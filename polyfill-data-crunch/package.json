@@ -1,0 +1,57 @@
+{
+  "name": "@voxpelli/stable-features",
+  "version": "0.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "description": "For Google",
+  "author": "Pelle Wessman <pelle@kodfabrik.se> (http://kodfabrik.se/)",
+  "homepage": "http://github.com/voxpelli/project-stable-features",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/voxpelli/project-stable-features.git"
+  },
+  "scripts": {
+    "skip:check:dependency-check": "dependency-check 'lib/**/*.js' --no-dev",
+    "check:installed-check": "installed-check -d -i eslint-plugin-jsdoc",
+    "check:eslint": "eslint .",
+    "check:typescript": "tsc",
+    "check:type-coverage": "type-coverage --detail --strict --at-least 95",
+    "check": "run-p check:*",
+    "test": "run-s check"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "@mdn/browser-compat-data": "^4.2.1",
+    "@voxpelli/semver-set": "^3.0.0",
+    "browserslist": "^4.20.3",
+    "debug": "^4.3.4",
+    "polyfill-library": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.7",
+    "@types/node": "^16.11.33",
+    "@types/semver": "^7.3.9",
+    "@voxpelli/eslint-config": "^14.0.2",
+    "@voxpelli/tsconfig": "^4.0.0",
+    "dependency-check": "^5.0.0-4",
+    "eslint": "^8.14.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-es": "^4.1.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsdoc": "^39.2.8",
+    "eslint-plugin-mocha": "^10.0.4",
+    "eslint-plugin-n": "^15.2.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-security": "^1.5.0",
+    "eslint-plugin-sort-destructure-keys": "^1.4.0",
+    "eslint-plugin-unicorn": "^42.0.0",
+    "installed-check": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "type-coverage": "^2.21.1",
+    "type-fest": "^2.12.2",
+    "typescript": "~4.6.4"
+  }
+}
