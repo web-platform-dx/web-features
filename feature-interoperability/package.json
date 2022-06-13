@@ -1,0 +1,17 @@
+{
+  "name": "@voxpelli/feature-interoperability",
+  "version": "0.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "author": "Pelle Wessman <pelle@kodfabrik.se> (http://kodfabrik.se/)",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "generate-readme": "node ./generate-readme > README.md"
+  },
+  "dependencies": {
+    "@mdn/browser-compat-data": "^5.0.2"
+  }
+}
