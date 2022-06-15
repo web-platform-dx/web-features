@@ -2,6 +2,7 @@
 
 import bcd from '@mdn/browser-compat-data' assert { type: 'json' };
 import features from './features.json' assert { type: 'json' };
+import resultData from './result.json' assert { type: 'json' };
 
 
 export const findBcdData = (name, src) => {
@@ -50,7 +51,11 @@ for (const category in result) {
     const header = url ? `[${headerText}](${url})` : headerText;
     const specLink = spec_url ? `([spec](${spec_url}))` : '';
 
-    console.log(`* [ ] ${header} ${specLink}`.trim());
+    const data = resultData[item];
+
+    const demoSuccess = data?.demoSuccess ? Object.keys(data.demoSuccess).sort().map(name => name + (data.demoSuccess[name] ? '✔' : (data.demoSuccess[name] === false ? '❌' : '🤷'))).join(', ') : '';
+
+    console.log(`* [${data ? 'x' : ' '}] ${header} ${specLink} ${demoSuccess ? `: ${demoSuccess}` : ''}`.trim());
   }
   console.log('');
 }

@@ -1,6 +1,6 @@
 # Supported in all
 
-* [ ] [`api.CSSStyleSheet.deleteRule`](https://developer.mozilla.org/docs/Web/API/CSSStyleSheet/deleteRule) ([spec](https://drafts.csswg.org/cssom/#dom-cssstylesheet-deleterule))
+* [x] [`api.CSSStyleSheet.deleteRule`](https://developer.mozilla.org/docs/Web/API/CSSStyleSheet/deleteRule) ([spec](https://drafts.csswg.org/cssom/#dom-cssstylesheet-deleterule)) : chrome✔, firefox✔, safari✔
 * [ ] [`api.DOMMatrixReadOnly.transformPoint`](https://developer.mozilla.org/docs/Web/API/DOMMatrixReadOnly/transformPoint) ([spec](https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-transformpoint))
 * [ ] [`api.MediaKeyStatusMap.get`](https://developer.mozilla.org/docs/Web/API/MediaKeyStatusMap/get) ([spec](https://w3c.github.io/encrypted-media/#dom-mediakeystatusmap-get))
 * [ ] [`api.MediaTrackSettings`](https://developer.mozilla.org/docs/Web/API/MediaTrackSettings) ([spec](https://w3c.github.io/mediacapture-main/#media-track-settings,https://w3c.github.io/mediacapture-screen-share/#extensions-to-mediatracksettings))
