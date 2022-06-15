@@ -3,9 +3,17 @@
 import bcd from '@mdn/browser-compat-data' assert { type: 'json' };
 import features from './features.json' assert { type: 'json' };
 import resultData from './result.json' assert { type: 'json' };
+import { readdir } from 'node:fs/promises';
 
+const demoDir = await readdir(new URL('demos/', import.meta.url));
 
-export const findBcdData = (name, src) => {
+const demos = {};
+for (const demoFile of demoDir) {
+  const [name] = demoFile.split('.html');
+  demos[name] = `demos/${demoFile}`;
+}
+
+const findBcdData = (name, src) => {
   if (!src) return
 
   const resolvedName = Array.isArray(name)
@@ -45,17 +53,35 @@ for (const category in result) {
   console.log(`# ${CATEGORY_TITLES[category]}\n`);
   for (const item in result[category]) {
     const { mdn_url, spec_url, parent_mdn_url } =  result[category][item];
+    const {
+      demoSuccess,
+      comment,
+      mdnDocPage404,
+      bugTrackers,
+      stackOverflow,
+      supportedWellInDevTools
+    } = resultData[item] || {};
 
     const url = mdn_url || parent_mdn_url || special_urls[item];
     const headerText = '`' + item + '`';
-    const header = url ? `[${headerText}](${url})` : headerText;
-    const specLink = spec_url ? `([spec](${spec_url}))` : '';
+    const header = url ? `[${headerText}${mdnDocPage404 ? ' :warning:' : ''}](${url})` : headerText;
 
-    const data = resultData[item];
+    const meta = [
+      spec_url ? `[spec](${spec_url})` : '',
+      demos[item] ? `[demo](${demos[item]})` : '',
+      demoSuccess ? Object.keys(demoSuccess).sort().map(
+        name => name + (demoSuccess[name] ? ' ✔' : (demoSuccess[name] === false ? ' ❌' : ' 🤷'))
+      ).join(' ') : ''
+    ].filter(value => !!value);
 
-    const demoSuccess = data?.demoSuccess ? Object.keys(data.demoSuccess).sort().map(name => name + (data.demoSuccess[name] ? '✔' : (data.demoSuccess[name] === false ? '❌' : '🤷'))).join(', ') : '';
+    const line = [
+      `[${resultData[item] ? 'x' : ' '}]`,
+      header,
+      meta.length ? `(${meta.join(', ')})` : '',
+      comment ? `- ${comment}` : '',
+    ].filter(value => !!value);
 
-    console.log(`* [${data ? 'x' : ' '}] ${header} ${specLink} ${demoSuccess ? `: ${demoSuccess}` : ''}`.trim());
+    console.log(`* ${line.join(' ')}`);
   }
   console.log('');
 }

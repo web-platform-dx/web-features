@@ -1,7 +1,7 @@
 # Supported in all
 
-* [x] [`api.CSSStyleSheet.deleteRule`](https://developer.mozilla.org/docs/Web/API/CSSStyleSheet/deleteRule) ([spec](https://drafts.csswg.org/cssom/#dom-cssstylesheet-deleterule)) : chrome✔, firefox✔, safari✔
-* [ ] [`api.DOMMatrixReadOnly.transformPoint`](https://developer.mozilla.org/docs/Web/API/DOMMatrixReadOnly/transformPoint) ([spec](https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-transformpoint))
+* [x] [`api.CSSStyleSheet.deleteRule`](https://developer.mozilla.org/docs/Web/API/CSSStyleSheet/deleteRule) ([spec](https://drafts.csswg.org/cssom/#dom-cssstylesheet-deleterule), [demo](demos/api.CSSStyleSheet.deleteRule.html), chrome ✔ firefox ✔ safari ✔) - Works reliably, but changes are not always reflected in web dev tools
+* [x] [`api.DOMMatrixReadOnly.transformPoint` :warning:](https://developer.mozilla.org/docs/Web/API/DOMMatrixReadOnly/transformPoint) ([spec](https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-transformpoint), [demo](demos/api.DOMMatrixReadOnly.transformPoint.html), chrome ✔ firefox ✔ safari ✔) - Works but isn't documented on MDN (despite BCD linking there)
 * [ ] [`api.MediaKeyStatusMap.get`](https://developer.mozilla.org/docs/Web/API/MediaKeyStatusMap/get) ([spec](https://w3c.github.io/encrypted-media/#dom-mediakeystatusmap-get))
 * [ ] [`api.MediaTrackSettings`](https://developer.mozilla.org/docs/Web/API/MediaTrackSettings) ([spec](https://w3c.github.io/mediacapture-main/#media-track-settings,https://w3c.github.io/mediacapture-screen-share/#extensions-to-mediatracksettings))
 * [ ] [`api.MediaTrackSettings.echoCancellation`](https://developer.mozilla.org/docs/Web/API/MediaTrackSettings/echoCancellation) ([spec](https://w3c.github.io/mediacapture-main/#dom-mediatracksettings-echocancellation))
