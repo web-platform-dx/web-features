@@ -5,8 +5,22 @@
       "firefox": true,
       "safari": true
     },
-    "bugTrackers": null,
-    "stackOverflow": null,
-    "comment": "Works reliably?"
+    "bugTrackers": [
+      "https://bugs.webkit.org/show_bug.cgi?id=141450"
+    ],
+    "stackOverflow": [],
+    "supportedWellInDevTools": false,
+    "comment": "Works reliably, but not necessarily reflected in web dev tools"
+  },
+  "api.DOMMatrixReadOnly.transformPoint": {
+    "mdnDocPage404": true,
+    "demoSuccess": {
+      "chrome": true,
+      "firefox": true,
+      "safari": true
+    },
+    "bugTrackers": [],
+    "stackOverflow": [],
+    "comment": "Works but isn't documented on MDN, despite BCD linking there"
   }
 }
