@@ -29,6 +29,8 @@ const findBcdData = (name, src) => {
   return { ...src.__compat, parent: src.parent };
 }
 
+const trafficEnlighten = (value) => value ? ' :white_check_mark:' : (value === false ? ' :x:' : ' :warning:')
+
 const CATEGORY_TITLES = {
   supportInAll: 'Supported in all',
   other: 'Other',
@@ -54,13 +56,15 @@ for (const category in result) {
   for (const item in result[category]) {
     const { mdn_url, spec_url, parent_mdn_url } =  result[category][item];
     const {
-      demoSuccess,
-      comment,
-      mdnDocPage404,
       bugTrackers,
+      comment,
+      demoSuccess,
+      developersCanDependOnIt,
+      mdnDocPage404,
       stackOverflow,
       supportedWellInDevTools
     } = resultData[item] || {};
+    const hasResult = !!resultData[item];
 
     const url = mdn_url || parent_mdn_url || special_urls[item];
     const headerText = '`' + item + '`';
@@ -70,12 +74,13 @@ for (const category in result) {
       spec_url ? `[spec](${spec_url})` : '',
       demos[item] ? `[demo](${demos[item]})` : '',
       demoSuccess ? Object.keys(demoSuccess).sort().map(
-        name => name + (demoSuccess[name] ? ' ✔' : (demoSuccess[name] === false ? ' ❌' : ' 🤷'))
+        name => name + trafficEnlighten(demoSuccess[name])
       ).join(' ') : ''
     ].filter(value => !!value);
 
     const line = [
       `[${resultData[item] ? 'x' : ' '}]`,
+      hasResult ? trafficEnlighten(developersCanDependOnIt) : ':new:',
       header,
       meta.length ? `(${meta.join(', ')})` : '',
       comment ? `- ${comment}` : '',
