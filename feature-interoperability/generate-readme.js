@@ -60,11 +60,15 @@ for (const category in result) {
       comment,
       demoSuccess,
       developersCanDependOnIt,
+      experimental,
+      hardToTest,
       mdnDocPage404,
+      mdnDocPageLacksExample,
+      postponed,
       stackOverflow,
       supportedWellInDevTools
     } = resultData[item] || {};
-    const hasResult = !!resultData[item];
+    const hasResult = !!resultData[item] && !postponed;
 
     const url = mdn_url || parent_mdn_url || special_urls[item];
     const headerText = '`' + item + '`';
@@ -79,7 +83,7 @@ for (const category in result) {
     ].filter(value => !!value);
 
     const line = [
-      `[${resultData[item] ? 'x' : ' '}]`,
+      `[${hasResult ? 'x' : ' '}]`,
       hasResult ? trafficEnlighten(developersCanDependOnIt) : ':new:',
       header,
       meta.length ? `(${meta.join(', ')})` : '',

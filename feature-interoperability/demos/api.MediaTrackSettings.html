@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Demo: api.MediaTrackSettings</title>
+</head>
+<body>
+  Click to test
+  <script>
+    document.onclick = () => {
+      navigator.mediaDevices.getUserMedia({
+        video: {
+          width: { min: 640, ideal: 1920 },
+          height: { min: 400, ideal: 1080 },
+          aspectRatio: { ideal: 1.7777777778 }
+        },
+        audio: {
+          sampleSize: 16,
+          channelCount: 2
+        }
+      }).then(stream => {
+        const settings = stream.getTracks()[0].getSettings();
+        if (typeof settings !== 'object' || Object.keys(settings).length === 0) {
+          console.error('❌ Expected a MediaTrackSettings object');
+        } else {
+          console.log('✔ Test successful. Got a MediaTrackSettings object:', settings);
+        }
+      }).catch(err => {
+        console.error('❌ Unexpected error:', err);
+      });
+    }
+  </script>
+</body>
+</html>
