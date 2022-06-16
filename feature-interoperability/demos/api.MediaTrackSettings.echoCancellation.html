@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Demo: api.MediaTrackSettings</title>
+  <title>Demo: api.MediaTrackSettings.echoCancellation</title>
 </head>
 <body>
   Click to test
@@ -15,10 +15,10 @@
         }
       }).then(stream => {
         const settings = stream.getTracks()[0].getSettings();
-        if (typeof settings !== 'object' || Object.keys(settings).length === 0) {
-          console.error('❌ Expected a MediaTrackSettings object');
+        if (!settings || typeof settings.echoCancellation !== 'boolean') {
+          console.error('❌ Expected a MediaTrackSettings object with echoCancellation, but got:', settings);
         } else {
-          console.log('✔ Test successful. Got a MediaTrackSettings object:', settings);
+          console.log('✔ Test successful. Got a MediaTrackSettings object with echoCancellation:', settings);
         }
       }).catch(err => {
         console.error('❌ Unexpected error:', err);

@@ -32,6 +32,7 @@
     "comment": "Part of Encrypted Media Extensions, which is hard to write a quick test for"
   },
   "api.MediaTrackSettings": {
+    "developersCanDependOnIt": true,
     "mdnDocPageLacksExample": true,
     "demoSuccess": {
       "chrome": true,
@@ -42,33 +43,14 @@
       "https://stackoverflow.com/questions/71072144/is-there-a-way-to-get-aspect-ratio-of-the-webcam-in-firefox",
       "https://stackoverflow.com/questions/12021159/webrtc-get-webcams-aspect-ratio/58160251#58160251"
     ],
-    "comment": "Works, but the amount of settings returned are different between browsers. On desktop MacOS 12.4 the settings returned for my microphone are 4 in Safari 15.5, 6 in Firefox 101 and 8 in Chrome 102. deviceId and echoCancellation being the only two settings included in all three.",
-    "exampleData": {
-      "chrome": {
-        "autoGainControl": true,
-        "channelCount": 2,
-        "deviceId": "default",
-        "echoCancellation": true,
-        "groupId": "97deb6b28f3f0b922f63e3f17e7b093f46543c8cd1e71b079ef6ffd17d70a5a3",
-        "latency": 0.01,
-        "noiseSuppression": true,
-        "sampleRate": 48000,
-        "sampleSize": 16
-      },
-      "firefox": {
-        "autoGainControl": true,
-        "channelCount": 1,
-        "deviceId": "9mb7s40hVkIskehubMOGetAsydTEPomeDgkeFWJ/OEI=",
-        "echoCancellation": true,
-        "groupId": "5Xfc/DqLehuNzxlfdyfSeDuYoPC7cPJJ90E9AlO3Tn0=",
-        "noiseSuppression": true
-      },
-      "safari": {
-        "deviceId": "02C3A74030140B4EAA21FD42A3415985C2A78F79",
-        "echoCancellation": true,
-        "sampleRate": 48000,
-        "volume": 1
-      }
+    "comment": "Works, but the amount of settings returned are different between browsers. On desktop MacOS 12.4 the settings returned for my microphone are 4 in Safari 15.5, 6 in Firefox 101 and 8 in Chrome 102. deviceId and echoCancellation being the only two settings included in all three."
+  },
+  "api.MediaTrackSettings.echoCancellation": {
+    "developersCanDependOnIt": true,
+    "demoSuccess": {
+      "chrome": true,
+      "firefox": true,
+      "safari": true
     }
   }
 }
