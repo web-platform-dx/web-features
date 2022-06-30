@@ -85,9 +85,13 @@ for (const category in result) {
     const line = [
       `[${hasResult ? 'x' : ' '}]`,
       hasResult ? trafficEnlighten(developersCanDependOnIt) : ':new:',
+      experimental ? ':test_tube:' : '',
+      hardToTest ? ':thinking:' : '',
       header,
       meta.length ? `(${meta.join(', ')})` : '',
       comment ? `- ${comment}` : '',
+      bugTrackers?.length ? `Bug trackers: ${bugTrackers.map((item, i) => `[${i + 1}](${item})`)}` : '',
+      stackOverflow?.length ? `SO: ${stackOverflow.map((item, i) => `[${i + 1}](${item})`)}` : '',
     ].filter(value => !!value);
 
     console.log(`* ${line.join(' ')}`);
