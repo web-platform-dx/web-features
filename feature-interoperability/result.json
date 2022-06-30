@@ -52,5 +52,26 @@
       "firefox": true,
       "safari": true
     }
+  },
+  "javascript.grammar.null_literal": {
+    "developersCanDependOnIt": true,
+    "comment": "See `javascript.operators.less_than_or_equal`"
+  },
+  "javascript.operators.bitwise_or": {
+    "developersCanDependOnIt": true,
+    "comment": "See `javascript.operators.less_than_or_equal`"
+  },
+  "javascript.operators.less_than_or_equal": {
+    "developersCanDependOnIt": true,
+    "bugTrackers": [
+      "https://github.com/mdn/browser-compat-data/issues/6861",
+      "https://github.com/mdn/browser-compat-data/pull/5923",
+      "https://github.com/mdn/browser-compat-data/pull/4784",
+      "https://github.com/mdn/browser-compat-data/issues/4772",
+      "https://github.com/mdn/browser-compat-data/pull/4923",
+      "https://github.com/mdn/browser-compat-data/pull/942",
+      "https://github.com/mdn/browser-compat-data/pull/5621"
+    ],
+    "comment": "Some oddities in the data stemming from the fact that BCD has minimum versions for this feature despite it probably being around from the start wherever this feature has been precent. Eg. Node.js is said to have only supported it since 0.10.0, but that since BCD has decided that the minimum version to include for Node.js is 0.10.0, making eg MDN docs confusing, as it presents it as not being fully precent before 0.10.0. Same goes for Edge 12, Firefox 4 for Android etc."
   }
 }
