@@ -1,7 +1,7 @@
 # Supported in all
 
 * [x]  :white_check_mark: [`api.CSSStyleSheet.deleteRule`](https://developer.mozilla.org/docs/Web/API/CSSStyleSheet/deleteRule) ([spec](https://drafts.csswg.org/cssom/#dom-cssstylesheet-deleterule), [demo](demos/api.CSSStyleSheet.deleteRule.html), chrome :white_check_mark: firefox :white_check_mark: safari :white_check_mark:) - Works reliably, but changes are not always reflected in web dev tools Bug trackers: [1](https://bugs.webkit.org/show_bug.cgi?id=141450)
-* [x]  :white_check_mark: [`api.DOMMatrixReadOnly.transformPoint` :warning:](https://developer.mozilla.org/docs/Web/API/DOMMatrixReadOnly/transformPoint) ([spec](https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-transformpoint), [demo](demos/api.DOMMatrixReadOnly.transformPoint.html), chrome :white_check_mark: firefox :white_check_mark: safari :white_check_mark:) - Works but isn't documented on MDN (despite BCD linking there)
+* [x]  :white_check_mark: [`api.DOMMatrixReadOnly.transformPoint` :hole:](https://developer.mozilla.org/docs/Web/API/DOMMatrixReadOnly/transformPoint) ([spec](https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-transformpoint), [demo](demos/api.DOMMatrixReadOnly.transformPoint.html), chrome :white_check_mark: firefox :white_check_mark: safari :white_check_mark:) - Works but isn't documented on MDN (despite BCD linking there)
 * [ ] :new: :test_tube: :thinking: [`api.MediaKeyStatusMap.get`](https://developer.mozilla.org/docs/Web/API/MediaKeyStatusMap/get) ([spec](https://w3c.github.io/encrypted-media/#dom-mediakeystatusmap-get)) - Part of Encrypted Media Extensions, which is hard to write a quick test for
 * [x]  :white_check_mark: [`api.MediaTrackSettings`](https://developer.mozilla.org/docs/Web/API/MediaTrackSettings) ([spec](https://w3c.github.io/mediacapture-main/#media-track-settings,https://w3c.github.io/mediacapture-screen-share/#extensions-to-mediatracksettings), [demo](demos/api.MediaTrackSettings.html), chrome :white_check_mark: firefox :white_check_mark: safari :white_check_mark:) - Works, but the amount of settings returned are different between browsers. On desktop MacOS 12.4 the settings returned for my microphone are 4 in Safari 15.5, 6 in Firefox 101 and 8 in Chrome 102. deviceId and echoCancellation being the only two settings included in all three. SO: [1](https://stackoverflow.com/questions/71072144/is-there-a-way-to-get-aspect-ratio-of-the-webcam-in-firefox),[2](https://stackoverflow.com/questions/12021159/webrtc-get-webcams-aspect-ratio/58160251#58160251)
 * [x]  :white_check_mark: [`api.MediaTrackSettings.echoCancellation`](https://developer.mozilla.org/docs/Web/API/MediaTrackSettings/echoCancellation) ([spec](https://w3c.github.io/mediacapture-main/#dom-mediatracksettings-echocancellation), [demo](demos/api.MediaTrackSettings.echoCancellation.html), chrome :white_check_mark: firefox :white_check_mark: safari :white_check_mark:)
@@ -30,7 +30,6 @@
 * [x]  :white_check_mark: [`javascript.grammar.null_literal`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Lexical_grammar#Null_literal) ([spec](https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html#sec-null-literals)) - See `javascript.operators.less_than_or_equal`
 * [x]  :white_check_mark: [`javascript.operators.bitwise_or`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Bitwise_OR) ([spec](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-BitwiseORExpression)) - See `javascript.operators.less_than_or_equal`
 * [x]  :white_check_mark: [`javascript.operators.less_than_or_equal`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal) ([spec](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-relational-operators)) - Some oddities in the data stemming from the fact that BCD has minimum versions for this feature despite it probably being around from the start wherever this feature has been precent. Eg. Node.js is said to have only supported it since 0.10.0, but that since BCD has decided that the minimum version to include for Node.js is 0.10.0, making eg MDN docs confusing, as it presents it as not being fully precent before 0.10.0. Same goes for Edge 12, Firefox 4 for Android etc. Bug trackers: [1](https://github.com/mdn/browser-compat-data/issues/6861),[2](https://github.com/mdn/browser-compat-data/pull/5923),[3](https://github.com/mdn/browser-compat-data/pull/4784),[4](https://github.com/mdn/browser-compat-data/issues/4772),[5](https://github.com/mdn/browser-compat-data/pull/4923),[6](https://github.com/mdn/browser-compat-data/pull/942),[7](https://github.com/mdn/browser-compat-data/pull/5621)
-
 # Other
 
 * [ ] :new: [`api.CSSSkew`](https://developer.mozilla.org/docs/Web/API/CSSSkew) ([spec](https://drafts.css-houdini.org/css-typed-om/#cssskew))
@@ -63,4 +62,19 @@
 * [ ] :new: [`javascript.builtins.Temporal.PlainMonthDay.constructor`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay/constructor) ([spec](https://tc39.es/proposal-temporal/#sec-temporal-plainmonthday-constructor))
 * [ ] :new: [`javascript.builtins.Temporal.PlainTime.microsecond`](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/temporal/plaintime/microsecond) ([spec](https://tc39.es/proposal-temporal/#sec-get-temporal.plaintime.prototype.microsecond))
 * [ ] :new: [`javascript.builtins.Temporal.PlainTime.with`](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/temporal/plaintime/with) ([spec](https://tc39.es/proposal-temporal/#sec-temporal.plaintime.prototype.with))
+
+# Symbol explanation
+
+## Success status
+
+- :white_check_mark: - success
+- :warning: - partial failure
+- :x: - failure
+
+## Other
+
+- :new: - feature hasn't yet been looked at in this work
+- :test_tube: - feature is experimental
+- :thinking: - feature is hard to make demo of
+- :hole: - documentation page leads nowhere
 

@@ -72,7 +72,7 @@ for (const category in result) {
 
     const url = mdn_url || parent_mdn_url || special_urls[item];
     const headerText = '`' + item + '`';
-    const header = url ? `[${headerText}${mdnDocPage404 ? ' :warning:' : ''}](${url})` : headerText;
+    const header = url ? `[${headerText}${mdnDocPage404 ? ' :hole:' : ''}](${url})` : headerText;
 
     const meta = [
       spec_url ? `[spec](${spec_url})` : '',
@@ -96,5 +96,21 @@ for (const category in result) {
 
     console.log(`* ${line.join(' ')}`);
   }
-  console.log('');
 }
+
+console.log(`
+# Symbol explanation
+
+## Success status
+
+- :white_check_mark: - success
+- :warning: - partial failure
+- :x: - failure
+
+## Other
+
+- :new: - feature hasn't yet been looked at in this work
+- :test_tube: - feature is experimental
+- :thinking: - feature is hard to make demo of
+- :hole: - documentation page leads nowhere
+`);
