@@ -32,6 +32,9 @@ A common list of web features, along with a companion grouping mechanism, seems 
 * Detect and fix data errors about features in sources viewed as authoritative (e.g. Can I Use, BCD).
 * And overall **send consistent signals on the list of interoperable features** that developers can build on with confidence.
 
+## Building on top of a common list of web features
+
+With the need to support IE11 fading, we have a new opportunity to define a set of featues as the baseline of the web platform and update that set regularly with new browser releases. Those would be features that work interoperabily across major browsers. That would on the one hand, give developers an easy shorthand to look for in terms of browser suppprt, and on the other hand give us an opportunity to talk regularly about which new features have become part of the baseline of the web.
 
 ## Explorations done in 2022
 
