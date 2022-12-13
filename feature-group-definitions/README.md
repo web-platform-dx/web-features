@@ -4,18 +4,18 @@ This directory houses the experiment to provide structured definitions groups of
 At inception, it consists of this README file only, but it should soon contain data and tools.
 See [ddbeck/common-web-feature-mockup](https://github.com/ddbeck/common-web-feature-mockup/) for more information.
 
-
 ## What is a web platform feature?
 
-For the purposes of this project, consider this defintion of a web platform feature:
+To identify, group, and report on the availability of web platform features, it might be nice to have a working defintion of a web platform feature.
+For the purposes of this project, consider this defintion:
 
 **A _feature_ (or _feature group_) is a logical subset of all the addressable behaviors and interfaces that the web platform, as mediated by browsers and related tools, exposes to web developers.**
 
-You could come up with many reasonable definitions for "web platform feature",
-so this definition is surely not authoritative.
-But it might be useful for understanding the scope of this project.
+This definition is surely not authoritative, complete, or universally applicable (see [_Limitations of this definition_](#limitations-of-this-definition)).
+You could come up with many reasonable alternative definitions.
+This definition focuses on things that are useful to this project, but potentially less useful to others.
 
-However, it's a mouthful. Take a look at each piece:
+Also, it's a mouthful. Take a look at each piece:
 
 
 ### A logical subset
@@ -61,3 +61,22 @@ Immature proposals or long-withdrawn behaviors of web browsers are not features 
 _The web platform … exposes to web developers_ means that a feature must be open to inspection or manipulation by web developers via the web documents and applications that they make.
 
 For example, the ability to request permission to stream video from a webcam might be a feature (i.e., to call the `getUserMedia()` method), but the particular format, placement, or wording of the prompt to the user to grant that permission is not.
+
+### Limitations of this definition
+
+This definition has many limitations.
+To name just a few:
+
+- The definition was written to be descriptive of web features, as opposed to prescriptive.
+  The definition intends to capture things that have the look of a web feature, not describe all of the formal requirements or expectations of a web feature.
+
+- The definition was written with a narrow application in mind:
+  to characterize web platform features as they relate to the experience of web developers.
+  Other definitions might be more useful to specification authors or implementers or technical writers.
+
+- The definition was written with the understanding that it is necessarily incomplete.
+  The web, understood broadly, involves many technologies, technologists, and users.
+  A one-sentence definition cannot capture everything.
+  Even focusing on web developers as a group requires approximating a great many individual perspectives.
+
+In other words, don't treat this as the one true definition of a web platform feature because it isn't.
