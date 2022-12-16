@@ -34,7 +34,7 @@ A common list of web features, along with a companion grouping mechanism, seems 
 
 ## Building on top of a common list of web features
 
-With the need to support IE11 fading, we have a new opportunity to define a set of featues as the baseline of the web platform and update that set regularly with new browser releases. Those would be features that work interoperabily across major browsers. That would on the one hand, give developers an easy shorthand to look for in terms of browser suppprt, and on the other hand give us an opportunity to talk regularly about which new features have become part of the baseline of the web. Defining this baseline requires a somewhat stable set of browsers and respective versions that developers consider as required before they can use features. We have started research in this space to better understand audiences and requirements. 
+With the need to support IE11 fading, we have a new opportunity to define a set of features as the baseline of the web platform and update that set regularly with new browser releases. Those would be features that work interoperably across major browsers. That would on the one hand, give developers an easy shorthand to look for in terms of browser support, and on the other hand give us an opportunity to talk regularly about which new features have become part of the baseline of the web. Defining this baseline requires a somewhat stable set of browsers and respective versions that developers consider as required before they can use features. We have started research in this space to better understand audiences and requirements. 
 
 ## Explorations done in 2022
 
