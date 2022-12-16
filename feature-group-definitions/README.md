@@ -27,6 +27,8 @@ It also means that a feature does not represent a random or arbitrary selection 
 For example, a group of JavaScript’s `Symbol` built-in object, the CSS `border-color` property, and the HTTP `POST` method is not a web feature, but all of the CSS border properties (individually or as a group) might be.
 
 The definition leaves the size the subset undefined on purpose. Logical subsets may be composed of a single specific feature or hundreds of them. For example, the [range syntax](https://drafts.csswg.org/mediaqueries-4/#mq-ranges) in Media Queries may be a web feature, but so would Media Queries as a whole.
+
+
 ### Addressable
 
 _Addressable_ means that a feature must be identifiable and distinguishable from other features.
