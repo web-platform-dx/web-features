@@ -1,0 +1,21 @@
+{
+  "name": "web-features",
+  "description": "Exploring the set of interoperable features in the Web Platform",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/web-platform-dx/feature-set.git"
+  },
+  "main": "web-features.json",
+  "scripts": {
+    "build": "ts-node build.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.15",
+    "fast-json-stable-stringify": "^2.1.0",
+    "fdir": "^5.3.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4",
+    "yaml": "^2.1.3"
+  }
+}
