@@ -19,6 +19,16 @@ jobs:
       - run: npm run build
       - name: Pretty print built index.json
         run: jq . index.json
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: npm
+      - run: npm ci
+      - run: npm test
 
 env:
   FORCE_COLOR: 3
