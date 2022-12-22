@@ -1,0 +1,24 @@
+import fs from 'fs';
+import path from 'path';
+
+import { fdir } from 'fdir';
+import YAML from 'yaml';
+
+const filePaths = new fdir()
+    .withBasePath()
+    .filter((fp) => fp.endsWith('.yml'))
+    .crawl('feature-group-definitions')
+    .sync() as string[];
+
+const features: { [key: string]: object } = {};
+
+for (const fp of filePaths) {
+    // The feature identifier/key is the filename without extension.
+    const key = path.parse(fp).name;
+
+    const src = fs.readFileSync(fp, { encoding: 'utf-8'});
+    const data = YAML.parse(src);
+    features[key] = data;
+}
+
+export default features;
