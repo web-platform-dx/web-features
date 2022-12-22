@@ -6,9 +6,10 @@
     "type": "git",
     "url": "https://github.com/web-platform-dx/feature-set.git"
   },
-  "main": "web-features.json",
+  "type": "module",
+  "main": "index.ts",
   "scripts": {
-    "build": "ts-node build.ts"
+    "build": "ts-node scripts/build.ts"
   },
   "devDependencies": {
     "@types/node": "^18.11.17",

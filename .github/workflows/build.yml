@@ -17,8 +17,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - name: Pretty print built web-features.json
-        run: jq . web-features.json
+      - name: Pretty print built index.json
+        run: jq . index.json
 
 env:
   FORCE_COLOR: 3
