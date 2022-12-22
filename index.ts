@@ -5,7 +5,8 @@ import { fdir } from 'fdir';
 import YAML from 'yaml';
 
 interface FeatureData {
-    spec: string
+    spec: string,
+    caniuse?: string
 }
 
 const filePaths = new fdir()
