@@ -1,4 +1,3 @@
-import fs from 'fs';
 import webSpecs from 'web-specs' assert { type: 'json' };
 
 import features from '../index.js';
