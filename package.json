@@ -11,11 +11,16 @@
   "main": "index.ts",
   "scripts": {
     "build": "ts-node scripts/build.ts",
-    "test": "ts-node scripts/specs.ts && ts-node scripts/caniuse.ts"
+    "test": "npm run test:caniuse && npm run test:schema && npm run test:specs",
+    "test:caniuse": "ts-node scripts/caniuse.ts",
+    "test:schema": "ts-node scripts/schema.ts",
+    "test:specs": "ts-node scripts/specs.ts"
   },
   "devDependencies": {
     "@types/caniuse-lite": "^1.0.1",
     "@types/node": "^18.11.17",
+    "ajv": "^8.11.2",
+    "ajv-formats": "^2.1.1",
     "caniuse-lite": "^1.0.30001441",
     "fast-json-stable-stringify": "^2.1.0",
     "fdir": "^5.3.0",
