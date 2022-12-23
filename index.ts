@@ -4,13 +4,17 @@ import path from 'path';
 import { fdir } from 'fdir';
 import YAML from 'yaml';
 
+interface FeatureData {
+    spec: string
+}
+
 const filePaths = new fdir()
     .withBasePath()
     .filter((fp) => fp.endsWith('.yml'))
     .crawl('feature-group-definitions')
     .sync() as string[];
 
-const features: { [key: string]: object } = {};
+const features: { [key: string]: FeatureData } = {};
 
 for (const fp of filePaths) {
     // The feature identifier/key is the filename without extension.
