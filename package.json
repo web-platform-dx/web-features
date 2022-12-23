@@ -11,10 +11,12 @@
   "main": "index.ts",
   "scripts": {
     "build": "ts-node scripts/build.ts",
-    "test": "ts-node scripts/specs.ts"
+    "test": "ts-node scripts/specs.ts && ts-node scripts/caniuse.ts"
   },
   "devDependencies": {
+    "@types/caniuse-lite": "^1.0.1",
     "@types/node": "^18.11.17",
+    "caniuse-lite": "^1.0.30001441",
     "fast-json-stable-stringify": "^2.1.0",
     "fdir": "^5.3.0",
     "ts-node": "^10.9.1",
