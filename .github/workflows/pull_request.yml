@@ -17,8 +17,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - name: Pretty print built index.json
-        run: jq . index.json
+      - name: Pretty print built JSON
+        run: jq . packages/web-features/index.json
   test:
     runs-on: ubuntu-latest
     steps:

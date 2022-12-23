@@ -7,7 +7,8 @@ import features from '../index.js';
 function build() {
     const json = stringify(features);
     // TODO: Validate the resulting JSON against a schema.
-    fs.writeFileSync('index.json', json);
+    const path = new URL('../packages/web-features/index.json', import.meta.url);
+    fs.writeFileSync(path, json);
 }
 
 build();
