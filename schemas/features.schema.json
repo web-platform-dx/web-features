@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "patternProperties": {
+    "^[a-z0-9-]*$": {
+      "type": "object",
+      "properties": {
+        "spec": {
+          "type": "string",
+          "description": "Specification URL",
+          "format": "uri"
+        },
+        "caniuse": {
+          "type": "string",
+          "description": "caniuse.com identifier"
+        }
+      },
+      "required": [
+        "spec"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
