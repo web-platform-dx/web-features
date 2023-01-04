@@ -11,7 +11,7 @@
   "main": "index.ts",
   "scripts": {
     "build": "ts-node scripts/build.ts",
-    "test": "npm run test:caniuse && npm run test:schema && npm run test:specs",
+    "test": "npm run test:caniuse -- --quiet && npm run test:schema && npm run test:specs",
     "test:caniuse": "ts-node scripts/caniuse.ts",
     "test:schema": "ts-node scripts/schema.ts",
     "test:specs": "ts-node scripts/specs.ts"

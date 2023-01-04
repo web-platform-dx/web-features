@@ -2,6 +2,8 @@ import lite from 'caniuse-lite';
 
 import features from '../index.js';
 
+const noisy = !process.argv.includes("--quiet");
+
 // Create a map from caniuse feature identifers to our identifiers, making
 // it possible to enumerate matched and unmatched features.
 const mapping = new Map<string, string | null>(
@@ -31,8 +33,9 @@ for (const [caniuseId, id] of mapping.entries()) {
         }
         matched++;
     }
-    console.log(`- ${checkbox} ${caniuseId}${details}`);
+    if (noisy) {
+        console.log(`- ${checkbox} ${caniuseId}${details}`);
+    }
 }
 
-console.log();
-console.log(`Summary: ${matched}/${mapping.size} features matched`);
+console.log(`${noisy ? '\n' : ''}Summary: ${matched}/${mapping.size} features matched`);
