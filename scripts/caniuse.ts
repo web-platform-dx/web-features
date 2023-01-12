@@ -1,8 +1,7 @@
 import lite from 'caniuse-lite';
+import winston from "winston";
 
 import features from '../index.js';
-
-import winston from "winston";
 
 const logger = winston.createLogger({
     level: 'info',
