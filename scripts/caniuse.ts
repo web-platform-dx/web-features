@@ -1,6 +1,18 @@
 import lite from 'caniuse-lite';
+import winston from "winston";
 
 import features from '../index.js';
+
+const logger = winston.createLogger({
+    level: 'info',
+    format: winston.format.printf(({level, message}) => `${message}`)
+})
+
+if (process.argv.includes("--quiet")) {
+    logger.add(new winston.transports.Console({ level: 'info'}));
+} else {
+    logger.add(new winston.transports.Console({ level: 'verbose' }));
+}
 
 // Create a map from caniuse feature identifers to our identifiers, making
 // it possible to enumerate matched and unmatched features.
@@ -31,8 +43,8 @@ for (const [caniuseId, id] of mapping.entries()) {
         }
         matched++;
     }
-    console.log(`- ${checkbox} ${caniuseId}${details}`);
+    logger.verbose(`- ${checkbox} ${caniuseId}${details}`);
 }
 
-console.log();
-console.log(`Summary: ${matched}/${mapping.size} features matched`);
+logger.verbose("");
+logger.info(`Summary: ${matched}/${mapping.size} features matched`);
