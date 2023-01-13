@@ -6,7 +6,22 @@ import YAML from 'yaml';
 
 interface FeatureData {
     spec: string,
-    caniuse?: string
+    caniuse?: string,
+    constituentFeatures?: Array<{source: string, query: string}>
+}
+
+// Some FeatureData keys aren't (and may never) be ready for publishing.
+// They're not part of the public schema (yet).
+// They'll be removed.
+const omittables = [
+    "constituentFeatures"
+]
+
+function scrub(data: FeatureData) {
+    for (const key of omittables) {
+        delete data[key];
+    }
+    return data;
 }
 
 const filePaths = new fdir()
@@ -23,7 +38,7 @@ for (const fp of filePaths) {
 
     const src = fs.readFileSync(fp, { encoding: 'utf-8'});
     const data = YAML.parse(src);
-    features[key] = data;
+    features[key] = scrub(data);
 }
 
 export default features;
