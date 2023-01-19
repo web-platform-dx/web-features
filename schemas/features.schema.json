@@ -1,84 +1,9 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "definitions": {
-    "spec_url": {
-      "type": "string",
-      "description": "Specification URL",
-      "format": "uri"
-    },
-    "usage_stats_url": {
-      "type": "string",
-      "description": "Feature usage metric URL",
-      "format": "uri"
-    },
-    "support_status": {
-      "type": "object",
-      "description": "Whether a feature is considered a \"baseline\" web platform feature and when it achieved that status",
-      "properties": {
-        "is_baseline": {
-          "type": "boolean",
-          "description": "Whether the feature achieved baseline status"
-        },
-        "since": {
-          "type": "string",
-          "description": "When the feature achieved baseline status",
-          "format": "date"
-        },
-        "support": {
-          "type": "object",
-          "description": "Browser identifiers and the first version from which they had baseline status",
-          "patternProperties": {
-            "^[a-z][a-z_]+[a-z]": {
-              "type": "string"
-            } 
-          }
-        }
-      },
-      "required": [
-        "is_baseline"
-      ],
-      "additionalProperties": false
-    }
-  },
   "type": "object",
   "patternProperties": {
     "^[a-z0-9-]*$": {
-      "type": "object",
-      "properties": {
-        "spec": {
-          "$ref": "#/definitions/spec_url"
-        },
-        "caniuse": {
-          "type": "string",
-          "description": "caniuse.com identifier"
-        },
-        "usage_stats": {
-          "anyOf": [
-            {
-              "$ref": "#/definitions/usage_stats_url"
-            },
-            {
-              "type": "array",
-              "minItems": 2,
-              "items": {
-                "$ref": "#/definitions/usage_stats_url"
-              }
-            }
-          ]
-        },
-        "status": {
-          "type": "object",
-          "properties": {
-            "baseline": {
-              "$ref": "#/definitions/support_status"
-            }
-          }
-        }
-      },
-      "required": [
-        "spec"
-      ],
-      "additionalProperties": false
+      "$ref": "defs#/definitions/FeatureData"
     }
   },
   "additionalProperties": false

@@ -1,0 +1,86 @@
+{
+  "$id": "defs",
+  "$ref": "#/definitions/FeatureData",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "FeatureData": {
+      "additionalProperties": false,
+      "description": "Web platform feature",
+      "properties": {
+        "caniuse": {
+          "description": "caniuse.com identifier",
+          "type": "string"
+        },
+        "compat_features": {
+          "description": "Sources of support data for this feature",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "spec": {
+          "description": "Specification URL",
+          "format": "uri",
+          "type": "string"
+        },
+        "status": {
+          "additionalProperties": false,
+          "description": "Whether a feature is considered a \"baseline\" web platform feature and when it achieved that status",
+          "properties": {
+            "is_baseline": {
+              "description": "Whether the feature achieved baseline status",
+              "type": "boolean"
+            },
+            "since": {
+              "description": "Date the feature achieved baseline status",
+              "type": "string"
+            },
+            "support": {
+              "additionalProperties": false,
+              "description": "Browser versions that most-recently introduced the feature",
+              "properties": {
+                "chrome": {
+                  "type": "string"
+                },
+                "firefox": {
+                  "type": "string"
+                },
+                "safari": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "required": [
+            "is_baseline"
+          ],
+          "type": "object"
+        },
+        "usage_stats": {
+          "anyOf": [
+            {
+              "description": "Usage stats URL",
+              "format": "uri",
+              "type": "string"
+            },
+            {
+              "items": {
+                "description": "Usage stats URL",
+                "format": "uri",
+                "type": "string"
+              },
+              "minItems": 2,
+              "type": "array"
+            }
+          ],
+          "description": "Usage stats"
+        }
+      },
+      "required": [
+        "spec"
+      ],
+      "type": "object"
+    }
+  }
+}
