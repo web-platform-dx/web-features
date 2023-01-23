@@ -1,0 +1,22 @@
+# I don't expect we'd actually write many of these by hand!
+# Instead, we'd defer to BCD (or a library built specifically for BCD) that could figure out the relationship at runtime.
+"@mdn/browser-compat-data":
+  "@layer": css.at-rules.layer
+  "@import layer()": css.at-rules.import.layer
+  CSSImportRule.prototype.layerName: api.CSSImportRule.layerName
+  CSSLayerBlockRule: api.CSSLayerBlockRule
+  CSSLayerBlockRule.prototype.name: api.CSSLayerBlockRule.name
+  CSSLayerStatementRule: api.CSSLayerStatementRule
+  CSSLayerStatementRule.prototype.nameList: api.CSSLayerStatementRule.nameList
+
+# Hypothetically, we could extend this approach to _any_ support data source
+# that can be mapped from a list of low-level features to a specific data
+# point.
+"wpt":
+  "@layer": css/css-cascade/layer-basic.html
+  "@import layer()": css/css-cascade/layer-import.html
+  CSSImportRule.prototype.layerName: css/css-cascade/layer-rules-cssom.html
+  CSSLayerBlockRule: css/css-cascade/layer-rules-cssom.html
+  CSSLayerBlockRule.prototype.name: css/css-cascade/layer-rules-cssom.html
+  CSSLayerStatementRule: css/css-cascade/layer-rules-cssom.html
+  CSSLayerStatementRule.prototype.nameList: css/css-cascade/layer-rules-cssom.html

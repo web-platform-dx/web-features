@@ -1,17 +1,12 @@
 spec: https://drafts.csswg.org/css-cascade-5/#layering
 caniuse: css-cascade-layers
-constituentFeatures:
-  - source: "@mdn/browser-compat-data"
-    query: css.at-rules.layer
-  - source: "@mdn/browser-compat-data"
-    query: css.at-rules.import.layer
-  - source: "@mdn/browser-compat-data"
-    query: api.CSSImportRule.layerName
-  - source: "@mdn/browser-compat-data"
-    query: api.CSSLayerBlockRule
-  - source: "@mdn/browser-compat-data"
-    query: api.CSSLayerBlockRule.name
-  - source: "@mdn/browser-compat-data"
-    query: api.CSSLayerStatementRule
-  - source: "@mdn/browser-compat-data"
-    query: api.CSSLayerStatementRule.nameList
+constituent-features:
+  # I'm not committed to a particular notation here, but it did occur to me
+  # that we might start with as "natural" a notation as possible.
+  - "@layer"
+  - "@import layer()"
+  - CSSImportRule.prototype.layerName
+  - CSSLayerBlockRule
+  - CSSLayerBlockRule.prototype.name
+  - CSSLayerStatementRule
+  - CSSLayerStatementRule.prototype.nameList
