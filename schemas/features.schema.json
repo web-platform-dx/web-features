@@ -13,6 +13,11 @@
         "caniuse": {
           "type": "string",
           "description": "caniuse.com identifier"
+        },
+        "usage": {
+          "type": "string",
+          "description": "Feature usage metric URL",
+          "format": "uri"
         }
       },
       "required": [
