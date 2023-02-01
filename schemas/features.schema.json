@@ -1,23 +1,42 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "definitions": {
+    "spec_url": {
+      "type": "string",
+      "description": "Specification URL",
+      "format": "uri"
+    },
+    "usage_stats_url": {
+      "type": "string",
+      "description": "Feature usage metric URL",
+      "format": "uri"
+    }
+  },
   "type": "object",
   "patternProperties": {
     "^[a-z0-9-]*$": {
       "type": "object",
       "properties": {
         "spec": {
-          "type": "string",
-          "description": "Specification URL",
-          "format": "uri"
+          "$ref": "#/definitions/spec_url"
         },
         "caniuse": {
           "type": "string",
           "description": "caniuse.com identifier"
         },
-        "usage": {
-          "type": "string",
-          "description": "Feature usage metric URL",
-          "format": "uri"
+        "usage_stats": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/usage_stats_url"
+            },
+            {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "$ref": "#/definitions/usage_stats_url"
+              }
+            }
+          ]
         }
       },
       "required": [
