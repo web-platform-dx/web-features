@@ -7,14 +7,14 @@ import YAML from 'yaml';
 interface FeatureData {
     spec: string,
     caniuse?: string,
-    constituentFeatures?: Array<{source: string, query: string}>
+    constituent_features?: {source: string, query: string}[];
 }
 
 // Some FeatureData keys aren't (and may never) be ready for publishing.
 // They're not part of the public schema (yet).
 // They'll be removed.
 const omittables = [
-    "constituentFeatures"
+    "constituent_features"
 ]
 
 function scrub(data: FeatureData) {
