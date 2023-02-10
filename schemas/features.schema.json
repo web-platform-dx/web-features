@@ -15,7 +15,7 @@
       "type": "object",
       "description": "Whether a feature is considered a \"baseline\" web platform feature and when it achieved that status",
       "properties": {
-        "status": {
+        "is_baseline": {
           "type": "boolean",
           "description": "Whether the feature achieved baseline status"
         },
@@ -35,7 +35,7 @@
         }
       },
       "required": [
-        "status"
+        "is_baseline"
       ],
       "additionalProperties": false
     }
