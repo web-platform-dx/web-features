@@ -14,7 +14,7 @@ interface FeatureData {
 type browserIdentifier = "chrome" | "firefox" | "safari";
 
 interface SupportStatus {
-    is_basline: boolean, since?: string, support?: {[K in browserIdentifier]?: string}
+    is_baseline: boolean, since?: string, support?: {[K in browserIdentifier]?: string}
 }
 
 // Some FeatureData keys aren't (and may never) be ready for publishing.
