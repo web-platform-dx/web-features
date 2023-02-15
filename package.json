@@ -11,22 +11,24 @@
   "main": "index.ts",
   "scripts": {
     "build": "ts-node scripts/build.ts",
-    "test": "npm run test:caniuse -- --quiet && npm run test:schema && npm run test:specs",
+    "test": "npm run test:caniuse -- --quiet && npm run test:schema && npm run test:specs && npm run format",
     "test:caniuse": "ts-node scripts/caniuse.ts",
     "test:schema": "ts-node scripts/schema.ts",
-    "test:specs": "ts-node scripts/specs.ts"
+    "test:specs": "ts-node scripts/specs.ts",
+    "test:format": "prettier --check .",
+    "format": "npx prettier --write ."
   },
   "devDependencies": {
     "@types/caniuse-lite": "^1.0.1",
-    "@types/node": "^18.11.18",
+    "@types/node": "^18.13.0",
     "ajv": "^8.12.0",
     "ajv-formats": "^2.1.1",
-    "caniuse-lite": "^1.0.30001450",
+    "caniuse-lite": "^1.0.30001452",
     "fast-json-stable-stringify": "^2.1.0",
-    "fdir": "^5.3.0",
+    "fdir": "^6.0.1",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5",
-    "web-specs": "^2.46.0",
+    "web-specs": "^2.47.0",
     "winston": "^3.8.2",
     "yaml": "^2.2.1"
   }
