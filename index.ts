@@ -8,7 +8,7 @@ interface FeatureData {
     spec: string,
     caniuse?: string,
     status?: SupportStatus
-    constituent_features?: {source: string, query: string}[];
+    constituent_features?: string[];
 }
 
 type browserIdentifier = "chrome" | "firefox" | "safari";
