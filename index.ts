@@ -8,7 +8,7 @@ interface FeatureData {
     spec: string,
     caniuse?: string,
     status?: SupportStatus
-    constituent_features?: string[];
+    compat_features?: string[];
 }
 
 type browserIdentifier = "chrome" | "firefox" | "safari";
@@ -21,7 +21,7 @@ interface SupportStatus {
 // They're not part of the public schema (yet).
 // They'll be removed.
 const omittables = [
-    "constituent_features"
+    "compat_features"
 ]
 
 function scrub(data: FeatureData) {
