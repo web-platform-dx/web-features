@@ -6,14 +6,29 @@ import YAML from 'yaml';
 
 interface FeatureData {
     spec: string,
-    caniuse?: string
+    caniuse?: string,
     status?: SupportStatus
+    compat_features?: string[];
 }
 
 type browserIdentifier = "chrome" | "firefox" | "safari";
 
 interface SupportStatus {
-    is_basline: boolean, since?: string, support?: {[K in browserIdentifier]?: string}
+    is_baseline: boolean, since?: string, support?: {[K in browserIdentifier]?: string}
+}
+
+// Some FeatureData keys aren't (and may never) be ready for publishing.
+// They're not part of the public schema (yet).
+// They'll be removed.
+const omittables = [
+    "compat_features"
+]
+
+function scrub(data: FeatureData) {
+    for (const key of omittables) {
+        delete data[key];
+    }
+    return data;
 }
 
 const filePaths = new fdir()
@@ -30,7 +45,7 @@ for (const fp of filePaths) {
 
     const src = fs.readFileSync(fp, { encoding: 'utf-8'});
     const data = YAML.parse(src);
-    features[key] = data;
+    features[key] = scrub(data);
 }
 
 export default features;

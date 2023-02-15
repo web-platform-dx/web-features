@@ -8,3 +8,11 @@ status:
     chrome: "99"
     firefox: "97"
     safari: "15.4"
+compat_features:
+  - css.at-rules.layer
+  - css.at-rules.import.layer
+  - api.CSSImportRule.layerName
+  - api.CSSLayerBlockRule
+  - api.CSSLayerBlockRule.name
+  - api.CSSLayerStatementRule
+  - api.CSSLayerStatementRule.nameList
