@@ -7,7 +7,14 @@ import YAML from 'yaml';
 interface FeatureData {
     spec: string,
     caniuse?: string,
+    status?: SupportStatus
     constituent_features?: {source: string, query: string}[];
+}
+
+type browserIdentifier = "chrome" | "firefox" | "safari";
+
+interface SupportStatus {
+    is_basline: boolean, since?: string, support?: {[K in browserIdentifier]?: string}
 }
 
 // Some FeatureData keys aren't (and may never) be ready for publishing.
