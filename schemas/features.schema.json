@@ -11,7 +11,7 @@
       "description": "Feature usage metric URL",
       "format": "uri"
     },
-    "baseline_status_report": {
+    "support_status": {
       "type": "object",
       "description": "Whether a feature is considered a \"baseline\" web platform feature and when it achieved that status",
       "properties": {
@@ -24,7 +24,7 @@
           "description": "When the feature achieved baseline status",
           "format": "date"
         },
-        "initial_versions": {
+        "support": {
           "type": "object",
           "description": "Browser identifiers and the first version from which they had baseline status",
           "patternProperties": {
@@ -66,11 +66,11 @@
             }
           ]
         },
-        "support_status": {
+        "status": {
           "type": "object",
           "properties": {
             "baseline": {
-              "$ref": "#/definitions/baseline_status_report"
+              "$ref": "#/definitions/support_status"
             }
           }
         }

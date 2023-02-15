@@ -7,13 +7,13 @@ import YAML from 'yaml';
 interface FeatureData {
     spec: string,
     caniuse?: string
-    support_status_summary: SupportStatusSummary
+    status?: SupportStatus
 }
 
 type browserIdentifier = "chrome" | "firefox" | "safari";
 
-interface SupportStatusSummary {
-    baseline: { status: boolean, since?: string, initial_versions?: {[K in browserIdentifier]?: string} }
+interface SupportStatus {
+    is_basline: boolean, since?: string, support?: {[K in browserIdentifier]?: string}
 }
 
 const filePaths = new fdir()
