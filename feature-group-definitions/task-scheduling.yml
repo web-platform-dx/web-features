@@ -1,0 +1,13 @@
+spec: https://wicg.github.io/scheduling-apis/
+compat_features:
+  - api.Scheduler
+  - api.Scheduler.postTask
+  - api.TaskController
+  - api.TaskController.setPriority
+  - api.TaskController.TaskController
+  - api.TaskPriorityChangeEvent
+  - api.TaskPriorityChangeEvent.previousPriority
+  - api.TaskPriorityChangeEvent.TaskPriorityChangeEvent
+  - api.TaskSignal
+  - api.TaskSignal.priority
+  - api.window.scheduler
