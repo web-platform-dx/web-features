@@ -1,6 +1,7 @@
 spec: https://drafts.csswg.org/css-grid-3/
 caniuse: css-grid
 compat_features:
+  - css.properties.align-content
   - css.properties.align-items
   - css.properties.align-self
   - css.properties.column-gap
@@ -24,7 +25,12 @@ compat_features:
   - css.properties.grid-template-columns.repeat
   - css.properties.grid-template-rows
   - css.properties.grid-template-rows.repeat
+  - css.properties.justify-content
   - css.properties.justify-items
   - css.properties.justify-self
+  - css.properties.place-content
+  - css.properties.place-items
+  - css.properties.place-self
   - css.properties.row-gap
   - css.types.flex
+  - css.types.minmax
