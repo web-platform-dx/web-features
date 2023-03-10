@@ -163,7 +163,7 @@ function diffJson(): string {
 
   execSync("npm install web-features", {
     cwd: temporaryDir,
-    encoding: "utf-8",
+    stdio: "inherit",
   });
 
   const releasedJson = join(
