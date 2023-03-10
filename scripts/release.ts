@@ -194,6 +194,7 @@ function diffJson(): string {
     rmSync(temporaryDir, { recursive: true });
     return result;
   } catch (err) {
+    // For diff's exit status, "1 means some differences were found, and 2 means trouble."
     if (err.status === 1) {
       const result = err.stdout;
       rmSync(temporaryDir, { recursive: true });
