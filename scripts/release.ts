@@ -63,11 +63,10 @@ yargs(process.argv.slice(2))
     command: "publish",
     describe: "Publish the package to npm",
     builder: (yargs) => {
-      return yargs
-        .positional("pr", {
-          describe: "the PR to rebase and update",
-        })
-        .demandOption("pr");
+      return yargs.option("dry-run", {
+        type: "boolean",
+        describe: "Do everything short of publishing",
+      });
     },
     handler: publish,
   }).argv;
@@ -150,8 +149,18 @@ function update(args) {
 }
 
 function publish(args) {
-  // TODO: Run `npm publish …`
-  throw Error("Not implemented");
+  preflight();
+
+  logger.info("Building release");
+  const buildCmd = `npm run build`;
+  execSync(buildCmd, { stdio: "inherit" });
+
+  logger.info("Publishing release");
+  let publishCmd = `npm publish`;
+  if (args.dryRun) {
+    publishCmd = `${publishCmd} --dry-run`;
+  }
+  execSync(publishCmd, { cwd: packages["web-features"], stdio: "inherit" });
 }
 
 function run(cmd: string) {
