@@ -24,6 +24,9 @@ const logger = winston.createLogger({
   transports: [loggerTransport],
 });
 
+let targetRepo = "web-platform-dx/feature-set";
+// targetRepo = "ddbeck/feature-set"; // Uncomment this line to point this at a fork for testing
+
 const packages = {
   "web-features": fileURLToPath(
     new URL("../packages/web-features", import.meta.url)
@@ -133,7 +136,7 @@ function init(args) {
     `--body-file=${temporaryBodyFile}`,
     `--base="main"`,
     `--head="${releaseBranch}"`,
-    // `--repo="ddbeck/feature-set"`, // Uncomment this line to point this at a fork for testing
+    `--repo="${targetRepo}"`,
   ].join(" ");
   run(pullRequestCmd);
 
