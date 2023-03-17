@@ -1,12 +1,5 @@
 import { execSync } from "node:child_process";
-import {
-  appendFileSync,
-  copyFileSync,
-  mkdtempSync,
-  readFileSync,
-  rmSync,
-  writeFileSync,
-} from "node:fs";
+import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -127,24 +120,26 @@ function init(args) {
   const bodyFile = fileURLToPath(
     new URL("release-pull-description.md", import.meta.url)
   );
-
-  const temporaryDir = mkdtempSync(join(tmpdir(), "pull-request-"));
-  const temporaryBodyFile = join(temporaryDir, "body.md");
-  copyFileSync(bodyFile, temporaryBodyFile);
-  appendFileSync(temporaryBodyFile, ["```diff", diff, "```"].join("\n"));
+  const body = [
+    readFileSync(bodyFile, { encoding: "utf-8" }),
+    "```diff",
+    diff,
+    "```",
+  ].join("\n");
 
   const pullRequestCmd = [
     "gh pr create",
     `--title="${title}"`,
     `--reviewer="${reviewer}"`,
-    `--body-file=${temporaryBodyFile}`,
+    `--body-file=-`,
     `--base="main"`,
     `--head="${releaseBranch}"`,
     `--repo="${targetRepo}"`,
   ].join(" ");
-  run(pullRequestCmd);
-
-  rmSync(temporaryDir, { recursive: true });
+  execSync(pullRequestCmd, {
+    input: body,
+    stdio: ["pipe", "inherit", "inherit"],
+  });
 }
 
 function update(args) {
