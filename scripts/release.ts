@@ -74,7 +74,7 @@ yargs(process.argv.slice(2))
   }).argv;
 
 function init(args) {
-  preflight();
+  preflight({ expectedBranch: "main " });
 
   const diff = diffJson();
 
@@ -155,6 +155,7 @@ function makePullBody(diff: string) {
 }
 
 function update(args) {
+  preflight({ expectedPull: args.pr });
   build();
 
   // TODO: Generate a diff
@@ -179,7 +180,7 @@ function update(args) {
 }
 
 function publish(args) {
-  preflight();
+  preflight({ expectedPull: args.pr });
   build();
 
   logger.info("Publishing release");
@@ -245,7 +246,10 @@ function diffJson(): string {
   }
 }
 
-function preflight(): void {
+function preflight(options: {
+  expectedBranch?: string;
+  expectedPull?: string;
+}): void {
   logger.info("Running preflight checks");
 
   logger.verbose("Checking that working directory is clean");
@@ -258,18 +262,6 @@ function preflight(): void {
       "Working directory is not clean. Stash your changes and try again."
     );
     process.exit(1);
-  }
-
-  logger.verbose("Checking base branch");
-  const headCmd = "git rev-parse --abbrev-ref HEAD";
-  logger.debug(headCmd);
-  const head = execSync(headCmd, { encoding: "utf-8" }).trim();
-
-  if (head !== "main") {
-    // TODO: uncomment below, after we create a GitHub Actions workflow to do this automatically
-    // logger.error("Base banch is not main");
-    // process.exit(1);
-    logger.warn("Base banch is not main");
   }
 
   logger.verbose("Confirming gh CLI is installed and authorized");
@@ -303,5 +295,29 @@ function preflight(): void {
   } catch (err) {
     logger.error("jq failed to run. Do you have it installed?", err.error);
     process.exit(1);
+  }
+
+  logger.verbose("Checking base branch");
+  const headCmd = "git rev-parse --abbrev-ref HEAD";
+  logger.debug(headCmd);
+  const head = execSync(headCmd, { encoding: "utf-8" }).trim();
+
+  let headRefName;
+  if (options.expectedPull) {
+    headRefName = execSync(
+      `gh pr view ${options.expectedPull} --json headRefName`,
+      {
+        encoding: "utf-8",
+      }
+    ).trim();
+  }
+
+  const expectedRef = headRefName ?? options.expectedBranch;
+
+  if (head !== expectedRef) {
+    // TODO: uncomment below, after we create a GitHub Actions workflow to run this script automatically
+    // logger.error(`Base banch is not ${expectedBranch}`);
+    // process.exit(1);
+    logger.warn(`Base banch is not ${expectedRef}`);
   }
 }
