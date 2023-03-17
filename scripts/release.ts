@@ -58,6 +58,11 @@ yargs(process.argv.slice(2))
           describe: "Update the Semantic Versioning level for the release",
           nargs: 1,
           choices: semverChoices,
+        })
+        .option("base", {
+          describe: "Branch to rebase against",
+          type: "string",
+          default: "main",
         });
     },
     handler: update,
@@ -97,12 +102,6 @@ function init(args) {
   // Bump version (no tag)
   const newVersion = bumpVersion(args.semverlevel);
 
-  // Commit
-  logger.info("Committing version bump");
-  const commitMessage = `Increment ${args.semverlevel} version to v${newVersion}`;
-  const commitCmd = `git commit --all --message="${commitMessage}"`;
-  run(commitCmd);
-
   // Push release branch
   logger.info("Pushing release branch");
   const pushCmd = `git push --set-upstream origin ${releaseBranch}`;
@@ -139,6 +138,13 @@ function bumpVersion(semverlevel: typeof semverChoices): string {
       encoding: "utf-8",
     })
   );
+
+  // Commit
+  logger.info("Committing version bump");
+  const commitMessage = `Increment ${semverlevel} version to v${version}`;
+  const commitCmd = `git commit --all --message="${commitMessage}"`;
+  run(commitCmd);
+
   return version;
 }
 
@@ -159,25 +165,50 @@ function update(args) {
   preflight({ expectedPull: args.pr });
   build();
 
-  // TODO: Generate a diff
-  // const diff = diffJson();
+  logger.verbose("Adding rebase-in-progress notice to PR description");
+  const { body } = JSON.parse(
+    execSync(`gh pr view "${args.pr}" --json body`, {
+      encoding: "utf-8",
+    })
+  );
+  const notice = "⛔️ Rebase in progress! ⛔️\n";
+  const editBodyCmd = `gh pr edit "${args.pr}" --body-file=-`;
+  execSync(editBodyCmd, {
+    input: [notice, body].join("\n\n"),
+    stdio: ["pipe", "inherit", "inherit"],
+  });
 
-  // TODO: Update description with new diff
+  logger.verbose("Rebasing");
+  try {
+    run(`git rebase ${args.base}`);
+  } catch (err) {
+    logger.error("Rebase failed, abandoning PR");
+    run(`git rebase --abort`);
+    run(
+      `gh pr comment "${args.pr}" --body="😱 Rebasing failed. Closing this PR. 😱"`
+    );
+    // run(`gh pr close ${args.pr}`); // TODO: Uncomment after testing
+  }
 
-  // TODO: Refactor `npm version` to shared function
-  // TODO: If selected, bump verison number by argument
-  // TODO: Commit results of `npm version`
+  const diff = diffJson();
+  const updatedBody = makePullBody(diff);
+  execSync(`gh pr edit "${args.pr}" --body-file=- --repo="${targetRepo}"`, {
+    input: updatedBody,
+    stdio: ["pipe", "inherit", "inherit"],
+  });
 
-  // TODO: Push
+  if (args.bump) {
+    const newVersion = bumpVersion(args.bump);
 
-  // TODO: Update description to hide rebase message
+    logger.info("Pushing release branch");
+    run(`git push origin HEAD`);
 
-  // const editPullCmd = [
-  //   `gh pr edit ${args.pr}`,
-  //   `--body-file=${temporaryBodyFile}`,
-  //   `--repo="${targetRepo}"`,
-  // ].join(" ");
-  throw Error("Not implemented");
+    logger.verbose("Updating PR title");
+    run(`gh pr edit "${args.pr}" --title="${pullTitleBase}${newVersion}"`);
+  }
+
+  logger.verbose("Removing rebase-in-progress notice from PR description");
+  execSync(editBodyCmd, { input: body, stdio: ["pipe", "inherit", "inherit"] });
 }
 
 function publish(args) {
