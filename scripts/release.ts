@@ -117,15 +117,7 @@ function init(args) {
   logger.info(`Creating PR for ${version}`);
   const title = `📦 Release web-features@${version}`;
   const reviewer = "ddbeck";
-  const bodyFile = fileURLToPath(
-    new URL("release-pull-description.md", import.meta.url)
-  );
-  const body = [
-    readFileSync(bodyFile, { encoding: "utf-8" }),
-    "```diff",
-    diff,
-    "```",
-  ].join("\n");
+  const body = makePullBody(diff);
 
   const pullRequestCmd = [
     "gh pr create",
@@ -142,18 +134,20 @@ function init(args) {
   });
 }
 
+function makePullBody(diff: string) {
+  const bodyFile = fileURLToPath(
+    new URL("release-pull-description.md", import.meta.url)
+  );
+  const body = [
+    readFileSync(bodyFile, { encoding: "utf-8" }),
+    "```diff",
+    diff,
+    "```",
+  ].join("\n");
+  return body;
+}
+
 function update(args) {
-  // TODO: Update description with rebase message
-
-  // TODO: Rebase
-  const rebaseCmd = "git rebase main";
-  const rebaseSuccess = true;
-  if (!rebaseSuccess) {
-    const abortCmd = "git rebase --abort";
-    // TODO: Post a comment that the rebase failed
-    // TODO: Close the PR without deleting the branch
-  }
-
   build();
 
   // TODO: Generate a diff
