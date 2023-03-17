@@ -58,7 +58,11 @@ yargs(process.argv.slice(2))
         .positional("pr", {
           describe: "the PR to rebase and update",
         })
-        .demandOption("pr");
+        .option("bump", {
+          describe: "Update the Semantic Versioning level for the release",
+          nargs: 1,
+          choices: ["major", "minor", "patch", "prerelease"],
+        });
     },
     handler: update,
   })
@@ -144,19 +148,43 @@ function init(args) {
 }
 
 function update(args) {
+  // TODO: Update description with rebase message
+
   // TODO: Rebase
-  // TODO: Run `npm run build`
-  // TODO: Commit results of `npm run build`
-  // TODO: Update PR diff
+  const rebaseCmd = "git rebase main";
+  const rebaseSuccess = true;
+  if (!rebaseSuccess) {
+    const abortCmd = "git rebase --abort";
+    // TODO: Post a comment that the rebase failed
+    // TODO: Close the PR without deleting the branch
+  }
+
+  build();
+
+  // TODO: Generate a diff
+  // const diff = diffJson();
+
+  // TODO: Update description with new diff
+
+  // TODO: Refactor `npm version` to shared function
+  // TODO: If selected, bump verison number by argument
+  // TODO: Commit results of `npm version`
+
+  // TODO: Push
+
+  // TODO: Update description to hide rebase message
+
+  // const editPullCmd = [
+  //   `gh pr edit ${args.pr}`,
+  //   `--body-file=${temporaryBodyFile}`,
+  //   `--repo="${targetRepo}"`,
+  // ].join(" ");
   throw Error("Not implemented");
 }
 
 function publish(args) {
   preflight();
-
-  logger.info("Building release");
-  const buildCmd = `npm run build`;
-  execSync(buildCmd, { stdio: "inherit" });
+  build();
 
   logger.info("Publishing release");
   let publishCmd = `npm publish`;
@@ -168,6 +196,11 @@ function publish(args) {
 
 function run(cmd: string) {
   execSync(cmd, { stdio: "inherit" });
+}
+
+function build() {
+  logger.info("Building release");
+  run("npm run build");
 }
 
 function diffJson(): string {
