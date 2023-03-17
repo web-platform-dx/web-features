@@ -7,6 +7,8 @@ import { fileURLToPath } from "node:url";
 import winston from "winston";
 import yargs from "yargs";
 
+const semverChoices = ["major", "minor", "patch", "prerelease"] as const;
+
 const loggerTransport = new winston.transports.Console({ level: "silly" });
 const logger = winston.createLogger({
   level: "info",
@@ -36,7 +38,7 @@ yargs(process.argv.slice(2))
       return yargs
         .positional("semverlevel", {
           describe: "the Semantic Versioning level for the release",
-          choices: ["major", "minor", "patch", "prerelease"],
+          choices: semverChoices,
           default: "patch",
         })
         .demandOption("semverlevel", "You must provide a semver level");
@@ -54,7 +56,7 @@ yargs(process.argv.slice(2))
         .option("bump", {
           describe: "Update the Semantic Versioning level for the release",
           nargs: 1,
-          choices: ["major", "minor", "patch", "prerelease"],
+          choices: semverChoices,
         });
     },
     handler: update,
@@ -92,19 +94,11 @@ function init(args) {
   execSync(checkoutCmd);
 
   // Bump version (no tag)
-  const bumpCmd = `npm version --no-git-tag-version ${args.semverlevel}`;
-  logger.info("Bumping version number");
-  logger.debug(bumpCmd);
-  execSync(bumpCmd, { cwd: packages["web-features"], stdio: "inherit" });
-  const { version } = JSON.parse(
-    readFileSync(join(packages["web-features"], "package.json"), {
-      encoding: "utf-8",
-    })
-  );
+  const newVersion = bumpVersion(args.semverlevel);
 
   // Commit
   logger.info("Committing version bump");
-  const commitMessage = `Increment ${args.semverlevel} version to v${version}`;
+  const commitMessage = `Increment ${args.semverlevel} version to v${newVersion}`;
   const commitCmd = `git commit --all --message="${commitMessage}"`;
   run(commitCmd);
 
@@ -114,8 +108,8 @@ function init(args) {
   run(pushCmd);
 
   // Create PR
-  logger.info(`Creating PR for ${version}`);
-  const title = `📦 Release web-features@${version}`;
+  logger.info(`Creating PR for ${newVersion}`);
+  const title = `📦 Release web-features@${newVersion}`;
   const reviewer = "ddbeck";
   const body = makePullBody(diff);
 
@@ -132,6 +126,19 @@ function init(args) {
     input: body,
     stdio: ["pipe", "inherit", "inherit"],
   });
+}
+
+function bumpVersion(semverlevel: typeof semverChoices): string {
+  const bumpCmd = `npm version --no-git-tag-version ${semverlevel}`;
+  logger.info("Bumping version number");
+  logger.debug(bumpCmd);
+  execSync(bumpCmd, { cwd: packages["web-features"], stdio: "inherit" });
+  const { version } = JSON.parse(
+    readFileSync(join(packages["web-features"], "package.json"), {
+      encoding: "utf-8",
+    })
+  );
+  return version;
 }
 
 function makePullBody(diff: string) {
