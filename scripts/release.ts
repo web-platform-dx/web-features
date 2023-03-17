@@ -218,7 +218,7 @@ function diffJson(): string {
   const prettyReleasedJsonFp = join(temporaryDir, "index.released.pretty.json");
   writeFileSync(prettyReleasedJsonFp, prettyReleasedJson);
 
-  execSync("npm run build", { stdio: "inherit" });
+  build();
   const preparedJson = join(packages["web-features"], "index.json");
   const prettyPreparedJson = execSync(`jq . "${preparedJson}"`, {
     encoding: "utf-8",
