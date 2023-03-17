@@ -172,7 +172,7 @@ function update(args) {
       encoding: "utf-8",
     })
   );
-  const notice = "⛔️ Rebase in progress! ⛔️\n";
+  const notice = "⛔️ Update in progress! ⛔️\n";
   const editBodyCmd = `gh pr edit "${args.pr}" --body-file=-`;
   execSync(editBodyCmd, {
     input: [notice, body].join("\n\n"),
@@ -183,22 +183,16 @@ function update(args) {
   try {
     run(`git rebase ${args.base}`);
   } catch (err) {
-    logger.error("Rebase failed, abandoning PR");
+    logger.error("Rebasing failed. Abandoning PR.");
     run(`git rebase --abort`);
     run(
       `gh pr comment "${args.pr}" --body="😱 Rebasing failed. Closing this PR. 😱"`
     );
-    logger.error("Rebasing failed. Abandoning PR.");
+    run(`gh pr close ${args.pr}`);
     process.exit(1);
-    // run(`gh pr close ${args.pr}`); // TODO: Uncomment after testing
   }
 
   const diff = diffJson();
-  const updatedBody = makePullBody(diff);
-  execSync(`gh pr edit "${args.pr}" --body-file=- --repo="${targetRepo}"`, {
-    input: updatedBody,
-    stdio: ["pipe", "inherit", "inherit"],
-  });
 
   if (args.bump) {
     const newVersion = bumpVersion(args.bump);
@@ -210,8 +204,14 @@ function update(args) {
     run(`gh pr edit "${args.pr}" --title="${pullTitleBase}${newVersion}"`);
   }
 
-  logger.verbose("Removing rebase-in-progress notice from PR description");
+  logger.verbose("Removing update-in-progress notice from PR description");
   execSync(editBodyCmd, { input: body, stdio: ["pipe", "inherit", "inherit"] });
+
+  const updatedBody = makePullBody(diff);
+  execSync(`gh pr edit "${args.pr}" --body-file=- --repo="${targetRepo}"`, {
+    input: updatedBody,
+    stdio: ["pipe", "inherit", "inherit"],
+  });
 }
 
 function publish(args) {
@@ -344,22 +344,19 @@ function preflight(options: {
   // undefined, then we ask GitHub what to expect.
   let expectedRef;
   if (typeof options.expectedBranch === "undefined") {
-    const headRefName = execSync(
-      `gh pr view ${options.expectedPull} --json headRefName`,
-      {
+    const { headRefName } = JSON.parse(
+      execSync(`gh pr view ${options.expectedPull} --json headRefName`, {
         encoding: "utf-8",
-      }
-    ).trim();
-
-    // headRefName is in the format `owner:branch`
-    expectedRef = headRefName.split(":")[1];
+      })
+    );
+    expectedRef = headRefName;
   } else {
     expectedRef = options.expectedBranch;
   }
 
   if (head !== expectedRef) {
     // TODO: uncomment below, after we create a GitHub Actions workflow to run this script automatically
-    // logger.error(`Base banch is not ${expectedBranch}`);
+    // logger.error(`Starting banch is not ${expectedRef}`);
     // process.exit(1);
     logger.warn(`Starting banch is not ${expectedRef}`);
   }
