@@ -188,6 +188,8 @@ function update(args) {
     run(
       `gh pr comment "${args.pr}" --body="😱 Rebasing failed. Closing this PR. 😱"`
     );
+    logger.error("Rebasing failed. Abandoning PR.");
+    process.exit(1);
     // run(`gh pr close ${args.pr}`); // TODO: Uncomment after testing
   }
 
