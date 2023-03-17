@@ -221,6 +221,8 @@ function publish(args) {
     publishCmd = `${publishCmd} --dry-run`;
   }
   execSync(publishCmd, { cwd: packages["web-features"], stdio: "inherit" });
+
+  // TODO: tag release
 }
 
 function run(cmd: string) {
