@@ -47,12 +47,13 @@ yargs(process.argv.slice(2))
     handler: init,
   })
   .command({
-    command: "update",
+    command: "update <pr>",
     describe: "Update an existing release pull request",
     builder: (yargs) => {
       return yargs
         .positional("pr", {
-          describe: "the PR to rebase and update",
+          describe: "the PR (URL, number, or branch) to rebase and update",
+          type: "string",
         })
         .option("bump", {
           describe: "Update the Semantic Versioning level for the release",
@@ -331,27 +332,33 @@ function preflight(options: {
     process.exit(1);
   }
 
-  logger.verbose("Checking base branch");
+  logger.verbose("Checking starting branch");
   const headCmd = "git rev-parse --abbrev-ref HEAD";
   logger.debug(headCmd);
   const head = execSync(headCmd, { encoding: "utf-8" }).trim();
 
-  let headRefName;
-  if (options.expectedPull) {
-    headRefName = execSync(
+  // The current branch (`head`, here) is easy enough to determine. The
+  // *correct* branch is harder to check. If `options.expectedBranch` is
+  // undefined, then we ask GitHub what to expect.
+  let expectedRef;
+  if (typeof options.expectedBranch === "undefined") {
+    const headRefName = execSync(
       `gh pr view ${options.expectedPull} --json headRefName`,
       {
         encoding: "utf-8",
       }
     ).trim();
-  }
 
-  const expectedRef = headRefName ?? options.expectedBranch;
+    // headRefName is in the format `owner:branch`
+    expectedRef = headRefName.split(":")[1];
+  } else {
+    expectedRef = options.expectedBranch;
+  }
 
   if (head !== expectedRef) {
     // TODO: uncomment below, after we create a GitHub Actions workflow to run this script automatically
     // logger.error(`Base banch is not ${expectedBranch}`);
     // process.exit(1);
-    logger.warn(`Base banch is not ${expectedRef}`);
+    logger.warn(`Starting banch is not ${expectedRef}`);
   }
 }
