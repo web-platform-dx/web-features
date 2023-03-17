@@ -19,6 +19,7 @@ const logger = winston.createLogger({
   transports: [loggerTransport],
 });
 
+const pullTitleBase = `📦 Release web-features@`;
 let targetRepo = "web-platform-dx/feature-set";
 // targetRepo = "ddbeck/feature-set"; // Uncomment this line to point this at a fork for testing
 
@@ -109,7 +110,7 @@ function init(args) {
 
   // Create PR
   logger.info(`Creating PR for ${newVersion}`);
-  const title = `📦 Release web-features@${newVersion}`;
+  const title = [pullTitleBase, newVersion].join();
   const reviewer = "ddbeck";
   const body = makePullBody(diff);
 
