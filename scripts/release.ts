@@ -134,11 +134,7 @@ function bumpVersion(semverlevel: typeof semverChoices): string {
   logger.info("Bumping version number");
   logger.debug(bumpCmd);
   execSync(bumpCmd, { cwd: packages["web-features"], stdio: "inherit" });
-  const { version } = JSON.parse(
-    readFileSync(join(packages["web-features"], "package.json"), {
-      encoding: "utf-8",
-    })
-  );
+  const { version } = readPackageJSON(packages["web-features"]);
 
   // Commit
   logger.info("Committing version bump");
@@ -215,8 +211,12 @@ function update(args) {
 }
 
 function publish(args) {
-  preflight({ expectedPull: args.pr });
+  preflight({ expectedBranch: "main" });
   build();
+
+  const { version } = readPackageJSON(packages["web-features"]);
+  const tagCmd = `git tag -a testing/web-features/${version}`;
+  run(tagCmd);
 
   logger.info("Publishing release");
   let publishCmd = `npm publish`;
@@ -224,8 +224,6 @@ function publish(args) {
     publishCmd = `${publishCmd} --dry-run`;
   }
   execSync(publishCmd, { cwd: packages["web-features"], stdio: "inherit" });
-
-  // TODO: tag release
 }
 
 function run(cmd: string) {
@@ -235,6 +233,14 @@ function run(cmd: string) {
 function build() {
   logger.info("Building release");
   run("npm run build");
+}
+
+function readPackageJSON(packageDir) {
+  return JSON.parse(
+    readFileSync(join(packageDir, "package.json"), {
+      encoding: "utf-8",
+    })
+  );
 }
 
 function diffJson(): string {
