@@ -33,7 +33,7 @@ yargs(process.argv.slice(2))
   .scriptName("release")
   .usage("$0 <cmd> [args]")
   .command({
-    command: "init",
+    command: "init <semverlevel>",
     describe: "Start a new release pull request",
     builder: (yargs) => {
       return yargs
