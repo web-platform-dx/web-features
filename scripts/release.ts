@@ -110,8 +110,8 @@ function init(args) {
   run(pushCmd);
 
   // Create PR
-  logger.info(`Creating PR for ${newVersion}`);
-  const title = [pullTitleBase, newVersion].join();
+  const title = [pullTitleBase, newVersion].join("");
+  logger.info(`Creating PR: ${title}`);
   const reviewer = "ddbeck";
   const body = makePullBody(diff);
 
