@@ -82,7 +82,7 @@ yargs(process.argv.slice(2))
   }).argv;
 
 function init(args) {
-  preflight({ expectedBranch: "main " });
+  preflight({ expectedBranch: "main" });
 
   const diff = diffJson();
 
