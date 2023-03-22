@@ -164,12 +164,12 @@ function update(args) {
 
   logger.verbose("Adding rebase-in-progress notice to PR description");
   const { body } = JSON.parse(
-    execSync(`gh pr view "${args.pr}" --json body`, {
+    execSync(`gh pr view --repo="${targetRepo}" "${args.pr}" --json body`, {
       encoding: "utf-8",
     })
   );
   const notice = "⛔️ Update in progress! ⛔️\n";
-  const editBodyCmd = `gh pr edit "${args.pr}" --body-file=-`;
+  const editBodyCmd = `gh pr edit --repo="${targetRepo}" "${args.pr}" --body-file=-`;
   execSync(editBodyCmd, {
     input: [notice, body].join("\n\n"),
     stdio: ["pipe", "inherit", "inherit"],
@@ -182,9 +182,9 @@ function update(args) {
     logger.error("Rebasing failed. Abandoning PR.");
     run(`git rebase --abort`);
     run(
-      `gh pr comment "${args.pr}" --body="😱 Rebasing failed. Closing this PR. 😱"`
+      `gh pr comment --repo="${targetRepo}" "${args.pr}" --body="😱 Rebasing failed. Closing this PR. 😱"`
     );
-    run(`gh pr close ${args.pr}`);
+    run(`gh pr close --repo="${targetRepo}" "${args.pr}"`);
     process.exit(1);
   }
 
@@ -351,9 +351,12 @@ function preflight(options: {
   let expectedRef;
   if (typeof options.expectedBranch === "undefined") {
     const { headRefName } = JSON.parse(
-      execSync(`gh pr view ${options.expectedPull} --json headRefName`, {
-        encoding: "utf-8",
-      })
+      execSync(
+        `gh pr view --repo="${targetRepo}" "${options.expectedPull}" --json headRefName`,
+        {
+          encoding: "utf-8",
+        }
+      )
     );
     expectedRef = headRefName;
   } else {
