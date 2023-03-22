@@ -75,6 +75,7 @@ yargs(process.argv.slice(2))
       return yargs.option("dry-run", {
         type: "boolean",
         describe: "Do everything short of publishing",
+        default: true,
       });
     },
     handler: publish,
