@@ -216,10 +216,10 @@ function update(args) {
 function publish(args) {
   preflight({ expectedBranch: "main" });
   build();
-
   const { version } = readPackageJSON(packages["web-features"]);
-  const tagCmd = `git tag -a testing/web-features/${version}`;
-  run(tagCmd);
+  const tag = `web-features/${version}`;
+  run(`git tag --annotate "${tag}" --message="web-features ${version}"`);
+  run(`git push origin ${tag}`);
 
   logger.info("Publishing release");
   let publishCmd = `npm publish`;
