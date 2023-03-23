@@ -20,8 +20,6 @@ const logger = winston.createLogger({
 });
 
 const pullTitleBase = `📦 Release web-features@`;
-let targetRepo = "web-platform-dx/feature-set";
-// targetRepo = "ddbeck/feature-set"; // Uncomment this line to point this at a fork for testing
 
 const packages = {
   "web-features": fileURLToPath(
@@ -32,6 +30,11 @@ const packages = {
 yargs(process.argv.slice(2))
   .scriptName("release")
   .usage("$0 <cmd> [args]")
+  .option("target-repo", {
+    describe: "Select upstream GitHub repository",
+    nargs: 1,
+    default: "web-platform-dx/feature-set",
+  })
   .command({
     command: "init <semverlevel>",
     describe: "Start a new release pull request",
@@ -122,7 +125,7 @@ function init(args) {
     `--body-file=-`,
     `--base="main"`,
     `--head="${releaseBranch}"`,
-    `--repo="${targetRepo}"`,
+    `--repo="${args.targetRepo}"`,
   ].join(" ");
   execSync(pullRequestCmd, {
     input: body,
@@ -160,17 +163,20 @@ function makePullBody(diff: string) {
 }
 
 function update(args) {
-  preflight({ expectedPull: args.pr });
+  preflight({ expectedPull: args.pr, targetRepo: args.targetRepo });
   build();
 
   logger.verbose("Adding rebase-in-progress notice to PR description");
   const { body } = JSON.parse(
-    execSync(`gh pr view --repo="${targetRepo}" "${args.pr}" --json body`, {
-      encoding: "utf-8",
-    })
+    execSync(
+      `gh pr view --repo="${args.targetRepo}" "${args.pr}" --json body`,
+      {
+        encoding: "utf-8",
+      }
+    )
   );
   const notice = "⛔️ Update in progress! ⛔️\n";
-  const editBodyCmd = `gh pr edit --repo="${targetRepo}" "${args.pr}" --body-file=-`;
+  const editBodyCmd = `gh pr edit --repo="${args.targetRepo}" "${args.pr}" --body-file=-`;
   execSync(editBodyCmd, {
     input: [notice, body].join("\n\n"),
     stdio: ["pipe", "inherit", "inherit"],
@@ -183,9 +189,9 @@ function update(args) {
     logger.error("Rebasing failed. Abandoning PR.");
     run(`git rebase --abort`);
     run(
-      `gh pr comment --repo="${targetRepo}" "${args.pr}" --body="😱 Rebasing failed. Closing this PR. 😱"`
+      `gh pr comment --repo="${args.targetRepo}" "${args.pr}" --body="😱 Rebasing failed. Closing this PR. 😱"`
     );
-    run(`gh pr close --repo="${targetRepo}" "${args.pr}"`);
+    run(`gh pr close --repo="${args.targetRepo}" "${args.pr}"`);
     process.exit(1);
   }
 
@@ -199,7 +205,7 @@ function update(args) {
 
     logger.verbose("Updating PR title");
     run(
-      `gh pr edit --repo="${targetRepo}" "${args.pr}" --title="${pullTitleBase}${newVersion}"`
+      `gh pr edit --repo="${args.targetRepo}" "${args.pr}" --title="${pullTitleBase}${newVersion}"`
     );
   }
 
@@ -207,10 +213,13 @@ function update(args) {
   execSync(editBodyCmd, { input: body, stdio: ["pipe", "inherit", "inherit"] });
 
   const updatedBody = makePullBody(diff);
-  execSync(`gh pr edit --repo="${targetRepo}" "${args.pr}" --body-file=-`, {
-    input: updatedBody,
-    stdio: ["pipe", "inherit", "inherit"],
-  });
+  execSync(
+    `gh pr edit --repo="${args.targetRepo}" "${args.pr}" --body-file=-`,
+    {
+      input: updatedBody,
+      stdio: ["pipe", "inherit", "inherit"],
+    }
+  );
 }
 
 function publish(args) {
@@ -292,10 +301,16 @@ function diffJson(): string {
   }
 }
 
-function preflight(options: {
-  expectedBranch?: string;
-  expectedPull?: string;
-}): void {
+type PreflightOptions =
+  | {
+      expectedPull: string;
+      targetRepo: string;
+    }
+  | {
+      expectedBranch: string;
+    };
+
+function preflight(options: PreflightOptions): void {
   logger.info("Running preflight checks");
 
   logger.verbose("Checking that working directory is clean");
@@ -352,10 +367,10 @@ function preflight(options: {
   // *correct* branch is harder to check. If `options.expectedBranch` is
   // undefined, then we ask GitHub what to expect.
   let expectedRef;
-  if (typeof options.expectedBranch === "undefined") {
+  if ("expectedPull" in options) {
     const { headRefName } = JSON.parse(
       execSync(
-        `gh pr view --repo="${targetRepo}" "${options.expectedPull}" --json headRefName`,
+        `gh pr view --repo="${options.targetRepo}" "${options.expectedPull}" --json headRefName`,
         {
           encoding: "utf-8",
         }
