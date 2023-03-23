@@ -4,6 +4,8 @@ import path from 'path';
 import { fdir } from 'fdir';
 import YAML from 'yaml';
 
+import { isLockfileFresh, lockout } from './lock.js';
+
 /** Web platform feature */
 export interface FeatureData {
     /** Specification URL
@@ -52,7 +54,7 @@ function scrub(data: FeatureData) {
 
 const filePaths = new fdir()
     .withBasePath()
-    .filter((fp) => fp.endsWith('.yml'))
+    .filter((fp) => fp.endsWith('.yml') && !fp.endsWith('.lockfile.yml'))
     .crawl('feature-group-definitions')
     .sync() as string[];
 
@@ -64,7 +66,31 @@ for (const fp of filePaths) {
 
     const src = fs.readFileSync(fp, { encoding: 'utf-8'});
     const data = YAML.parse(src);
-    features[key] = scrub(data);
+
+    const lockFp = path.join(path.dirname(fp), `${key}.lockfile.yml`);
+    const lockData = {};
+    
+    try {
+        const lockSrc = fs.readFileSync(lockFp, { encoding: 'utf-8'} );
+        try {
+            const parsed = YAML.parse(lockSrc);
+            if (isLockfileFresh(data, parsed)) {
+                Object.assign(lockData, parsed);
+            } else {
+                console.warn(`${fp} doesn't have a fresh lockfile. Regenerating.`);
+                Object.assign(lockData, lockout(fp, data));
+            }
+        } catch (err) {
+            console.warn(`${fp} doesn't have a valid lockfile. Regenerating.`);
+            Object.assign(lockData, lockout(fp, data));
+        }
+    } catch (err) {
+        console.warn(`${fp} doesn't have a lockfile. Generating.`);
+        Object.assign(lockData, lockout(fp, data));
+    }
+
+    delete lockData["hash"];  // Don't expose hashes to consumers
+    features[key] = scrub({ ...data, ...lockData });
 }
 
 export default features;
