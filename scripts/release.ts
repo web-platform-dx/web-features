@@ -198,14 +198,16 @@ function update(args) {
     run(`git push origin HEAD`);
 
     logger.verbose("Updating PR title");
-    run(`gh pr edit "${args.pr}" --title="${pullTitleBase}${newVersion}"`);
+    run(
+      `gh pr edit --repo="${targetRepo}" "${args.pr}" --title="${pullTitleBase}${newVersion}"`
+    );
   }
 
   logger.verbose("Removing update-in-progress notice from PR description");
   execSync(editBodyCmd, { input: body, stdio: ["pipe", "inherit", "inherit"] });
 
   const updatedBody = makePullBody(diff);
-  execSync(`gh pr edit "${args.pr}" --body-file=- --repo="${targetRepo}"`, {
+  execSync(`gh pr edit --repo="${targetRepo}" "${args.pr}" --body-file=-`, {
     input: updatedBody,
     stdio: ["pipe", "inherit", "inherit"],
   });
