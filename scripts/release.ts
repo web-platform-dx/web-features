@@ -224,6 +224,27 @@ function update(args) {
 
 function publish(args) {
   preflight({ expectedBranch: "main" });
+
+  try {
+    const accessList = execSync("npm access list packages --json", {
+      stdio: "pipe",
+      encoding: "utf-8",
+    });
+    if (JSON.parse(accessList)["web-features"] !== "read-write") {
+      logger.error(
+        "Write access to the package is required. Try setting the repository secret or run `npm adduser`."
+      );
+      process.exit(1);
+    }
+  } catch (err) {
+    logger.error(
+      "The exit status of `npm access list packages` was non-zero. Do you have an `.npmrc` file? If not, try running `npm adduser`.",
+      err.error
+    );
+    logger.error(err.stderr);
+    process.exit(1);
+  }
+
   build();
   const { version } = readPackageJSON(packages["web-features"]);
   const tag = `web-features/${version}`;
