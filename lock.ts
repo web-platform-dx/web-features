@@ -31,8 +31,10 @@ function resolve(feature: FeatureData) {
   const resolved: Partial<FeatureData> = {};
 
   for (const [key, value] of Object.entries(feature)) {
-    if (key === "compat_features") {
-      resolved[key] = lockCompatFeatures(value);
+    if (key in resolvers) {
+      resolved[key] = resolvers[key](value);
+    } else {
+      resolved[key] = value;
     }
   }
 
