@@ -6,12 +6,27 @@ import features from '../index.js';
 
 const specUrls = webSpecs.map(spec => new URL(spec.nightly.url));
 
-function isOK(url: URL) {
+type exception = [url: string, message: string];
+const exceptions: exception[] = [
+    [
+        "https://wicg.github.io/navigation-api/",
+        "This spec is moving to WHATWG HTML. Remove this exception when https://github.com/whatwg/html/pull/8502 merges."
+    ],
+];
+
+function isOK(url: URL, allowlist: exception[] = exceptions) {
     for (const specUrl of specUrls) {
         if (specUrl.protocol !== url.protocol || specUrl.origin !== url.origin) {
             continue;
         }
         if (url.pathname.startsWith(specUrl.pathname)) {
+            return true;
+        }
+    }
+
+    for (const [specUrl, message] of allowlist) {
+        if (specUrl === url.toString()) {
+            console.warn(`${specUrl}: ${message}`);
             return true;
         }
     }
@@ -22,6 +37,8 @@ function testIsOK() {
     assert.ok(isOK(new URL("https://tc39.es/ecma262/multipage/")));
     assert.ok(isOK(new URL("https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.at")));
     assert.ok(!isOK(new URL("https://typo.csswg.org/css-anchor-position-1/#anchoring")));
+    // Skip noisy test
+    // assert.ok(isOK(new URL("https://www.example.com/"), [["https://www.example.com/", "Remove this exception when…"]]));
 };
 testIsOK();
 
