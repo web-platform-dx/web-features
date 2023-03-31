@@ -89,7 +89,6 @@ for (const fp of filePaths) {
         Object.assign(lockData, lockout(fp, data));
     }
 
-    delete lockData["hash"];  // Don't expose hashes to consumers
     features[key] = scrub({ ...data, ...lockData });
 }
 

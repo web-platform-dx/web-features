@@ -1,4 +1,3 @@
-import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -7,36 +6,37 @@ import YAML from "yaml";
 
 import { FeatureData } from ".";
 
-type Lock = {
-  hash: string;
-  compat_features?: string[];
-};
-
-export function lockout(filePath: string, featureData: FeatureData): Lock {
-  const hash = md5(featureData);
-
+export function lockout(filePath: string, featureData: FeatureData) {
   const featureKey = path.basename(filePath).split(".yml")[0];
   const lockFp = path.join(
     path.dirname(filePath),
     `${featureKey}.lockfile.yml`
   );
 
-  const lockData: Lock = { hash };
-  if ("compat_features" in featureData) {
-    lockData.compat_features = lockCompatFeatures(featureData.compat_features);
-  }
-
+  const lockData = resolve(featureData);
   fs.writeFileSync(lockFp, YAML.stringify(lockData), { encoding: "utf-8" });
 
   return lockData;
 }
 
-export function isLockfileFresh(feature: FeatureData, lockfile: Lock) {
-  return md5(feature) === lockfile.hash;
+export function isLockfileFresh(feature: FeatureData, lockfile: FeatureData) {
+  return stringify(resolve(feature)) === stringify(lockfile);
 }
 
-function md5(data: FeatureData) {
-  return crypto.createHash("md5").update(stringify(data)).digest("hex");
+const resolvers = {
+  compat_features: lockCompatFeatures,
+};
+
+function resolve(feature: FeatureData) {
+  const resolved: Partial<FeatureData> = {};
+
+  for (const [key, value] of Object.entries(feature)) {
+    if (key === "compat_features") {
+      resolved[key] = lockCompatFeatures(value);
+    }
+  }
+
+  return resolved as FeatureData;
 }
 
 function lockCompatFeatures(compatFeatures: string[]): string[] {
