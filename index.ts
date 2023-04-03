@@ -2,9 +2,10 @@ import fs from 'fs';
 import path from 'path';
 
 import { fdir } from 'fdir';
+import stringify from "fast-json-stable-stringify";
 import YAML from 'yaml';
 
-import { isLockfileFresh, lockout } from './lock.js';
+import { lockout } from './lock.js';
 
 /** Web platform feature */
 export interface FeatureData {
@@ -46,10 +47,12 @@ const omittables = [
 ]
 
 function scrub(data: FeatureData) {
+    // TODO: there's no structuredClone in Node 16, so we'll do the next best thing
+    const scrubbed = JSON.parse(stringify(data));
     for (const key of omittables) {
-        delete data[key];
+        delete scrubbed[key];
     }
-    return data;
+    return scrubbed;
 }
 
 const filePaths = new fdir()
@@ -66,30 +69,15 @@ for (const fp of filePaths) {
 
     const src = fs.readFileSync(fp, { encoding: 'utf-8'});
     const data = YAML.parse(src);
+    const resolved = lockout(fp, data);
 
+    features[key] = scrub(resolved);
+
+    // Clean out lockfiles that are mere copies of the original file
     const lockFp = path.join(path.dirname(fp), `${key}.lockfile.yml`);
-    const lockData = {};
-    
-    try {
-        const lockSrc = fs.readFileSync(lockFp, { encoding: 'utf-8'} );
-        try {
-            const parsed = YAML.parse(lockSrc);
-            if (isLockfileFresh(data, parsed)) {
-                Object.assign(lockData, parsed);
-            } else {
-                console.warn(`${fp} doesn't have a fresh lockfile. Regenerating.`);
-                Object.assign(lockData, lockout(fp, data));
-            }
-        } catch (err) {
-            console.warn(`${fp} doesn't have a valid lockfile. Regenerating.`);
-            Object.assign(lockData, lockout(fp, data));
-        }
-    } catch (err) {
-        console.warn(`${fp} doesn't have a lockfile. Generating.`);
-        Object.assign(lockData, lockout(fp, data));
+    if (stringify(data) === stringify(resolved)) {
+        fs.rmSync(lockFp);
     }
-
-    features[key] = scrub({ ...data, ...lockData });
 }
 
 export default features;
