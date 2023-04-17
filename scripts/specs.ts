@@ -19,7 +19,11 @@ function isOK(url: URL, allowlist: allowlistItem[] = defaultAllowlist) {
         if (specUrl.origin !== url.origin) {
             continue;
         }
-        if (url.pathname.startsWith(specUrl.pathname)) {
+        if (specUrl.pathname === url.pathname) {
+            // that is, specUrl and url are the same, with the exception of the hash or query (`search`) string
+            return true;
+        }
+        if (specUrl.pathname.includes("/multipage") && url.pathname.startsWith(specUrl.pathname)) {
             return true;
         }
     }
@@ -37,6 +41,7 @@ function testIsOK() {
     assert.ok(isOK(new URL("https://tc39.es/ecma262/multipage/")));
     assert.ok(isOK(new URL("https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.at")));
     assert.ok(!isOK(new URL("https://typo.csswg.org/css-anchor-position-1/#anchoring")));
+    assert.ok(!isOK(new URL("https://w3c.github.io/gamepad/extensions.htmltypo")))
     // Skip noisy test
     // assert.ok(isOK(new URL("https://www.example.com/"), [["https://www.example.com/", "Remove this exception when…"]]));
 };
