@@ -16,7 +16,7 @@ const defaultAllowlist: allowlistItem[] = [
 
 function isOK(url: URL, allowlist: allowlistItem[] = defaultAllowlist) {
     for (const specUrl of specUrls) {
-        if (specUrl.protocol !== url.protocol || specUrl.origin !== url.origin) {
+        if (specUrl.origin !== url.origin) {
             continue;
         }
         if (url.pathname.startsWith(specUrl.pathname)) {
