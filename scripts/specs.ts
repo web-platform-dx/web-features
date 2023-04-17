@@ -23,7 +23,7 @@ function isOK(url: URL, allowlist: allowlistItem[] = defaultAllowlist) {
             // that is, specUrl and url are the same, with the exception of the hash or query (`search`) string
             return true;
         }
-        if (specUrl.pathname.includes("/multipage") && url.pathname.startsWith(specUrl.pathname)) {
+        if (specUrl.pathname.includes("/multipage/") && url.pathname.startsWith(specUrl.pathname)) {
             return true;
         }
     }
