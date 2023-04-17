@@ -4,7 +4,12 @@ import webSpecs from 'web-specs' assert { type: 'json' };
 
 import features from '../index.js';
 
-const specUrls = webSpecs.map(spec => new URL(spec.nightly.url));
+const specUrls: URL[] = webSpecs.flatMap(spec => {
+    return [
+        new URL(spec.nightly.url),
+        ...(spec.nightly.pages ?? []).map(page => new URL(page))
+    ]
+});
 
 type allowlistItem = [url: string, message: string];
 const defaultAllowlist: allowlistItem[] = [
@@ -16,14 +21,8 @@ const defaultAllowlist: allowlistItem[] = [
 
 function isOK(url: URL, allowlist: allowlistItem[] = defaultAllowlist) {
     for (const specUrl of specUrls) {
-        if (specUrl.origin !== url.origin) {
-            continue;
-        }
-        if (specUrl.pathname === url.pathname) {
+        if (specUrl.origin === url.origin && specUrl.pathname === url.pathname) {
             // that is, specUrl and url are the same, with the exception of the hash or query (`search`) string
-            return true;
-        }
-        if (specUrl.pathname.includes("/multipage/") && url.pathname.startsWith(specUrl.pathname)) {
             return true;
         }
     }
@@ -34,6 +33,7 @@ function isOK(url: URL, allowlist: allowlistItem[] = defaultAllowlist) {
             return true;
         }
     }
+
     return false;
 }
 
