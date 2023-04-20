@@ -20,7 +20,7 @@ export interface FeatureData {
     usage_stats?: usage_stats_url | [usage_stats_url, usage_stats_url, ...usage_stats_url[]];  // A single URL or an array of two or more
 }
 
-type browserIdentifier = "chrome" | "firefox" | "safari";
+type browserIdentifier = "chrome" | "edge" | "firefox" | "safari";
 
 interface SupportStatus {
     /** Whether the feature achieved baseline status */
