@@ -43,7 +43,7 @@ type usage_stats_url = string;
 // They're not part of the public schema (yet).
 // They'll be removed.
 const omittables = [
-    "compat_features"
+    // "compat_features"
 ]
 
 function scrub(data: FeatureData) {
