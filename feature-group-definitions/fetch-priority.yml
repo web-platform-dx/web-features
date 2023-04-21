@@ -1,0 +1,12 @@
+spec:
+  - https://fetch.spec.whatwg.org/#ref-for-dom-requestinit-priority
+  - https://html.spec.whatwg.org/multipage/semantics.html#attr-link-fetchpriority
+  - https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-fetchpriority
+  - https://html.spec.whatwg.org/multipage/scripting.html#attr-script-fetchpriority
+compat_features:
+  - api.HTMLImageElement.fetchPriority
+  - api.HTMLLinkElement.fetchPriority
+  - api.HTMLScriptElement.fetchPriority
+  - html.elements.img.fetchpriority
+  - html.elements.link.fetchpriority
+  - html.elements.script.fetchpriority
