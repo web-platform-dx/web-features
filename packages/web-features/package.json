@@ -6,5 +6,20 @@
     "type": "git",
     "url": "https://github.com/web-platform-dx/feature-set.git"
   },
-  "main": "index.json"
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./index.json": "./index.json"
+  },
+  "files": [
+    "index.js",
+    "index.json"
+  ],
+  "scripts": {
+    "prepare": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
 }
