@@ -1,5 +1,13 @@
 spec: https://drafts.csswg.org/css-grid-3/
 caniuse: css-grid
+status:
+  is_baseline: true
+  since: "2020-06-02" # since Firefox 77
+  support:
+    chrome: "66"
+    edge: "79"
+    firefox: "76"
+    safari: "12.1"
 compat_features:
   - css.properties.align-content.grid_context
   - css.properties.align-items.grid_context
