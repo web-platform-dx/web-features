@@ -4,5 +4,17 @@ usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/4165
 status:
   is_baseline: false
   support:
-    chrome: "105"
-    safari: "16"
+    chrome: "111"
+    edge: "111"
+    firefox: "110"
+compat_features:
+  - api.CSSContainerRule
+  - api.CSSContainerRule.containerName
+  - api.CSSContainerRule.containerQuery
+  - css.at-rules.container
+  - css.properties.contain
+  - css.properties.contain.inline-size
+  - css.properties.contain.style
+  - css.properties.container
+  - css.properties.container-name
+  - css.properties.container-type
