@@ -6,10 +6,8 @@ import YAML from 'yaml';
 
 /** Web platform feature */
 export interface FeatureData {
-    /** Specification URL
-     * @format uri
-    */
-    spec: string;
+    /** Specification */
+    spec: specification_url | [specification_url, specification_url, ...specification_url[]];
     /** caniuse.com identifier */
     caniuse?: string;
     /** Whether a feature is considered a "baseline" web platform feature and when it achieved that status */
@@ -30,6 +28,11 @@ interface SupportStatus {
     /** Browser versions that most-recently introduced the feature */
     support?: {[K in browserIdentifier]?: string};
 }
+
+/** Specification URL
+ * @format uri
+*/
+type specification_url = string;
 
 /** Usage stats URL
  * @format uri
