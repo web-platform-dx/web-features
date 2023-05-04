@@ -1,0 +1,25 @@
+spec:
+  - https://drafts.csswg.org/css-values-4/#viewport-relative-lengths
+  - https://drafts.csswg.org/css-values-4/#viewport-variants
+caniuse:
+  - viewport-units
+  - viewport-unit-variants
+status:
+  is_baseline: true
+  since: "2023-01-12"
+  support:
+    chrome: "108"
+    edge: "108"
+    firefox: "101"
+    safari: "15.4"
+compat_features:
+  - css.types.length.viewport_percentage_units_dynamic # BCD combines features: dvb, dvh, dvi, dvmax, dvmin, dvw
+  - css.types.length.viewport_percentage_units_large # BCD combines features: lvb, lvh, lvi, lvmax, lvmin, lvw
+  - css.types.length.viewport_percentage_units_small # BCD combines features: svb, svh, svi, svmax, svmin, svw
+  # BCD *does not* combine these into (one would assume) `viewport_percentage_units` or `viewport_percentage_units_default`
+  - css.types.length.vb
+  - css.types.length.vh
+  - css.types.length.vi
+  - css.types.length.vmax
+  - css.types.length.vmin
+  - css.types.length.vw
