@@ -51,12 +51,15 @@ let checked = 0;
 let errors = 0;
 
 for (const [id, data] of Object.entries(features)) {
-    const url = new URL(data.spec);
-    if (!isOK(url)) {
-        console.error(`URL for ${id} not in web-specs: ${url.toString()}`);
-        errors++;
+    const specs = Array.isArray(data.spec) ? data.spec : [data.spec];
+    for (const spec of specs) {
+        const url = new URL(spec);
+        if (!isOK(url)) {
+            console.error(`URL for ${id} not in web-specs: ${url.toString()}`);
+            errors++;
+        }
+        checked++;
     }
-    checked++;
 }
 
 if (errors) {
