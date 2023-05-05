@@ -1,13 +1,24 @@
 spec: https://drafts.csswg.org/css-grid-3/
 caniuse: css-grid
+status:
+  is_baseline: true
+  since: "2020-06-02" # since Firefox 77
+  support:
+    chrome: "66"
+    edge: "79"
+    firefox: "76"
+    safari: "12.1"
 compat_features:
-  - css.properties.align-content
-  - css.properties.align-items
-  - css.properties.align-self
-  - css.properties.column-gap
+  - css.properties.align-content.grid_context
+  - css.properties.align-items.grid_context
+  - css.properties.align-items.grid_context.start_end
+  - css.properties.align-self.grid_context
+  - css.properties.column-gap.grid_context
   - css.properties.display.grid
   - css.properties.display.inline-grid
-  - css.properties.gap
+  - css.properties.gap.grid_context
+  - css.properties.gap.grid_context.calc_values
+  - css.properties.gap.grid_context.percentage_values
   - css.properties.grid
   - css.properties.grid-area
   - css.properties.grid-auto-columns
@@ -22,15 +33,19 @@ compat_features:
   - css.properties.grid-template
   - css.properties.grid-template-areas
   - css.properties.grid-template-columns
+  - css.properties.grid-template-columns.fit-content
+  - css.properties.grid-template-columns.minmax
   - css.properties.grid-template-columns.repeat
   - css.properties.grid-template-rows
+  - css.properties.grid-template-rows.fit-content
+  - css.properties.grid-template-rows.minmax
   - css.properties.grid-template-rows.repeat
-  - css.properties.justify-content
-  - css.properties.justify-items
-  - css.properties.justify-self
-  - css.properties.place-content
-  - css.properties.place-items
-  - css.properties.place-self
-  - css.properties.row-gap
+  - css.properties.justify-content.grid_context
+  - css.properties.justify-items.grid_context
+  - css.properties.justify-self.grid_context
+  - css.properties.place-content.grid_context
+  - css.properties.place-items.grid_context
+  - css.properties.place-self.grid_context
+  - css.properties.row-gap.grid_context
   - css.types.flex
   - css.types.minmax
