@@ -1,3 +1,23 @@
 spec: https://drafts.csswg.org/css-backgrounds-3/#border-images
 caniuse: border-image
 usage_stats: https://chromestatus.com/metrics/css/timeline/popularity/43
+status:
+  is_baseline: true
+  since: "2017-03-09"
+  support:
+    chrome: "56"
+    edge: "12"
+    firefox: "50"
+    safari: "9.1"
+compat_features:
+  - css.properties.border-image
+  - css.properties.border-image.fill
+  - css.properties.border-image.gradient
+  - css.properties.border-image.optional_border_image_slice
+  - css.properties.border-image-outset
+  - css.properties.border-image-repeat
+  - css.properties.border-image-repeat.round
+  - css.properties.border-image-repeat.space
+  - css.properties.border-image-slice
+  - css.properties.border-image-source
+  - css.properties.border-image-width
