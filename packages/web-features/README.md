@@ -9,7 +9,8 @@ npm install web-features
 ```
 
 ```js
-import webFeatures from 'web-features' assert { type: 'json' };
+import webFeatures from 'web-features';
+// import webFeatures from 'web-features/index.json' assert { type: 'json' }
 ```
 
 ## Rendering baseline statuses with `web-features`
