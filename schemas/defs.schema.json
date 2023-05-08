@@ -19,9 +19,23 @@
           "type": "array"
         },
         "spec": {
-          "description": "Specification URL",
-          "format": "uri",
-          "type": "string"
+          "anyOf": [
+            {
+              "description": "Specification URL",
+              "format": "uri",
+              "type": "string"
+            },
+            {
+              "items": {
+                "description": "Specification URL",
+                "format": "uri",
+                "type": "string"
+              },
+              "minItems": 2,
+              "type": "array"
+            }
+          ],
+          "description": "Specifications"
         },
         "status": {
           "additionalProperties": false,
@@ -40,6 +54,9 @@
               "description": "Browser versions that most-recently introduced the feature",
               "properties": {
                 "chrome": {
+                  "type": "string"
+                },
+                "edge": {
                   "type": "string"
                 },
                 "firefox": {

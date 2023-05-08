@@ -1,0 +1,12 @@
+spec:
+  - https://fetch.spec.whatwg.org/#request-priority
+  - https://html.spec.whatwg.org/multipage/urls-and-fetching.html#fetch-priority-attributes
+compat_features:
+  - api.fetch.init_priority_parameter
+  - api.HTMLImageElement.fetchPriority
+  - api.HTMLLinkElement.fetchPriority
+  - api.HTMLScriptElement.fetchPriority
+  - api.Request.Request.init_priority_parameter
+  - html.elements.img.fetchpriority
+  - html.elements.link.fetchpriority
+  - html.elements.script.fetchpriority

@@ -9,10 +9,8 @@ import { lockout } from './lock.js';
 
 /** Web platform feature */
 export interface FeatureData {
-    /** Specification URL
-     * @format uri
-    */
-    spec: string;
+    /** Specification */
+    spec: specification_url | [specification_url, specification_url, ...specification_url[]];
     /** caniuse.com identifier */
     caniuse?: string;
     /** Whether a feature is considered a "baseline" web platform feature and when it achieved that status */
@@ -23,7 +21,7 @@ export interface FeatureData {
     usage_stats?: usage_stats_url | [usage_stats_url, usage_stats_url, ...usage_stats_url[]];  // A single URL or an array of two or more
 }
 
-type browserIdentifier = "chrome" | "firefox" | "safari";
+type browserIdentifier = "chrome" | "edge" | "firefox" | "safari";
 
 interface SupportStatus {
     /** Whether the feature achieved baseline status */
@@ -33,6 +31,11 @@ interface SupportStatus {
     /** Browser versions that most-recently introduced the feature */
     support?: {[K in browserIdentifier]?: string};
 }
+
+/** Specification URL
+ * @format uri
+*/
+type specification_url = string;
 
 /** Usage stats URL
  * @format uri

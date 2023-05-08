@@ -1,0 +1,14 @@
+spec: https://html.spec.whatwg.org/multipage/webappapis.html#context-lost-steps
+usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/3974
+status:
+  is_baseline: false
+  support:
+    chrome: "99"
+    edge: "99"
+compat_features:
+  - api.CanvasRenderingContext2D.isContextLost
+  - api.HTMLCanvasElement.contextlost_event
+  - api.HTMLCanvasElement.contextrestored_event
+  - api.OffscreenCanvas.contextlost_event
+  - api.OffscreenCanvas.contextrestored_event
+  - api.OffscreenCanvasRenderingContext2D.isContextLost

@@ -1,10 +1,26 @@
 {
   "name": "web-features",
   "description": "Curated list of Web platform features",
-  "version": "0.2.1",
+  "version": "0.4.0",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/web-platform-dx/feature-set.git"
   },
-  "main": "index.json"
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./index.json": "./index.json"
+  },
+  "files": [
+    "index.js",
+    "index.json"
+  ],
+  "scripts": {
+    "prepare": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
 }
