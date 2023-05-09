@@ -32,7 +32,3 @@ To get started contributing, take a look the following:
 * Learn more about [the WebDX Community Group](https://github.com/web-platform-dx/admin/blob/main/charter.md)
 * Go to [open issues](https://github.com/web-platform-dx/feature-set/issues) to propose new feature groups or report a bug
 * Go to [open PRs](https://github.com/web-platform-dx/feature-set/pulls) to review incoming feature groups and updates
-
-## License
-
-You’re free to TODO: license file needed.
