@@ -1,14 +1,14 @@
 spec: https://html.spec.whatwg.org/multipage/canvas.html#the-offscreencanvas-interface
 caniuse: offscreencanvas
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/1624
-status:
-  is_baseline: false
-  # since: future
-  support:
-    chrome: "80"
-    edge: "80"
-    firefox: "105"
-    safari: "16.4"
+# status:
+#   is_baseline: false
+#   # since: future
+#   support:
+#     chrome: "80"
+#     edge: "80"
+#     firefox: "105"
+#     safari: "16.4"
 compat_features:
   - api.HTMLCanvasElement.transferControlToOffscreen
   - api.OffscreenCanvas
