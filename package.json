@@ -9,6 +9,9 @@
   },
   "type": "module",
   "main": "index.ts",
+  "engines": {
+    "node": ">=16.18.0"
+  },
   "scripts": {
     "build": "ts-node scripts/build.ts",
     "generate-schema-defs": "ts-json-schema-generator --tsconfig ./tsconfig.json --type FeatureData --path ./index.ts --id defs --out ./schemas/defs.schema.json",
@@ -21,7 +24,7 @@
   },
   "devDependencies": {
     "@types/caniuse-lite": "^1.0.1",
-    "@types/node": "^18.16.3",
+    "@types/node": "^16.18.28",
     "ajv": "^8.12.0",
     "ajv-formats": "^2.1.1",
     "caniuse-lite": "^1.0.30001486",
