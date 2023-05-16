@@ -1,6 +1,6 @@
 # [`feature-set`](https://github.com/web-platform-dx/feature-set): exploring the set of interoperable features of the web platform
 
-By the W3C WebDX Community Group and contributors
+By the [W3C WebDX Community Group](https://www.w3.org/community/webdx/) and contributors.
 
 `feature-set` is an effort to build a shared catalog of features of the web platform.
 By creating a common list of features and their definitions, `feature-set` aims to improve understanding of what web developers get and want from the web.
@@ -29,6 +29,6 @@ To learn more about why this project was started and some of the problems its re
 The project is in its early stages, so we’re still developing tools and processes to help improve and expand our work.
 To get started contributing, take a look the following:
 
-* Learn more about [the WebDX Community Group](https://github.com/web-platform-dx/admin/blob/main/charter.md)
+* Learn more about [the WebDX Community Group](https://www.w3.org/community/webdx/)
 * Go to [open issues](https://github.com/web-platform-dx/feature-set/issues) to propose new feature groups or report a bug
 * Go to [open PRs](https://github.com/web-platform-dx/feature-set/pulls) to review incoming feature groups and updates
