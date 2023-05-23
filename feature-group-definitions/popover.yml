@@ -3,18 +3,20 @@ usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/4191
 compat_features:
   - api.HTMLButtonElement.popoverTargetAction
   - api.HTMLButtonElement.popoverTargetElement
-  - api.HTMLInputElement.popoverTargetElement
-  - api.HTMLInputElement.popoverTargetAction
   - api.HTMLElement.beforetoggle_event
   - api.HTMLElement.hidePopover
   - api.HTMLElement.popover
   - api.HTMLElement.showPopover
   - api.HTMLElement.toggle_event
+  - api.HTMLElement.togglePopover
+  - api.HTMLInputElement.popoverTargetAction
+  - api.HTMLInputElement.popoverTargetElement
   - api.ToggleEvent
   - api.ToggleEvent.ToggleEvent
   - api.ToggleEvent.newstate
   - api.ToggleEvent.oldstate
   - css.selectors.backdrop.popover
   - css.selectors.popover-open
+  - html.global_attributes.popover
   - html.global_attributes.popovertarget
   - html.global_attributes.popovertargetaction
