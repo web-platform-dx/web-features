@@ -1,3 +1,11 @@
 spec: https://html.spec.whatwg.org/multipage/web-messaging.html#broadcasting-to-other-browsing-contexts
 caniuse: broadcastchannel
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/1447
+compat_features:
+  - api.BroadcastChannel
+  - api.BroadcastChannel.BroadcastChannel
+  - api.BroadcastChannel.close
+  - api.BroadcastChannel.message_event
+  - api.BroadcastChannel.messageerror_event
+  - api.BroadcastChannel.name
+  - api.BroadcastChannel.postMessage
