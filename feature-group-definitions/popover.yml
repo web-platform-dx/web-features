@@ -1,2 +1,19 @@
 spec: https://html.spec.whatwg.org/multipage/popover.html
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/4191
+compat_features:
+  - api.HTMLButtonElement.popoverTargetAction
+  - api.HTMLButtonElement.popoverTargetElement
+  - api.HTMLElement.beforetoggle_event
+  - api.HTMLElement.hidePopover
+  - api.HTMLElement.popover
+  - api.HTMLElement.showPopover
+  - api.HTMLElement.toggle_event
+  - api.HTMLElement.togglePopover
+  - api.HTMLInputElement.popoverTargetAction
+  - api.HTMLInputElement.popoverTargetElement
+  - api.ToggleEvent
+  - css.selectors.backdrop.popover
+  - css.selectors.popover-open
+  - html.global_attributes.popover
+  - html.global_attributes.popovertarget
+  - html.global_attributes.popovertargetaction
