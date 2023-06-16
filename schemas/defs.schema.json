@@ -7,6 +7,21 @@
       "additionalProperties": false,
       "description": "Web platform feature",
       "properties": {
+        "alias": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 2,
+              "type": "array"
+            }
+          ],
+          "description": "Alias identifier"
+        },
         "caniuse": {
           "description": "caniuse.com identifier",
           "type": "string"
@@ -35,7 +50,7 @@
               "type": "array"
             }
           ],
-          "description": "Specifications"
+          "description": "Specification"
         },
         "status": {
           "additionalProperties": false,

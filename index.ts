@@ -6,6 +6,8 @@ import YAML from 'yaml';
 
 /** Web platform feature */
 export interface FeatureData {
+    /** Alias identifier */
+    alias?: string | [string, string, ...string[]];
     /** Specification */
     spec: specification_url | [specification_url, specification_url, ...specification_url[]];
     /** caniuse.com identifier */
