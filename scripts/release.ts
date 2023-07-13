@@ -14,7 +14,7 @@ const logger = winston.createLogger({
   level: "info",
   format: winston.format.combine(
     winston.format.colorize(),
-    winston.format.simple()
+    winston.format.simple(),
   ),
   transports: [loggerTransport],
 });
@@ -23,7 +23,7 @@ const pullTitleBase = `📦 Release web-features@`;
 
 const packages = {
   "web-features": fileURLToPath(
-    new URL("../packages/web-features", import.meta.url)
+    new URL("../packages/web-features", import.meta.url),
   ),
 };
 
@@ -151,7 +151,7 @@ function bumpVersion(semverlevel: typeof semverChoices): string {
 
 function makePullBody(diff: string) {
   const bodyFile = fileURLToPath(
-    new URL("release-pull-description.md", import.meta.url)
+    new URL("release-pull-description.md", import.meta.url),
   );
   const body = [
     readFileSync(bodyFile, { encoding: "utf-8" }),
@@ -172,8 +172,8 @@ function update(args) {
       `gh pr view --repo="${args.targetRepo}" "${args.pr}" --json body`,
       {
         encoding: "utf-8",
-      }
-    )
+      },
+    ),
   );
   const notice = "⛔️ Update in progress! ⛔️\n";
   const editBodyCmd = `gh pr edit --repo="${args.targetRepo}" "${args.pr}" --body-file=-`;
@@ -189,7 +189,7 @@ function update(args) {
     logger.error("Rebasing failed. Abandoning PR.");
     run(`git rebase --abort`);
     run(
-      `gh pr comment --repo="${args.targetRepo}" "${args.pr}" --body="😱 Rebasing failed. Closing this PR. 😱"`
+      `gh pr comment --repo="${args.targetRepo}" "${args.pr}" --body="😱 Rebasing failed. Closing this PR. 😱"`,
     );
     run(`gh pr close --repo="${args.targetRepo}" "${args.pr}"`);
     process.exit(1);
@@ -205,7 +205,7 @@ function update(args) {
 
     logger.verbose("Updating PR title");
     run(
-      `gh pr edit --repo="${args.targetRepo}" "${args.pr}" --title="${pullTitleBase}${newVersion}"`
+      `gh pr edit --repo="${args.targetRepo}" "${args.pr}" --title="${pullTitleBase}${newVersion}"`,
     );
   }
 
@@ -218,7 +218,7 @@ function update(args) {
     {
       input: updatedBody,
       stdio: ["pipe", "inherit", "inherit"],
-    }
+    },
   );
 }
 
@@ -232,14 +232,14 @@ function publish(args) {
     });
     if (JSON.parse(accessList)["web-features"] !== "read-write") {
       logger.error(
-        "Write access to the package is required. Try setting the repository secret or run `npm adduser`."
+        "Write access to the package is required. Try setting the repository secret or run `npm adduser`.",
       );
       process.exit(1);
     }
   } catch (err) {
     logger.error(
       "The exit status of `npm access list packages` was non-zero. Do you have an `.npmrc` file? If not, try running `npm adduser`.",
-      err.error
+      err.error,
     );
     logger.error(err.stderr);
     process.exit(1);
@@ -272,7 +272,7 @@ function readPackageJSON(packageDir) {
   return JSON.parse(
     readFileSync(join(packageDir, "package.json"), {
       encoding: "utf-8",
-    })
+    }),
   );
 }
 
@@ -288,7 +288,7 @@ function diffJson(): string {
     temporaryDir,
     "node_modules",
     "web-features",
-    "index.json"
+    "index.json",
   );
   const prettyReleasedJson = execSync(`jq . "${releasedJson}"`, {
     encoding: "utf-8",
@@ -307,7 +307,7 @@ function diffJson(): string {
   try {
     const result = execSync(
       `diff --unified "${prettyReleasedJsonFp}" "${prettyPreparedJsonFp}"`,
-      { encoding: "utf-8" }
+      { encoding: "utf-8" },
     );
     rmSync(temporaryDir, { recursive: true });
     return result;
@@ -341,7 +341,7 @@ function preflight(options: PreflightOptions): void {
     execSync(cleanCmd);
   } catch (err) {
     logger.error(
-      "Working directory is not clean. Stash your changes and try again."
+      "Working directory is not clean. Stash your changes and try again.",
     );
     process.exit(1);
   }
@@ -363,7 +363,7 @@ function preflight(options: PreflightOptions): void {
   } catch (err) {
     logger.error(
       "`gh auth status` was non-zero. Try running `gh auth login` or `gh auth refresh` and try again.",
-      err.error
+      err.error,
     );
     logger.error(err.stderr);
     process.exit(1);
@@ -394,8 +394,8 @@ function preflight(options: PreflightOptions): void {
         `gh pr view --repo="${options.targetRepo}" "${options.expectedPull}" --json headRefName`,
         {
           encoding: "utf-8",
-        }
-      )
+        },
+      ),
     );
     expectedRef = headRefName;
   } else {
