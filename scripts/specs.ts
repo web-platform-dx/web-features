@@ -13,10 +13,10 @@ const specUrls: URL[] = webSpecs.flatMap(spec => {
 
 type allowlistItem = [url: string, message: string];
 const defaultAllowlist: allowlistItem[] = [
-    [
-        "https://wicg.github.io/navigation-api/",
-        "This spec is moving to WHATWG HTML. Remove this exception when https://github.com/whatwg/html/pull/8502 merges."
-    ],
+    // [
+    //     "https://example.com/spec/",
+    //     "This spec is allowed because…. Remove this exception when https://example.com/org/repo/pull/1234 merges."
+    // ]
 ];
 
 function isOK(url: URL, allowlist: allowlistItem[] = defaultAllowlist) {
