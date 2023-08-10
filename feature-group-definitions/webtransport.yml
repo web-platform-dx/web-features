@@ -1,3 +1,43 @@
 spec: https://w3c.github.io/webtransport/
 caniuse: webtransport
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/3472
+compat_features:
+  - api.WebTransport
+  - api.WebTransport.WebTransport
+  - api.WebTransport.WebTransport.options_allowPooling_parameter
+  # As of 2023-08-10, the spec says "feature at risk"
+  # - api.WebTransport.WebTransport.options_congestionControl_parameter
+  - api.WebTransport.WebTransport.options_requireUnreliable_parameter
+  - api.WebTransport.WebTransport.options_serverCertificateHashes_parameter
+  - api.WebTransport.byob_readers
+  - api.WebTransport.close
+  - api.WebTransport.closed
+  # As of 2023-08-10, the spec says "feature at risk"
+  # - api.WebTransport.congestionControl
+  - api.WebTransport.createBidirectionalStream
+  - api.WebTransport.createUnidirectionalStream
+  - api.WebTransport.createUnidirectionalStream.byob_readers
+  - api.WebTransport.datagrams
+  - api.WebTransport.getStats
+  - api.WebTransport.incomingBidirectionalStreams
+  - api.WebTransport.incomingUnidirectionalStreams
+  - api.WebTransport.ready
+  - api.WebTransport.reliability
+  - api.WebTransportBidirectionalStream
+  - api.WebTransportBidirectionalStream.readable
+  - api.WebTransportBidirectionalStream.writable
+  - api.WebTransportDatagramDuplexStream
+  - api.WebTransportDatagramDuplexStream.byob_readers
+  - api.WebTransportDatagramDuplexStream.incomingHighWaterMark
+  - api.WebTransportDatagramDuplexStream.incomingMaxAge
+  - api.WebTransportDatagramDuplexStream.maxDatagramSize
+  - api.WebTransportDatagramDuplexStream.outgoingHighWaterMark
+  - api.WebTransportDatagramDuplexStream.outgoingMaxAge
+  - api.WebTransportDatagramDuplexStream.readable
+  - api.WebTransportDatagramDuplexStream.writable
+  - api.WebTransportError
+  - api.WebTransportError.WebTransportError
+  - api.WebTransportError.source
+  - api.WebTransportError.streamErrorCode
+  - api.WebTransportReceiveStream
+  - api.WebTransportReceiveStream.getStats
