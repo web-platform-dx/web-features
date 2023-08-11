@@ -1,0 +1,20 @@
+spec: https://w3c.github.io/clipboard-apis/#async-clipboard-api
+caniuse: async-clipboard
+compat_features:
+  - api.Clipboard
+  - api.Clipboard.read
+  - api.Clipboard.readText
+  - api.Clipboard.write
+  - api.Clipboard.writeText
+  - api.ClipboardEvent
+  - api.ClipboardEvent.ClipboardEvent
+  - api.ClipboardEvent.clipboardData
+  - api.ClipboardItem
+  - api.ClipboardItem.ClipboardItem
+  - api.ClipboardItem.getType
+  - api.ClipboardItem.presentationStyle
+  - api.ClipboardItem.types
+  - api.Navigator.clipboard
+  - api.Permissions.permission_clipboard-read
+  # This one appears to be not actually in the specification
+  # - api.Permissions.permission_clipboard-write
