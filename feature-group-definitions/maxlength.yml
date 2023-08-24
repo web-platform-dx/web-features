@@ -1,0 +1,10 @@
+spec:
+  - https://html.spec.whatwg.org/multipage/input.html#the-maxlength-and-minlength-attributes
+  - https://html.spec.whatwg.org/multipage/form-elements.html#dom-textarea-maxlength
+  - https://html.spec.whatwg.org/multipage/input.html#dom-input-maxlength
+caniuse: maxlength
+compat_features:
+  - api.HTMLInputElement.maxLength
+  - api.HTMLTextAreaElement.maxLength
+  - html.elements.input.maxlength
+  - html.elements.textarea.maxlength
