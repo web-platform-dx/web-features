@@ -27,20 +27,27 @@ const argv = yargs(process.argv.slice(2))
     default: "",
     describe: "Set the Can I use…? ID",
   })
+  .option("compat-features", {
+    alias: "compat",
+    type: "array",
+    demandOption: true,
+    default: [],
+    describe: "A BCD key. Can be used multiple times.",
+  })
   .option("spec", {
     demandOption: true,
     default: "",
-    describe: "A specification URL",
+    describe: "A specification URL. Can be used multiple times.",
   }).argv;
 
 async function main() {
-  const { dryRun, featureIdentifier, caniuse, spec } = argv;
+  const { dryRun, featureIdentifier, caniuse, compatFeatures, spec } = argv;
 
   const destination = identifierToPath(featureIdentifier);
   const content = {
-    spec: spec,
+    spec,
     caniuse,
-    compat_features: [""],
+    compat_features: compatFeatures,
   };
 
   const yamlText = stringify(content);
