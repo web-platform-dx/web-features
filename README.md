@@ -26,9 +26,4 @@ To learn more about why this project was started and some of the problems its re
 
 ## Contribute
 
-The project is in its early stages, so we’re still developing tools and processes to help improve and expand our work.
-To get started contributing, take a look the following:
-
-* Learn more about [the WebDX Community Group](https://www.w3.org/community/webdx/)
-* Go to [open issues](https://github.com/web-platform-dx/web-features/issues) to propose new feature groups or report a bug
-* Go to [open PRs](https://github.com/web-platform-dx/web-features/pulls) to review incoming feature groups and updates
+Read [`CONTRIBUTING.md`](./docs/CONTRIBUTING.md) to learn about how to contribute to this project.
