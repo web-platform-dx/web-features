@@ -33,7 +33,7 @@ yargs(process.argv.slice(2))
   .option("target-repo", {
     describe: "Select upstream GitHub repository",
     nargs: 1,
-    default: "web-platform-dx/feature-set",
+    default: "web-platform-dx/web-features",
   })
   .command({
     command: "init <semverlevel>",

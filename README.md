@@ -1,17 +1,17 @@
-# [`feature-set`](https://github.com/web-platform-dx/feature-set): exploring the set of interoperable features of the web platform
+# [`web-features`](https://github.com/web-platform-dx/web-features): exploring the set of interoperable features of the web platform
 
 By the [W3C WebDX Community Group](https://www.w3.org/community/webdx/) and contributors.
 
-`feature-set` is an effort to build a shared catalog of features of the web platform.
-By creating a common list of features and their definitions, `feature-set` aims to improve understanding of what web developers get and want from the web.
-`feature-set` does this by:
+`web-features` is an effort to build a shared catalog of features of the web platform.
+By creating a common list of features and their definitions, `web-features` aims to improve understanding of what web developers get and want from the web.
+`web-features` does this by:
 
 * Creating feature definitions, which identify and describe capabilities of the web
 * Generating _Baseline_ support data, which summarizes the availability of web features across key browsers and releases
 * Publishing the `web-features` npm package, which bundles feature identifiers with Baseline statuses
 
-From `Array` to Cascade Layers to Offscreen Canvas, `feature-set` identifies, defines, and categorizes capabilities of the web platform that web developers care about.
-By creating a common nomenclature for web platform features, `feature-set` intends to support communication between web developers, browser vendors, standardization bodies, and other ecosystem participants.
+From `Array` to Cascade Layers to Offscreen Canvas, `web-features` identifies, defines, and categorizes capabilities of the web platform that web developers care about.
+By creating a common nomenclature for web platform features, `web-features` intends to support communication between web developers, browser vendors, standardization bodies, and other ecosystem participants.
 
 ## Get started
 

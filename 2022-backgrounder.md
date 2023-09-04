@@ -38,7 +38,7 @@ With the need to support IE11 fading, we have a new opportunity to define a set 
 
 ## Explorations done in 2022
 
-As the WebDX effort was being explored, an initial investigation of what it would take to [converge on a common list of web features](https://github.com/web-platform-dx/feature-set/blob/main/towards-features.md#towards-a-common-list-of-web-features) was conducted.
+As the WebDX effort was being explored, an initial investigation of what it would take to [converge on a common list of web features](https://github.com/web-platform-dx/web-features/blob/main/towards-features.md#towards-a-common-list-of-web-features) was conducted.
 
 Following that investigation, a [methodology to group web features was developed](https://docs.google.com/document/d/1XjYQybcbOGPKxQnxtIp8C9iXYZBTlczvst5VVn83ty0/edit), leading to a [mockup of how common web platform features could be represented](https://github.com/ddbeck/common-web-feature-mockup/#common-web-platform-feature-representation-mockup-wip).
 
