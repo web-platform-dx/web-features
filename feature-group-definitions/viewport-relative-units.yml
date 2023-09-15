@@ -1,0 +1,16 @@
+spec: https://drafts.csswg.org/css-values-4/#viewport-relative-lengths
+caniuse: viewport-units
+status:
+  is_baseline: true
+  since: "2018-04-30"
+  support:
+    chrome: "26"
+    edge: "16"
+    firefox: "102"
+    safari: "7"
+compat_features:
+  # Excludes `vb` and `vi` because they were introduced later (see `viewport-relative-unit-variants`)
+  - css.types.length.vh
+  - css.types.length.vmax
+  - css.types.length.vmin
+  - css.types.length.vw
