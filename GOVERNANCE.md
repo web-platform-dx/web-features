@@ -205,37 +205,37 @@ The chair is responsible for summarizing the discussion of each agenda item and 
   <tr>
    <td>Abide by the CEPC
    </td>
-   <td>•
+   <td>Yes
    </td>
-   <td>•
+   <td>Yes
    </td>
-   <td>•
+   <td>Yes
    </td>
-   <td>•
+   <td>Yes
    </td>
   </tr>
   <tr>
    <td>Promoting the project
    </td>
-   <td>•
+   <td>Yes
    </td>
-   <td>•
+   <td>Yes
    </td>
-   <td>•
+   <td>Yes
    </td>
-   <td>•
+   <td>Yes
    </td>
   </tr>
   <tr>
    <td>Make use of the data, fork it, repackage it, etc.
    </td>
-   <td>•
+   <td>Yes
    </td>
-   <td>•
+   <td>Yes
    </td>
-   <td>•
+   <td>Yes
    </td>
-   <td>•
+   <td>Yes
    </td>
   </tr>
   <tr>
@@ -243,11 +243,11 @@ The chair is responsible for summarizing the discussion of each agenda item and 
    </td>
    <td>
    </td>
-   <td>•
+   <td>Yes
    </td>
-   <td>•
+   <td>Yes
    </td>
-   <td>•
+   <td>Yes
    </td>
   </tr>
   <tr>
@@ -255,11 +255,11 @@ The chair is responsible for summarizing the discussion of each agenda item and 
    </td>
    <td>
    </td>
-   <td>•
+   <td>Yes
    </td>
-   <td>•
+   <td>Yes
    </td>
-   <td>•
+   <td>Yes
    </td>
   </tr>
   <tr>
@@ -269,9 +269,9 @@ The chair is responsible for summarizing the discussion of each agenda item and 
    </td>
    <td>
    </td>
-   <td>•
+   <td>Yes
    </td>
-   <td>•
+   <td>Yes
    </td>
   </tr>
   <tr>
@@ -281,9 +281,9 @@ The chair is responsible for summarizing the discussion of each agenda item and 
    </td>
    <td>
    </td>
-   <td>•
+   <td>Yes
    </td>
-   <td>•
+   <td>Yes
    </td>
   </tr>
   <tr>
@@ -295,7 +295,7 @@ The chair is responsible for summarizing the discussion of each agenda item and 
    </td>
    <td>
    </td>
-   <td>•
+   <td>Yes
    </td>
   </tr>
   <tr>
@@ -307,7 +307,7 @@ The chair is responsible for summarizing the discussion of each agenda item and 
    </td>
    <td>
    </td>
-   <td>•
+   <td>Yes
    </td>
   </tr>
   <tr>
@@ -319,7 +319,7 @@ The chair is responsible for summarizing the discussion of each agenda item and 
    </td>
    <td>
    </td>
-   <td>•
+   <td>Yes
    </td>
   </tr>
   <tr>
@@ -331,7 +331,7 @@ The chair is responsible for summarizing the discussion of each agenda item and 
    </td>
    <td>
    </td>
-   <td>•
+   <td>Yes
    </td>
   </tr>
   <tr>
@@ -343,7 +343,7 @@ The chair is responsible for summarizing the discussion of each agenda item and 
    </td>
    <td>
    </td>
-   <td>•
+   <td>Yes
    </td>
   </tr>
   <tr>
@@ -355,7 +355,7 @@ The chair is responsible for summarizing the discussion of each agenda item and 
    </td>
    <td>
    </td>
-   <td>•
+   <td>Yes
    </td>
   </tr>
   <tr>
@@ -367,7 +367,7 @@ The chair is responsible for summarizing the discussion of each agenda item and 
    </td>
    <td>
    </td>
-   <td>•
+   <td>Yes
    </td>
   </tr>
   <tr>
@@ -379,7 +379,7 @@ The chair is responsible for summarizing the discussion of each agenda item and 
    </td>
    <td>
    </td>
-   <td>•
+   <td>Yes
    </td>
   </tr>
   </tbody>
