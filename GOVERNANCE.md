@@ -30,10 +30,10 @@ We do expect contributors to follow the CEPC.
 
 Contributors:
 
-* Have read-only access to source code and therefore can submit changes via pull requests.
-* Have their contribution reviewed and merged by a [Peer](#peers) or [Owner](#owners).
+- Have read-only access to source code and therefore can submit changes via pull requests.
+- Have their contribution reviewed and merged by a [Peer](#peers) or [Owner](#owners).
   _Owners_ and _Peers_ work with _Contributors_ to review their code and prepare it for merging.
-* May also review pull requests.
+- May also review pull requests.
   This can be helpful, but their approval or disapproval is not decisive for merging or not merging PRs.
 
 As _Contributors_ gain experience and familiarity with the project, their profile within, and commitment to, the community will increase.
@@ -46,21 +46,21 @@ _Peers_ are given push/write access to the project’s GitHub repository.
 
 Peers:
 
-* Must follow documented contribution guidelines.
-* Must submit pull requests for all their changes.
-* May label and close issues.
-* May merge pull requests that add or modify feature descriptions (excluding changes to a feature’s Baseline status or other availability status information).
-  * Other contributors’ pull requests may be merged by _Peers_.
-  * A _Peer_'s own pull requests may be merged after approval from a fellow _Peer_ or _Owner_.
-* Must have their status, infrastructure, and documentation work reviewed and merged by [Owners](#owners).
-    * Such pull requests change Baseline and other statuses, schemas, project direction-setting documentation, code files, and configuration files, or any change that would result in a [Semantic Versioning MAJOR](https://semver.org/) release.
-* Should ask for additional review from other _Peers_ or _Owners_ on others' PRs that are disruptive or controversial.
+- Must follow documented contribution guidelines.
+- Must submit pull requests for all their changes.
+- May label and close issues.
+- May merge pull requests that add or modify feature descriptions (excluding changes to a feature’s Baseline status or other availability status information).
+  - Other contributors’ pull requests may be merged by _Peers_.
+  - A _Peer_'s own pull requests may be merged after approval from a fellow _Peer_ or _Owner_.
+- Must have their status, infrastructure, and documentation work reviewed and merged by [Owners](#owners).
+  - Such pull requests change Baseline and other statuses, schemas, project direction-setting documentation, code files, and configuration files, or any change that would result in a [Semantic Versioning MAJOR](https://semver.org/) release.
+- Should ask for additional review from other _Peers_ or _Owners_ on others' PRs that are disruptive or controversial.
 
 To become a _Peer_ one must:
 
-* Have shown a willingness and ability to participate in the project in a helpful and collaborative way with other participants.
-* Have shown that they have an understanding of and alignment with the project, its objectives, and its strategy.
-* Have contributed a significant amount of work to the project (e.g. in the form of PRs or PR reviews), thereby demonstrating their trustworthiness and commitment to the project.
+- Have shown a willingness and ability to participate in the project in a helpful and collaborative way with other participants.
+- Have shown that they have an understanding of and alignment with the project, its objectives, and its strategy.
+- Have contributed a significant amount of work to the project (e.g. in the form of PRs or PR reviews), thereby demonstrating their trustworthiness and commitment to the project.
 
 New _Peers_ can be nominated by any existing _Peers or Owners_. Once they have been nominated, there will be a vote by the _Owners_.
 The _Owners_ hear nominations and vote on nominees in a private setting.
@@ -75,7 +75,7 @@ Inactive _Peers_ (no activity on the project for months or more) might be marked
 
 #### List of current Peers
 
-* (This list is currently empty.)
+- (This list is currently empty.)
 
 A _Peer_ who shows an above-average level of contribution to the project, particularly with respect to its strategic direction and long-term health, may be nominated to become an _Owner_, described below.
 
@@ -86,13 +86,13 @@ _Owners_ are collectively responsible for high-level guidance of the project.
 
 The _Owners_ group has final authority over:
 
-* Adoption or amendment to the definition of Baseline
-* Adoption or amendment to the definition of other feature availability statuses
-* Technical direction of the project, especially infrastructure and schema decisions
-* Project governance and process (including this policy and any updates)
-* Confirming _Peers_ and _Owners_
-* Contribution policy
-* GitHub repository hosting
+- Adoption or amendment to the definition of Baseline
+- Adoption or amendment to the definition of other feature availability statuses
+- Technical direction of the project, especially infrastructure and schema decisions
+- Project governance and process (including this policy and any updates)
+- Confirming _Peers_ and _Owners_
+- Contribution policy
+- GitHub repository hosting
 
 Being an _Owner_ is not time-limited.
 There is no fixed size of the _Owner_ group.
@@ -103,21 +103,21 @@ Changes to the _Owner_ group should be posted in the agenda, and may be suggeste
 
 _Owners_ fulfill all requirements of _Peers_, and also:
 
-* Must ensure the smooth running of the project.
-* Should review code contributions, changes to this document, or changes to the licensing of the project or its outputs.
-* May merge pull requests that remove feature descriptions.
-* May merge pull requests that change the Baseline definition or its implementation.
-* May merge pull requests that change Baseline statuses.
-* May merge pull requests that change other availability statuses.
-* May merge pull requests that change project documentation or infrastructure.
-* May merge pull requests that result in a [Semantic Versioning MAJOR](https://semver.org/) release.
-* Should release package(s) on a regular basis (or review and approve automation with the same effect).
+- Must ensure the smooth running of the project.
+- Should review code contributions, changes to this document, or changes to the licensing of the project or its outputs.
+- May merge pull requests that remove feature descriptions.
+- May merge pull requests that change the Baseline definition or its implementation.
+- May merge pull requests that change Baseline statuses.
+- May merge pull requests that change other availability statuses.
+- May merge pull requests that change project documentation or infrastructure.
+- May merge pull requests that result in a [Semantic Versioning MAJOR](https://semver.org/) release.
+- Should release package(s) on a regular basis (or review and approve automation with the same effect).
 
 To become an _Owner_ one must fulfill at least the following conditions and commit to being a part of the community for the long-term:
 
-* Have worked in a helpful and collaborative way with the WebDX community.
-* Have given good feedback on others’ submissions and displayed an overall understanding of the code quality standards for the project.
-* Have the ability to drive the project forward, manage requirements from users, and take on responsibility for the overall health of the project.
+- Have worked in a helpful and collaborative way with the WebDX community.
+- Have given good feedback on others’ submissions and displayed an overall understanding of the code quality standards for the project.
+- Have the ability to drive the project forward, manage requirements from users, and take on responsibility for the overall health of the project.
 
 See also: [Additional paths to becoming a Peer or Owner](#additional-paths-to-becoming-a-peer-or-owner)
 
@@ -130,11 +130,11 @@ If the nominee accepts the invitation, then the _Owners_ group adds the new _Own
 
 #### List of current Owners
 
-* Dan Fabulich (@dfabulich)
-* Daniel D. Beck (@ddbeck)
-* Florian Scholz (@Elchi3)
-* Kadir Topal (@atopal)
-* Leo McArdle (@LeoMcA)
+- Dan Fabulich (@dfabulich)
+- Daniel D. Beck (@ddbeck)
+- Florian Scholz (@Elchi3)
+- Kadir Topal (@atopal)
+- Leo McArdle (@LeoMcA)
 
 ## Additional paths to becoming a Peer or Owner
 
