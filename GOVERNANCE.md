@@ -187,18 +187,21 @@ The chair is responsible for summarizing the discussion of each agenda item and 
 ## Privileges and responsibilities matrix
 
 <table>
+  <thead>
   <tr>
-   <td><strong>Privilege / responsibility</strong>
+   <th>Privilege / responsibility
    </td>
-   <td><strong>Everyone / Users</strong>
+   <th>Everyone / Users
    </td>
-   <td><strong>Contributors</strong>
+   <th>Contributors
    </td>
-   <td><strong>Peers</strong>
+   <th>Peers
    </td>
-   <td><strong>Owners</strong>
+   <th>Owners
    </td>
   </tr>
+  </thead>
+  <tbody>
   <tr>
    <td>Abide by the CEPC
    </td>
@@ -379,6 +382,7 @@ The chair is responsible for summarizing the discussion of each agenda item and 
    <td>•
    </td>
   </tr>
+  </tbody>
 </table>
 
 <!--
