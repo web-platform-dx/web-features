@@ -32,8 +32,6 @@ compat_features:
   - api.WebTransportError.WebTransportError
   - api.WebTransportError.source
   - api.WebTransportError.streamErrorCode
-  - api.WebTransportReceiveStream
-  - api.WebTransportReceiveStream.getStats
 
   # BYOB reader support arrived later than the rest
   # - api.WebTransport.byob_readers
@@ -43,3 +41,9 @@ compat_features:
   # As of 2023-08-10, the spec calls these "feature at risk"
   # - api.WebTransport.WebTransport.options_congestionControl_parameter
   # - api.WebTransport.congestionControl
+
+  # TODO: figure out what the story is with WebTransportReceiveStream
+  # This feature has a different compatibility story than closely-related
+  # interfaces (i.e., WebTransportBidirectionalStream)
+  # - api.WebTransportReceiveStream
+  # - api.WebTransportReceiveStream.getStats
