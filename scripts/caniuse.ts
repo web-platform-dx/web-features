@@ -24,11 +24,21 @@ for (const [id, data] of Object.entries(features)) {
     if (!('caniuse' in data)) {
         continue;
     }
-    const caniuseId = data.caniuse;
-    if (!mapping.has(caniuseId)) {
-        throw new Error(`Invalid caniuse ID used for ${id}: ${caniuseId}`);
+    let caniuseIdOrIds = data.caniuse;
+
+    if (typeof caniuseIdOrIds === 'string') {
+        if (!mapping.has(caniuseIdOrIds)) {
+            throw new Error(`Invalid caniuse ID used for ${id}: ${caniuseIdOrIds}`);
+        }
+        mapping.set(caniuseIdOrIds, id);
+    } else {
+        for (const caniuseId of caniuseIdOrIds) {
+            if (!mapping.has(caniuseId)) {
+                throw new Error(`Invalid caniuse ID used for ${id}: ${caniuseId}`);
+            }
+            mapping.set(caniuseId, id);
+        }
     }
-    mapping.set(caniuseId, id);
 }
 
 let matched = 0;
