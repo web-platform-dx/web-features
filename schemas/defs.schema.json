@@ -23,8 +23,19 @@
           "description": "Alias identifier"
         },
         "caniuse": {
-          "description": "caniuse.com identifier",
-          "type": "string"
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 2,
+              "type": "array"
+            }
+          ],
+          "description": "caniuse.com identifier"
         },
         "compat_features": {
           "description": "Sources of support data for this feature",
