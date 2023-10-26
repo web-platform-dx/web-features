@@ -17,6 +17,10 @@ const defaultAllowlist: allowlistItem[] = [
     //     "https://example.com/spec/",
     //     "This spec is allowed because…. Remove this exception when https://example.com/org/repo/pull/1234 merges."
     // ]
+    [
+        "https://aomediacodec.github.io/av1-avif/",
+        "This spec is allowed because AVIF is supported in Chrome, Firefox and Safari. Remove this exception when https://github.com/w3c/browser-specs/issues/1088 is resolved."
+    ]
 ];
 
 function isOK(url: URL, allowlist: allowlistItem[] = defaultAllowlist) {
