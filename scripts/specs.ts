@@ -20,7 +20,11 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://aomediacodec.github.io/av1-avif/",
         "This spec is allowed because AVIF is supported in Chrome, Firefox and Safari. Remove this exception when https://github.com/w3c/browser-specs/issues/1088 is resolved."
-    ]
+    ],
+    [
+        "https://developers.google.com/speed/webp/",
+        "This spec is allowed because WebP is widely supported. Remove this exception when https://github.com/w3c/browser-specs/issues/1109 is resolved."
+    ],
 ];
 
 function isOK(url: URL, allowlist: allowlistItem[] = defaultAllowlist) {
