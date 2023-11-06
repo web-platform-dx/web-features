@@ -20,6 +20,8 @@ const mapping = new Map<string, string | null>(
     Object.keys(lite.features).sort().map(id => [id, null])
 );
 
+const hiddenCaniuseItems = Object.entries(lite.features).flatMap(([id, data]) => !lite.feature(data).shown ? [id] : []);
+
 for (const [id, data] of Object.entries(features)) {
     if (!('caniuse' in data)) {
         continue;
@@ -28,22 +30,34 @@ for (const [id, data] of Object.entries(features)) {
     if (!mapping.has(caniuseId)) {
         throw new Error(`Invalid caniuse ID used for ${id}: ${caniuseId}`);
     }
+    if (hiddenCaniuseItems.includes(caniuseId)) {
+        throw new Error(`The caniuse ID used for "${id}" ("${caniuseId}") is hidden on caniuse.com`);
+    }
+
     mapping.set(caniuseId, id);
 }
 
 let matched = 0;
 
 for (const [caniuseId, id] of mapping.entries()) {
-    let checkbox = '[ ]';
-    let details = '';
-    if (id) {
-        checkbox = '[x]';
-        if (id !== caniuseId) {
-            details = ` (as ${id})`;
-        }
+    const isHidden = hiddenCaniuseItems.includes(caniuseId);
+    const isComplete = id || isHidden;
+
+    if (isComplete) {
         matched++;
     }
-    logger.verbose(`- ${checkbox} ${caniuseId}${details}`);
+
+    const checkbox = isComplete ? "[x]" : "[ ]";
+    let details = '';
+    if (id && id !== caniuseId) {
+        details = ` (as ${id})`;
+    }
+    if (isHidden) {
+        details = " (hidden on caniuse.com 🤫)";
+    }
+
+    const strike = isHidden ? "~~" : "";
+    logger.verbose(`- ${checkbox} ${strike}${caniuseId}${strike}${details}`);
 }
 
 logger.verbose("");
