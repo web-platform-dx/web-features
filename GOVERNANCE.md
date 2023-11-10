@@ -135,6 +135,7 @@ If the nominee accepts the invitation, then the _Owners_ group adds the new _Own
 - Florian Scholz (@Elchi3)
 - Kadir Topal (@atopal)
 - Leo McArdle (@LeoMcA)
+- Philip Jägenstedt ([@foolip](https://github.com/foolip))
 
 ## Additional paths to becoming a Peer or Owner
 
