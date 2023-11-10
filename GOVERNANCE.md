@@ -130,6 +130,7 @@ If the nominee accepts the invitation, then the _Owners_ group adds the new _Own
 
 #### List of current Owners
 
+- Alexis Deveria (@Fyrd)
 - Dan Fabulich (@dfabulich)
 - Daniel D. Beck (@ddbeck)
 - Florian Scholz (@Elchi3)
