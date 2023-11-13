@@ -134,6 +134,7 @@ If the nominee accepts the invitation, then the _Owners_ group adds the new _Own
 - Dan Fabulich ([@dfabulich](https://github.com/dfabulich))
 - Daniel D. Beck ([@ddbeck](https://github.com/ddbeck))
 - Florian Scholz ([@Elchi3](https://github.com/Elchi3))
+- James Graham ([@jgraham](https://github.com/jgraham))
 - Kadir Topal ([@atopal](https://github.com/atopal))
 - Leo McArdle ([@LeoMcA](https://github.com/LeoMcA))
 - Philip Jägenstedt ([@foolip](https://github.com/foolip))
