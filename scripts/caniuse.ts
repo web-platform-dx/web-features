@@ -20,7 +20,7 @@ const mapping = new Map<string, string | null>(
     Object.keys(lite.features).sort().map(id => [id, null])
 );
 
-const hiddenCaniuseItems = Object.entries(lite.features).flatMap(([id, data]) => !lite.feature(data).shown ? [id] : []);
+const hiddenCaniuseItems = new Set(Object.entries(lite.features).flatMap(([id, data]) => !lite.feature(data).shown ? [id] : []));
 
 for (const [id, data] of Object.entries(features)) {
     if (!('caniuse' in data)) {
@@ -30,7 +30,7 @@ for (const [id, data] of Object.entries(features)) {
     if (!mapping.has(caniuseId)) {
         throw new Error(`Invalid caniuse ID used for ${id}: ${caniuseId}`);
     }
-    if (hiddenCaniuseItems.includes(caniuseId)) {
+    if (hiddenCaniuseItems.has(caniuseId)) {
         throw new Error(`The caniuse ID used for "${id}" ("${caniuseId}") is hidden on caniuse.com`);
     }
 
@@ -40,7 +40,7 @@ for (const [id, data] of Object.entries(features)) {
 let matched = 0;
 
 for (const [caniuseId, id] of mapping.entries()) {
-    const isHidden = hiddenCaniuseItems.includes(caniuseId);
+    const isHidden = hiddenCaniuseItems.has(caniuseId);
     const isComplete = id || isHidden;
 
     if (isComplete) {
