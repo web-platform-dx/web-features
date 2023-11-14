@@ -50,8 +50,9 @@ testIsOK();
 let checked = 0;
 let errors = 0;
 
+// Ensure every exception in defaultAllowlist is needed
 for (const [allowedUrl, message] of defaultAllowlist) {
-    if (specUrls.some(specUrl => specUrl.href === allowedUrl)) {
+    if (isOK(new URL(allowedUrl), [])) {
         console.error(`${allowedUrl}: ${message}`);
         console.error(`${allowedUrl} is now known to web-specs.`);
         errors++;
