@@ -58,6 +58,14 @@ testIsOK();
 let checked = 0;
 let errors = 0;
 
+for (const [allowedUrl, message] of defaultAllowlist) {
+    if (specUrls.some(specUrl => specUrl.href === allowedUrl)) {
+        console.error(`${allowedUrl}: ${message}`);
+        console.error(`${allowedUrl} is now known to web-specs.`);
+        errors++;
+    }
+}
+
 for (const [id, data] of Object.entries(features)) {
     const specs = Array.isArray(data.spec) ? data.spec : [data.spec];
     for (const spec of specs) {
