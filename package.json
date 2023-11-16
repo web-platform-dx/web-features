@@ -20,7 +20,8 @@
     "test:schema": "ts-node scripts/schema.ts",
     "test:specs": "ts-node scripts/specs.ts",
     "test:format": "prettier --check .",
-    "format": "npx prettier --write ."
+    "format": "npx prettier --write .",
+    "feature-init": "ts-node scripts/feature-init.ts"
   },
   "devDependencies": {
     "@types/caniuse-lite": "^1.0.4",
