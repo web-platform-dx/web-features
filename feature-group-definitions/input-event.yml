@@ -2,3 +2,10 @@ spec: https://w3c.github.io/uievents/#event-type-input
 caniuse: input-event
 compat_features:
   - api.HTMLElement.input_event
+  - api.InputEvent
+  - api.InputEvent.InputEvent
+  - api.InputEvent.data
+  - api.InputEvent.dataTransfer
+  - api.InputEvent.getTargetRanges
+  - api.InputEvent.inputType
+  - api.InputEvent.isComposing
