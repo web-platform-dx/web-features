@@ -44,6 +44,9 @@ for (const [id, data] of Object.entries(features)) {
         if (!mapping.has(caniuseId)) {
             throw new Error(`Invalid caniuse ID used for ${id}: ${caniuseId}`);
         }
+        if (hiddenCaniuseItems.has(caniuseId)) {
+            throw new Error(`A caniuse ID used for "${id}" ("${caniuseId}") is hidden on caniuse.com`);
+        }
         mapping.set(caniuseId, id);
     }
 }
