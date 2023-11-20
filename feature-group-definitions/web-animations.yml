@@ -1,0 +1,57 @@
+spec: https://drafts.csswg.org/web-animations-1/
+caniuse: web-animation
+compat_features:
+  # Animation interface.
+  - api.Animation
+  - api.Animation.Animation
+  - api.Animation.cancel_event
+  - api.Animation.cancel
+  - api.Animation.commitStyles
+  - api.Animation.currentTime
+  - api.Animation.effect
+  - api.Animation.finish
+  - api.Animation.finished
+  - api.Animation.finish_event
+  - api.Animation.id
+  - api.Animation.pause
+  - api.Animation.pending
+  - api.Animation.persist
+  - api.Animation.play
+  - api.Animation.playbackRate
+  - api.Animation.playState
+  - api.Animation.ready
+  - api.Animation.remove_event
+  - api.Animation.replaceState
+  - api.Animation.reverse
+  - api.Animation.startTime
+  - api.Animation.timeline
+  - api.Animation.updatePlaybackRate
+  # AnimationTimeline interface
+  - api.AnimationTimeline
+  - api.AnimationTimeline.currentTime
+  # AnimationEffect interface
+  - api.AnimationEffect
+  - api.AnimationEffect.getComputedTiming
+  - api.AnimationEffect.getTiming
+  - api.AnimationEffect.updateTiming
+  # AnimationPlaybackEvent interface
+  - api.AnimationPlaybackEvent
+  - api.AnimationPlaybackEvent.AnimationPlaybackEvent
+  - api.AnimationPlaybackEvent.currentTime
+  - api.AnimationPlaybackEvent.timelineTime
+  # KeyframeEffect interface
+  - api.KeyframeEffect
+  - api.KeyframeEffect.KeyframeEffect
+  - api.KeyframeEffect.composite
+  - api.KeyframeEffect.getKeyframes
+  - api.KeyframeEffect.iterationComposite
+  - api.KeyframeEffect.pseudoElement
+  - api.KeyframeEffect.setKeyframes
+  - api.KeyframeEffect.target
+  # DocumentTimeline interface
+  - api.DocumentTimeline
+  - api.DocumentTimeline.DocumentTimeline
+  # Various accessors
+  - api.Document.getAnimations
+  - api.Document.timeline
+  - api.Element.animate
