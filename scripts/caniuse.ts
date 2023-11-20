@@ -20,40 +20,55 @@ const mapping = new Map<string, string | null>(
     Object.keys(lite.features).sort().map(id => [id, null])
 );
 
+// Fix missing key-value in @types/caniuse-lite
+// TODO: remove this declaration when https://github.com/DefinitelyTyped/DefinitelyTyped/pull/67330 lands
+declare module 'caniuse-lite' {
+    interface Feature {
+      shown: boolean;
+    }
+  }
+
+const hiddenCaniuseItems = new Set<string>();
+for (const [id, data] of Object.entries(lite.features)) {
+    if (!lite.feature(data).shown) {
+        hiddenCaniuseItems.add(id);
+    }
+}
+
 for (const [id, data] of Object.entries(features)) {
     if (!('caniuse' in data)) {
         continue;
     }
-    let caniuseIdOrIds = data.caniuse;
-
-    if (typeof caniuseIdOrIds === 'string') {
-        if (!mapping.has(caniuseIdOrIds)) {
-            throw new Error(`Invalid caniuse ID used for ${id}: ${caniuseIdOrIds}`);
+    const caniuseIds: string[] = typeof data.caniuse === "string" ? [data.caniuse] : data.caniuse;
+    for (const caniuseId in caniuseIds) {
+        if (!mapping.has(caniuseId)) {
+            throw new Error(`Invalid caniuse ID used for ${id}: ${caniuseId}`);
         }
-        mapping.set(caniuseIdOrIds, id);
-    } else {
-        for (const caniuseId of caniuseIdOrIds) {
-            if (!mapping.has(caniuseId)) {
-                throw new Error(`Invalid caniuse ID used for ${id}: ${caniuseId}`);
-            }
-            mapping.set(caniuseId, id);
-        }
+        mapping.set(caniuseId, id);
     }
 }
 
 let matched = 0;
 
 for (const [caniuseId, id] of mapping.entries()) {
-    let checkbox = '[ ]';
-    let details = '';
-    if (id) {
-        checkbox = '[x]';
-        if (id !== caniuseId) {
-            details = ` (as ${id})`;
-        }
+    const isHidden = hiddenCaniuseItems.has(caniuseId);
+    const isComplete = id || isHidden;
+
+    if (isComplete) {
         matched++;
     }
-    logger.verbose(`- ${checkbox} ${caniuseId}${details}`);
+
+    const checkbox = isComplete ? "[x]" : "[ ]";
+    let details = '';
+    if (id && id !== caniuseId) {
+        details = ` (as ${id})`;
+    }
+    if (isHidden) {
+        details = " (hidden on caniuse.com 🤫)";
+    }
+
+    const strike = isHidden ? "~~" : "";
+    logger.verbose(`- ${checkbox} ${strike}${caniuseId}${strike}${details}`);
 }
 
 logger.verbose("");

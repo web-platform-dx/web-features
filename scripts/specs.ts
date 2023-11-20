@@ -17,14 +17,6 @@ const defaultAllowlist: allowlistItem[] = [
     //     "https://example.com/spec/",
     //     "This spec is allowed because…. Remove this exception when https://example.com/org/repo/pull/1234 merges."
     // ]
-    [
-        "https://aomediacodec.github.io/av1-avif/",
-        "This spec is allowed because AVIF is supported in Chrome, Firefox and Safari. Remove this exception when https://github.com/w3c/browser-specs/issues/1088 is resolved."
-    ],
-    [
-        "https://developers.google.com/speed/webp/",
-        "This spec is allowed because WebP is widely supported. Remove this exception when https://github.com/w3c/browser-specs/issues/1109 is resolved."
-    ],
 ];
 
 function isOK(url: URL, allowlist: allowlistItem[] = defaultAllowlist) {
@@ -57,6 +49,15 @@ testIsOK();
 
 let checked = 0;
 let errors = 0;
+
+// Ensure every exception in defaultAllowlist is needed
+for (const [allowedUrl, message] of defaultAllowlist) {
+    if (isOK(new URL(allowedUrl), [])) {
+        console.error(`${allowedUrl}: ${message}`);
+        console.error(`${allowedUrl} is now known to web-specs.`);
+        errors++;
+    }
+}
 
 for (const [id, data] of Object.entries(features)) {
     const specs = Array.isArray(data.spec) ? data.spec : [data.spec];
