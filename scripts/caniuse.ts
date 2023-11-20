@@ -40,7 +40,7 @@ for (const [id, data] of Object.entries(features)) {
         continue;
     }
     const caniuseIds: string[] = typeof data.caniuse === "string" ? [data.caniuse] : data.caniuse;
-    for (const caniuseId in caniuseIds) {
+    for (const caniuseId of caniuseIds) {
         if (!mapping.has(caniuseId)) {
             throw new Error(`Invalid caniuse ID used for ${id}: ${caniuseId}`);
         }
