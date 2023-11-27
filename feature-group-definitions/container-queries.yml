@@ -1,13 +1,18 @@
 spec: https://drafts.csswg.org/css-contain-3/#container-queries
 caniuse: css-container-queries
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/4165
-# status:
-#   is_baseline: false
-#   support:
-#     chrome: "111"
-#     edge: "111"
-#     firefox: "110"
-#     safari: "16"
+status:
+  is_baseline: true
+  substatus: low
+  keystone_date: 2023-02-14
+  support:
+    chrome: "105"
+    chrome_android: "105"
+    edge: "105"
+    firefox: "110"
+    firefox_android: "110"
+    safari: "16"
+    safari_ios: "16"
 compat_features:
   - css.at-rules.container
   - css.properties.contain
