@@ -57,11 +57,23 @@
           "description": "Whether a feature is considered a \"baseline\" web platform feature and when it achieved that status",
           "properties": {
             "is_baseline": {
-              "description": "Whether the feature achieved baseline status",
+              "description": "Whether the feature achieved Baseline status",
               "type": "boolean"
             },
+            "keystone_date": {
+              "description": "Date the feature achieved Baseline low status",
+              "type": "string"
+            },
             "since": {
-              "description": "Date the feature achieved baseline status",
+              "description": "Date the feature achieved Baseline status (legacy)",
+              "type": "string"
+            },
+            "substatus": {
+              "description": "Whether the feature is widely supported (high) or newly supported (low)",
+              "enum": [
+                "high",
+                "low"
+              ],
               "type": "string"
             },
             "support": {
@@ -71,13 +83,22 @@
                 "chrome": {
                   "type": "string"
                 },
+                "chrome_android": {
+                  "type": "string"
+                },
                 "edge": {
                   "type": "string"
                 },
                 "firefox": {
                   "type": "string"
                 },
+                "firefox_android": {
+                  "type": "string"
+                },
                 "safari": {
+                  "type": "string"
+                },
+                "safari_ios": {
                   "type": "string"
                 }
               },
