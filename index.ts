@@ -23,14 +23,14 @@ export interface FeatureData {
 type browserIdentifier = "chrome" | "chrome_android" | "edge" | "firefox" | "firefox_android" | "safari" | "safari_ios";
 
 interface SupportStatus {
-    /** Whether the feature achieved Baseline status */
-    is_baseline: boolean;
-    /** Whether the feature is widely supported (high) or newly supported (low) */
-    substatus?: "high" | "low";
+    /** Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false) */
+    baseline?: "high" | "low" | false;
+    /** Whether the feature is Baseline (legacy) */
+    is_baseline?: true | false;
     /** Date the feature achieved Baseline status (legacy) */
     since?: string;
     /** Date the feature achieved Baseline low status */
-    keystone_date?: string;
+    baseline_low_date?: string;
     /** Browser versions that most-recently introduced the feature */
     support?: {[K in browserIdentifier]?: string};
 }

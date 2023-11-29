@@ -56,24 +56,32 @@
           "additionalProperties": false,
           "description": "Whether a feature is considered a \"baseline\" web platform feature and when it achieved that status",
           "properties": {
-            "is_baseline": {
-              "description": "Whether the feature achieved Baseline status",
-              "type": "boolean"
+            "baseline": {
+              "description": "Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false)",
+              "enum": [
+                "high",
+                "low",
+                false
+              ],
+              "type": [
+                "string",
+                "boolean"
+              ]
             },
-            "keystone_date": {
+            "baseline_low_date": {
               "description": "Date the feature achieved Baseline low status",
               "type": "string"
             },
+            "is_baseline": {
+              "description": "Whether the feature is Baseline (legacy)",
+              "enum": [
+                true,
+                false
+              ],
+              "type": "boolean"
+            },
             "since": {
               "description": "Date the feature achieved Baseline status (legacy)",
-              "type": "string"
-            },
-            "substatus": {
-              "description": "Whether the feature is widely supported (high) or newly supported (low)",
-              "enum": [
-                "high",
-                "low"
-              ],
               "type": "string"
             },
             "support": {
@@ -105,9 +113,6 @@
               "type": "object"
             }
           },
-          "required": [
-            "is_baseline"
-          ],
           "type": "object"
         },
         "usage_stats": {
