@@ -7,7 +7,7 @@ import schema from '../schemas/features.schema.json' assert { type: 'json' };
 import defs from '../schemas/defs.schema.json' assert { type: 'json' }
 
 async function validate() {
-    const ajv = new Ajv({allErrors: true, allowUnionTypes: true, schemas: [defs]});
+    const ajv = new Ajv({allErrors: true, schemas: [defs]});
     addFormats(ajv);
 
     const validate = ajv.compile(schema);
