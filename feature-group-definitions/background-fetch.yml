@@ -1,4 +1,10 @@
 spec: https://wicg.github.io/background-fetch/
+status:
+  baseline: false
+  support:
+    chrome: "74"
+    chrome_android: "74"
+    edge: "79"
 compat_features:
   - api.BackgroundFetchEvent
   - api.BackgroundFetchEvent.BackgroundFetchEvent
