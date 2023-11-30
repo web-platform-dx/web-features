@@ -56,12 +56,36 @@
           "additionalProperties": false,
           "description": "Whether a feature is considered a \"baseline\" web platform feature and when it achieved that status",
           "properties": {
+            "baseline": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "high",
+                    "low"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "const": false,
+                  "type": "boolean"
+                }
+              ],
+              "description": "Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false)"
+            },
+            "baseline_low_date": {
+              "description": "Date the feature achieved Baseline low status",
+              "type": "string"
+            },
             "is_baseline": {
-              "description": "Whether the feature achieved baseline status",
+              "description": "Whether the feature is Baseline (legacy)",
+              "enum": [
+                true,
+                false
+              ],
               "type": "boolean"
             },
             "since": {
-              "description": "Date the feature achieved baseline status",
+              "description": "Date the feature achieved Baseline status (legacy)",
               "type": "string"
             },
             "support": {
@@ -71,22 +95,28 @@
                 "chrome": {
                   "type": "string"
                 },
+                "chrome_android": {
+                  "type": "string"
+                },
                 "edge": {
                   "type": "string"
                 },
                 "firefox": {
                   "type": "string"
                 },
+                "firefox_android": {
+                  "type": "string"
+                },
                 "safari": {
+                  "type": "string"
+                },
+                "safari_ios": {
                   "type": "string"
                 }
               },
               "type": "object"
             }
           },
-          "required": [
-            "is_baseline"
-          ],
           "type": "object"
         },
         "usage_stats": {

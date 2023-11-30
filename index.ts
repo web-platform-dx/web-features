@@ -20,13 +20,19 @@ export interface FeatureData {
     usage_stats?: usage_stats_url | [usage_stats_url, usage_stats_url, ...usage_stats_url[]];  // A single URL or an array of two or more
 }
 
-type browserIdentifier = "chrome" | "edge" | "firefox" | "safari";
+type browserIdentifier = "chrome" | "chrome_android" | "edge" | "firefox" | "firefox_android" | "safari" | "safari_ios";
+
+type BaselineHighLow = "high" | "low";
 
 interface SupportStatus {
-    /** Whether the feature achieved baseline status */
-    is_baseline: boolean;
-    /** Date the feature achieved baseline status */
+    /** Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false) */
+    baseline?: BaselineHighLow | false;
+    /** Whether the feature is Baseline (legacy) */
+    is_baseline?: true | false;
+    /** Date the feature achieved Baseline status (legacy) */
     since?: string;
+    /** Date the feature achieved Baseline low status */
+    baseline_low_date?: string;
     /** Browser versions that most-recently introduced the feature */
     support?: {[K in browserIdentifier]?: string};
 }

@@ -3,13 +3,16 @@ spec:
   - https://drafts.csswg.org/css-values-4/#viewport-relative-lengths
 caniuse: viewport-unit-variants
 status:
-  is_baseline: true
-  since: "2023-01-12"
+  baseline: low
+  baseline_low_date: 2022-12-06
   support:
     chrome: "108"
+    chrome_android: "108"
     edge: "108"
     firefox: "101"
+    firefox_android: "101"
     safari: "15.4"
+    safari_ios: "15.4"
 compat_features:
   - css.types.length.vb
   - css.types.length.vi
