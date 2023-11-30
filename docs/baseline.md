@@ -46,9 +46,7 @@ Goal 6: **Identify commitment through documentation.**
 Baseline features demonstrate consensus through specifications, documentation for web developers, and other signs that the feature will continue to have a place in a web developer’s toolbox.
 Baseline features aren’t unspecified or formally discouraged.
 
-<!-- TODO replace with an issue -->
-
-**Issue TBD**: Part of goal 6 ought to be part of feature-set/web-features feature definition rules, not in Baseline status selection.
+<!-- TODO: https://github.com/web-platform-dx/web-features/issues/437 -->
 
 ## Non-goals
 
@@ -81,9 +79,7 @@ Baseline status cannot or will not satisfy the following non-goals:
 
 ## Audience illustration for Baseline status
 
-<!-- TODO replace with an issue -->
-
-**Issue TBD**: This persona will likely have utility for all of feature-set/web-features and should move to some project-wide documentation and get a cross reference here.
+<!-- TODO: https://github.com/web-platform-dx/web-features/issues/438 -->
 
 Although Baseline is intended for web developers, “web developers” is an extremely broad category, which includes ranges of experience, goals, and motivations.
 It’s hard to make tools for a broad category.
@@ -117,7 +113,7 @@ This is but one of several possible stories to help keep in mind the needs and c
 ## Ownership and maintenance
 
 The WebDX community group, through the [web-platform-dx/web-features-set owners group](../GOVERNANCE.md), maintains this document.
-Based on WebDX community group research, the feature-set owners group decides matters such as the core browser set, releases, editorial overrides, and so on.
+Based on WebDX community group research, the web-features owners group decides matters such as the core browser set, releases, editorial overrides, and so on.
 
 ## Status definition
 
@@ -160,11 +156,11 @@ The _core browser set_ shall be defined as:
 
 * Apple Safari (iOS)
 * Apple Safari (macOS)
-* Mozilla Firefox (Android)
-* Mozilla Firefox (desktop)
 * Google Chrome (Android)
 * Google Chrome (desktop)
 * Microsoft Edge (desktop)
+* Mozilla Firefox (Android)
+* Mozilla Firefox (desktop)
 
 ## Future considerations
 
