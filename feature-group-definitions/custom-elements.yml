@@ -1,5 +1,11 @@
 spec: https://html.spec.whatwg.org/multipage/custom-elements.html
 caniuse: custom-elementsv1
+status:
+  baseline: false
+  support:
+    chrome: "73"
+    chrome_android: "73"
+    edge: "79"
 compat_features:
   - api.CustomElementRegistry
   - api.CustomElementRegistry.builtin_element_support
