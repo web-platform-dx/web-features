@@ -27,10 +27,6 @@ type BaselineHighLow = "high" | "low";
 interface SupportStatus {
     /** Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false) */
     baseline?: BaselineHighLow | false;
-    /** Whether the feature is Baseline (legacy) */
-    is_baseline?: true | false;
-    /** Date the feature achieved Baseline status (legacy) */
-    since?: string;
     /** Date the feature achieved Baseline low status */
     baseline_low_date?: string;
     /** Browser versions that most-recently introduced the feature */
