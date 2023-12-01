@@ -1,5 +1,11 @@
 spec: https://fullscreen.spec.whatwg.org/
 caniuse: fullscreen
+status:
+  baseline: false
+  support:
+    edge: "79"
+    firefox: "64"
+    firefox_android: "64"
 compat_features:
   - api.Document.exitFullscreen
   - api.Document.exitFullscreen.returns_promise
