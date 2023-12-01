@@ -2,13 +2,16 @@ spec: https://drafts.csswg.org/css-flexbox-1/
 caniuse: flexbox
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/1692
 status:
-  is_baseline: true
-  since: "2020-10-20"
+  baseline: low
+  baseline_low_date: 2022-09-12
   support:
-    chrome: "57"
-    edge: "79"
+    chrome: "94"
+    chrome_android: "94"
+    edge: "94"
     firefox: "81"
-    safari: "9"
+    firefox_android: "81"
+    safari: "16"
+    safari_ios: "16"
 compat_features:
   - css.properties.align-content.flex_context
   # - css.properties.align-content.flex_context.center
