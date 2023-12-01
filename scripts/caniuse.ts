@@ -39,15 +39,16 @@ for (const [id, data] of Object.entries(features)) {
     if (!('caniuse' in data)) {
         continue;
     }
-    const caniuseId = data.caniuse;
-    if (!mapping.has(caniuseId)) {
-        throw new Error(`Invalid caniuse ID used for ${id}: ${caniuseId}`);
+    const caniuseIds: string[] = typeof data.caniuse === "string" ? [data.caniuse] : data.caniuse;
+    for (const caniuseId of caniuseIds) {
+        if (!mapping.has(caniuseId)) {
+            throw new Error(`Invalid caniuse ID used for ${id}: ${caniuseId}`);
+        }
+        if (hiddenCaniuseItems.has(caniuseId)) {
+            throw new Error(`A caniuse ID used for "${id}" ("${caniuseId}") is hidden on caniuse.com`);
+        }
+        mapping.set(caniuseId, id);
     }
-    if (hiddenCaniuseItems.has(caniuseId)) {
-        throw new Error(`The caniuse ID used for "${id}" ("${caniuseId}") is hidden on caniuse.com`);
-    }
-
-    mapping.set(caniuseId, id);
 }
 
 let matched = 0;
