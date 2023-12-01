@@ -2,13 +2,16 @@ spec: https://drafts.csswg.org/css-grid-3/
 caniuse: css-grid
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/1693
 status:
-  is_baseline: true
-  since: "2020-06-02" # since Firefox 77
+  baseline: high
+  baseline_low_date: 2020-07-28
   support:
     chrome: "66"
+    chrome_android: "66"
     edge: "79"
     firefox: "76"
+    firefox_android: "79"
     safari: "12.1"
+    safari_ios: "12.2"
 compat_features:
   - css.properties.align-content.grid_context
   - css.properties.align-items.grid_context
@@ -49,4 +52,3 @@ compat_features:
   - css.properties.place-self.grid_context
   - css.properties.row-gap.grid_context
   - css.types.flex
-  - css.types.minmax
