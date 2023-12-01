@@ -1,5 +1,13 @@
 spec: https://w3c.github.io/uievents/#event-type-input
 caniuse: input-event
+status:
+  baseline: false
+  support:
+    chrome: "60"
+    chrome_android: "60"
+    edge: "79"
+    firefox: "87"
+    firefox_android: "87"
 compat_features:
   - api.HTMLElement.input_event
   - api.InputEvent
