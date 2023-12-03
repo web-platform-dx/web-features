@@ -2,6 +2,15 @@ spec:
   - https://html.spec.whatwg.org/multipage/semantics-other.html#selector-read-only
   - https://drafts.csswg.org/selectors-4/#rw-pseudos
 caniuse: css-read-only-write
+status:
+  baseline: false
+  support:
+    chrome: "1"
+    chrome_android: "18"
+    edge: "13"
+    firefox: "78"
+    safari: "4"
+    safari_ios: "3.2"
 compat_features:
   - css.selectors.read-only
   - css.selectors.read-write
