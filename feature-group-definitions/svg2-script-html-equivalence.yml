@@ -1,4 +1,9 @@
 spec: https://svgwg.org/svg2-draft/interact.html#ScriptElement
+status:
+  baseline: false
+  support:
+    firefox: "117"
+    firefox_android: "117"
 compat_features:
   - api.SVGScriptElement.async
   - api.SVGScriptElement.defer
