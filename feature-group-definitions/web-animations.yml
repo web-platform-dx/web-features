@@ -44,7 +44,8 @@ compat_features:
   - api.KeyframeEffect.KeyframeEffect
   - api.KeyframeEffect.composite
   - api.KeyframeEffect.getKeyframes
-  - api.KeyframeEffect.iterationComposite
+  # TODO: iterationComposite is a later addition and needs a better home than this feature
+  # - api.KeyframeEffect.iterationComposite
   - api.KeyframeEffect.pseudoElement
   - api.KeyframeEffect.setKeyframes
   - api.KeyframeEffect.target
