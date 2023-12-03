@@ -1,5 +1,10 @@
 spec: https://drafts.csswg.org/css-nesting-1/
 caniuse: css-nesting
+status:
+  baseline: false
+  support:
+    firefox: "117"
+    firefox_android: "117"
 compat_features:
   - css.selectors.nesting
   - api.CSSStyleRule.cssRules
