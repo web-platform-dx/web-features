@@ -1,5 +1,16 @@
 spec: https://drafts.csswg.org/css-overflow-3/#line-clamp
 caniuse: css-line-clamp
+status:
+  baseline: high
+  baseline_low_date: 2019-07-09
+  support:
+    chrome: "6"
+    chrome_android: "18"
+    edge: "17"
+    firefox: "68"
+    firefox_android: "68"
+    safari: "5"
+    safari_ios: "4.2"
 compat_features:
   # This is a weird one! Specified with a prefix:
   # https://drafts.csswg.org/css-overflow-4/#propdef--webkit-line-clamp
