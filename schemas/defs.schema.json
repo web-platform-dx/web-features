@@ -87,18 +87,6 @@
               "description": "Date the feature achieved Baseline low status",
               "type": "string"
             },
-            "is_baseline": {
-              "description": "Whether the feature is Baseline (legacy)",
-              "enum": [
-                true,
-                false
-              ],
-              "type": "boolean"
-            },
-            "since": {
-              "description": "Date the feature achieved Baseline status (legacy)",
-              "type": "string"
-            },
             "support": {
               "additionalProperties": false,
               "description": "Browser versions that most-recently introduced the feature",
