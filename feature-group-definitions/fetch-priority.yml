@@ -1,6 +1,12 @@
 spec:
   - https://fetch.spec.whatwg.org/#request-priority
   - https://html.spec.whatwg.org/multipage/urls-and-fetching.html#fetch-priority-attributes
+status:
+  baseline: false
+  support:
+    chrome: "102"
+    chrome_android: "102"
+    edge: "102"
 compat_features:
   - api.fetch.init_priority_parameter
   - api.HTMLImageElement.fetchPriority
