@@ -1,0 +1,89 @@
+spec: https://fetch.spec.whatwg.org/
+caniuse: fetch
+status:
+  baseline: false
+  support:
+    chrome: "105"
+    chrome_android: "105"
+    edge: "105"
+compat_features:
+  - api.Headers
+  - api.Headers.Headers
+  - api.Headers.append
+  - api.Headers.delete
+  - api.Headers.entries
+  - api.Headers.forEach
+  - api.Headers.get
+  # - api.Headers.getSetCookie # later addition
+  - api.Headers.has
+  - api.Headers.keys
+  # - api.Headers.lexicographical_sorting # unsupported in Safari, for a long time
+  - api.Headers.set
+  - api.Headers.values
+  - api.Headers.@@iterator
+  - api.Request
+  - api.Request.Request
+  - api.Request.Request.cross_origin_stripped
+  # - api.Request.Request.init_attributionReporting_parameter # related to a newer API
+  # - api.Request.Request.init_browsingTopics_parameter # related to a newer API
+  # - api.Request.Request.init_priority_parameter # related to a newer API
+  - api.Request.Request.init_referrer_parameter
+  # - api.Request.Request.request_body_readablestream # later addition
+  - api.Request.Request.response_body_readablestream
+  - api.Request.arrayBuffer
+  - api.Request.blob
+  - api.Request.body
+  - api.Request.bodyUsed
+  - api.Request.cache
+  # - api.Request.cache.only_if_cached # Not widely implemented
+  - api.Request.clone
+  - api.Request.credentials
+  # - api.Request.credentials.default_same-origin # later addition
+  - api.Request.destination
+  - api.Request.formData
+  - api.Request.headers
+  - api.Request.integrity
+  # - api.Request.isHistoryNavigation # later addition
+  - api.Request.json
+  # - api.Request.keepalive # Not widely implemented
+  - api.Request.method
+  - api.Request.mode
+  - api.Request.mode.navigate_mode
+  - api.Request.redirect
+  - api.Request.referrer
+  - api.Request.referrerPolicy
+  - api.Request.signal
+  - api.Request.text
+  - api.Request.url
+  - api.Response
+  - api.Response.Response
+  - api.Response.Response.accept_readablestream
+  - api.Response.Response.body_parameter_optional
+  - api.Response.arrayBuffer
+  - api.Response.blob
+  - api.Response.body
+  # - api.Response.body.readable_byte_stream # later addition
+  - api.Response.bodyUsed
+  - api.Response.clone
+  - api.Response.error_static
+  - api.Response.formData
+  - api.Response.headers
+  - api.Response.json
+  # - api.Response.json_static # later addition
+  - api.Response.ok
+  - api.Response.redirect_static
+  - api.Response.redirected
+  - api.Response.status
+  - api.Response.statusText
+  - api.Response.text
+  - api.Response.type
+  - api.Response.url
+  - api.fetch
+  # - api.fetch.authorization_removed_cross_origin # later addition
+  - api.fetch.blob_data_support
+  # - api.fetch.init_attributionReporting_parameter # related to a newer API
+  # - api.fetch.init_browsingTopics_parameter # related to a newer API
+  # - api.fetch.init_keepalive_parameter # Not widely implemented
+  # - api.fetch.init_priority_parameter # related to a newer API
+  - api.fetch.init_referrerPolicy_parameter
+  - api.fetch.init_signal_parameter
