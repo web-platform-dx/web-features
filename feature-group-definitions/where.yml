@@ -1,5 +1,16 @@
 spec: https://drafts.csswg.org/selectors-4/#zero-matches
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/2431
+status:
+  baseline: high
+  baseline_low_date: 2021-01-21
+  support:
+    chrome: "88"
+    chrome_android: "88"
+    edge: "88"
+    firefox: "82"
+    firefox_android: "82"
+    safari: "14"
+    safari_ios: "14"
 compat_features:
   - css.selectors.where
   - css.selectors.where.forgiving_selector_list
