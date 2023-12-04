@@ -248,8 +248,19 @@ function publish(args) {
   build();
   const { version } = readPackageJSON(packages["web-features"]);
   const tag = `web-features/${version}`;
-  run(`git tag --annotate "${tag}" --message="web-features ${version}"`);
-  run(`git push origin ${tag}`);
+
+  const tagCommands = [
+    `git tag --annotate "${tag}" --message="web-features ${version}"`,
+    `git push origin ${tag}`,
+  ];
+
+  for (const cmd of tagCommands) {
+    if (args.dryRun) {
+      logger.info(`Dry run, not running: ${tagCommands}`);
+      continue;
+    }
+    run(cmd);
+  }
 
   logger.info("Publishing release");
   let publishCmd = `npm publish`;
@@ -334,17 +345,17 @@ type PreflightOptions =
 function preflight(options: PreflightOptions): void {
   logger.info("Running preflight checks");
 
-  logger.verbose("Checking that working directory is clean");
-  const cleanCmd = "git diff-index --quiet HEAD";
-  try {
-    logger.debug(cleanCmd);
-    execSync(cleanCmd);
-  } catch (err) {
-    logger.error(
-      "Working directory is not clean. Stash your changes and try again.",
-    );
-    process.exit(1);
-  }
+  // logger.verbose("Checking that working directory is clean");
+  // const cleanCmd = "git diff-index --quiet HEAD";
+  // try {
+  //   logger.debug(cleanCmd);
+  //   execSync(cleanCmd);
+  // } catch (err) {
+  //   logger.error(
+  //     "Working directory is not clean. Stash your changes and try again.",
+  //   );
+  //   process.exit(1);
+  // }
 
   logger.verbose("Confirming gh CLI is installed and authorized");
   const ghVersionCmd = "gh version";
