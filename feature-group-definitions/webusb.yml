@@ -1,6 +1,12 @@
 spec: https://wicg.github.io/webusb/
 caniuse: webusb
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/1519
+status:
+  baseline: false
+  support:
+    chrome: "101"
+    chrome_android: "101"
+    edge: "101"
 compat_features:
   - api.Navigator.usb
   - api.USB
@@ -93,5 +99,4 @@ compat_features:
   - api.USBOutTransferResult.status
   - api.USBOutTransferResult.USBOutTransferResult
   - api.WorkerNavigator.usb
-  - http.headers.Feature-Policy.usb
   - http.headers.Permissions-Policy.usb
