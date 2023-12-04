@@ -11,7 +11,7 @@ export interface FeatureData {
     /** Specification */
     spec: specification_url | [specification_url, specification_url, ...specification_url[]];
     /** caniuse.com identifier */
-    caniuse?: string;
+    caniuse?: string | [string, string, ...string[]];
     /** Whether a feature is considered a "baseline" web platform feature and when it achieved that status */
     status?: SupportStatus;
     /** Sources of support data for this feature */

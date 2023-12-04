@@ -1,22 +1,20 @@
 spec: https://w3c.github.io/webtransport/
 caniuse: webtransport
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/3472
+status:
+  baseline: false
+  support: {}
 compat_features:
   - api.WebTransport
   - api.WebTransport.WebTransport
-  - api.WebTransport.WebTransport.options_allowPooling_parameter
-  - api.WebTransport.WebTransport.options_requireUnreliable_parameter
-  - api.WebTransport.WebTransport.options_serverCertificateHashes_parameter
   - api.WebTransport.close
   - api.WebTransport.closed
   - api.WebTransport.createBidirectionalStream
   - api.WebTransport.createUnidirectionalStream
   - api.WebTransport.datagrams
-  - api.WebTransport.getStats
   - api.WebTransport.incomingBidirectionalStreams
   - api.WebTransport.incomingUnidirectionalStreams
   - api.WebTransport.ready
-  - api.WebTransport.reliability
   - api.WebTransportBidirectionalStream
   - api.WebTransportBidirectionalStream.readable
   - api.WebTransportBidirectionalStream.writable
