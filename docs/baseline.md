@@ -124,7 +124,7 @@ If a feature satisfies the requirements of both substatuses, then the high statu
 
 This status represents the initial interoperability of a feature across many browsers.
 The status marks the starting point for setting the wider support (high) status.
-The status provides a versionable date for a feature.
+The status provides a versionable date for a feature, called the _keystone date_.
 
 For each feature definition in `web-features`, an interoperable status shall be assigned to the feature if the feature satisfies all of the following tests:
 
@@ -139,7 +139,7 @@ If there was more than one introduction (e.g., a feature was withdrawn then rein
 
 ### Wider-support (high) status
 
-For each feature definition in `web-features`, a wider-support status shall be be conferred to the feature if the feature satisfies the following test:
+For each feature definition in `web-features`, a wider-support status shall be conferred to the feature if the feature satisfies the following test:
 
 The feature’s keystone date is on or before today’s date minus 30 months and the dates of the following long-term support releases:
 
