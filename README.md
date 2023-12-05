@@ -7,7 +7,7 @@ By creating a common list of features and their definitions, `web-features` aims
 `web-features` does this by:
 
 * Creating feature definitions, which identify and describe capabilities of the web
-* Generating _Baseline_ support data, which summarizes the availability of web features across key browsers and releases
+* Generating [_Baseline_](./docs/baseline.md) support data, which summarizes the availability of web features across key browsers and releases
 * Publishing the `web-features` npm package, which bundles feature identifiers with Baseline statuses
 
 From `Array` to Cascade Layers to Offscreen Canvas, `web-features` identifies, defines, and categorizes capabilities of the web platform that web developers care about.

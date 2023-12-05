@@ -171,8 +171,10 @@ The _Owners_ commit to meeting on a quarterly basis, or more often as needed, on
 The meeting is run by a designated chair selected by the _Owners_ group.
 Meetings will typically tend to important or unresolved matters, such as modifications of governance, contribution policy, project membership, or release process.
 
+Reviewing and renewing the [definition of Baseline](./docs/baseline.md) must appear on the agenda of the _Owners_ group meeting at least once per calendar year.
+
 Any community member or _Peer_ can ask that something be added to the next meeting’s agenda by logging a GitHub Issue.
-_Peers_ can add the item to the agenda by adding the [meeting-agenda](https://github.com/web-platform-dx/feature-set/labels/meeting-agenda) label to the issue and _Contributors_ can ask _Peers_ or _Owners_ to add the label for them (though they’re not obliged to accept the request).
+_Peers_ can add the item to the agenda by adding the [meeting-agenda](https://github.com/web-platform-dx/web-features/labels/meeting-agenda) label to the issue and _Contributors_ can ask _Peers_ or _Owners_ to add the label for them (though they’re not obliged to accept the request).
 
 The intention of the agenda is not to approve or review all patches.
 That should happen continuously on GitHub and be handled by the larger group of Peers.
