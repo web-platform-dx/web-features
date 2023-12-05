@@ -27,7 +27,10 @@ Goal 1: **Tailor Baseline status to a developer audience.**
 The Baseline status is intended for developers creating and maintaining hypertext applications for the web, who may not have access to the resources, data, tools, or knowledge needed to identify their users’ browsers capabilities more directly.
 See [Audience illustration for Baseline status](#audience-illustration-for-baseline-status) for a detailed story to help understand this goal in more detail.
 
-Goal 2: **Change with the web and web developers’ needs.** Features can and should join and leave Baseline status as their respective interoperability, reliability, commitment, and availability profiles change. Likewise, Baseline statuses should change as developers’ needs change (for example, developers come to rely on a new browser or an established browser fades from use). Baseline is not an inert, one-time assessment.
+Goal 2: **Change with the web and web developers’ needs.**
+Features can and should join and leave Baseline status as their respective interoperability, reliability, commitment, and availability profiles change.
+Likewise, Baseline statuses should change as developers’ needs change (for example, developers come to rely on a new browser or an established browser fades from use).
+Baseline is not an inert, one-time assessment, nor is it arbitrary, changing form from one day to the next.
 
 Goal 3: **Identify interoperability through support across browser implementations.**
 Baseline features demonstrate consensus through multiple implementations.
