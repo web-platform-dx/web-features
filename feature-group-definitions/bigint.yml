@@ -11,12 +11,3 @@ status:
     firefox_android: "68"
     safari: "14"
     safari_ios: "14"
-compat_features:
-  - javascript.builtins.BigInt
-  # TODO: use a wildcard for these features, once implemented
-  - javascript.builtins.BigInt.asIntN
-  - javascript.builtins.BigInt.asUintN
-  - javascript.builtins.BigInt.BigInt
-  - javascript.builtins.BigInt.toLocaleString
-  - javascript.builtins.BigInt.toString
-  - javascript.builtins.BigInt.valueOf

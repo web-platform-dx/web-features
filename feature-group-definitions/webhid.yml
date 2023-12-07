@@ -6,31 +6,3 @@ status:
   support:
     chrome: "89"
     edge: "89"
-compat_features:
-  - api.HID
-  - api.HID.connect_event
-  - api.HID.disconnect_event
-  - api.HID.getDevices
-  - api.HID.requestDevice
-  - api.HIDConnectionEvent
-  - api.HIDConnectionEvent.HIDConnectionEvent
-  - api.HIDConnectionEvent.device
-  - api.HIDDevice
-  - api.HIDDevice.close
-  - api.HIDDevice.collections
-  # - api.HIDDevice.forget
-  - api.HIDDevice.inputreport_event
-  - api.HIDDevice.open
-  - api.HIDDevice.opened
-  - api.HIDDevice.productId
-  - api.HIDDevice.productName
-  - api.HIDDevice.receiveFeatureReport
-  - api.HIDDevice.sendFeatureReport
-  - api.HIDDevice.sendReport
-  - api.HIDDevice.vendorId
-  - api.HIDInputReportEvent
-  - api.HIDInputReportEvent.data
-  - api.HIDInputReportEvent.device
-  - api.HIDInputReportEvent.reportId
-  - api.Navigator.hid
-  - http.headers.Permissions-Policy.hid
