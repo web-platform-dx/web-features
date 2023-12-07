@@ -2,8 +2,12 @@ spec: https://html.spec.whatwg.org/multipage/canvas.html#the-offscreencanvas-int
 caniuse: offscreencanvas
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/1624
 status:
-  baseline: false
+  baseline: low
+  baseline_low_date: 2023-03-27
   support:
+    chrome: "80"
+    chrome_android: "80"
+    edge: "80"
     firefox: "105"
     firefox_android: "105"
     safari: "16.4"
