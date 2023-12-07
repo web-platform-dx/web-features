@@ -26,7 +26,10 @@ compat_features:
   - api.OffscreenCanvasRenderingContext2D.clearRect
   - api.OffscreenCanvasRenderingContext2D.clip
   - api.OffscreenCanvasRenderingContext2D.closePath
-  - api.OffscreenCanvasRenderingContext2D.commit
+  # `commit`'s relevance and future are uncertain, see both:
+  #   https://github.com/whatwg/html/pull/9979
+  #   https://bugs.chromium.org/p/chromium/issues/detail?id=1507769
+  # - api.OffscreenCanvasRenderingContext2D.commit
   - api.OffscreenCanvasRenderingContext2D.createImageData
   - api.OffscreenCanvasRenderingContext2D.createLinearGradient
   - api.OffscreenCanvasRenderingContext2D.createPattern
