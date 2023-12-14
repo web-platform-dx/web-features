@@ -1,4 +1,12 @@
 spec: https://drafts.css-houdini.org/css-properties-values-api-1/
+status:
+  baseline: false
+  support:
+    chrome: "85"
+    chrome_android: "85"
+    edge: "85"
+    safari: "16.4"
+    safari_ios: "16.4"
 compat_features:
   - api.CSS.registerProperty_static
   - api.CSSPropertyRule

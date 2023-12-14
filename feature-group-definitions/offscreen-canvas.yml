@@ -1,14 +1,17 @@
 spec: https://html.spec.whatwg.org/multipage/canvas.html#the-offscreencanvas-interface
 caniuse: offscreencanvas
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/1624
-# status:
-#   is_baseline: false
-#   # since: future
-#   support:
-#     chrome: "80"
-#     edge: "80"
-#     firefox: "105"
-#     safari: "16.4"
+status:
+  baseline: low
+  baseline_low_date: 2023-03-27
+  support:
+    chrome: "80"
+    chrome_android: "80"
+    edge: "80"
+    firefox: "105"
+    firefox_android: "105"
+    safari: "16.4"
+    safari_ios: "16.4"
 compat_features:
   - api.HTMLCanvasElement.transferControlToOffscreen
   - api.OffscreenCanvas
@@ -27,7 +30,10 @@ compat_features:
   - api.OffscreenCanvasRenderingContext2D.clearRect
   - api.OffscreenCanvasRenderingContext2D.clip
   - api.OffscreenCanvasRenderingContext2D.closePath
-  - api.OffscreenCanvasRenderingContext2D.commit
+  # `commit`'s relevance and future are uncertain, see both:
+  #   https://github.com/whatwg/html/pull/9979
+  #   https://bugs.chromium.org/p/chromium/issues/detail?id=1507769
+  # - api.OffscreenCanvasRenderingContext2D.commit
   - api.OffscreenCanvasRenderingContext2D.createImageData
   - api.OffscreenCanvasRenderingContext2D.createLinearGradient
   - api.OffscreenCanvasRenderingContext2D.createPattern

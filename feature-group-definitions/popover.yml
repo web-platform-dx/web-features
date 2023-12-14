@@ -1,5 +1,13 @@
 spec: https://html.spec.whatwg.org/multipage/popover.html
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/4191
+status:
+  baseline: false
+  support:
+    chrome: "114"
+    chrome_android: "114"
+    edge: "114"
+    safari: "17"
+    safari_ios: "17"
 compat_features:
   - api.HTMLButtonElement.popoverTargetAction
   - api.HTMLButtonElement.popoverTargetElement
@@ -13,8 +21,8 @@ compat_features:
   - api.HTMLInputElement.popoverTargetElement
   - api.ToggleEvent
   - api.ToggleEvent.ToggleEvent
-  - api.ToggleEvent.newstate
-  - api.ToggleEvent.oldstate
+  - api.ToggleEvent.newState
+  - api.ToggleEvent.oldState
   - css.selectors.backdrop.popover
   - css.selectors.popover-open
   - html.global_attributes.popover
