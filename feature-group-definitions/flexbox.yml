@@ -5,13 +5,13 @@ status:
   baseline: high
   baseline_low_date: 2020-09-22
   support:
-    chrome: "57"
-    chrome_android: "57"
+    chrome: "59"
+    chrome_android: "59"
     edge: "79"
     firefox: "81"
     firefox_android: "81"
-    safari: "9"
-    safari_ios: "9"
+    safari: "11"
+    safari_ios: "11"
 compat_features:
   - css.properties.align-content.flex_context
   # - css.properties.align-content.flex_context.center
@@ -59,4 +59,9 @@ compat_features:
   # - css.properties.justify-content.flex_context.space-around
   # - css.properties.justify-content.flex_context.space-between
   - css.properties.justify-content.flex_context.stretch
+  - css.properties.justify-items.flex_context
+  - css.properties.justify-self.flex_context
   - css.properties.order
+  - css.properties.place-content.flex_context
+  - css.properties.place-items.flex_context
+  - css.properties.place-self.flex_context
