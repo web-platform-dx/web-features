@@ -4,20 +4,21 @@ status:
   baseline: false
   support: {}
 compat_features:
-  - api.Clipboard
+  # As a temporary workaround for https://github.com/web-platform-dx/web-features/issues/495,
+  # exclude the features that are part of `navigator.clipboard.writeText()`, as those are older
+  # than most of the async clipboard API, and we don't want to claim it's limited availability.
+  # - api.Clipboard
   - api.Clipboard.read
   - api.Clipboard.readText
   - api.Clipboard.write
-  - api.Clipboard.writeText
-  - api.ClipboardEvent
-  - api.ClipboardEvent.ClipboardEvent
-  - api.ClipboardEvent.clipboardData
+  # - api.Clipboard.writeText
   - api.ClipboardItem
   - api.ClipboardItem.ClipboardItem
   - api.ClipboardItem.getType
-  - api.ClipboardItem.presentationStyle
+  # This is a later addition to the API and not necessary for all use cases.
+  # - api.ClipboardItem.presentationStyle
   - api.ClipboardItem.types
-  - api.Navigator.clipboard
+  # - api.Navigator.clipboard
   - api.Permissions.permission_clipboard-read
   # This one appears to be not actually in the specification
   # - api.Permissions.permission_clipboard-write
