@@ -118,6 +118,8 @@ This is but one of several possible stories to help keep in mind the needs and c
 The WebDX community group, through the [web-platform-dx/web-features-set owners group](../GOVERNANCE.md), maintains this document.
 Based on WebDX community group research, the web-features owners group decides matters such as the core browser set, releases, editorial overrides, and so on.
 
+The status definition is due for review by the governance group on 7 November 2024.
+
 ## Status definition
 
 The status has two substatuses: an interoperable low status and a wider-support high status.
@@ -149,8 +151,6 @@ The feature’s keystone date is on or before today’s date minus 30 months and
 * Mozilla Firefox ESR, given by the release date for the latest x.0 release of Firefox ESR (or the previous x.0 release, when there are two active ESR releases).
 
 This duration is selected to approximate developer signals, estimates of browser release uptake over time, an estimate of high total market share support, and the project governance group’s best judgment.
-
-This duration is due for review by the governance group on 7 November 2024.
 
 ### Core browser set
 
