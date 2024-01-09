@@ -1,10 +1,16 @@
 spec: https://drafts.csswg.org/css-nesting-1/
 caniuse: css-nesting
 status:
-  baseline: false
+  baseline: low
+  baseline_low_date: 2023-12-11
   support:
+    chrome: "120"
+    chrome_android: "120"
+    edge: "120"
     firefox: "117"
     firefox_android: "117"
+    safari: "17.2"
+    safari_ios: "17.2"
 compat_features:
   - css.selectors.nesting
   - api.CSSStyleRule.cssRules
