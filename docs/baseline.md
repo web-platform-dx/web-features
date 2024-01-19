@@ -60,7 +60,7 @@ Baseline status cannot or will not satisfy the following non-goals:
   If a web developer needs to support a globally uncommon or discontinued browser (e.g., Internet Explorer 11), then the developer needs to know the specific limitations of that browser, not a broad overview of developers’ most commonly required browsers.
   Baseline can’t be both.
 * **Identify support in assistive technology.**
-  Baseline should cover core accessibility support in browsers but it does not cover support in assistive tools (e.g., screen magnifiers, screen readers, alternative keyboards) that may be used along a browser to meet the requirements of people with disabilities.
+  Baseline does not cover support in assistive technology (AT), which includes screen readers, screen magnifiers, voice control, and so on.
   See also: [Future considerations](#future-considerations).
 * **Identify support in non-web environments.**
   Developers use web technologies in non-web settings, such as JavaScript in Node.js, Web APIs in Deno, or HTML and CSS in Electron-based applications.
@@ -178,7 +178,6 @@ Here are some areas for future consideration and not currently in-scope for Base
 * Upcoming (e.g., not yet shipped in all browsers)
 * Progressive enhancement safe (i.e., limited penalties for support failures)
 * Developer feedback requested
-* Buggy (e.g., supported but in ways that are surprising and semi-interoperable)
-* Buggy or unsupported in assistive tools
+* Buggy (e.g., supported but in ways that are surprising and semi-interoperable, not exposed to platform accessibility APIs (AAPIs) as specified)
 * Obsolete/deprecated/legacy/etc. (i.e., flagged as such in the specification or dropped from newer versions of the specification)
 * Having high-quality polyfills available
