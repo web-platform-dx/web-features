@@ -2,7 +2,10 @@ import fs from 'fs';
 import path from 'path';
 
 import { fdir } from 'fdir';
+import stringify from "fast-json-stable-stringify";
 import YAML from 'yaml';
+
+import { lockout } from './lock.js';
 
 /** Web platform feature */
 export interface FeatureData {
@@ -51,15 +54,17 @@ const omittables = [
 ]
 
 function scrub(data: FeatureData) {
+    // TODO: there's no structuredClone in Node 16, so we'll do the next best thing
+    const scrubbed = JSON.parse(stringify(data));
     for (const key of omittables) {
-        delete data[key];
+        delete scrubbed[key];
     }
-    return data;
+    return scrubbed;
 }
 
 const filePaths = new fdir()
     .withBasePath()
-    .filter((fp) => fp.endsWith('.yml'))
+    .filter((fp) => fp.endsWith('.yml') && !fp.endsWith('.lockfile.yml'))
     .crawl('feature-group-definitions')
     .sync() as string[];
 
@@ -71,7 +76,15 @@ for (const fp of filePaths) {
 
     const src = fs.readFileSync(fp, { encoding: 'utf-8'});
     const data = YAML.parse(src);
-    features[key] = scrub(data);
+    const resolved = lockout(fp, data);
+
+    features[key] = scrub(resolved);
+
+    // Clean out lockfiles that are mere copies of the original file
+    const lockFp = path.join(path.dirname(fp), `${key}.lockfile.yml`);
+    if (stringify(data) === stringify(resolved)) {
+        fs.rmSync(lockFp);
+    }
 }
 
 export default features;
