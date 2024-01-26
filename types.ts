@@ -1,6 +1,8 @@
 /** Web platform feature */
 
 export interface FeatureData {
+    /** Short name */
+    name: string;
     /** Alias identifier */
     alias?: string | [string, string, ...string[]];
     /** Specification */
