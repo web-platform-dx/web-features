@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "ts-node scripts/build.ts",
-    "schema-defs": "ts-json-schema-generator --tsconfig ./tsconfig.json --type FeatureData --path ./index.ts --id defs",
+    "schema-defs": "ts-json-schema-generator --tsconfig ./tsconfig.json --type FeatureData --path ./types.ts --id defs",
     "schema-defs:write": "npm run schema-defs -- --out ./schemas/defs.schema.json",
     "test": "npm run test:caniuse -- --quiet && npm run test:schema && npm run test:specs && npm run test:format",
     "test:caniuse": "ts-node scripts/caniuse.ts",
