@@ -44,6 +44,10 @@
           },
           "type": "array"
         },
+        "name": {
+          "description": "Short name",
+          "type": "string"
+        },
         "spec": {
           "anyOf": [
             {
@@ -139,6 +143,7 @@
         }
       },
       "required": [
+        "name",
         "spec"
       ],
       "type": "object"
