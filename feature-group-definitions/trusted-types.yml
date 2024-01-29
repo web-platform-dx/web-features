@@ -1,4 +1,4 @@
-name: Trusted Types
+name: Trusted types
 spec: https://w3c.github.io/trusted-types/dist/spec/
 caniuse: trusted-types
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/2722
@@ -6,7 +6,7 @@ status:
   baseline: false
   support:
     # Chrome 83 is an editorial override. The toJSON() methods were shipped in
-    # Chrome 90, but are not needed to use Trusted Types in the idiomatic way.
+    # Chrome 90, but are not needed to use trusted types in the idiomatic way.
     chrome: "83"
     chrome_android: "83"
     edge: "83"
