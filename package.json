@@ -13,20 +13,20 @@
     "node": ">=16.18.0"
   },
   "scripts": {
-    "build": "ts-node scripts/build.ts",
+    "build": "tsx scripts/build.ts",
     "schema-defs": "ts-json-schema-generator --tsconfig ./tsconfig.json --type FeatureData --path ./types.ts --id defs",
     "schema-defs:write": "npm run schema-defs -- --out ./schemas/defs.schema.json",
     "test": "npm run test:caniuse -- --quiet && npm run test:schema && npm run test:specs && npm run test:format",
-    "test:caniuse": "ts-node scripts/caniuse.ts",
-    "test:schema": "ts-node scripts/schema.ts",
-    "test:specs": "ts-node scripts/specs.ts",
+    "test:caniuse": "tsx scripts/caniuse.ts",
+    "test:schema": "tsx scripts/schema.ts",
+    "test:specs": "tsx scripts/specs.ts",
     "test:format": "prettier --check .",
     "format": "npx prettier --write .",
-    "feature-init": "ts-node scripts/feature-init.ts"
+    "feature-init": "tsx scripts/feature-init.ts"
   },
   "devDependencies": {
     "@types/caniuse-lite": "^1.0.4",
-    "@types/node": "^16.18.76",
+    "@types/node": "^18.19.0",
     "ajv": "^8.12.0",
     "ajv-formats": "^2.1.1",
     "caniuse-lite": "^1.0.30001563",
@@ -34,7 +34,7 @@
     "fdir": "^6.1.1",
     "prettier": "^3.2.4",
     "ts-json-schema-generator": "^1.5.0",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.7.0",
     "typescript": "^5.3.3",
     "web-specs": "^2.77.0",
     "winston": "^3.11.0",
