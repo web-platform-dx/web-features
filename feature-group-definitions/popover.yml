@@ -1,3 +1,4 @@
+name: "Popover"
 spec: https://html.spec.whatwg.org/multipage/popover.html
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/4191
 status:
@@ -26,5 +27,7 @@ compat_features:
   - css.selectors.backdrop.popover
   - css.selectors.popover-open
   - html.global_attributes.popover
-  - html.global_attributes.popovertarget
-  - html.global_attributes.popovertargetaction
+  - html.elements.button.popovertarget
+  - html.elements.button.popovertargetaction
+  - html.elements.input.popovertarget
+  - html.elements.input.popovertargetaction

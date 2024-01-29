@@ -1,7 +1,7 @@
 {
   "name": "web-features",
   "description": "Curated list of Web platform features",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
@@ -13,14 +13,17 @@
     ".": "./index.js",
     "./index.json": "./index.json"
   },
+  "types": "./index.d.ts",
   "files": [
+    "index.d.ts",
     "index.js",
     "index.json"
   ],
   "scripts": {
-    "prepare": "tsc"
+    "prepare": "tsc && rm types.js && tsup ./index.ts --dts-only --format=esm --out-dir=."
   },
   "devDependencies": {
+    "tsup": "^8.0.1",
     "typescript": "^5.0.4"
   }
 }
