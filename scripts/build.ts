@@ -18,8 +18,8 @@ function build() {
     for (const file of filesToCopy) {
         fs.copyFileSync(new URL(file, rootDir), new URL(file, packageDir));
     }
-    execSync("npm install", { cwd: "./packages/web-features"});
-    execSync("npm run prepare", { cwd: "./packages/web-features"});
+    execSync("npm install", { cwd: "./packages/web-features",  encoding: "utf-8"});
+    execSync("npm run prepare", { cwd: "./packages/web-features", encoding: "utf-8"});
 }
 
 build();
