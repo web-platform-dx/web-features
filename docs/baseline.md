@@ -178,6 +178,7 @@ Here are some areas for future consideration and not currently in-scope for Base
 * Upcoming (e.g., not yet shipped in all browsers)
 * Progressive enhancement safe (i.e., limited penalties for support failures)
 * Developer feedback requested
-* Buggy (e.g., supported but in ways that are surprising and semi-interoperable, not exposed to platform accessibility APIs (AAPIs) as specified)
+* Buggy (e.g., supported but in ways that are surprising and semi-interoperable)
+* Not exposed to platform accessibility APIs (AAPIs) as specified
 * Obsolete/deprecated/legacy/etc. (i.e., flagged as such in the specification or dropped from newer versions of the specification)
 * Having high-quality polyfills available
