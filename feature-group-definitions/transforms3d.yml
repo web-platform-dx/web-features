@@ -1,0 +1,17 @@
+name: CSS 3D transforms
+caniuse: transforms3d
+spec: https://drafts.csswg.org/css-transforms-2/
+compat_features:
+  - css.properties.transform-style
+  - css.properties.transform.3d
+  # https://drafts.csswg.org/css-transforms-2/#three-d-transform-functions
+  - css.types.transform-function.matrix3d
+  - css.types.transform-function.translate3d
+  - css.types.transform-function.translateZ
+  - css.types.transform-function.scale3d
+  - css.types.transform-function.scaleZ
+  - css.types.transform-function.rotate3d
+  - css.types.transform-function.rotateX
+  - css.types.transform-function.rotateY
+  - css.types.transform-function.rotateZ
+  - css.types.transform-function.perspective
