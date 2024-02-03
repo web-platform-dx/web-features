@@ -15,8 +15,12 @@ type allowlistItem = [url: string, message: string];
 const defaultAllowlist: allowlistItem[] = [
     // [
     //     "https://example.com/spec/",
-    //     "This spec is allowed because…. Remove this exception when https://example.com/org/repo/pull/1234 merges."
+    //     "Allowed because…. Remove this exception when https://example.com/org/repo/pull/1234 merges."
     // ]
+    [
+        "https://jpeg.org/jpegxl/workplan.html",
+        "Allowed because JPEG XL specs are published by ISO and are not free to view/download, so not useful to link. See also https://github.com/w3c/browser-specs/issues/1089."
+    ]
 ];
 
 function isOK(url: URL, allowlist: allowlistItem[] = defaultAllowlist) {
