@@ -18,8 +18,8 @@ const defaultAllowlist: allowlistItem[] = [
     //     "Allowed because…. Remove this exception when https://example.com/org/repo/pull/1234 merges."
     // ]
     [
-        "https://jpeg.org/jpegxl/workplan.html",
-        "Allowed because JPEG XL specs are published by ISO and are not free to view/download, so not useful to link. See also https://github.com/w3c/browser-specs/issues/1089."
+        "https://www.iso.org/standard/85253.html",
+        "Allowed because it's supported in Safari. Remove this exception when https://github.com/w3c/browser-specs/issues/1089 is resolved."
     ]
 ];
 
