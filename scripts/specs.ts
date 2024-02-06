@@ -15,8 +15,12 @@ type allowlistItem = [url: string, message: string];
 const defaultAllowlist: allowlistItem[] = [
     // [
     //     "https://example.com/spec/",
-    //     "This spec is allowed because…. Remove this exception when https://example.com/org/repo/pull/1234 merges."
+    //     "Allowed because…. Remove this exception when https://example.com/org/repo/pull/1234 merges."
     // ]
+    [
+        "https://www.iso.org/standard/85253.html",
+        "Allowed because it's supported in Safari. Remove this exception when https://github.com/w3c/browser-specs/issues/1089 is resolved."
+    ]
 ];
 
 function isOK(url: URL, allowlist: allowlistItem[] = defaultAllowlist) {
