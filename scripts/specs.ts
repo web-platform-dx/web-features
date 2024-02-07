@@ -6,8 +6,8 @@ import features from '../index.js';
 
 const specUrls: URL[] = webSpecs.flatMap(spec => {
     return [
-        new URL(spec.nightly.url),
-        ...(spec.nightly.pages ?? []).map(page => new URL(page))
+        new URL(spec.nightly?.url ?? spec.url),
+        ...(spec.nightly?.pages ?? []).map(page => new URL(page))
     ]
 });
 
@@ -17,10 +17,6 @@ const defaultAllowlist: allowlistItem[] = [
     //     "https://example.com/spec/",
     //     "Allowed because…. Remove this exception when https://example.com/org/repo/pull/1234 merges."
     // ]
-    [
-        "https://www.iso.org/standard/85253.html",
-        "Allowed because it's supported in Safari. Remove this exception when https://github.com/w3c/browser-specs/issues/1089 is resolved."
-    ]
 ];
 
 function isOK(url: URL, allowlist: allowlistItem[] = defaultAllowlist) {
