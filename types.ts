@@ -26,6 +26,8 @@ interface SupportStatus {
     baseline?: BaselineHighLow | false;
     /** Date the feature achieved Baseline low status */
     baseline_low_date?: string;
+    /** Date the feature achieved Baseline high status */
+    baseline_high_date?: string;
     /** Browser versions that most-recently introduced the feature */
     support?: {
         [K in browserIdentifier]?: string;
