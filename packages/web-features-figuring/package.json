@@ -1,0 +1,28 @@
+{
+  "name": "web-features-figuring",
+  "version": "0.1.0",
+  "description": "A library for computing web-features statuses from browser compatibility data",
+  "exports": {
+    ".": "./dist/index.js",
+    "./baseline": "./dist/baseline/index.js",
+    "./browser-compat-data": "./dist/browser-compat-data/index.js"
+  },
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "test": "mocha -r tsx 'src/**/*.test.ts'",
+    "prepare": "tsc"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "mocha": "^10.3.0",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "@mdn/browser-compat-data": "^5.0.0"
+  },
+  "dependencies": {
+    "@js-temporal/polyfill": "^0.4.4"
+  }
+}
