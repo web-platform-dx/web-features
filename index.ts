@@ -6,6 +6,10 @@ import YAML from 'yaml';
 import { FeatureData } from './types';
 import { Temporal } from '@js-temporal/polyfill';
 
+// Number of months after Baseline low that Baseline high happens. Keep in sync with definition:
+// https://github.com/web-platform-dx/web-features/blob/main/docs/baseline.md#wider-support-high-status
+const monthsFromBaselineLowToHigh = 30;
+
 // Some FeatureData keys aren't (and may never) be ready for publishing.
 // They're not part of the public schema (yet).
 // They'll be removed.
@@ -41,7 +45,7 @@ for (const fp of filePaths) {
     }
     if (data.status?.baseline === 'high') {
         const lowDate = Temporal.PlainDate.from(data.status.baseline_low_date);
-        const highDate = lowDate.add({ months: 30 });
+        const highDate = lowDate.add({ months: monthsFromBaselineLowToHigh });
         data.status.baseline_high_date = String(highDate);
     }
 
