@@ -1,0 +1,10 @@
+name: 'blocking="render"'
+spec: https://html.spec.whatwg.org/multipage/urls-and-fetching.html#blocking-attributes
+usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/4183
+compat_features:
+  - api.HTMLLinkElement.blocking
+  - api.HTMLScriptElement.blocking
+  - api.HTMLStyleElement.blocking
+  - html.elements.link.blocking
+  - html.elements.script.blocking
+  - html.elements.style.blocking
