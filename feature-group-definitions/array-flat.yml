@@ -1,6 +1,9 @@
-name: Array flat() and flatMap()
+name: Array flattening
+description: Array flat() and flatMap methods (ECMAScript 2019)
 caniuse: array-flat
-spec: https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.flat
+spec:
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.flat
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.flatmap
 status:
   baseline: high
   baseline_low_date: 2020-01-15

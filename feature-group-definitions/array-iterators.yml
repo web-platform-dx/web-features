@@ -1,0 +1,23 @@
+name: Array iterator
+description: Array iterator methods (ECMAScript 2015)
+spec:
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype-@@iterator
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.entries
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.keys
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.values
+status:
+  baseline: high
+  baseline_low_date: 2016-09-20
+  support:
+    chrome: "38"
+    chrome_android: "38"
+    edge: "12"
+    firefox: "36"
+    firefox_android: "36"
+    safari: "10"
+    safari_ios: "10"
+compat_features:
+  - javascript.builtins.Array.@@iterator
+  - javascript.builtins.Array.entries
+  - javascript.builtins.Array.keys
+  - javascript.builtins.Array.values
