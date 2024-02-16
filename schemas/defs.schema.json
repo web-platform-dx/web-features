@@ -22,6 +22,11 @@
           ],
           "description": "Alias identifier"
         },
+        "archived": {
+          "const": true,
+          "description": "Whether a feature is archived.\n\nA feature that has been widely available and used for more than 10 years may be archived if it is no longer thought of as a distinct feature, but part of the foundations of the platform. Archived features are typically not valuable to show in a list of features, or in search results.",
+          "type": "boolean"
+        },
         "caniuse": {
           "anyOf": [
             {

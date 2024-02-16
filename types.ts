@@ -5,6 +5,13 @@ export interface FeatureData {
     name: string;
     /** Alias identifier */
     alias?: string | [string, string, ...string[]];
+    /** Whether a feature is archived.
+     *
+     * A feature that has been widely available and used for more than 10 years
+     * may be archived if it is no longer thought of as a distinct feature, but
+     * part of the foundations of the platform. Archived features are typically
+     * not valuable to show in a list of features, or in search results. */
+    archived?: true;
     /** Specification */
     spec: specification_url | [specification_url, specification_url, ...specification_url[]];
     /** caniuse.com identifier */

@@ -20,6 +20,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://learn.microsoft.com/en-us/typography/opentype/otspec191alpha/colr",
         "Allowed because COLRv1 is shipping in Chrome and Firefox. Remove this exception when https://github.com/w3c/browser-specs/pull/1211 is released."
+    ],
+    [
+        "https://datatracker.ietf.org/doc/html/rfc2616",
+        "Allowed because HTTP/1.1 is an archived feature."
     ]
 ];
 
