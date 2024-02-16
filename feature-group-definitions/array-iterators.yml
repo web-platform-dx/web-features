@@ -1,10 +1,11 @@
-name: Array iterator
-description: Array iterator methods (ECMAScript 2015)
+name: Array iterators
+description: Array iterator methods (usage in for...of loops)
 spec:
   - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype-@@iterator
   - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.entries
   - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.keys
   - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.values
+snapshot: ecmascript-2015
 status:
   baseline: high
   baseline_low_date: 2016-09-20

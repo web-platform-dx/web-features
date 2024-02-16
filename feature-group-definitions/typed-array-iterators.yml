@@ -1,10 +1,11 @@
-name: Typed Array iterator
-description: Typed Array iterator methods (ECMAScript 2015)
+name: Typed array iterators
+description: Typed array iterator methods (usage in for...of loops)
 spec:
   - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype-@@iterator
   - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.entries
   - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.keys
   - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.values
+snapshot: ecmascript-2015
 status:
   baseline: high
   baseline_low_date: 2016-09-20
