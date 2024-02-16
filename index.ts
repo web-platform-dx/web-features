@@ -13,7 +13,8 @@ const monthsFromBaselineLowToHigh = 30;
 // Some FeatureData keys aren't (and may never) be ready for publishing.
 // They're not part of the public schema (yet).
 const omittables = [
-    "description"
+    "description",
+    "snapshot"
 ]
 
 function scrub(data: FeatureData) {
