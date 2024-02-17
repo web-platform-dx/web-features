@@ -6,5 +6,7 @@ spec:
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/2846
 compat_features:
   - api.CSSStyleSheet.CSSStyleSheet
+  - api.CSSStyleSheet.replace
+  - api.CSSStyleSheet.replaceSync
   - api.Document.adoptedStyleSheets
   - api.ShadowRoot.adoptedStyleSheets
