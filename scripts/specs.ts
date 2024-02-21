@@ -17,10 +17,6 @@ const defaultAllowlist: allowlistItem[] = [
     //     "https://example.com/spec/",
     //     "Allowed because…. Remove this exception when https://example.com/org/repo/pull/1234 merges."
     // ]
-    [
-        "https://learn.microsoft.com/en-us/typography/opentype/otspec191alpha/colr",
-        "Allowed because COLRv1 is shipping in Chrome and Firefox. Remove this exception when https://github.com/w3c/browser-specs/pull/1211 is released."
-    ]
 ];
 
 function isOK(url: URL, allowlist: allowlistItem[] = defaultAllowlist) {
