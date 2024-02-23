@@ -1,0 +1,20 @@
+name: Array.of()
+description: Array.of() and typed array of() static methods
+spec:
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.of
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.of
+snapshot: ecmascript-2015
+status:
+  baseline: high
+  baseline_low_date: 2015-09-30
+  support:
+    chrome: "45"
+    chrome_android: "39"
+    edge: "12"
+    firefox: "25"
+    firefox_android: "25"
+    safari: "9"
+    safari_ios: "9"
+compat_features:
+  - javascript.builtins.Array.of
+  - javascript.builtins.TypedArray.of

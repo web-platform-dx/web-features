@@ -1,0 +1,17 @@
+name: Array splice()
+description: Array splice() method
+spec: https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.splice
+snapshot: ecmascript-2015
+status:
+  baseline: high
+  baseline_low_date: 2015-07-28
+  support:
+    chrome: "1"
+    chrome_android: "18"
+    edge: "12"
+    firefox: "1"
+    firefox_android: "4"
+    safari: "1"
+    safari_ios: "1"
+compat_features:
+  - javascript.builtins.Array.splice

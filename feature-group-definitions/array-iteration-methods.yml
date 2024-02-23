@@ -1,0 +1,34 @@
+name: Array iteration methods
+description: Array iteration methods
+spec:
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.every
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.filter
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.foreach
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.indexof
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.lastindexof
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.map
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.reduce
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.reduceright
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.some
+snapshot: ecmascript-5
+status:
+  baseline: high
+  baseline_low_date: 2015-07-28
+  support:
+    chrome: "1"
+    chrome_android: "18"
+    edge: "12"
+    firefox: "1.5"
+    firefox_android: "4"
+    safari: "3"
+    safari_ios: "1"
+compat_features:
+  - javascript.builtins.Array.every
+  - javascript.builtins.Array.filter
+  - javascript.builtins.Array.forEach
+  - javascript.builtins.Array.indexOf
+  - javascript.builtins.Array.lastIndexOf
+  - javascript.builtins.Array.map
+  - javascript.builtins.Array.reduce
+  - javascript.builtins.Array.reduceRight
+  - javascript.builtins.Array.some
