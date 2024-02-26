@@ -14,7 +14,8 @@ const monthsFromBaselineLowToHigh = 30;
 // They're not part of the public schema (yet).
 const omittables = [
     "description",
-    "snapshot"
+    "snapshot",
+    "groups"
 ]
 
 function scrub(data: FeatureData) {
