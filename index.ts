@@ -15,7 +15,7 @@ const monthsFromBaselineLowToHigh = 30;
 const omittables = [
     "description",
     "snapshot",
-    "groups"
+    "group"
 ]
 
 function scrub(data: FeatureData) {
