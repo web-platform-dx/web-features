@@ -63,7 +63,7 @@ for (const [key, data] of yamlEntries('feature-group-definitions')) {
         throw new Error(`baseline_high_date is computed and should not be used in source YAML. Remove it from ${key}.yml.`);
     }
     if (data.status?.baseline === 'high') {
-        const lowDate = Temporal.PlainDate.from(data.status.baseline_low_date);
+        const lowDate = Temporal.PlainDate.from(data.status.baseline_low_date.replace('≤', ''));
         const highDate = lowDate.add({ months: monthsFromBaselineLowToHigh });
         data.status.baseline_high_date = String(highDate);
     }
