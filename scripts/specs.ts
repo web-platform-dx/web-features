@@ -18,10 +18,6 @@ const defaultAllowlist: allowlistItem[] = [
     //     "Allowed because…. Remove this exception when https://example.com/org/repo/pull/1234 merges."
     // ]
     [
-        "https://learn.microsoft.com/en-us/typography/opentype/otspec191alpha/colr",
-        "Allowed because COLRv1 is shipping in Chrome and Firefox. Remove this exception when https://github.com/w3c/browser-specs/pull/1211 is released."
-    ],
-    [
         "https://w3c.github.io/IntersectionObserver/v2/",
         "Allowed because it's shipped in Chrome and tracked on caniuse.com. Remove this exception when https://github.com/w3c/browser-specs/pull/1210 merges."
     ]
