@@ -1,0 +1,14 @@
+name: Relative color syntax
+description: "The `from` keyword for color functions (`color()`, `hsl()`, `oklch()`, etc.) creates a new color based on a given color by modifying the values of the input color."
+spec: https://drafts.csswg.org/css-color-5/#relative-color-function
+caniuse: css-relative-colors
+usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/4632
+compat_features:
+  - css.types.color.color.relative_syntax
+  - css.types.color.hsl.relative_syntax
+  - css.types.color.hwb.relative_syntax
+  - css.types.color.lab.relative_syntax
+  - css.types.color.lch.relative_syntax
+  - css.types.color.oklab.relative_syntax
+  - css.types.color.oklch.relative_syntax
+  - css.types.color.rgb.relative_syntax
