@@ -4,6 +4,8 @@ spec: https://drafts.csswg.org/css-color-4/#ok-lab
 status:
   baseline: low
   baseline_low_date: 2023-05-09
+  # Editorial override has been applied to ignore mixed_type_parameters.
+  # This should be captured in notes when we support notes.
   support:
     chrome: "111"
     chrome_android: "111"
@@ -14,4 +16,6 @@ status:
     safari_ios: "15.4"
 compat_features:
   - css.types.color.oklab
+  - css.types.color.oklab.mixed_type_parameters
   - css.types.color.oklch
+  - css.types.color.oklch.mixed_type_parameters
