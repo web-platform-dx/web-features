@@ -1,0 +1,8 @@
+name: IntersectionObserver visibility tracking
+description: The `trackVisibility` parameter for the `IntersectionObserver` constructor enables tracking the visibility of an element, to detect if it may be obscured by other content or visual effects. Also known as IntersectionObserver v2.
+spec: https://w3c.github.io/IntersectionObserver/v2/
+caniuse: intersectionobserver-v2
+usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/3051
+compat_features:
+  - api.IntersectionObserver.IntersectionObserver.options_trackVisibility_parameter
+  - api.IntersectionObserverEntry.isVisible
