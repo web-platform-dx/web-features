@@ -53,7 +53,7 @@ describe("computeBaseline", function () {
       browsers: bcd.browsers,
       css: bcd.css,
     };
-    chai.expect(data).to.matchSnapshot(true);
+    chai.expect(data).to.matchSnapshot();
 
     const result = computeBaseline(
       {
