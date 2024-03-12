@@ -1,11 +1,10 @@
 import {
-  BrowserName,
   FlagStatement,
   SimpleSupportStatement,
   VersionValue,
 } from "@mdn/browser-compat-data";
 
-import { browser } from "./browser";
+import { Browser } from "./browser";
 import { Release } from "./release";
 import { Feature } from "./feature";
 
@@ -20,7 +19,7 @@ export function statement(
     | Partial<SimpleSupportStatement>
     | SupportStatement
     | RealSupportStatement,
-  browser?: BrowserName,
+  browser?: Browser,
   feature?: Feature,
 ): SupportStatement {
   if (incoming instanceof RealSupportStatement) {
@@ -49,12 +48,12 @@ export class NonRealValueError extends Error {
 
 export class SupportStatement {
   data: Partial<SimpleSupportStatement>;
-  browser: BrowserName | undefined;
+  browser: Browser | undefined;
   feature: Feature | undefined;
 
   constructor(
     data: Partial<SimpleSupportStatement>,
-    browser?: BrowserName,
+    browser?: Browser,
     feature?: Feature,
   ) {
     this.data = data;
@@ -114,7 +113,7 @@ export class SupportStatement {
 export class RealSupportStatement extends SupportStatement {
   constructor(
     data: Partial<SimpleSupportStatement>,
-    browser?: BrowserName,
+    browser?: Browser,
     feature?: Feature,
   ) {
     // Strictness guarantee: Support statements never contain non-real values
@@ -164,19 +163,17 @@ export class RealSupportStatement extends SupportStatement {
 
     let start: Release;
     if (this.version_added.startsWith("≤")) {
-      start = browser(this.browser).version(this.version_added.slice(1));
+      start = this.browser.version(this.version_added.slice(1));
     } else {
-      start = browser(this.browser).version(this.version_added);
+      start = this.browser.version(this.version_added);
     }
 
     if (this.version_removed === false) {
-      return browser(this.browser)
-        .releases()
-        .filter((rel) => rel.compare(start) >= 0); // Release is on or after start
+      return this.browser.releases().filter((rel) => rel.compare(start) >= 0); // Release is on or after start
     }
 
-    const end: Release = browser(this.browser).version(this.version_removed);
-    return browser(this.browser)
+    const end: Release = this.browser.version(this.version_removed);
+    return this.browser
       .releases()
       .filter((rel) => rel.compare(start) >= 0 && rel.compare(end) < 0); // Release is on after start and before the end
   }

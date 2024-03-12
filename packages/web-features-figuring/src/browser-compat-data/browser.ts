@@ -1,19 +1,17 @@
 import { BrowserName, BrowserStatement } from "@mdn/browser-compat-data";
 
-import { query } from "./query";
 import { Release } from "./release";
+import { defaultCompat } from "./compat";
 
-const knownBrowsers = new Map<string, Browser>();
-
-export function browser(name: string): Browser {
-  let b = knownBrowsers.get(name);
-
-  if (b === undefined) {
-    const data = query(`browsers.${name}`) as BrowserStatement;
-    b = new Browser(name as BrowserName, data);
-    knownBrowsers.set(name, b);
+export function browser(id: string, compat = defaultCompat): Browser {
+  let b = compat.browsers.get(id);
+  if (b) {
+    return b;
   }
 
+  const data = compat.query(`browsers.${id}`) as BrowserStatement;
+  b = new Browser(id as BrowserName, data);
+  compat.browsers.set(id, b);
   return b;
 }
 

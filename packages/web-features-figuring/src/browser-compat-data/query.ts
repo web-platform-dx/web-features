@@ -1,10 +1,8 @@
-import bcd from "@mdn/browser-compat-data";
-
 import { isIndexable } from "./typeUtils";
 
 // TODO: Name this better. There's nothing so sophisticated as a "query" here.
 // It's a boring lookup!
-export function query(path: string, data: unknown = bcd) {
+export function query(path: string, data: unknown) {
   const pathElements = path.split(".");
   let lookup = data;
   while (pathElements.length) {

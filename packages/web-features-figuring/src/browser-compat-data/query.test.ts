@@ -2,31 +2,42 @@ import assert from "node:assert/strict";
 
 import { query } from "./query";
 import { BrowserStatement, Identifier } from "@mdn/browser-compat-data";
+import { Compat } from "./compat";
 
 describe("query", function () {
   it("returns arbitrary BCD data (browsers)", function () {
+    const data = new Compat().data;
     assert.ok(
-      Object.hasOwn(query("browsers.chrome") as BrowserStatement, "releases"),
+      Object.hasOwn(
+        query("browsers.chrome", data) as BrowserStatement,
+        "releases",
+      ),
     );
   });
 
   it("returns arbitrary BCD data (support)", function () {
+    const data = new Compat().data;
     assert.ok(
       Object.hasOwn(
-        query("css.properties.border-color") as Identifier,
+        query("css.properties.border-color", data) as Identifier,
         "__compat",
       ),
     );
   });
 
   it("throws for invalid path", function () {
-    assert.throws(() => query("nonExistentNameSpace"), Error);
-    assert.throws(() => query("api.NonExistentFeature"), Error);
-    assert.throws(() => query("api.NonExistentFeature.subFeature"), Error);
+    const data = new Compat().data;
+    assert.throws(() => query("nonExistentNameSpace", data), Error);
+    assert.throws(() => query("api.NonExistentFeature", data), Error);
+    assert.throws(
+      () => query("api.NonExistentFeature.subFeature", data),
+      Error,
+    );
   });
 
   it("should return the expected point in the tree (namespace)", function () {
-    const obj = query("css") as Identifier;
+    const data = new Compat().data;
+    const obj = query("css", data) as Identifier;
 
     assert.ok(!("__compat" in obj));
     assert.ok("properties" in obj);
@@ -34,7 +45,8 @@ describe("query", function () {
   });
 
   it("should return the expected point in the tree (feature)", function () {
-    const obj = query("api.HTMLAnchorElement.href") as Identifier;
+    const data = new Compat().data;
+    const obj = query("api.HTMLAnchorElement.href", data) as Identifier;
 
     assert.ok("__compat" in obj);
     assert.ok(obj.__compat !== undefined);
@@ -47,7 +59,8 @@ describe("query", function () {
   });
 
   it("should return the expected point in the tree (feature with children)", function () {
-    const obj = query("api.HTMLAnchorElement") as Identifier;
+    const data = new Compat().data;
+    const obj = query("api.HTMLAnchorElement", data) as Identifier;
 
     assert.ok("__compat" in obj);
     assert.ok("charset" in obj);

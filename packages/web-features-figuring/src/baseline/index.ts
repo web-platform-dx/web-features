@@ -7,7 +7,7 @@ import { Release } from "../browser-compat-data/release";
 import { browsers, highReleases, lowReleases } from "./core-browser-set";
 import { support } from "./support";
 import { Browser } from "../browser-compat-data/browser";
-import { query } from "../browser-compat-data";
+import { Compat, defaultCompat } from "../browser-compat-data/compat";
 
 interface FeatureSelector {
   compatKeys: [string, ...string[]];
@@ -25,13 +25,14 @@ interface SupportStatus {
 
 export function computeBaseline(
   featureSelector: FeatureSelector,
+  compat: Compat = defaultCompat,
 ): SupportStatus {
   const { compatKeys } = featureSelector;
   const keys = featureSelector.checkAncestors
-    ? compatKeys.flatMap(withAncestors)
+    ? compatKeys.flatMap((key) => withAncestors(key, compat))
     : compatKeys;
 
-  const statuses = keys.map(calculate);
+  const statuses = keys.map((key) => calculate(key, compat));
 
   const baseline = minStatus(statuses);
 
@@ -60,13 +61,17 @@ export function computeBaseline(
   };
 }
 
-function calculate(compatKey: string): SupportStatus {
+function calculate(compatKey: string, compat: Compat): SupportStatus {
   const f = feature(compatKey);
-  const s = support(f, browsers);
+  const s = support(f, browsers(compat), compat);
 
-  const allReleases = f.supportedBy();
-  const isBaselineLow = lowReleases.every((r) => allReleases.includes(r));
-  const isBaselineHigh = highReleases.every((r) => allReleases.includes(r));
+  const allReleases = f.supportedBy({ compat });
+  const isBaselineLow = lowReleases(compat).every((r) =>
+    allReleases.includes(r),
+  );
+  const isBaselineHigh = highReleases(compat).every((r) =>
+    allReleases.includes(r),
+  );
 
   const baseline =
     (isBaselineHigh ? "high" : false) || (isBaselineLow ? "low" : false);
@@ -106,7 +111,7 @@ function calculate(compatKey: string): SupportStatus {
   };
 }
 
-function withAncestors(compatKey: string): string[] {
+function withAncestors(compatKey: string, compat: Compat): string[] {
   const items = compatKey.split(".");
   const ancestors: string[] = [];
 
@@ -114,7 +119,7 @@ function withAncestors(compatKey: string): string[] {
   while (items.length) {
     current = `${current}.${items.shift()}`;
 
-    const data = query(current);
+    const data = compat.query(current);
     if (typeof data === "object" && data !== null && "__compat" in data) {
       ancestors.push(current);
     }

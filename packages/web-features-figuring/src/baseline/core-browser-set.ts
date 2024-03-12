@@ -1,4 +1,4 @@
-import { browser } from "../browser-compat-data/browser";
+import { Compat } from "../browser-compat-data/compat";
 import { Release } from "../browser-compat-data/release";
 
 export const identifiers = [
@@ -11,13 +11,19 @@ export const identifiers = [
   "safari_ios",
 ];
 
-export const browsers = identifiers.map((b) => browser(b));
+export function browsers(compat: Compat) {
+  return identifiers.map((b) => compat.browser(b));
+}
 
-export const lowReleases = browsers.map((b) => b.current());
+export function lowReleases(compat: Compat) {
+  return browsers(compat).map((b) => b.current());
+}
 
-export const highReleases = browsers
-  .flatMap((b) => b.releases())
-  .filter(isBaselineHighRelease);
+export function highReleases(compat: Compat) {
+  return browsers(compat)
+    .flatMap((b) => b.releases())
+    .filter(isBaselineHighRelease);
+}
 
 function isBaselineHighRelease(release: Release) {
   const baselineHighCutoff = new Date();

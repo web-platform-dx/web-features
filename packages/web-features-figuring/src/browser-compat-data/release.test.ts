@@ -19,7 +19,6 @@ describe("Release", function () {
       const release = browser("chrome")
         .releases()
         .find((r) => r.version === "100") as Release;
-      console.log(release);
       assert.equal(release.date().getTime(), new Date("2022-03-29").getTime());
     });
   });
@@ -65,12 +64,10 @@ describe("Release", function () {
       const chromeNext = chrome
         .releases()
         .at(chrome.releases().indexOf(chromeCurrent) + 1) as Release;
-      console.log(chromeNext);
       assert.equal(chromeNext.isPrerelease(), true);
     });
     it("returns true for the preview release", function () {
       const safariPreview = browser("safari").version("preview");
-      console.log(safariPreview);
       assert.equal(safariPreview.isPrerelease(), true);
     });
   });

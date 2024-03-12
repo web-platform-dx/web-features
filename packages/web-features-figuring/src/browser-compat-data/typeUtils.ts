@@ -1,11 +1,11 @@
 import {
-  CompatData,
-  Identifier,
-  BrowserStatement,
-  MetaBlock,
   Browsers,
+  BrowserStatement,
+  CompatData,
+  CompatStatement,
+  Identifier,
+  MetaBlock,
 } from "@mdn/browser-compat-data";
-import { CompatStatement } from "@mdn/browser-compat-data";
 
 export function isIndexable(o: unknown): o is Record<string, unknown> {
   if (typeof o === "object" && o !== null && Object.keys(o).length > 0) {

@@ -1,4 +1,4 @@
-import bcd, {
+import {
   BrowserStatement,
   Browsers,
   CompatData,
@@ -26,7 +26,7 @@ interface LowLevelWalkResult {
 }
 
 function* lowLevelWalk(
-  data: BCD | CompatData = bcd,
+  data: BCD | CompatData,
   path?: string,
   depth = Infinity,
 ): Generator<LowLevelWalkResult> {
@@ -60,7 +60,7 @@ function joinPath(...pathItems: (string | undefined)[]) {
   return pathItems.filter((item) => item !== undefined).join(".");
 }
 
-export function* walk(entryPoints?: string | string[], data: BCD = bcd) {
+export function* walk(entryPoints: string | string[], data: BCD) {
   const walkers = [];
 
   if (entryPoints === undefined) {

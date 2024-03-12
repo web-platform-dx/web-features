@@ -1,25 +1,19 @@
 import { Identifier } from "@mdn/browser-compat-data";
 
 import { Browser, browser } from "./browser";
-import { query } from "./query";
 import { isFeatureData } from "./typeUtils";
 import { Release } from "./release";
 import { RealSupportStatement, statement } from "./supportStatements";
+import { Compat, defaultCompat } from "./compat";
 
-const knownFeatures = new Map<string, Feature>();
-
-export function feature(id: string, data?: Identifier): Feature {
-  if (data) {
-    return new Feature(id, data);
+export function feature(id: string, compat: Compat = defaultCompat): Feature {
+  let f = compat.features.get(id);
+  if (f) {
+    return f;
   }
 
-  const lookup = knownFeatures.get(id);
-  if (lookup) {
-    return lookup;
-  }
-
-  const f = new Feature(id, data);
-  knownFeatures.set(id, f);
+  f = new Feature(id, compat.query(id) as Identifier);
+  compat.features.set(id, f);
   return f;
 }
 
@@ -27,21 +21,13 @@ export class Feature {
   id: string; // dotted.path.to.feature
   data: Identifier; // underlying BCD object
 
-  constructor(id: string, featureData: Identifier | undefined) {
-    let data;
-
-    if (featureData === undefined) {
-      data = query(id);
-    } else {
-      data = featureData;
-    }
-
-    if (!isFeatureData(data)) {
+  constructor(id: string, featureData: unknown) {
+    if (!isFeatureData(featureData)) {
       throw `${id} is not valid feature`;
     }
 
     this.id = id;
-    this.data = data;
+    this.data = featureData;
   }
 
   toString() {
@@ -72,7 +58,7 @@ export class Feature {
     const caveats: string[] = [];
 
     for (const raw of rawStatements) {
-      const s = statement(raw, browser.id, this);
+      const s = statement(raw, browser, this);
 
       if (!(s instanceof RealSupportStatement)) {
         throw Error(
@@ -96,12 +82,19 @@ export class Feature {
     return releases;
   }
 
-  supportedBy(options?: { only?: Browser[]; omit?: Browser[] }): Release[] {
+  supportedBy(options?: {
+    only?: Browser[];
+    omit?: Browser[];
+    compat?: Compat;
+  }): Release[] {
+    const compat =
+      options?.compat === undefined ? defaultCompat : options.compat;
+
     const includables = options?.only ? new Set(options.only) : null;
     const ignorables = new Set(options?.omit ?? []);
 
     const browserIds = Object.keys(this.data?.__compat?.support || {});
-    const browsers = browserIds.map((id) => browser(id));
+    const browsers = browserIds.map((id) => browser(id, compat));
 
     const result = [];
     for (const b of browsers) {

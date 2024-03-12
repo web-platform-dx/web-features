@@ -199,7 +199,10 @@ describe("statements", function () {
     });
     describe("#supportedBy", function () {
       it("returns an array of releases represented by the statement", function () {
-        const st = new RealSupportStatement({ version_added: "1" }, "chrome");
+        const st = new RealSupportStatement(
+          { version_added: "1" },
+          browser("chrome"),
+        );
         const rels = st.supportedBy();
         assert.equal(rels.length, browser("chrome").releases().length);
       });
@@ -209,7 +212,10 @@ describe("statements", function () {
       // of that range? If so, you should be able to opt-in to warnings or
       // errors about it.
       it("handles ≤ gracefully", function () {
-        const st = new RealSupportStatement({ version_added: "≤11" }, "chrome");
+        const st = new RealSupportStatement(
+          { version_added: "≤11" },
+          browser("chrome"),
+        );
         const rels = st.supportedBy();
         assert.equal(rels.length, browser("chrome").releases().length - 10);
       });
