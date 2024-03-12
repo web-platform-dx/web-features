@@ -5,7 +5,11 @@ status:
   baseline: low
   baseline_low_date: 2023-05-09
   # Editorial override has been applied to ignore mixed_type_parameters.
-  # This should be captured in notes when we support notes.
+  # TODO: The behavior of lightness gradients requiring gamut mapping is a
+  # topic of debate, and at least these browser bugs:
+  # https://crbug.com/329106317
+  # https://webkit.org/b/255939
+  # These problems should be captured in notes when we support notes.
   support:
     chrome: "111"
     chrome_android: "111"
