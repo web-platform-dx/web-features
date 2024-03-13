@@ -65,7 +65,7 @@ function calculate(compatKey: string, compat: Compat): SupportStatus {
   const f = feature(compatKey);
   const s = support(f, browsers(compat), compat);
 
-  const allReleases = f.supportedBy({ compat });
+  const allReleases = f.supportedBy({ only: browsers(compat), compat });
   const isBaselineLow = lowReleases(compat).every((r) =>
     allReleases.includes(r),
   );
