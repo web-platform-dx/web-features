@@ -1,6 +1,7 @@
 name: 'blocking="render"'
-description: 'The `blocking="render"` attribute for `<link>`, `<script>`, and `<style>` elements blocks rendering until the external script or stylesheet has been loaded. (If loading takes too long, the browser will not block indefinitely.) When used with `<link rel="expect">`, rendering is blocked until a specific element is in the DOM.'
+description: 'The `blocking="render"` attribute for `<link>`, `<script>`, and `<style>` elements blocks rendering until the external script or stylesheet has been loaded. When used with `<link rel="expect">`, rendering is blocked until a specific element is in the DOM.'
 # A few additional "limitations" that aren't in the description but could potentially be:
+#  - Rendering is not blocked indefinitely, there are UA-defined timeouts
 #  - Only works for text/html documents
 #  - Only works in <head>
 #  - Doesn't work on non-async classic scripts
