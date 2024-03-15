@@ -1,5 +1,7 @@
 import assert from "node:assert/strict";
 
+import { Temporal } from "@js-temporal/polyfill";
+
 import { browser } from "./browser";
 import { Release } from "./release";
 
@@ -19,7 +21,12 @@ describe("Release", function () {
       const release = browser("chrome")
         .releases()
         .find((r) => r.version === "100") as Release;
-      assert.equal(release.date().getTime(), new Date("2022-03-29").getTime());
+      const date = release.date();
+      assert(date !== null);
+      assert.equal(
+        Temporal.PlainDate.compare(date, Temporal.PlainDate.from("2022-03-29")),
+        0,
+      );
     });
   });
 

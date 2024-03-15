@@ -1,7 +1,12 @@
+import { Temporal } from "@js-temporal/polyfill";
 import { BrowserName, BrowserStatement } from "@mdn/browser-compat-data";
 
-import { Release } from "./release";
 import { defaultCompat } from "./compat";
+import { Release } from "./release";
+
+const VERY_FAR_FUTURE_DATE = Temporal.Now.plainDateISO().add({
+  years: 100,
+});
 
 export function browser(id: string, compat = defaultCompat): Browser {
   let b = compat.browsers.get(id);
@@ -45,7 +50,12 @@ export class Browser {
         this._releases.push(new Release(this, key, value));
       }
 
-      this._releases.sort((a, b) => a.date().getTime() - b.date().getTime());
+      this._releases.sort((a, b) =>
+        Temporal.PlainDate.compare(
+          a.date() ?? VERY_FAR_FUTURE_DATE,
+          b.date() ?? VERY_FAR_FUTURE_DATE,
+        ),
+      );
 
       if (this.data.preview_name) {
         this._releases.push(

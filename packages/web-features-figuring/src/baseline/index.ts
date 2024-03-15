@@ -9,6 +9,11 @@ import { support } from "./support";
 import { Browser } from "../browser-compat-data/browser";
 import { Compat, defaultCompat } from "../browser-compat-data/compat";
 
+export const BASELINE_HIGH_DURATION = Temporal.Duration.from({ months: 30 });
+export const VERY_FAR_FUTURE_DATE = Temporal.Now.plainDateISO().add({
+  years: 100,
+});
+
 interface FeatureSelector {
   compatKeys: [string, ...string[]];
   checkAncestors: boolean;
@@ -84,18 +89,25 @@ function calculate(compatKey: string, compat: Compat): SupportStatus {
       .sort((a, b) => {
         assert(a !== undefined);
         assert(b !== undefined);
-        return a.date().getTime() - b.date().getTime();
+        return Temporal.PlainDate.compare(
+          a.date() ?? VERY_FAR_FUTURE_DATE,
+          b.date() ?? VERY_FAR_FUTURE_DATE,
+        );
       })
       .pop();
 
     assert(keystoneRelease instanceof Release);
-    baseline_low_date = keystoneRelease.date().toISOString().slice(0, 10);
+    baseline_low_date = (keystoneRelease.date() ?? VERY_FAR_FUTURE_DATE)
+      .toString()
+      .slice(0, 10);
 
     if (isBaselineHigh) {
       const date = keystoneRelease.date();
-      // TODO: Replace with Temporal
-      date.setMonth(date.getMonth() + 30);
-      baseline_high_date = date.toISOString().slice(0, 10);
+      assert(date !== null);
+      baseline_high_date = date
+        .add(BASELINE_HIGH_DURATION)
+        .toString()
+        .slice(0, 10);
     }
   }
 

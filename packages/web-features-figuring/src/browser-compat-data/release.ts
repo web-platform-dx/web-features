@@ -1,4 +1,6 @@
+import { Temporal } from "@js-temporal/polyfill";
 import { ReleaseStatement } from "@mdn/browser-compat-data";
+
 import { Browser } from "./browser";
 
 export class Release {
@@ -16,13 +18,13 @@ export class Release {
     return `[${this.browser.name} ${this.version}]`;
   }
 
-  date(): Date {
+  date(): Temporal.PlainDate | null {
     const { release_date } = this.data;
     if (release_date === undefined) {
-      return new Date(NaN);
+      return null;
     }
 
-    return new Date(release_date);
+    return Temporal.PlainDate.from(release_date);
   }
 
   compare(otherRelease: Release) {
