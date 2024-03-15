@@ -10,6 +10,9 @@ import { Temporal } from '@js-temporal/polyfill';
 // https://github.com/web-platform-dx/web-features/blob/main/docs/baseline.md#wider-support-high-status
 const monthsFromBaselineLowToHigh = 30;
 
+// The longest description allowed, to avoid them growing into documentation.
+const descriptionMaxLength = 280;
+
 // Some FeatureData keys aren't (and may never) be ready for publishing.
 // They're not part of the public schema (yet).
 const omittables = [
@@ -63,6 +66,11 @@ for (const [key, data] of yamlEntries('feature-group-definitions')) {
         const lowDate = Temporal.PlainDate.from(data.status.baseline_low_date);
         const highDate = lowDate.add({ months: monthsFromBaselineLowToHigh });
         data.status.baseline_high_date = String(highDate);
+    }
+
+    // Ensure description is not too long.
+    if (data.description?.length > descriptionMaxLength) {
+        throw new Error(`description in ${key}.yml is too long, ${data.description.length} characters. The maximum allowed length is ${descriptionMaxLength}.`)
     }
 
     // Ensure that only known snapshot identifiers are used.
