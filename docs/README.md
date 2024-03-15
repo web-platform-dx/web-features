@@ -36,6 +36,11 @@ Feature authors should (in descending order of priority):
   - 👍 Recommended: Grid
   - 👎 Not recommended: `display: grid`
 
+- Prefer frequently-used qualifiers in parentheses at the end of the name.
+
+  - 👍 Recommended: Arrays (initial support)
+  - 👎 Not recommended: Initial support for arrays
+
 - Prefer shorter names to longer names, as long as they're unique and unambiguous.
 
   - 👍 Recommended: `:has()`
@@ -49,10 +54,12 @@ Feature identifiers must contain only lowercase alphanumeric characters (`a`-`z`
 
 The identifier should match the name, with these additional guidelines:
 
-- Prefer shorter identifiers to longer identifiers, by avoiding common and repeated words.
+- Prefer shorter identifiers to longer identifiers, by avoiding common qualifiers and repeated words.
 
   - 👍 Recommended: `aborting`
   - 👎 Not recommended: `abort-controller-and-abort-signal`
+  - 👍 Recommended: `arrays`
+  - 👎 Not recommended: `arrays-initial-support`
   - 👍 Recommended: `fullscreen`
   - 👎 Not recommended: `fullscreen-api`
   - 👍 Recommended: `user-pseudos`
