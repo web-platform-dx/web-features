@@ -6,9 +6,9 @@ import YAML from 'yaml';
 import { FeatureData } from './types';
 import { Temporal } from '@js-temporal/polyfill';
 
-// Number of months after Baseline low that Baseline high happens. Keep in sync with definition:
-// https://github.com/web-platform-dx/web-features/blob/main/docs/baseline.md#wider-support-high-status
-const monthsFromBaselineLowToHigh = 30;
+// TODO: Use npm workspaces (or similar) strategy to reference the package,
+// instead of reaching into the source like this
+import { BASELINE_LOW_TO_HIGH_DURATION } from "./packages/web-features-figuring/src/baseline/index"
 
 // The longest description allowed, to avoid them growing into documentation.
 const descriptionMaxLength = 280;
@@ -64,7 +64,7 @@ for (const [key, data] of yamlEntries('feature-group-definitions')) {
     }
     if (data.status?.baseline === 'high') {
         const lowDate = Temporal.PlainDate.from(data.status.baseline_low_date);
-        const highDate = lowDate.add({ months: monthsFromBaselineLowToHigh });
+        const highDate = lowDate.add(BASELINE_LOW_TO_HIGH_DURATION);
         data.status.baseline_high_date = String(highDate);
     }
 

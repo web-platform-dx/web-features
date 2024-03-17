@@ -9,7 +9,12 @@ import { support } from "./support";
 import { Browser } from "../browser-compat-data/browser";
 import { Compat, defaultCompat } from "../browser-compat-data/compat";
 
-export const BASELINE_HIGH_DURATION = Temporal.Duration.from({ months: 30 });
+// Number of months after Baseline low that Baseline high happens. Keep in sync with definition:
+// https://github.com/web-platform-dx/web-features/blob/main/docs/baseline.md#wider-support-high-status
+export const BASELINE_LOW_TO_HIGH_DURATION = Temporal.Duration.from({
+  months: 30,
+});
+
 export const VERY_FAR_FUTURE_DATE = Temporal.Now.plainDateISO().add({
   years: 100,
 });
@@ -105,7 +110,7 @@ function calculate(compatKey: string, compat: Compat): SupportStatus {
       const date = keystoneRelease.date();
       assert(date !== null);
       baseline_high_date = date
-        .add(BASELINE_HIGH_DURATION)
+        .add(BASELINE_LOW_TO_HIGH_DURATION)
         .toString()
         .slice(0, 10);
     }

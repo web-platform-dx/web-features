@@ -1,6 +1,6 @@
 import { Temporal } from "@js-temporal/polyfill";
 
-import { BASELINE_HIGH_DURATION, VERY_FAR_FUTURE_DATE } from ".";
+import { BASELINE_LOW_TO_HIGH_DURATION, VERY_FAR_FUTURE_DATE } from ".";
 import { Compat } from "../browser-compat-data/compat";
 import { Release } from "../browser-compat-data/release";
 
@@ -30,7 +30,7 @@ export function highReleases(compat: Compat) {
 
 function isBaselineHighRelease(release: Release) {
   const baselineHighCutoff = Temporal.Now.plainDateISO().subtract(
-    BASELINE_HIGH_DURATION,
+    BASELINE_LOW_TO_HIGH_DURATION,
   );
   return (
     Temporal.PlainDate.compare(
