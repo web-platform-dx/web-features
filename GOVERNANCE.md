@@ -75,7 +75,8 @@ Inactive _Peers_ (no activity on the project for months or more) might be marked
 
 #### List of current Peers
 
-- (This list is currently empty.)
+- Brian Kardell ([@bkardell](https://github.com/bkardell))
+- Patrick Brosset ([@captainbrosset](https://github.com/captainbrosset))
 
 A _Peer_ who shows an above-average level of contribution to the project, particularly with respect to its strategic direction and long-term health, may be nominated to become an _Owner_, described below.
 

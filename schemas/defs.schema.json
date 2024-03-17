@@ -87,6 +87,10 @@
               ],
               "description": "Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false)"
             },
+            "baseline_high_date": {
+              "description": "Date the feature achieved Baseline high status",
+              "type": "string"
+            },
             "baseline_low_date": {
               "description": "Date the feature achieved Baseline low status",
               "type": "string"
