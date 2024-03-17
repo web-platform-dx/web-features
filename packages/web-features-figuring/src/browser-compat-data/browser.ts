@@ -4,7 +4,7 @@ import { BrowserName, BrowserStatement } from "@mdn/browser-compat-data";
 import { defaultCompat } from "./compat";
 import { Release } from "./release";
 
-const VERY_FAR_FUTURE_DATE = Temporal.Now.plainDateISO().add({
+export const VERY_FAR_FUTURE_DATE = Temporal.Now.plainDateISO().add({
   years: 100,
 });
 

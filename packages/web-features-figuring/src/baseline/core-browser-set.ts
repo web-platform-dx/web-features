@@ -1,6 +1,7 @@
 import { Temporal } from "@js-temporal/polyfill";
 
-import { BASELINE_LOW_TO_HIGH_DURATION, VERY_FAR_FUTURE_DATE } from ".";
+import { BASELINE_LOW_TO_HIGH_DURATION } from ".";
+import { VERY_FAR_FUTURE_DATE } from "../browser-compat-data/browser";
 import { Compat } from "../browser-compat-data/compat";
 import { Release } from "../browser-compat-data/release";
 
