@@ -11,7 +11,7 @@ import { Temporal } from '@js-temporal/polyfill';
 const monthsFromBaselineLowToHigh = 30;
 
 // The longest description allowed, to avoid them growing into documentation.
-const descriptionMaxLength = 280;
+const descriptionMaxLength = 300;
 
 // Some FeatureData keys aren't (and may never) be ready for publishing.
 // They're not part of the public schema (yet).
