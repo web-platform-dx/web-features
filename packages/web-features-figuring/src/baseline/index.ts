@@ -6,14 +6,12 @@ import { feature } from "../browser-compat-data/feature";
 import { Release } from "../browser-compat-data/release";
 import { browsers, highReleases, lowReleases } from "./core-browser-set";
 import { support } from "./support";
-import { Browser, VERY_FAR_FUTURE_DATE } from "../browser-compat-data/browser";
+import { Browser } from "../browser-compat-data/browser";
+import {
+  BASELINE_LOW_TO_HIGH_DURATION,
+  VERY_FAR_FUTURE_DATE,
+} from "../constants";
 import { Compat, defaultCompat } from "../browser-compat-data/compat";
-
-// Number of months after Baseline low that Baseline high happens. Keep in sync with definition:
-// https://github.com/web-platform-dx/web-features/blob/main/docs/baseline.md#wider-support-high-status
-export const BASELINE_LOW_TO_HIGH_DURATION = Temporal.Duration.from({
-  months: 30,
-});
 
 interface FeatureSelector {
   compatKeys: [string, ...string[]];

@@ -8,7 +8,7 @@ import { Temporal } from '@js-temporal/polyfill';
 
 // TODO: Use npm workspaces (or similar) strategy to reference the package,
 // instead of reaching into the source like this
-import { BASELINE_LOW_TO_HIGH_DURATION } from "./packages/web-features-figuring/src/baseline/index"
+import { BASELINE_LOW_TO_HIGH_DURATION } from "./packages/web-features-figuring/src/constants"
 
 // The longest description allowed, to avoid them growing into documentation.
 const descriptionMaxLength = 280;

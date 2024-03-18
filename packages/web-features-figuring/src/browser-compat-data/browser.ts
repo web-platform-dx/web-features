@@ -3,10 +3,7 @@ import { BrowserName, BrowserStatement } from "@mdn/browser-compat-data";
 
 import { defaultCompat } from "./compat";
 import { Release } from "./release";
-
-export const VERY_FAR_FUTURE_DATE = Temporal.Now.plainDateISO().add({
-  years: 100,
-});
+import { VERY_FAR_FUTURE_DATE } from "../constants";
 
 export function browser(id: string, compat = defaultCompat): Browser {
   let b = compat.browsers.get(id);
