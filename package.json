@@ -21,7 +21,7 @@
     "test:schema": "tsx scripts/schema.ts",
     "test:specs": "tsx scripts/specs.ts",
     "test:format": "prettier --check .",
-    "test:web-features-figuring": "cd packages/web-features-figuring/ && npm test",
+    "test:web-features-figuring": "cd packages/web-features-figuring/ && npm install && npm test",
     "format": "npx prettier --write .",
     "feature-init": "tsx scripts/feature-init.ts"
   },
