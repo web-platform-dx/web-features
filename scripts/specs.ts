@@ -17,6 +17,10 @@ const defaultAllowlist: allowlistItem[] = [
     //     "https://example.com/spec/",
     //     "Allowed because…. Remove this exception when https://example.com/org/repo/pull/1234 merges."
     // ]
+    [
+        "https://w3c.github.io/IntersectionObserver/v2/",
+        "Allowed because it's shipped in Chrome and tracked on caniuse.com. Remove this exception when https://github.com/w3c/browser-specs/pull/1210 merges."
+    ]
 ];
 
 function isOK(url: URL, allowlist: allowlistItem[] = defaultAllowlist) {

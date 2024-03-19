@@ -26,7 +26,7 @@ function checkDefsConsistency(): void {
     }
 }
 
-async function validate() {
+function validate() {
     const ajv = new Ajv({allErrors: true, schemas: [defs]});
     addFormats(ajv);
 

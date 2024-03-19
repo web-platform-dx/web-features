@@ -1,0 +1,8 @@
+name: Declarative shadow DOM
+description: The `shadowrootmode` attribute on `<template>` creates a shadow root without the use of JavaScript. It is a declarative alternative to the `attachShadow()` method.
+spec: https://html.spec.whatwg.org/multipage/scripting.html#attr-template-shadowrootmode
+caniuse: declarative-shadow-dom
+usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/4421
+compat_features:
+  - api.HTMLTemplateElement.shadowRootMode
+  - html.elements.template.shadowrootmode
