@@ -1,4 +1,13 @@
+name: Array grouping
 spec: https://tc39.es/proposal-array-grouping/
+status:
+  baseline: false
+  support:
+    chrome: "117"
+    chrome_android: "117"
+    edge: "117"
+    firefox: "119"
+    firefox_android: "119"
 compat_features:
-  - javascript.builtins.Array.group
-  - javascript.builtins.Array.groupToMap
+  - javascript.builtins.Object.groupBy
+  - javascript.builtins.Map.groupBy

@@ -1,0 +1,14 @@
+name: Promise.withResolvers()
+description: Promise.withResolvers() static method
+spec: https://tc39.es/proposal-promise-with-resolvers/#sec-promise.withResolvers
+status:
+  baseline: false
+  # baseline_low_date: 2024-<Safari 17.4 release date>
+  support:
+    chrome: "119"
+    chrome_android: "119"
+    edge: "119"
+    firefox: "121"
+    firefox_android: "121"
+compat_features:
+  - javascript.builtins.Promise.withResolvers

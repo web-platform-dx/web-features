@@ -1,2 +1,17 @@
+name: Custom properties
 spec: https://drafts.csswg.org/css-variables-1/
 caniuse: css-variables
+status:
+  baseline: high
+  baseline_low_date: 2017-04-05
+  support:
+    chrome: "49"
+    chrome_android: "49"
+    edge: "15"
+    firefox: "31"
+    firefox_android: "31"
+    safari: "9.1"
+    safari_ios: "9.3"
+compat_features:
+  - css.properties.custom-property
+  - css.properties.custom-property.var

@@ -1,5 +1,18 @@
+name: BigInt
 spec: https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-bigint-objects
 caniuse: bigint
+snapshot: ecmascript-2020
+status:
+  baseline: high
+  baseline_low_date: 2020-09-16
+  support:
+    chrome: "67"
+    chrome_android: "67"
+    edge: "79"
+    firefox: "68"
+    firefox_android: "68"
+    safari: "14"
+    safari_ios: "14"
 compat_features:
   - javascript.builtins.BigInt
   # TODO: use a wildcard for these features, once implemented

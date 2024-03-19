@@ -1,0 +1,21 @@
+name: ":indeterminate()"
+spec:
+  - https://drafts.csswg.org/selectors-4/#indeterminate
+  - https://html.spec.whatwg.org/multipage/semantics-other.html#selector-indeterminate
+caniuse: css-indeterminate-pseudo
+status:
+  baseline: high
+  baseline_low_date: 2020-01-15
+  support:
+    chrome: "39"
+    chrome_android: "39"
+    edge: "79"
+    firefox: "51"
+    firefox_android: "51"
+    safari: "10"
+    safari_ios: "10"
+compat_features:
+  - css.selectors.indeterminate
+  - css.selectors.indeterminate.checkbox
+  - css.selectors.indeterminate.progress
+  - css.selectors.indeterminate.radio

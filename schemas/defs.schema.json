@@ -23,8 +23,19 @@
           "description": "Alias identifier"
         },
         "caniuse": {
-          "description": "caniuse.com identifier",
-          "type": "string"
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 2,
+              "type": "array"
+            }
+          ],
+          "description": "caniuse.com identifier"
         },
         "compat_features": {
           "description": "Sources of support data for this feature",
@@ -32,6 +43,10 @@
             "type": "string"
           },
           "type": "array"
+        },
+        "name": {
+          "description": "Short name",
+          "type": "string"
         },
         "spec": {
           "anyOf": [
@@ -56,12 +71,28 @@
           "additionalProperties": false,
           "description": "Whether a feature is considered a \"baseline\" web platform feature and when it achieved that status",
           "properties": {
-            "is_baseline": {
-              "description": "Whether the feature achieved baseline status",
-              "type": "boolean"
+            "baseline": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "high",
+                    "low"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "const": false,
+                  "type": "boolean"
+                }
+              ],
+              "description": "Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false)"
             },
-            "since": {
-              "description": "Date the feature achieved baseline status",
+            "baseline_high_date": {
+              "description": "Date the feature achieved Baseline high status",
+              "type": "string"
+            },
+            "baseline_low_date": {
+              "description": "Date the feature achieved Baseline low status",
               "type": "string"
             },
             "support": {
@@ -71,22 +102,28 @@
                 "chrome": {
                   "type": "string"
                 },
+                "chrome_android": {
+                  "type": "string"
+                },
                 "edge": {
                   "type": "string"
                 },
                 "firefox": {
                   "type": "string"
                 },
+                "firefox_android": {
+                  "type": "string"
+                },
                 "safari": {
+                  "type": "string"
+                },
+                "safari_ios": {
                   "type": "string"
                 }
               },
               "type": "object"
             }
           },
-          "required": [
-            "is_baseline"
-          ],
           "type": "object"
         },
         "usage_stats": {
@@ -110,6 +147,7 @@
         }
       },
       "required": [
+        "name",
         "spec"
       ],
       "type": "object"

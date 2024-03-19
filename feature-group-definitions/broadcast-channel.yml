@@ -1,6 +1,18 @@
+name: BroadcastChannel
 spec: https://html.spec.whatwg.org/multipage/web-messaging.html#broadcasting-to-other-browsing-contexts
 caniuse: broadcastchannel
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/1447
+status:
+  baseline: low
+  baseline_low_date: 2022-03-14
+  support:
+    chrome: "60"
+    chrome_android: "60"
+    edge: "79"
+    firefox: "57"
+    firefox_android: "57"
+    safari: "15.4"
+    safari_ios: "15.4"
 compat_features:
   - api.BroadcastChannel
   - api.BroadcastChannel.BroadcastChannel

@@ -1,14 +1,18 @@
+name: Cascade layers
 spec: https://drafts.csswg.org/css-cascade-5/#layering
 caniuse: css-cascade-layers
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/4007
 status:
-  is_baseline: true
-  since: "2022-09-19"
+  baseline: low
+  baseline_low_date: 2022-03-14
   support:
     chrome: "99"
+    chrome_android: "99"
     edge: "99"
     firefox: "97"
+    firefox_android: "97"
     safari: "15.4"
+    safari_ios: "15.4"
 compat_features:
   - css.at-rules.layer
   - css.at-rules.import.layer

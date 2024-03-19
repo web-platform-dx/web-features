@@ -1,0 +1,17 @@
+name: tabindex
+spec: https://html.spec.whatwg.org/multipage/interaction.html#attr-tabindex
+caniuse: tabindex-attr
+status:
+  baseline: high
+  baseline_low_date: 2018-10-02
+  support:
+    chrome: "1"
+    chrome_android: "18"
+    edge: "18"
+    firefox: "1.5"
+    firefox_android: "4"
+    safari: "4"
+    safari_ios: "3.2"
+compat_features:
+  - api.HTMLElement.tabIndex
+  - html.global_attributes.tabindex

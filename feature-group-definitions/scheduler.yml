@@ -1,4 +1,11 @@
+name: Scheduler API
 spec: https://wicg.github.io/scheduling-apis/
+status:
+  baseline: false
+  support:
+    chrome: "94"
+    chrome_android: "94"
+    edge: "94"
 compat_features:
   - api.Scheduler
   - api.Scheduler.postTask
@@ -10,4 +17,4 @@ compat_features:
   - api.TaskPriorityChangeEvent.TaskPriorityChangeEvent
   - api.TaskSignal
   - api.TaskSignal.priority
-  - api.window.scheduler
+  - api.scheduler

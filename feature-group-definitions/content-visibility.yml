@@ -1,2 +1,14 @@
+name: content-visibility
 spec: https://drafts.csswg.org/css-contain-2/#content-visibility
 caniuse: css-content-visibility
+status:
+  baseline: false
+  support:
+    chrome: "108"
+    chrome_android: "108"
+    edge: "108"
+compat_features:
+  - api.ContentVisibilityAutoStateChangeEvent
+  - api.ContentVisibilityAutoStateChangeEvent.ContentVisibilityAutoStateChangeEvent
+  - api.ContentVisibilityAutoStateChangeEvent.skipped
+  - css.properties.content-visibility

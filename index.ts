@@ -3,72 +3,81 @@ import path from 'path';
 
 import { fdir } from 'fdir';
 import YAML from 'yaml';
+import { FeatureData } from './types';
+import { Temporal } from '@js-temporal/polyfill';
 
-/** Web platform feature */
-export interface FeatureData {
-    /** Alias identifier */
-    alias?: string | [string, string, ...string[]];
-    /** Specification */
-    spec: specification_url | [specification_url, specification_url, ...specification_url[]];
-    /** caniuse.com identifier */
-    caniuse?: string;
-    /** Whether a feature is considered a "baseline" web platform feature and when it achieved that status */
-    status?: SupportStatus;
-    /** Sources of support data for this feature */
-    compat_features?: string[];
-    /** Usage stats */
-    usage_stats?: usage_stats_url | [usage_stats_url, usage_stats_url, ...usage_stats_url[]];  // A single URL or an array of two or more
-}
+// Number of months after Baseline low that Baseline high happens. Keep in sync with definition:
+// https://github.com/web-platform-dx/web-features/blob/main/docs/baseline.md#wider-support-high-status
+const monthsFromBaselineLowToHigh = 30;
 
-type browserIdentifier = "chrome" | "edge" | "firefox" | "safari";
-
-interface SupportStatus {
-    /** Whether the feature achieved baseline status */
-    is_baseline: boolean;
-    /** Date the feature achieved baseline status */
-    since?: string;
-    /** Browser versions that most-recently introduced the feature */
-    support?: {[K in browserIdentifier]?: string};
-}
-
-/** Specification URL
- * @format uri
-*/
-type specification_url = string;
-
-/** Usage stats URL
- * @format uri
-*/
-type usage_stats_url = string;
+// The longest description allowed, to avoid them growing into documentation.
+const descriptionMaxLength = 300;
 
 // Some FeatureData keys aren't (and may never) be ready for publishing.
 // They're not part of the public schema (yet).
-// They'll be removed.
 const omittables = [
-    // "compat_features"
+    "description",
+    "snapshot",
+    "group"
 ]
 
-function scrub(data: FeatureData) {
+function scrub(data: any) {
     for (const key of omittables) {
         delete data[key];
     }
-    return data;
+    return data as FeatureData;
 }
 
-const filePaths = new fdir()
-    .withBasePath()
-    .filter((fp) => fp.endsWith('.yml'))
-    .crawl('feature-group-definitions')
-    .sync() as string[];
+function* yamlEntries(root: string): Generator<[string, any]> {
+    const filePaths = new fdir()
+        .withBasePath()
+        .filter((fp) => fp.endsWith('.yml'))
+        .crawl(root)
+        .sync() as string[];
+
+    for (const fp of filePaths) {
+        // The feature identifier/key is the filename without extension.
+        const key = path.parse(fp).name;
+
+        const src = fs.readFileSync(fp, { encoding: 'utf-8'});
+        const data = YAML.parse(src);
+
+        yield [key, data];
+    }
+}
+
+// Load snapshots first so that snapshot identifiers can be validated while
+// loading features.
+const snapshots: { [key: string]: any } = {};
+
+for (const [key, data] of yamlEntries('snapshots')) {
+    // Note that the data is unused and unvalidated for now.
+    snapshots[key] = data;
+}
 
 const features: { [key: string]: FeatureData } = {};
 
-for (const fp of filePaths) {
-    // The feature identifier/key is the filename without extension.
-    const key = path.parse(fp).name;
+for (const [key, data] of yamlEntries('feature-group-definitions')) {
+    // Compute Baseline high date from low date.
+    if (data.status?.baseline_high_date) {
+        throw new Error(`baseline_high_date is computed and should not be used in source YAML. Remove it from ${key}.yml.`);
+    }
+    if (data.status?.baseline === 'high') {
+        const lowDate = Temporal.PlainDate.from(data.status.baseline_low_date);
+        const highDate = lowDate.add({ months: monthsFromBaselineLowToHigh });
+        data.status.baseline_high_date = String(highDate);
+    }
 
-    const src = fs.readFileSync(fp, { encoding: 'utf-8'});
-    const data = YAML.parse(src);
+    // Ensure description is not too long.
+    if (data.description?.length > descriptionMaxLength) {
+        throw new Error(`description in ${key}.yml is too long, ${data.description.length} characters. The maximum allowed length is ${descriptionMaxLength}.`)
+    }
+
+    // Ensure that only known snapshot identifiers are used.
+    if (data.snapshot && !Object.hasOwn(snapshots, data.snapshot)) {
+        throw new Error(`snapshot ${data.snapshot} used in ${key}.yml is not a valid snapshot. Add it to snapshots/ if needed.`);
+    }
+
     features[key] = scrub(data);
 }
 

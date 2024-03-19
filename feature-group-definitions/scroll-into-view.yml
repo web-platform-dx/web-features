@@ -1,0 +1,18 @@
+name: scrollIntoView()
+spec: https://drafts.csswg.org/cssom-view-1/#dom-element-scrollintoview
+alias: scrollintoview
+caniuse: scrollintoview
+status:
+  baseline: high
+  baseline_low_date: 2020-09-16
+  support:
+    chrome: "61"
+    chrome_android: "61"
+    edge: "79"
+    firefox: "36"
+    firefox_android: "36"
+    safari: "14"
+    safari_ios: "14"
+compat_features:
+  - api.Element.scrollIntoView
+  - api.Element.scrollIntoView.options_parameter
