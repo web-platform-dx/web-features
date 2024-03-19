@@ -25,6 +25,8 @@ compat_features:
   - css.properties.break-inside.multicol_context.avoid-column
   - css.properties.break-inside.paged_context
   - css.properties.break-inside.paged_context.avoid-page
+  # `page-break-` are now legacy shorthands
+  # https://drafts.csswg.org/css-break/#page-break-properties
   - css.properties.page-break-after
   - css.properties.page-break-before
   - css.properties.page-break-inside
