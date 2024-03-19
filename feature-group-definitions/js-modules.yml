@@ -1,0 +1,30 @@
+name: JavaScript modules
+description: 'JavaScript modules allow code to be organized into reusable units. Modules use `import` to load other modules and `export` to declare what is available to import from other modules. In HTML, modules are loaded with `<script type="module">`.'
+caniuse: es6-module
+spec:
+  - https://html.spec.whatwg.org/multipage/webappapis.html#javascript-module-script
+  - https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html#sec-modules
+snapshot: ecmascript-2015
+usage_stats:
+  - https://chromestatus.com/metrics/feature/timeline/popularity/2062
+  - https://chromestatus.com/metrics/feature/timeline/popularity/2615
+status:
+  baseline: high
+  baseline_low_date: 2018-05-09
+  # Editorial override has been applied to ignore lack of support in SVG.
+  # This could be a note when notes are supported.
+  support:
+    chrome: "61"
+    chrome_android: "61"
+    edge: "16"
+    firefox: "60"
+    firefox_android: "60"
+    safari: "10.1"
+    safari_ios: "10.3"
+compat_features:
+  - html.elements.script.nomodule
+  - html.elements.script.type.module
+  - javascript.statements.export
+  - javascript.statements.export.default
+  - javascript.statements.import
+  - svg.elements.script.type.module

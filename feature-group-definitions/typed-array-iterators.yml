@@ -1,0 +1,27 @@
+name: Typed array iterators
+description: Typed array iterator methods (usage in for...of loops)
+spec:
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype-@@iterator
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.entries
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.keys
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.values
+snapshot: ecmascript-2015
+group:
+  - iterators
+  - typed-arrays
+status:
+  baseline: high
+  baseline_low_date: 2016-09-20
+  support:
+    chrome: "38"
+    chrome_android: "38"
+    edge: "12"
+    firefox: "36"
+    firefox_android: "36"
+    safari: "10"
+    safari_ios: "10"
+compat_features:
+  - javascript.builtins.TypedArray.@@iterator
+  - javascript.builtins.TypedArray.entries
+  - javascript.builtins.TypedArray.keys
+  - javascript.builtins.TypedArray.values
