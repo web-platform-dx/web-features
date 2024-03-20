@@ -1,0 +1,49 @@
+name: Map (initial support)
+description: Map objects hold key-value pairs and remember the original insertion order of the keys.
+spec:
+  - https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map-objects
+  - https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map-constructor
+  - https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.clear
+  - https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.delete
+  - https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.entries
+  - https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.foreach
+  - https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.get
+  - https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.has
+  - https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.keys
+  - https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.set
+  - https://tc39.es/ecma262/multipage/keyed-collections.html#sec-get-map.prototype.size
+  - https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.values
+  - https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype-@@iterator
+  - https://tc39.es/ecma262/multipage/keyed-collections.html#sec-get-map-@@species
+snapshot: ecmascript-2015
+group: maps
+status:
+  baseline: high
+  baseline_low_date: 2016-09-20
+  support:
+    chrome: "51"
+    chrome_android: "51"
+    edge: "13"
+    firefox: "41"
+    firefox_android: "41"
+    safari: "10"
+    safari_ios: "10"
+compat_features:
+  - javascript.builtins.Map
+  - javascript.builtins.Map.Map
+  - javascript.builtins.Map.Map.iterable_allowed
+  - javascript.builtins.Map.Map.new_required
+  - javascript.builtins.Map.Map.new_required.null_allowed
+  - javascript.builtins.Map.clear
+  - javascript.builtins.Map.delete
+  - javascript.builtins.Map.entries
+  - javascript.builtins.Map.forEach
+  - javascript.builtins.Map.get
+  - javascript.builtins.Map.has
+  - javascript.builtins.Map.key_equality_for_zeros
+  - javascript.builtins.Map.keys
+  - javascript.builtins.Map.set
+  - javascript.builtins.Map.size
+  - javascript.builtins.Map.values
+  - javascript.builtins.Map.@@iterator
+  - javascript.builtins.Map.@@species
