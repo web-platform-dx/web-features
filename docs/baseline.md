@@ -60,7 +60,7 @@ Baseline status cannot or will not satisfy the following non-goals:
   If a web developer needs to support a globally uncommon or discontinued browser (e.g., Internet Explorer 11), then the developer needs to know the specific limitations of that browser, not a broad overview of developers’ most commonly required browsers.
   Baseline can’t be both.
 * **Identify support in assistive technology.**
-  Baseline does not cover support for screen readers, screen magnifiers, voice control, and other assistive technology that browsers do not expose to developers.
+  Baseline does not cover support for screen readers, screen magnifiers, voice control, and other assistive technology that is not built into browsers.
   See also: [Future considerations](#future-considerations).
 * **Identify support in non-web environments.**
   Developers use web technologies in non-web settings, such as JavaScript in Node.js, Web APIs in Deno, or HTML and CSS in Electron-based applications.
