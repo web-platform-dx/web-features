@@ -51,6 +51,20 @@ function testIsOK() {
 };
 testIsOK();
 
+
+/**
+ * Print an array of potential spec URLs.
+ */
+function suggestSpecs(bad: URL): void {
+    const searchBy = bad.pathname.replaceAll("/", "");
+    const suggestions = specUrls.filter((specUrl) => specUrl.toString().includes(searchBy)).map(u => `- ${u}`);
+    if (suggestions.length > 0) {
+        console.warn("Did you mean one of these?");
+        console.warn(`${suggestions.join('\n')}`);
+        console.warn();
+    }
+}
+
 let checked = 0;
 let errors = 0;
 
@@ -69,6 +83,7 @@ for (const [id, data] of Object.entries(features)) {
         const url = new URL(spec);
         if (!isOK(url)) {
             console.error(`URL for ${id} not in web-specs: ${url.toString()}`);
+            suggestSpecs(url);
             errors++;
         }
         checked++;
