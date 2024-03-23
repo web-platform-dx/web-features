@@ -83,7 +83,7 @@ for (const [id, data] of Object.entries(features)) {
         const url = new URL(spec);
         if (!isOK(url)) {
             console.error(`URL for ${id} not in web-specs: ${url.toString()}`);
-            suggestSpecs(url)
+            suggestSpecs(url);
             errors++;
         }
         checked++;
