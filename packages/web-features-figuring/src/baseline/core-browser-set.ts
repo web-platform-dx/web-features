@@ -32,13 +32,13 @@ export function highReleases(compat: Compat) {
 }
 
 function isBaselineHighRelease(release: Release) {
+  const releaseDate = release.date();
+  if (!releaseDate) {
+    return false;
+  }
+
   const baselineHighCutoff = Temporal.Now.plainDateISO().subtract(
     BASELINE_LOW_TO_HIGH_DURATION,
   );
-  return (
-    Temporal.PlainDate.compare(
-      release.date() ?? VERY_FAR_FUTURE_DATE,
-      baselineHighCutoff,
-    ) < 1
-  );
+  return Temporal.PlainDate.compare(releaseDate, baselineHighCutoff) <= 0;
 }
