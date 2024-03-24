@@ -4,16 +4,20 @@ import webSpecs from 'web-specs' assert { type: 'json' };
 
 import features from '../index.js';
 
-// Allowed spec URLs are nightly URLs from web-specs, or the snapshot/versioned URL
-// if a nightly does not exist:
+// Specs needs to be in "good standing". Nightly URLs are used if available,
+// otherwise the snapshot/versioned URL is used. See browser-specs/web-specs
+// docs for more details:
+// https://github.com/w3c/browser-specs/blob/main/README.md#standing
 // https://github.com/w3c/browser-specs/blob/main/README.md#nightly
 // https://github.com/w3c/browser-specs/blob/main/README.md#url
-const specUrls: URL[] = webSpecs.flatMap(spec => {
-    return [
-        new URL(spec.nightly?.url ?? spec.url),
-        ...(spec.nightly?.pages ?? []).map(page => new URL(page))
-    ]
-});
+const specUrls: URL[] = webSpecs
+    .filter((spec) => spec.standing === 'good')
+    .flatMap(spec => {
+        return [
+            new URL(spec.nightly?.url ?? spec.url),
+            ...(spec.nightly?.pages ?? []).map(page => new URL(page))
+        ]
+    });
 
 type allowlistItem = [url: string, message: string];
 const defaultAllowlist: allowlistItem[] = [
