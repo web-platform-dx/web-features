@@ -4,6 +4,10 @@ import webSpecs from 'web-specs' assert { type: 'json' };
 
 import features from '../index.js';
 
+// Allowed spec URLs are nightly URLs from web-specs, or the snapshot/versioned URL
+// if a nightly does not exist:
+// https://github.com/w3c/browser-specs/blob/main/README.md#nightly
+// https://github.com/w3c/browser-specs/blob/main/README.md#url
 const specUrls: URL[] = webSpecs.flatMap(spec => {
     return [
         new URL(spec.nightly?.url ?? spec.url),
