@@ -1,0 +1,35 @@
+name: Set (initial support)
+description: Set objects store unique values of any type.
+spec: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set-objects
+snapshot: ecmascript-2015
+group: sets
+status:
+  # Editorial override has been applied to ignore Set.@@species
+  baseline: high
+  baseline_low_date: 2015-07-29
+  support:
+    chrome: "38"
+    chrome_android: "38"
+    edge: "12"
+    firefox: "13"
+    firefox_android: "13"
+    safari: "8"
+    safari_ios: "8"
+compat_features:
+  - javascript.builtins.Set
+  - javascript.builtins.Set.Set
+  - javascript.builtins.Set.Set.iterable_allowed
+  - javascript.builtins.Set.Set.new_required
+  - javascript.builtins.Set.Set.null_allowed
+  - javascript.builtins.Set.add
+  - javascript.builtins.Set.clear
+  - javascript.builtins.Set.delete
+  - javascript.builtins.Set.entries
+  - javascript.builtins.Set.forEach
+  - javascript.builtins.Set.has
+  - javascript.builtins.Set.key_equality_for_zeros
+  - javascript.builtins.Set.keys
+  - javascript.builtins.Set.size
+  - javascript.builtins.Set.values
+  - javascript.builtins.Set.@@iterator
+  - javascript.builtins.Set.@@species
