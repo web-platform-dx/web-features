@@ -19,15 +19,17 @@ snapshot: ecmascript-2015
 group: maps
 status:
   baseline: high
-  baseline_low_date: 2016-09-20
+  baseline_low_date: 2015-07-29
+  # Editorial override has been applied to ignore Map.@@species
+  # https://github.com/web-platform-dx/web-features/pull/712#discussion_r1532483885
   support:
-    chrome: "51"
-    chrome_android: "51"
-    edge: "13"
-    firefox: "41"
-    firefox_android: "41"
-    safari: "10"
-    safari_ios: "10"
+    chrome: "38"
+    chrome_android: "38"
+    edge: "12"
+    firefox: "13"
+    firefox_android: "14"
+    safari: "8"
+    safari_ios: "8"
 compat_features:
   - javascript.builtins.Map
   - javascript.builtins.Map.Map
