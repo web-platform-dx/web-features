@@ -18,7 +18,7 @@ export class Release {
     return `[${this.browser.name} ${this.version}]`;
   }
 
-  date(): Temporal.PlainDate | null {
+  get date(): Temporal.PlainDate | null {
     const { release_date } = this.data;
     if (release_date === undefined) {
       return null;

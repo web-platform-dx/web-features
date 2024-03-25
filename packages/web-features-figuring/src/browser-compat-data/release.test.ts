@@ -16,17 +16,26 @@ describe("Release", function () {
     });
   });
 
-  describe("date()", function () {
-    it("get the date as a date object", function () {
+  describe("date (getter)", function () {
+    it("get the date as a Temporal PlainDate", function () {
       const release = browser("chrome")
         .releases()
         .find((r) => r.version === "100") as Release;
-      const date = release.date();
-      assert(date !== null);
+      assert(release.date !== null);
       assert.equal(
-        Temporal.PlainDate.compare(date, Temporal.PlainDate.from("2022-03-29")),
+        Temporal.PlainDate.compare(
+          release.date,
+          Temporal.PlainDate.from("2022-03-29"),
+        ),
         0,
       );
+    });
+    it("get the date as null when the date is not set", function () {
+      const release = [...browser("chrome").releases()]
+        .reverse()
+        .find((r) => r.data.release_date === undefined);
+      assert(release, "No release without a release date found in BCD");
+      assert.equal(release.date, null);
     });
   });
 

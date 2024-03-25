@@ -89,21 +89,20 @@ function calculate(compatKey: string, compat: Compat): SupportStatus {
         assert(a !== undefined);
         assert(b !== undefined);
         return Temporal.PlainDate.compare(
-          a.date() ?? VERY_FAR_FUTURE_DATE,
-          b.date() ?? VERY_FAR_FUTURE_DATE,
+          a.date ?? VERY_FAR_FUTURE_DATE,
+          b.date ?? VERY_FAR_FUTURE_DATE,
         );
       })
       .pop();
 
     assert(keystoneRelease instanceof Release);
-    baseline_low_date = (keystoneRelease.date() ?? VERY_FAR_FUTURE_DATE)
+    baseline_low_date = (keystoneRelease.date ?? VERY_FAR_FUTURE_DATE)
       .toString()
       .slice(0, 10);
 
     if (isBaselineHigh) {
-      const date = keystoneRelease.date();
-      assert(date !== null);
-      baseline_high_date = date
+      assert(keystoneRelease.date !== null);
+      baseline_high_date = keystoneRelease.date
         .add(BASELINE_LOW_TO_HIGH_DURATION)
         .toString()
         .slice(0, 10);

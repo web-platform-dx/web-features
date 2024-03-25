@@ -49,8 +49,8 @@ export class Browser {
 
       this._releases.sort((a, b) =>
         Temporal.PlainDate.compare(
-          a.date() ?? VERY_FAR_FUTURE_DATE,
-          b.date() ?? VERY_FAR_FUTURE_DATE,
+          a.date ?? VERY_FAR_FUTURE_DATE,
+          b.date ?? VERY_FAR_FUTURE_DATE,
         ),
       );
 
