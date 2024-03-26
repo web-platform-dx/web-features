@@ -1,13 +1,12 @@
-import { Temporal } from "@js-temporal/polyfill";
 import {
   BrowserName,
   BrowserStatement,
   ReleaseStatement,
 } from "@mdn/browser-compat-data";
+import { compareVersions } from "compare-versions";
 
 import { defaultCompat } from "./compat";
 import { Release } from "./release";
-import { VERY_FAR_FUTURE_DATE } from "../constants";
 
 export function browser(id: string, compat = defaultCompat): Browser {
   let b = compat.browsers.get(id);
@@ -30,12 +29,8 @@ export class Browser {
     this.id = id;
     this.data = data;
 
-    const sortedReleaseData: [version: string, data: ReleaseStatement][] = [];
-    sortedReleaseData.push(
-      ...Object.entries(data.releases).sort((a, b) =>
-        `${a[1].release_date}`.localeCompare(`${b[1].release_date}`),
-      ),
-    );
+    const sortedReleaseData: [version: string, data: ReleaseStatement][] =
+      Object.entries(data.releases).sort(([a], [b]) => compareVersions(a, b));
 
     const releases = sortedReleaseData.map(
       ([version, data], index) => new Release(this, version, data, index),
@@ -73,16 +68,4 @@ export class Browser {
     }
     return result;
   }
-}
-
-function sorter(a: Temporal.PlainDate | null, b: Temporal.PlainDate | null) {
-  // Sort nulls after dates
-  if (a === null) {
-    return b === null ? 0 : 1;
-  }
-  if (b === null) {
-    return -1;
-  }
-
-  return Temporal.PlainDate.compare(a, b);
 }
