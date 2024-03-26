@@ -169,12 +169,12 @@ export class RealSupportStatement extends SupportStatement {
     }
 
     if (this.version_removed === false) {
-      return this.browser.releases().filter((rel) => rel.compare(start) >= 0); // Release is on or after start
+      return this.browser.releases.filter((rel) => rel.compare(start) >= 0); // Release is on or after start
     }
 
     const end: Release = this.browser.version(this.version_removed);
-    return this.browser
-      .releases()
-      .filter((rel) => rel.compare(start) >= 0 && rel.compare(end) < 0); // Release is on after start and before the end
+    return this.browser.releases.filter(
+      (rel) => rel.compare(start) >= 0 && rel.compare(end) < 0,
+    ); // Release is on after start and before the end
   }
 }

@@ -8,7 +8,7 @@ import { Release } from "./release";
 describe("Release", function () {
   describe("toString()", function () {
     it("returns something useful", function () {
-      const latestNonPreview = browser("chrome").releases().at(-2) as Release;
+      const latestNonPreview = browser("chrome").releases.at(-2) as Release;
       assert(
         latestNonPreview.toString().startsWith("[Chrome 1"),
         latestNonPreview.toString(),
@@ -18,9 +18,9 @@ describe("Release", function () {
 
   describe("date (getter)", function () {
     it("get the date as a Temporal PlainDate", function () {
-      const release = browser("chrome")
-        .releases()
-        .find((r) => r.version === "100") as Release;
+      const release = browser("chrome").releases.find(
+        (r) => r.version === "100",
+      ) as Release;
       assert(release.date !== null);
       assert.equal(
         Temporal.PlainDate.compare(
@@ -31,7 +31,7 @@ describe("Release", function () {
       );
     });
     it("get the date as null when the date is not set", function () {
-      const release = [...browser("chrome").releases()]
+      const release = [...browser("chrome").releases]
         .reverse()
         .find((r) => r.data.release_date === undefined);
       assert(release, "No release without a release date found in BCD");
@@ -45,23 +45,23 @@ describe("Release", function () {
       assert.equal(chrome100.compare(chrome100), 0);
     });
 
-    it("returns -1 when other release is later", function () {
+    it("returns less than zero when other release is later", function () {
       const chrome100 = browser("chrome").version("100");
       const chrome101 = browser("chrome").version("101");
-      assert.equal(chrome100.compare(chrome101), -1);
+      assert(chrome100.compare(chrome101) < 0);
     });
 
-    it("returns 1 when other release is earlier", function () {
+    it("returns greater than 0 when other release is earlier", function () {
       const chrome100 = browser("chrome").version("100");
       const chrome101 = browser("chrome").version("101");
-      assert.equal(chrome101.compare(chrome100), 1);
+      assert(chrome101.compare(chrome100) > 0);
     });
 
     it("handles non-lexically sorted cases", function () {
       const fx15 = browser("firefox").version("1.5");
       const fx121 = browser("firefox").version("121");
-      assert.equal(fx121.compare(fx15), 1);
-      assert.equal(fx15.compare(fx121), -1);
+      assert(fx121.compare(fx15) > 0);
+      assert(fx15.compare(fx121) < 0);
     });
   });
 
@@ -77,9 +77,9 @@ describe("Release", function () {
     it("returns true for the next release", function () {
       const chrome = browser("chrome");
       const chromeCurrent = chrome.current();
-      const chromeNext = chrome
-        .releases()
-        .at(chrome.releases().indexOf(chromeCurrent) + 1) as Release;
+      const chromeNext = chrome.releases.at(
+        chrome.releases.indexOf(chromeCurrent) + 1,
+      ) as Release;
       assert.equal(chromeNext.isPrerelease(), true);
     });
     it("returns true for the preview release", function () {

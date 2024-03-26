@@ -18,10 +18,10 @@ describe("browser()", function () {
       });
     });
 
-    describe("#releases()", function () {
-      it("returns an array of releases", function () {
-        assert(browser("chrome").releases().length > 99);
-        assert(browser("firefox").releases().length > 99);
+    describe("#releases", function () {
+      it("is an array of releases", function () {
+        assert(browser("chrome").releases.length > 99);
+        assert(browser("firefox").releases.length > 99);
       });
     });
 

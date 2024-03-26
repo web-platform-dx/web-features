@@ -1,5 +1,9 @@
 import { Temporal } from "@js-temporal/polyfill";
-import { BrowserName, BrowserStatement } from "@mdn/browser-compat-data";
+import {
+  BrowserName,
+  BrowserStatement,
+  ReleaseStatement,
+} from "@mdn/browser-compat-data";
 
 import { defaultCompat } from "./compat";
 import { Release } from "./release";
@@ -20,11 +24,28 @@ export function browser(id: string, compat = defaultCompat): Browser {
 export class Browser {
   id: BrowserName;
   data: BrowserStatement;
-  _releases: Release[] | undefined;
+  releases: ReadonlyArray<Release>;
 
   constructor(id: BrowserName, data: BrowserStatement) {
     this.id = id;
     this.data = data;
+
+    const sortedReleaseData: [version: string, data: ReleaseStatement][] = [];
+    sortedReleaseData.push(
+      ...Object.entries(data.releases).sort((a, b) =>
+        `${a[1].release_date}`.localeCompare(`${b[1].release_date}`),
+      ),
+    );
+
+    const releases = sortedReleaseData.map(
+      ([version, data], index) => new Release(this, version, data, index),
+    );
+    if (this.data.preview_name) {
+      releases.push(
+        new Release(this, "preview", { status: "nightly" }, releases.length),
+      );
+    }
+    this.releases = releases;
   }
 
   toString(): string {
@@ -35,37 +56,8 @@ export class Browser {
     return this.data.name;
   }
 
-  releases(): Release[] {
-    if (this._releases === undefined) {
-      if (this.data.releases === undefined) {
-        // This shouldn't happe in practice, but we must appease the type checker
-        throw Error(`${this} doesn't have releases data. That's weird.`);
-      }
-
-      this._releases = [];
-      for (const [key, value] of Object.entries(this.data.releases)) {
-        this._releases.push(new Release(this, key, value));
-      }
-
-      this._releases.sort((a, b) =>
-        Temporal.PlainDate.compare(
-          a.date ?? VERY_FAR_FUTURE_DATE,
-          b.date ?? VERY_FAR_FUTURE_DATE,
-        ),
-      );
-
-      if (this.data.preview_name) {
-        this._releases.push(
-          new Release(this, "preview", { status: "nightly" }),
-        );
-      }
-    }
-
-    return this._releases;
-  }
-
   current(): Release {
-    const curr = this.releases().find((r) => r.data.status === "current");
+    const curr = this.releases.find((r) => r.data.status === "current");
 
     if (curr === undefined) {
       throw Error(`${browser} does not have a "current" release`);
@@ -75,10 +67,22 @@ export class Browser {
   }
 
   version(versionString: string): Release {
-    const result = this.releases().find((r) => r.version === versionString);
+    const result = this.releases.find((r) => r.version === versionString);
     if (result === undefined) {
       throw Error(`${browser} does not have a '${versionString}' release.`);
     }
     return result;
   }
+}
+
+function sorter(a: Temporal.PlainDate | null, b: Temporal.PlainDate | null) {
+  // Sort nulls after dates
+  if (a === null) {
+    return b === null ? 0 : 1;
+  }
+  if (b === null) {
+    return -1;
+  }
+
+  return Temporal.PlainDate.compare(a, b);
 }

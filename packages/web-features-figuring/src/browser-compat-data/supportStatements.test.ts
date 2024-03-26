@@ -204,7 +204,7 @@ describe("statements", function () {
           browser("chrome"),
         );
         const rels = st.supportedBy();
-        assert.equal(rels.length, browser("chrome").releases().length);
+        assert.equal(rels.length, browser("chrome").releases.length);
       });
 
       // TODO: This test could be more specific. Really, handling ≤ gracefully
@@ -217,7 +217,7 @@ describe("statements", function () {
           browser("chrome"),
         );
         const rels = st.supportedBy();
-        assert.equal(rels.length, browser("chrome").releases().length - 10);
+        assert.equal(rels.length, browser("chrome").releases.length - 10);
       });
     });
   });

@@ -7,11 +7,18 @@ export class Release {
   browser: Browser;
   version: string;
   data: ReleaseStatement;
+  releaseIndex: number;
 
-  constructor(browser: Browser, version: string, data: ReleaseStatement) {
+  constructor(
+    browser: Browser,
+    version: string,
+    data: ReleaseStatement,
+    index: number,
+  ) {
     this.browser = browser;
     this.version = version;
     this.data = data;
+    this.releaseIndex = index;
   }
 
   toString() {
@@ -34,18 +41,7 @@ export class Release {
       );
     }
 
-    const index = this.browser.releases().indexOf(this);
-    const otherIndex = this.browser.releases().indexOf(otherRelease);
-    // console.log(
-    //   `${this} @ ${index}, ${otherRelease} @ ${otherIndex}, ${index - otherIndex}`,
-    // );
-
-    if (index < otherIndex) {
-      return -1;
-    } else if (index > otherIndex) {
-      return 1;
-    }
-    return 0;
+    return this.releaseIndex - otherRelease.releaseIndex;
   }
 
   isPrerelease(): boolean {

@@ -24,7 +24,7 @@ export function lowReleases(compat: Compat) {
 
 export function highReleases(compat: Compat) {
   return browsers(compat)
-    .flatMap((b) => b.releases())
+    .flatMap((b) => b.releases)
     .filter(isBaselineHighRelease);
 }
 

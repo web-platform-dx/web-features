@@ -21,7 +21,7 @@ describe("features", function () {
       it("returns releases only for `only` browsers", function () {
         const f = feature("javascript.builtins.Array.sort");
         const releases = f.supportedBy({ only: [browser("chrome")] }).length;
-        const expectedReleases = browser("chrome").releases().length;
+        const expectedReleases = browser("chrome").releases.length;
         assert.equal(releases, expectedReleases);
       });
     });

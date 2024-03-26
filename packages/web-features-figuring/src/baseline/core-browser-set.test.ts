@@ -8,8 +8,7 @@ describe("isBaselineHighRelease", function () {
     // Get an upcoming, undated Chrome
     const r = new Compat()
       .browser("chrome")
-      .releases()
-      .find((r) => r.date === null);
+      .releases.find((r) => r.date === null);
     assert.equal(r?.date, null);
     assert.equal(isBaselineHighRelease(r), false);
   });
@@ -18,8 +17,9 @@ describe("isBaselineHighRelease", function () {
     // Get an upcoming, non-current Firefox
     const r = new Compat()
       .browser("firefox")
-      .releases()
-      .find((r) => r.date !== null && ["planned"].includes(r.data.status));
+      .releases.find(
+        (r) => r.date !== null && ["planned"].includes(r.data.status),
+      );
     assert(
       r,
       "If you're seeing this message it means that BCD doesn't know about a future-dated Firefox release",
@@ -44,7 +44,7 @@ describe("isBaselineHighRelease", function () {
 
   it("returns true for a release 29 months ago", function () {
     const monthsAgo = Temporal.Now.plainDateISO().subtract({ months: 29 });
-    const r = [...new Compat().browser("firefox").releases()]
+    const r = [...new Compat().browser("firefox").releases]
       .reverse()
       .find(
         (r) =>
@@ -60,7 +60,7 @@ describe("isBaselineHighRelease", function () {
 
   it("returns false for a release 32 months ago", function () {
     const monthsAgo = Temporal.Now.plainDateISO().subtract({ months: 32 });
-    const r = [...new Compat().browser("firefox").releases()]
+    const r = [...new Compat().browser("firefox").releases]
       .reverse()
       .find(
         (r) =>
