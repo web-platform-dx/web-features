@@ -12,6 +12,7 @@ import {
   VERY_FAR_FUTURE_DATE,
 } from "../constants";
 import { Compat, defaultCompat } from "../browser-compat-data/compat";
+import { toDateString, toHighDate } from "./date-utils";
 
 interface FeatureSelector {
   compatKeys: [string, ...string[]];
@@ -40,18 +41,18 @@ export function computeBaseline(
 
   const baseline = minStatus(statuses);
 
-  let baseline_low_date = null;
+  let baseline_low_date: string | null = null;
   if (baseline !== false) {
     baseline_low_date = latestDate(
       statuses.map((status) => status.baseline_low_date),
     );
   }
 
-  let baseline_high_date = null;
-  if (baseline === "high") {
-    baseline_high_date = latestDate(
-      statuses.map((status) => status.baseline_high_date),
-    );
+  let baseline_high_date;
+  if (baseline_low_date) {
+    baseline_high_date = toDateString(toHighDate(baseline_low_date));
+  } else {
+    baseline_high_date = null;
   }
 
   return {
@@ -96,16 +97,12 @@ function calculate(compatKey: string, compat: Compat): SupportStatus {
       .pop();
 
     assert(keystoneRelease instanceof Release);
-    baseline_low_date = (keystoneRelease.date ?? VERY_FAR_FUTURE_DATE)
-      .toString()
-      .slice(0, 10);
+    assert(keystoneRelease.date);
+    baseline_low_date = toDateString(keystoneRelease.date);
 
     if (isBaselineHigh) {
       assert(keystoneRelease.date !== null);
-      baseline_high_date = keystoneRelease.date
-        .add(BASELINE_LOW_TO_HIGH_DURATION)
-        .toString()
-        .slice(0, 10);
+      baseline_high_date = toDateString(toHighDate(keystoneRelease.date));
     }
   }
 

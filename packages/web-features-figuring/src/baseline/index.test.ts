@@ -70,5 +70,7 @@ describe("computeBaseline", function () {
       checkAncestors: false,
     });
     assert.equal(result.baseline, "high");
+    assert.equal(result.baseline_low_date, "2015-07-28"); // The first release of Edge, the youngest release in consideration
+    assert.equal(result.baseline_high_date, "2018-01-28"); // 30 months later
   });
 });
