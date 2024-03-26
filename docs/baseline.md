@@ -29,7 +29,7 @@ See [Audience illustration for Baseline status](#audience-illustration-for-basel
 
 Goal 2: **Change with the web and web developers’ needs.**
 Features can and should join and leave Baseline status as their respective interoperability, reliability, commitment, and availability profiles change.
-Likewise, Baseline statuses should change as developers’ needs change. (For example, if developers come to rely on a new browser or an established browser fades from use.)
+Likewise, Baseline statuses should change as developers’ needs change. For example, if developers come to rely on a new browser or an established browser fades from use.
 Baseline is not an inert, one-time assessment, nor is it arbitrary, changing form from one day to the next.
 
 Goal 3: **Identify interoperability through support across browser implementations.**
