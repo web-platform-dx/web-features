@@ -1,12 +1,9 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
 
-import bcd from "@mdn/browser-compat-data";
 import * as chai from "chai";
 import chaiJestSnapshot from "chai-jest-snapshot";
 
 import { computeBaseline } from ".";
-import { Compat } from "../browser-compat-data/compat";
 
 chai.use(chaiJestSnapshot);
 
@@ -19,49 +16,59 @@ describe("computeBaseline", function () {
     chaiJestSnapshot.configureUsingMochaContext(this);
   });
 
+  it("returns something sensible for the most complex features", function () {
+    // These are some of the most "complex" BCD features, given approximately by:
+    // const complexity = JSON.stringify(data.__compat, undefined, 2).split("\n").length
+    const result = Object.fromEntries(
+      [
+        "api.Document.visibilitychange_event",
+        "css.types.basic-shape.path",
+        "api.DOMMatrix.DOMMatrix",
+      ].map((key) => [
+        key,
+        computeBaseline({ compatKeys: [key], checkAncestors: false }),
+      ]),
+    );
+    assert.equal(
+      result["api.Document.visibilitychange_event"]?.baseline,
+      "high",
+    );
+    assert.equal(result["css.types.basic-shape.path"]?.baseline, false);
+    assert.equal(result["api.DOMMatrix.DOMMatrix"]?.baseline, "high");
+    chai.expect(result).to.matchSnapshot();
+  });
+
+  it("returns something sensible for the least complex features", function () {
+    // These are some of the least "complex" BCD features
+    const result = Object.fromEntries(
+      [
+        "css.properties.counter-reset.reset_does_not_affect_siblings",
+        "html.global_attributes.exportparts",
+        "html.elements.form.target",
+      ].map((key) => [
+        key,
+        computeBaseline({ compatKeys: [key], checkAncestors: false }),
+      ]),
+    );
+
+    assert.equal(
+      result["css.properties.counter-reset.reset_does_not_affect_siblings"]
+        ?.baseline,
+      false,
+    );
+    assert.equal(
+      result["html.global_attributes.exportparts"]?.baseline,
+      "high",
+    );
+    assert.equal(result["html.elements.form.target"]?.baseline, "high");
+    chai.expect(result).to.matchSnapshot();
+  });
+
   it("returns a result for a feature", function () {
     const result = computeBaseline({
       compatKeys: ["css.properties.border-color"],
       checkAncestors: false,
     });
-    assert.equal(result.baseline, "high");
-  });
-
-  it("returns a result for a feature (data provided)", function () {
-    const compat = new Compat(
-      JSON.parse(
-        readFileSync(new URL("index.test.ts.bcd.json", import.meta.url), {
-          encoding: "utf-8",
-        }),
-      ),
-    );
-
-    const result = computeBaseline(
-      {
-        compatKeys: ["css.properties.border-color"],
-        checkAncestors: false,
-      },
-      compat,
-    );
-    assert.equal(result.baseline, "high");
-  });
-
-  it("tests via a BCD snapshot", function () {
-    // If we thin out the data first, the snapshot assertion can run much faster
-    const data = {
-      __meta: bcd.__meta,
-      browsers: bcd.browsers,
-      css: bcd.css,
-    };
-    chai.expect(data).to.matchSnapshot();
-
-    const result = computeBaseline(
-      {
-        compatKeys: ["css.properties.border-color"],
-        checkAncestors: false,
-      },
-      new Compat(data),
-    );
     assert.equal(result.baseline, "high");
   });
 });

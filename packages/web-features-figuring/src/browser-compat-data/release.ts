@@ -36,6 +36,9 @@ export class Release {
 
     const index = this.browser.releases().indexOf(this);
     const otherIndex = this.browser.releases().indexOf(otherRelease);
+    // console.log(
+    //   `${this} @ ${index}, ${otherRelease} @ ${otherIndex}, ${index - otherIndex}`,
+    // );
 
     if (index < otherIndex) {
       return -1;
