@@ -1,9 +1,6 @@
 import { Temporal } from "@js-temporal/polyfill";
 
-import {
-  BASELINE_LOW_TO_HIGH_DURATION,
-  VERY_FAR_FUTURE_DATE,
-} from "../constants";
+import { BASELINE_LOW_TO_HIGH_DURATION } from "../constants";
 import { Compat } from "../browser-compat-data/compat";
 import { Release } from "../browser-compat-data/release";
 
@@ -31,13 +28,14 @@ export function highReleases(compat: Compat) {
     .filter(isBaselineHighRelease);
 }
 
-function isBaselineHighRelease(release: Release) {
-  if (!release.date) {
+export function isBaselineHighRelease(release: Release) {
+  const now = Temporal.Now.plainDateISO();
+
+  // Exclude undated or future-dated releases from Baseline consideration
+  if (!release.date || Temporal.PlainDate.compare(now, release.date) === -1) {
     return false;
   }
 
-  const baselineHighCutoff = Temporal.Now.plainDateISO().subtract(
-    BASELINE_LOW_TO_HIGH_DURATION,
-  );
-  return Temporal.PlainDate.compare(release.date, baselineHighCutoff) <= 0;
+  const baselineHighCutoff = now.subtract(BASELINE_LOW_TO_HIGH_DURATION);
+  return Temporal.PlainDate.compare(release.date, baselineHighCutoff) >= 0;
 }
