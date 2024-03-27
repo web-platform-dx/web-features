@@ -1,5 +1,5 @@
 name: contextlost and contextrestored
-description: The `contextlost` and `contextrestored` events are fired on a canvas element when the rendering context is lost or restored, such as when a graphics device crashes or runs out of memory.
+description: The `contextlost` event for `<canvas>` fires when the canvas backing storage is lost, while the `contextrestored` event fires when it is recreated.
 spec: https://html.spec.whatwg.org/multipage/webappapis.html#context-lost-steps
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/3974
 status:
