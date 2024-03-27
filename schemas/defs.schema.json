@@ -48,6 +48,11 @@
           "description": "Short name",
           "type": "string"
         },
+        "description": {
+          "description": "Short description of the feature",
+          "type": "string",
+          "maxLength": 300
+        },
         "spec": {
           "anyOf": [
             {
@@ -148,7 +153,8 @@
       },
       "required": [
         "name",
-        "spec"
+        "spec",
+        "description"
       ],
       "type": "object"
     }
