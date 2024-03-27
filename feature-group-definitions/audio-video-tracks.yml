@@ -1,0 +1,31 @@
+name: Audio and video tracks
+description: The `audioTracks` and `videoTracks` APIs for media elements allow switching audio and video tracks during playback.
+spec: https://html.spec.whatwg.org/multipage/media.html#media-resources-with-multiple-media-tracks
+compat_features:
+  - api.AudioTrack
+  - api.AudioTrack.enabled
+  - api.AudioTrack.id
+  - api.AudioTrack.kind
+  - api.AudioTrack.label
+  - api.AudioTrack.language
+  - api.AudioTrackList
+  - api.AudioTrackList.addtrack_event
+  - api.AudioTrackList.change_event
+  - api.AudioTrackList.getTrackById
+  - api.AudioTrackList.length
+  - api.AudioTrackList.removetrack_event
+  - api.HTMLMediaElement.audioTracks
+  - api.HTMLMediaElement.videoTracks
+  - api.VideoTrack
+  - api.VideoTrack.id
+  - api.VideoTrack.kind
+  - api.VideoTrack.label
+  - api.VideoTrack.language
+  - api.VideoTrack.selected
+  - api.VideoTrackList
+  - api.VideoTrackList.addtrack_event
+  - api.VideoTrackList.change_event
+  - api.VideoTrackList.getTrackById
+  - api.VideoTrackList.length
+  - api.VideoTrackList.removetrack_event
+  - api.VideoTrackList.selectedIndex
