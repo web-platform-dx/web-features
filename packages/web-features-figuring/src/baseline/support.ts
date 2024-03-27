@@ -5,19 +5,36 @@ import { Release } from "../browser-compat-data/release";
 
 type Support = Map<Browser, Release | undefined>;
 
+/**
+ * Map browsers to the release that most-recently introduced support for the feature.
+ */
 export function support(feature: Feature, browsers: Browser[], compat: Compat) {
   const support: Support = new Map();
   for (const b of browsers) {
-    support.set(b, undefined);
-  }
-
-  for (const rel of feature.supportedBy({ only: browsers, compat })) {
-    const currRel = support.get(rel.browser);
-
-    if (!currRel || currRel.compare(rel) >= 0) {
-      support.set(rel.browser, rel);
-    }
+    const releases = feature.supportedBy({ only: [b] });
+    support.set(b, lastInitialRelease(releases));
   }
 
   return support;
+}
+
+/**
+ * Find the most-recent first release of a consecutive series of releases.
+ *
+ * For example, given browser versions [50, 51, 52, 99, 100, 101], return release 99, since that was the most-recent release to start a consecutive series.
+ */
+export function lastInitialRelease(releases: Release[]): Release | undefined {
+  let newestFirst = [...releases].sort((a, b) => b.compare(a));
+
+  let initial: Release | undefined = undefined;
+  for (const thisRelease of newestFirst) {
+    if (initial === undefined) {
+      initial = thisRelease;
+    } else if (initial.releaseIndex - 1 === thisRelease.releaseIndex) {
+      initial = thisRelease;
+    } else {
+      break;
+    }
+  }
+  return initial;
 }
