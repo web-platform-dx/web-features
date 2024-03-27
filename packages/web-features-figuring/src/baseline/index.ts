@@ -70,6 +70,27 @@ function calculate(compatKey: string, compat: Compat): SupportStatus {
   const f = feature(compatKey);
   const s = support(f, browsers(compat), compat);
 
+  // The next three statements compute the low, high, or neither status of a
+  // given key. There are many ways to do this, but this is the one I picked.
+  //
+  // To check the Baseline low status, follow these steps:
+  // 1. Get the set of releases that support a given feature (via
+  //    `supportedBy`).
+  // 2. Get the set of current releases for all the core browser set browsers
+  //    (via `lowReleases`).
+  // 3. If the first set is a superset of the second set, then it's Baseline
+  //    low.
+
+  // To check the Baseline high status, follow these steps:
+  // 1. Get the set of releases that support a given feature (via
+  //    `supportedBy`).
+  // 2. Get the set of releases for all the core browser set browsers from the
+  //    present to 30 months ago (via `highReleases`).
+  // 3. If the first set is a superset of the second set, then it's Baseline
+  //    high.
+  //
+  // This will all be much more obvious when we can use
+  // `Set.prototype.isSupersetOf`.
   const allReleases = f.supportedBy({ only: browsers(compat), compat });
   const isBaselineLow = lowReleases(compat).every((r) =>
     allReleases.includes(r),
