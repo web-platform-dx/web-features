@@ -105,7 +105,7 @@ function calculate(compatKey: string, compat: Compat): SupportStatus {
   let baseline_low_date = null;
   let baseline_high_date = null;
   if (isBaselineLow) {
-    const initialReleases = [...s.entries()].map(([, r]) => r);
+    const initialReleases = [...s.values()];
     const keystoneRelease = initialReleases
       .sort((a, b) => {
         assert(a !== undefined);
