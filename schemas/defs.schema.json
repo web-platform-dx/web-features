@@ -44,14 +44,13 @@
           },
           "type": "array"
         },
+        "description": {
+          "description": "Short description",
+          "type": "string"
+        },
         "name": {
           "description": "Short name",
           "type": "string"
-        },
-        "description": {
-          "description": "Short description of the feature",
-          "type": "string",
-          "maxLength": 300
         },
         "spec": {
           "anyOf": [
@@ -153,8 +152,8 @@
       },
       "required": [
         "name",
-        "spec",
-        "description"
+        "description",
+        "spec"
       ],
       "type": "object"
     }
