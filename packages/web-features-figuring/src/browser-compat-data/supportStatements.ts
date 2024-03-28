@@ -88,15 +88,6 @@ export class SupportStatement {
     return version.includes("≤");
   }
 
-  hasCaveats(): boolean {
-    return (
-      this.data.alternative_name !== undefined ||
-      this.flags.length > 0 ||
-      this.partial_implementation === true ||
-      this.data.prefix !== undefined
-    );
-  }
-
   get flags(): FlagStatement[] {
     return this.data?.flags ?? [];
   }
