@@ -3,6 +3,8 @@
 export interface FeatureData {
     /** Short name */
     name: string;
+    /** Short description */
+    description: string;
     /** Alias identifier */
     alias?: string | [string, string, ...string[]];
     /** Specification */
