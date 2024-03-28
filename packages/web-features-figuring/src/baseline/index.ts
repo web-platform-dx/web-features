@@ -15,11 +15,14 @@ interface FeatureSelector {
   checkAncestors: boolean;
 }
 
+type BaselineStatus = "low" | "high" | false;
+type BaselineDate = string | null;
+
 interface SupportStatus {
   compatKey?: string;
-  baseline: "low" | "high" | false;
-  baseline_low_date: string | null;
-  baseline_high_date: string | null;
+  baseline: BaselineStatus;
+  baseline_low_date: BaselineDate;
+  baseline_high_date: BaselineDate;
   support: Map<Browser, Release | undefined>;
   toJSON: () => string;
 }
@@ -117,13 +120,14 @@ function minSupport(
 }
 
 function keystoneDateToStatus(date: Temporal.PlainDate | null): {
-  baseline: "high" | "low" | false;
-  baseline_low_date: string | null;
-  baseline_high_date: string | null;
+  baseline: BaselineStatus;
+  baseline_low_date: BaselineDate;
+  baseline_high_date: BaselineDate;
 } {
-  let baseline: "high" | "low" | false;
+  let baseline: BaselineStatus;
   let baseline_low_date;
   let baseline_high_date;
+
   if (date === null || isFuture(date)) {
     baseline = false;
     baseline_low_date = null;
