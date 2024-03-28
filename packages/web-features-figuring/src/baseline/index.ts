@@ -182,13 +182,10 @@ function findKeystoneDate(
 ): Temporal.PlainDate | null {
   let latestDate = null;
   for (const release of releases) {
-    if (release === undefined || release.date === null) {
+    if (!release?.date) {
       return null;
     }
-    if (latestDate === null) {
-      latestDate = release.date;
-    }
-    if (Temporal.PlainDate.compare(latestDate, release.date) < 0) {
+    if (!latestDate || Temporal.PlainDate.compare(latestDate, release.date) < 0) {
       latestDate = release.date;
     }
   }

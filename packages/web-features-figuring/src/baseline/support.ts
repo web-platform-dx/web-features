@@ -43,9 +43,7 @@ export function lastInitialRelease(releases: Release[]): Release | undefined {
 
   let initial: Release | undefined = undefined;
   for (const thisRelease of newestFirst) {
-    if (initial === undefined) {
-      initial = thisRelease;
-    } else if (initial.releaseIndex - 1 === thisRelease.releaseIndex) {
+    if (!initial || initial.releaseIndex - 1 === thisRelease.releaseIndex) {
       initial = thisRelease;
     } else {
       break;

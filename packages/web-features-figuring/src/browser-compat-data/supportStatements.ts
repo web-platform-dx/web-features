@@ -169,7 +169,7 @@ export class RealSupportStatement extends SupportStatement {
       const end: Release = this.browser.version(this.version_removed);
       releases = this.browser.releases.filter(
         (rel) => rel.compare(start) >= 0 && rel.compare(end) < 0,
-      ); // Release is on after start and before the end
+      ); // Release is on or after start and before the end
     }
 
     let qualifications: Qualifications = {};

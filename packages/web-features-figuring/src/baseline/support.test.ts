@@ -28,7 +28,7 @@ describe("lastInitialRelease", function () {
     const cr100 = cr.version("100");
     const cr99 = cr.version("99");
     const cr95 = cr.version("95");
-    const cr94 = cr.version("95");
+    const cr94 = cr.version("94");
 
     const result = lastInitialRelease([cr94, cr95, cr99, cr100]);
     assert.equal(result, cr99, `${result} is not ${cr99}`);
