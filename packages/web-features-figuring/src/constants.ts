@@ -5,7 +5,3 @@ import { Temporal } from "@js-temporal/polyfill";
 export const BASELINE_LOW_TO_HIGH_DURATION = Temporal.Duration.from({
   months: 30,
 });
-
-export const VERY_FAR_FUTURE_DATE = Temporal.Now.plainDateISO().add({
-  years: 100,
-});
