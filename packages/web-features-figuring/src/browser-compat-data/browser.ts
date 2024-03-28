@@ -37,6 +37,9 @@ export class Browser {
     );
     if (this.data.preview_name) {
       releases.push(
+        // For Safari TP, "nightly" isn't literally correct, but according to
+        // the BCD schema this can be any "current alpha / experimental
+        // release".
         new Release(this, "preview", { status: "nightly" }, releases.length),
       );
     }

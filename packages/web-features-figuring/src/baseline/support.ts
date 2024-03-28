@@ -18,10 +18,10 @@ export function support(feature: Feature, browsers: Browser[]): Support {
     const unqualifiedReleases = [];
     const qualifiedReleases = [];
     for (const { release, qualifications } of releases) {
-      if (qualifications === undefined) {
-        unqualifiedReleases.push(release);
-      } else {
+      if (qualifications) {
         qualifiedReleases.push({ release, qualifications });
+      } else {
+        unqualifiedReleases.push(release);
       }
     }
 
