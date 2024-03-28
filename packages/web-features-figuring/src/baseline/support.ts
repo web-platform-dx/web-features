@@ -39,7 +39,7 @@ export function support(feature: Feature, browsers: Browser[]): Support {
  * For example, given browser versions [50, 51, 52, 99, 100, 101], return release 99, since that was the most-recent release to start a consecutive series.
  */
 export function lastInitialRelease(releases: Release[]): Release | undefined {
-  let newestFirst = [...releases].sort((a, b) => b.compare(a));
+  let newestFirst = releases.sort((a, b) => b.compare(a));
 
   let initial: Release | undefined = undefined;
   for (const thisRelease of newestFirst) {
