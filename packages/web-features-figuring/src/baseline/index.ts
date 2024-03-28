@@ -27,6 +27,10 @@ interface SupportStatus {
   toJSON: () => string;
 }
 
+/**
+ * Given a set of compat keys, compute the aggregate Baseline support ("high",
+ * "low" or false, dates, and releases) for those keys.
+ */
 export function computeBaseline(
   featureSelector: FeatureSelector,
   compat: Compat = defaultCompat,
@@ -37,7 +41,7 @@ export function computeBaseline(
     : compatKeys;
 
   const statuses = keys.map((key) => calculate(key, compat));
-  const support = minSupport(statuses.map((status) => status.support));
+  const support = collateSupport(statuses.map((status) => status.support));
 
   const keystoneDate = findKeystoneDate(
     statuses.flatMap((s) => [...s.support.values()]),
@@ -56,6 +60,10 @@ export function computeBaseline(
   };
 }
 
+/**
+ * Compute the Baseline support ("high", "low" or false, dates, and releases)
+ * for a single compat key.
+ */
 function calculate(compatKey: string, compat: Compat): SupportStatus {
   const f = feature(compatKey);
   const s = support(f, browsers(compat), compat);
@@ -76,6 +84,12 @@ function calculate(compatKey: string, compat: Compat): SupportStatus {
   };
 }
 
+/**
+ * Given a compat key, get the key and any of its ancestor features.
+ *
+ * For example, given the key `"html.elements.a.href"`, return
+ * `["html.elements.a", "html.elements.a.href"]`.
+ */
 function withAncestors(compatKey: string, compat: Compat): string[] {
   const items = compatKey.split(".");
   const ancestors: string[] = [];
@@ -92,7 +106,10 @@ function withAncestors(compatKey: string, compat: Compat): string[] {
   return ancestors;
 }
 
-function minSupport(
+/**
+ * Collate several support summaries, taking the most-recent release for each browser across all of the summaries.
+ */
+function collateSupport(
   supports: Map<Browser, Release | undefined>[],
 ): Map<Browser, Release | undefined> {
   const collated = new Map<Browser, (Release | undefined)[]>();
@@ -119,6 +136,10 @@ function minSupport(
   return support;
 }
 
+/**
+ * Given several dates, find the most-recent date and determine the
+ * corresponding Baseline status and high and low dates.
+ */
 function keystoneDateToStatus(date: Temporal.PlainDate | null): {
   baseline: BaselineStatus;
   baseline_low_date: BaselineDate;
@@ -152,6 +173,10 @@ function keystoneDateToStatus(date: Temporal.PlainDate | null): {
   return { baseline, baseline_low_date, baseline_high_date };
 }
 
+/**
+ * Given one or more releases (or `undefined` releases), return the most-recent
+ * release date or `null` if no such date exists.
+ */
 function findKeystoneDate(
   releases: (Release | undefined)[],
 ): Temporal.PlainDate | null {
