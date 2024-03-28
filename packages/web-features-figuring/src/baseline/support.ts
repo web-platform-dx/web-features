@@ -8,7 +8,7 @@ type Support = Map<Browser, Release | undefined>;
 /**
  * Map browsers to the release that most-recently introduced support for the feature.
  */
-export function support(feature: Feature, browsers: Browser[], compat: Compat) {
+export function support(feature: Feature, browsers: Browser[]): Support {
   const support: Support = new Map();
   for (const b of browsers) {
     const releases = feature.supportedBy({ only: [b] });

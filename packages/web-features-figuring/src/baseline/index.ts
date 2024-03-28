@@ -66,7 +66,7 @@ export function computeBaseline(
  */
 function calculate(compatKey: string, compat: Compat): SupportStatus {
   const f = feature(compatKey);
-  const s = support(f, browsers(compat), compat);
+  const s = support(f, browsers(compat));
   const keystoneDate = findKeystoneDate([...s.values()]);
 
   const { baseline, baseline_low_date, baseline_high_date } =
