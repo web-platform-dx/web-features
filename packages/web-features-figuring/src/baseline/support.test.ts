@@ -23,7 +23,7 @@ describe("lastInitialRelease", function () {
     assert.equal(result, cr99, `${result} is not ${cr99}`);
   });
 
-  it("returns the least-recent consecutive release ", function () {
+  it("returns the least-recent release of the most-recent consecutive series", function () {
     const cr = new Compat().browser("chrome");
     const cr100 = cr.version("100");
     const cr99 = cr.version("99");

@@ -188,7 +188,7 @@ function findKeystoneDate(
     if (latestDate === null) {
       latestDate = release.date;
     }
-    if (Temporal.PlainDate.compare(latestDate, release.date) === -1) {
+    if (Temporal.PlainDate.compare(latestDate, release.date) < 0) {
       latestDate = release.date;
     }
   }
