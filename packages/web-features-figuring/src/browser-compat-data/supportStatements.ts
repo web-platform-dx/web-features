@@ -8,6 +8,13 @@ import { Browser } from "./browser";
 import { Release } from "./release";
 import { Feature } from "./feature";
 
+export interface Qualifications {
+  prefix?: string;
+  alternative_name?: string;
+  flags?: FlagStatement[];
+  partial_implementation?: true;
+}
+
 // TODO: This stuff is slow, clunky, and weirdly indirect. It was helpful to get
 // started (especially before I knew all of the variations that a given
 // statement could express), but we might be better served by extracting
@@ -148,13 +155,9 @@ export class RealSupportStatement extends SupportStatement {
   // TODO: `supportedBy()` ought to be (partially) implemented on non-real value
   // support statements. For example, `"version_added": true` should allow for
   // returning `[this.browser.current()]` at least.
-  supportedBy() {
+  supportedBy(): { release: Release; qualifications?: Qualifications }[] {
     if (this.browser === undefined) {
       throw Error("This support statement's browser is unknown.");
-    }
-
-    if (this.hasCaveats()) {
-      return [];
     }
 
     if (this.version_added === false) {
@@ -168,13 +171,34 @@ export class RealSupportStatement extends SupportStatement {
       start = this.browser.version(this.version_added);
     }
 
+    let releases;
     if (this.version_removed === false) {
-      return this.browser.releases.filter((rel) => rel.compare(start) >= 0); // Release is on or after start
+      releases = this.browser.releases.filter((rel) => rel.compare(start) >= 0); // Release is on or after start
+    } else {
+      const end: Release = this.browser.version(this.version_removed);
+      releases = this.browser.releases.filter(
+        (rel) => rel.compare(start) >= 0 && rel.compare(end) < 0,
+      ); // Release is on after start and before the end
     }
 
-    const end: Release = this.browser.version(this.version_removed);
-    return this.browser.releases.filter(
-      (rel) => rel.compare(start) >= 0 && rel.compare(end) < 0,
-    ); // Release is on after start and before the end
+    let qualifications: Qualifications = {};
+    if (this.data.prefix) {
+      qualifications.prefix = this.data.prefix;
+    }
+    if (this.data.alternative_name) {
+      qualifications.alternative_name = this.data.alternative_name;
+    }
+    if (this.flags.length) {
+      qualifications.flags = this.flags;
+    }
+    if (this.partial_implementation) {
+      qualifications.partial_implementation = this.partial_implementation;
+    }
+    if (Object.keys(qualifications).length) {
+      return releases.map((release) => ({ release, qualifications }));
+    }
+    return releases.map((release) => ({
+      release,
+    }));
   }
 }
