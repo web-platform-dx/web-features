@@ -8,7 +8,7 @@ import {
 } from "@mdn/browser-compat-data";
 
 export function isIndexable(o: unknown): o is Record<string, unknown> {
-  if (typeof o === "object" && o !== null && Object.keys(o).length > 0) {
+  if (typeof o === "object" && o !== null) {
     return true;
   }
   return false;
