@@ -185,7 +185,10 @@ function findKeystoneDate(
     if (!release?.date) {
       return null;
     }
-    if (!latestDate || Temporal.PlainDate.compare(latestDate, release.date) < 0) {
+    if (
+      !latestDate ||
+      Temporal.PlainDate.compare(latestDate, release.date) < 0
+    ) {
       latestDate = release.date;
     }
   }
