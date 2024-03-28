@@ -174,8 +174,9 @@ function keystoneDateToStatus(date: Temporal.PlainDate | null): {
 }
 
 /**
- * Given one or more releases (or `undefined` releases), return the most-recent
- * release date or `null` if no such date exists.
+ * Given one or more releases, return the most-recent release date. If a release
+ * is `undefined` or the release date is `null`, then return `null`, since the
+ * feature is not Baseline and there is no keystone date.
  */
 function findKeystoneDate(
   releases: (Release | undefined)[],
