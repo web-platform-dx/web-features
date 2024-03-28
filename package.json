@@ -16,11 +16,12 @@
     "build": "tsx scripts/build.ts",
     "schema-defs": "ts-json-schema-generator --tsconfig ./tsconfig.json --type FeatureData --path ./types.ts --id defs",
     "schema-defs:write": "npm run schema-defs -- --out ./schemas/defs.schema.json",
-    "test": "npm run test:caniuse -- --quiet && npm run test:schema && npm run test:specs && npm run test:format",
+    "test": "npm run test:caniuse -- --quiet && npm run test:schema && npm run test:specs && npm run test:compute-baseline && npm run test:format",
     "test:caniuse": "tsx scripts/caniuse.ts",
     "test:schema": "tsx scripts/schema.ts",
     "test:specs": "tsx scripts/specs.ts",
     "test:format": "prettier --check .",
+    "test:compute-baseline": "cd packages/compute-baseline/ && npm ci && npm test",
     "format": "npx prettier --write .",
     "feature-init": "tsx scripts/feature-init.ts"
   },
