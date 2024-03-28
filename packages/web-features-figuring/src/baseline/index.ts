@@ -2,13 +2,13 @@ import assert from "node:assert";
 
 import { Temporal } from "@js-temporal/polyfill";
 
+import { Browser } from "../browser-compat-data/browser";
+import { Compat, defaultCompat } from "../browser-compat-data/compat";
 import { feature } from "../browser-compat-data/feature";
 import { Release } from "../browser-compat-data/release";
 import { browsers } from "./core-browser-set";
-import { support } from "./support";
-import { Browser } from "../browser-compat-data/browser";
-import { Compat, defaultCompat } from "../browser-compat-data/compat";
 import { isFuture, toDateString, toHighDate } from "./date-utils";
+import { support } from "./support";
 
 interface FeatureSelector {
   compatKeys: [string, ...string[]];
