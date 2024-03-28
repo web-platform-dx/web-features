@@ -37,11 +37,13 @@ export function computeBaseline(
 
   const baseline = minStatus(statuses);
 
+  const keystoneDate = findKeystoneDate(
+    statuses.flatMap((s) => [...s.support.values()]),
+  );
   let baseline_low_date: string | null = null;
   if (baseline !== false) {
-    baseline_low_date = latestDate(
-      statuses.map((status) => status.baseline_low_date),
-    );
+    assert(keystoneDate !== null);
+    baseline_low_date = toDateString(keystoneDate);
   }
 
   let baseline_high_date;
@@ -179,23 +181,6 @@ function findKeystoneDate(
     }
   }
   return latestDate;
-}
-
-function latestDate(dates: (string | null)[]): string | null {
-  if (dates.some((date) => date === null)) {
-    return null;
-  }
-
-  const sorted = dates
-    .map((date) => {
-      assert(date !== null);
-      return Temporal.PlainDate.from(date);
-    })
-    .sort(Temporal.PlainDate.compare);
-
-  assert(sorted.length >= 1);
-
-  return sorted.at(-1)?.toString() ?? null;
 }
 
 function jsonify(status: SupportStatus): string {
