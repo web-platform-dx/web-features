@@ -44,6 +44,10 @@
           },
           "type": "array"
         },
+        "description": {
+          "description": "Short description",
+          "type": "string"
+        },
         "name": {
           "description": "Short name",
           "type": "string"
@@ -148,6 +152,7 @@
       },
       "required": [
         "name",
+        "description",
         "spec"
       ],
       "type": "object"
