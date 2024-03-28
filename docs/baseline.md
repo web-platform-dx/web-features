@@ -179,6 +179,6 @@ Here are some areas for future consideration and not currently in-scope for Base
 * Progressive enhancement safe (i.e., limited penalties for support failures)
 * Developer feedback requested
 * Buggy (e.g., supported but in ways that are surprising and semi-interoperable)
-* Not exposed to platform accessibility APIs (AAPIs) as specified
+* Support in assistive technology that is not built into browsers.
 * Obsolete/deprecated/legacy/etc. (i.e., flagged as such in the specification or dropped from newer versions of the specification)
 * Having high-quality polyfills available
