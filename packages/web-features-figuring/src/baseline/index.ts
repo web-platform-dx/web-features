@@ -4,15 +4,11 @@ import { Temporal } from "@js-temporal/polyfill";
 
 import { feature } from "../browser-compat-data/feature";
 import { Release } from "../browser-compat-data/release";
-import { browsers, highReleases, lowReleases } from "./core-browser-set";
+import { browsers } from "./core-browser-set";
 import { support } from "./support";
 import { Browser } from "../browser-compat-data/browser";
-import {
-  BASELINE_LOW_TO_HIGH_DURATION,
-  VERY_FAR_FUTURE_DATE,
-} from "../constants";
 import { Compat, defaultCompat } from "../browser-compat-data/compat";
-import { toDateString, toHighDate } from "./date-utils";
+import { isFuture, toDateString, toHighDate } from "./date-utils";
 
 interface FeatureSelector {
   compatKeys: [string, ...string[]];
@@ -70,60 +66,29 @@ function calculate(compatKey: string, compat: Compat): SupportStatus {
   const f = feature(compatKey);
   const s = support(f, browsers(compat), compat);
 
-  // The next three statements compute the low, high, or neither status of a
-  // given key. There are many ways to do this, but this is the one I picked.
-  //
-  // To check the Baseline low status, follow these steps:
-  // 1. Get the set of releases that support a given feature (via
-  //    `supportedBy`).
-  // 2. Get the set of current releases for all the core browser set browsers
-  //    (via `lowReleases`).
-  // 3. If the first set is a superset of the second set, then it's Baseline
-  //    low.
+  let baseline: SupportStatus["baseline"];
+  let baseline_low_date;
+  let baseline_high_date;
 
-  // To check the Baseline high status, follow these steps:
-  // 1. Get the set of releases that support a given feature (via
-  //    `supportedBy`).
-  // 2. Get the set of releases for all the core browser set browsers from the
-  //    present to 30 months ago (via `highReleases`).
-  // 3. If the first set is a superset of the second set, then it's Baseline
-  //    high.
-  //
-  // This will all be much more obvious when we can use
-  // `Set.prototype.isSupersetOf`.
-  const allReleases = f.supportedBy({ only: browsers(compat), compat });
-  const isBaselineLow = lowReleases(compat).every((r) =>
-    allReleases.includes(r),
-  );
-  const isBaselineHigh = highReleases(compat).every((r) =>
-    allReleases.includes(r),
-  );
+  const keystoneDate = findKeystoneDate([...s.values()]);
+  if (keystoneDate === null || isFuture(keystoneDate)) {
+    baseline = false;
+    baseline_low_date = null;
+    baseline_high_date = null;
+  } else {
+    baseline = "low";
+    baseline_low_date = toDateString(keystoneDate);
+    baseline_high_date = null;
+  }
 
-  const baseline =
-    (isBaselineHigh ? "high" : false) || (isBaselineLow ? "low" : false);
-
-  let baseline_low_date = null;
-  let baseline_high_date = null;
-  if (isBaselineLow) {
-    const initialReleases = [...s.values()];
-    const keystoneRelease = initialReleases
-      .sort((a, b) => {
-        assert(a !== undefined);
-        assert(b !== undefined);
-        return Temporal.PlainDate.compare(
-          a.date ?? VERY_FAR_FUTURE_DATE,
-          b.date ?? VERY_FAR_FUTURE_DATE,
-        );
-      })
-      .pop();
-
-    assert(keystoneRelease instanceof Release);
-    assert(keystoneRelease.date);
-    baseline_low_date = toDateString(keystoneRelease.date);
-
-    if (isBaselineHigh) {
-      assert(keystoneRelease.date !== null);
-      baseline_high_date = toDateString(toHighDate(keystoneRelease.date));
+  if (baseline === "low") {
+    assert(keystoneDate !== null);
+    const possibleHighDate = toHighDate(keystoneDate);
+    if (isFuture(possibleHighDate)) {
+      baseline_high_date = null;
+    } else {
+      baseline = "high";
+      baseline_high_date = toDateString(possibleHighDate);
     }
   }
 
@@ -196,6 +161,24 @@ function minSupport(
     }
   }
   return support;
+}
+
+function findKeystoneDate(
+  releases: (Release | undefined)[],
+): Temporal.PlainDate | null {
+  let latestDate = null;
+  for (const release of releases) {
+    if (release === undefined || release.date === null) {
+      return null;
+    }
+    if (latestDate === null) {
+      latestDate = release.date;
+    }
+    if (Temporal.PlainDate.compare(latestDate, release.date) === -1) {
+      latestDate = release.date;
+    }
+  }
+  return latestDate;
 }
 
 function latestDate(dates: (string | null)[]): string | null {
