@@ -34,30 +34,19 @@ export function computeBaseline(
     : compatKeys;
 
   const statuses = keys.map((key) => calculate(key, compat));
-
-  const baseline = minStatus(statuses);
+  const support = minSupport(statuses.map((status) => status.support));
 
   const keystoneDate = findKeystoneDate(
     statuses.flatMap((s) => [...s.support.values()]),
   );
-  let baseline_low_date: string | null = null;
-  if (baseline !== false) {
-    assert(keystoneDate !== null);
-    baseline_low_date = toDateString(keystoneDate);
-  }
-
-  let baseline_high_date;
-  if (baseline_low_date) {
-    baseline_high_date = toDateString(toHighDate(baseline_low_date));
-  } else {
-    baseline_high_date = null;
-  }
+  const { baseline, baseline_low_date, baseline_high_date } =
+    keystoneDateToStatus(keystoneDate);
 
   return {
     baseline,
     baseline_low_date,
     baseline_high_date,
-    support: minSupport(statuses.map((status) => status.support)),
+    support,
     toJSON: function () {
       return jsonify(this);
     },
@@ -67,32 +56,10 @@ export function computeBaseline(
 function calculate(compatKey: string, compat: Compat): SupportStatus {
   const f = feature(compatKey);
   const s = support(f, browsers(compat), compat);
-
-  let baseline: SupportStatus["baseline"];
-  let baseline_low_date;
-  let baseline_high_date;
-
   const keystoneDate = findKeystoneDate([...s.values()]);
-  if (keystoneDate === null || isFuture(keystoneDate)) {
-    baseline = false;
-    baseline_low_date = null;
-    baseline_high_date = null;
-  } else {
-    baseline = "low";
-    baseline_low_date = toDateString(keystoneDate);
-    baseline_high_date = null;
-  }
 
-  if (baseline === "low") {
-    assert(keystoneDate !== null);
-    const possibleHighDate = toHighDate(keystoneDate);
-    if (isFuture(possibleHighDate)) {
-      baseline_high_date = null;
-    } else {
-      baseline = "high";
-      baseline_high_date = toDateString(possibleHighDate);
-    }
-  }
+  const { baseline, baseline_low_date, baseline_high_date } =
+    keystoneDateToStatus(keystoneDate);
 
   return {
     compatKey,
@@ -122,22 +89,6 @@ function withAncestors(compatKey: string, compat: Compat): string[] {
   return ancestors;
 }
 
-function minStatus(statuses: SupportStatus[]): "high" | "low" | false {
-  let bestOf: "high" | "low" = "high";
-  for (const { baseline } of statuses) {
-    if (baseline === false) {
-      return false;
-    }
-    if (baseline === "low") {
-      bestOf = "low";
-    }
-    if (baseline === "high" && bestOf === "high") {
-      bestOf = "high";
-    }
-  }
-  return bestOf;
-}
-
 function minSupport(
   supports: Map<Browser, Release | undefined>[],
 ): Map<Browser, Release | undefined> {
@@ -163,6 +114,38 @@ function minSupport(
     }
   }
   return support;
+}
+
+function keystoneDateToStatus(date: Temporal.PlainDate | null): {
+  baseline: "high" | "low" | false;
+  baseline_low_date: string | null;
+  baseline_high_date: string | null;
+} {
+  let baseline: "high" | "low" | false;
+  let baseline_low_date;
+  let baseline_high_date;
+  if (date === null || isFuture(date)) {
+    baseline = false;
+    baseline_low_date = null;
+    baseline_high_date = null;
+  } else {
+    baseline = "low";
+    baseline_low_date = toDateString(date);
+    baseline_high_date = null;
+  }
+
+  if (baseline === "low") {
+    assert(date !== null);
+    const possibleHighDate = toHighDate(date);
+    if (isFuture(date)) {
+      baseline_high_date = null;
+    } else {
+      baseline = "high";
+      baseline_high_date = toDateString(possibleHighDate);
+    }
+  }
+
+  return { baseline, baseline_low_date, baseline_high_date };
 }
 
 function findKeystoneDate(
