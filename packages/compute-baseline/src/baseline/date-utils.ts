@@ -1,5 +1,5 @@
 import { Temporal } from "@js-temporal/polyfill";
-import { BASELINE_LOW_TO_HIGH_DURATION } from "../constants";
+import { BASELINE_LOW_TO_HIGH_DURATION } from ".";
 
 type LowDate = Temporal.PlainDate | string;
 
