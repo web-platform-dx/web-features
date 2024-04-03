@@ -25,5 +25,21 @@ describe("features", function () {
         assert.equal(releases, expectedReleases);
       });
     });
+
+    describe("tags", function () {
+      it("returns an array for features with tags", function () {
+        const f = feature("css.types.length.cap");
+        assert(Array.isArray(f.data.__compat?.tags));
+        assert(Array.isArray(f.tags));
+        assert(f.tags.length > 0);
+      });
+
+      it("returns an array for features without tags", function () {
+        const f = feature("webextensions.manifest.author");
+        assert.equal(f.data.__compat?.tags, undefined);
+        assert(Array.isArray(f.tags));
+        assert(f.tags.length === 0);
+      });
+    });
   });
 });
