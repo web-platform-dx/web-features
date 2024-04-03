@@ -146,7 +146,7 @@ function collateSupport(
  * Given several dates, find the most-recent date and determine the
  * corresponding Baseline status and high and low dates.
  */
-function keystoneDateToStatus(date: Temporal.PlainDate | null): {
+export function keystoneDateToStatus(date: Temporal.PlainDate | null): {
   baseline: BaselineStatus;
   baseline_low_date: BaselineDate;
   baseline_high_date: BaselineDate;
@@ -168,7 +168,7 @@ function keystoneDateToStatus(date: Temporal.PlainDate | null): {
   if (baseline === "low") {
     assert(date !== null);
     const possibleHighDate = toHighDate(date);
-    if (isFuture(date)) {
+    if (isFuture(possibleHighDate)) {
       baseline_high_date = null;
     } else {
       baseline = "high";
