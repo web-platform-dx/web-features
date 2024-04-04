@@ -77,7 +77,7 @@ describe("computeBaseline", function () {
 });
 
 describe("keystoneDateToStatus()", function () {
-  it('returns `"low"` for recent dates', function () {
+  it('returns "low" for recent dates', function () {
     const status = keystoneDateToStatus(
       Temporal.Now.plainDateISO().subtract({ days: 7 }),
     );
