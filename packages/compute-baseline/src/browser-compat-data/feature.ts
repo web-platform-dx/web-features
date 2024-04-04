@@ -38,6 +38,13 @@ export class Feature {
     return `[Feature ${this.id}]`;
   }
 
+  /**
+   * Return the feature's tags as an array (wthether there are any tags or not).
+   */
+  get tags(): string[] {
+    return this.data.__compat?.tags ?? [];
+  }
+
   get mdn_url(): string | undefined {
     return this.data.__compat?.mdn_url;
   }

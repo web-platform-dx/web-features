@@ -1,5 +1,5 @@
-import bcd from "@mdn/browser-compat-data";
-import { Browser, Feature, browser, feature, query } from ".";
+import bcd, { CompatData } from "@mdn/browser-compat-data";
+import { Browser, Feature, browser, feature, query, walk } from ".";
 
 export class Compat {
   data: unknown;
@@ -22,6 +22,25 @@ export class Compat {
 
   feature(id: string): Feature {
     return feature(id, this);
+  }
+
+  /**
+   * Generate `Feature` objects by walking tree of features.
+   *
+   * Similar to the `traverse` command in mdn/browser-compat-data.
+   *
+   * @param {string[]} [entryPoints] An array of dotted paths to compat features (e.g., `css.properties.background-color`)
+   */
+  *walk(entryPoints?: string[]): Generator<Feature> {
+    if (!entryPoints) {
+      entryPoints = Object.keys(this.data as CompatData).filter(
+        (key) => !["__meta", "browsers"].includes(key),
+      );
+    }
+
+    for (const { path } of walk(entryPoints, this.data as CompatData)) {
+      yield this.feature(path);
+    }
   }
 }
 

@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 
 import { Compat } from "./compat";
+import { Feature } from ".";
 
 describe("Compat()", function () {
   describe("constructor", function () {
@@ -43,6 +44,27 @@ describe("Compat()", function () {
       const f = c.feature("css.properties.display");
       assert(f.mdn_url);
       assert(f.id);
+    });
+  });
+
+  describe("walk()", function () {
+    it("generates many Feature objects by default", function () {
+      const c = new Compat();
+      const walker = c.walk();
+
+      // Running for the whole tree is a little slow, so let's just check the first few.
+      let index = 100;
+      while (index--) {
+        const { value } = walker.next();
+        assert(value instanceof Feature);
+      }
+    });
+
+    it("generates only items in specified entry points", function () {
+      const c = new Compat();
+      for (const f of c.walk(["http"])) {
+        assert(f.id.startsWith("http."));
+      }
     });
   });
 });
