@@ -86,14 +86,14 @@ describe("keystoneDateToStatus()", function () {
     assert.equal(status.baseline_high_date, null);
   });
 
-  it('returns `"high"` for long past dates', function () {
+  it('returns "high" for long past dates', function () {
     const status = keystoneDateToStatus(Temporal.PlainDate.from("2020-01-01"));
     assert.equal(status.baseline, "high");
     assert.equal(typeof status.baseline_low_date, "string");
     assert.equal(typeof status.baseline_high_date, "string");
   });
 
-  it("returns `false` for future dates", function () {
+  it("returns false for future dates", function () {
     const status = keystoneDateToStatus(
       Temporal.Now.plainDateISO().add({ days: 90 }),
     );
@@ -102,7 +102,7 @@ describe("keystoneDateToStatus()", function () {
     assert.equal(status.baseline_high_date, null);
   });
 
-  it("returns `false` for null dates", function () {
+  it("returns false for null dates", function () {
     const status = keystoneDateToStatus(null);
     assert.equal(status.baseline, false);
     assert.equal(status.baseline_low_date, null);
