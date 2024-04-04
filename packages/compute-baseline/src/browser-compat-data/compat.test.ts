@@ -52,7 +52,7 @@ describe("Compat()", function () {
       const c = new Compat();
       const walker = c.walk();
 
-      // Running for the whole tree is a little, so let's just check the first few.
+      // Running for the whole tree is a little slow, so let's just check the first few.
       let index = 100;
       while (index--) {
         const { value } = walker.next();
@@ -62,8 +62,8 @@ describe("Compat()", function () {
 
     it("generates only items in specified entry points", function () {
       const c = new Compat();
-      for (const f of c.walk(["css"])) {
-        assert(f.id.startsWith("css."));
+      for (const f of c.walk(["http"])) {
+        assert(f.id.startsWith("http."));
       }
     });
   });

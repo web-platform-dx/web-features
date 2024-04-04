@@ -42,9 +42,7 @@ export class Feature {
    * Return the feature's tags as an array (wthether there are any tags or not).
    */
   get tags(): string[] {
-    return Array.isArray(this.data.__compat?.tags)
-      ? this.data.__compat?.tags
-      : [];
+    return this.data.__compat?.tags ?? [];
   }
 
   get mdn_url(): string | undefined {

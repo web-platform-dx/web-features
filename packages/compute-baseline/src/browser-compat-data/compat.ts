@@ -32,10 +32,11 @@ export class Compat {
    * @param {string[]} [entryPoints] An array of dotted paths to compat features (e.g., `css.properties.background-color`)
    */
   *walk(entryPoints?: string[]): Generator<Feature> {
-    const defaultEntryPoints = Object.keys(this.data as CompatData).filter(
-      (key) => !["__meta", "browsers"].includes(key),
-    );
-    entryPoints = entryPoints ?? defaultEntryPoints;
+    if (!entryPoints) {
+      entryPoints = Object.keys(this.data as CompatData).filter(
+        (key) => !["__meta", "browsers"].includes(key),
+      );
+    }
 
     for (const { path } of walk(entryPoints, this.data as CompatData)) {
       yield this.feature(path);
