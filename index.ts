@@ -29,15 +29,16 @@ function scrub(data: any) {
 function* yamlEntries(root: string): Generator<[string, any]> {
     const filePaths = new fdir()
         .withBasePath()
-        .filter((fp) => fp.endsWith('.yml'))
+        .filter((fp) => fp.endsWith('.yml') && !fp.endsWith('.dist.yml'))
         .crawl(root)
         .sync() as string[];
 
     for (const fp of filePaths) {
         // The feature identifier/key is the filename without extension.
-        const key = path.parse(fp).name;
+        const { dir, name: key } = path.parse(fp);
+        const dist = path.join(dir, `${key}.dist.yml`);
 
-        const src = fs.readFileSync(fp, { encoding: 'utf-8'});
+        const src = fs.existsSync(dist) ? fs.readFileSync(dist, { encoding: 'utf-8'}) : fs.readFileSync(fp, { encoding: 'utf-8'});
         const data = YAML.parse(src);
 
         yield [key, data];
@@ -89,10 +90,11 @@ function* identifiers(value) {
 const features: { [key: string]: FeatureData } = {};
 for (const [key, data] of yamlEntries('feature-group-definitions')) {
     // Compute Baseline high date from low date.
-    if (data.status?.baseline_high_date) {
+    const isDist = fs.existsSync(`feature-group-definitions/${key}.dist.yml`);
+    if (!isDist && data.status?.baseline_high_date) {
         throw new Error(`baseline_high_date is computed and should not be used in source YAML. Remove it from ${key}.yml.`);
     }
-    if (data.status?.baseline === 'high') {
+    if (!isDist && data.status?.baseline === 'high') {
         const lowDate = Temporal.PlainDate.from(data.status.baseline_low_date);
         const highDate = lowDate.add(BASELINE_LOW_TO_HIGH_DURATION);
         data.status.baseline_high_date = String(highDate);
