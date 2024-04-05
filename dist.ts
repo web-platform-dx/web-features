@@ -62,7 +62,7 @@ function toDist(fp: string): YAML.Document {
     features = keys.map((key) => compat.feature(key));
   } else {
     // If there are no compat keys, get feature data from BCD tags
-    features = lookupTag(id);
+    features = tagsToFeatures.get(`web-features:${id}`) ?? [];
     if (features.length > 0) {
       yaml.set(
         "compat_features",
@@ -134,22 +134,15 @@ function toDist(fp: string): YAML.Document {
 
 const compat = new Compat();
 
-/**
- * Get all of the features with a given @mdn/browser-compat-data tag.
- *
- * @param {string} tag A tag (excluding the `web-features:` prefix).
- */
-function lookupTag(tag: string): Feature[] {
-  const namespaceTag = `web-features:${tag}`;
-
-  const features = [];
+const tagsToFeatures: Map<string, Feature[]> = (() => {
+  const map = new Map();
   for (const feature of compat.walk()) {
-    if (feature.tags.includes(namespaceTag)) {
-      features.push(feature);
+    for (const tag of feature.tags) {
+      map.set(tag, [...(map.get(tag) ?? []), feature]);
     }
   }
-  return features;
-}
+  return map;
+})();
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   for (const y of process.argv.slice(2)) {
