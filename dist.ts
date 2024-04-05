@@ -143,10 +143,16 @@ function insertHeaderComments(yaml: Document, id: string) {
 const compat = new Compat();
 
 const tagsToFeatures: Map<string, Feature[]> = (() => {
+  // TODO: Use Map.groupBy() instead, when it's available
   const map = new Map();
   for (const feature of compat.walk()) {
     for (const tag of feature.tags) {
-      map.set(tag, [...(map.get(tag) ?? []), feature]);
+      let features = map.get(tag);
+      if (!features) {
+        features = [];
+        map.set(tag, features);
+      }
+      features.push(feature);
     }
   }
   return map;
