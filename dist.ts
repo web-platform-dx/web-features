@@ -20,18 +20,8 @@ function updateDistFile(fp: string): void {
   const { dir, name: id } = path.parse(fp);
   const distPath = path.join(dir, `${id}.dist.yml`);
 
-  const stringify = (y: YAML.Document) => y.toString({ lineWidth: 0 });
-
-  const currentDist = fs.existsSync(distPath)
-    ? YAML.parseDocument(fs.readFileSync(distPath, { encoding: "utf-8" }))
-    : undefined;
-  const newDist = toDist(fp);
-  const newDestText = stringify(newDist);
-
-  // Write a dist only if it's new or modified
-  if (!currentDist || stringify(currentDist) !== newDestText) {
-    fs.writeFileSync(distPath, newDestText);
-  }
+  const dist = toDist(fp);
+  fs.writeFileSync(distPath, dist.toString({ lineWidth: 0 }));
 }
 
 /**
