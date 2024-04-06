@@ -39,7 +39,7 @@ export class Feature {
   }
 
   /**
-   * Return the feature's tags as an array (wthether there are any tags or not).
+   * Return the feature's tags as an array (whether there are any tags or not).
    */
   get tags(): string[] {
     return this.data.__compat?.tags ?? [];
@@ -73,7 +73,7 @@ export class Feature {
 
       if (!(s instanceof RealSupportStatement)) {
         throw Error(
-          `${feature} contains non-real values. Cannot expand support.`,
+          `${this.id} contains non-real values. Cannot expand support.`,
         );
       }
 
