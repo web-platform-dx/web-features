@@ -3,10 +3,13 @@
 
 name: EditContext
 spec: https://w3c.github.io/edit-context/
+# Status is overridden because Chrome Android data in BCD is wrong:
+# https://github.com/mdn/browser-compat-data/pull/22779
 status:
   baseline: false
   support:
     chrome: "121"
+    chrome_android: "121"
     edge: "121"
 compat_features:
   - api.CharacterBoundsUpdateEvent
