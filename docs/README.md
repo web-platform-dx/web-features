@@ -87,6 +87,10 @@ The identifier should match the name, with these additional guidelines:
 * Avoid circular descriptions.
   For example, prefer "The `filter()` method returns the items…" over "The `filter()` method filters the items…."
 
+* It's OK to use the second person ("you", "your", and "yours") to refer to the audience when needed.
+  For example, "The interface allows you to…."
+  ([#738](https://github.com/web-platform-dx/web-features/pull/742))
+
 * Never mention support or standards status.
   This information *will* go out of date and sooner than you think.
 
