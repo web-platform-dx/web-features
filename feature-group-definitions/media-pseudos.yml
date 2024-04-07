@@ -1,0 +1,13 @@
+name: Media element pseudo-classes
+description: The `:playing`, `:paused`, `:seeking`, `:buffering`, `:stalled`, `:muted`, and `:volume-locked` CSS pseudo-classes matches `<audio>` and `<video>` elements based on their state.
+spec:
+  - https://drafts.csswg.org/selectors-4/#resource-pseudos
+  - https://html.spec.whatwg.org/multipage/semantics-other.html#pseudo-classes
+compat_features:
+  - css.selectors.buffering
+  - css.selectors.muted
+  - css.selectors.paused
+  - css.selectors.playing
+  - css.selectors.seeking
+  - css.selectors.stalled
+  - css.selectors.volume-locked
