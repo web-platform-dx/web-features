@@ -101,6 +101,7 @@ The identifier should match the name, with these additional guidelines:
 
 OK in usage such as "allows you to…."
 Avoid where there is no named actor, as in "the feature allows magic to happen."
+([#738](https://github.com/web-platform-dx/web-features/pull/738#discussion_r1537760761))
 
 You can often omit it with gerunds.
 For example, prefer "The widget sends…" over "The widget allows sending…."
@@ -108,48 +109,58 @@ For example, prefer "The widget sends…" over "The widget allows sending…."
 ##### also known as
 
 Use a sentence at the end of the description, such as "Also known as AKA or an alias."
+([#628](https://github.com/web-platform-dx/web-features/pull/628/files/a9898862cb631c83ea16f1233b3c5c4353bf7a52#r1516293423))
 
 ##### defines
 
 Avoid.
 See [sets](#sets).
+([#727](https://github.com/web-platform-dx/web-features/pull/727#discussion_r1537635491))
 
 ##### determines
 
 Avoid.
 See [sets](#sets).
+([#727](https://github.com/web-platform-dx/web-features/pull/727#discussion_r1537635491))
 
 ##### elements
 
 Avoid "element" in reference to things that are not HTML elements.
 For example, an array of objects has "items", not "elements."
+([#750](https://github.com/web-platform-dx/web-features/pull/750#discussion_r1543011420))
 
 ##### enables
 
 Avoid, except in the sense of to turn on or activate.
 See [allows](#allows).
+([#750](https://github.com/web-platform-dx/web-features/pull/750#discussion_r1547382081))
 
 ##### for example
 
 Don't use it as a coordinating conjunction; start a new sentence instead.
 For example, this is an example.
+([#738](https://github.com/web-platform-dx/web-features/pull/738#discussion_r1537762579), [#742](https://github.com/web-platform-dx/web-features/pull/742))
 
 ##### is used to
 
 Omit "is used" where there's no loss in meaning.
 For example, prefer "The feature reads…" over "The feature is used to read…"
+([#727](https://github.com/web-platform-dx/web-features/pull/727#discussion_r1537635981))
 
 ##### provides
 
 Avoid, especially with gerunds.
 For example, prefer the "The feature writes to…" over "The feature provides writing to…."
+([#727](https://github.com/web-platform-dx/web-features/pull/727#discussion_r1537635491))
 
 ##### sets
 
 Prefer this over multisyllabic alternatives, such as "defines", "determines", or "specifies".
 Use "The property sets…" but never "The property defines…."
+([#727](https://github.com/web-platform-dx/web-features/pull/727#discussion_r1537635491))
 
 ##### specifies
 
 Avoid.
 See [sets](#sets).
+([#727](https://github.com/web-platform-dx/web-features/pull/727#discussion_r1537635491))
