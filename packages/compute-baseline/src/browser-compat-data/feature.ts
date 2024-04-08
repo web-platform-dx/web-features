@@ -73,7 +73,7 @@ export class Feature {
 
       if (!(s instanceof RealSupportStatement)) {
         throw Error(
-          `${this.id} contains non-real values for `${browser.name}`. Cannot expand support.`,
+          `${this.id} contains non-real values for ${browser.name}. Cannot expand support.`,
         );
       }
 
