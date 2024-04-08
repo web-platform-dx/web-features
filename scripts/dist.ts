@@ -10,18 +10,44 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { isDeepStrictEqual } from "node:util";
 import YAML, { Document } from "yaml";
+import yargs from "yargs";
+
+const argv = yargs(process.argv.slice(2))
+  .scriptName("dist")
+  .usage("$0 [filenames..]", "Generate .dist.yml from .yml", (yargs) =>
+    yargs.positional("filenames", {
+      describe: "YAML files to check/update.",
+    }),
+  )
+  .demandOption("filenames")
+  .option("check", {
+    boolean: true,
+    default: false,
+    describe: "Check that dist files are up-to-date instead of updating.",
+  }).argv;
 
 /**
  * Update (or create) a dist YAML file from a feature definition YAML file.
  *
- * @param {string} fp The path to the human-authored YAML file.
+ * @param {string} sourcePath The path to the human-authored YAML file.
+ * @param {string} distPath The path to the generated dist YAML file.
  */
-function updateDistFile(fp: string): void {
-  const { dir, name: id } = path.parse(fp);
-  const distPath = path.join(dir, `${id}.dist.yml`);
+function updateDistFile(sourcePath: string, distPath: string): void {
+  const distString = toDist(sourcePath).toString({ lineWidth: 0 });
+  fs.writeFileSync(distPath, distString);
+}
 
-  const dist = toDist(fp);
-  fs.writeFileSync(distPath, dist.toString({ lineWidth: 0 }));
+/**
+ * Check a dist YAML file from a feature definition YAML file.
+ *
+ * @param {string} sourcePath The path to the human-authored YAML file.
+ * @param {string} distPath The path to the generated dist YAML file.
+ * @returns true if the dist file is up-to-date, otherwise false.
+ */
+function checkDistFile(sourcePath: string, distPath: string): boolean {
+  const expected = toDist(sourcePath).toString({ lineWidth: 0 });
+  const actual = fs.readFileSync(distPath, { encoding: "utf-8" });
+  return actual === expected;
 }
 
 /**
@@ -31,9 +57,11 @@ function updateDistFile(fp: string): void {
  * possible, it fills in `compat_features` from @mdn/browser-compat-data and, if
  * successful, generates a `status` block.
  */
-function toDist(fp: string): YAML.Document {
-  const yaml = YAML.parseDocument(fs.readFileSync(fp, { encoding: "utf-8" }));
-  const { name: id } = path.parse(fp);
+function toDist(sourcePath: string): YAML.Document {
+  const yaml = YAML.parseDocument(
+    fs.readFileSync(sourcePath, { encoding: "utf-8" }),
+  );
+  const { name: id } = path.parse(sourcePath);
 
   const taggedCompatFeatures = (
     tagsToFeatures.get(`web-features:${id}`) ?? []
@@ -195,8 +223,48 @@ function warnOnNeedlessOverrides(id, overridden, generated) {
   }
 }
 
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  for (const y of process.argv.slice(2)) {
-    updateDistFile(y);
+function main() {
+  // Map from .yml to .dist.yml to filter out duplicates.
+  const sourceToDist = new Map(
+    argv.filenames.map((filePath: string) => {
+      let { dir, name, ext } = path.parse(filePath);
+      if (ext !== ".yml") {
+        throw new Error(
+          `Cannot generate dist for ${filePath}, only YAML input is supported`,
+        );
+      }
+      // Remove .dist to start from the source even if dist is given.
+      if (name.endsWith(".dist")) {
+        name = name.substring(0, name.length - 5);
+      }
+      return [
+        path.format({ dir, name, ext: ".yml" }),
+        path.format({ dir, name, ext: ".dist.yml" }),
+      ];
+    }),
+  );
+
+  if (argv.check) {
+    let updateNeeded = false;
+    for (const [source, dist] of sourceToDist.entries()) {
+      if (!checkDistFile(source, dist)) {
+        console.error(
+          `${dist} needs to be updated. Use npm run dist ${source} to update.`,
+        );
+        updateNeeded = true;
+      }
+    }
+    if (updateNeeded) {
+      process.exit(1);
+    }
+  } else {
+    // Update dist in place.
+    for (const [source, dist] of sourceToDist.entries()) {
+      updateDistFile(source, dist);
+    }
   }
+}
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  main();
 }
