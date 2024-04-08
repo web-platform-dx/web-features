@@ -4,7 +4,8 @@ spec: https://w3c.github.io/webrtc-pc/
 caniuse: rtcpeerconnection
 # The WebRTC API is huge and has been evolving for over a decade. These are
 # central interfaces that result in the right computed status (matching caniuse)
-# but this is <1% complete.
+# but this is <1% complete:
+# https://github.com/web-platform-dx/web-features/issues/819
 compat_features:
   - api.RTCPeerConnection
   - api.RTCDataChannel
