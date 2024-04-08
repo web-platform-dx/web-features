@@ -1,5 +1,5 @@
 name: font-size-adjust
-description: The `font-size-adjust` CSS property preserves the apparent text size by adjusting the font size so that the specified metric is scaled to the same size regardless of the font used. This is useful when fallback fonts may be used.
+description: The `font-size-adjust` CSS property preserves apparent text size, regardless of the font used, by scaling fonts to the same size with respect to a specific metric, such as x-height. This can help make fallback fonts look the same size.
 spec: https://drafts.csswg.org/css-fonts-5/#font-size-adjust-prop
 caniuse: font-size-adjust
 compat_features:
