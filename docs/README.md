@@ -131,6 +131,13 @@ Avoid.
 See [sets](#sets).
 ([#727](https://github.com/web-platform-dx/web-features/pull/727#discussion_r1537635491))
 
+##### device
+
+Use "device" to refer to the underlying operating system or hardware environment, or combination thereof.
+This is to avoid cumbersome phrases like "the operating system or hardware" or specifically enumerating Linux, macOS, and Windows.
+For example, write "the device UI" not the "operating system UI."
+([#810](https://github.com/web-platform-dx/web-features/pull/810))
+
 ##### elements
 
 Avoid "element" in reference to things that are not HTML elements.
@@ -154,6 +161,12 @@ For example, this is an example.
 Omit "is used" where there's no loss in meaning.
 For example, prefer "The feature reads…" over "The feature is used to read…"
 ([#727](https://github.com/web-platform-dx/web-features/pull/727#discussion_r1537635981))
+
+##### platform
+
+"platform" is often vague.
+Avoid using it by itself.
+Instead, prefer more complete phrases that make it clear which platform you're referring to, such as "the web platform."
 
 ##### provides
 
