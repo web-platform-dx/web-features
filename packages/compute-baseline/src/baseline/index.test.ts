@@ -1,10 +1,10 @@
 import assert from "node:assert/strict";
 
+import { Temporal } from "@js-temporal/polyfill";
 import * as chai from "chai";
 import chaiJestSnapshot from "chai-jest-snapshot";
 
 import { computeBaseline, keystoneDateToStatus } from ".";
-import { Temporal } from "@js-temporal/polyfill";
 
 chai.use(chaiJestSnapshot);
 
@@ -73,6 +73,20 @@ describe("computeBaseline", function () {
     assert.equal(result.baseline, "high");
     assert.equal(result.baseline_low_date, "2015-07-29"); // The first release of Edge, the youngest release in consideration
     assert.equal(result.baseline_high_date, "2018-01-29"); // 30 months later
+  });
+
+  it("finds discrepancies with ancestors (checkAncestors)", function () {
+    const compatKeys: [string, ...string[]] = ["api.Notification.body"];
+    const result = computeBaseline({ compatKeys, checkAncestors: false });
+    const resultWithAncestors = computeBaseline({
+      compatKeys,
+      checkAncestors: true,
+    });
+    assert.notEqual(result.baseline, resultWithAncestors.baseline);
+    assert.notEqual(
+      result.baseline_low_date?.toString(),
+      resultWithAncestors.baseline_low_date?.toString(),
+    );
   });
 });
 
