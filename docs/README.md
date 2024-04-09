@@ -112,7 +112,11 @@ For example, prefer "The widget sends…" over "The widget allows sending…."
 
 ##### also known as
 
-Use a sentence at the end of the description, such as "Also known as AKA or an alias."
+Use this phrase to call attention to other names this feature has gone by.
+Use it at the start of a sentence at the end of the description.
+For example:
+
+ > The `some-property` CSS property sets the … value. Also known as `<alias>`.
 ([#628](https://github.com/web-platform-dx/web-features/pull/628/files/a9898862cb631c83ea16f1233b3c5c4353bf7a52#r1516293423))
 
 ##### defines
