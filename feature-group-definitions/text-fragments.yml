@@ -1,0 +1,9 @@
+name: Text fragments
+description: Text fragments link to a snippet of text within a page. The browser may scroll, highlight, or otherwise bring that text to the reader's attention. The text is specified in a URL fragment on the form `#:~:text=snippet` and can be styled using the `::target-text` pseudo-element.
+spec: https://wicg.github.io/scroll-to-text-fragment/
+usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/2901
+caniuse: url-scroll-to-text-fragment
+compat_features:
+  - api.Document.fragmentDirective
+  - api.FragmentDirective
+  - css.selectors.target-text

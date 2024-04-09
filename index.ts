@@ -6,9 +6,7 @@ import YAML from 'yaml';
 import { FeatureData } from './types';
 import { Temporal } from '@js-temporal/polyfill';
 
-// Number of months after Baseline low that Baseline high happens. Keep in sync with definition:
-// https://github.com/web-platform-dx/web-features/blob/main/docs/baseline.md#wider-support-high-status
-const monthsFromBaselineLowToHigh = 30;
+import { BASELINE_LOW_TO_HIGH_DURATION } from 'compute-baseline';
 
 // The longest description allowed, to avoid them growing into documentation.
 const descriptionMaxLength = 300;
@@ -31,40 +29,74 @@ function scrub(data: any) {
 function* yamlEntries(root: string): Generator<[string, any]> {
     const filePaths = new fdir()
         .withBasePath()
-        .filter((fp) => fp.endsWith('.yml'))
+        .filter((fp) => fp.endsWith('.yml') && !fp.endsWith('.dist.yml'))
         .crawl(root)
         .sync() as string[];
 
     for (const fp of filePaths) {
         // The feature identifier/key is the filename without extension.
-        const key = path.parse(fp).name;
+        const { dir, name: key } = path.parse(fp);
+        const dist = path.join(dir, `${key}.dist.yml`);
 
-        const src = fs.readFileSync(fp, { encoding: 'utf-8'});
+        const src = fs.existsSync(dist) ? fs.readFileSync(dist, { encoding: 'utf-8'}) : fs.readFileSync(fp, { encoding: 'utf-8'});
         const data = YAML.parse(src);
 
         yield [key, data];
     }
 }
 
-// Load snapshots first so that snapshot identifiers can be validated while
-// loading features.
-const snapshots: { [key: string]: any } = {};
+// Load groups and snapshots first so that those identifiers can be validated
+// while loading features.
 
-for (const [key, data] of yamlEntries('snapshots')) {
-    // Note that the data is unused and unvalidated for now.
-    snapshots[key] = data;
+const groups: Map<string, any> = new Map(yamlEntries('groups'));
+
+// Validate group name and parent fields.
+for (const [key, data] of groups) {
+    if (typeof data.name !== 'string') {
+        throw new Error(`group ${key} does not have a name`);
+    }
+    // Walk the parent chain to detect cycles. This is not the most efficient
+    // way to detect cycles overall, but it is simple and will fail for some
+    // group if there is a cycle.
+    const chain = [key];
+    let iter = data;
+    while (iter.parent) {
+        chain.push(iter.parent);
+        if (chain.at(0) === chain.at(-1)) {
+            throw new Error(`cycle in group parent chain: ${chain.join(' < ')}`);
+        }
+        iter = groups.get(iter.parent);
+        if (!iter) {
+            throw new Error(`group ${chain.at(-2)} refers to parent ${chain.at(-1)} which does not exist.`);
+        }
+    }
+}
+
+const snapshots: Map<string, any> = new Map(yamlEntries('snapshots'));
+// TODO: validate the snapshot data.
+
+// Helper to iterate an optional string-or-array-of-strings value.
+function* identifiers(value) {
+    if (value === undefined) {
+        return;
+    }
+    if (Array.isArray(value)) {
+        yield* value;
+    } else {
+        yield value;
+    }
 }
 
 const features: { [key: string]: FeatureData } = {};
-
 for (const [key, data] of yamlEntries('feature-group-definitions')) {
     // Compute Baseline high date from low date.
-    if (data.status?.baseline_high_date) {
+    const isDist = fs.existsSync(`feature-group-definitions/${key}.dist.yml`);
+    if (!isDist && data.status?.baseline_high_date) {
         throw new Error(`baseline_high_date is computed and should not be used in source YAML. Remove it from ${key}.yml.`);
     }
-    if (data.status?.baseline === 'high') {
+    if (!isDist && data.status?.baseline === 'high') {
         const lowDate = Temporal.PlainDate.from(data.status.baseline_low_date);
-        const highDate = lowDate.add({ months: monthsFromBaselineLowToHigh });
+        const highDate = lowDate.add(BASELINE_LOW_TO_HIGH_DURATION);
         data.status.baseline_high_date = String(highDate);
     }
 
@@ -73,9 +105,16 @@ for (const [key, data] of yamlEntries('feature-group-definitions')) {
         throw new Error(`description in ${key}.yml is too long, ${data.description.length} characters. The maximum allowed length is ${descriptionMaxLength}.`)
     }
 
-    // Ensure that only known snapshot identifiers are used.
-    if (data.snapshot && !Object.hasOwn(snapshots, data.snapshot)) {
-        throw new Error(`snapshot ${data.snapshot} used in ${key}.yml is not a valid snapshot. Add it to snapshots/ if needed.`);
+    // Ensure that only known group and snapshot identifiers are used.
+    for (const group of identifiers(data.group)) {
+        if (!groups.has(group)) {
+            throw new Error(`group ${group} used in ${key}.yml is not a valid group. Add it to groups/ if needed.`);
+        }
+    }
+    for (const snapshot of identifiers(data.snapshot)) {
+        if (!snapshots.has(snapshot)) {
+            throw new Error(`snapshot ${snapshot} used in ${key}.yml is not a valid snapshot. Add it to snapshots/ if needed.`);
+        }
     }
 
     features[key] = scrub(data);
