@@ -1,0 +1,25 @@
+name: Media session
+description: The `navigator.mediaSession` API integrates with platform UI for media playback. It can be used to set metadata such as title and artwork, and to handle user actions like playing, pausing, or seeking.
+spec: https://w3c.github.io/mediasession/
+usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/1789
+compat_features:
+  # This is the subset of what was initially supported. Newer parts could be
+  # included with editorial override, or as new features.
+  - api.MediaMetadata
+  - api.MediaMetadata.album
+  - api.MediaMetadata.artist
+  - api.MediaMetadata.artwork
+  - api.MediaMetadata.MediaMetadata
+  - api.MediaMetadata.title
+  - api.MediaSession
+  - api.MediaSession.metadata
+  - api.MediaSession.playbackState
+  # TODO: include after https://github.com/mdn/browser-compat-data/pull/22793
+  # - api.MediaSession.setActionHandler
+  - api.MediaSession.setActionHandler.nexttrack_type
+  - api.MediaSession.setActionHandler.pause_type
+  - api.MediaSession.setActionHandler.play_type
+  - api.MediaSession.setActionHandler.previoustrack_type
+  - api.MediaSession.setActionHandler.seekbackward_type
+  - api.MediaSession.setActionHandler.seekforward_type
+  - api.Navigator.mediaSession

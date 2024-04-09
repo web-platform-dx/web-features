@@ -5,13 +5,16 @@ name: cap unit
 description: The CSS `cap` unit corresponds to the height of Latin capital letters.
 spec: https://drafts.csswg.org/css-values-4/#cap
 status:
-  baseline: false
+  baseline: low
+  baseline_low_date: 2023-12-11
   support:
-    chrome: "118"
-    chrome_android: "118"
-    edge: "118"
+    chrome: "117"
+    chrome_android: "117"
+    edge: "117"
+    firefox: "97"
+    firefox_android: "97"
     safari: "17.2"
     safari_ios: "17.2"
+# TODO: remove after https://github.com/mdn/browser-compat-data/pull/22789
 compat_features:
-  - api.CSS.cap_static
   - css.types.length.cap
