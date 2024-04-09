@@ -1,0 +1,16 @@
+name: font-palette and @font-palette-values
+spec:
+  - https://drafts.csswg.org/css-fonts-4/#font-palette-prop
+  - https://drafts.csswg.org/css-fonts-4/#font-palette-values
+usage_stats: https://chromestatus.com/metrics/css/timeline/popularity/709
+compat_features:
+  - api.CSSFontPaletteValuesRule
+  - api.CSSFontPaletteValuesRule.basePalette
+  - api.CSSFontPaletteValuesRule.fontFamily
+  - api.CSSFontPaletteValuesRule.name
+  - api.CSSFontPaletteValuesRule.overrideColors
+  - css.at-rules.font-palette-values
+  - css.at-rules.font-palette-values.base-palette
+  - css.at-rules.font-palette-values.font-family
+  - css.at-rules.font-palette-values.override-colors
+  - css.properties.font-palette

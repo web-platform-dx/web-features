@@ -1,0 +1,36 @@
+name: Promises (initial support)
+description: A promise represents an asynchronous operation which eventually succeeds or fails.
+alias: promises
+caniuse: promises
+snapshot: ecmascript-2015
+spec:
+  - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-promise-objects
+  - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-get-promise-@@species
+  - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-promise-constructor
+  - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-promise.all
+  - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-promise.prototype.catch
+  - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-promise.race
+  - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-promise.reject
+  - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-promise.resolve
+  - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-promise.prototype.then
+status:
+  baseline: high
+  baseline_low_date: 2015-07-29
+  support:
+    chrome: "32"
+    chrome_android: "32"
+    edge: "12"
+    firefox: "29"
+    firefox_android: "29"
+    safari: "8"
+    safari_ios: "8"
+compat_features:
+  - javascript.builtins.Promise
+  - javascript.builtins.Promise.@@species
+  - javascript.builtins.Promise.Promise
+  - javascript.builtins.Promise.all
+  - javascript.builtins.Promise.catch
+  - javascript.builtins.Promise.race
+  - javascript.builtins.Promise.reject
+  - javascript.builtins.Promise.resolve
+  - javascript.builtins.Promise.then

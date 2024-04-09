@@ -1,0 +1,9 @@
+name: calc() constants
+description: The `e`, `pi`, `infinity`, and `NaN` constants are accepted in CSS math functions such as `calc()`.
+spec: https://drafts.csswg.org/css-values-4/#calc-keywords
+compat_features:
+  - css.types.calc-constant
+  - css.types.calc-constant.NaN
+  - css.types.calc-constant.e
+  - css.types.calc-constant.infinity
+  - css.types.calc-constant.pi

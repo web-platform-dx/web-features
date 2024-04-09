@@ -1,3 +1,4 @@
+name: Fetch priority
 spec:
   - https://fetch.spec.whatwg.org/#request-priority
   - https://html.spec.whatwg.org/multipage/urls-and-fetching.html#fetch-priority-attributes
@@ -7,6 +8,8 @@ status:
     chrome: "102"
     chrome_android: "102"
     edge: "102"
+    safari: "17.2"
+    safari_ios: "17.2"
 compat_features:
   - api.fetch.init_priority_parameter
   - api.HTMLImageElement.fetchPriority

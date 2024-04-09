@@ -1,5 +1,17 @@
+name: ":has()"
 spec: https://drafts.csswg.org/selectors-4/#relational
 caniuse: css-has
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/4743
+status:
+  baseline: low
+  baseline_low_date: 2023-12-19
+  support:
+    chrome: "105"
+    chrome_android: "105"
+    edge: "105"
+    firefox: "121"
+    firefox_android: "121"
+    safari: "15.4"
+    safari_ios: "15.4"
 compat_features:
   - css.selectors.has

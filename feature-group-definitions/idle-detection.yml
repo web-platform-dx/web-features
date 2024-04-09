@@ -1,5 +1,12 @@
+name: Idle detection
 spec: https://wicg.github.io/idle-detection/
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/2834
+status:
+  baseline: false
+  support:
+    chrome: "94"
+    chrome_android: "94"
+    edge: "94"
 compat_features:
   - api.IdleDetector
   - api.IdleDetector.IdleDetector

@@ -1,1 +1,15 @@
+name: WebDriver BiDi
 spec: https://w3c.github.io/webdriver-bidi/
+# WebDriver BiDi is not in BCD, see https://github.com/mdn/browser-compat-data/issues/20207
+# The browser releases listed here are from:
+# https://developer.chrome.com/blog/webdriver-bidi-2023
+# https://bugs.chromium.org/p/chromedriver/issues/detail?id=4016
+# https://bugzilla.mozilla.org/show_bug.cgi?id=1753997
+status:
+  baseline: false
+  support:
+    chrome: "106"
+    chrome_android: "106"
+    edge: "106"
+    firefox: "102"
+    firefox_android: "102"

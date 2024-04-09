@@ -1,0 +1,90 @@
+name: Typed arrays (initial support)
+description: "Typed arrays are ordered lists of JavaScript values, where all values are of the same numerical type, such as 8-bit integers or 32-bit floating point numbers."
+spec:
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#table-49
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-typedarray-constructors
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-typedarray-objects
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-typedarray.bytes_per_element
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-get-%25typedarray%25.prototype.buffer
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-get-%25typedarray%25.prototype.bytelength
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-get-%25typedarray%25.prototype.byteoffset
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.join
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-get-%25typedarray%25.prototype.length
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-properties-of-the-typedarray-constructors
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.reverse
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.set
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.slice
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.sort
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.subarray
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.tolocalestring
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.tostring
+snapshot: ecmascript-2015
+group: typed-arrays
+status:
+  baseline: high
+  baseline_low_date: 2015-07-29
+  support:
+    chrome: "7"
+    chrome_android: "18"
+    edge: "12"
+    firefox: "4"
+    firefox_android: "4"
+    safari: "5.1"
+    safari_ios: "4.2"
+compat_features:
+  - javascript.builtins.Float32Array
+  - javascript.builtins.Float32Array.Float32Array
+  - javascript.builtins.Float32Array.Float32Array.constructor_without_parameters
+  - javascript.builtins.Float32Array.Float32Array.iterable_allowed
+  - javascript.builtins.Float32Array.Float32Array.new_required
+  - javascript.builtins.Float64Array
+  - javascript.builtins.Float64Array.Float64Array
+  - javascript.builtins.Float64Array.Float64Array.constructor_without_parameters
+  - javascript.builtins.Float64Array.Float64Array.iterable_allowed
+  - javascript.builtins.Float64Array.Float64Array.new_required
+  - javascript.builtins.Int16Array
+  - javascript.builtins.Int16Array.Int16Array
+  - javascript.builtins.Int16Array.Int16Array.constructor_without_parameters
+  - javascript.builtins.Int16Array.Int16Array.new_required
+  - javascript.builtins.Int32Array
+  - javascript.builtins.Int32Array.Int32Array
+  - javascript.builtins.Int32Array.Int32Array.constructor_without_parameters
+  - javascript.builtins.Int32Array.Int32Array.iterable_allowed
+  - javascript.builtins.Int32Array.Int32Array.new_required
+  - javascript.builtins.Int8Array
+  - javascript.builtins.Int8Array.Int8Array
+  - javascript.builtins.Int8Array.Int8Array.constructor_without_parameters
+  - javascript.builtins.Int8Array.Int8Array.iterable_allowed
+  - javascript.builtins.Int8Array.Int8Array.new_required
+  - javascript.builtins.TypedArray
+  - javascript.builtins.TypedArray.BYTES_PER_ELEMENT
+  - javascript.builtins.TypedArray.buffer
+  - javascript.builtins.TypedArray.byteLength
+  - javascript.builtins.TypedArray.byteOffset
+  - javascript.builtins.TypedArray.constructor_without_parameters
+  - javascript.builtins.TypedArray.join
+  - javascript.builtins.TypedArray.length
+  - javascript.builtins.TypedArray.name
+  - javascript.builtins.TypedArray.named_properties
+  - javascript.builtins.TypedArray.new_required
+  - javascript.builtins.TypedArray.reverse
+  - javascript.builtins.TypedArray.set
+  - javascript.builtins.TypedArray.slice
+  - javascript.builtins.TypedArray.sort
+  - javascript.builtins.TypedArray.subarray
+  - javascript.builtins.TypedArray.toLocaleString
+  - javascript.builtins.TypedArray.toString
+  - javascript.builtins.Uint16Array
+  - javascript.builtins.Uint16Array.Uint16Array
+  - javascript.builtins.Uint16Array.Uint16Array.constructor_without_parameters
+  - javascript.builtins.Uint16Array.Uint16Array.iterable_allowed
+  - javascript.builtins.Uint16Array.Uint16Array.new_required
+  - javascript.builtins.Uint8Array
+  - javascript.builtins.Uint8Array.Uint8Array
+  - javascript.builtins.Uint8Array.Uint8Array.constructor_without_parameters
+  - javascript.builtins.Uint8Array.Uint8Array.iterable_allowed
+  - javascript.builtins.Uint8Array.Uint8Array.new_required
+  - javascript.builtins.Uint8ClampedArray
+  - javascript.builtins.Uint8ClampedArray.Uint8ClampedArray
+  - javascript.builtins.Uint8ClampedArray.Uint8ClampedArray.iterable_allowed
+  - javascript.builtins.Uint8ClampedArray.Uint8ClampedArray.new_required

@@ -20,14 +20,6 @@ const mapping = new Map<string, string | null>(
     Object.keys(lite.features).sort().map(id => [id, null])
 );
 
-// Fix missing key-value in @types/caniuse-lite
-// TODO: remove this declaration when https://github.com/DefinitelyTyped/DefinitelyTyped/pull/67330 lands
-declare module 'caniuse-lite' {
-    interface Feature {
-      shown: boolean;
-    }
-  }
-
 const hiddenCaniuseItems = new Set<string>();
 for (const [id, data] of Object.entries(lite.features)) {
     if (!lite.feature(data).shown) {

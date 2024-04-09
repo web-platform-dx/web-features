@@ -1,9 +1,15 @@
+name: WebTransport
 spec: https://w3c.github.io/webtransport/
 caniuse: webtransport
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/3472
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "97"
+    chrome_android: "97"
+    edge: "97"
+    firefox: "114"
+    firefox_android: "114"
 compat_features:
   - api.WebTransport
   - api.WebTransport.WebTransport

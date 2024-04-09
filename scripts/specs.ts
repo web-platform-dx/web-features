@@ -4,19 +4,31 @@ import webSpecs from 'web-specs' assert { type: 'json' };
 
 import features from '../index.js';
 
-const specUrls: URL[] = webSpecs.flatMap(spec => {
-    return [
-        new URL(spec.nightly.url),
-        ...(spec.nightly.pages ?? []).map(page => new URL(page))
-    ]
-});
+// Specs needs to be in "good standing". Nightly URLs are used if available,
+// otherwise the snapshot/versioned URL is used. See browser-specs/web-specs
+// docs for more details:
+// https://github.com/w3c/browser-specs/blob/main/README.md#standing
+// https://github.com/w3c/browser-specs/blob/main/README.md#nightly
+// https://github.com/w3c/browser-specs/blob/main/README.md#url
+const specUrls: URL[] = webSpecs
+    .filter((spec) => spec.standing === 'good')
+    .flatMap(spec => {
+        return [
+            new URL(spec.nightly?.url ?? spec.url),
+            ...(spec.nightly?.pages ?? []).map(page => new URL(page))
+        ]
+    });
 
 type allowlistItem = [url: string, message: string];
 const defaultAllowlist: allowlistItem[] = [
     // [
     //     "https://example.com/spec/",
-    //     "This spec is allowed because…. Remove this exception when https://example.com/org/repo/pull/1234 merges."
+    //     "Allowed because…. Remove this exception when https://example.com/org/repo/pull/1234 merges."
     // ]
+    [
+        "https://w3c.github.io/IntersectionObserver/v2/",
+        "Allowed because it's shipped in Chrome and tracked on caniuse.com. Remove this exception when https://github.com/w3c/browser-specs/pull/1210 merges."
+    ]
 ];
 
 function isOK(url: URL, allowlist: allowlistItem[] = defaultAllowlist) {
@@ -47,6 +59,20 @@ function testIsOK() {
 };
 testIsOK();
 
+
+/**
+ * Print an array of potential spec URLs.
+ */
+function suggestSpecs(bad: URL): void {
+    const searchBy = bad.pathname.replaceAll("/", "");
+    const suggestions = specUrls.filter((specUrl) => specUrl.toString().includes(searchBy)).map(u => `- ${u}`);
+    if (suggestions.length > 0) {
+        console.warn("Did you mean one of these?");
+        console.warn(`${suggestions.join('\n')}`);
+        console.warn();
+    }
+}
+
 let checked = 0;
 let errors = 0;
 
@@ -65,6 +91,7 @@ for (const [id, data] of Object.entries(features)) {
         const url = new URL(spec);
         if (!isOK(url)) {
             console.error(`URL for ${id} not in web-specs: ${url.toString()}`);
+            suggestSpecs(url);
             errors++;
         }
         checked++;

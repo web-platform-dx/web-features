@@ -1,6 +1,13 @@
+name: WebCodecs
 spec: https://w3c.github.io/webcodecs/
 caniuse: webcodecs
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/3464
+status:
+  baseline: false
+  support:
+    chrome: "106"
+    chrome_android: "106"
+    edge: "106"
 compat_features:
   - api.AudioData
   - api.AudioData.allocationSize

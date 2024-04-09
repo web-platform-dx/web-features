@@ -1,5 +1,17 @@
+name: Motion path
 spec: https://drafts.fxtf.org/motion-1/
 caniuse: css-motion-paths
+status:
+  baseline: low
+  baseline_low_date: 2023-08-21
+  support:
+    chrome: "116"
+    chrome_android: "116"
+    edge: "116"
+    firefox: "72"
+    firefox_android: "79"
+    safari: "16"
+    safari_ios: "16"
 compat_features:
   - css.properties.offset-anchor
   - css.properties.offset-distance
