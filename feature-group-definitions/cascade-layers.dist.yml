@@ -18,10 +18,10 @@ status:
     safari: "15.4"
     safari_ios: "15.4"
 compat_features:
-  - css.at-rules.layer
-  - css.at-rules.import.layer
   - api.CSSImportRule.layerName
   - api.CSSLayerBlockRule
   - api.CSSLayerBlockRule.name
   - api.CSSLayerStatementRule
   - api.CSSLayerStatementRule.nameList
+  - css.at-rules.import.layer
+  - css.at-rules.layer

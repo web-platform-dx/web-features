@@ -1,27 +1,3 @@
 name: overflow
 spec: https://drafts.csswg.org/css-overflow-3/#propdef-overflow
 caniuse: css-overflow
-status:
-  baseline: low
-  baseline_low_date: 2022-09-12
-  support:
-    chrome: "90"
-    chrome_android: "90"
-    edge: "90"
-    firefox: "81"
-    firefox_android: "81"
-    safari: "16"
-    safari_ios: "16"
-compat_features:
-  - css.properties.overflow-x
-  - css.properties.overflow-x.clip
-  - css.properties.overflow-y
-  - css.properties.overflow-y.clip
-  - css.properties.overflow
-  - css.properties.overflow.clip
-  - css.properties.overflow.multiple_keywords
-  # BCD appears to represent `<overflow>` values as both
-  # 1) keyword subfeatures on properties (above) and
-  # 2) a type (below)
-  - css.types.overflow
-  - css.types.overflow.clip
