@@ -8,8 +8,6 @@ status:
   baseline_low_date: 2021-08-10
   baseline_high_date: 2024-02-10
   support:
-    # Editorial override for Chrome as the resize/scroll events were supported
-    # in 61, it was only the onresize and onscroll properties that were missing.
     chrome: "61"
     chrome_android: "61"
     edge: "79"
@@ -17,6 +15,8 @@ status:
     firefox_android: "68"
     safari: "13"
     safari_ios: "13"
+# The resize and scroll events are excluded as the onresize and onscroll
+# properties were missing in Chrome 61, but were added in Chrome 62.
 compat_features:
   - api.VisualViewport
   - api.VisualViewport.height
@@ -24,8 +24,8 @@ compat_features:
   - api.VisualViewport.offsetTop
   - api.VisualViewport.pageLeft
   - api.VisualViewport.pageTop
-  - api.VisualViewport.resize_event
+  # - api.VisualViewport.resize_event
   - api.VisualViewport.scale
-  - api.VisualViewport.scroll_event
+  # - api.VisualViewport.scroll_event
   - api.VisualViewport.width
   - api.Window.visualViewport
