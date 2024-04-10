@@ -1,3 +1,6 @@
 name: cap unit
 description: The CSS `cap` unit corresponds to the height of Latin capital letters.
 spec: https://drafts.csswg.org/css-values-4/#cap
+# TODO: remove after https://github.com/mdn/browser-compat-data/pull/22789
+compat_features:
+  - css.types.length.cap
