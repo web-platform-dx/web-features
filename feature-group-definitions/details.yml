@@ -1,9 +1,12 @@
 name: <details>
 description: The `<details>` element creates a disclosure widget which content is visible only when the widget is toggled open, such as when using a nested `<summary>` element.
 spec: https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element
+caniuse: details
 compat_features:
   - api.HTMLDetailsElement
   - api.HTMLDetailsElement.open
-  - api.HTMLDetailsElement.toggle_event
+  # Exclude toggle event as it changes the Chrome/Safari dates by 3-5 years, and
+  # it's not a critical part of the feature.
+  # - api.HTMLDetailsElement.toggle_event
   - html.elements.details
   - html.elements.details.open
