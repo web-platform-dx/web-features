@@ -13,11 +13,11 @@ compat_features:
   - api.Scheduler
   - api.Scheduler.postTask
   - api.TaskController
-  - api.TaskController.setPriority
   - api.TaskController.TaskController
+  - api.TaskController.setPriority
   - api.TaskPriorityChangeEvent
-  - api.TaskPriorityChangeEvent.previousPriority
   - api.TaskPriorityChangeEvent.TaskPriorityChangeEvent
+  - api.TaskPriorityChangeEvent.previousPriority
   - api.TaskSignal
   - api.TaskSignal.priority
   - api.scheduler

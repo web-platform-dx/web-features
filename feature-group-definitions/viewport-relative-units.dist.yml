@@ -17,7 +17,6 @@ status:
     safari: "7"
     safari_ios: "7"
 compat_features:
-  # Excludes `vb` and `vi` because they were introduced later (see `viewport-relative-unit-variants`)
   - css.types.length.vh
   - css.types.length.vmax
   - css.types.length.vmin

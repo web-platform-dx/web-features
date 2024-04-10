@@ -13,8 +13,8 @@ status:
     edge: "106"
 compat_features:
   - api.AudioData
-  - api.AudioData.allocationSize
   - api.AudioData.AudioData
+  - api.AudioData.allocationSize
   - api.AudioData.clone
   - api.AudioData.close
   - api.AudioData.copyTo
@@ -47,25 +47,25 @@ compat_features:
   - api.AudioEncoder.reset
   - api.AudioEncoder.state
   - api.EncodedAudioChunk
+  - api.EncodedAudioChunk.EncodedAudioChunk
   - api.EncodedAudioChunk.byteLength
   - api.EncodedAudioChunk.copyTo
   - api.EncodedAudioChunk.duration
-  - api.EncodedAudioChunk.EncodedAudioChunk
   - api.EncodedAudioChunk.timestamp
   - api.EncodedAudioChunk.type
   - api.EncodedVideoChunk
+  - api.EncodedVideoChunk.EncodedVideoChunk
   - api.EncodedVideoChunk.byteLength
   - api.EncodedVideoChunk.copyTo
   - api.EncodedVideoChunk.duration
-  - api.EncodedVideoChunk.EncodedVideoChunk
   - api.EncodedVideoChunk.timestamp
   - api.EncodedVideoChunk.type
   - api.ImageDecoder
+  - api.ImageDecoder.ImageDecoder
   - api.ImageDecoder.close
   - api.ImageDecoder.complete
   - api.ImageDecoder.completed
   - api.ImageDecoder.decode
-  - api.ImageDecoder.ImageDecoder
   - api.ImageDecoder.isTypeSupported_static
   - api.ImageDecoder.reset
   - api.ImageDecoder.tracks
@@ -81,13 +81,14 @@ compat_features:
   - api.ImageTrackList.selectedIndex
   - api.ImageTrackList.selectedTrack
   - api.VideoColorSpace
+  - api.VideoColorSpace.VideoColorSpace
   - api.VideoColorSpace.fullRange
   - api.VideoColorSpace.matrix
   - api.VideoColorSpace.primaries
   - api.VideoColorSpace.toJSON
   - api.VideoColorSpace.transfer
-  - api.VideoColorSpace.VideoColorSpace
   - api.VideoDecoder
+  - api.VideoDecoder.VideoDecoder
   - api.VideoDecoder.close
   - api.VideoDecoder.configure
   - api.VideoDecoder.decode
@@ -97,8 +98,8 @@ compat_features:
   - api.VideoDecoder.isConfigSupported_static
   - api.VideoDecoder.reset
   - api.VideoDecoder.state
-  - api.VideoDecoder.VideoDecoder
   - api.VideoEncoder
+  - api.VideoEncoder.VideoEncoder
   - api.VideoEncoder.close
   - api.VideoEncoder.configure
   - api.VideoEncoder.dequeue_event
@@ -108,8 +109,8 @@ compat_features:
   - api.VideoEncoder.isConfigSupported_static
   - api.VideoEncoder.reset
   - api.VideoEncoder.state
-  - api.VideoEncoder.VideoEncoder
   - api.VideoFrame
+  - api.VideoFrame.VideoFrame
   - api.VideoFrame.allocationSize
   - api.VideoFrame.clone
   - api.VideoFrame.close
@@ -123,5 +124,4 @@ compat_features:
   - api.VideoFrame.duration
   - api.VideoFrame.format
   - api.VideoFrame.timestamp
-  - api.VideoFrame.VideoFrame
   - api.VideoFrame.visibleRect

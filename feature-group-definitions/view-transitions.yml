@@ -2,22 +2,3 @@ name: View transitions
 spec: https://drafts.csswg.org/css-view-transitions-1/
 caniuse: view-transitions
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/4383
-status:
-  baseline: false
-  support:
-    chrome: "111"
-    chrome_android: "111"
-    edge: "111"
-compat_features:
-  - api.Document.startViewTransition
-  - api.ViewTransition
-  - api.ViewTransition.finished
-  - api.ViewTransition.ready
-  - api.ViewTransition.skipTransition
-  - api.ViewTransition.updateCallbackDone
-  - css.properties.view-transition-name
-  - css.selectors.view-transition-group
-  - css.selectors.view-transition-image-pair
-  - css.selectors.view-transition-new
-  - css.selectors.view-transition-old
-  - css.selectors.view-transition
