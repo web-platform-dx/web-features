@@ -177,5 +177,6 @@ See [sets](#sets).
 
 Never use "usage" in the sense of "using."
 For example, instead of "The `input()` method enables the usage of…" write "The `input()` method uses…."
+([#753](https://github.com/web-platform-dx/web-features/pull/753#discussion_r1560914869))
 
 It's OK to use "usage" only in the sense of "consumption" (as in "mobile data usage") or "customary practice" (as in "the style guide's usage recommendations").
