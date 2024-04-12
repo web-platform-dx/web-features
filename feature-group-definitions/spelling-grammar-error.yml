@@ -1,0 +1,11 @@
+name: "::spelling-error and ::grammar-error"
+description: The `::spelling-error` and `::grammar-error` CSS pseudo-elements match text that is highlighted as misspelled and grammatically incorrect, respectively.
+spec:
+  - https://drafts.csswg.org/css-pseudo-4/#selectordef-spelling-error
+  - https://drafts.csswg.org/css-pseudo-4/#selectordef-grammar-error
+# `text-decoration: spelling-error` and `text-decoration: grammar-error` are not
+# included in this feature. They're supported in Chrome, but not important for
+# changing or suppressing the styling of ::spelling-error and ::grammar-error.
+compat_features:
+  - css.selectors.grammar-error
+  - css.selectors.spelling-error
