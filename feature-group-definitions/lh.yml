@@ -1,3 +1,6 @@
 name: lh unit
 description: The CSS `lh` unit corresponds to the requested line height, the computed value of the `line-height` property. Some lines may be higher than this based on their content.
 spec: https://drafts.csswg.org/css-values-4/#lh
+# TODO: remove after https://github.com/mdn/browser-compat-data/pull/22789
+compat_features:
+  - css.types.length.lh
