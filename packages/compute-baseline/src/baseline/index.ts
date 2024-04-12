@@ -10,6 +10,21 @@ import { browsers } from "./core-browser-set";
 import { isFuture, toDateString, toHighDate } from "./date-utils";
 import { support } from "./support";
 
+interface Logger {
+  debug?: typeof console.debug;
+  info?: typeof console.info;
+  log?: typeof console.log;
+  warn?: typeof console.warn;
+}
+
+export let logger: Logger | undefined = process.env["DEBUG_COMPUTE_BASELINE"]
+  ? console
+  : undefined;
+
+export function setLogger(logFacility: Logger | undefined) {
+  logger = logFacility;
+}
+
 // Number of months after Baseline low that Baseline high happens. Keep in sync with definition:
 // https://github.com/web-platform-dx/web-features/blob/main/docs/baseline.md#wider-support-high-status
 export const BASELINE_LOW_TO_HIGH_DURATION = Temporal.Duration.from({

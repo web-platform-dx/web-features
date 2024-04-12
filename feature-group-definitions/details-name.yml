@@ -1,6 +1,7 @@
 name: Mutually exclusive <details> elements
 description: Multiple `<details>` elements which use the same `name` attribute are mutually exclusive. When one member of the group is opened, all other members are closed.
 spec: https://html.spec.whatwg.org/multipage/interactive-elements.html#attr-details-name
+group: html
 compat_features:
   - api.HTMLDetailsElement.name
   - html.elements.details.name
