@@ -1,13 +1,15 @@
-/*
+# Exclude all files (but not directories)
+/**/*.*
 
 # Opt-ins
 !GOVERNANCE.md
 
-!/feature-group-definitions/
-/feature-group-definitions/*
 !/feature-group-definitions/*.yml
 
-!/scripts/
-/scripts/*
-!/scripts/release.ts
+!/packages/compute-baseline/**
+!/packages/web-features/**
+
+!/scripts/dist.ts
 !/scripts/feature-init.ts
+!/scripts/find-troublesome-ancestors.ts
+!/scripts/release.ts

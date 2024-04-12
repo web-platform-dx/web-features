@@ -1,0 +1,8 @@
+# This group isn't intended for everything defined in HTML:
+# spec: https://html.spec.whatwg.org/multipage/
+#
+# It is for the markup language, and not for all APIs and infrastructure
+# defined in HTML. For example, structuredClone() should not be in this group.
+# APIs on HTML*Element and CSS features specific to an HTML element generally
+# do make sense to group under HTML, however.
+name: HTML

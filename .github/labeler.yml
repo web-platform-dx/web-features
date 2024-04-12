@@ -1,0 +1,8 @@
+feature-definition:
+  - changed-files:
+      - all-globs-to-any-file:
+          - "feature-group-definitions/*.yml"
+          - "!feature-group-definitions/*.dist.yml"
+      - all-globs-to-any-file:
+          - "features/*.yml"
+          - "!features/*.dist.yml"
