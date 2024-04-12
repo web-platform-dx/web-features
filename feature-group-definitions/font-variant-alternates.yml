@@ -1,5 +1,5 @@
 name: font-variant-alternates
-description: The `font-variant-alternates` CSS property selects which alternate glyphs a font should use, as defined by `@font-feature-values` at-rules.
+description: The `font-variant-alternates` CSS property, along with the `@font-feature-values` at-rule, chooses when to use a font's alternate glyphs.
 spec: https://drafts.csswg.org/css-fonts-4/#font-variant-alternates-prop
 caniuse: font-variant-alternates
 usage_stats: https://chromestatus.com/metrics/css/timeline/popularity/738
@@ -15,6 +15,16 @@ status:
     safari: "16.2"
     safari_ios: "16.2"
 compat_features:
+  - api.CSSFontFeatureValuesRule
+  - api.CSSFontFeatureValuesRule.fontFamily
+  - css.at-rules.font-feature-values
+  - css.at-rules.font-feature-values.annotation
+  - css.at-rules.font-feature-values.character-variant
+  - css.at-rules.font-feature-values.historical-forms
+  - css.at-rules.font-feature-values.ornaments
+  - css.at-rules.font-feature-values.styleset
+  - css.at-rules.font-feature-values.stylistic
+  - css.at-rules.font-feature-values.swash
   - css.properties.font-variant-alternates
   - css.properties.font-variant-alternates.annotation
   - css.properties.font-variant-alternates.character_variant

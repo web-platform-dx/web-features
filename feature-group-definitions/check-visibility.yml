@@ -1,4 +1,5 @@
 name: checkVisibility()
+description: "The `checkVisibility()` method checks if an element is potentially visible, with optional parameters for the kinds of visibility to check. For example, it checks whether the element has the style `display: none`, but can also check for `visibility: hidden`."
 spec: https://drafts.csswg.org/cssom-view-1/#dom-element-checkvisibility
 compat_features:
   - api.Element.checkVisibility

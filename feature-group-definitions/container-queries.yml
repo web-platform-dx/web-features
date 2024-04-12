@@ -1,4 +1,5 @@
 name: Container queries
+description: Container size queries with the `@container` at-rule apply styles to an element based on the dimensions of its container.
 spec: https://drafts.csswg.org/css-contain-3/#container-queries
 caniuse: css-container-queries
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/4165
@@ -29,5 +30,9 @@ compat_features:
   - css.properties.contain.style
   - css.properties.container
   - css.properties.container-name
+  - css.properties.container-name.none
   - css.properties.container-type
+  - css.properties.container-type.inline-size
+  - css.properties.container-type.normal
+  - css.properties.container-type.size
   - css.types.length.container_query_length_units
