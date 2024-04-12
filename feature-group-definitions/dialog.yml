@@ -1,27 +1,5 @@
 name: "<dialog>"
 spec: https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element
+group: html
 caniuse: dialog
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/481
-status:
-  baseline: low
-  baseline_low_date: 2022-03-14
-  support:
-    chrome: "37"
-    chrome_android: "37"
-    edge: "79"
-    firefox: "98"
-    firefox_android: "98"
-    safari: "15.4"
-    safari_ios: "15.4"
-compat_features:
-  - api.HTMLDialogElement
-  - api.HTMLDialogElement.cancel_event
-  - api.HTMLDialogElement.close
-  - api.HTMLDialogElement.close_event
-  - api.HTMLDialogElement.open
-  - api.HTMLDialogElement.returnValue
-  - api.HTMLDialogElement.show
-  - api.HTMLDialogElement.showModal
-  - css.selectors.backdrop.dialog
-  - html.elements.dialog
-  - html.elements.dialog.open
