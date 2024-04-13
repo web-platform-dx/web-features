@@ -1,0 +1,8 @@
+name: Federated credential management
+description: The `IdentityCredential` API. Also known as FedCM.
+spec: https://fedidcg.github.io/FedCM/
+group: credential-management
+compat_features:
+  - api.CredentialsContainer.get.identity_option
+  - api.IdentityCredential
+  - api.IdentityCredential.token
