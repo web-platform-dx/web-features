@@ -10,6 +10,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { isDeepStrictEqual } from "node:util";
+import { marked } from "marked";
 import winston from "winston";
 import YAML, { Document } from "yaml";
 import yargs from "yargs";
@@ -81,6 +82,9 @@ function toDist(sourcePath: string): YAML.Document {
   const yaml = YAML.parseDocument(
     fs.readFileSync(sourcePath, { encoding: "utf-8" }),
   );
+
+  convertMarkdown(yaml);
+
   const { name: id } = path.parse(sourcePath);
 
   const taggedCompatFeatures = (
@@ -135,6 +139,22 @@ function toDist(sourcePath: string): YAML.Document {
   insertHeaderComments(yaml, id);
 
   return yaml;
+}
+
+function convertMarkdown(yaml: YAML.Document) {
+  // Markdown is only used the descriptions right now, but could easily be
+  // supported in names as well.
+  const description = yaml.get("description");
+  if (typeof description !== "string") {
+    return;
+  }
+  let html = marked.parse(description).trim();
+  // Remove leading <p> and trailing </p> if there is only one of each in the
+  // description. (If there are multiple paragraphs, let them be.)
+  if (html.lastIndexOf('<p>') === 0 && html.indexOf('</p>') === html.length - 4) {
+    html = html.substring(3, html.length - 4);
+  }
+  yaml.set("description", html);
 }
 
 function resolveBaselineHighDate(status) {
