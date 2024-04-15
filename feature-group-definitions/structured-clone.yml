@@ -1,5 +1,5 @@
 name: structuredClone()
-description: The global `structuredClone()` JavaScript method creates a deep clone of an object by using the structured clone algorithm. The method also allows for transferring values from the original object to the cloned object.
+description: The `structuredClone()` global method creates a deep copy of an object. Values that cannot be cloned can instead be transferred, making the original value no longer usable.
 spec: https://html.spec.whatwg.org/multipage/structured-data.html#structured-cloning
 status:
   baseline: low
