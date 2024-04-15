@@ -76,17 +76,40 @@ describe("computeBaseline", function () {
   });
 
   it("finds discrepancies with ancestors (checkAncestors)", function () {
-    const compatKeys: [string, ...string[]] = ["api.Notification.body"];
-    const result = computeBaseline({ compatKeys, checkAncestors: false });
+    const result = computeBaseline({
+      compatKeys: ["api.Notification.body"],
+      checkAncestors: false,
+    });
+    const resultExplicit = computeBaseline({
+      compatKeys: ["api.Notification", "api.Notification.body"],
+      checkAncestors: false,
+    });
     const resultWithAncestors = computeBaseline({
-      compatKeys,
+      compatKeys: ["api.Notification.body"],
       checkAncestors: true,
     });
+
+    assert.equal(resultExplicit.toJSON(), resultWithAncestors.toJSON());
+    assert.notEqual(result.toJSON(), resultWithAncestors.toJSON());
+
     assert.notEqual(result.baseline, resultWithAncestors.baseline);
     assert.notEqual(
       result.baseline_low_date?.toString(),
       resultWithAncestors.baseline_low_date?.toString(),
     );
+
+    chai.expect(result).to.matchSnapshot();
+    chai.expect(resultExplicit).to.matchSnapshot();
+    chai.expect(resultWithAncestors).to.matchSnapshot();
+  });
+
+  it("disregards support that's been removed", function () {
+    const result = computeBaseline({
+      compatKeys: ["api.AudioTrack"],
+      checkAncestors: false,
+    });
+    chai.expect(result).to.matchSnapshot();
+    assert.notEqual(Boolean(result.baseline), true);
   });
 });
 

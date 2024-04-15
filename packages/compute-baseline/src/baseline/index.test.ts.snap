@@ -1,5 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`computeBaseline disregards support that's been removed 1`] = `
+"{
+  \\"baseline\\": false,
+  \\"support\\": {}
+}"
+`;
+
+exports[`computeBaseline finds discrepancies with ancestors (checkAncestors) 1`] = `
+"{
+  \\"baseline\\": \\"low\\",
+  \\"baseline_low_date\\": \\"2023-03-27\\",
+  \\"support\\": {
+    \\"chrome\\": \\"33\\",
+    \\"chrome_android\\": \\"42\\",
+    \\"edge\\": \\"14\\",
+    \\"firefox\\": \\"26\\",
+    \\"firefox_android\\": \\"26\\",
+    \\"safari\\": \\"11\\",
+    \\"safari_ios\\": \\"16.4\\"
+  }
+}"
+`;
+
+exports[`computeBaseline finds discrepancies with ancestors (checkAncestors) 2`] = `
+"{
+  \\"baseline\\": false,
+  \\"support\\": {
+    \\"chrome\\": \\"33\\",
+    \\"edge\\": \\"14\\",
+    \\"firefox\\": \\"26\\",
+    \\"firefox_android\\": \\"26\\",
+    \\"safari\\": \\"11\\",
+    \\"safari_ios\\": \\"16.4\\"
+  }
+}"
+`;
+
+exports[`computeBaseline finds discrepancies with ancestors (checkAncestors) 3`] = `
+"{
+  \\"baseline\\": false,
+  \\"support\\": {
+    \\"chrome\\": \\"33\\",
+    \\"edge\\": \\"14\\",
+    \\"firefox\\": \\"26\\",
+    \\"firefox_android\\": \\"26\\",
+    \\"safari\\": \\"11\\",
+    \\"safari_ios\\": \\"16.4\\"
+  }
+}"
+`;
+
 exports[`computeBaseline returns something sensible for the least complex features 1`] = `
 Object {
   "css.properties.counter-reset.reset_does_not_affect_siblings": "{
