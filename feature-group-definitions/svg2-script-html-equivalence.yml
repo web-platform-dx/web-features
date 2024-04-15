@@ -1,13 +1,3 @@
 name: SVG <script> async and defer
 description: The `async` and `defer` attributes of the `<script>` SVG element control the loading and execution of scripts in SVG documents.
 spec: https://svgwg.org/svg2-draft/interact.html#ScriptElement
-status:
-  baseline: false
-  support:
-    firefox: "117"
-    firefox_android: "117"
-compat_features:
-  - api.SVGScriptElement.async
-  - api.SVGScriptElement.defer
-  - svg.elements.script.async
-  - svg.elements.script.defer

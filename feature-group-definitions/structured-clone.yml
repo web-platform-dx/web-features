@@ -1,16 +1,3 @@
 name: structuredClone()
 description: The `structuredClone()` global method creates a deep copy of an object. Values that cannot be cloned can instead be transferred, making the original value no longer usable.
 spec: https://html.spec.whatwg.org/multipage/structured-data.html#structured-cloning
-status:
-  baseline: low
-  baseline_low_date: 2022-03-14
-  support:
-    chrome: "98"
-    chrome_android: "98"
-    edge: "98"
-    firefox: "94"
-    firefox_android: "94"
-    safari: "15.4"
-    safari_ios: "15.4"
-compat_features:
-  - api.structuredClone

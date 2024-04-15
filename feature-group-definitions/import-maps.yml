@@ -1,16 +1,4 @@
 name: Import maps
+description: A `<script type="importmap">` HTML element provides an import map as a JSON string. An import map controls how the browser should resolve module specifiers when importing JavaScript modules.
 spec: https://html.spec.whatwg.org/multipage/webappapis.html#import-maps
 caniuse: import-maps
-status:
-  baseline: low
-  baseline_low_date: 2023-03-27
-  support:
-    chrome: "89"
-    chrome_android: "89"
-    edge: "89"
-    firefox: "108"
-    firefox_android: "108"
-    safari: "16.4"
-    safari_ios: "16.4"
-compat_features:
-  - html.elements.script.type.importmap
