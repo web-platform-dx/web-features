@@ -24,9 +24,14 @@ export function support(feature: Feature, browsers: Browser[]): Support {
       }
     }
 
-    logReleaseOmissions(feature, qualifiedReleases, unqualifiedReleases);
+    const currentlySupported = unqualifiedReleases.includes(b.current());
+    if (currentlySupported) {
+      support.set(b, lastInitialRelease(unqualifiedReleases));
+    } else {
+      support.set(b, undefined);
+    }
 
-    support.set(b, lastInitialRelease(unqualifiedReleases));
+    logReleaseOmissions(feature, qualifiedReleases, unqualifiedReleases);
   }
 
   return support;
