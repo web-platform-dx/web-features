@@ -1,5 +1,19 @@
 name: Visual viewport API
+description: The `visualViewport` API provides a way to query and modify the user-visible viewport of a web page.
 spec: https://drafts.csswg.org/cssom-view-1/#visualViewport
+status:
+  baseline: high
+  baseline_low_date: 2021-08-10
+  support:
+    # Editorial override for Chrome as the resize/scroll events were supported
+    # in 61, it was only the onresize and onscroll properties that were missing.
+    chrome: "61"
+    chrome_android: "61"
+    edge: "79"
+    firefox: "91"
+    firefox_android: "68"
+    safari: "13"
+    safari_ios: "13"
 compat_features:
   - api.VisualViewport
   - api.VisualViewport.height

@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`computeBaseline disregards support that's been removed 1`] = `
+"{
+  \\"baseline\\": false,
+  \\"support\\": {
+    \\"safari\\": \\"8\\",
+    \\"safari_ios\\": \\"8\\"
+  }
+}"
+`;
+
+exports[`computeBaseline finds discrepancies with ancestors (checkAncestors) 1`] = `
+"{
+  \\"baseline\\": \\"low\\",
+  \\"baseline_low_date\\": \\"2023-03-27\\",
+  \\"support\\": {
+    \\"chrome\\": \\"33\\",
+    \\"chrome_android\\": \\"42\\",
+    \\"edge\\": \\"14\\",
+    \\"firefox\\": \\"26\\",
+    \\"firefox_android\\": \\"26\\",
+    \\"safari\\": \\"11\\",
+    \\"safari_ios\\": \\"16.4\\"
+  }
+}"
+`;
+
+exports[`computeBaseline finds discrepancies with ancestors (checkAncestors) 2`] = `
+"{
+  \\"baseline\\": false,
+  \\"support\\": {
+    \\"chrome\\": \\"33\\",
+    \\"edge\\": \\"14\\",
+    \\"firefox\\": \\"26\\",
+    \\"firefox_android\\": \\"26\\",
+    \\"safari\\": \\"11\\",
+    \\"safari_ios\\": \\"16.4\\"
+  }
+}"
+`;
+
+exports[`computeBaseline finds discrepancies with ancestors (checkAncestors) 3`] = `
+"{
+  \\"baseline\\": false,
+  \\"support\\": {
+    \\"chrome\\": \\"33\\",
+    \\"edge\\": \\"14\\",
+    \\"firefox\\": \\"26\\",
+    \\"firefox_android\\": \\"26\\",
+    \\"safari\\": \\"11\\",
+    \\"safari_ios\\": \\"16.4\\"
+  }
+}"
+`;
+
+exports[`computeBaseline returns something sensible for the least complex features 1`] = `
+Object {
+  "css.properties.counter-reset.reset_does_not_affect_siblings": "{
+  \\"baseline\\": false,
+  \\"support\\": {
+    \\"firefox\\": \\"82\\",
+    \\"firefox_android\\": \\"82\\"
+  }
+}",
+  "html.elements.form.target": "{
+  \\"baseline\\": \\"high\\",
+  \\"baseline_low_date\\": \\"2015-07-29\\",
+  \\"baseline_high_date\\": \\"2018-01-29\\",
+  \\"support\\": {
+    \\"chrome\\": \\"1\\",
+    \\"chrome_android\\": \\"18\\",
+    \\"edge\\": \\"12\\",
+    \\"firefox\\": \\"1\\",
+    \\"firefox_android\\": \\"4\\",
+    \\"safari\\": \\"3\\",
+    \\"safari_ios\\": \\"2\\"
+  }
+}",
+  "html.global_attributes.exportparts": "{
+  \\"baseline\\": \\"high\\",
+  \\"baseline_low_date\\": \\"2020-07-28\\",
+  \\"baseline_high_date\\": \\"2023-01-28\\",
+  \\"support\\": {
+    \\"chrome\\": \\"73\\",
+    \\"chrome_android\\": \\"73\\",
+    \\"edge\\": \\"79\\",
+    \\"firefox\\": \\"72\\",
+    \\"firefox_android\\": \\"79\\",
+    \\"safari\\": \\"13.1\\",
+    \\"safari_ios\\": \\"13.4\\"
+  }
+}",
+}
+`;
+
+exports[`computeBaseline returns something sensible for the most complex features 1`] = `
+Object {
+  "api.DOMMatrix.DOMMatrix": "{
+  \\"baseline\\": \\"high\\",
+  \\"baseline_low_date\\": \\"2020-01-15\\",
+  \\"baseline_high_date\\": \\"2022-07-15\\",
+  \\"support\\": {
+    \\"chrome\\": \\"61\\",
+    \\"chrome_android\\": \\"61\\",
+    \\"edge\\": \\"79\\",
+    \\"firefox\\": \\"33\\",
+    \\"firefox_android\\": \\"33\\",
+    \\"safari\\": \\"11\\",
+    \\"safari_ios\\": \\"11\\"
+  }
+}",
+  "api.Document.visibilitychange_event": "{
+  \\"baseline\\": \\"high\\",
+  \\"baseline_low_date\\": \\"2021-04-26\\",
+  \\"baseline_high_date\\": \\"2023-10-26\\",
+  \\"support\\": {
+    \\"chrome\\": \\"62\\",
+    \\"chrome_android\\": \\"62\\",
+    \\"edge\\": \\"18\\",
+    \\"firefox\\": \\"56\\",
+    \\"firefox_android\\": \\"56\\",
+    \\"safari\\": \\"14.1\\",
+    \\"safari_ios\\": \\"14.5\\"
+  }
+}",
+  "css.types.basic-shape.path": "{
+  \\"baseline\\": false,
+  \\"support\\": {}
+}",
+}
+`;

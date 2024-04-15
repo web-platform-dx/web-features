@@ -1,2 +1,11 @@
 name: EditContext
+description: The `EditContext` API allows you to build rich text editors that support advanced text input, such as Input Method Editor (IME) composition, an emoji picker, or other platform-specific editing UI.
 spec: https://w3c.github.io/edit-context/
+# Status is overridden because Chrome Android data in BCD is wrong:
+# https://github.com/mdn/browser-compat-data/pull/22779
+status:
+  baseline: false
+  support:
+    chrome: "121"
+    chrome_android: "121"
+    edge: "121"
