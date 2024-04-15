@@ -1,0 +1,8 @@
+name: User activation
+description: The `navigator.userActivation` API reveals whether the user has interacted with the page through an "activation" gesture such as a click, tap, or keyboard shortcut. This can be useful when working with APIs that require user activation, such as the fullscreen API.
+spec: https://html.spec.whatwg.org/multipage/interaction.html#the-useractivation-interface
+compat_features:
+  - api.Navigator.userActivation
+  - api.UserActivation
+  - api.UserActivation.hasBeenActive
+  - api.UserActivation.isActive
