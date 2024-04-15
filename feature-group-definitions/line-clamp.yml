@@ -1,9 +1,4 @@
 name: line-clamp
+description: The `line-clamp` CSS property limits the text in a block container to a certain number of lines.
 spec: https://drafts.csswg.org/css-overflow-3/#line-clamp
 caniuse: css-line-clamp
-compat_features:
-  # This is a weird one! Specified with a prefix:
-  # https://drafts.csswg.org/css-overflow-4/#propdef--webkit-line-clamp
-  - css.properties.-webkit-line-clamp
-  # This doesn't exist yet, but might in the future:
-  # - css.properties.line-clamp

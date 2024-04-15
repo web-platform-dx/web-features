@@ -1,20 +1,5 @@
-name: vw, vh, vmin, and vmax viewport units
+name: Viewport units
+description: The `vw`, `vh`, `vmin`, and `vmax` CSS viewport units are relative to the size of the viewport, and are used to size elements in relation to the viewport's dimensions.
+# This feature excludes `vb` and `vi` because they were introduced later (see `viewport-relative-unit-variants`)
 spec: https://drafts.csswg.org/css-values-4/#viewport-relative-lengths
 caniuse: viewport-units
-status:
-  baseline: high
-  baseline_low_date: 2017-10-17
-  support:
-    chrome: "26"
-    chrome_android: "26"
-    edge: "16"
-    firefox: "19"
-    firefox_android: "19"
-    safari: "7"
-    safari_ios: "7"
-compat_features:
-  # Excludes `vb` and `vi` because they were introduced later (see `viewport-relative-unit-variants`)
-  - css.types.length.vh
-  - css.types.length.vmax
-  - css.types.length.vmin
-  - css.types.length.vw
