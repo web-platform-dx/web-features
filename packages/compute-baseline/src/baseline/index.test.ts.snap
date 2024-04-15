@@ -3,7 +3,10 @@
 exports[`computeBaseline disregards support that's been removed 1`] = `
 "{
   \\"baseline\\": false,
-  \\"support\\": {}
+  \\"support\\": {
+    \\"safari\\": \\"8\\",
+    \\"safari_ios\\": \\"8\\"
+  }
 }"
 `;
 
