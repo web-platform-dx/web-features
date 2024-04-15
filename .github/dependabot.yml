@@ -16,3 +16,13 @@ updates:
     directory: packages/compute-baseline
     schedule:
       interval: daily
+    versioning-strategy: widen
+    allow:
+      - dependency-type: production
+  - package-ecosystem: npm
+    directory: packages/compute-baseline
+    schedule:
+      interval: daily
+    versioning-strategy: increase
+    allow:
+      - dependency-type: development
