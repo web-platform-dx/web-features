@@ -97,20 +97,16 @@ function toDist(sourcePath: string): YAML.Document {
       ? taggedCompatFeatures
       : undefined,
     status: taggedCompatFeatures.length
-      ? JSON.parse(
-          computeBaseline({
-            compatKeys: taggedCompatFeatures as [string, ...string[]],
-            checkAncestors: false,
-          }).toJSON(),
-        )
+      ? computeBaseline({
+          compatKeys: taggedCompatFeatures as [string, ...string[]],
+          checkAncestors: false,
+        })
       : undefined,
     statusByCompatFeaturesOverride: Array.isArray(overridden.compatFeatures)
-      ? JSON.parse(
-          computeBaseline({
-            compatKeys: overridden.compatFeatures as [string, ...string[]],
-            checkAncestors: false,
-          }).toJSON(),
-        )
+      ? computeBaseline({
+          compatKeys: overridden.compatFeatures as [string, ...string[]],
+          checkAncestors: false,
+        })
       : undefined,
   };
 
@@ -127,7 +123,12 @@ function toDist(sourcePath: string): YAML.Document {
   if (!overridden.status) {
     const status = generated.statusByCompatFeaturesOverride ?? generated.status;
     if (status) {
-      insertStatus(yaml, status);
+      if (status.discouraged) {
+        logger.warn(
+          `${id}: contains at least one deprecated compat feature and can never be Baseline. Was this intentional?`,
+        );
+      }
+      insertStatus(yaml, JSON.parse(status.toJSON()));
     }
   }
 
