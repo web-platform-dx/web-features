@@ -26,8 +26,6 @@ compat_features:
   - javascript.builtins.Set.Set
   # Set predates the iterable protocol.
   # - javascript.builtins.Set.Set.iterable_allowed
-  # https://github.com/mdn/browser-compat-data/pull/22825
-  # - javascript.builtins.Set.Set.new_required
   # Support for `new new Set(null)` isn't essential.
   # - javascript.builtins.Set.Set.null_allowed
   - javascript.builtins.Set.add

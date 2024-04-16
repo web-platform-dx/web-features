@@ -26,8 +26,6 @@ compat_features:
   - javascript.builtins.Map.Map
   # Map predates the iterable protocol.
   # - javascript.builtins.Map.Map.iterable_allowed
-  # https://github.com/mdn/browser-compat-data/pull/22825
-  # - javascript.builtins.Map.Map.new_required
   # Support for `new new Map(null)` isn't essential.
   # - javascript.builtins.Map.Map.null_allowed
   - javascript.builtins.Map.clear
