@@ -39,7 +39,14 @@ export class Feature {
   }
 
   /**
-   * Return the feature's tags as an array (whether there are any tags or not).
+   * The deprecation status of this feature, if known.
+   */
+  get deprecated(): boolean | undefined {
+    return this.data.__compat?.status?.deprecated;
+  }
+
+  /**
+   * The feature's tags as an array (whether there are any tags or not).
    */
   get tags(): string[] {
     return this.data.__compat?.tags ?? [];
