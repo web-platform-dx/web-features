@@ -111,12 +111,21 @@ describe("computeBaseline", function () {
     chai.expect(result).to.matchSnapshot();
     assert.notEqual(Boolean(result.baseline), true);
   });
+
+  it("rejects deprecated", function () {
+    const actual = computeBaseline({
+      compatKeys: ["javascript.statements.with"],
+      checkAncestors: false,
+    });
+    assert.equal(actual.baseline, false);
+  });
 });
 
 describe("keystoneDateToStatus()", function () {
   it('returns "low" for recent dates', function () {
     const status = keystoneDateToStatus(
       Temporal.Now.plainDateISO().subtract({ days: 7 }),
+      false,
     );
     assert.equal(status.baseline, "low");
     assert.equal(typeof status.baseline_low_date, "string");
@@ -124,7 +133,10 @@ describe("keystoneDateToStatus()", function () {
   });
 
   it('returns "high" for long past dates', function () {
-    const status = keystoneDateToStatus(Temporal.PlainDate.from("2020-01-01"));
+    const status = keystoneDateToStatus(
+      Temporal.PlainDate.from("2020-01-01"),
+      false,
+    );
     assert.equal(status.baseline, "high");
     assert.equal(typeof status.baseline_low_date, "string");
     assert.equal(typeof status.baseline_high_date, "string");
@@ -133,6 +145,7 @@ describe("keystoneDateToStatus()", function () {
   it("returns false for future dates", function () {
     const status = keystoneDateToStatus(
       Temporal.Now.plainDateISO().add({ days: 90 }),
+      false,
     );
     assert.equal(status.baseline, false);
     assert.equal(status.baseline_low_date, null);
@@ -140,7 +153,17 @@ describe("keystoneDateToStatus()", function () {
   });
 
   it("returns false for null dates", function () {
-    const status = keystoneDateToStatus(null);
+    const status = keystoneDateToStatus(null, false);
+    assert.equal(status.baseline, false);
+    assert.equal(status.baseline_low_date, null);
+    assert.equal(status.baseline_high_date, null);
+  });
+
+  it("returns false for discouraged (deprecated, obsolete, etc.) features", function () {
+    const status = keystoneDateToStatus(
+      Temporal.PlainDate.from("2020-01-01"),
+      true,
+    );
     assert.equal(status.baseline, false);
     assert.equal(status.baseline_low_date, null);
     assert.equal(status.baseline_high_date, null);
