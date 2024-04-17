@@ -26,7 +26,7 @@ compat_features:
   - javascript.builtins.Map.Map
   # Map predates the iterable protocol.
   # - javascript.builtins.Map.Map.iterable_allowed
-  # Support for `new new Map(null)` isn't essential.
+  # Support for `new Map(null)` isn't essential.
   # - javascript.builtins.Map.Map.null_allowed
   - javascript.builtins.Map.clear
   - javascript.builtins.Map.delete
