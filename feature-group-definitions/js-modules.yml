@@ -8,23 +8,15 @@ snapshot: ecmascript-2015
 usage_stats:
   - https://chromestatus.com/metrics/feature/timeline/popularity/2062
   - https://chromestatus.com/metrics/feature/timeline/popularity/2615
-status:
-  baseline: high
-  baseline_low_date: 2018-05-09
-  # Editorial override has been applied to ignore lack of support in SVG.
-  # This could be a note when notes are supported.
-  support:
-    chrome: "61"
-    chrome_android: "61"
-    edge: "16"
-    firefox: "60"
-    firefox_android: "60"
-    safari: "10.1"
-    safari_ios: "10.3"
 compat_features:
+  # TODO: Consider notes or partial implementation for Safari 10.1 due to the
+  # lack of support for nomodule. It's important for fallback behavior, but in
+  # the long term not important if JS modules support is completely ubiquitous.
   - html.elements.script.nomodule
   - html.elements.script.type.module
   - javascript.statements.export
   - javascript.statements.export.default
   - javascript.statements.import
-  - svg.elements.script.type.module
+  # Excluded because SVG is not essential for using JS modules, the 99% use case
+  # would be in HTML even if SVG was perfectly supported.
+  # - svg.elements.script.type.module

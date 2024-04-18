@@ -3,32 +3,22 @@ description: Container size queries with the `@container` at-rule apply styles t
 spec: https://drafts.csswg.org/css-contain-3/#container-queries
 caniuse: css-container-queries
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/4165
-status:
-  baseline: low
-  baseline_low_date: 2023-02-14
-  support:
-    # Chrome 105 is an editorial override. The containerName and containerQuery
-    # CSSOM properties were shipped in Chrome 111, but aren't needed to use the
-    # feature in the typical way, with `@container` in CSS.
-    chrome: "105"
-    chrome_android: "105"
-    edge: "105"
-    firefox: "110"
-    firefox_android: "110"
-    # Safari 16 is an editorial override. The containerName and containerQuery
-    # CSSOM properties were shipped in Safari 17, but aren't needed to use the
-    # feature in the typical way, with `@container` in CSS.
-    safari: "16"
-    safari_ios: "16"
+# The containerName and containerQuery CSSOM properties were shipped in
+# Chrome 111 and Safari 16, but aren't needed to use the feature in the typical
+# way, with `@container` in CSS.
 compat_features:
   - api.CSSContainerRule
-  - api.CSSContainerRule.containerName
-  - api.CSSContainerRule.containerQuery
+  # - api.CSSContainerRule.containerName
+  # - api.CSSContainerRule.containerQuery
   - css.at-rules.container
   - css.properties.contain
   - css.properties.contain.inline-size
   - css.properties.contain.style
   - css.properties.container
   - css.properties.container-name
+  - css.properties.container-name.none
   - css.properties.container-type
+  - css.properties.container-type.inline-size
+  - css.properties.container-type.normal
+  - css.properties.container-type.size
   - css.types.length.container_query_length_units
