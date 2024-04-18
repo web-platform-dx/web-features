@@ -2,6 +2,7 @@ import { Temporal } from "@js-temporal/polyfill";
 import {
   BASELINE_LOW_TO_HIGH_DURATION,
   computeBaseline,
+  setLogger,
 } from "compute-baseline";
 import { Compat, Feature } from "compute-baseline/browser-compat-data";
 import assert from "node:assert/strict";
@@ -9,6 +10,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { isDeepStrictEqual } from "node:util";
+import winston from "winston";
 import YAML, { Document } from "yaml";
 import yargs from "yargs";
 
@@ -24,7 +26,25 @@ const argv = yargs(process.argv.slice(2))
     boolean: true,
     default: false,
     describe: "Check that dist files are up-to-date instead of updating.",
+  })
+  .option("verbose", {
+    alias: "v",
+    describe: "Show more information about calculating the status",
+    type: "count",
+    default: 0,
+    defaultDescription: "warn",
   }).argv;
+
+const logger = winston.createLogger({
+  level: argv.verbose > 0 ? "debug" : "warn",
+  format: winston.format.combine(
+    winston.format.colorize(),
+    winston.format.simple(),
+  ),
+  transports: new winston.transports.Console(),
+});
+
+setLogger(logger);
 
 /**
  * Update (or create) a dist YAML file from a feature definition YAML file.
@@ -77,20 +97,16 @@ function toDist(sourcePath: string): YAML.Document {
       ? taggedCompatFeatures
       : undefined,
     status: taggedCompatFeatures.length
-      ? JSON.parse(
-          computeBaseline({
-            compatKeys: taggedCompatFeatures as [string, ...string[]],
-            checkAncestors: false,
-          }).toJSON(),
-        )
+      ? computeBaseline({
+          compatKeys: taggedCompatFeatures as [string, ...string[]],
+          checkAncestors: false,
+        })
       : undefined,
     statusByCompatFeaturesOverride: Array.isArray(overridden.compatFeatures)
-      ? JSON.parse(
-          computeBaseline({
-            compatKeys: overridden.compatFeatures as [string, ...string[]],
-            checkAncestors: false,
-          }).toJSON(),
-        )
+      ? computeBaseline({
+          compatKeys: overridden.compatFeatures as [string, ...string[]],
+          checkAncestors: false,
+        })
       : undefined,
   };
 
@@ -107,7 +123,12 @@ function toDist(sourcePath: string): YAML.Document {
   if (!overridden.status) {
     const status = generated.statusByCompatFeaturesOverride ?? generated.status;
     if (status) {
-      insertStatus(yaml, status);
+      if (status.discouraged) {
+        logger.warn(
+          `${id}: contains at least one deprecated compat feature and can never be Baseline. Was this intentional?`,
+        );
+      }
+      insertStatus(yaml, JSON.parse(status.toJSON()));
     }
   }
 
@@ -194,7 +215,7 @@ function warnOnNeedlessOverrides(id, overridden, generated) {
         [...generated.compatFeatures].sort(),
       )
     ) {
-      console.warn(
+      logger.warn(
         `${id}: compat_features override matches tags in @mdn/browser-compat-data. Consider deleting this override.`,
       );
     }
@@ -208,7 +229,7 @@ function warnOnNeedlessOverrides(id, overridden, generated) {
       generated.statusByCompatFeaturesOverride,
     )
   ) {
-    console.warn(
+    logger.warn(
       `${id}: status override matches generated status from compat_features override. Consider deleting this override.`,
     );
   }
@@ -217,7 +238,7 @@ function warnOnNeedlessOverrides(id, overridden, generated) {
     generated.status &&
     isDeepStrictEqual(overridden.status, generated.status)
   ) {
-    console.warn(
+    logger.warn(
       `${id}: status override matches generated status from tags. Consider deleting this override.`,
     );
   }
@@ -248,7 +269,7 @@ function main() {
     let updateNeeded = false;
     for (const [source, dist] of sourceToDist.entries()) {
       if (!checkDistFile(source, dist)) {
-        console.error(
+        logger.error(
           `${dist} needs to be updated. Use npm run dist ${source} to update.`,
         );
         updateNeeded = true;

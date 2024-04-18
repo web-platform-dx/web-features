@@ -76,17 +76,48 @@ describe("computeBaseline", function () {
   });
 
   it("finds discrepancies with ancestors (checkAncestors)", function () {
-    const compatKeys: [string, ...string[]] = ["api.Notification.body"];
-    const result = computeBaseline({ compatKeys, checkAncestors: false });
+    const result = computeBaseline({
+      compatKeys: ["api.Notification.body"],
+      checkAncestors: false,
+    });
+    const resultExplicit = computeBaseline({
+      compatKeys: ["api.Notification", "api.Notification.body"],
+      checkAncestors: false,
+    });
     const resultWithAncestors = computeBaseline({
-      compatKeys,
+      compatKeys: ["api.Notification.body"],
       checkAncestors: true,
     });
+
+    assert.equal(resultExplicit.toJSON(), resultWithAncestors.toJSON());
+    assert.notEqual(result.toJSON(), resultWithAncestors.toJSON());
+
     assert.notEqual(result.baseline, resultWithAncestors.baseline);
     assert.notEqual(
       result.baseline_low_date?.toString(),
       resultWithAncestors.baseline_low_date?.toString(),
     );
+
+    chai.expect(result).to.matchSnapshot();
+    chai.expect(resultExplicit).to.matchSnapshot();
+    chai.expect(resultWithAncestors).to.matchSnapshot();
+  });
+
+  it("disregards support that's been removed", function () {
+    const result = computeBaseline({
+      compatKeys: ["api.AudioTrack"],
+      checkAncestors: false,
+    });
+    chai.expect(result).to.matchSnapshot();
+    assert.notEqual(Boolean(result.baseline), true);
+  });
+
+  it("rejects deprecated", function () {
+    const actual = computeBaseline({
+      compatKeys: ["javascript.statements.with"],
+      checkAncestors: false,
+    });
+    assert.equal(actual.baseline, false);
   });
 });
 
@@ -94,6 +125,7 @@ describe("keystoneDateToStatus()", function () {
   it('returns "low" for recent dates', function () {
     const status = keystoneDateToStatus(
       Temporal.Now.plainDateISO().subtract({ days: 7 }),
+      false,
     );
     assert.equal(status.baseline, "low");
     assert.equal(typeof status.baseline_low_date, "string");
@@ -101,7 +133,10 @@ describe("keystoneDateToStatus()", function () {
   });
 
   it('returns "high" for long past dates', function () {
-    const status = keystoneDateToStatus(Temporal.PlainDate.from("2020-01-01"));
+    const status = keystoneDateToStatus(
+      Temporal.PlainDate.from("2020-01-01"),
+      false,
+    );
     assert.equal(status.baseline, "high");
     assert.equal(typeof status.baseline_low_date, "string");
     assert.equal(typeof status.baseline_high_date, "string");
@@ -110,6 +145,7 @@ describe("keystoneDateToStatus()", function () {
   it("returns false for future dates", function () {
     const status = keystoneDateToStatus(
       Temporal.Now.plainDateISO().add({ days: 90 }),
+      false,
     );
     assert.equal(status.baseline, false);
     assert.equal(status.baseline_low_date, null);
@@ -117,7 +153,17 @@ describe("keystoneDateToStatus()", function () {
   });
 
   it("returns false for null dates", function () {
-    const status = keystoneDateToStatus(null);
+    const status = keystoneDateToStatus(null, false);
+    assert.equal(status.baseline, false);
+    assert.equal(status.baseline_low_date, null);
+    assert.equal(status.baseline_high_date, null);
+  });
+
+  it("returns false for discouraged (deprecated, obsolete, etc.) features", function () {
+    const status = keystoneDateToStatus(
+      Temporal.PlainDate.from("2020-01-01"),
+      true,
+    );
     assert.equal(status.baseline, false);
     assert.equal(status.baseline_low_date, null);
     assert.equal(status.baseline_high_date, null);

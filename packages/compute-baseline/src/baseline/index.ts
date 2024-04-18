@@ -10,6 +10,21 @@ import { browsers } from "./core-browser-set";
 import { isFuture, toDateString, toHighDate } from "./date-utils";
 import { support } from "./support";
 
+interface Logger {
+  debug?: typeof console.debug;
+  info?: typeof console.info;
+  log?: typeof console.log;
+  warn?: typeof console.warn;
+}
+
+export let logger: Logger | undefined = process.env["DEBUG_COMPUTE_BASELINE"]
+  ? console
+  : undefined;
+
+export function setLogger(logFacility: Logger | undefined) {
+  logger = logFacility;
+}
+
 // Number of months after Baseline low that Baseline high happens. Keep in sync with definition:
 // https://github.com/web-platform-dx/web-features/blob/main/docs/baseline.md#wider-support-high-status
 export const BASELINE_LOW_TO_HIGH_DURATION = Temporal.Duration.from({
@@ -29,6 +44,7 @@ interface SupportStatus {
   baseline: BaselineStatus;
   baseline_low_date: BaselineDate;
   baseline_high_date: BaselineDate;
+  discouraged: boolean;
   support: Map<Browser, Release | undefined>;
   toJSON: () => string;
 }
@@ -52,13 +68,17 @@ export function computeBaseline(
   const keystoneDate = findKeystoneDate(
     statuses.flatMap((s) => [...s.support.values()]),
   );
-  const { baseline, baseline_low_date, baseline_high_date } =
-    keystoneDateToStatus(keystoneDate);
+  const { baseline, baseline_low_date, baseline_high_date, discouraged } =
+    keystoneDateToStatus(
+      keystoneDate,
+      statuses.some((s) => s.discouraged),
+    );
 
   return {
     baseline,
     baseline_low_date,
     baseline_high_date,
+    discouraged,
     support,
     toJSON: function () {
       return jsonify(this);
@@ -75,14 +95,15 @@ function calculate(compatKey: string, compat: Compat): SupportStatus {
   const s = support(f, browsers(compat));
   const keystoneDate = findKeystoneDate([...s.values()]);
 
-  const { baseline, baseline_low_date, baseline_high_date } =
-    keystoneDateToStatus(keystoneDate);
+  const { baseline, baseline_low_date, baseline_high_date, discouraged } =
+    keystoneDateToStatus(keystoneDate, f.deprecated ?? false);
 
   return {
     compatKey,
     baseline,
     baseline_low_date,
     baseline_high_date,
+    discouraged,
     support: s,
     toJSON: function () {
       return jsonify(this);
@@ -146,23 +167,29 @@ function collateSupport(
  * Given several dates, find the most-recent date and determine the
  * corresponding Baseline status and high and low dates.
  */
-export function keystoneDateToStatus(date: Temporal.PlainDate | null): {
+export function keystoneDateToStatus(
+  date: Temporal.PlainDate | null,
+  discouraged: boolean,
+): {
   baseline: BaselineStatus;
   baseline_low_date: BaselineDate;
   baseline_high_date: BaselineDate;
+  discouraged: boolean;
 } {
   let baseline: BaselineStatus;
   let baseline_low_date;
   let baseline_high_date;
 
-  if (date === null || isFuture(date)) {
+  if (discouraged || date === null || isFuture(date)) {
     baseline = false;
     baseline_low_date = null;
     baseline_high_date = null;
+    discouraged = discouraged;
   } else {
     baseline = "low";
     baseline_low_date = toDateString(date);
     baseline_high_date = null;
+    discouraged = false;
   }
 
   if (baseline === "low") {
@@ -176,7 +203,7 @@ export function keystoneDateToStatus(date: Temporal.PlainDate | null): {
     }
   }
 
-  return { baseline, baseline_low_date, baseline_high_date };
+  return { baseline, baseline_low_date, baseline_high_date, discouraged };
 }
 
 /**
