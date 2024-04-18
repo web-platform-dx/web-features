@@ -16,82 +16,42 @@ status:
     safari: "12.1"
     safari_ios: "12.2"
 compat_features:
-  # - api.Element.ariaAtomic
-  # - api.Element.ariaAutoComplete
-  # - api.Element.ariaBusy
-  # - api.Element.ariaChecked
-  # - api.Element.ariaColCount
-  # - api.Element.ariaColIndex
-  # - api.Element.ariaColSpan
-  # - api.Element.ariaCurrent
-  # - api.Element.ariaDisabled
-  # - api.Element.ariaExpanded
-  # - api.Element.ariaHasPopup
-  # - api.Element.ariaHidden
-  # - api.Element.ariaInvalid
-  # - api.Element.ariaKeyShortcuts
-  # - api.Element.ariaLabel
-  # - api.Element.ariaLevel
-  # - api.Element.ariaLive
-  # - api.Element.ariaModal
-  # - api.Element.ariaMultiLine
-  # - api.Element.ariaMultiSelectable
-  # - api.Element.ariaOrientation
-  # - api.Element.ariaPlaceholder
-  # - api.Element.ariaPosInSet
-  # - api.Element.ariaPressed
-  # - api.Element.ariaReadOnly
-  # - api.Element.ariaRelevant
-  # - api.Element.ariaRequired
-  # - api.Element.ariaRoleDescription
-  # - api.Element.ariaRowCount
-  # - api.Element.ariaRowIndex
-  # - api.Element.ariaRowSpan
-  # - api.Element.ariaSelected
-  # - api.Element.ariaSetSize
-  # - api.Element.ariaSort
-  # - api.Element.ariaValueMax
-  # - api.Element.ariaValueMin
-  # - api.Element.ariaValueNow
-  # - api.Element.ariaValueText
+  - api.Element.ariaAtomic
+  - api.Element.ariaAutoComplete
+  - api.Element.ariaBusy
+  - api.Element.ariaChecked
+  - api.Element.ariaColCount
+  - api.Element.ariaColIndex
+  - api.Element.ariaColSpan
+  - api.Element.ariaCurrent
+  - api.Element.ariaDisabled
+  - api.Element.ariaExpanded
+  - api.Element.ariaHasPopup
+  - api.Element.ariaHidden
+  - api.Element.ariaInvalid
+  - api.Element.ariaKeyShortcuts
+  - api.Element.ariaLabel
+  - api.Element.ariaLevel
+  - api.Element.ariaLive
+  - api.Element.ariaModal
+  - api.Element.ariaMultiLine
+  - api.Element.ariaMultiSelectable
+  - api.Element.ariaOrientation
+  - api.Element.ariaPlaceholder
+  - api.Element.ariaPosInSet
+  - api.Element.ariaPressed
+  - api.Element.ariaReadOnly
+  - api.Element.ariaRelevant
+  - api.Element.ariaRequired
+  - api.Element.ariaRoleDescription
+  - api.Element.ariaRowCount
+  - api.Element.ariaRowIndex
+  - api.Element.ariaRowSpan
+  - api.Element.ariaSelected
+  - api.Element.ariaSetSize
+  - api.Element.ariaSort
+  - api.Element.ariaValueMax
+  - api.Element.ariaValueMin
+  - api.Element.ariaValueNow
+  - api.Element.ariaValueText
   - api.Element.role
-  # - api.ElementInternals
-  # - api.ElementInternals.ariaAtomic
-  # - api.ElementInternals.ariaAutoComplete
-  # - api.ElementInternals.ariaBusy
-  # - api.ElementInternals.ariaChecked
-  # - api.ElementInternals.ariaColCount
-  # - api.ElementInternals.ariaColIndex
-  # - api.ElementInternals.ariaColSpan
-  # - api.ElementInternals.ariaCurrent
-  # - api.ElementInternals.ariaDisabled
-  # - api.ElementInternals.ariaExpanded
-  # - api.ElementInternals.ariaHasPopup
-  # - api.ElementInternals.ariaHidden
-  # - api.ElementInternals.ariaInvalid
-  # - api.ElementInternals.ariaKeyShortcuts
-  # - api.ElementInternals.ariaLabel
-  # - api.ElementInternals.ariaLevel
-  # - api.ElementInternals.ariaLive
-  # - api.ElementInternals.ariaModal
-  # - api.ElementInternals.ariaMultiLine
-  # - api.ElementInternals.ariaMultiSelectable
-  # - api.ElementInternals.ariaOrientation
-  # - api.ElementInternals.ariaPlaceholder
-  # - api.ElementInternals.ariaPosInSet
-  # - api.ElementInternals.ariaPressed
-  # - api.ElementInternals.ariaReadOnly
-  # - api.ElementInternals.ariaRelevant
-  # - api.ElementInternals.ariaRequired
-  # - api.ElementInternals.ariaRoleDescription
-  # - api.ElementInternals.ariaRowCount
-  # - api.ElementInternals.ariaRowIndex
-  # - api.ElementInternals.ariaRowSpan
-  # - api.ElementInternals.ariaSelected
-  # - api.ElementInternals.ariaSetSize
-  # - api.ElementInternals.ariaSort
-  # - api.ElementInternals.ariaValueMax
-  # - api.ElementInternals.ariaValueMin
-  # - api.ElementInternals.ariaValueNow
-  # - api.ElementInternals.ariaValueText
-  # - api.ElementInternals.role
