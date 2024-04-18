@@ -10,7 +10,12 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { isDeepStrictEqual } from "node:util";
-import { marked } from "marked";
+import rehypeStringify from 'rehype-stringify';
+import { remark } from 'remark';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import stripMarkdown from 'strip-markdown';
+import { unified } from 'unified';
 import winston from "winston";
 import YAML, { Document } from "yaml";
 import yargs from "yargs";
@@ -148,13 +153,23 @@ function convertMarkdown(yaml: YAML.Document) {
   if (typeof description !== "string") {
     return;
   }
-  let html = marked.parse(description).trim();
+
+  const text = remark()
+    .use(stripMarkdown)
+    .processSync(description).value.trim();
+  yaml.set("description", text);
+
+  let html = unified()
+    .use(remarkParse)
+    .use(remarkRehype)
+    .use(rehypeStringify)
+    .processSync(description).value.trim();
   // Remove leading <p> and trailing </p> if there is only one of each in the
   // description. (If there are multiple paragraphs, let them be.)
   if (html.lastIndexOf('<p>') === 0 && html.indexOf('</p>') === html.length - 4) {
     html = html.substring(3, html.length - 4);
   }
-  yaml.set("description", html);
+  yaml.set("descriptionHTML", html);
 }
 
 function resolveBaselineHighDate(status) {
