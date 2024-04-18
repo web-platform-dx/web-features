@@ -1,6 +1,5 @@
-import { release } from "os";
+import { logger } from ".";
 import { Browser } from "../browser-compat-data/browser";
-import { Compat } from "../browser-compat-data/compat";
 import { Feature } from "../browser-compat-data/feature";
 import { Release } from "../browser-compat-data/release";
 import { Qualifications } from "../browser-compat-data/supportStatements";
@@ -25,9 +24,14 @@ export function support(feature: Feature, browsers: Browser[]): Support {
       }
     }
 
-    logReleaseOmissions(feature, qualifiedReleases, unqualifiedReleases);
+    const currentlySupported = unqualifiedReleases.includes(b.current());
+    if (currentlySupported) {
+      support.set(b, lastInitialRelease(unqualifiedReleases));
+    } else {
+      support.set(b, undefined);
+    }
 
-    support.set(b, lastInitialRelease(unqualifiedReleases));
+    logReleaseOmissions(feature, qualifiedReleases, unqualifiedReleases);
   }
 
   return support;
@@ -57,6 +61,10 @@ function logReleaseOmissions(
   qualified: { release: Release; qualifications: Qualifications }[],
   unqualified: Release[],
 ) {
+  if (!logger || !logger.debug) {
+    return;
+  }
+
   const unqual = new Set(unqualified);
   const aggregated = new Map<
     Browser,
@@ -80,7 +88,7 @@ function logReleaseOmissions(
         ),
       ),
     );
-    console.warn(
+    logger.debug(
       `${feature}: ${browser} has ${releases.length} releases deemed unsupported due to ${qualifications.join(", ")}. See underlying data for details.`,
     );
   }

@@ -1,0 +1,15 @@
+name: Web authentication easy public key access
+description: The `getAuthenticatorData()`, `getPublicKey()`, and `getPublicKeyAlgorithm()` methods of `AuthenticatorAttestationResponse` access credential data inside `attestationObject` without the need to parse it.
+spec: https://w3c.github.io/webauthn/#sctn-public-key-easy
+# Spec and implementation links:
+# https://github.com/w3c/webauthn/issues/1363
+# https://github.com/w3c/webauthn/pull/1395
+# https://issues.chromium.org/issues/40131330
+# https://bugzilla.mozilla.org/show_bug.cgi?id=1816519
+# https://bugzilla.mozilla.org/show_bug.cgi?id=1816520
+# https://bugs.webkit.org/show_bug.cgi?id=241878
+# https://bugs.webkit.org/show_bug.cgi?id=238966
+compat_features:
+  - api.AuthenticatorAttestationResponse.getAuthenticatorData
+  - api.AuthenticatorAttestationResponse.getPublicKey
+  - api.AuthenticatorAttestationResponse.getPublicKeyAlgorithm

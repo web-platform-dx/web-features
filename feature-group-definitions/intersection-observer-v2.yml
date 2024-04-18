@@ -3,6 +3,12 @@ description: The `trackVisibility` parameter for the `IntersectionObserver` cons
 spec: https://w3c.github.io/IntersectionObserver/v2/
 caniuse: intersectionobserver-v2
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/3051
-compat_features:
-  - api.IntersectionObserver.IntersectionObserver.options_trackVisibility_parameter
-  - api.IntersectionObserverEntry.isVisible
+# TODO: Add the API to BCD and compute this status:
+# https://github.com/mdn/browser-compat-data/issues/22862
+status:
+  baseline: false
+  support:
+    # https://chromestatus.com/feature/5878481493688320
+    chrome: "74"
+    chrome_android: "74"
+    edge: "79"
