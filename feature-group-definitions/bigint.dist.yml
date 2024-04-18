@@ -8,17 +8,18 @@ caniuse: bigint
 snapshot: ecmascript-2020
 status:
   baseline: high
-  baseline_low_date: 2021-09-20
-  baseline_high_date: 2024-03-20
+  baseline_low_date: 2020-09-16
+  baseline_high_date: 2023-03-16
   support:
     chrome: "67"
     chrome_android: "67"
     edge: "79"
     firefox: "68"
     firefox_android: "68"
-    safari: "15"
-    safari_ios: "15"
+    safari: "14"
+    safari_ios: "14"
 compat_features:
+  # TODO: remove when https://github.com/mdn/browser-compat-data/pull/22869 is released
   - javascript.builtins.BigInt
   - javascript.builtins.BigInt.BigInt
   - javascript.builtins.BigInt.asIntN
@@ -26,11 +27,3 @@ compat_features:
   - javascript.builtins.BigInt.toLocaleString
   - javascript.builtins.BigInt.toString
   - javascript.builtins.BigInt.valueOf
-  - javascript.builtins.BigInt64Array
-  - javascript.builtins.BigInt64Array.BigInt64Array
-  - javascript.builtins.BigUint64Array
-  - javascript.builtins.BigUint64Array.BigUint64Array
-  - javascript.builtins.DataView.getBigInt64
-  - javascript.builtins.DataView.getBigUint64
-  - javascript.builtins.DataView.setBigInt64
-  - javascript.builtins.DataView.setBigUint64

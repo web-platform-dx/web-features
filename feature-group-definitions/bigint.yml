@@ -3,3 +3,12 @@ description: The `BigInt` JavaScript type represents integers of any size, inclu
 spec: https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-bigint-objects
 caniuse: bigint
 snapshot: ecmascript-2020
+compat_features:
+  # TODO: remove when https://github.com/mdn/browser-compat-data/pull/22869 is released
+  - javascript.builtins.BigInt
+  - javascript.builtins.BigInt.BigInt
+  - javascript.builtins.BigInt.asIntN
+  - javascript.builtins.BigInt.asUintN
+  - javascript.builtins.BigInt.toLocaleString
+  - javascript.builtins.BigInt.toString
+  - javascript.builtins.BigInt.valueOf
