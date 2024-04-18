@@ -2,6 +2,7 @@ name: File and directory entries
 description: File and directory entries represent a virtual file system for working with files and directories dragged and dropped into the browser.
 spec: https://wicg.github.io/entries-api/
 compat_features:
+  - api.DataTransferItem.webkitGetAsEntry
   - api.FileSystem
   - api.FileSystem.name
   - api.FileSystem.root
@@ -36,3 +37,4 @@ compat_features:
   - api.FileSystemHandle.isSameEntry
   - api.FileSystemHandle.kind
   - api.FileSystemHandle.name
+  - api.HTMLInputElement.webkitEntries
