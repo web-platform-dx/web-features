@@ -3,6 +3,9 @@
   "private": true,
   "description": "Exploring the set of interoperable features in the Web Platform",
   "version": "0.1.0",
+  "workspaces": [
+    "packages/compute-baseline"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/web-platform-dx/web-features.git"
@@ -17,31 +20,30 @@
     "dist": "tsx scripts/dist.ts",
     "schema-defs": "ts-json-schema-generator --tsconfig ./tsconfig.json --type FeatureData --path ./types.ts --id defs",
     "schema-defs:write": "npm run schema-defs -- --out ./schemas/defs.schema.json",
-    "test": "npm run test:caniuse -- --quiet && npm run test:schema && npm run test:specs && npm run test:compute-baseline && npm run test:format && npm run test:dist",
+    "test": "npm run test:caniuse -- --quiet && npm run test:schema && npm run test:specs && npm run test:format && npm run test:dist && npm run test --workspaces",
     "test:caniuse": "tsx scripts/caniuse.ts",
     "test:dist": "tsx scripts/dist.ts --check feature-group-definitions/*.dist.yml",
     "test:schema": "tsx scripts/schema.ts",
     "test:specs": "tsx scripts/specs.ts",
     "test:format": "prettier --check .",
-    "test:compute-baseline": "cd packages/compute-baseline/ && npm ci && npm test",
     "format": "npx prettier --write .",
     "feature-init": "tsx scripts/feature-init.ts"
   },
   "devDependencies": {
     "@js-temporal/polyfill": "^0.4.4",
+    "@mdn/browser-compat-data": "^5.5.22",
     "@types/caniuse-lite": "^1.0.4",
     "@types/node": "^18.19.31",
     "ajv": "^8.12.0",
     "ajv-formats": "^3.0.1",
-    "caniuse-lite": "^1.0.30001608",
-    "compute-baseline": "file:./packages/compute-baseline",
+    "caniuse-lite": "^1.0.30001610",
     "fast-json-stable-stringify": "^2.1.0",
     "fdir": "^6.1.1",
     "prettier": "^3.2.5",
-    "ts-json-schema-generator": "^1.5.1",
+    "ts-json-schema-generator": "^2.0.1",
     "tsx": "^4.7.2",
-    "typescript": "^5.4.3",
-    "web-specs": "^3.7.1",
+    "typescript": "^5.4.5",
+    "web-specs": "^3.8.0",
     "winston": "^3.13.0",
     "yaml": "^2.4.1",
     "yargs": "^17.7.2"
