@@ -193,3 +193,10 @@ For example, instead of "The `input()` method enables the usage of…" write "Th
 ([#753](https://github.com/web-platform-dx/web-features/pull/753#discussion_r1560914869))
 
 It's OK to use "usage" only in the sense of "consumption" (as in "mobile data usage") or "customary practice" (as in "the style guide's usage recommendations").
+
+##### `window`
+
+Because `window` is both the global object and represents the browser window, there are cases where it makes sense to refer to either `window.<object>` or `<object>` (such as `window.fetch` and `fetch`).
+Use the most customary reference in each case.
+If you're not sure what's customary, look to high-profile published examples, such as those on MDN reference pages for the feature.
+([#913](https://github.com/web-platform-dx/web-features/pull/913#discussion_r1572601975))
