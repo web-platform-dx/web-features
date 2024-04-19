@@ -1,0 +1,22 @@
+name: messageerror
+description: The `messageerror` event TODO.
+spec:
+  - https://html.spec.whatwg.org/multipage/indices.html#event-messageerror
+  - https://w3c.github.io/ServiceWorker/#eventdef-serviceworkerglobalscope-messageerror
+compat_features:
+  # BroadcastChannel as a whole wasn't supported in Edge 18.
+  #- api.BroadcastChannel.messageerror_event
+  - api.DedicatedWorkerGlobalScope.messageerror_event
+  - api.MessagePort.messageerror_event
+  - api.ServiceWorkerContainer.messageerror_event
+  # The messageerror event seems to not fire on ServiceWorkerGlobalScope in
+  # WebKit. This is an important part of the feature, but it's not crystal clear
+  # if it might fire under some conditions. TODO: Revisit this when
+  # https://webkit.org/b/272967 has been resolved or has comments.
+  # - api.ServiceWorkerGlobalScope.messageerror_event
+  - api.Window.messageerror_event
+  # The messageerror event can only fire on Worker in rare conditions such as
+  # going out-of-memory and the onmessageerror property is missing in Blink:
+  # https://github.com/whatwg/html/issues/10262
+  # https://crbug.com/335744333
+  # - api.Worker.messageerror_event
