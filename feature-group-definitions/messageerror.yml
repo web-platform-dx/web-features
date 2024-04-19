@@ -1,5 +1,5 @@
 name: messageerror
-description: The `messageerror` event TODO.
+description: The `messageerror` event fires on a target, such as a window or worker, when an incoming message cannot be deserialized. This event can fire for many types of messages, such as broadcast channels or cross-document messaging.
 spec:
   - https://html.spec.whatwg.org/multipage/indices.html#event-messageerror
   - https://w3c.github.io/ServiceWorker/#eventdef-serviceworkerglobalscope-messageerror
