@@ -4,7 +4,7 @@
 # Note: This does not include `background-clip: text`, which is a separate
 # feature. Consider both if making any changes. They may eventually merge.
 name: background-clip
-description: "The background-clip CSS property sets the extent of the background: the padding box, the content box, or the default border box."
+description: "The `background-clip` CSS property sets the extent of the background: the padding box, the content box, or the default border box."
 spec: https://drafts.csswg.org/css-backgrounds-3/#background-clip
 status:
   baseline: high
@@ -23,4 +23,3 @@ compat_features:
   - css.properties.background-clip.border-box
   - css.properties.background-clip.content-box
   - css.properties.background-clip.padding-box
-descriptionHTML: "The <code>background-clip</code> CSS property sets the extent of the background: the padding box, the content box, or the default border box."

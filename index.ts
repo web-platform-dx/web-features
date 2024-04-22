@@ -6,6 +6,12 @@ import YAML from 'yaml';
 import { FeatureData } from './types';
 import { Temporal } from '@js-temporal/polyfill';
 
+import { toString as hastTreeToString } from 'hast-util-to-string';
+import rehypeStringify from 'rehype-stringify';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import { unified } from 'unified';
+
 import { BASELINE_LOW_TO_HIGH_DURATION } from 'compute-baseline';
 
 // The longest description allowed, to avoid them growing into documentation.
@@ -15,6 +21,7 @@ const descriptionMaxLength = 300;
 // They're not part of the public schema (yet).
 const omittables = [
     "description",
+    "descriptionHTML",
     "snapshot",
     "group"
 ]
@@ -87,8 +94,30 @@ function* identifiers(value) {
     }
 }
 
+function convertMarkdown(markdown: string) {
+    const mdTree = unified().use(remarkParse).parse(markdown);
+    const htmlTree = unified().use(remarkRehype).runSync(mdTree);
+    const text = hastTreeToString(htmlTree);
+
+    let html = unified().use(rehypeStringify).stringify(htmlTree);
+    // Remove leading <p> and trailing </p> if there is only one of each in the
+    // description. (If there are multiple paragraphs, let them be.)
+    if (html.lastIndexOf('<p>') === 0 && html.indexOf('</p>') === html.length - 4) {
+      html = html.substring(3, html.length - 4);
+    }
+
+    return { text, html };
+}
+
 const features: { [key: string]: FeatureData } = {};
 for (const [key, data] of yamlEntries('feature-group-definitions')) {
+    // Convert markdown to text+HTML.
+    if (data.description) {
+        const { text, html } = convertMarkdown(data.description);
+        data.description = text;
+        data.descriptionHTML = html;
+    }
+
     // Compute Baseline high date from low date.
     const isDist = fs.existsSync(`feature-group-definitions/${key}.dist.yml`);
     if (!isDist && data.status?.baseline_high_date) {

@@ -3,7 +3,7 @@
 
 name: Device orientation events (intial support)
 # TODO: Add a note that coordinates can differ noticeably between platforms and devices
-description: The DeviceMotion and DeviceOrientation events report the movement and orientation of the browser's device in physical space.
+description: The `DeviceMotion` and `DeviceOrientation` events report the movement and orientation of the browser's device in physical space.
 spec: https://w3c.github.io/deviceorientation/
 caniuse: deviceorientation
 status:
@@ -29,4 +29,3 @@ compat_features:
   - api.DeviceOrientationEvent.gamma
   - api.Window.devicemotion_event
   - api.Window.deviceorientation_event
-descriptionHTML: The <code>DeviceMotion</code> and <code>DeviceOrientation</code> events report the movement and orientation of the browser's device in physical space.
