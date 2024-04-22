@@ -3,3 +3,15 @@ description: The WebP image format is a raster graphics file format that support
 spec: https://www.ietf.org/archive/id/draft-zern-webp-15.html
 caniuse: webp
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/3797
+# TODO: Add notes about animated WebP coming later in Chrome (but don't mark this as partially supported)
+status:
+  baseline: high
+  baseline_low_date: 2020-09-16
+  support:
+    chrome: "9"
+    chrome_android: "18"
+    edge: "18"
+    firefox: "65"
+    firefox_android: "65"
+    safari: "14"
+    safari_ios: "14"
