@@ -1,0 +1,7 @@
+name: Inert elements
+description: The `inert` HTML attribute marks an element and its descendants as non-interactive. Inert elements don't get focus or fire `click` events.
+spec: https://html.spec.whatwg.org/multipage/interaction.html#inert-subtrees
+group: html
+compat_features:
+  - api.HTMLElement.inert
+  - html.global_attributes.inert

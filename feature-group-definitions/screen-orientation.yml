@@ -1,0 +1,10 @@
+name: Screen orientation
+description: The `screen.orientation` API gets information about the orientation of the viewport, such as landscape or portrait. With this API, you can adapt an application's layout or behavior in response to changes in orientation.
+spec: https://w3c.github.io/screen-orientation/
+caniuse: screen-orientation
+compat_features:
+  - api.Screen.orientation
+  - api.ScreenOrientation
+  - api.ScreenOrientation.angle
+  - api.ScreenOrientation.change_event
+  - api.ScreenOrientation.type

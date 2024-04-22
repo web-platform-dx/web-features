@@ -76,20 +76,16 @@
           "description": "Whether a feature is considered a \"baseline\" web platform feature and when it achieved that status",
           "properties": {
             "baseline": {
-              "anyOf": [
-                {
-                  "enum": [
-                    "high",
-                    "low"
-                  ],
-                  "type": "string"
-                },
-                {
-                  "const": false,
-                  "type": "boolean"
-                }
+              "description": "Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false)",
+              "enum": [
+                "high",
+                "low",
+                false
               ],
-              "description": "Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false)"
+              "type": [
+                "string",
+                "boolean"
+              ]
             },
             "baseline_high_date": {
               "description": "Date the feature achieved Baseline high status",

@@ -5,7 +5,8 @@ caniuse: fullscreen
 compat_features:
   - api.Document.exitFullscreen
   - api.Document.exitFullscreen.returns_promise
-  - api.Document.fullscreen
+  # Historical in spec, deprecated in BCD.
+  # - api.Document.fullscreen
   - api.Document.fullscreenchange_event
   - api.Document.fullscreenElement
   - api.Document.fullscreenEnabled
@@ -18,5 +19,8 @@ compat_features:
   - api.ShadowRoot.fullscreenElement
   - css.selectors.backdrop.fullscreen
   - css.selectors.fullscreen
-  - css.selectors.fullscreen.all_elements
+  # Only supported in Firefox and non-essential since only the topmost
+  # fullscreen element is typically visible. For this to matter, you need nested
+  # fullscreen with non-opaque background in the topmost fullscreen element.
+  # - css.selectors.fullscreen.all_elements
   - html.elements.iframe.allowfullscreen

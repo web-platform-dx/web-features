@@ -1,0 +1,21 @@
+name: Autofocus
+description: The `autofocus` HTML attribute gives focus to an element on page load.
+spec: https://html.spec.whatwg.org/multipage/interaction.html#the-autofocus-attribute
+caniuse: autofocus
+# TODO: Add a note explaining that this expanded to cover all elements at a later date
+status:
+  baseline: high
+  baseline_low_date: 2015-07-29
+  support:
+    chrome: "1"
+    chrome_android: "18"
+    edge: "12"
+    firefox: "1"
+    firefox_android: "4"
+    safari: "4"
+    safari_ios: "3.2"
+compat_features:
+  - api.HTMLElement.autofocus
+  - api.MathMLElement.autofocus
+  - api.SVGElement.autofocus
+  - html.global_attributes.autofocus

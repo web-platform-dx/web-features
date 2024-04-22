@@ -7,12 +7,12 @@ compat_features:
   - api.Element.assignedSlot
   - api.Element.slot
   - api.HTMLSlotElement
-  - api.HTMLSlotElement.assign
-  - api.HTMLSlotElement.assignedElements
   - api.HTMLSlotElement.assignedNodes
+  # A later minor addition (element subset of assignedNodes)
+  # - api.HTMLSlotElement.assignedElements
   - api.HTMLSlotElement.name
-  - api.HTMLSlotElement.slotchange_event
-  - api.ShadowRoot.slotAssignment
+  # https://github.com/mdn/browser-compat-data/pull/22826
+  # - api.HTMLSlotElement.slotchange_event
   - api.Text.assignedSlot
   - css.selectors.slotted
   - html.elements.slot
