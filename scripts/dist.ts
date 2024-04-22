@@ -10,11 +10,10 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { isDeepStrictEqual } from "node:util";
+import { toString as hastTreeToString } from 'hast-util-to-string';
 import rehypeStringify from 'rehype-stringify';
-import { remark } from 'remark';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
-import stripMarkdown from 'strip-markdown';
 import { unified } from 'unified';
 import winston from "winston";
 import YAML, { Document } from "yaml";
@@ -154,16 +153,13 @@ function convertMarkdown(yaml: YAML.Document) {
     return;
   }
 
-  const text = remark()
-    .use(stripMarkdown)
-    .processSync(description).value.trim();
+  const mdTree = unified().use(remarkParse).parse(description);
+  const htmlTree = unified().use(remarkRehype).runSync(mdTree);
+  const text = hastTreeToString(htmlTree);
   yaml.set("description", text);
 
-  let html = unified()
-    .use(remarkParse)
-    .use(remarkRehype)
-    .use(rehypeStringify)
-    .processSync(description).value.trim();
+
+  let html = unified().use(rehypeStringify).stringify(htmlTree);
   // Remove leading <p> and trailing </p> if there is only one of each in the
   // description. (If there are multiple paragraphs, let them be.)
   if (html.lastIndexOf('<p>') === 0 && html.indexOf('</p>') === html.length - 4) {
