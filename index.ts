@@ -99,12 +99,6 @@ for (const [key, data] of yamlEntries('feature-group-definitions')) {
         data.status.baseline_high_date = String(highDate);
     }
 
-    // TODO: remove this when description is required by schema.
-    // Part of https://github.com/web-platform-dx/web-features/pull/761.
-    if (!data.description) {
-        throw new Error(`description is missing from ${key}.yml`);
-    }
-
     // Ensure description is not too long.
     if (data.description?.length > descriptionMaxLength) {
         throw new Error(`description in ${key}.yml is too long, ${data.description.length} characters. The maximum allowed length is ${descriptionMaxLength}.`)
