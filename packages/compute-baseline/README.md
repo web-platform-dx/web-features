@@ -40,13 +40,69 @@ Run:
 
 ## Usage
 
+### Check support for a group of compat keys
+
 ```javascript
 import { computeBaseline } from "compute-baseline";
 
 computeBaseline({
-  compatKeys: ["css.properties.border-color"],
-  checkAncestors: false,
+  compatKeys: [
+    "javascript.builtins.AsyncFunction",
+    "javascript.builtins.AsyncFunction.AsyncFunction",
+    "javascript.operators.async_function",
+    "javascript.operators.await",
+    "javascript.statements.async_function",
+  ],
 });
+```
+
+Returns:
+
+```
+{
+  baseline: 'high',
+  baseline_low_date: '2017-04-05',
+  baseline_high_date: '2019-10-05',
+  discouraged: false,
+  support: Map(7) { … }
+  toJSON: [Function: toJSON]
+}
+```
+
+Use the `toJSON()` method to get a `web-features`-like plain JSON representation of the status.
+
+### Check support for a single support key
+
+Sometimes it can be hepful to know if parent features have less support than the specific feature you'r checking (for example, the parent is behind a prefix or flag) when computing a status for a deeply-nested feature.
+This is typically most interesting when checking a single key.
+Use the `withAncestors` option:
+
+```javascript
+import { computeBaseline } from "compute-baseline";
+
+computeBaseline({
+  compatKeys: ["api.Notification.body"],
+  withAncestors: true,
+});
+```
+
+### Bring your own compatibility data
+
+If you don't want to import `@mdn/browser-compat-data` as your data source, you can bring your own schema-compatible compat data.
+
+```javascript
+import data from "some-parsed-json-file";
+import { computeBaseline } from "compute-baseline";
+import { Compat } from "compute-baseline/browser-compat-data";
+
+const compat = new Compat(data);
+
+computeBaseline(
+  {
+    compatKeys: ["css.properties.border-color"],
+  },
+  compat,
+);
 ```
 
 <!-- TODO: API reference -->
