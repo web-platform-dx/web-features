@@ -3,7 +3,7 @@
 By the [W3C WebDX Community Group](https://www.w3.org/community/webdx/) and contributors.
 
 `compute-baseline` computes preliminary [Baseline statuses](https://github.com/web-platform-dx/web-features/blob/main/docs/baseline.md) from `@mdn/browser-compat-data` feature keys.
-You can use `compute-baseline` to help you find interopable web platform features, propose new [`web-features`](https://github.com/web-platform-dx/web-features/) features, or compare support between features.
+You can use `compute-baseline` to help you find interoperable web platform features, propose new [`web-features`](https://github.com/web-platform-dx/web-features/) features, or compare support between features.
 
 `compute-baseline` also provides utility classes for working with `@mdn/browser-compat-data` generally.
 
@@ -73,7 +73,7 @@ Use the `toJSON()` method to get a `web-features`-like plain JSON representation
 
 ### Check support for a single support key
 
-Sometimes it can be hepful to know if parent features have less support than the specific feature you'r checking (for example, the parent is behind a prefix or flag) when computing a status for a deeply-nested feature.
+Sometimes it can be helpful to know if parent features have less support than the specific feature you're checking (for example, the parent is behind a prefix or flag) when computing a status for a deeply-nested feature.
 This is typically most interesting when checking a single key.
 Use the `withAncestors` option:
 
