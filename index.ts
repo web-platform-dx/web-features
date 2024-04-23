@@ -21,7 +21,7 @@ const descriptionMaxLength = 300;
 // They're not part of the public schema (yet).
 const omittables = [
     "description",
-    "descriptionHTML",
+    "description_html",
     "snapshot",
     "group"
 ]
