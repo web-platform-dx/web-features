@@ -115,7 +115,7 @@ for (const [key, data] of yamlEntries('feature-group-definitions')) {
     if (data.description) {
         const { text, html } = convertMarkdown(data.description);
         data.description = text;
-        data.descriptionHTML = html;
+        data.description_html = html;
     }
 
     // Compute Baseline high date from low date.
