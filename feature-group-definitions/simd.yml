@@ -1,0 +1,6 @@
+name: SIMD
+description: The 128-bit SIMD (Single Instruction Multiple Data) extension to WebAssembly performs one instruction on multiple units of data, when running on hardware that supports such instructions. Also known as vector instructions.
+spec: https://webassembly.github.io/spec/core/bikeshed/#vector-instructions%E2%91%A0
+caniuse: wasm-simd
+compat_features:
+  - webassembly.fixed-width-SIMD
