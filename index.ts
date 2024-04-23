@@ -14,6 +14,9 @@ import { unified } from 'unified';
 
 import { BASELINE_LOW_TO_HIGH_DURATION } from 'compute-baseline';
 
+// The longest name allowed, to allow for compact display.
+const nameMaxLength = 80;
+
 // The longest description allowed, to avoid them growing into documentation.
 const descriptionMaxLength = 300;
 
@@ -127,9 +130,12 @@ for (const [key, data] of yamlEntries('feature-group-definitions')) {
         data.status.baseline_high_date = String(highDate);
     }
 
-    // Ensure description is not too long.
+    // Ensure name and description are not too long.
+    if (data.name?.length > nameMaxLength) {
+        throw new Error(`name in ${key}.yml is too long, ${data.name.length} characters. The maximum allowed length is ${nameMaxLength}.`);
+    }
     if (data.description?.length > descriptionMaxLength) {
-        throw new Error(`description in ${key}.yml is too long, ${data.description.length} characters. The maximum allowed length is ${descriptionMaxLength}.`)
+        throw new Error(`description in ${key}.yml is too long, ${data.description.length} characters. The maximum allowed length is ${descriptionMaxLength}.`);
     }
 
     // Ensure that only known group and snapshot identifiers are used.
