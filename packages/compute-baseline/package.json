@@ -8,13 +8,15 @@
     "./browser-compat-data": "./dist/browser-compat-data/index.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "LICENSE.txt",
+    "README.md"
   ],
   "types": "./dist/index.d.ts",
   "type": "module",
   "scripts": {
     "test": "mocha -r tsx 'src/**/*.test.ts'",
-    "prepare": "tsc"
+    "prepare": "cp ../../LICENSE.txt . && tsc"
   },
   "license": "Apache-2.0",
   "devDependencies": {
