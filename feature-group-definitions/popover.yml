@@ -4,11 +4,14 @@ spec: https://html.spec.whatwg.org/multipage/popover.html
 group: html
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/4191
 status:
-  baseline: false
+  baseline: low
+  baseline_low_date: 2024-04-16
   support:
     chrome: "114"
     chrome_android: "114"
     edge: "114"
+    firefox: "125"
+    firefox_android: "125"
     safari: "17"
     safari_ios: "17"
 compat_features:

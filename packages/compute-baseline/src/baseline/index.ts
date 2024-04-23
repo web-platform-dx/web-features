@@ -31,11 +31,6 @@ export const BASELINE_LOW_TO_HIGH_DURATION = Temporal.Duration.from({
   months: 30,
 });
 
-interface FeatureSelector {
-  compatKeys: [string, ...string[]];
-  checkAncestors: boolean;
-}
-
 type BaselineStatus = "low" | "high" | false;
 type BaselineDate = string | null;
 
@@ -54,7 +49,10 @@ interface SupportStatus {
  * "low" or false, dates, and releases) for those keys.
  */
 export function computeBaseline(
-  featureSelector: FeatureSelector,
+  featureSelector: {
+    compatKeys: [string, ...string[]];
+    checkAncestors?: boolean;
+  },
   compat: Compat = defaultCompat,
 ): SupportStatus {
   const { compatKeys } = featureSelector;
