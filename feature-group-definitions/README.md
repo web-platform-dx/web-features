@@ -6,8 +6,8 @@ See [ddbeck/common-web-feature-mockup](https://github.com/ddbeck/common-web-feat
 
 ## What is a web platform feature?
 
-To identify, group, and report on the availability of web platform features, it might be nice to have a working defintion of a web platform feature.
-For the purposes of this project, consider this defintion:
+To identify, group, and report on the availability of web platform features, it might be nice to have a working definition of a web platform feature.
+For the purposes of this project, consider this definition:
 
 **A _feature_ (or _feature group_) is a logical subset of all the addressable behaviors and interfaces that the web platform, as mediated by browsers and related tools, exposes to web developers.**
 
