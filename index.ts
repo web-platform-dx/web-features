@@ -20,8 +20,6 @@ const descriptionMaxLength = 300;
 // Some FeatureData keys aren't (and may never) be ready for publishing.
 // They're not part of the public schema (yet).
 const omittables = [
-    "description",
-    "description_html",
     "snapshot",
     "group"
 ]
@@ -127,12 +125,6 @@ for (const [key, data] of yamlEntries('feature-group-definitions')) {
         const lowDate = Temporal.PlainDate.from(data.status.baseline_low_date);
         const highDate = lowDate.add(BASELINE_LOW_TO_HIGH_DURATION);
         data.status.baseline_high_date = String(highDate);
-    }
-
-    // TODO: remove this when description is required by schema.
-    // Part of https://github.com/web-platform-dx/web-features/pull/761.
-    if (!data.description) {
-        throw new Error(`description is missing from ${key}.yml`);
     }
 
     // Ensure description is not too long.

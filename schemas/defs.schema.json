@@ -44,6 +44,14 @@
           },
           "type": "array"
         },
+        "description": {
+          "description": "Short description of the feature, as a plain text string",
+          "type": "string"
+        },
+        "description_html": {
+          "description": "Short description of the feature, as an HTML string",
+          "type": "string"
+        },
         "name": {
           "description": "Short name",
           "type": "string"
@@ -144,6 +152,8 @@
       },
       "required": [
         "name",
+        "description",
+        "description_html",
         "spec"
       ],
       "type": "object"
