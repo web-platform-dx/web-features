@@ -1,0 +1,9 @@
+name: CSS module scripts
+description: 'CSS module scripts allow CSS code to be organized into reusable units. Other modules use `import ... with {type: "css"}` to load CSS modules as constructable stylesheets.'
+spec:
+  - https://html.spec.whatwg.org/multipage/webappapis.html#css-module-script
+usage_stats:
+  - https://chromestatus.com/metrics/feature/timeline/popularity/3805
+compat_features:
+  - javascript.statements.import
+  - javascript.statements.import.import_attributes.type_css
