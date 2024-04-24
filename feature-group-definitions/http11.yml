@@ -1,77 +1,19 @@
 name: HTTP/1.1
 description: HTTP/1.1 is a network protocol used by browsers and servers. It has been superseded by HTTP/2 and HTTP/3.
 spec: https://httpwg.org/specs/rfc9112.html
+# The HTTP data in BCD has a lot of true values which compute-baseline cannot
+# work with. A single feature was given real browser versions to support
+# computing this support: https://github.com/mdn/browser-compat-data/pull/22930
+status:
+  baseline: high
+  baseline_low_date: 2015-07-29
+  support:
+    chrome: "1"
+    chrome_android: "18"
+    edge: "12"
+    firefox: "1"
+    firefox_android: "4"
+    safari: "1"
+    safari_ios: "1"
 compat_features:
-  - http.headers.Accept
-  - http.headers.Accept-Encoding
-  - http.headers.Accept-Language
-  - http.headers.Accept-Ranges
-  - http.headers.Age
-  - http.headers.Authorization
-  - http.headers.Cache-Control
-  - http.headers.Connection
-  - http.headers.Content-Encoding
-  - http.headers.Content-Language
-  - http.headers.Content-Length
-  - http.headers.Content-Location
-  - http.headers.Content-Range
-  - http.headers.Content-Type
-  - http.headers.Date
-  - http.headers.ETag
-  - http.headers.Expect
-  - http.headers.Expires
-  - http.headers.From
-  - http.headers.Host
-  - http.headers.If-Match
-  - http.headers.If-Modified-Since
-  - http.headers.If-None-Match
-  - http.headers.If-Range
-  - http.headers.If-Unmodified-Since
-  - http.headers.Last-Modified
-  - http.headers.Location
-  - http.headers.Pragma
-  - http.headers.Proxy-Authenticate
-  - http.headers.Range
-  - http.headers.Referer
-  - http.headers.Retry-After
-  - http.headers.Server
-  - http.headers.TE
-  - http.headers.Trailer
-  - http.headers.Transfer-Encoding
-  - http.headers.User-Agent
-  - http.headers.Vary
-  - http.headers.Via
-  - http.headers.Warning
-  - http.headers.WWW-Authenticate
-  - http.methods.CONNECT
-  - http.methods.DELETE
   - http.methods.GET
-  - http.methods.HEAD
-  - http.methods.OPTIONS
-  - http.methods.POST
-  - http.methods.PUT
-  - http.methods.TRACE
-  - http.status.100
-  - http.status.200
-  - http.status.201
-  - http.status.204
-  - http.status.206
-  - http.status.301
-  - http.status.302
-  - http.status.303
-  - http.status.304
-  - http.status.307
-  - http.status.401
-  - http.status.403
-  - http.status.404
-  - http.status.406
-  - http.status.407
-  - http.status.409
-  - http.status.410
-  - http.status.412
-  - http.status.416
-  - http.status.500
-  - http.status.501
-  - http.status.502
-  - http.status.503
-  - http.status.504
