@@ -6,7 +6,7 @@
 
 Feature authors should (in descending order of priority):
 
-- Prefer names to known to be in widespread use by web developers.
+- Prefer names known to be in widespread use by web developers.
   Favor describing things as they are most-widely known, even if it's not the most technically correct option.
 
   - 👍 Recommended: JavaScript
