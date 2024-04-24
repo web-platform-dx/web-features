@@ -132,10 +132,10 @@ for (const [key, data] of yamlEntries('feature-group-definitions')) {
 
     // Ensure name and description are not too long.
     if (data.name?.length > nameMaxLength) {
-        throw new Error(`name in ${key}.yml is too long, ${data.name.length} characters. The maximum allowed length is ${nameMaxLength}.`);
+        throw new Error(`The name field in ${key}.yml is too long, ${data.name.length} characters. The maximum allowed length is ${nameMaxLength}.`);
     }
     if (data.description?.length > descriptionMaxLength) {
-        throw new Error(`description in ${key}.yml is too long, ${data.description.length} characters. The maximum allowed length is ${descriptionMaxLength}.`);
+        throw new Error(`The description field in ${key}.yml is too long, ${data.description.length} characters. The maximum allowed length is ${descriptionMaxLength}.`);
     }
 
     // Ensure that only known group and snapshot identifiers are used.
