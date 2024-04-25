@@ -1,13 +1,15 @@
-name: Publish web-features@next
+name: Publish compute-baseline@next
 
 on:
   push:
     branches:
       - "main"
+    paths:
+      - packages/compute-baseline/**
 
 env:
-  package: "web-features"
-  package_dir: "packages/web-features"
+  package: "compute-baseline"
+  package_dir: "packages/compute-baseline"
   dist_tag: "next"
 
 jobs:
@@ -36,22 +38,16 @@ jobs:
           cache: npm
           registry-url: "https://registry.npmjs.org"
       - run: npm ci
-      - run: npm run build
       - name: Get package.json version
         id: version
-        run: echo "VERSION=$(npm version --json | jq --raw-output '.["${{ env.package }}"]')" >> $GITHUB_OUTPUT
-        working-directory: ${{ env.package_dir }}
-      - run: npm install
-        working-directory: ${{ env.package_dir }}
-      - run: npm version --no-git-tag-version "$VERSION-dev-$TIMESTAMP-$(git rev-parse --short HEAD)"
+        run: echo "VERSION=$(npm version --json --workspace=${{ env.package }} | jq --raw-output '.["${{ env.package }}"]')" >> $GITHUB_OUTPUT
+      - run: npm version --workspace=${{ env.package }} --no-git-tag-version "$VERSION-dev-$TIMESTAMP-$(git rev-parse --short HEAD)"
         # The version string template is: <package.json version>-dev-<timestamp>-<commit-hash>
         # Why not use SemVer build metadata with a plus sign for some of this?
         # Because npm completely ignores it. 😒
-        working-directory: ${{ env.package_dir }}
         env:
           VERSION: ${{ steps.version.outputs.VERSION }}
           TIMESTAMP: ${{ steps.timestamp.outputs.TIMESTAMP }}
-      - run: npm publish --tag ${{ env.dist_tag }}
-        working-directory: ${{ env.package_dir }}
+      - run: npm publish --workspace=${{ env.package }} --tag ${{ env.dist_tag }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
