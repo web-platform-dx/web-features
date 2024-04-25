@@ -112,6 +112,11 @@ function convertMarkdown(markdown: string) {
 
 const features: { [key: string]: FeatureData } = {};
 for (const [key, data] of yamlEntries('feature-group-definitions')) {
+    // Draft features reserve an identifier but aren't complete yet. Skip them.
+    if (data.draft) {
+        continue;
+    }
+
     // Convert markdown to text+HTML.
     if (data.description) {
         const { text, html } = convertMarkdown(data.description);
