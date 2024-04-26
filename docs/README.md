@@ -119,6 +119,12 @@ For example:
  > The `some-property` CSS property sets the … value. Also known as `<alias>`.
 ([#628](https://github.com/web-platform-dx/web-features/pull/628/files/a9898862cb631c83ea16f1233b3c5c4353bf7a52#r1516293423))
 
+##### declaration
+
+For CSS, use _declaration_ to refer to property-value pairs.
+For example, prefer "The `some-property: none` CSS declaration…" over The `some-property: none` CSS property value…."
+([#969](https://github.com/web-platform-dx/web-features/pull/969))
+
 ##### defines
 
 Avoid.
