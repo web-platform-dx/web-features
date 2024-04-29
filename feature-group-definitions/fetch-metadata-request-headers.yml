@@ -1,0 +1,8 @@
+name: Fetch metadata request headers
+description: The headers `Sec-Fetch-Dest`, `Sec-Fetch-Mode, `Sec-Fetch-Site`, and `Sec-Fetch-User` provide extra information about the way a request was made, to help servers reject certain kinds of malicious requests.
+spec: https://w3c.github.io/webappsec-fetch-metadata/
+compat_features:
+  - http.headers.Sec-Fetch-Dest
+  - http.headers.Sec-Fetch-Mode
+  - http.headers.Sec-Fetch-Site
+  - http.headers.Sec-Fetch-User
