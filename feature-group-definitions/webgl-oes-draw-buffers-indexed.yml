@@ -1,0 +1,13 @@
+name: WebGL OES_draw_buffers_indexed extension
+description: The `OES_draw_buffers_indexed` extension to WebGL allows you to control blending on a per-color basis when writing to multiple color buffers simultaneously.
+spec: https://registry.khronos.org/webgl/extensions/OES_draw_buffers_indexed/
+group: webgl
+compat_features:
+  - api.OES_draw_buffers_indexed
+  - api.OES_draw_buffers_indexed.blendEquationiOES
+  - api.OES_draw_buffers_indexed.blendEquationSeparateiOES
+  - api.OES_draw_buffers_indexed.blendFunciOES
+  - api.OES_draw_buffers_indexed.blendFuncSeparateiOES
+  - api.OES_draw_buffers_indexed.colorMaskiOES
+  - api.OES_draw_buffers_indexed.disableiOES
+  - api.OES_draw_buffers_indexed.enableiOES
