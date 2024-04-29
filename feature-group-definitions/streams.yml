@@ -1,0 +1,69 @@
+name: Streams
+description: The streams API creates, composes, and consumes continuously generated data.
+spec: https://streams.spec.whatwg.org/
+caniuse: streams
+compat_features:
+  - api.ByteLengthQueuingStrategy
+  - api.ByteLengthQueuingStrategy.ByteLengthQueuingStrategy
+  - api.ByteLengthQueuingStrategy.highWaterMark
+  - api.ByteLengthQueuingStrategy.size
+  - api.CountQueuingStrategy
+  - api.CountQueuingStrategy.CountQueuingStrategy
+  - api.CountQueuingStrategy.highWaterMark
+  - api.CountQueuingStrategy.size
+  - api.WritableStream
+  - api.WritableStream.WritableStream
+  - api.WritableStream.abort
+  - api.WritableStream.close
+  - api.WritableStream.getWriter
+  - api.WritableStream.locked
+  - api.WritableStreamDefaultController
+  - api.WritableStreamDefaultController.error
+  - api.WritableStreamDefaultController.signal # TODO: consider breaking out as a abortable stream feature, for symmetry with fetch?
+  - api.WritableStreamDefaultWriter
+  - api.WritableStreamDefaultWriter.WritableStreamDefaultWriter
+  - api.WritableStreamDefaultWriter.abort
+  - api.WritableStreamDefaultWriter.close
+  - api.WritableStreamDefaultWriter.closed
+  - api.WritableStreamDefaultWriter.desiredSize
+  - api.WritableStreamDefaultWriter.ready
+  - api.WritableStreamDefaultWriter.releaseLock
+  - api.WritableStreamDefaultWriter.write
+  - api.ReadableStream
+  - api.ReadableStream.ReadableStream
+  - api.ReadableStream.cancel
+  - api.ReadableStream.getReader
+  - api.ReadableStream.locked
+  - api.ReadableStream.pipeThrough
+  - api.ReadableStream.pipeTo
+  - api.ReadableStream.tee
+  # TODO: consider whether breaking this out into a separate feature (and asking caniuse to do the same)
+  # - api.ReadableStreamBYOBReader
+  # - api.ReadableStreamBYOBReader.ReadableStreamBYOBReader
+  # - api.ReadableStreamBYOBReader.cancel
+  # - api.ReadableStreamBYOBReader.closed
+  # - api.ReadableStreamBYOBReader.read
+  # - api.ReadableStreamBYOBReader.releaseLock
+  # - api.ReadableStreamBYOBRequest
+  # - api.ReadableStreamBYOBRequest.respond
+  # - api.ReadableStreamBYOBRequest.respondWithNewView
+  # - api.ReadableStreamBYOBRequest.view
+  - api.ReadableStreamDefaultController
+  - api.ReadableStreamDefaultController.close
+  - api.ReadableStreamDefaultController.desiredSize
+  - api.ReadableStreamDefaultController.enqueue
+  - api.ReadableStreamDefaultController.error
+  - api.ReadableStreamDefaultReader
+  - api.ReadableStreamDefaultReader.cancel
+  - api.ReadableStreamDefaultReader.closed
+  - api.ReadableStreamDefaultReader.read
+  - api.ReadableStreamDefaultReader.releaseLock
+  - api.TransformStream
+  - api.TransformStream.TransformStream
+  - api.TransformStream.readable
+  - api.TransformStream.writable
+  - api.TransformStreamDefaultController
+  - api.TransformStreamDefaultController.desiredSize
+  - api.TransformStreamDefaultController.enqueue
+  - api.TransformStreamDefaultController.error
+  - api.TransformStreamDefaultController.terminate
