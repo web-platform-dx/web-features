@@ -2,6 +2,13 @@ name: Streams
 description: The streams API creates, composes, and consumes continuously generated data.
 spec: https://streams.spec.whatwg.org/
 caniuse: streams
+# TODO: Represent partial support with BYOB (Safari 14.1+).
+# This set of compat features omits `ReadableStreamBYOBReader` and
+# `ReadableStreamBYOBRequest`, since this API is usable for some applications
+# without BYOB. This differs from caniuse, which says that this feature is only
+# partially supported. Until we can represent partial support in our data, or
+# consult with caniuse on splitting this into BYOB and non-BYOB streams
+# features, we think this more accurately characterizes the state of this API.
 compat_features:
   - api.ByteLengthQueuingStrategy
   - api.ByteLengthQueuingStrategy.ByteLengthQueuingStrategy
@@ -37,7 +44,6 @@ compat_features:
   - api.ReadableStream.pipeThrough
   - api.ReadableStream.pipeTo
   - api.ReadableStream.tee
-  # TODO: consider whether breaking this out into a separate feature (and asking caniuse to do the same)
   # - api.ReadableStreamBYOBReader
   # - api.ReadableStreamBYOBReader.ReadableStreamBYOBReader
   # - api.ReadableStreamBYOBReader.cancel
