@@ -1,0 +1,5 @@
+name: URL.canParse()
+description: The `URL.canParse()` static method checks whether a URL can be parsed into a valid `URL` object. It's an alternative to calling `new URL()` in a `try…catch` statement.
+spec: https://url.spec.whatwg.org/#dom-url-canparse
+compat_features:
+  - api.URL.canParse_static
