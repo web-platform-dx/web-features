@@ -1,0 +1,7 @@
+name: Unsafe HTML parsing methods
+description: The `Document.parseHTMLUnsafe()` static method and `setHTMLUnsafe()` method of `Element` and `ShadowRoot` TODO.
+spec: https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#unsafe-html-parsing-methods
+compat_features:
+  - api.Document.parseHTMLUnsafe_static
+  - api.Element.setHTMLUnsafe
+  - api.ShadowRoot.setHTMLUnsafe
