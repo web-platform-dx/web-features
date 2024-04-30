@@ -1,7 +1,5 @@
 name: Service worker JavaScript modules
 description: 'The `navigator.serviceWorker.register()` method accepts `{ type: "module" }` to load scripts that use `import` and `export`. Also known as ECMAScript modules or ESM in service workers.'
-spec:
-  - https://html.spec.whatwg.org/multipage/workers.html#dom-worker-dev
-  - https://html.spec.whatwg.org/multipage/workers.html#shared-workers-and-the-sharedworker-interface:dom-sharedworker-2
+spec: https://w3c.github.io/ServiceWorker/#dom-registrationoptions-type
 compat_features:
   - api.ServiceWorker.ecmascript_modules
