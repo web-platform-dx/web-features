@@ -1,0 +1,11 @@
+# This group was originally a feature, which has 3 parts:
+#  1. Scrolling to a text fragment such as #:~:text=snippet.
+#  2. Feature detection for this, document.fragmentDirective. This cannot be
+#     relied upon due to https://webkit.org/b/273466. See also
+#     https://github.com/WICG/scroll-to-text-fragment/issues/257.
+#  3. The ::target-text pseudo-element for styling the highlight.
+#
+# TODO: Create a composite feature for text fragments as a whole. The original
+# feature in https://github.com/web-platform-dx/web-features/pull/732 has a
+# solid description to copy for that.
+name: Text fragments
