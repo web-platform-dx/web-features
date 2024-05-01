@@ -5,12 +5,8 @@ name: line-clamp
 description: "The `line-clamp` CSS property limits the text in a block container to a certain number of lines. The prefixed `-webkit-line-clamp` is widely supported but only works with `-webkit-box-orient: vertical` in combination with `display: -webkit-box` or `display: -webkit-inline-box`."
 spec: https://drafts.csswg.org/css-overflow-4/#line-clamp
 caniuse: css-line-clamp
-# Since BCD has an entry for -webkit-line-clamp but none for unprefixed
-# line-clamp, we need an override to represent that no browser supports this. If
-# https://github.com/mdn/browser-compat-data/pull/22951 is merged, this can be
-# removed:
 status:
   baseline: false
   support: {}
 compat_features:
-  - css.properties.-webkit-line-clamp
+  - css.properties.line-clamp
