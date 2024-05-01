@@ -2,20 +2,3 @@ name: 2D transforms
 description: The `transform` CSS property and its 2D transform functions allow rotating, scaling, skewing, and translating an element. Arbitrary 2D transforms are also possible using a transformation matrix.
 caniuse: transforms2d
 spec: https://drafts.csswg.org/css-transforms-1/
-compat_features:
-  - css.properties.transform
-  # https://github.com/mdn/browser-compat-data/pull/22926
-  # - css.properties.transform-box
-  - css.properties.transform-origin
-  - css.types.transform-function
-  - css.types.transform-function.matrix
-  - css.types.transform-function.rotate
-  - css.types.transform-function.scale
-  - css.types.transform-function.scaleX
-  - css.types.transform-function.scaleY
-  - css.types.transform-function.skew
-  - css.types.transform-function.skewX
-  - css.types.transform-function.skewY
-  - css.types.transform-function.translate
-  - css.types.transform-function.translateX
-  - css.types.transform-function.translateY
