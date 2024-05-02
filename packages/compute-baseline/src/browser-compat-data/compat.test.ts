@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 
-import { Compat } from "./compat";
-import { Feature } from ".";
+import { Compat } from "./compat.js";
+import { Feature } from "./index.js";
 
 describe("Compat()", function () {
   describe("constructor", function () {

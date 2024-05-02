@@ -1,14 +1,14 @@
 import { Identifier } from "@mdn/browser-compat-data";
 
-import { Browser } from "./browser";
-import { isFeatureData } from "./typeUtils";
-import { Release } from "./release";
+import { Browser } from "./browser.js";
+import { Compat, defaultCompat } from "./compat.js";
+import { Release } from "./release.js";
 import {
   Qualifications,
   RealSupportStatement,
   statement,
-} from "./supportStatements";
-import { Compat, defaultCompat } from "./compat";
+} from "./supportStatements.js";
+import { isFeatureData } from "./typeUtils.js";
 
 export function feature(id: string, compat: Compat = defaultCompat): Feature {
   let f = compat.features.get(id);

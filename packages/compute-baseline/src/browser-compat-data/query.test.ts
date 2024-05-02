@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 
-import { query } from "./query";
 import { BrowserStatement, Identifier } from "@mdn/browser-compat-data";
-import { Compat } from "./compat";
+import { Compat } from "./compat.js";
+import { query } from "./query.js";
 
 describe("query", function () {
   it("returns arbitrary BCD data (browsers)", function () {
