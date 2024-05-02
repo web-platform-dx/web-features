@@ -111,7 +111,7 @@ function convertMarkdown(markdown: string) {
 }
 
 const features: { [key: string]: FeatureData } = {};
-for (const [key, data] of yamlEntries('feature-group-definitions')) {
+for (const [key, data] of yamlEntries('features')) {
     // Draft features reserve an identifier but aren't complete yet. Skip them.
     if (data.draft) {
         continue;
@@ -125,7 +125,7 @@ for (const [key, data] of yamlEntries('feature-group-definitions')) {
     }
 
     // Compute Baseline high date from low date.
-    const isDist = fs.existsSync(`feature-group-definitions/${key}.dist.yml`);
+    const isDist = fs.existsSync(`features/${key}.dist.yml`);
     if (!isDist && data.status?.baseline_high_date) {
         throw new Error(`baseline_high_date is computed and should not be used in source YAML. Remove it from ${key}.yml.`);
     }
