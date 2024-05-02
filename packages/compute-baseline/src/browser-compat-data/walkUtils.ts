@@ -4,7 +4,7 @@ import {
   isCompatStatement,
   isFeatureData,
   isMetaBlock,
-} from "./typeUtils";
+} from "./typeUtils.js";
 
 export function descendantKeys(data: unknown, path?: string): string[] {
   if (isCompatData(data)) {

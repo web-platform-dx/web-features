@@ -1,11 +1,11 @@
 import assert from "node:assert/strict";
 
+import { browser } from "./browser.js";
 import {
   RealSupportStatement,
   SupportStatement,
   statement,
-} from "./supportStatements";
-import { browser } from "./browser";
+} from "./supportStatements.js";
 
 describe("statements", function () {
   describe("statement()", function () {

@@ -5,8 +5,8 @@ import {
 } from "@mdn/browser-compat-data";
 import { compareVersions } from "compare-versions";
 
-import { defaultCompat } from "./compat";
-import { Release } from "./release";
+import { defaultCompat } from "./compat.js";
+import { Release } from "./release.js";
 
 export function browser(id: string, compat = defaultCompat): Browser {
   let b = compat.browsers.get(id);

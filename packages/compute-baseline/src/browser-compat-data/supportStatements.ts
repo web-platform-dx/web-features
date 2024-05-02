@@ -4,9 +4,9 @@ import {
   VersionValue,
 } from "@mdn/browser-compat-data";
 
-import { Browser } from "./browser";
-import { Release } from "./release";
-import { Feature } from "./feature";
+import { Browser } from "./browser.js";
+import { Feature } from "./feature.js";
+import { Release } from "./release.js";
 
 export interface Qualifications {
   prefix?: string;

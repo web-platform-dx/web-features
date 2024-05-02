@@ -1,5 +1,5 @@
 import bcd, { CompatData } from "@mdn/browser-compat-data";
-import { Browser, Feature, browser, feature, query, walk } from ".";
+import { Browser, Feature, browser, feature, query, walk } from "./index.js";
 
 export class Compat {
   data: unknown;

@@ -1,8 +1,8 @@
-import { logger } from ".";
-import { Browser } from "../browser-compat-data/browser";
-import { Feature } from "../browser-compat-data/feature";
-import { Release } from "../browser-compat-data/release";
-import { Qualifications } from "../browser-compat-data/supportStatements";
+import { Browser } from "../browser-compat-data/browser.js";
+import { Feature } from "../browser-compat-data/feature.js";
+import { Release } from "../browser-compat-data/release.js";
+import { Qualifications } from "../browser-compat-data/supportStatements.js";
+import { logger } from "./index.js";
 
 type Support = Map<Browser, Release | undefined>;
 

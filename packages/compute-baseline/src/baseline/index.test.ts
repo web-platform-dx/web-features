@@ -4,7 +4,7 @@ import { Temporal } from "@js-temporal/polyfill";
 import * as chai from "chai";
 import chaiJestSnapshot from "chai-jest-snapshot";
 
-import { computeBaseline, keystoneDateToStatus } from ".";
+import { computeBaseline, keystoneDateToStatus } from "./index.js";
 
 chai.use(chaiJestSnapshot);
 
