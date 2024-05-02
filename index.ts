@@ -6,7 +6,16 @@ import YAML from 'yaml';
 import { FeatureData } from './types';
 import { Temporal } from '@js-temporal/polyfill';
 
+import { toString as hastTreeToString } from 'hast-util-to-string';
+import rehypeStringify from 'rehype-stringify';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import { unified } from 'unified';
+
 import { BASELINE_LOW_TO_HIGH_DURATION } from 'compute-baseline';
+
+// The longest name allowed, to allow for compact display.
+const nameMaxLength = 80;
 
 // The longest description allowed, to avoid them growing into documentation.
 const descriptionMaxLength = 300;
@@ -14,7 +23,6 @@ const descriptionMaxLength = 300;
 // Some FeatureData keys aren't (and may never) be ready for publishing.
 // They're not part of the public schema (yet).
 const omittables = [
-    "description",
     "snapshot",
     "group"
 ]
@@ -87,10 +95,37 @@ function* identifiers(value) {
     }
 }
 
+function convertMarkdown(markdown: string) {
+    const mdTree = unified().use(remarkParse).parse(markdown);
+    const htmlTree = unified().use(remarkRehype).runSync(mdTree);
+    const text = hastTreeToString(htmlTree);
+
+    let html = unified().use(rehypeStringify).stringify(htmlTree);
+    // Remove leading <p> and trailing </p> if there is only one of each in the
+    // description. (If there are multiple paragraphs, let them be.)
+    if (html.lastIndexOf('<p>') === 0 && html.indexOf('</p>') === html.length - 4) {
+      html = html.substring(3, html.length - 4);
+    }
+
+    return { text, html };
+}
+
 const features: { [key: string]: FeatureData } = {};
-for (const [key, data] of yamlEntries('feature-group-definitions')) {
+for (const [key, data] of yamlEntries('features')) {
+    // Draft features reserve an identifier but aren't complete yet. Skip them.
+    if (data.draft) {
+        continue;
+    }
+
+    // Convert markdown to text+HTML.
+    if (data.description) {
+        const { text, html } = convertMarkdown(data.description);
+        data.description = text;
+        data.description_html = html;
+    }
+
     // Compute Baseline high date from low date.
-    const isDist = fs.existsSync(`feature-group-definitions/${key}.dist.yml`);
+    const isDist = fs.existsSync(`features/${key}.dist.yml`);
     if (!isDist && data.status?.baseline_high_date) {
         throw new Error(`baseline_high_date is computed and should not be used in source YAML. Remove it from ${key}.yml.`);
     }
@@ -100,9 +135,12 @@ for (const [key, data] of yamlEntries('feature-group-definitions')) {
         data.status.baseline_high_date = String(highDate);
     }
 
-    // Ensure description is not too long.
+    // Ensure name and description are not too long.
+    if (data.name?.length > nameMaxLength) {
+        throw new Error(`The name field in ${key}.yml is too long, ${data.name.length} characters. The maximum allowed length is ${nameMaxLength}.`);
+    }
     if (data.description?.length > descriptionMaxLength) {
-        throw new Error(`description in ${key}.yml is too long, ${data.description.length} characters. The maximum allowed length is ${descriptionMaxLength}.`)
+        throw new Error(`The description field in ${key}.yml is too long, ${data.description.length} characters. The maximum allowed length is ${descriptionMaxLength}.`);
     }
 
     // Ensure that only known group and snapshot identifiers are used.

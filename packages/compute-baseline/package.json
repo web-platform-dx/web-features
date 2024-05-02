@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "compute-baseline",
   "version": "0.1.0",
   "description": "A library for computing web-features statuses from browser compatibility data",
@@ -7,11 +6,16 @@
     ".": "./dist/baseline/index.js",
     "./browser-compat-data": "./dist/browser-compat-data/index.js"
   },
+  "files": [
+    "dist",
+    "LICENSE.txt",
+    "README.md"
+  ],
   "types": "./dist/index.d.ts",
   "type": "module",
   "scripts": {
     "test": "mocha -r tsx 'src/**/*.test.ts'",
-    "prepare": "tsc"
+    "prepare": "cp ../../LICENSE.txt . && tsc"
   },
   "license": "Apache-2.0",
   "devDependencies": {

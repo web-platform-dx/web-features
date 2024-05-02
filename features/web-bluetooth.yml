@@ -1,0 +1,21 @@
+name: Web Bluetooth
+description: The Web Bluetooth API enables selecting and communicating with nearby Bluetooth devices.
+spec: https://webbluetoothcg.github.io/web-bluetooth/
+caniuse: web-bluetooth
+# BCD considers Web Bluetooth partially supported in Chrome due to the lack of
+# support on Linux (per guidelines), but caniuse makes this a regular note:
+# https://github.com/mdn/browser-compat-data/blob/77452e99e130d783418b3fe1bd1862a558d911bb/api/Bluetooth.json#L13-L15
+# https://github.com/mdn/browser-compat-data/blob/77452e99e130d783418b3fe1bd1862a558d911bb/docs/data-guidelines/index.md#operating-system-limitations-imply-partial_implementation
+# https://caniuse.com/web-bluetooth
+#
+# Nevertheless, it seems fair to call the features supported since Chrome 70,
+# since macOS and Windows account for the vast majority of users. This ends up
+# in-between the BCD and caniuse statuses, aligning with neither.
+#
+# TODO: convert this to partial implementation with notes.
+status:
+  baseline: false
+  support:
+    chrome: "70" # macOS and Windows, not Linux
+    chrome_android: "56"
+    edge: "79" # macOS and Windows, not Linux

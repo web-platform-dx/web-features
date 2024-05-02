@@ -1,0 +1,64 @@
+name: Publish web-features@next
+
+on:
+  push:
+    branches:
+      - "main"
+    paths:
+      - features/**
+      - groups/**
+      - packages/web-features/**
+      - snapshots/**
+      - index.ts
+      - scripts/build.ts
+
+env:
+  package: "web-features"
+  package_dir: "packages/web-features"
+  dist_tag: "next"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - run: npm test
+  publish:
+    if: github.repository == 'web-platform-dx/web-features'
+    runs-on: ubuntu-latest
+    needs: "test"
+    steps:
+      - name: Get timestamp
+        id: timestamp
+        run: echo "TIMESTAMP=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_OUTPUT
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: .node-version
+          cache: npm
+          registry-url: "https://registry.npmjs.org"
+      - run: npm ci
+      - run: npm run build
+      - name: Get package.json version
+        id: version
+        run: echo "VERSION=$(npm version --json | jq --raw-output '.["${{ env.package }}"]')" >> $GITHUB_OUTPUT
+        working-directory: ${{ env.package_dir }}
+      - run: npm install
+        working-directory: ${{ env.package_dir }}
+      - run: npm version --no-git-tag-version "$VERSION-dev-$TIMESTAMP-$(git rev-parse --short HEAD)"
+        # The version string template is: <package.json version>-dev-<timestamp>-<commit-hash>
+        # Why not use SemVer build metadata with a plus sign for some of this?
+        # Because npm completely ignores it. 😒
+        working-directory: ${{ env.package_dir }}
+        env:
+          VERSION: ${{ steps.version.outputs.VERSION }}
+          TIMESTAMP: ${{ steps.timestamp.outputs.TIMESTAMP }}
+      - run: npm publish --tag ${{ env.dist_tag }}
+        working-directory: ${{ env.package_dir }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

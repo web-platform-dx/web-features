@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 
-import { browser } from "./browser";
+import { browser } from "./browser.js";
 
 describe("browser()", function () {
   it("throws for non-existent browsers", function () {

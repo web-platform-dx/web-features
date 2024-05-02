@@ -1,0 +1,23 @@
+name: Relative colors
+description: "The `from` keyword for color functions (`color()`, `hsl()`, `oklch()`, etc.) creates a new color based on a given color by modifying the values of the input color. Also known as relative color syntax (RCS)."
+spec: https://drafts.csswg.org/css-color-5/#relative-colors
+caniuse: css-relative-colors
+usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/4632
+# TODO: Revisit when this has shipped in Firefox if we should retroactively
+# claim partial support in Chrome and Safari for some versions. If so, also make
+# the same changes in caniuse.
+compat_features:
+  # These are the only two features that don't use partial implementation for
+  # some browser, so they can represent initial support for the feature.
+  - css.types.color.lab.relative_syntax
+  - css.types.color.oklab.relative_syntax
+  # Partial implementation claims that need further research, see
+  # https://github.com/mdn/browser-compat-data/issues/22961
+  # - css.types.color.color.relative_syntax
+  # - css.types.color.hsl.relative_syntax
+  # - css.types.color.hwb.relative_syntax
+  # - css.types.color.lch.relative_syntax
+  # - css.types.color.oklch.relative_syntax
+  # Seemingly incorrect notes, see
+  # https://github.com/mdn/browser-compat-data/pull/22960
+  # - css.types.color.rgb.relative_syntax

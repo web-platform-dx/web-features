@@ -6,9 +6,9 @@ import {
   Identifier,
   MetaBlock,
 } from "@mdn/browser-compat-data";
-import { isBrowserStatement, isFeatureData } from "./typeUtils";
-import { descendantKeys } from "./walkUtils";
-import { query } from "./query";
+import { query } from "./query.js";
+import { isBrowserStatement, isFeatureData } from "./typeUtils.js";
+import { descendantKeys } from "./walkUtils.js";
 
 type BCD =
   | CompatData

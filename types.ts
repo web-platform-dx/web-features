@@ -3,6 +3,10 @@
 export interface FeatureData {
     /** Short name */
     name: string;
+    /** Short description of the feature, as a plain text string */
+    description: string;
+    /** Short description of the feature, as an HTML string */
+    description_html: string;
     /** Alias identifier */
     alias?: string | [string, string, ...string[]];
     /** Specification */
@@ -10,7 +14,7 @@ export interface FeatureData {
     /** caniuse.com identifier */
     caniuse?: string | [string, string, ...string[]];
     /** Whether a feature is considered a "baseline" web platform feature and when it achieved that status */
-    status?: SupportStatus;
+    status: SupportStatus;
     /** Sources of support data for this feature */
     compat_features?: string[];
     /** Usage stats */
@@ -23,13 +27,13 @@ type BaselineHighLow = "high" | "low";
 
 interface SupportStatus {
     /** Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false) */
-    baseline?: BaselineHighLow | false;
+    baseline: BaselineHighLow | false;
     /** Date the feature achieved Baseline low status */
     baseline_low_date?: string;
     /** Date the feature achieved Baseline high status */
     baseline_high_date?: string;
     /** Browser versions that most-recently introduced the feature */
-    support?: {
+    support: {
         [K in browserIdentifier]?: string;
     };
 }

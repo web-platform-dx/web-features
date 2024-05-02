@@ -1,0 +1,23 @@
+name: Array.from()
+description: The `Array.from()` and typed array `.from()` static methods copy items from an iterable or array-like object to make a new array.
+spec:
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.from
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.of
+snapshot: ecmascript-2015
+group:
+  - arrays
+  - typed-arrays
+status:
+  baseline: high
+  baseline_low_date: 2015-09-30
+  support:
+    chrome: "45"
+    chrome_android: "45"
+    edge: "12"
+    firefox: "32"
+    firefox_android: "32"
+    safari: "9"
+    safari_ios: "9"
+compat_features:
+  - javascript.builtins.Array.from
+  - javascript.builtins.TypedArray.from

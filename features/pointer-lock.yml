@@ -1,0 +1,16 @@
+name: Pointer lock
+description: Provides access to raw mouse movement by locking the target of mouse events to a single element and hiding the mouse cursor.
+spec: https://w3c.github.io/pointerlock/
+caniuse: pointerlock
+usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/417
+compat_features:
+  - api.Document.exitPointerLock
+  - api.Document.pointerlockchange_event
+  - api.Document.pointerLockElement
+  - api.Document.pointerlockerror_event
+  - api.Element.requestPointerLock
+  - api.MouseEvent.movementX
+  - api.MouseEvent.movementY
+  # Later additions:
+  # - api.ShadowRoot.pointerLockElement
+  # - html.elements.iframe.sandbox.allow-pointer-lock

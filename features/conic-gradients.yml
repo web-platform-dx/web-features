@@ -1,0 +1,17 @@
+name: Conic gradients
+description: The `conic-gradient()` and `repeating-conic-gradient()` CSS functions create backgrounds that progress between two or more colors around a center point.
+spec: https://drafts.csswg.org/css-images-4/#conic-gradients
+group: gradients
+caniuse: css-conic-gradients
+# https://caniuse.com/css-conic-gradients has a note about multi-position color
+# stops in Chrome 69-70, while BCD has it as a subfeature supported since Chrome
+# 72. TODO: investigate support in Chrome 71 and align BCD and caniuse.
+compat_features:
+  - css.types.image.gradient.conic-gradient
+  - css.types.image.gradient.conic-gradient.doubleposition
+  - css.types.image.gradient.repeating-conic-gradient
+  # Later additions for parity with CSS Color Level 4:
+  # - css.types.image.gradient.conic-gradient.hue_interpolation_method
+  # - css.types.image.gradient.conic-gradient.interpolation_color_space
+  # - css.types.image.gradient.repeating-conic-gradient.hue_interpolation_method
+  # - css.types.image.gradient.repeating-conic-gradient.interpolation_color_space

@@ -1,0 +1,38 @@
+name: Notifications
+description: The notifications API sends system notifications to the user, often even when the page or browser is not the foreground application.
+spec: https://notifications.spec.whatwg.org/
+caniuse: notifications
+# Notifications support is complicated and this entry is unusual. It represents
+# some kind of notification support available to web pages. More fine-grained
+# features could be added to represent specific things that work.
+#
+# https://caniuse.com/notifications marks iOS support as partial with this note:
+# "Requires website to first be added to the Home Screen."
+#
+# BCD doesn't use partial_implementation for safari_ios, but has this note:
+# "Notifications are supported in web apps saved to the home screen."
+#
+# We do not have the concept of partial support or notes:
+# https://github.com/web-platform-dx/web-features/issues/915
+#
+# Another complication is the two entry points to this API:
+# - new Notification() for non-persistent notifications.
+# - showNotification() in service workers for persistent notifications.
+#
+# Finally, BCD and caniuse.com disagree about whether it was Safari 6 or 7 that
+# first supported notifications, and BCD originally agreed with caniuse.com:
+# https://github.com/mdn/browser-compat-data/pull/7949
+#
+# Due to this complexity, manually combine these 3 data points:
+# https://developer.mozilla.org/en-US/docs/Web/API/Notification/Notification#browser_compatibility
+# https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification#browser_compatibility
+# https://caniuse.com/notifications (excluding partial support on iOS)
+status:
+  baseline: false
+  support:
+    chrome: "20"
+    chrome_android: "42"
+    edge: "14"
+    firefox: "22"
+    firefox_android: "22"
+    safari: "6"

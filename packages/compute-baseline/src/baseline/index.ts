@@ -2,13 +2,13 @@ import assert from "node:assert";
 
 import { Temporal } from "@js-temporal/polyfill";
 
-import { Browser } from "../browser-compat-data/browser";
-import { Compat, defaultCompat } from "../browser-compat-data/compat";
-import { feature } from "../browser-compat-data/feature";
-import { Release } from "../browser-compat-data/release";
-import { browsers } from "./core-browser-set";
-import { isFuture, toDateString, toHighDate } from "./date-utils";
-import { support } from "./support";
+import { Browser } from "../browser-compat-data/browser.js";
+import { Compat, defaultCompat } from "../browser-compat-data/compat.js";
+import { feature } from "../browser-compat-data/feature.js";
+import { Release } from "../browser-compat-data/release.js";
+import { browsers } from "./core-browser-set.js";
+import { isFuture, toDateString, toHighDate } from "./date-utils.js";
+import { support } from "./support.js";
 
 interface Logger {
   debug?: typeof console.debug;
@@ -31,11 +31,6 @@ export const BASELINE_LOW_TO_HIGH_DURATION = Temporal.Duration.from({
   months: 30,
 });
 
-interface FeatureSelector {
-  compatKeys: [string, ...string[]];
-  checkAncestors: boolean;
-}
-
 type BaselineStatus = "low" | "high" | false;
 type BaselineDate = string | null;
 
@@ -54,7 +49,10 @@ interface SupportStatus {
  * "low" or false, dates, and releases) for those keys.
  */
 export function computeBaseline(
-  featureSelector: FeatureSelector,
+  featureSelector: {
+    compatKeys: [string, ...string[]];
+    checkAncestors?: boolean;
+  },
   compat: Compat = defaultCompat,
 ): SupportStatus {
   const { compatKeys } = featureSelector;

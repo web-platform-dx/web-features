@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 
-import { feature } from "./feature";
-import { browser } from ".";
+import { feature } from "./feature.js";
+import { browser } from "./index.js";
 
 describe("features", function () {
   describe("feature()", function () {

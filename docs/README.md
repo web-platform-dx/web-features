@@ -6,7 +6,7 @@
 
 Feature authors should (in descending order of priority):
 
-- Prefer names to known to be in widespread use by web developers.
+- Prefer names known to be in widespread use by web developers.
   Favor describing things as they are most-widely known, even if it's not the most technically correct option.
 
   - 👍 Recommended: JavaScript
@@ -119,6 +119,12 @@ For example:
  > The `some-property` CSS property sets the … value. Also known as `<alias>`.
 ([#628](https://github.com/web-platform-dx/web-features/pull/628/files/a9898862cb631c83ea16f1233b3c5c4353bf7a52#r1516293423))
 
+##### declaration
+
+For CSS, use _declaration_ to refer to property-value pairs.
+For example, prefer "The `some-property: none` CSS declaration…" over The `some-property: none` CSS property value…."
+([#969](https://github.com/web-platform-dx/web-features/pull/969))
+
 ##### defines
 
 Avoid.
@@ -193,3 +199,10 @@ For example, instead of "The `input()` method enables the usage of…" write "Th
 ([#753](https://github.com/web-platform-dx/web-features/pull/753#discussion_r1560914869))
 
 It's OK to use "usage" only in the sense of "consumption" (as in "mobile data usage") or "customary practice" (as in "the style guide's usage recommendations").
+
+##### `window`
+
+Because `window` is both the global object and represents the browser window, there are cases where it makes sense to refer to either `window.<name>` or `<name>` (such as `window.fetch()` or `fetch()`).
+Use the most customary reference in each case.
+If you're not sure what's customary, look to high-profile published examples, such as those on MDN reference pages for the feature.
+([#913](https://github.com/web-platform-dx/web-features/pull/913#discussion_r1572601975))

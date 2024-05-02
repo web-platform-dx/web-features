@@ -1,0 +1,10 @@
+# Speech recognition is prefixed in all implementations and would appear as
+# unsupported, so don't publish it. Revisit if it's unprefixed.
+draft: true
+draft_date: 2024-04-30
+name: Speech recognition
+description: The `SpeechRecognition` API converts human speech from a microphone to text.
+spec: https://wicg.github.io/speech-api/#speechreco-section
+group: speech
+caniuse: speech-recognition
+usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/2014

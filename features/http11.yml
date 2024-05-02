@@ -1,0 +1,19 @@
+name: HTTP/1.1
+description: HTTP/1.1 is a network protocol used by browsers and servers. It has been superseded by HTTP/2 and HTTP/3.
+spec: https://httpwg.org/specs/rfc9112.html
+# The HTTP data in BCD has a lot of true values which compute-baseline cannot
+# work with. A single feature was given real browser versions to support
+# computing this support: https://github.com/mdn/browser-compat-data/pull/22930
+status:
+  baseline: high
+  baseline_low_date: 2015-07-29
+  support:
+    chrome: "1"
+    chrome_android: "18"
+    edge: "12"
+    firefox: "1"
+    firefox_android: "4"
+    safari: "1"
+    safari_ios: "1"
+compat_features:
+  - http.methods.GET
