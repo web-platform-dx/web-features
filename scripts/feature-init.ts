@@ -69,7 +69,7 @@ async function format(featurePath: string, text: string): Promise<string> {
 
 function identifierToPath(identifier: string): string {
   return fileURLToPath(
-    new URL(`../feature-group-definitions/${identifier}.yml`, import.meta.url),
+    new URL(`../features/${identifier}.yml`, import.meta.url),
   );
 }
 
