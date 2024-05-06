@@ -1,8 +1,6 @@
-name: Printing
-description: An alternative to `@media print` queries, the `window.print()` method, along with the `beforeprint` and `afterprint` events, allow you to change the page for printing, open the browser's print dialog, and restore the page after printing.
+name: window.print()
+description: The `window.print()` method opens the browser's print dialog, to give the user the choice to make a physical copy of the page.
+group: printing
 spec: https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#printing
-caniuse: beforeafterprint
 compat_features:
-  - api.Window.afterprint_event
-  - api.Window.beforeprint_event
   - api.Window.print

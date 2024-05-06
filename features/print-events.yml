@@ -1,0 +1,9 @@
+name: Print events
+description: An alternative to `@media print` queries, the `beforeprint` and `afterprint` events allow you to change the page for printing and and restore the page after printing.
+spec:
+  - https://html.spec.whatwg.org/multipage/indices.html#event-afterprint
+  - https://html.spec.whatwg.org/multipage/indices.html#event-beforeprint
+caniuse: beforeafterprint
+compat_features:
+  - api.Window.afterprint_event
+  - api.Window.beforeprint_event
