@@ -1,0 +1,6 @@
+name: requestAnimationFrame() in workers
+description: The `requestAnimationFrame()` method in workers schedules a function that runs before the next repaint. Together with offscreen canvas, it can be used to animate content from a worker.
+spec: https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#animation-frames
+compat_features:
+  - api.DedicatedWorkerGlobalScope.cancelAnimationFrame
+  - api.DedicatedWorkerGlobalScope.requestAnimationFrame

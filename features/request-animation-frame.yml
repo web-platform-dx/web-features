@@ -1,0 +1,7 @@
+name: requestAnimationFrame()
+description: The `requestAnimationFrame()` method schedules a function that runs before the next repaint. It can be used to animate content using JavaScript.
+spec: https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#animation-frames
+caniuse: requestanimationframe
+compat_features:
+  - api.Window.cancelAnimationFrame
+  - api.Window.requestAnimationFrame
