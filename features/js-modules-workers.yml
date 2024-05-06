@@ -4,3 +4,6 @@ spec: https://html.spec.whatwg.org/multipage/workers.html#dom-worker-dev
 group: js-modules
 compat_features:
   - api.Worker.Worker.ecmascript_modules
+  - api.Worker.Worker.options_type_parameter
+  - javascript.operators.import.worker_support
+  - javascript.statements.import.worker_support
