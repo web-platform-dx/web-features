@@ -3,7 +3,7 @@ import path from 'path';
 
 import { fdir } from 'fdir';
 import YAML from 'yaml';
-import { FeatureData } from './types';
+import { FeatureData, GroupData, SnapshotData } from './types';
 import { Temporal } from '@js-temporal/polyfill';
 
 import { toString as hastTreeToString } from 'hast-util-to-string';
@@ -23,20 +23,6 @@ const descriptionMaxLength = 300;
 // Internal symbol to mark draft entries, so that using the draft field outside
 // of a draft directory doesn't work.
 const draft = Symbol('draft');
-
-// Some FeatureData keys aren't (and may never) be ready for publishing.
-// They're not part of the public schema (yet).
-const omittables = [
-    "snapshot",
-    "group"
-]
-
-function scrub(data: any) {
-    for (const key of omittables) {
-        delete data[key];
-    }
-    return data as FeatureData;
-}
 
 function* yamlEntries(root: string): Generator<[string, any]> {
     const filePaths = new fdir()
@@ -67,10 +53,10 @@ function* yamlEntries(root: string): Generator<[string, any]> {
 // Load groups and snapshots first so that those identifiers can be validated
 // while loading features.
 
-const groups: Map<string, any> = new Map(yamlEntries('groups'));
+const groups: { [key: string]: GroupData } = Object.fromEntries(yamlEntries('groups'));
 
 // Validate group name and parent fields.
-for (const [key, data] of groups) {
+for (const [key, data] of Object.entries(groups)) {
     if (typeof data.name !== 'string') {
         throw new Error(`group ${key} does not have a name`);
     }
@@ -84,14 +70,14 @@ for (const [key, data] of groups) {
         if (chain.at(0) === chain.at(-1)) {
             throw new Error(`cycle in group parent chain: ${chain.join(' < ')}`);
         }
-        iter = groups.get(iter.parent);
+        iter = groups[iter.parent];
         if (!iter) {
             throw new Error(`group ${chain.at(-2)} refers to parent ${chain.at(-1)} which does not exist.`);
         }
     }
 }
 
-const snapshots: Map<string, any> = new Map(yamlEntries('snapshots'));
+const snapshots: { [key: string]: SnapshotData } = Object.fromEntries(yamlEntries('snapshots'));
 // TODO: validate the snapshot data.
 
 // Helper to iterate an optional string-or-array-of-strings value.
@@ -158,12 +144,12 @@ for (const [key, data] of yamlEntries('features')) {
 
     // Ensure that only known group and snapshot identifiers are used.
     for (const group of identifiers(data.group)) {
-        if (!groups.has(group)) {
+        if (!Object.hasOwn(groups, group)) {
             throw new Error(`group ${group} used in ${key}.yml is not a valid group. Add it to groups/ if needed.`);
         }
     }
     for (const snapshot of identifiers(data.snapshot)) {
-        if (!snapshots.has(snapshot)) {
+        if (!Object.hasOwn(snapshots, snapshot)) {
             throw new Error(`snapshot ${snapshot} used in ${key}.yml is not a valid snapshot. Add it to snapshots/ if needed.`);
         }
     }
@@ -181,7 +167,7 @@ for (const [key, data] of yamlEntries('features')) {
         }
     }
 
-    features[key] = scrub(data);
+    features[key] = data;
 }
 
-export default features;
+export { features, groups, snapshots };
