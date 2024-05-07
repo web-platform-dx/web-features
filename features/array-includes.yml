@@ -21,3 +21,4 @@ status:
 compat_features:
   - javascript.builtins.Array.includes
   - javascript.builtins.TypedArray.includes
+test262: Array.prototype.includes # does not cover typed arrays
