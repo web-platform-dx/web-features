@@ -2,5 +2,36 @@ name: Origin private file system
 description: The `navigator.storage.getDirectory()` method returns a `FileSystemDirectoryHandle` that is restricted to a specific origin and invisible to the user's actual file system for faster file-based applications, such as SQLite databases.
 spec: https://fs.spec.whatwg.org/#origin-private-file-system
 compat_features:
-  - api.StorageManager.getDirectory
+  - api.FileSystemDirectoryHandle
+  - api.FileSystemDirectoryHandle.entries
+  - api.FileSystemDirectoryHandle.getDirectoryHandle
+  - api.FileSystemDirectoryHandle.getFileHandle
+  - api.FileSystemDirectoryHandle.keys
+  - api.FileSystemDirectoryHandle.removeEntry
+  - api.FileSystemDirectoryHandle.resolve
+  - api.FileSystemDirectoryHandle.values
+  # TODO: later addition
+  # - api.FileSystemDirectoryHandle.@@asyncIterator
+  - api.FileSystemFileHandle
   - api.FileSystemFileHandle.createSyncAccessHandle
+  - api.FileSystemFileHandle.getFile
+  - api.FileSystemHandle
+  - api.FileSystemHandle.isSameEntry
+  - api.FileSystemHandle.kind
+  - api.FileSystemHandle.name
+  - api.FileSystemSyncAccessHandle
+  - api.FileSystemSyncAccessHandle.close
+  # TODO: later addition
+  # - api.FileSystemSyncAccessHandle.close.sync_version
+  - api.FileSystemSyncAccessHandle.flush
+  # TODO: later addition
+  # - api.FileSystemSyncAccessHandle.flush.sync_version
+  - api.FileSystemSyncAccessHandle.getSize
+  # TODO: later addition
+  # - api.FileSystemSyncAccessHandle.getSize.sync_version
+  - api.FileSystemSyncAccessHandle.read
+  - api.FileSystemSyncAccessHandle.truncate
+  # TODO: later addition
+  # - api.FileSystemSyncAccessHandle.truncate.sync_version
+  - api.FileSystemSyncAccessHandle.write
+  - api.StorageManager.getDirectory
