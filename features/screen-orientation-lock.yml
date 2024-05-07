@@ -1,6 +1,14 @@
 name: Screen orientation lock
 description: The `screen.orientation.lock()` method prevents changes to the screen orientation, typically in fullscreen applications such as games. For example, while locked, rotating a phone to the side won't change the screen orientation from landscape to portrait.
 spec: https://w3c.github.io/screen-orientation/#lock-method
+status:
+  baseline: false
+  support:
+    chrome: "N/A"
+    chrome_android: "38"
+    edge: "N/A"
+    firefox: "N/A"
+    safari: "N/A"
 compat_features:
   - api.ScreenOrientation.lock
   - api.ScreenOrientation.unlock
