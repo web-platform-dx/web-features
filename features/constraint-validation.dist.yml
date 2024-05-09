@@ -7,23 +7,21 @@ spec: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#th
 group: forms
 caniuse: constraint-validation
 status:
-  baseline: low
-  baseline_low_date: 2023-03-27
+  baseline: high
+  baseline_low_date: 2018-12-11
+  baseline_high_date: 2021-06-11
   support:
-    chrome: "77"
-    chrome_android: "77"
-    edge: "79"
-    firefox: "98"
-    firefox_android: "98"
-    safari: "16.4"
-    safari_ios: "16.4"
+    chrome: "40"
+    chrome_android: "40"
+    edge: "18"
+    firefox: "51"
+    firefox_android: "64"
+    safari: "10.1"
+    safari_ios: "10.3"
+# TODO: Align with https://caniuse.com/constraint-validation by updating either
+# BCD of caniuse. According to caniuse, this is supported since Edge 17 and
+# Safari 10, while our generated status says Edge 18 and Safari 10.1.
 compat_features:
-  - api.ElementInternals.checkValidity
-  - api.ElementInternals.reportValidity
-  - api.ElementInternals.setValidity
-  - api.ElementInternals.validationMessage
-  - api.ElementInternals.validity
-  - api.ElementInternals.willValidate
   - api.HTMLButtonElement.checkValidity
   - api.HTMLButtonElement.reportValidity
   - api.HTMLButtonElement.setCustomValidity
