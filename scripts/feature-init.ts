@@ -25,7 +25,14 @@ const argv = yargs(process.argv.slice(2))
     type: "string",
     demandOption: true,
     default: "",
-    describe: "A human-readable name for the feature",
+    describe: "A human-readable name",
+  })
+  .option("description", {
+    alias: "desc",
+    type: "string",
+    demandOption: true,
+    default: "",
+    describe: "A short description",
   })
   .option("caniuse", {
     type: "string",
@@ -47,12 +54,20 @@ const argv = yargs(process.argv.slice(2))
   }).argv;
 
 async function main() {
-  const { dryRun, featureIdentifier, name, caniuse, compatFeatures, spec } =
-    argv;
+  const {
+    dryRun,
+    featureIdentifier,
+    name,
+    description,
+    caniuse,
+    compatFeatures,
+    spec,
+  } = argv;
 
   const destination = identifierToPath(featureIdentifier);
   const content = {
     name,
+    description,
     spec,
     caniuse,
     compat_features: compatFeatures,
