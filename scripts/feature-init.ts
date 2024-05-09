@@ -4,8 +4,8 @@
 import fs from "node:fs/promises";
 import { fileURLToPath } from "url";
 
-import { stringify } from "yaml";
 import * as prettier from "prettier";
+import { stringify } from "yaml";
 import yargs from "yargs";
 
 const argv = yargs(process.argv.slice(2))
@@ -20,6 +20,12 @@ const argv = yargs(process.argv.slice(2))
     boolean: true,
     default: false,
     describe: "Print instead of writing to a file",
+  })
+  .option("name", {
+    type: "string",
+    demandOption: true,
+    default: "",
+    describe: "A human-readable name for the feature",
   })
   .option("caniuse", {
     type: "string",
@@ -41,10 +47,12 @@ const argv = yargs(process.argv.slice(2))
   }).argv;
 
 async function main() {
-  const { dryRun, featureIdentifier, caniuse, compatFeatures, spec } = argv;
+  const { dryRun, featureIdentifier, name, caniuse, compatFeatures, spec } =
+    argv;
 
   const destination = identifierToPath(featureIdentifier);
   const content = {
+    name,
     spec,
     caniuse,
     compat_features: compatFeatures,
