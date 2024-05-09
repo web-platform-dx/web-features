@@ -1,5 +1,5 @@
 name: AbortSignal.any()
-description: The `AbortSignal.any()` static method combines an iterable of abort signals into a single signal, with abort reason set to the first signal to abort.
+description: The `AbortSignal.any()` static method combines an iterable of abort signals into a single signal, with the abort reason taken from the first signal to abort.
 spec: https://dom.spec.whatwg.org/#dom-abortsignal-any
 compat_features:
   - api.AbortSignal.any_static
