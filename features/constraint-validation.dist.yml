@@ -18,9 +18,6 @@ status:
     firefox_android: "64"
     safari: "10.1"
     safari_ios: "10.3"
-# TODO: Align with https://caniuse.com/constraint-validation by updating either
-# BCD of caniuse. According to caniuse, this is supported since Edge 17 and
-# Safari 10, while our generated status says Edge 18 and Safari 10.1.
 compat_features:
   - api.HTMLButtonElement.checkValidity
   - api.HTMLButtonElement.reportValidity
@@ -78,3 +75,7 @@ compat_features:
   - api.ValidityState.typeMismatch
   - api.ValidityState.valid
   - api.ValidityState.valueMissing
+
+# TODO: Align with https://caniuse.com/constraint-validation by updating either
+# BCD or caniuse. According to caniuse, this is supported since Edge 17 and
+# Safari 10, while our generated status says Edge 18 and Safari 10.1.

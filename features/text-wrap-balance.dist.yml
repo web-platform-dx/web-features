@@ -6,12 +6,15 @@ description: "The `text-wrap: balance` CSS declaration balances the length of ea
 spec: https://drafts.csswg.org/css-text-4/#valdef-text-wrap-style-balance
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/4673
 status:
-  baseline: false
+  baseline: low
+  baseline_low_date: 2024-05-13
   support:
     chrome: "114"
     chrome_android: "114"
     edge: "114"
     firefox: "121"
     firefox_android: "121"
+    safari: "17.5"
+    safari_ios: "17.5"
 compat_features:
   - css.properties.text-wrap.balance
