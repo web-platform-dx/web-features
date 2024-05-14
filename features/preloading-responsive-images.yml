@@ -1,0 +1,8 @@
+name: Preloading responsive images
+description: The `imagesrcset` and `imagesizes` attributes with the `rel="preload"` attribute for the `<link>` HTML element starts fetching responsive images before they're found in the body of the document.
+spec: https://html.spec.whatwg.org/multipage/semantics.html#attr-link-imagesrcset
+compat_features:
+  - api.HTMLLinkElement.imageSizes
+  - api.HTMLLinkElement.imageSrcset
+  - html.elements.link.imagesizes
+  - html.elements.link.imagesrcset
