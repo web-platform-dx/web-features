@@ -7,7 +7,9 @@ spec: https://drafts.csswg.org/css-anchor-position-1/#anchoring
 caniuse: css-anchor-positioning
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "125"
+    chrome_android: "125"
 compat_features:
   - api.CSSPositionTryDescriptors
   - api.CSSPositionTryDescriptors.align-self
