@@ -1,0 +1,9 @@
+name: Customized built-in elements
+description: Customized built-in elements are HTML elements with behavior that you define.
+spec: https://html.spec.whatwg.org/multipage/custom-elements.html#customized-built-in-element
+group: html
+# Note that https://caniuse.com/custom-elementsv1 covers both autonomous custom
+# elements and customized built-in elements, so it is not linked here.
+compat_features:
+  - api.CustomElementRegistry.builtin_element_support
+  - html.global_attributes.is

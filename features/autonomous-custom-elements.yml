@@ -1,0 +1,11 @@
+name: Autonomous custom elements
+description: Autonomous custom elements are HTML elements with behavior that you define.
+spec: https://html.spec.whatwg.org/multipage/custom-elements.html#autonomous-custom-element
+group: html
+# Note that https://caniuse.com/custom-elementsv1 covers both autonomous custom
+# elements and customized built-in elements, so it is not linked here.
+compat_features:
+  - api.CustomElementRegistry
+  - api.CustomElementRegistry.define
+  - api.Window.customElements
+  - css.selectors.defined
