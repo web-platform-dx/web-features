@@ -1,5 +1,5 @@
 name: Resource timing (initial support)
-description: The `serverTiming` property of the `PerformanceResourceTiming` API contains server timing information about network requests.
+description: `PerformanceResourceTiming` entries report when network events happen while loading a resource, such as when connections start and end. You can use this information to measure loading times.
 spec: https://w3c.github.io/resource-timing/
 group: resource-timing
 caniuse: resource-timing
