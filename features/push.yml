@@ -19,9 +19,6 @@ compat_features:
   - api.PushEvent.PushEvent
   - api.PushEvent.data
   - api.PushManager
-  # Wrong and should be removed from BCD:
-  # https://github.com/mdn/browser-compat-data/pull/22885
-  # - api.PushManager.worker_support
   - api.PushManager.getSubscription
   # Deprecated in BCD
   # - api.PushManager.hasPermission
@@ -49,8 +46,7 @@ compat_features:
   - api.PushSubscription.toJSON
   - api.PushSubscription.unsubscribe
   - api.ServiceWorkerRegistration.pushManager
-  # Include after https://github.com/mdn/browser-compat-data/pull/22886 is merged:
-  # - api.ServiceWorkerGlobalScope.push_event
+  - api.ServiceWorkerGlobalScope.push_event
   # TODO: Add a PushSubscriptionOptions feature with these keys:
   # - api.PushSubscription.options
   # - api.PushSubscriptionOptions

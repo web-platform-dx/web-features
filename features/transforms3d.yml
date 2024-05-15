@@ -2,27 +2,3 @@ name: 3D transforms
 description: The `transform` CSS property and its 3D transform functions allow rotations and other transforms in three dimensions, including perspective transforms.
 caniuse: transforms3d
 spec: https://drafts.csswg.org/css-transforms-2/
-compat_features:
-  - css.properties.backface-visibility
-  - css.properties.perspective-origin
-  # TODO: include after https://github.com/mdn/browser-compat-data/pull/22928 is merged
-  # - css.properties.perspective-origin.bottom
-  # - css.properties.perspective-origin.center
-  # - css.properties.perspective-origin.left
-  # - css.properties.perspective-origin.right
-  # - css.properties.perspective-origin.top
-  - css.properties.perspective
-  - css.properties.perspective.none
-  - css.properties.transform-style
-  - css.properties.transform.3d
-  # https://drafts.csswg.org/css-transforms-2/#three-d-transform-functions
-  - css.types.transform-function.matrix3d
-  - css.types.transform-function.translate3d
-  - css.types.transform-function.translateZ
-  - css.types.transform-function.scale3d
-  - css.types.transform-function.scaleZ
-  - css.types.transform-function.rotate3d
-  - css.types.transform-function.rotateX
-  - css.types.transform-function.rotateY
-  - css.types.transform-function.rotateZ
-  - css.types.transform-function.perspective

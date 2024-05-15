@@ -5,9 +5,6 @@ name: Media capture
 description: The `navigator.mediaDevices.getUserMedia()` API requests access to devices that produce audio or video streams, such as microphones or video cameras.
 spec: https://w3c.github.io/mediacapture-main/
 caniuse: stream
-# Override is needed to fix the Edge version:
-# https://github.com/mdn/browser-compat-data/pull/22913
-#
 # Firefox support for `enumerateDevices()` also needs an override since lack of
 # output device (a separate feature) is treated as partial implementation in
 # BCD.

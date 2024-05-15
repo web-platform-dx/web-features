@@ -26,7 +26,7 @@ compat_features:
   # A later minor addition (element subset of assignedNodes)
   # - api.HTMLSlotElement.assignedElements
   - api.HTMLSlotElement.name
-  # https://github.com/mdn/browser-compat-data/pull/22826
+  # A later minor addition (onslotchange missing in Safari 10)
   # - api.HTMLSlotElement.slotchange_event
   - api.Text.assignedSlot
   - css.selectors.slotted
