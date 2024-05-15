@@ -2,21 +2,6 @@ name: image-set()
 description: The `image-set()` CSS function provides a set of images at different resolutions or pixel densities, which the browser can pick from, depending on the device capabilities.
 spec: https://drafts.csswg.org/css-images-4/#image-set-notation
 caniuse: css-image-set
-# TODO: Remove this when these BCD PRs have landed:
-# https://github.com/mdn/browser-compat-data/pull/22902
-# https://github.com/mdn/browser-compat-data/pull/22912
-# https://github.com/mdn/browser-compat-data/pull/22939
-status:
-  baseline: low
-  baseline_low_date: 2023-09-18
-  support:
-    chrome: "113"
-    chrome_android: "113"
-    edge: "113"
-    firefox: "89"
-    firefox_android: "89"
-    safari: "17"
-    safari_ios: "17"
 compat_features:
   - css.properties.background-image.image-set
   - css.properties.content.image-set

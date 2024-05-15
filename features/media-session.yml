@@ -14,8 +14,7 @@ compat_features:
   - api.MediaSession
   - api.MediaSession.metadata
   - api.MediaSession.playbackState
-  # TODO: include after https://github.com/mdn/browser-compat-data/pull/22793
-  # - api.MediaSession.setActionHandler
+  - api.MediaSession.setActionHandler
   - api.MediaSession.setActionHandler.nexttrack_type
   - api.MediaSession.setActionHandler.pause_type
   - api.MediaSession.setActionHandler.play_type
