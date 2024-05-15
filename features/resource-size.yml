@@ -1,0 +1,11 @@
+name: Resource size
+description: The `decodedSize`, `encodedSize`, and `transferSize` properties of the `PerformanceResourceTiming` API reports the size, in octets, of resources loaded.
+spec:
+  - https://w3c.github.io/resource-timing/#dom-performanceresourcetiming-decodedbodysize
+  - https://w3c.github.io/resource-timing/#dom-performanceresourcetiming-encodedbodysize
+  - https://w3c.github.io/resource-timing/#dom-performanceresourcetiming-transfersize
+group: resource-timing
+compat_features:
+  - api.PerformanceResourceTiming.transferSize
+  - api.PerformanceResourceTiming.decodedBodySize
+  - api.PerformanceResourceTiming.encodedBodySize
