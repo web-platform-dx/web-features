@@ -3,16 +3,3 @@ description: Stable array sort() function
 spec: https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.sort
 group: arrays
 snapshot: ecmascript-2019
-status:
-  baseline: high
-  baseline_low_date: 2020-01-15
-  support:
-    chrome: "70"
-    chrome_android: "70"
-    edge: "79"
-    firefox: "3"
-    firefox_android: "4"
-    safari: "10.1"
-    safari_ios: "10.3"
-compat_features:
-  - javascript.builtins.Array.sort.stable_sorting
