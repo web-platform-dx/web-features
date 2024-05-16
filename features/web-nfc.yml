@@ -10,11 +10,16 @@ compat_features:
   - api.NDEFReader
   - api.NDEFReader.NDEFReader
   - api.NDEFReader.secure_context_required
-  - api.NDEFReader.makeReadOnly
+  # - api.NDEFReader.makeReadOnly  # TODO: later addition
   - api.NDEFReader.reading_event
   - api.NDEFReader.readingerror_event
   - api.NDEFReader.scan
   - api.NDEFReader.write
+  - api.NDEFReadingEvent
+  - api.NDEFReadingEvent.NDEFReadingEvent
+  - api.NDEFReadingEvent.secure_context_required
+  - api.NDEFReadingEvent.message
+  - api.NDEFReadingEvent.serialNumber
   - api.NDEFRecord
   - api.NDEFRecord.NDEFRecord
   - api.NDEFRecord.secure_context_required
