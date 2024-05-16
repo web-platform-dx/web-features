@@ -1,7 +1,9 @@
 name: Form-associated custom elements
 description: Custom elements may act like built-in form elements, via the the `attachInternals()` method of `HTMLElement` and the `ElementInternals` API.
 spec: https://html.spec.whatwg.org/multipage/custom-elements.html#form-associated-custom-elements
-group: forms
+group:
+  - custom-elements
+  - forms
 compat_features:
   - api.HTMLElement.attachInternals
   - api.ElementInternals
