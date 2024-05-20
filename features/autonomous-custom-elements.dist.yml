@@ -17,10 +17,11 @@ status:
     firefox_android: "63"
     safari: "10.1"
     safari_ios: "10.3"
-# Note that https://caniuse.com/custom-elementsv1 covers both autonomous custom
-# elements and customized built-in elements, so it is not linked here.
 compat_features:
   - api.CustomElementRegistry
   - api.CustomElementRegistry.define
   - api.Window.customElements
   - css.selectors.defined
+
+# Note that https://caniuse.com/custom-elementsv1 covers both autonomous custom
+# elements and customized built-in elements, so it is not linked here.
