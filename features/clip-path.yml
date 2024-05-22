@@ -1,0 +1,21 @@
+name: clip-path
+description: "The `clip-path` CSS property hides part of an element according to a shape."
+spec: https://drafts.fxtf.org/css-masking-1/#clipping-paths
+# https://caniuse.com/css-clip-path is not linked here because the browser
+# versions are very different, mostly due to lack of support for url() for
+# external SVGs being treated as partial support. That is not essential to
+# using the feature, and not even mentioned on MDN.
+# TODO: align with caniuse and link it here.
+status:
+  compute_from:
+    - css.properties.clip-path
+    - css.properties.clip-path.basic_shape
+compat_features:
+  - css.properties.clip-path
+  - css.properties.clip-path.basic_shape
+  - css.properties.clip-path.fill-box
+  - css.properties.clip-path.html_elements
+  - css.properties.clip-path.path
+  - css.properties.clip-path.stroke-box
+  - css.properties.clip-path.svg_elements
+  - css.properties.clip-path.view-box
