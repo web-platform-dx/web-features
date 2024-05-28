@@ -10,6 +10,7 @@ status:
   support:
     chrome: "125"
     chrome_android: "125"
+    edge: "125"
 compat_features:
   - api.CSSPositionTryDescriptors
   - api.CSSPositionTryDescriptors.align-self
@@ -148,12 +149,15 @@ compat_features:
   - css.properties.min-height.anchor-size
   - css.properties.min-inline-size.anchor-size
   - css.properties.min-width.anchor-size
+  - css.properties.place-items.anchor-center
+  - css.properties.place-self.anchor-center
   - css.properties.position-anchor
   - css.properties.position-try
   - css.properties.position-try-options
   - css.properties.position-try-options.flip-block
   - css.properties.position-try-options.flip-inline
   - css.properties.position-try-options.flip-start
+  - css.properties.position-try-options.inset-area
   - css.properties.position-try-options.none
   - css.properties.position-try-order
   - css.properties.position-try-order.most-block-size
