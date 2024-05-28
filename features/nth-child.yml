@@ -1,0 +1,9 @@
+name: ":nth-child() (initial support)"
+description: "The `:nth-child()` and `:nth-last-child()` CSS functional pseudo-classes match elements by the relative position of elements (first, second, third, fourth, and so on), counted from the first or last sibling."
+spec:
+  - https://drafts.csswg.org/selectors-3/#nth-child-pseudo
+  - https://drafts.csswg.org/selectors-3/#nth-last-child-pseudo
+group: css
+compat_features:
+  - css.selectors.nth-child
+  - css.selectors.nth-last-child
