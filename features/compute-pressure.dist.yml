@@ -7,7 +7,8 @@ spec: https://w3c.github.io/compute-pressure/
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/3899
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "125"
 compat_features:
   - api.Permissions.permission_compute-pressure
   - api.PressureObserver
