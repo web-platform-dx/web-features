@@ -6,16 +6,10 @@ group: media-elements
 caniuse: video
 compat_features:
   - api.HTMLVideoElement
-  - api.HTMLVideoElement.cancelVideoFrameCallback
-  - api.HTMLVideoElement.disablePictureInPicture
-  - api.HTMLVideoElement.enterpictureinpicture_event
   - api.HTMLVideoElement.getVideoPlaybackQuality
   - api.HTMLVideoElement.height
-  - api.HTMLVideoElement.leavepictureinpicture_event
   - api.HTMLVideoElement.playsInline
   - api.HTMLVideoElement.poster
-  - api.HTMLVideoElement.requestPictureInPicture
-  - api.HTMLVideoElement.requestVideoFrameCallback
   - api.HTMLVideoElement.resize_event
   - api.HTMLVideoElement.videoHeight
   - api.HTMLVideoElement.videoWidth
@@ -26,7 +20,6 @@ compat_features:
   - html.elements.video.controls
   - html.elements.video.controlslist
   - html.elements.video.crossorigin
-  - html.elements.video.disablepictureinpicture
   - html.elements.video.disableremoteplayback
   - html.elements.video.height
   - html.elements.video.loop
