@@ -14,7 +14,7 @@ if (process.argv.includes("--quiet")) {
     logger.add(new winston.transports.Console({ level: 'verbose' }));
 }
 
-// Create a map from caniuse feature identifers to our identifiers, making
+// Create a map from caniuse feature identifiers to our identifiers, making
 // it possible to enumerate matched and unmatched features.
 const mapping = new Map<string, string | null>(
     Object.keys(lite.features).sort().map(id => [id, null])
