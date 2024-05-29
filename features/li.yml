@@ -1,0 +1,23 @@
+draft: true
+name: <li>
+description: The `<li>` element TODO.
+spec:
+  - https://html.spec.whatwg.org/multipage/grouping-content.html#the-li-element
+  - https://html.spec.whatwg.org/multipage/grouping-content.html#the-ol-element
+  - https://html.spec.whatwg.org/multipage/grouping-content.html#the-ul-element
+group: html
+compat_features:
+  - api.HTMLLIElement
+  - api.HTMLLIElement.value
+  - api.HTMLOListElement
+  - api.HTMLOListElement.reversed
+  - api.HTMLOListElement.start
+  - api.HTMLOListElement.type
+  - api.HTMLUListElement
+  - html.elements.li
+  - html.elements.li.value
+  - html.elements.ol
+  - html.elements.ol.reversed
+  - html.elements.ol.start
+  - html.elements.ol.type
+  - html.elements.ul

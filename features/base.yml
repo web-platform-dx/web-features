@@ -1,0 +1,14 @@
+draft: true
+name: <base>
+description: The `<base>` element TODO.
+spec: https://html.spec.whatwg.org/multipage/semantics.html#the-base-element
+group: html
+compat_features:
+  - api.HTMLBaseElement
+  - api.HTMLBaseElement.href
+  - api.HTMLBaseElement.target
+  - html.elements.base
+  - html.elements.base.href
+  - html.elements.base.href.forbid_data_javascript_urls
+  - html.elements.base.href.relative_url
+  - html.elements.base.target
