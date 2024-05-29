@@ -13,8 +13,9 @@ status:
     edge: "79"
     firefox: "63"
     firefox_android: "63"
-# Note that https://caniuse.com/custom-elementsv1 covers both autonomous custom
-# elements and customized built-in elements, so it is not linked here.
 compat_features:
   - api.CustomElementRegistry.builtin_element_support
   - html.global_attributes.is
+
+# Note that https://caniuse.com/custom-elementsv1 covers both autonomous custom
+# elements and customized built-in elements, so it is not linked here.
