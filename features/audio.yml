@@ -1,37 +1,12 @@
 draft: true
 name: <audio>
 description: The `<audio>` element TODO.
-spec:
-  - https://html.spec.whatwg.org/multipage/embedded-content.html#the-source-element
-  - https://html.spec.whatwg.org/multipage/media.html#audio
-  - https://html.spec.whatwg.org/multipage/media.html#video
-group: html
+spec: https://html.spec.whatwg.org/multipage/media.html#audio
+group: media-elements
+caniuse: audio
 compat_features:
   - api.HTMLAudioElement
   - api.HTMLAudioElement.Audio
-  - api.HTMLSourceElement
-  - api.HTMLSourceElement.height
-  - api.HTMLSourceElement.media
-  - api.HTMLSourceElement.sizes
-  - api.HTMLSourceElement.src
-  - api.HTMLSourceElement.srcset
-  - api.HTMLSourceElement.type
-  - api.HTMLSourceElement.width
-  - api.HTMLVideoElement
-  - api.HTMLVideoElement.cancelVideoFrameCallback
-  - api.HTMLVideoElement.disablePictureInPicture
-  - api.HTMLVideoElement.enterpictureinpicture_event
-  - api.HTMLVideoElement.getVideoPlaybackQuality
-  - api.HTMLVideoElement.height
-  - api.HTMLVideoElement.leavepictureinpicture_event
-  - api.HTMLVideoElement.playsInline
-  - api.HTMLVideoElement.poster
-  - api.HTMLVideoElement.requestPictureInPicture
-  - api.HTMLVideoElement.requestVideoFrameCallback
-  - api.HTMLVideoElement.resize_event
-  - api.HTMLVideoElement.videoHeight
-  - api.HTMLVideoElement.videoWidth
-  - api.HTMLVideoElement.width
   - html.elements.audio
   - html.elements.audio.autoplay
   - html.elements.audio.controls
@@ -42,27 +17,3 @@ compat_features:
   - html.elements.audio.muted
   - html.elements.audio.preload
   - html.elements.audio.src
-  - html.elements.source
-  - html.elements.source.height
-  - html.elements.source.media
-  - html.elements.source.sizes
-  - html.elements.source.src
-  - html.elements.source.srcset
-  - html.elements.source.type
-  - html.elements.source.width
-  - html.elements.video
-  - html.elements.video.aspect_ratio_computed_from_attributes
-  - html.elements.video.autoplay
-  - html.elements.video.controls
-  - html.elements.video.controlslist
-  - html.elements.video.crossorigin
-  - html.elements.video.disablepictureinpicture
-  - html.elements.video.disableremoteplayback
-  - html.elements.video.height
-  - html.elements.video.loop
-  - html.elements.video.muted
-  - html.elements.video.playsinline
-  - html.elements.video.poster
-  - html.elements.video.preload
-  - html.elements.video.src
-  - html.elements.video.width
