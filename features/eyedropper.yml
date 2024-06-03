@@ -1,5 +1,8 @@
 name: EyeDropper
-description: The EyeDropper API creates an eyedropper tool that allows users to select a color from their screen.
-spec: https://wicg.github.io/eyedropper-api/#eyedropper-interface
+description: The `EyeDropper` API opens an eyedropper tool that allows users to select a color from their screen.
+spec: https://wicg.github.io/eyedropper-api/
 compat_features:
   - api.EyeDropper
+  - api.EyeDropper.EyeDropper
+  - api.EyeDropper.secure_context_required
+  - api.EyeDropper.open
