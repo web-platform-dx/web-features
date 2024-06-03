@@ -14,7 +14,7 @@ Before you contribute, consider the following:
 The project is in its early stages, so we’re still developing tools and processes to help improve and expand our work.
 To get started contributing, take a look the following:
 
-* [Feature guidelines](./README.md#feature-guidelines)
+* Go to [feature guidelines](./README.md#feature-guidelines)
 * Go to [open issues](https://github.com/web-platform-dx/web-features/issues) to propose new feature groups or report a bug.
 * Go to [open PRs](https://github.com/web-platform-dx/web-features/pulls) to review incoming feature groups and updates.
 
