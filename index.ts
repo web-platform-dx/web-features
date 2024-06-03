@@ -110,6 +110,9 @@ function convertMarkdown(markdown: string) {
     return { text, html };
 }
 
+// Map from BCD keys/paths to web-features identifiers.
+const bcdToFeatureId: Map<string, string> = new Map();
+
 const features: { [key: string]: FeatureData } = {};
 for (const [key, data] of yamlEntries('features')) {
     // Draft features reserve an identifier but aren't complete yet. Skip them.
@@ -152,6 +155,19 @@ for (const [key, data] of yamlEntries('features')) {
     for (const snapshot of identifiers(data.snapshot)) {
         if (!snapshots.has(snapshot)) {
             throw new Error(`snapshot ${snapshot} used in ${key}.yml is not a valid snapshot. Add it to snapshots/ if needed.`);
+        }
+    }
+
+    // Check that no BCD key is used twice until the meaning is made clear in
+    // https://github.com/web-platform-dx/web-features/issues/1173.
+    if (data.compat_features) {
+        for (const bcdKey of data.compat_features) {
+            const otherKey = bcdToFeatureId.get(bcdKey);
+            if (otherKey) {
+                throw new Error(`BCD key ${bcdKey} is used in both ${otherKey} and ${key}, which creates ambiguity for some consumers. Please see https://github.com/web-platform-dx/web-features/issues/1173 and help us find a good solution to allow this.`);
+            } else {
+                bcdToFeatureId.set(bcdKey, key);
+            }
         }
     }
 
