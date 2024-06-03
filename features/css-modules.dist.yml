@@ -12,4 +12,7 @@ status:
     chrome_android: "123"
     edge: "123"
 compat_features:
+  # TODO: Include when https://github.com/web-platform-dx/web-features/issues/1173
+  # is resolved.
+  # - javascript.statements.import
   - javascript.statements.import.import_attributes.type_css

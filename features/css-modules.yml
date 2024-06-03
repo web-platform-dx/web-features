@@ -3,4 +3,7 @@ description: 'CSS module scripts allow CSS code to be organized into reusable un
 spec: https://html.spec.whatwg.org/multipage/webappapis.html#css-module-script
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/3805
 compat_features:
+  # TODO: Include when https://github.com/web-platform-dx/web-features/issues/1173
+  # is resolved.
+  # - javascript.statements.import
   - javascript.statements.import.import_attributes.type_css
