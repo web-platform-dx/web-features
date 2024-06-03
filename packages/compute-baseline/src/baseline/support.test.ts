@@ -1,6 +1,6 @@
 import assert from "assert/strict";
-import { Compat } from "../browser-compat-data";
-import { lastInitialRelease } from "./support";
+import { Compat } from "../browser-compat-data/index.js";
+import { lastInitialRelease } from "./support.js";
 
 describe("lastInitialRelease", function () {
   it("returns undefined for no releases", function () {

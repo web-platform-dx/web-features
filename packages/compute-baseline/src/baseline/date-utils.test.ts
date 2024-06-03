@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 
-import { isFuture } from "./date-utils";
 import { Temporal } from "@js-temporal/polyfill";
+import { isFuture } from "./date-utils.js";
 
 describe("isFuture", function () {
   it("returns true for tomorrow", function () {

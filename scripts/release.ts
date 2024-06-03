@@ -404,8 +404,8 @@ function preflight(options: PreflightOptions): void {
 
   if (head !== expectedRef) {
     // TODO: uncomment below, after we create a GitHub Actions workflow to run this script automatically
-    // logger.error(`Starting banch is not ${expectedRef}`);
+    // logger.error(`Starting branch is not ${expectedRef}`);
     // process.exit(1);
-    logger.warn(`Starting banch is not ${expectedRef}`);
+    logger.warn(`Starting branch is not ${expectedRef}`);
   }
 }

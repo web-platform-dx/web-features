@@ -1,0 +1,21 @@
+name: Form-associated custom elements
+description: Custom elements may act like built-in form elements, via the the `attachInternals()` method of `HTMLElement` and the `ElementInternals` API.
+spec: https://html.spec.whatwg.org/multipage/custom-elements.html#form-associated-custom-elements
+group:
+  - custom-elements
+  - forms
+compat_features:
+  - api.HTMLElement.attachInternals
+  - api.ElementInternals
+  - api.ElementInternals.checkValidity
+  - api.ElementInternals.form
+  - api.ElementInternals.labels
+  - api.ElementInternals.reportValidity
+  - api.ElementInternals.setFormValue
+  - api.ElementInternals.setValidity
+  - api.ElementInternals.validationMessage
+  - api.ElementInternals.validity
+  - api.ElementInternals.willValidate
+  # TODO: later additions
+  # - api.ElementInternals.shadowRoot
+  # - api.ElementInternals.states

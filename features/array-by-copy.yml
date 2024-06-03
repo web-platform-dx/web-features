@@ -1,0 +1,14 @@
+name: Array by copy
+description: The `toReserved()`, `toSorted()`, `toSpliced()`, and `with()` methods of arrays and typed arrays return changed copies of arrays. They stand in contrast to methods such as `sort()` or `reverse()` that change arrays in place.
+spec:
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.toreversed
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tosorted
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.tospliced
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-array.prototype.with
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.toreversed
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.tosorted
+  - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.with
+snapshot: ecmascript-2023
+group:
+  - arrays
+  - typed-arrays

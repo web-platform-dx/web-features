@@ -1,0 +1,8 @@
+name: Constraint validation API
+description: Methods that validate form controls before submission, such as `checkValidity()`, `reportValidity()` and `setCustomValidity()`.
+spec: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api
+group: forms
+caniuse: constraint-validation
+# TODO: Align with https://caniuse.com/constraint-validation by updating either
+# BCD or caniuse. According to caniuse, this is supported since Edge 17 and
+# Safari 10, while our generated status says Edge 18 and Safari 10.1.

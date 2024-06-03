@@ -1,7 +1,7 @@
 import { Temporal } from "@js-temporal/polyfill";
 import { ReleaseStatement } from "@mdn/browser-compat-data";
 
-import { Browser } from "./browser";
+import { Browser } from "./browser.js";
 
 export class Release {
   browser: Browser;

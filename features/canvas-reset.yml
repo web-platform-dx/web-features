@@ -1,0 +1,7 @@
+name: Canvas reset()
+description: The `reset()` method clears a canvas to its initial state.
+spec: https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-reset
+group: canvas
+compat_features:
+  - api.CanvasRenderingContext2D.reset
+  - api.OffscreenCanvasRenderingContext2D.reset

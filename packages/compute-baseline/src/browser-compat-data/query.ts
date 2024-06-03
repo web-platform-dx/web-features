@@ -1,4 +1,4 @@
-import { isIndexable } from "./typeUtils";
+import { isIndexable } from "./typeUtils.js";
 
 // TODO: Name this better. There's nothing so sophisticated as a "query" here.
 // It's a boring lookup!

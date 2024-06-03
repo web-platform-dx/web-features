@@ -1,4 +1,4 @@
-import { Compat } from "../browser-compat-data/compat";
+import { Compat } from "../browser-compat-data/compat.js";
 
 export const identifiers = [
   "chrome",

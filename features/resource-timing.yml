@@ -1,0 +1,27 @@
+name: Resource timing (initial support)
+description: "`PerformanceResourceTiming` entries report when network events happen while loading a resource, such as when connections start and end. You can use this information to measure loading times."
+spec: https://w3c.github.io/resource-timing/
+group: resource-timing
+caniuse: resource-timing
+# The following set of features attempts to closely match caniuse's "basic
+# support" feature. Unfortunately, BCD and caniuse disagree, so there are
+# differences.
+compat_features:
+  # - api.Performance.clearResourceTimings # TODO: later support
+  # - api.Performance.setResourceTimingBufferSize # TODO: later support
+  # - api.Performance.resourcetimingbufferfull_event # TODO: later support
+  - api.PerformanceResourceTiming
+  - api.PerformanceResourceTiming.connectEnd
+  - api.PerformanceResourceTiming.connectStart
+  - api.PerformanceResourceTiming.domainLookupEnd
+  - api.PerformanceResourceTiming.domainLookupStart
+  - api.PerformanceResourceTiming.fetchStart
+  - api.PerformanceResourceTiming.initiatorType
+  # - api.PerformanceResourceTiming.nextHopProtocol # TODO: later support
+  - api.PerformanceResourceTiming.redirectEnd
+  - api.PerformanceResourceTiming.redirectStart
+  - api.PerformanceResourceTiming.requestStart
+  - api.PerformanceResourceTiming.responseEnd
+  - api.PerformanceResourceTiming.responseStart
+  # - api.PerformanceResourceTiming.secureConnectionStart # TODO: later support
+  # - api.PerformanceResourceTiming.toJSON # TODO: later support

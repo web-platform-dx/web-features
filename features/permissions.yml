@@ -1,0 +1,12 @@
+name: Permissions
+description: The `navigator.permissions` API checks whether a permission, such as access to geolocation data, has been granted.
+spec: https://w3c.github.io/permissions/
+caniuse: permissions-api
+compat_features:
+  - api.Navigator.permissions
+  - api.PermissionStatus
+  # - api.PermissionStatus.change_event # TODO: later addition
+  # - api.PermissionStatus.name  # TODO: later addition
+  - api.PermissionStatus.state # caniuse says this shipped in Chrome 43, but BCD (and now web-features) says Chrome 44 because it was under an old name in 43 (`status`)
+  - api.Permissions
+  - api.Permissions.query
