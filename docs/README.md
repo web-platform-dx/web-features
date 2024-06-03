@@ -48,10 +48,12 @@ Feature authors should (in descending order of priority):
   - 👍 Recommended: `<dialog>`
   - 👎 Not recommended: `<dialog>` element
 
-- Prefer singular names over plurals.
+- Prefer plural names, except when you're shadowing the literal name of an interface, element, property, etc.
 
-  - 👍 Recommended: Array
-  - 👎 Not recommended: Arrays
+  - 👍 Recommended: JavaScript modules
+  - 👎 Not recommended: JavaScript module
+  - 👍 Recommended: BigInt
+  - 👎 Not recommended: BigInts
 
 ### Identifiers
 
