@@ -2,18 +2,3 @@ name: Idle detection
 description: The `IdleDetector` API is used to notify a webpage of the user's idle, active, and locked state.
 spec: https://wicg.github.io/idle-detection/
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/2834
-status:
-  baseline: false
-  support:
-    chrome: "94"
-    chrome_android: "94"
-    edge: "94"
-compat_features:
-  - api.IdleDetector
-  - api.IdleDetector.IdleDetector
-  - api.IdleDetector.change_event
-  - api.IdleDetector.requestPermission_static
-  - api.IdleDetector.screenState
-  - api.IdleDetector.start
-  - api.IdleDetector.userState
-  - http.headers.Permissions-Policy.idle-detection
