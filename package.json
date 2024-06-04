@@ -22,7 +22,7 @@
     "schema-defs:write": "npm run schema-defs -- --out ./schemas/defs.schema.json",
     "test": "npm run test:caniuse -- --quiet && npm run test:schema && npm run test:specs && npm run test:format && npm run test:dist && npm run test --workspaces",
     "test:caniuse": "tsx scripts/caniuse.ts",
-    "test:dist": "tsx scripts/dist.ts --check features/*.dist.yml",
+    "test:dist": "tsx scripts/dist.ts --check features/*.yml.dist",
     "test:schema": "tsx scripts/schema.ts",
     "test:specs": "tsx scripts/specs.ts",
     "test:format": "prettier --check .",

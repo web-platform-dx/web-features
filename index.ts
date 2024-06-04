@@ -37,14 +37,14 @@ function scrub(data: any) {
 function* yamlEntries(root: string): Generator<[string, any]> {
     const filePaths = new fdir()
         .withBasePath()
-        .filter((fp) => fp.endsWith('.yml') && !fp.endsWith('.dist.yml'))
+        .filter((fp) => fp.endsWith('.yml') && !fp.endsWith('.yml.dist'))
         .crawl(root)
         .sync() as string[];
 
     for (const fp of filePaths) {
         // The feature identifier/key is the filename without extension.
         const { dir, name: key } = path.parse(fp);
-        const distPath = path.join(dir, `${key}.dist.yml`);
+        const distPath = path.join(dir, `${key}.yml.dist`);
 
         const data = YAML.parse(fs.readFileSync(fp, { encoding: 'utf-8'}));
         if (fs.existsSync(distPath)) {

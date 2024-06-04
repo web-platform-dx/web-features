@@ -16,7 +16,7 @@ import yargs from "yargs";
 
 const argv = yargs(process.argv.slice(2))
   .scriptName("dist")
-  .usage("$0 [filenames..]", "Generate .dist.yml from .yml", (yargs) =>
+  .usage("$0 [filenames..]", "Generate .yml.dist from .yml", (yargs) =>
     yargs.positional("filenames", {
       describe: "YAML files to check/update.",
     }),
@@ -213,22 +213,22 @@ function warnOnNeedlessOverrides(id, overridden, generated) {
 }
 
 function main() {
-  // Map from .yml to .dist.yml to filter out duplicates.
+  // Map from .yml to .yml.dist to filter out duplicates.
   const sourceToDist = new Map<string, string>(
     argv.filenames.map((filePath: string) => {
       let { dir, name, ext } = path.parse(filePath);
-      if (ext !== ".yml") {
+      if (![".dist", ".yml"].includes(ext)) {
         throw new Error(
           `Cannot generate dist for ${filePath}, only YAML input is supported`,
         );
       }
-      // Remove .dist to start from the source even if dist is given.
-      if (name.endsWith(".dist")) {
-        name = name.substring(0, name.length - 5);
+      // Start from the source even if dist is given
+      if (name.endsWith(".yml")) {
+        name = name.substring(0, name.length - 4);
       }
       return [
         path.format({ dir, name, ext: ".yml" }),
-        path.format({ dir, name, ext: ".dist.yml" }),
+        path.format({ dir, name, ext: ".yml.dist" }),
       ];
     }),
   );
