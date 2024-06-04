@@ -3,36 +3,3 @@ description: The `popover` HTML attribute creates an overlay to display content 
 spec: https://html.spec.whatwg.org/multipage/popover.html
 group: html
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/4191
-status:
-  baseline: low
-  baseline_low_date: 2024-04-16
-  support:
-    chrome: "114"
-    chrome_android: "114"
-    edge: "114"
-    firefox: "125"
-    firefox_android: "125"
-    safari: "17"
-    safari_ios: "17"
-compat_features:
-  - api.HTMLButtonElement.popoverTargetAction
-  - api.HTMLButtonElement.popoverTargetElement
-  - api.HTMLElement.beforetoggle_event
-  - api.HTMLElement.hidePopover
-  - api.HTMLElement.popover
-  - api.HTMLElement.showPopover
-  - api.HTMLElement.toggle_event
-  - api.HTMLElement.togglePopover
-  - api.HTMLInputElement.popoverTargetAction
-  - api.HTMLInputElement.popoverTargetElement
-  - api.ToggleEvent
-  - api.ToggleEvent.ToggleEvent
-  - api.ToggleEvent.newState
-  - api.ToggleEvent.oldState
-  - css.selectors.backdrop.popover
-  - css.selectors.popover-open
-  - html.global_attributes.popover
-  - html.elements.button.popovertarget
-  - html.elements.button.popovertargetaction
-  - html.elements.input.popovertarget
-  - html.elements.input.popovertargetaction
