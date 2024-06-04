@@ -1,9 +1,9 @@
 name: paint()
-description: The `paint()` CSS function paints an element's background or border using a custom paint worklet.
+description: The `paint()` CSS function creates a custom image, drawn using a paint worklet, for an element's background or border.
 spec: https://drafts.css-houdini.org/css-paint-api-1/
+group: css
 caniuse: css-paint-api
 compat_features:
   - css.types.image.paint
   - api.CSS.paintWorklet_static
   - api.PaintWorkletGlobalScope
-group: css
