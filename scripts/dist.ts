@@ -216,19 +216,19 @@ function main() {
   // Map from .yml to .yml.dist to filter out duplicates.
   const sourceToDist = new Map<string, string>(
     argv.filenames.map((filePath: string) => {
-      let { dir, name, ext } = path.parse(filePath);
+      const ext = path.extname(filePath);
       if (![".dist", ".yml"].includes(ext)) {
         throw new Error(
           `Cannot generate dist for ${filePath}, only YAML input is supported`,
         );
       }
       // Start from the source even if dist is given
-      if (name.endsWith(".yml")) {
-        name = name.substring(0, name.length - 4);
+      if (filePath.endsWith(".dist")) {
+        filePath = filePath.substring(0, filePath.length - 5);
       }
       return [
-        path.format({ dir, name, ext: ".yml" }),
-        path.format({ dir, name, ext: ".yml.dist" }),
+        filePath,
+        `${filePath}.dist`,
       ];
     }),
   );
