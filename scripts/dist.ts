@@ -246,7 +246,7 @@ function warnOnNeedlessOverrides(id, overridden, generated) {
 
 function main() {
   // Map from .yml to .dist.yml to filter out duplicates.
-  const sourceToDist: Map<string, string> = new Map(
+  const sourceToDist = new Map<string, string>(
     argv.filenames.map((filePath: string) => {
       let { dir, name, ext } = path.parse(filePath);
       if (ext !== ".yml") {
