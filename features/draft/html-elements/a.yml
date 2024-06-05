@@ -5,8 +5,6 @@ spec: https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-ele
 group: html
 compat_features:
   - api.HTMLAnchorElement
-  - api.HTMLAnchorElement.attributionSourceId
-  - api.HTMLAnchorElement.attributionSrc
   - api.HTMLAnchorElement.download
   - api.HTMLAnchorElement.hash
   - api.HTMLAnchorElement.host
@@ -28,19 +26,12 @@ compat_features:
   - api.HTMLAnchorElement.type
   - api.HTMLAnchorElement.username
   - html.elements.a
-  - html.elements.a.attributionsourceid
-  - html.elements.a.attributionsrc
   - html.elements.a.download
   - html.elements.a.href
-  - html.elements.a.href.href_sms
-  - html.elements.a.href.href_top
   - html.elements.a.hreflang
-  - html.elements.a.implicit_noopener
   - html.elements.a.ping
   - html.elements.a.rel
   - html.elements.a.rel.noopener
   - html.elements.a.rel.noreferrer
   - html.elements.a.target
-  - html.elements.a.target.unfencedTop
-  - html.elements.a.text_fragments
   - html.elements.a.type
