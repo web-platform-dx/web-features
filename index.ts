@@ -20,6 +20,10 @@ const nameMaxLength = 80;
 // The longest description allowed, to avoid them growing into documentation.
 const descriptionMaxLength = 300;
 
+// Internal symbol to mark draft entries, so that using the draft field outside
+// of a draft directory doesn't work.
+const draft = Symbol('draft');
+
 // Some FeatureData keys aren't (and may never) be ready for publishing.
 // They're not part of the public schema (yet).
 const omittables = [
@@ -50,6 +54,10 @@ function* yamlEntries(root: string): Generator<[string, any]> {
         if (fs.existsSync(distPath)) {
             const dist = YAML.parse(fs.readFileSync(distPath, { encoding: 'utf-8'}));
             Object.assign(data, dist);
+        }
+
+        if (fp.split(path.sep).includes('draft')) {
+            data[draft] = true;
         }
 
         yield [key, data];
@@ -119,7 +127,10 @@ const bcdToFeatureId: Map<string, string> = new Map();
 const features: { [key: string]: FeatureData } = {};
 for (const [key, data] of yamlEntries('features')) {
     // Draft features reserve an identifier but aren't complete yet. Skip them.
-    if (data.draft) {
+    if (data[draft]) {
+        if (!data.draft_date) {
+            throw new Error(`The draft feature ${key} is missing the draft_date field. Set it to the current date.`);
+        }
         continue;
     }
 
