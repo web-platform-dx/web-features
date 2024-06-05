@@ -226,10 +226,7 @@ function main() {
       if (filePath.endsWith(".dist")) {
         filePath = filePath.substring(0, filePath.length - 5);
       }
-      return [
-        filePath,
-        `${filePath}.dist`,
-      ];
+      return [filePath, `${filePath}.dist`];
     }),
   );
 
