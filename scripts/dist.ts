@@ -120,14 +120,38 @@ function toDist(sourcePath: string): YAML.Document {
   }
 
   if (!overridden.status) {
-    const status = generated.statusByCompatFeaturesOverride ?? generated.status;
+    let status = generated.statusByCompatFeaturesOverride ?? generated.status;
     if (status) {
       if (status.discouraged) {
         logger.warn(
           `${id}: contains at least one deprecated compat feature and can never be Baseline. Was this intentional?`,
         );
       }
-      insertStatus(dist, JSON.parse(status.toJSON()));
+      status = JSON.parse(status.toJSON());
+
+      // Add ranges to dates and version numbers if the Baseline low date is
+      // before the status_uncertain_before year. It's not possible to use
+      // ranges more selectively than this, either the status of the feature as
+      // a whole is uncertain or it must be fully reviewed.
+      const statusUncertainBefore = Number(yaml.get("status_uncertain_before"));
+      if (statusUncertainBefore && status.baseline_low_date) {
+        const year = Temporal.PlainDate.from(status.baseline_low_date).year;
+        if (year < statusUncertainBefore) {
+          // Add ≤ to versions and dates to reflect uncertainty about the
+          // versions of earliest support.
+          status.baseline_low_date = `≤${status.baseline_low_date}`;
+          if (status.baseline_high_date) {
+            status.baseline_high_date = `≤${status.baseline_high_date}`;
+          }
+          for (const [browser, version] of Object.entries(status.support)) {
+            const firstVersion = compat.browser(browser).releases[0].version;
+            if (version !== firstVersion) {
+              status.support[browser] = `≤${version}`;
+            }
+          }
+        }
+      }
+      insertStatus(dist, status);
     }
   }
 

@@ -27,9 +27,10 @@ const draft = Symbol('draft');
 // Some FeatureData keys aren't (and may never) be ready for publishing.
 // They're not part of the public schema (yet).
 const omittables = [
+    "group",
     "snapshot",
-    "group"
-]
+    "status_uncertain_before",
+];
 
 function scrub(data: any) {
     for (const key of omittables) {
@@ -142,7 +143,7 @@ for (const [key, data] of yamlEntries('features')) {
     }
 
     // Compute Baseline high date from low date.
-    if (data.status?.baseline === 'high') {
+    if (data.status?.baseline === 'high' && !data.status.baseline_low_date) {
         const lowDate = Temporal.PlainDate.from(data.status.baseline_low_date);
         const highDate = lowDate.add(BASELINE_LOW_TO_HIGH_DURATION);
         data.status.baseline_high_date = String(highDate);
