@@ -1,4 +1,4 @@
-draft: true
+draft_date: 2024-06-05
 name: <input>
 description: The `<input>` element TODO.
 spec: https://html.spec.whatwg.org/multipage/input.html#the-input-element
@@ -102,6 +102,8 @@ compat_features:
   - html.elements.input.popovertarget
   - html.elements.input.popovertargetaction
   - html.elements.input.readonly
+  - html.elements.input.required
+  - html.elements.input.size
   - html.elements.input.src
   - html.elements.input.step
   - html.elements.input.type_button

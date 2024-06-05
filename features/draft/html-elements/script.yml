@@ -1,4 +1,4 @@
-draft: true
+draft_date: 2024-06-05
 name: <script>
 description: The `<script>` element TODO.
 spec:
@@ -40,6 +40,7 @@ compat_features:
   - html.elements.script.src
   - html.elements.script.type
   - html.elements.script.type.importmap
+  - html.elements.script.type.importmap.integrity
   - html.elements.script.type.module
   - html.elements.script.type.speculationrules
   - html.elements.script.type.speculationrules.eagerness
