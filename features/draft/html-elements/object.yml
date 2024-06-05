@@ -7,7 +7,6 @@ spec:
 group: html
 compat_features:
   - api.HTMLObjectElement
-  - api.HTMLObjectElement.checkValidity
   - api.HTMLObjectElement.contentDocument
   - api.HTMLObjectElement.contentWindow
   - api.HTMLObjectElement.data
@@ -15,13 +14,8 @@ compat_features:
   - api.HTMLObjectElement.getSVGDocument
   - api.HTMLObjectElement.height
   - api.HTMLObjectElement.name
-  - api.HTMLObjectElement.reportValidity
-  - api.HTMLObjectElement.setCustomValidity
   - api.HTMLObjectElement.type
-  - api.HTMLObjectElement.validationMessage
-  - api.HTMLObjectElement.validity
   - api.HTMLObjectElement.width
-  - api.HTMLObjectElement.willValidate
   - html.elements.object
   - html.elements.object.data
   - html.elements.object.form

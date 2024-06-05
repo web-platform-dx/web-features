@@ -5,7 +5,6 @@ spec: https://html.spec.whatwg.org/multipage/form-elements.html#the-button-eleme
 group: html
 compat_features:
   - api.HTMLButtonElement
-  - api.HTMLButtonElement.checkValidity
   - api.HTMLButtonElement.disabled
   - api.HTMLButtonElement.form
   - api.HTMLButtonElement.formAction
@@ -15,15 +14,8 @@ compat_features:
   - api.HTMLButtonElement.formTarget
   - api.HTMLButtonElement.labels
   - api.HTMLButtonElement.name
-  - api.HTMLButtonElement.popoverTargetAction
-  - api.HTMLButtonElement.popoverTargetElement
-  - api.HTMLButtonElement.reportValidity
-  - api.HTMLButtonElement.setCustomValidity
   - api.HTMLButtonElement.type
-  - api.HTMLButtonElement.validationMessage
-  - api.HTMLButtonElement.validity
   - api.HTMLButtonElement.value
-  - api.HTMLButtonElement.willValidate
   - html.elements.button
   - html.elements.button.disabled
   - html.elements.button.form
@@ -33,7 +25,5 @@ compat_features:
   - html.elements.button.formnovalidate
   - html.elements.button.formtarget
   - html.elements.button.name
-  - html.elements.button.popovertarget
-  - html.elements.button.popovertargetaction
   - html.elements.button.type
   - html.elements.button.value

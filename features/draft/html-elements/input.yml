@@ -9,11 +9,9 @@ compat_features:
   - api.HTMLInputElement.alt
   - api.HTMLInputElement.autocomplete
   - api.HTMLInputElement.cancel_event
-  - api.HTMLInputElement.checkValidity
   - api.HTMLInputElement.checked
   - api.HTMLInputElement.defaultChecked
   - api.HTMLInputElement.defaultValue
-  - api.HTMLInputElement.dirName
   - api.HTMLInputElement.disabled
   - api.HTMLInputElement.files
   - api.HTMLInputElement.form
@@ -35,17 +33,13 @@ compat_features:
   - api.HTMLInputElement.name
   - api.HTMLInputElement.pattern
   - api.HTMLInputElement.placeholder
-  - api.HTMLInputElement.popoverTargetAction
-  - api.HTMLInputElement.popoverTargetElement
   - api.HTMLInputElement.readOnly
-  - api.HTMLInputElement.reportValidity
   - api.HTMLInputElement.required
   - api.HTMLInputElement.select
   - api.HTMLInputElement.select_event
   - api.HTMLInputElement.selectionDirection
   - api.HTMLInputElement.selectionEnd
   - api.HTMLInputElement.selectionStart
-  - api.HTMLInputElement.setCustomValidity
   - api.HTMLInputElement.setRangeText
   - api.HTMLInputElement.setSelectionRange
   - api.HTMLInputElement.size
@@ -54,18 +48,14 @@ compat_features:
   - api.HTMLInputElement.stepDown
   - api.HTMLInputElement.stepUp
   - api.HTMLInputElement.type
-  - api.HTMLInputElement.validationMessage
-  - api.HTMLInputElement.validity
   - api.HTMLInputElement.value
   - api.HTMLInputElement.valueAsDate
   - api.HTMLInputElement.valueAsNumber
   - api.HTMLInputElement.width
-  - api.HTMLInputElement.willValidate
   - html.elements.input
   - html.elements.input.accept
   - html.elements.input.alt
   - html.elements.input.checked
-  - html.elements.input.dirname
   - html.elements.input.disabled
   - html.elements.input.form
   - html.elements.input.formaction
@@ -82,8 +72,6 @@ compat_features:
   - html.elements.input.name
   - html.elements.input.pattern
   - html.elements.input.placeholder
-  - html.elements.input.popovertarget
-  - html.elements.input.popovertargetaction
   - html.elements.input.readonly
   - html.elements.input.required
   # Excluded because of a non-real value
@@ -113,7 +101,6 @@ compat_features:
   # - html.elements.input.type_range.tick_marks
   # - html.elements.input.type_range.vertical_orientation
   - html.elements.input.type_reset
-  - html.elements.input.type_search
   - html.elements.input.type_submit
   # Excluded because of a non-real value
   # - html.elements.input.type_tel
