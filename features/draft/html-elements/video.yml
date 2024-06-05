@@ -19,9 +19,11 @@ compat_features:
   - html.elements.video.crossorigin
   - html.elements.video.height
   - html.elements.video.loop
-  - html.elements.video.muted
+  # Excluded because of a non-real value
+  # - html.elements.video.muted
   - html.elements.video.playsinline
   - html.elements.video.poster
-  - html.elements.video.preload
+  # Excluded because of a non-real value
+  # - html.elements.video.preload
   - html.elements.video.src
   - html.elements.video.width

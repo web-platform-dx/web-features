@@ -52,14 +52,16 @@ compat_features:
   - html.elements.td.colspan
   - html.elements.td.headers
   - html.elements.td.rowspan
-  - html.elements.td.rowspan.rowspan_zero
+  # Excluded because of a non-real value
+  # - html.elements.td.rowspan.rowspan_zero
   - html.elements.tfoot
   - html.elements.th
   - html.elements.th.abbr
   - html.elements.th.colspan
   - html.elements.th.headers
   - html.elements.th.rowspan
-  - html.elements.th.rowspan.rowspan_zero
+  # Excluded because of a non-real value
+  # - html.elements.th.rowspan.rowspan_zero
   - html.elements.th.scope
   - html.elements.thead
   - html.elements.tr

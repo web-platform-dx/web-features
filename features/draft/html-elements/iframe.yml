@@ -38,5 +38,6 @@ compat_features:
   - html.elements.iframe.sandbox.allow-top-navigation-by-user-activation
   - html.elements.iframe.sandbox.allow-top-navigation-to-custom-protocols
   - html.elements.iframe.src
-  - html.elements.iframe.srcdoc
+  # Excluded because of a non-real value
+  # - html.elements.iframe.srcdoc
   - html.elements.iframe.width

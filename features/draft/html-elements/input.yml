@@ -86,13 +86,15 @@ compat_features:
   - html.elements.input.popovertargetaction
   - html.elements.input.readonly
   - html.elements.input.required
-  - html.elements.input.size
+  # Excluded because of a non-real value
+  # - html.elements.input.size
   - html.elements.input.src
   - html.elements.input.step
   - html.elements.input.type_button
   - html.elements.input.type_checkbox
   - html.elements.input.type_color
-  - html.elements.input.type_color.autocomplete
+  # Excluded because of a non-real value
+  # - html.elements.input.type_color.autocomplete
   - html.elements.input.type_color.list
   - html.elements.input.type_date
   - html.elements.input.type_datetime-local
@@ -100,18 +102,21 @@ compat_features:
   - html.elements.input.type_file
   - html.elements.input.type_hidden
   - html.elements.input.type_image
-  - html.elements.input.type_month
+  # Excluded because of a non-real value
+  # - html.elements.input.type_month
   - html.elements.input.type_number
   - html.elements.input.type_password
   - html.elements.input.type_password.insecure_login_handling
   - html.elements.input.type_radio
   - html.elements.input.type_range
-  - html.elements.input.type_range.tick_marks
-  - html.elements.input.type_range.vertical_orientation
+  # Excluded because of a non-real value
+  # - html.elements.input.type_range.tick_marks
+  # - html.elements.input.type_range.vertical_orientation
   - html.elements.input.type_reset
   - html.elements.input.type_search
   - html.elements.input.type_submit
-  - html.elements.input.type_tel
+  # Excluded because of a non-real value
+  # - html.elements.input.type_tel
   - html.elements.input.type_text
   - html.elements.input.type_time
   - html.elements.input.type_url

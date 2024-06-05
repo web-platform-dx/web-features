@@ -13,8 +13,8 @@ compat_features:
   - html.elements.meta.charset
   - html.elements.meta.content
   - html.elements.meta.http-equiv
-  - html.elements.meta.http-equiv.content-security-policy
-  - html.elements.meta.http-equiv.content-type
+  # Excluded because of a non-real value
+  # - html.elements.meta.http-equiv.content-type
   - html.elements.meta.http-equiv.refresh
   - html.elements.meta.name
   - html.elements.meta.name.color-scheme

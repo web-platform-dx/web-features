@@ -19,5 +19,6 @@ compat_features:
   - html.elements.track.kind.descriptions
   - html.elements.track.label
   - html.elements.track.src
-  - html.elements.track.src.settable_src
+  # Excluded because of a non-real value
+  # - html.elements.track.src.settable_src
   - html.elements.track.srclang
