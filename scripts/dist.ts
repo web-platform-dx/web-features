@@ -16,7 +16,7 @@ import yargs from "yargs";
 
 const argv = yargs(process.argv.slice(2))
   .scriptName("dist")
-  .usage("$0 [filenames..]", "Generate .dist.yml from .yml", (yargs) =>
+  .usage("$0 [filenames..]", "Generate .yml.dist from .yml", (yargs) =>
     yargs.positional("filenames", {
       describe: "YAML files to check/update.",
     }),
@@ -89,7 +89,7 @@ function toDist(sourcePath: string): YAML.Document {
 
   const overridden = {
     compatFeatures: yaml.toJS().compat_features,
-    status: resolveBaselineHighDate(yaml.toJS().status),
+    status: yaml.toJS().status,
   };
 
   const generated = {
@@ -112,12 +112,11 @@ function toDist(sourcePath: string): YAML.Document {
 
   warnOnNeedlessOverrides(id, overridden, generated);
 
-  if (overridden.status?.baseline === "high") {
-    insertBaselineHighDate(yaml, overridden.status.baseline_high_date);
-  }
+  const dist = new Document({});
+  insertHeaderComments(dist, id);
 
   if (!overridden.compatFeatures && generated.compatFeatures) {
-    insertCompatFeatures(yaml, generated.compatFeatures);
+    insertCompatFeatures(dist, generated.compatFeatures);
   }
 
   if (!overridden.status) {
@@ -128,42 +127,11 @@ function toDist(sourcePath: string): YAML.Document {
           `${id}: contains at least one deprecated compat feature and can never be Baseline. Was this intentional?`,
         );
       }
-      insertStatus(yaml, JSON.parse(status.toJSON()));
+      insertStatus(dist, JSON.parse(status.toJSON()));
     }
   }
 
-  insertHeaderComments(yaml, id);
-
-  return yaml;
-}
-
-function resolveBaselineHighDate(status) {
-  if (
-    status?.baseline === "high" &&
-    typeof status?.baseline_low_date === "string"
-  ) {
-    return {
-      ...status,
-      baseline_high_date: Temporal.PlainDate.from(status.baseline_low_date)
-        .add(BASELINE_LOW_TO_HIGH_DURATION)
-        .toString(),
-    };
-  }
-  return status;
-}
-
-function insertBaselineHighDate(yaml: Document, baselineHighDate: string) {
-  // Append a high date…
-  yaml.setIn(["status", "baseline_high_date"], baselineHighDate);
-
-  // …then fix the order.
-  const statusNode = yaml.get("status");
-  assert(YAML.isMap(statusNode));
-  const highDateNode = statusNode.items.pop();
-  const targetIndex = statusNode.items.findIndex(
-    (item) => item.key === "baseline_low_date",
-  );
-  statusNode.items.splice(targetIndex, 0, highDateNode);
+  return dist;
 }
 
 function insertCompatFeatures(yaml: Document, compatFeatures: string[]) {
@@ -245,23 +213,20 @@ function warnOnNeedlessOverrides(id, overridden, generated) {
 }
 
 function main() {
-  // Map from .yml to .dist.yml to filter out duplicates.
-  const sourceToDist = new Map(
+  // Map from .yml to .yml.dist to filter out duplicates.
+  const sourceToDist = new Map<string, string>(
     argv.filenames.map((filePath: string) => {
-      let { dir, name, ext } = path.parse(filePath);
-      if (ext !== ".yml") {
+      const ext = path.extname(filePath);
+      if (![".dist", ".yml"].includes(ext)) {
         throw new Error(
           `Cannot generate dist for ${filePath}, only YAML input is supported`,
         );
       }
-      // Remove .dist to start from the source even if dist is given.
-      if (name.endsWith(".dist")) {
-        name = name.substring(0, name.length - 5);
+      // Start from the source even if dist is given
+      if (filePath.endsWith(".dist")) {
+        filePath = filePath.substring(0, filePath.length - 5);
       }
-      return [
-        path.format({ dir, name, ext: ".yml" }),
-        path.format({ dir, name, ext: ".dist.yml" }),
-      ];
+      return [filePath, `${filePath}.dist`];
     }),
   );
 

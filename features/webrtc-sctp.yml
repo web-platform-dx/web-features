@@ -1,6 +1,7 @@
 name: WebRTC SCTP information
 description: The `sctp` object on `RTCPeerConnection` represents the negotiated SCTP transport. SCTP (Stream Control Transmission Protocol) is the protocol that `RTCDataChannel` uses.
 spec: https://w3c.github.io/webrtc-pc/#rtcsctptransport-interface
+group: webrtc
 compat_features:
   - api.RTCPeerConnection.sctp
   - api.RTCSctpTransport
