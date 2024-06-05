@@ -28,6 +28,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://w3c.github.io/IntersectionObserver/v2/",
         "Allowed because it's shipped in Chrome and tracked on caniuse.com. Remove this exception when https://github.com/w3c/browser-specs/pull/1210 merges."
+    ],
+    [
+        "https://wicg.github.io/controls-list/",
+        "Allowed because it's shipped in Chrome. Remove this exception if https://github.com/whatwg/html/pull/6715 is merged."
     ]
 ];
 
