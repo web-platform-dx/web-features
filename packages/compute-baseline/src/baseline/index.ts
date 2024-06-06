@@ -45,6 +45,32 @@ interface SupportStatus {
 }
 
 /**
+ * Calculate a Baseline status for specific browser compat data keys within a
+ * web-features feature. Use this method to calculate fine-grained support
+ * statuses. This is the only method approved to compute Baseline statuses not
+ * otherwise published in the `web-features` package.
+ *
+ * For example, suppose you want to show a Baseline status for a specific method
+ * in a feature, which might've been supported earlier or later than the broader
+ * feature overall. Then you'd call `getStatus('example-feature',
+ * 'api.ExampleManager.doExample')`.
+ */
+export function getStatus(
+  featureId: string,
+  compatKey: string,
+  compat: Compat = defaultCompat,
+) {
+  // TODO: actually check that featureId is a valid feature
+  // TODO: actually check that compatKey is tagged as featureId in BCD _or_ listed in web-features
+  return JSON.parse(
+    computeBaseline(
+      { compatKeys: [compatKey], checkAncestors: true },
+      compat,
+    ).toJSON(),
+  );
+}
+
+/**
  * Given a set of compat keys, compute the aggregate Baseline support ("high",
  * "low" or false, dates, and releases) for those keys.
  */
