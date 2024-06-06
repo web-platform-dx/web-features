@@ -46,9 +46,10 @@ interface SupportStatus {
 
 /**
  * Calculate a Baseline status for specific browser compat data keys within a
- * web-features feature. Use this method to calculate fine-grained support
- * statuses. This is the only method approved to compute Baseline statuses not
- * otherwise published in the `web-features` package.
+ * web-features feature, in the style of a web-feature's `status` key. Use this
+ * method to calculate fine-grained support statuses. This is the only method
+ * approved to compute Baseline statuses not otherwise published in the
+ * `web-features` package.
  *
  * For example, suppose you want to show a Baseline status for a specific method
  * in a feature, which might've been supported earlier or later than the broader
