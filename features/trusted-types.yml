@@ -3,17 +3,16 @@ description: Trusted types allow you to lock down insecure parts of the DOM API 
 spec: https://w3c.github.io/trusted-types/dist/spec/
 caniuse: trusted-types
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/2722
-# toJSON() is excluded because they are not needed to use trusted types in the
-# idiomatic way. toJSON() shipped in Chrome 90, and the rest in Chrome 83.
+entrypoint: api.trustedTypes
 compat_features:
   - api.TrustedHTML
-  # - api.TrustedHTML.toJSON
+  - api.TrustedHTML.toJSON
   - api.TrustedHTML.toString
   - api.TrustedScript
-  # - api.TrustedScript.toJSON
+  - api.TrustedScript.toJSON
   - api.TrustedScript.toString
   - api.TrustedScriptURL
-  # - api.TrustedScriptURL.toJSON
+  - api.TrustedScriptURL.toJSON
   - api.TrustedScriptURL.toString
   - api.TrustedTypePolicy
   - api.TrustedTypePolicy.createHTML

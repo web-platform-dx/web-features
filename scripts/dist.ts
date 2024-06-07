@@ -78,6 +78,8 @@ function toDist(sourcePath: string): YAML.Document {
   );
   const { name: id } = path.parse(sourcePath);
 
+  const entrypoint: yaml.get('entrypoint');
+
   const taggedCompatFeatures = (
     tagsToFeatures.get(`web-features:${id}`) ?? []
   ).map((f) => `${f.id}`);
@@ -93,12 +95,14 @@ function toDist(sourcePath: string): YAML.Document {
       : undefined,
     status: taggedCompatFeatures.length
       ? computeBaseline({
+          entrypoint, // TODO: doesn't do anything
           compatKeys: taggedCompatFeatures as [string, ...string[]],
           checkAncestors: false,
         })
       : undefined,
     statusByCompatFeaturesOverride: Array.isArray(overridden.compatFeatures)
       ? computeBaseline({
+          entrypoint, // TODO: doesn't do anything
           compatKeys: overridden.compatFeatures as [string, ...string[]],
           checkAncestors: false,
         })
