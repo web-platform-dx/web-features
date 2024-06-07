@@ -30,7 +30,7 @@ jobs:
         env:
           CHANGED_FEATURES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
-          npx tsx scripts/dist.ts ${CHANGED_FEATURES}
+          npm run dist -- ${CHANGED_FEATURES}
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         if: steps.changed-files.outputs.any_changed == 'true'
