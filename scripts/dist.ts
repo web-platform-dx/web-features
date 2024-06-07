@@ -1,9 +1,4 @@
-import { Temporal } from "@js-temporal/polyfill";
-import {
-  BASELINE_LOW_TO_HIGH_DURATION,
-  computeBaseline,
-  setLogger,
-} from "compute-baseline";
+import { computeBaseline, setLogger } from "compute-baseline";
 import { Compat, Feature } from "compute-baseline/browser-compat-data";
 import assert from "node:assert/strict";
 import fs from "node:fs";
@@ -224,7 +219,15 @@ function main() {
       }
       // Start from the source even if dist is given
       if (filePath.endsWith(".dist")) {
-        filePath = filePath.substring(0, filePath.length - 5);
+        const candidateFilePath = filePath.substring(0, filePath.length - 5);
+
+        // Make sure this isn't an orphan dist file
+        if (!fs.existsSync(candidateFilePath)) {
+          throw new Error(
+            `${filePath} has no corresponding ${candidateFilePath}`,
+          );
+        }
+        filePath = candidateFilePath;
       }
       return [filePath, `${filePath}.dist`];
     }),
