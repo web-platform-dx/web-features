@@ -8,15 +8,16 @@ import { isDeepStrictEqual } from "node:util";
 import winston from "winston";
 import YAML, { Document } from "yaml";
 import yargs from "yargs";
+import { fdir } from "fdir";
 
 const argv = yargs(process.argv.slice(2))
   .scriptName("dist")
-  .usage("$0 [filenames..]", "Generate .yml.dist from .yml", (yargs) =>
-    yargs.positional("filenames", {
-      describe: "YAML files to check/update.",
+  .usage("$0 [paths..]", "Generate .yml.dist from .yml", (yargs) =>
+    yargs.positional("paths", {
+      describe: "Directories or files to check/update.",
+      default: ["features"],
     }),
   )
-  .demandOption("filenames")
   .option("check", {
     boolean: true,
     default: false,
@@ -208,16 +209,29 @@ function warnOnNeedlessOverrides(id, overridden, generated) {
 }
 
 function main() {
+  const filePaths = argv.paths.flatMap((fileOrDirectory) => {
+    if (fs.statSync(fileOrDirectory).isDirectory()) {
+      // Expand directory to any existing .dist file within.
+      // TODO: Change this to .yml when all features have dist files.
+      return new fdir()
+        .withBasePath()
+        .filter((fp) => fp.endsWith(".dist"))
+        .crawl(fileOrDirectory)
+        .sync();
+    }
+    return fileOrDirectory;
+  });
+
   // Map from .yml to .yml.dist to filter out duplicates.
   const sourceToDist = new Map<string, string>(
-    argv.filenames.map((filePath: string) => {
+    filePaths.map((filePath: string) => {
       const ext = path.extname(filePath);
       if (![".dist", ".yml"].includes(ext)) {
         throw new Error(
           `Cannot generate dist for ${filePath}, only YAML input is supported`,
         );
       }
-      // Start from the source even if dist is given
+      // Start from the source even if dist is given.
       if (filePath.endsWith(".dist")) {
         const candidateFilePath = filePath.substring(0, filePath.length - 5);
 
