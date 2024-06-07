@@ -1,0 +1,21 @@
+draft_date: 2024-06-07
+name: Contact Picker API
+description: TODO
+spec: https://w3c.github.io/contact-picker/
+compat_features:
+  - api.ContactAddress
+  - api.ContactAddress.addressLine
+  - api.ContactAddress.city
+  - api.ContactAddress.country
+  - api.ContactAddress.dependentLocality
+  - api.ContactAddress.organization
+  - api.ContactAddress.phone
+  - api.ContactAddress.postalCode
+  - api.ContactAddress.recipient
+  - api.ContactAddress.region
+  - api.ContactAddress.sortingCode
+  - api.ContactAddress.toJSON
+  - api.ContactsManager
+  - api.ContactsManager.getProperties
+  - api.ContactsManager.select
+  - api.Navigator.contacts

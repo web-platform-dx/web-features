@@ -1,0 +1,10 @@
+draft_date: 2024-06-07
+name: Clipboard API and events
+description: TODO
+spec: https://w3c.github.io/clipboard-apis/
+compat_features:
+  - api.ClipboardItem.supports_static.optional_type_image_svg_xml
+  - api.ClipboardItem.supports_static.optional_type_web
+  - api.Element.copy_event
+  - api.Element.cut_event
+  - api.Element.paste_event

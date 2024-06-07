@@ -1,0 +1,10 @@
+draft_date: 2024-06-07
+name: Page Lifecycle
+description: TODO
+spec: https://wicg.github.io/page-lifecycle/
+compat_features:
+  - api.Document.freeze_event
+  - api.Document.resume_event
+  - api.Document.wasDiscarded
+  - http.headers.Permissions-Policy.execution-while-not-rendered
+  - http.headers.Permissions-Policy.execution-while-out-of-viewport

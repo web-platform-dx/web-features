@@ -1,0 +1,10 @@
+draft_date: 2024-06-07
+name: requestIdleCallback() Cooperative Scheduling of Background Tasks
+description: TODO
+spec: https://w3c.github.io/requestidlecallback/
+compat_features:
+  - api.IdleDeadline
+  - api.IdleDeadline.didTimeout
+  - api.IdleDeadline.timeRemaining
+  - api.Window.cancelIdleCallback
+  - api.Window.requestIdleCallback

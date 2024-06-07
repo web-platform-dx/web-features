@@ -1,0 +1,54 @@
+draft_date: 2024-06-07
+name: Streams Standard
+description: TODO
+spec: https://streams.spec.whatwg.org/
+compat_features:
+  - api.ReadableByteStreamController
+  - api.ReadableByteStreamController.byobRequest
+  - api.ReadableByteStreamController.close
+  - api.ReadableByteStreamController.desiredSize
+  - api.ReadableByteStreamController.enqueue
+  - api.ReadableByteStreamController.error
+  - api.ReadableStream.@@asyncIterator
+  - api.ReadableStream.from_static
+  - api.ReadableStream.transferable
+  - api.ReadableStream.values
+  - api.ReadableStreamBYOBReader
+  - api.ReadableStreamBYOBReader.ReadableStreamBYOBReader
+  - api.ReadableStreamBYOBReader.cancel
+  - api.ReadableStreamBYOBReader.closed
+  - api.ReadableStreamBYOBReader.read
+  - api.ReadableStreamBYOBReader.releaseLock
+  - api.ReadableStreamBYOBRequest
+  - api.ReadableStreamBYOBRequest.respond
+  - api.ReadableStreamBYOBRequest.respondWithNewView
+  - api.ReadableStreamBYOBRequest.view
+  - api.ReadableStreamDefaultController
+  - api.ReadableStreamDefaultController.close
+  - api.ReadableStreamDefaultController.desiredSize
+  - api.ReadableStreamDefaultController.enqueue
+  - api.ReadableStreamDefaultController.error
+  - api.ReadableStreamDefaultReader
+  - api.ReadableStreamDefaultReader.ReadableStreamDefaultReader
+  - api.ReadableStreamDefaultReader.cancel
+  - api.ReadableStreamDefaultReader.closed
+  - api.ReadableStreamDefaultReader.read
+  - api.ReadableStreamDefaultReader.releaseLock
+  - api.TextDecoderStream.readable
+  - api.TextDecoderStream.writable
+  - api.TextEncoderStream.readable
+  - api.TextEncoderStream.writable
+  - api.TransformStream
+  - api.TransformStream.TransformStream
+  - api.TransformStream.readable
+  - api.TransformStream.transferable
+  - api.TransformStream.writable
+  - api.TransformStreamDefaultController
+  - api.TransformStreamDefaultController.desiredSize
+  - api.TransformStreamDefaultController.enqueue
+  - api.TransformStreamDefaultController.error
+  - api.TransformStreamDefaultController.terminate
+  - api.WritableStream.close
+  - api.WritableStream.transferable
+  - api.WritableStreamDefaultController.signal
+  - api.WritableStreamDefaultWriter.WritableStreamDefaultWriter

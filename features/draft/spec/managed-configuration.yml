@@ -1,0 +1,9 @@
+draft_date: 2024-06-07
+name: Managed Configuration API
+description: TODO
+spec: https://wicg.github.io/WebApiDevice/managed_config/
+compat_features:
+  - api.Navigator.managed
+  - api.NavigatorManagedData
+  - api.NavigatorManagedData.getManagedConfiguration
+  - api.NavigatorManagedData.managedconfigurationchange_event
