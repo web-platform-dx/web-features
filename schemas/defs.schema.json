@@ -101,7 +101,7 @@
             },
             "support": {
               "additionalProperties": false,
-              "description": "Browser versions that most-recently introduced the feature",
+              "description": "Browser versions that most-recently introduced the feature. A \"≤\" prefix indicates that support before this point is uncertain and the feature may have been supported earlier.",
               "properties": {
                 "chrome": {
                   "type": "string"

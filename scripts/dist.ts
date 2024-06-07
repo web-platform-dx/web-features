@@ -1,5 +1,6 @@
 import { computeBaseline, setLogger } from "compute-baseline";
 import { Compat, Feature } from "compute-baseline/browser-compat-data";
+import { Temporal } from "@js-temporal/polyfill";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
@@ -94,7 +95,7 @@ function toDist(sourcePath: string): YAML.Document {
 
   // Compute the status. A `status` block in the source takes precedence, but
   // can be removed if it matches the computed status.
-  let computedStatus = computeBaseline({
+  const computedStatus = computeBaseline({
     compatKeys: source.compat_features ?? taggedCompatFeatures,
     checkAncestors: false,
   });
@@ -105,10 +106,27 @@ function toDist(sourcePath: string): YAML.Document {
     );
   }
 
-  computedStatus = JSON.parse(computedStatus.toJSON());
+  const distStatus = JSON.parse(computedStatus.toJSON());
+
+  // Add ranges to releases before the Baseline low date. It's not possible
+  // to use ranges more selectively than this.
+  if (source.use_ranges_before_baseline_low_date) {
+    const lowDate = Temporal.PlainDate.from(computedStatus.baseline_low_date);
+    const distSupport = distStatus.support;
+    for (const [browser, release] of computedStatus.support.entries()) {
+      if (release.releaseIndex === 0) {
+        // Don't add a range for the first release of a browser.
+        continue;
+      }
+      const date = Temporal.PlainDate.from(release.date);
+      if (Temporal.PlainDate.compare(date, lowDate) === -1) {
+        distSupport[browser.id] = `≤${release.version}`;
+      }
+    }
+  }
 
   if (source.status) {
-    if (isDeepStrictEqual(source.status, computedStatus)) {
+    if (isDeepStrictEqual(source.status, distStatus)) {
       logger.warn(
         `${id}: status override matches computed status. Consider deleting this override.`,
       );
@@ -126,7 +144,7 @@ function toDist(sourcePath: string): YAML.Document {
     .join("\n");
 
   if (!source.status) {
-    dist.set("status", computedStatus);
+    dist.set("status", distStatus);
   }
 
   if (!source.compat_features) {
