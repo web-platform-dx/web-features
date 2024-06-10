@@ -42,7 +42,7 @@ jobs:
       - name: Refresh all dist files (for package*.json changes)
         if: steps.changed-package-json.outputs.any_changed == 'true'
         run: |
-          npm run dist -- features/**/*.yml.dist
+          npm run dist
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         if: steps.changed-package-json.outputs.any_changed == 'true' || steps.changed-features.outputs.any_changed == 'true'
