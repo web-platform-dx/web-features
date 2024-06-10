@@ -13,14 +13,14 @@ jobs:
       - uses: actions/checkout@v4
 
       - id: changed-package-json
-        uses: tj-actions/changed-features@v44
+        uses: tj-actions/changed-files@v44
         with:
           files: |
             **/package.json
             **/package-lock.json
 
       - id: changed-features
-        uses: tj-actions/changed-features@v44
+        uses: tj-actions/changed-files@v44
         with:
           files: |
             features/**/*.yml
