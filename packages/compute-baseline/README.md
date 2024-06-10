@@ -71,6 +71,8 @@ Returns:
 
 ### Check support for a group of compat keys
 
+**Note**: This example returns support data that has not received an editorial review. Do not use for presenting a Baseline status. See [Limitations](#limitations).
+
 ```javascript
 import { computeBaseline } from "compute-baseline";
 
@@ -102,6 +104,8 @@ Use the `toJSON()` method to get a `web-features`-like plain JSON representation
 
 ### Check support for a single support key
 
+**Note**: This example returns support data that has not received an editorial review. Do not use for presenting a Baseline status. See [Limitations](#limitations).
+
 Sometimes it can be helpful to know if parent features have less support than the specific feature you're checking (for example, the parent is behind a prefix or flag) when computing a status for a deeply-nested feature.
 This is typically most interesting when checking a single key.
 Use the `withAncestors` option:
@@ -117,7 +121,9 @@ computeBaseline({
 
 ### Bring your own compatibility data
 
-If you don't want to import `@mdn/browser-compat-data` as your data source, you can bring your own schema-compatible compat data.
+**Note**: This example returns support data that has not received an editorial review. Do not use for presenting a Baseline status. See [Limitations](#limitations).
+
+If you want to use some other source of data (such as pre-release browser-compat-data), you can bring your own schema-compatible compat data.
 
 ```javascript
 import data from "some-parsed-json-file";
