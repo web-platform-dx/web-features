@@ -12,28 +12,40 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - id: changed-files
-        uses: tj-actions/changed-files@v44
+      - id: changed-package-json
+        uses: tj-actions/changed-features@v44
+        with:
+          files: |
+            **/package.json
+            **/package-lock.json
+
+      - id: changed-features
+        uses: tj-actions/changed-features@v44
         with:
           files: |
             features/**/*.yml
             features/**/*.yml.dist
 
       - uses: actions/setup-node@v4
-        if: steps.changed-files.outputs.any_changed == 'true'
+        if: steps.changed-features.outputs.any_changed == 'true'
 
       - run: npm install
-        if: steps.changed-files.outputs.any_changed == 'true'
+        if: steps.changed-features.outputs.any_changed == 'true'
 
-      - name: Refresh dist files
-        if: steps.changed-files.outputs.any_changed == 'true'
+      - name: Refresh dist files for feature changes
+        if: steps.changed-package-json.outputs.any_changed == 'false' && steps.changed-features.outputs.any_changed == 'true'
         env:
-          CHANGED_FEATURES: ${{ steps.changed-files.outputs.all_changed_files }}
+          CHANGED_FEATURES: ${{ steps.changed-features.outputs.all_changed_files }}
         run: |
           npm run dist -- ${CHANGED_FEATURES}
 
+      - name: Refresh all dist files (for package*.json changes)
+        if: steps.changed-package-json.outputs.any_changed == 'true'
+        run: |
+          npm run dist -- features/**/*.yml.dist
+
       - uses: stefanzweifel/git-auto-commit-action@v5
-        if: steps.changed-files.outputs.any_changed == 'true'
+        if: steps.changed-package-json.outputs.any_changed == 'true' || steps.changed-features.outputs.any_changed == 'true'
         with:
           commit_message: Refresh dist files
 
