@@ -130,11 +130,27 @@ function toDist(sourcePath: string): YAML.Document {
   }
 
   const compatFeatures = source.compat_features ?? taggedCompatFeatures;
+  let computeFrom = compatFeatures;
+
+  if (source.status?.compute_from) {
+    const compute_from = source.status.compute_from;
+    const keys = Array.isArray(compute_from) ? compute_from : [compute_from];
+    for (const key of keys) {
+      if (!compatFeatures.includes(key)) {
+        throw new Error(
+          `${id}: compute_from key ${key} is not among the feature's compat keys`,
+        );
+      }
+    }
+
+    computeFrom = keys;
+    delete source.status;
+  }
 
   // Compute the status. A `status` block in the source takes precedence, but
   // can be removed if it matches the computed status.
   let computedStatus = computeBaseline({
-    compatKeys: source.compat_features ?? taggedCompatFeatures,
+    compatKeys: computeFrom,
     checkAncestors: false,
   });
 

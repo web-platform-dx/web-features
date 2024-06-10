@@ -5,14 +5,15 @@ status:
   baseline: low
   baseline_low_date: 2022-03-14
   support:
-    chrome: "60"
-    chrome_android: "60"
+    chrome: "54"
+    chrome_android: "54"
     edge: "79"
-    firefox: "57"
-    firefox_android: "57"
+    firefox: "38"
+    firefox_android: "38"
     safari: "15.4"
     safari_ios: "15.4"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2022-03-14
   # support:
@@ -30,7 +31,6 @@ compat_features:
   - api.BroadcastChannel.name
   - api.BroadcastChannel.postMessage
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2022-03-14
   # support:
