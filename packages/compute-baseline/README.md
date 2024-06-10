@@ -127,12 +127,17 @@ If you want to use some other source of data (such as pre-release browser-compat
 
 ```javascript
 import data from "some-parsed-json-file";
-import { getStatus } from "compute-baseline";
+import { computeBaseline } from "compute-baseline";
 import { Compat } from "compute-baseline/browser-compat-data";
 
 const compat = new Compat(data);
 
-getStatus("fetch", "api.Response.json", compat);
+computeBaseline(
+  {
+    compatKeys: ["css.properties.border-color"],
+  },
+  compat,
+);
 ```
 
 <!-- TODO: API reference -->
