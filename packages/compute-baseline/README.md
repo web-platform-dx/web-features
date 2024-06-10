@@ -42,6 +42,8 @@ Run:
 
 To get a Baseline status for a specific browser compatibility data entry within a `web-features` feature, call `getStatus` with the web feature's ID and the BCD feature key as parameters, as shown below:
 
+<!-- TODO: replace getStatus("fetch", "api.Response.json") with a call that produces different results than the main feature status, when there is one -->
+
 ```javascript
 import { getStatus } from "compute-baseline";
 
