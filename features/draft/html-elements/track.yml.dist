@@ -13,3 +13,32 @@ status:
     firefox_android: "68"
     safari: "10"
     safari_ios: "10"
+compat_features:
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "23"
+  #   chrome_android: "25"
+  #   edge: "12"
+  #   firefox: "31"
+  #   firefox_android: "31"
+  #   safari: "6"
+  #   safari_ios: "6"
+  - api.HTMLTrackElement
+  - api.HTMLTrackElement.default
+  - api.HTMLTrackElement.kind
+  - api.HTMLTrackElement.label
+  - api.HTMLTrackElement.readyState
+  - api.HTMLTrackElement.src
+  - api.HTMLTrackElement.srclang
+  - api.HTMLTrackElement.track
+  - html.elements.track
+  - html.elements.track.default
+  - html.elements.track.kind
+  - html.elements.track.label
+  - html.elements.track.src
+  - html.elements.track.srclang
+
+  # Same status as overall feature
+  - api.HTMLTrackElement.cuechange_event

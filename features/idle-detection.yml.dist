@@ -8,6 +8,14 @@ status:
     chrome_android: "94"
     edge: "114"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "94"
+  - http.headers.Permissions-Policy.idle-detection
+
+  # Same status as overall feature
   - api.IdleDetector
   - api.IdleDetector.IdleDetector
   - api.IdleDetector.change_event
@@ -15,4 +23,3 @@ compat_features:
   - api.IdleDetector.screenState
   - api.IdleDetector.start
   - api.IdleDetector.userState
-  - http.headers.Permissions-Policy.idle-detection

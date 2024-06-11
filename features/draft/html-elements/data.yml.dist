@@ -13,3 +13,21 @@ status:
     firefox_android: "22"
     safari: "10"
     safari_ios: "10"
+compat_features:
+  # baseline: high
+  # baseline_low_date: 2017-10-24
+  # baseline_high_date: 2020-04-24
+  # support:
+  #   chrome: "62"
+  #   chrome_android: "62"
+  #   edge: "14"
+  #   firefox: "22"
+  #   firefox_android: "22"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - api.HTMLDataElement
+  - api.HTMLDataElement.value
+
+  # Same status as overall feature
+  - html.elements.data
+  - html.elements.data.value

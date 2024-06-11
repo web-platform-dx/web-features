@@ -14,14 +14,87 @@ status:
     safari: "9.1"
     safari_ios: "9.3"
 compat_features:
-  - css.properties.border-image
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "15"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "13"
+  #   firefox_android: "14"
+  #   safari: "6"
+  #   safari_ios: "6"
+  - css.properties.border-image-width
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "15"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "15"
+  #   firefox_android: "15"
+  #   safari: "6"
+  #   safari_ios: "6"
   - css.properties.border-image-outset
-  - css.properties.border-image-repeat
-  - css.properties.border-image-repeat.round
-  - css.properties.border-image-repeat.space
   - css.properties.border-image-slice
   - css.properties.border-image-source
-  - css.properties.border-image-width
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "16"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "15"
+  #   firefox_android: "15"
+  #   safari: "6"
+  #   safari_ios: "6"
+  - css.properties.border-image
   - css.properties.border-image.fill
-  - css.properties.border-image.gradient
   - css.properties.border-image.optional_border_image_slice
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "16"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "29"
+  #   firefox_android: "29"
+  #   safari: "6"
+  #   safari_ios: "6"
+  - css.properties.border-image.gradient
+
+  # baseline: high
+  # baseline_low_date: 2016-03-21
+  # baseline_high_date: 2018-09-21
+  # support:
+  #   chrome: "15"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "15"
+  #   firefox_android: "15"
+  #   safari: "6"
+  #   safari_ios: "9.3"
+  - css.properties.border-image-repeat
+
+  # baseline: high
+  # baseline_low_date: 2016-03-21
+  # baseline_high_date: 2018-09-21
+  # support:
+  #   chrome: "30"
+  #   chrome_android: "30"
+  #   edge: "12"
+  #   firefox: "15"
+  #   firefox_android: "15"
+  #   safari: "9.1"
+  #   safari_ios: "9.3"
+  - css.properties.border-image-repeat.round
+
+  # Same status as overall feature
+  - css.properties.border-image-repeat.space

@@ -13,14 +13,26 @@ status:
     safari: "17"
     safari_ios: "4.2"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2023-09-18
+  # support:
+  #   chrome: "7"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "6"
+  #   firefox_android: "6"
+  #   safari: "17"
+  #   safari_ios: "4.2"
+  - api.DeviceOrientationEvent
+  - api.DeviceOrientationEvent.alpha
+  - api.DeviceOrientationEvent.beta
+  - api.DeviceOrientationEvent.gamma
+  - api.Window.deviceorientation_event
+
+  # Same status as overall feature
   - api.DeviceMotionEvent
   - api.DeviceMotionEvent.acceleration
   - api.DeviceMotionEvent.accelerationIncludingGravity
   - api.DeviceMotionEvent.interval
   - api.DeviceMotionEvent.rotationRate
-  - api.DeviceOrientationEvent
-  - api.DeviceOrientationEvent.alpha
-  - api.DeviceOrientationEvent.beta
-  - api.DeviceOrientationEvent.gamma
   - api.Window.devicemotion_event
-  - api.Window.deviceorientation_event

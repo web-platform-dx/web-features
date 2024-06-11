@@ -7,12 +7,10 @@ status:
     safari: "8"
     safari_ios: "8"
 compat_features:
-  - api.AudioTrack
-  - api.AudioTrack.enabled
-  - api.AudioTrack.id
-  - api.AudioTrack.kind
-  - api.AudioTrack.label
-  - api.AudioTrack.language
+  # baseline: false
+  # support:
+  #   safari: "7"
+  #   safari_ios: "7"
   - api.AudioTrackList
   - api.AudioTrackList.addtrack_event
   - api.AudioTrackList.change_event
@@ -34,3 +32,11 @@ compat_features:
   - api.VideoTrackList.length
   - api.VideoTrackList.removetrack_event
   - api.VideoTrackList.selectedIndex
+
+  # Same status as overall feature
+  - api.AudioTrack
+  - api.AudioTrack.enabled
+  - api.AudioTrack.id
+  - api.AudioTrack.kind
+  - api.AudioTrack.label
+  - api.AudioTrack.language

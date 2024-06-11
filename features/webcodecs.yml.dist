@@ -8,6 +8,11 @@ status:
     chrome_android: "106"
     edge: "106"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "94"
   - api.AudioData
   - api.AudioData.AudioData
   - api.AudioData.allocationSize
@@ -26,7 +31,6 @@ compat_features:
   - api.AudioDecoder.configure
   - api.AudioDecoder.decode
   - api.AudioDecoder.decodeQueueSize
-  - api.AudioDecoder.dequeue_event
   - api.AudioDecoder.flush
   - api.AudioDecoder.isConfigSupported_static
   - api.AudioDecoder.reset
@@ -35,7 +39,6 @@ compat_features:
   - api.AudioEncoder.AudioEncoder
   - api.AudioEncoder.close
   - api.AudioEncoder.configure
-  - api.AudioEncoder.dequeue_event
   - api.AudioEncoder.encode
   - api.AudioEncoder.encodeQueueSize
   - api.AudioEncoder.flush
@@ -49,13 +52,6 @@ compat_features:
   - api.EncodedAudioChunk.duration
   - api.EncodedAudioChunk.timestamp
   - api.EncodedAudioChunk.type
-  - api.EncodedVideoChunk
-  - api.EncodedVideoChunk.EncodedVideoChunk
-  - api.EncodedVideoChunk.byteLength
-  - api.EncodedVideoChunk.copyTo
-  - api.EncodedVideoChunk.duration
-  - api.EncodedVideoChunk.timestamp
-  - api.EncodedVideoChunk.type
   - api.ImageDecoder
   - api.ImageDecoder.ImageDecoder
   - api.ImageDecoder.close
@@ -76,20 +72,45 @@ compat_features:
   - api.ImageTrackList.ready
   - api.ImageTrackList.selectedIndex
   - api.ImageTrackList.selectedTrack
+
+  # Same status as overall feature
+  - api.AudioDecoder.dequeue_event
+  - api.AudioEncoder.dequeue_event
+
+  # baseline: false
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "94"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
   - api.VideoColorSpace
-  - api.VideoColorSpace.VideoColorSpace
   - api.VideoColorSpace.fullRange
   - api.VideoColorSpace.matrix
   - api.VideoColorSpace.primaries
   - api.VideoColorSpace.toJSON
   - api.VideoColorSpace.transfer
+
+  # baseline: false
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "94"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.EncodedVideoChunk
+  - api.EncodedVideoChunk.EncodedVideoChunk
+  - api.EncodedVideoChunk.byteLength
+  - api.EncodedVideoChunk.copyTo
+  - api.EncodedVideoChunk.duration
+  - api.EncodedVideoChunk.timestamp
+  - api.EncodedVideoChunk.type
   - api.VideoDecoder
   - api.VideoDecoder.VideoDecoder
   - api.VideoDecoder.close
   - api.VideoDecoder.configure
   - api.VideoDecoder.decode
   - api.VideoDecoder.decodeQueueSize
-  - api.VideoDecoder.dequeue_event
   - api.VideoDecoder.flush
   - api.VideoDecoder.isConfigSupported_static
   - api.VideoDecoder.reset
@@ -98,7 +119,6 @@ compat_features:
   - api.VideoEncoder.VideoEncoder
   - api.VideoEncoder.close
   - api.VideoEncoder.configure
-  - api.VideoEncoder.dequeue_event
   - api.VideoEncoder.encode
   - api.VideoEncoder.encodeQueueSize
   - api.VideoEncoder.flush
@@ -121,3 +141,22 @@ compat_features:
   - api.VideoFrame.format
   - api.VideoFrame.timestamp
   - api.VideoFrame.visibleRect
+
+  # baseline: false
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "94"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - api.VideoColorSpace.VideoColorSpace
+
+  # baseline: false
+  # support:
+  #   chrome: "106"
+  #   chrome_android: "106"
+  #   edge: "106"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.VideoDecoder.dequeue_event
+  - api.VideoEncoder.dequeue_event

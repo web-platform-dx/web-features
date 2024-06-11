@@ -14,9 +14,34 @@ status:
     safari: "10.1"
     safari_ios: "10.3"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2016-03-08
+  # baseline_high_date: 2018-09-08
+  # support:
+  #   chrome: "42"
+  #   chrome_android: "42"
+  #   edge: "13"
+  #   firefox: "45"
+  #   firefox_android: "45"
+  #   safari: "7"
+  #   safari_ios: "7"
+  - javascript.operators.super
+
+  # baseline: high
+  # baseline_low_date: 2016-03-08
+  # baseline_high_date: 2018-09-08
+  # support:
+  #   chrome: "42"
+  #   chrome_android: "42"
+  #   edge: "13"
+  #   firefox: "45"
+  #   firefox_android: "45"
+  #   safari: "9"
+  #   safari_ios: "9"
   - javascript.classes
   - javascript.classes.constructor
   - javascript.classes.extends
   - javascript.classes.static
-  - javascript.operators.super
+
+  # Same status as overall feature
   - javascript.statements.class

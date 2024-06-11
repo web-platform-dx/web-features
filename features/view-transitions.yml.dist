@@ -8,6 +8,18 @@ status:
     chrome_android: "111"
     edge: "111"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  - css.selectors.view-transition
+  - css.selectors.view-transition-group
+  - css.selectors.view-transition-image-pair
+  - css.selectors.view-transition-new
+  - css.selectors.view-transition-old
+
+  # Same status as overall feature
   - api.Document.startViewTransition
   - api.ViewTransition
   - api.ViewTransition.finished
@@ -15,8 +27,3 @@ compat_features:
   - api.ViewTransition.skipTransition
   - api.ViewTransition.updateCallbackDone
   - css.properties.view-transition-name
-  - css.selectors.view-transition
-  - css.selectors.view-transition-group
-  - css.selectors.view-transition-image-pair
-  - css.selectors.view-transition-new
-  - css.selectors.view-transition-old

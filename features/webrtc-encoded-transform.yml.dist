@@ -9,7 +9,16 @@ status:
     safari: "15.4"
     safari_ios: "15.4"
 compat_features:
-  - api.DedicatedWorkerGlobalScope.rtctransform_event
+  # baseline: low
+  # baseline_low_date: 2023-08-29
+  # support:
+  #   chrome: "86"
+  #   chrome_android: "86"
+  #   edge: "86"
+  #   firefox: "117"
+  #   firefox_android: "117"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
   - api.RTCEncodedAudioFrame
   - api.RTCEncodedAudioFrame.data
   - api.RTCEncodedAudioFrame.getMetadata
@@ -19,6 +28,9 @@ compat_features:
   - api.RTCEncodedVideoFrame.getMetadata
   - api.RTCEncodedVideoFrame.timestamp
   - api.RTCEncodedVideoFrame.type
+
+  # Same status as overall feature
+  - api.DedicatedWorkerGlobalScope.rtctransform_event
   - api.RTCRtpReceiver.transform
   - api.RTCRtpScriptTransform
   - api.RTCRtpScriptTransform.RTCRtpScriptTransform

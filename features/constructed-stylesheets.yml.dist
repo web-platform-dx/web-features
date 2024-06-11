@@ -12,3 +12,9 @@ status:
     firefox_android: "101"
     safari: "16.4"
     safari_ios: "16.4"
+compat_features:
+  - api.CSSStyleSheet.CSSStyleSheet
+  - api.CSSStyleSheet.replace
+  - api.CSSStyleSheet.replaceSync
+  - api.Document.adoptedStyleSheets
+  - api.ShadowRoot.adoptedStyleSheets

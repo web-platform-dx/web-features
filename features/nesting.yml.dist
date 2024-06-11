@@ -13,7 +13,19 @@ status:
     safari: "17.2"
     safari_ios: "17.2"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2023-08-29
+  # support:
+  #   chrome: "112"
+  #   chrome_android: "112"
+  #   edge: "112"
+  #   firefox: "117"
+  #   firefox_android: "117"
+  #   safari: "16.5"
+  #   safari_ios: "16.5"
   - api.CSSStyleRule.cssRules
   - api.CSSStyleRule.deleteRule
   - api.CSSStyleRule.insertRule
+
+  # Same status as overall feature
   - css.selectors.nesting

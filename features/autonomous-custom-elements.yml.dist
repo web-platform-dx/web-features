@@ -14,7 +14,20 @@ status:
     safari: "10.1"
     safari_ios: "10.3"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "54"
+  #   chrome_android: "54"
+  #   edge: "79"
+  #   firefox: "63"
+  #   firefox_android: "63"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - css.selectors.defined
+
+  # Same status as overall feature
   - api.CustomElementRegistry
   - api.CustomElementRegistry.define
   - api.Window.customElements
-  - css.selectors.defined

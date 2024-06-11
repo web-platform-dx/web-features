@@ -10,3 +10,30 @@ status:
     firefox: "101"
     firefox_android: "101"
     safari: "17.4"
+compat_features:
+  # baseline: low
+  # baseline_low_date: 2022-09-12
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "101"
+  #   firefox_android: "101"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - api.HTMLInputElement.showPicker
+  - api.HTMLInputElement.showPicker.file_input
+
+  # baseline: false
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "101"
+  #   firefox_android: "101"
+  #   safari: "16"
+  - api.HTMLInputElement.showPicker.color_input
+
+  # Same status as overall feature
+  - api.HTMLInputElement.showPicker.date_input
+  - api.HTMLInputElement.showPicker.datetime_local_input

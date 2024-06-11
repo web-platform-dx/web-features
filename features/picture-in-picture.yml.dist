@@ -9,3 +9,17 @@ status:
     edge: "79"
     safari: "13.1"
     safari_ios: "13.4"
+compat_features:
+  - api.Document.exitPictureInPicture
+  - api.Document.pictureInPictureElement
+  - api.Document.pictureInPictureEnabled
+  - api.HTMLVideoElement.disablePictureInPicture
+  - api.HTMLVideoElement.enterpictureinpicture_event
+  - api.HTMLVideoElement.leavepictureinpicture_event
+  - api.HTMLVideoElement.requestPictureInPicture
+  - api.PictureInPictureWindow
+  - api.PictureInPictureWindow.height
+  - api.PictureInPictureWindow.resize_event
+  - api.PictureInPictureWindow.width
+  - api.ShadowRoot.pictureInPictureElement
+  - html.elements.video.disablepictureinpicture

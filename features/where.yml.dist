@@ -14,5 +14,18 @@ status:
     safari: "14"
     safari_ios: "14"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2021-01-21
+  # baseline_high_date: 2023-07-21
+  # support:
+  #   chrome: "88"
+  #   chrome_android: "88"
+  #   edge: "88"
+  #   firefox: "78"
+  #   firefox_android: "79"
+  #   safari: "14"
+  #   safari_ios: "14"
   - css.selectors.where
+
+  # Same status as overall feature
   - css.selectors.where.forgiving_selector_list

@@ -13,5 +13,17 @@ status:
     safari: "16.4"
     safari_ios: "16.4"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2023-04-11
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "112"
+  #   firefox_android: "112"
+  #   safari: "16"
+  #   safari_ios: "16"
   - api.CanvasRenderingContext2D.roundRect
+
+  # Same status as overall feature
   - api.OffscreenCanvasRenderingContext2D.roundRect

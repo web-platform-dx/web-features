@@ -14,7 +14,32 @@ status:
     safari: "7"
     safari_ios: "7"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "20"
+  #   chrome_android: "25"
+  #   edge: "12"
+  #   firefox: "19"
+  #   firefox_android: "19"
+  #   safari: "6"
+  #   safari_ios: "6"
   - css.types.length.vh
-  - css.types.length.vmax
-  - css.types.length.vmin
   - css.types.length.vw
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "26"
+  #   chrome_android: "26"
+  #   edge: "12"
+  #   firefox: "19"
+  #   firefox_android: "19"
+  #   safari: "7"
+  #   safari_ios: "7"
+  - css.types.length.vmin
+
+  # Same status as overall feature
+  - css.types.length.vmax

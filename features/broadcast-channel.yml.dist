@@ -13,10 +13,22 @@ status:
     safari: "15.4"
     safari_ios: "15.4"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2022-03-14
+  # support:
+  #   chrome: "54"
+  #   chrome_android: "54"
+  #   edge: "79"
+  #   firefox: "38"
+  #   firefox_android: "38"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
   - api.BroadcastChannel
   - api.BroadcastChannel.BroadcastChannel
   - api.BroadcastChannel.close
   - api.BroadcastChannel.message_event
-  - api.BroadcastChannel.messageerror_event
   - api.BroadcastChannel.name
   - api.BroadcastChannel.postMessage
+
+  # Same status as overall feature
+  - api.BroadcastChannel.messageerror_event

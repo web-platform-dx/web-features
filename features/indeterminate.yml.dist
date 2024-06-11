@@ -14,7 +14,44 @@ status:
     safari: "10"
     safari_ios: "10"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "2"
+  #   firefox_android: "4"
+  #   safari: "3"
+  #   safari_ios: "1"
   - css.selectors.indeterminate
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3.6"
+  #   firefox_android: "4"
+  #   safari: "3"
+  #   safari_ios: "1"
   - css.selectors.indeterminate.checkbox
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "6"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "6"
+  #   firefox_android: "6"
+  #   safari: "5.1"
+  #   safari_ios: "5"
   - css.selectors.indeterminate.progress
+
+  # Same status as overall feature
   - css.selectors.indeterminate.radio

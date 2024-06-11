@@ -11,6 +11,16 @@ status:
     firefox_android: "42"
     safari: "8"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "31"
+  #   chrome_android: "31"
+  #   edge: "12"
+  #   firefox: "42"
+  #   firefox_android: "41"
+  #   safari: "8"
   - api.MediaSource
-  - api.SourceBuffer
   - api.SourceBufferList
+
+  # Same status as overall feature
+  - api.SourceBuffer

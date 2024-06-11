@@ -6,5 +6,11 @@ status:
   support:
     chrome_android: "38"
 compat_features:
+  # Same status as overall feature
   - api.ScreenOrientation.lock
+
+  # baseline: false
+  # support:
+  #   chrome_android: "38"
+  #   firefox_android: "43"
   - api.ScreenOrientation.unlock

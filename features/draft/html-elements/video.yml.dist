@@ -9,3 +9,95 @@ status:
     edge: "79"
     safari: "10"
     safari_ios: "10"
+compat_features:
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "3"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3.5"
+  #   firefox_android: "4"
+  #   safari: "3.1"
+  #   safari_ios: "3"
+  - api.HTMLVideoElement
+  - api.HTMLVideoElement.height
+  - api.HTMLVideoElement.videoHeight
+  - api.HTMLVideoElement.videoWidth
+  - api.HTMLVideoElement.width
+  - html.elements.video
+  - html.elements.video.controls
+  - html.elements.video.height
+  - html.elements.video.src
+  - html.elements.video.width
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "3"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3.6"
+  #   firefox_android: "4"
+  #   safari: "3.1"
+  #   safari_ios: "3"
+  - api.HTMLVideoElement.poster
+  - html.elements.video.poster
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "3"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "11"
+  #   firefox_android: "14"
+  #   safari: "3.1"
+  #   safari_ios: "6"
+  - html.elements.video.loop
+
+  # baseline: high
+  # baseline_low_date: 2016-09-13
+  # baseline_high_date: 2019-03-13
+  # support:
+  #   chrome: "3"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3.5"
+  #   firefox_android: "4"
+  #   safari: "3.1"
+  #   safari_ios: "10"
+  - html.elements.video.autoplay
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "3"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: "3.5"
+  #   firefox_android: "4"
+  #   safari: "3.1"
+  #   safari_ios: "3"
+  - api.HTMLVideoElement.resize_event
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "33"
+  #   chrome_android: "33"
+  #   edge: "18"
+  #   firefox: "74"
+  #   firefox_android: "79"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - html.elements.video.crossorigin
+
+  # Same status as overall feature
+  - api.HTMLVideoElement.playsInline
+  - html.elements.video.playsinline

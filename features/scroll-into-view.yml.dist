@@ -14,5 +14,18 @@ status:
     safari: "14"
     safari_ios: "14"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "3"
+  #   safari_ios: "1"
   - api.Element.scrollIntoView
+
+  # Same status as overall feature
   - api.Element.scrollIntoView.options_parameter

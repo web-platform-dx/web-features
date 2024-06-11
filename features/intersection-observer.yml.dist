@@ -14,6 +14,17 @@ status:
     safari: "12.1"
     safari_ios: "12.2"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2019-03-25
+  # baseline_high_date: 2021-09-25
+  # support:
+  #   chrome: "51"
+  #   chrome_android: "51"
+  #   edge: "15"
+  #   firefox: "55"
+  #   firefox_android: "55"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
   - api.IntersectionObserver
   - api.IntersectionObserver.IntersectionObserver
   - api.IntersectionObserver.disconnect
@@ -21,13 +32,27 @@ compat_features:
   - api.IntersectionObserver.root
   - api.IntersectionObserver.rootMargin
   - api.IntersectionObserver.takeRecords
-  - api.IntersectionObserver.thresholds
   - api.IntersectionObserver.unobserve
   - api.IntersectionObserverEntry
   - api.IntersectionObserverEntry.boundingClientRect
   - api.IntersectionObserverEntry.intersectionRatio
   - api.IntersectionObserverEntry.intersectionRect
-  - api.IntersectionObserverEntry.isIntersecting
   - api.IntersectionObserverEntry.rootBounds
   - api.IntersectionObserverEntry.target
   - api.IntersectionObserverEntry.time
+
+  # baseline: high
+  # baseline_low_date: 2019-03-25
+  # baseline_high_date: 2021-09-25
+  # support:
+  #   chrome: "52"
+  #   chrome_android: "52"
+  #   edge: "15"
+  #   firefox: "55"
+  #   firefox_android: "55"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - api.IntersectionObserver.thresholds
+
+  # Same status as overall feature
+  - api.IntersectionObserverEntry.isIntersecting

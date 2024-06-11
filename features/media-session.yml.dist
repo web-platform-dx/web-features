@@ -11,12 +11,35 @@ status:
     safari: "15"
     safari_ios: "15"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2021-09-20
+  # baseline_high_date: 2024-03-20
+  # support:
+  #   chrome: "73"
+  #   chrome_android: "57"
+  #   edge: "79"
+  #   firefox: "82"
+  #   firefox_android: "82"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - api.Navigator.mediaSession
+
+  # baseline: false
+  # support:
+  #   chrome: "57"
+  #   chrome_android: "57"
+  #   edge: "79"
+  #   firefox: "82"
+  #   safari: "14"
+  #   safari_ios: "14"
   - api.MediaMetadata
   - api.MediaMetadata.MediaMetadata
   - api.MediaMetadata.album
   - api.MediaMetadata.artist
   - api.MediaMetadata.artwork
   - api.MediaMetadata.title
+
+  # Same status as overall feature
   - api.MediaSession
   - api.MediaSession.metadata
   - api.MediaSession.playbackState
@@ -27,4 +50,3 @@ compat_features:
   - api.MediaSession.setActionHandler.previoustrack_type
   - api.MediaSession.setActionHandler.seekbackward_type
   - api.MediaSession.setActionHandler.seekforward_type
-  - api.Navigator.mediaSession

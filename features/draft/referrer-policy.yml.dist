@@ -4,3 +4,257 @@
 status:
   baseline: false
   support: {}
+compat_features:
+  # baseline: high
+  # baseline_low_date: 2017-03-27
+  # baseline_high_date: 2019-09-27
+  # support:
+  #   chrome: "52"
+  #   chrome_android: "52"
+  #   edge: "14"
+  #   firefox: "47"
+  #   firefox_android: "47"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.Request.referrerPolicy
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "56"
+  #   chrome_android: "56"
+  #   edge: "79"
+  #   firefox: "50"
+  #   firefox_android: "50"
+  #   safari: "11.1"
+  #   safari_ios: "12"
+  - http.headers.Referrer-Policy
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "61"
+  #   chrome_android: "61"
+  #   edge: "79"
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "11.1"
+  #   safari_ios: "12"
+  - http.headers.Referrer-Policy.same-origin
+  - http.headers.Referrer-Policy.strict-origin
+  - http.headers.Referrer-Policy.strict-origin-when-cross-origin
+
+  # baseline: high
+  # baseline_low_date: 2020-09-16
+  # baseline_high_date: 2023-03-16
+  # support:
+  #   chrome: "51"
+  #   chrome_android: "51"
+  #   edge: "79"
+  #   firefox: "50"
+  #   firefox_android: "50"
+  #   safari: "14"
+  #   safari_ios: "14"
+  - html.elements.a.referrerpolicy
+  - html.elements.area.referrerpolicy
+  - html.elements.iframe.referrerpolicy
+  - html.elements.img.referrerpolicy
+  - html.elements.link.referrerpolicy
+
+  # baseline: high
+  # baseline_low_date: 2020-09-16
+  # baseline_high_date: 2023-03-16
+  # support:
+  #   chrome: "51"
+  #   chrome_android: "51"
+  #   edge: "79"
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "14"
+  #   safari_ios: "14"
+  - svg.elements.a.referrerpolicy
+
+  # baseline: high
+  # baseline_low_date: 2020-09-16
+  # baseline_high_date: 2023-03-16
+  # support:
+  #   chrome: "52"
+  #   chrome_android: "52"
+  #   edge: "79"
+  #   firefox: "50"
+  #   firefox_android: "50"
+  #   safari: "14"
+  #   safari_ios: "14"
+  - api.HTMLAnchorElement.referrerPolicy
+  - api.HTMLIFrameElement.referrerPolicy
+  - api.HTMLImageElement.referrerPolicy
+
+  # baseline: high
+  # baseline_low_date: 2020-09-16
+  # baseline_high_date: 2023-03-16
+  # support:
+  #   chrome: "70"
+  #   chrome_android: "70"
+  #   edge: "79"
+  #   firefox: "65"
+  #   firefox_android: "65"
+  #   safari: "14"
+  #   safari_ios: "14"
+  - api.HTMLScriptElement.referrerPolicy
+  - html.elements.script.referrerpolicy
+
+  # baseline: high
+  # baseline_low_date: 2021-04-26
+  # baseline_high_date: 2023-10-26
+  # support:
+  #   chrome: "52"
+  #   chrome_android: "52"
+  #   edge: "79"
+  #   firefox: "50"
+  #   firefox_android: "50"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.HTMLAreaElement.referrerPolicy
+
+  # baseline: high
+  # baseline_low_date: 2021-04-26
+  # baseline_high_date: 2023-10-26
+  # support:
+  #   chrome: "58"
+  #   chrome_android: "58"
+  #   edge: "79"
+  #   firefox: "50"
+  #   firefox_android: "50"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.HTMLLinkElement.referrerPolicy
+
+  # baseline: high
+  # baseline_low_date: 2021-09-20
+  # baseline_high_date: 2024-03-20
+  # support:
+  #   chrome: "85"
+  #   chrome_android: "85"
+  #   edge: "85"
+  #   firefox: "87"
+  #   firefox_android: "87"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - http.headers.Referrer-Policy.default_strict-origin-when-cross-origin
+
+  # baseline: false
+  # support:
+  #   firefox: "61"
+  #   firefox_android: "61"
+  - api.SVGAElement.referrerPolicy
+
+  # baseline: false
+  # support:
+  #   chrome: "51"
+  #   chrome_android: "51"
+  #   edge: "79"
+  - html.elements.a.referrerpolicy.no-referrer-when-downgrade
+  - html.elements.a.referrerpolicy.origin-when-cross-origin
+  - html.elements.a.referrerpolicy.unsafe-url
+  - html.elements.area.referrerpolicy.no-referrer-when-downgrade
+  - html.elements.area.referrerpolicy.origin-when-cross-origin
+  - html.elements.area.referrerpolicy.unsafe-url
+  - html.elements.iframe.referrerpolicy.no-referrer-when-downgrade
+  - html.elements.iframe.referrerpolicy.origin-when-cross-origin
+  - html.elements.iframe.referrerpolicy.unsafe-url
+  - html.elements.img.referrerpolicy.no-referrer-when-downgrade
+  - html.elements.img.referrerpolicy.origin-when-cross-origin
+  - html.elements.img.referrerpolicy.unsafe-url
+  - html.elements.link.referrerpolicy.no-referrer-when-downgrade
+  - html.elements.link.referrerpolicy.origin-when-cross-origin
+  - html.elements.link.referrerpolicy.unsafe-url
+  - svg.elements.a.referrerpolicy.no-referrer-when-downgrade
+  - svg.elements.a.referrerpolicy.origin-when-cross-origin
+  - svg.elements.a.referrerpolicy.unsafe-url
+
+  # baseline: false
+  # support:
+  #   chrome: "56"
+  #   chrome_android: "56"
+  #   edge: "79"
+  - http.headers.Referrer-Policy.no-referrer-when-downgrade
+  - http.headers.Referrer-Policy.origin-when-cross-origin
+  - http.headers.Referrer-Policy.unsafe-url
+
+  # baseline: false
+  # support:
+  #   chrome: "70"
+  #   chrome_android: "70"
+  #   edge: "79"
+  - html.elements.script.referrerpolicy.no-referrer-when-downgrade
+  - html.elements.script.referrerpolicy.origin-when-cross-origin
+  - html.elements.script.referrerpolicy.unsafe-url
+
+  # baseline: false
+  # support:
+  #   chrome: "111"
+  #   chrome_android: "111"
+  #   edge: "111"
+  - html.elements.script.type.speculationrules.referrer_policy
+
+  # baseline: false
+  # support:
+  #   chrome: "52"
+  #   chrome_android: "52"
+  #   edge: "79"
+  #   safari: "14"
+  #   safari_ios: "14"
+  - api.HTMLAnchorElement.referrerPolicy.no-referrer-when-downgrade
+  - api.HTMLAnchorElement.referrerPolicy.origin-when-cross-origin
+  - api.HTMLAnchorElement.referrerPolicy.unsafe-url
+  - api.HTMLIFrameElement.referrerPolicy.no-referrer-when-downgrade
+  - api.HTMLIFrameElement.referrerPolicy.origin-when-cross-origin
+  - api.HTMLIFrameElement.referrerPolicy.unsafe-url
+  - api.HTMLImageElement.referrerPolicy.no-referrer-when-downgrade
+  - api.HTMLImageElement.referrerPolicy.origin-when-cross-origin
+  - api.HTMLImageElement.referrerPolicy.unsafe-url
+
+  # baseline: false
+  # support:
+  #   chrome: "52"
+  #   chrome_android: "52"
+  #   edge: "79"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.HTMLAreaElement.referrerPolicy.no-referrer-when-downgrade
+  - api.HTMLAreaElement.referrerPolicy.origin-when-cross-origin
+  - api.HTMLAreaElement.referrerPolicy.unsafe-url
+
+  # baseline: false
+  # support:
+  #   chrome: "58"
+  #   chrome_android: "58"
+  #   edge: "79"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.HTMLLinkElement.referrerPolicy.no-referrer-when-downgrade
+  - api.HTMLLinkElement.referrerPolicy.origin-when-cross-origin
+  - api.HTMLLinkElement.referrerPolicy.unsafe-url
+
+  # baseline: false
+  # support:
+  #   chrome: "70"
+  #   chrome_android: "70"
+  #   edge: "79"
+  #   safari: "14"
+  #   safari_ios: "14"
+  - api.HTMLScriptElement.referrerPolicy.no-referrer-when-downgrade
+  - api.HTMLScriptElement.referrerPolicy.origin-when-cross-origin
+  - api.HTMLScriptElement.referrerPolicy.unsafe-url
+
+  # baseline: false
+  # support:
+  #   chrome: "52"
+  #   chrome_android: "52"
+  #   edge: "79"
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "11.1"
+  - api.fetch.init_referrerPolicy_parameter

@@ -6,3 +6,197 @@ status:
   support:
     firefox: "101"
     firefox_android: "101"
+compat_features:
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "3"
+  #   safari_ios: "1"
+  - api.HTMLIFrameElement
+  - api.HTMLIFrameElement.contentDocument
+  - api.HTMLIFrameElement.contentWindow
+  - api.HTMLIFrameElement.height
+  - api.HTMLIFrameElement.name
+  - api.HTMLIFrameElement.src
+  - api.HTMLIFrameElement.width
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - html.elements.iframe
+  - html.elements.iframe.height
+  - html.elements.iframe.name
+  - html.elements.iframe.src
+  - html.elements.iframe.width
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3.5"
+  #   firefox_android: "4"
+  #   safari: "3.1"
+  #   safari_ios: "2"
+  - api.HTMLIFrameElement.getSVGDocument
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "4"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "17"
+  #   firefox_android: "17"
+  #   safari: "5"
+  #   safari_ios: "4.2"
+  - html.elements.iframe.sandbox
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "5"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "17"
+  #   firefox_android: "17"
+  #   safari: "5"
+  #   safari_ios: "4"
+  - api.HTMLIFrameElement.sandbox
+
+  # baseline: high
+  # baseline_low_date: 2018-10-02
+  # baseline_high_date: 2021-04-02
+  # support:
+  #   chrome: "4"
+  #   chrome_android: "18"
+  #   edge: "18"
+  #   firefox: "28"
+  #   firefox_android: "27"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - html.elements.iframe.sandbox.allow-popups
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "20"
+  #   chrome_android: "25"
+  #   edge: "79"
+  #   firefox: "25"
+  #   firefox_android: "25"
+  #   safari: "6"
+  #   safari_ios: "6"
+  - api.HTMLIFrameElement.srcdoc
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "46"
+  #   chrome_android: "46"
+  #   edge: "79"
+  #   firefox: "49"
+  #   firefox_android: "49"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - html.elements.iframe.sandbox.allow-modals
+  - html.elements.iframe.sandbox.allow-popups-to-escape-sandbox
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "49"
+  #   chrome_android: "49"
+  #   edge: "79"
+  #   firefox: "49"
+  #   firefox_android: "49"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - html.elements.iframe.sandbox.allow-forms
+  - html.elements.iframe.sandbox.allow-pointer-lock
+  - html.elements.iframe.sandbox.allow-same-origin
+  - html.elements.iframe.sandbox.allow-scripts
+  - html.elements.iframe.sandbox.allow-top-navigation
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "58"
+  #   chrome_android: "58"
+  #   edge: "79"
+  #   firefox: "79"
+  #   firefox_android: "79"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - html.elements.iframe.sandbox.allow-top-navigation-by-user-activation
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "79"
+  #   firefox: "74"
+  #   firefox_android: "79"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - api.HTMLIFrameElement.allow
+  - html.elements.iframe.allow
+
+  # baseline: false
+  # support:
+  #   firefox: "101"
+  #   firefox_android: "101"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - html.elements.iframe.sandbox.allow-top-navigation-to-custom-protocols
+
+  # baseline: false
+  # support:
+  #   chrome: "53"
+  #   chrome_android: "53"
+  #   edge: "79"
+  #   firefox: "50"
+  #   firefox_android: "50"
+  - html.elements.iframe.sandbox.allow-presentation
+
+  # baseline: false
+  # support:
+  #   chrome: "68"
+  #   chrome_android: "68"
+  #   edge: "79"
+  #   firefox: "49"
+  #   firefox_android: "49"
+  - html.elements.iframe.sandbox.allow-orientation-lock
+
+  # baseline: false
+  # support:
+  #   chrome: "83"
+  #   chrome_android: "83"
+  #   edge: "83"
+  #   firefox: "82"
+  #   firefox_android: "82"
+  - html.elements.iframe.sandbox.allow-downloads

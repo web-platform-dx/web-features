@@ -13,11 +13,81 @@ status:
     safari: "16.4"
     safari_ios: "16.4"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: "6"
+  #   firefox_android: "6"
+  #   safari: "3.1"
+  #   safari_ios: "2"
   - api.Element.input_event
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "79"
+  #   firefox: "31"
+  #   firefox_android: "31"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
   - api.InputEvent
   - api.InputEvent.InputEvent
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "79"
+  #   firefox: "66"
+  #   firefox_android: "66"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.InputEvent.inputType
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "79"
+  #   firefox: "67"
+  #   firefox_android: "67"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
   - api.InputEvent.data
   - api.InputEvent.dataTransfer
+
+  # baseline: high
+  # baseline_low_date: 2021-03-23
+  # baseline_high_date: 2023-09-23
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "79"
+  #   firefox: "87"
+  #   firefox_android: "87"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
   - api.InputEvent.getTargetRanges
-  - api.InputEvent.inputType
+
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "79"
+  #   firefox: "31"
+  #   firefox_android: "31"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
   - api.InputEvent.isComposing
