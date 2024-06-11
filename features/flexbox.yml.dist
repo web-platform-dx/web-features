@@ -3,14 +3,14 @@
 
 status:
   baseline: high
-  baseline_low_date: 2020-09-22
-  baseline_high_date: 2023-03-22
+  baseline_low_date: 2020-01-15
+  baseline_high_date: 2022-07-15
   support:
     chrome: "59"
     chrome_android: "59"
     edge: "79"
-    firefox: "81"
-    firefox_android: "81"
+    firefox: "52"
+    firefox_android: "52"
     safari: "11"
     safari_ios: "11"
 compat_features:
@@ -34,7 +34,6 @@ compat_features:
   - css.properties.justify-content.flex_context
   - css.properties.justify-content.flex_context.stretch
   - css.properties.justify-items.flex_context
-  - css.properties.justify-self.flex_context
   - css.properties.order
   - css.properties.place-content.flex_context
   - css.properties.place-items.flex_context

@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "125"
-    chrome_android: "125"
-    edge: "125"
+  support: {}
 compat_features:
   - api.CSSPositionTryDescriptors
   - api.CSSPositionTryDescriptors.align-self
@@ -148,6 +145,7 @@ compat_features:
   - css.properties.place-items.anchor-center
   - css.properties.place-self.anchor-center
   - css.properties.position-anchor
+  - css.properties.position-anchor.auto
   - css.properties.position-try
   - css.properties.position-try-options
   - css.properties.position-try-options.flip-block
