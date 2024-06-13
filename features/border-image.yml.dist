@@ -15,9 +15,6 @@ status:
     safari_ios: "9.3"
 compat_features:
   - css.properties.border-image
-  - css.properties.border-image.fill
-  - css.properties.border-image.gradient
-  - css.properties.border-image.optional_border_image_slice
   - css.properties.border-image-outset
   - css.properties.border-image-repeat
   - css.properties.border-image-repeat.round
@@ -25,3 +22,6 @@ compat_features:
   - css.properties.border-image-slice
   - css.properties.border-image-source
   - css.properties.border-image-width
+  - css.properties.border-image.fill
+  - css.properties.border-image.gradient
+  - css.properties.border-image.optional_border_image_slice
