@@ -1,9 +1,4 @@
-import { Temporal } from "@js-temporal/polyfill";
-import {
-  BASELINE_LOW_TO_HIGH_DURATION,
-  computeBaseline,
-  setLogger,
-} from "compute-baseline";
+import { computeBaseline, setLogger } from "compute-baseline";
 import { Compat, Feature } from "compute-baseline/browser-compat-data";
 import assert from "node:assert/strict";
 import fs from "node:fs";
@@ -13,15 +8,16 @@ import { isDeepStrictEqual } from "node:util";
 import winston from "winston";
 import YAML, { Document } from "yaml";
 import yargs from "yargs";
+import { fdir } from "fdir";
 
 const argv = yargs(process.argv.slice(2))
   .scriptName("dist")
-  .usage("$0 [filenames..]", "Generate .dist.yml from .yml", (yargs) =>
-    yargs.positional("filenames", {
-      describe: "YAML files to check/update.",
+  .usage("$0 [paths..]", "Generate .yml.dist from .yml", (yargs) =>
+    yargs.positional("paths", {
+      describe: "Directories or files to check/update.",
+      default: ["features"],
     }),
   )
-  .demandOption("filenames")
   .option("check", {
     boolean: true,
     default: false,
@@ -78,115 +74,66 @@ function checkDistFile(sourcePath: string, distPath: string): boolean {
  * successful, generates a `status` block.
  */
 function toDist(sourcePath: string): YAML.Document {
-  const yaml = YAML.parseDocument(
-    fs.readFileSync(sourcePath, { encoding: "utf-8" }),
-  );
+  const source = YAML.parse(fs.readFileSync(sourcePath, { encoding: "utf-8" }));
   const { name: id } = path.parse(sourcePath);
 
-  const taggedCompatFeatures = (
-    tagsToFeatures.get(`web-features:${id}`) ?? []
-  ).map((f) => `${f.id}`);
+  // Collect tagged compat features. A `compat_features` list in the source
+  // takes precedence, but can be removed if it matches the tagged features.
+  const taggedCompatFeatures = (tagsToFeatures.get(`web-features:${id}`) ?? [])
+    .map((f) => `${f.id}`)
+    .sort();
 
-  const overridden = {
-    compatFeatures: yaml.toJS().compat_features,
-    status: resolveBaselineHighDate(yaml.toJS().status),
-  };
-
-  const generated = {
-    compatFeatures: taggedCompatFeatures.length
-      ? taggedCompatFeatures
-      : undefined,
-    status: taggedCompatFeatures.length
-      ? computeBaseline({
-          compatKeys: taggedCompatFeatures as [string, ...string[]],
-          checkAncestors: false,
-        })
-      : undefined,
-    statusByCompatFeaturesOverride: Array.isArray(overridden.compatFeatures)
-      ? computeBaseline({
-          compatKeys: overridden.compatFeatures as [string, ...string[]],
-          checkAncestors: false,
-        })
-      : undefined,
-  };
-
-  warnOnNeedlessOverrides(id, overridden, generated);
-
-  if (overridden.status?.baseline === "high") {
-    insertBaselineHighDate(yaml, overridden.status.baseline_high_date);
-  }
-
-  if (!overridden.compatFeatures && generated.compatFeatures) {
-    insertCompatFeatures(yaml, generated.compatFeatures);
-  }
-
-  if (!overridden.status) {
-    const status = generated.statusByCompatFeaturesOverride ?? generated.status;
-    if (status) {
-      if (status.discouraged) {
-        logger.warn(
-          `${id}: contains at least one deprecated compat feature and can never be Baseline. Was this intentional?`,
-        );
-      }
-      insertStatus(yaml, JSON.parse(status.toJSON()));
+  if (source.compat_features) {
+    source.compat_features.sort();
+    if (isDeepStrictEqual(source.compat_features, taggedCompatFeatures)) {
+      logger.warn(
+        `${id}: compat_features override matches tags in @mdn/browser-compat-data. Consider deleting this override.`,
+      );
     }
   }
 
-  insertHeaderComments(yaml, id);
+  // Compute the status. A `status` block in the source takes precedence, but
+  // can be removed if it matches the computed status.
+  let computedStatus = computeBaseline({
+    compatKeys: source.compat_features ?? taggedCompatFeatures,
+    checkAncestors: false,
+  });
 
-  return yaml;
-}
-
-function resolveBaselineHighDate(status) {
-  if (
-    status?.baseline === "high" &&
-    typeof status?.baseline_low_date === "string"
-  ) {
-    return {
-      ...status,
-      baseline_high_date: Temporal.PlainDate.from(status.baseline_low_date)
-        .add(BASELINE_LOW_TO_HIGH_DURATION)
-        .toString(),
-    };
+  if (computedStatus.discouraged) {
+    logger.warn(
+      `${id}: contains at least one deprecated compat feature and can never be Baseline. Was this intentional?`,
+    );
   }
-  return status;
-}
 
-function insertBaselineHighDate(yaml: Document, baselineHighDate: string) {
-  // Append a high date…
-  yaml.setIn(["status", "baseline_high_date"], baselineHighDate);
+  computedStatus = JSON.parse(computedStatus.toJSON());
 
-  // …then fix the order.
-  const statusNode = yaml.get("status");
-  assert(YAML.isMap(statusNode));
-  const highDateNode = statusNode.items.pop();
-  const targetIndex = statusNode.items.findIndex(
-    (item) => item.key === "baseline_low_date",
-  );
-  statusNode.items.splice(targetIndex, 0, highDateNode);
-}
+  if (source.status) {
+    if (isDeepStrictEqual(source.status, computedStatus)) {
+      logger.warn(
+        `${id}: status override matches computed status. Consider deleting this override.`,
+      );
+    }
+  }
 
-function insertCompatFeatures(yaml: Document, compatFeatures: string[]) {
-  yaml.set("compat_features", compatFeatures);
-}
+  // Assemble and return the dist YAML.
+  const dist = new Document({});
 
-function insertStatus(yaml: Document, status) {
-  // Create the status node and insert it just before "compat_features"
-  const statusNode = yaml.createPair("status", status);
-  assert(YAML.isMap(yaml.contents));
-  const targetIndex = yaml.contents.items.findIndex(
-    (item) => item.key.toString() === "compat_features",
-  );
-  yaml.contents.items.splice(targetIndex, 0, statusNode as YAML.Pair<any, any>);
-}
-
-function insertHeaderComments(yaml: Document, id: string) {
-  yaml.commentBefore = [
+  dist.commentBefore = [
     `Generated from: ${id}.yml`,
     `Do not edit this file by hand. Edit the source file instead!`,
   ]
     .map((line) => ` ${line}`)
     .join("\n");
+
+  if (!source.status) {
+    dist.set("status", computedStatus);
+  }
+
+  if (!source.compat_features) {
+    dist.set("compat_features", taggedCompatFeatures);
+  }
+
+  return dist;
 }
 
 const compat = new Compat();
@@ -207,61 +154,42 @@ const tagsToFeatures: Map<string, Feature[]> = (() => {
   return map;
 })();
 
-function warnOnNeedlessOverrides(id, overridden, generated) {
-  if (overridden.compatFeatures?.length && generated.compatFeatures?.length) {
-    if (
-      isDeepStrictEqual(
-        [...overridden.compatFeatures].sort(),
-        [...generated.compatFeatures].sort(),
-      )
-    ) {
-      logger.warn(
-        `${id}: compat_features override matches tags in @mdn/browser-compat-data. Consider deleting this override.`,
-      );
-    }
-  }
-
-  if (
-    overridden.status &&
-    generated.statusByCompatFeaturesOverride &&
-    isDeepStrictEqual(
-      overridden.status,
-      generated.statusByCompatFeaturesOverride,
-    )
-  ) {
-    logger.warn(
-      `${id}: status override matches generated status from compat_features override. Consider deleting this override.`,
-    );
-  }
-  if (
-    overridden.status &&
-    generated.status &&
-    isDeepStrictEqual(overridden.status, generated.status)
-  ) {
-    logger.warn(
-      `${id}: status override matches generated status from tags. Consider deleting this override.`,
-    );
-  }
-}
-
 function main() {
-  // Map from .yml to .dist.yml to filter out duplicates.
-  const sourceToDist = new Map(
-    argv.filenames.map((filePath: string) => {
-      let { dir, name, ext } = path.parse(filePath);
-      if (ext !== ".yml") {
+  const filePaths = argv.paths.flatMap((fileOrDirectory) => {
+    if (fs.statSync(fileOrDirectory).isDirectory()) {
+      // Expand directory to any existing .dist file within.
+      // TODO: Change this to .yml when all features have dist files.
+      return new fdir()
+        .withBasePath()
+        .filter((fp) => fp.endsWith(".dist"))
+        .crawl(fileOrDirectory)
+        .sync();
+    }
+    return fileOrDirectory;
+  });
+
+  // Map from .yml to .yml.dist to filter out duplicates.
+  const sourceToDist = new Map<string, string>(
+    filePaths.map((filePath: string) => {
+      const ext = path.extname(filePath);
+      if (![".dist", ".yml"].includes(ext)) {
         throw new Error(
           `Cannot generate dist for ${filePath}, only YAML input is supported`,
         );
       }
-      // Remove .dist to start from the source even if dist is given.
-      if (name.endsWith(".dist")) {
-        name = name.substring(0, name.length - 5);
+      // Start from the source even if dist is given.
+      if (filePath.endsWith(".dist")) {
+        const candidateFilePath = filePath.substring(0, filePath.length - 5);
+
+        // Make sure this isn't an orphan dist file
+        if (!fs.existsSync(candidateFilePath)) {
+          throw new Error(
+            `${filePath} has no corresponding ${candidateFilePath}`,
+          );
+        }
+        filePath = candidateFilePath;
       }
-      return [
-        path.format({ dir, name, ext: ".yml" }),
-        path.format({ dir, name, ext: ".dist.yml" }),
-      ];
+      return [filePath, `${filePath}.dist`];
     }),
   );
 

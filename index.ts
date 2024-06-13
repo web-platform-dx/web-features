@@ -20,6 +20,10 @@ const nameMaxLength = 80;
 // The longest description allowed, to avoid them growing into documentation.
 const descriptionMaxLength = 300;
 
+// Internal symbol to mark draft entries, so that using the draft field outside
+// of a draft directory doesn't work.
+const draft = Symbol('draft');
+
 // Some FeatureData keys aren't (and may never) be ready for publishing.
 // They're not part of the public schema (yet).
 const omittables = [
@@ -37,17 +41,24 @@ function scrub(data: any) {
 function* yamlEntries(root: string): Generator<[string, any]> {
     const filePaths = new fdir()
         .withBasePath()
-        .filter((fp) => fp.endsWith('.yml') && !fp.endsWith('.dist.yml'))
+        .filter((fp) => fp.endsWith('.yml'))
         .crawl(root)
         .sync() as string[];
 
     for (const fp of filePaths) {
         // The feature identifier/key is the filename without extension.
-        const { dir, name: key } = path.parse(fp);
-        const dist = path.join(dir, `${key}.dist.yml`);
+        const { name: key } = path.parse(fp);
+        const distPath = `${fp}.dist`;
 
-        const src = fs.existsSync(dist) ? fs.readFileSync(dist, { encoding: 'utf-8'}) : fs.readFileSync(fp, { encoding: 'utf-8'});
-        const data = YAML.parse(src);
+        const data = YAML.parse(fs.readFileSync(fp, { encoding: 'utf-8'}));
+        if (fs.existsSync(distPath)) {
+            const dist = YAML.parse(fs.readFileSync(distPath, { encoding: 'utf-8'}));
+            Object.assign(data, dist);
+        }
+
+        if (fp.split(path.sep).includes('draft')) {
+            data[draft] = true;
+        }
 
         yield [key, data];
     }
@@ -116,7 +127,10 @@ const bcdToFeatureId: Map<string, string> = new Map();
 const features: { [key: string]: FeatureData } = {};
 for (const [key, data] of yamlEntries('features')) {
     // Draft features reserve an identifier but aren't complete yet. Skip them.
-    if (data.draft) {
+    if (data[draft]) {
+        if (!data.draft_date) {
+            throw new Error(`The draft feature ${key} is missing the draft_date field. Set it to the current date.`);
+        }
         continue;
     }
 
@@ -128,11 +142,7 @@ for (const [key, data] of yamlEntries('features')) {
     }
 
     // Compute Baseline high date from low date.
-    const isDist = fs.existsSync(`features/${key}.dist.yml`);
-    if (!isDist && data.status?.baseline_high_date) {
-        throw new Error(`baseline_high_date is computed and should not be used in source YAML. Remove it from ${key}.yml.`);
-    }
-    if (!isDist && data.status?.baseline === 'high') {
+    if (data.status?.baseline === 'high') {
         const lowDate = Temporal.PlainDate.from(data.status.baseline_low_date);
         const highDate = lowDate.add(BASELINE_LOW_TO_HIGH_DURATION);
         data.status.baseline_high_date = String(highDate);
