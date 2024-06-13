@@ -1,0 +1,8 @@
+name: Resizable ArrayBuffer
+description: ArrayBuffer objects can take a maximum length allowing them to grow and shrink in place.
+spec: https://tc39.es/ecma262/multipage/structured-data.html#sec-get-sharedarraybuffer.prototype.growable
+compat_features:
+  - javascript.builtins.ArrayBuffer.ArrayBuffer.maxByteLength_option
+  - javascript.builtins.ArrayBuffer.maxByteLength
+  - javascript.builtins.ArrayBuffer.resizable
+  - javascript.builtins.ArrayBuffer.resize
