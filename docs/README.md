@@ -48,6 +48,13 @@ Feature authors should (in descending order of priority):
   - 👍 Recommended: `<dialog>`
   - 👎 Not recommended: `<dialog>` element
 
+- Prefer plural names, except when you're shadowing the literal name of an interface, element, property, etc.
+
+  - 👍 Recommended: JavaScript modules
+  - 👎 Not recommended: JavaScript module
+  - 👍 Recommended: BigInt
+  - 👎 Not recommended: BigInts
+
 ### Identifiers
 
 Feature identifiers must contain only lowercase alphanumeric characters (`a`-`z` and `0-9`) plus the `-` character (hyphen or minus sign) as a word separator.
