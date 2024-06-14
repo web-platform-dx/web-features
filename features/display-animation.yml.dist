@@ -7,3 +7,8 @@ status:
     chrome: "117"
     chrome_android: "117"
     edge: "117"
+compat_features:
+  - css.properties.content-visibility.is_transitionable
+  - css.properties.content-visibility.keyframe_animatable
+  - css.properties.display.is_transitionable
+  - css.properties.display.keyframe_animatable

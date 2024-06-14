@@ -12,3 +12,15 @@ status:
     firefox_android: "98"
     safari: "16.4"
     safari_ios: "16.4"
+compat_features:
+  - api.ElementInternals
+  - api.ElementInternals.checkValidity
+  - api.ElementInternals.form
+  - api.ElementInternals.labels
+  - api.ElementInternals.reportValidity
+  - api.ElementInternals.setFormValue
+  - api.ElementInternals.setValidity
+  - api.ElementInternals.validationMessage
+  - api.ElementInternals.validity
+  - api.ElementInternals.willValidate
+  - api.HTMLElement.attachInternals

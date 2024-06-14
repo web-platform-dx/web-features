@@ -7,3 +7,7 @@ status:
     chrome: "58"
     chrome_android: "58"
     edge: "79"
+compat_features:
+  - api.HTMLMediaElement.controlsList
+  - html.elements.audio.controlslist
+  - html.elements.video.controlslist

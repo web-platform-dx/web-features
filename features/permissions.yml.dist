@@ -12,3 +12,9 @@ status:
     firefox_android: "46"
     safari: "16"
     safari_ios: "16"
+compat_features:
+  - api.Navigator.permissions
+  - api.PermissionStatus
+  - api.PermissionStatus.state
+  - api.Permissions
+  - api.Permissions.query

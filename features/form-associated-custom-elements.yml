@@ -4,18 +4,3 @@ spec: https://html.spec.whatwg.org/multipage/custom-elements.html#form-associate
 group:
   - custom-elements
   - forms
-compat_features:
-  - api.HTMLElement.attachInternals
-  - api.ElementInternals
-  - api.ElementInternals.checkValidity
-  - api.ElementInternals.form
-  - api.ElementInternals.labels
-  - api.ElementInternals.reportValidity
-  - api.ElementInternals.setFormValue
-  - api.ElementInternals.setValidity
-  - api.ElementInternals.validationMessage
-  - api.ElementInternals.validity
-  - api.ElementInternals.willValidate
-  # TODO: later additions
-  # - api.ElementInternals.shadowRoot
-  # - api.ElementInternals.states

@@ -12,3 +12,27 @@ status:
     firefox_android: "111"
     safari: "15.2"
     safari_ios: "15.2"
+compat_features:
+  - api.FileSystemDirectoryHandle
+  - api.FileSystemDirectoryHandle.entries
+  - api.FileSystemDirectoryHandle.getDirectoryHandle
+  - api.FileSystemDirectoryHandle.getFileHandle
+  - api.FileSystemDirectoryHandle.keys
+  - api.FileSystemDirectoryHandle.removeEntry
+  - api.FileSystemDirectoryHandle.resolve
+  - api.FileSystemDirectoryHandle.values
+  - api.FileSystemFileHandle
+  - api.FileSystemFileHandle.createSyncAccessHandle
+  - api.FileSystemFileHandle.getFile
+  - api.FileSystemHandle
+  - api.FileSystemHandle.isSameEntry
+  - api.FileSystemHandle.kind
+  - api.FileSystemHandle.name
+  - api.FileSystemSyncAccessHandle
+  - api.FileSystemSyncAccessHandle.close
+  - api.FileSystemSyncAccessHandle.flush
+  - api.FileSystemSyncAccessHandle.getSize
+  - api.FileSystemSyncAccessHandle.read
+  - api.FileSystemSyncAccessHandle.truncate
+  - api.FileSystemSyncAccessHandle.write
+  - api.StorageManager.getDirectory

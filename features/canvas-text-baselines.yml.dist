@@ -12,3 +12,7 @@ status:
     firefox_android: "116"
     safari: "11.1"
     safari_ios: "11.3"
+compat_features:
+  - api.TextMetrics.alphabeticBaseline
+  - api.TextMetrics.hangingBaseline
+  - api.TextMetrics.ideographicBaseline
