@@ -1,5 +1,5 @@
 name: Growable SharedArrayBuffer
-description: ShareArrayBuffer objects can take a maximum length allowing them to grow in place.
+description: The `grow()` method of a `SharedArrayBuffer`, constructed with the `maxByteLength` option, increases the size of the buffer in place.
 spec: https://tc39.es/ecma262/multipage/structured-data.html#sec-get-sharedarraybuffer.prototype.growable
 compat_features:
   - javascript.builtins.SharedArrayBuffer.SharedArrayBuffer.maxByteLength_option

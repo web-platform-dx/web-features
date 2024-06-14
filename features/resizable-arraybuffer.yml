@@ -1,5 +1,5 @@
 name: Resizable ArrayBuffer
-description: ArrayBuffer objects can take a maximum length allowing them to grow and shrink in place.
+description: The `resize()` method of an `ArrayBuffer`, constructed with the `maxByteLength` option, changes the size of the buffer in place.
 spec: https://tc39.es/ecma262/multipage/structured-data.html#sec-get-arraybuffer.prototype.resizable
 compat_features:
   - javascript.builtins.ArrayBuffer.ArrayBuffer.maxByteLength_option
