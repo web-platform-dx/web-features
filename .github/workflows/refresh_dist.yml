@@ -11,6 +11,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
 
       - id: changed-package-json
         uses: tj-actions/changed-files@v44
@@ -49,13 +52,15 @@ jobs:
         with:
           commit_message: Refresh dist files
 
-      - name: Remove label
-        uses: actions/github-script@v6
+      # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#using-data-from-the-triggering-workflow
+      - name: Save PR URL
+        env:
+          PR_URL: https://github.com/${{ github.repository }}/pull/${{ github.event.number }}
+        run: |
+          mkdir -p ./pr
+          echo $PR_URL > ./pr/pr_url
+
+      - uses: actions/upload-artifact@v4
         with:
-          script: |
-            github.rest.issues.removeLabel({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              name: ["refresh dist"]
-            })
+          name: pr_url
+          path: pr/
