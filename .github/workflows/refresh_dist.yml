@@ -27,10 +27,10 @@ jobs:
             features/**/*.yml.dist
 
       - uses: actions/setup-node@v4
-        if: steps.changed-features.outputs.any_changed == 'true'
+        if: steps.changed-package-json.outputs.any_changed == 'true' || steps.changed-features.outputs.any_changed == 'true'
 
       - run: npm install
-        if: steps.changed-features.outputs.any_changed == 'true'
+        if: steps.changed-package-json.outputs.any_changed == 'true' || steps.changed-features.outputs.any_changed == 'true'
 
       - name: Refresh dist files for feature changes
         if: steps.changed-package-json.outputs.any_changed == 'false' && steps.changed-features.outputs.any_changed == 'true'
