@@ -12,3 +12,11 @@ status:
     firefox_android: "113"
     safari: "15.4"
     safari_ios: "15.4"
+compat_features:
+  - api.RTCPeerConnection.sctp
+  - api.RTCSctpTransport
+  - api.RTCSctpTransport.maxChannels
+  - api.RTCSctpTransport.maxMessageSize
+  - api.RTCSctpTransport.state
+  - api.RTCSctpTransport.statechange_event
+  - api.RTCSctpTransport.transport

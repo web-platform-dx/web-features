@@ -12,3 +12,8 @@ status:
     firefox_android: "90"
     safari: "16.4"
     safari_ios: "16.4"
+compat_features:
+  - http.headers.Sec-Fetch-Dest
+  - http.headers.Sec-Fetch-Mode
+  - http.headers.Sec-Fetch-Site
+  - http.headers.Sec-Fetch-User
