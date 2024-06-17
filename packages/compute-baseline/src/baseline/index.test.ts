@@ -4,9 +4,25 @@ import { Temporal } from "@js-temporal/polyfill";
 import * as chai from "chai";
 import chaiJestSnapshot from "chai-jest-snapshot";
 
-import { computeBaseline, keystoneDateToStatus } from "./index.js";
+import { computeBaseline, getStatus, keystoneDateToStatus } from "./index.js";
 
 chai.use(chaiJestSnapshot);
+
+describe("getStatus", function () {
+  before(function () {
+    chaiJestSnapshot.resetSnapshotRegistry();
+  });
+
+  beforeEach(function () {
+    chaiJestSnapshot.configureUsingMochaContext(this);
+  });
+
+  it("returns a status", function () {
+    const result = getStatus("fetch", "api.Response.json");
+    assert.equal(result.baseline, "high");
+    chai.expect(result).to.matchSnapshot();
+  });
+});
 
 describe("computeBaseline", function () {
   before(function () {

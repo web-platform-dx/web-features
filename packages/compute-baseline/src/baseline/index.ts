@@ -34,7 +34,7 @@ export const BASELINE_LOW_TO_HIGH_DURATION = Temporal.Duration.from({
 type BaselineStatus = "low" | "high" | false;
 type BaselineDate = string | null;
 
-interface SupportStatus {
+interface SupportDetails {
   compatKey?: string;
   baseline: BaselineStatus;
   baseline_low_date: BaselineDate;
@@ -42,6 +42,41 @@ interface SupportStatus {
   discouraged: boolean;
   support: Map<Browser, Release | undefined>;
   toJSON: () => string;
+}
+
+// TODO: Use a type from `web-features` directly, instead of approximating it here
+interface SupportStatus {
+  baseline: "low" | "high" | false;
+  baseline_low_date: string;
+  baseline_high_date?: string;
+  support: Record<string, string>;
+}
+
+/**
+ * Calculate a Baseline status for specific browser compat data keys within a
+ * web-features feature, in the style of a web-feature's `status` key. Use this
+ * method to calculate fine-grained support statuses. This is the only method
+ * approved to compute Baseline statuses not otherwise published in the
+ * `web-features` package.
+ *
+ * For example, suppose you want to show a Baseline status for a specific method
+ * in a feature, which might've been supported earlier or later than the broader
+ * feature overall. Then you'd call `getStatus('example-feature',
+ * 'api.ExampleManager.doExample')`.
+ */
+export function getStatus(
+  featureId: string,
+  compatKey: string,
+  compat: Compat = defaultCompat,
+): SupportStatus {
+  // TODO: actually check that featureId is a valid feature
+  // TODO: actually check that compatKey is tagged as featureId in BCD _or_ listed in web-features
+  return JSON.parse(
+    computeBaseline(
+      { compatKeys: [compatKey], checkAncestors: true },
+      compat,
+    ).toJSON(),
+  );
 }
 
 /**
@@ -54,7 +89,7 @@ export function computeBaseline(
     checkAncestors?: boolean;
   },
   compat: Compat = defaultCompat,
-): SupportStatus {
+): SupportDetails {
   const { compatKeys } = featureSelector;
   const keys = featureSelector.checkAncestors
     ? compatKeys.flatMap((key) => withAncestors(key, compat))
@@ -88,7 +123,7 @@ export function computeBaseline(
  * Compute the Baseline support ("high", "low" or false, dates, and releases)
  * for a single compat key.
  */
-function calculate(compatKey: string, compat: Compat): SupportStatus {
+function calculate(compatKey: string, compat: Compat): SupportDetails {
   const f = feature(compatKey);
   const s = support(f, browsers(compat));
   const keystoneDate = findKeystoneDate([...s.values()]);
@@ -227,7 +262,7 @@ function findKeystoneDate(
   return latestDate;
 }
 
-function jsonify(status: SupportStatus): string {
+function jsonify(status: SupportDetails): string {
   const { baseline_low_date, baseline_high_date } = status;
   const support: Record<string, string> = {};
 
