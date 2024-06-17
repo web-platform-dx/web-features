@@ -12,3 +12,7 @@ status:
     firefox_android: "122"
     safari: "17.4"
     safari_ios: "17.4"
+compat_features:
+  - javascript.builtins.ArrayBuffer.detached
+  - javascript.builtins.ArrayBuffer.transfer
+  - javascript.builtins.ArrayBuffer.transferToFixedLength

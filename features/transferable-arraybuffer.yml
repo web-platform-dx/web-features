@@ -2,7 +2,3 @@ name: Transferable ArrayBuffer
 description: The `transfer()` and `transferToFixedLength()` methods of `ArrayBuffer` move a buffer from one context to another (for example, to a worker).
 group: transferable
 spec: https://tc39.es/proposal-arraybuffer-transfer/#sec-arraybuffer.prototype.transfer
-compat_features:
-  - javascript.builtins.ArrayBuffer.transfer
-  - javascript.builtins.ArrayBuffer.transferToFixedLength
-  - javascript.builtins.ArrayBuffer.detached

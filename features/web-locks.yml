@@ -2,12 +2,3 @@ name: Locks
 description: The `navigator.locks` API coordinates work with shared resources through mutually exclusive ownership of a resource's name. Also known as web locks.
 spec: https://w3c.github.io/web-locks/
 usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/2375
-compat_features:
-  - api.Lock
-  - api.Lock.mode
-  - api.Lock.name
-  - api.LockManager
-  - api.LockManager.query
-  - api.LockManager.request
-  - api.Navigator.locks
-  - api.WorkerNavigator.locks

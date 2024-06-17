@@ -13,3 +13,6 @@ status:
     firefox_android: "57"
     safari: "12.1"
     safari_ios: "12.2"
+compat_features:
+  - api.Request.signal
+  - api.fetch.init_signal_parameter
