@@ -12,3 +12,35 @@ status:
     firefox_android: "102"
     safari: "14.1"
     safari_ios: "14.5"
+compat_features:
+  - api.ByteLengthQueuingStrategy
+  - api.ByteLengthQueuingStrategy.ByteLengthQueuingStrategy
+  - api.ByteLengthQueuingStrategy.highWaterMark
+  - api.ByteLengthQueuingStrategy.size
+  - api.CountQueuingStrategy
+  - api.CountQueuingStrategy.CountQueuingStrategy
+  - api.CountQueuingStrategy.highWaterMark
+  - api.CountQueuingStrategy.size
+  - api.ReadableStream
+  - api.ReadableStream.ReadableStream
+  - api.ReadableStream.cancel
+  - api.ReadableStream.getReader
+  - api.ReadableStream.locked
+  - api.ReadableStream.pipeThrough
+  - api.ReadableStream.pipeTo
+  - api.ReadableStream.tee
+  - api.WritableStream
+  - api.WritableStream.WritableStream
+  - api.WritableStream.abort
+  - api.WritableStream.getWriter
+  - api.WritableStream.locked
+  - api.WritableStreamDefaultController
+  - api.WritableStreamDefaultController.error
+  - api.WritableStreamDefaultWriter
+  - api.WritableStreamDefaultWriter.abort
+  - api.WritableStreamDefaultWriter.close
+  - api.WritableStreamDefaultWriter.closed
+  - api.WritableStreamDefaultWriter.desiredSize
+  - api.WritableStreamDefaultWriter.ready
+  - api.WritableStreamDefaultWriter.releaseLock
+  - api.WritableStreamDefaultWriter.write

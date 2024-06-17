@@ -4,9 +4,3 @@ spec: https://privacycg.github.io/storage-access/
 usage_stats:
   - https://chromestatus.com/metrics/feature/timeline/popularity/3310 # hasStorageAccess
   - https://chromestatus.com/metrics/feature/timeline/popularity/3311 # requestStorageAccess
-# Note that document.requestStorageAccessFor() is defined in
-# https://privacycg.github.io/requestStorageAccessFor/ and has a different
-# implementation history.
-compat_features:
-  - api.Document.hasStorageAccess
-  - api.Document.requestStorageAccess
