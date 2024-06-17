@@ -2,7 +2,3 @@ name: controlslist
 description: The `controlslist` attribute for `<audio>` or `<video>` hides parts of the browser's built-in controls. For example, `controlslist="nofullscreen"` removes the button to play the video in fullscreen.
 spec: https://wicg.github.io/controls-list/
 group: media-elements
-compat_features:
-  - api.HTMLMediaElement.controlsList
-  - html.elements.audio.controlslist
-  - html.elements.video.controlslist
