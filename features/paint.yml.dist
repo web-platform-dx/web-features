@@ -7,3 +7,7 @@ status:
     chrome: "65"
     chrome_android: "65"
     edge: "79"
+compat_features:
+  - api.CSS.paintWorklet_static
+  - api.PaintWorkletGlobalScope
+  - css.types.image.paint

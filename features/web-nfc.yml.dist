@@ -5,3 +5,30 @@ status:
   baseline: false
   support:
     chrome_android: "89"
+compat_features:
+  - api.NDEFMessage
+  - api.NDEFMessage.NDEFMessage
+  - api.NDEFMessage.records
+  - api.NDEFMessage.secure_context_required
+  - api.NDEFReader
+  - api.NDEFReader.NDEFReader
+  - api.NDEFReader.reading_event
+  - api.NDEFReader.readingerror_event
+  - api.NDEFReader.scan
+  - api.NDEFReader.secure_context_required
+  - api.NDEFReader.write
+  - api.NDEFReadingEvent
+  - api.NDEFReadingEvent.NDEFReadingEvent
+  - api.NDEFReadingEvent.message
+  - api.NDEFReadingEvent.secure_context_required
+  - api.NDEFReadingEvent.serialNumber
+  - api.NDEFRecord
+  - api.NDEFRecord.NDEFRecord
+  - api.NDEFRecord.data
+  - api.NDEFRecord.encoding
+  - api.NDEFRecord.id
+  - api.NDEFRecord.lang
+  - api.NDEFRecord.mediaType
+  - api.NDEFRecord.recordType
+  - api.NDEFRecord.secure_context_required
+  - api.NDEFRecord.toRecords

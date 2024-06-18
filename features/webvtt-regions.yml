@@ -1,17 +1,3 @@
 name: WebVTT regions
 description: WebVTT regions set the areas of the video where captions or subtitles should be rendered, such as placing roll-up captions used for live captions.
 spec: https://w3c.github.io/webvtt/#regions
-compat_features:
-  # Added in Safari 14.1:
-  # - api.VTTCue.region
-  - api.VTTRegion
-  - api.VTTRegion.VTTRegion
-  - api.VTTRegion.id
-  # Added in Safari 12.1:
-  # - api.VTTRegion.lines
-  - api.VTTRegion.regionAnchorX
-  - api.VTTRegion.regionAnchorY
-  - api.VTTRegion.scroll
-  - api.VTTRegion.viewportAnchorX
-  - api.VTTRegion.viewportAnchorY
-  - api.VTTRegion.width

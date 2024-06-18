@@ -6,3 +6,7 @@ status:
   support:
     safari: "16.4"
     safari_ios: "16.4"
+compat_features:
+  - api.AudioSession
+  - api.AudioSession.type
+  - api.Navigator.audioSession

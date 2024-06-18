@@ -8,3 +8,26 @@ status:
     firefox_android: "117"
     safari: "15.4"
     safari_ios: "15.4"
+compat_features:
+  - api.DedicatedWorkerGlobalScope.rtctransform_event
+  - api.RTCEncodedAudioFrame
+  - api.RTCEncodedAudioFrame.data
+  - api.RTCEncodedAudioFrame.getMetadata
+  - api.RTCEncodedAudioFrame.timestamp
+  - api.RTCEncodedVideoFrame
+  - api.RTCEncodedVideoFrame.data
+  - api.RTCEncodedVideoFrame.getMetadata
+  - api.RTCEncodedVideoFrame.timestamp
+  - api.RTCEncodedVideoFrame.type
+  - api.RTCRtpReceiver.transform
+  - api.RTCRtpScriptTransform
+  - api.RTCRtpScriptTransform.RTCRtpScriptTransform
+  - api.RTCRtpScriptTransformer
+  - api.RTCRtpScriptTransformer.generateKeyFrame
+  - api.RTCRtpScriptTransformer.options
+  - api.RTCRtpScriptTransformer.readable
+  - api.RTCRtpScriptTransformer.sendKeyFrameRequest
+  - api.RTCRtpScriptTransformer.writable
+  - api.RTCRtpSender.transform
+  - api.RTCTransformEvent
+  - api.RTCTransformEvent.transformer

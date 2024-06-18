@@ -12,3 +12,8 @@ status:
     firefox_android: "65"
     safari: "16.4"
     safari_ios: "16.4"
+compat_features:
+  - api.DedicatedWorkerGlobalScope.messageerror_event
+  - api.MessagePort.messageerror_event
+  - api.ServiceWorkerContainer.messageerror_event
+  - api.Window.messageerror_event

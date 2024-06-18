@@ -12,3 +12,22 @@ status:
     firefox_android: "48"
     safari: "16"
     safari_ios: "16.4"
+compat_features:
+  - api.PushEvent
+  - api.PushEvent.PushEvent
+  - api.PushEvent.data
+  - api.PushManager
+  - api.PushManager.getSubscription
+  - api.PushManager.permissionState
+  - api.PushMessageData
+  - api.PushMessageData.arrayBuffer
+  - api.PushMessageData.blob
+  - api.PushMessageData.json
+  - api.PushMessageData.text
+  - api.PushSubscription
+  - api.PushSubscription.endpoint
+  - api.PushSubscription.getKey
+  - api.PushSubscription.toJSON
+  - api.PushSubscription.unsubscribe
+  - api.ServiceWorkerGlobalScope.push_event
+  - api.ServiceWorkerRegistration.pushManager

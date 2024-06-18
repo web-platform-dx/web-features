@@ -13,3 +13,11 @@ status:
     firefox_android: "31"
     safari: "4"
     safari_ios: "3.2"
+compat_features:
+  - api.CanvasRenderingContext2D.fillText
+  - api.CanvasRenderingContext2D.measureText
+  - api.CanvasRenderingContext2D.strokeText
+  - api.CanvasRenderingContext2D.textAlign
+  - api.CanvasRenderingContext2D.textBaseline
+  - api.TextMetrics
+  - api.TextMetrics.width

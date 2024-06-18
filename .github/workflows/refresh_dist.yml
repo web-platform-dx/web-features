@@ -1,0 +1,61 @@
+name: Refresh dist files
+
+on:
+  pull_request:
+    types: [labeled]
+
+jobs:
+  refresh:
+    if: contains(github.event.pull_request.labels.*.name, 'refresh dist')
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: changed-package-json
+        uses: tj-actions/changed-files@v44
+        with:
+          files: |
+            **/package.json
+            **/package-lock.json
+
+      - id: changed-features
+        uses: tj-actions/changed-files@v44
+        with:
+          files: |
+            features/**/*.yml
+            features/**/*.yml.dist
+
+      - uses: actions/setup-node@v4
+        if: steps.changed-features.outputs.any_changed == 'true'
+
+      - run: npm install
+        if: steps.changed-features.outputs.any_changed == 'true'
+
+      - name: Refresh dist files for feature changes
+        if: steps.changed-package-json.outputs.any_changed == 'false' && steps.changed-features.outputs.any_changed == 'true'
+        env:
+          CHANGED_FEATURES: ${{ steps.changed-features.outputs.all_changed_files }}
+        run: |
+          npm run dist -- ${CHANGED_FEATURES}
+
+      - name: Refresh all dist files (for package*.json changes)
+        if: steps.changed-package-json.outputs.any_changed == 'true'
+        run: |
+          npm run dist
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        if: steps.changed-package-json.outputs.any_changed == 'true' || steps.changed-features.outputs.any_changed == 'true'
+        with:
+          commit_message: Refresh dist files
+
+      - name: Remove label
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.removeLabel({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: ["refresh dist"]
+            })

@@ -1,0 +1,107 @@
+draft_date: 2024-06-05
+name: <input>
+description: The `<input>` element TODO.
+spec: https://html.spec.whatwg.org/multipage/input.html#the-input-element
+group: forms
+compat_features:
+  - api.HTMLInputElement
+  - api.HTMLInputElement.accept
+  - api.HTMLInputElement.alt
+  - api.HTMLInputElement.autocomplete
+  - api.HTMLInputElement.cancel_event
+  - api.HTMLInputElement.checked
+  - api.HTMLInputElement.defaultChecked
+  - api.HTMLInputElement.defaultValue
+  - api.HTMLInputElement.disabled
+  - api.HTMLInputElement.files
+  - api.HTMLInputElement.form
+  - api.HTMLInputElement.formAction
+  - api.HTMLInputElement.formEnctype
+  - api.HTMLInputElement.formMethod
+  - api.HTMLInputElement.formNoValidate
+  - api.HTMLInputElement.formTarget
+  - api.HTMLInputElement.height
+  - api.HTMLInputElement.indeterminate
+  - api.HTMLInputElement.invalid_event
+  - api.HTMLInputElement.labels
+  - api.HTMLInputElement.list
+  - api.HTMLInputElement.max
+  - api.HTMLInputElement.maxLength
+  - api.HTMLInputElement.min
+  - api.HTMLInputElement.minLength
+  - api.HTMLInputElement.multiple
+  - api.HTMLInputElement.name
+  - api.HTMLInputElement.pattern
+  - api.HTMLInputElement.placeholder
+  - api.HTMLInputElement.readOnly
+  - api.HTMLInputElement.required
+  - api.HTMLInputElement.select
+  - api.HTMLInputElement.select_event
+  - api.HTMLInputElement.selectionDirection
+  - api.HTMLInputElement.selectionEnd
+  - api.HTMLInputElement.selectionStart
+  - api.HTMLInputElement.setRangeText
+  - api.HTMLInputElement.setSelectionRange
+  - api.HTMLInputElement.size
+  - api.HTMLInputElement.src
+  - api.HTMLInputElement.step
+  - api.HTMLInputElement.stepDown
+  - api.HTMLInputElement.stepUp
+  - api.HTMLInputElement.type
+  - api.HTMLInputElement.value
+  - api.HTMLInputElement.valueAsDate
+  - api.HTMLInputElement.valueAsNumber
+  - api.HTMLInputElement.width
+  - html.elements.input
+  - html.elements.input.accept
+  - html.elements.input.alt
+  - html.elements.input.checked
+  - html.elements.input.disabled
+  - html.elements.input.form
+  - html.elements.input.formaction
+  - html.elements.input.formenctype
+  - html.elements.input.formmethod
+  - html.elements.input.formnovalidate
+  - html.elements.input.formtarget
+  - html.elements.input.list
+  - html.elements.input.max
+  - html.elements.input.maxlength
+  - html.elements.input.min
+  - html.elements.input.minlength
+  - html.elements.input.multiple
+  - html.elements.input.name
+  - html.elements.input.pattern
+  - html.elements.input.placeholder
+  - html.elements.input.readonly
+  - html.elements.input.required
+  # Excluded because of a non-real value
+  # - html.elements.input.size
+  - html.elements.input.src
+  - html.elements.input.step
+  - html.elements.input.type_button
+  - html.elements.input.type_checkbox
+  - html.elements.input.type_color
+  - html.elements.input.type_date
+  - html.elements.input.type_datetime-local
+  - html.elements.input.type_email
+  - html.elements.input.type_file
+  - html.elements.input.type_hidden
+  - html.elements.input.type_image
+  # Excluded because of a non-real value
+  # - html.elements.input.type_month
+  - html.elements.input.type_number
+  - html.elements.input.type_password
+  - html.elements.input.type_password.insecure_login_handling
+  - html.elements.input.type_radio
+  - html.elements.input.type_range
+  # Excluded because of a non-real value
+  # - html.elements.input.type_range.tick_marks
+  # - html.elements.input.type_range.vertical_orientation
+  - html.elements.input.type_reset
+  - html.elements.input.type_submit
+  # Excluded because of a non-real value
+  # - html.elements.input.type_tel
+  - html.elements.input.type_text
+  - html.elements.input.type_time
+  - html.elements.input.type_url
+  - html.elements.input.type_week

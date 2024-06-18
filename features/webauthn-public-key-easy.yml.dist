@@ -12,3 +12,7 @@ status:
     firefox_android: "119"
     safari: "16"
     safari_ios: "16"
+compat_features:
+  - api.AuthenticatorAttestationResponse.getAuthenticatorData
+  - api.AuthenticatorAttestationResponse.getPublicKey
+  - api.AuthenticatorAttestationResponse.getPublicKeyAlgorithm
