@@ -1,5 +1,5 @@
-name: JSON module scripts
-description: 'JSON module scripts allow other modules to load JSON data by using `import ... with {type: "json"}`.'
+name: JSON import attributes
+description: 'Module `import ... with { type: "json" }` statements load JSON data. Also known as JSON module scripts and formerly known as import assertions.'
 spec: https://html.spec.whatwg.org/multipage/webappapis.html#json-module-script
 compat_features:
   # TODO: Include when https://github.com/web-platform-dx/web-features/issues/1173
