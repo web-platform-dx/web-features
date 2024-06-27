@@ -30,7 +30,7 @@ interface SupportStatus {
     baseline_low_date?: string;
     /** Date the feature achieved Baseline high status */
     baseline_high_date?: string;
-    /** Browser versions that most-recently introduced the feature. A "≤" prefix indicates that support before this point is uncertain and the feature may have been supported earlier. */
+    /** Browser versions that most-recently introduced the feature */
     support: {
         [K in browserIdentifier]?: string;
     };
