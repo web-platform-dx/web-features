@@ -20,6 +20,9 @@ const nameMaxLength = 80;
 // The longest description allowed, to avoid them growing into documentation.
 const descriptionMaxLength = 300;
 
+// The cutoff point for when ranges (≤) are allowed.
+const allowRangesBeforeDate = Temporal.PlainDate.from('2016-01-01');
+
 // Internal symbol to mark draft entries, so that using the draft field outside
 // of a draft directory doesn't work.
 const draft = Symbol('draft');
@@ -27,9 +30,10 @@ const draft = Symbol('draft');
 // Some FeatureData keys aren't (and may never) be ready for publishing.
 // They're not part of the public schema (yet).
 const omittables = [
+    "group",
     "snapshot",
-    "group"
-]
+    "use_ranges_before_baseline_low_date",
+];
 
 function scrub(data: any) {
     for (const key of omittables) {
@@ -165,6 +169,17 @@ for (const [key, data] of yamlEntries('features')) {
     for (const snapshot of identifiers(data.snapshot)) {
         if (!snapshots.has(snapshot)) {
             throw new Error(`snapshot ${snapshot} used in ${key}.yml is not a valid snapshot. Add it to snapshots/ if needed.`);
+        }
+    }
+
+    // Ensure that version ranges are only used for prehistoric features.
+    if (data.status?.support) {
+        const versions: string[] = Object.values(data.status.support);
+        if (versions.some((v) => v.startsWith('≤'))) {
+            const lowDate = Temporal.PlainDate.from(data.status.baseline_low_date);
+            if (Temporal.PlainDate.compare(lowDate, allowRangesBeforeDate) >= 0) {
+                throw new Error(`Ranges (≤) used in ${key}.yml(.dist) but can only be used when the baseline_low_date is before ${allowRangesBeforeDate}.`);
+            }
         }
     }
 
