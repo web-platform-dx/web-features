@@ -17,8 +17,6 @@ export interface FeatureData {
     status: SupportStatus;
     /** Sources of support data for this feature */
     compat_features?: string[];
-    /** Usage stats */
-    usage_stats?: usage_stats_url | [usage_stats_url, usage_stats_url, ...usage_stats_url[]]; // A single URL or an array of two or more
 }
 
 type browserIdentifier = "chrome" | "chrome_android" | "edge" | "firefox" | "firefox_android" | "safari" | "safari_ios";
@@ -42,8 +40,3 @@ interface SupportStatus {
  * @format uri
 */
 type specification_url = string;
-
-/** Usage stats URL
- * @format uri
-*/
-type usage_stats_url = string;
