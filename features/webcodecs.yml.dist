@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "106"
-    chrome_android: "106"
-    edge: "106"
+    chrome: "126"
+    chrome_android: "126"
+    edge: "126"
 compat_features:
   - api.AudioData
   - api.AudioData.AudioData
@@ -35,6 +35,10 @@ compat_features:
   - api.AudioEncoder.AudioEncoder
   - api.AudioEncoder.close
   - api.AudioEncoder.configure
+  - api.AudioEncoder.configure.bitrateMode
+  - api.AudioEncoder.configure.opus
+  - api.AudioEncoder.configure.opus.opus_application
+  - api.AudioEncoder.configure.opus.opus_signal
   - api.AudioEncoder.dequeue_event
   - api.AudioEncoder.encode
   - api.AudioEncoder.encodeQueueSize
