@@ -101,7 +101,7 @@
             },
             "support": {
               "additionalProperties": false,
-              "description": "Browser versions that most-recently introduced the feature. A \"≤\" prefix indicates that support before this point is uncertain and the feature may have been supported earlier.",
+              "description": "Browser versions that most-recently introduced the feature",
               "properties": {
                 "chrome": {
                   "type": "string"
@@ -133,25 +133,6 @@
             "support"
           ],
           "type": "object"
-        },
-        "usage_stats": {
-          "anyOf": [
-            {
-              "description": "Usage stats URL",
-              "format": "uri",
-              "type": "string"
-            },
-            {
-              "items": {
-                "description": "Usage stats URL",
-                "format": "uri",
-                "type": "string"
-              },
-              "minItems": 2,
-              "type": "array"
-            }
-          ],
-          "description": "Usage stats"
         }
       },
       "required": [

@@ -2,7 +2,6 @@ name: WebTransport
 description: The `WebTransport` API transmits data between a client and a server, by using the HTTP/3 protocol.
 spec: https://w3c.github.io/webtransport/
 caniuse: webtransport
-usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/3472
 # Status override because createUnidirectionalStream() is marked as partial
 # implementation in Firefox in BCD.
 status:
