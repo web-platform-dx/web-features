@@ -28,7 +28,8 @@
     "test:format": "prettier --check .",
     "test:coverage": "npm run --workspaces test:coverage",
     "format": "npx prettier --write .",
-    "feature-init": "tsx scripts/feature-init.ts"
+    "feature-init": "tsx scripts/feature-init.ts",
+    "update-drafts": "tsx scripts/update-drafts.ts"
   },
   "devDependencies": {
     "@js-temporal/polyfill": "^0.4.4",
