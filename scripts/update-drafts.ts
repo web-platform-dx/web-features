@@ -61,13 +61,7 @@ async function main() {
       continue;
     }
 
-    const spec_url = feature.data.__compat.spec_url;
-    if (!spec_url) {
-      continue;
-    }
-
-    const urls = Array.isArray(spec_url) ? spec_url : [spec_url];
-    for (const url of urls) {
+    for (const url of feature.spec_url) {
       const spec = pageToSpec.get(normalize(url));
       if (!spec) {
         console.warn(`${url} not matched to any spec`);
