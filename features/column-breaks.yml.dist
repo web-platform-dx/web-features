@@ -50,7 +50,12 @@ compat_features:
   #   edge: "12"
   - css.properties.break-before.multicol_context.column
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "102"
+  #   chrome_android: "102"
+  #   edge: "102"
   - css.properties.break-after.multicol_context.avoid
   - css.properties.break-after.multicol_context.avoid-column
   - css.properties.break-before.multicol_context.avoid

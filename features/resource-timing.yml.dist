@@ -27,7 +27,18 @@ compat_features:
   #   safari_ios: "11"
   - api.PerformanceResourceTiming
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2017-09-19
+  # baseline_high_date: 2020-03-19
+  # support:
+  #   chrome: "43"
+  #   chrome_android: "43"
+  #   edge: "12"
+  #   firefox: "35"
+  #   firefox_android: "35"
+  #   safari: "11"
+  #   safari_ios: "11"
   - api.PerformanceResourceTiming.connectEnd
   - api.PerformanceResourceTiming.connectStart
   - api.PerformanceResourceTiming.domainLookupEnd

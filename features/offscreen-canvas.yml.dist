@@ -103,5 +103,15 @@ compat_features:
   #   safari_ios: "16.4"
   - api.OffscreenCanvas.getContext.bitmaprenderer_context
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "80"
+  #   chrome_android: "80"
+  #   edge: "80"
+  #   firefox: "105"
+  #   firefox_android: "105"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
   - api.OffscreenCanvasRenderingContext2D.getTransform

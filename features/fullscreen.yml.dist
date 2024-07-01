@@ -54,7 +54,15 @@ compat_features:
   - api.Document.fullscreenEnabled
   - css.selectors.fullscreen
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "71"
+  #   chrome_android: "71"
+  #   edge: "79"
+  #   firefox: "64"
+  #   firefox_android: "64"
+  #   safari: "16.4"
   - api.Document.exitFullscreen
   - api.Document.exitFullscreen.returns_promise
   - api.Document.fullscreenElement

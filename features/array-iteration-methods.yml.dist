@@ -33,6 +33,17 @@ compat_features:
   - javascript.builtins.Array.map
   - javascript.builtins.Array.some
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "3"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
   - javascript.builtins.Array.reduce
   - javascript.builtins.Array.reduceRight

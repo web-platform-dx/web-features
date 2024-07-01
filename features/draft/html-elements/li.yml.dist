@@ -62,6 +62,17 @@ compat_features:
   - html.elements.ol.type
   - html.elements.ul
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "18"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: "18"
+  #   firefox_android: "18"
+  #   safari: "6"
+  #   safari_ios: "6"
   - api.HTMLOListElement.reversed
   - html.elements.ol.reversed

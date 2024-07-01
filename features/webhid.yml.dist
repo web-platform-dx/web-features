@@ -7,7 +7,11 @@ status:
     chrome: "89"
     edge: "89"
 compat_features:
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "89"
+  #   edge: "89"
   - api.HID
   - api.HID.connect_event
   - api.HID.disconnect_event

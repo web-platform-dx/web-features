@@ -29,7 +29,13 @@ compat_features:
   - api.RTCEncodedVideoFrame.timestamp
   - api.RTCEncodedVideoFrame.type
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   firefox: "117"
+  #   firefox_android: "117"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
   - api.DedicatedWorkerGlobalScope.rtctransform_event
   - api.RTCRtpReceiver.transform
   - api.RTCRtpScriptTransform

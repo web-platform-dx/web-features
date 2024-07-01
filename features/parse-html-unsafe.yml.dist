@@ -23,5 +23,12 @@ compat_features:
   - api.Element.setHTMLUnsafe
   - api.ShadowRoot.setHTMLUnsafe
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "124"
+  #   chrome_android: "124"
+  #   edge: "124"
+  #   safari: "17.4"
+  #   safari_ios: "17.4"
   - api.Document.parseHTMLUnsafe_static

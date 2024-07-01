@@ -22,5 +22,12 @@ compat_features:
   #   safari_ios: "15"
   - javascript.statements.import.service_worker_support
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "91"
+  #   chrome_android: "91"
+  #   edge: "91"
+  #   safari: "15"
+  #   safari_ios: "15"
   - api.ServiceWorker.ecmascript_modules

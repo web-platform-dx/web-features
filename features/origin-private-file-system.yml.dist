@@ -50,7 +50,17 @@ compat_features:
   #   safari_ios: "15.2"
   - api.StorageManager.getDirectory
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2023-03-14
+  # support:
+  #   chrome: "102"
+  #   chrome_android: "109"
+  #   edge: "102"
+  #   firefox: "111"
+  #   firefox_android: "111"
+  #   safari: "15.2"
+  #   safari_ios: "15.2"
   - api.FileSystemFileHandle.createSyncAccessHandle
   - api.FileSystemSyncAccessHandle
   - api.FileSystemSyncAccessHandle.close

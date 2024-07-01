@@ -7,7 +7,11 @@ status:
     chrome: "125"
     edge: "125"
 compat_features:
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "125"
+  #   edge: "125"
   - api.Permissions.permission_compute-pressure
   - api.PressureRecord
   - api.PressureRecord.source

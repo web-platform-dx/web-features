@@ -54,5 +54,16 @@ compat_features:
   #   safari_ios: "12.2"
   - api.IntersectionObserver.thresholds
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2019-03-25
+  # baseline_high_date: 2021-09-25
+  # support:
+  #   chrome: "58"
+  #   chrome_android: "58"
+  #   edge: "16"
+  #   firefox: "55"
+  #   firefox_android: "55"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
   - api.IntersectionObserverEntry.isIntersecting

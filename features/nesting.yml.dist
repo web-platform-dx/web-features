@@ -27,5 +27,15 @@ compat_features:
   - api.CSSStyleRule.deleteRule
   - api.CSSStyleRule.insertRule
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2023-12-11
+  # support:
+  #   chrome: "120"
+  #   chrome_android: "120"
+  #   edge: "120"
+  #   firefox: "117"
+  #   firefox_android: "117"
+  #   safari: "17.2"
+  #   safari_ios: "17.2"
   - css.selectors.nesting

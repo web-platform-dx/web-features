@@ -30,5 +30,15 @@ compat_features:
   - api.BroadcastChannel.name
   - api.BroadcastChannel.postMessage
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2022-03-14
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "79"
+  #   firefox: "57"
+  #   firefox_android: "57"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
   - api.BroadcastChannel.messageerror_event

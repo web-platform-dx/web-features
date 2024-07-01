@@ -73,7 +73,12 @@ compat_features:
   - api.ImageTrackList.selectedIndex
   - api.ImageTrackList.selectedTrack
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "106"
+  #   chrome_android: "106"
+  #   edge: "106"
   - api.AudioDecoder.dequeue_event
   - api.AudioEncoder.dequeue_event
 

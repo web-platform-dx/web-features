@@ -22,5 +22,13 @@ compat_features:
   - api.MediaSource
   - api.SourceBufferList
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "31"
+  #   chrome_android: "31"
+  #   edge: "12"
+  #   firefox: "42"
+  #   firefox_android: "42"
+  #   safari: "8"
   - api.SourceBuffer

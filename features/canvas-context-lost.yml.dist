@@ -20,7 +20,14 @@ compat_features:
   - api.HTMLCanvasElement.contextlost_event
   - api.HTMLCanvasElement.contextrestored_event
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "125"
+  #   firefox_android: "125"
   - api.CanvasRenderingContext2D.isContextLost
   - api.OffscreenCanvas.contextlost_event
   - api.OffscreenCanvas.contextrestored_event

@@ -34,6 +34,14 @@ compat_features:
   #   safari: "16"
   - api.HTMLInputElement.showPicker.color_input
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "101"
+  #   firefox_android: "101"
+  #   safari: "17.4"
   - api.HTMLInputElement.showPicker.date_input
   - api.HTMLInputElement.showPicker.datetime_local_input

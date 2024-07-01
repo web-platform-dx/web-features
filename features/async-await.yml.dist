@@ -27,7 +27,18 @@ compat_features:
   #   safari_ios: "10.3"
   - javascript.operators.await
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2017-04-05
+  # baseline_high_date: 2019-10-05
+  # support:
+  #   chrome: "55"
+  #   chrome_android: "55"
+  #   edge: "15"
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
   - javascript.builtins.AsyncFunction
   - javascript.builtins.AsyncFunction.AsyncFunction
   - javascript.operators.async_function

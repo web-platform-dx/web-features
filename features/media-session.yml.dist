@@ -39,7 +39,15 @@ compat_features:
   - api.MediaMetadata.artwork
   - api.MediaMetadata.title
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "73"
+  #   chrome_android: "57"
+  #   edge: "79"
+  #   firefox: "82"
+  #   safari: "15"
+  #   safari_ios: "15"
   - api.MediaSession
   - api.MediaSession.metadata
   - api.MediaSession.playbackState

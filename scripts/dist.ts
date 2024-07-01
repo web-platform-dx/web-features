@@ -175,13 +175,11 @@ function toDist(sourcePath: string): YAML.Document {
 
   const sortedGroups = new Map<string, string[]>();
   for (const status of sortedStatus) {
-    let key;
+    let comment = YAML.stringify(status);
     if (isDeepStrictEqual(status, computedStatus)) {
-      key = "Same status as overall feature";
-    } else {
-      key = YAML.stringify(status);
+      comment = `⬇️ Same status as overall feature ⬇️\n${comment}`;
     }
-    sortedGroups.set(key, groups.get(status));
+    sortedGroups.set(comment, groups.get(status));
   }
 
   // Assemble and return the dist YAML.

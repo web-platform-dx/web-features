@@ -29,7 +29,17 @@ compat_features:
   - api.DeviceOrientationEvent.gamma
   - api.Window.deviceorientation_event
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2023-09-18
+  # support:
+  #   chrome: "31"
+  #   chrome_android: "31"
+  #   edge: "12"
+  #   firefox: "6"
+  #   firefox_android: "6"
+  #   safari: "17"
+  #   safari_ios: "4.2"
   - api.DeviceMotionEvent
   - api.DeviceMotionEvent.acceleration
   - api.DeviceMotionEvent.accelerationIncludingGravity

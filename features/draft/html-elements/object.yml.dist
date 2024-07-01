@@ -66,5 +66,16 @@ compat_features:
   #   safari_ios: "1"
   - api.HTMLObjectElement.getSVGDocument
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2019-09-19
+  # baseline_high_date: 2022-03-19
+  # support:
+  #   chrome: "53"
+  #   chrome_android: "53"
+  #   edge: "17"
+  #   firefox: "22"
+  #   firefox_android: "22"
+  #   safari: "13"
+  #   safari_ios: "13"
   - api.HTMLObjectElement.contentWindow

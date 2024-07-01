@@ -16,6 +16,11 @@ compat_features:
   - css.properties.content-visibility.keyframe_animatable
   - css.properties.display.keyframe_animatable
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "117"
+  #   chrome_android: "117"
+  #   edge: "117"
   - css.properties.content-visibility.is_transitionable
   - css.properties.display.is_transitionable

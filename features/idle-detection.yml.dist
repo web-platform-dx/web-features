@@ -15,7 +15,12 @@ compat_features:
   #   edge: "94"
   - http.headers.Permissions-Policy.idle-detection
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "114"
   - api.IdleDetector
   - api.IdleDetector.IdleDetector
   - api.IdleDetector.change_event

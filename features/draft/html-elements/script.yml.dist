@@ -137,5 +137,15 @@ compat_features:
   - api.HTMLScriptElement.integrity
   - html.elements.script.integrity
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2022-09-12
+  # support:
+  #   chrome: "96"
+  #   chrome_android: "96"
+  #   edge: "96"
+  #   firefox: "94"
+  #   firefox_android: "94"
+  #   safari: "16"
+  #   safari_ios: "16"
   - api.HTMLScriptElement.supports_static

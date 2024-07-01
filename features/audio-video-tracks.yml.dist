@@ -33,7 +33,11 @@ compat_features:
   - api.VideoTrackList.removetrack_event
   - api.VideoTrackList.selectedIndex
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   safari: "8"
+  #   safari_ios: "8"
   - api.AudioTrack
   - api.AudioTrack.enabled
   - api.AudioTrack.id

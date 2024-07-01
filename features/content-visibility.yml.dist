@@ -19,7 +19,14 @@ compat_features:
   #   firefox_android: "125"
   - css.properties.content-visibility
 
-  # Same status as overall feature
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "108"
+  #   chrome_android: "108"
+  #   edge: "108"
+  #   firefox: "125"
+  #   firefox_android: "125"
   - api.ContentVisibilityAutoStateChangeEvent
   - api.ContentVisibilityAutoStateChangeEvent.ContentVisibilityAutoStateChangeEvent
   - api.ContentVisibilityAutoStateChangeEvent.skipped
