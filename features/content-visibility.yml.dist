@@ -10,7 +10,23 @@ status:
     firefox: "125"
     firefox_android: "125"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "85"
+  #   chrome_android: "85"
+  #   edge: "85"
+  #   firefox: "125"
+  #   firefox_android: "125"
+  - css.properties.content-visibility
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "108"
+  #   chrome_android: "108"
+  #   edge: "108"
+  #   firefox: "125"
+  #   firefox_android: "125"
   - api.ContentVisibilityAutoStateChangeEvent
   - api.ContentVisibilityAutoStateChangeEvent.ContentVisibilityAutoStateChangeEvent
   - api.ContentVisibilityAutoStateChangeEvent.skipped
-  - css.properties.content-visibility

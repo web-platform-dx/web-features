@@ -4,3 +4,196 @@
 status:
   baseline: false
   support: {}
+compat_features:
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "1"
+  #   safari_ios: "1"
+  - api.HTMLSelectElement
+  - html.elements.select
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "1.2"
+  #   safari_ios: "1"
+  - api.HTMLOptionElement
+  - api.HTMLOptionElement.Option
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "3"
+  #   safari_ios: "1"
+  - api.HTMLOptGroupElement
+  - api.HTMLOptGroupElement.disabled
+  - api.HTMLOptGroupElement.label
+  - api.HTMLOptionElement.defaultSelected
+  - api.HTMLOptionElement.disabled
+  - api.HTMLOptionElement.form
+  - api.HTMLOptionElement.index
+  - api.HTMLOptionElement.selected
+  - api.HTMLOptionElement.text
+  - api.HTMLOptionElement.value
+  - api.HTMLSelectElement.add
+  - api.HTMLSelectElement.disabled
+  - api.HTMLSelectElement.form
+  - api.HTMLSelectElement.item
+  - api.HTMLSelectElement.length
+  - api.HTMLSelectElement.multiple
+  - api.HTMLSelectElement.name
+  - api.HTMLSelectElement.namedItem
+  - api.HTMLSelectElement.options
+  - api.HTMLSelectElement.remove
+  - api.HTMLSelectElement.selectedIndex
+  - api.HTMLSelectElement.size
+  - api.HTMLSelectElement.type
+  - api.HTMLSelectElement.value
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "3"
+  #   safari_ios: "2"
+  - html.elements.select.disabled
+  - html.elements.select.form
+  - html.elements.select.multiple
+  - html.elements.select.name
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - html.elements.optgroup
+  - html.elements.optgroup.disabled
+  - html.elements.optgroup.label
+  - html.elements.option
+  - html.elements.option.disabled
+  - html.elements.option.label
+  - html.elements.option.selected
+  - html.elements.option.value
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "7"
+  #   firefox_android: "7"
+  #   safari: "3"
+  #   safari_ios: "1"
+  - api.HTMLOptionElement.label
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "10"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "4"
+  #   firefox_android: "4"
+  #   safari: "5.1"
+  #   safari_ios: "5"
+  - api.HTMLSelectElement.required
+  - html.elements.select.required
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "19"
+  #   chrome_android: "25"
+  #   edge: "12"
+  #   firefox: "26"
+  #   firefox_android: "26"
+  #   safari: "6"
+  #   safari_ios: "6"
+  - api.HTMLSelectElement.selectedOptions
+
+  # baseline: high
+  # baseline_low_date: 2015-09-30
+  # baseline_high_date: 2018-03-30
+  # support:
+  #   chrome: "35"
+  #   chrome_android: "35"
+  #   edge: "12"
+  #   firefox: "8"
+  #   firefox_android: "8"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - api.HTMLSelectElement.add.index_before_parameter
+
+  # baseline: high
+  # baseline_low_date: 2018-10-02
+  # baseline_high_date: 2021-04-02
+  # support:
+  #   chrome: "6"
+  #   chrome_android: "18"
+  #   edge: "18"
+  #   firefox: "56"
+  #   firefox_android: "56"
+  #   safari: "5.1"
+  #   safari_ios: "5"
+  - api.HTMLSelectElement.labels
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "66"
+  #   chrome_android: "66"
+  #   edge: "79"
+  #   firefox: "59"
+  #   firefox_android: "59"
+  #   safari: "9.1"
+  #   safari_ios: "9.3"
+  - api.HTMLSelectElement.autocomplete
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - html.elements.select.hr_in_select
+
+  # baseline: false
+  # support:
+  #   chrome: "1"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "3"
+  - html.elements.select.size

@@ -13,6 +13,16 @@ status:
     safari: "15.2"
     safari_ios: "15.2"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2023-03-14
+  # support:
+  #   chrome: "86"
+  #   chrome_android: "86"
+  #   edge: "86"
+  #   firefox: "111"
+  #   firefox_android: "111"
+  #   safari: "15.2"
+  #   safari_ios: "15.2"
   - api.FileSystemDirectoryHandle
   - api.FileSystemDirectoryHandle.entries
   - api.FileSystemDirectoryHandle.getDirectoryHandle
@@ -22,12 +32,36 @@ compat_features:
   - api.FileSystemDirectoryHandle.resolve
   - api.FileSystemDirectoryHandle.values
   - api.FileSystemFileHandle
-  - api.FileSystemFileHandle.createSyncAccessHandle
   - api.FileSystemFileHandle.getFile
   - api.FileSystemHandle
   - api.FileSystemHandle.isSameEntry
   - api.FileSystemHandle.kind
   - api.FileSystemHandle.name
+
+  # baseline: low
+  # baseline_low_date: 2023-03-14
+  # support:
+  #   chrome: "86"
+  #   chrome_android: "109"
+  #   edge: "86"
+  #   firefox: "111"
+  #   firefox_android: "111"
+  #   safari: "15.2"
+  #   safari_ios: "15.2"
+  - api.StorageManager.getDirectory
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2023-03-14
+  # support:
+  #   chrome: "102"
+  #   chrome_android: "109"
+  #   edge: "102"
+  #   firefox: "111"
+  #   firefox_android: "111"
+  #   safari: "15.2"
+  #   safari_ios: "15.2"
+  - api.FileSystemFileHandle.createSyncAccessHandle
   - api.FileSystemSyncAccessHandle
   - api.FileSystemSyncAccessHandle.close
   - api.FileSystemSyncAccessHandle.flush
@@ -35,4 +69,3 @@ compat_features:
   - api.FileSystemSyncAccessHandle.read
   - api.FileSystemSyncAccessHandle.truncate
   - api.FileSystemSyncAccessHandle.write
-  - api.StorageManager.getDirectory

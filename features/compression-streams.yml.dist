@@ -12,3 +12,16 @@ status:
     firefox_android: "113"
     safari: "16.4"
     safari_ios: "16.4"
+compat_features:
+  - api.CompressionStream
+  - api.CompressionStream.CompressionStream
+  - api.CompressionStream.CompressionStream.deflate
+  - api.CompressionStream.CompressionStream.gzip
+  - api.CompressionStream.readable
+  - api.CompressionStream.writable
+  - api.DecompressionStream
+  - api.DecompressionStream.DecompressionStream
+  - api.DecompressionStream.DecompressionStream.deflate
+  - api.DecompressionStream.DecompressionStream.gzip
+  - api.DecompressionStream.readable
+  - api.DecompressionStream.writable
