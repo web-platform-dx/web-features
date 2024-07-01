@@ -168,14 +168,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   firefox: "101"
-  #   firefox_android: "101"
-  #   safari: "16"
-  #   safari_ios: "16"
-  - html.elements.iframe.sandbox.allow-top-navigation-to-custom-protocols
-
-  # baseline: false
-  # support:
   #   chrome: "53"
   #   chrome_android: "53"
   #   edge: "79"
@@ -200,3 +192,11 @@ compat_features:
   #   firefox: "82"
   #   firefox_android: "82"
   - html.elements.iframe.sandbox.allow-downloads
+
+  # baseline: false
+  # support:
+  #   firefox: "101"
+  #   firefox_android: "101"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - html.elements.iframe.sandbox.allow-top-navigation-to-custom-protocols

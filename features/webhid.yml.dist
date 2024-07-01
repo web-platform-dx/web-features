@@ -7,6 +7,13 @@ status:
     chrome: "89"
     edge: "89"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "89"
+  #   chrome_android: "89"
+  #   edge: "89"
+  - http.headers.Permissions-Policy.hid
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
@@ -37,10 +44,3 @@ compat_features:
   - api.HIDInputReportEvent.device
   - api.HIDInputReportEvent.reportId
   - api.Navigator.hid
-
-  # baseline: false
-  # support:
-  #   chrome: "89"
-  #   chrome_android: "89"
-  #   edge: "89"
-  - http.headers.Permissions-Policy.hid

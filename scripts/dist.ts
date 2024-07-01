@@ -90,7 +90,7 @@ function compareStatus(a: SupportStatus, b: SupportStatus) {
   const aBrowsers = Object.keys(a.support).length;
   const bBrowsers = Object.keys(b.support).length;
   if (aBrowsers !== bBrowsers) {
-    return aBrowsers - bBrowsers;
+    return bBrowsers - aBrowsers;
   }
   // Finally sort by the version numbers.
   const aVersions = Object.values(a.support);
