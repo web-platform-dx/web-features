@@ -1,16 +1,24 @@
-import fs from "fs";
-
-import stringify from "fast-json-stable-stringify";
-
 import { execSync } from "child_process";
+import stringify from "fast-json-stable-stringify";
+import fs from "fs";
+import yargs from "yargs";
 import features from "../index.js";
 
 const rootDir = new URL("..", import.meta.url);
-const packageDir = new URL("./packages/web-features/", rootDir);
 
-const filesToCopy = ["LICENSE.txt", "types.ts"];
+yargs(process.argv.slice(2))
+  .scriptName("build")
+  .command({
+    command: "package",
+    describe: "Generate the web-features npm package",
+    handler: buildPackage,
+  })
+  .parseSync();
 
-function build() {
+function buildPackage() {
+  const packageDir = new URL("./packages/web-features/", rootDir);
+  const filesToCopy = ["LICENSE.txt", "types.ts"];
+
   const json = stringify(features);
   // TODO: Validate the resulting JSON against a schema.
   const path = new URL("index.json", packageDir);
@@ -27,5 +35,3 @@ function build() {
     encoding: "utf-8",
   });
 }
-
-build();

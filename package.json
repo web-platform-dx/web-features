@@ -16,7 +16,7 @@
     "node": ">=18.19.0"
   },
   "scripts": {
-    "build": "tsx scripts/build.ts",
+    "build": "tsx scripts/build.ts package",
     "dist": "tsx scripts/dist.ts",
     "schema-defs": "ts-json-schema-generator --tsconfig ./tsconfig.json --type FeatureData --path ./types.ts --id defs",
     "schema-defs:write": "npm run schema-defs -- --out ./schemas/defs.schema.json",
