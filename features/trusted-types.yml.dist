@@ -8,6 +8,12 @@ status:
     chrome_android: "83"
     edge: "83"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "83"
+  #   chrome_android: "83"
+  #   edge: "83"
   - api.TrustedHTML
   - api.TrustedHTML.toString
   - api.TrustedScript
@@ -32,3 +38,12 @@ compat_features:
   - api.trustedTypes
   - http.headers.Content-Security-Policy.require-trusted-types-for
   - http.headers.Content-Security-Policy.trusted-types
+
+  # baseline: false
+  # support:
+  #   chrome: "90"
+  #   chrome_android: "90"
+  #   edge: "90"
+  - api.TrustedHTML.toJSON
+  - api.TrustedScript.toJSON
+  - api.TrustedScriptURL.toJSON

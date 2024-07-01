@@ -13,6 +13,17 @@ status:
     safari: "16"
     safari_ios: "16"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2023-02-14
+  # support:
+  #   chrome: "105"
+  #   chrome_android: "105"
+  #   edge: "105"
+  #   firefox: "110"
+  #   firefox_android: "110"
+  #   safari: "16"
+  #   safari_ios: "16"
   - api.CSSContainerRule
   - css.at-rules.container
   - css.properties.container
@@ -23,3 +34,16 @@ compat_features:
   - css.properties.container-type.normal
   - css.properties.container-type.size
   - css.types.length.container_query_length_units
+
+  # baseline: low
+  # baseline_low_date: 2023-09-18
+  # support:
+  #   chrome: "111"
+  #   chrome_android: "111"
+  #   edge: "111"
+  #   firefox: "110"
+  #   firefox_android: "110"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - api.CSSContainerRule.containerName
+  - api.CSSContainerRule.containerQuery

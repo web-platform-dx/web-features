@@ -1,20 +1,7 @@
 name: Compression streams
 description: The `CompressionStream` and `DecompressionStream` interfaces compress and decompress data using the gzip or deflate formats.
 spec: https://compression.spec.whatwg.org/
-compat_features:
-  - api.CompressionStream
-  - api.CompressionStream.CompressionStream
-  - api.CompressionStream.CompressionStream.deflate
-  # Later addition in Chrome (but doesn't change the Baseline date)
-  # - api.CompressionStream.CompressionStream.deflate-raw
-  - api.CompressionStream.CompressionStream.gzip
-  - api.CompressionStream.readable
-  - api.CompressionStream.writable
-  - api.DecompressionStream
-  - api.DecompressionStream.DecompressionStream
-  - api.DecompressionStream.DecompressionStream.deflate
-  # Later addition in Chrome (but doesn't change the Baseline date)
-  # - api.DecompressionStream.DecompressionStream.deflate-raw
-  - api.DecompressionStream.DecompressionStream.gzip
-  - api.DecompressionStream.readable
-  - api.DecompressionStream.writable
+status:
+  compute_from:
+    - api.CompressionStream.CompressionStream
+    - api.DecompressionStream.DecompressionStream
