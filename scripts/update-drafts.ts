@@ -1,8 +1,8 @@
 import { Compat } from "compute-baseline/browser-compat-data";
 import fs from "node:fs/promises";
 import { fileURLToPath } from "node:url";
-import YAML from "yaml";
 import webSpecs from 'web-specs' assert { type: 'json' };
+import YAML from "yaml";
 import features from '../index.js';
 
 function* getPages(spec): Generator<string> {
@@ -56,8 +56,7 @@ async function main() {
     }
 
     // Skip deprecated and non-standard features.
-    const status = feature.data.__compat.status;
-    if (status?.deprecated || !status?.standard_track) {
+    if (feature.deprecated || !feature.standard_track) {
       continue;
     }
 
