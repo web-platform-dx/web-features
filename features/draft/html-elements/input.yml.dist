@@ -417,17 +417,13 @@ compat_features:
 
   # baseline: false
   # support:
-  #   firefox: "52"
-  #   firefox_android: "52"
-  - html.elements.input.type_password.insecure_login_handling
-
-  # baseline: false
-  # support:
   #   chrome: "20"
   #   chrome_android: "25"
-  #   edge: "12"
-  #   firefox_android: "18"
-  - html.elements.input.type_week
+  #   edge: "14"
+  #   firefox: "29"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - html.elements.input.type_color
 
   # baseline: false
   # support:
@@ -443,8 +439,12 @@ compat_features:
   # support:
   #   chrome: "20"
   #   chrome_android: "25"
-  #   edge: "14"
-  #   firefox: "29"
-  #   safari: "12.1"
-  #   safari_ios: "12.2"
-  - html.elements.input.type_color
+  #   edge: "12"
+  #   firefox_android: "18"
+  - html.elements.input.type_week
+
+  # baseline: false
+  # support:
+  #   firefox: "52"
+  #   firefox_android: "52"
+  - html.elements.input.type_password.insecure_login_handling

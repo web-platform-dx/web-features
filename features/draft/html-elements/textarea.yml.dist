@@ -217,16 +217,16 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "16"
-  #   chrome_android: "18"
-  #   edge: "12"
-  - html.elements.textarea.wrap.hard
-
-  # baseline: false
-  # support:
   #   chrome: "36"
   #   chrome_android: "36"
   #   edge: "12"
   #   firefox: "59"
   #   firefox_android: "59"
   - html.elements.textarea.placeholder.line_breaks
+
+  # baseline: false
+  # support:
+  #   chrome: "16"
+  #   chrome_android: "18"
+  #   edge: "12"
+  - html.elements.textarea.wrap.hard

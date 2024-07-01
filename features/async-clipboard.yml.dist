@@ -87,10 +87,12 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "64"
-  #   chrome_android: "64"
   #   edge: "79"
-  - api.Permissions.permission_clipboard-read
+  #   firefox: "127"
+  #   firefox_android: "127"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.Clipboard.read
 
   # baseline: false
   # support:
@@ -110,9 +112,7 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "64"
+  #   chrome_android: "64"
   #   edge: "79"
-  #   firefox: "127"
-  #   firefox_android: "127"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
-  - api.Clipboard.read
+  - api.Permissions.permission_clipboard-read

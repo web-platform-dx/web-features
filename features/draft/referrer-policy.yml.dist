@@ -146,58 +146,13 @@ compat_features:
 
   # baseline: false
   # support:
-  #   firefox: "61"
-  #   firefox_android: "61"
-  - api.SVGAElement.referrerPolicy
-
-  # baseline: false
-  # support:
-  #   chrome: "51"
-  #   chrome_android: "51"
+  #   chrome: "52"
+  #   chrome_android: "52"
   #   edge: "79"
-  - html.elements.a.referrerpolicy.no-referrer-when-downgrade
-  - html.elements.a.referrerpolicy.origin-when-cross-origin
-  - html.elements.a.referrerpolicy.unsafe-url
-  - html.elements.area.referrerpolicy.no-referrer-when-downgrade
-  - html.elements.area.referrerpolicy.origin-when-cross-origin
-  - html.elements.area.referrerpolicy.unsafe-url
-  - html.elements.iframe.referrerpolicy.no-referrer-when-downgrade
-  - html.elements.iframe.referrerpolicy.origin-when-cross-origin
-  - html.elements.iframe.referrerpolicy.unsafe-url
-  - html.elements.img.referrerpolicy.no-referrer-when-downgrade
-  - html.elements.img.referrerpolicy.origin-when-cross-origin
-  - html.elements.img.referrerpolicy.unsafe-url
-  - html.elements.link.referrerpolicy.no-referrer-when-downgrade
-  - html.elements.link.referrerpolicy.origin-when-cross-origin
-  - html.elements.link.referrerpolicy.unsafe-url
-  - svg.elements.a.referrerpolicy.no-referrer-when-downgrade
-  - svg.elements.a.referrerpolicy.origin-when-cross-origin
-  - svg.elements.a.referrerpolicy.unsafe-url
-
-  # baseline: false
-  # support:
-  #   chrome: "56"
-  #   chrome_android: "56"
-  #   edge: "79"
-  - http.headers.Referrer-Policy.no-referrer-when-downgrade
-  - http.headers.Referrer-Policy.origin-when-cross-origin
-  - http.headers.Referrer-Policy.unsafe-url
-
-  # baseline: false
-  # support:
-  #   chrome: "70"
-  #   chrome_android: "70"
-  #   edge: "79"
-  - html.elements.script.referrerpolicy.no-referrer-when-downgrade
-  - html.elements.script.referrerpolicy.origin-when-cross-origin
-  - html.elements.script.referrerpolicy.unsafe-url
-
-  # baseline: false
-  # support:
-  #   chrome: "111"
-  #   chrome_android: "111"
-  #   edge: "111"
-  - html.elements.script.type.speculationrules.referrer_policy
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "11.1"
+  - api.fetch.init_referrerPolicy_parameter
 
   # baseline: false
   # support:
@@ -251,10 +206,55 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "52"
-  #   chrome_android: "52"
+  #   chrome: "51"
+  #   chrome_android: "51"
   #   edge: "79"
-  #   firefox: "52"
-  #   firefox_android: "52"
-  #   safari: "11.1"
-  - api.fetch.init_referrerPolicy_parameter
+  - html.elements.a.referrerpolicy.no-referrer-when-downgrade
+  - html.elements.a.referrerpolicy.origin-when-cross-origin
+  - html.elements.a.referrerpolicy.unsafe-url
+  - html.elements.area.referrerpolicy.no-referrer-when-downgrade
+  - html.elements.area.referrerpolicy.origin-when-cross-origin
+  - html.elements.area.referrerpolicy.unsafe-url
+  - html.elements.iframe.referrerpolicy.no-referrer-when-downgrade
+  - html.elements.iframe.referrerpolicy.origin-when-cross-origin
+  - html.elements.iframe.referrerpolicy.unsafe-url
+  - html.elements.img.referrerpolicy.no-referrer-when-downgrade
+  - html.elements.img.referrerpolicy.origin-when-cross-origin
+  - html.elements.img.referrerpolicy.unsafe-url
+  - html.elements.link.referrerpolicy.no-referrer-when-downgrade
+  - html.elements.link.referrerpolicy.origin-when-cross-origin
+  - html.elements.link.referrerpolicy.unsafe-url
+  - svg.elements.a.referrerpolicy.no-referrer-when-downgrade
+  - svg.elements.a.referrerpolicy.origin-when-cross-origin
+  - svg.elements.a.referrerpolicy.unsafe-url
+
+  # baseline: false
+  # support:
+  #   chrome: "56"
+  #   chrome_android: "56"
+  #   edge: "79"
+  - http.headers.Referrer-Policy.no-referrer-when-downgrade
+  - http.headers.Referrer-Policy.origin-when-cross-origin
+  - http.headers.Referrer-Policy.unsafe-url
+
+  # baseline: false
+  # support:
+  #   chrome: "70"
+  #   chrome_android: "70"
+  #   edge: "79"
+  - html.elements.script.referrerpolicy.no-referrer-when-downgrade
+  - html.elements.script.referrerpolicy.origin-when-cross-origin
+  - html.elements.script.referrerpolicy.unsafe-url
+
+  # baseline: false
+  # support:
+  #   chrome: "111"
+  #   chrome_android: "111"
+  #   edge: "111"
+  - html.elements.script.type.speculationrules.referrer_policy
+
+  # baseline: false
+  # support:
+  #   firefox: "61"
+  #   firefox_android: "61"
+  - api.SVGAElement.referrerPolicy

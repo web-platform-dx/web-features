@@ -184,11 +184,6 @@ compat_features:
   #   safari_ios: "9.3"
   - api.HTMLSelectElement.autocomplete
 
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - html.elements.select.hr_in_select
-
   # baseline: false
   # support:
   #   chrome: "1"
@@ -197,3 +192,8 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "3"
   - html.elements.select.size
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - html.elements.select.hr_in_select
