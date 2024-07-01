@@ -68,6 +68,10 @@ export class Feature {
     return [];
   }
 
+  get standard_track(): boolean {
+    return this.data.__compat?.status?.standard_track ?? false;
+  }
+
   _supportedBy(
     browser: Browser,
   ): { release: Release; qualifications?: Qualifications }[] {
