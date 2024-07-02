@@ -2,7 +2,7 @@ import { execSync } from "child_process";
 import stringify from "fast-json-stable-stringify";
 import fs from "fs";
 import yargs from "yargs";
-import features from "../index.js";
+import * as data from "../index.js";
 
 const rootDir = new URL("..", import.meta.url);
 
@@ -19,7 +19,7 @@ function buildPackage() {
   const packageDir = new URL("./packages/web-features/", rootDir);
   const filesToCopy = ["LICENSE.txt", "types.ts"];
 
-  const json = stringify(features);
+  const json = stringify(data);
   // TODO: Validate the resulting JSON against a schema.
   const path = new URL("index.json", packageDir);
   fs.writeFileSync(path, json);

@@ -1,4 +1,11 @@
-/** Web platform feature */
+export interface WebFeaturesData {
+    /** Feature identifiers and data */
+    features: { [key: string]: FeatureData };
+    /** Group identifiers and data */
+    groups: { [key: string]: GroupData };
+    /** Snapshot identifiers and data */
+    snapshots: { [key: string]: SnapshotData };
+}
 
 export interface FeatureData {
     /** Short name */
@@ -11,6 +18,10 @@ export interface FeatureData {
     alias?: string | [string, string, ...string[]];
     /** Specification */
     spec: specification_url | [specification_url, specification_url, ...specification_url[]];
+    /** Group identifier */
+    group?: string | [string, string, ...string[]];
+    /** Snapshot identifier */
+    snapshot?: string | [string, string, ...string[]];
     /** caniuse.com identifier */
     caniuse?: string | [string, string, ...string[]];
     /** Whether a feature is considered a "baseline" web platform feature and when it achieved that status */
@@ -40,3 +51,17 @@ interface SupportStatus {
  * @format uri
 */
 type specification_url = string;
+
+export interface GroupData {
+    /** Short name */
+    name: string;
+    /** Identifier of parent group */
+    parent?: string;
+}
+
+export interface SnapshotData {
+    /** Short name */
+    name: string;
+    /** Specification */
+    spec: specification_url;
+}

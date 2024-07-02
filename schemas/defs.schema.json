@@ -1,11 +1,10 @@
 {
   "$id": "defs",
-  "$ref": "#/definitions/FeatureData",
+  "$ref": "#/definitions/WebFeaturesData",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
     "FeatureData": {
       "additionalProperties": false,
-      "description": "Web platform feature",
       "properties": {
         "alias": {
           "anyOf": [
@@ -52,9 +51,39 @@
           "description": "Short description of the feature, as an HTML string",
           "type": "string"
         },
+        "group": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 2,
+              "type": "array"
+            }
+          ],
+          "description": "Group identifier"
+        },
         "name": {
           "description": "Short name",
           "type": "string"
+        },
+        "snapshot": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 2,
+              "type": "array"
+            }
+          ],
+          "description": "Snapshot identifier"
         },
         "spec": {
           "anyOf": [
@@ -141,6 +170,74 @@
         "description_html",
         "spec",
         "status"
+      ],
+      "type": "object"
+    },
+    "GroupData": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "description": "Short name",
+          "type": "string"
+        },
+        "parent": {
+          "description": "Identifier of parent group",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "SnapshotData": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "description": "Short name",
+          "type": "string"
+        },
+        "spec": {
+          "description": "Specification",
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "spec"
+      ],
+      "type": "object"
+    },
+    "WebFeaturesData": {
+      "additionalProperties": false,
+      "properties": {
+        "features": {
+          "additionalProperties": {
+            "$ref": "#/definitions/FeatureData"
+          },
+          "description": "Feature identifiers and data",
+          "type": "object"
+        },
+        "groups": {
+          "additionalProperties": {
+            "$ref": "#/definitions/GroupData"
+          },
+          "description": "Group identifiers and data",
+          "type": "object"
+        },
+        "snapshots": {
+          "additionalProperties": {
+            "$ref": "#/definitions/SnapshotData"
+          },
+          "description": "Snapshot identifiers and data",
+          "type": "object"
+        }
+      },
+      "required": [
+        "features",
+        "groups",
+        "snapshots"
       ],
       "type": "object"
     }

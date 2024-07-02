@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 
 import webSpecs from 'web-specs' assert { type: 'json' };
 
-import features from '../index.js';
+import { features } from '../index.js';
 
 // Specs needs to be in "good standing". Nightly URLs are used if available,
 // otherwise the snapshot/versioned URL is used. See browser-specs/web-specs

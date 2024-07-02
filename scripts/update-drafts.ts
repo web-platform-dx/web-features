@@ -3,7 +3,7 @@ import fs from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import webSpecs from 'web-specs' assert { type: 'json' };
 import YAML from "yaml";
-import features from '../index.js';
+import { features } from '../index.js';
 
 function* getPages(spec): Generator<string> {
   yield spec.url;
