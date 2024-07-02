@@ -100,11 +100,23 @@ compat_features:
   #   firefox: "4"
   #   firefox_android: "4"
   #   safari: "5"
+  #   safari_ios: "4.2"
+  - html.elements.textarea.maxlength
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "4"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "4"
+  #   firefox_android: "4"
+  #   safari: "5"
   #   safari_ios: "5"
   - api.HTMLTextAreaElement.maxLength
   - api.HTMLTextAreaElement.placeholder
   - api.HTMLTextAreaElement.required
-  - html.elements.textarea.maxlength
   - html.elements.textarea.placeholder
   - html.elements.textarea.required
 

@@ -165,3 +165,25 @@ compat_features:
   #   edge: "106"
   - api.AudioDecoder.dequeue_event
   - api.AudioEncoder.dequeue_event
+
+  # baseline: false
+  # support:
+  #   chrome: "110"
+  #   chrome_android: "110"
+  #   edge: "110"
+  - api.AudioEncoder.configure.opus
+
+  # baseline: false
+  # support:
+  #   chrome: "119"
+  #   chrome_android: "119"
+  #   edge: "119"
+  - api.AudioEncoder.configure.bitrateMode
+
+  # baseline: false
+  # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  - api.AudioEncoder.configure.opus.opus_application
+  - api.AudioEncoder.configure.opus.opus_signal
