@@ -9,7 +9,6 @@ import addFormats from 'ajv-formats';
 import * as data from '../index.js';
 
 import defs from '../schemas/defs.schema.json' assert { type: 'json' };
-import schema from '../schemas/features.schema.json' assert { type: 'json' };
 
 let status: 0 | 1 = 0;
 
@@ -27,10 +26,10 @@ function checkDefsConsistency(): void {
 }
 
 function validate() {
-    const ajv = new Ajv({allErrors: true, schemas: [defs]});
+    const ajv = new Ajv({allErrors: true});
     addFormats(ajv);
 
-    const validate = ajv.compile(schema);
+    const validate = ajv.compile(defs);
 
     const valid = validate(data);
     if (!valid) {
