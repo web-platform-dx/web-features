@@ -97,9 +97,14 @@ export class SupportStatement {
     return this.data?.partial_implementation ?? false;
   }
 
+  /**
+   * Get the `version_added` value, or false if unset.
+   */
   get version_added(): VersionValue {
-    // Strictness guarantee: unset version_added returns false
-    return this.data?.version_added || false;
+    if (this.data?.version_added === undefined) {
+      return false;
+    }
+    return this.data?.version_added;
   }
 
   get version_removed(): VersionValue {
