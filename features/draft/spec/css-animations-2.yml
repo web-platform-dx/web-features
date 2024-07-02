@@ -1,0 +1,49 @@
+draft_date: 2024-06-07
+name: CSS Animations Level 2
+description: TODO
+spec: https://drafts.csswg.org/css-animations-2/
+compat_features:
+  - api.AnimationEvent
+  - api.AnimationEvent.AnimationEvent
+  - api.AnimationEvent.animationName
+  - api.AnimationEvent.elapsedTime
+  - api.AnimationEvent.pseudoElement
+  - api.CSSAnimation
+  - api.CSSAnimation.animationName
+  - api.CSSKeyframeRule
+  - api.CSSKeyframeRule.keyText
+  - api.CSSKeyframeRule.style
+  - api.CSSKeyframesRule
+  - api.CSSKeyframesRule.appendRule
+  - api.CSSKeyframesRule.cssRules
+  - api.CSSKeyframesRule.deleteRule
+  - api.CSSKeyframesRule.findRule
+  - api.CSSKeyframesRule.length
+  - api.CSSKeyframesRule.name
+  - api.Element.animationcancel_event
+  - api.Element.animationend_event
+  - api.Element.animationiteration_event
+  - api.Element.animationstart_event
+  - css.at-rules.keyframes
+  - css.properties.animation
+  - css.properties.animation-delay
+  - css.properties.animation-direction
+  - css.properties.animation-direction.alternate
+  - css.properties.animation-direction.alternate-reverse
+  - css.properties.animation-direction.normal
+  - css.properties.animation-direction.reverse
+  - css.properties.animation-duration
+  - css.properties.animation-duration.auto
+  - css.properties.animation-fill-mode
+  - css.properties.animation-fill-mode.backwards
+  - css.properties.animation-fill-mode.both
+  - css.properties.animation-fill-mode.forwards
+  - css.properties.animation-fill-mode.none
+  - css.properties.animation-iteration-count
+  - css.properties.animation-iteration-count.infinite
+  - css.properties.animation-name
+  - css.properties.animation-name.none
+  - css.properties.animation-play-state
+  - css.properties.animation-play-state.paused
+  - css.properties.animation-play-state.running
+  - css.properties.animation-timing-function

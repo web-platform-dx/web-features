@@ -1,0 +1,18 @@
+draft_date: 2024-06-07
+name: Resource Timing
+description: TODO
+spec: https://w3c.github.io/resource-timing/
+compat_features:
+  - api.Performance
+  - api.Performance.clearResourceTimings
+  - api.Performance.resourcetimingbufferfull_event
+  - api.Performance.setResourceTimingBufferSize
+  - api.PerformanceResourceTiming.deliveryType
+  - api.PerformanceResourceTiming.firstInterimResponseStart
+  - api.PerformanceResourceTiming.nextHopProtocol
+  - api.PerformanceResourceTiming.renderBlockingStatus
+  - api.PerformanceResourceTiming.responseStatus
+  - api.PerformanceResourceTiming.secureConnectionStart
+  - api.PerformanceResourceTiming.toJSON
+  - api.PerformanceResourceTiming.workerStart
+  - http.headers.Timing-Allow-Origin

@@ -1,0 +1,19 @@
+draft_date: 2024-06-07
+name: Device Orientation and Motion
+description: TODO
+spec: https://w3c.github.io/deviceorientation/
+compat_features:
+  - api.DeviceMotionEvent.DeviceMotionEvent
+  - api.DeviceMotionEvent.requestPermission_static
+  - api.DeviceMotionEventAcceleration
+  - api.DeviceMotionEventAcceleration.x
+  - api.DeviceMotionEventAcceleration.y
+  - api.DeviceMotionEventAcceleration.z
+  - api.DeviceMotionEventRotationRate
+  - api.DeviceMotionEventRotationRate.alpha
+  - api.DeviceMotionEventRotationRate.beta
+  - api.DeviceMotionEventRotationRate.gamma
+  - api.DeviceOrientationEvent.DeviceOrientationEvent
+  - api.DeviceOrientationEvent.absolute
+  - api.DeviceOrientationEvent.requestPermission_static
+  - api.Window.deviceorientationabsolute_event

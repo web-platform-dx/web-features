@@ -1,0 +1,25 @@
+draft_date: 2024-06-07
+name: Geolocation API
+description: TODO
+spec: https://w3c.github.io/geolocation-api/
+compat_features:
+  - api.Geolocation
+  - api.Geolocation.clearWatch
+  - api.Geolocation.getCurrentPosition
+  - api.Geolocation.watchPosition
+  - api.GeolocationCoordinates
+  - api.GeolocationCoordinates.accuracy
+  - api.GeolocationCoordinates.altitude
+  - api.GeolocationCoordinates.altitudeAccuracy
+  - api.GeolocationCoordinates.heading
+  - api.GeolocationCoordinates.latitude
+  - api.GeolocationCoordinates.longitude
+  - api.GeolocationCoordinates.speed
+  - api.GeolocationPosition
+  - api.GeolocationPosition.coords
+  - api.GeolocationPosition.timestamp
+  - api.GeolocationPositionError
+  - api.GeolocationPositionError.code
+  - api.GeolocationPositionError.message
+  - api.Navigator.geolocation
+  - http.headers.Permissions-Policy.geolocation

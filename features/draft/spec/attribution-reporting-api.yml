@@ -1,0 +1,19 @@
+draft_date: 2024-06-07
+name: Attribution Reporting
+description: TODO
+spec: https://wicg.github.io/attribution-reporting-api/
+compat_features:
+  - api.HTMLAnchorElement.attributionSrc
+  - api.HTMLImageElement.attributionSrc
+  - api.HTMLScriptElement.attributionSrc
+  - api.Request.Request.init_attributionReporting_parameter
+  - api.XMLHttpRequest.setAttributionReporting
+  - api.fetch.init_attributionReporting_parameter
+  - html.elements.a.attributionsrc
+  - html.elements.img.attributionsrc
+  - html.elements.script.attributionsrc
+  - http.headers.Attribution-Reporting-Eligible
+  - http.headers.Attribution-Reporting-Register-Source
+  - http.headers.Attribution-Reporting-Register-Trigger
+  - http.headers.Attribution-Reporting-Support
+  - http.headers.Permissions-Policy.attribution-reporting

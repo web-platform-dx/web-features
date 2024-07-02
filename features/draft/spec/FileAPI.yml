@@ -1,0 +1,42 @@
+draft_date: 2024-06-07
+name: File API
+description: TODO
+spec: https://w3c.github.io/FileAPI/
+compat_features:
+  - api.Blob
+  - api.Blob.Blob
+  - api.Blob.arrayBuffer
+  - api.Blob.size
+  - api.Blob.slice
+  - api.Blob.stream
+  - api.Blob.text
+  - api.Blob.type
+  - api.File
+  - api.File.File
+  - api.File.lastModified
+  - api.File.name
+  - api.FileList
+  - api.FileList.item
+  - api.FileList.length
+  - api.FileReader
+  - api.FileReader.FileReader
+  - api.FileReader.abort
+  - api.FileReader.abort_event
+  - api.FileReader.error
+  - api.FileReader.error_event
+  - api.FileReader.load_event
+  - api.FileReader.loadend_event
+  - api.FileReader.loadstart_event
+  - api.FileReader.progress_event
+  - api.FileReader.readAsArrayBuffer
+  - api.FileReader.readAsDataURL
+  - api.FileReader.readAsText
+  - api.FileReader.readyState
+  - api.FileReader.result
+  - api.FileReaderSync
+  - api.FileReaderSync.FileReaderSync
+  - api.FileReaderSync.readAsArrayBuffer
+  - api.FileReaderSync.readAsDataURL
+  - api.FileReaderSync.readAsText
+  - api.URL.createObjectURL_static
+  - api.URL.revokeObjectURL_static

@@ -1,0 +1,43 @@
+draft_date: 2024-06-07
+name: Encrypted Media Extensions
+description: TODO
+spec: https://w3c.github.io/encrypted-media/
+compat_features:
+  - api.HTMLMediaElement.encrypted_event
+  - api.HTMLMediaElement.mediaKeys
+  - api.HTMLMediaElement.setMediaKeys
+  - api.HTMLMediaElement.waitingforkey_event
+  - api.MediaEncryptedEvent
+  - api.MediaEncryptedEvent.MediaEncryptedEvent
+  - api.MediaEncryptedEvent.initData
+  - api.MediaEncryptedEvent.initDataType
+  - api.MediaKeyMessageEvent
+  - api.MediaKeyMessageEvent.MediaKeyMessageEvent
+  - api.MediaKeyMessageEvent.message
+  - api.MediaKeyMessageEvent.messageType
+  - api.MediaKeySession
+  - api.MediaKeySession.close
+  - api.MediaKeySession.closed
+  - api.MediaKeySession.expiration
+  - api.MediaKeySession.generateRequest
+  - api.MediaKeySession.keyStatuses
+  - api.MediaKeySession.keystatuseschange_event
+  - api.MediaKeySession.load
+  - api.MediaKeySession.message_event
+  - api.MediaKeySession.remove
+  - api.MediaKeySession.sessionId
+  - api.MediaKeySession.update
+  - api.MediaKeyStatusMap
+  - api.MediaKeyStatusMap.get
+  - api.MediaKeyStatusMap.has
+  - api.MediaKeyStatusMap.size
+  - api.MediaKeySystemAccess
+  - api.MediaKeySystemAccess.createMediaKeys
+  - api.MediaKeySystemAccess.getConfiguration
+  - api.MediaKeySystemAccess.keySystem
+  - api.MediaKeys
+  - api.MediaKeys.createSession
+  - api.MediaKeys.getStatusForPolicy
+  - api.MediaKeys.setServerCertificate
+  - api.Navigator.requestMediaKeySystemAccess
+  - http.headers.Permissions-Policy.encrypted-media
