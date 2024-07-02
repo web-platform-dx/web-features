@@ -133,25 +133,6 @@
             "support"
           ],
           "type": "object"
-        },
-        "usage_stats": {
-          "anyOf": [
-            {
-              "description": "Usage stats URL",
-              "format": "uri",
-              "type": "string"
-            },
-            {
-              "items": {
-                "description": "Usage stats URL",
-                "format": "uri",
-                "type": "string"
-              },
-              "minItems": 2,
-              "type": "array"
-            }
-          ],
-          "description": "Usage stats"
         }
       },
       "required": [

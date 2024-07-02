@@ -2,18 +2,13 @@ name: Container queries
 description: Container size queries with the `@container` at-rule apply styles to an element based on the dimensions of its container.
 spec: https://drafts.csswg.org/css-contain-3/#container-queries
 caniuse: css-container-queries
-usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/4165
-# The containerName and containerQuery CSSOM properties were shipped in
-# Chrome 111 and Safari 16, but aren't needed to use the feature in the typical
-# way, with `@container` in CSS.
+status:
+  compute_from: css.at-rules.container
 compat_features:
   - api.CSSContainerRule
-  # - api.CSSContainerRule.containerName
-  # - api.CSSContainerRule.containerQuery
+  - api.CSSContainerRule.containerName
+  - api.CSSContainerRule.containerQuery
   - css.at-rules.container
-  - css.properties.contain
-  - css.properties.contain.inline-size
-  - css.properties.contain.style
   - css.properties.container
   - css.properties.container-name
   - css.properties.container-name.none

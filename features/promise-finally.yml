@@ -3,16 +3,4 @@ description: The promise `finally()` method executes a function when the promise
 caniuse: promise-finally
 snapshot: ecmascript-2018
 spec: https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-promise.prototype.finally
-status:
-  baseline: high
-  baseline_low_date: 2018-04-12
-  support:
-    chrome: "63"
-    chrome_android: "63"
-    edge: "18"
-    firefox: "58"
-    firefox_android: "58"
-    safari: "11.1"
-    safari_ios: "11.3"
-compat_features:
-  - javascript.builtins.Promise.finally
+group: promises

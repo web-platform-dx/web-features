@@ -2,8 +2,3 @@ name: JavaScript modules in workers
 description: 'The `Worker()` constructor accepts `{ type: "module" }` to load scripts that use `import` and `export`. Also known as ECMAScript modules or ESM in workers.'
 spec: https://html.spec.whatwg.org/multipage/workers.html#dom-worker-dev
 group: js-modules
-compat_features:
-  - api.Worker.Worker.ecmascript_modules
-  - api.Worker.Worker.options_type_parameter
-  - javascript.operators.import.worker_support
-  - javascript.statements.import.worker_support

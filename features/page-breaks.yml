@@ -1,21 +1,5 @@
 name: Page breaks
 description: The `break-after`, `break-before`, `break-inside` CSS properties (along with `page-break-` aliases) control where printed pages start and end. Also known as pagination or page breaking.
 spec: https://drafts.csswg.org/css-break-3/#breaking-controls
+group: layout
 caniuse: css-page-break
-compat_features:
-  - css.properties.break-after
-  - css.properties.break-after.paged_context
-  - css.properties.break-after.paged_context.page
-  - css.properties.break-before
-  - css.properties.break-before.paged_context
-  - css.properties.break-before.paged_context.page
-  - css.properties.break-inside
-  - css.properties.break-inside.paged_context
-  # `page-break-` are now legacy shorthands
-  # https://drafts.csswg.org/css-break/#page-break-properties
-  - css.properties.page-break-after
-  - css.properties.page-break-after.avoid
-  - css.properties.page-break-before
-  - css.properties.page-break-before.avoid
-  - css.properties.page-break-inside
-  - css.properties.page-break-inside.avoid
