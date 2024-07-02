@@ -13,8 +13,16 @@ status:
     safari: "16.2"
     safari_ios: "16.2"
 compat_features:
-  - api.CSSFontFeatureValuesRule
-  - api.CSSFontFeatureValuesRule.fontFamily
+  # baseline: low
+  # baseline_low_date: 2023-03-13
+  # support:
+  #   chrome: "111"
+  #   chrome_android: "111"
+  #   edge: "111"
+  #   firefox: "34"
+  #   firefox_android: "34"
+  #   safari: "9.1"
+  #   safari_ios: "9.3"
   - css.at-rules.font-feature-values
   - css.at-rules.font-feature-values.annotation
   - css.at-rules.font-feature-values.character-variant
@@ -24,6 +32,20 @@ compat_features:
   - css.at-rules.font-feature-values.stylistic
   - css.at-rules.font-feature-values.swash
   - css.properties.font-variant-alternates
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2023-03-13
+  # support:
+  #   chrome: "111"
+  #   chrome_android: "111"
+  #   edge: "111"
+  #   firefox: "34"
+  #   firefox_android: "34"
+  #   safari: "16.2"
+  #   safari_ios: "16.2"
+  - api.CSSFontFeatureValuesRule
+  - api.CSSFontFeatureValuesRule.fontFamily
   - css.properties.font-variant-alternates.annotation
   - css.properties.font-variant-alternates.character_variant
   - css.properties.font-variant-alternates.ornaments

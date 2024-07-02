@@ -13,21 +13,76 @@ status:
     safari: "16"
     safari_ios: "16.4"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "40"
+  #   chrome_android: "40"
+  #   edge: "17"
+  #   firefox: "44"
+  #   firefox_android: "48"
+  #   safari: "16"
+  #   safari_ios: "16.4"
+  - api.ServiceWorkerGlobalScope.push_event
+  - api.ServiceWorkerRegistration.pushManager
+
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "42"
+  #   chrome_android: "42"
+  #   edge: "17"
+  #   firefox: "44"
+  #   firefox_android: "48"
+  #   safari: "16"
+  #   safari_ios: "16.4"
   - api.PushEvent
   - api.PushEvent.PushEvent
-  - api.PushEvent.data
   - api.PushManager
   - api.PushManager.getSubscription
+  - api.PushSubscription
+  - api.PushSubscription.endpoint
+  - api.PushSubscription.getKey
+
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "42"
+  #   chrome_android: "50"
+  #   edge: "17"
+  #   firefox: "44"
+  #   firefox_android: "48"
+  #   safari: "16"
+  #   safari_ios: "16.4"
+  - api.PushSubscription.toJSON
+  - api.PushSubscription.unsubscribe
+
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "44"
+  #   chrome_android: "44"
+  #   edge: "17"
+  #   firefox: "44"
+  #   firefox_android: "48"
+  #   safari: "16"
+  #   safari_ios: "16.4"
   - api.PushManager.permissionState
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "50"
+  #   chrome_android: "50"
+  #   edge: "17"
+  #   firefox: "44"
+  #   firefox_android: "48"
+  #   safari: "16"
+  #   safari_ios: "16.4"
+  - api.PushEvent.data
   - api.PushMessageData
   - api.PushMessageData.arrayBuffer
   - api.PushMessageData.blob
   - api.PushMessageData.json
   - api.PushMessageData.text
-  - api.PushSubscription
-  - api.PushSubscription.endpoint
-  - api.PushSubscription.getKey
-  - api.PushSubscription.toJSON
-  - api.PushSubscription.unsubscribe
-  - api.ServiceWorkerGlobalScope.push_event
-  - api.ServiceWorkerRegistration.pushManager

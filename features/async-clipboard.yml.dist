@@ -5,18 +5,114 @@ status:
   baseline: false
   support: {}
 compat_features:
-  - api.Clipboard
-  - api.Clipboard.read
-  - api.Clipboard.readText
-  - api.Clipboard.write
-  - api.Clipboard.writeText
+  # baseline: high
+  # baseline_low_date: 2017-03-27
+  # baseline_high_date: 2019-09-27
+  # support:
+  #   chrome: "41"
+  #   chrome_android: "41"
+  #   edge: "12"
+  #   firefox: "22"
+  #   firefox_android: "22"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
   - api.ClipboardEvent
-  - api.ClipboardEvent.ClipboardEvent
   - api.ClipboardEvent.clipboardData
-  - api.ClipboardItem
-  - api.ClipboardItem.ClipboardItem
-  - api.ClipboardItem.getType
-  - api.ClipboardItem.presentationStyle
-  - api.ClipboardItem.types
+
+  # baseline: high
+  # baseline_low_date: 2018-04-30
+  # baseline_high_date: 2020-10-30
+  # support:
+  #   chrome: "58"
+  #   chrome_android: "58"
+  #   edge: "17"
+  #   firefox: "22"
+  #   firefox_android: "22"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.ClipboardEvent.ClipboardEvent
+
+  # baseline: high
+  # baseline_low_date: 2020-03-24
+  # baseline_high_date: 2022-09-24
+  # support:
+  #   chrome: "66"
+  #   chrome_android: "66"
+  #   edge: "79"
+  #   firefox: "63"
+  #   firefox_android: "63"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.Clipboard
+  - api.Clipboard.writeText
   - api.Navigator.clipboard
+
+  # baseline: low
+  # baseline_low_date: 2024-06-11
+  # support:
+  #   chrome: "66"
+  #   chrome_android: "66"
+  #   edge: "79"
+  #   firefox: "127"
+  #   firefox_android: "127"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.Clipboard.write
+
+  # baseline: low
+  # baseline_low_date: 2024-06-11
+  # support:
+  #   chrome: "76"
+  #   chrome_android: "84"
+  #   edge: "79"
+  #   firefox: "127"
+  #   firefox_android: "127"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.ClipboardItem
+  - api.ClipboardItem.getType
+  - api.ClipboardItem.types
+
+  # baseline: low
+  # baseline_low_date: 2024-06-11
+  # support:
+  #   chrome: "98"
+  #   chrome_android: "98"
+  #   edge: "98"
+  #   firefox: "127"
+  #   firefox_android: "127"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.ClipboardItem.ClipboardItem
+
+  # baseline: false
+  # support:
+  #   edge: "79"
+  #   firefox: "127"
+  #   firefox_android: "127"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.Clipboard.read
+
+  # baseline: false
+  # support:
+  #   firefox: "125"
+  #   firefox_android: "125"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.Clipboard.readText
+
+  # baseline: false
+  # support:
+  #   firefox: "127"
+  #   firefox_android: "127"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.ClipboardItem.presentationStyle
+
+  # baseline: false
+  # support:
+  #   chrome: "64"
+  #   chrome_android: "64"
+  #   edge: "79"
   - api.Permissions.permission_clipboard-read

@@ -13,3 +13,69 @@ status:
     firefox_android: "22"
     safari: "13"
     safari_ios: "13"
+compat_features:
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "3"
+  #   safari_ios: "1"
+  - api.HTMLObjectElement
+  - api.HTMLObjectElement.contentDocument
+  - api.HTMLObjectElement.data
+  - api.HTMLObjectElement.form
+  - api.HTMLObjectElement.height
+  - api.HTMLObjectElement.name
+  - api.HTMLObjectElement.type
+  - api.HTMLObjectElement.width
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "3"
+  #   safari_ios: "2"
+  - html.elements.object
+  - html.elements.object.data
+  - html.elements.object.form
+  - html.elements.object.height
+  - html.elements.object.name
+  - html.elements.object.type
+  - html.elements.object.width
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3.5"
+  #   firefox_android: "4"
+  #   safari: "3"
+  #   safari_ios: "1"
+  - api.HTMLObjectElement.getSVGDocument
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2019-09-19
+  # baseline_high_date: 2022-03-19
+  # support:
+  #   chrome: "53"
+  #   chrome_android: "53"
+  #   edge: "17"
+  #   firefox: "22"
+  #   firefox_android: "22"
+  #   safari: "13"
+  #   safari_ios: "13"
+  - api.HTMLObjectElement.contentWindow

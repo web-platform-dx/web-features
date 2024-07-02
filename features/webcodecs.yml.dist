@@ -4,55 +4,31 @@
 status:
   baseline: false
   support:
-    chrome: "126"
-    chrome_android: "126"
-    edge: "126"
+    chrome: "94"
+    chrome_android: "94"
+    edge: "94"
 compat_features:
-  - api.AudioData
-  - api.AudioData.AudioData
-  - api.AudioData.allocationSize
-  - api.AudioData.clone
-  - api.AudioData.close
-  - api.AudioData.copyTo
-  - api.AudioData.duration
-  - api.AudioData.format
-  - api.AudioData.numberOfChannels
-  - api.AudioData.numberOfFrames
-  - api.AudioData.sampleRate
-  - api.AudioData.timestamp
-  - api.AudioDecoder
-  - api.AudioDecoder.AudioDecoder
-  - api.AudioDecoder.close
-  - api.AudioDecoder.configure
-  - api.AudioDecoder.decode
-  - api.AudioDecoder.decodeQueueSize
-  - api.AudioDecoder.dequeue_event
-  - api.AudioDecoder.flush
-  - api.AudioDecoder.isConfigSupported_static
-  - api.AudioDecoder.reset
-  - api.AudioDecoder.state
-  - api.AudioEncoder
-  - api.AudioEncoder.AudioEncoder
-  - api.AudioEncoder.close
-  - api.AudioEncoder.configure
-  - api.AudioEncoder.configure.bitrateMode
-  - api.AudioEncoder.configure.opus
-  - api.AudioEncoder.configure.opus.opus_application
-  - api.AudioEncoder.configure.opus.opus_signal
-  - api.AudioEncoder.dequeue_event
-  - api.AudioEncoder.encode
-  - api.AudioEncoder.encodeQueueSize
-  - api.AudioEncoder.flush
-  - api.AudioEncoder.isConfigSupported_static
-  - api.AudioEncoder.reset
-  - api.AudioEncoder.state
-  - api.EncodedAudioChunk
-  - api.EncodedAudioChunk.EncodedAudioChunk
-  - api.EncodedAudioChunk.byteLength
-  - api.EncodedAudioChunk.copyTo
-  - api.EncodedAudioChunk.duration
-  - api.EncodedAudioChunk.timestamp
-  - api.EncodedAudioChunk.type
+  # baseline: false
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "94"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - api.VideoColorSpace
+  - api.VideoColorSpace.fullRange
+  - api.VideoColorSpace.matrix
+  - api.VideoColorSpace.primaries
+  - api.VideoColorSpace.toJSON
+  - api.VideoColorSpace.transfer
+
+  # baseline: false
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "94"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
   - api.EncodedVideoChunk
   - api.EncodedVideoChunk.EncodedVideoChunk
   - api.EncodedVideoChunk.byteLength
@@ -60,40 +36,12 @@ compat_features:
   - api.EncodedVideoChunk.duration
   - api.EncodedVideoChunk.timestamp
   - api.EncodedVideoChunk.type
-  - api.ImageDecoder
-  - api.ImageDecoder.ImageDecoder
-  - api.ImageDecoder.close
-  - api.ImageDecoder.complete
-  - api.ImageDecoder.completed
-  - api.ImageDecoder.decode
-  - api.ImageDecoder.isTypeSupported_static
-  - api.ImageDecoder.reset
-  - api.ImageDecoder.tracks
-  - api.ImageDecoder.type
-  - api.ImageTrack
-  - api.ImageTrack.animated
-  - api.ImageTrack.frameCount
-  - api.ImageTrack.repetitionCount
-  - api.ImageTrack.selected
-  - api.ImageTrackList
-  - api.ImageTrackList.length
-  - api.ImageTrackList.ready
-  - api.ImageTrackList.selectedIndex
-  - api.ImageTrackList.selectedTrack
-  - api.VideoColorSpace
-  - api.VideoColorSpace.VideoColorSpace
-  - api.VideoColorSpace.fullRange
-  - api.VideoColorSpace.matrix
-  - api.VideoColorSpace.primaries
-  - api.VideoColorSpace.toJSON
-  - api.VideoColorSpace.transfer
   - api.VideoDecoder
   - api.VideoDecoder.VideoDecoder
   - api.VideoDecoder.close
   - api.VideoDecoder.configure
   - api.VideoDecoder.decode
   - api.VideoDecoder.decodeQueueSize
-  - api.VideoDecoder.dequeue_event
   - api.VideoDecoder.flush
   - api.VideoDecoder.isConfigSupported_static
   - api.VideoDecoder.reset
@@ -102,7 +50,6 @@ compat_features:
   - api.VideoEncoder.VideoEncoder
   - api.VideoEncoder.close
   - api.VideoEncoder.configure
-  - api.VideoEncoder.dequeue_event
   - api.VideoEncoder.encode
   - api.VideoEncoder.encodeQueueSize
   - api.VideoEncoder.flush
@@ -125,3 +72,118 @@ compat_features:
   - api.VideoFrame.format
   - api.VideoFrame.timestamp
   - api.VideoFrame.visibleRect
+
+  # baseline: false
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "94"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - api.VideoColorSpace.VideoColorSpace
+
+  # baseline: false
+  # support:
+  #   chrome: "106"
+  #   chrome_android: "106"
+  #   edge: "106"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.VideoDecoder.dequeue_event
+  - api.VideoEncoder.dequeue_event
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "94"
+  - api.AudioData
+  - api.AudioData.AudioData
+  - api.AudioData.allocationSize
+  - api.AudioData.clone
+  - api.AudioData.close
+  - api.AudioData.copyTo
+  - api.AudioData.duration
+  - api.AudioData.format
+  - api.AudioData.numberOfChannels
+  - api.AudioData.numberOfFrames
+  - api.AudioData.sampleRate
+  - api.AudioData.timestamp
+  - api.AudioDecoder
+  - api.AudioDecoder.AudioDecoder
+  - api.AudioDecoder.close
+  - api.AudioDecoder.configure
+  - api.AudioDecoder.decode
+  - api.AudioDecoder.decodeQueueSize
+  - api.AudioDecoder.flush
+  - api.AudioDecoder.isConfigSupported_static
+  - api.AudioDecoder.reset
+  - api.AudioDecoder.state
+  - api.AudioEncoder
+  - api.AudioEncoder.AudioEncoder
+  - api.AudioEncoder.close
+  - api.AudioEncoder.configure
+  - api.AudioEncoder.encode
+  - api.AudioEncoder.encodeQueueSize
+  - api.AudioEncoder.flush
+  - api.AudioEncoder.isConfigSupported_static
+  - api.AudioEncoder.reset
+  - api.AudioEncoder.state
+  - api.EncodedAudioChunk
+  - api.EncodedAudioChunk.EncodedAudioChunk
+  - api.EncodedAudioChunk.byteLength
+  - api.EncodedAudioChunk.copyTo
+  - api.EncodedAudioChunk.duration
+  - api.EncodedAudioChunk.timestamp
+  - api.EncodedAudioChunk.type
+  - api.ImageDecoder
+  - api.ImageDecoder.ImageDecoder
+  - api.ImageDecoder.close
+  - api.ImageDecoder.complete
+  - api.ImageDecoder.completed
+  - api.ImageDecoder.decode
+  - api.ImageDecoder.isTypeSupported_static
+  - api.ImageDecoder.reset
+  - api.ImageDecoder.tracks
+  - api.ImageDecoder.type
+  - api.ImageTrack
+  - api.ImageTrack.animated
+  - api.ImageTrack.frameCount
+  - api.ImageTrack.repetitionCount
+  - api.ImageTrack.selected
+  - api.ImageTrackList
+  - api.ImageTrackList.length
+  - api.ImageTrackList.ready
+  - api.ImageTrackList.selectedIndex
+  - api.ImageTrackList.selectedTrack
+
+  # baseline: false
+  # support:
+  #   chrome: "106"
+  #   chrome_android: "106"
+  #   edge: "106"
+  - api.AudioDecoder.dequeue_event
+  - api.AudioEncoder.dequeue_event
+
+  # baseline: false
+  # support:
+  #   chrome: "110"
+  #   chrome_android: "110"
+  #   edge: "110"
+  - api.AudioEncoder.configure.opus
+
+  # baseline: false
+  # support:
+  #   chrome: "119"
+  #   chrome_android: "119"
+  #   edge: "119"
+  - api.AudioEncoder.configure.bitrateMode
+
+  # baseline: false
+  # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  - api.AudioEncoder.configure.opus.opus_application
+  - api.AudioEncoder.configure.opus.opus_signal

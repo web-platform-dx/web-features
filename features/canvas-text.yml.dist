@@ -14,10 +14,33 @@ status:
     safari: "4"
     safari_ios: "3.2"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "2"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1.5"
+  #   firefox_android: "31"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - api.TextMetrics
+  - api.TextMetrics.width
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "2"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3.5"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
   - api.CanvasRenderingContext2D.fillText
   - api.CanvasRenderingContext2D.measureText
   - api.CanvasRenderingContext2D.strokeText
   - api.CanvasRenderingContext2D.textAlign
   - api.CanvasRenderingContext2D.textBaseline
-  - api.TextMetrics
-  - api.TextMetrics.width

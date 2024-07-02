@@ -13,6 +13,28 @@ status:
     safari: "13"
     safari_ios: "13"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2022-01-11
+  # support:
+  #   chrome: "81"
+  #   chrome_android: "81"
+  #   edge: "81"
+  #   firefox: "96"
+  #   firefox_android: "96"
+  #   safari: "13"
+  #   safari_ios: "13"
   - css.properties.color-scheme
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2022-02-03
+  # support:
+  #   chrome: "98"
+  #   chrome_android: "98"
+  #   edge: "98"
+  #   firefox: "96"
+  #   firefox_android: "96"
+  #   safari: "13"
+  #   safari_ios: "13"
   - css.properties.color-scheme.only_dark
   - css.properties.color-scheme.only_light
