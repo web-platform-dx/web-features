@@ -1,8 +1,21 @@
 name: Mouse events
 description: Mouse events, such as `click`, `mousedown`, or `mousemove`, fire when users interact with a pointing device such a mouse or trackpad.
 spec: https://w3c.github.io/uievents/#events-mouse-types
+status:
+  compute_from:
+    - api.MouseEvent
+    - api.Element.click_event
+    - api.Element.dblclick_event
+    - api.Element.mousedown_event
+    - api.Element.mouseup_event
+    - api.Element.mousemove_event
+    - api.Element.mouseout_event
+    - api.Element.mouseover_event
+    - api.Element.mousedown_event
+    - api.Element.mousemove_event
+    - api.Element.mouseover_event
+    - api.Element.mouseup_event
 compat_features:
-  # TODO: compute_from list
   - api.Element.click_event
   - api.Element.dblclick_event
   - api.Element.mousedown_event
@@ -24,16 +37,16 @@ compat_features:
   - api.MouseEvent.screenY
   - api.MouseEvent.shiftKey
 
-  # TODO: later additions
-  # - api.Element.mouseenter_event
-  # - api.Element.mouseleave_event
-  # - api.MouseEvent.MouseEvent
-  # - api.MouseEvent.buttons
-  # - api.MouseEvent.getModifierState
-  # - api.MouseEvent.offsetX
-  # - api.MouseEvent.offsetY
-  # - api.MouseEvent.x
-  # - api.MouseEvent.y
+  - api.Element.mouseenter_event
+  - api.Element.mouseleave_event
+  - api.MouseEvent.MouseEvent
+  - api.MouseEvent.buttons
+  - api.MouseEvent.getModifierState
+  - api.MouseEvent.offsetX
+  - api.MouseEvent.offsetY
+  - api.MouseEvent.x
+  - api.MouseEvent.y
+
   # Note that the next two were specified with `pointer-lock`, but work independently of it.
-  # - api.MouseEvent.movementX
-  # - api.MouseEvent.movementY
+  - api.MouseEvent.movementX
+  - api.MouseEvent.movementY
