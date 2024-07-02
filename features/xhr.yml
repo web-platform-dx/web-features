@@ -1,0 +1,56 @@
+name: XMLHttpRequest
+description: The `XMLHttpRequest` API TODO. Also known as XHR.
+spec: https://xhr.spec.whatwg.org/
+# https://caniuse.com/xhr2 is not linked here. It's for a subset of the API that
+# is baked into our definition of XHR. It's too old to split out.
+status:
+  compute_from: api.XMLHttpRequest.XMLHttpRequest
+compat_features:
+  - api.FormData
+  - api.FormData.append
+  - api.FormData.append.filename_parameter
+  - api.FormData.FormData
+  - api.ProgressEvent
+  - api.ProgressEvent.lengthComputable
+  - api.ProgressEvent.loaded
+  - api.ProgressEvent.total
+  - api.XMLHttpRequest
+  - api.XMLHttpRequest.abort
+  - api.XMLHttpRequest.abort_event
+  - api.XMLHttpRequest.error_event
+  - api.XMLHttpRequest.getAllResponseHeaders
+  - api.XMLHttpRequest.getResponseHeader
+  - api.XMLHttpRequest.load_event
+  - api.XMLHttpRequest.loadend_event
+  - api.XMLHttpRequest.loadstart_event
+  - api.XMLHttpRequest.open
+  - api.XMLHttpRequest.overrideMimeType
+  - api.XMLHttpRequest.progress_event
+  - api.XMLHttpRequest.readyState
+  - api.XMLHttpRequest.readystatechange_event
+  - api.XMLHttpRequest.response
+  - api.XMLHttpRequest.responseText
+  - api.XMLHttpRequest.responseXML
+  - api.XMLHttpRequest.send
+  - api.XMLHttpRequest.send.body_ArrayBuffer_type
+  - api.XMLHttpRequest.send.body_ArrayBufferView_type
+  - api.XMLHttpRequest.send.body_Blob_type
+  - api.XMLHttpRequest.send.body_FormData_type
+  - api.XMLHttpRequest.setRequestHeader
+  - api.XMLHttpRequest.status
+  - api.XMLHttpRequest.statusText
+  - api.XMLHttpRequest.timeout
+  - api.XMLHttpRequest.timeout_event
+  - api.XMLHttpRequest.upload
+  - api.XMLHttpRequest.withCredentials
+  - api.XMLHttpRequest.worker_support
+  - api.XMLHttpRequest.XMLHttpRequest
+  - api.XMLHttpRequestEventTarget
+  - api.XMLHttpRequestUpload
+  - api.XMLHttpRequestUpload.abort_event
+  - api.XMLHttpRequestUpload.error_event
+  - api.XMLHttpRequestUpload.load_event
+  - api.XMLHttpRequestUpload.loadend_event
+  - api.XMLHttpRequestUpload.loadstart_event
+  - api.XMLHttpRequestUpload.progress_event
+  - api.XMLHttpRequestUpload.timeout_event
