@@ -18,33 +18,4 @@ spec:
 snapshot: ecmascript-2015
 group: maps
 status:
-  baseline: high
-  baseline_low_date: 2015-07-29
-  # Editorial override has been applied to ignore Map.@@species
-  # https://github.com/web-platform-dx/web-features/pull/712#discussion_r1532483885
-  support:
-    chrome: "38"
-    chrome_android: "38"
-    edge: "12"
-    firefox: "13"
-    firefox_android: "14"
-    safari: "8"
-    safari_ios: "8"
-compat_features:
-  - javascript.builtins.Map
-  - javascript.builtins.Map.Map
-  - javascript.builtins.Map.Map.iterable_allowed
-  - javascript.builtins.Map.Map.null_allowed
-  - javascript.builtins.Map.clear
-  - javascript.builtins.Map.delete
-  - javascript.builtins.Map.entries
-  - javascript.builtins.Map.forEach
-  - javascript.builtins.Map.get
-  - javascript.builtins.Map.has
-  - javascript.builtins.Map.key_equality_for_zeros
-  - javascript.builtins.Map.keys
-  - javascript.builtins.Map.set
-  - javascript.builtins.Map.size
-  - javascript.builtins.Map.values
-  - javascript.builtins.Map.@@iterator
-  - javascript.builtins.Map.@@species
+  compute_from: javascript.builtins.Map.Map

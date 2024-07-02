@@ -1,14 +1,15 @@
-import { computeBaseline, setLogger } from "compute-baseline";
+import { computeBaseline, getStatus, setLogger } from "compute-baseline";
 import { Compat, Feature } from "compute-baseline/browser-compat-data";
-import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { isDeepStrictEqual } from "node:util";
 import winston from "winston";
-import YAML, { Document } from "yaml";
+import YAML, { Document, YAMLSeq, Scalar } from "yaml";
 import yargs from "yargs";
 import { fdir } from "fdir";
+
+const compat = new Compat();
 
 const argv = yargs(process.argv.slice(2))
   .scriptName("dist")
@@ -66,6 +67,42 @@ function checkDistFile(sourcePath: string, distPath: string): boolean {
   return actual === expected;
 }
 
+type SupportStatus = ReturnType<typeof getStatus>;
+
+/**
+ * Compare two status objects for sorting.
+ *
+ * @returns -1, 0 or 1.
+ */
+function compareStatus(a: SupportStatus, b: SupportStatus) {
+  // First sort by Baseline status/date, oldest Base features first, and
+  // non-Baseline features last.
+  if (a.baseline_low_date !== b.baseline_low_date) {
+    if (!a.baseline_low_date) {
+      return 1;
+    }
+    if (!b.baseline_low_date) {
+      return -1;
+    }
+    return a.baseline_low_date.localeCompare(b.baseline_low_date);
+  }
+  // Next sort by number of supporting browsers.
+  const aBrowsers = Object.keys(a.support).length;
+  const bBrowsers = Object.keys(b.support).length;
+  if (aBrowsers !== bBrowsers) {
+    return bBrowsers - aBrowsers;
+  }
+  // Finally sort by the version numbers.
+  const aVersions = Object.values(a.support);
+  const bVersions = Object.values(b.support);
+  for (let i = 0; i < aVersions.length; i++) {
+    if (aVersions[i] !== bVersions[i]) {
+      return aVersions[i] - bVersions[i];
+    }
+  }
+  return 0;
+}
+
 /**
  * Generate a dist YAML document from a feature definition YAML file path.
  *
@@ -92,10 +129,28 @@ function toDist(sourcePath: string): YAML.Document {
     }
   }
 
+  const compatFeatures = source.compat_features ?? taggedCompatFeatures;
+  let computeFrom = compatFeatures;
+
+  if (source.status?.compute_from) {
+    const compute_from = source.status.compute_from;
+    const keys = Array.isArray(compute_from) ? compute_from : [compute_from];
+    for (const key of keys) {
+      if (!compatFeatures.includes(key)) {
+        throw new Error(
+          `${id}: compute_from key ${key} is not among the feature's compat keys`,
+        );
+      }
+    }
+
+    computeFrom = keys;
+    delete source.status;
+  }
+
   // Compute the status. A `status` block in the source takes precedence, but
   // can be removed if it matches the computed status.
   let computedStatus = computeBaseline({
-    compatKeys: source.compat_features ?? taggedCompatFeatures,
+    compatKeys: computeFrom,
     checkAncestors: false,
   });
 
@@ -115,6 +170,34 @@ function toDist(sourcePath: string): YAML.Document {
     }
   }
 
+  // Map between status object and BCD keys with that computed status.
+  const groups = new Map<SupportStatus, string[]>();
+  for (const key of compatFeatures) {
+    const status = getStatus(id, key);
+    let added = false;
+    for (const [existingKey, list] of groups.entries()) {
+      if (isDeepStrictEqual(status, existingKey)) {
+        list.push(key);
+        added = true;
+        break;
+      }
+    }
+    if (!added) {
+      groups.set(status, [key]);
+    }
+  }
+
+  const sortedStatus = Array.from(groups.keys()).sort(compareStatus);
+
+  const sortedGroups = new Map<string, string[]>();
+  for (const status of sortedStatus) {
+    let comment = YAML.stringify(status);
+    if (isDeepStrictEqual(status, computedStatus)) {
+      comment = `⬇️ Same status as overall feature ⬇️\n${comment}`;
+    }
+    sortedGroups.set(comment, groups.get(status));
+  }
+
   // Assemble and return the dist YAML.
   const dist = new Document({});
 
@@ -129,14 +212,42 @@ function toDist(sourcePath: string): YAML.Document {
     dist.set("status", computedStatus);
   }
 
-  if (!source.compat_features) {
-    dist.set("compat_features", taggedCompatFeatures);
+  if (groups.size) {
+    insertCompatFeatures(dist, sortedGroups);
   }
 
   return dist;
 }
 
-const compat = new Compat();
+function insertCompatFeatures(yaml: Document, groups: Map<string, string[]>) {
+  if (groups.size === 1) {
+    // Add no comments when there's a single group.
+    yaml.set("compat_features", groups.values().next().value);
+    return;
+  }
+
+  const list = new YAMLSeq();
+  for (const [comment, keys] of groups.entries()) {
+    let first = true;
+    for (const key of keys) {
+      const item = new Scalar(key);
+      if (first) {
+        item.commentBefore = comment
+          .trim()
+          .split("\n")
+          .map((line) => ` ${line}`)
+          .join("\n");
+        first = false;
+      }
+      list.add(item);
+    }
+    // Blank line between each group.
+    list.items.at(-1).comment = "\n";
+  }
+  // Avoid trailing blank line.
+  list.items.at(-1).comment = "";
+  yaml.set("compat_features", list);
+}
 
 const tagsToFeatures: Map<string, Feature[]> = (() => {
   // TODO: Use Map.groupBy() instead, when it's available

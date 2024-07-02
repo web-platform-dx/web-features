@@ -13,9 +13,64 @@ status:
     safari: "16"
     safari_ios: "16"
 compat_features:
-  - css.properties.offset
-  - css.properties.offset-anchor
-  - css.properties.offset-distance
+  # baseline: low
+  # baseline_low_date: 2022-03-14
+  # support:
+  #   chrome: "55"
+  #   chrome_android: "55"
+  #   edge: "79"
+  #   firefox: "72"
+  #   firefox_android: "79"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
   - css.properties.offset-path
-  - css.properties.offset-path.path
+
+  # baseline: low
+  # baseline_low_date: 2022-09-12
+  # support:
+  #   chrome: "55"
+  #   chrome_android: "55"
+  #   edge: "79"
+  #   firefox: "72"
+  #   firefox_android: "79"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - css.properties.offset
+  - css.properties.offset-distance
+
+  # baseline: low
+  # baseline_low_date: 2022-09-12
+  # support:
+  #   chrome: "56"
+  #   chrome_android: "56"
+  #   edge: "79"
+  #   firefox: "72"
+  #   firefox_android: "79"
+  #   safari: "16"
+  #   safari_ios: "16"
   - css.properties.offset-rotate
+
+  # baseline: low
+  # baseline_low_date: 2022-09-12
+  # support:
+  #   chrome: "64"
+  #   chrome_android: "64"
+  #   edge: "79"
+  #   firefox: "72"
+  #   firefox_android: "79"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - css.properties.offset-path.path
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2023-08-21
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "116"
+  #   edge: "116"
+  #   firefox: "72"
+  #   firefox_android: "79"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - css.properties.offset-anchor

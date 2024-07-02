@@ -13,3 +13,24 @@ status:
     firefox_android: "83"
     safari: "12.1"
     safari_ios: "12.2"
+compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "69"
+  #   firefox: "83"
+  #   firefox_android: "83"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - css.types.image.gradient.conic-gradient
+  - css.types.image.gradient.repeating-conic-gradient
+
+  # baseline: false
+  # support:
+  #   chrome: "72"
+  #   chrome_android: "72"
+  #   firefox: "83"
+  #   firefox_android: "83"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - css.types.image.gradient.conic-gradient.doubleposition
