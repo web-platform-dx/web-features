@@ -1,0 +1,6 @@
+name: Paint containment
+description: "The `contain: paint` CSS declaration prevents an element's descendants from being drawn outside the boundaries of the containing element, with any overflow clipped. This permits the browser to avoid slower painting calculations."
+spec: https://drafts.csswg.org/css-contain-2/#containment-paint
+group: containment
+compat_features:
+  - css.properties.contain.paint
