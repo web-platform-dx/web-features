@@ -13,8 +13,51 @@ status:
     safari: "16"
     safari_ios: "16"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2022-12-13
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "108"
+  #   firefox_android: "108"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
   - css.types.calc-constant
-  - css.types.calc-constant.NaN
-  - css.types.calc-constant.e
-  - css.types.calc-constant.infinity
+
+  # baseline: low
+  # baseline_low_date: 2023-01-12
+  # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  #   firefox: "108"
+  #   firefox_android: "108"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
   - css.types.calc-constant.pi
+
+  # baseline: low
+  # baseline_low_date: 2023-02-09
+  # support:
+  #   chrome: "110"
+  #   chrome_android: "110"
+  #   edge: "110"
+  #   firefox: "108"
+  #   firefox_android: "108"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - css.types.calc-constant.e
+
+  # baseline: low
+  # baseline_low_date: 2023-06-06
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "114"
+  #   firefox_android: "114"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - css.types.calc-constant.NaN
+  - css.types.calc-constant.infinity

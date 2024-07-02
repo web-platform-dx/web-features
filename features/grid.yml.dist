@@ -14,21 +14,65 @@ status:
     safari: "12.1"
     safari_ios: "12.2"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2017-03-27
+  # baseline_high_date: 2019-09-27
+  # support:
+  #   chrome: "29"
+  #   chrome_android: "29"
+  #   edge: "12"
+  #   firefox: "40"
+  #   firefox_android: "40"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - css.types.flex
+
+  # baseline: high
+  # baseline_low_date: 2017-10-17
+  # baseline_high_date: 2020-04-17
+  # support:
+  #   chrome: "57"
+  #   chrome_android: "52"
+  #   edge: "16"
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
   - css.properties.align-content.grid_context
   - css.properties.align-items.grid_context
-  - css.properties.align-items.grid_context.start_end
   - css.properties.align-self.grid_context
-  - css.properties.column-gap.grid_context
+  - css.properties.justify-content.grid_context
+
+  # baseline: high
+  # baseline_low_date: 2017-10-17
+  # baseline_high_date: 2020-04-17
+  # support:
+  #   chrome: "57"
+  #   chrome_android: "57"
+  #   edge: "16"
+  #   firefox: "45"
+  #   firefox_android: "45"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - css.properties.justify-items.grid_context
+  - css.properties.justify-self.grid_context
+
+  # baseline: high
+  # baseline_low_date: 2017-10-17
+  # baseline_high_date: 2020-04-17
+  # support:
+  #   chrome: "57"
+  #   chrome_android: "57"
+  #   edge: "16"
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
   - css.properties.display.grid
   - css.properties.display.inline-grid
-  - css.properties.gap.grid_context
-  - css.properties.gap.grid_context.calc_values
-  - css.properties.gap.grid_context.percentage_values
   - css.properties.grid
   - css.properties.grid-area
-  - css.properties.grid-auto-columns
   - css.properties.grid-auto-flow
-  - css.properties.grid-auto-rows
   - css.properties.grid-column
   - css.properties.grid-column-end
   - css.properties.grid-column-start
@@ -40,16 +84,103 @@ compat_features:
   - css.properties.grid-template-columns
   - css.properties.grid-template-columns.fit-content
   - css.properties.grid-template-columns.minmax
-  - css.properties.grid-template-columns.repeat
   - css.properties.grid-template-rows
   - css.properties.grid-template-rows.fit-content
   - css.properties.grid-template-rows.minmax
-  - css.properties.grid-template-rows.repeat
-  - css.properties.justify-content.grid_context
-  - css.properties.justify-items.grid_context
-  - css.properties.justify-self.grid_context
-  - css.properties.place-content.grid_context
+
+  # baseline: high
+  # baseline_low_date: 2018-09-17
+  # baseline_high_date: 2021-03-17
+  # support:
+  #   chrome: "66"
+  #   chrome_android: "66"
+  #   edge: "16"
+  #   firefox: "61"
+  #   firefox_android: "61"
+  #   safari: "12"
+  #   safari_ios: "12"
+  - css.properties.column-gap.grid_context
+  - css.properties.gap.grid_context
+  - css.properties.gap.grid_context.percentage_values
+  - css.properties.row-gap.grid_context
+
+  # baseline: high
+  # baseline_low_date: 2019-03-25
+  # baseline_high_date: 2021-09-25
+  # support:
+  #   chrome: "66"
+  #   chrome_android: "66"
+  #   edge: "16"
+  #   firefox: "61"
+  #   firefox_android: "61"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - css.properties.gap.grid_context.calc_values
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "57"
+  #   chrome_android: "57"
+  #   edge: "79"
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - css.properties.align-items.grid_context.start_end
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "59"
+  #   chrome_android: "59"
+  #   edge: "79"
+  #   firefox: "45"
+  #   firefox_android: "45"
+  #   safari: "11"
+  #   safari_ios: "11"
   - css.properties.place-items.grid_context
   - css.properties.place-self.grid_context
-  - css.properties.row-gap.grid_context
-  - css.types.flex
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "59"
+  #   chrome_android: "59"
+  #   edge: "79"
+  #   firefox: "53"
+  #   firefox_android: "53"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - css.properties.place-content.grid_context
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "57"
+  #   chrome_android: "57"
+  #   edge: "16"
+  #   firefox: "70"
+  #   firefox_android: "79"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - css.properties.grid-auto-columns
+  - css.properties.grid-auto-rows
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "57"
+  #   chrome_android: "57"
+  #   edge: "16"
+  #   firefox: "76"
+  #   firefox_android: "79"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - css.properties.grid-template-columns.repeat
+  - css.properties.grid-template-rows.repeat

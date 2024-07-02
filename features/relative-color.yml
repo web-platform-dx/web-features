@@ -2,7 +2,6 @@ name: Relative colors
 description: "The `from` keyword for color functions (`color()`, `hsl()`, `oklch()`, etc.) creates a new color based on a given color by modifying the values of the input color. Also known as relative color syntax (RCS)."
 spec: https://drafts.csswg.org/css-color-5/#relative-colors
 caniuse: css-relative-colors
-usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/4632
 # TODO: Revisit when this has shipped in Firefox if we should retroactively
 # claim partial support in Chrome and Safari for some versions. If so, also make
 # the same changes in caniuse.

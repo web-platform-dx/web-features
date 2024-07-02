@@ -10,7 +10,23 @@ status:
     safari: "16.4"
     safari_ios: "16.4"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "78"
+  #   chrome_android: "78"
+  #   edge: "79"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
   - api.CSS.registerProperty_static
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "85"
+  #   chrome_android: "85"
+  #   edge: "85"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
   - api.CSSPropertyRule
   - api.CSSPropertyRule.inherits
   - api.CSSPropertyRule.initialValue

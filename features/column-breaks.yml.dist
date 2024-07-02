@@ -8,13 +8,55 @@ status:
     chrome_android: "102"
     edge: "102"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2019-01-29
+  # baseline_high_date: 2021-07-29
+  # support:
+  #   chrome: "50"
+  #   chrome_android: "50"
+  #   edge: "12"
+  #   firefox: "65"
+  #   firefox_android: "65"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - css.properties.break-inside.multicol_context
+
+  # baseline: high
+  # baseline_low_date: 2021-09-07
+  # baseline_high_date: 2024-03-07
+  # support:
+  #   chrome: "50"
+  #   chrome_android: "50"
+  #   edge: "12"
+  #   firefox: "92"
+  #   firefox_android: "92"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - css.properties.break-inside.multicol_context.avoid-column
+
+  # baseline: false
+  # support:
+  #   chrome: "50"
+  #   chrome_android: "50"
+  #   edge: "12"
   - css.properties.break-after.multicol_context
-  - css.properties.break-after.multicol_context.avoid
-  - css.properties.break-after.multicol_context.avoid-column
   - css.properties.break-after.multicol_context.column
   - css.properties.break-before.multicol_context
+
+  # baseline: false
+  # support:
+  #   chrome: "51"
+  #   chrome_android: "51"
+  #   edge: "12"
+  - css.properties.break-before.multicol_context.column
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "102"
+  #   chrome_android: "102"
+  #   edge: "102"
+  - css.properties.break-after.multicol_context.avoid
+  - css.properties.break-after.multicol_context.avoid-column
   - css.properties.break-before.multicol_context.avoid
   - css.properties.break-before.multicol_context.avoid-column
-  - css.properties.break-before.multicol_context.column
-  - css.properties.break-inside.multicol_context
-  - css.properties.break-inside.multicol_context.avoid-column

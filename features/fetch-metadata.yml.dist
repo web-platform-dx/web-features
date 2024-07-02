@@ -13,7 +13,29 @@ status:
     safari: "16.4"
     safari_ios: "16.4"
 compat_features:
-  - http.headers.Sec-Fetch-Dest
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "76"
+  #   chrome_android: "76"
+  #   edge: "79"
+  #   firefox: "90"
+  #   firefox_android: "90"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
   - http.headers.Sec-Fetch-Mode
   - http.headers.Sec-Fetch-Site
   - http.headers.Sec-Fetch-User
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "80"
+  #   chrome_android: "80"
+  #   edge: "80"
+  #   firefox: "90"
+  #   firefox_android: "90"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - http.headers.Sec-Fetch-Dest
