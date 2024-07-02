@@ -2,6 +2,12 @@ name: Fetch (initial support)
 description: The `fetch()` method makes asynchronous HTTP requests.
 spec: https://fetch.spec.whatwg.org/
 caniuse: fetch
+status:
+  compute_from:
+    - api.fetch
+    - api.Response
+    - api.Request
+    - api.Headers
 compat_features:
   - api.Headers
   - api.Headers.Headers
@@ -31,6 +37,7 @@ compat_features:
   - api.Response.clone
   - api.Response.headers
   - api.Response.json
+  - api.Response.json_static
   - api.Response.ok
   - api.Response.status
   - api.Response.statusText
