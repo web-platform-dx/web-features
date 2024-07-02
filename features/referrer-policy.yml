@@ -1,0 +1,29 @@
+name: Referrer policy
+description: The `Referrer-Policy` HTTP header and `referrerpolicy` HTML attributes control whether requests have the `Referer` header and what information the header contains.
+spec: https://w3c.github.io/webappsec-referrer-policy/
+caniuse: referrer-policy
+status:
+  compute_from:
+    - html.elements.a.referrerpolicy
+    - html.elements.area.referrerpolicy
+    - html.elements.iframe.referrerpolicy
+    - html.elements.img.referrerpolicy
+    - html.elements.link.referrerpolicy
+    - html.elements.script.referrerpolicy
+    - http.headers.Referrer-Policy
+    - http.headers.Referrer-Policy.default_strict-origin-when-cross-origin
+compat_features:
+  - api.HTMLAnchorElement.referrerPolicy
+  - api.HTMLAreaElement.referrerPolicy
+  - api.HTMLIFrameElement.referrerPolicy
+  - api.HTMLImageElement.referrerPolicy
+  - api.HTMLLinkElement.referrerPolicy
+  - api.HTMLScriptElement.referrerPolicy
+  - html.elements.a.referrerpolicy
+  - html.elements.area.referrerpolicy
+  - html.elements.iframe.referrerpolicy
+  - html.elements.img.referrerpolicy
+  - html.elements.link.referrerpolicy
+  - html.elements.script.referrerpolicy
+  - http.headers.Referrer-Policy
+  - http.headers.Referrer-Policy.default_strict-origin-when-cross-origin
