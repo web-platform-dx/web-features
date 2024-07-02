@@ -56,6 +56,22 @@ export class Feature {
     return this.data.__compat?.mdn_url;
   }
 
+  /**
+   * The feature's specification URLs as an array (whether there are any URLs or
+   * not).
+   */
+  get spec_url(): string[] {
+    const underlying = this.data.__compat?.spec_url;
+    if (underlying) {
+      return Array.isArray(underlying) ? underlying : [underlying];
+    }
+    return [];
+  }
+
+  get standard_track(): boolean {
+    return this.data.__compat?.status?.standard_track ?? false;
+  }
+
   _supportedBy(
     browser: Browser,
   ): { release: Release; qualifications?: Qualifications }[] {

@@ -26,6 +26,34 @@ describe("features", function () {
       });
     });
 
+    describe("standard_track", function () {
+      it("returns true only when true", function () {
+        const noStatus = feature("webextensions.manifest.storage");
+        assert.equal(noStatus.standard_track, false);
+
+        const nonStandard = feature("css.properties.-webkit-text-zoom");
+        assert.equal(nonStandard.standard_track, false);
+
+        const standard = feature("html.elements.table");
+        assert.equal(standard.standard_track, true);
+      });
+    });
+
+    describe("spec_url", function () {
+      it("returns an empty array if there's no spec_url", function () {
+        const noSpec = feature("javascript.builtins.Date.parse.iso_8601");
+        assert(noSpec.spec_url.length === 0);
+      });
+
+      it("returns an array regardless of the number of spec_urls", function () {
+        const oneSpec = feature("css.properties.grid").spec_url;
+        assert.equal(oneSpec.length, 1);
+
+        const twoSpecs = feature("css.properties.width").spec_url;
+        assert.equal(twoSpecs.length, 2);
+      });
+    });
+
     describe("tags", function () {
       it("returns an array for features with tags", function () {
         const f = feature("css.types.length.cap");

@@ -1,8 +1,8 @@
 import { Compat } from "compute-baseline/browser-compat-data";
 import fs from "node:fs/promises";
 import { fileURLToPath } from "node:url";
-import YAML from "yaml";
 import webSpecs from 'web-specs' assert { type: 'json' };
+import YAML from "yaml";
 import features from '../index.js';
 
 function* getPages(spec): Generator<string> {
@@ -56,18 +56,11 @@ async function main() {
     }
 
     // Skip deprecated and non-standard features.
-    const status = feature.data.__compat.status;
-    if (status?.deprecated || !status?.standard_track) {
+    if (feature.deprecated || !feature.standard_track) {
       continue;
     }
 
-    const spec_url = feature.data.__compat.spec_url;
-    if (!spec_url) {
-      continue;
-    }
-
-    const urls = Array.isArray(spec_url) ? spec_url : [spec_url];
-    for (const url of urls) {
+    for (const url of feature.spec_url) {
       const spec = pageToSpec.get(normalize(url));
       if (!spec) {
         console.warn(`${url} not matched to any spec`);
