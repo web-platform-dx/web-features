@@ -2,3 +2,9 @@ name: WebCodecs
 description: The WebCodecs API provides low-level access to individual video frames and chunks of audio samples, for full control over the way media is processed.
 spec: https://w3c.github.io/webcodecs/
 caniuse: webcodecs
+status:
+  compute_from:
+    - api.AudioDecoder.AudioDecoder
+    - api.AudioEncoder.AudioEncoder
+    - api.VideoDecoder.VideoDecoder
+    - api.VideoEncoder.VideoEncoder

@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "106"
-    chrome_android: "106"
-    edge: "106"
+    chrome: "94"
+    chrome_android: "94"
+    edge: "94"
 compat_features:
   # baseline: false
   # support:
@@ -92,6 +92,7 @@ compat_features:
   - api.VideoDecoder.dequeue_event
   - api.VideoEncoder.dequeue_event
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "94"
@@ -157,7 +158,6 @@ compat_features:
   - api.ImageTrackList.selectedIndex
   - api.ImageTrackList.selectedTrack
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "106"
