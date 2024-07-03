@@ -177,19 +177,7 @@ export class RealSupportStatement extends SupportStatement {
       ); // Release is on or after start and before the end
     }
 
-    let qualifications: Qualifications = {};
-    if (this.data.prefix) {
-      qualifications.prefix = this.data.prefix;
-    }
-    if (this.data.alternative_name) {
-      qualifications.alternative_name = this.data.alternative_name;
-    }
-    if (this.flags.length) {
-      qualifications.flags = this.flags;
-    }
-    if (this.partial_implementation) {
-      qualifications.partial_implementation = this.partial_implementation;
-    }
+    let qualifications: Qualifications = statementToQualifications(this);
     if (Object.keys(qualifications).length) {
       return releases.map((release) => ({ release, qualifications }));
     }
@@ -197,4 +185,23 @@ export class RealSupportStatement extends SupportStatement {
       release,
     }));
   }
+}
+
+function statementToQualifications(
+  statement: SupportStatement,
+): Qualifications {
+  let qualifications: Qualifications = {};
+  if (statement.data.prefix) {
+    qualifications.prefix = statement.data.prefix;
+  }
+  if (statement.data.alternative_name) {
+    qualifications.alternative_name = statement.data.alternative_name;
+  }
+  if (statement.flags.length) {
+    qualifications.flags = statement.flags;
+  }
+  if (statement.partial_implementation) {
+    qualifications.partial_implementation = statement.partial_implementation;
+  }
+  return qualifications;
 }
