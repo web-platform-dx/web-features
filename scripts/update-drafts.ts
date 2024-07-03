@@ -1,8 +1,8 @@
 import { Compat } from "compute-baseline/browser-compat-data";
 import fs from "node:fs/promises";
 import { fileURLToPath } from "node:url";
+import YAML , {Document, YAMLSeq, Scalar} from "yaml";
 import webSpecs from 'web-specs' assert { type: 'json' };
-import YAML from "yaml";
 import features from '../index.js';
 
 function* getPages(spec): Generator<string> {
@@ -35,9 +35,15 @@ async function main() {
   const compat = new Compat();
 
   // Build a set of used BCD keys.
-  const usedFeatures = new Set<string>(
-    Object.values(features).flatMap((data) => data.compat_features)
-  );
+  const usedFeatures = new Map<string,string>();
+  Object.values(features).map((data) => {
+    //console.log(data);
+    if(data.compat_features){
+    for(const compatFeature of data.compat_features){
+      usedFeatures.set(compatFeature, data.name);
+    }
+  }
+  })
 
   // Build a map from URLs to spec.
   const pageToSpec = new Map<string, object>();
@@ -50,17 +56,24 @@ async function main() {
   // Iterate BCD and group compat features by spec.
   const specToCompatFeatures = new Map<object, Set<string>>();
   for (const feature of compat.walk()) {
-    // Skip any BCD keys already used in web-features.
-    if (usedFeatures.has(feature.id)) {
-      continue;
-    }
+    // // Skip any BCD keys already used in web-features.
+    // if (usedFeatures.has(feature.id)) {
+    //   continue;
+    // }
 
     // Skip deprecated and non-standard features.
-    if (feature.deprecated || !feature.standard_track) {
+    const status = feature.data.__compat.status;
+    if (status?.deprecated || !status?.standard_track) {
       continue;
     }
 
-    for (const url of feature.spec_url) {
+    const spec_url = feature.data.__compat.spec_url;
+    if (!spec_url) {
+      continue;
+    }
+
+    const urls = Array.isArray(spec_url) ? spec_url : [spec_url];
+    for (const url of urls) {
       const spec = pageToSpec.get(normalize(url));
       if (!spec) {
         console.warn(`${url} not matched to any spec`);
@@ -79,14 +92,27 @@ async function main() {
     // Write out draft feature per spec.
     const id = spec.shortname;
 
-    const feature = {
+    const feature = new Document({
       draft_date: new Date().toISOString().substring(0, 10),
       name: spec.title,
       description: 'TODO',
       spec: spec.nightly?.url ?? spec.url,
-      compat_features: Array.from(compatFeatures).sort(),
-    };
-    const yaml = YAML.stringify(feature);
+      
+    });
+
+    // add compat_features with comments for the ones that are already mapped
+    const list = new YAMLSeq();
+    for (const key of Array.from(compatFeatures).sort()) {
+      const item = new Scalar(key);
+      if(usedFeatures.has(key)){
+        item.comment = `Already part of ${usedFeatures.get(key)}`;
+      }
+    list.add(item);
+    }
+
+    feature.set("compat_features", list);
+
+    const yaml = YAML.stringify(feature);    
     await fs.writeFile(`features/draft/spec/${id}.yml`, yaml);
   }
 }
