@@ -136,23 +136,14 @@ export class SupportStatement {
       );
     }
 
-    if (this.version_added === true) {
-      const result = new Map();
-      for (const r of this.browser.releases) {
-        if (r.inRange(this.browser.current())) {
-          result.set(r, { supported: true });
-        } else {
-          result.set(r, { supported: false });
-        }
-      }
-      return result;
-    }
-
     const result = new Map();
 
     let start: Release;
     let startRanged = false;
-    if (this.version_added.startsWith("≤")) {
+    if (this.version_added === true) {
+      startRanged = true;
+      start = this.browser.current();
+    } else if (this.version_added.startsWith("≤")) {
       startRanged = true;
       start = this.browser.version(this.version_added.slice(1));
     } else {
