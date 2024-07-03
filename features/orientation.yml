@@ -1,0 +1,9 @@
+name: Orientation Sensor
+description: The `AbsoluteOrientationSensor` and `RelativeOrientationSensor` APIs describe the physical orientation of a device in three-dimensional space, either in relation to the Earth's coordinate system or in relation to the device's own orientation, respectively.
+spec:
+  - https://w3c.github.io/orientation-sensor/#absoluteorientationsensor-interface
+  - https://w3c.github.io/orientation-sensor/#relativeorientationsensor-interface
+group: sensors
+compat_features:
+  - api.AbsoluteOrientationSensor
+  - api.RelativeOrientationSensor
