@@ -71,26 +71,6 @@ export class SupportStatement {
     this.feature = feature;
   }
 
-  _isRanged(key: "version_added" | "version_removed" | undefined): boolean {
-    if (key === undefined) {
-      return (
-        this._isRanged("version_added") || this._isRanged("version_removed")
-      );
-    }
-
-    const version = this.data?.[key];
-
-    if (
-      typeof version === "boolean" ||
-      version === undefined ||
-      version === null
-    ) {
-      return false;
-    }
-
-    return version.includes("≤");
-  }
-
   get flags(): FlagStatement[] {
     return this.data?.flags ?? [];
   }
