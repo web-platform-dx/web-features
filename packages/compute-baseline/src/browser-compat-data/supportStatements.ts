@@ -15,11 +15,14 @@ export interface Qualifications {
   partial_implementation?: true;
 }
 
-// TODO: This stuff is slow, clunky, and weirdly indirect. It was helpful to get
-// started (especially before I knew all of the variations that a given
-// statement could express), but we might be better served by extracting
-// `supportedBy()` into something like an `expandToReleases(browser: Browser,
-// statement: SimpleSupportStatement)` function or similar.
+export type Supported = { supported: true; qualifications?: Qualifications };
+export type Unsupported = { supported: false };
+export type UnknownSupport = { supported: null };
+
+export type ReleaseSupportMap = Map<
+  Release,
+  Supported | Unsupported | UnknownSupport
+>;
 
 export function statement(
   incoming:
@@ -111,6 +114,77 @@ export class SupportStatement {
     // Strictness guarantee: unset version_removed returns false
     return this.data?.version_removed || false;
   }
+
+  /**
+   * Expand this support statement into a `Map` from `Release` objects to objects
+   * describing whether the release is supporting, unsupporting, or unknown.
+   */
+  toReleaseSupportMap(): ReleaseSupportMap {
+    if (this.browser === undefined) {
+      throw Error("This support statement's browser is unknown.");
+    }
+
+    if (this.version_added === false || this.version_removed === true) {
+      return new Map(
+        this.browser.releases.map((r) => [r, { supported: false }]),
+      );
+    }
+
+    if (this.version_added === null) {
+      return new Map(
+        this.browser.releases.map((r) => [r, { supported: null }]),
+      );
+    }
+
+    if (this.version_added === true) {
+      const result = new Map();
+      for (const r of this.browser.releases) {
+        if (r.inRange(this.browser.current())) {
+          result.set(r, { supported: true });
+        } else {
+          result.set(r, { supported: false });
+        }
+      }
+      return result;
+    }
+
+    const result = new Map();
+
+    let start: Release;
+    let startRanged = false;
+    if (this.version_added.startsWith("≤")) {
+      startRanged = true;
+      start = this.browser.version(this.version_added.slice(1));
+    } else {
+      start = this.browser.version(this.version_added);
+    }
+
+    let end: Release | undefined;
+    if (this.version_removed) {
+      end = this.browser.version(this.version_removed);
+    }
+
+    const qualifications = statementToQualifications(this);
+    const isQualified = Boolean(Object.keys(qualifications).length);
+
+    for (const r of this.browser.releases) {
+      if (isQualified && r.inRange(start, end)) {
+        // Supported with qualifications
+        result.set(r, { supported: true, qualifications });
+      } else if (r.inRange(start, end)) {
+        // Supported without qualification
+        result.set(r, { supported: true });
+      } else if (startRanged && !r.inRange(start)) {
+        // Support unknown (before a ≤ version)
+        result.set(r, { supported: null });
+      } else {
+        // Unsupported (outside a hard range)
+        result.set(r, { supported: false });
+      }
+    }
+
+    return result;
+  }
 }
 
 export class RealSupportStatement extends SupportStatement {
@@ -148,9 +222,6 @@ export class RealSupportStatement extends SupportStatement {
     return super.version_removed as string | false;
   }
 
-  // TODO: `supportedBy()` ought to be (partially) implemented on non-real value
-  // support statements. For example, `"version_added": true` should allow for
-  // returning `[this.browser.current()]` at least.
   supportedBy(): { release: Release; qualifications?: Qualifications }[] {
     if (this.browser === undefined) {
       throw Error("This support statement's browser is unknown.");

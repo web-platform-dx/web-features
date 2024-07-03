@@ -101,6 +101,105 @@ describe("statements", function () {
         assert.equal(s.version_removed, false);
       });
     });
+
+    describe("toReleaseSupportMap()", function () {
+      it("expands false values to unsupported", function () {
+        const cr = browser("chrome");
+        const statement = new SupportStatement({ version_added: false }, cr);
+        const supportMap = statement.toReleaseSupportMap();
+
+        assert.equal(supportMap.size, cr.releases.length);
+        for (const { supported } of supportMap.values()) {
+          assert.equal(supported, false);
+        }
+      });
+
+      it("expands null values to unknown support", function () {
+        const cr = browser("chrome");
+        const statement = new SupportStatement({ version_added: null }, cr);
+        const supportMap = statement.toReleaseSupportMap();
+
+        assert.equal(supportMap.size, cr.releases.length);
+        for (const { supported } of supportMap.values()) {
+          assert.equal(supported, null);
+        }
+      });
+
+      it("expands true values to supported in current and future releases", function () {
+        const cr = browser("chrome");
+        const statement = new SupportStatement({ version_added: true }, cr);
+        const supportMap = statement.toReleaseSupportMap();
+
+        assert.equal(supportMap.size, cr.releases.length);
+        assert.equal(supportMap.get(cr.current())?.supported, true);
+        assert.equal(
+          supportMap.get(cr.releases.at(-1) as any)?.supported,
+          true,
+        );
+      });
+
+      it("expands open-ended statements to (unsupported, …, supported, …)", function () {
+        const cr = browser("chrome");
+        const statement = new SupportStatement({ version_added: "100" }, cr);
+        const supportMap = statement.toReleaseSupportMap();
+        const entries = [...supportMap.entries()];
+
+        assert.equal(supportMap.size, entries.length);
+        assert.equal(supportMap.get(cr.version("1"))?.supported, false);
+        assert.equal(supportMap.get(cr.version("99"))?.supported, false);
+        assert.equal(supportMap.get(cr.version("100"))?.supported, true);
+        assert.equal(supportMap.get(cr.version("101"))?.supported, true);
+        assert.equal(supportMap.get(cr.current())?.supported, true);
+        assert.equal(
+          supportMap.get(cr.releases.at(-1) as any)?.supported,
+          true,
+        );
+      });
+
+      it("expands ranged open-ended statements to (unknown, …, supported, …)", function () {
+        const cr = browser("chrome");
+        const statement = new SupportStatement({ version_added: "≤100" }, cr);
+        const supportMap = statement.toReleaseSupportMap();
+        const entries = [...supportMap.entries()];
+
+        assert.equal(supportMap.size, entries.length);
+        assert.equal(supportMap.get(cr.version("1"))?.supported, null);
+        assert.equal(supportMap.get(cr.version("99"))?.supported, null);
+        assert.equal(supportMap.get(cr.version("100"))?.supported, true);
+        assert.equal(supportMap.get(cr.version("101"))?.supported, true);
+        assert.equal(supportMap.get(cr.current())?.supported, true);
+        console.log(cr.releases.at(-1) as any);
+        console.log(supportMap.get(cr.releases.at(-1) as any));
+        assert.equal(
+          supportMap.get(cr.releases.at(-1) as any)?.supported,
+          true,
+        );
+      });
+
+      it("expands ranged closed statements to (unknown, …, supported, …, unsupported, …)", function () {
+        const cr = browser("chrome");
+        const statement = new SupportStatement(
+          { version_added: "≤100", version_removed: "125" },
+          cr,
+        );
+        const supportMap = statement.toReleaseSupportMap();
+        const entries = [...supportMap.entries()];
+
+        assert.equal(supportMap.size, entries.length);
+        assert.equal(supportMap.get(cr.version("1"))?.supported, null);
+        assert.equal(supportMap.get(cr.version("99"))?.supported, null);
+        assert.equal(supportMap.get(cr.version("100"))?.supported, true);
+        assert.equal(supportMap.get(cr.version("101"))?.supported, true);
+        assert.equal(supportMap.get(cr.version("124"))?.supported, true);
+        assert.equal(supportMap.get(cr.version("125"))?.supported, false);
+        assert.equal(supportMap.get(cr.version("126"))?.supported, false);
+        assert.equal(supportMap.get(cr.current())?.supported, false);
+        assert.equal(
+          supportMap.get(cr.releases.at(-1) as any)?.supported,
+          false,
+        );
+      });
+    });
   });
 
   describe("RealSupportStatement", function () {
