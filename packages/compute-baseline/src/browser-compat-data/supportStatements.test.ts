@@ -96,9 +96,17 @@ describe("statements", function () {
         assert.equal(s.version_removed, "2");
       });
 
-      it("returns false for undefined", function () {
-        const s = new SupportStatement({ version_added: "1" });
+      it("returns false", function () {
+        const s = new SupportStatement({
+          version_added: "1",
+          version_removed: false,
+        });
         assert.equal(s.version_removed, false);
+      });
+
+      it("returns undefined", function () {
+        const s = new SupportStatement({ version_added: "1" });
+        assert.equal(s.version_removed, undefined);
       });
     });
 

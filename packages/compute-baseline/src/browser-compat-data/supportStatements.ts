@@ -90,9 +90,29 @@ export class SupportStatement {
     return this.data?.version_added;
   }
 
-  get version_removed(): VersionValue {
-    // Strictness guarantee: unset version_removed returns false
-    return this.data?.version_removed || false;
+  get version_removed(): string | boolean | undefined {
+    const value = this.data?.version_removed;
+
+    // TODO: Report and fix upstream bug in BCD, then uncomment or drop the code
+    // below
+
+    // According to @mdn/browser-compat-data's schema, `version_removed` values
+    // should only be `true` or strings. In practice (and according to the
+    // exported types), this is not the case, because mirroring inserts `false`
+    // values.
+
+    // if (value === null || value === false) {
+    //   throw new Error(
+    //     "`version_added` should never be `null` or `false`. This is a bug, so please file an issue!",
+    //   );
+    // }
+    if (value === null) {
+      throw new Error(
+        "`version_added` should never be `null`. This is a bug, so please file an issue!",
+      );
+    }
+
+    return value;
   }
 
   /**
@@ -194,12 +214,12 @@ export class RealSupportStatement extends SupportStatement {
     }
   }
 
-  get version_added() {
+  get version_added(): string | false {
     return super.version_added as string | false;
   }
 
-  get version_removed() {
-    return super.version_removed as string | false;
+  get version_removed(): string | false | undefined {
+    return super.version_removed as string | false | undefined;
   }
 
   supportedBy(): { release: Release; qualifications?: Qualifications }[] {
@@ -219,7 +239,7 @@ export class RealSupportStatement extends SupportStatement {
     }
 
     let releases;
-    if (this.version_removed === undefined) {
+    if (this.version_removed === undefined || this.version_removed === false) {
       releases = this.browser.releases.filter((rel) => rel.inRange(start));
     } else {
       const end: Release = this.browser.version(this.version_removed);
