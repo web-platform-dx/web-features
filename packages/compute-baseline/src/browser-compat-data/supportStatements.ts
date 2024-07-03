@@ -168,13 +168,11 @@ export class RealSupportStatement extends SupportStatement {
     }
 
     let releases;
-    if (this.version_removed === false) {
-      releases = this.browser.releases.filter((rel) => rel.compare(start) >= 0); // Release is on or after start
+    if (this.version_removed === undefined) {
+      releases = this.browser.releases.filter((rel) => rel.inRange(start));
     } else {
       const end: Release = this.browser.version(this.version_removed);
-      releases = this.browser.releases.filter(
-        (rel) => rel.compare(start) >= 0 && rel.compare(end) < 0,
-      ); // Release is on or after start and before the end
+      releases = this.browser.releases.filter((rel) => rel.inRange(start, end));
     }
 
     let qualifications: Qualifications = statementToQualifications(this);

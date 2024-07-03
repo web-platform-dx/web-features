@@ -87,4 +87,30 @@ describe("Release", function () {
       assert.equal(safariPreview.isPrerelease(), true);
     });
   });
+
+  describe("inRange()", function () {
+    it("handles closed ranges", function () {
+      const cr = browser("chrome");
+      assert.equal(
+        cr.version("1").inRange(cr.version("1"), cr.version("125")),
+        true,
+      );
+      assert.equal(
+        cr.version("1").inRange(cr.version("10"), cr.version("15")),
+        false,
+      );
+      assert.equal(
+        cr.version("100").inRange(cr.version("10"), cr.version("15")),
+        false,
+      );
+    });
+
+    it("handles open ranges", function () {
+      const cr = browser("chrome");
+      assert.equal(cr.version("1").inRange(cr.version("1")), true);
+      assert.equal(cr.version("1").inRange(cr.version("10")), false);
+      assert.equal(cr.version("100").inRange(cr.version("10")), true);
+      assert.equal(cr.version("preview").inRange(cr.version("10")), true);
+    });
+  });
 });
