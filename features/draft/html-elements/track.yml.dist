@@ -37,8 +37,20 @@ compat_features:
   - html.elements.track.default
   - html.elements.track.kind
   - html.elements.track.label
-  - html.elements.track.src
   - html.elements.track.srclang
+
+  # baseline: high
+  # baseline_low_date: 2016-11-15
+  # baseline_high_date: 2019-05-15
+  # support:
+  #   chrome: "23"
+  #   chrome_android: "25"
+  #   edge: "12"
+  #   firefox: "50"
+  #   firefox_android: "50"
+  #   safari: "6"
+  #   safari_ios: "6"
+  - html.elements.track.src
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: high
