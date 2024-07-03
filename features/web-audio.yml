@@ -1,0 +1,25 @@
+name: Web Audio
+description: The Web Audio API creates graphs of audio nodes used to handle sound inputs, synthesize sounds, apply effects, create visualizations, and output to audio devices.
+spec: https://webaudio.github.io/web-audio-api/#AudioContext
+caniuse: audio-api
+compat_features:
+  - api.AnalyserNode
+  - api.AudioBuffer
+  - api.AudioBufferSourceNode
+  - api.AudioContext
+  - api.AudioDestinationNode
+  - api.AudioListener
+  - api.AudioNode
+  - api.AudioParam
+  - api.BiquadFilterNode
+  - api.ChannelMergerNode
+  - api.ChannelSplitterNode
+  - api.ConvolverNode
+  - api.DelayNode
+  - api.DynamicsCompressorNode
+  - api.GainNode
+  - api.MediaElementAudioSourceNode
+  - api.OscillatorNode
+  - api.PannerNode
+  - api.PeriodicWave
+  - api.WaveShaperNode
