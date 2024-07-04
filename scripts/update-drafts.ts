@@ -1,7 +1,7 @@
 import { Compat } from "compute-baseline/browser-compat-data";
 import fs from "node:fs/promises";
 import { fileURLToPath } from "node:url";
-import YAML , {Document, YAMLSeq, Scalar} from "yaml";
+import {Document} from "yaml";
 import webSpecs from 'web-specs' assert { type: 'json' };
 import features from '../index.js';
 
@@ -37,7 +37,6 @@ async function main() {
   // Build a set of used BCD keys.
   const webFeatures = new Map<string,string>();
   Object.values(features).map((data) => {
-    //console.log(data);
     if(data.compat_features){
     for(const compatFeature of data.compat_features){
       webFeatures.set(compatFeature, data.name);
@@ -100,7 +99,7 @@ async function main() {
        }
      }
 
-         // Write out draft feature per spec.
+    // Write out draft feature per spec.
     const id = spec.shortname;
 
     const feature = new Document({
