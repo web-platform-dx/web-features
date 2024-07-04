@@ -1,0 +1,17 @@
+name: OfflineAudioContext
+description: The `OfflineAudioContext` API TODO.
+spec: https://webaudio.github.io/web-audio-api/#OfflineAudioContext
+group: web-audio
+status:
+  compute_from: api.OfflineAudioContext.OfflineAudioContext
+compat_features:
+  - api.OfflineAudioCompletionEvent
+  - api.OfflineAudioCompletionEvent.OfflineAudioCompletionEvent
+  - api.OfflineAudioCompletionEvent.renderedBuffer
+  - api.OfflineAudioContext
+  - api.OfflineAudioContext.OfflineAudioContext
+  - api.OfflineAudioContext.complete_event
+  - api.OfflineAudioContext.length
+  - api.OfflineAudioContext.resume
+  - api.OfflineAudioContext.startRendering
+  - api.OfflineAudioContext.suspend
