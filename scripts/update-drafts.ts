@@ -35,12 +35,12 @@ async function main() {
   const compat = new Compat();
 
   // Build a set of used BCD keys.
-  const usedFeatures = new Map<string,string>();
+  const webFeatures = new Map<string,string>();
   Object.values(features).map((data) => {
     //console.log(data);
     if(data.compat_features){
     for(const compatFeature of data.compat_features){
-      usedFeatures.set(compatFeature, data.name);
+      webFeatures.set(compatFeature, data.name);
     }
   }
   })
@@ -56,10 +56,6 @@ async function main() {
   // Iterate BCD and group compat features by spec.
   const specToCompatFeatures = new Map<object, Set<string>>();
   for (const feature of compat.walk()) {
-    // // Skip any BCD keys already used in web-features.
-    // if (usedFeatures.has(feature.id)) {
-    //   continue;
-    // }
 
     // Skip deprecated and non-standard features.
     const status = feature.data.__compat.status;
@@ -89,7 +85,22 @@ async function main() {
   }
 
   for (const [spec, compatFeatures] of specToCompatFeatures.entries()) {
-    // Write out draft feature per spec.
+
+    // Separate out features that are already part of web-features.
+    const usedFeatures = new Map<string,Set<String>>();
+     for (const key of compatFeatures) {
+       if(webFeatures.has(key)){
+         const feature = webFeatures.get(key);
+         if(usedFeatures.has(feature)){
+           usedFeatures.get(feature).add(key);
+         } else {
+           usedFeatures.set(feature, new Set([key]));
+         }
+         compatFeatures.delete(key);
+       }
+     }
+
+         // Write out draft feature per spec.
     const id = spec.shortname;
 
     const feature = new Document({
@@ -97,23 +108,19 @@ async function main() {
       name: spec.title,
       description: 'TODO',
       spec: spec.nightly?.url ?? spec.url,
-      
+      compat_features: Array.from(compatFeatures).sort(),
     });
 
-    // add compat_features with comments for the ones that are already mapped
-    const list = new YAMLSeq();
-    for (const key of Array.from(compatFeatures).sort()) {
-      const item = new Scalar(key);
-      if(usedFeatures.has(key)){
-        item.comment = `Already part of ${usedFeatures.get(key)}`;
+    if(usedFeatures.size > 0) {
+      let usedFeaturesComment = ` The following features in the Spec are already part of web-features: \n`;
+      for(const [feature, keys] of usedFeatures.entries()){
+        usedFeaturesComment += ` - ${feature}:\n    ${Array.from(keys).join(",\n    ")}\n`;
       }
-    list.add(item);
+
+     feature.comment = usedFeaturesComment.trimEnd();
+
     }
-
-    feature.set("compat_features", list);
-
-    const yaml = YAML.stringify(feature);    
-    await fs.writeFile(`features/draft/spec/${id}.yml`, yaml);
+    await fs.writeFile(`features/draft/spec/${id}.yml`, feature.toString());
   }
 }
 
