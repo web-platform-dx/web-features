@@ -40,6 +40,16 @@ describe("Release", function () {
   });
 
   describe("compare()", function () {
+    it("throws when comparing between two browsers", function () {
+      const cr = browser("chrome");
+      const ed = browser("edge");
+
+      assert.throws(
+        () => cr.version("100").inRange(ed.version("79"), cr.version("125")),
+        Error,
+      );
+    });
+
     it("returns 0 for equivalent releases", function () {
       const chrome100 = browser("chrome").version("100");
       assert.equal(chrome100.compare(chrome100), 0);
@@ -89,6 +99,13 @@ describe("Release", function () {
   });
 
   describe("inRange()", function () {
+    it("throws when comparing between two browsers", function () {
+      const cr = browser("chrome");
+      const fx = browser("firefox");
+
+      assert.throws(() => cr.version("50").inRange(fx.version("50")), Error);
+    });
+
     it("handles closed ranges", function () {
       const cr = browser("chrome");
       assert.equal(
