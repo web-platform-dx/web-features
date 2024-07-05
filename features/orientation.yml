@@ -5,5 +5,8 @@ spec:
   - https://w3c.github.io/orientation-sensor/#relativeorientationsensor-interface
 group: sensors
 compat_features:
+  - api.OrientationSensor
+  - api.OrientationSensor.populateMatrix
+  - api.OrientationSensor.quaternion
   - api.AbsoluteOrientationSensor
   - api.RelativeOrientationSensor

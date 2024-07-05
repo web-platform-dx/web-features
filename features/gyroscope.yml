@@ -4,3 +4,9 @@ spec: https://w3c.github.io/gyroscope/#gyroscope-interface
 group: sensors
 compat_features:
   - api.Gyroscope
+  - api.Gyroscope.x
+  - api.Gyroscope.y
+  - api.Gyroscope.z
+  - api.Permissions.permission_gyroscope
+  # Later addition
+  # - http.headers.Permissions-Policy.gyroscope

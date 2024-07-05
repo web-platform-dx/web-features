@@ -8,4 +8,20 @@ status:
     chrome_android: "67"
     edge: "79"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "51"
+  #   chrome_android: "51"
+  #   edge: "79"
+  - api.Permissions.permission_gyroscope
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "67"
+  #   chrome_android: "67"
+  #   edge: "79"
   - api.Gyroscope
+  - api.Gyroscope.x
+  - api.Gyroscope.y
+  - api.Gyroscope.z

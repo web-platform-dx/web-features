@@ -8,5 +8,21 @@ status:
     chrome_android: "67"
     edge: "79"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "62"
+  #   chrome_android: "62"
+  #   edge: "79"
+  - api.Permissions.permission_accelerometer
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "67"
+  #   chrome_android: "67"
+  #   edge: "79"
   - api.Accelerometer
+  - api.Accelerometer.x
+  - api.Accelerometer.y
+  - api.Accelerometer.z
   - api.LinearAccelerationSensor

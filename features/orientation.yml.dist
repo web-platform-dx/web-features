@@ -9,4 +9,7 @@ status:
     edge: "79"
 compat_features:
   - api.AbsoluteOrientationSensor
+  - api.OrientationSensor
+  - api.OrientationSensor.populateMatrix
+  - api.OrientationSensor.quaternion
   - api.RelativeOrientationSensor
