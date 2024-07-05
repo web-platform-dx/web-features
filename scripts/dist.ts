@@ -216,6 +216,10 @@ function toDist(sourcePath: string): YAML.Document {
     insertCompatFeatures(dist, sortedGroups);
   }
 
+  if (dist.contents.items.length === 0) {
+    dist.comment = ' Nothing is generated, nothing to see here.'
+  }
+
   return dist;
 }
 
