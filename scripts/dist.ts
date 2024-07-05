@@ -192,7 +192,7 @@ function toDist(sourcePath: string): YAML.Document {
   const sortedGroups = new Map<string, string[]>();
   for (const status of sortedStatus) {
     let comment = YAML.stringify(status);
-    if (isDeepStrictEqual(status, computedStatus)) {
+    if (isDeepStrictEqual(status, source.status ?? computedStatus)) {
       comment = `⬇️ Same status as overall feature ⬇️\n${comment}`;
     }
     sortedGroups.set(comment, groups.get(status));
