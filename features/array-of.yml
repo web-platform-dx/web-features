@@ -8,16 +8,4 @@ group:
   - arrays
   - typed-arrays
 status:
-  baseline: high
-  baseline_low_date: 2016-09-20
-  support:
-    chrome: "45"
-    chrome_android: "39"
-    edge: "12"
-    firefox: "25"
-    firefox_android: "25"
-    safari: "10"
-    safari_ios: "10"
-compat_features:
-  - javascript.builtins.Array.of
-  - javascript.builtins.TypedArray.of
+  compute_from: javascript.builtins.Array.of

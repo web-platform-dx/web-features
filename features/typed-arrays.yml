@@ -20,67 +20,15 @@ spec:
   - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-%25typedarray%25.prototype.tostring
 snapshot: ecmascript-2015
 group: typed-arrays
-status:
-  baseline: high
-  baseline_low_date: 2015-07-29
-  support:
-    chrome: "7"
-    chrome_android: "18"
-    edge: "12"
-    firefox: "4"
-    firefox_android: "4"
-    safari: "5.1"
-    safari_ios: "4.2"
 caniuse: typedarrays
-compat_features:
-  - javascript.builtins.Float32Array
-  - javascript.builtins.Float32Array.Float32Array
-  - javascript.builtins.Float32Array.Float32Array.constructor_without_parameters
-  - javascript.builtins.Float32Array.Float32Array.iterable_allowed
-  - javascript.builtins.Float64Array
-  - javascript.builtins.Float64Array.Float64Array
-  - javascript.builtins.Float64Array.Float64Array.constructor_without_parameters
-  - javascript.builtins.Float64Array.Float64Array.iterable_allowed
-  - javascript.builtins.Int16Array
-  - javascript.builtins.Int16Array.Int16Array
-  - javascript.builtins.Int16Array.Int16Array.constructor_without_parameters
-  - javascript.builtins.Int32Array
-  - javascript.builtins.Int32Array.Int32Array
-  - javascript.builtins.Int32Array.Int32Array.constructor_without_parameters
-  - javascript.builtins.Int32Array.Int32Array.iterable_allowed
-  - javascript.builtins.Int8Array
-  - javascript.builtins.Int8Array.Int8Array
-  - javascript.builtins.Int8Array.Int8Array.constructor_without_parameters
-  - javascript.builtins.Int8Array.Int8Array.iterable_allowed
-  - javascript.builtins.TypedArray
-  - javascript.builtins.TypedArray.BYTES_PER_ELEMENT
-  - javascript.builtins.TypedArray.buffer
-  - javascript.builtins.TypedArray.byteLength
-  - javascript.builtins.TypedArray.byteOffset
-  - javascript.builtins.TypedArray.constructor_without_parameters
-  - javascript.builtins.TypedArray.join
-  - javascript.builtins.TypedArray.length
-  - javascript.builtins.TypedArray.name
-  - javascript.builtins.TypedArray.named_properties
-  - javascript.builtins.TypedArray.reverse
-  - javascript.builtins.TypedArray.set
-  - javascript.builtins.TypedArray.slice
-  - javascript.builtins.TypedArray.sort
-  - javascript.builtins.TypedArray.subarray
-  - javascript.builtins.TypedArray.toLocaleString
-  - javascript.builtins.TypedArray.toString
-  - javascript.builtins.Uint16Array
-  - javascript.builtins.Uint16Array.Uint16Array
-  - javascript.builtins.Uint16Array.Uint16Array.constructor_without_parameters
-  - javascript.builtins.Uint16Array.Uint16Array.iterable_allowed
-  - javascript.builtins.Uint32Array
-  - javascript.builtins.Uint32Array.Uint32Array
-  - javascript.builtins.Uint32Array.Uint32Array.constructor_without_parameters
-  - javascript.builtins.Uint32Array.Uint32Array.iterable_allowed
-  - javascript.builtins.Uint8Array
-  - javascript.builtins.Uint8Array.Uint8Array
-  - javascript.builtins.Uint8Array.Uint8Array.constructor_without_parameters
-  - javascript.builtins.Uint8Array.Uint8Array.iterable_allowed
-  - javascript.builtins.Uint8ClampedArray
-  - javascript.builtins.Uint8ClampedArray.Uint8ClampedArray
-  - javascript.builtins.Uint8ClampedArray.Uint8ClampedArray.iterable_allowed
+status:
+  compute_from:
+    - javascript.builtins.Float32Array.Float32Array
+    - javascript.builtins.Float64Array.Float64Array
+    - javascript.builtins.Int16Array.Int16Array
+    - javascript.builtins.Int32Array.Int32Array
+    - javascript.builtins.Int8Array.Int8Array
+    - javascript.builtins.Uint16Array.Uint16Array
+    - javascript.builtins.Uint32Array.Uint32Array
+    - javascript.builtins.Uint8Array.Uint8Array
+    - javascript.builtins.Uint8ClampedArray.Uint8ClampedArray
