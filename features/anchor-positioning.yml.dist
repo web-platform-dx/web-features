@@ -8,6 +8,12 @@ status:
     chrome_android: "125"
     edge: "125"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
   - api.CSSPositionTryDescriptors
   - api.CSSPositionTryDescriptors.align-self
   - api.CSSPositionTryDescriptors.alignSelf
@@ -170,3 +176,7 @@ compat_features:
   - css.properties.width.anchor-size
   - css.types.anchor
   - css.types.anchor-size
+
+  # baseline: false
+  # support: {}
+  - css.properties.position-anchor.auto
