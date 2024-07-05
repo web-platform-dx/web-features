@@ -1,5 +1,6 @@
 name: Asynchronously iterable streams
 description: Asynchronous iteration of a stream allows you to use `for await...of` loops to iterate through a stream's incoming data.
 spec: https://streams.spec.whatwg.org/#rs-asynciterator
+group: streams
 compat_features:
   - api.ReadableStream.@@asyncIterator
