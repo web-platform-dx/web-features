@@ -80,6 +80,11 @@ describe("statements", function () {
         const s = new SupportStatement({});
         assert.equal(s.version_added, false);
       });
+
+      it("returns null for null", function () {
+        const s = new SupportStatement({ version_added: null });
+        assert.equal(s.version_added, null);
+      });
     });
 
     describe("#version_removed", function () {
