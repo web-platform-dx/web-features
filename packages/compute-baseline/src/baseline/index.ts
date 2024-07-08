@@ -7,7 +7,7 @@ import { Compat, defaultCompat } from "../browser-compat-data/compat.js";
 import { feature } from "../browser-compat-data/feature.js";
 import { Release } from "../browser-compat-data/release.js";
 import { browsers } from "./core-browser-set.js";
-import { isFuture, toDateString, toHighDate } from "./date-utils.js";
+import { toDateString, toHighDate } from "./date-utils.js";
 import { support } from "./support.js";
 
 interface Logger {
@@ -90,6 +90,14 @@ export function computeBaseline(
   },
   compat: Compat = defaultCompat,
 ): SupportDetails {
+  // A cutoff date approximating "now" is needed to determine when a feature has
+  // entered Baseline high. We use BCD's __meta.timestamp for this, but any
+  // "clock" based on the state of the tree that ticks frequently would work.
+  const timestamp: string = (compat.data as any).__meta.timestamp;
+  const cutoffDate = Temporal.Instant.from(timestamp)
+    .toZonedDateTimeISO("UTC")
+    .toPlainDate();
+
   const { compatKeys } = featureSelector;
   const keys = featureSelector.checkAncestors
     ? compatKeys.flatMap((key) => withAncestors(key, compat))
@@ -101,11 +109,9 @@ export function computeBaseline(
   const keystoneDate = findKeystoneDate(
     statuses.flatMap((s) => [...s.support.values()]),
   );
-  const { baseline, baseline_low_date, baseline_high_date, discouraged } =
-    keystoneDateToStatus(
-      keystoneDate,
-      statuses.some((s) => s.discouraged),
-    );
+  const discouraged = statuses.some((s) => s.discouraged);
+  const { baseline, baseline_low_date, baseline_high_date } =
+    keystoneDateToStatus(keystoneDate, cutoffDate, discouraged);
 
   return {
     baseline,
@@ -123,24 +129,12 @@ export function computeBaseline(
  * Compute the Baseline support ("high", "low" or false, dates, and releases)
  * for a single compat key.
  */
-function calculate(compatKey: string, compat: Compat): SupportDetails {
+function calculate(compatKey: string, compat: Compat) {
   const f = feature(compatKey);
-  const s = support(f, browsers(compat));
-  const keystoneDate = findKeystoneDate([...s.values()]);
-
-  const { baseline, baseline_low_date, baseline_high_date, discouraged } =
-    keystoneDateToStatus(keystoneDate, f.deprecated ?? false);
 
   return {
-    compatKey,
-    baseline,
-    baseline_low_date,
-    baseline_high_date,
-    discouraged,
-    support: s,
-    toJSON: function () {
-      return jsonify(this);
-    },
+    discouraged: f.deprecated ?? false,
+    support: support(f, browsers(compat)),
   };
 }
 
@@ -202,41 +196,32 @@ function collateSupport(
  */
 export function keystoneDateToStatus(
   date: Temporal.PlainDate | null,
+  cutoffDate: Temporal.PlainDate,
   discouraged: boolean,
 ): {
   baseline: BaselineStatus;
   baseline_low_date: BaselineDate;
   baseline_high_date: BaselineDate;
-  discouraged: boolean;
 } {
-  let baseline: BaselineStatus;
-  let baseline_low_date;
-  let baseline_high_date;
-
-  if (discouraged || date === null || isFuture(date)) {
-    baseline = false;
-    baseline_low_date = null;
-    baseline_high_date = null;
-    discouraged = discouraged;
-  } else {
-    baseline = "low";
-    baseline_low_date = toDateString(date);
-    baseline_high_date = null;
-    discouraged = false;
+  if (date == null || discouraged) {
+    return {
+      baseline: false,
+      baseline_low_date: null,
+      baseline_high_date: null,
+    };
   }
 
-  if (baseline === "low") {
-    assert(date !== null);
-    const possibleHighDate = toHighDate(date);
-    if (isFuture(possibleHighDate)) {
-      baseline_high_date = null;
-    } else {
-      baseline = "high";
-      baseline_high_date = toDateString(possibleHighDate);
-    }
+  let baseline: BaselineStatus = "low";
+  let baseline_low_date: BaselineDate = toDateString(date);
+  let baseline_high_date: BaselineDate = null;
+
+  const possibleHighDate = toHighDate(date);
+  if (Temporal.PlainDate.compare(possibleHighDate, cutoffDate) <= 0) {
+    baseline = "high";
+    baseline_high_date = toDateString(possibleHighDate);
   }
 
-  return { baseline, baseline_low_date, baseline_high_date, discouraged };
+  return { baseline, baseline_low_date, baseline_high_date };
 }
 
 /**
