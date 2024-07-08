@@ -1,0 +1,24 @@
+name: Contact picker
+description: The `navigator.contacts` API allows you to ask users to share limited details about entries in their contact list with your application.
+spec: https://w3c.github.io/contact-picker/#contacts-manager
+status:
+  # This makes the feature be supported starting with Chrome 80, which is in line with what MDN documents.
+  # See https://github.com/web-platform-dx/web-features/pull/1326 for more information.
+  compute_from: api.Navigator.contacts
+compat_features:
+  - api.Navigator.contacts
+  - api.ContactsManager
+  - api.ContactsManager.getProperties
+  - api.ContactsManager.select
+  - api.ContactAddress
+  - api.ContactAddress.addressLine
+  - api.ContactAddress.city
+  - api.ContactAddress.country
+  - api.ContactAddress.dependentLocality
+  - api.ContactAddress.organization
+  - api.ContactAddress.phone
+  - api.ContactAddress.postalCode
+  - api.ContactAddress.recipient
+  - api.ContactAddress.region
+  - api.ContactAddress.sortingCode
+  - api.ContactAddress.toJSON
