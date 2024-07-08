@@ -19,11 +19,6 @@ export type Supported = { supported: true; qualifications?: Qualifications };
 export type Unsupported = { supported: false };
 export type UnknownSupport = { supported: null };
 
-export type ReleaseSupportMap = Map<
-  Release,
-  Supported | Unsupported | UnknownSupport
->;
-
 export function statement(
   incoming:
     | Partial<SimpleSupportStatement>
@@ -114,68 +109,6 @@ export class SupportStatement {
 
     return value;
   }
-
-  /**
-   * Expand this support statement into a `Map` from `Release` objects to objects
-   * describing whether the release is supporting, unsupporting, or unknown.
-   */
-  toReleaseSupportMap(): ReleaseSupportMap {
-    if (this.browser === undefined) {
-      throw Error("This support statement's browser is unknown.");
-    }
-
-    if (this.version_added === false || this.version_removed === true) {
-      return new Map(
-        this.browser.releases.map((r) => [r, { supported: false }]),
-      );
-    }
-
-    if (this.version_added === null) {
-      return new Map(
-        this.browser.releases.map((r) => [r, { supported: null }]),
-      );
-    }
-
-    const result = new Map();
-
-    let start: Release;
-    let startRanged = false;
-    if (this.version_added === true) {
-      startRanged = true;
-      start = this.browser.current();
-    } else if (this.version_added.startsWith("≤")) {
-      startRanged = true;
-      start = this.browser.version(this.version_added.slice(1));
-    } else {
-      start = this.browser.version(this.version_added);
-    }
-
-    let end: Release | undefined;
-    if (this.version_removed) {
-      end = this.browser.version(this.version_removed);
-    }
-
-    const qualifications = statementToQualifications(this);
-    const isQualified = Boolean(Object.keys(qualifications).length);
-
-    for (const r of this.browser.releases) {
-      if (isQualified && r.inRange(start, end)) {
-        // Supported with qualifications
-        result.set(r, { supported: true, qualifications });
-      } else if (r.inRange(start, end)) {
-        // Supported without qualification
-        result.set(r, { supported: true });
-      } else if (startRanged && !r.inRange(start)) {
-        // Support unknown (before a ≤ version)
-        result.set(r, { supported: null });
-      } else {
-        // Unsupported (outside a hard range)
-        result.set(r, { supported: false });
-      }
-    }
-
-    return result;
-  }
 }
 
 export class RealSupportStatement extends SupportStatement {
@@ -211,6 +144,105 @@ export class RealSupportStatement extends SupportStatement {
 
   get version_removed(): string | false | undefined {
     return super.version_removed as string | false | undefined;
+  }
+
+  /**
+   * Find out whether this support statement says a given browser release is
+   * supported (with or without qualifications), unsupported, or unknown.
+   */
+  supportedIn(release: Release): Supported | Unsupported | UnknownSupport {
+    if (this.browser === undefined) {
+      throw new Error("This support statement's browser is unknown.");
+    }
+
+    if (release.browser !== this.browser) {
+      throw new Error(
+        "Browser-release mismatch. The release is not part of the statement's browser's set of releases.",
+      );
+    }
+
+    if (this.version_added === false) {
+      return { supported: false };
+    }
+
+    // From here, some releases might be supporting
+    const qualifications = statementToQualifications(this);
+    const asSupported = Boolean(Object.keys(qualifications).length)
+      ? { supported: true, qualifications }
+      : { supported: true };
+
+    // Let's deal with the most fiendish case first:
+    // { version_added: "≤", version_removed: "≤…" }
+    // That is, a case where unknown values are in two version ranges:
+    // - Supported in version_added
+    // - Unsupported from version_removed
+    // - Unknown before version_added
+    // - Unknown from version_added + 1 to removed (exclusive)
+    if (
+      isRangedVersion(this.version_added) &&
+      isRangedVersion(this.version_removed)
+    ) {
+      const supportedIn = this.browser.version(
+        this.version_added.replaceAll("≤", ""),
+      ) as Release;
+      const unsupportedFrom = this.browser.version(
+        this.version_removed.replaceAll("≤", ""),
+      ) as Release;
+
+      if (release === supportedIn) {
+        return asSupported;
+      }
+      if (release.inRange(unsupportedFrom)) {
+        return { supported: false };
+      }
+      return { supported: null };
+    }
+
+    const initial = this.browser.releases[0] as Release;
+
+    // The other fiendish case is:
+    // { version_added: "…", version_removed: "≤…" }
+    // That is, cases such that:
+    // - Supported in version_added
+    // - Unsupported before version_added
+    // - Unsupported from version_removed
+    // - Unknown from version_added + 1 to removed (exclusive)
+    if (
+      isFixedVersion(this.version_added) &&
+      isRangedVersion(this.version_removed)
+    ) {
+      const supportedIn = this.browser.version(this.version_added);
+      const unsupportedFrom = this.browser.version(
+        this.version_removed.replaceAll("≤", ""),
+      ) as Release;
+
+      if (release === supportedIn) {
+        return asSupported;
+      }
+      if (
+        release.inRange(unsupportedFrom) ||
+        release.inRange(initial, supportedIn)
+      ) {
+        return { supported: false };
+      }
+      return { supported: null };
+    }
+
+    const start = this.browser.version(this.version_added.replaceAll("≤", ""));
+    const startRanged = isRangedVersion(this.version_added);
+
+    const end: Release | undefined =
+      typeof this.version_removed === "string"
+        ? this.browser.version(this.version_removed)
+        : undefined;
+
+    if (release.inRange(start, end)) {
+      return asSupported;
+    }
+    if (startRanged && release.inRange(initial, start)) {
+      return { supported: null };
+    }
+    return { supported: false };
   }
 
   supportedBy(): { release: Release; qualifications?: Qualifications }[] {
@@ -264,4 +296,12 @@ function statementToQualifications(
     qualifications.partial_implementation = statement.partial_implementation;
   }
   return qualifications;
+}
+
+function isRangedVersion(s: any): s is string {
+  return typeof s === "string" && s.startsWith("≤");
+}
+
+function isFixedVersion(s: any): s is string {
+  return typeof s === "string" && !s.startsWith("≤");
 }
