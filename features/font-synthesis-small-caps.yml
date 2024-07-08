@@ -2,12 +2,7 @@ name: font-synthesis-small-caps
 description: "The `font-synthesis-small-caps` CSS property sets whether or not the browser should synthesize small caps typefaces when they're missing from the font."
 spec: https://drafts.csswg.org/css-fonts-4/#font-synthesis-small-caps
 group: font-synthesis
-compat_features:
-  - css.properties.font-synthesis-small-caps
-  - css.properties.font-synthesis-small-caps.auto
-  - css.properties.font-synthesis-small-caps.none
-  # The font-synthesis shorthand also allows disabling all synthesis and opting
-  # in to specific kinds of synthesis. As such, `font-synthesis: small-caps`
-  # affects everything except small caps, and doesn't fit the description of
-  # this feature. See https://github.com/w3c/csswg-drafts/issues/1641.
-  # - css.properties.font-synthesis.small-caps
+# The font-synthesis shorthand also allows disabling all synthesis and opting
+# in to specific kinds of synthesis. As such, `font-synthesis: small-caps`
+# affects everything except small caps, and doesn't fit the description of
+# this feature. See https://github.com/w3c/csswg-drafts/issues/1641.
