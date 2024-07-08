@@ -1,20 +1,13 @@
 name: Mouse events
 description: Mouse events, such as `click`, `mousedown`, or `mousemove`, fire when users interact with a pointing device such a mouse or trackpad.
 spec: https://w3c.github.io/uievents/#events-mouse-types
+# TODO: With the exception of mouseenter and mouseleave, it's likely that the
+# mouse events were supported from the initial release in each browser. It'd be
+# nice to research the data to be sure and fix it.
+# https://github.com/web-platform-dx/web-features/pull/1263/files#r1666715169
 status:
   compute_from:
     - api.MouseEvent
-    - api.Element.click_event
-    - api.Element.dblclick_event
-    - api.Element.mousedown_event
-    - api.Element.mouseup_event
-    - api.Element.mousemove_event
-    - api.Element.mouseout_event
-    - api.Element.mouseover_event
-    - api.Element.mousedown_event
-    - api.Element.mousemove_event
-    - api.Element.mouseover_event
-    - api.Element.mouseup_event
 compat_features:
   - api.Element.click_event
   - api.Element.dblclick_event
