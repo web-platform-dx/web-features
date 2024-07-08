@@ -38,6 +38,8 @@ function scrub(data: any) {
     return data as FeatureData;
 }
 
+const identifierPattern = /^[a-z0-9-]*$/;
+
 function* yamlEntries(root: string): Generator<[string, any]> {
     const filePaths = new fdir()
         .withBasePath()
@@ -48,9 +50,13 @@ function* yamlEntries(root: string): Generator<[string, any]> {
     for (const fp of filePaths) {
         // The feature identifier/key is the filename without extension.
         const { name: key } = path.parse(fp);
-        const distPath = `${fp}.dist`;
+
+        if (!identifierPattern.test(key)) {
+            throw new Error(`${key} is not a valid identifier (must be lowercase a-z, 0-9, and hyphens)`);
+        }
 
         const data = YAML.parse(fs.readFileSync(fp, { encoding: 'utf-8'}));
+        const distPath = `${fp}.dist`;
         if (fs.existsSync(distPath)) {
             const dist = YAML.parse(fs.readFileSync(distPath, { encoding: 'utf-8'}));
             Object.assign(data, dist);
