@@ -75,6 +75,9 @@ export class Feature {
     return this.data.__compat?.status?.standard_track ?? false;
   }
 
+  /**
+   * Get this feature's support statement data, for a given browser.
+   */
   rawSupportStatements(browser: Browser): SimpleSupportStatement[] {
     const support = this.data?.__compat?.support;
     if (support === undefined) {
@@ -91,12 +94,21 @@ export class Feature {
       : [statementOrStatements];
   }
 
+  /**
+   * Get this feature's `SupportStatement` or `RealSupportStatement` objects,
+   * for a given browser.
+   */
   supportStatements(browser: Browser): SupportStatement[] {
     return this.rawSupportStatements(browser).map((raw) =>
       statement(raw, browser, this),
     );
   }
 
+  /**
+   * Find out whether this feature's support data says that a given browser
+   * release is supported (with or without qualifications), unsupported, or
+   * unknown.
+   */
   supportedIn(release: Release): (Supported | Unsupported | UnknownSupport)[] {
     const result = [];
     for (const s of this.supportStatements(release.browser)) {
@@ -107,6 +119,12 @@ export class Feature {
     return result;
   }
 
+  /**
+   * Find out whether this feature's support data says that a given browser
+   * release is supported (`true`), unsupported (`false`), or unknown (`null`).
+   * Note that this ignores qualifications such as partial implementations,
+   * prefixes, alternative names, and flags.
+   */
   flatSupportedIn(release: Release): boolean | null {
     let unknown = false;
     for (const s of this.supportStatements(release.browser)) {
@@ -156,6 +174,9 @@ export class Feature {
     return result;
   }
 
+  /**
+   * Throws when a support statement contains non-real values.
+   */
   assertRealSupportStatement(
     statement: SupportStatement,
     browser: Browser,
