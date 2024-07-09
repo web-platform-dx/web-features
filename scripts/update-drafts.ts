@@ -111,7 +111,7 @@ async function main() {
     });
 
     if(usedFeatures.size > 0) {
-      let usedFeaturesComment = ` The following features in the Spec are already part of web-features: \n`;
+      let usedFeaturesComment = ` The following features in the spec are already part of web-features: \n`;
       for(const [feature, keys] of usedFeatures.entries()){
         usedFeaturesComment += ` - ${feature}:\n    ${Array.from(keys).join(",\n    ")}\n`;
       }
