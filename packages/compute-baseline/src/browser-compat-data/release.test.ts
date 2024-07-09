@@ -108,10 +108,19 @@ describe("Release", function () {
 
     it("handles closed ranges", function () {
       const cr = browser("chrome");
+
+      // Start of range is inclusive
       assert.equal(
         cr.version("1").inRange(cr.version("1"), cr.version("125")),
         true,
       );
+
+      // End of range is exclusive
+      assert.equal(
+        cr.version("20").inRange(cr.version("1"), cr.version("20")),
+        false,
+      );
+
       assert.equal(
         cr.version("1").inRange(cr.version("10"), cr.version("15")),
         false,
