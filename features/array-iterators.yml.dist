@@ -3,14 +3,14 @@
 
 status:
   baseline: high
-  baseline_low_date: 2016-09-20
-  baseline_high_date: 2019-03-20
+  baseline_low_date: 2018-05-09
+  baseline_high_date: 2020-11-09
   support:
-    chrome: "38"
-    chrome_android: "38"
-    edge: "12"
-    firefox: "36"
-    firefox_android: "36"
+    chrome: "66"
+    chrome_android: "66"
+    edge: "14"
+    firefox: "60"
+    firefox_android: "60"
     safari: "10"
     safari_ios: "10"
 compat_features:
@@ -28,7 +28,6 @@ compat_features:
   - javascript.builtins.Array.entries
   - javascript.builtins.Array.keys
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2016-09-20
   # baseline_high_date: 2019-03-20
