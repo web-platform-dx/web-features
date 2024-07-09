@@ -34,7 +34,7 @@ function normalize(page: string) {
 async function main() {
   const compat = new Compat();
 
-  // Build a set of used BCD keys.
+  // Build a map of used BCD keys to feature.
   const webFeatures = new Map<string,string>();
   Object.values(features).map((data) => {
     if(data.compat_features){
