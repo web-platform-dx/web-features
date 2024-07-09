@@ -27,7 +27,7 @@ export class Feature {
 
   constructor(id: string, featureData: unknown) {
     if (!isFeatureData(featureData)) {
-      throw `${id} is not valid feature`;
+      throw new Error(`${id} is not valid feature`);
     }
 
     this.id = id;
@@ -77,13 +77,13 @@ export class Feature {
   ): { release: Release; qualifications?: Qualifications }[] {
     const support = this.data?.__compat?.support;
     if (support === undefined) {
-      throw Error("This feature contains no __compat object.");
+      throw new Error("This feature contains no __compat object.");
     }
 
     const statementOrStatements = support[browser.id];
 
     if (statementOrStatements === undefined) {
-      throw Error(`${this} contains no support data for ${browser.name}`);
+      throw new Error(`${this} contains no support data for ${browser.name}`);
     }
 
     const rawStatements = Array.isArray(statementOrStatements)
@@ -95,7 +95,7 @@ export class Feature {
       const s = statement(raw, browser, this);
 
       if (!(s instanceof RealSupportStatement)) {
-        throw Error(
+        throw new Error(
           `${this.id} contains non-real values for ${browser.name}. Cannot expand support.`,
         );
       }
