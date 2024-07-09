@@ -258,6 +258,7 @@ describe("statements", function () {
         assert.equal(ranged.supportedIn(cr.version("100")).supported, true);
         assert.equal(ranged.supportedIn(cr.version("101")).supported, true);
         assert.equal(ranged.supportedIn(cr.version("124")).supported, true);
+        assert.equal(unranged.supportedIn(cr.version("125")).supported, false);
       });
 
       it("returns unknown support when release is before ranged version_added", function () {
@@ -286,6 +287,7 @@ describe("statements", function () {
         );
 
         assert.equal(rangedEnd.supportedIn(cr.version("100")).supported, true);
+        assert.equal(rangedEnd.supportedIn(cr.version("101")).supported, null);
         assert.equal(rangedEnd.supportedIn(cr.version("124")).supported, null);
         assert.equal(rangedEnd.supportedIn(cr.version("125")).supported, false);
       });
