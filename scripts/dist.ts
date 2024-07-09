@@ -63,8 +63,12 @@ function updateDistFile(sourcePath: string, distPath: string): void {
  */
 function checkDistFile(sourcePath: string, distPath: string): boolean {
   const expected = toDist(sourcePath).toString({ lineWidth: 0 });
-  const actual = fs.readFileSync(distPath, { encoding: "utf-8" });
-  return actual === expected;
+  try {
+    const actual = fs.readFileSync(distPath, { encoding: "utf-8" });
+    return actual === expected;
+  } catch {
+    return false;
+  }
 }
 
 type SupportStatus = ReturnType<typeof getStatus>;
@@ -268,11 +272,9 @@ const tagsToFeatures: Map<string, Feature[]> = (() => {
 function main() {
   const filePaths = argv.paths.flatMap((fileOrDirectory) => {
     if (fs.statSync(fileOrDirectory).isDirectory()) {
-      // Expand directory to any existing .dist file within.
-      // TODO: Change this to .yml when all features have dist files.
       return new fdir()
         .withBasePath()
-        .filter((fp) => fp.endsWith(".dist"))
+        .filter((fp) => fp.endsWith(".yml"))
         .crawl(fileOrDirectory)
         .sync();
     }
