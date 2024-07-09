@@ -1,5 +1,4 @@
-import { Identifier } from "@mdn/browser-compat-data";
-
+import { Identifier, SimpleSupportStatement } from "@mdn/browser-compat-data";
 import { Browser } from "./browser.js";
 import { Compat, defaultCompat } from "./compat.js";
 import { Release } from "./release.js";
@@ -7,6 +6,10 @@ import {
   Qualifications,
   RealSupportStatement,
   statement,
+  Supported,
+  SupportStatement,
+  UnknownSupport,
+  Unsupported,
 } from "./supportStatements.js";
 import { isFeatureData } from "./typeUtils.js";
 
@@ -72,33 +75,64 @@ export class Feature {
     return this.data.__compat?.status?.standard_track ?? false;
   }
 
-  _supportedBy(
-    browser: Browser,
-  ): { release: Release; qualifications?: Qualifications }[] {
+  rawSupportStatements(browser: Browser): SimpleSupportStatement[] {
     const support = this.data?.__compat?.support;
     if (support === undefined) {
-      throw Error("This feature contains no __compat object.");
+      throw new Error("This feature contains no __compat object.");
     }
 
     const statementOrStatements = support[browser.id];
-
     if (statementOrStatements === undefined) {
-      throw Error(`${this} contains no support data for ${browser.name}`);
+      throw new Error(`${this} contains no support data for ${browser.name}`);
     }
 
-    const rawStatements = Array.isArray(statementOrStatements)
+    return Array.isArray(statementOrStatements)
       ? statementOrStatements
       : [statementOrStatements];
+  }
 
+  supportStatements(browser: Browser): SupportStatement[] {
+    return this.rawSupportStatements(browser).map((raw) =>
+      statement(raw, browser, this),
+    );
+  }
+
+  supportedIn(release: Release): (Supported | Unsupported | UnknownSupport)[] {
     const result = [];
-    for (const raw of rawStatements) {
-      const s = statement(raw, browser, this);
+    for (const s of this.supportStatements(release.browser)) {
+      this.assertRealSupportStatement(s, release.browser);
 
-      if (!(s instanceof RealSupportStatement)) {
-        throw Error(
-          `${this.id} contains non-real values for ${browser.name}. Cannot expand support.`,
-        );
+      result.push(s.supportedIn(release));
+    }
+    return result;
+  }
+
+  flatSupportedIn(release: Release): boolean | null {
+    let unknown = false;
+    for (const s of this.supportStatements(release.browser)) {
+      this.assertRealSupportStatement(s, release.browser);
+
+      const supported = s.supportedIn(release);
+      if (supported.supported && !supported.qualifications) {
+        return true;
       }
+
+      if (supported.supported === null) {
+        unknown = true;
+      }
+    }
+    if (unknown) {
+      return null;
+    }
+    return false;
+  }
+
+  _supportedBy(
+    browser: Browser,
+  ): { release: Release; qualifications?: Qualifications }[] {
+    const result = [];
+    for (const s of this.supportStatements(browser)) {
+      this.assertRealSupportStatement(s, browser);
 
       result.push(...s.supportedBy());
     }
@@ -120,5 +154,15 @@ export class Feature {
       result.push(...this._supportedBy(b));
     }
     return result;
+  }
+
+  assertRealSupportStatement(
+    statement: SupportStatement,
+    browser: Browser,
+  ): asserts statement is RealSupportStatement {
+    if (!(statement instanceof RealSupportStatement))
+      throw new Error(
+        `${this.id} contains non-real values for ${browser.name}. Cannot expand support.`,
+      );
   }
 }
