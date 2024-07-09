@@ -2,16 +2,3 @@ name: Promise.withResolvers()
 description: The `Promise.withResolvers()` static method is an alternative to the `Promise()` constructor that returns both the promise and resolution functions. You can use this to access `resolve` and `reject` outside the scope of the executor function.
 spec: https://tc39.es/proposal-promise-with-resolvers/#sec-promise.withResolvers
 group: promises
-status:
-  baseline: low
-  baseline_low_date: 2024-03-05
-  support:
-    chrome: "119"
-    chrome_android: "119"
-    edge: "119"
-    firefox: "121"
-    firefox_android: "121"
-    safari: "17.4"
-    safari_ios: "17.4"
-compat_features:
-  - javascript.builtins.Promise.withResolvers

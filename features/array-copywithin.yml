@@ -5,17 +5,3 @@ snapshot: ecmascript-2015
 group:
   - arrays
   - typed-arrays
-status:
-  baseline: high
-  baseline_low_date: 2016-09-20
-  support:
-    chrome: "45"
-    chrome_android: "45"
-    edge: "12"
-    firefox: "32"
-    firefox_android: "32"
-    safari: "10"
-    safari_ios: "10"
-compat_features:
-  - javascript.builtins.Array.copyWithin
-  - javascript.builtins.TypedArray.copyWithin
