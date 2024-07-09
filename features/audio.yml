@@ -1,9 +1,12 @@
-draft_date: 2024-06-05
 name: <audio>
 description: The `<audio>` element TODO.
 spec: https://html.spec.whatwg.org/multipage/media.html#audio
 group: media-elements
 caniuse: audio
+status:
+  compute_from: html.elements.audio
+# TODO: Include relevant parts of HTMLMediaElement when possible:
+# https://github.com/web-platform-dx/web-features/issues/1173
 compat_features:
   - api.HTMLAudioElement
   - api.HTMLAudioElement.Audio

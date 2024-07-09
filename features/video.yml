@@ -1,0 +1,77 @@
+name: <video>
+description: The `<video>` element TODO.
+spec: https://html.spec.whatwg.org/multipage/media.html#video
+group: media-elements
+caniuse: video
+status:
+  compute_from: html.elements.video
+compat_features:
+  - api.HTMLMediaElement
+  - api.HTMLMediaElement.abort_event
+  - api.HTMLMediaElement.autoplay
+  - api.HTMLMediaElement.buffered
+  - api.HTMLMediaElement.canplay_event
+  - api.HTMLMediaElement.canplaythrough_event
+  - api.HTMLMediaElement.canPlayType
+  - api.HTMLMediaElement.controls
+  - api.HTMLMediaElement.crossOrigin
+  - api.HTMLMediaElement.currentSrc
+  - api.HTMLMediaElement.currentTime
+  - api.HTMLMediaElement.defaultMuted
+  - api.HTMLMediaElement.defaultPlaybackRate
+  - api.HTMLMediaElement.duration
+  - api.HTMLMediaElement.durationchange_event
+  - api.HTMLMediaElement.emptied_event
+  - api.HTMLMediaElement.ended
+  - api.HTMLMediaElement.ended_event
+  - api.HTMLMediaElement.error
+  - api.HTMLMediaElement.error_event
+  - api.HTMLMediaElement.load
+  - api.HTMLMediaElement.loadeddata_event
+  - api.HTMLMediaElement.loadedmetadata_event
+  - api.HTMLMediaElement.loadstart_event
+  - api.HTMLMediaElement.loop
+  - api.HTMLMediaElement.muted
+  - api.HTMLMediaElement.networkState
+  - api.HTMLMediaElement.pause
+  - api.HTMLMediaElement.pause_event
+  - api.HTMLMediaElement.paused
+  - api.HTMLMediaElement.play
+  - api.HTMLMediaElement.play_event
+  - api.HTMLMediaElement.play.returns_promise
+  - api.HTMLMediaElement.playbackRate
+  - api.HTMLMediaElement.played
+  - api.HTMLMediaElement.playing_event
+  - api.HTMLMediaElement.preload
+  - api.HTMLMediaElement.progress_event
+  - api.HTMLMediaElement.ratechange_event
+  - api.HTMLMediaElement.readyState
+  - api.HTMLMediaElement.seekable
+  - api.HTMLMediaElement.seeked_event
+  - api.HTMLMediaElement.seeking
+  - api.HTMLMediaElement.seeking_event
+  - api.HTMLMediaElement.src
+  - api.HTMLMediaElement.stalled_event
+  - api.HTMLMediaElement.suspend_event
+  - api.HTMLMediaElement.timeupdate_event
+  - api.HTMLMediaElement.volume
+  - api.HTMLMediaElement.volumechange_event
+  - api.HTMLMediaElement.waiting_event
+  - api.HTMLVideoElement
+  - api.HTMLVideoElement.height
+  - api.HTMLVideoElement.poster
+  - api.HTMLVideoElement.resize_event
+  - api.HTMLVideoElement.videoHeight
+  - api.HTMLVideoElement.videoWidth
+  - api.HTMLVideoElement.width
+  - html.elements.video
+  - html.elements.video.autoplay
+  - html.elements.video.controls
+  - html.elements.video.crossorigin
+  - html.elements.video.height
+  - html.elements.video.loop
+  - html.elements.video.muted
+  - html.elements.video.poster
+  - html.elements.video.preload
+  - html.elements.video.src
+  - html.elements.video.width
