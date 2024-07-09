@@ -21,3 +21,14 @@ spec:
 snapshot: ecmascript-2015
 group: typed-arrays
 caniuse: typedarrays
+status:
+  compute_from:
+    - javascript.builtins.Float32Array.Float32Array
+    - javascript.builtins.Float64Array.Float64Array
+    - javascript.builtins.Int16Array.Int16Array
+    - javascript.builtins.Int32Array.Int32Array
+    - javascript.builtins.Int8Array.Int8Array
+    - javascript.builtins.Uint16Array.Uint16Array
+    - javascript.builtins.Uint32Array.Uint32Array
+    - javascript.builtins.Uint8Array.Uint8Array
+    - javascript.builtins.Uint8ClampedArray.Uint8ClampedArray
