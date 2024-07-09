@@ -297,9 +297,8 @@ describe("statements", function () {
           cr,
         );
 
-        const allReleases = cr.releases.map((r) => statement.supportedIn(r));
-        for (const { supported } of allReleases) {
-          assert.equal(supported, false);
+        for (const release of cr.releases) {
+          assert.equal(statement.supportedIn(release).supported, false);
         }
       });
 
