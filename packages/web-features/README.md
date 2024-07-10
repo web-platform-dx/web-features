@@ -9,7 +9,7 @@ npm install web-features
 ```
 
 ```js
-import webFeatures from "web-features";
+import { features, groups, snapshots } from "web-features";
 ```
 
 ## Rendering Baseline statuses with `web-features`
