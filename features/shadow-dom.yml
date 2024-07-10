@@ -3,23 +3,4 @@ description: Shadow DOM allows you to attach encapsulated "shadow" DOM trees to 
 spec: https://dom.spec.whatwg.org/#shadow-trees
 caniuse: shadowdomv1
 status:
-  baseline: high
-  baseline_low_date: 2020-01-15
-  support:
-    chrome: "54"
-    chrome_android: "54"
-    edge: "79"
-    firefox: "63"
-    firefox_android: "63"
-    safari: "10.1"
-    safari_ios: "10.3"
-compat_features:
-  - api.Element.attachShadow
-  - api.Element.shadowRoot
-  - api.Event.composed
-  - api.Event.composedPath
-  - api.Node.getRootNode
-  - api.Node.isConnected
-  - api.ShadowRoot
-  - api.ShadowRoot.host
-  - api.ShadowRoot.mode
+  compute_from: api.Element.attachShadow
