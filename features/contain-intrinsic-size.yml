@@ -1,13 +1,5 @@
 name: contain-intrinsic-size
 description: The `contain-intrinsic-size` CSS property sets the intrinsic size of an element. When using size containment, the browser will lay out the element as if it had a single child of this size.
 spec: https://drafts.csswg.org/css-sizing-4/#intrinsic-size-override
-# Shown as "intrinsic-size" on chromestatus.com, but 651 is contain-intrinsic-size.
-compat_features:
-  # Initial support:
-  - css.properties.contain-intrinsic-block-size
-  - css.properties.contain-intrinsic-height
-  - css.properties.contain-intrinsic-inline-size
-  - css.properties.contain-intrinsic-size
-  - css.properties.contain-intrinsic-width
-  # Later support:
-  # - css.properties.contain-intrinsic-size.auto_none
+status:
+  compute_from: css.properties.contain-intrinsic-size

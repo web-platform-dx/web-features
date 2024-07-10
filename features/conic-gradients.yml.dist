@@ -6,14 +6,15 @@ status:
   baseline_low_date: 2020-11-17
   baseline_high_date: 2023-05-17
   support:
-    chrome: "72"
-    chrome_android: "72"
+    chrome: "69"
+    chrome_android: "69"
     edge: "79"
     firefox: "83"
     firefox_android: "83"
     safari: "12.1"
     safari_ios: "12.2"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-11-17
   # baseline_high_date: 2023-05-17
@@ -28,7 +29,6 @@ compat_features:
   - css.types.image.gradient.conic-gradient
   - css.types.image.gradient.repeating-conic-gradient
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-11-17
   # baseline_high_date: 2023-05-17
@@ -41,3 +41,18 @@ compat_features:
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - css.types.image.gradient.conic-gradient.doubleposition
+
+  # baseline: low
+  # baseline_low_date: 2024-06-11
+  # support:
+  #   chrome: "111"
+  #   chrome_android: "111"
+  #   edge: "111"
+  #   firefox: "127"
+  #   firefox_android: "127"
+  #   safari: "16.2"
+  #   safari_ios: "16.2"
+  - css.types.image.gradient.conic-gradient.hue_interpolation_method
+  - css.types.image.gradient.conic-gradient.interpolation_color_space
+  - css.types.image.gradient.repeating-conic-gradient.hue_interpolation_method
+  - css.types.image.gradient.repeating-conic-gradient.interpolation_color_space

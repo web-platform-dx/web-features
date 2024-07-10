@@ -18,7 +18,7 @@
   "scripts": {
     "build": "tsx scripts/build.ts package",
     "dist": "tsx scripts/dist.ts",
-    "schema-defs": "ts-json-schema-generator --tsconfig ./tsconfig.json --type FeatureData --path ./types.ts --id defs",
+    "schema-defs": "ts-json-schema-generator --tsconfig ./tsconfig.json --type WebFeaturesData --path ./types.ts --id defs",
     "schema-defs:write": "npm run schema-defs -- --out ./schemas/defs.schema.json",
     "test": "npm run test:caniuse -- --quiet && npm run test:schema && npm run test:specs && npm run test:format && npm run test:dist && npm run test --workspaces",
     "test:caniuse": "tsx scripts/caniuse.ts",
@@ -33,12 +33,12 @@
   },
   "devDependencies": {
     "@js-temporal/polyfill": "^0.4.4",
-    "@mdn/browser-compat-data": "^5.5.36",
+    "@mdn/browser-compat-data": "^5.5.38",
     "@types/caniuse-lite": "^1.0.4",
     "@types/node": "^18.19.39",
     "ajv": "^8.16.0",
     "ajv-formats": "^3.0.1",
-    "caniuse-lite": "^1.0.30001640",
+    "caniuse-lite": "^1.0.30001641",
     "fast-json-stable-stringify": "^2.1.0",
     "fdir": "^6.1.1",
     "hast-util-to-string": "^3.0.0",
