@@ -11,13 +11,15 @@
   "main": "index.js",
   "exports": {
     ".": "./index.js",
-    "./data.json": "./data.json"
+    "./data.json": "./data.json",
+    "./data.schema.json": "./data.schema.json"
   },
   "types": "./index.d.ts",
   "files": [
     "index.d.ts",
     "index.js",
-    "data.json"
+    "data.json",
+    "data.schema.json"
   ],
   "scripts": {
     "prepare": "tsc && rm types.js && tsup ./index.ts --dts-only --format=esm --out-dir=."

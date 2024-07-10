@@ -19,6 +19,12 @@ import data from "web-features/data.json" with { type: "json" };
 const { features, groups, snapshots } = data;
 ```
 
+To import the JSON schema with or without Node.js:
+
+```js
+import schema from "web-features/data.schema.json" with { type: "json" };
+```
+
 ## Rendering Baseline statuses with `web-features`
 
 If you're using `web-features` to render Baseline iconography or browser logos with support markers, then you must follow these procedures to ensure consistent usage.
