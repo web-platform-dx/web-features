@@ -1,0 +1,13 @@
+name: Intl.Segmenter
+description: "`Intl.Segmenter()` creates a locale-aware text splitter that can separate a string into meaningful graphemes, words, or sentences."
+group: intl
+spec: https://tc39.es/ecma402/#segmenter-objects
+compat_features:
+  - javascript.builtins.Intl.Segmenter
+  - javascript.builtins.Intl.Segmenter.Segmenter
+  - javascript.builtins.Intl.Segmenter.resolvedOptions
+  - javascript.builtins.Intl.Segmenter.segment
+  - javascript.builtins.Intl.Segmenter.supportedLocalesOf
+  - javascript.builtins.Intl.Segments
+  - javascript.builtins.Intl.Segments.containing
+  - javascript.builtins.Intl.Segments.@@iterator
