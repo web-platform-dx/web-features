@@ -40,6 +40,16 @@ describe("Release", function () {
   });
 
   describe("compare()", function () {
+    it("throws when comparing between two browsers", function () {
+      const cr = browser("chrome");
+      const ed = browser("edge");
+
+      assert.throws(
+        () => cr.version("100").inRange(ed.version("79"), cr.version("125")),
+        Error,
+      );
+    });
+
     it("returns 0 for equivalent releases", function () {
       const chrome100 = browser("chrome").version("100");
       assert.equal(chrome100.compare(chrome100), 0);
@@ -85,6 +95,48 @@ describe("Release", function () {
     it("returns true for the preview release", function () {
       const safariPreview = browser("safari").version("preview");
       assert.equal(safariPreview.isPrerelease(), true);
+    });
+  });
+
+  describe("inRange()", function () {
+    it("throws when comparing between two browsers", function () {
+      const cr = browser("chrome");
+      const fx = browser("firefox");
+
+      assert.throws(() => cr.version("50").inRange(fx.version("50")), Error);
+    });
+
+    it("handles closed ranges", function () {
+      const cr = browser("chrome");
+
+      // Start of range is inclusive
+      assert.equal(
+        cr.version("1").inRange(cr.version("1"), cr.version("125")),
+        true,
+      );
+
+      // End of range is exclusive
+      assert.equal(
+        cr.version("20").inRange(cr.version("1"), cr.version("20")),
+        false,
+      );
+
+      assert.equal(
+        cr.version("1").inRange(cr.version("10"), cr.version("15")),
+        false,
+      );
+      assert.equal(
+        cr.version("100").inRange(cr.version("10"), cr.version("15")),
+        false,
+      );
+    });
+
+    it("handles open ranges", function () {
+      const cr = browser("chrome");
+      assert.equal(cr.version("1").inRange(cr.version("1")), true);
+      assert.equal(cr.version("1").inRange(cr.version("10")), false);
+      assert.equal(cr.version("100").inRange(cr.version("10")), true);
+      assert.equal(cr.version("preview").inRange(cr.version("10")), true);
     });
   });
 });

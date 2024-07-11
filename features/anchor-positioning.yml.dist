@@ -8,6 +8,12 @@ status:
     chrome_android: "125"
     edge: "125"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
   - api.CSSPositionTryDescriptors
   - api.CSSPositionTryDescriptors.align-self
   - api.CSSPositionTryDescriptors.alignSelf
@@ -149,12 +155,6 @@ compat_features:
   - css.properties.place-self.anchor-center
   - css.properties.position-anchor
   - css.properties.position-try
-  - css.properties.position-try-options
-  - css.properties.position-try-options.flip-block
-  - css.properties.position-try-options.flip-inline
-  - css.properties.position-try-options.flip-start
-  - css.properties.position-try-options.inset-area
-  - css.properties.position-try-options.none
   - css.properties.position-try-order
   - css.properties.position-try-order.most-block-size
   - css.properties.position-try-order.most-height
@@ -170,3 +170,13 @@ compat_features:
   - css.properties.width.anchor-size
   - css.types.anchor
   - css.types.anchor-size
+
+  # baseline: false
+  # support: {}
+  - css.properties.position-anchor.auto
+  - css.properties.position-try-fallbacks
+  - css.properties.position-try-fallbacks.flip-block
+  - css.properties.position-try-fallbacks.flip-inline
+  - css.properties.position-try-fallbacks.flip-start
+  - css.properties.position-try-fallbacks.inset-area
+  - css.properties.position-try-fallbacks.none
