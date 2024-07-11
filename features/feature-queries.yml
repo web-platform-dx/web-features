@@ -1,0 +1,15 @@
+name: Feature queries
+description: Feature queries with the `@supports` at-rule apply styles based on a browser's support for CSS features, such as a CSS property and value.
+spec: https://drafts.csswg.org/css-conditional-3/#at-supports
+caniuse: css-featurequeries
+group: css
+status:
+  compute_from: css.at-rules.supports
+compat_features:
+  - api.CSSImportRule.supportsText
+  - api.CSSSupportsRule
+  - css.at-rules.import.supports
+  - css.at-rules.supports
+  - css.at-rules.supports.font-format
+  - css.at-rules.supports.font-tech
+  - css.at-rules.supports.selector
