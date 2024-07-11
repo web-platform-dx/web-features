@@ -1,8 +1,9 @@
 import { Compat } from "compute-baseline/browser-compat-data";
 import fs from "node:fs/promises";
 import { fileURLToPath } from "node:url";
+import {Document} from "yaml";
 import webSpecs from 'web-specs' assert { type: 'json' };
-import YAML from "yaml";
+
 import { features } from '../index.js';
 
 function* getPages(spec): Generator<string> {
@@ -34,10 +35,15 @@ function normalize(page: string) {
 async function main() {
   const compat = new Compat();
 
-  // Build a set of used BCD keys.
-  const usedFeatures = new Set<string>(
-    Object.values(features).flatMap((data) => data.compat_features)
-  );
+  // Build a map of used BCD keys to feature.
+  const webFeatures = new Map<string,string>();
+  Object.values(features).map((data) => {
+    if(data.compat_features){
+    for(const compatFeature of data.compat_features){
+      webFeatures.set(compatFeature, data.name);
+    }
+  }
+  })
 
   // Build a map from URLs to spec.
   const pageToSpec = new Map<string, object>();
@@ -50,13 +56,14 @@ async function main() {
   // Iterate BCD and group compat features by spec.
   const specToCompatFeatures = new Map<object, Set<string>>();
   for (const feature of compat.walk()) {
-    // Skip any BCD keys already used in web-features.
-    if (usedFeatures.has(feature.id)) {
-      continue;
-    }
 
     // Skip deprecated and non-standard features.
     if (feature.deprecated || !feature.standard_track) {
+      continue;
+    }
+
+    const spec_url = feature.data.__compat.spec_url;
+    if (!spec_url) {
       continue;
     }
 
@@ -76,18 +83,42 @@ async function main() {
   }
 
   for (const [spec, compatFeatures] of specToCompatFeatures.entries()) {
+
+    // Separate out features that are already part of web-features.
+    const usedFeatures = new Map<string,Set<String>>();
+     for (const key of compatFeatures) {
+       if(webFeatures.has(key)){
+         const feature = webFeatures.get(key);
+         if(usedFeatures.has(feature)){
+           usedFeatures.get(feature).add(key);
+         } else {
+           usedFeatures.set(feature, new Set([key]));
+         }
+         compatFeatures.delete(key);
+       }
+     }
+
     // Write out draft feature per spec.
     const id = spec.shortname;
 
-    const feature = {
+    const feature = new Document({
       draft_date: new Date().toISOString().substring(0, 10),
       name: spec.title,
       description: 'TODO',
       spec: spec.nightly?.url ?? spec.url,
       compat_features: Array.from(compatFeatures).sort(),
-    };
-    const yaml = YAML.stringify(feature);
-    await fs.writeFile(`features/draft/spec/${id}.yml`, yaml);
+    });
+
+    if(usedFeatures.size > 0) {
+      let usedFeaturesComment = ` The following features in the spec are already part of web-features:\n`;
+      for(const [feature, keys] of usedFeatures.entries()){
+        usedFeaturesComment += ` - ${feature}:\n   - ${Array.from(keys).join("\n   - ")}\n`;
+      }
+
+     feature.comment = usedFeaturesComment.trimEnd();
+
+    }
+    await fs.writeFile(`features/draft/spec/${id}.yml`, feature.toString());
   }
 }
 
