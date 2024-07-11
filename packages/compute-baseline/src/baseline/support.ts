@@ -19,7 +19,7 @@ export function support(feature: Feature, browsers: Browser[]): Support {
 
     // const reverseChronological = b.releases.slice().reverse();
     // let previousRelease: string | undefined;
-    // for (let index = 0; index < reverseChronological.length; index++) {
+    // for (let index = b.releases.length - 1; index >= 0; index--) {
     //   const release = reverseChronological[index] as Release;
     //   const current = feature.flatSupportedIn(release);
 

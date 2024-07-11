@@ -128,7 +128,7 @@ describe("features", function () {
         assert.equal(lineClamp[0]?.qualifications?.prefix, "-webkit-");
       });
 
-      it("returns mixed results for (un)prefixedfeatures", function () {
+      it("returns mixed results for (un)prefixed features", function () {
         const fx = browser("firefox");
         const actual = feature(
           "css.types.image.gradient.repeating-linear-gradient",
