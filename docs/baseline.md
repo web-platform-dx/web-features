@@ -1,4 +1,4 @@
-## Baseline
+# Baseline
 
 This document describes what Baseline intends to do and specifies how features are to receive a Baseline status.
 
