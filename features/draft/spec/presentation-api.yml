@@ -1,0 +1,37 @@
+draft_date: 2024-07-11
+name: Presentation API
+description: TODO
+spec: https://w3c.github.io/presentation-api/
+compat_features:
+  - api.Navigator.presentation
+  - api.Presentation
+  - api.Presentation.defaultRequest
+  - api.Presentation.receiver
+  - api.PresentationAvailability
+  - api.PresentationAvailability.change_event
+  - api.PresentationAvailability.value
+  - api.PresentationConnection
+  - api.PresentationConnection.binaryType
+  - api.PresentationConnection.close
+  - api.PresentationConnection.id
+  - api.PresentationConnection.send
+  - api.PresentationConnection.state
+  - api.PresentationConnection.terminate
+  - api.PresentationConnection.url
+  - api.PresentationConnectionAvailableEvent
+  - api.PresentationConnectionAvailableEvent.PresentationConnectionAvailableEvent
+  - api.PresentationConnectionAvailableEvent.connection
+  - api.PresentationConnectionCloseEvent
+  - api.PresentationConnectionCloseEvent.PresentationConnectionCloseEvent
+  - api.PresentationConnectionCloseEvent.message
+  - api.PresentationConnectionCloseEvent.reason
+  - api.PresentationConnectionList
+  - api.PresentationConnectionList.connections
+  - api.PresentationReceiver
+  - api.PresentationReceiver.connectionList
+  - api.PresentationRequest
+  - api.PresentationRequest.PresentationRequest
+  - api.PresentationRequest.connectionavailable_event
+  - api.PresentationRequest.getAvailability
+  - api.PresentationRequest.reconnect
+  - api.PresentationRequest.start

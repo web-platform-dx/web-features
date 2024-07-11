@@ -1,0 +1,27 @@
+draft_date: 2024-07-11
+name: File and Directory Entries API
+description: TODO
+spec: https://wicg.github.io/entries-api/
+compat_features:
+  - api.DataTransferItem.webkitGetAsEntry
+  - api.File.webkitRelativePath
+  - api.FileSystem
+  - api.FileSystem.name
+  - api.FileSystem.root
+  - api.FileSystemDirectoryEntry
+  - api.FileSystemDirectoryEntry.createReader
+  - api.FileSystemDirectoryEntry.getDirectory
+  - api.FileSystemDirectoryEntry.getFile
+  - api.FileSystemDirectoryReader
+  - api.FileSystemDirectoryReader.readEntries
+  - api.FileSystemEntry
+  - api.FileSystemEntry.filesystem
+  - api.FileSystemEntry.fullPath
+  - api.FileSystemEntry.getParent
+  - api.FileSystemEntry.isDirectory
+  - api.FileSystemEntry.isFile
+  - api.FileSystemEntry.name
+  - api.FileSystemFileEntry
+  - api.FileSystemFileEntry.file
+  - api.HTMLInputElement.webkitEntries
+  - api.HTMLInputElement.webkitdirectory
