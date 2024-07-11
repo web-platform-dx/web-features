@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 import {Document} from "yaml";
 import webSpecs from 'web-specs' assert { type: 'json' };
 
-import features from '../index.js';
+import { features } from '../index.js';
 
 function* getPages(spec): Generator<string> {
   yield spec.url;
