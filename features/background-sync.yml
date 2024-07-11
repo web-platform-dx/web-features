@@ -1,0 +1,13 @@
+name: Background sync
+description: Background synch allows web applications to defer server synchronization work to their service worker to handle at a later time, if the device is offline.
+spec: https://wicg.github.io/background-sync/spec/
+compat_features:
+  - api.ServiceWorkerGlobalScope.sync_event
+  - api.ServiceWorkerRegistration.sync
+  - api.SyncEvent
+  - api.SyncEvent.SyncEvent
+  - api.SyncEvent.lastChance
+  - api.SyncEvent.tag
+  - api.SyncManager
+  - api.SyncManager.getTags
+  - api.SyncManager.register
