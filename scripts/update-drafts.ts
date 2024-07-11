@@ -32,6 +32,13 @@ function normalize(page: string) {
   return String(url);
 }
 
+function formatIdentifier(s: string): string {
+  return s
+    .toLowerCase()
+    .split(/[^a-z0-9-]+/)
+    .join("-");
+}
+
 async function main() {
   const compat = new Compat();
 
@@ -97,7 +104,7 @@ async function main() {
     }
 
     // Write out draft feature per spec.
-    const id = spec.shortname;
+    const id = formatIdentifier(spec.shortname);
 
     const feature = new Document({
       draft_date: new Date().toISOString().substring(0, 10),
