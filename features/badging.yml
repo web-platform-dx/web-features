@@ -1,0 +1,6 @@
+name: Badging
+description: Using `navigator.setAppBadge()` and `navigator.clearAppBadge` installed web applications can set or remove (respectively) an application badge, which is usually shown alongside the application's icon on the device's home screen or application dock.
+spec: https://w3c.github.io/badging/
+compat_features:
+  - api.Navigator.clearAppBadge
+  - api.Navigator.setAppBadge
