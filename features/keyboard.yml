@@ -1,0 +1,10 @@
+name: Keyboard
+description: The Keyboard interface of the Keyboard API provides functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
+spec: https://wicg.github.io/keyboard-lock/
+compat_features:
+  - api.Keyboard
+  - api.Keyboard.getLayoutMap
+  - api.KeyboardLayoutMap
+  - api.Keyboard.lock
+  - api.Keyboard.unlock
+  - api.Navigator.keyboard
