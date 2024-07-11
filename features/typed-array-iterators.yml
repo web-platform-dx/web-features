@@ -9,19 +9,3 @@ snapshot: ecmascript-2015
 group:
   - iterators
   - typed-arrays
-status:
-  baseline: high
-  baseline_low_date: 2016-09-20
-  support:
-    chrome: "38"
-    chrome_android: "38"
-    edge: "12"
-    firefox: "36"
-    firefox_android: "36"
-    safari: "10"
-    safari_ios: "10"
-compat_features:
-  - javascript.builtins.TypedArray.@@iterator
-  - javascript.builtins.TypedArray.entries
-  - javascript.builtins.TypedArray.keys
-  - javascript.builtins.TypedArray.values

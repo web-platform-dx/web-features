@@ -21,7 +21,7 @@
     "feature-init": "tsx scripts/feature-init.ts",
     "format": "npx prettier --write .",
     "schema-defs:write": "npm run schema-defs -- --out ./schemas/defs.schema.json",
-    "schema-defs": "ts-json-schema-generator --tsconfig ./tsconfig.json --type FeatureData --path ./types.ts --id defs",
+    "schema-defs": "ts-json-schema-generator --tsconfig ./tsconfig.json --type WebFeaturesData --path ./types.ts --id defs",
     "test:caniuse": "tsx scripts/caniuse.ts",
     "test:coverage": "npm run --workspaces test:coverage",
     "test:dist": "tsx scripts/dist.ts --check",
@@ -35,13 +35,13 @@
   "devDependencies": {
     "@eslint/js": "^9.6.0",
     "@js-temporal/polyfill": "^0.4.4",
-    "@mdn/browser-compat-data": "^5.5.37",
+    "@mdn/browser-compat-data": "^5.5.38",
     "@types/caniuse-lite": "^1.0.4",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^18.19.39",
     "ajv": "^8.16.0",
     "ajv-formats": "^3.0.1",
-    "caniuse-lite": "^1.0.30001640",
+    "caniuse-lite": "^1.0.30001641",
     "eslint-plugin-new-with-error": "^5.0.0",
     "fast-json-stable-stringify": "^2.1.0",
     "fdir": "^6.1.1",
@@ -56,7 +56,7 @@
     "typescript-eslint": "^7.16.0",
     "unified": "^11.0.5",
     "web-specs": "^3.13.0",
-    "winston": "^3.13.0",
+    "winston": "^3.13.1",
     "yaml": "^2.4.5",
     "yargs": "^17.7.2"
   }
