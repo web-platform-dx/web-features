@@ -4,7 +4,7 @@ These guidelines are for authors of new features.
 
 ## Identifiers
 
-Feature identifiers must contain only lowercase alphanumeric characters (`a`-`z` and `0-9`) plus the `-` character (hyphen or minus sign) as a word separator.
+Feature identifiers must contain only lowercase alphanumeric characters (a-z and 0-9) plus the `-` character (hyphen or minus sign) as a word separator.
 
 The identifier should match the name, with these additional guidelines:
 
