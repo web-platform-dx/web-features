@@ -1,5 +1,5 @@
 name: Background sync
-description: Background synch allows web applications to defer server synchronization work to their service worker to handle at a later time, if the device is offline.
+description: The `ServiceWorkerRegistration.sync` API registers a service worker callback to run only when the device is no longer offline. You can use this to let users continue using your app while offline, and synchronize with a server later when, when a connection is established.
 spec: https://wicg.github.io/background-sync/spec/
 compat_features:
   - api.ServiceWorkerGlobalScope.sync_event
