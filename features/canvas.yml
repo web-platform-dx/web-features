@@ -1,15 +1,16 @@
-draft_date: 2024-06-05
-name: <canvas>
-description: The `<canvas>` element TODO.
+name: Canvas API
+description: The canvas API provides a means for drawing graphics via JavaScript and the HTML `<canvas>` element.
 spec: https://html.spec.whatwg.org/multipage/canvas.html#canvas
 group: html
 compat_features:
   - api.HTMLCanvasElement
+  - api.HTMLCanvasElement.captureStream
   - api.HTMLCanvasElement.getContext
   - api.HTMLCanvasElement.height
   - api.HTMLCanvasElement.toBlob
   - api.HTMLCanvasElement.toDataURL
   - api.HTMLCanvasElement.width
+  - api.HTMLCanvasElement.transferControlToOffscreen
   - html.elements.canvas
   - html.elements.canvas.height
   - html.elements.canvas.width
