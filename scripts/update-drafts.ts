@@ -88,8 +88,8 @@ async function main() {
     }
   }
 
+  // Separate out features that are already part of web-features.
   for (const [spec, compatFeatures] of specToCompatFeatures.entries()) {
-    // Separate out features that are already part of web-features.
     const usedFeatures = new Map<string, Set<String>>();
     for (const key of compatFeatures) {
       if (webFeatures.has(key)) {
@@ -101,6 +101,11 @@ async function main() {
         }
         compatFeatures.delete(key);
       }
+    }
+
+    // If all features are already part of web-features, skip this spec.
+    if (compatFeatures.size === 0) {
+      continue;
     }
 
     // Write out draft feature per spec.
