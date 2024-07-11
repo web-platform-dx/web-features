@@ -73,18 +73,13 @@ describe("features", function () {
     describe("flatSupportedIn()", function () {
       it("returns true for unqualified support", function () {
         const cr = browser("chrome");
-        assert.equal(
-          feature("api.Attr").flatSupportedIn(cr.version("100")),
-          true,
-        );
+        assert.equal(feature("api.Attr").supportedIn(cr.version("100")), true);
       });
 
       it("returns false for qualified support", function () {
         const cr = browser("chrome");
         assert.equal(
-          feature("css.properties.line-clamp").flatSupportedIn(
-            cr.version("100"),
-          ),
+          feature("css.properties.line-clamp").supportedIn(cr.version("100")),
           false,
         ); // { version_added: "…", "prefix": "-webkit-" }
       });
@@ -92,7 +87,7 @@ describe("features", function () {
       it("returns false for wholly unsupported", function () {
         const fx = browser("firefox");
         assert.equal(
-          feature("api.Accelerometer").flatSupportedIn(fx.current()),
+          feature("api.Accelerometer").supportedIn(fx.current()),
           false,
         ); // { version_added: false }
       });
@@ -101,9 +96,9 @@ describe("features", function () {
         const edge = browser("edge");
         const f = feature("svg.elements.animate"); // { version_added: "≤79" }
 
-        assert.equal(f.flatSupportedIn(edge.version("12")), null);
-        assert.equal(f.flatSupportedIn(edge.version("79")), true);
-        assert.equal(f.flatSupportedIn(edge.version("80")), true);
+        assert.equal(f.supportedIn(edge.version("12")), null);
+        assert.equal(f.supportedIn(edge.version("79")), true);
+        assert.equal(f.supportedIn(edge.version("80")), true);
       });
     });
 
@@ -113,16 +108,16 @@ describe("features", function () {
         const cr = browser("chrome");
 
         // { version_added: "…" }
-        const bgColor = feature("css.properties.background-color").supportedIn(
-          cr.version("100"),
-        );
+        const bgColor = feature(
+          "css.properties.background-color",
+        ).supportedInDetails(cr.version("100"));
         assert.equal(bgColor.length, 1);
         assert.equal(bgColor[0]?.supported, true);
 
         // { version_added: "…", prefix: "-webkit-" }
-        const lineClamp = feature("css.properties.line-clamp").supportedIn(
-          cr.version("100"),
-        );
+        const lineClamp = feature(
+          "css.properties.line-clamp",
+        ).supportedInDetails(cr.version("100"));
         assert.equal(lineClamp.length, 1);
         assert.equal(lineClamp[0]?.supported, true);
         assert.equal(lineClamp[0]?.qualifications?.prefix, "-webkit-");
@@ -132,7 +127,7 @@ describe("features", function () {
         const fx = browser("firefox");
         const actual = feature(
           "css.types.image.gradient.repeating-linear-gradient",
-        ).supportedIn(fx.version("100"));
+        ).supportedInDetails(fx.version("100"));
         assert.equal(actual.length, 3); // unprefixed, -moz-, and -webkit-
         assert(actual.some((s) => s.supported && "qualifications" in s));
         assert(actual.some((s) => s.supported && !("qualifications" in s)));
@@ -141,11 +136,11 @@ describe("features", function () {
       it("returns unknown support before version ranges", function () {
         const edge = browser("edge");
         const f = feature("svg.elements.animate");
-        const unknown = f.supportedIn(edge.version("12"));
+        const unknown = f.supportedInDetails(edge.version("12"));
         assert.equal(unknown.length, 1);
         assert.equal(unknown[0]?.supported, null);
 
-        const known = f.supportedIn(edge.version("79"));
+        const known = f.supportedInDetails(edge.version("79"));
         assert.equal(known.length, 1);
         assert.equal(known[0]?.supported, true);
       });

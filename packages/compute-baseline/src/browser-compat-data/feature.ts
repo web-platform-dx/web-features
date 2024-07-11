@@ -109,12 +109,14 @@ export class Feature {
    * release is supported (with or without qualifications), unsupported, or
    * unknown.
    */
-  supportedIn(release: Release): (Supported | Unsupported | UnknownSupport)[] {
+  supportedInDetails(
+    release: Release,
+  ): (Supported | Unsupported | UnknownSupport)[] {
     const result = [];
     for (const s of this.supportStatements(release.browser)) {
       this.assertRealSupportStatement(s, release.browser);
 
-      result.push(s.supportedIn(release));
+      result.push(s.supportedInDetails(release));
     }
     return result;
   }
@@ -125,12 +127,12 @@ export class Feature {
    * Note that this ignores qualifications such as partial implementations,
    * prefixes, alternative names, and flags.
    */
-  flatSupportedIn(release: Release): boolean | null {
+  supportedIn(release: Release): boolean | null {
     let unknown = false;
     for (const s of this.supportStatements(release.browser)) {
       this.assertRealSupportStatement(s, release.browser);
 
-      const supported = s.supportedIn(release);
+      const supported = s.supportedInDetails(release);
       if (supported.supported && !supported.qualifications) {
         return true;
       }
