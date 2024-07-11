@@ -6,7 +6,8 @@ group: css
 status:
   compute_from: css.at-rules.supports
 compat_features:
-  - api.CSSImportRule.supportsText
+  # TODO: see discussion on https://github.com/web-platform-dx/web-features/pull/1353#discussion_r1673871428
+  # - api.CSSImportRule.supportsText
   - api.CSSSupportsRule
   - css.at-rules.import.supports
   - css.at-rules.supports
