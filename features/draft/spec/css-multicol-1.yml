@@ -1,0 +1,41 @@
+draft_date: 2024-07-11
+name: CSS Multi-column Layout Module Level 1
+description: TODO
+spec: https://drafts.csswg.org/css-multicol-1/
+compat_features:
+  - css.properties.align-content.multicol_context
+  - css.properties.column-count
+  - css.properties.column-count.auto
+  - css.properties.column-fill
+  - css.properties.column-fill.auto
+  - css.properties.column-fill.balance
+  - css.properties.column-fill.balance-all
+  - css.properties.column-gap
+  - css.properties.column-gap.multicol_context
+  - css.properties.column-rule
+  - css.properties.column-rule-color
+  - css.properties.column-rule-style
+  - css.properties.column-rule-width
+  - css.properties.column-span
+  - css.properties.column-span.all
+  - css.properties.column-span.none
+  - css.properties.column-width
+  - css.properties.columns
+  - css.properties.widows
+
+# The following features in the spec are already part of web-features:
+# - Page breaks:
+#   - css.properties.break-after
+#   - css.properties.break-after.paged_context
+#   - css.properties.break-before
+#   - css.properties.break-before.paged_context
+#   - css.properties.break-inside
+#   - css.properties.break-inside.paged_context
+# - Column breaks:
+#   - css.properties.break-after.multicol_context
+#   - css.properties.break-before.multicol_context
+#   - css.properties.break-inside.multicol_context
+# - Flexbox gap:
+#   - css.properties.column-gap.flex_context
+# - Grid:
+#   - css.properties.column-gap.grid_context

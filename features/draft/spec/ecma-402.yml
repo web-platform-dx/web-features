@@ -1,0 +1,88 @@
+draft_date: 2024-07-11
+name: ECMAScript Internationalization API Specification
+description: TODO
+spec: https://tc39.es/ecma402/
+compat_features:
+  - javascript.builtins.Date.toLocaleDateString
+  - javascript.builtins.Date.toLocaleString
+  - javascript.builtins.Date.toLocaleTimeString
+  - javascript.builtins.Intl
+  - javascript.builtins.Intl.Collator
+  - javascript.builtins.Intl.Collator.Collator
+  - javascript.builtins.Intl.Collator.compare
+  - javascript.builtins.Intl.Collator.resolvedOptions
+  - javascript.builtins.Intl.Collator.supportedLocalesOf
+  - javascript.builtins.Intl.DateTimeFormat
+  - javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
+  - javascript.builtins.Intl.DateTimeFormat.format
+  - javascript.builtins.Intl.DateTimeFormat.formatRange
+  - javascript.builtins.Intl.DateTimeFormat.formatRangeToParts
+  - javascript.builtins.Intl.DateTimeFormat.formatToParts
+  - javascript.builtins.Intl.DateTimeFormat.resolvedOptions
+  - javascript.builtins.Intl.DateTimeFormat.supportedLocalesOf
+  - javascript.builtins.Intl.DisplayNames
+  - javascript.builtins.Intl.DisplayNames.DisplayNames
+  - javascript.builtins.Intl.DisplayNames.of
+  - javascript.builtins.Intl.DisplayNames.resolvedOptions
+  - javascript.builtins.Intl.DisplayNames.supportedLocalesOf
+  - javascript.builtins.Intl.ListFormat
+  - javascript.builtins.Intl.ListFormat.ListFormat
+  - javascript.builtins.Intl.ListFormat.format
+  - javascript.builtins.Intl.ListFormat.formatToParts
+  - javascript.builtins.Intl.ListFormat.resolvedOptions
+  - javascript.builtins.Intl.ListFormat.supportedLocalesOf
+  - javascript.builtins.Intl.Locale
+  - javascript.builtins.Intl.Locale.Locale
+  - javascript.builtins.Intl.Locale.baseName
+  - javascript.builtins.Intl.Locale.calendar
+  - javascript.builtins.Intl.Locale.caseFirst
+  - javascript.builtins.Intl.Locale.collation
+  - javascript.builtins.Intl.Locale.hourCycle
+  - javascript.builtins.Intl.Locale.language
+  - javascript.builtins.Intl.Locale.maximize
+  - javascript.builtins.Intl.Locale.minimize
+  - javascript.builtins.Intl.Locale.numberingSystem
+  - javascript.builtins.Intl.Locale.numeric
+  - javascript.builtins.Intl.Locale.region
+  - javascript.builtins.Intl.Locale.script
+  - javascript.builtins.Intl.Locale.toString
+  - javascript.builtins.Intl.NumberFormat
+  - javascript.builtins.Intl.NumberFormat.NumberFormat
+  - javascript.builtins.Intl.NumberFormat.format
+  - javascript.builtins.Intl.NumberFormat.formatRange
+  - javascript.builtins.Intl.NumberFormat.formatRangeToParts
+  - javascript.builtins.Intl.NumberFormat.formatToParts
+  - javascript.builtins.Intl.NumberFormat.resolvedOptions
+  - javascript.builtins.Intl.NumberFormat.supportedLocalesOf
+  - javascript.builtins.Intl.PluralRules
+  - javascript.builtins.Intl.PluralRules.PluralRules
+  - javascript.builtins.Intl.PluralRules.resolvedOptions
+  - javascript.builtins.Intl.PluralRules.select
+  - javascript.builtins.Intl.PluralRules.selectRange
+  - javascript.builtins.Intl.PluralRules.supportedLocalesOf
+  - javascript.builtins.Intl.RelativeTimeFormat
+  - javascript.builtins.Intl.RelativeTimeFormat.RelativeTimeFormat
+  - javascript.builtins.Intl.RelativeTimeFormat.format
+  - javascript.builtins.Intl.RelativeTimeFormat.formatToParts
+  - javascript.builtins.Intl.RelativeTimeFormat.resolvedOptions
+  - javascript.builtins.Intl.RelativeTimeFormat.supportedLocalesOf
+  - javascript.builtins.Intl.Segmenter
+  - javascript.builtins.Intl.Segmenter.Segmenter
+  - javascript.builtins.Intl.Segmenter.resolvedOptions
+  - javascript.builtins.Intl.Segmenter.segment
+  - javascript.builtins.Intl.Segmenter.supportedLocalesOf
+  - javascript.builtins.Intl.Segments
+  - javascript.builtins.Intl.Segments.@@iterator
+  - javascript.builtins.Intl.Segments.containing
+  - javascript.builtins.Intl.getCanonicalLocales
+  - javascript.builtins.Intl.supportedValuesOf
+  - javascript.builtins.Number.toLocaleString
+  - javascript.builtins.String.localeCompare
+  - javascript.builtins.String.toLocaleLowerCase
+  - javascript.builtins.String.toLocaleUpperCase
+
+# The following features in the spec are already part of web-features:
+# - Array (initial support):
+#   - javascript.builtins.Array.toLocaleString
+# - BigInt:
+#   - javascript.builtins.BigInt.toLocaleString
