@@ -1,0 +1,19 @@
+draft_date: 2024-07-11
+name: Resize Observer
+description: TODO
+spec: https://drafts.csswg.org/resize-observer-1/
+compat_features:
+  - api.ResizeObserver
+  - api.ResizeObserver.ResizeObserver
+  - api.ResizeObserver.disconnect
+  - api.ResizeObserver.observe
+  - api.ResizeObserver.unobserve
+  - api.ResizeObserverEntry
+  - api.ResizeObserverEntry.borderBoxSize
+  - api.ResizeObserverEntry.contentBoxSize
+  - api.ResizeObserverEntry.contentRect
+  - api.ResizeObserverEntry.devicePixelContentBoxSize
+  - api.ResizeObserverEntry.target
+  - api.ResizeObserverSize
+  - api.ResizeObserverSize.blockSize
+  - api.ResizeObserverSize.inlineSize

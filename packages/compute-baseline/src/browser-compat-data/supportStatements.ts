@@ -249,7 +249,7 @@ export class RealSupportStatement extends SupportStatement {
 
   supportedBy(): { release: Release; qualifications?: Qualifications }[] {
     if (this.browser === undefined) {
-      throw Error("This support statement's browser is unknown.");
+      throw new Error("This support statement's browser is unknown.");
     }
 
     if (this.version_added === false) {

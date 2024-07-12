@@ -1,0 +1,58 @@
+draft_date: 2024-07-11
+name: XMLHttpRequest Standard
+description: TODO
+spec: https://xhr.spec.whatwg.org/
+compat_features:
+  - api.FormData.delete
+  - api.FormData.get
+  - api.FormData.getAll
+  - api.FormData.has
+  - api.FormData.set
+  - api.ProgressEvent.ProgressEvent
+  - api.XMLHttpRequest.responseType
+  - api.XMLHttpRequest.responseURL
+
+# The following features in the spec are already part of web-features:
+# - XMLHttpRequest:
+#   - api.FormData
+#   - api.FormData.FormData
+#   - api.FormData.append
+#   - api.ProgressEvent
+#   - api.ProgressEvent.lengthComputable
+#   - api.ProgressEvent.loaded
+#   - api.ProgressEvent.total
+#   - api.XMLHttpRequest
+#   - api.XMLHttpRequest.XMLHttpRequest
+#   - api.XMLHttpRequest.abort
+#   - api.XMLHttpRequest.abort_event
+#   - api.XMLHttpRequest.error_event
+#   - api.XMLHttpRequest.getAllResponseHeaders
+#   - api.XMLHttpRequest.getResponseHeader
+#   - api.XMLHttpRequest.load_event
+#   - api.XMLHttpRequest.loadend_event
+#   - api.XMLHttpRequest.loadstart_event
+#   - api.XMLHttpRequest.open
+#   - api.XMLHttpRequest.overrideMimeType
+#   - api.XMLHttpRequest.progress_event
+#   - api.XMLHttpRequest.readyState
+#   - api.XMLHttpRequest.readystatechange_event
+#   - api.XMLHttpRequest.response
+#   - api.XMLHttpRequest.responseText
+#   - api.XMLHttpRequest.responseXML
+#   - api.XMLHttpRequest.send
+#   - api.XMLHttpRequest.setRequestHeader
+#   - api.XMLHttpRequest.status
+#   - api.XMLHttpRequest.statusText
+#   - api.XMLHttpRequest.timeout
+#   - api.XMLHttpRequest.timeout_event
+#   - api.XMLHttpRequest.upload
+#   - api.XMLHttpRequest.withCredentials
+#   - api.XMLHttpRequestEventTarget
+#   - api.XMLHttpRequestUpload
+#   - api.XMLHttpRequestUpload.abort_event
+#   - api.XMLHttpRequestUpload.error_event
+#   - api.XMLHttpRequestUpload.load_event
+#   - api.XMLHttpRequestUpload.loadend_event
+#   - api.XMLHttpRequestUpload.loadstart_event
+#   - api.XMLHttpRequestUpload.progress_event
+#   - api.XMLHttpRequestUpload.timeout_event
