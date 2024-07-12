@@ -3,40 +3,15 @@
 
 status:
   baseline: high
-  baseline_low_date: 2020-01-15
-  baseline_high_date: 2022-07-15
+  baseline_low_date: 2015-07-29
+  baseline_high_date: 2018-01-29
   support:
-    chrome: "56"
-    chrome_android: "56"
-    edge: "79"
-    firefox: "50"
-    firefox_android: "50"
-    safari: "11.1"
-    safari_ios: "12"
+    chrome: "1"
+    chrome_android: "18"
+    edge: "12"
+    firefox: "1"
+    firefox_android: "4"
+    safari: "4"
+    safari_ios: "3.2"
 compat_features:
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
   - html.elements.meta.name
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "56"
-  #   chrome_android: "56"
-  #   edge: "79"
-  #   firefox: "50"
-  #   firefox_android: "50"
-  #   safari: "11.1"
-  #   safari_ios: "12"
-  - http.headers.Referrer-Policy
