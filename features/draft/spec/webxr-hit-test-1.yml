@@ -1,0 +1,23 @@
+draft_date: 2024-07-11
+name: WebXR Hit Test Module
+description: TODO
+spec: https://immersive-web.github.io/hit-test/
+compat_features:
+  - api.XRFrame.getHitTestResults
+  - api.XRFrame.getHitTestResultsForTransientInput
+  - api.XRHitTestResult
+  - api.XRHitTestResult.getPose
+  - api.XRHitTestSource
+  - api.XRHitTestSource.cancel
+  - api.XRRay
+  - api.XRRay.XRRay
+  - api.XRRay.direction
+  - api.XRRay.matrix
+  - api.XRRay.origin
+  - api.XRSession.requestHitTestSource
+  - api.XRSession.requestHitTestSourceForTransientInput
+  - api.XRTransientInputHitTestResult
+  - api.XRTransientInputHitTestResult.inputSource
+  - api.XRTransientInputHitTestResult.results
+  - api.XRTransientInputHitTestSource
+  - api.XRTransientInputHitTestSource.cancel

@@ -1,0 +1,25 @@
+draft_date: 2024-07-11
+name: Window Management
+description: TODO
+spec: https://w3c.github.io/window-management/
+compat_features:
+  - api.Element.requestFullscreen.options_screen_parameter
+  - api.Permissions.permission_window-management
+  - api.Screen.change_event
+  - api.Screen.isExtended
+  - api.ScreenDetailed
+  - api.ScreenDetailed.availLeft
+  - api.ScreenDetailed.availTop
+  - api.ScreenDetailed.devicePixelRatio
+  - api.ScreenDetailed.isInternal
+  - api.ScreenDetailed.isPrimary
+  - api.ScreenDetailed.label
+  - api.ScreenDetailed.left
+  - api.ScreenDetailed.top
+  - api.ScreenDetails
+  - api.ScreenDetails.currentScreen
+  - api.ScreenDetails.currentscreenchange_event
+  - api.ScreenDetails.screens
+  - api.ScreenDetails.screenschange_event
+  - api.Window.getScreenDetails
+  - http.headers.Permissions-Policy.window-management
