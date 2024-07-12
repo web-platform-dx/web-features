@@ -2,6 +2,8 @@ name: Referrer policy
 description: The `Referrer-Policy` HTTP header and `referrerpolicy` HTML attributes control whether requests have the `Referer` header and what information the header contains.
 spec: https://w3c.github.io/webappsec-referrer-policy/
 caniuse: referrer-policy
+# TODO: Align with caniuse.com if https://github.com/Fyrd/caniuse/pull/7108 lands
+# or remove this TODO if it does not.
 status:
   compute_from:
     - html.elements.a.referrerpolicy
