@@ -1,0 +1,21 @@
+draft_date: 2024-07-11
+name: User-Agent Client Hints
+description: TODO
+spec: https://wicg.github.io/ua-client-hints/
+compat_features:
+  - api.Navigator.userAgentData
+  - api.NavigatorUAData
+  - api.NavigatorUAData.brands
+  - api.NavigatorUAData.getHighEntropyValues
+  - api.NavigatorUAData.mobile
+  - api.NavigatorUAData.platform
+  - api.NavigatorUAData.toJSON
+  - api.WorkerNavigator.userAgentData
+  - http.headers.Sec-CH-UA
+  - http.headers.Sec-CH-UA-Arch
+  - http.headers.Sec-CH-UA-Bitness
+  - http.headers.Sec-CH-UA-Full-Version-List
+  - http.headers.Sec-CH-UA-Mobile
+  - http.headers.Sec-CH-UA-Model
+  - http.headers.Sec-CH-UA-Platform
+  - http.headers.Sec-CH-UA-Platform-Version

@@ -1,0 +1,11 @@
+draft_date: 2024-07-11
+name: File System Access
+description: TODO
+spec: https://wicg.github.io/file-system-access/
+compat_features:
+  - api.DataTransferItem.getAsFileSystemHandle
+  - api.FileSystemHandle.queryPermission
+  - api.FileSystemHandle.requestPermission
+  - api.Window.showDirectoryPicker
+  - api.Window.showOpenFilePicker
+  - api.Window.showSaveFilePicker
