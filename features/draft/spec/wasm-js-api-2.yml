@@ -1,0 +1,37 @@
+draft_date: 2024-07-11
+name: WebAssembly JavaScript Interface
+description: TODO
+spec: https://webassembly.github.io/spec/js-api/
+compat_features:
+  - webassembly.api
+  - webassembly.api.CompileError
+  - webassembly.api.CompileError.CompileError
+  - webassembly.api.Global
+  - webassembly.api.Global.Global
+  - webassembly.api.Global.value
+  - webassembly.api.Global.valueOf
+  - webassembly.api.Instance
+  - webassembly.api.Instance.Instance
+  - webassembly.api.Instance.exports
+  - webassembly.api.LinkError
+  - webassembly.api.LinkError.LinkError
+  - webassembly.api.Memory
+  - webassembly.api.Memory.Memory
+  - webassembly.api.Memory.buffer
+  - webassembly.api.Memory.grow
+  - webassembly.api.Module
+  - webassembly.api.Module.Module
+  - webassembly.api.Module.customSections_static
+  - webassembly.api.Module.exports_static
+  - webassembly.api.Module.imports_static
+  - webassembly.api.RuntimeError
+  - webassembly.api.RuntimeError.RuntimeError
+  - webassembly.api.Table
+  - webassembly.api.Table.Table
+  - webassembly.api.Table.get
+  - webassembly.api.Table.grow
+  - webassembly.api.Table.length
+  - webassembly.api.Table.set
+  - webassembly.api.compile_static
+  - webassembly.api.instantiate_static
+  - webassembly.api.validate_static
