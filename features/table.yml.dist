@@ -6,14 +6,15 @@ status:
   baseline_low_date: 2015-07-29
   baseline_high_date: 2018-01-29
   support:
-    chrome: "20"
-    chrome_android: "25"
+    chrome: "1"
+    chrome_android: "18"
     edge: "12"
-    firefox: "25"
-    firefox_android: "25"
-    safari: "6"
-    safari_ios: "6"
+    firefox: "1"
+    firefox_android: "4"
+    safari: "1"
+    safari_ios: "1"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -130,7 +131,6 @@ compat_features:
   - api.HTMLTableRowElement.insertCell.index_parameter_negative_one
   - api.HTMLTableRowElement.insertCell.index_parameter_optional
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
