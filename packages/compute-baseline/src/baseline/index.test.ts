@@ -4,6 +4,7 @@ import { Temporal } from "@js-temporal/polyfill";
 import * as chai from "chai";
 import chaiJestSnapshot from "chai-jest-snapshot";
 
+import { browser } from "../browser-compat-data/index.js";
 import { computeBaseline, getStatus, keystoneDateToStatus } from "./index.js";
 
 chai.use(chaiJestSnapshot);
@@ -32,6 +33,25 @@ describe("computeBaseline", function () {
   beforeEach(function () {
     chaiJestSnapshot.configureUsingMochaContext(this);
   });
+
+  // XXX: place this somewhere useful
+  it("hmm", function () {});
+
+  // XXX: place this somewhere useful
+  it("hmm", function () {
+    const result = computeBaseline({
+      compatKeys: ["css.properties.align-self.flex_context.baseline"],
+      checkAncestors: true,
+    });
+    const initialSafari = result.support.get(browser("safari"));
+    assert(initialSafari);
+    assert.equal(initialSafari.release.version, "9");
+    assert.equal(initialSafari.text, "9");
+    assert.equal(JSON.parse(result.toJSON()).support.safari, "9");
+  });
+
+  // XXX: place this somewhere useful
+  it("hmm", function () {});
 
   it("returns something sensible for the most complex features", function () {
     // These are some of the most "complex" BCD features, given approximately by:
@@ -119,6 +139,38 @@ describe("computeBaseline", function () {
     chai.expect(resultWithAncestors).to.matchSnapshot();
   });
 
+  it("surfaces version ranges from the underlying compat data", function () {
+    const singleKey = computeBaseline({
+      compatKeys: ["css.properties.align-self"],
+    });
+    const singleKeySafari = singleKey.support.get(browser("safari"));
+    assert(singleKeySafari);
+    assert.equal(singleKeySafari.release.version, "9");
+    assert.equal(singleKeySafari.text, "9");
+    assert.equal(JSON.parse(singleKey.toJSON()).support.safari, "9");
+
+    const multiKey = computeBaseline({
+      compatKeys: [
+        "css.properties.align-self",
+        "css.properties.align-self.flex_context.baseline",
+      ],
+      checkAncestors: false,
+    });
+    const multiKeySafari = multiKey.support.get(browser("safari"));
+    assert(multiKeySafari);
+    assert.equal(multiKeySafari.release.version, "9");
+    assert.equal(multiKeySafari.text, "9");
+    assert.equal(JSON.parse(multiKey.toJSON()).support.safari, "9");
+  });
+
+  it("calculates ranged dates from underlying compat data ranged versions", function () {
+    const result = computeBaseline({
+      compatKeys: ["api.FileSystem"],
+    });
+    assert.equal(JSON.parse(result.toJSON()).support.edge, "≤18");
+    assert(JSON.parse(result.toJSON()).baseline_low_date.startsWith("≤"));
+  });
+
   it("disregards support that's been removed", function () {
     const result = computeBaseline({
       compatKeys: ["api.AudioTrack"],
@@ -140,7 +192,7 @@ describe("computeBaseline", function () {
 describe("keystoneDateToStatus()", function () {
   it('returns "low" for date 1 year before cutoff date', function () {
     const status = keystoneDateToStatus(
-      Temporal.PlainDate.from("2020-01-01"),
+      Temporal.PlainDate.from("2020-01-01").toString(),
       Temporal.PlainDate.from("2021-01-01"),
       false,
     );
@@ -151,7 +203,7 @@ describe("keystoneDateToStatus()", function () {
 
   it('returns "high" for date 3 years before cutoff date', function () {
     const status = keystoneDateToStatus(
-      Temporal.PlainDate.from("2020-01-01"),
+      Temporal.PlainDate.from("2020-01-01").toString(),
       Temporal.PlainDate.from("2024-01-01"),
       false,
     );
@@ -173,7 +225,7 @@ describe("keystoneDateToStatus()", function () {
 
   it("returns false for discouraged (deprecated, obsolete, etc.) features", function () {
     const status = keystoneDateToStatus(
-      Temporal.PlainDate.from("2020-01-01"),
+      Temporal.PlainDate.from("2020-01-01").toString(),
       Temporal.PlainDate.from("2020-01-01"),
       true,
     );
