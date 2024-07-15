@@ -1,0 +1,66 @@
+draft_date: 2024-07-11
+name: Media Source Extensions™
+description: TODO
+spec: https://w3c.github.io/media-source/
+compat_features:
+  - api.AudioTrack.sourceBuffer
+  - api.BufferedChangeEvent
+  - api.BufferedChangeEvent.BufferedChangeEvent
+  - api.BufferedChangeEvent.addedRanges
+  - api.BufferedChangeEvent.removedRanges
+  - api.HTMLMediaElement.buffered
+  - api.HTMLMediaElement.seekable
+  - api.MediaSource.MediaSource
+  - api.MediaSource.activeSourceBuffers
+  - api.MediaSource.addSourceBuffer
+  - api.MediaSource.canConstructInDedicatedWorker_static
+  - api.MediaSource.clearLiveSeekableRange
+  - api.MediaSource.duration
+  - api.MediaSource.endOfStream
+  - api.MediaSource.handle
+  - api.MediaSource.isTypeSupported_static
+  - api.MediaSource.readyState
+  - api.MediaSource.removeSourceBuffer
+  - api.MediaSource.setLiveSeekableRange
+  - api.MediaSource.sourceBuffers
+  - api.MediaSource.sourceclose_event
+  - api.MediaSource.sourceended_event
+  - api.MediaSource.sourceopen_event
+  - api.MediaSourceHandle
+  - api.SourceBuffer.abort
+  - api.SourceBuffer.abort_event
+  - api.SourceBuffer.appendBuffer
+  - api.SourceBuffer.appendWindowEnd
+  - api.SourceBuffer.appendWindowStart
+  - api.SourceBuffer.audioTracks
+  - api.SourceBuffer.buffered
+  - api.SourceBuffer.changeType
+  - api.SourceBuffer.error_event
+  - api.SourceBuffer.mode
+  - api.SourceBuffer.remove
+  - api.SourceBuffer.textTracks
+  - api.SourceBuffer.timestampOffset
+  - api.SourceBuffer.update_event
+  - api.SourceBuffer.updateend_event
+  - api.SourceBuffer.updatestart_event
+  - api.SourceBuffer.updating
+  - api.SourceBuffer.videoTracks
+  - api.SourceBufferList.addsourcebuffer_event
+  - api.SourceBufferList.length
+  - api.SourceBufferList.removesourcebuffer_event
+  - api.TextTrack.sourceBuffer
+  - api.VideoTrack.sourceBuffer
+
+# The following features in the spec are already part of web-features:
+# - Managed media source:
+#   - api.ManagedMediaSource
+#   - api.ManagedMediaSource.ManagedMediaSource
+#   - api.ManagedMediaSource.endstreaming_event
+#   - api.ManagedMediaSource.startstreaming_event
+#   - api.ManagedMediaSource.streaming
+#   - api.ManagedSourceBuffer
+#   - api.ManagedSourceBuffer.bufferedchange_event
+# - Media source:
+#   - api.MediaSource
+#   - api.SourceBuffer
+#   - api.SourceBufferList

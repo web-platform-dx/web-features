@@ -1,0 +1,33 @@
+draft_date: 2024-07-11
+name: Extending Storage Access API (SAA) to non-cookie storage
+description: TODO
+spec: https://privacycg.github.io/saa-non-cookie-storage/
+compat_features:
+  - api.Document.hasUnpartitionedCookieAccess
+  - api.Document.requestStorageAccess.types_parameter
+  - api.Document.requestStorageAccess.types_parameter.types_BroadcastChannel_parameter
+  - api.Document.requestStorageAccess.types_parameter.types_SharedWorker_parameter
+  - api.Document.requestStorageAccess.types_parameter.types_all_parameter
+  - api.Document.requestStorageAccess.types_parameter.types_caches_parameter
+  - api.Document.requestStorageAccess.types_parameter.types_cookies_parameter
+  - api.Document.requestStorageAccess.types_parameter.types_createObjectURL_parameter
+  - api.Document.requestStorageAccess.types_parameter.types_estimate_parameter
+  - api.Document.requestStorageAccess.types_parameter.types_getDirectory_parameter
+  - api.Document.requestStorageAccess.types_parameter.types_indexedDB_parameter
+  - api.Document.requestStorageAccess.types_parameter.types_localStorage_parameter
+  - api.Document.requestStorageAccess.types_parameter.types_locks_parameter
+  - api.Document.requestStorageAccess.types_parameter.types_revokeObjectURL_parameter
+  - api.Document.requestStorageAccess.types_parameter.types_sessionStorage_parameter
+  - api.SharedWorker.SharedWorker.options_sameSiteCookies_parameter
+  - api.StorageAccessHandle
+  - api.StorageAccessHandle.BroadcastChannel
+  - api.StorageAccessHandle.SharedWorker
+  - api.StorageAccessHandle.caches
+  - api.StorageAccessHandle.createObjectURL
+  - api.StorageAccessHandle.estimate
+  - api.StorageAccessHandle.getDirectory
+  - api.StorageAccessHandle.indexedDB
+  - api.StorageAccessHandle.localStorage
+  - api.StorageAccessHandle.locks
+  - api.StorageAccessHandle.revokeObjectURL
+  - api.StorageAccessHandle.sessionStorage

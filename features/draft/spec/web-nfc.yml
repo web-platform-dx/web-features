@@ -1,0 +1,31 @@
+draft_date: 2024-07-11
+name: Web NFC API
+description: TODO
+spec: https://w3c.github.io/web-nfc/
+compat_features:
+  - api.NDEFReader.makeReadOnly
+
+# The following features in the spec are already part of web-features:
+# - Web NFC:
+#   - api.NDEFMessage
+#   - api.NDEFMessage.NDEFMessage
+#   - api.NDEFMessage.records
+#   - api.NDEFReader
+#   - api.NDEFReader.NDEFReader
+#   - api.NDEFReader.reading_event
+#   - api.NDEFReader.readingerror_event
+#   - api.NDEFReader.scan
+#   - api.NDEFReader.write
+#   - api.NDEFReadingEvent
+#   - api.NDEFReadingEvent.NDEFReadingEvent
+#   - api.NDEFReadingEvent.message
+#   - api.NDEFReadingEvent.serialNumber
+#   - api.NDEFRecord
+#   - api.NDEFRecord.NDEFRecord
+#   - api.NDEFRecord.data
+#   - api.NDEFRecord.encoding
+#   - api.NDEFRecord.id
+#   - api.NDEFRecord.lang
+#   - api.NDEFRecord.mediaType
+#   - api.NDEFRecord.recordType
+#   - api.NDEFRecord.toRecords

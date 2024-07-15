@@ -1,0 +1,34 @@
+draft_date: 2024-07-11
+name: Shared Storage API
+description: TODO
+spec: https://wicg.github.io/shared-storage/
+compat_features:
+  - api.HTMLIFrameElement.sharedStorageWritable
+  - api.HTMLImageElement.sharedStorageWritable
+  - api.SharedStorage
+  - api.SharedStorage.append
+  - api.SharedStorage.clear
+  - api.SharedStorage.delete
+  - api.SharedStorage.set
+  - api.SharedStorageOperation
+  - api.SharedStorageRunOperation
+  - api.SharedStorageRunOperation.run
+  - api.SharedStorageSelectURLOperation
+  - api.SharedStorageSelectURLOperation.run
+  - api.SharedStorageWorklet
+  - api.SharedStorageWorklet.run
+  - api.SharedStorageWorklet.selectURL
+  - api.SharedStorageWorkletGlobalScope
+  - api.SharedStorageWorkletGlobalScope.register
+  - api.SharedStorageWorkletGlobalScope.sharedStorage
+  - api.Window.sharedStorage
+  - api.WindowSharedStorage
+  - api.WindowSharedStorage.run
+  - api.WindowSharedStorage.selectURL
+  - api.WindowSharedStorage.worklet
+  - api.WorkletSharedStorage
+  - api.WorkletSharedStorage.entries
+  - api.WorkletSharedStorage.get
+  - api.WorkletSharedStorage.keys
+  - api.WorkletSharedStorage.length
+  - api.WorkletSharedStorage.remainingBudget
