@@ -1,0 +1,43 @@
+draft_date: 2024-07-11
+name: MathML Core
+description: TODO
+spec: https://w3c.github.io/mathml-core/
+compat_features:
+  - api.MathMLElement
+  - css.properties.math-depth
+  - css.properties.math-shift
+  - css.properties.math-style
+  - css.properties.text-transform.math-auto
+  - mathml.elements.annotation
+  - mathml.elements.annotation-xml
+  - mathml.elements.math
+  - mathml.elements.merror
+  - mathml.elements.mfrac
+  - mathml.elements.mi
+  - mathml.elements.mi.mathvariant
+  - mathml.elements.mmultiscripts
+  - mathml.elements.mn
+  - mathml.elements.mo
+  - mathml.elements.mover
+  - mathml.elements.mpadded
+  - mathml.elements.mphantom
+  - mathml.elements.mprescripts
+  - mathml.elements.mroot
+  - mathml.elements.mrow
+  - mathml.elements.ms
+  - mathml.elements.mspace
+  - mathml.elements.msqrt
+  - mathml.elements.mstyle
+  - mathml.elements.msub
+  - mathml.elements.msubsup
+  - mathml.elements.msup
+  - mathml.elements.mtable
+  - mathml.elements.mtd
+  - mathml.elements.mtext
+  - mathml.elements.mtr
+  - mathml.elements.munder
+  - mathml.elements.munderover
+  - mathml.elements.semantics
+  - mathml.global_attributes.dir
+  - mathml.global_attributes.displaystyle
+  - mathml.global_attributes.scriptlevel
