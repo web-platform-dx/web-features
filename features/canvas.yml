@@ -4,6 +4,8 @@ spec: https://html.spec.whatwg.org/multipage/canvas.html#canvas
 group:
   - canvas
   - html
+status:
+  compute_from: html.elements.canvas
 compat_features:
   - api.HTMLCanvasElement
   - api.HTMLCanvasElement.captureStream
