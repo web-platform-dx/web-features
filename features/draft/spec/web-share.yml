@@ -1,0 +1,12 @@
+draft_date: 2024-07-11
+name: Web Share API
+description: TODO
+spec: https://w3c.github.io/web-share/
+compat_features:
+  - api.Navigator.canShare
+  - api.Navigator.canShare.data_files_parameter
+  - api.Navigator.canShare.data_text_parameter
+  - api.Navigator.share
+  - api.Navigator.share.data_files_parameter
+  - api.Navigator.share.data_text_parameter
+  - http.headers.Permissions-Policy.web-share

@@ -1,0 +1,20 @@
+draft_date: 2024-07-11
+name: Pointer Lock 2.0
+description: TODO
+spec: https://w3c.github.io/pointerlock/
+compat_features:
+  - api.Document
+  - api.Element
+  - api.ShadowRoot.pointerLockElement
+
+# The following features in the spec are already part of web-features:
+# - Pointer lock:
+#   - api.Document.exitPointerLock
+#   - api.Document.pointerLockElement
+#   - api.Document.pointerlockchange_event
+#   - api.Document.pointerlockerror_event
+#   - api.Element.requestPointerLock
+# - Mouse events:
+#   - api.MouseEvent
+#   - api.MouseEvent.movementX
+#   - api.MouseEvent.movementY
