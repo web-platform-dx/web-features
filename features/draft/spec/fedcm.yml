@@ -1,0 +1,19 @@
+draft_date: 2024-07-11
+name: Federated Credential Management API
+description: TODO
+spec: https://fedidcg.github.io/FedCM/
+compat_features:
+  - api.CredentialsContainer.get.identity_option
+  - api.CredentialsContainer.get.identity_option.context_option
+  - api.CredentialsContainer.get.identity_option.loginHint
+  - api.IdentityCredential
+  - api.IdentityCredential.disconnect_static
+  - api.IdentityCredential.token
+  - api.IdentityProvider
+  - api.IdentityProvider.close_static
+  - api.IdentityProvider.getUserInfo_static
+  - api.Navigator.login
+  - api.NavigatorLogin
+  - api.NavigatorLogin.setStatus
+  - http.headers.Permissions-Policy.identity-credentials-get
+  - http.headers.Set-Login

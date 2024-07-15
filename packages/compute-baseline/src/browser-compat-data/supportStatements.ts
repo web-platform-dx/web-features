@@ -150,7 +150,9 @@ export class RealSupportStatement extends SupportStatement {
    * Find out whether this support statement says a given browser release is
    * supported (with or without qualifications), unsupported, or unknown.
    */
-  supportedIn(release: Release): Supported | Unsupported | UnknownSupport {
+  supportedInDetails(
+    release: Release,
+  ): Supported | Unsupported | UnknownSupport {
     if (this.browser === undefined) {
       throw new Error("This support statement's browser is unknown.");
     }
@@ -247,7 +249,7 @@ export class RealSupportStatement extends SupportStatement {
 
   supportedBy(): { release: Release; qualifications?: Qualifications }[] {
     if (this.browser === undefined) {
-      throw Error("This support statement's browser is unknown.");
+      throw new Error("This support statement's browser is unknown.");
     }
 
     if (this.version_added === false) {
