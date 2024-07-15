@@ -38,7 +38,7 @@ export function descendantKeys(data: unknown, path?: string): string[] {
     return Object.keys(data).filter((key) => key !== "__compat");
   }
 
-  throw Error(
+  throw new Error(
     `Unhandled traverse into descendants of object at ${path ?? "[root]"}`,
   );
 }

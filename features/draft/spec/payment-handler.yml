@@ -1,0 +1,29 @@
+draft_date: 2024-07-11
+name: Payment Handler API
+description: TODO
+spec: https://w3c.github.io/payment-handler/
+compat_features:
+  - api.CanMakePaymentEvent
+  - api.CanMakePaymentEvent.CanMakePaymentEvent
+  - api.CanMakePaymentEvent.respondWith
+  - api.PaymentManager
+  - api.PaymentManager.enableDelegations
+  - api.PaymentManager.userHint
+  - api.PaymentRequestEvent
+  - api.PaymentRequestEvent.PaymentRequestEvent
+  - api.PaymentRequestEvent.changePaymentMethod
+  - api.PaymentRequestEvent.changeShippingAddress
+  - api.PaymentRequestEvent.changeShippingOption
+  - api.PaymentRequestEvent.methodData
+  - api.PaymentRequestEvent.modifiers
+  - api.PaymentRequestEvent.openWindow
+  - api.PaymentRequestEvent.paymentOptions
+  - api.PaymentRequestEvent.paymentRequestId
+  - api.PaymentRequestEvent.paymentRequestOrigin
+  - api.PaymentRequestEvent.respondWith
+  - api.PaymentRequestEvent.shippingOptions
+  - api.PaymentRequestEvent.topOrigin
+  - api.PaymentRequestEvent.total
+  - api.ServiceWorkerGlobalScope.canmakepayment_event
+  - api.ServiceWorkerGlobalScope.paymentrequest_event
+  - api.ServiceWorkerRegistration.paymentManager

@@ -1,0 +1,22 @@
+draft_date: 2024-07-11
+name: Web Serial API
+description: TODO
+spec: https://wicg.github.io/serial/
+compat_features:
+  - api.Navigator.serial
+  - api.Serial
+  - api.Serial.getPorts
+  - api.Serial.requestPort
+  - api.SerialPort
+  - api.SerialPort.close
+  - api.SerialPort.connect_event
+  - api.SerialPort.disconnect_event
+  - api.SerialPort.forget
+  - api.SerialPort.getInfo
+  - api.SerialPort.getSignals
+  - api.SerialPort.open
+  - api.SerialPort.readable
+  - api.SerialPort.setSignals
+  - api.SerialPort.writable
+  - api.WorkerNavigator.serial
+  - http.headers.Permissions-Policy.serial

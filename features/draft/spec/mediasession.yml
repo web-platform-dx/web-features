@@ -1,0 +1,27 @@
+draft_date: 2024-07-11
+name: Media Session
+description: TODO
+spec: https://w3c.github.io/mediasession/
+compat_features:
+  - api.ChapterInformation
+  - api.ChapterInformation.artwork
+  - api.ChapterInformation.startTime
+  - api.ChapterInformation.title
+  - api.MediaMetadata.chapterInfo
+  - api.MediaSession.setCameraActive
+  - api.MediaSession.setMicrophoneActive
+  - api.MediaSession.setPositionState
+
+# The following features in the spec are already part of web-features:
+# - Media session:
+#   - api.MediaMetadata
+#   - api.MediaMetadata.MediaMetadata
+#   - api.MediaMetadata.album
+#   - api.MediaMetadata.artist
+#   - api.MediaMetadata.artwork
+#   - api.MediaMetadata.title
+#   - api.MediaSession
+#   - api.MediaSession.metadata
+#   - api.MediaSession.playbackState
+#   - api.MediaSession.setActionHandler
+#   - api.Navigator.mediaSession
