@@ -1,0 +1,38 @@
+draft_date: 2024-07-11
+name: Notifications API Standard
+description: TODO
+spec: https://notifications.spec.whatwg.org/
+compat_features:
+  - api.Notification
+  - api.Notification.Notification
+  - api.Notification.actions
+  - api.Notification.badge
+  - api.Notification.body
+  - api.Notification.click_event
+  - api.Notification.close
+  - api.Notification.close_event
+  - api.Notification.data
+  - api.Notification.dir
+  - api.Notification.error_event
+  - api.Notification.icon
+  - api.Notification.image
+  - api.Notification.lang
+  - api.Notification.maxActions_static
+  - api.Notification.permission_static
+  - api.Notification.renotify
+  - api.Notification.requestPermission_static
+  - api.Notification.requireInteraction
+  - api.Notification.show_event
+  - api.Notification.silent
+  - api.Notification.tag
+  - api.Notification.timestamp
+  - api.Notification.title
+  - api.Notification.vibrate
+  - api.NotificationEvent
+  - api.NotificationEvent.NotificationEvent
+  - api.NotificationEvent.action
+  - api.NotificationEvent.notification
+  - api.ServiceWorkerGlobalScope.notificationclick_event
+  - api.ServiceWorkerGlobalScope.notificationclose_event
+  - api.ServiceWorkerRegistration.getNotifications
+  - api.ServiceWorkerRegistration.showNotification
