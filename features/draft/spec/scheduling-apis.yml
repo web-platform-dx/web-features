@@ -1,0 +1,21 @@
+draft_date: 2024-07-11
+name: Prioritized Task Scheduling
+description: TODO
+spec: https://wicg.github.io/scheduling-apis/
+compat_features:
+  - api.TaskSignal.any_static
+  - api.TaskSignal.prioritychange_event
+
+# The following features in the spec are already part of web-features:
+# - Scheduler API:
+#   - api.Scheduler
+#   - api.Scheduler.postTask
+#   - api.TaskController
+#   - api.TaskController.TaskController
+#   - api.TaskController.setPriority
+#   - api.TaskPriorityChangeEvent
+#   - api.TaskPriorityChangeEvent.TaskPriorityChangeEvent
+#   - api.TaskPriorityChangeEvent.previousPriority
+#   - api.TaskSignal
+#   - api.TaskSignal.priority
+#   - api.scheduler

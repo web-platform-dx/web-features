@@ -1,0 +1,50 @@
+draft_date: 2024-07-11
+name: WebTransport
+description: TODO
+spec: https://w3c.github.io/webtransport/
+compat_features:
+  - api.WebTransport.WebTransport.options_allowPooling_parameter
+  - api.WebTransport.WebTransport.options_congestionControl_parameter
+  - api.WebTransport.WebTransport.options_requireUnreliable_parameter
+  - api.WebTransport.WebTransport.options_serverCertificateHashes_parameter
+  - api.WebTransport.congestionControl
+  - api.WebTransport.createBidirectionalStream.options_sendOrder_parameter
+  - api.WebTransport.createUnidirectionalStream.options_sendOrder_parameter
+  - api.WebTransport.getStats
+  - api.WebTransport.reliability
+  - api.WebTransportBidirectionalStream.readable.returns_WebTransportReceiveStream
+  - api.WebTransportBidirectionalStream.writable.returns_WebTransportSendStream
+  - api.WebTransportReceiveStream
+  - api.WebTransportReceiveStream.getStats
+  - api.WebTransportSendStream
+  - api.WebTransportSendStream.getStats
+  - api.WebTransportSendStream.getWriter
+  - api.WebTransportSendStream.sendOrder
+
+# The following features in the spec are already part of web-features:
+# - WebTransport:
+#   - api.WebTransport
+#   - api.WebTransport.WebTransport
+#   - api.WebTransport.close
+#   - api.WebTransport.closed
+#   - api.WebTransport.createBidirectionalStream
+#   - api.WebTransport.createUnidirectionalStream
+#   - api.WebTransport.datagrams
+#   - api.WebTransport.incomingBidirectionalStreams
+#   - api.WebTransport.incomingUnidirectionalStreams
+#   - api.WebTransport.ready
+#   - api.WebTransportBidirectionalStream
+#   - api.WebTransportBidirectionalStream.readable
+#   - api.WebTransportBidirectionalStream.writable
+#   - api.WebTransportDatagramDuplexStream
+#   - api.WebTransportDatagramDuplexStream.incomingHighWaterMark
+#   - api.WebTransportDatagramDuplexStream.incomingMaxAge
+#   - api.WebTransportDatagramDuplexStream.maxDatagramSize
+#   - api.WebTransportDatagramDuplexStream.outgoingHighWaterMark
+#   - api.WebTransportDatagramDuplexStream.outgoingMaxAge
+#   - api.WebTransportDatagramDuplexStream.readable
+#   - api.WebTransportDatagramDuplexStream.writable
+#   - api.WebTransportError
+#   - api.WebTransportError.WebTransportError
+#   - api.WebTransportError.source
+#   - api.WebTransportError.streamErrorCode
