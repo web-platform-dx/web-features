@@ -1,7 +1,9 @@
 name: Canvas API
-description: The canvas API provides a means for drawing graphics via JavaScript and the HTML `<canvas>` element.
+description: The `<canvas>` HTML element represents a space to draw graphics in, using the 2D canvas API or 3D WebGPU API.
 spec: https://html.spec.whatwg.org/multipage/canvas.html#canvas
-group: html
+group:
+  - canvas
+  - html
 compat_features:
   - api.HTMLCanvasElement
   - api.HTMLCanvasElement.captureStream
