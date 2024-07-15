@@ -34,25 +34,6 @@ describe("computeBaseline", function () {
     chaiJestSnapshot.configureUsingMochaContext(this);
   });
 
-  // XXX: place this somewhere useful
-  it("hmm", function () {});
-
-  // XXX: place this somewhere useful
-  it("hmm", function () {
-    const result = computeBaseline({
-      compatKeys: ["css.properties.align-self.flex_context.baseline"],
-      checkAncestors: true,
-    });
-    const initialSafari = result.support.get(browser("safari"));
-    assert(initialSafari);
-    assert.equal(initialSafari.release.version, "9");
-    assert.equal(initialSafari.text, "9");
-    assert.equal(JSON.parse(result.toJSON()).support.safari, "9");
-  });
-
-  // XXX: place this somewhere useful
-  it("hmm", function () {});
-
   it("returns something sensible for the most complex features", function () {
     // These are some of the most "complex" BCD features, given approximately by:
     // const complexity = JSON.stringify(data.__compat, undefined, 2).split("\n").length
