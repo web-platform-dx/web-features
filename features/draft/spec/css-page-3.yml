@@ -1,0 +1,20 @@
+draft_date: 2024-07-11
+name: CSS Paged Media Module Level 3
+description: TODO
+spec: https://drafts.csswg.org/css-page-3/
+compat_features:
+  - css.at-rules.page
+  - css.at-rules.page.page-orientation
+  - css.at-rules.page.size
+  - css.at-rules.page.size.jis-b4
+  - css.at-rules.page.size.jis-b5
+  - css.properties.page
+  - css.selectors.first
+  - css.selectors.left
+  - css.selectors.right
+
+# The following features in the spec are already part of web-features:
+# - Page breaks:
+#   - css.properties.page-break-after
+#   - css.properties.page-break-before
+#   - css.properties.page-break-inside

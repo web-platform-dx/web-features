@@ -36,7 +36,7 @@ export class Release {
 
   compare(otherRelease: Release) {
     if (otherRelease.browser !== this.browser) {
-      throw Error(
+      throw new Error(
         `Cannot compare releases of differing browsers (${this.browser} versus ${otherRelease.browser})`,
       );
     }
