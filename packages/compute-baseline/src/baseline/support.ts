@@ -13,6 +13,18 @@ export function support(feature: Feature, browsers: Browser[]): Support {
   const support: Support = new Map();
   for (const b of browsers) {
     const releases = feature.supportedBy({ only: [b] });
+    // TODO:
+    // let lastInitial: Release | undefined;
+    // let lastInitialBoundary: "" | "≤" | undefined;
+
+    // const reverseChronological = b.releases.slice().reverse();
+    // let previousRelease: string | undefined;
+    // for (let index = b.releases.length - 1; index >= 0; index--) {
+    //   const release = reverseChronological[index] as Release;
+    //   const current = feature.flatSupportedIn(release);
+
+    //   // Check if current has changed, etc.
+    // }
 
     const unqualifiedReleases = [];
     const qualifiedReleases = [];

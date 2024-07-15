@@ -9,7 +9,7 @@ To help out, pick a feature and do the following:
   its own feature or if it should be grouped with other features.
 - Review `baseline_low_date`, does it look plausible? If not, remove features
   from `compat_features` until the date and browser versions seem plausible. Run
-  `npm run dist features/draft/html-elements` to regenerate dist.
+  `npm run dist` to regenerate dist files after changes.
 - Write a description for the feature.
 - Move the file into the main features/ directory and submit a PR with your
   changes.

@@ -200,7 +200,7 @@ describe("statements", function () {
       it("throws when browser is undefined", function () {
         const cr = browser("chrome");
         const statement = new RealSupportStatement({ version_added: "1" });
-        assert.throws(() => statement.supportedIn(cr.current()), Error);
+        assert.throws(() => statement.supportedInDetails(cr.current()), Error);
       });
 
       it("throws when release does not correspond to the statement's browser", function () {
@@ -209,7 +209,7 @@ describe("statements", function () {
           browser("chrome"),
         );
         assert.throws(
-          () => statement.supportedIn(browser("firefox").current()),
+          () => statement.supportedInDetails(browser("firefox").current()),
           Error,
         );
       });
@@ -219,20 +219,35 @@ describe("statements", function () {
         const unranged = new RealSupportStatement({ version_added: "100" }, cr);
         const ranged = new RealSupportStatement({ version_added: "≤100" }, cr);
 
-        assert.equal(unranged.supportedIn(cr.version("100")).supported, true);
-        assert.equal(unranged.supportedIn(cr.version("101")).supported, true);
-        assert.equal(unranged.supportedIn(cr.current()).supported, true);
         assert.equal(
-          unranged.supportedIn(cr.releases.at(-1) as any).supported,
+          unranged.supportedInDetails(cr.version("100")).supported,
+          true,
+        );
+        assert.equal(
+          unranged.supportedInDetails(cr.version("101")).supported,
+          true,
+        );
+        assert.equal(unranged.supportedInDetails(cr.current()).supported, true);
+        assert.equal(
+          unranged.supportedInDetails(cr.releases.at(-1) as any).supported,
           true,
         );
 
-        assert.equal(ranged.supportedIn(cr.version("99")).supported, null);
-        assert.equal(ranged.supportedIn(cr.version("100")).supported, true);
-        assert.equal(ranged.supportedIn(cr.version("101")).supported, true);
-        assert.equal(ranged.supportedIn(cr.current()).supported, true);
         assert.equal(
-          ranged.supportedIn(cr.releases.at(-1) as any).supported,
+          ranged.supportedInDetails(cr.version("99")).supported,
+          null,
+        );
+        assert.equal(
+          ranged.supportedInDetails(cr.version("100")).supported,
+          true,
+        );
+        assert.equal(
+          ranged.supportedInDetails(cr.version("101")).supported,
+          true,
+        );
+        assert.equal(ranged.supportedInDetails(cr.current()).supported, true);
+        assert.equal(
+          ranged.supportedInDetails(cr.releases.at(-1) as any).supported,
           true,
         );
       });
@@ -248,17 +263,47 @@ describe("statements", function () {
           cr,
         );
 
-        assert.equal(unranged.supportedIn(cr.version("99")).supported, false);
-        assert.equal(unranged.supportedIn(cr.version("100")).supported, true);
-        assert.equal(unranged.supportedIn(cr.version("101")).supported, true);
-        assert.equal(unranged.supportedIn(cr.version("124")).supported, true);
-        assert.equal(unranged.supportedIn(cr.version("125")).supported, false);
+        assert.equal(
+          unranged.supportedInDetails(cr.version("99")).supported,
+          false,
+        );
+        assert.equal(
+          unranged.supportedInDetails(cr.version("100")).supported,
+          true,
+        );
+        assert.equal(
+          unranged.supportedInDetails(cr.version("101")).supported,
+          true,
+        );
+        assert.equal(
+          unranged.supportedInDetails(cr.version("124")).supported,
+          true,
+        );
+        assert.equal(
+          unranged.supportedInDetails(cr.version("125")).supported,
+          false,
+        );
 
-        assert.equal(ranged.supportedIn(cr.version("99")).supported, null);
-        assert.equal(ranged.supportedIn(cr.version("100")).supported, true);
-        assert.equal(ranged.supportedIn(cr.version("101")).supported, true);
-        assert.equal(ranged.supportedIn(cr.version("124")).supported, true);
-        assert.equal(unranged.supportedIn(cr.version("125")).supported, false);
+        assert.equal(
+          ranged.supportedInDetails(cr.version("99")).supported,
+          null,
+        );
+        assert.equal(
+          ranged.supportedInDetails(cr.version("100")).supported,
+          true,
+        );
+        assert.equal(
+          ranged.supportedInDetails(cr.version("101")).supported,
+          true,
+        );
+        assert.equal(
+          ranged.supportedInDetails(cr.version("124")).supported,
+          true,
+        );
+        assert.equal(
+          unranged.supportedInDetails(cr.version("125")).supported,
+          false,
+        );
       });
 
       it("returns unknown support when release is before ranged version_added", function () {
@@ -272,9 +317,12 @@ describe("statements", function () {
           cr,
         );
 
-        assert.equal(rangedOpen.supportedIn(cr.version("99")).supported, null);
         assert.equal(
-          rangedClosed.supportedIn(cr.version("99")).supported,
+          rangedOpen.supportedInDetails(cr.version("99")).supported,
+          null,
+        );
+        assert.equal(
+          rangedClosed.supportedInDetails(cr.version("99")).supported,
           null,
         );
       });
@@ -286,10 +334,22 @@ describe("statements", function () {
           cr,
         );
 
-        assert.equal(rangedEnd.supportedIn(cr.version("100")).supported, true);
-        assert.equal(rangedEnd.supportedIn(cr.version("101")).supported, null);
-        assert.equal(rangedEnd.supportedIn(cr.version("124")).supported, null);
-        assert.equal(rangedEnd.supportedIn(cr.version("125")).supported, false);
+        assert.equal(
+          rangedEnd.supportedInDetails(cr.version("100")).supported,
+          true,
+        );
+        assert.equal(
+          rangedEnd.supportedInDetails(cr.version("101")).supported,
+          null,
+        );
+        assert.equal(
+          rangedEnd.supportedInDetails(cr.version("124")).supported,
+          null,
+        );
+        assert.equal(
+          rangedEnd.supportedInDetails(cr.version("125")).supported,
+          false,
+        );
       });
 
       it("returns unsupported when statement is version_added false", function () {
@@ -300,14 +360,17 @@ describe("statements", function () {
         );
 
         for (const release of cr.releases) {
-          assert.equal(statement.supportedIn(release).supported, false);
+          assert.equal(statement.supportedInDetails(release).supported, false);
         }
       });
 
       it("returns unsupported when release is before fixed version_added", function () {
         const cr = browser("chrome");
         const unranged = new RealSupportStatement({ version_added: "100" }, cr);
-        assert.equal(unranged.supportedIn(cr.version("99")).supported, false);
+        assert.equal(
+          unranged.supportedInDetails(cr.version("99")).supported,
+          false,
+        );
       });
 
       it("returns unsupported when release is on or after version_removed", function () {
@@ -317,11 +380,20 @@ describe("statements", function () {
           { version_added: "1", version_removed: "10" },
           cr,
         );
-        assert.equal(unranged.supportedIn(cr.version("10")).supported, false);
-        assert.equal(unranged.supportedIn(cr.version("11")).supported, false);
-        assert.equal(unranged.supportedIn(cr.current()).supported, false);
         assert.equal(
-          unranged.supportedIn(cr.releases.at(-1) as any).supported,
+          unranged.supportedInDetails(cr.version("10")).supported,
+          false,
+        );
+        assert.equal(
+          unranged.supportedInDetails(cr.version("11")).supported,
+          false,
+        );
+        assert.equal(
+          unranged.supportedInDetails(cr.current()).supported,
+          false,
+        );
+        assert.equal(
+          unranged.supportedInDetails(cr.releases.at(-1) as any).supported,
           false,
         );
 
@@ -329,11 +401,17 @@ describe("statements", function () {
           { version_added: "≤5", version_removed: "10" },
           cr,
         );
-        assert.equal(ranged.supportedIn(cr.version("10")).supported, false);
-        assert.equal(ranged.supportedIn(cr.version("11")).supported, false);
-        assert.equal(ranged.supportedIn(cr.current()).supported, false);
         assert.equal(
-          ranged.supportedIn(cr.releases.at(-1) as any).supported,
+          ranged.supportedInDetails(cr.version("10")).supported,
+          false,
+        );
+        assert.equal(
+          ranged.supportedInDetails(cr.version("11")).supported,
+          false,
+        );
+        assert.equal(ranged.supportedInDetails(cr.current()).supported, false);
+        assert.equal(
+          ranged.supportedInDetails(cr.releases.at(-1) as any).supported,
           false,
         );
       });
