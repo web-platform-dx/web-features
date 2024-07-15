@@ -1,0 +1,14 @@
+draft_date: 2024-07-11
+name: Web Periodic Background Synchronization
+description: TODO
+spec: https://wicg.github.io/periodic-background-sync/
+compat_features:
+  - api.PeriodicSyncEvent
+  - api.PeriodicSyncEvent.PeriodicSyncEvent
+  - api.PeriodicSyncEvent.tag
+  - api.PeriodicSyncManager
+  - api.PeriodicSyncManager.getTags
+  - api.PeriodicSyncManager.register
+  - api.PeriodicSyncManager.unregister
+  - api.ServiceWorkerGlobalScope.periodicsync_event
+  - api.ServiceWorkerRegistration.periodicSync

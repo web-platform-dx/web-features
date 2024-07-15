@@ -1,0 +1,28 @@
+draft_date: 2024-07-11
+name: CSS Lists and Counters Module Level 3
+description: TODO
+spec: https://drafts.csswg.org/css-lists-3/
+compat_features:
+  - css.properties.counter-increment
+  - css.properties.counter-increment.list-item
+  - css.properties.counter-increment.none
+  - css.properties.counter-reset
+  - css.properties.counter-reset.list-item
+  - css.properties.counter-reset.none
+  - css.properties.counter-reset.reversed
+  - css.properties.list-style
+  - css.properties.list-style-image
+  - css.properties.list-style-image.none
+  - css.properties.list-style-position
+  - css.properties.list-style-position.inside
+  - css.properties.list-style-position.outside
+  - css.properties.list-style-type
+  - css.properties.list-style-type.none
+  - css.types.counter
+  - css.types.counters
+
+# The following features in the spec are already part of web-features:
+# - counter-set:
+#   - css.properties.counter-set
+#   - css.properties.counter-set.list-item
+#   - css.properties.counter-set.none
