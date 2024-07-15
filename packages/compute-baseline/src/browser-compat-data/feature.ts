@@ -30,7 +30,7 @@ export class Feature {
 
   constructor(id: string, featureData: unknown) {
     if (!isFeatureData(featureData)) {
-      throw `${id} is not valid feature`;
+      throw new Error(`${id} is not valid feature`);
     }
 
     this.id = id;

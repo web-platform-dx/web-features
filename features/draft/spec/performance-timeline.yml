@@ -1,0 +1,26 @@
+draft_date: 2024-07-11
+name: Performance Timeline
+description: TODO
+spec: https://w3c.github.io/performance-timeline/
+compat_features:
+  - api.Performance
+  - api.Performance.getEntries
+  - api.Performance.getEntriesByName
+  - api.Performance.getEntriesByType
+  - api.PerformanceEntry
+  - api.PerformanceEntry.duration
+  - api.PerformanceEntry.entryType
+  - api.PerformanceEntry.name
+  - api.PerformanceEntry.startTime
+  - api.PerformanceEntry.toJSON
+  - api.PerformanceObserver
+  - api.PerformanceObserver.PerformanceObserver
+  - api.PerformanceObserver.PerformanceObserver.droppedEntriesCount
+  - api.PerformanceObserver.disconnect
+  - api.PerformanceObserver.observe
+  - api.PerformanceObserver.supportedEntryTypes_static
+  - api.PerformanceObserver.takeRecords
+  - api.PerformanceObserverEntryList
+  - api.PerformanceObserverEntryList.getEntries
+  - api.PerformanceObserverEntryList.getEntriesByName
+  - api.PerformanceObserverEntryList.getEntriesByType
