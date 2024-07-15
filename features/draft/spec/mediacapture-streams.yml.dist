@@ -248,12 +248,12 @@ compat_features:
   - api.InputDeviceInfo
 
   # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
+  # baseline_low_date: ≤2020-01-15
+  # baseline_high_date: ≤2022-07-15
   # support:
   #   chrome: "59"
   #   chrome_android: "59"
-  #   edge: "79"
+  #   edge: ≤79
   #   firefox: "43"
   #   firefox_android: "43"
   #   safari: "11"
@@ -261,12 +261,12 @@ compat_features:
   - api.MediaStreamTrack.applyConstraints.deviceId_constraint
 
   # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
+  # baseline_low_date: ≤2020-01-15
+  # baseline_high_date: ≤2022-07-15
   # support:
   #   chrome: "59"
   #   chrome_android: "59"
-  #   edge: "79"
+  #   edge: ≤79
   #   firefox: "50"
   #   firefox_android: "50"
   #   safari: "11"
@@ -297,7 +297,7 @@ compat_features:
   # support:
   #   chrome: "59"
   #   chrome_android: "59"
-  #   edge: "79"
+  #   edge: ≤79
   #   firefox: "70"
   #   firefox_android: "79"
   #   safari: "11"
@@ -318,7 +318,7 @@ compat_features:
   # support:
   #   chrome: "59"
   #   chrome_android: "59"
-  #   edge: "79"
+  #   edge: ≤79
   #   firefox_android: "43"
   #   safari: "11"
   #   safari_ios: "11"
@@ -337,21 +337,21 @@ compat_features:
   # support:
   #   chrome: "59"
   #   chrome_android: "59"
-  #   edge: "12"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - api.MediaStreamTrack.getCapabilities
-
-  # baseline: false
-  # support:
-  #   chrome: "59"
-  #   chrome_android: "59"
-  #   edge: "79"
+  #   edge: ≤79
   #   safari: "11"
   #   safari_ios: "11"
   - api.MediaStreamTrack.applyConstraints.channelCount_constraint
   - api.MediaStreamTrack.applyConstraints.sampleRate_constraint
   - api.MediaStreamTrack.applyConstraints.sampleSize_constraint
+
+  # baseline: false
+  # support:
+  #   chrome: "59"
+  #   chrome_android: "59"
+  #   edge: "12"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.MediaStreamTrack.getCapabilities
 
   # baseline: false
   # support:
@@ -385,7 +385,7 @@ compat_features:
   # support:
   #   chrome: "67"
   #   chrome_android: "67"
-  #   edge: "79"
+  #   edge: ≤79
   #   firefox: "55"
   #   firefox_android: "55"
   - api.MediaStreamTrack.applyConstraints.autoGainControl_constraint

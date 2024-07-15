@@ -13,7 +13,7 @@ compat_features:
   #   edge: "12"
   #   firefox: "52"
   #   firefox_android: "6"
-  #   safari_ios: "3"
+  #   safari_ios: ≤3
   - api.Element.touchcancel_event
   - api.Element.touchend_event
   - api.Element.touchmove_event
@@ -40,7 +40,7 @@ compat_features:
   # support:
   #   chrome: "18"
   #   chrome_android: "18"
-  #   edge: "18"
+  #   edge: ≤18
   #   firefox_android: "6"
   #   safari_ios: "2"
   - api.TouchList
@@ -51,16 +51,16 @@ compat_features:
   # support:
   #   chrome: "22"
   #   chrome_android: "25"
-  #   edge: "18"
+  #   edge: ≤18
   #   firefox_android: "6"
-  #   safari_ios: "3"
+  #   safari_ios: ≤3
   - api.Touch
 
   # baseline: false
   # support:
   #   chrome: "22"
   #   chrome_android: "25"
-  #   edge: "18"
+  #   edge: ≤18
   #   firefox_android: "6"
   #   safari_ios: "10"
   - api.Touch.clientX
@@ -76,7 +76,7 @@ compat_features:
   # support:
   #   chrome: "38"
   #   chrome_android: "38"
-  #   edge: "79"
+  #   edge: ≤79
   #   firefox_android: "6"
   #   safari_ios: "10"
   - api.Touch.force
@@ -87,7 +87,7 @@ compat_features:
   # support:
   #   chrome: "43"
   #   chrome_android: "43"
-  #   edge: "79"
+  #   edge: ≤79
   #   firefox_android: "6"
   #   safari_ios: "10"
   - api.Touch.rotationAngle
@@ -98,7 +98,7 @@ compat_features:
   #   chrome_android: "48"
   #   edge: "79"
   #   firefox_android: "6"
-  #   safari_ios: "3"
+  #   safari_ios: ≤3
   - api.Touch.Touch
 
   # baseline: false

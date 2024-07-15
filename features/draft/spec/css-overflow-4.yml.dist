@@ -62,8 +62,8 @@ compat_features:
   #   edge: "79"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: "3"
-  #   safari_ios: "2"
+  #   safari: ≤3
+  #   safari_ios: ≤2
   - css.properties.overflow.auto
 
   # baseline: high
@@ -76,7 +76,7 @@ compat_features:
   #   firefox: "3.5"
   #   firefox_android: "4"
   #   safari: "3"
-  #   safari_ios: "2"
+  #   safari_ios: ≤2
   - css.properties.overflow-x.auto
   - css.properties.overflow-y.auto
 

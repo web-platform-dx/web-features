@@ -112,10 +112,11 @@ compat_features:
   #   edge: "79"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: "3.1"
-  #   safari_ios: "2"
-  - css.properties.text-align.end
-  - css.properties.text-align.start
+  #   safari: ≤4
+  #   safari_ios: ≤3.2
+  - css.properties.text-align.center
+  - css.properties.text-align.left
+  - css.properties.text-align.right
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -126,11 +127,10 @@ compat_features:
   #   edge: "79"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - css.properties.text-align.center
-  - css.properties.text-align.left
-  - css.properties.text-align.right
+  #   safari: "3.1"
+  #   safari_ios: "2"
+  - css.properties.text-align.end
+  - css.properties.text-align.start
 
   # baseline: high
   # baseline_low_date: 2020-07-28
@@ -149,10 +149,26 @@ compat_features:
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
   # support:
+  #   chrome: ≤83
+  #   chrome_android: "83"
+  #   edge: "83"
+  #   firefox: ≤72
+  #   firefox_android: "79"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
+  - css.properties.line-break.anywhere
+  - css.properties.line-break.auto
+  - css.properties.line-break.loose
+  - css.properties.line-break.strict
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
   #   chrome: "58"
   #   chrome_android: "58"
   #   edge: "79"
-  #   firefox: "72"
+  #   firefox: ≤72
   #   firefox_android: "79"
   #   safari: "11"
   #   safari_ios: "11"
@@ -175,30 +191,14 @@ compat_features:
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
   # support:
-  #   chrome: "80"
+  #   chrome: ≤80
   #   chrome_android: "80"
-  #   edge: "80"
-  #   firefox: "72"
+  #   edge: ≤80
+  #   firefox: ≤72
   #   firefox_android: "79"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
   - css.properties.word-wrap
-
-  # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
-  # support:
-  #   chrome: "83"
-  #   chrome_android: "83"
-  #   edge: "83"
-  #   firefox: "72"
-  #   firefox_android: "79"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
-  - css.properties.line-break.anywhere
-  - css.properties.line-break.auto
-  - css.properties.line-break.loose
-  - css.properties.line-break.strict
 
   # baseline: high
   # baseline_low_date: 2021-08-10

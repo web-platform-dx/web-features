@@ -14,28 +14,40 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
-  #   chrome: "79"
+  #   chrome: ≤79
   #   chrome_android: "79"
   #   edge: "79"
-  #   firefox: "23"
+  #   firefox: ≤23
   #   firefox_android: "23"
-  #   safari: "9.1"
-  #   safari_ios: "9.3"
+  #   safari: ≤9.1
+  #   safari_ios: ≤9.3
   - http.mixed-content
-  - http.mixed-content.blockable_mixed_content
 
-  # baseline: false
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
   # support:
   #   chrome: "79"
   #   chrome_android: "79"
   #   edge: "79"
   #   firefox: "23"
+  #   firefox_android: "23"
+  #   safari: ≤9.1
+  #   safari_ios: ≤9.3
+  - http.mixed-content.blockable_mixed_content
+
+  # baseline: false
+  # support:
+  #   chrome: ≤79
+  #   chrome_android: "79"
+  #   edge: "79"
+  #   firefox: ≤23
   #   firefox_android: "23"
   - http.mixed-content.allow_file_urls
 
   # baseline: false
   # support:
-  #   chrome: "79"
+  #   chrome: ≤79
   #   chrome_android: "79"
   #   edge: "79"
   #   firefox: "55"
@@ -44,7 +56,7 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "79"
+  #   chrome: ≤79
   #   chrome_android: "79"
   #   edge: "79"
   #   firefox: "84"
