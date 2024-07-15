@@ -1,0 +1,17 @@
+draft_date: 2024-07-11
+name: Reporting API
+description: TODO
+spec: https://w3c.github.io/reporting/
+compat_features:
+  - api.Report
+  - api.Report.body
+  - api.Report.toJSON
+  - api.Report.type
+  - api.Report.url
+  - api.ReportBody
+  - api.ReportBody.toJSON
+  - api.ReportingObserver
+  - api.ReportingObserver.ReportingObserver
+  - api.ReportingObserver.disconnect
+  - api.ReportingObserver.observe
+  - api.ReportingObserver.takeRecords

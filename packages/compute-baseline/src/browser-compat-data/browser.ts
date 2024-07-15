@@ -58,7 +58,7 @@ export class Browser {
     const curr = this.releases.find((r) => r.data.status === "current");
 
     if (curr === undefined) {
-      throw Error(`${browser} does not have a "current" release`);
+      throw new Error(`${browser} does not have a "current" release`);
     }
 
     return curr;
@@ -67,7 +67,7 @@ export class Browser {
   version(versionString: string): Release {
     const result = this.releases.find((r) => r.version === versionString);
     if (result === undefined) {
-      throw Error(`${browser} does not have a '${versionString}' release.`);
+      throw new Error(`${browser} does not have a '${versionString}' release.`);
     }
     return result;
   }
