@@ -16,6 +16,7 @@
     "node": ">=18.19.0"
   },
   "scripts": {
+    "build:extended": "tsx scripts/build.ts extended-json",
     "build": "tsx scripts/build.ts package",
     "dist": "tsx scripts/dist.ts",
     "feature-init": "tsx scripts/feature-init.ts",

@@ -45,6 +45,8 @@ interface SupportStatus {
     support: {
         [K in browserIdentifier]?: string;
     };
+    /** Statuses for each key in the feature's compat_features list, if applicable. Not available to the npm release of web-features. */
+    by_compat_key?: Record<string, SupportStatus>
 }
 
 /** Specification URL

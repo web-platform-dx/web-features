@@ -1,4 +1,5 @@
 import { execSync } from "child_process";
+import { getStatus } from "compute-baseline";
 import stringify from "fast-json-stable-stringify";
 import fs from "fs";
 import yargs from "yargs";
@@ -12,6 +13,11 @@ yargs(process.argv.slice(2))
     command: "package",
     describe: "Generate the web-features npm package",
     handler: buildPackage,
+  })
+  .command({
+    command: "extended-json",
+    describe: "Generate a web-features JSON file with BCD per-key statuses",
+    handler: buildExtendedJSON,
   })
   .parseSync();
 
@@ -34,4 +40,26 @@ function buildPackage() {
     cwd: "./packages/web-features",
     encoding: "utf-8",
   });
+}
+
+function buildExtendedJSON() {
+  // TODO: Validate the resulting JSON against a schema.
+  for (const [id, featureData] of Object.entries(data.features)) {
+    if (Array.isArray(featureData.compat_features) && featureData.status) {
+      const by_compat_key = {};
+
+      for (const key of featureData.compat_features) {
+        by_compat_key[key] = { status: getStatus(id, key) };
+      }
+
+      if (Object.keys(by_compat_key).length) {
+        featureData.status.by_compat_key = by_compat_key;
+      }
+    }
+  }
+
+  fs.writeFileSync(
+    new URL("./web-features.extended.json", rootDir),
+    stringify(data),
+  );
 }
