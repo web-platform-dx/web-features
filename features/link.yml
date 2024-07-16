@@ -1,8 +1,9 @@
-draft_date: 2024-06-05
 name: <link>
-description: The `<link>` element TODO.
+description: The `<link>` element specifies relationships between the current document and an external resource, for example stylesheets, favicons, and more.
 spec: https://html.spec.whatwg.org/multipage/semantics.html#the-link-element
 group: html
+status:
+  compute_from: html.elements.link
 compat_features:
   - api.HTMLLinkElement
   - api.HTMLLinkElement.as
