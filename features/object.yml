@@ -1,10 +1,11 @@
-draft_date: 2024-06-05
 name: <object>
-description: The `<object>` element TODO.
+description: The `<object>` element represents an external resource such as an external plugin or nested browsing context.
 spec:
   - https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element
   - https://html.spec.whatwg.org/multipage/obsolete.html#param
 group: html
+status:
+  compute_from: html.elements.object
 compat_features:
   - api.HTMLObjectElement
   - api.HTMLObjectElement.contentDocument
