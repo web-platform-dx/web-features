@@ -1,0 +1,35 @@
+draft_date: 2024-07-11
+name: Cookie Store API
+description: TODO
+spec: https://wicg.github.io/cookie-store/
+compat_features:
+  - api.CookieChangeEvent
+  - api.CookieChangeEvent.CookieChangeEvent
+  - api.CookieChangeEvent.changed
+  - api.CookieChangeEvent.changed.partitioned_property
+  - api.CookieChangeEvent.deleted
+  - api.CookieChangeEvent.deleted.partitioned_property
+  - api.CookieStore
+  - api.CookieStore.change_event
+  - api.CookieStore.delete
+  - api.CookieStore.delete.partitioned_option
+  - api.CookieStore.get
+  - api.CookieStore.get.partitioned_return_property
+  - api.CookieStore.getAll
+  - api.CookieStore.getAll.partitioned_return_property
+  - api.CookieStore.set
+  - api.CookieStore.set.partitioned_option
+  - api.CookieStoreManager
+  - api.CookieStoreManager.getSubscriptions
+  - api.CookieStoreManager.subscribe
+  - api.CookieStoreManager.unsubscribe
+  - api.ExtendableCookieChangeEvent
+  - api.ExtendableCookieChangeEvent.ExtendableCookieChangeEvent
+  - api.ExtendableCookieChangeEvent.changed
+  - api.ExtendableCookieChangeEvent.changed.partitioned_property
+  - api.ExtendableCookieChangeEvent.deleted
+  - api.ExtendableCookieChangeEvent.deleted.partitioned_property
+  - api.ServiceWorkerGlobalScope.cookieStore
+  - api.ServiceWorkerGlobalScope.cookiechange_event
+  - api.ServiceWorkerRegistration.cookies
+  - api.Window.cookieStore
