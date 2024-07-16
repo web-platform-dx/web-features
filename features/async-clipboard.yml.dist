@@ -58,6 +58,23 @@ compat_features:
 
   # baseline: false
   # support:
+  #   edge: "79"
+  #   firefox: "127"
+  #   firefox_android: "127"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.Clipboard.read
+
+  # baseline: false
+  # support:
+  #   firefox: "125"
+  #   firefox_android: "125"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.Clipboard.readText
+
+  # baseline: false
+  # support:
   #   firefox: "127"
   #   firefox_android: "127"
   #   safari: "13.1"

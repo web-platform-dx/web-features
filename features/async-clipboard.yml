@@ -20,9 +20,8 @@ status:
     safari_ios: "13.4"
 compat_features:
   - api.Clipboard
-  # TODO: include after https://github.com/mdn/browser-compat-data/pull/23593
-  # - api.Clipboard.read
-  # - api.Clipboard.readText
+  - api.Clipboard.read
+  - api.Clipboard.readText
   - api.Clipboard.write
   - api.Clipboard.writeText
   - api.ClipboardItem
