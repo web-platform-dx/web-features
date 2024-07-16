@@ -1,0 +1,6 @@
+name: Keyboard map
+description: Keyboard map allows websites to convert from a given `code` value to a valid `key` value that can be shown to the user to identify the given key. The conversion from code to key is based on the user's currently selected keyboard layout. It is intended to be used by web applications that want to treat the keyboard as a set of buttons and need to describe those buttons to the user.
+spec: https://wicg.github.io/keyboard-map/
+compat_features:
+  - api.Keyboard.getLayoutMap
+  - api.KeyboardLayoutMap

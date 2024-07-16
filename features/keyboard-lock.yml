@@ -1,0 +1,8 @@
+name: Keyboard lock
+description: Keyboard lock allows websites to capture keys that are normally reserved by the underlying host operating system. It is intended to be used by web applications that provide a fullscreen immersive experience.
+spec: https://wicg.github.io/keyboard-lock/
+compat_features:
+  - api.Keyboard
+  - api.Keyboard.lock
+  - api.Keyboard.unlock
+  - api.Navigator.keyboard
