@@ -1,0 +1,13 @@
+draft_date: 2024-07-11
+name: Local Font Access
+description: TODO
+spec: https://wicg.github.io/local-font-access/
+compat_features:
+  - api.FontData
+  - api.FontData.blob
+  - api.FontData.family
+  - api.FontData.fullName
+  - api.FontData.postscriptName
+  - api.FontData.style
+  - api.Window.queryLocalFonts
+  - http.headers.Permissions-Policy.local-fonts
