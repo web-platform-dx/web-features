@@ -192,6 +192,17 @@ Avoid.
 See [sets](#sets).
 ([#727](https://github.com/web-platform-dx/web-features/pull/727#discussion_r1537635491))
 
+##### typically styled as … by default
+
+Use this phrase (or a closely similarly one like "typically styled in") to note unspecified but conventional browser default styling.
+Use it at the end of the description, but before [_also known as_ text](#also-known-as).
+For example:
+
+ > The `<small>` element represents side-comments and small print, like copyright and legal text, independent of its styled presentation.
+ > Typically styled in a reduced font size by default.
+ 
+ ([#1379](https://github.com/web-platform-dx/web-features/pull/1379))
+
 ##### usage
 
 Never use "usage" in the sense of "using."
