@@ -1,0 +1,13 @@
+name: <menu>
+description: The `<menu>` element represents an unordered list of items (`<li>`), and is a semantic alternative to the `<ul>` element.
+spec:
+  - https://html.spec.whatwg.org/multipage/grouping-content.html#menus
+  - https://html.spec.whatwg.org/multipage/grouping-content.html#the-li-element
+group: html
+compat_features:
+  - api.HTMLMenuElement
+  - html.elements.menu
+  - api.HTMLLIElement
+  - api.HTMLLIElement.value
+  - html.elements.li
+  - html.elements.li.value
