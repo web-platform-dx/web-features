@@ -16,6 +16,7 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "3"
   #   safari_ios: "2"
+  - css.properties.overflow.auto
   - css.properties.overflow.hidden
   - css.properties.overflow.scroll
   - css.properties.overflow.visible
@@ -31,9 +32,11 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "3"
   #   safari_ios: "2"
+  - css.properties.overflow-x.auto
   - css.properties.overflow-x.hidden
   - css.properties.overflow-x.scroll
   - css.properties.overflow-x.visible
+  - css.properties.overflow-y.auto
   - css.properties.overflow-y.hidden
   - css.properties.overflow-y.scroll
   - css.properties.overflow-y.visible
@@ -52,33 +55,6 @@ compat_features:
   - css.properties.text-overflow
   - css.properties.text-overflow.clip
   - css.properties.text-overflow.ellipsis
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "79"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "3"
-  #   safari_ios: "2"
-  - css.properties.overflow.auto
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "79"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "3"
-  #   safari_ios: "2"
-  - css.properties.overflow-x.auto
-  - css.properties.overflow-y.auto
 
   # baseline: low
   # baseline_low_date: 2022-03-14
