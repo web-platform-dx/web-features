@@ -139,7 +139,7 @@ To create a new feature from scratch:
    The `group` field is used to categorize features into groups. For example, the Async Clipboard API feature is in the `clipboard` group. Groups are maintained in the [`groups`](../groups) directory, and each group is a YAML file. The name of the file defines the unique ID of a group.
 
    * If one of the existing groups fits your feature, add the `group` field to your feature, and set it to the ID of the group.
-   * If none of the existing groups fit your feature, but you believe a new group should be greated, then create a new group file in the `groups` directory, then add the `group` field to your feature set to the ID of the new group.
+   * If none of the existing groups fit your feature, but you believe a new group should be created, then create a new group file in the `groups` directory, then add the `group` field to your feature set to the ID of the new group.
 
 1. Set the baseline status and browser compatibility data of the feature. This is the most important and difficult step of authoring a feature, which is documented in a separate section. See [Set the status of a feature](#set-the-status-of-a-feature).
 
@@ -249,18 +249,19 @@ To generate your feature's dist file, once your feature is associated with one o
 
 #### Fix data discrepancies in your feature's dist file
 
-The most likely reason for the data in your new feature's dist file to be incorrect is that your feature is associated to too many BCD keys.
+The most likely reason for the data in your new feature's dist file to be incorrect is that your feature is associated with too many BCD keys, or with the wrong BCD keys. BCD keys describe all constituents of a feature, whether they are vital to the feature, or later additions to it. For example, developers have been able to use the Web Audio API for many years even if the AudioWorklet or OfflineAudioContext APIs were added later, and only recently became baseline.
 
-BCD keys describe all constituents of a feature, whether they are vital to the feature, or later additions to it. For example, developers have been able to use the Web Audio API for many years even if the AudioWorklet or OfflineAudioContext APIs were added later, and only recently became baseline.
+You might be faced with the following scenarios:
 
-> [!IMPORTANT]
-> Ensure that the BCD keys that your feature is associated with matches how most developers use the feature.
+* Your feature's overall status is too old (e.g., it's a new feature, but it's being reported as long-established). In this case, you might have missing BCD keys. Check that you've covering the complete feature by looking for missing interfaces, CSS property values, and so on.
+* Your feature's overall status is too young (e.g., it's a long-established feature, but it's being reported as newly available). In this case, you might have BCD keys that correspond to later additions which are holding the feature back unfairly.\
+* Your feature's overall status and individual BCD keys are yielding incorrect results. In this case, the underlying BCD data might have caveats or errors. Check the data in the [browser-compat-data](https://github.com/mdn/browser-compat-data/) repository for any caveats such as features behind prefixes or flags, or partial implementations.
 
-To fix data discrepancies in your dist file, open the dist file and, under `compat_features`, review each individual section.
+To fix data discrepancies in your dist file, open the dist file and, under `compat_features`, review each individual section. Each section corresponds to a group of BCD keys that have the same baseline and support status.
 
-Each section corresponds to a group of BCD keys that have the same baseline and support status.
+Look for the feature's entrypoint in the dist file. The entrypoint of a feature is the property, interface, method, or other constituent part of the feature which web developers use first. For example, the Web Audio API feature has the `AudioContext` interface as its entrypoint. Before doing anything else, developers will first instantiate an `AudioContext` object by doing `const audioContext = new AudioContext()`.
 
-_TODO: continue documenting this section (consider splitting BCD keys into different features (later addition), or using just silencing some BCD keys by using `compat_from`)._
+If your feature's entrypoint doesn't have the same status as the overall feature, use the `compute_from` field in your feature file to flag the BCD key (or keys) that represent the minimum viable set of constituent parts of a feature that make it usable.
 
 ### Create a GitHub Pull Request to review and merge your changes
 
