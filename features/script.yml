@@ -1,10 +1,10 @@
-draft_date: 2024-06-05
 name: <script>
-description: The `<script>` element TODO.
+description: The `<script>` element is used to embed executable code or data; this is typically used to embed or refer to JavaScript code.
 spec:
   - https://html.spec.whatwg.org/multipage/scripting.html#script
-  - https://html.spec.whatwg.org/multipage/scripting.html#the-noscript-element
 group: html
+status:
+  compute_from: html.elements.script
 compat_features:
   - api.HTMLScriptElement
   - api.HTMLScriptElement.async
@@ -15,7 +15,6 @@ compat_features:
   - api.HTMLScriptElement.supports_static
   - api.HTMLScriptElement.text
   - api.HTMLScriptElement.type
-  - html.elements.noscript
   - html.elements.script
   - html.elements.script.async
   - html.elements.script.crossorigin
