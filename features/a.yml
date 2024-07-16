@@ -2,6 +2,8 @@ name: <a>
 description: The `<a>` element creates a hyperlink to any resource that's accessible via a URL, such as web pages, files, email addresses, locations within the same page.
 spec: https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element
 group: html
+status:
+  compute_from: html.elements.a
 compat_features:
   - api.HTMLAnchorElement
   - api.HTMLAnchorElement.download
