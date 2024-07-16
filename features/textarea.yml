@@ -1,8 +1,9 @@
-draft_date: 2024-06-05
 name: <textarea>
-description: The `<textarea>` element TODO.
+description: The `<textarea>` element represents an editing control that allows users to enter multi-line, free-form, plain text.
 spec: https://html.spec.whatwg.org/multipage/form-elements.html#the-textarea-element
 group: forms
+status:
+  compute_from: html.elements.textarea
 compat_features:
   - api.HTMLTextAreaElement
   - api.HTMLTextAreaElement.autocomplete
