@@ -29,6 +29,7 @@ compat_features:
   - api.HTMLImageElement
   - api.HTMLImageElement.Image
   - html.elements.img
+  - html.elements.img.src
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -44,10 +45,9 @@ compat_features:
   - api.HTMLImageElement.alt
   - api.HTMLImageElement.complete
   - api.HTMLImageElement.height
-  - api.HTMLImageElement.isMap
   - api.HTMLImageElement.naturalHeight
   - api.HTMLImageElement.naturalWidth
-  - api.HTMLImageElement.useMap
+  - api.HTMLImageElement.src
   - api.HTMLImageElement.width
 
   # baseline: high
@@ -63,8 +63,6 @@ compat_features:
   #   safari_ios: "2"
   - html.elements.img.alt
   - html.elements.img.height
-  - html.elements.img.ismap
-  - html.elements.img.usemap
   - html.elements.img.width
 
   # baseline: high
@@ -80,32 +78,6 @@ compat_features:
   #   safari_ios: "6"
   - api.HTMLImageElement.crossOrigin
   - html.elements.img.crossorigin
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "34"
-  #   chrome_android: "34"
-  #   edge: "12"
-  #   firefox: "38"
-  #   firefox_android: "38"
-  #   safari: "8"
-  #   safari_ios: "8"
-  - api.HTMLImageElement.srcset
-
-  # baseline: high
-  # baseline_low_date: 2016-03-21
-  # baseline_high_date: 2018-09-21
-  # support:
-  #   chrome: "38"
-  #   chrome_android: "38"
-  #   edge: "12"
-  #   firefox: "38"
-  #   firefox_android: "38"
-  #   safari: "9.1"
-  #   safari_ios: "9.3"
-  - html.elements.img.sizes
 
   # baseline: high
   # baseline_low_date: 2016-03-21
