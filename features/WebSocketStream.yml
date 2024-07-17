@@ -1,0 +1,10 @@
+name: WebSocketStream API
+description: WebSocketStream API opens a two-way interactive communication session between the user's browser and a server using streams.
+spec: https://github.com/ricea/websocketstream-explainer/blob/master/README.md
+compat_features:
+  - api.WebSocketStream
+  - api.WebSocketStream.WebSocketStream
+  - api.WebSocketStream.close
+  - api.WebSocketStream.closed
+  - api.WebSocketStream.opened
+  - api.WebSocketStream.url
