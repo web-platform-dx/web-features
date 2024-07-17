@@ -214,4 +214,15 @@ describe("keystoneDateToStatus()", function () {
     assert.equal(status.baseline_low_date, null);
     assert.equal(status.baseline_high_date, null);
   });
+
+  it("preserves ranges where they exist", function () {
+    const status = keystoneDateToStatus(
+      "≤2020-01-01",
+      Temporal.PlainDate.from("2024-01-01"),
+      false,
+    );
+    assert.equal(status.baseline, "high");
+    assert.equal(status.baseline_low_date, "≤2020-01-01");
+    assert.equal(status.baseline_high_date, "≤2022-07-01");
+  });
 });
