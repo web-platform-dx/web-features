@@ -29,7 +29,6 @@ compat_features:
   - api.HTMLImageElement
   - api.HTMLImageElement.Image
   - html.elements.img
-  - html.elements.img.src
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -48,7 +47,6 @@ compat_features:
   - api.HTMLImageElement.isMap
   - api.HTMLImageElement.naturalHeight
   - api.HTMLImageElement.naturalWidth
-  - api.HTMLImageElement.src
   - api.HTMLImageElement.useMap
   - api.HTMLImageElement.width
 
@@ -121,20 +119,6 @@ compat_features:
   #   safari: "9.1"
   #   safari_ios: "9.3"
   - api.HTMLImageElement.currentSrc
-  - api.HTMLImageElement.sizes
-
-  # baseline: high
-  # baseline_low_date: 2018-10-02
-  # baseline_high_date: 2021-04-02
-  # support:
-  #   chrome: "34"
-  #   chrome_android: "34"
-  #   edge: "18"
-  #   firefox: "38"
-  #   firefox_android: "38"
-  #   safari: "8"
-  #   safari_ios: "8"
-  - html.elements.img.srcset
 
   # baseline: high
   # baseline_low_date: 2020-01-15
