@@ -173,7 +173,7 @@ describe("computeBaseline", function () {
 describe("keystoneDateToStatus()", function () {
   it('returns "low" for date 1 year before cutoff date', function () {
     const status = keystoneDateToStatus(
-      Temporal.PlainDate.from("2020-01-01").toString(),
+      "2020-01-01",
       Temporal.PlainDate.from("2021-01-01"),
       false,
     );
@@ -184,7 +184,7 @@ describe("keystoneDateToStatus()", function () {
 
   it('returns "high" for date 3 years before cutoff date', function () {
     const status = keystoneDateToStatus(
-      Temporal.PlainDate.from("2020-01-01").toString(),
+      "2020-01-01",
       Temporal.PlainDate.from("2024-01-01"),
       false,
     );
@@ -206,7 +206,7 @@ describe("keystoneDateToStatus()", function () {
 
   it("returns false for discouraged (deprecated, obsolete, etc.) features", function () {
     const status = keystoneDateToStatus(
-      Temporal.PlainDate.from("2020-01-01").toString(),
+      "2020-01-01",
       Temporal.PlainDate.from("2020-01-01"),
       true,
     );
