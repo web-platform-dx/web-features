@@ -27,8 +27,7 @@ export function support(feature: Feature, browsers: Browser[]): SupportMap {
       if (!lastInitial) {
         if ([false, null].includes(current)) {
           // First-iteration only: bail when the latest release does not support
-          // the feature. Strictly speaking, this could be a future release
-          // (e.g., removed in a beta).
+          // the feature.
           break;
         }
         lastInitial = release;
