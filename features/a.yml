@@ -6,7 +6,6 @@ status:
   compute_from: html.elements.a
 compat_features:
   - api.HTMLAnchorElement
-  - api.HTMLAnchorElement.download
   - api.HTMLAnchorElement.hash
   - api.HTMLAnchorElement.host
   - api.HTMLAnchorElement.hostname
@@ -15,7 +14,6 @@ compat_features:
   - api.HTMLAnchorElement.origin
   - api.HTMLAnchorElement.password
   - api.HTMLAnchorElement.pathname
-  - api.HTMLAnchorElement.ping
   - api.HTMLAnchorElement.port
   - api.HTMLAnchorElement.protocol
   - api.HTMLAnchorElement.rel
@@ -27,10 +25,8 @@ compat_features:
   - api.HTMLAnchorElement.type
   - api.HTMLAnchorElement.username
   - html.elements.a
-  - html.elements.a.download
   - html.elements.a.href
   - html.elements.a.hreflang
-  - html.elements.a.ping
   - html.elements.a.rel
   - html.elements.a.rel.noopener
   - html.elements.a.rel.noreferrer
