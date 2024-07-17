@@ -25,7 +25,7 @@ export function support(feature: Feature, browsers: Browser[]): SupportMap {
       const supported = feature.supportedIn(release);
 
       if (!lastInitial) {
-        if ([false, null].includes(current)) {
+        if ([false, null].includes(supported)) {
           // First-iteration only: bail when the latest release does not support
           // the feature.
           break;
@@ -34,11 +34,11 @@ export function support(feature: Feature, browsers: Browser[]): SupportMap {
         continue;
       }
 
-      if (current === null) {
+      if (supported === null) {
         lastInitialBoundary = "≤";
         break;
       }
-      if (current === false) {
+      if (supported === false) {
         lastInitialBoundary = "";
         break;
       }
