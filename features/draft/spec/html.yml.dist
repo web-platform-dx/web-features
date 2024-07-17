@@ -298,7 +298,6 @@ compat_features:
   #   safari_ios: "1"
   - api.BarProp
   - api.BarProp.visible
-  - api.HTMLBRElement
   - api.HTMLBodyElement
   - api.HTMLButtonElement
   - api.HTMLButtonElement.disabled
@@ -549,12 +548,10 @@ compat_features:
   #   safari: "4"
   #   safari_ios: "3.2"
   - html.elements.blockquote
-  - html.elements.br
   - html.elements.button
   - html.elements.button.disabled
   - html.elements.caption
   - html.elements.cite
-  - html.elements.code
   - html.elements.col
   - html.elements.col.span
   - html.elements.colgroup
@@ -1118,19 +1115,6 @@ compat_features:
   #   chrome: "2"
   #   chrome_android: "18"
   #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - html.elements.abbr
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "2"
-  #   chrome_android: "18"
-  #   edge: "12"
   #   firefox: "1.5"
   #   firefox_android: "4"
   #   safari: "4"
@@ -1268,79 +1252,6 @@ compat_features:
   #   edge: "12"
   #   firefox: "3.5"
   #   firefox_android: "4"
-  #   safari: "3.1"
-  #   safari_ios: "3"
-  - api.HTMLAudioElement
-  - api.HTMLMediaElement
-  - api.HTMLMediaElement.autoplay
-  - api.HTMLMediaElement.canplay_event
-  - api.HTMLMediaElement.canplaythrough_event
-  - api.HTMLMediaElement.controls
-  - api.HTMLMediaElement.currentSrc
-  - api.HTMLMediaElement.currentTime
-  - api.HTMLMediaElement.duration
-  - api.HTMLMediaElement.durationchange_event
-  - api.HTMLMediaElement.emptied_event
-  - api.HTMLMediaElement.ended
-  - api.HTMLMediaElement.ended_event
-  - api.HTMLMediaElement.error
-  - api.HTMLMediaElement.load
-  - api.HTMLMediaElement.loadeddata_event
-  - api.HTMLMediaElement.loadedmetadata_event
-  - api.HTMLMediaElement.muted
-  - api.HTMLMediaElement.networkState
-  - api.HTMLMediaElement.pause
-  - api.HTMLMediaElement.pause_event
-  - api.HTMLMediaElement.paused
-  - api.HTMLMediaElement.play
-  - api.HTMLMediaElement.play_event
-  - api.HTMLMediaElement.playing_event
-  - api.HTMLMediaElement.ratechange_event
-  - api.HTMLMediaElement.readyState
-  - api.HTMLMediaElement.seeked_event
-  - api.HTMLMediaElement.seeking
-  - api.HTMLMediaElement.seeking_event
-  - api.HTMLMediaElement.src
-  - api.HTMLMediaElement.stalled_event
-  - api.HTMLMediaElement.suspend_event
-  - api.HTMLMediaElement.timeupdate_event
-  - api.HTMLVideoElement
-  - api.HTMLVideoElement.height
-  - api.HTMLVideoElement.videoHeight
-  - api.HTMLVideoElement.videoWidth
-  - api.HTMLVideoElement.width
-  - html.elements.audio
-  - html.elements.audio.autoplay
-  - html.elements.audio.controls
-  - html.elements.audio.src
-  - html.elements.video
-  - html.elements.video.controls
-  - html.elements.video.height
-  - html.elements.video.src
-  - html.elements.video.width
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3"
-  - api.HTMLMediaElement.canPlayType
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
   #   safari: "4"
   #   safari_ios: "3.2"
   - api.DataTransfer
@@ -1362,20 +1273,6 @@ compat_features:
   #   safari: "5"
   #   safari_ios: "5"
   - api.DataTransfer.setData
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.6"
-  #   firefox_android: "4"
-  #   safari: "3.1"
-  #   safari_ios: "3"
-  - api.HTMLVideoElement.poster
-  - html.elements.video.poster
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -1413,21 +1310,6 @@ compat_features:
   #   edge: "12"
   #   firefox: "4"
   #   firefox_android: "4"
-  #   safari: "3.1"
-  #   safari_ios: "3"
-  - api.HTMLMediaElement.buffered
-  - html.elements.audio.preload
-  - html.elements.video.preload
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
   #   safari: "4"
   #   safari_ios: "3"
   - html.elements.input.type_tel
@@ -1455,65 +1337,10 @@ compat_features:
   #   edge: "12"
   #   firefox: "6"
   #   firefox_android: "6"
-  #   safari: "3.1"
-  #   safari_ios: "3"
-  - api.HTMLMediaElement.error_event
-  - api.HTMLMediaElement.progress_event
-  - api.HTMLMediaElement.volumechange_event
-  - api.HTMLMediaElement.waiting_event
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "6"
-  #   firefox_android: "6"
-  #   safari: "4"
-  #   safari_ios: "3"
-  - api.HTMLMediaElement.loadstart_event
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "6"
-  #   firefox_android: "6"
   #   safari: "5"
   #   safari_ios: "4.2"
   - api.Window.pagehide_event
   - api.Window.pageshow_event
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "8"
-  #   firefox_android: "8"
-  #   safari: "3.1"
-  #   safari_ios: "3"
-  - api.HTMLMediaElement.seekable
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "9"
-  #   firefox_android: "9"
-  #   safari: "3.1"
-  #   safari_ios: "3"
-  - api.HTMLMediaElement.abort_event
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -1528,45 +1355,6 @@ compat_features:
   #   safari_ios: "3"
   - api.Window.offline_event
   - api.Window.online_event
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "11"
-  #   firefox_android: "14"
-  #   safari: "3.1"
-  #   safari_ios: "3"
-  - html.elements.audio.loop
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "11"
-  #   firefox_android: "14"
-  #   safari: "3.1"
-  #   safari_ios: "6"
-  - html.elements.video.loop
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "11"
-  #   firefox_android: "14"
-  #   safari: "4"
-  #   safari_ios: "3"
-  - api.HTMLMediaElement.loop
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -1594,32 +1382,6 @@ compat_features:
   #   safari_ios: "2"
   - api.HTMLSourceElement.media
   - html.elements.source.media
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "15"
-  #   firefox_android: "15"
-  #   safari: "3.1"
-  #   safari_ios: "3"
-  - api.HTMLMediaElement.played
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "20"
-  #   firefox_android: "20"
-  #   safari: "3.1"
-  #   safari_ios: "3"
-  - api.HTMLMediaElement.defaultPlaybackRate
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -1699,19 +1461,6 @@ compat_features:
   #   safari: "4"
   #   safari_ios: "3.2"
   - api.MessageEvent.ports
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "3.1"
-  #   safari_ios: "3"
-  - api.HTMLAudioElement.Audio
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -1979,25 +1728,10 @@ compat_features:
   #   safari_ios: "4.2"
   - api.Window.popstate_event
   - html.elements.article
-  - html.elements.aside
   - html.elements.footer
   - html.elements.header
-  - html.elements.hgroup
   - html.elements.nav
   - html.elements.section
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "5"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "5"
-  #   safari_ios: "5"
-  - api.HTMLMediaElement.preload
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -2461,19 +2195,6 @@ compat_features:
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
   # support:
-  #   chrome: "15"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "11"
-  #   firefox_android: "14"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - api.HTMLMediaElement.defaultMuted
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
   #   chrome: "16"
   #   chrome_android: "18"
   #   edge: "12"
@@ -2721,19 +2442,6 @@ compat_features:
   #   safari: "8"
   #   safari_ios: "8"
   - api.Document.currentScript
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "30"
-  #   chrome_android: "30"
-  #   edge: "12"
-  #   firefox: "11"
-  #   firefox_android: "14"
-  #   safari: "5"
-  #   safari_ios: "4.2"
-  - html.elements.video.muted
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -3122,19 +2830,6 @@ compat_features:
   - api.CanvasRenderingContext2D.drawFocusIfNeeded
 
   # baseline: high
-  # baseline_low_date: 2016-09-13
-  # baseline_high_date: 2019-03-13
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "3.1"
-  #   safari_ios: "10"
-  - html.elements.video.autoplay
-
-  # baseline: high
   # baseline_low_date: 2016-09-20
   # baseline_high_date: 2019-03-20
   # support:
@@ -3159,19 +2854,6 @@ compat_features:
   #   safari: "10"
   #   safari_ios: "10"
   - api.ErrorEvent.error
-
-  # baseline: high
-  # baseline_low_date: 2016-09-20
-  # baseline_high_date: 2019-03-20
-  # support:
-  #   chrome: "33"
-  #   chrome_android: "33"
-  #   edge: "13"
-  #   firefox: "22"
-  #   firefox_android: "22"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - api.HTMLMediaElement.crossOrigin
 
   # baseline: high
   # baseline_low_date: 2016-09-20
@@ -3902,19 +3584,6 @@ compat_features:
   # baseline_low_date: 2018-10-02
   # baseline_high_date: 2021-04-02
   # support:
-  #   chrome: "15"
-  #   chrome_android: "18"
-  #   edge: "18"
-  #   firefox: "11"
-  #   firefox_android: "14"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - html.elements.audio.muted
-
-  # baseline: high
-  # baseline_low_date: 2018-10-02
-  # baseline_high_date: 2021-04-02
-  # support:
   #   chrome: "33"
   #   chrome_android: "33"
   #   edge: "18"
@@ -4126,19 +3795,6 @@ compat_features:
   - html.elements.embed.type
   - html.elements.wbr
   - html.global_attributes.dir
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "79"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "3.1"
-  #   safari_ios: "3"
-  - api.HTMLVideoElement.resize_event
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -4649,20 +4305,6 @@ compat_features:
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
   # support:
-  #   chrome: "33"
-  #   chrome_android: "33"
-  #   edge: "18"
-  #   firefox: "74"
-  #   firefox_android: "79"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - html.elements.audio.crossorigin
-  - html.elements.video.crossorigin
-
-  # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
-  # support:
   #   chrome: "49"
   #   chrome_android: "49"
   #   edge: "79"
@@ -4789,52 +4431,6 @@ compat_features:
   - api.DragEvent.dataTransfer
 
   # baseline: high
-  # baseline_low_date: 2020-09-16
-  # baseline_high_date: 2023-03-16
-  # support:
-  #   chrome: "51"
-  #   chrome_android: "51"
-  #   edge: "79"
-  #   firefox: "50"
-  #   firefox_android: "50"
-  #   safari: "14"
-  #   safari_ios: "14"
-  - html.elements.a.referrerpolicy
-  - html.elements.area.referrerpolicy
-  - html.elements.iframe.referrerpolicy
-  - html.elements.img.referrerpolicy
-  - html.elements.link.referrerpolicy
-
-  # baseline: high
-  # baseline_low_date: 2020-09-16
-  # baseline_high_date: 2023-03-16
-  # support:
-  #   chrome: "52"
-  #   chrome_android: "52"
-  #   edge: "79"
-  #   firefox: "50"
-  #   firefox_android: "50"
-  #   safari: "14"
-  #   safari_ios: "14"
-  - api.HTMLAnchorElement.referrerPolicy
-  - api.HTMLIFrameElement.referrerPolicy
-  - api.HTMLImageElement.referrerPolicy
-
-  # baseline: high
-  # baseline_low_date: 2020-09-16
-  # baseline_high_date: 2023-03-16
-  # support:
-  #   chrome: "70"
-  #   chrome_android: "70"
-  #   edge: "79"
-  #   firefox: "65"
-  #   firefox_android: "65"
-  #   safari: "14"
-  #   safari_ios: "14"
-  - api.HTMLScriptElement.referrerPolicy
-  - html.elements.script.referrerpolicy
-
-  # baseline: high
   # baseline_low_date: 2021-01-26
   # baseline_high_date: 2023-07-26
   # support:
@@ -4860,32 +4456,6 @@ compat_features:
   #   safari_ios: "5"
   - html.elements.input.type_date
   - html.elements.input.type_time
-
-  # baseline: high
-  # baseline_low_date: 2021-04-26
-  # baseline_high_date: 2023-10-26
-  # support:
-  #   chrome: "52"
-  #   chrome_android: "52"
-  #   edge: "79"
-  #   firefox: "50"
-  #   firefox_android: "50"
-  #   safari: "14.1"
-  #   safari_ios: "14.5"
-  - api.HTMLAreaElement.referrerPolicy
-
-  # baseline: high
-  # baseline_low_date: 2021-04-26
-  # baseline_high_date: 2023-10-26
-  # support:
-  #   chrome: "58"
-  #   chrome_android: "58"
-  #   edge: "79"
-  #   firefox: "50"
-  #   firefox_android: "50"
-  #   safari: "14.1"
-  #   safari_ios: "14.5"
-  - api.HTMLLinkElement.referrerPolicy
 
   # baseline: high
   # baseline_low_date: 2021-04-26
@@ -5354,16 +4924,6 @@ compat_features:
   #   safari: "17"
   #   safari_ios: "17"
   - http.status.103
-
-  # baseline: false
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "3.1"
-  - api.HTMLMediaElement.volume
 
   # baseline: false
   # support:
@@ -6078,12 +5638,6 @@ compat_features:
   #   firefox: "3"
   #   firefox_android: "4"
   - html.elements.link.rel.alternate_stylesheet
-
-  # baseline: false
-  # support:
-  #   safari: "3.1"
-  #   safari_ios: "3"
-  - api.HTMLMediaElement.playbackRate
 
   # baseline: false
   # support:
