@@ -1,8 +1,9 @@
-name: <track>
+name: Text tracks
 description: The `<track>` element is used as a child of the media elements that lets you specify a timed text track to be displayed in parallel with the media element.
 spec: https://html.spec.whatwg.org/multipage/media.html#timed-text-tracks
 group: media-elements
 compat_features:
+  - api.HTMLMediaElement.addTextTrack
   - api.HTMLTrackElement
   - api.HTMLTrackElement.cuechange_event
   - api.HTMLTrackElement.default
@@ -12,6 +13,36 @@ compat_features:
   - api.HTMLTrackElement.src
   - api.HTMLTrackElement.srclang
   - api.HTMLTrackElement.track
+  - api.TextTrack
+  - api.TextTrack.activeCues
+  - api.TextTrack.addCue
+  - api.TextTrack.cuechange_event
+  - api.TextTrack.cues
+  - api.TextTrack.id
+  # Excluded because of a non-real value
+  # - api.TextTrack.inBandMetadataTrackDispatchType
+  - api.TextTrack.kind
+  - api.TextTrack.label
+  - api.TextTrack.language
+  - api.TextTrack.mode
+  - api.TextTrack.removeCue
+  - api.TextTrackCue
+  - api.TextTrackCue.endTime
+  - api.TextTrackCue.enter_event
+  - api.TextTrackCue.exit_event
+  - api.TextTrackCue.id
+  - api.TextTrackCue.pauseOnExit
+  - api.TextTrackCue.startTime
+  - api.TextTrackCue.track
+  - api.TextTrackCueList
+  - api.TextTrackCueList.getCueById
+  - api.TextTrackCueList.length
+  - api.TextTrackList
+  - api.TextTrackList.addtrack_event
+  - api.TextTrackList.change_event
+  - api.TextTrackList.getTrackById
+  - api.TextTrackList.length
+  - api.TextTrackList.removetrack_event
   - html.elements.track
   - html.elements.track.default
   - html.elements.track.kind
