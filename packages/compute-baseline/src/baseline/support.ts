@@ -22,7 +22,7 @@ export function support(feature: Feature, browsers: Browser[]): SupportMap {
     for (let index = b.current().releaseIndex; index >= 0; index--) {
       const release = b.releases[index];
       assert(release instanceof Release, `No index ${index} in ${b} releases`); // This shouldn't happen, but neither should off-by-one errors. 🫠
-      const current = feature.supportedIn(release);
+      const supported = feature.supportedIn(release);
 
       if (!lastInitial) {
         if ([false, null].includes(current)) {
