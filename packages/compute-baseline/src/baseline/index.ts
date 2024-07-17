@@ -272,10 +272,14 @@ function findKeystoneDate(
     })
     .at(-1) as InitialSupport;
 
+  if (!keystone.release.date) {
+    return null;
+  }
+
   if (keystone.ranged) {
     return `≤${keystone.release.date}`;
   }
-  return `${keystone.release.date}`;
+  return keystone.release.date.toString();
 }
 
 function jsonify(status: SupportDetails): string {
