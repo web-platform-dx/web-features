@@ -26,8 +26,9 @@ export function toRangedDateString(
 export function parseRangedDateString(
   dateSpec: string,
 ): [date: Temporal.PlainDate, ranged: boolean] {
+  const ranged = dateSpec.startsWith("≤");
   return [
-    Temporal.PlainDate.from(dateSpec.replaceAll("≤", "")),
-    dateSpec.startsWith("≤"),
+    Temporal.PlainDate.from(ranged ? dateSpec.slice(1) : dateSpec),
+    ranged,
   ];
 }
