@@ -210,17 +210,15 @@ export function keystoneDateToStatus(
   baseline_low_date: BaselineDate;
   baseline_high_date: BaselineDate;
 } {
-  const [date, ranged] = dateSpec
-    ? parseRangedDateString(dateSpec)
-    : [null, false];
-
-  if (date == null || discouraged) {
+  if (dateSpec == null || discouraged) {
     return {
       baseline: false,
       baseline_low_date: null,
       baseline_high_date: null,
     };
   }
+
+  const [date, ranged] = parseRangedDateString(dateSpec);
 
   let baseline: BaselineStatus = "low";
   let baseline_low_date: BaselineDate = toRangedDateString(date, ranged);
