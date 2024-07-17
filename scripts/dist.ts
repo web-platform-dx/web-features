@@ -1,13 +1,13 @@
 import { computeBaseline, getStatus, setLogger } from "compute-baseline";
 import { Compat, Feature } from "compute-baseline/browser-compat-data";
+import { fdir } from "fdir";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { isDeepStrictEqual } from "node:util";
 import winston from "winston";
-import YAML, { Document, YAMLSeq, Scalar } from "yaml";
+import YAML, { Document, Scalar, YAMLSeq } from "yaml";
 import yargs from "yargs";
-import { fdir } from "fdir";
 
 const compat = new Compat();
 
@@ -101,7 +101,7 @@ function compareStatus(a: SupportStatus, b: SupportStatus) {
   const bVersions = Object.values(b.support);
   for (let i = 0; i < aVersions.length; i++) {
     if (aVersions[i] !== bVersions[i]) {
-      return aVersions[i] - bVersions[i];
+      return Number(aVersions[i]) - Number(bVersions[i]);
     }
   }
   return 0;
@@ -230,7 +230,7 @@ function insertCompatFeatures(yaml: Document, groups: Map<string, string[]>) {
     return;
   }
 
-  const list = new YAMLSeq();
+  const list = new YAMLSeq<Scalar<string>>();
   for (const [comment, keys] of groups.entries()) {
     let first = true;
     for (const key of keys) {
