@@ -17,7 +17,7 @@ compat_features:
   #   chrome: "36"
   #   chrome_android: "36"
   #   edge: "12"
-  #   firefox: "16"
+  #   firefox: ≤16
   #   firefox_android: "16"
   #   safari: "9"
   #   safari_ios: "9"
@@ -50,16 +50,16 @@ compat_features:
   - css.properties.transform-box
 
   # baseline: high
-  # baseline_low_date: 2020-03-24
-  # baseline_high_date: 2022-09-24
+  # baseline_low_date: ≤2020-03-24
+  # baseline_high_date: ≤2022-09-24
   # support:
   #   chrome: "64"
   #   chrome_android: "64"
   #   edge: "79"
   #   firefox: "55"
   #   firefox_android: "55"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
   - css.properties.transform-box.fill-box
   - css.properties.transform-box.view-box
 
@@ -70,7 +70,7 @@ compat_features:
   #   chrome: "36"
   #   chrome_android: "36"
   #   edge: "12"
-  #   firefox: "72"
+  #   firefox: ≤72
   #   firefox_android: "79"
   #   safari: "9"
   #   safari_ios: "9"
@@ -121,7 +121,7 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "83"
+  #   chrome: ≤83
   #   chrome_android: "83"
   #   edge: "83"
   #   firefox: "77"
