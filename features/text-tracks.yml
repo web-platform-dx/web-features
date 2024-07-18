@@ -1,7 +1,9 @@
 name: Text tracks
 description: The `<track>` element is used as a child of the media elements that lets you specify a timed text track to be displayed in parallel with the media element.
 spec: https://html.spec.whatwg.org/multipage/media.html#timed-text-tracks
-group: media-elements
+group:
+  - media-elements
+  - html-elements
 status:
   compute_from: html.elements.track
 compat_features:
