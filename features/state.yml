@@ -1,6 +1,7 @@
 name: :state()
 description: The `:state()` CSS pseudo-class matches custom elements based on their custom state, set through the `ElementInternals.states` API.
 spec: https://html.spec.whatwg.org/multipage/custom-elements.html#custom-state-pseudo-class
+group: custom-elements
 compat_features:
   - css.selectors.state
   - api.CustomStateSet
