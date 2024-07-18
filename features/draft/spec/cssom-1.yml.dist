@@ -87,7 +87,6 @@ compat_features:
   #   safari: "4"
   #   safari_ios: "3.2"
   - api.Document.styleSheets
-  - api.MediaList.toString
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -103,6 +102,19 @@ compat_features:
   - api.CSSStyleDeclaration.item
   - api.CSSStyleDeclaration.length
   - api.CSSStyleDeclaration.setProperty
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: ≤4
+  #   safari_ios: ≤3.2
+  - api.MediaList.toString
 
   # baseline: high
   # baseline_low_date: 2015-07-29
