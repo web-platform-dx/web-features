@@ -131,7 +131,7 @@ function compareStatus(a: SupportStatus, b: SupportStatus) {
         ? [true, bVersions[i].slice(1)]
         : [false, bVersions[i]];
 
-      if (Number(aVersion) - Number(bVersion) === 0) {
+      if (aVersion !== bVersion) {
         if (!aRanged && bRanged) {
           return -1;
         }
