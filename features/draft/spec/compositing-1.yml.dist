@@ -4,8 +4,8 @@
 status:
   baseline: false
   support:
-    safari: "13.1"
-    safari_ios: "13.4"
+    safari: ≤13.1
+    safari_ios: ≤13.4
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -74,6 +74,6 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
   - css.properties.mix-blend-mode.plus-darker
