@@ -49,8 +49,8 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
+  #   safari: ≤4
+  #   safari_ios: ≤3.2
   - html.elements.fieldset
   - html.elements.fieldset.form
 
@@ -125,7 +125,7 @@ compat_features:
   # support:
   #   chrome: "57"
   #   chrome_android: "57"
-  #   edge: "18"
+  #   edge: ≤18
   #   firefox: "4"
   #   firefox_android: "4"
   #   safari: "13"

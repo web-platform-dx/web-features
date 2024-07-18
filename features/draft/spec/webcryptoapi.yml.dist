@@ -105,16 +105,16 @@ compat_features:
   - api.SubtleCrypto.deriveKey
 
   # baseline: high
-  # baseline_low_date: 2020-03-24
-  # baseline_high_date: 2022-09-24
+  # baseline_low_date: ≤2020-03-24
+  # baseline_high_date: ≤2022-09-24
   # support:
   #   chrome: "41"
   #   chrome_android: "41"
   #   edge: "79"
   #   firefox: "34"
   #   firefox_android: "34"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
   - api.SubtleCrypto.deriveKey.derivedKeyAlgorithm_option_aes
   - api.SubtleCrypto.deriveKey.derivedKeyAlgorithm_option_hmac
 
@@ -138,8 +138,8 @@ compat_features:
   #   edge: "79"
   #   firefox: "119"
   #   firefox_android: "119"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
   - api.SubtleCrypto.deriveKey.derivedKeyAlgorithm_option_hkdf
 
   # baseline: false
@@ -147,6 +147,6 @@ compat_features:
   #   chrome: "41"
   #   chrome_android: "41"
   #   edge: "79"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
   - api.SubtleCrypto.deriveKey.derivedKeyAlgorithm_option_pbkdf2
