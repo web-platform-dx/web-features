@@ -1,0 +1,8 @@
+name: Keyboard lock
+description: The `navigator.keyboard.lock()` API allows you to capture keys that are normally reserved by the operating system. It can be used to provide an immersive fullscreen experience such as games.
+spec: https://wicg.github.io/keyboard-lock/
+compat_features:
+  - api.Keyboard
+  - api.Keyboard.lock
+  - api.Keyboard.unlock
+  - api.Navigator.keyboard
