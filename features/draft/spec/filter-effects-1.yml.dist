@@ -348,12 +348,12 @@ compat_features:
   - css.properties.filter
 
   # baseline: high
-  # baseline_low_date: 2018-10-02
-  # baseline_high_date: 2021-04-02
+  # baseline_low_date: ≤2018-10-02
+  # baseline_high_date: ≤2021-04-02
   # support:
   #   chrome: "5"
   #   chrome_android: "18"
-  #   edge: "18"
+  #   edge: ≤18
   #   firefox: "3"
   #   firefox_android: "4"
   #   safari: "6"
@@ -374,10 +374,6 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "6"
   #   safari_ios: "6"
-  - svg.elements.feComposite.k1
-  - svg.elements.feComposite.k2
-  - svg.elements.feComposite.k3
-  - svg.elements.feComposite.k4
   - svg.elements.feDiffuseLighting.diffuseConstant
   - svg.elements.feDiffuseLighting.kernelUnitLength
   - svg.elements.feDiffuseLighting.surfaceScale
@@ -444,26 +440,42 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
-  #   chrome: "53"
+  #   chrome: ≤53
   #   chrome_android: "53"
   #   edge: "79"
   #   firefox: "35"
   #   firefox_android: "35"
-  #   safari: "10.1"
-  #   safari_ios: "10.3"
+  #   safari: ≤10.1
+  #   safari_ios: ≤10.3
   - svg.global_attributes.filter
+
+  # baseline: high
+  # baseline_low_date: ≤2020-01-15
+  # baseline_high_date: ≤2022-07-15
+  # support:
+  #   chrome: "5"
+  #   chrome_android: "18"
+  #   edge: ≤79
+  #   firefox: "3"
+  #   firefox_android: "4"
+  #   safari: "6"
+  #   safari_ios: "6"
+  - svg.elements.feComposite.k1
+  - svg.elements.feComposite.k2
+  - svg.elements.feComposite.k3
+  - svg.elements.feComposite.k4
 
   # baseline: high
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
   # support:
-  #   chrome: "80"
+  #   chrome: ≤80
   #   chrome_android: "80"
   #   edge: "80"
-  #   firefox: "72"
+  #   firefox: ≤72
   #   firefox_android: "79"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
   - css.properties.color-interpolation-filters
   - svg.global_attributes.color-interpolation-filters
 
@@ -471,13 +483,13 @@ compat_features:
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
   # support:
-  #   chrome: "83"
+  #   chrome: ≤83
   #   chrome_android: "83"
   #   edge: "83"
-  #   firefox: "72"
+  #   firefox: ≤72
   #   firefox_android: "79"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
   - css.properties.color-interpolation-filters.auto
   - css.properties.color-interpolation-filters.linearRGB
   - css.properties.color-interpolation-filters.sRGB
