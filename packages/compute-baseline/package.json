@@ -14,9 +14,10 @@
   "types": "./dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "test": "mocha -r tsx 'src/**/*.test.ts'",
+    "prepare": "cp ../../LICENSE.txt . && tsc",
     "test:coverage": "c8 npm run test",
-    "prepare": "cp ../../LICENSE.txt . && tsc"
+    "test:types": "tsc --noEmit",
+    "test": "mocha -r tsx 'src/**/*.test.ts'"
   },
   "license": "Apache-2.0",
   "devDependencies": {
