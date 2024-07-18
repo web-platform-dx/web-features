@@ -52,6 +52,19 @@ compat_features:
   #   chrome: "6"
   #   chrome_android: "18"
   #   edge: "18"
+  #   firefox: "56"
+  #   firefox_android: "56"
+  #   safari: "6"
+  #   safari_ios: "6"
+  - api.HTMLMeterElement.labels
+
+  # baseline: high
+  # baseline_low_date: ≤2018-10-02
+  # baseline_high_date: ≤2021-04-02
+  # support:
+  #   chrome: "6"
+  #   chrome_android: "18"
+  #   edge: ≤18
   #   firefox: "16"
   #   firefox_android: "16"
   #   safari: "6"
@@ -63,16 +76,3 @@ compat_features:
   - html.elements.meter.min
   - html.elements.meter.optimum
   - html.elements.meter.value
-
-  # baseline: high
-  # baseline_low_date: 2018-10-02
-  # baseline_high_date: 2021-04-02
-  # support:
-  #   chrome: "6"
-  #   chrome_android: "18"
-  #   edge: "18"
-  #   firefox: "56"
-  #   firefox_android: "56"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - api.HTMLMeterElement.labels
