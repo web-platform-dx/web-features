@@ -62,8 +62,8 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3"
+  #   safari: ≤4
+  #   safari_ios: ≤3
   - html.elements.textarea
 
   # baseline: high
@@ -75,8 +75,8 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
+  #   safari: ≤4
+  #   safari_ios: ≤3.2
   - html.elements.textarea.cols
   - html.elements.textarea.disabled
   - html.elements.textarea.form
