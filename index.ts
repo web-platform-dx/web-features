@@ -160,9 +160,13 @@ for (const [key, data] of yamlEntries('features')) {
         }
     }
 
-    // Check that no BCD key is used twice until the meaning is made clear in
-    // https://github.com/web-platform-dx/web-features/issues/1173.
     if (data.compat_features) {
+        // Sort compat_features so that grouping and ordering in dist files has
+        // no effect on what web-features users see.
+        data.compat_features.sort();
+
+        // Check that no BCD key is used twice until the meaning is made clear in
+        // https://github.com/web-platform-dx/web-features/issues/1173.
         for (const bcdKey of data.compat_features) {
             const otherKey = bcdToFeatureId.get(bcdKey);
             if (otherKey) {
