@@ -1,10 +1,12 @@
 import { Compat } from "compute-baseline/browser-compat-data";
 import fs from "node:fs/promises";
 import { fileURLToPath } from "node:url";
-import { Document } from "yaml";
 import webSpecs from "web-specs" assert { type: "json" };
+import { Document } from "yaml";
 
 import { features } from "../index.js";
+
+type WebSpecsSpec = (typeof webSpecs)[number];
 
 function* getPages(spec): Generator<string> {
   yield spec.url;
@@ -53,7 +55,7 @@ async function main() {
   });
 
   // Build a map from URLs to spec.
-  const pageToSpec = new Map<string, object>();
+  const pageToSpec = new Map<string, WebSpecsSpec>();
   for (const spec of webSpecs) {
     for (const page of getPages(spec)) {
       pageToSpec.set(normalize(page), spec);
@@ -61,7 +63,7 @@ async function main() {
   }
 
   // Iterate BCD and group compat features by spec.
-  const specToCompatFeatures = new Map<object, Set<string>>();
+  const specToCompatFeatures = new Map<WebSpecsSpec, Set<string>>();
   for (const feature of compat.walk()) {
     // Skip deprecated and non-standard features.
     if (feature.deprecated || !feature.standard_track) {
