@@ -5,6 +5,11 @@ spec:
   - https://html.spec.whatwg.org/multipage/grouping-content.html#the-ol-element
   - https://html.spec.whatwg.org/multipage/grouping-content.html#the-ul-element
 group: html
+status:
+  compute_from:
+    - html.elements.ol
+    - html.elements.ul
+    - html.elements.li
 compat_features:
   - api.HTMLLIElement
   - api.HTMLLIElement.value
