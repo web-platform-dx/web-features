@@ -8,16 +8,16 @@ status:
     firefox_android: "117"
 compat_features:
   # baseline: high
-  # baseline_low_date: 2020-03-24
-  # baseline_high_date: 2022-09-24
+  # baseline_low_date: ≤2020-03-24
+  # baseline_high_date: ≤2022-09-24
   # support:
   #   chrome: "78"
   #   chrome_android: "78"
   #   edge: "79"
   #   firefox: "65"
   #   firefox_android: "65"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
   - api.ReadableStreamDefaultReader
   - api.ReadableStreamDefaultReader.cancel
   - api.ReadableStreamDefaultReader.closed
@@ -25,16 +25,16 @@ compat_features:
   - api.ReadableStreamDefaultReader.releaseLock
 
   # baseline: high
-  # baseline_low_date: 2020-03-24
-  # baseline_high_date: 2022-09-24
+  # baseline_low_date: ≤2020-03-24
+  # baseline_high_date: ≤2022-09-24
   # support:
-  #   chrome: "80"
+  #   chrome: ≤80
   #   chrome_android: "80"
   #   edge: "80"
   #   firefox: "65"
   #   firefox_android: "65"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
   - api.ReadableStreamDefaultController
   - api.ReadableStreamDefaultController.close
   - api.ReadableStreamDefaultController.desiredSize
