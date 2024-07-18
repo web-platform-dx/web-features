@@ -140,6 +140,19 @@ compat_features:
   # baseline_low_date: 2021-12-07
   # baseline_high_date: 2024-06-07
   # support:
+  #   chrome: ≤83
+  #   chrome_android: "83"
+  #   edge: "83"
+  #   firefox: ≤72
+  #   firefox_android: "95"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
+  - css.properties.cursor.grabbing
+
+  # baseline: high
+  # baseline_low_date: 2021-12-07
+  # baseline_high_date: 2024-06-07
+  # support:
   #   chrome: "5"
   #   chrome_android: "18"
   #   edge: "12"
@@ -162,19 +175,6 @@ compat_features:
   #   safari_ios: "1"
   - css.properties.cursor.zoom-in
   - css.properties.cursor.zoom-out
-
-  # baseline: high
-  # baseline_low_date: 2021-12-07
-  # baseline_high_date: 2024-06-07
-  # support:
-  #   chrome: "83"
-  #   chrome_android: "83"
-  #   edge: "83"
-  #   firefox: "72"
-  #   firefox_android: "95"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
-  - css.properties.cursor.grabbing
 
   # baseline: low
   # baseline_low_date: 2023-03-27

@@ -83,11 +83,12 @@ compat_features:
   #   chrome: "50"
   #   chrome_android: "50"
   #   edge: "12"
-  #   firefox: "71"
+  #   firefox: ≤72
   #   firefox_android: "79"
   #   safari: "9"
   #   safari_ios: "9"
-  - css.properties.column-span
+  - css.properties.column-fill.auto
+  - css.properties.column-fill.balance
 
   # baseline: high
   # baseline_low_date: 2020-07-28
@@ -96,12 +97,11 @@ compat_features:
   #   chrome: "50"
   #   chrome_android: "50"
   #   edge: "12"
-  #   firefox: "72"
+  #   firefox: "71"
   #   firefox_android: "79"
   #   safari: "9"
   #   safari_ios: "9"
-  - css.properties.column-fill.auto
-  - css.properties.column-fill.balance
+  - css.properties.column-span
 
   # baseline: high
   # baseline_low_date: 2020-07-28

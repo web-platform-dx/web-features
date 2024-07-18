@@ -265,10 +265,10 @@ compat_features:
   #   chrome: "79"
   #   chrome_android: "79"
   #   edge: "79"
-  #   firefox: "72"
+  #   firefox: ≤72
   #   firefox_android: "79"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
   - css.properties.font-optical-sizing.auto
   - css.properties.font-optical-sizing.none
 
@@ -276,13 +276,13 @@ compat_features:
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
   # support:
-  #   chrome: "83"
+  #   chrome: ≤83
   #   chrome_android: "83"
   #   edge: "83"
-  #   firefox: "72"
+  #   firefox: ≤72
   #   firefox_android: "79"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
   - css.properties.font-variant.none
 
   # baseline: low
@@ -318,11 +318,12 @@ compat_features:
   #   chrome: "111"
   #   chrome_android: "111"
   #   edge: "111"
-  #   firefox: "34"
-  #   firefox_android: "34"
-  #   safari: "9.1"
-  #   safari_ios: "9.3"
-  - css.properties.font-variant.historical-forms
+  #   firefox: ≤72
+  #   firefox_android: "79"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
+  - css.properties.font-variant-alternates.historical-forms
+  - css.properties.font-variant-alternates.normal
 
   # baseline: low
   # baseline_low_date: 2023-03-13
@@ -330,12 +331,11 @@ compat_features:
   #   chrome: "111"
   #   chrome_android: "111"
   #   edge: "111"
-  #   firefox: "72"
-  #   firefox_android: "79"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
-  - css.properties.font-variant-alternates.historical-forms
-  - css.properties.font-variant-alternates.normal
+  #   firefox: "34"
+  #   firefox_android: "34"
+  #   safari: "9.1"
+  #   safari_ios: "9.3"
+  - css.properties.font-variant.historical-forms
 
   # baseline: low
   # baseline_low_date: 2023-09-15
@@ -355,10 +355,10 @@ compat_features:
   #   chrome: "117"
   #   chrome_android: "117"
   #   edge: "117"
-  #   firefox: "72"
+  #   firefox: ≤72
   #   firefox_android: "79"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
   - css.properties.font-variant-position.normal
   - css.properties.font-variant-position.sub
   - css.properties.font-variant-position.super

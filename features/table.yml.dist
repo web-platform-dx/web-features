@@ -14,34 +14,6 @@ status:
     safari: "1"
     safari_ios: "1"
 compat_features:
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "1"
-  #   safari_ios: "1"
-  - html.elements.table
-  - html.elements.tbody
-  - html.elements.td
-  - html.elements.td.colspan
-  - html.elements.td.headers
-  - html.elements.td.rowspan
-  - html.elements.tfoot
-  - html.elements.th
-  - html.elements.th.abbr
-  - html.elements.th.colspan
-  - html.elements.th.headers
-  - html.elements.th.rowspan
-  - html.elements.th.scope
-  - html.elements.thead
-  - html.elements.tr
-
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -109,13 +81,41 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
+  #   safari: ≤4
+  #   safari_ios: ≤3.2
   - html.elements.caption
   - html.elements.col
   - html.elements.col.span
   - html.elements.colgroup
   - html.elements.colgroup.span
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "1"
+  #   safari_ios: "1"
+  - html.elements.table
+  - html.elements.tbody
+  - html.elements.td
+  - html.elements.td.colspan
+  - html.elements.td.headers
+  - html.elements.td.rowspan
+  - html.elements.tfoot
+  - html.elements.th
+  - html.elements.th.abbr
+  - html.elements.th.colspan
+  - html.elements.th.headers
+  - html.elements.th.rowspan
+  - html.elements.th.scope
+  - html.elements.thead
+  - html.elements.tr
 
   # baseline: high
   # baseline_low_date: 2015-07-29
