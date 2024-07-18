@@ -10,7 +10,7 @@ compat_features:
   # support:
   #   chrome: "61"
   #   chrome_android: "61"
-  #   edge: "79"
+  #   edge: ≤79
   #   firefox: "63"
   #   firefox_android: "63"
   #   safari: "17"
@@ -21,7 +21,7 @@ compat_features:
   # support:
   #   chrome: "61"
   #   chrome_android: "61"
-  #   edge: "79"
+  #   edge: ≤79
   #   firefox: "63"
   #   firefox_android: "63"
   - http.headers.Clear-Site-Data.cookies
@@ -31,7 +31,7 @@ compat_features:
   # support:
   #   chrome: "61"
   #   chrome_android: "61"
-  #   edge: "79"
+  #   edge: ≤79
   - http.headers.Clear-Site-Data.cache
 
   # baseline: false
