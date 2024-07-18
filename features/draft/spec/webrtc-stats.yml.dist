@@ -563,16 +563,6 @@ compat_features:
   #   chrome: "80"
   #   chrome_android: "80"
   #   edge: "80"
-  #   firefox: ≤73
-  #   firefox_android: "79"
-  - api.RTCStatsReport.type_outbound-rtp.framesEncoded
-  - api.RTCStatsReport.type_outbound-rtp.qpSum
-
-  # baseline: false
-  # support:
-  #   chrome: "80"
-  #   chrome_android: "80"
-  #   edge: "80"
   #   firefox: "98"
   #   firefox_android: "98"
   - api.RTCStatsReport.type_inbound-rtp.codecId
@@ -591,15 +581,6 @@ compat_features:
   #   chrome: "80"
   #   chrome_android: "80"
   #   edge: "80"
-  #   firefox: "106"
-  #   firefox_android: "106"
-  - api.RTCStatsReport.type_inbound-rtp.lastPacketReceivedTimestamp
-
-  # baseline: false
-  # support:
-  #   chrome: "80"
-  #   chrome_android: "80"
-  #   edge: "80"
   #   firefox: "116"
   #   firefox_android: "116"
   - api.RTCStatsReport.type_media-source.framesPerSecond
@@ -608,24 +589,13 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: ≤80
+  #   chrome: "80"
   #   chrome_android: "80"
   #   edge: "80"
   #   firefox: ≤73
   #   firefox_android: "79"
-  - api.RTCStatsReport.type_inbound-rtp.framesDecoded
-
-  # baseline: false
-  # support:
-  #   chrome: ≤80
-  #   chrome_android: "80"
-  #   edge: "80"
-  #   firefox: "106"
-  #   firefox_android: "106"
-  - api.RTCStatsReport.type_inbound-rtp.qpSum
-  - api.RTCStatsReport.type_inbound-rtp.totalDecodeTime
-  - api.RTCStatsReport.type_inbound-rtp.totalInterFrameDelay
-  - api.RTCStatsReport.type_inbound-rtp.totalSquaredInterFrameDelay
+  - api.RTCStatsReport.type_outbound-rtp.framesEncoded
+  - api.RTCStatsReport.type_outbound-rtp.qpSum
 
   # baseline: false
   # support:
@@ -759,6 +729,34 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  #   firefox: "56"
+  #   firefox_android: "56"
+  - api.RTCStatsReport.type_candidate-pair.lastPacketReceivedTimestamp
+  - api.RTCStatsReport.type_candidate-pair.lastPacketSentTimestamp
+
+  # baseline: false
+  # support:
+  #   chrome: ≤80
+  #   chrome_android: "80"
+  #   edge: "80"
+  #   firefox: ≤73
+  #   firefox_android: "79"
+  - api.RTCStatsReport.type_inbound-rtp.framesDecoded
+
+  # baseline: false
+  # support:
+  #   chrome: "80"
+  #   chrome_android: "80"
+  #   edge: "80"
+  #   firefox: "106"
+  #   firefox_android: "106"
+  - api.RTCStatsReport.type_inbound-rtp.lastPacketReceivedTimestamp
+
+  # baseline: false
+  # support:
   #   chrome: "103"
   #   chrome_android: "103"
   #   edge: "103"
@@ -777,13 +775,15 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "109"
-  #   chrome_android: "109"
-  #   edge: "109"
-  #   firefox: "56"
-  #   firefox_android: "56"
-  - api.RTCStatsReport.type_candidate-pair.lastPacketReceivedTimestamp
-  - api.RTCStatsReport.type_candidate-pair.lastPacketSentTimestamp
+  #   chrome: ≤80
+  #   chrome_android: "80"
+  #   edge: "80"
+  #   firefox: "106"
+  #   firefox_android: "106"
+  - api.RTCStatsReport.type_inbound-rtp.qpSum
+  - api.RTCStatsReport.type_inbound-rtp.totalDecodeTime
+  - api.RTCStatsReport.type_inbound-rtp.totalInterFrameDelay
+  - api.RTCStatsReport.type_inbound-rtp.totalSquaredInterFrameDelay
 
   # baseline: false
   # support:
@@ -836,13 +836,6 @@ compat_features:
   - api.RTCStatsReport.type_outbound-rtp.qualityLimitationReason
   - api.RTCStatsReport.type_outbound-rtp.totalPacketSendDelay
   - api.RTCStatsReport.type_transport.selectedCandidatePairChanges
-
-  # baseline: false
-  # support:
-  #   chrome: ≤80
-  #   chrome_android: "80"
-  #   edge: "80"
-  - api.RTCStatsReport.type_inbound-rtp.keyFramesDecoded
 
   # baseline: false
   # support:
@@ -937,6 +930,13 @@ compat_features:
   - api.RTCStatsReport.type_media-playout.totalSamplesCount
   - api.RTCStatsReport.type_media-playout.totalSamplesDuration
   - api.RTCStatsReport.type_media-playout.type
+
+  # baseline: false
+  # support:
+  #   chrome: ≤80
+  #   chrome_android: "80"
+  #   edge: "80"
+  - api.RTCStatsReport.type_inbound-rtp.keyFramesDecoded
 
   # baseline: false
   # support:

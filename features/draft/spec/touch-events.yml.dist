@@ -53,15 +53,6 @@ compat_features:
   #   chrome_android: "25"
   #   edge: ≤18
   #   firefox_android: "6"
-  #   safari_ios: ≤3
-  - api.Touch
-
-  # baseline: false
-  # support:
-  #   chrome: "22"
-  #   chrome_android: "25"
-  #   edge: ≤18
-  #   firefox_android: "6"
   #   safari_ios: "10"
   - api.Touch.clientX
   - api.Touch.clientY
@@ -71,6 +62,15 @@ compat_features:
   - api.Touch.screenX
   - api.Touch.screenY
   - api.Touch.target
+
+  # baseline: false
+  # support:
+  #   chrome: "22"
+  #   chrome_android: "25"
+  #   edge: ≤18
+  #   firefox_android: "6"
+  #   safari_ios: ≤3
+  - api.Touch
 
   # baseline: false
   # support:

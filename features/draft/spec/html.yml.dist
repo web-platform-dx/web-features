@@ -517,6 +517,34 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
+  #   safari: "5.1"
+  #   safari_ios: "5"
+  - api.DOMStringList
+  - api.DOMStringList.item
+  - api.DOMStringList.length
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: ≤4
+  #   safari_ios: "1"
+  - api.HTMLFormControlsCollection
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
   #   safari: "4"
   #   safari_ios: "1"
   - api.clearTimeout
@@ -533,19 +561,6 @@ compat_features:
   #   safari: "4"
   #   safari_ios: "3"
   - api.HTMLTableElement.insertRow
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: ≤4
-  #   safari_ios: "1"
-  - api.HTMLFormControlsCollection
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -659,21 +674,6 @@ compat_features:
   - html.global_attributes.class
   - html.global_attributes.lang
   - html.global_attributes.title
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "5.1"
-  #   safari_ios: "5"
-  - api.DOMStringList
-  - api.DOMStringList.item
-  - api.DOMStringList.length
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -2206,19 +2206,6 @@ compat_features:
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
   # support:
-  #   chrome: ≤15
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "10"
-  #   firefox_android: "10"
-  #   safari: ≤4
-  #   safari_ios: ≤3.2
-  - html.elements.bdo
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
   #   chrome: "16"
   #   chrome_android: "18"
   #   edge: "12"
@@ -2506,6 +2493,19 @@ compat_features:
   #   safari: "8"
   #   safari_ios: "8"
   - api.HTMLImageElement.srcset
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: ≤15
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "10"
+  #   firefox_android: "10"
+  #   safari: ≤4
+  #   safari_ios: ≤3.2
+  - html.elements.bdo
 
   # baseline: high
   # baseline_low_date: 2015-09-22
@@ -3814,9 +3814,10 @@ compat_features:
   #   edge: "79"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - html.elements.wbr
+  #   safari: ≤4
+  #   safari_ios: ≤3.2
+  - html.elements.embed.type
+  - html.global_attributes.dir
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -3827,10 +3828,9 @@ compat_features:
   #   edge: "79"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: ≤4
-  #   safari_ios: ≤3.2
-  - html.elements.embed.type
-  - html.global_attributes.dir
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - html.elements.wbr
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -4149,23 +4149,6 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
-  #   chrome: ≤49
-  #   chrome_android: "49"
-  #   edge: "79"
-  #   firefox: ≤49
-  #   firefox_android: "49"
-  #   safari: ≤10.1
-  #   safari_ios: ≤10.3
-  - html.elements.iframe.sandbox.allow-forms
-  - html.elements.iframe.sandbox.allow-pointer-lock
-  - html.elements.iframe.sandbox.allow-same-origin
-  - html.elements.iframe.sandbox.allow-scripts
-  - html.elements.iframe.sandbox.allow-top-navigation
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
   #   chrome: "50"
   #   chrome_android: "50"
   #   edge: "79"
@@ -4321,6 +4304,23 @@ compat_features:
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - api.CustomElementRegistry.upgrade
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: ≤49
+  #   chrome_android: "49"
+  #   edge: "79"
+  #   firefox: ≤49
+  #   firefox_android: "49"
+  #   safari: ≤10.1
+  #   safari_ios: ≤10.3
+  - html.elements.iframe.sandbox.allow-forms
+  - html.elements.iframe.sandbox.allow-pointer-lock
+  - html.elements.iframe.sandbox.allow-same-origin
+  - html.elements.iframe.sandbox.allow-scripts
+  - html.elements.iframe.sandbox.allow-top-navigation
 
   # baseline: high
   # baseline_low_date: ≤2020-01-15
