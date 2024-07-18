@@ -52,8 +52,8 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
+  #   safari: ≤4
+  #   safari_ios: ≤3.2
   - html.elements.script.src
   - html.elements.script.type
 
@@ -92,8 +92,8 @@ compat_features:
   #   edge: "12"
   #   firefox: "3.6"
   #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
+  #   safari: ≤4
+  #   safari_ios: ≤3.2
   - html.elements.script.async
 
   # baseline: high

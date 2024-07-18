@@ -1,0 +1,45 @@
+name: Image maps
+description: The `<area>` and `<map>` elements define a clickable area on an image.
+spec: https://html.spec.whatwg.org/multipage/image-maps.html
+group: html
+status:
+  compute_from: html.elements.area
+compat_features:
+  - api.HTMLAreaElement
+  - api.HTMLAreaElement.alt
+  - api.HTMLAreaElement.coords
+  - api.HTMLAreaElement.hash
+  - api.HTMLAreaElement.host
+  - api.HTMLAreaElement.hostname
+  - api.HTMLAreaElement.href
+  - api.HTMLAreaElement.origin
+  - api.HTMLAreaElement.password
+  - api.HTMLAreaElement.pathname
+  - api.HTMLAreaElement.port
+  - api.HTMLAreaElement.protocol
+  - api.HTMLAreaElement.rel
+  - api.HTMLAreaElement.relList
+  - api.HTMLAreaElement.search
+  - api.HTMLAreaElement.shape
+  - api.HTMLAreaElement.target
+  - api.HTMLAreaElement.toString
+  - api.HTMLAreaElement.username
+  - api.HTMLImageElement.isMap
+  - api.HTMLImageElement.useMap
+  - api.HTMLMapElement
+  - api.HTMLMapElement.areas
+  - api.HTMLMapElement.name
+  - html.elements.area
+  - html.elements.area.alt
+  - html.elements.area.coords
+  - html.elements.area.href
+  - html.elements.area.implicit_noopener
+  - html.elements.area.rel
+  - html.elements.area.rel.noopener
+  - html.elements.area.rel.noreferrer
+  - html.elements.area.shape
+  - html.elements.area.target
+  - html.elements.img.ismap
+  - html.elements.img.usemap
+  - html.elements.map
+  - html.elements.map.name
