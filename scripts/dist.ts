@@ -124,7 +124,7 @@ function compareStatus(a: SupportStatus, b: SupportStatus) {
   const bVersions = Object.values(b.support);
   for (let i = 0; i < aVersions.length; i++) {
     if (aVersions[i] !== bVersions[i]) {
-      return aVersions[i] - bVersions[i];
+      return Number(aVersions[i]) - Number(bVersions[i]);
     }
   }
   return 0;
@@ -253,7 +253,7 @@ function insertCompatFeatures(yaml: Document, groups: Map<string, string[]>) {
     return;
   }
 
-  const list = new YAMLSeq();
+  const list = new YAMLSeq<Scalar<string>>();
   for (const [comment, keys] of groups.entries()) {
     let first = true;
     for (const key of keys) {
