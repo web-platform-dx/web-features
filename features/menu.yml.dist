@@ -11,8 +11,8 @@ status:
     edge: "12"
     firefox: "1"
     firefox_android: "4"
-    safari: "4"
-    safari_ios: "3.2"
+    safari: ≤4
+    safari_ios: ≤3.2
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -53,6 +53,6 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
+  #   safari: ≤4
+  #   safari_ios: ≤3.2
   - html.elements.li.value
