@@ -1,9 +1,8 @@
 name: <picture>
-description: The `<picture>` element is used for responsive images.
+description: The `<picture>` element is used for art direction in responsive images, where a different image is displayed based on the `<source>` element.
 spec: https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element
 group: html
 caniuse: picture
 compat_features:
   - api.HTMLPictureElement
   - html.elements.picture
-  - html.elements.source
