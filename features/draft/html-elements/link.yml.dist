@@ -6,10 +6,10 @@ status:
   baseline_low_date: 2020-07-28
   baseline_high_date: 2023-01-28
   support:
-    chrome: "80"
+    chrome: ≤80
     chrome_android: "80"
     edge: "80"
-    firefox: "72"
+    firefox: ≤72
     firefox_android: "79"
     safari: "11.1"
     safari_ios: "11.3"
@@ -42,8 +42,8 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
+  #   safari: ≤4
+  #   safari_ios: ≤3.2
   - html.elements.link
   - html.elements.link.disabled
   - html.elements.link.href
@@ -124,10 +124,10 @@ compat_features:
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
   # support:
-  #   chrome: "80"
+  #   chrome: ≤80
   #   chrome_android: "80"
   #   edge: "80"
-  #   firefox: "72"
+  #   firefox: ≤72
   #   firefox_android: "79"
   #   safari: "6"
   #   safari_ios: "6"
