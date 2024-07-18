@@ -54,8 +54,8 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
+  #   safari: ≤4
+  #   safari_ios: ≤3.2
   - html.elements.meta.content
   - html.elements.meta.http-equiv
   - html.elements.meta.http-equiv.refresh
@@ -74,8 +74,9 @@ compat_features:
   #   safari_ios: "12"
   - html.elements.meta.name.referrer
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-01-11
+  # baseline_high_date: 2024-07-11
   # support:
   #   chrome: "81"
   #   chrome_android: "81"
