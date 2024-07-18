@@ -1,8 +1,9 @@
 name: WebSockets
-description: WebSockets provides a way to open a two-way communication channel between the user's browser and a server.
+description: The `WebSocket` API opens a two-way communication channel between the user's browser and a server.
 spec: https://websockets.spec.whatwg.org/
+caniuse: websockets
 status:
-  compute_from: api.WebSocket
+  compute_from: api.WebSocket.WebSocket
 compat_features:
   - api.CloseEvent
   - api.CloseEvent.CloseEvent
