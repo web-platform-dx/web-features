@@ -5,5 +5,7 @@
     "moduleResolution": "Bundler",
     "esModuleInterop": true,
     "resolveJsonModule": true,
-  }
+    "noEmit": true
+  },
+  "exclude": ["packages/"]
 }
