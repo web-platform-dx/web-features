@@ -4,6 +4,7 @@ spec: https://html.spec.whatwg.org/multipage/canvas.html#the-offscreencanvas-int
 group: canvas
 caniuse: offscreencanvas
 compat_features:
+  - api.HTMLCanvasElement.transferControlToOffscreen
   - api.OffscreenCanvas
   - api.OffscreenCanvas.convertToBlob
   - api.OffscreenCanvas.getContext
