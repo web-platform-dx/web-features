@@ -62,8 +62,6 @@ export function support(feature: Feature, browsers: Browser[]): SupportMap {
 /**
  * Returns a number indicating whether an `InitialSupport` object comes before
  * (negative), after (positive), in the same position (0) by sort order.
- * Releases are compared across browsers by release date, with ranged (≤) values
- * coming after unranged values.
  */
 export function compareInitialSupport(
   i1: InitialSupport,
