@@ -1,10 +1,11 @@
-name: Canvas API
+name: `<canvas>`
 description: The `<canvas>` HTML element represents a space to draw graphics in, using the 2D canvas API or 3D WebGPU API.
 spec: https://html.spec.whatwg.org/multipage/canvas.html#canvas
 group:
   - canvas
   - html
-caniuse: canvas
+# Note: https://caniuse.com/canvas covers both the <canvas> element and the 2D
+# rendering context. These are separated in web-features, so no caniuse link here.
 status:
   compute_from: html.elements.canvas
 compat_features:
