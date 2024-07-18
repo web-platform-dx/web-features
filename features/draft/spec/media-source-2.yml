@@ -1,4 +1,4 @@
-draft_date: 2024-07-11
+draft_date: 2024-07-12
 name: Media Source Extensions™
 description: TODO
 spec: https://w3c.github.io/media-source/
@@ -8,8 +8,6 @@ compat_features:
   - api.BufferedChangeEvent.BufferedChangeEvent
   - api.BufferedChangeEvent.addedRanges
   - api.BufferedChangeEvent.removedRanges
-  - api.HTMLMediaElement.buffered
-  - api.HTMLMediaElement.seekable
   - api.MediaSource.MediaSource
   - api.MediaSource.activeSourceBuffers
   - api.MediaSource.addSourceBuffer
@@ -52,6 +50,9 @@ compat_features:
   - api.VideoTrack.sourceBuffer
 
 # The following features in the spec are already part of web-features:
+# - <video>:
+#   - api.HTMLMediaElement.buffered
+#   - api.HTMLMediaElement.seekable
 # - Managed media source:
 #   - api.ManagedMediaSource
 #   - api.ManagedMediaSource.ManagedMediaSource
