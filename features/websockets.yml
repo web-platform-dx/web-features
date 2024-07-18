@@ -1,7 +1,9 @@
-draft_date: 2024-07-11
-name: WebSockets Standard
-description: TODO
+name: WebSockets
+description: The `WebSocket` API opens a two-way communication channel between the user's browser and a server.
 spec: https://websockets.spec.whatwg.org/
+caniuse: websockets
+status:
+  compute_from: api.WebSocket.WebSocket
 compat_features:
   - api.CloseEvent
   - api.CloseEvent.CloseEvent
@@ -22,3 +24,8 @@ compat_features:
   - api.WebSocket.readyState
   - api.WebSocket.send
   - api.WebSocket.url
+  - api.WebSocket.worker_support
+  - api.WebSocketError
+  - api.WebSocketError.WebSocketError
+  - api.WebSocketError.closeCode
+  - api.WebSocketError.reason
