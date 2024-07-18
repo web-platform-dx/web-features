@@ -3,17 +3,18 @@
 
 status:
   baseline: high
-  baseline_low_date: 2020-01-15
-  baseline_high_date: 2022-07-15
+  baseline_low_date: 2015-07-29
+  baseline_high_date: 2018-01-29
   support:
-    chrome: "50"
-    chrome_android: "50"
-    edge: "79"
-    firefox: "18"
-    firefox_android: "18"
-    safari: "11"
-    safari_ios: "11"
+    chrome: "1"
+    chrome_android: "18"
+    edge: "12"
+    firefox: "1.5"
+    firefox_android: "4"
+    safari: "2"
+    safari_ios: "1"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -58,7 +59,6 @@ compat_features:
   #   safari_ios: "3"
   - api.HTMLCanvasElement.toDataURL
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
