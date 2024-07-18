@@ -14,19 +14,6 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
-  #   chrome: ≤79
-  #   chrome_android: "79"
-  #   edge: "79"
-  #   firefox: ≤23
-  #   firefox_android: "23"
-  #   safari: ≤9.1
-  #   safari_ios: ≤9.3
-  - http.mixed-content
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
   #   chrome: "79"
   #   chrome_android: "79"
   #   edge: "79"
@@ -35,6 +22,19 @@ compat_features:
   #   safari: ≤9.1
   #   safari_ios: ≤9.3
   - http.mixed-content.blockable_mixed_content
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: ≤79
+  #   chrome_android: "79"
+  #   edge: "79"
+  #   firefox: ≤23
+  #   firefox_android: "23"
+  #   safari: ≤9.1
+  #   safari_ios: ≤9.3
+  - http.mixed-content
 
   # baseline: false
   # support:

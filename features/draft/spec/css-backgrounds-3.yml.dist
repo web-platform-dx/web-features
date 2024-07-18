@@ -230,23 +230,6 @@ compat_features:
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
   # support:
-  #   chrome: ≤83
-  #   chrome_android: "83"
-  #   edge: "83"
-  #   firefox: ≤72
-  #   firefox_android: "79"
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
-  - css.properties.background-position.bottom
-  - css.properties.background-position.center
-  - css.properties.background-position.left
-  - css.properties.background-position.right
-  - css.properties.background-position.top
-
-  # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
-  # support:
   #   chrome: "3"
   #   chrome_android: "18"
   #   edge: "12"
@@ -282,6 +265,23 @@ compat_features:
   #   safari: ≤13.1
   #   safari_ios: ≤13.4
   - css.properties.border-image-width.auto
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: ≤83
+  #   chrome_android: "83"
+  #   edge: "83"
+  #   firefox: ≤72
+  #   firefox_android: "79"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
+  - css.properties.background-position.bottom
+  - css.properties.background-position.center
+  - css.properties.background-position.left
+  - css.properties.background-position.right
+  - css.properties.background-position.top
 
   # baseline: low
   # baseline_low_date: 2022-03-14

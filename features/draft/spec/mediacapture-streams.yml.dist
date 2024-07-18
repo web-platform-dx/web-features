@@ -337,21 +337,21 @@ compat_features:
   # support:
   #   chrome: "59"
   #   chrome_android: "59"
+  #   edge: "12"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.MediaStreamTrack.getCapabilities
+
+  # baseline: false
+  # support:
+  #   chrome: "59"
+  #   chrome_android: "59"
   #   edge: ≤79
   #   safari: "11"
   #   safari_ios: "11"
   - api.MediaStreamTrack.applyConstraints.channelCount_constraint
   - api.MediaStreamTrack.applyConstraints.sampleRate_constraint
   - api.MediaStreamTrack.applyConstraints.sampleSize_constraint
-
-  # baseline: false
-  # support:
-  #   chrome: "59"
-  #   chrome_android: "59"
-  #   edge: "12"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - api.MediaStreamTrack.getCapabilities
 
   # baseline: false
   # support:

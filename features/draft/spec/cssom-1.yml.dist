@@ -97,11 +97,9 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - api.CSSStyleDeclaration.item
-  - api.CSSStyleDeclaration.length
-  - api.CSSStyleDeclaration.setProperty
+  #   safari: ≤4
+  #   safari_ios: ≤3.2
+  - api.MediaList.toString
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -112,9 +110,11 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: ≤4
-  #   safari_ios: ≤3.2
-  - api.MediaList.toString
+  #   safari: "6"
+  #   safari_ios: "6"
+  - api.CSSStyleDeclaration.item
+  - api.CSSStyleDeclaration.length
+  - api.CSSStyleDeclaration.setProperty
 
   # baseline: high
   # baseline_low_date: 2015-07-29

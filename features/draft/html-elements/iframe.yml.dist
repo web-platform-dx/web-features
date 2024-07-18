@@ -112,6 +112,20 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
+  #   chrome: "46"
+  #   chrome_android: "46"
+  #   edge: "79"
+  #   firefox: "49"
+  #   firefox_android: "49"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - html.elements.iframe.sandbox.allow-modals
+  - html.elements.iframe.sandbox.allow-popups-to-escape-sandbox
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
   #   chrome: ≤49
   #   chrome_android: "49"
   #   edge: "79"
@@ -124,20 +138,6 @@ compat_features:
   - html.elements.iframe.sandbox.allow-same-origin
   - html.elements.iframe.sandbox.allow-scripts
   - html.elements.iframe.sandbox.allow-top-navigation
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "46"
-  #   chrome_android: "46"
-  #   edge: "79"
-  #   firefox: "49"
-  #   firefox_android: "49"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - html.elements.iframe.sandbox.allow-modals
-  - html.elements.iframe.sandbox.allow-popups-to-escape-sandbox
 
   # baseline: high
   # baseline_low_date: 2020-07-28

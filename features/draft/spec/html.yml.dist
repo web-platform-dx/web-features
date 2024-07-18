@@ -268,6 +268,32 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
+  #   safari: "1.3"
+  #   safari_ios: "2"
+  - css.selectors.target
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "2"
+  #   safari_ios: "1"
+  - css.selectors.hover
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
   #   safari: "3"
   #   safari_ios: "1"
   - api.BarProp
@@ -491,11 +517,22 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: "5.1"
-  #   safari_ios: "5"
-  - api.DOMStringList
-  - api.DOMStringList.item
-  - api.DOMStringList.length
+  #   safari: "4"
+  #   safari_ios: "1"
+  - api.clearTimeout
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3"
+  - api.HTMLTableElement.insertRow
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -519,48 +556,9 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: "1.3"
-  #   safari_ios: "2"
-  - css.selectors.target
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "2"
-  #   safari_ios: "1"
-  - css.selectors.hover
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "1"
-  - api.clearTimeout
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3"
-  - api.HTMLTableElement.insertRow
+  #   safari: ≤4
+  #   safari_ios: ≤3
+  - html.elements.textarea
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -671,9 +669,11 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: ≤4
-  #   safari_ios: ≤3
-  - html.elements.textarea
+  #   safari: "5.1"
+  #   safari_ios: "5"
+  - api.DOMStringList
+  - api.DOMStringList.item
+  - api.DOMStringList.length
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -2206,6 +2206,19 @@ compat_features:
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
   # support:
+  #   chrome: ≤15
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "10"
+  #   firefox_android: "10"
+  #   safari: ≤4
+  #   safari_ios: ≤3.2
+  - html.elements.bdo
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
   #   chrome: "16"
   #   chrome_android: "18"
   #   edge: "12"
@@ -2427,19 +2440,6 @@ compat_features:
   - api.TextTrackList
   - api.TextTrackList.addtrack_event
   - api.TextTrackList.length
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: ≤15
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "10"
-  #   firefox_android: "10"
-  #   safari: ≤4
-  #   safari_ios: ≤3.2
-  - html.elements.bdo
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -3814,10 +3814,9 @@ compat_features:
   #   edge: "79"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: ≤4
-  #   safari_ios: ≤3.2
-  - html.elements.embed.type
-  - html.global_attributes.dir
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - html.elements.wbr
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -3828,9 +3827,10 @@ compat_features:
   #   edge: "79"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - html.elements.wbr
+  #   safari: ≤4
+  #   safari_ios: ≤3.2
+  - html.elements.embed.type
+  - html.global_attributes.dir
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -4121,6 +4121,20 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
+  #   chrome: "46"
+  #   chrome_android: "46"
+  #   edge: "79"
+  #   firefox: "49"
+  #   firefox_android: "49"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - html.elements.iframe.sandbox.allow-modals
+  - html.elements.iframe.sandbox.allow-popups-to-escape-sandbox
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
   #   chrome: "49"
   #   chrome_android: "49"
   #   edge: "79"
@@ -4147,20 +4161,6 @@ compat_features:
   - html.elements.iframe.sandbox.allow-same-origin
   - html.elements.iframe.sandbox.allow-scripts
   - html.elements.iframe.sandbox.allow-top-navigation
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "46"
-  #   chrome_android: "46"
-  #   edge: "79"
-  #   firefox: "49"
-  #   firefox_android: "49"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - html.elements.iframe.sandbox.allow-modals
-  - html.elements.iframe.sandbox.allow-popups-to-escape-sandbox
 
   # baseline: high
   # baseline_low_date: 2020-01-15

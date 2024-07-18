@@ -47,16 +47,6 @@ compat_features:
   # support:
   #   chrome: ≤80
   #   chrome_android: "80"
-  #   edge: ≤80
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
-  - css.properties.alignment-baseline
-  - svg.global_attributes.alignment-baseline
-
-  # baseline: false
-  # support:
-  #   chrome: ≤80
-  #   chrome_android: "80"
   #   edge: "80"
   #   safari: ≤13.1
   #   safari_ios: ≤13.4
@@ -65,6 +55,16 @@ compat_features:
   - css.properties.baseline-shift.sub
   - css.properties.baseline-shift.super
   - svg.global_attributes.baseline-shift
+
+  # baseline: false
+  # support:
+  #   chrome: ≤80
+  #   chrome_android: "80"
+  #   edge: ≤80
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
+  - css.properties.alignment-baseline
+  - svg.global_attributes.alignment-baseline
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false

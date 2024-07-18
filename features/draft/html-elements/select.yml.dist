@@ -78,16 +78,12 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: ≤4
-  #   safari_ios: ≤3.2
-  - html.elements.optgroup
-  - html.elements.optgroup.disabled
-  - html.elements.optgroup.label
-  - html.elements.option
-  - html.elements.option.disabled
-  - html.elements.option.label
-  - html.elements.option.selected
-  - html.elements.option.value
+  #   safari: "3"
+  #   safari_ios: "2"
+  - html.elements.select.disabled
+  - html.elements.select.form
+  - html.elements.select.multiple
+  - html.elements.select.name
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -98,12 +94,16 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: "3"
-  #   safari_ios: "2"
-  - html.elements.select.disabled
-  - html.elements.select.form
-  - html.elements.select.multiple
-  - html.elements.select.name
+  #   safari: ≤4
+  #   safari_ios: ≤3.2
+  - html.elements.optgroup
+  - html.elements.optgroup.disabled
+  - html.elements.optgroup.label
+  - html.elements.option
+  - html.elements.option.disabled
+  - html.elements.option.label
+  - html.elements.option.selected
+  - html.elements.option.value
 
   # baseline: high
   # baseline_low_date: 2015-07-29

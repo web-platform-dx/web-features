@@ -124,7 +124,23 @@ function compareStatus(a: SupportStatus, b: SupportStatus) {
   const bVersions = Object.values(b.support);
   for (let i = 0; i < aVersions.length; i++) {
     if (aVersions[i] !== bVersions[i]) {
-      return Number(aVersions[i]) - Number(bVersions[i]);
+      const [aRanged, aVersion] = aVersions[i].startsWith("≤")
+        ? [true, aVersions[i].slice(1)]
+        : [false, aVersions[i]];
+      const [bRanged, bVersion] = bVersions[i].startsWith("≤")
+        ? [true, bVersions[i].slice(1)]
+        : [false, bVersions[i]];
+
+      if (Number(aVersion) - Number(bVersion) === 0) {
+        if (!aRanged && bRanged) {
+          return -1;
+        }
+        if (!bRanged && aRanged) {
+          return 1;
+        }
+      }
+
+      return Number(aVersion) - Number(bVersion);
     }
   }
   return 0;
