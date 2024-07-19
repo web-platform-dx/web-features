@@ -311,12 +311,12 @@ function diffJson(from: string = "latest", to?: string): string {
       temporaryDir,
       "node_modules",
       "web-features",
-      "index.json",
+      "data.json",
     );
     const prettyJson = execSync(`jq . "${pkgJson}"`, {
       encoding: "utf-8",
     });
-    const fp = join(temporaryDir, `index.${version}.json`);
+    const fp = join(temporaryDir, `data.${version}.json`);
     writeFileSync(fp, prettyJson);
     return fp;
   }
@@ -327,11 +327,11 @@ function diffJson(from: string = "latest", to?: string): string {
       return pkgToJsonFile(to);
     } else {
       build();
-      const preparedJson = join(packages["web-features"], "index.json");
+      const preparedJson = join(packages["web-features"], "data.json");
       const prettyPreparedJson = execSync(`jq . "${preparedJson}"`, {
         encoding: "utf-8",
       });
-      const fp = join(temporaryDir, "index.HEAD.json");
+      const fp = join(temporaryDir, "data.HEAD.json");
       writeFileSync(fp, prettyPreparedJson);
       return fp;
     }
