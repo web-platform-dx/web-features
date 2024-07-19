@@ -13,6 +13,17 @@ status:
     safari: "17"
     safari_ios: "17"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2023-09-18
+  # support:
+  #   chrome: "91"
+  #   chrome_android: "91"
+  #   edge: "91"
+  #   firefox: "33"
+  #   firefox_android: "33"
+  #   safari: "17"
+  #   safari_ios: "17"
   - api.CSSCounterStyleRule
   - api.CSSCounterStyleRule.additiveSymbols
   - api.CSSCounterStyleRule.fallback
@@ -21,7 +32,9 @@ compat_features:
   - api.CSSCounterStyleRule.pad
   - api.CSSCounterStyleRule.prefix
   - api.CSSCounterStyleRule.range
+  - api.CSSCounterStyleRule.speakAs
   - api.CSSCounterStyleRule.suffix
+  - api.CSSCounterStyleRule.symbols
   - api.CSSCounterStyleRule.system
   - css.at-rules.counter-style
   - css.at-rules.counter-style.additive-symbols
@@ -32,3 +45,15 @@ compat_features:
   - css.at-rules.counter-style.range
   - css.at-rules.counter-style.suffix
   - css.at-rules.counter-style.system
+
+  # baseline: false
+  # support:
+  #   safari: "17"
+  #   safari_ios: "17"
+  - css.at-rules.counter-style.symbols
+
+  # baseline: false
+  # support:
+  #   firefox: "33"
+  #   firefox_android: "33"
+  - css.at-rules.counter-style.speak-as
