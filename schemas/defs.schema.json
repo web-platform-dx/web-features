@@ -6,21 +6,6 @@
     "FeatureData": {
       "additionalProperties": false,
       "properties": {
-        "alias": {
-          "anyOf": [
-            {
-              "type": "string"
-            },
-            {
-              "items": {
-                "type": "string"
-              },
-              "minItems": 2,
-              "type": "array"
-            }
-          ],
-          "description": "Alias identifier"
-        },
         "caniuse": {
           "anyOf": [
             {
