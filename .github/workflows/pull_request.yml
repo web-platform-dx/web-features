@@ -18,7 +18,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - name: Pretty print built JSON
-        run: jq . packages/web-features/index.json
+        run: jq . packages/web-features/data.json
   test:
     runs-on: ubuntu-latest
     steps:

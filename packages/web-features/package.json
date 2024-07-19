@@ -11,13 +11,13 @@
   "main": "index.js",
   "exports": {
     ".": "./index.js",
-    "./index.json": "./index.json"
+    "./data.json": "./data.json"
   },
   "types": "./index.d.ts",
   "files": [
     "index.d.ts",
     "index.js",
-    "index.json"
+    "data.json"
   ],
   "scripts": {
     "prepare": "tsc && rm types.js && tsup ./index.ts --dts-only --format=esm --out-dir=."
