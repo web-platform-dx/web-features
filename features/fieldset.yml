@@ -3,7 +3,9 @@ description: The `<fieldset>` and `<legend>` elements are used to group several 
 spec:
   - https://html.spec.whatwg.org/multipage/form-elements.html#the-fieldset-element
   - https://html.spec.whatwg.org/multipage/form-elements.html#the-legend-element
-group: forms
+group:
+  - forms
+  - html-elements
 compat_features:
   - api.HTMLFieldSetElement
   - api.HTMLFieldSetElement.disabled
