@@ -28,3 +28,10 @@ compat_features:
   - api.Accelerometer.z
   - api.LinearAccelerationSensor
   - api.LinearAccelerationSensor.LinearAccelerationSensor
+
+  # baseline: false
+  # support:
+  #   chrome: "88"
+  #   chrome_android: "88"
+  #   edge: "88"
+  - http.headers.Permissions-Policy.accelerometer
