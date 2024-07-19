@@ -1,0 +1,25 @@
+draft_date: 2024-07-11
+name: Picture-in-Picture
+description: TODO
+spec: https://w3c.github.io/picture-in-picture/
+compat_features:
+  - api.PictureInPictureEvent
+  - api.PictureInPictureEvent.PictureInPictureEvent
+  - api.PictureInPictureEvent.pictureInPictureWindow
+  - http.headers.Permissions-Policy.picture-in-picture
+
+# The following features in the spec are already part of web-features:
+# - Picture-in-picture (video):
+#   - api.Document.exitPictureInPicture
+#   - api.Document.pictureInPictureElement
+#   - api.Document.pictureInPictureEnabled
+#   - api.HTMLVideoElement.disablePictureInPicture
+#   - api.HTMLVideoElement.enterpictureinpicture_event
+#   - api.HTMLVideoElement.leavepictureinpicture_event
+#   - api.HTMLVideoElement.requestPictureInPicture
+#   - api.PictureInPictureWindow
+#   - api.PictureInPictureWindow.height
+#   - api.PictureInPictureWindow.resize_event
+#   - api.PictureInPictureWindow.width
+#   - api.ShadowRoot.pictureInPictureElement
+#   - html.elements.video.disablepictureinpicture

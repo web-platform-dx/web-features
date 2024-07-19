@@ -1,0 +1,21 @@
+draft_date: 2024-07-11
+name: Motion Path Module Level 1
+description: TODO
+spec: https://drafts.fxtf.org/motion-1/
+compat_features:
+  - css.properties.offset-anchor.auto
+  - css.properties.offset-position
+  - css.properties.offset-position.auto
+  - css.properties.offset-position.normal
+  - css.properties.offset-rotate.auto
+  - css.properties.offset-rotate.reverse
+  - css.types.basic-shape.path.offset-path
+  - css.types.ray
+
+# The following features in the spec are already part of web-features:
+# - Motion path:
+#   - css.properties.offset
+#   - css.properties.offset-anchor
+#   - css.properties.offset-distance
+#   - css.properties.offset-path
+#   - css.properties.offset-rotate

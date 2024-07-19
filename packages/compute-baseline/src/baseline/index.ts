@@ -1,14 +1,22 @@
-import assert from "node:assert";
-
 import { Temporal } from "@js-temporal/polyfill";
-
 import { Browser } from "../browser-compat-data/browser.js";
 import { Compat, defaultCompat } from "../browser-compat-data/compat.js";
 import { feature } from "../browser-compat-data/feature.js";
-import { Release } from "../browser-compat-data/release.js";
 import { browsers } from "./core-browser-set.js";
-import { toDateString, toHighDate } from "./date-utils.js";
-import { support } from "./support.js";
+import {
+  parseRangedDateString,
+  toHighDate,
+  toRangedDateString,
+} from "./date-utils.js";
+import {
+  compareInitialSupport,
+  InitialSupport,
+  support,
+  SupportMap,
+} from "./support.js";
+
+// Include this in the public API
+export { parseRangedDateString } from "./date-utils.js";
 
 interface Logger {
   debug?: typeof console.debug;
@@ -40,7 +48,7 @@ interface SupportDetails {
   baseline_low_date: BaselineDate;
   baseline_high_date: BaselineDate;
   discouraged: boolean;
-  support: Map<Browser, Release | undefined>;
+  support: Map<Browser, InitialSupport | undefined>;
   toJSON: () => string;
 }
 
@@ -161,28 +169,27 @@ function withAncestors(compatKey: string, compat: Compat): string[] {
 }
 
 /**
- * Collate several support summaries, taking the most-recent release for each browser across all of the summaries.
+ * Collate several support summaries, taking the most-recent release for each
+ * browser across all of the summaries.
  */
-function collateSupport(
-  supports: Map<Browser, Release | undefined>[],
-): Map<Browser, Release | undefined> {
-  const collated = new Map<Browser, (Release | undefined)[]>();
+function collateSupport(supports: SupportMap[]): SupportMap {
+  const collated = new Map<Browser, (InitialSupport | undefined)[]>();
 
   for (const support of supports) {
-    for (const [browser, release] of support) {
-      collated.set(browser, [...(collated.get(browser) ?? []), release]);
+    for (const [browser, initialSupport] of support) {
+      collated.set(browser, [...(collated.get(browser) ?? []), initialSupport]);
     }
   }
 
-  const support: Map<Browser, Release | undefined> = new Map();
-  for (const [browser, releases] of collated) {
-    if (releases.includes(undefined)) {
+  const support: SupportMap = new Map();
+  for (const [browser, initialSupports] of collated) {
+    if (initialSupports.includes(undefined)) {
       support.set(browser, undefined);
     } else {
       support.set(
         browser,
-        releases
-          .sort((r1, r2) => (r1 as Release).compare(r2 as Release))
+        (initialSupports as InitialSupport[])
+          .sort(compareInitialSupport)
           .at(-1),
       );
     }
@@ -195,7 +202,7 @@ function collateSupport(
  * corresponding Baseline status and high and low dates.
  */
 export function keystoneDateToStatus(
-  date: Temporal.PlainDate | null,
+  dateSpec: string | null,
   cutoffDate: Temporal.PlainDate,
   discouraged: boolean,
 ): {
@@ -203,7 +210,7 @@ export function keystoneDateToStatus(
   baseline_low_date: BaselineDate;
   baseline_high_date: BaselineDate;
 } {
-  if (date == null || discouraged) {
+  if (dateSpec == null || discouraged) {
     return {
       baseline: false,
       baseline_low_date: null,
@@ -211,14 +218,16 @@ export function keystoneDateToStatus(
     };
   }
 
+  const [date, ranged] = parseRangedDateString(dateSpec);
+
   let baseline: BaselineStatus = "low";
-  let baseline_low_date: BaselineDate = toDateString(date);
+  let baseline_low_date: BaselineDate = toRangedDateString(date, ranged);
   let baseline_high_date: BaselineDate = null;
 
   const possibleHighDate = toHighDate(date);
   if (Temporal.PlainDate.compare(possibleHighDate, cutoffDate) <= 0) {
     baseline = "high";
-    baseline_high_date = toDateString(possibleHighDate);
+    baseline_high_date = toRangedDateString(possibleHighDate, ranged);
   }
 
   return { baseline, baseline_low_date, baseline_high_date };
@@ -230,30 +239,56 @@ export function keystoneDateToStatus(
  * feature is not Baseline and there is no keystone date.
  */
 function findKeystoneDate(
-  releases: (Release | undefined)[],
-): Temporal.PlainDate | null {
-  let latestDate = null;
-  for (const release of releases) {
-    if (!release?.date) {
-      return null;
-    }
-    if (
-      !latestDate ||
-      Temporal.PlainDate.compare(latestDate, release.date) < 0
-    ) {
-      latestDate = release.date;
-    }
+  support: (InitialSupport | undefined)[],
+): string | null {
+  if (support.includes(undefined) || support.length === 0) {
+    return null;
   }
-  return latestDate;
+
+  const initialSupports = support as InitialSupport[];
+  if (initialSupports.some((i) => i.release.date === null)) {
+    return null;
+  }
+  const keystone = initialSupports
+    .sort((i1, i2) => {
+      if (
+        Temporal.PlainDate.compare(
+          i1.release.date as Temporal.PlainDate,
+          i2.release.date as Temporal.PlainDate,
+        ) === 0
+      ) {
+        if (i1.ranged && !i2.ranged) {
+          return -1;
+        }
+        if (!i1.ranged && i2.ranged) {
+          return 1;
+        }
+        return 0;
+      }
+      return Temporal.PlainDate.compare(
+        i1.release.date as Temporal.PlainDate,
+        i2.release.date as Temporal.PlainDate,
+      );
+    })
+    .at(-1) as InitialSupport;
+
+  if (!keystone.release.date) {
+    return null;
+  }
+
+  if (keystone.ranged) {
+    return `≤${keystone.release.date}`;
+  }
+  return keystone.release.date.toString();
 }
 
 function jsonify(status: SupportDetails): string {
   const { baseline_low_date, baseline_high_date } = status;
   const support: Record<string, string> = {};
 
-  for (const [browser, release] of status.support.entries()) {
-    if (release !== undefined) {
-      support[browser.id] = release.version;
+  for (const [browser, initialSupport] of status.support.entries()) {
+    if (initialSupport !== undefined) {
+      support[browser.id] = initialSupport.text;
     }
   }
 
