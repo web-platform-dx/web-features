@@ -21,7 +21,7 @@ function buildPackage() {
 
   const json = stringify(data);
   // TODO: Validate the resulting JSON against a schema.
-  const path = new URL("index.json", packageDir);
+  const path = new URL("data.json", packageDir);
   fs.writeFileSync(path, json);
   for (const file of filesToCopy) {
     fs.copyFileSync(new URL(file, rootDir), new URL(file, packageDir));
