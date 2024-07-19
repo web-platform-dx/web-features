@@ -15,11 +15,8 @@ import { features, groups, snapshots } from "web-features";
 Or, without Node.js:
 
 ```js
-import {
-  features,
-  groups,
-  snapshots,
-} from "web-features/data.json" with { type: "json" };
+import data from "web-features/data.json" with { type: "json" };
+const { features, groups, snapshots } = data;
 ```
 
 ## Rendering Baseline statuses with `web-features`
