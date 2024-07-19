@@ -1,7 +1,9 @@
 name: <textarea>
 description: The `<textarea>` element represents an editing control that allows users to enter multi-line, free-form, plain text.
 spec: https://html.spec.whatwg.org/multipage/form-elements.html#the-textarea-element
-group: forms
+group:
+  - forms
+  - html-elements
 status:
   compute_from: html.elements.textarea
 compat_features:
