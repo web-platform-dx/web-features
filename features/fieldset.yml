@@ -6,6 +6,8 @@ spec:
 group:
   - forms
   - html-elements
+status:
+  compute_from: html.elements.fieldset
 compat_features:
   - api.HTMLFieldSetElement
   - api.HTMLFieldSetElement.disabled
