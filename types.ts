@@ -14,8 +14,6 @@ export interface FeatureData {
     description: string;
     /** Short description of the feature, as an HTML string */
     description_html: string;
-    /** Alias identifier */
-    alias?: string | [string, string, ...string[]];
     /** Specification */
     spec: specification_url | [specification_url, specification_url, ...specification_url[]];
     /** Group identifier */
