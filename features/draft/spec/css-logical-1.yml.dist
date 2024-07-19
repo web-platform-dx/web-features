@@ -85,16 +85,16 @@ compat_features:
   - css.properties.padding-inline-start
 
   # baseline: high
-  # baseline_low_date: 2020-03-24
-  # baseline_high_date: 2022-09-24
+  # baseline_low_date: ≤2020-03-24
+  # baseline_high_date: ≤2022-09-24
   # support:
   #   chrome: "2"
   #   chrome_android: "18"
   #   edge: "12"
   #   firefox: "19"
   #   firefox_android: "19"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
   - css.at-rules.page
 
   # baseline: high
