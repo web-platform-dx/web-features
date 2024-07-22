@@ -3,16 +3,16 @@
 
 status:
   baseline: high
-  baseline_low_date: 2020-03-24
-  baseline_high_date: 2022-09-24
+  baseline_low_date: ≤2020-03-24
+  baseline_high_date: ≤2022-09-24
   support:
     chrome: "57"
     chrome_android: "57"
     edge: "79"
     firefox: "52"
     firefox_android: "52"
-    safari: "13.1"
-    safari_ios: "13.4"
+    safari: ≤13.1
+    safari_ios: ≤13.4
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -64,16 +64,16 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: high
-  # baseline_low_date: 2020-03-24
-  # baseline_high_date: 2022-09-24
+  # baseline_low_date: ≤2020-03-24
+  # baseline_high_date: ≤2022-09-24
   # support:
   #   chrome: "57"
   #   chrome_android: "57"
   #   edge: "79"
   #   firefox: "52"
   #   firefox_android: "52"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
   - css.properties.grid-auto-flow.column
   - css.properties.grid-auto-flow.dense
   - css.properties.grid-auto-flow.row

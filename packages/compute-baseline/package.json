@@ -14,9 +14,10 @@
   "types": "./dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "test": "mocha -r tsx 'src/**/*.test.ts'",
+    "prepare": "cp ../../LICENSE.txt . && tsc",
     "test:coverage": "c8 npm run test",
-    "prepare": "cp ../../LICENSE.txt . && tsc"
+    "test:types": "tsc --noEmit",
+    "test": "mocha -r tsx 'src/**/*.test.ts'"
   },
   "license": "Apache-2.0",
   "devDependencies": {
@@ -26,7 +27,7 @@
     "c8": "^10.1.2",
     "chai": "^5.1.1",
     "chai-jest-snapshot": "^2.0.0",
-    "mocha": "^10.6.0"
+    "mocha": "^10.7.0"
   },
   "peerDependencies": {
     "@mdn/browser-compat-data": "^5.0.0"

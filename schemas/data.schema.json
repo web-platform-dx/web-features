@@ -1,0 +1,228 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "FeatureData": {
+      "additionalProperties": false,
+      "properties": {
+        "caniuse": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 2,
+              "type": "array"
+            }
+          ],
+          "description": "caniuse.com identifier"
+        },
+        "compat_features": {
+          "description": "Sources of support data for this feature",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "description": {
+          "description": "Short description of the feature, as a plain text string",
+          "type": "string"
+        },
+        "description_html": {
+          "description": "Short description of the feature, as an HTML string",
+          "type": "string"
+        },
+        "group": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 2,
+              "type": "array"
+            }
+          ],
+          "description": "Group identifier"
+        },
+        "name": {
+          "description": "Short name",
+          "type": "string"
+        },
+        "snapshot": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 2,
+              "type": "array"
+            }
+          ],
+          "description": "Snapshot identifier"
+        },
+        "spec": {
+          "anyOf": [
+            {
+              "description": "Specification URL",
+              "format": "uri",
+              "type": "string"
+            },
+            {
+              "items": {
+                "description": "Specification URL",
+                "format": "uri",
+                "type": "string"
+              },
+              "minItems": 2,
+              "type": "array"
+            }
+          ],
+          "description": "Specification"
+        },
+        "status": {
+          "additionalProperties": false,
+          "description": "Whether a feature is considered a \"baseline\" web platform feature and when it achieved that status",
+          "properties": {
+            "baseline": {
+              "description": "Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false)",
+              "enum": [
+                "high",
+                "low",
+                false
+              ],
+              "type": [
+                "string",
+                "boolean"
+              ]
+            },
+            "baseline_high_date": {
+              "description": "Date the feature achieved Baseline high status",
+              "type": "string"
+            },
+            "baseline_low_date": {
+              "description": "Date the feature achieved Baseline low status",
+              "type": "string"
+            },
+            "support": {
+              "additionalProperties": false,
+              "description": "Browser versions that most-recently introduced the feature",
+              "properties": {
+                "chrome": {
+                  "type": "string"
+                },
+                "chrome_android": {
+                  "type": "string"
+                },
+                "edge": {
+                  "type": "string"
+                },
+                "firefox": {
+                  "type": "string"
+                },
+                "firefox_android": {
+                  "type": "string"
+                },
+                "safari": {
+                  "type": "string"
+                },
+                "safari_ios": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "required": [
+            "baseline",
+            "support"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "description_html",
+        "spec",
+        "status"
+      ],
+      "type": "object"
+    },
+    "GroupData": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "description": "Short name",
+          "type": "string"
+        },
+        "parent": {
+          "description": "Identifier of parent group",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "type": "object"
+    },
+    "SnapshotData": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "description": "Short name",
+          "type": "string"
+        },
+        "spec": {
+          "description": "Specification",
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "spec"
+      ],
+      "type": "object"
+    },
+    "WebFeaturesData": {
+      "additionalProperties": false,
+      "properties": {
+        "features": {
+          "additionalProperties": {
+            "$ref": "#/definitions/FeatureData"
+          },
+          "description": "Feature identifiers and data",
+          "type": "object"
+        },
+        "groups": {
+          "additionalProperties": {
+            "$ref": "#/definitions/GroupData"
+          },
+          "description": "Group identifiers and data",
+          "type": "object"
+        },
+        "snapshots": {
+          "additionalProperties": {
+            "$ref": "#/definitions/SnapshotData"
+          },
+          "description": "Snapshot identifiers and data",
+          "type": "object"
+        }
+      },
+      "required": [
+        "features",
+        "groups",
+        "snapshots"
+      ],
+      "type": "object"
+    }
+  }
+}
