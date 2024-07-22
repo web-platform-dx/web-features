@@ -11,9 +11,10 @@ status:
     edge: "12"
     firefox: "1"
     firefox_android: "4"
-    safari: ≤4
-    safari_ios: ≤3.2
+    safari: "1"
+    safari_ios: "1"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -45,7 +46,6 @@ compat_features:
   - api.HTMLButtonElement.type
   - api.HTMLButtonElement.value
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
