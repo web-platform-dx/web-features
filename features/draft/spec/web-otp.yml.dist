@@ -5,10 +5,9 @@ status:
   baseline: false
   support:
     chrome: "93"
-    chrome_android: "84"
+    chrome_android: "88"
     edge: "93"
 compat_features:
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "93"
@@ -18,6 +17,7 @@ compat_features:
   - api.OTPCredential
   - api.OTPCredential.code
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "93"

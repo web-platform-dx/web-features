@@ -1,10 +1,9 @@
-draft_date: 2024-06-05
 name: <object>
-description: The `<object>` element TODO.
-spec:
-  - https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element
-  - https://html.spec.whatwg.org/multipage/obsolete.html#param
-group: html
+description: The `<object>` element represents an external resource such as a PDF or SVG document. It was historically used for plugins such as Shockwave Flash.
+spec: https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element
+group: html-elements
+status:
+  compute_from: html.elements.object
 compat_features:
   - api.HTMLObjectElement
   - api.HTMLObjectElement.contentDocument
