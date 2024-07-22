@@ -6,3 +6,11 @@ status:
   support:
     safari: "17"
     safari_ios: "17.1"
+compat_features:
+  - api.ManagedMediaSource
+  - api.ManagedMediaSource.ManagedMediaSource
+  - api.ManagedMediaSource.endstreaming_event
+  - api.ManagedMediaSource.startstreaming_event
+  - api.ManagedMediaSource.streaming
+  - api.ManagedSourceBuffer
+  - api.ManagedSourceBuffer.bufferedchange_event

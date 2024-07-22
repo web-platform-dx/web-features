@@ -7,3 +7,94 @@ status:
     chrome_android: "93"
     safari: "15"
     safari_ios: "15"
+compat_features:
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "1"
+  #   safari_ios: "1"
+  - api.HTMLMetaElement
+  - api.HTMLMetaElement.content
+  - api.HTMLMetaElement.httpEquiv
+  - api.HTMLMetaElement.name
+  - html.elements.meta
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "3"
+  #   safari_ios: "2"
+  - html.elements.meta.charset
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: ≤4
+  #   safari_ios: ≤3.2
+  - html.elements.meta.content
+  - html.elements.meta.http-equiv
+  - html.elements.meta.http-equiv.refresh
+  - html.elements.meta.name
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "17"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: "36"
+  #   firefox_android: "36"
+  #   safari: "11.1"
+  #   safari_ios: "12"
+  - html.elements.meta.name.referrer
+
+  # baseline: high
+  # baseline_low_date: 2022-01-11
+  # baseline_high_date: 2024-07-11
+  # support:
+  #   chrome: "81"
+  #   chrome_android: "81"
+  #   edge: "81"
+  #   firefox: "96"
+  #   firefox_android: "96"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - html.elements.meta.name.color-scheme
+
+  # baseline: low
+  # baseline_low_date: 2022-10-18
+  # support:
+  #   chrome: "93"
+  #   chrome_android: "93"
+  #   edge: "93"
+  #   firefox: "106"
+  #   firefox_android: "106"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - api.HTMLMetaElement.media
+
+  # baseline: false
+  # support:
+  #   chrome_android: "80"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - html.elements.meta.name.theme-color

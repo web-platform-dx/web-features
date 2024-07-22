@@ -1,4 +1,11 @@
-/** Web platform feature */
+export interface WebFeaturesData {
+    /** Feature identifiers and data */
+    features: { [key: string]: FeatureData };
+    /** Group identifiers and data */
+    groups: { [key: string]: GroupData };
+    /** Snapshot identifiers and data */
+    snapshots: { [key: string]: SnapshotData };
+}
 
 export interface FeatureData {
     /** Short name */
@@ -7,18 +14,18 @@ export interface FeatureData {
     description: string;
     /** Short description of the feature, as an HTML string */
     description_html: string;
-    /** Alias identifier */
-    alias?: string | [string, string, ...string[]];
     /** Specification */
     spec: specification_url | [specification_url, specification_url, ...specification_url[]];
+    /** Group identifier */
+    group?: string | [string, string, ...string[]];
+    /** Snapshot identifier */
+    snapshot?: string | [string, string, ...string[]];
     /** caniuse.com identifier */
     caniuse?: string | [string, string, ...string[]];
     /** Whether a feature is considered a "baseline" web platform feature and when it achieved that status */
     status: SupportStatus;
     /** Sources of support data for this feature */
     compat_features?: string[];
-    /** Usage stats */
-    usage_stats?: usage_stats_url | [usage_stats_url, usage_stats_url, ...usage_stats_url[]]; // A single URL or an array of two or more
 }
 
 type browserIdentifier = "chrome" | "chrome_android" | "edge" | "firefox" | "firefox_android" | "safari" | "safari_ios";
@@ -43,7 +50,16 @@ interface SupportStatus {
 */
 type specification_url = string;
 
-/** Usage stats URL
- * @format uri
-*/
-type usage_stats_url = string;
+export interface GroupData {
+    /** Short name */
+    name: string;
+    /** Identifier of parent group */
+    parent?: string;
+}
+
+export interface SnapshotData {
+    /** Short name */
+    name: string;
+    /** Specification */
+    spec: specification_url;
+}

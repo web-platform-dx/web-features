@@ -12,3 +12,87 @@ status:
     firefox_android: "119"
     safari: "12.1"
     safari_ios: "12.2"
+compat_features:
+  # baseline: low
+  # baseline_low_date: 2023-10-24
+  # support:
+  #   chrome: "81"
+  #   chrome_android: "81"
+  #   edge: "81"
+  #   firefox: "119"
+  #   firefox_android: "119"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - api.Element.ariaAtomic
+  - api.Element.ariaAutoComplete
+  - api.Element.ariaBusy
+  - api.Element.ariaChecked
+  - api.Element.ariaColCount
+  - api.Element.ariaColIndex
+  - api.Element.ariaColSpan
+  - api.Element.ariaCurrent
+  - api.Element.ariaDisabled
+  - api.Element.ariaExpanded
+  - api.Element.ariaHasPopup
+  - api.Element.ariaHidden
+  - api.Element.ariaKeyShortcuts
+  - api.Element.ariaLabel
+  - api.Element.ariaLevel
+  - api.Element.ariaLive
+  - api.Element.ariaModal
+  - api.Element.ariaMultiLine
+  - api.Element.ariaMultiSelectable
+  - api.Element.ariaOrientation
+  - api.Element.ariaPlaceholder
+  - api.Element.ariaPosInSet
+  - api.Element.ariaPressed
+  - api.Element.ariaReadOnly
+  - api.Element.ariaRelevant
+  - api.Element.ariaRequired
+  - api.Element.ariaRoleDescription
+  - api.Element.ariaRowCount
+  - api.Element.ariaRowIndex
+  - api.Element.ariaRowSpan
+  - api.Element.ariaSelected
+  - api.Element.ariaSort
+  - api.Element.ariaValueMax
+  - api.Element.ariaValueMin
+  - api.Element.ariaValueNow
+  - api.Element.ariaValueText
+
+  # baseline: low
+  # baseline_low_date: 2023-10-24
+  # support:
+  #   chrome: "84"
+  #   chrome_android: "84"
+  #   edge: "84"
+  #   firefox: "119"
+  #   firefox_android: "119"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - api.Element.ariaSetSize
+
+  # baseline: low
+  # baseline_low_date: 2023-10-24
+  # support:
+  #   chrome: "102"
+  #   chrome_android: "102"
+  #   edge: "102"
+  #   firefox: "119"
+  #   firefox_android: "119"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - api.Element.ariaInvalid
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2023-10-24
+  # support:
+  #   chrome: "103"
+  #   chrome_android: "103"
+  #   edge: "103"
+  #   firefox: "119"
+  #   firefox_android: "119"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - api.Element.role

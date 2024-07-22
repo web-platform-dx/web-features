@@ -1,19 +1,34 @@
 import { Temporal } from "@js-temporal/polyfill";
 import { BASELINE_LOW_TO_HIGH_DURATION } from "./index.js";
 
-type LowDate = Temporal.PlainDate | string;
-
-export function isFuture(date: Temporal.PlainDate): boolean {
-  return Temporal.PlainDate.compare(Temporal.Now.plainDateISO(), date) < 0;
-}
-
-export function toHighDate(lowDate: LowDate): Temporal.PlainDate {
-  const startDate =
-    typeof lowDate === "string" ? Temporal.PlainDate.from(lowDate) : lowDate;
-
+export function toHighDate(
+  lowDate: Parameters<typeof Temporal.PlainDate.from>[0],
+): Temporal.PlainDate {
+  const startDate = Temporal.PlainDate.from(lowDate);
   return startDate.add(BASELINE_LOW_TO_HIGH_DURATION);
 }
 
-export function toDateString(date: Temporal.PlainDate): string {
-  return date.toString().slice(0, 10);
+/**
+ * Format a `Temporal.PlainDate` as a string, with a ≤ range specifier as
+ * needed.
+ */
+export function toRangedDateString(
+  date: Temporal.PlainDate,
+  ranged?: boolean,
+): string {
+  return `${ranged ? "≤" : ""}${date.toString().slice(0, 10)}`;
+}
+
+/**
+ * Parse a potentially ranged date string (e.g., "≤2024-01-01") to a
+ * `Temporal.PlainDate` and a boolean value for ranged or unranged.
+ */
+export function parseRangedDateString(
+  dateSpec: string,
+): [date: Temporal.PlainDate, ranged: boolean] {
+  const ranged = dateSpec.startsWith("≤");
+  return [
+    Temporal.PlainDate.from(ranged ? dateSpec.slice(1) : dateSpec),
+    ranged,
+  ];
 }

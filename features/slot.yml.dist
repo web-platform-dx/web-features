@@ -13,3 +13,76 @@ status:
     firefox_android: "63"
     safari: "10"
     safari_ios: "10"
+compat_features:
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "50"
+  #   chrome_android: "50"
+  #   edge: "79"
+  #   firefox: "63"
+  #   firefox_android: "63"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - css.selectors.slotted
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "53"
+  #   chrome_android: "53"
+  #   edge: "79"
+  #   firefox: "63"
+  #   firefox_android: "63"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - api.Element.assignedSlot
+  - api.Element.slot
+  - api.HTMLSlotElement
+  - api.HTMLSlotElement.assignedNodes
+  - api.HTMLSlotElement.name
+  - api.Text.assignedSlot
+  - html.elements.slot
+  - html.elements.slot.name
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "53"
+  #   chrome_android: "53"
+  #   edge: "79"
+  #   firefox: "63"
+  #   firefox_android: "63"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.HTMLSlotElement.slotchange_event
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "65"
+  #   chrome_android: "65"
+  #   edge: "79"
+  #   firefox: "66"
+  #   firefox_android: "66"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - api.HTMLSlotElement.assignedElements
+
+  # baseline: high
+  # baseline_low_date: ≤2020-01-15
+  # baseline_high_date: ≤2022-07-15
+  # support:
+  #   chrome: "53"
+  #   chrome_android: "53"
+  #   edge: ≤79
+  #   firefox: "63"
+  #   firefox_android: "63"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - html.global_attributes.slot

@@ -2,17 +2,8 @@ name: WebTransport
 description: The `WebTransport` API transmits data between a client and a server, by using the HTTP/3 protocol.
 spec: https://w3c.github.io/webtransport/
 caniuse: webtransport
-usage_stats: https://chromestatus.com/metrics/feature/timeline/popularity/3472
-# Status override because createUnidirectionalStream() is marked as partial
-# implementation in Firefox in BCD.
 status:
-  baseline: false
-  support:
-    chrome: "97"
-    chrome_android: "97"
-    edge: "97"
-    firefox: "114"
-    firefox_android: "114"
+  compute_from: api.WebTransport.WebTransport
 # BYOB reader support arrived later than the rest
 # - api.WebTransport.byob_readers
 # - api.WebTransport.createUnidirectionalStream.byob_readers

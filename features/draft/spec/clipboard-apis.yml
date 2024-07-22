@@ -1,0 +1,32 @@
+draft_date: 2024-07-11
+name: Clipboard API and events
+description: TODO
+spec: https://w3c.github.io/clipboard-apis/
+compat_features:
+  - api.Clipboard.read
+  - api.Clipboard.readText
+  - api.ClipboardEvent
+  - api.ClipboardEvent.ClipboardEvent
+  - api.ClipboardEvent.clipboardData
+  - api.ClipboardItem.type_image_svg_xml
+  - api.ClipboardItem.type_web
+  - api.Element.copy_event
+  - api.Element.cut_event
+  - api.Element.paste_event
+  - api.Permissions.permission_clipboard-write
+
+# The following features in the spec are already part of web-features:
+# - Async clipboard:
+#   - api.Clipboard
+#   - api.Clipboard.write
+#   - api.Clipboard.writeText
+#   - api.ClipboardItem
+#   - api.ClipboardItem.ClipboardItem
+#   - api.ClipboardItem.getType
+#   - api.ClipboardItem.presentationStyle
+#   - api.ClipboardItem.types
+#   - api.Navigator.clipboard
+# - Read unsanitized clipboard data:
+#   - api.Clipboard.read.formats_unsanitized_parameter
+# - ClipboardItem.supports():
+#   - api.ClipboardItem.supports_static

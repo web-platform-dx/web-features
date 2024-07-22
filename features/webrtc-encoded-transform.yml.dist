@@ -8,3 +8,44 @@ status:
     firefox_android: "117"
     safari: "15.4"
     safari_ios: "15.4"
+compat_features:
+  # baseline: low
+  # baseline_low_date: 2023-08-29
+  # support:
+  #   chrome: "86"
+  #   chrome_android: "86"
+  #   edge: "86"
+  #   firefox: "117"
+  #   firefox_android: "117"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - api.RTCEncodedAudioFrame
+  - api.RTCEncodedAudioFrame.data
+  - api.RTCEncodedAudioFrame.getMetadata
+  - api.RTCEncodedAudioFrame.timestamp
+  - api.RTCEncodedVideoFrame
+  - api.RTCEncodedVideoFrame.data
+  - api.RTCEncodedVideoFrame.getMetadata
+  - api.RTCEncodedVideoFrame.timestamp
+  - api.RTCEncodedVideoFrame.type
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   firefox: "117"
+  #   firefox_android: "117"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - api.DedicatedWorkerGlobalScope.rtctransform_event
+  - api.RTCRtpReceiver.transform
+  - api.RTCRtpScriptTransform
+  - api.RTCRtpScriptTransform.RTCRtpScriptTransform
+  - api.RTCRtpScriptTransformer
+  - api.RTCRtpScriptTransformer.generateKeyFrame
+  - api.RTCRtpScriptTransformer.options
+  - api.RTCRtpScriptTransformer.readable
+  - api.RTCRtpScriptTransformer.sendKeyFrameRequest
+  - api.RTCRtpScriptTransformer.writable
+  - api.RTCRtpSender.transform
+  - api.RTCTransformEvent
+  - api.RTCTransformEvent.transformer

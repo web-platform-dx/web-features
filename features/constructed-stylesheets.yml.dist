@@ -12,3 +12,28 @@ status:
     firefox_android: "101"
     safari: "16.4"
     safari_ios: "16.4"
+compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "73"
+  #   chrome_android: "73"
+  #   edge: "79"
+  #   firefox: "101"
+  #   firefox_android: "101"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.CSSStyleSheet.CSSStyleSheet
+  - api.CSSStyleSheet.replace
+  - api.CSSStyleSheet.replaceSync
+  - api.Document.adoptedStyleSheets
+  - api.ShadowRoot.adoptedStyleSheets
+
+  # baseline: false
+  # support:
+  #   firefox: "101"
+  #   firefox_android: "101"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.CSSStyleSheet.CSSStyleSheet.options_baseURL_parameter

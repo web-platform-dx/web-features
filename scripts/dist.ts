@@ -1,14 +1,21 @@
-import { computeBaseline, setLogger } from "compute-baseline";
+import { Temporal } from "@js-temporal/polyfill";
+import {
+  computeBaseline,
+  getStatus,
+  parseRangedDateString,
+  setLogger,
+} from "compute-baseline";
 import { Compat, Feature } from "compute-baseline/browser-compat-data";
-import assert from "node:assert/strict";
+import { fdir } from "fdir";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { isDeepStrictEqual } from "node:util";
 import winston from "winston";
-import YAML, { Document } from "yaml";
+import YAML, { Document, Scalar, YAMLSeq } from "yaml";
 import yargs from "yargs";
-import { fdir } from "fdir";
+
+const compat = new Compat();
 
 const argv = yargs(process.argv.slice(2))
   .scriptName("dist")
@@ -62,8 +69,81 @@ function updateDistFile(sourcePath: string, distPath: string): void {
  */
 function checkDistFile(sourcePath: string, distPath: string): boolean {
   const expected = toDist(sourcePath).toString({ lineWidth: 0 });
-  const actual = fs.readFileSync(distPath, { encoding: "utf-8" });
-  return actual === expected;
+  try {
+    const actual = fs.readFileSync(distPath, { encoding: "utf-8" });
+    return actual === expected;
+  } catch {
+    return false;
+  }
+}
+
+type SupportStatus = ReturnType<typeof getStatus>;
+
+/**
+ * Compare two status objects for sorting.
+ *
+ * @returns -1, 0 or 1.
+ */
+function compareStatus(a: SupportStatus, b: SupportStatus) {
+  // First sort by Baseline status/date, oldest Base features first, and
+  // non-Baseline features last.
+
+  if (a.baseline_low_date !== b.baseline_low_date) {
+    if (!a.baseline_low_date) {
+      return 1;
+    }
+    if (!b.baseline_low_date) {
+      return -1;
+    }
+
+    const [aLowDate, aLowRanged] = parseRangedDateString(a.baseline_low_date);
+    const [bLowDate, bLowRanged] = parseRangedDateString(b.baseline_low_date);
+
+    // Older dates first
+    if (Temporal.PlainDate.compare(aLowDate, bLowDate) !== 0) {
+      return Temporal.PlainDate.compare(aLowDate, bLowDate);
+    }
+
+    // If dates are equal, then unranged values go first
+    if (!aLowRanged && bLowRanged) {
+      return -1;
+    }
+    if (!bLowRanged && aLowRanged) {
+      return 1;
+    }
+  }
+
+  // Next sort by number of supporting browsers.
+  const aBrowsers = Object.keys(a.support).length;
+  const bBrowsers = Object.keys(b.support).length;
+  if (aBrowsers !== bBrowsers) {
+    return bBrowsers - aBrowsers;
+  }
+  // Finally sort by the version numbers.
+  const aVersions = Object.values(a.support);
+  const bVersions = Object.values(b.support);
+  for (let i = 0; i < aVersions.length; i++) {
+    if (aVersions[i] !== bVersions[i]) {
+      const [aRanged, aVersion] = aVersions[i].startsWith("≤")
+        ? [true, aVersions[i].slice(1)]
+        : [false, aVersions[i]];
+      const [bRanged, bVersion] = bVersions[i].startsWith("≤")
+        ? [true, bVersions[i].slice(1)]
+        : [false, bVersions[i]];
+
+      if (aVersion !== bVersion) {
+        if (!aRanged && bRanged) {
+          return -1;
+        }
+        if (!bRanged && aRanged) {
+          return 1;
+        }
+      }
+
+      return Number(aVersion) - Number(bVersion);
+    }
+  }
+  return 0;
 }
 
 /**
@@ -92,10 +172,28 @@ function toDist(sourcePath: string): YAML.Document {
     }
   }
 
+  const compatFeatures = source.compat_features ?? taggedCompatFeatures;
+  let computeFrom = compatFeatures;
+
+  if (source.status?.compute_from) {
+    const compute_from = source.status.compute_from;
+    const keys = Array.isArray(compute_from) ? compute_from : [compute_from];
+    for (const key of keys) {
+      if (!compatFeatures.includes(key)) {
+        throw new Error(
+          `${id}: compute_from key ${key} is not among the feature's compat keys`,
+        );
+      }
+    }
+
+    computeFrom = keys;
+    delete source.status;
+  }
+
   // Compute the status. A `status` block in the source takes precedence, but
   // can be removed if it matches the computed status.
   let computedStatus = computeBaseline({
-    compatKeys: source.compat_features ?? taggedCompatFeatures,
+    compatKeys: computeFrom,
     checkAncestors: false,
   });
 
@@ -115,6 +213,34 @@ function toDist(sourcePath: string): YAML.Document {
     }
   }
 
+  // Map between status object and BCD keys with that computed status.
+  const groups = new Map<SupportStatus, string[]>();
+  for (const key of compatFeatures) {
+    const status = getStatus(id, key);
+    let added = false;
+    for (const [existingKey, list] of groups.entries()) {
+      if (isDeepStrictEqual(status, existingKey)) {
+        list.push(key);
+        added = true;
+        break;
+      }
+    }
+    if (!added) {
+      groups.set(status, [key]);
+    }
+  }
+
+  const sortedStatus = Array.from(groups.keys()).sort(compareStatus);
+
+  const sortedGroups = new Map<string, string[]>();
+  for (const status of sortedStatus) {
+    let comment = YAML.stringify(status);
+    if (isDeepStrictEqual(status, source.status ?? computedStatus)) {
+      comment = `⬇️ Same status as overall feature ⬇️\n${comment}`;
+    }
+    sortedGroups.set(comment, groups.get(status));
+  }
+
   // Assemble and return the dist YAML.
   const dist = new Document({});
 
@@ -129,14 +255,42 @@ function toDist(sourcePath: string): YAML.Document {
     dist.set("status", computedStatus);
   }
 
-  if (!source.compat_features) {
-    dist.set("compat_features", taggedCompatFeatures);
+  if (groups.size) {
+    insertCompatFeatures(dist, sortedGroups);
   }
 
   return dist;
 }
 
-const compat = new Compat();
+function insertCompatFeatures(yaml: Document, groups: Map<string, string[]>) {
+  if (groups.size === 1) {
+    // Add no comments when there's a single group.
+    yaml.set("compat_features", groups.values().next().value);
+    return;
+  }
+
+  const list = new YAMLSeq<Scalar<string>>();
+  for (const [comment, keys] of groups.entries()) {
+    let first = true;
+    for (const key of keys) {
+      const item = new Scalar(key);
+      if (first) {
+        item.commentBefore = comment
+          .trim()
+          .split("\n")
+          .map((line) => ` ${line}`)
+          .join("\n");
+        first = false;
+      }
+      list.add(item);
+    }
+    // Blank line between each group.
+    list.items.at(-1).comment = "\n";
+  }
+  // Avoid trailing blank line.
+  list.items.at(-1).comment = "";
+  yaml.set("compat_features", list);
+}
 
 const tagsToFeatures: Map<string, Feature[]> = (() => {
   // TODO: Use Map.groupBy() instead, when it's available
@@ -157,11 +311,9 @@ const tagsToFeatures: Map<string, Feature[]> = (() => {
 function main() {
   const filePaths = argv.paths.flatMap((fileOrDirectory) => {
     if (fs.statSync(fileOrDirectory).isDirectory()) {
-      // Expand directory to any existing .dist file within.
-      // TODO: Change this to .yml when all features have dist files.
       return new fdir()
         .withBasePath()
-        .filter((fp) => fp.endsWith(".dist"))
+        .filter((fp) => fp.endsWith(".yml"))
         .crawl(fileOrDirectory)
         .sync();
     }

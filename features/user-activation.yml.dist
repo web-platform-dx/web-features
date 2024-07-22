@@ -12,3 +12,8 @@ status:
     firefox_android: "120"
     safari: "16.4"
     safari_ios: "16.4"
+compat_features:
+  - api.Navigator.userActivation
+  - api.UserActivation
+  - api.UserActivation.hasBeenActive
+  - api.UserActivation.isActive

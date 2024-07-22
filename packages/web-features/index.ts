@@ -1,11 +1,11 @@
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
-import { FeatureData } from "./types";
+import { WebFeaturesData } from "./types";
 
-const jsonPath = fileURLToPath(new URL("./index.json", import.meta.url));
-const features = JSON.parse(readFileSync(jsonPath, { encoding: "utf-8" })) as {
-  [id: string]: FeatureData;
-};
+const jsonPath = fileURLToPath(new URL("./data.json", import.meta.url));
+const { features, groups, snapshots } = JSON.parse(
+  readFileSync(jsonPath, { encoding: "utf-8" }),
+) as WebFeaturesData;
 
-export default features;
+export { features, groups, snapshots };

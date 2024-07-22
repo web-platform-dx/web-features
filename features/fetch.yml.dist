@@ -13,3 +13,63 @@ status:
     firefox_android: "39"
     safari: "10.1"
     safari_ios: "10.3"
+compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2017-03-27
+  # baseline_high_date: 2019-09-27
+  # support:
+  #   chrome: "42"
+  #   chrome_android: "42"
+  #   edge: "14"
+  #   firefox: "39"
+  #   firefox_android: "39"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.Headers
+  - api.Headers.Headers
+  - api.Headers.append
+  - api.Headers.delete
+  - api.Headers.get
+  - api.Headers.has
+  - api.Headers.set
+  - api.Request
+  - api.Request.Request
+  - api.Request.arrayBuffer
+  - api.Request.blob
+  - api.Request.bodyUsed
+  - api.Request.clone
+  - api.Request.credentials
+  - api.Request.headers
+  - api.Request.json
+  - api.Request.method
+  - api.Request.mode
+  - api.Request.text
+  - api.Request.url
+  - api.Response
+  - api.Response.Response
+  - api.Response.arrayBuffer
+  - api.Response.blob
+  - api.Response.bodyUsed
+  - api.Response.clone
+  - api.Response.headers
+  - api.Response.json
+  - api.Response.ok
+  - api.Response.status
+  - api.Response.statusText
+  - api.Response.text
+  - api.Response.type
+  - api.Response.url
+  - api.fetch
+
+  # baseline: low
+  # baseline_low_date: 2023-09-18
+  # support:
+  #   chrome: "105"
+  #   chrome_android: "105"
+  #   edge: "105"
+  #   firefox: "115"
+  #   firefox_android: "115"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - api.Response.json_static

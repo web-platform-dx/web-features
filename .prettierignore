@@ -3,6 +3,9 @@
 
 # Opt-ins
 !GOVERNANCE.md
+!eslint.config.js
+
+!/docs/publishing.md
 
 !/features/*.yml
 /features/*.yml.dist
@@ -10,7 +13,9 @@
 !/packages/compute-baseline/**
 !/packages/web-features/**
 
+!/scripts/build.ts
 !/scripts/dist.ts
 !/scripts/feature-init.ts
 !/scripts/find-troublesome-ancestors.ts
 !/scripts/release.ts
+!/scripts/update-drafts.ts

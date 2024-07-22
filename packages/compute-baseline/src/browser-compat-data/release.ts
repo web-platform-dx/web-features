@@ -36,12 +36,25 @@ export class Release {
 
   compare(otherRelease: Release) {
     if (otherRelease.browser !== this.browser) {
-      throw Error(
+      throw new Error(
         `Cannot compare releases of differing browsers (${this.browser} versus ${otherRelease.browser})`,
       );
     }
 
     return this.releaseIndex - otherRelease.releaseIndex;
+  }
+
+  /**
+   * Check if this release is the same as or after a starting release and,
+   * optionally, before an ending release.
+   */
+  inRange(start: Release, end?: Release): boolean {
+    const onOrAfterStart = this.compare(start) >= 0;
+    if (end) {
+      const beforeEnd = this.compare(end) < 0;
+      return onOrAfterStart && beforeEnd;
+    }
+    return onOrAfterStart;
   }
 
   isPrerelease(): boolean {

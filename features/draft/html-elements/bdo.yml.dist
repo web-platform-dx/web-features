@@ -6,10 +6,12 @@ status:
   baseline_low_date: 2015-07-29
   baseline_high_date: 2018-01-29
   support:
-    chrome: "15"
+    chrome: ≤15
     chrome_android: "18"
     edge: "12"
     firefox: "10"
     firefox_android: "10"
-    safari: "4"
-    safari_ios: "3.2"
+    safari: ≤4
+    safari_ios: ≤3.2
+compat_features:
+  - html.elements.bdo
