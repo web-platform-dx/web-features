@@ -1,0 +1,13 @@
+name: captureStream() for <canvas>
+description: The `captureStream()` method for `<canvas>` elements TODO.
+spec: https://w3c.github.io/mediacapture-fromelement/#html-canvas-element-media-capture-extensions
+group: canvas
+# TODO: Add notes about captureStream() being supported in Firefox, but not
+# CanvasCaptureMediaStreamTrack. Instead there's CanvasCaptureMediaStream, so it
+# would be possible to write code that works in Firefox. See
+# https://bugzil.la/1231131.
+compat_features:
+  - api.CanvasCaptureMediaStreamTrack
+  - api.CanvasCaptureMediaStreamTrack.canvas
+  - api.CanvasCaptureMediaStreamTrack.requestFrame
+  - api.HTMLCanvasElement.captureStream
