@@ -1,0 +1,7 @@
+name: Size containment
+description: "The `contain: size` CSS declaration sets an element's dimensions exclusively by its `height` and `width` properties, ignoring its contents and descendants. This permits the browser to avoid slower layout calculations."
+spec: https://drafts.csswg.org/css-contain-2/#containment-size
+group: containment
+compat_features:
+  - css.properties.contain
+  - css.properties.contain.size
