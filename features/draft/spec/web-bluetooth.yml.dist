@@ -4,9 +4,7 @@
 status:
   baseline: false
   support:
-    chrome: "114"
     chrome_android: "114"
-    edge: "114"
 compat_features:
   # baseline: false
   # support:
@@ -20,6 +18,7 @@ compat_features:
   #   chrome_android: "92"
   - api.Bluetooth.requestDevice.options_filter_manufacturerData_parameter
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome_android: "114"

@@ -3,8 +3,7 @@
 
 status:
   baseline: false
-  support:
-    safari: "17.2"
+  support: {}
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -205,7 +204,6 @@ compat_features:
   - css.properties.mask-mode.match-source
   - svg.global_attributes.mask
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   safari: "17.2"
@@ -216,6 +214,7 @@ compat_features:
   - css.properties.mask-border-source
   - css.properties.mask-border-width
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - css.types.basic-shape.path.clip-path
