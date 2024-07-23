@@ -3,7 +3,7 @@ import { fileURLToPath } from "node:url";
 
 import { WebFeaturesData } from "./types";
 
-const jsonPath = fileURLToPath(new URL("./index.json", import.meta.url));
+const jsonPath = fileURLToPath(new URL("./data.json", import.meta.url));
 const { features, groups, snapshots } = JSON.parse(
   readFileSync(jsonPath, { encoding: "utf-8" }),
 ) as WebFeaturesData;
