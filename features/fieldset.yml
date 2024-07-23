@@ -1,5 +1,5 @@
 name: <fieldset> and <legend>
-description: The `<fieldset>` and `<legend>` elements are used to group several controls as well as <label>'s within a web form.
+description: The `<fieldset>` and `<legend>` elements group several form control elements within a web form.
 spec:
   - https://html.spec.whatwg.org/multipage/form-elements.html#the-fieldset-element
   - https://html.spec.whatwg.org/multipage/form-elements.html#the-legend-element
@@ -7,7 +7,9 @@ group:
   - forms
   - html-elements
 status:
-  compute_from: html.elements.fieldset
+  compute_from:
+    - html.elements.fieldset
+    - html.elements.legend
 compat_features:
   - api.HTMLFieldSetElement
   - api.HTMLFieldSetElement.disabled
