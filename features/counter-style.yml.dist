@@ -48,12 +48,15 @@ compat_features:
 
   # baseline: false
   # support:
-  #   safari: "17"
-  #   safari_ios: "17"
-  - css.at-rules.counter-style.symbols
-
-  # baseline: false
-  # support:
+  #   chrome: "91"
+  #   chrome_android: "91"
+  #   edge: "91"
   #   firefox: "33"
   #   firefox_android: "33"
   - css.at-rules.counter-style.speak-as
+
+  # baseline: false
+  # support:
+  #   safari: "17"
+  #   safari_ios: "17"
+  - css.at-rules.counter-style.symbols
