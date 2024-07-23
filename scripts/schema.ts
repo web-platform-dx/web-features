@@ -8,19 +8,19 @@ import addFormats from 'ajv-formats';
 
 import * as data from '../index.js';
 
-import defs from '../schemas/defs.schema.json' assert { type: 'json' };
+import schema from '../schemas/data.schema.json' assert { type: 'json' };
 
 let status: 0 | 1 = 0;
 
-function checkDefsConsistency(): void {
-    const defsPath: string = path.join(path.dirname(url.fileURLToPath(import.meta.url)), "../schemas/defs.schema.json");
-    const defsOnDisk: string = fs.readFileSync(defsPath, { encoding: "utf-8"});
-    const defsGenerated: string = child_process.execSync("npm run --silent schema-defs", { encoding: "utf-8"}).trim();
+function checkSchemaConsistency(): void {
+    const schemaPath: string = path.join(path.dirname(url.fileURLToPath(import.meta.url)), "../schemas/data.schema.json");
+    const schemaOnDisk: string = fs.readFileSync(schemaPath, { encoding: "utf-8"});
+    const schemaGenerated: string = child_process.execSync("npm run --silent schema", { encoding: "utf-8"}).trim();
 
-    if (defsOnDisk !== defsGenerated) {
-        console.error("There's a mismatch between the schema defs on disk and types in `index.ts`.");
+    if (schemaOnDisk !== schemaGenerated) {
+        console.error("There's a mismatch between the schema on disk and types in `index.ts`.");
         console.error("This may produce misleading results for feature validation.");
-        console.error("To fix this, run `npm run schema-defs:write`.");
+        console.error("To fix this, run `npm run schema:write`.");
         status = 1;
     }
 }
@@ -29,7 +29,7 @@ function validate() {
     const ajv = new Ajv({allErrors: true});
     addFormats(ajv);
 
-    const validate = ajv.compile(defs);
+    const validate = ajv.compile(schema);
 
     const valid = validate(data);
     if (!valid) {
@@ -40,6 +40,6 @@ function validate() {
     }
 }
 
-checkDefsConsistency();
+checkSchemaConsistency();
 validate();
 process.exit(status);
