@@ -194,7 +194,7 @@ function toDist(sourcePath: string): YAML.Document {
   // can be removed if it matches the computed status.
   let computedStatus = computeBaseline({
     compatKeys: computeFrom,
-    checkAncestors: false,
+    checkAncestors: true,
   });
 
   if (computedStatus.discouraged) {
