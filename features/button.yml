@@ -1,8 +1,11 @@
-draft_date: 2024-06-05
 name: <button>
-description: The `<button>` element TODO.
+description: The `<button>` element is an interactive element activated by a user gesture that performs an action such as submitting a form, or opening a dialog.
 spec: https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element
-group: forms
+group:
+  - forms
+  - html-elements
+status:
+  compute_from: html.elements.button
 compat_features:
   - api.HTMLButtonElement
   - api.HTMLButtonElement.disabled
