@@ -377,6 +377,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "127"
+  #   chrome_android: "127"
+  #   firefox: "3"
+  #   firefox_android: "4"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - svg.global_attributes.font-size-adjust
+
+  # baseline: false
+  # support:
   #   chrome: "87"
   #   chrome_android: "87"
   #   edge: "87"
@@ -385,14 +395,6 @@ compat_features:
   - css.at-rules.font-face.ascent-override
   - css.at-rules.font-face.descent-override
   - css.at-rules.font-face.line-gap-override
-
-  # baseline: false
-  # support:
-  #   firefox: "3"
-  #   firefox_android: "4"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - svg.global_attributes.font-size-adjust
 
   # baseline: false
   # support:
