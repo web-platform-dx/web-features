@@ -1,10 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 
+import { Temporal } from '@js-temporal/polyfill';
 import { fdir } from 'fdir';
 import YAML from 'yaml';
 import { FeatureData, GroupData, SnapshotData } from './types';
-import { Temporal } from '@js-temporal/polyfill';
 
 import { toString as hastTreeToString } from 'hast-util-to-string';
 import rehypeStringify from 'rehype-stringify';
@@ -12,7 +12,7 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
 
-import { BASELINE_LOW_TO_HIGH_DURATION } from 'compute-baseline';
+import { BASELINE_LOW_TO_HIGH_DURATION, parseRangedDateString } from 'compute-baseline';
 
 // The longest name allowed, to allow for compact display.
 const nameMaxLength = 80;
@@ -135,9 +135,10 @@ for (const [key, data] of yamlEntries('features')) {
 
     // Compute Baseline high date from low date.
     if (data.status?.baseline === 'high') {
-        const lowDate = Temporal.PlainDate.from(data.status.baseline_low_date);
+        const [date, ranged] = parseRangedDateString(data.status.baseline_low_date);
+        const lowDate = Temporal.PlainDate.from(date);
         const highDate = lowDate.add(BASELINE_LOW_TO_HIGH_DURATION);
-        data.status.baseline_high_date = String(highDate);
+        data.status.baseline_high_date = ranged ? `≤${highDate}` : String(highDate);
     }
 
     // Ensure name and description are not too long.
