@@ -2,7 +2,9 @@ name: Streams
 description: The streams API creates, composes, and consumes continuously generated data.
 spec: https://streams.spec.whatwg.org/
 caniuse: streams
-group: streams
+group:
+  - streams
+  - transferable
 # TODO: Later support
 # - api.ReadableStreamDefaultController
 # - api.ReadableStreamDefaultController.close

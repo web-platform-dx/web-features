@@ -1,7 +1,9 @@
 name: Offscreen canvas
 description: The `OffscreenCanvas` API provides a canvas that can be drawn to off screen, with no dependencies on the DOM, which can be used to run heavy rendering operations inside a worker context.
 spec: https://html.spec.whatwg.org/multipage/canvas.html#the-offscreencanvas-interface
-group: canvas
+group:
+  - canvas
+  - transferable
 caniuse: offscreencanvas
 compat_features:
   - api.HTMLCanvasElement.transferControlToOffscreen
