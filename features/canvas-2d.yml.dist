@@ -111,6 +111,20 @@ compat_features:
   #   chrome: "2"
   #   chrome_android: "18"
   #   edge: "12"
+  #   firefox: "1.5"
+  #   firefox_android: "31"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - api.TextMetrics
+  - api.TextMetrics.width
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "2"
+  #   chrome_android: "18"
+  #   edge: "12"
   #   firefox: "2"
   #   firefox_android: "4"
   #   safari: "4"
@@ -143,7 +157,27 @@ compat_features:
   #   safari: "4"
   #   safari_ios: "3.2"
   - api.CanvasRenderingContext2D.createImageData
+  - api.CanvasRenderingContext2D.fillText
   - api.CanvasRenderingContext2D.font
+  - api.CanvasRenderingContext2D.measureText
+  - api.CanvasRenderingContext2D.strokeText
+  - api.CanvasRenderingContext2D.textAlign
+  - api.CanvasRenderingContext2D.textBaseline
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "23"
+  #   chrome_android: "25"
+  #   edge: "12"
+  #   firefox: "27"
+  #   firefox_android: "27"
+  #   safari: "7"
+  #   safari_ios: "7"
+  - api.CanvasRenderingContext2D.getLineDash
+  - api.CanvasRenderingContext2D.lineDashOffset
+  - api.CanvasRenderingContext2D.setLineDash
 
   # baseline: high
   # baseline_low_date: 2016-08-02
@@ -170,6 +204,19 @@ compat_features:
   #   safari: "8"
   #   safari_ios: "8"
   - api.CanvasRenderingContext2D.drawFocusIfNeeded
+
+  # baseline: high
+  # baseline_low_date: 2017-04-05
+  # baseline_high_date: 2019-10-05
+  # support:
+  #   chrome: "30"
+  #   chrome_android: "30"
+  #   edge: "15"
+  #   firefox: "51"
+  #   firefox_android: "51"
+  #   safari: "9.1"
+  #   safari_ios: "9.3"
+  - api.CanvasRenderingContext2D.imageSmoothingEnabled
 
   # baseline: high
   # baseline_low_date: 2020-01-15

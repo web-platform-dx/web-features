@@ -32,17 +32,17 @@ compat_features:
   # - api.CanvasRenderingContext2D.fontVariantCaps
   # - api.CanvasRenderingContext2D.getContextAttributes
   - api.CanvasRenderingContext2D.getImageData
-  # - api.CanvasRenderingContext2D.getLineDash
+  - api.CanvasRenderingContext2D.getLineDash
   - api.CanvasRenderingContext2D.getTransform
   - api.CanvasRenderingContext2D.globalAlpha
   - api.CanvasRenderingContext2D.globalCompositeOperation
-  # - api.CanvasRenderingContext2D.imageSmoothingEnabled
+  - api.CanvasRenderingContext2D.imageSmoothingEnabled
   # - api.CanvasRenderingContext2D.imageSmoothingQuality
   - api.CanvasRenderingContext2D.isPointInPath
   - api.CanvasRenderingContext2D.isPointInStroke
   # - api.CanvasRenderingContext2D.letterSpacing
   - api.CanvasRenderingContext2D.lineCap
-  # - api.CanvasRenderingContext2D.lineDashOffset
+  - api.CanvasRenderingContext2D.lineDashOffset
   - api.CanvasRenderingContext2D.lineJoin
   - api.CanvasRenderingContext2D.lineTo
   - api.CanvasRenderingContext2D.lineWidth
@@ -56,7 +56,7 @@ compat_features:
   - api.CanvasRenderingContext2D.rotate
   - api.CanvasRenderingContext2D.save
   - api.CanvasRenderingContext2D.scale
-  # - api.CanvasRenderingContext2D.setLineDash
+  - api.CanvasRenderingContext2D.setLineDash
   - api.CanvasRenderingContext2D.setTransform
   - api.CanvasRenderingContext2D.shadowBlur
   - api.CanvasRenderingContext2D.shadowColor
@@ -73,3 +73,10 @@ compat_features:
   # - api.HTMLCanvasElement.getContext.2d_context.options_colorSpace_parameter
   # - api.HTMLCanvasElement.getContext.2d_context.options_desynchronized_parameter
   # - api.HTMLCanvasElement.getContext.2d_context.options_willReadFrequently_parameter
+  - api.TextMetrics
+  - api.TextMetrics.width
+  - api.CanvasRenderingContext2D.fillText
+  - api.CanvasRenderingContext2D.measureText
+  - api.CanvasRenderingContext2D.strokeText
+  - api.CanvasRenderingContext2D.textAlign
+  - api.CanvasRenderingContext2D.textBaseline
