@@ -1,6 +1,13 @@
-name: Canvas 2D font rendering
-description: TODO.
-spec: https://html.spec.whatwg.org/multipage/canvas.html#2dcontext
+name: Canvas 2D advanced font rendering
+description: Canvas 2D font rendering properties for direction, kerning, spacing, and more.
+spec:
+  - https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-direction-dev
+  - https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-fontkerning
+  - https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-fontstretch
+  - https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-fontvariantcaps
+  - https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-letterspacing
+  - https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-textrendering
+  - https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-wordspacing
 group: canvas
 compat_features:
   - api.CanvasRenderingContext2D.direction

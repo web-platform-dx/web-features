@@ -1,6 +1,6 @@
-name: Canvas 2D context desynchronized
+name: Canvas 2D `desynchronized` parameter
 description: Reduces latency by desynchronizing the canvas paint cycle from the event loop.
-spec: https://html.spec.whatwg.org/multipage/canvas.html#2dcontext
+spec: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-desynchronized
 group: canvas
 compat_features:
   - api.HTMLCanvasElement.getContext.2d_context.options_desynchronized_parameter

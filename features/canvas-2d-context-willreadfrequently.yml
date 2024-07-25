@@ -1,6 +1,6 @@
-name: Canvas 2D context will read frequently
-description: TODO.
-spec: https://html.spec.whatwg.org/multipage/canvas.html#2dcontext
+name: Canvas 2D `willReadFrequently` parameter
+description: Switches to software acceleration to improves performance when calling getImageData() frequently.
+spec: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently
 group: canvas
 compat_features:
   - api.HTMLCanvasElement.getContext.2d_context.options_willReadFrequently_parameter
