@@ -708,17 +708,11 @@ compat_features:
   - api.AudioParam.exponentialRampToValueAtTime
   - api.AudioParam.linearRampToValueAtTime
 
-  # last_introduced_date: 2021-04-26
-  # baseline: false
-  # support:
-  #   firefox: "68"
-  #   firefox_android: "68"
-  - api.AudioContext.createMediaStreamTrackSource
-
   # last_introduced_date: 2019-07-09
   # baseline: false
   # support:
   #   firefox: "68"
   #   firefox_android: "68"
+  - api.AudioContext.createMediaStreamTrackSource
   - api.MediaStreamTrackAudioSourceNode
   - api.MediaStreamTrackAudioSourceNode.MediaStreamTrackAudioSourceNode

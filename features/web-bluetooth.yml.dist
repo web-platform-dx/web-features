@@ -7,19 +7,8 @@ compat_features:
   # support:
   #   chrome_android: "56"
   - api.Bluetooth
-  - api.BluetoothCharacteristicProperties
-  - api.BluetoothDevice
-  - api.BluetoothRemoteGATTCharacteristic
-  - api.BluetoothRemoteGATTServer
-  - api.BluetoothRemoteGATTService
-  - api.BluetoothUUID
-  - api.Navigator.bluetooth
-
-  # last_introduced_date: 2020-01-15
-  # baseline: false
-  # support:
-  #   chrome_android: "56"
   - api.Bluetooth.requestDevice
+  - api.BluetoothCharacteristicProperties
   - api.BluetoothCharacteristicProperties.authenticatedSignedWrites
   - api.BluetoothCharacteristicProperties.broadcast
   - api.BluetoothCharacteristicProperties.indicate
@@ -29,10 +18,12 @@ compat_features:
   - api.BluetoothCharacteristicProperties.writableAuxiliaries
   - api.BluetoothCharacteristicProperties.write
   - api.BluetoothCharacteristicProperties.writeWithoutResponse
+  - api.BluetoothDevice
   - api.BluetoothDevice.gatt
   - api.BluetoothDevice.gattserverdisconnected_event
   - api.BluetoothDevice.id
   - api.BluetoothDevice.name
+  - api.BluetoothRemoteGATTCharacteristic
   - api.BluetoothRemoteGATTCharacteristic.characteristicvaluechanged_event
   - api.BluetoothRemoteGATTCharacteristic.properties
   - api.BluetoothRemoteGATTCharacteristic.readValue
@@ -41,54 +32,52 @@ compat_features:
   - api.BluetoothRemoteGATTCharacteristic.stopNotifications
   - api.BluetoothRemoteGATTCharacteristic.uuid
   - api.BluetoothRemoteGATTCharacteristic.value
+  - api.BluetoothRemoteGATTServer
   - api.BluetoothRemoteGATTServer.connect
   - api.BluetoothRemoteGATTServer.connected
   - api.BluetoothRemoteGATTServer.device
   - api.BluetoothRemoteGATTServer.disconnect
   - api.BluetoothRemoteGATTServer.getPrimaryService
   - api.BluetoothRemoteGATTServer.getPrimaryServices
+  - api.BluetoothRemoteGATTService
   - api.BluetoothRemoteGATTService.device
   - api.BluetoothRemoteGATTService.getCharacteristic
   - api.BluetoothRemoteGATTService.getCharacteristics
   - api.BluetoothRemoteGATTService.isPrimary
   - api.BluetoothRemoteGATTService.uuid
+  - api.BluetoothUUID
   - api.BluetoothUUID.canonicalUUID_static
   - api.BluetoothUUID.getCharacteristic_static
   - api.BluetoothUUID.getDescriptor_static
   - api.BluetoothUUID.getService_static
+  - api.Navigator.bluetooth
 
-  # last_introduced_date: 2020-01-15
+  # last_introduced_date: 2017-03-16
   # baseline: false
   # support:
   #   chrome_android: "57"
   - api.BluetoothRemoteGATTCharacteristic.getDescriptor
   - api.BluetoothRemoteGATTCharacteristic.getDescriptors
+  - api.BluetoothRemoteGATTDescriptor
   - api.BluetoothRemoteGATTDescriptor.characteristic
   - api.BluetoothRemoteGATTDescriptor.readValue
   - api.BluetoothRemoteGATTDescriptor.uuid
   - api.BluetoothRemoteGATTDescriptor.value
   - api.BluetoothRemoteGATTDescriptor.writeValue
 
-  # last_introduced_date: 2017-03-16
-  # baseline: false
-  # support:
-  #   chrome_android: "57"
-  - api.BluetoothRemoteGATTDescriptor
-
-  # last_introduced_date: 2020-01-15
+  # last_introduced_date: 2019-10-22
   # baseline: false
   # support:
   #   chrome_android: "78"
   - api.Bluetooth.getAvailability
 
-  # last_introduced_date: 2020-08-27
+  # last_introduced_date: 2020-08-25
   # baseline: false
   # support:
   #   chrome_android: "85"
   - api.BluetoothRemoteGATTCharacteristic.writeValueWithResponse
   - api.BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse
 
-  # last_introduced_date: 2017-02-01
   # baseline: false
   # support: {}
   - api.Bluetooth.getDevices

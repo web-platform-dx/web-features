@@ -451,20 +451,13 @@ compat_features:
   #   safari_ios: "15"
   - api.HTMLCanvasElement.getContext.webgl2_context.options_powerPreference_parameter
 
-  # last_introduced_date: 2021-09-20
-  # baseline: false
-  # support:
-  #   chrome: "81"
-  #   chrome_android: "75"
-  #   edge: "79"
-  - api.HTMLCanvasElement.getContext.webgl2_context.options_desynchronized_parameter
-
   # last_introduced_date: 2020-04-07
   # baseline: false
   # support:
   #   chrome: "81"
   #   chrome_android: "75"
   #   edge: "79"
+  - api.HTMLCanvasElement.getContext.webgl2_context.options_desynchronized_parameter
   - api.HTMLCanvasElement.getContext.webgl_context.options_desynchronized_parameter
 
   # last_introduced_date: 2022-08-05
