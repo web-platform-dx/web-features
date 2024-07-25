@@ -5,6 +5,7 @@ status:
   baseline: false
   support: {}
 compat_features:
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -21,6 +22,7 @@ compat_features:
   - api.UIEvent.detail
   - api.UIEvent.view
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -34,6 +36,7 @@ compat_features:
   #   safari_ios: "1"
   - api.Window.load_event
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -51,6 +54,7 @@ compat_features:
   - api.KeyboardEvent.metaKey
   - api.KeyboardEvent.shiftKey
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -65,6 +69,7 @@ compat_features:
   - api.Element.keydown_event
   - api.Element.keyup_event
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -78,6 +83,7 @@ compat_features:
   #   safari_ios: "2"
   - api.Element.blur_event
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -91,6 +97,7 @@ compat_features:
   #   safari_ios: "1"
   - api.WheelEvent
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -104,6 +111,7 @@ compat_features:
   #   safari_ios: "2"
   - api.Element.focus_event
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -118,6 +126,7 @@ compat_features:
   - api.Window.blur_event
   - api.Window.focus_event
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -134,6 +143,7 @@ compat_features:
   - api.Element.compositionend_event
   - api.Element.compositionstart_event
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -147,6 +157,7 @@ compat_features:
   #   safari_ios: "5"
   - api.Element.compositionupdate_event
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -160,6 +171,7 @@ compat_features:
   #   safari_ios: "7"
   - api.UIEvent.UIEvent
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -174,6 +186,7 @@ compat_features:
   - api.WheelEvent.WheelEvent
   - api.WheelEvent.deltaMode
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -189,6 +202,7 @@ compat_features:
   - api.FocusEvent.FocusEvent
   - api.FocusEvent.relatedTarget
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -202,6 +216,7 @@ compat_features:
   #   safari_ios: "7"
   - api.KeyboardEvent.KeyboardEvent
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -215,6 +230,7 @@ compat_features:
   #   safari_ios: "8"
   - api.KeyboardEvent.location
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -230,6 +246,7 @@ compat_features:
   - api.WheelEvent.deltaY
   - api.WheelEvent.deltaZ
 
+  # last_introduced_date: 2017-03-27
   # baseline: high
   # baseline_low_date: 2017-03-27
   # baseline_high_date: 2019-09-27
@@ -243,6 +260,7 @@ compat_features:
   #   safari_ios: "10.3"
   - api.KeyboardEvent.getModifierState
 
+  # last_introduced_date: 2017-03-27
   # baseline: high
   # baseline_low_date: 2017-03-27
   # baseline_high_date: 2019-09-27
@@ -256,6 +274,7 @@ compat_features:
   #   safari_ios: "10.3"
   - api.KeyboardEvent.key
 
+  # last_introduced_date: 2017-04-19
   # baseline: high
   # baseline_low_date: 2017-04-19
   # baseline_high_date: 2019-10-19
@@ -269,6 +288,7 @@ compat_features:
   #   safari_ios: "7"
   - api.CompositionEvent.CompositionEvent
 
+  # last_introduced_date: 2020-01-15
   # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
@@ -282,6 +302,7 @@ compat_features:
   #   safari_ios: "10.3"
   - api.KeyboardEvent.code
 
+  # last_introduced_date: 2020-01-15
   # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
@@ -295,6 +316,7 @@ compat_features:
   #   safari_ios: "10.3"
   - api.KeyboardEvent.isComposing
 
+  # last_introduced_date: 2021-03-23
   # baseline: high
   # baseline_low_date: 2021-03-23
   # baseline_high_date: 2023-09-23
@@ -308,6 +330,7 @@ compat_features:
   #   safari_ios: "10.3"
   - api.Element.beforeinput_event
 
+  # last_introduced_date: 2015-07-29
   # baseline: false
   # support:
   #   chrome: "1"
@@ -318,6 +341,7 @@ compat_features:
   #   safari: "3"
   - api.Element.contextmenu_event
 
+  # last_introduced_date: 2015-07-29
   # baseline: false
   # support:
   #   chrome: "31"
@@ -328,6 +352,7 @@ compat_features:
   #   safari: "7"
   - api.Element.wheel_event
 
+  # last_introduced_date: 2015-07-29
   # baseline: false
   # support:
   #   chrome: "1"
@@ -339,6 +364,7 @@ compat_features:
   - api.TextEvent.data
   - api.TextEvent.initTextEvent
 
+  # last_introduced_date: 2017-03-27
   # baseline: false
   # support:
   #   edge: "12"
@@ -348,6 +374,7 @@ compat_features:
   #   safari_ios: "10.3"
   - api.KeyboardEvent.repeat
 
+  # last_introduced_date: 2020-01-15
   # baseline: false
   # support:
   #   chrome: "55"
@@ -357,6 +384,7 @@ compat_features:
   #   firefox_android: "53"
   - api.Element.auxclick_event
 
+  # last_introduced_date: 2010-11-22
   # baseline: false
   # support:
   #   safari: "5"

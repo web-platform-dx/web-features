@@ -5,6 +5,7 @@ status:
   baseline: false
   support: {}
 compat_features:
+  # last_introduced_date: 2020-01-15
   # baseline: false
   # support:
   #   chrome: "79"
@@ -101,6 +102,7 @@ compat_features:
   - api.XRWebGLLayer.getViewport
   - api.XRWebGLLayer.ignoreDepthValues
 
+  # last_introduced_date: 2020-05-21
   # baseline: false
   # support:
   #   chrome: "83"
@@ -110,6 +112,7 @@ compat_features:
   - api.XRSession.squeezeend_event
   - api.XRSession.squeezestart_event
 
+  # last_introduced_date: 2020-07-27
   # baseline: false
   # support:
   #   chrome: "84"
@@ -117,6 +120,7 @@ compat_features:
   #   edge: "84"
   - api.XRLayer
 
+  # last_introduced_date: 2021-01-21
   # baseline: false
   # support:
   #   chrome: "88"
@@ -124,6 +128,7 @@ compat_features:
   #   edge: "88"
   - http.headers.Permissions-Policy.xr-spatial-tracking
 
+  # last_introduced_date: 2021-04-15
   # baseline: false
   # support:
   #   chrome: "90"
@@ -132,6 +137,7 @@ compat_features:
   - api.XRView.recommendedViewportScale
   - api.XRView.requestViewportScale
 
+  # last_introduced_date: 2023-03-13
   # baseline: false
   # support:
   #   chrome: "111"

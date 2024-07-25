@@ -44,6 +44,7 @@ type BaselineDate = string | null;
 
 interface SupportDetails {
   compatKey?: string;
+  last_introduced_date: BaselineDate;
   baseline: BaselineStatus;
   baseline_low_date: BaselineDate;
   baseline_high_date: BaselineDate;
@@ -54,6 +55,7 @@ interface SupportDetails {
 
 // TODO: Use a type from `web-features` directly, instead of approximating it here
 interface SupportStatus {
+  last_introduced_date: string;
   baseline: "low" | "high" | false;
   baseline_low_date: string;
   baseline_high_date?: string;
@@ -121,7 +123,25 @@ export function computeBaseline(
   const { baseline, baseline_low_date, baseline_high_date } =
     keystoneDateToStatus(keystoneDate, cutoffDate, discouraged);
 
+  const initalReleases = [...support.values()];
+  let last_introduced_date: BaselineDate;
+  if (initalReleases.length === 0) {
+    last_introduced_date = null;
+  } else {
+    const lastInitial = initalReleases
+      .flatMap((i) => (i && i.release.date ? [i] : []))
+      .sort(compareInitialSupport)
+      .at(-1);
+    last_introduced_date = lastInitial
+      ? toRangedDateString(
+          lastInitial.release.date as Temporal.PlainDate,
+          lastInitial?.ranged,
+        )
+      : null;
+  }
+
   return {
+    last_introduced_date,
     baseline,
     baseline_low_date,
     baseline_high_date,
@@ -249,30 +269,9 @@ function findKeystoneDate(
   if (initialSupports.some((i) => i.release.date === null)) {
     return null;
   }
-  const keystone = initialSupports
-    .sort((i1, i2) => {
-      if (
-        Temporal.PlainDate.compare(
-          i1.release.date as Temporal.PlainDate,
-          i2.release.date as Temporal.PlainDate,
-        ) === 0
-      ) {
-        if (i1.ranged && !i2.ranged) {
-          return -1;
-        }
-        if (!i1.ranged && i2.ranged) {
-          return 1;
-        }
-        return 0;
-      }
-      return Temporal.PlainDate.compare(
-        i1.release.date as Temporal.PlainDate,
-        i2.release.date as Temporal.PlainDate,
-      );
-    })
-    .at(-1) as InitialSupport;
+  const keystone = initialSupports.sort(compareInitialSupport).at(-1);
 
-  if (!keystone.release.date) {
+  if (!keystone?.release.date) {
     return null;
   }
 
@@ -283,7 +282,8 @@ function findKeystoneDate(
 }
 
 function jsonify(status: SupportDetails): string {
-  const { baseline_low_date, baseline_high_date } = status;
+  const { last_introduced_date, baseline_low_date, baseline_high_date } =
+    status;
   const support: Record<string, string> = {};
 
   for (const [browser, initialSupport] of status.support.entries()) {
@@ -295,6 +295,7 @@ function jsonify(status: SupportDetails): string {
   if (status.baseline === "high") {
     return JSON.stringify(
       {
+        last_introduced_date,
         baseline: status.baseline,
         baseline_low_date,
         baseline_high_date,
@@ -308,8 +309,21 @@ function jsonify(status: SupportDetails): string {
   if (status.baseline === "low") {
     return JSON.stringify(
       {
+        last_introduced_date,
         baseline: status.baseline,
         baseline_low_date,
+        support,
+      },
+      undefined,
+      2,
+    );
+  }
+
+  if (last_introduced_date) {
+    return JSON.stringify(
+      {
+        last_introduced_date,
+        baseline: status.baseline,
         support,
       },
       undefined,

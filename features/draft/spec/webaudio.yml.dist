@@ -5,6 +5,7 @@ status:
   baseline: false
   support: {}
 compat_features:
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -71,6 +72,7 @@ compat_features:
   - api.PannerNode.refDistance
   - api.PannerNode.rolloffFactor
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -87,6 +89,7 @@ compat_features:
   - api.WaveShaperNode
   - api.WaveShaperNode.curve
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -100,6 +103,7 @@ compat_features:
   #   safari_ios: "6"
   - api.BiquadFilterNode.getFrequencyResponse
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -113,6 +117,7 @@ compat_features:
   #   safari_ios: "6"
   - api.ConvolverNode.normalize
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -130,6 +135,7 @@ compat_features:
   - api.DynamicsCompressorNode.reduction
   - api.DynamicsCompressorNode.threshold
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -147,6 +153,7 @@ compat_features:
   - api.OscillatorNode.frequency
   - api.OscillatorNode.type
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -166,6 +173,7 @@ compat_features:
   - api.GainNode
   - api.GainNode.gain
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -179,6 +187,7 @@ compat_features:
   #   safari_ios: "7"
   - api.BiquadFilterNode.detune
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -194,6 +203,7 @@ compat_features:
   - api.AudioNode.channelCountMode
   - api.AudioNode.channelInterpretation
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -207,6 +217,7 @@ compat_features:
   #   safari_ios: "6"
   - api.WaveShaperNode.oversample
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -220,6 +231,7 @@ compat_features:
   #   safari_ios: "8"
   - api.OscillatorNode.setPeriodicWave
 
+  # last_introduced_date: 2015-07-29
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -233,6 +245,7 @@ compat_features:
   #   safari_ios: "8"
   - api.PeriodicWave
 
+  # last_introduced_date: 2017-09-19
   # baseline: high
   # baseline_low_date: 2017-09-19
   # baseline_high_date: 2020-03-19
@@ -246,6 +259,7 @@ compat_features:
   #   safari_ios: "11"
   - api.MediaStreamAudioSourceNode
 
+  # last_introduced_date: 2018-10-02
   # baseline: high
   # baseline_low_date: 2018-10-02
   # baseline_high_date: 2021-04-02
@@ -260,6 +274,7 @@ compat_features:
   - api.MediaStreamAudioDestinationNode
   - api.MediaStreamAudioDestinationNode.stream
 
+  # last_introduced_date: 2020-01-15
   # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
@@ -274,6 +289,7 @@ compat_features:
   - api.AudioParam.maxValue
   - api.AudioParam.minValue
 
+  # last_introduced_date: 2020-07-28
   # baseline: high
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
@@ -287,6 +303,7 @@ compat_features:
   #   safari_ios: "6"
   - api.MediaElementAudioSourceNode.mediaElement
 
+  # last_introduced_date: 2020-07-28
   # baseline: high
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
@@ -300,6 +317,7 @@ compat_features:
   #   safari_ios: "11"
   - api.MediaStreamAudioSourceNode.mediaStream
 
+  # last_introduced_date: 2020-09-16
   # baseline: high
   # baseline_low_date: 2020-09-16
   # baseline_high_date: 2023-03-16
@@ -317,6 +335,7 @@ compat_features:
   - api.AudioScheduledSourceNode.stop
   - api.OfflineAudioCompletionEvent.OfflineAudioCompletionEvent
 
+  # last_introduced_date: 2021-04-26
   # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
@@ -330,6 +349,7 @@ compat_features:
   #   safari_ios: "14.5"
   - api.AudioDestinationNode.maxChannelCount
 
+  # last_introduced_date: 2021-04-26
   # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
@@ -350,6 +370,7 @@ compat_features:
   - api.OfflineAudioContext.complete_event
   - api.OfflineAudioContext.startRendering
 
+  # last_introduced_date: 2021-04-26
   # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
@@ -363,6 +384,7 @@ compat_features:
   #   safari_ios: "14.5"
   - api.AnalyserNode.getFloatTimeDomainData
 
+  # last_introduced_date: 2021-04-26
   # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
@@ -376,6 +398,7 @@ compat_features:
   #   safari_ios: "14.5"
   - api.AudioContext.createMediaStreamDestination
 
+  # last_introduced_date: 2021-04-26
   # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
@@ -390,6 +413,7 @@ compat_features:
   - api.StereoPannerNode
   - api.StereoPannerNode.pan
 
+  # last_introduced_date: 2021-04-26
   # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
@@ -404,6 +428,7 @@ compat_features:
   - api.AudioContext.resume
   - api.AudioContext.suspend
 
+  # last_introduced_date: 2021-04-26
   # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
@@ -417,6 +442,7 @@ compat_features:
   #   safari_ios: "14.5"
   - api.AudioContext.close
 
+  # last_introduced_date: 2021-04-26
   # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
@@ -431,6 +457,7 @@ compat_features:
   - api.AudioBuffer.copyFromChannel
   - api.AudioBuffer.copyToChannel
 
+  # last_introduced_date: 2021-04-26
   # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
@@ -444,6 +471,7 @@ compat_features:
   #   safari_ios: "14.5"
   - api.AudioBufferSourceNode.detune
 
+  # last_introduced_date: 2021-04-26
   # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
@@ -458,6 +486,7 @@ compat_features:
   - api.IIRFilterNode
   - api.IIRFilterNode.getFrequencyResponse
 
+  # last_introduced_date: 2021-04-26
   # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
@@ -471,6 +500,7 @@ compat_features:
   #   safari_ios: "14.5"
   - api.OfflineAudioContext.length
 
+  # last_introduced_date: 2021-04-26
   # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
@@ -489,6 +519,7 @@ compat_features:
   - api.PannerNode.positionY
   - api.PannerNode.positionZ
 
+  # last_introduced_date: 2021-04-26
   # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
@@ -519,6 +550,7 @@ compat_features:
   - api.StereoPannerNode.StereoPannerNode
   - api.WaveShaperNode.WaveShaperNode
 
+  # last_introduced_date: 2021-04-26
   # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
@@ -534,6 +566,7 @@ compat_features:
   - api.ConstantSourceNode.ConstantSourceNode
   - api.ConstantSourceNode.offset
 
+  # last_introduced_date: 2021-04-26
   # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
@@ -571,6 +604,7 @@ compat_features:
   - api.BaseAudioContext.state
   - api.BaseAudioContext.statechange_event
 
+  # last_introduced_date: 2021-04-26
   # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
@@ -584,6 +618,7 @@ compat_features:
   #   safari_ios: "14.5"
   - api.MediaStreamAudioDestinationNode.MediaStreamAudioDestinationNode
 
+  # last_introduced_date: 2021-04-26
   # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
@@ -597,6 +632,7 @@ compat_features:
   #   safari_ios: "14.5"
   - api.AudioContext.getOutputTimestamp
 
+  # last_introduced_date: 2021-04-26
   # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
@@ -610,6 +646,7 @@ compat_features:
   #   safari_ios: "14.5"
   - api.AudioContext.baseLatency
 
+  # last_introduced_date: 2021-04-26
   # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
@@ -625,6 +662,7 @@ compat_features:
   - api.AudioWorkletProcessor.AudioWorkletProcessor
   - api.AudioWorkletProcessor.port
 
+  # last_introduced_date: 2021-04-26
   # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
@@ -650,6 +688,7 @@ compat_features:
   - api.AudioWorkletNode.processorerror_event
   - api.BaseAudioContext.audioWorklet
 
+  # last_introduced_date: 2021-04-26
   # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
@@ -663,6 +702,7 @@ compat_features:
   #   safari_ios: "14.5"
   - api.AudioContext.AudioContext.options_sampleRate_parameter
 
+  # last_introduced_date: 2021-04-26
   # baseline: false
   # support:
   #   chrome: "41"
@@ -673,6 +713,7 @@ compat_features:
   - api.OfflineAudioContext.resume
   - api.OfflineAudioContext.suspend
 
+  # last_introduced_date: 2021-04-26
   # baseline: false
   # support:
   #   chrome: "52"
@@ -690,6 +731,7 @@ compat_features:
   - api.AudioListener.upY
   - api.AudioListener.upZ
 
+  # last_introduced_date: 2021-04-26
   # baseline: false
   # support:
   #   chrome: "57"
@@ -699,6 +741,7 @@ compat_features:
   #   safari_ios: "14.5"
   - api.AudioParam.cancelAndHoldAtTime
 
+  # last_introduced_date: 2021-04-26
   # baseline: false
   # support:
   #   chrome: "58"
@@ -708,6 +751,7 @@ compat_features:
   #   safari_ios: "14.5"
   - api.AudioContext.AudioContext.options_latencyHint_parameter
 
+  # last_introduced_date: 2020-09-16
   # baseline: false
   # support:
   #   chrome: "68"
@@ -717,6 +761,7 @@ compat_features:
   #   safari_ios: "14"
   - api.AudioParam.automationRate
 
+  # last_introduced_date: 2022-05-31
   # baseline: false
   # support:
   #   chrome: "102"
@@ -726,6 +771,7 @@ compat_features:
   #   firefox_android: "79"
   - api.AudioContext.outputLatency
 
+  # last_introduced_date: 2015-07-29
   # baseline: false
   # support:
   #   chrome: "14"
@@ -735,6 +781,7 @@ compat_features:
   - api.AudioParam.exponentialRampToValueAtTime
   - api.AudioParam.linearRampToValueAtTime
 
+  # last_introduced_date: 2023-02-09
   # baseline: false
   # support:
   #   chrome: "110"
@@ -747,6 +794,7 @@ compat_features:
   - api.AudioSinkInfo
   - api.AudioSinkInfo.type
 
+  # last_introduced_date: 2019-07-09
   # baseline: false
   # support:
   #   firefox: "68"

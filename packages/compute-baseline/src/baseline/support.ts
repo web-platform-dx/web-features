@@ -1,3 +1,4 @@
+import { Temporal } from "@js-temporal/polyfill";
 import assert from "assert";
 import { Browser } from "../browser-compat-data/browser.js";
 import { Feature } from "../browser-compat-data/feature.js";
@@ -67,7 +68,43 @@ export function compareInitialSupport(
   i1: InitialSupport,
   i2: InitialSupport,
 ): number {
-  if (i1.release.compare(i2.release) === 0) {
+  // If they're the same browser, compare them by release order and rangeyness
+  if (i1.release.browser === i2.release.browser) {
+    if (i1.release.compare(i2.release) === 0) {
+      if (i1.ranged && !i2.ranged) {
+        return -1;
+      }
+      if (!i1.ranged && i2.ranged) {
+        return 1;
+      }
+      return 0;
+    }
+    return i1.release.compare(i2.release);
+  }
+
+  // If they're different browsers, check if they have a release date. If not,
+  // no release date comes after releases with dates.
+  if (i1.release.date === null) {
+    if (i2.release.date !== null) {
+      return 1;
+    }
+    if (i2.release.date === null) {
+      return 0;
+    }
+    return -1;
+  }
+
+  if (i2.release.date === null) {
+    if (i1.release.date !== null) {
+      return 1;
+    }
+    if (i1.release.date === null) {
+      return 0;
+    }
+    return -1;
+  }
+
+  if (Temporal.PlainDate.compare(i1.release.date, i2.release.date) === 0) {
     if (i1.ranged && !i2.ranged) {
       return -1;
     }
@@ -76,5 +113,5 @@ export function compareInitialSupport(
     }
     return 0;
   }
-  return i1.release.compare(i2.release);
+  return Temporal.PlainDate.compare(i1.release.date, i2.release.date);
 }

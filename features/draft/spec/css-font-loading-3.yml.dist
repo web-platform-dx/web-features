@@ -5,6 +5,7 @@ status:
   baseline: false
   support: {}
 compat_features:
+  # last_introduced_date: 2020-01-15
   # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
@@ -38,6 +39,7 @@ compat_features:
   - api.FontFaceSet.ready
   - api.FontFaceSet.status
 
+  # last_introduced_date: 2020-01-15
   # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
@@ -51,6 +53,7 @@ compat_features:
   #   safari_ios: "10"
   - api.FontFace.loaded
 
+  # last_introduced_date: 2020-01-15
   # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
@@ -64,6 +67,7 @@ compat_features:
   #   safari_ios: "10"
   - api.FontFaceSet.@@iterator
 
+  # last_introduced_date: 2020-01-15
   # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
@@ -77,6 +81,7 @@ compat_features:
   #   safari_ios: "11.3"
   - api.FontFace.display
 
+  # last_introduced_date: 2022-09-20
   # baseline: low
   # baseline_low_date: 2022-09-20
   # support:
@@ -89,6 +94,7 @@ compat_features:
   #   safari_ios: "15"
   - api.WorkerGlobalScope.fonts
 
+  # last_introduced_date: 2023-12-07
   # baseline: low
   # baseline_low_date: 2023-12-07
   # support:
@@ -101,6 +107,7 @@ compat_features:
   #   safari_ios: "10"
   - api.FontFaceSet.check
 
+  # last_introduced_date: 2020-01-15
   # baseline: false
   # support:
   #   chrome: "35"
@@ -112,6 +119,7 @@ compat_features:
   - api.FontFaceSetLoadEvent
   - api.FontFaceSetLoadEvent.fontfaces
 
+  # last_introduced_date: 2020-01-15
   # baseline: false
   # support:
   #   chrome: "57"
@@ -121,6 +129,7 @@ compat_features:
   #   firefox_android: "41"
   - api.FontFaceSetLoadEvent.FontFaceSetLoadEvent
 
+  # last_introduced_date: 2021-06-01
   # baseline: false
   # support:
   #   chrome: "87"
@@ -132,12 +141,14 @@ compat_features:
   - api.FontFace.descentOverride
   - api.FontFace.lineGapOverride
 
+  # last_introduced_date: 2016-09-20
   # baseline: false
   # support:
   #   safari: "10"
   #   safari_ios: "10"
   - api.FontFaceSet.FontFaceSet
 
+  # last_introduced_date: 2018-09-05
   # baseline: false
   # support:
   #   firefox: "62"
