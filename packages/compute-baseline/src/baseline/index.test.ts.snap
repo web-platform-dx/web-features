@@ -2,6 +2,7 @@
 
 exports[`computeBaseline disregards support that's been removed 1`] = `
 "{
+  \\"last_introduced_date\\": \\"2014-10-16\\",
   \\"baseline\\": false,
   \\"support\\": {
     \\"safari\\": \\"8\\",
@@ -12,6 +13,7 @@ exports[`computeBaseline disregards support that's been removed 1`] = `
 
 exports[`computeBaseline finds discrepancies with ancestors (checkAncestors) 1`] = `
 "{
+  \\"last_introduced_date\\": \\"2023-03-27\\",
   \\"baseline\\": \\"low\\",
   \\"baseline_low_date\\": \\"2023-03-27\\",
   \\"support\\": {
@@ -28,6 +30,7 @@ exports[`computeBaseline finds discrepancies with ancestors (checkAncestors) 1`]
 
 exports[`computeBaseline finds discrepancies with ancestors (checkAncestors) 2`] = `
 "{
+  \\"last_introduced_date\\": \\"2023-03-27\\",
   \\"baseline\\": false,
   \\"support\\": {
     \\"chrome\\": \\"33\\",
@@ -42,6 +45,7 @@ exports[`computeBaseline finds discrepancies with ancestors (checkAncestors) 2`]
 
 exports[`computeBaseline finds discrepancies with ancestors (checkAncestors) 3`] = `
 "{
+  \\"last_introduced_date\\": \\"2023-03-27\\",
   \\"baseline\\": false,
   \\"support\\": {
     \\"chrome\\": \\"33\\",
@@ -57,6 +61,7 @@ exports[`computeBaseline finds discrepancies with ancestors (checkAncestors) 3`]
 exports[`computeBaseline returns something sensible for the least complex features 1`] = `
 Object {
   "css.properties.counter-reset.reset_does_not_affect_siblings": "{
+  \\"last_introduced_date\\": \\"2020-10-20\\",
   \\"baseline\\": false,
   \\"support\\": {
     \\"firefox\\": \\"82\\",
@@ -64,6 +69,7 @@ Object {
   }
 }",
   "html.elements.form.target": "{
+  \\"last_introduced_date\\": \\"2015-07-29\\",
   \\"baseline\\": \\"high\\",
   \\"baseline_low_date\\": \\"2015-07-29\\",
   \\"baseline_high_date\\": \\"2018-01-29\\",
@@ -78,6 +84,7 @@ Object {
   }
 }",
   "html.global_attributes.exportparts": "{
+  \\"last_introduced_date\\": \\"2020-07-28\\",
   \\"baseline\\": \\"high\\",
   \\"baseline_low_date\\": \\"2020-07-28\\",
   \\"baseline_high_date\\": \\"2023-01-28\\",
@@ -97,6 +104,7 @@ Object {
 exports[`computeBaseline returns something sensible for the most complex features 1`] = `
 Object {
   "api.DOMMatrix.DOMMatrix": "{
+  \\"last_introduced_date\\": \\"2020-01-15\\",
   \\"baseline\\": \\"high\\",
   \\"baseline_low_date\\": \\"2020-01-15\\",
   \\"baseline_high_date\\": \\"2022-07-15\\",
@@ -111,6 +119,7 @@ Object {
   }
 }",
   "api.Document.visibilitychange_event": "{
+  \\"last_introduced_date\\": \\"2021-04-26\\",
   \\"baseline\\": \\"high\\",
   \\"baseline_low_date\\": \\"2021-04-26\\",
   \\"baseline_high_date\\": \\"2023-10-26\\",
@@ -136,6 +145,7 @@ Object {
   "baseline": "high",
   "baseline_high_date": "2019-09-27",
   "baseline_low_date": "2017-03-27",
+  "last_introduced_date": "2017-03-27",
   "support": Object {
     "chrome": "42",
     "chrome_android": "42",

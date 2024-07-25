@@ -44,6 +44,7 @@ type BaselineDate = string | null;
 
 interface SupportDetails {
   compatKey?: string;
+  last_introduced_date: BaselineDate;
   baseline: BaselineStatus;
   baseline_low_date: BaselineDate;
   baseline_high_date: BaselineDate;
@@ -54,6 +55,7 @@ interface SupportDetails {
 
 // TODO: Use a type from `web-features` directly, instead of approximating it here
 interface SupportStatus {
+  last_introduced_date: string;
   baseline: "low" | "high" | false;
   baseline_low_date: string;
   baseline_high_date?: string;
@@ -121,7 +123,16 @@ export function computeBaseline(
   const { baseline, baseline_low_date, baseline_high_date } =
     keystoneDateToStatus(keystoneDate, cutoffDate, discouraged);
 
+  const last_introduced_date = baseline_low_date
+    ? baseline_low_date
+    : findKeystoneDate(
+        statuses
+          .flatMap((s) => [...s.support.values()])
+          .filter((v) => v && v.release.date),
+      );
+
   return {
+    last_introduced_date,
     baseline,
     baseline_low_date,
     baseline_high_date,
@@ -283,7 +294,8 @@ function findKeystoneDate(
 }
 
 function jsonify(status: SupportDetails): string {
-  const { baseline_low_date, baseline_high_date } = status;
+  const { last_introduced_date, baseline_low_date, baseline_high_date } =
+    status;
   const support: Record<string, string> = {};
 
   for (const [browser, initialSupport] of status.support.entries()) {
@@ -295,6 +307,7 @@ function jsonify(status: SupportDetails): string {
   if (status.baseline === "high") {
     return JSON.stringify(
       {
+        last_introduced_date,
         baseline: status.baseline,
         baseline_low_date,
         baseline_high_date,
@@ -308,8 +321,21 @@ function jsonify(status: SupportDetails): string {
   if (status.baseline === "low") {
     return JSON.stringify(
       {
+        last_introduced_date,
         baseline: status.baseline,
         baseline_low_date,
+        support,
+      },
+      undefined,
+      2,
+    );
+  }
+
+  if (last_introduced_date) {
+    return JSON.stringify(
+      {
+        last_introduced_date,
+        baseline: status.baseline,
         support,
       },
       undefined,
