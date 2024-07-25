@@ -3,7 +3,8 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "127"
 compat_features:
   # baseline: false
   # support:
@@ -274,7 +275,8 @@ compat_features:
   - api.WGSLLanguageFeatures.size
   - api.WGSLLanguageFeatures.values
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "127"
+  #   chrome_android: "127"
   - api.GPUAdapter.info
