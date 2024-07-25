@@ -123,13 +123,22 @@ export function computeBaseline(
   const { baseline, baseline_low_date, baseline_high_date } =
     keystoneDateToStatus(keystoneDate, cutoffDate, discouraged);
 
-  const last_introduced_date = baseline_low_date
-    ? baseline_low_date
-    : findKeystoneDate(
-        statuses
-          .flatMap((s) => [...s.support.values()])
-          .filter((v) => v && v.release.date),
-      );
+  const initalReleases = [...support.values()];
+  let last_introduced_date: BaselineDate;
+  if (initalReleases.length === 0) {
+    last_introduced_date = null;
+  } else {
+    const lastInitial = initalReleases
+      .flatMap((i) => (i && i.release.date ? [i] : []))
+      .sort(compareInitialSupport)
+      .at(-1);
+    last_introduced_date = lastInitial
+      ? toRangedDateString(
+          lastInitial.release.date as Temporal.PlainDate,
+          lastInitial?.ranged,
+        )
+      : null;
+  }
 
   return {
     last_introduced_date,
@@ -260,30 +269,9 @@ function findKeystoneDate(
   if (initialSupports.some((i) => i.release.date === null)) {
     return null;
   }
-  const keystone = initialSupports
-    .sort((i1, i2) => {
-      if (
-        Temporal.PlainDate.compare(
-          i1.release.date as Temporal.PlainDate,
-          i2.release.date as Temporal.PlainDate,
-        ) === 0
-      ) {
-        if (i1.ranged && !i2.ranged) {
-          return -1;
-        }
-        if (!i1.ranged && i2.ranged) {
-          return 1;
-        }
-        return 0;
-      }
-      return Temporal.PlainDate.compare(
-        i1.release.date as Temporal.PlainDate,
-        i2.release.date as Temporal.PlainDate,
-      );
-    })
-    .at(-1) as InitialSupport;
+  const keystone = initialSupports.sort(compareInitialSupport).at(-1);
 
-  if (!keystone.release.date) {
+  if (!keystone?.release.date) {
     return null;
   }
 
