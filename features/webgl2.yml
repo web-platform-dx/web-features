@@ -1,12 +1,9 @@
-draft_date: 2024-07-11
 name: WebGL2 2D and 3D Graphics
-description: WebGL is a JavaScript API for rendering high-performance interactive 3D and 2D graphics and support for much of the OpenGL ES 3.0 feature set.
+description: WebGL2 is a JavaScript API for rendering high-performance interactive 3D and 2D graphics and support for much of the OpenGL ES 3.0 feature set.
 spec: https://registry.khronos.org/webgl/specs/latest/2.0/
 compat_features:
   - api.HTMLCanvasElement.getContext.webgl2_context.options_alpha_parameter
-  - api.HTMLCanvasElement.getContext.webgl2_context.options_desynchronized_parameter
   - api.HTMLCanvasElement.getContext.webgl2_context.options_failIfMajorPerformanceCaveat_parameter
-  - api.HTMLCanvasElement.getContext.webgl2_context.options_powerPreference_parameter
   - api.WebGL2RenderingContext
   - api.WebGL2RenderingContext.activeTexture
   - api.WebGL2RenderingContext.attachShader
@@ -84,10 +81,7 @@ compat_features:
   - api.WebGL2RenderingContext.drawBuffers
   - api.WebGL2RenderingContext.drawElements
   - api.WebGL2RenderingContext.drawElementsInstanced
-  - api.WebGL2RenderingContext.drawingBufferColorSpace
-  - api.WebGL2RenderingContext.drawingBufferFormat
   - api.WebGL2RenderingContext.drawingBufferHeight
-  - api.WebGL2RenderingContext.drawingBufferStorage
   - api.WebGL2RenderingContext.drawingBufferWidth
   - api.WebGL2RenderingContext.drawRangeElements
   - api.WebGL2RenderingContext.enable
@@ -220,7 +214,6 @@ compat_features:
   - api.WebGL2RenderingContext.uniformMatrix4fv
   - api.WebGL2RenderingContext.uniformMatrix4x2fv
   - api.WebGL2RenderingContext.uniformMatrix4x3fv
-  - api.WebGL2RenderingContext.unpackColorSpace
   - api.WebGL2RenderingContext.useProgram
   - api.WebGL2RenderingContext.validateProgram
   - api.WebGL2RenderingContext.vertexAttrib1f
@@ -240,3 +233,8 @@ compat_features:
   - api.WebGL2RenderingContext.vertexAttribPointer
   - api.WebGL2RenderingContext.viewport
   - api.WebGL2RenderingContext.waitSync
+  - api.WebGLQuery
+  - api.WebGLSampler
+  - api.WebGLSync
+  - api.WebGLTransformFeedback
+  - api.WebGLVertexArrayObject

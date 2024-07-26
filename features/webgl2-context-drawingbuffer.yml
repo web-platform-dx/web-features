@@ -1,0 +1,6 @@
+name: WebGL2 drawing buffer
+description: Provides access to the underlying storage buffer.
+spec: https://registry.khronos.org/webgl/specs/latest/2.0/#2.2
+compat_features:
+  - api.WebGL2RenderingContext.drawingBufferFormat
+  - api.WebGL2RenderingContext.drawingBufferStorage
