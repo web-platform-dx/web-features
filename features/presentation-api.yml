@@ -1,7 +1,8 @@
-draft_date: 2024-07-11
 name: Presentation API
-description: TODO
+description: The Presentation API allows you to show and control content on another device, such as a network-connected TV.
 spec: https://w3c.github.io/presentation-api/
+status:
+  compute_from: api.PresentationRequest.PresentationRequest
 compat_features:
   - api.Navigator.presentation
   - api.Presentation
@@ -35,3 +36,4 @@ compat_features:
   - api.PresentationRequest.getAvailability
   - api.PresentationRequest.reconnect
   - api.PresentationRequest.start
+  - html.elements.iframe.sandbox.allow-presentation
