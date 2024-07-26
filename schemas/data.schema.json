@@ -113,7 +113,62 @@
             },
             "by_compat_key": {
               "additionalProperties": {
-                "$ref": "#/definitions/interface-types.ts-1307-1979-types.ts-0-2314"
+                "additionalProperties": false,
+                "properties": {
+                  "baseline": {
+                    "description": "Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false)",
+                    "enum": [
+                      "high",
+                      "low",
+                      false
+                    ],
+                    "type": [
+                      "string",
+                      "boolean"
+                    ]
+                  },
+                  "baseline_high_date": {
+                    "description": "Date the feature achieved Baseline high status",
+                    "type": "string"
+                  },
+                  "baseline_low_date": {
+                    "description": "Date the feature achieved Baseline low status",
+                    "type": "string"
+                  },
+                  "support": {
+                    "additionalProperties": false,
+                    "description": "Browser versions that most-recently introduced the feature",
+                    "properties": {
+                      "chrome": {
+                        "type": "string"
+                      },
+                      "chrome_android": {
+                        "type": "string"
+                      },
+                      "edge": {
+                        "type": "string"
+                      },
+                      "firefox": {
+                        "type": "string"
+                      },
+                      "firefox_android": {
+                        "type": "string"
+                      },
+                      "safari": {
+                        "type": "string"
+                      },
+                      "safari_ios": {
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "baseline",
+                  "support"
+                ],
+                "type": "object"
               },
               "description": "Statuses for each key in the feature's compat_features list, if applicable. Not available to the npm release of web-features.",
               "type": "object"
@@ -228,71 +283,6 @@
         "features",
         "groups",
         "snapshots"
-      ],
-      "type": "object"
-    },
-    "interface-types.ts-1307-1979-types.ts-0-2314": {
-      "additionalProperties": false,
-      "properties": {
-        "baseline": {
-          "description": "Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false)",
-          "enum": [
-            "high",
-            "low",
-            false
-          ],
-          "type": [
-            "string",
-            "boolean"
-          ]
-        },
-        "baseline_high_date": {
-          "description": "Date the feature achieved Baseline high status",
-          "type": "string"
-        },
-        "baseline_low_date": {
-          "description": "Date the feature achieved Baseline low status",
-          "type": "string"
-        },
-        "by_compat_key": {
-          "additionalProperties": {
-            "$ref": "#/definitions/interface-types.ts-1307-1979-types.ts-0-2314"
-          },
-          "description": "Statuses for each key in the feature's compat_features list, if applicable. Not available to the npm release of web-features.",
-          "type": "object"
-        },
-        "support": {
-          "additionalProperties": false,
-          "description": "Browser versions that most-recently introduced the feature",
-          "properties": {
-            "chrome": {
-              "type": "string"
-            },
-            "chrome_android": {
-              "type": "string"
-            },
-            "edge": {
-              "type": "string"
-            },
-            "firefox": {
-              "type": "string"
-            },
-            "firefox_android": {
-              "type": "string"
-            },
-            "safari": {
-              "type": "string"
-            },
-            "safari_ios": {
-              "type": "string"
-            }
-          },
-          "type": "object"
-        }
-      },
-      "required": [
-        "baseline",
-        "support"
       ],
       "type": "object"
     }
