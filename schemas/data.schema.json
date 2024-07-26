@@ -1,6 +1,27 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
+    "BrowserData": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "description": "The name of the browser, as in \"Edge\" or \"Safari on iOS\"",
+          "type": "string"
+        },
+        "releases": {
+          "description": "The browser's releases",
+          "items": {
+            "$ref": "#/definitions/Release"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "releases"
+      ],
+      "type": "object"
+    },
     "FeatureData": {
       "additionalProperties": false,
       "properties": {
@@ -173,6 +194,24 @@
       ],
       "type": "object"
     },
+    "Release": {
+      "additionalProperties": false,
+      "properties": {
+        "date": {
+          "description": "The release date, as in \"2023-12-11\"",
+          "type": "string"
+        },
+        "version": {
+          "description": "The version string, as in \"10\" or \"17.1\"",
+          "type": "string"
+        }
+      },
+      "required": [
+        "version",
+        "date"
+      ],
+      "type": "object"
+    },
     "SnapshotData": {
       "additionalProperties": false,
       "properties": {
@@ -195,6 +234,43 @@
     "WebFeaturesData": {
       "additionalProperties": false,
       "properties": {
+        "browsers": {
+          "additionalProperties": false,
+          "description": "Browsers and browser release data",
+          "properties": {
+            "chrome": {
+              "$ref": "#/definitions/BrowserData"
+            },
+            "chrome_android": {
+              "$ref": "#/definitions/BrowserData"
+            },
+            "edge": {
+              "$ref": "#/definitions/BrowserData"
+            },
+            "firefox": {
+              "$ref": "#/definitions/BrowserData"
+            },
+            "firefox_android": {
+              "$ref": "#/definitions/BrowserData"
+            },
+            "safari": {
+              "$ref": "#/definitions/BrowserData"
+            },
+            "safari_ios": {
+              "$ref": "#/definitions/BrowserData"
+            }
+          },
+          "required": [
+            "chrome",
+            "chrome_android",
+            "edge",
+            "firefox",
+            "firefox_android",
+            "safari",
+            "safari_ios"
+          ],
+          "type": "object"
+        },
         "features": {
           "additionalProperties": {
             "$ref": "#/definitions/FeatureData"
@@ -218,6 +294,7 @@
         }
       },
       "required": [
+        "browsers",
         "features",
         "groups",
         "snapshots"
