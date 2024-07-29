@@ -1,8 +1,9 @@
-draft_date: 2024-06-05
 name: <meta>
-description: The `<meta>` element TODO.
+description: The `<meta>` element represents metadata about the page used by the browser or search engines, including description, keywords, and character sets.
 spec: https://html.spec.whatwg.org/multipage/semantics.html#meta
-group: html
+group: html-elements
+status:
+  compute_from: html.elements.meta
 compat_features:
   - api.HTMLMetaElement
   - api.HTMLMetaElement.content
@@ -17,6 +18,4 @@ compat_features:
   # - html.elements.meta.http-equiv.content-type
   - html.elements.meta.http-equiv.refresh
   - html.elements.meta.name
-  - html.elements.meta.name.color-scheme
   - html.elements.meta.name.referrer
-  - html.elements.meta.name.theme-color

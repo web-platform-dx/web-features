@@ -1,8 +1,11 @@
-draft_date: 2024-06-05
 name: <output>
-description: The `<output>` element TODO.
+description: The `<output>` element represents the result of a calculation, user action, or form entry.
 spec: https://html.spec.whatwg.org/multipage/form-elements.html#the-output-element
-group: forms
+group:
+  - forms
+  - html-elements
+status:
+  compute_from: html.elements.output
 compat_features:
   - api.HTMLOutputElement
   - api.HTMLOutputElement.HTMLOutputElement
