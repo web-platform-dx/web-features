@@ -1,10 +1,23 @@
+import Ajv from "ajv";
+import addFormats from "ajv-formats";
 import { getStatus } from "compute-baseline";
 import stringify from "fast-json-stable-stringify";
 import { execSync } from "node:child_process";
 import fs from "node:fs";
 import { basename } from "node:path";
+import winston from "winston";
 import yargs from "yargs";
 import * as data from "../index.js";
+import schema from "../schemas/data.schema.json" assert { type: "json" };
+import { FeatureData } from "../types.js";
+
+const logger = winston.createLogger({
+  format: winston.format.combine(
+    winston.format.colorize(),
+    winston.format.simple(),
+  ),
+  transports: new winston.transports.Console(),
+});
 
 const rootDir = new URL("..", import.meta.url);
 
@@ -26,8 +39,12 @@ function buildPackage() {
   const packageDir = new URL("./packages/web-features/", rootDir);
   const filesToCopy = ["LICENSE.txt", "types.ts", "schemas/data.schema.json"];
 
+  if (!valid(data)) {
+    logger.error("Data failed schema validation. No package built.");
+    process.exit(1);
+  }
+
   const json = stringify(data);
-  // TODO: Validate the resulting JSON against a schema.
   const path = new URL("data.json", packageDir);
   fs.writeFileSync(path, json);
   for (const file of filesToCopy) {
@@ -47,13 +64,12 @@ function buildPackage() {
 }
 
 function buildExtendedJSON() {
-  // TODO: Validate the resulting JSON against a schema.
   for (const [id, featureData] of Object.entries(data.features)) {
     if (Array.isArray(featureData.compat_features) && featureData.status) {
-      const by_compat_key = {};
+      const by_compat_key: FeatureData["status"]["by_compat_key"] = {};
 
       for (const key of featureData.compat_features) {
-        by_compat_key[key] = { status: getStatus(id, key) };
+        by_compat_key[key] = getStatus(id, key);
       }
 
       if (Object.keys(by_compat_key).length) {
@@ -62,8 +78,27 @@ function buildExtendedJSON() {
     }
   }
 
+  if (!valid(data)) {
+    logger.error("Data failed schema validation. No JSON file written.");
+    process.exit(1);
+  }
+
   fs.writeFileSync(
     new URL("./web-features.extended.json", rootDir),
     stringify(data),
   );
+}
+
+function valid(data: any): boolean {
+  const ajv = new Ajv({ allErrors: true, allowUnionTypes: true });
+  addFormats(ajv);
+  const validate = ajv.compile(schema);
+  const valid = validate(data);
+  if (!valid) {
+    for (const error of validate.errors) {
+      console.error(`${error.instancePath}: ${error.message}`);
+    }
+    return false;
+  }
+  return true;
 }
