@@ -1,0 +1,13 @@
+name: <ins>
+description: The `<ins>` element element represents a range of text that has been inserted into a document, styling text as underlined by default.
+spec: https://html.spec.whatwg.org/multipage/edits.html#the-ins-element
+group: html-elements
+compat_features:
+  # TODO - Removed until #1173 is resolved, these APIs are currently listed
+  # in <del> to prevent the error.
+  # - api.HTMLModElement
+  # - api.HTMLModElement.cite
+  # - api.HTMLModElement.dateTime
+  - html.elements.ins
+  - html.elements.ins.cite
+  - html.elements.ins.datetime
