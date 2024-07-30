@@ -1,5 +1,4 @@
-import Ajv from "ajv";
-import addFormats from "ajv-formats";
+import { DefinedError } from "ajv";
 import { getStatus } from "compute-baseline";
 import stringify from "fast-json-stable-stringify";
 import { execSync } from "node:child_process";
@@ -8,8 +7,8 @@ import { basename } from "node:path";
 import winston from "winston";
 import yargs from "yargs";
 import * as data from "../index.js";
-import schema from "../schemas/data.schema.json" assert { type: "json" };
 import { FeatureData } from "../types.js";
+import { validate } from "./validate.js";
 
 const logger = winston.createLogger({
   format: winston.format.combine(
@@ -90,13 +89,13 @@ function buildExtendedJSON() {
 }
 
 function valid(data: any): boolean {
-  const ajv = new Ajv({ allErrors: true, allowUnionTypes: true });
-  addFormats(ajv);
-  const validate = ajv.compile(schema);
   const valid = validate(data);
   if (!valid) {
-    for (const error of validate.errors) {
-      console.error(`${error.instancePath}: ${error.message}`);
+    // TODO: turn on strictNullChecks, fix all the errors, and replace this with:
+    // const errors = validate.errors;
+    const errors = (valid as any).errors as DefinedError[];
+    for (const error of errors) {
+      logger.error(`${error.instancePath}: ${error.message}`);
     }
     return false;
   }

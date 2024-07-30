@@ -1,15 +1,11 @@
-import assert from "node:assert/strict";
 import child_process from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import url from 'url';
 
-import Ajv from 'ajv';
-import addFormats from 'ajv-formats';
-
+import { DefinedError } from "ajv";
 import * as data from '../index.js';
-
-import schema from '../schemas/data.schema.json' assert { type: 'json' };
+import { validate } from "./validate.js";
 
 let status: 0 | 1 = 0;
 
@@ -26,18 +22,13 @@ function checkSchemaConsistency(): void {
     }
 }
 
-function validate() {
-    const ajv = new Ajv({allErrors: true});
-    addFormats(ajv);
-
-    const validate = ajv.compile(schema);
-
-    // confidence check that the schema finds any errors at all
-    assert.equal(validate({}), false)
-
+function valid() {
     const valid = validate(data);
     if (!valid) {
-        for (const error of validate.errors) {
+        // TODO: turn on strictNullChecks, fix all the errors, and replace this with:
+        // const errors = validate.errors;
+        const errors = (validate as any).errors as DefinedError[];
+        for (const error of errors) {
             console.error(`${error.instancePath}: ${error.message}`);
         }
         status = 1;
@@ -45,5 +36,5 @@ function validate() {
 }
 
 checkSchemaConsistency();
-validate();
+valid();
 process.exit(status);
