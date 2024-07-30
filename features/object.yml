@@ -1,0 +1,24 @@
+name: <object>
+description: The `<object>` element represents an external resource such as a PDF or SVG document. It was historically used for plugins such as Shockwave Flash.
+spec: https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element
+group: html-elements
+status:
+  compute_from: html.elements.object
+compat_features:
+  - api.HTMLObjectElement
+  - api.HTMLObjectElement.contentDocument
+  - api.HTMLObjectElement.contentWindow
+  - api.HTMLObjectElement.data
+  - api.HTMLObjectElement.form
+  - api.HTMLObjectElement.getSVGDocument
+  - api.HTMLObjectElement.height
+  - api.HTMLObjectElement.name
+  - api.HTMLObjectElement.type
+  - api.HTMLObjectElement.width
+  - html.elements.object
+  - html.elements.object.data
+  - html.elements.object.form
+  - html.elements.object.height
+  - html.elements.object.name
+  - html.elements.object.type
+  - html.elements.object.width

@@ -68,8 +68,8 @@ compat_features:
   #   edge: "79"
   #   firefox: "99"
   #   firefox_android: "39"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
   - css.properties.scroll-snap-type.none
 
   # baseline: low
@@ -80,8 +80,8 @@ compat_features:
   #   edge: "79"
   #   firefox: "99"
   #   firefox_android: "68"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
   - css.properties.scroll-snap-type.block
   - css.properties.scroll-snap-type.both
   - css.properties.scroll-snap-type.inline

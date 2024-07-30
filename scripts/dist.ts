@@ -1,13 +1,19 @@
-import { computeBaseline, getStatus, setLogger } from "compute-baseline";
+import { Temporal } from "@js-temporal/polyfill";
+import {
+  computeBaseline,
+  getStatus,
+  parseRangedDateString,
+  setLogger,
+} from "compute-baseline";
 import { Compat, Feature } from "compute-baseline/browser-compat-data";
+import { fdir } from "fdir";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { isDeepStrictEqual } from "node:util";
 import winston from "winston";
-import YAML, { Document, YAMLSeq, Scalar } from "yaml";
+import YAML, { Document, Scalar, YAMLSeq } from "yaml";
 import yargs from "yargs";
-import { fdir } from "fdir";
 
 const compat = new Compat();
 
@@ -81,6 +87,7 @@ type SupportStatus = ReturnType<typeof getStatus>;
 function compareStatus(a: SupportStatus, b: SupportStatus) {
   // First sort by Baseline status/date, oldest Base features first, and
   // non-Baseline features last.
+
   if (a.baseline_low_date !== b.baseline_low_date) {
     if (!a.baseline_low_date) {
       return 1;
@@ -88,8 +95,24 @@ function compareStatus(a: SupportStatus, b: SupportStatus) {
     if (!b.baseline_low_date) {
       return -1;
     }
-    return a.baseline_low_date.localeCompare(b.baseline_low_date);
+
+    const [aLowDate, aLowRanged] = parseRangedDateString(a.baseline_low_date);
+    const [bLowDate, bLowRanged] = parseRangedDateString(b.baseline_low_date);
+
+    // Older dates first
+    if (Temporal.PlainDate.compare(aLowDate, bLowDate) !== 0) {
+      return Temporal.PlainDate.compare(aLowDate, bLowDate);
+    }
+
+    // If dates are equal, then unranged values go first
+    if (!aLowRanged && bLowRanged) {
+      return -1;
+    }
+    if (!bLowRanged && aLowRanged) {
+      return 1;
+    }
   }
+
   // Next sort by number of supporting browsers.
   const aBrowsers = Object.keys(a.support).length;
   const bBrowsers = Object.keys(b.support).length;
@@ -101,7 +124,23 @@ function compareStatus(a: SupportStatus, b: SupportStatus) {
   const bVersions = Object.values(b.support);
   for (let i = 0; i < aVersions.length; i++) {
     if (aVersions[i] !== bVersions[i]) {
-      return aVersions[i] - bVersions[i];
+      const [aRanged, aVersion] = aVersions[i].startsWith("≤")
+        ? [true, aVersions[i].slice(1)]
+        : [false, aVersions[i]];
+      const [bRanged, bVersion] = bVersions[i].startsWith("≤")
+        ? [true, bVersions[i].slice(1)]
+        : [false, bVersions[i]];
+
+      if (aVersion !== bVersion) {
+        if (!aRanged && bRanged) {
+          return -1;
+        }
+        if (!bRanged && aRanged) {
+          return 1;
+        }
+      }
+
+      return Number(aVersion) - Number(bVersion);
     }
   }
   return 0;
@@ -155,7 +194,7 @@ function toDist(sourcePath: string): YAML.Document {
   // can be removed if it matches the computed status.
   let computedStatus = computeBaseline({
     compatKeys: computeFrom,
-    checkAncestors: false,
+    checkAncestors: true,
   });
 
   if (computedStatus.discouraged) {
@@ -230,7 +269,7 @@ function insertCompatFeatures(yaml: Document, groups: Map<string, string[]>) {
     return;
   }
 
-  const list = new YAMLSeq();
+  const list = new YAMLSeq<Scalar<string>>();
   for (const [comment, keys] of groups.entries()) {
     let first = true;
     for (const key of keys) {
