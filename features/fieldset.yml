@@ -1,10 +1,15 @@
-draft_date: 2024-06-05
-name: <fieldset>
-description: The `<fieldset>` element TODO.
+name: <fieldset> and <legend>
+description: The `<fieldset>` and `<legend>` elements group several form control elements within a web form.
 spec:
   - https://html.spec.whatwg.org/multipage/form-elements.html#the-fieldset-element
   - https://html.spec.whatwg.org/multipage/form-elements.html#the-legend-element
-group: forms
+group:
+  - forms
+  - html-elements
+status:
+  compute_from:
+    - html.elements.fieldset
+    - html.elements.legend
 compat_features:
   - api.HTMLFieldSetElement
   - api.HTMLFieldSetElement.disabled
