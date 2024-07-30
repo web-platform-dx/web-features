@@ -1,7 +1,7 @@
 {
   "name": "web-features",
   "description": "Curated list of Web platform features",
-  "version": "0.10.0",
+  "version": "1.0.0",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
@@ -11,13 +11,15 @@
   "main": "index.js",
   "exports": {
     ".": "./index.js",
-    "./index.json": "./index.json"
+    "./data.json": "./data.json",
+    "./data.schema.json": "./data.schema.json"
   },
   "types": "./index.d.ts",
   "files": [
     "index.d.ts",
     "index.js",
-    "index.json"
+    "data.json",
+    "data.schema.json"
   ],
   "scripts": {
     "prepare": "tsc && rm types.js && tsup ./index.ts --dts-only --format=esm --out-dir=."

@@ -1,7 +1,10 @@
-draft_date: 2024-07-11
+draft_date: 2024-07-12
 name: Referrer Policy
 description: TODO
 spec: https://w3c.github.io/webappsec-referrer-policy/
 compat_features:
   - html.elements.meta.name
-  - http.headers.Referrer-Policy
+
+# The following features in the spec are already part of web-features:
+# - Referrer policy:
+#   - http.headers.Referrer-Policy
