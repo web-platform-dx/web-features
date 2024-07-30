@@ -1,6 +1,9 @@
 import assert from "node:assert/strict";
 
-import { toHighDate, toDateString } from "./date-utils.js";
+import { Temporal } from "@js-temporal/polyfill";
+import { toHighDate } from "./date-utils.js";
+
+const toDateString = (d: Temporal.PlainDate) => d.toString().slice(0, 10);
 
 describe("toHighDate", function () {
   it("Jan 1", function () {

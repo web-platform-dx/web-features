@@ -14,8 +14,6 @@ export interface FeatureData {
     description: string;
     /** Short description of the feature, as an HTML string */
     description_html: string;
-    /** Alias identifier */
-    alias?: string | [string, string, ...string[]];
     /** Specification */
     spec: specification_url | [specification_url, specification_url, ...specification_url[]];
     /** Group identifier */
@@ -34,7 +32,7 @@ type browserIdentifier = "chrome" | "chrome_android" | "edge" | "firefox" | "fir
 
 type BaselineHighLow = "high" | "low";
 
-interface SupportStatus {
+interface Status {
     /** Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false) */
     baseline: BaselineHighLow | false;
     /** Date the feature achieved Baseline low status */
@@ -45,6 +43,11 @@ interface SupportStatus {
     support: {
         [K in browserIdentifier]?: string;
     };
+}
+
+interface SupportStatus extends Status {
+    /** Statuses for each key in the feature's compat_features list, if applicable. Not available to the npm release of web-features. */
+    by_compat_key?: Record<string, Status>
 }
 
 /** Specification URL

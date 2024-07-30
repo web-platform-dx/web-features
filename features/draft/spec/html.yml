@@ -1,4 +1,4 @@
-draft_date: 2024-07-11
+draft_date: 2024-07-12
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -61,7 +61,6 @@ compat_features:
   - api.CanvasRenderingContext2D.rotate
   - api.CanvasRenderingContext2D.save
   - api.CanvasRenderingContext2D.scale
-  - api.CanvasRenderingContext2D.scrollPathIntoView
   - api.CanvasRenderingContext2D.setLineDash
   - api.CanvasRenderingContext2D.setTransform
   - api.CanvasRenderingContext2D.shadowBlur
@@ -211,7 +210,6 @@ compat_features:
   - api.HTMLAnchorElement.ping
   - api.HTMLAnchorElement.port
   - api.HTMLAnchorElement.protocol
-  - api.HTMLAnchorElement.referrerPolicy
   - api.HTMLAnchorElement.rel
   - api.HTMLAnchorElement.relList
   - api.HTMLAnchorElement.search
@@ -234,7 +232,6 @@ compat_features:
   - api.HTMLAreaElement.ping
   - api.HTMLAreaElement.port
   - api.HTMLAreaElement.protocol
-  - api.HTMLAreaElement.referrerPolicy
   - api.HTMLAreaElement.rel
   - api.HTMLAreaElement.relList
   - api.HTMLAreaElement.search
@@ -242,9 +239,6 @@ compat_features:
   - api.HTMLAreaElement.target
   - api.HTMLAreaElement.toString
   - api.HTMLAreaElement.username
-  - api.HTMLAudioElement
-  - api.HTMLAudioElement.Audio
-  - api.HTMLBRElement
   - api.HTMLBodyElement
   - api.HTMLButtonElement
   - api.HTMLButtonElement.disabled
@@ -350,7 +344,6 @@ compat_features:
   - api.HTMLIFrameElement.getSVGDocument
   - api.HTMLIFrameElement.height
   - api.HTMLIFrameElement.name
-  - api.HTMLIFrameElement.referrerPolicy
   - api.HTMLIFrameElement.sandbox
   - api.HTMLIFrameElement.src
   - api.HTMLIFrameElement.srcdoc
@@ -367,7 +360,6 @@ compat_features:
   - api.HTMLImageElement.isMap
   - api.HTMLImageElement.naturalHeight
   - api.HTMLImageElement.naturalWidth
-  - api.HTMLImageElement.referrerPolicy
   - api.HTMLImageElement.sizes
   - api.HTMLImageElement.src
   - api.HTMLImageElement.srcset
@@ -437,7 +429,6 @@ compat_features:
   - api.HTMLLinkElement.hreflang
   - api.HTMLLinkElement.integrity
   - api.HTMLLinkElement.media
-  - api.HTMLLinkElement.referrerPolicy
   - api.HTMLLinkElement.rel
   - api.HTMLLinkElement.relList
   - api.HTMLLinkElement.sizes
@@ -445,60 +436,10 @@ compat_features:
   - api.HTMLMapElement
   - api.HTMLMapElement.areas
   - api.HTMLMapElement.name
-  - api.HTMLMediaElement
-  - api.HTMLMediaElement.abort_event
   - api.HTMLMediaElement.addTextTrack
-  - api.HTMLMediaElement.autoplay
-  - api.HTMLMediaElement.buffered
-  - api.HTMLMediaElement.canPlayType
-  - api.HTMLMediaElement.canplay_event
-  - api.HTMLMediaElement.canplaythrough_event
-  - api.HTMLMediaElement.controls
-  - api.HTMLMediaElement.crossOrigin
-  - api.HTMLMediaElement.currentSrc
-  - api.HTMLMediaElement.currentTime
-  - api.HTMLMediaElement.defaultMuted
-  - api.HTMLMediaElement.defaultPlaybackRate
-  - api.HTMLMediaElement.duration
-  - api.HTMLMediaElement.durationchange_event
-  - api.HTMLMediaElement.emptied_event
-  - api.HTMLMediaElement.ended
-  - api.HTMLMediaElement.ended_event
-  - api.HTMLMediaElement.error
-  - api.HTMLMediaElement.error_event
   - api.HTMLMediaElement.getStartDate
-  - api.HTMLMediaElement.load
-  - api.HTMLMediaElement.loadeddata_event
-  - api.HTMLMediaElement.loadedmetadata_event
-  - api.HTMLMediaElement.loadstart_event
-  - api.HTMLMediaElement.loop
-  - api.HTMLMediaElement.muted
-  - api.HTMLMediaElement.networkState
-  - api.HTMLMediaElement.pause
-  - api.HTMLMediaElement.pause_event
-  - api.HTMLMediaElement.paused
-  - api.HTMLMediaElement.play
-  - api.HTMLMediaElement.play_event
-  - api.HTMLMediaElement.playbackRate
-  - api.HTMLMediaElement.played
-  - api.HTMLMediaElement.playing_event
-  - api.HTMLMediaElement.preload
-  - api.HTMLMediaElement.progress_event
-  - api.HTMLMediaElement.ratechange_event
-  - api.HTMLMediaElement.readyState
-  - api.HTMLMediaElement.seekable
-  - api.HTMLMediaElement.seeked_event
-  - api.HTMLMediaElement.seeking
-  - api.HTMLMediaElement.seeking_event
-  - api.HTMLMediaElement.src
   - api.HTMLMediaElement.srcObject
-  - api.HTMLMediaElement.stalled_event
-  - api.HTMLMediaElement.suspend_event
   - api.HTMLMediaElement.textTracks
-  - api.HTMLMediaElement.timeupdate_event
-  - api.HTMLMediaElement.volume
-  - api.HTMLMediaElement.volumechange_event
-  - api.HTMLMediaElement.waiting_event
   - api.HTMLMenuElement
   - api.HTMLMetaElement
   - api.HTMLMetaElement.content
@@ -573,7 +514,6 @@ compat_features:
   - api.HTMLScriptElement.defer
   - api.HTMLScriptElement.integrity
   - api.HTMLScriptElement.noModule
-  - api.HTMLScriptElement.referrerPolicy
   - api.HTMLScriptElement.src
   - api.HTMLScriptElement.supports_static
   - api.HTMLScriptElement.text
@@ -685,14 +625,7 @@ compat_features:
   - api.HTMLTrackElement.track
   - api.HTMLUListElement
   - api.HTMLUnknownElement
-  - api.HTMLVideoElement
-  - api.HTMLVideoElement.height
   - api.HTMLVideoElement.playsInline
-  - api.HTMLVideoElement.poster
-  - api.HTMLVideoElement.resize_event
-  - api.HTMLVideoElement.videoHeight
-  - api.HTMLVideoElement.videoWidth
-  - api.HTMLVideoElement.width
   - api.HashChangeEvent
   - api.HashChangeEvent.HashChangeEvent
   - api.HashChangeEvent.newURL
@@ -795,10 +728,8 @@ compat_features:
   - api.OffscreenCanvasRenderingContext2D.textRendering
   - api.OffscreenCanvasRenderingContext2D.wordSpacing
   - api.PageRevealEvent
-  - api.PageRevealEvent.PageRevealEvent
   - api.PageRevealEvent.viewTransition
   - api.PageSwapEvent
-  - api.PageSwapEvent.PageSwapEvent
   - api.PageSwapEvent.activation
   - api.PageSwapEvent.viewTransition
   - api.PageTransitionEvent
@@ -1071,13 +1002,11 @@ compat_features:
   - html.elements.a.href
   - html.elements.a.hreflang
   - html.elements.a.ping
-  - html.elements.a.referrerpolicy
   - html.elements.a.rel
   - html.elements.a.rel.noopener
   - html.elements.a.rel.noreferrer
   - html.elements.a.target
   - html.elements.a.type
-  - html.elements.abbr
   - html.elements.address
   - html.elements.area
   - html.elements.area.alt
@@ -1085,28 +1014,17 @@ compat_features:
   - html.elements.area.download
   - html.elements.area.href
   - html.elements.area.ping
-  - html.elements.area.referrerpolicy
   - html.elements.area.rel
   - html.elements.area.rel.noopener
   - html.elements.area.rel.noreferrer
   - html.elements.area.shape
   - html.elements.area.target
   - html.elements.article
-  - html.elements.aside
-  - html.elements.audio
-  - html.elements.audio.autoplay
-  - html.elements.audio.controls
-  - html.elements.audio.crossorigin
-  - html.elements.audio.loop
-  - html.elements.audio.muted
-  - html.elements.audio.preload
-  - html.elements.audio.src
   - html.elements.b
   - html.elements.bdi
   - html.elements.bdo
   - html.elements.blockquote
   - html.elements.body
-  - html.elements.br
   - html.elements.button
   - html.elements.button.disabled
   - html.elements.canvas
@@ -1114,7 +1032,6 @@ compat_features:
   - html.elements.canvas.width
   - html.elements.caption
   - html.elements.cite
-  - html.elements.code
   - html.elements.col
   - html.elements.col.span
   - html.elements.colgroup
@@ -1161,7 +1078,6 @@ compat_features:
   - html.elements.h6
   - html.elements.head
   - html.elements.header
-  - html.elements.hgroup
   - html.elements.hr
   - html.elements.html
   - html.elements.i
@@ -1169,7 +1085,6 @@ compat_features:
   - html.elements.iframe.allow
   - html.elements.iframe.height
   - html.elements.iframe.name
-  - html.elements.iframe.referrerpolicy
   - html.elements.iframe.sandbox
   - html.elements.iframe.sandbox.allow-downloads
   - html.elements.iframe.sandbox.allow-forms
@@ -1193,7 +1108,6 @@ compat_features:
   - html.elements.img.decoding
   - html.elements.img.height
   - html.elements.img.ismap
-  - html.elements.img.referrerpolicy
   - html.elements.img.sizes
   - html.elements.img.src
   - html.elements.img.srcset
@@ -1261,7 +1175,6 @@ compat_features:
   - html.elements.link.hreflang
   - html.elements.link.integrity
   - html.elements.link.media
-  - html.elements.link.referrerpolicy
   - html.elements.link.rel
   - html.elements.link.rel.alternate_stylesheet
   - html.elements.link.rel.dns-prefetch
@@ -1337,7 +1250,6 @@ compat_features:
   - html.elements.script.crossorigin
   - html.elements.script.defer
   - html.elements.script.integrity
-  - html.elements.script.referrerpolicy
   - html.elements.script.src
   - html.elements.script.type
   - html.elements.script.type.importmap.integrity
@@ -1400,18 +1312,7 @@ compat_features:
   - html.elements.u
   - html.elements.ul
   - html.elements.var
-  - html.elements.video
-  - html.elements.video.autoplay
-  - html.elements.video.controls
-  - html.elements.video.crossorigin
-  - html.elements.video.height
-  - html.elements.video.loop
-  - html.elements.video.muted
   - html.elements.video.playsinline
-  - html.elements.video.poster
-  - html.elements.video.preload
-  - html.elements.video.src
-  - html.elements.video.width
   - html.elements.wbr
   - html.global_attributes.accesskey
   - html.global_attributes.autocapitalize
@@ -1568,6 +1469,33 @@ compat_features:
 #   - api.ElementInternals.validity
 #   - api.ElementInternals.willValidate
 #   - api.HTMLElement.attachInternals
+# - Referrer policy:
+#   - api.HTMLAnchorElement.referrerPolicy
+#   - api.HTMLAreaElement.referrerPolicy
+#   - api.HTMLIFrameElement.referrerPolicy
+#   - api.HTMLImageElement.referrerPolicy
+#   - api.HTMLLinkElement.referrerPolicy
+#   - api.HTMLScriptElement.referrerPolicy
+#   - html.elements.a.referrerpolicy
+#   - html.elements.area.referrerpolicy
+#   - html.elements.iframe.referrerpolicy
+#   - html.elements.img.referrerpolicy
+#   - html.elements.link.referrerpolicy
+#   - html.elements.script.referrerpolicy
+# - <audio>:
+#   - api.HTMLAudioElement
+#   - api.HTMLAudioElement.Audio
+#   - html.elements.audio
+#   - html.elements.audio.autoplay
+#   - html.elements.audio.controls
+#   - html.elements.audio.crossorigin
+#   - html.elements.audio.loop
+#   - html.elements.audio.muted
+#   - html.elements.audio.preload
+#   - html.elements.audio.src
+# - <br>:
+#   - api.HTMLBRElement
+#   - html.elements.br
 # - <base>:
 #   - api.HTMLBaseElement
 #   - api.HTMLBaseElement.href
@@ -1787,6 +1715,75 @@ compat_features:
 #   - api.HTMLLinkElement.imageSrcset
 #   - html.elements.link.imagesizes
 #   - html.elements.link.imagesrcset
+# - <video>:
+#   - api.HTMLMediaElement
+#   - api.HTMLMediaElement.abort_event
+#   - api.HTMLMediaElement.autoplay
+#   - api.HTMLMediaElement.buffered
+#   - api.HTMLMediaElement.canPlayType
+#   - api.HTMLMediaElement.canplay_event
+#   - api.HTMLMediaElement.canplaythrough_event
+#   - api.HTMLMediaElement.controls
+#   - api.HTMLMediaElement.crossOrigin
+#   - api.HTMLMediaElement.currentSrc
+#   - api.HTMLMediaElement.currentTime
+#   - api.HTMLMediaElement.defaultMuted
+#   - api.HTMLMediaElement.defaultPlaybackRate
+#   - api.HTMLMediaElement.duration
+#   - api.HTMLMediaElement.durationchange_event
+#   - api.HTMLMediaElement.emptied_event
+#   - api.HTMLMediaElement.ended
+#   - api.HTMLMediaElement.ended_event
+#   - api.HTMLMediaElement.error
+#   - api.HTMLMediaElement.error_event
+#   - api.HTMLMediaElement.load
+#   - api.HTMLMediaElement.loadeddata_event
+#   - api.HTMLMediaElement.loadedmetadata_event
+#   - api.HTMLMediaElement.loadstart_event
+#   - api.HTMLMediaElement.loop
+#   - api.HTMLMediaElement.muted
+#   - api.HTMLMediaElement.networkState
+#   - api.HTMLMediaElement.pause
+#   - api.HTMLMediaElement.pause_event
+#   - api.HTMLMediaElement.paused
+#   - api.HTMLMediaElement.play
+#   - api.HTMLMediaElement.play_event
+#   - api.HTMLMediaElement.playbackRate
+#   - api.HTMLMediaElement.played
+#   - api.HTMLMediaElement.playing_event
+#   - api.HTMLMediaElement.preload
+#   - api.HTMLMediaElement.progress_event
+#   - api.HTMLMediaElement.ratechange_event
+#   - api.HTMLMediaElement.readyState
+#   - api.HTMLMediaElement.seekable
+#   - api.HTMLMediaElement.seeked_event
+#   - api.HTMLMediaElement.seeking
+#   - api.HTMLMediaElement.seeking_event
+#   - api.HTMLMediaElement.src
+#   - api.HTMLMediaElement.stalled_event
+#   - api.HTMLMediaElement.suspend_event
+#   - api.HTMLMediaElement.timeupdate_event
+#   - api.HTMLMediaElement.volume
+#   - api.HTMLMediaElement.volumechange_event
+#   - api.HTMLMediaElement.waiting_event
+#   - api.HTMLVideoElement
+#   - api.HTMLVideoElement.height
+#   - api.HTMLVideoElement.poster
+#   - api.HTMLVideoElement.resize_event
+#   - api.HTMLVideoElement.videoHeight
+#   - api.HTMLVideoElement.videoWidth
+#   - api.HTMLVideoElement.width
+#   - html.elements.video
+#   - html.elements.video.autoplay
+#   - html.elements.video.controls
+#   - html.elements.video.crossorigin
+#   - html.elements.video.height
+#   - html.elements.video.loop
+#   - html.elements.video.muted
+#   - html.elements.video.poster
+#   - html.elements.video.preload
+#   - html.elements.video.src
+#   - html.elements.video.width
 # - fastSeek():
 #   - api.HTMLMediaElement.fastSeek
 # - preservesPitch:
@@ -1895,6 +1892,14 @@ compat_features:
 # - :read-only and :read-write:
 #   - css.selectors.read-only
 #   - css.selectors.read-write
+# - <abbr>:
+#   - html.elements.abbr
+# - <aside>:
+#   - html.elements.aside
+# - <code>:
+#   - html.elements.code
+# - <hgroup>:
+#   - html.elements.hgroup
 # - <input type="search">:
 #   - html.elements.input.type_search
 # - <link rel="modulepreload">:
