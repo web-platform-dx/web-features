@@ -22,7 +22,7 @@
     "feature-init": "tsx scripts/feature-init.ts",
     "format": "npx prettier --write .",
     "schema:write": "npm run schema -- --out ./schemas/data.schema.json",
-    "schema": "ts-json-schema-generator --tsconfig ./tsconfig.json --path ./types.ts",
+    "schema": "ts-json-schema-generator --tsconfig ./tsconfig.json --path ./types.ts --type=WebFeaturesData",
     "test:caniuse": "tsx scripts/caniuse.ts",
     "test:coverage": "npm run --workspaces test:coverage",
     "test:dist": "tsx scripts/dist.ts --check",

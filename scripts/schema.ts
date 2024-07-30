@@ -1,3 +1,4 @@
+import assert from "node:assert/strict";
 import child_process from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
@@ -30,6 +31,9 @@ function validate() {
     addFormats(ajv);
 
     const validate = ajv.compile(schema);
+
+    // confidence check that the schema finds any errors at all
+    assert.equal(validate({}), false)
 
     const valid = validate(data);
     if (!valid) {
