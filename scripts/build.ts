@@ -7,7 +7,6 @@ import { basename } from "node:path";
 import winston from "winston";
 import yargs from "yargs";
 import * as data from "../index.js";
-import { FeatureData } from "../types.js";
 import { validate } from "./validate.js";
 
 const logger = winston.createLogger({
@@ -64,15 +63,14 @@ function buildPackage() {
 
 function buildExtendedJSON() {
   for (const [id, featureData] of Object.entries(data.features)) {
-    if (Array.isArray(featureData.compat_features) && featureData.status) {
-      const by_compat_key: FeatureData["status"]["by_compat_key"] = {};
-
+    if (
+      Array.isArray(featureData.compat_features) &&
+      featureData.compat_features.length &&
+      featureData.status
+    ) {
+      featureData.status.by_compat_key = {};
       for (const key of featureData.compat_features) {
-        by_compat_key[key] = getStatus(id, key);
-      }
-
-      if (Object.keys(by_compat_key).length) {
-        featureData.status.by_compat_key = by_compat_key;
+        featureData.status.by_compat_key[key] = getStatus(id, key);
       }
     }
   }
