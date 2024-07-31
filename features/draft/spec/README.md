@@ -12,6 +12,7 @@ To help out, pick a feature and do the following:
   from `compat_features` until the date and browser versions seem plausible. Run
   `npm run dist` to regenerate dist files after changes.
 - Write a description for the feature.
+- Remove draft_date.
 - Move the file into the main features/ directory and submit a PR with your
   changes.
 
