@@ -8,4 +8,5 @@ const { features, groups, snapshots } = JSON.parse(
   readFileSync(jsonPath, { encoding: "utf-8" }),
 ) as WebFeaturesData;
 
+export * from "./types";
 export { features, groups, snapshots };
