@@ -165,9 +165,17 @@ compat_features:
   - html.elements.area.target
   - html.elements.b
   - html.elements.body
+  - html.elements.button
   - html.elements.div
+  - html.elements.h1
+  - html.elements.h2
+  - html.elements.h3
+  - html.elements.h4
+  - html.elements.h5
+  - html.elements.h6
   - html.elements.head
   - html.elements.html
+  - html.elements.i
   - html.elements.img
   - html.elements.img.src
   - html.elements.input
@@ -207,6 +215,7 @@ compat_features:
   - html.elements.thead
   - html.elements.title
   - html.elements.tr
+  - html.elements.u
   - html.global_attributes.style
 
   # baseline: high
@@ -587,7 +596,6 @@ compat_features:
   #   safari: ≤4
   #   safari_ios: ≤3.2
   - html.elements.blockquote
-  - html.elements.button
   - html.elements.button.disabled
   - html.elements.caption
   - html.elements.cite
@@ -613,13 +621,6 @@ compat_features:
   - html.elements.form.method
   - html.elements.form.name
   - html.elements.form.target
-  - html.elements.h1
-  - html.elements.h2
-  - html.elements.h3
-  - html.elements.h4
-  - html.elements.h5
-  - html.elements.h6
-  - html.elements.i
   - html.elements.iframe
   - html.elements.iframe.height
   - html.elements.iframe.name
@@ -667,13 +668,25 @@ compat_features:
   - html.elements.textarea.name
   - html.elements.textarea.readonly
   - html.elements.textarea.rows
-  - html.elements.u
   - html.elements.ul
   - html.elements.var
   - html.global_attributes.accesskey
   - html.global_attributes.class
   - html.global_attributes.lang
   - html.global_attributes.title
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - html.elements.wbr
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -1703,19 +1716,6 @@ compat_features:
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
   # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "17"
-  #   firefox_android: "17"
-  #   safari: "5"
-  #   safari_ios: "4.2"
-  - html.elements.iframe.sandbox
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
   #   chrome: "5"
   #   chrome_android: "18"
   #   edge: "12"
@@ -1798,6 +1798,7 @@ compat_features:
   #   safari: "5"
   #   safari_ios: "4"
   - api.HTMLIFrameElement.sandbox
+  - html.elements.iframe.sandbox
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -1825,6 +1826,8 @@ compat_features:
   #   firefox_android: "38"
   #   safari: "5"
   #   safari_ios: "4.2"
+  - html.elements.rp
+  - html.elements.rt
   - html.elements.ruby
 
   # baseline: high
@@ -2259,6 +2262,19 @@ compat_features:
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
   # support:
+  #   chrome: "17"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "28"
+  #   firefox_android: "27"
+  #   safari: "6"
+  #   safari_ios: "6"
+  - html.elements.iframe.sandbox.allow-popups
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
   #   chrome: "19"
   #   chrome_android: "25"
   #   edge: "12"
@@ -2453,6 +2469,19 @@ compat_features:
   #   safari: "8"
   #   safari_ios: "8"
   - api.Document.currentScript
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "30"
+  #   chrome_android: "30"
+  #   edge: "12"
+  #   firefox: "1.5"
+  #   firefox_android: "4"
+  #   safari: "7"
+  #   safari_ios: "7"
+  - api.BeforeUnloadEvent
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -3136,6 +3165,8 @@ compat_features:
   #   safari_ios: "10"
   - api.HTMLDataElement
   - api.HTMLDataElement.value
+  - html.elements.data
+  - html.elements.data.value
 
   # baseline: high
   # baseline_low_date: 2017-11-28
@@ -3615,19 +3646,6 @@ compat_features:
   # baseline_low_date: ≤2018-10-02
   # baseline_high_date: ≤2021-04-02
   # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: ≤18
-  #   firefox: "28"
-  #   firefox_android: "27"
-  #   safari: ≤10.1
-  #   safari_ios: ≤10.3
-  - html.elements.iframe.sandbox.allow-popups
-
-  # baseline: high
-  # baseline_low_date: ≤2018-10-02
-  # baseline_high_date: ≤2021-04-02
-  # support:
   #   chrome: "6"
   #   chrome_android: "18"
   #   edge: ≤18
@@ -3685,20 +3703,6 @@ compat_features:
   #   safari_ios: "9.3"
   - html.elements.source.sizes
   - html.elements.source.srcset
-
-  # baseline: high
-  # baseline_low_date: ≤2018-10-02
-  # baseline_high_date: ≤2021-04-02
-  # support:
-  #   chrome: "62"
-  #   chrome_android: "62"
-  #   edge: ≤18
-  #   firefox: "22"
-  #   firefox_android: "22"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - html.elements.data
-  - html.elements.data.value
 
   # baseline: high
   # baseline_low_date: 2018-10-23
@@ -3823,28 +3827,16 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "79"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - html.elements.wbr
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
   #   chrome: "5"
   #   chrome_android: "18"
   #   edge: "79"
-  #   firefox: "38"
-  #   firefox_android: "38"
+  #   firefox: ≤49
+  #   firefox_android: "49"
   #   safari: "5"
-  #   safari_ios: "4.2"
-  - html.elements.rp
-  - html.elements.rt
+  #   safari_ios: "4"
+  - html.elements.iframe.sandbox.allow-forms
+  - html.elements.iframe.sandbox.allow-same-origin
+  - html.elements.iframe.sandbox.allow-scripts
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -3864,6 +3856,19 @@ compat_features:
   - api.EventSource.message_event
   - api.EventSource.open_event
   - api.EventSource.readyState
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "6"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: ≤49
+  #   firefox_android: "49"
+  #   safari: "5"
+  #   safari_ios: "4.2"
+  - html.elements.iframe.sandbox.allow-top-navigation
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -4022,19 +4027,6 @@ compat_features:
   #   safari: "7"
   #   safari_ios: "7"
   - api.CanvasRenderingContext2D.isPointInStroke
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "30"
-  #   chrome_android: "30"
-  #   edge: "79"
-  #   firefox: "1.5"
-  #   firefox_android: "4"
-  #   safari: "7"
-  #   safari_ios: "7"
-  - api.BeforeUnloadEvent
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -4304,23 +4296,6 @@ compat_features:
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - api.CustomElementRegistry.upgrade
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: ≤49
-  #   chrome_android: "49"
-  #   edge: "79"
-  #   firefox: ≤49
-  #   firefox_android: "49"
-  #   safari: ≤10.1
-  #   safari_ios: ≤10.3
-  - html.elements.iframe.sandbox.allow-forms
-  - html.elements.iframe.sandbox.allow-pointer-lock
-  - html.elements.iframe.sandbox.allow-same-origin
-  - html.elements.iframe.sandbox.allow-scripts
-  - html.elements.iframe.sandbox.allow-top-navigation
 
   # baseline: high
   # baseline_low_date: ≤2020-01-15
@@ -4974,6 +4949,18 @@ compat_features:
   - api.CanvasRenderingContext2D.getContextAttributes
 
   # baseline: low
+  # baseline_low_date: 2023-09-18
+  # support:
+  #   chrome: "83"
+  #   chrome_android: "83"
+  #   edge: "83"
+  #   firefox: "82"
+  #   firefox_android: "82"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - html.elements.iframe.sandbox.allow-downloads
+
+  # baseline: low
   # baseline_low_date: 2023-11-21
   # support:
   #   chrome: "103"
@@ -5040,6 +5027,16 @@ compat_features:
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - html.elements.input.type_color
+
+  # baseline: false
+  # support:
+  #   chrome: "23"
+  #   chrome_android: "25"
+  #   edge: "79"
+  #   firefox: ≤49
+  #   firefox_android: "49"
+  #   safari: "10.1"
+  - html.elements.iframe.sandbox.allow-pointer-lock
 
   # baseline: false
   # support:
@@ -5307,15 +5304,6 @@ compat_features:
   #   safari: "15"
   #   safari_ios: "15"
   - api.HTMLCanvasElement.getContext.2d_context.options_desynchronized_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "83"
-  #   chrome_android: "83"
-  #   edge: "83"
-  #   firefox: "82"
-  #   firefox_android: "82"
-  - html.elements.iframe.sandbox.allow-downloads
 
   # baseline: false
   # support:
@@ -5647,7 +5635,6 @@ compat_features:
   - api.NavigationActivation.from
   - api.NavigationActivation.navigationType
   - api.PageRevealEvent
-  - api.PageRevealEvent.PageRevealEvent
   - api.Window.pagereveal_event
 
   # baseline: false
@@ -5657,7 +5644,6 @@ compat_features:
   #   edge: "124"
   - api.HTMLElement.writingSuggestions
   - api.PageSwapEvent
-  - api.PageSwapEvent.PageSwapEvent
   - api.PageSwapEvent.activation
   - api.Window.pageswap_event
   - html.elements.link.rel.expect
@@ -5692,6 +5678,13 @@ compat_features:
   - api.CloseWatcher.requestClose
   - api.PageRevealEvent.viewTransition
   - api.PageSwapEvent.viewTransition
+
+  # baseline: false
+  # support:
+  #   chrome: "127"
+  #   chrome_android: "127"
+  #   edge: "127"
+  - html.elements.script.type.importmap.integrity
 
   # baseline: false
   # support:
@@ -5732,6 +5725,4 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - api.CanvasRenderingContext2D.scrollPathIntoView
-  - html.elements.script.type.importmap.integrity
   - http.headers.Permissions-Policy.document-domain

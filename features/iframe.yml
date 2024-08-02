@@ -1,0 +1,22 @@
+name: <iframe>
+description: The `<iframe>` element embeds another HTML page into the current page.
+spec: https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element
+group: html-elements
+status:
+  compute_from: html.elements.iframe
+compat_features:
+  - api.HTMLIFrameElement
+  - api.HTMLIFrameElement.allow
+  - api.HTMLIFrameElement.contentDocument
+  - api.HTMLIFrameElement.contentWindow
+  - api.HTMLIFrameElement.getSVGDocument
+  - api.HTMLIFrameElement.height
+  - api.HTMLIFrameElement.name
+  - api.HTMLIFrameElement.src
+  - api.HTMLIFrameElement.width
+  - html.elements.iframe
+  - html.elements.iframe.allow
+  - html.elements.iframe.height
+  - html.elements.iframe.name
+  - html.elements.iframe.src
+  - html.elements.iframe.width
