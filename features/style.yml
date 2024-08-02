@@ -1,8 +1,9 @@
-draft_date: 2024-06-05
 name: <style>
-description: The `<style>` element TODO.
+description: The `<style>` element embeds an inline CSS stylesheet in a document.
 spec: https://html.spec.whatwg.org/multipage/semantics.html#the-style-element
-group: html
+group: html-elements
+status:
+  compute_from: html.elements.style
 compat_features:
   - api.HTMLStyleElement
   - api.HTMLStyleElement.disabled

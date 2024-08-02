@@ -3,17 +3,18 @@
 
 status:
   baseline: high
-  baseline_low_date: 2015-11-12
-  baseline_high_date: 2018-05-12
+  baseline_low_date: 2015-07-29
+  baseline_high_date: 2018-01-29
   support:
     chrome: "1"
     chrome_android: "18"
-    edge: "13"
+    edge: "12"
     firefox: "1"
     firefox_android: "4"
     safari: "1"
     safari_ios: "1"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -30,7 +31,6 @@ compat_features:
   - html.elements.style
   - html.elements.style.media
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-11-12
   # baseline_high_date: 2018-05-12
