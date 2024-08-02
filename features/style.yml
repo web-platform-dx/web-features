@@ -2,6 +2,8 @@ name: <style>
 description: The `<style>` element contains CSS style information for a document, or part of a document.
 spec: https://html.spec.whatwg.org/multipage/semantics.html#the-style-element
 group: html-elements
+status:
+  compute_from: html.elements.style
 compat_features:
   - api.HTMLStyleElement
   - api.HTMLStyleElement.disabled
