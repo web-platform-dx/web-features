@@ -80,10 +80,7 @@ function buildExtendedJSON() {
     process.exit(1);
   }
 
-  fs.writeFileSync(
-    new URL("./web-features.extended.json", rootDir),
-    stringify(data),
-  );
+  fs.writeFileSync(new URL("./data.extended.json", rootDir), stringify(data));
 }
 
 function valid(data: any): boolean {
