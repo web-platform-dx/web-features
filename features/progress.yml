@@ -1,0 +1,18 @@
+name: <progress>
+description: The `<progress>` element displays an indicator showing the completion progress of a task, typically displayed as a progress bar.
+spec: https://html.spec.whatwg.org/multipage/form-elements.html#the-progress-element
+group:
+  - forms
+  - html-elements
+caniuse: progress
+status:
+  compute_from: html.elements.progress
+compat_features:
+  - api.HTMLProgressElement
+  - api.HTMLProgressElement.labels
+  - api.HTMLProgressElement.max
+  - api.HTMLProgressElement.position
+  - api.HTMLProgressElement.value
+  - html.elements.progress
+  - html.elements.progress.max
+  - html.elements.progress.value

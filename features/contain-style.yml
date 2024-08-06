@@ -1,0 +1,6 @@
+name: Style containment
+description: "The `contain: style` CSS declaration permits the browser to avoid slower layout calculations by preventing modification to counter (`counter-increment` and `counter-set`) and quotation styles (`content` property quote values) beyond the element's descendants."
+spec: https://drafts.csswg.org/css-contain-2/#containment-style
+group: containment
+compat_features:
+  - css.properties.contain.style

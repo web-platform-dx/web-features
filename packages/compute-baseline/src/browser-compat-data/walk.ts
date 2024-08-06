@@ -73,7 +73,7 @@ export function* walk(entryPoints: string | string[], data: BCD) {
         if (isFeatureData(queryResult)) {
           return lowLevelWalk(queryResult, entryPoint);
         }
-        throw Error("Unhandled traverse target");
+        throw new Error("Unhandled traverse target");
       }),
     );
   }
