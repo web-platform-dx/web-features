@@ -28,11 +28,11 @@ export interface FeatureData {
     compat_features?: string[];
 }
 
-type browserIdentifier = "chrome" | "chrome_android" | "edge" | "firefox" | "firefox_android" | "safari" | "safari_ios";
+export type BrowserIdentifier = "chrome" | "chrome_android" | "edge" | "firefox" | "firefox_android" | "safari" | "safari_ios";
 
-type BaselineHighLow = "high" | "low";
+export type BaselineHighLow = "high" | "low";
 
-interface Status {
+export interface Status {
     /** Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false) */
     baseline: BaselineHighLow | false;
     /** Date the feature achieved Baseline low status */
@@ -41,11 +41,11 @@ interface Status {
     baseline_high_date?: string;
     /** Browser versions that most-recently introduced the feature */
     support: {
-        [K in browserIdentifier]?: string;
+        [K in BrowserIdentifier]?: string;
     };
 }
 
-interface SupportStatus extends Status {
+export interface SupportStatus extends Status {
     /** Statuses for each key in the feature's compat_features list, if applicable. Not available to the npm release of web-features. */
     by_compat_key?: Record<string, Status>
 }
@@ -53,7 +53,7 @@ interface SupportStatus extends Status {
 /** Specification URL
  * @format uri
 */
-type specification_url = string;
+export type specification_url = string;
 
 export interface GroupData {
     /** Short name */
