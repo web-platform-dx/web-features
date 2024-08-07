@@ -1,0 +1,39 @@
+name: Publish web-features
+
+on:
+  push:
+    # Tags on the form v1.2.3 are for releases. Any other tags are ignored.
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+
+env:
+  package_dir: "packages/web-features"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - run: npm test
+  publish:
+    if: github.repository == 'web-platform-dx/web-features'
+    runs-on: ubuntu-latest
+    needs: "test"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+          registry-url: "https://registry.npmjs.org"
+      - run: npm ci
+      - run: npm run build
+      - run: npm publish
+        working-directory: ${{ env.package_dir }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

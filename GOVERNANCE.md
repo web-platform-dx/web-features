@@ -75,8 +75,11 @@ Inactive _Peers_ (no activity on the project for months or more) might be marked
 
 #### List of current Peers
 
+- Adriana Jara ([@tropicadri](https://github.com/tropicadri))
 - Brian Kardell ([@bkardell](https://github.com/bkardell))
 - Patrick Brosset ([@captainbrosset](https://github.com/captainbrosset))
+- Pete LePage ([@petele](https://github.com/petele))
+- Mariko Kosaka ([@kosamari](https://github.com/kosamari))
 
 A _Peer_ who shows an above-average level of contribution to the project, particularly with respect to its strategic direction and long-term health, may be nominated to become an _Owner_, described below.
 

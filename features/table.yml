@@ -1,0 +1,68 @@
+name: Tables
+description: The `<table>` HTML element, with several related elements, represents tabular data in rows and columns of cells.
+spec: https://html.spec.whatwg.org/multipage/tables.html
+status:
+  compute_from: html.elements.table
+group: html-elements
+compat_features:
+  - api.HTMLTableCaptionElement
+  - api.HTMLTableCellElement
+  - api.HTMLTableCellElement.abbr
+  - api.HTMLTableCellElement.cellIndex
+  - api.HTMLTableCellElement.colSpan
+  - api.HTMLTableCellElement.headers
+  - api.HTMLTableCellElement.rowSpan
+  - api.HTMLTableCellElement.scope
+  - api.HTMLTableColElement
+  - api.HTMLTableColElement.span
+  - api.HTMLTableElement
+  - api.HTMLTableElement.caption
+  - api.HTMLTableElement.createCaption
+  - api.HTMLTableElement.createTBody
+  - api.HTMLTableElement.createTFoot
+  - api.HTMLTableElement.createTHead
+  - api.HTMLTableElement.deleteCaption
+  - api.HTMLTableElement.deleteRow
+  - api.HTMLTableElement.deleteTFoot
+  - api.HTMLTableElement.deleteTHead
+  - api.HTMLTableElement.insertRow
+  - api.HTMLTableElement.rows
+  - api.HTMLTableElement.tBodies
+  - api.HTMLTableElement.tFoot
+  - api.HTMLTableElement.tHead
+  - api.HTMLTableRowElement
+  - api.HTMLTableRowElement.cells
+  - api.HTMLTableRowElement.deleteCell
+  - api.HTMLTableRowElement.insertCell
+  - api.HTMLTableRowElement.insertCell.index_parameter_negative_one
+  - api.HTMLTableRowElement.insertCell.index_parameter_optional
+  - api.HTMLTableRowElement.rowIndex
+  - api.HTMLTableRowElement.sectionRowIndex
+  - api.HTMLTableSectionElement
+  - api.HTMLTableSectionElement.deleteRow
+  - api.HTMLTableSectionElement.insertRow
+  - api.HTMLTableSectionElement.rows
+  - html.elements.caption
+  - html.elements.col
+  - html.elements.col.span
+  - html.elements.colgroup
+  - html.elements.colgroup.span
+  - html.elements.table
+  - html.elements.tbody
+  - html.elements.td
+  - html.elements.td.colspan
+  - html.elements.td.headers
+  - html.elements.td.rowspan
+  # Excluded because of a non-real value
+  # - html.elements.td.rowspan.rowspan_zero
+  - html.elements.tfoot
+  - html.elements.th
+  - html.elements.th.abbr
+  - html.elements.th.colspan
+  - html.elements.th.headers
+  - html.elements.th.rowspan
+  # Excluded because of a non-real value
+  # - html.elements.th.rowspan.rowspan_zero
+  - html.elements.th.scope
+  - html.elements.thead
+  - html.elements.tr

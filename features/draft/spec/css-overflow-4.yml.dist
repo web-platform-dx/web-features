@@ -14,9 +14,21 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
+  #   safari: ≤3
+  #   safari_ios: ≤2
+  - css.properties.overflow.auto
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
   #   safari: "3"
   #   safari_ios: "2"
-  - css.properties.overflow.auto
   - css.properties.overflow.hidden
   - css.properties.overflow.scroll
   - css.properties.overflow.visible
@@ -31,12 +43,24 @@ compat_features:
   #   firefox: "3.5"
   #   firefox_android: "4"
   #   safari: "3"
-  #   safari_ios: "2"
+  #   safari_ios: ≤2
   - css.properties.overflow-x.auto
+  - css.properties.overflow-y.auto
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3.5"
+  #   firefox_android: "4"
+  #   safari: "3"
+  #   safari_ios: "2"
   - css.properties.overflow-x.hidden
   - css.properties.overflow-x.scroll
   - css.properties.overflow-x.visible
-  - css.properties.overflow-y.auto
   - css.properties.overflow-y.hidden
   - css.properties.overflow-y.scroll
   - css.properties.overflow-y.visible

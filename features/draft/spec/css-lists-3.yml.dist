@@ -84,13 +84,13 @@ compat_features:
   # baseline_low_date: 2020-05-19
   # baseline_high_date: 2022-11-19
   # support:
-  #   chrome: "83"
+  #   chrome: ≤83
   #   chrome_android: "83"
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "25"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
   - css.properties.counter-increment.list-item
   - css.properties.counter-reset.list-item
 
@@ -101,7 +101,7 @@ compat_features:
   #   chrome: "1"
   #   chrome_android: "18"
   #   edge: "12"
-  #   firefox: "72"
+  #   firefox: ≤72
   #   firefox_android: "79"
   #   safari: "1"
   #   safari_ios: "1"
