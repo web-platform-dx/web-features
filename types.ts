@@ -9,6 +9,8 @@ export interface WebFeaturesData {
     snapshots: { [key: string]: SnapshotData };
 }
 
+
+/** Browser information */
 export interface BrowserData {
     /** The name of the browser, as in "Edge" or "Safari on iOS" */
     name: string;
@@ -16,6 +18,7 @@ export interface BrowserData {
     releases: Release[];
 }
 
+/** Browser release information */
 export interface Release {
     /** The version string, as in "10" or "17.1" */
     version: string;

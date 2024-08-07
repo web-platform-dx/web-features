@@ -4,6 +4,7 @@
   "definitions": {
     "BrowserData": {
       "additionalProperties": false,
+      "description": "Browser information",
       "properties": {
         "name": {
           "description": "The name of the browser, as in \"Edge\" or \"Safari on iOS\"",
@@ -259,6 +260,7 @@
     },
     "Release": {
       "additionalProperties": false,
+      "description": "Browser release information",
       "properties": {
         "date": {
           "description": "The release date, as in \"2023-12-11\"",
