@@ -162,11 +162,6 @@ Don't use it as a coordinating conjunction; start a new sentence instead.
 For example, this is an example.
 ([#738](https://github.com/web-platform-dx/web-features/pull/738#discussion_r1537762579), [#742](https://github.com/web-platform-dx/web-features/pull/742))
 
-##### indicates
-
-Avoid when you mean sets or represents.
-See [sets](#sets) and [represents](#represents).
-
 ##### is used to
 
 Omit "is used" where there's no loss in meaning.
@@ -191,7 +186,7 @@ If an HTML element or other type doesn't obviously do anything, then it probably
 
 ##### sets
 
-Prefer this over multisyllabic alternatives, such as "defines", "determines", "indicates", or "specifies".
+Prefer this over multisyllabic alternatives, such as "defines", "determines", or "specifies".
 Use "The property sets…" but never "The property defines…."
 ([#727](https://github.com/web-platform-dx/web-features/pull/727#discussion_r1537635491))
 
