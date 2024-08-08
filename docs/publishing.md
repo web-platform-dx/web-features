@@ -5,7 +5,7 @@
 > [!NOTE]
 > This information is for [project owners](../GOVERNANCE.md#roles-and-responsibilities).
 
-These are the steps to publish regular release on NPM and as a GitHub release:
+These are the steps to publish a regular release on NPM and as a GitHub release:
 
 - Determine if it should be a major, minor, or patch release. The "[major version required](https://github.com/web-platform-dx/web-features/pulls?q=is%3Apr+label%3A%major+version+required%22+is%3Aclosed+sort%3Aupdated-desc)" and "[minor version required](https://github.com/web-platform-dx/web-features/pulls?q=is%3Apr+label%3A%minor+version+required%22+is%3Aclosed+sort%3Aupdated-desc)" labels should be used to support this decision.
 - Update `packages/web-features/package.json` and `packages/web-features/package-lock.json` in a PR and get review.
