@@ -1,8 +1,25 @@
 # Publishing
 
+## Regular releases
+
+These are the steps to publish regular release on NPM and as a GitHub release:
+
+- Determine if it should be a major, minor, or patch release. The "major version required" and "minor version required" labels should be used to support this decision.
+- Update packages/web-features/package.json and packages/web-features/package-lock.json in a PR and get review.
+- Merge the PR and draft a new release at https://github.com/web-platform-dx/web-features/releases/new
+- Fill in the tag name vX.Y.Z manually as both the tag and release title
+- For major releases, add a "Breaking Changes" section up top.
+- For minor releases, add a "What's New" section up top.
+- Click "Generate release notes"
+- Search for "<" and make sure all element names are quoted with backquotes
+- Remove all lines from Dependabot
+- Publish the GitHub release
+
+Publishing the GitHub release creates the tag. This triggers the [Publish web-features GitHub Actions workflows](https://github.com/web-platform-dx/web-features/blob/main/.github/workflows/publish_web-features.yml), uploads GitHub release artifacts and publishes the package to NPM.
+
 ## `@next` releases
 
-The [`publish_next_` GitHub Actions workflows](https://github.com/web-platform-dx/web-features/tree/main/.github/workflows) automatically publish pre-releases on push to the main branch using the `next` [npm dist tag](https://docs.npmjs.com/adding-dist-tags-to-packages).
+The [Publish web-features@next GitHub Actions workflows](https://github.com/web-platform-dx/web-features/blob/main/.github/workflows/publish_next_web-features.yml) automatically publish pre-releases on push to the main branch using the `next` [npm dist tag](https://docs.npmjs.com/adding-dist-tags-to-packages).
 You can install these prereleases using a command such as `npm install web-features@next`.
 
 ## Secrets
