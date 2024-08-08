@@ -1,0 +1,54 @@
+name: String
+description: The String object is used to store and manipulate a sequence of characters.
+spec: https://tc39.es/ecma262/multipage/text-processing.html#sec-string-objects
+status:
+  compute_from: javascript.builtins.String
+compat_features:
+  - javascript.builtins.String
+  - javascript.builtins.String.String
+  - javascript.builtins.String.at
+  - javascript.builtins.String.charAt
+  - javascript.builtins.String.charCodeAt
+  - javascript.builtins.String.codePointAt
+  - javascript.builtins.String.concat
+  - javascript.builtins.String.endsWith
+  - javascript.builtins.String.fromCharCode
+  - javascript.builtins.String.fromCodePoint
+  - javascript.builtins.String.includes
+  - javascript.builtins.String.indexOf
+  - javascript.builtins.String.isWellFormed
+  - javascript.builtins.String.lastIndexOf
+  - javascript.builtins.String.length
+  - javascript.builtins.String.localeCompare
+  - javascript.builtins.String.localeCompare.locales_parameter
+  - javascript.builtins.String.localeCompare.options_parameter
+  - javascript.builtins.String.match
+  - javascript.builtins.String.matchAll
+  - javascript.builtins.String.normalize
+  - javascript.builtins.String.padEnd
+  - javascript.builtins.String.padStart
+  - javascript.builtins.String.raw
+  - javascript.builtins.String.repeat
+  - javascript.builtins.String.replace
+  - javascript.builtins.String.replaceAll
+  - javascript.builtins.String.search
+  - javascript.builtins.String.slice
+  - javascript.builtins.String.split
+  - javascript.builtins.String.startsWith
+  # Note: substr is deprecated
+  # - javascript.builtins.String.substr
+  - javascript.builtins.String.substring
+  - javascript.builtins.String.toLocaleLowerCase
+  - javascript.builtins.String.toLocaleLowerCase.locale
+  - javascript.builtins.String.toLocaleUpperCase
+  - javascript.builtins.String.toLocaleUpperCase.locale
+  - javascript.builtins.String.toLowerCase
+  - javascript.builtins.String.toString
+  - javascript.builtins.String.toUpperCase
+  - javascript.builtins.String.toWellFormed
+  - javascript.builtins.String.trim
+  - javascript.builtins.String.trimEnd
+  - javascript.builtins.String.trimStart
+  - javascript.builtins.String.unicode_code_point_escapes
+  - javascript.builtins.String.valueOf
+  - javascript.builtins.String.@@iterator
