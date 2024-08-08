@@ -9,6 +9,8 @@
 
 !/features/*.yml
 /features/*.yml.dist
+!/groups/*.yml
+!/snapshots/*.yml
 
 !/packages/compute-baseline/**
 !/packages/web-features/**
@@ -19,3 +21,4 @@
 !/scripts/find-troublesome-ancestors.ts
 !/scripts/release.ts
 !/scripts/update-drafts.ts
+!/scripts/validate.ts
