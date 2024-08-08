@@ -1,0 +1,44 @@
+name: Regular Expressions (RegExp)
+description: The RegExp object is used for matching text with a regular expression.
+spec: https://tc39.es/ecma262/multipage/text-processing.html#sec-regexp-regular-expression-objects
+status:
+  compute_from: javascript.builtins.RegExp
+compat_features:
+  - javascript.builtins.RegExp
+  - javascript.builtins.RegExp.RegExp
+  - javascript.builtins.RegExp.compile
+  - javascript.builtins.RegExp.dotAll
+  - javascript.builtins.RegExp.exec
+  - javascript.builtins.RegExp.flags
+  - javascript.builtins.RegExp.global
+  - javascript.builtins.RegExp.global.prototype_accessor
+  - javascript.builtins.RegExp.hasIndices
+  - javascript.builtins.RegExp.ignoreCase
+  - javascript.builtins.RegExp.ignoreCase.prototype_accessor
+  - javascript.builtins.RegExp.input
+  - javascript.builtins.RegExp.lastIndex
+  - javascript.builtins.RegExp.lastMatch
+  - javascript.builtins.RegExp.lastParen
+  - javascript.builtins.RegExp.leftContext
+  - javascript.builtins.RegExp.multiline
+  - javascript.builtins.RegExp.multiline.prototype_accessor
+  - javascript.builtins.RegExp.n
+  - javascript.builtins.RegExp.rightContext
+  - javascript.builtins.RegExp.source
+  - javascript.builtins.RegExp.source.empty_regex_string
+  - javascript.builtins.RegExp.source.escaping
+  - javascript.builtins.RegExp.source.prototype_accessor
+  - javascript.builtins.RegExp.sticky
+  - javascript.builtins.RegExp.sticky.anchored_sticky_flag
+  - javascript.builtins.RegExp.sticky.prototype_accessor
+  - javascript.builtins.RegExp.test
+  - javascript.builtins.RegExp.toString
+  - javascript.builtins.RegExp.toString.escaping
+  - javascript.builtins.RegExp.unicode
+  - javascript.builtins.RegExp.unicodeSets
+  - javascript.builtins.RegExp.@@match
+  - javascript.builtins.RegExp.@@matchAll
+  - javascript.builtins.RegExp.@@replace
+  - javascript.builtins.RegExp.@@search
+  - javascript.builtins.RegExp.@@species
+  - javascript.builtins.RegExp.@@split
