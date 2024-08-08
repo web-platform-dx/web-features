@@ -1,0 +1,12 @@
+name: <style>
+description: The `<style>` element embeds an inline CSS stylesheet in a document.
+spec: https://html.spec.whatwg.org/multipage/semantics.html#the-style-element
+group: html-elements
+status:
+  compute_from: html.elements.style
+compat_features:
+  - api.HTMLStyleElement
+  - api.HTMLStyleElement.disabled
+  - api.HTMLStyleElement.media
+  - html.elements.style
+  - html.elements.style.media

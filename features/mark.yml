@@ -2,5 +2,7 @@ name: <mark>
 description: The `<mark>` element represents text which is marked or highlighted for reference or notation purposes.
 spec: https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-mark-element
 group: html-elements
+# Note: <mark> is part of https://caniuse.com/html5semantic but that feature
+# covers many unrelated elements and is therefore not linked here.
 compat_features:
   - html.elements.mark
