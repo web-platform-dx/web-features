@@ -1,0 +1,15 @@
+name: WeakMap
+description: Map objects hold key-value pairs and does not create strong references to its keys.
+spec: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-weakmap-objects
+status:
+  compute_from: javascript.builtins.WeakMap
+compat_features:
+  - javascript.builtins.WeakMap
+  - javascript.builtins.WeakMap.WeakMap
+  - javascript.builtins.WeakMap.WeakMap.iterable_allowed
+  - javascript.builtins.WeakMap.WeakMap.null_allowed
+  - javascript.builtins.WeakMap.delete
+  - javascript.builtins.WeakMap.get
+  - javascript.builtins.WeakMap.has
+  - javascript.builtins.WeakMap.set
+  - javascript.builtins.WeakMap.symbol_as_keys
