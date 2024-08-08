@@ -4,7 +4,7 @@ import path from 'path';
 import { Temporal } from '@js-temporal/polyfill';
 import { fdir } from 'fdir';
 import YAML from 'yaml';
-import { FeatureData, GroupData, SnapshotData } from './types';
+import { FeatureData, GroupData, SnapshotData, WebFeaturesData } from './types';
 
 import { toString as hastTreeToString } from 'hast-util-to-string';
 import rehypeStringify from 'rehype-stringify';
@@ -12,7 +12,8 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
 
-import { BASELINE_LOW_TO_HIGH_DURATION, parseRangedDateString } from 'compute-baseline';
+import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, parseRangedDateString } from 'compute-baseline';
+import { Compat } from 'compute-baseline/browser-compat-data';
 
 // The longest name allowed, to allow for compact display.
 const nameMaxLength = 80;
@@ -181,4 +182,19 @@ for (const [key, data] of yamlEntries('features')) {
     features[key] = data;
 }
 
-export { features, groups, snapshots };
+const compat = new Compat();
+const browsers: Partial<WebFeaturesData["browsers"]> = {};
+for (const browser of coreBrowserSet.map(identifier => compat.browser(identifier))) {
+    const { id, name } = browser;
+    const releases = browser.releases.filter(release => !release.isPrerelease()).map(release => ({
+        version: release.version,
+        date: String(release.date),
+    }))
+    browsers[id] = {
+        name,
+        releases,
+    }
+}
+
+export { browsers, features, groups, snapshots };
+

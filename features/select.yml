@@ -1,11 +1,14 @@
-draft_date: 2024-06-05
 name: <select>
-description: The `<select>` element TODO.
+description: The `<select>` element provides a menu of options for a user to pick from, typically rendered as a dropdown list.
 spec:
   - https://html.spec.whatwg.org/multipage/form-elements.html#the-optgroup-element
   - https://html.spec.whatwg.org/multipage/form-elements.html#the-option-element
   - https://html.spec.whatwg.org/multipage/form-elements.html#the-select-element
-group: forms
+group:
+  - forms
+  - html-elements
+status:
+  compute_from: html.elements.select
 compat_features:
   - api.HTMLOptGroupElement
   - api.HTMLOptGroupElement.disabled
