@@ -16,12 +16,13 @@
     "node": ">=18.19.0"
   },
   "scripts": {
+    "build:extended": "tsx scripts/build.ts extended-json",
     "build": "tsx scripts/build.ts package",
     "dist": "tsx scripts/dist.ts",
     "feature-init": "tsx scripts/feature-init.ts",
     "format": "npx prettier --write .",
     "schema:write": "npm run schema -- --out ./schemas/data.schema.json",
-    "schema": "ts-json-schema-generator --tsconfig ./tsconfig.json --path ./types.ts",
+    "schema": "ts-json-schema-generator --tsconfig ./tsconfig.json --path ./types.ts --type=WebFeaturesData",
     "test:caniuse": "tsx scripts/caniuse.ts",
     "test:coverage": "npm run --workspaces test:coverage",
     "test:dist": "tsx scripts/dist.ts --check",
@@ -34,15 +35,15 @@
     "update-drafts": "tsx scripts/update-drafts.ts"
   },
   "devDependencies": {
-    "@eslint/js": "^9.7.0",
+    "@eslint/js": "^9.8.0",
     "@js-temporal/polyfill": "^0.4.4",
-    "@mdn/browser-compat-data": "^5.5.40",
+    "@mdn/browser-compat-data": "^5.5.45",
     "@types/caniuse-lite": "^1.0.4",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^18.19.41",
+    "@types/node": "^18.19.43",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
-    "caniuse-lite": "^1.0.30001643",
+    "caniuse-lite": "^1.0.30001651",
     "eslint-plugin-new-with-error": "^5.0.0",
     "fast-json-stable-stringify": "^2.1.0",
     "fdir": "^6.2.0",
@@ -52,13 +53,13 @@
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.0",
     "ts-json-schema-generator": "^2.3.0",
-    "tsx": "^4.16.2",
+    "tsx": "^4.17.0",
     "typescript": "^5.5.3",
-    "typescript-eslint": "^7.16.1",
+    "typescript-eslint": "^8.0.1",
     "unified": "^11.0.5",
-    "web-specs": "^3.13.1",
-    "winston": "^3.13.1",
-    "yaml": "^2.4.5",
+    "web-specs": "^3.16.0",
+    "winston": "^3.14.0",
+    "yaml": "^2.5.0",
     "yargs": "^17.7.2"
   }
 }
