@@ -24,14 +24,12 @@ compat_features:
   - api.CSSPositionTryDescriptors.inline-size
   - api.CSSPositionTryDescriptors.inlineSize
   - api.CSSPositionTryDescriptors.inset
-  - api.CSSPositionTryDescriptors.inset-area
   - api.CSSPositionTryDescriptors.inset-block
   - api.CSSPositionTryDescriptors.inset-block-end
   - api.CSSPositionTryDescriptors.inset-block-start
   - api.CSSPositionTryDescriptors.inset-inline
   - api.CSSPositionTryDescriptors.inset-inline-end
   - api.CSSPositionTryDescriptors.inset-inline-start
-  - api.CSSPositionTryDescriptors.insetArea
   - api.CSSPositionTryDescriptors.insetBlock
   - api.CSSPositionTryDescriptors.insetBlockEnd
   - api.CSSPositionTryDescriptors.insetBlockStart
@@ -173,6 +171,8 @@ compat_features:
 
   # baseline: false
   # support: {}
+  - api.CSSPositionTryDescriptors.position-area
+  - api.CSSPositionTryDescriptors.positionArea
   - css.properties.position-anchor.auto
   - css.properties.position-try-fallbacks
   - css.properties.position-try-fallbacks.flip-block

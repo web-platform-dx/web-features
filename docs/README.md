@@ -192,6 +192,17 @@ Avoid.
 See [sets](#sets).
 ([#727](https://github.com/web-platform-dx/web-features/pull/727#discussion_r1537635491))
 
+##### styling … as … by default
+
+Use this phrase (or using another appropriate preposition, such as "styling in") to note conventional or standardized default styling.
+The ellipses stand in for the thing being styled (e.g., "text") and the style itself (e.g., "italic").
+Use it before [_also known as_ text](#also-known-as).
+For example:
+
+ > The `<small>` element represents side-comments and small print, like copyright and legal text, styling text in a reduced font size by default.
+ 
+ ([#1403](https://github.com/web-platform-dx/web-features/pull/1403), [#1379](https://github.com/web-platform-dx/web-features/pull/1379))
+
 ##### usage
 
 Never use "usage" in the sense of "using."

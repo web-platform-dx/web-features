@@ -20,6 +20,23 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
+  artifacts:
+    if: github.repository == 'web-platform-dx/web-features'
+    runs-on: ubuntu-latest
+    needs: "test"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+          registry-url: "https://registry.npmjs.org"
+      - run: npm ci
+      - run: npm run build
+      - run: npm run build:extended
+      - run: gh release upload ${{ github.ref_name }} packages/web-features/data.json schemas/data.schema.json data.extended.json
+        env:
+          GH_TOKEN: ${{ github.token }}
   publish:
     if: github.repository == 'web-platform-dx/web-features'
     runs-on: ubuntu-latest

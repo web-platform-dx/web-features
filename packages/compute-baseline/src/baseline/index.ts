@@ -16,6 +16,7 @@ import {
 } from "./support.js";
 
 // Include this in the public API
+export { identifiers as coreBrowserSet } from "./core-browser-set.js";
 export { parseRangedDateString } from "./date-utils.js";
 
 interface Logger {

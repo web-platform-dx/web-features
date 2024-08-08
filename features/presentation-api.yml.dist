@@ -4,10 +4,20 @@
 status:
   baseline: false
   support:
-    chrome: "59"
-    chrome_android: "59"
+    chrome: "47"
+    chrome_android: "47"
     edge: "79"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "53"
+  #   chrome_android: "53"
+  #   edge: "79"
+  #   firefox: "50"
+  #   firefox_android: "50"
+  - html.elements.iframe.sandbox.allow-presentation
+
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "47"
@@ -65,7 +75,6 @@ compat_features:
   #   edge: "79"
   - api.PresentationConnection.url
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "59"

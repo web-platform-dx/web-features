@@ -7,7 +7,6 @@ status:
 compat_features:
   - api.ML
   - api.ML.createContext
-  - api.MLActivation
   - api.MLContext
   - api.MLContext.compute
   - api.MLGraph
@@ -53,6 +52,7 @@ compat_features:
   - api.MLGraphBuilder.lesserOrEqual
   - api.MLGraphBuilder.linear
   - api.MLGraphBuilder.log
+  - api.MLGraphBuilder.logicalNot
   - api.MLGraphBuilder.lstm
   - api.MLGraphBuilder.lstmCell
   - api.MLGraphBuilder.matmul
@@ -61,7 +61,6 @@ compat_features:
   - api.MLGraphBuilder.min
   - api.MLGraphBuilder.mul
   - api.MLGraphBuilder.neg
-  - api.MLGraphBuilder.not
   - api.MLGraphBuilder.pad
   - api.MLGraphBuilder.pow
   - api.MLGraphBuilder.prelu

@@ -3992,19 +3992,6 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
-  #   chrome: "23"
-  #   chrome_android: "25"
-  #   edge: "79"
-  #   firefox: ≤49
-  #   firefox_android: "49"
-  #   safari: "10.1"
-  #   safari_ios: "10.3"
-  - html.elements.iframe.sandbox.allow-pointer-lock
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
   #   chrome: "24"
   #   chrome_android: "25"
   #   edge: "79"
@@ -4962,6 +4949,18 @@ compat_features:
   - api.CanvasRenderingContext2D.getContextAttributes
 
   # baseline: low
+  # baseline_low_date: 2023-09-18
+  # support:
+  #   chrome: "83"
+  #   chrome_android: "83"
+  #   edge: "83"
+  #   firefox: "82"
+  #   firefox_android: "82"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - html.elements.iframe.sandbox.allow-downloads
+
+  # baseline: low
   # baseline_low_date: 2023-11-21
   # support:
   #   chrome: "103"
@@ -5028,6 +5027,16 @@ compat_features:
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - html.elements.input.type_color
+
+  # baseline: false
+  # support:
+  #   chrome: "23"
+  #   chrome_android: "25"
+  #   edge: "79"
+  #   firefox: ≤49
+  #   firefox_android: "49"
+  #   safari: "10.1"
+  - html.elements.iframe.sandbox.allow-pointer-lock
 
   # baseline: false
   # support:
@@ -5295,15 +5304,6 @@ compat_features:
   #   safari: "15"
   #   safari_ios: "15"
   - api.HTMLCanvasElement.getContext.2d_context.options_desynchronized_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "83"
-  #   chrome_android: "83"
-  #   edge: "83"
-  #   firefox: "82"
-  #   firefox_android: "82"
-  - html.elements.iframe.sandbox.allow-downloads
 
   # baseline: false
   # support:
@@ -5681,6 +5681,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "127"
+  #   chrome_android: "127"
+  #   edge: "127"
+  - html.elements.script.type.importmap.integrity
+
+  # baseline: false
+  # support:
   #   firefox: "3"
   #   firefox_android: "4"
   - html.elements.link.rel.alternate_stylesheet
@@ -5714,12 +5721,6 @@ compat_features:
   #   firefox: "50"
   #   firefox_android: "50"
   - javascript.builtins.Promise.incumbent_settings_object_tracking
-
-  # baseline: false
-  # support:
-  #   chrome: "127"
-  #   chrome_android: "127"
-  - html.elements.script.type.importmap.integrity
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false

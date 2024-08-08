@@ -2,5 +2,7 @@ name: <section>
 description: The `<section>` element is a generic standalone section of a document, which doesn't have a more specific semantic element to represent it.
 spec: https://html.spec.whatwg.org/multipage/sections.html#the-section-element
 group: html-elements
+# Note: <section> is part of https://caniuse.com/html5semantic but that feature
+# covers many unrelated elements and is therefore not linked here.
 compat_features:
   - html.elements.section

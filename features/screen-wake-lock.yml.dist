@@ -4,10 +4,14 @@
 status:
   baseline: false
   support:
-    chrome: "88"
-    chrome_android: "88"
-    edge: "88"
+    chrome: "84"
+    chrome_android: "84"
+    edge: "84"
+    firefox: "126"
+    firefox_android: "126"
+    safari: "16.4"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "84"
@@ -43,7 +47,6 @@ compat_features:
   #   firefox_android: "126"
   - api.Permissions.permission_screen-wake-lock
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "88"
