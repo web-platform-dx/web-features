@@ -1,5 +1,5 @@
 name: <bdi>
-description: The `<bdi>` element tells the browser's bidirectional algorithm to treat the text it contains in isolation from its surrounding text.
+description: The `<bdi>` element isolates text that may have a different text direction from its surrounding text. This prevents the browser's bidirectional text algorithm from affecting or being affected by the direction of the surrounding text.
 spec: https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdi-element
 group: html-elements
 compat_features:
