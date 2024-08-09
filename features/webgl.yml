@@ -1,15 +1,17 @@
-draft_date: 2024-07-11
-name: WebGL Specification
-description: TODO
+name: WebGL 2D and 3D Graphics
+description: WebGL is a JavaScript API for rendering high-performance interactive 3D and 2D graphics that can be used in the `<canvas>` element.
 spec: https://registry.khronos.org/webgl/specs/latest/1.0/
 compat_features:
   - api.HTMLCanvasElement.getContext.webgl_context.options_alpha_parameter
-  - api.HTMLCanvasElement.getContext.webgl_context.options_desynchronized_parameter
   - api.HTMLCanvasElement.getContext.webgl_context.options_failIfMajorPerformanceCaveat_parameter
-  - api.HTMLCanvasElement.getContext.webgl_context.options_powerPreference_parameter
   - api.HTMLCanvasElement.webglcontextcreationerror_event
   - api.HTMLCanvasElement.webglcontextlost_event
   - api.HTMLCanvasElement.webglcontextrestored_event
+  - api.WEBGL_debug_renderer_info
+  - api.WEBGL_depth_texture
+  - api.WEBGL_lose_context
+  - api.WEBGL_lose_context.loseContext
+  - api.WEBGL_lose_context.restoreContext
   - api.WebGLActiveInfo
   - api.WebGLActiveInfo.name
   - api.WebGLActiveInfo.size
@@ -19,7 +21,6 @@ compat_features:
   - api.WebGLContextEvent.statusMessage
   - api.WebGLContextEvent.WebGLContextEvent
   - api.WebGLFramebuffer
-  - api.WebGLObject
   - api.WebGLProgram
   - api.WebGLRenderbuffer
   - api.WebGLRenderingContext
@@ -70,10 +71,7 @@ compat_features:
   - api.WebGLRenderingContext.disableVertexAttribArray
   - api.WebGLRenderingContext.drawArrays
   - api.WebGLRenderingContext.drawElements
-  - api.WebGLRenderingContext.drawingBufferColorSpace
-  - api.WebGLRenderingContext.drawingBufferFormat
   - api.WebGLRenderingContext.drawingBufferHeight
-  - api.WebGLRenderingContext.drawingBufferStorage
   - api.WebGLRenderingContext.drawingBufferWidth
   - api.WebGLRenderingContext.enable
   - api.WebGLRenderingContext.enableVertexAttribArray
@@ -153,7 +151,6 @@ compat_features:
   - api.WebGLRenderingContext.uniformMatrix2fv
   - api.WebGLRenderingContext.uniformMatrix3fv
   - api.WebGLRenderingContext.uniformMatrix4fv
-  - api.WebGLRenderingContext.unpackColorSpace
   - api.WebGLRenderingContext.useProgram
   - api.WebGLRenderingContext.validateProgram
   - api.WebGLRenderingContext.vertexAttrib1f
