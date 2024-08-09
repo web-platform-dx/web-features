@@ -1,4 +1,4 @@
-draft_date: 2024-07-11
+draft_date: 2024-08-09
 name: CSS Object Model (CSSOM)
 description: TODO
 spec: https://drafts.csswg.org/cssom-1/
@@ -9,14 +9,21 @@ compat_features:
   - api.CSSGroupingRule.cssRules
   - api.CSSGroupingRule.deleteRule
   - api.CSSGroupingRule.insertRule
-  - api.CSSImportRule
-  - api.CSSImportRule.href
-  - api.CSSImportRule.media
-  - api.CSSImportRule.styleSheet
   - api.CSSImportRule.supportsText
   - api.CSSNamespaceRule
   - api.CSSNamespaceRule.namespaceURI
   - api.CSSNamespaceRule.prefix
+  - api.CSSPageDescriptors
+  - api.CSSPageDescriptors.margin
+  - api.CSSPageDescriptors.margin-bottom
+  - api.CSSPageDescriptors.margin-left
+  - api.CSSPageDescriptors.margin-right
+  - api.CSSPageDescriptors.margin-top
+  - api.CSSPageDescriptors.marginBottom
+  - api.CSSPageDescriptors.marginLeft
+  - api.CSSPageDescriptors.marginRight
+  - api.CSSPageDescriptors.marginTop
+  - api.CSSPageDescriptors.size
   - api.CSSPageRule
   - api.CSSPageRule.selectorText
   - api.CSSPageRule.style
@@ -41,7 +48,6 @@ compat_features:
   - api.CSSStyleRule.selectorText
   - api.CSSStyleRule.style
   - api.CSSStyleSheet
-  - api.CSSStyleSheet.CSSStyleSheet.options_baseURL_parameter
   - api.CSSStyleSheet.cssRules
   - api.CSSStyleSheet.deleteRule
   - api.CSSStyleSheet.insertRule
@@ -77,10 +83,20 @@ compat_features:
   - html.elements.link.rel.alternate_stylesheet
 
 # The following features in the spec are already part of web-features:
+# - @import:
+#   - api.CSSImportRule
+#   - api.CSSImportRule.href
+#   - api.CSSImportRule.media
+#   - api.CSSImportRule.styleSheet
 # - Cascade layers:
 #   - api.CSSImportRule.layerName
+# - Nesting:
+#   - api.CSSStyleRule.cssRules
+#   - api.CSSStyleRule.deleteRule
+#   - api.CSSStyleRule.insertRule
 # - Constructed stylesheets:
 #   - api.CSSStyleSheet.CSSStyleSheet
+#   - api.CSSStyleSheet.CSSStyleSheet.options_baseURL_parameter
 #   - api.CSSStyleSheet.replace
 #   - api.CSSStyleSheet.replaceSync
 #   - api.Document.adoptedStyleSheets
