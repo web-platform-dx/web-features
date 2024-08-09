@@ -1,0 +1,5 @@
+name: WebGL2 `desynchronized` parameter
+description: Reduces latency by desynchronizing the canvas paint cycle from the event loop.
+spec: https://registry.khronos.org/webgl/specs/latest/2.0/
+compat_features:
+  - api.HTMLCanvasElement.getContext.webgl2_context.options_desynchronized_parameter
