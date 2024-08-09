@@ -1,0 +1,30 @@
+name: Number
+description: The Number object is used to store number and manipulate floating-point numbers, like 42, or -4.201
+spec: https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number-objects
+status:
+  compute_from: javascript.builtins.Number
+compat_features:
+  - javascript.builtins.Number
+  - javascript.builtins.Number.EPSILON
+  - javascript.builtins.Number.MAX_SAFE_INTEGER
+  - javascript.builtins.Number.MAX_VALUE
+  - javascript.builtins.Number.MIN_SAFE_INTEGER
+  - javascript.builtins.Number.MIN_VALUE
+  - javascript.builtins.Number.NaN
+  - javascript.builtins.Number.NEGATIVE_INFINITY
+  - javascript.builtins.Number.Number
+  - javascript.builtins.Number.POSITIVE_INFINITY
+  - javascript.builtins.Number.isFinite
+  - javascript.builtins.Number.isInteger
+  - javascript.builtins.Number.isNaN
+  - javascript.builtins.Number.isSafeInteger
+  - javascript.builtins.Number.parseFloat
+  - javascript.builtins.Number.parseInt
+  - javascript.builtins.Number.toExponential
+  - javascript.builtins.Number.toFixed
+  - javascript.builtins.Number.toLocaleString
+  - javascript.builtins.Number.toLocaleString.locales_parameter
+  - javascript.builtins.Number.toLocaleString.options_parameter
+  - javascript.builtins.Number.toPrecision
+  - javascript.builtins.Number.toString
+  - javascript.builtins.Number.valueOf
