@@ -180,6 +180,15 @@ Avoid, especially with gerunds.
 For example, prefer the "The feature writes to…" over "The feature provides writing to…."
 ([#727](https://github.com/web-platform-dx/web-features/pull/727#discussion_r1537635491))
 
+##### represents
+
+If an HTML element or other type doesn't obviously do anything, then it probably _represents_ something.
+Use _represents_ as a default for describing the behavior of HTML elements when no more specific verb makes sense.
+
+  - 👍 Recommended: The `<html>` element represents the top level of an HTML document…
+  - 👍 Recommended: The `<br>` element breaks lines in text.
+  - 👎 Not recommended: The `<br>` element represents a line break in text.
+
 ##### sets
 
 Prefer this over multisyllabic alternatives, such as "defines", "determines", or "specifies".
