@@ -70,6 +70,13 @@ async function main() {
       continue;
     }
 
+    // A few null values remain in BCD. They are being removed in
+    // https://github.com/mdn/browser-compat-data/pull/23774.
+    // TODO: Remove this workaround when BCD is free or true/null values.
+    if (feature.id.startsWith("html.manifest.")) {
+      continue;
+    }
+
     const spec_url = feature.data.__compat.spec_url;
     if (!spec_url) {
       continue;
