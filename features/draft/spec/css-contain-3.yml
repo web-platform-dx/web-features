@@ -1,18 +1,12 @@
-draft_date: 2024-07-11
+draft_date: 2024-08-09
 name: CSS Containment Module Level 3
 description: TODO
 spec: https://drafts.csswg.org/css-contain-3/
 compat_features:
   - api.Element.contentvisibilityautostatechange_event
-  - css.properties.contain
   - css.properties.contain.content
-  - css.properties.contain.inline-size
-  - css.properties.contain.layout
   - css.properties.contain.none
-  - css.properties.contain.paint
-  - css.properties.contain.size
   - css.properties.contain.strict
-  - css.properties.contain.style
   - css.properties.content-visibility.auto
   - css.properties.content-visibility.hidden
   - css.properties.content-visibility.visible
@@ -37,6 +31,17 @@ compat_features:
 #   - css.properties.content-visibility
 # - Container style queries:
 #   - css.at-rules.container.style_queries_for_custom_properties
+# - Size containment:
+#   - css.properties.contain
+#   - css.properties.contain.size
+# - Inline-size containment:
+#   - css.properties.contain.inline-size
+# - Layout containment:
+#   - css.properties.contain.layout
+# - Paint containment:
+#   - css.properties.contain.paint
+# - Style containment:
+#   - css.properties.contain.style
 # - display animation:
 #   - css.properties.content-visibility.is_transitionable
 #   - css.properties.content-visibility.keyframe_animatable

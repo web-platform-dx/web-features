@@ -1,0 +1,52 @@
+draft_date: 2024-08-09
+name: CSS Scroll Snap Module Level 2
+description: TODO
+spec: https://drafts.csswg.org/css-scroll-snap-2/
+compat_features:
+  - css.properties.scroll-padding-block-end.auto
+  - css.properties.scroll-padding-block-start.auto
+  - css.properties.scroll-padding-block.auto
+  - css.properties.scroll-padding-inline-end.auto
+  - css.properties.scroll-padding-inline-start.auto
+  - css.properties.scroll-padding-inline.auto
+  - css.properties.scroll-padding.auto
+  - css.properties.scroll-snap-align.center
+  - css.properties.scroll-snap-align.end
+  - css.properties.scroll-snap-align.none
+  - css.properties.scroll-snap-align.start
+  - css.properties.scroll-snap-stop.always
+  - css.properties.scroll-snap-stop.normal
+  - css.properties.scroll-snap-type.block
+  - css.properties.scroll-snap-type.both
+  - css.properties.scroll-snap-type.inline
+  - css.properties.scroll-snap-type.none
+  - css.properties.scroll-snap-type.x
+  - css.properties.scroll-snap-type.y
+
+# The following features in the spec are already part of web-features:
+# - Scroll snap:
+#   - css.properties.scroll-margin
+#   - css.properties.scroll-margin-block
+#   - css.properties.scroll-margin-block-end
+#   - css.properties.scroll-margin-block-start
+#   - css.properties.scroll-margin-bottom
+#   - css.properties.scroll-margin-inline
+#   - css.properties.scroll-margin-inline-end
+#   - css.properties.scroll-margin-inline-start
+#   - css.properties.scroll-margin-left
+#   - css.properties.scroll-margin-right
+#   - css.properties.scroll-margin-top
+#   - css.properties.scroll-padding
+#   - css.properties.scroll-padding-block
+#   - css.properties.scroll-padding-block-end
+#   - css.properties.scroll-padding-block-start
+#   - css.properties.scroll-padding-bottom
+#   - css.properties.scroll-padding-inline
+#   - css.properties.scroll-padding-inline-end
+#   - css.properties.scroll-padding-inline-start
+#   - css.properties.scroll-padding-left
+#   - css.properties.scroll-padding-right
+#   - css.properties.scroll-padding-top
+#   - css.properties.scroll-snap-align
+#   - css.properties.scroll-snap-stop
+#   - css.properties.scroll-snap-type
