@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "109"
-    chrome_android: "109"
-    edge: "109"
+    chrome: "117"
+    chrome_android: "117"
+    edge: "117"
 compat_features:
   # baseline: low
   # baseline_low_date: 2023-01-12
@@ -21,6 +21,7 @@ compat_features:
   - mathml.elements.annotation
   - mathml.elements.annotation-xml
   - mathml.elements.mo
+  - mathml.elements.mo.stretchy
   - mathml.elements.semantics
 
   # baseline: low
@@ -77,6 +78,27 @@ compat_features:
   #   safari: "7"
   #   safari_ios: "7"
   - mathml.elements.mspace
+  - mathml.elements.mspace.depth
+  - mathml.elements.mspace.height
+  - mathml.elements.mspace.width
+
+  # baseline: low
+  # baseline_low_date: 2023-01-12
+  # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "8"
+  #   safari_ios: "8"
+  - mathml.elements.mo.form
+  - mathml.elements.mo.largeop
+  - mathml.elements.mo.lspace
+  - mathml.elements.mo.maxsize
+  - mathml.elements.mo.minsize
+  - mathml.elements.mo.rspace
+  - mathml.elements.mo.symmetric
 
   # baseline: low
   # baseline_low_date: 2023-01-12
@@ -88,7 +110,28 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "9"
   #   safari_ios: "9"
+  - mathml.elements.mfrac.linethickness
   - mathml.elements.ms
+
+  # baseline: low
+  # baseline_low_date: 2023-01-12
+  # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - mathml.elements.mo.moveablelimits
+  - mathml.elements.mover.accent
+  - mathml.elements.mpadded.depth
+  - mathml.elements.mpadded.height
+  - mathml.elements.mpadded.lspace
+  - mathml.elements.mpadded.width
+  - mathml.elements.munder.accentunder
+  - mathml.elements.munderover.accent
+  - mathml.elements.munderover.accentunder
 
   # baseline: low
   # baseline_low_date: 2023-01-12
@@ -101,6 +144,7 @@ compat_features:
   #   safari: "5.1"
   #   safari_ios: "5"
   - mathml.elements.math
+  - mathml.elements.math.display
 
   # baseline: low
   # baseline_low_date: 2023-01-12
@@ -113,6 +157,18 @@ compat_features:
   #   safari: "5.1"
   #   safari_ios: "5"
   - mathml.elements.mstyle
+
+  # baseline: low
+  # baseline_low_date: 2023-01-12
+  # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  #   firefox: "7"
+  #   firefox_android: "7"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - mathml.elements.mpadded.voffset
 
   # baseline: low
   # baseline_low_date: 2023-01-12
@@ -174,6 +230,19 @@ compat_features:
   #   safari_ios: "14.5"
   - css.properties.math-style
 
+  # baseline: low
+  # baseline_low_date: 2023-09-15
+  # support:
+  #   chrome: "117"
+  #   chrome_android: "117"
+  #   edge: "117"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "5.1"
+  #   safari_ios: "5"
+  - mathml.elements.mtd.columnspan
+  - mathml.elements.mtd.rowspan
+
   # baseline: false
   # support:
   #   chrome: "109"
@@ -193,7 +262,6 @@ compat_features:
   - css.properties.math-depth
   - css.properties.text-transform.math-auto
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "109"
