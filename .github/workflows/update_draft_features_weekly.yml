@@ -6,9 +6,6 @@ on:
     - cron: '30 5 * * 1'
   workflow_dispatch:
 
-permissions:
-  pull-requests: write
-
 jobs:
   update-drafts:
     runs-on: ubuntu-latest
