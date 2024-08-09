@@ -1,4 +1,4 @@
-draft_date: 2024-07-11
+draft_date: 2024-08-09
 name: Generic Sensor API
 description: TODO
 spec: https://w3c.github.io/sensors/
@@ -15,7 +15,14 @@ compat_features:
   - api.SensorErrorEvent
   - api.SensorErrorEvent.SensorErrorEvent
   - api.SensorErrorEvent.error
-  - http.headers.Permissions-Policy.accelerometer
   - http.headers.Permissions-Policy.ambient-light-sensor
   - http.headers.Permissions-Policy.gyroscope
   - http.headers.Permissions-Policy.magnetometer
+  - webdriver.commands.CreateVirtualSensor
+  - webdriver.commands.DeleteVirtualSensor
+  - webdriver.commands.GetVirtualSensorInformation
+  - webdriver.commands.UpdateVirtualSensorReading
+
+# The following features in the spec are already part of web-features:
+# - Accelerometer:
+#   - http.headers.Permissions-Policy.accelerometer
