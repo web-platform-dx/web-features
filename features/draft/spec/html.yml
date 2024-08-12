@@ -1,4 +1,4 @@
-draft_date: 2024-08-09
+draft_date: 2024-08-12
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -336,16 +336,7 @@ compat_features:
   - api.HTMLOptionsCollection.length
   - api.HTMLOptionsCollection.remove
   - api.HTMLOptionsCollection.selectedIndex
-  - api.HTMLScriptElement
-  - api.HTMLScriptElement.async
-  - api.HTMLScriptElement.crossOrigin
-  - api.HTMLScriptElement.defer
-  - api.HTMLScriptElement.integrity
   - api.HTMLScriptElement.noModule
-  - api.HTMLScriptElement.src
-  - api.HTMLScriptElement.supports_static
-  - api.HTMLScriptElement.text
-  - api.HTMLScriptElement.type
   - api.HTMLSourceElement
   - api.HTMLSourceElement.height
   - api.HTMLSourceElement.media
@@ -809,15 +800,7 @@ compat_features:
   - html.elements.meter.min
   - html.elements.meter.optimum
   - html.elements.meter.value
-  - html.elements.noscript
   - html.elements.s
-  - html.elements.script
-  - html.elements.script.async
-  - html.elements.script.crossorigin
-  - html.elements.script.defer
-  - html.elements.script.integrity
-  - html.elements.script.src
-  - html.elements.script.type
   - html.elements.script.type.importmap.integrity
   - html.elements.select.autocomplete
   - html.elements.source.sizes
@@ -1688,6 +1671,24 @@ compat_features:
 #   - api.HTMLQuoteElement.cite
 #   - html.elements.q
 #   - html.elements.q.cite
+# - <script> and <noscript>:
+#   - api.HTMLScriptElement
+#   - api.HTMLScriptElement.async
+#   - api.HTMLScriptElement.crossOrigin
+#   - api.HTMLScriptElement.defer
+#   - api.HTMLScriptElement.integrity
+#   - api.HTMLScriptElement.src
+#   - api.HTMLScriptElement.supports_static
+#   - api.HTMLScriptElement.text
+#   - api.HTMLScriptElement.type
+#   - html.elements.noscript
+#   - html.elements.script
+#   - html.elements.script.async
+#   - html.elements.script.crossorigin
+#   - html.elements.script.defer
+#   - html.elements.script.integrity
+#   - html.elements.script.src
+#   - html.elements.script.type
 # - showPicker() for <select>:
 #   - api.HTMLSelectElement.showPicker
 # - <slot>:
