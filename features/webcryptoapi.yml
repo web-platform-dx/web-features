@@ -1,6 +1,9 @@
 name: Web Cryptography API
-description: TODO
+description: The Web Crypto API provides utilities and primitives for building cryptographic systems.
 spec: https://w3c.github.io/webcrypto/
+status:
+  compute_from:
+    - api.Crypto
 compat_features:
   - api.Crypto
   - api.Crypto.getRandomValues
