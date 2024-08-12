@@ -16,10 +16,6 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "1"
   #   safari_ios: "1"
-  - api.CSSImportRule
-  - api.CSSImportRule.href
-  - api.CSSImportRule.media
-  - api.CSSImportRule.styleSheet
   - api.CSSRule
   - api.CSSRule.cssText
   - api.CSSRule.parentRule
@@ -297,14 +293,21 @@ compat_features:
 
   # baseline: false
   # support:
-  #   firefox: "101"
-  #   firefox_android: "101"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - api.CSSStyleSheet.CSSStyleSheet.options_baseURL_parameter
-
-  # baseline: false
-  # support:
   #   firefox: "3"
   #   firefox_android: "4"
   - html.elements.link.rel.alternate_stylesheet
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.CSSPageDescriptors
+  - api.CSSPageDescriptors.margin
+  - api.CSSPageDescriptors.margin-bottom
+  - api.CSSPageDescriptors.margin-left
+  - api.CSSPageDescriptors.margin-right
+  - api.CSSPageDescriptors.margin-top
+  - api.CSSPageDescriptors.marginBottom
+  - api.CSSPageDescriptors.marginLeft
+  - api.CSSPageDescriptors.marginRight
+  - api.CSSPageDescriptors.marginTop
+  - api.CSSPageDescriptors.size
