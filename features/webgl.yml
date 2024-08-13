@@ -2,8 +2,8 @@ name: WebGL 2D and 3D Graphics
 description: WebGL is a JavaScript API for rendering high-performance interactive 3D and 2D graphics that can be used in the `<canvas>` element.
 spec: https://registry.khronos.org/webgl/specs/latest/1.0/
 group: webgl
-# status:
-#   compute_from: api.WebGLRenderingContext
+status:
+  compute_from: api.WebGLRenderingContext
 compat_features:
   - api.HTMLCanvasElement.getContext.webgl_context.options_alpha_parameter
   - api.HTMLCanvasElement.getContext.webgl_context.options_failIfMajorPerformanceCaveat_parameter
