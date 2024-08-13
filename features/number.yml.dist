@@ -26,6 +26,8 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "1"
   #   safari_ios: "1"
+  - javascript.builtins.Infinity
+  - javascript.builtins.NaN
   - javascript.builtins.Number
   - javascript.builtins.Number.MAX_VALUE
   - javascript.builtins.Number.MIN_VALUE
@@ -36,6 +38,10 @@ compat_features:
   - javascript.builtins.Number.toLocaleString
   - javascript.builtins.Number.toString
   - javascript.builtins.Number.valueOf
+  - javascript.builtins.isNaN
+  - javascript.builtins.parseInt
+  - javascript.grammar.decimal_numeric_literals
+  - javascript.grammar.hexadecimal_numeric_literals
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -134,6 +140,20 @@ compat_features:
   - javascript.builtins.Number.isSafeInteger
 
   # baseline: high
+  # baseline_low_date: 2015-09-30
+  # baseline_high_date: 2018-03-30
+  # support:
+  #   chrome: "41"
+  #   chrome_android: "41"
+  #   edge: "12"
+  #   firefox: "25"
+  #   firefox_android: "25"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - javascript.grammar.binary_numeric_literals
+  - javascript.grammar.octal_numeric_literals
+
+  # baseline: high
   # baseline_low_date: 2017-09-28
   # baseline_high_date: 2020-03-28
   # support:
@@ -146,3 +166,16 @@ compat_features:
   #   safari_ios: "10"
   - javascript.builtins.Number.toLocaleString.locales_parameter
   - javascript.builtins.Number.toLocaleString.options_parameter
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "75"
+  #   chrome_android: "75"
+  #   edge: "79"
+  #   firefox: "70"
+  #   firefox_android: "79"
+  #   safari: "13"
+  #   safari_ios: "13"
+  - javascript.grammar.numeric_separators

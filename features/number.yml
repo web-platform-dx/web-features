@@ -5,10 +5,14 @@ status:
   compute_from: javascript.builtins.Number
 compat_features:
   - javascript.builtins.Infinity
-  - javascript.builtins.NaN
   - javascript.builtins.isNaN
+  - javascript.builtins.NaN
   - javascript.builtins.Number
   - javascript.builtins.Number.EPSILON
+  - javascript.builtins.Number.isFinite
+  - javascript.builtins.Number.isInteger
+  - javascript.builtins.Number.isNaN
+  - javascript.builtins.Number.isSafeInteger
   - javascript.builtins.Number.MAX_SAFE_INTEGER
   - javascript.builtins.Number.MAX_VALUE
   - javascript.builtins.Number.MIN_SAFE_INTEGER
@@ -16,14 +20,9 @@ compat_features:
   - javascript.builtins.Number.NaN
   - javascript.builtins.Number.NEGATIVE_INFINITY
   - javascript.builtins.Number.Number
-  - javascript.builtins.Number.POSITIVE_INFINITY
-  - javascript.builtins.Number.isFinite
-  - javascript.builtins.Number.isInteger
-  - javascript.builtins.Number.isNaN
-  - javascript.builtins.Number.isSafeInteger
   - javascript.builtins.Number.parseFloat
   - javascript.builtins.Number.parseInt
-  - javascript.builtins.parseInt
+  - javascript.builtins.Number.POSITIVE_INFINITY
   - javascript.builtins.Number.toExponential
   - javascript.builtins.Number.toFixed
   - javascript.builtins.Number.toLocaleString
@@ -32,6 +31,7 @@ compat_features:
   - javascript.builtins.Number.toPrecision
   - javascript.builtins.Number.toString
   - javascript.builtins.Number.valueOf
+  - javascript.builtins.parseInt
   - javascript.grammar.binary_numeric_literals
   - javascript.grammar.decimal_numeric_literals
   - javascript.grammar.hexadecimal_numeric_literals
