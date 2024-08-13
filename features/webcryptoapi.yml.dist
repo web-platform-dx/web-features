@@ -147,3 +147,13 @@ compat_features:
   #   safari_ios: ≤13.4
   - api.SubtleCrypto.deriveKey.derivedKeyAlgorithm_option_hkdf
   - api.SubtleCrypto.deriveKey.derivedKeyAlgorithm_option_pbkdf2
+
+  # baseline: false
+  # support:
+  #   safari: "17"
+  #   safari_ios: "17"
+  - api.SubtleCrypto.exportKey.ed25519
+  - api.SubtleCrypto.generateKey.ed25519
+  - api.SubtleCrypto.importKey.ed25519
+  - api.SubtleCrypto.sign.ed25519
+  - api.SubtleCrypto.verify.ed25519

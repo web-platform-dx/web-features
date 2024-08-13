@@ -31,4 +31,9 @@ compat_features:
   - api.SubtleCrypto.unwrapKey
   - api.SubtleCrypto.verify
   - api.SubtleCrypto.wrapKey
+  - api.SubtleCrypto.exportKey.ed25519
+  - api.SubtleCrypto.generateKey.ed25519
+  - api.SubtleCrypto.importKey.ed25519
+  - api.SubtleCrypto.sign.ed25519
+  - api.SubtleCrypto.verify.ed25519
   - api.crypto
