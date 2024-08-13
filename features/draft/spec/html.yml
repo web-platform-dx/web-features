@@ -1,4 +1,4 @@
-draft_date: 2024-07-12
+draft_date: 2024-08-12
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -197,77 +197,17 @@ compat_features:
   - api.HTMLAllCollection.item
   - api.HTMLAllCollection.length
   - api.HTMLAllCollection.namedItem
-  - api.HTMLAnchorElement
   - api.HTMLAnchorElement.download
-  - api.HTMLAnchorElement.hash
-  - api.HTMLAnchorElement.host
-  - api.HTMLAnchorElement.hostname
-  - api.HTMLAnchorElement.href
-  - api.HTMLAnchorElement.hreflang
-  - api.HTMLAnchorElement.origin
-  - api.HTMLAnchorElement.password
-  - api.HTMLAnchorElement.pathname
   - api.HTMLAnchorElement.ping
-  - api.HTMLAnchorElement.port
-  - api.HTMLAnchorElement.protocol
-  - api.HTMLAnchorElement.rel
-  - api.HTMLAnchorElement.relList
-  - api.HTMLAnchorElement.search
-  - api.HTMLAnchorElement.target
-  - api.HTMLAnchorElement.text
-  - api.HTMLAnchorElement.toString
-  - api.HTMLAnchorElement.type
-  - api.HTMLAnchorElement.username
-  - api.HTMLAreaElement
-  - api.HTMLAreaElement.alt
-  - api.HTMLAreaElement.coords
   - api.HTMLAreaElement.download
-  - api.HTMLAreaElement.hash
-  - api.HTMLAreaElement.host
-  - api.HTMLAreaElement.hostname
-  - api.HTMLAreaElement.href
-  - api.HTMLAreaElement.origin
-  - api.HTMLAreaElement.password
-  - api.HTMLAreaElement.pathname
   - api.HTMLAreaElement.ping
-  - api.HTMLAreaElement.port
-  - api.HTMLAreaElement.protocol
-  - api.HTMLAreaElement.rel
-  - api.HTMLAreaElement.relList
-  - api.HTMLAreaElement.search
-  - api.HTMLAreaElement.shape
-  - api.HTMLAreaElement.target
-  - api.HTMLAreaElement.toString
-  - api.HTMLAreaElement.username
-  - api.HTMLBodyElement
-  - api.HTMLButtonElement
-  - api.HTMLButtonElement.disabled
-  - api.HTMLButtonElement.form
-  - api.HTMLButtonElement.formAction
-  - api.HTMLButtonElement.formEnctype
-  - api.HTMLButtonElement.formMethod
-  - api.HTMLButtonElement.formNoValidate
-  - api.HTMLButtonElement.formTarget
-  - api.HTMLButtonElement.labels
-  - api.HTMLButtonElement.name
-  - api.HTMLButtonElement.type
-  - api.HTMLButtonElement.value
-  - api.HTMLCanvasElement
-  - api.HTMLCanvasElement.getContext
   - api.HTMLCanvasElement.getContext.2d_context.options_alpha_parameter
   - api.HTMLCanvasElement.getContext.2d_context.options_colorSpace_parameter
   - api.HTMLCanvasElement.getContext.2d_context.options_desynchronized_parameter
   - api.HTMLCanvasElement.getContext.2d_context.options_willReadFrequently_parameter
   - api.HTMLCanvasElement.getContext.bitmaprenderer_context.options_alpha_parameter
-  - api.HTMLCanvasElement.height
-  - api.HTMLCanvasElement.toBlob
-  - api.HTMLCanvasElement.toDataURL
-  - api.HTMLCanvasElement.width
   - api.HTMLDListElement
-  - api.HTMLDataElement
-  - api.HTMLDataElement.value
   - api.HTMLDetailsElement.toggle_event
-  - api.HTMLDivElement
   - api.HTMLDocument
   - api.HTMLElement
   - api.HTMLElement.accessKey
@@ -299,18 +239,6 @@ compat_features:
   - api.HTMLElement.spellcheck
   - api.HTMLElement.title
   - api.HTMLElement.writingSuggestions
-  - api.HTMLEmbedElement
-  - api.HTMLEmbedElement.getSVGDocument
-  - api.HTMLEmbedElement.height
-  - api.HTMLEmbedElement.src
-  - api.HTMLEmbedElement.type
-  - api.HTMLEmbedElement.width
-  - api.HTMLFieldSetElement
-  - api.HTMLFieldSetElement.disabled
-  - api.HTMLFieldSetElement.elements
-  - api.HTMLFieldSetElement.form
-  - api.HTMLFieldSetElement.name
-  - api.HTMLFieldSetElement.type
   - api.HTMLFormControlsCollection
   - api.HTMLFormControlsCollection.namedItem
   - api.HTMLFormElement
@@ -333,38 +261,12 @@ compat_features:
   - api.HTMLFormElement.submit
   - api.HTMLFormElement.submit_event
   - api.HTMLFormElement.target
-  - api.HTMLHRElement
-  - api.HTMLHeadElement
-  - api.HTMLHeadingElement
-  - api.HTMLHtmlElement
-  - api.HTMLIFrameElement
-  - api.HTMLIFrameElement.allow
-  - api.HTMLIFrameElement.contentDocument
-  - api.HTMLIFrameElement.contentWindow
-  - api.HTMLIFrameElement.getSVGDocument
-  - api.HTMLIFrameElement.height
-  - api.HTMLIFrameElement.name
   - api.HTMLIFrameElement.sandbox
-  - api.HTMLIFrameElement.src
   - api.HTMLIFrameElement.srcdoc
-  - api.HTMLIFrameElement.width
-  - api.HTMLImageElement
-  - api.HTMLImageElement.Image
-  - api.HTMLImageElement.alt
-  - api.HTMLImageElement.complete
-  - api.HTMLImageElement.crossOrigin
   - api.HTMLImageElement.currentSrc
-  - api.HTMLImageElement.decode
-  - api.HTMLImageElement.decoding
-  - api.HTMLImageElement.height
-  - api.HTMLImageElement.isMap
-  - api.HTMLImageElement.naturalHeight
-  - api.HTMLImageElement.naturalWidth
   - api.HTMLImageElement.sizes
-  - api.HTMLImageElement.src
+  - api.HTMLImageElement.sizes.auto
   - api.HTMLImageElement.srcset
-  - api.HTMLImageElement.useMap
-  - api.HTMLImageElement.width
   - api.HTMLInputElement
   - api.HTMLInputElement.accept
   - api.HTMLInputElement.alt
@@ -413,39 +315,14 @@ compat_features:
   - api.HTMLInputElement.valueAsDate
   - api.HTMLInputElement.valueAsNumber
   - api.HTMLInputElement.width
-  - api.HTMLLIElement
-  - api.HTMLLIElement.value
   - api.HTMLLabelElement
   - api.HTMLLabelElement.control
   - api.HTMLLabelElement.form
   - api.HTMLLabelElement.htmlFor
-  - api.HTMLLegendElement
-  - api.HTMLLegendElement.form
-  - api.HTMLLinkElement
-  - api.HTMLLinkElement.as
-  - api.HTMLLinkElement.crossOrigin
-  - api.HTMLLinkElement.disabled
-  - api.HTMLLinkElement.href
-  - api.HTMLLinkElement.hreflang
-  - api.HTMLLinkElement.integrity
-  - api.HTMLLinkElement.media
-  - api.HTMLLinkElement.rel
-  - api.HTMLLinkElement.relList
-  - api.HTMLLinkElement.sizes
-  - api.HTMLLinkElement.type
-  - api.HTMLMapElement
-  - api.HTMLMapElement.areas
-  - api.HTMLMapElement.name
-  - api.HTMLMediaElement.addTextTrack
   - api.HTMLMediaElement.getStartDate
   - api.HTMLMediaElement.srcObject
   - api.HTMLMediaElement.textTracks
   - api.HTMLMenuElement
-  - api.HTMLMetaElement
-  - api.HTMLMetaElement.content
-  - api.HTMLMetaElement.httpEquiv
-  - api.HTMLMetaElement.media
-  - api.HTMLMetaElement.name
   - api.HTMLMeterElement
   - api.HTMLMeterElement.high
   - api.HTMLMeterElement.labels
@@ -454,89 +331,12 @@ compat_features:
   - api.HTMLMeterElement.min
   - api.HTMLMeterElement.optimum
   - api.HTMLMeterElement.value
-  - api.HTMLModElement
-  - api.HTMLModElement.cite
-  - api.HTMLModElement.dateTime
-  - api.HTMLOListElement
-  - api.HTMLOListElement.reversed
-  - api.HTMLOListElement.start
-  - api.HTMLOListElement.type
-  - api.HTMLObjectElement
-  - api.HTMLObjectElement.contentDocument
-  - api.HTMLObjectElement.contentWindow
-  - api.HTMLObjectElement.data
-  - api.HTMLObjectElement.form
-  - api.HTMLObjectElement.getSVGDocument
-  - api.HTMLObjectElement.height
-  - api.HTMLObjectElement.name
-  - api.HTMLObjectElement.type
-  - api.HTMLObjectElement.width
-  - api.HTMLOptGroupElement
-  - api.HTMLOptGroupElement.disabled
-  - api.HTMLOptGroupElement.label
-  - api.HTMLOptionElement
-  - api.HTMLOptionElement.Option
-  - api.HTMLOptionElement.defaultSelected
-  - api.HTMLOptionElement.disabled
-  - api.HTMLOptionElement.form
-  - api.HTMLOptionElement.index
-  - api.HTMLOptionElement.label
-  - api.HTMLOptionElement.selected
-  - api.HTMLOptionElement.text
-  - api.HTMLOptionElement.value
   - api.HTMLOptionsCollection
   - api.HTMLOptionsCollection.add
   - api.HTMLOptionsCollection.length
   - api.HTMLOptionsCollection.remove
   - api.HTMLOptionsCollection.selectedIndex
-  - api.HTMLOutputElement
-  - api.HTMLOutputElement.HTMLOutputElement
-  - api.HTMLOutputElement.defaultValue
-  - api.HTMLOutputElement.form
-  - api.HTMLOutputElement.htmlFor
-  - api.HTMLOutputElement.labels
-  - api.HTMLOutputElement.name
-  - api.HTMLOutputElement.type
-  - api.HTMLOutputElement.value
-  - api.HTMLParagraphElement
-  - api.HTMLPictureElement
-  - api.HTMLPreElement
-  - api.HTMLProgressElement
-  - api.HTMLProgressElement.labels
-  - api.HTMLProgressElement.max
-  - api.HTMLProgressElement.position
-  - api.HTMLProgressElement.value
-  - api.HTMLQuoteElement
-  - api.HTMLQuoteElement.cite
-  - api.HTMLScriptElement
-  - api.HTMLScriptElement.async
-  - api.HTMLScriptElement.crossOrigin
-  - api.HTMLScriptElement.defer
-  - api.HTMLScriptElement.integrity
   - api.HTMLScriptElement.noModule
-  - api.HTMLScriptElement.src
-  - api.HTMLScriptElement.supports_static
-  - api.HTMLScriptElement.text
-  - api.HTMLScriptElement.type
-  - api.HTMLSelectElement
-  - api.HTMLSelectElement.add
-  - api.HTMLSelectElement.autocomplete
-  - api.HTMLSelectElement.disabled
-  - api.HTMLSelectElement.form
-  - api.HTMLSelectElement.item
-  - api.HTMLSelectElement.labels
-  - api.HTMLSelectElement.length
-  - api.HTMLSelectElement.multiple
-  - api.HTMLSelectElement.name
-  - api.HTMLSelectElement.namedItem
-  - api.HTMLSelectElement.options
-  - api.HTMLSelectElement.remove
-  - api.HTMLSelectElement.required
-  - api.HTMLSelectElement.selectedIndex
-  - api.HTMLSelectElement.selectedOptions
-  - api.HTMLSelectElement.size
-  - api.HTMLSelectElement.type
-  - api.HTMLSelectElement.value
   - api.HTMLSourceElement
   - api.HTMLSourceElement.height
   - api.HTMLSourceElement.media
@@ -545,85 +345,9 @@ compat_features:
   - api.HTMLSourceElement.srcset
   - api.HTMLSourceElement.type
   - api.HTMLSourceElement.width
-  - api.HTMLSpanElement
-  - api.HTMLStyleElement
-  - api.HTMLStyleElement.disabled
-  - api.HTMLStyleElement.media
-  - api.HTMLTableCaptionElement
-  - api.HTMLTableCellElement
-  - api.HTMLTableCellElement.abbr
-  - api.HTMLTableCellElement.cellIndex
-  - api.HTMLTableCellElement.colSpan
-  - api.HTMLTableCellElement.headers
-  - api.HTMLTableCellElement.rowSpan
-  - api.HTMLTableCellElement.scope
-  - api.HTMLTableColElement
-  - api.HTMLTableColElement.span
-  - api.HTMLTableElement
-  - api.HTMLTableElement.caption
-  - api.HTMLTableElement.createCaption
-  - api.HTMLTableElement.createTBody
-  - api.HTMLTableElement.createTFoot
-  - api.HTMLTableElement.createTHead
-  - api.HTMLTableElement.deleteCaption
-  - api.HTMLTableElement.deleteRow
-  - api.HTMLTableElement.deleteTFoot
-  - api.HTMLTableElement.deleteTHead
-  - api.HTMLTableElement.insertRow
-  - api.HTMLTableElement.rows
-  - api.HTMLTableElement.tBodies
-  - api.HTMLTableElement.tFoot
-  - api.HTMLTableElement.tHead
-  - api.HTMLTableRowElement
-  - api.HTMLTableRowElement.cells
-  - api.HTMLTableRowElement.deleteCell
-  - api.HTMLTableRowElement.insertCell
-  - api.HTMLTableRowElement.rowIndex
-  - api.HTMLTableRowElement.sectionRowIndex
-  - api.HTMLTableSectionElement
-  - api.HTMLTableSectionElement.deleteRow
-  - api.HTMLTableSectionElement.insertRow
-  - api.HTMLTableSectionElement.rows
   - api.HTMLTemplateElement.shadowRootClonable
   - api.HTMLTemplateElement.shadowRootDelegatesFocus
   - api.HTMLTemplateElement.shadowRootSerializable
-  - api.HTMLTextAreaElement
-  - api.HTMLTextAreaElement.autocomplete
-  - api.HTMLTextAreaElement.cols
-  - api.HTMLTextAreaElement.defaultValue
-  - api.HTMLTextAreaElement.disabled
-  - api.HTMLTextAreaElement.form
-  - api.HTMLTextAreaElement.labels
-  - api.HTMLTextAreaElement.maxLength
-  - api.HTMLTextAreaElement.minLength
-  - api.HTMLTextAreaElement.name
-  - api.HTMLTextAreaElement.placeholder
-  - api.HTMLTextAreaElement.readOnly
-  - api.HTMLTextAreaElement.required
-  - api.HTMLTextAreaElement.rows
-  - api.HTMLTextAreaElement.select
-  - api.HTMLTextAreaElement.select_event
-  - api.HTMLTextAreaElement.selectionDirection
-  - api.HTMLTextAreaElement.selectionEnd
-  - api.HTMLTextAreaElement.selectionStart
-  - api.HTMLTextAreaElement.setRangeText
-  - api.HTMLTextAreaElement.setSelectionRange
-  - api.HTMLTextAreaElement.textLength
-  - api.HTMLTextAreaElement.type
-  - api.HTMLTextAreaElement.value
-  - api.HTMLTextAreaElement.wrap
-  - api.HTMLTitleElement
-  - api.HTMLTitleElement.text
-  - api.HTMLTrackElement
-  - api.HTMLTrackElement.cuechange_event
-  - api.HTMLTrackElement.default
-  - api.HTMLTrackElement.kind
-  - api.HTMLTrackElement.label
-  - api.HTMLTrackElement.readyState
-  - api.HTMLTrackElement.src
-  - api.HTMLTrackElement.srclang
-  - api.HTMLTrackElement.track
-  - api.HTMLUListElement
   - api.HTMLUnknownElement
   - api.HTMLVideoElement.playsInline
   - api.HashChangeEvent
@@ -728,8 +452,10 @@ compat_features:
   - api.OffscreenCanvasRenderingContext2D.textRendering
   - api.OffscreenCanvasRenderingContext2D.wordSpacing
   - api.PageRevealEvent
+  - api.PageRevealEvent.PageRevealEvent
   - api.PageRevealEvent.viewTransition
   - api.PageSwapEvent
+  - api.PageSwapEvent.PageSwapEvent
   - api.PageSwapEvent.activation
   - api.PageSwapEvent.viewTransition
   - api.PageTransitionEvent
@@ -745,6 +471,7 @@ compat_features:
   - api.PaintRenderingContext2D.fill
   - api.PaintRenderingContext2D.fillRect
   - api.PaintRenderingContext2D.fillStyle
+  - api.PaintRenderingContext2D.filter
   - api.PaintRenderingContext2D.getLineDash
   - api.PaintRenderingContext2D.getTransform
   - api.PaintRenderingContext2D.globalAlpha
@@ -797,6 +524,7 @@ compat_features:
   - api.PromiseRejectionEvent.reason
   - api.RadioNodeList
   - api.RadioNodeList.value
+  - api.Range.createContextualFragment
   - api.SVGElement.blur
   - api.SVGElement.dataset
   - api.SVGElement.focus
@@ -840,35 +568,6 @@ compat_features:
   - api.TextMetrics.emHeightDescent
   - api.TextMetrics.fontBoundingBoxAscent
   - api.TextMetrics.fontBoundingBoxDescent
-  - api.TextTrack
-  - api.TextTrack.activeCues
-  - api.TextTrack.addCue
-  - api.TextTrack.cuechange_event
-  - api.TextTrack.cues
-  - api.TextTrack.id
-  - api.TextTrack.inBandMetadataTrackDispatchType
-  - api.TextTrack.kind
-  - api.TextTrack.label
-  - api.TextTrack.language
-  - api.TextTrack.mode
-  - api.TextTrack.removeCue
-  - api.TextTrackCue
-  - api.TextTrackCue.endTime
-  - api.TextTrackCue.enter_event
-  - api.TextTrackCue.exit_event
-  - api.TextTrackCue.id
-  - api.TextTrackCue.pauseOnExit
-  - api.TextTrackCue.startTime
-  - api.TextTrackCue.track
-  - api.TextTrackCueList
-  - api.TextTrackCueList.getCueById
-  - api.TextTrackCueList.length
-  - api.TextTrackList
-  - api.TextTrackList.addtrack_event
-  - api.TextTrackList.change_event
-  - api.TextTrackList.getTrackById
-  - api.TextTrackList.length
-  - api.TextTrackList.removetrack_event
   - api.TimeRanges
   - api.TimeRanges.end
   - api.TimeRanges.length
@@ -997,68 +696,15 @@ compat_features:
   - css.selectors.target
   - css.selectors.valid
   - css.selectors.visited
-  - html.elements.a
   - html.elements.a.download
-  - html.elements.a.href
-  - html.elements.a.hreflang
   - html.elements.a.ping
-  - html.elements.a.rel
-  - html.elements.a.rel.noopener
-  - html.elements.a.rel.noreferrer
-  - html.elements.a.target
-  - html.elements.a.type
-  - html.elements.address
-  - html.elements.area
-  - html.elements.area.alt
-  - html.elements.area.coords
   - html.elements.area.download
-  - html.elements.area.href
   - html.elements.area.ping
-  - html.elements.area.rel
-  - html.elements.area.rel.noopener
-  - html.elements.area.rel.noreferrer
-  - html.elements.area.shape
-  - html.elements.area.target
-  - html.elements.article
-  - html.elements.b
-  - html.elements.bdi
-  - html.elements.bdo
-  - html.elements.blockquote
-  - html.elements.body
-  - html.elements.button
-  - html.elements.button.disabled
-  - html.elements.canvas
-  - html.elements.canvas.height
-  - html.elements.canvas.width
-  - html.elements.caption
-  - html.elements.cite
-  - html.elements.col
-  - html.elements.col.span
-  - html.elements.colgroup
-  - html.elements.colgroup.span
-  - html.elements.data
-  - html.elements.data.value
   - html.elements.dd
-  - html.elements.del
-  - html.elements.dfn
-  - html.elements.div
   - html.elements.dl
   - html.elements.dt
-  - html.elements.em
-  - html.elements.embed
-  - html.elements.embed.height
-  - html.elements.embed.src
-  - html.elements.embed.type
-  - html.elements.embed.width
   - html.elements.fencedframe.height
   - html.elements.fencedframe.width
-  - html.elements.fieldset
-  - html.elements.fieldset.disabled
-  - html.elements.fieldset.form
-  - html.elements.fieldset.name
-  - html.elements.figcaption
-  - html.elements.figure
-  - html.elements.footer
   - html.elements.form
   - html.elements.form.accept-charset
   - html.elements.form.action
@@ -1070,21 +716,6 @@ compat_features:
   - html.elements.form.novalidate
   - html.elements.form.rel
   - html.elements.form.target
-  - html.elements.h1
-  - html.elements.h2
-  - html.elements.h3
-  - html.elements.h4
-  - html.elements.h5
-  - html.elements.h6
-  - html.elements.head
-  - html.elements.header
-  - html.elements.hr
-  - html.elements.html
-  - html.elements.i
-  - html.elements.iframe
-  - html.elements.iframe.allow
-  - html.elements.iframe.height
-  - html.elements.iframe.name
   - html.elements.iframe.sandbox
   - html.elements.iframe.sandbox.allow-downloads
   - html.elements.iframe.sandbox.allow-forms
@@ -1093,26 +724,15 @@ compat_features:
   - html.elements.iframe.sandbox.allow-pointer-lock
   - html.elements.iframe.sandbox.allow-popups
   - html.elements.iframe.sandbox.allow-popups-to-escape-sandbox
-  - html.elements.iframe.sandbox.allow-presentation
   - html.elements.iframe.sandbox.allow-same-origin
   - html.elements.iframe.sandbox.allow-scripts
   - html.elements.iframe.sandbox.allow-top-navigation
   - html.elements.iframe.sandbox.allow-top-navigation-by-user-activation
   - html.elements.iframe.sandbox.allow-top-navigation-to-custom-protocols
-  - html.elements.iframe.src
   - html.elements.iframe.srcdoc
-  - html.elements.iframe.width
-  - html.elements.img
-  - html.elements.img.alt
-  - html.elements.img.crossorigin
-  - html.elements.img.decoding
-  - html.elements.img.height
-  - html.elements.img.ismap
   - html.elements.img.sizes
-  - html.elements.img.src
+  - html.elements.img.sizes.auto
   - html.elements.img.srcset
-  - html.elements.img.usemap
-  - html.elements.img.width
   - html.elements.input
   - html.elements.input.accept
   - html.elements.input.alt
@@ -1160,22 +780,8 @@ compat_features:
   - html.elements.input.type_time
   - html.elements.input.type_url
   - html.elements.input.type_week
-  - html.elements.ins
-  - html.elements.kbd
   - html.elements.label
   - html.elements.label.for
-  - html.elements.legend
-  - html.elements.li
-  - html.elements.li.value
-  - html.elements.link
-  - html.elements.link.as
-  - html.elements.link.crossorigin
-  - html.elements.link.disabled
-  - html.elements.link.href
-  - html.elements.link.hreflang
-  - html.elements.link.integrity
-  - html.elements.link.media
-  - html.elements.link.rel
   - html.elements.link.rel.alternate_stylesheet
   - html.elements.link.rel.dns-prefetch
   - html.elements.link.rel.expect
@@ -1183,22 +789,9 @@ compat_features:
   - html.elements.link.rel.preconnect
   - html.elements.link.rel.prefetch
   - html.elements.link.rel.preload
-  - html.elements.link.sizes
-  - html.elements.link.type
-  - html.elements.main
-  - html.elements.map
-  - html.elements.mark
   - html.elements.menu
-  - html.elements.meta
-  - html.elements.meta.charset
-  - html.elements.meta.content
-  - html.elements.meta.http-equiv
   - html.elements.meta.http-equiv.content-security-policy
   - html.elements.meta.http-equiv.content-type
-  - html.elements.meta.http-equiv.refresh
-  - html.elements.meta.name
-  - html.elements.meta.name.color-scheme
-  - html.elements.meta.name.referrer
   - html.elements.meta.name.theme-color
   - html.elements.meter
   - html.elements.meter.high
@@ -1207,113 +800,17 @@ compat_features:
   - html.elements.meter.min
   - html.elements.meter.optimum
   - html.elements.meter.value
-  - html.elements.nav
-  - html.elements.noscript
-  - html.elements.object
-  - html.elements.object.data
-  - html.elements.object.form
-  - html.elements.object.height
-  - html.elements.object.name
-  - html.elements.object.type
-  - html.elements.object.width
-  - html.elements.ol
-  - html.elements.ol.reversed
-  - html.elements.ol.start
-  - html.elements.ol.type
-  - html.elements.optgroup
-  - html.elements.optgroup.disabled
-  - html.elements.optgroup.label
-  - html.elements.option
-  - html.elements.option.disabled
-  - html.elements.option.label
-  - html.elements.option.selected
-  - html.elements.option.value
-  - html.elements.output
-  - html.elements.output.for
-  - html.elements.output.form
-  - html.elements.output.name
-  - html.elements.p
-  - html.elements.picture
-  - html.elements.pre
-  - html.elements.progress
-  - html.elements.progress.max
-  - html.elements.progress.value
-  - html.elements.q
-  - html.elements.q.cite
-  - html.elements.rp
-  - html.elements.rt
-  - html.elements.ruby
   - html.elements.s
-  - html.elements.samp
-  - html.elements.script
-  - html.elements.script.async
-  - html.elements.script.crossorigin
-  - html.elements.script.defer
-  - html.elements.script.integrity
-  - html.elements.script.src
-  - html.elements.script.type
   - html.elements.script.type.importmap.integrity
-  - html.elements.section
-  - html.elements.select
   - html.elements.select.autocomplete
-  - html.elements.select.disabled
-  - html.elements.select.form
-  - html.elements.select.multiple
-  - html.elements.select.name
-  - html.elements.select.required
-  - html.elements.select.size
-  - html.elements.small
-  - html.elements.source
-  - html.elements.source.height
-  - html.elements.source.media
   - html.elements.source.sizes
-  - html.elements.source.src
   - html.elements.source.srcset
-  - html.elements.source.type
-  - html.elements.source.width
-  - html.elements.span
-  - html.elements.strong
-  - html.elements.style
-  - html.elements.style.media
-  - html.elements.sub
   - html.elements.summary
-  - html.elements.sup
-  - html.elements.table
-  - html.elements.tbody
-  - html.elements.td
   - html.elements.template.shadowrootclonable
   - html.elements.template.shadowrootdelegatesfocus
   - html.elements.template.shadowrootserializable
-  - html.elements.textarea
-  - html.elements.textarea.autocomplete
   - html.elements.textarea.autocomplete.webauthn
-  - html.elements.textarea.cols
-  - html.elements.textarea.disabled
-  - html.elements.textarea.form
-  - html.elements.textarea.maxlength
-  - html.elements.textarea.minlength
-  - html.elements.textarea.name
-  - html.elements.textarea.placeholder
-  - html.elements.textarea.readonly
-  - html.elements.textarea.required
-  - html.elements.textarea.rows
-  - html.elements.textarea.wrap
-  - html.elements.tfoot
-  - html.elements.th
-  - html.elements.thead
-  - html.elements.title
-  - html.elements.tr
-  - html.elements.track
-  - html.elements.track.default
-  - html.elements.track.kind
-  - html.elements.track.label
-  - html.elements.track.src
-  - html.elements.track.srclang
-  - html.elements.u
-  - html.elements.ul
-  - html.elements.var
   - html.elements.video.playsinline
-  - html.elements.wbr
   - html.global_attributes.accesskey
   - html.global_attributes.autocapitalize
   - html.global_attributes.class
@@ -1455,7 +952,7 @@ compat_features:
 #   - api.Element.mouseout_event
 #   - api.Element.mouseover_event
 #   - api.Element.mouseup_event
-# - input event:
+# - input (event):
 #   - api.Element.input_event
 # - Form-associated custom elements:
 #   - api.ElementInternals
@@ -1469,6 +966,34 @@ compat_features:
 #   - api.ElementInternals.validity
 #   - api.ElementInternals.willValidate
 #   - api.HTMLElement.attachInternals
+# - <a>:
+#   - api.HTMLAnchorElement
+#   - api.HTMLAnchorElement.hash
+#   - api.HTMLAnchorElement.host
+#   - api.HTMLAnchorElement.hostname
+#   - api.HTMLAnchorElement.href
+#   - api.HTMLAnchorElement.hreflang
+#   - api.HTMLAnchorElement.origin
+#   - api.HTMLAnchorElement.password
+#   - api.HTMLAnchorElement.pathname
+#   - api.HTMLAnchorElement.port
+#   - api.HTMLAnchorElement.protocol
+#   - api.HTMLAnchorElement.rel
+#   - api.HTMLAnchorElement.relList
+#   - api.HTMLAnchorElement.search
+#   - api.HTMLAnchorElement.target
+#   - api.HTMLAnchorElement.text
+#   - api.HTMLAnchorElement.toString
+#   - api.HTMLAnchorElement.type
+#   - api.HTMLAnchorElement.username
+#   - html.elements.a
+#   - html.elements.a.href
+#   - html.elements.a.hreflang
+#   - html.elements.a.rel
+#   - html.elements.a.rel.noopener
+#   - html.elements.a.rel.noreferrer
+#   - html.elements.a.target
+#   - html.elements.a.type
 # - Referrer policy:
 #   - api.HTMLAnchorElement.referrerPolicy
 #   - api.HTMLAreaElement.referrerPolicy
@@ -1482,6 +1007,43 @@ compat_features:
 #   - html.elements.img.referrerpolicy
 #   - html.elements.link.referrerpolicy
 #   - html.elements.script.referrerpolicy
+# - Image maps:
+#   - api.HTMLAreaElement
+#   - api.HTMLAreaElement.alt
+#   - api.HTMLAreaElement.coords
+#   - api.HTMLAreaElement.hash
+#   - api.HTMLAreaElement.host
+#   - api.HTMLAreaElement.hostname
+#   - api.HTMLAreaElement.href
+#   - api.HTMLAreaElement.origin
+#   - api.HTMLAreaElement.password
+#   - api.HTMLAreaElement.pathname
+#   - api.HTMLAreaElement.port
+#   - api.HTMLAreaElement.protocol
+#   - api.HTMLAreaElement.rel
+#   - api.HTMLAreaElement.relList
+#   - api.HTMLAreaElement.search
+#   - api.HTMLAreaElement.shape
+#   - api.HTMLAreaElement.target
+#   - api.HTMLAreaElement.toString
+#   - api.HTMLAreaElement.username
+#   - api.HTMLImageElement.isMap
+#   - api.HTMLImageElement.useMap
+#   - api.HTMLMapElement
+#   - api.HTMLMapElement.areas
+#   - api.HTMLMapElement.name
+#   - html.elements.area
+#   - html.elements.area.alt
+#   - html.elements.area.coords
+#   - html.elements.area.href
+#   - html.elements.area.rel
+#   - html.elements.area.rel.noopener
+#   - html.elements.area.rel.noreferrer
+#   - html.elements.area.shape
+#   - html.elements.area.target
+#   - html.elements.img.ismap
+#   - html.elements.img.usemap
+#   - html.elements.map
 # - <audio>:
 #   - api.HTMLAudioElement
 #   - api.HTMLAudioElement.Audio
@@ -1503,6 +1065,24 @@ compat_features:
 #   - html.elements.base
 #   - html.elements.base.href
 #   - html.elements.base.target
+# - <body>:
+#   - api.HTMLBodyElement
+#   - html.elements.body
+# - <button>:
+#   - api.HTMLButtonElement
+#   - api.HTMLButtonElement.disabled
+#   - api.HTMLButtonElement.form
+#   - api.HTMLButtonElement.formAction
+#   - api.HTMLButtonElement.formEnctype
+#   - api.HTMLButtonElement.formMethod
+#   - api.HTMLButtonElement.formNoValidate
+#   - api.HTMLButtonElement.formTarget
+#   - api.HTMLButtonElement.labels
+#   - api.HTMLButtonElement.name
+#   - api.HTMLButtonElement.type
+#   - api.HTMLButtonElement.value
+#   - html.elements.button
+#   - html.elements.button.disabled
 # - Constraint validation API:
 #   - api.HTMLButtonElement.checkValidity
 #   - api.HTMLButtonElement.reportValidity
@@ -1581,6 +1161,16 @@ compat_features:
 #   - html.elements.input.popovertarget
 #   - html.elements.input.popovertargetaction
 #   - html.global_attributes.popover
+# - <canvas>:
+#   - api.HTMLCanvasElement
+#   - api.HTMLCanvasElement.getContext
+#   - api.HTMLCanvasElement.height
+#   - api.HTMLCanvasElement.toBlob
+#   - api.HTMLCanvasElement.toDataURL
+#   - api.HTMLCanvasElement.width
+#   - html.elements.canvas
+#   - html.elements.canvas.height
+#   - html.elements.canvas.width
 # - Offscreen canvas:
 #   - api.HTMLCanvasElement.transferControlToOffscreen
 #   - api.OffscreenCanvas
@@ -1649,6 +1239,11 @@ compat_features:
 #   - api.OffscreenCanvasRenderingContext2D.textBaseline
 #   - api.OffscreenCanvasRenderingContext2D.transform
 #   - api.OffscreenCanvasRenderingContext2D.translate
+# - <data>:
+#   - api.HTMLDataElement
+#   - api.HTMLDataElement.value
+#   - html.elements.data
+#   - html.elements.data.value
 # - <datalist>:
 #   - api.HTMLDataListElement
 #   - api.HTMLDataListElement.options
@@ -1667,6 +1262,9 @@ compat_features:
 #   - api.HTMLDialogElement.show
 #   - api.HTMLDialogElement.showModal
 #   - html.elements.dialog
+# - <div>:
+#   - api.HTMLDivElement
+#   - html.elements.div
 # - Autofocus:
 #   - api.HTMLElement.autofocus
 #   - api.MathMLElement.autofocus
@@ -1681,6 +1279,65 @@ compat_features:
 # - translate attribute:
 #   - api.HTMLElement.translate
 #   - html.global_attributes.translate
+# - <embed>:
+#   - api.HTMLEmbedElement
+#   - api.HTMLEmbedElement.getSVGDocument
+#   - api.HTMLEmbedElement.height
+#   - api.HTMLEmbedElement.src
+#   - api.HTMLEmbedElement.type
+#   - api.HTMLEmbedElement.width
+#   - html.elements.embed
+#   - html.elements.embed.height
+#   - html.elements.embed.src
+#   - html.elements.embed.type
+#   - html.elements.embed.width
+# - <fieldset> and <legend>:
+#   - api.HTMLFieldSetElement
+#   - api.HTMLFieldSetElement.disabled
+#   - api.HTMLFieldSetElement.elements
+#   - api.HTMLFieldSetElement.form
+#   - api.HTMLFieldSetElement.name
+#   - api.HTMLFieldSetElement.type
+#   - api.HTMLLegendElement
+#   - api.HTMLLegendElement.form
+#   - html.elements.fieldset
+#   - html.elements.fieldset.disabled
+#   - html.elements.fieldset.form
+#   - html.elements.fieldset.name
+#   - html.elements.legend
+# - <hr>:
+#   - api.HTMLHRElement
+#   - html.elements.hr
+# - <head>:
+#   - api.HTMLHeadElement
+#   - html.elements.head
+# - <h1> through <h6>:
+#   - api.HTMLHeadingElement
+#   - html.elements.h1
+#   - html.elements.h2
+#   - html.elements.h3
+#   - html.elements.h4
+#   - html.elements.h5
+#   - html.elements.h6
+# - <html>:
+#   - api.HTMLHtmlElement
+#   - html.elements.html
+# - <iframe>:
+#   - api.HTMLIFrameElement
+#   - api.HTMLIFrameElement.allow
+#   - api.HTMLIFrameElement.contentDocument
+#   - api.HTMLIFrameElement.contentWindow
+#   - api.HTMLIFrameElement.getSVGDocument
+#   - api.HTMLIFrameElement.height
+#   - api.HTMLIFrameElement.name
+#   - api.HTMLIFrameElement.src
+#   - api.HTMLIFrameElement.width
+#   - html.elements.iframe
+#   - html.elements.iframe.allow
+#   - html.elements.iframe.height
+#   - html.elements.iframe.name
+#   - html.elements.iframe.src
+#   - html.elements.iframe.width
 # - Fullscreen API:
 #   - api.HTMLIFrameElement.allowFullscreen
 #   - html.elements.iframe.allowfullscreen
@@ -1689,6 +1346,26 @@ compat_features:
 #   - api.HTMLImageElement.loading
 #   - html.elements.iframe.loading
 #   - html.elements.img.loading
+# - <img>:
+#   - api.HTMLImageElement
+#   - api.HTMLImageElement.Image
+#   - api.HTMLImageElement.alt
+#   - api.HTMLImageElement.complete
+#   - api.HTMLImageElement.crossOrigin
+#   - api.HTMLImageElement.decode
+#   - api.HTMLImageElement.decoding
+#   - api.HTMLImageElement.height
+#   - api.HTMLImageElement.naturalHeight
+#   - api.HTMLImageElement.naturalWidth
+#   - api.HTMLImageElement.src
+#   - api.HTMLImageElement.width
+#   - html.elements.img
+#   - html.elements.img.alt
+#   - html.elements.img.crossorigin
+#   - html.elements.img.decoding
+#   - html.elements.img.height
+#   - html.elements.img.src
+#   - html.elements.img.width
 # - Fetch priority:
 #   - api.HTMLImageElement.fetchPriority
 #   - api.HTMLLinkElement.fetchPriority
@@ -1703,6 +1380,45 @@ compat_features:
 #   - html.elements.textarea.dirname
 # - showPicker() for <input>:
 #   - api.HTMLInputElement.showPicker
+# - <ol>, <ul>, and <li>:
+#   - api.HTMLLIElement
+#   - api.HTMLLIElement.value
+#   - api.HTMLOListElement
+#   - api.HTMLOListElement.reversed
+#   - api.HTMLOListElement.start
+#   - api.HTMLOListElement.type
+#   - api.HTMLUListElement
+#   - html.elements.li
+#   - html.elements.li.value
+#   - html.elements.ol
+#   - html.elements.ol.reversed
+#   - html.elements.ol.start
+#   - html.elements.ol.type
+#   - html.elements.ul
+# - <link>:
+#   - api.HTMLLinkElement
+#   - api.HTMLLinkElement.as
+#   - api.HTMLLinkElement.crossOrigin
+#   - api.HTMLLinkElement.disabled
+#   - api.HTMLLinkElement.href
+#   - api.HTMLLinkElement.hreflang
+#   - api.HTMLLinkElement.integrity
+#   - api.HTMLLinkElement.media
+#   - api.HTMLLinkElement.rel
+#   - api.HTMLLinkElement.relList
+#   - api.HTMLLinkElement.sizes
+#   - api.HTMLLinkElement.type
+#   - html.elements.link
+#   - html.elements.link.as
+#   - html.elements.link.crossorigin
+#   - html.elements.link.disabled
+#   - html.elements.link.href
+#   - html.elements.link.hreflang
+#   - html.elements.link.integrity
+#   - html.elements.link.media
+#   - html.elements.link.rel
+#   - html.elements.link.sizes
+#   - html.elements.link.type
 # - blocking="render":
 #   - api.HTMLLinkElement.blocking
 #   - api.HTMLScriptElement.blocking
@@ -1784,10 +1500,195 @@ compat_features:
 #   - html.elements.video.preload
 #   - html.elements.video.src
 #   - html.elements.video.width
+# - Text tracks:
+#   - api.HTMLMediaElement.addTextTrack
+#   - api.HTMLTrackElement
+#   - api.HTMLTrackElement.cuechange_event
+#   - api.HTMLTrackElement.default
+#   - api.HTMLTrackElement.kind
+#   - api.HTMLTrackElement.label
+#   - api.HTMLTrackElement.readyState
+#   - api.HTMLTrackElement.src
+#   - api.HTMLTrackElement.srclang
+#   - api.HTMLTrackElement.track
+#   - api.TextTrack
+#   - api.TextTrack.activeCues
+#   - api.TextTrack.addCue
+#   - api.TextTrack.cuechange_event
+#   - api.TextTrack.cues
+#   - api.TextTrack.id
+#   - api.TextTrack.inBandMetadataTrackDispatchType
+#   - api.TextTrack.kind
+#   - api.TextTrack.label
+#   - api.TextTrack.language
+#   - api.TextTrack.mode
+#   - api.TextTrack.removeCue
+#   - api.TextTrackCue
+#   - api.TextTrackCue.endTime
+#   - api.TextTrackCue.enter_event
+#   - api.TextTrackCue.exit_event
+#   - api.TextTrackCue.id
+#   - api.TextTrackCue.pauseOnExit
+#   - api.TextTrackCue.startTime
+#   - api.TextTrackCue.track
+#   - api.TextTrackCueList
+#   - api.TextTrackCueList.getCueById
+#   - api.TextTrackCueList.length
+#   - api.TextTrackList
+#   - api.TextTrackList.addtrack_event
+#   - api.TextTrackList.change_event
+#   - api.TextTrackList.getTrackById
+#   - api.TextTrackList.length
+#   - api.TextTrackList.removetrack_event
+#   - html.elements.track
+#   - html.elements.track.default
+#   - html.elements.track.kind
+#   - html.elements.track.label
+#   - html.elements.track.src
+#   - html.elements.track.srclang
 # - fastSeek():
 #   - api.HTMLMediaElement.fastSeek
 # - preservesPitch:
 #   - api.HTMLMediaElement.preservesPitch
+# - <meta>:
+#   - api.HTMLMetaElement
+#   - api.HTMLMetaElement.content
+#   - api.HTMLMetaElement.httpEquiv
+#   - api.HTMLMetaElement.media
+#   - api.HTMLMetaElement.name
+#   - html.elements.meta
+#   - html.elements.meta.charset
+#   - html.elements.meta.content
+#   - html.elements.meta.http-equiv
+#   - html.elements.meta.http-equiv.refresh
+#   - html.elements.meta.name
+#   - html.elements.meta.name.referrer
+# - <del>:
+#   - api.HTMLModElement
+#   - api.HTMLModElement.cite
+#   - api.HTMLModElement.dateTime
+#   - html.elements.del
+# - <object>:
+#   - api.HTMLObjectElement
+#   - api.HTMLObjectElement.contentDocument
+#   - api.HTMLObjectElement.contentWindow
+#   - api.HTMLObjectElement.data
+#   - api.HTMLObjectElement.form
+#   - api.HTMLObjectElement.getSVGDocument
+#   - api.HTMLObjectElement.height
+#   - api.HTMLObjectElement.name
+#   - api.HTMLObjectElement.type
+#   - api.HTMLObjectElement.width
+#   - html.elements.object
+#   - html.elements.object.data
+#   - html.elements.object.form
+#   - html.elements.object.height
+#   - html.elements.object.name
+#   - html.elements.object.type
+#   - html.elements.object.width
+# - <select>:
+#   - api.HTMLOptGroupElement
+#   - api.HTMLOptGroupElement.disabled
+#   - api.HTMLOptGroupElement.label
+#   - api.HTMLOptionElement
+#   - api.HTMLOptionElement.Option
+#   - api.HTMLOptionElement.defaultSelected
+#   - api.HTMLOptionElement.disabled
+#   - api.HTMLOptionElement.form
+#   - api.HTMLOptionElement.index
+#   - api.HTMLOptionElement.label
+#   - api.HTMLOptionElement.selected
+#   - api.HTMLOptionElement.text
+#   - api.HTMLOptionElement.value
+#   - api.HTMLSelectElement
+#   - api.HTMLSelectElement.add
+#   - api.HTMLSelectElement.autocomplete
+#   - api.HTMLSelectElement.disabled
+#   - api.HTMLSelectElement.form
+#   - api.HTMLSelectElement.item
+#   - api.HTMLSelectElement.labels
+#   - api.HTMLSelectElement.length
+#   - api.HTMLSelectElement.multiple
+#   - api.HTMLSelectElement.name
+#   - api.HTMLSelectElement.namedItem
+#   - api.HTMLSelectElement.options
+#   - api.HTMLSelectElement.remove
+#   - api.HTMLSelectElement.required
+#   - api.HTMLSelectElement.selectedIndex
+#   - api.HTMLSelectElement.selectedOptions
+#   - api.HTMLSelectElement.size
+#   - api.HTMLSelectElement.type
+#   - api.HTMLSelectElement.value
+#   - html.elements.optgroup
+#   - html.elements.optgroup.disabled
+#   - html.elements.optgroup.label
+#   - html.elements.option
+#   - html.elements.option.disabled
+#   - html.elements.option.label
+#   - html.elements.option.selected
+#   - html.elements.option.value
+#   - html.elements.select
+#   - html.elements.select.disabled
+#   - html.elements.select.form
+#   - html.elements.select.multiple
+#   - html.elements.select.name
+#   - html.elements.select.required
+#   - html.elements.select.size
+# - <output>:
+#   - api.HTMLOutputElement
+#   - api.HTMLOutputElement.HTMLOutputElement
+#   - api.HTMLOutputElement.defaultValue
+#   - api.HTMLOutputElement.form
+#   - api.HTMLOutputElement.htmlFor
+#   - api.HTMLOutputElement.labels
+#   - api.HTMLOutputElement.name
+#   - api.HTMLOutputElement.type
+#   - api.HTMLOutputElement.value
+#   - html.elements.output
+#   - html.elements.output.for
+#   - html.elements.output.form
+#   - html.elements.output.name
+# - <p>:
+#   - api.HTMLParagraphElement
+#   - html.elements.p
+# - <picture>:
+#   - api.HTMLPictureElement
+#   - html.elements.picture
+# - <pre>:
+#   - api.HTMLPreElement
+#   - html.elements.pre
+# - <progress>:
+#   - api.HTMLProgressElement
+#   - api.HTMLProgressElement.labels
+#   - api.HTMLProgressElement.max
+#   - api.HTMLProgressElement.position
+#   - api.HTMLProgressElement.value
+#   - html.elements.progress
+#   - html.elements.progress.max
+#   - html.elements.progress.value
+# - <q>:
+#   - api.HTMLQuoteElement
+#   - api.HTMLQuoteElement.cite
+#   - html.elements.q
+#   - html.elements.q.cite
+# - <script> and <noscript>:
+#   - api.HTMLScriptElement
+#   - api.HTMLScriptElement.async
+#   - api.HTMLScriptElement.crossOrigin
+#   - api.HTMLScriptElement.defer
+#   - api.HTMLScriptElement.integrity
+#   - api.HTMLScriptElement.src
+#   - api.HTMLScriptElement.supports_static
+#   - api.HTMLScriptElement.text
+#   - api.HTMLScriptElement.type
+#   - html.elements.noscript
+#   - html.elements.script
+#   - html.elements.script.async
+#   - html.elements.script.crossorigin
+#   - html.elements.script.defer
+#   - html.elements.script.integrity
+#   - html.elements.script.src
+#   - html.elements.script.type
 # - showPicker() for <select>:
 #   - api.HTMLSelectElement.showPicker
 # - <slot>:
@@ -1800,6 +1701,63 @@ compat_features:
 #   - html.global_attributes.slot
 # - Imperative slot assignment:
 #   - api.HTMLSlotElement.assign
+# - <span>:
+#   - api.HTMLSpanElement
+#   - html.elements.span
+# - <style>:
+#   - api.HTMLStyleElement
+#   - api.HTMLStyleElement.disabled
+#   - api.HTMLStyleElement.media
+#   - html.elements.style
+#   - html.elements.style.media
+# - Tables:
+#   - api.HTMLTableCaptionElement
+#   - api.HTMLTableCellElement
+#   - api.HTMLTableCellElement.abbr
+#   - api.HTMLTableCellElement.cellIndex
+#   - api.HTMLTableCellElement.colSpan
+#   - api.HTMLTableCellElement.headers
+#   - api.HTMLTableCellElement.rowSpan
+#   - api.HTMLTableCellElement.scope
+#   - api.HTMLTableColElement
+#   - api.HTMLTableColElement.span
+#   - api.HTMLTableElement
+#   - api.HTMLTableElement.caption
+#   - api.HTMLTableElement.createCaption
+#   - api.HTMLTableElement.createTBody
+#   - api.HTMLTableElement.createTFoot
+#   - api.HTMLTableElement.createTHead
+#   - api.HTMLTableElement.deleteCaption
+#   - api.HTMLTableElement.deleteRow
+#   - api.HTMLTableElement.deleteTFoot
+#   - api.HTMLTableElement.deleteTHead
+#   - api.HTMLTableElement.insertRow
+#   - api.HTMLTableElement.rows
+#   - api.HTMLTableElement.tBodies
+#   - api.HTMLTableElement.tFoot
+#   - api.HTMLTableElement.tHead
+#   - api.HTMLTableRowElement
+#   - api.HTMLTableRowElement.cells
+#   - api.HTMLTableRowElement.deleteCell
+#   - api.HTMLTableRowElement.insertCell
+#   - api.HTMLTableRowElement.rowIndex
+#   - api.HTMLTableRowElement.sectionRowIndex
+#   - api.HTMLTableSectionElement
+#   - api.HTMLTableSectionElement.deleteRow
+#   - api.HTMLTableSectionElement.insertRow
+#   - api.HTMLTableSectionElement.rows
+#   - html.elements.caption
+#   - html.elements.col
+#   - html.elements.col.span
+#   - html.elements.colgroup
+#   - html.elements.colgroup.span
+#   - html.elements.table
+#   - html.elements.tbody
+#   - html.elements.td
+#   - html.elements.tfoot
+#   - html.elements.th
+#   - html.elements.thead
+#   - html.elements.tr
 # - <template>:
 #   - api.HTMLTemplateElement
 #   - api.HTMLTemplateElement.content
@@ -1807,10 +1765,53 @@ compat_features:
 # - Declarative shadow DOM:
 #   - api.HTMLTemplateElement.shadowRootMode
 #   - html.elements.template.shadowrootmode
+# - <textarea>:
+#   - api.HTMLTextAreaElement
+#   - api.HTMLTextAreaElement.autocomplete
+#   - api.HTMLTextAreaElement.cols
+#   - api.HTMLTextAreaElement.defaultValue
+#   - api.HTMLTextAreaElement.disabled
+#   - api.HTMLTextAreaElement.form
+#   - api.HTMLTextAreaElement.labels
+#   - api.HTMLTextAreaElement.maxLength
+#   - api.HTMLTextAreaElement.minLength
+#   - api.HTMLTextAreaElement.name
+#   - api.HTMLTextAreaElement.placeholder
+#   - api.HTMLTextAreaElement.readOnly
+#   - api.HTMLTextAreaElement.required
+#   - api.HTMLTextAreaElement.rows
+#   - api.HTMLTextAreaElement.select
+#   - api.HTMLTextAreaElement.select_event
+#   - api.HTMLTextAreaElement.selectionDirection
+#   - api.HTMLTextAreaElement.selectionEnd
+#   - api.HTMLTextAreaElement.selectionStart
+#   - api.HTMLTextAreaElement.setRangeText
+#   - api.HTMLTextAreaElement.setSelectionRange
+#   - api.HTMLTextAreaElement.textLength
+#   - api.HTMLTextAreaElement.type
+#   - api.HTMLTextAreaElement.value
+#   - api.HTMLTextAreaElement.wrap
+#   - html.elements.textarea
+#   - html.elements.textarea.autocomplete
+#   - html.elements.textarea.cols
+#   - html.elements.textarea.disabled
+#   - html.elements.textarea.form
+#   - html.elements.textarea.maxlength
+#   - html.elements.textarea.minlength
+#   - html.elements.textarea.name
+#   - html.elements.textarea.placeholder
+#   - html.elements.textarea.readonly
+#   - html.elements.textarea.required
+#   - html.elements.textarea.rows
+#   - html.elements.textarea.wrap
 # - <time>:
 #   - api.HTMLTimeElement
 #   - api.HTMLTimeElement.dateTime
 #   - html.elements.time
+# - <title>:
+#   - api.HTMLTitleElement
+#   - api.HTMLTitleElement.text
+#   - html.elements.title
 # - Navigation API:
 #   - api.NavigateEvent
 #   - api.NavigateEvent.NavigateEvent
@@ -1894,22 +1895,90 @@ compat_features:
 #   - css.selectors.read-write
 # - <abbr>:
 #   - html.elements.abbr
+# - <address>:
+#   - html.elements.address
+# - <article>:
+#   - html.elements.article
 # - <aside>:
 #   - html.elements.aside
+# - <b>:
+#   - html.elements.b
+# - <bdi>:
+#   - html.elements.bdi
+# - <bdo>:
+#   - html.elements.bdo
+# - <blockquote>:
+#   - html.elements.blockquote
+# - <cite>:
+#   - html.elements.cite
 # - <code>:
 #   - html.elements.code
+# - <dfn>:
+#   - html.elements.dfn
+# - <em>:
+#   - html.elements.em
+# - <figure> and <figcaption>:
+#   - html.elements.figcaption
+#   - html.elements.figure
+# - <header> and <footer>:
+#   - html.elements.footer
+#   - html.elements.header
 # - <hgroup>:
 #   - html.elements.hgroup
+# - <i>:
+#   - html.elements.i
+# - Presentation API:
+#   - html.elements.iframe.sandbox.allow-presentation
 # - <input type="search">:
 #   - html.elements.input.type_search
+# - <ins>:
+#   - html.elements.ins
+# - <kbd>:
+#   - html.elements.kbd
 # - <link rel="modulepreload">:
 #   - html.elements.link.rel.modulepreload
+# - <main>:
+#   - html.elements.main
+# - <mark>:
+#   - html.elements.mark
+# - color-scheme:
+#   - html.elements.meta.name.color-scheme
+# - <nav>:
+#   - html.elements.nav
+# - <ruby>:
+#   - html.elements.rp
+#   - html.elements.rt
+#   - html.elements.ruby
+# - <samp>:
+#   - html.elements.samp
 # - JavaScript modules:
 #   - html.elements.script.nomodule
 # - Import maps:
 #   - html.elements.script.type.importmap
 # - <search>:
 #   - html.elements.search
+# - <section>:
+#   - html.elements.section
+# - <small>:
+#   - html.elements.small
+# - <source>:
+#   - html.elements.source
+#   - html.elements.source.height
+#   - html.elements.source.media
+#   - html.elements.source.src
+#   - html.elements.source.type
+#   - html.elements.source.width
+# - <strong>:
+#   - html.elements.strong
+# - <sub> and <sup>:
+#   - html.elements.sub
+#   - html.elements.sup
+# - <u>:
+#   - html.elements.u
+# - <var>:
+#   - html.elements.var
+# - <wbr>:
+#   - html.elements.wbr
 # - hidden="until-found":
 #   - html.global_attributes.hidden.until-found_value
 # - Customized built-in elements:
