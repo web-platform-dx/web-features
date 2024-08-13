@@ -28,9 +28,18 @@ compat_features:
   #   chrome: "88"
   #   chrome_android: "88"
   #   edge: "88"
-  - http.headers.Permissions-Policy.accelerometer
   - http.headers.Permissions-Policy.gyroscope
   - http.headers.Permissions-Policy.magnetometer
+
+  # baseline: false
+  # support:
+  #   chrome: "120"
+  #   chrome_android: "120"
+  #   edge: "120"
+  - webdriver.commands.CreateVirtualSensor
+  - webdriver.commands.DeleteVirtualSensor
+  - webdriver.commands.GetVirtualSensorInformation
+  - webdriver.commands.UpdateVirtualSensorReading
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false

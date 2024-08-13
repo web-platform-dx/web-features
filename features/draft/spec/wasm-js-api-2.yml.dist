@@ -3,16 +3,16 @@
 
 status:
   baseline: high
-  baseline_low_date: 2020-03-24
-  baseline_high_date: 2022-09-24
+  baseline_low_date: 2021-04-26
+  baseline_high_date: 2023-10-26
   support:
-    chrome: "69"
-    chrome_android: "69"
-    edge: "79"
-    firefox: "62"
-    firefox_android: "62"
-    safari: "13.1"
-    safari_ios: "13.4"
+    chrome: "85"
+    chrome_android: "85"
+    edge: "85"
+    firefox: "78"
+    firefox_android: "79"
+    safari: "14.1"
+    safari_ios: "14.5"
 compat_features:
   # baseline: high
   # baseline_low_date: 2017-10-17
@@ -54,7 +54,6 @@ compat_features:
   - webassembly.api.instantiate_static
   - webassembly.api.validate_static
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-03-24
   # baseline_high_date: 2022-09-24
@@ -70,3 +69,30 @@ compat_features:
   - webassembly.api.Global.Global
   - webassembly.api.Global.value
   - webassembly.api.Global.valueOf
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: ≤80
+  #   chrome_android: "80"
+  #   edge: ≤80
+  #   firefox: ≤72
+  #   firefox_android: "79"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
+  - webassembly.mutable-globals
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2021-04-26
+  # baseline_high_date: 2023-10-26
+  # support:
+  #   chrome: "85"
+  #   chrome_android: "85"
+  #   edge: "85"
+  #   firefox: "78"
+  #   firefox_android: "79"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - webassembly.BigInt-to-i64-integration
