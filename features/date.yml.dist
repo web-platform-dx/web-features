@@ -170,16 +170,3 @@ compat_features:
   #   safari: "12"
   #   safari_ios: "12"
   - javascript.builtins.Date.UTC.optional_monthIndex
-
-  # baseline: false
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "1"
-  #   safari_ios: "1"
-  - javascript.builtins.Date.getYear
-  - javascript.builtins.Date.setYear
-  - javascript.builtins.Date.toGMTString
