@@ -26,11 +26,11 @@ Also consider joining the [WebDX Community Group](https://www.w3.org/community/w
 
 Think of features as individual components of the web platform that web developers can use to achieve specific tasks.
 
-As such, a feature has no specific size. Some features might cover single CSS properties while other features cover entire JavaScript APIs with multiple interfaces, methods, and properties. As long as a web developer would use this to achieve a specific goal, it's a feature.
+As such, a feature has no specific size. A feature might cover a single CSS property, an entire JavaScript APIs with multiple interfaces, methods, and properties, or a combination of CSS properties, HTML elements, and JavaScript APIs. As long as a web developer would use the feature to achieve a specific goal, it's a feature.
 
 For example, the `fetch()` API is a feature, the `:has()` CSS pseudo-class function too, and so is the Web Audio API.
 
-For the time being, this repository focuses only on features that have at least some level of browser support and that are already documented on MDN.
+For the time being, this repository focuses only on features that are implemented in some browser and that are already documented on MDN.
 
 ### Feature file name and format
 
@@ -50,9 +50,8 @@ This table lists the fields that can be found in a feature file, and provides a 
 |---|---|---|---|
 | `name` | The name of the feature. | String | Yes |
 | `description` | A short description of the feature. | String | Yes |
-| `spec` | One or more specification URLs for this feature | String, or array of strings | Yes |
-| `group` | An optional group, or list of groups that this feature belongs to | String, or array of strings | No |
-| `snapshot` | An optional snapshot, or list of snapshots that this feature belongs to | String, or array of strings | No |
+| `spec` | One or more specification URLs for this feature. | String, or array of strings | Yes |
+| `group` | An optional group, or list of groups that this feature belongs to. See the definition of groups under [Create a new feature from scratch](#create-a-new-feature-from-scratch). | String, or array of strings | No |
 | `caniuse` | The feature's ID on the [Can I Use](https://caniuse.com/) website. | String | No |
 | `compat_features` | The list of browser-compat-data entries that make up this feature. In many cases, the corresponding browser-compat-data entries already map to the feature ID, and this is therefore not needed. | Array of strings | No |
 | `status` | An optional object which describes whether the feature is considered baseline, when it achieved this baseline status, and the version number of supported browsers. In the majority of cases, this is calculated from the `compat_features` list or from browser-compat-data entries directly, and therefore not needed. | Object | No |
