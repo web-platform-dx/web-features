@@ -1,0 +1,27 @@
+name: <fieldset> and <legend>
+description: The `<fieldset>` and `<legend>` elements group several form control elements within a web form.
+spec:
+  - https://html.spec.whatwg.org/multipage/form-elements.html#the-fieldset-element
+  - https://html.spec.whatwg.org/multipage/form-elements.html#the-legend-element
+group:
+  - forms
+  - html-elements
+status:
+  compute_from:
+    - html.elements.fieldset
+    - html.elements.legend
+compat_features:
+  - api.HTMLFieldSetElement
+  - api.HTMLFieldSetElement.disabled
+  - api.HTMLFieldSetElement.elements
+  - api.HTMLFieldSetElement.elements.type_HTMLCollection
+  - api.HTMLFieldSetElement.form
+  - api.HTMLFieldSetElement.name
+  - api.HTMLFieldSetElement.type
+  - api.HTMLLegendElement
+  - api.HTMLLegendElement.form
+  - html.elements.fieldset
+  - html.elements.fieldset.disabled
+  - html.elements.fieldset.form
+  - html.elements.fieldset.name
+  - html.elements.legend

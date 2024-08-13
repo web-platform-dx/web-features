@@ -26,13 +26,13 @@ compat_features:
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
   # support:
-  #   chrome: "80"
+  #   chrome: ≤80
   #   chrome_android: "80"
   #   edge: "80"
-  #   firefox: "72"
+  #   firefox: ≤72
   #   firefox_android: "79"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
   - css.properties.dominant-baseline
   - css.properties.dominant-baseline.alphabetic
   - css.properties.dominant-baseline.auto
@@ -45,17 +45,25 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "80"
+  #   chrome: ≤80
+  #   chrome_android: "80"
+  #   edge: ≤80
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
+  - css.properties.alignment-baseline
+  - svg.global_attributes.alignment-baseline
+
+  # baseline: false
+  # support:
+  #   chrome: ≤80
   #   chrome_android: "80"
   #   edge: "80"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
-  - css.properties.alignment-baseline
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
   - css.properties.baseline-shift
   - css.properties.baseline-shift.baseline
   - css.properties.baseline-shift.sub
   - css.properties.baseline-shift.super
-  - svg.global_attributes.alignment-baseline
   - svg.global_attributes.baseline-shift
 
   # ⬇️ Same status as overall feature ⬇️

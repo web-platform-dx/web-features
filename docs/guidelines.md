@@ -1,24 +1,5 @@
 # Feature guidelines
 
-These guidelines are for authors of new features.
-
-## Identifiers
-
-Feature identifiers must contain only lowercase alphanumeric characters (a-z and 0-9) plus the `-` character (hyphen or minus sign) as a word separator.
-
-The identifier should match the name, with these additional guidelines:
-
-- Prefer shorter identifiers to longer identifiers, by avoiding common qualifiers and repeated words.
-
-  - 👍 Recommended: `aborting`
-  - 👎 Not recommended: `abort-controller-and-abort-signal`
-  - 👍 Recommended: `arrays`
-  - 👎 Not recommended: `arrays-initial-support`
-  - 👍 Recommended: `fullscreen`
-  - 👎 Not recommended: `fullscreen-api`
-  - 👍 Recommended: `user-pseudos`
-  - 👎 Not recommended: `user-valid-and-user-invalid`
-
 ## Names
 
 Feature authors should (in descending order of priority):
@@ -64,6 +45,23 @@ Feature authors should (in descending order of priority):
   - 👎 Not recommended: `:has()` pseudo-class
   - 👍 Recommended: `<dialog>`
   - 👎 Not recommended: `<dialog>` element
+
+## Identifiers
+
+Feature identifiers must contain only lowercase alphanumeric characters (a-z and 0-9) plus the `-` character (hyphen or minus sign) as a word separator.
+
+The identifier should match the name, with these additional guidelines:
+
+- Prefer shorter identifiers to longer identifiers, by avoiding common qualifiers and repeated words.
+
+  - 👍 Recommended: `aborting`
+  - 👎 Not recommended: `abort-controller-and-abort-signal`
+  - 👍 Recommended: `arrays`
+  - 👎 Not recommended: `arrays-initial-support`
+  - 👍 Recommended: `fullscreen`
+  - 👎 Not recommended: `fullscreen-api`
+  - 👍 Recommended: `user-pseudos`
+  - 👎 Not recommended: `user-valid-and-user-invalid`
 
 ## Descriptions
 
@@ -191,6 +189,17 @@ Use "The property sets…" but never "The property defines…."
 Avoid.
 See [sets](#sets).
 ([#727](https://github.com/web-platform-dx/web-features/pull/727#discussion_r1537635491))
+
+#### styling … as … by default
+
+Use this phrase (or using another appropriate preposition, such as "styling in") to note conventional or standardized default styling.
+The ellipses stand in for the thing being styled (e.g., "text") and the style itself (e.g., "italic").
+Use it before [_also known as_ text](#also-known-as).
+For example:
+
+ > The `<small>` element represents side-comments and small print, like copyright and legal text, styling text in a reduced font size by default.
+ 
+ ([#1403](https://github.com/web-platform-dx/web-features/pull/1403), [#1379](https://github.com/web-platform-dx/web-features/pull/1379))
 
 #### usage
 

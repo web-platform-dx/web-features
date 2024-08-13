@@ -247,19 +247,6 @@ compat_features:
   # baseline_low_date: 2017-03-27
   # baseline_high_date: 2019-09-27
   # support:
-  #   chrome: "32"
-  #   chrome_android: "32"
-  #   edge: "12"
-  #   firefox: "28"
-  #   firefox_android: "28"
-  #   safari: "10.1"
-  #   safari_ios: "10.3"
-  - api.KeyboardEvent.repeat
-
-  # baseline: high
-  # baseline_low_date: 2017-03-27
-  # baseline_high_date: 2019-09-27
-  # support:
   #   chrome: "51"
   #   chrome_android: "51"
   #   edge: "12"
@@ -343,14 +330,12 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
   #   edge: "12"
-  #   safari: "3"
-  #   safari_ios: "2"
-  - api.TextEvent
-  - api.TextEvent.data
-  - api.TextEvent.initTextEvent
+  #   firefox: "28"
+  #   firefox_android: "28"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.KeyboardEvent.repeat
 
   # baseline: false
   # support:

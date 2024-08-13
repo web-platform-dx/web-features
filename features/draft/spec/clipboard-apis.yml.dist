@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "124"
+    chrome_android: "124"
+    edge: "124"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -49,23 +52,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   edge: "79"
-  #   firefox: "127"
-  #   firefox_android: "127"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
-  - api.Clipboard.read
-
-  # baseline: false
-  # support:
-  #   firefox: "125"
-  #   firefox_android: "125"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
-  - api.Clipboard.readText
-
-  # baseline: false
-  # support:
   #   chrome: "64"
   #   chrome_android: "64"
   #   edge: "79"
@@ -73,7 +59,15 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "121"
-  #   edge: "121"
-  - api.ClipboardItem.supports_static.optional_type_image_svg_xml
-  - api.ClipboardItem.supports_static.optional_type_web
+  #   chrome: "104"
+  #   chrome_android: "104"
+  #   edge: "104"
+  - api.ClipboardItem.type_web
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "124"
+  #   chrome_android: "124"
+  #   edge: "124"
+  - api.ClipboardItem.type_image_svg_xml

@@ -20,37 +20,9 @@ compat_features:
   #   firefox_android: "79"
   #   safari: "15.4"
   #   safari_ios: "15.4"
-  - css.properties.contain
   - css.properties.contain.content
-  - css.properties.contain.layout
   - css.properties.contain.none
-  - css.properties.contain.paint
-  - css.properties.contain.size
   - css.properties.contain.strict
-
-  # baseline: low
-  # baseline_low_date: 2022-07-26
-  # support:
-  #   chrome: "52"
-  #   chrome_android: "52"
-  #   edge: "79"
-  #   firefox: "103"
-  #   firefox_android: "103"
-  #   safari: "15.4"
-  #   safari_ios: "15.4"
-  - css.properties.contain.style
-
-  # baseline: low
-  # baseline_low_date: 2022-09-12
-  # support:
-  #   chrome: "105"
-  #   chrome_android: "105"
-  #   edge: "105"
-  #   firefox: "101"
-  #   firefox_android: "101"
-  #   safari: "16"
-  #   safari_ios: "16"
-  - css.properties.contain.inline-size
 
   # baseline: false
   # support:

@@ -58,6 +58,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "68"
+  #   chrome_android: "68"
+  #   edge: "15"
+  #   firefox: "55"
+  #   firefox_android: "55"
+  #   safari: "16.4"
+  - api.GamepadHapticActuator
+
+  # baseline: false
+  # support:
   #   chrome: "73"
   #   chrome_android: "73"
   #   edge: "15"
@@ -76,6 +86,14 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "68"
+  #   chrome_android: "68"
+  #   edge: "79"
+  #   safari: "16.4"
+  - api.Gamepad.vibrationActuator
+
+  # baseline: false
+  # support:
   #   firefox: "89"
   #   firefox_android: "89"
   #   safari: "16"
@@ -89,6 +107,10 @@ compat_features:
   #   chrome_android: "126"
   #   edge: "126"
   - api.GamepadHapticActuator.effects
+  - api.GamepadHapticActuator.effects.type_trigger-rumble
+  - api.GamepadHapticActuator.playEffect.params_leftTrigger_parameter
+  - api.GamepadHapticActuator.playEffect.params_rightTrigger_parameter
+  - api.GamepadHapticActuator.playEffect.type_trigger-rumble
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
