@@ -1,0 +1,6 @@
+name: Desynchronized WebGL
+description: Reduces latency by desynchronizing the canvas paint cycle from the event loop..
+spec: https://registry.khronos.org/webgl/specs/latest/1.0/#5.2.1
+group: webgl
+compat_features:
+  - api.HTMLCanvasElement.getContext.webgl_context.options_desynchronized_parameter
