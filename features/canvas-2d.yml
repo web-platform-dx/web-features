@@ -2,6 +2,8 @@ name: Canvas 2D rendering context
 description: Canvas 2D provides the 2D rendering context for the drawing surface of a `<canvas>` element.
 spec: https://html.spec.whatwg.org/multipage/canvas.html#2dcontext
 group: canvas
+status:
+  compute_from: api.CanvasRenderingContext2D
 compat_features:
   - api.CanvasGradient
   - api.CanvasGradient.addColorStop
@@ -18,6 +20,7 @@ compat_features:
   - api.CanvasRenderingContext2D.createLinearGradient
   - api.CanvasRenderingContext2D.createPattern
   - api.CanvasRenderingContext2D.createRadialGradient
+  - api.CanvasRenderingContext2D.direction
   - api.CanvasRenderingContext2D.drawFocusIfNeeded
   - api.CanvasRenderingContext2D.drawImage
   - api.CanvasRenderingContext2D.ellipse
@@ -25,15 +28,22 @@ compat_features:
   - api.CanvasRenderingContext2D.fillRect
   - api.CanvasRenderingContext2D.fillStyle
   - api.CanvasRenderingContext2D.fillText
+  - api.CanvasRenderingContext2D.filter
   - api.CanvasRenderingContext2D.font
+  - api.CanvasRenderingContext2D.fontKerning
+  - api.CanvasRenderingContext2D.fontStretch
+  - api.CanvasRenderingContext2D.fontVariantCaps
+  - api.CanvasRenderingContext2D.getContextAttributes
   - api.CanvasRenderingContext2D.getImageData
   - api.CanvasRenderingContext2D.getLineDash
   - api.CanvasRenderingContext2D.getTransform
   - api.CanvasRenderingContext2D.globalAlpha
   - api.CanvasRenderingContext2D.globalCompositeOperation
   - api.CanvasRenderingContext2D.imageSmoothingEnabled
+  - api.CanvasRenderingContext2D.imageSmoothingQuality
   - api.CanvasRenderingContext2D.isPointInPath
   - api.CanvasRenderingContext2D.isPointInStroke
+  - api.CanvasRenderingContext2D.letterSpacing
   - api.CanvasRenderingContext2D.lineCap
   - api.CanvasRenderingContext2D.lineDashOffset
   - api.CanvasRenderingContext2D.lineJoin
@@ -62,7 +72,12 @@ compat_features:
   - api.CanvasRenderingContext2D.strokeText
   - api.CanvasRenderingContext2D.textAlign
   - api.CanvasRenderingContext2D.textBaseline
+  - api.CanvasRenderingContext2D.textRendering
   - api.CanvasRenderingContext2D.transform
   - api.CanvasRenderingContext2D.translate
+  - api.CanvasRenderingContext2D.wordSpacing
   - api.TextMetrics
+  - api.TextMetrics.alphabeticBaseline
+  - api.TextMetrics.hangingBaseline
+  - api.TextMetrics.ideographicBaseline
   - api.TextMetrics.width
