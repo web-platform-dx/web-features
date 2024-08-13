@@ -1,6 +1,7 @@
 name: String
 description: The string type (and `String` object) represents a sequence of characters.
 spec: https://tc39.es/ecma262/multipage/text-processing.html#sec-string-objects
+group: primitive-types
 status:
   compute_from: javascript.builtins.String
 compat_features:
@@ -35,8 +36,6 @@ compat_features:
   - javascript.builtins.String.slice
   - javascript.builtins.String.split
   - javascript.builtins.String.startsWith
-  # Note: substr is deprecated
-  # - javascript.builtins.String.substr
   - javascript.builtins.String.substring
   - javascript.builtins.String.toLocaleLowerCase
   - javascript.builtins.String.toLocaleLowerCase.locale
