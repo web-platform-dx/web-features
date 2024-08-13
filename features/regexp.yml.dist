@@ -36,6 +36,20 @@ compat_features:
   - javascript.builtins.RegExp.source
   - javascript.builtins.RegExp.test
   - javascript.builtins.RegExp.toString
+  - javascript.grammar.regular_expression_literals
+  - javascript.regular_expressions.backreference
+  - javascript.regular_expressions.capturing_group
+  - javascript.regular_expressions.character_class
+  - javascript.regular_expressions.character_class_escape
+  - javascript.regular_expressions.character_escape
+  - javascript.regular_expressions.disjunction
+  - javascript.regular_expressions.input_boundary_assertion
+  - javascript.regular_expressions.literal_character
+  - javascript.regular_expressions.lookahead_assertion
+  - javascript.regular_expressions.non_capturing_group
+  - javascript.regular_expressions.quantifier
+  - javascript.regular_expressions.wildcard
+  - javascript.regular_expressions.word_boundary_assertion
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -129,6 +143,7 @@ compat_features:
   #   safari: "10"
   #   safari_ios: "10"
   - javascript.builtins.RegExp.unicode
+  - javascript.regular_expressions.character_escape.unicode
 
   # baseline: high
   # baseline_low_date: 2016-09-20
@@ -225,6 +240,21 @@ compat_features:
   - javascript.builtins.RegExp.dotAll
 
   # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "64"
+  #   chrome_android: "64"
+  #   edge: "79"
+  #   firefox: "78"
+  #   firefox_android: "79"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - javascript.regular_expressions.named_backreference
+  - javascript.regular_expressions.named_capturing_group
+  - javascript.regular_expressions.unicode_character_class_escape
+
+  # baseline: high
   # baseline_low_date: 2021-09-20
   # baseline_high_date: 2024-03-20
   # support:
@@ -236,6 +266,18 @@ compat_features:
   #   safari: "15"
   #   safari_ios: "15"
   - javascript.builtins.RegExp.hasIndices
+
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "62"
+  #   chrome_android: "62"
+  #   edge: "79"
+  #   firefox: "78"
+  #   firefox_android: "79"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - javascript.regular_expressions.lookbehind_assertion
 
   # baseline: low
   # baseline_low_date: 2023-09-18
@@ -251,37 +293,16 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "1"
-  #   safari_ios: "1"
-  - javascript.builtins.RegExp.n
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - javascript.regular_expressions.named_capturing_group.duplicate_named_capturing_groups
 
   # baseline: false
   # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "3"
-  #   safari_ios: "1"
-  - javascript.builtins.RegExp.input
-  - javascript.builtins.RegExp.lastMatch
-  - javascript.builtins.RegExp.lastParen
-  - javascript.builtins.RegExp.leftContext
-  - javascript.builtins.RegExp.rightContext
-
-  # baseline: false
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "3.1"
-  #   safari_ios: "2"
-  - javascript.builtins.RegExp.compile
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
+  - javascript.regular_expressions.modifier
