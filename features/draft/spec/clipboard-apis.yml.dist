@@ -50,30 +50,6 @@ compat_features:
   #   safari_ios: "10.3"
   - api.ClipboardEvent.ClipboardEvent
 
-  # baseline: low
-  # baseline_low_date: 2024-04-16
-  # support:
-  #   chrome: "66"
-  #   chrome_android: "66"
-  #   edge: "79"
-  #   firefox: "125"
-  #   firefox_android: "125"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
-  - api.Clipboard.readText
-
-  # baseline: low
-  # baseline_low_date: 2024-06-11
-  # support:
-  #   chrome: "66"
-  #   chrome_android: "66"
-  #   edge: "79"
-  #   firefox: "127"
-  #   firefox_android: "127"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
-  - api.Clipboard.read
-
   # baseline: false
   # support:
   #   chrome: "64"

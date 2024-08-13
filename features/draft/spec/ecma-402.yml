@@ -1,4 +1,4 @@
-draft_date: 2024-07-11
+draft_date: 2024-08-12
 name: ECMAScript Internationalization API Specification
 description: TODO
 spec: https://tc39.es/ecma402/
@@ -66,14 +66,6 @@ compat_features:
   - javascript.builtins.Intl.RelativeTimeFormat.formatToParts
   - javascript.builtins.Intl.RelativeTimeFormat.resolvedOptions
   - javascript.builtins.Intl.RelativeTimeFormat.supportedLocalesOf
-  - javascript.builtins.Intl.Segmenter
-  - javascript.builtins.Intl.Segmenter.Segmenter
-  - javascript.builtins.Intl.Segmenter.resolvedOptions
-  - javascript.builtins.Intl.Segmenter.segment
-  - javascript.builtins.Intl.Segmenter.supportedLocalesOf
-  - javascript.builtins.Intl.Segments
-  - javascript.builtins.Intl.Segments.@@iterator
-  - javascript.builtins.Intl.Segments.containing
   - javascript.builtins.Intl.getCanonicalLocales
   - javascript.builtins.Intl.supportedValuesOf
   - javascript.builtins.Number.toLocaleString
@@ -86,3 +78,12 @@ compat_features:
 #   - javascript.builtins.Array.toLocaleString
 # - BigInt:
 #   - javascript.builtins.BigInt.toLocaleString
+# - Intl.Segmenter:
+#   - javascript.builtins.Intl.Segmenter
+#   - javascript.builtins.Intl.Segmenter.Segmenter
+#   - javascript.builtins.Intl.Segmenter.resolvedOptions
+#   - javascript.builtins.Intl.Segmenter.segment
+#   - javascript.builtins.Intl.Segmenter.supportedLocalesOf
+#   - javascript.builtins.Intl.Segments
+#   - javascript.builtins.Intl.Segments.@@iterator
+#   - javascript.builtins.Intl.Segments.containing
