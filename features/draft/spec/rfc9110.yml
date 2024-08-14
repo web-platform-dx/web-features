@@ -1,0 +1,51 @@
+draft_date: 2024-08-12
+name: HTTP Semantics
+description: TODO
+spec: https://httpwg.org/specs/rfc9110.html
+compat_features:
+  - http.headers.Accept
+  - http.headers.Accept-Encoding
+  - http.headers.Accept-Language
+  - http.headers.Accept-Ranges
+  - http.headers.Authorization
+  - http.headers.Connection
+  - http.headers.Content-Encoding
+  - http.headers.Content-Language
+  - http.headers.Content-Length
+  - http.headers.Content-Location
+  - http.headers.Content-Range
+  - http.headers.Content-Type
+  - http.headers.Date
+  - http.headers.ETag
+  - http.headers.From
+  - http.headers.Host
+  - http.headers.If-Match
+  - http.headers.If-Modified-Since
+  - http.headers.If-None-Match
+  - http.headers.If-Range
+  - http.headers.If-Unmodified-Since
+  - http.headers.Last-Modified
+  - http.headers.Location
+  - http.headers.Proxy-Authenticate
+  - http.headers.Range
+  - http.headers.Referer
+  - http.headers.Retry-After
+  - http.headers.Server
+  - http.headers.TE
+  - http.headers.Trailer
+  - http.headers.Upgrade
+  - http.headers.User-Agent
+  - http.headers.Vary
+  - http.headers.Via
+  - http.headers.WWW-Authenticate
+  - http.methods.CONNECT
+  - http.methods.DELETE
+  - http.methods.HEAD
+  - http.methods.OPTIONS
+  - http.methods.POST
+  - http.methods.PUT
+  - http.status.308
+
+# The following features in the spec are already part of web-features:
+# - HTTP/1.1:
+#   - http.methods.GET

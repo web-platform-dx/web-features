@@ -1,11 +1,13 @@
-draft_date: 2024-07-11
+draft_date: 2024-08-12
 name: DOM Parsing and Serialization
 description: TODO
 spec: https://w3c.github.io/DOM-Parsing/
 compat_features:
   - api.Element
   - api.Range
-  - api.Range.createContextualFragment
-  - api.XMLSerializer
-  - api.XMLSerializer.XMLSerializer
-  - api.XMLSerializer.serializeToString
+
+# The following features in the spec are already part of web-features:
+# - XMLSerializer:
+#   - api.XMLSerializer
+#   - api.XMLSerializer.XMLSerializer
+#   - api.XMLSerializer.serializeToString

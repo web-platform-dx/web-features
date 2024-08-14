@@ -4,8 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "126"
-    edge: "126"
+    chrome: "64"
+    chrome_android: "61"
+    edge: "79"
 compat_features:
   # baseline: false
   # support:
@@ -20,39 +21,3 @@ compat_features:
   #   chrome_android: "57"
   #   edge: "79"
   - api.Window.appinstalled_event
-
-  # baseline: false
-  # support:
-  #   chrome: "89"
-  #   chrome_android: "89"
-  #   edge: "89"
-  - html.manifest.display_override
-
-  # baseline: false
-  # support:
-  #   chrome: "96"
-  #   chrome_android: "96"
-  #   edge: "96"
-  - html.manifest.protocol_handlers
-  - html.manifest.protocol_handlers.protocol
-  - html.manifest.protocol_handlers.url
-
-  # baseline: false
-  # support:
-  #   chrome: "126"
-  #   chrome_android: "126"
-  #   edge: "126"
-  - html.manifest.display_override.tabbed
-
-  # baseline: false
-  # support:
-  #   chrome: "95"
-  #   edge: "95"
-  - html.manifest.note_taking
-  - html.manifest.note_taking.new_note_url
-
-  # baseline: false
-  # support:
-  #   chrome: "102"
-  #   edge: "102"
-  - html.manifest.file_handlers
