@@ -1,10 +1,29 @@
 export interface WebFeaturesData {
+    /** Browsers and browser release data */
+    browsers: { [key in BrowserIdentifier]: BrowserData };
     /** Feature identifiers and data */
     features: { [key: string]: FeatureData };
     /** Group identifiers and data */
     groups: { [key: string]: GroupData };
     /** Snapshot identifiers and data */
     snapshots: { [key: string]: SnapshotData };
+}
+
+
+/** Browser information */
+export interface BrowserData {
+    /** The name of the browser, as in "Edge" or "Safari on iOS" */
+    name: string;
+    /** The browser's releases */
+    releases: Release[];
+}
+
+/** Browser release information */
+export interface Release {
+    /** The version string, as in "10" or "17.1" */
+    version: string;
+    /** The release date, as in "2023-12-11" */
+    date: string;
 }
 
 export interface FeatureData {
@@ -28,7 +47,7 @@ export interface FeatureData {
     compat_features?: string[];
 }
 
-type browserIdentifier = "chrome" | "chrome_android" | "edge" | "firefox" | "firefox_android" | "safari" | "safari_ios";
+type BrowserIdentifier = "chrome" | "chrome_android" | "edge" | "firefox" | "firefox_android" | "safari" | "safari_ios";
 
 type BaselineHighLow = "high" | "low";
 
@@ -41,7 +60,7 @@ interface Status {
     baseline_high_date?: string;
     /** Browser versions that most-recently introduced the feature */
     support: {
-        [K in browserIdentifier]?: string;
+        [K in BrowserIdentifier]?: string;
     };
 }
 
