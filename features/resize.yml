@@ -1,0 +1,10 @@
+name: Resize
+description: The `resize` CSS property sets whether an element can be resized by the user, and on which axes.
+spec: https://drafts.csswg.org/css-ui-4/#resize
+caniuse: css-resize
+# Baseline is false due to no Safari on iOS support, but it is available on all non-mobile browsers.
+compat_features:
+  - css.properties.resize
+  - css.properties.resize.block
+  - css.properties.resize.block_level_support
+  - css.properties.resize.inline
