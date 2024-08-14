@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "105"
+    firefox_android: "105"
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -108,7 +110,6 @@ compat_features:
   #   edge: "79"
   #   firefox: "41"
   #   firefox_android: "41"
-  - api.FontFace.variant
   - api.FontFaceSetLoadEvent
   - api.FontFaceSetLoadEvent.fontfaces
 
@@ -131,12 +132,6 @@ compat_features:
   - api.FontFace.ascentOverride
   - api.FontFace.descentOverride
   - api.FontFace.lineGapOverride
-
-  # baseline: false
-  # support:
-  #   safari: "10"
-  #   safari_ios: "10"
-  - api.FontFaceSet.FontFaceSet
 
   # baseline: false
   # support:

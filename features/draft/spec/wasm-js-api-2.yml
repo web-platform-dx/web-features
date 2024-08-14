@@ -1,8 +1,9 @@
-draft_date: 2024-07-11
+draft_date: 2024-08-12
 name: WebAssembly JavaScript Interface
 description: TODO
 spec: https://webassembly.github.io/spec/js-api/
 compat_features:
+  - webassembly.BigInt-to-i64-integration
   - webassembly.api
   - webassembly.api.CompileError
   - webassembly.api.CompileError.CompileError
@@ -35,3 +36,4 @@ compat_features:
   - webassembly.api.compile_static
   - webassembly.api.instantiate_static
   - webassembly.api.validate_static
+  - webassembly.mutable-globals
