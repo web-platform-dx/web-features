@@ -1,0 +1,11 @@
+name: Intl.Locale additions (week data, writing direction, hour cycle)
+description: "Additional getters in the `Intl.Locale` API provide supplemental locale information, such as calendar week data (first day in a week, weekend start day, weekend end day, minimum day in the first week), writing direction, 12- or 24-hour cycles, and numbering systems used in the locale."
+group: intl
+spec: https://tc39.es/ecma402/#locale-objects
+compat_features:
+  - javascript.builtins.Intl.Locale.getCalendars
+  - javascript.builtins.Intl.Locale.getCollations
+  - javascript.builtins.Intl.Locale.getHourCycles
+  - javascript.builtins.Intl.Locale.getNumberingSystems
+  - javascript.builtins.Intl.Locale.getTextInfo
+  - javascript.builtins.Intl.Locale.getTimeZones
