@@ -1,7 +1,8 @@
-draft_date: 2024-08-12
-name: Indexed Database API 3.0
-description: TODO
+name: IndexedDB
+description: IndexedDB is a low-level API for client-side storage of significant amounts of structured data, including files/blobs.
 spec: https://w3c.github.io/IndexedDB/
+status:
+  compute_from: api.indexedDB
 compat_features:
   - api.IDBCursor
   - api.IDBCursor.advance
@@ -10,12 +11,15 @@ compat_features:
   - api.IDBCursor.delete
   - api.IDBCursor.direction
   - api.IDBCursor.key
+  - api.IDBCursor.key.binary_keys
   - api.IDBCursor.primaryKey
   - api.IDBCursor.request
   - api.IDBCursor.source
   - api.IDBCursor.update
+  - api.IDBCursor.worker_support
   - api.IDBCursorWithValue
   - api.IDBCursorWithValue.value
+  - api.IDBCursorWithValue.worker_support
   - api.IDBDatabase
   - api.IDBDatabase.close
   - api.IDBDatabase.close_event
@@ -26,11 +30,13 @@ compat_features:
   - api.IDBDatabase.transaction
   - api.IDBDatabase.version
   - api.IDBDatabase.versionchange_event
+  - api.IDBDatabase.worker_support
   - api.IDBFactory
   - api.IDBFactory.cmp
   - api.IDBFactory.databases
   - api.IDBFactory.deleteDatabase
   - api.IDBFactory.open
+  - api.IDBFactory.worker_support
   - api.IDBIndex
   - api.IDBIndex.count
   - api.IDBIndex.get
@@ -40,10 +46,12 @@ compat_features:
   - api.IDBIndex.keyPath
   - api.IDBIndex.multiEntry
   - api.IDBIndex.name
+  - api.IDBIndex.name.renaming_through_name_setter
   - api.IDBIndex.objectStore
   - api.IDBIndex.openCursor
   - api.IDBIndex.openKeyCursor
   - api.IDBIndex.unique
+  - api.IDBIndex.worker_support
   - api.IDBKeyRange
   - api.IDBKeyRange.bound_static
   - api.IDBKeyRange.includes
@@ -54,6 +62,7 @@ compat_features:
   - api.IDBKeyRange.upper
   - api.IDBKeyRange.upperBound_static
   - api.IDBKeyRange.upperOpen
+  - api.IDBKeyRange.worker_support
   - api.IDBObjectStore
   - api.IDBObjectStore.add
   - api.IDBObjectStore.autoIncrement
@@ -70,21 +79,26 @@ compat_features:
   - api.IDBObjectStore.indexNames
   - api.IDBObjectStore.keyPath
   - api.IDBObjectStore.name
+  - api.IDBObjectStore.name.renaming_through_name_setter
   - api.IDBObjectStore.openCursor
   - api.IDBObjectStore.openKeyCursor
   - api.IDBObjectStore.put
   - api.IDBObjectStore.transaction
+  - api.IDBObjectStore.worker_support
   - api.IDBOpenDBRequest
   - api.IDBOpenDBRequest.blocked_event
   - api.IDBOpenDBRequest.upgradeneeded_event
+  - api.IDBOpenDBRequest.worker_support
   - api.IDBRequest
   - api.IDBRequest.error
   - api.IDBRequest.error_event
+  - api.IDBRequest.error.DOMException
   - api.IDBRequest.readyState
   - api.IDBRequest.result
   - api.IDBRequest.source
   - api.IDBRequest.success_event
   - api.IDBRequest.transaction
+  - api.IDBRequest.worker_support
   - api.IDBTransaction
   - api.IDBTransaction.abort
   - api.IDBTransaction.abort_event
@@ -94,11 +108,14 @@ compat_features:
   - api.IDBTransaction.durability
   - api.IDBTransaction.error
   - api.IDBTransaction.error_event
+  - api.IDBTransaction.error.DOMException
   - api.IDBTransaction.mode
   - api.IDBTransaction.objectStore
   - api.IDBTransaction.objectStoreNames
+  - api.IDBTransaction.worker_support
   - api.IDBVersionChangeEvent
   - api.IDBVersionChangeEvent.IDBVersionChangeEvent
   - api.IDBVersionChangeEvent.newVersion
   - api.IDBVersionChangeEvent.oldVersion
+  - api.IDBVersionChangeEvent.worker_support
   - api.indexedDB
