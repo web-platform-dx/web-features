@@ -1,7 +1,9 @@
-draft_date: 2024-08-12
 name: WebDriver
-description: TODO
+description: WebDriver is a remote control interface that enables introspection and control of user agents by out-of-process programs.
 spec: https://w3c.github.io/webdriver/
+status:
+  compute_from:
+  - api.Navigator.webdriver
 compat_features:
   - api.Navigator.webdriver
   - webdriver.commands.AcceptAlert
