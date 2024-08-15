@@ -24,7 +24,6 @@ compat_features:
   - javascript.builtins.Math.E
   - javascript.builtins.Math.exp
   - javascript.builtins.Math.expm1
-  - javascript.builtins.Math.f16round
   - javascript.builtins.Math.floor
   - javascript.builtins.Math.fround
   - javascript.builtins.Math.hypot
@@ -71,9 +70,6 @@ compat_features:
   - javascript.builtins.Number.POSITIVE_INFINITY
   - javascript.builtins.Number.toExponential
   - javascript.builtins.Number.toFixed
-  - javascript.builtins.Number.toLocaleString
-  - javascript.builtins.Number.toLocaleString.locales_parameter
-  - javascript.builtins.Number.toLocaleString.options_parameter
   - javascript.builtins.Number.toPrecision
   - javascript.builtins.Number.toString
   - javascript.builtins.Number.valueOf
@@ -81,5 +77,4 @@ compat_features:
   - javascript.grammar.binary_numeric_literals
   - javascript.grammar.decimal_numeric_literals
   - javascript.grammar.hexadecimal_numeric_literals
-  - javascript.grammar.numeric_separators
   - javascript.grammar.octal_numeric_literals
