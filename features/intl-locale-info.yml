@@ -1,7 +1,7 @@
 # Merge with intl-locale.yml once this file's compat_features have reached baseline high
 
-name: Intl.Locale additions (week data, writing direction, hour cycle)
-description: "Additional getters in the `Intl.Locale` API provide supplemental locale information, such as calendar week data (first day in a week, weekend start day, weekend end day, minimum day in the first week), writing direction, 12- or 24-hour cycles, and numbering systems used in the locale."
+name: Intl.Locale info
+description: The getter methods of the `Intl.Locale` API provide supplemental information about a Unicode locale, such as the locale's calendar (for example, the first day in a week or the weekend start day), writing direction, 12- or 24-hour cycles, and numbering system.
 group: intl
 spec: https://tc39.es/ecma402/#locale-objects
 compat_features:
