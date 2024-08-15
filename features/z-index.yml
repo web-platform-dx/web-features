@@ -1,5 +1,5 @@
 name: z-index
-description: The `z-index` CSS property allows you to order overlapping elements, with higher values in front of or on top of lower values.
+description: The `z-index` CSS property orders overlapping elements, with higher values appearing in front of or on top of lower values.
 spec: https://drafts.csswg.org/css2/#z-index
 snapshot: ecmascript-5
 group: css
@@ -7,5 +7,3 @@ compat_features:
   - css.properties.z-index
   - css.properties.z-index.auto
   - css.properties.z-index.negative_values
-# Baseline low date of 2015 seems late, but is due to lack of Edge support until
-# then.
