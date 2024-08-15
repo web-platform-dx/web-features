@@ -4,12 +4,12 @@
 status:
   baseline: false
   support:
-    chrome: "118"
-    chrome_android: "118"
-    edge: "118"
-    firefox: "63"
-    firefox_android: "63"
-    safari: "16"
+    chrome: "4"
+    chrome_android: "18"
+    edge: "79"
+    firefox: "5"
+    firefox_android: "5"
+    safari: "4"
 compat_features:
   # baseline: false
   # support:
@@ -21,6 +21,7 @@ compat_features:
   #   safari: "3"
   - css.properties.resize
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "4"
@@ -31,7 +32,6 @@ compat_features:
   #   safari: "4"
   - css.properties.resize.block_level_support
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "118"
