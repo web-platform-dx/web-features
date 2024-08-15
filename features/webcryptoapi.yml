@@ -1,6 +1,9 @@
 name: Web Cryptography
 description: The Web Cryptography API provides utilities and primitives for performing basic cryptographic operations.
-spec: https://w3c.github.io/webcrypto/
+spec:
+  - https://w3c.github.io/webcrypto/
+  - https://wicg.github.io/webcrypto-secure-curves/
+caniuse: cryptography
 status:
   compute_from:
     - api.Crypto
