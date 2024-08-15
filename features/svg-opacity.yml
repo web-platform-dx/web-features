@@ -1,0 +1,15 @@
+name: SVG opacity
+description: The SVG opacity properties and attributes control the transparency of parts of an SVG.
+spec: https://www.w3.org/TR/SVG/render.html#ObjectAndGroupOpacityProperties
+compat_features:
+  - css.properties.fill-opacity
+  - css.properties.flood-opacity
+  - css.properties.stop-opacity
+  - css.properties.stroke-opacity
+  - svg.elements.feFlood.flood-opacity
+  - svg.elements.stop.stop-opacity
+  - svg.global_attributes.fill-opacity
+  - svg.global_attributes.flood-opacity
+  - svg.global_attributes.opacity
+  - svg.global_attributes.stroke-opacity
+group: css
