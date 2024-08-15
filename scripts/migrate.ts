@@ -2,7 +2,7 @@ import assert from 'assert';
 import fs from 'fs';
 import path from 'path';
 import { fdir } from 'fdir';
-import features from '../index.js';
+import { features } from '../index.js';
 
 const BCD_PATH = '/Users/foolip/mdn/browser-compat-data';
 
