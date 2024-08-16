@@ -1,11 +1,14 @@
-draft_date: 2024-08-12
 name: Geolocation
-description: TODO
+description: The `navigator.gelocation` API requests the user's latitude, longitude, heading, and speed.
 spec: https://w3c.github.io/geolocation/
+status:
+  compute_from: api.Navigator.geolocation
+caniuse: geolocation
 compat_features:
   - api.Geolocation
   - api.Geolocation.clearWatch
   - api.Geolocation.getCurrentPosition
+  - api.Geolocation.secure_context_required
   - api.Geolocation.watchPosition
   - api.GeolocationCoordinates
   - api.GeolocationCoordinates.accuracy
@@ -14,14 +17,18 @@ compat_features:
   - api.GeolocationCoordinates.heading
   - api.GeolocationCoordinates.latitude
   - api.GeolocationCoordinates.longitude
+  - api.GeolocationCoordinates.secure_context_required
   - api.GeolocationCoordinates.speed
   - api.GeolocationCoordinates.toJSON
   - api.GeolocationPosition
   - api.GeolocationPosition.coords
+  - api.GeolocationPosition.secure_context_required
   - api.GeolocationPosition.timestamp
   - api.GeolocationPosition.toJSON
   - api.GeolocationPositionError
   - api.GeolocationPositionError.code
   - api.GeolocationPositionError.message
+  - api.GeolocationPositionError.secure_context_required
   - api.Navigator.geolocation
+  - api.Navigator.geolocation.secure_context_required
   - http.headers.Permissions-Policy.geolocation
