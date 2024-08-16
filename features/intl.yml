@@ -81,10 +81,18 @@ compat_features:
   #- javascript.builtins.BigInt.toLocaleString
   - javascript.builtins.BigInt.toLocaleString.locales_parameter
   - javascript.builtins.BigInt.toLocaleString.options_parameter
+  - javascript.builtins.Date.toLocaleDateString
+  - javascript.builtins.Date.toLocaleDateString.iana_time_zone_names
+  - javascript.builtins.Date.toLocaleDateString.locales_parameter
+  - javascript.builtins.Date.toLocaleDateString.options_parameter
   - javascript.builtins.Date.toLocaleString
   - javascript.builtins.Date.toLocaleString.iana_time_zone_names
   - javascript.builtins.Date.toLocaleString.locales_parameter
   - javascript.builtins.Date.toLocaleString.options_parameter
+  - javascript.builtins.Date.toLocaleTimeString
+  - javascript.builtins.Date.toLocaleTimeString.iana_time_zone_names
+  - javascript.builtins.Date.toLocaleTimeString.locales_parameter
+  - javascript.builtins.Date.toLocaleTimeString.options_parameter
   - javascript.builtins.Number.toLocaleString
   - javascript.builtins.Number.toLocaleString.locales_parameter
   - javascript.builtins.Number.toLocaleString.options_parameter

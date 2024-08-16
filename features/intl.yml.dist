@@ -25,7 +25,9 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "1"
   #   safari_ios: "1"
+  - javascript.builtins.Date.toLocaleDateString
   - javascript.builtins.Date.toLocaleString
+  - javascript.builtins.Date.toLocaleTimeString
   - javascript.builtins.Number.toLocaleString
   - javascript.builtins.Object.toLocaleString
 
@@ -41,8 +43,12 @@ compat_features:
   #   firefox_android: "56"
   #   safari: "10"
   #   safari_ios: "10"
+  - javascript.builtins.Date.toLocaleDateString.locales_parameter
+  - javascript.builtins.Date.toLocaleDateString.options_parameter
   - javascript.builtins.Date.toLocaleString.locales_parameter
   - javascript.builtins.Date.toLocaleString.options_parameter
+  - javascript.builtins.Date.toLocaleTimeString.locales_parameter
+  - javascript.builtins.Date.toLocaleTimeString.options_parameter
   - javascript.builtins.Intl
   - javascript.builtins.Intl.Collator
   - javascript.builtins.Intl.Collator.Collator
@@ -86,7 +92,9 @@ compat_features:
   #   firefox_android: "56"
   #   safari: "7"
   #   safari_ios: "7"
+  - javascript.builtins.Date.toLocaleDateString.iana_time_zone_names
   - javascript.builtins.Date.toLocaleString.iana_time_zone_names
+  - javascript.builtins.Date.toLocaleTimeString.iana_time_zone_names
 
   # baseline: high
   # baseline_low_date: 2017-09-28
