@@ -292,6 +292,20 @@ compat_features:
   - api.HTMLCanvasElement.getContext.webgl_context.options_failIfMajorPerformanceCaveat_parameter
 
   # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "47"
+  #   chrome_android: "47"
+  #   edge: "79"
+  #   firefox: "53"
+  #   firefox_android: "53"
+  #   safari: "12"
+  #   safari_ios: "12"
+  - api.WEBGL_compressed_texture_astc
+  - api.WEBGL_compressed_texture_astc.getSupportedProfiles
+
+  # baseline: high
   # baseline_low_date: 2020-09-16
   # baseline_high_date: 2023-03-16
   # support:
@@ -304,6 +318,49 @@ compat_features:
   #   safari_ios: "14"
   - api.WEBGL_debug_shaders
   - api.WEBGL_debug_shaders.getTranslatedShaderSource
+
+  # baseline: high
+  # baseline_low_date: 2021-09-20
+  # baseline_high_date: 2024-03-20
+  # support:
+  #   chrome: "63"
+  #   chrome_android: "63"
+  #   edge: "17"
+  #   firefox: "30"
+  #   firefox_android: "30"
+  #   safari: "14"
+  #   safari_ios: "15"
+  - api.WEBGL_color_buffer_float
+
+  # baseline: false
+  # support:
+  #   chrome: "49"
+  #   chrome_android: "49"
+  #   edge: "79"
+  #   firefox_android: "30"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.WEBGL_compressed_texture_etc1
+
+  # baseline: false
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "80"
+  #   firefox: "55"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.WEBGL_compressed_texture_s3tc_srgb
+
+  # baseline: false
+  # support:
+  #   chrome: "63"
+  #   chrome_android: "63"
+  #   edge: "79"
+  #   firefox_android: "51"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.WEBGL_compressed_texture_etc
 
   # baseline: false
   # support:
@@ -336,6 +393,14 @@ compat_features:
   - api.WEBGL_multi_draw.multiDrawArraysWEBGL
   - api.WEBGL_multi_draw.multiDrawElementsInstancedWEBGL
   - api.WEBGL_multi_draw.multiDrawElementsWEBGL
+
+  # baseline: false
+  # support:
+  #   chrome: "26"
+  #   edge: "12"
+  #   firefox: "22"
+  #   safari: "8"
+  - api.WEBGL_compressed_texture_s3tc
 
   # baseline: false
   # support:
