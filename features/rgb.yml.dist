@@ -3,17 +3,18 @@
 
 status:
   baseline: high
-  baseline_low_date: 2020-01-15
-  baseline_high_date: 2022-07-15
+  baseline_low_date: 2015-07-29
+  baseline_high_date: 2018-01-29
   support:
-    chrome: "66"
-    chrome_android: "66"
-    edge: "79"
-    firefox: "52"
-    firefox_android: "52"
-    safari: "12.1"
-    safari_ios: "12.2"
+    chrome: "1"
+    chrome_android: "18"
+    edge: "12"
+    firefox: "1"
+    firefox_android: "4"
+    safari: "1"
+    safari_ios: "1"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -55,7 +56,6 @@ compat_features:
   - css.types.color.rgb.alpha_parameter
   - css.types.color.rgb.space_separated_parameters
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
