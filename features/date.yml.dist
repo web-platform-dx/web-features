@@ -64,9 +64,6 @@ compat_features:
   - javascript.builtins.Date.setUTCMonth
   - javascript.builtins.Date.setUTCSeconds
   - javascript.builtins.Date.toDateString
-  - javascript.builtins.Date.toLocaleDateString
-  - javascript.builtins.Date.toLocaleString
-  - javascript.builtins.Date.toLocaleTimeString
   - javascript.builtins.Date.toString
   - javascript.builtins.Date.toTimeString
   - javascript.builtins.Date.toUTCString
@@ -124,39 +121,6 @@ compat_features:
   #   safari: "10"
   #   safari_ios: "10"
   - javascript.builtins.Date.@@toPrimitive
-
-  # baseline: high
-  # baseline_low_date: 2017-09-28
-  # baseline_high_date: 2020-03-28
-  # support:
-  #   chrome: "24"
-  #   chrome_android: "25"
-  #   edge: "12"
-  #   firefox: "29"
-  #   firefox_android: "56"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.builtins.Date.toLocaleDateString.locales_parameter
-  - javascript.builtins.Date.toLocaleDateString.options_parameter
-  - javascript.builtins.Date.toLocaleString.locales_parameter
-  - javascript.builtins.Date.toLocaleString.options_parameter
-  - javascript.builtins.Date.toLocaleTimeString.locales_parameter
-  - javascript.builtins.Date.toLocaleTimeString.options_parameter
-
-  # baseline: high
-  # baseline_low_date: 2017-09-28
-  # baseline_high_date: 2020-03-28
-  # support:
-  #   chrome: "24"
-  #   chrome_android: "25"
-  #   edge: "14"
-  #   firefox: "52"
-  #   firefox_android: "56"
-  #   safari: "7"
-  #   safari_ios: "7"
-  - javascript.builtins.Date.toLocaleDateString.iana_time_zone_names
-  - javascript.builtins.Date.toLocaleString.iana_time_zone_names
-  - javascript.builtins.Date.toLocaleTimeString.iana_time_zone_names
 
   # baseline: high
   # baseline_low_date: 2020-01-15
