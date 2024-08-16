@@ -1,5 +1,5 @@
-name: Alpha for 2D canvas
-description: Indicates that the canvas contains an alpha channel.
+name: Opaque 2D canvas
+description: The optional `alpha` parameter of a 2D canvas's `getContext()` method sets whether the canvas has an alpha transparency channel. If set to `false`, then this permits the browser to optimize compositing for an opaque canvas.
 spec: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-alpha
 group: canvas
 compat_features:

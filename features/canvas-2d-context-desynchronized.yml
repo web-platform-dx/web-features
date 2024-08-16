@@ -1,5 +1,5 @@
 name: Desynchronized 2D canvas
-description: The optional `desynchronized` parameter of a canvas's `getContext()` method permits the browser to draw the canvas independently of the event loop. This can reduce drawing latency.
+description: The optional `desynchronized` parameter of a canvas's `getContext()` method permits the browser to draw a 2D canvas independently of the event loop. This can reduce drawing latency.
 spec: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-desynchronized
 group: canvas
 compat_features:
