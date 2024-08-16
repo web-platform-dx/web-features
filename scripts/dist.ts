@@ -47,6 +47,8 @@ const logger = winston.createLogger({
   transports: new winston.transports.Console(),
 });
 
+let exitStatus = 0;
+
 setLogger(logger);
 
 /**
@@ -175,7 +177,8 @@ function toDist(sourcePath: string): YAML.Document {
   const compatFeatures = source.compat_features ?? taggedCompatFeatures;
   let computeFrom = compatFeatures;
 
-  if (source.status?.compute_from) {
+  const computeFromWasExplicitlySet = Boolean(source.status?.compute_from);
+  if (computeFromWasExplicitlySet) {
     const compute_from = source.status.compute_from;
     const keys = Array.isArray(compute_from) ? compute_from : [compute_from];
     for (const key of keys) {
@@ -227,6 +230,15 @@ function toDist(sourcePath: string): YAML.Document {
     }
     if (!added) {
       groups.set(status, [key]);
+    }
+  }
+
+  if (computeFromWasExplicitlySet) {
+    if (groups.size === 1) {
+      logger.error(
+        `${id}: uses compute_from overall but it does not differ from per-key statuses. Delete this override.`,
+      );
+      exitStatus = 1;
     }
   }
 
@@ -356,7 +368,7 @@ function main() {
       }
     }
     if (updateNeeded) {
-      process.exit(1);
+      exitStatus = 1;
     }
   } else {
     // Update dist in place.
@@ -368,4 +380,5 @@ function main() {
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   main();
+  process.exit(exitStatus);
 }
