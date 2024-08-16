@@ -1,0 +1,13 @@
+name: HSL
+description: The HSL color model specifies colors using hue, saturation and lightness channels. It can be specified using `hsl()` and `hsla()` functions.
+spec: https://drafts.csswg.org/css-color-4/#the-hsl-notation
+caniuse: css3-colors
+group: css
+status:
+  compute_from: css.types.color.hsl
+# Editorial override has been applied to ignore mixed_type_parameters.
+compat_features:
+  - css.types.color.hsl
+  - css.types.color.hsl.alpha_parameter
+  # - css.types.color.hsl.mixed_type_parameters
+  - css.types.color.hsl.space_separated_parameters
