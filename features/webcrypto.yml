@@ -5,8 +5,7 @@ spec:
   - https://wicg.github.io/webcrypto-secure-curves/
 caniuse: cryptography
 status:
-  compute_from:
-    - api.Crypto
+  compute_from: api.Crypto
 compat_features:
   - api.Crypto
   - api.Crypto.getRandomValues
