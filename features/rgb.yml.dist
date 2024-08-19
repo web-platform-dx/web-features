@@ -3,18 +3,17 @@
 
 status:
   baseline: high
-  baseline_low_date: 2015-07-29
-  baseline_high_date: 2018-01-29
+  baseline_low_date: 2020-01-15
+  baseline_high_date: 2022-07-15
   support:
-    chrome: "1"
-    chrome_android: "18"
-    edge: "12"
-    firefox: "1"
-    firefox_android: "4"
-    safari: "1"
-    safari_ios: "1"
+    chrome: "65"
+    chrome_android: "65"
+    edge: "79"
+    firefox: "52"
+    firefox_android: "52"
+    safari: "12.1"
+    safari_ios: "12.2"
 compat_features:
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -42,6 +41,7 @@ compat_features:
   #   safari_ios: "9.3"
   - css.types.color.rgb_hexadecimal_notation.alpha_hexadecimal_notation
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
@@ -68,3 +68,12 @@ compat_features:
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - css.types.color.rgb.float_values
+
+  # baseline: false
+  # support:
+  #   chrome: "122"
+  #   chrome_android: "122"
+  #   edge: "122"
+  #   firefox: "113"
+  #   firefox_android: "113"
+  - css.types.color.rgb.mixed_type_parameters
