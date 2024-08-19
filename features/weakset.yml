@@ -1,6 +1,7 @@
 name: WeakSet
 description: A `WeakSet` object stores unique values of any type without creating strong references to the values, such that membership in the set does not prevent garbage collection of the value.
 spec: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-weakset-objects
+group: collections
 status:
   compute_from: javascript.builtins.WeakSet
 compat_features:
