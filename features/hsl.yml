@@ -1,0 +1,12 @@
+name: HSL
+description: The `hsl()` and `hsla()` CSS functions pick colors using hue, saturation and lightness channels.
+spec: https://drafts.csswg.org/css-color-4/#the-hsl-notation
+caniuse: css3-colors
+group: color-types
+status:
+  compute_from: css.types.color.hsl
+compat_features:
+  - css.types.color.hsl
+  - css.types.color.hsl.alpha_parameter
+  - css.types.color.hsl.mixed_type_parameters
+  - css.types.color.hsl.space_separated_parameters
