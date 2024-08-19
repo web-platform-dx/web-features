@@ -89,15 +89,17 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  #   firefox: "129"
+  #   firefox_android: "129"
+  - api.GeolocationCoordinates.toJSON
+  - api.GeolocationPosition.toJSON
+
+  # baseline: false
+  # support:
   #   chrome: "88"
   #   chrome_android: "88"
   #   edge: "88"
   - http.headers.Permissions-Policy.geolocation
-
-  # baseline: false
-  # support:
-  #   chrome: "126"
-  #   chrome_android: "126"
-  #   edge: "126"
-  - api.GeolocationCoordinates.toJSON
-  - api.GeolocationPosition.toJSON
