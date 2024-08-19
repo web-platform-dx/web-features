@@ -4,13 +4,28 @@
 status:
   baseline: false
   support:
-    firefox: "129"
-    firefox_android: "129"
     safari: "17"
     safari_ios: "17"
 compat_features:
+  # baseline: false
+  # support:
+  #   firefox: "129"
+  #   firefox_android: "129"
+  #   safari: "17"
+  #   safari_ios: "17"
   - api.SubtleCrypto.exportKey.ed25519
   - api.SubtleCrypto.generateKey.ed25519
   - api.SubtleCrypto.importKey.ed25519
   - api.SubtleCrypto.sign.ed25519
   - api.SubtleCrypto.verify.ed25519
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   safari: "17"
+  #   safari_ios: "17"
+  - api.SubtleCrypto.deriveBits.x25519
+  - api.SubtleCrypto.deriveKey.x25519
+  - api.SubtleCrypto.exportKey.x25519
+  - api.SubtleCrypto.generateKey.x25519
+  - api.SubtleCrypto.importKey.x25519
