@@ -1,0 +1,8 @@
+name: Color management for WebGL2
+description: The `drawingBufferColorSpace` and `unpackColorSpace` properties of `WebGL2RenderingContext` sets the color representation for the buffer and imported textures, such as `"srgb"` or `"display-p3"`.
+spec: https://registry.khronos.org/webgl/specs/latest/2.0/
+status:
+  compute_from: api.WebGL2RenderingContext.drawingBufferColorSpace
+compat_features:
+  - api.WebGL2RenderingContext.drawingBufferColorSpace
+  - api.WebGL2RenderingContext.unpackColorSpace

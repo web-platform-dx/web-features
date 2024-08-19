@@ -10,5 +10,24 @@ status:
     safari: "17.5"
     safari_ios: "17.5"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2024-08-06
+  # support:
+  #   chrome: "117"
+  #   chrome_android: "117"
+  #   edge: "117"
+  #   firefox: "129"
+  #   firefox_android: "129"
+  #   safari: "17.5"
+  #   safari_ios: "17.5"
   - api.CSSStartingStyleRule
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "117"
+  #   chrome_android: "117"
+  #   edge: "117"
+  #   safari: "17.5"
+  #   safari_ios: "17.5"
   - css.at-rules.starting-style
