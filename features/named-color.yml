@@ -1,7 +1,9 @@
 name: Named colors
-description: The `named-color` CSS values are a standard set of colors that can be referenced by a name, such as `red` or `limegreen`.
+description: A standard set of colors that can be referenced by names, such as `red` or `limegreen`.
 spec: https://drafts.csswg.org/css-color-4/#named-colors
 group: css
+status:
+  compute_from: css.types.color.named-color
 compat_features:
   - css.types.color.named-color
   - css.types.color.named-color.rebeccapurple
