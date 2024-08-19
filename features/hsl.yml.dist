@@ -41,3 +41,12 @@ compat_features:
   #   safari_ios: "12.2"
   - css.types.color.hsl.alpha_parameter
   - css.types.color.hsl.space_separated_parameters
+
+  # baseline: false
+  # support:
+  #   chrome: "121"
+  #   chrome_android: "121"
+  #   edge: "121"
+  #   firefox: "122"
+  #   firefox_android: "122"
+  - css.types.color.hsl.mixed_type_parameters
