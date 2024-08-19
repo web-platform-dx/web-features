@@ -236,7 +236,7 @@ function toDist(sourcePath: string): YAML.Document {
   if (computeFromWasExplicitlySet) {
     if (groups.size === 1) {
       logger.error(
-        `${id}: uses compute_from overall but it does not differ from per-key statuses. Delete this override.`,
+        `${id}: uses compute_from which must not be used when the overall status does not differ from the per-key statuses. Delete this override.`,
       );
       exitStatus = 1;
     }
