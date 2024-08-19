@@ -25,6 +25,7 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "1"
   #   safari_ios: "1"
+  - javascript.builtins.Array.toLocaleString
   - javascript.builtins.Date.toLocaleDateString
   - javascript.builtins.Date.toLocaleString
   - javascript.builtins.Date.toLocaleTimeString
@@ -57,6 +58,19 @@ compat_features:
   #   safari: "3"
   #   safari_ios: "1"
   - javascript.builtins.String.localeCompare
+
+  # baseline: high
+  # baseline_low_date: 2017-01-24
+  # baseline_high_date: 2019-07-24
+  # support:
+  #   chrome: "7"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "51"
+  #   firefox_android: "51"
+  #   safari: "5.1"
+  #   safari_ios: "5"
+  - javascript.builtins.TypedArray.toLocaleString
 
   # baseline: high
   # baseline_low_date: 2017-08-08
@@ -274,6 +288,19 @@ compat_features:
   #   safari_ios: "7"
   - javascript.builtins.Array.toLocaleString.locales_parameter
   - javascript.builtins.Array.toLocaleString.options_parameter
+
+  # baseline: high
+  # baseline_low_date: 2020-09-16
+  # baseline_high_date: 2023-03-16
+  # support:
+  #   chrome: "67"
+  #   chrome_android: "67"
+  #   edge: "79"
+  #   firefox: "68"
+  #   firefox_android: "68"
+  #   safari: "14"
+  #   safari_ios: "14"
+  - javascript.builtins.BigInt.toLocaleString
 
   # baseline: high
   # baseline_low_date: 2020-09-16

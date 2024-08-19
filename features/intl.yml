@@ -5,7 +5,7 @@ spec: https://tc39.es/ecma402/#introduction
 caniuse: internationalization
 status:
   compute_from: javascript.builtins.Intl
-# We might want to break this feature up into smaller features.
+# We might want to break this feature up into smaller features. 
 # It is hard to determine how to slice the incremental Intl enhancements, though.
 # See https://github.com/web-platform-dx/web-features/pull/1601#issuecomment-2296149060
 compat_features:
@@ -78,10 +78,10 @@ compat_features:
   - javascript.builtins.Intl.NumberFormat.formatRangeToParts
   - javascript.builtins.Intl.NumberFormat.formatToParts
   - javascript.builtins.Intl.NumberFormat.resolvedOptions
-  #- javascript.builtins.Array.toLocaleString
+  - javascript.builtins.Array.toLocaleString
   - javascript.builtins.Array.toLocaleString.locales_parameter
   - javascript.builtins.Array.toLocaleString.options_parameter
-  #- javascript.builtins.BigInt.toLocaleString
+  - javascript.builtins.BigInt.toLocaleString
   - javascript.builtins.BigInt.toLocaleString.locales_parameter
   - javascript.builtins.BigInt.toLocaleString.options_parameter
   - javascript.builtins.Date.toLocaleDateString
@@ -107,4 +107,4 @@ compat_features:
   - javascript.builtins.String.toLocaleLowerCase.locale
   - javascript.builtins.String.toLocaleUpperCase
   - javascript.builtins.String.toLocaleUpperCase.locale
-  #- javascript.builtins.TypedArray.toLocaleString
+  - javascript.builtins.TypedArray.toLocaleString
