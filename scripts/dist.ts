@@ -169,7 +169,7 @@ function toDist(sourcePath: string): YAML.Document {
     source.compat_features.sort();
     if (isDeepStrictEqual(source.compat_features, taggedCompatFeatures)) {
       logger.warn(
-        `${id}: compat_features override matches tags in @mdn/browser-compat-data. Consider deleting this override.`,
+        `${id}: compat_features override matches tags in @mdn/browser-compat-data. Consider deleting the compat_features override.`,
       );
     }
   }
@@ -211,7 +211,7 @@ function toDist(sourcePath: string): YAML.Document {
   if (source.status) {
     if (isDeepStrictEqual(source.status, computedStatus)) {
       logger.warn(
-        `${id}: status override matches computed status. Consider deleting this override.`,
+        `${id}: status override matches computed status. Consider deleting the status override.`,
       );
     }
   }
@@ -236,7 +236,7 @@ function toDist(sourcePath: string): YAML.Document {
   if (computeFromWasExplicitlySet) {
     if (groups.size === 1) {
       logger.error(
-        `${id}: uses compute_from which must not be used when the overall status does not differ from the per-key statuses. Delete this override.`,
+        `${id}: uses compute_from which must not be used when the overall status does not differ from the per-key statuses. Delete the status override.`,
       );
       exitStatus = 1;
     }
