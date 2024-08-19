@@ -1,0 +1,15 @@
+name: RGB
+description: The RGB color model specifies colors using red, green and blue channels. It can be specified using `rgb()` and `rgba()` functions, or with hexadecimal notation.
+spec: https://drafts.csswg.org/css-color-4/#rgb-functions
+group: css
+status:
+  compute_from: css.types.color.rgb
+# Editorial override has been applied to ignore mixed_type_parameters.
+compat_features:
+  - css.types.color.rgb
+  - css.types.color.rgb.alpha_parameter
+  - css.types.color.rgb.float_values
+  # - css.types.color.rgb.mixed_type_parameters
+  - css.types.color.rgb.space_separated_parameters
+  - css.types.color.rgb_hexadecimal_notation
+  - css.types.color.rgb_hexadecimal_notation.alpha_hexadecimal_notation
