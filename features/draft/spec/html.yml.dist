@@ -202,24 +202,10 @@ compat_features:
   - api.HTMLElement.dir
   - api.HTMLElement.lang
   - api.HTMLElement.title
-  - api.HTMLFormElement
-  - api.HTMLFormElement.acceptCharset
-  - api.HTMLFormElement.action
-  - api.HTMLFormElement.elements
-  - api.HTMLFormElement.encoding
-  - api.HTMLFormElement.enctype
-  - api.HTMLFormElement.length
-  - api.HTMLFormElement.method
-  - api.HTMLFormElement.name
-  - api.HTMLFormElement.reset
-  - api.HTMLFormElement.submit
-  - api.HTMLFormElement.submit_event
-  - api.HTMLFormElement.target
   - api.HTMLInputElement.setSelectionRange
   - api.HTMLLabelElement
   - api.HTMLLabelElement.form
   - api.HTMLLabelElement.htmlFor
-  - api.HTMLMenuElement
   - api.HTMLOptionsCollection
   - api.HTMLOptionsCollection.add
   - api.HTMLOptionsCollection.length
@@ -236,7 +222,6 @@ compat_features:
   - api.Window.toolbar
   - api.Window.top
   - api.Window.window
-  - html.elements.menu
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -323,13 +308,6 @@ compat_features:
   - html.elements.dd
   - html.elements.dl
   - html.elements.dt
-  - html.elements.form
-  - html.elements.form.accept-charset
-  - html.elements.form.action
-  - html.elements.form.enctype
-  - html.elements.form.method
-  - html.elements.form.name
-  - html.elements.form.target
   - html.elements.label
   - html.elements.label.for
   - html.elements.s
@@ -590,19 +568,6 @@ compat_features:
   #   safari: "2"
   #   safari_ios: "1"
   - api.Document.scroll_event
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "6"
-  #   firefox_android: "6"
-  #   safari: "3"
-  #   safari_ios: "1"
-  - api.HTMLFormElement.reset_event
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -1200,7 +1165,6 @@ compat_features:
   #   safari: "5"
   #   safari_ios: "4"
   - api.Document.head
-  - api.HTMLFormElement.noValidate
   - api.HTMLInputElement.formNoValidate
   - api.HTMLInputElement.pattern
   - api.HTMLInputElement.required
@@ -1613,9 +1577,7 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "6"
   #   safari_ios: "6"
-  - api.HTMLFormElement.autocomplete
   - api.HTMLInputElement.autocomplete
-  - html.elements.form.autocomplete
   - html.elements.input.autocomplete
 
   # baseline: high
@@ -2174,19 +2136,6 @@ compat_features:
   #   safari: "3.1"
   #   safari_ios: "5"
   - html.elements.input.type_range
-
-  # baseline: high
-  # baseline_low_date: 2017-03-27
-  # baseline_high_date: 2019-09-27
-  # support:
-  #   chrome: "10"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "10.1"
-  #   safari_ios: "10.3"
-  - html.elements.form.novalidate
 
   # baseline: high
   # baseline_low_date: 2017-03-27
@@ -3287,7 +3236,6 @@ compat_features:
   - api.FormDataEvent
   - api.FormDataEvent.FormDataEvent
   - api.FormDataEvent.formData
-  - api.HTMLFormElement.formdata_event
 
   # baseline: high
   # baseline_low_date: 2021-09-20
@@ -3469,18 +3417,6 @@ compat_features:
   - api.CanvasRenderingContext2D.direction
 
   # baseline: low
-  # baseline_low_date: 2022-09-12
-  # support:
-  #   chrome: "76"
-  #   chrome_android: "76"
-  #   edge: "79"
-  #   firefox: "75"
-  #   firefox_android: "79"
-  #   safari: "16"
-  #   safari_ios: "16"
-  - api.HTMLFormElement.requestSubmit
-
-  # baseline: low
   # baseline_low_date: 2022-12-13
   # support:
   #   chrome: "90"
@@ -3507,20 +3443,6 @@ compat_features:
   - api.MathMLElement.dataset
   - api.MathMLElement.focus
   - api.MathMLElement.tabIndex
-
-  # baseline: low
-  # baseline_low_date: 2023-03-14
-  # support:
-  #   chrome: "108"
-  #   chrome_android: "108"
-  #   edge: "108"
-  #   firefox: "111"
-  #   firefox_android: "111"
-  #   safari: "15.4"
-  #   safari_ios: "15.4"
-  - api.HTMLFormElement.rel
-  - api.HTMLFormElement.relList
-  - html.elements.form.rel
 
   # baseline: low
   # baseline_low_date: 2023-03-27

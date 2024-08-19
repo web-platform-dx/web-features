@@ -1,4 +1,4 @@
-draft_date: 2024-08-12
+draft_date: 2024-08-19
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -241,26 +241,6 @@ compat_features:
   - api.HTMLElement.writingSuggestions
   - api.HTMLFormControlsCollection
   - api.HTMLFormControlsCollection.namedItem
-  - api.HTMLFormElement
-  - api.HTMLFormElement.acceptCharset
-  - api.HTMLFormElement.action
-  - api.HTMLFormElement.autocomplete
-  - api.HTMLFormElement.elements
-  - api.HTMLFormElement.encoding
-  - api.HTMLFormElement.enctype
-  - api.HTMLFormElement.formdata_event
-  - api.HTMLFormElement.length
-  - api.HTMLFormElement.method
-  - api.HTMLFormElement.name
-  - api.HTMLFormElement.noValidate
-  - api.HTMLFormElement.rel
-  - api.HTMLFormElement.relList
-  - api.HTMLFormElement.requestSubmit
-  - api.HTMLFormElement.reset
-  - api.HTMLFormElement.reset_event
-  - api.HTMLFormElement.submit
-  - api.HTMLFormElement.submit_event
-  - api.HTMLFormElement.target
   - api.HTMLIFrameElement.sandbox
   - api.HTMLIFrameElement.srcdoc
   - api.HTMLImageElement.currentSrc
@@ -322,7 +302,6 @@ compat_features:
   - api.HTMLMediaElement.getStartDate
   - api.HTMLMediaElement.srcObject
   - api.HTMLMediaElement.textTracks
-  - api.HTMLMenuElement
   - api.HTMLMeterElement
   - api.HTMLMeterElement.high
   - api.HTMLMeterElement.labels
@@ -705,17 +684,7 @@ compat_features:
   - html.elements.dt
   - html.elements.fencedframe.height
   - html.elements.fencedframe.width
-  - html.elements.form
-  - html.elements.form.accept-charset
-  - html.elements.form.action
-  - html.elements.form.autocomplete
   - html.elements.form.autocomplete.webauthn
-  - html.elements.form.enctype
-  - html.elements.form.method
-  - html.elements.form.name
-  - html.elements.form.novalidate
-  - html.elements.form.rel
-  - html.elements.form.target
   - html.elements.iframe.sandbox
   - html.elements.iframe.sandbox.allow-downloads
   - html.elements.iframe.sandbox.allow-forms
@@ -789,7 +758,6 @@ compat_features:
   - html.elements.link.rel.preconnect
   - html.elements.link.rel.prefetch
   - html.elements.link.rel.preload
-  - html.elements.menu
   - html.elements.meta.http-equiv.content-security-policy
   - html.elements.meta.http-equiv.content-type
   - html.elements.meta.name.theme-color
@@ -1305,6 +1273,37 @@ compat_features:
 #   - html.elements.fieldset.form
 #   - html.elements.fieldset.name
 #   - html.elements.legend
+# - <form>:
+#   - api.HTMLFormElement
+#   - api.HTMLFormElement.acceptCharset
+#   - api.HTMLFormElement.action
+#   - api.HTMLFormElement.autocomplete
+#   - api.HTMLFormElement.elements
+#   - api.HTMLFormElement.encoding
+#   - api.HTMLFormElement.enctype
+#   - api.HTMLFormElement.formdata_event
+#   - api.HTMLFormElement.length
+#   - api.HTMLFormElement.method
+#   - api.HTMLFormElement.name
+#   - api.HTMLFormElement.noValidate
+#   - api.HTMLFormElement.rel
+#   - api.HTMLFormElement.relList
+#   - api.HTMLFormElement.requestSubmit
+#   - api.HTMLFormElement.reset
+#   - api.HTMLFormElement.reset_event
+#   - api.HTMLFormElement.submit
+#   - api.HTMLFormElement.submit_event
+#   - api.HTMLFormElement.target
+#   - html.elements.form
+#   - html.elements.form.accept-charset
+#   - html.elements.form.action
+#   - html.elements.form.autocomplete
+#   - html.elements.form.enctype
+#   - html.elements.form.method
+#   - html.elements.form.name
+#   - html.elements.form.novalidate
+#   - html.elements.form.rel
+#   - html.elements.form.target
 # - <hr>:
 #   - api.HTMLHRElement
 #   - html.elements.hr
@@ -1550,6 +1549,9 @@ compat_features:
 #   - api.HTMLMediaElement.fastSeek
 # - preservesPitch:
 #   - api.HTMLMediaElement.preservesPitch
+# - <menu>:
+#   - api.HTMLMenuElement
+#   - html.elements.menu
 # - <meta>:
 #   - api.HTMLMetaElement
 #   - api.HTMLMetaElement.content
