@@ -2207,7 +2207,8 @@ compat_features:
   #   safari_ios: "16.4"
   - javascript.builtins.Atomics.waitAsync
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "129"
+  #   firefox_android: "129"
   - javascript.builtins.Float16Array.Float16Array

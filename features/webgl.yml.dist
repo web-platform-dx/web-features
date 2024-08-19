@@ -332,6 +332,7 @@ compat_features:
   #   safari_ios: "15"
   - api.WEBGL_color_buffer_float
 
+<<<<<<< HEAD:features/webgl.yml.dist
   # baseline: false
   # support:
   #   chrome: "49"
@@ -372,6 +373,22 @@ compat_features:
   - api.WEBGL_draw_buffers
   - api.WEBGL_draw_buffers.drawBuffersWEBGL
 
+||||||| 398385fe:features/draft/spec/webgl1.yml.dist
+  # baseline: low
+  # baseline_low_date: 2024-06-11
+  # support:
+  #   chrome: "104"
+  #   chrome_android: "104"
+  #   edge: "104"
+  #   firefox: "127"
+  #   firefox_android: "127"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.WebGL2RenderingContext.drawingBufferColorSpace
+  - api.WebGLRenderingContext.drawingBufferColorSpace
+
+=======
+>>>>>>> main:features/draft/spec/webgl1.yml.dist
   # baseline: false
   # support:
   #   chrome: "75"
@@ -396,11 +413,51 @@ compat_features:
 
   # baseline: false
   # support:
+<<<<<<< HEAD:features/webgl.yml.dist
   #   chrome: "26"
   #   edge: "12"
   #   firefox: "22"
   #   safari: "8"
   - api.WEBGL_compressed_texture_s3tc
+||||||| 398385fe:features/draft/spec/webgl1.yml.dist
+  #   chrome: "81"
+  #   chrome_android: "75"
+  #   edge: "79"
+  - api.HTMLCanvasElement.getContext.webgl2_context.options_desynchronized_parameter
+  - api.HTMLCanvasElement.getContext.webgl_context.options_desynchronized_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "104"
+  #   chrome_android: "104"
+  #   edge: "104"
+  - api.WebGL2RenderingContext.unpackColorSpace
+  - api.WebGLRenderingContext.unpackColorSpace
+=======
+  #   chrome: "104"
+  #   chrome_android: "104"
+  #   edge: "104"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.WebGL2RenderingContext.drawingBufferColorSpace
+  - api.WebGLRenderingContext.drawingBufferColorSpace
+
+  # baseline: false
+  # support:
+  #   chrome: "81"
+  #   chrome_android: "75"
+  #   edge: "79"
+  - api.HTMLCanvasElement.getContext.webgl2_context.options_desynchronized_parameter
+  - api.HTMLCanvasElement.getContext.webgl_context.options_desynchronized_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "104"
+  #   chrome_android: "104"
+  #   edge: "104"
+  - api.WebGL2RenderingContext.unpackColorSpace
+  - api.WebGLRenderingContext.unpackColorSpace
+>>>>>>> main:features/draft/spec/webgl1.yml.dist
 
   # baseline: false
   # support:
