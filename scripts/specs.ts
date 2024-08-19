@@ -92,8 +92,13 @@ for (const [allowedUrl, message] of defaultAllowlist) {
 for (const [id, data] of Object.entries(features)) {
     const specs = Array.isArray(data.spec) ? data.spec : [data.spec];
     for (const spec of specs) {
-        const url = new URL(spec);
-        if (!isOK(url)) {
+        try {
+            var url = new URL(spec);
+        } catch (error) {
+            console.error(`Invalid URL "${spec}" found in spec for "${data.name}"`);
+            errors++
+        }
+        if (url && !isOK(url)) {
             console.error(`URL for ${id} not in web-specs: ${url.toString()}`);
             suggestSpecs(url);
             errors++;
