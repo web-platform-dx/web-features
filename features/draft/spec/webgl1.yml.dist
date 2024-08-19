@@ -408,19 +408,6 @@ compat_features:
   - api.WebGL2RenderingContext.vertexAttribPointer
   - api.WebGL2RenderingContext.viewport
 
-  # baseline: low
-  # baseline_low_date: 2024-06-11
-  # support:
-  #   chrome: "104"
-  #   chrome_android: "104"
-  #   edge: "104"
-  #   firefox: "127"
-  #   firefox_android: "127"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - api.WebGL2RenderingContext.drawingBufferColorSpace
-  - api.WebGLRenderingContext.drawingBufferColorSpace
-
   # baseline: false
   # support:
   #   chrome: "75"
@@ -438,6 +425,16 @@ compat_features:
   #   safari: "15"
   #   safari_ios: "15"
   - api.HTMLCanvasElement.getContext.webgl2_context.options_powerPreference_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "104"
+  #   chrome_android: "104"
+  #   edge: "104"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.WebGL2RenderingContext.drawingBufferColorSpace
+  - api.WebGLRenderingContext.drawingBufferColorSpace
 
   # baseline: false
   # support:
