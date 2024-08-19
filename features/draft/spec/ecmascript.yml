@@ -69,55 +69,9 @@ compat_features:
   - javascript.builtins.DataView.setUint16
   - javascript.builtins.DataView.setUint32
   - javascript.builtins.DataView.setUint8
-  - javascript.builtins.Date
-  - javascript.builtins.Date.@@toPrimitive
-  - javascript.builtins.Date.Date
-  - javascript.builtins.Date.UTC
-  - javascript.builtins.Date.getDate
-  - javascript.builtins.Date.getDay
-  - javascript.builtins.Date.getFullYear
-  - javascript.builtins.Date.getHours
-  - javascript.builtins.Date.getMilliseconds
-  - javascript.builtins.Date.getMinutes
-  - javascript.builtins.Date.getMonth
-  - javascript.builtins.Date.getSeconds
-  - javascript.builtins.Date.getTime
-  - javascript.builtins.Date.getTimezoneOffset
-  - javascript.builtins.Date.getUTCDate
-  - javascript.builtins.Date.getUTCDay
-  - javascript.builtins.Date.getUTCFullYear
-  - javascript.builtins.Date.getUTCHours
-  - javascript.builtins.Date.getUTCMilliseconds
-  - javascript.builtins.Date.getUTCMinutes
-  - javascript.builtins.Date.getUTCMonth
-  - javascript.builtins.Date.getUTCSeconds
-  - javascript.builtins.Date.now
-  - javascript.builtins.Date.parse
-  - javascript.builtins.Date.setDate
-  - javascript.builtins.Date.setFullYear
-  - javascript.builtins.Date.setHours
-  - javascript.builtins.Date.setMilliseconds
-  - javascript.builtins.Date.setMinutes
-  - javascript.builtins.Date.setMonth
-  - javascript.builtins.Date.setSeconds
-  - javascript.builtins.Date.setTime
-  - javascript.builtins.Date.setUTCDate
-  - javascript.builtins.Date.setUTCFullYear
-  - javascript.builtins.Date.setUTCHours
-  - javascript.builtins.Date.setUTCMilliseconds
-  - javascript.builtins.Date.setUTCMinutes
-  - javascript.builtins.Date.setUTCMonth
-  - javascript.builtins.Date.setUTCSeconds
-  - javascript.builtins.Date.toDateString
-  - javascript.builtins.Date.toISOString
-  - javascript.builtins.Date.toJSON
   - javascript.builtins.Date.toLocaleDateString
   - javascript.builtins.Date.toLocaleString
   - javascript.builtins.Date.toLocaleTimeString
-  - javascript.builtins.Date.toString
-  - javascript.builtins.Date.toTimeString
-  - javascript.builtins.Date.toUTCString
-  - javascript.builtins.Date.valueOf
   - javascript.builtins.Error
   - javascript.builtins.Error.Error
   - javascript.builtins.Error.Error.options_cause_parameter
@@ -295,20 +249,9 @@ compat_features:
   - javascript.builtins.TypedArray.@@species
   - javascript.builtins.URIError
   - javascript.builtins.URIError.URIError
-  - javascript.builtins.WeakMap
-  - javascript.builtins.WeakMap.WeakMap
-  - javascript.builtins.WeakMap.delete
-  - javascript.builtins.WeakMap.get
-  - javascript.builtins.WeakMap.has
-  - javascript.builtins.WeakMap.set
   - javascript.builtins.WeakRef
   - javascript.builtins.WeakRef.WeakRef
   - javascript.builtins.WeakRef.deref
-  - javascript.builtins.WeakSet
-  - javascript.builtins.WeakSet.WeakSet
-  - javascript.builtins.WeakSet.add
-  - javascript.builtins.WeakSet.delete
-  - javascript.builtins.WeakSet.has
   - javascript.builtins.decodeURI
   - javascript.builtins.decodeURIComponent
   - javascript.builtins.encodeURI
@@ -524,11 +467,15 @@ compat_features:
 #   - javascript.builtins.TypedArray.toReversed
 #   - javascript.builtins.TypedArray.toSorted
 #   - javascript.builtins.TypedArray.with
-# - Resizable ArrayBuffer:
+# - Resizable buffers:
 #   - javascript.builtins.ArrayBuffer.ArrayBuffer.maxByteLength_option
 #   - javascript.builtins.ArrayBuffer.maxByteLength
 #   - javascript.builtins.ArrayBuffer.resizable
 #   - javascript.builtins.ArrayBuffer.resize
+#   - javascript.builtins.SharedArrayBuffer.SharedArrayBuffer.maxByteLength_option
+#   - javascript.builtins.SharedArrayBuffer.grow
+#   - javascript.builtins.SharedArrayBuffer.growable
+#   - javascript.builtins.SharedArrayBuffer.maxByteLength
 # - Async functions:
 #   - javascript.builtins.AsyncFunction
 #   - javascript.builtins.AsyncFunction.AsyncFunction
@@ -542,6 +489,53 @@ compat_features:
 #   - javascript.builtins.BigInt.asUintN
 #   - javascript.builtins.BigInt.toString
 #   - javascript.builtins.BigInt.valueOf
+# - Date:
+#   - javascript.builtins.Date
+#   - javascript.builtins.Date.@@toPrimitive
+#   - javascript.builtins.Date.Date
+#   - javascript.builtins.Date.UTC
+#   - javascript.builtins.Date.getDate
+#   - javascript.builtins.Date.getDay
+#   - javascript.builtins.Date.getFullYear
+#   - javascript.builtins.Date.getHours
+#   - javascript.builtins.Date.getMilliseconds
+#   - javascript.builtins.Date.getMinutes
+#   - javascript.builtins.Date.getMonth
+#   - javascript.builtins.Date.getSeconds
+#   - javascript.builtins.Date.getTime
+#   - javascript.builtins.Date.getTimezoneOffset
+#   - javascript.builtins.Date.getUTCDate
+#   - javascript.builtins.Date.getUTCDay
+#   - javascript.builtins.Date.getUTCFullYear
+#   - javascript.builtins.Date.getUTCHours
+#   - javascript.builtins.Date.getUTCMilliseconds
+#   - javascript.builtins.Date.getUTCMinutes
+#   - javascript.builtins.Date.getUTCMonth
+#   - javascript.builtins.Date.getUTCSeconds
+#   - javascript.builtins.Date.now
+#   - javascript.builtins.Date.parse
+#   - javascript.builtins.Date.setDate
+#   - javascript.builtins.Date.setFullYear
+#   - javascript.builtins.Date.setHours
+#   - javascript.builtins.Date.setMilliseconds
+#   - javascript.builtins.Date.setMinutes
+#   - javascript.builtins.Date.setMonth
+#   - javascript.builtins.Date.setSeconds
+#   - javascript.builtins.Date.setTime
+#   - javascript.builtins.Date.setUTCDate
+#   - javascript.builtins.Date.setUTCFullYear
+#   - javascript.builtins.Date.setUTCHours
+#   - javascript.builtins.Date.setUTCMilliseconds
+#   - javascript.builtins.Date.setUTCMinutes
+#   - javascript.builtins.Date.setUTCMonth
+#   - javascript.builtins.Date.setUTCSeconds
+#   - javascript.builtins.Date.toDateString
+#   - javascript.builtins.Date.toISOString
+#   - javascript.builtins.Date.toJSON
+#   - javascript.builtins.Date.toString
+#   - javascript.builtins.Date.toTimeString
+#   - javascript.builtins.Date.toUTCString
+#   - javascript.builtins.Date.valueOf
 # - Typed arrays (initial support):
 #   - javascript.builtins.Float32Array
 #   - javascript.builtins.Float32Array.Float32Array
@@ -733,11 +727,6 @@ compat_features:
 #   - javascript.builtins.Set.keys
 #   - javascript.builtins.Set.size
 #   - javascript.builtins.Set.values
-# - Growable SharedArrayBuffer:
-#   - javascript.builtins.SharedArrayBuffer.SharedArrayBuffer.maxByteLength_option
-#   - javascript.builtins.SharedArrayBuffer.grow
-#   - javascript.builtins.SharedArrayBuffer.growable
-#   - javascript.builtins.SharedArrayBuffer.maxByteLength
 # - Typed array iterators:
 #   - javascript.builtins.TypedArray.@@iterator
 #   - javascript.builtins.TypedArray.entries
@@ -753,6 +742,19 @@ compat_features:
 #   - javascript.builtins.TypedArray.reduce
 #   - javascript.builtins.TypedArray.reduceRight
 #   - javascript.builtins.TypedArray.some
+# - WeakMap:
+#   - javascript.builtins.WeakMap
+#   - javascript.builtins.WeakMap.WeakMap
+#   - javascript.builtins.WeakMap.delete
+#   - javascript.builtins.WeakMap.get
+#   - javascript.builtins.WeakMap.has
+#   - javascript.builtins.WeakMap.set
+# - WeakSet:
+#   - javascript.builtins.WeakSet
+#   - javascript.builtins.WeakSet.WeakSet
+#   - javascript.builtins.WeakSet.add
+#   - javascript.builtins.WeakSet.delete
+#   - javascript.builtins.WeakSet.has
 # - Classes:
 #   - javascript.classes
 #   - javascript.classes.constructor

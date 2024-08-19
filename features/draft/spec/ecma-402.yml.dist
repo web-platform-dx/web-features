@@ -114,23 +114,6 @@ compat_features:
   # baseline_low_date: 2019-09-19
   # baseline_high_date: 2022-03-19
   # support:
-  #   chrome: "63"
-  #   chrome_android: "63"
-  #   edge: "18"
-  #   firefox: "58"
-  #   firefox_android: "58"
-  #   safari: "13"
-  #   safari_ios: "13"
-  - javascript.builtins.Intl.PluralRules
-  - javascript.builtins.Intl.PluralRules.PluralRules
-  - javascript.builtins.Intl.PluralRules.resolvedOptions
-  - javascript.builtins.Intl.PluralRules.select
-  - javascript.builtins.Intl.PluralRules.supportedLocalesOf
-
-  # baseline: high
-  # baseline_low_date: 2019-09-19
-  # baseline_high_date: 2022-03-19
-  # support:
   #   chrome: "64"
   #   chrome_android: "64"
   #   edge: "12"
@@ -179,4 +162,3 @@ compat_features:
   #   safari_ios: "15.4"
   - javascript.builtins.Intl.NumberFormat.formatRange
   - javascript.builtins.Intl.NumberFormat.formatRangeToParts
-  - javascript.builtins.Intl.PluralRules.selectRange

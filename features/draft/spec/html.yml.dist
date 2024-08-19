@@ -310,7 +310,6 @@ compat_features:
   - html.elements.dt
   - html.elements.label
   - html.elements.label.for
-  - html.elements.s
   - html.global_attributes.accesskey
   - html.global_attributes.class
   - html.global_attributes.lang
@@ -327,44 +326,7 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "2"
   #   safari_ios: "1"
-  - api.CanvasGradient
-  - api.CanvasGradient.addColorStop
   - api.CanvasPattern
-  - api.CanvasRenderingContext2D
-  - api.CanvasRenderingContext2D.arcTo
-  - api.CanvasRenderingContext2D.beginPath
-  - api.CanvasRenderingContext2D.bezierCurveTo
-  - api.CanvasRenderingContext2D.clearRect
-  - api.CanvasRenderingContext2D.clip
-  - api.CanvasRenderingContext2D.closePath
-  - api.CanvasRenderingContext2D.createLinearGradient
-  - api.CanvasRenderingContext2D.createPattern
-  - api.CanvasRenderingContext2D.createRadialGradient
-  - api.CanvasRenderingContext2D.drawImage
-  - api.CanvasRenderingContext2D.fill
-  - api.CanvasRenderingContext2D.fillRect
-  - api.CanvasRenderingContext2D.fillStyle
-  - api.CanvasRenderingContext2D.globalAlpha
-  - api.CanvasRenderingContext2D.globalCompositeOperation
-  - api.CanvasRenderingContext2D.lineCap
-  - api.CanvasRenderingContext2D.lineJoin
-  - api.CanvasRenderingContext2D.lineTo
-  - api.CanvasRenderingContext2D.lineWidth
-  - api.CanvasRenderingContext2D.miterLimit
-  - api.CanvasRenderingContext2D.moveTo
-  - api.CanvasRenderingContext2D.rect
-  - api.CanvasRenderingContext2D.restore
-  - api.CanvasRenderingContext2D.rotate
-  - api.CanvasRenderingContext2D.save
-  - api.CanvasRenderingContext2D.scale
-  - api.CanvasRenderingContext2D.shadowBlur
-  - api.CanvasRenderingContext2D.shadowColor
-  - api.CanvasRenderingContext2D.shadowOffsetX
-  - api.CanvasRenderingContext2D.shadowOffsetY
-  - api.CanvasRenderingContext2D.stroke
-  - api.CanvasRenderingContext2D.strokeRect
-  - api.CanvasRenderingContext2D.strokeStyle
-  - api.CanvasRenderingContext2D.translate
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -377,9 +339,6 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "3"
   #   safari_ios: "1"
-  - api.CanvasRenderingContext2D.arc
-  - api.CanvasRenderingContext2D.canvas
-  - api.CanvasRenderingContext2D.quadraticCurveTo
   - api.HTMLElement.blur
   - api.HTMLElement.focus
 
@@ -403,37 +362,11 @@ compat_features:
   #   chrome: "1"
   #   chrome_android: "18"
   #   edge: "12"
-  #   firefox: "2"
-  #   firefox_android: "4"
-  #   safari: "3.1"
-  #   safari_ios: "2"
-  - api.CanvasRenderingContext2D.isPointInPath
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
   #   firefox: "3"
   #   firefox_android: "4"
   #   safari: "3"
   #   safari_ios: "1"
   - api.HTMLElement.contentEditable
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3"
-  #   firefox_android: "4"
-  #   safari: "3.1"
-  #   safari_ios: "2"
-  - api.CanvasRenderingContext2D.transform
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -717,20 +650,6 @@ compat_features:
   #   chrome: "2"
   #   chrome_android: "18"
   #   edge: "12"
-  #   firefox: "2"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - api.CanvasRenderingContext2D.getImageData
-  - api.CanvasRenderingContext2D.putImageData
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "2"
-  #   chrome_android: "18"
-  #   edge: "12"
   #   firefox: "3"
   #   firefox_android: "4"
   #   safari: "4"
@@ -748,7 +667,6 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "4"
   #   safari_ios: "3.2"
-  - api.CanvasRenderingContext2D.setTransform
   - api.Document.activeElement
   - api.Document.hasFocus
   - api.FileList
@@ -757,20 +675,6 @@ compat_features:
   - api.MessageEvent.origin
   - api.MessageEvent.source
   - api.Window.postMessage
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "2"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - api.CanvasRenderingContext2D.createImageData
-  - api.CanvasRenderingContext2D.font
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -1694,21 +1598,6 @@ compat_features:
   #   chrome: "23"
   #   chrome_android: "25"
   #   edge: "12"
-  #   firefox: "27"
-  #   firefox_android: "27"
-  #   safari: "7"
-  #   safari_ios: "7"
-  - api.CanvasRenderingContext2D.getLineDash
-  - api.CanvasRenderingContext2D.lineDashOffset
-  - api.CanvasRenderingContext2D.setLineDash
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "23"
-  #   chrome_android: "25"
-  #   edge: "12"
   #   firefox: "31"
   #   firefox_android: "31"
   #   safari: "6"
@@ -1969,19 +1858,6 @@ compat_features:
   # baseline_low_date: 2016-08-02
   # baseline_high_date: 2019-02-02
   # support:
-  #   chrome: "31"
-  #   chrome_android: "31"
-  #   edge: "13"
-  #   firefox: "48"
-  #   firefox_android: "48"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - api.CanvasRenderingContext2D.ellipse
-
-  # baseline: high
-  # baseline_low_date: 2016-08-02
-  # baseline_high_date: 2019-02-02
-  # support:
   #   chrome: "36"
   #   chrome_android: "36"
   #   edge: "14"
@@ -2025,19 +1901,6 @@ compat_features:
   #   safari: "9"
   #   safari_ios: "9"
   - api.Path2D.ellipse
-
-  # baseline: high
-  # baseline_low_date: 2016-08-02
-  # baseline_high_date: 2019-02-02
-  # support:
-  #   chrome: "37"
-  #   chrome_android: "37"
-  #   edge: "14"
-  #   firefox: "32"
-  #   firefox_android: "32"
-  #   safari: "8"
-  #   safari_ios: "8"
-  - api.CanvasRenderingContext2D.drawFocusIfNeeded
 
   # baseline: high
   # baseline_low_date: 2016-09-20
@@ -2202,19 +2065,6 @@ compat_features:
   #   safari: "4"
   #   safari_ios: "4"
   - api.Window.storage_event
-
-  # baseline: high
-  # baseline_low_date: 2017-04-05
-  # baseline_high_date: 2019-10-05
-  # support:
-  #   chrome: "30"
-  #   chrome_android: "30"
-  #   edge: "15"
-  #   firefox: "51"
-  #   firefox_android: "51"
-  #   safari: "9.1"
-  #   safari_ios: "9.3"
-  - api.CanvasRenderingContext2D.imageSmoothingEnabled
 
   # baseline: high
   # baseline_low_date: 2017-06-06
@@ -2791,32 +2641,6 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
-  #   chrome: "26"
-  #   chrome_android: "26"
-  #   edge: "79"
-  #   firefox: "19"
-  #   firefox_android: "19"
-  #   safari: "7"
-  #   safari_ios: "7"
-  - api.CanvasRenderingContext2D.isPointInStroke
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "31"
-  #   chrome_android: "31"
-  #   edge: "79"
-  #   firefox: "36"
-  #   firefox_android: "36"
-  #   safari: "10.1"
-  #   safari_ios: "10.3"
-  - api.CanvasRenderingContext2D.resetTransform
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
   #   chrome: "36"
   #   chrome_android: "36"
   #   edge: "79"
@@ -3054,19 +2878,6 @@ compat_features:
   #   safari: "11.1"
   #   safari_ios: "11.3"
   - html.elements.iframe.sandbox.allow-top-navigation-by-user-activation
-
-  # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
-  # support:
-  #   chrome: "68"
-  #   chrome_android: "68"
-  #   edge: "79"
-  #   firefox: "70"
-  #   firefox_android: "79"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - api.CanvasRenderingContext2D.getTransform
 
   # baseline: high
   # baseline_low_date: 2020-07-28
@@ -3406,18 +3217,6 @@ compat_features:
   - api.reportError
 
   # baseline: low
-  # baseline_low_date: 2022-05-31
-  # support:
-  #   chrome: "77"
-  #   chrome_android: "77"
-  #   edge: "79"
-  #   firefox: "101"
-  #   firefox_android: "101"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - api.CanvasRenderingContext2D.direction
-
-  # baseline: low
   # baseline_low_date: 2022-12-13
   # support:
   #   chrome: "90"
@@ -3517,18 +3316,6 @@ compat_features:
   #   safari_ios: "11.3"
   - api.TextMetrics.fontBoundingBoxAscent
   - api.TextMetrics.fontBoundingBoxDescent
-
-  # baseline: low
-  # baseline_low_date: 2023-08-29
-  # support:
-  #   chrome: "73"
-  #   chrome_android: "73"
-  #   edge: "79"
-  #   firefox: "117"
-  #   firefox_android: "117"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - api.CanvasRenderingContext2D.getContextAttributes
 
   # baseline: low
   # baseline_low_date: 2023-09-18
@@ -3699,15 +3486,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "32"
-  #   chrome_android: "32"
-  #   edge: ≤79
-  #   firefox: "30"
-  #   firefox_android: "30"
-  - api.HTMLCanvasElement.getContext.2d_context.options_alpha_parameter
-
-  # baseline: false
-  # support:
   #   chrome: "37"
   #   chrome_android: "37"
   #   edge: "15"
@@ -3724,24 +3502,6 @@ compat_features:
   #   firefox_android: "58"
   #   safari_ios: "11.3"
   - html.elements.link.rel.manifest
-
-  # baseline: false
-  # support:
-  #   chrome: "52"
-  #   chrome_android: "52"
-  #   edge: "79"
-  #   firefox: "49"
-  #   firefox_android: "49"
-  - api.CanvasRenderingContext2D.filter
-
-  # baseline: false
-  # support:
-  #   chrome: "54"
-  #   chrome_android: "54"
-  #   edge: "79"
-  #   safari: "9.1"
-  #   safari_ios: "9.3"
-  - api.CanvasRenderingContext2D.imageSmoothingQuality
 
   # baseline: false
   # support:
@@ -3852,40 +3612,12 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "81"
-  #   chrome_android: "75"
-  #   edge: "79"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - api.HTMLCanvasElement.getContext.2d_context.options_desynchronized_parameter
-
-  # baseline: false
-  # support:
   #   chrome: "92"
   #   chrome_android: "92"
   #   edge: "92"
   #   safari: "15.2"
   #   safari_ios: "15.2"
-  - api.HTMLCanvasElement.getContext.2d_context.options_colorSpace_parameter
   - api.ImageData.colorSpace
-
-  # baseline: false
-  # support:
-  #   chrome: "99"
-  #   chrome_android: "99"
-  #   edge: "99"
-  #   firefox: "28"
-  #   firefox_android: "28"
-  - api.HTMLCanvasElement.getContext.2d_context.options_willReadFrequently_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "99"
-  #   chrome_android: "99"
-  #   edge: "99"
-  #   firefox: "104"
-  #   firefox_android: "104"
-  - api.CanvasRenderingContext2D.fontKerning
 
   # baseline: false
   # support:
@@ -3903,8 +3635,6 @@ compat_features:
   #   edge: "99"
   #   firefox: "115"
   #   firefox_android: "115"
-  - api.CanvasRenderingContext2D.letterSpacing
-  - api.CanvasRenderingContext2D.wordSpacing
   - api.OffscreenCanvasRenderingContext2D.letterSpacing
   - api.OffscreenCanvasRenderingContext2D.wordSpacing
 
@@ -3915,7 +3645,6 @@ compat_features:
   #   edge: "99"
   #   firefox: "116"
   #   firefox_android: "116"
-  - api.CanvasRenderingContext2D.textRendering
   - api.OffscreenCanvasRenderingContext2D.textRendering
 
   # baseline: false
@@ -3925,8 +3654,6 @@ compat_features:
   #   edge: "99"
   #   firefox: "117"
   #   firefox_android: "117"
-  - api.CanvasRenderingContext2D.fontStretch
-  - api.CanvasRenderingContext2D.fontVariantCaps
   - api.OffscreenCanvasRenderingContext2D.fontStretch
   - api.OffscreenCanvasRenderingContext2D.fontVariantCaps
 
