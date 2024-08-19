@@ -7,6 +7,8 @@ status:
     chrome: "101"
     chrome_android: "101"
     edge: "101"
+    firefox: "129"
+    firefox_android: "129"
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -52,4 +54,6 @@ compat_features:
   #   chrome: "80"
   #   chrome_android: "80"
   #   edge: "80"
+  #   firefox: "129"
+  #   firefox_android: "129"
   - api.MediaCapabilities.decodingInfo.configuration_keySystemConfiguration_parameter
