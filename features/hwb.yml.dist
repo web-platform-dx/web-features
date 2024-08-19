@@ -13,4 +13,24 @@ status:
     safari: "15"
     safari_ios: "15"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2022-04-28
+  # support:
+  #   chrome: "101"
+  #   chrome_android: "101"
+  #   edge: "101"
+  #   firefox: "96"
+  #   firefox_android: "96"
+  #   safari: "15"
+  #   safari_ios: "15"
   - css.types.color.hwb
+
+  # baseline: false
+  # support:
+  #   chrome: "121"
+  #   chrome_android: "121"
+  #   edge: "121"
+  #   firefox: "122"
+  #   firefox_android: "122"
+  - css.types.color.hwb.mixed_type_parameters
