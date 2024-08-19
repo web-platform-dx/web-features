@@ -1,0 +1,8 @@
+name: HWB
+description: The HWB color model specifies colors using hue, whiteness and blackness. It is specified using the `hsb()` CSS function.
+spec: https://drafts.csswg.org/css-color-4/#the-hwb-notation
+group: css
+# Editorial override has been applied to ignore mixed_type_parameters.
+compat_features:
+  - css.types.color.hwb
+  # - css.types.color.hwb.mixed_type_parameters
