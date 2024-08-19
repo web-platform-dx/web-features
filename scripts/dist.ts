@@ -177,7 +177,7 @@ function toDist(sourcePath: string): YAML.Document {
   const compatFeatures = source.compat_features ?? taggedCompatFeatures;
   let computeFrom = compatFeatures;
 
-  const computeFromWasExplicitlySet = Boolean(source.status?.compute_from);
+  const computeFromWasExplicitlySet = source.status?.compute_from !== undefined;
   if (computeFromWasExplicitlySet) {
     const compute_from = source.status.compute_from;
     const keys = Array.isArray(compute_from) ? compute_from : [compute_from];
