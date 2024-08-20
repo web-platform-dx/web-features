@@ -1,0 +1,13 @@
+name: font-style
+description: The `font-style` CSS property sets the text style, with `italic` and `oblique` options.
+spec: https://drafts.csswg.org/css-fonts-4/#font-style-prop
+group: fonts
+status:
+  compute_from: css.properties.font-style
+compat_features:
+  - css.at-rules.font-face.font-style
+  - css.properties.font-style
+  - css.properties.font-style.italic
+  - css.properties.font-style.normal
+  - css.properties.font-style.oblique-angle
+  - svg.global_attributes.font-style
