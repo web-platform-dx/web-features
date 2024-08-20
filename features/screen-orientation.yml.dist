@@ -12,3 +12,31 @@ status:
     firefox_android: "43"
     safari: "16.4"
     safari_ios: "16.4"
+compat_features:
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "38"
+  #   chrome_android: "38"
+  #   edge: "79"
+  #   firefox: "43"
+  #   firefox_android: "43"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.ScreenOrientation
+  - api.ScreenOrientation.angle
+  - api.ScreenOrientation.change_event
+  - api.ScreenOrientation.type
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "38"
+  #   chrome_android: "39"
+  #   edge: "79"
+  #   firefox: "43"
+  #   firefox_android: "43"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.Screen.orientation

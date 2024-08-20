@@ -1,6 +1,3 @@
 name: Abortable fetch
 description: If you construct a fetch request with an `AbortSignal`, you can cancel the request.
 spec: https://fetch.spec.whatwg.org/#ref-for-dom-request-signal%E2%91%A1
-compat_features:
-  - api.fetch.init_signal_parameter
-  - api.Request.signal

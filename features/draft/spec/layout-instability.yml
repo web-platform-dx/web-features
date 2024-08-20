@@ -1,0 +1,16 @@
+draft_date: 2024-08-19
+name: Layout Instability
+description: TODO
+spec: https://wicg.github.io/layout-instability/
+compat_features:
+  - api.LayoutShift
+  - api.LayoutShift.hadRecentInput
+  - api.LayoutShift.lastInputTime
+  - api.LayoutShift.sources
+  - api.LayoutShift.toJSON
+  - api.LayoutShift.value
+  - api.LayoutShiftAttribution
+  - api.LayoutShiftAttribution.currentRect
+  - api.LayoutShiftAttribution.node
+  - api.LayoutShiftAttribution.previousRect
+  - api.LayoutShiftAttribution.toJSON

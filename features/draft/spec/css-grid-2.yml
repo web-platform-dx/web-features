@@ -1,0 +1,53 @@
+draft_date: 2024-08-19
+name: CSS Grid Layout Module Level 2
+description: TODO
+spec: https://drafts.csswg.org/css-grid-2/
+compat_features:
+  - css.properties.column-gap
+  - css.properties.column-gap.multicol_context
+  - css.properties.grid-auto-flow.column
+  - css.properties.grid-auto-flow.dense
+  - css.properties.grid-auto-flow.row
+  - css.properties.grid-template-areas.none
+  - css.properties.grid-template-columns.auto
+  - css.properties.grid-template-columns.max-content
+  - css.properties.grid-template-columns.min-content
+  - css.properties.grid-template-columns.none
+  - css.properties.grid-template-rows.auto
+  - css.properties.grid-template-rows.max-content
+  - css.properties.grid-template-rows.min-content
+  - css.properties.grid-template-rows.none
+  - css.properties.grid-template.none
+
+# The following features in the spec are already part of web-features:
+# - Grid:
+#   - css.properties.align-content.grid_context
+#   - css.properties.column-gap.grid_context
+#   - css.properties.grid
+#   - css.properties.grid-area
+#   - css.properties.grid-auto-columns
+#   - css.properties.grid-auto-flow
+#   - css.properties.grid-auto-rows
+#   - css.properties.grid-column
+#   - css.properties.grid-column-end
+#   - css.properties.grid-column-start
+#   - css.properties.grid-row
+#   - css.properties.grid-row-end
+#   - css.properties.grid-row-start
+#   - css.properties.grid-template
+#   - css.properties.grid-template-areas
+#   - css.properties.grid-template-columns
+#   - css.properties.grid-template-columns.minmax
+#   - css.properties.grid-template-columns.repeat
+#   - css.properties.grid-template-rows
+#   - css.properties.grid-template-rows.minmax
+#   - css.properties.grid-template-rows.repeat
+#   - css.types.flex
+# - Flexbox gap:
+#   - css.properties.column-gap.flex_context
+# - Masonry:
+#   - css.properties.grid-template-columns.masonry
+#   - css.properties.grid-template-rows.masonry
+# - Subgrid:
+#   - css.properties.grid-template-columns.subgrid
+#   - css.properties.grid-template-rows.subgrid

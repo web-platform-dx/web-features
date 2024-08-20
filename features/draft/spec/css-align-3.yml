@@ -1,0 +1,43 @@
+draft_date: 2024-08-19
+name: CSS Box Alignment Module Level 3
+description: TODO
+spec: https://drafts.csswg.org/css-align-3/
+compat_features:
+  - css.properties.align-content
+  - css.properties.align-content.block_context
+  - css.properties.align-content.multicol_context
+  - css.properties.align-items
+  - css.properties.align-self
+  - css.properties.column-gap
+  - css.properties.column-gap.multicol_context
+  - css.properties.gap
+  - css.properties.gap.multicol_context
+  - css.properties.justify-content
+  - css.properties.justify-items
+  - css.properties.justify-self
+  - css.properties.place-content
+  - css.properties.place-items
+  - css.properties.place-self
+  - css.properties.row-gap
+
+# The following features in the spec are already part of web-features:
+# - Flexbox:
+#   - css.properties.align-content.flex_context
+#   - css.properties.align-items.flex_context
+#   - css.properties.align-self.flex_context
+#   - css.properties.justify-content.flex_context
+#   - css.properties.justify-items.flex_context
+# - Grid:
+#   - css.properties.align-content.grid_context
+#   - css.properties.align-items.grid_context
+#   - css.properties.align-self.grid_context
+#   - css.properties.column-gap.grid_context
+#   - css.properties.gap.grid_context
+#   - css.properties.justify-content.grid_context
+#   - css.properties.justify-items.grid_context
+#   - css.properties.justify-self.grid_context
+#   - css.properties.row-gap.grid_context
+# - Flexbox gap:
+#   - css.properties.column-gap.flex_context
+#   - css.properties.gap.flex_context
+#   - css.properties.row-gap.flex_context

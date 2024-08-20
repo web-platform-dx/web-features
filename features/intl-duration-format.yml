@@ -1,0 +1,11 @@
+name: Intl.DurationFormat
+description: "The `Intl.DurationFormat` API creates a locale-aware formatter that turns an object representing a duration (such as days, hours, and minutes) into a string."
+group: intl
+spec: https://tc39.es/proposal-intl-duration-format/
+compat_features:
+  - javascript.builtins.Intl.DurationFormat
+  - javascript.builtins.Intl.DurationFormat.DurationFormat
+  - javascript.builtins.Intl.DurationFormat.format
+  - javascript.builtins.Intl.DurationFormat.formatToParts
+  - javascript.builtins.Intl.DurationFormat.resolvedOptions
+  - javascript.builtins.Intl.DurationFormat.supportedLocalesOf

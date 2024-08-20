@@ -1,0 +1,58 @@
+draft_date: 2024-08-19
+name: CSS Masking Module Level 1
+description: TODO
+spec: https://drafts.fxtf.org/css-masking-1/
+compat_features:
+  - api.SVGClipPathElement
+  - api.SVGClipPathElement.clipPathUnits
+  - api.SVGClipPathElement.transform
+  - api.SVGMaskElement
+  - api.SVGMaskElement.height
+  - api.SVGMaskElement.maskContentUnits
+  - api.SVGMaskElement.maskUnits
+  - api.SVGMaskElement.width
+  - api.SVGMaskElement.x
+  - api.SVGMaskElement.y
+  - css.properties.clip-path
+  - css.properties.clip-path.fill-box
+  - css.properties.clip-path.stroke-box
+  - css.properties.clip-path.view-box
+  - css.properties.clip-rule
+  - css.properties.clip-rule.evenodd
+  - css.properties.clip-rule.nonzero
+  - css.properties.mask-border
+  - css.properties.mask-border-outset
+  - css.properties.mask-border-repeat
+  - css.properties.mask-border-slice
+  - css.properties.mask-border-source
+  - css.properties.mask-border-width
+  - css.properties.mask-composite.add
+  - css.properties.mask-composite.exclude
+  - css.properties.mask-composite.intersect
+  - css.properties.mask-composite.subtract
+  - css.properties.mask-mode.alpha
+  - css.properties.mask-mode.luminance
+  - css.properties.mask-mode.match-source
+  - css.properties.mask-type
+  - css.properties.mask-type.alpha
+  - css.properties.mask-type.luminance
+  - css.types.basic-shape.path.clip-path
+  - svg.elements.clipPath
+  - svg.elements.mask
+  - svg.elements.mask.maskContentUnits
+  - svg.elements.mask.maskUnits
+  - svg.global_attributes.clip-path
+  - svg.global_attributes.clip-rule
+  - svg.global_attributes.mask
+
+# The following features in the spec are already part of web-features:
+# - Masks:
+#   - css.properties.mask
+#   - css.properties.mask-clip
+#   - css.properties.mask-composite
+#   - css.properties.mask-image
+#   - css.properties.mask-mode
+#   - css.properties.mask-origin
+#   - css.properties.mask-position
+#   - css.properties.mask-repeat
+#   - css.properties.mask-size

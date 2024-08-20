@@ -1,0 +1,34 @@
+draft_date: 2024-08-19
+name: "WebVTT: The Web Video Text Tracks Format"
+description: TODO
+spec: https://w3c.github.io/webvtt/
+compat_features:
+  - api.VTTCue.VTTCue
+  - api.VTTCue.align
+  - api.VTTCue.line
+  - api.VTTCue.position
+  - api.VTTCue.region
+  - api.VTTCue.size
+  - api.VTTCue.snapToLines
+  - api.VTTCue.vertical
+  - api.VTTRegion.lines
+  - css.selectors.cue
+
+# The following features in the spec are already part of web-features:
+# - WebVTT:
+#   - api.VTTCue
+#   - api.VTTCue.getCueAsHTML
+#   - api.VTTCue.text
+# - WebVTT cue alignment:
+#   - api.VTTCue.lineAlign
+#   - api.VTTCue.positionAlign
+# - WebVTT regions:
+#   - api.VTTRegion
+#   - api.VTTRegion.VTTRegion
+#   - api.VTTRegion.id
+#   - api.VTTRegion.regionAnchorX
+#   - api.VTTRegion.regionAnchorY
+#   - api.VTTRegion.scroll
+#   - api.VTTRegion.viewportAnchorX
+#   - api.VTTRegion.viewportAnchorY
+#   - api.VTTRegion.width

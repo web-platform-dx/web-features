@@ -1,0 +1,94 @@
+draft_date: 2024-08-19
+name: Streams Standard
+description: TODO
+spec: https://streams.spec.whatwg.org/
+compat_features:
+  - api.ReadableByteStreamController
+  - api.ReadableByteStreamController.byobRequest
+  - api.ReadableByteStreamController.close
+  - api.ReadableByteStreamController.desiredSize
+  - api.ReadableByteStreamController.enqueue
+  - api.ReadableByteStreamController.error
+  - api.ReadableStream.from_static
+  - api.ReadableStream.transferable
+  - api.ReadableStream.values
+  - api.ReadableStreamBYOBReader
+  - api.ReadableStreamBYOBReader.ReadableStreamBYOBReader
+  - api.ReadableStreamBYOBReader.cancel
+  - api.ReadableStreamBYOBReader.closed
+  - api.ReadableStreamBYOBReader.read
+  - api.ReadableStreamBYOBReader.releaseLock
+  - api.ReadableStreamBYOBRequest
+  - api.ReadableStreamBYOBRequest.respond
+  - api.ReadableStreamBYOBRequest.respondWithNewView
+  - api.ReadableStreamBYOBRequest.view
+  - api.ReadableStreamDefaultController
+  - api.ReadableStreamDefaultController.close
+  - api.ReadableStreamDefaultController.desiredSize
+  - api.ReadableStreamDefaultController.enqueue
+  - api.ReadableStreamDefaultController.error
+  - api.ReadableStreamDefaultReader
+  - api.ReadableStreamDefaultReader.ReadableStreamDefaultReader
+  - api.ReadableStreamDefaultReader.cancel
+  - api.ReadableStreamDefaultReader.closed
+  - api.ReadableStreamDefaultReader.read
+  - api.ReadableStreamDefaultReader.releaseLock
+  - api.TextDecoderStream.readable
+  - api.TextDecoderStream.writable
+  - api.TextEncoderStream.readable
+  - api.TextEncoderStream.writable
+  - api.TransformStream
+  - api.TransformStream.TransformStream
+  - api.TransformStream.readable
+  - api.TransformStream.transferable
+  - api.TransformStream.writable
+  - api.TransformStreamDefaultController
+  - api.TransformStreamDefaultController.desiredSize
+  - api.TransformStreamDefaultController.enqueue
+  - api.TransformStreamDefaultController.error
+  - api.TransformStreamDefaultController.terminate
+  - api.WritableStream.close
+  - api.WritableStream.transferable
+  - api.WritableStreamDefaultController.signal
+  - api.WritableStreamDefaultWriter.WritableStreamDefaultWriter
+
+# The following features in the spec are already part of web-features:
+# - Streams:
+#   - api.ByteLengthQueuingStrategy
+#   - api.ByteLengthQueuingStrategy.ByteLengthQueuingStrategy
+#   - api.ByteLengthQueuingStrategy.highWaterMark
+#   - api.ByteLengthQueuingStrategy.size
+#   - api.CountQueuingStrategy
+#   - api.CountQueuingStrategy.CountQueuingStrategy
+#   - api.CountQueuingStrategy.highWaterMark
+#   - api.CountQueuingStrategy.size
+#   - api.ReadableStream
+#   - api.ReadableStream.ReadableStream
+#   - api.ReadableStream.cancel
+#   - api.ReadableStream.getReader
+#   - api.ReadableStream.locked
+#   - api.ReadableStream.pipeThrough
+#   - api.ReadableStream.pipeTo
+#   - api.ReadableStream.tee
+#   - api.WritableStream
+#   - api.WritableStream.WritableStream
+#   - api.WritableStream.abort
+#   - api.WritableStream.getWriter
+#   - api.WritableStream.locked
+#   - api.WritableStreamDefaultController
+#   - api.WritableStreamDefaultController.error
+#   - api.WritableStreamDefaultWriter
+#   - api.WritableStreamDefaultWriter.abort
+#   - api.WritableStreamDefaultWriter.close
+#   - api.WritableStreamDefaultWriter.closed
+#   - api.WritableStreamDefaultWriter.desiredSize
+#   - api.WritableStreamDefaultWriter.ready
+#   - api.WritableStreamDefaultWriter.releaseLock
+#   - api.WritableStreamDefaultWriter.write
+# - Compression streams:
+#   - api.CompressionStream.readable
+#   - api.CompressionStream.writable
+#   - api.DecompressionStream.readable
+#   - api.DecompressionStream.writable
+# - Asynchronously iterable streams:
+#   - api.ReadableStream.@@asyncIterator

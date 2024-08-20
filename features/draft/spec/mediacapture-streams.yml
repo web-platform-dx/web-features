@@ -1,0 +1,74 @@
+draft_date: 2024-08-19
+name: Media Capture and Streams
+description: TODO
+spec: https://w3c.github.io/mediacapture-main/
+compat_features:
+  - api.InputDeviceInfo
+  - api.InputDeviceInfo.getCapabilities
+  - api.MediaDeviceInfo.toJSON
+  - api.MediaDevices.devicechange_event
+  - api.MediaDevices.getSupportedConstraints
+  - api.MediaStream
+  - api.MediaStream.MediaStream
+  - api.MediaStream.active
+  - api.MediaStream.addTrack
+  - api.MediaStream.addtrack_event
+  - api.MediaStream.clone
+  - api.MediaStream.getTrackById
+  - api.MediaStream.id
+  - api.MediaStream.removeTrack
+  - api.MediaStream.removetrack_event
+  - api.MediaStreamTrack.applyConstraints
+  - api.MediaStreamTrack.applyConstraints.aspectRatio_constraint
+  - api.MediaStreamTrack.applyConstraints.autoGainControl_constraint
+  - api.MediaStreamTrack.applyConstraints.channelCount_constraint
+  - api.MediaStreamTrack.applyConstraints.deviceId_constraint
+  - api.MediaStreamTrack.applyConstraints.echoCancellation_constraint
+  - api.MediaStreamTrack.applyConstraints.facingMode_constraint
+  - api.MediaStreamTrack.applyConstraints.frameRate_constraint
+  - api.MediaStreamTrack.applyConstraints.groupId_constraint
+  - api.MediaStreamTrack.applyConstraints.height_constraint
+  - api.MediaStreamTrack.applyConstraints.latency_constraint
+  - api.MediaStreamTrack.applyConstraints.noiseSuppression_constraint
+  - api.MediaStreamTrack.applyConstraints.resizeMode_constraint
+  - api.MediaStreamTrack.applyConstraints.sampleRate_constraint
+  - api.MediaStreamTrack.applyConstraints.sampleSize_constraint
+  - api.MediaStreamTrack.applyConstraints.width_constraint
+  - api.MediaStreamTrack.clone
+  - api.MediaStreamTrack.ended_event
+  - api.MediaStreamTrack.getCapabilities
+  - api.MediaStreamTrack.getConstraints
+  - api.MediaStreamTrack.getSettings
+  - api.MediaStreamTrack.mute_event
+  - api.MediaStreamTrack.muted
+  - api.MediaStreamTrack.readyState
+  - api.MediaStreamTrack.unmute_event
+  - api.MediaStreamTrackEvent
+  - api.MediaStreamTrackEvent.MediaStreamTrackEvent
+  - api.MediaStreamTrackEvent.track
+  - api.Navigator.mediaDevices
+  - api.OverconstrainedError
+  - api.OverconstrainedError.OverconstrainedError
+  - api.OverconstrainedError.constraint
+  - http.headers.Permissions-Policy.camera
+  - http.headers.Permissions-Policy.microphone
+
+# The following features in the spec are already part of web-features:
+# - Media capture:
+#   - api.MediaDeviceInfo
+#   - api.MediaDeviceInfo.deviceId
+#   - api.MediaDeviceInfo.groupId
+#   - api.MediaDeviceInfo.kind
+#   - api.MediaDeviceInfo.label
+#   - api.MediaDevices
+#   - api.MediaDevices.enumerateDevices
+#   - api.MediaDevices.getUserMedia
+#   - api.MediaStream.getAudioTracks
+#   - api.MediaStream.getTracks
+#   - api.MediaStream.getVideoTracks
+#   - api.MediaStreamTrack
+#   - api.MediaStreamTrack.enabled
+#   - api.MediaStreamTrack.id
+#   - api.MediaStreamTrack.kind
+#   - api.MediaStreamTrack.label
+#   - api.MediaStreamTrack.stop

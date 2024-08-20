@@ -1,4 +1,6 @@
-import bcd, { CompatData } from "@mdn/browser-compat-data";
+import bcd, {
+  CompatData,
+} from "@mdn/browser-compat-data" with { type: "json" };
 import { Browser, Feature, browser, feature, query, walk } from "./index.js";
 
 export class Compat {

@@ -1,0 +1,17 @@
+draft_date: 2024-08-19
+name: Remote Playback API
+description: TODO
+spec: https://w3c.github.io/remote-playback/
+compat_features:
+  - api.HTMLMediaElement.disableRemotePlayback
+  - api.HTMLMediaElement.remote
+  - api.RemotePlayback
+  - api.RemotePlayback.cancelWatchAvailability
+  - api.RemotePlayback.connect_event
+  - api.RemotePlayback.connecting_event
+  - api.RemotePlayback.disconnect_event
+  - api.RemotePlayback.prompt
+  - api.RemotePlayback.state
+  - api.RemotePlayback.watchAvailability
+  - html.elements.audio.disableremoteplayback
+  - html.elements.video.disableremoteplayback

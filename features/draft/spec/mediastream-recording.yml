@@ -1,0 +1,29 @@
+draft_date: 2024-08-19
+name: MediaStream Recording
+description: TODO
+spec: https://w3c.github.io/mediacapture-record/
+compat_features:
+  - api.BlobEvent
+  - api.BlobEvent.BlobEvent
+  - api.BlobEvent.data
+  - api.BlobEvent.timecode
+  - api.MediaRecorder
+  - api.MediaRecorder.MediaRecorder
+  - api.MediaRecorder.audioBitrateMode
+  - api.MediaRecorder.audioBitsPerSecond
+  - api.MediaRecorder.dataavailable_event
+  - api.MediaRecorder.error_event
+  - api.MediaRecorder.isTypeSupported_static
+  - api.MediaRecorder.mimeType
+  - api.MediaRecorder.pause
+  - api.MediaRecorder.pause_event
+  - api.MediaRecorder.requestData
+  - api.MediaRecorder.resume
+  - api.MediaRecorder.resume_event
+  - api.MediaRecorder.start
+  - api.MediaRecorder.start_event
+  - api.MediaRecorder.state
+  - api.MediaRecorder.stop
+  - api.MediaRecorder.stop_event
+  - api.MediaRecorder.stream
+  - api.MediaRecorder.videoBitsPerSecond

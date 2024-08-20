@@ -1,0 +1,61 @@
+draft_date: 2024-08-19
+name: CSS Box Sizing Module Level 4
+description: TODO
+spec: https://drafts.csswg.org/css-sizing-4/
+compat_features:
+  - css.properties.aspect-ratio.auto
+  - css.properties.block-size
+  - css.properties.box-sizing
+  - css.properties.box-sizing.border-box
+  - css.properties.box-sizing.content-box
+  - css.properties.column-width
+  - css.properties.contain-intrinsic-block-size.none
+  - css.properties.contain-intrinsic-height.none
+  - css.properties.contain-intrinsic-inline-size.none
+  - css.properties.contain-intrinsic-size.none
+  - css.properties.contain-intrinsic-width.none
+  - css.properties.height
+  - css.properties.height.auto
+  - css.properties.height.fit-content
+  - css.properties.height.fit-content_function
+  - css.properties.height.max-content
+  - css.properties.height.min-content
+  - css.properties.height.stretch
+  - css.properties.inline-size
+  - css.properties.max-block-size
+  - css.properties.max-height
+  - css.properties.max-height.fit-content
+  - css.properties.max-height.max-content
+  - css.properties.max-height.min-content
+  - css.properties.max-height.none
+  - css.properties.max-height.stretch
+  - css.properties.max-inline-size
+  - css.properties.max-width
+  - css.properties.max-width.fit-content
+  - css.properties.max-width.max-content
+  - css.properties.max-width.min-content
+  - css.properties.max-width.none
+  - css.properties.max-width.stretch
+  - css.properties.min-block-size
+  - css.properties.min-height
+  - css.properties.min-inline-size
+  - css.properties.min-width
+  - css.properties.width
+  - css.properties.width.auto
+  - css.properties.width.fit-content
+  - css.properties.width.max-content
+  - css.properties.width.min-content
+  - css.properties.width.stretch
+
+# The following features in the spec are already part of web-features:
+# - aspect-ratio:
+#   - css.properties.aspect-ratio
+# - contain-intrinsic-size:
+#   - css.properties.contain-intrinsic-block-size
+#   - css.properties.contain-intrinsic-height
+#   - css.properties.contain-intrinsic-inline-size
+#   - css.properties.contain-intrinsic-size
+#   - css.properties.contain-intrinsic-width
+# - Grid:
+#   - css.properties.grid-template-columns.fit-content
+#   - css.properties.grid-template-rows.fit-content

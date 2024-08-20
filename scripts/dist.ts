@@ -1,14 +1,21 @@
-import { computeBaseline, setLogger } from "compute-baseline";
+import { Temporal } from "@js-temporal/polyfill";
+import {
+  computeBaseline,
+  getStatus,
+  parseRangedDateString,
+  setLogger,
+} from "compute-baseline";
 import { Compat, Feature } from "compute-baseline/browser-compat-data";
-import assert from "node:assert/strict";
+import { fdir } from "fdir";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { isDeepStrictEqual } from "node:util";
 import winston from "winston";
-import YAML, { Document } from "yaml";
+import YAML, { Document, Scalar, YAMLSeq } from "yaml";
 import yargs from "yargs";
-import { fdir } from "fdir";
+
+const compat = new Compat();
 
 const argv = yargs(process.argv.slice(2))
   .scriptName("dist")
@@ -40,6 +47,8 @@ const logger = winston.createLogger({
   transports: new winston.transports.Console(),
 });
 
+let exitStatus = 0;
+
 setLogger(logger);
 
 /**
@@ -62,8 +71,81 @@ function updateDistFile(sourcePath: string, distPath: string): void {
  */
 function checkDistFile(sourcePath: string, distPath: string): boolean {
   const expected = toDist(sourcePath).toString({ lineWidth: 0 });
-  const actual = fs.readFileSync(distPath, { encoding: "utf-8" });
-  return actual === expected;
+  try {
+    const actual = fs.readFileSync(distPath, { encoding: "utf-8" });
+    return actual === expected;
+  } catch {
+    return false;
+  }
+}
+
+type SupportStatus = ReturnType<typeof getStatus>;
+
+/**
+ * Compare two status objects for sorting.
+ *
+ * @returns -1, 0 or 1.
+ */
+function compareStatus(a: SupportStatus, b: SupportStatus) {
+  // First sort by Baseline status/date, oldest Base features first, and
+  // non-Baseline features last.
+
+  if (a.baseline_low_date !== b.baseline_low_date) {
+    if (!a.baseline_low_date) {
+      return 1;
+    }
+    if (!b.baseline_low_date) {
+      return -1;
+    }
+
+    const [aLowDate, aLowRanged] = parseRangedDateString(a.baseline_low_date);
+    const [bLowDate, bLowRanged] = parseRangedDateString(b.baseline_low_date);
+
+    // Older dates first
+    if (Temporal.PlainDate.compare(aLowDate, bLowDate) !== 0) {
+      return Temporal.PlainDate.compare(aLowDate, bLowDate);
+    }
+
+    // If dates are equal, then unranged values go first
+    if (!aLowRanged && bLowRanged) {
+      return -1;
+    }
+    if (!bLowRanged && aLowRanged) {
+      return 1;
+    }
+  }
+
+  // Next sort by number of supporting browsers.
+  const aBrowsers = Object.keys(a.support).length;
+  const bBrowsers = Object.keys(b.support).length;
+  if (aBrowsers !== bBrowsers) {
+    return bBrowsers - aBrowsers;
+  }
+  // Finally sort by the version numbers.
+  const aVersions = Object.values(a.support);
+  const bVersions = Object.values(b.support);
+  for (let i = 0; i < aVersions.length; i++) {
+    if (aVersions[i] !== bVersions[i]) {
+      const [aRanged, aVersion] = aVersions[i].startsWith("≤")
+        ? [true, aVersions[i].slice(1)]
+        : [false, aVersions[i]];
+      const [bRanged, bVersion] = bVersions[i].startsWith("≤")
+        ? [true, bVersions[i].slice(1)]
+        : [false, bVersions[i]];
+
+      if (aVersion !== bVersion) {
+        if (!aRanged && bRanged) {
+          return -1;
+        }
+        if (!bRanged && aRanged) {
+          return 1;
+        }
+      }
+
+      return Number(aVersion) - Number(bVersion);
+    }
+  }
+  return 0;
 }
 
 /**
@@ -74,86 +156,153 @@ function checkDistFile(sourcePath: string, distPath: string): boolean {
  * successful, generates a `status` block.
  */
 function toDist(sourcePath: string): YAML.Document {
-  const yaml = YAML.parseDocument(
-    fs.readFileSync(sourcePath, { encoding: "utf-8" }),
-  );
+  const source = YAML.parse(fs.readFileSync(sourcePath, { encoding: "utf-8" }));
   const { name: id } = path.parse(sourcePath);
 
-  const taggedCompatFeatures = (
-    tagsToFeatures.get(`web-features:${id}`) ?? []
-  ).map((f) => `${f.id}`);
+  // Collect tagged compat features. A `compat_features` list in the source
+  // takes precedence, but can be removed if it matches the tagged features.
+  const taggedCompatFeatures = (tagsToFeatures.get(`web-features:${id}`) ?? [])
+    .map((f) => `${f.id}`)
+    .sort();
 
-  const overridden = {
-    compatFeatures: yaml.toJS().compat_features,
-    status: yaml.toJS().status,
-  };
-
-  const generated = {
-    compatFeatures: taggedCompatFeatures.length
-      ? taggedCompatFeatures
-      : undefined,
-    status: taggedCompatFeatures.length
-      ? computeBaseline({
-          compatKeys: taggedCompatFeatures as [string, ...string[]],
-          checkAncestors: false,
-        })
-      : undefined,
-    statusByCompatFeaturesOverride: Array.isArray(overridden.compatFeatures)
-      ? computeBaseline({
-          compatKeys: overridden.compatFeatures as [string, ...string[]],
-          checkAncestors: false,
-        })
-      : undefined,
-  };
-
-  warnOnNeedlessOverrides(id, overridden, generated);
-
-  const dist = new Document({});
-  insertHeaderComments(dist, id);
-
-  if (!overridden.compatFeatures && generated.compatFeatures) {
-    insertCompatFeatures(dist, generated.compatFeatures);
-  }
-
-  if (!overridden.status) {
-    const status = generated.statusByCompatFeaturesOverride ?? generated.status;
-    if (status) {
-      if (status.discouraged) {
-        logger.warn(
-          `${id}: contains at least one deprecated compat feature and can never be Baseline. Was this intentional?`,
-        );
-      }
-      insertStatus(dist, JSON.parse(status.toJSON()));
+  if (source.compat_features) {
+    source.compat_features.sort();
+    if (isDeepStrictEqual(source.compat_features, taggedCompatFeatures)) {
+      logger.warn(
+        `${id}: compat_features override matches tags in @mdn/browser-compat-data. Consider deleting the compat_features override.`,
+      );
     }
   }
 
-  return dist;
-}
+  const compatFeatures = source.compat_features ?? taggedCompatFeatures;
+  let computeFrom = compatFeatures;
 
-function insertCompatFeatures(yaml: Document, compatFeatures: string[]) {
-  yaml.set("compat_features", compatFeatures);
-}
+  const computeFromWasExplicitlySet = source.status?.compute_from !== undefined;
+  if (computeFromWasExplicitlySet) {
+    const compute_from = source.status.compute_from;
+    const keys = Array.isArray(compute_from) ? compute_from : [compute_from];
+    for (const key of keys) {
+      if (!compatFeatures.includes(key)) {
+        throw new Error(
+          `${id}: compute_from key ${key} is not among the feature's compat keys`,
+        );
+      }
+    }
 
-function insertStatus(yaml: Document, status) {
-  // Create the status node and insert it just before "compat_features"
-  const statusNode = yaml.createPair("status", status);
-  assert(YAML.isMap(yaml.contents));
-  const targetIndex = yaml.contents.items.findIndex(
-    (item) => item.key.toString() === "compat_features",
-  );
-  yaml.contents.items.splice(targetIndex, 0, statusNode as YAML.Pair<any, any>);
-}
+    computeFrom = keys;
+    delete source.status;
+  }
 
-function insertHeaderComments(yaml: Document, id: string) {
-  yaml.commentBefore = [
+  // Compute the status. A `status` block in the source takes precedence, but
+  // can be removed if it matches the computed status.
+  let computedStatus = computeBaseline({
+    compatKeys: computeFrom,
+    checkAncestors: true,
+  });
+
+  if (computedStatus.discouraged) {
+    logger.warn(
+      `${id}: contains at least one deprecated compat feature and can never be Baseline. Was this intentional?`,
+    );
+  }
+
+  computedStatus = JSON.parse(computedStatus.toJSON());
+
+  if (source.status) {
+    if (isDeepStrictEqual(source.status, computedStatus)) {
+      logger.warn(
+        `${id}: status override matches computed status. Consider deleting the status override.`,
+      );
+    }
+  }
+
+  // Map between status object and BCD keys with that computed status.
+  const groups = new Map<SupportStatus, string[]>();
+  for (const key of compatFeatures) {
+    const status = getStatus(id, key);
+    let added = false;
+    for (const [existingKey, list] of groups.entries()) {
+      if (isDeepStrictEqual(status, existingKey)) {
+        list.push(key);
+        added = true;
+        break;
+      }
+    }
+    if (!added) {
+      groups.set(status, [key]);
+    }
+  }
+
+  if (computeFromWasExplicitlySet) {
+    if (groups.size === 1) {
+      logger.error(
+        `${id}: uses compute_from which must not be used when the overall status does not differ from the per-key statuses. Delete the status override.`,
+      );
+      exitStatus = 1;
+    }
+  }
+
+  const sortedStatus = Array.from(groups.keys()).sort(compareStatus);
+
+  const sortedGroups = new Map<string, string[]>();
+  for (const status of sortedStatus) {
+    let comment = YAML.stringify(status);
+    if (isDeepStrictEqual(status, source.status ?? computedStatus)) {
+      comment = `⬇️ Same status as overall feature ⬇️\n${comment}`;
+    }
+    sortedGroups.set(comment, groups.get(status));
+  }
+
+  // Assemble and return the dist YAML.
+  const dist = new Document({});
+
+  dist.commentBefore = [
     `Generated from: ${id}.yml`,
     `Do not edit this file by hand. Edit the source file instead!`,
   ]
     .map((line) => ` ${line}`)
     .join("\n");
+
+  if (!source.status) {
+    dist.set("status", computedStatus);
+  }
+
+  if (groups.size) {
+    insertCompatFeatures(dist, sortedGroups);
+  }
+
+  return dist;
 }
 
-const compat = new Compat();
+function insertCompatFeatures(yaml: Document, groups: Map<string, string[]>) {
+  if (groups.size === 1) {
+    // Add no comments when there's a single group.
+    yaml.set("compat_features", groups.values().next().value);
+    return;
+  }
+
+  const list = new YAMLSeq<Scalar<string>>();
+  for (const [comment, keys] of groups.entries()) {
+    let first = true;
+    for (const key of keys) {
+      const item = new Scalar(key);
+      if (first) {
+        item.commentBefore = comment
+          .trim()
+          .split("\n")
+          .map((line) => ` ${line}`)
+          .join("\n");
+        first = false;
+      }
+      list.add(item);
+    }
+    // Blank line between each group.
+    list.items.at(-1).comment = "\n";
+  }
+  // Avoid trailing blank line.
+  list.items.at(-1).comment = "";
+  yaml.set("compat_features", list);
+}
 
 const tagsToFeatures: Map<string, Feature[]> = (() => {
   // TODO: Use Map.groupBy() instead, when it's available
@@ -171,51 +320,12 @@ const tagsToFeatures: Map<string, Feature[]> = (() => {
   return map;
 })();
 
-function warnOnNeedlessOverrides(id, overridden, generated) {
-  if (overridden.compatFeatures?.length && generated.compatFeatures?.length) {
-    if (
-      isDeepStrictEqual(
-        [...overridden.compatFeatures].sort(),
-        [...generated.compatFeatures].sort(),
-      )
-    ) {
-      logger.warn(
-        `${id}: compat_features override matches tags in @mdn/browser-compat-data. Consider deleting this override.`,
-      );
-    }
-  }
-
-  if (
-    overridden.status &&
-    generated.statusByCompatFeaturesOverride &&
-    isDeepStrictEqual(
-      overridden.status,
-      generated.statusByCompatFeaturesOverride,
-    )
-  ) {
-    logger.warn(
-      `${id}: status override matches generated status from compat_features override. Consider deleting this override.`,
-    );
-  }
-  if (
-    overridden.status &&
-    generated.status &&
-    isDeepStrictEqual(overridden.status, generated.status)
-  ) {
-    logger.warn(
-      `${id}: status override matches generated status from tags. Consider deleting this override.`,
-    );
-  }
-}
-
 function main() {
   const filePaths = argv.paths.flatMap((fileOrDirectory) => {
     if (fs.statSync(fileOrDirectory).isDirectory()) {
-      // Expand directory to any existing .dist file within.
-      // TODO: Change this to .yml when all features have dist files.
       return new fdir()
         .withBasePath()
-        .filter((fp) => fp.endsWith(".dist"))
+        .filter((fp) => fp.endsWith(".yml"))
         .crawl(fileOrDirectory)
         .sync();
     }
@@ -258,7 +368,7 @@ function main() {
       }
     }
     if (updateNeeded) {
-      process.exit(1);
+      exitStatus = 1;
     }
   } else {
     // Update dist in place.
@@ -270,4 +380,5 @@ function main() {
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   main();
+  process.exit(exitStatus);
 }

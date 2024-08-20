@@ -12,3 +12,115 @@ status:
     firefox_android: "102"
     safari: "14.1"
     safari_ios: "14.5"
+compat_features:
+  # baseline: high
+  # baseline_low_date: 2019-01-29
+  # baseline_high_date: 2021-07-29
+  # support:
+  #   chrome: "43"
+  #   chrome_android: "43"
+  #   edge: "14"
+  #   firefox: "65"
+  #   firefox_android: "65"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.ReadableStream
+  - api.ReadableStream.cancel
+  - api.ReadableStream.getReader
+
+  # baseline: high
+  # baseline_low_date: 2019-01-29
+  # baseline_high_date: 2021-07-29
+  # support:
+  #   chrome: "52"
+  #   chrome_android: "52"
+  #   edge: "14"
+  #   firefox: "65"
+  #   firefox_android: "65"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.ReadableStream.locked
+
+  # baseline: high
+  # baseline_low_date: 2019-01-29
+  # baseline_high_date: 2021-07-29
+  # support:
+  #   chrome: "52"
+  #   chrome_android: "52"
+  #   edge: "16"
+  #   firefox: "65"
+  #   firefox_android: "65"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.ByteLengthQueuingStrategy
+  - api.ByteLengthQueuingStrategy.ByteLengthQueuingStrategy
+  - api.ByteLengthQueuingStrategy.highWaterMark
+  - api.ByteLengthQueuingStrategy.size
+  - api.CountQueuingStrategy
+  - api.CountQueuingStrategy.CountQueuingStrategy
+  - api.CountQueuingStrategy.highWaterMark
+  - api.CountQueuingStrategy.size
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "52"
+  #   chrome_android: "52"
+  #   edge: "79"
+  #   firefox: "65"
+  #   firefox_android: "65"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.ReadableStream.ReadableStream
+  - api.ReadableStream.tee
+
+  # baseline: low
+  # baseline_low_date: 2022-05-03
+  # support:
+  #   chrome: "59"
+  #   chrome_android: "59"
+  #   edge: "16"
+  #   firefox: "100"
+  #   firefox_android: "100"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.WritableStream
+  - api.WritableStream.WritableStream
+  - api.WritableStream.abort
+  - api.WritableStream.getWriter
+  - api.WritableStream.locked
+  - api.WritableStreamDefaultController
+  - api.WritableStreamDefaultController.error
+  - api.WritableStreamDefaultWriter
+  - api.WritableStreamDefaultWriter.abort
+  - api.WritableStreamDefaultWriter.close
+  - api.WritableStreamDefaultWriter.closed
+  - api.WritableStreamDefaultWriter.desiredSize
+  - api.WritableStreamDefaultWriter.ready
+  - api.WritableStreamDefaultWriter.releaseLock
+  - api.WritableStreamDefaultWriter.write
+
+  # baseline: low
+  # baseline_low_date: 2022-05-03
+  # support:
+  #   chrome: "59"
+  #   chrome_android: "59"
+  #   edge: "79"
+  #   firefox: "100"
+  #   firefox_android: "100"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.ReadableStream.pipeTo
+
+  # baseline: low
+  # baseline_low_date: 2022-06-28
+  # support:
+  #   chrome: "59"
+  #   chrome_android: "59"
+  #   edge: "79"
+  #   firefox: "102"
+  #   firefox_android: "102"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.ReadableStream.pipeThrough

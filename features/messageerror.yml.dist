@@ -12,3 +12,30 @@ status:
     firefox_android: "65"
     safari: "16.4"
     safari_ios: "16.4"
+compat_features:
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "18"
+  #   firefox: "57"
+  #   firefox_android: "57"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.DedicatedWorkerGlobalScope.messageerror_event
+  - api.MessagePort.messageerror_event
+  - api.Window.messageerror_event
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "80"
+  #   chrome_android: "80"
+  #   edge: "80"
+  #   firefox: "65"
+  #   firefox_android: "65"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.ServiceWorkerContainer.messageerror_event

@@ -3,9 +3,14 @@ description: The `font-size-adjust` CSS property preserves apparent text size, r
 spec: https://drafts.csswg.org/css-fonts-5/#font-size-adjust-prop
 group: fonts
 caniuse: font-size-adjust
+status:
+  compute_from:
+    - css.properties.font-size-adjust
+    # Included in order to match https://caniuse.com/font-size-adjust
+    - css.properties.font-size-adjust.from-font
 compat_features:
   - css.properties.font-size-adjust
-  # TODO: include after https://github.com/mdn/browser-compat-data/pull/22936
-  # - css.properties.font-size-adjust.from-font
-  # - css.properties.font-size-adjust.none
-  # - css.properties.font-size-adjust.two-values
+  - css.properties.font-size-adjust.from-font
+  - css.properties.font-size-adjust.none
+  - css.properties.font-size-adjust.two-values
+  - svg.global_attributes.font-size-adjust

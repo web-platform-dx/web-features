@@ -10,3 +10,66 @@ status:
     firefox: "64"
     firefox_android: "64"
     safari: "16.4"
+compat_features:
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "69"
+  #   edge: "79"
+  #   firefox: "47"
+  #   firefox_android: "47"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - css.selectors.backdrop.fullscreen
+
+  # baseline: false
+  # support:
+  #   chrome: "38"
+  #   chrome_android: "38"
+  #   edge: "12"
+  #   firefox: "18"
+  #   firefox_android: "18"
+  #   safari: "10.1"
+  - html.elements.iframe.allowfullscreen
+
+  # baseline: false
+  # support:
+  #   chrome: "38"
+  #   chrome_android: "38"
+  #   edge: "12"
+  #   firefox: "22"
+  #   firefox_android: "22"
+  #   safari: "10.1"
+  - api.HTMLIFrameElement.allowFullscreen
+
+  # baseline: false
+  # support:
+  #   chrome: "71"
+  #   chrome_android: "71"
+  #   edge: "12"
+  #   firefox: "64"
+  #   firefox_android: "64"
+  #   safari: "16.4"
+  - api.Document.fullscreenEnabled
+  - css.selectors.fullscreen
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "71"
+  #   chrome_android: "71"
+  #   edge: "79"
+  #   firefox: "64"
+  #   firefox_android: "64"
+  #   safari: "16.4"
+  - api.Document.exitFullscreen
+  - api.Document.exitFullscreen.returns_promise
+  - api.Document.fullscreenElement
+  - api.Document.fullscreenchange_event
+  - api.Document.fullscreenerror_event
+  - api.Element.fullscreenchange_event
+  - api.Element.fullscreenerror_event
+  - api.Element.requestFullscreen
+  - api.Element.requestFullscreen.returns_promise
+  - api.ShadowRoot.fullscreenElement

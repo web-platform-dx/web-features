@@ -2,24 +2,6 @@ name: Shadow DOM
 description: Shadow DOM allows you to attach encapsulated "shadow" DOM trees to elements. A shadow DOM tree is a separate component, isolated from the scripts and styles in other parts of the document. This is a part of Web Components.
 spec: https://dom.spec.whatwg.org/#shadow-trees
 caniuse: shadowdomv1
+group: web-components
 status:
-  baseline: high
-  baseline_low_date: 2020-01-15
-  support:
-    chrome: "54"
-    chrome_android: "54"
-    edge: "79"
-    firefox: "63"
-    firefox_android: "63"
-    safari: "10.1"
-    safari_ios: "10.3"
-compat_features:
-  - api.Element.attachShadow
-  - api.Element.shadowRoot
-  - api.Event.composed
-  - api.Event.composedPath
-  - api.Node.getRootNode
-  - api.Node.isConnected
-  - api.ShadowRoot
-  - api.ShadowRoot.host
-  - api.ShadowRoot.mode
+  compute_from: api.Element.attachShadow

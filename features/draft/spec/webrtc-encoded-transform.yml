@@ -1,0 +1,30 @@
+draft_date: 2024-08-19
+name: WebRTC Encoded Transform
+description: TODO
+spec: https://w3c.github.io/webrtc-encoded-transform/
+compat_features:
+  - api.RTCEncodedAudioFrame.RTCEncodedAudioFrame
+  - api.RTCEncodedVideoFrame.RTCEncodedVideoFrame
+
+# The following features in the spec are already part of web-features:
+# - WebRTC encoded transform:
+#   - api.DedicatedWorkerGlobalScope.rtctransform_event
+#   - api.RTCEncodedAudioFrame
+#   - api.RTCEncodedAudioFrame.data
+#   - api.RTCEncodedAudioFrame.getMetadata
+#   - api.RTCEncodedVideoFrame
+#   - api.RTCEncodedVideoFrame.data
+#   - api.RTCEncodedVideoFrame.getMetadata
+#   - api.RTCEncodedVideoFrame.type
+#   - api.RTCRtpReceiver.transform
+#   - api.RTCRtpScriptTransform
+#   - api.RTCRtpScriptTransform.RTCRtpScriptTransform
+#   - api.RTCRtpScriptTransformer
+#   - api.RTCRtpScriptTransformer.generateKeyFrame
+#   - api.RTCRtpScriptTransformer.options
+#   - api.RTCRtpScriptTransformer.readable
+#   - api.RTCRtpScriptTransformer.sendKeyFrameRequest
+#   - api.RTCRtpScriptTransformer.writable
+#   - api.RTCRtpSender.transform
+#   - api.RTCTransformEvent
+#   - api.RTCTransformEvent.transformer

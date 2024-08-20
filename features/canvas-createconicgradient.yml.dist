@@ -12,3 +12,27 @@ status:
     firefox_android: "112"
     safari: "16.4"
     safari_ios: "16.4"
+compat_features:
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "105"
+  #   firefox_android: "105"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.OffscreenCanvasRenderingContext2D.createConicGradient
+
+  # baseline: low
+  # baseline_low_date: 2023-04-11
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "112"
+  #   firefox_android: "112"
+  #   safari: "16.1"
+  #   safari_ios: "16.1"
+  - api.CanvasRenderingContext2D.createConicGradient

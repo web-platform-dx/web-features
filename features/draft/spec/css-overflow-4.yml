@@ -1,0 +1,45 @@
+draft_date: 2024-08-19
+name: CSS Overflow Module Level 4
+description: TODO
+spec: https://drafts.csswg.org/css-overflow-4/
+compat_features:
+  - css.properties.overflow-block
+  - css.properties.overflow-clip-margin
+  - css.properties.overflow-clip-margin.border-box
+  - css.properties.overflow-clip-margin.content-box
+  - css.properties.overflow-clip-margin.padding-box
+  - css.properties.overflow-inline
+  - css.properties.overflow-x.auto
+  - css.properties.overflow-x.hidden
+  - css.properties.overflow-x.scroll
+  - css.properties.overflow-x.visible
+  - css.properties.overflow-y.auto
+  - css.properties.overflow-y.hidden
+  - css.properties.overflow-y.scroll
+  - css.properties.overflow-y.visible
+  - css.properties.overflow.auto
+  - css.properties.overflow.hidden
+  - css.properties.overflow.scroll
+  - css.properties.overflow.visible
+  - css.properties.scroll-behavior
+  - css.properties.scroll-behavior.auto
+  - css.properties.scroll-behavior.smooth
+  - css.properties.scrollbar-gutter.auto
+  - css.properties.scrollbar-gutter.stable
+  - css.properties.text-overflow
+  - css.properties.text-overflow.clip
+  - css.properties.text-overflow.ellipsis
+
+# The following features in the spec are already part of web-features:
+# - line-clamp:
+#   - css.properties.line-clamp
+# - overflow:
+#   - css.properties.overflow
+#   - css.properties.overflow.clip
+#   - css.properties.overflow-x
+#   - css.properties.overflow-x.clip
+#   - css.properties.overflow-y
+#   - css.properties.overflow-y.clip
+#   - css.types.overflow
+# - scrollbar-gutter:
+#   - css.properties.scrollbar-gutter

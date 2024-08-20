@@ -1,0 +1,23 @@
+draft_date: 2024-08-19
+name: CSS Fragmentation Module Level 4
+description: TODO
+spec: https://drafts.csswg.org/css-break-4/
+compat_features:
+  - css.properties.box-decoration-break
+  - css.properties.box-decoration-break.clone
+  - css.properties.box-decoration-break.slice
+  - css.properties.orphans
+  - css.properties.widows
+
+# The following features in the spec are already part of web-features:
+# - Page breaks:
+#   - css.properties.break-after
+#   - css.properties.break-after.paged_context
+#   - css.properties.break-before
+#   - css.properties.break-before.paged_context
+#   - css.properties.break-inside
+#   - css.properties.break-inside.paged_context
+# - Column breaks:
+#   - css.properties.break-after.multicol_context
+#   - css.properties.break-before.multicol_context
+#   - css.properties.break-inside.multicol_context

@@ -1,0 +1,26 @@
+draft_date: 2024-08-19
+name: Payment Request API 1.1
+description: TODO
+spec: https://w3c.github.io/payment-request/
+compat_features:
+  - api.PaymentMethodChangeEvent
+  - api.PaymentMethodChangeEvent.PaymentMethodChangeEvent
+  - api.PaymentMethodChangeEvent.methodDetails
+  - api.PaymentMethodChangeEvent.methodName
+  - api.PaymentRequest
+  - api.PaymentRequest.PaymentRequest
+  - api.PaymentRequest.abort
+  - api.PaymentRequest.canMakePayment
+  - api.PaymentRequest.id
+  - api.PaymentRequest.paymentmethodchange_event
+  - api.PaymentRequest.show
+  - api.PaymentRequestUpdateEvent
+  - api.PaymentRequestUpdateEvent.PaymentRequestUpdateEvent
+  - api.PaymentRequestUpdateEvent.updateWith
+  - api.PaymentResponse
+  - api.PaymentResponse.complete
+  - api.PaymentResponse.details
+  - api.PaymentResponse.methodName
+  - api.PaymentResponse.requestId
+  - api.PaymentResponse.retry
+  - http.headers.Permissions-Policy.payment

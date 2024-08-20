@@ -12,3 +12,12 @@ status:
     firefox_android: "96"
     safari: "15.4"
     safari_ios: "15.4"
+compat_features:
+  - api.Lock
+  - api.Lock.mode
+  - api.Lock.name
+  - api.LockManager
+  - api.LockManager.query
+  - api.LockManager.request
+  - api.Navigator.locks
+  - api.WorkerNavigator.locks

@@ -1,0 +1,32 @@
+draft_date: 2024-08-19
+name: CSS Inline Layout Module Level 3
+description: TODO
+spec: https://drafts.csswg.org/css-inline-3/
+compat_features:
+  - css.properties.alignment-baseline
+  - css.properties.baseline-shift
+  - css.properties.baseline-shift.baseline
+  - css.properties.baseline-shift.sub
+  - css.properties.baseline-shift.super
+  - css.properties.dominant-baseline
+  - css.properties.dominant-baseline.alphabetic
+  - css.properties.dominant-baseline.auto
+  - css.properties.dominant-baseline.central
+  - css.properties.dominant-baseline.hanging
+  - css.properties.dominant-baseline.ideographic
+  - css.properties.dominant-baseline.mathematical
+  - css.properties.dominant-baseline.middle
+  - css.properties.initial-letter
+  - css.properties.initial-letter.normal
+  - css.properties.line-height
+  - css.properties.line-height.normal
+  - svg.global_attributes.alignment-baseline
+  - svg.global_attributes.baseline-shift
+  - svg.global_attributes.dominant-baseline
+
+# The following features in the spec are already part of web-features:
+# - baseline-source:
+#   - css.properties.baseline-source
+#   - css.properties.baseline-source.auto
+#   - css.properties.baseline-source.first
+#   - css.properties.baseline-source.last

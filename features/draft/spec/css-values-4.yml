@@ -1,0 +1,63 @@
+draft_date: 2024-08-19
+name: CSS Values and Units Module Level 4
+description: TODO
+spec: https://drafts.csswg.org/css-values-4/
+compat_features:
+  - css.at-rules.media.calc
+  - css.properties.content.url
+  - css.properties.tab-size.length
+  - css.types.angle
+  - css.types.angle-percentage
+  - css.types.attr
+  - css.types.dimension
+  - css.types.frequency
+  - css.types.frequency-percentage
+  - css.types.integer
+  - css.types.length
+  - css.types.length-percentage
+  - css.types.length.rcap
+  - css.types.length.rch
+  - css.types.length.rex
+  - css.types.length.ric
+  - css.types.length.rlh
+  - css.types.number
+  - css.types.percentage
+  - css.types.position
+  - css.types.resolution
+  - css.types.string
+  - css.types.time
+  - css.types.time-percentage
+  - css.types.url
+
+# The following features in the spec are already part of web-features:
+# - abs() and sign():
+#   - css.types.abs
+#   - css.types.sign
+# - sin(), cos(), tan(), asin(), acos(), atan(), and atan2() (CSS):
+#   - css.types.acos
+#   - css.types.asin
+#   - css.types.atan
+#   - css.types.atan2
+#   - css.types.cos
+#   - css.types.sin
+#   - css.types.tan
+# - calc():
+#   - css.types.calc
+# - calc() constants:
+#   - css.types.calc-constant
+# - min(), max(), and clamp():
+#   - css.types.clamp
+#   - css.types.max
+#   - css.types.min
+# - pow(), sqrt(), hypot(), log(), and exp():
+#   - css.types.exp
+#   - css.types.hypot
+#   - css.types.log
+#   - css.types.pow
+#   - css.types.sqrt
+# - lh unit:
+#   - css.types.length.lh
+# - round(), mod(), and rem():
+#   - css.types.mod
+#   - css.types.rem
+#   - css.types.round

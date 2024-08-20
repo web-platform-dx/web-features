@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 
 import webSpecs from 'web-specs' assert { type: 'json' };
 
-import features from '../index.js';
+import { features } from '../index.js';
 
 // Specs needs to be in "good standing". Nightly URLs are used if available,
 // otherwise the snapshot/versioned URL is used. See browser-specs/web-specs
@@ -25,10 +25,6 @@ const defaultAllowlist: allowlistItem[] = [
     //     "https://example.com/spec/",
     //     "Allowed because…. Remove this exception when https://example.com/org/repo/pull/1234 merges."
     // ]
-    [
-        "https://w3c.github.io/IntersectionObserver/v2/",
-        "Allowed because it's shipped in Chrome and tracked on caniuse.com. Remove this exception when https://github.com/w3c/browser-specs/pull/1210 merges."
-    ],
     [
         "https://wicg.github.io/controls-list/",
         "Allowed because it's shipped in Chrome. Remove this exception if https://github.com/whatwg/html/pull/6715 is merged."

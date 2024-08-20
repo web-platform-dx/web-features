@@ -1,0 +1,38 @@
+draft_date: 2024-08-19
+name: Pointer Events
+description: TODO
+spec: https://w3c.github.io/pointerevents/
+compat_features:
+  - api.Element
+  - api.Element.gotpointercapture_event
+  - api.Element.hasPointerCapture
+  - api.Element.lostpointercapture_event
+  - api.Element.pointercancel_event
+  - api.Element.pointerdown_event
+  - api.Element.pointerenter_event
+  - api.Element.pointerleave_event
+  - api.Element.pointermove_event
+  - api.Element.pointerout_event
+  - api.Element.pointerover_event
+  - api.Element.pointerrawupdate_event
+  - api.Element.pointerup_event
+  - api.Element.releasePointerCapture
+  - api.Element.setPointerCapture
+  - api.Navigator.maxTouchPoints
+  - api.PointerEvent
+  - api.PointerEvent.PointerEvent
+  - api.PointerEvent.altitudeAngle
+  - api.PointerEvent.azimuthAngle
+  - api.PointerEvent.getCoalescedEvents
+  - api.PointerEvent.getPredictedEvents
+  - api.PointerEvent.height
+  - api.PointerEvent.isPrimary
+  - api.PointerEvent.pointerId
+  - api.PointerEvent.pointerType
+  - api.PointerEvent.pressure
+  - api.PointerEvent.tangentialPressure
+  - api.PointerEvent.tiltX
+  - api.PointerEvent.tiltY
+  - api.PointerEvent.twist
+  - api.PointerEvent.width
+  - css.properties.touch-action

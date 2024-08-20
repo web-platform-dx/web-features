@@ -2,13 +2,7 @@ name: font-synthesis-weight
 description: The `font-synthesis-weight` CSS property sets whether or not the browser should synthesize bold typefaces when they're missing from the font.
 spec: https://drafts.csswg.org/css-fonts-4/#font-synthesis-weight
 group: font-synthesis
-usage_stats: https://chromestatus.com/metrics/css/timeline/popularity/700
-compat_features:
-  - css.properties.font-synthesis-weight
-  - css.properties.font-synthesis-weight.auto
-  - css.properties.font-synthesis-weight.none
-  # The font-synthesis shorthand also allows disabling all synthesis and opting
-  # in to specific kinds of synthesis. As such, `font-synthesis: weight` affects
-  # everything except weight, and doesn't fit the description of this feature.
-  # See https://github.com/w3c/csswg-drafts/issues/1641.
-  # - css.properties.font-synthesis.weight
+# The font-synthesis shorthand also allows disabling all synthesis and opting
+# in to specific kinds of synthesis. As such, `font-synthesis: weight` affects
+# everything except weight, and doesn't fit the description of this feature.
+# See https://github.com/w3c/csswg-drafts/issues/1641.

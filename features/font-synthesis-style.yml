@@ -2,13 +2,7 @@ name: font-synthesis-style
 description: The `font-synthesis-style` CSS property sets whether or not the browser should synthesize italic and oblique typefaces when they're missing from the font.
 spec: https://drafts.csswg.org/css-fonts-4/#font-synthesis-style
 group: font-synthesis
-usage_stats: https://chromestatus.com/metrics/css/timeline/popularity/701
-compat_features:
-  - css.properties.font-synthesis-style
-  - css.properties.font-synthesis-style.auto
-  - css.properties.font-synthesis-style.none
-  # The font-synthesis shorthand also allows disabling all synthesis and opting
-  # in to specific kinds of synthesis. As such, `font-synthesis: style` affects
-  # everything except style, and doesn't fit the description of this feature.
-  # See https://github.com/w3c/csswg-drafts/issues/1641.
-  # - css.properties.font-synthesis.style
+# The font-synthesis shorthand also allows disabling all synthesis and opting
+# in to specific kinds of synthesis. As such, `font-synthesis: style` affects
+# everything except style, and doesn't fit the description of this feature.
+# See https://github.com/w3c/csswg-drafts/issues/1641.

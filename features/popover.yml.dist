@@ -13,6 +13,32 @@ status:
     safari: "17"
     safari_ios: "17"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2023-11-21
+  # support:
+  #   chrome: "114"
+  #   chrome_android: "114"
+  #   edge: "114"
+  #   firefox: "120"
+  #   firefox_android: "120"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - api.ToggleEvent
+  - api.ToggleEvent.ToggleEvent
+  - api.ToggleEvent.newState
+  - api.ToggleEvent.oldState
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2024-04-16
+  # support:
+  #   chrome: "114"
+  #   chrome_android: "114"
+  #   edge: "114"
+  #   firefox: "125"
+  #   firefox_android: "125"
+  #   safari: "17"
+  #   safari_ios: "17"
   - api.HTMLButtonElement.popoverTargetAction
   - api.HTMLButtonElement.popoverTargetElement
   - api.HTMLElement.beforetoggle_event
@@ -23,10 +49,6 @@ compat_features:
   - api.HTMLElement.toggle_event
   - api.HTMLInputElement.popoverTargetAction
   - api.HTMLInputElement.popoverTargetElement
-  - api.ToggleEvent
-  - api.ToggleEvent.ToggleEvent
-  - api.ToggleEvent.newState
-  - api.ToggleEvent.oldState
   - css.selectors.backdrop.popover
   - css.selectors.popover-open
   - html.elements.button.popovertarget

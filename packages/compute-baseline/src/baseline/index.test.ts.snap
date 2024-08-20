@@ -130,3 +130,20 @@ Object {
 }",
 }
 `;
+
+exports[`getStatus returns a status 1`] = `
+Object {
+  "baseline": "high",
+  "baseline_high_date": "2019-09-27",
+  "baseline_low_date": "2017-03-27",
+  "support": Object {
+    "chrome": "42",
+    "chrome_android": "42",
+    "edge": "14",
+    "firefox": "39",
+    "firefox_android": "39",
+    "safari": "10.1",
+    "safari_ios": "10.3",
+  },
+}
+`;

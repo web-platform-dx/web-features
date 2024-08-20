@@ -1,0 +1,28 @@
+draft_date: 2024-08-19
+name: CSS Cascading and Inheritance Level 6
+description: TODO
+spec: https://drafts.csswg.org/css-cascade-6/
+compat_features:
+  - css.properties.all
+  - css.types.global_keywords.inherit
+  - css.types.global_keywords.initial
+  - css.types.global_keywords.revert
+  - css.types.global_keywords.revert-layer
+  - css.types.global_keywords.unset
+
+# The following features in the spec are already part of web-features:
+# - Cascade layers:
+#   - api.CSSLayerBlockRule
+#   - api.CSSLayerBlockRule.name
+#   - api.CSSLayerStatementRule
+#   - api.CSSLayerStatementRule.nameList
+#   - css.at-rules.layer
+# - @scope:
+#   - api.CSSScopeRule
+#   - api.CSSScopeRule.end
+#   - api.CSSScopeRule.start
+#   - css.at-rules.scope
+# - @import:
+#   - css.at-rules.import
+# - @supports:
+#   - css.at-rules.import.supports

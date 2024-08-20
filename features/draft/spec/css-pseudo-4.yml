@@ -1,0 +1,23 @@
+draft_date: 2024-08-19
+name: CSS Pseudo-Elements Module Level 4
+description: TODO
+spec: https://drafts.csswg.org/css-pseudo-4/
+compat_features:
+  - api.CSSPseudoElement
+  - api.CSSPseudoElement.element
+  - api.CSSPseudoElement.type
+  - css.selectors.after
+  - css.selectors.before
+  - css.selectors.file-selector-button
+  - css.selectors.first-letter
+  - css.selectors.first-line
+  - css.selectors.marker
+  - css.selectors.placeholder
+  - css.selectors.selection
+
+# The following features in the spec are already part of web-features:
+# - ::spelling-error and ::grammar-error:
+#   - css.selectors.grammar-error
+#   - css.selectors.spelling-error
+# - ::target-text:
+#   - css.selectors.target-text

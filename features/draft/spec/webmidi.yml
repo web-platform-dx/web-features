@@ -1,0 +1,40 @@
+draft_date: 2024-08-19
+name: Web MIDI API
+description: TODO
+spec: https://webaudio.github.io/web-midi-api/
+compat_features:
+  - api.MIDIOutput.clear
+  - api.Permissions.permission_midi
+  - http.headers.Permissions-Policy.midi
+
+# The following features in the spec are already part of web-features:
+# - Web MIDI:
+#   - api.MIDIAccess
+#   - api.MIDIAccess.inputs
+#   - api.MIDIAccess.outputs
+#   - api.MIDIAccess.statechange_event
+#   - api.MIDIAccess.sysexEnabled
+#   - api.MIDIConnectionEvent
+#   - api.MIDIConnectionEvent.MIDIConnectionEvent
+#   - api.MIDIConnectionEvent.port
+#   - api.MIDIInput
+#   - api.MIDIInput.midimessage_event
+#   - api.MIDIInputMap
+#   - api.MIDIMessageEvent
+#   - api.MIDIMessageEvent.MIDIMessageEvent
+#   - api.MIDIMessageEvent.data
+#   - api.MIDIOutput
+#   - api.MIDIOutput.send
+#   - api.MIDIOutputMap
+#   - api.MIDIPort
+#   - api.MIDIPort.close
+#   - api.MIDIPort.connection
+#   - api.MIDIPort.id
+#   - api.MIDIPort.manufacturer
+#   - api.MIDIPort.name
+#   - api.MIDIPort.open
+#   - api.MIDIPort.state
+#   - api.MIDIPort.statechange_event
+#   - api.MIDIPort.type
+#   - api.MIDIPort.version
+#   - api.Navigator.requestMIDIAccess

@@ -12,3 +12,40 @@ status:
     firefox_android: "113"
     safari: "16.4"
     safari_ios: "16.4"
+compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2023-05-09
+  # support:
+  #   chrome: "80"
+  #   chrome_android: "80"
+  #   edge: "80"
+  #   firefox: "113"
+  #   firefox_android: "113"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.CompressionStream
+  - api.CompressionStream.CompressionStream
+  - api.CompressionStream.CompressionStream.deflate
+  - api.CompressionStream.CompressionStream.gzip
+  - api.CompressionStream.readable
+  - api.CompressionStream.writable
+  - api.DecompressionStream
+  - api.DecompressionStream.DecompressionStream
+  - api.DecompressionStream.DecompressionStream.deflate
+  - api.DecompressionStream.DecompressionStream.gzip
+  - api.DecompressionStream.readable
+  - api.DecompressionStream.writable
+
+  # baseline: low
+  # baseline_low_date: 2023-05-09
+  # support:
+  #   chrome: "103"
+  #   chrome_android: "103"
+  #   edge: "103"
+  #   firefox: "113"
+  #   firefox_android: "113"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.CompressionStream.CompressionStream.deflate-raw
+  - api.DecompressionStream.DecompressionStream.deflate-raw

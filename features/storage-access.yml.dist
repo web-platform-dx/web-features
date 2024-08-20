@@ -12,3 +12,6 @@ status:
     firefox_android: "65"
     safari: "11.1"
     safari_ios: "11.3"
+compat_features:
+  - api.Document.hasStorageAccess
+  - api.Document.requestStorageAccess

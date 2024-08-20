@@ -1,8 +1,3 @@
 name: HTTP/1.1
 description: HTTP/1.1 is a network protocol used by browsers and servers. It has been superseded by HTTP/2 and HTTP/3.
 spec: https://httpwg.org/specs/rfc9112.html
-# The HTTP data in BCD has a lot of true values which compute-baseline cannot
-# work with, so a single feature with real browser versions is used here.
-# TODO: Update BCD and expand the set of BCD keys included here.
-compat_features:
-  - http.methods.GET
