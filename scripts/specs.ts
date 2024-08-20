@@ -77,7 +77,8 @@ function suggestSpecs(bad: URL): void {
     }
 }
 
-let checked = 0;
+let checkedFeatures = 0;
+let checkedSpecs = 0;
 let errors = 0;
 
 // Ensure every exception in defaultAllowlist is needed
@@ -96,20 +97,21 @@ for (const [id, data] of Object.entries(features)) {
             var url = new URL(spec);
         } catch (error) {
             console.error(`Invalid URL "${spec}" found in spec for "${data.name}"`);
-            errors++
+            errors++;
         }
         if (url && !isOK(url)) {
             console.error(`URL for ${id} not in web-specs: ${url.toString()}`);
             suggestSpecs(url);
             errors++;
         }
-        checked++;
+        checkedSpecs++;
     }
+    checkedFeatures++;
 }
 
 if (errors) {
-    console.log(`\n${checked} features checked, found ${errors} error(s)`);
+    console.log(`\nChecked ${checkedSpecs} specs in ${checkedFeatures} features, found ${errors} error(s)`);
     process.exit(1);
 } else {
-    console.log(`${checked} features checked, no errors`);
+    console.log(`\nChecked ${checkedSpecs} specs in ${checkedFeatures} features, no errors`);
 }
