@@ -1,0 +1,5 @@
+name: WebAssembly SIMD (relaxed width)
+description: The relaxed SIMD (Single Instruction Multiple Data) extension adds instructions that introduce local non-determinism (where the results of the instructions may vary based on hardware support).
+spec: https://webassembly.github.io/spec/core/bikeshed/#vector-instructions
+compat_features:
+  - webassembly.relaxed-SIMD

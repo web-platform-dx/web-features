@@ -1,0 +1,7 @@
+name: WebAssembly threads and atomics
+description: An extension to WebAssembly adding shared memory and atomic memory operations.
+spec: https://webassembly.github.io/threads/js-api/
+caniuse: wasm-threads
+compat_features:
+  - webassembly.api.Memory.Memory.shared
+  - webassembly.threads-and-atomics
