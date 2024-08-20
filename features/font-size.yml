@@ -1,0 +1,11 @@
+name: Font size
+description: The `font-size` CSS property sets the text size.
+spec: https://drafts.csswg.org/css-fonts-4/#font-size-prop
+group: fonts
+status:
+  compute_from: css.properties.font-size
+compat_features:
+  - css.properties.font-size
+  - css.properties.font-size.rem_values
+  - css.properties.font-size.xxx-large
+  - svg.global_attributes.font-size
