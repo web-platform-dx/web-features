@@ -2,3 +2,9 @@ name: font-optical-sizing
 description: The `font-optical-sizing` CSS property sets whether text rendering is optimized for viewing at different sizes.
 spec: https://drafts.csswg.org/css-fonts-4/#font-optical-sizing-def
 group: fonts
+status:
+  compute_from: css.properties.font-optical-sizing
+compat_features:
+  - css.properties.font-optical-sizing
+  - css.properties.font-optical-sizing.auto
+  - css.properties.font-optical-sizing.none
