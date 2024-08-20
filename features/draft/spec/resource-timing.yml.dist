@@ -112,17 +112,19 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  #   firefox: "129"
+  #   firefox_android: "129"
+  - api.PerformanceResourceTiming.responseStatus
+
+  # baseline: false
+  # support:
   #   chrome: "107"
   #   chrome_android: "107"
   #   edge: "107"
   - api.PerformanceResourceTiming.renderBlockingStatus
-
-  # baseline: false
-  # support:
-  #   chrome: "109"
-  #   chrome_android: "109"
-  #   edge: "109"
-  - api.PerformanceResourceTiming.responseStatus
 
   # baseline: false
   # support:
@@ -138,7 +140,8 @@ compat_features:
   #   edge: "117"
   - api.PerformanceResourceTiming.deliveryType
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "129"
+  #   firefox_android: "129"
   - api.PerformanceResourceTiming.contentType
