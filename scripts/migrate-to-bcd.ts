@@ -65,6 +65,13 @@ for (const fp of bcdJsons) {
         if (compat.tags?.includes(tag)) {
             continue;
         }
+
+        const index = compat.tags?.findIndex(t => t.startsWith("web-features:") && !(t.startsWith("web-features:snapshot:")));
+        if (index > -1) {
+            // Remove any other web-features tags -- features can't be a part of multiple groups, right?
+            compat.tags.pop(index);
+        }
+
         if (compat.tags) {
             compat.tags.push(tag);
         } else {
