@@ -1,0 +1,9 @@
+name: Font variation settings
+description: 'The `font-variation-settings` CSS property sets an "axis of variability" on a variable font, such as weight, optical size, or a custom axis defined by the typeface designer. When possible, use other CSS font properties, such as `font-weight: bold`.'
+spec: https://drafts.csswg.org/css-fonts-4/#font-variation-settings-def
+group: fonts
+caniuse: variable-fonts
+compat_features:
+  - css.properties.font-variation-settings
+  # Not supported in Chrome (https://crbug.com/40398871) or Safari
+  # - css.at-rules.font-face.font-variation-settings
