@@ -1,10 +1,10 @@
-name: font-weight
+name: Font weight
 description: The `font-weight` CSS property controls the thickness of a font. It is set explicitly with the keyword `bold` or a number, or relative to the inherited thickness with the keywords `bolder` or `lighter`.
 spec: https://drafts.csswg.org/css-fonts-4/#font-weight-prop
 group: fonts
 status:
   compute_from: css.properties.font-weight
-compat_features: 
+compat_features:
   - css.at-rules.font-face.font-weight
   - css.properties.font-weight
   - css.properties.font-weight.bold
@@ -13,4 +13,3 @@ compat_features:
   - css.properties.font-weight.normal
   - css.properties.font-weight.number
   - svg.global_attributes.font-weight
- 
