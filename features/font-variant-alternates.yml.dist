@@ -65,3 +65,15 @@ compat_features:
   #   safari_ios: ≤13.4
   - css.properties.font-variant-alternates.historical-forms
   - css.properties.font-variant-alternates.normal
+
+  # baseline: false
+  # support:
+  #   chrome: "111"
+  #   chrome_android: "111"
+  #   edge: "111"
+  - api.CSSFontFeatureValuesRule.annotation
+  - api.CSSFontFeatureValuesRule.characterVariant
+  - api.CSSFontFeatureValuesRule.ornaments
+  - api.CSSFontFeatureValuesRule.styleset
+  - api.CSSFontFeatureValuesRule.stylistic
+  - api.CSSFontFeatureValuesRule.swash
