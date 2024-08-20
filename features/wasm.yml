@@ -1,39 +1,40 @@
-draft_date: 2024-08-19
-name: WebAssembly JavaScript Interface
-description: TODO
-spec: https://webassembly.github.io/spec/js-api/
+name: WebAssembly
+description: WebAssembly or "wasm" is a new portable, size- and load-time-efficient format suitable for compilation to the web.
+spec: https://webassembly.github.io/gc/core/bikeshed/
+caniuse: wasm
 compat_features:
-  - webassembly.BigInt-to-i64-integration
   - webassembly.api
+  - webassembly.api.compile_static
   - webassembly.api.CompileError
   - webassembly.api.CompileError.CompileError
+  - webassembly.api.compileStreaming_static
   - webassembly.api.Global
   - webassembly.api.Global.Global
   - webassembly.api.Global.value
   - webassembly.api.Global.valueOf
   - webassembly.api.Instance
-  - webassembly.api.Instance.Instance
   - webassembly.api.Instance.exports
+  - webassembly.api.Instance.Instance
+  - webassembly.api.instantiate_static
+  - webassembly.api.instantiateStreaming_static
   - webassembly.api.LinkError
   - webassembly.api.LinkError.LinkError
   - webassembly.api.Memory
-  - webassembly.api.Memory.Memory
   - webassembly.api.Memory.buffer
   - webassembly.api.Memory.grow
+  - webassembly.api.Memory.Memory
   - webassembly.api.Module
-  - webassembly.api.Module.Module
   - webassembly.api.Module.customSections_static
   - webassembly.api.Module.exports_static
   - webassembly.api.Module.imports_static
+  - webassembly.api.Module.Module
   - webassembly.api.RuntimeError
   - webassembly.api.RuntimeError.RuntimeError
   - webassembly.api.Table
-  - webassembly.api.Table.Table
   - webassembly.api.Table.get
   - webassembly.api.Table.grow
   - webassembly.api.Table.length
   - webassembly.api.Table.set
-  - webassembly.api.compile_static
-  - webassembly.api.instantiate_static
+  - webassembly.api.Table.Table
   - webassembly.api.validate_static
-  - webassembly.mutable-globals
+  - webassembly.extended-constant-expressions

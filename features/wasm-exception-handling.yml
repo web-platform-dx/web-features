@@ -1,0 +1,16 @@
+name: WebAssembly exception handling
+description: Exception handling allows code to break control flow when an exception is thrown.
+spec: https://webassembly.github.io/exception-handling/js-api/
+status:
+  compute_from: webassembly.api.Exception
+compat_features:
+  - webassembly.exception-handling
+  - webassembly.api.Exception
+  - webassembly.api.Exception.Exception
+  - webassembly.api.Exception.getArg
+  - webassembly.api.Exception.is
+  - webassembly.api.Tag
+  - webassembly.api.Tag.Tag
+  - webassembly.api.Tag.type
+  - webassembly.api.Exception.Exception.options_parameter_traceStack
+  - webassembly.api.Exception.stack

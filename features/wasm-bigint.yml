@@ -1,0 +1,6 @@
+name: WebAssembly BigInt to i64 conversion in JS
+description: An extension to the WebAssembly JS API for bidrectionally converting BigInts and 64-bit WebAssembly integer values.
+spec: https://webassembly.github.io/spec/js-api/
+caniuse: wasm-bigint
+compat_features:
+  - webassembly.BigInt-to-i64-integration

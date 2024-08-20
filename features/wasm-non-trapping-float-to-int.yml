@@ -1,0 +1,6 @@
+name: WebAssembly non-trapping float-to-int conversion
+description: An extension to WebAssembly adding floating-point to integer conversion operators which saturate instead of trapping.
+spec: https://webassembly.github.io/gc/core/bikeshed/
+caniuse: wasm-nontrapping-fptoint
+compat_features:
+  - webassembly.non-trapping-float-to-int-conversions

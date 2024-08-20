@@ -1,0 +1,6 @@
+name: WebAssembly bulk memory operations
+description: An extension to WebAssembly adding bulk memory operations and conditional segment initialization.
+spec: https://webassembly.github.io/gc/core/bikeshed/
+caniuse: wasm-bulk-memory
+compat_features:
+  - webassembly.bulk-memory-operations
