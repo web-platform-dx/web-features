@@ -32,7 +32,8 @@
     "test:specs": "tsx scripts/specs.ts",
     "test:types": "npm run --workspaces test:types && tsc",
     "test": "npm run test:caniuse -- --quiet && npm run test:schema && npm run test:specs && npm run test:format && npm run test:dist && npm run test --workspaces && npm run test:lint",
-    "update-drafts": "tsx scripts/update-drafts.ts"
+    "update-drafts": "tsx scripts/update-drafts.ts",
+    "migrate-to-bcd": "tsx scripts/migrate-to-bcd.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
