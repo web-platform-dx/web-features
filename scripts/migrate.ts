@@ -1,10 +1,13 @@
 import assert from 'node:assert';
 import fs from 'node:fs';
 import path from 'node:path';
+import {fileURLToPath} from "node:url";
 import { fdir } from 'fdir';
 import { features } from '../index.js';
 
-const BCD_PATH = '/Users/foolip/mdn/browser-compat-data';
+export const BCD_PATH = process.env.BCD_PATH
+  ? path.resolve(process.env.BCD_PATH)
+  : fileURLToPath(new URL("../../browser-compat-data", import.meta.url));
 
 // Map from api.CoolThing.something to cool-thing
 const bcdToFeature = new Map();
