@@ -1,16 +1,9 @@
-name: Web Speech API
-description: TODO
-spec: https://wicg.github.io/speech-api/
+name: Speech Recognition
+description: The SpeechRecognition API provides the ability to recognize voice context from an audio input (typically via the device's default speech recognition service) and respond appropriately.
+spec: https://wicg.github.io/speech-api/#speechreco-section
+group: speech
+caniuse: speech-recognition
 compat_features:
-  - api.SpeechGrammar
-  - api.SpeechGrammar.src
-  - api.SpeechGrammar.weight
-  - api.SpeechGrammarList
-  - api.SpeechGrammarList.SpeechGrammarList
-  - api.SpeechGrammarList.addFromString
-  - api.SpeechGrammarList.addFromURI
-  - api.SpeechGrammarList.item
-  - api.SpeechGrammarList.length
   - api.SpeechRecognition
   - api.SpeechRecognition.SpeechRecognition
   - api.SpeechRecognition.abort
@@ -57,41 +50,3 @@ compat_features:
   - api.SpeechSynthesisEvent.SpeechSynthesisEvent
   - api.SpeechSynthesisEvent.charLength
   - api.SpeechSynthesisUtterance.boundary_event
-
-# The following features in the spec are already part of web-features:
-# - Speech synthesis:
-#   - api.SpeechSynthesis
-#   - api.SpeechSynthesis.cancel
-#   - api.SpeechSynthesis.getVoices
-#   - api.SpeechSynthesis.pause
-#   - api.SpeechSynthesis.paused
-#   - api.SpeechSynthesis.pending
-#   - api.SpeechSynthesis.resume
-#   - api.SpeechSynthesis.speak
-#   - api.SpeechSynthesis.speaking
-#   - api.SpeechSynthesisEvent
-#   - api.SpeechSynthesisEvent.charIndex
-#   - api.SpeechSynthesisEvent.elapsedTime
-#   - api.SpeechSynthesisEvent.name
-#   - api.SpeechSynthesisEvent.utterance
-#   - api.SpeechSynthesisUtterance
-#   - api.SpeechSynthesisUtterance.SpeechSynthesisUtterance
-#   - api.SpeechSynthesisUtterance.end_event
-#   - api.SpeechSynthesisUtterance.error_event
-#   - api.SpeechSynthesisUtterance.lang
-#   - api.SpeechSynthesisUtterance.mark_event
-#   - api.SpeechSynthesisUtterance.pause_event
-#   - api.SpeechSynthesisUtterance.pitch
-#   - api.SpeechSynthesisUtterance.rate
-#   - api.SpeechSynthesisUtterance.resume_event
-#   - api.SpeechSynthesisUtterance.start_event
-#   - api.SpeechSynthesisUtterance.text
-#   - api.SpeechSynthesisUtterance.voice
-#   - api.SpeechSynthesisUtterance.volume
-#   - api.SpeechSynthesisVoice
-#   - api.SpeechSynthesisVoice.default
-#   - api.SpeechSynthesisVoice.lang
-#   - api.SpeechSynthesisVoice.localService
-#   - api.SpeechSynthesisVoice.name
-#   - api.SpeechSynthesisVoice.voiceURI
-#   - api.Window.speechSynthesis

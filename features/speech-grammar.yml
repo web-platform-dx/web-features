@@ -1,0 +1,15 @@
+name: Speech Grammar
+description: The SpeechGrammar interface of the Web Speech API represents a set of words or patterns of words that we want the recognition service to recognize.
+spec: https://wicg.github.io/speech-api/#speechreco-speechgrammar
+group: speech
+caniuse: mdn-api_speechgrammar
+compat_features:
+  - api.SpeechGrammar
+  - api.SpeechGrammar.src
+  - api.SpeechGrammar.weight
+  - api.SpeechGrammarList
+  - api.SpeechGrammarList.SpeechGrammarList
+  - api.SpeechGrammarList.addFromString
+  - api.SpeechGrammarList.addFromURI
+  - api.SpeechGrammarList.item
+  - api.SpeechGrammarList.length
