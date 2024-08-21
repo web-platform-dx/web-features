@@ -1,8 +1,11 @@
-draft_date: 2024-06-05
 name: <label>
-description: The `<label>` element TODO.
+description: The `<label>` HTML element represents a caption for a form element.
 spec: https://html.spec.whatwg.org/multipage/forms.html#the-label-element
-group: forms
+group:
+  - forms
+  - html-elements
+status:
+  compute_from: html.elements.label
 compat_features:
   - api.HTMLLabelElement
   - api.HTMLLabelElement.control

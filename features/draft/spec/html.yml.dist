@@ -3992,9 +3992,14 @@ compat_features:
   #   firefox_android: "50"
   - javascript.builtins.Promise.incumbent_settings_object_tracking
 
+  # baseline: false
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  - api.PageRevealEvent.PageRevealEvent
+  - api.PageSwapEvent.PageSwapEvent
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - api.PageRevealEvent.PageRevealEvent
-  - api.PageSwapEvent.PageSwapEvent
   - http.headers.Permissions-Policy.document-domain

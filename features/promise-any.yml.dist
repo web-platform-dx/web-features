@@ -14,4 +14,7 @@ status:
     safari: "14"
     safari_ios: "14"
 compat_features:
+  - javascript.builtins.AggregateError
+  - javascript.builtins.AggregateError.AggregateError
+  - javascript.builtins.AggregateError.errors
   - javascript.builtins.Promise.any
