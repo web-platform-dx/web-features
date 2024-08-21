@@ -82,7 +82,9 @@ for (const fp of bcdJsons) {
         !t.startsWith("web-features:snapshot:"),
     );
     if (index > -1) {
-      // Remove any other web-features tags -- features can't be a part of multiple groups, right?
+      // Remove any other feature tags (besides snapshots)
+      // Compat keys in multiple web-features features creates ambiguity for some consumers, see https://github.com/web-platform-dx/web-features/issues/1173
+      logger.info(`Removing tag ${compat.tags[index]} from ${key}`);
       compat.tags.pop(index);
     }
 
