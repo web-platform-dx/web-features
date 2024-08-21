@@ -46,7 +46,7 @@ const bcdJsons = new fdir()
   .crawl(BCD_PATH)
   .sync();
 
-const lookup = (root, key) => {
+function lookup(root, key) {
   const parts = key.split(".");
   let node = root;
   for (const part of parts) {
@@ -57,7 +57,7 @@ const lookup = (root, key) => {
     }
   }
   return node;
-};
+}
 
 for (const fp of bcdJsons) {
   const src = fs.readFileSync(fp, { encoding: "utf-8" });
