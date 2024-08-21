@@ -1,6 +1,7 @@
-name: 'writingsuggestions'
-description: 'The `writingsuggestions` HTML attribute allows you to turn browser-provided writing suggestions on or off for editable regions of a web page.'
+name: writingsuggestions
+description: The `writingsuggestions` HTML attribute turns on or off a browser's writing suggestions, such as text completions or incremental autocompletions.
 spec: https://html.spec.whatwg.org/multipage/interaction.html#writing-suggestions
 group: forms
 compat_features:
   - html.global_attributes.writingsuggestions
+  - api.HTMLElement.writingSuggestions
