@@ -8,8 +8,8 @@ import winston from "winston";
 
 import { features } from "../index.js";
 
-const BCD_PATH = process.env.BCD_PATH
-  ? path.resolve(process.env.BCD_PATH)
+const BCD_DIR = process.env.BCD_DIR
+  ? path.resolve(process.env.BCD_DIR)
   : fileURLToPath(new URL("../../browser-compat-data", import.meta.url));
 
 const logger = winston.createLogger({
@@ -39,11 +39,11 @@ for (const [feature, { compat_features }] of Object.entries(features)) {
 const bcdJsons = new fdir()
   .withBasePath()
   .filter((fp) => {
-    const dir = path.relative(BCD_PATH, fp).split(path.sep)[0];
+    const dir = path.relative(BCD_DIR, fp).split(path.sep)[0];
     return bcdDirs.has(dir);
   })
   .filter((fp) => fp.endsWith(".json"))
-  .crawl(BCD_PATH)
+  .crawl(BCD_DIR)
   .sync();
 
 function lookup(root, key) {
