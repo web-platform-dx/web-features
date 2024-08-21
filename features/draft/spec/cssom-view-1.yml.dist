@@ -339,13 +339,8 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "126"
-  #   chrome_android: "126"
-  #   edge: "126"
-  - api.VisualViewport.scrollend_event
-
-  # baseline: false
-  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
   #   firefox: "20"
   #   firefox_android: "20"
   - api.CaretPosition
@@ -354,15 +349,26 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
   #   firefox: "23"
   #   firefox_android: "23"
   - api.CaretPosition.getClientRect
 
   # baseline: false
   # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
   #   firefox: "126"
   #   firefox_android: "126"
   - api.Element.currentCSSZoom
+
+  # baseline: false
+  # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  - api.VisualViewport.scrollend_event
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
