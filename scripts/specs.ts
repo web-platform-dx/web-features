@@ -93,8 +93,9 @@ for (const [allowedUrl, message] of defaultAllowlist) {
 for (const [id, data] of Object.entries(features)) {
     const specs = Array.isArray(data.spec) ? data.spec : [data.spec];
     for (const spec of specs) {
+        let url: URL;
         try {
-            var url = new URL(spec);
+            url = new URL(spec);
         } catch (error) {
             console.error(`Invalid URL "${spec}" found in spec for "${data.name}"`);
             errors++;
