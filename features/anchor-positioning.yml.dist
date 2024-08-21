@@ -95,42 +95,6 @@ compat_features:
   - css.properties.bottom.anchor
   - css.properties.height.anchor-size
   - css.properties.inline-size.anchor-size
-  - css.properties.inset-area
-  - css.properties.inset-area.block-end
-  - css.properties.inset-area.block-start
-  - css.properties.inset-area.bottom
-  - css.properties.inset-area.center
-  - css.properties.inset-area.end
-  - css.properties.inset-area.inline-end
-  - css.properties.inset-area.inline-start
-  - css.properties.inset-area.left
-  - css.properties.inset-area.none
-  - css.properties.inset-area.right
-  - css.properties.inset-area.self-end
-  - css.properties.inset-area.self-start
-  - css.properties.inset-area.span-all
-  - css.properties.inset-area.span-block-end
-  - css.properties.inset-area.span-block-start
-  - css.properties.inset-area.span-bottom
-  - css.properties.inset-area.span-end
-  - css.properties.inset-area.span-inline-end
-  - css.properties.inset-area.span-inline-start
-  - css.properties.inset-area.span-start
-  - css.properties.inset-area.span-top
-  - css.properties.inset-area.span-x-end
-  - css.properties.inset-area.span-x-start
-  - css.properties.inset-area.span-y-end
-  - css.properties.inset-area.span-y-start
-  - css.properties.inset-area.start
-  - css.properties.inset-area.top
-  - css.properties.inset-area.x-end
-  - css.properties.inset-area.x-self-end
-  - css.properties.inset-area.x-self-start
-  - css.properties.inset-area.x-start
-  - css.properties.inset-area.y-end
-  - css.properties.inset-area.y-self-end
-  - css.properties.inset-area.y-self-start
-  - css.properties.inset-area.y-start
   - css.properties.inset-block-end.anchor
   - css.properties.inset-block-start.anchor
   - css.properties.inset-block.anchor
@@ -170,13 +134,54 @@ compat_features:
   - css.types.anchor-size
 
   # baseline: false
-  # support: {}
-  - api.CSSPositionTryDescriptors.position-area
-  - api.CSSPositionTryDescriptors.positionArea
-  - css.properties.position-anchor.auto
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
   - css.properties.position-try-fallbacks
   - css.properties.position-try-fallbacks.flip-block
   - css.properties.position-try-fallbacks.flip-inline
   - css.properties.position-try-fallbacks.flip-start
-  - css.properties.position-try-fallbacks.inset-area
   - css.properties.position-try-fallbacks.none
+  - css.properties.position-try-fallbacks.position-area
+
+  # baseline: false
+  # support: {}
+  - api.CSSPositionTryDescriptors.position-area
+  - api.CSSPositionTryDescriptors.positionArea
+  - css.properties.position-anchor.auto
+  - css.properties.position-area
+  - css.properties.position-area.block-end
+  - css.properties.position-area.block-start
+  - css.properties.position-area.bottom
+  - css.properties.position-area.center
+  - css.properties.position-area.end
+  - css.properties.position-area.inline-end
+  - css.properties.position-area.inline-start
+  - css.properties.position-area.left
+  - css.properties.position-area.none
+  - css.properties.position-area.right
+  - css.properties.position-area.self-end
+  - css.properties.position-area.self-start
+  - css.properties.position-area.span-all
+  - css.properties.position-area.span-block-end
+  - css.properties.position-area.span-block-start
+  - css.properties.position-area.span-bottom
+  - css.properties.position-area.span-end
+  - css.properties.position-area.span-inline-end
+  - css.properties.position-area.span-inline-start
+  - css.properties.position-area.span-start
+  - css.properties.position-area.span-top
+  - css.properties.position-area.span-x-end
+  - css.properties.position-area.span-x-start
+  - css.properties.position-area.span-y-end
+  - css.properties.position-area.span-y-start
+  - css.properties.position-area.start
+  - css.properties.position-area.top
+  - css.properties.position-area.x-end
+  - css.properties.position-area.x-self-end
+  - css.properties.position-area.x-self-start
+  - css.properties.position-area.x-start
+  - css.properties.position-area.y-end
+  - css.properties.position-area.y-self-end
+  - css.properties.position-area.y-self-start
+  - css.properties.position-area.y-start

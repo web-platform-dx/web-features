@@ -32,6 +32,31 @@ For example, the `fetch()` API is a feature, the `:has()` CSS pseudo-class funct
 
 For the time being, this repository focuses only on features that are implemented in some browser and that are already documented on MDN.
 
+### Hints for distinguishing features
+
+Sometimes it can be hard to tell whether something (like an HTML attribute or JavaScript method) is a distinct feature or part of another feature.
+Here are some questions to ask yourself when deciding whether something is a distinct feature of the web platform:
+
+- Is there evidence that developers recognize it as a feature?
+  Blog posts, Stack Overflow questions, and social media posts by developers about the feature are good places to learn whether developers see something as part of a category or as standing alone
+  (they're also a good source of other information, such as a name for the feature).
+
+- Do existing publications already describe this as a distinct feature?
+  For example, an original Can I Use entry (or request for one on [Fyrd/caniuse](https://github.com/Fyrd/caniuse/issues)) is a good sign that developers will recognize this as a feature.
+  Articles in developer-audience publications (such as CSS-Tricks, DEV.to, and sometimes MDN) are also helpful indicators.
+
+- Do you _expect_ developers to recognize it as a feature?
+  Very new features are harder to sort out because developers don't know about them already.
+  In such cases, you have to make educated guesses.
+  Sometimes you can use prior features' development and specification process to make good guesses.
+  For example, TC39 proposals often emerge as distinct features, while CSS specifications often contain several distinct but related features or incremental additions to existing features.
+  Sometimes you may need to talk to developers or subject matter experts before making a decision.
+
+Creating features is more art than science.
+You won't always get it right.
+That's OK!
+Features can be renamed, split, or merged later.
+
 ### Feature file name and format
 
 Features in this repository are authored as **YAML files** that are stored in the [`features`](../features) directory. Each file corresponds to a single feature, and contains metadata about the feature, such as its name, description, specification, or support data.
@@ -100,6 +125,7 @@ To learn more about the fork and pull request process, see [Fork a repository](h
 When you have the repository cloned locally, set up your local environment:
 
 1. [Install Node.js](https://nodejs.org).
+   See [`.nvmrc`](../.nvmrc) for the minimum required version.
 
 1. At a command line prompt, navigate to the root of the repository:
 
@@ -112,6 +138,10 @@ When you have the repository cloned locally, set up your local environment:
 1. Create a new Git branch to track your work:
 
    `git checkout -b <your branch name>`
+
+> [!TIP]
+> If you editor supports it, turn on automatic code formatting with Prettier.
+> Read Prettier's [Editor Integration](https://prettier.io/docs/en/editors) documentation for more information.
 
 ### Create a new feature from scratch
 
@@ -237,6 +267,7 @@ To set the status of your new feature, you must associate your feature with one 
 To generate your feature's dist file, once your feature is associated with one or more BCD keys:
 
 1. Run the command `npm run dist`.
+   Optionally, run `npm run dist -- features/<feature-id>.yml` to regenerate only your feature's dist file.
 
 1. Check that a new file, named after your feature ID, and with the `.yml.dist` file extension exists, and open the file.
 
