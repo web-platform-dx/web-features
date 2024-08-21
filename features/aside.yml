@@ -1,6 +1,8 @@
 name: <aside>
 description: The `<aside>` element represents a portion of a document whose content is only indirectly related to the document's main content.
 spec: https://html.spec.whatwg.org/multipage/sections.html#the-aside-element
-group: html
+group: html-elements
+# Note: <aside> is part of https://caniuse.com/html5semantic but that feature
+# covers many unrelated elements and is therefore not linked here.
 compat_features:
   - html.elements.aside

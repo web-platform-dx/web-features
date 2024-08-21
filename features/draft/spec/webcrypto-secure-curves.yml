@@ -1,10 +1,15 @@
-draft_date: 2024-07-11
+draft_date: 2024-08-19
 name: Secure Curves in the Web Cryptography API
 description: TODO
 spec: https://wicg.github.io/webcrypto-secure-curves/
 compat_features:
+  - api.SubtleCrypto.deriveBits.x25519
+  - api.SubtleCrypto.deriveKey.x25519
   - api.SubtleCrypto.exportKey.ed25519
+  - api.SubtleCrypto.exportKey.x25519
   - api.SubtleCrypto.generateKey.ed25519
+  - api.SubtleCrypto.generateKey.x25519
   - api.SubtleCrypto.importKey.ed25519
+  - api.SubtleCrypto.importKey.x25519
   - api.SubtleCrypto.sign.ed25519
   - api.SubtleCrypto.verify.ed25519

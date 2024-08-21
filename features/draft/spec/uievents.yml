@@ -1,4 +1,4 @@
-draft_date: 2024-07-11
+draft_date: 2024-08-19
 name: UI Events
 description: TODO
 spec: https://w3c.github.io/uievents/
@@ -35,9 +35,6 @@ compat_features:
   - api.KeyboardEvent.metaKey
   - api.KeyboardEvent.repeat
   - api.KeyboardEvent.shiftKey
-  - api.TextEvent
-  - api.TextEvent.data
-  - api.TextEvent.initTextEvent
   - api.UIEvent
   - api.UIEvent.UIEvent
   - api.UIEvent.detail
@@ -77,7 +74,7 @@ compat_features:
 #   - api.MouseEvent.screenX
 #   - api.MouseEvent.screenY
 #   - api.MouseEvent.shiftKey
-# - input event:
+# - input (event):
 #   - api.Element.input_event
 #   - api.InputEvent
 #   - api.InputEvent.InputEvent

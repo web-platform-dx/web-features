@@ -1,0 +1,50 @@
+name: <textarea>
+description: The `<textarea>` element represents an editing control that allows users to enter multi-line, free-form, plain text.
+spec: https://html.spec.whatwg.org/multipage/form-elements.html#the-textarea-element
+group:
+  - forms
+  - html-elements
+status:
+  compute_from: html.elements.textarea
+compat_features:
+  - api.HTMLTextAreaElement
+  - api.HTMLTextAreaElement.autocomplete
+  - api.HTMLTextAreaElement.cols
+  - api.HTMLTextAreaElement.defaultValue
+  - api.HTMLTextAreaElement.disabled
+  - api.HTMLTextAreaElement.form
+  - api.HTMLTextAreaElement.labels
+  - api.HTMLTextAreaElement.maxLength
+  - api.HTMLTextAreaElement.minLength
+  - api.HTMLTextAreaElement.name
+  - api.HTMLTextAreaElement.placeholder
+  - api.HTMLTextAreaElement.readOnly
+  - api.HTMLTextAreaElement.required
+  - api.HTMLTextAreaElement.rows
+  - api.HTMLTextAreaElement.select
+  - api.HTMLTextAreaElement.select_event
+  - api.HTMLTextAreaElement.selectionDirection
+  - api.HTMLTextAreaElement.selectionEnd
+  - api.HTMLTextAreaElement.selectionStart
+  - api.HTMLTextAreaElement.setRangeText
+  - api.HTMLTextAreaElement.setSelectionRange
+  - api.HTMLTextAreaElement.textLength
+  - api.HTMLTextAreaElement.type
+  - api.HTMLTextAreaElement.value
+  - api.HTMLTextAreaElement.wrap
+  - html.elements.textarea
+  - html.elements.textarea.autocomplete
+  - html.elements.textarea.cols
+  - html.elements.textarea.disabled
+  - html.elements.textarea.form
+  - html.elements.textarea.maxlength
+  - html.elements.textarea.minlength
+  - html.elements.textarea.name
+  - html.elements.textarea.placeholder
+  - html.elements.textarea.placeholder.line_breaks
+  - html.elements.textarea.readonly
+  - html.elements.textarea.required
+  - html.elements.textarea.rows
+  - html.elements.textarea.spellcheck
+  - html.elements.textarea.wrap
+  - html.elements.textarea.wrap.hard

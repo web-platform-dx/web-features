@@ -1,10 +1,11 @@
-draft_date: 2024-07-11
+draft_date: 2024-08-19
 name: Media Capabilities
 description: TODO
 spec: https://w3c.github.io/media-capabilities/
 compat_features:
   - api.MediaCapabilities
   - api.MediaCapabilities.decodingInfo
+  - api.MediaCapabilities.decodingInfo.configuration_keySystemConfiguration_parameter
   - api.MediaCapabilities.encodingInfo
   - api.Navigator.mediaCapabilities
   - api.WorkerNavigator.mediaCapabilities

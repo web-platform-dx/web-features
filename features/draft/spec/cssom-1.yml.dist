@@ -16,10 +16,6 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "1"
   #   safari_ios: "1"
-  - api.CSSImportRule
-  - api.CSSImportRule.href
-  - api.CSSImportRule.media
-  - api.CSSImportRule.styleSheet
   - api.CSSRule
   - api.CSSRule.cssText
   - api.CSSRule.parentRule
@@ -87,7 +83,6 @@ compat_features:
   #   safari: "4"
   #   safari_ios: "3.2"
   - api.Document.styleSheets
-  - api.MediaList.toString
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -103,6 +98,19 @@ compat_features:
   - api.CSSStyleDeclaration.item
   - api.CSSStyleDeclaration.length
   - api.CSSStyleDeclaration.setProperty
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: ≤4
+  #   safari_ios: ≤3.2
+  - api.MediaList.toString
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -285,14 +293,22 @@ compat_features:
 
   # baseline: false
   # support:
-  #   firefox: "101"
-  #   firefox_android: "101"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - api.CSSStyleSheet.CSSStyleSheet.options_baseURL_parameter
-
-  # baseline: false
-  # support:
   #   firefox: "3"
   #   firefox_android: "4"
   - html.elements.link.rel.alternate_stylesheet
+
+  # baseline: false
+  # support:
+  #   firefox: "129"
+  #   firefox_android: "129"
+  - api.CSSPageDescriptors
+  - api.CSSPageDescriptors.margin
+  - api.CSSPageDescriptors.margin-bottom
+  - api.CSSPageDescriptors.margin-left
+  - api.CSSPageDescriptors.margin-right
+  - api.CSSPageDescriptors.margin-top
+  - api.CSSPageDescriptors.marginBottom
+  - api.CSSPageDescriptors.marginLeft
+  - api.CSSPageDescriptors.marginRight
+  - api.CSSPageDescriptors.marginTop
+  - api.CSSPageDescriptors.size
