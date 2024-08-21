@@ -4,12 +4,17 @@
 status:
   baseline: false
   support:
-    chrome: "69"
-    chrome_android: "69"
-    edge: "79"
-    safari: "16.4"
-    safari_ios: "16.4"
+    chrome: "96"
+    chrome_android: "96"
+    edge: "96"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "69"
+  #   edge: "79"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
   - api.Report
   - api.Report.body
   - api.Report.toJSON
@@ -22,3 +27,11 @@ compat_features:
   - api.ReportingObserver.disconnect
   - api.ReportingObserver.observe
   - api.ReportingObserver.takeRecords
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "96"
+  #   chrome_android: "96"
+  #   edge: "96"
+  - http.headers.Reporting-Endpoints
