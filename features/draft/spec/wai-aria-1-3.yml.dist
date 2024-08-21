@@ -122,6 +122,17 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   firefox: "119"
+  #   firefox_android: "119"
+  - api.Element.ariaColIndexText
+  - api.Element.ariaRowIndexText
+  - api.ElementInternals.ariaColIndexText
+  - api.ElementInternals.ariaRowIndexText
+
+  # baseline: false
+  # support:
   #   safari: "16.4"
   #   safari_ios: "16.4"
   - api.Element.ariaActiveDescendantElement
@@ -140,12 +151,3 @@ compat_features:
   - api.ElementInternals.ariaFlowToElements
   - api.ElementInternals.ariaLabelledByElements
   - api.ElementInternals.ariaOwnsElements
-
-  # baseline: false
-  # support:
-  #   firefox: "119"
-  #   firefox_android: "119"
-  - api.Element.ariaColIndexText
-  - api.Element.ariaRowIndexText
-  - api.ElementInternals.ariaColIndexText
-  - api.ElementInternals.ariaRowIndexText
