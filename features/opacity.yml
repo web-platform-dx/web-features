@@ -1,12 +1,9 @@
-name: Opacity
-description: The `opacity` CSS property and function, and the `transparent` CSS color value control the transparency of an element.
-spec:
-  - https://drafts.csswg.org/css-color-3/#transparency
-  - https://drafts.csswg.org/css-color-3/#transparent
-caniuse: css-opacity
+name: opacity
+description: The `opacity` CSS property sets the transparency of an element.
+spec: https://drafts.csswg.org/css-color-3/#transparency
 group: css
+status:
+  compute_from: css.properties.opacity
 compat_features:
   - css.properties.opacity
   - css.properties.opacity.percentages
-  - css.types.filter-function.opacity
-  - css.types.color.transparent
