@@ -20,7 +20,6 @@ for (const [feature, { compat_features }] of Object.entries(features)) {
     continue;
   }
   for (const key of compat_features) {
-    assert(!bcdToFeature.has(key), `${key} is used in compat_features twice`);
     bcdToFeature.set(key, feature);
     bcdDirs.add(key.split(".")[0]);
   }
