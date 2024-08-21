@@ -1,0 +1,15 @@
+name: <label>
+description: The `<label>` HTML element represents a caption for a form element.
+spec: https://html.spec.whatwg.org/multipage/forms.html#the-label-element
+group:
+  - forms
+  - html-elements
+status:
+  compute_from: html.elements.label
+compat_features:
+  - api.HTMLLabelElement
+  - api.HTMLLabelElement.control
+  - api.HTMLLabelElement.form
+  - api.HTMLLabelElement.htmlFor
+  - html.elements.label
+  - html.elements.label.for
