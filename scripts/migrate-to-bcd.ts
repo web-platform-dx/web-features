@@ -2,12 +2,23 @@ import assert from "node:assert";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+
 import { fdir } from "fdir";
+import winston from "winston";
+
 import { features } from "../index.js";
 
 const BCD_PATH = process.env.BCD_PATH
   ? path.resolve(process.env.BCD_PATH)
   : fileURLToPath(new URL("../../browser-compat-data", import.meta.url));
+
+const logger = winston.createLogger({
+  format: winston.format.combine(
+    winston.format.colorize(),
+    winston.format.simple(),
+  ),
+  transports: new winston.transports.Console(),
+});
 
 // Map from api.CoolThing.something to cool-thing
 const bcdToFeature = new Map();
@@ -89,5 +100,5 @@ for (const fp of bcdJsons) {
 }
 
 for (const [key, feature] of bcdToFeature) {
-  console.warn("Not migrated:", feature, key);
+  logger.warn("Not migrated:", feature, key);
 }
