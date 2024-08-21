@@ -1,4 +1,4 @@
-draft_date: 2024-08-12
+draft_date: 2024-08-19
 name: Cascading Style Sheets Level 2 Revision 2 (CSS 2.2) Specification
 description: TODO
 spec: https://drafts.csswg.org/css2/
@@ -35,11 +35,12 @@ compat_features:
   - css.properties.vertical-align.text-bottom
   - css.properties.vertical-align.text-top
   - css.properties.vertical-align.top
-  - css.properties.z-index
-  - css.properties.z-index.auto
 
 # The following features in the spec are already part of web-features:
 # - Page breaks:
 #   - css.properties.page-break-after.avoid
 #   - css.properties.page-break-before.avoid
 #   - css.properties.page-break-inside.avoid
+# - z-index:
+#   - css.properties.z-index
+#   - css.properties.z-index.auto
