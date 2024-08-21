@@ -76,12 +76,16 @@ for (const fp of bcdJsons) {
       continue;
     }
 
-    const index = compat.tags?.findIndex(
-      (t) =>
-        t.startsWith("web-features:") &&
-        !t.startsWith("web-features:snapshot:"),
-    );
-    if (index > -1) {
+    while (true) {
+      const index = compat.tags?.findIndex(
+        (t) =>
+          t.startsWith("web-features:") &&
+          !t.startsWith("web-features:snapshot:"),
+      );
+      if (index > -1) {
+        break;
+      }
+
       // Remove any other feature tags (besides snapshots)
       // Compat keys in multiple web-features features creates ambiguity for some consumers, see https://github.com/web-platform-dx/web-features/issues/1173
       logger.info(`Removing tag ${compat.tags[index]} from ${key}`);
