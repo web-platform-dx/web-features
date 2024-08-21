@@ -4,7 +4,9 @@ spec: https://drafts.csswg.org/css-fonts-4/#font-variant-alternates-prop
 group: fonts
 caniuse: font-variant-alternates
 status:
-  compute_from: css.at-rules.font-feature-values
+  compute_from:
+    - css.properties.font-variant-alternates
+    - css.at-rules.font-feature-values
 compat_features:
   - css.at-rules.font-feature-values
   - css.at-rules.font-feature-values.annotation
@@ -27,8 +29,6 @@ compat_features:
   - api.CSSFontFeatureValuesRule.annotation
   - api.CSSFontFeatureValuesRule.characterVariant
   - api.CSSFontFeatureValuesRule.fontFamily
-  # historicalForms is not present in BCD data
-  # - api.CSSFontFeatureValuesRule.historicalForms
   - api.CSSFontFeatureValuesRule.ornaments
   - api.CSSFontFeatureValuesRule.styleset
   - api.CSSFontFeatureValuesRule.stylistic

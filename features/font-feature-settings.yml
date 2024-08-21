@@ -1,10 +1,11 @@
-name: Font feature settings
-description: The `font-feature-settings` CSS property sets the OpenType feature tags on a font for advanced use cases. When possible, use available `font-variant` options instead.
+name: font-feature-settings
+description: The `font-feature-settings` CSS property sets low-level OpenType feature tags for a font. When possible, use `font-variant` instead.
 spec: https://drafts.csswg.org/css-fonts-4/#font-feature-settings-prop
 group: font-features
 caniuse: font-feature
+status:
+  compute_from: css.properties.font-feature-settings
 compat_features:
   - css.properties.font-feature-settings
   - css.properties.font-feature-settings.normal
-  # Not supported in Chrome: https://crbug.com/40398871
-  # - css.at-rules.font-face.font-feature-settings
+  - css.at-rules.font-face.font-feature-settings
