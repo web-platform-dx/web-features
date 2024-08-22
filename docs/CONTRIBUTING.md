@@ -140,7 +140,7 @@ When you have the repository cloned locally, set up your local environment:
    `git checkout -b <your branch name>`
 
 > [!TIP]
-> If you editor supports it, turn on automatic code formatting with Prettier.
+> If your editor supports it, turn on automatic code formatting with Prettier.
 > Read Prettier's [Editor Integration](https://prettier.io/docs/en/editors) documentation for more information.
 
 ### Create a new feature from scratch
