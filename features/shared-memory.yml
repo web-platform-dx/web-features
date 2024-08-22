@@ -1,5 +1,5 @@
 name: SharedArrayBuffer and Atomics
-description: "`SharedArrayBuffer` objects share bytes between multiple worker and the main thread. The `Atomics` object safely accesses shared data to make sure predictable values are read and written and that operations are not interrupted."
+description: The `SharedArrayBuffer` object represents bytes shared between multiple workers and the main thread. The `Atomics` object safely accesses `SharedArrayBuffer` data to make sure predictable values are read and written and that operations are not interrupted."
 caniuse: sharedarraybuffer
 spec:
   - https://tc39.es/ecma262/multipage/structured-data.html#sec-sharedarraybuffer-objects
