@@ -1,9 +1,8 @@
-draft_date: 2024-08-12
+draft_date: 2024-08-19
 name: CSS Basic User Interface Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-ui-4/
 compat_features:
-  - css.properties.caret-color
   - css.properties.cursor
   - css.properties.cursor.alias
   - css.properties.cursor.all-scroll
@@ -18,7 +17,6 @@ compat_features:
   - css.properties.cursor.ew-resize
   - css.properties.cursor.grabbing
   - css.properties.cursor.help
-  - css.properties.cursor.inherit
   - css.properties.cursor.move
   - css.properties.cursor.n-resize
   - css.properties.cursor.ne-resize
@@ -48,7 +46,6 @@ compat_features:
   - css.properties.outline-style.auto
   - css.properties.outline-width
   - css.properties.pointer-events
-  - css.properties.resize
   - css.properties.user-select
   - svg.global_attributes.cursor
 
@@ -70,7 +67,11 @@ compat_features:
 #   - css.properties.appearance.searchfield
 #   - css.properties.appearance.textarea
 #   - css.properties.appearance.textfield
+# - caret-color:
+#   - css.properties.caret-color
 # - field-sizing:
 #   - css.properties.field-sizing
 #   - css.properties.field-sizing.content
 #   - css.properties.field-sizing.fixed
+# - resize (CSS property):
+#   - css.properties.resize
