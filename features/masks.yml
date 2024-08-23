@@ -3,3 +3,20 @@ description: The `mask` CSS property (and several longhand properties) partially
 spec: https://drafts.fxtf.org/css-masking-1/#positioned-masks
 group: clipping-shapes-masking
 caniuse: css-masks
+compat_features:
+  - css.properties.mask
+  - css.properties.mask-clip
+  - css.properties.mask-composite
+  - css.properties.mask-composite.add
+  - css.properties.mask-composite.exclude
+  - css.properties.mask-composite.intersect
+  - css.properties.mask-composite.subtract
+  - css.properties.mask-image
+  - css.properties.mask-mode
+  - css.properties.mask-mode.alpha
+  - css.properties.mask-mode.luminance
+  - css.properties.mask-mode.match-source
+  - css.properties.mask-origin
+  - css.properties.mask-position
+  - css.properties.mask-repeat
+  - css.properties.mask-size
