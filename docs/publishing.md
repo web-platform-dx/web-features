@@ -7,16 +7,16 @@
 
 These are the steps to publish a regular release on NPM and as a GitHub release:
 
-- Determine if it should be a major, minor, or patch release. The "[major version required](https://github.com/web-platform-dx/web-features/pulls?q=is%3Apr+is%3Amerged+label%3A%22major+version+required%22+sort%3Aupdated-desc)" and "[minor version required](https://github.com/web-platform-dx/web-features/pulls?q=is%3Apr+is%3Amerged+label%3A%22minor+version+required%22+sort%3Aupdated-desc)" labels should be used to support this decision.
-- Update `packages/web-features/package.json` and `packages/web-features/package-lock.json` in a PR and get review.
-- Merge the PR and draft a new release at https://github.com/web-platform-dx/web-features/releases/new
-- Fill in the tag name `vX.Y.Z` manually as both the tag and release title
-- For major releases, add a "Breaking Changes" section up top.
-- For minor releases, add a "What's New" section up top.
-- Click "Generate release notes"
-- Search for "<" and make sure all element names are quoted with backquotes
-- Remove all lines from Dependabot
-- Publish the GitHub release
+1. Determine if it should be a major, minor, or patch release. The "[major version required](https://github.com/web-platform-dx/web-features/pulls?q=is%3Apr+is%3Amerged+label%3A%22major+version+required%22+sort%3Aupdated-desc)" and "[minor version required](https://github.com/web-platform-dx/web-features/pulls?q=is%3Apr+is%3Amerged+label%3A%22minor+version+required%22+sort%3Aupdated-desc)" labels should be used to support this decision.
+1. Update `packages/web-features/package.json` and `packages/web-features/package-lock.json` in a PR and get review.
+1. Merge the PR and draft a new release at https://github.com/web-platform-dx/web-features/releases/new
+1. Fill in the tag name `vX.Y.Z` manually as both the tag and release title
+1. For major releases, add a "Breaking Changes" section up top.
+1. For minor releases, add a "What's New" section up top.
+1. Click "Generate release notes"
+1. Search for "<" and make sure all element names are quoted with backquotes
+1. Remove all lines from Dependabot
+1. Publish the GitHub release
 
 Publishing the GitHub release creates the tag. This triggers the [Publish web-features GitHub Actions workflows](https://github.com/web-platform-dx/web-features/blob/main/.github/workflows/publish_web-features.yml), uploads GitHub release artifacts and publishes the package to NPM.
 
