@@ -10,9 +10,10 @@ status:
     edge: "111"
     firefox: "34"
     firefox_android: "34"
-    safari: "16.2"
-    safari_ios: "16.2"
+    safari: "9.1"
+    safari_ios: "9.3"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2023-03-13
   # support:
@@ -33,7 +34,6 @@ compat_features:
   - css.at-rules.font-feature-values.swash
   - css.properties.font-variant-alternates
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2023-03-13
   # support:
@@ -52,3 +52,28 @@ compat_features:
   - css.properties.font-variant-alternates.styleset
   - css.properties.font-variant-alternates.stylistic
   - css.properties.font-variant-alternates.swash
+
+  # baseline: low
+  # baseline_low_date: 2023-03-13
+  # support:
+  #   chrome: "111"
+  #   chrome_android: "111"
+  #   edge: "111"
+  #   firefox: ≤72
+  #   firefox_android: "79"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
+  - css.properties.font-variant-alternates.historical-forms
+  - css.properties.font-variant-alternates.normal
+
+  # baseline: false
+  # support:
+  #   chrome: "111"
+  #   chrome_android: "111"
+  #   edge: "111"
+  - api.CSSFontFeatureValuesRule.annotation
+  - api.CSSFontFeatureValuesRule.characterVariant
+  - api.CSSFontFeatureValuesRule.ornaments
+  - api.CSSFontFeatureValuesRule.styleset
+  - api.CSSFontFeatureValuesRule.stylistic
+  - api.CSSFontFeatureValuesRule.swash
