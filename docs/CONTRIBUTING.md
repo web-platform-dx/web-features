@@ -74,7 +74,7 @@ This table lists the fields that can be found in a feature file, and provides a 
 | Field | Description | Type | Mandatory |
 |---|---|---|---|
 | `name` | The name of the feature. | String | Yes |
-| `description` | A short description of the feature. | String | Yes |
+| `description` | A short description of the feature. | Markdown-formatted string | Yes |
 | `spec` | One or more specification URLs for this feature. | String, or array of strings | Yes |
 | `group` | An optional group, or list of groups that this feature belongs to. See the definition of groups under [Create a new feature from scratch](#create-a-new-feature-from-scratch). | String, or array of strings | No |
 | `caniuse` | The feature's ID on the [Can I Use](https://caniuse.com/) website. | String | No |
@@ -140,7 +140,7 @@ When you have the repository cloned locally, set up your local environment:
    `git checkout -b <your branch name>`
 
 > [!TIP]
-> If you editor supports it, turn on automatic code formatting with Prettier.
+> If your editor supports it, turn on automatic code formatting with Prettier.
 > Read Prettier's [Editor Integration](https://prettier.io/docs/en/editors) documentation for more information.
 
 ### Create a new feature from scratch
