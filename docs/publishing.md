@@ -14,7 +14,14 @@ These are the steps to publish a regular release on NPM and as a GitHub release:
 1. For major releases, add a "Breaking Changes" section up top.
 1. For minor releases, add a "What's New" section up top.
 1. Click "Generate release notes".
-1. Search for "<" and make sure all element names are quoted with backquotes.
+1. Find unescaped `<` characters and make sure that HTML elements are enclosed with backticks.
+
+   This regular expression can help:
+
+   ```regex
+   / (?<!`)<(.*?)> /
+   ```
+
 1. Remove all lines from Dependabot.
 1. Publish the GitHub release.
 
