@@ -11,9 +11,9 @@ These are the steps to publish a regular release on NPM and as a GitHub release:
 1. Update `packages/web-features/package.json` and `packages/web-features/package-lock.json` in a PR and get review.
 1. Merge the PR and draft a new release at https://github.com/web-platform-dx/web-features/releases/new.
 1. Fill in the tag name `vX.Y.Z` manually as both the tag and release title.
-1. For major releases, add a "Breaking Changes" section up top.
-1. For minor releases, add a "What's New" section up top.
-1. Click "Generate release notes".
+1. For major releases, add a `## Breaking Changes` section up top.
+1. For minor releases, add a `## What's New` section up top.
+1. Click **Generate release notes**.
 1. Find unescaped `<` characters and make sure that HTML elements are enclosed with backticks.
 
    This regular expression can help:
