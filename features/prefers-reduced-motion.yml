@@ -1,0 +1,9 @@
+name: prefers-reduced-motion
+description: The `prefers-reduced-motion` CSS media query detects whether the user requested less non-essential animation.
+spec: https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion
+caniuse: prefers-reduced-motion
+status:
+  compute_from: css.at-rules.media.prefers-reduced-motion
+compat_features:
+  - css.at-rules.media.prefers-reduced-motion
+  - http.headers.Sec-CH-Prefers-Reduced-Motion
