@@ -7,7 +7,7 @@
 
 These are the steps to publish a regular release on NPM and as a GitHub release:
 
-1. Determine if it should be a major, minor, or patch release. The "[major version required](https://github.com/web-platform-dx/web-features/pulls?q=is%3Apr+is%3Amerged+label%3A%22major+version+required%22+sort%3Aupdated-desc)" and "[minor version required](https://github.com/web-platform-dx/web-features/pulls?q=is%3Apr+is%3Amerged+label%3A%22minor+version+required%22+sort%3Aupdated-desc)" labels should be used to support this decision.
+1. Determine if it should be a major, minor, or patch release. The "[major version required][major-version]" and "[minor version required][minor-version]" labels should be used to support this decision.
 1. Update `packages/web-features/package.json` and `packages/web-features/package-lock.json` in a PR and get review.
 1. Merge the PR and draft a new release at https://github.com/web-platform-dx/web-features/releases/new.
 1. Fill in the tag name `vX.Y.Z` manually as both the tag and release title.
@@ -24,6 +24,10 @@ These are the steps to publish a regular release on NPM and as a GitHub release:
 
 1. Remove all lines from Dependabot.
 1. Publish the GitHub release.
+1. Remove the "[major version required][major-version]" and "[minor version required][minor-version]" labels from any pull requests that were included in the release.
+
+[major-version]: https://github.com/web-platform-dx/web-features/pulls?q=is%3Apr+is%3Amerged+label%3A%22major+version+required%22+sort%3Aupdated-desc
+[minor-version]: https://github.com/web-platform-dx/web-features/pulls?q=is%3Apr+is%3Amerged+label%3A%22minor+version+required%22+sort%3Aupdated-desc
 
 Publishing the GitHub release creates the tag. This triggers the [Publish web-features GitHub Actions workflows](https://github.com/web-platform-dx/web-features/blob/main/.github/workflows/publish_web-features.yml), uploads GitHub release artifacts and publishes the package to NPM.
 
