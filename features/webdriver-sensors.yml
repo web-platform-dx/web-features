@@ -1,0 +1,9 @@
+name: WebDriver Sensors
+description: WebDriver Sensors is a WebDriver extension defined in the Generic Sensors API for defining and controlling virtual sensors that behave like device sensors.
+spec: https://w3c.github.io/sensors/#automation
+group: sensors
+compat_features:
+  - webdriver.commands.CreateVirtualSensor
+  - webdriver.commands.DeleteVirtualSensor
+  - webdriver.commands.GetVirtualSensorInformation
+  - webdriver.commands.UpdateVirtualSensorReading
