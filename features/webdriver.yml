@@ -7,11 +7,9 @@ compat_features:
   - webdriver.commands.AddCookie
   - webdriver.commands.Back
   - webdriver.commands.CloseWindow
-  - webdriver.commands.CreateVirtualSensor
   - webdriver.commands.DeleteAllCookies
   - webdriver.commands.DeleteCookie
   - webdriver.commands.DeleteSession
-  - webdriver.commands.DeleteVirtualSensor
   - webdriver.commands.DismissAlert
   - webdriver.commands.ElementClear
   - webdriver.commands.ElementClick
@@ -38,7 +36,6 @@ compat_features:
   - webdriver.commands.GetPageSource
   - webdriver.commands.GetTimeouts
   - webdriver.commands.GetTitle
-  - webdriver.commands.GetVirtualSensorInformation
   - webdriver.commands.GetWindowHandle
   - webdriver.commands.GetWindowHandles
   - webdriver.commands.GetWindowRect
@@ -61,4 +58,3 @@ compat_features:
   - webdriver.commands.SwitchToWindow
   - webdriver.commands.TakeElementScreenshot
   - webdriver.commands.TakeScreenshot
-  - webdriver.commands.UpdateVirtualSensorReading

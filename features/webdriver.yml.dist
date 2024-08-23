@@ -3,7 +3,8 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "66"
 compat_features:
   # baseline: high
   # baseline_low_date: 2018-05-09
@@ -75,16 +76,6 @@ compat_features:
   - webdriver.commands.SwitchToWindow
   - webdriver.commands.TakeElementScreenshot
   - webdriver.commands.TakeScreenshot
-
-  # baseline: false
-  # support:
-  #   chrome: "120"
-  #   chrome_android: "120"
-  #   edge: "120"
-  - webdriver.commands.CreateVirtualSensor
-  - webdriver.commands.DeleteVirtualSensor
-  - webdriver.commands.GetVirtualSensorInformation
-  - webdriver.commands.UpdateVirtualSensorReading
 
   # baseline: false
   # support:
