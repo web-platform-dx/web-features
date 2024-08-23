@@ -2,6 +2,8 @@
 
 ## Names
 
+The `name` field contains the feature's human-readable plain-text name.
+
 Feature authors should (in descending order of priority):
 
 - Prefer names known to be in widespread use by web developers.
@@ -48,6 +50,8 @@ Feature authors should (in descending order of priority):
 
 ## Identifiers
 
+A feature's identifier is the feature's filename before the `.yml` extension.
+
 Feature identifiers must contain only lowercase alphanumeric characters (a-z and 0-9) plus the `-` character (hyphen or minus sign) as a word separator.
 
 The identifier should match the name, with these additional guidelines:
@@ -65,6 +69,9 @@ The identifier should match the name, with these additional guidelines:
 
 ## Descriptions
 
+The `description` field contains a short description of the feature in Markdown-formatted text, which is converted to HTML in the published package.
+Follow the general writing guidelines in this section, but see the [word and phrase list](#word-and-phrase-list) for specific usage instructions.
+
 * Describe, in the active voice, what a feature does or is.
   Think about how developers will use it, not abstract technology relationships.
   Start with a template like this:
@@ -78,6 +85,9 @@ The identifier should match the name, with these additional guidelines:
   It should not refer to text, images, or other content outside the short description.
   Try reading the sentence aloud.
   Does it still make sense without mentioning the name or ID?
+
+* Enclose literal code, such as CSS property names, interface and method names, or other syntax, in backticks.
+  For example, prefer ```The `addEventListener()` method…``` and avoid ```The addEventListener() method…```.
 
 * Start descriptions with words that are distinct to the feature.
   For example, prefer "The `some-prop` CSS property…" and avoid "The CSS property `some-prop`…."
@@ -94,8 +104,6 @@ The identifier should match the name, with these additional guidelines:
 
 * For every rule, there's a counterexample.
   Use your best judgement before writing something absurd.
-
-* See the [word and phrase list](#word-and-phrase-list) for specific guidelines.
 
 ### Word and phrase list
 
