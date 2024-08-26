@@ -1,0 +1,16 @@
+name: WeakMap
+description: A `WeakMap` object holds key-value pairs that do not create strong references to its keys, such that value data can be associated with a key without preventing garbage collection of the key.
+spec: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-weakmap-objects
+group: collections
+status:
+  compute_from: javascript.builtins.WeakMap
+compat_features:
+  - javascript.builtins.WeakMap
+  - javascript.builtins.WeakMap.WeakMap
+  - javascript.builtins.WeakMap.WeakMap.iterable_allowed
+  - javascript.builtins.WeakMap.WeakMap.null_allowed
+  - javascript.builtins.WeakMap.delete
+  - javascript.builtins.WeakMap.get
+  - javascript.builtins.WeakMap.has
+  - javascript.builtins.WeakMap.set
+  - javascript.builtins.WeakMap.symbol_as_keys

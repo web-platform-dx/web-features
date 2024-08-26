@@ -1,7 +1,11 @@
-draft_date: 2024-08-12
-name: Web Cryptography API
-description: TODO
-spec: https://w3c.github.io/webcrypto/
+name: Web Cryptography
+description: The Web Cryptography API performs low-level cryptographic operations, such as encryption, decryption, and signature verification. Also known as the Web Crypto API.
+spec:
+  - https://w3c.github.io/webcrypto/
+  - https://wicg.github.io/webcrypto-secure-curves/
+caniuse: cryptography
+status:
+  compute_from: api.Crypto
 compat_features:
   - api.Crypto
   - api.Crypto.getRandomValues
@@ -29,4 +33,14 @@ compat_features:
   - api.SubtleCrypto.unwrapKey
   - api.SubtleCrypto.verify
   - api.SubtleCrypto.wrapKey
+  - api.SubtleCrypto.exportKey.ed25519
+  - api.SubtleCrypto.generateKey.ed25519
+  - api.SubtleCrypto.importKey.ed25519
+  - api.SubtleCrypto.sign.ed25519
+  - api.SubtleCrypto.verify.ed25519
+  - api.SubtleCrypto.deriveBits.x25519
+  - api.SubtleCrypto.deriveKey.x25519
+  - api.SubtleCrypto.exportKey.x25519
+  - api.SubtleCrypto.generateKey.x25519
+  - api.SubtleCrypto.importKey.x25519
   - api.crypto
