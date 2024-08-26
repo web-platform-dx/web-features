@@ -1,0 +1,14 @@
+name: Iterators and the for..of loop
+description: The `for...of` loop operates on a sequence of values sourced from an iterable object (arrays, array-like objects, DOM collections, iterators, generators, and user-defined iterables).
+group: iterators
+snapshot: ecmascript-2015
+spec:
+  - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-%iteratorprototype%-object
+  - https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#sec-for-in-and-for-of-statements
+status:
+  compute_from: javascript.statements.for_of
+compat_features:
+  - javascript.builtins.Iterator
+  - javascript.builtins.Iterator.@@iterator
+  - javascript.statements.for_of
+  - javascript.statements.for_of.closing_iterators
