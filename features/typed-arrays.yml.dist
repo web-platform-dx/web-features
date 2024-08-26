@@ -26,6 +26,9 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "5.1"
   #   safari_ios: "4.2"
+  - javascript.builtins.ArrayBuffer
+  - javascript.builtins.ArrayBuffer.ArrayBuffer
+  - javascript.builtins.ArrayBuffer.byteLength
   - javascript.builtins.Float32Array
   - javascript.builtins.Float32Array.Float32Array
   - javascript.builtins.Float64Array
@@ -68,6 +71,65 @@ compat_features:
   - javascript.builtins.TypedArray.named_properties
 
   # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "9"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "15"
+  #   firefox_android: "15"
+  #   safari: "5.1"
+  #   safari_ios: "5"
+  - javascript.builtins.DataView
+  - javascript.builtins.DataView.DataView
+  - javascript.builtins.DataView.buffer
+  - javascript.builtins.DataView.byteLength
+  - javascript.builtins.DataView.byteOffset
+  - javascript.builtins.DataView.getFloat32
+  - javascript.builtins.DataView.getFloat64
+  - javascript.builtins.DataView.getInt16
+  - javascript.builtins.DataView.getInt32
+  - javascript.builtins.DataView.getInt8
+  - javascript.builtins.DataView.getUint16
+  - javascript.builtins.DataView.getUint32
+  - javascript.builtins.DataView.getUint8
+  - javascript.builtins.DataView.setFloat32
+  - javascript.builtins.DataView.setFloat64
+  - javascript.builtins.DataView.setInt16
+  - javascript.builtins.DataView.setInt32
+  - javascript.builtins.DataView.setInt8
+  - javascript.builtins.DataView.setUint16
+  - javascript.builtins.DataView.setUint32
+  - javascript.builtins.DataView.setUint8
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "17"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "12"
+  #   firefox_android: "14"
+  #   safari: "5.1"
+  #   safari_ios: "6"
+  - javascript.builtins.ArrayBuffer.slice
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "32"
+  #   chrome_android: "32"
+  #   edge: "12"
+  #   firefox: "29"
+  #   firefox_android: "29"
+  #   safari: "7"
+  #   safari_ios: "7"
+  - javascript.builtins.ArrayBuffer.isView
+
+  # baseline: high
   # baseline_low_date: 2016-09-20
   # baseline_high_date: 2019-03-20
   # support:
@@ -106,6 +168,19 @@ compat_features:
   #   safari: "10"
   #   safari_ios: "10"
   - javascript.builtins.TypedArray.sort
+
+  # baseline: high
+  # baseline_low_date: 2016-09-20
+  # baseline_high_date: 2019-03-20
+  # support:
+  #   chrome: "51"
+  #   chrome_android: "51"
+  #   edge: "13"
+  #   firefox: "48"
+  #   firefox_android: "48"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - javascript.builtins.ArrayBuffer.@@species
 
   # baseline: high
   # baseline_low_date: 2017-01-24
