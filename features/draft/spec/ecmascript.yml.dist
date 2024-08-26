@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "129"
+    firefox_android: "129"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -20,9 +22,6 @@ compat_features:
   - javascript.builtins.Boolean.Boolean
   - javascript.builtins.Boolean.toString
   - javascript.builtins.Boolean.valueOf
-  - javascript.builtins.Date.toLocaleDateString
-  - javascript.builtins.Date.toLocaleString
-  - javascript.builtins.Date.toLocaleTimeString
   - javascript.builtins.Error
   - javascript.builtins.Error.Error
   - javascript.builtins.Error.message
@@ -36,11 +35,9 @@ compat_features:
   - javascript.builtins.Function.call
   - javascript.builtins.Function.length
   - javascript.builtins.Function.toString
-  - javascript.builtins.Number.toLocaleString
   - javascript.builtins.Object
   - javascript.builtins.Object.Object
   - javascript.builtins.Object.constructor
-  - javascript.builtins.Object.toLocaleString
   - javascript.builtins.Object.toString
   - javascript.builtins.Object.valueOf
   - javascript.builtins.RangeError
@@ -176,26 +173,11 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: "1.3"
-  #   safari_ios: "1"
-  - javascript.builtins.String.toLocaleLowerCase
-  - javascript.builtins.String.toLocaleUpperCase
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
   #   safari: "3"
   #   safari_ios: "1"
   - javascript.builtins.Object.hasOwnProperty
   - javascript.builtins.Object.isPrototypeOf
   - javascript.builtins.Object.propertyIsEnumerable
-  - javascript.builtins.String.localeCompare
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -1465,9 +1447,6 @@ compat_features:
   #   firefox_android: "79"
   #   safari: "14"
   #   safari_ios: "14"
-  - javascript.builtins.AggregateError
-  - javascript.builtins.AggregateError.AggregateError
-  - javascript.builtins.AggregateError.errors
   - javascript.operators.logical_and_assignment
   - javascript.operators.logical_or_assignment
   - javascript.operators.nullish_coalescing_assignment
@@ -1603,48 +1582,6 @@ compat_features:
   - javascript.builtins.Error.Error.options_cause_parameter
   - javascript.builtins.Error.cause
 
-  # baseline: high
-  # baseline_low_date: 2021-12-13
-  # baseline_high_date: 2024-06-13
-  # support:
-  #   chrome: "68"
-  #   chrome_android: "89"
-  #   edge: "79"
-  #   firefox: "78"
-  #   firefox_android: "79"
-  #   safari: "15.2"
-  #   safari_ios: "15.2"
-  - javascript.builtins.Atomics
-  - javascript.builtins.Atomics.add
-  - javascript.builtins.Atomics.and
-  - javascript.builtins.Atomics.compareExchange
-  - javascript.builtins.Atomics.exchange
-  - javascript.builtins.Atomics.isLockFree
-  - javascript.builtins.Atomics.load
-  - javascript.builtins.Atomics.notify
-  - javascript.builtins.Atomics.or
-  - javascript.builtins.Atomics.store
-  - javascript.builtins.Atomics.sub
-  - javascript.builtins.Atomics.wait
-  - javascript.builtins.Atomics.xor
-
-  # baseline: high
-  # baseline_low_date: 2021-12-13
-  # baseline_high_date: 2024-06-13
-  # support:
-  #   chrome: "68"
-  #   chrome_android: "89"
-  #   edge: "79"
-  #   firefox: "79"
-  #   firefox_android: "79"
-  #   safari: "15.2"
-  #   safari_ios: "15.2"
-  - javascript.builtins.SharedArrayBuffer
-  - javascript.builtins.SharedArrayBuffer.@@species
-  - javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
-  - javascript.builtins.SharedArrayBuffer.byteLength
-  - javascript.builtins.SharedArrayBuffer.slice
-
   # baseline: low
   # baseline_low_date: 2022-03-14
   # support:
@@ -1706,15 +1643,7 @@ compat_features:
   - javascript.builtins.String.isWellFormed
   - javascript.builtins.String.toWellFormed
 
-  # baseline: false
-  # support:
-  #   chrome: "87"
-  #   chrome_android: "89"
-  #   edge: "87"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - javascript.builtins.Atomics.waitAsync
-
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "129"

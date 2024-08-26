@@ -1116,6 +1116,32 @@ compat_features:
   - api.SVGPointList.length
 
   # baseline: high
+  # baseline_low_date: 2020-03-24
+  # baseline_high_date: 2022-09-24
+  # support:
+  #   chrome: "35"
+  #   chrome_android: "35"
+  #   edge: "79"
+  #   firefox: "9"
+  #   firefox_android: "9"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.SVGTransformList.length
+
+  # baseline: high
+  # baseline_low_date: 2020-03-24
+  # baseline_high_date: 2022-09-24
+  # support:
+  #   chrome: "35"
+  #   chrome_android: "35"
+  #   edge: "79"
+  #   firefox: "12"
+  #   firefox_android: "14"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.SVGStringList.length
+
+  # baseline: high
   # baseline_low_date: ≤2020-03-24
   # baseline_high_date: ≤2022-09-24
   # support:

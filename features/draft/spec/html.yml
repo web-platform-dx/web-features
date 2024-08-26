@@ -1,4 +1,4 @@
-draft_date: 2024-08-19
+draft_date: 2024-08-26
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -168,7 +168,6 @@ compat_features:
   - api.HTMLElement.outerText
   - api.HTMLElement.spellcheck
   - api.HTMLElement.title
-  - api.HTMLElement.writingSuggestions
   - api.HTMLFormControlsCollection
   - api.HTMLFormControlsCollection.namedItem
   - api.HTMLIFrameElement.sandbox
@@ -225,10 +224,6 @@ compat_features:
   - api.HTMLInputElement.valueAsDate
   - api.HTMLInputElement.valueAsNumber
   - api.HTMLInputElement.width
-  - api.HTMLLabelElement
-  - api.HTMLLabelElement.control
-  - api.HTMLLabelElement.form
-  - api.HTMLLabelElement.htmlFor
   - api.HTMLMediaElement.getStartDate
   - api.HTMLMediaElement.srcObject
   - api.HTMLMediaElement.textTracks
@@ -679,8 +674,6 @@ compat_features:
   - html.elements.input.type_time
   - html.elements.input.type_url
   - html.elements.input.type_week
-  - html.elements.label
-  - html.elements.label.for
   - html.elements.link.rel.alternate_stylesheet
   - html.elements.link.rel.dns-prefetch
   - html.elements.link.rel.expect
@@ -1253,6 +1246,9 @@ compat_features:
 # - translate attribute:
 #   - api.HTMLElement.translate
 #   - html.global_attributes.translate
+# - writingsuggestions:
+#   - api.HTMLElement.writingSuggestions
+#   - html.global_attributes.writingsuggestions
 # - <embed>:
 #   - api.HTMLEmbedElement
 #   - api.HTMLEmbedElement.getSVGDocument
@@ -1400,6 +1396,13 @@ compat_features:
 #   - html.elements.ol.start
 #   - html.elements.ol.type
 #   - html.elements.ul
+# - <label>:
+#   - api.HTMLLabelElement
+#   - api.HTMLLabelElement.control
+#   - api.HTMLLabelElement.form
+#   - api.HTMLLabelElement.htmlFor
+#   - html.elements.label
+#   - html.elements.label.for
 # - <link>:
 #   - api.HTMLLinkElement
 #   - api.HTMLLinkElement.as
@@ -1888,6 +1891,14 @@ compat_features:
 #   - api.structuredClone
 # - :autofill:
 #   - css.selectors.autofill
+# - Media element pseudo-classes:
+#   - css.selectors.buffering
+#   - css.selectors.muted
+#   - css.selectors.paused
+#   - css.selectors.playing
+#   - css.selectors.seeking
+#   - css.selectors.stalled
+#   - css.selectors.volume-locked
 # - :default:
 #   - css.selectors.default
 # - :dir():

@@ -203,9 +203,6 @@ compat_features:
   - api.HTMLElement.lang
   - api.HTMLElement.title
   - api.HTMLInputElement.setSelectionRange
-  - api.HTMLLabelElement
-  - api.HTMLLabelElement.form
-  - api.HTMLLabelElement.htmlFor
   - api.HTMLOptionsCollection
   - api.HTMLOptionsCollection.add
   - api.HTMLOptionsCollection.length
@@ -308,8 +305,6 @@ compat_features:
   - html.elements.dd
   - html.elements.dl
   - html.elements.dt
-  - html.elements.label
-  - html.elements.label.for
   - html.global_attributes.accesskey
   - html.global_attributes.class
   - html.global_attributes.lang
@@ -2341,19 +2336,6 @@ compat_features:
   #   chrome: "6"
   #   chrome_android: "18"
   #   edge: "18"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "5.1"
-  #   safari_ios: "5"
-  - api.HTMLLabelElement.control
-
-  # baseline: high
-  # baseline_low_date: 2018-10-02
-  # baseline_high_date: 2021-04-02
-  # support:
-  #   chrome: "6"
-  #   chrome_android: "18"
-  #   edge: "18"
   #   firefox: "56"
   #   firefox_android: "56"
   #   safari: "5"
@@ -3916,7 +3898,6 @@ compat_features:
   #   chrome: "124"
   #   chrome_android: "124"
   #   edge: "124"
-  - api.HTMLElement.writingSuggestions
   - api.PageSwapEvent
   - api.PageSwapEvent.activation
   - api.Window.pageswap_event

@@ -1,11 +1,8 @@
-draft_date: 2024-08-19
+draft_date: 2024-08-26
 name: ECMAScript Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
 compat_features:
-  - javascript.builtins.AggregateError
-  - javascript.builtins.AggregateError.AggregateError
-  - javascript.builtins.AggregateError.errors
   - javascript.builtins.Array.@@species
   - javascript.builtins.Array.@@unscopables
   - javascript.builtins.ArrayBuffer
@@ -22,20 +19,6 @@ compat_features:
   - javascript.builtins.AsyncGeneratorFunction.AsyncGeneratorFunction
   - javascript.builtins.AsyncIterator
   - javascript.builtins.AsyncIterator.@@asyncIterator
-  - javascript.builtins.Atomics
-  - javascript.builtins.Atomics.add
-  - javascript.builtins.Atomics.and
-  - javascript.builtins.Atomics.compareExchange
-  - javascript.builtins.Atomics.exchange
-  - javascript.builtins.Atomics.isLockFree
-  - javascript.builtins.Atomics.load
-  - javascript.builtins.Atomics.notify
-  - javascript.builtins.Atomics.or
-  - javascript.builtins.Atomics.store
-  - javascript.builtins.Atomics.sub
-  - javascript.builtins.Atomics.wait
-  - javascript.builtins.Atomics.waitAsync
-  - javascript.builtins.Atomics.xor
   - javascript.builtins.BigInt64Array
   - javascript.builtins.BigInt64Array.BigInt64Array
   - javascript.builtins.BigUint64Array
@@ -69,9 +52,6 @@ compat_features:
   - javascript.builtins.DataView.setUint16
   - javascript.builtins.DataView.setUint32
   - javascript.builtins.DataView.setUint8
-  - javascript.builtins.Date.toLocaleDateString
-  - javascript.builtins.Date.toLocaleString
-  - javascript.builtins.Date.toLocaleTimeString
   - javascript.builtins.Error
   - javascript.builtins.Error.Error
   - javascript.builtins.Error.Error.options_cause_parameter
@@ -107,7 +87,6 @@ compat_features:
   - javascript.builtins.JSON.parse
   - javascript.builtins.JSON.stringify
   - javascript.builtins.Map.@@species
-  - javascript.builtins.Number.toLocaleString
   - javascript.builtins.Object
   - javascript.builtins.Object.Object
   - javascript.builtins.Object.assign
@@ -135,7 +114,6 @@ compat_features:
   - javascript.builtins.Object.propertyIsEnumerable
   - javascript.builtins.Object.seal
   - javascript.builtins.Object.setPrototypeOf
-  - javascript.builtins.Object.toLocaleString
   - javascript.builtins.Object.toString
   - javascript.builtins.Object.valueOf
   - javascript.builtins.Object.values
@@ -175,11 +153,6 @@ compat_features:
   - javascript.builtins.Reflect.set
   - javascript.builtins.Reflect.setPrototypeOf
   - javascript.builtins.Set.@@species
-  - javascript.builtins.SharedArrayBuffer
-  - javascript.builtins.SharedArrayBuffer.@@species
-  - javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
-  - javascript.builtins.SharedArrayBuffer.byteLength
-  - javascript.builtins.SharedArrayBuffer.slice
   - javascript.builtins.String
   - javascript.builtins.String.@@iterator
   - javascript.builtins.String.String
@@ -196,7 +169,6 @@ compat_features:
   - javascript.builtins.String.isWellFormed
   - javascript.builtins.String.lastIndexOf
   - javascript.builtins.String.length
-  - javascript.builtins.String.localeCompare
   - javascript.builtins.String.match
   - javascript.builtins.String.matchAll
   - javascript.builtins.String.normalize
@@ -211,8 +183,6 @@ compat_features:
   - javascript.builtins.String.split
   - javascript.builtins.String.startsWith
   - javascript.builtins.String.substring
-  - javascript.builtins.String.toLocaleLowerCase
-  - javascript.builtins.String.toLocaleUpperCase
   - javascript.builtins.String.toLowerCase
   - javascript.builtins.String.toString
   - javascript.builtins.String.toUpperCase
@@ -393,6 +363,11 @@ compat_features:
   - webassembly.api.RuntimeError.RuntimeError
 
 # The following features in the spec are already part of web-features:
+# - Promise.any():
+#   - javascript.builtins.AggregateError
+#   - javascript.builtins.AggregateError.AggregateError
+#   - javascript.builtins.AggregateError.errors
+#   - javascript.builtins.Promise.any
 # - Array (initial support):
 #   - javascript.builtins.Array
 #   - javascript.builtins.Array.Array
@@ -405,7 +380,6 @@ compat_features:
 #   - javascript.builtins.Array.shift
 #   - javascript.builtins.Array.slice
 #   - javascript.builtins.Array.sort
-#   - javascript.builtins.Array.toLocaleString
 #   - javascript.builtins.Array.toString
 #   - javascript.builtins.Array.unshift
 #   - javascript.grammar.array_literals
@@ -459,6 +433,17 @@ compat_features:
 #   - javascript.builtins.TypedArray.of
 # - Array splice():
 #   - javascript.builtins.Array.splice
+# - Intl:
+#   - javascript.builtins.Array.toLocaleString
+#   - javascript.builtins.Date.toLocaleDateString
+#   - javascript.builtins.Date.toLocaleString
+#   - javascript.builtins.Date.toLocaleTimeString
+#   - javascript.builtins.Number.toLocaleString
+#   - javascript.builtins.Object.toLocaleString
+#   - javascript.builtins.String.localeCompare
+#   - javascript.builtins.String.toLocaleLowerCase
+#   - javascript.builtins.String.toLocaleUpperCase
+#   - javascript.builtins.TypedArray.toLocaleString
 # - Array by copy:
 #   - javascript.builtins.Array.toReversed
 #   - javascript.builtins.Array.toSorted
@@ -482,6 +467,27 @@ compat_features:
 #   - javascript.operators.async_function
 #   - javascript.operators.await
 #   - javascript.statements.async_function
+# - SharedArrayBuffer and Atomics:
+#   - javascript.builtins.Atomics
+#   - javascript.builtins.Atomics.add
+#   - javascript.builtins.Atomics.and
+#   - javascript.builtins.Atomics.compareExchange
+#   - javascript.builtins.Atomics.exchange
+#   - javascript.builtins.Atomics.isLockFree
+#   - javascript.builtins.Atomics.load
+#   - javascript.builtins.Atomics.notify
+#   - javascript.builtins.Atomics.or
+#   - javascript.builtins.Atomics.store
+#   - javascript.builtins.Atomics.sub
+#   - javascript.builtins.Atomics.wait
+#   - javascript.builtins.Atomics.xor
+#   - javascript.builtins.SharedArrayBuffer
+#   - javascript.builtins.SharedArrayBuffer.@@species
+#   - javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
+#   - javascript.builtins.SharedArrayBuffer.byteLength
+#   - javascript.builtins.SharedArrayBuffer.slice
+# - Atomics.waitAsync:
+#   - javascript.builtins.Atomics.waitAsync
 # - BigInt:
 #   - javascript.builtins.BigInt
 #   - javascript.builtins.BigInt.BigInt
@@ -560,7 +566,6 @@ compat_features:
 #   - javascript.builtins.TypedArray.slice
 #   - javascript.builtins.TypedArray.sort
 #   - javascript.builtins.TypedArray.subarray
-#   - javascript.builtins.TypedArray.toLocaleString
 #   - javascript.builtins.TypedArray.toString
 #   - javascript.builtins.Uint16Array
 #   - javascript.builtins.Uint16Array.Uint16Array
@@ -669,8 +674,6 @@ compat_features:
 #   - javascript.builtins.Promise.then
 # - Promise.allSettled():
 #   - javascript.builtins.Promise.allSettled
-# - Promise.any():
-#   - javascript.builtins.Promise.any
 # - Promise finally():
 #   - javascript.builtins.Promise.finally
 # - Regular expressions:
