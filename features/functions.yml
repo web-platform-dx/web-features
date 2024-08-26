@@ -1,0 +1,45 @@
+name: Functions
+description: "Functions are blocks of code executing particular statements. They can be created using the `function() { }` keyword or by using the arrow (`=>`) function expression. Additional JavaScript function features are: binding, default & rest parameters."
+spec:
+  - https://tc39.es/ecma262/multipage/ecmascript-language-functions-and-classes.html#sec-ecmascript-language-functions-and-classes
+  - https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-function-objects
+group: javascript
+status:
+  compute_from: javascript.functions
+compat_features:
+  - javascript.builtins.Function
+  - javascript.builtins.Function.Function
+  - javascript.builtins.Function.apply
+  - javascript.builtins.Function.apply.generic_arrays_as_arguments
+  - javascript.builtins.Function.bind
+  - javascript.builtins.Function.call
+  - javascript.builtins.Function.length
+  - javascript.builtins.Function.toString
+  - javascript.builtins.Function.length.configurable_true
+  - javascript.builtins.Function.name
+  - javascript.builtins.Function.name.configurable_true
+  - javascript.builtins.Function.name.inferred_names
+  - javascript.builtins.Function.@@hasInstance
+  - javascript.functions
+  - javascript.functions.arguments
+  - javascript.functions.arguments.length
+  - javascript.functions.arguments.@@iterator
+  - javascript.functions.arrow_functions
+  - javascript.functions.arrow_functions.trailing_comma
+  - javascript.functions.block_level_functions
+  - javascript.functions.default_parameters
+  - javascript.functions.default_parameters.destructured_parameter_with_default_value_assignment
+  - javascript.functions.default_parameters.parameters_without_defaults_after_default_parameters
+  - javascript.functions.get
+  - javascript.functions.get.computed_property_names
+  - javascript.functions.method_definitions
+  - javascript.functions.method_definitions.async_methods
+  - javascript.functions.method_definitions.generator_methods_not_constructable
+  - javascript.functions.rest_parameters
+  - javascript.functions.rest_parameters.destructuring
+  - javascript.functions.set
+  - javascript.functions.set.computed_property_names
+  - javascript.operators.function
+  - javascript.operators.function.trailing_comma
+  - javascript.statements.function
+  - javascript.statements.function.trailing_comma_in_parameters
