@@ -1,0 +1,28 @@
+name: Symbol
+description: The `Symbol` type represents a unique identifier.
+spec: https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-symbol-objects
+group: primitive-types
+status:
+  compute_from: javascript.builtins.Symbol
+compat_features:
+  - javascript.builtins.Symbol
+  - javascript.builtins.Symbol.Symbol
+  - javascript.builtins.Symbol.description
+  - javascript.builtins.Symbol.for
+  - javascript.builtins.Symbol.hasInstance
+  - javascript.builtins.Symbol.isConcatSpreadable
+  - javascript.builtins.Symbol.iterator
+  - javascript.builtins.Symbol.keyFor
+  - javascript.builtins.Symbol.match
+  - javascript.builtins.Symbol.matchAll
+  - javascript.builtins.Symbol.replace
+  - javascript.builtins.Symbol.search
+  - javascript.builtins.Symbol.species
+  - javascript.builtins.Symbol.split
+  - javascript.builtins.Symbol.toPrimitive
+  - javascript.builtins.Symbol.toString
+  - javascript.builtins.Symbol.toStringTag
+  - javascript.builtins.Symbol.toStringTag.dom_objects
+  - javascript.builtins.Symbol.unscopables
+  - javascript.builtins.Symbol.valueOf
+  - javascript.builtins.Symbol.@@toPrimitive
