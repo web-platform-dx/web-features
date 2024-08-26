@@ -1,0 +1,17 @@
+name: Async generators
+description: Async generator functions (`async function*`) are asynchronous and always yield `Promise` objects.
+group: javascript
+snapshot: ecmascript-2017
+spec:
+  - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-asyncgeneratorfunction-objects
+  - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-asyncgenerator-objects
+compat_features:
+  - javascript.builtins.AsyncGenerator
+  - javascript.builtins.AsyncGenerator.next
+  - javascript.builtins.AsyncGenerator.return
+  - javascript.builtins.AsyncGenerator.throw
+  - javascript.builtins.AsyncGeneratorFunction
+  - javascript.builtins.AsyncGeneratorFunction.AsyncGeneratorFunction
+  - javascript.functions.method_definitions.async_generator_methods
+  - javascript.operators.async_generator_function
+  - javascript.statements.async_generator_function
