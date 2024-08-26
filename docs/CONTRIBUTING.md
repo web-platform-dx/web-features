@@ -78,7 +78,7 @@ This table lists the fields that can be found in a feature file, and provides a 
 | `spec` | One or more specification URLs for this feature. | String, or array of strings | Yes |
 | `group` | An optional group, or list of groups that this feature belongs to. See the definition of groups under [Create a new feature from scratch](#create-a-new-feature-from-scratch). | String, or array of strings | No |
 | `caniuse` | The feature's ID on the [Can I Use](https://caniuse.com/) website. | String | No |
-| `compat_features` | The list of browser-compat-data entries that make up this feature. In many cases, the corresponding browser-compat-data entries already map to the feature ID, and this is therefore not needed. | Array of strings | No |
+| `compat_features` | @mdn/browser-compat-data (BCD) entry keys (e.g., `css.properties.background-color`) that make up this feature. If there already exists a matching `web-features:<feature-id>` tag in BCD, then this key is automatically populated from the tag. | Array of strings | No |
 | `status` | An optional object which describes whether the feature is considered baseline, when it achieved this baseline status, and the version number of supported browsers. In the majority of cases, this is calculated from the `compat_features` list or from browser-compat-data entries directly, and therefore not needed. | Object | No |
 | `status.compute_from` | An optional field, within the `status` object, to allows you to specify which BCD keys should the overall feature status be computed from. This is useful to list all BCD keys that are related to a feature, but only consider some of them in the baseline status calculation. | String, or array of strings | No |
 
