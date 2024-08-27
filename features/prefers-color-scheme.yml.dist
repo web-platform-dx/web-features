@@ -14,4 +14,29 @@ status:
     safari: "12.1"
     safari_ios: "13"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "76"
+  #   chrome_android: "76"
+  #   edge: "79"
+  #   firefox: "67"
+  #   firefox_android: "67"
+  #   safari: "12.1"
+  #   safari_ios: "13"
   - css.at-rules.media.prefers-color-scheme
+
+  # baseline: false
+  # support:
+  #   chrome: "93"
+  #   chrome_android: "93"
+  #   edge: "93"
+  - http.headers.Sec-CH-Prefers-Color-Scheme
+
+  # baseline: false
+  # support:
+  #   firefox: "105"
+  #   firefox_android: "105"
+  - css.at-rules.media.prefers-color-scheme.respects-inherited-scheme
