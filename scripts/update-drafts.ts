@@ -94,7 +94,7 @@ async function main(specFilter: string = undefined) {
     for (const url of feature.spec_url) {
       const spec = pageToSpec.get(normalize(url));
       if (!spec) {
-        if(!specFilter) console.warn(`${url} not matched to any spec`);
+        if (!specFilter) console.warn(`${url} not matched to any spec`);
         continue;
       }
       const keys = specToCompatFeatures.get(spec);
