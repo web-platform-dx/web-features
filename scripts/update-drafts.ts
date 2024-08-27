@@ -1,3 +1,7 @@
+// Updates files in features/draft/spec/* with BCD keys mentioned in specs
+// `npm run update-drafts` updates all
+// `npm run update-drafts -- [key]` only updates features with a `shortname` that includes `key`.
+
 import { Compat } from "compute-baseline/browser-compat-data";
 import fs from "node:fs/promises";
 import { fileURLToPath } from "node:url";
@@ -41,7 +45,7 @@ function formatIdentifier(s: string): string {
     .join("-");
 }
 
-async function main() {
+async function main(specFilter: string = undefined) {
   const compat = new Compat();
 
   // Build a map of used BCD keys to feature.
@@ -56,7 +60,12 @@ async function main() {
 
   // Build a map from URLs to spec.
   const pageToSpec = new Map<string, WebSpecsSpec>();
-  for (const spec of webSpecs) {
+
+  const selectedSpecs = specFilter
+    ? webSpecs.filter((ws) => ws.shortname.includes(specFilter))
+    : webSpecs;
+
+  for (const spec of selectedSpecs) {
     for (const page of getPages(spec)) {
       pageToSpec.set(normalize(page), spec);
     }
@@ -85,7 +94,7 @@ async function main() {
     for (const url of feature.spec_url) {
       const spec = pageToSpec.get(normalize(url));
       if (!spec) {
-        console.warn(`${url} not matched to any spec`);
+        if(!specFilter) console.warn(`${url} not matched to any spec`);
         continue;
       }
       const keys = specToCompatFeatures.get(spec);
@@ -141,5 +150,5 @@ async function main() {
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  await main();
+  await main(process.argv[2]);
 }
