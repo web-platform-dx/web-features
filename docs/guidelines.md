@@ -229,6 +229,7 @@ If you're not sure what's customary, look to high-profile published examples, su
 The `caniuse` key references one or more [Can I Use](https://caniuse.com/) feature IDs.
 This is the part of a Can I Use URL after `https://caniuse.com/`.
 For example, the Can I Use feature ID for [Flexbox](https://caniuse.com/flexbox) is `flexbox`.
+For a complete list of IDs, run `npx tsx ./scripts/caniuse.ts`.
 
 Setting a `caniuse` value says that a feature is approximately equivalent to or a superset of a Can I Use feature.
 If you set a `caniuse` value, then the Can I Use site shows a status badge based on the feature's top-level headline `status` information.
