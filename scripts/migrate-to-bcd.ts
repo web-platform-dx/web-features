@@ -5,12 +5,9 @@ import { fileURLToPath } from "node:url";
 
 import { fdir } from "fdir";
 import winston from "winston";
+import yargs from "yargs";
 
 import { features } from "../index.js";
-
-const BCD_DIR = process.env.BCD_DIR
-  ? path.resolve(process.env.BCD_DIR)
-  : fileURLToPath(new URL("../../browser-compat-data", import.meta.url));
 
 const logger = winston.createLogger({
   format: winston.format.combine(
@@ -36,75 +33,87 @@ for (const [feature, { compat_features }] of Object.entries(features)) {
   }
 }
 
-const bcdJsons = new fdir()
-  .withBasePath()
-  .filter((fp) => {
-    const dir = path.relative(BCD_DIR, fp).split(path.sep)[0];
-    return bcdDirs.has(dir);
-  })
-  .filter((fp) => fp.endsWith(".json"))
-  .crawl(BCD_DIR)
-  .sync();
+async function main(bcd_path) {
+  const bcdJsons = new fdir()
+    .withBasePath()
+    .filter((fp) => {
+      const dir = path.relative(bcd_path, fp).split(path.sep)[0];
+      return bcdDirs.has(dir);
+    })
+    .filter((fp) => fp.endsWith(".json"))
+    .crawl(bcd_path)
+    .sync();
 
-function lookup(root, key) {
-  const parts = key.split(".");
-  let node = root;
-  for (const part of parts) {
-    if (Object.hasOwn(node, part)) {
-      node = node[part];
-    } else {
-      return undefined;
+  function lookup(root, key) {
+    const parts = key.split(".");
+    let node = root;
+    for (const part of parts) {
+      if (Object.hasOwn(node, part)) {
+        node = node[part];
+      } else {
+        return undefined;
+      }
     }
+    return node;
   }
-  return node;
-}
 
-for (const fp of bcdJsons) {
-  const src = fs.readFileSync(fp, { encoding: "utf-8" });
-  const data = JSON.parse(src);
-  let updated = false;
-  for (const [key, feature] of bcdToFeature.entries()) {
-    const node = lookup(data, key);
-    if (!node || !node.__compat) {
-      continue;
-    }
-    bcdToFeature.delete(key);
+  for (const fp of bcdJsons) {
+    const src = fs.readFileSync(fp, { encoding: "utf-8" });
+    const data = JSON.parse(src);
+    let updated = false;
+    for (const [key, feature] of bcdToFeature.entries()) {
+      const node = lookup(data, key);
+      if (!node || !node.__compat) {
+        continue;
+      }
+      bcdToFeature.delete(key);
 
-    const tag = `web-features:${feature}`;
-    const compat = node.__compat;
-    if (compat.tags?.includes(tag)) {
-      continue;
-    }
-
-    while (true) {
-      const index = compat.tags?.findIndex(
-        (t) =>
-          t.startsWith("web-features:") &&
-          !t.startsWith("web-features:snapshot:"),
-      );
-      if (index > -1) {
-        break;
+      const tag = `web-features:${feature}`;
+      const compat = node.__compat;
+      if (compat.tags?.includes(tag)) {
+        continue;
       }
 
-      // Remove any other feature tags (besides snapshots)
-      // Compat keys in multiple web-features features creates ambiguity for some consumers, see https://github.com/web-platform-dx/web-features/issues/1173
-      logger.info(`Removing tag ${compat.tags[index]} from ${key}`);
-      compat.tags.pop(index);
-    }
+      while (true) {
+        const index = compat.tags?.findIndex(
+          (t) =>
+            t.startsWith("web-features:") &&
+            !t.startsWith("web-features:snapshot:"),
+        );
+        if (index > -1) {
+          break;
+        }
 
-    if (compat.tags) {
-      compat.tags.push(tag);
-    } else {
-      compat.tags = [tag];
+        // Remove any other feature tags (besides snapshots)
+        // Compat keys in multiple web-features features creates ambiguity for some consumers, see https://github.com/web-platform-dx/web-features/issues/1173
+        logger.info(`Removing tag ${compat.tags[index]} from ${key}`);
+        compat.tags.pop(index);
+      }
+
+      if (compat.tags) {
+        compat.tags.push(tag);
+      } else {
+        compat.tags = [tag];
+      }
+      updated = true;
     }
-    updated = true;
+    if (updated) {
+      const src = JSON.stringify(data, null, "  ") + "\n";
+      fs.writeFileSync(fp, src, { encoding: "utf-8" });
+    }
   }
-  if (updated) {
-    const src = JSON.stringify(data, null, "  ") + "\n";
-    fs.writeFileSync(fp, src, { encoding: "utf-8" });
+
+  for (const [key, feature] of bcdToFeature) {
+    logger.warn("Not migrated:", feature, key);
   }
 }
 
-for (const [key, feature] of bcdToFeature) {
-  logger.warn("Not migrated:", feature, key);
-}
+const argv = yargs(process.argv.slice(2))
+  .scriptName("migrate-to-bcd")
+  .usage("$0 <bcd-path>", "Migrate compat_features keys to BCD tags", (yargs) =>
+    yargs.positional("bcd-path", {
+      describe: "The path to the BCD folder",
+    }),
+  ).argv;
+
+await main(argv.bcd_path);
