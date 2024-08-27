@@ -1,0 +1,11 @@
+name: Interaction media queries
+description: The interaction CSS media queries set styles based on a user's ability to hover using `hover` or `any-hover` or use a pointer using `pointer` and `any-pointer`. For example, a smartphone would match `@media (hover:none) and (pointer:coarse)`.
+spec: https://drafts.csswg.org/mediaqueries-5/#mf-interaction
+caniuse: css-media-interaction
+status:
+  compute_from: css.at-rules.media.any-pointer
+compat_features: 
+  - css.at-rules.media.hover
+  - css.at-rules.media.any-hover
+  - css.at-rules.media.any-pointer
+  - css.at-rules.media.pointer
