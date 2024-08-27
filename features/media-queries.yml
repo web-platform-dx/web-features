@@ -3,12 +3,17 @@ description: CSS Media queries allow you to provide different styles based on th
 spec: https://drafts.csswg.org/mediaqueries-5/
 caniuse: css-mediaqueries
 group: media-queries
+status:
+  compute_from: css.at-rules.media
 compat_features:
   - css.at-rules.media
   - css.at-rules.media.color
   - css.at-rules.media.grid
   - css.at-rules.media.height
   - css.at-rules.media.width
+  - css.at-rules.media.monochrome
   - css.at-rules.media.orientation
   - css.at-rules.media.aspect-ratio
   - css.types.ratio
+  - css.at-rules.media.color-index
+  

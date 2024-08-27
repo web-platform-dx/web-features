@@ -6,14 +6,15 @@ status:
   baseline_low_date: 2015-07-29
   baseline_high_date: 2018-01-29
   support:
-    chrome: "3"
+    chrome: "1"
     chrome_android: "18"
     edge: "12"
-    firefox: "3.5"
+    firefox: "1"
     firefox_android: "4"
-    safari: "5"
-    safari_ios: "4.2"
+    safari: "3"
+    safari_ios: "1"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -56,7 +57,6 @@ compat_features:
   #   safari_ios: "4.2"
   - css.at-rules.media.orientation
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -70,3 +70,25 @@ compat_features:
   #   safari_ios: "4.2"
   - css.at-rules.media.aspect-ratio
   - css.types.ratio
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: "2"
+  #   firefox_android: "4"
+  #   safari: "3"
+  #   safari_ios: "1"
+  - css.at-rules.media.monochrome
+
+  # baseline: false
+  # support:
+  #   chrome: "29"
+  #   chrome_android: "29"
+  #   edge: "79"
+  #   safari: "8"
+  #   safari_ios: "8"
+  - css.at-rules.media.color-index
