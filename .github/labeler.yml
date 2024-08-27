@@ -1,13 +1,13 @@
+"documentation":
+  - changed-files:
+      - all-globs-to-any-file:
+          - "**/*.md"
+
 "feature definition":
   - changed-files:
       - all-globs-to-any-file:
           - "features/*.yml"
           - "!features/*.yml.dist"
-
-"documentation":
-  - changed-files:
-      - all-globs-to-any-file:
-          - "**/*.md"
 
 "tools and infrastructure":
   - changed-files:
