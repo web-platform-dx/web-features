@@ -16,7 +16,7 @@ jobs:
           node-version-file: .node-version
           cache: npm
       - run: npm ci
-      - run: rm features/draft/spec/*.yml features/draft/spec/*.dist
+      - run: git rm features/draft/spec/*.yml features/draft/spec/*.dist
       - run: npm run update-drafts
       - run: npm run dist
       - name: Create Pull Request
