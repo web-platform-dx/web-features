@@ -1,0 +1,6 @@
+name: Atomics.waitAsync
+description: The `Atomics.waitAsync()` static method waits for a value in a shared memory location, providing a promise when the expected value is not yet in memory. The `waitAsync()` method is a non-blocking alternative to `Atomics.wait()`.
+spec: https://tc39.es/ecma262/multipage/structured-data.html#sec-atomics.waitasync
+group: javascript
+compat_features:
+  - javascript.builtins.Atomics.waitAsync
