@@ -107,6 +107,8 @@ Follow the general writing guidelines in this section, but see the [word and phr
 
 ### Word and phrase list
 
+For general usage recommendations not covered by this list, such word choice or punctuation, refer to the [Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/).
+
 #### allows
 
 OK in usage such as "allows you to…."
