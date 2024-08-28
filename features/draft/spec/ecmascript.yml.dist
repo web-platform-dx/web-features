@@ -44,25 +44,6 @@ compat_features:
   - javascript.builtins.RangeError.RangeError
   - javascript.builtins.ReferenceError
   - javascript.builtins.ReferenceError.ReferenceError
-  - javascript.builtins.String
-  - javascript.builtins.String.String
-  - javascript.builtins.String.charAt
-  - javascript.builtins.String.charCodeAt
-  - javascript.builtins.String.concat
-  - javascript.builtins.String.fromCharCode
-  - javascript.builtins.String.indexOf
-  - javascript.builtins.String.lastIndexOf
-  - javascript.builtins.String.length
-  - javascript.builtins.String.match
-  - javascript.builtins.String.replace
-  - javascript.builtins.String.search
-  - javascript.builtins.String.slice
-  - javascript.builtins.String.split
-  - javascript.builtins.String.substring
-  - javascript.builtins.String.toLowerCase
-  - javascript.builtins.String.toString
-  - javascript.builtins.String.toUpperCase
-  - javascript.builtins.String.valueOf
   - javascript.builtins.SyntaxError
   - javascript.builtins.SyntaxError.SyntaxError
   - javascript.builtins.TypeError
@@ -79,7 +60,6 @@ compat_features:
   - javascript.grammar.boolean_literals
   - javascript.grammar.hexadecimal_escape_sequences
   - javascript.grammar.null_literal
-  - javascript.grammar.string_literals
   - javascript.grammar.trailing_commas
   - javascript.grammar.unicode_escape_sequences
   - javascript.operators.addition
@@ -247,19 +227,6 @@ compat_features:
   - javascript.builtins.JSON
   - javascript.builtins.JSON.parse
   - javascript.builtins.JSON.stringify
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "5"
-  #   safari_ios: "5"
-  - javascript.builtins.String.trim
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -486,7 +453,6 @@ compat_features:
   #   safari: "9"
   #   safari_ios: "9"
   - javascript.builtins.Object.getOwnPropertySymbols
-  - javascript.builtins.String.@@iterator
   - javascript.builtins.Symbol
   - javascript.builtins.Symbol.Symbol
   - javascript.builtins.Symbol.toString
@@ -524,68 +490,13 @@ compat_features:
   # baseline_high_date: 2018-03-30
   # support:
   #   chrome: "41"
-  #   chrome_android: "36"
-  #   edge: "12"
-  #   firefox: "17"
-  #   firefox_android: "17"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.builtins.String.endsWith
-  - javascript.builtins.String.startsWith
-
-  # baseline: high
-  # baseline_low_date: 2015-09-30
-  # baseline_high_date: 2018-03-30
-  # support:
-  #   chrome: "41"
-  #   chrome_android: "36"
-  #   edge: "12"
-  #   firefox: "24"
-  #   firefox_android: "24"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.builtins.String.repeat
-
-  # baseline: high
-  # baseline_low_date: 2015-09-30
-  # baseline_high_date: 2018-03-30
-  # support:
-  #   chrome: "41"
-  #   chrome_android: "41"
-  #   edge: "12"
-  #   firefox: "29"
-  #   firefox_android: "29"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.builtins.String.codePointAt
-  - javascript.builtins.String.fromCodePoint
-
-  # baseline: high
-  # baseline_low_date: 2015-09-30
-  # baseline_high_date: 2018-03-30
-  # support:
-  #   chrome: "41"
   #   chrome_android: "41"
   #   edge: "12"
   #   firefox: "34"
   #   firefox_android: "34"
   #   safari: "9"
   #   safari_ios: "9"
-  - javascript.builtins.String.raw
   - javascript.grammar.template_literals
-
-  # baseline: high
-  # baseline_low_date: 2015-09-30
-  # baseline_high_date: 2018-03-30
-  # support:
-  #   chrome: "41"
-  #   chrome_android: "41"
-  #   edge: "12"
-  #   firefox: "40"
-  #   firefox_android: "40"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.builtins.String.includes
 
   # baseline: high
   # baseline_low_date: 2015-09-30
@@ -704,19 +615,6 @@ compat_features:
   #   safari: "8"
   #   safari_ios: "8"
   - javascript.operators.destructuring
-
-  # baseline: high
-  # baseline_low_date: 2016-09-20
-  # baseline_high_date: 2019-03-20
-  # support:
-  #   chrome: "34"
-  #   chrome_android: "34"
-  #   edge: "12"
-  #   firefox: "31"
-  #   firefox_android: "31"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.builtins.String.normalize
 
   # baseline: high
   # baseline_low_date: 2016-09-20
@@ -1105,20 +1003,6 @@ compat_features:
   - javascript.builtins.Object.getOwnPropertyDescriptors
 
   # baseline: high
-  # baseline_low_date: 2017-04-05
-  # baseline_high_date: 2019-10-05
-  # support:
-  #   chrome: "57"
-  #   chrome_android: "57"
-  #   edge: "15"
-  #   firefox: "48"
-  #   firefox_android: "48"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.builtins.String.padEnd
-  - javascript.builtins.String.padStart
-
-  # baseline: high
   # baseline_low_date: 2017-09-19
   # baseline_high_date: 2020-03-19
   # support:
@@ -1308,20 +1192,6 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
-  #   chrome: "66"
-  #   chrome_android: "66"
-  #   edge: "79"
-  #   firefox: "61"
-  #   firefox_android: "61"
-  #   safari: "12"
-  #   safari_ios: "12"
-  - javascript.builtins.String.trimEnd
-  - javascript.builtins.String.trimStart
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
   #   chrome: "70"
   #   chrome_android: "70"
   #   edge: "79"
@@ -1368,7 +1238,6 @@ compat_features:
   #   firefox_android: "67"
   #   safari: "13"
   #   safari_ios: "13"
-  - javascript.builtins.String.matchAll
   - javascript.builtins.Symbol.matchAll
 
   # baseline: high
@@ -1422,19 +1291,6 @@ compat_features:
   #   safari: "13.1"
   #   safari_ios: "13.4"
   - javascript.operators.optional_chaining
-
-  # baseline: high
-  # baseline_low_date: 2020-08-27
-  # baseline_high_date: 2023-02-27
-  # support:
-  #   chrome: "85"
-  #   chrome_android: "85"
-  #   edge: "85"
-  #   firefox: "77"
-  #   firefox_android: "79"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
-  - javascript.builtins.String.replaceAll
 
   # baseline: high
   # baseline_low_date: 2020-09-16
@@ -1585,18 +1441,6 @@ compat_features:
   # baseline: low
   # baseline_low_date: 2022-03-14
   # support:
-  #   chrome: "92"
-  #   chrome_android: "92"
-  #   edge: "92"
-  #   firefox: "90"
-  #   firefox_android: "90"
-  #   safari: "15.4"
-  #   safari_ios: "15.4"
-  - javascript.builtins.String.at
-
-  # baseline: low
-  # baseline_low_date: 2022-03-14
-  # support:
   #   chrome: "93"
   #   chrome_android: "93"
   #   edge: "93"
@@ -1629,19 +1473,6 @@ compat_features:
   #   safari: "16.4"
   #   safari_ios: "16.4"
   - javascript.classes.static_initialization_blocks
-
-  # baseline: low
-  # baseline_low_date: 2023-10-24
-  # support:
-  #   chrome: "111"
-  #   chrome_android: "111"
-  #   edge: "111"
-  #   firefox: "119"
-  #   firefox_android: "119"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - javascript.builtins.String.isWellFormed
-  - javascript.builtins.String.toWellFormed
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
