@@ -9,14 +9,14 @@ npm install web-features
 ```
 
 ```js
-import { features, groups, snapshots } from "web-features";
+import { browsers, features, groups, snapshots } from "web-features";
 ```
 
 Or, without Node.js:
 
 ```js
 import data from "web-features/data.json" with { type: "json" };
-const { features, groups, snapshots } = data;
+const { browsers, features, groups, snapshots } = data;
 ```
 
 To import the JSON schema with or without Node.js:

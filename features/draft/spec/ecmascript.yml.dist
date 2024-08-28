@@ -20,51 +20,9 @@ compat_features:
   - javascript.builtins.Boolean.Boolean
   - javascript.builtins.Boolean.toString
   - javascript.builtins.Boolean.valueOf
-  - javascript.builtins.Date
-  - javascript.builtins.Date.Date
-  - javascript.builtins.Date.UTC
-  - javascript.builtins.Date.getDate
-  - javascript.builtins.Date.getDay
-  - javascript.builtins.Date.getFullYear
-  - javascript.builtins.Date.getHours
-  - javascript.builtins.Date.getMilliseconds
-  - javascript.builtins.Date.getMinutes
-  - javascript.builtins.Date.getMonth
-  - javascript.builtins.Date.getSeconds
-  - javascript.builtins.Date.getTime
-  - javascript.builtins.Date.getTimezoneOffset
-  - javascript.builtins.Date.getUTCDate
-  - javascript.builtins.Date.getUTCDay
-  - javascript.builtins.Date.getUTCFullYear
-  - javascript.builtins.Date.getUTCHours
-  - javascript.builtins.Date.getUTCMilliseconds
-  - javascript.builtins.Date.getUTCMinutes
-  - javascript.builtins.Date.getUTCMonth
-  - javascript.builtins.Date.getUTCSeconds
-  - javascript.builtins.Date.parse
-  - javascript.builtins.Date.setDate
-  - javascript.builtins.Date.setFullYear
-  - javascript.builtins.Date.setHours
-  - javascript.builtins.Date.setMilliseconds
-  - javascript.builtins.Date.setMinutes
-  - javascript.builtins.Date.setMonth
-  - javascript.builtins.Date.setSeconds
-  - javascript.builtins.Date.setTime
-  - javascript.builtins.Date.setUTCDate
-  - javascript.builtins.Date.setUTCFullYear
-  - javascript.builtins.Date.setUTCHours
-  - javascript.builtins.Date.setUTCMilliseconds
-  - javascript.builtins.Date.setUTCMinutes
-  - javascript.builtins.Date.setUTCMonth
-  - javascript.builtins.Date.setUTCSeconds
-  - javascript.builtins.Date.toDateString
   - javascript.builtins.Date.toLocaleDateString
   - javascript.builtins.Date.toLocaleString
   - javascript.builtins.Date.toLocaleTimeString
-  - javascript.builtins.Date.toString
-  - javascript.builtins.Date.toTimeString
-  - javascript.builtins.Date.toUTCString
-  - javascript.builtins.Date.valueOf
   - javascript.builtins.Error
   - javascript.builtins.Error.Error
   - javascript.builtins.Error.message
@@ -78,45 +36,7 @@ compat_features:
   - javascript.builtins.Function.call
   - javascript.builtins.Function.length
   - javascript.builtins.Function.toString
-  - javascript.builtins.Infinity
-  - javascript.builtins.Math
-  - javascript.builtins.Math.E
-  - javascript.builtins.Math.LN10
-  - javascript.builtins.Math.LN2
-  - javascript.builtins.Math.LOG10E
-  - javascript.builtins.Math.LOG2E
-  - javascript.builtins.Math.PI
-  - javascript.builtins.Math.SQRT1_2
-  - javascript.builtins.Math.SQRT2
-  - javascript.builtins.Math.abs
-  - javascript.builtins.Math.acos
-  - javascript.builtins.Math.asin
-  - javascript.builtins.Math.atan
-  - javascript.builtins.Math.atan2
-  - javascript.builtins.Math.ceil
-  - javascript.builtins.Math.cos
-  - javascript.builtins.Math.exp
-  - javascript.builtins.Math.floor
-  - javascript.builtins.Math.log
-  - javascript.builtins.Math.max
-  - javascript.builtins.Math.min
-  - javascript.builtins.Math.pow
-  - javascript.builtins.Math.random
-  - javascript.builtins.Math.round
-  - javascript.builtins.Math.sin
-  - javascript.builtins.Math.sqrt
-  - javascript.builtins.Math.tan
-  - javascript.builtins.NaN
-  - javascript.builtins.Number
-  - javascript.builtins.Number.MAX_VALUE
-  - javascript.builtins.Number.MIN_VALUE
-  - javascript.builtins.Number.NEGATIVE_INFINITY
-  - javascript.builtins.Number.NaN
-  - javascript.builtins.Number.Number
-  - javascript.builtins.Number.POSITIVE_INFINITY
   - javascript.builtins.Number.toLocaleString
-  - javascript.builtins.Number.toString
-  - javascript.builtins.Number.valueOf
   - javascript.builtins.Object
   - javascript.builtins.Object.Object
   - javascript.builtins.Object.constructor
@@ -127,16 +47,6 @@ compat_features:
   - javascript.builtins.RangeError.RangeError
   - javascript.builtins.ReferenceError
   - javascript.builtins.ReferenceError.ReferenceError
-  - javascript.builtins.RegExp
-  - javascript.builtins.RegExp.RegExp
-  - javascript.builtins.RegExp.exec
-  - javascript.builtins.RegExp.global
-  - javascript.builtins.RegExp.ignoreCase
-  - javascript.builtins.RegExp.lastIndex
-  - javascript.builtins.RegExp.multiline
-  - javascript.builtins.RegExp.source
-  - javascript.builtins.RegExp.test
-  - javascript.builtins.RegExp.toString
   - javascript.builtins.String
   - javascript.builtins.String.String
   - javascript.builtins.String.charAt
@@ -164,19 +74,14 @@ compat_features:
   - javascript.builtins.URIError.URIError
   - javascript.builtins.eval
   - javascript.builtins.isFinite
-  - javascript.builtins.isNaN
   - javascript.builtins.parseFloat
-  - javascript.builtins.parseInt
   - javascript.builtins.undefined
   - javascript.functions
   - javascript.functions.arguments
   - javascript.functions.arguments.length
   - javascript.grammar.boolean_literals
-  - javascript.grammar.decimal_numeric_literals
   - javascript.grammar.hexadecimal_escape_sequences
-  - javascript.grammar.hexadecimal_numeric_literals
   - javascript.grammar.null_literal
-  - javascript.grammar.regular_expression_literals
   - javascript.grammar.string_literals
   - javascript.grammar.trailing_commas
   - javascript.grammar.unicode_escape_sequences
@@ -230,19 +135,6 @@ compat_features:
   - javascript.operators.unary_plus
   - javascript.operators.unsigned_right_shift
   - javascript.operators.unsigned_right_shift_assignment
-  - javascript.regular_expressions.backreference
-  - javascript.regular_expressions.capturing_group
-  - javascript.regular_expressions.character_class
-  - javascript.regular_expressions.character_class_escape
-  - javascript.regular_expressions.character_escape
-  - javascript.regular_expressions.disjunction
-  - javascript.regular_expressions.input_boundary_assertion
-  - javascript.regular_expressions.literal_character
-  - javascript.regular_expressions.lookahead_assertion
-  - javascript.regular_expressions.non_capturing_group
-  - javascript.regular_expressions.quantifier
-  - javascript.regular_expressions.wildcard
-  - javascript.regular_expressions.word_boundary_assertion
   - javascript.statements.block
   - javascript.statements.break
   - javascript.statements.continue
@@ -298,21 +190,6 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: "2"
-  #   safari_ios: "1"
-  - javascript.builtins.Number.toExponential
-  - javascript.builtins.Number.toFixed
-  - javascript.builtins.Number.toPrecision
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
   #   safari: "3"
   #   safari_ios: "1"
   - javascript.builtins.Object.hasOwnProperty
@@ -332,19 +209,6 @@ compat_features:
   #   safari: "3.1"
   #   safari_ios: "3"
   - javascript.operators.void
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "4"
-  - javascript.builtins.Date.now
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -373,20 +237,6 @@ compat_features:
   #   safari_ios: "3.2"
   - javascript.operators.decrement
   - javascript.operators.increment
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - javascript.builtins.Date.toISOString
-  - javascript.builtins.Date.toJSON
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -594,19 +444,6 @@ compat_features:
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
   # support:
-  #   chrome: "28"
-  #   chrome_android: "28"
-  #   edge: "12"
-  #   firefox: "20"
-  #   firefox_android: "20"
-  #   safari: "7"
-  #   safari_ios: "7"
-  - javascript.builtins.Math.imul
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
   #   chrome: "32"
   #   chrome_android: "32"
   #   edge: "12"
@@ -620,24 +457,6 @@ compat_features:
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
   # support:
-  #   chrome: "36"
-  #   chrome_android: "36"
-  #   edge: "12"
-  #   firefox: "6"
-  #   firefox_android: "6"
-  #   safari: "8"
-  #   safari_ios: "8"
-  - javascript.builtins.WeakMap
-  - javascript.builtins.WeakMap.WeakMap
-  - javascript.builtins.WeakMap.delete
-  - javascript.builtins.WeakMap.get
-  - javascript.builtins.WeakMap.has
-  - javascript.builtins.WeakMap.set
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
   #   chrome: "38"
   #   chrome_android: "38"
   #   edge: "12"
@@ -646,82 +465,6 @@ compat_features:
   #   safari: "7"
   #   safari_ios: "7"
   - javascript.statements.for_of
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "38"
-  #   chrome_android: "38"
-  #   edge: "12"
-  #   firefox: "25"
-  #   firefox_android: "25"
-  #   safari: "8"
-  #   safari_ios: "8"
-  - javascript.builtins.Math.acosh
-  - javascript.builtins.Math.asinh
-  - javascript.builtins.Math.atanh
-  - javascript.builtins.Math.cbrt
-  - javascript.builtins.Math.cosh
-  - javascript.builtins.Math.expm1
-  - javascript.builtins.Math.log10
-  - javascript.builtins.Math.log1p
-  - javascript.builtins.Math.log2
-  - javascript.builtins.Math.sinh
-  - javascript.builtins.Math.tanh
-  - javascript.builtins.Math.trunc
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "38"
-  #   chrome_android: "38"
-  #   edge: "12"
-  #   firefox: "26"
-  #   firefox_android: "26"
-  #   safari: "8"
-  #   safari_ios: "8"
-  - javascript.builtins.Math.fround
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "38"
-  #   chrome_android: "38"
-  #   edge: "12"
-  #   firefox: "27"
-  #   firefox_android: "27"
-  #   safari: "8"
-  #   safari_ios: "8"
-  - javascript.builtins.Math.hypot
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "38"
-  #   chrome_android: "38"
-  #   edge: "12"
-  #   firefox: "31"
-  #   firefox_android: "31"
-  #   safari: "7"
-  #   safari_ios: "7"
-  - javascript.builtins.Math.clz32
-
-  # baseline: high
-  # baseline_low_date: 2015-09-30
-  # baseline_high_date: 2018-03-30
-  # support:
-  #   chrome: "19"
-  #   chrome_android: "25"
-  #   edge: "12"
-  #   firefox: "16"
-  #   firefox_android: "16"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.builtins.Number.isFinite
 
   # baseline: high
   # baseline_low_date: 2015-09-30
@@ -740,47 +483,6 @@ compat_features:
   # baseline_low_date: 2015-09-30
   # baseline_high_date: 2018-03-30
   # support:
-  #   chrome: "25"
-  #   chrome_android: "25"
-  #   edge: "12"
-  #   firefox: "15"
-  #   firefox_android: "15"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.builtins.Number.isNaN
-
-  # baseline: high
-  # baseline_low_date: 2015-09-30
-  # baseline_high_date: 2018-03-30
-  # support:
-  #   chrome: "34"
-  #   chrome_android: "34"
-  #   edge: "12"
-  #   firefox: "16"
-  #   firefox_android: "16"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.builtins.Number.isInteger
-
-  # baseline: high
-  # baseline_low_date: 2015-09-30
-  # baseline_high_date: 2018-03-30
-  # support:
-  #   chrome: "34"
-  #   chrome_android: "34"
-  #   edge: "12"
-  #   firefox: "25"
-  #   firefox_android: "25"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.builtins.Number.EPSILON
-  - javascript.builtins.Number.parseFloat
-  - javascript.builtins.Number.parseInt
-
-  # baseline: high
-  # baseline_low_date: 2015-09-30
-  # baseline_high_date: 2018-03-30
-  # support:
   #   chrome: "34"
   #   chrome_android: "34"
   #   edge: "12"
@@ -788,52 +490,7 @@ compat_features:
   #   firefox_android: "31"
   #   safari: "9"
   #   safari_ios: "9"
-  - javascript.builtins.Number.MAX_SAFE_INTEGER
-  - javascript.builtins.Number.MIN_SAFE_INTEGER
   - javascript.builtins.Object.setPrototypeOf
-
-  # baseline: high
-  # baseline_low_date: 2015-09-30
-  # baseline_high_date: 2018-03-30
-  # support:
-  #   chrome: "34"
-  #   chrome_android: "34"
-  #   edge: "12"
-  #   firefox: "32"
-  #   firefox_android: "32"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.builtins.Number.isSafeInteger
-
-  # baseline: high
-  # baseline_low_date: 2015-09-30
-  # baseline_high_date: 2018-03-30
-  # support:
-  #   chrome: "36"
-  #   chrome_android: "36"
-  #   edge: "12"
-  #   firefox: "34"
-  #   firefox_android: "34"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.builtins.WeakSet
-  - javascript.builtins.WeakSet.WeakSet
-  - javascript.builtins.WeakSet.add
-  - javascript.builtins.WeakSet.delete
-  - javascript.builtins.WeakSet.has
-
-  # baseline: high
-  # baseline_low_date: 2015-09-30
-  # baseline_high_date: 2018-03-30
-  # support:
-  #   chrome: "38"
-  #   chrome_android: "38"
-  #   edge: "12"
-  #   firefox: "25"
-  #   firefox_android: "25"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.builtins.Math.sign
 
   # baseline: high
   # baseline_low_date: 2015-09-30
@@ -906,20 +563,6 @@ compat_features:
   #   safari: "9"
   #   safari_ios: "9"
   - javascript.builtins.String.repeat
-
-  # baseline: high
-  # baseline_low_date: 2015-09-30
-  # baseline_high_date: 2018-03-30
-  # support:
-  #   chrome: "41"
-  #   chrome_android: "41"
-  #   edge: "12"
-  #   firefox: "25"
-  #   firefox_android: "25"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.grammar.binary_numeric_literals
-  - javascript.grammar.octal_numeric_literals
 
   # baseline: high
   # baseline_low_date: 2015-09-30
@@ -1322,19 +965,6 @@ compat_features:
   # support:
   #   chrome: "49"
   #   chrome_android: "49"
-  #   edge: "13"
-  #   firefox: "3"
-  #   firefox_android: "4"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.builtins.RegExp.sticky
-
-  # baseline: high
-  # baseline_low_date: 2016-09-20
-  # baseline_high_date: 2019-03-20
-  # support:
-  #   chrome: "49"
-  #   chrome_android: "49"
   #   edge: "14"
   #   firefox: "15"
   #   firefox_android: "15"
@@ -1361,39 +991,12 @@ compat_features:
   # support:
   #   chrome: "50"
   #   chrome_android: "50"
-  #   edge: "12"
-  #   firefox: "46"
-  #   firefox_android: "46"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.builtins.RegExp.unicode
-
-  # baseline: high
-  # baseline_low_date: 2016-09-20
-  # baseline_high_date: 2019-03-20
-  # support:
-  #   chrome: "50"
-  #   chrome_android: "50"
   #   edge: "13"
   #   firefox: "38"
   #   firefox_android: "38"
   #   safari: "10"
   #   safari_ios: "10"
   - javascript.builtins.Generator.return
-
-  # baseline: high
-  # baseline_low_date: 2016-09-20
-  # baseline_high_date: 2019-03-20
-  # support:
-  #   chrome: "50"
-  #   chrome_android: "50"
-  #   edge: "13"
-  #   firefox: "49"
-  #   firefox_android: "49"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.builtins.RegExp.@@match
-  - javascript.builtins.RegExp.@@search
 
   # baseline: high
   # baseline_low_date: 2016-09-20
@@ -1423,19 +1026,6 @@ compat_features:
   #   safari_ios: "10"
   - javascript.builtins.ArrayBuffer.@@species
   - javascript.builtins.TypedArray.@@species
-
-  # baseline: high
-  # baseline_low_date: 2016-09-20
-  # baseline_high_date: 2019-03-20
-  # support:
-  #   chrome: "51"
-  #   chrome_android: "51"
-  #   edge: "13"
-  #   firefox: "49"
-  #   firefox_android: "49"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.builtins.RegExp.@@species
 
   # baseline: high
   # baseline_low_date: 2017-03-27
@@ -1476,7 +1066,6 @@ compat_features:
   #   firefox_android: "44"
   #   safari: "10"
   #   safari_ios: "10"
-  - javascript.builtins.Date.@@toPrimitive
   - javascript.builtins.Symbol.@@toPrimitive
   - javascript.builtins.Symbol.toPrimitive
 
@@ -1598,19 +1187,6 @@ compat_features:
   #   chrome: "49"
   #   chrome_android: "49"
   #   edge: "79"
-  #   firefox: "37"
-  #   firefox_android: "37"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.builtins.RegExp.flags
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "49"
-  #   chrome_android: "49"
-  #   edge: "79"
   #   firefox: "49"
   #   firefox_android: "49"
   #   safari: "10"
@@ -1641,8 +1217,6 @@ compat_features:
   #   firefox_android: "49"
   #   safari: "10"
   #   safari_ios: "10"
-  - javascript.builtins.RegExp.@@replace
-  - javascript.builtins.RegExp.@@split
   - javascript.builtins.Symbol.replace
   - javascript.builtins.Symbol.search
   - javascript.builtins.Symbol.split
@@ -1812,7 +1386,6 @@ compat_features:
   #   firefox_android: "67"
   #   safari: "13"
   #   safari_ios: "13"
-  - javascript.builtins.RegExp.@@matchAll
   - javascript.builtins.String.matchAll
   - javascript.builtins.Symbol.matchAll
 
@@ -1828,34 +1401,6 @@ compat_features:
   #   safari: "13.1"
   #   safari_ios: "13.4"
   - javascript.grammar.hashbang_comments
-
-  # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
-  # support:
-  #   chrome: "62"
-  #   chrome_android: "62"
-  #   edge: "79"
-  #   firefox: "78"
-  #   firefox_android: "79"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - javascript.builtins.RegExp.dotAll
-
-  # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
-  # support:
-  #   chrome: "64"
-  #   chrome_android: "64"
-  #   edge: "79"
-  #   firefox: "78"
-  #   firefox_android: "79"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - javascript.regular_expressions.named_backreference
-  - javascript.regular_expressions.named_capturing_group
-  - javascript.regular_expressions.unicode_character_class_escape
 
   # baseline: high
   # baseline_low_date: 2020-07-28
@@ -2035,19 +1580,6 @@ compat_features:
   # baseline_low_date: 2021-09-20
   # baseline_high_date: 2024-03-20
   # support:
-  #   chrome: "90"
-  #   chrome_android: "90"
-  #   edge: "90"
-  #   firefox: "88"
-  #   firefox_android: "88"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - javascript.builtins.RegExp.hasIndices
-
-  # baseline: high
-  # baseline_low_date: 2021-09-20
-  # baseline_high_date: 2024-03-20
-  # support:
   #   chrome: "91"
   #   chrome_android: "91"
   #   edge: "91"
@@ -2152,18 +1684,6 @@ compat_features:
   # baseline: low
   # baseline_low_date: 2023-03-27
   # support:
-  #   chrome: "62"
-  #   chrome_android: "62"
-  #   edge: "79"
-  #   firefox: "78"
-  #   firefox_android: "79"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - javascript.regular_expressions.lookbehind_assertion
-
-  # baseline: low
-  # baseline_low_date: 2023-03-27
-  # support:
   #   chrome: "94"
   #   chrome_android: "94"
   #   edge: "94"
@@ -2172,18 +1692,6 @@ compat_features:
   #   safari: "16.4"
   #   safari_ios: "16.4"
   - javascript.classes.static_initialization_blocks
-
-  # baseline: low
-  # baseline_low_date: 2023-09-18
-  # support:
-  #   chrome: "112"
-  #   chrome_android: "112"
-  #   edge: "112"
-  #   firefox: "116"
-  #   firefox_android: "116"
-  #   safari: "17"
-  #   safari_ios: "17"
-  - javascript.builtins.RegExp.unicodeSets
 
   # baseline: low
   # baseline_low_date: 2023-10-24
@@ -2207,7 +1715,8 @@ compat_features:
   #   safari_ios: "16.4"
   - javascript.builtins.Atomics.waitAsync
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "129"
+  #   firefox_android: "129"
   - javascript.builtins.Float16Array.Float16Array

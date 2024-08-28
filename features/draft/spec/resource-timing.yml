@@ -1,0 +1,38 @@
+draft_date: 2024-08-19
+name: Resource Timing
+description: TODO
+spec: https://w3c.github.io/resource-timing/
+compat_features:
+  - api.Performance
+  - api.Performance.clearResourceTimings
+  - api.Performance.resourcetimingbufferfull_event
+  - api.Performance.setResourceTimingBufferSize
+  - api.PerformanceResourceTiming.contentType
+  - api.PerformanceResourceTiming.deliveryType
+  - api.PerformanceResourceTiming.firstInterimResponseStart
+  - api.PerformanceResourceTiming.nextHopProtocol
+  - api.PerformanceResourceTiming.renderBlockingStatus
+  - api.PerformanceResourceTiming.responseStatus
+  - api.PerformanceResourceTiming.secureConnectionStart
+  - api.PerformanceResourceTiming.toJSON
+  - api.PerformanceResourceTiming.workerStart
+  - http.headers.Timing-Allow-Origin
+
+# The following features in the spec are already part of web-features:
+# - Resource timing (initial support):
+#   - api.PerformanceResourceTiming
+#   - api.PerformanceResourceTiming.connectEnd
+#   - api.PerformanceResourceTiming.connectStart
+#   - api.PerformanceResourceTiming.domainLookupEnd
+#   - api.PerformanceResourceTiming.domainLookupStart
+#   - api.PerformanceResourceTiming.fetchStart
+#   - api.PerformanceResourceTiming.initiatorType
+#   - api.PerformanceResourceTiming.redirectEnd
+#   - api.PerformanceResourceTiming.redirectStart
+#   - api.PerformanceResourceTiming.requestStart
+#   - api.PerformanceResourceTiming.responseEnd
+#   - api.PerformanceResourceTiming.responseStart
+# - Resource size:
+#   - api.PerformanceResourceTiming.decodedBodySize
+#   - api.PerformanceResourceTiming.encodedBodySize
+#   - api.PerformanceResourceTiming.transferSize

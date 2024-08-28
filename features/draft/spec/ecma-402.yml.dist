@@ -3,13 +3,13 @@
 
 status:
   baseline: low
-  baseline_low_date: 2024-04-16
+  baseline_low_date: 2023-08-01
   support:
     chrome: "106"
     chrome_android: "106"
     edge: "106"
-    firefox: "125"
-    firefox_android: "125"
+    firefox: "116"
+    firefox_android: "116"
     safari: "15.4"
     safari_ios: "15.4"
 compat_features:
@@ -114,23 +114,6 @@ compat_features:
   # baseline_low_date: 2019-09-19
   # baseline_high_date: 2022-03-19
   # support:
-  #   chrome: "63"
-  #   chrome_android: "63"
-  #   edge: "18"
-  #   firefox: "58"
-  #   firefox_android: "58"
-  #   safari: "13"
-  #   safari_ios: "13"
-  - javascript.builtins.Intl.PluralRules
-  - javascript.builtins.Intl.PluralRules.PluralRules
-  - javascript.builtins.Intl.PluralRules.resolvedOptions
-  - javascript.builtins.Intl.PluralRules.select
-  - javascript.builtins.Intl.PluralRules.supportedLocalesOf
-
-  # baseline: high
-  # baseline_low_date: 2019-09-19
-  # baseline_high_date: 2022-03-19
-  # support:
   #   chrome: "64"
   #   chrome_android: "64"
   #   edge: "12"
@@ -139,98 +122,6 @@ compat_features:
   #   safari: "13"
   #   safari_ios: "13"
   - javascript.builtins.Intl.NumberFormat.formatToParts
-
-  # baseline: high
-  # baseline_low_date: 2020-09-16
-  # baseline_high_date: 2023-03-16
-  # support:
-  #   chrome: "71"
-  #   chrome_android: "71"
-  #   edge: "79"
-  #   firefox: "65"
-  #   firefox_android: "65"
-  #   safari: "14"
-  #   safari_ios: "14"
-  - javascript.builtins.Intl.RelativeTimeFormat
-  - javascript.builtins.Intl.RelativeTimeFormat.RelativeTimeFormat
-  - javascript.builtins.Intl.RelativeTimeFormat.format
-  - javascript.builtins.Intl.RelativeTimeFormat.resolvedOptions
-  - javascript.builtins.Intl.RelativeTimeFormat.supportedLocalesOf
-
-  # baseline: high
-  # baseline_low_date: 2020-09-16
-  # baseline_high_date: 2023-03-16
-  # support:
-  #   chrome: "71"
-  #   chrome_android: "71"
-  #   edge: "79"
-  #   firefox: "70"
-  #   firefox_android: "79"
-  #   safari: "14"
-  #   safari_ios: "14"
-  - javascript.builtins.Intl.RelativeTimeFormat.formatToParts
-
-  # baseline: high
-  # baseline_low_date: 2020-09-16
-  # baseline_high_date: 2023-03-16
-  # support:
-  #   chrome: "74"
-  #   chrome_android: "74"
-  #   edge: "79"
-  #   firefox: "75"
-  #   firefox_android: "79"
-  #   safari: "14"
-  #   safari_ios: "14"
-  - javascript.builtins.Intl.Locale
-  - javascript.builtins.Intl.Locale.Locale
-  - javascript.builtins.Intl.Locale.baseName
-  - javascript.builtins.Intl.Locale.calendar
-  - javascript.builtins.Intl.Locale.caseFirst
-  - javascript.builtins.Intl.Locale.collation
-  - javascript.builtins.Intl.Locale.hourCycle
-  - javascript.builtins.Intl.Locale.language
-  - javascript.builtins.Intl.Locale.maximize
-  - javascript.builtins.Intl.Locale.minimize
-  - javascript.builtins.Intl.Locale.numberingSystem
-  - javascript.builtins.Intl.Locale.numeric
-  - javascript.builtins.Intl.Locale.region
-  - javascript.builtins.Intl.Locale.script
-  - javascript.builtins.Intl.Locale.toString
-
-  # baseline: high
-  # baseline_low_date: 2021-04-26
-  # baseline_high_date: 2023-10-26
-  # support:
-  #   chrome: "72"
-  #   chrome_android: "72"
-  #   edge: "79"
-  #   firefox: "78"
-  #   firefox_android: "79"
-  #   safari: "14.1"
-  #   safari_ios: "14.5"
-  - javascript.builtins.Intl.ListFormat
-  - javascript.builtins.Intl.ListFormat.ListFormat
-  - javascript.builtins.Intl.ListFormat.format
-  - javascript.builtins.Intl.ListFormat.formatToParts
-  - javascript.builtins.Intl.ListFormat.resolvedOptions
-  - javascript.builtins.Intl.ListFormat.supportedLocalesOf
-
-  # baseline: high
-  # baseline_low_date: 2021-04-26
-  # baseline_high_date: 2023-10-26
-  # support:
-  #   chrome: "81"
-  #   chrome_android: "81"
-  #   edge: "81"
-  #   firefox: "86"
-  #   firefox_android: "86"
-  #   safari: "14.1"
-  #   safari_ios: "14.5"
-  - javascript.builtins.Intl.DisplayNames
-  - javascript.builtins.Intl.DisplayNames.DisplayNames
-  - javascript.builtins.Intl.DisplayNames.of
-  - javascript.builtins.Intl.DisplayNames.resolvedOptions
-  - javascript.builtins.Intl.DisplayNames.supportedLocalesOf
 
   # baseline: high
   # baseline_low_date: 2021-08-10
@@ -258,6 +149,7 @@ compat_features:
   #   safari_ios: "15.4"
   - javascript.builtins.Intl.supportedValuesOf
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2023-08-01
   # support:
@@ -270,23 +162,3 @@ compat_features:
   #   safari_ios: "15.4"
   - javascript.builtins.Intl.NumberFormat.formatRange
   - javascript.builtins.Intl.NumberFormat.formatRangeToParts
-  - javascript.builtins.Intl.PluralRules.selectRange
-
-  # baseline: low
-  # baseline_low_date: 2024-04-16
-  # support:
-  #   chrome: "87"
-  #   chrome_android: "87"
-  #   edge: "87"
-  #   firefox: "125"
-  #   firefox_android: "125"
-  #   safari: "14.1"
-  #   safari_ios: "14.5"
-  - javascript.builtins.Intl.Segmenter
-  - javascript.builtins.Intl.Segmenter.Segmenter
-  - javascript.builtins.Intl.Segmenter.resolvedOptions
-  - javascript.builtins.Intl.Segmenter.segment
-  - javascript.builtins.Intl.Segmenter.supportedLocalesOf
-  - javascript.builtins.Intl.Segments
-  - javascript.builtins.Intl.Segments.@@iterator
-  - javascript.builtins.Intl.Segments.containing
