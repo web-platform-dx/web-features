@@ -1,0 +1,7 @@
+name: srcdoc
+description: The `srcdoc` attribute for the `<iframe>` HTML element sets a string of HTML to embed in the document. The value of `srcdoc` overrides loading a document from the `src` attribute.
+spec: https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-iframe-srcdoc
+caniuse: iframe-srcdoc
+compat_features:
+  - api.HTMLIFrameElement.srcdoc
+  - html.elements.iframe.srcdoc
