@@ -83,8 +83,8 @@ compat_features:
   #   firefox_android: "55"
   #   safari: "10"
   #   safari_ios: "10"
-  - javascript.builtins.String.toLocaleLowerCase.locale
-  - javascript.builtins.String.toLocaleUpperCase.locale
+  - javascript.builtins.String.toLocaleLowerCase.locales_parameter
+  - javascript.builtins.String.toLocaleUpperCase.locales_parameter
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: high
