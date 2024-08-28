@@ -1,16 +1,28 @@
-// Updates files in features/draft/spec/* with BCD keys mentioned in specs
-// `npm run update-drafts` updates all
-// `npm run update-drafts -- [key]` only updates features with a `shortname` that includes `key`.
-
 import { Compat } from "compute-baseline/browser-compat-data";
 import fs from "node:fs/promises";
+import fsSync from "node:fs";
+import { fdir } from "fdir";
+import Path from "path";
 import { fileURLToPath } from "node:url";
 import webSpecs from "web-specs" assert { type: "json" };
 import { Document } from "yaml";
+import yargs from "yargs";
 
 import { features } from "../index.js";
 
 type WebSpecsSpec = (typeof webSpecs)[number];
+
+const argv = yargs(process.argv.slice(2))
+  .scriptName("update-drafts")
+  .usage("$0", "Update draft features with BCD keys mentioned in specs.")
+  .option("keys", {
+    type: "array",
+    describe: "Keys to match",
+  })
+  .option("paths", {
+    type: "array",
+    describe: "Draft feature files to update",
+  }).argv;
 
 function* getPages(spec): Generator<string> {
   yield spec.url;
@@ -45,7 +57,9 @@ function formatIdentifier(s: string): string {
     .join("-");
 }
 
-async function main(specFilter: string = undefined) {
+async function main() {
+  const { keys: filterKeys, paths: filterPaths } = argv;
+
   const compat = new Compat();
 
   // Build a map of used BCD keys to feature.
@@ -61,9 +75,28 @@ async function main(specFilter: string = undefined) {
   // Build a map from URLs to spec.
   const pageToSpec = new Map<string, WebSpecsSpec>();
 
-  const selectedSpecs = specFilter
-    ? webSpecs.filter((ws) => ws.shortname.includes(specFilter))
-    : webSpecs;
+  let selectedSpecs = webSpecs;
+  let selectedKeys = filterKeys;
+
+  if (filterPaths?.length) {
+    const filePaths = filterPaths.flatMap((fileOrDirectory) => {
+      if (fsSync.statSync(fileOrDirectory).isDirectory()) {
+        return new fdir()
+          .withBasePath()
+          .filter((fp) => fp.endsWith(".yml"))
+          .crawl(fileOrDirectory)
+          .sync();
+      }
+      return fileOrDirectory;
+    });
+    selectedKeys = filePaths.map((fp) => Path.parse(fp).name);
+  }
+
+  if (selectedKeys?.length) {
+    selectedSpecs = selectedSpecs.filter((ws) =>
+      selectedKeys.some((selectedKey) => ws.shortname.includes(selectedKey)),
+    );
+  }
 
   for (const spec of selectedSpecs) {
     for (const page of getPages(spec)) {
@@ -94,7 +127,7 @@ async function main(specFilter: string = undefined) {
     for (const url of feature.spec_url) {
       const spec = pageToSpec.get(normalize(url));
       if (!spec) {
-        if (!specFilter) console.warn(`${url} not matched to any spec`);
+        if (!selectedKeys) console.warn(`${url} not matched to any spec`);
         continue;
       }
       const keys = specToCompatFeatures.get(spec);
@@ -150,5 +183,5 @@ async function main(specFilter: string = undefined) {
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  await main(process.argv[2]);
+  await main();
 }
