@@ -19,7 +19,7 @@ jobs:
       - run: git rm features/draft/spec/*.yml features/draft/spec/*.dist
       - run: npm run update-drafts
       - run: npm run dist
-      - name: Create Pull Request
+      - name: Create pull request
         uses: peter-evans/create-pull-request@v6
         with:
           add-paths: |
