@@ -2,3 +2,10 @@ name: Individual transform properties
 description: Transform elements with separate `translate`, `rotate`, and `scale` CSS properties.
 spec: https://drafts.csswg.org/css-transforms-2/#individual-transforms
 group: transforms
+compat_features:
+  - css.properties.rotate
+  - css.properties.scale
+  - css.properties.translate
+  - css.properties.rotate.none
+  - css.properties.scale.none
+  - css.properties.translate.none

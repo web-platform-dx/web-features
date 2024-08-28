@@ -9,7 +9,7 @@ status:
     chrome: "36"
     chrome_android: "36"
     edge: "12"
-    firefox: "16"
+    firefox: ≤16
     firefox_android: "16"
     safari: "9"
     safari_ios: "9"
@@ -38,6 +38,7 @@ compat_features:
   - css.types.transform-function.translateX
   - css.types.transform-function.translateY
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-09-30
   # baseline_high_date: 2018-03-30
@@ -51,7 +52,6 @@ compat_features:
   #   safari_ios: "9"
   - css.properties.transform
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-09-30
   # baseline_high_date: 2018-03-30
@@ -64,3 +64,20 @@ compat_features:
   #   safari: "9"
   #   safari_ios: "9"
   - css.properties.transform-origin
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "36"
+  #   chrome_android: "36"
+  #   edge: "12"
+  #   firefox: ≤72
+  #   firefox_android: "79"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - css.properties.transform-origin.bottom
+  - css.properties.transform-origin.center
+  - css.properties.transform-origin.left
+  - css.properties.transform-origin.right
+  - css.properties.transform-origin.top
