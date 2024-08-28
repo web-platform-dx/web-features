@@ -1,10 +1,8 @@
-draft_date: 2024-07-11
+draft_date: 2024-08-19
 name: CSS Cascading and Inheritance Level 6
 description: TODO
 spec: https://drafts.csswg.org/css-cascade-6/
 compat_features:
-  - css.at-rules.import
-  - css.at-rules.import.supports
   - css.properties.all
   - css.types.global_keywords.inherit
   - css.types.global_keywords.initial
@@ -24,3 +22,7 @@ compat_features:
 #   - api.CSSScopeRule.end
 #   - api.CSSScopeRule.start
 #   - css.at-rules.scope
+# - @import:
+#   - css.at-rules.import
+# - @supports:
+#   - css.at-rules.import.supports

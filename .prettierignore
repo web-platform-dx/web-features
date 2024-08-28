@@ -1,21 +1,19 @@
-# Exclude all files (but not directories)
-/**/*.*
+# Exclude any generated files/folders
+/**/*.dist
+/**/dist
 
-# Opt-ins
-!GOVERNANCE.md
-!eslint.config.js
-
+# Files/folders that have not yet been formatted
+# TODO: Format all these files
+README.md
+index.ts
+types.ts
+2022-backgrounder.md
+towards-features.md
+/.github/**
+/docs
 !/docs/publishing.md
-
-!/features/*.yml
-/features/*.yml.dist
-
-!/packages/compute-baseline/**
-!/packages/web-features/**
-
-!/scripts/build.ts
-!/scripts/dist.ts
-!/scripts/feature-init.ts
-!/scripts/find-troublesome-ancestors.ts
-!/scripts/release.ts
-!/scripts/update-drafts.ts
+/features/draft
+/schemas
+/scripts/caniuse.ts
+/scripts/schema.ts
+/scripts/specs.ts

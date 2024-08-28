@@ -1,4 +1,4 @@
-draft_date: 2024-07-11
+draft_date: 2024-08-19
 name: CSS Fonts Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-fonts-5/
@@ -101,7 +101,6 @@ compat_features:
   - css.properties.font-weight.normal
   - svg.global_attributes.font-family
   - svg.global_attributes.font-size
-  - svg.global_attributes.font-size-adjust
   - svg.global_attributes.font-stretch
   - svg.global_attributes.font-style
   - svg.global_attributes.font-variant
@@ -142,6 +141,7 @@ compat_features:
 #   - css.properties.font-size-adjust
 #   - css.properties.font-size-adjust.from-font
 #   - css.properties.font-size-adjust.none
+#   - svg.global_attributes.font-size-adjust
 # - font-synthesis:
 #   - css.properties.font-synthesis
 # - font-synthesis-position:

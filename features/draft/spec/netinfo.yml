@@ -1,0 +1,17 @@
+draft_date: 2024-08-19
+name: Network Information API
+description: TODO
+spec: https://wicg.github.io/netinfo/
+compat_features:
+  - api.Navigator.connection
+  - api.NetworkInformation
+  - api.NetworkInformation.change_event
+  - api.NetworkInformation.downlink
+  - api.NetworkInformation.downlinkMax
+  - api.NetworkInformation.effectiveType
+  - api.NetworkInformation.rtt
+  - api.NetworkInformation.type
+  - api.WorkerNavigator.connection
+  - http.headers.Downlink
+  - http.headers.ECT
+  - http.headers.RTT

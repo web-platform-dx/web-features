@@ -1,4 +1,4 @@
-draft_date: 2024-07-11
+draft_date: 2024-08-19
 name: ECMAScript Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
@@ -69,55 +69,9 @@ compat_features:
   - javascript.builtins.DataView.setUint16
   - javascript.builtins.DataView.setUint32
   - javascript.builtins.DataView.setUint8
-  - javascript.builtins.Date
-  - javascript.builtins.Date.@@toPrimitive
-  - javascript.builtins.Date.Date
-  - javascript.builtins.Date.UTC
-  - javascript.builtins.Date.getDate
-  - javascript.builtins.Date.getDay
-  - javascript.builtins.Date.getFullYear
-  - javascript.builtins.Date.getHours
-  - javascript.builtins.Date.getMilliseconds
-  - javascript.builtins.Date.getMinutes
-  - javascript.builtins.Date.getMonth
-  - javascript.builtins.Date.getSeconds
-  - javascript.builtins.Date.getTime
-  - javascript.builtins.Date.getTimezoneOffset
-  - javascript.builtins.Date.getUTCDate
-  - javascript.builtins.Date.getUTCDay
-  - javascript.builtins.Date.getUTCFullYear
-  - javascript.builtins.Date.getUTCHours
-  - javascript.builtins.Date.getUTCMilliseconds
-  - javascript.builtins.Date.getUTCMinutes
-  - javascript.builtins.Date.getUTCMonth
-  - javascript.builtins.Date.getUTCSeconds
-  - javascript.builtins.Date.now
-  - javascript.builtins.Date.parse
-  - javascript.builtins.Date.setDate
-  - javascript.builtins.Date.setFullYear
-  - javascript.builtins.Date.setHours
-  - javascript.builtins.Date.setMilliseconds
-  - javascript.builtins.Date.setMinutes
-  - javascript.builtins.Date.setMonth
-  - javascript.builtins.Date.setSeconds
-  - javascript.builtins.Date.setTime
-  - javascript.builtins.Date.setUTCDate
-  - javascript.builtins.Date.setUTCFullYear
-  - javascript.builtins.Date.setUTCHours
-  - javascript.builtins.Date.setUTCMilliseconds
-  - javascript.builtins.Date.setUTCMinutes
-  - javascript.builtins.Date.setUTCMonth
-  - javascript.builtins.Date.setUTCSeconds
-  - javascript.builtins.Date.toDateString
-  - javascript.builtins.Date.toISOString
-  - javascript.builtins.Date.toJSON
   - javascript.builtins.Date.toLocaleDateString
   - javascript.builtins.Date.toLocaleString
   - javascript.builtins.Date.toLocaleTimeString
-  - javascript.builtins.Date.toString
-  - javascript.builtins.Date.toTimeString
-  - javascript.builtins.Date.toUTCString
-  - javascript.builtins.Date.valueOf
   - javascript.builtins.Error
   - javascript.builtins.Error.Error
   - javascript.builtins.Error.Error.options_cause_parameter
@@ -147,80 +101,13 @@ compat_features:
   - javascript.builtins.Generator.throw
   - javascript.builtins.GeneratorFunction
   - javascript.builtins.GeneratorFunction.GeneratorFunction
-  - javascript.builtins.Infinity
   - javascript.builtins.Iterator
   - javascript.builtins.Iterator.@@iterator
   - javascript.builtins.JSON
   - javascript.builtins.JSON.parse
   - javascript.builtins.JSON.stringify
   - javascript.builtins.Map.@@species
-  - javascript.builtins.Math
-  - javascript.builtins.Math.E
-  - javascript.builtins.Math.LN10
-  - javascript.builtins.Math.LN2
-  - javascript.builtins.Math.LOG10E
-  - javascript.builtins.Math.LOG2E
-  - javascript.builtins.Math.PI
-  - javascript.builtins.Math.SQRT1_2
-  - javascript.builtins.Math.SQRT2
-  - javascript.builtins.Math.abs
-  - javascript.builtins.Math.acos
-  - javascript.builtins.Math.acosh
-  - javascript.builtins.Math.asin
-  - javascript.builtins.Math.asinh
-  - javascript.builtins.Math.atan
-  - javascript.builtins.Math.atan2
-  - javascript.builtins.Math.atanh
-  - javascript.builtins.Math.cbrt
-  - javascript.builtins.Math.ceil
-  - javascript.builtins.Math.clz32
-  - javascript.builtins.Math.cos
-  - javascript.builtins.Math.cosh
-  - javascript.builtins.Math.exp
-  - javascript.builtins.Math.expm1
-  - javascript.builtins.Math.floor
-  - javascript.builtins.Math.fround
-  - javascript.builtins.Math.hypot
-  - javascript.builtins.Math.imul
-  - javascript.builtins.Math.log
-  - javascript.builtins.Math.log10
-  - javascript.builtins.Math.log1p
-  - javascript.builtins.Math.log2
-  - javascript.builtins.Math.max
-  - javascript.builtins.Math.min
-  - javascript.builtins.Math.pow
-  - javascript.builtins.Math.random
-  - javascript.builtins.Math.round
-  - javascript.builtins.Math.sign
-  - javascript.builtins.Math.sin
-  - javascript.builtins.Math.sinh
-  - javascript.builtins.Math.sqrt
-  - javascript.builtins.Math.tan
-  - javascript.builtins.Math.tanh
-  - javascript.builtins.Math.trunc
-  - javascript.builtins.NaN
-  - javascript.builtins.Number
-  - javascript.builtins.Number.EPSILON
-  - javascript.builtins.Number.MAX_SAFE_INTEGER
-  - javascript.builtins.Number.MAX_VALUE
-  - javascript.builtins.Number.MIN_SAFE_INTEGER
-  - javascript.builtins.Number.MIN_VALUE
-  - javascript.builtins.Number.NEGATIVE_INFINITY
-  - javascript.builtins.Number.NaN
-  - javascript.builtins.Number.Number
-  - javascript.builtins.Number.POSITIVE_INFINITY
-  - javascript.builtins.Number.isFinite
-  - javascript.builtins.Number.isInteger
-  - javascript.builtins.Number.isNaN
-  - javascript.builtins.Number.isSafeInteger
-  - javascript.builtins.Number.parseFloat
-  - javascript.builtins.Number.parseInt
-  - javascript.builtins.Number.toExponential
-  - javascript.builtins.Number.toFixed
   - javascript.builtins.Number.toLocaleString
-  - javascript.builtins.Number.toPrecision
-  - javascript.builtins.Number.toString
-  - javascript.builtins.Number.valueOf
   - javascript.builtins.Object
   - javascript.builtins.Object.Object
   - javascript.builtins.Object.assign
@@ -287,28 +174,6 @@ compat_features:
   - javascript.builtins.Reflect.preventExtensions
   - javascript.builtins.Reflect.set
   - javascript.builtins.Reflect.setPrototypeOf
-  - javascript.builtins.RegExp
-  - javascript.builtins.RegExp.@@match
-  - javascript.builtins.RegExp.@@matchAll
-  - javascript.builtins.RegExp.@@replace
-  - javascript.builtins.RegExp.@@search
-  - javascript.builtins.RegExp.@@species
-  - javascript.builtins.RegExp.@@split
-  - javascript.builtins.RegExp.RegExp
-  - javascript.builtins.RegExp.dotAll
-  - javascript.builtins.RegExp.exec
-  - javascript.builtins.RegExp.flags
-  - javascript.builtins.RegExp.global
-  - javascript.builtins.RegExp.hasIndices
-  - javascript.builtins.RegExp.ignoreCase
-  - javascript.builtins.RegExp.lastIndex
-  - javascript.builtins.RegExp.multiline
-  - javascript.builtins.RegExp.source
-  - javascript.builtins.RegExp.sticky
-  - javascript.builtins.RegExp.test
-  - javascript.builtins.RegExp.toString
-  - javascript.builtins.RegExp.unicode
-  - javascript.builtins.RegExp.unicodeSets
   - javascript.builtins.Set.@@species
   - javascript.builtins.SharedArrayBuffer
   - javascript.builtins.SharedArrayBuffer.@@species
@@ -384,20 +249,9 @@ compat_features:
   - javascript.builtins.TypedArray.@@species
   - javascript.builtins.URIError
   - javascript.builtins.URIError.URIError
-  - javascript.builtins.WeakMap
-  - javascript.builtins.WeakMap.WeakMap
-  - javascript.builtins.WeakMap.delete
-  - javascript.builtins.WeakMap.get
-  - javascript.builtins.WeakMap.has
-  - javascript.builtins.WeakMap.set
   - javascript.builtins.WeakRef
   - javascript.builtins.WeakRef.WeakRef
   - javascript.builtins.WeakRef.deref
-  - javascript.builtins.WeakSet
-  - javascript.builtins.WeakSet.WeakSet
-  - javascript.builtins.WeakSet.add
-  - javascript.builtins.WeakSet.delete
-  - javascript.builtins.WeakSet.has
   - javascript.builtins.decodeURI
   - javascript.builtins.decodeURIComponent
   - javascript.builtins.encodeURI
@@ -405,9 +259,7 @@ compat_features:
   - javascript.builtins.eval
   - javascript.builtins.globalThis
   - javascript.builtins.isFinite
-  - javascript.builtins.isNaN
   - javascript.builtins.parseFloat
-  - javascript.builtins.parseInt
   - javascript.builtins.undefined
   - javascript.classes.private_class_fields
   - javascript.classes.private_class_fields_in
@@ -425,16 +277,11 @@ compat_features:
   - javascript.functions.method_definitions
   - javascript.functions.rest_parameters
   - javascript.functions.set
-  - javascript.grammar.binary_numeric_literals
   - javascript.grammar.boolean_literals
-  - javascript.grammar.decimal_numeric_literals
   - javascript.grammar.hashbang_comments
   - javascript.grammar.hexadecimal_escape_sequences
-  - javascript.grammar.hexadecimal_numeric_literals
   - javascript.grammar.null_literal
   - javascript.grammar.numeric_separators
-  - javascript.grammar.octal_numeric_literals
-  - javascript.grammar.regular_expression_literals
   - javascript.grammar.string_literals
   - javascript.grammar.template_literals
   - javascript.grammar.trailing_commas
@@ -514,23 +361,6 @@ compat_features:
   - javascript.operators.void
   - javascript.operators.yield
   - javascript.operators.yield_star
-  - javascript.regular_expressions.backreference
-  - javascript.regular_expressions.capturing_group
-  - javascript.regular_expressions.character_class
-  - javascript.regular_expressions.character_class_escape
-  - javascript.regular_expressions.character_escape
-  - javascript.regular_expressions.disjunction
-  - javascript.regular_expressions.input_boundary_assertion
-  - javascript.regular_expressions.literal_character
-  - javascript.regular_expressions.lookahead_assertion
-  - javascript.regular_expressions.lookbehind_assertion
-  - javascript.regular_expressions.named_backreference
-  - javascript.regular_expressions.named_capturing_group
-  - javascript.regular_expressions.non_capturing_group
-  - javascript.regular_expressions.quantifier
-  - javascript.regular_expressions.unicode_character_class_escape
-  - javascript.regular_expressions.wildcard
-  - javascript.regular_expressions.word_boundary_assertion
   - javascript.statements.async_generator_function
   - javascript.statements.block
   - javascript.statements.break
@@ -637,11 +467,15 @@ compat_features:
 #   - javascript.builtins.TypedArray.toReversed
 #   - javascript.builtins.TypedArray.toSorted
 #   - javascript.builtins.TypedArray.with
-# - Resizable ArrayBuffer:
+# - Resizable buffers:
 #   - javascript.builtins.ArrayBuffer.ArrayBuffer.maxByteLength_option
 #   - javascript.builtins.ArrayBuffer.maxByteLength
 #   - javascript.builtins.ArrayBuffer.resizable
 #   - javascript.builtins.ArrayBuffer.resize
+#   - javascript.builtins.SharedArrayBuffer.SharedArrayBuffer.maxByteLength_option
+#   - javascript.builtins.SharedArrayBuffer.grow
+#   - javascript.builtins.SharedArrayBuffer.growable
+#   - javascript.builtins.SharedArrayBuffer.maxByteLength
 # - Async functions:
 #   - javascript.builtins.AsyncFunction
 #   - javascript.builtins.AsyncFunction.AsyncFunction
@@ -655,6 +489,53 @@ compat_features:
 #   - javascript.builtins.BigInt.asUintN
 #   - javascript.builtins.BigInt.toString
 #   - javascript.builtins.BigInt.valueOf
+# - Date:
+#   - javascript.builtins.Date
+#   - javascript.builtins.Date.@@toPrimitive
+#   - javascript.builtins.Date.Date
+#   - javascript.builtins.Date.UTC
+#   - javascript.builtins.Date.getDate
+#   - javascript.builtins.Date.getDay
+#   - javascript.builtins.Date.getFullYear
+#   - javascript.builtins.Date.getHours
+#   - javascript.builtins.Date.getMilliseconds
+#   - javascript.builtins.Date.getMinutes
+#   - javascript.builtins.Date.getMonth
+#   - javascript.builtins.Date.getSeconds
+#   - javascript.builtins.Date.getTime
+#   - javascript.builtins.Date.getTimezoneOffset
+#   - javascript.builtins.Date.getUTCDate
+#   - javascript.builtins.Date.getUTCDay
+#   - javascript.builtins.Date.getUTCFullYear
+#   - javascript.builtins.Date.getUTCHours
+#   - javascript.builtins.Date.getUTCMilliseconds
+#   - javascript.builtins.Date.getUTCMinutes
+#   - javascript.builtins.Date.getUTCMonth
+#   - javascript.builtins.Date.getUTCSeconds
+#   - javascript.builtins.Date.now
+#   - javascript.builtins.Date.parse
+#   - javascript.builtins.Date.setDate
+#   - javascript.builtins.Date.setFullYear
+#   - javascript.builtins.Date.setHours
+#   - javascript.builtins.Date.setMilliseconds
+#   - javascript.builtins.Date.setMinutes
+#   - javascript.builtins.Date.setMonth
+#   - javascript.builtins.Date.setSeconds
+#   - javascript.builtins.Date.setTime
+#   - javascript.builtins.Date.setUTCDate
+#   - javascript.builtins.Date.setUTCFullYear
+#   - javascript.builtins.Date.setUTCHours
+#   - javascript.builtins.Date.setUTCMilliseconds
+#   - javascript.builtins.Date.setUTCMinutes
+#   - javascript.builtins.Date.setUTCMonth
+#   - javascript.builtins.Date.setUTCSeconds
+#   - javascript.builtins.Date.toDateString
+#   - javascript.builtins.Date.toISOString
+#   - javascript.builtins.Date.toJSON
+#   - javascript.builtins.Date.toString
+#   - javascript.builtins.Date.toTimeString
+#   - javascript.builtins.Date.toUTCString
+#   - javascript.builtins.Date.valueOf
 # - Typed arrays (initial support):
 #   - javascript.builtins.Float32Array
 #   - javascript.builtins.Float32Array.Float32Array
@@ -689,6 +570,80 @@ compat_features:
 #   - javascript.builtins.Uint8Array.Uint8Array
 #   - javascript.builtins.Uint8ClampedArray
 #   - javascript.builtins.Uint8ClampedArray.Uint8ClampedArray
+# - Math and numbers:
+#   - javascript.builtins.Infinity
+#   - javascript.builtins.Math
+#   - javascript.builtins.Math.E
+#   - javascript.builtins.Math.LN10
+#   - javascript.builtins.Math.LN2
+#   - javascript.builtins.Math.LOG10E
+#   - javascript.builtins.Math.LOG2E
+#   - javascript.builtins.Math.PI
+#   - javascript.builtins.Math.SQRT1_2
+#   - javascript.builtins.Math.SQRT2
+#   - javascript.builtins.Math.abs
+#   - javascript.builtins.Math.acos
+#   - javascript.builtins.Math.acosh
+#   - javascript.builtins.Math.asin
+#   - javascript.builtins.Math.asinh
+#   - javascript.builtins.Math.atan
+#   - javascript.builtins.Math.atan2
+#   - javascript.builtins.Math.atanh
+#   - javascript.builtins.Math.cbrt
+#   - javascript.builtins.Math.ceil
+#   - javascript.builtins.Math.clz32
+#   - javascript.builtins.Math.cos
+#   - javascript.builtins.Math.cosh
+#   - javascript.builtins.Math.exp
+#   - javascript.builtins.Math.expm1
+#   - javascript.builtins.Math.floor
+#   - javascript.builtins.Math.fround
+#   - javascript.builtins.Math.hypot
+#   - javascript.builtins.Math.imul
+#   - javascript.builtins.Math.log
+#   - javascript.builtins.Math.log10
+#   - javascript.builtins.Math.log1p
+#   - javascript.builtins.Math.log2
+#   - javascript.builtins.Math.max
+#   - javascript.builtins.Math.min
+#   - javascript.builtins.Math.pow
+#   - javascript.builtins.Math.random
+#   - javascript.builtins.Math.round
+#   - javascript.builtins.Math.sign
+#   - javascript.builtins.Math.sin
+#   - javascript.builtins.Math.sinh
+#   - javascript.builtins.Math.sqrt
+#   - javascript.builtins.Math.tan
+#   - javascript.builtins.Math.tanh
+#   - javascript.builtins.Math.trunc
+#   - javascript.builtins.NaN
+#   - javascript.builtins.Number
+#   - javascript.builtins.Number.EPSILON
+#   - javascript.builtins.Number.MAX_SAFE_INTEGER
+#   - javascript.builtins.Number.MAX_VALUE
+#   - javascript.builtins.Number.MIN_SAFE_INTEGER
+#   - javascript.builtins.Number.MIN_VALUE
+#   - javascript.builtins.Number.NEGATIVE_INFINITY
+#   - javascript.builtins.Number.NaN
+#   - javascript.builtins.Number.Number
+#   - javascript.builtins.Number.POSITIVE_INFINITY
+#   - javascript.builtins.Number.isFinite
+#   - javascript.builtins.Number.isInteger
+#   - javascript.builtins.Number.isNaN
+#   - javascript.builtins.Number.isSafeInteger
+#   - javascript.builtins.Number.parseFloat
+#   - javascript.builtins.Number.parseInt
+#   - javascript.builtins.Number.toExponential
+#   - javascript.builtins.Number.toFixed
+#   - javascript.builtins.Number.toPrecision
+#   - javascript.builtins.Number.toString
+#   - javascript.builtins.Number.valueOf
+#   - javascript.builtins.isNaN
+#   - javascript.builtins.parseInt
+#   - javascript.grammar.binary_numeric_literals
+#   - javascript.grammar.decimal_numeric_literals
+#   - javascript.grammar.hexadecimal_numeric_literals
+#   - javascript.grammar.octal_numeric_literals
 # - Map (initial support):
 #   - javascript.builtins.Map
 #   - javascript.builtins.Map.@@iterator
@@ -718,6 +673,47 @@ compat_features:
 #   - javascript.builtins.Promise.any
 # - Promise finally():
 #   - javascript.builtins.Promise.finally
+# - Regular expressions:
+#   - javascript.builtins.RegExp
+#   - javascript.builtins.RegExp.@@match
+#   - javascript.builtins.RegExp.@@matchAll
+#   - javascript.builtins.RegExp.@@replace
+#   - javascript.builtins.RegExp.@@search
+#   - javascript.builtins.RegExp.@@species
+#   - javascript.builtins.RegExp.@@split
+#   - javascript.builtins.RegExp.RegExp
+#   - javascript.builtins.RegExp.dotAll
+#   - javascript.builtins.RegExp.exec
+#   - javascript.builtins.RegExp.flags
+#   - javascript.builtins.RegExp.global
+#   - javascript.builtins.RegExp.hasIndices
+#   - javascript.builtins.RegExp.ignoreCase
+#   - javascript.builtins.RegExp.lastIndex
+#   - javascript.builtins.RegExp.multiline
+#   - javascript.builtins.RegExp.source
+#   - javascript.builtins.RegExp.sticky
+#   - javascript.builtins.RegExp.test
+#   - javascript.builtins.RegExp.toString
+#   - javascript.builtins.RegExp.unicode
+#   - javascript.builtins.RegExp.unicodeSets
+#   - javascript.grammar.regular_expression_literals
+#   - javascript.regular_expressions.backreference
+#   - javascript.regular_expressions.capturing_group
+#   - javascript.regular_expressions.character_class
+#   - javascript.regular_expressions.character_class_escape
+#   - javascript.regular_expressions.character_escape
+#   - javascript.regular_expressions.disjunction
+#   - javascript.regular_expressions.input_boundary_assertion
+#   - javascript.regular_expressions.literal_character
+#   - javascript.regular_expressions.lookahead_assertion
+#   - javascript.regular_expressions.lookbehind_assertion
+#   - javascript.regular_expressions.named_backreference
+#   - javascript.regular_expressions.named_capturing_group
+#   - javascript.regular_expressions.non_capturing_group
+#   - javascript.regular_expressions.quantifier
+#   - javascript.regular_expressions.unicode_character_class_escape
+#   - javascript.regular_expressions.wildcard
+#   - javascript.regular_expressions.word_boundary_assertion
 # - Set (initial support):
 #   - javascript.builtins.Set
 #   - javascript.builtins.Set.@@iterator
@@ -731,11 +727,6 @@ compat_features:
 #   - javascript.builtins.Set.keys
 #   - javascript.builtins.Set.size
 #   - javascript.builtins.Set.values
-# - Growable SharedArrayBuffer:
-#   - javascript.builtins.SharedArrayBuffer.SharedArrayBuffer.maxByteLength_option
-#   - javascript.builtins.SharedArrayBuffer.grow
-#   - javascript.builtins.SharedArrayBuffer.growable
-#   - javascript.builtins.SharedArrayBuffer.maxByteLength
 # - Typed array iterators:
 #   - javascript.builtins.TypedArray.@@iterator
 #   - javascript.builtins.TypedArray.entries
@@ -751,6 +742,19 @@ compat_features:
 #   - javascript.builtins.TypedArray.reduce
 #   - javascript.builtins.TypedArray.reduceRight
 #   - javascript.builtins.TypedArray.some
+# - WeakMap:
+#   - javascript.builtins.WeakMap
+#   - javascript.builtins.WeakMap.WeakMap
+#   - javascript.builtins.WeakMap.delete
+#   - javascript.builtins.WeakMap.get
+#   - javascript.builtins.WeakMap.has
+#   - javascript.builtins.WeakMap.set
+# - WeakSet:
+#   - javascript.builtins.WeakSet
+#   - javascript.builtins.WeakSet.WeakSet
+#   - javascript.builtins.WeakSet.add
+#   - javascript.builtins.WeakSet.delete
+#   - javascript.builtins.WeakSet.has
 # - Classes:
 #   - javascript.classes
 #   - javascript.classes.constructor

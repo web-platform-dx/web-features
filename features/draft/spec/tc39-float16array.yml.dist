@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "129"
+    firefox_android: "129"
 compat_features:
   - javascript.builtins.DataView.getFloat16
   - javascript.builtins.DataView.setFloat16
