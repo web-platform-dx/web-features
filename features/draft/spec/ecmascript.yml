@@ -1,4 +1,4 @@
-draft_date: 2024-08-26
+draft_date: 2024-08-28
 name: ECMAScript Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
@@ -153,44 +153,6 @@ compat_features:
   - javascript.builtins.Reflect.set
   - javascript.builtins.Reflect.setPrototypeOf
   - javascript.builtins.Set.@@species
-  - javascript.builtins.String
-  - javascript.builtins.String.@@iterator
-  - javascript.builtins.String.String
-  - javascript.builtins.String.at
-  - javascript.builtins.String.charAt
-  - javascript.builtins.String.charCodeAt
-  - javascript.builtins.String.codePointAt
-  - javascript.builtins.String.concat
-  - javascript.builtins.String.endsWith
-  - javascript.builtins.String.fromCharCode
-  - javascript.builtins.String.fromCodePoint
-  - javascript.builtins.String.includes
-  - javascript.builtins.String.indexOf
-  - javascript.builtins.String.isWellFormed
-  - javascript.builtins.String.lastIndexOf
-  - javascript.builtins.String.length
-  - javascript.builtins.String.match
-  - javascript.builtins.String.matchAll
-  - javascript.builtins.String.normalize
-  - javascript.builtins.String.padEnd
-  - javascript.builtins.String.padStart
-  - javascript.builtins.String.raw
-  - javascript.builtins.String.repeat
-  - javascript.builtins.String.replace
-  - javascript.builtins.String.replaceAll
-  - javascript.builtins.String.search
-  - javascript.builtins.String.slice
-  - javascript.builtins.String.split
-  - javascript.builtins.String.startsWith
-  - javascript.builtins.String.substring
-  - javascript.builtins.String.toLowerCase
-  - javascript.builtins.String.toString
-  - javascript.builtins.String.toUpperCase
-  - javascript.builtins.String.toWellFormed
-  - javascript.builtins.String.trim
-  - javascript.builtins.String.trimEnd
-  - javascript.builtins.String.trimStart
-  - javascript.builtins.String.valueOf
   - javascript.builtins.Symbol
   - javascript.builtins.Symbol.@@toPrimitive
   - javascript.builtins.Symbol.Symbol
@@ -252,7 +214,6 @@ compat_features:
   - javascript.grammar.hexadecimal_escape_sequences
   - javascript.grammar.null_literal
   - javascript.grammar.numeric_separators
-  - javascript.grammar.string_literals
   - javascript.grammar.template_literals
   - javascript.grammar.trailing_commas
   - javascript.grammar.unicode_escape_sequences
@@ -730,6 +691,58 @@ compat_features:
 #   - javascript.builtins.Set.keys
 #   - javascript.builtins.Set.size
 #   - javascript.builtins.Set.values
+# - String (initial support):
+#   - javascript.builtins.String
+#   - javascript.builtins.String.@@iterator
+#   - javascript.builtins.String.String
+#   - javascript.builtins.String.charAt
+#   - javascript.builtins.String.charCodeAt
+#   - javascript.builtins.String.concat
+#   - javascript.builtins.String.fromCharCode
+#   - javascript.builtins.String.indexOf
+#   - javascript.builtins.String.lastIndexOf
+#   - javascript.builtins.String.length
+#   - javascript.builtins.String.match
+#   - javascript.builtins.String.replace
+#   - javascript.builtins.String.search
+#   - javascript.builtins.String.slice
+#   - javascript.builtins.String.split
+#   - javascript.builtins.String.substring
+#   - javascript.builtins.String.toLowerCase
+#   - javascript.builtins.String.toString
+#   - javascript.builtins.String.toUpperCase
+#   - javascript.builtins.String.trim
+#   - javascript.builtins.String.valueOf
+#   - javascript.grammar.string_literals
+# - String at():
+#   - javascript.builtins.String.at
+# - String codePointAt() and fromCodePoint():
+#   - javascript.builtins.String.codePointAt
+#   - javascript.builtins.String.fromCodePoint
+# - String startsWith() and endsWith():
+#   - javascript.builtins.String.endsWith
+#   - javascript.builtins.String.startsWith
+# - String includes():
+#   - javascript.builtins.String.includes
+# - String isWellFormed() and toWellFormed():
+#   - javascript.builtins.String.isWellFormed
+#   - javascript.builtins.String.toWellFormed
+# - String matchAll():
+#   - javascript.builtins.String.matchAll
+# - String normalize():
+#   - javascript.builtins.String.normalize
+# - String padStart() and padEnd():
+#   - javascript.builtins.String.padEnd
+#   - javascript.builtins.String.padStart
+# - String raw():
+#   - javascript.builtins.String.raw
+# - String repeat():
+#   - javascript.builtins.String.repeat
+# - String replaceAll():
+#   - javascript.builtins.String.replaceAll
+# - String trimStart() and trimEnd():
+#   - javascript.builtins.String.trimEnd
+#   - javascript.builtins.String.trimStart
 # - Typed array iterators:
 #   - javascript.builtins.TypedArray.@@iterator
 #   - javascript.builtins.TypedArray.entries

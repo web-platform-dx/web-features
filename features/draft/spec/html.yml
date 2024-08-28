@@ -1,4 +1,4 @@
-draft_date: 2024-08-26
+draft_date: 2024-08-28
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -171,7 +171,6 @@ compat_features:
   - api.HTMLFormControlsCollection
   - api.HTMLFormControlsCollection.namedItem
   - api.HTMLIFrameElement.sandbox
-  - api.HTMLIFrameElement.srcdoc
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes
   - api.HTMLImageElement.sizes.auto
@@ -623,7 +622,6 @@ compat_features:
   - html.elements.iframe.sandbox.allow-top-navigation
   - html.elements.iframe.sandbox.allow-top-navigation-by-user-activation
   - html.elements.iframe.sandbox.allow-top-navigation-to-custom-protocols
-  - html.elements.iframe.srcdoc
   - html.elements.img.sizes
   - html.elements.img.sizes.auto
   - html.elements.img.srcset
@@ -1347,6 +1345,9 @@ compat_features:
 #   - api.HTMLImageElement.loading
 #   - html.elements.iframe.loading
 #   - html.elements.img.loading
+# - srcdoc:
+#   - api.HTMLIFrameElement.srcdoc
+#   - html.elements.iframe.srcdoc
 # - <img>:
 #   - api.HTMLImageElement
 #   - api.HTMLImageElement.Image
