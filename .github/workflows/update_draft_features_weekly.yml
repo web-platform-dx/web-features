@@ -25,7 +25,10 @@ jobs:
             features/draft/spec/
           commit-message: Update draft features
           title: "Update draft features weekly"
-          body: "This is an auto-generated PR with draft features by spec updates."
+          body: |
+            This is an auto-generated PR with draft features by spec updates.
+
+            See https://github.com/web-platform-dx/web-features/blob/main/.github/workflows/update_draft_features_weekly.yml for details.
           labels: |
             generated
           branch: update-draft-features-${{ github.run_number }}
