@@ -1,0 +1,13 @@
+# Merge with intl-locale.yml once this file's compat_features have reached baseline high
+
+name: Intl.Locale info
+description: The getter methods of the `Intl.Locale` API provide supplemental information about a Unicode locale, such as the locale's calendar (for example, the first day in a week or the weekend start day), writing direction, 12- or 24-hour cycles, and numbering system.
+group: intl
+spec: https://tc39.es/ecma402/#locale-objects
+compat_features:
+  - javascript.builtins.Intl.Locale.getCalendars
+  - javascript.builtins.Intl.Locale.getCollations
+  - javascript.builtins.Intl.Locale.getHourCycles
+  - javascript.builtins.Intl.Locale.getNumberingSystems
+  - javascript.builtins.Intl.Locale.getTextInfo
+  - javascript.builtins.Intl.Locale.getTimeZones

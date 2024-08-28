@@ -1,0 +1,18 @@
+name: Intl.PluralRules
+description: "The `Intl.PluralRules` API creates a locale-aware object that tells you which of the language's pluralization rules apply based on a given number."
+group: intl
+spec: https://tc39.es/ecma402/#pluralrules-objects
+status:
+  compute_from: javascript.builtins.Intl.PluralRules
+compat_features:
+  - javascript.builtins.Intl.PluralRules
+  - javascript.builtins.Intl.PluralRules.PluralRules
+  - javascript.builtins.Intl.PluralRules.PluralRules.options_parameter
+  - javascript.builtins.Intl.PluralRules.PluralRules.options_parameter.options_roundingIncrement_parameter
+  - javascript.builtins.Intl.PluralRules.PluralRules.options_parameter.options_roundingMode_parameter
+  - javascript.builtins.Intl.PluralRules.PluralRules.options_parameter.options_roundingPriority_parameter
+  - javascript.builtins.Intl.PluralRules.PluralRules.options_parameter.options_trailingZeroDisplay_parameter
+  - javascript.builtins.Intl.PluralRules.resolvedOptions
+  - javascript.builtins.Intl.PluralRules.select
+  - javascript.builtins.Intl.PluralRules.selectRange
+  - javascript.builtins.Intl.PluralRules.supportedLocalesOf

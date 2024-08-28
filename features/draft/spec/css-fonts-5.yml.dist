@@ -259,16 +259,16 @@ compat_features:
   - css.properties.font-variant-east-asian.traditional
 
   # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
+  # baseline_low_date: 2020-03-24
+  # baseline_high_date: 2022-09-24
   # support:
   #   chrome: "79"
   #   chrome_android: "79"
-  #   edge: "79"
-  #   firefox: ≤72
-  #   firefox_android: "79"
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
+  #   edge: "17"
+  #   firefox: "62"
+  #   firefox_android: "62"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
   - css.properties.font-optical-sizing.auto
   - css.properties.font-optical-sizing.none
 
@@ -385,14 +385,6 @@ compat_features:
   - css.at-rules.font-face.ascent-override
   - css.at-rules.font-face.descent-override
   - css.at-rules.font-face.line-gap-override
-
-  # baseline: false
-  # support:
-  #   firefox: "3"
-  #   firefox_android: "4"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - svg.global_attributes.font-size-adjust
 
   # baseline: false
   # support:
