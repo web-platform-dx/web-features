@@ -1,0 +1,7 @@
+name: paint-order
+description: "The `paint-order` CSS property sets whether the `stroke` is above or below the `fill`. In SVG content, `markers` can also be ordered. For example, `paint-order: markers stroke fill;` will draw the markers, then stroke, then fill."
+spec: https://svgwg.org/svg2-draft/painting.html#PaintOrder
+group: css
+compat_features:
+  - css.properties.paint-order
+  - svg.global_attributes.paint-order
