@@ -2,25 +2,25 @@ name: New feature
 description: Suggest a new feature for web-features
 labels: feature definition
 body:
-- type: markdown
-  attributes:
-    value: |
-      Thanks for suggesting a new feature! Whether you suggest a feature here or by sending us a pull request, all contributions are welcome!
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! Whether you suggest a feature here or by sending us a pull request, all contributions are welcome!
 
-      Please see our [contributing guidelines](https://github.com/web-platform-dx/web-features/blob/main/docs/CONTRIBUTING.md).
-- type: textarea
-  attributes:
-    label: Specification
-    description: Link to the spec for this feature
-  validations:
-    required: true
-- type: textarea
-  attributes:
-    label: Description
-    description: Describe the feature in one or two sentences.
-  validations:
-    required: true
-- type: textarea
-  attributes:
-    label: Browser support
-    description: If you have a caniuse.com link or other information about browser support, please share here.
+        Please see our [contributing guidelines](https://github.com/web-platform-dx/web-features/blob/main/docs/CONTRIBUTING.md).
+  - type: textarea
+    attributes:
+      label: Specification
+      description: Link to the spec for this feature
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Description
+      description: Describe the feature in one or two sentences.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Browser support
+      description: If you have a caniuse.com link or other information about browser support, please share here.
