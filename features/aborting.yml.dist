@@ -25,6 +25,8 @@ compat_features:
   #   safari: "11.1"
   #   safari_ios: "11.3"
   - api.AbortSignal
+  - api.AbortSignal.abort_event
+  - api.AbortSignal.aborted
 
   # baseline: high
   # baseline_low_date: 2021-09-20
