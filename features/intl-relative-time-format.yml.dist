@@ -6,8 +6,8 @@ status:
   baseline_low_date: 2020-09-16
   baseline_high_date: 2023-03-16
   support:
-    chrome: "73"
-    chrome_android: "73"
+    chrome: "71"
+    chrome_android: "71"
     edge: "79"
     firefox: "76"
     firefox_android: "79"
@@ -47,6 +47,7 @@ compat_features:
   #   safari_ios: "14"
   - javascript.builtins.Intl.RelativeTimeFormat.formatToParts
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-09-16
   # baseline_high_date: 2023-03-16
@@ -59,16 +60,3 @@ compat_features:
   #   safari: "14"
   #   safari_ios: "14"
   - javascript.builtins.Intl.RelativeTimeFormat.RelativeTimeFormat.options_parameter.options_numberingSystem_parameter
-
-  # baseline: high
-  # baseline_low_date: 2020-09-16
-  # baseline_high_date: 2023-03-16
-  # support:
-  #   chrome: "73"
-  #   chrome_android: "73"
-  #   edge: "79"
-  #   firefox: "70"
-  #   firefox_android: "79"
-  #   safari: "14"
-  #   safari_ios: "14"
-  - javascript.builtins.Intl.RelativeTimeFormat.resolvedOptions.numberingSystem
