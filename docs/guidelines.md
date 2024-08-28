@@ -72,7 +72,7 @@ The identifier should match the name, with these additional guidelines:
 The `description` field contains a short description of the feature in Markdown-formatted text, which is converted to HTML in the published package.
 Follow the general writing guidelines in this section, but see the [word and phrase list](#word-and-phrase-list) for specific usage instructions.
 
-* Describe, in the active voice, what a feature does or is.
+- Describe, in the active voice, what a feature does or is.
   Think about how developers will use it, not abstract technology relationships.
   Start with a template like this:
 
@@ -81,28 +81,28 @@ Follow the general writing guidelines in this section, but see the [word and phr
   - `The <type> represents <nouns>.`
   - `<format> is a <kind> or <variety>`.
 
-* Description text must stand alone.
+- Description text must stand alone.
   It should not refer to text, images, or other content outside the short description.
   Try reading the sentence aloud.
   Does it still make sense without mentioning the name or ID?
 
-* Enclose literal code, such as CSS property names, interface and method names, or other syntax, in backticks.
-  For example, prefer ```The `addEventListener()` method…``` and avoid ```The addEventListener() method…```.
+- Enclose literal code, such as CSS property names, interface and method names, or other syntax, in backticks.
+  For example, prefer ``The `addEventListener()` method…`` and avoid `The addEventListener() method…`.
 
-* Start descriptions with words that are distinct to the feature.
+- Start descriptions with words that are distinct to the feature.
   For example, prefer "The `some-prop` CSS property…" and avoid "The CSS property `some-prop`…."
 
-* Avoid circular descriptions.
+- Avoid circular descriptions.
   For example, prefer "The `filter()` method returns the items…" over "The `filter()` method filters the items…."
 
-* It's OK to use the second person ("you", "your", and "yours") to refer to the audience when needed.
+- It's OK to use the second person ("you", "your", and "yours") to refer to the audience when needed.
   For example, "The interface allows you to…."
   ([#738](https://github.com/web-platform-dx/web-features/pull/742))
 
-* Never mention support or standards status.
-  This information *will* go out of date and sooner than you think.
+- Never mention support or standards status.
+  This information _will_ go out of date and sooner than you think.
 
-* For every rule, there's a counterexample.
+- For every rule, there's a counterexample.
   Use your best judgement before writing something absurd.
 
 ### Word and phrase list
@@ -122,8 +122,8 @@ Use this phrase to call attention to other names this feature has gone by.
 Use it at the start of a sentence at the end of the description.
 For example:
 
- > The `some-property` CSS property sets the … value. Also known as `<alias>`.
-([#628](https://github.com/web-platform-dx/web-features/pull/628/files/a9898862cb631c83ea16f1233b3c5c4353bf7a52#r1516293423))
+> The `some-property` CSS property sets the … value. Also known as `<alias>`.
+> ([#628](https://github.com/web-platform-dx/web-features/pull/628/files/a9898862cb631c83ea16f1233b3c5c4353bf7a52#r1516293423))
 
 #### declaration
 
@@ -205,9 +205,9 @@ The ellipses stand in for the thing being styled (e.g., "text") and the style it
 Use it before [_also known as_ text](#also-known-as).
 For example:
 
- > The `<small>` element represents side-comments and small print, like copyright and legal text, styling text in a reduced font size by default.
- 
- ([#1403](https://github.com/web-platform-dx/web-features/pull/1403), [#1379](https://github.com/web-platform-dx/web-features/pull/1379))
+> The `<small>` element represents side-comments and small print, like copyright and legal text, styling text in a reduced font size by default.
+
+([#1403](https://github.com/web-platform-dx/web-features/pull/1403), [#1379](https://github.com/web-platform-dx/web-features/pull/1379))
 
 #### usage
 

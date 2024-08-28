@@ -17,7 +17,6 @@ This definition focuses on things that are useful to this project, but potential
 
 Also, it's a mouthful. Take a look at each piece:
 
-
 ### A logical subset
 
 _A logical subset_ means that all web technologies together are not a feature;
@@ -28,13 +27,11 @@ For example, a group of JavaScript’s `Symbol` built-in object, the CSS `border
 
 The definition leaves the size the subset undefined on purpose. Logical subsets may be composed of a single specific feature or hundreds of them. For example, the [range syntax](https://drafts.csswg.org/mediaqueries-4/#mq-ranges) in Media Queries may be a web feature, but so would Media Queries as a whole.
 
-
 ### Addressable
 
 _Addressable_ means that a feature must be identifiable and distinguishable from other features.
 
 For example, “a form” is not a web feature, but the HTML `<form>` element, the `HTMLFormElement` API, or a group of both (“forms”) might be.
-
 
 ### Behaviors and interfaces
 
@@ -43,7 +40,6 @@ _Behaviors and interfaces_ means that a feature must represent the things that t
 For example, the document retrieved from `https://www.wikipedia.org/`, parsed, and turned into a `Document` object is not a feature;
 the general browser behavior of retrieving a resource from a URL, parsing its HTML, and turning it into a `Document` object might be.
 
-
 ### The web platform
 
 _The web platform_ means the many technologies developed as open standards with aspirations of compatibility and interoperability that facilitate the use of hypermedia documents and applications on the Internet.
@@ -51,12 +47,10 @@ This includes technologies such as HTML, CSS, JavaScript, SVG, WebAssembly, and 
 
 For example, a standardized API implemented by web browsers might be a feature; a proprietary API exposed to an operating system’s web views is not a feature (even if the web view otherwise implements web platform technologies).
 
-
 ### Mediated by browsers
 
 _As mediated by web browsers and related tools_ means that features must be implemented (or enjoy a reasonable prospect of being implemented in the near future) by web browsers or closely related tools (e.g., a JavaScript engine).
 Immature proposals or long-withdrawn behaviors of web browsers are not features (though they might be in the future or have been in the past).
-
 
 ### Exposes to web developers
 

@@ -3,20 +3,20 @@
 Thanks for your interest in contributing to this project!
 Before you contribute, consider the following:
 
-* Help us create a kind, welcoming, and productive project.
- 
+- Help us create a kind, welcoming, and productive project.
+
   You can do this in part by following the [W3C Code of Ethics and Professional Conduct](https://www.w3.org/Consortium/cepc/), which governs conduct on this project.
 
-* All contributions to this project are licensed under the terms of the Apache License, Version 2.0.
- 
+- All contributions to this project are licensed under the terms of the Apache License, Version 2.0.
+
   [Read `LICENSE.txt` for details](../LICENSE.txt).
 
 There are multiple ways to contribute to the web-features repository, such as:
 
-* Adding a missing feature to the repository, from scratch.
-* Adding a missing feature to the repository, by updating a feature that was already drafted.
-* Updating an existing feature, for example to change its name, description, support data, or other fields.
-* Reviewing a pull request that was submitted by someone else, to check if the feature is correctly authored.
+- Adding a missing feature to the repository, from scratch.
+- Adding a missing feature to the repository, by updating a feature that was already drafted.
+- Updating an existing feature, for example to change its name, description, support data, or other fields.
+- Reviewing a pull request that was submitted by someone else, to check if the feature is correctly authored.
 
 In any case, **thank you** for wanting to help. This document will guide you through the process of contributing to the web-features repository.
 
@@ -71,16 +71,16 @@ Feature IDs must be unique as they are used in other projects to reference the f
 
 This table lists the fields that can be found in a feature file, and provides a brief description of each field:
 
-| Field | Description | Type | Mandatory |
-|---|---|---|---|
-| `name` | The name of the feature. | String | Yes |
-| `description` | A short description of the feature. | Markdown-formatted string | Yes |
-| `spec` | One or more specification URLs for this feature. | String, or array of strings | Yes |
-| `group` | An optional group, or list of groups that this feature belongs to. See the definition of groups under [Create a new feature from scratch](#create-a-new-feature-from-scratch). | String, or array of strings | No |
-| `caniuse` | The feature's ID on the [Can I Use](https://caniuse.com/) website. | String | No |
-| `compat_features` | The list of browser-compat-data entries that make up this feature. In many cases, the corresponding browser-compat-data entries already map to the feature ID, and this is therefore not needed. | Array of strings | No |
-| `status` | An optional object which describes whether the feature is considered baseline, when it achieved this baseline status, and the version number of supported browsers. In the majority of cases, this is calculated from the `compat_features` list or from browser-compat-data entries directly, and therefore not needed. | Object | No |
-| `status.compute_from` | An optional field, within the `status` object, to allows you to specify which BCD keys should the overall feature status be computed from. This is useful to list all BCD keys that are related to a feature, but only consider some of them in the baseline status calculation. | String, or array of strings | No |
+| Field                 | Description                                                                                                                                                                                                                                                                                                              | Type                        | Mandatory |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------- | --------- |
+| `name`                | The name of the feature.                                                                                                                                                                                                                                                                                                 | String                      | Yes       |
+| `description`         | A short description of the feature.                                                                                                                                                                                                                                                                                      | Markdown-formatted string   | Yes       |
+| `spec`                | One or more specification URLs for this feature.                                                                                                                                                                                                                                                                         | String, or array of strings | Yes       |
+| `group`               | An optional group, or list of groups that this feature belongs to. See the definition of groups under [Create a new feature from scratch](#create-a-new-feature-from-scratch).                                                                                                                                           | String, or array of strings | No        |
+| `caniuse`             | The feature's ID on the [Can I Use](https://caniuse.com/) website.                                                                                                                                                                                                                                                       | String                      | No        |
+| `compat_features`     | The list of browser-compat-data entries that make up this feature. In many cases, the corresponding browser-compat-data entries already map to the feature ID, and this is therefore not needed.                                                                                                                         | Array of strings            | No        |
+| `status`              | An optional object which describes whether the feature is considered baseline, when it achieved this baseline status, and the version number of supported browsers. In the majority of cases, this is calculated from the `compat_features` list or from browser-compat-data entries directly, and therefore not needed. | Object                      | No        |
+| `status.compute_from` | An optional field, within the `status` object, to allows you to specify which BCD keys should the overall feature status be computed from. This is useful to list all BCD keys that are related to a feature, but only consider some of them in the baseline status calculation.                                         | String, or array of strings | No        |
 
 ### Feature dist files
 
@@ -101,8 +101,8 @@ In some cases, you will already have an idea for a feature to add to the reposit
 
 In other cases, you might want to help but don't have a specific feature in mind. That's okay too. You can find inspiration in the following places:
 
-* [The list of issues with the **feature definition** label](https://github.com/web-platform-dx/web-features/issues?q=is%3Aopen+is%3Aissue+label%3A%22feature+definition%22).
-* [The list of draft features](../features/draft).
+- [The list of issues with the **feature definition** label](https://github.com/web-platform-dx/web-features/issues?q=is%3Aopen+is%3Aissue+label%3A%22feature+definition%22).
+- [The list of draft features](../features/draft).
 
 A third case is if you've found a feature that's incorrectly defined. For example if its description is misleading, or you believe the browser support data is incorrect.
 
@@ -167,8 +167,8 @@ To create a new feature from scratch:
 
    The `group` field is used to categorize features into groups. For example, the Async Clipboard API feature is in the `clipboard` group. Groups are maintained in the [`groups`](../groups) directory, and each group is a YAML file. The name of the file defines the unique ID of a group.
 
-   * If one of the existing groups fits your feature, add the `group` field to your feature, and set it to the ID of the group.
-   * If none of the existing groups fit your feature, but you believe a new group should be created, then create a new group file in the `groups` directory, then add the `group` field to your feature set to the ID of the new group.
+   - If one of the existing groups fits your feature, add the `group` field to your feature, and set it to the ID of the group.
+   - If none of the existing groups fit your feature, but you believe a new group should be created, then create a new group file in the `groups` directory, then add the `group` field to your feature set to the ID of the new group.
 
 1. Set the baseline status and browser compatibility data of the feature. This is the most important and difficult step of authoring a feature, which is documented in a separate section. See [Set the status of a feature](#set-the-status-of-a-feature).
 
@@ -198,16 +198,16 @@ After you've prepared your new feature file with its unique ID, `name`, `descrip
 
 A feature's status consists of:
 
-* Whether the feature is considered baseline or not, and which level of baseline it has achieved:
+- Whether the feature is considered baseline or not, and which level of baseline it has achieved:
 
-  * Baseline _low_ means that the feature is now available on all browsers listed in the core browser set.
-  * Baseline _high_ means that the feature has been available on all browsers listed in the core browser set for long enough that it's considered _widely_ available.
+  - Baseline _low_ means that the feature is now available on all browsers listed in the core browser set.
+  - Baseline _high_ means that the feature has been available on all browsers listed in the core browser set for long enough that it's considered _widely_ available.
 
   For more information about baseline and the actual definition of _long enough_, see [Baseline](./baseline.md).
 
-* If the feature is considered baseline, the dates at which it has achieved the low and high levels.
+- If the feature is considered baseline, the dates at which it has achieved the low and high levels.
 
-* The browser support data for this feature, which consists of the version number for each of the browsers that support the feature.
+- The browser support data for this feature, which consists of the version number for each of the browsers that support the feature.
 
 #### Understand where browser support data comes from
 
@@ -226,7 +226,7 @@ Features in the web-features project are associated with one or more BCD keys. F
 
 To set the status of your new feature, you must associate your feature with one or more BCD keys. There are two cases for associating your feature to BCD keys:
 
-* Either BCD already defines references to your new feature. In this case, you don't need to explicitly list the BCD keys that your feature depends on.
+- Either BCD already defines references to your new feature. In this case, you don't need to explicitly list the BCD keys that your feature depends on.
 
   For example, the [grid](https://github.com/web-platform-dx/web-features/blob/main/features/grid.yml) feature doesn't list any BCD keys, because the BCD project already maps the right BCD keys to the `grid` web-features ID. See the [`web-features:grid` search results](https://github.com/search?q=repo%3Amdn%2Fbrowser-compat-data%20%22web-features%3Agrid%22&type=code) in BCD.
 
@@ -242,7 +242,7 @@ To set the status of your new feature, you must associate your feature with one 
 
   You should always check first if BCD doesn't already map to your feature ID by running `npm run dist` and checking if the resulting dist file contains supported browser versions.
 
-* Or BCD doesn't already reference your new feature. In this case, you need to list the BCD keys that make up your feature under the `compat_features` field of your new feature file.
+- Or BCD doesn't already reference your new feature. In this case, you need to list the BCD keys that make up your feature under the `compat_features` field of your new feature file.
 
   For example, here are the first few lines of the `@counter-style` feature, which defines a list of BCD keys:
 
@@ -256,7 +256,7 @@ To set the status of your new feature, you must associate your feature with one 
     - css.at-rules.counter-style.additive-symbols
     - css.at-rules.counter-style.fallback
     - css.at-rules.counter-style.negative
-   ```
+  ```
 
   To identify the BCD keys that you need, check the browser compatibility tables displayed at the end of the MDN pages that document your new feature, and then search the BCD source code for the names that appear in the table.
 
@@ -273,9 +273,9 @@ To generate your feature's dist file, once your feature is associated with one o
 
 1. Check that the data in the dist file is correct. In particular, verify that the data is consistent with what developers would find when searching for the same feature on caniuse.com or MDN.
 
-   * Check the `baseline` status. If the feature isn't yet supported in all browsers of the core browsers set, it should be `false`. If the feature is supported on all browsers, it should either be `low` or `high`, depending on how long has passed.
-   * Check the `baseline_low_date`. Does it seem like the feature should be older? Newer? Or just right?
-   * Check that the browser versions listed under `support` match what caniuse.com and MDN document too.
+   - Check the `baseline` status. If the feature isn't yet supported in all browsers of the core browsers set, it should be `false`. If the feature is supported on all browsers, it should either be `low` or `high`, depending on how long has passed.
+   - Check the `baseline_low_date`. Does it seem like the feature should be older? Newer? Or just right?
+   - Check that the browser versions listed under `support` match what caniuse.com and MDN document too.
 
 #### Fix data discrepancies in your feature's dist file
 
@@ -283,9 +283,9 @@ The most likely reason for the data in your new feature's dist file to be incorr
 
 You might be faced with the following scenarios:
 
-* Your feature's overall status is too old (e.g., it's a new feature, but it's being reported as long-established). In this case, you might have missing BCD keys. Check that you've covering the complete feature by looking for missing interfaces, CSS property values, and so on.
-* Your feature's overall status is too young (e.g., it's a long-established feature, but it's being reported as newly available). In this case, you might have BCD keys that correspond to later additions which are holding the feature back unfairly.\
-* Your feature's overall status and individual BCD keys are yielding incorrect results. In this case, the underlying BCD data might have caveats or errors. Check the data in the [browser-compat-data](https://github.com/mdn/browser-compat-data/) repository for any caveats such as features behind prefixes or flags, or partial implementations.
+- Your feature's overall status is too old (e.g., it's a new feature, but it's being reported as long-established). In this case, you might have missing BCD keys. Check that you've covering the complete feature by looking for missing interfaces, CSS property values, and so on.
+- Your feature's overall status is too young (e.g., it's a long-established feature, but it's being reported as newly available). In this case, you might have BCD keys that correspond to later additions which are holding the feature back unfairly.\
+- Your feature's overall status and individual BCD keys are yielding incorrect results. In this case, the underlying BCD data might have caveats or errors. Check the data in the [browser-compat-data](https://github.com/mdn/browser-compat-data/) repository for any caveats such as features behind prefixes or flags, or partial implementations.
 
 To fix data discrepancies in your dist file, open the dist file and, under `compat_features`, review each individual section. Each section corresponds to a group of BCD keys that have the same baseline and support status.
 

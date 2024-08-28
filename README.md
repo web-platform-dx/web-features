@@ -6,9 +6,9 @@ By the [W3C WebDX Community Group](https://www.w3.org/community/webdx/) and cont
 By creating a common list of features and their definitions, `web-features` aims to improve understanding of what web developers get and want from the web.
 `web-features` does this by:
 
-* Creating feature definitions, which identify and describe capabilities of the web
-* Generating [_Baseline_](./docs/baseline.md) support data, which summarizes the availability of web features across key browsers and releases
-* Publishing the `web-features` npm package, which bundles feature identifiers with Baseline statuses
+- Creating feature definitions, which identify and describe capabilities of the web
+- Generating [_Baseline_](./docs/baseline.md) support data, which summarizes the availability of web features across key browsers and releases
+- Publishing the `web-features` npm package, which bundles feature identifiers with Baseline statuses
 
 From `Array` to Cascade Layers to Offscreen Canvas, `web-features` identifies, defines, and categorizes capabilities of the web platform that web developers care about.
 By creating a common nomenclature for web platform features, `web-features` intends to support communication between web developers, browser vendors, standardization bodies, and other ecosystem participants.

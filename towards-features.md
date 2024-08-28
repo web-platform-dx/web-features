@@ -4,7 +4,6 @@
 
 This document investigates the definition of a common set of web features with browser support information for use in dashboards, platform status projects, and contexts that discuss specific usage scenarios on the web. Examples include Can I Use, Chrome Platform Status, MDN.
 
-
 ## The web as a set of specs
 
 The unit of discourse in standardization circles is the **specification**. W3C, the WHATWG, IETF, the Khronos Group, Ecma International all publish specifications. Taking a browser-centric perspective, the web platform can be roughly defined as the set of specifications implemented or considered for implementation across browsers.
@@ -16,7 +15,6 @@ This is a bit more complicated than meets the eye. Specifications start as propo
 The [browser-specs](https://github.com/w3c/browser-specs/) project was created to converge on a common list of web specifications with canonical identifiers for each of them. Maintaining the list over time requires keeping an eye on organizations that publish web specifications. A good chunk of that process can be automated but human review and intervention remains needed to assess whether a specification meets selection criteria.
 
 In other words, building a curated list of specifications takes time. And specifications are not the most useful level to talk about the web platform outside of standardization circles.
-
 
 ## The web as a set of features
 
@@ -42,7 +40,6 @@ Sometimes, platform status projects align on a specific feature. For instance, a
 
 In any case, as illustrated with the `<datalist>` example above, the level of granularity is but one problem on the way to building a useful list of features. Most dashboards will also want to evaluate support for features in browsers.
 
-
 ## Features and browser support
 
 There are always specific behaviors, attributes, corner cases, implementation bugs that make it impossible to assert that a feature is fully supported in a browser.
@@ -62,7 +59,6 @@ Ideally, **it should be easy to scope, extend and compose features in a list** s
 
 **It should equally be possible to update the scope of a feature over time**. Unfortunately, this means that authors of documents and dashboards referencing features will need to track changes and update the underlying data when the scope of a feature changes. That may be an acceptable trade-off though. The browser-specs project takes a similar approach: it pushes changes onto consumers, including change of identifiers, each time a new version is released, which effectively forces everyone to converge on the same list and identifiers.
 
-
 ## Selection criteria for features
 
 As said, projects that list features tend to grow features organically, adding new ones when the need arises: entries are created in Chrome Platform Status and Webkit status as part of internal development workflows, new features are added to projects that collect ideas from users (e.g. Web we want) when they get submitted, roadmap documents create features when they need to talk about them.
@@ -70,7 +66,7 @@ As said, projects that list features tend to grow features organically, adding n
 To keep the list useful as a means to provide web developers with clear signals for whether they can or cannot use a feature, we would need to settle on selection criteria. Can I Use defines a [set of criteria](https://github.com/Fyrd/caniuse/blob/main/CONTRIBUTING.md#adding-a-feature) for adding new features that provide food for thought:
 
 1. Feature is on the higher end of the spectrum on the [Feature suggestion list](https://caniuse.com/issue-list/)
-2. Feature is *not* already widely supported
+2. Feature is _not_ already widely supported
 3. Feature is at least supported in one (possibly upcoming) browser
 4. PR includes a link to the test case(s) used to test support (can be codepen, jsfiddle, etc)
 5. Support data was properly validated using either test cases or from information from reliable sources.
@@ -87,7 +83,6 @@ Focus on features that are not already widely supported also makes sense on an o
 All in all, selection criteria will probably end up close, though not identical, to the selection criteria used in Can I Use and, as with the selection of specs in browser-specs, exceptions-to-the-rule are to be expected.
 
 On top of selection criteria, we would need to settle on maintenance criteria. When should the scope of a feature be updated? How to deal with feature levels and maturity stages? When can a feature be deprecated or dropped? This needs more thoughts.
-
 
 ## Suggestions for next steps
 
