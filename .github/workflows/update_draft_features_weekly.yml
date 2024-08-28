@@ -24,7 +24,9 @@ jobs:
           add-paths: |
             features/draft/spec/
           commit-message: Update draft features
-          title: "[GitHub Actions] Update draft features weekly"
+          title: "Update draft features weekly"
           body: "This is an auto-generated PR with draft features by spec updates."
+          labels: |
+            generated
           branch: update-draft-features-${{ github.run_number }}
           delete-branch: true
