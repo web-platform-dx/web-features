@@ -18,7 +18,10 @@
           "type": "array"
         }
       },
-      "required": ["name", "releases"],
+      "required": [
+        "name",
+        "releases"
+      ],
       "type": "object"
     },
     "FeatureData": {
@@ -113,8 +116,15 @@
           "properties": {
             "baseline": {
               "description": "Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false)",
-              "enum": ["high", "low", false],
-              "type": ["string", "boolean"]
+              "enum": [
+                "high",
+                "low",
+                false
+              ],
+              "type": [
+                "string",
+                "boolean"
+              ]
             },
             "baseline_high_date": {
               "description": "Date the feature achieved Baseline high status",
@@ -130,8 +140,15 @@
                 "properties": {
                   "baseline": {
                     "description": "Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false)",
-                    "enum": ["high", "low", false],
-                    "type": ["string", "boolean"]
+                    "enum": [
+                      "high",
+                      "low",
+                      false
+                    ],
+                    "type": [
+                      "string",
+                      "boolean"
+                    ]
                   },
                   "baseline_high_date": {
                     "description": "Date the feature achieved Baseline high status",
@@ -170,7 +187,10 @@
                     "type": "object"
                   }
                 },
-                "required": ["baseline", "support"],
+                "required": [
+                  "baseline",
+                  "support"
+                ],
                 "type": "object"
               },
               "description": "Statuses for each key in the feature's compat_features list, if applicable. Not available to the npm release of web-features.",
@@ -205,11 +225,20 @@
               "type": "object"
             }
           },
-          "required": ["baseline", "support"],
+          "required": [
+            "baseline",
+            "support"
+          ],
           "type": "object"
         }
       },
-      "required": ["name", "description", "description_html", "spec", "status"],
+      "required": [
+        "name",
+        "description",
+        "description_html",
+        "spec",
+        "status"
+      ],
       "type": "object"
     },
     "GroupData": {
@@ -224,7 +253,9 @@
           "type": "string"
         }
       },
-      "required": ["name"],
+      "required": [
+        "name"
+      ],
       "type": "object"
     },
     "Release": {
@@ -240,7 +271,10 @@
           "type": "string"
         }
       },
-      "required": ["version", "date"],
+      "required": [
+        "version",
+        "date"
+      ],
       "type": "object"
     },
     "SnapshotData": {
@@ -256,7 +290,10 @@
           "type": "string"
         }
       },
-      "required": ["name", "spec"],
+      "required": [
+        "name",
+        "spec"
+      ],
       "type": "object"
     },
     "WebFeaturesData": {
@@ -321,7 +358,12 @@
           "type": "object"
         }
       },
-      "required": ["browsers", "features", "groups", "snapshots"],
+      "required": [
+        "browsers",
+        "features",
+        "groups",
+        "snapshots"
+      ],
       "type": "object"
     }
   }
