@@ -141,6 +141,134 @@ compat_features:
   #   safari_ios: "11.3"
   - css.properties.font-style.oblique-angle
 
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "63"
+  #   chrome_android: "63"
+  #   edge: "79"
+  #   firefox: "34"
+  #   firefox_android: "34"
+  #   safari: "9.1"
+  #   safari_ios: "9.3"
+  - css.properties.font-variant-east-asian
+  - css.properties.font-variant-east-asian.full-width
+  - css.properties.font-variant-east-asian.jis04
+  - css.properties.font-variant-east-asian.jis78
+  - css.properties.font-variant-east-asian.jis83
+  - css.properties.font-variant-east-asian.jis90
+  - css.properties.font-variant-east-asian.normal
+  - css.properties.font-variant-east-asian.proportional-width
+  - css.properties.font-variant-east-asian.ruby
+  - css.properties.font-variant-east-asian.simplified
+  - css.properties.font-variant-east-asian.traditional
+
+  # baseline: high
+  # baseline_low_date: 2020-03-24
+  # baseline_high_date: 2022-09-24
+  # support:
+  #   chrome: "79"
+  #   chrome_android: "79"
+  #   edge: "17"
+  #   firefox: "62"
+  #   firefox_android: "62"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - css.properties.font-optical-sizing.auto
+  - css.properties.font-optical-sizing.none
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: ≤83
+  #   chrome_android: "83"
+  #   edge: "83"
+  #   firefox: ≤72
+  #   firefox_android: "79"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
+  - css.properties.font-variant.none
+
+  # baseline: low
+  # baseline_low_date: 2022-11-15
+  # support:
+  #   chrome: "101"
+  #   chrome_android: "101"
+  #   edge: "101"
+  #   firefox: "107"
+  #   firefox_android: "107"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - css.properties.font-palette.dark
+  - css.properties.font-palette.light
+  - css.properties.font-palette.normal
+
+  # baseline: low
+  # baseline_low_date: 2023-02-09
+  # support:
+  #   chrome: "110"
+  #   chrome_android: "110"
+  #   edge: "110"
+  #   firefox: "34"
+  #   firefox_android: "34"
+  #   safari: "9.1"
+  #   safari_ios: "9.3"
+  - css.properties.font-variant.sub
+  - css.properties.font-variant.super
+
+  # baseline: low
+  # baseline_low_date: 2023-03-13
+  # support:
+  #   chrome: "111"
+  #   chrome_android: "111"
+  #   edge: "111"
+  #   firefox: "34"
+  #   firefox_android: "34"
+  #   safari: "9.1"
+  #   safari_ios: "9.3"
+  - css.properties.font-variant.historical-forms
+
+  # baseline: low
+  # baseline_low_date: 2023-03-13
+  # support:
+  #   chrome: "111"
+  #   chrome_android: "111"
+  #   edge: "111"
+  #   firefox: ≤72
+  #   firefox_android: "79"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
+  - css.properties.font-variant-alternates.historical-forms
+  - css.properties.font-variant-alternates.normal
+
+  # baseline: low
+  # baseline_low_date: 2023-09-15
+  # support:
+  #   chrome: "117"
+  #   chrome_android: "117"
+  #   edge: "117"
+  #   firefox: "34"
+  #   firefox_android: "34"
+  #   safari: "9.1"
+  #   safari_ios: "9.3"
+  - css.properties.font-variant-position
+
+  # baseline: low
+  # baseline_low_date: 2023-09-15
+  # support:
+  #   chrome: "117"
+  #   chrome_android: "117"
+  #   edge: "117"
+  #   firefox: ≤72
+  #   firefox_android: "79"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
+  - css.properties.font-variant-position.normal
+  - css.properties.font-variant-position.sub
+  - css.properties.font-variant-position.super
+
   # baseline: low
   # baseline_low_date: 2023-09-18
   # support:
