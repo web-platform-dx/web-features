@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "128"
+    chrome_android: "128"
+    edge: "128"
 compat_features:
   # baseline: high
   # baseline_low_date: 2021-04-26
@@ -41,5 +44,8 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
   - api.AudioContext.error_event

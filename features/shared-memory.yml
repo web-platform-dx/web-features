@@ -1,0 +1,27 @@
+name: SharedArrayBuffer and Atomics
+description: The `SharedArrayBuffer` object represents bytes shared between multiple workers and the main thread. The `Atomics` object safely accesses `SharedArrayBuffer` data to make sure predictable values are read and written and that operations are not interrupted.
+caniuse: sharedarraybuffer
+spec:
+  - https://tc39.es/ecma262/multipage/structured-data.html#sec-sharedarraybuffer-objects
+  - https://tc39.es/ecma262/multipage/structured-data.html#sec-atomics-object
+group: javascript
+compat_features:
+  - javascript.builtins.Atomics
+  - javascript.builtins.Atomics.add
+  - javascript.builtins.Atomics.and
+  - javascript.builtins.Atomics.compareExchange
+  - javascript.builtins.Atomics.exchange
+  - javascript.builtins.Atomics.isLockFree
+  - javascript.builtins.Atomics.load
+  - javascript.builtins.Atomics.notify
+  - javascript.builtins.Atomics.or
+  - javascript.builtins.Atomics.store
+  - javascript.builtins.Atomics.sub
+  - javascript.builtins.Atomics.wait
+  - javascript.builtins.Atomics.xor
+  - javascript.builtins.DataView.DataView.sharedarraybuffer_support
+  - javascript.builtins.SharedArrayBuffer
+  - javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
+  - javascript.builtins.SharedArrayBuffer.byteLength
+  - javascript.builtins.SharedArrayBuffer.slice
+  - javascript.builtins.SharedArrayBuffer.@@species

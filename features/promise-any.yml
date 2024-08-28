@@ -3,3 +3,8 @@ description: The `Promise.any()` static method returns a promise that fulfills a
 snapshot: ecmascript-2021
 spec: https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-promise.any
 group: promises
+compat_features:
+  - javascript.builtins.Promise.any
+  - javascript.builtins.AggregateError
+  - javascript.builtins.AggregateError.AggregateError
+  - javascript.builtins.AggregateError.errors
