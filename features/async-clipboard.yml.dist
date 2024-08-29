@@ -41,7 +41,20 @@ compat_features:
   #   safari: "13.1"
   #   safari_ios: "13.4"
   - api.Clipboard.read
+  - api.Clipboard.type_text-plain
   - api.Clipboard.write
+
+  # baseline: low
+  # baseline_low_date: 2024-06-11
+  # support:
+  #   chrome: "76"
+  #   chrome_android: "76"
+  #   edge: "79"
+  #   firefox: "127"
+  #   firefox_android: "127"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.Clipboard.type_image-png
 
   # baseline: low
   # baseline_low_date: 2024-06-11
@@ -56,6 +69,18 @@ compat_features:
   - api.ClipboardItem
   - api.ClipboardItem.getType
   - api.ClipboardItem.types
+
+  # baseline: low
+  # baseline_low_date: 2024-06-11
+  # support:
+  #   chrome: "86"
+  #   chrome_android: "86"
+  #   edge: "86"
+  #   firefox: "127"
+  #   firefox_android: "127"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.Clipboard.type_text-html
 
   # baseline: low
   # baseline_low_date: 2024-06-11
