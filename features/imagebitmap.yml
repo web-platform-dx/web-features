@@ -1,0 +1,22 @@
+name: ImageBitmap
+description: The ImageBitmap interface represents a bitmap image which can be drawn to a <canvas> without undue latency. It can be created from a variety of source objects using the createImageBitmap() factory method. ImageBitmap provides an asynchronous and resource efficient pathway to prepare textures for rendering in WebGL.
+spec: https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#imagebitmap
+compat_features:
+  - api.createImageBitmap
+#  - api.createImageBitmap.options_parameter
+#  - api.createImageBitmap.options_colorSpaceConversion_parameter
+#  - api.createImageBitmap.options_imageOrientation_parameter
+#  - api.createImageBitmap.options_premultiplyAlpha_parameter
+#  - api.createImageBitmap.options_resizeHeight_parameter
+#  - api.createImageBitmap.options_resizeQuality_parameter
+#  - api.createImageBitmap.options_resizeWidth_parameter
+#  - api.createImageBitmap.resizeWidth_resizeHeight_resizeQuality
+#  - api.createImageBitmap.worker_support
+  - api.ImageBitmap
+  - api.ImageBitmap.close
+  - api.ImageBitmap.height
+  - api.ImageBitmap.width
+  - api.ImageBitmapRenderingContext
+  - api.ImageBitmapRenderingContext.canvas
+  - api.ImageBitmapRenderingContext.transferFromImageBitmap
+  - api.OffscreenCanvas.transferToImageBitmap
