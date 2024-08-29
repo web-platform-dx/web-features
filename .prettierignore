@@ -2,6 +2,12 @@
 /**/*.dist
 /**/dist
 
+# Exclude the website includes since these are typically fragments, or include
+# Jekyll and that makes Prettier unhappy.
+/gh-pages/_includes/**
+/gh-pages/_layouts/**
+/gh-pages/_sass/**
+
 # Files/folders that have not yet been formatted
 # TODO: Format all these files
 README.md
