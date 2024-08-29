@@ -19,6 +19,10 @@ You can find Baseline in the following places. If you spot somewhere else using 
 - [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Baseline/Compatibility)
 - [RUM Archive Insights](https://rumarchive.com/insights/)
 
+## Presentations
+
+- [Baseline web features for the win](https://www.w3.org/2024/09/TPAC/demo-baseline.html) by Patrick Brosset, August, 2024.
+
 ## More
 
 - [Clearleft browser support policy](https://browsersupport.clearleft.com/)
