@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        {% if site.logo %}
+        <a href="./">
+          <img src="{{site.logo | relative_url}}" alt="Logo" />
+        </a>
+        {% endif %}
+
+        {% if site.description %}
+        <p>
+          {{ site.description }}
+        </p>
+        {% endif %}
+
+        <ul class="nav">
+          <li><a href="./">What is Baseline?</a></li>
+          <li><a href="web-features">What are web-features</a></li>
+          <li><a href="webdx-cg">Who is the WebDX Community Group</a></li>
+          <li><a href="use-baseline">Use Baseline in your project</a></li>
+          <li><a href="name-and-logo-usage-guidelines">Name and logo usage guidelines</a></li>
+          <li><a href="baseline-in-the-wild">Baseline in the wild</a></li>
+          <li><a href="https://github.com/web-platform-dx/web-features/">View the project on GitHub</a></li>
+        </ul>
+      </header>
+
+      <section>
+
+      {{ content }}
+
+      </section>
+      <footer>
+        <!-- Footer Content -->
+      </footer>
+    </div>
+  </body>
+</html>

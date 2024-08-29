@@ -1,0 +1,34 @@
+---
+---
+
+@import "jekyll-theme-minimal";
+
+html {
+  overflow-y: scroll;
+}
+
+ul.nav a:hover {
+  font-weight: bold;
+}
+
+header img {
+  margin-bottom: 1em;
+}
+
+table.logos {
+  th, td {
+    border-bottom: none;
+    width: 50%;
+    text-align: center;
+    padding: 15px 10px;
+  }
+
+  img {
+    width: 80%;
+    padding: 20px;
+  }
+
+  img.dark-bg {
+    background-color: black;
+  }
+}
