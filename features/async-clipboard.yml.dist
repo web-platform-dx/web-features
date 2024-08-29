@@ -101,3 +101,10 @@ compat_features:
   #   safari: "13.1"
   #   safari_ios: "13.4"
   - api.ClipboardItem.presentationStyle
+
+  # baseline: false
+  # support:
+  #   chrome: "64"
+  #   chrome_android: "64"
+  #   edge: "79"
+  - api.Permissions.permission_clipboard-write

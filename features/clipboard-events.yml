@@ -1,6 +1,6 @@
 name: Clipboard Events
-description: The `ClipboardEvents` API provides read and write access to the system clipboard, allowing a web application to implement cut, copy, and paste features.
-spec: https://w3c.github.io/clipboard-apis/
+description: The `ClipboardEvent` interface represents events providing information about system clipboard activity such as cut, copy, and paste.
+spec: https://w3c.github.io/clipboard-apis/#clipboard-event-interfaces
 group: clipboard
 compat_features:
   - api.ClipboardEvent
@@ -11,7 +11,6 @@ compat_features:
   - api.Element.copy_event
   - api.Element.cut_event
   - api.Element.paste_event
-  - api.Permissions.permission_clipboard-write
 # The following features in the spec are already part of web-features:
 # - Async clipboard:
 #   - api.Clipboard
