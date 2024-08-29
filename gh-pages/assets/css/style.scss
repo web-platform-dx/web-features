@@ -7,8 +7,8 @@ html {
   overflow-y: scroll;
 }
 
-ul.nav a:hover {
-  font-weight: bold;
+ul.nav a:is(:hover,:focus) {
+  background: #FFA;
 }
 
 header img {
