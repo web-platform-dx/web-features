@@ -65,7 +65,7 @@ The Baseline name should be used when talking about Baseline as a concept.
   </tr>
 </table>
 
-The Baseline Widely Available logo should  be used when talking about Baseline as a concept, or to indicate a specific web platform feature has been supported by all of the core browsers for at least 30 months, and is therefore widely interoperable.
+The Baseline Widely Available logo should be used when talking about Baseline as a concept, or to indicate a specific web platform feature has been supported by all of the core browsers for at least 30 months, and is therefore widely interoperable.
 
 ### Baseline Newly Available logo
 
@@ -141,7 +141,7 @@ The logos have been released under the [Creative Commons Attribution No Derivati
 
 ### Can I change the colors of the icons and logos?
 
-No, the colors are part of the logo and indicate what level of Baseline support a feature has.  As noted above, please do not modify, distort or alter the logos.
+No, the colors are part of the logo and indicate what level of Baseline support a feature has. As noted above, please do not modify, distort or alter the logos.
 
 ### Can I put these icons and logos on stickers, t-shirts, etc?
 

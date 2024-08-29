@@ -19,4 +19,4 @@ The [Universal Baseline Widget](https://github.com/GoogleChrome/baseline-status)
 
 ## Looking forward
 
-This is just the start. More  tools are coming  to help you use Baseline in your day to day workflow. For example, linters  that alert you if you use features not supported in your browser support matrix, and tooling to help you discover new useful Baseline features.
+This is just the start. More tools are coming to help you use Baseline in your day to day workflow. For example, linters that alert you if you use features not supported in your browser support matrix, and tooling to help you discover new useful Baseline features.
