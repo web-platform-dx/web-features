@@ -138,8 +138,8 @@ header ul.nav a[href] {
 	display: block;
 }
 header ul.nav a[href^="http"]::after {
-	content: url('https://en.wikipedia.org/w/skins/Vector/resources/skins.vector.styles/images/link-external-small-ltr-progressive.svg?fb64d');
-	padding-inline-start: 0.1em;
+	content: url('/assets/img/external-link.svg');
+  padding-inline-start: 0.1em;
 }
 
 ul.downloads {
@@ -238,7 +238,7 @@ footer {
     position:static;
     width:auto;
   }
-  
+
   header {
     width: 30vw;
   }
