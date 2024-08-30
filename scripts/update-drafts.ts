@@ -89,7 +89,7 @@ async function main() {
       }
       return fileOrDirectory;
     });
-    selectedKeys = filePaths.map((fp) => Path.parse(fp).name);
+    selectedKeys.push(...filePaths.map((fp) => Path.parse(fp).name));
   }
 
   if (selectedKeys?.length) {
