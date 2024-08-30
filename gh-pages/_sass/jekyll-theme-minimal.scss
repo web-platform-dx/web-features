@@ -3,7 +3,7 @@
 
 body {
   background-color: #fff;
-  padding:50px;
+  padding:3.5em;
   font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#727272;
   font-weight:400;
@@ -11,11 +11,15 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color:#222;
-  margin:0 0 20px;
+  margin:0 0 1.25rem;
 }
 
 p, ul, ol, table, pre, dl {
-  margin:0 0 20px;
+  margin:0 0 1.25rem;
+}
+
+ul, ol {
+	padding-inline: 2em 0;
 }
 
 h1, h2, h3 {
@@ -23,7 +27,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size:28px;
+  font-size:2em;
 }
 
 h2 {
@@ -38,14 +42,13 @@ a {
   color:#267CB9;
   text-decoration:none;
 }
-
 a:hover, a:focus {
   color:#069;
   /*font-weight: bold;*/
 }
 
 a small {
-  font-size:11px;
+  font-size:smaller;
   color:#777;
   margin-top:-0.3em;
   display:block;
@@ -56,14 +59,17 @@ a:hover small {
 }
 
 .wrapper {
-  width:860px;
+  display: grid;
+  grid-template-columns: 19.25em auto;
+  gap: 0 6.5em;
+  width:61.5em;
   margin:0 auto;
 }
 
 blockquote {
   border-left:1px solid #e5e5e5;
   margin:0;
-  padding:0 0 0 20px;
+  padding:0 0 0 1.5em;
   font-style:italic;
 }
 
@@ -73,7 +79,7 @@ code, pre {
 }
 
 pre {
-  padding:8px 15px;
+  padding:0.8em 1.1em;
   background: #f8f8f8;
   border-radius:5px;
   border:1px solid #e5e5e5;
@@ -87,7 +93,7 @@ table {
 
 th, td {
   text-align:left;
-  padding:5px 10px;
+  padding:0.33em 0.66em;
   border-bottom:1px solid #e5e5e5;
 }
 
@@ -112,27 +118,38 @@ kbd {
   box-shadow: inset 0 -1px 0 #959da5;
   color: #444d56;
   display: inline-block;
-  font-size: 11px;
-  line-height: 10px;
+  font-size: smaller;
+  line-height: 1;
   padding: 3px 5px;
   vertical-align: middle;
 }
 
 header {
-  width:270px;
-  float:left;
+  width:19.25em;
   position:fixed;
+  grid-column: 1;
   -webkit-font-smoothing:subpixel-antialiased;
+}
+
+header ul.nav {
+	padding-inline: 1em;
+}
+header ul.nav a[href] {
+	display: block;
+}
+header ul.nav a[href^="http"]::after {
+	content: url('https://en.wikipedia.org/w/skins/Vector/resources/skins.vector.styles/images/link-external-small-ltr-progressive.svg?fb64d');
+	padding-inline-start: 0.1em;
 }
 
 ul.downloads {
   list-style:none;
-  height:40px;
+  height:3em;
   padding:0;
   background: #f4f4f4;
   border-radius:5px;
   border:1px solid #e0e0e0;
-  width:270px;
+  width:19.25em;
 }
 
 .downloads li {
@@ -186,9 +203,8 @@ strong {
 }
 
 section {
-  width:500px;
-  float:right;
-  padding-bottom:50px;
+  grid-column: 2;
+  padding-block:1.33em 4em;
 }
 
 small {
@@ -203,10 +219,9 @@ hr {
 }
 
 footer {
-  width:270px;
-  float:left;
+  width:19.25em;
   position:fixed;
-  bottom:50px;
+  bottom:3.5em;
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
@@ -215,34 +230,32 @@ footer {
   div.wrapper {
     width:auto;
     margin:0;
+    grid-template-columns: 30vw auto;
+    gap: 5vw;
   }
 
   header, section, footer {
-    float:none;
     position:static;
     width:auto;
   }
-
+  
   header {
-    padding-right:320px;
+    width: 30vw;
   }
 
   section {
-    border:1px solid #e5e5e5;
-    border-width:1px 0;
-    padding:20px 0;
-    margin:0 0 20px;
+    padding:1.5em 0;
+    margin:0 0 1.5em;
   }
+
+	section :is(ul, ol) {
+		padding-inline: 1em 0;
+	}
 
   header a small {
     display:inline;
   }
 
-  header ul {
-    position:absolute;
-    right:50px;
-    top:52px;
-  }
 }
 
 @media print, screen and (max-width: 720px) {
@@ -250,12 +263,24 @@ footer {
     word-wrap:break-word;
   }
 
+	.wrapper {
+		display: block;
+	}
+
   header {
+  	width: auto;
     padding:0;
+  }
+  header img {
+  	max-height: 3.5em;
   }
 
   header ul, header p.view {
     position:static;
+  }
+  section {
+    border:1px solid #e5e5e5;
+    border-inline-width:0;
   }
 
   pre, code {
@@ -265,8 +290,10 @@ footer {
 
 @media print, screen and (max-width: 480px) {
   body {
-    padding:15px;
+    padding-block: 2rem;
+    padding-inline: 0.5rem;
   }
+
 
   .downloads {
     width:99%;
