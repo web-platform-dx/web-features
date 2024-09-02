@@ -1,5 +1,5 @@
-name: Alt text in content
-description: "Add alternate text in the CSS `content` property after a `/`. For example, `content: url('upvote.svg') / 'Upvote'` will have the accesible text 'Upvote'."
+name: Alt text for generated content
+description: "The `/` notation in `content` CSS property values adds alternative text to generated content. For example, the `content: url('upvote-icon.svg') / 'Upvote'` declaration adds accessible "Upvote" text to the SVG icon. Also known as alternate text."
 spec: https://drafts.csswg.org/css-content-3/#alt
 group: css
 compat_features:
