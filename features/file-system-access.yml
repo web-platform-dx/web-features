@@ -1,5 +1,5 @@
 name: File system access
-description: The `showOpenFilePicker()`, `showDirectoryPicker()`, and `showSaveFilePicker()` functions, and the `FileSystemHandle` interface access files and directories on the user's device and allow you to read and write to them.
+description: The `showOpenFilePicker()`, `showDirectoryPicker()`, and `showSaveFilePicker()` methods request access to files and directories on the user's device and returns a handle for reading and writing to them.
 spec: https://wicg.github.io/file-system-access/
 caniuse: native-filesystem-api
 group: file-system
