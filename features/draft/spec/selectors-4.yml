@@ -1,0 +1,89 @@
+draft_date: 2024-08-28
+name: Selectors Level 4
+description: TODO
+spec: https://drafts.csswg.org/selectors-4/
+compat_features:
+  - css.selectors.active
+  - css.selectors.any-link
+  - css.selectors.attribute
+  - css.selectors.blank
+  - css.selectors.checked
+  - css.selectors.child
+  - css.selectors.class
+  - css.selectors.closed
+  - css.selectors.column
+  - css.selectors.descendant
+  - css.selectors.disabled
+  - css.selectors.empty
+  - css.selectors.enabled
+  - css.selectors.first-child
+  - css.selectors.first-of-type
+  - css.selectors.focus
+  - css.selectors.focus-within
+  - css.selectors.future
+  - css.selectors.hover
+  - css.selectors.id
+  - css.selectors.in-range
+  - css.selectors.invalid
+  - css.selectors.lang
+  - css.selectors.last-child
+  - css.selectors.last-of-type
+  - css.selectors.link
+  - css.selectors.list
+  - css.selectors.next-sibling
+  - css.selectors.not
+  - css.selectors.nth-last-of-type
+  - css.selectors.nth-of-type
+  - css.selectors.only-child
+  - css.selectors.only-of-type
+  - css.selectors.open
+  - css.selectors.optional
+  - css.selectors.out-of-range
+  - css.selectors.past
+  - css.selectors.picture-in-picture
+  - css.selectors.placeholder-shown
+  - css.selectors.required
+  - css.selectors.root
+  - css.selectors.scope
+  - css.selectors.subsequent-sibling
+  - css.selectors.target
+  - css.selectors.target-within
+  - css.selectors.type
+  - css.selectors.universal
+  - css.selectors.valid
+  - css.selectors.visited
+
+# The following features in the spec are already part of web-features:
+# - Media element pseudo-classes:
+#   - css.selectors.buffering
+#   - css.selectors.muted
+#   - css.selectors.paused
+#   - css.selectors.playing
+#   - css.selectors.seeking
+#   - css.selectors.stalled
+#   - css.selectors.volume-locked
+# - :default:
+#   - css.selectors.default
+# - :dir():
+#   - css.selectors.dir
+# - :focus-visible:
+#   - css.selectors.focus-visible
+# - :has():
+#   - css.selectors.has
+# - :indeterminate:
+#   - css.selectors.indeterminate
+# - :is():
+#   - css.selectors.is
+# - :modal:
+#   - css.selectors.modal
+# - :nth-child() (initial support):
+#   - css.selectors.nth-child
+#   - css.selectors.nth-last-child
+# - :read-only and :read-write:
+#   - css.selectors.read-only
+#   - css.selectors.read-write
+# - :user-valid and :user-invalid:
+#   - css.selectors.user-invalid
+#   - css.selectors.user-valid
+# - :where():
+#   - css.selectors.where

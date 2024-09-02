@@ -1,0 +1,57 @@
+draft_date: 2024-08-28
+name: Content Security Policy Level 3
+description: TODO
+spec: https://w3c.github.io/webappsec-csp/
+compat_features:
+  - api.CSPViolationReportBody
+  - api.CSPViolationReportBody.blockedURL
+  - api.CSPViolationReportBody.columnNumber
+  - api.CSPViolationReportBody.disposition
+  - api.CSPViolationReportBody.documentURL
+  - api.CSPViolationReportBody.effectiveDirective
+  - api.CSPViolationReportBody.lineNumber
+  - api.CSPViolationReportBody.originalPolicy
+  - api.CSPViolationReportBody.referrer
+  - api.CSPViolationReportBody.sample
+  - api.CSPViolationReportBody.sourceFile
+  - api.CSPViolationReportBody.statusCode
+  - api.Element.securitypolicyviolation_event
+  - api.SecurityPolicyViolationEvent
+  - api.SecurityPolicyViolationEvent.SecurityPolicyViolationEvent
+  - api.SecurityPolicyViolationEvent.blockedURI
+  - api.SecurityPolicyViolationEvent.columnNumber
+  - api.SecurityPolicyViolationEvent.disposition
+  - api.SecurityPolicyViolationEvent.documentURI
+  - api.SecurityPolicyViolationEvent.effectiveDirective
+  - api.SecurityPolicyViolationEvent.lineNumber
+  - api.SecurityPolicyViolationEvent.originalPolicy
+  - api.SecurityPolicyViolationEvent.referrer
+  - api.SecurityPolicyViolationEvent.sample
+  - api.SecurityPolicyViolationEvent.sourceFile
+  - api.SecurityPolicyViolationEvent.statusCode
+  - api.SecurityPolicyViolationEvent.violatedDirective
+  - api.WorkerGlobalScope.securitypolicyviolation_event
+  - http.headers.Content-Security-Policy
+  - http.headers.Content-Security-Policy-Report-Only
+  - http.headers.Content-Security-Policy.base-uri
+  - http.headers.Content-Security-Policy.child-src
+  - http.headers.Content-Security-Policy.connect-src
+  - http.headers.Content-Security-Policy.default-src
+  - http.headers.Content-Security-Policy.font-src
+  - http.headers.Content-Security-Policy.form-action
+  - http.headers.Content-Security-Policy.frame-ancestors
+  - http.headers.Content-Security-Policy.frame-src
+  - http.headers.Content-Security-Policy.img-src
+  - http.headers.Content-Security-Policy.manifest-src
+  - http.headers.Content-Security-Policy.media-src
+  - http.headers.Content-Security-Policy.object-src
+  - http.headers.Content-Security-Policy.report-to
+  - http.headers.Content-Security-Policy.sandbox
+  - http.headers.Content-Security-Policy.script-src
+  - http.headers.Content-Security-Policy.script-src-attr
+  - http.headers.Content-Security-Policy.script-src-elem
+  - http.headers.Content-Security-Policy.script-src.external_scripts
+  - http.headers.Content-Security-Policy.style-src
+  - http.headers.Content-Security-Policy.style-src-attr
+  - http.headers.Content-Security-Policy.style-src-elem
+  - http.headers.Content-Security-Policy.worker-src

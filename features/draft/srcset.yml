@@ -1,0 +1,16 @@
+# TODO: Fix Edge ≤18 data in BCD and publish this.
+draft_date: 2024-07-17
+name: srcset and sizes
+description: The `srcset` and `sizes` attributes for `<img>` elements set a list of possible sources for the image and a corresponding list of size conditions for choosing a source, to show a responsive image that fits the size of the display.
+spec: https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-srcset
+group: html
+caniuse: srcset
+compat_features:
+  - api.HTMLImageElement.sizes
+  - api.HTMLImageElement.srcset
+  - api.HTMLSourceElement.sizes
+  - api.HTMLSourceElement.srcset
+  - html.elements.img.sizes
+  - html.elements.img.srcset
+  - html.elements.source.sizes
+  - html.elements.source.srcset

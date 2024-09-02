@@ -1,0 +1,15 @@
+draft_date: 2024-08-28
+name: Battery Status API
+description: TODO
+spec: https://w3c.github.io/battery/
+compat_features:
+  - api.BatteryManager
+  - api.BatteryManager.charging
+  - api.BatteryManager.chargingTime
+  - api.BatteryManager.chargingchange_event
+  - api.BatteryManager.chargingtimechange_event
+  - api.BatteryManager.dischargingTime
+  - api.BatteryManager.dischargingtimechange_event
+  - api.BatteryManager.level
+  - api.BatteryManager.levelchange_event
+  - api.Navigator.getBattery

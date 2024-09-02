@@ -9,7 +9,20 @@ npm install web-features
 ```
 
 ```js
-import webFeatures from "web-features";
+import { browsers, features, groups, snapshots } from "web-features";
+```
+
+Or, without Node.js:
+
+```js
+import data from "web-features/data.json" with { type: "json" };
+const { browsers, features, groups, snapshots } = data;
+```
+
+To import the JSON schema with or without Node.js:
+
+```js
+import schema from "web-features/data.schema.json" with { type: "json" };
 ```
 
 ## Rendering Baseline statuses with `web-features`

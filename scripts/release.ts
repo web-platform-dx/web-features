@@ -36,6 +36,23 @@ yargs(process.argv.slice(2))
     default: "web-platform-dx/web-features",
   })
   .command({
+    command: "diff [from [to]]",
+    describe:
+      "Compare the contents of a prior release to HEAD or another prior version",
+    builder: (yargs) => {
+      yargs.positional("from", {
+        describe: "the published web-features release to compare against",
+        type: "string",
+        default: "latest",
+      });
+      yargs.positional("to", {
+        describe: "the published web-features release to compare against",
+        type: "string",
+      });
+    },
+    handler: diff,
+  })
+  .command({
     command: "init <semverlevel>",
     describe: "Start a new release pull request",
     builder: (yargs) => {
@@ -222,6 +239,11 @@ function update(args) {
   );
 }
 
+function diff(args) {
+  const diff = diffJson(args.from, args.to);
+  console.log(diff);
+}
+
 function publish(args) {
   preflight({ expectedBranch: "main" });
 
@@ -276,39 +298,49 @@ function readPackageJSON(packageDir) {
   );
 }
 
-function diffJson(): string {
+function diffJson(from: string = "latest", to?: string): string {
   const temporaryDir = mkdtempSync(join(tmpdir(), "web-features-"));
 
-  execSync("npm install web-features", {
-    cwd: temporaryDir,
-    stdio: "inherit",
-  });
+  function pkgToJsonFile(version: string): string {
+    execSync(`npm install web-features@${version}`, {
+      cwd: temporaryDir,
+      stdio: "inherit",
+    });
 
-  const releasedJson = join(
-    temporaryDir,
-    "node_modules",
-    "web-features",
-    "index.json",
-  );
-  const prettyReleasedJson = execSync(`jq . "${releasedJson}"`, {
-    encoding: "utf-8",
-  });
-  const prettyReleasedJsonFp = join(temporaryDir, "index.released.pretty.json");
-  writeFileSync(prettyReleasedJsonFp, prettyReleasedJson);
+    const pkgJson = join(
+      temporaryDir,
+      "node_modules",
+      "web-features",
+      "data.json",
+    );
+    const prettyJson = execSync(`jq . "${pkgJson}"`, {
+      encoding: "utf-8",
+    });
+    const fp = join(temporaryDir, `data.${version}.json`);
+    writeFileSync(fp, prettyJson);
+    return fp;
+  }
 
-  build();
-  const preparedJson = join(packages["web-features"], "index.json");
-  const prettyPreparedJson = execSync(`jq . "${preparedJson}"`, {
-    encoding: "utf-8",
-  });
-  const prettyPreparedJsonFp = join(temporaryDir, "index.prepared.pretty.json");
-  writeFileSync(prettyPreparedJsonFp, prettyPreparedJson);
+  const fromFp = pkgToJsonFile(from);
+  const toFp: string = (() => {
+    if (to) {
+      return pkgToJsonFile(to);
+    } else {
+      build();
+      const preparedJson = join(packages["web-features"], "data.json");
+      const prettyPreparedJson = execSync(`jq . "${preparedJson}"`, {
+        encoding: "utf-8",
+      });
+      const fp = join(temporaryDir, "data.HEAD.json");
+      writeFileSync(fp, prettyPreparedJson);
+      return fp;
+    }
+  })();
 
   try {
-    const result = execSync(
-      `diff --unified "${prettyReleasedJsonFp}" "${prettyPreparedJsonFp}"`,
-      { encoding: "utf-8" },
-    );
+    const result = execSync(`diff --unified "${fromFp}" "${toFp}"`, {
+      encoding: "utf-8",
+    });
     rmSync(temporaryDir, { recursive: true });
     return result;
   } catch (err) {

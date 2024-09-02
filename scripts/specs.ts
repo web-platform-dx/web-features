@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 
 import webSpecs from 'web-specs' assert { type: 'json' };
 
-import features from '../index.js';
+import { features } from '../index.js';
 
 // Specs needs to be in "good standing". Nightly URLs are used if available,
 // otherwise the snapshot/versioned URL is used. See browser-specs/web-specs
@@ -77,7 +77,8 @@ function suggestSpecs(bad: URL): void {
     }
 }
 
-let checked = 0;
+let checkedFeatures = 0;
+let checkedSpecs = 0;
 let errors = 0;
 
 // Ensure every exception in defaultAllowlist is needed
@@ -92,19 +93,26 @@ for (const [allowedUrl, message] of defaultAllowlist) {
 for (const [id, data] of Object.entries(features)) {
     const specs = Array.isArray(data.spec) ? data.spec : [data.spec];
     for (const spec of specs) {
-        const url = new URL(spec);
-        if (!isOK(url)) {
+        let url: URL;
+        try {
+            url = new URL(spec);
+        } catch (error) {
+            console.error(`Invalid URL "${spec}" found in spec for "${data.name}"`);
+            errors++;
+        }
+        if (url && !isOK(url)) {
             console.error(`URL for ${id} not in web-specs: ${url.toString()}`);
             suggestSpecs(url);
             errors++;
         }
-        checked++;
+        checkedSpecs++;
     }
+    checkedFeatures++;
 }
 
 if (errors) {
-    console.log(`\n${checked} features checked, found ${errors} error(s)`);
+    console.log(`\nChecked ${checkedSpecs} specs in ${checkedFeatures} features, found ${errors} error(s)`);
     process.exit(1);
 } else {
-    console.log(`${checked} features checked, no errors`);
+    console.log(`\nChecked ${checkedSpecs} specs in ${checkedFeatures} features, no errors`);
 }

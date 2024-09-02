@@ -1,0 +1,14 @@
+draft_date: 2024-08-28
+name: Content Index
+description: TODO
+spec: https://wicg.github.io/content-index/spec/
+compat_features:
+  - api.ContentIndex
+  - api.ContentIndex.add
+  - api.ContentIndex.delete
+  - api.ContentIndex.getAll
+  - api.ContentIndexEvent
+  - api.ContentIndexEvent.ContentIndexEvent
+  - api.ContentIndexEvent.id
+  - api.ServiceWorkerGlobalScope.contentdelete_event
+  - api.ServiceWorkerRegistration.index

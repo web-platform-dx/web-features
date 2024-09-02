@@ -1,0 +1,18 @@
+draft_date: 2024-08-28
+name: Screen Capture
+description: TODO
+spec: https://w3c.github.io/mediacapture-screen-share/
+compat_features:
+  - api.CaptureController
+  - api.CaptureController.CaptureController
+  - api.CaptureController.setFocusBehavior
+  - api.MediaDevices.getDisplayMedia
+  - api.MediaDevices.getDisplayMedia.controller_option
+  - api.MediaDevices.getDisplayMedia.monitorTypeSurfaces_option
+  - api.MediaDevices.getDisplayMedia.selfBrowserSurface_option
+  - api.MediaDevices.getDisplayMedia.surfaceSwitching_option
+  - api.MediaDevices.getDisplayMedia.systemAudio_option
+  - api.MediaStreamTrack.applyConstraints.displaySurface_constraint
+  - api.MediaStreamTrack.applyConstraints.logicalSurface_constraint
+  - api.MediaStreamTrack.applyConstraints.suppressLocalAudioPlayback_constraint
+  - http.headers.Permissions-Policy.display-capture

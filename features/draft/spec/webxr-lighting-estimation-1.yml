@@ -1,0 +1,16 @@
+draft_date: 2024-08-28
+name: WebXR Lighting Estimation API Level 1
+description: TODO
+spec: https://immersive-web.github.io/lighting-estimation/
+compat_features:
+  - api.XRFrame.getLightEstimate
+  - api.XRLightEstimate
+  - api.XRLightEstimate.primaryLightDirection
+  - api.XRLightEstimate.primaryLightIntensity
+  - api.XRLightEstimate.sphericalHarmonicsCoefficients
+  - api.XRLightProbe
+  - api.XRLightProbe.probeSpace
+  - api.XRLightProbe.reflectionchange_event
+  - api.XRSession.preferredReflectionFormat
+  - api.XRSession.requestLightProbe
+  - api.XRWebGLBinding.getReflectionCubeMap

@@ -1,0 +1,82 @@
+draft_date: 2024-08-28
+name: UI Events
+description: TODO
+spec: https://w3c.github.io/uievents/
+compat_features:
+  - api.CompositionEvent
+  - api.CompositionEvent.CompositionEvent
+  - api.CompositionEvent.data
+  - api.Element.auxclick_event
+  - api.Element.beforeinput_event
+  - api.Element.blur_event
+  - api.Element.compositionend_event
+  - api.Element.compositionstart_event
+  - api.Element.compositionupdate_event
+  - api.Element.contextmenu_event
+  - api.Element.focus_event
+  - api.Element.focusin_event
+  - api.Element.focusout_event
+  - api.Element.keydown_event
+  - api.Element.keyup_event
+  - api.Element.wheel_event
+  - api.FocusEvent
+  - api.FocusEvent.FocusEvent
+  - api.FocusEvent.relatedTarget
+  - api.HTMLElement.error_event
+  - api.KeyboardEvent
+  - api.KeyboardEvent.KeyboardEvent
+  - api.KeyboardEvent.altKey
+  - api.KeyboardEvent.code
+  - api.KeyboardEvent.ctrlKey
+  - api.KeyboardEvent.getModifierState
+  - api.KeyboardEvent.isComposing
+  - api.KeyboardEvent.key
+  - api.KeyboardEvent.location
+  - api.KeyboardEvent.metaKey
+  - api.KeyboardEvent.repeat
+  - api.KeyboardEvent.shiftKey
+  - api.UIEvent
+  - api.UIEvent.UIEvent
+  - api.UIEvent.detail
+  - api.UIEvent.view
+  - api.WheelEvent
+  - api.WheelEvent.WheelEvent
+  - api.WheelEvent.deltaMode
+  - api.WheelEvent.deltaX
+  - api.WheelEvent.deltaY
+  - api.WheelEvent.deltaZ
+  - api.Window.blur_event
+  - api.Window.focus_event
+  - api.Window.load_event
+
+# The following features in the spec are already part of web-features:
+# - Mouse events:
+#   - api.Element.click_event
+#   - api.Element.dblclick_event
+#   - api.Element.mousedown_event
+#   - api.Element.mouseenter_event
+#   - api.Element.mouseleave_event
+#   - api.Element.mousemove_event
+#   - api.Element.mouseout_event
+#   - api.Element.mouseover_event
+#   - api.Element.mouseup_event
+#   - api.MouseEvent
+#   - api.MouseEvent.MouseEvent
+#   - api.MouseEvent.altKey
+#   - api.MouseEvent.button
+#   - api.MouseEvent.buttons
+#   - api.MouseEvent.clientX
+#   - api.MouseEvent.clientY
+#   - api.MouseEvent.ctrlKey
+#   - api.MouseEvent.getModifierState
+#   - api.MouseEvent.metaKey
+#   - api.MouseEvent.relatedTarget
+#   - api.MouseEvent.screenX
+#   - api.MouseEvent.screenY
+#   - api.MouseEvent.shiftKey
+# - input (event):
+#   - api.Element.input_event
+#   - api.InputEvent
+#   - api.InputEvent.InputEvent
+#   - api.InputEvent.inputType
+#   - api.InputEvent.isComposing

@@ -1,0 +1,47 @@
+draft_date: 2024-08-28
+name: CSS Images Module Level 4
+description: TODO
+spec: https://drafts.csswg.org/css-images-4/
+compat_features:
+  - css.properties.background-image.element
+  - css.properties.background-image.gradients
+  - css.properties.content.gradient
+  - css.properties.image-orientation
+  - css.properties.image-orientation.from-image
+  - css.properties.image-orientation.none
+  - css.properties.image-rendering
+  - css.properties.image-rendering.auto
+  - css.properties.image-rendering.crisp-edges
+  - css.properties.image-rendering.pixelated
+  - css.properties.image-rendering.smooth
+  - css.properties.object-fit
+  - css.properties.object-fit.contain
+  - css.properties.object-fit.cover
+  - css.properties.object-fit.fill
+  - css.properties.object-fit.none
+  - css.properties.object-fit.scale-down
+  - css.properties.object-position
+  - css.properties.object-view-box.none
+  - css.properties.shape-outside.gradient
+  - css.properties.shape-outside.image
+  - css.types.image
+  - css.types.image.cross-fade
+  - css.types.image.element
+  - css.types.image.gradient
+  - css.types.image.gradient.linear-gradient
+  - css.types.image.gradient.radial-gradient
+  - css.types.image.gradient.repeating-linear-gradient
+  - css.types.image.gradient.repeating-radial-gradient
+  - css.types.image.image
+  - svg.global_attributes.image-rendering
+
+# The following features in the spec are already part of web-features:
+# - image-set():
+#   - css.properties.background-image.image-set
+#   - css.properties.content.image-set
+#   - css.types.image.image-set
+# - object-view-box:
+#   - css.properties.object-view-box
+# - Conic gradients:
+#   - css.types.image.gradient.conic-gradient
+#   - css.types.image.gradient.repeating-conic-gradient

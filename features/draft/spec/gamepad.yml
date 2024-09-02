@@ -1,0 +1,33 @@
+draft_date: 2024-08-28
+name: Gamepad
+description: TODO
+spec: https://w3c.github.io/gamepad/
+compat_features:
+  - api.Gamepad
+  - api.Gamepad.axes
+  - api.Gamepad.buttons
+  - api.Gamepad.connected
+  - api.Gamepad.id
+  - api.Gamepad.index
+  - api.Gamepad.mapping
+  - api.Gamepad.timestamp
+  - api.Gamepad.vibrationActuator
+  - api.GamepadButton
+  - api.GamepadButton.pressed
+  - api.GamepadButton.touched
+  - api.GamepadButton.value
+  - api.GamepadEvent
+  - api.GamepadEvent.GamepadEvent
+  - api.GamepadEvent.gamepad
+  - api.GamepadHapticActuator
+  - api.GamepadHapticActuator.effects
+  - api.GamepadHapticActuator.effects.type_trigger-rumble
+  - api.GamepadHapticActuator.playEffect
+  - api.GamepadHapticActuator.playEffect.params_leftTrigger_parameter
+  - api.GamepadHapticActuator.playEffect.params_rightTrigger_parameter
+  - api.GamepadHapticActuator.playEffect.type_trigger-rumble
+  - api.GamepadHapticActuator.reset
+  - api.Navigator.getGamepads
+  - api.Window.gamepadconnected_event
+  - api.Window.gamepaddisconnected_event
+  - http.headers.Permissions-Policy.gamepad

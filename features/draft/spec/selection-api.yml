@@ -1,0 +1,38 @@
+draft_date: 2024-08-28
+name: Selection API
+description: TODO
+spec: https://w3c.github.io/selection-api/
+compat_features:
+  - api.Document
+  - api.Document.getSelection
+  - api.Document.selectionchange_event
+  - api.HTMLInputElement.selectionchange_event
+  - api.HTMLTextAreaElement.selectionchange_event
+  - api.Node.selectstart_event
+  - api.Selection
+  - api.Selection.addRange
+  - api.Selection.anchorNode
+  - api.Selection.anchorOffset
+  - api.Selection.collapse
+  - api.Selection.collapseToEnd
+  - api.Selection.collapseToStart
+  - api.Selection.containsNode
+  - api.Selection.deleteFromDocument
+  - api.Selection.direction
+  - api.Selection.empty
+  - api.Selection.extend
+  - api.Selection.focusNode
+  - api.Selection.focusOffset
+  - api.Selection.getComposedRanges
+  - api.Selection.getRangeAt
+  - api.Selection.isCollapsed
+  - api.Selection.modify
+  - api.Selection.rangeCount
+  - api.Selection.removeAllRanges
+  - api.Selection.removeRange
+  - api.Selection.selectAllChildren
+  - api.Selection.setBaseAndExtent
+  - api.Selection.setPosition
+  - api.Selection.toString
+  - api.Selection.type
+  - api.Window.getSelection

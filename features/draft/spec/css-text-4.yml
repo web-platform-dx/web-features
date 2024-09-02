@@ -1,0 +1,99 @@
+draft_date: 2024-08-28
+name: CSS Text Module Level 4
+description: TODO
+spec: https://drafts.csswg.org/css-text-4/
+compat_features:
+  - css.properties.hanging-punctuation
+  - css.properties.hanging-punctuation.allow-end
+  - css.properties.hanging-punctuation.first
+  - css.properties.hanging-punctuation.last
+  - css.properties.hanging-punctuation.none
+  - css.properties.hyphenate-character
+  - css.properties.hyphenate-character.auto
+  - css.properties.hyphenate-limit-chars
+  - css.properties.hyphenate-limit-chars.auto
+  - css.properties.letter-spacing
+  - css.properties.letter-spacing.normal
+  - css.properties.line-break
+  - css.properties.line-break.anywhere
+  - css.properties.line-break.auto
+  - css.properties.line-break.loose
+  - css.properties.line-break.normal
+  - css.properties.line-break.strict
+  - css.properties.overflow-wrap
+  - css.properties.overflow-wrap.anywhere
+  - css.properties.overflow-wrap.break-word
+  - css.properties.overflow-wrap.normal
+  - css.properties.tab-size
+  - css.properties.text-align
+  - css.properties.text-align-last
+  - css.properties.text-align-last.auto
+  - css.properties.text-align.center
+  - css.properties.text-align.end
+  - css.properties.text-align.justify
+  - css.properties.text-align.left
+  - css.properties.text-align.match-parent
+  - css.properties.text-align.right
+  - css.properties.text-align.start
+  - css.properties.text-indent.each-line
+  - css.properties.text-indent.hanging
+  - css.properties.text-justify
+  - css.properties.text-justify.auto
+  - css.properties.text-justify.inter-character
+  - css.properties.text-justify.inter-word
+  - css.properties.text-justify.none
+  - css.properties.text-spacing-trim.normal
+  - css.properties.text-spacing-trim.space-all
+  - css.properties.text-spacing-trim.space-first
+  - css.properties.text-spacing-trim.trim-start
+  - css.properties.text-transform
+  - css.properties.text-transform.capitalize
+  - css.properties.text-transform.full-size-kana
+  - css.properties.text-transform.full-width
+  - css.properties.text-transform.lowercase
+  - css.properties.text-transform.none
+  - css.properties.text-transform.uppercase
+  - css.properties.text-wrap
+  - css.properties.text-wrap-mode
+  - css.properties.text-wrap-style
+  - css.properties.text-wrap-style.auto
+  - css.properties.text-wrap-style.balance
+  - css.properties.text-wrap-style.stable
+  - css.properties.text-wrap.stable
+  - css.properties.white-space
+  - css.properties.white-space-collapse
+  - css.properties.white-space-collapse.break-spaces
+  - css.properties.white-space-collapse.collapse
+  - css.properties.white-space-collapse.preserve
+  - css.properties.white-space-collapse.preserve-breaks
+  - css.properties.white-space.break-spaces
+  - css.properties.white-space.normal
+  - css.properties.white-space.nowrap
+  - css.properties.white-space.pre
+  - css.properties.white-space.pre-line
+  - css.properties.white-space.pre-wrap
+  - css.properties.word-break
+  - css.properties.word-break.auto-phrase
+  - css.properties.word-break.break-all
+  - css.properties.word-break.keep-all
+  - css.properties.word-break.normal
+  - css.properties.word-spacing
+  - css.properties.word-spacing.normal
+  - css.properties.word-wrap
+  - svg.global_attributes.letter-spacing
+  - svg.global_attributes.word-spacing
+
+# The following features in the spec are already part of web-features:
+# - Hyphenation:
+#   - css.properties.hyphens
+# - text-indent:
+#   - css.properties.text-indent
+# - text-spacing-trim:
+#   - css.properties.text-spacing-trim
+# - text-wrap: balance:
+#   - css.properties.text-wrap.balance
+# - text-wrap: nowrap:
+#   - css.properties.text-wrap.nowrap
+#   - css.properties.text-wrap.wrap
+# - text-wrap: pretty:
+#   - css.properties.text-wrap.pretty

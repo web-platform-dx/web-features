@@ -1,0 +1,7 @@
+name: String trimStart() and trimEnd()
+description: The `trimStart()` and `trimEnd()` methods of strings return a new string with whitespace removed from the beginning or end of the string.
+spec: https://tc39.es/ecma262/multipage/text-processing.html#sec-string-objects
+group: string
+compat_features:
+  - javascript.builtins.String.trimEnd
+  - javascript.builtins.String.trimStart

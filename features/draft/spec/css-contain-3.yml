@@ -1,0 +1,47 @@
+draft_date: 2024-08-28
+name: CSS Containment Module Level 3
+description: TODO
+spec: https://drafts.csswg.org/css-contain-3/
+compat_features:
+  - api.Element.contentvisibilityautostatechange_event
+  - css.properties.contain.content
+  - css.properties.contain.none
+  - css.properties.contain.strict
+  - css.properties.content-visibility.auto
+  - css.properties.content-visibility.hidden
+  - css.properties.content-visibility.visible
+
+# The following features in the spec are already part of web-features:
+# - Container queries:
+#   - api.CSSContainerRule
+#   - api.CSSContainerRule.containerName
+#   - api.CSSContainerRule.containerQuery
+#   - css.at-rules.container
+#   - css.properties.container
+#   - css.properties.container-name
+#   - css.properties.container-name.none
+#   - css.properties.container-type
+#   - css.properties.container-type.inline-size
+#   - css.properties.container-type.normal
+#   - css.properties.container-type.size
+# - content-visibility:
+#   - api.ContentVisibilityAutoStateChangeEvent
+#   - api.ContentVisibilityAutoStateChangeEvent.ContentVisibilityAutoStateChangeEvent
+#   - api.ContentVisibilityAutoStateChangeEvent.skipped
+#   - css.properties.content-visibility
+# - Container style queries:
+#   - css.at-rules.container.style_queries_for_custom_properties
+# - Size containment:
+#   - css.properties.contain
+#   - css.properties.contain.size
+# - Inline-size containment:
+#   - css.properties.contain.inline-size
+# - Layout containment:
+#   - css.properties.contain.layout
+# - Paint containment:
+#   - css.properties.contain.paint
+# - Style containment:
+#   - css.properties.contain.style
+# - display animation:
+#   - css.properties.content-visibility.is_transitionable
+#   - css.properties.content-visibility.keyframe_animatable

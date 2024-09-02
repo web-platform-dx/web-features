@@ -1,0 +1,64 @@
+draft_date: 2024-08-28
+name: CSS Transforms Module Level 2
+description: TODO
+spec: https://drafts.csswg.org/css-transforms-2/
+compat_features:
+  - css.properties.rotate.none
+  - css.properties.scale.none
+  - css.properties.transform-box
+  - css.properties.transform-box.border-box
+  - css.properties.transform-box.content-box
+  - css.properties.transform-box.fill-box
+  - css.properties.transform-box.stroke-box
+  - css.properties.transform-box.view-box
+  - css.properties.transform-origin.bottom
+  - css.properties.transform-origin.center
+  - css.properties.transform-origin.left
+  - css.properties.transform-origin.right
+  - css.properties.transform-origin.top
+  - css.properties.translate.none
+  - svg.elements.linearGradient.gradientTransform
+  - svg.global_attributes.transform
+  - svg.global_attributes.transform-origin
+
+# The following features in the spec are already part of web-features:
+# - 3D transforms:
+#   - css.properties.backface-visibility
+#   - css.properties.perspective
+#   - css.properties.perspective.none
+#   - css.properties.perspective-origin
+#   - css.properties.perspective-origin.bottom
+#   - css.properties.perspective-origin.center
+#   - css.properties.perspective-origin.left
+#   - css.properties.perspective-origin.right
+#   - css.properties.perspective-origin.top
+#   - css.properties.transform-style
+#   - css.types.transform-function.matrix3d
+#   - css.types.transform-function.perspective
+#   - css.types.transform-function.rotate3d
+#   - css.types.transform-function.rotateX
+#   - css.types.transform-function.rotateY
+#   - css.types.transform-function.rotateZ
+#   - css.types.transform-function.scale3d
+#   - css.types.transform-function.scaleZ
+#   - css.types.transform-function.translate3d
+#   - css.types.transform-function.translateZ
+# - Individual transform properties:
+#   - css.properties.rotate
+#   - css.properties.scale
+#   - css.properties.translate
+# - 2D transforms:
+#   - css.properties.transform
+#   - css.properties.transform-origin
+#   - css.types.transform-function
+#   - css.types.transform-function.matrix
+#   - css.types.transform-function.rotate
+#   - css.types.transform-function.scale
+#   - css.types.transform-function.scaleX
+#   - css.types.transform-function.scaleY
+#   - css.types.transform-function.skew
+#   - css.types.transform-function.skewX
+#   - css.types.transform-function.skewY
+#   - css.types.transform-function.translate
+#   - css.types.transform-function.translateX
+#   - css.types.transform-function.translateY

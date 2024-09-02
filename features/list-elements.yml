@@ -1,0 +1,27 @@
+name: <ol>, <ul>, and <li>
+description: The `<ol>`, `<ul>`, and `<li>` HTML elements represent ordered and unordered lists.
+spec:
+  - https://html.spec.whatwg.org/multipage/grouping-content.html#the-ol-element
+  - https://html.spec.whatwg.org/multipage/grouping-content.html#the-ul-element
+  - https://html.spec.whatwg.org/multipage/grouping-content.html#the-li-element
+group: html-elements
+status:
+  compute_from:
+    - html.elements.ol
+    - html.elements.ul
+    - html.elements.li
+compat_features:
+  - api.HTMLLIElement
+  - api.HTMLLIElement.value
+  - api.HTMLOListElement
+  - api.HTMLOListElement.reversed
+  - api.HTMLOListElement.start
+  - api.HTMLOListElement.type
+  - api.HTMLUListElement
+  - html.elements.li
+  - html.elements.li.value
+  - html.elements.ol
+  - html.elements.ol.reversed
+  - html.elements.ol.start
+  - html.elements.ol.type
+  - html.elements.ul
