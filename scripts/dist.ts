@@ -325,7 +325,7 @@ function main() {
     if (fs.statSync(fileOrDirectory).isDirectory()) {
       return new fdir()
         .withBasePath()
-        .filter((fp) => fp.endsWith(".yml"))
+        .filter((fp) => fp.endsWith(".yml") || fp.endsWith(".yml.dist"))
         .crawl(fileOrDirectory)
         .sync();
     }
