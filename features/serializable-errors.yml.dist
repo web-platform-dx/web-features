@@ -4,6 +4,9 @@
 status:
   baseline: false
   support:
+    chrome: "77"
+    chrome_android: "77"
+    edge: "79"
     firefox: "103"
     firefox_android: "103"
 compat_features:
@@ -16,6 +19,7 @@ compat_features:
   #   firefox_android: "101"
   - api.DOMException.serializable_object
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "77"
@@ -30,10 +34,3 @@ compat_features:
   - javascript.builtins.SyntaxError.serializable_object
   - javascript.builtins.TypeError.serializable_object
   - javascript.builtins.URIError.serializable_object
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   firefox: "103"
-  #   firefox_android: "103"
-  - javascript.builtins.AggregateError.serializable_object
