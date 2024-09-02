@@ -2,7 +2,10 @@ name: Proxy and Reflect
 description: "The `Proxy` and `Reflect` JavaScript built-ins intercept and define custom behavior for fundamental language operations (such as property lookup, assignment, enumeration, or function invocation)."
 spec: https://tc39.es/ecma262/multipage/reflection.html#sec-reflection
 group: javascript
+caniuse: proxy
 snapshot: ecmascript-2015
+status:
+  compute_from: javascript.builtins.Proxy
 compat_features:
   - javascript.builtins.Proxy
   - javascript.builtins.Proxy.Proxy
