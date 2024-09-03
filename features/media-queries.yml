@@ -1,5 +1,5 @@
 name: Media queries
-description: CSS Media queries allow you to provide different styles based on the user's device and settings. For example, `@media (width <= 700px) and (orientation:portrait)` selects screens less than 700 pixels wide and also are taller than they are wide.
+description: The `@media` CSS rule conditionally applies styles based on the output device type, its capabilities, and the user's preferences. Media queries are composed of an optional media type such as `screen` or `print`, and one or more mandatory media features, such as `prefers-reduced-animations`.
 spec: https://drafts.csswg.org/mediaqueries-5/
 caniuse: css-mediaqueries
 group: media-queries
