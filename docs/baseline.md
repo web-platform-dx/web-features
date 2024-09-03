@@ -55,29 +55,29 @@ Baseline features aren’t unspecified or formally discouraged.
 
 Baseline status cannot or will not satisfy the following non-goals:
 
-* **Identify universally available features.**
+- **Identify universally available features.**
   Many Baseline features will not achieve 100% user reach soon or perhaps ever.
   If a web developer needs to support a globally uncommon or discontinued browser (e.g., Internet Explorer 11), then the developer needs to know the specific limitations of that browser, not a broad overview of developers’ most commonly required browsers.
   Baseline can’t be both.
-* **Identify support in assistive technology.**
+- **Identify support in assistive technology.**
   Baseline does not cover support for screen readers, screen magnifiers, voice control, and other assistive technology that is not built into browsers.
   See also: [Future considerations](#future-considerations).
-* **Identify support in non-web environments.**
+- **Identify support in non-web environments.**
   Developers use web technologies in non-web settings, such as JavaScript in Node.js, Web APIs in Deno, or HTML and CSS in Electron-based applications.
   For good reasons, web technologies in non-web settings often depart from interoperability with web browsers.
   Baseline’s ability to report broad consistency would be undermined by accommodating such departures.
-* **Tailor Baseline status to standards bodies, browser implementers, and other audiences.**
+- **Tailor Baseline status to standards bodies, browser implementers, and other audiences.**
   Baseline is intended to fill a troublesome gap in web developer experience.
   Other audiences may find utility in Baseline, but their needs must not come at the expense of developer experience.
-* **Identify features that are good candidates for polyfilling or progressive enhancement.**
+- **Identify features that are good candidates for polyfilling or progressive enhancement.**
   Baseline features should "just work" when you use them, without requiring polyfills or workarounds.
   Instead, developers should be able to use Baseline to decide when to stop shipping a polyfill.
   See also: [Future considerations](#future-considerations).
-* **Replace fine-grained or site-specific reporting or analyses.**
+- **Replace fine-grained or site-specific reporting or analyses.**
   Baseline is a complement to, not a replacement for, detailed compatibility reporting, such as _Can I Use…?_ or browser compatibility tables on MDN.
   Likewise, Baseline is not a substitute for custom analysis (e.g., [Import statistics on Can I Use…?](https://caniuse.com/ciu/import)).
   Baseline may aid web developers in directing their browser support investigations but, as a summary, won’t eliminate application-specific analysis.
-* **Foreclose on other statuses.**
+- **Foreclose on other statuses.**
   Baseline’s goals capture a certain kind of stability in web platform features, but that’s far from the only status relevant to web developers.
   Other categories could surely exist to complement or work alongside Baseline.
   Baseline should seek to summarize underlying facts about web platform features, not canonize them.
@@ -105,12 +105,12 @@ This is but one of several possible stories to help keep in mind the needs and c
 >
 > But the developer has several constraints that influence their day-to-day decisions about whether to use a given web platform feature:
 >
-> * The developer does not have access to downstream developers’ analytics and they don't use telemetry in the application itself, so they can’t directly know anything about end users’ browsers.
-> * The developer has limited time and budget to get relatively old or new devices and test with.
+> - The developer does not have access to downstream developers’ analytics and they don't use telemetry in the application itself, so they can’t directly know anything about end users’ browsers.
+> - The developer has limited time and budget to get relatively old or new devices and test with.
 >   They use a 2-year old laptop that they keep _mostly_ up-to-date with OS and browser updates.
-> * The developer has limited time and interest to keep up with browser news.
+> - The developer has limited time and interest to keep up with browser news.
 >   They don’t routinely read web development blogs.
-> * The developer recently decided to stop worrying about end-of-life browsers.
+> - The developer recently decided to stop worrying about end-of-life browsers.
 >
 > Today, to decide whether to use a new-to-them web platform feature, the developer uses the same techniques taught by their mentors: skim _Can I use…?_ and MDN browser compatibility tables.
 > They mostly work on a gut feeling: is there _enough_ green in the table to use this feature?
@@ -151,7 +151,7 @@ For each feature definition in `web-features`, a wider-support status shall be c
 
 The feature’s keystone date is on or before today’s date minus 30 months and the dates of the following long-term support releases:
 
-* Mozilla Firefox ESR, given by the release date for the latest x.0 release of Firefox ESR (or the previous x.0 release, when there are two active ESR releases).
+- Mozilla Firefox ESR, given by the release date for the latest x.0 release of Firefox ESR (or the previous x.0 release, when there are two active ESR releases).
 
 This duration is selected to approximate developer signals, estimates of browser release uptake over time, an estimate of high total market share support, and the project governance group’s best judgment.
 
@@ -160,13 +160,13 @@ This duration is selected to approximate developer signals, estimates of browser
 Both the interoperable and wider-support substatuses observe support with respect to a set of browsers.
 The _core browser set_ shall be defined as:
 
-* Apple Safari (iOS)
-* Apple Safari (macOS)
-* Google Chrome (Android)
-* Google Chrome (desktop)
-* Microsoft Edge (desktop)
-* Mozilla Firefox (Android)
-* Mozilla Firefox (desktop)
+- Apple Safari (iOS)
+- Apple Safari (macOS)
+- Google Chrome (Android)
+- Google Chrome (desktop)
+- Microsoft Edge (desktop)
+- Mozilla Firefox (Android)
+- Mozilla Firefox (desktop)
 
 ## Future considerations
 
@@ -175,10 +175,10 @@ Here are some areas for future consideration and not currently in-scope for Base
 
 <!-- TODO: Replace these with issues -->
 
-* Upcoming (e.g., not yet shipped in all browsers)
-* Progressive enhancement safe (i.e., limited penalties for support failures)
-* Developer feedback requested
-* Buggy (e.g., supported but in ways that are surprising and semi-interoperable)
-* Support in assistive technology that is not built into browsers.
-* Obsolete/deprecated/legacy/etc. (i.e., flagged as such in the specification or dropped from newer versions of the specification)
-* Having high-quality polyfills available
+- Upcoming (e.g., not yet shipped in all browsers)
+- Progressive enhancement safe (i.e., limited penalties for support failures)
+- Developer feedback requested
+- Buggy (e.g., supported but in ways that are surprising and semi-interoperable)
+- Support in assistive technology that is not built into browsers.
+- Obsolete/deprecated/legacy/etc. (i.e., flagged as such in the specification or dropped from newer versions of the specification)
+- Having high-quality polyfills available
