@@ -1,14 +1,18 @@
-draft_date: 2024-08-12
+draft_date: 2024-08-28
 name: CSS Values and Units Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-values-4/
 compat_features:
   - css.at-rules.media.calc
   - css.properties.content.url
+  - css.properties.interpolate-size
+  - css.properties.interpolate-size.allow-keywords
+  - css.properties.interpolate-size.numeric-only
   - css.properties.tab-size.length
   - css.types.angle
   - css.types.angle-percentage
   - css.types.attr
+  - css.types.calc-size
   - css.types.dimension
   - css.types.frequency
   - css.types.frequency-percentage
@@ -33,7 +37,7 @@ compat_features:
 # - abs() and sign():
 #   - css.types.abs
 #   - css.types.sign
-# - sin(), cos(), tan(), asin(), acos(), atan(), and atan2():
+# - sin(), cos(), tan(), asin(), acos(), atan(), and atan2() (CSS):
 #   - css.types.acos
 #   - css.types.asin
 #   - css.types.atan

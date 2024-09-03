@@ -138,5 +138,9 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
+  - css.properties.interpolate-size
+  - css.properties.interpolate-size.allow-keywords
+  - css.properties.interpolate-size.numeric-only
+  - css.types.calc-size
   - css.types.frequency
   - css.types.frequency-percentage
