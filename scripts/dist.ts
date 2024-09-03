@@ -1,4 +1,10 @@
-import { computeBaseline, getStatus, setLogger } from "compute-baseline";
+import { Temporal } from "@js-temporal/polyfill";
+import {
+  computeBaseline,
+  getStatus,
+  parseRangedDateString,
+  setLogger,
+} from "compute-baseline";
 import { Compat, Feature } from "compute-baseline/browser-compat-data";
 import { fdir } from "fdir";
 import fs from "node:fs";
@@ -41,6 +47,8 @@ const logger = winston.createLogger({
   transports: new winston.transports.Console(),
 });
 
+let exitStatus = 0;
+
 setLogger(logger);
 
 /**
@@ -81,6 +89,7 @@ type SupportStatus = ReturnType<typeof getStatus>;
 function compareStatus(a: SupportStatus, b: SupportStatus) {
   // First sort by Baseline status/date, oldest Base features first, and
   // non-Baseline features last.
+
   if (a.baseline_low_date !== b.baseline_low_date) {
     if (!a.baseline_low_date) {
       return 1;
@@ -88,8 +97,24 @@ function compareStatus(a: SupportStatus, b: SupportStatus) {
     if (!b.baseline_low_date) {
       return -1;
     }
-    return a.baseline_low_date.localeCompare(b.baseline_low_date);
+
+    const [aLowDate, aLowRanged] = parseRangedDateString(a.baseline_low_date);
+    const [bLowDate, bLowRanged] = parseRangedDateString(b.baseline_low_date);
+
+    // Older dates first
+    if (Temporal.PlainDate.compare(aLowDate, bLowDate) !== 0) {
+      return Temporal.PlainDate.compare(aLowDate, bLowDate);
+    }
+
+    // If dates are equal, then unranged values go first
+    if (!aLowRanged && bLowRanged) {
+      return -1;
+    }
+    if (!bLowRanged && aLowRanged) {
+      return 1;
+    }
   }
+
   // Next sort by number of supporting browsers.
   const aBrowsers = Object.keys(a.support).length;
   const bBrowsers = Object.keys(b.support).length;
@@ -101,7 +126,23 @@ function compareStatus(a: SupportStatus, b: SupportStatus) {
   const bVersions = Object.values(b.support);
   for (let i = 0; i < aVersions.length; i++) {
     if (aVersions[i] !== bVersions[i]) {
-      return Number(aVersions[i]) - Number(bVersions[i]);
+      const [aRanged, aVersion] = aVersions[i].startsWith("≤")
+        ? [true, aVersions[i].slice(1)]
+        : [false, aVersions[i]];
+      const [bRanged, bVersion] = bVersions[i].startsWith("≤")
+        ? [true, bVersions[i].slice(1)]
+        : [false, bVersions[i]];
+
+      if (aVersion !== bVersion) {
+        if (!aRanged && bRanged) {
+          return -1;
+        }
+        if (!bRanged && aRanged) {
+          return 1;
+        }
+      }
+
+      return Number(aVersion) - Number(bVersion);
     }
   }
   return 0;
@@ -128,7 +169,7 @@ function toDist(sourcePath: string): YAML.Document {
     source.compat_features.sort();
     if (isDeepStrictEqual(source.compat_features, taggedCompatFeatures)) {
       logger.warn(
-        `${id}: compat_features override matches tags in @mdn/browser-compat-data. Consider deleting this override.`,
+        `${id}: compat_features override matches tags in @mdn/browser-compat-data. Consider deleting the compat_features override.`,
       );
     }
   }
@@ -136,7 +177,8 @@ function toDist(sourcePath: string): YAML.Document {
   const compatFeatures = source.compat_features ?? taggedCompatFeatures;
   let computeFrom = compatFeatures;
 
-  if (source.status?.compute_from) {
+  const computeFromWasExplicitlySet = source.status?.compute_from !== undefined;
+  if (computeFromWasExplicitlySet) {
     const compute_from = source.status.compute_from;
     const keys = Array.isArray(compute_from) ? compute_from : [compute_from];
     for (const key of keys) {
@@ -155,7 +197,7 @@ function toDist(sourcePath: string): YAML.Document {
   // can be removed if it matches the computed status.
   let computedStatus = computeBaseline({
     compatKeys: computeFrom,
-    checkAncestors: false,
+    checkAncestors: true,
   });
 
   if (computedStatus.discouraged) {
@@ -169,7 +211,7 @@ function toDist(sourcePath: string): YAML.Document {
   if (source.status) {
     if (isDeepStrictEqual(source.status, computedStatus)) {
       logger.warn(
-        `${id}: status override matches computed status. Consider deleting this override.`,
+        `${id}: status override matches computed status. Consider deleting the status override.`,
       );
     }
   }
@@ -188,6 +230,15 @@ function toDist(sourcePath: string): YAML.Document {
     }
     if (!added) {
       groups.set(status, [key]);
+    }
+  }
+
+  if (computeFromWasExplicitlySet) {
+    if (groups.size === 1) {
+      logger.error(
+        `${id}: uses compute_from which must not be used when the overall status does not differ from the per-key statuses. Delete the status override.`,
+      );
+      exitStatus = 1;
     }
   }
 
@@ -274,7 +325,7 @@ function main() {
     if (fs.statSync(fileOrDirectory).isDirectory()) {
       return new fdir()
         .withBasePath()
-        .filter((fp) => fp.endsWith(".yml"))
+        .filter((fp) => fp.endsWith(".yml") || fp.endsWith(".yml.dist"))
         .crawl(fileOrDirectory)
         .sync();
     }
@@ -317,7 +368,7 @@ function main() {
       }
     }
     if (updateNeeded) {
-      process.exit(1);
+      exitStatus = 1;
     }
   } else {
     // Update dist in place.
@@ -329,4 +380,5 @@ function main() {
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   main();
+  process.exit(exitStatus);
 }

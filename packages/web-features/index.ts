@@ -3,9 +3,9 @@ import { fileURLToPath } from "node:url";
 
 import { WebFeaturesData } from "./types";
 
-const jsonPath = fileURLToPath(new URL("./index.json", import.meta.url));
-const { features, groups, snapshots } = JSON.parse(
+const jsonPath = fileURLToPath(new URL("./data.json", import.meta.url));
+const { browsers, features, groups, snapshots } = JSON.parse(
   readFileSync(jsonPath, { encoding: "utf-8" }),
 ) as WebFeaturesData;
 
-export { features, groups, snapshots };
+export { browsers, features, groups, snapshots };

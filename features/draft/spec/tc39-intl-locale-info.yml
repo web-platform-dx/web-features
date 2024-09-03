@@ -1,12 +1,15 @@
-draft_date: 2024-07-11
+draft_date: 2024-08-28
 name: Intl Locale Info Proposal
 description: TODO
 spec: https://tc39.es/proposal-intl-locale-info/
 compat_features:
-  - javascript.builtins.Intl.Locale.getCalendars
-  - javascript.builtins.Intl.Locale.getCollations
-  - javascript.builtins.Intl.Locale.getHourCycles
-  - javascript.builtins.Intl.Locale.getNumberingSystems
-  - javascript.builtins.Intl.Locale.getTextInfo
-  - javascript.builtins.Intl.Locale.getTimeZones
   - javascript.builtins.Intl.Locale.getWeekInfo
+
+# The following features in the spec are already part of web-features:
+# - Intl.Locale info:
+#   - javascript.builtins.Intl.Locale.getCalendars
+#   - javascript.builtins.Intl.Locale.getCollations
+#   - javascript.builtins.Intl.Locale.getHourCycles
+#   - javascript.builtins.Intl.Locale.getNumberingSystems
+#   - javascript.builtins.Intl.Locale.getTextInfo
+#   - javascript.builtins.Intl.Locale.getTimeZones

@@ -1,0 +1,18 @@
+name: <embed>
+description: The `<embed>` element represents an external resource such as a PDF or SVG document. It was historically used for plugins such as Shockwave Flash.
+spec:
+  - https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element
+  - https://html.spec.whatwg.org/multipage/obsolete.html#noembed
+group: html-elements
+compat_features:
+  - api.HTMLEmbedElement
+  - api.HTMLEmbedElement.getSVGDocument
+  - api.HTMLEmbedElement.height
+  - api.HTMLEmbedElement.src
+  - api.HTMLEmbedElement.type
+  - api.HTMLEmbedElement.width
+  - html.elements.embed
+  - html.elements.embed.height
+  - html.elements.embed.src
+  - html.elements.embed.type
+  - html.elements.embed.width

@@ -1,7 +1,9 @@
 name: "@counter-style"
-description: The `@counter-style` CSS at-rule defines custom counter styles for list items. For example, you can use a sequence of specific symbols instead of numbers for an ordered list.
+description: The `@counter-style` CSS at-rule sets custom counter styles for list items. For example, you can use a sequence of specific symbols instead of numbers for an ordered list.
 spec: https://drafts.csswg.org/css-counter-styles-3/
 caniuse: css-at-counter-style
+status:
+  compute_from: css.at-rules.counter-style
 compat_features:
   - css.at-rules.counter-style
   - css.at-rules.counter-style.additive-symbols
@@ -22,9 +24,7 @@ compat_features:
   - api.CSSCounterStyleRule.range
   - api.CSSCounterStyleRule.system
   - api.CSSCounterStyleRule.suffix
-  # Partial support except in Safari:
-  # - css.at-rules.counter-style.symbols
-  # - api.CSSCounterStyleRule.symbols
-  # Firefox only:
-  # - css.at-rules.counter-style.speak-as
-  # - api.CSSCounterStyleRule.speakAs
+  - css.at-rules.counter-style.symbols
+  - api.CSSCounterStyleRule.symbols
+  - css.at-rules.counter-style.speak-as
+  - api.CSSCounterStyleRule.speakAs

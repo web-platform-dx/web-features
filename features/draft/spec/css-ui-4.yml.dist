@@ -53,32 +53,6 @@ compat_features:
   - css.properties.outline-offset
 
   # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "79"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "3"
-  #   safari_ios: "1"
-  - css.properties.resize
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "57"
-  #   chrome_android: "57"
-  #   edge: "79"
-  #   firefox: "53"
-  #   firefox_android: "53"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - css.properties.caret-color
-
-  # baseline: high
   # baseline_low_date: 2021-12-07
   # baseline_high_date: 2024-06-07
   # support:
@@ -95,7 +69,6 @@ compat_features:
   - css.properties.cursor.default
   - css.properties.cursor.e-resize
   - css.properties.cursor.help
-  - css.properties.cursor.inherit
   - css.properties.cursor.move
   - css.properties.cursor.n-resize
   - css.properties.cursor.ne-resize
@@ -167,13 +140,13 @@ compat_features:
   # baseline_low_date: 2021-12-07
   # baseline_high_date: 2024-06-07
   # support:
-  #   chrome: "83"
+  #   chrome: ≤83
   #   chrome_android: "83"
   #   edge: "83"
-  #   firefox: "72"
+  #   firefox: ≤72
   #   firefox_android: "95"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
   - css.properties.cursor.grabbing
 
   # baseline: low

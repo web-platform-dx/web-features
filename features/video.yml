@@ -1,7 +1,9 @@
 name: <video>
 description: The `<video>` element plays videos or movies, optionally with controls provided by the browser.
 spec: https://html.spec.whatwg.org/multipage/media.html#video
-group: media-elements
+group:
+  - media-elements
+  - html-elements
 caniuse: video
 status:
   compute_from: html.elements.video

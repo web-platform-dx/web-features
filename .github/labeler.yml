@@ -1,5 +1,22 @@
+"documentation":
+  - changed-files:
+      - all-globs-to-any-file:
+          - "**/*.md"
+
 "feature definition":
   - changed-files:
       - all-globs-to-any-file:
           - "features/*.yml"
           - "!features/*.yml.dist"
+
+"tools and infrastructure":
+  - changed-files:
+      - all-globs-to-any-file:
+          - ".eslint.config.js"
+          - ".github/**"
+          - ".node-version"
+          - ".nvmrc"
+          - ".prettierignore"
+          - ".prettierrc"
+          - "scripts/**"
+          - "tsconfig.json"

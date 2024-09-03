@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "55"
+    firefox_android: "55"
 compat_features:
   # baseline: high
   # baseline_low_date: 2017-03-27
@@ -18,17 +20,7 @@ compat_features:
   #   safari_ios: "10.3"
   - api.Gamepad
 
-  # baseline: false
-  # support:
-  #   chrome: "68"
-  #   chrome_android: "68"
-  #   edge: "15"
-  #   firefox: "55"
-  #   firefox_android: "55"
-  #   safari: "16.4"
-  - api.GamepadHapticActuator
-  - api.GamepadHapticActuator.type
-
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "55"
@@ -46,8 +38,3 @@ compat_features:
   - api.GamepadPose.linearVelocity
   - api.GamepadPose.orientation
   - api.GamepadPose.position
-
-  # baseline: false
-  # support:
-  #   safari: "16.4"
-  - api.GamepadHapticActuator.canPlayEffectType

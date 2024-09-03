@@ -1,0 +1,6 @@
+name: Color management for 2D canvas
+description: The optional `colorSpace` parameter of a 2D canvas's `getContext()` method chooses the color representation, such as `"srgb"` or `"display-p3"`.
+spec: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-color-space
+group: canvas
+compat_features:
+  - api.HTMLCanvasElement.getContext.2d_context.options_colorSpace_parameter
