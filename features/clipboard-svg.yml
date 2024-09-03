@@ -1,0 +1,6 @@
+name: Async clipboard support for SVG
+description: Support for the `image/svg+xml` mime-type in the `navigator.clipboard.write()` and `navigator.clipboard.read()` methods allows you to copy SVG data across native and web applications.
+spec: https://w3c.github.io/clipboard-apis/#dom-clipboardunsanitizedformats-unsanitized
+group: clipboard
+compat_features:
+  - api.ClipboardItem.type_image_svg_xml
