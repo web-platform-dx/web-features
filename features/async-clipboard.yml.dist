@@ -119,3 +119,17 @@ compat_features:
   #   chrome_android: "64"
   #   edge: "79"
   - api.Permissions.permission_clipboard-write
+
+  # baseline: false
+  # support:
+  #   chrome: "104"
+  #   chrome_android: "104"
+  #   edge: "104"
+  - api.ClipboardItem.type_web
+
+  # baseline: false
+  # support:
+  #   chrome: "124"
+  #   chrome_android: "124"
+  #   edge: "124"
+  - api.ClipboardItem.type_image_svg_xml
