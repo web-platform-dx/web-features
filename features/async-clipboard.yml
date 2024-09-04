@@ -2,33 +2,28 @@ name: Async clipboard
 description: The `navigator.clipboard` API asynchronously reads and writes to the system clipboard.
 spec: https://w3c.github.io/clipboard-apis/#async-clipboard-api
 caniuse: async-clipboard
-# Differences between web-features and caniuse.com are tracked here:
-# https://github.com/Fyrd/caniuse/issues/7105
-# https://github.com/Fyrd/caniuse/pull/7106
-# https://github.com/Fyrd/caniuse/issues/7107
 group: clipboard
 # This feature's support history and data has been rather tangled. See:
 # https://github.com/web-platform-dx/web-features/issues/1249
 status:
-  baseline: low
-  baseline_low_date: 2024-06-11
-  support:
-    chrome: "66"
-    chrome_android: "66"
-    edge: "79"
-    firefox: "127"
-    firefox_android: "127"
-    safari: "13.1"
-    safari_ios: "13.4"
+  compute_from:
+    - api.Clipboard.read
+    - api.Clipboard.write
 compat_features:
   - api.Clipboard
   - api.Clipboard.read
   - api.Clipboard.readText
   - api.Clipboard.write
   - api.Clipboard.writeText
+  - api.Clipboard.type_image-png
+  - api.Clipboard.type_text-html
+  - api.Clipboard.type_text-plain
   - api.ClipboardItem
   - api.ClipboardItem.ClipboardItem
   - api.ClipboardItem.getType
   - api.ClipboardItem.presentationStyle
+  - api.ClipboardItem.type_image_svg_xml
+  - api.ClipboardItem.type_web
   - api.ClipboardItem.types
   - api.Navigator.clipboard
+  - api.Permissions.permission_clipboard-write
