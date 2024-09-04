@@ -3,14 +3,14 @@
 
 status:
   baseline: high
-  baseline_low_date: 2022-02-08
-  baseline_high_date: 2024-08-08
+  baseline_low_date: 2021-09-20
+  baseline_high_date: 2024-03-20
   support:
-    chrome: "66"
-    chrome_android: "66"
+    chrome: "50"
+    chrome_android: "50"
     edge: "79"
-    firefox: "97"
-    firefox_android: "97"
+    firefox: "42"
+    firefox_android: "42"
     safari: "15"
     safari_ios: "15"
 compat_features:
@@ -40,6 +40,7 @@ compat_features:
   #   safari_ios: "11.3"
   - api.ImageBitmapRenderingContext.transferFromImageBitmap
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2021-09-20
   # baseline_high_date: 2024-03-20
