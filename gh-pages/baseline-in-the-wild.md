@@ -18,6 +18,7 @@ You can find Baseline in the following places. If you spot somewhere else using 
 - [Can I Use](https://caniuse.com/)
 - [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Baseline/Compatibility)
 - [RUM Archive Insights](https://rumarchive.com/insights/)
+- [web-features explorer](https://web-platform-dx.github.io/web-features-explorer/)
 
 ## Presentations
 
