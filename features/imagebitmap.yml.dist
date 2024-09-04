@@ -71,6 +71,20 @@ compat_features:
   - api.ImageBitmap.close
 
   # baseline: high
+  # baseline_low_date: 2021-10-05
+  # baseline_high_date: 2024-04-05
+  # support:
+  #   chrome: "52"
+  #   chrome_android: "52"
+  #   edge: "79"
+  #   firefox: "93"
+  #   firefox_android: "93"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - api.createImageBitmap.options_imageOrientation_parameter
+  - api.createImageBitmap.options_premultiplyAlpha_parameter
+
+  # baseline: high
   # baseline_low_date: 2022-02-08
   # baseline_high_date: 2024-08-08
   # support:
@@ -82,3 +96,37 @@ compat_features:
   #   safari: "11.1"
   #   safari_ios: "11.3"
   - api.ImageBitmapRenderingContext.canvas
+
+  # baseline: low
+  # baseline_low_date: 2022-03-08
+  # support:
+  #   chrome: "54"
+  #   chrome_android: "54"
+  #   edge: "79"
+  #   firefox: "98"
+  #   firefox_android: "98"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - api.createImageBitmap.options_resizeHeight_parameter
+  - api.createImageBitmap.options_resizeWidth_parameter
+
+  # baseline: low
+  # baseline_low_date: 2022-03-08
+  # support:
+  #   chrome: "58"
+  #   chrome_android: "58"
+  #   edge: "79"
+  #   firefox: "98"
+  #   firefox_android: "98"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - api.createImageBitmap.options_colorSpaceConversion_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "54"
+  #   chrome_android: "54"
+  #   edge: "79"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - api.createImageBitmap.options_resizeQuality_parameter

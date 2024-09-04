@@ -5,15 +5,15 @@ status:
   compute_from: api.ImageBitmap
 compat_features:
   - api.createImageBitmap
-  #  - api.createImageBitmap.options_parameter
-  #  - api.createImageBitmap.options_colorSpaceConversion_parameter
-  #  - api.createImageBitmap.options_imageOrientation_parameter
-  #  - api.createImageBitmap.options_premultiplyAlpha_parameter
-  #  - api.createImageBitmap.options_resizeHeight_parameter
-  #  - api.createImageBitmap.options_resizeQuality_parameter
-  #  - api.createImageBitmap.options_resizeWidth_parameter
-  #  - api.createImageBitmap.resizeWidth_resizeHeight_resizeQuality
-  #  - api.createImageBitmap.worker_support
+  #- api.createImageBitmap.options_parameter
+  - api.createImageBitmap.options_colorSpaceConversion_parameter
+  - api.createImageBitmap.options_imageOrientation_parameter
+  - api.createImageBitmap.options_premultiplyAlpha_parameter
+  - api.createImageBitmap.options_resizeHeight_parameter
+  - api.createImageBitmap.options_resizeQuality_parameter
+  - api.createImageBitmap.options_resizeWidth_parameter
+  #- api.createImageBitmap.resizeWidth_resizeHeight_resizeQuality
+  #- api.createImageBitmap.worker_support
   - api.ImageBitmap
   - api.ImageBitmap.close
   - api.ImageBitmap.height
