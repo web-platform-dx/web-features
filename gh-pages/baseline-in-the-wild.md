@@ -4,7 +4,7 @@ permalink: baseline-in-the-wild
 
 # Baseline in the wild
 
-You can find Baseline in the following places. If you spot somewhere else using Baseline, or are using Baseline on your own site, or to convey compat information in your library, create a PR to add it to the list.
+You can find Baseline in the following places. If you spot somewhere else using Baseline, or are using Baseline on your own site, or to convey compat information in your library, [create a pull request to add it to the list](https://github.com/web-platform-dx/web-features/edit/pages/main/baseline-in-the-wild.md).
 
 ## From browser vendors
 

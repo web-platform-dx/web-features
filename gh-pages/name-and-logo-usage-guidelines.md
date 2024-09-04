@@ -143,10 +143,10 @@ The logos have been released under the [Creative Commons Attribution No Derivati
 
 No, the colors are part of the logo and indicate what level of Baseline support a feature has. As noted above, please do not modify, distort or alter the logos.
 
-### Can I put these icons and logos on stickers, t-shirts, etc?
+### Can I put these icons and logos on stickers, t-shirts, or other things?
 
 Yes, please, we encourage creative uses of the Baseline name and logos! Be creative, have fun, and show your support.
 
-### I have a question, who can I contact?
+### I have a licensing or trademark question. Who can I contact?
 
 Please send questions or comments to wp-baseline-logo-questions@google.com.
