@@ -1,0 +1,39 @@
+name: Proxy and Reflect
+description: "The `Proxy` and `Reflect` JavaScript built-ins intercept and define custom behavior for fundamental language operations (such as property lookup, assignment, enumeration, or function invocation)."
+spec: https://tc39.es/ecma262/multipage/reflection.html#sec-reflection
+group: javascript
+caniuse: proxy
+snapshot: ecmascript-2015
+status:
+  compute_from: javascript.builtins.Proxy
+compat_features:
+  - javascript.builtins.Proxy
+  - javascript.builtins.Proxy.Proxy
+  - javascript.builtins.Proxy.handler.apply
+  - javascript.builtins.Proxy.handler.construct
+  - javascript.builtins.Proxy.handler.defineProperty
+  - javascript.builtins.Proxy.handler.deleteProperty
+  - javascript.builtins.Proxy.handler.get
+  - javascript.builtins.Proxy.handler.getOwnPropertyDescriptor
+  - javascript.builtins.Proxy.handler.getPrototypeOf
+  - javascript.builtins.Proxy.handler.has
+  - javascript.builtins.Proxy.handler.isExtensible
+  - javascript.builtins.Proxy.handler.ownKeys
+  - javascript.builtins.Proxy.handler.preventExtensions
+  - javascript.builtins.Proxy.handler.set
+  - javascript.builtins.Proxy.handler.setPrototypeOf
+  - javascript.builtins.Proxy.revocable
+  - javascript.builtins.Reflect
+  - javascript.builtins.Reflect.apply
+  - javascript.builtins.Reflect.construct
+  - javascript.builtins.Reflect.defineProperty
+  - javascript.builtins.Reflect.deleteProperty
+  - javascript.builtins.Reflect.get
+  - javascript.builtins.Reflect.getOwnPropertyDescriptor
+  - javascript.builtins.Reflect.getPrototypeOf
+  - javascript.builtins.Reflect.has
+  - javascript.builtins.Reflect.isExtensible
+  - javascript.builtins.Reflect.ownKeys
+  - javascript.builtins.Reflect.preventExtensions
+  - javascript.builtins.Reflect.set
+  - javascript.builtins.Reflect.setPrototypeOf
