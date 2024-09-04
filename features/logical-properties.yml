@@ -1,0 +1,66 @@
+name: Logical properties
+description: The logical CSS properties control page layout with directions and dimensions relative to the writing mode. Also known as flow relative.
+spec: https://drafts.csswg.org/css-logical-1/
+caniuse: css-logical-props
+group: css
+# Picked to match caniuse- clear and float came 2 years later, but don't warrant separate features.
+status:
+  compute_from: css.properties.border-end-end-radius
+compat_features:
+  - css.properties.block-size
+  - css.properties.border-block
+  - css.properties.border-block-color
+  - css.properties.border-block-end
+  - css.properties.border-block-end-color
+  - css.properties.border-block-end-style
+  - css.properties.border-block-end-width
+  - css.properties.border-block-start
+  - css.properties.border-block-start-color
+  - css.properties.border-block-start-style
+  - css.properties.border-block-start-width
+  - css.properties.border-block-style
+  - css.properties.border-block-width
+  - css.properties.border-end-end-radius
+  - css.properties.border-end-start-radius
+  - css.properties.border-inline
+  - css.properties.border-inline-color
+  - css.properties.border-inline-end
+  - css.properties.border-inline-end-color
+  - css.properties.border-inline-end-style
+  - css.properties.border-inline-end-width
+  - css.properties.border-inline-start
+  - css.properties.border-inline-start-color
+  - css.properties.border-inline-start-style
+  - css.properties.border-inline-start-width
+  - css.properties.border-inline-style
+  - css.properties.border-inline-width
+  - css.properties.border-start-end-radius
+  - css.properties.border-start-start-radius
+  - css.properties.clear.inline-end
+  - css.properties.clear.inline-start
+  - css.properties.float.inline-end
+  - css.properties.float.inline-start
+  - css.properties.inline-size
+  - css.properties.inset
+  - css.properties.inset-block
+  - css.properties.inset-block-end
+  - css.properties.inset-block-start
+  - css.properties.inset-inline
+  - css.properties.inset-inline-end
+  - css.properties.inset-inline-start
+  - css.properties.margin-block
+  - css.properties.margin-block-end
+  - css.properties.margin-block-start
+  - css.properties.margin-inline
+  - css.properties.margin-inline-end
+  - css.properties.margin-inline-start
+  - css.properties.max-block-size
+  - css.properties.max-inline-size
+  - css.properties.min-block-size
+  - css.properties.min-inline-size
+  - css.properties.padding-block
+  - css.properties.padding-block-end
+  - css.properties.padding-block-start
+  - css.properties.padding-inline
+  - css.properties.padding-inline-end
+  - css.properties.padding-inline-start
