@@ -1,0 +1,13 @@
+name: File system access
+description: The `showOpenFilePicker()`, `showDirectoryPicker()`, and `showSaveFilePicker()` methods request access to files and directories on the user's device and returns a handle for reading and writing to them.
+spec: https://wicg.github.io/file-system-access/
+caniuse: native-filesystem-api
+group: file-system
+compat_features:
+  # api.DataTransferItem.getAsFileSystemHandle is likely to be part of a drag and drop feature, but it can't be in both features at once. See https://github.com/web-platform-dx/web-features/issues/1173 for details
+  - api.DataTransferItem.getAsFileSystemHandle
+  - api.FileSystemHandle.queryPermission
+  - api.FileSystemHandle.requestPermission
+  - api.Window.showDirectoryPicker
+  - api.Window.showOpenFilePicker
+  - api.Window.showSaveFilePicker
