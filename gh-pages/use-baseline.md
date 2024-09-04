@@ -15,7 +15,7 @@ When visiting sites like [Can I Use](https://caniuse.com), [MDN Web Docs](https:
 
 Writing a blog post or article? Or presenting at a conference? Use the [Baseline logos](name-and-logo-usage-guidelines) as a shorthand to let your audience know the status of a feature.
 
-The [Universal Baseline Widget](https://github.com/GoogleChrome/baseline-status) is also available to include on your site or pages to indicate the status of a web feature. It renders at run-time, so it’s always up to date with the latest Baseline status.
+The [`<baseline-status>` web component](https://github.com/GoogleChrome/baseline-status) is also available to include on your site or pages to indicate the status of a web feature. It renders at run-time, so it’s always up to date with the latest Baseline status.
 
 ## Looking forward
 
