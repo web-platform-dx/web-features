@@ -8,7 +8,7 @@ You can find Baseline in the following places. If you spot somewhere else using 
 
 ## From browser vendors
 
-- [Baseline on MDN (Firefox)](https://developer.mozilla.org/en-US/blog/baseline-unified-view-stable-web-features/)
+- [Baseline on MDN (Firefox)](https://developer.mozilla.org/en-US/blog/baseline-evolution-on-mdn/)
 - [Baseline on web.dev (Google)](https://web.dev/baseline/)
 
 ## Featured projects and tools
