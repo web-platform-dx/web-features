@@ -9,9 +9,9 @@ There are many ways to use Baseline in your projects today.
 
 ## Determine when a feature is ready to use
 
-When visiting sites like [CanIUse](https://caniuse.com), [MDN](https://developer.mozilla.org/), [RUM Archive Insights](https://rumarchive.com/insights/#baseline) and [WebStatus](https://webstatus.dev), check the status of a feature and learn if it’s safe to use in your project.
+When visiting sites like [Can I Use](https://caniuse.com), [MDN Web Docs](https://developer.mozilla.org/), [RUM Archive Insights](https://rumarchive.com/insights/#baseline) and [webstatus.dev](https://webstatus.dev), check the status of a feature to learn if it works across browsers.
 
-## Let others know when a feature is safe to use
+## Let others know when a feature works across browsers
 
 Writing a blog post or article? Or presenting at a conference? Use the [Baseline logos](name-and-logo-usage-guidelines) as a shorthand to let your audience know the status of a feature.
 
