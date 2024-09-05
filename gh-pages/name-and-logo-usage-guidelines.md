@@ -5,11 +5,13 @@ description: How to use the Baseline name and logos on your site or in your proj
 
 # Baseline name and logo usage guidelines
 
-[Web Platform Baseline](./) is an initiative that gives you clear information about which web platform features are ready to use in your projects today. When reading an article, or choosing a library for your project, if the features used are all part of Baseline, you can trust the level of browser compatibility.
+<!-- NOTE: Updates or changes to these license terms must be approved by emailing the contact at the bottom of this page. -->
 
-The Baseline name and logos (“Baseline Trademarks”) are trademarks owned by Google, but have been licensed so they can be used by third parties to indicate which web platform features work well across all browsers. We've put together these guidelines to promote the growth of the Baseline initiative while making sure that the “Baseline” brand is protected as a meaningful source identifier in a way that’s consistent with trademark law.
+The Baseline name and logos (“Baseline Trademarks”) are trademarks owned by Google, but they have been licensed so they can be used by third parties to indicate which web platform features work well across all browsers.
 
-We encourage you to use the Baseline name and logos in articles, presentations, sites, or anywhere that you’re talking about web platform features, to help developers understand browser support for those features.
+You can use the Baseline name and logos in articles, presentations, sites, or anywhere that you’re talking about web platform features, to help developers understand browser support for those features.
+
+These guidelines support the use of the Baseline initiative while making sure that the “Baseline” brand is protected as a meaningful source identifier in a way that’s consistent with trademark law.
 
 ## Trademark Usage Guidelines
 
@@ -131,17 +133,13 @@ The Baseline Limited Availability logo should be used to indicate a web platform
 
 ## Frequently Asked Questions
 
-### Where can I check the status of a web platform feature?
-
-Baseline is already displayed for many features on [Can I Use](https://caniuse.com/), [MDN](https://developer.mozilla.org/), and all features on [webstatus.dev](https://webstatus.dev) so you can see at a glance the status of features. We hope that many other sites will start to use Baseline to clearly explain feature status—from individual blogs to large content sites. Find out how to [use Baseline on your site](use-baseline) and explore some of the places you can already [find Baseline](baseline-in-the-wild).
-
 ### How are the logos licensed?
 
-The logos have been released under the [Creative Commons Attribution No Derivatives 4.0 License](https://creativecommons.org/licenses/by-nd/4.0/). However, since the Baseline name and logos are trademarks owned by Google, we have prepared these trademark usage guidelines to describe their appropriate uses.
+The logos have been released under the [Creative Commons Attribution No Derivatives 4.0 License](https://creativecommons.org/licenses/by-nd/4.0/). The Baseline name and logos are trademarks owned by Google. These trademark usage guidelines describe their appropriate uses.
 
 ### Can I change the colors of the icons and logos?
 
-No, the colors are part of the logo and indicate what level of Baseline support a feature has. As noted above, please do not modify, distort or alter the logos.
+No, the colors are part of the logo and indicate what level of Baseline support a feature has.  As noted above, please do not modify, distort or alter the logos.
 
 ### Can I put these icons and logos on stickers, t-shirts, or other things?
 
