@@ -3,6 +3,8 @@ description: The `SpeechSynthesis` API converts text into audio using a syntheti
 spec: https://wicg.github.io/speech-api/#tts-section
 group: speech
 caniuse: speech-synthesis
+status:
+  compute_from: api.SpeechSynthesis
 compat_features:
   - api.SpeechSynthesis
   - api.SpeechSynthesis.cancel
