@@ -20,6 +20,3 @@ Are you writing a blog post or article or presenting at a conference? Use the [B
 
 The [`<baseline-status>` web component](https://github.com/GoogleChrome/baseline-status) is also available to include on your site or pages to indicate the status of a web feature. It renders at run-time, so it’s always up to date with the latest Baseline status.
 
-## Looking forward
-
-This is just the start. More tools are coming to help you use Baseline in your day to day workflow. For example, linters that alert you if you use features not supported in your browser support matrix, and tooling to help you discover new useful Baseline features.
