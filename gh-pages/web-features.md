@@ -18,16 +18,6 @@ As such, a feature has no specific size. A feature might cover a single CSS prop
 
 For example, the `fetch()` API is a feature, the `:has()` CSS pseudo-class function too, and so is the Web Audio API.
 
-## How is a feature described?
-
-Features in the [web-features repository](https://github.com/web-platform-dx/web-features/) are authored as YAML files that are stored in the [features](https://github.com/web-platform-dx/web-features/blob/main/features) directory. Each file corresponds to a single feature, and contains metadata about the feature, such as its name, description, specification, or support data.
-
-For example, the `fetch()` API feature is described in the [features/fetch.yml](https://github.com/web-platform-dx/web-features/blob/main/features/fetch.yml) file.
-
-In addition to meta information about the feature, the various parts that come together to make the feature are identified using [@mdn/browser-compat-data](https://github.com/mdn/browser-compat-data) (BCD) entries. BCD holds fine-grained support data for most web platform features; this is used to build up each feature definition, identifying all of the component parts.
-
-See [What makes a feature](https://github.com/web-platform-dx/web-features/blob/main/docs/CONTRIBUTING.md#what-makes-a-feature) for more details.
-
 ## How does web-features relate to Baseline?
 
 The web-features project computes, reviews, and publishes Baseline statues. Therefore, web-features is the source of truth for Baseline statuses.
