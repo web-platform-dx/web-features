@@ -67,7 +67,7 @@ The Baseline name should be used when talking about Baseline as a concept.
   </tr>
 </table>
 
-The Baseline Widely Available logo should be used when talking about Baseline as a concept, or to indicate a specific web platform feature has been supported by all of the core browsers for at least 30 months, and is therefore widely interoperable.
+The Baseline Widely Available logo should be used when talking about Baseline as a concept, or to indicate a specific web platform feature has the `"baseline": "high"` value in the web-features package data.
 
 ### Baseline Newly Available logo
 
@@ -98,7 +98,7 @@ The Baseline Widely Available logo should be used when talking about Baseline as
   </tr>
 </table>
 
-The Baseline Newly Available logo should only be used to indicate a web platform feature is supported by all of the core browsers, and is therefore interoperable, but not yet widely available.
+The Baseline Newly Available logo should only be used to indicate a indicate a specific web platform feature has the `"baseline": "low"` value in the web-features package data.
 
 ### Baseline Limited Availablity logo
 
@@ -129,7 +129,7 @@ The Baseline Newly Available logo should only be used to indicate a web platform
   </tr>
 </table>
 
-The Baseline Limited Availability logo should be used to indicate a web platform feature is not available in one or more of the core browsers.
+The Baseline Limited Availability logo should be used to indicate a web platform feature is not available in one or more of the core browsers or has the `"baseline": false` value in the web-features package data.
 
 ## Frequently Asked Questions
 
