@@ -7,8 +7,8 @@ status:
     chrome: "108"
     chrome_android: "108"
     edge: "108"
-    firefox: "125"
-    firefox_android: "125"
+    firefox: "130"
+    firefox_android: "130"
 compat_features:
   # baseline: low
   # baseline_low_date: 2022-03-14
@@ -35,11 +35,12 @@ compat_features:
   - css.properties.content-visibility.hidden
   - css.properties.content-visibility.visible
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "108"
   #   chrome_android: "108"
   #   edge: "108"
-  #   firefox: "124"
-  #   firefox_android: "124"
+  #   firefox: "130"
+  #   firefox_android: "130"
   - api.Element.contentvisibilityautostatechange_event

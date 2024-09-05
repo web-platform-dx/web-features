@@ -1,0 +1,10 @@
+name: System colors
+description: The system color CSS keywords, such as `ButtonBorder` or `LinkText`, allow you to match default colors from the user agent.
+spec: https://drafts.csswg.org/css-color-4/#css-system-colors
+group: color-types
+status:
+  compute_from: css.types.color.system-color
+compat_features:
+  - css.types.color.system-color
+  - css.types.color.system-color.accentcolor_accentcolortext
+  - css.types.color.system-color.mark_marktext_buttonborder
