@@ -1,9 +1,73 @@
 name: Hyphenation
-description: The `hyphens` CSS property controls when long words are broken by line wrapping. Although called `hyphens`, the property applies to word-splitting behavior across languages, such as customary spelling changes or the use of other characters to mark an intraword line break.
+description: The `hyphens` CSS property controls when long words are broken by line wrapping. Although called `hyphens`, the property applies to word-splitting behavior across languages, such as customary spelling changes or the use of other characters. Support for non-English languages varies signficantly.
 spec: https://drafts.csswg.org/css-text-3/#hyphens-property
 caniuse: css-hyphens
 group: css
+status:
+  compute_from: css.properties.hyphens.auto
 compat_features:
   - css.properties.hyphens
   - css.properties.hyphens.auto
   - css.properties.hyphens.language_english
+  - css.properties.hyphens.language_afrikaans
+  - css.properties.hyphens.language_albanian
+  - css.properties.hyphens.language_amharic
+  - css.properties.hyphens.language_armenian
+  - css.properties.hyphens.language_assamese
+  - css.properties.hyphens.language_basque
+  - css.properties.hyphens.language_belarusian
+  - css.properties.hyphens.language_bengali
+  - css.properties.hyphens.language_bosnian
+  - css.properties.hyphens.language_bulgarian
+  - css.properties.hyphens.language_catalan
+  - css.properties.hyphens.language_croatian
+  - css.properties.hyphens.language_cyrillic_mongolian
+  - css.properties.hyphens.language_czech
+  - css.properties.hyphens.language_danish
+  - css.properties.hyphens.language_dutch
+  - css.properties.hyphens.language_esperanto
+  - css.properties.hyphens.language_estonian
+  - css.properties.hyphens.language_ethiopic_script_mul
+  - css.properties.hyphens.language_ethiopic_script_und
+  - css.properties.hyphens.language_finnish
+  - css.properties.hyphens.language_french
+  - css.properties.hyphens.language_galician
+  - css.properties.hyphens.language_georgian
+  - css.properties.hyphens.language_german_reformed_orthography
+  - css.properties.hyphens.language_german_swiss_orthography
+  - css.properties.hyphens.language_german_traditional_orthography
+  - css.properties.hyphens.language_gujarati
+  - css.properties.hyphens.language_hindi
+  - css.properties.hyphens.language_hungarian
+  - css.properties.hyphens.language_icelandic
+  - css.properties.hyphens.language_interlingua
+  - css.properties.hyphens.language_irish
+  - css.properties.hyphens.language_italian
+  - css.properties.hyphens.language_kannada
+  - css.properties.hyphens.language_kurmanji
+  - css.properties.hyphens.language_latin
+  - css.properties.hyphens.language_latvian
+  - css.properties.hyphens.language_lithuanian
+  - css.properties.hyphens.language_malayalam
+  - css.properties.hyphens.language_marathi
+  - css.properties.hyphens.language_modern_greek
+  - css.properties.hyphens.language_mongolian
+  - css.properties.hyphens.language_norwegian_nn
+  - css.properties.hyphens.language_norwegian_no
+  - css.properties.hyphens.language_old_slavonic
+  - css.properties.hyphens.language_oriya
+  - css.properties.hyphens.language_polish
+  - css.properties.hyphens.language_portuguese
+  - css.properties.hyphens.language_punjabi
+  - css.properties.hyphens.language_russian
+  - css.properties.hyphens.language_slovak
+  - css.properties.hyphens.language_slovenian
+  - css.properties.hyphens.language_spanish
+  - css.properties.hyphens.language_swedish
+  - css.properties.hyphens.language_tamil
+  - css.properties.hyphens.language_telugu
+  - css.properties.hyphens.language_turkish
+  - css.properties.hyphens.language_turkmen
+  - css.properties.hyphens.language_ukrainian
+  - css.properties.hyphens.language_upper_sorbian
+  - css.properties.hyphens.language_welsh
