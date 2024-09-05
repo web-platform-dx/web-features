@@ -1,6 +1,6 @@
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const markdownIt = require("markdown-it");
-const markdownItAnchor = require('markdown-it-anchor');
+const markdownItAnchor = require("markdown-it-anchor");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./gh-pages/assets/img");
