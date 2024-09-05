@@ -1,6 +1,9 @@
-# What is Baseline?
+---
+layout: "default.html"
+title: "What is Baseline?"
+---
 
-Baseline gives you clear information about which web platform features work across our [core browser set](#how-do-features-become-part-of-baseline) today. When reading an article, or choosing a library for your project, if the features used are all part of Baseline, you can trust the level of browser compatibility. By aligning with Baseline, there should be fewer surprises when testing your site.
+Baseline gives you clear information about which web platform features work across our [core browser set](#how-do-features-become-part-of-baseline%3F) today. When reading an article, or choosing a library for your project, if the features used are all part of Baseline, you can trust the level of browser compatibility. By aligning with Baseline, there should be fewer surprises when testing your site.
 
 ## How do features become part of Baseline?
 
@@ -18,9 +21,9 @@ Baseline is calculated using the following core browser set:
 
 ## How do I find the Baseline status of a feature?
 
-You can find at-a-glance Baseline statuses on [Can I Use](https://caniuse.com/) feature entries, [MDN Web Docs](https://developer.mozilla.org/) reference pages, and [webstatus.dev](https://webstatus.dev). See [Baseline in the wild](baseline-in-the-wild) for more examples.
+You can find at-a-glance Baseline statuses on [Can I Use](https://caniuse.com/) feature entries, [MDN Web Docs](https://developer.mozilla.org/) reference pages, and [webstatus.dev](https://webstatus.dev). See [Baseline in the wild](/baseline-in-the-wild/) for more examples.
 
-You can [use Baseline on your site](use-baseline) too.
+You can [use Baseline on your site](/use-baseline/) too.
 
 ## Who owns and maintains Baseline?
 
@@ -28,7 +31,7 @@ The Baseline definition is written by the [web-features owners group](https://gi
 
 Feature definitions are created and reviewed by web-features owners, peers, and contributors.
 
-This work is coordinated and supported by members of the [WebDX Community Group](webdx-cg).
+This work is coordinated and supported by members of the [WebDX Community Group](/webdx-cg/).
 
 ## Learn more
 

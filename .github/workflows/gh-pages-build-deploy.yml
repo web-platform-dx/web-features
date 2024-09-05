@@ -1,14 +1,21 @@
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+name: Build and deploy gh-pages website
 
 on:
-  # Runs on pushes targeting the main branch, in the `gh-pages` folder.
+  # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
-    paths: ["/gh-pages/**"]
+    branches:
+      - "main"
+    paths:
+      - "gh-pages/**"
+      - ".github/workflows/gh-pages-build-deploy.yml"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+
+# Use color in output
+env:
+  FORCE_COLOR: 3
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -23,21 +30,24 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job
+  # Build the site
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          source: ./gh-pages/
-          destination: ./_site
+          cache: npm
+          node-version-file: .node-version
+      - name: NPM Install
+        run: npm ci
+      - name: Build pages
+        run: npm run gh-pages:build-prod
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+
 
   # Deployment job
   deploy:

@@ -1,8 +1,7 @@
 ---
-permalink: webdx-cg
+title: The WebDX Community Group
+layout: "default.html"
 ---
-
-# The WebDX Community Group
 
 > The mission of the [Web Developer Experience (WebDX) Community Group](https://www.w3.org/community/webdx/) is to facilitate coordinated approaches to improve the overall experience of developing for the Web platform when such coordination provides unique opportunities for these improvements. — [WebDX Community Group charter](https://github.com/web-platform-dx/admin/blob/main/charter.md).
 

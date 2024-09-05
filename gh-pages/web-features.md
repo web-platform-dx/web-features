@@ -1,8 +1,7 @@
 ---
-permalink: web-features
+title: web-features
+layout: "default.html"
 ---
-
-# web-features
 
 web-features is an effort to build a shared catalog of features of the web platform. By creating a common list of features and their definitions, web-features aims to improve understanding of what web developers get and want from the web. web-features does this by:
 

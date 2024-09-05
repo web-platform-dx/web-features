@@ -1,11 +1,8 @@
 ---
-permalink: name-and-logo-usage-guidelines
+title: Name and logo usage guidelines
 description: How to use the Baseline name and logos on your site or in your projects.
+layout: "default.html"
 ---
-
-# Baseline name and logo usage guidelines
-
-<!-- NOTE: Updates or changes to these license terms must be approved by emailing the contact at the bottom of this page. -->
 
 The Baseline name and logos (“Baseline Trademarks”) are trademarks owned by Google, but they have been licensed so they can be used by third parties to indicate which web platform features work well across all browsers.
 
@@ -24,14 +21,14 @@ These guidelines support the use of the Baseline initiative while making sure th
 <table class="logos">
   <tr>
     <td>
-      <img src="assets/img/baseline-wordmark.svg" alt="Baseline wordmark"><br>
-      <a href="assets/img/baseline-wordmark.png" download>Download PNG</a> |
-      <a href="assets/img/baseline-wordmark.svg" download>Download SVG</a>
+      <img src="/assets/img/baseline-wordmark.svg" alt="Baseline wordmark"><br>
+      <a href="/assets/img/baseline-wordmark.png" download>Download PNG</a> |
+      <a href="/assets/img/baseline-wordmark.svg" download>Download SVG</a>
     </td>
     <td>
-      <img src="assets/img/baseline-wordmark-dark.svg" class="dark-bg" alt="Baseline wordmark dark"><br>
-      <a href="assets/img/baseline-wordmark-dark.png" download>Download PNG</a> |
-      <a href="assets/img/baseline-wordmark-dark.svg" download>Download SVG</a>
+      <img src="/assets/img/baseline-wordmark-dark.svg" class="dark-bg" alt="Baseline wordmark dark"><br>
+      <a href="/assets/img/baseline-wordmark-dark.png" download>Download PNG</a> |
+      <a href="/assets/img/baseline-wordmark-dark.svg" download>Download SVG</a>
     </td>
   </tr>
 </table>
@@ -43,26 +40,26 @@ The Baseline name should be used when talking about Baseline as a concept.
 <table class="logos">
   <tr>
     <td>
-      <img src="assets/img/baseline-widely-icon.svg" alt="Baseline widely available icon"><br>
-      <a href="assets/img/baseline-widely-icon.png" download>Download PNG</a> |
-      <a href="assets/img/baseline-widely-icon.svg" download>Download SVG</a>
+      <img src="/assets/img/baseline-widely-icon.svg" alt="Baseline widely available icon"><br>
+      <a href="/assets/img/baseline-widely-icon.png" download>Download PNG</a> |
+      <a href="/assets/img/baseline-widely-icon.svg" download>Download SVG</a>
     </td>
     <td>
-      <img src="assets/img/baseline-widely-icon-dark.svg" class="dark-bg" alt="Baseline widely available icon dark"><br>
-      <a href="assets/img/baseline-widely-icon-dark.png" download>Download PNG</a> |
-      <a href="assets/img/baseline-widely-icon-dark.svg" download>Download SVG</a>
+      <img src="/assets/img/baseline-widely-icon-dark.svg" class="dark-bg" alt="Baseline widely available icon dark"><br>
+      <a href="/assets/img/baseline-widely-icon-dark.png" download>Download PNG</a> |
+      <a href="/assets/img/baseline-widely-icon-dark.svg" download>Download SVG</a>
     </td>
   </tr>
   <tr>
     <td>
-      <img src="assets/img/baseline-widely-word.svg" alt="Baseline widely available wordmark"><br>
-      <a href="assets/img/baseline-widely-word.png" download>Download PNG</a> |
-      <a href="assets/img/baseline-widely-word.svg" download>Download SVG</a>
+      <img src="/assets/img/baseline-widely-word.svg" alt="Baseline widely available wordmark"><br>
+      <a href="/assets/img/baseline-widely-word.png" download>Download PNG</a> |
+      <a href="/assets/img/baseline-widely-word.svg" download>Download SVG</a>
     </td>
     <td>
-      <img src="assets/img/baseline-widely-word-dark.svg" class="dark-bg" alt="Baseline widely available wordmark dark"><br>
-      <a href="assets/img/baseline-widely-word-dark.png" download>Download PNG</a> |
-      <a href="assets/img/baseline-widely-word-dark.svg" download>Download SVG</a>
+      <img src="/assets/img/baseline-widely-word-dark.svg" class="dark-bg" alt="Baseline widely available wordmark dark"><br>
+      <a href="/assets/img/baseline-widely-word-dark.png" download>Download PNG</a> |
+      <a href="/assets/img/baseline-widely-word-dark.svg" download>Download SVG</a>
     </td>
   </tr>
 </table>
@@ -74,26 +71,26 @@ The Baseline Widely Available logo should be used when talking about Baseline as
 <table class="logos">
   <tr>
     <td>
-      <img src="assets/img/baseline-newly-icon.svg" alt="Baseline newly available icon"><br>
-      <a href="assets/img/baseline-newly-icon.png" download>Download PNG</a> |
-      <a href="assets/img/baseline-newly-icon.svg" download>Download SVG</a>
+      <img src="/assets/img/baseline-newly-icon.svg" alt="Baseline newly available icon"><br>
+      <a href="/assets/img/baseline-newly-icon.png" download>Download PNG</a> |
+      <a href="/assets/img/baseline-newly-icon.svg" download>Download SVG</a>
     </td>
     <td>
-      <img src="assets/img/baseline-newly-icon-dark.svg" class="dark-bg" alt="Baseline newly available icon dark"><br>
-      <a href="assets/img/baseline-newly-icon-dark.png" download>Download PNG</a> |
-      <a href="assets/img/baseline-newly-icon-dark.svg" download>Download SVG</a>
+      <img src="/assets/img/baseline-newly-icon-dark.svg" class="dark-bg" alt="Baseline newly available icon dark"><br>
+      <a href="/assets/img/baseline-newly-icon-dark.png" download>Download PNG</a> |
+      <a href="/assets/img/baseline-newly-icon-dark.svg" download>Download SVG</a>
     </td>
   </tr>
   <tr>
     <td>
-      <img src="assets/img/baseline-newly-word.svg" alt="Baseline newly available wordmark"><br>
-      <a href="assets/img/baseline-newly-word.png" download>Download PNG</a> |
-      <a href="assets/img/baseline-newly-word.svg" download>Download SVG</a>
+      <img src="/assets/img/baseline-newly-word.svg" alt="Baseline newly available wordmark"><br>
+      <a href="/assets/img/baseline-newly-word.png" download>Download PNG</a> |
+      <a href="/assets/img/baseline-newly-word.svg" download>Download SVG</a>
     </td>
     <td>
-      <img src="assets/img/baseline-newly-word-dark.svg" class="dark-bg" alt="Baseline newly available wordmark dark"><br>
-      <a href="assets/img/baseline-newly-word-dark.png" download>Download PNG</a> |
-      <a href="assets/img/baseline-newly-word-dark.svg" download>Download SVG</a>
+      <img src="/assets/img/baseline-newly-word-dark.svg" class="dark-bg" alt="Baseline newly available wordmark dark"><br>
+      <a href="/assets/img/baseline-newly-word-dark.png" download>Download PNG</a> |
+      <a href="/assets/img/baseline-newly-word-dark.svg" download>Download SVG</a>
     </td>
   </tr>
 </table>
@@ -105,26 +102,26 @@ The Baseline Newly Available logo should only be used to indicate a indicate a s
 <table class="logos">
   <tr>
     <td>
-      <img src="assets/img/baseline-limited-icon.svg" alt="Baseline limited availablity icon"><br>
-      <a href="assets/img/baseline-limited-icon.png" download>Download PNG</a> |
-      <a href="assets/img/baseline-limited-icon.svg" download>Download SVG</a>
+      <img src="/assets/img/baseline-limited-icon.svg" alt="Baseline limited availablity icon"><br>
+      <a href="/assets/img/baseline-limited-icon.png" download>Download PNG</a> |
+      <a href="/assets/img/baseline-limited-icon.svg" download>Download SVG</a>
     </td>
     <td>
-      <img src="assets/img/baseline-limited-icon-dark.svg" class="dark-bg" alt="Baseline limited availablity icon dark"><br>
-      <a href="assets/img/baseline-limited-icon-dark.png" download>Download PNG</a> |
-      <a href="assets/img/baseline-limited-icon-dark.svg" download>Download SVG</a>
+      <img src="/assets/img/baseline-limited-icon-dark.svg" class="dark-bg" alt="Baseline limited availablity icon dark"><br>
+      <a href="/assets/img/baseline-limited-icon-dark.png" download>Download PNG</a> |
+      <a href="/assets/img/baseline-limited-icon-dark.svg" download>Download SVG</a>
     </td>
   </tr>
   <tr>
     <td>
-      <img src="assets/img/baseline-limited-word.svg" alt="Baseline limited availablity wordmark"><br>
-      <a href="assets/img/baseline-limited-word.png" download>Download PNG</a> |
-      <a href="assets/img/baseline-limited-word.svg" download>Download SVG</a>
+      <img src="/assets/img/baseline-limited-word.svg" alt="Baseline limited availablity wordmark"><br>
+      <a href="/assets/img/baseline-limited-word.png" download>Download PNG</a> |
+      <a href="/assets/img/baseline-limited-word.svg" download>Download SVG</a>
     </td>
     <td>
-      <img src="assets/img/baseline-limited-word-dark.svg" class="dark-bg" alt="Baseline limited availablity wordmark dark"><br>
-      <a href="assets/img/baseline-limited-word-dark.png" download>Download PNG</a> |
-      <a href="assets/img/baseline-limited-word-dark.svg" download>Download SVG</a>
+      <img src="/assets/img/baseline-limited-word-dark.svg" class="dark-bg" alt="Baseline limited availablity wordmark dark"><br>
+      <a href="/assets/img/baseline-limited-word-dark.png" download>Download PNG</a> |
+      <a href="/assets/img/baseline-limited-word-dark.svg" download>Download SVG</a>
     </td>
   </tr>
 </table>
