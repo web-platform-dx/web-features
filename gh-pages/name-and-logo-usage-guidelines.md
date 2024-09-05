@@ -139,7 +139,7 @@ The logos have been released under the [Creative Commons Attribution No Derivati
 
 ### Can I change the colors of the icons and logos?
 
-No, the colors are part of the logo and indicate what level of Baseline support a feature has.  As noted above, please do not modify, distort or alter the logos.
+No, the colors are part of the logo and indicate what level of Baseline support a feature has. As noted above, please do not modify, distort or alter the logos.
 
 ### Can I put these icons and logos on stickers, t-shirts, or other things?
 
