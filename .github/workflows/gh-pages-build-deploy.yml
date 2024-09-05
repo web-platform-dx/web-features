@@ -8,6 +8,7 @@ on:
       - "main"
     paths:
       - "gh-pages/**"
+      - "eleventy.config.cjs"
       - ".github/workflows/gh-pages-build-deploy.yml"
 
   # Allows you to run this workflow manually from the Actions tab
