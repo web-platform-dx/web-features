@@ -122,6 +122,18 @@ compat_features:
   #   safari_ios: "15"
   - api.createImageBitmap.options_colorSpaceConversion_parameter
 
+  # baseline: low
+  # baseline_low_date: 2023-12-11
+  # support:
+  #   chrome: "59"
+  #   chrome_android: "59"
+  #   edge: "79"
+  #   firefox: "65"
+  #   firefox_android: "65"
+  #   safari: "17.2"
+  #   safari_ios: "17.2"
+  - api.createImageBitmap.svgimageelement_as_source_image
+
   # baseline: false
   # support:
   #   chrome: "54"
