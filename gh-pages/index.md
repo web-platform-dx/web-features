@@ -1,24 +1,20 @@
 # What is Baseline?
 
-Web Platform Baseline gives you clear information about which web platform features are ready to use in your projects today. When reading an article, or choosing a library for your project, if the features used are all part of Baseline, you can trust the level of browser compatibility. By aligning with Baseline, there should be no surprises when testing your site.
+Baseline gives you clear information about which web platform features work across our [core browser set](#how-do-features-become-part-of-baseline) today. When reading an article, or choosing a library for your project, if the features used are all part of Baseline, you can trust the level of browser compatibility. By aligning with Baseline, there should be fewer surprises when testing your site.
 
 ## How do features become part of Baseline?
 
-Features that are in Baseline are interoperable across the following core browser set:
+Baseline features are available across popular browsers. Baseline has two stages:
 
-- Chrome (desktop and Android)
-- Edge
-- Firefox (desktop and Android)
-- Safari (macOS and iOS)
+- **Newly available**: The feature works across the latest devices and browser versions. The feature might not work in older devices or browsers. Indicated with a blue icon.
+- **Widely available**: The feature is well established and works across many devices and browser versions. It’s been available across browsers for at least 2½ years (30 months). Indicated with a green icon.
 
-Baseline has two stages:
+Baseline is calculated using the following core browser set:
 
-- **Newly available**: The feature becomes supported by all of the core browsers, and is therefore interoperable. Indicated with a blue icon.
-- **Widely available**: 30 months has passed since the newly interoperable date. The feature can be used by most sites without worrying about support. Indicated with a green icon.
-
-Features that are newly available can be used with confidence that they work in all the core browsers, however most people will need to consider fallbacks for browsers without support.
-
-Features that are widely available should be considered broadly available for use.
+- Apple Safari (macOS and iOS)
+- Google Chrome (desktop and Android)
+- Microsoft Edge (desktop)
+- Mozilla Firefox (desktop and Android)
 
 ## How do I find the Baseline status of a feature?
 
