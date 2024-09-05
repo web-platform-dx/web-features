@@ -4,7 +4,7 @@ Web Platform Baseline gives you clear information about which web platform featu
 
 ## How do features become part of Baseline?
 
-Features that are in Baseline are interoperable across a core browser set:
+Features that are in Baseline are interoperable across the following core browser set:
 
 - Chrome (desktop and Android)
 - Edge
@@ -22,11 +22,17 @@ Features that are widely available should be considered broadly available for us
 
 ## How do I find the Baseline status of a feature?
 
-Baseline is already displayed for many features on [Can I Use](https://caniuse.com/), [MDN](https://developer.mozilla.org/), and all features on [webstatus.dev](https://webstatus.dev) so you can see at a glance the status of features. We hope that many other sites will start to use Baseline to clearly explain feature status—from individual blogs to large content sites. Find out how to [use Baseline on your site](use-baseline) and explore some of the places you can already [find Baseline](baseline-in-the-wild).
+You can find at-a-glance Baseline statuses on [Can I Use](https://caniuse.com/) feature entries, [MDN Web Docs](https://developer.mozilla.org/) reference pages, and [webstatus.dev](https://webstatus.dev). See [Baseline in the wild](baseline-in-the-wild) for more examples.
 
-## Who owns Baseline?
+You can [use Baseline on your site](use-baseline) too.
 
-The Baseline definition and the feature grouping work that decides if features are part of Baseline is owned by the [Web Features Owners Group](https://github.com/web-platform-dx/web-features/blob/main/GOVERNANCE.md) and discussed in the [WebDX Community Group](webdx-cg).
+## Who owns and maintains Baseline?
+
+The Baseline definition is written by the [web-features owners group](https://github.com/web-platform-dx/web-features/blob/main/GOVERNANCE.md).
+
+Feature definitions are created and reviewed by web-features owners, peers, and contributors.
+
+This work is coordinated and supported by members of the [WebDX Community Group](webdx-cg).
 
 ## Learn more
 

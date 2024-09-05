@@ -2,7 +2,7 @@
 permalink: web-features
 ---
 
-# Web features
+# web-features
 
 web-features is an effort to build a shared catalog of features of the web platform. By creating a common list of features and their definitions, web-features aims to improve understanding of what web developers get and want from the web. web-features does this by:
 
@@ -24,14 +24,14 @@ Features in the [web-features repository](https://github.com/web-platform-dx/web
 
 For example, the `fetch()` API feature is described in the [features/fetch.yml](https://github.com/web-platform-dx/web-features/blob/main/features/fetch.yml) file.
 
-In addition to meta information about the feature, the various elements that come together to make the feature are identified using a list of [browser-compat-data](https://github.com/mdn/browser-compat-data) entries, from the MDN repository. This repository already holds fine-grained support data for most web platform features, this is used to build up each feature grouping, by allowing us to identify all of the component elements.
+In addition to meta information about the feature, the various parts that come together to make the feature are identified using [@mdn/browser-compat-data](https://github.com/mdn/browser-compat-data) (BCD) entries. BCD holds fine-grained support data for most web platform features; this is used to build up each feature definition, identifying all of the component parts.
 
 See [What makes a feature](https://github.com/web-platform-dx/web-features/blob/main/docs/CONTRIBUTING.md#what-makes-a-feature) for more details.
 
-## How are features used?
+## How does web-features relate to Baseline?
 
-The web features information is the basis that allows us to identify Baseline features, therefore anywhere that displays Baseline status should use this repository as the source of truth.
+The web-features project computes, reviews, and publishes Baseline statues. Therefore, web-features is the source of truth for Baseline statuses.
 
 ## Get involved
 
-It’s a huge effort to group the entire web platform in this way, and will be an ongoing one given that new web platform features are released every month. The community is encouraged to help with the grouping work. See the [contributing information](https://github.com/web-platform-dx/web-features/blob/main/docs/CONTRIBUTING.md) for more details.
+It’s a huge effort to describe the entire web platform in this way and will be an ongoing one given that new web platform features are released every month. Help out by contributing feature definitions. See the [contributing information](https://github.com/web-platform-dx/web-features/blob/main/docs/CONTRIBUTING.md) for more details.
