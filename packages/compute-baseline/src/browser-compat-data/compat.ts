@@ -2,6 +2,7 @@ import bcd, {
   CompatData,
 } from "@mdn/browser-compat-data" with { type: "json" };
 import { Browser, Feature, browser, feature, query, walk } from "./index.js";
+import { isIndexable, isMetaBlock } from "./typeUtils.js";
 
 export class Compat {
   data: unknown;
@@ -12,6 +13,17 @@ export class Compat {
     this.data = data;
     this.browsers = new Map();
     this.features = new Map();
+  }
+
+  /**
+   * Get the version string from @mdn/browser-compat-data's `__meta` object (or
+   * `"unknown"` if unset).
+   */
+  get version(): string {
+    if (isIndexable(this.data) && isMetaBlock(this.data.__meta)) {
+      return this.data.__meta.version;
+    }
+    return "unknown";
   }
 
   query(path: string) {
