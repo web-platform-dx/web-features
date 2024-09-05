@@ -1,5 +1,4 @@
 @import "fonts";
-@import "rouge-github";
 
 body {
   background-color: #fff;
@@ -44,7 +43,6 @@ a {
 }
 a:hover, a:focus {
   color:#069;
-  /*font-weight: bold;*/
 }
 
 a small {
@@ -134,72 +132,19 @@ header {
 header ul.nav {
 	padding-inline: 1em;
 }
+
 header ul.nav a[href] {
 	display: block;
 }
+
 header ul.nav a[href^="http"]::after {
 	content: url('/assets/img/external-link.svg');
   padding-inline-start: 0.1em;
 }
 
-ul.downloads {
-  list-style:none;
-  height:3em;
-  padding:0;
-  background: #f4f4f4;
-  border-radius:5px;
-  border:1px solid #e0e0e0;
-  width:19.25em;
-}
-
-.downloads li {
-  width:89px;
-  float:left;
-  border-right:1px solid #e0e0e0;
-  height:40px;
-}
-
-.downloads li:first-child a {
-  border-radius:5px 0 0 5px;
-}
-
-.downloads li:last-child a {
-  border-radius:0 5px 5px 0;
-}
-
-.downloads a {
-  line-height:1;
-  font-size:11px;
-  color:#676767;
-  display:block;
-  text-align:center;
-  padding-top:6px;
-  height:34px;
-}
-
-.downloads a:hover, .downloads a:focus {
-  color:#675C5C;
-  font-weight:bold;
-}
-
-.downloads ul a:active {
-  background-color:#f0f0f0;
-}
-
 strong {
   color:#222;
   font-weight:700;
-}
-
-.downloads li + li + li {
-  border-right:none;
-  width:89px;
-}
-
-.downloads a strong {
-  font-size:14px;
-  display:block;
-  color:#222;
 }
 
 section {
@@ -292,15 +237,6 @@ footer {
   body {
     padding-block: 2rem;
     padding-inline: 0.5rem;
-  }
-
-
-  .downloads {
-    width:99%;
-  }
-
-  .downloads li, .downloads li + li + li {
-    width:33%;
   }
 }
 
