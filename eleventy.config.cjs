@@ -7,7 +7,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./gh-pages/assets/fonts");
   eleventyConfig.addPassthroughCopy("./gh-pages/assets/css");
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-  eleventyConfig.ignores.add("./gh-pages/README.md");
   const mdOpts = {
     html: true,
     breaks: true,
