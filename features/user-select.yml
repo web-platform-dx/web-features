@@ -3,8 +3,8 @@ description: The `user-select` CSS property controls which elements can be selec
 spec: https://drafts.csswg.org/css-ui-4/#content-selection
 caniuse: user-select-none
 group: css
-# `contain` does not have any support yet, so compute from `user-select` key.
-# Not baseline due to `-webkit` prefix in Safari.
+# compute_from: required because `css.properties.user-select.contain` has no support (except historically in IE)
+# Baseline status may be surprising. It's caused by a prefix in Safari.
 status:
   compute_from: css.properties.user-select
 compat_features:
