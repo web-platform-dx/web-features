@@ -2,7 +2,9 @@ name: "@font-face"
 description: The `@font-face` CSS at-rule creates a custom `font-family` value. The at-rule's descriptors set the font's name, source, and various display settings.
 spec: https://drafts.csswg.org/css-fonts-5/
 group: fonts
-caniuse: fontface
+caniuse:
+  - fontface
+  - font-unicode-range
 compat_features:
   - css.at-rules.font-face
   - css.at-rules.font-face.font-family
@@ -11,3 +13,4 @@ compat_features:
   - css.at-rules.font-face.WOFF_2
   - api.CSSFontFaceRule
   - api.CSSFontFaceRule.style
+  - css.at-rules.font-face.unicode-range
