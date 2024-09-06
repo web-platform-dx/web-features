@@ -2,7 +2,7 @@
 #
 # - "web notifications": very common, but searches also show Web Push
 # - "notifications api": ditto
-# - "web notifications": ditto, but even more general
+# - "notifications": ditto, but even more general
 #
 # Going with the generally preferred pattern of not including "web".
 name: Notifications API
@@ -21,7 +21,7 @@ name: Notifications API
 # - asynchronous (not user-interactive)
 # - often platform integrated/compatible
 #
-description: The Notifications API displays alerts to the user outside of the viewport, often using the notification system of the host operating system.
+description: The Notifications API displays alerts to the user outside of the viewport, typically using the notification system of the host operating system.
 spec: https://notifications.spec.whatwg.org/
 caniuse: notifications
 status:
