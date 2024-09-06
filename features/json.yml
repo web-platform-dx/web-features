@@ -1,0 +1,12 @@
+name: JSON
+description: JavaScript Object Notation (JSON) is a syntax for serializing objects, arrays, numbers, strings, booleans, and null. The `JSON` JavaScript namespace provides static methods for parsing values from and converting values to JSON.
+group: json
+spec: https://tc39.es/ecma262/multipage/structured-data.html#sec-json-object
+status:
+  compute_from: javascript.builtins.JSON
+compat_features:
+  - javascript.builtins.JSON
+  - javascript.builtins.JSON.json_superset
+  - javascript.builtins.JSON.parse
+  - javascript.builtins.JSON.stringify
+  - javascript.builtins.JSON.stringify.well_formed_stringify

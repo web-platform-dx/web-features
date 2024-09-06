@@ -1,0 +1,8 @@
+name: JSON source text access
+description: With JSON source text access, you can use a `reviver` callback to post-process data in `JSON.parse()`, and you can pre-process `JSON.rawJSON` using `replacer` in `JSON.stringify()`. This is useful for lossless number serialization for BigInt numbers, for example.
+group: json
+spec: https://tc39.es/proposal-json-parse-with-source/#sec-json-object
+compat_features:
+  - javascript.builtins.JSON.isRawJSON
+  - javascript.builtins.JSON.parse.reviver_parameter_context_argument
+  - javascript.builtins.JSON.rawJSON
