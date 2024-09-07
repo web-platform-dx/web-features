@@ -76,7 +76,7 @@ async function main() {
   const pageToSpec = new Map<string, WebSpecsSpec>();
 
   let selectedSpecs = webSpecs;
-  let selectedKeys = filterKeys;
+  let selectedKeys = filterKeys ?? [];
 
   if (filterPaths?.length) {
     const filePaths = filterPaths.flatMap((fileOrDirectory) => {
