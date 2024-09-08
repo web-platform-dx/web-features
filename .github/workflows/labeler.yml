@@ -14,3 +14,4 @@ jobs:
         run: gh pr edit ${{ github.event.pull_request.number }} --add-label "generated"
         env:
           GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
