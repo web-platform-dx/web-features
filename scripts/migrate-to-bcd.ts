@@ -90,6 +90,8 @@ async function main(bcd_path) {
         compat.tags.pop(index);
       }
 
+      logger.info(`Adding tag ${tag} to ${key}`);
+
       if (compat.tags) {
         compat.tags.push(tag);
       } else {
