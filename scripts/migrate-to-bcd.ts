@@ -80,7 +80,7 @@ async function main(bcd_path) {
             t.startsWith("web-features:") &&
             !t.startsWith("web-features:snapshot:"),
         );
-        if (index > -1) {
+        if (index === undefined || index === -1) {
           break;
         }
 
