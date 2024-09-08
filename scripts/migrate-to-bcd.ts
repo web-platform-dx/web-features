@@ -116,4 +116,4 @@ const argv = yargs(process.argv.slice(2))
     }),
   ).argv;
 
-await main(argv.bcd_path);
+await main(argv.bcdPath);
