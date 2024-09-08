@@ -1,0 +1,33 @@
+name: Payment Handler
+description: The Payment Handler API provides a standardized set of functionality for web applications to directly handle payments, rather than having to be redirected to a separate site for payment handling.
+group: payment
+status:
+  compute_from: api.PaymentManager
+compat_features:
+  - api.PaymentManager
+  - api.PaymentManager.enableDelegations
+  - api.PaymentManager.instruments
+  - api.PaymentManager.userHint
+  - api.CanMakePaymentEvent
+  - api.CanMakePaymentEvent.CanMakePaymentEvent
+  - api.CanMakePaymentEvent.methodData
+  - api.CanMakePaymentEvent.modifiers
+  - api.CanMakePaymentEvent.paymentRequestOrigin
+  - api.CanMakePaymentEvent.respondWith
+  - api.CanMakePaymentEvent.topOrigin
+  - api.PaymentRequestEvent
+  - api.PaymentRequestEvent.PaymentRequestEvent
+  - api.PaymentRequestEvent.changePaymentMethod
+  - api.PaymentRequestEvent.changeShippingAddress
+  - api.PaymentRequestEvent.changeShippingOption
+  - api.PaymentRequestEvent.instrumentKey
+  - api.PaymentRequestEvent.methodData
+  - api.PaymentRequestEvent.modifiers
+  - api.PaymentRequestEvent.openWindow
+  - api.PaymentRequestEvent.paymentOptions
+  - api.PaymentRequestEvent.paymentRequestId
+  - api.PaymentRequestEvent.paymentRequestOrigin
+  - api.PaymentRequestEvent.respondWith
+  - api.PaymentRequestEvent.shippingOptions
+  - api.PaymentRequestEvent.topOrigin
+  - api.PaymentRequestEvent.total

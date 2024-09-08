@@ -1,0 +1,40 @@
+name: Payment Request
+description: The Payment Request API allows the browser to offer a consistent and streamlined user experience while performing financial transactions.
+group: payment
+status:
+  compute_from: api.PaymentRequest
+compat_features:
+  - api.PaymentRequest
+  - api.PaymentRequest.PaymentRequest
+  - api.PaymentRequest.PaymentRequest.secure_payment_confirmation_method
+  - api.PaymentRequest.abort
+  - api.PaymentRequest.canMakePayment
+  - api.PaymentRequest.id
+  - api.PaymentRequest.merchantvalidation_event
+  - api.PaymentRequest.paymentmethodchange_event
+  - api.PaymentRequest.shippingAddress
+  - api.PaymentRequest.shippingaddresschange_event
+  - api.PaymentRequest.shippingOption
+  - api.PaymentRequest.shippingoptionchange_event
+  - api.PaymentRequest.shippingType
+  - api.PaymentRequest.show
+  - api.PaymentMethodChangeEvent
+  - api.PaymentMethodChangeEvent.PaymentMethodChangeEvent
+  - api.PaymentMethodChangeEvent.methodDetails
+  - api.PaymentMethodChangeEvent.methodName
+  - api.PaymentRequestUpdateEvent
+  - api.PaymentRequestUpdateEvent.PaymentRequestUpdateEvent
+  - api.PaymentRequestUpdateEvent.updateWith
+  - api.PaymentResponse
+  - api.PaymentResponse.complete
+  - api.PaymentResponse.details
+  - api.PaymentResponse.methodName
+  - api.PaymentResponse.payerdetailchange_event
+  - api.PaymentResponse.payerEmail
+  - api.PaymentResponse.payerName
+  - api.PaymentResponse.payerPhone
+  - api.PaymentResponse.requestId
+  - api.PaymentResponse.retry
+  - api.PaymentResponse.shippingAddress
+  - api.PaymentResponse.shippingOption
+  - api.PaymentResponse.toJSON
