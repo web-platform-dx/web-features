@@ -34,7 +34,6 @@ const argv = yargs(process.argv.slice(2))
     if (argv.bcdPath) {
       return true;
     } else {
-      console.log(argv);
       throw new Error(
         "The path to BCD must be set, as a positional, BCD_PATH environment variable, or MIGRATE_TO_BCD_BCD_PATH environment variable.",
       );
