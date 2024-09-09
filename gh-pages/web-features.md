@@ -19,7 +19,7 @@ For example, the `fetch()` API is a feature, the `:has()` CSS pseudo-class funct
 
 ## How does web-features relate to Baseline?
 
-The web-features project computes, reviews, and publishes Baseline statues. Therefore, web-features is the source of truth for Baseline statuses.
+The web-features project computes, reviews, and publishes Baseline statuses. Therefore, web-features is the source of truth for Baseline statuses.
 
 ## Get involved
 
