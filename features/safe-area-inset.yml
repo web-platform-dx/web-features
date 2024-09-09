@@ -1,0 +1,8 @@
+name: Safe area inset environment variables
+description: The `safe-area-inset-*` CSS environment variables represent an area of a non-rectangular screen that will not be cut off. For example, `top:\ env(safe-area-inset-top);` positions the top of an element below the notch on an iPhone.
+spec: https://drafts.csswg.org/css-env-1/#safe-area-insets
+compat_features:
+  - css.properties.custom-property.env.safe-area-inset-bottom
+  - css.properties.custom-property.env.safe-area-inset-left
+  - css.properties.custom-property.env.safe-area-inset-right
+  - css.properties.custom-property.env.safe-area-inset-top

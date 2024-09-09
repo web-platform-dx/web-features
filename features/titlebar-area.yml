@@ -1,0 +1,9 @@
+name: Titlebar area environment variables
+description: The `titlebar-area-*` CSS environment variables represent the header area of a Progressive Web App that is not hidden by the system's buttons. For example, ` height:\ env(titlebar-area-height)` sets the element's height to the height of the space reserved for the titlebar.
+spec: https://wicg.github.io/window-controls-overlay/#title-bar-area-env-variables
+group: environment-variables
+compat_features:
+  - css.properties.custom-property.env.titlebar-area-height
+  - css.properties.custom-property.env.titlebar-area-width
+  - css.properties.custom-property.env.titlebar-area-x
+  - css.properties.custom-property.env.titlebar-area-y
