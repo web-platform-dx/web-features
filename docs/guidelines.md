@@ -107,6 +107,8 @@ Follow the general writing guidelines in this section, but see the [word and phr
 
 ### Word and phrase list
 
+For general usage recommendations not covered by this list, such as word choice or punctuation, refer to the [Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/).
+
 #### allows
 
 OK in usage such as "allows you to…."
@@ -223,3 +225,38 @@ Because `window` is both the global object and represents the browser window, th
 Use the most customary reference in each case.
 If you're not sure what's customary, look to high-profile published examples, such as those on MDN reference pages for the feature.
 ([#913](https://github.com/web-platform-dx/web-features/pull/913#discussion_r1572601975))
+
+## `caniuse` values
+
+The `caniuse` key references one or more [Can I Use](https://caniuse.com/) feature IDs.
+This is the part of a Can I Use URL after `https://caniuse.com/`.
+For example, the Can I Use feature ID for [Flexbox](https://caniuse.com/flexbox) is `flexbox`.
+For a complete list of IDs, run `npx tsx ./scripts/caniuse.ts`.
+
+Setting a `caniuse` value says that a feature is approximately equivalent to or a superset of a Can I Use feature.
+If you set a `caniuse` value, then the Can I Use site shows a status badge based on the feature's top-level headline `status` information.
+
+Follow these guidelines when setting a `caniuse` value:
+
+- Do not set a `caniuse` value if the Can I Use feature is merely related to the feature.
+  For example, in [`grid.yml`](../features/grid.yml), do not set `caniuse: css-subgrid`.
+
+- Do not set a `caniuse` value if the top-level headline `status` would not be accurate with respect to the table on Can I Use.
+  For example, if Can I Use shows that a core browser set browser does not support a feature but web-features's status reports that the feature is Baseline high, then do not set the `caniuse` value for that feature.
+
+- Do not set a `caniuse` value if the top-level headline status's first-supported release (for example, the value of `status.support.safari`) differs from Can I Use's first-supported release by:
+
+  - More than one release for releases since 2020
+  - More than one year for releases before 2020
+
+  This means there's a major disagreement—and a likely error—in mdn/browser-compat-data or Can I Use.
+
+  If you see a discrepancy between Can I Use and a computed status that is less than one year for releases before 2020, please make a note of it in [#1499](https://github.com/web-platform-dx/web-features/issues/1499).
+
+- Do use `compute_from` to improve the correspondence of a feature's top-level headline status with Can I Use data.
+  Use this in cases where later additions, such as the introduction of a minor property or method, brings the statuses out of alignment.
+
+  But don't forget to use your judgement!
+  Can I Use isn't perfect.
+  Don't use `compute_from` in a way that would not make sense if the corresponding `caniuse` value didn't exist (for example, by pinning support before the introduction of an essential component of the feature).
+  In such situations, it's better to comment out the `caniuse` value, make a `TODO` comment, and open an issue about why you did it.
