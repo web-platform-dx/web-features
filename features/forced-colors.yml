@@ -1,0 +1,14 @@
+name: Forced colors
+description: The `forced-colors` CSS @media rule detects when a user has chosen to use a forced colors mode, also known as high-contrast mode, and the `forced-color-adjust` CSS property sets whether forced colors apply to an element.
+spec:
+  - https://drafts.csswg.org/mediaqueries-5/#forced-colors
+  - https://drafts.csswg.org/css-color-adjust-1/#forced-color-adjust-prop
+group: css
+status:
+  compute_from: css.at-rules.media.forced-colors
+compat_features:
+  - css.at-rules.media.forced-colors
+  - css.properties.forced-color-adjust
+  - css.properties.forced-color-adjust.auto
+  - css.properties.forced-color-adjust.none
+  - css.properties.forced-color-adjust.preserve-parent-color

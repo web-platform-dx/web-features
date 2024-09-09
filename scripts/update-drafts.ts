@@ -1,12 +1,28 @@
 import { Compat } from "compute-baseline/browser-compat-data";
 import fs from "node:fs/promises";
+import fsSync from "node:fs";
+import { fdir } from "fdir";
+import Path from "path";
 import { fileURLToPath } from "node:url";
 import webSpecs from "web-specs" assert { type: "json" };
 import { Document } from "yaml";
+import yargs from "yargs";
 
 import { features } from "../index.js";
 
 type WebSpecsSpec = (typeof webSpecs)[number];
+
+const argv = yargs(process.argv.slice(2))
+  .scriptName("update-drafts")
+  .usage("$0", "Update draft features with BCD keys mentioned in specs.")
+  .option("keys", {
+    type: "array",
+    describe: "Keys to match",
+  })
+  .option("paths", {
+    type: "array",
+    describe: "Draft feature files to update",
+  }).argv;
 
 function* getPages(spec): Generator<string> {
   yield spec.url;
@@ -42,6 +58,8 @@ function formatIdentifier(s: string): string {
 }
 
 async function main() {
+  const { keys: filterKeys, paths: filterPaths } = argv;
+
   const compat = new Compat();
 
   // Build a map of used BCD keys to feature.
@@ -56,7 +74,31 @@ async function main() {
 
   // Build a map from URLs to spec.
   const pageToSpec = new Map<string, WebSpecsSpec>();
-  for (const spec of webSpecs) {
+
+  let selectedSpecs = webSpecs;
+  let selectedKeys = filterKeys ?? [];
+
+  if (filterPaths?.length) {
+    const filePaths = filterPaths.flatMap((fileOrDirectory) => {
+      if (fsSync.statSync(fileOrDirectory).isDirectory()) {
+        return new fdir()
+          .withBasePath()
+          .filter((fp) => fp.endsWith(".yml"))
+          .crawl(fileOrDirectory)
+          .sync();
+      }
+      return fileOrDirectory;
+    });
+    selectedKeys.push(...filePaths.map((fp) => Path.parse(fp).name));
+  }
+
+  if (selectedKeys?.length) {
+    selectedSpecs = selectedSpecs.filter((ws) =>
+      selectedKeys.some((selectedKey) => ws.shortname.includes(selectedKey)),
+    );
+  }
+
+  for (const spec of selectedSpecs) {
     for (const page of getPages(spec)) {
       pageToSpec.set(normalize(page), spec);
     }
@@ -85,7 +127,7 @@ async function main() {
     for (const url of feature.spec_url) {
       const spec = pageToSpec.get(normalize(url));
       if (!spec) {
-        console.warn(`${url} not matched to any spec`);
+        if (!selectedKeys) console.warn(`${url} not matched to any spec`);
         continue;
       }
       const keys = specToCompatFeatures.get(spec);
