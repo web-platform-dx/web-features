@@ -7,7 +7,42 @@ import yargs from "yargs";
 
 import { features } from "../index.js";
 
+const argv = yargs(process.argv.slice(2))
+  .scriptName("migrate-to-bcd")
+  .usage("$0 [bcd-path]", "Migrate compat_features keys to BCD tags")
+  .env("MIGRATE_TO_BCD")
+  .option("bcd-path", {
+    describe: "Path to a mdn/browser-compat-data checkout",
+    type: "string",
+    nargs: 1,
+  })
+  .option("verbose", {
+    alias: "v",
+    describe: "Show more information",
+    type: "count",
+    default: 0,
+    defaultDescription: "warn",
+  })
+  .middleware((argv) => {
+    // Read `--bcd-path` option from BCD_PATH if set, for compatibility with BCD
+    // Collector's config style
+    if (process.env.BCD_PATH) {
+      argv.bcdPath = process.env.BCD_PATH;
+    }
+  })
+  .check((argv) => {
+    if (argv.bcdPath) {
+      return true;
+    } else {
+      console.log(argv);
+      throw new Error(
+        "The path to BCD must be set, as a positional, BCD_PATH environment variable, or MIGRATE_TO_BCD_BCD_PATH environment variable.",
+      );
+    }
+  }).argv;
+
 const logger = winston.createLogger({
+  level: argv.verbose > 0 ? "debug" : "warn",
   format: winston.format.combine(
     winston.format.colorize(),
     winston.format.simple(),
@@ -107,13 +142,5 @@ async function main(bcd_path) {
     logger.warn("Not migrated:", feature, key);
   }
 }
-
-const argv = yargs(process.argv.slice(2))
-  .scriptName("migrate-to-bcd")
-  .usage("$0 <bcd-path>", "Migrate compat_features keys to BCD tags", (yargs) =>
-    yargs.positional("bcd-path", {
-      describe: "The path to the BCD folder",
-    }),
-  ).argv;
 
 await main(argv.bcdPath);
