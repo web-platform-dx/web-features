@@ -89,6 +89,7 @@ compat_features:
   #   safari: "16"
   #   safari_ios: "16"
   - css.properties.offset-path.ray
+  - css.types.ray
 
   # baseline: low
   # baseline_low_date: 2024-01-23
@@ -101,6 +102,19 @@ compat_features:
   #   safari: "17"
   #   safari_ios: "17"
   - css.properties.offset-path.url
+  - css.types.ray.size
+
+  # baseline: low
+  # baseline_low_date: 2024-01-23
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "116"
+  #   edge: "116"
+  #   firefox: "122"
+  #   firefox_android: "122"
+  #   safari: "17.2"
+  #   safari_ios: "17.2"
+  - css.types.ray.position
 
   # baseline: false
   # support:
