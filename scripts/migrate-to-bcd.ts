@@ -26,7 +26,7 @@ const argv = yargs(process.argv.slice(2))
   .middleware((argv) => {
     // Read `--bcd-path` option from BCD_PATH if set, for compatibility with BCD
     // Collector's config style
-    if (process.env.BCD_PATH) {
+    if (!argv.bcdPath && process.env.BCD_PATH) {
       argv.bcdPath = process.env.BCD_PATH;
     }
   })
