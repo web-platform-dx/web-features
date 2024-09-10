@@ -1,4 +1,4 @@
-draft_date: 2024-08-19
+draft_date: 2024-09-09
 name: CSS Text Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-text-4/
@@ -24,7 +24,6 @@ compat_features:
   - css.properties.overflow-wrap.anywhere
   - css.properties.overflow-wrap.break-word
   - css.properties.overflow-wrap.normal
-  - css.properties.tab-size
   - css.properties.text-align
   - css.properties.text-align-last
   - css.properties.text-align-last.auto
@@ -54,24 +53,11 @@ compat_features:
   - css.properties.text-transform.none
   - css.properties.text-transform.uppercase
   - css.properties.text-wrap
-  - css.properties.text-wrap-mode
   - css.properties.text-wrap-style
   - css.properties.text-wrap-style.auto
   - css.properties.text-wrap-style.balance
   - css.properties.text-wrap-style.stable
   - css.properties.text-wrap.stable
-  - css.properties.white-space
-  - css.properties.white-space-collapse
-  - css.properties.white-space-collapse.break-spaces
-  - css.properties.white-space-collapse.collapse
-  - css.properties.white-space-collapse.preserve
-  - css.properties.white-space-collapse.preserve-breaks
-  - css.properties.white-space.break-spaces
-  - css.properties.white-space.normal
-  - css.properties.white-space.nowrap
-  - css.properties.white-space.pre
-  - css.properties.white-space.pre-line
-  - css.properties.white-space.pre-wrap
   - css.properties.word-break
   - css.properties.word-break.auto-phrase
   - css.properties.word-break.break-all
@@ -86,6 +72,8 @@ compat_features:
 # The following features in the spec are already part of web-features:
 # - Hyphenation:
 #   - css.properties.hyphens
+# - tab-size:
+#   - css.properties.tab-size
 # - text-indent:
 #   - css.properties.text-indent
 # - text-spacing-trim:
@@ -97,3 +85,19 @@ compat_features:
 #   - css.properties.text-wrap.wrap
 # - text-wrap: pretty:
 #   - css.properties.text-wrap.pretty
+# - text-wrap-mode:
+#   - css.properties.text-wrap-mode
+# - white-space:
+#   - css.properties.white-space
+#   - css.properties.white-space.break-spaces
+#   - css.properties.white-space.normal
+#   - css.properties.white-space.nowrap
+#   - css.properties.white-space.pre
+#   - css.properties.white-space.pre-line
+#   - css.properties.white-space.pre-wrap
+# - white-space-collapse:
+#   - css.properties.white-space-collapse
+#   - css.properties.white-space-collapse.break-spaces
+#   - css.properties.white-space-collapse.collapse
+#   - css.properties.white-space-collapse.preserve
+#   - css.properties.white-space-collapse.preserve-breaks

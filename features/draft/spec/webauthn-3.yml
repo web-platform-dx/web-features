@@ -1,43 +1,44 @@
-draft_date: 2024-08-19
+draft_date: 2024-09-09
 name: "Web Authentication: An API for accessing Public Key Credentials - Level 3"
 description: TODO
 spec: https://w3c.github.io/webauthn/
 compat_features:
-  - api.AuthenticatorAssertionResponse
-  - api.AuthenticatorAssertionResponse.authenticatorData
-  - api.AuthenticatorAssertionResponse.signature
-  - api.AuthenticatorAssertionResponse.userHandle
-  - api.AuthenticatorAttestationResponse
-  - api.AuthenticatorAttestationResponse.attestationObject
   - api.AuthenticatorAttestationResponse.getTransports
-  - api.AuthenticatorResponse
-  - api.AuthenticatorResponse.clientDataJSON
-  - api.CredentialsContainer.create.publicKey_option
-  - api.CredentialsContainer.create.publicKey_option.extensions
-  - api.CredentialsContainer.create.publicKey_option.extensions.appidExclude
   - api.CredentialsContainer.create.publicKey_option.extensions.credProps
   - api.CredentialsContainer.create.publicKey_option.extensions.largeBlob
   - api.CredentialsContainer.create.publicKey_option.requireResidentKey
   - api.CredentialsContainer.create.publicKey_option.residentKey
-  - api.CredentialsContainer.get.publicKey_option
-  - api.CredentialsContainer.get.publicKey_option.extensions
-  - api.CredentialsContainer.get.publicKey_option.extensions.appid
   - api.CredentialsContainer.get.publicKey_option.extensions.largeBlob
-  - api.PublicKeyCredential
   - api.PublicKeyCredential.authenticatorAttachment
   - api.PublicKeyCredential.getClientCapabilities_static
-  - api.PublicKeyCredential.getClientExtensionResults
   - api.PublicKeyCredential.isConditionalMediationAvailable_static
-  - api.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable_static
   - api.PublicKeyCredential.parseCreationOptionsFromJSON_static
   - api.PublicKeyCredential.parseRequestOptionsFromJSON_static
-  - api.PublicKeyCredential.rawId
-  - api.PublicKeyCredential.response
   - api.PublicKeyCredential.toJSON
   - http.headers.Permissions-Policy.publickey-credentials-create
   - http.headers.Permissions-Policy.publickey-credentials-get
 
 # The following features in the spec are already part of web-features:
+# - Web authentication:
+#   - api.AuthenticatorAssertionResponse
+#   - api.AuthenticatorAssertionResponse.authenticatorData
+#   - api.AuthenticatorAssertionResponse.signature
+#   - api.AuthenticatorAssertionResponse.userHandle
+#   - api.AuthenticatorAttestationResponse
+#   - api.AuthenticatorAttestationResponse.attestationObject
+#   - api.AuthenticatorResponse
+#   - api.AuthenticatorResponse.clientDataJSON
+#   - api.CredentialsContainer.create.publicKey_option
+#   - api.CredentialsContainer.create.publicKey_option.extensions
+#   - api.CredentialsContainer.create.publicKey_option.extensions.appidExclude
+#   - api.CredentialsContainer.get.publicKey_option
+#   - api.CredentialsContainer.get.publicKey_option.extensions
+#   - api.CredentialsContainer.get.publicKey_option.extensions.appid
+#   - api.PublicKeyCredential
+#   - api.PublicKeyCredential.getClientExtensionResults
+#   - api.PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable_static
+#   - api.PublicKeyCredential.rawId
+#   - api.PublicKeyCredential.response
 # - Web authentication easy public key access:
 #   - api.AuthenticatorAttestationResponse.getAuthenticatorData
 #   - api.AuthenticatorAttestationResponse.getPublicKey

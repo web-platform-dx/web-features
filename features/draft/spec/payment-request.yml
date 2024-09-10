@@ -1,5 +1,5 @@
-draft_date: 2024-08-19
-name: Payment Request API 1.1
+draft_date: 2024-09-09
+name: Payment Request API
 description: TODO
 spec: https://w3c.github.io/payment-request/
 compat_features:
@@ -21,6 +21,12 @@ compat_features:
   - api.PaymentResponse.complete
   - api.PaymentResponse.details
   - api.PaymentResponse.methodName
+  - api.PaymentResponse.payerEmail
+  - api.PaymentResponse.payerName
+  - api.PaymentResponse.payerPhone
+  - api.PaymentResponse.payerdetailchange_event
   - api.PaymentResponse.requestId
   - api.PaymentResponse.retry
+  - api.PaymentResponse.shippingAddress
+  - api.PaymentResponse.shippingOption
   - http.headers.Permissions-Policy.payment

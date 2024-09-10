@@ -1,4 +1,4 @@
-draft_date: 2024-08-19
+draft_date: 2024-09-09
 name: Scalable Vector Graphics (SVG) 2
 description: TODO
 spec: https://svgwg.org/svg2-draft/
@@ -222,6 +222,7 @@ compat_features:
   - api.SVGStopElement
   - api.SVGStopElement.offset
   - api.SVGStringList
+  - api.SVGStringList.length
   - api.SVGStyleElement
   - api.SVGStyleElement.disabled
   - api.SVGStyleElement.media
@@ -273,6 +274,7 @@ compat_features:
   - api.SVGTransformList.getItem
   - api.SVGTransformList.initialize
   - api.SVGTransformList.insertItemBefore
+  - api.SVGTransformList.length
   - api.SVGTransformList.numberOfItems
   - api.SVGTransformList.removeItem
   - api.SVGTransformList.replaceItem
@@ -305,6 +307,7 @@ compat_features:
   - css.properties.shape-rendering
   - css.properties.stop-color
   - css.properties.stop-opacity
+  - css.properties.stroke
   - css.properties.text-anchor
   - css.properties.text-rendering
   - css.properties.vector-effect

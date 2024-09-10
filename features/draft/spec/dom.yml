@@ -1,13 +1,8 @@
-draft_date: 2024-08-19
+draft_date: 2024-09-09
 name: DOM Standard
 description: TODO
 spec: https://dom.spec.whatwg.org/
 compat_features:
-  - api.AbortSignal.abort_static
-  - api.AbortSignal.abort_static.reason_parameter
-  - api.AbortSignal.reason
-  - api.AbortSignal.throwIfAborted
-  - api.AbortSignal.timeout_static
   - api.AbstractRange
   - api.AbstractRange.collapsed
   - api.AbstractRange.endContainer
@@ -350,7 +345,12 @@ compat_features:
 #   - api.AbortController.signal
 #   - api.AbortSignal
 #   - api.AbortSignal.abort_event
+#   - api.AbortSignal.abort_static
+#   - api.AbortSignal.abort_static.reason_parameter
 #   - api.AbortSignal.aborted
+#   - api.AbortSignal.reason
+#   - api.AbortSignal.throwIfAborted
+#   - api.AbortSignal.timeout_static
 # - AbortSignal.any():
 #   - api.AbortSignal.any_static
 # - <slot>:
