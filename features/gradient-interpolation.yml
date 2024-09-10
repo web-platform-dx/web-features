@@ -1,0 +1,17 @@
+name: Gradient interpolation
+description: Gradient interpolation controls how the colors between gradient stops are calculated in CSS. For example, `linear-gradient(to right in oklch longer hue, red, red);` calculates in the `oklch` color space, with the hue going all the way around the hue circle from red back to red.
+spec: https://drafts.csswg.org/css-color-4/#interpolation-space
+group: gradients
+compat_features:
+  - css.types.image.gradient.conic-gradient.hue_interpolation_method
+  - css.types.image.gradient.conic-gradient.interpolation_color_space
+  - css.types.image.gradient.linear-gradient.hue_interpolation_method
+  - css.types.image.gradient.linear-gradient.interpolation_color_space
+  - css.types.image.gradient.radial-gradient.hue_interpolation_method
+  - css.types.image.gradient.radial-gradient.interpolation_color_space
+  - css.types.image.gradient.repeating-conic-gradient.hue_interpolation_method
+  - css.types.image.gradient.repeating-conic-gradient.interpolation_color_space
+  - css.types.image.gradient.repeating-linear-gradient.hue_interpolation_method
+  - css.types.image.gradient.repeating-linear-gradient.interpolation_color_space
+  - css.types.image.gradient.repeating-radial-gradient.hue_interpolation_method
+  - css.types.image.gradient.repeating-radial-gradient.interpolation_color_space
