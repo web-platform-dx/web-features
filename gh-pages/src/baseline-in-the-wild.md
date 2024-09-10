@@ -12,7 +12,7 @@ You can find Baseline in the following places. If you spot somewhere else using 
 
 ## Featured projects and tools
 
-- [`<baseline-status>` web component](https://github.com/GoogleChrome/baseline-status)
+- [`<baseline-status>` web component](https://github.com/web-platform-dx/baseline-status)
 - [Can I Use](https://caniuse.com/)
 - [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Baseline/Compatibility)
 - [RUM Archive Insights](https://rumarchive.com/insights/)

@@ -17,4 +17,4 @@ When visiting sites like [Can I Use](https://caniuse.com), [MDN Web Docs](https:
 
 Are you writing a blog post or article or presenting at a conference? Use the [Baseline logos](/name-and-logo-usage-guidelines/) as a shorthand to let your audience know the status of a feature.
 
-The [`<baseline-status>` web component](https://github.com/GoogleChrome/baseline-status) is also available to include on your site or pages to indicate the status of a web feature. It renders at run-time, so it’s always up to date with the latest Baseline status.
+The [`<baseline-status>` web component](https://github.com/web-platform-dx/baseline-status) is also available to include on your site or pages to indicate the status of a web feature. It renders at run-time, so it’s always up to date with the latest Baseline status.
