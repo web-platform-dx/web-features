@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "86"
-    chrome_android: "86"
-    edge: "86"
+    chrome: "128"
+    chrome_android: "128"
+    edge: "128"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -156,7 +156,6 @@ compat_features:
   #   edge: "79"
   - api.Element.pointerrawupdate_event
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "86"
@@ -164,3 +163,11 @@ compat_features:
   #   edge: "86"
   - api.PointerEvent.altitudeAngle
   - api.PointerEvent.azimuthAngle
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  - api.PointerEvent.persistentDeviceId
