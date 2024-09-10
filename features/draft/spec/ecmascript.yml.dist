@@ -745,99 +745,11 @@ compat_features:
   #   chrome: "49"
   #   chrome_android: "49"
   #   edge: "12"
-  #   firefox: "18"
-  #   firefox_android: "18"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.builtins.Proxy
-  - javascript.builtins.Proxy.Proxy
-  - javascript.builtins.Proxy.handler.apply
-  - javascript.builtins.Proxy.handler.construct
-  - javascript.builtins.Proxy.handler.defineProperty
-  - javascript.builtins.Proxy.handler.deleteProperty
-  - javascript.builtins.Proxy.handler.get
-  - javascript.builtins.Proxy.handler.getOwnPropertyDescriptor
-  - javascript.builtins.Proxy.handler.has
-  - javascript.builtins.Proxy.handler.ownKeys
-  - javascript.builtins.Proxy.handler.set
-
-  # baseline: high
-  # baseline_low_date: 2016-09-20
-  # baseline_high_date: 2019-03-20
-  # support:
-  #   chrome: "49"
-  #   chrome_android: "49"
-  #   edge: "12"
-  #   firefox: "22"
-  #   firefox_android: "22"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.builtins.Proxy.handler.preventExtensions
-
-  # baseline: high
-  # baseline_low_date: 2016-09-20
-  # baseline_high_date: 2019-03-20
-  # support:
-  #   chrome: "49"
-  #   chrome_android: "49"
-  #   edge: "12"
   #   firefox: "26"
   #   firefox_android: "26"
   #   safari: "10"
   #   safari_ios: "10"
   - javascript.operators.generator_function
-
-  # baseline: high
-  # baseline_low_date: 2016-09-20
-  # baseline_high_date: 2019-03-20
-  # support:
-  #   chrome: "49"
-  #   chrome_android: "49"
-  #   edge: "12"
-  #   firefox: "31"
-  #   firefox_android: "31"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.builtins.Proxy.handler.isExtensible
-
-  # baseline: high
-  # baseline_low_date: 2016-09-20
-  # baseline_high_date: 2019-03-20
-  # support:
-  #   chrome: "49"
-  #   chrome_android: "49"
-  #   edge: "12"
-  #   firefox: "42"
-  #   firefox_android: "42"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.builtins.Reflect
-  - javascript.builtins.Reflect.apply
-  - javascript.builtins.Reflect.construct
-  - javascript.builtins.Reflect.defineProperty
-  - javascript.builtins.Reflect.deleteProperty
-  - javascript.builtins.Reflect.get
-  - javascript.builtins.Reflect.getOwnPropertyDescriptor
-  - javascript.builtins.Reflect.getPrototypeOf
-  - javascript.builtins.Reflect.has
-  - javascript.builtins.Reflect.isExtensible
-  - javascript.builtins.Reflect.ownKeys
-  - javascript.builtins.Reflect.preventExtensions
-  - javascript.builtins.Reflect.set
-  - javascript.builtins.Reflect.setPrototypeOf
-
-  # baseline: high
-  # baseline_low_date: 2016-09-20
-  # baseline_high_date: 2019-03-20
-  # support:
-  #   chrome: "49"
-  #   chrome_android: "49"
-  #   edge: "12"
-  #   firefox: "49"
-  #   firefox_android: "49"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.builtins.Proxy.handler.setPrototypeOf
 
   # baseline: high
   # baseline_low_date: 2016-09-20
@@ -1032,32 +944,6 @@ compat_features:
   - webassembly.api.LinkError.LinkError
   - webassembly.api.RuntimeError
   - webassembly.api.RuntimeError.RuntimeError
-
-  # baseline: high
-  # baseline_low_date: 2017-12-06
-  # baseline_high_date: 2020-06-06
-  # support:
-  #   chrome: "63"
-  #   chrome_android: "63"
-  #   edge: "12"
-  #   firefox: "34"
-  #   firefox_android: "34"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.builtins.Proxy.revocable
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "49"
-  #   chrome_android: "49"
-  #   edge: "79"
-  #   firefox: "49"
-  #   firefox_android: "49"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.builtins.Proxy.handler.getPrototypeOf
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -1332,25 +1218,6 @@ compat_features:
   #   safari: "14.1"
   #   safari_ios: "14.5"
   - javascript.statements.export.namespace
-
-  # baseline: high
-  # baseline_low_date: 2021-04-26
-  # baseline_high_date: 2023-10-26
-  # support:
-  #   chrome: "84"
-  #   chrome_android: "84"
-  #   edge: "84"
-  #   firefox: "79"
-  #   firefox_android: "79"
-  #   safari: "14.1"
-  #   safari_ios: "14.5"
-  - javascript.builtins.FinalizationRegistry
-  - javascript.builtins.FinalizationRegistry.FinalizationRegistry
-  - javascript.builtins.FinalizationRegistry.register
-  - javascript.builtins.FinalizationRegistry.unregister
-  - javascript.builtins.WeakRef
-  - javascript.builtins.WeakRef.WeakRef
-  - javascript.builtins.WeakRef.deref
 
   # baseline: high
   # baseline_low_date: 2021-07-13
