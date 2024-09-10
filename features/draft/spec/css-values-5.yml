@@ -1,14 +1,13 @@
-draft_date: 2024-08-28
-name: CSS Values and Units Module Level 4
+draft_date: 2024-09-09
+name: CSS Values and Units Module Level 5
 description: TODO
-spec: https://drafts.csswg.org/css-values-4/
+spec: https://drafts.csswg.org/css-values-5/
 compat_features:
   - css.at-rules.media.calc
   - css.properties.content.url
   - css.properties.interpolate-size
   - css.properties.interpolate-size.allow-keywords
   - css.properties.interpolate-size.numeric-only
-  - css.properties.tab-size.length
   - css.types.angle
   - css.types.angle-percentage
   - css.types.attr
@@ -34,6 +33,8 @@ compat_features:
   - css.types.url
 
 # The following features in the spec are already part of web-features:
+# - tab-size:
+#   - css.properties.tab-size.length
 # - abs() and sign():
 #   - css.types.abs
 #   - css.types.sign
