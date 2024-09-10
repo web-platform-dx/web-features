@@ -217,8 +217,14 @@ async function main() {
     // other than the `draft_date` changed. Because changes can be comments, we
     // have to check a diff rather than parsing and comparing values.
     const changes = diff.diffLines(originalFile, proposedFile);
+
+    // When there are no changes, diffLines returns 1 "change" with nothing
+    // added or removed.
     const noChanges =
       changes.length === 1 && !changes[0].added && !changes[0].removed;
+
+    // When there are date-only changes, diffLines returns 3 "changes" (one added, one
+    // removed, the rest with nothing added or removed).
     const onlyDateChanges =
       !noChanges &&
       changes.length === 3 &&
