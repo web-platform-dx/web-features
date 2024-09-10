@@ -8,7 +8,6 @@ on:
       - "main"
     paths:
       - "gh-pages/**"
-      - "eleventy.config.cjs"
       - ".github/workflows/gh-pages-build-deploy.yml"
 
   # Allows you to run this workflow manually from the Actions tab
@@ -44,8 +43,10 @@ jobs:
           node-version-file: .node-version
       - name: NPM Install
         run: npm ci
+        working-directory: gh-pages/
       - name: Build pages
-        run: npm run gh-pages:build-prod
+        run: npm run build:prod
+        working-directory: gh-pages/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 

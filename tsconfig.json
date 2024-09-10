@@ -5,8 +5,10 @@
     "moduleResolution": "Bundler",
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "noEmit": true,
-    "skipLibCheck": true
+    "noEmit": true
   },
-  "exclude": ["packages/"]
+  "exclude": [
+    "packages/",
+    "gh-pages/"
+  ]
 }

@@ -3,9 +3,9 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("./gh-pages/assets/img");
-  eleventyConfig.addPassthroughCopy("./gh-pages/assets/fonts");
-  eleventyConfig.addPassthroughCopy("./gh-pages/assets/css");
+  eleventyConfig.addPassthroughCopy("./src/assets/img");
+  eleventyConfig.addPassthroughCopy("./src/assets/fonts");
+  eleventyConfig.addPassthroughCopy("./src/assets/css");
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   const mdOpts = {
     html: true,
@@ -15,8 +15,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary("md", markdownIt(mdOpts).use(markdownItAnchor));
   return {
     dir: {
-      input: "gh-pages",
-      output: "_site",
+      input: "src",
+      output: "../_site",
     },
   };
 };
