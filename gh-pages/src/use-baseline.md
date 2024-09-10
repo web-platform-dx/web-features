@@ -11,7 +11,7 @@ You can use Baseline to:
 
 ## Check if a feature works across browsers
 
-When visiting sites like [Can I Use](https://caniuse.com), [MDN Web Docs](https://developer.mozilla.org/), [RUM Archive Insights](https://rumarchive.com/insights/#baseline) and [webstatus.dev](https://webstatus.dev), check the status of a feature to learn if it works across browsers.
+When visiting sites like [Can I Use](https://caniuse.com), [MDN Web Docs](https://developer.mozilla.org/), and [RUM Archive Insights](https://rumarchive.com/insights/#baseline) check the status of a feature to learn if it available across browsers.
 
 ## Let others know when a feature works across browsers
 
