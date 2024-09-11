@@ -64,39 +64,32 @@ compat_features:
   - javascript.builtins.Temporal.Instant.Instant
   - javascript.builtins.Temporal.Instant.add
   - javascript.builtins.Temporal.Instant.compare
-  - javascript.builtins.Temporal.Instant.epochMicroseconds
   - javascript.builtins.Temporal.Instant.epochMilliseconds
   - javascript.builtins.Temporal.Instant.epochNanoseconds
-  - javascript.builtins.Temporal.Instant.epochSeconds
   - javascript.builtins.Temporal.Instant.equals
   - javascript.builtins.Temporal.Instant.from
-  - javascript.builtins.Temporal.Instant.fromEpochMicroseconds
   - javascript.builtins.Temporal.Instant.fromEpochMilliseconds
   - javascript.builtins.Temporal.Instant.fromEpochNanoseconds
-  - javascript.builtins.Temporal.Instant.fromEpochSeconds
   - javascript.builtins.Temporal.Instant.round
   - javascript.builtins.Temporal.Instant.since
   - javascript.builtins.Temporal.Instant.subtract
   - javascript.builtins.Temporal.Instant.toJSON
   - javascript.builtins.Temporal.Instant.toLocaleString
   - javascript.builtins.Temporal.Instant.toString
-  - javascript.builtins.Temporal.Instant.toZonedDateTime
   - javascript.builtins.Temporal.Instant.toZonedDateTimeISO
   - javascript.builtins.Temporal.Instant.until
   - javascript.builtins.Temporal.Instant.valueOf
   - javascript.builtins.Temporal.Now
   - javascript.builtins.Temporal.Now.instant
-  - javascript.builtins.Temporal.Now.plainDate
   - javascript.builtins.Temporal.Now.plainDateISO
-  - javascript.builtins.Temporal.Now.plainDateTime
   - javascript.builtins.Temporal.Now.plainDateTimeISO
-  - javascript.builtins.Temporal.Now.timeZone
-  - javascript.builtins.Temporal.Now.zonedDateTime
+  - javascript.builtins.Temporal.Now.plainTimeISO
+  - javascript.builtins.Temporal.Now.timeZoneID
   - javascript.builtins.Temporal.Now.zonedDateTimeISO
   - javascript.builtins.Temporal.PlainDate
   - javascript.builtins.Temporal.PlainDate.PlainDate
   - javascript.builtins.Temporal.PlainDate.add
-  - javascript.builtins.Temporal.PlainDate.calendar
+  - javascript.builtins.Temporal.PlainDate.calendarId
   - javascript.builtins.Temporal.PlainDate.compare
   - javascript.builtins.Temporal.PlainDate.day
   - javascript.builtins.Temporal.PlainDate.dayOfWeek
@@ -128,10 +121,11 @@ compat_features:
   - javascript.builtins.Temporal.PlainDate.with
   - javascript.builtins.Temporal.PlainDate.withCalendar
   - javascript.builtins.Temporal.PlainDate.year
+  - javascript.builtins.Temporal.PlainDate.yearOfWeek
   - javascript.builtins.Temporal.PlainDateTime
   - javascript.builtins.Temporal.PlainDateTime.PlainDateTime
   - javascript.builtins.Temporal.PlainDateTime.add
-  - javascript.builtins.Temporal.PlainDateTime.calendar
+  - javascript.builtins.Temporal.PlainDateTime.calendarId
   - javascript.builtins.Temporal.PlainDateTime.compare
   - javascript.builtins.Temporal.PlainDateTime.day
   - javascript.builtins.Temporal.PlainDateTime.dayOfWeek
@@ -160,9 +154,7 @@ compat_features:
   - javascript.builtins.Temporal.PlainDateTime.toJSON
   - javascript.builtins.Temporal.PlainDateTime.toLocaleString
   - javascript.builtins.Temporal.PlainDateTime.toPlainDate
-  - javascript.builtins.Temporal.PlainDateTime.toPlainMonthDay
   - javascript.builtins.Temporal.PlainDateTime.toPlainTime
-  - javascript.builtins.Temporal.PlainDateTime.toPlainYearMonth
   - javascript.builtins.Temporal.PlainDateTime.toString
   - javascript.builtins.Temporal.PlainDateTime.toZonedDateTime
   - javascript.builtins.Temporal.PlainDateTime.until
@@ -170,12 +162,12 @@ compat_features:
   - javascript.builtins.Temporal.PlainDateTime.weekOfYear
   - javascript.builtins.Temporal.PlainDateTime.with
   - javascript.builtins.Temporal.PlainDateTime.withCalendar
-  - javascript.builtins.Temporal.PlainDateTime.withPlainDate
   - javascript.builtins.Temporal.PlainDateTime.withPlainTime
   - javascript.builtins.Temporal.PlainDateTime.year
+  - javascript.builtins.Temporal.PlainDateTime.yearOfWeek
   - javascript.builtins.Temporal.PlainMonthDay
   - javascript.builtins.Temporal.PlainMonthDay.PlainMonthDay
-  - javascript.builtins.Temporal.PlainMonthDay.calendar
+  - javascript.builtins.Temporal.PlainMonthDay.calendarId
   - javascript.builtins.Temporal.PlainMonthDay.day
   - javascript.builtins.Temporal.PlainMonthDay.equals
   - javascript.builtins.Temporal.PlainMonthDay.from
@@ -190,7 +182,6 @@ compat_features:
   - javascript.builtins.Temporal.PlainTime
   - javascript.builtins.Temporal.PlainTime.PlainTime
   - javascript.builtins.Temporal.PlainTime.add
-  - javascript.builtins.Temporal.PlainTime.calendar
   - javascript.builtins.Temporal.PlainTime.compare
   - javascript.builtins.Temporal.PlainTime.equals
   - javascript.builtins.Temporal.PlainTime.from
@@ -206,16 +197,14 @@ compat_features:
   - javascript.builtins.Temporal.PlainTime.subtract
   - javascript.builtins.Temporal.PlainTime.toJSON
   - javascript.builtins.Temporal.PlainTime.toLocaleString
-  - javascript.builtins.Temporal.PlainTime.toPlainDateTime
   - javascript.builtins.Temporal.PlainTime.toString
-  - javascript.builtins.Temporal.PlainTime.toZonedDateTime
   - javascript.builtins.Temporal.PlainTime.until
   - javascript.builtins.Temporal.PlainTime.valueOf
   - javascript.builtins.Temporal.PlainTime.with
   - javascript.builtins.Temporal.PlainYearMonth
   - javascript.builtins.Temporal.PlainYearMonth.PlainYearMonth
   - javascript.builtins.Temporal.PlainYearMonth.add
-  - javascript.builtins.Temporal.PlainYearMonth.calendar
+  - javascript.builtins.Temporal.PlainYearMonth.calendarId
   - javascript.builtins.Temporal.PlainYearMonth.compare
   - javascript.builtins.Temporal.PlainYearMonth.daysInMonth
   - javascript.builtins.Temporal.PlainYearMonth.daysInYear
@@ -242,19 +231,17 @@ compat_features:
   - javascript.builtins.Temporal.TimeZone.TimeZone
   - javascript.builtins.Temporal.TimeZone.from
   - javascript.builtins.Temporal.TimeZone.getInstantFor
-  - javascript.builtins.Temporal.TimeZone.getNextTransition
   - javascript.builtins.Temporal.TimeZone.getOffsetNanosecondsFor
   - javascript.builtins.Temporal.TimeZone.getOffsetStringFor
   - javascript.builtins.Temporal.TimeZone.getPlainDateTimeFor
   - javascript.builtins.Temporal.TimeZone.getPossibleInstantsFor
-  - javascript.builtins.Temporal.TimeZone.getPreviousTransition
   - javascript.builtins.Temporal.TimeZone.id
   - javascript.builtins.Temporal.TimeZone.toJSON
   - javascript.builtins.Temporal.TimeZone.toString
   - javascript.builtins.Temporal.ZonedDateTime
   - javascript.builtins.Temporal.ZonedDateTime.ZonedDateTime
   - javascript.builtins.Temporal.ZonedDateTime.add
-  - javascript.builtins.Temporal.ZonedDateTime.calendar
+  - javascript.builtins.Temporal.ZonedDateTime.calendarId
   - javascript.builtins.Temporal.ZonedDateTime.compare
   - javascript.builtins.Temporal.ZonedDateTime.day
   - javascript.builtins.Temporal.ZonedDateTime.dayOfWeek
@@ -262,15 +249,14 @@ compat_features:
   - javascript.builtins.Temporal.ZonedDateTime.daysInMonth
   - javascript.builtins.Temporal.ZonedDateTime.daysInWeek
   - javascript.builtins.Temporal.ZonedDateTime.daysInYear
-  - javascript.builtins.Temporal.ZonedDateTime.epochMicroseconds
   - javascript.builtins.Temporal.ZonedDateTime.epochMilliseconds
   - javascript.builtins.Temporal.ZonedDateTime.epochNanoseconds
-  - javascript.builtins.Temporal.ZonedDateTime.epochSeconds
   - javascript.builtins.Temporal.ZonedDateTime.equals
   - javascript.builtins.Temporal.ZonedDateTime.era
   - javascript.builtins.Temporal.ZonedDateTime.eraYear
   - javascript.builtins.Temporal.ZonedDateTime.from
   - javascript.builtins.Temporal.ZonedDateTime.getISOFields
+  - javascript.builtins.Temporal.ZonedDateTime.getTimeZoneTransition
   - javascript.builtins.Temporal.ZonedDateTime.hour
   - javascript.builtins.Temporal.ZonedDateTime.hoursInDay
   - javascript.builtins.Temporal.ZonedDateTime.inLeapYear
@@ -288,22 +274,20 @@ compat_features:
   - javascript.builtins.Temporal.ZonedDateTime.since
   - javascript.builtins.Temporal.ZonedDateTime.startOfDay
   - javascript.builtins.Temporal.ZonedDateTime.subtract
-  - javascript.builtins.Temporal.ZonedDateTime.timeZone
+  - javascript.builtins.Temporal.ZonedDateTime.timeZoneId
   - javascript.builtins.Temporal.ZonedDateTime.toInstant
   - javascript.builtins.Temporal.ZonedDateTime.toJSON
   - javascript.builtins.Temporal.ZonedDateTime.toLocaleString
   - javascript.builtins.Temporal.ZonedDateTime.toPlainDate
   - javascript.builtins.Temporal.ZonedDateTime.toPlainDateTime
-  - javascript.builtins.Temporal.ZonedDateTime.toPlainMonthDay
   - javascript.builtins.Temporal.ZonedDateTime.toPlainTime
-  - javascript.builtins.Temporal.ZonedDateTime.toPlainYearMonth
   - javascript.builtins.Temporal.ZonedDateTime.toString
   - javascript.builtins.Temporal.ZonedDateTime.until
   - javascript.builtins.Temporal.ZonedDateTime.valueOf
   - javascript.builtins.Temporal.ZonedDateTime.weekOfYear
   - javascript.builtins.Temporal.ZonedDateTime.with
   - javascript.builtins.Temporal.ZonedDateTime.withCalendar
-  - javascript.builtins.Temporal.ZonedDateTime.withPlainDate
   - javascript.builtins.Temporal.ZonedDateTime.withPlainTime
   - javascript.builtins.Temporal.ZonedDateTime.withTimeZone
   - javascript.builtins.Temporal.ZonedDateTime.year
+  - javascript.builtins.Temporal.ZonedDateTime.yearOfWeek

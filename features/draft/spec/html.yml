@@ -1,4 +1,4 @@
-draft_date: 2024-08-12
+draft_date: 2024-09-09
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -6,74 +6,8 @@ compat_features:
   - api.BarProp
   - api.BarProp.visible
   - api.BeforeUnloadEvent
-  - api.CanvasGradient
-  - api.CanvasGradient.addColorStop
   - api.CanvasPattern
   - api.CanvasPattern.setTransform
-  - api.CanvasRenderingContext2D
-  - api.CanvasRenderingContext2D.arc
-  - api.CanvasRenderingContext2D.arcTo
-  - api.CanvasRenderingContext2D.beginPath
-  - api.CanvasRenderingContext2D.bezierCurveTo
-  - api.CanvasRenderingContext2D.canvas
-  - api.CanvasRenderingContext2D.clearRect
-  - api.CanvasRenderingContext2D.clip
-  - api.CanvasRenderingContext2D.closePath
-  - api.CanvasRenderingContext2D.createImageData
-  - api.CanvasRenderingContext2D.createLinearGradient
-  - api.CanvasRenderingContext2D.createPattern
-  - api.CanvasRenderingContext2D.createRadialGradient
-  - api.CanvasRenderingContext2D.direction
-  - api.CanvasRenderingContext2D.drawFocusIfNeeded
-  - api.CanvasRenderingContext2D.drawImage
-  - api.CanvasRenderingContext2D.ellipse
-  - api.CanvasRenderingContext2D.fill
-  - api.CanvasRenderingContext2D.fillRect
-  - api.CanvasRenderingContext2D.fillStyle
-  - api.CanvasRenderingContext2D.filter
-  - api.CanvasRenderingContext2D.font
-  - api.CanvasRenderingContext2D.fontKerning
-  - api.CanvasRenderingContext2D.fontStretch
-  - api.CanvasRenderingContext2D.fontVariantCaps
-  - api.CanvasRenderingContext2D.getContextAttributes
-  - api.CanvasRenderingContext2D.getImageData
-  - api.CanvasRenderingContext2D.getLineDash
-  - api.CanvasRenderingContext2D.getTransform
-  - api.CanvasRenderingContext2D.globalAlpha
-  - api.CanvasRenderingContext2D.globalCompositeOperation
-  - api.CanvasRenderingContext2D.imageSmoothingEnabled
-  - api.CanvasRenderingContext2D.imageSmoothingQuality
-  - api.CanvasRenderingContext2D.isPointInPath
-  - api.CanvasRenderingContext2D.isPointInStroke
-  - api.CanvasRenderingContext2D.letterSpacing
-  - api.CanvasRenderingContext2D.lineCap
-  - api.CanvasRenderingContext2D.lineDashOffset
-  - api.CanvasRenderingContext2D.lineJoin
-  - api.CanvasRenderingContext2D.lineTo
-  - api.CanvasRenderingContext2D.lineWidth
-  - api.CanvasRenderingContext2D.miterLimit
-  - api.CanvasRenderingContext2D.moveTo
-  - api.CanvasRenderingContext2D.putImageData
-  - api.CanvasRenderingContext2D.quadraticCurveTo
-  - api.CanvasRenderingContext2D.rect
-  - api.CanvasRenderingContext2D.resetTransform
-  - api.CanvasRenderingContext2D.restore
-  - api.CanvasRenderingContext2D.rotate
-  - api.CanvasRenderingContext2D.save
-  - api.CanvasRenderingContext2D.scale
-  - api.CanvasRenderingContext2D.setLineDash
-  - api.CanvasRenderingContext2D.setTransform
-  - api.CanvasRenderingContext2D.shadowBlur
-  - api.CanvasRenderingContext2D.shadowColor
-  - api.CanvasRenderingContext2D.shadowOffsetX
-  - api.CanvasRenderingContext2D.shadowOffsetY
-  - api.CanvasRenderingContext2D.stroke
-  - api.CanvasRenderingContext2D.strokeRect
-  - api.CanvasRenderingContext2D.strokeStyle
-  - api.CanvasRenderingContext2D.textRendering
-  - api.CanvasRenderingContext2D.transform
-  - api.CanvasRenderingContext2D.translate
-  - api.CanvasRenderingContext2D.wordSpacing
   - api.CloseWatcher
   - api.CloseWatcher.CloseWatcher
   - api.CloseWatcher.cancel_event
@@ -159,8 +93,6 @@ compat_features:
   - api.Element.auxclick_event
   - api.Element.beforematch_event
   - api.Element.blur_event
-  - api.Element.copy_event
-  - api.Element.cut_event
   - api.Element.focus_event
   - api.Element.getHTML
   - api.Element.innerHTML
@@ -168,7 +100,6 @@ compat_features:
   - api.Element.keydown_event
   - api.Element.keyup_event
   - api.Element.outerHTML
-  - api.Element.paste_event
   - api.Element.scroll_event
   - api.Element.securitypolicyviolation_event
   - api.Element.wheel_event
@@ -201,10 +132,6 @@ compat_features:
   - api.HTMLAnchorElement.ping
   - api.HTMLAreaElement.download
   - api.HTMLAreaElement.ping
-  - api.HTMLCanvasElement.getContext.2d_context.options_alpha_parameter
-  - api.HTMLCanvasElement.getContext.2d_context.options_colorSpace_parameter
-  - api.HTMLCanvasElement.getContext.2d_context.options_desynchronized_parameter
-  - api.HTMLCanvasElement.getContext.2d_context.options_willReadFrequently_parameter
   - api.HTMLCanvasElement.getContext.bitmaprenderer_context.options_alpha_parameter
   - api.HTMLDListElement
   - api.HTMLDetailsElement.toggle_event
@@ -238,31 +165,9 @@ compat_features:
   - api.HTMLElement.outerText
   - api.HTMLElement.spellcheck
   - api.HTMLElement.title
-  - api.HTMLElement.writingSuggestions
   - api.HTMLFormControlsCollection
   - api.HTMLFormControlsCollection.namedItem
-  - api.HTMLFormElement
-  - api.HTMLFormElement.acceptCharset
-  - api.HTMLFormElement.action
-  - api.HTMLFormElement.autocomplete
-  - api.HTMLFormElement.elements
-  - api.HTMLFormElement.encoding
-  - api.HTMLFormElement.enctype
-  - api.HTMLFormElement.formdata_event
-  - api.HTMLFormElement.length
-  - api.HTMLFormElement.method
-  - api.HTMLFormElement.name
-  - api.HTMLFormElement.noValidate
-  - api.HTMLFormElement.rel
-  - api.HTMLFormElement.relList
-  - api.HTMLFormElement.requestSubmit
-  - api.HTMLFormElement.reset
-  - api.HTMLFormElement.reset_event
-  - api.HTMLFormElement.submit
-  - api.HTMLFormElement.submit_event
-  - api.HTMLFormElement.target
   - api.HTMLIFrameElement.sandbox
-  - api.HTMLIFrameElement.srcdoc
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes
   - api.HTMLImageElement.sizes.auto
@@ -315,14 +220,9 @@ compat_features:
   - api.HTMLInputElement.valueAsDate
   - api.HTMLInputElement.valueAsNumber
   - api.HTMLInputElement.width
-  - api.HTMLLabelElement
-  - api.HTMLLabelElement.control
-  - api.HTMLLabelElement.form
-  - api.HTMLLabelElement.htmlFor
   - api.HTMLMediaElement.getStartDate
   - api.HTMLMediaElement.srcObject
   - api.HTMLMediaElement.textTracks
-  - api.HTMLMenuElement
   - api.HTMLMeterElement
   - api.HTMLMeterElement.high
   - api.HTMLMeterElement.labels
@@ -705,17 +605,7 @@ compat_features:
   - html.elements.dt
   - html.elements.fencedframe.height
   - html.elements.fencedframe.width
-  - html.elements.form
-  - html.elements.form.accept-charset
-  - html.elements.form.action
-  - html.elements.form.autocomplete
   - html.elements.form.autocomplete.webauthn
-  - html.elements.form.enctype
-  - html.elements.form.method
-  - html.elements.form.name
-  - html.elements.form.novalidate
-  - html.elements.form.rel
-  - html.elements.form.target
   - html.elements.iframe.sandbox
   - html.elements.iframe.sandbox.allow-downloads
   - html.elements.iframe.sandbox.allow-forms
@@ -729,7 +619,6 @@ compat_features:
   - html.elements.iframe.sandbox.allow-top-navigation
   - html.elements.iframe.sandbox.allow-top-navigation-by-user-activation
   - html.elements.iframe.sandbox.allow-top-navigation-to-custom-protocols
-  - html.elements.iframe.srcdoc
   - html.elements.img.sizes
   - html.elements.img.sizes.auto
   - html.elements.img.srcset
@@ -780,8 +669,6 @@ compat_features:
   - html.elements.input.type_time
   - html.elements.input.type_url
   - html.elements.input.type_week
-  - html.elements.label
-  - html.elements.label.for
   - html.elements.link.rel.alternate_stylesheet
   - html.elements.link.rel.dns-prefetch
   - html.elements.link.rel.expect
@@ -789,7 +676,6 @@ compat_features:
   - html.elements.link.rel.preconnect
   - html.elements.link.rel.prefetch
   - html.elements.link.rel.preload
-  - html.elements.menu
   - html.elements.meta.http-equiv.content-security-policy
   - html.elements.meta.http-equiv.content-type
   - html.elements.meta.name.theme-color
@@ -800,7 +686,6 @@ compat_features:
   - html.elements.meter.min
   - html.elements.meter.optimum
   - html.elements.meter.value
-  - html.elements.s
   - html.elements.script.type.importmap.integrity
   - html.elements.select.autocomplete
   - html.elements.source.sizes
@@ -885,17 +770,86 @@ compat_features:
 #   - api.BroadcastChannel.messageerror_event
 #   - api.BroadcastChannel.name
 #   - api.BroadcastChannel.postMessage
-# - Canvas createConicGradient():
-#   - api.CanvasRenderingContext2D.createConicGradient
-#   - api.OffscreenCanvasRenderingContext2D.createConicGradient
-# - Canvas text metrics:
+# - 2D canvas:
+#   - api.CanvasGradient
+#   - api.CanvasGradient.addColorStop
+#   - api.CanvasRenderingContext2D
+#   - api.CanvasRenderingContext2D.arc
+#   - api.CanvasRenderingContext2D.arcTo
+#   - api.CanvasRenderingContext2D.beginPath
+#   - api.CanvasRenderingContext2D.bezierCurveTo
+#   - api.CanvasRenderingContext2D.canvas
+#   - api.CanvasRenderingContext2D.clearRect
+#   - api.CanvasRenderingContext2D.clip
+#   - api.CanvasRenderingContext2D.closePath
+#   - api.CanvasRenderingContext2D.createImageData
+#   - api.CanvasRenderingContext2D.createLinearGradient
+#   - api.CanvasRenderingContext2D.createPattern
+#   - api.CanvasRenderingContext2D.createRadialGradient
+#   - api.CanvasRenderingContext2D.direction
+#   - api.CanvasRenderingContext2D.drawFocusIfNeeded
+#   - api.CanvasRenderingContext2D.drawImage
+#   - api.CanvasRenderingContext2D.ellipse
+#   - api.CanvasRenderingContext2D.fill
+#   - api.CanvasRenderingContext2D.fillRect
+#   - api.CanvasRenderingContext2D.fillStyle
 #   - api.CanvasRenderingContext2D.fillText
+#   - api.CanvasRenderingContext2D.filter
+#   - api.CanvasRenderingContext2D.font
+#   - api.CanvasRenderingContext2D.fontKerning
+#   - api.CanvasRenderingContext2D.fontStretch
+#   - api.CanvasRenderingContext2D.fontVariantCaps
+#   - api.CanvasRenderingContext2D.getContextAttributes
+#   - api.CanvasRenderingContext2D.getImageData
+#   - api.CanvasRenderingContext2D.getLineDash
+#   - api.CanvasRenderingContext2D.getTransform
+#   - api.CanvasRenderingContext2D.globalAlpha
+#   - api.CanvasRenderingContext2D.globalCompositeOperation
+#   - api.CanvasRenderingContext2D.imageSmoothingEnabled
+#   - api.CanvasRenderingContext2D.imageSmoothingQuality
+#   - api.CanvasRenderingContext2D.isPointInPath
+#   - api.CanvasRenderingContext2D.isPointInStroke
+#   - api.CanvasRenderingContext2D.letterSpacing
+#   - api.CanvasRenderingContext2D.lineCap
+#   - api.CanvasRenderingContext2D.lineDashOffset
+#   - api.CanvasRenderingContext2D.lineJoin
+#   - api.CanvasRenderingContext2D.lineTo
+#   - api.CanvasRenderingContext2D.lineWidth
 #   - api.CanvasRenderingContext2D.measureText
+#   - api.CanvasRenderingContext2D.miterLimit
+#   - api.CanvasRenderingContext2D.moveTo
+#   - api.CanvasRenderingContext2D.putImageData
+#   - api.CanvasRenderingContext2D.quadraticCurveTo
+#   - api.CanvasRenderingContext2D.rect
+#   - api.CanvasRenderingContext2D.resetTransform
+#   - api.CanvasRenderingContext2D.restore
+#   - api.CanvasRenderingContext2D.rotate
+#   - api.CanvasRenderingContext2D.save
+#   - api.CanvasRenderingContext2D.scale
+#   - api.CanvasRenderingContext2D.setLineDash
+#   - api.CanvasRenderingContext2D.setTransform
+#   - api.CanvasRenderingContext2D.shadowBlur
+#   - api.CanvasRenderingContext2D.shadowColor
+#   - api.CanvasRenderingContext2D.shadowOffsetX
+#   - api.CanvasRenderingContext2D.shadowOffsetY
+#   - api.CanvasRenderingContext2D.stroke
+#   - api.CanvasRenderingContext2D.strokeRect
+#   - api.CanvasRenderingContext2D.strokeStyle
 #   - api.CanvasRenderingContext2D.strokeText
 #   - api.CanvasRenderingContext2D.textAlign
 #   - api.CanvasRenderingContext2D.textBaseline
+#   - api.CanvasRenderingContext2D.textRendering
+#   - api.CanvasRenderingContext2D.transform
+#   - api.CanvasRenderingContext2D.translate
+#   - api.CanvasRenderingContext2D.wordSpacing
 #   - api.TextMetrics
+#   - api.TextMetrics.alphabeticBaseline
+#   - api.TextMetrics.hangingBaseline
+#   - api.TextMetrics.ideographicBaseline
 #   - api.TextMetrics.width
+# - Canvas createConicGradient():
+#   - api.CanvasRenderingContext2D.createConicGradient
+#   - api.OffscreenCanvasRenderingContext2D.createConicGradient
 # - contextlost and contextrestored:
 #   - api.CanvasRenderingContext2D.isContextLost
 #   - api.HTMLCanvasElement.contextlost_event
@@ -952,6 +906,10 @@ compat_features:
 #   - api.Element.mouseout_event
 #   - api.Element.mouseover_event
 #   - api.Element.mouseup_event
+# - Clipboard events:
+#   - api.Element.copy_event
+#   - api.Element.cut_event
+#   - api.Element.paste_event
 # - input (event):
 #   - api.Element.input_event
 # - Form-associated custom elements:
@@ -1171,6 +1129,14 @@ compat_features:
 #   - html.elements.canvas
 #   - html.elements.canvas.height
 #   - html.elements.canvas.width
+# - 2D canvas opacity:
+#   - api.HTMLCanvasElement.getContext.2d_context.options_alpha_parameter
+# - Color management for 2D canvas:
+#   - api.HTMLCanvasElement.getContext.2d_context.options_colorSpace_parameter
+# - Desynchronized 2D canvas:
+#   - api.HTMLCanvasElement.getContext.2d_context.options_desynchronized_parameter
+# - willReadFrequently:
+#   - api.HTMLCanvasElement.getContext.2d_context.options_willReadFrequently_parameter
 # - Offscreen canvas:
 #   - api.HTMLCanvasElement.transferControlToOffscreen
 #   - api.OffscreenCanvas
@@ -1252,6 +1218,8 @@ compat_features:
 #   - api.HTMLDetailsElement
 #   - api.HTMLDetailsElement.open
 #   - html.elements.details
+# - Mutually exclusive <details> elements:
+#   - api.HTMLDetailsElement.name
 # - <dialog>:
 #   - api.HTMLDialogElement
 #   - api.HTMLDialogElement.cancel_event
@@ -1279,6 +1247,9 @@ compat_features:
 # - translate attribute:
 #   - api.HTMLElement.translate
 #   - html.global_attributes.translate
+# - writingsuggestions:
+#   - api.HTMLElement.writingSuggestions
+#   - html.global_attributes.writingsuggestions
 # - <embed>:
 #   - api.HTMLEmbedElement
 #   - api.HTMLEmbedElement.getSVGDocument
@@ -1305,6 +1276,37 @@ compat_features:
 #   - html.elements.fieldset.form
 #   - html.elements.fieldset.name
 #   - html.elements.legend
+# - <form>:
+#   - api.HTMLFormElement
+#   - api.HTMLFormElement.acceptCharset
+#   - api.HTMLFormElement.action
+#   - api.HTMLFormElement.autocomplete
+#   - api.HTMLFormElement.elements
+#   - api.HTMLFormElement.encoding
+#   - api.HTMLFormElement.enctype
+#   - api.HTMLFormElement.formdata_event
+#   - api.HTMLFormElement.length
+#   - api.HTMLFormElement.method
+#   - api.HTMLFormElement.name
+#   - api.HTMLFormElement.noValidate
+#   - api.HTMLFormElement.rel
+#   - api.HTMLFormElement.relList
+#   - api.HTMLFormElement.requestSubmit
+#   - api.HTMLFormElement.reset
+#   - api.HTMLFormElement.reset_event
+#   - api.HTMLFormElement.submit
+#   - api.HTMLFormElement.submit_event
+#   - api.HTMLFormElement.target
+#   - html.elements.form
+#   - html.elements.form.accept-charset
+#   - html.elements.form.action
+#   - html.elements.form.autocomplete
+#   - html.elements.form.enctype
+#   - html.elements.form.method
+#   - html.elements.form.name
+#   - html.elements.form.novalidate
+#   - html.elements.form.rel
+#   - html.elements.form.target
 # - <hr>:
 #   - api.HTMLHRElement
 #   - html.elements.hr
@@ -1346,6 +1348,9 @@ compat_features:
 #   - api.HTMLImageElement.loading
 #   - html.elements.iframe.loading
 #   - html.elements.img.loading
+# - srcdoc:
+#   - api.HTMLIFrameElement.srcdoc
+#   - html.elements.iframe.srcdoc
 # - <img>:
 #   - api.HTMLImageElement
 #   - api.HTMLImageElement.Image
@@ -1395,6 +1400,13 @@ compat_features:
 #   - html.elements.ol.start
 #   - html.elements.ol.type
 #   - html.elements.ul
+# - <label>:
+#   - api.HTMLLabelElement
+#   - api.HTMLLabelElement.control
+#   - api.HTMLLabelElement.form
+#   - api.HTMLLabelElement.htmlFor
+#   - html.elements.label
+#   - html.elements.label.for
 # - <link>:
 #   - api.HTMLLinkElement
 #   - api.HTMLLinkElement.as
@@ -1550,6 +1562,9 @@ compat_features:
 #   - api.HTMLMediaElement.fastSeek
 # - preservesPitch:
 #   - api.HTMLMediaElement.preservesPitch
+# - <menu>:
+#   - api.HTMLMenuElement
+#   - html.elements.menu
 # - <meta>:
 #   - api.HTMLMetaElement
 #   - api.HTMLMetaElement.content
@@ -1868,10 +1883,6 @@ compat_features:
 #   - api.UserActivation
 #   - api.UserActivation.hasBeenActive
 #   - api.UserActivation.isActive
-# - Canvas text baselines:
-#   - api.TextMetrics.alphabeticBaseline
-#   - api.TextMetrics.hangingBaseline
-#   - api.TextMetrics.ideographicBaseline
 # - Print events:
 #   - api.Window.afterprint_event
 #   - api.Window.beforeprint_event
@@ -1884,6 +1895,14 @@ compat_features:
 #   - api.structuredClone
 # - :autofill:
 #   - css.selectors.autofill
+# - Media element pseudo-classes:
+#   - css.selectors.buffering
+#   - css.selectors.muted
+#   - css.selectors.paused
+#   - css.selectors.playing
+#   - css.selectors.seeking
+#   - css.selectors.stalled
+#   - css.selectors.volume-locked
 # - :default:
 #   - css.selectors.default
 # - :dir():
@@ -1949,6 +1968,8 @@ compat_features:
 #   - html.elements.rp
 #   - html.elements.rt
 #   - html.elements.ruby
+# - <s>:
+#   - html.elements.s
 # - <samp>:
 #   - html.elements.samp
 # - JavaScript modules:

@@ -1,12 +1,8 @@
-draft_date: 2024-08-12
+draft_date: 2024-09-09
 name: CSS Color Adjustment Module Level 1
 description: TODO
 spec: https://drafts.csswg.org/css-color-adjust-1/
 compat_features:
-  - css.properties.forced-color-adjust
-  - css.properties.forced-color-adjust.auto
-  - css.properties.forced-color-adjust.none
-  - css.properties.forced-color-adjust.preserve-parent-color
   - css.properties.print-color-adjust
   - css.properties.print-color-adjust.economy
   - css.properties.print-color-adjust.exact
@@ -14,3 +10,8 @@ compat_features:
 # The following features in the spec are already part of web-features:
 # - color-scheme:
 #   - css.properties.color-scheme
+# - Forced colors:
+#   - css.properties.forced-color-adjust
+#   - css.properties.forced-color-adjust.auto
+#   - css.properties.forced-color-adjust.none
+#   - css.properties.forced-color-adjust.preserve-parent-color

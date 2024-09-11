@@ -47,7 +47,42 @@ const logger = winston.createLogger({
   transports: new winston.transports.Console(),
 });
 
+let exitStatus = 0;
+
 setLogger(logger);
+
+/**
+ * Check that the installed @mdn/browser-compat-data (BCD) package matches the
+ * one pinned in `package.json`. BCD updates frequently, leading to surprising
+ * error messages if you haven't run `npm install` recently.
+ */
+function checkForStaleCompat(): void {
+  const packageBCDVersionSpecifier: string = (() => {
+    const packageJSON: unknown = JSON.parse(
+      fs.readFileSync(process.env.npm_package_json, {
+        encoding: "utf-8",
+      }),
+    );
+    if (typeof packageJSON === "object" && "devDependencies" in packageJSON) {
+      const bcd = packageJSON.devDependencies["@mdn/browser-compat-data"];
+      if (typeof bcd === "string") {
+        return bcd;
+      }
+      throw new Error(
+        "@mdn/browser-compat-data version not found in package.json",
+      );
+    }
+  })();
+  const installedBCDVersion = compat.version;
+
+  if (!packageBCDVersionSpecifier.includes(installedBCDVersion)) {
+    logger.error(
+      `Installed @mdn/browser-compat-data (${installedBCDVersion}) does not match package.json version (${packageBCDVersionSpecifier})`,
+    );
+    logger.error("Run `npm install` and try again.");
+    process.exit(1);
+  }
+}
 
 /**
  * Update (or create) a dist YAML file from a feature definition YAML file.
@@ -167,7 +202,7 @@ function toDist(sourcePath: string): YAML.Document {
     source.compat_features.sort();
     if (isDeepStrictEqual(source.compat_features, taggedCompatFeatures)) {
       logger.warn(
-        `${id}: compat_features override matches tags in @mdn/browser-compat-data. Consider deleting this override.`,
+        `${id}: compat_features override matches tags in @mdn/browser-compat-data. Consider deleting the compat_features override.`,
       );
     }
   }
@@ -175,7 +210,8 @@ function toDist(sourcePath: string): YAML.Document {
   const compatFeatures = source.compat_features ?? taggedCompatFeatures;
   let computeFrom = compatFeatures;
 
-  if (source.status?.compute_from) {
+  const computeFromWasExplicitlySet = source.status?.compute_from !== undefined;
+  if (computeFromWasExplicitlySet) {
     const compute_from = source.status.compute_from;
     const keys = Array.isArray(compute_from) ? compute_from : [compute_from];
     for (const key of keys) {
@@ -208,7 +244,7 @@ function toDist(sourcePath: string): YAML.Document {
   if (source.status) {
     if (isDeepStrictEqual(source.status, computedStatus)) {
       logger.warn(
-        `${id}: status override matches computed status. Consider deleting this override.`,
+        `${id}: status override matches computed status. Consider deleting the status override.`,
       );
     }
   }
@@ -227,6 +263,15 @@ function toDist(sourcePath: string): YAML.Document {
     }
     if (!added) {
       groups.set(status, [key]);
+    }
+  }
+
+  if (computeFromWasExplicitlySet) {
+    if (groups.size === 1) {
+      logger.error(
+        `${id}: uses compute_from which must not be used when the overall status does not differ from the per-key statuses. Delete the status override.`,
+      );
+      exitStatus = 1;
     }
   }
 
@@ -313,7 +358,7 @@ function main() {
     if (fs.statSync(fileOrDirectory).isDirectory()) {
       return new fdir()
         .withBasePath()
-        .filter((fp) => fp.endsWith(".yml"))
+        .filter((fp) => fp.endsWith(".yml") || fp.endsWith(".yml.dist"))
         .crawl(fileOrDirectory)
         .sync();
     }
@@ -356,7 +401,7 @@ function main() {
       }
     }
     if (updateNeeded) {
-      process.exit(1);
+      exitStatus = 1;
     }
   } else {
     // Update dist in place.
@@ -367,5 +412,7 @@ function main() {
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  checkForStaleCompat();
   main();
+  process.exit(exitStatus);
 }
