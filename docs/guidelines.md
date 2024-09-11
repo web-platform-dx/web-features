@@ -89,6 +89,15 @@ Follow the general writing guidelines in this section, but see the [word and phr
 * Enclose literal code, such as CSS property names, interface and method names, or other syntax, in backticks.
   For example, prefer ```The `addEventListener()` method…``` and avoid ```The addEventListener() method…```.
 
+* To aid search, include literal text that a web developer would inevitably type if they were to invoke the feature.
+  If there's no essential entry point to the feature, then include only concise snippets of essential literal code instead.
+  Never use made-up, idiosyncratic, or non-literal example code.
+
+  * 👍 Recommended: `display: flex`, `fetch()`, etc.
+  * 👎 Not recommended: `(await navigator.serviceWorker.ready).sync`
+  * 👍 Recommended: "`margin-top`, `margin-right`, `margin-bottom`, and `margin-left`"
+  * 👎 Not recommended: `margin-{top,right,bottom,left}`
+
 * Start descriptions with words that are distinct to the feature.
   For example, prefer "The `some-prop` CSS property…" and avoid "The CSS property `some-prop`…."
 
