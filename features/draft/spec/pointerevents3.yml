@@ -1,4 +1,4 @@
-draft_date: 2024-08-12
+draft_date: 2024-09-09
 name: Pointer Events
 description: TODO
 spec: https://w3c.github.io/pointerevents/
@@ -27,6 +27,7 @@ compat_features:
   - api.PointerEvent.getPredictedEvents
   - api.PointerEvent.height
   - api.PointerEvent.isPrimary
+  - api.PointerEvent.persistentDeviceId
   - api.PointerEvent.pointerId
   - api.PointerEvent.pointerType
   - api.PointerEvent.pressure
