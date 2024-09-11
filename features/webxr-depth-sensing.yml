@@ -2,8 +2,6 @@ name: WebXR Depth Sensing
 description: WebXR Depth Sensing provides information about the distance from the user's device to the real-world geometry in the user's environment.
 spec: https://immersive-web.github.io/depth-sensing/
 group: webxr
-status:
-  compute_from: api.XRSession.depthUsage
 compat_features:
   - api.XRSession.depthUsage
   - api.XRSession.depthDataFormat

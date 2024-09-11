@@ -2,8 +2,6 @@ name: WebXR Hand Input
 description: Exposes a fully-articulated hand model as an `XRInputSource` for hand-tracking use during a WebXR session.
 spec: https://immersive-web.github.io/webxr-hand-input/
 group: webxr
-status:
-  compute_from: api.XRHand
 compat_features:
   - api.XRInputSource.hand
   - api.XRHand
