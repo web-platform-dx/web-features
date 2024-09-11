@@ -1,5 +1,5 @@
 name: List style
-description: The `list-style` CSS and the `list-style-image`, `list-style-position`, and `list-style-type` longhands style the marker for a list item which can be selected using the `::marker` pseudoelement.
+description: The `list-style` CSS and the `list-style-image`, `list-style-position`, and `list-style-type` longhands style the marker for a list item.
 spec: https://drafts.csswg.org/css-lists-3/#list-style-property
 group: lists
 status:
@@ -112,5 +112,3 @@ compat_features:
   - css.properties.list-style-type.upper-roman
   - css.properties.list-style-type.urdu
   - css.properties.list-style.symbols
-  - css.selectors.marker
-  - css.selectors.marker.animation_and_transition_support
