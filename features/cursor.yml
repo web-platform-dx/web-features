@@ -3,6 +3,7 @@ description: The `cursor` CSS property styles the pointer, allowing you to provi
 spec: https://drafts.csswg.org/css-ui-4/#cursor
 caniuse:
   - css3-cursors
+  - css3-cursors-grab
   - css3-cursors-newer
 group: css
 # Baseline is delayed by support in Firefox for Android.
@@ -22,7 +23,6 @@ compat_features:
   - css.properties.cursor.grab
   - css.properties.cursor.grabbing
   - css.properties.cursor.help
-  - css.properties.cursor.inherit
   - css.properties.cursor.move
   - css.properties.cursor.n-resize
   - css.properties.cursor.ne-resize
