@@ -1,10 +1,9 @@
-draft_date: 2024-08-28
+draft_date: 2024-09-09
 name: CSS Color Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-color-5/
 compat_features:
   - css.properties.color
-  - css.properties.opacity
   - css.types.color
   - css.types.color.color-contrast
   - css.types.color.color.relative_syntax
@@ -16,6 +15,8 @@ compat_features:
   - svg.global_attributes.opacity
 
 # The following features in the spec are already part of web-features:
+# - opacity:
+#   - css.properties.opacity
 # - color():
 #   - css.types.color.color
 # - color-mix():
