@@ -1,0 +1,10 @@
+name: WebXR Augmented Reality Module
+description: To be written...
+spec: https://immersive-web.github.io/webxr-ar-module/
+group: webxr
+status:
+  compute_from: api.XRSession.environmentBlendMode
+compat_features:
+  - api.XRSession.environmentBlendMode
+  - api.XRSession.interactionMode
+  - api.XRView.isFirstPersonObserver

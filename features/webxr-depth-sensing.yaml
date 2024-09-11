@@ -1,0 +1,21 @@
+name: WebXR Depth Sensing Module
+description: To be written...
+spec: https://immersive-web.github.io/depth-sensing/
+group: webxr
+status:
+  compute_from: api.XRSession.depthUsage
+compat_features:
+  - api.XRSession.depthUsage
+  - api.XRSession.depthDataFormat
+  - api.XRDepthInformation
+  - api.XRDepthInformation.height
+  - api.XRDepthInformation.normDepthBufferFromNormView
+  - api.XRDepthInformation.rawValueToMeters
+  - api.XRDepthInformation.width
+  - api.XRCPUDepthInformation
+  - api.XRCPUDepthInformation.data
+  - api.XRCPUDepthInformation.getDepthInMeters
+  - api.XRFrame.getDepthInformation
+  - api.XRWebGLDepthInformation
+  - api.XRWebGLDepthInformation.texture
+  - api.XRWebGLBinding.getDepthInformation

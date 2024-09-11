@@ -1,0 +1,23 @@
+name: WebXR Hand Input Module
+description: To be written...
+spec: https://immersive-web.github.io/webxr-hand-input/
+group: webxr
+status:
+  compute_from: api.XRHand
+compat_features:
+  - api.XRInputSource.hand
+  - api.XRHand
+  - api.XRHand.entries
+  - api.XRHand.forEach
+  - api.XRHand.get
+  - api.XRHand.keys
+  - api.XRHand.size
+  - api.XRHand.values
+  - api.XRHand.@@iterator
+  - api.XRJointSpace
+  - api.XRJointSpace.jointName
+  - api.XRFrame.fillJointRadii
+  - api.XRFrame.fillPoses
+  - api.XRFrame.getJointPose
+  - api.XRJointPose
+  - api.XRJointPose.radius

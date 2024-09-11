@@ -1,0 +1,25 @@
+name: WebXR Hit Test Module
+description: To be written...
+spec: https://immersive-web.github.io/webxr-hit-test/
+group: webxr
+status:
+  compute_from: api.XRHitTestSource
+compat_features:
+  - api.XRHitTestSource
+  - api.XRHitTestSource.cancel
+  - api.XRTransientInputHitTestSource
+  - api.XRTransientInputHitTestSource.cancel
+  - api.XRHitTestResult
+  - api.XRHitTestResult.getPose
+  - api.XRTransientInputHitTestResult
+  - api.XRTransientInputHitTestResult.inputSource
+  - api.XRTransientInputHitTestResult.results
+  - api.XRSession.requestHitTestSource
+  - api.XRSession.requestHitTestSourceForTransientInput
+  - api.XRFrame.getHitTestResults
+  - api.XRFrame.getHitTestResultsForTransientInput
+  - api.XRRay
+  - api.XRRay.XRRay
+  - api.XRRay.direction
+  - api.XRRay.matrix
+  - api.XRRay.origin

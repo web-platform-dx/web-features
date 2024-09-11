@@ -1,0 +1,12 @@
+name: WebXR Raw Camera Access Module
+description: To be written...
+spec: https://immersive-web.github.io/raw-camera-access/
+group: webxr
+status:
+  compute_from: api.XRCamera
+compat_features:
+  - api.XRCamera
+  - api.XRCamera.width
+  - api.XRCamera.height
+  - api.XRView.camera
+  - api.XRWebGLBinding.getCameraImage

@@ -1,0 +1,19 @@
+name: WebXR Anchors Module
+description: To be written...
+spec: https://immersive-web.github.io/anchors/
+group: webxr
+compat_features:
+  - api.XRAnchor
+  - api.XRAnchor.anchorSpace
+  - api.XRAnchor.delete
+  - api.XRAnchorSet
+  - api.XRAnchorSet.entries
+  - api.XRAnchorSet.forEach
+  - api.XRAnchorSet.has
+  - api.XRAnchorSet.keys
+  - api.XRAnchorSet.size
+  - api.XRAnchorSet.values
+  - api.XRAnchorSet.@@iterator
+  - api.XRFrame.createAnchor
+  - api.XRFrame.trackedAnchors
+  - api.XRHitTestResult.createAnchor
