@@ -1,6 +1,70 @@
 name: Web animations
-description: The web animations API allows you to animate and synchronize the animations of DOM elements.
+description: The web animations JavaScript API allows you to animate and synchronize the animations of DOM elements.
 spec: https://drafts.csswg.org/web-animations-1/
 caniuse: web-animation
+group: animation
 status:
   compute_from: api.Element.animate
+compat_features:
+  - api.Element.animate
+  - api.Animation
+  - api.Animation.Animation
+  - api.Animation.cancel
+  - api.Animation.cancel_event
+  - api.Animation.currentTime
+  - api.Animation.finish
+  - api.Animation.finish_event
+  - api.Animation.id
+  - api.Animation.pause
+  - api.Animation.play
+  - api.Animation.playState
+  - api.Animation.playbackRate
+  - api.Animation.reverse
+  - api.Animation.startTime
+  - api.Animation.effect
+  - api.AnimationEffect
+  - api.AnimationEffect.getComputedTiming
+  - api.AnimationEffect.getTiming
+  - api.AnimationEffect.updateTiming
+  - api.KeyframeEffect
+  - api.KeyframeEffect.KeyframeEffect
+  - api.KeyframeEffect.target
+  - api.Animation.pending
+  - api.Animation.updatePlaybackRate
+  - api.Animation.finished
+  - api.Animation.ready
+  - api.AnimationPlaybackEvent
+  - api.AnimationPlaybackEvent.AnimationPlaybackEvent
+  - api.AnimationPlaybackEvent.currentTime
+  - api.AnimationPlaybackEvent.timelineTime
+  - api.KeyframeEffect.getKeyframes
+  - api.KeyframeEffect.setKeyframes
+  - api.Animation.commitStyles
+  - api.Animation.persist
+  - api.Animation.remove_event
+  - api.Animation.replaceState
+  - api.Animation.timeline
+  - api.AnimationTimeline
+  - api.AnimationTimeline.currentTime
+  - api.Document.timeline
+  - api.DocumentTimeline
+  - api.DocumentTimeline.DocumentTimeline
+  - api.Document.getAnimations
+  - api.KeyframeEffect.pseudoElement
+  - api.KeyframeEffect.composite
+  - api.KeyframeEffect.iterationComposite
+  - api.Animation.remove_filling_animation
+  - api.Element.animate.implicit_tofrom
+  - api.Element.animate.options_composite_parameter
+  - api.Element.animate.options_id_parameter
+  - api.Element.animate.options_iterationComposite_parameter
+  - api.Element.animate.options_pseudoElement_parameter
+  - api.Element.animate.options_rangeEnd_parameter
+  - api.Element.animate.options_rangeStart_parameter
+  - api.Element.animate.options_timeline_parameter
+  - api.Element.animationend_event
+  - api.Element.animationiteration_event
+  - api.Element.animationstart_event
+  - api.Element.animationcancel_event
+  - api.Element.getAnimations
+  - api.ShadowRoot.getAnimations

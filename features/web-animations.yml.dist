@@ -14,6 +14,21 @@ status:
     safari: "13.1"
     safari_ios: "13.4"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2019-12-17
+  # baseline_high_date: 2022-06-17
+  # support:
+  #   chrome: "79"
+  #   chrome_android: "79"
+  #   edge: "18"
+  #   firefox: "51"
+  #   firefox_android: "51"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - api.Element.animationend_event
+  - api.Element.animationiteration_event
+  - api.Element.animationstart_event
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-03-24
@@ -27,6 +42,19 @@ compat_features:
   #   safari: "13.1"
   #   safari_ios: "13.4"
   - api.Element.animate
+
+  # baseline: high
+  # baseline_low_date: 2020-03-24
+  # baseline_high_date: 2022-09-24
+  # support:
+  #   chrome: "50"
+  #   chrome_android: "50"
+  #   edge: "79"
+  #   firefox: "48"
+  #   firefox_android: "48"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.Element.animate.options_id_parameter
 
   # baseline: high
   # baseline_low_date: 2020-03-24
@@ -134,6 +162,7 @@ compat_features:
   - api.Animation.commitStyles
   - api.Animation.persist
   - api.Animation.remove_event
+  - api.Animation.remove_filling_animation
   - api.Animation.replaceState
   - api.Animation.timeline
   - api.AnimationTimeline
@@ -141,6 +170,7 @@ compat_features:
   - api.Document.timeline
   - api.DocumentTimeline
   - api.DocumentTimeline.DocumentTimeline
+  - api.Element.getAnimations
 
   # baseline: high
   # baseline_low_date: 2020-09-16
@@ -154,7 +184,9 @@ compat_features:
   #   safari: "14"
   #   safari_ios: "14"
   - api.Document.getAnimations
+  - api.Element.animate.options_pseudoElement_parameter
   - api.KeyframeEffect.pseudoElement
+  - api.ShadowRoot.getAnimations
 
   # baseline: low
   # baseline_low_date: 2022-09-12
@@ -166,7 +198,34 @@ compat_features:
   #   firefox_android: "80"
   #   safari: "16"
   #   safari_ios: "16"
+  - api.Element.animate.options_composite_parameter
   - api.KeyframeEffect.composite
+
+  # baseline: false
+  # support:
+  #   chrome: "84"
+  #   chrome_android: "84"
+  #   edge: "84"
+  #   firefox: "75"
+  #   firefox_android: "79"
+  - api.Element.animate.implicit_tofrom
+
+  # baseline: false
+  # support:
+  #   chrome: "85"
+  #   chrome_android: "85"
+  #   edge: "85"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - api.Element.animate.options_timeline_parameter
+
+  # baseline: false
+  # support:
+  #   firefox: "54"
+  #   firefox_android: "54"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.Element.animationcancel_event
 
   # baseline: false
   # support:
@@ -175,3 +234,17 @@ compat_features:
   #   safari: "16.4"
   #   safari_ios: "16.4"
   - api.KeyframeEffect.iterationComposite
+
+  # baseline: false
+  # support:
+  #   chrome: "115"
+  #   chrome_android: "115"
+  #   edge: "115"
+  - api.Element.animate.options_rangeEnd_parameter
+  - api.Element.animate.options_rangeStart_parameter
+
+  # baseline: false
+  # support:
+  #   firefox: "80"
+  #   firefox_android: "80"
+  - api.Element.animate.options_iterationComposite_parameter
