@@ -1,5 +1,5 @@
 name: Window Controls Overlay
-description: The Window Controls Overlay API displays content in the title bar area of a progressive web app that is installed on desktop and has `display_override:\ window-controls-overlay` in the manifest.
+description: The `display_override:\ ["window-controls-overlay"]` web application manifest member shows content in the title bar area of a progressive web app that is installed on a desktop device.
 spec: https://wicg.github.io/window-controls-overlay/
 group: progressive-web-app
 compat_features:
@@ -16,3 +16,4 @@ compat_features:
   - css.properties.custom-property.env.titlebar-area-width
   - css.properties.custom-property.env.titlebar-area-x
   - css.properties.custom-property.env.titlebar-area-y
+  - html.manifest.display_override.window-controls-overlay
