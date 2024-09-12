@@ -5,8 +5,10 @@ caniuse: svg-smil
 group:
   - animation
   - svg
+# Most features are quite old, but only became baseline when Edge adopted Chromium.
 status:
-  compute_from: svg.global_attributes.class.animation_support
+  compute_from: api.SVGAnimateElement
+
 compat_features:
   - api.SVGAnimateColorElement
   - api.SVGAnimateElement
