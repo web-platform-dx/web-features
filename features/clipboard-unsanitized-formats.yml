@@ -1,5 +1,5 @@
-name: Read unsanitized clipboard data
-description: The optional `formats.unsanitized` parameter of the `navigator.clipboard.read()` method reads unsanitized data from the system clipboard.
+name: Read unsanitized HTML clipboard data
+description: The optional `formats.unsanitized` parameter of the `navigator.clipboard.read()` method reads unsanitized text/html data from the system clipboard.
 spec: https://w3c.github.io/clipboard-apis/#dom-clipboardunsanitizedformats-unsanitized
 group: clipboard
 compat_features:
