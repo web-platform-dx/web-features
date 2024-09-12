@@ -1,11 +1,20 @@
 name: Speech synthesis
 description: The `SpeechSynthesis` API converts text to speech with artificial voices.
-spec: https://wicg.github.io/speech-api/#tts-section
+spec: https://wicg.github.io/speech-api/
 group: speech
 caniuse: speech-synthesis
 status:
   compute_from: api.SpeechSynthesis
 compat_features:
+  - api.SpeechGrammar
+  - api.SpeechGrammar.src
+  - api.SpeechGrammar.weight
+  - api.SpeechGrammarList
+  - api.SpeechGrammarList.SpeechGrammarList
+  - api.SpeechGrammarList.addFromString
+  - api.SpeechGrammarList.addFromURI
+  - api.SpeechGrammarList.item
+  - api.SpeechGrammarList.length
   - api.SpeechSynthesis
   - api.SpeechSynthesis.cancel
   - api.SpeechSynthesis.getVoices
