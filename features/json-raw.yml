@@ -1,5 +1,5 @@
 name: JSON source text access
-description: The JSON source text access API is the `JSON.rawJSON` static method, `JSON.isRawJSON()` static method, a source context parameter for the `JSON.parse()` reviver callback, and `rawJSON` value handling in `JSON.stringify()`. You can use this API for lossless serialization.
+description: The `rawJSON` value handling in `JSON.stringify()` and the source context parameter for the `JSON.parse()` reviver callback serialize and parse JSON in a lossless way.
 group: json
 spec: https://tc39.es/proposal-json-parse-with-source/#sec-json-object
 compat_features:
