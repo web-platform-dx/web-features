@@ -132,15 +132,3 @@ compat_features:
   #   safari: "7"
   #   safari_ios: "7"
   - api.SpeechSynthesisUtterance.boundary_event
-
-  # baseline: false
-  # support: {}
-  - api.SpeechGrammar
-  - api.SpeechGrammar.src
-  - api.SpeechGrammar.weight
-  - api.SpeechGrammarList
-  - api.SpeechGrammarList.SpeechGrammarList
-  - api.SpeechGrammarList.addFromString
-  - api.SpeechGrammarList.addFromURI
-  - api.SpeechGrammarList.item
-  - api.SpeechGrammarList.length
