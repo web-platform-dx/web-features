@@ -1,4 +1,4 @@
-draft_date: 2024-08-28
+draft_date: 2024-09-09
 name: Media Queries Level 5
 description: TODO
 spec: https://drafts.csswg.org/mediaqueries-5/
@@ -13,7 +13,6 @@ compat_features:
   - css.at-rules.media.display-mode
   - css.at-rules.media.display-mode.picture-in-picture
   - css.at-rules.media.dynamic-range
-  - css.at-rules.media.forced-colors
   - css.at-rules.media.grid
   - css.at-rules.media.height
   - css.at-rules.media.hover
@@ -35,5 +34,7 @@ compat_features:
   - css.types.ratio
 
 # The following features in the spec are already part of web-features:
+# - Forced colors:
+#   - css.at-rules.media.forced-colors
 # - prefers-color-scheme:
 #   - css.at-rules.media.prefers-color-scheme
