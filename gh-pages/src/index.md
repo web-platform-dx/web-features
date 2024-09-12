@@ -21,7 +21,7 @@ Baseline is calculated using the following core browser set:
 
 ## How do I find the Baseline status of a feature?
 
-You can find at-a-glance Baseline statuses on [Can I Use](https://caniuse.com/) feature entries, [MDN Web Docs](https://developer.mozilla.org/) reference pages, and [webstatus.dev](https://webstatus.dev). See [Baseline in the wild](/baseline-in-the-wild/) for more examples.
+You can find at-a-glance Baseline statuses on [Can I Use](https://caniuse.com/) feature entries, and [MDN Web Docs](https://developer.mozilla.org/) reference pages. See [Baseline in the wild](/baseline-in-the-wild/) for more examples.
 
 You can [use Baseline on your site](/use-baseline/) too.
 
