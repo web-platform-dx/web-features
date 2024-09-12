@@ -12,6 +12,7 @@ updates:
     directory: packages/web-features
     schedule:
       interval: daily
+    versioning-strategy: increase
   - package-ecosystem: npm
     directory: packages/compute-baseline
     schedule:
