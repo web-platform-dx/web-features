@@ -1,6 +1,7 @@
 name: Relative colors
 description: "The `from` keyword for color functions (`color()`, `hsl()`, `oklch()`, etc.) creates a new color based on a given color by modifying the values of the input color. Also known as relative color syntax (RCS)."
 spec: https://drafts.csswg.org/css-color-5/#relative-colors
+group: css
 caniuse: css-relative-colors
 # TODO: Revisit when this has shipped in Firefox if we should retroactively
 # claim partial support in Chrome and Safari for some versions. If so, also make
@@ -20,3 +21,5 @@ compat_features:
   # Seemingly incorrect notes, see
   # https://github.com/mdn/browser-compat-data/pull/22960
   # - css.types.color.rgb.relative_syntax
+  # calc.color_component is tagged as `web-features:calc`, but should be moved here instead.
+  #- css.types.calc.color_component

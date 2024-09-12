@@ -1,4 +1,4 @@
-draft_date: 2024-08-28
+draft_date: 2024-09-09
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -93,8 +93,6 @@ compat_features:
   - api.Element.auxclick_event
   - api.Element.beforematch_event
   - api.Element.blur_event
-  - api.Element.copy_event
-  - api.Element.cut_event
   - api.Element.focus_event
   - api.Element.getHTML
   - api.Element.innerHTML
@@ -102,7 +100,6 @@ compat_features:
   - api.Element.keydown_event
   - api.Element.keyup_event
   - api.Element.outerHTML
-  - api.Element.paste_event
   - api.Element.scroll_event
   - api.Element.securitypolicyviolation_event
   - api.Element.wheel_event
@@ -909,6 +906,10 @@ compat_features:
 #   - api.Element.mouseout_event
 #   - api.Element.mouseover_event
 #   - api.Element.mouseup_event
+# - Clipboard events:
+#   - api.Element.copy_event
+#   - api.Element.cut_event
+#   - api.Element.paste_event
 # - input (event):
 #   - api.Element.input_event
 # - Form-associated custom elements:
@@ -1217,6 +1218,8 @@ compat_features:
 #   - api.HTMLDetailsElement
 #   - api.HTMLDetailsElement.open
 #   - html.elements.details
+# - Mutually exclusive <details> elements:
+#   - api.HTMLDetailsElement.name
 # - <dialog>:
 #   - api.HTMLDialogElement
 #   - api.HTMLDialogElement.cancel_event
