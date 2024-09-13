@@ -7,12 +7,25 @@
 
 These are the steps to publish a regular release on NPM and as a GitHub release:
 
-1. Determine if it should be a major, minor, or patch release. The "[major version required][major-version]" and "[minor version required][minor-version]" labels should be used to support this decision.
+1. Determine if it should be a major, minor, or patch release.
+
+   A major version is required for releases when:
+
+   - Previously valid references are invalid (for example, a group ID is renamed or a feature ID is removed)
+   - Types have incompatibly narrowed, widened, or otherwise changed (for example, a string value now accepts an array of strings or an ID has become a URL)
+
+   A minor version is required for releases that contain only additions, such as new feature or new properties on existing types.
+
+   Patch versions are required for releases that contain only routine data changes, such as updates to `compat_features` arrays or `support` objects.
+
+   Changes to `data.schema.json` often indicates a major or minor version is required.
+   The "[major version required][major-version]" and "[minor version required][minor-version]" labels should be used to support this decision.
+
 1. Update `packages/web-features/package.json` and `packages/web-features/package-lock.json` in a PR and get review.
 1. Merge the PR and draft a new release at https://github.com/web-platform-dx/web-features/releases/new.
 1. Fill in the tag name `vX.Y.Z` manually as both the tag and release title.
-1. For major releases, add a `## Breaking Changes` section up top.
-1. For minor releases, add a `## What's New` section up top.
+1. For minor releases, add a `## What's New` section to the top of the release notes, before all other sections.
+1. For major releases, add a `## Breaking Changes` section to the top of the release notes, before all other sections.
 1. Click **Generate release notes**.
 1. In the release description, find unescaped `<` characters and make sure that HTML elements are enclosed with backticks.
 
