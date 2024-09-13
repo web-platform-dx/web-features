@@ -2,3 +2,12 @@ name: Cascade layers
 description: The `@layer` CSS at-rule avoids specificity conflicts by providing priority levels for different groups of CSS rules, such as low-priority styles like resets, and high-priority styles like UI components.
 spec: https://drafts.csswg.org/css-cascade-5/#layering
 caniuse: css-cascade-layers
+compat_features:
+  - api.CSSImportRule.layerName
+  - api.CSSLayerBlockRule
+  - api.CSSLayerBlockRule.name
+  - api.CSSLayerStatementRule
+  - api.CSSLayerStatementRule.nameList
+  - css.at-rules.import.layer
+  - css.at-rules.layer
+  - css.types.global_keywords.revert-layer
