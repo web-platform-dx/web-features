@@ -358,7 +358,7 @@ function main() {
     if (fs.statSync(fileOrDirectory).isDirectory()) {
       return new fdir()
         .withBasePath()
-        .filter((fp) => fp.endsWith(".yml") || fp.endsWith(".yml.dist"))
+        .filter((fp) => !(fp.endsWith(".md") || fp.endsWith(".DS_Store")))
         .crawl(fileOrDirectory)
         .sync();
     }
@@ -369,6 +369,11 @@ function main() {
   const sourceToDist = new Map<string, string>(
     filePaths.map((filePath: string) => {
       const ext = path.extname(filePath);
+      if (ext === ".yaml") {
+        throw new Error(
+          `YAML files must use .yml extension; ${filePath} has invalid extension`,
+        );
+      }
       if (![".dist", ".yml"].includes(ext)) {
         throw new Error(
           `Cannot generate dist for ${filePath}, only YAML input is supported`,
