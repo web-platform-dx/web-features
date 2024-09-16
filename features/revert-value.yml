@@ -1,0 +1,6 @@
+name: revert
+description: The `revert` keyword can be applied to any CSS property, resetting that property to the previous default, provided by either the user or browser stylesheets. For example, setting `display:revert` on a `<div>` will likely result in `display:block`, the browser default style. This is often confused with `initial` which provides the specified initial value of a property, regardless of the element.
+spec: https://www.w3.org/TR/css-cascade/#default
+caniuse: css-revert-value
+compat_features:
+  - css.types.global_keywords.revert

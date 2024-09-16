@@ -1,0 +1,6 @@
+name: all
+description: The `all` CSS property is a shorthand for resetting all CSS properties, except for `direction` and `unicode-bidi`. Only the global CSS keywords for explicit defaulting (`initial`, `inherit`, etc.) are allowed here, since they are the only values supported on all CSS properties.
+spec: https://drafts.csswg.org/css-cascade-6/
+caniuse: css-all
+compat_features:
+  - css.properties.all

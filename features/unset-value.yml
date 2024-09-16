@@ -1,0 +1,6 @@
+name: unset
+description: The `unset` keyword can be applied to any CSS property, removing any values previously declared by the author, user, or browser. For inherited properties (like `color`) the property will inherit the parent value, while non-inherited properties (like `display`) will default to the specification-defined initial value for that property (`inline`). In order to fallback to the browser default styles instead, authors can use `revert` or `revert-layer`.
+spec: https://www.w3.org/TR/css-cascade/#inherit-initial
+caniuse: css-unset-value
+compat_features:
+  - css.types.global_keywords.unset
