@@ -1,5 +1,5 @@
 name: initial
-description: The `initial` keyword can be applied to any CSS property, resetting that property to its initial value as defined by the specification. For example, the `initial` value of the `display` property is `inline`, regardless of the element being styled. This is often confused with `revert` which will provide the user or browser default style, specific to the element.
+description: The `initial` keyword resets any CSS property to its initial value as defined by the spec. For example, the `initial` value of the `display` property is `inline`, regardless of the element being styled. This is often confused with `revert` which will provide the user or browser default style.
 spec: https://www.w3.org/TR/css-cascade/#initial
 caniuse: css-initial-value
 compat_features:
