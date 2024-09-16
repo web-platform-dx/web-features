@@ -172,13 +172,22 @@ async function main() {
       }
     }
 
-    // If all features are already part of web-features, skip this spec.
+    const id = formatIdentifier(spec.shortname);
+    const destination = `features/draft/spec/${id}.yml`;
+
+    // If all features are already part of web-features
     if (compatFeatures.size === 0) {
+      try {
+        const dist = `${destination}.dist`;
+        await fs.rm(destination);
+        logger.warn(`${destination}: deleted`);
+        await fs.rm(dist);
+        logger.warn(`${dist}: deleted`);
+      } catch (err) {
+        // If deleting fails, it probably didn't exist in the first place
+      }
       continue;
     }
-
-    // Write out draft feature per spec.
-    const id = formatIdentifier(spec.shortname);
 
     const feature = new Document({
       draft_date: new Date().toISOString().substring(0, 10),
@@ -197,7 +206,6 @@ async function main() {
       feature.comment = usedFeaturesComment.trimEnd();
     }
 
-    const destination = `features/draft/spec/${id}.yml`;
     const proposedFile = feature.toString();
 
     let originalFile: string;
