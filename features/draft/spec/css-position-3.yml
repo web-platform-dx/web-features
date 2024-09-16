@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-09-16
 name: CSS Positioned Layout Module Level 3
 description: TODO
 spec: https://drafts.csswg.org/css-position-3/
@@ -14,8 +14,6 @@ compat_features:
   - css.properties.inset.auto
   - css.properties.left
   - css.properties.left.auto
-  - css.properties.overlay.auto
-  - css.properties.overlay.none
   - css.properties.position
   - css.properties.position.absolute
   - css.properties.position.fixed
@@ -30,5 +28,7 @@ compat_features:
 # The following features in the spec are already part of web-features:
 # - overlay:
 #   - css.properties.overlay
+#   - css.properties.overlay.auto
+#   - css.properties.overlay.none
 # - Sticky positioning:
 #   - css.properties.position.sticky

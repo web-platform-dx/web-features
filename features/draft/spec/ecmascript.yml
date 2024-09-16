@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-09-16
 name: ECMAScript Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
@@ -62,15 +62,6 @@ compat_features:
   - javascript.builtins.EvalError
   - javascript.builtins.EvalError.EvalError
   - javascript.builtins.Float16Array.Float16Array
-  - javascript.builtins.Function
-  - javascript.builtins.Function.@@hasInstance
-  - javascript.builtins.Function.Function
-  - javascript.builtins.Function.apply
-  - javascript.builtins.Function.bind
-  - javascript.builtins.Function.call
-  - javascript.builtins.Function.length
-  - javascript.builtins.Function.name
-  - javascript.builtins.Function.toString
   - javascript.builtins.Generator
   - javascript.builtins.Generator.next
   - javascript.builtins.Generator.return
@@ -162,16 +153,6 @@ compat_features:
   - javascript.classes.public_class_fields
   - javascript.classes.static_class_fields
   - javascript.classes.static_initialization_blocks
-  - javascript.functions
-  - javascript.functions.arguments
-  - javascript.functions.arguments.@@iterator
-  - javascript.functions.arguments.length
-  - javascript.functions.arrow_functions
-  - javascript.functions.default_parameters
-  - javascript.functions.get
-  - javascript.functions.method_definitions
-  - javascript.functions.rest_parameters
-  - javascript.functions.set
   - javascript.grammar.boolean_literals
   - javascript.grammar.hashbang_comments
   - javascript.grammar.hexadecimal_escape_sequences
@@ -204,7 +185,6 @@ compat_features:
   - javascript.operators.equality
   - javascript.operators.exponentiation
   - javascript.operators.exponentiation_assignment
-  - javascript.operators.function
   - javascript.operators.generator_function
   - javascript.operators.greater_than
   - javascript.operators.greater_than_or_equal
@@ -268,7 +248,6 @@ compat_features:
   - javascript.statements.for_await_of
   - javascript.statements.for_in
   - javascript.statements.for_of
-  - javascript.statements.function
   - javascript.statements.generator_function
   - javascript.statements.if_else
   - javascript.statements.label
@@ -511,6 +490,28 @@ compat_features:
 #   - javascript.builtins.Uint8Array.Uint8Array
 #   - javascript.builtins.Uint8ClampedArray
 #   - javascript.builtins.Uint8ClampedArray.Uint8ClampedArray
+# - Functions:
+#   - javascript.builtins.Function
+#   - javascript.builtins.Function.@@hasInstance
+#   - javascript.builtins.Function.Function
+#   - javascript.builtins.Function.apply
+#   - javascript.builtins.Function.bind
+#   - javascript.builtins.Function.call
+#   - javascript.builtins.Function.length
+#   - javascript.builtins.Function.name
+#   - javascript.builtins.Function.toString
+#   - javascript.functions
+#   - javascript.functions.arguments
+#   - javascript.functions.arguments.@@iterator
+#   - javascript.functions.arguments.length
+#   - javascript.functions.arrow_functions
+#   - javascript.functions.default_parameters
+#   - javascript.functions.get
+#   - javascript.functions.method_definitions
+#   - javascript.functions.rest_parameters
+#   - javascript.functions.set
+#   - javascript.operators.function
+#   - javascript.statements.function
 # - Math and numbers:
 #   - javascript.builtins.Infinity
 #   - javascript.builtins.Math

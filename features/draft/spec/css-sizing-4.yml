@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-09-16
 name: CSS Box Sizing Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-sizing-4/
@@ -9,11 +9,6 @@ compat_features:
   - css.properties.box-sizing.border-box
   - css.properties.box-sizing.content-box
   - css.properties.column-width
-  - css.properties.contain-intrinsic-block-size.none
-  - css.properties.contain-intrinsic-height.none
-  - css.properties.contain-intrinsic-inline-size.none
-  - css.properties.contain-intrinsic-size.none
-  - css.properties.contain-intrinsic-width.none
   - css.properties.height
   - css.properties.height.auto
   - css.properties.height.fit-content
@@ -52,10 +47,15 @@ compat_features:
 #   - css.properties.aspect-ratio
 # - contain-intrinsic-size:
 #   - css.properties.contain-intrinsic-block-size
+#   - css.properties.contain-intrinsic-block-size.none
 #   - css.properties.contain-intrinsic-height
+#   - css.properties.contain-intrinsic-height.none
 #   - css.properties.contain-intrinsic-inline-size
+#   - css.properties.contain-intrinsic-inline-size.none
 #   - css.properties.contain-intrinsic-size
+#   - css.properties.contain-intrinsic-size.none
 #   - css.properties.contain-intrinsic-width
+#   - css.properties.contain-intrinsic-width.none
 # - Grid:
 #   - css.properties.grid-template-columns.fit-content
 #   - css.properties.grid-template-rows.fit-content

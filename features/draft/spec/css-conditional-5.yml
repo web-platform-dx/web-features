@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-09-16
 name: CSS Conditional Rules Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-conditional-5/
@@ -11,6 +11,20 @@ compat_features:
   - css.at-rules.media
 
 # The following features in the spec are already part of web-features:
+# - Container queries:
+#   - api.CSSContainerRule
+#   - api.CSSContainerRule.containerName
+#   - api.CSSContainerRule.containerQuery
+#   - css.at-rules.container
+#   - css.properties.container
+#   - css.properties.container-name
+#   - css.properties.container-name.none
+#   - css.properties.container-type
+#   - css.properties.container-type.inline-size
+#   - css.properties.container-type.normal
+#   - css.properties.container-type.size
 # - @supports:
 #   - api.CSSSupportsRule
 #   - css.at-rules.supports
+# - Container style queries:
+#   - css.at-rules.container.style_queries_for_custom_properties

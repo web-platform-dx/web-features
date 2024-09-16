@@ -34,19 +34,6 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: "2"
-  #   safari_ios: "1"
-  - svg.global_attributes.opacity
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
   #   safari: ≤4
   #   safari_ios: ≤3.2
   - svg.global_attributes.lang
@@ -1192,7 +1179,6 @@ compat_features:
   - css.properties.vector-effect
   - css.properties.x
   - css.properties.y
-  - svg.global_attributes.fill-opacity
   - svg.global_attributes.marker-end
   - svg.global_attributes.marker-mid
   - svg.global_attributes.marker-start
@@ -1200,7 +1186,6 @@ compat_features:
   - svg.global_attributes.stroke
   - svg.global_attributes.stroke-dashoffset
   - svg.global_attributes.stroke-miterlimit
-  - svg.global_attributes.stroke-opacity
   - svg.global_attributes.stroke-width
   - svg.global_attributes.text-anchor
   - svg.global_attributes.vector-effect
@@ -1263,18 +1248,6 @@ compat_features:
   - api.SVGImageElement.crossOrigin
   - svg.elements.image.crossorigin
 
-  # baseline: low
-  # baseline_low_date: 2024-03-22
-  # support:
-  #   chrome: "123"
-  #   chrome_android: "123"
-  #   edge: "123"
-  #   firefox: "60"
-  #   firefox_android: "60"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - css.properties.paint-order
-
   # baseline: false
   # support:
   #   chrome: "124"
@@ -1284,16 +1257,6 @@ compat_features:
   #   firefox_android: "111"
   #   safari_ios: "3"
   - svg.elements.ellipse.fill.context-fill
-
-  # baseline: false
-  # support:
-  #   chrome: ≤73
-  #   chrome_android: "73"
-  #   edge: ≤79
-  #   firefox: ≤66
-  #   firefox_android: "66"
-  #   safari: ≤12
-  - svg.global_attributes.paint-order
 
   # baseline: false
   # support:
@@ -1341,6 +1304,15 @@ compat_features:
   #   chrome: ≤80
   #   chrome_android: "80"
   #   edge: ≤80
+  #   firefox: "97"
+  #   firefox_android: "97"
+  - css.properties.d
+
+  # baseline: false
+  # support:
+  #   chrome: ≤80
+  #   chrome_android: "80"
+  #   edge: ≤80
   #   safari: ≤13.1
   #   safari_ios: ≤13.4
   - css.properties.alignment-baseline
@@ -1355,15 +1327,6 @@ compat_features:
   #   safari_ios: ≤13.4
   - css.properties.baseline-shift
   - svg.global_attributes.baseline-shift
-
-  # baseline: false
-  # support:
-  #   chrome: ≤80
-  #   chrome_android: "80"
-  #   edge: ≤80
-  #   firefox: "97"
-  #   firefox_android: "97"
-  - css.properties.d
 
   # baseline: false
   # support:

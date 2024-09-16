@@ -1,10 +1,9 @@
-draft_date: 2024-09-09
+draft_date: 2024-09-16
 name: CSS Fill and Stroke Module Level 3
 description: TODO
 spec: https://drafts.fxtf.org/fill-stroke-3/
 compat_features:
   - css.properties.fill
-  - css.properties.fill-opacity
   - css.properties.fill-rule
   - css.properties.fill-rule.evenodd
   - css.properties.fill-rule.nonzero
@@ -21,5 +20,9 @@ compat_features:
   - css.properties.stroke-linejoin.miter
   - css.properties.stroke-linejoin.round
   - css.properties.stroke-miterlimit
-  - css.properties.stroke-opacity
   - css.properties.stroke-width
+
+# The following features in the spec are already part of web-features:
+# - Opacity (SVG):
+#   - css.properties.fill-opacity
+#   - css.properties.stroke-opacity

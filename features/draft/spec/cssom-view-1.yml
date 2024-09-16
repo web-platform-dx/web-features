@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-09-16
 name: CSSOM View Module
 description: TODO
 spec: https://drafts.csswg.org/cssom-view-1/
@@ -14,11 +14,6 @@ compat_features:
   - api.Document.scroll_event
   - api.Document.scrollingElement
   - api.Element
-  - api.Element.checkVisibility.options_checkOpacity_parameter
-  - api.Element.checkVisibility.options_checkVisibilityCSS_parameter
-  - api.Element.checkVisibility.options_contentVisibilityAuto_parameter
-  - api.Element.checkVisibility.options_opacityProperty_parameter
-  - api.Element.checkVisibility.options_visibilityProperty_parameter
   - api.Element.clientHeight
   - api.Element.clientLeft
   - api.Element.clientTop
@@ -95,6 +90,11 @@ compat_features:
 #   - api.Element.scrollend_event
 # - checkVisibility():
 #   - api.Element.checkVisibility
+#   - api.Element.checkVisibility.options_checkOpacity_parameter
+#   - api.Element.checkVisibility.options_checkVisibilityCSS_parameter
+#   - api.Element.checkVisibility.options_contentVisibilityAuto_parameter
+#   - api.Element.checkVisibility.options_opacityProperty_parameter
+#   - api.Element.checkVisibility.options_visibilityProperty_parameter
 # - scrollIntoView():
 #   - api.Element.scrollIntoView
 # - Mouse events:
