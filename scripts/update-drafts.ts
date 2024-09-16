@@ -1,10 +1,12 @@
 import { Compat } from "compute-baseline/browser-compat-data";
-import fs from "node:fs/promises";
-import fsSync from "node:fs";
+import * as diff from "diff";
 import { fdir } from "fdir";
-import Path from "path";
+import fsSync from "node:fs";
+import fs from "node:fs/promises";
 import { fileURLToPath } from "node:url";
+import Path from "path";
 import webSpecs from "web-specs" assert { type: "json" };
+import winston from "winston";
 import { Document } from "yaml";
 import yargs from "yargs";
 
@@ -22,7 +24,23 @@ const argv = yargs(process.argv.slice(2))
   .option("paths", {
     type: "array",
     describe: "Draft feature files to update",
+  })
+  .option("verbose", {
+    alias: "v",
+    describe: "Show more information about what files are modified",
+    type: "count",
+    default: 0,
+    defaultDescription: "warn",
   }).argv;
+
+const logger = winston.createLogger({
+  level: argv.verbose > 0 ? "debug" : "info",
+  format: winston.format.combine(
+    winston.format.colorize(),
+    winston.format.simple(),
+  ),
+  transports: new winston.transports.Console(),
+});
 
 function* getPages(spec): Generator<string> {
   yield spec.url;
@@ -178,7 +196,49 @@ async function main() {
 
       feature.comment = usedFeaturesComment.trimEnd();
     }
-    await fs.writeFile(`features/draft/spec/${id}.yml`, feature.toString());
+
+    const destination = `features/draft/spec/${id}.yml`;
+    const proposedFile = feature.toString();
+
+    let originalFile: string;
+    try {
+      originalFile = await fs.readFile(destination, { encoding: "utf-8" });
+    } catch (err: unknown) {
+      // If there's no file for this spec already, write a new one immediately.
+      if (typeof err === "object" && "code" in err && err.code === "ENOENT") {
+        await fs.writeFile(destination, proposedFile);
+        logger.info(`${destination}: new spec file added`);
+        continue;
+      }
+      throw err;
+    }
+
+    // If there's a file for this spec already, write updates only if something
+    // other than the `draft_date` changed. Because changes can be comments, we
+    // have to check a diff rather than parsing and comparing values.
+    const changes = diff.diffLines(originalFile, proposedFile);
+
+    // When there are no changes, diffLines returns 1 "change" with nothing
+    // added or removed.
+    const noChanges =
+      changes.length === 1 && !changes[0].added && !changes[0].removed;
+
+    // When there are date-only changes, diffLines returns 3 "changes" (one added, one
+    // removed, the rest with nothing added or removed).
+    const onlyDateChanges =
+      !noChanges &&
+      changes.length === 3 &&
+      changes
+        .filter((change) => change.added || change.removed)
+        .every((change) => change.value.includes("draft_date: "));
+
+    if (noChanges || onlyDateChanges) {
+      logger.debug(`${destination}: no changes, skipped`);
+      continue;
+    }
+
+    await fs.writeFile(destination, proposedFile);
+    logger.info(`${destination}: updated`);
   }
 }
 
