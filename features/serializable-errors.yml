@@ -1,0 +1,12 @@
+name: Serializable errors
+description: "The `DOMException`, `Error`, `EvalError`, `RangeError`, `ReferenceError`, `SyntaxError`, `TypeError`, and `URIError` objects are serializable. You can call `structuredClone()` on an error object or pass it to a worker using `postMessage()`."
+spec: https://webidl.spec.whatwg.org/#idl-DOMException
+compat_features:
+  - api.DOMException.serializable_object
+  - javascript.builtins.Error.serializable_object
+  - javascript.builtins.EvalError.serializable_object
+  - javascript.builtins.RangeError.serializable_object
+  - javascript.builtins.ReferenceError.serializable_object
+  - javascript.builtins.SyntaxError.serializable_object
+  - javascript.builtins.TypeError.serializable_object
+  - javascript.builtins.URIError.serializable_object
