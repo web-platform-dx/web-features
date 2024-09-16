@@ -1,0 +1,5 @@
+name: scripting media query
+description: The `scripting` CSS media query sets styles based on whether scripting such as JavaScript is available. Values are `enabled` if scripting is available, `initial-only` if scripting is only available on page load (for example, printed or server-rendered content), or `none`.
+spec: https://drafts.csswg.org/mediaqueries-5/#scripting
+compat_features:
+  - css.at-rules.media.scripting

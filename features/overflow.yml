@@ -1,0 +1,9 @@
+name: Overflow media queries
+description: The `overflow-block` and `overflow-inline` CSS media queries set styles based on the way a device displays content that's larger than the viewport or page area. For example, a laptop lets users scroll to reveal content, while a printer displays overflowing content on additional pages.
+spec:
+  - https://drafts.csswg.org/mediaqueries-5/#mf-overflow-block
+  - https://drafts.csswg.org/mediaqueries-5/#mf-overflow-inline
+group: media-queries
+compat_features:
+  - css.at-rules.media.overflow-block
+  - css.at-rules.media.overflow-inline

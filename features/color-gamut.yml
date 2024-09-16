@@ -1,0 +1,6 @@
+name: color-gamut media query
+description: The `color-gamut` media query sets styles based on the colors a device can display. Values are `srgb` if the device can display at least sRGB, `p3` if the device can display at least Display P3, and `rec2020` if the device can display at least REC. 2020.
+spec: https://drafts.csswg.org/mediaqueries-5/#color-gamut
+group: media-queries
+compat_features:
+  - css.at-rules.media.color-gamut
