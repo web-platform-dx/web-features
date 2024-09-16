@@ -1,6 +1,5 @@
 name: Serializable errors
-description: "`DOMException`, `Error`, `EvalError`, `RangeError`, `ReferenceError`, `SyntaxError`, `TypeError`, and `URIError` are serializable (structuring cloning is possible). This allows you to pass errors from a worker using `postMessage()`."
-group: javascript
+description: "The `DOMException`, `Error`, `EvalError`, `RangeError`, `ReferenceError`, `SyntaxError`, `TypeError`, and `URIError` objects are serializable. You can call `structuredClone()` on an error object or pass it to a worker using `postMessage()`."
 spec: https://webidl.spec.whatwg.org/#idl-DOMException
 compat_features:
   - api.DOMException.serializable_object
