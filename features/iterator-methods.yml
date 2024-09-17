@@ -1,5 +1,5 @@
 name: Iterator methods
-description: The constructor and the `drop()`, `every()`, `filter()`, `find()`, `flatMap()`, `forEach()`, `from()`, `map()`, `reduce()`, `some()`, `take()` and `toArray()` methods on the `Iterator` object.
+description: The `Iterator` object is an abstract base for objects that implement the iterator protocol. It provides methods common to built-in iterators, such as `filter()`, `find()`, `map()`, and `reduce()`. You can also use the static method `Iterator.from()` to convert an existing iterable into an `Iterator`.
 spec: https://tc39.es/proposal-iterator-helpers/
 group: iterators
 compat_features:
