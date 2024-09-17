@@ -1,0 +1,22 @@
+name: Outlines
+description: The `outline` CSS property sets the color, style, and width of a line around an element, outside of the border. The `outline-offset` CSS property sets the distance from the element's edge to the outline.
+spec: https://drafts.csswg.org/css-ui-4/#outline
+status:
+  # The `outline` shorthand was introduced at a later date.
+  compute_from: css.properties.outline-style
+compat_features:
+  - css.properties.outline-color
+  - css.properties.outline-offset
+  - css.properties.outline-style
+  - css.properties.outline-style.auto
+  - css.properties.outline-style.dashed
+  - css.properties.outline-style.dotted
+  - css.properties.outline-style.double
+  - css.properties.outline-style.groove
+  - css.properties.outline-style.inset
+  - css.properties.outline-style.none
+  - css.properties.outline-style.outset
+  - css.properties.outline-style.ridge
+  - css.properties.outline-style.solid
+  - css.properties.outline-width
+  - css.properties.outline
