@@ -177,14 +177,18 @@ async function main() {
 
     // If all features are already part of web-features
     if (compatFeatures.size === 0) {
+      const dist = `${destination}.dist`;
       try {
-        const dist = `${destination}.dist`;
         await fs.rm(destination);
         logger.warn(`${destination}: deleted`);
+      } catch (error) {
+        logger.debug(`${destination}: deletion failed`);
+      }
+      try {
         await fs.rm(dist);
         logger.warn(`${dist}: deleted`);
-      } catch (err) {
-        // If deleting fails, it probably didn't exist in the first place
+      } catch (error) {
+        logger.debug(`${dist}: deletion failed`);
       }
       continue;
     }
