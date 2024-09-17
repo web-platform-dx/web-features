@@ -1164,19 +1164,6 @@ compat_features:
   - api.EventTarget.addEventListener.options_parameter.options_signal_parameter
 
   # baseline: high
-  # baseline_low_date: 2021-09-20
-  # baseline_high_date: 2024-03-20
-  # support:
-  #   chrome: "93"
-  #   chrome_android: "93"
-  #   edge: "93"
-  #   firefox: "88"
-  #   firefox_android: "88"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - api.AbortSignal.abort_static
-
-  # baseline: high
   # baseline_low_date: 2021-11-02
   # baseline_high_date: 2024-05-02
   # support:
@@ -1201,43 +1188,6 @@ compat_features:
   #   safari: "15"
   #   safari_ios: "15"
   - api.ShadowRoot.delegatesFocus
-
-  # baseline: low
-  # baseline_low_date: 2022-03-14
-  # support:
-  #   chrome: "98"
-  #   chrome_android: "98"
-  #   edge: "98"
-  #   firefox: "97"
-  #   firefox_android: "97"
-  #   safari: "15.4"
-  #   safari_ios: "15.4"
-  - api.AbortSignal.abort_static.reason_parameter
-  - api.AbortSignal.reason
-
-  # baseline: low
-  # baseline_low_date: 2022-04-01
-  # support:
-  #   chrome: "100"
-  #   chrome_android: "100"
-  #   edge: "100"
-  #   firefox: "97"
-  #   firefox_android: "97"
-  #   safari: "15.4"
-  #   safari_ios: "15.4"
-  - api.AbortSignal.throwIfAborted
-
-  # baseline: low
-  # baseline_low_date: 2022-09-12
-  # support:
-  #   chrome: "103"
-  #   chrome_android: "103"
-  #   edge: "103"
-  #   firefox: "100"
-  #   firefox_android: "100"
-  #   safari: "16"
-  #   safari_ios: "16"
-  - api.AbortSignal.timeout_static
 
   # baseline: low
   # baseline_low_date: 2024-04-18

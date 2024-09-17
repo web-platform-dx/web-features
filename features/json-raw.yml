@@ -1,0 +1,8 @@
+name: JSON source text access
+description: To serialize and parse JSON in a lossless way, `JSON.stringify()` handles `rawJSON` values and `JSON.parse()`'s reviver callback takes a source context parameter.
+group: json
+spec: https://tc39.es/proposal-json-parse-with-source/#sec-json-object
+compat_features:
+  - javascript.builtins.JSON.isRawJSON
+  - javascript.builtins.JSON.parse.reviver_parameter_context_argument
+  - javascript.builtins.JSON.rawJSON

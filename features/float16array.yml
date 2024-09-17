@@ -1,0 +1,9 @@
+name: Float16Array
+description: Float16Array is a typed array of 16-bit floating point numbers.
+spec: https://tc39.es/proposal-float16array/
+group: typed-arrays
+compat_features:
+  - javascript.builtins.DataView.getFloat16
+  - javascript.builtins.DataView.setFloat16
+  - javascript.builtins.Float16Array
+  - javascript.builtins.Math.f16round

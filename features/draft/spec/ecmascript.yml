@@ -1,4 +1,4 @@
-draft_date: 2024-08-28
+draft_date: 2024-09-09
 name: ECMAScript Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
@@ -61,10 +61,6 @@ compat_features:
   - javascript.builtins.Error.toString
   - javascript.builtins.EvalError
   - javascript.builtins.EvalError.EvalError
-  - javascript.builtins.FinalizationRegistry
-  - javascript.builtins.FinalizationRegistry.FinalizationRegistry
-  - javascript.builtins.FinalizationRegistry.register
-  - javascript.builtins.FinalizationRegistry.unregister
   - javascript.builtins.Float16Array.Float16Array
   - javascript.builtins.Function
   - javascript.builtins.Function.@@hasInstance
@@ -118,40 +114,10 @@ compat_features:
   - javascript.builtins.Object.valueOf
   - javascript.builtins.Object.values
   - javascript.builtins.Promise.@@species
-  - javascript.builtins.Proxy
-  - javascript.builtins.Proxy.Proxy
-  - javascript.builtins.Proxy.handler.apply
-  - javascript.builtins.Proxy.handler.construct
-  - javascript.builtins.Proxy.handler.defineProperty
-  - javascript.builtins.Proxy.handler.deleteProperty
-  - javascript.builtins.Proxy.handler.get
-  - javascript.builtins.Proxy.handler.getOwnPropertyDescriptor
-  - javascript.builtins.Proxy.handler.getPrototypeOf
-  - javascript.builtins.Proxy.handler.has
-  - javascript.builtins.Proxy.handler.isExtensible
-  - javascript.builtins.Proxy.handler.ownKeys
-  - javascript.builtins.Proxy.handler.preventExtensions
-  - javascript.builtins.Proxy.handler.set
-  - javascript.builtins.Proxy.handler.setPrototypeOf
-  - javascript.builtins.Proxy.revocable
   - javascript.builtins.RangeError
   - javascript.builtins.RangeError.RangeError
   - javascript.builtins.ReferenceError
   - javascript.builtins.ReferenceError.ReferenceError
-  - javascript.builtins.Reflect
-  - javascript.builtins.Reflect.apply
-  - javascript.builtins.Reflect.construct
-  - javascript.builtins.Reflect.defineProperty
-  - javascript.builtins.Reflect.deleteProperty
-  - javascript.builtins.Reflect.get
-  - javascript.builtins.Reflect.getOwnPropertyDescriptor
-  - javascript.builtins.Reflect.getPrototypeOf
-  - javascript.builtins.Reflect.has
-  - javascript.builtins.Reflect.isExtensible
-  - javascript.builtins.Reflect.ownKeys
-  - javascript.builtins.Reflect.preventExtensions
-  - javascript.builtins.Reflect.set
-  - javascript.builtins.Reflect.setPrototypeOf
   - javascript.builtins.Set.@@species
   - javascript.builtins.Symbol
   - javascript.builtins.Symbol.@@toPrimitive
@@ -181,9 +147,6 @@ compat_features:
   - javascript.builtins.TypedArray.@@species
   - javascript.builtins.URIError
   - javascript.builtins.URIError.URIError
-  - javascript.builtins.WeakRef
-  - javascript.builtins.WeakRef.WeakRef
-  - javascript.builtins.WeakRef.deref
   - javascript.builtins.decodeURI
   - javascript.builtins.decodeURIComponent
   - javascript.builtins.encodeURI
@@ -422,6 +385,10 @@ compat_features:
 #   - javascript.builtins.SharedArrayBuffer.grow
 #   - javascript.builtins.SharedArrayBuffer.growable
 #   - javascript.builtins.SharedArrayBuffer.maxByteLength
+# - Transferable ArrayBuffer:
+#   - javascript.builtins.ArrayBuffer.detached
+#   - javascript.builtins.ArrayBuffer.transfer
+#   - javascript.builtins.ArrayBuffer.transferToFixedLength
 # - Async functions:
 #   - javascript.builtins.AsyncFunction
 #   - javascript.builtins.AsyncFunction.AsyncFunction
@@ -503,6 +470,14 @@ compat_features:
 #   - javascript.builtins.Date.toTimeString
 #   - javascript.builtins.Date.toUTCString
 #   - javascript.builtins.Date.valueOf
+# - Weak references:
+#   - javascript.builtins.FinalizationRegistry
+#   - javascript.builtins.FinalizationRegistry.FinalizationRegistry
+#   - javascript.builtins.FinalizationRegistry.register
+#   - javascript.builtins.FinalizationRegistry.unregister
+#   - javascript.builtins.WeakRef
+#   - javascript.builtins.WeakRef.WeakRef
+#   - javascript.builtins.WeakRef.deref
 # - Typed arrays (initial support):
 #   - javascript.builtins.Float32Array
 #   - javascript.builtins.Float32Array.Float32Array
@@ -624,6 +599,9 @@ compat_features:
 #   - javascript.builtins.Map.set
 #   - javascript.builtins.Map.size
 #   - javascript.builtins.Map.values
+# - Array grouping:
+#   - javascript.builtins.Map.groupBy
+#   - javascript.builtins.Object.groupBy
 # - Promise (initial support):
 #   - javascript.builtins.Promise
 #   - javascript.builtins.Promise.Promise
@@ -637,6 +615,39 @@ compat_features:
 #   - javascript.builtins.Promise.allSettled
 # - Promise finally():
 #   - javascript.builtins.Promise.finally
+# - Promise.withResolvers():
+#   - javascript.builtins.Promise.withResolvers
+# - Proxy and Reflect:
+#   - javascript.builtins.Proxy
+#   - javascript.builtins.Proxy.Proxy
+#   - javascript.builtins.Proxy.handler.apply
+#   - javascript.builtins.Proxy.handler.construct
+#   - javascript.builtins.Proxy.handler.defineProperty
+#   - javascript.builtins.Proxy.handler.deleteProperty
+#   - javascript.builtins.Proxy.handler.get
+#   - javascript.builtins.Proxy.handler.getOwnPropertyDescriptor
+#   - javascript.builtins.Proxy.handler.getPrototypeOf
+#   - javascript.builtins.Proxy.handler.has
+#   - javascript.builtins.Proxy.handler.isExtensible
+#   - javascript.builtins.Proxy.handler.ownKeys
+#   - javascript.builtins.Proxy.handler.preventExtensions
+#   - javascript.builtins.Proxy.handler.set
+#   - javascript.builtins.Proxy.handler.setPrototypeOf
+#   - javascript.builtins.Proxy.revocable
+#   - javascript.builtins.Reflect
+#   - javascript.builtins.Reflect.apply
+#   - javascript.builtins.Reflect.construct
+#   - javascript.builtins.Reflect.defineProperty
+#   - javascript.builtins.Reflect.deleteProperty
+#   - javascript.builtins.Reflect.get
+#   - javascript.builtins.Reflect.getOwnPropertyDescriptor
+#   - javascript.builtins.Reflect.getPrototypeOf
+#   - javascript.builtins.Reflect.has
+#   - javascript.builtins.Reflect.isExtensible
+#   - javascript.builtins.Reflect.ownKeys
+#   - javascript.builtins.Reflect.preventExtensions
+#   - javascript.builtins.Reflect.set
+#   - javascript.builtins.Reflect.setPrototypeOf
 # - Regular expressions:
 #   - javascript.builtins.RegExp
 #   - javascript.builtins.RegExp.@@match
