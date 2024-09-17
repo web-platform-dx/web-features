@@ -1,0 +1,11 @@
+name: Page setup
+description: The `@page` rule sets the page-specific dimensions, orientation, and margins for content such as printed documents, ebooks, or slides.
+spec: https://drafts.csswg.org/css-page-3/#at-page-rule
+group: layout
+caniuse: css-paged-media
+compat_features:
+  - css.at-rules.page
+  - css.at-rules.page.page-orientation
+  - css.at-rules.page.size
+  - css.at-rules.page.size.jis-b4
+  - css.at-rules.page.size.jis-b5
