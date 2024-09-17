@@ -1,9 +1,9 @@
 name: Logical properties
-description: The logical CSS properties control borders, size, margin, and padding with directions and dimensions relative to the writing mode. For example, in a left to right, top to bottom writing mode, `block-end` refers to the bottom. Also known as flow relative.
+description: CSS logical properties control borders, size, margin and padding with directions and dimensions relative to the writing mode. For example, in a left to right, top to bottom writing mode, `block-end` refers to the bottom. Also known as flow relative.
 spec: https://drafts.csswg.org/css-logical-1/
 caniuse: css-logical-props
 group: css
-# Picked to match caniuse- clear and float came 2 years later, but don't warrant separate features.
+# Picked to match Caniuse. Clear and float came 2 years later, but don't warrant separate features.
 status:
   compute_from: css.properties.border-end-end-radius
 compat_features:
