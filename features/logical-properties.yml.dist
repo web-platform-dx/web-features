@@ -45,6 +45,16 @@ compat_features:
   #   safari_ios: "12.2"
   - css.properties.block-size.max-content
   - css.properties.block-size.min-content
+  - css.properties.inline-size.max-content
+  - css.properties.inline-size.min-content
+  - css.properties.max-block-size.max-content
+  - css.properties.max-block-size.min-content
+  - css.properties.max-inline-size.max-content
+  - css.properties.max-inline-size.min-content
+  - css.properties.min-block-size.max-content
+  - css.properties.min-block-size.min-content
+  - css.properties.min-inline-size.max-content
+  - css.properties.min-inline-size.min-content
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -173,6 +183,11 @@ compat_features:
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - css.properties.block-size.fit-content
+  - css.properties.inline-size.fit-content
+  - css.properties.max-block-size.fit-content
+  - css.properties.max-inline-size.fit-content
+  - css.properties.min-block-size.fit-content
+  - css.properties.min-inline-size.fit-content
 
   # baseline: low
   # baseline_low_date: 2023-10-13

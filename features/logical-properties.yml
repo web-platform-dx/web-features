@@ -44,6 +44,9 @@ compat_features:
   - css.properties.float.inline-end
   - css.properties.float.inline-start
   - css.properties.inline-size
+  - css.properties.inline-size.fit-content
+  - css.properties.inline-size.max-content
+  - css.properties.inline-size.min-content
   - css.properties.inset
   - css.properties.inset.auto
   - css.properties.inset-block
@@ -65,9 +68,21 @@ compat_features:
   - css.properties.margin-inline-end
   - css.properties.margin-inline-start
   - css.properties.max-block-size
+  - css.properties.max-block-size.fit-content
+  - css.properties.max-block-size.max-content
+  - css.properties.max-block-size.min-content
   - css.properties.max-inline-size
+  - css.properties.max-inline-size.fit-content
+  - css.properties.max-inline-size.max-content
+  - css.properties.max-inline-size.min-content
   - css.properties.min-block-size
+  - css.properties.min-block-size.fit-content
+  - css.properties.min-block-size.max-content
+  - css.properties.min-block-size.min-content
   - css.properties.min-inline-size
+  - css.properties.min-inline-size.fit-content
+  - css.properties.min-inline-size.max-content
+  - css.properties.min-inline-size.min-content
   - css.properties.padding-block
   - css.properties.padding-block-end
   - css.properties.padding-block-start
