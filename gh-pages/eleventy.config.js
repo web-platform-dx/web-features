@@ -6,6 +6,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/img");
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
   eleventyConfig.addPassthroughCopy("./src/assets/css");
+  eleventyConfig.addPassthroughCopy({"../packages/web-features/data.json": "assets/data/data.json"});
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   const mdOpts = {
     html: true,
