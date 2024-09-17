@@ -1,0 +1,23 @@
+{
+  "name": "@web-platform-dx/web-features/site",
+  "private": true,
+  "description": "Exploring the set of interoperable features in the Web Platform",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/web-platform-dx/web-features.git"
+  },
+  "engines": {
+    "node": ">=18.19.0"
+  },
+  "scripts": {
+    "build:dev": "eleventy",
+    "build:prod": "eleventy --pathprefix=web-features",
+    "dev": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.1.0"
+  }
+}
