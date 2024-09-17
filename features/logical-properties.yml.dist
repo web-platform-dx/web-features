@@ -36,6 +36,20 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
+  #   chrome: "57"
+  #   chrome_android: "57"
+  #   edge: "79"
+  #   firefox: "66"
+  #   firefox_android: "66"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - css.properties.block-size.max-content
+  - css.properties.block-size.min-content
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
   #   chrome: "69"
   #   chrome_android: "69"
   #   edge: "79"
@@ -146,6 +160,19 @@ compat_features:
   - css.properties.border-end-start-radius
   - css.properties.border-start-end-radius
   - css.properties.border-start-start-radius
+
+  # baseline: high
+  # baseline_low_date: 2021-11-02
+  # baseline_high_date: 2024-05-02
+  # support:
+  #   chrome: "57"
+  #   chrome_android: "57"
+  #   edge: "79"
+  #   firefox: "94"
+  #   firefox_android: "94"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - css.properties.block-size.fit-content
 
   # baseline: low
   # baseline_low_date: 2023-10-13
