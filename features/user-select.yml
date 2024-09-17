@@ -1,0 +1,16 @@
+name: user-select
+description: The `user-select` CSS property controls which elements can be selected by the user.
+spec: https://drafts.csswg.org/css-ui-4/#content-selection
+caniuse: user-select-none
+group: css
+# compute_from: required because `css.properties.user-select.contain` has no support (except historically in IE)
+# Baseline status may be surprising. It's caused by a prefix in Safari.
+status:
+  compute_from: css.properties.user-select
+compat_features:
+  - css.properties.user-select
+  - css.properties.user-select.all
+  - css.properties.user-select.auto
+  - css.properties.user-select.contain
+  - css.properties.user-select.none
+  - css.properties.user-select.text

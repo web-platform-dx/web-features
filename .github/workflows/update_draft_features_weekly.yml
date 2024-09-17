@@ -3,7 +3,7 @@ name: Update Draft Features
 on:
   # Runs at midnight on Mondays 05:30 UTC, or manually triggered
   schedule:
-    - cron: '30 5 * * 1'
+    - cron: "30 5 * * 1"
   workflow_dispatch:
 
 jobs:
@@ -16,20 +16,21 @@ jobs:
           node-version-file: .node-version
           cache: npm
       - run: npm ci
-      - run: rm features/draft/spec/*.yml features/draft/spec/*.dist
+      - run: git rm features/draft/spec/*.yml features/draft/spec/*.dist
       - run: npm run update-drafts
       - run: npm run dist
-      - name: Commit changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add -A
-          git commit -m "Update draft features weekly" || echo "No changes to commit"
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
         with:
-          commit-message: Update draft features weekly
-          title: "[GitHub Actions] Update draft features weekly"
-          body: "This is an auto-generated PR with draft features by spec updates."
+          add-paths: |
+            features/draft/spec/
+          commit-message: Update draft features
+          title: "Update draft features weekly"
+          body: |
+            This is an auto-generated PR with draft features by spec updates.
+
+            See https://github.com/web-platform-dx/web-features/blob/main/.github/workflows/update_draft_features_weekly.yml for details.
+          labels: |
+            generated
           branch: update-draft-features-${{ github.run_number }}
           delete-branch: true
