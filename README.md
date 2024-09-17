@@ -18,7 +18,7 @@ By creating a common nomenclature for web platform features, `web-features` inte
 To get feature identifiers, Baseline support data, or cross-references to other resources (such as specifications and caniuse), use [the `web-features` npm package](https://www.npmjs.com/package/web-features).
 [Read the package README](./packages/web-features/README.md) for more information.
 
-To contribute to feature identification, definition, Baseline support statuses, or to update the status on MDN, jump to [Contribute](#contribute).
+To contribute to feature identification, definition, Baseline support statuses, or to update the status on MDN, read [`CONTRIBUTING.md`](./docs/CONTRIBUTING.md).
 
 ## Background
 
