@@ -1203,21 +1203,23 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
+  #   firefox: "128"
+  #   firefox_android: "128"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.ShadowRoot.serializable
+
+  # baseline: false
+  # support:
   #   chrome: "1"
   #   chrome_android: "18"
   #   edge: "12"
   #   safari: "1"
   #   safari_ios: "1"
   - api.Range.detach
-
-  # baseline: false
-  # support:
-  #   chrome: "125"
-  #   chrome_android: "125"
-  #   edge: "125"
-  #   firefox: "128"
-  #   firefox_android: "128"
-  - api.ShadowRoot.serializable
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
