@@ -123,8 +123,9 @@ compat_features:
   - api.SubtleCrypto.deriveKey.derivedKeyAlgorithm_option_aes
   - api.SubtleCrypto.deriveKey.derivedKeyAlgorithm_option_hmac
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "92"
   #   chrome_android: "92"
