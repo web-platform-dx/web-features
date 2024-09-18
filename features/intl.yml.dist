@@ -417,8 +417,9 @@ compat_features:
   - javascript.builtins.Intl.DateTimeFormat.formatRange
   - javascript.builtins.Intl.DateTimeFormat.formatRangeToParts
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "95"
   #   chrome_android: "95"
@@ -429,8 +430,9 @@ compat_features:
   #   safari_ios: "15.4"
   - javascript.builtins.Intl.DateTimeFormat.DateTimeFormat.options_parameter.options_timeZoneName_parameter.extended_values
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "99"
   #   chrome_android: "99"
