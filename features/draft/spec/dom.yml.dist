@@ -1201,6 +1201,18 @@ compat_features:
   #   safari_ios: "17.4"
   - api.Element.attachShadow.options_clonable_parameter
 
+  # baseline: low
+  # baseline_low_date: 2024-09-16
+  # support:
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
+  #   firefox: "128"
+  #   firefox_android: "128"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.ShadowRoot.serializable
+
   # baseline: false
   # support:
   #   chrome: "1"
@@ -1209,15 +1221,6 @@ compat_features:
   #   safari: "1"
   #   safari_ios: "1"
   - api.Range.detach
-
-  # baseline: false
-  # support:
-  #   chrome: "125"
-  #   chrome_android: "125"
-  #   edge: "125"
-  #   firefox: "128"
-  #   firefox_android: "128"
-  - api.ShadowRoot.serializable
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
