@@ -60,7 +60,6 @@ compat_features:
   - css.properties.break-before.paged_context
   - css.properties.break-before.paged_context.page
   - css.properties.break-inside
-  - css.properties.break-inside.multicol_context
   - css.properties.break-inside.paged_context
 
   # baseline: high
@@ -91,19 +90,6 @@ compat_features:
   # baseline_low_date: 2021-09-07
   # baseline_high_date: 2024-03-07
   # support:
-  #   chrome: "50"
-  #   chrome_android: "50"
-  #   edge: "12"
-  #   firefox: "92"
-  #   firefox_android: "92"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - css.properties.break-inside.multicol_context.avoid-column
-
-  # baseline: high
-  # baseline_low_date: 2021-09-07
-  # baseline_high_date: 2024-03-07
-  # support:
   #   chrome: ≤80
   #   chrome_android: "80"
   #   edge: ≤80
@@ -111,7 +97,6 @@ compat_features:
   #   firefox_android: "92"
   #   safari: ≤13.1
   #   safari_ios: ≤13.4
-  - css.properties.break-inside.avoid-column
   - css.properties.break-inside.avoid-page
 
   # baseline: false
@@ -139,14 +124,10 @@ compat_features:
   #   edge: ≤80
   #   safari: ≤13.1
   #   safari_ios: ≤13.4
-  - css.properties.break-after.avoid-column
   - css.properties.break-after.avoid-page
-  - css.properties.break-after.column
   - css.properties.break-after.recto
   - css.properties.break-after.verso
-  - css.properties.break-before.avoid-column
   - css.properties.break-before.avoid-page
-  - css.properties.break-before.column
   - css.properties.break-before.recto
   - css.properties.break-before.verso
 
@@ -157,32 +138,6 @@ compat_features:
   #   edge: "12"
   - css.properties.page-break-after.avoid
   - css.properties.page-break-before.avoid
-
-  # baseline: false
-  # support:
-  #   chrome: "50"
-  #   chrome_android: "50"
-  #   edge: "12"
-  - css.properties.break-after.multicol_context
-  - css.properties.break-after.multicol_context.column
-  - css.properties.break-before.multicol_context
-
-  # baseline: false
-  # support:
-  #   chrome: "51"
-  #   chrome_android: "51"
-  #   edge: "12"
-  - css.properties.break-before.multicol_context.column
-
-  # baseline: false
-  # support:
-  #   chrome: "102"
-  #   chrome_android: "102"
-  #   edge: "102"
-  - css.properties.break-after.multicol_context.avoid
-  - css.properties.break-after.multicol_context.avoid-column
-  - css.properties.break-before.multicol_context.avoid
-  - css.properties.break-before.multicol_context.avoid-column
 
   # baseline: false
   # support:
