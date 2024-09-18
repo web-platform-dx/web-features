@@ -13,11 +13,13 @@
   "scripts": {
     "build:dev": "eleventy",
     "build:prod": "eleventy --pathprefix=web-features",
-    "dev": "eleventy --serve"
+    "dev": "eleventy --serve",
+    "clean": "rm -rf ../_site"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "markdown-it": "^14.1.0",
-    "markdown-it-anchor": "^9.1.0"
+    "markdown-it-anchor": "^9.1.0",
+    "web-features": "next"
   }
 }
