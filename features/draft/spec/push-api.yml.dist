@@ -3,7 +3,8 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    safari: "18"
 compat_features:
   # baseline: high
   # baseline_low_date: 2018-04-30
@@ -76,6 +77,14 @@ compat_features:
 
   # baseline: false
   # support:
+  #   firefox: "128"
+  #   firefox_android: "128"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.PushMessageData.bytes
+
+  # baseline: false
+  # support:
   #   safari: "16"
   #   safari_ios: "16.4"
   - api.PushSubscriptionChangeEvent
@@ -87,12 +96,6 @@ compat_features:
   #   safari: "16.1"
   #   safari_ios: "16.4"
   - api.PushSubscriptionChangeEvent.PushSubscriptionChangeEvent
-
-  # baseline: false
-  # support:
-  #   firefox: "128"
-  #   firefox_android: "128"
-  - api.PushMessageData.bytes
 
   # baseline: false
   # support:

@@ -122,12 +122,17 @@ compat_features:
   #   safari_ios: "17.2"
   - css.types.length.rcap
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "129"
+  #   chrome_android: "129"
   - css.properties.interpolate-size
   - css.properties.interpolate-size.allow-keywords
   - css.properties.interpolate-size.numeric-only
   - css.types.calc-size
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
   - css.types.frequency
   - css.types.frequency-percentage
