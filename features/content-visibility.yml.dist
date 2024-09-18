@@ -9,6 +9,8 @@ status:
     edge: "108"
     firefox: "125"
     firefox_android: "125"
+    safari: "18"
+    safari_ios: "18"
 compat_features:
   # baseline: false
   # support:
@@ -17,6 +19,8 @@ compat_features:
   #   edge: "85"
   #   firefox: "125"
   #   firefox_android: "125"
+  #   safari: "18"
+  #   safari_ios: "18"
   - css.properties.content-visibility
 
   # ⬇️ Same status as overall feature ⬇️
@@ -27,6 +31,8 @@ compat_features:
   #   edge: "108"
   #   firefox: "125"
   #   firefox_android: "125"
+  #   safari: "18"
+  #   safari_ios: "18"
   - api.ContentVisibilityAutoStateChangeEvent
   - api.ContentVisibilityAutoStateChangeEvent.ContentVisibilityAutoStateChangeEvent
   - api.ContentVisibilityAutoStateChangeEvent.skipped
