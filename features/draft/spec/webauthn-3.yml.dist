@@ -8,18 +8,6 @@ compat_features:
   # baseline: low
   # baseline_low_date: 2023-10-24
   # support:
-  #   chrome: "74"
-  #   chrome_android: "74"
-  #   edge: "79"
-  #   firefox: "119"
-  #   firefox_android: "119"
-  #   safari: "16"
-  #   safari_ios: "16"
-  - api.AuthenticatorAttestationResponse.getTransports
-
-  # baseline: low
-  # baseline_low_date: 2023-10-24
-  # support:
   #   chrome: "108"
   #   chrome_android: "108"
   #   edge: "108"
@@ -52,11 +40,30 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "113"
+  #   chrome_android: "113"
+  #   edge: "113"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - api.CredentialsContainer.create.publicKey_option.extensions.largeBlob
+
+  # baseline: false
+  # support:
   #   chrome: "89"
   #   chrome_android: "108"
   #   edge: "89"
   #   firefox: "114"
   - api.CredentialsContainer.create.publicKey_option.residentKey
+
+  # baseline: false
+  # support:
+  #   chrome: "129"
+  #   chrome_android: "129"
+  #   firefox: "119"
+  #   firefox_android: "119"
+  - api.PublicKeyCredential.parseCreationOptionsFromJSON_static
+  - api.PublicKeyCredential.parseRequestOptionsFromJSON_static
+  - api.PublicKeyCredential.toJSON
 
   # baseline: false
   # support:
@@ -78,7 +85,6 @@ compat_features:
   #   chrome: "113"
   #   chrome_android: "113"
   #   edge: "113"
-  - api.CredentialsContainer.create.publicKey_option.extensions.largeBlob
   - api.CredentialsContainer.get.publicKey_option.extensions.largeBlob
 
   # baseline: false
@@ -86,11 +92,3 @@ compat_features:
   #   safari: "17.4"
   #   safari_ios: "17.4"
   - api.PublicKeyCredential.getClientCapabilities_static
-
-  # baseline: false
-  # support:
-  #   firefox: "119"
-  #   firefox_android: "119"
-  - api.PublicKeyCredential.parseCreationOptionsFromJSON_static
-  - api.PublicKeyCredential.parseRequestOptionsFromJSON_static
-  - api.PublicKeyCredential.toJSON

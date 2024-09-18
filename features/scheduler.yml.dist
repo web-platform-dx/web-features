@@ -4,10 +4,14 @@
 status:
   baseline: false
   support:
-    chrome: "94"
-    chrome_android: "94"
-    edge: "94"
+    chrome: "129"
+    chrome_android: "129"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "94"
   - api.Scheduler
   - api.Scheduler.postTask
   - api.TaskController
@@ -19,3 +23,10 @@ compat_features:
   - api.TaskSignal
   - api.TaskSignal.priority
   - api.scheduler
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "129"
+  #   chrome_android: "129"
+  - api.Scheduler.yield

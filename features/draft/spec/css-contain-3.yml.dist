@@ -10,8 +10,9 @@ status:
     firefox: "130"
     firefox_android: "130"
 compat_features:
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "52"
   #   chrome_android: "52"
@@ -24,13 +25,16 @@ compat_features:
   - css.properties.contain.none
   - css.properties.contain.strict
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2024-09-16
   # support:
   #   chrome: "85"
   #   chrome_android: "85"
   #   edge: "85"
   #   firefox: "125"
   #   firefox_android: "125"
+  #   safari: "18"
+  #   safari_ios: "18"
   - css.properties.content-visibility.auto
   - css.properties.content-visibility.hidden
   - css.properties.content-visibility.visible
