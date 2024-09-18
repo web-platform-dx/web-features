@@ -3,3 +3,22 @@ description: The `offset` CSS property animates an element along a defined motio
 spec: https://drafts.fxtf.org/motion-1/
 group: css
 caniuse: css-motion-paths
+status:
+  compute_from: css.properties.offset
+compat_features:
+  - css.properties.offset
+  - css.properties.offset-path
+  - css.properties.offset-path.basic_shape
+  - css.properties.offset-path.coord_box
+  - css.properties.offset-path.path
+  - css.properties.offset-path.ray
+  - css.properties.offset-path.url
+  - css.properties.offset-distance
+  - css.properties.offset-rotate
+  - css.properties.offset-rotate.auto
+  - css.properties.offset-rotate.reverse
+  - css.properties.offset-anchor
+  - css.properties.offset-anchor.auto
+  - css.types.ray
+  - css.types.ray.position
+  - css.types.ray.size
