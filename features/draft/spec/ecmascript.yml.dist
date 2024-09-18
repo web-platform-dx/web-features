@@ -29,12 +29,6 @@ compat_features:
   - javascript.builtins.Error.toString
   - javascript.builtins.EvalError
   - javascript.builtins.EvalError.EvalError
-  - javascript.builtins.Function
-  - javascript.builtins.Function.Function
-  - javascript.builtins.Function.apply
-  - javascript.builtins.Function.call
-  - javascript.builtins.Function.length
-  - javascript.builtins.Function.toString
   - javascript.builtins.Object
   - javascript.builtins.Object.Object
   - javascript.builtins.Object.constructor
@@ -54,9 +48,6 @@ compat_features:
   - javascript.builtins.isFinite
   - javascript.builtins.parseFloat
   - javascript.builtins.undefined
-  - javascript.functions
-  - javascript.functions.arguments
-  - javascript.functions.arguments.length
   - javascript.grammar.boolean_literals
   - javascript.grammar.hexadecimal_escape_sequences
   - javascript.grammar.null_literal
@@ -78,7 +69,6 @@ compat_features:
   - javascript.operators.division
   - javascript.operators.division_assignment
   - javascript.operators.equality
-  - javascript.operators.function
   - javascript.operators.greater_than
   - javascript.operators.greater_than_or_equal
   - javascript.operators.grouping
@@ -118,7 +108,6 @@ compat_features:
   - javascript.statements.do_while
   - javascript.statements.for
   - javascript.statements.for_in
-  - javascript.statements.function
   - javascript.statements.if_else
   - javascript.statements.label
   - javascript.statements.return
@@ -176,20 +165,6 @@ compat_features:
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
   # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1.5"
-  #   firefox_android: "4"
-  #   safari: "3"
-  #   safari_ios: "1"
-  - javascript.functions.get
-  - javascript.functions.set
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
   #   chrome: "2"
   #   chrome_android: "18"
   #   edge: "12"
@@ -212,21 +187,6 @@ compat_features:
   #   safari: "5"
   #   safari_ios: "4.2"
   - javascript.statements.empty
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "4"
-  - javascript.builtins.JSON
-  - javascript.builtins.JSON.parse
-  - javascript.builtins.JSON.stringify
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -316,19 +276,6 @@ compat_features:
   - javascript.builtins.ArrayBuffer
   - javascript.builtins.ArrayBuffer.ArrayBuffer
   - javascript.builtins.ArrayBuffer.byteLength
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "7"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "5.1"
-  #   safari_ios: "6"
-  - javascript.builtins.Function.bind
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -462,19 +409,6 @@ compat_features:
   # baseline_low_date: 2015-09-30
   # baseline_high_date: 2018-03-30
   # support:
-  #   chrome: "39"
-  #   chrome_android: "39"
-  #   edge: "12"
-  #   firefox: "34"
-  #   firefox_android: "34"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.functions.method_definitions
-
-  # baseline: high
-  # baseline_low_date: 2015-09-30
-  # baseline_high_date: 2018-03-30
-  # support:
   #   chrome: "40"
   #   chrome_android: "40"
   #   edge: "12"
@@ -565,32 +499,6 @@ compat_features:
   - javascript.operators.class
 
   # baseline: high
-  # baseline_low_date: 2016-07-27
-  # baseline_high_date: 2019-01-27
-  # support:
-  #   chrome: "52"
-  #   chrome_android: "52"
-  #   edge: "12"
-  #   firefox: "46"
-  #   firefox_android: "46"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.functions.arguments.@@iterator
-
-  # baseline: high
-  # baseline_low_date: 2016-08-02
-  # baseline_high_date: 2019-02-02
-  # support:
-  #   chrome: "15"
-  #   chrome_android: "18"
-  #   edge: "14"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - javascript.builtins.Function.name
-
-  # baseline: high
   # baseline_low_date: 2016-08-02
   # baseline_high_date: 2019-02-02
   # support:
@@ -659,50 +567,6 @@ compat_features:
   # baseline_low_date: 2016-09-20
   # baseline_high_date: 2019-03-20
   # support:
-  #   chrome: "39"
-  #   chrome_android: "39"
-  #   edge: "12"
-  #   firefox: "26"
-  #   firefox_android: "26"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.operators.yield
-
-  # baseline: high
-  # baseline_low_date: 2016-09-20
-  # baseline_high_date: 2019-03-20
-  # support:
-  #   chrome: "39"
-  #   chrome_android: "39"
-  #   edge: "12"
-  #   firefox: "27"
-  #   firefox_android: "27"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.operators.yield_star
-
-  # baseline: high
-  # baseline_low_date: 2016-09-20
-  # baseline_high_date: 2019-03-20
-  # support:
-  #   chrome: "39"
-  #   chrome_android: "39"
-  #   edge: "13"
-  #   firefox: "26"
-  #   firefox_android: "26"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.builtins.Generator
-  - javascript.builtins.Generator.next
-  - javascript.builtins.Generator.throw
-  - javascript.builtins.GeneratorFunction
-  - javascript.builtins.GeneratorFunction.GeneratorFunction
-  - javascript.statements.generator_function
-
-  # baseline: high
-  # baseline_low_date: 2016-09-20
-  # baseline_high_date: 2019-03-20
-  # support:
   #   chrome: "43"
   #   chrome_android: "43"
   #   edge: "12"
@@ -716,58 +580,6 @@ compat_features:
   # baseline_low_date: 2016-09-20
   # baseline_high_date: 2019-03-20
   # support:
-  #   chrome: "45"
-  #   chrome_android: "45"
-  #   edge: "12"
-  #   firefox: "22"
-  #   firefox_android: "22"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.functions.arrow_functions
-
-  # baseline: high
-  # baseline_low_date: 2016-09-20
-  # baseline_high_date: 2019-03-20
-  # support:
-  #   chrome: "47"
-  #   chrome_android: "47"
-  #   edge: "12"
-  #   firefox: "15"
-  #   firefox_android: "15"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.functions.rest_parameters
-
-  # baseline: high
-  # baseline_low_date: 2016-09-20
-  # baseline_high_date: 2019-03-20
-  # support:
-  #   chrome: "49"
-  #   chrome_android: "49"
-  #   edge: "12"
-  #   firefox: "26"
-  #   firefox_android: "26"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.operators.generator_function
-
-  # baseline: high
-  # baseline_low_date: 2016-09-20
-  # baseline_high_date: 2019-03-20
-  # support:
-  #   chrome: "49"
-  #   chrome_android: "49"
-  #   edge: "14"
-  #   firefox: "15"
-  #   firefox_android: "15"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.functions.default_parameters
-
-  # baseline: high
-  # baseline_low_date: 2016-09-20
-  # baseline_high_date: 2019-03-20
-  # support:
   #   chrome: "49"
   #   chrome_android: "49"
   #   edge: "14"
@@ -776,19 +588,6 @@ compat_features:
   #   safari: "10"
   #   safari_ios: "10"
   - javascript.statements.let
-
-  # baseline: high
-  # baseline_low_date: 2016-09-20
-  # baseline_high_date: 2019-03-20
-  # support:
-  #   chrome: "50"
-  #   chrome_android: "50"
-  #   edge: "13"
-  #   firefox: "38"
-  #   firefox_android: "38"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.builtins.Generator.return
 
   # baseline: high
   # baseline_low_date: 2016-09-20
@@ -898,7 +697,6 @@ compat_features:
   #   firefox_android: "50"
   #   safari: "10"
   #   safari_ios: "10"
-  - javascript.builtins.Function.@@hasInstance
   - javascript.builtins.Symbol.hasInstance
 
   # baseline: high
@@ -999,26 +797,6 @@ compat_features:
   #   safari: "11.1"
   #   safari_ios: "11.3"
   - javascript.operators.spread.spread_in_object_literals
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "63"
-  #   chrome_android: "63"
-  #   edge: "79"
-  #   firefox: "55"
-  #   firefox_android: "55"
-  #   safari: "12"
-  #   safari_ios: "12"
-  - javascript.builtins.AsyncGenerator
-  - javascript.builtins.AsyncGenerator.next
-  - javascript.builtins.AsyncGenerator.return
-  - javascript.builtins.AsyncGenerator.throw
-  - javascript.builtins.AsyncGeneratorFunction
-  - javascript.builtins.AsyncGeneratorFunction.AsyncGeneratorFunction
-  - javascript.operators.async_generator_function
-  - javascript.statements.async_generator_function
 
   # baseline: high
   # baseline_low_date: 2020-01-15
