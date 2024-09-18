@@ -6,14 +6,15 @@ description: Lookup Baseline status for a web feature.
 
 Look up the Baseline status of a web feature using the [`<baseline-status>` web component](https://github.com/web-platform-dx/baseline-status).
 
-<label for="feature-select">Web feature</label>
-<select name="feature" id="feature-select">
-
-  <option value=""></option>
-  {% for feature in featuresList %}
-  <option value="{{ feature.key }}">{{ feature.name }}</option>
-  {% endfor %}
-</select>
+<div>
+  <label for="feature-select">Web feature</label>
+  <select name="feature" id="feature-select">
+    <option value=""></option>
+    {% for feature in featuresList %}
+    <option value="{{ feature.key }}">{{ feature.name }} ({{ feature.key }})</option>
+    {% endfor %}
+  </select>
+</div>
 
 <div id="status-container">
 </div>
