@@ -64,7 +64,6 @@ compat_features:
   - api.Location.replace
   - api.Location.search
   - api.Navigator
-  - api.Navigator.cookieEnabled
   - api.Navigator.language
   - api.Navigator.userAgent
   - api.Range.createContextualFragment
@@ -3097,8 +3096,9 @@ compat_features:
   #   safari_ios: "11.3"
   - api.ImageBitmapRenderingContext.canvas
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-08
+  # baseline_high_date: 2024-09-08
   # support:
   #   chrome: "1"
   #   chrome_android: "18"
@@ -3109,8 +3109,9 @@ compat_features:
   #   safari_ios: "1"
   - api.HTMLElement.outerText
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "61"
   #   chrome_android: "61"
@@ -3121,8 +3122,9 @@ compat_features:
   #   safari_ios: "15.4"
   - html.global_attributes.nonce
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "61"
   #   chrome_android: "61"
@@ -3134,8 +3136,9 @@ compat_features:
   - api.HTMLElement.nonce
   - api.SVGElement.nonce
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "76"
   #   chrome_android: "76"
@@ -3146,8 +3149,9 @@ compat_features:
   #   safari_ios: "15.4"
   - api.Document.securitypolicyviolation_event
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "81"
   #   chrome_android: "81"
@@ -3158,8 +3162,9 @@ compat_features:
   #   safari_ios: "15.4"
   - api.SubmitEvent.submitter
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "95"
   #   chrome_android: "95"
@@ -3294,6 +3299,56 @@ compat_features:
   #   safari: "17"
   #   safari_ios: "17"
   - http.status.103
+
+  # baseline: low
+  # baseline_low_date: 2024-09-16
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.Navigator.cookieEnabled
+
+  # baseline: low
+  # baseline_low_date: 2024-09-16
+  # support:
+  #   chrome: "123"
+  #   chrome_android: "123"
+  #   edge: "123"
+  #   firefox: "123"
+  #   firefox_android: "123"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.HTMLTemplateElement.shadowRootDelegatesFocus
+
+  # baseline: low
+  # baseline_low_date: 2024-09-16
+  # support:
+  #   chrome: "124"
+  #   chrome_android: "124"
+  #   edge: "124"
+  #   firefox: "125"
+  #   firefox_android: "125"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.HTMLTemplateElement.shadowRootClonable
+
+  # baseline: low
+  # baseline_low_date: 2024-09-16
+  # support:
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
+  #   firefox: "128"
+  #   firefox_android: "128"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.Element.getHTML
+  - api.HTMLTemplateElement.shadowRootSerializable
+  - api.ShadowRoot.getHTML
 
   # baseline: false
   # support:
@@ -3607,12 +3662,20 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "118"
+  #   chrome_android: "118"
+  #   edge: "118"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.PopStateEvent.hasUAVisualTransition
+
+  # baseline: false
+  # support:
   #   chrome: "123"
   #   chrome_android: "123"
   #   edge: "123"
   #   firefox: "123"
   #   firefox_android: "123"
-  - api.HTMLTemplateElement.shadowRootDelegatesFocus
   - html.elements.template.shadowrootdelegatesfocus
 
   # baseline: false
@@ -3622,19 +3685,16 @@ compat_features:
   #   edge: "124"
   #   firefox: "125"
   #   firefox_android: "125"
-  - api.HTMLTemplateElement.shadowRootClonable
   - html.elements.template.shadowrootclonable
 
   # baseline: false
   # support:
-  #   chrome: "125"
-  #   chrome_android: "125"
-  #   edge: "125"
-  #   firefox: "128"
-  #   firefox_android: "128"
-  - api.Element.getHTML
-  - api.HTMLTemplateElement.shadowRootSerializable
-  - api.ShadowRoot.getHTML
+  #   chrome: "127"
+  #   chrome_android: "127"
+  #   edge: "127"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - html.elements.script.type.importmap.integrity
 
   # baseline: false
   # support:
@@ -3826,7 +3886,6 @@ compat_features:
   #   chrome_android: "118"
   #   edge: "118"
   - api.NavigateEvent.hasUAVisualTransition
-  - api.PopStateEvent.hasUAVisualTransition
 
   # baseline: false
   # support:
@@ -3883,13 +3942,6 @@ compat_features:
   - api.PageRevealEvent.viewTransition
   - api.PageSwapEvent.viewTransition
   - html.elements.img.sizes.auto
-
-  # baseline: false
-  # support:
-  #   chrome: "127"
-  #   chrome_android: "127"
-  #   edge: "127"
-  - html.elements.script.type.importmap.integrity
 
   # baseline: false
   # support:
