@@ -1,4 +1,4 @@
-draft_date: 2024-08-28
+draft_date: 2024-09-18
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -19,7 +19,6 @@ compat_features:
   - api.CustomElementRegistry.getName
   - api.CustomElementRegistry.upgrade
   - api.CustomElementRegistry.whenDefined
-  - api.DOMException.serializable_object
   - api.DOMParser
   - api.DOMParser.DOMParser
   - api.DOMParser.parseFromString
@@ -93,8 +92,6 @@ compat_features:
   - api.Element.auxclick_event
   - api.Element.beforematch_event
   - api.Element.blur_event
-  - api.Element.copy_event
-  - api.Element.cut_event
   - api.Element.focus_event
   - api.Element.getHTML
   - api.Element.innerHTML
@@ -102,7 +99,6 @@ compat_features:
   - api.Element.keydown_event
   - api.Element.keyup_event
   - api.Element.outerHTML
-  - api.Element.paste_event
   - api.Element.scroll_event
   - api.Element.securitypolicyviolation_event
   - api.Element.wheel_event
@@ -722,16 +718,10 @@ compat_features:
   - http.headers.Permissions-Policy.autoplay
   - http.headers.Permissions-Policy.cross-origin-isolated
   - http.headers.Permissions-Policy.document-domain
+  - http.headers.Refresh
   - http.headers.X-Frame-Options
   - http.status.103
-  - javascript.builtins.Error.serializable_object
-  - javascript.builtins.EvalError.serializable_object
   - javascript.builtins.Promise.incumbent_settings_object_tracking
-  - javascript.builtins.RangeError.serializable_object
-  - javascript.builtins.ReferenceError.serializable_object
-  - javascript.builtins.SyntaxError.serializable_object
-  - javascript.builtins.TypeError.serializable_object
-  - javascript.builtins.URIError.serializable_object
   - javascript.operators.import_meta
   - javascript.operators.import_meta.resolve
   - svg.elements.image.decoding
@@ -885,6 +875,15 @@ compat_features:
 #   - api.CustomStateSet.values
 #   - api.ElementInternals.states
 #   - css.selectors.state
+# - Serializable errors:
+#   - api.DOMException.serializable_object
+#   - javascript.builtins.Error.serializable_object
+#   - javascript.builtins.EvalError.serializable_object
+#   - javascript.builtins.RangeError.serializable_object
+#   - javascript.builtins.ReferenceError.serializable_object
+#   - javascript.builtins.SyntaxError.serializable_object
+#   - javascript.builtins.TypeError.serializable_object
+#   - javascript.builtins.URIError.serializable_object
 # - requestAnimationFrame() in workers:
 #   - api.DedicatedWorkerGlobalScope.cancelAnimationFrame
 #   - api.DedicatedWorkerGlobalScope.requestAnimationFrame
@@ -909,6 +908,10 @@ compat_features:
 #   - api.Element.mouseout_event
 #   - api.Element.mouseover_event
 #   - api.Element.mouseup_event
+# - Clipboard events:
+#   - api.Element.copy_event
+#   - api.Element.cut_event
+#   - api.Element.paste_event
 # - input (event):
 #   - api.Element.input_event
 # - Form-associated custom elements:
@@ -1217,6 +1220,8 @@ compat_features:
 #   - api.HTMLDetailsElement
 #   - api.HTMLDetailsElement.open
 #   - html.elements.details
+# - Mutually exclusive <details> elements:
+#   - api.HTMLDetailsElement.name
 # - <dialog>:
 #   - api.HTMLDialogElement
 #   - api.HTMLDialogElement.cancel_event

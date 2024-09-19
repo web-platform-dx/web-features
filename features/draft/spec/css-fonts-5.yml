@@ -1,10 +1,8 @@
-draft_date: 2024-08-28
+draft_date: 2024-09-09
 name: CSS Fonts Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-fonts-5/
 compat_features:
-  - api.CSSFontFaceRule
-  - api.CSSFontFaceRule.style
   - api.CSSFontFeatureValuesMap
   - api.CSSFontFeatureValuesMap.@@iterator
   - api.CSSFontFeatureValuesMap.clear
@@ -19,13 +17,11 @@ compat_features:
   - api.CSSFontFeatureValuesMap.values
   - css.at-rules.font-face.ascent-override
   - css.at-rules.font-face.descent-override
-  - css.at-rules.font-face.font-display
   - css.at-rules.font-face.font-stretch
   - css.at-rules.font-face.font-style
   - css.at-rules.font-face.font-weight
   - css.at-rules.font-face.line-gap-override
   - css.at-rules.font-face.size-adjust
-  - css.at-rules.font-face.unicode-range
   - css.properties.font
   - css.properties.font-family
   - css.properties.font-size
@@ -46,6 +42,13 @@ compat_features:
   - svg.global_attributes.font-weight
 
 # The following features in the spec are already part of web-features:
+# - @font-face:
+#   - api.CSSFontFaceRule
+#   - api.CSSFontFaceRule.style
+#   - css.at-rules.font-face
+#   - css.at-rules.font-face.font-family
+#   - css.at-rules.font-face.src
+#   - css.at-rules.font-face.unicode-range
 # - font-variant-alternates:
 #   - api.CSSFontFeatureValuesRule
 #   - api.CSSFontFeatureValuesRule.annotation
@@ -79,10 +82,8 @@ compat_features:
 #   - css.properties.font-palette.dark
 #   - css.properties.font-palette.light
 #   - css.properties.font-palette.normal
-# - @font-face:
-#   - css.at-rules.font-face
-#   - css.at-rules.font-face.font-family
-#   - css.at-rules.font-face.src
+# - font-display:
+#   - css.at-rules.font-face.font-display
 # - font-feature-settings:
 #   - css.at-rules.font-face.font-feature-settings
 #   - css.properties.font-feature-settings
