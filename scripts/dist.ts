@@ -379,9 +379,7 @@ function main() {
         .crawl(fileOrDirectory)
         .sync();
     }
-    if (isDistOrDistable(fileOrDirectory)) {
-      return fileOrDirectory;
-    }
+    return isDistOrDistable(fileOrDirectory) ? fileOrDirectory : [];
   });
 
   // Map from .yml to .yml.dist to filter out duplicates.
