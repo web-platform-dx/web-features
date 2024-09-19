@@ -79,6 +79,7 @@ Inactive _Peers_ (no activity on the project for months or more) might be marked
 - Brian Kardell ([@bkardell](https://github.com/bkardell))
 - Dietrich Ayala ([@autonome](https://github.com/autonome/))
 - Mariko Kosaka ([@kosamari](https://github.com/kosamari))
+- James Stuckey Weber ([@jamesnw](https://github.com/jamesnw))
 - Patrick Brosset ([@captainbrosset](https://github.com/captainbrosset))
 - Pete LePage ([@petele](https://github.com/petele))
 
