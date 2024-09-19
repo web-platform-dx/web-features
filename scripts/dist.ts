@@ -52,6 +52,39 @@ let exitStatus = 0;
 setLogger(logger);
 
 /**
+ * Check that the installed @mdn/browser-compat-data (BCD) package matches the
+ * one pinned in `package.json`. BCD updates frequently, leading to surprising
+ * error messages if you haven't run `npm install` recently.
+ */
+function checkForStaleCompat(): void {
+  const packageBCDVersionSpecifier: string = (() => {
+    const packageJSON: unknown = JSON.parse(
+      fs.readFileSync(process.env.npm_package_json, {
+        encoding: "utf-8",
+      }),
+    );
+    if (typeof packageJSON === "object" && "devDependencies" in packageJSON) {
+      const bcd = packageJSON.devDependencies["@mdn/browser-compat-data"];
+      if (typeof bcd === "string") {
+        return bcd;
+      }
+      throw new Error(
+        "@mdn/browser-compat-data version not found in package.json",
+      );
+    }
+  })();
+  const installedBCDVersion = compat.version;
+
+  if (!packageBCDVersionSpecifier.includes(installedBCDVersion)) {
+    logger.error(
+      `Installed @mdn/browser-compat-data (${installedBCDVersion}) does not match package.json version (${packageBCDVersionSpecifier})`,
+    );
+    logger.error("Run `npm install` and try again.");
+    process.exit(1);
+  }
+}
+
+/**
  * Update (or create) a dist YAML file from a feature definition YAML file.
  *
  * @param {string} sourcePath The path to the human-authored YAML file.
@@ -325,7 +358,7 @@ function main() {
     if (fs.statSync(fileOrDirectory).isDirectory()) {
       return new fdir()
         .withBasePath()
-        .filter((fp) => fp.endsWith(".yml"))
+        .filter((fp) => !(fp.endsWith(".md") || fp.endsWith(".DS_Store")))
         .crawl(fileOrDirectory)
         .sync();
     }
@@ -336,6 +369,11 @@ function main() {
   const sourceToDist = new Map<string, string>(
     filePaths.map((filePath: string) => {
       const ext = path.extname(filePath);
+      if (ext === ".yaml") {
+        throw new Error(
+          `YAML files must use .yml extension; ${filePath} has invalid extension`,
+        );
+      }
       if (![".dist", ".yml"].includes(ext)) {
         throw new Error(
           `Cannot generate dist for ${filePath}, only YAML input is supported`,
@@ -379,6 +417,7 @@ function main() {
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  checkForStaleCompat();
   main();
   process.exit(exitStatus);
 }

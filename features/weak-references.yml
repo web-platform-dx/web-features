@@ -1,0 +1,14 @@
+name: Weak references
+description: The `WeakRef` and `FinalizationRegistry` objects hold references to garbage-collectable objects without creating strong references that prevent their garbage collection.
+spec:
+  - https://tc39.es/ecma262/multipage/managing-memory.html#sec-managing-memory
+snapshot: ecmascript-2021
+group: javascript
+compat_features:
+  - javascript.builtins.FinalizationRegistry
+  - javascript.builtins.FinalizationRegistry.FinalizationRegistry
+  - javascript.builtins.FinalizationRegistry.register
+  - javascript.builtins.FinalizationRegistry.unregister
+  - javascript.builtins.WeakRef
+  - javascript.builtins.WeakRef.WeakRef
+  - javascript.builtins.WeakRef.deref

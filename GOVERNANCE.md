@@ -49,7 +49,7 @@ Peers:
 - Must follow documented contribution guidelines.
 - Must submit pull requests for all their changes.
 - May label and close issues.
-- May merge pull requests that add or modify feature descriptions (excluding changes to a feature’s Baseline status or other availability status information).
+- May merge pull requests that add or modify features.
   - Other contributors’ pull requests may be merged by _Peers_.
   - A _Peer_'s own pull requests may be merged after approval from a fellow _Peer_ or _Owner_.
 - Must have their status, infrastructure, and documentation work reviewed and merged by [Owners](#owners).
@@ -92,6 +92,7 @@ The _Owners_ group has final authority over:
 
 - Adoption or amendment to the definition of Baseline
 - Adoption or amendment to the definition of other feature availability statuses
+- Resolving disagreements on the scope or status of individual features
 - Technical direction of the project, especially infrastructure and schema decisions
 - Project governance and process (including this policy and any updates)
 - Confirming _Peers_ and _Owners_
@@ -109,7 +110,7 @@ _Owners_ fulfill all requirements of _Peers_, and also:
 
 - Must ensure the smooth running of the project.
 - Should review code contributions, changes to this document, or changes to the licensing of the project or its outputs.
-- May merge pull requests that remove feature descriptions.
+- May merge pull requests that remove features.
 - May merge pull requests that change the Baseline definition or its implementation.
 - May merge pull requests that change Baseline statuses.
 - May merge pull requests that change other availability statuses.
@@ -153,7 +154,7 @@ Such Peers and Owners are indicated in the Peers or Owners list with the text �
 
 _Owners_ may, at their discretion, nominate an owner-delegate to carry out a task or make a decision ordinarily carried out by an _Owner_ or _Peer_.
 Delegation should be limited in duration or scope, or both; delegation may be withdrawn by any _Owner_ at any time.
-For example, an _Owner_ may nominate a tool expert as an owner-delegate to approve an infrastructure PR or nominate a feature expert as an owner-delegate to approve a feature description.
+For example, an _Owner_ may nominate a tool expert as an owner-delegate to approve an infrastructure PR or nominate a feature expert as an owner-delegate to approve a feature.
 
 ## Decision making
 
@@ -284,13 +285,37 @@ The chair is responsible for summarizing the discussion of each agenda item and 
    </td>
   </tr>
   <tr>
-   <td>Merge new or modified feature descriptions
+   <td>Merge a new or modified feature
    </td>
    <td>
    </td>
    <td>
    </td>
    <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td>Merge changes to a feature’s status
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>Yes
+   </td>
+   <td>Yes
+   </td>
+  </tr>
+  <tr>
+   <td>Merge removal of a feature
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
    </td>
    <td>Yes
    </td>
@@ -309,30 +334,6 @@ The chair is responsible for summarizing the discussion of each agenda item and 
   </tr>
   <tr>
    <td>Merge schema or infrastructure changes
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>Yes
-   </td>
-  </tr>
-  <tr>
-   <td>Merge changes to a feature’s status
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>Yes
-   </td>
-  </tr>
-  <tr>
-   <td>Merge removal of a feature
    </td>
    <td>
    </td>
