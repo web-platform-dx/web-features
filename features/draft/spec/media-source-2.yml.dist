@@ -3,7 +3,8 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    safari: "18"
 compat_features:
   # baseline: false
   # support:
@@ -123,9 +124,18 @@ compat_features:
   #   chrome: "108"
   #   chrome_android: "108"
   #   edge: "108"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.MediaSourceHandle
+
+  # baseline: false
+  # support:
+  #   chrome: "108"
+  #   chrome_android: "108"
+  #   edge: "108"
+  #   safari: "18"
   - api.MediaSource.canConstructInDedicatedWorker_static
   - api.MediaSource.handle
-  - api.MediaSourceHandle
 
   # baseline: false
   # support:
