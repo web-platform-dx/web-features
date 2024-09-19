@@ -353,16 +353,35 @@ const tagsToFeatures: Map<string, Feature[]> = (() => {
   return map;
 })();
 
+/**
+ * Check if a file is an authored definition or dist file. Throws on likely
+ * mistakes, such as `.yaml` files.
+ */
+function isDistOrDistable(path: string): boolean {
+  if (path.endsWith(".yaml.dist") || path.endsWith(".yaml")) {
+    throw new Error(
+      `YAML files must use .yml extension; ${path} has invalid extension`,
+    );
+  }
+  if (path.endsWith(".yml.dist") || path.endsWith(".yml")) {
+    return true;
+  }
+  logger.debug(`${path} is not a likely YAML file, skipping`);
+  return false;
+}
+
 function main() {
-  const filePaths = argv.paths.flatMap((fileOrDirectory) => {
+  const filePaths: string[] = argv.paths.flatMap((fileOrDirectory) => {
     if (fs.statSync(fileOrDirectory).isDirectory()) {
       return new fdir()
         .withBasePath()
-        .filter((fp) => !(fp.endsWith(".md") || fp.endsWith(".DS_Store")))
+        .filter(isDistOrDistable)
         .crawl(fileOrDirectory)
         .sync();
     }
-    return fileOrDirectory;
+    if (isDistOrDistable(fileOrDirectory)) {
+      return fileOrDirectory;
+    }
   });
 
   // Map from .yml to .yml.dist to filter out duplicates.
