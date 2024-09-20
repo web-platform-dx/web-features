@@ -1,11 +1,10 @@
 # Name
 #
 #
-name: Storage
+name: Storage Manager
 description: TODO
 spec: https://storage.spec.whatwg.org/
 compat_features:
-  - api.Navigator.storage
   - api.StorageManager
   - api.StorageManager.estimate
   - api.StorageManager.persist
