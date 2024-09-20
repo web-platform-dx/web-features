@@ -7,3 +7,19 @@ spec: https://storage.spec.whatwg.org/
 group: storage
 compat_features:
   - api.Navigator.storage
+  - api.Storage
+  - api.Storage.clear
+  - api.Storage.getItem
+  - api.Storage.key
+  - api.Storage.length
+  - api.Storage.removeItem
+  - api.Storage.setItem
+  - api.StorageEvent
+  - api.StorageEvent.key
+  - api.StorageEvent.newValue
+  - api.StorageEvent.oldValue
+  - api.StorageEvent.storageArea
+  - api.StorageEvent.url
+  - api.Window.localStorage
+  - api.Window.sessionStorage
+  - api.Window.storage_event
