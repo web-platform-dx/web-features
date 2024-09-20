@@ -4,16 +4,3 @@ spec: https://dom.spec.whatwg.org/#aborting-ongoing-activities
 caniuse: abortcontroller
 status:
   compute_from: api.AbortController
-compat_features:
-  - api.AbortController
-  - api.AbortController.AbortController
-  - api.AbortController.abort
-  - api.AbortController.signal
-  - api.AbortSignal
-  - api.AbortSignal.abort_event
-  - api.AbortSignal.abort_static
-  - api.AbortSignal.abort_static.reason_parameter
-  - api.AbortSignal.aborted
-  - api.AbortSignal.reason
-  - api.AbortSignal.throwIfAborted
-  - api.AbortSignal.timeout_static
