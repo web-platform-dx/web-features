@@ -4,13 +4,3 @@ spec: https://w3c.github.io/accelerometer/#accelerometer-interface
 group: sensors
 status:
   compute_from: api.Accelerometer.Accelerometer
-compat_features:
-  - api.Accelerometer
-  - api.Accelerometer.Accelerometer
-  - api.Accelerometer.x
-  - api.Accelerometer.y
-  - api.Accelerometer.z
-  - api.LinearAccelerationSensor
-  - api.LinearAccelerationSensor.LinearAccelerationSensor
-  - api.Permissions.permission_accelerometer
-  - http.headers.Permissions-Policy.accelerometer

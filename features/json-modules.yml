@@ -2,8 +2,6 @@ name: JSON import attributes
 description: 'Module `import ... with { type: "json" }` statements load JSON data. Also known as JSON module scripts and formerly known as import assertions.'
 spec: https://html.spec.whatwg.org/multipage/webappapis.html#json-module-script
 group: json
-compat_features:
-  # TODO: Include when https://github.com/web-platform-dx/web-features/issues/1173
-  # is resolved.
-  # - javascript.statements.import
-  - javascript.statements.import.import_attributes.type_json
+# TODO: Include when https://github.com/web-platform-dx/web-features/issues/1173
+# is resolved.
+# - javascript.statements.import
