@@ -1,7 +1,9 @@
 name: column-fill
 description: The `column-fill` CSS property sets the distribution of content across columns in a multi-column layout.
 spec: https://drafts.csswg.org/css-multicol-1/#filling-columns
-group: layout
+group: multi-column
+status:
+  compute_from: css.properties.column-fill
 compat_features:
   - css.properties.column-fill
   - css.properties.column-fill.auto
