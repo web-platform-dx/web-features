@@ -1,6 +1,7 @@
 # Exclude any generated files/folders
 /**/*.dist
 /**/dist
+schemas/data.schema.json
 
 
 # Exclude the website includes since these are typically fragments, or include
@@ -14,11 +15,9 @@ index.ts
 types.ts
 2022-backgrounder.md
 towards-features.md
-/.github/**
 /docs
 !/docs/publishing.md
 /features/draft
-/schemas
 /scripts/caniuse.ts
 /scripts/schema.ts
 /scripts/specs.ts

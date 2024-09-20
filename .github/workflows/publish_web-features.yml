@@ -4,7 +4,7 @@ on:
   push:
     # Tags on the form v1.2.3 are for releases. Any other tags are ignored.
     tags:
-      - 'v[0-9]+.[0-9]+.[0-9]+'
+      - "v[0-9]+.[0-9]+.[0-9]+"
 
 env:
   package_dir: "packages/web-features"
