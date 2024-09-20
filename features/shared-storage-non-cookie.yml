@@ -1,6 +1,7 @@
 name: Extending Storage Access API (SAA) to non-cookie storage
 description: TODO
 spec: https://privacycg.github.io/saa-non-cookie-storage/
+group: storage
 compat_features:
   - api.Document.hasUnpartitionedCookieAccess
   - api.Document.requestStorageAccess.types_parameter
