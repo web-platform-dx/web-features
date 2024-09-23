@@ -1,0 +1,21 @@
+[files]
+extend-exclude = [
+    ".git/",
+]
+ignore-hidden = false
+
+[default]
+extend-ignore-re = [
+    "\\bext-shader-texture-lod\\b",
+    "\\bhttp\\.headers\\.ECT\\b",
+]
+
+[default.extend-words]
+"seeked" = "seeked"
+
+[default.extend-identifiers]
+"is_transitionable" = "is_transitionable"
+"EXT_shader_texture_lod" = "EXT_shader_texture_lod"
+
+# Typos
+"Github" = "GitHub"
