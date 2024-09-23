@@ -29,6 +29,11 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
+  spelling:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: crate-ci/typos@master
 
 env:
   FORCE_COLOR: 3
