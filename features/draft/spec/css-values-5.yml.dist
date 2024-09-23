@@ -113,10 +113,16 @@ compat_features:
   # support:
   #   chrome: "129"
   #   chrome_android: "129"
+  #   edge: "129"
+  - css.types.calc-size
+
+  # baseline: false
+  # support:
+  #   chrome: "129"
+  #   chrome_android: "129"
   - css.properties.interpolate-size
   - css.properties.interpolate-size.allow-keywords
   - css.properties.interpolate-size.numeric-only
-  - css.types.calc-size
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
