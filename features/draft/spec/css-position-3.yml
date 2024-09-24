@@ -1,17 +1,10 @@
-draft_date: 2024-09-18
+draft_date: 2024-09-23
 name: CSS Positioned Layout Module Level 3
 description: TODO
 spec: https://drafts.csswg.org/css-position-3/
 compat_features:
   - css.properties.bottom
   - css.properties.bottom.auto
-  - css.properties.inset-block-end.auto
-  - css.properties.inset-block-start.auto
-  - css.properties.inset-block.auto
-  - css.properties.inset-inline-end.auto
-  - css.properties.inset-inline-start.auto
-  - css.properties.inset-inline.auto
-  - css.properties.inset.auto
   - css.properties.left
   - css.properties.left.auto
   - css.properties.position
@@ -26,6 +19,14 @@ compat_features:
   - css.selectors.backdrop
 
 # The following features in the spec are already part of web-features:
+# - Logical properties:
+#   - css.properties.inset.auto
+#   - css.properties.inset-block.auto
+#   - css.properties.inset-block-end.auto
+#   - css.properties.inset-block-start.auto
+#   - css.properties.inset-inline.auto
+#   - css.properties.inset-inline-end.auto
+#   - css.properties.inset-inline-start.auto
 # - overlay:
 #   - css.properties.overlay
 #   - css.properties.overlay.auto

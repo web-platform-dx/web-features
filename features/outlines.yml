@@ -1,0 +1,20 @@
+name: Outlines
+description: The `outline-color`, `outline-style`, and `outline-width` and `outline-offset` CSS properties style a line around an element, outside of the border.
+spec: https://drafts.csswg.org/css-ui-4/#outline
+# TODO: Caniuse support is close but would need to be reconciled.
+# caniuse: outline
+compat_features:
+  - css.properties.outline-color
+  - css.properties.outline-offset
+  - css.properties.outline-style
+  - css.properties.outline-style.auto
+  - css.properties.outline-style.dashed
+  - css.properties.outline-style.dotted
+  - css.properties.outline-style.double
+  - css.properties.outline-style.groove
+  - css.properties.outline-style.inset
+  - css.properties.outline-style.none
+  - css.properties.outline-style.outset
+  - css.properties.outline-style.ridge
+  - css.properties.outline-style.solid
+  - css.properties.outline-width
