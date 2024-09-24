@@ -1,0 +1,24 @@
+name: border-radius
+description: The `border-radius` CSS property rounds the corners of the border drawn around an element.
+spec: https://drafts.csswg.org/css-backgrounds-3/#corners
+caniuse: border-radius
+status:
+  compute_from: css.properties.border-radius
+group: borders-outlines
+compat_features:
+  - css.properties.border-bottom-left-radius
+  - css.properties.border-bottom-left-radius.elliptical_corners
+  - css.properties.border-bottom-left-radius.percentages
+  - css.properties.border-bottom-right-radius
+  - css.properties.border-bottom-right-radius.elliptical_corners
+  - css.properties.border-bottom-right-radius.percentages
+  - css.properties.border-radius
+  - css.properties.border-radius.elliptical_borders
+  - css.properties.border-radius.percentages
+  - css.properties.border-radius.4_values_for_4_corners
+  - css.properties.border-top-left-radius
+  - css.properties.border-top-left-radius.elliptical_corners
+  - css.properties.border-top-left-radius.percentages
+  - css.properties.border-top-right-radius
+  - css.properties.border-top-right-radius.elliptical_corners
+  - css.properties.border-top-right-radius.percentages
