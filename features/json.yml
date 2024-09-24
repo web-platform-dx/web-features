@@ -1,0 +1,12 @@
+name: JSON
+description: The `JSON` API provides static methods for parsing values from and converting values to JavaScript Object Notation (JSON), a serialization format for objects, arrays, numbers, strings, Boolean values, and null.
+group: json
+spec: https://tc39.es/ecma262/multipage/structured-data.html#sec-json-object
+status:
+  compute_from: javascript.builtins.JSON
+compat_features:
+  - javascript.builtins.JSON
+  - javascript.builtins.JSON.json_superset
+  - javascript.builtins.JSON.parse
+  - javascript.builtins.JSON.stringify
+  - javascript.builtins.JSON.stringify.well_formed_stringify
