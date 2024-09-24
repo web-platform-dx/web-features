@@ -4,5 +4,8 @@ spec: https://w3c-fedid.github.io/FedCM/
 group: credential-management
 compat_features:
   - api.CredentialsContainer.get.identity_option
+  - api.CredentialsContainer.get.identity_option.context_option
+  - api.CredentialsContainer.get.identity_option.error_api
+  - api.CredentialsContainer.get.identity_option.loginHint
   - api.IdentityCredential
   - api.IdentityCredential.token
