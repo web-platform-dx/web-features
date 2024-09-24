@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-09-23
 name: CSS Images Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-images-4/
@@ -22,8 +22,6 @@ compat_features:
   - css.properties.object-fit.scale-down
   - css.properties.object-position
   - css.properties.object-view-box.none
-  - css.properties.shape-outside.gradient
-  - css.properties.shape-outside.image
   - css.types.image
   - css.types.image.cross-fade
   - css.types.image.element
@@ -42,6 +40,9 @@ compat_features:
 #   - css.types.image.image-set
 # - object-view-box:
 #   - css.properties.object-view-box
+# - shape-outside:
+#   - css.properties.shape-outside.gradient
+#   - css.properties.shape-outside.image
 # - Conic gradients:
 #   - css.types.image.gradient.conic-gradient
 #   - css.types.image.gradient.repeating-conic-gradient
