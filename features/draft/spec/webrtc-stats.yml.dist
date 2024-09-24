@@ -241,8 +241,9 @@ compat_features:
   #   safari_ios: "14.5"
   - api.RTCStatsReport.type_remote-inbound-rtp.roundTripTime
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-08
+  # baseline_high_date: 2024-09-08
   # support:
   #   chrome: "80"
   #   chrome_android: "80"
@@ -254,8 +255,9 @@ compat_features:
   - api.RTCStatsReport.type_outbound-rtp.codecId
   - api.RTCStatsReport.type_remote-inbound-rtp.codecId
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-08
+  # baseline_high_date: 2024-09-08
   # support:
   #   chrome: "80"
   #   chrome_android: "80"
@@ -272,8 +274,9 @@ compat_features:
   - api.RTCStatsReport.type_codec.timestamp
   - api.RTCStatsReport.type_codec.type
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-08
+  # baseline_high_date: 2024-09-08
   # support:
   #   chrome: "83"
   #   chrome_android: "83"
@@ -284,8 +287,9 @@ compat_features:
   #   safari_ios: "14"
   - api.RTCStatsReport.type_codec.sdpFmtpLine
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-08
+  # baseline_high_date: 2024-09-08
   # support:
   #   chrome: "83"
   #   chrome_android: "83"
@@ -296,8 +300,9 @@ compat_features:
   #   safari_ios: "14.5"
   - api.RTCStatsReport.type_codec.channels
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-08
+  # baseline_high_date: 2024-09-08
   # support:
   #   chrome: "91"
   #   chrome_android: "91"
@@ -308,8 +313,9 @@ compat_features:
   #   safari_ios: "11"
   - api.RTCStatsReport.type_remote-outbound-rtp.codecId
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "93"
   #   chrome_android: "93"
@@ -320,8 +326,9 @@ compat_features:
   #   safari_ios: "15.4"
   - api.RTCStatsReport.type_outbound-rtp.nackCount
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "94"
   #   chrome_android: "94"

@@ -99,6 +99,21 @@ compat_features:
   #   safari_ios: "17.4"
   - api.Element.ariaDescription
 
+  # baseline: low
+  # baseline_low_date: 2024-09-16
+  # support:
+  #   chrome: "107"
+  #   chrome_android: "107"
+  #   edge: "107"
+  #   firefox: "125"
+  #   firefox_android: "125"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.Element.ariaBrailleLabel
+  - api.Element.ariaBrailleRoleDescription
+  - api.ElementInternals.ariaBrailleLabel
+  - api.ElementInternals.ariaBrailleRoleDescription
+
   # baseline: false
   # support:
   #   chrome: "83"
@@ -107,18 +122,6 @@ compat_features:
   #   firefox: "119"
   #   firefox_android: "119"
   - api.ElementInternals.ariaDescription
-
-  # baseline: false
-  # support:
-  #   chrome: "107"
-  #   chrome_android: "107"
-  #   edge: "107"
-  #   firefox: "125"
-  #   firefox_android: "125"
-  - api.Element.ariaBrailleLabel
-  - api.Element.ariaBrailleRoleDescription
-  - api.ElementInternals.ariaBrailleLabel
-  - api.ElementInternals.ariaBrailleRoleDescription
 
   # baseline: false
   # support:
