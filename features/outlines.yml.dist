@@ -3,18 +3,17 @@
 
 status:
   baseline: high
-  baseline_low_date: 2015-07-29
-  baseline_high_date: 2018-01-29
+  baseline_low_date: 2017-04-05
+  baseline_high_date: 2019-10-05
   support:
     chrome: "1"
     chrome_android: "18"
-    edge: "12"
+    edge: "15"
     firefox: "1.5"
     firefox_android: "4"
     safari: "1.2"
     safari_ios: "1"
 compat_features:
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -40,6 +39,7 @@ compat_features:
   - css.properties.outline-style.solid
   - css.properties.outline-width
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2017-04-05
   # baseline_high_date: 2019-10-05
@@ -52,15 +52,3 @@ compat_features:
   #   safari: "1.2"
   #   safari_ios: "1"
   - css.properties.outline-offset
-
-  # baseline: low
-  # baseline_low_date: 2023-03-27
-  # support:
-  #   chrome: "94"
-  #   chrome_android: "94"
-  #   edge: "94"
-  #   firefox: "88"
-  #   firefox_android: "88"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - css.properties.outline

@@ -6,14 +6,15 @@ status:
   baseline_low_date: 2015-07-29
   baseline_high_date: 2018-01-29
   support:
-    chrome: "8"
+    chrome: "4"
     chrome_android: "18"
     edge: "12"
     firefox: "4"
     firefox_android: "4"
-    safari: "5.1"
-    safari_ios: "5"
+    safari: "5"
+    safari_ios: "4.2"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -41,7 +42,6 @@ compat_features:
   - css.properties.border-top-right-radius.elliptical_corners
   - css.properties.border-top-right-radius.percentages
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
