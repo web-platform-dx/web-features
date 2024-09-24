@@ -1,0 +1,10 @@
+name: path()
+description: The `path()` CSS shape function creates a shape for `clip-path`, `shape-outside`, and the SVG attribute `d`.
+spec: https://drafts.csswg.org/css-shapes-1/#supported-basic-shapes
+# group: clipping-shapes-masking
+compat_features:
+  - css.types.basic-shape.path
+  - css.types.basic-shape.path.clip-path
+  - css.types.basic-shape.path.d
+  - css.types.basic-shape.path.shape-outside
+  - css.types.basic-shape.path.offset-path
