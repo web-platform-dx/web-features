@@ -3,6 +3,11 @@ description: The `captureStream()` method for `<canvas>` elements returns a `Med
 # Firefox compat issue: https://bugzil.la/1231131
 spec: https://w3c.github.io/mediacapture-fromelement/#html-canvas-element-media-capture-extensions
 group: canvas
+# TODO: Firefox implements `CanvasCaptureMediaStream` as an equivalent to `CanvasCaptureMediaStreamTrack`.
+#
+# Add a note when https://github.com/web-platform-dx/web-features/issues/915 is resolved.
+#
+# See also: https://bugzil.la/1231131
 compat_features:
   - api.CanvasCaptureMediaStreamTrack
   - api.CanvasCaptureMediaStreamTrack.canvas
