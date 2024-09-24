@@ -272,14 +272,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   firefox: "128"
+  #   firefox_android: "128"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.Request.bytes
+  - api.Response.bytes
+
+  # baseline: false
+  # support:
   #   chrome: "69"
   #   chrome_android: "69"
   #   edge: "79"
   - api.Request.isHistoryNavigation
-
-  # baseline: false
-  # support:
-  #   firefox: "128"
-  #   firefox_android: "128"
-  - api.Request.bytes
-  - api.Response.bytes
