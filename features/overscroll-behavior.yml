@@ -1,0 +1,29 @@
+name: overscroll-behavior
+description: The `overscroll-behavior` CSS property sets the behavior when the edges of a scrolling area are reached. The `contain` keyword prevents scroll chaining, and the `none` keyword prevents scroll chaining, bouncing effects, and device specific behaviors like scroll to refresh.
+spec: https://drafts.csswg.org/css-overscroll-1/
+caniuse: css-overscroll-behavior
+group: scrolling
+# BCD has incorrect Edge support data. This can be removed when that is resolved.
+status:
+  compute_from: css.properties.overscroll-behavior-x
+compat_features:
+  - css.properties.overscroll-behavior
+  - css.properties.overscroll-behavior-block
+  - css.properties.overscroll-behavior-block.auto
+  - css.properties.overscroll-behavior-block.contain
+  - css.properties.overscroll-behavior-block.none
+  - css.properties.overscroll-behavior-inline
+  - css.properties.overscroll-behavior-inline.auto
+  - css.properties.overscroll-behavior-inline.contain
+  - css.properties.overscroll-behavior-inline.none
+  - css.properties.overscroll-behavior-x
+  - css.properties.overscroll-behavior-x.auto
+  - css.properties.overscroll-behavior-x.contain
+  - css.properties.overscroll-behavior-x.none
+  - css.properties.overscroll-behavior-y
+  - css.properties.overscroll-behavior-y.auto
+  - css.properties.overscroll-behavior-y.contain
+  - css.properties.overscroll-behavior-y.none
+  - css.properties.overscroll-behavior.auto
+  - css.properties.overscroll-behavior.contain
+  - css.properties.overscroll-behavior.none
