@@ -1,5 +1,5 @@
-name: Async clipboard support for custom formats
-description: Support for custom formats in the `navigator.clipboard` API allows you to read and write unsanitized custom data in the system clipboard. Custom formats have mime-types that start with the `web ` prefix.
+name: Custom formats for clipboard items
+description: The `web ` prefix for `ClipboardItem` data types (also known as MIME types) allows reading and writing ununsanitized custom data from the device clipboard.
 spec: https://w3c.github.io/clipboard-apis/#optional-data-types-x
 group: clipboard
 compat_features:
