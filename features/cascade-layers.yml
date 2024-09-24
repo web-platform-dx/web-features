@@ -11,4 +11,5 @@ compat_features:
   - api.CSSLayerStatementRule.nameList
   - css.at-rules.import.layer
   - css.at-rules.layer
+# revert-layer would ideally be grouped with both cascade-layers and explicit-defaults
   - css.types.global_keywords.revert-layer
