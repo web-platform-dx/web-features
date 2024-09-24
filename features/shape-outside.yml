@@ -1,0 +1,17 @@
+name: shape-outside
+description: The `shape-outside` CSS property, along with `shape-margin` and `shape-image-threshold`, sets the shape around which adjacent content will wrap.
+spec: https://drafts.csswg.org/css-shapes-1/#declaring-shapes
+group: clipping-shapes-masking
+status:
+  compute_from: css.properties.shape-outside
+compat_features:
+  - css.properties.shape-image-threshold
+  - css.properties.shape-margin
+  - css.properties.shape-outside
+  - css.properties.shape-outside.none
+  - css.properties.shape-outside.circle
+  - css.properties.shape-outside.gradient
+  - css.properties.shape-outside.image
+  - css.properties.shape-outside.inset
+  - css.properties.shape-outside.path
+  - css.properties.shape-outside.polygon
