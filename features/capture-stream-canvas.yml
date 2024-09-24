@@ -1,5 +1,5 @@
 name: captureStream() for <canvas>
-description: The `captureStream()` method for `<canvas>` elements returns a `MediaStream` which includes a `CanvasCaptureMediaStreamTrack` containing a real-time video capture of the contents of the canvas. Firefox doesn't support `CanvasCaptureMediaStreamTrack`, but has `CanvasCaptureMediaStream` which is equivalent.
+description: The `captureStream()` method for `<canvas>` elements returns a `MediaStream` which includes a `CanvasCaptureMediaStreamTrack` representing real-time video of the canvas image. You can use this to record the canvas, or send it elsewhere, such as another canvas or WebRTC connection.
 # Firefox compat issue: https://bugzil.la/1231131
 spec: https://w3c.github.io/mediacapture-fromelement/#html-canvas-element-media-capture-extensions
 group: canvas
