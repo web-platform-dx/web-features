@@ -18,7 +18,7 @@ Follow these steps to merge:
    - The pull request has the [blocked label](https://github.com/web-platform-dx/web-features/pulls?q=is%3Aopen+is%3Apr+label%3Ablocked)
    - A reviewer asked to re-review before merging or has requested changes that have not been addressed with a commit or comment
    - The author explicitly asked to delay merging
-   - The author explicitly asked fro review from all requested reviewers (the presumption is at least one but not all)
+   - The author explicitly asked for review from all requested reviewers (the presumption is at least one but not all)
 
    If a blocker no longer applies, remove the label or dismiss the stale review.
 
@@ -28,6 +28,6 @@ Follow these steps to merge:
 
    Clean up the subject and message fields so they make sense as a single unit.
    For example, delete boilerplate messages about applying changes from code review.
-   Often an imperative-noun subject, such as "Add example feature," is sufficient.
+   Often an imperative-noun subject, such as "Add example feature", is sufficient.
 
 1. When you're ready to commit the changes, click **Confirm squash and merge**.
