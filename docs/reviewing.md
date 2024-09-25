@@ -8,7 +8,10 @@
 If a pull request has been approved and tests are passing, then you can merge it.
 Follow these steps to merge:
 
-1. Make sure **you** can merge this pull request.
+1. Make sure you **should** merge this pull request.
+   In general, only merge pull requests you are already familiar with, either as an author or reviewer.
+
+1. Make sure **you** should merge this pull request.
    Some changes—most notably, feature removals, tooling and policy changes, and schema changes—require an owner to merge.
    See [the privileges and responsibilities matrix](../GOVERNANCE.md#privileges-and-responsibilities-matrix) for more information.
 
