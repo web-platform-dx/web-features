@@ -18,10 +18,10 @@ Follow these steps to merge:
 1. Make sure there are no explicit blockers to merging.
    Blockers include:
 
-   - The pull request has the [blocked label](https://github.com/web-platform-dx/web-features/pulls?q=is%3Aopen+is%3Apr+label%3Ablocked)
-   - A reviewer asked to re-review before merging or has requested changes that have not been addressed with a commit or comment
-   - The author explicitly asked to delay merging
-   - The author explicitly asked for review from all requested reviewers (the presumption is at least one but not all)
+   - The pull request has the [blocked label](https://github.com/web-platform-dx/web-features/pulls?q=is%3Aopen+is%3Apr+label%3Ablocked).
+   - A reviewer asked to re-review before merging or has requested changes that have not been addressed with a commit or comment.
+   - The author explicitly asked to delay merging.
+   - The author explicitly asked for review from all requested reviewers (the presumption is at least one but not all).
 
    If a blocker no longer applies, remove the label or dismiss the stale review.
 
