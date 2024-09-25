@@ -1,0 +1,16 @@
+name: Battery Status
+description: The Battery Status API allows web developers to obtain information about the device's battery, including charge level and status.
+spec: https://w3c.github.io/battery/
+status:
+  compute_from: api.BatteryManager
+compat_features:
+  - api.BatteryManager
+  - api.BatteryManager.charging
+  - api.BatteryManager.chargingchange_event
+  - api.BatteryManager.chargingTime
+  - api.BatteryManager.chargingtimechange_event
+  - api.BatteryManager.dischargingTime
+  - api.BatteryManager.dischargingtimechange_event
+  - api.BatteryManager.level
+  - api.BatteryManager.levelchange_event
+  - api.Navigator.getBattery
