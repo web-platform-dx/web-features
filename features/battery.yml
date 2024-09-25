@@ -3,7 +3,7 @@ description: The `navigator.getBattery()` API obtains information about the devi
 spec: https://w3c.github.io/battery/
 caniuse: battery-status
 status:
-  compute_from: api.BatteryManager
+  compute_from: api.Navigator.getBattery
 compat_features:
   - api.BatteryManager
   - api.BatteryManager.charging
