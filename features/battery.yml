@@ -1,6 +1,7 @@
 name: Battery status
 description: The `navigator.getBattery()` API obtains information about the device's battery, including charge level and status. Also known as the Battery API.
 spec: https://w3c.github.io/battery/
+caniuse: battery-status
 status:
   compute_from: api.BatteryManager
 compat_features:
