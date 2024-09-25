@@ -1,0 +1,23 @@
+name: gamepad
+description: The Gamepad Extensions API allows developers to seamlessly interface with gamepad-like devices with advanced capabilities, such as controllers for XR headsets.
+spec: https://w3c.github.io/gamepad/extensions.html
+group: gamepad
+status:
+  compute_from: api.GamepadPose
+compat_features:
+  - api.Gamepad.displayId
+  - api.Gamepad.hand
+  - api.Gamepad.hapticActuators
+  - api.Gamepad.pose
+  - api.GamepadHapticActuator.canPlayEffectType
+  - api.GamepadHapticActuator.pulse
+  - api.GamepadHapticActuator.type
+  - api.GamepadPose
+  - api.GamepadPose.angularAcceleration
+  - api.GamepadPose.angularVelocity
+  - api.GamepadPose.hasOrientation
+  - api.GamepadPose.hasPosition
+  - api.GamepadPose.linearAcceleration
+  - api.GamepadPose.linearVelocity
+  - api.GamepadPose.orientation
+  - api.GamepadPose.position
