@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "120"
-    chrome_android: "120"
-    edge: "120"
+    chrome: "116"
+    chrome_android: "116"
+    edge: "116"
 compat_features:
   # baseline: false
   # support:
@@ -17,6 +17,7 @@ compat_features:
   - api.IdentityCredential
   - api.IdentityCredential.token
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "116"
@@ -24,11 +25,3 @@ compat_features:
   #   edge: "116"
   - api.CredentialsContainer.get.identity_option.context_option
   - api.CredentialsContainer.get.identity_option.loginHint
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "120"
-  #   chrome_android: "120"
-  #   edge: "120"
-  - api.CredentialsContainer.get.identity_option.error_api
