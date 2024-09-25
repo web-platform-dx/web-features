@@ -23,7 +23,7 @@ Follow these steps to merge:
    - The author explicitly asked to delay merging.
    - The author explicitly asked for review from all requested reviewers (the presumption is at least one but not all).
 
-   If a blocker no longer applies, remove the label or dismiss the stale review.
+   If a blocker no longer applies, remove the label or [dismiss the stale review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/dismissing-a-pull-request-review).
 
 1. If the pull request might require a Semantic Versioning MAJOR or MINOR release, then add the [minor version required](https://github.com/web-platform-dx/web-features/labels/minor%20version%20required) or [major version required](https://github.com/web-platform-dx/web-features/labels/major%20version%20required) label.
 
