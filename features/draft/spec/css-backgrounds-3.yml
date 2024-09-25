@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-09-23
 name: CSS Backgrounds and Borders Module Level 3
 description: TODO
 spec: https://drafts.csswg.org/css-backgrounds-3/
@@ -8,6 +8,7 @@ compat_features:
   - css.properties.background-attachment.fixed
   - css.properties.background-attachment.local
   - css.properties.background-attachment.scroll
+  - css.properties.background-clip.border-area
   - css.properties.background-color
   - css.properties.background-image
   - css.properties.background-image.none
@@ -90,6 +91,8 @@ compat_features:
 #   - css.properties.background-clip.border-box
 #   - css.properties.background-clip.content-box
 #   - css.properties.background-clip.padding-box
+# - background-clip: text:
+#   - css.properties.background-clip.text
 # - Border images:
 #   - css.properties.border-image
 #   - css.properties.border-image-outset
