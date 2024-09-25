@@ -90,6 +90,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "113"
+  #   chrome_android: "113"
+  #   edge: "113"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - api.CredentialsContainer.create.publicKey_option.extensions.largeBlob
+
+  # baseline: false
+  # support:
   #   chrome: "89"
   #   chrome_android: "108"
   #   edge: "89"
@@ -122,5 +131,4 @@ compat_features:
   #   chrome: "113"
   #   chrome_android: "113"
   #   edge: "113"
-  - api.CredentialsContainer.create.publicKey_option.extensions.largeBlob
   - api.CredentialsContainer.get.publicKey_option.extensions.largeBlob
