@@ -1,10 +1,12 @@
 name: Counters (CSS)
-description: The `counter()` and `counters()` CSS functions, used with `counter-reset` and `counter-increment`, automatically number headings or ordered list items.
+description: The `counter-reset` and `counter-increment` CSS properties and the `counter()` and `counters()` functions automatically number headings or ordered list items.
 spec: https://drafts.csswg.org/css-lists-3/#auto-numbering
 caniuse: css-counters
 group: counters
 status:
-  compute_from: css.types.counter
+  compute_from:
+    - css.properties.counter-increment
+    - css.properties.counter-reset
 compat_features:
   - css.properties.counter-increment
   - css.properties.counter-increment.list-item

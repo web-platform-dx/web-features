@@ -6,15 +6,14 @@ status:
   baseline_low_date: 2015-07-29
   baseline_high_date: 2018-01-29
   support:
-    chrome: "1"
+    chrome: "2"
     chrome_android: "18"
     edge: "12"
     firefox: "1"
-    firefox_android: "4"
+    firefox_android: "25"
     safari: "3"
     safari_ios: "1"
 compat_features:
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -41,6 +40,7 @@ compat_features:
   #   safari_ios: "1"
   - css.types.counters
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
