@@ -3,18 +3,19 @@
 
 status:
   baseline: low
-  baseline_low_date: 2023-08-21
+  baseline_low_date: 2022-09-12
   support:
-    chrome: "116"
-    chrome_android: "116"
-    edge: "116"
+    chrome: "55"
+    chrome_android: "55"
+    edge: "79"
     firefox: "72"
     firefox_android: "79"
     safari: "16"
     safari_ios: "16"
 compat_features:
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "55"
   #   chrome_android: "55"
@@ -25,6 +26,7 @@ compat_features:
   #   safari_ios: "15.4"
   - css.properties.offset-path
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2022-09-12
   # support:
@@ -49,6 +51,8 @@ compat_features:
   #   safari: "16"
   #   safari_ios: "16"
   - css.properties.offset-rotate
+  - css.properties.offset-rotate.auto
+  - css.properties.offset-rotate.reverse
 
   # baseline: low
   # baseline_low_date: 2022-09-12
@@ -62,7 +66,6 @@ compat_features:
   #   safari_ios: "16"
   - css.properties.offset-path.path
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2023-08-21
   # support:
@@ -74,3 +77,55 @@ compat_features:
   #   safari: "16"
   #   safari_ios: "16"
   - css.properties.offset-anchor
+  - css.properties.offset-anchor.auto
+
+  # baseline: low
+  # baseline_low_date: 2024-01-23
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "116"
+  #   edge: "116"
+  #   firefox: "122"
+  #   firefox_android: "122"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - css.properties.offset-path.ray
+  - css.types.ray
+
+  # baseline: low
+  # baseline_low_date: 2024-01-23
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "116"
+  #   edge: "116"
+  #   firefox: "122"
+  #   firefox_android: "122"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - css.properties.offset-path.url
+  - css.types.ray.size
+
+  # baseline: low
+  # baseline_low_date: 2024-01-23
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "116"
+  #   edge: "116"
+  #   firefox: "122"
+  #   firefox_android: "122"
+  #   safari: "17.2"
+  #   safari_ios: "17.2"
+  - css.types.ray.position
+
+  # baseline: low
+  # baseline_low_date: 2024-09-16
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "116"
+  #   edge: "116"
+  #   firefox: "122"
+  #   firefox_android: "122"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - css.properties.offset-path.basic_shape
+  - css.properties.offset-path.coord_box

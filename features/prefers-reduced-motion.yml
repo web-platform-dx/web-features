@@ -1,0 +1,10 @@
+name: prefers-reduced-motion media query
+description: The `prefers-reduced-motion` CSS media query sets styles based on whether the user prefers to minimize the amount of non-essential animations on the device, such as scrolling, panning, zooming, and strobing.
+spec: https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion
+caniuse: prefers-reduced-motion
+group: media-queries
+status:
+  compute_from: css.at-rules.media.prefers-reduced-motion
+compat_features:
+  - css.at-rules.media.prefers-reduced-motion
+  - http.headers.Sec-CH-Prefers-Reduced-Motion

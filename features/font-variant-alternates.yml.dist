@@ -71,6 +71,18 @@ compat_features:
   #   chrome: "111"
   #   chrome_android: "111"
   #   edge: "111"
+  - api.CSSFontFeatureValuesMap
+  - api.CSSFontFeatureValuesMap.@@iterator
+  - api.CSSFontFeatureValuesMap.clear
+  - api.CSSFontFeatureValuesMap.delete
+  - api.CSSFontFeatureValuesMap.entries
+  - api.CSSFontFeatureValuesMap.forEach
+  - api.CSSFontFeatureValuesMap.get
+  - api.CSSFontFeatureValuesMap.has
+  - api.CSSFontFeatureValuesMap.keys
+  - api.CSSFontFeatureValuesMap.set
+  - api.CSSFontFeatureValuesMap.size
+  - api.CSSFontFeatureValuesMap.values
   - api.CSSFontFeatureValuesRule.annotation
   - api.CSSFontFeatureValuesRule.characterVariant
   - api.CSSFontFeatureValuesRule.ornaments

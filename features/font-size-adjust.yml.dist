@@ -14,6 +14,18 @@ status:
     safari_ios: "17"
 compat_features:
   # baseline: low
+  # baseline_low_date: 2023-09-18
+  # support:
+  #   chrome: "92"
+  #   chrome_android: "92"
+  #   edge: "92"
+  #   firefox: "92"
+  #   firefox_android: "92"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - css.at-rules.font-face.size-adjust
+
+  # baseline: low
   # baseline_low_date: 2024-07-25
   # support:
   #   chrome: "127"

@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "129"
+    chrome_android: "129"
+    edge: "129"
 compat_features:
   - webdriver.commands.CreateVirtualPressureSource
   - webdriver.commands.DeleteVirtualPressureSource
