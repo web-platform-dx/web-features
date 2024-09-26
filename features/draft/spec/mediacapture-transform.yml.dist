@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    safari: "18"
+    safari_ios: "18"
 compat_features:
   - api.MediaStreamTrackProcessor
   - api.MediaStreamTrackProcessor.MediaStreamTrackProcessor

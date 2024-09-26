@@ -1,20 +1,8 @@
-draft_date: 2024-09-09
+draft_date: 2024-09-23
 name: CSS Fonts Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-fonts-5/
 compat_features:
-  - api.CSSFontFeatureValuesMap
-  - api.CSSFontFeatureValuesMap.@@iterator
-  - api.CSSFontFeatureValuesMap.clear
-  - api.CSSFontFeatureValuesMap.delete
-  - api.CSSFontFeatureValuesMap.entries
-  - api.CSSFontFeatureValuesMap.forEach
-  - api.CSSFontFeatureValuesMap.get
-  - api.CSSFontFeatureValuesMap.has
-  - api.CSSFontFeatureValuesMap.keys
-  - api.CSSFontFeatureValuesMap.set
-  - api.CSSFontFeatureValuesMap.size
-  - api.CSSFontFeatureValuesMap.values
   - css.at-rules.font-face.ascent-override
   - css.at-rules.font-face.descent-override
   - css.at-rules.font-face.font-stretch
@@ -50,6 +38,18 @@ compat_features:
 #   - css.at-rules.font-face.src
 #   - css.at-rules.font-face.unicode-range
 # - font-variant-alternates:
+#   - api.CSSFontFeatureValuesMap
+#   - api.CSSFontFeatureValuesMap.@@iterator
+#   - api.CSSFontFeatureValuesMap.clear
+#   - api.CSSFontFeatureValuesMap.delete
+#   - api.CSSFontFeatureValuesMap.entries
+#   - api.CSSFontFeatureValuesMap.forEach
+#   - api.CSSFontFeatureValuesMap.get
+#   - api.CSSFontFeatureValuesMap.has
+#   - api.CSSFontFeatureValuesMap.keys
+#   - api.CSSFontFeatureValuesMap.set
+#   - api.CSSFontFeatureValuesMap.size
+#   - api.CSSFontFeatureValuesMap.values
 #   - api.CSSFontFeatureValuesRule
 #   - api.CSSFontFeatureValuesRule.annotation
 #   - api.CSSFontFeatureValuesRule.characterVariant
