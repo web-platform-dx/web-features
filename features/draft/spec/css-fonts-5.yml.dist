@@ -4,9 +4,11 @@
 status:
   baseline: false
   support:
-    chrome: "111"
-    chrome_android: "111"
-    edge: "111"
+    chrome: "92"
+    chrome_android: "92"
+    edge: "92"
+    firefox: "92"
+    firefox_android: "92"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -123,22 +125,3 @@ compat_features:
   - css.at-rules.font-face.ascent-override
   - css.at-rules.font-face.descent-override
   - css.at-rules.font-face.line-gap-override
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "111"
-  #   chrome_android: "111"
-  #   edge: "111"
-  - api.CSSFontFeatureValuesMap
-  - api.CSSFontFeatureValuesMap.@@iterator
-  - api.CSSFontFeatureValuesMap.clear
-  - api.CSSFontFeatureValuesMap.delete
-  - api.CSSFontFeatureValuesMap.entries
-  - api.CSSFontFeatureValuesMap.forEach
-  - api.CSSFontFeatureValuesMap.get
-  - api.CSSFontFeatureValuesMap.has
-  - api.CSSFontFeatureValuesMap.keys
-  - api.CSSFontFeatureValuesMap.set
-  - api.CSSFontFeatureValuesMap.size
-  - api.CSSFontFeatureValuesMap.values
