@@ -728,8 +728,9 @@ compat_features:
   #   safari_ios: "14.5"
   - api.RTCPeerConnection.restartIce
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "59"
   #   chrome_android: "59"
@@ -740,8 +741,9 @@ compat_features:
   #   safari_ios: "15.4"
   - api.RTCRtpReceiver.transport
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "72"
   #   chrome_android: "72"
@@ -753,8 +755,9 @@ compat_features:
   - api.RTCDtlsTransport
   - api.RTCDtlsTransport.state
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "75"
   #   chrome_android: "75"
@@ -765,8 +768,9 @@ compat_features:
   #   safari_ios: "15.4"
   - api.RTCRtpSender.transport
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "83"
   #   chrome_android: "83"
