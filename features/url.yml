@@ -1,6 +1,7 @@
 name: URL
-description: The URL API allows developers to parse and interact with URL strings.
+description: A `URL` object represents a web address, like `https://example.com/`, and parts of the address, such as the domain, path, and query string (as `URLSearchParams`).
 spec: https://url.spec.whatwg.org/
+caniuse: url
 status:
   compute_from: api.URL
 compat_features:
