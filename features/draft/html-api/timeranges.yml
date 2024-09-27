@@ -1,0 +1,12 @@
+name: TimeRanges
+description: When loading a media resource for use by an &lt;audio&gt; or &lt;video&gt; element, the TimeRanges interface is used for representing the time ranges of the media resource that have been buffered, the time ranges that have been played, and the time ranges that are seekable.
+spec: https://html.spec.whatwg.org/multipage/media.html#time-ranges
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.TimeRanges
+  - api.TimeRanges.end
+  - api.TimeRanges.length
+  - api.TimeRanges.start

@@ -1,0 +1,9 @@
+name: FileList
+description: The FileList interface represents an object of this type returned by the files property of the HTML &lt;input&gt; element; this lets you access the list of files selected with the &lt;input type=&quot;file&quot;&gt; element. It&#x27;s also used for a list of files dropped into web content when using the drag and drop API; see the DataTransfer object for details on this usage.
+spec: https://w3c.github.io/FileAPI/#filelist-section,https://html.spec.whatwg.org/multipage/input.html#dom-input-files-dev
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.FileList

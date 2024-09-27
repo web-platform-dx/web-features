@@ -1,0 +1,13 @@
+name: MessagePort
+description: The MessagePort interface of the Channel Messaging API represents one of the two ports of a MessageChannel, allowing messages to be sent from one port and listening out for them arriving at the other.
+spec: https://html.spec.whatwg.org/multipage/web-messaging.html#message-ports
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.MessagePort
+  - api.MessagePort.close
+  - api.MessagePort.message_event
+  - api.MessagePort.postMessage
+  - api.MessagePort.start

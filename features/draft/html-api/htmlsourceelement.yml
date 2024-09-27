@@ -1,0 +1,16 @@
+name: HTMLSourceElement
+description: The HTMLSourceElement interface provides special properties (beyond the regular HTMLElement object interface it also has available to it by inheritance) for manipulating &lt;source&gt; elements.
+spec: https://html.spec.whatwg.org/multipage/embedded-content.html#htmlsourceelement
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.HTMLSourceElement
+  - api.HTMLSourceElement.height
+  - api.HTMLSourceElement.media
+  - api.HTMLSourceElement.sizes
+  - api.HTMLSourceElement.src
+  - api.HTMLSourceElement.srcset
+  - api.HTMLSourceElement.type
+  - api.HTMLSourceElement.width

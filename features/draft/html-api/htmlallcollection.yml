@@ -1,0 +1,12 @@
+name: HTMLAllCollection
+description: The HTMLAllCollection interface represents a collection of all of the document&#x27;s elements, accessible by index (like an array) and by the element&#x27;s id. It is returned by the document.all property.
+spec: https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#the-htmlallcollection-interface
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.HTMLAllCollection
+  - api.HTMLAllCollection.item
+  - api.HTMLAllCollection.length
+  - api.HTMLAllCollection.namedItem

@@ -1,0 +1,9 @@
+name: HTMLDocument
+description: For historical reasons, Window objects have a window.HTMLDocument property whose value is the Document interface. So you can think of HTMLDocument as an alias for Document, and you can find documentation for HTMLDocument members under the documentation for the Document interface.
+spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#htmldocument
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.HTMLDocument

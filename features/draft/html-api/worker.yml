@@ -1,0 +1,15 @@
+name: Worker
+description: The Worker interface of the Web Workers API represents a background task that can be created via script, which can send messages back to its creator.
+spec: https://html.spec.whatwg.org/multipage/workers.html#dedicated-workers-and-the-worker-interface
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.Worker
+  - api.Worker.Worker
+  - api.Worker.error_event
+  - api.Worker.message_event
+  - api.Worker.messageerror_event
+  - api.Worker.postMessage
+  - api.Worker.terminate

@@ -1,0 +1,21 @@
+name: Path2D
+description: The Path2D interface of the Canvas 2D API is used to declare a path that can then be used on a CanvasRenderingContext2D object. The path methods of the CanvasRenderingContext2D interface are also present on this interface, which gives you the convenience of being able to retain and replay your path whenever desired.
+spec: https://html.spec.whatwg.org/multipage/canvas.html#path2d-objects
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.Path2D
+  - api.Path2D.Path2D
+  - api.Path2D.addPath
+  - api.Path2D.arc
+  - api.Path2D.arcTo
+  - api.Path2D.bezierCurveTo
+  - api.Path2D.closePath
+  - api.Path2D.ellipse
+  - api.Path2D.lineTo
+  - api.Path2D.moveTo
+  - api.Path2D.quadraticCurveTo
+  - api.Path2D.rect
+  - api.Path2D.roundRect

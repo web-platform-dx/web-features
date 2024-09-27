@@ -1,0 +1,9 @@
+name: Range
+description: The Range interface represents a fragment of a document that can contain nodes and parts of text nodes.
+spec: https://dom.spec.whatwg.org/#interface-range,https://w3c.github.io/DOM-Parsing/#extensions-to-the-range-interface,https://drafts.csswg.org/cssom-view/#extensions-to-the-range-interface
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.Range.createContextualFragment

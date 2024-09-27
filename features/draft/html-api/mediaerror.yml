@@ -1,0 +1,11 @@
+name: MediaError
+description: The MediaError interface represents an error which occurred while handling media in an HTML media element based on HTMLMediaElement, such as &lt;audio&gt; or &lt;video&gt;.
+spec: https://html.spec.whatwg.org/multipage/media.html#error-codes
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.MediaError
+  - api.MediaError.code
+  - api.MediaError.message

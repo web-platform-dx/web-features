@@ -1,0 +1,13 @@
+name: SVGElement
+description: All of the SVG DOM interfaces that correspond directly to elements in the SVG language derive from the SVGElement interface.
+spec: https://svgwg.org/svg2-draft/types.html#InterfaceSVGElement
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.SVGElement.blur
+  - api.SVGElement.dataset
+  - api.SVGElement.focus
+  - api.SVGElement.nonce
+  - api.SVGElement.tabIndex

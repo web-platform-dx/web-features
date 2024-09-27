@@ -1,0 +1,19 @@
+name: DataTransfer
+description: The DataTransfer object is used to hold any data transferred between contexts, such as a drag and drop operation, or clipboard read/write. It may hold one or more data items, each of one or more data types.
+spec: https://html.spec.whatwg.org/multipage/dnd.html#the-datatransfer-interface
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.DataTransfer
+  - api.DataTransfer.DataTransfer
+  - api.DataTransfer.clearData
+  - api.DataTransfer.dropEffect
+  - api.DataTransfer.effectAllowed
+  - api.DataTransfer.files
+  - api.DataTransfer.getData
+  - api.DataTransfer.items
+  - api.DataTransfer.setData
+  - api.DataTransfer.setDragImage
+  - api.DataTransfer.types

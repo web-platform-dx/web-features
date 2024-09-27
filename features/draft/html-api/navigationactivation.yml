@@ -1,0 +1,12 @@
+name: NavigationActivation
+description: The NavigationActivation interface of the Navigation API represents a recent cross-document navigation. It contains the navigation type and outgoing and inbound document history entries.
+spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#navigationactivation
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.NavigationActivation
+  - api.NavigationActivation.entry
+  - api.NavigationActivation.from
+  - api.NavigationActivation.navigationType

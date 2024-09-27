@@ -1,0 +1,12 @@
+name: PopStateEvent
+description: PopStateEvent is an interface for the popstate event.
+spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-popstateevent-interface
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.PopStateEvent
+  - api.PopStateEvent.PopStateEvent
+  - api.PopStateEvent.hasUAVisualTransition
+  - api.PopStateEvent.state

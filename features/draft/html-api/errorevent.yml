@@ -1,0 +1,15 @@
+name: ErrorEvent
+description: The ErrorEvent interface represents events providing information related to errors in scripts or in files.
+spec: https://html.spec.whatwg.org/multipage/webappapis.html#the-errorevent-interface
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.ErrorEvent
+  - api.ErrorEvent.ErrorEvent
+  - api.ErrorEvent.colno
+  - api.ErrorEvent.error
+  - api.ErrorEvent.filename
+  - api.ErrorEvent.lineno
+  - api.ErrorEvent.message

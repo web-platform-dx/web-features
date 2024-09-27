@@ -1,0 +1,16 @@
+name: HTMLMeterElement
+description: The HTML &lt;meter&gt; elements expose the HTMLMeterElement interface, which provides special properties and methods (beyond the HTMLElement object interface they also have available to them by inheritance) for manipulating the layout and presentation of &lt;meter&gt; elements.
+spec: https://html.spec.whatwg.org/multipage/form-elements.html#htmlmeterelement
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.HTMLMeterElement
+  - api.HTMLMeterElement.high
+  - api.HTMLMeterElement.labels
+  - api.HTMLMeterElement.low
+  - api.HTMLMeterElement.max
+  - api.HTMLMeterElement.min
+  - api.HTMLMeterElement.optimum
+  - api.HTMLMeterElement.value

@@ -1,0 +1,14 @@
+name: StorageEvent
+description: StorageEvent does stuff!
+spec: https://html.spec.whatwg.org/multipage/webstorage.html#the-storageevent-interface
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.StorageEvent
+  - api.StorageEvent.key
+  - api.StorageEvent.newValue
+  - api.StorageEvent.oldValue
+  - api.StorageEvent.storageArea
+  - api.StorageEvent.url

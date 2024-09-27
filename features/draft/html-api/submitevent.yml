@@ -1,0 +1,11 @@
+name: SubmitEvent
+description: The SubmitEvent interface defines the object used to represent an HTML form&#x27;s submit event. This event is fired at the &lt;form&gt; when the form&#x27;s submit action is invoked.
+spec: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-submitevent-interface
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.SubmitEvent
+  - api.SubmitEvent.SubmitEvent
+  - api.SubmitEvent.submitter

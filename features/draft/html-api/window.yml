@@ -1,0 +1,59 @@
+name: Window
+description: The Window interface represents a window containing a DOM document; the document property points to the DOM document loaded in that window.
+spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-window-object
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.Window
+  - api.Window.DOMContentLoaded_event
+  - api.Window.alert
+  - api.Window.beforeunload_event
+  - api.Window.blur_event
+  - api.Window.close
+  - api.Window.closed
+  - api.Window.confirm
+  - api.Window.document
+  - api.Window.error_event
+  - api.Window.focus
+  - api.Window.focus_event
+  - api.Window.frameElement
+  - api.Window.frames
+  - api.Window.hashchange_event
+  - api.Window.history
+  - api.Window.languagechange_event
+  - api.Window.length
+  - api.Window.load_event
+  - api.Window.localStorage
+  - api.Window.location
+  - api.Window.locationbar
+  - api.Window.menubar
+  - api.Window.message_event
+  - api.Window.name
+  - api.Window.navigator
+  - api.Window.offline_event
+  - api.Window.online_event
+  - api.Window.open
+  - api.Window.opener
+  - api.Window.originAgentCluster
+  - api.Window.pagehide_event
+  - api.Window.pagereveal_event
+  - api.Window.pageshow_event
+  - api.Window.pageswap_event
+  - api.Window.parent
+  - api.Window.personalbar
+  - api.Window.popstate_event
+  - api.Window.postMessage
+  - api.Window.prompt
+  - api.Window.rejectionhandled_event
+  - api.Window.scrollbars
+  - api.Window.self
+  - api.Window.sessionStorage
+  - api.Window.statusbar
+  - api.Window.stop
+  - api.Window.storage_event
+  - api.Window.toolbar
+  - api.Window.top
+  - api.Window.unhandledrejection_event
+  - api.Window.window

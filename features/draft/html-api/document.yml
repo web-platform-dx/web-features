@@ -1,0 +1,41 @@
+name: Document
+description: The Document interface represents any web page loaded in the browser and serves as an entry point into the web page&#x27;s content, which is the DOM tree.
+spec: https://dom.spec.whatwg.org/#interface-document,https://html.spec.whatwg.org/multipage/dom.html#the-document-object,https://drafts.csswg.org/cssom-view/#extensions-to-the-document-interface,https://w3c.github.io/pointerlock/#extensions-to-the-document-interface,https://w3c.github.io/selection-api/#extensions-to-document-interface
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.Document
+  - api.Document.DOMContentLoaded_event
+  - api.Document.activeElement
+  - api.Document.body
+  - api.Document.close
+  - api.Document.cookie
+  - api.Document.currentScript
+  - api.Document.defaultView
+  - api.Document.designMode
+  - api.Document.dir
+  - api.Document.embeds
+  - api.Document.forms
+  - api.Document.getElementsByName
+  - api.Document.hasFocus
+  - api.Document.head
+  - api.Document.hidden
+  - api.Document.images
+  - api.Document.lastModified
+  - api.Document.links
+  - api.Document.location
+  - api.Document.open
+  - api.Document.plugins
+  - api.Document.readyState
+  - api.Document.readystatechange_event
+  - api.Document.referrer
+  - api.Document.scripts
+  - api.Document.scroll_event
+  - api.Document.securitypolicyviolation_event
+  - api.Document.title
+  - api.Document.visibilityState
+  - api.Document.visibilitychange_event
+  - api.Document.write
+  - api.Document.writeln

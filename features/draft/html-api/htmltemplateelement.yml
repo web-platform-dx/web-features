@@ -1,0 +1,11 @@
+name: HTMLTemplateElement
+description: The HTMLTemplateElement interface enables access to the contents of an HTML &lt;template&gt; element.
+spec: https://html.spec.whatwg.org/multipage/scripting.html#htmltemplateelement
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.HTMLTemplateElement.shadowRootClonable
+  - api.HTMLTemplateElement.shadowRootDelegatesFocus
+  - api.HTMLTemplateElement.shadowRootSerializable

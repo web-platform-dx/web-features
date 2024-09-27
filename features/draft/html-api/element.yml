@@ -1,0 +1,21 @@
+name: Element
+description: Element is the most general base class from which all element objects (i.e. objects that represent elements) in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element.
+spec: https://dom.spec.whatwg.org/#interface-element,https://w3c.github.io/pointerevents/#extensions-to-the-element-interface,https://fullscreen.spec.whatwg.org/#api,https://w3c.github.io/DOM-Parsing/#extensions-to-the-element-interface,https://drafts.csswg.org/cssom-view/#extension-to-the-element-interface
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.Element.auxclick_event
+  - api.Element.beforematch_event
+  - api.Element.blur_event
+  - api.Element.focus_event
+  - api.Element.getHTML
+  - api.Element.innerHTML
+  - api.Element.insertAdjacentHTML
+  - api.Element.keydown_event
+  - api.Element.keyup_event
+  - api.Element.outerHTML
+  - api.Element.scroll_event
+  - api.Element.securitypolicyviolation_event
+  - api.Element.wheel_event

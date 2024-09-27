@@ -1,0 +1,13 @@
+name: HTMLOptionsCollection
+description: The HTMLOptionsCollection interface represents a collection of &lt;option&gt; HTML elements (in document order) and offers methods and properties for selecting from the list as well as optionally altering its items. This object is returned only by the options property of select.
+spec: https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#the-htmloptionscollection-interface
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.HTMLOptionsCollection
+  - api.HTMLOptionsCollection.add
+  - api.HTMLOptionsCollection.length
+  - api.HTMLOptionsCollection.remove
+  - api.HTMLOptionsCollection.selectedIndex

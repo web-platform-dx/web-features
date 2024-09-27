@@ -1,0 +1,11 @@
+name: FormDataEvent
+description: The FormDataEvent interface represents a formdata event — such an event is fired on an HTMLFormElement object after the entry list representing the form&#x27;s data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a FormData() constructor.
+spec: https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-formdataevent-interface
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.FormDataEvent
+  - api.FormDataEvent.FormDataEvent
+  - api.FormDataEvent.formData

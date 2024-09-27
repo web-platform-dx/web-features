@@ -1,0 +1,48 @@
+name: PaintRenderingContext2D
+description: PaintRenderingContext2D does stuff!
+spec: https://drafts.css-houdini.org/css-paint-api/#2d-rendering-context
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.PaintRenderingContext2D.beginPath
+  - api.PaintRenderingContext2D.clearRect
+  - api.PaintRenderingContext2D.clip
+  - api.PaintRenderingContext2D.createLinearGradient
+  - api.PaintRenderingContext2D.createPattern
+  - api.PaintRenderingContext2D.createRadialGradient
+  - api.PaintRenderingContext2D.drawImage
+  - api.PaintRenderingContext2D.fill
+  - api.PaintRenderingContext2D.fillRect
+  - api.PaintRenderingContext2D.fillStyle
+  - api.PaintRenderingContext2D.filter
+  - api.PaintRenderingContext2D.getLineDash
+  - api.PaintRenderingContext2D.getTransform
+  - api.PaintRenderingContext2D.globalAlpha
+  - api.PaintRenderingContext2D.globalCompositeOperation
+  - api.PaintRenderingContext2D.imageSmoothingEnabled
+  - api.PaintRenderingContext2D.imageSmoothingQuality
+  - api.PaintRenderingContext2D.isPointInPath
+  - api.PaintRenderingContext2D.isPointInStroke
+  - api.PaintRenderingContext2D.lineCap
+  - api.PaintRenderingContext2D.lineDashOffset
+  - api.PaintRenderingContext2D.lineJoin
+  - api.PaintRenderingContext2D.lineWidth
+  - api.PaintRenderingContext2D.miterLimit
+  - api.PaintRenderingContext2D.resetTransform
+  - api.PaintRenderingContext2D.restore
+  - api.PaintRenderingContext2D.rotate
+  - api.PaintRenderingContext2D.save
+  - api.PaintRenderingContext2D.scale
+  - api.PaintRenderingContext2D.setLineDash
+  - api.PaintRenderingContext2D.setTransform
+  - api.PaintRenderingContext2D.shadowBlur
+  - api.PaintRenderingContext2D.shadowColor
+  - api.PaintRenderingContext2D.shadowOffsetX
+  - api.PaintRenderingContext2D.shadowOffsetY
+  - api.PaintRenderingContext2D.stroke
+  - api.PaintRenderingContext2D.strokeRect
+  - api.PaintRenderingContext2D.strokeStyle
+  - api.PaintRenderingContext2D.transform
+  - api.PaintRenderingContext2D.translate

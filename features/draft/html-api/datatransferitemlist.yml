@@ -1,0 +1,13 @@
+name: DataTransferItemList
+description: The DataTransferItemList object is a list of DataTransferItem objects representing items being dragged. During a drag operation, each DragEvent has a dataTransfer property and that property is a DataTransferItemList.
+spec: https://html.spec.whatwg.org/multipage/dnd.html#the-datatransferitemlist-interface
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.DataTransferItemList
+  - api.DataTransferItemList.add
+  - api.DataTransferItemList.clear
+  - api.DataTransferItemList.length
+  - api.DataTransferItemList.remove

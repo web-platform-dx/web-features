@@ -1,0 +1,12 @@
+name: DOMStringList
+description: The DOMStringList interface is a legacy type returned by some APIs and represents a non-modifiable list of strings (DOMString).
+spec: https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#the-domstringlist-interface
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.DOMStringList
+  - api.DOMStringList.contains
+  - api.DOMStringList.item
+  - api.DOMStringList.length

@@ -1,0 +1,15 @@
+name: Storage
+description: The Storage interface of the Web Storage API provides access to a particular domain&#x27;s session or local storage. It allows, for example, the addition, modification, or deletion of stored data items.
+spec: https://html.spec.whatwg.org/multipage/webstorage.html#storage
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.Storage
+  - api.Storage.clear
+  - api.Storage.getItem
+  - api.Storage.key
+  - api.Storage.length
+  - api.Storage.removeItem
+  - api.Storage.setItem

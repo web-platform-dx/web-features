@@ -1,0 +1,10 @@
+name: HTMLAnchorElement
+description: The HTMLAnchorElement interface represents hyperlink elements and provides special properties and methods (beyond those of the regular HTMLElement object interface that they inherit from) for manipulating the layout and presentation of such elements. This interface corresponds to &lt;a&gt; element; not to be confused with &lt;link&gt;, which is represented by HTMLLinkElement.
+spec: https://html.spec.whatwg.org/multipage/text-level-semantics.html#htmlanchorelement
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.HTMLAnchorElement.download
+  - api.HTMLAnchorElement.ping

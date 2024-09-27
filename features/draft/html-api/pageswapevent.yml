@@ -1,0 +1,12 @@
+name: PageSwapEvent
+description: The PageSwapEvent event object is made available inside handler functions for the pageswap event.
+spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-pageswapevent-interface
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.PageSwapEvent
+  - api.PageSwapEvent.PageSwapEvent
+  - api.PageSwapEvent.activation
+  - api.PageSwapEvent.viewTransition

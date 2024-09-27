@@ -1,0 +1,16 @@
+name: TextMetrics
+description: The TextMetrics interface represents the dimensions of a piece of text in the canvas; a TextMetrics instance can be retrieved using the CanvasRenderingContext2D.measureText() method.
+spec: https://html.spec.whatwg.org/multipage/canvas.html#textmetrics
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.TextMetrics.actualBoundingBoxAscent
+  - api.TextMetrics.actualBoundingBoxDescent
+  - api.TextMetrics.actualBoundingBoxLeft
+  - api.TextMetrics.actualBoundingBoxRight
+  - api.TextMetrics.emHeightAscent
+  - api.TextMetrics.emHeightDescent
+  - api.TextMetrics.fontBoundingBoxAscent
+  - api.TextMetrics.fontBoundingBoxDescent

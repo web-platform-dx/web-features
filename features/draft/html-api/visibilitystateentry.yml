@@ -1,0 +1,13 @@
+name: VisibilityStateEntry
+description: The VisibilityStateEntry interface provides timings of page visibility state changes, i.e., when a tab changes from the foreground to the background or vice versa.
+spec: https://html.spec.whatwg.org/multipage/interaction.html#the-visibilitystateentry-interface
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.VisibilityStateEntry
+  - api.VisibilityStateEntry.duration
+  - api.VisibilityStateEntry.entryType
+  - api.VisibilityStateEntry.name
+  - api.VisibilityStateEntry.startTime

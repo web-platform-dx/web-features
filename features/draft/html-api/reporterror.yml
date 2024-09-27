@@ -1,0 +1,9 @@
+name: reportError
+description: The reportError() method of the Window interface may be used to report errors to the console or event handlers of global scopes, emulating an uncaught JavaScript exception.
+spec: https://html.spec.whatwg.org/multipage/webappapis.html#runtime-script-errors
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.reportError

@@ -1,0 +1,11 @@
+name: DOMParser
+description: DOMParser does stuff!
+spec: https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-parsing-and-serialization
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.DOMParser
+  - api.DOMParser.DOMParser
+  - api.DOMParser.parseFromString

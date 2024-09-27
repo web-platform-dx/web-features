@@ -1,0 +1,12 @@
+name: NavigateEvent
+description: The NavigateEvent interface of the Navigation API is the event object for the navigate event, which fires when any type of navigation is initiated (this includes usage of History API features like History.go()). NavigateEvent provides access to information about that navigation, and allows developers to intercept and control the navigation handling.
+spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-navigateevent-interface
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.NavigateEvent.canIntercept
+  - api.NavigateEvent.hasUAVisualTransition
+  - api.NavigateEvent.intercept
+  - api.NavigateEvent.scroll

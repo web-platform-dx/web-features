@@ -1,0 +1,11 @@
+name: PageTransitionEvent
+description: The PageTransitionEvent event object is available inside handler functions for the pageshow and pagehide events, fired when a document is being loaded or unloaded.
+spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-pagetransitionevent-interface
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.PageTransitionEvent
+  - api.PageTransitionEvent.PageTransitionEvent
+  - api.PageTransitionEvent.persisted

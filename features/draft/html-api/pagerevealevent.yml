@@ -1,0 +1,11 @@
+name: PageRevealEvent
+description: The PageRevealEvent event object is made available inside handler functions for the pagereveal event.
+spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-pagerevealevent-interface
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.PageRevealEvent
+  - api.PageRevealEvent.PageRevealEvent
+  - api.PageRevealEvent.viewTransition

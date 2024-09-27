@@ -1,0 +1,23 @@
+name: Location
+description: The Location interface represents the location (URL) of the object it is linked to. Changes done on it are reflected on the object it relates to. Both the Document and Window interface have such a linked Location, accessible via Document.location and Window.location respectively.
+spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-location-interface
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.Location
+  - api.Location.ancestorOrigins
+  - api.Location.assign
+  - api.Location.hash
+  - api.Location.host
+  - api.Location.hostname
+  - api.Location.href
+  - api.Location.origin
+  - api.Location.pathname
+  - api.Location.port
+  - api.Location.protocol
+  - api.Location.reload
+  - api.Location.replace
+  - api.Location.search
+  - api.Location.toString

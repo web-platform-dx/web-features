@@ -1,0 +1,37 @@
+name: HTMLElement
+description: The HTMLElement interface represents any HTML element. Some elements directly implement this interface, while others implement it via an interface that inherits it.
+spec: https://html.spec.whatwg.org/multipage/dom.html#htmlelement
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.HTMLElement
+  - api.HTMLElement.accessKey
+  - api.HTMLElement.accessKeyLabel
+  - api.HTMLElement.autocapitalize
+  - api.HTMLElement.blur
+  - api.HTMLElement.change_event
+  - api.HTMLElement.click
+  - api.HTMLElement.contentEditable
+  - api.HTMLElement.dataset
+  - api.HTMLElement.dir
+  - api.HTMLElement.drag_event
+  - api.HTMLElement.dragend_event
+  - api.HTMLElement.dragenter_event
+  - api.HTMLElement.draggable
+  - api.HTMLElement.dragleave_event
+  - api.HTMLElement.dragover_event
+  - api.HTMLElement.dragstart_event
+  - api.HTMLElement.drop_event
+  - api.HTMLElement.enterKeyHint
+  - api.HTMLElement.focus
+  - api.HTMLElement.hidden
+  - api.HTMLElement.innerText
+  - api.HTMLElement.inputMode
+  - api.HTMLElement.isContentEditable
+  - api.HTMLElement.lang
+  - api.HTMLElement.nonce
+  - api.HTMLElement.outerText
+  - api.HTMLElement.spellcheck
+  - api.HTMLElement.title

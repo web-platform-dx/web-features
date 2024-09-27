@@ -1,0 +1,15 @@
+name: NotRestoredReasons
+description: The NotRestoredReasons interface of the Performance API provides report data containing reasons why the current document was blocked from using the back/forward cache (bfcache) on navigation.
+spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#notrestoredreasons
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.NotRestoredReasons
+  - api.NotRestoredReasons.children
+  - api.NotRestoredReasons.id
+  - api.NotRestoredReasons.name
+  - api.NotRestoredReasons.reasons
+  - api.NotRestoredReasons.src
+  - api.NotRestoredReasons.url

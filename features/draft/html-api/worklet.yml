@@ -1,0 +1,10 @@
+name: Worklet
+description: The Worklet interface is a lightweight version of Web Workers and gives developers access to low-level parts of the rendering pipeline.
+spec: https://html.spec.whatwg.org/multipage/worklets.html#worklets-worklet
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.Worklet
+  - api.Worklet.addModule

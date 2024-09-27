@@ -1,0 +1,12 @@
+name: MessageChannel
+description: The MessageChannel interface of the Channel Messaging API allows us to create a new message channel and send data through it via its two MessagePort properties.
+spec: https://html.spec.whatwg.org/multipage/web-messaging.html#message-channels
+#caniuse:
+group: html-api
+#status:
+#  compute_from:
+compat_features:
+  - api.MessageChannel
+  - api.MessageChannel.MessageChannel
+  - api.MessageChannel.port1
+  - api.MessageChannel.port2
