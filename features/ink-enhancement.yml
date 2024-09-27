@@ -1,5 +1,5 @@
-name: Ink enhancement
-description: The Ink API allows browsers to directly make use of available OS-level compositors when drawing pen strokes in an inking app feature, thereby reducing latency and increasing performance.
+name: Ink
+description: The `navigator.ink` API draws between pointer events, reducing the delay between moving a stylus or cursor and a pen stroke appearing on screen.
 spec: https://wicg.github.io/ink-enhancement/
 compat_features:
   - api.Ink
