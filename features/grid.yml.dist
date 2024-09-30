@@ -3,16 +3,16 @@
 
 status:
   baseline: high
-  baseline_low_date: 2020-07-28
-  baseline_high_date: 2023-01-28
+  baseline_low_date: 2017-10-17
+  baseline_high_date: 2020-04-17
   support:
-    chrome: "66"
-    chrome_android: "66"
-    edge: "79"
-    firefox: "76"
-    firefox_android: "79"
-    safari: "12.1"
-    safari_ios: "12.2"
+    chrome: "57"
+    chrome_android: "57"
+    edge: "16"
+    firefox: "52"
+    firefox_android: "52"
+    safari: "10.1"
+    safari_ios: "10.3"
 compat_features:
   # baseline: high
   # baseline_low_date: 2017-03-27
@@ -57,6 +57,7 @@ compat_features:
   - css.properties.justify-items.grid_context
   - css.properties.justify-self.grid_context
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2017-10-17
   # baseline_high_date: 2020-04-17
