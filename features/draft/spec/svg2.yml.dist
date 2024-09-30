@@ -462,6 +462,19 @@ compat_features:
   #   chrome: "1"
   #   chrome_android: "18"
   #   edge: "12"
+  #   firefox: "7"
+  #   firefox_android: "7"
+  #   safari: "1.3"
+  #   safari_ios: "1"
+  - svg.global_attributes.text-overflow
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
   #   firefox: "12"
   #   firefox_android: "14"
   #   safari: "3"
@@ -739,19 +752,6 @@ compat_features:
   #   safari: ≤4
   #   safari_ios: ≤3.2
   - svg.global_attributes.tabindex
-
-  # baseline: high
-  # baseline_low_date: 2017-03-27
-  # baseline_high_date: 2019-09-27
-  # support:
-  #   chrome: "48"
-  #   chrome_android: "48"
-  #   edge: "12"
-  #   firefox: "41"
-  #   firefox_android: "41"
-  #   safari: "10.1"
-  #   safari_ios: "10.3"
-  - svg.global_attributes.writing-mode
 
   # baseline: high
   # baseline_low_date: ≤2018-10-02
@@ -1400,7 +1400,6 @@ compat_features:
   # baseline: false
   # support: {}
   - api.SVGAElement.ping
-  - css.types.basic-shape.path.d
   - svg.elements.cursor.systemLanguage
   - svg.elements.tref.fill
   - svg.elements.tref.fill.context-fill
