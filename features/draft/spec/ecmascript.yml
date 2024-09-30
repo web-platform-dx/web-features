@@ -1,4 +1,4 @@
-draft_date: 2024-09-18
+draft_date: 2024-09-30
 name: ECMAScript Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
@@ -13,10 +13,6 @@ compat_features:
   - javascript.builtins.ArrayBuffer.slice
   - javascript.builtins.AsyncIterator
   - javascript.builtins.AsyncIterator.@@asyncIterator
-  - javascript.builtins.BigInt64Array
-  - javascript.builtins.BigInt64Array.BigInt64Array
-  - javascript.builtins.BigUint64Array
-  - javascript.builtins.BigUint64Array.BigUint64Array
   - javascript.builtins.Boolean
   - javascript.builtins.Boolean.Boolean
   - javascript.builtins.Boolean.toString
@@ -26,8 +22,6 @@ compat_features:
   - javascript.builtins.DataView.buffer
   - javascript.builtins.DataView.byteLength
   - javascript.builtins.DataView.byteOffset
-  - javascript.builtins.DataView.getBigInt64
-  - javascript.builtins.DataView.getBigUint64
   - javascript.builtins.DataView.getFloat32
   - javascript.builtins.DataView.getFloat64
   - javascript.builtins.DataView.getInt16
@@ -36,8 +30,6 @@ compat_features:
   - javascript.builtins.DataView.getUint16
   - javascript.builtins.DataView.getUint32
   - javascript.builtins.DataView.getUint8
-  - javascript.builtins.DataView.setBigInt64
-  - javascript.builtins.DataView.setBigUint64
   - javascript.builtins.DataView.setFloat32
   - javascript.builtins.DataView.setFloat64
   - javascript.builtins.DataView.setInt16
@@ -390,6 +382,15 @@ compat_features:
 #   - javascript.builtins.BigInt.asUintN
 #   - javascript.builtins.BigInt.toString
 #   - javascript.builtins.BigInt.valueOf
+# - BigInt64Array:
+#   - javascript.builtins.BigInt64Array
+#   - javascript.builtins.BigInt64Array.BigInt64Array
+#   - javascript.builtins.BigUint64Array
+#   - javascript.builtins.BigUint64Array.BigUint64Array
+#   - javascript.builtins.DataView.getBigInt64
+#   - javascript.builtins.DataView.getBigUint64
+#   - javascript.builtins.DataView.setBigInt64
+#   - javascript.builtins.DataView.setBigUint64
 # - Date:
 #   - javascript.builtins.Date
 #   - javascript.builtins.Date.@@toPrimitive

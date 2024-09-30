@@ -1,4 +1,4 @@
-draft_date: 2024-09-23
+draft_date: 2024-09-30
 name: CSS Masking Module Level 1
 description: TODO
 spec: https://drafts.fxtf.org/css-masking-1/
@@ -13,7 +13,6 @@ compat_features:
   - css.properties.clip-rule
   - css.properties.clip-rule.evenodd
   - css.properties.clip-rule.nonzero
-  - css.types.basic-shape.path.clip-path
   - svg.elements.mask
   - svg.elements.mask.maskContentUnits
   - svg.elements.mask.maskUnits
@@ -60,3 +59,5 @@ compat_features:
 #   - css.properties.mask-type
 #   - css.properties.mask-type.alpha
 #   - css.properties.mask-type.luminance
+# - path():
+#   - css.types.basic-shape.path.clip-path
