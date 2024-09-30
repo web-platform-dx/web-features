@@ -36,6 +36,16 @@ Feature authors should (in descending order of priority):
   - 👍 Recommended: Grid
   - 👎 Not recommended: `display: grid`
 
+- Prefer sentence case.
+  Avoid capitalizing ordinary nouns, but preserve case when it's meaningful.
+
+  - 👍 Recommended: Typed arrays
+  - 👎 Not recommended: Typed Arrays
+  - 👍 Recommended: View transitions
+  - 👎 Not recommended: View Transitions
+  - 👍 Recommended: WebDriver BiDi
+  - 👎 Not recommended: Webdriver bidi
+
 - Prefer frequently-used qualifiers in parentheses at the end of the name.
 
   - 👍 Recommended: Arrays (initial support)
