@@ -1,4 +1,4 @@
-draft_date: 2024-09-18
+draft_date: 2024-09-30
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -565,7 +565,6 @@ compat_features:
   - api.btoa
   - api.clearInterval
   - api.clearTimeout
-  - api.createImageBitmap
   - api.crossOriginIsolated
   - api.isSecureContext
   - api.origin
@@ -712,7 +711,6 @@ compat_features:
   - http.headers.Permissions-Policy.cross-origin-isolated
   - http.headers.Permissions-Policy.document-domain
   - http.headers.Refresh
-  - http.headers.X-Frame-Options
   - http.status.103
   - javascript.builtins.Promise.incumbent_settings_object_tracking
   - javascript.operators.import_meta
@@ -1822,6 +1820,15 @@ compat_features:
 #   - api.HTMLTitleElement
 #   - api.HTMLTitleElement.text
 #   - html.elements.title
+# - createImageBitmap:
+#   - api.ImageBitmap
+#   - api.ImageBitmap.close
+#   - api.ImageBitmap.height
+#   - api.ImageBitmap.width
+#   - api.ImageBitmapRenderingContext
+#   - api.ImageBitmapRenderingContext.canvas
+#   - api.ImageBitmapRenderingContext.transferFromImageBitmap
+#   - api.createImageBitmap
 # - Navigation API:
 #   - api.NavigateEvent
 #   - api.NavigateEvent.NavigateEvent
