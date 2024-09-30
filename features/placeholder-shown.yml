@@ -1,5 +1,5 @@
 name: :placeholder-shown
-description: The `:placeholder-shown` CSS pseudo-element selects `<input>` and `<textarea>` elements when no value is set and placeholder text is shown.
+description: The `:placeholder-shown` CSS pseudo-element selects `<input>` and `<textarea>` elements when no value is set and the element's `placeholder` attribute is not empty. Not to be confused with `::placeholder`, which selects the placeholder text itself.
 spec: https://drafts.csswg.org/selectors-4/#placeholder
 caniuse: css-placeholder-shown
 group: selectors
