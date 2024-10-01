@@ -1,5 +1,9 @@
+# BCD: https://github.com/mdn/browser-compat-data/tree/main/api/WorkerGlobalScope.json
+# MDN: https://developer.mozilla.org/docs/Web/API/WorkerGlobalScope
+# CIU: https://caniuse.com/?search=WorkerGlobalScope
+draft_date: 2024-09-30
 name: WorkerGlobalScope
-description: The WorkerGlobalScope interface of the Web Workers API is an interface representing the scope of any worker. Workers have no browsing context; this scope contains the information usually conveyed by Window objects — in this case event handlers, the console or the associated WorkerNavigator object. Each WorkerGlobalScope has its own event loop.
+description: "The WorkerGlobalScope interface of the Web Workers API is an interface representing the scope of any worker. Workers have no browsing context; this scope contains the information usually conveyed by Window objects — in this case event handlers, the console or the associated WorkerNavigator object. Each WorkerGlobalScope has its own event loop."
 spec: https://html.spec.whatwg.org/multipage/workers.html#the-workerglobalscope-common-interface
 #caniuse:
 group: html-api

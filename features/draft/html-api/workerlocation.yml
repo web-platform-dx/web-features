@@ -1,5 +1,9 @@
+# BCD: https://github.com/mdn/browser-compat-data/tree/main/api/WorkerLocation.json
+# MDN: https://developer.mozilla.org/docs/Web/API/WorkerLocation
+# CIU: https://caniuse.com/?search=WorkerLocation
+draft_date: 2024-09-30
 name: WorkerLocation
-description: The WorkerLocation interface defines the absolute location of the script executed by the Worker. Such an object is initialized for each worker and is available via the WorkerGlobalScope.location property obtained by calling self.location.
+description: "The WorkerLocation interface defines the absolute location of the script executed by the Worker. Such an object is initialized for each worker and is available via the WorkerGlobalScope.location property obtained by calling self.location."
 spec: https://html.spec.whatwg.org/multipage/workers.html#worker-locations
 #caniuse:
 group: html-api
