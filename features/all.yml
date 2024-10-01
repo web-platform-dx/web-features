@@ -1,0 +1,7 @@
+name: all
+description: The `all` CSS property is a shorthand for all CSS properties, except for `direction` and `unicode-bidi`. It accepts only the keywords for explicit defaulting (such as `initial` and `inherit`), since they are the only values supported on all CSS properties.
+spec: https://drafts.csswg.org/css-cascade-6/
+group: explicit-defaults
+caniuse: css-all
+compat_features:
+  - css.properties.all
