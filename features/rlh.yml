@@ -1,0 +1,8 @@
+name: rlh unit
+description: The `rlh` CSS length unit is a font-relative length relative to the line height of root element.
+spec: https://drafts.csswg.org/css-values-4/#font-relative-lengths
+status:
+  compute_from: css.types.length.rlh
+compat_features:
+  - css.types.length.rlh
+  - api.CSS.rlh_static
