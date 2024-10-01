@@ -35,3 +35,11 @@ compat_features:
   #   chrome_android: "88"
   #   edge: "88"
   - http.headers.Permissions-Policy.accelerometer
+
+  # baseline: false
+  # support:
+  #   chrome: "91"
+  #   chrome_android: "91"
+  #   edge: "91"
+  - api.GravitySensor
+  - api.GravitySensor.GravitySensor
