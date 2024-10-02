@@ -1,9 +1,9 @@
 name: overscroll-behavior
-description: The `overscroll-behavior` CSS property allows disabling default scrolling behaviors when the edges of a scrolling area are reached.
+description: The `overscroll-behavior` CSS property disables default scrolling behaviors when the edges of a scrolling area are reached.
 spec: https://drafts.csswg.org/css-overscroll-1/
 caniuse: css-overscroll-behavior
 group: scrolling
-# BCD has incorrect Edge support data. This can be removed when that is resolved.
+# TODO: Removed compute_from when https://github.com/mdn/browser-compat-data/issues/24511 resolves incorrect Edge data.
 status:
   compute_from: css.properties.overscroll-behavior-x
 compat_features:
