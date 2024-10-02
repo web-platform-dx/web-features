@@ -2,3 +2,7 @@ name: scrollbar-gutter
 description: The `scrollbar-gutter` CSS property reserves space for the scrollbar, preventing unwanted layout changes as the scrollbar appears and disappears.
 spec: https://drafts.csswg.org/css-overflow-3/#scrollbar-gutter-property
 group: scrolling
+compat_features:
+  - css.properties.scrollbar-gutter
+  - css.properties.scrollbar-gutter.auto
+  - css.properties.scrollbar-gutter.stable
