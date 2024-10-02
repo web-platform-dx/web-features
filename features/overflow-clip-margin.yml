@@ -1,0 +1,9 @@
+name: Overflow clip margin
+description: "The `overflow-clip-margin` CSS property sets how far outside of an element's bounds overflow content will display when clipped by effects such as `overflow: clip`."
+spec: https://drafts.csswg.org/css-overflow-4/#overflow-clip-margin
+group: css
+compat_features:
+  - css.properties.overflow-clip-margin
+  - css.properties.overflow-clip-margin.border-box
+  - css.properties.overflow-clip-margin.content-box
+  - css.properties.overflow-clip-margin.padding-box
