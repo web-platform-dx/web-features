@@ -3850,13 +3850,6 @@ compat_features:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
-  - api.CloseWatcher
-  - api.CloseWatcher.CloseWatcher
-  - api.CloseWatcher.cancel_event
-  - api.CloseWatcher.close
-  - api.CloseWatcher.close_event
-  - api.CloseWatcher.destroy
-  - api.CloseWatcher.requestClose
   - api.HTMLImageElement.sizes.auto
   - api.PageRevealEvent.viewTransition
   - api.PageSwapEvent.viewTransition

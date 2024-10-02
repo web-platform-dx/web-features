@@ -1,0 +1,11 @@
+name: CloseWatcher
+description: "The CloseWatcher interface listens and responds to close requests for developer-implemented user interface components such as sidebars."
+spec: https://html.spec.whatwg.org/multipage/interaction.html#closewatcher
+compat_features:
+  - api.CloseWatcher
+  - api.CloseWatcher.CloseWatcher
+  - api.CloseWatcher.cancel_event
+  - api.CloseWatcher.close
+  - api.CloseWatcher.close_event
+  - api.CloseWatcher.destroy
+  - api.CloseWatcher.requestClose
