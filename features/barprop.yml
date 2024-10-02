@@ -1,6 +1,7 @@
 name: BarProp
-description: "BarProp is an interface implemented by browser user interface components such as the address bar or scrollbars. It has a single property `visible` which is true if the user interface component is visible. While implemented in all major browsers, Apple has disabled the feature by making `visible` always return false for privacy reasons."
+description: "BarProp is implemented by browser UI such as the address bar or scrollbars, historically to represent whether the user interface component was visible. For privacy reasons, the spec was changed to make `visible` represent whether is a popup or not. Apple has not yet implemented the change."
 spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#barprop
 compat_features:
   - api.BarProp
   - api.BarProp.visible
+  - api.BarProp.visible.returns_popup
