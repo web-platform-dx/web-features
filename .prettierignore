@@ -2,6 +2,11 @@
 /**/*.dist
 /**/dist
 
+
+# Exclude the website includes since these are typically fragments, or include
+# things that makes Prettier unhappy.
+/gh-pages/src/_includes/**
+
 # Files/folders that have not yet been formatted
 # TODO: Format all these files
 README.md

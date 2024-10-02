@@ -7,12 +7,14 @@ status:
     chrome: "94"
     chrome_android: "94"
     edge: "94"
+    firefox: "130"
 compat_features:
   # baseline: false
   # support:
   #   chrome: "94"
   #   chrome_android: "94"
   #   edge: "94"
+  #   firefox: "130"
   #   safari: "15.4"
   #   safari_ios: "15.4"
   - api.VideoColorSpace
@@ -27,6 +29,7 @@ compat_features:
   #   chrome: "94"
   #   chrome_android: "94"
   #   edge: "94"
+  #   firefox: "130"
   #   safari: "16.4"
   #   safari_ios: "16.4"
   - api.EncodedVideoChunk
@@ -78,6 +81,7 @@ compat_features:
   #   chrome: "94"
   #   chrome_android: "94"
   #   edge: "94"
+  #   firefox: "130"
   #   safari: "17"
   #   safari_ios: "17"
   - api.VideoColorSpace.VideoColorSpace
@@ -87,6 +91,7 @@ compat_features:
   #   chrome: "106"
   #   chrome_android: "106"
   #   edge: "106"
+  #   firefox: "130"
   #   safari: "16.4"
   #   safari_ios: "16.4"
   - api.VideoDecoder.dequeue_event
@@ -98,6 +103,7 @@ compat_features:
   #   chrome: "94"
   #   chrome_android: "94"
   #   edge: "94"
+  #   firefox: "130"
   - api.AudioData
   - api.AudioData.AudioData
   - api.AudioData.allocationSize
@@ -137,6 +143,21 @@ compat_features:
   - api.EncodedAudioChunk.duration
   - api.EncodedAudioChunk.timestamp
   - api.EncodedAudioChunk.type
+
+  # baseline: false
+  # support:
+  #   chrome: "106"
+  #   chrome_android: "106"
+  #   edge: "106"
+  #   firefox: "130"
+  - api.AudioDecoder.dequeue_event
+  - api.AudioEncoder.dequeue_event
+
+  # baseline: false
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "94"
   - api.ImageDecoder
   - api.ImageDecoder.ImageDecoder
   - api.ImageDecoder.close
@@ -157,14 +178,6 @@ compat_features:
   - api.ImageTrackList.ready
   - api.ImageTrackList.selectedIndex
   - api.ImageTrackList.selectedTrack
-
-  # baseline: false
-  # support:
-  #   chrome: "106"
-  #   chrome_android: "106"
-  #   edge: "106"
-  - api.AudioDecoder.dequeue_event
-  - api.AudioEncoder.dequeue_event
 
   # baseline: false
   # support:

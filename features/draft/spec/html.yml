@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-09-30
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -19,7 +19,6 @@ compat_features:
   - api.CustomElementRegistry.getName
   - api.CustomElementRegistry.upgrade
   - api.CustomElementRegistry.whenDefined
-  - api.DOMException.serializable_object
   - api.DOMParser
   - api.DOMParser.DOMParser
   - api.DOMParser.parseFromString
@@ -263,13 +262,6 @@ compat_features:
   - api.History.replaceState
   - api.History.scrollRestoration
   - api.History.state
-  - api.ImageBitmap
-  - api.ImageBitmap.close
-  - api.ImageBitmap.height
-  - api.ImageBitmap.width
-  - api.ImageBitmapRenderingContext
-  - api.ImageBitmapRenderingContext.canvas
-  - api.ImageBitmapRenderingContext.transferFromImageBitmap
   - api.ImageData
   - api.ImageData.ImageData
   - api.ImageData.colorSpace
@@ -573,7 +565,6 @@ compat_features:
   - api.btoa
   - api.clearInterval
   - api.clearTimeout
-  - api.createImageBitmap
   - api.crossOriginIsolated
   - api.isSecureContext
   - api.origin
@@ -719,16 +710,9 @@ compat_features:
   - http.headers.Permissions-Policy.autoplay
   - http.headers.Permissions-Policy.cross-origin-isolated
   - http.headers.Permissions-Policy.document-domain
-  - http.headers.X-Frame-Options
+  - http.headers.Refresh
   - http.status.103
-  - javascript.builtins.Error.serializable_object
-  - javascript.builtins.EvalError.serializable_object
   - javascript.builtins.Promise.incumbent_settings_object_tracking
-  - javascript.builtins.RangeError.serializable_object
-  - javascript.builtins.ReferenceError.serializable_object
-  - javascript.builtins.SyntaxError.serializable_object
-  - javascript.builtins.TypeError.serializable_object
-  - javascript.builtins.URIError.serializable_object
   - javascript.operators.import_meta
   - javascript.operators.import_meta.resolve
   - svg.elements.image.decoding
@@ -882,6 +866,15 @@ compat_features:
 #   - api.CustomStateSet.values
 #   - api.ElementInternals.states
 #   - css.selectors.state
+# - Serializable errors:
+#   - api.DOMException.serializable_object
+#   - javascript.builtins.Error.serializable_object
+#   - javascript.builtins.EvalError.serializable_object
+#   - javascript.builtins.RangeError.serializable_object
+#   - javascript.builtins.ReferenceError.serializable_object
+#   - javascript.builtins.SyntaxError.serializable_object
+#   - javascript.builtins.TypeError.serializable_object
+#   - javascript.builtins.URIError.serializable_object
 # - requestAnimationFrame() in workers:
 #   - api.DedicatedWorkerGlobalScope.cancelAnimationFrame
 #   - api.DedicatedWorkerGlobalScope.requestAnimationFrame
@@ -1827,6 +1820,15 @@ compat_features:
 #   - api.HTMLTitleElement
 #   - api.HTMLTitleElement.text
 #   - html.elements.title
+# - createImageBitmap:
+#   - api.ImageBitmap
+#   - api.ImageBitmap.close
+#   - api.ImageBitmap.height
+#   - api.ImageBitmap.width
+#   - api.ImageBitmapRenderingContext
+#   - api.ImageBitmapRenderingContext.canvas
+#   - api.ImageBitmapRenderingContext.transferFromImageBitmap
+#   - api.createImageBitmap
 # - Navigation API:
 #   - api.NavigateEvent
 #   - api.NavigateEvent.NavigateEvent

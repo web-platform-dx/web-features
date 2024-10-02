@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-09-30
 name: Scalable Vector Graphics (SVG) 2
 description: TODO
 spec: https://svgwg.org/svg2-draft/
@@ -299,7 +299,6 @@ compat_features:
   - css.properties.marker-end
   - css.properties.marker-mid
   - css.properties.marker-start
-  - css.properties.paint-order
   - css.properties.pointer-events
   - css.properties.r
   - css.properties.rx
@@ -313,7 +312,6 @@ compat_features:
   - css.properties.vector-effect
   - css.properties.x
   - css.properties.y
-  - css.types.basic-shape.path.d
   - svg.elements.a
   - svg.elements.a.href
   - svg.elements.a.systemLanguage
@@ -325,7 +323,6 @@ compat_features:
   - svg.elements.circle.fill
   - svg.elements.circle.fill.context-fill
   - svg.elements.circle.systemLanguage
-  - svg.elements.clipPath.systemLanguage
   - svg.elements.cursor.systemLanguage
   - svg.elements.defs
   - svg.elements.defs.systemLanguage
@@ -437,7 +434,6 @@ compat_features:
   - svg.global_attributes.direction
   - svg.global_attributes.display
   - svg.global_attributes.dominant-baseline
-  - svg.global_attributes.fill-opacity
   - svg.global_attributes.fill-rule
   - svg.global_attributes.id
   - svg.global_attributes.image-rendering
@@ -445,9 +441,7 @@ compat_features:
   - svg.global_attributes.marker-end
   - svg.global_attributes.marker-mid
   - svg.global_attributes.marker-start
-  - svg.global_attributes.opacity
   - svg.global_attributes.overflow
-  - svg.global_attributes.paint-order
   - svg.global_attributes.pointer-events
   - svg.global_attributes.shape-rendering
   - svg.global_attributes.stop-color
@@ -457,16 +451,31 @@ compat_features:
   - svg.global_attributes.stroke-linecap
   - svg.global_attributes.stroke-linejoin
   - svg.global_attributes.stroke-miterlimit
-  - svg.global_attributes.stroke-opacity
   - svg.global_attributes.stroke-width
   - svg.global_attributes.stroke.context-stroke
   - svg.global_attributes.style
   - svg.global_attributes.tabindex
   - svg.global_attributes.text-anchor
   - svg.global_attributes.text-decoration
+  - svg.global_attributes.text-overflow
   - svg.global_attributes.text-rendering
   - svg.global_attributes.transform
   - svg.global_attributes.transform-origin
   - svg.global_attributes.vector-effect
   - svg.global_attributes.visibility
-  - svg.global_attributes.writing-mode
+
+# The following features in the spec are already part of web-features:
+# - paint-order:
+#   - css.properties.paint-order
+#   - svg.global_attributes.paint-order
+# - path():
+#   - css.types.basic-shape.path.d
+# - clip-path:
+#   - svg.elements.clipPath.systemLanguage
+# - Opacity (SVG):
+#   - svg.global_attributes.fill-opacity
+#   - svg.global_attributes.stroke-opacity
+# - opacity:
+#   - svg.global_attributes.opacity
+# - writing-mode:
+#   - svg.global_attributes.writing-mode
