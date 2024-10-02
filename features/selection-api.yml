@@ -1,0 +1,58 @@
+name: Selection
+description: The Selection API controls and modifies user text selections within the page.
+spec: https://w3c.github.io/selection-api/
+caniuse: selection-api
+group: selection
+status:
+  compute_from:
+    # This makes it roughly match caniuse data.
+    - api.Window.getSelection
+    - api.Document.selectionchange_event
+compat_features:
+  - api.Document.getSelection
+  - api.Document.selectionchange_event
+  - api.Selection
+  - api.Selection.addRange
+  - api.Selection.anchorNode
+  - api.Selection.anchorOffset
+  - api.Selection.collapse
+  - api.Selection.collapseToEnd
+  - api.Selection.collapseToStart
+  - api.Selection.containsNode
+  - api.Selection.deleteFromDocument
+  - api.Selection.empty
+  - api.Selection.extend
+  - api.Selection.focusNode
+  - api.Selection.focusOffset
+  - api.Selection.getRangeAt
+  - api.Selection.isCollapsed
+  - api.Selection.rangeCount
+  - api.Selection.removeAllRanges
+  - api.Selection.selectAllChildren
+  - api.Selection.setBaseAndExtent
+  - api.Selection.setPosition
+  - api.Selection.toString
+  - api.Selection.type
+  - api.Window.getSelection
+
+  # The selectionchange events on <input> and <textarea> are not really needed.
+  # The event is fired on document too and his is what developers use.
+  - api.HTMLInputElement.selectionchange_event
+  - api.HTMLTextAreaElement.selectionchange_event
+
+  # The node.selectstart event is not supported on Safari iOS.
+  # Unclear if developers need it because selectionchange is supported.
+  - api.Node.selectstart_event
+
+  # Direction is supported only on Firefox and Safari.
+  # Maybe split into a separate feature.
+  - api.Selection.direction
+
+  # Modify seems like a nice-to-have, you can do the same thing with other methods.
+  # Edge only added support for this in 79, even though the rest of the API was
+  # supported much earlier. And Firefox doesn't support all modify commands.
+  - api.Selection.modify
+
+  # removeRange is baseline low because it was only added in Safari 17.
+  # Maybe split into a separate feature.
+  - api.Selection.removeRange
