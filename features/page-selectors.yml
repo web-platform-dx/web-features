@@ -1,5 +1,5 @@
 name: Page selectors
-description: The `page` CSS property matches a page defined by an `@page` rule. The `:first`, `:left`, and `:right` pseudo-classes match pages based on their position in sequence after pagination.
+description: The `:first`, `:left`, and `:right` pseudo-classes select pages based on their position in sequence after pagination. They're often used with the `page` CSS property, to choose a print layout defined by the `@page` rule.
 spec: https://drafts.csswg.org/css-page-3/#page-selectors
 group:
   - selectors
