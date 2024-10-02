@@ -1,0 +1,10 @@
+name: Text overflow
+description: The `text-overflow` CSS property sets how hidden overflow content is signalled to users. It can be clipped, display an ellipsis (…), or display a custom string.
+spec: https://drafts.csswg.org/css-overflow-4/#text-overflow
+group: css
+caniuse: text-overflow
+compat_features:
+  - css.properties.text-overflow
+  - css.properties.text-overflow.clip
+  - css.properties.text-overflow.ellipsis
+  - svg.global_attributes.text-overflow
