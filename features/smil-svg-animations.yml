@@ -1,4 +1,4 @@
-name: SVG animations
+name: SMIL SVG animations
 description: The `<animate>`, `<animateMotion>`, and `<animateTransform>` SVG elements declaratively animate SVG elements. Also known as SMIL.
 spec: https://svgwg.org/specs/animations/
 caniuse: svg-smil
@@ -7,7 +7,10 @@ group:
   - svg
 # Most features are quite old, but only became baseline when Edge adopted Chromium.
 status:
-  compute_from: api.SVGAnimateElement
+  compute_from: 
+    - svg.elements.animate
+    - svg.elements.animateMotion
+    - svg.elements.animateTransform
 
 compat_features:
   - api.SVGAnimateColorElement
