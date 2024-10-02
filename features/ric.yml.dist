@@ -4,27 +4,10 @@
 status:
   baseline: false
   support:
-    chrome: "118"
-    chrome_android: "118"
-    edge: "118"
+    chrome: "111"
+    chrome_android: "111"
+    edge: "111"
     safari: "17.2"
     safari_ios: "17.2"
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "111"
-  #   chrome_android: "111"
-  #   edge: "111"
-  #   safari: "17.2"
-  #   safari_ios: "17.2"
   - css.types.length.ric
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "118"
-  #   chrome_android: "118"
-  #   edge: "118"
-  #   safari: "17.2"
-  #   safari_ios: "17.2"
-  - api.CSS.ric_static

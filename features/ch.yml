@@ -1,8 +1,6 @@
 name: ch unit
 description: The `ch` CSS length unit is a font-relative length based on the width of the zero (0) character.
 spec: https://drafts.csswg.org/css-values-4/#font-relative-lengths
-status:
-  compute_from: css.types.length.ch
+group: units
 compat_features:
   - css.types.length.ch
-  - api.CSS.ch_static

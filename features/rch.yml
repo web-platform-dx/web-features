@@ -1,8 +1,6 @@
 name: rch unit
-description: The `rch` CSS length unit is a font-relative length equal to the value of the ch unit on the root element. Ch length based on the width of the zero (0) character.
+description: The `rch` CSS length unit is a font-relative length equal to the value of the `ch` unit on the root element. `ch` length is based on the width of the zero (0) character.
 spec: https://drafts.csswg.org/css-values-4/#font-relative-lengths
-status:
-  compute_from: css.types.length.rch
+group: units
 compat_features:
   - css.types.length.rch
-  - api.CSS.rch_static
