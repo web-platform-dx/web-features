@@ -14,56 +14,6 @@ compat_features:
   - api.SVGAngle.value
   - api.SVGAngle.valueAsString
   - api.SVGAngle.valueInSpecifiedUnits
-  - api.SVGAnimatedAngle
-  - api.SVGAnimatedAngle.animVal
-  - api.SVGAnimatedAngle.baseVal
-  - api.SVGAnimatedBoolean
-  - api.SVGAnimatedBoolean.animVal
-  - api.SVGAnimatedBoolean.baseVal
-  - api.SVGAnimatedEnumeration
-  - api.SVGAnimatedEnumeration.animVal
-  - api.SVGAnimatedEnumeration.baseVal
-  - api.SVGAnimatedInteger
-  - api.SVGAnimatedInteger.animVal
-  - api.SVGAnimatedInteger.baseVal
-  - api.SVGAnimatedLength
-  - api.SVGAnimatedLength.animVal
-  - api.SVGAnimatedLength.baseVal
-  - api.SVGAnimatedLengthList
-  - api.SVGAnimatedLengthList.animVal
-  - api.SVGAnimatedLengthList.baseVal
-  - api.SVGAnimatedNumber
-  - api.SVGAnimatedNumber.animVal
-  - api.SVGAnimatedNumber.baseVal
-  - api.SVGAnimatedNumberList
-  - api.SVGAnimatedNumberList.animVal
-  - api.SVGAnimatedNumberList.baseVal
-  - api.SVGAnimatedPreserveAspectRatio
-  - api.SVGAnimatedPreserveAspectRatio.animVal
-  - api.SVGAnimatedPreserveAspectRatio.baseVal
-  - api.SVGAnimatedRect
-  - api.SVGAnimatedRect.animVal
-  - api.SVGAnimatedRect.baseVal
-  - api.SVGAnimatedString
-  - api.SVGAnimatedString.animVal
-  - api.SVGAnimatedString.baseVal
-  - api.SVGAnimatedTransformList
-  - api.SVGAnimatedTransformList.animVal
-  - api.SVGAnimatedTransformList.baseVal
-  - api.SVGAnimateElement
-  - api.SVGAnimateMotionElement
-  - api.SVGAnimateTransformElement
-  - api.SVGAnimationElement
-  - api.SVGAnimationElement.beginElement
-  - api.SVGAnimationElement.beginElementAt
-  - api.SVGAnimationElement.endElement
-  - api.SVGAnimationElement.endElementAt
-  - api.SVGAnimationElement.getCurrentTime
-  - api.SVGAnimationElement.getSimpleDuration
-  - api.SVGAnimationElement.getStartTime
-  - api.SVGAnimationElement.requiredExtensions
-  - api.SVGAnimationElement.systemLanguage
-  - api.SVGAnimationElement.targetElement
   - api.SVGCircleElement
   - api.SVGCircleElement.cx
   - api.SVGCircleElement.cy
@@ -406,10 +356,8 @@ compat_features:
   - api.SVGPointList.removeItem
   - api.SVGPointList.replaceItem
   - api.SVGPolygonElement
-  - api.SVGPolygonElement.animatedPoints
   - api.SVGPolygonElement.points
   - api.SVGPolylineElement
-  - api.SVGPolylineElement.animatedPoints
   - api.SVGPolylineElement.points
   - api.SVGPreserveAspectRatio
   - api.SVGPreserveAspectRatio.align
@@ -453,7 +401,6 @@ compat_features:
   - api.SVGStyleElement.media
   - api.SVGStyleElement.title
   - api.SVGSVGElement
-  - api.SVGSVGElement.animationsPaused
   - api.SVGSVGElement.createSVGAngle
   - api.SVGSVGElement.createSVGLength
   - api.SVGSVGElement.createSVGMatrix
@@ -468,10 +415,8 @@ compat_features:
   - api.SVGSVGElement.getCurrentTime
   - api.SVGSVGElement.getElementById
   - api.SVGSVGElement.height
-  - api.SVGSVGElement.pauseAnimations
   - api.SVGSVGElement.preserveAspectRatio
   - api.SVGSVGElement.setCurrentTime
-  - api.SVGSVGElement.unpauseAnimations
   - api.SVGSVGElement.viewBox
   - api.SVGSVGElement.width
   - api.SVGSVGElement.x
@@ -539,7 +484,27 @@ compat_features:
   - api.SVGViewElement.viewBox
   - css.properties.background-image.svg_images
   - css.properties.background.SVG_image_as_background
+  - css.properties.clip-rule
+  - css.properties.clip-rule.evenodd
+  - css.properties.clip-rule.nonzero
+  - css.properties.fill
+  - css.properties.fill-rule
+  - css.properties.fill-rule.evenodd
+  - css.properties.fill-rule.nonzero
   - css.properties.letter-spacing.svg_elements
+  - css.properties.stroke-dasharray
+  - css.properties.stroke-dasharray.none
+  - css.properties.stroke-dashoffset
+  - css.properties.stroke-linecap
+  - css.properties.stroke-linecap.butt
+  - css.properties.stroke-linecap.round
+  - css.properties.stroke-linecap.square
+  - css.properties.stroke-linejoin
+  - css.properties.stroke-linejoin.bevel
+  - css.properties.stroke-linejoin.miter
+  - css.properties.stroke-linejoin.round
+  - css.properties.stroke-miterlimit
+  - css.properties.stroke-width
   - css.properties.transform-origin.svg_elements
   - css.properties.word-spacing.svg_elements
   - svg.elements.a
@@ -547,33 +512,6 @@ compat_features:
   - svg.elements.a.referrerpolicy
   - svg.elements.a.systemLanguage
   - svg.elements.a.target
-  - svg.elements.animate
-  - svg.elements.animate.attributeName
-  - svg.elements.animate.attributeType
-  - svg.elements.animate.dur
-  - svg.elements.animate.fill
-  - svg.elements.animate.from
-  - svg.elements.animate.href
-  - svg.elements.animate.repeatCount
-  - svg.elements.animate.systemLanguage
-  - svg.elements.animate.to
-  - svg.elements.animateMotion
-  - svg.elements.animateMotion.calcMode
-  - svg.elements.animateMotion.fill
-  - svg.elements.animateMotion.href
-  - svg.elements.animateMotion.keyPoints
-  - svg.elements.animateMotion.origin
-  - svg.elements.animateMotion.path
-  - svg.elements.animateMotion.rotate
-  - svg.elements.animateMotion.systemLanguage
-  - svg.elements.animateTransform
-  - svg.elements.animateTransform.by
-  - svg.elements.animateTransform.fill
-  - svg.elements.animateTransform.from
-  - svg.elements.animateTransform.href
-  - svg.elements.animateTransform.systemLanguage
-  - svg.elements.animateTransform.to
-  - svg.elements.animateTransform.type
   - svg.elements.circle
   - svg.elements.circle.cx
   - svg.elements.circle.cy
@@ -859,7 +797,6 @@ compat_features:
   - svg.elements.view.preserveAspectRatio
   - svg.elements.view.viewBox
   - svg.global_attributes.class
-  - svg.global_attributes.class.animation_support
   - svg.global_attributes.clip-rule
   - svg.global_attributes.color
   - svg.global_attributes.color-interpolation-filters
@@ -903,27 +840,6 @@ compat_features:
   - svg.global_attributes.vector-effect
   - svg.global_attributes.visibility
   - svg.global_attributes.word-spacing
-  - css.properties.clip-rule
-  - css.properties.clip-rule.evenodd
-  - css.properties.clip-rule.nonzero
-  - css.properties.fill
-  - css.properties.fill-rule
-  - css.properties.fill-rule.evenodd
-  - css.properties.fill-rule.nonzero
-  - css.properties.stroke-dasharray
-  - css.properties.stroke-dasharray.none
-  - css.properties.stroke-dashoffset
-  - css.properties.stroke-linecap
-  - css.properties.stroke-linecap.butt
-  - css.properties.stroke-linecap.round
-  - css.properties.stroke-linecap.square
-  - css.properties.stroke-linejoin
-  - css.properties.stroke-linejoin.bevel
-  - css.properties.stroke-linejoin.miter
-  - css.properties.stroke-linejoin.round
-  - css.properties.stroke-miterlimit
-  - css.properties.stroke-width
-  - svg.elements.path.d
   #
   # Included in separate features
   # - svg.global_attributes.font-family

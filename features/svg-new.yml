@@ -1,7 +1,6 @@
 name: SVG New features
 description: Placeholder for non-deprecated, low or false baseline keys.
 spec: ""
-caniuse: ""
 compat_features:
   - api.SVGElement.focus.options_preventScroll_parameter
   - api.SVGStyleElement.disabled
@@ -9,7 +8,6 @@ compat_features:
   - api.SVGStyleElement.sheet
   - api.CanvasRenderingContext2D.drawImage.SVGImageElement_source_image
   - svg.global_attributes.mask
-  - api.createImageBitmap.svgimageelement_as_source_image
   - api.SVGImageElement.crossOrigin
   - svg.elements.image.crossorigin
   - api.SVGFESpecularLightingElement.kernelUnitLengthX
@@ -21,9 +19,6 @@ compat_features:
   - api.SVGSVGElement.checkIntersection
   - api.SVGSVGElement.getEnclosureList
   - api.SVGSVGElement.getIntersectionList
-  - api.SVGAnimationElement.beginEvent_event
-  - api.SVGAnimationElement.endEvent_event
-  - api.SVGAnimationElement.repeatEvent_event
   - svg.elements.path.d.path
   - api.SVGImageElement.decode
   - api.SVGImageElement.decoding
@@ -43,7 +38,6 @@ compat_features:
   - svg.global_attributes.baseline-shift
   - svg.global_attributes.transform-origin
   - css.at-rules.font-face.OpenType_SVG
-  - css.properties.mix-blend-mode.svg_elements
   - api.SVGAElement.rel
   - api.SVGAElement.relList
   - svg.elements.a.rel
@@ -72,8 +66,6 @@ compat_features:
   - svg.elements.script.async
   - svg.elements.script.defer
   - svg.global_attributes.color-interpolation.linearGradient
-  - css.selectors.first-letter.svg_text_element
-  - css.selectors.first-line.svg_text_element
   - svg.global_attributes.color-interpolation
   - svg.global_attributes.color-interpolation.sRGB
   - svg.elements.use.data_uri

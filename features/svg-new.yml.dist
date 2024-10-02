@@ -80,18 +80,6 @@ compat_features:
   # baseline: low
   # baseline_low_date: 2023-12-11
   # support:
-  #   chrome: "59"
-  #   chrome_android: "59"
-  #   edge: "79"
-  #   firefox: "65"
-  #   firefox_android: "65"
-  #   safari: "17.2"
-  #   safari_ios: "17.2"
-  - api.createImageBitmap.svgimageelement_as_source_image
-
-  # baseline: low
-  # baseline_low_date: 2023-12-11
-  # support:
   #   chrome: "118"
   #   chrome_android: "118"
   #   edge: "118"
@@ -149,17 +137,6 @@ compat_features:
   - api.SVGSVGElement.checkIntersection
   - api.SVGSVGElement.getEnclosureList
   - api.SVGSVGElement.getIntersectionList
-
-  # baseline: false
-  # support:
-  #   chrome: "35"
-  #   chrome_android: "35"
-  #   edge: "79"
-  #   firefox: "93"
-  #   firefox_android: "93"
-  - api.SVGAnimationElement.beginEvent_event
-  - api.SVGAnimationElement.endEvent_event
-  - api.SVGAnimationElement.repeatEvent_event
 
   # baseline: false
   # support:
@@ -261,14 +238,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "41"
-  #   edge: "79"
-  #   firefox: "32"
-  #   firefox_android: "32"
-  - css.properties.mix-blend-mode.svg_elements
-
-  # baseline: false
-  # support:
   #   firefox: "61"
   #   firefox_android: "61"
   #   safari: "14"
@@ -354,13 +323,6 @@ compat_features:
   #   firefox: "123"
   #   firefox_android: "123"
   - svg.global_attributes.color-interpolation.linearGradient
-
-  # baseline: false
-  # support:
-  #   firefox: "124"
-  #   firefox_android: "124"
-  - css.selectors.first-letter.svg_text_element
-  - css.selectors.first-line.svg_text_element
 
   # baseline: false
   # support:
