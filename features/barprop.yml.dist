@@ -23,6 +23,12 @@ compat_features:
   #   safari_ios: "1"
   - api.BarProp
   - api.BarProp.visible
+  - api.Window.locationbar
+  - api.Window.menubar
+  - api.Window.personalbar
+  - api.Window.scrollbars
+  - api.Window.statusbar
+  - api.Window.toolbar
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
