@@ -1,0 +1,29 @@
+name: overscroll-behavior
+description: The `overscroll-behavior` CSS property disables default scrolling behaviors when the edges of a scrolling area are reached.
+spec: https://drafts.csswg.org/css-overscroll-1/
+caniuse: css-overscroll-behavior
+group: scrolling
+# TODO: Removed compute_from when https://github.com/mdn/browser-compat-data/issues/24511 resolves incorrect Edge data.
+status:
+  compute_from: css.properties.overscroll-behavior-x
+compat_features:
+  - css.properties.overscroll-behavior
+  - css.properties.overscroll-behavior-block
+  - css.properties.overscroll-behavior-block.auto
+  - css.properties.overscroll-behavior-block.contain
+  - css.properties.overscroll-behavior-block.none
+  - css.properties.overscroll-behavior-inline
+  - css.properties.overscroll-behavior-inline.auto
+  - css.properties.overscroll-behavior-inline.contain
+  - css.properties.overscroll-behavior-inline.none
+  - css.properties.overscroll-behavior-x
+  - css.properties.overscroll-behavior-x.auto
+  - css.properties.overscroll-behavior-x.contain
+  - css.properties.overscroll-behavior-x.none
+  - css.properties.overscroll-behavior-y
+  - css.properties.overscroll-behavior-y.auto
+  - css.properties.overscroll-behavior-y.contain
+  - css.properties.overscroll-behavior-y.none
+  - css.properties.overscroll-behavior.auto
+  - css.properties.overscroll-behavior.contain
+  - css.properties.overscroll-behavior.none

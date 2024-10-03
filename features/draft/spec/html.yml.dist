@@ -196,8 +196,6 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "3"
   #   safari_ios: "1"
-  - api.BarProp
-  - api.BarProp.visible
   - api.HTMLDListElement
   - api.HTMLElement.dir
   - api.HTMLElement.lang
@@ -210,13 +208,7 @@ compat_features:
   - api.Location.assign
   - api.Window.beforeunload_event
   - api.Window.frameElement
-  - api.Window.locationbar
-  - api.Window.menubar
-  - api.Window.personalbar
-  - api.Window.scrollbars
   - api.Window.self
-  - api.Window.statusbar
-  - api.Window.toolbar
   - api.Window.top
   - api.Window.window
 
@@ -838,20 +830,6 @@ compat_features:
   #   safari: "3.1"
   #   safari_ios: "2"
   - api.HTMLSourceElement.media
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "3"
-  #   safari_ios: "1"
-  - api.atob
-  - api.btoa
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -3850,13 +3828,6 @@ compat_features:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
-  - api.CloseWatcher
-  - api.CloseWatcher.CloseWatcher
-  - api.CloseWatcher.cancel_event
-  - api.CloseWatcher.close
-  - api.CloseWatcher.close_event
-  - api.CloseWatcher.destroy
-  - api.CloseWatcher.requestClose
   - api.HTMLImageElement.sizes.auto
   - api.PageRevealEvent.viewTransition
   - api.PageSwapEvent.viewTransition
