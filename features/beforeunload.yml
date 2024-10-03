@@ -1,5 +1,5 @@
 name: Beforeunload
-description: "The `beforeunload` event is fired when the current window, contained document, and associated resources are about to be unloaded."
+description: "The `beforeunload` event is fired when the current window is about to be unloaded. Typically this is done to display a confirmation dialog that asks users to confirm if they really want to leave the page when they try to close or reload it, or navigate somewhere else."
 spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-beforeunloadevent-interface
 # The commented out keys below are deprecated.
 compat_features:
