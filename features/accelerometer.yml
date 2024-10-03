@@ -3,7 +3,9 @@ description: The `Accelerometer`, `LinearAccelerationSensor` and `GravitySensor`
 spec: https://w3c.github.io/accelerometer/
 group: sensors
 status:
-  compute_from: api.Accelerometer.Accelerometer
+  compute_from:
+    - api.Accelerometer.Accelerometer
+    - api.GravitySensor
 compat_features:
   - api.Accelerometer
   - api.Accelerometer.Accelerometer
