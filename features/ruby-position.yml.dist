@@ -10,4 +10,18 @@ status:
     firefox: "38"
     firefox_android: "38"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "84"
+  #   chrome_android: "84"
+  #   edge: "84"
+  #   firefox: "38"
+  #   firefox_android: "38"
   - css.properties.ruby-position
+
+  # baseline: false
+  # support:
+  #   firefox: "88"
+  #   firefox_android: "88"
+  - css.properties.ruby-position.alternate
