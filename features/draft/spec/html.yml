@@ -5,7 +5,6 @@ spec: https://html.spec.whatwg.org/multipage/
 compat_features:
   - api.BarProp
   - api.BarProp.visible
-  - api.BeforeUnloadEvent
   - api.CanvasPattern
   - api.CanvasPattern.setTransform
   - api.CloseWatcher
@@ -475,7 +474,6 @@ compat_features:
   - api.Window
   - api.Window.DOMContentLoaded_event
   - api.Window.alert
-  - api.Window.beforeunload_event
   - api.Window.blur_event
   - api.Window.close
   - api.Window.closed

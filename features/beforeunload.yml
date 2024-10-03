@@ -1,0 +1,6 @@
+name: Beforeunload
+description: "The `beforeunload` event is fired when the current window, contained document, and associated resources are about to be unloaded."
+spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-beforeunloadevent-interface
+compat_features:
+  - api.BeforeUnloadEvent
+  - api.Window.beforeunload_event
