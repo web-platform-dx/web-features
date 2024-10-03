@@ -1,5 +1,5 @@
 name: BarProp
-description: "BarProp is implemented by browser UI such as the address bar or scrollbars, historically to represent whether the user interface component was visible. For privacy reasons, the spec was changed to make `visible` represent whether is a popup or not. Apple has not yet implemented the change."
+description: The `visible` property of the `window.locationbar`, `window.menubar`, `window.personalbar`, `window.scrollbars`, `window.statusbar`, and `window.toolbar` APIs historically represented the visibility of a browser user interface. For privacy reasons, it now represents whether the window is a pop-up.
 spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#barprop
 compat_features:
   - api.BarProp
