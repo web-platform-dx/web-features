@@ -36,7 +36,7 @@ compat_features:
   - api.Window.getSelection
 
   # The selectionchange events on <input> and <textarea> are not really needed.
-  # The event is fired on document too and his is what developers use.
+  # The event is fired on document too and this is what developers use.
   - api.HTMLInputElement.selectionchange_event
   - api.HTMLTextAreaElement.selectionchange_event
 
