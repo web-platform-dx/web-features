@@ -1,0 +1,15 @@
+name: ImageData
+description: "`ImageData` represents pixel data for a particular area inside a `Canvas` element, in order to  manipulate that part of the canvas or draw images to it."
+spec: https://html.spec.whatwg.org/multipage/canvas.html#pixel-manipulation
+group: canvas
+# `.colorspace` is not yet implemented in Firefox but the core feature is
+# baseline high for a long time.
+status:
+  compute_from: api.ImageData
+compat_features:
+  - api.ImageData
+  - api.ImageData.ImageData
+  - api.ImageData.colorSpace
+  - api.ImageData.data
+  - api.ImageData.height
+  - api.ImageData.width
