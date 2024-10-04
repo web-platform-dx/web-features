@@ -3,7 +3,6 @@ name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
-  - api.BeforeUnloadEvent
   - api.CanvasPattern
   - api.CanvasPattern.setTransform
   - api.CustomElementRegistry.get
@@ -466,7 +465,6 @@ compat_features:
   - api.Window
   - api.Window.DOMContentLoaded_event
   - api.Window.alert
-  - api.Window.beforeunload_event
   - api.Window.blur_event
   - api.Window.close
   - api.Window.closed
