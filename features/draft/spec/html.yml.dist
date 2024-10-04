@@ -206,7 +206,6 @@ compat_features:
   - api.HTMLOptionsCollection.length
   - api.HTMLOptionsCollection.selectedIndex
   - api.Location.assign
-  - api.Window.beforeunload_event
   - api.Window.frameElement
   - api.Window.self
   - api.Window.top
@@ -1561,19 +1560,6 @@ compat_features:
   #   safari: "8"
   #   safari_ios: "8"
   - api.Document.currentScript
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "30"
-  #   chrome_android: "30"
-  #   edge: "12"
-  #   firefox: "1.5"
-  #   firefox_android: "4"
-  #   safari: "7"
-  #   safari_ios: "7"
-  - api.BeforeUnloadEvent
 
   # baseline: high
   # baseline_low_date: 2015-07-29
