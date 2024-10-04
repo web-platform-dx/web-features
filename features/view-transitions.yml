@@ -1,31 +1,17 @@
 name: View transitions
-description: View transitions allow you to create animated visual transitions between different states of a document, or between different documents.
-spec:
-  - https://drafts.csswg.org/css-view-transitions-1/
-  - https://drafts.csswg.org/css-view-transitions-2/
+description: View transitions allow you to create animated visual transitions between different states of a document.
+spec: https://drafts.csswg.org/css-view-transitions-1/
 caniuse: view-transitions
-group: css
-status:
-  compute_from: api.ViewTransition
+group: transitions
 compat_features:
-  - api.CSSViewTransitionRule
-  - api.CSSViewTransitionRule.navigation
-  - api.CSSViewTransitionRule.types
   - api.Document.startViewTransition
   - api.ViewTransition
   - api.ViewTransition.finished
   - api.ViewTransition.ready
   - api.ViewTransition.skipTransition
-  - api.ViewTransition.types
   - api.ViewTransition.updateCallbackDone
-  - api.ViewTransitionTypeSet
-  - css.at-rules.view-transition
-  - css.properties.view-transition-class
-  - css.properties.view-transition-class.none
   - css.properties.view-transition-name
   - css.properties.view-transition-name.none
-  - css.selectors.active-view-transition
-  - css.selectors.active-view-transition-type
   - css.selectors.view-transition
   - css.selectors.view-transition-group
   - css.selectors.view-transition-image-pair

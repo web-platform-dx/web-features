@@ -1,0 +1,11 @@
+name: Cross-document view transitions
+description: The `@view-transition` CSS rule sets whether a document opts-in to cross-document view transitions. Both the old and new document must opt-in for a transition to be triggered.
+spec: https://drafts.csswg.org/css-view-transitions-2/#cross-doc-opt-in
+group: transitions
+compat_features:
+  - api.CSSViewTransitionRule
+  - api.CSSViewTransitionRule.navigation
+  - api.CSSViewTransitionRule.types
+  - api.ViewTransition.types
+  - api.ViewTransitionTypeSet
+  - css.at-rules.view-transition
