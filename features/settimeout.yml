@@ -1,0 +1,9 @@
+# BCD: https://github.com/mdn/browser-compat-data/tree/main/api/_globals/setTimeout.json
+# MDN: https://developer.mozilla.org/docs/Web/API/setTimeout
+# CIU: https://caniuse.com/?search=setTimeout
+name: setTimeout
+description: "The `setTimeout()` global function executes provided code after a given duration of time, and the accompanying `clearTimeout()` cancels the timer."
+spec: https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#dom-settimeout-dev
+compat_features:
+  - api.setTimeout
+  - api.clearTimeout
