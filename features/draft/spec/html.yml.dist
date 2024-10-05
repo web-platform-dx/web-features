@@ -83,9 +83,6 @@ compat_features:
   - api.Window.open
   - api.Window.opener
   - api.Window.prompt
-  - api.clearInterval
-  - api.setInterval
-  - api.setTimeout
   - css.selectors.active
   - css.selectors.focus
   - css.selectors.visited
@@ -268,19 +265,6 @@ compat_features:
   #   safari: ≤4
   #   safari_ios: "1"
   - api.HTMLFormControlsCollection
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "1"
-  - api.clearTimeout
 
   # baseline: high
   # baseline_low_date: 2015-07-29
