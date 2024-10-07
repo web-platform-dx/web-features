@@ -8,6 +8,7 @@ on:
 
 jobs:
   update-drafts:
+    if: github.repository == 'web-platform-dx/web-features'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
