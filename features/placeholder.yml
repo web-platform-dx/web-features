@@ -1,0 +1,8 @@
+name: ::placeholder
+description: The `::placeholder` CSS pseudo-element selects help text in `<input>` and `<textarea>` elements when no value is set.
+spec: https://drafts.csswg.org/css-pseudo-4/#placeholder-pseudo
+caniuse: css-placeholder
+group: selectors
+# TODO: create some kind of "input placeholders" feature when https://github.com/web-platform-dx/web-features/issues/971 is resolved, combining placeholder selectors and the element attr
+compat_features:
+  - css.selectors.placeholder
