@@ -1,0 +1,11 @@
+name: PostMessage
+description: "xxx"
+spec: https://html.spec.whatwg.org/multipage/web-messaging.html#web-messaging
+caniuse: x-doc-messaging
+group: messaging
+#status:
+#  compute_from:
+compat_features:
+  - api.DedicatedWorkerGlobalScope.postMessage
+  - api.Window.postMessage
+  - api.Worker.postMessage
