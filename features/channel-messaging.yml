@@ -1,0 +1,25 @@
+# BCD: https://github.com/mdn/browser-compat-data/tree/main/api/MessagePort.json
+# MDN: https://developer.mozilla.org/docs/Web/API/MessagePort
+# CIU: https://caniuse.com/?search=MessagePort
+name: Channel Messaging
+description: "The MessagePort interface of the Channel Messaging API represents one of the two ports of a MessageChannel, allowing messages to be sent from one port and listening out for them arriving at the other."
+spec: https://html.spec.whatwg.org/multipage/web-messaging.html#message-ports
+# BCD: https://github.com/mdn/browser-compat-data/tree/main/api/MessageChannel.json
+# MDN: https://developer.mozilla.org/docs/Web/API/MessageChannel
+# CIU: https://caniuse.com/?search=MessageChannel
+#description: "The MessageChannel interface of the Channel Messaging API allows us to create a new message channel and send data through it via its two MessagePort properties."
+#spec: https://html.spec.whatwg.org/multipage/web-messaging.html#message-channels
+#caniuse:
+group: messaging
+#status:
+#  compute_from:
+compat_features:
+  - api.MessageChannel
+  - api.MessageChannel.MessageChannel
+  - api.MessageChannel.port1
+  - api.MessageChannel.port2
+  - api.MessagePort
+  - api.MessagePort.close
+  - api.MessagePort.message_event
+  - api.MessagePort.postMessage
+  - api.MessagePort.start

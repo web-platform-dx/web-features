@@ -1,0 +1,18 @@
+# BCD: https://github.com/mdn/browser-compat-data/tree/main/api/MessageEvent.json
+# MDN: https://developer.mozilla.org/docs/Web/API/MessageEvent
+# CIU: https://caniuse.com/?search=MessageEvent
+name: MessageEvent
+description: "The MessageEvent interface represents a message received by a target object."
+spec: https://html.spec.whatwg.org/multipage/comms.html#the-messageevent-interface
+#caniuse:
+group: messaging
+#status:
+#  compute_from:
+compat_features:
+  - api.MessageEvent
+  - api.MessageEvent.MessageEvent
+  - api.MessageEvent.data
+  - api.MessageEvent.lastEventId
+  - api.MessageEvent.origin
+  - api.MessageEvent.ports
+  - api.MessageEvent.source
