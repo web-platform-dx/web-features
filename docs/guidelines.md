@@ -260,17 +260,13 @@ Follow these guidelines when setting a `caniuse` value:
 - Do not set a `caniuse` value if the Can I Use feature is merely related to the feature.
   For example, in [`grid.yml`](../features/grid.yml), do not set `caniuse: css-subgrid`.
 
-- Do not set a `caniuse` value if the top-level headline `status` would not be accurate with respect to the table on Can I Use.
-  For example, if Can I Use shows that a core browser set browser does not support a feature but web-features's status reports that the feature is Baseline high, then do not set the `caniuse` value for that feature.
+- Do not set a `caniuse` value if the top-level headline `status` would not accurately reflect whether each browser is shown as supported on Can I Use.
 
-- Do not set a `caniuse` value if the top-level headline status's first-supported release (for example, the value of `status.support.safari`) differs from Can I Use's first-supported release by:
+  For example, if Can I Use shows that a core browser set browser does not support a feature but web-features's status reports that the feature is Baseline high, then either do not set the `caniuse` value for that feature or submit a correction to Can I Use or browser-compat-data.
 
-  - More than one release for releases since 2020
-  - More than one year for releases before 2020
+- Do not set a `caniuse` value if the top-level headline `status` would not accurately reflect when a feature was last introduced to core browser set (the [keystone release](./baseline.md#interoperable-low-status) version number).
 
-  This means there's a major disagreement—and a likely error—in mdn/browser-compat-data or Can I Use.
-
-  If you see a discrepancy between Can I Use and a computed status that is less than one year for releases before 2020, please make a note of it in [#1499](https://github.com/web-platform-dx/web-features/issues/1499).
+  For example, if Can I Use shows that Edge 79 introduced a feature, then the headline status must also show that Edge 79 introduced the feature.
 
 - Do use `compute_from` to improve the correspondence of a feature's top-level headline status with Can I Use data.
   Use this in cases where later additions, such as the introduction of a minor property or method, brings the statuses out of alignment.
@@ -279,6 +275,10 @@ Follow these guidelines when setting a `caniuse` value:
   Can I Use isn't perfect.
   Don't use `compute_from` in a way that would not make sense if the corresponding `caniuse` value didn't exist (for example, by pinning support before the introduction of an essential component of the feature).
   In such situations, it's better to comment out the `caniuse` value, make a `TODO` comment, and open an issue about why you did it.
+
+If you see a discrepancy between Can I Use and a computed status that is less than one year for releases before 2020, please make a note of it in [#1499](https://github.com/web-platform-dx/web-features/issues/1499).
+
+See also: [#1880](https://github.com/web-platform-dx/web-features/issues/1880).
 
 ## Groups
 
