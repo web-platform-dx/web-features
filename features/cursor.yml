@@ -7,10 +7,8 @@ caniuse:
   - css3-cursors-newer
 group: css
 # Baseline is delayed by support in Firefox for Android.
-# Most properties are not supported on Safari iOS.
-# compute_from to match caniuse css3-cursors.
-status:
-  compute_from: css.properties.cursor.none
+# TODO: Most properties are not supported on Safari iOS, revisit when form factor can be taken into account for Baseline.
+# See https://github.com/web-platform-dx/web-features/issues/1038.
 compat_features:
   - css.properties.cursor
   - css.properties.cursor.alias
