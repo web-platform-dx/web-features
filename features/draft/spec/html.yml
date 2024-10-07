@@ -1,20 +1,10 @@
-draft_date: 2024-09-30
+draft_date: 2024-10-07
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
-  - api.BarProp
-  - api.BarProp.visible
-  - api.BeforeUnloadEvent
   - api.CanvasPattern
   - api.CanvasPattern.setTransform
-  - api.CloseWatcher
-  - api.CloseWatcher.CloseWatcher
-  - api.CloseWatcher.cancel_event
-  - api.CloseWatcher.close
-  - api.CloseWatcher.close_event
-  - api.CloseWatcher.destroy
-  - api.CloseWatcher.requestClose
   - api.CustomElementRegistry.get
   - api.CustomElementRegistry.getName
   - api.CustomElementRegistry.upgrade
@@ -253,15 +243,6 @@ compat_features:
   - api.HashChangeEvent.HashChangeEvent
   - api.HashChangeEvent.newURL
   - api.HashChangeEvent.oldURL
-  - api.History
-  - api.History.back
-  - api.History.forward
-  - api.History.go
-  - api.History.length
-  - api.History.pushState
-  - api.History.replaceState
-  - api.History.scrollRestoration
-  - api.History.state
   - api.ImageData
   - api.ImageData.ImageData
   - api.ImageData.colorSpace
@@ -475,7 +456,6 @@ compat_features:
   - api.Window
   - api.Window.DOMContentLoaded_event
   - api.Window.alert
-  - api.Window.beforeunload_event
   - api.Window.blur_event
   - api.Window.close
   - api.Window.closed
@@ -493,8 +473,6 @@ compat_features:
   - api.Window.load_event
   - api.Window.localStorage
   - api.Window.location
-  - api.Window.locationbar
-  - api.Window.menubar
   - api.Window.message_event
   - api.Window.name
   - api.Window.navigator
@@ -508,18 +486,14 @@ compat_features:
   - api.Window.pageshow_event
   - api.Window.pageswap_event
   - api.Window.parent
-  - api.Window.personalbar
   - api.Window.popstate_event
   - api.Window.postMessage
   - api.Window.prompt
   - api.Window.rejectionhandled_event
-  - api.Window.scrollbars
   - api.Window.self
   - api.Window.sessionStorage
-  - api.Window.statusbar
   - api.Window.stop
   - api.Window.storage_event
-  - api.Window.toolbar
   - api.Window.top
   - api.Window.unhandledrejection_event
   - api.Window.window
@@ -561,17 +535,11 @@ compat_features:
   - api.Worklet
   - api.Worklet.addModule
   - api.WorkletGlobalScope
-  - api.atob
-  - api.btoa
-  - api.clearInterval
-  - api.clearTimeout
   - api.crossOriginIsolated
   - api.isSecureContext
   - api.origin
   - api.queueMicrotask
   - api.reportError
-  - api.setInterval
-  - api.setTimeout
   - css.selectors.active
   - css.selectors.checked
   - css.selectors.disabled
@@ -746,6 +714,18 @@ compat_features:
 #   - api.VideoTrackList.length
 #   - api.VideoTrackList.removetrack_event
 #   - api.VideoTrackList.selectedIndex
+# - BarProp:
+#   - api.BarProp
+#   - api.BarProp.visible
+#   - api.Window.locationbar
+#   - api.Window.menubar
+#   - api.Window.personalbar
+#   - api.Window.scrollbars
+#   - api.Window.statusbar
+#   - api.Window.toolbar
+# - Beforeunload:
+#   - api.BeforeUnloadEvent
+#   - api.Window.beforeunload_event
 # - BroadcastChannel:
 #   - api.BroadcastChannel
 #   - api.BroadcastChannel.BroadcastChannel
@@ -847,6 +827,14 @@ compat_features:
 # - Canvas roundRect():
 #   - api.CanvasRenderingContext2D.roundRect
 #   - api.OffscreenCanvasRenderingContext2D.roundRect
+# - CloseWatcher:
+#   - api.CloseWatcher
+#   - api.CloseWatcher.CloseWatcher
+#   - api.CloseWatcher.cancel_event
+#   - api.CloseWatcher.close
+#   - api.CloseWatcher.close_event
+#   - api.CloseWatcher.destroy
+#   - api.CloseWatcher.requestClose
 # - Autonomous custom elements:
 #   - api.CustomElementRegistry
 #   - api.CustomElementRegistry.define
@@ -1820,6 +1808,16 @@ compat_features:
 #   - api.HTMLTitleElement
 #   - api.HTMLTitleElement.text
 #   - html.elements.title
+# - History:
+#   - api.History
+#   - api.History.back
+#   - api.History.forward
+#   - api.History.go
+#   - api.History.length
+#   - api.History.pushState
+#   - api.History.replaceState
+#   - api.History.scrollRestoration
+#   - api.History.state
 # - createImageBitmap:
 #   - api.ImageBitmap
 #   - api.ImageBitmap.close
@@ -1893,6 +1891,15 @@ compat_features:
 #   - api.Window.requestAnimationFrame
 # - window.print():
 #   - api.Window.print
+# - Base64 encoding and decoding:
+#   - api.atob
+#   - api.btoa
+# - setInterval:
+#   - api.clearInterval
+#   - api.setInterval
+# - setTimeout:
+#   - api.clearTimeout
+#   - api.setTimeout
 # - structuredClone():
 #   - api.structuredClone
 # - :autofill:
