@@ -9,3 +9,11 @@ spec: https://drafts.csswg.org/css-color-adjust-1/#color-scheme-prop
 # 2022-02-03 (Chrome 98). Since this is less than a month's difference and the
 # opt-out could be important for some developers, the later date is accepted.
 group: css
+compat_features:
+  - html.elements.meta.name.color-scheme
+  - css.properties.color-scheme
+  - css.properties.color-scheme.only_dark
+  - css.properties.color-scheme.only_light
+  - css.properties.color-scheme.dark
+  - css.properties.color-scheme.light
+  - css.properties.color-scheme.normal
