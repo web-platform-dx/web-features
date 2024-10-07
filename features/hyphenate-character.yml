@@ -1,0 +1,10 @@
+name: Hyphenate character
+description: The CSS `hyphenate character` property tells the browser what character (or string) to use at the end of a line before a hyphenation break.
+spec: https://drafts.csswg.org/css-text-4/#hyphenate-character
+status:
+  compute_from: css.properties.hyphenate-character
+compat_features:
+  - css.properties.hyphenate-character
+  - css.properties.hyphenate-character.auto
+  - css.properties.hyphenate-limit-chars
+  - css.properties.hyphenate-limit-chars.auto
