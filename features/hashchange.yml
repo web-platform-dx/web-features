@@ -1,0 +1,9 @@
+name: HashChangeEvent
+description: "The `HashChangeEvent` is emitted when the fragment identifier of the current page URL has changed."
+spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-hashchangeevent-interface
+caniuse: hashchange
+compat_features:
+  - api.HashChangeEvent
+  - api.HashChangeEvent.HashChangeEvent
+  - api.HashChangeEvent.newURL
+  - api.HashChangeEvent.oldURL
