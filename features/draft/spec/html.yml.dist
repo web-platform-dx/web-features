@@ -1205,8 +1205,6 @@ compat_features:
   #   firefox_android: "6"
   #   safari: "5.1"
   #   safari_ios: "5"
-  - api.DOMStringMap
-  - api.HTMLElement.dataset
   - html.global_attributes.data_attributes
 
   # baseline: high
@@ -2166,19 +2164,6 @@ compat_features:
   - html.elements.input.minlength
 
   # baseline: high
-  # baseline_low_date: 2018-04-30
-  # baseline_high_date: 2020-10-30
-  # support:
-  #   chrome: "55"
-  #   chrome_android: "55"
-  #   edge: "17"
-  #   firefox: "51"
-  #   firefox_android: "51"
-  #   safari: "5.1"
-  #   safari_ios: "5"
-  - api.SVGElement.dataset
-
-  # baseline: high
   # baseline_low_date: 2018-05-09
   # baseline_high_date: 2020-11-09
   # support:
@@ -3021,7 +3006,6 @@ compat_features:
   #   safari: "13.1"
   #   safari_ios: "13.4"
   - api.MathMLElement.blur
-  - api.MathMLElement.dataset
   - api.MathMLElement.focus
   - api.MathMLElement.tabIndex
 
