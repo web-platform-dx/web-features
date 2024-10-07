@@ -1,4 +1,4 @@
-draft_date: 2024-09-30
+draft_date: 2024-10-07
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -714,6 +714,18 @@ compat_features:
 #   - api.VideoTrackList.length
 #   - api.VideoTrackList.removetrack_event
 #   - api.VideoTrackList.selectedIndex
+# - BarProp:
+#   - api.BarProp
+#   - api.BarProp.visible
+#   - api.Window.locationbar
+#   - api.Window.menubar
+#   - api.Window.personalbar
+#   - api.Window.scrollbars
+#   - api.Window.statusbar
+#   - api.Window.toolbar
+# - Beforeunload:
+#   - api.BeforeUnloadEvent
+#   - api.Window.beforeunload_event
 # - BroadcastChannel:
 #   - api.BroadcastChannel
 #   - api.BroadcastChannel.BroadcastChannel
@@ -815,6 +827,14 @@ compat_features:
 # - Canvas roundRect():
 #   - api.CanvasRenderingContext2D.roundRect
 #   - api.OffscreenCanvasRenderingContext2D.roundRect
+# - CloseWatcher:
+#   - api.CloseWatcher
+#   - api.CloseWatcher.CloseWatcher
+#   - api.CloseWatcher.cancel_event
+#   - api.CloseWatcher.close
+#   - api.CloseWatcher.close_event
+#   - api.CloseWatcher.destroy
+#   - api.CloseWatcher.requestClose
 # - Autonomous custom elements:
 #   - api.CustomElementRegistry
 #   - api.CustomElementRegistry.define
@@ -1788,6 +1808,16 @@ compat_features:
 #   - api.HTMLTitleElement
 #   - api.HTMLTitleElement.text
 #   - html.elements.title
+# - History:
+#   - api.History
+#   - api.History.back
+#   - api.History.forward
+#   - api.History.go
+#   - api.History.length
+#   - api.History.pushState
+#   - api.History.replaceState
+#   - api.History.scrollRestoration
+#   - api.History.state
 # - createImageBitmap:
 #   - api.ImageBitmap
 #   - api.ImageBitmap.close
@@ -1861,6 +1891,15 @@ compat_features:
 #   - api.Window.requestAnimationFrame
 # - window.print():
 #   - api.Window.print
+# - Base64 encoding and decoding:
+#   - api.atob
+#   - api.btoa
+# - setInterval:
+#   - api.clearInterval
+#   - api.setInterval
+# - setTimeout:
+#   - api.clearTimeout
+#   - api.setTimeout
 # - structuredClone():
 #   - api.structuredClone
 # - :autofill:
