@@ -3,12 +3,12 @@
 
 status:
   baseline: high
-  baseline_low_date: 2020-01-15
-  baseline_high_date: 2022-07-15
+  baseline_low_date: 2015-07-29
+  baseline_high_date: 2018-01-29
   support:
     chrome: "18"
     chrome_android: "18"
-    edge: "79"
+    edge: "12"
     firefox: "1"
     firefox_android: "4"
     safari: "1.3"
@@ -42,6 +42,7 @@ compat_features:
   #   safari_ios: "1"
   - css.properties.min-height
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -54,6 +55,7 @@ compat_features:
   #   safari: "1.3"
   #   safari_ios: "1"
   - css.properties.max-height
+  - css.properties.max-height.none
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -66,27 +68,5 @@ compat_features:
   #   firefox_android: "34"
   #   safari: "7"
   #   safari_ios: "7"
-  - css.properties.min-width.auto
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "18"
-  #   chrome_android: "18"
-  #   edge: "79"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "1.3"
-  #   safari_ios: "1"
-  - css.properties.max-height.none
-
-  # baseline: false
-  # support:
-  #   chrome: "21"
-  #   chrome_android: "25"
-  #   edge: "79"
-  #   safari: "7"
-  #   safari_ios: "7"
   - css.properties.min-height.auto
+  - css.properties.min-width.auto

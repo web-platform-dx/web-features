@@ -24,10 +24,27 @@ compat_features:
   #   firefox_android: "59"
   #   safari: "16"
   #   safari_ios: "16"
+  - css.properties.overscroll-behavior
   - css.properties.overscroll-behavior-x
   - css.properties.overscroll-behavior-x.auto
   - css.properties.overscroll-behavior-x.contain
+  - css.properties.overscroll-behavior-y
+
+  # baseline: low
+  # baseline_low_date: 2022-09-12
+  # support:
+  #   chrome: "63"
+  #   chrome_android: "63"
+  #   edge: "79"
+  #   firefox: "59"
+  #   firefox_android: "59"
+  #   safari: "16"
+  #   safari_ios: "16"
   - css.properties.overscroll-behavior-x.none
+  - css.properties.overscroll-behavior-y.auto
+  - css.properties.overscroll-behavior.auto
+  - css.properties.overscroll-behavior.contain
+  - css.properties.overscroll-behavior.none
 
   # baseline: low
   # baseline_low_date: 2022-09-12
@@ -48,28 +65,26 @@ compat_features:
   - css.properties.overscroll-behavior-inline.contain
   - css.properties.overscroll-behavior-inline.none
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2022-09-12
   # support:
-  #   chrome: "63"
-  #   chrome_android: "63"
+  #   chrome: ≤83
+  #   chrome_android: "83"
+  #   edge: "79"
   #   firefox: "59"
   #   firefox_android: "59"
   #   safari: "16"
   #   safari_ios: "16"
-  - css.properties.overscroll-behavior
-  - css.properties.overscroll-behavior-y
-  - css.properties.overscroll-behavior-y.auto
-  - css.properties.overscroll-behavior.auto
-  - css.properties.overscroll-behavior.contain
-  - css.properties.overscroll-behavior.none
+  - css.properties.overscroll-behavior-y.none
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2022-09-12
   # support:
   #   chrome: ≤83
   #   chrome_android: "83"
+  #   edge: "83"
   #   firefox: "59"
   #   firefox_android: "59"
   #   safari: "16"
   #   safari_ios: "16"
   - css.properties.overscroll-behavior-y.contain
-  - css.properties.overscroll-behavior-y.none
