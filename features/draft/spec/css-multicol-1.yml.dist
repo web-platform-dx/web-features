@@ -43,7 +43,10 @@ compat_features:
   #   safari: "9"
   #   safari_ios: "9"
   - css.properties.column-count
+  - css.properties.column-count.auto
   - css.properties.column-fill
+  - css.properties.column-fill.auto
+  - css.properties.column-fill.balance
   - css.properties.column-rule
   - css.properties.column-rule-color
   - css.properties.column-rule-style
@@ -64,19 +67,6 @@ compat_features:
   - css.properties.column-gap.multicol_context
 
   # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "50"
-  #   chrome_android: "50"
-  #   edge: "79"
-  #   firefox: "52"
-  #   firefox_android: "52"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - css.properties.column-count.auto
-
-  # baseline: high
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
   # support:
@@ -88,32 +78,6 @@ compat_features:
   #   safari: "9"
   #   safari_ios: "9"
   - css.properties.column-span
-
-  # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
-  # support:
-  #   chrome: "50"
-  #   chrome_android: "50"
-  #   edge: "12"
-  #   firefox: ≤72
-  #   firefox_android: "79"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - css.properties.column-fill.auto
-  - css.properties.column-fill.balance
-
-  # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
-  # support:
-  #   chrome: "50"
-  #   chrome_android: "50"
-  #   edge: "79"
-  #   firefox: "71"
-  #   firefox_android: "79"
-  #   safari: "9"
-  #   safari_ios: "9"
   - css.properties.column-span.all
   - css.properties.column-span.none
 

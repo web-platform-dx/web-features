@@ -37,12 +37,10 @@ compat_features:
 
   # baseline: false
   # support:
-  #   safari: "12.1"
-  #   safari_ios: "13"
-  - css.at-rules.media.prefers-color-scheme.no-preference
-
-  # baseline: false
-  # support:
   #   firefox: "105"
   #   firefox_android: "105"
   - css.at-rules.media.prefers-color-scheme.respects-inherited-scheme
+
+  # baseline: false
+  # support: {}
+  - css.at-rules.media.prefers-color-scheme.no-preference
