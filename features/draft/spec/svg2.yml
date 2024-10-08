@@ -384,7 +384,7 @@ compat_features:
   - svg.global_attributes.color-interpolation
   - svg.global_attributes.color-interpolation.linearGradient
   - svg.global_attributes.color-interpolation.sRGB
-  - svg.global_attributes.data
+  - svg.global_attributes.data_attributes
   - svg.global_attributes.direction
   - svg.global_attributes.display
   - svg.global_attributes.dominant-baseline
@@ -416,7 +416,6 @@ compat_features:
   - svg.global_attributes.transform-origin
   - svg.global_attributes.vector-effect
   - svg.global_attributes.visibility
-
 # The following features in the spec are already part of web-features:
 # - SMIL SVG animations:
 #   - api.SVGAnimatedAngle
