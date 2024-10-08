@@ -1,13 +1,10 @@
-# BCD: https://github.com/mdn/browser-compat-data/tree/main/api/EventSource.json
-# MDN: https://developer.mozilla.org/docs/Web/API/EventSource
-# CIU: https://caniuse.com/?search=EventSource
-name: EventSource
-description: "The EventSource interface is web content&#x27;s interface to server-sent events."
-spec: https://html.spec.whatwg.org/multipage/server-sent-events.html#the-eventsource-interface
-#caniuse:
+name: Server-sent events
+description: "The `EventSource` API creates a persistent one-way connection to the originating server for receiving streams of events."
+spec: https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events
+caniuse: eventsource
 group: messaging
-#status:
-#  compute_from:
+status:
+  compute_from: api.EventSource
 compat_features:
   - api.EventSource
   - api.EventSource.EventSource

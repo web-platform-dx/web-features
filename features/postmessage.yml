@@ -1,14 +1,16 @@
 name: PostMessage
-description: "xxx"
+description: "The `postMessage()` method safely enables cross-origin communication for windows and workers, including popups and iframes."
 spec: https://html.spec.whatwg.org/multipage/web-messaging.html#web-messaging
 caniuse: x-doc-messaging
 group: messaging
-#status:
-#  compute_from:
+# Anchor baseline on window support.
+status:
+  compute_from: api.Window.postMessage
 compat_features:
   # Already generated in Broadcast channel.
   # Revisit once the "keys in impl or feature" question is answered.
   #- api.BroadcastChannel.postMessage
   - api.DedicatedWorkerGlobalScope.postMessage
+  - api.MessagePort.postMessage
   - api.Window.postMessage
   - api.Worker.postMessage

@@ -6,14 +6,15 @@ status:
   baseline_low_date: 2020-01-15
   baseline_high_date: 2022-07-15
   support:
-    chrome: "26"
-    chrome_android: "26"
+    chrome: "6"
+    chrome_android: "18"
     edge: "79"
     firefox: "6"
     firefox_android: "45"
-    safari: "7"
-    safari_ios: "7"
+    safari: "5"
+    safari_ios: "5"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
@@ -46,7 +47,6 @@ compat_features:
   #   safari_ios: "6"
   - api.EventSource.url
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
