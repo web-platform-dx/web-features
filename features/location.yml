@@ -1,9 +1,9 @@
 name: Location
-description: "The `Location` global object represents the current address of the web page loaded in the browser. It makes all component parts of the address accessible and can be manipulated to initiate navigations."
+description: The `location` global object represents the current page's address. You can use it to get the parts of the address (such as `location.hostname` or `location.pathname`) or navigate to another URL.
 spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-location-interface
 # `ancestorOrigins` makes this baseline false but is not required for usage of the feature.
 status:
-  compute_from: api.Location
+  compute_from: api.Window.location
 compat_features:
   - api.Document.location
   - api.Location
