@@ -5,6 +5,7 @@ spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-location-
 status:
   compute_from: api.Location
 compat_features:
+  - api.Document.location
   - api.Location
   - api.Location.ancestorOrigins
   - api.Location.assign
@@ -20,3 +21,4 @@ compat_features:
   - api.Location.replace
   - api.Location.search
   - api.Location.toString
+  - api.Window.location
