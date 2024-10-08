@@ -40,7 +40,6 @@ compat_features:
   - api.DataTransferItemList.remove
   - api.DedicatedWorkerGlobalScope
   - api.DedicatedWorkerGlobalScope.close
-  - api.DedicatedWorkerGlobalScope.message_event
   - api.DedicatedWorkerGlobalScope.name
   - api.Document
   - api.Document.DOMContentLoaded_event
@@ -447,7 +446,6 @@ compat_features:
   - api.Window.load_event
   - api.Window.localStorage
   - api.Window.location
-  - api.Window.message_event
   - api.Window.name
   - api.Window.navigator
   - api.Window.offline_event
@@ -473,7 +471,6 @@ compat_features:
   - api.Worker
   - api.Worker.Worker
   - api.Worker.error_event
-  - api.Worker.message_event
   - api.Worker.messageerror_event
   - api.Worker.terminate
   - api.WorkerGlobalScope

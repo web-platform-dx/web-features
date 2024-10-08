@@ -881,10 +881,8 @@ compat_features:
   #   safari_ios: "5"
   - api.DedicatedWorkerGlobalScope
   - api.DedicatedWorkerGlobalScope.close
-  - api.DedicatedWorkerGlobalScope.message_event
   - api.Worker.Worker
   - api.Worker.error_event
-  - api.Worker.message_event
   - api.WorkerGlobalScope
   - api.WorkerGlobalScope.error_event
   - api.WorkerGlobalScope.location
@@ -1908,19 +1906,6 @@ compat_features:
   #   safari_ios: ≤10.3
   - html.elements.meta.http-equiv.content-security-policy
   - html.elements.meta.http-equiv.content-type
-
-  # baseline: high
-  # baseline_low_date: 2017-08-01
-  # baseline_high_date: 2020-02-01
-  # support:
-  #   chrome: "60"
-  #   chrome_android: "60"
-  #   edge: "12"
-  #   firefox: "9"
-  #   firefox_android: "9"
-  #   safari: "4"
-  #   safari_ios: "4"
-  - api.Window.message_event
 
   # baseline: high
   # baseline_low_date: 2017-10-17

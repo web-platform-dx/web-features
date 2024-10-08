@@ -6,6 +6,7 @@ group: messaging
 #status:
 #  compute_from:
 compat_features:
+  - api.BroadcastChannel.postMessage
   - api.DedicatedWorkerGlobalScope.postMessage
   - api.Window.postMessage
   - api.Worker.postMessage

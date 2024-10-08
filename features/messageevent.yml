@@ -9,6 +9,8 @@ group: messaging
 #status:
 #  compute_from:
 compat_features:
+  - api.BroadcastChannel.message_event
+  - api.DedicatedWorkerGlobalScope.message_event
   - api.MessageEvent
   - api.MessageEvent.MessageEvent
   - api.MessageEvent.data
@@ -16,3 +18,5 @@ compat_features:
   - api.MessageEvent.origin
   - api.MessageEvent.ports
   - api.MessageEvent.source
+  - api.Window.message_event
+  - api.Worker.message_event
