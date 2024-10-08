@@ -3,16 +3,16 @@
 
 status:
   baseline: high
-  baseline_low_date: 2022-03-14
-  baseline_high_date: 2024-09-14
+  baseline_low_date: 2018-04-30
+  baseline_high_date: 2020-10-30
   support:
     chrome: "60"
     chrome_android: "60"
-    edge: "79"
-    firefox: "38"
-    firefox_android: "38"
-    safari: "15.4"
-    safari_ios: "15.4"
+    edge: "17"
+    firefox: "26"
+    firefox_android: "26"
+    safari: "6"
+    safari_ios: "6"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -95,16 +95,3 @@ compat_features:
   #   safari: "4"
   #   safari_ios: "3.2"
   - api.MessageEvent.lastEventId
-
-  # baseline: high
-  # baseline_low_date: 2022-03-14
-  # baseline_high_date: 2024-09-14
-  # support:
-  #   chrome: "54"
-  #   chrome_android: "54"
-  #   edge: "79"
-  #   firefox: "38"
-  #   firefox_android: "38"
-  #   safari: "15.4"
-  #   safari_ios: "15.4"
-  - api.BroadcastChannel.message_event

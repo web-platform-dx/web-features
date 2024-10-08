@@ -6,7 +6,9 @@ group: messaging
 #status:
 #  compute_from:
 compat_features:
-  - api.BroadcastChannel.postMessage
+  # Already generated in Broadcast channel.
+  # Revisit once the "keys in impl or feature" question is answered.
+  #- api.BroadcastChannel.postMessage
   - api.DedicatedWorkerGlobalScope.postMessage
   - api.Window.postMessage
   - api.Worker.postMessage
