@@ -2,3 +2,8 @@ name: scrollbar-width
 description: The `scrollbar-width` CSS property sets the width of the scrollbar.
 spec: https://drafts.csswg.org/css-scrollbars-1/#scrollbar-width
 group: scrolling
+compat_features:
+  - css.properties.scrollbar-width
+  - css.properties.scrollbar-width.auto
+  - css.properties.scrollbar-width.none
+  - css.properties.scrollbar-width.thin

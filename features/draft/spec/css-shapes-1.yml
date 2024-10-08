@@ -1,11 +1,8 @@
-draft_date: 2024-09-23
+draft_date: 2024-09-30
 name: CSS Shapes Module Level 1
 description: TODO
 spec: https://drafts.csswg.org/css-shapes-1/
 compat_features:
-  - css.types.basic-shape.path
-  - css.types.basic-shape.path.clip-path
-  - css.types.basic-shape.path.shape-outside
   - css.types.basic-shape.shape
   - svg.elements.path.d.path
 
@@ -26,3 +23,7 @@ compat_features:
 #   - css.types.basic-shape.polygon
 #   - css.types.basic-shape.rect
 #   - css.types.basic-shape.xywh
+# - path():
+#   - css.types.basic-shape.path
+#   - css.types.basic-shape.path.clip-path
+#   - css.types.basic-shape.path.shape-outside
