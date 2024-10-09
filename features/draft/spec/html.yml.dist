@@ -24,7 +24,6 @@ compat_features:
   - api.Document.images
   - api.Document.lastModified
   - api.Document.links
-  - api.Document.location
   - api.Document.referrer
   - api.Document.title
   - api.Document.write
@@ -47,17 +46,6 @@ compat_features:
   - api.HTMLInputElement.src
   - api.HTMLInputElement.type
   - api.HTMLInputElement.value
-  - api.Location
-  - api.Location.hash
-  - api.Location.host
-  - api.Location.hostname
-  - api.Location.href
-  - api.Location.pathname
-  - api.Location.port
-  - api.Location.protocol
-  - api.Location.reload
-  - api.Location.replace
-  - api.Location.search
   - api.Navigator
   - api.Navigator.language
   - api.Navigator.userAgent
@@ -72,7 +60,6 @@ compat_features:
   - api.Window.frames
   - api.Window.history
   - api.Window.length
-  - api.Window.location
   - api.Window.name
   - api.Window.navigator
   - api.Window.open
@@ -197,7 +184,6 @@ compat_features:
   - api.HTMLOptionsCollection.add
   - api.HTMLOptionsCollection.length
   - api.HTMLOptionsCollection.selectedIndex
-  - api.Location.assign
   - api.Window.frameElement
   - api.Window.self
   - api.Window.top
@@ -1189,8 +1175,6 @@ compat_features:
   #   firefox_android: "6"
   #   safari: "5.1"
   #   safari_ios: "5"
-  - api.DOMStringMap
-  - api.HTMLElement.dataset
   - html.global_attributes.data_attributes
 
   # baseline: high
@@ -1205,19 +1189,6 @@ compat_features:
   #   safari: "5.1"
   #   safari_ios: "5"
   - html.elements.input.type_number
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "8"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "21"
-  #   firefox_android: "21"
-  #   safari: "5.1"
-  #   safari_ios: "5"
-  - api.Location.origin
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -1602,19 +1573,6 @@ compat_features:
   #   safari_ios: "9.3"
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes
-
-  # baseline: high
-  # baseline_low_date: 2016-07-27
-  # baseline_high_date: 2019-01-27
-  # support:
-  #   chrome: "52"
-  #   chrome_android: "52"
-  #   edge: "12"
-  #   firefox: "22"
-  #   firefox_android: "22"
-  #   safari: "1"
-  #   safari_ios: "1"
-  - api.Location.toString
 
   # baseline: high
   # baseline_low_date: 2016-08-02
@@ -2095,19 +2053,6 @@ compat_features:
   #   safari_ios: "10.3"
   - api.HTMLInputElement.minLength
   - html.elements.input.minlength
-
-  # baseline: high
-  # baseline_low_date: 2018-04-30
-  # baseline_high_date: 2020-10-30
-  # support:
-  #   chrome: "55"
-  #   chrome_android: "55"
-  #   edge: "17"
-  #   firefox: "51"
-  #   firefox_android: "51"
-  #   safari: "5.1"
-  #   safari_ios: "5"
-  - api.SVGElement.dataset
 
   # baseline: high
   # baseline_low_date: 2018-05-09
@@ -2952,7 +2897,6 @@ compat_features:
   #   safari: "13.1"
   #   safari_ios: "13.4"
   - api.MathMLElement.blur
-  - api.MathMLElement.dataset
   - api.MathMLElement.focus
   - api.MathMLElement.tabIndex
 
@@ -3236,15 +3180,6 @@ compat_features:
   #   firefox_android: "18"
   #   safari_ios: ≤11.3
   - html.elements.input.type_month
-
-  # baseline: false
-  # support:
-  #   chrome: "20"
-  #   chrome_android: "25"
-  #   edge: "79"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - api.Location.ancestorOrigins
 
   # baseline: false
   # support:
