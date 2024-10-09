@@ -1,10 +1,11 @@
-# Name
-#
-#
 name: Storage
-description: TODO
+description: "`Storage` is for access and maniupulation of a particular domain's session or local storage, include the addition, modification, or deletion of stored data using name/value pairs."
 spec: https://storage.spec.whatwg.org/
 group: storage
+caniuse: namevalue-storage
+# Computing from here aligns the feature with Caniuse
+status:
+  compute_from: api.Storage
 compat_features:
   - api.Navigator.storage
   - api.Storage
@@ -20,6 +21,11 @@ compat_features:
   - api.StorageEvent.oldValue
   - api.StorageEvent.storageArea
   - api.StorageEvent.url
+  - api.StorageManager
+  - api.StorageManager.estimate
+  - api.StorageManager.persist
+  - api.StorageManager.persisted
   - api.Window.localStorage
   - api.Window.sessionStorage
   - api.Window.storage_event
+  - api.WorkerNavigator.storage
