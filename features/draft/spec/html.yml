@@ -1,25 +1,14 @@
-draft_date: 2024-08-19
+draft_date: 2024-10-07
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
-  - api.BarProp
-  - api.BarProp.visible
-  - api.BeforeUnloadEvent
   - api.CanvasPattern
   - api.CanvasPattern.setTransform
-  - api.CloseWatcher
-  - api.CloseWatcher.CloseWatcher
-  - api.CloseWatcher.cancel_event
-  - api.CloseWatcher.close
-  - api.CloseWatcher.close_event
-  - api.CloseWatcher.destroy
-  - api.CloseWatcher.requestClose
   - api.CustomElementRegistry.get
   - api.CustomElementRegistry.getName
   - api.CustomElementRegistry.upgrade
   - api.CustomElementRegistry.whenDefined
-  - api.DOMException.serializable_object
   - api.DOMParser
   - api.DOMParser.DOMParser
   - api.DOMParser.parseFromString
@@ -27,7 +16,6 @@ compat_features:
   - api.DOMStringList.contains
   - api.DOMStringList.item
   - api.DOMStringList.length
-  - api.DOMStringMap
   - api.DataTransfer
   - api.DataTransfer.DataTransfer
   - api.DataTransfer.clearData
@@ -93,8 +81,6 @@ compat_features:
   - api.Element.auxclick_event
   - api.Element.beforematch_event
   - api.Element.blur_event
-  - api.Element.copy_event
-  - api.Element.cut_event
   - api.Element.focus_event
   - api.Element.getHTML
   - api.Element.innerHTML
@@ -102,7 +88,6 @@ compat_features:
   - api.Element.keydown_event
   - api.Element.keyup_event
   - api.Element.outerHTML
-  - api.Element.paste_event
   - api.Element.scroll_event
   - api.Element.securitypolicyviolation_event
   - api.Element.wheel_event
@@ -147,7 +132,6 @@ compat_features:
   - api.HTMLElement.change_event
   - api.HTMLElement.click
   - api.HTMLElement.contentEditable
-  - api.HTMLElement.dataset
   - api.HTMLElement.dir
   - api.HTMLElement.drag_event
   - api.HTMLElement.dragend_event
@@ -168,11 +152,9 @@ compat_features:
   - api.HTMLElement.outerText
   - api.HTMLElement.spellcheck
   - api.HTMLElement.title
-  - api.HTMLElement.writingSuggestions
   - api.HTMLFormControlsCollection
   - api.HTMLFormControlsCollection.namedItem
   - api.HTMLIFrameElement.sandbox
-  - api.HTMLIFrameElement.srcdoc
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes
   - api.HTMLImageElement.sizes.auto
@@ -225,10 +207,6 @@ compat_features:
   - api.HTMLInputElement.valueAsDate
   - api.HTMLInputElement.valueAsNumber
   - api.HTMLInputElement.width
-  - api.HTMLLabelElement
-  - api.HTMLLabelElement.control
-  - api.HTMLLabelElement.form
-  - api.HTMLLabelElement.htmlFor
   - api.HTMLMediaElement.getStartDate
   - api.HTMLMediaElement.srcObject
   - api.HTMLMediaElement.textTracks
@@ -259,32 +237,6 @@ compat_features:
   - api.HTMLTemplateElement.shadowRootSerializable
   - api.HTMLUnknownElement
   - api.HTMLVideoElement.playsInline
-  - api.HashChangeEvent
-  - api.HashChangeEvent.HashChangeEvent
-  - api.HashChangeEvent.newURL
-  - api.HashChangeEvent.oldURL
-  - api.History
-  - api.History.back
-  - api.History.forward
-  - api.History.go
-  - api.History.length
-  - api.History.pushState
-  - api.History.replaceState
-  - api.History.scrollRestoration
-  - api.History.state
-  - api.ImageBitmap
-  - api.ImageBitmap.close
-  - api.ImageBitmap.height
-  - api.ImageBitmap.width
-  - api.ImageBitmapRenderingContext
-  - api.ImageBitmapRenderingContext.canvas
-  - api.ImageBitmapRenderingContext.transferFromImageBitmap
-  - api.ImageData
-  - api.ImageData.ImageData
-  - api.ImageData.colorSpace
-  - api.ImageData.data
-  - api.ImageData.height
-  - api.ImageData.width
   - api.Location
   - api.Location.ancestorOrigins
   - api.Location.assign
@@ -301,7 +253,6 @@ compat_features:
   - api.Location.search
   - api.Location.toString
   - api.MathMLElement.blur
-  - api.MathMLElement.dataset
   - api.MathMLElement.focus
   - api.MathMLElement.nonce
   - api.MathMLElement.tabIndex
@@ -435,7 +386,6 @@ compat_features:
   - api.RadioNodeList.value
   - api.Range.createContextualFragment
   - api.SVGElement.blur
-  - api.SVGElement.dataset
   - api.SVGElement.focus
   - api.SVGElement.nonce
   - api.SVGElement.tabIndex
@@ -492,7 +442,6 @@ compat_features:
   - api.Window
   - api.Window.DOMContentLoaded_event
   - api.Window.alert
-  - api.Window.beforeunload_event
   - api.Window.blur_event
   - api.Window.close
   - api.Window.closed
@@ -510,8 +459,6 @@ compat_features:
   - api.Window.load_event
   - api.Window.localStorage
   - api.Window.location
-  - api.Window.locationbar
-  - api.Window.menubar
   - api.Window.message_event
   - api.Window.name
   - api.Window.navigator
@@ -525,18 +472,14 @@ compat_features:
   - api.Window.pageshow_event
   - api.Window.pageswap_event
   - api.Window.parent
-  - api.Window.personalbar
   - api.Window.popstate_event
   - api.Window.postMessage
   - api.Window.prompt
   - api.Window.rejectionhandled_event
-  - api.Window.scrollbars
   - api.Window.self
   - api.Window.sessionStorage
-  - api.Window.statusbar
   - api.Window.stop
   - api.Window.storage_event
-  - api.Window.toolbar
   - api.Window.top
   - api.Window.unhandledrejection_event
   - api.Window.window
@@ -578,18 +521,11 @@ compat_features:
   - api.Worklet
   - api.Worklet.addModule
   - api.WorkletGlobalScope
-  - api.atob
-  - api.btoa
-  - api.clearInterval
-  - api.clearTimeout
-  - api.createImageBitmap
   - api.crossOriginIsolated
   - api.isSecureContext
   - api.origin
   - api.queueMicrotask
   - api.reportError
-  - api.setInterval
-  - api.setTimeout
   - css.selectors.active
   - css.selectors.checked
   - css.selectors.disabled
@@ -628,7 +564,6 @@ compat_features:
   - html.elements.iframe.sandbox.allow-top-navigation
   - html.elements.iframe.sandbox.allow-top-navigation-by-user-activation
   - html.elements.iframe.sandbox.allow-top-navigation-to-custom-protocols
-  - html.elements.iframe.srcdoc
   - html.elements.img.sizes
   - html.elements.img.sizes.auto
   - html.elements.img.srcset
@@ -679,8 +614,6 @@ compat_features:
   - html.elements.input.type_time
   - html.elements.input.type_url
   - html.elements.input.type_week
-  - html.elements.label
-  - html.elements.label.for
   - html.elements.link.rel.alternate_stylesheet
   - html.elements.link.rel.dns-prefetch
   - html.elements.link.rel.expect
@@ -731,16 +664,9 @@ compat_features:
   - http.headers.Permissions-Policy.autoplay
   - http.headers.Permissions-Policy.cross-origin-isolated
   - http.headers.Permissions-Policy.document-domain
-  - http.headers.X-Frame-Options
+  - http.headers.Refresh
   - http.status.103
-  - javascript.builtins.Error.serializable_object
-  - javascript.builtins.EvalError.serializable_object
   - javascript.builtins.Promise.incumbent_settings_object_tracking
-  - javascript.builtins.RangeError.serializable_object
-  - javascript.builtins.ReferenceError.serializable_object
-  - javascript.builtins.SyntaxError.serializable_object
-  - javascript.builtins.TypeError.serializable_object
-  - javascript.builtins.URIError.serializable_object
   - javascript.operators.import_meta
   - javascript.operators.import_meta.resolve
   - svg.elements.image.decoding
@@ -774,6 +700,18 @@ compat_features:
 #   - api.VideoTrackList.length
 #   - api.VideoTrackList.removetrack_event
 #   - api.VideoTrackList.selectedIndex
+# - BarProp:
+#   - api.BarProp
+#   - api.BarProp.visible
+#   - api.Window.locationbar
+#   - api.Window.menubar
+#   - api.Window.personalbar
+#   - api.Window.scrollbars
+#   - api.Window.statusbar
+#   - api.Window.toolbar
+# - Beforeunload:
+#   - api.BeforeUnloadEvent
+#   - api.Window.beforeunload_event
 # - BroadcastChannel:
 #   - api.BroadcastChannel
 #   - api.BroadcastChannel.BroadcastChannel
@@ -875,6 +813,14 @@ compat_features:
 # - Canvas roundRect():
 #   - api.CanvasRenderingContext2D.roundRect
 #   - api.OffscreenCanvasRenderingContext2D.roundRect
+# - CloseWatcher:
+#   - api.CloseWatcher
+#   - api.CloseWatcher.CloseWatcher
+#   - api.CloseWatcher.cancel_event
+#   - api.CloseWatcher.close
+#   - api.CloseWatcher.close_event
+#   - api.CloseWatcher.destroy
+#   - api.CloseWatcher.requestClose
 # - Autonomous custom elements:
 #   - api.CustomElementRegistry
 #   - api.CustomElementRegistry.define
@@ -894,6 +840,15 @@ compat_features:
 #   - api.CustomStateSet.values
 #   - api.ElementInternals.states
 #   - css.selectors.state
+# - Serializable errors:
+#   - api.DOMException.serializable_object
+#   - javascript.builtins.Error.serializable_object
+#   - javascript.builtins.EvalError.serializable_object
+#   - javascript.builtins.RangeError.serializable_object
+#   - javascript.builtins.ReferenceError.serializable_object
+#   - javascript.builtins.SyntaxError.serializable_object
+#   - javascript.builtins.TypeError.serializable_object
+#   - javascript.builtins.URIError.serializable_object
 # - requestAnimationFrame() in workers:
 #   - api.DedicatedWorkerGlobalScope.cancelAnimationFrame
 #   - api.DedicatedWorkerGlobalScope.requestAnimationFrame
@@ -918,6 +873,10 @@ compat_features:
 #   - api.Element.mouseout_event
 #   - api.Element.mouseover_event
 #   - api.Element.mouseup_event
+# - Clipboard events:
+#   - api.Element.copy_event
+#   - api.Element.cut_event
+#   - api.Element.paste_event
 # - input (event):
 #   - api.Element.input_event
 # - Form-associated custom elements:
@@ -1226,6 +1185,8 @@ compat_features:
 #   - api.HTMLDetailsElement
 #   - api.HTMLDetailsElement.open
 #   - html.elements.details
+# - Mutually exclusive <details> elements:
+#   - api.HTMLDetailsElement.name
 # - <dialog>:
 #   - api.HTMLDialogElement
 #   - api.HTMLDialogElement.cancel_event
@@ -1253,6 +1214,9 @@ compat_features:
 # - translate attribute:
 #   - api.HTMLElement.translate
 #   - html.global_attributes.translate
+# - writingsuggestions:
+#   - api.HTMLElement.writingSuggestions
+#   - html.global_attributes.writingsuggestions
 # - <embed>:
 #   - api.HTMLEmbedElement
 #   - api.HTMLEmbedElement.getSVGDocument
@@ -1351,6 +1315,9 @@ compat_features:
 #   - api.HTMLImageElement.loading
 #   - html.elements.iframe.loading
 #   - html.elements.img.loading
+# - srcdoc:
+#   - api.HTMLIFrameElement.srcdoc
+#   - html.elements.iframe.srcdoc
 # - <img>:
 #   - api.HTMLImageElement
 #   - api.HTMLImageElement.Image
@@ -1400,6 +1367,13 @@ compat_features:
 #   - html.elements.ol.start
 #   - html.elements.ol.type
 #   - html.elements.ul
+# - <label>:
+#   - api.HTMLLabelElement
+#   - api.HTMLLabelElement.control
+#   - api.HTMLLabelElement.form
+#   - api.HTMLLabelElement.htmlFor
+#   - html.elements.label
+#   - html.elements.label.for
 # - <link>:
 #   - api.HTMLLinkElement
 #   - api.HTMLLinkElement.as
@@ -1820,6 +1794,25 @@ compat_features:
 #   - api.HTMLTitleElement
 #   - api.HTMLTitleElement.text
 #   - html.elements.title
+# - History:
+#   - api.History
+#   - api.History.back
+#   - api.History.forward
+#   - api.History.go
+#   - api.History.length
+#   - api.History.pushState
+#   - api.History.replaceState
+#   - api.History.scrollRestoration
+#   - api.History.state
+# - createImageBitmap:
+#   - api.ImageBitmap
+#   - api.ImageBitmap.close
+#   - api.ImageBitmap.height
+#   - api.ImageBitmap.width
+#   - api.ImageBitmapRenderingContext
+#   - api.ImageBitmapRenderingContext.canvas
+#   - api.ImageBitmapRenderingContext.transferFromImageBitmap
+#   - api.createImageBitmap
 # - Navigation API:
 #   - api.NavigateEvent
 #   - api.NavigateEvent.NavigateEvent
@@ -1884,10 +1877,27 @@ compat_features:
 #   - api.Window.requestAnimationFrame
 # - window.print():
 #   - api.Window.print
+# - Base64 encoding and decoding:
+#   - api.atob
+#   - api.btoa
+# - setInterval:
+#   - api.clearInterval
+#   - api.setInterval
+# - setTimeout:
+#   - api.clearTimeout
+#   - api.setTimeout
 # - structuredClone():
 #   - api.structuredClone
 # - :autofill:
 #   - css.selectors.autofill
+# - Media element pseudo-classes:
+#   - css.selectors.buffering
+#   - css.selectors.muted
+#   - css.selectors.paused
+#   - css.selectors.playing
+#   - css.selectors.seeking
+#   - css.selectors.stalled
+#   - css.selectors.volume-locked
 # - :default:
 #   - css.selectors.default
 # - :dir():

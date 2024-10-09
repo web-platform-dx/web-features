@@ -1,0 +1,13 @@
+name: Clipboard events
+description: The `"copy"`, `"cut"`, and `"paste"` events fire on elements when the user starts an action with the clipboard.
+spec: https://w3c.github.io/clipboard-apis/#clipboard-event-interfaces
+group: clipboard
+status:
+  compute_from: api.ClipboardEvent
+compat_features:
+  - api.ClipboardEvent
+  - api.ClipboardEvent.ClipboardEvent
+  - api.ClipboardEvent.clipboardData
+  - api.Element.copy_event
+  - api.Element.cut_event
+  - api.Element.paste_event

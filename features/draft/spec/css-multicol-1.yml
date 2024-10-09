@@ -1,4 +1,4 @@
-draft_date: 2024-08-19
+draft_date: 2024-09-30
 name: CSS Multi-column Layout Module Level 1
 description: TODO
 spec: https://drafts.csswg.org/css-multicol-1/
@@ -21,7 +21,6 @@ compat_features:
   - css.properties.column-span.none
   - css.properties.column-width
   - css.properties.columns
-  - css.properties.widows
 
 # The following features in the spec are already part of web-features:
 # - Page breaks:
@@ -39,3 +38,5 @@ compat_features:
 #   - css.properties.column-gap.flex_context
 # - Grid:
 #   - css.properties.column-gap.grid_context
+# - Widows and orphans:
+#   - css.properties.widows

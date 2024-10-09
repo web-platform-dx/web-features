@@ -1,0 +1,6 @@
+name: Promise.try()
+description: The `Promise.try()` static method returns a promise that takes a callback of any kind (returns or throws, synchronously or asynchronously) and wraps its result in a `Promise`.
+spec: https://tc39.es/proposal-promise-try/
+group: promises
+compat_features:
+  - javascript.builtins.Promise.try

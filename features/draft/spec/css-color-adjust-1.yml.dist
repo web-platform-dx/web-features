@@ -3,32 +3,12 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "97"
+    firefox_android: "97"
+    safari: "15.4"
+    safari_ios: "15.4"
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "89"
-  #   chrome_android: "89"
-  #   edge: "79"
-  #   firefox: "113"
-  #   firefox_android: "113"
-  - css.properties.forced-color-adjust
-  - css.properties.forced-color-adjust.auto
-  - css.properties.forced-color-adjust.none
-
-  # baseline: false
-  # support:
-  #   firefox: "97"
-  #   firefox_android: "97"
-  #   safari: "15.4"
-  #   safari_ios: "15.4"
   - css.properties.print-color-adjust
   - css.properties.print-color-adjust.economy
   - css.properties.print-color-adjust.exact
-
-  # baseline: false
-  # support:
-  #   chrome: "106"
-  #   chrome_android: "106"
-  #   edge: "106"
-  - css.properties.forced-color-adjust.preserve-parent-color

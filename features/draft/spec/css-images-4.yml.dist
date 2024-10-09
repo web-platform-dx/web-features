@@ -71,8 +71,6 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "6"
   #   safari_ios: "6"
-  - css.properties.image-rendering
-  - css.properties.image-rendering.auto
   - svg.global_attributes.image-rendering
 
   # baseline: high
@@ -94,48 +92,6 @@ compat_features:
   - css.properties.object-fit.scale-down
   - css.properties.object-position
 
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "37"
-  #   chrome_android: "37"
-  #   edge: "79"
-  #   firefox: "62"
-  #   firefox_android: "62"
-  #   safari: "10.1"
-  #   safari_ios: "10.3"
-  - css.properties.shape-outside.gradient
-  - css.properties.shape-outside.image
-
-  # baseline: high
-  # baseline_low_date: 2020-04-13
-  # baseline_high_date: 2022-10-13
-  # support:
-  #   chrome: "81"
-  #   chrome_android: "81"
-  #   edge: "81"
-  #   firefox: "26"
-  #   firefox_android: "26"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
-  - css.properties.image-orientation
-  - css.properties.image-orientation.from-image
-  - css.properties.image-orientation.none
-
-  # baseline: high
-  # baseline_low_date: 2021-10-05
-  # baseline_high_date: 2024-04-05
-  # support:
-  #   chrome: "41"
-  #   chrome_android: "41"
-  #   edge: "79"
-  #   firefox: "93"
-  #   firefox_android: "93"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - css.properties.image-rendering.pixelated
-
   # baseline: false
   # support:
   #   chrome: "26"
@@ -147,34 +103,12 @@ compat_features:
 
   # baseline: false
   # support:
-  #   firefox: "65"
-  #   firefox_android: "65"
-  #   safari: "7"
-  #   safari_ios: "7"
-  - css.properties.image-rendering.crisp-edges
-
-  # baseline: false
-  # support:
   #   chrome: "104"
   #   chrome_android: "104"
   #   edge: "104"
   - css.properties.object-view-box.none
 
-  # baseline: false
-  # support:
-  #   safari: "10"
-  #   safari_ios: "9.3"
-  - css.types.image.cross-fade
-
-  # baseline: false
-  # support:
-  #   firefox: "93"
-  #   firefox_android: "93"
-  - css.properties.image-rendering.smooth
-
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - css.properties.background-image.element
-  - css.types.image.element
   - css.types.image.image

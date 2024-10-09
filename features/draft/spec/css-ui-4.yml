@@ -1,4 +1,4 @@
-draft_date: 2024-08-19
+draft_date: 2024-09-30
 name: CSS Basic User Interface Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-ui-4/
@@ -39,14 +39,7 @@ compat_features:
   - css.properties.cursor.wait
   - css.properties.cursor.zoom-in
   - css.properties.cursor.zoom-out
-  - css.properties.outline
-  - css.properties.outline-color
-  - css.properties.outline-offset
-  - css.properties.outline-style
-  - css.properties.outline-style.auto
-  - css.properties.outline-width
   - css.properties.pointer-events
-  - css.properties.user-select
   - svg.global_attributes.cursor
 
 # The following features in the spec are already part of web-features:
@@ -73,5 +66,15 @@ compat_features:
 #   - css.properties.field-sizing
 #   - css.properties.field-sizing.content
 #   - css.properties.field-sizing.fixed
+# - outline:
+#   - css.properties.outline
+# - Outlines:
+#   - css.properties.outline-color
+#   - css.properties.outline-offset
+#   - css.properties.outline-style
+#   - css.properties.outline-style.auto
+#   - css.properties.outline-width
 # - resize (CSS property):
 #   - css.properties.resize
+# - user-select:
+#   - css.properties.user-select

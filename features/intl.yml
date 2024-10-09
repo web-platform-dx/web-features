@@ -78,6 +78,7 @@ compat_features:
   - javascript.builtins.Intl.NumberFormat.formatRangeToParts
   - javascript.builtins.Intl.NumberFormat.formatToParts
   - javascript.builtins.Intl.NumberFormat.resolvedOptions
+  - javascript.builtins.Intl.NumberFormat.supportedLocalesOf
   - javascript.builtins.Array.toLocaleString
   - javascript.builtins.Array.toLocaleString.locales_parameter
   - javascript.builtins.Array.toLocaleString.options_parameter
@@ -104,7 +105,7 @@ compat_features:
   - javascript.builtins.String.localeCompare.locales_parameter
   - javascript.builtins.String.localeCompare.options_parameter
   - javascript.builtins.String.toLocaleLowerCase
-  - javascript.builtins.String.toLocaleLowerCase.locale
+  - javascript.builtins.String.toLocaleLowerCase.locales_parameter
   - javascript.builtins.String.toLocaleUpperCase
-  - javascript.builtins.String.toLocaleUpperCase.locale
+  - javascript.builtins.String.toLocaleUpperCase.locales_parameter
   - javascript.builtins.TypedArray.toLocaleString
