@@ -1,11 +1,12 @@
 name: Gradients
-description: The `linear-gradient()`, `radial-gradient()` CSS functions and their repeating counterparts create background that progress smoothly between multiple colors.
+description: The `linear-gradient()` and `radial-gradient()` CSS functions and their repeating counterparts create backgrounds that progress smoothly between multiple colors.
 spec: https://drafts.csswg.org/css-images-3/#gradients
-# Todo: caniuse support needs to be reconciled for Safari and Firefox.
+# TODO: caniuse support needs to be reconciled for Safari and Firefox.
 # caniuse: css-gradients
 group: gradients
 status:
   compute_from: css.types.image.gradient
+# TODO: we should have separate linear and radial gradients when https://github.com/web-platform-dx/web-features/issues/971 is resolved.
 compat_features:
   - css.properties.background-image.gradients
   - css.types.image.gradient
