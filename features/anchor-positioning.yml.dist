@@ -137,6 +137,7 @@ compat_features:
   # support:
   #   chrome: "128"
   #   chrome_android: "128"
+  #   edge: "128"
   - css.properties.position-try-fallbacks
   - css.properties.position-try-fallbacks.flip-block
   - css.properties.position-try-fallbacks.flip-inline
@@ -145,10 +146,12 @@ compat_features:
   - css.properties.position-try-fallbacks.position-area
 
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "129"
+  #   chrome_android: "129"
+  #   edge: "129"
   - api.CSSPositionTryDescriptors.position-area
   - api.CSSPositionTryDescriptors.positionArea
-  - css.properties.position-anchor.auto
   - css.properties.position-area
   - css.properties.position-area.block-end
   - css.properties.position-area.block-start
@@ -185,3 +188,7 @@ compat_features:
   - css.properties.position-area.y-self-end
   - css.properties.position-area.y-self-start
   - css.properties.position-area.y-start
+
+  # baseline: false
+  # support: {}
+  - css.properties.position-anchor.auto

@@ -44,6 +44,22 @@ compat_features:
   # baseline: low
   # baseline_low_date: 2023-09-18
   # support:
+  #   chrome: "98"
+  #   chrome_android: "98"
+  #   edge: "98"
+  #   firefox: "107"
+  #   firefox_android: "107"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - css.properties.contain-intrinsic-block-size.none
+  - css.properties.contain-intrinsic-height.none
+  - css.properties.contain-intrinsic-inline-size.none
+  - css.properties.contain-intrinsic-size.none
+  - css.properties.contain-intrinsic-width.none
+
+  # baseline: low
+  # baseline_low_date: 2023-09-18
+  # support:
   #   chrome: "117"
   #   chrome_android: "117"
   #   edge: "117"

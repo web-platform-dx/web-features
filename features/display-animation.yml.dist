@@ -7,12 +7,16 @@ status:
     chrome: "117"
     chrome_android: "117"
     edge: "117"
+    safari: "18"
+    safari_ios: "18"
 compat_features:
   # baseline: false
   # support:
   #   chrome: "116"
   #   chrome_android: "116"
   #   edge: "116"
+  #   safari: "18"
+  #   safari_ios: "18"
   - css.properties.content-visibility.keyframe_animatable
   - css.properties.display.keyframe_animatable
 
@@ -22,5 +26,7 @@ compat_features:
   #   chrome: "117"
   #   chrome_android: "117"
   #   edge: "117"
+  #   safari: "18"
+  #   safari_ios: "18"
   - css.properties.content-visibility.is_transitionable
   - css.properties.display.is_transitionable

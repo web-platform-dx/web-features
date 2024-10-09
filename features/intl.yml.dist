@@ -83,8 +83,8 @@ compat_features:
   #   firefox_android: "55"
   #   safari: "10"
   #   safari_ios: "10"
-  - javascript.builtins.String.toLocaleLowerCase.locale
-  - javascript.builtins.String.toLocaleUpperCase.locale
+  - javascript.builtins.String.toLocaleLowerCase.locales_parameter
+  - javascript.builtins.String.toLocaleUpperCase.locales_parameter
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: high
@@ -135,6 +135,7 @@ compat_features:
   - javascript.builtins.Intl.NumberFormat.NumberFormat.options_parameter.options_useGrouping_parameter
   - javascript.builtins.Intl.NumberFormat.format
   - javascript.builtins.Intl.NumberFormat.resolvedOptions
+  - javascript.builtins.Intl.NumberFormat.supportedLocalesOf
 
   # baseline: high
   # baseline_low_date: 2017-09-28
@@ -416,8 +417,9 @@ compat_features:
   - javascript.builtins.Intl.DateTimeFormat.formatRange
   - javascript.builtins.Intl.DateTimeFormat.formatRangeToParts
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "95"
   #   chrome_android: "95"
@@ -428,8 +430,9 @@ compat_features:
   #   safari_ios: "15.4"
   - javascript.builtins.Intl.DateTimeFormat.DateTimeFormat.options_parameter.options_timeZoneName_parameter.extended_values
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "99"
   #   chrome_android: "99"

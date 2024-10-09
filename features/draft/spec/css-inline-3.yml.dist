@@ -4,9 +4,11 @@
 status:
   baseline: false
   support:
-    chrome: "110"
-    chrome_android: "110"
-    edge: "110"
+    chrome: ≤80
+    chrome_android: "80"
+    edge: "80"
+    safari: ≤13.1
+    safari_ios: ≤13.4
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -53,6 +55,7 @@ compat_features:
   - css.properties.alignment-baseline
   - svg.global_attributes.alignment-baseline
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: ≤80
@@ -65,12 +68,3 @@ compat_features:
   - css.properties.baseline-shift.sub
   - css.properties.baseline-shift.super
   - svg.global_attributes.baseline-shift
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "110"
-  #   chrome_android: "110"
-  #   edge: "110"
-  - css.properties.initial-letter
-  - css.properties.initial-letter.normal
