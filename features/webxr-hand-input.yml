@@ -1,0 +1,21 @@
+name: Hand input
+description: An `XRHand` object, from the `hand` attribute of an `XRInputSource` object, represents a WebXR session's fully-articulated hand tracking model.
+spec: https://immersive-web.github.io/webxr-hand-input/
+group: webxr
+compat_features:
+  - api.XRInputSource.hand
+  - api.XRHand
+  - api.XRHand.entries
+  - api.XRHand.forEach
+  - api.XRHand.get
+  - api.XRHand.keys
+  - api.XRHand.size
+  - api.XRHand.values
+  - api.XRHand.@@iterator
+  - api.XRJointSpace
+  - api.XRJointSpace.jointName
+  - api.XRFrame.fillJointRadii
+  - api.XRFrame.fillPoses
+  - api.XRFrame.getJointPose
+  - api.XRJointPose
+  - api.XRJointPose.radius
