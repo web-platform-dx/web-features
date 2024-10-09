@@ -57,11 +57,7 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "3"
   #   safari_ios: "1"
-  - api.SVGAnimateElement
-  - api.SVGAnimateTransformElement
-  - api.SVGAnimationElement
   - api.SVGSetElement
-  - svg.elements.animateTransform.fill
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -74,37 +70,7 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "3"
   #   safari_ios: "2"
-  - svg.elements.animateTransform.by
   - svg.elements.set.fill
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "2"
-  #   chrome_android: "18"
-  #   edge: "79"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "3.1"
-  #   safari_ios: "2"
-  - svg.elements.animate.fill
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "2"
-  #   chrome_android: "18"
-  #   edge: "79"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - api.SVGAnimationElement.targetElement
-  - svg.elements.animate.dur
-  - svg.elements.animate.from
-  - svg.elements.animate.repeatCount
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -117,10 +83,7 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "6"
   #   safari_ios: "6"
-  - api.SVGAnimateMotionElement
   - api.SVGMPathElement
-  - svg.elements.animateMotion.fill
-  - svg.elements.animateMotion.keyPoints
 
   # baseline: high
   # baseline_low_date: ≤2020-01-15
@@ -133,34 +96,7 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "3"
   #   safari_ios: "1"
-  - svg.elements.animateTransform
   - svg.elements.set
-
-  # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
-  # support:
-  #   chrome: "2"
-  #   chrome_android: "18"
-  #   edge: ≤79
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "3.1"
-  #   safari_ios: "2"
-  - svg.elements.animate
-
-  # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
-  # support:
-  #   chrome: "19"
-  #   chrome_android: "25"
-  #   edge: ≤79
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - svg.elements.animateMotion
 
   # baseline: high
   # baseline_low_date: ≤2020-01-15
@@ -173,9 +109,6 @@ compat_features:
   #   firefox_android: "51"
   #   safari: "12.1"
   #   safari_ios: "12.2"
-  - svg.elements.animate.href
-  - svg.elements.animateMotion.href
-  - svg.elements.animateTransform.href
   - svg.elements.set.href
 
   # baseline: false
