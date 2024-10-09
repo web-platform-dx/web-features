@@ -1,0 +1,16 @@
+name: Navigator
+description: "The Navigator interface represents the state and the identity of the user agent. It also serve as a generic global under which various APIs are located."
+spec: https://html.spec.whatwg.org/multipage/system-state.html#the-navigator-object
+status:
+  compute_from: api.Navigator
+compat_features:
+  - api.Navigator
+  - api.Navigator.cookieEnabled
+  - api.Navigator.hardwareConcurrency
+  - api.Navigator.language
+  - api.Navigator.languages
+  - api.Navigator.onLine
+  - api.Navigator.pdfViewerEnabled
+  - api.Navigator.registerProtocolHandler
+  - api.Navigator.unregisterProtocolHandler
+  - api.Navigator.userAgent
