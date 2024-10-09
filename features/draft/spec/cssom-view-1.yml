@@ -1,4 +1,4 @@
-draft_date: 2024-09-18
+draft_date: 2024-10-07
 name: CSSOM View Module
 description: TODO
 spec: https://drafts.csswg.org/cssom-view-1/
@@ -8,8 +8,6 @@ compat_features:
   - api.CaretPosition.offset
   - api.CaretPosition.offsetNode
   - api.Document
-  - api.Document.elementFromPoint
-  - api.Document.elementsFromPoint
   - api.Document.getBoxQuads
   - api.Document.scroll_event
   - api.Document.scrollingElement
@@ -85,6 +83,9 @@ compat_features:
 # The following features in the spec are already part of web-features:
 # - document.caretPositionFromPoint():
 #   - api.Document.caretPositionFromPoint
+# - document.elementFromPoint() and document.elementsFromPoint():
+#   - api.Document.elementFromPoint
+#   - api.Document.elementsFromPoint
 # - scrollend:
 #   - api.Document.scrollend_event
 #   - api.Element.scrollend_event

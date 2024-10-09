@@ -805,34 +805,6 @@ compat_features:
   #   chrome: "63"
   #   chrome_android: "63"
   #   edge: "79"
-  #   firefox: "57"
-  #   firefox_android: "57"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - javascript.builtins.AsyncIterator
-  - javascript.builtins.AsyncIterator.@@asyncIterator
-  - javascript.builtins.Symbol.asyncIterator
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "63"
-  #   chrome_android: "63"
-  #   edge: "79"
-  #   firefox: "57"
-  #   firefox_android: "57"
-  #   safari: "12"
-  #   safari_ios: "12"
-  - javascript.statements.for_await_of
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "63"
-  #   chrome_android: "63"
-  #   edge: "79"
   #   firefox: "67"
   #   firefox_android: "67"
   #   safari: "11.1"

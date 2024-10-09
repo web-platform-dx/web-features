@@ -1,4 +1,4 @@
-draft_date: 2024-09-30
+draft_date: 2024-10-07
 name: ECMAScript Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
@@ -11,8 +11,6 @@ compat_features:
   - javascript.builtins.ArrayBuffer.byteLength
   - javascript.builtins.ArrayBuffer.isView
   - javascript.builtins.ArrayBuffer.slice
-  - javascript.builtins.AsyncIterator
-  - javascript.builtins.AsyncIterator.@@asyncIterator
   - javascript.builtins.Boolean
   - javascript.builtins.Boolean.Boolean
   - javascript.builtins.Boolean.toString
@@ -90,7 +88,6 @@ compat_features:
   - javascript.builtins.Symbol
   - javascript.builtins.Symbol.@@toPrimitive
   - javascript.builtins.Symbol.Symbol
-  - javascript.builtins.Symbol.asyncIterator
   - javascript.builtins.Symbol.description
   - javascript.builtins.Symbol.for
   - javascript.builtins.Symbol.hasInstance
@@ -217,7 +214,6 @@ compat_features:
   - javascript.statements.empty
   - javascript.statements.export.namespace
   - javascript.statements.for
-  - javascript.statements.for_await_of
   - javascript.statements.for_in
   - javascript.statements.for_of
   - javascript.statements.if_else
@@ -354,6 +350,11 @@ compat_features:
 #   - javascript.builtins.AsyncGeneratorFunction.AsyncGeneratorFunction
 #   - javascript.operators.async_generator_function
 #   - javascript.statements.async_generator_function
+# - Async iterators and the for await..of loop:
+#   - javascript.builtins.AsyncIterator
+#   - javascript.builtins.AsyncIterator.@@asyncIterator
+#   - javascript.builtins.Symbol.asyncIterator
+#   - javascript.statements.for_await_of
 # - SharedArrayBuffer and Atomics:
 #   - javascript.builtins.Atomics
 #   - javascript.builtins.Atomics.add
