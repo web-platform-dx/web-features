@@ -1,0 +1,8 @@
+name: String padStart() and padEnd()
+description: The `padStart()` and `padEnd()` methods of strings return a string lengthened to a minimum number of characters by adding characters to the start or end of the string.
+spec: https://tc39.es/ecma262/multipage/text-processing.html#sec-string-objects
+group: string
+caniuse: pad-start-end
+compat_features:
+  - javascript.builtins.String.padEnd
+  - javascript.builtins.String.padStart

@@ -1,0 +1,11 @@
+name: WebOTP
+description: The `OTPCredential` API represents a one-time-password (OTP).
+spec: https://wicg.github.io/web-otp/
+group: credential-management
+status:
+  compute_from: api.CredentialsContainer.get.otp_option
+compat_features:
+  - api.CredentialsContainer.get.otp_option
+  - api.OTPCredential
+  - api.OTPCredential.code
+  - http.headers.Permissions-Policy.otp-credentials

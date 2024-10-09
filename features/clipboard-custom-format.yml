@@ -1,0 +1,6 @@
+name: Custom formats for clipboard items
+description: The `web ` prefix for `ClipboardItem` data types (also known as MIME types) allows reading and writing ununsanitized custom data from the device clipboard.
+spec: https://w3c.github.io/clipboard-apis/#optional-data-types-x
+group: clipboard
+compat_features:
+  - api.ClipboardItem.type_web

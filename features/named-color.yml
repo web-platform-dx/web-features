@@ -1,0 +1,10 @@
+name: Named colors
+description: Some CSS color values can be referenced by name, such as `red` or `limegreen`. They stand in for specific RGB color values.
+spec: https://drafts.csswg.org/css-color-4/#named-colors
+group: color-types
+status:
+  compute_from: css.types.color.named-color
+compat_features:
+  - css.types.color.named-color
+  - css.types.color.named-color.rebeccapurple
+  - css.types.color.named-color.transparent

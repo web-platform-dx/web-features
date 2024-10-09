@@ -1,4 +1,4 @@
-draft_date: 2024-08-19
+draft_date: 2024-09-30
 name: CSS Writing Modes Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-writing-modes-4/
@@ -18,7 +18,10 @@ compat_features:
   - css.properties.unicode-bidi.isolate-override
   - css.properties.unicode-bidi.normal
   - css.properties.unicode-bidi.plaintext
-  - css.properties.writing-mode
   - svg.global_attributes.direction
   - svg.global_attributes.unicode-bidi
-  - svg.global_attributes.writing-mode
+
+# The following features in the spec are already part of web-features:
+# - writing-mode:
+#   - css.properties.writing-mode
+#   - svg.global_attributes.writing-mode

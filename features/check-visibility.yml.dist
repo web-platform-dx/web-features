@@ -13,4 +13,31 @@ status:
     safari: "17.4"
     safari_ios: "17.4"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2024-03-05
+  # support:
+  #   chrome: "105"
+  #   chrome_android: "105"
+  #   edge: "105"
+  #   firefox: "106"
+  #   firefox_android: "106"
+  #   safari: "17.4"
+  #   safari_ios: "17.4"
   - api.Element.checkVisibility
+  - api.Element.checkVisibility.options_checkOpacity_parameter
+  - api.Element.checkVisibility.options_checkVisibilityCSS_parameter
+
+  # baseline: low
+  # baseline_low_date: 2024-03-05
+  # support:
+  #   chrome: "121"
+  #   chrome_android: "121"
+  #   edge: "121"
+  #   firefox: "122"
+  #   firefox_android: "122"
+  #   safari: "17.4"
+  #   safari_ios: "17.4"
+  - api.Element.checkVisibility.options_contentVisibilityAuto_parameter
+  - api.Element.checkVisibility.options_opacityProperty_parameter
+  - api.Element.checkVisibility.options_visibilityProperty_parameter

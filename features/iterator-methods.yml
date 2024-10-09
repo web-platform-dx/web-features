@@ -1,0 +1,18 @@
+name: Iterator methods
+description: The `Iterator` object is an abstract base for objects that implement the iterator protocol. It provides methods common to built-in iterators, such as `filter()`, `find()`, `map()`, and `reduce()`. You can also use the static method `Iterator.from()` to convert an existing iterable into an `Iterator`.
+spec: https://tc39.es/proposal-iterator-helpers/
+group: iterators
+compat_features:
+  - javascript.builtins.Iterator.Iterator
+  - javascript.builtins.Iterator.drop
+  - javascript.builtins.Iterator.every
+  - javascript.builtins.Iterator.filter
+  - javascript.builtins.Iterator.find
+  - javascript.builtins.Iterator.flatMap
+  - javascript.builtins.Iterator.forEach
+  - javascript.builtins.Iterator.from
+  - javascript.builtins.Iterator.map
+  - javascript.builtins.Iterator.reduce
+  - javascript.builtins.Iterator.some
+  - javascript.builtins.Iterator.take
+  - javascript.builtins.Iterator.toArray
