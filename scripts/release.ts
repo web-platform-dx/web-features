@@ -65,40 +65,6 @@ yargs(process.argv.slice(2))
         .demandOption("semverlevel", "You must provide a semver level");
     },
     handler: init,
-  })
-  .command({
-    command: "update <pr>",
-    describe: "Update an existing release pull request",
-    builder: (yargs) => {
-      return yargs
-        .positional("pr", {
-          describe: "the PR (URL, number, or branch) to rebase and update",
-          type: "string",
-        })
-        .option("bump", {
-          describe: "Update the Semantic Versioning level for the release",
-          nargs: 1,
-          choices: semverChoices,
-        })
-        .option("base", {
-          describe: "Branch to rebase against",
-          type: "string",
-          default: "main",
-        });
-    },
-    handler: update,
-  })
-  .command({
-    command: "publish",
-    describe: "Publish the package to npm",
-    builder: (yargs) => {
-      return yargs.option("dry-run", {
-        type: "boolean",
-        describe: "Do everything short of publishing",
-        default: true,
-      });
-    },
-    handler: publish,
   }).argv;
 
 function init(args) {
@@ -179,106 +145,9 @@ function makePullBody(diff: string) {
   return body;
 }
 
-function update(args) {
-  preflight({ expectedPull: args.pr, targetRepo: args.targetRepo });
-  build();
-
-  logger.verbose("Adding rebase-in-progress notice to PR description");
-  const { body } = JSON.parse(
-    execSync(
-      `gh pr view --repo="${args.targetRepo}" "${args.pr}" --json body`,
-      {
-        encoding: "utf-8",
-      },
-    ),
-  );
-  const notice = "⛔️ Update in progress! ⛔️\n";
-  const editBodyCmd = `gh pr edit --repo="${args.targetRepo}" "${args.pr}" --body-file=-`;
-  execSync(editBodyCmd, {
-    input: [notice, body].join("\n\n"),
-    stdio: ["pipe", "inherit", "inherit"],
-  });
-
-  logger.verbose("Rebasing");
-  try {
-    run(`git rebase ${args.base}`);
-  } catch (err) {
-    logger.error("Rebasing failed. Abandoning PR.");
-    run(`git rebase --abort`);
-    run(
-      `gh pr comment --repo="${args.targetRepo}" "${args.pr}" --body="😱 Rebasing failed. Closing this PR. 😱"`,
-    );
-    run(`gh pr close --repo="${args.targetRepo}" "${args.pr}"`);
-    process.exit(1);
-  }
-
-  const diff = diffJson();
-
-  if (args.bump) {
-    const newVersion = bumpVersion(args.bump);
-
-    logger.info("Pushing release branch");
-    run(`git push origin HEAD`);
-
-    logger.verbose("Updating PR title");
-    run(
-      `gh pr edit --repo="${args.targetRepo}" "${args.pr}" --title="${pullTitleBase}${newVersion}"`,
-    );
-  }
-
-  logger.verbose("Removing update-in-progress notice from PR description");
-  execSync(editBodyCmd, { input: body, stdio: ["pipe", "inherit", "inherit"] });
-
-  const updatedBody = makePullBody(diff);
-  execSync(
-    `gh pr edit --repo="${args.targetRepo}" "${args.pr}" --body-file=-`,
-    {
-      input: updatedBody,
-      stdio: ["pipe", "inherit", "inherit"],
-    },
-  );
-}
-
 function diff(args) {
   const diff = diffJson(args.from, args.to);
   console.log(diff);
-}
-
-function publish(args) {
-  preflight({ expectedBranch: "main" });
-
-  try {
-    const accessList = execSync("npm access list packages --json", {
-      stdio: "pipe",
-      encoding: "utf-8",
-    });
-    if (JSON.parse(accessList)["web-features"] !== "read-write") {
-      logger.error(
-        "Write access to the package is required. Try setting the repository secret or run `npm adduser`.",
-      );
-      process.exit(1);
-    }
-  } catch (err) {
-    logger.error(
-      "The exit status of `npm access list packages` was non-zero. Do you have an `.npmrc` file? If not, try running `npm adduser`.",
-      err.error,
-    );
-    logger.error(err.stderr);
-    process.exit(1);
-  }
-
-  build();
-  const { version } = readPackageJSON(packages["web-features"]);
-  const tag = `web-features/${version}`;
-  run(`git tag --annotate "${tag}" --message="web-features ${version}"`);
-  run(`git push origin ${tag}`);
-
-  logger.info("Publishing release");
-  let publishCmd = `npm publish`;
-  if (args.dryRun) {
-    publishCmd = `${publishCmd} --dry-run`;
-  }
-  execSync(publishCmd, { cwd: packages["web-features"], stdio: "inherit" });
 }
 
 function run(cmd: string) {

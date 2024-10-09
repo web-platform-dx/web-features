@@ -36,6 +36,16 @@ Feature authors should (in descending order of priority):
   - 👍 Recommended: Grid
   - 👎 Not recommended: `display: grid`
 
+- Prefer sentence case.
+  Avoid capitalizing ordinary nouns, but preserve case when it's meaningful.
+
+  - 👍 Recommended: Typed arrays
+  - 👎 Not recommended: Typed Arrays
+  - 👍 Recommended: View transitions
+  - 👎 Not recommended: View Transitions
+  - 👍 Recommended: WebDriver BiDi
+  - 👎 Not recommended: Webdriver bidi
+
 - Prefer frequently-used qualifiers in parentheses at the end of the name.
 
   - 👍 Recommended: Arrays (initial support)
@@ -88,6 +98,15 @@ Follow the general writing guidelines in this section, but see the [word and phr
 
 * Enclose literal code, such as CSS property names, interface and method names, or other syntax, in backticks.
   For example, prefer ```The `addEventListener()` method…``` and avoid ```The addEventListener() method…```.
+
+* To aid search, include literal text that a web developer would inevitably type if they were to invoke the feature.
+  If there's no essential entry point to the feature, then include only concise snippets of essential literal code instead.
+  Never use made-up, idiosyncratic, or non-literal example code.
+
+  * 👍 Recommended: `display: flex`, `fetch()`, etc.
+  * 👎 Not recommended: `(await navigator.serviceWorker.ready).sync`
+  * 👍 Recommended: "`margin-top`, `margin-right`, `margin-bottom`, and `margin-left`"
+  * 👎 Not recommended: `margin-{top,right,bottom,left}`
 
 * Start descriptions with words that are distinct to the feature.
   For example, prefer "The `some-prop` CSS property…" and avoid "The CSS property `some-prop`…."
@@ -260,3 +279,17 @@ Follow these guidelines when setting a `caniuse` value:
   Can I Use isn't perfect.
   Don't use `compute_from` in a way that would not make sense if the corresponding `caniuse` value didn't exist (for example, by pinning support before the introduction of an essential component of the feature).
   In such situations, it's better to comment out the `caniuse` value, make a `TODO` comment, and open an issue about why you did it.
+
+## Groups
+
+The `group` field references one or more groups.
+You can find group definitions in the [`groups/`](../groups/) directory.
+
+Groups are experimental.
+It might not be clear how to group features until more features have been defined.
+
+Don't assign features to two or more groups such that one group is an ancestor of another.
+For example, don't assign a feature to both `css` and `fonts`, since `css` is the parent of `fonts`.
+
+Do assign features to groups when there's an opportunity for future feature composition (see [#971](https://github.com/web-platform-dx/web-features/issues/971)).
+For example, several features for the JavaScript `Array` interface are members of the `array` group.
