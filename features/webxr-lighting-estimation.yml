@@ -1,0 +1,16 @@
+name: Lighting estimation
+description: The `XRLightProbe` and `XRLightEstimate` objects represent real-world environmental lighting conditions during a WebXR session.
+spec: https://immersive-web.github.io/lighting-estimation/
+group: webxr
+compat_features:
+  - api.XRLightProbe
+  - api.XRLightProbe.probeSpace
+  - api.XRLightProbe.reflectionchange_event
+  - api.XRLightEstimate
+  - api.XRLightEstimate.primaryLightDirection
+  - api.XRLightEstimate.primaryLightIntensity
+  - api.XRLightEstimate.sphericalHarmonicsCoefficients
+  - api.XRFrame.getLightEstimate
+  - api.XRSession.preferredReflectionFormat
+  - api.XRSession.requestLightProbe
+  - api.XRWebGLBinding.getReflectionCubeMap
