@@ -403,6 +403,19 @@ compat_features:
   - api.SharedWorkerGlobalScope.close
   - api.SharedWorkerGlobalScope.connect_event
   - api.SharedWorkerGlobalScope.name
+  - api.Storage
+  - api.Storage.clear
+  - api.Storage.getItem
+  - api.Storage.key
+  - api.Storage.length
+  - api.Storage.removeItem
+  - api.Storage.setItem
+  - api.StorageEvent
+  - api.StorageEvent.key
+  - api.StorageEvent.newValue
+  - api.StorageEvent.oldValue
+  - api.StorageEvent.storageArea
+  - api.StorageEvent.url
   - api.SubmitEvent
   - api.SubmitEvent.SubmitEvent
   - api.SubmitEvent.submitter
@@ -444,6 +457,7 @@ compat_features:
   - api.Window.languagechange_event
   - api.Window.length
   - api.Window.load_event
+  - api.Window.localStorage
   - api.Window.location
   - api.Window.message_event
   - api.Window.name

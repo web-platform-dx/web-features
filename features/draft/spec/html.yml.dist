@@ -516,6 +516,22 @@ compat_features:
   #   chrome: "1"
   #   chrome_android: "18"
   #   edge: "12"
+  #   firefox: "13"
+  #   firefox_android: "14"
+  #   safari: "4"
+  #   safari_ios: "3"
+  - api.StorageEvent
+  - api.StorageEvent.key
+  - api.StorageEvent.newValue
+  - api.StorageEvent.oldValue
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
   #   firefox: "24"
   #   firefox_android: "24"
   #   safari: "3.1"
@@ -758,6 +774,19 @@ compat_features:
   #   chrome: "3"
   #   chrome_android: "18"
   #   edge: "12"
+  #   firefox: "13"
+  #   firefox_android: "14"
+  #   safari: "4"
+  #   safari_ios: "3"
+  - api.StorageEvent.storageArea
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "3"
+  #   chrome_android: "18"
+  #   edge: "12"
   #   firefox: "15"
   #   firefox_android: "15"
   #   safari: "3.1"
@@ -839,6 +868,19 @@ compat_features:
   #   firefox: "3.5"
   #   firefox_android: "4"
   #   safari: "4"
+  #   safari_ios: "3.2"
+  - api.Window.localStorage
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "4"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3.5"
+  #   firefox_android: "4"
+  #   safari: "4"
   #   safari_ios: "5"
   - api.DedicatedWorkerGlobalScope
   - api.DedicatedWorkerGlobalScope.close
@@ -863,6 +905,25 @@ compat_features:
   - api.WorkerNavigator
   - api.WorkerNavigator.onLine
   - api.WorkerNavigator.userAgent
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "4"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3.5"
+  #   firefox_android: "6"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - api.Storage
+  - api.Storage.clear
+  - api.Storage.getItem
+  - api.Storage.key
+  - api.Storage.length
+  - api.Storage.removeItem
+  - api.Storage.setItem
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -1077,6 +1138,19 @@ compat_features:
   #   safari: "5.1"
   #   safari_ios: "5"
   - api.HTMLElement.hidden
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "6"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "13"
+  #   firefox_android: "14"
+  #   safari: "5"
+  #   safari_ios: "5"
+  - api.StorageEvent.url
 
   # baseline: high
   # baseline_low_date: 2015-07-29
