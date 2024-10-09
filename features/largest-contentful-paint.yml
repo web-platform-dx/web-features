@@ -1,7 +1,7 @@
-draft_date: 2024-09-09
-name: Largest Contentful Paint
-description: TODO
+name: Largest contentful paint (LCP)
+description: The `LargestContentfulPaint` interface provides timing information about the largest image or text paint before user input on a web page. The key moment this API provides is known as the LCP metric.
 spec: https://w3c.github.io/largest-contentful-paint/
+group: performance
 compat_features:
   - api.LargestContentfulPaint
   - api.LargestContentfulPaint.element

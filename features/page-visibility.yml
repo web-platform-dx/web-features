@@ -1,0 +1,10 @@
+name: Page visibility state
+description: The `"visibility-state"` performance entry and the `VisibilityStateEntry` interface provide timings of page visibility state changes.
+spec: https://html.spec.whatwg.org/multipage/interaction.html#the-visibilitystateentry-interface
+group: performance
+compat_features:
+  - api.VisibilityStateEntry
+  - api.VisibilityStateEntry.duration
+  - api.VisibilityStateEntry.entryType
+  - api.VisibilityStateEntry.name
+  - api.VisibilityStateEntry.startTime
