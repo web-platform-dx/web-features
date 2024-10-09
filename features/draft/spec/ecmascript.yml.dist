@@ -805,34 +805,6 @@ compat_features:
   #   chrome: "63"
   #   chrome_android: "63"
   #   edge: "79"
-  #   firefox: "57"
-  #   firefox_android: "57"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - javascript.builtins.AsyncIterator
-  - javascript.builtins.AsyncIterator.@@asyncIterator
-  - javascript.builtins.Symbol.asyncIterator
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "63"
-  #   chrome_android: "63"
-  #   edge: "79"
-  #   firefox: "57"
-  #   firefox_android: "57"
-  #   safari: "12"
-  #   safari_ios: "12"
-  - javascript.statements.for_await_of
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "63"
-  #   chrome_android: "63"
-  #   edge: "79"
   #   firefox: "67"
   #   firefox_android: "67"
   #   safari: "11.1"
@@ -1009,26 +981,6 @@ compat_features:
   #   safari: "14.1"
   #   safari_ios: "14.5"
   - javascript.classes.private_class_fields
-
-  # baseline: high
-  # baseline_low_date: 2021-09-20
-  # baseline_high_date: 2024-03-20
-  # support:
-  #   chrome: "67"
-  #   chrome_android: "67"
-  #   edge: "79"
-  #   firefox: "68"
-  #   firefox_android: "68"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - javascript.builtins.BigInt64Array
-  - javascript.builtins.BigInt64Array.BigInt64Array
-  - javascript.builtins.BigUint64Array
-  - javascript.builtins.BigUint64Array.BigUint64Array
-  - javascript.builtins.DataView.getBigInt64
-  - javascript.builtins.DataView.getBigUint64
-  - javascript.builtins.DataView.setBigInt64
-  - javascript.builtins.DataView.setBigUint64
 
   # baseline: high
   # baseline_low_date: 2021-09-20

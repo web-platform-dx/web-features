@@ -68,18 +68,17 @@ compat_features:
   - css.types.angle
   - css.types.angle-percentage
 
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
+  # baseline: low
+  # baseline_low_date: 2022-09-12
   # support:
-  #   chrome: "66"
-  #   chrome_android: "66"
-  #   edge: "79"
-  #   firefox: "59"
-  #   firefox_android: "59"
-  #   safari: "12"
-  #   safari_ios: "12"
-  - css.at-rules.media.calc
+  #   chrome: "29"
+  #   chrome_android: "29"
+  #   edge: "12"
+  #   firefox: "8"
+  #   firefox_android: "8"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - css.types.resolution
 
   # baseline: low
   # baseline_low_date: 2023-11-21
@@ -92,15 +91,6 @@ compat_features:
   #   safari: "16.4"
   #   safari_ios: "16.4"
   - css.types.length.rlh
-
-  # baseline: false
-  # support:
-  #   chrome: "29"
-  #   chrome_android: "29"
-  #   edge: "12"
-  #   firefox: "8"
-  #   firefox_android: "8"
-  - css.types.resolution
 
   # baseline: false
   # support:
@@ -126,10 +116,16 @@ compat_features:
   # support:
   #   chrome: "129"
   #   chrome_android: "129"
+  #   edge: "129"
+  - css.types.calc-size
+
+  # baseline: false
+  # support:
+  #   chrome: "129"
+  #   chrome_android: "129"
   - css.properties.interpolate-size
   - css.properties.interpolate-size.allow-keywords
   - css.properties.interpolate-size.numeric-only
-  - css.types.calc-size
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false

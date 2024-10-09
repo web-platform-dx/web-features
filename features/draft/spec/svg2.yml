@@ -1,4 +1,4 @@
-draft_date: 2024-09-18
+draft_date: 2024-10-07
 name: Scalable Vector Graphics (SVG) 2
 description: TODO
 spec: https://svgwg.org/svg2-draft/
@@ -20,47 +20,6 @@ compat_features:
   - api.SVGAngle.value
   - api.SVGAngle.valueAsString
   - api.SVGAngle.valueInSpecifiedUnits
-  - api.SVGAnimatedAngle
-  - api.SVGAnimatedAngle.animVal
-  - api.SVGAnimatedAngle.baseVal
-  - api.SVGAnimatedBoolean
-  - api.SVGAnimatedBoolean.animVal
-  - api.SVGAnimatedBoolean.baseVal
-  - api.SVGAnimatedEnumeration
-  - api.SVGAnimatedEnumeration.animVal
-  - api.SVGAnimatedEnumeration.baseVal
-  - api.SVGAnimatedInteger
-  - api.SVGAnimatedInteger.animVal
-  - api.SVGAnimatedInteger.baseVal
-  - api.SVGAnimatedLength
-  - api.SVGAnimatedLength.animVal
-  - api.SVGAnimatedLength.baseVal
-  - api.SVGAnimatedLengthList
-  - api.SVGAnimatedLengthList.animVal
-  - api.SVGAnimatedLengthList.baseVal
-  - api.SVGAnimatedNumber
-  - api.SVGAnimatedNumber.animVal
-  - api.SVGAnimatedNumber.baseVal
-  - api.SVGAnimatedNumberList
-  - api.SVGAnimatedNumberList.animVal
-  - api.SVGAnimatedNumberList.baseVal
-  - api.SVGAnimatedPreserveAspectRatio
-  - api.SVGAnimatedPreserveAspectRatio.animVal
-  - api.SVGAnimatedPreserveAspectRatio.baseVal
-  - api.SVGAnimatedRect
-  - api.SVGAnimatedRect.animVal
-  - api.SVGAnimatedRect.baseVal
-  - api.SVGAnimatedString
-  - api.SVGAnimatedString.animVal
-  - api.SVGAnimatedString.baseVal
-  - api.SVGAnimatedTransformList
-  - api.SVGAnimatedTransformList.animVal
-  - api.SVGAnimatedTransformList.baseVal
-  - api.SVGAnimationElement.beginEvent_event
-  - api.SVGAnimationElement.endEvent_event
-  - api.SVGAnimationElement.repeatEvent_event
-  - api.SVGAnimationElement.requiredExtensions
-  - api.SVGAnimationElement.systemLanguage
   - api.SVGCircleElement
   - api.SVGCircleElement.cx
   - api.SVGCircleElement.cy
@@ -170,10 +129,8 @@ compat_features:
   - api.SVGPointList.removeItem
   - api.SVGPointList.replaceItem
   - api.SVGPolygonElement
-  - api.SVGPolygonElement.animatedPoints
   - api.SVGPolygonElement.points
   - api.SVGPolylineElement
-  - api.SVGPolylineElement.animatedPoints
   - api.SVGPolylineElement.points
   - api.SVGPreserveAspectRatio
   - api.SVGPreserveAspectRatio.align
@@ -312,19 +269,14 @@ compat_features:
   - css.properties.vector-effect
   - css.properties.x
   - css.properties.y
-  - css.types.basic-shape.path.d
   - svg.elements.a
   - svg.elements.a.href
   - svg.elements.a.systemLanguage
   - svg.elements.a.target
-  - svg.elements.animate.systemLanguage
-  - svg.elements.animateMotion.systemLanguage
-  - svg.elements.animateTransform.systemLanguage
   - svg.elements.circle
   - svg.elements.circle.fill
   - svg.elements.circle.fill.context-fill
   - svg.elements.circle.systemLanguage
-  - svg.elements.clipPath.systemLanguage
   - svg.elements.cursor.systemLanguage
   - svg.elements.defs
   - svg.elements.defs.systemLanguage
@@ -432,7 +384,7 @@ compat_features:
   - svg.global_attributes.color-interpolation
   - svg.global_attributes.color-interpolation.linearGradient
   - svg.global_attributes.color-interpolation.sRGB
-  - svg.global_attributes.data
+  - svg.global_attributes.data_attributes
   - svg.global_attributes.direction
   - svg.global_attributes.display
   - svg.global_attributes.dominant-baseline
@@ -464,14 +416,67 @@ compat_features:
   - svg.global_attributes.transform-origin
   - svg.global_attributes.vector-effect
   - svg.global_attributes.visibility
-  - svg.global_attributes.writing-mode
-
 # The following features in the spec are already part of web-features:
+# - SMIL SVG animations:
+#   - api.SVGAnimatedAngle
+#   - api.SVGAnimatedAngle.animVal
+#   - api.SVGAnimatedAngle.baseVal
+#   - api.SVGAnimatedBoolean
+#   - api.SVGAnimatedBoolean.animVal
+#   - api.SVGAnimatedBoolean.baseVal
+#   - api.SVGAnimatedEnumeration
+#   - api.SVGAnimatedEnumeration.animVal
+#   - api.SVGAnimatedEnumeration.baseVal
+#   - api.SVGAnimatedInteger
+#   - api.SVGAnimatedInteger.animVal
+#   - api.SVGAnimatedInteger.baseVal
+#   - api.SVGAnimatedLength
+#   - api.SVGAnimatedLength.animVal
+#   - api.SVGAnimatedLength.baseVal
+#   - api.SVGAnimatedLengthList
+#   - api.SVGAnimatedLengthList.animVal
+#   - api.SVGAnimatedLengthList.baseVal
+#   - api.SVGAnimatedNumber
+#   - api.SVGAnimatedNumber.animVal
+#   - api.SVGAnimatedNumber.baseVal
+#   - api.SVGAnimatedNumberList
+#   - api.SVGAnimatedNumberList.animVal
+#   - api.SVGAnimatedNumberList.baseVal
+#   - api.SVGAnimatedPreserveAspectRatio
+#   - api.SVGAnimatedPreserveAspectRatio.animVal
+#   - api.SVGAnimatedPreserveAspectRatio.baseVal
+#   - api.SVGAnimatedRect
+#   - api.SVGAnimatedRect.animVal
+#   - api.SVGAnimatedRect.baseVal
+#   - api.SVGAnimatedString
+#   - api.SVGAnimatedString.animVal
+#   - api.SVGAnimatedString.baseVal
+#   - api.SVGAnimatedTransformList
+#   - api.SVGAnimatedTransformList.animVal
+#   - api.SVGAnimatedTransformList.baseVal
+#   - api.SVGAnimationElement.beginEvent_event
+#   - api.SVGAnimationElement.endEvent_event
+#   - api.SVGAnimationElement.repeatEvent_event
+#   - api.SVGAnimationElement.requiredExtensions
+#   - api.SVGAnimationElement.systemLanguage
+#   - api.SVGPolygonElement.animatedPoints
+#   - api.SVGPolylineElement.animatedPoints
+#   - svg.elements.animate.systemLanguage
+#   - svg.elements.animateMotion.systemLanguage
+#   - svg.elements.animateTransform.systemLanguage
 # - paint-order:
 #   - css.properties.paint-order
 #   - svg.global_attributes.paint-order
+# - path():
+#   - css.types.basic-shape.path.d
+# - clip-path:
+#   - svg.elements.clipPath.systemLanguage
 # - Opacity (SVG):
 #   - svg.global_attributes.fill-opacity
 #   - svg.global_attributes.stroke-opacity
 # - opacity:
 #   - svg.global_attributes.opacity
+# - Text overflow:
+#   - svg.global_attributes.text-overflow
+# - writing-mode:
+#   - svg.global_attributes.writing-mode

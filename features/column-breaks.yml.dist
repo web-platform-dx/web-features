@@ -34,6 +34,31 @@ compat_features:
   #   safari_ios: "10"
   - css.properties.break-inside.multicol_context.avoid-column
 
+  # baseline: high
+  # baseline_low_date: 2021-09-07
+  # baseline_high_date: 2024-03-07
+  # support:
+  #   chrome: ≤80
+  #   chrome_android: "80"
+  #   edge: ≤80
+  #   firefox: "92"
+  #   firefox_android: "92"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
+  - css.properties.break-inside.avoid-column
+
+  # baseline: false
+  # support:
+  #   chrome: ≤80
+  #   chrome_android: "80"
+  #   edge: ≤80
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
+  - css.properties.break-after.avoid-column
+  - css.properties.break-after.column
+  - css.properties.break-before.avoid-column
+  - css.properties.break-before.column
+
   # baseline: false
   # support:
   #   chrome: "50"

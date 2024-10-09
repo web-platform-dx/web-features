@@ -1,9 +1,8 @@
-draft_date: 2024-09-09
+draft_date: 2024-09-23
 name: CSS Values and Units Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-values-5/
 compat_features:
-  - css.at-rules.media.calc
   - css.properties.content.url
   - css.properties.interpolate-size
   - css.properties.interpolate-size.allow-keywords
@@ -33,6 +32,8 @@ compat_features:
   - css.types.url
 
 # The following features in the spec are already part of web-features:
+# - Media queries:
+#   - css.at-rules.media.calc
 # - tab-size:
 #   - css.properties.tab-size.length
 # - abs() and sign():
