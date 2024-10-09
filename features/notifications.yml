@@ -1,43 +1,7 @@
-# Feature composition notes
-#
-# Discussion and reasoning here:
-#
-# https://github.com/web-platform-dx/web-features/issues/973
-#
-# Disambiguations:
-# - Push (aka Web Push / Push API / Push Notifications)
-
-# Feature name reasoning
-#
-# - "web notifications": very common, but searches also show Web Push
-# - "notifications api": ditto
-# - "notifications": ditto, but even more general
-#
-# MDN: Notifications API
-# CIU: Web Notifications
-#
-# Going with the generally preferred pattern of not including "web" nor "API".
-#
 name: Notifications
-
-# Description reasoning
-#
-# Spec: The Notifications API defines an API to display notifications to the end user, typically outside the top-level browsing context’s viewport. It is designed to be compatible with existing notification systems, while remaining platform-independent.
-#
-# Caniuse: Method of alerting the user outside of a web page by displaying notifications (that do not require interaction by the user).
-#
-# MDN: The Notification interface of the Notifications API is used to configure and display desktop notifications to the user. These notifications' appearance and specific functionality vary across platforms but generally they provide a way to asynchronously provide information to the user.
-#
-# common pieces:
-# - display information to the user
-# - shown outside the viewport
-# - asynchronous (not user-interactive)
-# - often platform integrated/compatible
-#
 description: The Notifications API displays messages to the user outside of the browser, typically using the notification system of the host operating system. This feature is solely client-side, and does not integrate with server-originating notifications.
 spec: https://notifications.spec.whatwg.org/
 caniuse: notifications
-
 # Computing from the ServiceWorker feature since that gets us a baseline
 # which matches the general availability of the feature given platform
 # constraints.

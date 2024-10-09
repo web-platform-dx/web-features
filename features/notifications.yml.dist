@@ -91,7 +91,6 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "16.4"
   - api.Notification.body
-  - api.Notification.icon
   - api.Notification.lang
   - api.Notification.title
 
@@ -139,15 +138,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "20"
-  #   edge: "14"
-  #   firefox: "26"
-  #   firefox_android: "26"
-  #   safari: "7"
-  - api.Notification.tag
-
-  # baseline: false
-  # support:
   #   chrome: "42"
   #   chrome_android: "42"
   #   edge: "17"
@@ -163,6 +153,22 @@ compat_features:
   #   firefox: "44"
   #   firefox_android: "44"
   - api.NotificationEvent.action
+
+  # baseline: false
+  # support:
+  #   chrome: "20"
+  #   edge: "14"
+  #   firefox: "26"
+  #   firefox_android: "26"
+  - api.Notification.tag
+
+  # baseline: false
+  # support:
+  #   chrome: "33"
+  #   edge: "14"
+  #   firefox: "26"
+  #   firefox_android: "26"
+  - api.Notification.icon
 
   # baseline: false
   # support:
