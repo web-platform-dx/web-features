@@ -1,5 +1,5 @@
-name: Channel Messaging
-description: "Channel Messaging allows scripts to communicate across various contexts within a same origin, such as between frames in a single document, or between documents using a `SharedWorker`."
+name: Channel messaging
+description: "Channel messaging communicates one-to-one between browsing contexts on the same origin, such as between `<iframe>` elements or two documents using a shared worker."
 spec: https://html.spec.whatwg.org/multipage/web-messaging.html#channel-messaging
 caniuse: channel-messaging
 group: messaging
