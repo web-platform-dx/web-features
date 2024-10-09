@@ -1,0 +1,13 @@
+name: Dataset
+description: "The `dataset` API attaches and accesses custom data on elements, using either the `dataset` property of `HTMLElement` or attributes prefixed with `data-`."
+spec: https://html.spec.whatwg.org/multipage/dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes
+caniuse: dataset
+# This matches Caniuse, which specifically notes that support figures are derived from
+# the HTML support in that spec, not SVG/MathML.
+status:
+  compute_from: api.HTMLElement.dataset
+compat_features:
+  - api.DOMStringMap
+  - api.HTMLElement.dataset
+  - api.MathMLElement.dataset
+  - api.SVGElement.dataset

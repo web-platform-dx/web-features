@@ -69,6 +69,18 @@ compat_features:
   - css.types.angle-percentage
 
   # baseline: low
+  # baseline_low_date: 2022-09-12
+  # support:
+  #   chrome: "29"
+  #   chrome_android: "29"
+  #   edge: "12"
+  #   firefox: "8"
+  #   firefox_android: "8"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - css.types.resolution
+
+  # baseline: low
   # baseline_low_date: 2023-11-21
   # support:
   #   chrome: "111"
@@ -79,15 +91,6 @@ compat_features:
   #   safari: "16.4"
   #   safari_ios: "16.4"
   - css.types.length.rlh
-
-  # baseline: false
-  # support:
-  #   chrome: "29"
-  #   chrome_android: "29"
-  #   edge: "12"
-  #   firefox: "8"
-  #   firefox_android: "8"
-  - css.types.resolution
 
   # baseline: false
   # support:
