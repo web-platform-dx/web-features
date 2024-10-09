@@ -53,6 +53,7 @@ compat_features:
   #   safari: "9"
   #   safari_ios: "9"
   - css.properties.column-count
+  - css.properties.column-count.auto
   - css.properties.column-rule
   - css.properties.column-rule-color
   - css.properties.column-rule-style
@@ -71,19 +72,6 @@ compat_features:
   #   safari: "10"
   #   safari_ios: "10"
   - css.properties.column-gap.multicol_context
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "50"
-  #   chrome_android: "50"
-  #   edge: "79"
-  #   firefox: "52"
-  #   firefox_android: "52"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - css.properties.column-count.auto
 
   # baseline: false
   # support:
