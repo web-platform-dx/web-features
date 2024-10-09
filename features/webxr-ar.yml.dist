@@ -4,11 +4,10 @@
 status:
   baseline: false
   support:
-    chrome: "81"
-    chrome_android: "81"
-    edge: "81"
+    chrome: "86"
+    chrome_android: "86"
+    edge: "86"
 compat_features:
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "81"
@@ -23,6 +22,7 @@ compat_features:
   #   edge: "84"
   - api.XRSession.interactionMode
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "86"
