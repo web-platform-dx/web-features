@@ -3,11 +3,14 @@ description: "Channel messaging communicates one-to-one between browsing context
 spec: https://html.spec.whatwg.org/multipage/web-messaging.html#channel-messaging
 caniuse: channel-messaging
 group: messaging
+status:
+  compute_from: api.MessageChannel
 compat_features:
   - api.MessageChannel
   - api.MessageChannel.MessageChannel
   - api.MessageChannel.port1
   - api.MessageChannel.port2
+  - api.MessageEvent.ports
   - api.MessagePort
   - api.MessagePort.close
   - api.MessagePort.message_event
