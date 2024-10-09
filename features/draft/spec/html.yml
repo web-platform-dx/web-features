@@ -16,7 +16,6 @@ compat_features:
   - api.DOMStringList.contains
   - api.DOMStringList.item
   - api.DOMStringList.length
-  - api.DOMStringMap
   - api.DataTransfer
   - api.DataTransfer.DataTransfer
   - api.DataTransfer.clearData
@@ -132,7 +131,6 @@ compat_features:
   - api.HTMLElement.change_event
   - api.HTMLElement.click
   - api.HTMLElement.contentEditable
-  - api.HTMLElement.dataset
   - api.HTMLElement.dir
   - api.HTMLElement.drag_event
   - api.HTMLElement.dragend_event
@@ -239,7 +237,6 @@ compat_features:
   - api.HTMLUnknownElement
   - api.HTMLVideoElement.playsInline
   - api.MathMLElement.blur
-  - api.MathMLElement.dataset
   - api.MathMLElement.focus
   - api.MathMLElement.nonce
   - api.MathMLElement.tabIndex
@@ -373,7 +370,6 @@ compat_features:
   - api.RadioNodeList.value
   - api.Range.createContextualFragment
   - api.SVGElement.blur
-  - api.SVGElement.dataset
   - api.SVGElement.focus
   - api.SVGElement.nonce
   - api.SVGElement.tabIndex
