@@ -1,4 +1,4 @@
-draft_date: 2024-10-07
+draft_date: 2024-10-10
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -127,6 +127,7 @@ compat_features:
   - api.HTMLElement.accessKey
   - api.HTMLElement.accessKeyLabel
   - api.HTMLElement.autocapitalize
+  - api.HTMLElement.autocorrect
   - api.HTMLElement.blur
   - api.HTMLElement.change_event
   - api.HTMLElement.click
@@ -436,7 +437,6 @@ compat_features:
   - api.Window.focus_event
   - api.Window.frameElement
   - api.Window.frames
-  - api.Window.hashchange_event
   - api.Window.history
   - api.Window.languagechange_event
   - api.Window.length
@@ -626,6 +626,7 @@ compat_features:
   - html.elements.video.playsinline
   - html.global_attributes.accesskey
   - html.global_attributes.autocapitalize
+  - html.global_attributes.autocorrect
   - html.global_attributes.class
   - html.global_attributes.contenteditable
   - html.global_attributes.data_attributes
@@ -643,6 +644,7 @@ compat_features:
   - http.headers.Cross-Origin-Embedder-Policy
   - http.headers.Cross-Origin-Embedder-Policy.credentialless
   - http.headers.Cross-Origin-Opener-Policy
+  - http.headers.Link.expect
   - http.headers.Origin-Agent-Cluster
   - http.headers.Permissions-Policy.autoplay
   - http.headers.Permissions-Policy.cross-origin-isolated
@@ -775,6 +777,12 @@ compat_features:
 #   - api.CanvasRenderingContext2D.transform
 #   - api.CanvasRenderingContext2D.translate
 #   - api.CanvasRenderingContext2D.wordSpacing
+#   - api.ImageData
+#   - api.ImageData.ImageData
+#   - api.ImageData.colorSpace
+#   - api.ImageData.data
+#   - api.ImageData.height
+#   - api.ImageData.width
 #   - api.TextMetrics
 #   - api.TextMetrics.alphabeticBaseline
 #   - api.TextMetrics.hangingBaseline
@@ -832,6 +840,11 @@ compat_features:
 #   - javascript.builtins.SyntaxError.serializable_object
 #   - javascript.builtins.TypeError.serializable_object
 #   - javascript.builtins.URIError.serializable_object
+# - Dataset:
+#   - api.DOMStringMap
+#   - api.HTMLElement.dataset
+#   - api.MathMLElement.dataset
+#   - api.SVGElement.dataset
 # - requestAnimationFrame() in workers:
 #   - api.DedicatedWorkerGlobalScope.cancelAnimationFrame
 #   - api.DedicatedWorkerGlobalScope.requestAnimationFrame
@@ -839,6 +852,24 @@ compat_features:
 #   - api.DedicatedWorkerGlobalScope.messageerror_event
 #   - api.MessagePort.messageerror_event
 #   - api.Window.messageerror_event
+# - Location:
+#   - api.Document.location
+#   - api.Location
+#   - api.Location.ancestorOrigins
+#   - api.Location.assign
+#   - api.Location.hash
+#   - api.Location.host
+#   - api.Location.hostname
+#   - api.Location.href
+#   - api.Location.origin
+#   - api.Location.pathname
+#   - api.Location.port
+#   - api.Location.protocol
+#   - api.Location.reload
+#   - api.Location.replace
+#   - api.Location.search
+#   - api.Location.toString
+#   - api.Window.location
 # - Unsanitized HTML parsing methods:
 #   - api.Document.parseHTMLUnsafe_static
 #   - api.Element.setHTMLUnsafe
@@ -1328,6 +1359,7 @@ compat_features:
 #   - html.elements.img.fetchpriority
 #   - html.elements.link.fetchpriority
 #   - html.elements.script.fetchpriority
+#   - http.headers.Link.fetchpriority
 # - dirname:
 #   - api.HTMLInputElement.dirName
 #   - api.HTMLTextAreaElement.dirName
@@ -1388,6 +1420,7 @@ compat_features:
 #   - html.elements.link.blocking
 #   - html.elements.script.blocking
 #   - html.elements.style.blocking
+#   - http.headers.Link.blocking
 # - Preloading responsive images:
 #   - api.HTMLLinkElement.imageSizes
 #   - api.HTMLLinkElement.imageSrcset
@@ -1777,6 +1810,12 @@ compat_features:
 #   - api.HTMLTitleElement
 #   - api.HTMLTitleElement.text
 #   - html.elements.title
+# - hashchange:
+#   - api.HashChangeEvent
+#   - api.HashChangeEvent.HashChangeEvent
+#   - api.HashChangeEvent.newURL
+#   - api.HashChangeEvent.oldURL
+#   - api.Window.hashchange_event
 # - History:
 #   - api.History
 #   - api.History.back

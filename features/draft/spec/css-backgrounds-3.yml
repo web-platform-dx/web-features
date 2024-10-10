@@ -1,15 +1,8 @@
-draft_date: 2024-09-30
+draft_date: 2024-10-10
 name: CSS Backgrounds and Borders Module Level 3
 description: TODO
 spec: https://drafts.csswg.org/css-backgrounds-3/
 compat_features:
-  - css.properties.background
-  - css.properties.background-attachment
-  - css.properties.background-attachment.fixed
-  - css.properties.background-attachment.local
-  - css.properties.background-attachment.scroll
-  - css.properties.background-clip.border-area
-  - css.properties.background-color
   - css.properties.background-image
   - css.properties.background-image.none
   - css.properties.background-origin
@@ -24,17 +17,6 @@ compat_features:
   - css.properties.background-position.left
   - css.properties.background-position.right
   - css.properties.background-position.top
-  - css.properties.background-repeat
-  - css.properties.background-repeat.no-repeat
-  - css.properties.background-repeat.repeat
-  - css.properties.background-repeat.repeat-x
-  - css.properties.background-repeat.repeat-y
-  - css.properties.background-repeat.round
-  - css.properties.background-repeat.space
-  - css.properties.background-size
-  - css.properties.background-size.auto
-  - css.properties.background-size.contain
-  - css.properties.background-size.cover
   - css.properties.border-image-repeat.repeat
   - css.properties.border-image-repeat.stretch
   - css.properties.border-image-width.auto
@@ -42,13 +24,37 @@ compat_features:
   - css.types.line-style
 
 # The following features in the spec are already part of web-features:
+# - background:
+#   - css.properties.background
+# - background-attachment:
+#   - css.properties.background-attachment
+#   - css.properties.background-attachment.fixed
+#   - css.properties.background-attachment.local
+#   - css.properties.background-attachment.scroll
 # - background-clip:
 #   - css.properties.background-clip
 #   - css.properties.background-clip.border-box
 #   - css.properties.background-clip.content-box
 #   - css.properties.background-clip.padding-box
+# - background-clip: border-area:
+#   - css.properties.background-clip.border-area
 # - background-clip: text:
 #   - css.properties.background-clip.text
+# - background-color:
+#   - css.properties.background-color
+# - background-repeat:
+#   - css.properties.background-repeat
+#   - css.properties.background-repeat.no-repeat
+#   - css.properties.background-repeat.repeat
+#   - css.properties.background-repeat.repeat-x
+#   - css.properties.background-repeat.repeat-y
+#   - css.properties.background-repeat.round
+#   - css.properties.background-repeat.space
+# - background-size:
+#   - css.properties.background-size
+#   - css.properties.background-size.auto
+#   - css.properties.background-size.contain
+#   - css.properties.background-size.cover
 # - Borders:
 #   - css.properties.border
 #   - css.properties.border-bottom
