@@ -7,10 +7,8 @@ group: messaging
 status:
   compute_from: api.Window.postMessage
 compat_features:
-  # Already generated in Broadcast channel.
-  # Revisit once the "keys in impl or feature" question is answered.
-  #- api.BroadcastChannel.postMessage
+  # Other features, such as channel messaging and broadcast channels have
+  # `postMessage` methods too, but are not covered by this feature.
   - api.DedicatedWorkerGlobalScope.postMessage
-  - api.MessagePort.postMessage
   - api.Window.postMessage
   - api.Worker.postMessage
