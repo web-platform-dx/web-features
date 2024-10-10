@@ -6,7 +6,7 @@ status:
   baseline_low_date: 2015-09-22
   baseline_high_date: 2018-03-22
   support:
-    chrome: "2"
+    chrome: "4"
     chrome_android: "18"
     edge: "12"
     firefox: "41"
@@ -27,7 +27,6 @@ compat_features:
   #   safari_ios: "3.2"
   - api.MessageEvent.ports
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-09-22
   # baseline_high_date: 2018-03-22
