@@ -8,6 +8,12 @@ status:
     chrome_android: "115"
     edge: "115"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "115"
+  #   chrome_android: "115"
+  #   edge: "115"
   - api.ScrollTimeline
   - api.ScrollTimeline.ScrollTimeline
   - api.ScrollTimeline.axis
@@ -30,3 +36,14 @@ compat_features:
   - css.properties.view-timeline-axis
   - css.properties.view-timeline-inset
   - css.properties.view-timeline-name
+
+  # baseline: false
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "116"
+  #   edge: "116"
+  - css.properties.timeline-scope
+
+  # baseline: false
+  # support: {}
+  - css.properties.animation.animation-timeline_included

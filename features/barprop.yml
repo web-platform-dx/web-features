@@ -1,0 +1,13 @@
+name: BarProp
+description: The `visible` property of the `window.locationbar`, `window.menubar`, `window.personalbar`, `window.scrollbars`, `window.statusbar`, and `window.toolbar` APIs historically represented the visibility of a browser user interface. For privacy reasons, it now represents whether the window is a pop-up.
+spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#browser-interface-elements
+compat_features:
+  - api.BarProp
+  - api.BarProp.visible
+  - api.BarProp.visible.returns_popup
+  - api.Window.locationbar
+  - api.Window.menubar
+  - api.Window.personalbar
+  - api.Window.scrollbars
+  - api.Window.statusbar
+  - api.Window.toolbar

@@ -143,6 +143,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "86"
+  #   chrome_android: "86"
+  #   edge: "86"
+  #   firefox: "131"
+  #   firefox_android: "131"
+  - api.PointerEvent.altitudeAngle
+  - api.PointerEvent.azimuthAngle
+
+  # baseline: false
+  # support:
   #   chrome: "58"
   #   chrome_android: "58"
   #   edge: "79"
@@ -155,14 +165,6 @@ compat_features:
   #   chrome_android: "77"
   #   edge: "79"
   - api.Element.pointerrawupdate_event
-
-  # baseline: false
-  # support:
-  #   chrome: "86"
-  #   chrome_android: "86"
-  #   edge: "86"
-  - api.PointerEvent.altitudeAngle
-  - api.PointerEvent.azimuthAngle
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
