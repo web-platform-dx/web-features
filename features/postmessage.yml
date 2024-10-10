@@ -14,3 +14,16 @@ compat_features:
   - api.MessagePort.postMessage
   - api.Window.postMessage
   - api.Worker.postMessage
+
+  # Already generated in Broadcast channel.
+  # Revisit once the "keys in impl or feature" question is answered.
+  #- api.BroadcastChannel.message_event
+  - api.DedicatedWorkerGlobalScope.message_event
+  - api.MessageEvent
+  - api.MessageEvent.MessageEvent
+  - api.MessageEvent.data
+  - api.MessageEvent.lastEventId
+  - api.MessageEvent.origin
+  - api.MessageEvent.source
+  - api.Window.message_event
+  - api.Worker.message_event
