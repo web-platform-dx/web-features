@@ -26,6 +26,10 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "4"
   #   safari_ios: "3.2"
+  - api.MessageEvent
+  - api.MessageEvent.data
+  - api.MessageEvent.origin
+  - api.MessageEvent.source
   - api.Window.postMessage
 
   # baseline: high
@@ -52,17 +56,45 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "4"
   #   safari_ios: "5"
+  - api.DedicatedWorkerGlobalScope.message_event
   - api.DedicatedWorkerGlobalScope.postMessage
+  - api.Worker.message_event
 
   # baseline: high
-  # baseline_low_date: 2015-09-22
-  # baseline_high_date: 2018-03-22
+  # baseline_low_date: 2016-08-02
+  # baseline_high_date: 2019-02-02
+  # support:
+  #   chrome: "16"
+  #   chrome_android: "18"
+  #   edge: "14"
+  #   firefox: "26"
+  #   firefox_android: "26"
+  #   safari: "6"
+  #   safari_ios: "6"
+  - api.MessageEvent.MessageEvent
+
+  # baseline: high
+  # baseline_low_date: 2017-08-01
+  # baseline_high_date: 2020-02-01
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "12"
+  #   firefox: "9"
+  #   firefox_android: "9"
+  #   safari: "4"
+  #   safari_ios: "4"
+  - api.Window.message_event
+
+  # baseline: high
+  # baseline_low_date: 2018-04-30
+  # baseline_high_date: 2020-10-30
   # support:
   #   chrome: "2"
   #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "41"
-  #   firefox_android: "41"
-  #   safari: "5"
-  #   safari_ios: "4.2"
-  - api.MessagePort.postMessage
+  #   edge: "17"
+  #   firefox: "3"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - api.MessageEvent.lastEventId
