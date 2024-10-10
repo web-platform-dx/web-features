@@ -312,8 +312,9 @@ compat_features:
   #   safari_ios: "11.3"
   - api.ServiceWorkerContainer.startMessages
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-04-05
+  # baseline_high_date: 2024-10-05
   # support:
   #   chrome: "59"
   #   chrome_android: "59"
@@ -324,8 +325,9 @@ compat_features:
   #   safari_ios: "15.4"
   - api.ServiceWorkerRegistration.navigationPreload
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-04-05
+  # baseline_high_date: 2024-10-05
   # support:
   #   chrome: "59"
   #   chrome_android: "59"
@@ -403,6 +405,13 @@ compat_features:
   #   firefox: "65"
   #   firefox_android: "65"
   - api.ServiceWorkerGlobalScope.messageerror_event
+
+  # baseline: false
+  # support:
+  #   chrome: "40"
+  #   chrome_android: "40"
+  #   edge: "79"
+  - api.InstallEvent.InstallEvent
 
   # baseline: false
   # support:

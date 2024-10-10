@@ -3,44 +3,18 @@
 
 status:
   baseline: high
-  baseline_low_date: ≤2020-03-24
-  baseline_high_date: ≤2022-09-24
+  baseline_low_date: 2015-07-29
+  baseline_high_date: 2018-01-29
   support:
-    chrome: "2"
+    chrome: "1"
     chrome_android: "18"
     edge: "12"
-    firefox: "19"
-    firefox_android: "19"
-    safari: ≤13.1
-    safari_ios: ≤13.4
+    firefox: "1"
+    firefox_android: "4"
+    safari: "1"
+    safari_ios: "1"
 compat_features:
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "1"
-  #   safari_ios: "1"
-  - css.properties.border-color
   - css.properties.caption-side
   - css.properties.clear
   - css.properties.float
   - css.properties.text-align
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: high
-  # baseline_low_date: ≤2020-03-24
-  # baseline_high_date: ≤2022-09-24
-  # support:
-  #   chrome: "2"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "19"
-  #   firefox_android: "19"
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
-  - css.at-rules.page

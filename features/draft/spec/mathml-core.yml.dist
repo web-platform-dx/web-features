@@ -123,7 +123,7 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "10"
   #   safari_ios: "10"
-  - mathml.elements.mo.moveablelimits
+  - mathml.elements.mo.movablelimits
   - mathml.elements.mover.accent
   - mathml.elements.mpadded.depth
   - mathml.elements.mpadded.height
@@ -260,7 +260,6 @@ compat_features:
   #   firefox: "117"
   #   firefox_android: "117"
   - css.properties.math-depth
-  - css.properties.text-transform.math-auto
 
   # baseline: false
   # support:
