@@ -4,15 +4,10 @@
 status:
   baseline: false
   support:
-    chrome: "114"
-    chrome_android: "114"
-    edge: "114"
+    chrome: "87"
+    chrome_android: "87"
+    edge: "87"
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "87"
-  #   chrome_android: "87"
-  #   edge: "87"
   - api.CookieChangeEvent
   - api.CookieChangeEvent.CookieChangeEvent
   - api.CookieChangeEvent.changed
@@ -35,18 +30,3 @@ compat_features:
   - api.ServiceWorkerGlobalScope.cookiechange_event
   - api.ServiceWorkerRegistration.cookies
   - api.Window.cookieStore
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "114"
-  #   chrome_android: "114"
-  #   edge: "114"
-  - api.CookieChangeEvent.changed.partitioned_property
-  - api.CookieChangeEvent.deleted.partitioned_property
-  - api.CookieStore.delete.partitioned_option
-  - api.CookieStore.get.partitioned_return_property
-  - api.CookieStore.getAll.partitioned_return_property
-  - api.CookieStore.set.partitioned_option
-  - api.ExtendableCookieChangeEvent.changed.partitioned_property
-  - api.ExtendableCookieChangeEvent.deleted.partitioned_property
