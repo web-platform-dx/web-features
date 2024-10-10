@@ -18,6 +18,8 @@ compat_features:
   #   safari: "13.1"
   #   safari_ios: "13"
   - api.HTMLMediaElement.disableRemotePlayback
+  - html.elements.audio.disableremoteplayback
+  - html.elements.video.disableremoteplayback
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
