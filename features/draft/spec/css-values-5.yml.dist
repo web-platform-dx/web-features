@@ -16,7 +16,6 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "1"
   #   safari_ios: "1"
-  - css.properties.content.url
   - css.types.dimension
   - css.types.integer
   - css.types.length
@@ -67,18 +66,6 @@ compat_features:
   #   safari_ios: "3.2"
   - css.types.angle
   - css.types.angle-percentage
-
-  # baseline: low
-  # baseline_low_date: 2022-09-12
-  # support:
-  #   chrome: "29"
-  #   chrome_android: "29"
-  #   edge: "12"
-  #   firefox: "8"
-  #   firefox_android: "8"
-  #   safari: "16"
-  #   safari_ios: "16"
-  - css.types.resolution
 
   # baseline: low
   # baseline_low_date: 2023-11-21

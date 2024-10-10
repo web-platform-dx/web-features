@@ -1,10 +1,9 @@
-draft_date: 2024-09-23
+draft_date: 2024-10-10
 name: Media Queries Level 5
 description: TODO
 spec: https://drafts.csswg.org/mediaqueries-5/
 compat_features:
   - css.at-rules.custom-media
-  - css.at-rules.media.resolution
 
 # The following features in the spec are already part of web-features:
 # - Media queries:
@@ -47,6 +46,8 @@ compat_features:
 #   - css.at-rules.media.prefers-reduced-motion
 # - prefers-reduced-transparency media query:
 #   - css.at-rules.media.prefers-reduced-transparency
+# - resolution media query:
+#   - css.at-rules.media.resolution
 # - scripting media query:
 #   - css.at-rules.media.scripting
 # - Update frequency media query:
