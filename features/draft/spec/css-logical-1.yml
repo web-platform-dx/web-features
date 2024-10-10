@@ -1,16 +1,16 @@
-draft_date: 2024-09-23
+draft_date: 2024-10-10
 name: CSS Logical Properties and Values Level 1
 description: TODO
 spec: https://drafts.csswg.org/css-logical-1/
 compat_features:
-  - css.at-rules.page
-  - css.properties.border-color
   - css.properties.caption-side
   - css.properties.clear
   - css.properties.float
   - css.properties.text-align
 
 # The following features in the spec are already part of web-features:
+# - Page setup:
+#   - css.at-rules.page
 # - Logical properties:
 #   - css.properties.block-size
 #   - css.properties.border-block
@@ -69,6 +69,8 @@ compat_features:
 #   - css.properties.padding-inline
 #   - css.properties.padding-inline-end
 #   - css.properties.padding-inline-start
+# - Borders:
+#   - css.properties.border-color
 # - Page breaks:
 #   - css.properties.page-break-after
 #   - css.properties.page-break-before

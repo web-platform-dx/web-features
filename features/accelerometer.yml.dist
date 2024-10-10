@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "67"
-    chrome_android: "67"
-    edge: "79"
+    chrome: "91"
+    chrome_android: "91"
+    edge: "91"
 compat_features:
   # baseline: false
   # support:
@@ -15,7 +15,6 @@ compat_features:
   #   edge: "79"
   - api.Permissions.permission_accelerometer
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "67"
@@ -35,3 +34,12 @@ compat_features:
   #   chrome_android: "88"
   #   edge: "88"
   - http.headers.Permissions-Policy.accelerometer
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "91"
+  #   chrome_android: "91"
+  #   edge: "91"
+  - api.GravitySensor
+  - api.GravitySensor.GravitySensor

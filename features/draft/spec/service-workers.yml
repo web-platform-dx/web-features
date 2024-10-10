@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-10
 name: Service Workers
 description: TODO
 spec: https://w3c.github.io/ServiceWorker/
@@ -49,6 +49,7 @@ compat_features:
   - api.FetchEvent.respondWith
   - api.FetchEvent.resultingClientId
   - api.InstallEvent
+  - api.InstallEvent.InstallEvent
   - api.InstallEvent.addRoutes
   - api.NavigationPreloadManager
   - api.NavigationPreloadManager.disable
