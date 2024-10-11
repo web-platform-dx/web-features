@@ -1,7 +1,9 @@
-draft_date: 2024-09-09
-name: URL Standard
-description: TODO
+name: URL
+description: A `URL` object represents a web address, like `https://example.com/`, and parts of the address, such as the domain, path, and query string (as `URLSearchParams`).
 spec: https://url.spec.whatwg.org/
+caniuse: url
+status:
+  compute_from: api.URL
 compat_features:
   - api.URL
   - api.URL.URL
@@ -21,7 +23,6 @@ compat_features:
   - api.URL.toString
   - api.URL.username
   - api.URLSearchParams
-  - api.URLSearchParams.@@iterator
   - api.URLSearchParams.URLSearchParams
   - api.URLSearchParams.append
   - api.URLSearchParams.delete
@@ -36,7 +37,4 @@ compat_features:
   - api.URLSearchParams.sort
   - api.URLSearchParams.toString
   - api.URLSearchParams.values
-
-# The following features in the spec are already part of web-features:
-# - URL.canParse():
-#   - api.URL.canParse_static
+  - api.URLSearchParams.@@iterator
