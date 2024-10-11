@@ -6,6 +6,7 @@ status:
   compute_from: api.Document.requestStorageAccess
 compat_features:
   - api.Document.hasStorageAccess
+  - api.Document.hasUnpartitionedCookieAccess
   - api.Document.requestStorageAccess
   - api.Document.requestStorageAccessFor
   - api.Permissions.permission_top-level-storage-access
