@@ -1,5 +1,5 @@
 name: Shared storage
-description: "Shared Storage is a client-side storage mechanism for unpartitioned, cross-site data access that  preserves privacy by not relying on tracking cookies."
+description: The `sharedStorage` API stores data across sites. Unlike `localStorage`, third-parties can write to shared storage, which you can read from the origin browsing context.
 spec: https://wicg.github.io/shared-storage/
 group: storage
 compat_features:
