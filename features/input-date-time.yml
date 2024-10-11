@@ -1,0 +1,16 @@
+name: <input> date, datetime-local, time, and week
+description: The `<input>` element allows the user to input date and time information to a form.
+spec: https://html.spec.whatwg.org/multipage/input.html#date-state-(type=date)
+group:
+  - forms
+  - html-elements
+status:
+  compute_from: html.elements.input.type_date
+caniuse: input-datetime
+compat_features:
+  - html.elements.input.type_date
+  - html.elements.input.type_datetime-local
+  # Excluded because of a non-real value
+  # - html.elements.input.type_month
+  - html.elements.input.type_time
+  - html.elements.input.type_week
