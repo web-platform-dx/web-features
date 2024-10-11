@@ -1,5 +1,5 @@
-name: Storage
-description: "`Storage` is for access and manipulation of a particular domain's stored data either for the duration of a session, or persistent across sessions, using name/value pairs."
+name: localStorage and sessionStorage
+description: The `localStorage` and `sessionStorage` APIs store data as key-value pairs. While `localStorage` persists across sessions, `sessionStorage` data is discarded when the page is closed.
 spec: https://storage.spec.whatwg.org/
 group: storage
 caniuse: namevalue-storage
