@@ -1,0 +1,16 @@
+name: "display: table"
+description: "The `display: table` CSS declaration sets an element as a table layout container, as the `<table>` HTML element. Child elements may use the declaration equivalents of `<table>` internal elements such as `display: table-row`"
+spec: https://drafts.csswg.org/css-display-3/#layout-specific-display
+caniuse: css-table
+group: css
+compat_features:
+  - css.properties.display.table
+  - css.properties.display.table-caption
+  - css.properties.display.table-cell
+  - css.properties.display.table-column
+  - css.properties.display.table-column-group
+  - css.properties.display.table-footer-group
+  - css.properties.display.table-header-group
+  - css.properties.display.table-row
+  - css.properties.display.table-row-group
+  - css.properties.display.inline-table
