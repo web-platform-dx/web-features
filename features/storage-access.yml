@@ -2,7 +2,6 @@ name: Storage access
 description: The `document.requestStorageAccess()` method allows content in iframes to request storing and reading cookies and other site data, while the `document.hasStorageAccess()` method checks if such access is granted.
 spec: https://privacycg.github.io/storage-access/
 group: storage
-# Gets this to match on baseline status on MDN
 status:
   compute_from: api.Document.requestStorageAccess
 compat_features:
