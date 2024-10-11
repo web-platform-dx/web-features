@@ -1,0 +1,24 @@
+name: XPath
+description: "XML Path Language (`XPath`) uses a syntax akin to file paths to provide a flexible way of pointing to or selecting different parts of an XML document. It can also be used to test addressed nodes within a document to determine whether they match a pattern or not."
+spec: https://dom.spec.whatwg.org/#xpath
+group: xml
+compat_features:
+  # Doesn't really fit well here, maybe should stand alone,
+  # or be part of DOM?
+  #- api.XMLDocument
+  - api.XPathEvaluator
+  - api.XPathEvaluator.XPathEvaluator
+  - api.XPathEvaluator.createExpression
+  - api.XPathEvaluator.evaluate
+  - api.XPathExpression
+  - api.XPathExpression.evaluate
+  - api.XPathResult
+  - api.XPathResult.booleanValue
+  - api.XPathResult.invalidIteratorState
+  - api.XPathResult.iterateNext
+  - api.XPathResult.numberValue
+  - api.XPathResult.resultType
+  - api.XPathResult.singleNodeValue
+  - api.XPathResult.snapshotItem
+  - api.XPathResult.snapshotLength
+  - api.XPathResult.stringValue
