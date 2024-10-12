@@ -1,8 +1,8 @@
 name: Bidirectional override
 description: The `unicode-bidi` and `direction` CSS properties override the Unicode layout algorithm in non-HTML documents. Authors should use the `dir` global HTML attribute instead.
 spec:
-  - https://drafts.csswg.org/css-writing-modes/#direction
-  - https://drafts.csswg.org/css-writing-modes/#unicode-bidi
+  - https://drafts.csswg.org/css-writing-modes-4/#direction
+  - https://drafts.csswg.org/css-writing-modes-4/#unicode-bidi
 compat_features:
   - css.properties.unicode-bidi
   - css.properties.unicode-bidi.bidi-override
