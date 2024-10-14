@@ -9,6 +9,8 @@ compat_features:
   - api.CSS.paintWorklet_static
   - api.PaintWorkletGlobalScope
   - css.types.image.paint
+  # At the time of writing, additional parameters are not supported anywhere.
+  # When support is added, reflect on whether this calls for a separate feature.
   - css.types.image.paint.additional_parameters
   - api.PaintRenderingContext2D
   - api.PaintRenderingContext2D.beginPath
