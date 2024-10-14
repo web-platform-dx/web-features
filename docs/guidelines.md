@@ -260,7 +260,7 @@ Follow these guidelines when setting a `caniuse` value:
 - Do not set a `caniuse` value if the Can I Use feature is merely related to the feature.
   For example, in [`grid.yml`](../features/grid.yml), do not set `caniuse: css-subgrid`.
 
-- Do not set a `caniuse` value if the top-level headline `status` would not accurately reflect whether each browser is shown as supported on Can I Use.
+- Do not set a `caniuse` value if the top-level headline `status` does not match Can I Use on whether each browser supports or does not support the feature.
 
   For example, if Can I Use shows that one browser of the core browser set does not support a feature but web-features's status reports that the feature is supported across all of the browsers, then do one of these:
 
