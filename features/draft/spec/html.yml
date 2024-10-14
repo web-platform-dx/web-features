@@ -1,4 +1,4 @@
-draft_date: 2024-10-10
+draft_date: 2024-10-14
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -817,6 +817,19 @@ compat_features:
 # - requestAnimationFrame() in workers:
 #   - api.DedicatedWorkerGlobalScope.cancelAnimationFrame
 #   - api.DedicatedWorkerGlobalScope.requestAnimationFrame
+# - postMessage:
+#   - api.DedicatedWorkerGlobalScope.message_event
+#   - api.DedicatedWorkerGlobalScope.postMessage
+#   - api.MessageEvent
+#   - api.MessageEvent.MessageEvent
+#   - api.MessageEvent.data
+#   - api.MessageEvent.lastEventId
+#   - api.MessageEvent.origin
+#   - api.MessageEvent.source
+#   - api.Window.message_event
+#   - api.Window.postMessage
+#   - api.Worker.message_event
+#   - api.Worker.postMessage
 # - messageerror:
 #   - api.DedicatedWorkerGlobalScope.messageerror_event
 #   - api.MessagePort.messageerror_event
@@ -874,6 +887,16 @@ compat_features:
 #   - api.ElementInternals.validity
 #   - api.ElementInternals.willValidate
 #   - api.HTMLElement.attachInternals
+# - Server-sent events:
+#   - api.EventSource
+#   - api.EventSource.EventSource
+#   - api.EventSource.close
+#   - api.EventSource.error_event
+#   - api.EventSource.message_event
+#   - api.EventSource.open_event
+#   - api.EventSource.readyState
+#   - api.EventSource.url
+#   - api.EventSource.withCredentials
 # - <a>:
 #   - api.HTMLAnchorElement
 #   - api.HTMLAnchorElement.hash
@@ -1804,6 +1827,17 @@ compat_features:
 #   - api.ImageBitmapRenderingContext.canvas
 #   - api.ImageBitmapRenderingContext.transferFromImageBitmap
 #   - api.createImageBitmap
+# - Channel messaging:
+#   - api.MessageChannel
+#   - api.MessageChannel.MessageChannel
+#   - api.MessageChannel.port1
+#   - api.MessageChannel.port2
+#   - api.MessageEvent.ports
+#   - api.MessagePort
+#   - api.MessagePort.close
+#   - api.MessagePort.message_event
+#   - api.MessagePort.postMessage
+#   - api.MessagePort.start
 # - Navigation API:
 #   - api.NavigateEvent
 #   - api.NavigateEvent.NavigateEvent
