@@ -1,4 +1,4 @@
-draft_date: 2024-09-30
+draft_date: 2024-10-10
 name: CSS Text Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-text-4/
@@ -50,14 +50,9 @@ compat_features:
   - css.properties.text-transform.full-size-kana
   - css.properties.text-transform.full-width
   - css.properties.text-transform.lowercase
+  - css.properties.text-transform.math-auto
   - css.properties.text-transform.none
   - css.properties.text-transform.uppercase
-  - css.properties.text-wrap
-  - css.properties.text-wrap-style
-  - css.properties.text-wrap-style.auto
-  - css.properties.text-wrap-style.balance
-  - css.properties.text-wrap-style.stable
-  - css.properties.text-wrap.stable
   - css.properties.word-break
   - css.properties.word-break.auto-phrase
   - css.properties.word-break.break-all
@@ -78,15 +73,25 @@ compat_features:
 #   - css.properties.text-indent
 # - text-spacing-trim:
 #   - css.properties.text-spacing-trim
+# - text-wrap:
+#   - css.properties.text-wrap
+#   - css.properties.text-wrap.wrap
 # - text-wrap: balance:
 #   - css.properties.text-wrap.balance
 # - text-wrap: nowrap:
 #   - css.properties.text-wrap.nowrap
-#   - css.properties.text-wrap.wrap
 # - text-wrap: pretty:
 #   - css.properties.text-wrap.pretty
+# - text-wrap: stable:
+#   - css.properties.text-wrap.stable
 # - text-wrap-mode:
 #   - css.properties.text-wrap-mode
+# - text-wrap-style:
+#   - css.properties.text-wrap-style
+#   - css.properties.text-wrap-style.auto
+#   - css.properties.text-wrap-style.balance
+#   - css.properties.text-wrap-style.pretty
+#   - css.properties.text-wrap-style.stable
 # - white-space:
 #   - css.properties.white-space
 #   - css.properties.white-space.break-spaces

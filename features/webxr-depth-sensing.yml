@@ -1,0 +1,19 @@
+name: Depth sensing
+description: An `XRDepthInformation` object represents a measurement of the distance from the user's device to the real-world geometry in the user's environment.
+spec: https://immersive-web.github.io/depth-sensing/
+group: webxr
+compat_features:
+  - api.XRSession.depthUsage
+  - api.XRSession.depthDataFormat
+  - api.XRDepthInformation
+  - api.XRDepthInformation.height
+  - api.XRDepthInformation.normDepthBufferFromNormView
+  - api.XRDepthInformation.rawValueToMeters
+  - api.XRDepthInformation.width
+  - api.XRCPUDepthInformation
+  - api.XRCPUDepthInformation.data
+  - api.XRCPUDepthInformation.getDepthInMeters
+  - api.XRFrame.getDepthInformation
+  - api.XRWebGLDepthInformation
+  - api.XRWebGLDepthInformation.texture
+  - api.XRWebGLBinding.getDepthInformation
