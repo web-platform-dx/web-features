@@ -1,15 +1,12 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-10
 name: CSS Box Alignment Module Level 3
 description: TODO
 spec: https://drafts.csswg.org/css-align-3/
 compat_features:
   - css.properties.align-content
   - css.properties.align-content.block_context
-  - css.properties.align-content.multicol_context
   - css.properties.align-items
   - css.properties.align-self
-  - css.properties.column-gap
-  - css.properties.column-gap.multicol_context
   - css.properties.gap
   - css.properties.gap.multicol_context
   - css.properties.justify-content
@@ -37,6 +34,10 @@ compat_features:
 #   - css.properties.justify-items.grid_context
 #   - css.properties.justify-self.grid_context
 #   - css.properties.row-gap.grid_context
+# - Multi-column layout:
+#   - css.properties.align-content.multicol_context
+#   - css.properties.column-gap
+#   - css.properties.column-gap.multicol_context
 # - Flexbox gap:
 #   - css.properties.column-gap.flex_context
 #   - css.properties.gap.flex_context
