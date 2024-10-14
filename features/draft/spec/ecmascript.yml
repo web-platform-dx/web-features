@@ -1,4 +1,4 @@
-draft_date: 2024-09-30
+draft_date: 2024-10-10
 name: ECMAScript Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
@@ -11,12 +11,6 @@ compat_features:
   - javascript.builtins.ArrayBuffer.byteLength
   - javascript.builtins.ArrayBuffer.isView
   - javascript.builtins.ArrayBuffer.slice
-  - javascript.builtins.AsyncIterator
-  - javascript.builtins.AsyncIterator.@@asyncIterator
-  - javascript.builtins.Boolean
-  - javascript.builtins.Boolean.Boolean
-  - javascript.builtins.Boolean.toString
-  - javascript.builtins.Boolean.valueOf
   - javascript.builtins.DataView
   - javascript.builtins.DataView.DataView
   - javascript.builtins.DataView.buffer
@@ -38,18 +32,9 @@ compat_features:
   - javascript.builtins.DataView.setUint16
   - javascript.builtins.DataView.setUint32
   - javascript.builtins.DataView.setUint8
-  - javascript.builtins.Error
-  - javascript.builtins.Error.Error
   - javascript.builtins.Error.Error.options_cause_parameter
   - javascript.builtins.Error.cause
-  - javascript.builtins.Error.message
-  - javascript.builtins.Error.name
-  - javascript.builtins.Error.toString
-  - javascript.builtins.EvalError
-  - javascript.builtins.EvalError.EvalError
   - javascript.builtins.Float16Array.Float16Array
-  - javascript.builtins.Iterator
-  - javascript.builtins.Iterator.@@iterator
   - javascript.builtins.Map.@@species
   - javascript.builtins.Object
   - javascript.builtins.Object.Object
@@ -82,153 +67,43 @@ compat_features:
   - javascript.builtins.Object.valueOf
   - javascript.builtins.Object.values
   - javascript.builtins.Promise.@@species
-  - javascript.builtins.RangeError
-  - javascript.builtins.RangeError.RangeError
-  - javascript.builtins.ReferenceError
-  - javascript.builtins.ReferenceError.ReferenceError
   - javascript.builtins.Set.@@species
-  - javascript.builtins.Symbol
-  - javascript.builtins.Symbol.@@toPrimitive
-  - javascript.builtins.Symbol.Symbol
-  - javascript.builtins.Symbol.asyncIterator
-  - javascript.builtins.Symbol.description
-  - javascript.builtins.Symbol.for
-  - javascript.builtins.Symbol.hasInstance
-  - javascript.builtins.Symbol.isConcatSpreadable
-  - javascript.builtins.Symbol.iterator
-  - javascript.builtins.Symbol.keyFor
-  - javascript.builtins.Symbol.match
-  - javascript.builtins.Symbol.matchAll
-  - javascript.builtins.Symbol.replace
-  - javascript.builtins.Symbol.search
-  - javascript.builtins.Symbol.species
-  - javascript.builtins.Symbol.split
-  - javascript.builtins.Symbol.toPrimitive
-  - javascript.builtins.Symbol.toString
-  - javascript.builtins.Symbol.toStringTag
-  - javascript.builtins.Symbol.unscopables
-  - javascript.builtins.Symbol.valueOf
-  - javascript.builtins.SyntaxError
-  - javascript.builtins.SyntaxError.SyntaxError
-  - javascript.builtins.TypeError
-  - javascript.builtins.TypeError.TypeError
   - javascript.builtins.TypedArray.@@species
-  - javascript.builtins.URIError
-  - javascript.builtins.URIError.URIError
-  - javascript.builtins.decodeURI
-  - javascript.builtins.decodeURIComponent
-  - javascript.builtins.encodeURI
-  - javascript.builtins.encodeURIComponent
-  - javascript.builtins.eval
   - javascript.builtins.globalThis
-  - javascript.builtins.isFinite
-  - javascript.builtins.parseFloat
-  - javascript.builtins.undefined
   - javascript.classes.private_class_fields
   - javascript.classes.private_class_fields_in
   - javascript.classes.private_class_methods
   - javascript.classes.public_class_fields
   - javascript.classes.static_class_fields
   - javascript.classes.static_initialization_blocks
-  - javascript.grammar.boolean_literals
   - javascript.grammar.hashbang_comments
   - javascript.grammar.hexadecimal_escape_sequences
-  - javascript.grammar.null_literal
   - javascript.grammar.numeric_separators
   - javascript.grammar.template_literals
   - javascript.grammar.trailing_commas
   - javascript.grammar.unicode_escape_sequences
   - javascript.grammar.unicode_point_escapes
-  - javascript.operators.addition
-  - javascript.operators.addition_assignment
-  - javascript.operators.assignment
   - javascript.operators.await.top_level
-  - javascript.operators.bitwise_and
-  - javascript.operators.bitwise_and_assignment
-  - javascript.operators.bitwise_not
-  - javascript.operators.bitwise_or
-  - javascript.operators.bitwise_or_assignment
-  - javascript.operators.bitwise_xor
-  - javascript.operators.bitwise_xor_assignment
   - javascript.operators.class
-  - javascript.operators.comma
-  - javascript.operators.conditional
-  - javascript.operators.decrement
-  - javascript.operators.delete
   - javascript.operators.destructuring
-  - javascript.operators.division
-  - javascript.operators.division_assignment
-  - javascript.operators.equality
   - javascript.operators.exponentiation
   - javascript.operators.exponentiation_assignment
-  - javascript.operators.greater_than
-  - javascript.operators.greater_than_or_equal
-  - javascript.operators.grouping
   - javascript.operators.import
   - javascript.operators.import_meta
-  - javascript.operators.in
-  - javascript.operators.increment
-  - javascript.operators.inequality
-  - javascript.operators.instanceof
-  - javascript.operators.left_shift
-  - javascript.operators.left_shift_assignment
-  - javascript.operators.less_than
-  - javascript.operators.less_than_or_equal
-  - javascript.operators.logical_and
   - javascript.operators.logical_and_assignment
-  - javascript.operators.logical_not
-  - javascript.operators.logical_or
   - javascript.operators.logical_or_assignment
-  - javascript.operators.multiplication
-  - javascript.operators.multiplication_assignment
-  - javascript.operators.new
   - javascript.operators.new_target
-  - javascript.operators.null
   - javascript.operators.nullish_coalescing
   - javascript.operators.nullish_coalescing_assignment
   - javascript.operators.object_initializer
   - javascript.operators.optional_chaining
-  - javascript.operators.property_accessors
-  - javascript.operators.remainder
-  - javascript.operators.remainder_assignment
-  - javascript.operators.right_shift
-  - javascript.operators.right_shift_assignment
   - javascript.operators.spread
   - javascript.operators.spread.spread_in_arrays
   - javascript.operators.spread.spread_in_function_calls
   - javascript.operators.spread.spread_in_object_literals
-  - javascript.operators.strict_equality
-  - javascript.operators.strict_inequality
-  - javascript.operators.subtraction
-  - javascript.operators.subtraction_assignment
-  - javascript.operators.this
-  - javascript.operators.typeof
-  - javascript.operators.unary_negation
-  - javascript.operators.unary_plus
-  - javascript.operators.unsigned_right_shift
-  - javascript.operators.unsigned_right_shift_assignment
-  - javascript.operators.void
-  - javascript.statements.block
-  - javascript.statements.break
   - javascript.statements.const
-  - javascript.statements.continue
-  - javascript.statements.debugger
-  - javascript.statements.do_while
-  - javascript.statements.empty
   - javascript.statements.export.namespace
-  - javascript.statements.for
-  - javascript.statements.for_await_of
-  - javascript.statements.for_in
-  - javascript.statements.for_of
-  - javascript.statements.if_else
-  - javascript.statements.label
   - javascript.statements.let
-  - javascript.statements.return
-  - javascript.statements.switch
-  - javascript.statements.throw
-  - javascript.statements.try_catch
-  - javascript.statements.var
-  - javascript.statements.while
   - webassembly.api.CompileError
   - webassembly.api.CompileError.CompileError
   - webassembly.api.LinkError
@@ -354,6 +229,11 @@ compat_features:
 #   - javascript.builtins.AsyncGeneratorFunction.AsyncGeneratorFunction
 #   - javascript.operators.async_generator_function
 #   - javascript.statements.async_generator_function
+# - Async iterators and the for await..of loop:
+#   - javascript.builtins.AsyncIterator
+#   - javascript.builtins.AsyncIterator.@@asyncIterator
+#   - javascript.builtins.Symbol.asyncIterator
+#   - javascript.statements.for_await_of
 # - SharedArrayBuffer and Atomics:
 #   - javascript.builtins.Atomics
 #   - javascript.builtins.Atomics.add
@@ -391,6 +271,105 @@ compat_features:
 #   - javascript.builtins.DataView.getBigUint64
 #   - javascript.builtins.DataView.setBigInt64
 #   - javascript.builtins.DataView.setBigUint64
+# - JavaScript (initial core language support):
+#   - javascript.builtins.Boolean
+#   - javascript.builtins.Boolean.Boolean
+#   - javascript.builtins.Boolean.toString
+#   - javascript.builtins.Boolean.valueOf
+#   - javascript.builtins.Error
+#   - javascript.builtins.Error.Error
+#   - javascript.builtins.Error.message
+#   - javascript.builtins.Error.name
+#   - javascript.builtins.Error.toString
+#   - javascript.builtins.EvalError
+#   - javascript.builtins.EvalError.EvalError
+#   - javascript.builtins.RangeError
+#   - javascript.builtins.RangeError.RangeError
+#   - javascript.builtins.ReferenceError
+#   - javascript.builtins.ReferenceError.ReferenceError
+#   - javascript.builtins.SyntaxError
+#   - javascript.builtins.SyntaxError.SyntaxError
+#   - javascript.builtins.TypeError
+#   - javascript.builtins.TypeError.TypeError
+#   - javascript.builtins.URIError
+#   - javascript.builtins.URIError.URIError
+#   - javascript.builtins.decodeURI
+#   - javascript.builtins.decodeURIComponent
+#   - javascript.builtins.encodeURI
+#   - javascript.builtins.encodeURIComponent
+#   - javascript.builtins.eval
+#   - javascript.builtins.isFinite
+#   - javascript.builtins.parseFloat
+#   - javascript.builtins.undefined
+#   - javascript.grammar.boolean_literals
+#   - javascript.grammar.null_literal
+#   - javascript.operators.addition
+#   - javascript.operators.addition_assignment
+#   - javascript.operators.assignment
+#   - javascript.operators.bitwise_and
+#   - javascript.operators.bitwise_and_assignment
+#   - javascript.operators.bitwise_not
+#   - javascript.operators.bitwise_or
+#   - javascript.operators.bitwise_or_assignment
+#   - javascript.operators.bitwise_xor
+#   - javascript.operators.bitwise_xor_assignment
+#   - javascript.operators.comma
+#   - javascript.operators.conditional
+#   - javascript.operators.decrement
+#   - javascript.operators.delete
+#   - javascript.operators.division
+#   - javascript.operators.division_assignment
+#   - javascript.operators.equality
+#   - javascript.operators.greater_than
+#   - javascript.operators.greater_than_or_equal
+#   - javascript.operators.grouping
+#   - javascript.operators.in
+#   - javascript.operators.increment
+#   - javascript.operators.inequality
+#   - javascript.operators.instanceof
+#   - javascript.operators.left_shift
+#   - javascript.operators.left_shift_assignment
+#   - javascript.operators.less_than
+#   - javascript.operators.less_than_or_equal
+#   - javascript.operators.logical_and
+#   - javascript.operators.logical_not
+#   - javascript.operators.logical_or
+#   - javascript.operators.multiplication
+#   - javascript.operators.multiplication_assignment
+#   - javascript.operators.new
+#   - javascript.operators.null
+#   - javascript.operators.property_accessors
+#   - javascript.operators.remainder
+#   - javascript.operators.remainder_assignment
+#   - javascript.operators.right_shift
+#   - javascript.operators.right_shift_assignment
+#   - javascript.operators.strict_equality
+#   - javascript.operators.strict_inequality
+#   - javascript.operators.subtraction
+#   - javascript.operators.subtraction_assignment
+#   - javascript.operators.this
+#   - javascript.operators.typeof
+#   - javascript.operators.unary_negation
+#   - javascript.operators.unary_plus
+#   - javascript.operators.unsigned_right_shift
+#   - javascript.operators.unsigned_right_shift_assignment
+#   - javascript.operators.void
+#   - javascript.statements.block
+#   - javascript.statements.break
+#   - javascript.statements.continue
+#   - javascript.statements.debugger
+#   - javascript.statements.do_while
+#   - javascript.statements.empty
+#   - javascript.statements.for
+#   - javascript.statements.for_in
+#   - javascript.statements.if_else
+#   - javascript.statements.label
+#   - javascript.statements.return
+#   - javascript.statements.switch
+#   - javascript.statements.throw
+#   - javascript.statements.try_catch
+#   - javascript.statements.var
+#   - javascript.statements.while
 # - Date:
 #   - javascript.builtins.Date
 #   - javascript.builtins.Date.@@toPrimitive
@@ -586,6 +565,10 @@ compat_features:
 #   - javascript.grammar.decimal_numeric_literals
 #   - javascript.grammar.hexadecimal_numeric_literals
 #   - javascript.grammar.octal_numeric_literals
+# - Iterators and the for...of loop:
+#   - javascript.builtins.Iterator
+#   - javascript.builtins.Iterator.@@iterator
+#   - javascript.statements.for_of
 # - JSON:
 #   - javascript.builtins.JSON
 #   - javascript.builtins.JSON.parse
@@ -759,6 +742,27 @@ compat_features:
 # - String trimStart() and trimEnd():
 #   - javascript.builtins.String.trimEnd
 #   - javascript.builtins.String.trimStart
+# - Symbol:
+#   - javascript.builtins.Symbol
+#   - javascript.builtins.Symbol.@@toPrimitive
+#   - javascript.builtins.Symbol.Symbol
+#   - javascript.builtins.Symbol.description
+#   - javascript.builtins.Symbol.for
+#   - javascript.builtins.Symbol.hasInstance
+#   - javascript.builtins.Symbol.isConcatSpreadable
+#   - javascript.builtins.Symbol.iterator
+#   - javascript.builtins.Symbol.keyFor
+#   - javascript.builtins.Symbol.match
+#   - javascript.builtins.Symbol.matchAll
+#   - javascript.builtins.Symbol.replace
+#   - javascript.builtins.Symbol.search
+#   - javascript.builtins.Symbol.species
+#   - javascript.builtins.Symbol.split
+#   - javascript.builtins.Symbol.toPrimitive
+#   - javascript.builtins.Symbol.toString
+#   - javascript.builtins.Symbol.toStringTag
+#   - javascript.builtins.Symbol.unscopables
+#   - javascript.builtins.Symbol.valueOf
 # - Typed array iterators:
 #   - javascript.builtins.TypedArray.@@iterator
 #   - javascript.builtins.TypedArray.entries

@@ -1,0 +1,13 @@
+name: speak-as
+description: The `speak-as` CSS property sets how any element's content is spoken. Not to be confused with the `speak-as` descriptor of `@counter-style` at-rules.
+spec: https://drafts.csswg.org/css-speech-1/#speaking-props-speak-as
+group:
+  - speech
+  - css
+compat_features:
+  - css.properties.speak-as
+  - css.properties.speak-as.digits
+  - css.properties.speak-as.literal-punctuation
+  - css.properties.speak-as.no-punctuation
+  - css.properties.speak-as.normal
+  - css.properties.speak-as.spell-out

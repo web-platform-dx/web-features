@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-10
 name: Content Security Policy Level 3
 description: TODO
 spec: https://w3c.github.io/webappsec-csp/
@@ -15,6 +15,7 @@ compat_features:
   - api.CSPViolationReportBody.sample
   - api.CSPViolationReportBody.sourceFile
   - api.CSPViolationReportBody.statusCode
+  - api.CSPViolationReportBody.toJSON
   - api.Element.securitypolicyviolation_event
   - api.SecurityPolicyViolationEvent
   - api.SecurityPolicyViolationEvent.SecurityPolicyViolationEvent
