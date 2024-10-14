@@ -1,5 +1,5 @@
 name: Navigator
-description: "The Navigator interface represents the state and the identity of the user agent. It also serves as a generic global under which many different APIs are located, from `clipboard` to `wakeLock`."
+description: The `window.navigator` API represents the user agent and its state. It's also the generic global object under which many other APIs are located, such as `clipboard` or `wakeLock`.
 spec: https://html.spec.whatwg.org/multipage/system-state.html#the-navigator-object
 status:
   compute_from: api.Navigator
