@@ -1,4 +1,4 @@
-draft_date: 2024-10-07
+draft_date: 2024-10-10
 name: Scalable Vector Graphics (SVG) 2
 description: TODO
 spec: https://svgwg.org/svg2-draft/
@@ -270,9 +270,15 @@ compat_features:
   - css.properties.x
   - css.properties.y
   - svg.elements.a
+  - svg.elements.a.download
   - svg.elements.a.href
+  - svg.elements.a.hreflang
+  - svg.elements.a.ping
+  - svg.elements.a.referrerpolicy
+  - svg.elements.a.rel
   - svg.elements.a.systemLanguage
   - svg.elements.a.target
+  - svg.elements.a.type
   - svg.elements.circle
   - svg.elements.circle.fill
   - svg.elements.circle.fill.context-fill
@@ -384,7 +390,7 @@ compat_features:
   - svg.global_attributes.color-interpolation
   - svg.global_attributes.color-interpolation.linearGradient
   - svg.global_attributes.color-interpolation.sRGB
-  - svg.global_attributes.data
+  - svg.global_attributes.data_attributes
   - svg.global_attributes.direction
   - svg.global_attributes.display
   - svg.global_attributes.dominant-baseline
