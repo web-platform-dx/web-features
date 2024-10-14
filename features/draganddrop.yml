@@ -19,6 +19,7 @@ compat_features:
   - api.DataTransfer.types
   - api.DataTransferItem
   - api.DataTransferItem.getAsFile
+# api.DataTransferItem.getAsFileSystemHandle was in the file-system-access feature, but it can't be in both features at once. See https://github.com/web-platform-dx/web-features/issues/1173 for details
   - api.DataTransferItem.getAsFileSystemHandle
   - api.DataTransferItem.getAsString
   - api.DataTransferItem.kind
