@@ -197,9 +197,12 @@ For example, prefer "The feature reads…" over "The feature is used to read…"
 
 #### longhands and shorthands
 
-Prefer the terms "shorthand" and "longhand" to describe the relationship between CSS properties that combine multiple properties into a single declaration and the individual properties. 
+Use the terms "shorthand" and "longhand" to describe the relationship between CSS properties that combine multiple properties into a single declaration and the individual properties. 
 
-Avoid using these terms without the word "property", so prefer "The `text-wrap` CSS property is a shorthand" over "The `text-wrap` CSS shorthand", and "It is a longhand property of..." over "It is a longhand of".
+Avoid using "shorthand" and "longhand" without the word "property":
+
+* Prefer "The `text-wrap` CSS property is a shorthand" over "The `text-wrap` CSS shorthand".
+* Prefer "It is a longhand property of" over "It is a longhand of".
 
 Avoid the phrase "constituent properties" for longhand properties, even though this is common on MDN Web Docs.
 ([#1764](https://github.com/web-platform-dx/web-features/pull/1764#discussion_r1777335770))
