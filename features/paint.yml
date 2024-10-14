@@ -3,3 +3,58 @@ description: The `paint()` CSS function creates a custom image, drawn using a pa
 spec: https://drafts.css-houdini.org/css-paint-api-1/
 group: css
 caniuse: css-paint-api
+status:
+  compute_from: css.types.image.paint
+compat_features:
+  - api.CSS.paintWorklet_static
+  - api.PaintWorkletGlobalScope
+  - css.types.image.paint
+  # At the time of writing, additional parameters are not supported anywhere.
+  # When support is added, reflect on whether this calls for a separate feature.
+  - css.types.image.paint.additional_parameters
+  - api.PaintRenderingContext2D
+  - api.PaintRenderingContext2D.beginPath
+  - api.PaintRenderingContext2D.clearRect
+  - api.PaintRenderingContext2D.clip
+  - api.PaintRenderingContext2D.createLinearGradient
+  - api.PaintRenderingContext2D.createPattern
+  - api.PaintRenderingContext2D.createRadialGradient
+  - api.PaintRenderingContext2D.drawImage
+  - api.PaintRenderingContext2D.fill
+  - api.PaintRenderingContext2D.fillRect
+  - api.PaintRenderingContext2D.fillStyle
+  - api.PaintRenderingContext2D.filter
+  - api.PaintRenderingContext2D.getLineDash
+  - api.PaintRenderingContext2D.getTransform
+  - api.PaintRenderingContext2D.globalAlpha
+  - api.PaintRenderingContext2D.globalCompositeOperation
+  - api.PaintRenderingContext2D.imageSmoothingEnabled
+  - api.PaintRenderingContext2D.imageSmoothingQuality
+  - api.PaintRenderingContext2D.isPointInPath
+  - api.PaintRenderingContext2D.isPointInStroke
+  - api.PaintRenderingContext2D.lineCap
+  - api.PaintRenderingContext2D.lineDashOffset
+  - api.PaintRenderingContext2D.lineJoin
+  - api.PaintRenderingContext2D.lineWidth
+  - api.PaintRenderingContext2D.miterLimit
+  - api.PaintRenderingContext2D.resetTransform
+  - api.PaintRenderingContext2D.restore
+  - api.PaintRenderingContext2D.rotate
+  - api.PaintRenderingContext2D.save
+  - api.PaintRenderingContext2D.scale
+  - api.PaintRenderingContext2D.setLineDash
+  - api.PaintRenderingContext2D.setTransform
+  - api.PaintRenderingContext2D.shadowBlur
+  - api.PaintRenderingContext2D.shadowColor
+  - api.PaintRenderingContext2D.shadowOffsetX
+  - api.PaintRenderingContext2D.shadowOffsetY
+  - api.PaintRenderingContext2D.stroke
+  - api.PaintRenderingContext2D.strokeRect
+  - api.PaintRenderingContext2D.strokeStyle
+  - api.PaintRenderingContext2D.transform
+  - api.PaintRenderingContext2D.translate
+  - api.PaintSize
+  - api.PaintSize.height
+  - api.PaintSize.width
+  - api.PaintWorkletGlobalScope.devicePixelRatio
+  - api.PaintWorkletGlobalScope.registerPaint

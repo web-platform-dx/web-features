@@ -1,8 +1,18 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-10
 name: CSS Scroll Snap Module Level 2
 description: TODO
 spec: https://drafts.csswg.org/css-scroll-snap-2/
 compat_features:
+  - api.Document.scrollsnapchange_event
+  - api.Document.scrollsnapchanging_event
+  - api.Element.scrollsnapchange_event
+  - api.Element.scrollsnapchanging_event
+  - api.SnapEvent
+  - api.SnapEvent.SnapEvent
+  - api.SnapEvent.snapTargetBlock
+  - api.SnapEvent.snapTargetInline
+  - api.Window.scrollsnapchange_event
+  - api.Window.scrollsnapchanging_event
   - css.properties.scroll-padding-block-end.auto
   - css.properties.scroll-padding-block-start.auto
   - css.properties.scroll-padding-block.auto
