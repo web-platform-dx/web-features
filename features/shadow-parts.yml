@@ -1,0 +1,11 @@
+name: Shadow Parts
+description: The `::part()` CSS pseudo-element selects named elements within a shadow DOM that have been exposed by a web component for styling. The `part` and `exportparts` HTML attributes expose elements as named parts.
+spec: https://drafts.csswg.org/css-shadow-parts-1/
+group:
+  - selectors
+  - web-components
+compat_features:
+  - api.Element.part
+  - css.selectors.part
+  - html.global_attributes.exportparts
+  - html.global_attributes.part
