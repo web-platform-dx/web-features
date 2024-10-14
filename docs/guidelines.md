@@ -262,7 +262,11 @@ Follow these guidelines when setting a `caniuse` value:
 
 - Do not set a `caniuse` value if the top-level headline `status` would not accurately reflect whether each browser is shown as supported on Can I Use.
 
-  For example, if Can I Use shows that a core browser set browser does not support a feature but web-features's status reports that the feature is Baseline high, then either do not set the `caniuse` value for that feature or submit a correction to Can I Use or browser-compat-data.
+  For example, if Can I Use shows that one browser of the core browser set does not support a feature but web-features's status reports that the feature is supported across all of the browsers, then do one of these:
+
+  - Do not set the `caniuse` value for that feature.
+  - Submit a correction to Can I Use.
+  - Submit a correction to mdn/browser-compat-data.
 
 - Do not set a `caniuse` value if the top-level headline `status` would not accurately reflect when a feature was last introduced to core browser set (the [keystone release](./baseline.md#interoperable-low-status) version number).
 
