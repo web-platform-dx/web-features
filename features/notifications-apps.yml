@@ -4,7 +4,7 @@ name: Notifications from service workers and installed apps
 #
 # See `features/notifications.yml` for the full Notifications feature, which
 # does not align with Caniuse.
-description: The Notifications API, when used from a service worker or home screen app, displays messages to the user, typically using the notification system of the host operating system. Chrome Android supports notifications from installed service workers, and Safari iOS supports notifications from websites that have been added to the home screen."
+description: The Notifications API, when used from a service worker for Chrome Android or home screen app for Safari iOS, displays messages to the user, typically using the notification system of the host operating system.
 spec: https://notifications.spec.whatwg.org/
 caniuse: notifications
 status:
