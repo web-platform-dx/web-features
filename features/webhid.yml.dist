@@ -44,3 +44,7 @@ compat_features:
   - api.HIDInputReportEvent.device
   - api.HIDInputReportEvent.reportId
   - api.Navigator.hid
+
+  # baseline: false
+  # support: {}
+  - api.WorkerNavigator.hid
