@@ -9,8 +9,8 @@ status:
     chrome: "80"
     chrome_android: "80"
     edge: "80"
-    firefox: "65"
-    firefox_android: "65"
+    firefox: ≤72
+    firefox_android: "79"
     safari: "15.4"
     safari_ios: "15.4"
 compat_features:
@@ -29,7 +29,19 @@ compat_features:
   - css.properties.overflow-wrap.break-word
   - css.properties.overflow-wrap.normal
 
-  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: ≤80
+  #   chrome_android: "80"
+  #   edge: ≤80
+  #   firefox: ≤72
+  #   firefox_android: "79"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
+  - css.properties.word-wrap
+
   # baseline: high
   # baseline_low_date: 2022-03-14
   # baseline_high_date: 2024-09-14
