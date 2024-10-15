@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "89"
+    edge: "89"
 compat_features:
   # baseline: false
   # support:
@@ -12,6 +14,7 @@ compat_features:
   #   edge: "89"
   - http.headers.Permissions-Policy.hid
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "89"
@@ -42,7 +45,6 @@ compat_features:
   - api.HIDInputReportEvent.reportId
   - api.Navigator.hid
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.WorkerNavigator.hid
