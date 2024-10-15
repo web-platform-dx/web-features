@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-10
 name: Web Serial API
 description: TODO
 spec: https://wicg.github.io/serial/
@@ -10,6 +10,7 @@ compat_features:
   - api.SerialPort
   - api.SerialPort.close
   - api.SerialPort.connect_event
+  - api.SerialPort.connected
   - api.SerialPort.disconnect_event
   - api.SerialPort.forget
   - api.SerialPort.getInfo

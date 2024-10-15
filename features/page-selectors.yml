@@ -1,0 +1,11 @@
+name: Page selectors
+description: The `:first`, `:left`, and `:right` pseudo-classes select pages based on their position in sequence after pagination. They're often used with the `page` CSS property, to choose a print layout defined by the `@page` rule.
+spec: https://drafts.csswg.org/css-page-3/#page-selectors
+group:
+  - selectors
+  - print
+compat_features:
+  - css.properties.page
+  - css.selectors.first
+  - css.selectors.left
+  - css.selectors.right
