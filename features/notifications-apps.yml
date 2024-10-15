@@ -1,0 +1,19 @@
+name: Notifications from service workers and installed apps
+# This feature is for the platform-specific nature of notifications support
+# in Chrome Android and Safari iOS, and anchors to the Caniuse feature.
+#
+# See `features/notifications.yml` for the full Notifications feature, which
+# does not align with Caniuse.
+description: "The Notifications API displays messages to the user, with platform-specific requirements in some cases. Chrome Android supports notifications from installed service workers, and Safari iOS supports notifications from websites that have been bookmarked on the homescreen."
+spec: https://notifications.spec.whatwg.org/
+caniuse: notifications
+status:
+  baseline: low
+  support:
+    chrome: 20
+    chrome_android: 42
+    edge: 14
+    firefox: 22
+    firefox_android: 22
+    safari: 7
+    safari_ios: 16.4
