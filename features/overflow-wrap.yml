@@ -1,5 +1,5 @@
 name: Overflow wrap
-description: The `overflow-wrap` CSS property breaks a line of text onto multiple lines inside the targeted element in an otherwise unbreakable place to prevent overflow.
+description: The `overflow-wrap` CSS property breaks a line of text onto multiple lines inside the targeted element in an otherwise unbreakable place to prevent overflow. The legacy name is `word-wrap`.
 spec: https://drafts.csswg.org/css-text-4/#overflow-wrap-property
 caniuse: wordwrap
 compat_features:
@@ -7,3 +7,4 @@ compat_features:
   - css.properties.overflow-wrap.anywhere
   - css.properties.overflow-wrap.break-word
   - css.properties.overflow-wrap.normal
+  - css.properties.word-wrap
