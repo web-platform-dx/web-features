@@ -6,16 +6,6 @@ name: Notifications
 # browsers that have platform-specific requirements and aligns with Caniuse.
 description: The Notifications API displays messages to the user outside of the browser, typically using the notification system of the host operating system. This feature is solely client-side, and does not integrate with server-originating notifications.
 spec: https://notifications.spec.whatwg.org/
-# Computing from the ServiceWorker feature since that gets us a baseline
-# which matches the general availability of the feature given platform
-# constraints.
-#
-# This matches Caniuse: https://caniuse.com/?search=notifications
-#
-# BCD notes:
-#
-# https://github.com/mdn/browser-compat-data/blob/0398a9fa847b3a616fa7968f79aadfc6cba4718f/api/Notification.json#L18
-#
 compat_features:
   - api.Notification
   - api.Notification.Notification
