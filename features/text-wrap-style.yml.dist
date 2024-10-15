@@ -3,10 +3,13 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "130"
 compat_features:
   # baseline: false
   # support:
+  #   chrome: "130"
+  #   chrome_android: "130"
   #   firefox: "124"
   #   firefox_android: "124"
   #   safari: "17.5"
@@ -18,5 +21,6 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "130"
   - css.properties.text-wrap-style.pretty

@@ -44,7 +44,6 @@ compat_features:
   - api.FetchEvent.clientId
   - api.FetchEvent.handled
   - api.FetchEvent.preloadResponse
-  - api.FetchEvent.replacesClientId
   - api.FetchEvent.request
   - api.FetchEvent.respondWith
   - api.FetchEvent.resultingClientId
@@ -100,7 +99,6 @@ compat_features:
   - api.WorkerNavigator.serviceWorker
   - api.caches
   - http.headers.Service-Worker-Navigation-Preload
-
 # The following features in the spec are already part of web-features:
 # - messageerror:
 #   - api.ServiceWorkerContainer.messageerror_event
