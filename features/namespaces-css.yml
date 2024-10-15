@@ -1,0 +1,10 @@
+name: Namespaces (CSS)
+description: The `@namespace` CSS at-rule declares a default namespace or binds a namespace prefix to a namespace. Namespaces allow CSS selectors to distinguish elements with the same name but in different namespaces.
+spec: https://drafts.csswg.org/css-namespaces-3/#declaration
+caniuse: css-namespaces
+group:
+  - css
+  - selectors
+compat_features:
+  - css.at-rules.namespace
+  - css.selectors.namespace
