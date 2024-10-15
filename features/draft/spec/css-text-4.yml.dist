@@ -183,30 +183,14 @@ compat_features:
   - css.properties.text-align-last
   - css.properties.text-align-last.auto
 
-  # baseline: low
-  # baseline_low_date: 2023-09-18
+  # baseline: false
   # support:
-  #   chrome: "106"
-  #   chrome_android: "106"
-  #   edge: "106"
-  #   firefox: "98"
-  #   firefox_android: "98"
-  #   safari: "17"
-  #   safari_ios: "17"
-  - css.properties.hyphenate-character
-  - css.properties.hyphenate-character.auto
-
-  # baseline: low
-  # baseline_low_date: 2024-03-05
-  # support:
-  #   chrome: "114"
-  #   chrome_android: "114"
-  #   edge: "114"
-  #   firefox: "121"
-  #   firefox_android: "121"
-  #   safari: "17.4"
-  #   safari_ios: "17.4"
-  - css.properties.text-wrap
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  #   firefox: "117"
+  #   firefox_android: "117"
+  - css.properties.text-transform.math-auto
 
   # baseline: false
   # support:
@@ -243,33 +227,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   firefox: "121"
-  #   firefox_android: "121"
-  #   safari: "17.5"
-  #   safari_ios: "17.5"
-  - css.properties.text-wrap.stable
-
-  # baseline: false
-  # support:
-  #   firefox: "124"
-  #   firefox_android: "124"
-  #   safari: "17.5"
-  #   safari_ios: "17.5"
-  - css.properties.text-wrap-style
-  - css.properties.text-wrap-style.auto
-  - css.properties.text-wrap-style.balance
-  - css.properties.text-wrap-style.stable
-
-  # baseline: false
-  # support:
-  #   chrome: "109"
-  #   chrome_android: "109"
-  #   edge: "109"
-  - css.properties.hyphenate-limit-chars
-  - css.properties.hyphenate-limit-chars.auto
-
-  # baseline: false
-  # support:
   #   chrome: "119"
   #   chrome_android: "119"
   #   edge: "119"
@@ -294,12 +251,3 @@ compat_features:
   - css.properties.text-justify.inter-character
   - css.properties.text-justify.inter-word
   - css.properties.text-justify.none
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - css.properties.hanging-punctuation
-  - css.properties.hanging-punctuation.allow-end
-  - css.properties.hanging-punctuation.first
-  - css.properties.hanging-punctuation.last
-  - css.properties.hanging-punctuation.none

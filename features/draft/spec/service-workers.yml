@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-10
 name: Service Workers
 description: TODO
 spec: https://w3c.github.io/ServiceWorker/
@@ -44,11 +44,11 @@ compat_features:
   - api.FetchEvent.clientId
   - api.FetchEvent.handled
   - api.FetchEvent.preloadResponse
-  - api.FetchEvent.replacesClientId
   - api.FetchEvent.request
   - api.FetchEvent.respondWith
   - api.FetchEvent.resultingClientId
   - api.InstallEvent
+  - api.InstallEvent.InstallEvent
   - api.InstallEvent.addRoutes
   - api.NavigationPreloadManager
   - api.NavigationPreloadManager.disable
@@ -99,7 +99,6 @@ compat_features:
   - api.WorkerNavigator.serviceWorker
   - api.caches
   - http.headers.Service-Worker-Navigation-Preload
-
 # The following features in the spec are already part of web-features:
 # - messageerror:
 #   - api.ServiceWorkerContainer.messageerror_event

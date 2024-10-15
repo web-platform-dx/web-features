@@ -1,4 +1,4 @@
-draft_date: 2024-10-07
+draft_date: 2024-10-14
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -9,9 +9,6 @@ compat_features:
   - api.CustomElementRegistry.getName
   - api.CustomElementRegistry.upgrade
   - api.CustomElementRegistry.whenDefined
-  - api.DOMParser
-  - api.DOMParser.DOMParser
-  - api.DOMParser.parseFromString
   - api.DOMStringList
   - api.DOMStringList.contains
   - api.DOMStringList.item
@@ -39,9 +36,7 @@ compat_features:
   - api.DataTransferItemList.remove
   - api.DedicatedWorkerGlobalScope
   - api.DedicatedWorkerGlobalScope.close
-  - api.DedicatedWorkerGlobalScope.message_event
   - api.DedicatedWorkerGlobalScope.name
-  - api.DedicatedWorkerGlobalScope.postMessage
   - api.Document
   - api.Document.DOMContentLoaded_event
   - api.Document.activeElement
@@ -61,7 +56,6 @@ compat_features:
   - api.Document.images
   - api.Document.lastModified
   - api.Document.links
-  - api.Document.location
   - api.Document.open
   - api.Document.plugins
   - api.Document.readyState
@@ -99,15 +93,6 @@ compat_features:
   - api.ErrorEvent.filename
   - api.ErrorEvent.lineno
   - api.ErrorEvent.message
-  - api.EventSource
-  - api.EventSource.EventSource
-  - api.EventSource.close
-  - api.EventSource.error_event
-  - api.EventSource.message_event
-  - api.EventSource.open_event
-  - api.EventSource.readyState
-  - api.EventSource.url
-  - api.EventSource.withCredentials
   - api.FileList
   - api.FormDataEvent
   - api.FormDataEvent.FormDataEvent
@@ -128,6 +113,7 @@ compat_features:
   - api.HTMLElement.accessKey
   - api.HTMLElement.accessKeyLabel
   - api.HTMLElement.autocapitalize
+  - api.HTMLElement.autocorrect
   - api.HTMLElement.blur
   - api.HTMLElement.change_event
   - api.HTMLElement.click
@@ -237,21 +223,6 @@ compat_features:
   - api.HTMLTemplateElement.shadowRootSerializable
   - api.HTMLUnknownElement
   - api.HTMLVideoElement.playsInline
-  - api.Location
-  - api.Location.ancestorOrigins
-  - api.Location.assign
-  - api.Location.hash
-  - api.Location.host
-  - api.Location.hostname
-  - api.Location.href
-  - api.Location.origin
-  - api.Location.pathname
-  - api.Location.port
-  - api.Location.protocol
-  - api.Location.reload
-  - api.Location.replace
-  - api.Location.search
-  - api.Location.toString
   - api.MathMLElement.blur
   - api.MathMLElement.focus
   - api.MathMLElement.nonce
@@ -259,22 +230,6 @@ compat_features:
   - api.MediaError
   - api.MediaError.code
   - api.MediaError.message
-  - api.MessageChannel
-  - api.MessageChannel.MessageChannel
-  - api.MessageChannel.port1
-  - api.MessageChannel.port2
-  - api.MessageEvent
-  - api.MessageEvent.MessageEvent
-  - api.MessageEvent.data
-  - api.MessageEvent.lastEventId
-  - api.MessageEvent.origin
-  - api.MessageEvent.ports
-  - api.MessageEvent.source
-  - api.MessagePort
-  - api.MessagePort.close
-  - api.MessagePort.message_event
-  - api.MessagePort.postMessage
-  - api.MessagePort.start
   - api.NavigateEvent.canIntercept
   - api.NavigateEvent.hasUAVisualTransition
   - api.NavigateEvent.intercept
@@ -452,14 +407,11 @@ compat_features:
   - api.Window.focus_event
   - api.Window.frameElement
   - api.Window.frames
-  - api.Window.hashchange_event
   - api.Window.history
   - api.Window.languagechange_event
   - api.Window.length
   - api.Window.load_event
   - api.Window.localStorage
-  - api.Window.location
-  - api.Window.message_event
   - api.Window.name
   - api.Window.navigator
   - api.Window.offline_event
@@ -473,7 +425,6 @@ compat_features:
   - api.Window.pageswap_event
   - api.Window.parent
   - api.Window.popstate_event
-  - api.Window.postMessage
   - api.Window.prompt
   - api.Window.rejectionhandled_event
   - api.Window.self
@@ -486,9 +437,7 @@ compat_features:
   - api.Worker
   - api.Worker.Worker
   - api.Worker.error_event
-  - api.Worker.message_event
   - api.Worker.messageerror_event
-  - api.Worker.postMessage
   - api.Worker.terminate
   - api.WorkerGlobalScope
   - api.WorkerGlobalScope.error_event
@@ -643,6 +592,7 @@ compat_features:
   - html.elements.video.playsinline
   - html.global_attributes.accesskey
   - html.global_attributes.autocapitalize
+  - html.global_attributes.autocorrect
   - html.global_attributes.class
   - html.global_attributes.contenteditable
   - html.global_attributes.data_attributes
@@ -660,6 +610,7 @@ compat_features:
   - http.headers.Cross-Origin-Embedder-Policy
   - http.headers.Cross-Origin-Embedder-Policy.credentialless
   - http.headers.Cross-Origin-Opener-Policy
+  - http.headers.Link.expect
   - http.headers.Origin-Agent-Cluster
   - http.headers.Permissions-Policy.autoplay
   - http.headers.Permissions-Policy.cross-origin-isolated
@@ -792,6 +743,12 @@ compat_features:
 #   - api.CanvasRenderingContext2D.transform
 #   - api.CanvasRenderingContext2D.translate
 #   - api.CanvasRenderingContext2D.wordSpacing
+#   - api.ImageData
+#   - api.ImageData.ImageData
+#   - api.ImageData.colorSpace
+#   - api.ImageData.data
+#   - api.ImageData.height
+#   - api.ImageData.width
 #   - api.TextMetrics
 #   - api.TextMetrics.alphabeticBaseline
 #   - api.TextMetrics.hangingBaseline
@@ -849,13 +806,49 @@ compat_features:
 #   - javascript.builtins.SyntaxError.serializable_object
 #   - javascript.builtins.TypeError.serializable_object
 #   - javascript.builtins.URIError.serializable_object
+# - Dataset:
+#   - api.DOMStringMap
+#   - api.HTMLElement.dataset
+#   - api.MathMLElement.dataset
+#   - api.SVGElement.dataset
 # - requestAnimationFrame() in workers:
 #   - api.DedicatedWorkerGlobalScope.cancelAnimationFrame
 #   - api.DedicatedWorkerGlobalScope.requestAnimationFrame
+# - postMessage:
+#   - api.DedicatedWorkerGlobalScope.message_event
+#   - api.DedicatedWorkerGlobalScope.postMessage
+#   - api.MessageEvent
+#   - api.MessageEvent.MessageEvent
+#   - api.MessageEvent.data
+#   - api.MessageEvent.lastEventId
+#   - api.MessageEvent.origin
+#   - api.MessageEvent.source
+#   - api.Window.message_event
+#   - api.Window.postMessage
+#   - api.Worker.message_event
+#   - api.Worker.postMessage
 # - messageerror:
 #   - api.DedicatedWorkerGlobalScope.messageerror_event
 #   - api.MessagePort.messageerror_event
 #   - api.Window.messageerror_event
+# - Location:
+#   - api.Document.location
+#   - api.Location
+#   - api.Location.ancestorOrigins
+#   - api.Location.assign
+#   - api.Location.hash
+#   - api.Location.host
+#   - api.Location.hostname
+#   - api.Location.href
+#   - api.Location.origin
+#   - api.Location.pathname
+#   - api.Location.port
+#   - api.Location.protocol
+#   - api.Location.reload
+#   - api.Location.replace
+#   - api.Location.search
+#   - api.Location.toString
+#   - api.Window.location
 # - Unsanitized HTML parsing methods:
 #   - api.Document.parseHTMLUnsafe_static
 #   - api.Element.setHTMLUnsafe
@@ -891,6 +884,16 @@ compat_features:
 #   - api.ElementInternals.validity
 #   - api.ElementInternals.willValidate
 #   - api.HTMLElement.attachInternals
+# - Server-sent events:
+#   - api.EventSource
+#   - api.EventSource.EventSource
+#   - api.EventSource.close
+#   - api.EventSource.error_event
+#   - api.EventSource.message_event
+#   - api.EventSource.open_event
+#   - api.EventSource.readyState
+#   - api.EventSource.url
+#   - api.EventSource.withCredentials
 # - <a>:
 #   - api.HTMLAnchorElement
 #   - api.HTMLAnchorElement.hash
@@ -1345,6 +1348,7 @@ compat_features:
 #   - html.elements.img.fetchpriority
 #   - html.elements.link.fetchpriority
 #   - html.elements.script.fetchpriority
+#   - http.headers.Link.fetchpriority
 # - dirname:
 #   - api.HTMLInputElement.dirName
 #   - api.HTMLTextAreaElement.dirName
@@ -1405,6 +1409,7 @@ compat_features:
 #   - html.elements.link.blocking
 #   - html.elements.script.blocking
 #   - html.elements.style.blocking
+#   - http.headers.Link.blocking
 # - Preloading responsive images:
 #   - api.HTMLLinkElement.imageSizes
 #   - api.HTMLLinkElement.imageSrcset
@@ -1794,6 +1799,12 @@ compat_features:
 #   - api.HTMLTitleElement
 #   - api.HTMLTitleElement.text
 #   - html.elements.title
+# - hashchange:
+#   - api.HashChangeEvent
+#   - api.HashChangeEvent.HashChangeEvent
+#   - api.HashChangeEvent.newURL
+#   - api.HashChangeEvent.oldURL
+#   - api.Window.hashchange_event
 # - History:
 #   - api.History
 #   - api.History.back
@@ -1813,6 +1824,17 @@ compat_features:
 #   - api.ImageBitmapRenderingContext.canvas
 #   - api.ImageBitmapRenderingContext.transferFromImageBitmap
 #   - api.createImageBitmap
+# - Channel messaging:
+#   - api.MessageChannel
+#   - api.MessageChannel.MessageChannel
+#   - api.MessageChannel.port1
+#   - api.MessageChannel.port2
+#   - api.MessageEvent.ports
+#   - api.MessagePort
+#   - api.MessagePort.close
+#   - api.MessagePort.message_event
+#   - api.MessagePort.postMessage
+#   - api.MessagePort.start
 # - Navigation API:
 #   - api.NavigateEvent
 #   - api.NavigateEvent.NavigateEvent
