@@ -1,5 +1,5 @@
 name: Shared storage
-description: The `sharedStorage` API stores data across sites. Unlike `localStorage`, third-parties can write to shared storage, which you can read from the origin browsing context.
+description: The `sharedStorage` API stores data to a shared space where the data can then be processed without the ability to track users across the different sites they visit. A common use case is measuring the reach of third-party ads without using user-tracking cookies."
 spec: https://wicg.github.io/shared-storage/
 group: storage
 compat_features:
