@@ -1,0 +1,10 @@
+name: Virtual pressure sources
+description: The `CreateVirtualPressureSource` WebDriver command creates artificial sources of compute pressure for testing without the need real device sources of compute pressure.
+spec: https://w3c.github.io/compute-pressure/
+group:
+  - compute-pressure
+  - webdriver
+compat_features:
+  - webdriver.commands.CreateVirtualPressureSource
+  - webdriver.commands.DeleteVirtualPressureSource
+  - webdriver.commands.UpdateVirtualPressureSource
