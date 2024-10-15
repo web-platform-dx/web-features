@@ -36,6 +36,7 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "3"
   #   safari_ios: "1"
+  - api.SVGElement.className
   - api.SVGPoint
   - api.SVGPoint.matrixTransform
   - api.SVGPoint.x
@@ -68,17 +69,6 @@ compat_features:
   #   safari: "3.1"
   #   safari_ios: "2"
   - svg.elements.a.xlink_href
-
-  # baseline: false
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1.5"
-  #   firefox_android: "4"
-  #   safari: ≤4
-  #   safari_ios: "1"
-  - api.SVGElement.className
 
   # baseline: false
   # support:
