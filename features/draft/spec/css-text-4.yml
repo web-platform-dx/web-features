@@ -1,17 +1,8 @@
-draft_date: 2024-10-10
+draft_date: 2024-10-14
 name: CSS Text Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-text-4/
 compat_features:
-  - css.properties.hanging-punctuation
-  - css.properties.hanging-punctuation.allow-end
-  - css.properties.hanging-punctuation.first
-  - css.properties.hanging-punctuation.last
-  - css.properties.hanging-punctuation.none
-  - css.properties.hyphenate-character
-  - css.properties.hyphenate-character.auto
-  - css.properties.hyphenate-limit-chars
-  - css.properties.hyphenate-limit-chars.auto
   - css.properties.letter-spacing
   - css.properties.letter-spacing.normal
   - css.properties.line-break
@@ -65,6 +56,18 @@ compat_features:
   - svg.global_attributes.word-spacing
 
 # The following features in the spec are already part of web-features:
+# - Hanging punctuation:
+#   - css.properties.hanging-punctuation
+#   - css.properties.hanging-punctuation.allow-end
+#   - css.properties.hanging-punctuation.first
+#   - css.properties.hanging-punctuation.last
+#   - css.properties.hanging-punctuation.none
+# - Hyphenate character:
+#   - css.properties.hyphenate-character
+#   - css.properties.hyphenate-character.auto
+# - Hyphenate limit chars:
+#   - css.properties.hyphenate-limit-chars
+#   - css.properties.hyphenate-limit-chars.auto
 # - Hyphenation:
 #   - css.properties.hyphens
 # - tab-size:
