@@ -1,4 +1,4 @@
-draft_date: 2024-10-14
+draft_date: 2024-10-15
 name: CSS Text Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-text-4/
@@ -41,7 +41,6 @@ compat_features:
   - css.properties.text-transform.full-size-kana
   - css.properties.text-transform.full-width
   - css.properties.text-transform.lowercase
-  - css.properties.text-transform.math-auto
   - css.properties.text-transform.none
   - css.properties.text-transform.uppercase
   - css.properties.word-break
@@ -76,6 +75,8 @@ compat_features:
 #   - css.properties.text-indent
 # - text-spacing-trim:
 #   - css.properties.text-spacing-trim
+# - MathML:
+#   - css.properties.text-transform.math-auto
 # - text-wrap:
 #   - css.properties.text-wrap
 #   - css.properties.text-wrap.wrap
@@ -110,3 +111,4 @@ compat_features:
 #   - css.properties.white-space-collapse.collapse
 #   - css.properties.white-space-collapse.preserve
 #   - css.properties.white-space-collapse.preserve-breaks
+#   - css.properties.white-space-collapse.preserve-spaces
