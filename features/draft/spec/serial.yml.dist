@@ -4,8 +4,7 @@
 status:
   baseline: false
   support:
-    chrome: "103"
-    edge: "103"
+    chrome: "130"
 compat_features:
   # baseline: false
   # support:
@@ -34,9 +33,14 @@ compat_features:
   - api.SerialPort.writable
   - api.WorkerNavigator.serial
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "103"
   #   edge: "103"
   - api.SerialPort.forget
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "130"
+  - api.SerialPort.connected

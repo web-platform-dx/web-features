@@ -42,6 +42,7 @@ describe("computeBaseline", function () {
         "api.Document.visibilitychange_event",
         "css.types.basic-shape.path",
         "api.DOMMatrix.DOMMatrix",
+        "css.types.image.cross-fade",
       ].map((key) => [
         key,
         computeBaseline({ compatKeys: [key], checkAncestors: false }),
@@ -51,8 +52,9 @@ describe("computeBaseline", function () {
       result["api.Document.visibilitychange_event"]?.baseline,
       "high",
     );
-    assert.equal(result["css.types.basic-shape.path"]?.baseline, false);
+    assert.equal(result["css.types.basic-shape.path"]?.baseline, "high");
     assert.equal(result["api.DOMMatrix.DOMMatrix"]?.baseline, "high");
+    assert.equal(result["css.types.image.cross-fade"]?.baseline, false);
     chai.expect(result).to.matchSnapshot();
   });
 
