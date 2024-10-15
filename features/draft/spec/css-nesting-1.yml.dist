@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "130"
+    chrome_android: "130"
 compat_features:
   - api.CSSNestedDeclarations
   - api.CSSNestedDeclarations.style

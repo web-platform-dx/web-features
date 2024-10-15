@@ -183,19 +183,6 @@ compat_features:
   - css.properties.text-align-last
   - css.properties.text-align-last.auto
 
-  # baseline: low
-  # baseline_low_date: 2023-09-18
-  # support:
-  #   chrome: "106"
-  #   chrome_android: "106"
-  #   edge: "106"
-  #   firefox: "98"
-  #   firefox_android: "98"
-  #   safari: "17"
-  #   safari_ios: "17"
-  - css.properties.hyphenate-character
-  - css.properties.hyphenate-character.auto
-
   # baseline: false
   # support:
   #   chrome: "109"
@@ -240,14 +227,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "109"
-  #   chrome_android: "109"
-  #   edge: "109"
-  - css.properties.hyphenate-limit-chars
-  - css.properties.hyphenate-limit-chars.auto
-
-  # baseline: false
-  # support:
   #   chrome: "119"
   #   chrome_android: "119"
   #   edge: "119"
@@ -272,12 +251,3 @@ compat_features:
   - css.properties.text-justify.inter-character
   - css.properties.text-justify.inter-word
   - css.properties.text-justify.none
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - css.properties.hanging-punctuation
-  - css.properties.hanging-punctuation.allow-end
-  - css.properties.hanging-punctuation.first
-  - css.properties.hanging-punctuation.last
-  - css.properties.hanging-punctuation.none
