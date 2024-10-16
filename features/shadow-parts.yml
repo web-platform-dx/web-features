@@ -1,0 +1,11 @@
+name: Shadow parts
+description: The `part` and `exportparts` HTML attributes expose elements of a shadow DOM as named parts, which can be selected by the `::part()` CSS pseudo-element for styling.
+spec: https://drafts.csswg.org/css-shadow-parts-1/
+group:
+  - selectors
+  - web-components
+compat_features:
+  - api.Element.part
+  - css.selectors.part
+  - html.global_attributes.exportparts
+  - html.global_attributes.part
