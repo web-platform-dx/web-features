@@ -1,0 +1,5 @@
+name: pdfViewerEnabled
+description: "The pdfViewerEnabled read-only property of the Navigator interface indicates whether the browser supports inline display of PDF files when navigating to them. If inline viewing is not supported the PDF is downloaded and may then be handled by some external application."
+spec: https://html.spec.whatwg.org/multipage/system-state.html#pdf-viewing-support
+compat_features:
+  - api.Navigator.pdfViewerEnabled
