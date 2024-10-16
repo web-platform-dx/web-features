@@ -1,0 +1,8 @@
+name: host-context
+description: The `:host-context()` CSS pseudo-class selects the containing element of the shadow tree in which it is used if that element or an ancestor matches the provided selector.
+spec: https://drafts.csswg.org/css-scoping-1/#host-selector
+group:
+  - selectors
+  - web-components
+compat_features:
+  - css.selectors.host-context

@@ -1,0 +1,9 @@
+name: Host
+description: The `:host` CSS pseudo-class selects the containing element of the shadow tree in which it is used. The `:host()` CSS pseudo-class selects the that element only if it matches the provided selector.
+spec: https://drafts.csswg.org/css-scoping-1/#host-selector
+group:
+  - selectors
+  - web-components
+compat_features:
+  - css.selectors.host
+  - css.selectors.hostfunction
