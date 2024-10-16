@@ -1,5 +1,9 @@
 name: hardwareConcurrency
 description: "The navigator.hardwareConcurrency read-only property returns the number of logical processors available to run threads on the user's computer."
 spec: https://html.spec.whatwg.org/multipage/workers.html#navigator.hardwareconcurrency
+# Caniuse has this as green, with a note that Safari has it behind a flag.
+# BCD has this as baseline false due to lack of Safari support.
+caniuse: hardwareconcurrency
 compat_features:
   - api.Navigator.hardwareConcurrency
+  - api.WorkerNavigator.hardwareConcurrency

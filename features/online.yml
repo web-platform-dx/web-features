@@ -1,9 +1,17 @@
-name: Online offline detection
+name: Online status
 description: "The `navigator.onLine` property returns a boolean value for the online status of the browser, with true meaning online and false meaning offline. The `online` and `offline` events communicate changes in this state, and are supported in windows and workers."
-spec: https://html.spec.whatwg.org/multipage/system-state.html#navigator.online
+spec:
+  - https://html.spec.whatwg.org/multipage/system-state.html#navigator.online
+  - https://html.spec.whatwg.org/multipage/indices.html#event-online
+# Doesn't quite match up exactly, since BCD reports supported while Caninuse
+# considers the early Chrome/Safari partial implementation as not supported.
+caniuse: online-status
+status:
+  compute_from: api.Navigator.onLine
 compat_features:
   - api.Navigator.onLine
   - api.Window.offline_event
   - api.Window.online_event
   - api.WorkerGlobalScope.offline_event
   - api.WorkerGlobalScope.online_event
+  - api.WorkerNavigator.onLine

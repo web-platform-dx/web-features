@@ -4,3 +4,7 @@ spec: https://html.spec.whatwg.org/multipage/system-state.html#language-preferen
 compat_features:
   - api.Navigator.language
   - api.Navigator.languages
+  - api.Window.languagechange_event
+  - api.WorkerGlobalScope.languagechange_event
+  - api.WorkerNavigator.language
+  - api.WorkerNavigator.languages
