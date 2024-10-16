@@ -5,6 +5,18 @@ draft_date: 2024-09-30
 name: Document
 description: "The Document interface represents any web page loaded in the browser and serves as an entry point into the web page&#x27;s content, which is the DOM tree."
 spec: https://dom.spec.whatwg.org/#interface-document,https://html.spec.whatwg.org/multipage/dom.html#the-document-object,https://drafts.csswg.org/cssom-view/#extensions-to-the-document-interface,https://w3c.github.io/pointerlock/#extensions-to-the-document-interface,https://w3c.github.io/selection-api/#extensions-to-document-interface
+
+# Caniuse features containing "document"
+#
+# Document.execCommand()
+# document.head
+# document.elementFromPoint()
+# Document Policy
+# document.evaluate & XPath
+# Document Object Model Range
+# document.currentScript
+# document.scrollingElement
+# Node.compareDocumentPosition()
 #caniuse:
 #status:
 #  compute_from:
