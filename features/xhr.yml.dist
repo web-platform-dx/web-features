@@ -278,3 +278,11 @@ compat_features:
   - api.XMLHttpRequest.timeout
   - api.XMLHttpRequest.timeout_event
   - api.XMLHttpRequestUpload.timeout_event
+
+  # baseline: false
+  # support:
+  #   firefox: "111"
+  #   firefox_android: "111"
+  #   safari: "16.1"
+  #   safari_ios: "16.1"
+  - api.XMLHttpRequest.authorization_removed_cross_origin
