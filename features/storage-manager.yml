@@ -1,0 +1,13 @@
+name: Storage manager
+description: "The `navigator.storage` API provides information about the availability and persistence of data stored by the browser."
+spec: https://storage.spec.whatwg.org/
+group: storage
+status:
+  compute_from: api.StorageManager.estimate
+compat_features:
+  - api.Navigator.storage
+  - api.WorkerNavigator.storage
+  - api.StorageManager
+  - api.StorageManager.estimate
+  - api.StorageManager.persist
+  - api.StorageManager.persisted

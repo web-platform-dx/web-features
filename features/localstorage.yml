@@ -7,7 +7,6 @@ caniuse: namevalue-storage
 status:
   compute_from: api.Storage
 compat_features:
-  - api.Navigator.storage
   - api.Storage
   - api.Storage.clear
   - api.Storage.getItem
@@ -21,11 +20,6 @@ compat_features:
   - api.StorageEvent.oldValue
   - api.StorageEvent.storageArea
   - api.StorageEvent.url
-  - api.StorageManager
-  - api.StorageManager.estimate
-  - api.StorageManager.persist
-  - api.StorageManager.persisted
   - api.Window.localStorage
   - api.Window.sessionStorage
   - api.Window.storage_event
-  - api.WorkerNavigator.storage
