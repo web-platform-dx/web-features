@@ -10,19 +10,32 @@ compat_features:
   - api.Headers.append
   - api.Headers.delete
   - api.Headers.get
+  - api.Headers.getSetCookie
   - api.Headers.has
   - api.Headers.set
   - api.Request
   - api.Request.Request
+  - api.Request.Request.init_referrer_parameter
   - api.Request.arrayBuffer
   - api.Request.blob
+  - api.Request.body
   - api.Request.bodyUsed
+  - api.Request.bytes
+  - api.Request.cache
   - api.Request.clone
   - api.Request.credentials
+  - api.Request.destination
+  - api.Request.formData
+  - api.Request.integrity
+  - api.Request.isHistoryNavigation
   - api.Request.headers
   - api.Request.json
+  - api.Request.keepalive
   - api.Request.method
   - api.Request.mode
+  - api.Request.redirect
+  - api.Request.referrer
+  - api.Request.referrerPolicy
   - api.Request.text
   - api.Request.url
   - api.Response
@@ -30,14 +43,22 @@ compat_features:
   - api.Response.arrayBuffer
   - api.Response.blob
   - api.Response.bodyUsed
+  - api.Response.body
+  - api.Response.bytes
   - api.Response.clone
+  - api.Response.error_static
+  - api.Response.formData
   - api.Response.headers
   - api.Response.json
   - api.Response.json_static
   - api.Response.ok
+  - api.Response.redirect_static
+  - api.Response.redirected
   - api.Response.status
   - api.Response.statusText
   - api.Response.text
   - api.Response.type
   - api.Response.url
+  - api.XMLHttpRequest.authorization_removed_cross_origin
   - api.fetch
+  - api.fetch.authorization_removed_cross_origin
