@@ -1,4 +1,4 @@
-draft_date: 2024-09-23
+draft_date: 2024-10-10
 name: CSS Display Module Level 3
 description: TODO
 spec: https://drafts.csswg.org/css-display-3/
@@ -8,11 +8,6 @@ compat_features:
   - css.properties.display.inline
   - css.properties.display.list-item
   - css.properties.display.none
-  - css.properties.reading-flow
-  - css.properties.visibility
-  - css.properties.visibility.collapse
-  - css.properties.visibility.hidden
-  - css.properties.visibility.visible
 
 # The following features in the spec are already part of web-features:
 # - display animation:
@@ -20,3 +15,10 @@ compat_features:
 #   - css.properties.display.keyframe_animatable
 # - Flexbox:
 #   - css.properties.order
+# - reading-flow:
+#   - css.properties.reading-flow
+# - visibility:
+#   - css.properties.visibility
+#   - css.properties.visibility.collapse
+#   - css.properties.visibility.hidden
+#   - css.properties.visibility.visible
