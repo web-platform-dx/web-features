@@ -16,6 +16,7 @@ compat_features:
   #   safari: "17"
   #   safari_ios: "17"
   - http.headers.Clear-Site-Data
+  - http.headers.Clear-Site-Data.secure_context_required
 
   # baseline: false
   # support:

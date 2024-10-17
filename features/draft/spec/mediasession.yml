@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-17
 name: Media Session
 description: TODO
 spec: https://w3c.github.io/mediasession/
@@ -8,6 +8,14 @@ compat_features:
   - api.ChapterInformation.startTime
   - api.ChapterInformation.title
   - api.MediaMetadata.chapterInfo
+  - api.MediaSession.setActionHandler.hangup_type
+  - api.MediaSession.setActionHandler.nextslide_type
+  - api.MediaSession.setActionHandler.previousslide_type
+  - api.MediaSession.setActionHandler.seekto_type
+  - api.MediaSession.setActionHandler.skipad_type
+  - api.MediaSession.setActionHandler.stop_type
+  - api.MediaSession.setActionHandler.togglecamera_type
+  - api.MediaSession.setActionHandler.togglemicrophone_type
   - api.MediaSession.setCameraActive
   - api.MediaSession.setMicrophoneActive
   - api.MediaSession.setPositionState
@@ -24,4 +32,10 @@ compat_features:
 #   - api.MediaSession.metadata
 #   - api.MediaSession.playbackState
 #   - api.MediaSession.setActionHandler
+#   - api.MediaSession.setActionHandler.nexttrack_type
+#   - api.MediaSession.setActionHandler.pause_type
+#   - api.MediaSession.setActionHandler.play_type
+#   - api.MediaSession.setActionHandler.previoustrack_type
+#   - api.MediaSession.setActionHandler.seekbackward_type
+#   - api.MediaSession.setActionHandler.seekforward_type
 #   - api.Navigator.mediaSession

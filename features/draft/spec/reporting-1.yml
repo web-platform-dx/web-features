@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-17
 name: Reporting API
 description: TODO
 spec: https://w3c.github.io/reporting/
@@ -15,4 +15,5 @@ compat_features:
   - api.ReportingObserver.disconnect
   - api.ReportingObserver.observe
   - api.ReportingObserver.takeRecords
+  - api.ReportingObserver.worker_support
   - http.headers.Reporting-Endpoints

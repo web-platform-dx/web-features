@@ -45,6 +45,7 @@ compat_features:
   - css.properties.text-decoration-color
   - css.properties.text-decoration-line
   - css.properties.text-decoration-style
+  - css.properties.text-decoration-style.wavy
 
   # baseline: high
   # baseline_low_date: 2020-07-28
@@ -58,6 +59,19 @@ compat_features:
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - css.properties.text-underline-position
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "33"
+  #   chrome_android: "33"
+  #   edge: "79"
+  #   firefox: "74"
+  #   firefox_android: "79"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - css.properties.text-underline-position.under
 
   # baseline: high
   # baseline_low_date: 2020-07-28
@@ -88,6 +102,19 @@ compat_features:
   #   safari_ios: "12.2"
   - css.properties.text-underline-offset
   - css.properties.text-underline-offset.auto
+
+  # baseline: high
+  # baseline_low_date: 2020-11-19
+  # baseline_high_date: 2023-05-19
+  # support:
+  #   chrome: "87"
+  #   chrome_android: "87"
+  #   edge: "87"
+  #   firefox: "74"
+  #   firefox_android: "79"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - css.properties.text-underline-position.from-font
 
   # baseline: high
   # baseline_low_date: 2021-03-04
@@ -127,6 +154,20 @@ compat_features:
   #   chrome: "99"
   #   chrome_android: "99"
   #   edge: "99"
+  #   firefox: "46"
+  #   firefox_android: "46"
+  #   safari: "8"
+  #   safari_ios: "8"
+  - css.properties.text-emphasis-position.left
+  - css.properties.text-emphasis-position.right
+
+  # baseline: high
+  # baseline_low_date: 2022-03-03
+  # baseline_high_date: 2024-09-03
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
   #   firefox: ≤72
   #   firefox_android: "79"
   #   safari: ≤13.1
@@ -153,6 +194,59 @@ compat_features:
   - css.properties.text-decoration-skip-ink
   - css.properties.text-decoration-skip-ink.auto
   - css.properties.text-decoration-skip-ink.none
+
+  # baseline: low
+  # baseline_low_date: 2022-12-13
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "108"
+  #   firefox_android: "108"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
+  - css.properties.text-emphasis-position.over
+  - css.properties.text-emphasis-position.under
+
+  # baseline: low
+  # baseline_low_date: 2024-03-05
+  # support:
+  #   chrome: "89"
+  #   chrome_android: "89"
+  #   edge: "89"
+  #   firefox: "74"
+  #   firefox_android: "79"
+  #   safari: "17.4"
+  #   safari_ios: "17.4"
+  - css.properties.text-decoration-thickness.percentage
+
+  # baseline: false
+  # support:
+  #   chrome: "57"
+  #   chrome_android: "57"
+  #   edge: "79"
+  #   firefox: "6"
+  #   firefox_android: "6"
+  - css.properties.text-decoration.includes_color-and-style
+
+  # baseline: false
+  # support:
+  #   chrome: "71"
+  #   chrome_android: "71"
+  #   edge: "79"
+  #   firefox: "74"
+  #   firefox_android: "79"
+  - css.properties.text-underline-position.left
+  - css.properties.text-underline-position.right
+
+  # baseline: false
+  # support:
+  #   chrome: "87"
+  #   chrome_android: "87"
+  #   edge: "87"
+  #   firefox: "70"
+  #   firefox_android: "79"
+  - css.properties.text-decoration.includes_thickness
 
   # baseline: false
   # support:

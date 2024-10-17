@@ -1,13 +1,17 @@
-draft_date: 2024-10-10
+draft_date: 2024-10-17
 name: CSS Basic User Interface Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-ui-4/
 compat_features:
+  - css.properties.cursor.url
+  - css.properties.cursor.url_positioning_syntax
   - css.properties.pointer-events
+  - css.properties.pointer-events.html_elements
 
 # The following features in the spec are already part of web-features:
 # - accent-color:
 #   - css.properties.accent-color
+#   - css.properties.accent-color.auto
 # - appearance:
 #   - css.properties.appearance
 #   - css.properties.appearance.auto
@@ -38,6 +42,7 @@ compat_features:
 #   - css.properties.cursor.default
 #   - css.properties.cursor.e-resize
 #   - css.properties.cursor.ew-resize
+#   - css.properties.cursor.grab
 #   - css.properties.cursor.grabbing
 #   - css.properties.cursor.help
 #   - css.properties.cursor.move
@@ -77,5 +82,12 @@ compat_features:
 #   - css.properties.outline-width
 # - resize (CSS property):
 #   - css.properties.resize
+#   - css.properties.resize.block
+#   - css.properties.resize.block_level_support
+#   - css.properties.resize.inline
 # - user-select:
 #   - css.properties.user-select
+#   - css.properties.user-select.all
+#   - css.properties.user-select.auto
+#   - css.properties.user-select.none
+#   - css.properties.user-select.text

@@ -112,6 +112,20 @@ compat_features:
   - api.GamepadHapticActuator.playEffect.params_rightTrigger_parameter
   - api.GamepadHapticActuator.playEffect.type_trigger-rumble
 
+  # baseline: false
+  # support:
+  #   firefox: "91"
+  #   firefox_android: "91"
+  - api.Gamepad.secure_context_required
+  - api.GamepadButton.secure_context_required
+  - api.GamepadEvent.secure_context_required
+  - api.GamepadHapticActuator.secure_context_required
+
+  # baseline: false
+  # support:
+  #   firefox: "91"
+  - api.Navigator.getGamepads.secure_context_required
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}

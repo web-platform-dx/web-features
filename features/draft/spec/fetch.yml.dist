@@ -42,6 +42,19 @@ compat_features:
   # baseline_low_date: 2017-03-27
   # baseline_high_date: 2019-09-27
   # support:
+  #   chrome: "42"
+  #   chrome_android: "42"
+  #   edge: "14"
+  #   firefox: "47"
+  #   firefox_android: "47"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.Headers.forEach
+
+  # baseline: high
+  # baseline_low_date: 2017-03-27
+  # baseline_high_date: 2019-09-27
+  # support:
   #   chrome: "46"
   #   chrome_android: "46"
   #   edge: "14"
@@ -94,6 +107,22 @@ compat_features:
   # baseline_low_date: 2017-10-17
   # baseline_high_date: 2020-04-17
   # support:
+  #   chrome: "42"
+  #   chrome_android: "42"
+  #   edge: "16"
+  #   firefox: "44"
+  #   firefox_android: "44"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.Headers.@@iterator
+  - api.Headers.entries
+  - api.Headers.keys
+  - api.Headers.values
+
+  # baseline: high
+  # baseline_low_date: 2017-10-17
+  # baseline_high_date: 2020-04-17
+  # support:
   #   chrome: "43"
   #   chrome_android: "43"
   #   edge: "16"
@@ -128,6 +157,19 @@ compat_features:
   #   safari: "10.1"
   #   safari_ios: "10.3"
   - api.Response.redirected
+
+  # baseline: high
+  # baseline_low_date: 2017-11-28
+  # baseline_high_date: 2020-05-28
+  # support:
+  #   chrome: "57"
+  #   chrome_android: "57"
+  #   edge: "16"
+  #   firefox: "57"
+  #   firefox_android: "57"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.Headers.iterate_combined_duplicates
 
   # baseline: high
   # baseline_low_date: 2018-01-23
@@ -169,6 +211,32 @@ compat_features:
   - api.Request.destination
 
   # baseline: high
+  # baseline_low_date: 2018-09-04
+  # baseline_high_date: 2021-03-04
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "69"
+  #   edge: "15"
+  #   firefox: "54"
+  #   firefox_android: "54"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.Request.Request.cross_origin_stripped
+
+  # baseline: high
+  # baseline_low_date: 2018-10-02
+  # baseline_high_date: 2021-04-02
+  # support:
+  #   chrome: "57"
+  #   chrome_android: "57"
+  #   edge: "18"
+  #   firefox: "57"
+  #   firefox_android: "57"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.Headers.iterate_lexicographically
+
+  # baseline: high
   # baseline_low_date: 2019-01-29
   # baseline_high_date: 2021-07-29
   # support:
@@ -182,6 +250,58 @@ compat_features:
   - api.Response.body
 
   # baseline: high
+  # baseline_low_date: 2019-03-25
+  # baseline_high_date: 2021-09-25
+  # support:
+  #   chrome: "72"
+  #   chrome_android: "72"
+  #   edge: "18"
+  #   firefox: "61"
+  #   firefox_android: "61"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - api.Request.credentials.default_same-origin
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "48"
+  #   chrome_android: "48"
+  #   edge: "79"
+  #   firefox: "39"
+  #   firefox_android: "39"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.fetch.blob_data_support
+
+  # baseline: high
+  # baseline_low_date: ≤2020-01-15
+  # baseline_high_date: ≤2022-07-15
+  # support:
+  #   chrome: "42"
+  #   chrome_android: "42"
+  #   edge: ≤79
+  #   firefox: "59"
+  #   firefox_android: "59"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.Response.Response.body_parameter_optional
+
+  # baseline: high
+  # baseline_low_date: ≤2020-01-15
+  # baseline_high_date: ≤2022-07-15
+  # support:
+  #   chrome: "52"
+  #   chrome_android: "52"
+  #   edge: ≤79
+  #   firefox: "39"
+  #   firefox_android: "39"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.Response.Response.accept_readablestream
+
+  # baseline: high
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
   # support:
@@ -193,6 +313,33 @@ compat_features:
   #   safari: "1"
   #   safari_ios: "1"
   - http.headers.Origin
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "63"
+  #   chrome_android: "63"
+  #   edge: "79"
+  #   firefox: "69"
+  #   firefox_android: "79"
+  #   safari: "13"
+  #   safari_ios: "13"
+  - http.headers.Access-Control-Allow-Headers.wildcard
+  - http.headers.Access-Control-Allow-Methods.wildcard
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "65"
+  #   chrome_android: "65"
+  #   edge: "79"
+  #   firefox: "69"
+  #   firefox_android: "79"
+  #   safari: "13"
+  #   safari_ios: "13"
+  - http.headers.Access-Control-Expose-Headers.wildcard
 
   # baseline: high
   # baseline_low_date: 2020-07-28
@@ -235,12 +382,53 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "43"
+  #   chrome_android: "43"
+  #   edge: ≤79
+  #   firefox: "65"
+  #   firefox_android: "65"
+  #   safari_ios: "10.3"
+  - api.Request.Request.response_body_readablestream
+
+  # baseline: false
+  # support:
+  #   chrome: "49"
+  #   chrome_android: "49"
+  #   edge: ≤18
+  #   firefox: "46"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.Request.mode.navigate_mode
+
+  # baseline: false
+  # support:
+  #   chrome: "52"
+  #   chrome_android: "52"
+  #   edge: "79"
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "11.1"
+  - api.fetch.init_referrerPolicy_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "64"
+  #   chrome_android: "64"
+  #   edge: "79"
+  #   firefox: "50"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.Request.cache.only-if-cached
+
+  # baseline: false
+  # support:
   #   chrome: "66"
   #   chrome_android: "66"
   #   edge: "15"
   #   safari: "13"
   #   safari_ios: "13"
   - api.Request.keepalive
+  - api.fetch.init_keepalive_parameter
 
   # baseline: false
   # support:
@@ -259,6 +447,15 @@ compat_features:
   #   firefox: "115"
   #   firefox_android: "115"
   - http.headers.Sec-Purpose
+
+  # baseline: false
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "116"
+  #   edge: "116"
+  #   firefox: "102"
+  #   firefox_android: "102"
+  - api.Response.body.readable_byte_stream
 
   # baseline: false
   # support:
@@ -285,3 +482,28 @@ compat_features:
   #   chrome_android: "69"
   #   edge: "79"
   - api.Request.isHistoryNavigation
+
+  # baseline: false
+  # support:
+  #   chrome: "105"
+  #   chrome_android: "105"
+  #   edge: "105"
+  - api.Request.Request.request_body_readablestream
+
+  # baseline: false
+  # support:
+  #   chrome: "110"
+  #   chrome_android: "110"
+  #   edge: "110"
+  - http.headers.Sec-Purpose.speculationrules
+
+  # baseline: false
+  # support:
+  #   firefox: "115"
+  #   firefox_android: "115"
+  - http.headers.Sec-Purpose.prefetch
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - http.headers.Access-Control-Allow-Headers.authorization_not_covered_by_wildcard

@@ -1,9 +1,17 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-17
 name: Event Timing API
 description: TODO
 spec: https://w3c.github.io/event-timing/
 compat_features:
   - api.EventCounts
+  - api.EventCounts.@@iterator
+  - api.EventCounts.entries
+  - api.EventCounts.forEach
+  - api.EventCounts.get
+  - api.EventCounts.has
+  - api.EventCounts.keys
+  - api.EventCounts.size
+  - api.EventCounts.values
   - api.Performance.eventCounts
   - api.PerformanceEventTiming
   - api.PerformanceEventTiming.cancelable

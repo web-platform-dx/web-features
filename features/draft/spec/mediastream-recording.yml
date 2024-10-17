@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-17
 name: MediaStream Recording
 description: TODO
 spec: https://w3c.github.io/mediacapture-record/
@@ -9,6 +9,7 @@ compat_features:
   - api.BlobEvent.timecode
   - api.MediaRecorder
   - api.MediaRecorder.MediaRecorder
+  - api.MediaRecorder.MediaRecorder.options_parameter
   - api.MediaRecorder.audioBitrateMode
   - api.MediaRecorder.audioBitsPerSecond
   - api.MediaRecorder.dataavailable_event

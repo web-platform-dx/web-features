@@ -1,12 +1,17 @@
-draft_date: 2024-10-07
+draft_date: 2024-10-17
 name: Cascading Style Sheets Level 2 Revision 2 (CSS 2.2) Specification
 description: TODO
 spec: https://drafts.csswg.org/css2/
 compat_features:
   - css.at-rules.charset
   - css.properties.border-collapse
+  - css.properties.border-collapse.collapse
+  - css.properties.border-collapse.separate
   - css.properties.border-spacing
   - css.properties.caption-side
+  - css.properties.caption-side.bottom
+  - css.properties.caption-side.top
+  - css.properties.caption-side.writing-mode_relative_values
   - css.properties.clear
   - css.properties.clear.both
   - css.properties.clear.left
@@ -44,3 +49,4 @@ compat_features:
 # - z-index:
 #   - css.properties.z-index
 #   - css.properties.z-index.auto
+#   - css.properties.z-index.negative_values

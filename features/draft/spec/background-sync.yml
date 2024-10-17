@@ -1,0 +1,18 @@
+draft_date: 2024-10-17
+name: Web Background Synchronization
+description: TODO
+spec: https://wicg.github.io/background-sync/spec/
+compat_features:
+  - api.SyncManager.worker_support
+
+# The following features in the spec are already part of web-features:
+# - Background sync:
+#   - api.ServiceWorkerGlobalScope.sync_event
+#   - api.ServiceWorkerRegistration.sync
+#   - api.SyncEvent
+#   - api.SyncEvent.SyncEvent
+#   - api.SyncEvent.lastChance
+#   - api.SyncEvent.tag
+#   - api.SyncManager
+#   - api.SyncManager.getTags
+#   - api.SyncManager.register

@@ -1,4 +1,4 @@
-draft_date: 2024-09-30
+draft_date: 2024-10-17
 name: CSS Font Loading Module Level 3
 description: TODO
 spec: https://drafts.csswg.org/css-font-loading-3/
@@ -21,21 +21,30 @@ compat_features:
 #   - api.FontFace.unicodeRange
 #   - api.FontFace.variationSettings
 #   - api.FontFace.weight
+#   - api.FontFace.worker_support
 #   - api.FontFaceSet
 #   - api.FontFaceSet.@@iterator
 #   - api.FontFaceSet.add
 #   - api.FontFaceSet.check
 #   - api.FontFaceSet.clear
 #   - api.FontFaceSet.delete
+#   - api.FontFaceSet.entries
+#   - api.FontFaceSet.forEach
+#   - api.FontFaceSet.has
+#   - api.FontFaceSet.keys
 #   - api.FontFaceSet.load
 #   - api.FontFaceSet.loading_event
 #   - api.FontFaceSet.loadingdone_event
 #   - api.FontFaceSet.loadingerror_event
 #   - api.FontFaceSet.ready
+#   - api.FontFaceSet.size
 #   - api.FontFaceSet.status
+#   - api.FontFaceSet.values
+#   - api.FontFaceSet.worker_support
 #   - api.FontFaceSetLoadEvent
 #   - api.FontFaceSetLoadEvent.FontFaceSetLoadEvent
 #   - api.FontFaceSetLoadEvent.fontfaces
+#   - api.FontFaceSetLoadEvent.worker_support
 # - Font metric overrides:
 #   - api.FontFace.ascentOverride
 #   - api.FontFace.descentOverride

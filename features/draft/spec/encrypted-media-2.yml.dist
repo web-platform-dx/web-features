@@ -78,6 +78,47 @@ compat_features:
   - api.MediaKeyStatusMap.has
 
   # baseline: high
+  # baseline_low_date: 2019-03-25
+  # baseline_high_date: 2021-09-25
+  # support:
+  #   chrome: "42"
+  #   chrome_android: "42"
+  #   edge: "13"
+  #   firefox: "47"
+  #   firefox_android: "47"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - api.MediaKeyStatusMap.forEach
+
+  # baseline: high
+  # baseline_low_date: 2019-03-25
+  # baseline_high_date: 2021-09-25
+  # support:
+  #   chrome: "42"
+  #   chrome_android: "42"
+  #   edge: "16"
+  #   firefox: "38"
+  #   firefox_android: "38"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - api.MediaKeyStatusMap.entries
+  - api.MediaKeyStatusMap.keys
+  - api.MediaKeyStatusMap.values
+
+  # baseline: high
+  # baseline_low_date: 2019-03-25
+  # baseline_high_date: 2021-09-25
+  # support:
+  #   chrome: "42"
+  #   chrome_android: "42"
+  #   edge: "16"
+  #   firefox: "45"
+  #   firefox_android: "45"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - api.MediaKeyStatusMap.@@iterator
+
+  # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:

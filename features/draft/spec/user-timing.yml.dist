@@ -102,7 +102,21 @@ compat_features:
   #   firefox_android: "101"
   #   safari: "14.1"
   #   safari_ios: "14.5"
+  - api.Performance.mark.markOptions_parameter
+  - api.Performance.mark.returns_performancemark
   - api.PerformanceMark.detail
+
+  # baseline: low
+  # baseline_low_date: 2022-07-26
+  # support:
+  #   chrome: "77"
+  #   chrome_android: "77"
+  #   edge: "79"
+  #   firefox: "103"
+  #   firefox_android: "103"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.Performance.measure.measureOptions_parameter
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: low
@@ -115,4 +129,5 @@ compat_features:
   #   firefox_android: "103"
   #   safari: "14.1"
   #   safari_ios: "14.5"
+  - api.Performance.measure.returns_performancemeasure
   - api.PerformanceMeasure.detail

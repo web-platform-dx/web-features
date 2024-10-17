@@ -1,4 +1,4 @@
-draft_date: 2024-09-23
+draft_date: 2024-10-17
 name: CSS Conditional Rules Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-conditional-5/
@@ -25,7 +25,16 @@ compat_features:
 # - @supports:
 #   - api.CSSSupportsRule
 #   - css.at-rules.supports
+#   - css.at-rules.supports.font-format
+#   - css.at-rules.supports.font-tech
+#   - css.at-rules.supports.selector
 # - Container style queries:
 #   - css.at-rules.container.style_queries_for_custom_properties
 # - Media queries:
 #   - css.at-rules.media
+#   - css.at-rules.media.media_features
+#   - css.at-rules.media.media_query_values
+#   - css.at-rules.media.nested-queries
+#   - css.at-rules.media.or_syntax
+# - Media query range syntax:
+#   - css.at-rules.media.range_syntax
