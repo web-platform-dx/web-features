@@ -1,4 +1,4 @@
-draft_date: 2024-10-14
+draft_date: 2024-10-17
 name: CSS Text Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-text-4/
@@ -41,9 +41,9 @@ compat_features:
   - css.properties.text-transform.full-size-kana
   - css.properties.text-transform.full-width
   - css.properties.text-transform.lowercase
-  - css.properties.text-transform.math-auto
   - css.properties.text-transform.none
   - css.properties.text-transform.uppercase
+  - css.properties.white-space-collapse.preserve-spaces
   - css.properties.word-break
   - css.properties.word-break.auto-phrase
   - css.properties.word-break.break-all
@@ -52,8 +52,6 @@ compat_features:
   - css.properties.word-spacing
   - css.properties.word-spacing.normal
   - css.properties.word-wrap
-  - svg.global_attributes.letter-spacing
-  - svg.global_attributes.word-spacing
 
 # The following features in the spec are already part of web-features:
 # - Hanging punctuation:
@@ -76,6 +74,8 @@ compat_features:
 #   - css.properties.text-indent
 # - text-spacing-trim:
 #   - css.properties.text-spacing-trim
+# - MathML:
+#   - css.properties.text-transform.math-auto
 # - text-wrap:
 #   - css.properties.text-wrap
 #   - css.properties.text-wrap.wrap
@@ -110,3 +110,6 @@ compat_features:
 #   - css.properties.white-space-collapse.collapse
 #   - css.properties.white-space-collapse.preserve
 #   - css.properties.white-space-collapse.preserve-breaks
+# - SVG:
+#   - svg.global_attributes.letter-spacing
+#   - svg.global_attributes.word-spacing

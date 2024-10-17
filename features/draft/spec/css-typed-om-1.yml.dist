@@ -137,7 +137,6 @@ compat_features:
   - api.CSSVariableReferenceValue.variable
   - api.Element.computedStyleMap
   - api.HTMLElement.attributeStyleMap
-  - api.SVGElement.attributeStyleMap
   - api.StylePropertyMap
   - api.StylePropertyMap.append
   - api.StylePropertyMap.clear
@@ -203,15 +202,6 @@ compat_features:
   - api.CSS.svw_static
   - api.CSS.vb_static
   - api.CSS.vi_static
-
-  # baseline: false
-  # support:
-  #   chrome: "109"
-  #   chrome_android: "109"
-  #   edge: "109"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - api.MathMLElement.attributeStyleMap
 
   # baseline: false
   # support:
