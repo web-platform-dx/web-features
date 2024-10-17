@@ -9,8 +9,14 @@ compat_features:
   - api.FormData
   - api.FormData.append
   - api.FormData.append.filename_parameter
+  - api.FormData.delete
+  - api.FormData.get
+  - api.FormData.getAll
+  - api.FormData.has
+  - api.FormData.set
   - api.FormData.FormData
   - api.ProgressEvent
+  - api.ProgressEvent.ProgressEvent
   - api.ProgressEvent.lengthComputable
   - api.ProgressEvent.loaded
   - api.ProgressEvent.total
@@ -30,6 +36,8 @@ compat_features:
   - api.XMLHttpRequest.readystatechange_event
   - api.XMLHttpRequest.response
   - api.XMLHttpRequest.responseText
+  - api.XMLHttpRequest.responseType
+  - api.XMLHttpRequest.responseURL
   - api.XMLHttpRequest.responseXML
   - api.XMLHttpRequest.send
   - api.XMLHttpRequest.send.body_ArrayBuffer_type
