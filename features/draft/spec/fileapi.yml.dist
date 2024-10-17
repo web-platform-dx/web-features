@@ -80,6 +80,7 @@ compat_features:
   - api.FileReaderSync.FileReaderSync
   - api.FileReaderSync.readAsDataURL
   - api.FileReaderSync.readAsText
+  - api.FileReaderSync.worker_support
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -159,6 +160,19 @@ compat_features:
   #   safari_ios: "7"
   - api.URL.createObjectURL_static
   - api.URL.revokeObjectURL_static
+
+  # baseline: high
+  # baseline_low_date: 2016-04-26
+  # baseline_high_date: 2018-10-26
+  # support:
+  #   chrome: "6"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "46"
+  #   firefox_android: "46"
+  #   safari: "6"
+  #   safari_ios: "6"
+  - api.FileReader.worker_support
 
   # baseline: high
   # baseline_low_date: 2018-10-02

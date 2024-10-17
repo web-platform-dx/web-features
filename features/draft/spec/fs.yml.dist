@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "86"
+    chrome: "108"
     chrome_android: "109"
-    edge: "86"
+    edge: "108"
     firefox: "111"
     firefox_android: "111"
 compat_features:
@@ -22,6 +22,21 @@ compat_features:
   #   safari_ios: "16.4"
   - api.FileSystemDirectoryHandle.@@asyncIterator
 
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "108"
+  #   chrome_android: "109"
+  #   edge: "108"
+  #   firefox: "111"
+  #   firefox_android: "111"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.FileSystemSyncAccessHandle.close.sync_version
+  - api.FileSystemSyncAccessHandle.flush.sync_version
+  - api.FileSystemSyncAccessHandle.getSize.sync_version
+  - api.FileSystemSyncAccessHandle.truncate.sync_version
+
   # baseline: false
   # support:
   #   chrome: "86"
@@ -31,7 +46,6 @@ compat_features:
   #   firefox_android: "111"
   - api.FileSystemFileHandle.createWritable
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "86"

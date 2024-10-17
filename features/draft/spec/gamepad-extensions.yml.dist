@@ -4,8 +4,8 @@
 status:
   baseline: false
   support:
-    firefox: "55"
-    firefox_android: "55"
+    firefox: "91"
+    firefox_android: "91"
 compat_features:
   # baseline: high
   # baseline_low_date: 2017-03-27
@@ -20,7 +20,6 @@ compat_features:
   #   safari_ios: "10.3"
   - api.Gamepad
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "55"
@@ -38,3 +37,11 @@ compat_features:
   - api.GamepadPose.linearVelocity
   - api.GamepadPose.orientation
   - api.GamepadPose.position
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   firefox: "91"
+  #   firefox_android: "91"
+  - api.Gamepad.secure_context_required
+  - api.GamepadPose.secure_context_required

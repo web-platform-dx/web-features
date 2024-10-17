@@ -1,4 +1,4 @@
-import { Compat } from "compute-baseline/browser-compat-data";
+import { Compat, Feature } from "compute-baseline/browser-compat-data";
 import * as diff from "diff";
 import { fdir } from "fdir";
 import fsSync from "node:fs";
@@ -11,6 +11,7 @@ import { Document } from "yaml";
 import yargs from "yargs";
 
 import { features } from "../index.js";
+import { Identifier } from "@mdn/browser-compat-data";
 
 type WebSpecsSpec = (typeof webSpecs)[number];
 
@@ -137,12 +138,29 @@ async function main() {
       continue;
     }
 
-    const spec_url = feature.data.__compat.spec_url;
-    if (!spec_url) {
-      continue;
+    let parent_url = null;
+    if (!feature.data.__compat.spec_url) {
+      const parent_urls = [];
+      const path = feature.id.split(".");
+      let parentFeature = compat.data as Identifier;
+      while (path.length > 1) {
+        parentFeature = parentFeature[path.shift()];
+        const parent_spec = parentFeature.__compat?.spec_url;
+        if (parent_spec) {
+          parent_urls.push(parent_spec);
+        }
+      }
+      if (!parent_urls.length) {
+        continue;
+      } else {
+        const mostSpecific = parent_urls.pop();
+        parent_url = Array.isArray(mostSpecific)
+          ? mostSpecific
+          : [mostSpecific];
+      }
     }
-
-    for (const url of feature.spec_url) {
+    const urls = parent_url ?? feature.spec_url;
+    for (const url of urls) {
       const spec = pageToSpec.get(normalize(url));
       if (!spec) {
         if (!selectedKeys) console.warn(`${url} not matched to any spec`);

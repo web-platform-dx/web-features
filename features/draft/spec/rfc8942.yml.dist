@@ -4,8 +4,34 @@
 status:
   baseline: false
   support:
-    chrome: "46"
-    chrome_android: "46"
-    edge: ≤79
+    chrome: "89"
+    chrome_android: "89"
+    edge: "89"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "46"
+  #   chrome_android: "46"
+  #   edge: ≤79
   - http.headers.Accept-CH
+
+  # baseline: false
+  # support:
+  #   chrome: "61"
+  #   chrome_android: "61"
+  #   edge: ≤79
+  - http.headers.Accept-CH.Device-Memory
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "89"
+  #   chrome_android: "89"
+  #   edge: "89"
+  - http.headers.Accept-CH.Sec-CH-UA
+  - http.headers.Accept-CH.Sec-CH-UA-Arch
+  - http.headers.Accept-CH.Sec-CH-UA-Full-Version
+  - http.headers.Accept-CH.Sec-CH-UA-Mobile
+  - http.headers.Accept-CH.Sec-CH-UA-Model
+  - http.headers.Accept-CH.Sec-CH-UA-Platform
+  - http.headers.Accept-CH.Sec-CH-UA-Platform-Version

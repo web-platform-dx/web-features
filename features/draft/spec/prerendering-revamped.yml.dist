@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "109"
-    chrome_android: "109"
-    edge: "109"
+    chrome: "117"
+    chrome_android: "117"
+    edge: "117"
 compat_features:
   # baseline: false
   # support:
@@ -23,10 +23,18 @@ compat_features:
   - api.Document.prerendering
   - api.Document.prerenderingchange_event
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "109"
   #   chrome_android: "109"
   #   edge: "109"
   - http.headers.Supports-Loading-Mode
+  - http.headers.Supports-Loading-Mode.credentialed-prerender
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "117"
+  #   chrome_android: "117"
+  #   edge: "117"
+  - http.headers.Supports-Loading-Mode.fenced-frames

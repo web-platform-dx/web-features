@@ -12,6 +12,66 @@ compat_features:
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
   # support:
+  #   chrome: "42"
+  #   chrome_android: "42"
+  #   edge: ≤18
+  #   firefox: "37"
+  #   firefox_android: "37"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.OfflineAudioContext.startRendering.returns_promise
+
+  # baseline: high
+  # baseline_low_date: 2021-04-26
+  # baseline_high_date: 2023-10-26
+  # support:
+  #   chrome: "56"
+  #   chrome_android: "56"
+  #   edge: "79"
+  #   firefox: "53"
+  #   firefox_android: "53"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.BaseAudioContext.createPeriodicWave.constraints_disableNormalization_parameter
+  - api.BaseAudioContext.decodeAudioData.returns_promise
+
+  # baseline: high
+  # baseline_low_date: 2021-04-26
+  # baseline_high_date: 2023-10-26
+  # support:
+  #   chrome: "62"
+  #   chrome_android: "62"
+  #   edge: ≤79
+  #   firefox: "57"
+  #   firefox_android: "57"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.OfflineAudioContext.OfflineAudioContext.options_parameter
+
+  # baseline: high
+  # baseline_low_date: 2021-04-26
+  # baseline_high_date: 2023-10-26
+  # support:
+  #   chrome: "66"
+  #   chrome_android: "66"
+  #   edge: "79"
+  #   firefox: "76"
+  #   firefox_android: "79"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.AudioParamMap.@@iterator
+  - api.AudioParamMap.entries
+  - api.AudioParamMap.forEach
+  - api.AudioParamMap.get
+  - api.AudioParamMap.has
+  - api.AudioParamMap.keys
+  - api.AudioParamMap.size
+  - api.AudioParamMap.values
+
+  # baseline: high
+  # baseline_low_date: 2021-04-26
+  # baseline_high_date: 2023-10-26
+  # support:
   #   chrome: "74"
   #   chrome_android: "74"
   #   edge: "79"
@@ -29,6 +89,14 @@ compat_features:
   #   safari: "14.1"
   #   safari_ios: "14.5"
   - api.AudioContext.AudioContext.options_latencyHint_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "43"
+  #   chrome_android: "43"
+  #   edge: ≤18
+  - api.AudioNode.disconnect.destination_parameter
+  - api.AudioNode.disconnect.input_parameter
 
   # baseline: false
   # support:

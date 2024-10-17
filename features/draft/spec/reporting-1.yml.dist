@@ -28,6 +28,13 @@ compat_features:
   - api.ReportingObserver.observe
   - api.ReportingObserver.takeRecords
 
+  # baseline: false
+  # support:
+  #   chrome: "84"
+  #   chrome_android: "84"
+  #   edge: "84"
+  - api.ReportingObserver.worker_support
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:

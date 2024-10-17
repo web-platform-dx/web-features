@@ -4,12 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "53"
-    chrome_android: "53"
+    chrome: "74"
+    chrome_android: "74"
     edge: "79"
-    firefox: "63"
-    firefox_android: "63"
-    safari: "10.1"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -24,7 +21,6 @@ compat_features:
   #   safari_ios: "1"
   - api.Document
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "53"
@@ -34,3 +30,11 @@ compat_features:
   #   firefox_android: "63"
   #   safari: "10.1"
   - api.ShadowRoot.pointerLockElement
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "74"
+  #   chrome_android: "74"
+  #   edge: "79"
+  - api.Document.featurePolicy
