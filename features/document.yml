@@ -9,17 +9,42 @@ spec: https://dom.spec.whatwg.org/#interface-document,https://html.spec.whatwg.o
 # Caniuse features containing "document"
 #
 # Document.execCommand()
+# https://caniuse.com/document-execcommand
+# Document.execCommand()
+# (deprecated)
+#
 # document.head
+# https://caniuse.com/documenthead
+#
 # document.elementFromPoint()
+# https://caniuse.com/element-from-point
+# (baseline)
+#
 # Document Policy
+# https://caniuse.com/document-policy
+# https://wicg.github.io/document-policy/
+# looks like not in BCD yet - would be an iframe attr and http headers
+#
 # document.evaluate & XPath
+# https://caniuse.com/document-evaluate-xpath
+#
 # Document Object Model Range
+# https://caniuse.com/dom-range
+#
 # document.currentScript
+# https://caniuse.com/document-currentscript
+#
 # document.scrollingElement
+# https://caniuse.com/document-scrollingelement
+#
 # Node.compareDocumentPosition()
+# https://caniuse.com/comparedocumentposition
+#
 #caniuse:
+
 #status:
 #  compute_from:
+
 compat_features:
   - api.Document
   - api.Document.DOMContentLoaded_event
@@ -35,6 +60,7 @@ compat_features:
   - api.Document.forms
   - api.Document.getElementsByName
   - api.Document.hasFocus
+  # Caniuse: documenthead
   - api.Document.head
   - api.Document.hidden
   - api.Document.images
@@ -61,17 +87,19 @@ compat_features:
   # spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#htmldocument
   - api.HTMLDocument
 
-  # from dom.yml
+  # From the DOM spec.
+  # Removed implementations of Element interface for now, as that'll be
+  # its own feature..
   - api.DOMImplementation.createDocument
   - api.DOMImplementation.createDocumentType
   - api.DOMImplementation.createHTMLDocument
   - api.Document.Document
   - api.Document.URL
   - api.Document.adoptNode
-  - api.Document.append
+  #- api.Document.append
   - api.Document.characterSet
-  - api.Document.childElementCount
-  - api.Document.children
+  #- api.Document.childElementCount
+  #- api.Document.children
   - api.Document.compatMode
   - api.Document.contentType
   - api.Document.createAttribute
@@ -92,18 +120,18 @@ compat_features:
   - api.Document.documentElement
   - api.Document.documentURI
   - api.Document.evaluate
-  - api.Document.firstElementChild
+  #- api.Document.firstElementChild
   - api.Document.getElementById
-  - api.Document.getElementsByClassName
-  - api.Document.getElementsByTagName
-  - api.Document.getElementsByTagNameNS
+  #- api.Document.getElementsByClassName
+  #- api.Document.getElementsByTagName
+  #- api.Document.getElementsByTagNameNS
   - api.Document.implementation
   - api.Document.importNode
-  - api.Document.lastElementChild
-  - api.Document.prepend
-  - api.Document.querySelector
-  - api.Document.querySelectorAll
-  - api.Document.replaceChildren
+  #- api.Document.lastElementChild
+  #- api.Document.prepend
+  #- api.Document.querySelector
+  #- api.Document.querySelectorAll
+  #- api.Document.replaceChildren
   - api.DocumentFragment
   - api.DocumentFragment.DocumentFragment
   - api.DocumentFragment.append
