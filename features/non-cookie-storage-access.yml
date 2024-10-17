@@ -1,8 +1,9 @@
 name: Non-cookie storage access
-description: "This extension of the Storage Access API enables content in cross-site iframes to request access to first-party data beyond cookies."
+description: "Non-cookie storage access extends the `requestStorageAccess()` API to let content in cross-site iframes request access to first-party data beyond cookies."
 spec: https://privacycg.github.io/saa-non-cookie-storage/
 group: storage
 compat_features:
+  - api.Document.hasUnpartitionedCookieAccess
   - api.Document.requestStorageAccess.types_parameter
   - api.Document.requestStorageAccess.types_parameter.types_BroadcastChannel_parameter
   - api.Document.requestStorageAccess.types_parameter.types_SharedWorker_parameter

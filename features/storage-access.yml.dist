@@ -36,11 +36,5 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "125"
-  #   chrome_android: "125"
-  - api.Document.hasUnpartitionedCookieAccess
-
-  # baseline: false
-  # support:
   #   chrome_android: "120"
   - api.Permissions.permission_top-level-storage-access
