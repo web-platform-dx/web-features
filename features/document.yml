@@ -133,7 +133,10 @@ compat_features:
   - api.Document.doctype
   - api.Document.documentElement
   - api.Document.documentURI
+
+  # proposed in #1949
   - api.Document.evaluate
+
   #- api.Document.firstElementChild
   - api.Document.getElementById
   #- api.Document.getElementsByClassName
