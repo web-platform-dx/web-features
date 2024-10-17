@@ -1,4 +1,4 @@
-draft_date: 2024-10-15
+draft_date: 2024-10-17
 name: CSS Text Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-text-4/
@@ -51,8 +51,6 @@ compat_features:
   - css.properties.word-spacing
   - css.properties.word-spacing.normal
   - css.properties.word-wrap
-  - svg.global_attributes.letter-spacing
-  - svg.global_attributes.word-spacing
 
 # The following features in the spec are already part of web-features:
 # - Hanging punctuation:
@@ -112,3 +110,6 @@ compat_features:
 #   - css.properties.white-space-collapse.preserve
 #   - css.properties.white-space-collapse.preserve-breaks
 #   - css.properties.white-space-collapse.preserve-spaces
+# - SVG:
+#   - svg.global_attributes.letter-spacing
+#   - svg.global_attributes.word-spacing
