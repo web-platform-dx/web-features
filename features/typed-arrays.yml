@@ -71,6 +71,7 @@ compat_features:
   - javascript.builtins.Int16Array
   - javascript.builtins.Int16Array.Int16Array
   - javascript.builtins.Int16Array.Int16Array.constructor_without_parameters
+  - javascript.builtins.Int16Array.Int16Array.iterable_allowed
   - javascript.builtins.Int32Array
   - javascript.builtins.Int32Array.Int32Array
   - javascript.builtins.Int32Array.Int32Array.constructor_without_parameters
@@ -85,6 +86,8 @@ compat_features:
   - javascript.builtins.TypedArray.byteLength
   - javascript.builtins.TypedArray.byteOffset
   - javascript.builtins.TypedArray.constructor_without_parameters
+  - javascript.builtins.TypedArray.index_properties_not_consulting_prototype
+  - javascript.builtins.TypedArray.iterable_in_constructor
   - javascript.builtins.TypedArray.join
   - javascript.builtins.TypedArray.length
   - javascript.builtins.TypedArray.name
@@ -95,6 +98,7 @@ compat_features:
   - javascript.builtins.TypedArray.sort
   - javascript.builtins.TypedArray.subarray
   - javascript.builtins.TypedArray.toString
+  - javascript.builtins.TypedArray.@@species
   - javascript.builtins.Uint16Array
   - javascript.builtins.Uint16Array.Uint16Array
   - javascript.builtins.Uint16Array.Uint16Array.constructor_without_parameters
@@ -109,4 +113,5 @@ compat_features:
   - javascript.builtins.Uint8Array.Uint8Array.iterable_allowed
   - javascript.builtins.Uint8ClampedArray
   - javascript.builtins.Uint8ClampedArray.Uint8ClampedArray
+  - javascript.builtins.Uint8ClampedArray.Uint8ClampedArray.constructor_without_parameters
   - javascript.builtins.Uint8ClampedArray.Uint8ClampedArray.iterable_allowed
