@@ -1,5 +1,5 @@
 name: Content Security Policy (CSP)
-description: Content-Security-Policy (CSP) controls the resources which a particular page can fetch or execute, as well as a number of security-relevant policy decisions. This helps guard against cross-site scripting attacks (XSS).
+description: Content Security Policy (CSP) helps to mitigate certain security threats, including cross-site scripting (XSS) and clickjacking attacks. It consists of a set of directives from a website to a browser, which instruct the browser to restrict the things that the site is allowed to do.
 spec: https://w3c.github.io/webappsec-csp/
 caniuse:
   - contentsecuritypolicy
@@ -50,7 +50,6 @@ compat_features:
   - http.headers.Content-Security-Policy.child-src
   - http.headers.Content-Security-Policy.connect-src
   - http.headers.Content-Security-Policy.default-src
-  - http.headers.Content-Security-Policy.fenced-frame-src # Should be moved to fenced-frame?
   - http.headers.Content-Security-Policy.font-src
   - http.headers.Content-Security-Policy.form-action
   - http.headers.Content-Security-Policy.frame-ancestors
@@ -64,11 +63,9 @@ compat_features:
   - http.headers.Content-Security-Policy.report-sample
   - http.headers.Content-Security-Policy.report-to
   # - http.headers.Content-Security-Policy.report-uri (deprecated in BCD)
-  # - http.headers.Content-Security-Policy.require-trusted-types-for (already in trusted-types)
   - http.headers.Content-Security-Policy.sandbox
   - http.headers.Content-Security-Policy.script-src
   - http.headers.Content-Security-Policy.script-src.external_scripts
-  - http.headers.Content-Security-Policy.script-src.inline-speculation-rules # Should be moved to speculation-rules?
   - http.headers.Content-Security-Policy.script-src.wasm-unsafe-eval
   - http.headers.Content-Security-Policy.script-src-attr
   - http.headers.Content-Security-Policy.script-src-elem
@@ -76,7 +73,6 @@ compat_features:
   - http.headers.Content-Security-Policy.style-src
   - http.headers.Content-Security-Policy.style-src-attr
   - http.headers.Content-Security-Policy.style-src-elem
-  # - http.headers.Content-Security-Policy.trusted-types (already in trusted-types)
   - http.headers.Content-Security-Policy.unsafe-hashes
   - http.headers.Content-Security-Policy.upgrade-insecure-requests
   - http.headers.Content-Security-Policy.worker-src
