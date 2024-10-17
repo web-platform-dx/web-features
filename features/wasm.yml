@@ -2,6 +2,8 @@ name: WebAssembly
 description: WebAssembly or "WASM" is a new portable, size- and load-time-efficient binary instruction format suitable for compilation to the web.
 spec: https://webassembly.github.io/gc/core/bikeshed/
 caniuse: wasm
+status:
+  compute_from: webassembly.api
 compat_features:
   - webassembly.api
   - webassembly.api.compile_static
