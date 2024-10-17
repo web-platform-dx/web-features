@@ -4,41 +4,55 @@
 draft_date: 2024-09-30
 name: Document
 description: "The Document interface represents any web page loaded in the browser and serves as an entry point into the web page&#x27;s content, which is the DOM tree."
-spec: https://dom.spec.whatwg.org/#interface-document,https://html.spec.whatwg.org/multipage/dom.html#the-document-object,https://drafts.csswg.org/cssom-view/#extensions-to-the-document-interface,https://w3c.github.io/pointerlock/#extensions-to-the-document-interface,https://w3c.github.io/selection-api/#extensions-to-document-interface
+spec:
+  - https://dom.spec.whatwg.org/#interface-document
+  - https://html.spec.whatwg.org/multipage/dom.html#the-document-object
+  - https://drafts.csswg.org/cssom-view/#extensions-to-the-document-interface
+  - https://w3c.github.io/pointerlock/#extensions-to-the-document-interface
+  - https://w3c.github.io/selection-api/#extensions-to-document-interface
 
-# Caniuse features containing "document"
+# Caniuse does not have a `Document` feature.
+#
+# However, it has the following features containing "document":
 #
 # Document.execCommand()
 # https://caniuse.com/document-execcommand
 # Document.execCommand()
-# (deprecated)
+# key: api.Document.execCommand
+# Action: deprecated
 #
 # document.head
 # https://caniuse.com/documenthead
+# Action: either put in a Head feature or leave here
 #
 # document.elementFromPoint()
 # https://caniuse.com/element-from-point
-# (baseline)
+# Action: done in features/element-from-point.yml
 #
 # Document Policy
 # https://caniuse.com/document-policy
 # https://wicg.github.io/document-policy/
-# looks like not in BCD yet - would be an iframe attr and http headers
+# Action: looks like not in BCD yet - would be an iframe attr and http headers
 #
 # document.evaluate & XPath
 # https://caniuse.com/document-evaluate-xpath
+# Action: proposed to add to XPath feature in PR #1949
 #
 # Document Object Model Range
 # https://caniuse.com/dom-range
+# Action: will be separate feature in the DOM work
 #
 # document.currentScript
 # https://caniuse.com/document-currentscript
+# Action: hmm kinda seems like could just stay here...
 #
 # document.scrollingElement
 # https://caniuse.com/document-scrollingelement
+# Action: hmm kinda seems like could just stay here...
 #
 # Node.compareDocumentPosition()
 # https://caniuse.com/comparedocumentposition
+# Action: seems like a standalone feature, possibly in a document or intra-document group
 #
 #caniuse:
 
@@ -46,6 +60,7 @@ spec: https://dom.spec.whatwg.org/#interface-document,https://html.spec.whatwg.o
 #  compute_from:
 
 compat_features:
+  # From the HTML spec
   - api.Document
   - api.Document.DOMContentLoaded_event
   - api.Document.activeElement
