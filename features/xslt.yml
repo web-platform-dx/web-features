@@ -1,0 +1,15 @@
+name: XSLT
+description: "Extensible Stylesheet Language Transformations (`XSLT`) is an XML-based language used for the transformation of XML documents into new distinct XML documents. XSLT is often used to convert data between different XML schemas or to convert XML data into web pages or PDF documents."
+spec: https://dom.spec.whatwg.org/#xslt
+group: xml
+compat_features:
+  - api.XSLTProcessor
+  - api.XSLTProcessor.XSLTProcessor
+  - api.XSLTProcessor.clearParameters
+  - api.XSLTProcessor.getParameter
+  - api.XSLTProcessor.importStylesheet
+  - api.XSLTProcessor.removeParameter
+  - api.XSLTProcessor.reset
+  - api.XSLTProcessor.setParameter
+  - api.XSLTProcessor.transformToDocument
+  - api.XSLTProcessor.transformToFragment
