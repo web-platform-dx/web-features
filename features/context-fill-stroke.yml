@@ -1,0 +1,15 @@
+name: context-fill and context-stroke
+description: The `context-fill` and `context-stroke` CSS values are used with `fill` and `stroke` in SVG `<marker>` or `<use>` elements to match a color from where they appear.
+spec: https://svgwg.org/svg2-draft/painting.html#SpecifyingPaint
+group: svg
+compat_features:
+  - svg.elements.circle.fill.context-fill
+  - svg.elements.path.fill.context-fill
+  - svg.elements.polygon.fill.context-fill
+  - svg.elements.polyline.fill.context-fill
+  - svg.elements.rect.fill.context-fill
+  - svg.elements.text.fill.context-fill
+  - svg.elements.textPath.fill.context-fill
+  - svg.elements.tspan.fill.context-fill
+  - svg.global_attributes.stroke.context-stroke
+  - svg.elements.ellipse.fill.context-fill
