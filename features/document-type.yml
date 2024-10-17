@@ -1,0 +1,17 @@
+# BCD: https://github.com/mdn/browser-compat-data/tree/main/api/Document.json
+# MDN: https://developer.mozilla.org/docs/Web/API/Document
+# CIU: https://caniuse.com/?search=Document
+name: Document Type
+description: "The Document interface represents any web page loaded in the browser and serves as an entry point into the web page&#x27;s content, which is the DOM tree."
+spec: https://dom.spec.whatwg.org/#interface-documenttype
+#status:
+#  compute_from:
+compat_features:
+  - api.DocumentType
+  - api.DocumentType.after
+  - api.DocumentType.before
+  - api.DocumentType.name
+  - api.DocumentType.publicId
+  - api.DocumentType.remove
+  - api.DocumentType.replaceWith
+  - api.DocumentType.systemId
