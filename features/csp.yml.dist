@@ -381,17 +381,3 @@ compat_features:
   #   chrome_android: "80"
   #   edge: "80"
   - api.CSPViolationReportBody.toJSON
-
-  # baseline: false
-  # support:
-  #   chrome: "110"
-  #   chrome_android: "110"
-  #   edge: "110"
-  - http.headers.Content-Security-Policy.script-src.inline-speculation-rules
-
-  # baseline: false
-  # support:
-  #   chrome: "117"
-  #   chrome_android: "117"
-  #   edge: "117"
-  - http.headers.Content-Security-Policy.fenced-frame-src
