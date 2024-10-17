@@ -1,0 +1,8 @@
+name: Paint timing
+description: The `PerformancePaintTiming` interface provides timing information about "paint" (also called "render") operations during web page construction. The key moments this API provides are known as the First Paint (FP) and First Contentful Paint (FCP) metrics.
+spec: https://w3c.github.io/paint-timing/
+group: performance
+compat_features:
+  - api.PerformancePaintTiming
+  - api.PerformancePaintTiming.first-contentful-paint
+  - api.PerformancePaintTiming.first-paint

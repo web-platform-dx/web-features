@@ -1,0 +1,49 @@
+name: Performance
+description: The global `performance` property and the `Performance` interface provide access to performance-related information for the current execution context.
+spec:
+  - https://w3c.github.io/hr-time/
+  - https://w3c.github.io/performance-timeline/
+  - https://w3c.github.io/resource-timing/
+  - https://w3c.github.io/user-timing/#extensions-performance-interface
+group: performance
+status:
+  compute_from: api.Performance
+compat_features:
+  - api.performance
+  - api.Performance
+  - api.Performance.now
+  - api.Performance.timeOrigin
+  - api.Performance.toJSON
+  - api.Performance.getEntries
+  - api.Performance.getEntriesByName
+  - api.Performance.getEntriesByType
+  - api.Performance.resourcetimingbufferfull_event
+  - api.Performance.setResourceTimingBufferSize
+  - api.Performance.clearMarks
+  - api.Performance.clearMeasures
+  - api.Performance.clearResourceTimings
+  - api.Performance.mark
+  - api.Performance.measure
+  - api.PerformanceEntry
+  - api.PerformanceEntry.duration
+  - api.PerformanceEntry.entryType
+  - api.PerformanceEntry.name
+  - api.PerformanceEntry.startTime
+  - api.PerformanceEntry.toJSON
+  - api.PerformanceMark
+  - api.PerformanceMark.PerformanceMark
+  - api.PerformanceMark.detail
+  - api.PerformanceMeasure
+  - api.PerformanceMeasure.detail
+  - api.PerformanceObserver
+  - api.PerformanceObserver.PerformanceObserver
+  - api.PerformanceObserver.PerformanceObserver.droppedEntriesCount
+  - api.PerformanceObserver.disconnect
+  - api.PerformanceObserver.observe
+  - api.PerformanceObserver.supportedEntryTypes_static
+  - api.PerformanceObserver.takeRecords
+  - api.PerformanceObserverEntryList
+  - api.PerformanceObserverEntryList.getEntries
+  - api.PerformanceObserverEntryList.getEntriesByName
+  - api.PerformanceObserverEntryList.getEntriesByType
+  - http.headers.Timing-Allow-Origin
