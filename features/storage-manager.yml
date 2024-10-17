@@ -1,0 +1,11 @@
+name: Storage manager
+description: "The `navigator.storage` API provides information about the availability and persistence of the data that a site stores on the device, by using APIs such as the Cache API or the IndexedDB API."
+spec: https://storage.spec.whatwg.org/
+group: storage
+compat_features:
+  - api.Navigator.storage
+  - api.WorkerNavigator.storage
+  - api.StorageManager
+  - api.StorageManager.estimate
+  - api.StorageManager.persist
+  - api.StorageManager.persisted
