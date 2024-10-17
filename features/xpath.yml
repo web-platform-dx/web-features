@@ -3,6 +3,7 @@ description: "XML Path Language (`XPath`) uses a syntax akin to file paths to pr
 spec: https://dom.spec.whatwg.org/#xpath
 group: xml
 compat_features:
+  - api.Document.evaluate
   # Doesn't really fit well here, maybe should stand alone,
   # or be part of DOM?
   #- api.XMLDocument
