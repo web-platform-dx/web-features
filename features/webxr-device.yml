@@ -108,3 +108,6 @@ compat_features:
   - api.XRReferenceSpaceEvent.transform
   - api.XRBoundedReferenceSpace
   - api.XRBoundedReferenceSpace.boundsGeometry
+  - api.WebGL2RenderingContext.makeXRCompatible
+  - api.WebGLRenderingContext.makeXRCompatible
+  - http.headers.Permissions-Policy.xr-spatial-tracking

@@ -1,4 +1,4 @@
-draft_date: 2024-10-10
+draft_date: 2024-10-17
 name: ECMAScript Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
@@ -34,7 +34,6 @@ compat_features:
   - javascript.builtins.DataView.setUint8
   - javascript.builtins.Error.Error.options_cause_parameter
   - javascript.builtins.Error.cause
-  - javascript.builtins.Float16Array.Float16Array
   - javascript.builtins.Map.@@species
   - javascript.builtins.Object
   - javascript.builtins.Object.Object
@@ -425,6 +424,8 @@ compat_features:
 #   - javascript.builtins.WeakRef
 #   - javascript.builtins.WeakRef.WeakRef
 #   - javascript.builtins.WeakRef.deref
+# - Float16Array:
+#   - javascript.builtins.Float16Array.Float16Array
 # - Typed arrays (initial support):
 #   - javascript.builtins.Float32Array
 #   - javascript.builtins.Float32Array.Float32Array
