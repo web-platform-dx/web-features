@@ -1,12 +1,6 @@
-# BCD: https://github.com/mdn/browser-compat-data/tree/main/api/Document.json
-# MDN: https://developer.mozilla.org/docs/Web/API/Document
-# CIU: https://caniuse.com/?search=Document
 name: Document Fragment
-description: "The Document interface represents any web page loaded in the browser and serves as an entry point into the web page&#x27;s content, which is the DOM tree."
+description: "A `DocumentFragment` is a minimal document object that has no parent. It is a lightweight version of `Document` that stores a segment of a document structure comprised of nodes just like a standard document, but isn't part of the active document."
 spec: https://dom.spec.whatwg.org/#interface-documentfragment
-#status:
-#  compute_from:
-
 compat_features:
   - api.DocumentFragment
   - api.DocumentFragment.DocumentFragment

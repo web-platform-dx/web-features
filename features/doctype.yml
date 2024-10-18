@@ -1,0 +1,13 @@
+name: Document Type
+description: "A document's `doctype` is a read-only property representing the Document Type Declaration (DTD) associated with the current document."
+spec: https://dom.spec.whatwg.org/#interface-documenttype
+compat_features:
+  - api.Document.doctype
+  - api.DocumentType
+  - api.DocumentType.after
+  - api.DocumentType.before
+  - api.DocumentType.name
+  - api.DocumentType.publicId
+  - api.DocumentType.remove
+  - api.DocumentType.replaceWith
+  - api.DocumentType.systemId
