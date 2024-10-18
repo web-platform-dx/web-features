@@ -2,6 +2,7 @@ name: XPath
 description: "XML Path Language (`XPath`) uses a syntax akin to file paths to provide a flexible way of pointing to or selecting different parts of an XML document. It can also be used to test addressed nodes within a document to determine whether they match a pattern or not."
 spec: https://dom.spec.whatwg.org/#xpath
 group: xml
+caniuse: document-evaluate-xpath
 compat_features:
   - api.Document.evaluate
   # Doesn't really fit well here, maybe should stand alone,
