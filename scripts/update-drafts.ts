@@ -1,4 +1,4 @@
-import { Compat, Feature } from "compute-baseline/browser-compat-data";
+import { Compat } from "compute-baseline/browser-compat-data";
 import * as diff from "diff";
 import { fdir } from "fdir";
 import fsSync from "node:fs";
