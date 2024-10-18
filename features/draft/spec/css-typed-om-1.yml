@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-17
 name: CSS Typed OM Level 1
 description: TODO
 spec: https://drafts.css-houdini.org/css-typed-om-1/
@@ -168,8 +168,6 @@ compat_features:
   - api.CSSVariableReferenceValue.variable
   - api.Element.computedStyleMap
   - api.HTMLElement.attributeStyleMap
-  - api.MathMLElement.attributeStyleMap
-  - api.SVGElement.attributeStyleMap
   - api.StylePropertyMap
   - api.StylePropertyMap.append
   - api.StylePropertyMap.clear
@@ -180,3 +178,9 @@ compat_features:
   - api.StylePropertyMapReadOnly.getAll
   - api.StylePropertyMapReadOnly.has
   - api.StylePropertyMapReadOnly.size
+
+# The following features in the spec are already part of web-features:
+# - MathML:
+#   - api.MathMLElement.attributeStyleMap
+# - SVG:
+#   - api.SVGElement.attributeStyleMap

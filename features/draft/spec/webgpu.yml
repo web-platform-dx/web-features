@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-17
 name: WebGPU
 description: TODO
 spec: https://gpuweb.github.io/gpuweb/
@@ -34,6 +34,8 @@ compat_features:
   - api.GPUCanvasContext
   - api.GPUCanvasContext.canvas
   - api.GPUCanvasContext.configure
+  - api.GPUCanvasContext.configure.toneMapping
+  - api.GPUCanvasContext.getConfiguration
   - api.GPUCanvasContext.getCurrentTexture
   - api.GPUCanvasContext.unconfigure
   - api.GPUCommandBuffer
