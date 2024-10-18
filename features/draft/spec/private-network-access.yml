@@ -1,7 +1,10 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-18
 name: Private Network Access
 description: TODO
 spec: https://wicg.github.io/private-network-access/
 compat_features:
-  - api.Request.targetAddressSpace
   - http.mixed-content.private_network_access
+
+# The following features in the spec are already part of web-features:
+# - Fetch:
+#   - api.Request.targetAddressSpace

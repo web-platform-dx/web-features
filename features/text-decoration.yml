@@ -1,0 +1,31 @@
+name: text-decoration
+description: The `text-decoration` CSS property sets the style and color of decorative lines including underline, overline, line-through, or a combination of lines.
+spec: https://drafts.csswg.org/css-text-decor-4/#line-decoration
+caniuse: text-decoration
+status:
+  compute_from: css.properties.text-decoration
+compat_features:
+  - css.properties.text-decoration
+  - css.properties.text-decoration-color
+  - css.properties.text-decoration-line
+  - css.properties.text-decoration-line.grammar-error
+  - css.properties.text-decoration-line.line-through
+  - css.properties.text-decoration-line.none
+  - css.properties.text-decoration-line.overline
+  - css.properties.text-decoration-line.spelling-error
+  - css.properties.text-decoration-line.underline
+  - css.properties.text-decoration-skip
+  - css.properties.text-decoration-skip-ink
+  - css.properties.text-decoration-skip-ink.all
+  - css.properties.text-decoration-skip-ink.auto
+  - css.properties.text-decoration-skip-ink.none
+  - css.properties.text-decoration-skip.auto
+  - css.properties.text-decoration-skip.none
+  - css.properties.text-decoration-style
+  - css.properties.text-decoration-style.wavy
+  - css.properties.text-decoration-thickness
+  - css.properties.text-decoration-thickness.auto
+  - css.properties.text-decoration-thickness.from-font
+  - css.properties.text-decoration-thickness.percentage
+  - css.properties.text-decoration.includes_color-and-style
+  - css.properties.text-decoration.includes_thickness
