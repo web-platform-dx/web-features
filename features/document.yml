@@ -1,56 +1,24 @@
-# BCD: https://github.com/mdn/browser-compat-data/tree/main/api/Document.json
-# MDN: https://developer.mozilla.org/docs/Web/API/Document
-# CIU: https://caniuse.com/?search=Document
-# BCD: https://github.com/mdn/browser-compat-data/tree/main/api/HTMLDocument.json
-# MDN: https://developer.mozilla.org/docs/Web/API/HTMLDocument
-# CIU: https://caniuse.com/?search=HTMLDocument
-# description: "For historical reasons, Window objects have a window.HTMLDocument property whose value is the Document interface. So you can think of HTMLDocument as an alias for Document, and you can find documentation for HTMLDocument members under the documentation for the Document interface."
 name: Document
-description: "The Document interface represents any web page loaded in the browser and serves as an entry point into the web page&#x27;s content, which is the DOM tree."
+description: "The `document` object represents a loaded web page, and is an entry point into the page's content, through the DOM tree. It provides functionality globally to the page, such as access to the page's URL and ways to create new elements in the document."
 spec:
   - https://dom.spec.whatwg.org/#interface-document
   - https://html.spec.whatwg.org/multipage/dom.html#the-document-object
-  - https://html.spec.whatwg.org/multipage/nav-history-apis.html#htmldocument
-  #- https://drafts.csswg.org/cssom-view/#extensions-to-the-document-interface
-  #- https://w3c.github.io/pointerlock/#extensions-to-the-document-interface
-  #- https://w3c.github.io/selection-api/#extensions-to-document-interface
 
-# Caniuse does not have a `Document` feature.
+# Caniuse does not have a `Document` feature but does have the following:
 #
-# However, it has the following features containing "document":
-#
-# Document.execCommand()
-# https://caniuse.com/document-execcommand
-# Document.execCommand()
-# key: api.Document.execCommand
-# Action: deprecated
-#
-# Document Policy
-# https://caniuse.com/document-policy
-# https://wicg.github.io/document-policy/
-# Action: looks like not in BCD yet - would be an iframe attr and http headers
-#
-#
-# Document Object Model Range
-# https://caniuse.com/dom-range
-# Action: will be separate feature in the DOM work
-#
-# document.currentScript
+# - api.Document.currentScript
 # https://caniuse.com/document-currentscript
-# Action: hmm kinda seems like could just stay here...
+# Seems odd to have as a standalone feature.
+# We could either leave it here and have multiple keys for `caniuse`,
+# or make a separate feature.
 #
-# document.scrollingElement
+# - api.Document.head
+# https://caniuse.com/documenthead
+# This should go in a standalone feature for the <head> tag.
+#
+# - api.Document.scrollingElement
 # https://caniuse.com/document-scrollingelement
-# Action: hmm kinda seems like could just stay here...
-#
-# Node.compareDocumentPosition()
-# https://caniuse.com/comparedocumentposition
-# Action: seems like a standalone feature, possibly in a document or intra-document group
-#
-#caniuse:
-
-#status:
-#  compute_from:
+# This is in CSSOM spec, which seems a right home for it.
 
 compat_features:
   - api.DOMImplementation.createDocument
@@ -89,7 +57,6 @@ compat_features:
   - api.Document.defaultView
   - api.Document.designMode
   - api.Document.dir
-  - api.Document.doctype
   - api.Document.documentElement
   - api.Document.documentURI
   - api.Document.embeds
@@ -101,9 +68,6 @@ compat_features:
   - api.Document.getElementsByTagName
   - api.Document.getElementsByTagNameNS
   - api.Document.hasFocus
-  # document.head
-  # https://caniuse.com/documenthead
-  # TBD: either put in a Head feature or leave here
   - api.Document.head
   - api.Document.hidden
   - api.Document.images
