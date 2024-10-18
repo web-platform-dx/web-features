@@ -9,11 +9,12 @@ status:
     chrome: "99"
     chrome_android: "99"
     edge: "99"
-    firefox: ≤72
-    firefox_android: "79"
-    safari: ≤13.1
-    safari_ios: ≤13.4
+    firefox: "46"
+    firefox_android: "46"
+    safari: "7"
+    safari_ios: "7"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2022-03-03
   # baseline_high_date: 2024-09-03
@@ -30,7 +31,20 @@ compat_features:
   - css.properties.text-emphasis-position
   - css.properties.text-emphasis-style
 
-  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2022-03-03
+  # baseline_high_date: 2024-09-03
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "46"
+  #   firefox_android: "46"
+  #   safari: "8"
+  #   safari_ios: "8"
+  - css.properties.text-emphasis-position.left
+  - css.properties.text-emphasis-position.right
+
   # baseline: high
   # baseline_low_date: 2022-03-03
   # baseline_high_date: 2024-09-03
@@ -49,3 +63,16 @@ compat_features:
   - css.properties.text-emphasis-style.none
   - css.properties.text-emphasis-style.sesame
   - css.properties.text-emphasis-style.triangle
+
+  # baseline: low
+  # baseline_low_date: 2022-12-13
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "108"
+  #   firefox_android: "108"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
+  - css.properties.text-emphasis-position.over
+  - css.properties.text-emphasis-position.under
