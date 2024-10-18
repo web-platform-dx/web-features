@@ -388,3 +388,11 @@ compat_features:
   #   safari: "15"
   #   safari_ios: "15"
   - api.XMLHttpRequest.send.body_URLSearchParams_type
+
+  # baseline: false
+  # support:
+  #   firefox: "54"
+  #   firefox_android: "54"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - api.ProgressEvent.worker_support

@@ -1,4 +1,4 @@
-draft_date: 2024-10-10
+draft_date: 2024-10-14
 name: CSS Values and Units Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-values-5/
@@ -16,11 +16,6 @@ compat_features:
   - css.types.integer
   - css.types.length
   - css.types.length-percentage
-  - css.types.length.rcap
-  - css.types.length.rch
-  - css.types.length.rex
-  - css.types.length.ric
-  - css.types.length.rlh
   - css.types.number
   - css.types.percentage
   - css.types.position
@@ -63,6 +58,16 @@ compat_features:
 #   - css.types.sqrt
 # - lh unit:
 #   - css.types.length.lh
+# - rcap unit:
+#   - css.types.length.rcap
+# - rch unit:
+#   - css.types.length.rch
+# - rex unit:
+#   - css.types.length.rex
+# - ric unit:
+#   - css.types.length.ric
+# - rlh unit:
+#   - css.types.length.rlh
 # - round(), mod(), and rem():
 #   - css.types.mod
 #   - css.types.rem
