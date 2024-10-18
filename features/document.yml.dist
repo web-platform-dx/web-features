@@ -6,9 +6,9 @@ status:
   baseline_low_date: 2022-03-14
   baseline_high_date: 2024-09-14
   support:
-    chrome: "76"
-    chrome_android: "76"
-    edge: "79"
+    chrome: "86"
+    chrome_android: "86"
+    edge: "86"
     firefox: "93"
     firefox_android: "93"
     safari: "15.4"
@@ -47,6 +47,8 @@ compat_features:
   - api.Document.forms
   - api.Document.getElementById
   - api.Document.getElementsByName
+  - api.Document.getElementsByTagName
+  - api.Document.getElementsByTagNameNS
   - api.Document.images
   - api.Document.implementation
   - api.Document.importNode
@@ -85,7 +87,6 @@ compat_features:
   - api.Document.characterSet
   - api.Document.createExpression
   - api.Document.createNodeIterator
-  - api.Document.evaluate
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -113,6 +114,33 @@ compat_features:
   #   safari_ios: "2"
   - api.Document.DOMContentLoaded_event
   - api.Document.compatMode
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3"
+  #   firefox_android: "4"
+  #   safari: "3.1"
+  #   safari_ios: "2"
+  - api.Document.getElementsByClassName
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3.5"
+  #   firefox_android: "4"
+  #   safari: "3.1"
+  #   safari_ios: "2"
+  - api.Document.querySelector
+  - api.Document.querySelectorAll
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -234,6 +262,32 @@ compat_features:
   - api.Document.visibilityState
 
   # baseline: high
+  # baseline_low_date: 2016-09-20
+  # baseline_high_date: 2019-03-20
+  # support:
+  #   chrome: "34"
+  #   chrome_android: "34"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - api.XMLDocument
+
+  # baseline: high
+  # baseline_low_date: 2017-10-17
+  # baseline_high_date: 2020-04-17
+  # support:
+  #   chrome: "29"
+  #   chrome_android: "29"
+  #   edge: "16"
+  #   firefox: "25"
+  #   firefox_android: "25"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - api.Document.children
+
+  # baseline: high
   # baseline_low_date: 2018-01-23
   # baseline_high_date: 2020-07-23
   # support:
@@ -280,6 +334,21 @@ compat_features:
   # baseline_low_date: 2018-04-30
   # baseline_high_date: 2020-10-30
   # support:
+  #   chrome: "29"
+  #   chrome_android: "29"
+  #   edge: "17"
+  #   firefox: "25"
+  #   firefox_android: "25"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - api.Document.childElementCount
+  - api.Document.firstElementChild
+  - api.Document.lastElementChild
+
+  # baseline: high
+  # baseline_low_date: 2018-04-30
+  # baseline_high_date: 2020-10-30
+  # support:
   #   chrome: "36"
   #   chrome_android: "36"
   #   edge: "17"
@@ -288,6 +357,20 @@ compat_features:
   #   safari: "9"
   #   safari_ios: "9"
   - api.Document.contentType
+
+  # baseline: high
+  # baseline_low_date: 2018-04-30
+  # baseline_high_date: 2020-10-30
+  # support:
+  #   chrome: "54"
+  #   chrome_android: "54"
+  #   edge: "17"
+  #   firefox: "49"
+  #   firefox_android: "49"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - api.Document.append
+  - api.Document.prepend
 
   # baseline: high
   # baseline_low_date: 2018-04-30
@@ -316,6 +399,19 @@ compat_features:
   - api.Document.body
 
   # baseline: high
+  # baseline_low_date: 2020-10-20
+  # baseline_high_date: 2023-04-20
+  # support:
+  #   chrome: "86"
+  #   chrome_android: "86"
+  #   edge: "86"
+  #   firefox: "78"
+  #   firefox_android: "79"
+  #   safari: "14"
+  #   safari_ios: "14"
+  - api.Document.replaceChildren
+
+  # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
   # support:
@@ -328,7 +424,6 @@ compat_features:
   #   safari_ios: "14.5"
   - api.Document.visibilitychange_event
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2022-03-14
   # baseline_high_date: 2024-09-14
