@@ -1,0 +1,16 @@
+name: Document Fragment
+description: "A `DocumentFragment` is a minimal document object that has no parent. It is a lightweight version of `Document` that stores a segment of a document structure comprised of nodes just like a standard document, but isn't part of the active document."
+spec: https://dom.spec.whatwg.org/#interface-documentfragment
+compat_features:
+  - api.DocumentFragment
+  - api.DocumentFragment.DocumentFragment
+  - api.DocumentFragment.append
+  - api.DocumentFragment.childElementCount
+  - api.DocumentFragment.children
+  - api.DocumentFragment.firstElementChild
+  - api.DocumentFragment.getElementById
+  - api.DocumentFragment.lastElementChild
+  - api.DocumentFragment.prepend
+  - api.DocumentFragment.querySelector
+  - api.DocumentFragment.querySelectorAll
+  - api.DocumentFragment.replaceChildren

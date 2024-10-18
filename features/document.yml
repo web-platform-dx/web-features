@@ -1,0 +1,97 @@
+name: Document
+description: "The `document` object represents a loaded web page, and is an entry point into the page's content, through the DOM tree. It provides functionality globally to the page, such as access to the page's URL and ways to create new elements in the document."
+spec:
+  - https://dom.spec.whatwg.org/#interface-document
+  - https://html.spec.whatwg.org/multipage/dom.html#the-document-object
+
+# Caniuse does not have a `Document` feature but does have the following:
+#
+# - api.Document.currentScript
+# https://caniuse.com/document-currentscript
+# Seems odd to have as a standalone feature.
+# We could either leave it here and have multiple keys for `caniuse`,
+# or make a separate feature.
+#
+# - api.Document.head
+# https://caniuse.com/documenthead
+# This should go in a standalone feature for the <head> tag.
+#
+# - api.Document.scrollingElement
+# https://caniuse.com/document-scrollingelement
+# This is in CSSOM spec, which seems a right home for it.
+
+compat_features:
+  - api.DOMImplementation.createDocument
+  - api.DOMImplementation.createDocumentType
+  - api.DOMImplementation.createHTMLDocument
+  - api.Document
+  - api.Document.DOMContentLoaded_event
+  - api.Document.Document
+  - api.Document.URL
+  - api.Document.activeElement
+  - api.Document.adoptNode
+  - api.Document.append
+  - api.Document.body
+  - api.Document.characterSet
+  - api.Document.childElementCount
+  - api.Document.children
+  - api.Document.close
+  - api.Document.compatMode
+  - api.Document.contentType
+  - api.Document.cookie
+  - api.Document.createAttribute
+  - api.Document.createAttributeNS
+  - api.Document.createCDATASection
+  - api.Document.createComment
+  - api.Document.createDocumentFragment
+  - api.Document.createElement
+  - api.Document.createElementNS
+  - api.Document.createEvent
+  - api.Document.createExpression
+  - api.Document.createNodeIterator
+  - api.Document.createProcessingInstruction
+  - api.Document.createRange
+  - api.Document.createTextNode
+  - api.Document.createTreeWalker
+  - api.Document.currentScript
+  - api.Document.defaultView
+  - api.Document.designMode
+  - api.Document.dir
+  - api.Document.documentElement
+  - api.Document.documentURI
+  - api.Document.embeds
+  - api.Document.firstElementChild
+  - api.Document.forms
+  - api.Document.getElementById
+  - api.Document.getElementsByClassName
+  - api.Document.getElementsByName
+  - api.Document.getElementsByTagName
+  - api.Document.getElementsByTagNameNS
+  - api.Document.hasFocus
+  - api.Document.head
+  - api.Document.hidden
+  - api.Document.images
+  - api.Document.implementation
+  - api.Document.importNode
+  - api.Document.lastElementChild
+  - api.Document.lastModified
+  - api.Document.links
+  - api.Document.open
+  - api.Document.plugins
+  - api.Document.prepend
+  - api.Document.querySelector
+  - api.Document.querySelectorAll
+  - api.Document.readyState
+  - api.Document.readystatechange_event
+  - api.Document.referrer
+  - api.Document.replaceChildren
+  - api.Document.scripts
+  - api.Document.scroll_event
+  - api.Document.securitypolicyviolation_event
+  - api.Document.title
+  - api.Document.visibilityState
+  - api.Document.visibilitychange_event
+  - api.Document.write
+  - api.Document.writeln
+  - api.HTMLDocument
+  - api.XMLDocument
