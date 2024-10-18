@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-17
 name: DOM Standard
 description: TODO
 spec: https://dom.spec.whatwg.org/
@@ -36,21 +36,33 @@ compat_features:
   - api.CustomEvent
   - api.CustomEvent.CustomEvent
   - api.CustomEvent.detail
+  - api.CustomEvent.worker_support
   - api.DOMImplementation
   - api.DOMImplementation.createDocument
   - api.DOMImplementation.createDocumentType
   - api.DOMImplementation.createHTMLDocument
   - api.DOMTokenList
+  - api.DOMTokenList.@@iterator
   - api.DOMTokenList.add
+  - api.DOMTokenList.add.multiple_parameters
   - api.DOMTokenList.contains
+  - api.DOMTokenList.entries
+  - api.DOMTokenList.forEach
   - api.DOMTokenList.item
+  - api.DOMTokenList.keys
   - api.DOMTokenList.length
   - api.DOMTokenList.remove
+  - api.DOMTokenList.remove.multiple_parameters
+  - api.DOMTokenList.remove_duplicates
   - api.DOMTokenList.replace
+  - api.DOMTokenList.replace.boolean_value
   - api.DOMTokenList.supports
   - api.DOMTokenList.toString
   - api.DOMTokenList.toggle
+  - api.DOMTokenList.toggle.force_parameter
+  - api.DOMTokenList.trim_whitespace
   - api.DOMTokenList.value
+  - api.DOMTokenList.values
   - api.Document
   - api.Document.Document
   - api.Document.URL
@@ -67,7 +79,9 @@ compat_features:
   - api.Document.createComment
   - api.Document.createDocumentFragment
   - api.Document.createElement
+  - api.Document.createElement.options_parameter
   - api.Document.createElementNS
+  - api.Document.createElementNS.options_parameter
   - api.Document.createEvent
   - api.Document.createExpression
   - api.Document.createNodeIterator
@@ -75,10 +89,12 @@ compat_features:
   - api.Document.createRange
   - api.Document.createTextNode
   - api.Document.createTreeWalker
+  - api.Document.createTreeWalker.whatToShow_filter_parameters_optional
   - api.Document.doctype
   - api.Document.documentElement
   - api.Document.documentURI
   - api.Document.evaluate
+  - api.Document.featurePolicy
   - api.Document.firstElementChild
   - api.Document.getElementById
   - api.Document.getElementsByClassName
@@ -132,7 +148,9 @@ compat_features:
   - api.Element.getAttributeNodeNS
   - api.Element.getElementsByClassName
   - api.Element.getElementsByTagName
+  - api.Element.getElementsByTagName.all_elements_selector
   - api.Element.getElementsByTagNameNS
+  - api.Element.getElementsByTagNameNS.all_elements_selector
   - api.Element.hasAttribute
   - api.Element.hasAttributeNS
   - api.Element.hasAttributes
@@ -178,12 +196,18 @@ compat_features:
   - api.EventTarget
   - api.EventTarget.EventTarget
   - api.EventTarget.addEventListener
+  - api.EventTarget.addEventListener.options_parameter
   - api.EventTarget.addEventListener.options_parameter.options_capture_parameter
   - api.EventTarget.addEventListener.options_parameter.options_once_parameter
   - api.EventTarget.addEventListener.options_parameter.options_passive_parameter
+  - api.EventTarget.addEventListener.options_parameter.options_passive_parameter_default_true_touch
+  - api.EventTarget.addEventListener.options_parameter.options_passive_parameter_default_true_wheel
   - api.EventTarget.addEventListener.options_parameter.options_signal_parameter
+  - api.EventTarget.addEventListener.useCapture_parameter_optional
   - api.EventTarget.dispatchEvent
   - api.EventTarget.removeEventListener
+  - api.EventTarget.removeEventListener.options_parameter
+  - api.EventTarget.removeEventListener.useCapture_parameter_optional
   - api.HTMLCollection
   - api.HTMLCollection.item
   - api.HTMLCollection.length
@@ -250,9 +274,12 @@ compat_features:
   - api.NodeIterator.whatToShow
   - api.NodeList
   - api.NodeList.@@iterator
+  - api.NodeList.entries
   - api.NodeList.forEach
   - api.NodeList.item
+  - api.NodeList.keys
   - api.NodeList.length
+  - api.NodeList.values
   - api.ProcessingInstruction
   - api.ProcessingInstruction.target
   - api.Range
@@ -260,6 +287,7 @@ compat_features:
   - api.Range.cloneContents
   - api.Range.cloneRange
   - api.Range.collapse
+  - api.Range.collapse.toStart_parameter_optional
   - api.Range.collapsed
   - api.Range.commonAncestorContainer
   - api.Range.compareBoundaryPoints
@@ -359,6 +387,7 @@ compat_features:
 #   - api.HTMLSlotElement.slotchange_event
 #   - api.Text.assignedSlot
 #   - html.elements.slot
+#   - html.elements.slot.name
 #   - html.global_attributes.slot
 # - Shadow DOM:
 #   - api.Element.attachShadow

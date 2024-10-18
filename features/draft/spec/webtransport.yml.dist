@@ -16,6 +16,23 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  #   firefox: "114"
+  #   firefox_android: "114"
+  - api.WebTransport.byob_readers
+
+  # baseline: false
+  # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  - api.WebTransport.createUnidirectionalStream.byob_readers
+  - api.WebTransportDatagramDuplexStream.byob_readers
+
+  # baseline: false
+  # support:
   #   firefox: "114"
   #   firefox_android: "114"
   - api.WebTransport.WebTransport.options_allowPooling_parameter

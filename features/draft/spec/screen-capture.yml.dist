@@ -44,6 +44,12 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "74"
+  #   edge: "79"
+  - api.MediaDevices.getDisplayMedia.audio_capture_support
+
+  # baseline: false
+  # support:
   #   chrome: "105"
   #   edge: "105"
   - api.MediaDevices.getDisplayMedia.systemAudio_option

@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-17
 name: Web NFC API
 description: TODO
 spec: https://w3c.github.io/web-nfc/
@@ -10,15 +10,18 @@ compat_features:
 #   - api.NDEFMessage
 #   - api.NDEFMessage.NDEFMessage
 #   - api.NDEFMessage.records
+#   - api.NDEFMessage.secure_context_required
 #   - api.NDEFReader
 #   - api.NDEFReader.NDEFReader
 #   - api.NDEFReader.reading_event
 #   - api.NDEFReader.readingerror_event
 #   - api.NDEFReader.scan
+#   - api.NDEFReader.secure_context_required
 #   - api.NDEFReader.write
 #   - api.NDEFReadingEvent
 #   - api.NDEFReadingEvent.NDEFReadingEvent
 #   - api.NDEFReadingEvent.message
+#   - api.NDEFReadingEvent.secure_context_required
 #   - api.NDEFReadingEvent.serialNumber
 #   - api.NDEFRecord
 #   - api.NDEFRecord.NDEFRecord
@@ -28,4 +31,5 @@ compat_features:
 #   - api.NDEFRecord.lang
 #   - api.NDEFRecord.mediaType
 #   - api.NDEFRecord.recordType
+#   - api.NDEFRecord.secure_context_required
 #   - api.NDEFRecord.toRecords

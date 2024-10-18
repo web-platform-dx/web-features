@@ -1,20 +1,49 @@
-draft_date: 2024-10-10
+draft_date: 2024-10-17
 name: CSS Display Module Level 3
 description: TODO
 spec: https://drafts.csswg.org/css-display-3/
 compat_features:
   - css.properties.display
   - css.properties.display.block
+  - css.properties.display.contents
+  - css.properties.display.contents.contents_unusual
+  - css.properties.display.flow-root
   - css.properties.display.inline
+  - css.properties.display.inline-block
+  - css.properties.display.inline-table
   - css.properties.display.list-item
+  - css.properties.display.list-item.legend-support
   - css.properties.display.none
+  - css.properties.display.ruby
+  - css.properties.display.ruby-base
+  - css.properties.display.ruby-base-container
+  - css.properties.display.ruby-text
+  - css.properties.display.ruby-text-container
+  - css.properties.display.table
+  - css.properties.display.table-caption
+  - css.properties.display.table-cell
+  - css.properties.display.table-column
+  - css.properties.display.table-column-group
+  - css.properties.display.table-footer-group
+  - css.properties.display.table-header-group
+  - css.properties.display.table-row
+  - css.properties.display.table-row-group
 
 # The following features in the spec are already part of web-features:
+# - Flexbox:
+#   - css.properties.display.flex
+#   - css.properties.display.inline-flex
+#   - css.properties.order
+# - Grid:
+#   - css.properties.display.grid
+#   - css.properties.display.inline-grid
 # - display animation:
 #   - css.properties.display.is_transitionable
 #   - css.properties.display.keyframe_animatable
-# - Flexbox:
-#   - css.properties.order
+# - MathML:
+#   - css.properties.display.math
+# - Two-value display property:
+#   - css.properties.display.multi-keyword_values
 # - reading-flow:
 #   - css.properties.reading-flow
 # - visibility:

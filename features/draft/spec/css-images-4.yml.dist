@@ -18,6 +18,12 @@ compat_features:
   #   safari_ios: "1"
   - css.types.image
 
+  # baseline: false
+  # support:
+  #   firefox: "36"
+  #   firefox_android: "36"
+  - css.properties.object-position.applies_to_iframe_elements
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}

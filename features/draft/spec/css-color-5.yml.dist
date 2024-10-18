@@ -19,6 +19,21 @@ compat_features:
   - css.properties.color
   - css.types.color
 
+  # baseline: low
+  # baseline_low_date: 2023-08-21
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "116"
+  #   edge: "116"
+  #   firefox: "113"
+  #   firefox_android: "113"
+  #   safari: "16.2"
+  #   safari_ios: "16.2"
+  - css.types.color.lab.mixed_type_parameters
+  - css.types.color.lch.mixed_type_parameters
+  - css.types.color.oklab.mixed_type_parameters
+  - css.types.color.oklch.mixed_type_parameters
+
   # baseline: false
   # support:
   #   chrome: "119"

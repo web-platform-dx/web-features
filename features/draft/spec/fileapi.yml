@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-17
 name: File API
 description: TODO
 spec: https://w3c.github.io/FileAPI/
@@ -34,10 +34,12 @@ compat_features:
   - api.FileReader.readAsText
   - api.FileReader.readyState
   - api.FileReader.result
+  - api.FileReader.worker_support
   - api.FileReaderSync
   - api.FileReaderSync.FileReaderSync
   - api.FileReaderSync.readAsArrayBuffer
   - api.FileReaderSync.readAsDataURL
   - api.FileReaderSync.readAsText
+  - api.FileReaderSync.worker_support
   - api.URL.createObjectURL_static
   - api.URL.revokeObjectURL_static
