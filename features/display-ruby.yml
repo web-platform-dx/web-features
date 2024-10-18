@@ -1,0 +1,12 @@
+name: "display: ruby"
+description: "The `display: ruby` CSS declaration renders an element with the box layout of a `<ruby>` HTML element. Child elements may use equivalents to `<ruby>` internal elements such as `display: ruby-base` for `<rb>`."
+spec: https://drafts.csswg.org/css-display-3/#layout-specific-display
+group:
+  - css
+  - ruby
+compat_features:
+  - css.properties.display.ruby
+  - css.properties.display.ruby-base
+  - css.properties.display.ruby-base-container
+  - css.properties.display.ruby-text
+  - css.properties.display.ruby-text-container
