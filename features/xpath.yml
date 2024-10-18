@@ -5,9 +5,6 @@ group: xml
 caniuse: document-evaluate-xpath
 compat_features:
   - api.Document.evaluate
-  # Doesn't really fit well here, maybe should stand alone,
-  # or be part of DOM?
-  #- api.XMLDocument
   - api.XPathEvaluator
   - api.XPathEvaluator.XPathEvaluator
   - api.XPathEvaluator.createExpression
