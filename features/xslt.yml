@@ -1,0 +1,15 @@
+name: XSLT
+description: The `XSLTProcessor` API transforms XML documents into new XML or HTML documents, using XSLT stylesheets. You can use XSLT to convert data between different XML schemas or to convert XML data into web pages or PDF documents. Also known as Extensible Stylesheet Language Transformations.
+spec: https://dom.spec.whatwg.org/#xslt
+group: xml
+compat_features:
+  - api.XSLTProcessor
+  - api.XSLTProcessor.XSLTProcessor
+  - api.XSLTProcessor.clearParameters
+  - api.XSLTProcessor.getParameter
+  - api.XSLTProcessor.importStylesheet
+  - api.XSLTProcessor.removeParameter
+  - api.XSLTProcessor.reset
+  - api.XSLTProcessor.setParameter
+  - api.XSLTProcessor.transformToDocument
+  - api.XSLTProcessor.transformToFragment
