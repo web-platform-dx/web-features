@@ -20,22 +20,11 @@ spec:
 # key: api.Document.execCommand
 # Action: deprecated
 #
-# document.head
-# https://caniuse.com/documenthead
-# Action: either put in a Head feature or leave here
-#
-# document.elementFromPoint()
-# https://caniuse.com/element-from-point
-# Action: done in features/element-from-point.yml
-#
 # Document Policy
 # https://caniuse.com/document-policy
 # https://wicg.github.io/document-policy/
 # Action: looks like not in BCD yet - would be an iframe attr and http headers
 #
-# document.evaluate & XPath
-# https://caniuse.com/document-evaluate-xpath
-# Action: proposed to add to XPath feature in PR #1949
 #
 # Document Object Model Range
 # https://caniuse.com/dom-range
@@ -74,7 +63,9 @@ compat_features:
   - api.Document.forms
   - api.Document.getElementsByName
   - api.Document.hasFocus
-  # Caniuse: documenthead
+  # document.head
+  # https://caniuse.com/documenthead
+  # TBD: either put in a Head feature or leave here
   - api.Document.head
   - api.Document.hidden
   - api.Document.images
@@ -102,18 +93,16 @@ compat_features:
   - api.HTMLDocument
 
   # From the DOM spec.
-  # Removed implementations of Element interface for now, as that'll be
-  # its own feature..
   - api.DOMImplementation.createDocument
   - api.DOMImplementation.createDocumentType
   - api.DOMImplementation.createHTMLDocument
   - api.Document.Document
   - api.Document.URL
   - api.Document.adoptNode
-  #- api.Document.append
+  - api.Document.append
   - api.Document.characterSet
-  #- api.Document.childElementCount
-  #- api.Document.children
+  - api.Document.childElementCount
+  - api.Document.children
   - api.Document.compatMode
   - api.Document.contentType
   - api.Document.createAttribute
@@ -134,18 +123,20 @@ compat_features:
   - api.Document.documentElement
   - api.Document.documentURI
 
-  # proposed in #1949
-  - api.Document.evaluate
+  # https://caniuse.com/document-evaluate-xpath
+  # "document.evaluate & XPath"
+  # Action: proposed to add to XPath feature in PR #1949
+  #- api.Document.evaluate
 
-  #- api.Document.firstElementChild
+  - api.Document.firstElementChild
   - api.Document.getElementById
-  #- api.Document.getElementsByClassName
-  #- api.Document.getElementsByTagName
-  #- api.Document.getElementsByTagNameNS
+  - api.Document.getElementsByClassName
+  - api.Document.getElementsByTagName
+  - api.Document.getElementsByTagNameNS
   - api.Document.implementation
   - api.Document.importNode
-  #- api.Document.lastElementChild
-  #- api.Document.prepend
-  #- api.Document.querySelector
-  #- api.Document.querySelectorAll
-  #- api.Document.replaceChildren
+  - api.Document.lastElementChild
+  - api.Document.prepend
+  - api.Document.querySelector
+  - api.Document.querySelectorAll
+  - api.Document.replaceChildren
