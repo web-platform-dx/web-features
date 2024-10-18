@@ -1,20 +1,12 @@
-draft_date: 2024-10-07
+draft_date: 2024-10-17
 name: SVG Animations Level 2
 description: TODO
 spec: https://svgwg.org/specs/animations/
 compat_features:
-  - api.SVGMPathElement
-  - api.SVGSetElement
   - api.TimeEvent
   - api.TimeEvent.detail
   - api.TimeEvent.initTimeEvent
   - api.TimeEvent.view
-  - svg.elements.mpath
-  - svg.elements.mpath.href
-  - svg.elements.set
-  - svg.elements.set.fill
-  - svg.elements.set.href
-  - svg.elements.text.rotate
 
 # The following features in the spec are already part of web-features:
 # - SMIL SVG animations:
@@ -37,3 +29,12 @@ compat_features:
 #   - svg.elements.animateTransform.by
 #   - svg.elements.animateTransform.fill
 #   - svg.elements.animateTransform.href
+# - SVG:
+#   - api.SVGMPathElement
+#   - api.SVGSetElement
+#   - svg.elements.mpath
+#   - svg.elements.mpath.href
+#   - svg.elements.set
+#   - svg.elements.set.fill
+#   - svg.elements.set.href
+#   - svg.elements.text.rotate

@@ -22,6 +22,20 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "84"
+  #   chrome_android: "84"
+  #   edge: "84"
+  #   firefox: ≤72
+  #   firefox_android: "79"
+  - css.properties.ruby-position.over
+  - css.properties.ruby-position.under
+
+  # baseline: false
+  # support:
   #   firefox: "88"
   #   firefox_android: "88"
   - css.properties.ruby-position.alternate
+
+  # baseline: false
+  # support: {}
+  - css.properties.ruby-position.inter-character
