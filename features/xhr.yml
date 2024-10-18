@@ -9,8 +9,14 @@ compat_features:
   - api.FormData
   - api.FormData.append
   - api.FormData.append.filename_parameter
+  - api.FormData.delete
+  - api.FormData.get
+  - api.FormData.getAll
+  - api.FormData.has
+  - api.FormData.set
   - api.FormData.FormData
   - api.ProgressEvent
+  - api.ProgressEvent.ProgressEvent
   - api.ProgressEvent.lengthComputable
   - api.ProgressEvent.loaded
   - api.ProgressEvent.total
@@ -20,6 +26,7 @@ compat_features:
   - api.XMLHttpRequest.abort_event
   - api.XMLHttpRequest.error_event
   - api.XMLHttpRequest.getAllResponseHeaders
+  - api.XMLHttpRequest.getAllResponseHeaders.header_names_lowercase
   - api.XMLHttpRequest.getResponseHeader
   - api.XMLHttpRequest.load_event
   - api.XMLHttpRequest.loadend_event
@@ -31,12 +38,19 @@ compat_features:
   - api.XMLHttpRequest.readystatechange_event
   - api.XMLHttpRequest.response
   - api.XMLHttpRequest.responseText
+  - api.XMLHttpRequest.responseType
+  - api.XMLHttpRequest.responseType.arraybuffer_value
+  - api.XMLHttpRequest.responseType.blob_value
+  - api.XMLHttpRequest.responseType.document_value
+  - api.XMLHttpRequest.responseType.json_value
+  - api.XMLHttpRequest.responseURL
   - api.XMLHttpRequest.responseXML
   - api.XMLHttpRequest.send
   - api.XMLHttpRequest.send.body_ArrayBuffer_type
   - api.XMLHttpRequest.send.body_ArrayBufferView_type
   - api.XMLHttpRequest.send.body_Blob_type
   - api.XMLHttpRequest.send.body_FormData_type
+  - api.XMLHttpRequest.send.body_URLSearchParams_type
   - api.XMLHttpRequest.setRequestHeader
   - api.XMLHttpRequest.status
   - api.XMLHttpRequest.statusText
