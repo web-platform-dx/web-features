@@ -1,14 +1,20 @@
 # BCD: https://github.com/mdn/browser-compat-data/tree/main/api/Document.json
 # MDN: https://developer.mozilla.org/docs/Web/API/Document
 # CIU: https://caniuse.com/?search=Document
+# BCD: https://github.com/mdn/browser-compat-data/tree/main/api/HTMLDocument.json
+# MDN: https://developer.mozilla.org/docs/Web/API/HTMLDocument
+# CIU: https://caniuse.com/?search=HTMLDocument
+# description: "For historical reasons, Window objects have a window.HTMLDocument property whose value is the Document interface. So you can think of HTMLDocument as an alias for Document, and you can find documentation for HTMLDocument members under the documentation for the Document interface."
 name: Document
 description: "The Document interface represents any web page loaded in the browser and serves as an entry point into the web page&#x27;s content, which is the DOM tree."
 spec:
   - https://dom.spec.whatwg.org/#interface-document
   - https://html.spec.whatwg.org/multipage/dom.html#the-document-object
+  - https://html.spec.whatwg.org/multipage/nav-history-apis.html#htmldocument
   #- https://drafts.csswg.org/cssom-view/#extensions-to-the-document-interface
   #- https://w3c.github.io/pointerlock/#extensions-to-the-document-interface
   #- https://w3c.github.io/selection-api/#extensions-to-document-interface
+
 
 # Caniuse does not have a `Document` feature.
 #
@@ -48,63 +54,24 @@ spec:
 #  compute_from:
 
 compat_features:
-  # From the HTML spec
-  - api.Document
-  - api.Document.DOMContentLoaded_event
-  - api.Document.activeElement
-  - api.Document.body
-  - api.Document.close
-  - api.Document.cookie
-  - api.Document.currentScript
-  - api.Document.defaultView
-  - api.Document.designMode
-  - api.Document.dir
-  - api.Document.embeds
-  - api.Document.forms
-  - api.Document.getElementsByName
-  - api.Document.hasFocus
-  # document.head
-  # https://caniuse.com/documenthead
-  # TBD: either put in a Head feature or leave here
-  - api.Document.head
-  - api.Document.hidden
-  - api.Document.images
-  - api.Document.lastModified
-  - api.Document.links
-  - api.Document.open
-  - api.Document.plugins
-  - api.Document.readyState
-  - api.Document.readystatechange_event
-  - api.Document.referrer
-  - api.Document.scripts
-  - api.Document.scroll_event
-  - api.Document.securitypolicyviolation_event
-  - api.Document.title
-  - api.Document.visibilityState
-  - api.Document.visibilitychange_event
-  - api.Document.write
-  - api.Document.writeln
-
-  # BCD: https://github.com/mdn/browser-compat-data/tree/main/api/HTMLDocument.json
-  # MDN: https://developer.mozilla.org/docs/Web/API/HTMLDocument
-  # CIU: https://caniuse.com/?search=HTMLDocument
-  # description: "For historical reasons, Window objects have a window.HTMLDocument property whose value is the Document interface. So you can think of HTMLDocument as an alias for Document, and you can find documentation for HTMLDocument members under the documentation for the Document interface."
-  # spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#htmldocument
-  - api.HTMLDocument
-
-  # From the DOM spec.
   - api.DOMImplementation.createDocument
   - api.DOMImplementation.createDocumentType
   - api.DOMImplementation.createHTMLDocument
+  - api.Document
+  - api.Document.DOMContentLoaded_event
   - api.Document.Document
   - api.Document.URL
+  - api.Document.activeElement
   - api.Document.adoptNode
   - api.Document.append
+  - api.Document.body
   - api.Document.characterSet
   - api.Document.childElementCount
   - api.Document.children
+  - api.Document.close
   - api.Document.compatMode
   - api.Document.contentType
+  - api.Document.cookie
   - api.Document.createAttribute
   - api.Document.createAttributeNS
   - api.Document.createCDATASection
@@ -119,26 +86,49 @@ compat_features:
   - api.Document.createRange
   - api.Document.createTextNode
   - api.Document.createTreeWalker
+  - api.Document.currentScript
+  - api.Document.defaultView
+  - api.Document.designMode
+  - api.Document.dir
   - api.Document.doctype
   - api.Document.documentElement
   - api.Document.documentURI
-
-  # https://caniuse.com/document-evaluate-xpath
-  # "document.evaluate & XPath"
-  # Action: proposed to add to XPath feature in PR #1949
-  #- api.Document.evaluate
-
+  - api.Document.embeds
   - api.Document.firstElementChild
+  - api.Document.forms
   - api.Document.getElementById
   - api.Document.getElementsByClassName
+  - api.Document.getElementsByName
   - api.Document.getElementsByTagName
   - api.Document.getElementsByTagNameNS
+  - api.Document.hasFocus
+  # document.head
+  # https://caniuse.com/documenthead
+  # TBD: either put in a Head feature or leave here
+  - api.Document.head
+  - api.Document.hidden
+  - api.Document.images
   - api.Document.implementation
   - api.Document.importNode
   - api.Document.lastElementChild
+  - api.Document.lastModified
+  - api.Document.links
+  - api.Document.open
+  - api.Document.plugins
   - api.Document.prepend
   - api.Document.querySelector
   - api.Document.querySelectorAll
+  - api.Document.readyState
+  - api.Document.readystatechange_event
+  - api.Document.referrer
   - api.Document.replaceChildren
-
+  - api.Document.scripts
+  - api.Document.scroll_event
+  - api.Document.securitypolicyviolation_event
+  - api.Document.title
+  - api.Document.visibilityState
+  - api.Document.visibilitychange_event
+  - api.Document.write
+  - api.Document.writeln
+  - api.HTMLDocument
   - api.XMLDocument
