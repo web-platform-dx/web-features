@@ -3,9 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "127"
-    edge: "127"
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -262,6 +260,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "129"
+  #   chrome_android: "129"
+  #   edge: "129"
+  - api.GPUCanvasContext.configure.toneMapping
+
+  # baseline: false
+  # support:
   #   chrome: "113"
   #   edge: "113"
   - api.HTMLCanvasElement.getContext.webgpu_context
@@ -281,3 +286,8 @@ compat_features:
   - api.WGSLLanguageFeatures.keys
   - api.WGSLLanguageFeatures.size
   - api.WGSLLanguageFeatures.values
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.GPUCanvasContext.getConfiguration
