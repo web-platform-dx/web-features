@@ -1,5 +1,6 @@
 name: object-position
-description: The `object-position` CSS property places images, videos, and other replaced elements within their boxes.
+# TODO: Remove iframe support note once that is no longer the case.
+description: The `object-position` CSS property places images, videos, and other replaced elements within their boxes. Support for `<iframe>` elements is behind other elements.
 spec: https://drafts.csswg.org/css-images-3/#the-object-position
 # object-fit on caniuse includes both object-fit and object-position.
 # `caniuse: object-fit` is set in object-fit.yml
