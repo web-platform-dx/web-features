@@ -1,6 +1,8 @@
-name: DOM Standard
-description: TODO
-spec: https://dom.spec.whatwg.org/
+name: DOM Ranges
+description: "The Range interface represents a fragment of a document that can contain nodes and parts of text nodes."
+spec: https://dom.spec.whatwg.org/#ranges
+status:
+  compute_from: api.Document.createRange
 compat_features:
   - api.AbstractRange
   - api.AbstractRange.collapsed
