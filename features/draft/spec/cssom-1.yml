@@ -1,4 +1,4 @@
-draft_date: 2024-10-17
+draft_date: 2024-10-21
 name: CSS Object Model (CSSOM)
 description: TODO
 spec: https://drafts.csswg.org/cssom-1/
@@ -10,9 +10,6 @@ compat_features:
   - api.CSSGroupingRule.deleteRule
   - api.CSSGroupingRule.insertRule
   - api.CSSImportRule.supportsText
-  - api.CSSNamespaceRule
-  - api.CSSNamespaceRule.namespaceURI
-  - api.CSSNamespaceRule.prefix
   - api.CSSPageDescriptors
   - api.CSSPageDescriptors.margin
   - api.CSSPageDescriptors.margin-bottom
@@ -89,6 +86,10 @@ compat_features:
 #   - api.CSSImportRule.styleSheet
 # - Cascade layers:
 #   - api.CSSImportRule.layerName
+# - `@namespace`:
+#   - api.CSSNamespaceRule
+#   - api.CSSNamespaceRule.namespaceURI
+#   - api.CSSNamespaceRule.prefix
 # - Nesting:
 #   - api.CSSStyleRule.cssRules
 #   - api.CSSStyleRule.deleteRule
