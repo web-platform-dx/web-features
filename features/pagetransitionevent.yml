@@ -1,0 +1,17 @@
+# BCD: https://github.com/mdn/browser-compat-data/tree/main/api/PageTransitionEvent.json
+# MDN: https://developer.mozilla.org/docs/Web/API/PageTransitionEvent
+# CIU: https://caniuse.com/?search=PageTransitionEvent
+name: PageTransitionEvent
+description: "The PageTransitionEvent event object is available inside handler functions for the pageshow and pagehide events, fired when a document is being loaded or unloaded."
+spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-pagetransitionevent-interface
+caniuse: page-transition-events
+#status:
+#  compute_from:
+compat_features:
+  - api.PageTransitionEvent
+  - api.PageTransitionEvent.PageTransitionEvent
+  - api.PageTransitionEvent.persisted
+  - api.Window.pagehide_event
+  - api.Window.pagereveal_event
+  - api.Window.pageshow_event
+  - api.Window.pageswap_event
