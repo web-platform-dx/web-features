@@ -4,61 +4,12 @@
 status:
   baseline: false
   support:
-    firefox: ≤72
-    firefox_android: "79"
+    chrome: "65"
+    chrome_android: "65"
+    edge: "79"
+    firefox: "59"
+    firefox_android: "59"
 compat_features:
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "1"
-  #   safari_ios: "1"
-  - css.properties.display
-  - css.properties.display.block
-  - css.properties.display.inline
-  - css.properties.display.inline-block
-  - css.properties.display.list-item
-  - css.properties.display.none
-  - css.properties.display.table
-  - css.properties.display.table-cell
-  - css.properties.display.table-column
-  - css.properties.display.table-column-group
-  - css.properties.display.table-footer-group
-  - css.properties.display.table-header-group
-  - css.properties.display.table-row
-  - css.properties.display.table-row-group
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3"
-  #   firefox_android: "4"
-  #   safari: "1"
-  #   safari_ios: "1"
-  - css.properties.display.inline-table
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "58"
-  #   chrome_android: "58"
-  #   edge: "79"
-  #   firefox: "53"
-  #   firefox_android: "53"
-  #   safari: "13"
-  #   safari_ios: "13"
-  - css.properties.display.flow-root
-
   # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
@@ -72,19 +23,7 @@ compat_features:
   #   safari_ios: "11.3"
   - css.properties.display.contents
 
-  # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
-  # support:
-  #   chrome: ≤80
-  #   chrome_android: "80"
-  #   edge: "80"
-  #   firefox: ≤72
-  #   firefox_android: "79"
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
-  - css.properties.display.table-caption
-
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "65"
@@ -93,29 +32,3 @@ compat_features:
   #   firefox: "59"
   #   firefox_android: "59"
   - css.properties.display.contents.contents_unusual
-
-  # baseline: false
-  # support:
-  #   chrome: "71"
-  #   chrome_android: "71"
-  #   edge: "79"
-  #   firefox: "64"
-  #   firefox_android: "64"
-  - css.properties.display.list-item.legend-support
-
-  # baseline: false
-  # support:
-  #   chrome: "121"
-  #   chrome_android: "121"
-  #   firefox: "38"
-  #   firefox_android: "38"
-  - css.properties.display.ruby
-  - css.properties.display.ruby-text
-
-  # baseline: false
-  # support:
-  #   firefox: "38"
-  #   firefox_android: "38"
-  - css.properties.display.ruby-base
-  - css.properties.display.ruby-base-container
-  - css.properties.display.ruby-text-container

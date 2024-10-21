@@ -8,7 +8,6 @@ compat_features:
   - api.GPU
   - api.GPU.getPreferredCanvasFormat
   - api.GPU.requestAdapter
-  - api.GPU.requestAdapter.discrete_adapter_default_ac
   - api.GPU.wgslLanguageFeatures
   - api.GPUAdapter
   - api.GPUAdapter.features
@@ -16,7 +15,6 @@ compat_features:
   - api.GPUAdapter.isFallbackAdapter
   - api.GPUAdapter.limits
   - api.GPUAdapter.requestDevice
-  - api.GPUAdapter.requestDevice.lost_device_on_duplicate
   - api.GPUAdapterInfo
   - api.GPUAdapterInfo.architecture
   - api.GPUAdapterInfo.description
@@ -98,7 +96,6 @@ compat_features:
   - api.GPUDevice.destroy
   - api.GPUDevice.features
   - api.GPUDevice.importExternalTexture
-  - api.GPUDevice.importExternalTexture.videoframe_source
   - api.GPUDevice.label
   - api.GPUDevice.limits
   - api.GPUDevice.lost
@@ -119,7 +116,6 @@ compat_features:
   - api.GPUOutOfMemoryError.GPUOutOfMemoryError
   - api.GPUPipelineError
   - api.GPUPipelineError.GPUPipelineError
-  - api.GPUPipelineError.GPUPipelineError.message_optional
   - api.GPUPipelineError.reason
   - api.GPUPipelineLayout
   - api.GPUPipelineLayout.label
@@ -130,7 +126,6 @@ compat_features:
   - api.GPUQuerySet.type
   - api.GPUQueue
   - api.GPUQueue.copyExternalImageToTexture
-  - api.GPUQueue.copyExternalImageToTexture.videoframe_source
   - api.GPUQueue.label
   - api.GPUQueue.onSubmittedWorkDone
   - api.GPUQueue.submit
@@ -152,7 +147,6 @@ compat_features:
   - api.GPURenderBundleEncoder.setIndexBuffer
   - api.GPURenderBundleEncoder.setPipeline
   - api.GPURenderBundleEncoder.setVertexBuffer
-  - api.GPURenderBundleEncoder.setVertexBuffer.unset_vertex_buffer
   - api.GPURenderPassEncoder
   - api.GPURenderPassEncoder.beginOcclusionQuery
   - api.GPURenderPassEncoder.draw
@@ -173,7 +167,6 @@ compat_features:
   - api.GPURenderPassEncoder.setScissorRect
   - api.GPURenderPassEncoder.setStencilReference
   - api.GPURenderPassEncoder.setVertexBuffer
-  - api.GPURenderPassEncoder.setVertexBuffer.unset_vertex_buffer
   - api.GPURenderPassEncoder.setViewport
   - api.GPURenderPipeline
   - api.GPURenderPipeline.getBindGroupLayout

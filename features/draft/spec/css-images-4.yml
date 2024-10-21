@@ -5,7 +5,6 @@ spec: https://drafts.csswg.org/css-images-4/
 compat_features:
   - css.properties.object-position.applies_to_iframe_elements
   - css.types.image
-  - css.types.image.image
 
 # The following features in the spec are already part of web-features:
 # - element():
@@ -86,5 +85,7 @@ compat_features:
 #   - css.types.image.gradient.repeating-linear-gradient.interpolation_color_space
 #   - css.types.image.gradient.repeating-radial-gradient.hue_interpolation_method
 #   - css.types.image.gradient.repeating-radial-gradient.interpolation_color_space
+# - image():
+#   - css.types.image.image
 # - SVG:
 #   - svg.global_attributes.image-rendering

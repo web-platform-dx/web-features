@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "36"
+    firefox_android: "36"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -18,13 +20,9 @@ compat_features:
   #   safari_ios: "1"
   - css.types.image
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "36"
   #   firefox_android: "36"
   - css.properties.object-position.applies_to_iframe_elements
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - css.types.image.image
