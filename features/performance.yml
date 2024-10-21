@@ -5,6 +5,9 @@ spec:
   - https://w3c.github.io/performance-timeline/
   - https://w3c.github.io/resource-timing/
   - https://w3c.github.io/user-timing/#extensions-performance-interface
+caniuse:
+  - user-timing
+  - high-resolution-time
 group: performance
 status:
   compute_from: api.Performance
