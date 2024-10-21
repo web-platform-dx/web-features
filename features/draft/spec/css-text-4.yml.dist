@@ -27,8 +27,6 @@ compat_features:
   - css.properties.text-transform.uppercase
   - css.properties.word-spacing
   - css.properties.word-spacing.normal
-  - svg.global_attributes.letter-spacing
-  - svg.global_attributes.word-spacing
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -183,28 +181,6 @@ compat_features:
   - css.properties.text-align-last
   - css.properties.text-align-last.auto
 
-  # baseline: low
-  # baseline_low_date: 2023-09-18
-  # support:
-  #   chrome: "106"
-  #   chrome_android: "106"
-  #   edge: "106"
-  #   firefox: "98"
-  #   firefox_android: "98"
-  #   safari: "17"
-  #   safari_ios: "17"
-  - css.properties.hyphenate-character
-  - css.properties.hyphenate-character.auto
-
-  # baseline: false
-  # support:
-  #   chrome: "109"
-  #   chrome_android: "109"
-  #   edge: "109"
-  #   firefox: "117"
-  #   firefox_android: "117"
-  - css.properties.text-transform.math-auto
-
   # baseline: false
   # support:
   #   firefox: "19"
@@ -240,14 +216,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "109"
-  #   chrome_android: "109"
-  #   edge: "109"
-  - css.properties.hyphenate-limit-chars
-  - css.properties.hyphenate-limit-chars.auto
-
-  # baseline: false
-  # support:
   #   chrome: "119"
   #   chrome_android: "119"
   #   edge: "119"
@@ -273,11 +241,8 @@ compat_features:
   - css.properties.text-justify.inter-word
   - css.properties.text-justify.none
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
-  - css.properties.hanging-punctuation
-  - css.properties.hanging-punctuation.allow-end
-  - css.properties.hanging-punctuation.first
-  - css.properties.hanging-punctuation.last
-  - css.properties.hanging-punctuation.none
+  # support:
+  #   firefox: "124"
+  #   firefox_android: "124"
+  - css.properties.white-space-collapse.preserve-spaces

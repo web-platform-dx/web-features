@@ -278,3 +278,11 @@ compat_features:
   - api.XMLHttpRequest.timeout
   - api.XMLHttpRequest.timeout_event
   - api.XMLHttpRequestUpload.timeout_event
+
+  # baseline: false
+  # support:
+  #   firefox: "54"
+  #   firefox_android: "54"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - api.ProgressEvent.worker_support
