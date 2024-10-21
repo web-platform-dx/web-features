@@ -24,7 +24,6 @@ compat_features:
   - api.Document.images
   - api.Document.lastModified
   - api.Document.links
-  - api.Document.location
   - api.Document.referrer
   - api.Document.title
   - api.Document.write
@@ -47,24 +46,7 @@ compat_features:
   - api.HTMLInputElement.src
   - api.HTMLInputElement.type
   - api.HTMLInputElement.value
-  - api.History
-  - api.History.back
-  - api.History.forward
-  - api.History.go
-  - api.History.length
-  - api.Location
-  - api.Location.hash
-  - api.Location.host
-  - api.Location.hostname
-  - api.Location.href
-  - api.Location.pathname
-  - api.Location.port
-  - api.Location.protocol
-  - api.Location.reload
-  - api.Location.replace
-  - api.Location.search
   - api.Navigator
-  - api.Navigator.cookieEnabled
   - api.Navigator.language
   - api.Navigator.userAgent
   - api.Range.createContextualFragment
@@ -78,15 +60,11 @@ compat_features:
   - api.Window.frames
   - api.Window.history
   - api.Window.length
-  - api.Window.location
   - api.Window.name
   - api.Window.navigator
   - api.Window.open
   - api.Window.opener
   - api.Window.prompt
-  - api.clearInterval
-  - api.setInterval
-  - api.setTimeout
   - css.selectors.active
   - css.selectors.focus
   - css.selectors.visited
@@ -113,6 +91,7 @@ compat_features:
   - html.elements.input.type_text
   - html.elements.input.type_url
   - html.global_attributes.style
+  - http.headers.Refresh
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -151,9 +130,6 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "1.3"
   #   safari_ios: "1"
-  - api.DOMParser
-  - api.DOMParser.DOMParser
-  - api.DOMParser.parseFromString
   - api.HTMLInputElement.selectionEnd
   - api.HTMLInputElement.selectionStart
   - api.Window.load_event
@@ -196,30 +172,18 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "3"
   #   safari_ios: "1"
-  - api.BarProp
-  - api.BarProp.visible
   - api.HTMLDListElement
   - api.HTMLElement.dir
   - api.HTMLElement.lang
   - api.HTMLElement.title
+  - api.HTMLFormControlsCollection
   - api.HTMLInputElement.setSelectionRange
-  - api.HTMLLabelElement
-  - api.HTMLLabelElement.form
-  - api.HTMLLabelElement.htmlFor
   - api.HTMLOptionsCollection
   - api.HTMLOptionsCollection.add
   - api.HTMLOptionsCollection.length
   - api.HTMLOptionsCollection.selectedIndex
-  - api.Location.assign
-  - api.Window.beforeunload_event
   - api.Window.frameElement
-  - api.Window.locationbar
-  - api.Window.menubar
-  - api.Window.personalbar
-  - api.Window.scrollbars
   - api.Window.self
-  - api.Window.statusbar
-  - api.Window.toolbar
   - api.Window.top
   - api.Window.window
 
@@ -278,38 +242,10 @@ compat_features:
   #   firefox: "1"
   #   firefox_android: "4"
   #   safari: ≤4
-  #   safari_ios: "1"
-  - api.HTMLFormControlsCollection
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "1"
-  - api.clearTimeout
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: ≤4
   #   safari_ios: ≤3.2
   - html.elements.dd
   - html.elements.dl
   - html.elements.dt
-  - html.elements.label
-  - html.elements.label.for
   - html.global_attributes.accesskey
   - html.global_attributes.class
   - html.global_attributes.lang
@@ -380,22 +316,6 @@ compat_features:
   #   safari: ≤4
   #   safari_ios: ≤3.2
   - html.global_attributes.contenteditable
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "3.1"
-  #   safari_ios: "2"
-  - api.ImageData
-  - api.ImageData.data
-  - api.ImageData.height
-  - api.ImageData.width
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -535,61 +455,11 @@ compat_features:
   #   chrome: "1"
   #   chrome_android: "18"
   #   edge: "12"
-  #   firefox: "9"
-  #   firefox_android: "9"
-  #   safari: "3.1"
-  #   safari_ios: "2"
-  - api.HTMLElement.drag_event
-  - api.HTMLElement.dragend_event
-  - api.HTMLElement.dragenter_event
-  - api.HTMLElement.dragleave_event
-  - api.HTMLElement.dragover_event
-  - api.HTMLElement.dragstart_event
-  - api.HTMLElement.drop_event
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
   #   firefox: "11"
   #   firefox_android: "14"
   #   safari: "1.3"
   #   safari_ios: "1"
   - api.Element.outerHTML
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "13"
-  #   firefox_android: "14"
-  #   safari: "4"
-  #   safari_ios: "3"
-  - api.StorageEvent
-  - api.StorageEvent.key
-  - api.StorageEvent.newValue
-  - api.StorageEvent.oldValue
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "22"
-  #   firefox_android: "22"
-  #   safari: "3"
-  #   safari_ios: "3"
-  - api.Element.copy_event
-  - api.Element.cut_event
-  - api.Element.paste_event
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -626,7 +496,7 @@ compat_features:
   #   edge: "12"
   #   firefox: "33"
   #   firefox_android: "33"
-  #   safari: ≤4
+  #   safari: "3"
   #   safari_ios: "1"
   - api.HTMLFormControlsCollection.namedItem
 
@@ -670,11 +540,6 @@ compat_features:
   - api.Document.activeElement
   - api.Document.hasFocus
   - api.FileList
-  - api.MessageEvent
-  - api.MessageEvent.data
-  - api.MessageEvent.origin
-  - api.MessageEvent.source
-  - api.Window.postMessage
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -688,7 +553,6 @@ compat_features:
   #   safari: "4"
   #   safari_ios: "5"
   - api.Worker
-  - api.Worker.postMessage
   - api.Worker.terminate
 
   # baseline: high
@@ -719,50 +583,6 @@ compat_features:
   - api.HTMLSourceElement
   - api.HTMLSourceElement.src
   - api.HTMLSourceElement.type
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - api.DataTransfer
-  - api.DataTransfer.clearData
-  - api.DataTransfer.dropEffect
-  - api.DataTransfer.effectAllowed
-  - api.DataTransfer.getData
-  - api.DataTransfer.types
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "5"
-  #   safari_ios: "5"
-  - api.DataTransfer.setData
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.6"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - api.DataTransfer.files
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -840,38 +660,11 @@ compat_features:
   #   chrome: "3"
   #   chrome_android: "18"
   #   edge: "12"
-  #   firefox: "13"
-  #   firefox_android: "14"
-  #   safari: "4"
-  #   safari_ios: "3"
-  - api.StorageEvent.storageArea
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
   #   firefox: "15"
   #   firefox_android: "15"
   #   safari: "3.1"
   #   safari_ios: "2"
   - api.HTMLSourceElement.media
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "3"
-  #   safari_ios: "1"
-  - api.atob
-  - api.btoa
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -895,61 +688,9 @@ compat_features:
   #   edge: "12"
   #   firefox: "2"
   #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - api.Window.sessionStorage
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "2"
-  #   firefox_android: "4"
-  #   safari: "5"
-  #   safari_ios: "4"
-  - api.HTMLElement.draggable
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "2"
-  #   firefox_android: "4"
   #   safari: "5"
   #   safari_ios: "4.2"
   - html.global_attributes.draggable
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - api.MessageEvent.ports
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - api.Window.localStorage
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -964,11 +705,8 @@ compat_features:
   #   safari_ios: "5"
   - api.DedicatedWorkerGlobalScope
   - api.DedicatedWorkerGlobalScope.close
-  - api.DedicatedWorkerGlobalScope.message_event
-  - api.DedicatedWorkerGlobalScope.postMessage
   - api.Worker.Worker
   - api.Worker.error_event
-  - api.Worker.message_event
   - api.WorkerGlobalScope
   - api.WorkerGlobalScope.error_event
   - api.WorkerGlobalScope.location
@@ -994,55 +732,10 @@ compat_features:
   #   chrome_android: "18"
   #   edge: "12"
   #   firefox: "3.5"
-  #   firefox_android: "6"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - api.Storage
-  - api.Storage.clear
-  - api.Storage.getItem
-  - api.Storage.key
-  - api.Storage.length
-  - api.Storage.removeItem
-  - api.Storage.setItem
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
   #   firefox_android: "34"
   #   safari: "4"
   #   safari_ios: "5"
   - api.WorkerGlobalScope.self
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.6"
-  #   firefox_android: "4"
-  #   safari: "5"
-  #   safari_ios: "5"
-  - api.Window.hashchange_event
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - http.headers.X-Frame-Options
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -1131,20 +824,6 @@ compat_features:
   #   safari: "5"
   #   safari_ios: "3"
   - html.elements.input.type_email
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "5"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "5"
-  #   safari_ios: "4"
-  - api.History.pushState
-  - api.History.replaceState
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -1253,19 +932,6 @@ compat_features:
   #   chrome: "6"
   #   chrome_android: "18"
   #   edge: "12"
-  #   firefox: "13"
-  #   firefox_android: "14"
-  #   safari: "5"
-  #   safari_ios: "5"
-  - api.StorageEvent.url
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "6"
-  #   chrome_android: "18"
-  #   edge: "12"
   #   firefox: "16"
   #   firefox_android: "16"
   #   safari: "6"
@@ -1296,8 +962,6 @@ compat_features:
   #   firefox_android: "6"
   #   safari: "5.1"
   #   safari_ios: "5"
-  - api.DOMStringMap
-  - api.HTMLElement.dataset
   - html.global_attributes.data_attributes
 
   # baseline: high
@@ -1312,46 +976,6 @@ compat_features:
   #   safari: "5.1"
   #   safari_ios: "5"
   - html.elements.input.type_number
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "8"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.6"
-  #   firefox_android: "4"
-  #   safari: "5"
-  #   safari_ios: "5"
-  - api.HashChangeEvent
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "8"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "6"
-  #   firefox_android: "6"
-  #   safari: "5.1"
-  #   safari_ios: "5"
-  - api.HashChangeEvent.newURL
-  - api.HashChangeEvent.oldURL
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "8"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "21"
-  #   firefox_android: "21"
-  #   safari: "5.1"
-  #   safari_ios: "5"
-  - api.Location.origin
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -1501,19 +1125,6 @@ compat_features:
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
   # support:
-  #   chrome: "16"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "11"
-  #   firefox_android: "14"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - api.HashChangeEvent.HashChangeEvent
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
   #   chrome: "17"
   #   chrome_android: "18"
   #   edge: "12"
@@ -1535,19 +1146,6 @@ compat_features:
   #   safari: "6"
   #   safari_ios: "6"
   - html.elements.iframe.sandbox.allow-popups
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "19"
-  #   chrome_android: "25"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - api.History.state
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -1624,19 +1222,6 @@ compat_features:
   #   chrome: "30"
   #   chrome_android: "30"
   #   edge: "12"
-  #   firefox: "1.5"
-  #   firefox_android: "4"
-  #   safari: "7"
-  #   safari_ios: "7"
-  - api.BeforeUnloadEvent
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "30"
-  #   chrome_android: "30"
-  #   edge: "12"
   #   firefox: "31"
   #   firefox_android: "31"
   #   safari: "8"
@@ -1669,27 +1254,6 @@ compat_features:
   #   safari: "8"
   #   safari_ios: "8"
   - api.HTMLImageElement.srcset
-
-  # baseline: high
-  # baseline_low_date: 2015-09-22
-  # baseline_high_date: 2018-03-22
-  # support:
-  #   chrome: "2"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "41"
-  #   firefox_android: "41"
-  #   safari: "5"
-  #   safari_ios: "4.2"
-  - api.MessageChannel
-  - api.MessageChannel.MessageChannel
-  - api.MessageChannel.port1
-  - api.MessageChannel.port2
-  - api.MessagePort
-  - api.MessagePort.close
-  - api.MessagePort.message_event
-  - api.MessagePort.postMessage
-  - api.MessagePort.start
 
   # baseline: high
   # baseline_low_date: 2015-11-12
@@ -1777,19 +1341,6 @@ compat_features:
   - api.HTMLImageElement.sizes
 
   # baseline: high
-  # baseline_low_date: 2016-07-27
-  # baseline_high_date: 2019-01-27
-  # support:
-  #   chrome: "52"
-  #   chrome_android: "52"
-  #   edge: "12"
-  #   firefox: "22"
-  #   firefox_android: "22"
-  #   safari: "1"
-  #   safari_ios: "1"
-  - api.Location.toString
-
-  # baseline: high
   # baseline_low_date: 2016-08-02
   # baseline_high_date: 2019-02-02
   # support:
@@ -1822,19 +1373,6 @@ compat_features:
   #   chrome: "16"
   #   chrome_android: "18"
   #   edge: "14"
-  #   firefox: "26"
-  #   firefox_android: "26"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - api.MessageEvent.MessageEvent
-
-  # baseline: high
-  # baseline_low_date: 2016-08-02
-  # baseline_high_date: 2019-02-02
-  # support:
-  #   chrome: "16"
-  #   chrome_android: "18"
-  #   edge: "14"
   #   firefox: "27"
   #   firefox_android: "27"
   #   safari: "6"
@@ -1853,19 +1391,6 @@ compat_features:
   #   safari: "6"
   #   safari_ios: "7"
   - api.TrackEvent.TrackEvent
-
-  # baseline: high
-  # baseline_low_date: 2016-08-02
-  # baseline_high_date: 2019-02-02
-  # support:
-  #   chrome: "36"
-  #   chrome_android: "36"
-  #   edge: "14"
-  #   firefox: "29"
-  #   firefox_android: "29"
-  #   safari: "8"
-  #   safari_ios: "8"
-  - api.ImageData.ImageData
 
   # baseline: high
   # baseline_low_date: 2016-08-02
@@ -1942,52 +1467,6 @@ compat_features:
   - api.WorkerLocation.origin
 
   # baseline: high
-  # baseline_low_date: 2016-11-15
-  # baseline_high_date: 2019-05-15
-  # support:
-  #   chrome: "11"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "50"
-  #   firefox_android: "50"
-  #   safari: "5.1"
-  #   safari_ios: "5"
-  - api.DataTransferItem
-  - api.DataTransferItem.getAsFile
-  - api.DataTransferItem.getAsString
-  - api.DataTransferItem.kind
-  - api.DataTransferItem.type
-
-  # baseline: high
-  # baseline_low_date: 2016-11-15
-  # baseline_high_date: 2019-05-15
-  # support:
-  #   chrome: "13"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "50"
-  #   firefox_android: "50"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - api.DataTransferItemList
-  - api.DataTransferItemList.add
-  - api.DataTransferItemList.clear
-  - api.DataTransferItemList.length
-
-  # baseline: high
-  # baseline_low_date: 2016-11-15
-  # baseline_high_date: 2019-05-15
-  # support:
-  #   chrome: "31"
-  #   chrome_android: "31"
-  #   edge: "12"
-  #   firefox: "50"
-  #   firefox_android: "50"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - api.DataTransferItemList.remove
-
-  # baseline: high
   # baseline_low_date: 2017-03-16
   # baseline_high_date: 2019-09-16
   # support:
@@ -1999,6 +1478,25 @@ compat_features:
   #   safari: "3.1"
   #   safari_ios: "5"
   - html.elements.input.type_range
+
+  # baseline: high
+  # baseline_low_date: 2017-03-27
+  # baseline_high_date: 2019-09-27
+  # support:
+  #   chrome: "6"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "16"
+  #   firefox_android: "16"
+  #   safari: "6"
+  #   safari_ios: "10.3"
+  - html.elements.meter
+  - html.elements.meter.high
+  - html.elements.meter.low
+  - html.elements.meter.max
+  - html.elements.meter.min
+  - html.elements.meter.optimum
+  - html.elements.meter.value
 
   # baseline: high
   # baseline_low_date: 2017-03-27
@@ -2054,19 +1552,6 @@ compat_features:
   - api.HTMLAreaElement.download
 
   # baseline: high
-  # baseline_low_date: 2017-04-05
-  # baseline_high_date: 2019-10-05
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "15"
-  #   firefox: "45"
-  #   firefox_android: "45"
-  #   safari: "4"
-  #   safari_ios: "4"
-  - api.Window.storage_event
-
-  # baseline: high
   # baseline_low_date: 2017-06-06
   # baseline_high_date: 2019-12-06
   # support:
@@ -2079,19 +1564,6 @@ compat_features:
   #   safari_ios: ≤10.3
   - html.elements.meta.http-equiv.content-security-policy
   - html.elements.meta.http-equiv.content-type
-
-  # baseline: high
-  # baseline_low_date: 2017-08-01
-  # baseline_high_date: 2020-02-01
-  # support:
-  #   chrome: "60"
-  #   chrome_android: "60"
-  #   edge: "12"
-  #   firefox: "9"
-  #   firefox_android: "9"
-  #   safari: "4"
-  #   safari_ios: "4"
-  - api.Window.message_event
 
   # baseline: high
   # baseline_low_date: 2017-10-17
@@ -2167,19 +1639,6 @@ compat_features:
   # baseline_low_date: 2018-04-12
   # baseline_high_date: 2020-10-12
   # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "50"
-  #   firefox_android: "52"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - api.DataTransfer.items
-
-  # baseline: high
-  # baseline_low_date: 2018-04-12
-  # baseline_high_date: 2020-10-12
-  # support:
   #   chrome: "47"
   #   chrome_android: "47"
   #   edge: "15"
@@ -2206,33 +1665,6 @@ compat_features:
   # baseline_low_date: 2018-04-30
   # baseline_high_date: 2020-10-30
   # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "17"
-  #   firefox: "51"
-  #   firefox_android: "51"
-  #   safari: "3"
-  #   safari_ios: "1"
-  - api.SVGElement.blur
-  - api.SVGElement.focus
-
-  # baseline: high
-  # baseline_low_date: 2018-04-30
-  # baseline_high_date: 2020-10-30
-  # support:
-  #   chrome: "2"
-  #   chrome_android: "18"
-  #   edge: "17"
-  #   firefox: "3"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - api.MessageEvent.lastEventId
-
-  # baseline: high
-  # baseline_low_date: 2018-04-30
-  # baseline_high_date: 2020-10-30
-  # support:
   #   chrome: "4"
   #   chrome_android: "18"
   #   edge: "17"
@@ -2241,19 +1673,6 @@ compat_features:
   #   safari: "4"
   #   safari_ios: "5"
   - api.WorkerGlobalScope.navigator
-
-  # baseline: high
-  # baseline_low_date: 2018-04-30
-  # baseline_high_date: 2020-10-30
-  # support:
-  #   chrome: "36"
-  #   chrome_android: "36"
-  #   edge: "17"
-  #   firefox: "51"
-  #   firefox_android: "51"
-  #   safari: "8"
-  #   safari_ios: "8"
-  - api.SVGElement.tabIndex
 
   # baseline: high
   # baseline_low_date: 2018-04-30
@@ -2283,19 +1702,6 @@ compat_features:
   - html.elements.input.minlength
 
   # baseline: high
-  # baseline_low_date: 2018-04-30
-  # baseline_high_date: 2020-10-30
-  # support:
-  #   chrome: "55"
-  #   chrome_android: "55"
-  #   edge: "17"
-  #   firefox: "51"
-  #   firefox_android: "51"
-  #   safari: "5.1"
-  #   safari_ios: "5"
-  - api.SVGElement.dataset
-
-  # baseline: high
   # baseline_low_date: 2018-05-09
   # baseline_high_date: 2020-11-09
   # support:
@@ -2320,32 +1726,6 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - api.HTMLScriptElement.noModule
-
-  # baseline: high
-  # baseline_low_date: 2018-10-02
-  # baseline_high_date: 2021-04-02
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "18"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - api.DataTransfer.setDragImage
-
-  # baseline: high
-  # baseline_low_date: 2018-10-02
-  # baseline_high_date: 2021-04-02
-  # support:
-  #   chrome: "6"
-  #   chrome_android: "18"
-  #   edge: "18"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "5.1"
-  #   safari_ios: "5"
-  - api.HTMLLabelElement.control
 
   # baseline: high
   # baseline_low_date: 2018-10-02
@@ -2385,25 +1765,6 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - api.origin
-
-  # baseline: high
-  # baseline_low_date: ≤2018-10-02
-  # baseline_high_date: ≤2021-04-02
-  # support:
-  #   chrome: "6"
-  #   chrome_android: "18"
-  #   edge: ≤18
-  #   firefox: "16"
-  #   firefox_android: "16"
-  #   safari: "6"
-  #   safari_ios: "10.3"
-  - html.elements.meter
-  - html.elements.meter.high
-  - html.elements.meter.low
-  - html.elements.meter.max
-  - html.elements.meter.min
-  - html.elements.meter.optimum
-  - html.elements.meter.value
 
   # baseline: high
   # baseline_low_date: ≤2018-10-02
@@ -2533,25 +1894,6 @@ compat_features:
   #   chrome: "6"
   #   chrome_android: "18"
   #   edge: "79"
-  #   firefox: "6"
-  #   firefox_android: "45"
-  #   safari: "5"
-  #   safari_ios: "5"
-  - api.EventSource
-  - api.EventSource.EventSource
-  - api.EventSource.close
-  - api.EventSource.error_event
-  - api.EventSource.message_event
-  - api.EventSource.open_event
-  - api.EventSource.readyState
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "6"
-  #   chrome_android: "18"
-  #   edge: "79"
   #   firefox: ≤49
   #   firefox_android: "49"
   #   safari: "5"
@@ -2588,33 +1930,6 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
-  #   chrome: "18"
-  #   chrome_android: "18"
-  #   edge: "79"
-  #   firefox: "6"
-  #   firefox_android: "45"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - api.EventSource.url
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "20"
-  #   chrome_android: "25"
-  #   edge: "79"
-  #   firefox: "25"
-  #   firefox_android: "25"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - api.HTMLIFrameElement.srcdoc
-  - html.elements.iframe.srcdoc
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
   #   chrome: "24"
   #   chrome_android: "25"
   #   edge: "79"
@@ -2623,19 +1938,6 @@ compat_features:
   #   safari: "7"
   #   safari_ios: "7"
   - api.HTMLInputElement.setRangeText
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "26"
-  #   chrome_android: "26"
-  #   edge: "79"
-  #   firefox: "6"
-  #   firefox_android: "45"
-  #   safari: "7"
-  #   safari_ios: "7"
-  - api.EventSource.withCredentials
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -2675,19 +1977,6 @@ compat_features:
   #   safari: "11.1"
   #   safari_ios: "11.3"
   - html.elements.link.rel.preconnect
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "46"
-  #   chrome_android: "46"
-  #   edge: "79"
-  #   firefox: "46"
-  #   firefox_android: "46"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - api.History.scrollRestoration
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -2742,32 +2031,6 @@ compat_features:
   #   safari: "11.1"
   #   safari_ios: "12"
   - javascript.operators.import_meta
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "66"
-  #   chrome_android: "66"
-  #   edge: "79"
-  #   firefox: "46"
-  #   firefox_android: "46"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - api.ImageBitmapRenderingContext
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "66"
-  #   chrome_android: "66"
-  #   edge: "79"
-  #   firefox: "50"
-  #   firefox_android: "50"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - api.ImageBitmapRenderingContext.transferFromImageBitmap
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -2909,21 +2172,6 @@ compat_features:
   - api.TextMetrics.actualBoundingBoxRight
 
   # baseline: high
-  # baseline_low_date: 2020-09-16
-  # baseline_high_date: 2023-03-16
-  # support:
-  #   chrome: "46"
-  #   chrome_android: "46"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "14"
-  #   safari_ios: "14"
-  - api.DragEvent
-  - api.DragEvent.DragEvent
-  - api.DragEvent.dataTransfer
-
-  # baseline: high
   # baseline_low_date: 2021-01-26
   # baseline_high_date: 2023-07-26
   # support:
@@ -2954,19 +2202,6 @@ compat_features:
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
   # support:
-  #   chrome: "59"
-  #   chrome_android: "59"
-  #   edge: "17"
-  #   firefox: "62"
-  #   firefox_android: "62"
-  #   safari: "14.1"
-  #   safari_ios: "14.5"
-  - api.DataTransfer.DataTransfer
-
-  # baseline: high
-  # baseline_low_date: 2021-04-26
-  # baseline_high_date: 2023-10-26
-  # support:
   #   chrome: "62"
   #   chrome_android: "62"
   #   edge: "18"
@@ -2990,35 +2225,6 @@ compat_features:
   - api.Worklet
   - api.Worklet.addModule
   - api.WorkletGlobalScope
-
-  # baseline: high
-  # baseline_low_date: 2021-09-20
-  # baseline_high_date: 2024-03-20
-  # support:
-  #   chrome: "50"
-  #   chrome_android: "50"
-  #   edge: "79"
-  #   firefox: "42"
-  #   firefox_android: "42"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - api.ImageBitmap
-  - api.ImageBitmap.height
-  - api.ImageBitmap.width
-  - api.createImageBitmap
-
-  # baseline: high
-  # baseline_low_date: 2021-09-20
-  # baseline_high_date: 2024-03-20
-  # support:
-  #   chrome: "52"
-  #   chrome_android: "52"
-  #   edge: "79"
-  #   firefox: "46"
-  #   firefox_android: "46"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - api.ImageBitmap.close
 
   # baseline: high
   # baseline_low_date: 2021-09-20
@@ -3131,20 +2337,8 @@ compat_features:
   - api.crossOriginIsolated
 
   # baseline: high
-  # baseline_low_date: 2022-02-08
-  # baseline_high_date: 2024-08-08
-  # support:
-  #   chrome: "66"
-  #   chrome_android: "66"
-  #   edge: "79"
-  #   firefox: "97"
-  #   firefox_android: "97"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - api.ImageBitmapRenderingContext.canvas
-
-  # baseline: low
   # baseline_low_date: 2022-03-08
+  # baseline_high_date: 2024-09-08
   # support:
   #   chrome: "1"
   #   chrome_android: "18"
@@ -3155,8 +2349,9 @@ compat_features:
   #   safari_ios: "1"
   - api.HTMLElement.outerText
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "61"
   #   chrome_android: "61"
@@ -3167,8 +2362,9 @@ compat_features:
   #   safari_ios: "15.4"
   - html.global_attributes.nonce
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "61"
   #   chrome_android: "61"
@@ -3178,10 +2374,10 @@ compat_features:
   #   safari: "15.4"
   #   safari_ios: "15.4"
   - api.HTMLElement.nonce
-  - api.SVGElement.nonce
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "76"
   #   chrome_android: "76"
@@ -3192,8 +2388,9 @@ compat_features:
   #   safari_ios: "15.4"
   - api.Document.securitypolicyviolation_event
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "81"
   #   chrome_android: "81"
@@ -3204,8 +2401,9 @@ compat_features:
   #   safari_ios: "15.4"
   - api.SubmitEvent.submitter
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "95"
   #   chrome_android: "95"
@@ -3228,21 +2426,6 @@ compat_features:
   #   safari_ios: "15"
   - api.HTMLSourceElement.height
   - api.HTMLSourceElement.width
-
-  # baseline: low
-  # baseline_low_date: 2023-01-12
-  # support:
-  #   chrome: "109"
-  #   chrome_android: "109"
-  #   edge: "109"
-  #   firefox: "71"
-  #   firefox_android: "79"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
-  - api.MathMLElement.blur
-  - api.MathMLElement.dataset
-  - api.MathMLElement.focus
-  - api.MathMLElement.tabIndex
 
   # baseline: low
   # baseline_low_date: 2023-03-27
@@ -3340,6 +2523,56 @@ compat_features:
   #   safari: "17"
   #   safari_ios: "17"
   - http.status.103
+
+  # baseline: low
+  # baseline_low_date: 2024-09-16
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.Navigator.cookieEnabled
+
+  # baseline: low
+  # baseline_low_date: 2024-09-16
+  # support:
+  #   chrome: "123"
+  #   chrome_android: "123"
+  #   edge: "123"
+  #   firefox: "123"
+  #   firefox_android: "123"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.HTMLTemplateElement.shadowRootDelegatesFocus
+
+  # baseline: low
+  # baseline_low_date: 2024-09-16
+  # support:
+  #   chrome: "124"
+  #   chrome_android: "124"
+  #   edge: "124"
+  #   firefox: "125"
+  #   firefox_android: "125"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.HTMLTemplateElement.shadowRootClonable
+
+  # baseline: low
+  # baseline_low_date: 2024-09-16
+  # support:
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
+  #   firefox: "128"
+  #   firefox_android: "128"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.Element.getHTML
+  - api.HTMLTemplateElement.shadowRootSerializable
+  - api.ShadowRoot.getHTML
 
   # baseline: false
   # support:
@@ -3477,15 +2710,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "20"
-  #   chrome_android: "25"
-  #   edge: "79"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - api.Location.ancestorOrigins
-
-  # baseline: false
-  # support:
   #   chrome: "37"
   #   chrome_android: "37"
   #   edge: "15"
@@ -3520,25 +2744,6 @@ compat_features:
   #   firefox: "53"
   #   firefox_android: "53"
   - api.Element.auxclick_event
-
-  # baseline: false
-  # support:
-  #   chrome: "64"
-  #   chrome_android: "64"
-  #   edge: "79"
-  #   firefox: "68"
-  #   firefox_android: "68"
-  - api.SVGImageElement.decode
-
-  # baseline: false
-  # support:
-  #   chrome: "65"
-  #   chrome_android: "65"
-  #   edge: "79"
-  #   firefox: "63"
-  #   firefox_android: "63"
-  - api.SVGImageElement.decoding
-  - svg.elements.image.decoding
 
   # baseline: false
   # support:
@@ -3588,39 +2793,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "77"
-  #   chrome_android: "77"
-  #   edge: "79"
-  #   firefox: "101"
-  #   firefox_android: "101"
-  - api.DOMException.serializable_object
-
-  # baseline: false
-  # support:
-  #   chrome: "77"
-  #   chrome_android: "77"
-  #   edge: "79"
-  #   firefox: "103"
-  #   firefox_android: "103"
-  - javascript.builtins.Error.serializable_object
-  - javascript.builtins.EvalError.serializable_object
-  - javascript.builtins.RangeError.serializable_object
-  - javascript.builtins.ReferenceError.serializable_object
-  - javascript.builtins.SyntaxError.serializable_object
-  - javascript.builtins.TypeError.serializable_object
-  - javascript.builtins.URIError.serializable_object
-
-  # baseline: false
-  # support:
-  #   chrome: "92"
-  #   chrome_android: "92"
-  #   edge: "92"
-  #   safari: "15.2"
-  #   safari_ios: "15.2"
-  - api.ImageData.colorSpace
-
-  # baseline: false
-  # support:
   #   chrome: "99"
   #   chrome_android: "99"
   #   edge: "99"
@@ -3659,15 +2831,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "109"
-  #   chrome_android: "109"
-  #   edge: "109"
-  #   safari: "15.4"
-  #   safari_ios: "15.4"
-  - api.MathMLElement.nonce
-
-  # baseline: false
-  # support:
   #   chrome: "117"
   #   chrome_android: "117"
   #   edge: "117"
@@ -3677,12 +2840,20 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "118"
+  #   chrome_android: "118"
+  #   edge: "118"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.PopStateEvent.hasUAVisualTransition
+
+  # baseline: false
+  # support:
   #   chrome: "123"
   #   chrome_android: "123"
   #   edge: "123"
   #   firefox: "123"
   #   firefox_android: "123"
-  - api.HTMLTemplateElement.shadowRootDelegatesFocus
   - html.elements.template.shadowrootdelegatesfocus
 
   # baseline: false
@@ -3692,19 +2863,16 @@ compat_features:
   #   edge: "124"
   #   firefox: "125"
   #   firefox_android: "125"
-  - api.HTMLTemplateElement.shadowRootClonable
   - html.elements.template.shadowrootclonable
 
   # baseline: false
   # support:
-  #   chrome: "125"
-  #   chrome_android: "125"
-  #   edge: "125"
-  #   firefox: "128"
-  #   firefox_android: "128"
-  - api.Element.getHTML
-  - api.HTMLTemplateElement.shadowRootSerializable
-  - api.ShadowRoot.getHTML
+  #   chrome: "127"
+  #   chrome_android: "127"
+  #   edge: "127"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - html.elements.script.type.importmap.integrity
 
   # baseline: false
   # support:
@@ -3771,58 +2939,6 @@ compat_features:
   #   safari_ios: "11.3"
   - api.TextMetrics.emHeightAscent
   - api.TextMetrics.emHeightDescent
-
-  # baseline: false
-  # support:
-  #   chrome: "65"
-  #   chrome_android: "65"
-  #   edge: "79"
-  - api.PaintRenderingContext2D.beginPath
-  - api.PaintRenderingContext2D.clearRect
-  - api.PaintRenderingContext2D.clip
-  - api.PaintRenderingContext2D.createLinearGradient
-  - api.PaintRenderingContext2D.createPattern
-  - api.PaintRenderingContext2D.createRadialGradient
-  - api.PaintRenderingContext2D.drawImage
-  - api.PaintRenderingContext2D.fill
-  - api.PaintRenderingContext2D.fillRect
-  - api.PaintRenderingContext2D.fillStyle
-  - api.PaintRenderingContext2D.filter
-  - api.PaintRenderingContext2D.getLineDash
-  - api.PaintRenderingContext2D.globalAlpha
-  - api.PaintRenderingContext2D.globalCompositeOperation
-  - api.PaintRenderingContext2D.imageSmoothingEnabled
-  - api.PaintRenderingContext2D.imageSmoothingQuality
-  - api.PaintRenderingContext2D.isPointInPath
-  - api.PaintRenderingContext2D.isPointInStroke
-  - api.PaintRenderingContext2D.lineCap
-  - api.PaintRenderingContext2D.lineDashOffset
-  - api.PaintRenderingContext2D.lineJoin
-  - api.PaintRenderingContext2D.lineWidth
-  - api.PaintRenderingContext2D.miterLimit
-  - api.PaintRenderingContext2D.resetTransform
-  - api.PaintRenderingContext2D.restore
-  - api.PaintRenderingContext2D.rotate
-  - api.PaintRenderingContext2D.save
-  - api.PaintRenderingContext2D.scale
-  - api.PaintRenderingContext2D.setLineDash
-  - api.PaintRenderingContext2D.shadowBlur
-  - api.PaintRenderingContext2D.shadowColor
-  - api.PaintRenderingContext2D.shadowOffsetX
-  - api.PaintRenderingContext2D.shadowOffsetY
-  - api.PaintRenderingContext2D.stroke
-  - api.PaintRenderingContext2D.strokeRect
-  - api.PaintRenderingContext2D.strokeStyle
-  - api.PaintRenderingContext2D.transform
-  - api.PaintRenderingContext2D.translate
-
-  # baseline: false
-  # support:
-  #   chrome: "68"
-  #   chrome_android: "68"
-  #   edge: "79"
-  - api.PaintRenderingContext2D.getTransform
-  - api.PaintRenderingContext2D.setTransform
 
   # baseline: false
   # support:
@@ -3896,7 +3012,6 @@ compat_features:
   #   chrome_android: "118"
   #   edge: "118"
   - api.NavigateEvent.hasUAVisualTransition
-  - api.PopStateEvent.hasUAVisualTransition
 
   # baseline: false
   # support:
@@ -3916,11 +3031,11 @@ compat_features:
   #   chrome: "124"
   #   chrome_android: "124"
   #   edge: "124"
-  - api.HTMLElement.writingSuggestions
   - api.PageSwapEvent
   - api.PageSwapEvent.activation
   - api.Window.pageswap_event
   - html.elements.link.rel.expect
+  - http.headers.Link.expect
 
   # baseline: false
   # support:
@@ -3943,13 +3058,6 @@ compat_features:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
-  - api.CloseWatcher
-  - api.CloseWatcher.CloseWatcher
-  - api.CloseWatcher.cancel_event
-  - api.CloseWatcher.close
-  - api.CloseWatcher.close_event
-  - api.CloseWatcher.destroy
-  - api.CloseWatcher.requestClose
   - api.HTMLImageElement.sizes.auto
   - api.PageRevealEvent.viewTransition
   - api.PageSwapEvent.viewTransition
@@ -3957,10 +3065,11 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "127"
-  #   chrome_android: "127"
-  #   edge: "127"
-  - html.elements.script.type.importmap.integrity
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  - api.PageRevealEvent.PageRevealEvent
+  - api.PageSwapEvent.PageSwapEvent
 
   # baseline: false
   # support:
@@ -3992,14 +3101,10 @@ compat_features:
   #   firefox_android: "50"
   - javascript.builtins.Promise.incumbent_settings_object_tracking
 
-  # baseline: false
-  # support:
-  #   chrome: "128"
-  #   chrome_android: "128"
-  - api.PageRevealEvent.PageRevealEvent
-  - api.PageSwapEvent.PageSwapEvent
-
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
+  - api.HTMLElement.autocorrect
+  - html.global_attributes.autocorrect
+  - http.headers.Cross-Origin-Opener-Policy.noopener-allow-popups
   - http.headers.Permissions-Policy.document-domain

@@ -4,6 +4,8 @@
 status:
   baseline: false
   support:
+    chrome: "130"
+    chrome_android: "130"
     safari: "17"
     safari_ios: "17"
 compat_features:
@@ -13,3 +15,4 @@ compat_features:
   - javascript.builtins.Intl.Locale.getNumberingSystems
   - javascript.builtins.Intl.Locale.getTextInfo
   - javascript.builtins.Intl.Locale.getTimeZones
+  - javascript.builtins.Intl.Locale.getWeekInfo

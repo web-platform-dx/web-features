@@ -25,40 +25,8 @@ compat_features:
   - css.properties.text-transform.lowercase
   - css.properties.text-transform.none
   - css.properties.text-transform.uppercase
-  - css.properties.white-space
-  - css.properties.white-space.normal
-  - css.properties.white-space.nowrap
-  - css.properties.white-space.pre
   - css.properties.word-spacing
   - css.properties.word-spacing.normal
-  - svg.global_attributes.letter-spacing
-  - svg.global_attributes.word-spacing
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3"
-  #   firefox_android: "4"
-  #   safari: "3"
-  #   safari_ios: "1"
-  - css.properties.white-space.pre-wrap
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "3"
-  #   safari_ios: "1"
-  - css.properties.white-space.pre-line
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -162,19 +130,6 @@ compat_features:
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
   # support:
-  #   chrome: "76"
-  #   chrome_android: "76"
-  #   edge: "79"
-  #   firefox: "69"
-  #   firefox_android: "79"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
-  - css.properties.white-space.break-spaces
-
-  # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
-  # support:
   #   chrome: ≤80
   #   chrome_android: "80"
   #   edge: ≤80
@@ -201,20 +156,8 @@ compat_features:
   - css.properties.line-break.strict
 
   # baseline: high
-  # baseline_low_date: 2021-08-10
-  # baseline_high_date: 2024-02-10
-  # support:
-  #   chrome: "21"
-  #   chrome_android: "25"
-  #   edge: "79"
-  #   firefox: "91"
-  #   firefox_android: "91"
-  #   safari: "7"
-  #   safari_ios: "7"
-  - css.properties.tab-size
-
-  # baseline: low
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "80"
   #   chrome_android: "80"
@@ -237,47 +180,6 @@ compat_features:
   #   safari_ios: "16"
   - css.properties.text-align-last
   - css.properties.text-align-last.auto
-
-  # baseline: low
-  # baseline_low_date: 2023-09-18
-  # support:
-  #   chrome: "106"
-  #   chrome_android: "106"
-  #   edge: "106"
-  #   firefox: "98"
-  #   firefox_android: "98"
-  #   safari: "17"
-  #   safari_ios: "17"
-  - css.properties.hyphenate-character
-  - css.properties.hyphenate-character.auto
-
-  # baseline: low
-  # baseline_low_date: 2024-03-05
-  # support:
-  #   chrome: "114"
-  #   chrome_android: "114"
-  #   edge: "114"
-  #   firefox: "121"
-  #   firefox_android: "121"
-  #   safari: "17.4"
-  #   safari_ios: "17.4"
-  - css.properties.text-wrap
-
-  # baseline: low
-  # baseline_low_date: 2024-03-19
-  # support:
-  #   chrome: "114"
-  #   chrome_android: "114"
-  #   edge: "114"
-  #   firefox: "124"
-  #   firefox_android: "124"
-  #   safari: "17.4"
-  #   safari_ios: "17.4"
-  - css.properties.white-space-collapse
-  - css.properties.white-space-collapse.break-spaces
-  - css.properties.white-space-collapse.collapse
-  - css.properties.white-space-collapse.preserve
-  - css.properties.white-space-collapse.preserve-breaks
 
   # baseline: false
   # support:
@@ -314,41 +216,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   firefox: "121"
-  #   firefox_android: "121"
-  #   safari: "17.5"
-  #   safari_ios: "17.5"
-  - css.properties.text-wrap.stable
-
-  # baseline: false
-  # support:
-  #   firefox: "124"
-  #   firefox_android: "124"
-  #   safari: "17.4"
-  #   safari_ios: "17.4"
-  - css.properties.text-wrap-mode
-
-  # baseline: false
-  # support:
-  #   firefox: "124"
-  #   firefox_android: "124"
-  #   safari: "17.5"
-  #   safari_ios: "17.5"
-  - css.properties.text-wrap-style
-  - css.properties.text-wrap-style.auto
-  - css.properties.text-wrap-style.balance
-  - css.properties.text-wrap-style.stable
-
-  # baseline: false
-  # support:
-  #   chrome: "109"
-  #   chrome_android: "109"
-  #   edge: "109"
-  - css.properties.hyphenate-limit-chars
-  - css.properties.hyphenate-limit-chars.auto
-
-  # baseline: false
-  # support:
   #   chrome: "119"
   #   chrome_android: "119"
   #   edge: "119"
@@ -374,11 +241,8 @@ compat_features:
   - css.properties.text-justify.inter-word
   - css.properties.text-justify.none
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
-  - css.properties.hanging-punctuation
-  - css.properties.hanging-punctuation.allow-end
-  - css.properties.hanging-punctuation.first
-  - css.properties.hanging-punctuation.last
-  - css.properties.hanging-punctuation.none
+  # support:
+  #   firefox: "124"
+  #   firefox_android: "124"
+  - css.properties.white-space-collapse.preserve-spaces

@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "75"
-    chrome_android: "75"
-    edge: "79"
+    chrome: "80"
+    chrome_android: "80"
+    edge: "80"
 compat_features:
   # baseline: high
   # baseline_low_date: 2016-08-02
@@ -238,3 +238,11 @@ compat_features:
   - api.CSPViolationReportBody.sample
   - api.CSPViolationReportBody.sourceFile
   - api.CSPViolationReportBody.statusCode
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "80"
+  #   chrome_android: "80"
+  #   edge: "80"
+  - api.CSPViolationReportBody.toJSON

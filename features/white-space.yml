@@ -1,0 +1,18 @@
+name: white-space
+description: The `white-space` CSS property sets how white space is collapsed and how lines wrap. It is a shorthand for `white-space-collapse` and `text-wrap-mode`.
+spec: https://drafts.csswg.org/css-text-4/#white-space-property
+group: white-space
+status:
+  compute_from: css.properties.white-space
+compat_features:
+  - css.properties.white-space
+  - css.properties.white-space.break-spaces
+  - css.properties.white-space.normal
+  - css.properties.white-space.nowrap
+  - css.properties.white-space.pre
+  - css.properties.white-space.pre-line
+  - css.properties.white-space.pre-wrap
+  - css.properties.white-space.shorthand_values
+  - css.properties.white-space.svg_elements
+  - css.properties.white-space.textarea_support
+  - svg.global_attributes.white-space

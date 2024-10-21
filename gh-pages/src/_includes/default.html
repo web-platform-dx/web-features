@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta property="og:locale" content="en_US" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% if title %}
+    <title>{{ title }} | Baseline</title>
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="twitter:title" content="{{ title }}" />
+    {% else %}
+    <title>Baseline</title>
+    {% endif %}
+
+    {% if description %}
+    <meta name="description" content="{{ description }}" />
+    <meta property="og:description" content="{{ description }}">
+    {% endif %}
+
+    <link rel="canonical" href="{{ page.url | htmlBaseUrl: "https://web-platform-dx.github.io" }}" />
+    <meta property="og:url" content="{{ page.url | htmlBaseUrl: "https://web-platform-dx.github.io" }}" />
+
+    <meta property="og:site_name" content="Baseline" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="icon" type="image/png" href="/assets/img/wide-sq-32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/assets/img/wide-sq-192.png" sizes="192x192" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+
+        <a href="/">
+          <img src="/assets/img/baseline-wordmark.svg" alt="Baseline logo" />
+        </a>
+
+        <p>
+          Baseline gives you clear information about which web platform features work across browsers.
+        </p>
+
+        <ul class="nav">
+          <li><a href="/">Baseline</a></li>
+          <li><a href="/web-features/">web-features</a></li>
+          <li><a href="/webdx-cg/">WebDX Community Group</a></li>
+          <li><a href="/use-baseline/">Baseline in your project</a></li>
+          <li><a href="/name-and-logo-usage-guidelines/">Name and logo usage guidelines</a></li>
+          <li><a href="/baseline-in-the-wild/">Baseline in the wild</a></li>
+          <li><a href="https://github.com/web-platform-dx/web-features/tree/main/docs">Project documentation</a></li>
+          <li><a href="https://github.com/web-platform-dx/web-features/">GitHub repository</a></li>
+        </ul>
+      </header>
+
+      <section>
+        {% if title %}<h1>{{ title }}</h1>{% endif %}
+
+        {{ content }}
+      </section>
+      <footer>
+        <!-- Footer Content -->
+      </footer>
+    </div>
+  </body>
+</html>

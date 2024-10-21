@@ -2,6 +2,8 @@
 
 ## Names
 
+The `name` field contains the feature's human-readable plain-text name.
+
 Feature authors should (in descending order of priority):
 
 - Prefer names known to be in widespread use by web developers.
@@ -34,6 +36,16 @@ Feature authors should (in descending order of priority):
   - 👍 Recommended: Grid
   - 👎 Not recommended: `display: grid`
 
+- Prefer sentence case.
+  Avoid capitalizing ordinary nouns, but preserve case when it's meaningful.
+
+  - 👍 Recommended: Typed arrays
+  - 👎 Not recommended: Typed Arrays
+  - 👍 Recommended: View transitions
+  - 👎 Not recommended: View Transitions
+  - 👍 Recommended: WebDriver BiDi
+  - 👎 Not recommended: Webdriver bidi
+
 - Prefer frequently-used qualifiers in parentheses at the end of the name.
 
   - 👍 Recommended: Arrays (initial support)
@@ -47,6 +59,8 @@ Feature authors should (in descending order of priority):
   - 👎 Not recommended: `<dialog>` element
 
 ## Identifiers
+
+A feature's identifier is the feature's filename before the `.yml` extension.
 
 Feature identifiers must contain only lowercase alphanumeric characters (a-z and 0-9) plus the `-` character (hyphen or minus sign) as a word separator.
 
@@ -65,6 +79,9 @@ The identifier should match the name, with these additional guidelines:
 
 ## Descriptions
 
+The `description` field contains a short description of the feature in Markdown-formatted text, which is converted to HTML in the published package.
+Follow the general writing guidelines in this section, but see the [word and phrase list](#word-and-phrase-list) for specific usage instructions.
+
 * Describe, in the active voice, what a feature does or is.
   Think about how developers will use it, not abstract technology relationships.
   Start with a template like this:
@@ -78,6 +95,18 @@ The identifier should match the name, with these additional guidelines:
   It should not refer to text, images, or other content outside the short description.
   Try reading the sentence aloud.
   Does it still make sense without mentioning the name or ID?
+
+* Enclose literal code, such as CSS property names, interface and method names, or other syntax, in backticks.
+  For example, prefer ```The `addEventListener()` method…``` and avoid ```The addEventListener() method…```.
+
+* To aid search, include literal text that a web developer would inevitably type if they were to invoke the feature.
+  If there's no essential entry point to the feature, then include only concise snippets of essential literal code instead.
+  Never use made-up, idiosyncratic, or non-literal example code.
+
+  * 👍 Recommended: `display: flex`, `fetch()`, etc.
+  * 👎 Not recommended: `(await navigator.serviceWorker.ready).sync`
+  * 👍 Recommended: "`margin-top`, `margin-right`, `margin-bottom`, and `margin-left`"
+  * 👎 Not recommended: `margin-{top,right,bottom,left}`
 
 * Start descriptions with words that are distinct to the feature.
   For example, prefer "The `some-prop` CSS property…" and avoid "The CSS property `some-prop`…."
@@ -95,9 +124,9 @@ The identifier should match the name, with these additional guidelines:
 * For every rule, there's a counterexample.
   Use your best judgement before writing something absurd.
 
-* See the [word and phrase list](#word-and-phrase-list) for specific guidelines.
-
 ### Word and phrase list
+
+For general usage recommendations not covered by this list, such as word choice or punctuation, refer to the [Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/).
 
 #### allows
 
@@ -166,6 +195,18 @@ Omit "is used" where there's no loss in meaning.
 For example, prefer "The feature reads…" over "The feature is used to read…"
 ([#727](https://github.com/web-platform-dx/web-features/pull/727#discussion_r1537635981))
 
+#### longhands and shorthands
+
+Use the terms "shorthand" and "longhand" to describe the relationship between CSS properties that combine multiple properties into a single declaration and the individual properties. 
+
+Avoid using "shorthand" and "longhand" without the word "property":
+
+* Prefer "The `text-wrap` CSS property is a shorthand" over "The `text-wrap` CSS shorthand".
+* Prefer "It is a longhand property of" over "It is a longhand of".
+
+Avoid the phrase "constituent properties" for longhand properties, even though this is common on MDN Web Docs.
+([#1764](https://github.com/web-platform-dx/web-features/pull/1764#discussion_r1777335770))
+
 #### platform
 
 "platform" is often vague.
@@ -215,3 +256,56 @@ Because `window` is both the global object and represents the browser window, th
 Use the most customary reference in each case.
 If you're not sure what's customary, look to high-profile published examples, such as those on MDN reference pages for the feature.
 ([#913](https://github.com/web-platform-dx/web-features/pull/913#discussion_r1572601975))
+
+## `caniuse` values
+
+The `caniuse` key references one or more [Can I Use](https://caniuse.com/) feature IDs.
+This is the part of a Can I Use URL after `https://caniuse.com/`.
+For example, the Can I Use feature ID for [Flexbox](https://caniuse.com/flexbox) is `flexbox`.
+For a complete list of IDs, run `npx tsx ./scripts/caniuse.ts`.
+
+Setting a `caniuse` value says that a feature is approximately equivalent to or a superset of a Can I Use feature.
+If you set a `caniuse` value, then the Can I Use site shows a status badge based on the feature's top-level headline `status` information.
+
+Follow these guidelines when setting a `caniuse` value:
+
+- Do not set a `caniuse` value if the Can I Use feature is merely related to the feature.
+  For example, in [`grid.yml`](../features/grid.yml), do not set `caniuse: css-subgrid`.
+
+- Do not set a `caniuse` value if the top-level headline `status` does not match Can I Use on whether each browser supports or does not support the feature.
+
+  For example, if Can I Use shows that one browser of the core browser set does not support a feature but web-features's status reports that the feature is supported across all of the browsers, then do one of these:
+
+  - Do not set the `caniuse` value for that feature.
+  - Submit a correction to Can I Use.
+  - Submit a correction to mdn/browser-compat-data.
+
+- Do not set a `caniuse` value if the top-level headline `status` would not accurately reflect when a feature was last introduced to core browser set (the [keystone release](./baseline.md#interoperable-low-status) version number).
+
+  For example, if Can I Use shows that Edge 79 introduced a feature, then the headline status must also show that Edge 79 introduced the feature.
+
+- Do use `compute_from` to improve the correspondence of a feature's top-level headline status with Can I Use data.
+  Use this in cases where later additions, such as the introduction of a minor property or method, brings the statuses out of alignment.
+
+  But don't forget to use your judgement!
+  Can I Use isn't perfect.
+  Don't use `compute_from` in a way that would not make sense if the corresponding `caniuse` value didn't exist (for example, by pinning support before the introduction of an essential component of the feature).
+  In such situations, it's better to comment out the `caniuse` value, make a `TODO` comment, and open an issue about why you did it.
+
+If you see a discrepancy between Can I Use and a computed status that is less than one year for releases before 2020, please make a note of it in [#1499](https://github.com/web-platform-dx/web-features/issues/1499).
+
+See also: [#1880](https://github.com/web-platform-dx/web-features/issues/1880).
+
+## Groups
+
+The `group` field references one or more groups.
+You can find group definitions in the [`groups/`](../groups/) directory.
+
+Groups are experimental.
+It might not be clear how to group features until more features have been defined.
+
+Don't assign features to two or more groups such that one group is an ancestor of another.
+For example, don't assign a feature to both `css` and `fonts`, since `css` is the parent of `fonts`.
+
+Do assign features to groups when there's an opportunity for future feature composition (see [#971](https://github.com/web-platform-dx/web-features/issues/971)).
+For example, several features for the JavaScript `Array` interface are members of the `array` group.

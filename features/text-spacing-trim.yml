@@ -1,3 +1,10 @@
 name: text-spacing-trim
 description: The `text-spacing-trim` CSS property controls spacing around CJK characters, avoiding excessive whitespace when using full-width punctuation characters.
 spec: https://drafts.csswg.org/css-text-4/#text-spacing-trim-property
+group: css
+compat_features:
+  - css.properties.text-spacing-trim
+  - css.properties.text-spacing-trim.normal
+  - css.properties.text-spacing-trim.space-all
+  - css.properties.text-spacing-trim.space-first
+  - css.properties.text-spacing-trim.trim-start

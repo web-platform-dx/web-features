@@ -1,0 +1,16 @@
+name: font-variant
+description: The `font-variant` CSS property is a shorthand for `font-variant-alternates`, `font-variant-caps`, `font-variant-east-asian`, `font-variant-emoji`, `font-variant-ligatures`, `font-variant-numeric`, and `font-variant-position`.
+spec: https://drafts.csswg.org/css-fonts-4/#font-variant-prop
+group: font-features
+status:
+  compute_from: css.properties.font-variant
+compat_features:
+  - css.properties.font-variant
+  - css.properties.font-variant.historical-forms
+  - css.properties.font-variant.none
+  - css.properties.font-variant.normal
+  - css.at-rules.font-face.font-variant
+  - svg.global_attributes.font-variant
+  - css.properties.font-variant.sub
+  - css.properties.font-variant.super
+  - css.properties.font-variant.turkic_is

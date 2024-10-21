@@ -81,6 +81,7 @@ async function main() {
     process.exit(0);
   }
   await fs.writeFile(destination, formatted);
+  console.log(destination);
 }
 
 async function format(featurePath: string, text: string): Promise<string> {
