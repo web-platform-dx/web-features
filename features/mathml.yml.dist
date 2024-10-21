@@ -206,11 +206,39 @@ compat_features:
   #   chrome: "109"
   #   chrome_android: "109"
   #   edge: "109"
+  #   firefox: "71"
+  #   firefox_android: "79"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.MathMLElement
+  - api.MathMLElement.blur
+  - api.MathMLElement.focus
+  - api.MathMLElement.style
+  - api.MathMLElement.tabIndex
+
+  # baseline: low
+  # baseline_low_date: 2023-01-12
+  # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
   #   firefox: "83"
   #   firefox_android: "83"
   #   safari: "14"
   #   safari_ios: "14"
   - mathml.global_attributes.displaystyle
+
+  # baseline: low
+  # baseline_low_date: 2023-08-29
+  # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  #   firefox: "117"
+  #   firefox_android: "117"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - css.properties.math-style
 
   # baseline: low
   # baseline_low_date: 2023-09-15
@@ -230,9 +258,38 @@ compat_features:
   #   chrome: "109"
   #   chrome_android: "109"
   #   edge: "109"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - api.MathMLElement.nonce
+
+  # baseline: false
+  # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.MathMLElement.attributeStyleMap
+
+  # baseline: false
+  # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
   #   firefox: "70"
   #   firefox_android: "79"
   - mathml.global_attributes.scriptlevel
+
+  # baseline: false
+  # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  #   firefox: "117"
+  #   firefox_android: "117"
+  - css.properties.font-size.math
+  - css.properties.math-depth
+  - css.properties.text-transform.math-auto
 
   # baseline: false
   # support:
@@ -296,6 +353,14 @@ compat_features:
   #   safari: "10"
   #   safari_ios: "10"
   - mathml.global_attributes.href
+
+  # baseline: false
+  # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  - css.properties.display.math
+  - css.properties.math-shift
 
   # baseline: false
   # support:

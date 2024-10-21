@@ -5,6 +5,19 @@ caniuse: mathml
 status:
   compute_from: mathml.elements.math
 compat_features:
+  - api.MathMLElement
+  - api.MathMLElement.attributeStyleMap
+  - api.MathMLElement.blur
+  - api.MathMLElement.focus
+  - api.MathMLElement.nonce
+  - api.MathMLElement.style
+  - api.MathMLElement.tabIndex
+  - css.properties.display.math
+  - css.properties.font-size.math
+  - css.properties.math-depth
+  - css.properties.math-shift
+  - css.properties.math-style
+  - css.properties.text-transform.math-auto
   - mathml.attribute_values.named_space
   - mathml.attribute_values.nonzero_unitless_values
   - mathml.elements.annotation

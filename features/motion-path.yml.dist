@@ -90,6 +90,8 @@ compat_features:
   #   safari: "16"
   #   safari_ios: "16"
   - css.properties.offset-path.ray
+  - css.properties.offset-position
+  - css.properties.offset-position.auto
   - css.types.ray
 
   # baseline: low
@@ -115,6 +117,7 @@ compat_features:
   #   firefox_android: "122"
   #   safari: "17.2"
   #   safari_ios: "17.2"
+  - css.properties.offset-position.normal
   - css.types.ray.position
 
   # baseline: low
