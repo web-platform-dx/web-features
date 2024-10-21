@@ -1,18 +1,25 @@
 name: Navigation API
-description: The `navigation` API provides mechanisms to initiate, intercept, and manage browser navigation actions.
+description: The `navigation` API initiates, intercepts, or modifies browser navigation actions. Not to be confused with the `navigator` API.
 spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#navigation-api
+status:
+  compute_from: api.Navigation
 compat_features:
   - api.NavigateEvent
   - api.NavigateEvent.NavigateEvent
+  - api.NavigateEvent.canIntercept
   - api.NavigateEvent.destination
   - api.NavigateEvent.downloadRequest
   - api.NavigateEvent.formData
+  - api.NavigateEvent.hasUAVisualTransition
   - api.NavigateEvent.hashChange
   - api.NavigateEvent.info
+  - api.NavigateEvent.intercept
   - api.NavigateEvent.navigationType
+  - api.NavigateEvent.scroll
   - api.NavigateEvent.signal
   - api.NavigateEvent.userInitiated
   - api.Navigation
+  - api.Navigation.activation
   - api.Navigation.back
   - api.Navigation.canGoBack
   - api.Navigation.canGoForward
@@ -28,6 +35,10 @@ compat_features:
   - api.Navigation.transition
   - api.Navigation.traverseTo
   - api.Navigation.updateCurrentEntry
+  - api.NavigationActivation
+  - api.NavigationActivation.entry
+  - api.NavigationActivation.from
+  - api.NavigationActivation.navigationType
   - api.NavigationCurrentEntryChangeEvent
   - api.NavigationCurrentEntryChangeEvent.NavigationCurrentEntryChangeEvent
   - api.NavigationCurrentEntryChangeEvent.from
