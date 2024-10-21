@@ -1,8 +1,9 @@
 name: WebGPU
-description: WebGPU is an API for performing operations, such as rendering and computation, on a Graphics Processing Unit.
+description: The `navigator.gpu` API performs operations on such as rendering and computation on dedicated graphics hardware (also known as a Graphics Processing Unit).
 spec: https://gpuweb.github.io/gpuweb/
+caniuse: webgpu
 status:
-  compute_from: api.GPU
+  compute_from: api.Navigator.gpu
 compat_features:
   - api.GPU
   - api.GPU.getPreferredCanvasFormat
