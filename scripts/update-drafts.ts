@@ -11,7 +11,6 @@ import { Document } from "yaml";
 import yargs from "yargs";
 
 import { features } from "../index.js";
-import { Identifier } from "@mdn/browser-compat-data";
 
 type WebSpecsSpec = (typeof webSpecs)[number];
 
@@ -138,15 +137,17 @@ async function main() {
       continue;
     }
 
-    let parent_url = null;
-    if (!feature.data.__compat.spec_url) {
-      const parent_urls = [];
+    let parent_url: string | string[] = null;
+    if (!feature.spec_url.length) {
+      const parent_urls: (string | string[])[] = [];
       const path = feature.id.split(".");
-      let parentFeature = compat.data as Identifier;
-      while (path.length > 1) {
-        parentFeature = parentFeature[path.shift()];
-        const parent_spec = parentFeature.__compat?.spec_url;
-        if (parent_spec) {
+
+      let parentPath: string[] = [];
+      while (path.length > 0) {
+        parentPath.push(path.shift());
+        const parent_spec =
+          compat.features.get(parentPath.join("."))?.spec_url ?? [];
+        if (parent_spec.length) {
           parent_urls.push(parent_spec);
         }
       }
