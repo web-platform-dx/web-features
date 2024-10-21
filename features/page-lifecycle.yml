@@ -1,6 +1,5 @@
-draft_date: 2024-09-09
 name: Page Lifecycle
-description: "The Page Lifecycle API provides lifecycle hooks so pages can safely handle browser interventions such as page suspension or discards without affecting the user experience."
+description: "The Page Lifecycle API provides lifecycle hooks so pages can safely handle browser interventions, such as page suspensions or discards from memory, without affecting the user experience."
 spec: https://wicg.github.io/page-lifecycle/
 compat_features:
   - api.Document.freeze_event
