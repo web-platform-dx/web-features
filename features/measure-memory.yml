@@ -1,0 +1,6 @@
+name: Memory measurement
+description: The `measureUserAgentSpecificMemory()` method estimates the memory usage of a web application including all its iframes and workers.
+spec: https://wicg.github.io/performance-measure-memory/
+group: performance
+compat_features:
+  - api.Performance.measureUserAgentSpecificMemory
