@@ -1,12 +1,7 @@
-# BCD: https://github.com/mdn/browser-compat-data/tree/main/api/Document.json
-# MDN: https://developer.mozilla.org/docs/Web/API/Document
-# CIU: https://caniuse.com/?search=Document
 name: Page Visibility
-description: "The Document interface represents any web page loaded in the browser and serves as an entry point into the web page&#x27;s content, which is the DOM tree."
+description: "The Page Visibility API tells you the current visibility state of the page, and fires events you can watch for to know when it becomes visible or hidden."
 spec: https://html.spec.whatwg.org/multipage/interaction.html#page-visibility
 caniuse: pagevisibility
-#status:
-#  compute_from:
 compat_features:
   - api.Document.visibilityState
   - api.Document.visibilitychange_event
