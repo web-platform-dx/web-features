@@ -1,62 +1,9 @@
-draft_date: 2024-10-17
+draft_date: 2024-10-21
 name: CSS Text Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-text-4/
 compat_features:
-  - css.properties.letter-spacing
-  - css.properties.letter-spacing.normal
-  - css.properties.line-break
-  - css.properties.line-break.anywhere
-  - css.properties.line-break.auto
-  - css.properties.line-break.loose
-  - css.properties.line-break.normal
-  - css.properties.line-break.strict
-  - css.properties.overflow-wrap
-  - css.properties.overflow-wrap.anywhere
-  - css.properties.overflow-wrap.break-word
-  - css.properties.overflow-wrap.normal
-  - css.properties.text-align
-  - css.properties.text-align-last
-  - css.properties.text-align-last.auto
-  - css.properties.text-align.center
-  - css.properties.text-align.end
-  - css.properties.text-align.justify
-  - css.properties.text-align.left
-  - css.properties.text-align.match-parent
-  - css.properties.text-align.right
-  - css.properties.text-align.start
-  - css.properties.text-indent.each-line
-  - css.properties.text-indent.hanging
-  - css.properties.text-justify
-  - css.properties.text-justify.auto
-  - css.properties.text-justify.inter-character
-  - css.properties.text-justify.inter-word
-  - css.properties.text-justify.none
-  - css.properties.text-spacing-trim.normal
-  - css.properties.text-spacing-trim.space-all
-  - css.properties.text-spacing-trim.space-first
-  - css.properties.text-spacing-trim.trim-start
-  - css.properties.text-transform
-  - css.properties.text-transform.capitalize
-  - css.properties.text-transform.dutch_ij_digraph
-  - css.properties.text-transform.full-size-kana
-  - css.properties.text-transform.full-width
-  - css.properties.text-transform.greek_accented_characters
-  - css.properties.text-transform.lowercase
-  - css.properties.text-transform.lowercase_sigma
-  - css.properties.text-transform.none
-  - css.properties.text-transform.turkic_is
-  - css.properties.text-transform.uppercase
-  - css.properties.text-transform.uppercase_eszett
   - css.properties.white-space-collapse.preserve-spaces
-  - css.properties.word-break
-  - css.properties.word-break.auto-phrase
-  - css.properties.word-break.break-all
-  - css.properties.word-break.keep-all
-  - css.properties.word-break.normal
-  - css.properties.word-spacing
-  - css.properties.word-spacing.normal
-  - css.properties.word-wrap
 
 # The following features in the spec are already part of web-features:
 # - Hanging punctuation:
@@ -137,17 +84,71 @@ compat_features:
 #   - css.properties.hyphens.language_ukrainian
 #   - css.properties.hyphens.language_upper_sorbian
 #   - css.properties.hyphens.language_welsh
+# - letter-spacing:
+#   - css.properties.letter-spacing
+#   - css.properties.letter-spacing.normal
+#   - svg.global_attributes.letter-spacing
 # - SVG:
 #   - css.properties.letter-spacing.svg_elements
 #   - css.properties.word-spacing.svg_elements
-#   - svg.global_attributes.letter-spacing
-#   - svg.global_attributes.word-spacing
+# - line-break:
+#   - css.properties.line-break
+#   - css.properties.line-break.anywhere
+#   - css.properties.line-break.auto
+#   - css.properties.line-break.loose
+#   - css.properties.line-break.normal
+#   - css.properties.line-break.strict
+# - overflow-wrap:
+#   - css.properties.overflow-wrap
+#   - css.properties.overflow-wrap.anywhere
+#   - css.properties.overflow-wrap.break-word
+#   - css.properties.overflow-wrap.normal
+#   - css.properties.word-wrap
 # - tab-size:
 #   - css.properties.tab-size
+# - text-align:
+#   - css.properties.text-align
+#   - css.properties.text-align.center
+#   - css.properties.text-align.end
+#   - css.properties.text-align.justify
+#   - css.properties.text-align.left
+#   - css.properties.text-align.match-parent
+#   - css.properties.text-align.right
+#   - css.properties.text-align.start
+# - text-align-last:
+#   - css.properties.text-align-last
+#   - css.properties.text-align-last.auto
 # - text-indent:
 #   - css.properties.text-indent
+# - text-indent: each-line:
+#   - css.properties.text-indent.each-line
+# - text-indent: hanging:
+#   - css.properties.text-indent.hanging
+# - text-justify:
+#   - css.properties.text-justify
+#   - css.properties.text-justify.auto
+#   - css.properties.text-justify.inter-character
+#   - css.properties.text-justify.inter-word
+#   - css.properties.text-justify.none
 # - text-spacing-trim:
 #   - css.properties.text-spacing-trim
+#   - css.properties.text-spacing-trim.normal
+#   - css.properties.text-spacing-trim.space-all
+#   - css.properties.text-spacing-trim.space-first
+#   - css.properties.text-spacing-trim.trim-start
+# - text-transform:
+#   - css.properties.text-transform
+#   - css.properties.text-transform.capitalize
+#   - css.properties.text-transform.dutch_ij_digraph
+#   - css.properties.text-transform.full-size-kana
+#   - css.properties.text-transform.full-width
+#   - css.properties.text-transform.greek_accented_characters
+#   - css.properties.text-transform.lowercase
+#   - css.properties.text-transform.lowercase_sigma
+#   - css.properties.text-transform.none
+#   - css.properties.text-transform.turkic_is
+#   - css.properties.text-transform.uppercase
+#   - css.properties.text-transform.uppercase_eszett
 # - MathML:
 #   - css.properties.text-transform.math-auto
 # - text-wrap:
@@ -189,3 +190,14 @@ compat_features:
 #   - css.properties.white-space-collapse.collapse
 #   - css.properties.white-space-collapse.preserve
 #   - css.properties.white-space-collapse.preserve-breaks
+# - word-break:
+#   - css.properties.word-break
+#   - css.properties.word-break.break-all
+#   - css.properties.word-break.keep-all
+#   - css.properties.word-break.normal
+# - word-break: auto-phrase:
+#   - css.properties.word-break.auto-phrase
+# - word-spacing:
+#   - css.properties.word-spacing
+#   - css.properties.word-spacing.normal
+#   - svg.global_attributes.word-spacing

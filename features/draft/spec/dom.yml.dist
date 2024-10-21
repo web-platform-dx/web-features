@@ -183,7 +183,6 @@ compat_features:
   - api.Document.characterSet
   - api.Document.createExpression
   - api.Document.createNodeIterator
-  - api.Document.evaluate
   - api.DocumentFragment
   - api.DocumentType
   - api.DocumentType.name
@@ -194,22 +193,6 @@ compat_features:
   - api.Node.lookupNamespaceURI
   - api.Node.lookupPrefix
   - api.Node.textContent
-  - api.XPathEvaluator
-  - api.XPathEvaluator.XPathEvaluator
-  - api.XPathEvaluator.createExpression
-  - api.XPathEvaluator.evaluate
-  - api.XPathExpression
-  - api.XPathExpression.evaluate
-  - api.XPathResult
-  - api.XPathResult.booleanValue
-  - api.XPathResult.invalidIteratorState
-  - api.XPathResult.iterateNext
-  - api.XPathResult.numberValue
-  - api.XPathResult.resultType
-  - api.XPathResult.singleNodeValue
-  - api.XPathResult.snapshotItem
-  - api.XPathResult.snapshotLength
-  - api.XPathResult.stringValue
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -236,16 +219,6 @@ compat_features:
   #   safari: "3.1"
   #   safari_ios: "2"
   - api.Document.compatMode
-  - api.XSLTProcessor
-  - api.XSLTProcessor.XSLTProcessor
-  - api.XSLTProcessor.clearParameters
-  - api.XSLTProcessor.getParameter
-  - api.XSLTProcessor.importStylesheet
-  - api.XSLTProcessor.removeParameter
-  - api.XSLTProcessor.reset
-  - api.XSLTProcessor.setParameter
-  - api.XSLTProcessor.transformToDocument
-  - api.XSLTProcessor.transformToFragment
 
   # baseline: high
   # baseline_low_date: 2015-07-29

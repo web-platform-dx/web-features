@@ -1,11 +1,9 @@
-draft_date: 2024-10-17
+draft_date: 2024-10-21
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
   - api.BeforeUnloadEvent.user_interaction
-  - api.CanvasPattern
-  - api.CanvasPattern.setTransform
   - api.CanvasPattern.setTransform.dommatrix
   - api.CanvasRenderingContext2D.clip.path_parameter
   - api.CanvasRenderingContext2D.drawFocusIfNeeded.path_parameter
@@ -446,6 +444,7 @@ compat_features:
   - api.Worker.error_event
   - api.Worker.messageerror_event
   - api.Worker.terminate
+  - api.Worker.worker_support
   - api.WorkerGlobalScope
   - api.WorkerGlobalScope.error_event
   - api.WorkerGlobalScope.importScripts
@@ -750,6 +749,8 @@ compat_features:
 # - 2D canvas:
 #   - api.CanvasGradient
 #   - api.CanvasGradient.addColorStop
+#   - api.CanvasPattern
+#   - api.CanvasPattern.setTransform
 #   - api.CanvasRenderingContext2D
 #   - api.CanvasRenderingContext2D.arc
 #   - api.CanvasRenderingContext2D.arcTo
