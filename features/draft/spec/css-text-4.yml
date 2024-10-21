@@ -1,17 +1,8 @@
-draft_date: 2024-09-30
+draft_date: 2024-10-17
 name: CSS Text Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-text-4/
 compat_features:
-  - css.properties.hanging-punctuation
-  - css.properties.hanging-punctuation.allow-end
-  - css.properties.hanging-punctuation.first
-  - css.properties.hanging-punctuation.last
-  - css.properties.hanging-punctuation.none
-  - css.properties.hyphenate-character
-  - css.properties.hyphenate-character.auto
-  - css.properties.hyphenate-limit-chars
-  - css.properties.hyphenate-limit-chars.auto
   - css.properties.letter-spacing
   - css.properties.letter-spacing.normal
   - css.properties.line-break
@@ -52,12 +43,7 @@ compat_features:
   - css.properties.text-transform.lowercase
   - css.properties.text-transform.none
   - css.properties.text-transform.uppercase
-  - css.properties.text-wrap
-  - css.properties.text-wrap-style
-  - css.properties.text-wrap-style.auto
-  - css.properties.text-wrap-style.balance
-  - css.properties.text-wrap-style.stable
-  - css.properties.text-wrap.stable
+  - css.properties.white-space-collapse.preserve-spaces
   - css.properties.word-break
   - css.properties.word-break.auto-phrase
   - css.properties.word-break.break-all
@@ -66,10 +52,20 @@ compat_features:
   - css.properties.word-spacing
   - css.properties.word-spacing.normal
   - css.properties.word-wrap
-  - svg.global_attributes.letter-spacing
-  - svg.global_attributes.word-spacing
 
 # The following features in the spec are already part of web-features:
+# - Hanging punctuation:
+#   - css.properties.hanging-punctuation
+#   - css.properties.hanging-punctuation.allow-end
+#   - css.properties.hanging-punctuation.first
+#   - css.properties.hanging-punctuation.last
+#   - css.properties.hanging-punctuation.none
+# - Hyphenate character:
+#   - css.properties.hyphenate-character
+#   - css.properties.hyphenate-character.auto
+# - Hyphenate limit chars:
+#   - css.properties.hyphenate-limit-chars
+#   - css.properties.hyphenate-limit-chars.auto
 # - Hyphenation:
 #   - css.properties.hyphens
 # - tab-size:
@@ -78,15 +74,27 @@ compat_features:
 #   - css.properties.text-indent
 # - text-spacing-trim:
 #   - css.properties.text-spacing-trim
+# - MathML:
+#   - css.properties.text-transform.math-auto
+# - text-wrap:
+#   - css.properties.text-wrap
+#   - css.properties.text-wrap.wrap
 # - text-wrap: balance:
 #   - css.properties.text-wrap.balance
 # - text-wrap: nowrap:
 #   - css.properties.text-wrap.nowrap
-#   - css.properties.text-wrap.wrap
 # - text-wrap: pretty:
 #   - css.properties.text-wrap.pretty
+# - text-wrap: stable:
+#   - css.properties.text-wrap.stable
 # - text-wrap-mode:
 #   - css.properties.text-wrap-mode
+# - text-wrap-style:
+#   - css.properties.text-wrap-style
+#   - css.properties.text-wrap-style.auto
+#   - css.properties.text-wrap-style.balance
+#   - css.properties.text-wrap-style.pretty
+#   - css.properties.text-wrap-style.stable
 # - white-space:
 #   - css.properties.white-space
 #   - css.properties.white-space.break-spaces
@@ -102,3 +110,6 @@ compat_features:
 #   - css.properties.white-space-collapse.collapse
 #   - css.properties.white-space-collapse.preserve
 #   - css.properties.white-space-collapse.preserve-breaks
+# - SVG:
+#   - svg.global_attributes.letter-spacing
+#   - svg.global_attributes.word-spacing

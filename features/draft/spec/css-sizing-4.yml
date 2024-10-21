@@ -1,9 +1,8 @@
-draft_date: 2024-10-07
+draft_date: 2024-10-10
 name: CSS Box Sizing Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-sizing-4/
 compat_features:
-  - css.properties.column-width
   - css.properties.height.stretch
   - css.properties.max-height.stretch
   - css.properties.max-width.stretch
@@ -24,6 +23,8 @@ compat_features:
 #   - css.properties.box-sizing
 #   - css.properties.box-sizing.border-box
 #   - css.properties.box-sizing.content-box
+# - Multi-column layout:
+#   - css.properties.column-width
 # - contain-intrinsic-size:
 #   - css.properties.contain-intrinsic-block-size
 #   - css.properties.contain-intrinsic-block-size.none

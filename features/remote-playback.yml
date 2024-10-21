@@ -1,0 +1,16 @@
+name: Remote playback
+description: The Remote Playback API initiates and controls playback of media on connected remote devices, such as smart TVs with AirPlay or Chromecast capabilities.
+spec: https://w3c.github.io/remote-playback/
+compat_features:
+  - api.RemotePlayback
+  - api.RemotePlayback.cancelWatchAvailability
+  - api.RemotePlayback.connect_event
+  - api.RemotePlayback.connecting_event
+  - api.RemotePlayback.disconnect_event
+  - api.RemotePlayback.prompt
+  - api.RemotePlayback.state
+  - api.RemotePlayback.watchAvailability
+  - api.HTMLMediaElement.disableRemotePlayback
+  - api.HTMLMediaElement.remote
+  - html.elements.audio.disableremoteplayback
+  - html.elements.video.disableremoteplayback

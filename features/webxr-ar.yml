@@ -1,0 +1,8 @@
+name: Augmented reality
+description: The `"immersive-ar"` value for `navigator.xr.requestSession()` starts an augmented reality WebXR session that renders content aligned with the visible environment.
+spec: https://immersive-web.github.io/webxr-ar-module/
+group: webxr
+compat_features:
+  - api.XRSession.environmentBlendMode
+  - api.XRSession.interactionMode
+  - api.XRView.isFirstPersonObserver
