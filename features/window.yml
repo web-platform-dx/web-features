@@ -1,0 +1,43 @@
+name: Window
+description: "The Window object is home to a variety of functions, namespaces, objects, and constructors. Some of these are associated with the user interface window the document is loaded in, but many are items that need to be available in the global scope."
+spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-window-object
+status:
+  compute_from: api.Window
+compat_features:
+  - api.Window
+  - api.Window.DOMContentLoaded_event
+  - api.Window.alert
+  - api.Window.blur_event
+  - api.Window.close
+  - api.Window.closed
+  - api.Window.confirm
+  - api.Window.document
+  - api.Window.error_event
+  - api.Window.focus
+  - api.Window.focus_event
+  - api.Window.frameElement
+  - api.Window.frames
+  - api.Window.history
+  - api.Window.languagechange_event
+  - api.Window.length
+  - api.Window.load_event
+  - api.Window.name
+  - api.Window.navigator
+  - api.Window.offline_event
+  - api.Window.online_event
+  - api.Window.open
+  - api.Window.opener
+  - api.Window.originAgentCluster
+  - api.Window.pagehide_event
+  - api.Window.pagereveal_event
+  - api.Window.pageshow_event
+  - api.Window.pageswap_event
+  - api.Window.parent
+  - api.Window.popstate_event
+  - api.Window.prompt
+  - api.Window.rejectionhandled_event
+  - api.Window.self
+  - api.Window.stop
+  - api.Window.top
+  - api.Window.unhandledrejection_event
+  - api.Window.window
