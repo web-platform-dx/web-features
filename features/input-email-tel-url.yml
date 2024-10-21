@@ -1,0 +1,14 @@
+name: <input> email, tel, and url
+description: The `<input>` element allows the user to input information to a form intended for email addresses, telephone numbers or URLs. Particularly useful in combination with form validation.
+spec:
+  - https://html.spec.whatwg.org/multipage/input.html#email-state-(type=email)
+  - https://html.spec.whatwg.org/multipage/input.html#telephone-state-(type=tel)
+  - https://html.spec.whatwg.org/multipage/input.html#url-state-(type=url)
+group:
+  - forms
+  - html-elements
+caniuse: input-email-tel-url
+compat_features:
+  - html.elements.input.type_email
+  - html.elements.input.type_tel
+  - html.elements.input.type_url

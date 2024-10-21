@@ -1,0 +1,16 @@
+name: '<input type="range">'
+description: The `<input>` element allows the user to select a value using a slider widget.
+spec: https://html.spec.whatwg.org/multipage/input.html#range-state-(type=range)
+group:
+  - forms
+  - html-elements
+caniuse: input-range
+compat_features:
+  # Included in input-number.yml
+  # - html.elements.input.max
+  # - html.elements.input.min
+  # - html.elements.input.step
+  - html.elements.input.type_range
+  - html.elements.input.type_range.vertical_orientation
+  # Excluded because of a non-real value
+  # - html.elements.input.type_range.tick_marks
