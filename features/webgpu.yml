@@ -33,6 +33,8 @@ compat_features:
   - api.GPUCanvasContext
   - api.GPUCanvasContext.canvas
   - api.GPUCanvasContext.configure
+  - api.GPUCanvasContext.configure.toneMapping
+  - api.GPUCanvasContext.getConfiguration
   - api.GPUCanvasContext.getCurrentTexture
   - api.GPUCanvasContext.unconfigure
   - api.GPUCommandBuffer

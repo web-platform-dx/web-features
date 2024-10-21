@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-17
 name: CSS Text Decoration Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-text-decor-4/
@@ -39,4 +39,7 @@ compat_features:
   - css.properties.text-underline-offset.auto
   - css.properties.text-underline-offset.percentage
   - css.properties.text-underline-position
-  - svg.global_attributes.text-decoration
+
+# The following features in the spec are already part of web-features:
+# - SVG:
+#   - svg.global_attributes.text-decoration

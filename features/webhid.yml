@@ -2,3 +2,5 @@ name: WebHID
 description: The WebHID API provides access to Human Interface Devices (HID) that are connected to the user's device.
 spec: https://wicg.github.io/webhid/
 caniuse: webhid
+status:
+  compute_from: api.Navigator.hid

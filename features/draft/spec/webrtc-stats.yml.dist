@@ -499,6 +499,27 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "79"
+  #   chrome_android: "79"
+  #   edge: "79"
+  #   firefox: "106"
+  #   firefox_android: "106"
+  - api.RTCStatsReport.type_inbound-rtp.qpSum
+  - api.RTCStatsReport.type_inbound-rtp.totalDecodeTime
+  - api.RTCStatsReport.type_inbound-rtp.totalInterFrameDelay
+  - api.RTCStatsReport.type_inbound-rtp.totalSquaredInterFrameDelay
+
+  # baseline: false
+  # support:
+  #   chrome: "79"
+  #   chrome_android: "79"
+  #   edge: "79"
+  #   firefox: ≤73
+  #   firefox_android: "79"
+  - api.RTCStatsReport.type_inbound-rtp.framesDecoded
+
+  # baseline: false
+  # support:
   #   chrome: "80"
   #   chrome_android: "80"
   #   edge: "80"
@@ -582,6 +603,15 @@ compat_features:
   #   firefox: "102"
   #   firefox_android: "102"
   - api.RTCStatsReport.type_outbound-rtp.totalEncodeTime
+
+  # baseline: false
+  # support:
+  #   chrome: "80"
+  #   chrome_android: "80"
+  #   edge: "80"
+  #   firefox: "106"
+  #   firefox_android: "106"
+  - api.RTCStatsReport.type_inbound-rtp.lastPacketReceivedTimestamp
 
   # baseline: false
   # support:
@@ -736,34 +766,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "109"
-  #   chrome_android: "109"
-  #   edge: "109"
-  #   firefox: "56"
-  #   firefox_android: "56"
-  - api.RTCStatsReport.type_candidate-pair.lastPacketReceivedTimestamp
-  - api.RTCStatsReport.type_candidate-pair.lastPacketSentTimestamp
-
-  # baseline: false
-  # support:
-  #   chrome: ≤80
-  #   chrome_android: "80"
-  #   edge: "80"
-  #   firefox: ≤73
-  #   firefox_android: "79"
-  - api.RTCStatsReport.type_inbound-rtp.framesDecoded
-
-  # baseline: false
-  # support:
-  #   chrome: "80"
-  #   chrome_android: "80"
-  #   edge: "80"
-  #   firefox: "106"
-  #   firefox_android: "106"
-  - api.RTCStatsReport.type_inbound-rtp.lastPacketReceivedTimestamp
-
-  # baseline: false
-  # support:
   #   chrome: "103"
   #   chrome_android: "103"
   #   edge: "103"
@@ -782,15 +784,13 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: ≤80
-  #   chrome_android: "80"
-  #   edge: "80"
-  #   firefox: "106"
-  #   firefox_android: "106"
-  - api.RTCStatsReport.type_inbound-rtp.qpSum
-  - api.RTCStatsReport.type_inbound-rtp.totalDecodeTime
-  - api.RTCStatsReport.type_inbound-rtp.totalInterFrameDelay
-  - api.RTCStatsReport.type_inbound-rtp.totalSquaredInterFrameDelay
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  #   firefox: "56"
+  #   firefox_android: "56"
+  - api.RTCStatsReport.type_candidate-pair.lastPacketReceivedTimestamp
+  - api.RTCStatsReport.type_candidate-pair.lastPacketSentTimestamp
 
   # baseline: false
   # support:
@@ -829,6 +829,13 @@ compat_features:
   #   chrome_android: "71"
   #   edge: "79"
   - api.RTCStatsReport.type_candidate-pair.currentRoundTripTime
+
+  # baseline: false
+  # support:
+  #   chrome: "79"
+  #   chrome_android: "79"
+  #   edge: "79"
+  - api.RTCStatsReport.type_inbound-rtp.keyFramesDecoded
 
   # baseline: false
   # support:
@@ -937,13 +944,6 @@ compat_features:
   - api.RTCStatsReport.type_media-playout.totalSamplesCount
   - api.RTCStatsReport.type_media-playout.totalSamplesDuration
   - api.RTCStatsReport.type_media-playout.type
-
-  # baseline: false
-  # support:
-  #   chrome: ≤80
-  #   chrome_android: "80"
-  #   edge: "80"
-  - api.RTCStatsReport.type_inbound-rtp.keyFramesDecoded
 
   # baseline: false
   # support:
