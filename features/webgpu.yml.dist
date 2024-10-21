@@ -5,10 +5,8 @@ status:
   baseline: false
   support:
     chrome: "113"
-    chrome_android: "121"
     edge: "113"
 compat_features:
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "113"
@@ -269,6 +267,7 @@ compat_features:
   #   edge: "129"
   - api.GPUCanvasContext.configure.toneMapping
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "113"
