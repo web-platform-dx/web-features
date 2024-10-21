@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-21
 name: DOM Standard
 description: TODO
 spec: https://dom.spec.whatwg.org/
@@ -78,7 +78,6 @@ compat_features:
   - api.Document.doctype
   - api.Document.documentElement
   - api.Document.documentURI
-  - api.Document.evaluate
   - api.Document.firstElementChild
   - api.Document.getElementById
   - api.Document.getElementsByClassName
@@ -310,32 +309,6 @@ compat_features:
   - api.TreeWalker.root
   - api.TreeWalker.whatToShow
   - api.XMLDocument
-  - api.XPathEvaluator
-  - api.XPathEvaluator.XPathEvaluator
-  - api.XPathEvaluator.createExpression
-  - api.XPathEvaluator.evaluate
-  - api.XPathExpression
-  - api.XPathExpression.evaluate
-  - api.XPathResult
-  - api.XPathResult.booleanValue
-  - api.XPathResult.invalidIteratorState
-  - api.XPathResult.iterateNext
-  - api.XPathResult.numberValue
-  - api.XPathResult.resultType
-  - api.XPathResult.singleNodeValue
-  - api.XPathResult.snapshotItem
-  - api.XPathResult.snapshotLength
-  - api.XPathResult.stringValue
-  - api.XSLTProcessor
-  - api.XSLTProcessor.XSLTProcessor
-  - api.XSLTProcessor.clearParameters
-  - api.XSLTProcessor.getParameter
-  - api.XSLTProcessor.importStylesheet
-  - api.XSLTProcessor.removeParameter
-  - api.XSLTProcessor.reset
-  - api.XSLTProcessor.setParameter
-  - api.XSLTProcessor.transformToDocument
-  - api.XSLTProcessor.transformToFragment
 
 # The following features in the spec are already part of web-features:
 # - AbortController and AbortSignal:
@@ -353,6 +326,24 @@ compat_features:
 #   - api.AbortSignal.timeout_static
 # - AbortSignal.any():
 #   - api.AbortSignal.any_static
+# - XPath:
+#   - api.Document.evaluate
+#   - api.XPathEvaluator
+#   - api.XPathEvaluator.XPathEvaluator
+#   - api.XPathEvaluator.createExpression
+#   - api.XPathEvaluator.evaluate
+#   - api.XPathExpression
+#   - api.XPathExpression.evaluate
+#   - api.XPathResult
+#   - api.XPathResult.booleanValue
+#   - api.XPathResult.invalidIteratorState
+#   - api.XPathResult.iterateNext
+#   - api.XPathResult.numberValue
+#   - api.XPathResult.resultType
+#   - api.XPathResult.singleNodeValue
+#   - api.XPathResult.snapshotItem
+#   - api.XPathResult.snapshotLength
+#   - api.XPathResult.stringValue
 # - <slot>:
 #   - api.Element.assignedSlot
 #   - api.Element.slot
@@ -373,3 +364,14 @@ compat_features:
 #   - api.ShadowRoot.mode
 # - Imperative slot assignment:
 #   - api.ShadowRoot.slotAssignment
+# - XSLT:
+#   - api.XSLTProcessor
+#   - api.XSLTProcessor.XSLTProcessor
+#   - api.XSLTProcessor.clearParameters
+#   - api.XSLTProcessor.getParameter
+#   - api.XSLTProcessor.importStylesheet
+#   - api.XSLTProcessor.removeParameter
+#   - api.XSLTProcessor.reset
+#   - api.XSLTProcessor.setParameter
+#   - api.XSLTProcessor.transformToDocument
+#   - api.XSLTProcessor.transformToFragment
