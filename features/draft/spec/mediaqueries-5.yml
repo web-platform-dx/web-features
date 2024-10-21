@@ -1,9 +1,10 @@
-draft_date: 2024-10-10
+draft_date: 2024-10-21
 name: Media Queries Level 5
 description: TODO
 spec: https://drafts.csswg.org/mediaqueries-5/
 compat_features:
   - css.at-rules.custom-media
+  - css.types.ratio.number_value
 
 # The following features in the spec are already part of web-features:
 # - Media queries:
@@ -13,7 +14,11 @@ compat_features:
 #   - css.at-rules.media.color-index
 #   - css.at-rules.media.grid
 #   - css.at-rules.media.height
+#   - css.at-rules.media.media_features
+#   - css.at-rules.media.media_query_values
 #   - css.at-rules.media.monochrome
+#   - css.at-rules.media.nested-queries
+#   - css.at-rules.media.or_syntax
 #   - css.at-rules.media.orientation
 #   - css.at-rules.media.width
 #   - css.types.ratio
@@ -46,6 +51,8 @@ compat_features:
 #   - css.at-rules.media.prefers-reduced-motion
 # - prefers-reduced-transparency media query:
 #   - css.at-rules.media.prefers-reduced-transparency
+# - Media query range syntax:
+#   - css.at-rules.media.range_syntax
 # - resolution media query:
 #   - css.at-rules.media.resolution
 # - scripting media query:

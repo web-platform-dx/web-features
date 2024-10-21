@@ -165,6 +165,13 @@ compat_features:
   #   firefox_android: "110"
   - api.ReadableStream.values
 
+  # baseline: false
+  # support:
+  #   firefox: "102"
+  #   firefox_android: "102"
+  - api.ReadableStreamBYOBReader.releaseLock.reject_pending_read_request
+  - api.ReadableStreamDefaultReader.releaseLock.reject_pending_read_request
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:

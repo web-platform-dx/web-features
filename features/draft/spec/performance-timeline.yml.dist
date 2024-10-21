@@ -67,6 +67,19 @@ compat_features:
   - api.PerformanceEntry.toJSON
 
   # baseline: high
+  # baseline_low_date: 2018-05-09
+  # baseline_high_date: 2020-11-09
+  # support:
+  #   chrome: "62"
+  #   chrome_android: "62"
+  #   edge: "15"
+  #   firefox: "60"
+  #   firefox_android: "60"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.PerformanceEntry.worker_support
+
+  # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
@@ -85,6 +98,19 @@ compat_features:
   - api.PerformanceObserverEntryList.getEntries
   - api.PerformanceObserverEntryList.getEntriesByName
   - api.PerformanceObserverEntryList.getEntriesByType
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "62"
+  #   chrome_android: "62"
+  #   edge: "79"
+  #   firefox: "57"
+  #   firefox_android: "57"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.PerformanceObserver.worker_support
 
   # baseline: high
   # baseline_low_date: 2020-01-15

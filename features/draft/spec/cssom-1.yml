@@ -26,6 +26,7 @@ compat_features:
   - api.CSSPageRule
   - api.CSSPageRule.selectorText
   - api.CSSPageRule.style
+  - api.CSSPageRule.style.type_CSSPageDescriptors
   - api.CSSRule
   - api.CSSRule.cssText
   - api.CSSRule.parentRule
@@ -34,6 +35,7 @@ compat_features:
   - api.CSSRuleList.item
   - api.CSSRuleList.length
   - api.CSSStyleDeclaration
+  - api.CSSStyleDeclaration.@@iterator
   - api.CSSStyleDeclaration.cssFloat
   - api.CSSStyleDeclaration.cssText
   - api.CSSStyleDeclaration.getPropertyPriority
@@ -50,6 +52,7 @@ compat_features:
   - api.CSSStyleSheet.cssRules
   - api.CSSStyleSheet.deleteRule
   - api.CSSStyleSheet.insertRule
+  - api.CSSStyleSheet.insertRule.index_parameter_optional
   - api.CSSStyleSheet.ownerRule
   - api.Document.styleSheets
   - api.HTMLElement.style
@@ -76,6 +79,7 @@ compat_features:
   - api.StyleSheetList.item
   - api.StyleSheetList.length
   - api.Window.getComputedStyle
+  - api.Window.getComputedStyle.pseudo_element_support
   - html.elements.link.rel.alternate_stylesheet
 
 # The following features in the spec are already part of web-features:
@@ -86,7 +90,7 @@ compat_features:
 #   - api.CSSImportRule.styleSheet
 # - Cascade layers:
 #   - api.CSSImportRule.layerName
-# - `@namespace`:
+# - @namespace:
 #   - api.CSSNamespaceRule
 #   - api.CSSNamespaceRule.namespaceURI
 #   - api.CSSNamespaceRule.prefix

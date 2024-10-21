@@ -4,10 +4,15 @@
 status:
   baseline: false
   support:
-    chrome: "117"
-    chrome_android: "117"
-    edge: "117"
+    chrome: "120"
+    chrome_android: "120"
+    edge: "120"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "117"
+  #   chrome_android: "117"
+  #   edge: "117"
   - api.Fence
   - api.Fence.getNestedConfigs
   - api.Fence.reportEvent
@@ -24,3 +29,11 @@ compat_features:
   - html.elements.fencedframe
   - html.elements.fencedframe.allow
   - http.headers.Content-Security-Policy.fenced-frame-src
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "120"
+  #   chrome_android: "120"
+  #   edge: "120"
+  - api.Fence.setReportEventDataForAutomaticBeacons.start_commit_eventType

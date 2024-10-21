@@ -8,10 +8,16 @@ compat_features:
   - css.properties.text-underline-offset.auto
   - css.properties.text-underline-offset.percentage
   - css.properties.text-underline-position
+  - css.properties.text-underline-position.from-font
+  - css.properties.text-underline-position.left
+  - css.properties.text-underline-position.right
+  - css.properties.text-underline-position.under
 
 # The following features in the spec are already part of web-features:
 # - text-decoration:
 #   - css.properties.text-decoration
+#   - css.properties.text-decoration.includes_color-and-style
+#   - css.properties.text-decoration.includes_thickness
 #   - css.properties.text-decoration-color
 #   - css.properties.text-decoration-line
 #   - css.properties.text-decoration-line.grammar-error
@@ -28,13 +34,19 @@ compat_features:
 #   - css.properties.text-decoration-skip-ink.auto
 #   - css.properties.text-decoration-skip-ink.none
 #   - css.properties.text-decoration-style
+#   - css.properties.text-decoration-style.wavy
 #   - css.properties.text-decoration-thickness
 #   - css.properties.text-decoration-thickness.auto
 #   - css.properties.text-decoration-thickness.from-font
+#   - css.properties.text-decoration-thickness.percentage
 # - text-emphasis:
 #   - css.properties.text-emphasis
 #   - css.properties.text-emphasis-color
 #   - css.properties.text-emphasis-position
+#   - css.properties.text-emphasis-position.left
+#   - css.properties.text-emphasis-position.over
+#   - css.properties.text-emphasis-position.right
+#   - css.properties.text-emphasis-position.under
 #   - css.properties.text-emphasis-style
 #   - css.properties.text-emphasis-style.circle
 #   - css.properties.text-emphasis-style.dot

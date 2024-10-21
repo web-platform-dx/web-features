@@ -1,4 +1,4 @@
-draft_date: 2024-10-07
+draft_date: 2024-10-21
 name: CSSOM View Module
 description: TODO
 spec: https://drafts.csswg.org/cssom-view-1/
@@ -8,6 +8,8 @@ compat_features:
   - api.CaretPosition.offset
   - api.CaretPosition.offsetNode
   - api.Document
+  - api.Document.caretPositionFromPoint.options_parameter
+  - api.Document.featurePolicy
   - api.Document.getBoxQuads
   - api.Document.scroll_event
   - api.Document.scrollingElement
@@ -21,10 +23,19 @@ compat_features:
   - api.Element.getBoxQuads
   - api.Element.getClientRects
   - api.Element.scroll
+  - api.Element.scroll.options_behavior_parameter
+  - api.Element.scroll.options_left_parameter
+  - api.Element.scroll.options_top_parameter
   - api.Element.scrollBy
+  - api.Element.scrollBy.options_behavior_parameter
+  - api.Element.scrollBy.options_left_parameter
+  - api.Element.scrollBy.options_top_parameter
   - api.Element.scrollHeight
   - api.Element.scrollLeft
   - api.Element.scrollTo
+  - api.Element.scrollTo.options_behavior_parameter
+  - api.Element.scrollTo.options_left_parameter
+  - api.Element.scrollTo.options_top_parameter
   - api.Element.scrollTop
   - api.Element.scrollWidth
   - api.Element.scroll_event
@@ -36,6 +47,7 @@ compat_features:
   - api.HTMLImageElement.x
   - api.HTMLImageElement.y
   - api.MediaQueryList
+  - api.MediaQueryList.EventTarget_inheritance
   - api.MediaQueryList.change_event
   - api.MediaQueryList.matches
   - api.MediaQueryList.media
@@ -63,7 +75,12 @@ compat_features:
   - api.Window.matchMedia
   - api.Window.moveBy
   - api.Window.moveTo
+  - api.Window.moveTo.relative-multi-screen
   - api.Window.open
+  - api.Window.open.features_parameter_attributionsrc
+  - api.Window.open.features_parameter_popup
+  - api.Window.open.once_per_event
+  - api.Window.open.relative-multi-screen
   - api.Window.outerHeight
   - api.Window.outerWidth
   - api.Window.resizeBy
@@ -71,14 +88,29 @@ compat_features:
   - api.Window.resize_event
   - api.Window.screen
   - api.Window.screenLeft
+  - api.Window.screenLeft.relative-multi-screen
   - api.Window.screenTop
+  - api.Window.screenTop.relative-multi-screen
   - api.Window.screenX
+  - api.Window.screenX.relative-multi-screen
   - api.Window.screenY
+  - api.Window.screenY.relative-multi-screen
   - api.Window.scroll
+  - api.Window.scroll.options_behavior_parameter
+  - api.Window.scroll.options_left_parameter
+  - api.Window.scroll.options_top_parameter
   - api.Window.scrollBy
+  - api.Window.scrollBy.options_behavior_parameter
+  - api.Window.scrollBy.options_left_parameter
+  - api.Window.scrollBy.options_top_parameter
   - api.Window.scrollTo
+  - api.Window.scrollTo.options_behavior_parameter
+  - api.Window.scrollTo.options_left_parameter
+  - api.Window.scrollTo.options_top_parameter
   - api.Window.scrollX
+  - api.Window.scrollX.subpixel_precision
   - api.Window.scrollY
+  - api.Window.scrollY.subpixel_precision
 
 # The following features in the spec are already part of web-features:
 # - document.caretPositionFromPoint():
@@ -98,6 +130,7 @@ compat_features:
 #   - api.Element.checkVisibility.options_visibilityProperty_parameter
 # - scrollIntoView():
 #   - api.Element.scrollIntoView
+#   - api.Element.scrollIntoView.options_parameter
 # - Mouse events:
 #   - api.MouseEvent
 #   - api.MouseEvent.offsetX

@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-21
 name: Notifications API Standard
 description: TODO
 spec: https://notifications.spec.whatwg.org/
@@ -21,13 +21,16 @@ compat_features:
   - api.Notification.permission_static
   - api.Notification.renotify
   - api.Notification.requestPermission_static
+  - api.Notification.requestPermission_static.returns_promise
   - api.Notification.requireInteraction
+  - api.Notification.secure_context_required
   - api.Notification.show_event
   - api.Notification.silent
   - api.Notification.tag
   - api.Notification.timestamp
   - api.Notification.title
   - api.Notification.vibrate
+  - api.Notification.worker_support
   - api.NotificationEvent
   - api.NotificationEvent.NotificationEvent
   - api.NotificationEvent.action
@@ -36,3 +39,10 @@ compat_features:
   - api.ServiceWorkerGlobalScope.notificationclose_event
   - api.ServiceWorkerRegistration.getNotifications
   - api.ServiceWorkerRegistration.showNotification
+  - api.ServiceWorkerRegistration.showNotification.options_actions_parameter
+  - api.ServiceWorkerRegistration.showNotification.options_badge_parameter
+  - api.ServiceWorkerRegistration.showNotification.options_data_parameter
+  - api.ServiceWorkerRegistration.showNotification.options_image_parameter
+  - api.ServiceWorkerRegistration.showNotification.options_renotify_parameter
+  - api.ServiceWorkerRegistration.showNotification.options_requireInteraction_parameter
+  - api.ServiceWorkerRegistration.showNotification.options_vibrate_parameter

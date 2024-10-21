@@ -1,6 +1,8 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-21
 name: An HTTP Status Code for Indicating Hints
 description: TODO
 spec: https://httpwg.org/specs/rfc8297.html
 compat_features:
   - http.status.103
+  - http.status.103.preconnect
+  - http.status.103.preload

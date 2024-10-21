@@ -1,4 +1,4 @@
-draft_date: 2024-10-17
+draft_date: 2024-10-21
 name: Geometry Interfaces Module Level 1
 description: TODO
 spec: https://drafts.fxtf.org/geometry-1/
@@ -42,6 +42,7 @@ compat_features:
   - api.DOMMatrix.skewXSelf
   - api.DOMMatrix.skewYSelf
   - api.DOMMatrix.translateSelf
+  - api.DOMMatrix.worker_support
   - api.DOMMatrixReadOnly
   - api.DOMMatrixReadOnly.DOMMatrixReadOnly
   - api.DOMMatrixReadOnly.a
@@ -85,12 +86,15 @@ compat_features:
   - api.DOMMatrixReadOnly.toFloat32Array
   - api.DOMMatrixReadOnly.toFloat64Array
   - api.DOMMatrixReadOnly.toJSON
+  - api.DOMMatrixReadOnly.toString
   - api.DOMMatrixReadOnly.transformPoint
   - api.DOMMatrixReadOnly.translate
+  - api.DOMMatrixReadOnly.worker_support
   - api.DOMPoint
   - api.DOMPoint.DOMPoint
   - api.DOMPoint.fromPoint_static
   - api.DOMPoint.w
+  - api.DOMPoint.worker_support
   - api.DOMPoint.x
   - api.DOMPoint.y
   - api.DOMPoint.z
@@ -100,6 +104,7 @@ compat_features:
   - api.DOMPointReadOnly.matrixTransform
   - api.DOMPointReadOnly.toJSON
   - api.DOMPointReadOnly.w
+  - api.DOMPointReadOnly.worker_support
   - api.DOMPointReadOnly.x
   - api.DOMPointReadOnly.y
   - api.DOMPointReadOnly.z
@@ -113,11 +118,13 @@ compat_features:
   - api.DOMQuad.p3
   - api.DOMQuad.p4
   - api.DOMQuad.toJSON
+  - api.DOMQuad.worker_support
   - api.DOMRect
   - api.DOMRect.DOMRect
   - api.DOMRect.fromRect_static
   - api.DOMRect.height
   - api.DOMRect.width
+  - api.DOMRect.worker_support
   - api.DOMRect.x
   - api.DOMRect.y
   - api.DOMRectList
@@ -133,9 +140,14 @@ compat_features:
   - api.DOMRectReadOnly.toJSON
   - api.DOMRectReadOnly.top
   - api.DOMRectReadOnly.width
+  - api.DOMRectReadOnly.worker_support
   - api.DOMRectReadOnly.x
   - api.DOMRectReadOnly.y
 
 # The following features in the spec are already part of web-features:
 # - SVG:
 #   - api.SVGRect
+#   - api.SVGRect.height
+#   - api.SVGRect.width
+#   - api.SVGRect.x
+#   - api.SVGRect.y
