@@ -1,0 +1,23 @@
+name: postMessage
+description: "The `postMessage()` global method sends cross-origin messages to windows and workers, including popups and iframes. Also known as cross-document messaging."
+spec: https://html.spec.whatwg.org/multipage/web-messaging.html#web-messaging
+caniuse: x-doc-messaging
+group: messaging
+# Anchor baseline on window support.
+status:
+  compute_from: api.Window.postMessage
+compat_features:
+  # Other features, such as channel messaging and broadcast channels have
+  # `postMessage` methods too, but are not covered by this feature.
+  - api.DedicatedWorkerGlobalScope.postMessage
+  - api.DedicatedWorkerGlobalScope.message_event
+  - api.Window.postMessage
+  - api.Worker.postMessage
+  - api.MessageEvent
+  - api.MessageEvent.MessageEvent
+  - api.MessageEvent.data
+  - api.MessageEvent.lastEventId
+  - api.MessageEvent.origin
+  - api.MessageEvent.source
+  - api.Window.message_event
+  - api.Worker.message_event

@@ -9,6 +9,22 @@ status:
     edge: "79"
     firefox: "108"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "43"
+  #   chrome_android: "43"
+  #   edge: "79"
+  #   firefox: "110"
+  #   firefox_android: "110"
+  - api.Permissions.permission_midi
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "43"
+  #   chrome_android: "43"
+  #   edge: "79"
+  #   firefox: "108"
   - api.MIDIAccess
   - api.MIDIAccess.inputs
   - api.MIDIAccess.outputs
@@ -54,3 +70,15 @@ compat_features:
   - api.MIDIPort.type
   - api.MIDIPort.version
   - api.Navigator.requestMIDIAccess
+
+  # baseline: false
+  # support:
+  #   chrome: "88"
+  #   chrome_android: "88"
+  #   edge: "88"
+  - http.headers.Permissions-Policy.midi
+
+  # baseline: false
+  # support:
+  #   firefox: "108"
+  - api.MIDIOutput.clear
