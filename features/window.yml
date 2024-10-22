@@ -7,22 +7,23 @@ compat_features:
   - api.Window
   - api.Window.DOMContentLoaded_event
 
-  # move to feature?
-  - api.Window.alert
+  # features/dialog.yml
+  #- api.Window.alert
 
   - api.Window.blur_event
   - api.Window.close
   - api.Window.closed
 
-  # move to feature?
-  - api.Window.confirm
+  # features/dialog.yml
+  #- api.Window.confirm
 
+  # hm, could go in #1983
   - api.Window.document
+
   - api.Window.error_event
   - api.Window.focus
   - api.Window.focus_event
 
-  # move to feature?
   - api.Window.frameElement
   - api.Window.frames
 
@@ -30,36 +31,36 @@ compat_features:
   #- api.Window.history
 
   # proposed in `language` feature in #1931
-  - api.Window.languagechange_event
+  #- api.Window.languagechange_event
 
   - api.Window.length
   - api.Window.load_event
   - api.Window.name
 
   # proposed in `navigator` feature in #1931
-  - api.Window.navigator
+  #- api.Window.navigator
 
   # proposed in `online` feature in #1931
-  - api.Window.offline_event
-  - api.Window.online_event
+  #- api.Window.offline_event
+  #- api.Window.online_event
 
   - api.Window.open
   - api.Window.opener
   - api.Window.originAgentCluster
 
-  # move to feature?
-  - api.Window.pagehide_event
-  - api.Window.pagereveal_event
-  - api.Window.pageshow_event
-  - api.Window.pageswap_event
+  # proposed in features in #2012
+  #- api.Window.pagehide_event
+  #- api.Window.pagereveal_event
+  #- api.Window.pageshow_event
+  #- api.Window.pageswap_event
 
   - api.Window.parent
 
   # features/history.yml
   #- api.Window.popstate_event
 
-  # move to feature?
-  - api.Window.prompt
+  # features/dialog.yml
+  #- api.Window.prompt
 
   - api.Window.rejectionhandled_event
   - api.Window.self
