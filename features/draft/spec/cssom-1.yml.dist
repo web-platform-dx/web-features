@@ -128,33 +128,6 @@ compat_features:
   - api.CSS
 
   # baseline: high
-  # baseline_low_date: 2017-04-19
-  # baseline_high_date: 2019-10-19
-  # support:
-  #   chrome: "47"
-  #   chrome_android: "47"
-  #   edge: "12"
-  #   firefox: "53"
-  #   firefox_android: "53"
-  #   safari: "10.1"
-  #   safari_ios: "10.3"
-  - api.CSSNamespaceRule
-
-  # baseline: high
-  # baseline_low_date: 2018-03-13
-  # baseline_high_date: 2020-09-13
-  # support:
-  #   chrome: "47"
-  #   chrome_android: "47"
-  #   edge: "12"
-  #   firefox: "59"
-  #   firefox_android: "59"
-  #   safari: "10.1"
-  #   safari_ios: "10.3"
-  - api.CSSNamespaceRule.namespaceURI
-  - api.CSSNamespaceRule.prefix
-
-  # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
