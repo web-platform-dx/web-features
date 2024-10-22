@@ -105,6 +105,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "43"
+  #   chrome_android: "43"
+  #   edge: "15"
+  #   firefox: "60"
+  #   firefox_android: "60"
+  #   safari: "12"
+  - api.PerformanceResourceTiming.worker_support
+
+  # baseline: false
+  # support:
   #   chrome: "109"
   #   chrome_android: "109"
   #   edge: "109"

@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "36"
-    chrome_android: "36"
-    edge: ≤18
+    chrome: "99"
+    chrome_android: "99"
+    edge: "99"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -72,6 +72,58 @@ compat_features:
   #   safari: "7"
   #   safari_ios: "7"
   - http.status.308
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: ≤7
+  #   safari_ios: ≤7
+  - http.headers.Authorization.NTLM
+  - http.headers.WWW-Authenticate.NTLM
+
+  # baseline: high
+  # baseline_low_date: 2020-09-16
+  # baseline_high_date: 2023-03-16
+  # support:
+  #   chrome: "77"
+  #   chrome_android: "77"
+  #   edge: "79"
+  #   firefox: "70"
+  #   firefox_android: "79"
+  #   safari: "14"
+  #   safari_ios: "14"
+  - http.headers.Referer.length_limit_4096B
+
+  # baseline: high
+  # baseline_low_date: 2021-03-23
+  # baseline_high_date: 2023-09-23
+  # support:
+  #   chrome: "76"
+  #   chrome_android: "76"
+  #   edge: ≤79
+  #   firefox: "87"
+  #   firefox_android: "87"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - http.headers.Content-Length.cors_response_safelist
+
+  # baseline: low
+  # baseline_low_date: 2023-08-29
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "117"
+  #   firefox_android: "117"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - http.headers.Range.cors_safe
 
   # baseline: false
   # support:

@@ -28,6 +28,7 @@ compat_features:
   #   safari_ios: "1"
   - api.CanvasGradient
   - api.CanvasGradient.addColorStop
+  - api.CanvasPattern
   - api.CanvasRenderingContext2D
   - api.CanvasRenderingContext2D.arcTo
   - api.CanvasRenderingContext2D.beginPath
@@ -273,6 +274,19 @@ compat_features:
   #   safari: "10.1"
   #   safari_ios: "10.3"
   - api.CanvasRenderingContext2D.resetTransform
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "68"
+  #   chrome_android: "68"
+  #   edge: "79"
+  #   firefox: "33"
+  #   firefox_android: "33"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - api.CanvasPattern.setTransform
 
   # baseline: high
   # baseline_low_date: 2020-07-28

@@ -13,6 +13,7 @@ status:
   compute_from: api.Performance
 compat_features:
   - api.performance
+  - api.performance.worker_support
   - api.Performance
   - api.Performance.now
   - api.Performance.timeOrigin
@@ -26,13 +27,18 @@ compat_features:
   - api.Performance.clearMeasures
   - api.Performance.clearResourceTimings
   - api.Performance.mark
+  - api.Performance.mark.markOptions_parameter
+  - api.Performance.mark.returns_performancemark
   - api.Performance.measure
+  - api.Performance.measure.measureOptions_parameter
+  - api.Performance.measure.returns_performancemeasure
   - api.PerformanceEntry
   - api.PerformanceEntry.duration
   - api.PerformanceEntry.entryType
   - api.PerformanceEntry.name
   - api.PerformanceEntry.startTime
   - api.PerformanceEntry.toJSON
+  - api.PerformanceEntry.worker_support
   - api.PerformanceMark
   - api.PerformanceMark.PerformanceMark
   - api.PerformanceMark.detail
@@ -45,6 +51,7 @@ compat_features:
   - api.PerformanceObserver.observe
   - api.PerformanceObserver.supportedEntryTypes_static
   - api.PerformanceObserver.takeRecords
+  - api.PerformanceObserver.worker_support
   - api.PerformanceObserverEntryList
   - api.PerformanceObserverEntryList.getEntries
   - api.PerformanceObserverEntryList.getEntriesByName

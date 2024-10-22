@@ -115,6 +115,19 @@ compat_features:
   # baseline_low_date: 2017-09-19
   # baseline_high_date: 2020-03-19
   # support:
+  #   chrome: "30"
+  #   chrome_android: "30"
+  #   edge: "14"
+  #   firefox: "34"
+  #   firefox_android: "34"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.performance.worker_support
+
+  # baseline: high
+  # baseline_low_date: 2017-09-19
+  # baseline_high_date: 2020-03-19
+  # support:
   #   chrome: "46"
   #   chrome_android: "46"
   #   edge: "12"
@@ -142,6 +155,19 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - api.PerformanceEntry.toJSON
+
+  # baseline: high
+  # baseline_low_date: 2018-05-09
+  # baseline_high_date: 2020-11-09
+  # support:
+  #   chrome: "62"
+  #   chrome_android: "62"
+  #   edge: "15"
+  #   firefox: "60"
+  #   firefox_android: "60"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.PerformanceEntry.worker_support
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -188,6 +214,19 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - http.headers.Timing-Allow-Origin
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "62"
+  #   chrome_android: "62"
+  #   edge: "79"
+  #   firefox: "57"
+  #   firefox_android: "57"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.PerformanceObserver.worker_support
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -263,7 +302,21 @@ compat_features:
   #   firefox_android: "101"
   #   safari: "14.1"
   #   safari_ios: "14.5"
+  - api.Performance.mark.markOptions_parameter
+  - api.Performance.mark.returns_performancemark
   - api.PerformanceMark.detail
+
+  # baseline: low
+  # baseline_low_date: 2022-07-26
+  # support:
+  #   chrome: "77"
+  #   chrome_android: "77"
+  #   edge: "79"
+  #   firefox: "103"
+  #   firefox_android: "103"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.Performance.measure.measureOptions_parameter
 
   # baseline: low
   # baseline_low_date: 2022-07-26
@@ -275,6 +328,7 @@ compat_features:
   #   firefox_android: "103"
   #   safari: "14.1"
   #   safari_ios: "14.5"
+  - api.Performance.measure.returns_performancemeasure
   - api.PerformanceMeasure.detail
 
   # baseline: false

@@ -32,6 +32,14 @@ compat_features:
   #   firefox: "89"
   #   firefox_android: "89"
   - api.EventCounts
+  - api.EventCounts.@@iterator
+  - api.EventCounts.entries
+  - api.EventCounts.forEach
+  - api.EventCounts.get
+  - api.EventCounts.has
+  - api.EventCounts.keys
+  - api.EventCounts.size
+  - api.EventCounts.values
   - api.Performance.eventCounts
   - api.PerformanceEventTiming.target
 

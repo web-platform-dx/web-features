@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "88"
-    chrome_android: "88"
-    edge: "88"
+    chrome: "95"
+    chrome_android: "95"
+    edge: "95"
 compat_features:
   # baseline: false
   # support:
@@ -39,6 +39,15 @@ compat_features:
   #   safari: "11.1"
   #   safari_ios: "11.3"
   - api.PaymentRequest.canMakePayment
+
+  # baseline: false
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "55"
+  #   edge: "15"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - api.PaymentResponse.toJSON
 
   # baseline: false
   # support:
@@ -90,10 +99,17 @@ compat_features:
   #   safari_ios: "12.2"
   - api.PaymentResponse.payerdetailchange_event
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "88"
   #   chrome_android: "88"
   #   edge: "88"
   - http.headers.Permissions-Policy.payment
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "95"
+  #   chrome_android: "95"
+  #   edge: "95"
+  - api.PaymentRequest.PaymentRequest.secure_payment_confirmation_method

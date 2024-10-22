@@ -6,6 +6,14 @@ status:
   compute_from: api.PerformanceEventTiming
 compat_features:
   - api.EventCounts
+  - api.EventCounts.@@iterator
+  - api.EventCounts.entries
+  - api.EventCounts.forEach
+  - api.EventCounts.get
+  - api.EventCounts.has
+  - api.EventCounts.keys
+  - api.EventCounts.size
+  - api.EventCounts.values
   - api.Performance.eventCounts
   - api.PerformanceEventTiming
   - api.PerformanceEventTiming.cancelable
