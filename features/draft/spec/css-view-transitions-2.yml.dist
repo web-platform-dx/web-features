@@ -4,46 +4,17 @@
 status:
   baseline: false
   support:
-    chrome: "126"
-    chrome_android: "126"
-    edge: "126"
+    chrome: "125"
+    chrome_android: "125"
+    edge: "125"
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "111"
-  #   chrome_android: "111"
-  #   edge: "111"
-  #   safari: "18"
-  #   safari_ios: "18"
-  - css.properties.view-transition-name.none
-
-  # baseline: false
-  # support:
-  #   chrome: "125"
-  #   chrome_android: "125"
-  #   edge: "125"
-  #   safari: "18"
-  #   safari_ios: "18"
-  - css.selectors.active-view-transition
-
-  # baseline: false
-  # support:
-  #   chrome: "125"
-  #   chrome_android: "125"
-  #   edge: "125"
-  - api.ViewTransition.types
-  - api.ViewTransitionTypeSet
-  - css.properties.view-transition-class
-  - css.properties.view-transition-class.none
-  - css.selectors.active-view-transition-type
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "126"
-  #   chrome_android: "126"
-  #   edge: "126"
-  - api.CSSViewTransitionRule
-  - api.CSSViewTransitionRule.navigation
-  - api.CSSViewTransitionRule.types
-  - css.at-rules.view-transition
+  - api.ViewTransitionTypeSet.@@iterator
+  - api.ViewTransitionTypeSet.add
+  - api.ViewTransitionTypeSet.clear
+  - api.ViewTransitionTypeSet.delete
+  - api.ViewTransitionTypeSet.entries
+  - api.ViewTransitionTypeSet.forEach
+  - api.ViewTransitionTypeSet.has
+  - api.ViewTransitionTypeSet.keys
+  - api.ViewTransitionTypeSet.size
+  - api.ViewTransitionTypeSet.values

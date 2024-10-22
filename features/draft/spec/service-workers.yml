@@ -1,4 +1,4 @@
-draft_date: 2024-10-10
+draft_date: 2024-10-21
 name: Service Workers
 description: TODO
 spec: https://w3c.github.io/ServiceWorker/
@@ -11,12 +11,15 @@ compat_features:
   - api.Cache.match
   - api.Cache.matchAll
   - api.Cache.put
+  - api.Cache.worker_support
   - api.CacheStorage
   - api.CacheStorage.delete
   - api.CacheStorage.has
   - api.CacheStorage.keys
   - api.CacheStorage.match
   - api.CacheStorage.open
+  - api.CacheStorage.secure_context_required
+  - api.CacheStorage.worker_support
   - api.Client
   - api.Client.frameType
   - api.Client.id
@@ -32,6 +35,7 @@ compat_features:
   - api.ExtendableEvent
   - api.ExtendableEvent.ExtendableEvent
   - api.ExtendableEvent.waitUntil
+  - api.ExtendableEvent.waitUntil.async_waitUntil
   - api.ExtendableMessageEvent
   - api.ExtendableMessageEvent.ExtendableMessageEvent
   - api.ExtendableMessageEvent.data
@@ -44,9 +48,10 @@ compat_features:
   - api.FetchEvent.clientId
   - api.FetchEvent.handled
   - api.FetchEvent.preloadResponse
-  - api.FetchEvent.replacesClientId
   - api.FetchEvent.request
   - api.FetchEvent.respondWith
+  - api.FetchEvent.respondWith.networkerror_on_same-origin_cors
+  - api.FetchEvent.respondWith.resource_url
   - api.FetchEvent.resultingClientId
   - api.InstallEvent
   - api.InstallEvent.InstallEvent
@@ -99,8 +104,12 @@ compat_features:
   - api.WindowClient.visibilityState
   - api.WorkerNavigator.serviceWorker
   - api.caches
+  - api.caches.secure_context_required
+  - api.caches.worker_support
   - http.headers.Service-Worker-Navigation-Preload
 
 # The following features in the spec are already part of web-features:
+# - JavaScript modules in service workers:
+#   - api.ServiceWorker.ecmascript_modules
 # - messageerror:
 #   - api.ServiceWorkerContainer.messageerror_event

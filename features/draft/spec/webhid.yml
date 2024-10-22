@@ -1,9 +1,13 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-21
 name: WebHID API
 description: TODO
 spec: https://wicg.github.io/webhid/
 compat_features:
+  - api.HID.worker_support
+  - api.HIDConnectionEvent.worker_support
   - api.HIDDevice.forget
+  - api.HIDDevice.worker_support
+  - api.HIDInputReportEvent.worker_support
 
 # The following features in the spec are already part of web-features:
 # - WebHID:
@@ -32,4 +36,5 @@ compat_features:
 #   - api.HIDInputReportEvent.device
 #   - api.HIDInputReportEvent.reportId
 #   - api.Navigator.hid
+#   - api.WorkerNavigator.hid
 #   - http.headers.Permissions-Policy.hid

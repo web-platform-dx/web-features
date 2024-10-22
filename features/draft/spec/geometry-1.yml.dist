@@ -12,19 +12,6 @@ status:
     safari_ios: "11"
 compat_features:
   # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1.5"
-  #   firefox_android: "4"
-  #   safari: "3"
-  #   safari_ios: "1"
-  - api.SVGRect
-
-  # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
@@ -178,6 +165,7 @@ compat_features:
   - api.DOMMatrixReadOnly.skewY
   - api.DOMMatrixReadOnly.toFloat32Array
   - api.DOMMatrixReadOnly.toFloat64Array
+  - api.DOMMatrixReadOnly.toString
   - api.DOMMatrixReadOnly.transformPoint
   - api.DOMMatrixReadOnly.translate
 
@@ -239,8 +227,12 @@ compat_features:
   #   firefox_android: "79"
   #   safari: "10.1"
   #   safari_ios: "10.3"
+  - api.DOMPoint.worker_support
+  - api.DOMPointReadOnly.worker_support
   - api.DOMRect.fromRect_static
+  - api.DOMRect.worker_support
   - api.DOMRectReadOnly.fromRect_static
+  - api.DOMRectReadOnly.worker_support
 
   # baseline: high
   # baseline_low_date: 2020-07-28
@@ -256,12 +248,15 @@ compat_features:
   - api.DOMMatrix.fromFloat32Array_static
   - api.DOMMatrix.fromFloat64Array_static
   - api.DOMMatrix.fromMatrix_static
+  - api.DOMMatrix.worker_support
   - api.DOMMatrixReadOnly.fromFloat32Array_static
   - api.DOMMatrixReadOnly.fromFloat64Array_static
   - api.DOMMatrixReadOnly.fromMatrix_static
+  - api.DOMMatrixReadOnly.worker_support
   - api.DOMPointReadOnly.matrixTransform
   - api.DOMQuad.fromQuad_static
   - api.DOMQuad.fromRect_static
+  - api.DOMQuad.worker_support
 
   # baseline: false
   # support:

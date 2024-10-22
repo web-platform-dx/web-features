@@ -8,10 +8,9 @@ group: security
 status:
   compute_from: http.headers.Content-Security-Policy
 compat_features:
-  - api.Document.securitypolicyviolation_event
-  - api.Element.securitypolicyviolation_event
-  - api.WorkerGlobalScope.securitypolicyviolation_event
-  - api.HTMLIFrameElement.csp
+  # - http.headers.Content-Security-Policy.block-all-mixed-content (deprecated in BCD)
+  # - http.headers.Content-Security-Policy.prefetch-src (deprecated in BCD)
+  # - http.headers.Content-Security-Policy.report-uri (deprecated in BCD)
   - api.CSPViolationReportBody
   - api.CSPViolationReportBody.blockedURL
   - api.CSPViolationReportBody.columnNumber
@@ -25,9 +24,11 @@ compat_features:
   - api.CSPViolationReportBody.sourceFile
   - api.CSPViolationReportBody.statusCode
   - api.CSPViolationReportBody.toJSON
+  - api.Document.securitypolicyviolation_event
+  - api.Element.securitypolicyviolation_event
+  - api.HTMLIFrameElement.csp
   - api.SecurityPolicyViolationEvent
   - api.SecurityPolicyViolationEvent.SecurityPolicyViolationEvent
-  - api.SecurityPolicyViolationEvent.worker_support
   - api.SecurityPolicyViolationEvent.blockedURI
   - api.SecurityPolicyViolationEvent.columnNumber
   - api.SecurityPolicyViolationEvent.disposition
@@ -40,13 +41,13 @@ compat_features:
   - api.SecurityPolicyViolationEvent.sourceFile
   - api.SecurityPolicyViolationEvent.statusCode
   - api.SecurityPolicyViolationEvent.violatedDirective
+  - api.SecurityPolicyViolationEvent.worker_support
+  - api.WorkerGlobalScope.securitypolicyviolation_event
   - html.elements.iframe.csp
   - html.elements.meta.http-equiv.content-security-policy
-  - http.headers.Content-Security-Policy-Report-Only
   - http.headers.Content-Security-Policy
-  - http.headers.Content-Security-Policy.worker_support
+  - http.headers.Content-Security-Policy-Report-Only
   - http.headers.Content-Security-Policy.base-uri
-  # - http.headers.Content-Security-Policy.block-all-mixed-content (deprecated in BCD)
   - http.headers.Content-Security-Policy.child-src
   - http.headers.Content-Security-Policy.connect-src
   - http.headers.Content-Security-Policy.default-src
@@ -59,16 +60,14 @@ compat_features:
   - http.headers.Content-Security-Policy.media-src
   - http.headers.Content-Security-Policy.meta-element-support
   - http.headers.Content-Security-Policy.object-src
-  # - http.headers.Content-Security-Policy.prefetch-src (deprecated in BCD)
   - http.headers.Content-Security-Policy.report-sample
   - http.headers.Content-Security-Policy.report-to
-  # - http.headers.Content-Security-Policy.report-uri (deprecated in BCD)
   - http.headers.Content-Security-Policy.sandbox
   - http.headers.Content-Security-Policy.script-src
-  - http.headers.Content-Security-Policy.script-src.external_scripts
-  - http.headers.Content-Security-Policy.script-src.wasm-unsafe-eval
   - http.headers.Content-Security-Policy.script-src-attr
   - http.headers.Content-Security-Policy.script-src-elem
+  - http.headers.Content-Security-Policy.script-src.external_scripts
+  - http.headers.Content-Security-Policy.script-src.wasm-unsafe-eval
   - http.headers.Content-Security-Policy.strict-dynamic
   - http.headers.Content-Security-Policy.style-src
   - http.headers.Content-Security-Policy.style-src-attr
@@ -76,3 +75,4 @@ compat_features:
   - http.headers.Content-Security-Policy.unsafe-hashes
   - http.headers.Content-Security-Policy.upgrade-insecure-requests
   - http.headers.Content-Security-Policy.worker-src
+  - http.headers.Content-Security-Policy.worker_support
