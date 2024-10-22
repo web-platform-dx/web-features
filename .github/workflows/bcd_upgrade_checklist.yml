@@ -1,0 +1,29 @@
+name: BCD upgrade
+
+on:
+  pull_request:
+    types: [opened]
+jobs:
+  post-comment:
+    name: "Post checklist"
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    steps:
+      - id: dependency
+        run: |
+          if ! git diff --exit-code -G '@mdn/browser-compat-data' "${{ github.event.pull_request.base.sha }}" "${{ github.sha }}"; then
+            echo "is_bcd=true" >> $GITHUB_OUTPUT
+          fi
+          exit 0
+      - if: ${{ steps.dependency.outputs.is_bcd == 'true' }}
+        uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 #v4.0.0
+        with:
+          issue-number: ${{ github.event.number }}
+          body: |
+            Complete this checklist for every `@mdn/browser-compat-data` upgrade PR:
+
+            - [ ] Check out this branch locally.
+            - [ ] If any keys were removed in the release, delete them from `.yml` files.
+            - [ ] Run `npm install && npm run dist && npm run dist && git commit --all --message="Refresh dist"`.
+            - [ ] Start a PR to [publish the next web-features release](https://github.com/web-platform-dx/web-features/blob/main/docs/publishing.md#regular-releases).
+            - [ ] Merge this PR.
