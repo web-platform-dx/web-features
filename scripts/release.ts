@@ -1,5 +1,5 @@
-import { execSync } from "node:child_process";
-import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { execSync, spawn } from "node:child_process";
+import { createWriteStream, mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -67,10 +67,10 @@ yargs(process.argv.slice(2))
     handler: init,
   }).argv;
 
-function init(args) {
+async function init(args) {
   preflight({ expectedBranch: "main" });
 
-  const diff = diffJson();
+  const diff = await diffJson();
 
   // Start a release branch
   // Convention borrowed from https://github.com/w3c/webref/blob/60ebf71b9d555c523975cfefb08f5420d12b7293/tools/prepare-release.js#L164-L165
@@ -145,8 +145,8 @@ function makePullBody(diff: string) {
   return body;
 }
 
-function diff(args) {
-  const diff = diffJson(args.from, args.to);
+async function diff(args) {
+  const diff = await diffJson(args.from, args.to);
   console.log(diff);
 }
 
@@ -167,10 +167,25 @@ function readPackageJSON(packageDir) {
   );
 }
 
-function diffJson(from: string = "latest", to?: string): string {
+function toPrettyJson(sourceFp: string, destFp: string): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const jqProcess = spawn("jq", [".", sourceFp]);
+    const prettyJsonStream = createWriteStream(destFp);
+    jqProcess.stdout.pipe(prettyJsonStream);
+    jqProcess.on("error", (err) => reject(err));
+    jqProcess.on("close", (code) => {
+      if (code === 0) {
+        resolve(destFp);
+      }
+      reject(code);
+    });
+  });
+}
+
+async function diffJson(from: string = "latest", to?: string): Promise<string> {
   const temporaryDir = mkdtempSync(join(tmpdir(), "web-features-"));
 
-  function pkgToJsonFile(version: string): string {
+  function pkgToJsonFile(version: string): Promise<string> {
     execSync(`npm install web-features@${version}`, {
       cwd: temporaryDir,
       stdio: "inherit",
@@ -182,27 +197,20 @@ function diffJson(from: string = "latest", to?: string): string {
       "web-features",
       "data.json",
     );
-    const prettyJson = execSync(`jq . "${pkgJson}"`, {
-      encoding: "utf-8",
-    });
-    const fp = join(temporaryDir, `data.${version}.json`);
-    writeFileSync(fp, prettyJson);
-    return fp;
+
+    return toPrettyJson(pkgJson, join(temporaryDir, `data.${version}.json`));
   }
 
-  const fromFp = pkgToJsonFile(from);
-  const toFp: string = (() => {
+  const fromFp = await pkgToJsonFile(from);
+  const toFp: string = await (() => {
     if (to) {
       return pkgToJsonFile(to);
     } else {
       build();
-      const preparedJson = join(packages["web-features"], "data.json");
-      const prettyPreparedJson = execSync(`jq . "${preparedJson}"`, {
-        encoding: "utf-8",
-      });
-      const fp = join(temporaryDir, "data.HEAD.json");
-      writeFileSync(fp, prettyPreparedJson);
-      return fp;
+      return toPrettyJson(
+        join(packages["web-features"], "data.json"),
+        join(temporaryDir, "data.HEAD.json"),
+      );
     }
   })();
 
