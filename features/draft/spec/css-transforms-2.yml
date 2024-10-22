@@ -1,11 +1,10 @@
-draft_date: 2024-09-30
+draft_date: 2024-10-17
 name: CSS Transforms Module Level 2
 description: TODO
 spec: https://drafts.csswg.org/css-transforms-2/
 compat_features:
-  - svg.elements.linearGradient.gradientTransform
-  - svg.global_attributes.transform
-  - svg.global_attributes.transform-origin
+  - css.properties.rotate.x_y_z_angle
+  - css.properties.transform-origin.three_value_syntax
 
 # The following features in the spec are already part of web-features:
 # - 3D transforms:
@@ -18,6 +17,7 @@ compat_features:
 #   - css.properties.perspective-origin.left
 #   - css.properties.perspective-origin.right
 #   - css.properties.perspective-origin.top
+#   - css.properties.transform.3d
 #   - css.properties.transform-style
 #   - css.types.transform-function.matrix3d
 #   - css.types.transform-function.perspective
@@ -63,3 +63,8 @@ compat_features:
 #   - css.properties.transform-box.fill-box
 #   - css.properties.transform-box.stroke-box
 #   - css.properties.transform-box.view-box
+# - SVG:
+#   - css.properties.transform-origin.svg_elements
+#   - svg.elements.linearGradient.gradientTransform
+#   - svg.global_attributes.transform
+#   - svg.global_attributes.transform-origin

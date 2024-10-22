@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "36"
+    firefox_android: "36"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -18,97 +20,9 @@ compat_features:
   #   safari_ios: "1"
   - css.types.image
 
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.6"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - css.properties.background-image.gradients
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "26"
-  #   chrome_android: "26"
-  #   edge: "12"
-  #   firefox: "3.6"
-  #   firefox_android: "4"
-  #   safari: "7"
-  #   safari_ios: "7"
-  - css.types.image.gradient
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "26"
-  #   chrome_android: "26"
-  #   edge: "12"
-  #   firefox: "16"
-  #   firefox_android: "16"
-  #   safari: "7"
-  #   safari_ios: "7"
-  - css.types.image.gradient.linear-gradient
-  - css.types.image.gradient.radial-gradient
-  - css.types.image.gradient.repeating-linear-gradient
-  - css.types.image.gradient.repeating-radial-gradient
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "13"
-  #   chrome_android: "18"
-  #   edge: "79"
-  #   firefox: "3.6"
-  #   firefox_android: "4"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - svg.global_attributes.image-rendering
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "32"
-  #   chrome_android: "32"
-  #   edge: "79"
-  #   firefox: "36"
-  #   firefox_android: "36"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - css.properties.object-fit
-  - css.properties.object-fit.contain
-  - css.properties.object-fit.cover
-  - css.properties.object-fit.fill
-  - css.properties.object-fit.none
-  - css.properties.object-fit.scale-down
-  - css.properties.object-position
-
-  # baseline: false
-  # support:
-  #   chrome: "26"
-  #   chrome_android: "26"
-  #   edge: "12"
-  #   safari: "7"
-  #   safari_ios: "7"
-  - css.properties.content.gradient
-
-  # baseline: false
-  # support:
-  #   chrome: "104"
-  #   chrome_android: "104"
-  #   edge: "104"
-  - css.properties.object-view-box.none
-
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
-  - css.types.image.image
+  # support:
+  #   firefox: "36"
+  #   firefox_android: "36"
+  - css.properties.object-position.applies_to_iframe_elements

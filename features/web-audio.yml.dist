@@ -551,10 +551,12 @@ compat_features:
   - api.BaseAudioContext.createOscillator
   - api.BaseAudioContext.createPanner
   - api.BaseAudioContext.createPeriodicWave
+  - api.BaseAudioContext.createPeriodicWave.constraints_disableNormalization_parameter
   - api.BaseAudioContext.createStereoPanner
   - api.BaseAudioContext.createWaveShaper
   - api.BaseAudioContext.currentTime
   - api.BaseAudioContext.decodeAudioData
+  - api.BaseAudioContext.decodeAudioData.returns_promise
   - api.BaseAudioContext.destination
   - api.BaseAudioContext.listener
   - api.BaseAudioContext.sampleRate
@@ -612,6 +614,27 @@ compat_features:
   #   safari: "14.1"
   #   safari_ios: "14.5"
   - api.AudioParamMap
+  - api.AudioParamMap.@@iterator
+  - api.AudioParamMap.entries
+  - api.AudioParamMap.forEach
+  - api.AudioParamMap.get
+  - api.AudioParamMap.has
+  - api.AudioParamMap.keys
+  - api.AudioParamMap.size
+  - api.AudioParamMap.values
+
+  # baseline: high
+  # baseline_low_date: 2021-04-26
+  # baseline_high_date: 2023-10-26
+  # support:
+  #   chrome: "74"
+  #   chrome_android: "74"
+  #   edge: "79"
+  #   firefox: "61"
+  #   firefox_android: "61"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.AudioContext.AudioContext.options_sampleRate_parameter
 
   # baseline: false
   # support:
@@ -641,6 +664,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "58"
+  #   chrome_android: "58"
+  #   edge: "79"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.AudioContext.AudioContext.options_latencyHint_parameter
+
+  # baseline: false
+  # support:
   #   chrome: "68"
   #   chrome_android: "68"
   #   edge: "79"
@@ -665,6 +697,33 @@ compat_features:
   #   safari_ios: "6"
   - api.AudioParam.exponentialRampToValueAtTime
   - api.AudioParam.linearRampToValueAtTime
+
+  # baseline: false
+  # support:
+  #   chrome: "43"
+  #   chrome_android: "43"
+  #   edge: ≤18
+  - api.AudioNode.disconnect.destination_parameter
+  - api.AudioNode.disconnect.input_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "110"
+  #   chrome_android: "110"
+  #   edge: "110"
+  - api.AudioContext.AudioContext.options_sinkId_parameter
+  - api.AudioContext.setSinkId
+  - api.AudioContext.sinkId
+  - api.AudioContext.sinkchange_event
+  - api.AudioSinkInfo
+  - api.AudioSinkInfo.type
+
+  # baseline: false
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  - api.AudioContext.error_event
 
   # baseline: false
   # support:

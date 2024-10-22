@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-21
 name: Content Security Policy Level 3
 description: TODO
 spec: https://w3c.github.io/webappsec-csp/
@@ -15,6 +15,7 @@ compat_features:
   - api.CSPViolationReportBody.sample
   - api.CSPViolationReportBody.sourceFile
   - api.CSPViolationReportBody.statusCode
+  - api.CSPViolationReportBody.toJSON
   - api.Element.securitypolicyviolation_event
   - api.SecurityPolicyViolationEvent
   - api.SecurityPolicyViolationEvent.SecurityPolicyViolationEvent
@@ -30,6 +31,7 @@ compat_features:
   - api.SecurityPolicyViolationEvent.sourceFile
   - api.SecurityPolicyViolationEvent.statusCode
   - api.SecurityPolicyViolationEvent.violatedDirective
+  - api.SecurityPolicyViolationEvent.worker_support
   - api.WorkerGlobalScope.securitypolicyviolation_event
   - http.headers.Content-Security-Policy
   - http.headers.Content-Security-Policy-Report-Only
@@ -44,14 +46,20 @@ compat_features:
   - http.headers.Content-Security-Policy.img-src
   - http.headers.Content-Security-Policy.manifest-src
   - http.headers.Content-Security-Policy.media-src
+  - http.headers.Content-Security-Policy.meta-element-support
   - http.headers.Content-Security-Policy.object-src
+  - http.headers.Content-Security-Policy.report-sample
   - http.headers.Content-Security-Policy.report-to
   - http.headers.Content-Security-Policy.sandbox
   - http.headers.Content-Security-Policy.script-src
   - http.headers.Content-Security-Policy.script-src-attr
   - http.headers.Content-Security-Policy.script-src-elem
   - http.headers.Content-Security-Policy.script-src.external_scripts
+  - http.headers.Content-Security-Policy.script-src.wasm-unsafe-eval
+  - http.headers.Content-Security-Policy.strict-dynamic
   - http.headers.Content-Security-Policy.style-src
   - http.headers.Content-Security-Policy.style-src-attr
   - http.headers.Content-Security-Policy.style-src-elem
+  - http.headers.Content-Security-Policy.unsafe-hashes
   - http.headers.Content-Security-Policy.worker-src
+  - http.headers.Content-Security-Policy.worker_support

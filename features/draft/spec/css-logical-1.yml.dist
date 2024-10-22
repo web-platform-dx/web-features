@@ -4,11 +4,8 @@
 status:
   baseline: false
   support:
-    chrome: "2"
-    chrome_android: "18"
-    edge: "12"
-    firefox: "19"
-    firefox_android: "19"
+    firefox: ≤72
+    firefox_android: "79"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -24,14 +21,23 @@ compat_features:
   - css.properties.caption-side
   - css.properties.clear
   - css.properties.float
-  - css.properties.text-align
 
-  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: ≤80
+  #   chrome_android: "80"
+  #   edge: "80"
+  #   firefox: ≤72
+  #   firefox_android: "79"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
+  - css.properties.caption-side.bottom
+  - css.properties.caption-side.top
+
   # baseline: false
   # support:
-  #   chrome: "2"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "19"
-  #   firefox_android: "19"
-  - css.at-rules.page
+  #   firefox: "42"
+  #   firefox_android: "42"
+  - css.properties.caption-side.writing-mode_relative_values

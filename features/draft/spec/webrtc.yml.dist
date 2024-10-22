@@ -162,6 +162,7 @@ compat_features:
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - api.RTCRtpReceiver.getContributingSources
+  - api.RTCRtpReceiver.getContributingSources.audio_tracks_supported
 
   # baseline: high
   # baseline_low_date: 2019-03-25
@@ -189,6 +190,7 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - api.RTCDataChannel.binaryType
+  - api.RTCDataChannel.binaryType.arraybuffer_value
   - api.RTCDataChannel.bufferedAmount
   - api.RTCDataChannel.close
   - api.RTCDataChannel.close_event
@@ -309,8 +311,13 @@ compat_features:
   #   firefox_android: "44"
   #   safari: "11"
   #   safari_ios: "11"
+  - api.RTCPeerConnection.addIceCandidate.returns_promise
+  - api.RTCPeerConnection.createAnswer.returns_promise
   - api.RTCPeerConnection.createDataChannel
+  - api.RTCPeerConnection.createOffer.returns_promise
   - api.RTCPeerConnection.datachannel_event
+  - api.RTCPeerConnection.setLocalDescription.returns_promise
+  - api.RTCPeerConnection.setRemoteDescription.returns_promise
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -374,12 +381,27 @@ compat_features:
   #   chrome: "58"
   #   chrome_android: "58"
   #   edge: "79"
+  #   firefox: "44"
+  #   firefox_android: "44"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.RTCPeerConnection.getStats.returns_promise
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "58"
+  #   chrome_android: "58"
+  #   edge: "79"
   #   firefox: "48"
   #   firefox_android: "48"
   #   safari: "11"
   #   safari_ios: "11"
+  - api.RTCStatsReport.@@iterator
   - api.RTCStatsReport.entries
   - api.RTCStatsReport.keys
+  - api.RTCStatsReport.values
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -461,6 +483,7 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - api.RTCPeerConnection.addTransceiver
+  - api.RTCPeerConnection.addTransceiver.init_direction_parameter
   - api.RTCPeerConnection.getTransceivers
   - api.RTCRtpTransceiver.direction
   - api.RTCRtpTransceiver.mid
@@ -479,6 +502,7 @@ compat_features:
   #   firefox_android: "59"
   #   safari: "12.1"
   #   safari_ios: "12.2"
+  - api.RTCPeerConnection.addTransceiver.init_streams_parameter
   - api.RTCRtpTransceiver.currentDirection
 
   # baseline: high
@@ -522,6 +546,20 @@ compat_features:
   #   safari_ios: "12.2"
   - api.RTCRtpReceiver.getContributingSources.audioLevel
   - api.RTCRtpReceiver.getSynchronizationSources
+  - api.RTCRtpReceiver.getSynchronizationSources.audio_tracks_supported
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "73"
+  #   chrome_android: "73"
+  #   edge: "79"
+  #   firefox: "68"
+  #   firefox_android: "68"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - api.RTCRtpReceiver.getSynchronizationSources.video_tracks_supported
 
   # baseline: high
   # baseline_low_date: ≤2020-01-15
@@ -584,6 +622,19 @@ compat_features:
   # baseline_low_date: ≤2020-01-15
   # baseline_high_date: ≤2022-07-15
   # support:
+  #   chrome: "67"
+  #   chrome_android: "67"
+  #   edge: ≤79
+  #   firefox: "44"
+  #   firefox_android: "44"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.RTCPeerConnection.getStats.selector_parameter
+
+  # baseline: high
+  # baseline_low_date: ≤2020-01-15
+  # baseline_high_date: ≤2022-07-15
+  # support:
   #   chrome: "68"
   #   chrome_android: "68"
   #   edge: ≤79
@@ -632,6 +683,19 @@ compat_features:
   #   safari_ios: "11"
   - api.RTCRtpSender.setParameters.parameters_encodings_parameter
   - api.RTCRtpSender.setParameters.parameters_encodings_parameter.maxBitrate
+
+  # baseline: high
+  # baseline_low_date: ≤2020-01-15
+  # baseline_high_date: ≤2022-07-15
+  # support:
+  #   chrome: "73"
+  #   chrome_android: "73"
+  #   edge: ≤79
+  #   firefox: "68"
+  #   firefox_android: "68"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - api.RTCRtpReceiver.getContributingSources.video_tracks_supported
 
   # baseline: high
   # baseline_low_date: 2020-03-24
@@ -729,6 +793,19 @@ compat_features:
   - api.RTCPeerConnection.restartIce
 
   # baseline: high
+  # baseline_low_date: 2021-04-26
+  # baseline_high_date: 2023-10-26
+  # support:
+  #   chrome: "80"
+  #   chrome_android: "80"
+  #   edge: "80"
+  #   firefox: "75"
+  #   firefox_android: "79"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.RTCPeerConnection.setLocalDescription.description_parameter_optional
+
+  # baseline: high
   # baseline_low_date: 2022-03-14
   # baseline_high_date: 2024-09-14
   # support:
@@ -759,6 +836,19 @@ compat_features:
   # baseline_low_date: 2022-03-14
   # baseline_high_date: 2024-09-14
   # support:
+  #   chrome: "72"
+  #   chrome_android: "72"
+  #   edge: "79"
+  #   firefox: "82"
+  #   firefox_android: "82"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - api.RTCDtlsTransport.statechange_event
+
+  # baseline: high
+  # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
+  # support:
   #   chrome: "75"
   #   chrome_android: "75"
   #   edge: "13"
@@ -767,6 +857,19 @@ compat_features:
   #   safari: "15.4"
   #   safari_ios: "15.4"
   - api.RTCRtpSender.transport
+
+  # baseline: high
+  # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
+  # support:
+  #   chrome: "80"
+  #   chrome_android: "80"
+  #   edge: "80"
+  #   firefox: "70"
+  #   firefox_android: "79"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - api.RTCPeerConnection.setRemoteDescription.implicit_rollback
 
   # baseline: high
   # baseline_low_date: 2022-03-14
@@ -793,6 +896,30 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - api.RTCPeerConnection.setConfiguration
+
+  # baseline: low
+  # baseline_low_date: 2023-02-14
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "69"
+  #   edge: "79"
+  #   firefox: "110"
+  #   firefox_android: "110"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.RTCPeerConnection.addTransceiver.init_sendEncodings_parameter
+
+  # baseline: low
+  # baseline_low_date: 2023-02-14
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "69"
+  #   edge: ≤79
+  #   firefox: "110"
+  #   firefox_android: "110"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - api.RTCRtpSender.setParameters.parameters_encodings_parameter.active
 
   # baseline: low
   # baseline_low_date: 2023-05-09
@@ -975,6 +1102,18 @@ compat_features:
   #   safari_ios: "13.4"
   - api.RTCDTMFSender.canInsertDTMF
 
+  # baseline: low
+  # baseline_low_date: 2024-09-19
+  # support:
+  #   chrome: "129"
+  #   chrome_android: "129"
+  #   edge: "129"
+  #   firefox: "22"
+  #   firefox_android: "24"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.RTCDataChannel.binaryType.blob_value
+
   # baseline: false
   # support:
   #   chrome: "74"
@@ -984,6 +1123,33 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - api.RTCRtpSender.setParameters.parameters_encodings_parameter.scaleResolutionDownBy
+
+  # baseline: false
+  # support:
+  #   chrome: "56"
+  #   chrome_android: "57"
+  #   edge: ≤79
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.RTCPeerConnection.RTCPeerConnection.configuration_iceCandidatePoolSize_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "57"
+  #   chrome_android: "57"
+  #   edge: ≤79
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - api.RTCPeerConnection.RTCPeerConnection.configuration_rtcpMuxPolicy_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "58"
+  #   chrome_android: "58"
+  #   edge: "79"
+  #   firefox: "63"
+  #   firefox_android: "63"
+  - api.RTCDataChannel.sctp_sdp_21
 
   # baseline: false
   # support:
@@ -1033,6 +1199,7 @@ compat_features:
   #   edge: "12"
   #   safari: "15.4"
   #   safari_ios: "15.4"
+  - api.RTCDtlsTransport.error_event
   - api.RTCDtlsTransport.getRemoteCertificates
 
   # baseline: false
@@ -1116,6 +1283,17 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "88"
+  #   chrome_android: "88"
+  #   edge: "88"
+  #   firefox: "118"
+  #   firefox_android: "118"
+  - api.RTCPeerConnection.getReceivers.stopped_transceivers_removed
+  - api.RTCPeerConnection.getSenders.stopped_transceivers_removed
+  - api.RTCPeerConnection.getTransceivers.stopped_transceivers_removed
+
+  # baseline: false
+  # support:
   #   chrome: "103"
   #   chrome_android: "103"
   #   edge: "103"
@@ -1152,6 +1330,14 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "86"
+  #   chrome_android: "86"
+  #   edge: "86"
+  - api.RTCRtpReceiver.createEncodedStreams
+  - api.RTCRtpSender.createEncodedStreams
+
+  # baseline: false
+  # support:
   #   chrome: "124"
   #   chrome_android: "124"
   #   edge: "124"
@@ -1163,3 +1349,15 @@ compat_features:
   #   safari: "12"
   #   safari_ios: "12"
   - api.RTCPeerConnectionIceEvent.url
+
+  # baseline: false
+  # support:
+  #   firefox: "44"
+  #   firefox_android: "44"
+  - api.RTCPeerConnection.RTCPeerConnection.configuration_peerIdentity_parameter
+
+  # baseline: false
+  # support:
+  #   firefox: "64"
+  #   firefox_android: "64"
+  - api.RTCRtpSender.setParameters.parameters_encodings_parameter.rid

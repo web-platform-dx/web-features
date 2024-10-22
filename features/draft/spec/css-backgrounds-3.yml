@@ -1,16 +1,11 @@
-draft_date: 2024-09-30
+draft_date: 2024-10-21
 name: CSS Backgrounds and Borders Module Level 3
 description: TODO
 spec: https://drafts.csswg.org/css-backgrounds-3/
 compat_features:
-  - css.properties.background
-  - css.properties.background-attachment
-  - css.properties.background-attachment.fixed
-  - css.properties.background-attachment.local
-  - css.properties.background-attachment.scroll
-  - css.properties.background-clip.border-area
-  - css.properties.background-color
+  - css.properties.background-attachment.multiple_backgrounds
   - css.properties.background-image
+  - css.properties.background-image.multiple_backgrounds
   - css.properties.background-image.none
   - css.properties.background-origin
   - css.properties.background-origin.border-box
@@ -18,37 +13,66 @@ compat_features:
   - css.properties.background-origin.padding-box
   - css.properties.background-position
   - css.properties.background-position-x
+  - css.properties.background-position-x.side-relative_values
   - css.properties.background-position-y
+  - css.properties.background-position-y.side-relative_values
   - css.properties.background-position.bottom
   - css.properties.background-position.center
   - css.properties.background-position.left
+  - css.properties.background-position.multiple_backgrounds
   - css.properties.background-position.right
+  - css.properties.background-position.side-relative_values
   - css.properties.background-position.top
-  - css.properties.background-repeat
-  - css.properties.background-repeat.no-repeat
-  - css.properties.background-repeat.repeat
-  - css.properties.background-repeat.repeat-x
-  - css.properties.background-repeat.repeat-y
-  - css.properties.background-repeat.round
-  - css.properties.background-repeat.space
-  - css.properties.background-size
-  - css.properties.background-size.auto
-  - css.properties.background-size.contain
-  - css.properties.background-size.cover
+  - css.properties.background.background-clip
+  - css.properties.background.background-origin
+  - css.properties.background.multiple_backgrounds
   - css.properties.border-image-repeat.repeat
   - css.properties.border-image-repeat.stretch
   - css.properties.border-image-width.auto
   - css.properties.box-shadow
+  - css.properties.box-shadow.inset
+  - css.properties.box-shadow.multiple_shadows
+  - css.properties.box-shadow.spread_radius
   - css.types.line-style
 
 # The following features in the spec are already part of web-features:
+# - background:
+#   - css.properties.background
+# - SVG:
+#   - css.properties.background.SVG_image_as_background
+#   - css.properties.background-image.svg_images
+# - background-size:
+#   - css.properties.background.background-size
+#   - css.properties.background-size
+#   - css.properties.background-size.auto
+#   - css.properties.background-size.contain
+#   - css.properties.background-size.cover
+# - background-attachment:
+#   - css.properties.background-attachment
+#   - css.properties.background-attachment.fixed
+#   - css.properties.background-attachment.local
+#   - css.properties.background-attachment.scroll
 # - background-clip:
 #   - css.properties.background-clip
 #   - css.properties.background-clip.border-box
 #   - css.properties.background-clip.content-box
 #   - css.properties.background-clip.padding-box
+# - background-clip: border-area:
+#   - css.properties.background-clip.border-area
 # - background-clip: text:
 #   - css.properties.background-clip.text
+# - background-color:
+#   - css.properties.background-color
+# - background-repeat:
+#   - css.properties.background-repeat
+#   - css.properties.background-repeat.2-value
+#   - css.properties.background-repeat.multiple_backgrounds
+#   - css.properties.background-repeat.no-repeat
+#   - css.properties.background-repeat.repeat
+#   - css.properties.background-repeat.repeat-x
+#   - css.properties.background-repeat.repeat-y
+#   - css.properties.background-repeat.round
+#   - css.properties.background-repeat.space
 # - Borders:
 #   - css.properties.border
 #   - css.properties.border-bottom
@@ -82,12 +106,26 @@ compat_features:
 #   - css.properties.border-width
 # - border-radius:
 #   - css.properties.border-bottom-left-radius
+#   - css.properties.border-bottom-left-radius.elliptical_corners
+#   - css.properties.border-bottom-left-radius.percentages
 #   - css.properties.border-bottom-right-radius
+#   - css.properties.border-bottom-right-radius.elliptical_corners
+#   - css.properties.border-bottom-right-radius.percentages
 #   - css.properties.border-radius
+#   - css.properties.border-radius.4_values_for_4_corners
+#   - css.properties.border-radius.elliptical_borders
+#   - css.properties.border-radius.percentages
 #   - css.properties.border-top-left-radius
+#   - css.properties.border-top-left-radius.elliptical_corners
+#   - css.properties.border-top-left-radius.percentages
 #   - css.properties.border-top-right-radius
+#   - css.properties.border-top-right-radius.elliptical_corners
+#   - css.properties.border-top-right-radius.percentages
 # - Border images:
 #   - css.properties.border-image
+#   - css.properties.border-image.fill
+#   - css.properties.border-image.gradient
+#   - css.properties.border-image.optional_border_image_slice
 #   - css.properties.border-image-outset
 #   - css.properties.border-image-repeat
 #   - css.properties.border-image-repeat.round

@@ -1,35 +1,44 @@
-draft_date: 2024-09-30
+draft_date: 2024-10-21
 name: CSS Images Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-images-4/
 compat_features:
-  - css.properties.background-image.gradients
-  - css.properties.content.gradient
-  - css.properties.object-fit
-  - css.properties.object-fit.contain
-  - css.properties.object-fit.cover
-  - css.properties.object-fit.fill
-  - css.properties.object-fit.none
-  - css.properties.object-fit.scale-down
-  - css.properties.object-position
-  - css.properties.object-view-box.none
+  - css.properties.object-position.applies_to_iframe_elements
   - css.types.image
-  - css.types.image.gradient
-  - css.types.image.gradient.linear-gradient
-  - css.types.image.gradient.radial-gradient
-  - css.types.image.gradient.repeating-linear-gradient
-  - css.types.image.gradient.repeating-radial-gradient
-  - css.types.image.image
-  - svg.global_attributes.image-rendering
 
 # The following features in the spec are already part of web-features:
 # - element():
 #   - css.properties.background-image.element
 #   - css.types.image.element
+# - Gradients:
+#   - css.properties.background-image.gradients
+#   - css.types.image.gradient
+#   - css.types.image.gradient.linear-gradient
+#   - css.types.image.gradient.linear-gradient.doubleposition
+#   - css.types.image.gradient.linear-gradient.interpolation_hints
+#   - css.types.image.gradient.linear-gradient.premultiplied_gradients
+#   - css.types.image.gradient.linear-gradient.to
+#   - css.types.image.gradient.linear-gradient.unitless_0_angle
+#   - css.types.image.gradient.radial-gradient
+#   - css.types.image.gradient.radial-gradient.at
+#   - css.types.image.gradient.radial-gradient.doubleposition
+#   - css.types.image.gradient.radial-gradient.interpolation_hints
+#   - css.types.image.gradient.radial-gradient.premultiplied_gradients
+#   - css.types.image.gradient.repeating-linear-gradient
+#   - css.types.image.gradient.repeating-linear-gradient.doubleposition
+#   - css.types.image.gradient.repeating-linear-gradient.interpolation_hints
+#   - css.types.image.gradient.repeating-linear-gradient.to
+#   - css.types.image.gradient.repeating-linear-gradient.unitless_0_angle
+#   - css.types.image.gradient.repeating-radial-gradient
+#   - css.types.image.gradient.repeating-radial-gradient.at
+#   - css.types.image.gradient.repeating-radial-gradient.doubleposition
+#   - css.types.image.gradient.repeating-radial-gradient.interpolation_hints
 # - image-set():
 #   - css.properties.background-image.image-set
 #   - css.properties.content.image-set
 #   - css.types.image.image-set
+# - Content:
+#   - css.properties.content.gradient
 # - image-orientation:
 #   - css.properties.image-orientation
 #   - css.properties.image-orientation.from-image
@@ -42,8 +51,18 @@ compat_features:
 #   - css.properties.image-rendering.crisp-edges
 # - smooth:
 #   - css.properties.image-rendering.smooth
+# - object-fit:
+#   - css.properties.object-fit
+#   - css.properties.object-fit.contain
+#   - css.properties.object-fit.cover
+#   - css.properties.object-fit.fill
+#   - css.properties.object-fit.none
+#   - css.properties.object-fit.scale-down
+# - object-position:
+#   - css.properties.object-position
 # - object-view-box:
 #   - css.properties.object-view-box
+#   - css.properties.object-view-box.none
 # - shape-outside:
 #   - css.properties.shape-outside.gradient
 #   - css.properties.shape-outside.image
@@ -51,4 +70,22 @@ compat_features:
 #   - css.types.image.cross-fade
 # - Conic gradients:
 #   - css.types.image.gradient.conic-gradient
+#   - css.types.image.gradient.conic-gradient.doubleposition
 #   - css.types.image.gradient.repeating-conic-gradient
+# - Gradient interpolation:
+#   - css.types.image.gradient.conic-gradient.hue_interpolation_method
+#   - css.types.image.gradient.conic-gradient.interpolation_color_space
+#   - css.types.image.gradient.linear-gradient.hue_interpolation_method
+#   - css.types.image.gradient.linear-gradient.interpolation_color_space
+#   - css.types.image.gradient.radial-gradient.hue_interpolation_method
+#   - css.types.image.gradient.radial-gradient.interpolation_color_space
+#   - css.types.image.gradient.repeating-conic-gradient.hue_interpolation_method
+#   - css.types.image.gradient.repeating-conic-gradient.interpolation_color_space
+#   - css.types.image.gradient.repeating-linear-gradient.hue_interpolation_method
+#   - css.types.image.gradient.repeating-linear-gradient.interpolation_color_space
+#   - css.types.image.gradient.repeating-radial-gradient.hue_interpolation_method
+#   - css.types.image.gradient.repeating-radial-gradient.interpolation_color_space
+# - image():
+#   - css.types.image.image
+# - SVG:
+#   - svg.global_attributes.image-rendering

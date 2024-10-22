@@ -3,8 +3,18 @@
 
 status:
   baseline: false
-  support:
-    chrome: "100"
-    edge: "100"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "100"
+  #   edge: "100"
   - api.HIDDevice.forget
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.HID.worker_support
+  - api.HIDConnectionEvent.worker_support
+  - api.HIDDevice.worker_support
+  - api.HIDInputReportEvent.worker_support

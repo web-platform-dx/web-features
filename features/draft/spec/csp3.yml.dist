@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "75"
-    chrome_android: "75"
-    edge: "79"
+    chrome: "97"
+    chrome_android: "97"
+    edge: "97"
 compat_features:
   # baseline: high
   # baseline_low_date: 2016-08-02
@@ -96,6 +96,19 @@ compat_features:
   - http.headers.Content-Security-Policy.frame-ancestors
 
   # baseline: high
+  # baseline_low_date: ≤2018-10-02
+  # baseline_high_date: ≤2021-04-02
+  # support:
+  #   chrome: "25"
+  #   chrome_android: "25"
+  #   edge: ≤18
+  #   firefox: "45"
+  #   firefox_android: "45"
+  #   safari: "7"
+  #   safari_ios: "7"
+  - http.headers.Content-Security-Policy.meta-element-support
+
+  # baseline: high
   # baseline_low_date: 2018-10-23
   # baseline_high_date: 2021-04-23
   # support:
@@ -148,6 +161,19 @@ compat_features:
   - http.headers.Content-Security-Policy.manifest-src
 
   # baseline: high
+  # baseline_low_date: ≤2020-01-15
+  # baseline_high_date: ≤2022-07-15
+  # support:
+  #   chrome: "56"
+  #   chrome_android: "56"
+  #   edge: ≤79
+  #   firefox: "50"
+  #   firefox_android: "50"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - http.headers.Content-Security-Policy.worker_support
+
+  # baseline: high
   # baseline_low_date: 2021-09-20
   # baseline_high_date: 2024-03-20
   # support:
@@ -173,6 +199,19 @@ compat_features:
   #   safari_ios: "15"
   - api.SecurityPolicyViolationEvent.sample
 
+  # baseline: high
+  # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
+  # support:
+  #   chrome: "59"
+  #   chrome_android: "59"
+  #   edge: ≤79
+  #   firefox: "63"
+  #   firefox_android: "63"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - http.headers.Content-Security-Policy.report-sample
+
   # baseline: low
   # baseline_low_date: 2022-05-16
   # support:
@@ -184,6 +223,18 @@ compat_features:
   #   safari: "15.5"
   #   safari_ios: "15.5"
   - http.headers.Content-Security-Policy.worker-src
+
+  # baseline: low
+  # baseline_low_date: 2022-09-12
+  # support:
+  #   chrome: "97"
+  #   chrome_android: "97"
+  #   edge: "97"
+  #   firefox: "102"
+  #   firefox_android: "102"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - http.headers.Content-Security-Policy.script-src.wasm-unsafe-eval
 
   # baseline: low
   # baseline_low_date: 2022-12-13
@@ -201,6 +252,18 @@ compat_features:
   - http.headers.Content-Security-Policy.style-src-elem
 
   # baseline: low
+  # baseline_low_date: 2023-01-17
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "69"
+  #   edge: "79"
+  #   firefox: "109"
+  #   firefox_android: "109"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - http.headers.Content-Security-Policy.unsafe-hashes
+
+  # baseline: low
   # baseline_low_date: 2023-08-01
   # support:
   #   chrome: "59"
@@ -211,6 +274,25 @@ compat_features:
   #   safari: "15.6"
   #   safari_ios: "15.6"
   - http.headers.Content-Security-Policy.script-src.external_scripts
+
+  # baseline: false
+  # support:
+  #   chrome: "52"
+  #   chrome_android: "52"
+  #   edge: "79"
+  #   firefox: "52"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - http.headers.Content-Security-Policy.strict-dynamic
+
+  # baseline: false
+  # support:
+  #   chrome: "56"
+  #   chrome_android: "56"
+  #   edge: "15"
+  #   firefox: "63"
+  #   firefox_android: "63"
+  - api.SecurityPolicyViolationEvent.worker_support
 
   # baseline: false
   # support:
@@ -238,3 +320,10 @@ compat_features:
   - api.CSPViolationReportBody.sample
   - api.CSPViolationReportBody.sourceFile
   - api.CSPViolationReportBody.statusCode
+
+  # baseline: false
+  # support:
+  #   chrome: "80"
+  #   chrome_android: "80"
+  #   edge: "80"
+  - api.CSPViolationReportBody.toJSON

@@ -6,17 +6,17 @@ status:
   support: {}
 compat_features:
   # baseline: high
-  # baseline_low_date: 2016-11-15
-  # baseline_high_date: 2019-05-15
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
   # support:
   #   chrome: "50"
   #   chrome_android: "50"
-  #   edge: "12"
+  #   edge: "79"
   #   firefox: "50"
   #   firefox_android: "50"
   #   safari: "9"
   #   safari_ios: "9"
-  - css.properties.column-width
+  - css.properties.column-width.auto
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
@@ -24,4 +24,6 @@ compat_features:
   - css.properties.height.stretch
   - css.properties.max-height.stretch
   - css.properties.max-width.stretch
+  - css.properties.min-height.stretch
+  - css.properties.min-width.stretch
   - css.properties.width.stretch
