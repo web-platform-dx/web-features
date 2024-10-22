@@ -1,4 +1,4 @@
-draft_date: 2024-10-21
+draft_date: 2024-10-22
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -301,17 +301,8 @@ compat_features:
   - api.Navigator.registerProtocolHandler.secure_context_required
   - api.Navigator.unregisterProtocolHandler
   - api.Navigator.userAgent
-  - api.NotRestoredReasonDetails
-  - api.NotRestoredReasonDetails.reason
   - api.NotRestoredReasonDetails.toJSON
-  - api.NotRestoredReasons
-  - api.NotRestoredReasons.children
-  - api.NotRestoredReasons.id
-  - api.NotRestoredReasons.name
-  - api.NotRestoredReasons.reasons
-  - api.NotRestoredReasons.src
   - api.NotRestoredReasons.toJSON
-  - api.NotRestoredReasons.url
   - api.OffscreenCanvas.convertToBlob.option_type_parameter_webp
   - api.OffscreenCanvas.getContext.webgl2_context
   - api.OffscreenCanvas.getContext.webgl_context
@@ -390,11 +381,6 @@ compat_features:
   - api.TrackEvent
   - api.TrackEvent.TrackEvent
   - api.TrackEvent.track
-  - api.VisibilityStateEntry
-  - api.VisibilityStateEntry.duration
-  - api.VisibilityStateEntry.entryType
-  - api.VisibilityStateEntry.name
-  - api.VisibilityStateEntry.startTime
   - api.Window
   - api.Window.DOMContentLoaded_event
   - api.Window.alert
@@ -2074,6 +2060,16 @@ compat_features:
 #   - api.UserActivation
 #   - api.UserActivation.hasBeenActive
 #   - api.UserActivation.isActive
+# - Back/forward cache blocking reasons:
+#   - api.NotRestoredReasonDetails
+#   - api.NotRestoredReasonDetails.reason
+#   - api.NotRestoredReasons
+#   - api.NotRestoredReasons.children
+#   - api.NotRestoredReasons.id
+#   - api.NotRestoredReasons.name
+#   - api.NotRestoredReasons.reasons
+#   - api.NotRestoredReasons.src
+#   - api.NotRestoredReasons.url
 # - paint():
 #   - api.PaintRenderingContext2D.beginPath
 #   - api.PaintRenderingContext2D.clearRect
@@ -2135,6 +2131,12 @@ compat_features:
 #   - api.Window.localStorage
 #   - api.Window.sessionStorage
 #   - api.Window.storage_event
+# - Page visibility state:
+#   - api.VisibilityStateEntry
+#   - api.VisibilityStateEntry.duration
+#   - api.VisibilityStateEntry.entryType
+#   - api.VisibilityStateEntry.name
+#   - api.VisibilityStateEntry.startTime
 # - Print events:
 #   - api.Window.afterprint_event
 #   - api.Window.beforeprint_event

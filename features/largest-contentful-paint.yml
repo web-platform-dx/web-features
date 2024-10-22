@@ -1,7 +1,7 @@
-draft_date: 2024-09-09
-name: Largest Contentful Paint
-description: TODO
+name: Largest contentful paint (LCP)
+description: The `largest-contentful-paint` performance entry and the `LargestContentfulPaint` API measures  the time it takes for the largest image or text to appear. Largest contentful paint (LCP) is a common metric for perceived loading times.
 spec: https://w3c.github.io/largest-contentful-paint/
+group: performance
 compat_features:
   - api.LargestContentfulPaint
   - api.LargestContentfulPaint.element

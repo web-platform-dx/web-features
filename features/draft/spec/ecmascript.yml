@@ -1,43 +1,15 @@
-draft_date: 2024-10-21
+draft_date: 2024-10-22
 name: ECMAScript Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
 compat_features:
   - javascript.builtins.Array.@@species
   - javascript.builtins.Array.@@unscopables
-  - javascript.builtins.ArrayBuffer
-  - javascript.builtins.ArrayBuffer.@@species
-  - javascript.builtins.ArrayBuffer.ArrayBuffer
-  - javascript.builtins.ArrayBuffer.byteLength
-  - javascript.builtins.ArrayBuffer.isView
-  - javascript.builtins.ArrayBuffer.slice
   - javascript.builtins.Atomics.Atomic_operations_on_non_shared_buffers
-  - javascript.builtins.DataView
-  - javascript.builtins.DataView.DataView
-  - javascript.builtins.DataView.buffer
-  - javascript.builtins.DataView.byteLength
-  - javascript.builtins.DataView.byteOffset
-  - javascript.builtins.DataView.getFloat32
-  - javascript.builtins.DataView.getFloat64
-  - javascript.builtins.DataView.getInt16
-  - javascript.builtins.DataView.getInt32
-  - javascript.builtins.DataView.getInt8
-  - javascript.builtins.DataView.getUint16
-  - javascript.builtins.DataView.getUint32
-  - javascript.builtins.DataView.getUint8
-  - javascript.builtins.DataView.setFloat32
-  - javascript.builtins.DataView.setFloat64
-  - javascript.builtins.DataView.setInt16
-  - javascript.builtins.DataView.setInt32
-  - javascript.builtins.DataView.setInt8
-  - javascript.builtins.DataView.setUint16
-  - javascript.builtins.DataView.setUint32
-  - javascript.builtins.DataView.setUint8
   - javascript.builtins.Error.Error.options_cause_parameter
   - javascript.builtins.Error.cause
   - javascript.builtins.FinalizationRegistry.symbol_as_target
   - javascript.builtins.Function.toString.toString_revision
-  - javascript.builtins.Int16Array.Int16Array.iterable_allowed
   - javascript.builtins.Map.@@species
   - javascript.builtins.Object
   - javascript.builtins.Object.Object
@@ -72,10 +44,6 @@ compat_features:
   - javascript.builtins.Object.values
   - javascript.builtins.Promise.@@species
   - javascript.builtins.Set.@@species
-  - javascript.builtins.TypedArray.@@species
-  - javascript.builtins.TypedArray.index_properties_not_consulting_prototype
-  - javascript.builtins.TypedArray.iterable_in_constructor
-  - javascript.builtins.Uint8ClampedArray.Uint8ClampedArray.constructor_without_parameters
   - javascript.builtins.WeakRef.symbol_as_target
   - javascript.builtins.globalThis
   - javascript.builtins.parseInt.leading_zero_strings_as_decimal
@@ -241,6 +209,89 @@ compat_features:
 #   - javascript.builtins.TypedArray.toReversed
 #   - javascript.builtins.TypedArray.toSorted
 #   - javascript.builtins.TypedArray.with
+# - Typed arrays (initial support):
+#   - javascript.builtins.ArrayBuffer
+#   - javascript.builtins.ArrayBuffer.@@species
+#   - javascript.builtins.ArrayBuffer.ArrayBuffer
+#   - javascript.builtins.ArrayBuffer.byteLength
+#   - javascript.builtins.ArrayBuffer.isView
+#   - javascript.builtins.ArrayBuffer.slice
+#   - javascript.builtins.DataView
+#   - javascript.builtins.DataView.DataView
+#   - javascript.builtins.DataView.buffer
+#   - javascript.builtins.DataView.byteLength
+#   - javascript.builtins.DataView.byteOffset
+#   - javascript.builtins.DataView.getFloat32
+#   - javascript.builtins.DataView.getFloat64
+#   - javascript.builtins.DataView.getInt16
+#   - javascript.builtins.DataView.getInt32
+#   - javascript.builtins.DataView.getInt8
+#   - javascript.builtins.DataView.getUint16
+#   - javascript.builtins.DataView.getUint32
+#   - javascript.builtins.DataView.getUint8
+#   - javascript.builtins.DataView.setFloat32
+#   - javascript.builtins.DataView.setFloat64
+#   - javascript.builtins.DataView.setInt16
+#   - javascript.builtins.DataView.setInt32
+#   - javascript.builtins.DataView.setInt8
+#   - javascript.builtins.DataView.setUint16
+#   - javascript.builtins.DataView.setUint32
+#   - javascript.builtins.DataView.setUint8
+#   - javascript.builtins.Float32Array
+#   - javascript.builtins.Float32Array.Float32Array
+#   - javascript.builtins.Float32Array.Float32Array.constructor_without_parameters
+#   - javascript.builtins.Float32Array.Float32Array.iterable_allowed
+#   - javascript.builtins.Float64Array
+#   - javascript.builtins.Float64Array.Float64Array
+#   - javascript.builtins.Float64Array.Float64Array.constructor_without_parameters
+#   - javascript.builtins.Float64Array.Float64Array.iterable_allowed
+#   - javascript.builtins.Int16Array
+#   - javascript.builtins.Int16Array.Int16Array
+#   - javascript.builtins.Int16Array.Int16Array.constructor_without_parameters
+#   - javascript.builtins.Int16Array.Int16Array.iterable_allowed
+#   - javascript.builtins.Int32Array
+#   - javascript.builtins.Int32Array.Int32Array
+#   - javascript.builtins.Int32Array.Int32Array.constructor_without_parameters
+#   - javascript.builtins.Int32Array.Int32Array.iterable_allowed
+#   - javascript.builtins.Int8Array
+#   - javascript.builtins.Int8Array.Int8Array
+#   - javascript.builtins.Int8Array.Int8Array.constructor_without_parameters
+#   - javascript.builtins.Int8Array.Int8Array.iterable_allowed
+#   - javascript.builtins.TypedArray
+#   - javascript.builtins.TypedArray.@@species
+#   - javascript.builtins.TypedArray.BYTES_PER_ELEMENT
+#   - javascript.builtins.TypedArray.buffer
+#   - javascript.builtins.TypedArray.byteLength
+#   - javascript.builtins.TypedArray.byteOffset
+#   - javascript.builtins.TypedArray.constructor_without_parameters
+#   - javascript.builtins.TypedArray.index_properties_not_consulting_prototype
+#   - javascript.builtins.TypedArray.iterable_in_constructor
+#   - javascript.builtins.TypedArray.join
+#   - javascript.builtins.TypedArray.length
+#   - javascript.builtins.TypedArray.name
+#   - javascript.builtins.TypedArray.named_properties
+#   - javascript.builtins.TypedArray.reverse
+#   - javascript.builtins.TypedArray.set
+#   - javascript.builtins.TypedArray.slice
+#   - javascript.builtins.TypedArray.sort
+#   - javascript.builtins.TypedArray.subarray
+#   - javascript.builtins.TypedArray.toString
+#   - javascript.builtins.Uint16Array
+#   - javascript.builtins.Uint16Array.Uint16Array
+#   - javascript.builtins.Uint16Array.Uint16Array.constructor_without_parameters
+#   - javascript.builtins.Uint16Array.Uint16Array.iterable_allowed
+#   - javascript.builtins.Uint32Array
+#   - javascript.builtins.Uint32Array.Uint32Array
+#   - javascript.builtins.Uint32Array.Uint32Array.constructor_without_parameters
+#   - javascript.builtins.Uint32Array.Uint32Array.iterable_allowed
+#   - javascript.builtins.Uint8Array
+#   - javascript.builtins.Uint8Array.Uint8Array
+#   - javascript.builtins.Uint8Array.Uint8Array.constructor_without_parameters
+#   - javascript.builtins.Uint8Array.Uint8Array.iterable_allowed
+#   - javascript.builtins.Uint8ClampedArray
+#   - javascript.builtins.Uint8ClampedArray.Uint8ClampedArray
+#   - javascript.builtins.Uint8ClampedArray.Uint8ClampedArray.constructor_without_parameters
+#   - javascript.builtins.Uint8ClampedArray.Uint8ClampedArray.iterable_allowed
 # - Resizable buffers:
 #   - javascript.builtins.ArrayBuffer.ArrayBuffer.maxByteLength_option
 #   - javascript.builtins.ArrayBuffer.maxByteLength
@@ -472,57 +523,6 @@ compat_features:
 #   - javascript.builtins.WeakRef.deref
 # - Float16Array:
 #   - javascript.builtins.Float16Array.Float16Array
-# - Typed arrays (initial support):
-#   - javascript.builtins.Float32Array
-#   - javascript.builtins.Float32Array.Float32Array
-#   - javascript.builtins.Float32Array.Float32Array.constructor_without_parameters
-#   - javascript.builtins.Float32Array.Float32Array.iterable_allowed
-#   - javascript.builtins.Float64Array
-#   - javascript.builtins.Float64Array.Float64Array
-#   - javascript.builtins.Float64Array.Float64Array.constructor_without_parameters
-#   - javascript.builtins.Float64Array.Float64Array.iterable_allowed
-#   - javascript.builtins.Int16Array
-#   - javascript.builtins.Int16Array.Int16Array
-#   - javascript.builtins.Int16Array.Int16Array.constructor_without_parameters
-#   - javascript.builtins.Int32Array
-#   - javascript.builtins.Int32Array.Int32Array
-#   - javascript.builtins.Int32Array.Int32Array.constructor_without_parameters
-#   - javascript.builtins.Int32Array.Int32Array.iterable_allowed
-#   - javascript.builtins.Int8Array
-#   - javascript.builtins.Int8Array.Int8Array
-#   - javascript.builtins.Int8Array.Int8Array.constructor_without_parameters
-#   - javascript.builtins.Int8Array.Int8Array.iterable_allowed
-#   - javascript.builtins.TypedArray
-#   - javascript.builtins.TypedArray.BYTES_PER_ELEMENT
-#   - javascript.builtins.TypedArray.buffer
-#   - javascript.builtins.TypedArray.byteLength
-#   - javascript.builtins.TypedArray.byteOffset
-#   - javascript.builtins.TypedArray.constructor_without_parameters
-#   - javascript.builtins.TypedArray.join
-#   - javascript.builtins.TypedArray.length
-#   - javascript.builtins.TypedArray.name
-#   - javascript.builtins.TypedArray.named_properties
-#   - javascript.builtins.TypedArray.reverse
-#   - javascript.builtins.TypedArray.set
-#   - javascript.builtins.TypedArray.slice
-#   - javascript.builtins.TypedArray.sort
-#   - javascript.builtins.TypedArray.subarray
-#   - javascript.builtins.TypedArray.toString
-#   - javascript.builtins.Uint16Array
-#   - javascript.builtins.Uint16Array.Uint16Array
-#   - javascript.builtins.Uint16Array.Uint16Array.constructor_without_parameters
-#   - javascript.builtins.Uint16Array.Uint16Array.iterable_allowed
-#   - javascript.builtins.Uint32Array
-#   - javascript.builtins.Uint32Array.Uint32Array
-#   - javascript.builtins.Uint32Array.Uint32Array.constructor_without_parameters
-#   - javascript.builtins.Uint32Array.Uint32Array.iterable_allowed
-#   - javascript.builtins.Uint8Array
-#   - javascript.builtins.Uint8Array.Uint8Array
-#   - javascript.builtins.Uint8Array.Uint8Array.constructor_without_parameters
-#   - javascript.builtins.Uint8Array.Uint8Array.iterable_allowed
-#   - javascript.builtins.Uint8ClampedArray
-#   - javascript.builtins.Uint8ClampedArray.Uint8ClampedArray
-#   - javascript.builtins.Uint8ClampedArray.Uint8ClampedArray.iterable_allowed
 # - Functions:
 #   - javascript.builtins.Function
 #   - javascript.builtins.Function.@@hasInstance

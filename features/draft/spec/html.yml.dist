@@ -3886,17 +3886,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "115"
-  #   chrome_android: "115"
-  #   edge: "115"
-  - api.VisibilityStateEntry
-  - api.VisibilityStateEntry.duration
-  - api.VisibilityStateEntry.entryType
-  - api.VisibilityStateEntry.name
-  - api.VisibilityStateEntry.startTime
-
-  # baseline: false
-  # support:
   #   chrome: "117"
   #   chrome_android: "117"
   #   edge: "117"
@@ -3941,17 +3930,8 @@ compat_features:
   #   chrome: "125"
   #   chrome_android: "125"
   #   edge: "125"
-  - api.NotRestoredReasonDetails
-  - api.NotRestoredReasonDetails.reason
   - api.NotRestoredReasonDetails.toJSON
-  - api.NotRestoredReasons
-  - api.NotRestoredReasons.children
-  - api.NotRestoredReasons.id
-  - api.NotRestoredReasons.name
-  - api.NotRestoredReasons.reasons
-  - api.NotRestoredReasons.src
   - api.NotRestoredReasons.toJSON
-  - api.NotRestoredReasons.url
   - html.elements.template.shadowrootserializable
 
   # baseline: false
