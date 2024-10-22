@@ -1,9 +1,10 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-21
 name: User-Agent Client Hints
 description: TODO
 spec: https://wicg.github.io/ua-client-hints/
 compat_features:
   - api.Navigator.userAgentData
+  - api.Navigator.userAgentData.secure_context_required
   - api.NavigatorUAData
   - api.NavigatorUAData.brands
   - api.NavigatorUAData.getHighEntropyValues
