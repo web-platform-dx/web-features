@@ -1,11 +1,21 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-17
 name: WebUSB API
 description: TODO
 spec: https://wicg.github.io/webusb/
 compat_features:
-  - api.USBDevice.forget
-  - api.WorkerNavigator.usb
-  - http.headers.Permissions-Policy.usb
+  - api.USB.worker_support
+  - api.USBAlternateInterface.worker_support
+  - api.USBConfiguration.worker_support
+  - api.USBConnectionEvent.worker_support
+  - api.USBDevice.worker_support
+  - api.USBEndpoint.worker_support
+  - api.USBInTransferResult.worker_support
+  - api.USBInterface.worker_support
+  - api.USBIsochronousInTransferPacket.worker_support
+  - api.USBIsochronousInTransferResult.worker_support
+  - api.USBIsochronousOutTransferPacket.worker_support
+  - api.USBIsochronousOutTransferResult.worker_support
+  - api.USBOutTransferResult.worker_support
 
 # The following features in the spec are already part of web-features:
 # - WebUSB:
@@ -16,6 +26,7 @@ compat_features:
 #   - api.USB.getDevices
 #   - api.USB.requestDevice
 #   - api.USBAlternateInterface
+#   - api.USBAlternateInterface.USBAlternateInterface
 #   - api.USBAlternateInterface.alternateSetting
 #   - api.USBAlternateInterface.endpoints
 #   - api.USBAlternateInterface.interfaceClass
@@ -44,6 +55,7 @@ compat_features:
 #   - api.USBDevice.deviceVersionMajor
 #   - api.USBDevice.deviceVersionMinor
 #   - api.USBDevice.deviceVersionSubminor
+#   - api.USBDevice.forget
 #   - api.USBDevice.isochronousTransferIn
 #   - api.USBDevice.isochronousTransferOut
 #   - api.USBDevice.manufacturerName
@@ -63,29 +75,39 @@ compat_features:
 #   - api.USBDevice.usbVersionSubminor
 #   - api.USBDevice.vendorId
 #   - api.USBEndpoint
+#   - api.USBEndpoint.USBEndpoint
 #   - api.USBEndpoint.direction
 #   - api.USBEndpoint.endpointNumber
 #   - api.USBEndpoint.packetSize
 #   - api.USBEndpoint.type
 #   - api.USBInTransferResult
+#   - api.USBInTransferResult.USBInTransferResult
 #   - api.USBInTransferResult.data
 #   - api.USBInTransferResult.status
 #   - api.USBInterface
+#   - api.USBInterface.USBInterface
 #   - api.USBInterface.alternate
 #   - api.USBInterface.alternates
 #   - api.USBInterface.claimed
 #   - api.USBInterface.interfaceNumber
 #   - api.USBIsochronousInTransferPacket
+#   - api.USBIsochronousInTransferPacket.USBIsochronousInTransferPacket
 #   - api.USBIsochronousInTransferPacket.data
 #   - api.USBIsochronousInTransferPacket.status
 #   - api.USBIsochronousInTransferResult
+#   - api.USBIsochronousInTransferResult.USBIsochronousInTransferResult
 #   - api.USBIsochronousInTransferResult.data
 #   - api.USBIsochronousInTransferResult.packets
 #   - api.USBIsochronousOutTransferPacket
+#   - api.USBIsochronousOutTransferPacket.USBIsochronousOutTransferPacket
 #   - api.USBIsochronousOutTransferPacket.bytesWritten
 #   - api.USBIsochronousOutTransferPacket.status
 #   - api.USBIsochronousOutTransferResult
+#   - api.USBIsochronousOutTransferResult.USBIsochronousOutTransferResult
 #   - api.USBIsochronousOutTransferResult.packets
 #   - api.USBOutTransferResult
+#   - api.USBOutTransferResult.USBOutTransferResult
 #   - api.USBOutTransferResult.bytesWritten
 #   - api.USBOutTransferResult.status
+#   - api.WorkerNavigator.usb
+#   - http.headers.Permissions-Policy.usb
