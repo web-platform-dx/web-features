@@ -3,16 +3,16 @@
 
 status:
   baseline: high
-  baseline_low_date: 2020-01-15
-  baseline_high_date: 2022-07-15
+  baseline_low_date: 2015-07-29
+  baseline_high_date: 2018-01-29
   support:
-    chrome: "16"
+    chrome: "4"
     chrome_android: "18"
-    edge: "79"
-    firefox: "11"
-    firefox_android: "14"
-    safari: "6"
-    safari_ios: "6"
+    edge: "12"
+    firefox: "1.5"
+    firefox_android: "4"
+    safari: "5"
+    safari_ios: "4"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -28,6 +28,7 @@ compat_features:
   - api.Window.pagehide_event
   - api.Window.pageshow_event
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -54,7 +55,6 @@ compat_features:
   #   safari_ios: "4"
   - api.PageTransitionEvent.persisted
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15

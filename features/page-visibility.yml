@@ -2,6 +2,9 @@ name: Page Visibility
 description: "The Page Visibility API tells you the current visibility state of the page, and fires events you can watch for to know when it becomes visible or hidden."
 spec: https://html.spec.whatwg.org/multipage/interaction.html#page-visibility
 caniuse: pagevisibility
+status:
+  compute_from: api.Document.hidden
 compat_features:
+  - api.Document.hidden
   - api.Document.visibilityState
   - api.Document.visibilitychange_event
