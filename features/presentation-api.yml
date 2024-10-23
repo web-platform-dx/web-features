@@ -14,10 +14,14 @@ compat_features:
   - api.PresentationConnection
   - api.PresentationConnection.binaryType
   - api.PresentationConnection.close
+  - api.PresentationConnection.close_event
+  - api.PresentationConnection.connect_event
   - api.PresentationConnection.id
+  - api.PresentationConnection.message_event
   - api.PresentationConnection.send
   - api.PresentationConnection.state
   - api.PresentationConnection.terminate
+  - api.PresentationConnection.terminate_event
   - api.PresentationConnection.url
   - api.PresentationConnectionAvailableEvent
   - api.PresentationConnectionAvailableEvent.PresentationConnectionAvailableEvent
@@ -27,6 +31,7 @@ compat_features:
   - api.PresentationConnectionCloseEvent.message
   - api.PresentationConnectionCloseEvent.reason
   - api.PresentationConnectionList
+  - api.PresentationConnectionList.connectionavailable_event
   - api.PresentationConnectionList.connections
   - api.PresentationReceiver
   - api.PresentationReceiver.connectionList
@@ -35,5 +40,6 @@ compat_features:
   - api.PresentationRequest.connectionavailable_event
   - api.PresentationRequest.getAvailability
   - api.PresentationRequest.reconnect
+  - api.PresentationRequest.secure_context_required
   - api.PresentationRequest.start
   - html.elements.iframe.sandbox.allow-presentation
