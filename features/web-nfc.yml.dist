@@ -4,8 +4,11 @@
 status:
   baseline: false
   support:
-    chrome_android: "89"
+    chrome_android: "100"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome_android: "89"
   - api.NDEFMessage
   - api.NDEFMessage.NDEFMessage
   - api.NDEFMessage.records
@@ -32,3 +35,9 @@ compat_features:
   - api.NDEFRecord.recordType
   - api.NDEFRecord.secure_context_required
   - api.NDEFRecord.toRecords
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome_android: "100"
+  - api.NDEFReader.makeReadOnly
