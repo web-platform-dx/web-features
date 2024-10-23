@@ -4,9 +4,20 @@
 status:
   baseline: false
   support:
-    chrome: "95"
-    edge: "95"
+    chrome: "96"
+    edge: "96"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "95"
+  #   edge: "95"
   - api.EyeDropper
   - api.EyeDropper.EyeDropper
   - api.EyeDropper.open
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "96"
+  #   edge: "96"
+  - api.EyeDropper.secure_context_required

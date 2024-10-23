@@ -1,4 +1,4 @@
-draft_date: 2024-10-22
+draft_date: 2024-10-23
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -54,7 +54,6 @@ compat_features:
   - api.Document.referrer
   - api.Document.scripts
   - api.Document.scroll_event
-  - api.Document.securitypolicyviolation_event
   - api.Document.title
   - api.Document.visibilityState
   - api.Document.visibilitychange_event
@@ -73,7 +72,6 @@ compat_features:
   - api.Element.keyup_event
   - api.Element.outerHTML
   - api.Element.scroll_event
-  - api.Element.securitypolicyviolation_event
   - api.Element.wheel_event
   - api.ElementInternals.shadowRoot
   - api.ErrorEvent
@@ -614,7 +612,6 @@ compat_features:
   - html.elements.link.rel.preload.as-script
   - html.elements.link.rel.preload.as-style
   - html.elements.link.rel.preload.as-track
-  - html.elements.meta.http-equiv.content-security-policy
   - html.elements.meta.http-equiv.content-type
   - html.elements.meta.name.theme-color
   - html.elements.meter
@@ -970,6 +967,10 @@ compat_features:
 # - scrollend:
 #   - api.Document.scrollend_event
 #   - api.Element.scrollend_event
+# - Content Security Policy (CSP):
+#   - api.Document.securitypolicyviolation_event
+#   - api.Element.securitypolicyviolation_event
+#   - html.elements.meta.http-equiv.content-security-policy
 # - Mouse events:
 #   - api.Element.click_event
 #   - api.Element.dblclick_event
