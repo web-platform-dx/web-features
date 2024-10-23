@@ -137,12 +137,31 @@ async function main() {
       continue;
     }
 
-    const spec_url = feature.data.__compat.spec_url;
-    if (!spec_url) {
-      continue;
-    }
+    let parent_url: string | string[] = null;
+    if (!feature.spec_url.length) {
+      const parent_urls: (string | string[])[] = [];
+      const path = feature.id.split(".");
 
-    for (const url of feature.spec_url) {
+      let parentPath: string[] = [];
+      while (path.length > 0) {
+        parentPath.push(path.shift());
+        const parent_spec =
+          compat.features.get(parentPath.join("."))?.spec_url ?? [];
+        if (parent_spec.length) {
+          parent_urls.push(parent_spec);
+        }
+      }
+      if (!parent_urls.length) {
+        continue;
+      } else {
+        const mostSpecific = parent_urls.pop();
+        parent_url = Array.isArray(mostSpecific)
+          ? mostSpecific
+          : [mostSpecific];
+      }
+    }
+    const urls = parent_url ?? feature.spec_url;
+    for (const url of urls) {
       const spec = pageToSpec.get(normalize(url));
       if (!spec) {
         if (!selectedKeys) console.warn(`${url} not matched to any spec`);

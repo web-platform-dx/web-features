@@ -1,0 +1,24 @@
+name: Event timing
+description: The `event` and `first-input` performance entries and the `PerformanceEventTiming` API measures the latency of user input events, such as mouse clicks or keypresses, and the latency of the first user input. First Input Delay (FID) is a common metric for perceived responsiveness.
+spec: https://w3c.github.io/event-timing/
+group: performance
+status:
+  compute_from: api.PerformanceEventTiming
+compat_features:
+  - api.EventCounts
+  - api.EventCounts.@@iterator
+  - api.EventCounts.entries
+  - api.EventCounts.forEach
+  - api.EventCounts.get
+  - api.EventCounts.has
+  - api.EventCounts.keys
+  - api.EventCounts.size
+  - api.EventCounts.values
+  - api.Performance.eventCounts
+  - api.PerformanceEventTiming
+  - api.PerformanceEventTiming.cancelable
+  - api.PerformanceEventTiming.interactionId
+  - api.PerformanceEventTiming.processingEnd
+  - api.PerformanceEventTiming.processingStart
+  - api.PerformanceEventTiming.target
+  - api.PerformanceEventTiming.toJSON

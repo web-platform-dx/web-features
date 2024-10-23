@@ -327,5 +327,14 @@ compat_features:
 
   # baseline: false
   # support:
+  #   firefox: "4"
+  #   firefox_android: "4"
+  - api.TimeEvent
+  - api.TimeEvent.detail
+  - api.TimeEvent.initTimeEvent
+  - api.TimeEvent.view
+
+  # baseline: false
+  # support:
   #   safari_ios: "1"
   - api.SVGAnimateColorElement

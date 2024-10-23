@@ -1,0 +1,13 @@
+name: Display
+description: The `display` CSS property sets the display behavior of an element's box within its layout and sets the layout behavior for its child elements.
+spec: https://drafts.csswg.org/css-display-3/#the-display-properties
+group: css
+status:
+  compute_from: css.properties.display
+compat_features:
+  - css.properties.display
+  - css.properties.display.none
+  - css.properties.display.none.option_is_hidden
+  - css.properties.display.block
+  - css.properties.display.inline
+  - css.properties.display.inline-block

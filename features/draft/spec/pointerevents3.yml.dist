@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "128"
-    chrome_android: "128"
-    edge: "128"
+  support: {}
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -33,6 +30,22 @@ compat_features:
   #   safari: "13"
   #   safari_ios: "9.3"
   - css.properties.touch-action
+  - css.properties.touch-action.manipulation
+
+  # baseline: high
+  # baseline_low_date: 2019-09-19
+  # baseline_high_date: 2022-03-19
+  # support:
+  #   chrome: "36"
+  #   chrome_android: "36"
+  #   edge: "12"
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "13"
+  #   safari_ios: "13"
+  - css.properties.touch-action.none
+  - css.properties.touch-action.pan-x
+  - css.properties.touch-action.pan-y
 
   # baseline: high
   # baseline_low_date: 2020-07-28
@@ -132,6 +145,19 @@ compat_features:
   #   safari_ios: "13"
   - api.PointerEvent.tangentialPressure
 
+  # baseline: high
+  # baseline_low_date: 2021-01-26
+  # baseline_high_date: 2023-07-26
+  # support:
+  #   chrome: "56"
+  #   chrome_android: "56"
+  #   edge: "12"
+  #   firefox: "85"
+  #   firefox_android: "85"
+  #   safari: "13"
+  #   safari_ios: "13"
+  - css.properties.touch-action.pinch-zoom
+
   # baseline: false
   # support:
   #   chrome: "77"
@@ -148,6 +174,8 @@ compat_features:
   #   edge: "86"
   #   firefox: "131"
   #   firefox_android: "131"
+  - api.PointerEvent.PointerEvent.options_altitudeAngle_parameter
+  - api.PointerEvent.PointerEvent.options_azimuthAngle_parameter
   - api.PointerEvent.altitudeAngle
   - api.PointerEvent.azimuthAngle
 
@@ -161,15 +189,29 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "55"
+  #   chrome_android: "55"
+  #   edge: "79"
+  - css.properties.touch-action.pan-down
+  - css.properties.touch-action.pan-left
+  - css.properties.touch-action.pan-right
+  - css.properties.touch-action.pan-up
+
+  # baseline: false
+  # support:
   #   chrome: "77"
   #   chrome_android: "77"
   #   edge: "79"
   - api.Element.pointerrawupdate_event
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "128"
   #   chrome_android: "128"
   #   edge: "128"
   - api.PointerEvent.persistentDeviceId
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.PointerEvent.pointerType.fractional_coordinates
