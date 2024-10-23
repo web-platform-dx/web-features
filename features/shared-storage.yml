@@ -27,6 +27,7 @@ compat_features:
   - api.WindowSharedStorage.selectURL
   - api.WindowSharedStorage.worklet
   - api.WorkletSharedStorage
+  - api.WorkletSharedStorage.@@asyncIterator
   - api.WorkletSharedStorage.entries
   - api.WorkletSharedStorage.get
   - api.WorkletSharedStorage.keys

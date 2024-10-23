@@ -1,0 +1,9 @@
+name: overflow-anchor
+description: The `overflow-anchor` CSS property sets an element as a possible scroll anchor, reducing unintended scrolling when document changes occur above the current scrollport. This is enabled by default where supported.
+spec: https://drafts.csswg.org/css-scroll-anchoring-1/#exclusion-api
+caniuse: css-overflow-anchor
+group: scrolling
+compat_features:
+  - css.properties.overflow-anchor
+  - css.properties.overflow-anchor.auto
+  - css.properties.overflow-anchor.none
