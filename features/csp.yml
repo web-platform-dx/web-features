@@ -1,8 +1,16 @@
-draft_date: 2024-10-21
-name: Content Security Policy Level 3
-description: TODO
+name: Content Security Policy (CSP)
+description: Content Security Policy (CSP) helps to mitigate certain security threats, including cross-site scripting (XSS) and clickjacking attacks. It consists of a set of directives from a website to a browser, which instruct the browser to restrict the things that the site is allowed to do.
 spec: https://w3c.github.io/webappsec-csp/
+caniuse:
+  - contentsecuritypolicy
+  - contentsecuritypolicy2
+group: security
+status:
+  compute_from: http.headers.Content-Security-Policy
 compat_features:
+  # - http.headers.Content-Security-Policy.block-all-mixed-content (deprecated in BCD)
+  # - http.headers.Content-Security-Policy.prefetch-src (deprecated in BCD)
+  # - http.headers.Content-Security-Policy.report-uri (deprecated in BCD)
   - api.CSPViolationReportBody
   - api.CSPViolationReportBody.blockedURL
   - api.CSPViolationReportBody.columnNumber
@@ -16,7 +24,9 @@ compat_features:
   - api.CSPViolationReportBody.sourceFile
   - api.CSPViolationReportBody.statusCode
   - api.CSPViolationReportBody.toJSON
+  - api.Document.securitypolicyviolation_event
   - api.Element.securitypolicyviolation_event
+  - api.HTMLIFrameElement.csp
   - api.SecurityPolicyViolationEvent
   - api.SecurityPolicyViolationEvent.SecurityPolicyViolationEvent
   - api.SecurityPolicyViolationEvent.blockedURI
@@ -33,6 +43,8 @@ compat_features:
   - api.SecurityPolicyViolationEvent.violatedDirective
   - api.SecurityPolicyViolationEvent.worker_support
   - api.WorkerGlobalScope.securitypolicyviolation_event
+  - html.elements.iframe.csp
+  - html.elements.meta.http-equiv.content-security-policy
   - http.headers.Content-Security-Policy
   - http.headers.Content-Security-Policy-Report-Only
   - http.headers.Content-Security-Policy.base-uri
@@ -61,5 +73,6 @@ compat_features:
   - http.headers.Content-Security-Policy.style-src-attr
   - http.headers.Content-Security-Policy.style-src-elem
   - http.headers.Content-Security-Policy.unsafe-hashes
+  - http.headers.Content-Security-Policy.upgrade-insecure-requests
   - http.headers.Content-Security-Policy.worker-src
   - http.headers.Content-Security-Policy.worker_support
