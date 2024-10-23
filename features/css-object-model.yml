@@ -2,6 +2,8 @@ name: CSS Object Model
 description: The CSS Object Model allows users to create and change CSS styles using JavaScript. Also known as CSSOM.
 spec: https://drafts.csswg.org/cssom-1/#css-object-model
 group: cssom
+status:
+  compute_from: api.CSS
 compat_features:
   - api.CSS
   - api.CSSGroupingRule
@@ -24,6 +26,7 @@ compat_features:
   - api.CSSPageRule
   - api.CSSPageRule.selectorText
   - api.CSSPageRule.style
+  - api.CSSPageRule.style.type_CSSPageDescriptors
   - api.CSSRule
   - api.CSSRule.cssText
   - api.CSSRule.parentRule
@@ -41,6 +44,7 @@ compat_features:
   - api.CSSStyleDeclaration.parentRule
   - api.CSSStyleDeclaration.removeProperty
   - api.CSSStyleDeclaration.setProperty
+  - api.CSSStyleDeclaration.@@iterator
   - api.CSSStyleRule
   - api.CSSStyleRule.selectorText
   - api.CSSStyleRule.style
@@ -48,6 +52,7 @@ compat_features:
   - api.CSSStyleSheet.cssRules
   - api.CSSStyleSheet.deleteRule
   - api.CSSStyleSheet.insertRule
+  - api.CSSStyleSheet.insertRule.index_parameter_optional
   - api.CSSStyleSheet.ownerRule
   - api.Document.styleSheets
   - api.HTMLElement.style
@@ -73,3 +78,6 @@ compat_features:
   - api.StyleSheetList
   - api.StyleSheetList.item
   - api.StyleSheetList.length
+  - api.CSSMarginRule
+  - api.CSSMarginRule.name
+  - api.CSSMarginRule.style
