@@ -3,9 +3,7 @@
 
 status:
   baseline: false
-  support:
-    firefox: "115"
-    firefox_android: "115"
+  support: {}
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -26,6 +24,19 @@ compat_features:
   - http.headers.Access-Control-Max-Age
   - http.headers.Access-Control-Request-Headers
   - http.headers.Access-Control-Request-Method
+
+  # baseline: high
+  # baseline_low_date: 2017-10-17
+  # baseline_high_date: 2020-04-17
+  # support:
+  #   chrome: "42"
+  #   chrome_android: "42"
+  #   edge: "16"
+  #   firefox: "44"
+  #   firefox_android: "44"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.Headers.@@iterator
 
   # baseline: high
   # baseline_low_date: 2018-01-23
@@ -57,6 +68,33 @@ compat_features:
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
   # support:
+  #   chrome: "63"
+  #   chrome_android: "63"
+  #   edge: "79"
+  #   firefox: "69"
+  #   firefox_android: "79"
+  #   safari: "13"
+  #   safari_ios: "13"
+  - http.headers.Access-Control-Allow-Headers.wildcard
+  - http.headers.Access-Control-Allow-Methods.wildcard
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "65"
+  #   chrome_android: "65"
+  #   edge: "79"
+  #   firefox: "69"
+  #   firefox_android: "79"
+  #   safari: "13"
+  #   safari_ios: "13"
+  - http.headers.Access-Control-Expose-Headers.wildcard
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
   #   chrome: "73"
   #   chrome_android: "73"
   #   edge: "79"
@@ -83,3 +121,22 @@ compat_features:
   #   safari_ios: "16.1"
   - api.XMLHttpRequest.authorization_removed_cross_origin
   - http.headers.Authorization.authorization_removed_cross_origin
+
+  # baseline: false
+  # support:
+  #   chrome: "110"
+  #   chrome_android: "110"
+  #   edge: "110"
+  - http.headers.Sec-Purpose.speculationrules
+
+  # baseline: false
+  # support:
+  #   firefox: "115"
+  #   firefox_android: "115"
+  - http.headers.Sec-Purpose.prefetch
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.Request.duplex
+  - http.headers.Access-Control-Allow-Headers.authorization_not_covered_by_wildcard

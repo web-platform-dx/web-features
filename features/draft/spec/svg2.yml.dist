@@ -19,6 +19,19 @@ compat_features:
   - css.properties.pointer-events
 
   # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "2"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3.6"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - css.properties.pointer-events.html_elements
+
+  # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
@@ -67,27 +80,8 @@ compat_features:
   #   firefox_android: "79"
   #   safari: ≤13.1
   #   safari_ios: ≤13.4
-  - css.properties.dominant-baseline
   - css.properties.stop-color
   - css.properties.stop-opacity
-
-  # baseline: false
-  # support:
-  #   chrome: ≤80
-  #   chrome_android: "80"
-  #   edge: ≤80
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
-  - css.properties.alignment-baseline
-
-  # baseline: false
-  # support:
-  #   chrome: ≤80
-  #   chrome_android: "80"
-  #   edge: "80"
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
-  - css.properties.baseline-shift
 
   # baseline: false
   # support:
@@ -110,9 +104,22 @@ compat_features:
 
   # baseline: false
   # support:
+  #   firefox: "117"
+  #   firefox_android: "117"
+  - svg.elements.script.type.module
+
+  # baseline: false
+  # support:
+  #   firefox: "123"
+  #   firefox_android: "123"
+  - css.properties.color-interpolation.linearGradient
+
+  # baseline: false
+  # support:
   #   firefox: ≤72
   #   firefox_android: "79"
   - css.properties.color-interpolation
+  - css.properties.color-interpolation.sRGB
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
