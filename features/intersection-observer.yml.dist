@@ -67,3 +67,38 @@ compat_features:
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - api.IntersectionObserverEntry.isIntersecting
+
+  # baseline: high
+  # baseline_low_date: 2020-09-16
+  # baseline_high_date: 2023-03-16
+  # support:
+  #   chrome: "81"
+  #   chrome_android: "81"
+  #   edge: "81"
+  #   firefox: "76"
+  #   firefox_android: "79"
+  #   safari: "14"
+  #   safari_ios: "14"
+  - api.IntersectionObserver.IntersectionObserver.options_root_parameter_Document
+
+  # baseline: false
+  # support:
+  #   chrome: "74"
+  #   chrome_android: "74"
+  #   edge: "79"
+  - api.IntersectionObserver.delay
+  - api.IntersectionObserver.trackVisibility
+  - api.IntersectionObserverEntry.isVisible
+
+  # baseline: false
+  # support:
+  #   chrome: "120"
+  #   chrome_android: "120"
+  #   edge: "120"
+  - api.IntersectionObserver.scrollMargin
+
+  # baseline: false
+  # support:
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - api.IntersectionObserverEntry.IntersectionObserverEntry
