@@ -1,0 +1,12 @@
+name: Partitioned cookies
+description: To write...
+spec: https://wicg.github.io/cookie-store/
+compat_features:
+  - api.CookieChangeEvent.changed.partitioned_property
+  - api.CookieChangeEvent.deleted.partitioned_property
+  - api.CookieStore.delete.partitioned_option
+  - api.CookieStore.get.partitioned_return_property
+  - api.CookieStore.getAll.partitioned_return_property
+  - api.CookieStore.set.partitioned_option
+  - api.ExtendableCookieChangeEvent.changed.partitioned_property
+  - api.ExtendableCookieChangeEvent.deleted.partitioned_property
