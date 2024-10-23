@@ -5,21 +5,16 @@ status:
   baseline: false
   support: {}
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "88"
-  #   chrome_android: "88"
-  #   edge: "88"
-  - http.headers.Permissions-Policy.usb
-
-  # baseline: false
-  # support:
-  #   chrome: "101"
-  #   chrome_android: "101"
-  #   edge: "101"
-  - api.USBDevice.forget
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - api.WorkerNavigator.usb
+  - api.USB.worker_support
+  - api.USBAlternateInterface.worker_support
+  - api.USBConfiguration.worker_support
+  - api.USBConnectionEvent.worker_support
+  - api.USBDevice.worker_support
+  - api.USBEndpoint.worker_support
+  - api.USBInTransferResult.worker_support
+  - api.USBInterface.worker_support
+  - api.USBIsochronousInTransferPacket.worker_support
+  - api.USBIsochronousInTransferResult.worker_support
+  - api.USBIsochronousOutTransferPacket.worker_support
+  - api.USBIsochronousOutTransferResult.worker_support
+  - api.USBOutTransferResult.worker_support
