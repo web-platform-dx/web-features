@@ -1,0 +1,20 @@
+name: Navigation timing
+description: The `navigation` performance entry and the `PerformanceNavigationTiming` API measures navigation events, such as loading time or the number of redirects.
+spec: https://w3c.github.io/navigation-timing/
+group: performance
+status:
+  compute_from: api.PerformanceNavigationTiming
+compat_features:
+  - api.PerformanceNavigationTiming
+  - api.PerformanceNavigationTiming.criticalCHRestart
+  - api.PerformanceNavigationTiming.domComplete
+  - api.PerformanceNavigationTiming.domContentLoadedEventEnd
+  - api.PerformanceNavigationTiming.domContentLoadedEventStart
+  - api.PerformanceNavigationTiming.domInteractive
+  - api.PerformanceNavigationTiming.loadEventEnd
+  - api.PerformanceNavigationTiming.loadEventStart
+  - api.PerformanceNavigationTiming.redirectCount
+  - api.PerformanceNavigationTiming.toJSON
+  - api.PerformanceNavigationTiming.type
+  - api.PerformanceNavigationTiming.unloadEventEnd
+  - api.PerformanceNavigationTiming.unloadEventStart

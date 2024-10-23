@@ -3,8 +3,7 @@
 
 status:
   baseline: false
-  support:
-    safari: "18"
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -139,6 +138,31 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "108"
+  #   chrome_android: "108"
+  #   edge: "108"
+  - api.MediaSource.worker_support
+  - api.SourceBuffer.abort.worker_support
+  - api.SourceBuffer.abort_event.worker_support
+  - api.SourceBuffer.appendBuffer.worker_support
+  - api.SourceBuffer.appendWindowEnd.worker_support
+  - api.SourceBuffer.appendWindowStart.worker_support
+  - api.SourceBuffer.buffered.worker_support
+  - api.SourceBuffer.changeType.worker_support
+  - api.SourceBuffer.error_event.worker_support
+  - api.SourceBuffer.mode.worker_support
+  - api.SourceBuffer.remove.worker_support
+  - api.SourceBuffer.timestampOffset.worker_support
+  - api.SourceBuffer.update_event.worker_support
+  - api.SourceBuffer.updateend_event.worker_support
+  - api.SourceBuffer.updatestart_event.worker_support
+  - api.SourceBuffer.updating.worker_support
+  - api.SourceBufferList.addsourcebuffer_event.worker_support
+  - api.SourceBufferList.length.worker_support
+  - api.SourceBufferList.removesourcebuffer_event.worker_support
+
+  # baseline: false
+  # support:
   #   safari: "17"
   #   safari_ios: "17.1"
   - api.BufferedChangeEvent
@@ -159,3 +183,9 @@ compat_features:
   - api.SourceBuffer.textTracks
   - api.SourceBuffer.videoTracks
   - api.TextTrack.sourceBuffer
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.SourceBuffer.audioTracks.worker_support
+  - api.SourceBuffer.videoTracks.worker_support

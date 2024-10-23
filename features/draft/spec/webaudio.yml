@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-21
 name: Web Audio API
 description: TODO
 spec: https://webaudio.github.io/web-audio-api/
@@ -10,8 +10,22 @@ compat_features:
   - api.AudioContext.setSinkId
   - api.AudioContext.sinkId
   - api.AudioContext.sinkchange_event
+  - api.AudioNode.disconnect.destination_parameter
+  - api.AudioNode.disconnect.input_parameter
+  - api.AudioParamMap.@@iterator
+  - api.AudioParamMap.entries
+  - api.AudioParamMap.forEach
+  - api.AudioParamMap.get
+  - api.AudioParamMap.has
+  - api.AudioParamMap.keys
+  - api.AudioParamMap.size
+  - api.AudioParamMap.values
   - api.AudioSinkInfo
   - api.AudioSinkInfo.type
+  - api.BaseAudioContext.createPeriodicWave.constraints_disableNormalization_parameter
+  - api.BaseAudioContext.decodeAudioData.returns_promise
+  - api.OfflineAudioContext.OfflineAudioContext.options_parameter
+  - api.OfflineAudioContext.startRendering.returns_promise
 
 # The following features in the spec are already part of web-features:
 # - Web Audio:

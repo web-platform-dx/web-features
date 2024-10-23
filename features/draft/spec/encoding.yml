@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-21
 name: Encoding Standard
 description: TODO
 spec: https://encoding.spec.whatwg.org/
@@ -9,6 +9,7 @@ compat_features:
   - api.TextDecoder.encoding
   - api.TextDecoder.fatal
   - api.TextDecoder.ignoreBOM
+  - api.TextDecoder.worker_support
   - api.TextDecoderStream
   - api.TextDecoderStream.TextDecoderStream
   - api.TextDecoderStream.encoding
@@ -19,6 +20,7 @@ compat_features:
   - api.TextEncoder.encode
   - api.TextEncoder.encodeInto
   - api.TextEncoder.encoding
+  - api.TextEncoder.worker_support
   - api.TextEncoderStream
   - api.TextEncoderStream.TextEncoderStream
   - api.TextEncoderStream.encoding

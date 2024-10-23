@@ -23,7 +23,15 @@ compat_features:
   - api.TaskPriorityChangeEvent.previousPriority
   - api.TaskSignal
   - api.TaskSignal.priority
+  - api.TaskSignal.prioritychange_event
   - api.scheduler
+
+  # baseline: false
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "116"
+  #   edge: "116"
+  - api.TaskSignal.any_static
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
