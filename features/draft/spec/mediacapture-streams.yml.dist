@@ -248,6 +248,19 @@ compat_features:
   - api.InputDeviceInfo
 
   # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "53"
+  #   chrome_android: "53"
+  #   edge: "79"
+  #   firefox: "68"
+  #   firefox_android: "68"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.MediaDevices.getUserMedia.secure_context_required
+
+  # baseline: high
   # baseline_low_date: ≤2020-01-15
   # baseline_high_date: ≤2022-07-15
   # support:
@@ -323,6 +336,16 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - api.MediaStreamTrack.applyConstraints.aspectRatio_constraint
+
+  # baseline: false
+  # support:
+  #   chrome: "74"
+  #   chrome_android: "74"
+  #   edge: "79"
+  #   firefox: "69"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.Navigator.mediaDevices.secure_context_required
 
   # baseline: false
   # support:
