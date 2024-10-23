@@ -1794,6 +1794,12 @@ compat_features:
 
   # baseline: false
   # support:
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
+  - css.properties.stroke-color
+
+  # baseline: false
+  # support:
   #   firefox: ≤72
   #   firefox_android: "79"
   - svg.global_attributes.color-interpolation
