@@ -24,6 +24,8 @@ jobs:
 
             - [ ] Check out this branch locally.
             - [ ] If any keys were removed in the release, delete them from `.yml` files.
-            - [ ] Run `npm install && npm run dist && npm run dist && git commit --all --message="Refresh dist"`.
+            - [ ] Run `npm install && npm run dist && npm test && git commit --all --message="Refresh dist"`.
+            - [ ] Review the diff. Watch out for Baseline regressions; if applicable, add a comment (see https://github.com/web-platform-dx/web-features/issues/1971).
             - [ ] Start a PR to [publish the next web-features release](https://github.com/web-platform-dx/web-features/blob/main/docs/publishing.md#regular-releases).
             - [ ] Merge this PR.
+            - [ ] [Trigger a drafts update workflow run](https://github.com/web-platform-dx/web-features/actions/workflows/update_draft_features_weekly.yml).
