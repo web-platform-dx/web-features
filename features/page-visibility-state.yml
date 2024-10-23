@@ -1,0 +1,10 @@
+name: Page visibility state
+description: The `visibility-state` performance entry and the `VisibilityStateEntry` API measure the timing of page visibility state changes, such as when a tab is no longer visible or the user has switched to another app.
+spec: https://html.spec.whatwg.org/multipage/interaction.html#the-visibilitystateentry-interface
+group: performance
+compat_features:
+  - api.VisibilityStateEntry
+  - api.VisibilityStateEntry.duration
+  - api.VisibilityStateEntry.entryType
+  - api.VisibilityStateEntry.name
+  - api.VisibilityStateEntry.startTime
