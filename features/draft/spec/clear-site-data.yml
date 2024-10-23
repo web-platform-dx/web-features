@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-21
 name: Clear Site Data
 description: TODO
 spec: https://w3c.github.io/webappsec-clear-site-data/
@@ -8,4 +8,5 @@ compat_features:
   - http.headers.Clear-Site-Data.clientHints
   - http.headers.Clear-Site-Data.cookies
   - http.headers.Clear-Site-Data.executionContexts
+  - http.headers.Clear-Site-Data.secure_context_required
   - http.headers.Clear-Site-Data.storage
