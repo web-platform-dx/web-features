@@ -7,14 +7,21 @@ status:
   compute_from: api.XMLHttpRequest.XMLHttpRequest
 compat_features:
   - api.FormData
+  - api.FormData.@@iterator
+  - api.FormData.FormData
+  - api.FormData.FormData.submitter
   - api.FormData.append
   - api.FormData.append.filename_parameter
   - api.FormData.delete
+  - api.FormData.entries
+  - api.FormData.forEach
   - api.FormData.get
   - api.FormData.getAll
   - api.FormData.has
+  - api.FormData.keys
   - api.FormData.set
-  - api.FormData.FormData
+  - api.FormData.values
+  - api.FormData.worker_support
   - api.ProgressEvent
   - api.ProgressEvent.ProgressEvent
   - api.ProgressEvent.lengthComputable
@@ -22,6 +29,7 @@ compat_features:
   - api.ProgressEvent.total
   - api.ProgressEvent.worker_support
   - api.XMLHttpRequest
+  - api.XMLHttpRequest.XMLHttpRequest
   - api.XMLHttpRequest.abort
   - api.XMLHttpRequest.abort_event
   - api.XMLHttpRequest.error_event
@@ -46,8 +54,8 @@ compat_features:
   - api.XMLHttpRequest.responseURL
   - api.XMLHttpRequest.responseXML
   - api.XMLHttpRequest.send
-  - api.XMLHttpRequest.send.body_ArrayBuffer_type
   - api.XMLHttpRequest.send.body_ArrayBufferView_type
+  - api.XMLHttpRequest.send.body_ArrayBuffer_type
   - api.XMLHttpRequest.send.body_Blob_type
   - api.XMLHttpRequest.send.body_FormData_type
   - api.XMLHttpRequest.send.body_URLSearchParams_type
@@ -59,7 +67,6 @@ compat_features:
   - api.XMLHttpRequest.upload
   - api.XMLHttpRequest.withCredentials
   - api.XMLHttpRequest.worker_support
-  - api.XMLHttpRequest.XMLHttpRequest
   - api.XMLHttpRequestEventTarget
   - api.XMLHttpRequestUpload
   - api.XMLHttpRequestUpload.abort_event
