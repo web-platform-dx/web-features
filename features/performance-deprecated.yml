@@ -1,0 +1,34 @@
+name: Deprecated Performance API
+description: The `PerformanceNavigation` and `PerformanceTiming` APIs are deprecated. Use `PerformanceNavigationTiming` instead.
+spec: https://w3c.github.io/navigation-timing/#obsolete
+group: performance
+compat_features:
+  - api.Performance.navigation
+  - api.Performance.timing
+  - api.PerformanceNavigation
+  - api.PerformanceNavigation.redirectCount
+  - api.PerformanceNavigation.toJSON
+  - api.PerformanceNavigation.type
+  - api.PerformanceTiming
+  - api.PerformanceTiming.connectEnd
+  - api.PerformanceTiming.connectStart
+  - api.PerformanceTiming.domComplete
+  - api.PerformanceTiming.domContentLoadedEventEnd
+  - api.PerformanceTiming.domContentLoadedEventStart
+  - api.PerformanceTiming.domInteractive
+  - api.PerformanceTiming.domLoading
+  - api.PerformanceTiming.domainLookupEnd
+  - api.PerformanceTiming.domainLookupStart
+  - api.PerformanceTiming.fetchStart
+  - api.PerformanceTiming.loadEventEnd
+  - api.PerformanceTiming.loadEventStart
+  - api.PerformanceTiming.navigationStart
+  - api.PerformanceTiming.redirectEnd
+  - api.PerformanceTiming.redirectStart
+  - api.PerformanceTiming.requestStart
+  - api.PerformanceTiming.responseEnd
+  - api.PerformanceTiming.responseStart
+  - api.PerformanceTiming.secureConnectionStart
+  - api.PerformanceTiming.toJSON
+  - api.PerformanceTiming.unloadEventEnd
+  - api.PerformanceTiming.unloadEventStart
