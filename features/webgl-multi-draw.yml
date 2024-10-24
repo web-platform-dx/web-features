@@ -1,0 +1,10 @@
+name: WebGL WEBGL_multi_draw extension
+description: The `WEBGL_multi_draw` extension to WebGL TODO
+spec: https://registry.khronos.org/webgl/extensions/WEBGL_multi_draw/
+group: webgl-extensions
+compat_features:
+  - api.WEBGL_multi_draw
+  - api.WEBGL_multi_draw.multiDrawArraysInstancedWEBGL
+  - api.WEBGL_multi_draw.multiDrawArraysWEBGL
+  - api.WEBGL_multi_draw.multiDrawElementsInstancedWEBGL
+  - api.WEBGL_multi_draw.multiDrawElementsWEBGL
