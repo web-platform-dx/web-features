@@ -1,0 +1,35 @@
+name: Web app manifest
+description: A web app manifest file provides metadata about the site. The browser can use the metadata to install the site as a standalone application on the user's device. The metadata usually includes the app's name, icon, description, and ways in which the app wishes to integrate with the operating system.
+spec: https://w3c.github.io/manifest/
+group: progressive-web-app
+compat_features:
+  # Loading the manifest
+  - html.elements.link.rel.manifest
+
+  # Basic metadata
+  - html.manifest.id
+  - html.manifest.start_url
+  - html.manifest.scope
+  - html.manifest.name
+  - html.manifest.short_name
+  - html.manifest.description
+  - html.manifest.display
+  - html.manifest.background_color
+  - html.manifest.theme_color
+  - html.manifest.icons
+  - html.manifest.orientation
+  - html.manifest.serviceworker
+  - html.manifest.serviceworker.scope
+  - html.manifest.serviceworker.src
+  - html.manifest.serviceworker.use_cache
+
+  # Advanced OS integration features
+  # - html.manifest.launch_handler
+  # - html.manifest.launch_handler.client_mode
+  # - html.manifest.shortcuts
+  # - html.manifest.note_taking
+  # - html.manifest.note_taking.new_note_url
+
+  # # Integration with other apps
+  # - html.manifest.prefer_related_applications
+  # - html.manifest.related_applications
