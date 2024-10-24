@@ -1,0 +1,30 @@
+name: Events
+description: TODO
+spec: https://dom.spec.whatwg.org/
+compat_features:
+  - api.CustomEvent
+  - api.CustomEvent.CustomEvent
+  - api.CustomEvent.detail
+  - api.Event
+  - api.Event.Event
+  - api.Event.bubbles
+  - api.Event.cancelable
+  - api.Event.currentTarget
+  - api.Event.defaultPrevented
+  - api.Event.eventPhase
+  - api.Event.isTrusted
+  - api.Event.preventDefault
+  - api.Event.stopImmediatePropagation
+  - api.Event.stopPropagation
+  - api.Event.target
+  - api.Event.timeStamp
+  - api.Event.type
+  - api.EventTarget
+  - api.EventTarget.EventTarget
+  - api.EventTarget.addEventListener
+  - api.EventTarget.addEventListener.options_parameter.options_capture_parameter
+  - api.EventTarget.addEventListener.options_parameter.options_once_parameter
+  - api.EventTarget.addEventListener.options_parameter.options_passive_parameter
+  - api.EventTarget.addEventListener.options_parameter.options_signal_parameter
+  - api.EventTarget.dispatchEvent
+  - api.EventTarget.removeEventListener
