@@ -3,8 +3,6 @@ description: "The `navigator.onLine` property returns a Boolean for whether the 
 spec:
   - https://html.spec.whatwg.org/multipage/system-state.html#navigator.online
   - https://html.spec.whatwg.org/multipage/indices.html#event-online
-# Doesn't quite match up exactly, since BCD reports supported while Caninuse
-# considers the early Chrome/Safari partial implementation as not supported.
 caniuse: online-status
 status:
   compute_from: api.Navigator.onLine
