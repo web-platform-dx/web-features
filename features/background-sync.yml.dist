@@ -8,6 +8,12 @@ status:
     chrome_android: "49"
     edge: "79"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "49"
+  #   chrome_android: "49"
+  #   edge: "79"
   - api.ServiceWorkerGlobalScope.sync_event
   - api.ServiceWorkerRegistration.sync
   - api.SyncEvent
@@ -17,3 +23,10 @@ compat_features:
   - api.SyncManager
   - api.SyncManager.getTags
   - api.SyncManager.register
+
+  # baseline: false
+  # support:
+  #   chrome: "61"
+  #   chrome_android: "61"
+  #   edge: "79"
+  - api.SyncManager.worker_support

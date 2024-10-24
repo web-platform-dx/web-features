@@ -1,24 +1,15 @@
-draft_date: 2024-10-21
+draft_date: 2024-10-23
 name: Scalable Vector Graphics (SVG) 2
 description: TODO
 spec: https://svgwg.org/svg2-draft/
 compat_features:
   - api.SVGAElement.ping
-  - css.properties.alignment-baseline
-  - css.properties.alignment-baseline.alphabetic
-  - css.properties.alignment-baseline.baseline
-  - css.properties.alignment-baseline.central
-  - css.properties.alignment-baseline.ideographic
-  - css.properties.alignment-baseline.mathematical
-  - css.properties.alignment-baseline.middle
-  - css.properties.baseline-shift
   - css.properties.color-interpolation
   - css.properties.color-interpolation.linearGradient
   - css.properties.color-interpolation.sRGB
   - css.properties.cx
   - css.properties.cy
   - css.properties.d
-  - css.properties.dominant-baseline
   - css.properties.marker
   - css.properties.marker-end
   - css.properties.marker-mid
@@ -591,6 +582,18 @@ compat_features:
 # - SVG filters:
 #   - api.SVGFEImageElement.href
 #   - api.SVGFilterElement.href
+# - alignment-baseline:
+#   - css.properties.alignment-baseline
+#   - css.properties.alignment-baseline.alphabetic
+#   - css.properties.alignment-baseline.baseline
+#   - css.properties.alignment-baseline.central
+#   - css.properties.alignment-baseline.ideographic
+#   - css.properties.alignment-baseline.mathematical
+#   - css.properties.alignment-baseline.middle
+# - baseline-shift:
+#   - css.properties.baseline-shift
+# - dominant-baseline:
+#   - css.properties.dominant-baseline
 # - paint-order:
 #   - css.properties.paint-order
 #   - svg.global_attributes.paint-order

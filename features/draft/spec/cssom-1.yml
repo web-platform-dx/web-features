@@ -1,4 +1,4 @@
-draft_date: 2024-10-21
+draft_date: 2024-10-23
 name: CSS Object Model (CSSOM)
 description: TODO
 spec: https://drafts.csswg.org/cssom-1/
@@ -10,6 +10,9 @@ compat_features:
   - api.CSSGroupingRule.deleteRule
   - api.CSSGroupingRule.insertRule
   - api.CSSImportRule.supportsText
+  - api.CSSMarginRule
+  - api.CSSMarginRule.name
+  - api.CSSMarginRule.style
   - api.CSSPageDescriptors
   - api.CSSPageDescriptors.margin
   - api.CSSPageDescriptors.margin-bottom
