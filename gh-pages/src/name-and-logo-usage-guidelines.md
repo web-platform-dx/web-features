@@ -97,29 +97,29 @@ The Baseline Widely Available logo should be used when talking about Baseline as
 
 The Baseline Newly Available logo should only be used to indicate a indicate a specific web platform feature has the `"baseline": "low"` value in the web-features package data.
 
-### Baseline Limited Availablity logo
+### Baseline Limited Availability logo
 
 <table class="logos">
   <tr>
     <td>
-      <img src="/assets/img/baseline-limited-icon.svg" alt="Baseline limited availablity icon"><br>
+      <img src="/assets/img/baseline-limited-icon.svg" alt="Baseline limited availability icon"><br>
       <a href="/assets/img/baseline-limited-icon.png" download>Download PNG</a> |
       <a href="/assets/img/baseline-limited-icon.svg" download>Download SVG</a>
     </td>
     <td>
-      <img src="/assets/img/baseline-limited-icon-dark.svg" class="dark-bg" alt="Baseline limited availablity icon dark"><br>
+      <img src="/assets/img/baseline-limited-icon-dark.svg" class="dark-bg" alt="Baseline limited availability icon dark"><br>
       <a href="/assets/img/baseline-limited-icon-dark.png" download>Download PNG</a> |
       <a href="/assets/img/baseline-limited-icon-dark.svg" download>Download SVG</a>
     </td>
   </tr>
   <tr>
     <td>
-      <img src="/assets/img/baseline-limited-word.svg" alt="Baseline limited availablity wordmark"><br>
+      <img src="/assets/img/baseline-limited-word.svg" alt="Baseline limited availability wordmark"><br>
       <a href="/assets/img/baseline-limited-word.png" download>Download PNG</a> |
       <a href="/assets/img/baseline-limited-word.svg" download>Download SVG</a>
     </td>
     <td>
-      <img src="/assets/img/baseline-limited-word-dark.svg" class="dark-bg" alt="Baseline limited availablity wordmark dark"><br>
+      <img src="/assets/img/baseline-limited-word-dark.svg" class="dark-bg" alt="Baseline limited availability wordmark dark"><br>
       <a href="/assets/img/baseline-limited-word-dark.png" download>Download PNG</a> |
       <a href="/assets/img/baseline-limited-word-dark.svg" download>Download SVG</a>
     </td>
