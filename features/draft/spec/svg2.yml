@@ -1,21 +1,21 @@
-draft_date: 2024-10-17
+draft_date: 2024-10-23
 name: Scalable Vector Graphics (SVG) 2
 description: TODO
 spec: https://svgwg.org/svg2-draft/
 compat_features:
   - api.SVGAElement.ping
-  - css.properties.alignment-baseline
-  - css.properties.baseline-shift
   - css.properties.color-interpolation
+  - css.properties.color-interpolation.linearGradient
+  - css.properties.color-interpolation.sRGB
   - css.properties.cx
   - css.properties.cy
   - css.properties.d
-  - css.properties.dominant-baseline
   - css.properties.marker
   - css.properties.marker-end
   - css.properties.marker-mid
   - css.properties.marker-start
   - css.properties.pointer-events
+  - css.properties.pointer-events.html_elements
   - css.properties.r
   - css.properties.rx
   - css.properties.ry
@@ -30,6 +30,7 @@ compat_features:
   - css.properties.y
   - svg.elements.a.ping
   - svg.elements.cursor.systemLanguage
+  - svg.elements.script.type.module
   - svg.elements.tref.fill
   - svg.elements.tref.fill.context-fill
   - svg.elements.tref.systemLanguage
@@ -78,7 +79,9 @@ compat_features:
 #   - api.SVGGeometryElement.getPointAtLength
 #   - api.SVGGeometryElement.getTotalLength
 #   - api.SVGGeometryElement.isPointInFill
+#   - api.SVGGeometryElement.isPointInFill.point_parameter_DOMPoint
 #   - api.SVGGeometryElement.isPointInStroke
+#   - api.SVGGeometryElement.isPointInStroke.point_parameter_DOMPoint
 #   - api.SVGGeometryElement.pathLength
 #   - api.SVGGradientElement
 #   - api.SVGGradientElement.gradientTransform
@@ -108,6 +111,15 @@ compat_features:
 #   - api.SVGLength.valueAsString
 #   - api.SVGLength.valueInSpecifiedUnits
 #   - api.SVGLengthList
+#   - api.SVGLengthList.appendItem
+#   - api.SVGLengthList.clear
+#   - api.SVGLengthList.getItem
+#   - api.SVGLengthList.initialize
+#   - api.SVGLengthList.insertItemBefore
+#   - api.SVGLengthList.length
+#   - api.SVGLengthList.numberOfItems
+#   - api.SVGLengthList.removeItem
+#   - api.SVGLengthList.replaceItem
 #   - api.SVGLineElement
 #   - api.SVGLineElement.x1
 #   - api.SVGLineElement.x2
@@ -136,6 +148,15 @@ compat_features:
 #   - api.SVGNumber
 #   - api.SVGNumber.value
 #   - api.SVGNumberList
+#   - api.SVGNumberList.appendItem
+#   - api.SVGNumberList.clear
+#   - api.SVGNumberList.getItem
+#   - api.SVGNumberList.initialize
+#   - api.SVGNumberList.insertItemBefore
+#   - api.SVGNumberList.length
+#   - api.SVGNumberList.numberOfItems
+#   - api.SVGNumberList.removeItem
+#   - api.SVGNumberList.replaceItem
 #   - api.SVGPathElement
 #   - api.SVGPatternElement
 #   - api.SVGPatternElement.height
@@ -193,23 +214,35 @@ compat_features:
 #   - api.SVGSVGElement.currentScale
 #   - api.SVGSVGElement.currentTranslate
 #   - api.SVGSVGElement.deselectAll
+#   - api.SVGSVGElement.getCurrentTime
 #   - api.SVGSVGElement.getElementById
 #   - api.SVGSVGElement.getEnclosureList
 #   - api.SVGSVGElement.getIntersectionList
 #   - api.SVGSVGElement.height
 #   - api.SVGSVGElement.preserveAspectRatio
+#   - api.SVGSVGElement.setCurrentTime
 #   - api.SVGSVGElement.viewBox
 #   - api.SVGSVGElement.width
 #   - api.SVGSVGElement.x
 #   - api.SVGSVGElement.y
 #   - api.SVGScriptElement
+#   - api.SVGScriptElement.async
 #   - api.SVGScriptElement.crossOrigin
+#   - api.SVGScriptElement.defer
 #   - api.SVGScriptElement.href
 #   - api.SVGScriptElement.type
 #   - api.SVGStopElement
 #   - api.SVGStopElement.offset
 #   - api.SVGStringList
+#   - api.SVGStringList.appendItem
+#   - api.SVGStringList.clear
+#   - api.SVGStringList.getItem
+#   - api.SVGStringList.initialize
+#   - api.SVGStringList.insertItemBefore
 #   - api.SVGStringList.length
+#   - api.SVGStringList.numberOfItems
+#   - api.SVGStringList.removeItem
+#   - api.SVGStringList.replaceItem
 #   - api.SVGStyleElement
 #   - api.SVGStyleElement.disabled
 #   - api.SVGStyleElement.media
@@ -280,38 +313,69 @@ compat_features:
 #   - svg.elements.a.href
 #   - svg.elements.a.hreflang
 #   - svg.elements.a.referrerpolicy
+#   - svg.elements.a.referrerpolicy.no-referrer-when-downgrade
+#   - svg.elements.a.referrerpolicy.origin-when-cross-origin
+#   - svg.elements.a.referrerpolicy.unsafe-url
 #   - svg.elements.a.rel
 #   - svg.elements.a.systemLanguage
 #   - svg.elements.a.target
 #   - svg.elements.a.type
 #   - svg.elements.circle
+#   - svg.elements.circle.cx
+#   - svg.elements.circle.cy
 #   - svg.elements.circle.fill
+#   - svg.elements.circle.r
 #   - svg.elements.circle.systemLanguage
 #   - svg.elements.defs
 #   - svg.elements.defs.systemLanguage
 #   - svg.elements.desc
 #   - svg.elements.ellipse
+#   - svg.elements.ellipse.cx
+#   - svg.elements.ellipse.cy
 #   - svg.elements.ellipse.fill
+#   - svg.elements.ellipse.rx
+#   - svg.elements.ellipse.ry
 #   - svg.elements.ellipse.systemLanguage
 #   - svg.elements.foreignObject
+#   - svg.elements.foreignObject.height
 #   - svg.elements.foreignObject.systemLanguage
+#   - svg.elements.foreignObject.width
+#   - svg.elements.foreignObject.x
+#   - svg.elements.foreignObject.y
 #   - svg.elements.g
 #   - svg.elements.g.systemLanguage
 #   - svg.elements.image
 #   - svg.elements.image.crossorigin
+#   - svg.elements.image.height
 #   - svg.elements.image.href
+#   - svg.elements.image.preserveAspectRatio
 #   - svg.elements.image.systemLanguage
+#   - svg.elements.image.width
+#   - svg.elements.image.x
+#   - svg.elements.image.y
 #   - svg.elements.line
 #   - svg.elements.line.systemLanguage
+#   - svg.elements.line.x1
+#   - svg.elements.line.x2
+#   - svg.elements.line.y1
+#   - svg.elements.line.y2
 #   - svg.elements.linearGradient
 #   - svg.elements.linearGradient.gradientTransform
+#   - svg.elements.linearGradient.gradientUnits
 #   - svg.elements.linearGradient.href
 #   - svg.elements.linearGradient.spreadMethod
+#   - svg.elements.linearGradient.x1
+#   - svg.elements.linearGradient.x2
+#   - svg.elements.linearGradient.y1
+#   - svg.elements.linearGradient.y2
 #   - svg.elements.marker
 #   - svg.elements.marker.markerHeight
 #   - svg.elements.marker.markerUnits
 #   - svg.elements.marker.markerWidth
 #   - svg.elements.marker.orient
+#   - svg.elements.marker.refX
+#   - svg.elements.marker.refY
+#   - svg.elements.marker.viewBox
 #   - svg.elements.mask.systemLanguage
 #   - svg.elements.metadata
 #   - svg.elements.path
@@ -319,38 +383,71 @@ compat_features:
 #   - svg.elements.path.fill
 #   - svg.elements.path.systemLanguage
 #   - svg.elements.pattern
+#   - svg.elements.pattern.height
 #   - svg.elements.pattern.href
 #   - svg.elements.pattern.patternContentUnits
 #   - svg.elements.pattern.patternTransform
 #   - svg.elements.pattern.patternUnits
 #   - svg.elements.pattern.systemLanguage
+#   - svg.elements.pattern.width
+#   - svg.elements.pattern.x
+#   - svg.elements.pattern.y
 #   - svg.elements.polygon
 #   - svg.elements.polygon.fill
+#   - svg.elements.polygon.points
 #   - svg.elements.polygon.systemLanguage
 #   - svg.elements.polyline
 #   - svg.elements.polyline.fill
+#   - svg.elements.polyline.points
 #   - svg.elements.polyline.systemLanguage
 #   - svg.elements.radialGradient
+#   - svg.elements.radialGradient.cx
+#   - svg.elements.radialGradient.cy
 #   - svg.elements.radialGradient.fr
 #   - svg.elements.radialGradient.fx
 #   - svg.elements.radialGradient.fy
+#   - svg.elements.radialGradient.gradientTransform
+#   - svg.elements.radialGradient.gradientUnits
 #   - svg.elements.radialGradient.href
+#   - svg.elements.radialGradient.r
 #   - svg.elements.radialGradient.spreadMethod
 #   - svg.elements.rect
 #   - svg.elements.rect.fill
+#   - svg.elements.rect.height
+#   - svg.elements.rect.rx
+#   - svg.elements.rect.ry
 #   - svg.elements.rect.systemLanguage
+#   - svg.elements.rect.width
+#   - svg.elements.rect.x
+#   - svg.elements.rect.y
 #   - svg.elements.script
+#   - svg.elements.script.async
+#   - svg.elements.script.defer
 #   - svg.elements.script.href
+#   - svg.elements.script.type
+#   - svg.elements.script.xlink_href
 #   - svg.elements.set.systemLanguage
 #   - svg.elements.stop
+#   - svg.elements.stop.offset
+#   - svg.elements.stop.stop-color
 #   - svg.elements.stop.stop-opacity
 #   - svg.elements.style
 #   - svg.elements.style.media
+#   - svg.elements.style.title
+#   - svg.elements.style.type
 #   - svg.elements.svg
+#   - svg.elements.svg.height
+#   - svg.elements.svg.preserveAspectRatio
 #   - svg.elements.svg.systemLanguage
+#   - svg.elements.svg.viewBox
+#   - svg.elements.svg.width
+#   - svg.elements.svg.x
+#   - svg.elements.svg.y
 #   - svg.elements.switch
 #   - svg.elements.switch.systemLanguage
 #   - svg.elements.symbol
+#   - svg.elements.symbol.preserveAspectRatio
+#   - svg.elements.symbol.viewBox
 #   - svg.elements.text
 #   - svg.elements.text.dx
 #   - svg.elements.text.dy
@@ -363,18 +460,36 @@ compat_features:
 #   - svg.elements.textPath
 #   - svg.elements.textPath.fill
 #   - svg.elements.textPath.href
+#   - svg.elements.textPath.path
 #   - svg.elements.textPath.side
 #   - svg.elements.textPath.spacing
 #   - svg.elements.textPath.startOffset
 #   - svg.elements.textPath.systemLanguage
+#   - svg.elements.textPath.textLength
 #   - svg.elements.title
+#   - svg.elements.title.tooltip_display
 #   - svg.elements.tspan
+#   - svg.elements.tspan.dx
+#   - svg.elements.tspan.dy
 #   - svg.elements.tspan.fill
+#   - svg.elements.tspan.lengthAdjust
+#   - svg.elements.tspan.rotate
 #   - svg.elements.tspan.systemLanguage
+#   - svg.elements.tspan.textLength
+#   - svg.elements.tspan.x
+#   - svg.elements.tspan.y
 #   - svg.elements.use
+#   - svg.elements.use.data_uri
+#   - svg.elements.use.external_uri
+#   - svg.elements.use.height
 #   - svg.elements.use.href
 #   - svg.elements.use.systemLanguage
+#   - svg.elements.use.width
+#   - svg.elements.use.x
+#   - svg.elements.use.y
 #   - svg.elements.view
+#   - svg.elements.view.preserveAspectRatio
+#   - svg.elements.view.viewBox
 #   - svg.global_attributes.alignment-baseline
 #   - svg.global_attributes.baseline-shift
 #   - svg.global_attributes.class
@@ -457,12 +572,28 @@ compat_features:
 #   - api.SVGAnimationElement.systemLanguage
 #   - api.SVGPolygonElement.animatedPoints
 #   - api.SVGPolylineElement.animatedPoints
+#   - api.SVGSVGElement.animationsPaused
+#   - api.SVGSVGElement.pauseAnimations
+#   - api.SVGSVGElement.unpauseAnimations
 #   - svg.elements.animate.systemLanguage
 #   - svg.elements.animateMotion.systemLanguage
 #   - svg.elements.animateTransform.systemLanguage
+#   - svg.global_attributes.class.animation_support
 # - SVG filters:
 #   - api.SVGFEImageElement.href
 #   - api.SVGFilterElement.href
+# - alignment-baseline:
+#   - css.properties.alignment-baseline
+#   - css.properties.alignment-baseline.alphabetic
+#   - css.properties.alignment-baseline.baseline
+#   - css.properties.alignment-baseline.central
+#   - css.properties.alignment-baseline.ideographic
+#   - css.properties.alignment-baseline.mathematical
+#   - css.properties.alignment-baseline.middle
+# - baseline-shift:
+#   - css.properties.baseline-shift
+# - dominant-baseline:
+#   - css.properties.dominant-baseline
 # - paint-order:
 #   - css.properties.paint-order
 #   - svg.global_attributes.paint-order

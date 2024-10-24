@@ -72,6 +72,10 @@ compat_features:
   - api.SVGSVGElement.animationsPaused
   - api.SVGSVGElement.pauseAnimations
   - api.SVGSVGElement.unpauseAnimations
+  - api.TimeEvent
+  - api.TimeEvent.detail
+  - api.TimeEvent.initTimeEvent
+  - api.TimeEvent.view
   - svg.elements.animate
   - svg.elements.animate.attributeName
   - svg.elements.animate.attributeType
