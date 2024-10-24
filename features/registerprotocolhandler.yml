@@ -1,5 +1,5 @@
 name: registerProtocolHandler
-description: "The `navigator.registerProtocolHandler()' method lets websites register their ability to open or handle particular address schemes (also known as protocols). For example, this API lets webmail sites open `mailto:` URLs, or VoIP sites open `tel:` URLs."
+description: "The `navigator.registerProtocolHandler()' method declares a site's ability to handle an address scheme (also known as a protocol). For example, an email site can register to open `mailto:` URLs or a VoIP site to open `tel:` URLs."
 spec: https://html.spec.whatwg.org/multipage/system-state.html#custom-handlers
 compat_features:
   - api.Navigator.registerProtocolHandler
