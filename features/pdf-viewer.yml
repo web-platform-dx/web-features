@@ -1,5 +1,5 @@
 name: pdfViewerEnabled
-description: "The `navigator.pdfViewerEnabled` read-only property indicates whether the browser supports inline display of PDF files when navigating to them. If inline viewing is not supported the PDF is downloaded and may then be handled by an external application."
+description: The `navigator.pdfViewerEnabled` read-only property returns a Boolean for whether the browser navigates to and shows a PDF in the browser window or downloads the PDF.
 spec: https://html.spec.whatwg.org/multipage/system-state.html#pdf-viewing-support
 # Caniuse has a feature for PDF viewing generally, which is marked not supported for
 # Chrome/Firefox Android, but also has this entry from the BCD key shown all green.
