@@ -3,19 +3,21 @@ name: BCD upgrade
 on:
   pull_request:
     types: [opened]
+permissions:
+  pull-requests: write
 jobs:
   post-comment:
     name: "Post checklist"
     runs-on: ubuntu-latest
     if: github.event.pull_request.user.login == 'dependabot[bot]'
     steps:
-      - id: dependency
-        run: |
-          if ! git diff --exit-code -G '@mdn/browser-compat-data' "${{ github.event.pull_request.base.sha }}" "${{ github.sha }}"; then
-            echo "is_bcd=true" >> $GITHUB_OUTPUT
-          fi
-          exit 0
-      - if: ${{ steps.dependency.outputs.is_bcd == 'true' }}
+      - name: Fetch Dependabot metadata
+        id: dependabot-metadata
+        continue-on-error: true
+        uses: dependabot/fetch-metadata@dbb049abf0d677abbd7f7eee0375145b417fdd34 #v2.2.0
+
+      - if: ${{ contains(steps.dependabot-metadata.outputs.dependency-names, "@mdn/browser-compat-data" }}
+        continue-on-error: true
         uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 #v4.0.0
         with:
           issue-number: ${{ github.event.number }}
