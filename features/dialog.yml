@@ -3,3 +3,18 @@ description: The `<dialog>` HTML element represents a modal or non-modal dialog 
 spec: https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element
 group: html-elements
 caniuse: dialog
+compat_features:
+  - api.HTMLDialogElement
+  - api.HTMLDialogElement.cancel_event
+  - api.HTMLDialogElement.close
+  - api.HTMLDialogElement.close_event
+  - api.HTMLDialogElement.open
+  - api.HTMLDialogElement.returnValue
+  - api.HTMLDialogElement.show
+  - api.HTMLDialogElement.showModal
+  - api.Window.alert
+  - api.Window.confirm
+  - api.Window.prompt
+  - css.selectors.backdrop.dialog
+  - html.elements.dialog
+  - html.elements.dialog.open
