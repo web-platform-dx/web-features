@@ -1,0 +1,8 @@
+name: WebGL WEBGL_lose_context extension
+description: The `WEBGL_lose_context` extension to WebGL TODO
+spec: https://registry.khronos.org/webgl/extensions/WEBGL_lose_context/
+group: webgl-extensions
+compat_features:
+  - api.WEBGL_lose_context
+  - api.WEBGL_lose_context.loseContext
+  - api.WEBGL_lose_context.restoreContext

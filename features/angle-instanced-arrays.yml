@@ -1,0 +1,9 @@
+name: WebGL ANGLE_instanced_arrays extension
+description: The `ANGLE_instanced_arrays` extension to WebGL TODO
+spec: https://registry.khronos.org/webgl/extensions/ANGLE_instanced_arrays/
+group: webgl-extensions
+compat_features:
+  - api.ANGLE_instanced_arrays
+  - api.ANGLE_instanced_arrays.drawArraysInstancedANGLE
+  - api.ANGLE_instanced_arrays.drawElementsInstancedANGLE
+  - api.ANGLE_instanced_arrays.vertexAttribDivisorANGLE
