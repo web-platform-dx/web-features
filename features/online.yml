@@ -1,0 +1,15 @@
+name: Online status
+description: The `navigator.onLine` property returns a Boolean for whether the browser is connected to some network (though not necessarily the internet). The `online` and `offline` events fire when the connection state changes.
+spec:
+  - https://html.spec.whatwg.org/multipage/system-state.html#navigator.online
+  - https://html.spec.whatwg.org/multipage/indices.html#event-online
+caniuse: online-status
+status:
+  compute_from: api.Navigator.onLine
+compat_features:
+  - api.Navigator.onLine
+  - api.Window.offline_event
+  - api.Window.online_event
+  - api.WorkerGlobalScope.offline_event
+  - api.WorkerGlobalScope.online_event
+  - api.WorkerNavigator.onLine
