@@ -12,6 +12,7 @@ compat_features:
   - api.CloseEvent.wasClean
   - api.WebSocket
   - api.WebSocket.WebSocket
+  - api.WebSocket.WebSocket.url_parameter_http_https_relative
   - api.WebSocket.binaryType
   - api.WebSocket.bufferedAmount
   - api.WebSocket.close
@@ -21,6 +22,7 @@ compat_features:
   - api.WebSocket.message_event
   - api.WebSocket.open_event
   - api.WebSocket.protocol
+  - api.WebSocket.protocol_rfc_6455
   - api.WebSocket.readyState
   - api.WebSocket.send
   - api.WebSocket.url
