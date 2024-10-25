@@ -159,7 +159,7 @@ function build() {
   run("npm run build");
 }
 
-function prettyJSON(sourceFp: string): string {
+function prettyJson(sourceFp: string): string {
   return (
     JSON.stringify(
       JSON.parse(readFileSync(sourceFp, { encoding: "utf-8" })),
@@ -193,7 +193,7 @@ function diffJson(from: string = "latest", to?: string): string {
       "data.json",
     );
     // fn this prettyJSON
-    const prettyJson = prettyJSON(pkgJson);
+    const prettyJson = prettyJson(pkgJson);
     const fp = join(temporaryDir, `data.${version}.json`);
     writeFileSync(fp, prettyJson);
     return fp;
@@ -206,7 +206,7 @@ function diffJson(from: string = "latest", to?: string): string {
     } else {
       build();
       const preparedJson = join(packages["web-features"], "data.json");
-      const prettyPreparedJson = prettyJSON(preparedJson);
+      const prettyPreparedJson = prettyJson(preparedJson);
       const fp = join(temporaryDir, "data.HEAD.json");
       writeFileSync(fp, prettyPreparedJson);
       return fp;
