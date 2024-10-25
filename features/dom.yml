@@ -1,6 +1,8 @@
-name: DOM
-description: TODO
+name: DOM Standard
+description: "The DOM (Document Object Model) is an API for working with documents by modeling them as a tree of nodes. TODO: add some of the parts"
 spec: https://dom.spec.whatwg.org/
+status:
+  compute_from: api.Document
 compat_features:
   - api.Attr
   - api.Attr.localName
@@ -30,21 +32,223 @@ compat_features:
   - api.DOMImplementation.createDocument
   - api.DOMImplementation.createDocumentType
   - api.DOMImplementation.createHTMLDocument
+  - api.DOMStringList
+  - api.DOMStringList.contains
+  - api.DOMStringList.item
+  - api.DOMStringList.length
   - api.DOMTokenList
+  - api.DOMTokenList.@@iterator
   - api.DOMTokenList.add
+  - api.DOMTokenList.add.multiple_parameters
   - api.DOMTokenList.contains
+  - api.DOMTokenList.entries
+  - api.DOMTokenList.forEach
   - api.DOMTokenList.item
+  - api.DOMTokenList.keys
   - api.DOMTokenList.length
   - api.DOMTokenList.remove
+  - api.DOMTokenList.remove.multiple_parameters
+  - api.DOMTokenList.remove_duplicates
   - api.DOMTokenList.replace
+  - api.DOMTokenList.replace.boolean_value
   - api.DOMTokenList.supports
   - api.DOMTokenList.toString
   - api.DOMTokenList.toggle
+  - api.DOMTokenList.toggle.force_parameter
+  - api.DOMTokenList.trim_whitespace
   - api.DOMTokenList.value
+  - api.DOMTokenList.values
+  - api.Document
+  - api.Document.Document
+  - api.Document.DOMContentLoaded_event
+  - api.Document.URL
+  - api.Document.activeElement
+  - api.Document.adoptNode
+  - api.Document.append
+  - api.Document.body
+  - api.Document.characterSet
+  - api.Document.childElementCount
+  - api.Document.children
+  - api.Document.close
+  - api.Document.compatMode
+  - api.Document.contentType
+  - api.Document.cookie
+  - api.Document.createAttribute
+  - api.Document.createAttributeNS
+  - api.Document.createCDATASection
+  - api.Document.createComment
+  - api.Document.createDocumentFragment
+  - api.Document.createElement
+  - api.Document.createElement.options_parameter
+  - api.Document.createElementNS
+  - api.Document.createElementNS.options_parameter
+  - api.Document.createEvent
+  - api.Document.createExpression
+  - api.Document.createNodeIterator
+  - api.Document.createProcessingInstruction
+  - api.Document.createTextNode
+  - api.Document.createTreeWalker
+  - api.Document.createTreeWalker.whatToShow_filter_parameters_optional
+  - api.Document.currentScript
+  - api.Document.defaultView
+  - api.Document.designMode
+  - api.Document.dir
+  - api.Document.doctype
+  - api.Document.documentElement
+  - api.Document.documentURI
+  - api.Document.embeds
+  - api.Document.featurePolicy
+  - api.Document.firstElementChild
+  - api.Document.forms
+  - api.Document.getElementsByName
+  - api.Document.getElementById
+  - api.Document.getElementsByClassName
+  - api.Document.getElementsByTagName
+  - api.Document.getElementsByTagNameNS
+  - api.Document.hasFocus
+  - api.Document.head
+  - api.Document.hidden
+  - api.Document.images
+  - api.Document.implementation
+  - api.Document.importNode
+  - api.Document.lastElementChild
+  - api.Document.lastModified
+  - api.Document.links
+  - api.Document.open
+  - api.Document.plugins
+  - api.Document.prepend
+  - api.Document.querySelector
+  - api.Document.querySelectorAll
+  - api.Document.readyState
+  - api.Document.readystatechange_event
+  - api.Document.referrer
+  - api.Document.replaceChildren
+  - api.Document.scripts
+  - api.Document.scroll_event
+  - api.Document.securitypolicyviolation_event
+  - api.Document.title
+  - api.Document.visibilityState
+  - api.Document.visibilitychange_event
+  - api.Document.write
+  - api.Document.writeln
+  - api.DocumentFragment
+  - api.DocumentFragment.DocumentFragment
+  - api.DocumentFragment.append
+  - api.DocumentFragment.childElementCount
+  - api.DocumentFragment.children
+  - api.DocumentFragment.firstElementChild
+  - api.DocumentFragment.getElementById
+  - api.DocumentFragment.lastElementChild
+  - api.DocumentFragment.prepend
+  - api.DocumentFragment.querySelector
+  - api.DocumentFragment.querySelectorAll
+  - api.DocumentFragment.replaceChildren
+  - api.DocumentType
+  - api.DocumentType.after
+  - api.DocumentType.before
+  - api.DocumentType.name
+  - api.DocumentType.publicId
+  - api.DocumentType.remove
+  - api.DocumentType.replaceWith
+  - api.DocumentType.systemId
+  - api.Element
+  - api.Element.after
+  - api.Element.append
+  - api.Element.attachShadow.options_clonable_parameter
+  - api.Element.attachShadow.options_delegatesFocus_parameter
+  - api.Element.attachShadow.options_serializable_parameter
+  - api.Element.attributes
+  - api.Element.auxclick_event
+  - api.Element.auxclick_event.type_pointerevent
+  - api.Element.focus_event
+  - api.Element.outerHTML
+  - api.Element.scroll_event
+  - api.Element.securitypolicyviolation_event
+  - api.Element.wheel_event
+  - api.Element.before
+  - api.Element.beforematch_event
+  - api.Element.blur_event
+  - api.Element.childElementCount
+  - api.Element.children
+  - api.Element.classList
+  - api.Element.className
+  - api.Element.click_event.type_pointerevent
+  - api.Element.closest
+  - api.Element.firstElementChild
+  - api.Element.getAttribute
+  - api.Element.getAttributeNS
+  - api.Element.getAttributeNames
+  - api.Element.getAttributeNode
+  - api.Element.getAttributeNodeNS
+  - api.Element.getElementsByClassName
+  - api.Element.getElementsByTagName
+  - api.Element.getElementsByTagName.all_elements_selector
+  - api.Element.getElementsByTagNameNS
+  - api.Element.getElementsByTagNameNS.all_elements_selector
+  - api.Element.getHTML
+  - api.Element.hasAttribute
+  - api.Element.hasAttributeNS
+  - api.Element.hasAttributes
+  - api.Element.id
+  - api.Element.innerHTML
+  - api.Element.insertAdjacentElement
+  - api.Element.insertAdjacentHTML
+  - api.Element.insertAdjacentText
+  - api.Element.keydown_event
+  - api.Element.keyup_event
+  - api.Element.lastElementChild
+  - api.Element.localName
+  - api.Element.matches
+  - api.Element.namespaceURI
+  - api.Element.nextElementSibling
+  - api.Element.prefix
+  - api.Element.prepend
+  - api.Element.previousElementSibling
+  - api.Element.querySelector
+  - api.Element.querySelectorAll
+  - api.Element.remove
+  - api.Element.removeAttribute
+  - api.Element.removeAttributeNS
+  - api.Element.removeAttributeNode
+  - api.Element.replaceChildren
+  - api.Element.replaceWith
+  - api.Element.setAttribute
+  - api.Element.setAttributeNS
+  - api.Element.setAttributeNode
+  - api.Element.setAttributeNodeNS
+  - api.Element.tagName
+  - api.Element.toggleAttribute
   - api.HTMLCollection
   - api.HTMLCollection.item
   - api.HTMLCollection.length
   - api.HTMLCollection.namedItem
+  - api.HTMLDocument
+  - api.HTMLElement
+  - api.HTMLElement.accessKey
+  - api.HTMLElement.accessKeyLabel
+  - api.HTMLElement.autocapitalize
+  - api.HTMLElement.autocorrect
+  - api.HTMLElement.blur
+  - api.HTMLElement.change_event
+  - api.HTMLElement.click
+  - api.HTMLElement.command_event
+  - api.HTMLElement.contentEditable
+  - api.HTMLElement.contentEditable.plaintext-only
+  - api.HTMLElement.dir
+  - api.HTMLElement.enterKeyHint
+  - api.HTMLElement.focus
+  - api.HTMLElement.focus.options_focusVisible_parameter
+  - api.HTMLElement.focus.options_preventScroll_parameter
+  - api.HTMLElement.hidden
+  - api.HTMLElement.innerText
+  - api.HTMLElement.inputMode
+  - api.HTMLElement.isContentEditable
+  - api.HTMLElement.lang
+  - api.HTMLElement.nonce
+  - api.HTMLElement.outerText
+  - api.HTMLElement.spellcheck
+  - api.HTMLElement.title
+  - api.HTMLElement.togglePopover.returns_boolean
   - api.NamedNodeMap
   - api.NamedNodeMap.getNamedItem
   - api.NamedNodeMap.getNamedItemNS
@@ -54,6 +258,34 @@ compat_features:
   - api.NamedNodeMap.removeNamedItemNS
   - api.NamedNodeMap.setNamedItem
   - api.NamedNodeMap.setNamedItemNS
+  - api.Node
+  - api.Node.appendChild
+  - api.Node.baseURI
+  - api.Node.childNodes
+  - api.Node.cloneNode
+  - api.Node.compareDocumentPosition
+  - api.Node.contains
+  - api.Node.firstChild
+  - api.Node.hasChildNodes
+  - api.Node.insertBefore
+  - api.Node.isDefaultNamespace
+  - api.Node.isEqualNode
+  - api.Node.isSameNode
+  - api.Node.lastChild
+  - api.Node.lookupNamespaceURI
+  - api.Node.lookupPrefix
+  - api.Node.nextSibling
+  - api.Node.nodeName
+  - api.Node.nodeType
+  - api.Node.nodeValue
+  - api.Node.normalize
+  - api.Node.ownerDocument
+  - api.Node.parentElement
+  - api.Node.parentNode
+  - api.Node.previousSibling
+  - api.Node.removeChild
+  - api.Node.replaceChild
+  - api.Node.textContent
   - api.NodeIterator
   - api.NodeIterator.filter
   - api.NodeIterator.nextNode
@@ -64,14 +296,14 @@ compat_features:
   - api.NodeIterator.whatToShow
   - api.NodeList
   - api.NodeList.@@iterator
+  - api.NodeList.entries
   - api.NodeList.forEach
   - api.NodeList.item
+  - api.NodeList.keys
   - api.NodeList.length
+  - api.NodeList.values
   - api.ProcessingInstruction
   - api.ProcessingInstruction.target
-  - api.Range
-  - api.ShadowRoot.delegatesFocus
-  - api.ShadowRoot.serializable
   - api.Text
   - api.Text.Text
   - api.Text.splitText
@@ -89,5 +321,3 @@ compat_features:
   - api.TreeWalker.root
   - api.TreeWalker.whatToShow
   - api.XMLDocument
-
-  - api.Element
