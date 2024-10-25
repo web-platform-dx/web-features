@@ -32,3 +32,8 @@ compat_features:
   - api.PaymentRequestEvent.shippingOptions
   - api.PaymentRequestEvent.topOrigin
   - api.PaymentRequestEvent.total
+  - api.Permissions.permission_payment-handler
+  - api.ServiceWorkerGlobalScope.canmakepayment_event
+  - api.ServiceWorkerGlobalScope.paymentrequest_event
+  - api.ServiceWorkerRegistration.paymentManager
+  - http.headers.Permissions-Policy.payment
