@@ -3,3 +3,9 @@ description: The `showOpenFilePicker()`, `showDirectoryPicker()`, and `showSaveF
 spec: https://wicg.github.io/file-system-access/
 caniuse: native-filesystem-api
 group: file-system
+compat_features:
+  - api.FileSystemHandle.queryPermission
+  - api.FileSystemHandle.requestPermission
+  - api.Window.showDirectoryPicker
+  - api.Window.showOpenFilePicker
+  - api.Window.showSaveFilePicker

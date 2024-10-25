@@ -13,5 +13,44 @@ status:
     safari: "11.1"
     safari_ios: "11.3"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2023-12-05
+  # support:
+  #   chrome: "119"
+  #   chrome_android: "120"
+  #   edge: "85"
+  #   firefox: "65"
+  #   firefox_android: "65"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
   - api.Document.hasStorageAccess
   - api.Document.requestStorageAccess
+
+  # baseline: false
+  # support:
+  #   chrome: "119"
+  #   chrome_android: "120"
+  #   edge: "85"
+  #   firefox: "117"
+  #   firefox_android: "117"
+  - api.Permissions.permission_storage-access
+
+  # baseline: false
+  # support:
+  #   chrome: "113"
+  #   chrome_android: "113"
+  #   edge: "113"
+  - http.headers.Permissions-Policy.storage-access
+
+  # baseline: false
+  # support:
+  #   chrome: "119"
+  #   chrome_android: "119"
+  #   edge: "119"
+  - api.Document.requestStorageAccessFor
+
+  # baseline: false
+  # support:
+  #   chrome_android: "120"
+  - api.Permissions.permission_top-level-storage-access

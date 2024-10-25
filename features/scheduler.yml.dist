@@ -6,6 +6,7 @@ status:
   support:
     chrome: "129"
     chrome_android: "129"
+    edge: "129"
 compat_features:
   # baseline: false
   # support:
@@ -22,11 +23,20 @@ compat_features:
   - api.TaskPriorityChangeEvent.previousPriority
   - api.TaskSignal
   - api.TaskSignal.priority
+  - api.TaskSignal.prioritychange_event
   - api.scheduler
+
+  # baseline: false
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "116"
+  #   edge: "116"
+  - api.TaskSignal.any_static
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "129"
   #   chrome_android: "129"
+  #   edge: "129"
   - api.Scheduler.yield

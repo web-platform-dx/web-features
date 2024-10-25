@@ -1,7 +1,10 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-23
 name: Upgrade Insecure Requests
 description: TODO
 spec: https://w3c.github.io/webappsec-upgrade-insecure-requests/
 compat_features:
-  - http.headers.Content-Security-Policy.upgrade-insecure-requests
   - http.headers.Upgrade-Insecure-Requests
+
+# The following features in the spec are already part of web-features:
+# - Content Security Policy (CSP):
+#   - http.headers.Content-Security-Policy.upgrade-insecure-requests

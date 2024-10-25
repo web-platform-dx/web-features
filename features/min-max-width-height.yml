@@ -1,0 +1,17 @@
+name: Min and max width and height
+description: The `min-width`, `min-height`, `max-width`, and `max-height` CSS properties set the minimum and maximum size of an element.
+spec:
+  - https://drafts.csswg.org/css-sizing-3/#min-size-properties
+  - https://drafts.csswg.org/css-sizing-3/#max-size-properties
+caniuse: minmaxwh
+status:
+  compute_from: css.properties.max-height.none
+compat_features:
+  - css.properties.max-height
+  - css.properties.max-height.none
+  - css.properties.max-width
+  - css.properties.max-width.none
+  - css.properties.min-height
+  - css.properties.min-height.auto
+  - css.properties.min-width
+  - css.properties.min-width.auto

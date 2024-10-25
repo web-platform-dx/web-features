@@ -9,3 +9,19 @@ status:
   compute_from:
     - api.Clipboard.read
     - api.Clipboard.write
+compat_features:
+  - api.Clipboard
+  - api.Clipboard.read
+  - api.Clipboard.readText
+  - api.Clipboard.write
+  - api.Clipboard.writeText
+  - api.Clipboard.type_image-png
+  - api.Clipboard.type_text-html
+  - api.Clipboard.type_text-plain
+  - api.ClipboardItem
+  - api.ClipboardItem.ClipboardItem
+  - api.ClipboardItem.getType
+  - api.ClipboardItem.presentationStyle
+  - api.ClipboardItem.types
+  - api.Navigator.clipboard
+  - api.Permissions.permission_clipboard-write

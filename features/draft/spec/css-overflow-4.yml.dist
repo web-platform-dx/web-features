@@ -5,117 +5,33 @@ status:
   baseline: false
   support: {}
 compat_features:
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
+  # baseline: low
+  # baseline_low_date: 2023-04-11
   # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: ≤3
-  #   safari_ios: ≤2
-  - css.properties.overflow.auto
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "3"
-  #   safari_ios: "2"
-  - css.properties.overflow.hidden
-  - css.properties.overflow.scroll
-  - css.properties.overflow.visible
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "3"
-  #   safari_ios: ≤2
-  - css.properties.overflow-x.auto
-  - css.properties.overflow-y.auto
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "3"
-  #   safari_ios: "2"
-  - css.properties.overflow-x.hidden
-  - css.properties.overflow-x.scroll
-  - css.properties.overflow-x.visible
-  - css.properties.overflow-y.hidden
-  - css.properties.overflow-y.scroll
-  - css.properties.overflow-y.visible
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "7"
-  #   firefox_android: "7"
-  #   safari: "1.3"
-  #   safari_ios: "1"
-  - css.properties.text-overflow
-  - css.properties.text-overflow.clip
-  - css.properties.text-overflow.ellipsis
-
-  # baseline: high
-  # baseline_low_date: 2022-03-14
-  # baseline_high_date: 2024-09-14
-  # support:
-  #   chrome: "61"
-  #   chrome_android: "61"
+  #   chrome: "15"
+  #   chrome_android: "100"
   #   edge: "79"
-  #   firefox: "36"
-  #   firefox_android: "36"
-  #   safari: "15.4"
-  #   safari_ios: "15.4"
-  - css.properties.scroll-behavior
-  - css.properties.scroll-behavior.auto
-  - css.properties.scroll-behavior.smooth
+  #   firefox: "112"
+  #   firefox_android: "112"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
+  - css.types.overflow.overlay
 
   # baseline: false
   # support:
-  #   chrome: "94"
-  #   chrome_android: "94"
-  #   edge: "94"
-  #   firefox: "97"
-  #   firefox_android: "97"
-  - css.properties.scrollbar-gutter.auto
-  - css.properties.scrollbar-gutter.stable
+  #   firefox: "9"
+  #   firefox_android: "9"
+  - css.properties.text-overflow.string
+  - css.properties.text-overflow.two_value_syntax
 
   # baseline: false
   # support:
-  #   firefox: "69"
-  #   firefox_android: "79"
-  - css.properties.overflow-block
-  - css.properties.overflow-inline
+  #   firefox: "112"
+  #   firefox_android: "112"
+  - css.properties.overflow-block.overlay
+  - css.properties.overflow-inline.overlay
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - css.properties.overflow-clip-margin
-  - css.properties.overflow-clip-margin.border-box
-  - css.properties.overflow-clip-margin.content-box
-  - css.properties.overflow-clip-margin.padding-box
+  - css.properties.line-clamp.none
