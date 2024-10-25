@@ -69,6 +69,7 @@ compat_features:
   - api.NodeList.length
   - api.ProcessingInstruction
   - api.ProcessingInstruction.target
+  - api.Range
   - api.ShadowRoot.delegatesFocus
   - api.ShadowRoot.serializable
   - api.Text
@@ -88,3 +89,5 @@ compat_features:
   - api.TreeWalker.root
   - api.TreeWalker.whatToShow
   - api.XMLDocument
+
+  - api.Element
