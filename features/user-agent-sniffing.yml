@@ -1,0 +1,6 @@
+name: User agent sniffing
+description: "The `navigator.userAgent` read-only property returns the user agent string for the current browser. Selectively showing content based on the user agent string is unreliable. Consider using feature detection instead."
+spec: https://html.spec.whatwg.org/multipage/system-state.html#the-navigator-object
+compat_features:
+  - api.Navigator.userAgent
+  - api.WorkerNavigator.userAgent
