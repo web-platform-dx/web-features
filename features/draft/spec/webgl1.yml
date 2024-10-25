@@ -1,4 +1,4 @@
-draft_date: 2024-10-17
+draft_date: 2024-10-24
 name: WebGL Specification
 description: TODO
 spec: https://registry.khronos.org/webgl/specs/latest/1.0/
@@ -15,22 +15,11 @@ compat_features:
   - api.WebGL2RenderingContext.vertexAttrib2fv.value_param_accepts_SharedArrayBuffer
   - api.WebGL2RenderingContext.vertexAttrib3fv.value_param_accepts_SharedArrayBuffer
   - api.WebGL2RenderingContext.vertexAttrib4fv.value_param_accepts_SharedArrayBuffer
-  - api.WebGLActiveInfo.worker_support
-  - api.WebGLBuffer.worker_support
-  - api.WebGLContextEvent.worker_support
-  - api.WebGLFramebuffer.worker_support
-  - api.WebGLProgram.worker_support
-  - api.WebGLRenderbuffer.worker_support
   - api.WebGLRenderingContext.compressedTexImage2D.pixels_param_accepts_SharedArrayBuffer
   - api.WebGLRenderingContext.vertexAttrib1fv.value_param_accepts_SharedArrayBuffer
   - api.WebGLRenderingContext.vertexAttrib2fv.value_param_accepts_SharedArrayBuffer
   - api.WebGLRenderingContext.vertexAttrib3fv.value_param_accepts_SharedArrayBuffer
   - api.WebGLRenderingContext.vertexAttrib4fv.value_param_accepts_SharedArrayBuffer
-  - api.WebGLRenderingContext.worker_support
-  - api.WebGLShader.worker_support
-  - api.WebGLShaderPrecisionFormat.worker_support
-  - api.WebGLTexture.worker_support
-  - api.WebGLUniformLocation.worker_support
 
 # The following features in the spec are already part of web-features:
 # - WebGL2:
@@ -191,14 +180,20 @@ compat_features:
 #   - api.WebGLActiveInfo.name
 #   - api.WebGLActiveInfo.size
 #   - api.WebGLActiveInfo.type
+#   - api.WebGLActiveInfo.worker_support
 #   - api.WebGLBuffer
+#   - api.WebGLBuffer.worker_support
 #   - api.WebGLContextEvent
 #   - api.WebGLContextEvent.WebGLContextEvent
 #   - api.WebGLContextEvent.statusMessage
+#   - api.WebGLContextEvent.worker_support
 #   - api.WebGLFramebuffer
+#   - api.WebGLFramebuffer.worker_support
 #   - api.WebGLObject
 #   - api.WebGLProgram
+#   - api.WebGLProgram.worker_support
 #   - api.WebGLRenderbuffer
+#   - api.WebGLRenderbuffer.worker_support
 #   - api.WebGLRenderingContext
 #   - api.WebGLRenderingContext.activeTexture
 #   - api.WebGLRenderingContext.attachShader
@@ -341,13 +336,18 @@ compat_features:
 #   - api.WebGLRenderingContext.vertexAttrib4fv
 #   - api.WebGLRenderingContext.vertexAttribPointer
 #   - api.WebGLRenderingContext.viewport
+#   - api.WebGLRenderingContext.worker_support
 #   - api.WebGLShader
+#   - api.WebGLShader.worker_support
 #   - api.WebGLShaderPrecisionFormat
 #   - api.WebGLShaderPrecisionFormat.precision
 #   - api.WebGLShaderPrecisionFormat.rangeMax
 #   - api.WebGLShaderPrecisionFormat.rangeMin
+#   - api.WebGLShaderPrecisionFormat.worker_support
 #   - api.WebGLTexture
+#   - api.WebGLTexture.worker_support
 #   - api.WebGLUniformLocation
+#   - api.WebGLUniformLocation.worker_support
 # - Desynchronized WebGL canvas:
 #   - api.HTMLCanvasElement.getContext.webgl_context.options_desynchronized_parameter
 # - Color management for WebGL2:
