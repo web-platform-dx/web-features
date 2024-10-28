@@ -58,7 +58,6 @@ compat_features:
   - api.Window.history
   - api.Window.length
   - api.Window.name
-  - api.Window.open
   - api.Window.opener
   - api.Window.prompt
   - css.selectors.active
@@ -1914,19 +1913,6 @@ compat_features:
   - api.HTMLInputElement.invalid_event
 
   # baseline: high
-  # baseline_low_date: 2019-01-29
-  # baseline_high_date: 2021-07-29
-  # support:
-  #   chrome: "23"
-  #   chrome_android: "25"
-  #   edge: "12"
-  #   firefox: "65"
-  #   firefox_android: "65"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - api.Window.open.once_per_event
-
-  # baseline: high
   # baseline_low_date: 2019-03-25
   # baseline_high_date: 2021-09-25
   # support:
@@ -2973,6 +2959,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "1"
+  - api.Window.open
+
+  # baseline: false
+  # support:
   #   chrome: "4"
   #   chrome_android: "18"
   #   edge: "12"
@@ -3016,6 +3012,16 @@ compat_features:
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - html.elements.input.type_color
+
+  # baseline: false
+  # support:
+  #   chrome: "23"
+  #   chrome_android: "25"
+  #   edge: "12"
+  #   firefox: "65"
+  #   firefox_android: "65"
+  #   safari: "11"
+  - api.Window.open.once_per_event
 
   # baseline: false
   # support:
