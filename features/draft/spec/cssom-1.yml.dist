@@ -278,3 +278,10 @@ compat_features:
   - api.CSSPageDescriptors.pageOrientation
   - api.CSSPageDescriptors.size
   - api.CSSPageRule.style.type_CSSPageDescriptors
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.CSSMarginRule
+  - api.CSSMarginRule.name
+  - api.CSSMarginRule.style

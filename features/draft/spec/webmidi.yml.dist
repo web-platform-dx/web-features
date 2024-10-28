@@ -4,9 +4,10 @@
 status:
   baseline: false
   support:
-    chrome: "43"
-    chrome_android: "43"
+    chrome: "64"
+    chrome_android: "64"
     edge: "79"
-    firefox: "108"
+    firefox: "74"
+    firefox_android: "79"
 compat_features:
-  - api.Navigator.requestMIDIAccess.secure_context_required
+  - html.elements.iframe.allow.midi
