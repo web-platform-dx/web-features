@@ -1,6 +1,7 @@
-name: CSS numeric factory functions
-description: The CSS numeric factory functions create a CSSUnitValue, for instance with `CSS.px(12)` or `CSS.kHz(440)`.
+name: Numeric factory functions
+description: The numeric factory functions, such as `CSS.px()` or `CSS.kHz()`, return a `CSSUnitValue` representing a CSS number value (as in `12px` or `440kHz`).
 spec: https://drafts.css-houdini.org/css-typed-om-1/#numeric-factory
+group: cssom
 compat_features:
   - api.CSS.Hz_static
   - api.CSS.Q_static
