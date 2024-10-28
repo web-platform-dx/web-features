@@ -17,6 +17,11 @@ compat_features:
   - api.PictureInPictureEvent.PictureInPictureEvent
   - api.PictureInPictureEvent.pictureInPictureWindow
 
+  # baseline: false
+  # support:
+  #   chrome: "71"
+  - html.elements.iframe.allow.picture-in-picture
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
