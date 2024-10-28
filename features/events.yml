@@ -1,6 +1,9 @@
 name: Events
-description: TODO
-spec: https://dom.spec.whatwg.org/
+description: "Events are notifications of significant things occurring in the web page, such as documents or images loading, or user clicks. The Events APIs let you listen for these events, and react to them."
+spec:
+  - https://html.spec.whatwg.org/multipage/indices.html#events-2
+  - https://dom.spec.whatwg.org/#interface-customevent
+  - https://dom.spec.whatwg.org/#interface-eventtarget
 compat_features:
   - api.CustomEvent
   - api.CustomEvent.CustomEvent
