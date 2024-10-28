@@ -1,4 +1,4 @@
-draft_date: 2024-10-21
+draft_date: 2024-10-28
 name: Gamepad
 description: TODO
 spec: https://w3c.github.io/gamepad/
@@ -35,4 +35,5 @@ compat_features:
   - api.Navigator.getGamepads.secure_context_required
   - api.Window.gamepadconnected_event
   - api.Window.gamepaddisconnected_event
+  - html.elements.iframe.allow.gamepad
   - http.headers.Permissions-Policy.gamepad
