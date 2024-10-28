@@ -492,6 +492,10 @@ compat_features:
   - html.elements.form.autocomplete.webauthn
   - html.elements.hr.hr_in_select
   - html.elements.html.xmlns
+  - html.elements.iframe.allow.autoplay
+  - html.elements.iframe.allow.cross-origin-isolated
+  - html.elements.iframe.allow.document-domain
+  - html.elements.iframe.allow.wildcards
   - html.elements.iframe.referrerpolicy.no-referrer-when-downgrade
   - html.elements.iframe.referrerpolicy.origin-when-cross-origin
   - html.elements.iframe.referrerpolicy.unsafe-url
@@ -639,7 +643,6 @@ compat_features:
   - http.headers.Permissions-Policy.cross-origin-isolated
   - http.headers.Permissions-Policy.document-domain
   - http.headers.Refresh
-  - http.headers.X-Frame-Options.SAMEORIGIN
   - http.status.103
   - http.status.103.preconnect
   - http.status.103.preload
