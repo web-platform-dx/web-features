@@ -192,9 +192,9 @@ function diffJson(from: string = "latest", to?: string): string {
       "web-features",
       "data.json",
     );
-    const prettyJson = prettyJson(pkgJson);
+    const prettyPkgJson = prettyJson(pkgJson);
     const fp = join(temporaryDir, `data.${version}.json`);
-    writeFileSync(fp, prettyJson);
+    writeFileSync(fp, prettyPkgJson);
     return fp;
   }
 
