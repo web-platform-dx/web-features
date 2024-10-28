@@ -3,9 +3,9 @@ description: "The `from` keyword for color functions (`color()`, `hsl()`, `oklch
 spec: https://drafts.csswg.org/css-color-5/#relative-colors
 group: css
 caniuse: css-relative-colors
-# TODO: Sort out support with https://github.com/mdn/browser-compat-data/issues/24528 
+# TODO: Sort out support with https://github.com/mdn/browser-compat-data/issues/24528
 # Support for Relative colors in Chromium 119, Safari 16.4, Firefox 128.
-# Support for currentColor in relative colors in Chromium 131, Safari 16.4, Firefox 133. 
+# Support for currentColor in relative colors in Chromium 131, Safari 16.4, Firefox 133.
 # We don't need separate features, but should pin the feature on one of those.
 compat_features:
   # These are the only two features that don't use partial implementation for
