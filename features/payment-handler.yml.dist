@@ -59,13 +59,6 @@ compat_features:
   - api.PaymentRequestEvent.shippingOptions
 
   # baseline: false
-  # support:
-  #   chrome: "88"
-  #   chrome_android: "88"
-  #   edge: "88"
-  - http.headers.Permissions-Policy.payment
-
-  # baseline: false
   # support: {}
   - api.CanMakePaymentEvent.methodData
   - api.CanMakePaymentEvent.modifiers

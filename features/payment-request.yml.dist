@@ -109,6 +109,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "88"
+  #   chrome_android: "88"
+  #   edge: "88"
+  - http.headers.Permissions-Policy.payment
+
+  # baseline: false
+  # support:
   #   chrome: "95"
   #   chrome_android: "95"
   #   edge: "95"
