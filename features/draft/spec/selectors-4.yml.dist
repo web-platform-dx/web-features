@@ -17,6 +17,7 @@ compat_features:
   #   safari: "1"
   #   safari_ios: "1"
   - css.selectors.active
+  - css.selectors.active.non_a_elements
   - css.selectors.child
   - css.selectors.class
   - css.selectors.descendant
@@ -41,6 +42,20 @@ compat_features:
   #   safari: "1"
   #   safari_ios: "3.2"
   - css.selectors.link
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "1.3"
+  #   safari_ios: "1"
+  - css.selectors.type.namespaces
+  - css.selectors.universal.namespaces
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -160,6 +175,19 @@ compat_features:
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
   # support:
+  #   chrome: "6"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "4"
+  #   firefox_android: "4"
+  #   safari: "5"
+  #   safari_ios: "4.2"
+  - css.selectors.visited.privacy_measures
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
   #   chrome: "10"
   #   chrome_android: "18"
   #   edge: "12"
@@ -198,19 +226,34 @@ compat_features:
   #   safari: "7"
   #   safari_ios: "7"
   - css.selectors.scope
+  - css.selectors.scope.dom_api
 
   # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
-  #   chrome: "47"
-  #   chrome_android: "47"
+  #   chrome: "40"
+  #   chrome_android: "40"
   #   edge: "79"
-  #   firefox: "51"
-  #   firefox_android: "51"
+  #   firefox: "13"
+  #   firefox_android: "14"
   #   safari: "9"
   #   safari_ios: "9"
-  - css.selectors.placeholder-shown
+  - css.selectors.invalid.form
+  - css.selectors.valid.form
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "49"
+  #   chrome_android: "49"
+  #   edge: "79"
+  #   firefox: "47"
+  #   firefox_android: "47"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - css.selectors.attribute.case_insensitive_modifier
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -238,6 +281,46 @@ compat_features:
   #   safari_ios: "9"
   - css.selectors.any-link
 
+  # baseline: high
+  # baseline_low_date: 2021-01-21
+  # baseline_high_date: 2023-07-21
+  # support:
+  #   chrome: "88"
+  #   chrome_android: "88"
+  #   edge: "88"
+  #   firefox: "84"
+  #   firefox_android: "84"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - css.selectors.not.selector_list
+
+  # baseline: high
+  # baseline_low_date: 2021-09-20
+  # baseline_high_date: 2024-03-20
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "87"
+  #   firefox_android: "87"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - css.selectors.link.not_match_link
+  - css.selectors.visited.not_match_link
+
+  # baseline: high
+  # baseline_low_date: 2021-09-20
+  # baseline_high_date: 2024-03-20
+  # support:
+  #   chrome: "65"
+  #   chrome_android: "65"
+  #   edge: "79"
+  #   firefox: "87"
+  #   firefox_android: "87"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - css.selectors.any-link.not_match_link
+
   # baseline: false
   # support:
   #   chrome: "23"
@@ -250,6 +333,19 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "57"
+  #   chrome_android: "57"
+  #   edge: "79"
+  #   firefox: "52"
+  #   firefox_android: "52"
+  - css.selectors.first-child.no_parent_required
+  - css.selectors.last-child.no_parent_required
+  - css.selectors.nth-child.no_parent_required
+  - css.selectors.nth-last-child.no_parent_required
+  - css.selectors.only-child.no_parent_required
+
+  # baseline: false
+  # support:
   #   chrome: "110"
   #   chrome_android: "110"
   #   edge: "110"
@@ -257,11 +353,27 @@ compat_features:
   #   safari_ios: "13.4"
   - css.selectors.picture-in-picture
 
+  # baseline: false
+  # support:
+  #   firefox: "114"
+  #   firefox_android: "114"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - css.selectors.lang.argument_list
+  - css.selectors.lang.wildcards
+
+  # baseline: false
+  # support:
+  #   firefox: "66"
+  #   firefox_android: "66"
+  - css.selectors.attribute.case_sensitive_modifier
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - css.selectors.blank
   - css.selectors.closed
   - css.selectors.column
+  - css.selectors.empty.matches_whitespace
   - css.selectors.open
   - css.selectors.target-within

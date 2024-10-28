@@ -1,4 +1,4 @@
-draft_date: 2024-08-28
+draft_date: 2024-10-28
 name: Encrypted Media Extensions
 description: TODO
 spec: https://w3c.github.io/encrypted-media/
@@ -28,9 +28,14 @@ compat_features:
   - api.MediaKeySession.sessionId
   - api.MediaKeySession.update
   - api.MediaKeyStatusMap
+  - api.MediaKeyStatusMap.@@iterator
+  - api.MediaKeyStatusMap.entries
+  - api.MediaKeyStatusMap.forEach
   - api.MediaKeyStatusMap.get
   - api.MediaKeyStatusMap.has
+  - api.MediaKeyStatusMap.keys
   - api.MediaKeyStatusMap.size
+  - api.MediaKeyStatusMap.values
   - api.MediaKeySystemAccess
   - api.MediaKeySystemAccess.createMediaKeys
   - api.MediaKeySystemAccess.getConfiguration
@@ -40,4 +45,5 @@ compat_features:
   - api.MediaKeys.getStatusForPolicy
   - api.MediaKeys.setServerCertificate
   - api.Navigator.requestMediaKeySystemAccess
+  - html.elements.iframe.allow.encrypted-media
   - http.headers.Permissions-Policy.encrypted-media

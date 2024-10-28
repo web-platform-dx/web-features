@@ -1,4 +1,4 @@
-draft_date: 2024-08-28
+draft_date: 2024-10-21
 name: Media Source Extensions™
 description: TODO
 spec: https://w3c.github.io/media-source/
@@ -24,28 +24,49 @@ compat_features:
   - api.MediaSource.sourceclose_event
   - api.MediaSource.sourceended_event
   - api.MediaSource.sourceopen_event
+  - api.MediaSource.worker_support
   - api.MediaSourceHandle
   - api.SourceBuffer.abort
+  - api.SourceBuffer.abort.worker_support
   - api.SourceBuffer.abort_event
+  - api.SourceBuffer.abort_event.worker_support
   - api.SourceBuffer.appendBuffer
+  - api.SourceBuffer.appendBuffer.worker_support
   - api.SourceBuffer.appendWindowEnd
+  - api.SourceBuffer.appendWindowEnd.worker_support
   - api.SourceBuffer.appendWindowStart
+  - api.SourceBuffer.appendWindowStart.worker_support
   - api.SourceBuffer.audioTracks
+  - api.SourceBuffer.audioTracks.worker_support
   - api.SourceBuffer.buffered
+  - api.SourceBuffer.buffered.worker_support
   - api.SourceBuffer.changeType
+  - api.SourceBuffer.changeType.worker_support
   - api.SourceBuffer.error_event
+  - api.SourceBuffer.error_event.worker_support
   - api.SourceBuffer.mode
+  - api.SourceBuffer.mode.worker_support
   - api.SourceBuffer.remove
+  - api.SourceBuffer.remove.worker_support
   - api.SourceBuffer.textTracks
   - api.SourceBuffer.timestampOffset
+  - api.SourceBuffer.timestampOffset.worker_support
   - api.SourceBuffer.update_event
+  - api.SourceBuffer.update_event.worker_support
   - api.SourceBuffer.updateend_event
+  - api.SourceBuffer.updateend_event.worker_support
   - api.SourceBuffer.updatestart_event
+  - api.SourceBuffer.updatestart_event.worker_support
   - api.SourceBuffer.updating
+  - api.SourceBuffer.updating.worker_support
   - api.SourceBuffer.videoTracks
+  - api.SourceBuffer.videoTracks.worker_support
   - api.SourceBufferList.addsourcebuffer_event
+  - api.SourceBufferList.addsourcebuffer_event.worker_support
   - api.SourceBufferList.length
+  - api.SourceBufferList.length.worker_support
   - api.SourceBufferList.removesourcebuffer_event
+  - api.SourceBufferList.removesourcebuffer_event.worker_support
   - api.TextTrack.sourceBuffer
   - api.VideoTrack.sourceBuffer
 

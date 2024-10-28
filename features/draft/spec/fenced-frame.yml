@@ -1,4 +1,4 @@
-draft_date: 2024-08-28
+draft_date: 2024-10-21
 name: Fenced Frame
 description: TODO
 spec: https://wicg.github.io/fenced-frame/
@@ -7,6 +7,7 @@ compat_features:
   - api.Fence.getNestedConfigs
   - api.Fence.reportEvent
   - api.Fence.setReportEventDataForAutomaticBeacons
+  - api.Fence.setReportEventDataForAutomaticBeacons.start_commit_eventType
   - api.FencedFrameConfig
   - api.FencedFrameConfig.setSharedStorageContext
   - api.HTMLFencedFrameElement

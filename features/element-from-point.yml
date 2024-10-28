@@ -1,0 +1,9 @@
+name: document.elementFromPoint() and document.elementsFromPoint()
+description: The `document.elementFromPoint()` and `document.elementsFromPoint()` methods find the top-most element at a given point in the viewport, or all elements at a given point in the viewport, respectively.
+spec:
+  - https://drafts.csswg.org/cssom-view-1/#dom-document-elementfrompoint
+  - https://drafts.csswg.org/cssom-view-1/#dom-document-elementsfrompoint
+caniuse: element-from-point
+compat_features:
+  - api.Document.elementFromPoint
+  - api.Document.elementsFromPoint

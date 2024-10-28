@@ -1,4 +1,4 @@
-draft_date: 2024-08-28
+draft_date: 2024-10-21
 name: Compatibility Standard
 description: TODO
 spec: https://compat.spec.whatwg.org/
@@ -12,3 +12,12 @@ compat_features:
   - css.properties.-webkit-text-stroke-color
   - css.properties.-webkit-text-stroke-width
   - css.properties.touch-action
+  - css.properties.touch-action.manipulation
+  - css.properties.touch-action.none
+  - css.properties.touch-action.pan-down
+  - css.properties.touch-action.pan-left
+  - css.properties.touch-action.pan-right
+  - css.properties.touch-action.pan-up
+  - css.properties.touch-action.pan-x
+  - css.properties.touch-action.pan-y
+  - css.properties.touch-action.pinch-zoom

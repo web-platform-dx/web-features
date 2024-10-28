@@ -1,91 +1,15 @@
-draft_date: 2024-08-28
+draft_date: 2024-10-22
 name: ECMAScript Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
 compat_features:
   - javascript.builtins.Array.@@species
   - javascript.builtins.Array.@@unscopables
-  - javascript.builtins.ArrayBuffer
-  - javascript.builtins.ArrayBuffer.@@species
-  - javascript.builtins.ArrayBuffer.ArrayBuffer
-  - javascript.builtins.ArrayBuffer.byteLength
-  - javascript.builtins.ArrayBuffer.isView
-  - javascript.builtins.ArrayBuffer.slice
-  - javascript.builtins.AsyncGenerator
-  - javascript.builtins.AsyncGenerator.next
-  - javascript.builtins.AsyncGenerator.return
-  - javascript.builtins.AsyncGenerator.throw
-  - javascript.builtins.AsyncGeneratorFunction
-  - javascript.builtins.AsyncGeneratorFunction.AsyncGeneratorFunction
-  - javascript.builtins.AsyncIterator
-  - javascript.builtins.AsyncIterator.@@asyncIterator
-  - javascript.builtins.BigInt64Array
-  - javascript.builtins.BigInt64Array.BigInt64Array
-  - javascript.builtins.BigUint64Array
-  - javascript.builtins.BigUint64Array.BigUint64Array
-  - javascript.builtins.Boolean
-  - javascript.builtins.Boolean.Boolean
-  - javascript.builtins.Boolean.toString
-  - javascript.builtins.Boolean.valueOf
-  - javascript.builtins.DataView
-  - javascript.builtins.DataView.DataView
-  - javascript.builtins.DataView.buffer
-  - javascript.builtins.DataView.byteLength
-  - javascript.builtins.DataView.byteOffset
-  - javascript.builtins.DataView.getBigInt64
-  - javascript.builtins.DataView.getBigUint64
-  - javascript.builtins.DataView.getFloat32
-  - javascript.builtins.DataView.getFloat64
-  - javascript.builtins.DataView.getInt16
-  - javascript.builtins.DataView.getInt32
-  - javascript.builtins.DataView.getInt8
-  - javascript.builtins.DataView.getUint16
-  - javascript.builtins.DataView.getUint32
-  - javascript.builtins.DataView.getUint8
-  - javascript.builtins.DataView.setBigInt64
-  - javascript.builtins.DataView.setBigUint64
-  - javascript.builtins.DataView.setFloat32
-  - javascript.builtins.DataView.setFloat64
-  - javascript.builtins.DataView.setInt16
-  - javascript.builtins.DataView.setInt32
-  - javascript.builtins.DataView.setInt8
-  - javascript.builtins.DataView.setUint16
-  - javascript.builtins.DataView.setUint32
-  - javascript.builtins.DataView.setUint8
-  - javascript.builtins.Error
-  - javascript.builtins.Error.Error
+  - javascript.builtins.Atomics.Atomic_operations_on_non_shared_buffers
   - javascript.builtins.Error.Error.options_cause_parameter
   - javascript.builtins.Error.cause
-  - javascript.builtins.Error.message
-  - javascript.builtins.Error.name
-  - javascript.builtins.Error.toString
-  - javascript.builtins.EvalError
-  - javascript.builtins.EvalError.EvalError
-  - javascript.builtins.FinalizationRegistry
-  - javascript.builtins.FinalizationRegistry.FinalizationRegistry
-  - javascript.builtins.FinalizationRegistry.register
-  - javascript.builtins.FinalizationRegistry.unregister
-  - javascript.builtins.Float16Array.Float16Array
-  - javascript.builtins.Function
-  - javascript.builtins.Function.@@hasInstance
-  - javascript.builtins.Function.Function
-  - javascript.builtins.Function.apply
-  - javascript.builtins.Function.bind
-  - javascript.builtins.Function.call
-  - javascript.builtins.Function.length
-  - javascript.builtins.Function.name
-  - javascript.builtins.Function.toString
-  - javascript.builtins.Generator
-  - javascript.builtins.Generator.next
-  - javascript.builtins.Generator.return
-  - javascript.builtins.Generator.throw
-  - javascript.builtins.GeneratorFunction
-  - javascript.builtins.GeneratorFunction.GeneratorFunction
-  - javascript.builtins.Iterator
-  - javascript.builtins.Iterator.@@iterator
-  - javascript.builtins.JSON
-  - javascript.builtins.JSON.parse
-  - javascript.builtins.JSON.stringify
+  - javascript.builtins.FinalizationRegistry.symbol_as_target
+  - javascript.builtins.Function.toString.toString_revision
   - javascript.builtins.Map.@@species
   - javascript.builtins.Object
   - javascript.builtins.Object.Object
@@ -111,6 +35,7 @@ compat_features:
   - javascript.builtins.Object.isSealed
   - javascript.builtins.Object.keys
   - javascript.builtins.Object.preventExtensions
+  - javascript.builtins.Object.preventExtensions.ES2015_behavior
   - javascript.builtins.Object.propertyIsEnumerable
   - javascript.builtins.Object.seal
   - javascript.builtins.Object.setPrototypeOf
@@ -118,204 +43,56 @@ compat_features:
   - javascript.builtins.Object.valueOf
   - javascript.builtins.Object.values
   - javascript.builtins.Promise.@@species
-  - javascript.builtins.Proxy
-  - javascript.builtins.Proxy.Proxy
-  - javascript.builtins.Proxy.handler.apply
-  - javascript.builtins.Proxy.handler.construct
-  - javascript.builtins.Proxy.handler.defineProperty
-  - javascript.builtins.Proxy.handler.deleteProperty
-  - javascript.builtins.Proxy.handler.get
-  - javascript.builtins.Proxy.handler.getOwnPropertyDescriptor
-  - javascript.builtins.Proxy.handler.getPrototypeOf
-  - javascript.builtins.Proxy.handler.has
-  - javascript.builtins.Proxy.handler.isExtensible
-  - javascript.builtins.Proxy.handler.ownKeys
-  - javascript.builtins.Proxy.handler.preventExtensions
-  - javascript.builtins.Proxy.handler.set
-  - javascript.builtins.Proxy.handler.setPrototypeOf
-  - javascript.builtins.Proxy.revocable
-  - javascript.builtins.RangeError
-  - javascript.builtins.RangeError.RangeError
-  - javascript.builtins.ReferenceError
-  - javascript.builtins.ReferenceError.ReferenceError
-  - javascript.builtins.Reflect
-  - javascript.builtins.Reflect.apply
-  - javascript.builtins.Reflect.construct
-  - javascript.builtins.Reflect.defineProperty
-  - javascript.builtins.Reflect.deleteProperty
-  - javascript.builtins.Reflect.get
-  - javascript.builtins.Reflect.getOwnPropertyDescriptor
-  - javascript.builtins.Reflect.getPrototypeOf
-  - javascript.builtins.Reflect.has
-  - javascript.builtins.Reflect.isExtensible
-  - javascript.builtins.Reflect.ownKeys
-  - javascript.builtins.Reflect.preventExtensions
-  - javascript.builtins.Reflect.set
-  - javascript.builtins.Reflect.setPrototypeOf
   - javascript.builtins.Set.@@species
-  - javascript.builtins.Symbol
-  - javascript.builtins.Symbol.@@toPrimitive
-  - javascript.builtins.Symbol.Symbol
-  - javascript.builtins.Symbol.asyncIterator
-  - javascript.builtins.Symbol.description
-  - javascript.builtins.Symbol.for
-  - javascript.builtins.Symbol.hasInstance
-  - javascript.builtins.Symbol.isConcatSpreadable
-  - javascript.builtins.Symbol.iterator
-  - javascript.builtins.Symbol.keyFor
-  - javascript.builtins.Symbol.match
-  - javascript.builtins.Symbol.matchAll
-  - javascript.builtins.Symbol.replace
-  - javascript.builtins.Symbol.search
-  - javascript.builtins.Symbol.species
-  - javascript.builtins.Symbol.split
-  - javascript.builtins.Symbol.toPrimitive
-  - javascript.builtins.Symbol.toString
-  - javascript.builtins.Symbol.toStringTag
-  - javascript.builtins.Symbol.unscopables
-  - javascript.builtins.Symbol.valueOf
-  - javascript.builtins.SyntaxError
-  - javascript.builtins.SyntaxError.SyntaxError
-  - javascript.builtins.TypeError
-  - javascript.builtins.TypeError.TypeError
-  - javascript.builtins.TypedArray.@@species
-  - javascript.builtins.URIError
-  - javascript.builtins.URIError.URIError
-  - javascript.builtins.WeakRef
-  - javascript.builtins.WeakRef.WeakRef
-  - javascript.builtins.WeakRef.deref
-  - javascript.builtins.decodeURI
-  - javascript.builtins.decodeURIComponent
-  - javascript.builtins.encodeURI
-  - javascript.builtins.encodeURIComponent
-  - javascript.builtins.eval
+  - javascript.builtins.WeakRef.symbol_as_target
   - javascript.builtins.globalThis
-  - javascript.builtins.isFinite
-  - javascript.builtins.parseFloat
-  - javascript.builtins.undefined
+  - javascript.builtins.parseInt.leading_zero_strings_as_decimal
   - javascript.classes.private_class_fields
   - javascript.classes.private_class_fields_in
   - javascript.classes.private_class_methods
   - javascript.classes.public_class_fields
   - javascript.classes.static_class_fields
   - javascript.classes.static_initialization_blocks
-  - javascript.functions
-  - javascript.functions.arguments
-  - javascript.functions.arguments.@@iterator
-  - javascript.functions.arguments.length
-  - javascript.functions.arrow_functions
-  - javascript.functions.default_parameters
-  - javascript.functions.get
-  - javascript.functions.method_definitions
-  - javascript.functions.rest_parameters
-  - javascript.functions.set
-  - javascript.grammar.boolean_literals
   - javascript.grammar.hashbang_comments
   - javascript.grammar.hexadecimal_escape_sequences
-  - javascript.grammar.null_literal
   - javascript.grammar.numeric_separators
   - javascript.grammar.template_literals
+  - javascript.grammar.template_literals.template_literal_revision
   - javascript.grammar.trailing_commas
+  - javascript.grammar.trailing_commas.trailing_commas_in_functions
+  - javascript.grammar.trailing_commas.trailing_commas_in_object_literals
   - javascript.grammar.unicode_escape_sequences
   - javascript.grammar.unicode_point_escapes
-  - javascript.operators.addition
-  - javascript.operators.addition_assignment
-  - javascript.operators.assignment
-  - javascript.operators.async_generator_function
   - javascript.operators.await.top_level
-  - javascript.operators.bitwise_and
-  - javascript.operators.bitwise_and_assignment
-  - javascript.operators.bitwise_not
-  - javascript.operators.bitwise_or
-  - javascript.operators.bitwise_or_assignment
-  - javascript.operators.bitwise_xor
-  - javascript.operators.bitwise_xor_assignment
   - javascript.operators.class
-  - javascript.operators.comma
-  - javascript.operators.conditional
-  - javascript.operators.decrement
-  - javascript.operators.delete
   - javascript.operators.destructuring
-  - javascript.operators.division
-  - javascript.operators.division_assignment
-  - javascript.operators.equality
+  - javascript.operators.destructuring.computed_property_names
+  - javascript.operators.destructuring.rest_in_arrays
+  - javascript.operators.destructuring.rest_in_objects
   - javascript.operators.exponentiation
   - javascript.operators.exponentiation_assignment
-  - javascript.operators.function
-  - javascript.operators.generator_function
-  - javascript.operators.greater_than
-  - javascript.operators.greater_than_or_equal
-  - javascript.operators.grouping
   - javascript.operators.import
   - javascript.operators.import_meta
-  - javascript.operators.in
-  - javascript.operators.increment
-  - javascript.operators.inequality
-  - javascript.operators.instanceof
-  - javascript.operators.left_shift
-  - javascript.operators.left_shift_assignment
-  - javascript.operators.less_than
-  - javascript.operators.less_than_or_equal
-  - javascript.operators.logical_and
   - javascript.operators.logical_and_assignment
-  - javascript.operators.logical_not
-  - javascript.operators.logical_or
   - javascript.operators.logical_or_assignment
-  - javascript.operators.multiplication
-  - javascript.operators.multiplication_assignment
-  - javascript.operators.new
   - javascript.operators.new_target
-  - javascript.operators.null
   - javascript.operators.nullish_coalescing
   - javascript.operators.nullish_coalescing_assignment
   - javascript.operators.object_initializer
+  - javascript.operators.object_initializer.computed_property_names
+  - javascript.operators.object_initializer.shorthand_method_names
+  - javascript.operators.object_initializer.shorthand_property_names
+  - javascript.operators.object_initializer.spread_properties
   - javascript.operators.optional_chaining
-  - javascript.operators.property_accessors
-  - javascript.operators.remainder
-  - javascript.operators.remainder_assignment
-  - javascript.operators.right_shift
-  - javascript.operators.right_shift_assignment
   - javascript.operators.spread
   - javascript.operators.spread.spread_in_arrays
   - javascript.operators.spread.spread_in_function_calls
   - javascript.operators.spread.spread_in_object_literals
-  - javascript.operators.strict_equality
-  - javascript.operators.strict_inequality
-  - javascript.operators.subtraction
-  - javascript.operators.subtraction_assignment
-  - javascript.operators.this
-  - javascript.operators.typeof
-  - javascript.operators.unary_negation
-  - javascript.operators.unary_plus
-  - javascript.operators.unsigned_right_shift
-  - javascript.operators.unsigned_right_shift_assignment
-  - javascript.operators.void
-  - javascript.operators.yield
-  - javascript.operators.yield_star
-  - javascript.statements.async_generator_function
-  - javascript.statements.block
-  - javascript.statements.break
   - javascript.statements.const
-  - javascript.statements.continue
-  - javascript.statements.debugger
-  - javascript.statements.do_while
-  - javascript.statements.empty
   - javascript.statements.export.namespace
-  - javascript.statements.for
-  - javascript.statements.for_await_of
-  - javascript.statements.for_in
-  - javascript.statements.for_of
-  - javascript.statements.function
-  - javascript.statements.generator_function
-  - javascript.statements.if_else
-  - javascript.statements.label
+  - javascript.statements.import.worklet_support
   - javascript.statements.let
-  - javascript.statements.return
-  - javascript.statements.switch
-  - javascript.statements.throw
-  - javascript.statements.try_catch
-  - javascript.statements.var
-  - javascript.statements.while
+  - javascript.statements.try_catch.optional_catch_binding
   - webassembly.api.CompileError
   - webassembly.api.CompileError.CompileError
   - webassembly.api.LinkError
@@ -392,18 +169,37 @@ compat_features:
 # - Array.of():
 #   - javascript.builtins.Array.of
 #   - javascript.builtins.TypedArray.of
+# - Stable array sort:
+#   - javascript.builtins.Array.sort.stable_sorting
 # - Array splice():
 #   - javascript.builtins.Array.splice
 # - Intl:
 #   - javascript.builtins.Array.toLocaleString
+#   - javascript.builtins.Array.toLocaleString.locales_parameter
+#   - javascript.builtins.Array.toLocaleString.options_parameter
 #   - javascript.builtins.Date.toLocaleDateString
+#   - javascript.builtins.Date.toLocaleDateString.iana_time_zone_names
+#   - javascript.builtins.Date.toLocaleDateString.locales_parameter
+#   - javascript.builtins.Date.toLocaleDateString.options_parameter
 #   - javascript.builtins.Date.toLocaleString
+#   - javascript.builtins.Date.toLocaleString.iana_time_zone_names
+#   - javascript.builtins.Date.toLocaleString.locales_parameter
+#   - javascript.builtins.Date.toLocaleString.options_parameter
 #   - javascript.builtins.Date.toLocaleTimeString
+#   - javascript.builtins.Date.toLocaleTimeString.iana_time_zone_names
+#   - javascript.builtins.Date.toLocaleTimeString.locales_parameter
+#   - javascript.builtins.Date.toLocaleTimeString.options_parameter
 #   - javascript.builtins.Number.toLocaleString
+#   - javascript.builtins.Number.toLocaleString.locales_parameter
+#   - javascript.builtins.Number.toLocaleString.options_parameter
 #   - javascript.builtins.Object.toLocaleString
 #   - javascript.builtins.String.localeCompare
+#   - javascript.builtins.String.localeCompare.locales_parameter
+#   - javascript.builtins.String.localeCompare.options_parameter
 #   - javascript.builtins.String.toLocaleLowerCase
+#   - javascript.builtins.String.toLocaleLowerCase.locales_parameter
 #   - javascript.builtins.String.toLocaleUpperCase
+#   - javascript.builtins.String.toLocaleUpperCase.locales_parameter
 #   - javascript.builtins.TypedArray.toLocaleString
 # - Array by copy:
 #   - javascript.builtins.Array.toReversed
@@ -413,6 +209,89 @@ compat_features:
 #   - javascript.builtins.TypedArray.toReversed
 #   - javascript.builtins.TypedArray.toSorted
 #   - javascript.builtins.TypedArray.with
+# - Typed arrays (initial support):
+#   - javascript.builtins.ArrayBuffer
+#   - javascript.builtins.ArrayBuffer.@@species
+#   - javascript.builtins.ArrayBuffer.ArrayBuffer
+#   - javascript.builtins.ArrayBuffer.byteLength
+#   - javascript.builtins.ArrayBuffer.isView
+#   - javascript.builtins.ArrayBuffer.slice
+#   - javascript.builtins.DataView
+#   - javascript.builtins.DataView.DataView
+#   - javascript.builtins.DataView.buffer
+#   - javascript.builtins.DataView.byteLength
+#   - javascript.builtins.DataView.byteOffset
+#   - javascript.builtins.DataView.getFloat32
+#   - javascript.builtins.DataView.getFloat64
+#   - javascript.builtins.DataView.getInt16
+#   - javascript.builtins.DataView.getInt32
+#   - javascript.builtins.DataView.getInt8
+#   - javascript.builtins.DataView.getUint16
+#   - javascript.builtins.DataView.getUint32
+#   - javascript.builtins.DataView.getUint8
+#   - javascript.builtins.DataView.setFloat32
+#   - javascript.builtins.DataView.setFloat64
+#   - javascript.builtins.DataView.setInt16
+#   - javascript.builtins.DataView.setInt32
+#   - javascript.builtins.DataView.setInt8
+#   - javascript.builtins.DataView.setUint16
+#   - javascript.builtins.DataView.setUint32
+#   - javascript.builtins.DataView.setUint8
+#   - javascript.builtins.Float32Array
+#   - javascript.builtins.Float32Array.Float32Array
+#   - javascript.builtins.Float32Array.Float32Array.constructor_without_parameters
+#   - javascript.builtins.Float32Array.Float32Array.iterable_allowed
+#   - javascript.builtins.Float64Array
+#   - javascript.builtins.Float64Array.Float64Array
+#   - javascript.builtins.Float64Array.Float64Array.constructor_without_parameters
+#   - javascript.builtins.Float64Array.Float64Array.iterable_allowed
+#   - javascript.builtins.Int16Array
+#   - javascript.builtins.Int16Array.Int16Array
+#   - javascript.builtins.Int16Array.Int16Array.constructor_without_parameters
+#   - javascript.builtins.Int16Array.Int16Array.iterable_allowed
+#   - javascript.builtins.Int32Array
+#   - javascript.builtins.Int32Array.Int32Array
+#   - javascript.builtins.Int32Array.Int32Array.constructor_without_parameters
+#   - javascript.builtins.Int32Array.Int32Array.iterable_allowed
+#   - javascript.builtins.Int8Array
+#   - javascript.builtins.Int8Array.Int8Array
+#   - javascript.builtins.Int8Array.Int8Array.constructor_without_parameters
+#   - javascript.builtins.Int8Array.Int8Array.iterable_allowed
+#   - javascript.builtins.TypedArray
+#   - javascript.builtins.TypedArray.@@species
+#   - javascript.builtins.TypedArray.BYTES_PER_ELEMENT
+#   - javascript.builtins.TypedArray.buffer
+#   - javascript.builtins.TypedArray.byteLength
+#   - javascript.builtins.TypedArray.byteOffset
+#   - javascript.builtins.TypedArray.constructor_without_parameters
+#   - javascript.builtins.TypedArray.index_properties_not_consulting_prototype
+#   - javascript.builtins.TypedArray.iterable_in_constructor
+#   - javascript.builtins.TypedArray.join
+#   - javascript.builtins.TypedArray.length
+#   - javascript.builtins.TypedArray.name
+#   - javascript.builtins.TypedArray.named_properties
+#   - javascript.builtins.TypedArray.reverse
+#   - javascript.builtins.TypedArray.set
+#   - javascript.builtins.TypedArray.slice
+#   - javascript.builtins.TypedArray.sort
+#   - javascript.builtins.TypedArray.subarray
+#   - javascript.builtins.TypedArray.toString
+#   - javascript.builtins.Uint16Array
+#   - javascript.builtins.Uint16Array.Uint16Array
+#   - javascript.builtins.Uint16Array.Uint16Array.constructor_without_parameters
+#   - javascript.builtins.Uint16Array.Uint16Array.iterable_allowed
+#   - javascript.builtins.Uint32Array
+#   - javascript.builtins.Uint32Array.Uint32Array
+#   - javascript.builtins.Uint32Array.Uint32Array.constructor_without_parameters
+#   - javascript.builtins.Uint32Array.Uint32Array.iterable_allowed
+#   - javascript.builtins.Uint8Array
+#   - javascript.builtins.Uint8Array.Uint8Array
+#   - javascript.builtins.Uint8Array.Uint8Array.constructor_without_parameters
+#   - javascript.builtins.Uint8Array.Uint8Array.iterable_allowed
+#   - javascript.builtins.Uint8ClampedArray
+#   - javascript.builtins.Uint8ClampedArray.Uint8ClampedArray
+#   - javascript.builtins.Uint8ClampedArray.Uint8ClampedArray.constructor_without_parameters
+#   - javascript.builtins.Uint8ClampedArray.Uint8ClampedArray.iterable_allowed
 # - Resizable buffers:
 #   - javascript.builtins.ArrayBuffer.ArrayBuffer.maxByteLength_option
 #   - javascript.builtins.ArrayBuffer.maxByteLength
@@ -422,12 +301,32 @@ compat_features:
 #   - javascript.builtins.SharedArrayBuffer.grow
 #   - javascript.builtins.SharedArrayBuffer.growable
 #   - javascript.builtins.SharedArrayBuffer.maxByteLength
+# - Transferable ArrayBuffer:
+#   - javascript.builtins.ArrayBuffer.detached
+#   - javascript.builtins.ArrayBuffer.transfer
+#   - javascript.builtins.ArrayBuffer.transferToFixedLength
 # - Async functions:
 #   - javascript.builtins.AsyncFunction
 #   - javascript.builtins.AsyncFunction.AsyncFunction
 #   - javascript.operators.async_function
 #   - javascript.operators.await
 #   - javascript.statements.async_function
+# - Async generators:
+#   - javascript.builtins.AsyncGenerator
+#   - javascript.builtins.AsyncGenerator.next
+#   - javascript.builtins.AsyncGenerator.return
+#   - javascript.builtins.AsyncGenerator.throw
+#   - javascript.builtins.AsyncGeneratorFunction
+#   - javascript.builtins.AsyncGeneratorFunction.AsyncGeneratorFunction
+#   - javascript.functions.method_definitions.async_generator_methods
+#   - javascript.operators.async_generator_function
+#   - javascript.statements.async_generator_function
+# - Async iterators and the for await..of loop:
+#   - javascript.builtins.AsyncIterator
+#   - javascript.builtins.AsyncIterator.@@asyncIterator
+#   - javascript.builtins.Symbol.asyncIterator
+#   - javascript.statements.for_await_of
+#   - javascript.statements.for_of.async_iterators
 # - SharedArrayBuffer and Atomics:
 #   - javascript.builtins.Atomics
 #   - javascript.builtins.Atomics.add
@@ -442,6 +341,7 @@ compat_features:
 #   - javascript.builtins.Atomics.sub
 #   - javascript.builtins.Atomics.wait
 #   - javascript.builtins.Atomics.xor
+#   - javascript.builtins.DataView.DataView.sharedarraybuffer_support
 #   - javascript.builtins.SharedArrayBuffer
 #   - javascript.builtins.SharedArrayBuffer.@@species
 #   - javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
@@ -456,11 +356,120 @@ compat_features:
 #   - javascript.builtins.BigInt.asUintN
 #   - javascript.builtins.BigInt.toString
 #   - javascript.builtins.BigInt.valueOf
+# - BigInt64Array:
+#   - javascript.builtins.BigInt64Array
+#   - javascript.builtins.BigInt64Array.BigInt64Array
+#   - javascript.builtins.BigUint64Array
+#   - javascript.builtins.BigUint64Array.BigUint64Array
+#   - javascript.builtins.DataView.getBigInt64
+#   - javascript.builtins.DataView.getBigUint64
+#   - javascript.builtins.DataView.setBigInt64
+#   - javascript.builtins.DataView.setBigUint64
+# - JavaScript (initial core language support):
+#   - javascript.builtins.Boolean
+#   - javascript.builtins.Boolean.Boolean
+#   - javascript.builtins.Boolean.toString
+#   - javascript.builtins.Boolean.valueOf
+#   - javascript.builtins.Error
+#   - javascript.builtins.Error.Error
+#   - javascript.builtins.Error.message
+#   - javascript.builtins.Error.name
+#   - javascript.builtins.Error.toString
+#   - javascript.builtins.EvalError
+#   - javascript.builtins.EvalError.EvalError
+#   - javascript.builtins.RangeError
+#   - javascript.builtins.RangeError.RangeError
+#   - javascript.builtins.ReferenceError
+#   - javascript.builtins.ReferenceError.ReferenceError
+#   - javascript.builtins.SyntaxError
+#   - javascript.builtins.SyntaxError.SyntaxError
+#   - javascript.builtins.TypeError
+#   - javascript.builtins.TypeError.TypeError
+#   - javascript.builtins.URIError
+#   - javascript.builtins.URIError.URIError
+#   - javascript.builtins.decodeURI
+#   - javascript.builtins.decodeURIComponent
+#   - javascript.builtins.encodeURI
+#   - javascript.builtins.encodeURIComponent
+#   - javascript.builtins.eval
+#   - javascript.builtins.isFinite
+#   - javascript.builtins.parseFloat
+#   - javascript.builtins.undefined
+#   - javascript.grammar.boolean_literals
+#   - javascript.grammar.null_literal
+#   - javascript.operators.addition
+#   - javascript.operators.addition_assignment
+#   - javascript.operators.assignment
+#   - javascript.operators.bitwise_and
+#   - javascript.operators.bitwise_and_assignment
+#   - javascript.operators.bitwise_not
+#   - javascript.operators.bitwise_or
+#   - javascript.operators.bitwise_or_assignment
+#   - javascript.operators.bitwise_xor
+#   - javascript.operators.bitwise_xor_assignment
+#   - javascript.operators.comma
+#   - javascript.operators.conditional
+#   - javascript.operators.decrement
+#   - javascript.operators.delete
+#   - javascript.operators.division
+#   - javascript.operators.division_assignment
+#   - javascript.operators.equality
+#   - javascript.operators.greater_than
+#   - javascript.operators.greater_than_or_equal
+#   - javascript.operators.grouping
+#   - javascript.operators.in
+#   - javascript.operators.increment
+#   - javascript.operators.inequality
+#   - javascript.operators.instanceof
+#   - javascript.operators.left_shift
+#   - javascript.operators.left_shift_assignment
+#   - javascript.operators.less_than
+#   - javascript.operators.less_than_or_equal
+#   - javascript.operators.logical_and
+#   - javascript.operators.logical_not
+#   - javascript.operators.logical_or
+#   - javascript.operators.multiplication
+#   - javascript.operators.multiplication_assignment
+#   - javascript.operators.new
+#   - javascript.operators.null
+#   - javascript.operators.property_accessors
+#   - javascript.operators.remainder
+#   - javascript.operators.remainder_assignment
+#   - javascript.operators.right_shift
+#   - javascript.operators.right_shift_assignment
+#   - javascript.operators.strict_equality
+#   - javascript.operators.strict_inequality
+#   - javascript.operators.subtraction
+#   - javascript.operators.subtraction_assignment
+#   - javascript.operators.this
+#   - javascript.operators.typeof
+#   - javascript.operators.unary_negation
+#   - javascript.operators.unary_plus
+#   - javascript.operators.unsigned_right_shift
+#   - javascript.operators.unsigned_right_shift_assignment
+#   - javascript.operators.void
+#   - javascript.statements.block
+#   - javascript.statements.break
+#   - javascript.statements.continue
+#   - javascript.statements.debugger
+#   - javascript.statements.do_while
+#   - javascript.statements.empty
+#   - javascript.statements.for
+#   - javascript.statements.for_in
+#   - javascript.statements.if_else
+#   - javascript.statements.label
+#   - javascript.statements.return
+#   - javascript.statements.switch
+#   - javascript.statements.throw
+#   - javascript.statements.try_catch
+#   - javascript.statements.var
+#   - javascript.statements.while
 # - Date:
 #   - javascript.builtins.Date
 #   - javascript.builtins.Date.@@toPrimitive
 #   - javascript.builtins.Date.Date
 #   - javascript.builtins.Date.UTC
+#   - javascript.builtins.Date.UTC.optional_monthIndex
 #   - javascript.builtins.Date.getDate
 #   - javascript.builtins.Date.getDay
 #   - javascript.builtins.Date.getFullYear
@@ -481,6 +490,7 @@ compat_features:
 #   - javascript.builtins.Date.getUTCSeconds
 #   - javascript.builtins.Date.now
 #   - javascript.builtins.Date.parse
+#   - javascript.builtins.Date.parse.iso_8601
 #   - javascript.builtins.Date.setDate
 #   - javascript.builtins.Date.setFullYear
 #   - javascript.builtins.Date.setHours
@@ -503,39 +513,68 @@ compat_features:
 #   - javascript.builtins.Date.toTimeString
 #   - javascript.builtins.Date.toUTCString
 #   - javascript.builtins.Date.valueOf
-# - Typed arrays (initial support):
-#   - javascript.builtins.Float32Array
-#   - javascript.builtins.Float32Array.Float32Array
-#   - javascript.builtins.Float64Array
-#   - javascript.builtins.Float64Array.Float64Array
-#   - javascript.builtins.Int16Array
-#   - javascript.builtins.Int16Array.Int16Array
-#   - javascript.builtins.Int32Array
-#   - javascript.builtins.Int32Array.Int32Array
-#   - javascript.builtins.Int8Array
-#   - javascript.builtins.Int8Array.Int8Array
-#   - javascript.builtins.TypedArray
-#   - javascript.builtins.TypedArray.BYTES_PER_ELEMENT
-#   - javascript.builtins.TypedArray.buffer
-#   - javascript.builtins.TypedArray.byteLength
-#   - javascript.builtins.TypedArray.byteOffset
-#   - javascript.builtins.TypedArray.join
-#   - javascript.builtins.TypedArray.length
-#   - javascript.builtins.TypedArray.name
-#   - javascript.builtins.TypedArray.reverse
-#   - javascript.builtins.TypedArray.set
-#   - javascript.builtins.TypedArray.slice
-#   - javascript.builtins.TypedArray.sort
-#   - javascript.builtins.TypedArray.subarray
-#   - javascript.builtins.TypedArray.toString
-#   - javascript.builtins.Uint16Array
-#   - javascript.builtins.Uint16Array.Uint16Array
-#   - javascript.builtins.Uint32Array
-#   - javascript.builtins.Uint32Array.Uint32Array
-#   - javascript.builtins.Uint8Array
-#   - javascript.builtins.Uint8Array.Uint8Array
-#   - javascript.builtins.Uint8ClampedArray
-#   - javascript.builtins.Uint8ClampedArray.Uint8ClampedArray
+# - Weak references:
+#   - javascript.builtins.FinalizationRegistry
+#   - javascript.builtins.FinalizationRegistry.FinalizationRegistry
+#   - javascript.builtins.FinalizationRegistry.register
+#   - javascript.builtins.FinalizationRegistry.unregister
+#   - javascript.builtins.WeakRef
+#   - javascript.builtins.WeakRef.WeakRef
+#   - javascript.builtins.WeakRef.deref
+# - Float16Array:
+#   - javascript.builtins.Float16Array.Float16Array
+# - Functions:
+#   - javascript.builtins.Function
+#   - javascript.builtins.Function.@@hasInstance
+#   - javascript.builtins.Function.Function
+#   - javascript.builtins.Function.apply
+#   - javascript.builtins.Function.apply.generic_arrays_as_arguments
+#   - javascript.builtins.Function.bind
+#   - javascript.builtins.Function.call
+#   - javascript.builtins.Function.length
+#   - javascript.builtins.Function.length.configurable_true
+#   - javascript.builtins.Function.name
+#   - javascript.builtins.Function.name.configurable_true
+#   - javascript.builtins.Function.name.inferred_names
+#   - javascript.builtins.Function.toString
+#   - javascript.functions
+#   - javascript.functions.arguments
+#   - javascript.functions.arguments.@@iterator
+#   - javascript.functions.arguments.length
+#   - javascript.functions.arrow_functions
+#   - javascript.functions.arrow_functions.trailing_comma
+#   - javascript.functions.block_level_functions
+#   - javascript.functions.default_parameters
+#   - javascript.functions.default_parameters.destructured_parameter_with_default_value_assignment
+#   - javascript.functions.default_parameters.parameters_without_defaults_after_default_parameters
+#   - javascript.functions.get
+#   - javascript.functions.get.computed_property_names
+#   - javascript.functions.method_definitions
+#   - javascript.functions.method_definitions.async_methods
+#   - javascript.functions.method_definitions.generator_methods_not_constructable
+#   - javascript.functions.rest_parameters
+#   - javascript.functions.rest_parameters.destructuring
+#   - javascript.functions.set
+#   - javascript.functions.set.computed_property_names
+#   - javascript.operators.function
+#   - javascript.operators.function.trailing_comma
+#   - javascript.statements.function
+#   - javascript.statements.function.trailing_comma_in_parameters
+# - Generators:
+#   - javascript.builtins.Generator
+#   - javascript.builtins.Generator.next
+#   - javascript.builtins.Generator.return
+#   - javascript.builtins.Generator.throw
+#   - javascript.builtins.GeneratorFunction
+#   - javascript.builtins.GeneratorFunction.GeneratorFunction
+#   - javascript.operators.generator_function
+#   - javascript.operators.generator_function.trailing_comma
+#   - javascript.operators.yield
+#   - javascript.operators.yield_star
+#   - javascript.statements.generator_function
+#   - javascript.statements.generator_function.IteratorResult_object
+#   - javascript.statements.generator_function.not_constructable_with_new
+#   - javascript.statements.generator_function.trailing_comma_in_parameters
 # - Math and numbers:
 #   - javascript.builtins.Infinity
 #   - javascript.builtins.Math
@@ -610,20 +649,37 @@ compat_features:
 #   - javascript.grammar.decimal_numeric_literals
 #   - javascript.grammar.hexadecimal_numeric_literals
 #   - javascript.grammar.octal_numeric_literals
+# - Iterators and the for...of loop:
+#   - javascript.builtins.Iterator
+#   - javascript.builtins.Iterator.@@iterator
+#   - javascript.statements.for_of
+#   - javascript.statements.for_of.closing_iterators
+# - JSON:
+#   - javascript.builtins.JSON
+#   - javascript.builtins.JSON.json_superset
+#   - javascript.builtins.JSON.parse
+#   - javascript.builtins.JSON.stringify
+#   - javascript.builtins.JSON.stringify.well_formed_stringify
 # - Map (initial support):
 #   - javascript.builtins.Map
 #   - javascript.builtins.Map.@@iterator
 #   - javascript.builtins.Map.Map
+#   - javascript.builtins.Map.Map.iterable_allowed
+#   - javascript.builtins.Map.Map.null_allowed
 #   - javascript.builtins.Map.clear
 #   - javascript.builtins.Map.delete
 #   - javascript.builtins.Map.entries
 #   - javascript.builtins.Map.forEach
 #   - javascript.builtins.Map.get
 #   - javascript.builtins.Map.has
+#   - javascript.builtins.Map.key_equality_for_zeros
 #   - javascript.builtins.Map.keys
 #   - javascript.builtins.Map.set
 #   - javascript.builtins.Map.size
 #   - javascript.builtins.Map.values
+# - Array grouping:
+#   - javascript.builtins.Map.groupBy
+#   - javascript.builtins.Object.groupBy
 # - Promise (initial support):
 #   - javascript.builtins.Promise
 #   - javascript.builtins.Promise.Promise
@@ -637,6 +693,39 @@ compat_features:
 #   - javascript.builtins.Promise.allSettled
 # - Promise finally():
 #   - javascript.builtins.Promise.finally
+# - Promise.withResolvers():
+#   - javascript.builtins.Promise.withResolvers
+# - Proxy and Reflect:
+#   - javascript.builtins.Proxy
+#   - javascript.builtins.Proxy.Proxy
+#   - javascript.builtins.Proxy.handler.apply
+#   - javascript.builtins.Proxy.handler.construct
+#   - javascript.builtins.Proxy.handler.defineProperty
+#   - javascript.builtins.Proxy.handler.deleteProperty
+#   - javascript.builtins.Proxy.handler.get
+#   - javascript.builtins.Proxy.handler.getOwnPropertyDescriptor
+#   - javascript.builtins.Proxy.handler.getPrototypeOf
+#   - javascript.builtins.Proxy.handler.has
+#   - javascript.builtins.Proxy.handler.isExtensible
+#   - javascript.builtins.Proxy.handler.ownKeys
+#   - javascript.builtins.Proxy.handler.preventExtensions
+#   - javascript.builtins.Proxy.handler.set
+#   - javascript.builtins.Proxy.handler.setPrototypeOf
+#   - javascript.builtins.Proxy.revocable
+#   - javascript.builtins.Reflect
+#   - javascript.builtins.Reflect.apply
+#   - javascript.builtins.Reflect.construct
+#   - javascript.builtins.Reflect.defineProperty
+#   - javascript.builtins.Reflect.deleteProperty
+#   - javascript.builtins.Reflect.get
+#   - javascript.builtins.Reflect.getOwnPropertyDescriptor
+#   - javascript.builtins.Reflect.getPrototypeOf
+#   - javascript.builtins.Reflect.has
+#   - javascript.builtins.Reflect.isExtensible
+#   - javascript.builtins.Reflect.ownKeys
+#   - javascript.builtins.Reflect.preventExtensions
+#   - javascript.builtins.Reflect.set
+#   - javascript.builtins.Reflect.setPrototypeOf
 # - Regular expressions:
 #   - javascript.builtins.RegExp
 #   - javascript.builtins.RegExp.@@match
@@ -650,14 +739,23 @@ compat_features:
 #   - javascript.builtins.RegExp.exec
 #   - javascript.builtins.RegExp.flags
 #   - javascript.builtins.RegExp.global
+#   - javascript.builtins.RegExp.global.prototype_accessor
 #   - javascript.builtins.RegExp.hasIndices
 #   - javascript.builtins.RegExp.ignoreCase
+#   - javascript.builtins.RegExp.ignoreCase.prototype_accessor
 #   - javascript.builtins.RegExp.lastIndex
 #   - javascript.builtins.RegExp.multiline
+#   - javascript.builtins.RegExp.multiline.prototype_accessor
 #   - javascript.builtins.RegExp.source
+#   - javascript.builtins.RegExp.source.empty_regex_string
+#   - javascript.builtins.RegExp.source.escaping
+#   - javascript.builtins.RegExp.source.prototype_accessor
 #   - javascript.builtins.RegExp.sticky
+#   - javascript.builtins.RegExp.sticky.anchored_sticky_flag
+#   - javascript.builtins.RegExp.sticky.prototype_accessor
 #   - javascript.builtins.RegExp.test
 #   - javascript.builtins.RegExp.toString
+#   - javascript.builtins.RegExp.toString.escaping
 #   - javascript.builtins.RegExp.unicode
 #   - javascript.builtins.RegExp.unicodeSets
 #   - javascript.grammar.regular_expression_literals
@@ -666,6 +764,7 @@ compat_features:
 #   - javascript.regular_expressions.character_class
 #   - javascript.regular_expressions.character_class_escape
 #   - javascript.regular_expressions.character_escape
+#   - javascript.regular_expressions.character_escape.unicode
 #   - javascript.regular_expressions.disjunction
 #   - javascript.regular_expressions.input_boundary_assertion
 #   - javascript.regular_expressions.literal_character
@@ -673,6 +772,7 @@ compat_features:
 #   - javascript.regular_expressions.lookbehind_assertion
 #   - javascript.regular_expressions.named_backreference
 #   - javascript.regular_expressions.named_capturing_group
+#   - javascript.regular_expressions.named_capturing_group.duplicate_named_capturing_groups
 #   - javascript.regular_expressions.non_capturing_group
 #   - javascript.regular_expressions.quantifier
 #   - javascript.regular_expressions.unicode_character_class_escape
@@ -682,12 +782,15 @@ compat_features:
 #   - javascript.builtins.Set
 #   - javascript.builtins.Set.@@iterator
 #   - javascript.builtins.Set.Set
+#   - javascript.builtins.Set.Set.iterable_allowed
+#   - javascript.builtins.Set.Set.null_allowed
 #   - javascript.builtins.Set.add
 #   - javascript.builtins.Set.clear
 #   - javascript.builtins.Set.delete
 #   - javascript.builtins.Set.entries
 #   - javascript.builtins.Set.forEach
 #   - javascript.builtins.Set.has
+#   - javascript.builtins.Set.key_equality_for_zeros
 #   - javascript.builtins.Set.keys
 #   - javascript.builtins.Set.size
 #   - javascript.builtins.Set.values
@@ -712,6 +815,7 @@ compat_features:
 #   - javascript.builtins.String.toString
 #   - javascript.builtins.String.toUpperCase
 #   - javascript.builtins.String.trim
+#   - javascript.builtins.String.unicode_code_point_escapes
 #   - javascript.builtins.String.valueOf
 #   - javascript.grammar.string_literals
 # - String at():
@@ -743,6 +847,28 @@ compat_features:
 # - String trimStart() and trimEnd():
 #   - javascript.builtins.String.trimEnd
 #   - javascript.builtins.String.trimStart
+# - Symbol:
+#   - javascript.builtins.Symbol
+#   - javascript.builtins.Symbol.@@toPrimitive
+#   - javascript.builtins.Symbol.Symbol
+#   - javascript.builtins.Symbol.description
+#   - javascript.builtins.Symbol.for
+#   - javascript.builtins.Symbol.hasInstance
+#   - javascript.builtins.Symbol.isConcatSpreadable
+#   - javascript.builtins.Symbol.iterator
+#   - javascript.builtins.Symbol.keyFor
+#   - javascript.builtins.Symbol.match
+#   - javascript.builtins.Symbol.matchAll
+#   - javascript.builtins.Symbol.replace
+#   - javascript.builtins.Symbol.search
+#   - javascript.builtins.Symbol.species
+#   - javascript.builtins.Symbol.split
+#   - javascript.builtins.Symbol.toPrimitive
+#   - javascript.builtins.Symbol.toString
+#   - javascript.builtins.Symbol.toStringTag
+#   - javascript.builtins.Symbol.toStringTag.dom_objects
+#   - javascript.builtins.Symbol.unscopables
+#   - javascript.builtins.Symbol.valueOf
 # - Typed array iterators:
 #   - javascript.builtins.TypedArray.@@iterator
 #   - javascript.builtins.TypedArray.entries
@@ -761,16 +887,22 @@ compat_features:
 # - WeakMap:
 #   - javascript.builtins.WeakMap
 #   - javascript.builtins.WeakMap.WeakMap
+#   - javascript.builtins.WeakMap.WeakMap.iterable_allowed
+#   - javascript.builtins.WeakMap.WeakMap.null_allowed
 #   - javascript.builtins.WeakMap.delete
 #   - javascript.builtins.WeakMap.get
 #   - javascript.builtins.WeakMap.has
 #   - javascript.builtins.WeakMap.set
+#   - javascript.builtins.WeakMap.symbol_as_keys
 # - WeakSet:
 #   - javascript.builtins.WeakSet
 #   - javascript.builtins.WeakSet.WeakSet
+#   - javascript.builtins.WeakSet.WeakSet.iterable_allowed
+#   - javascript.builtins.WeakSet.WeakSet.null_allowed
 #   - javascript.builtins.WeakSet.add
 #   - javascript.builtins.WeakSet.delete
 #   - javascript.builtins.WeakSet.has
+#   - javascript.builtins.WeakSet.symbol_as_keys
 # - Classes:
 #   - javascript.classes
 #   - javascript.classes.constructor
@@ -778,7 +910,12 @@ compat_features:
 #   - javascript.classes.static
 #   - javascript.operators.super
 #   - javascript.statements.class
+# - JavaScript modules in workers:
+#   - javascript.operators.import.worker_support
+#   - javascript.statements.import.worker_support
 # - JavaScript modules:
 #   - javascript.statements.export
 #   - javascript.statements.export.default
 #   - javascript.statements.import
+# - JavaScript modules in service workers:
+#   - javascript.statements.import.service_worker_support

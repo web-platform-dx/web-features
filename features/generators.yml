@@ -1,0 +1,25 @@
+name: Generators
+description: Generator functions (`function*`) create iterators that return multiple values, one after another, on-demand.
+group: javascript
+snapshot: ecmascript-2015
+caniuse: es6-generators
+spec:
+  - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-generator-objects
+  - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-generatorfunction-objects
+status:
+  compute_from: javascript.statements.generator_function
+compat_features:
+  - javascript.builtins.Generator
+  - javascript.builtins.Generator.next
+  - javascript.builtins.Generator.return
+  - javascript.builtins.Generator.throw
+  - javascript.builtins.GeneratorFunction
+  - javascript.builtins.GeneratorFunction.GeneratorFunction
+  - javascript.operators.generator_function
+  - javascript.operators.generator_function.trailing_comma
+  - javascript.operators.yield
+  - javascript.operators.yield_star
+  - javascript.statements.generator_function
+  - javascript.statements.generator_function.IteratorResult_object
+  - javascript.statements.generator_function.not_constructable_with_new
+  - javascript.statements.generator_function.trailing_comma_in_parameters

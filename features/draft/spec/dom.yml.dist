@@ -64,7 +64,9 @@ compat_features:
   - api.Element.getAttributeNode
   - api.Element.getAttributeNodeNS
   - api.Element.getElementsByTagName
+  - api.Element.getElementsByTagName.all_elements_selector
   - api.Element.getElementsByTagNameNS
+  - api.Element.getElementsByTagNameNS.all_elements_selector
   - api.Element.hasAttribute
   - api.Element.hasAttributeNS
   - api.Element.hasAttributes
@@ -181,7 +183,6 @@ compat_features:
   - api.Document.characterSet
   - api.Document.createExpression
   - api.Document.createNodeIterator
-  - api.Document.evaluate
   - api.DocumentFragment
   - api.DocumentType
   - api.DocumentType.name
@@ -192,22 +193,6 @@ compat_features:
   - api.Node.lookupNamespaceURI
   - api.Node.lookupPrefix
   - api.Node.textContent
-  - api.XPathEvaluator
-  - api.XPathEvaluator.XPathEvaluator
-  - api.XPathEvaluator.createExpression
-  - api.XPathEvaluator.evaluate
-  - api.XPathExpression
-  - api.XPathExpression.evaluate
-  - api.XPathResult
-  - api.XPathResult.booleanValue
-  - api.XPathResult.invalidIteratorState
-  - api.XPathResult.iterateNext
-  - api.XPathResult.numberValue
-  - api.XPathResult.resultType
-  - api.XPathResult.singleNodeValue
-  - api.XPathResult.snapshotItem
-  - api.XPathResult.snapshotLength
-  - api.XPathResult.stringValue
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -234,16 +219,6 @@ compat_features:
   #   safari: "3.1"
   #   safari_ios: "2"
   - api.Document.compatMode
-  - api.XSLTProcessor
-  - api.XSLTProcessor.XSLTProcessor
-  - api.XSLTProcessor.clearParameters
-  - api.XSLTProcessor.getParameter
-  - api.XSLTProcessor.importStylesheet
-  - api.XSLTProcessor.removeParameter
-  - api.XSLTProcessor.reset
-  - api.XSLTProcessor.setParameter
-  - api.XSLTProcessor.transformToDocument
-  - api.XSLTProcessor.transformToFragment
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -371,6 +346,20 @@ compat_features:
   - api.TreeWalker.previousSibling
   - api.TreeWalker.root
   - api.TreeWalker.whatToShow
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "6"
+  #   firefox_android: "6"
+  #   safari: "1"
+  #   safari_ios: "1"
+  - api.EventTarget.addEventListener.useCapture_parameter_optional
+  - api.EventTarget.removeEventListener.useCapture_parameter_optional
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -606,6 +595,33 @@ compat_features:
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
   # support:
+  #   chrome: "24"
+  #   chrome_android: "25"
+  #   edge: "12"
+  #   firefox: "24"
+  #   firefox_android: "24"
+  #   safari: "7"
+  #   safari_ios: "7"
+  - api.DOMTokenList.toggle.force_parameter
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "24"
+  #   chrome_android: "25"
+  #   edge: "12"
+  #   firefox: "26"
+  #   firefox_android: "26"
+  #   safari: "7"
+  #   safari_ios: "7"
+  - api.DOMTokenList.add.multiple_parameters
+  - api.DOMTokenList.remove.multiple_parameters
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
   #   chrome: "26"
   #   chrome_android: "26"
   #   edge: "12"
@@ -618,6 +634,19 @@ compat_features:
   - api.MutationObserver.disconnect
   - api.MutationObserver.observe
   - api.MutationObserver.takeRecords
+
+  # baseline: high
+  # baseline_low_date: 2015-11-12
+  # baseline_high_date: 2018-05-12
+  # support:
+  #   chrome: "4"
+  #   chrome_android: "18"
+  #   edge: "13"
+  #   firefox: "12"
+  #   firefox_android: "14"
+  #   safari: "3"
+  #   safari_ios: "3"
+  - api.Document.createTreeWalker.whatToShow_filter_parameters_optional
 
   # baseline: high
   # baseline_low_date: 2016-03-08
@@ -670,6 +699,19 @@ compat_features:
   #   safari: "10"
   #   safari_ios: "10"
   - api.Event.isTrusted
+
+  # baseline: high
+  # baseline_low_date: 2017-01-24
+  # baseline_high_date: 2019-07-24
+  # support:
+  #   chrome: "48"
+  #   chrome_android: "48"
+  #   edge: "12"
+  #   firefox: "51"
+  #   firefox_android: "51"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - api.DOMTokenList.trim_whitespace
 
   # baseline: high
   # baseline_low_date: 2017-04-05
@@ -781,6 +823,35 @@ compat_features:
   # baseline_low_date: 2017-10-17
   # baseline_high_date: 2020-04-17
   # support:
+  #   chrome: "42"
+  #   chrome_android: "42"
+  #   edge: "16"
+  #   firefox: "36"
+  #   firefox_android: "36"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.DOMTokenList.@@iterator
+
+  # baseline: high
+  # baseline_low_date: 2017-10-17
+  # baseline_high_date: 2020-04-17
+  # support:
+  #   chrome: "42"
+  #   chrome_android: "42"
+  #   edge: "16"
+  #   firefox: "50"
+  #   firefox_android: "50"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.DOMTokenList.entries
+  - api.DOMTokenList.forEach
+  - api.DOMTokenList.keys
+  - api.DOMTokenList.values
+
+  # baseline: high
+  # baseline_low_date: 2017-10-17
+  # baseline_high_date: 2020-04-17
+  # support:
   #   chrome: "51"
   #   chrome_android: "51"
   #   edge: "16"
@@ -788,7 +859,10 @@ compat_features:
   #   firefox_android: "50"
   #   safari: "10"
   #   safari_ios: "10"
+  - api.NodeList.entries
   - api.NodeList.forEach
+  - api.NodeList.keys
+  - api.NodeList.values
 
   # baseline: high
   # baseline_low_date: 2018-04-30
@@ -986,6 +1060,19 @@ compat_features:
   # baseline_low_date: 2018-04-30
   # baseline_high_date: 2020-10-30
   # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "17"
+  #   firefox: "55"
+  #   firefox_android: "55"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - api.DOMTokenList.remove_duplicates
+
+  # baseline: high
+  # baseline_low_date: 2018-04-30
+  # baseline_high_date: 2020-10-30
+  # support:
   #   chrome: "61"
   #   chrome_android: "61"
   #   edge: "17"
@@ -994,6 +1081,19 @@ compat_features:
   #   safari: "10.1"
   #   safari_ios: "10.3"
   - api.DOMTokenList.replace
+
+  # baseline: high
+  # baseline_low_date: 2018-09-17
+  # baseline_high_date: 2021-03-17
+  # support:
+  #   chrome: "43"
+  #   chrome_android: "43"
+  #   edge: "17"
+  #   firefox: "48"
+  #   firefox_android: "48"
+  #   safari: "12"
+  #   safari_ios: "12"
+  - api.CustomEvent.worker_support
 
   # baseline: high
   # baseline_low_date: 2018-10-02
@@ -1007,6 +1107,33 @@ compat_features:
   #   safari: "10.1"
   #   safari_ios: "10.3"
   - api.Element.getAttributeNames
+
+  # baseline: high
+  # baseline_low_date: 2018-10-02
+  # baseline_high_date: 2021-04-02
+  # support:
+  #   chrome: "67"
+  #   chrome_android: "67"
+  #   edge: "18"
+  #   firefox: "61"
+  #   firefox_android: "61"
+  #   safari: "12"
+  #   safari_ios: "12"
+  - api.DOMTokenList.replace.boolean_value
+
+  # baseline: high
+  # baseline_low_date: ≤2018-10-02
+  # baseline_high_date: ≤2021-04-02
+  # support:
+  #   chrome: "49"
+  #   chrome_android: "49"
+  #   edge: ≤18
+  #   firefox: "49"
+  #   firefox_android: "49"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - api.EventTarget.addEventListener.options_parameter
+  - api.EventTarget.removeEventListener.options_parameter
 
   # baseline: high
   # baseline_low_date: ≤2018-10-02
@@ -1072,6 +1199,32 @@ compat_features:
   #   safari: "10"
   #   safari_ios: "10"
   - api.NodeList.@@iterator
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "55"
+  #   chrome_android: "55"
+  #   edge: "79"
+  #   firefox: "61"
+  #   firefox_android: "61"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - api.EventTarget.addEventListener.options_parameter.options_passive_parameter_default_true_touch
+
+  # baseline: high
+  # baseline_low_date: ≤2020-01-15
+  # baseline_high_date: ≤2022-07-15
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: ≤79
+  #   firefox: "25"
+  #   firefox_android: "25"
+  #   safari: "1"
+  #   safari_ios: "1"
+  - api.Range.collapse.toStart_parameter_optional
 
   # baseline: high
   # baseline_low_date: 2020-07-28
@@ -1164,19 +1317,6 @@ compat_features:
   - api.EventTarget.addEventListener.options_parameter.options_signal_parameter
 
   # baseline: high
-  # baseline_low_date: 2021-09-20
-  # baseline_high_date: 2024-03-20
-  # support:
-  #   chrome: "93"
-  #   chrome_android: "93"
-  #   edge: "93"
-  #   firefox: "88"
-  #   firefox_android: "88"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - api.AbortSignal.abort_static
-
-  # baseline: high
   # baseline_low_date: 2021-11-02
   # baseline_high_date: 2024-05-02
   # support:
@@ -1203,43 +1343,6 @@ compat_features:
   - api.ShadowRoot.delegatesFocus
 
   # baseline: low
-  # baseline_low_date: 2022-03-14
-  # support:
-  #   chrome: "98"
-  #   chrome_android: "98"
-  #   edge: "98"
-  #   firefox: "97"
-  #   firefox_android: "97"
-  #   safari: "15.4"
-  #   safari_ios: "15.4"
-  - api.AbortSignal.abort_static.reason_parameter
-  - api.AbortSignal.reason
-
-  # baseline: low
-  # baseline_low_date: 2022-04-01
-  # support:
-  #   chrome: "100"
-  #   chrome_android: "100"
-  #   edge: "100"
-  #   firefox: "97"
-  #   firefox_android: "97"
-  #   safari: "15.4"
-  #   safari_ios: "15.4"
-  - api.AbortSignal.throwIfAborted
-
-  # baseline: low
-  # baseline_low_date: 2022-09-12
-  # support:
-  #   chrome: "103"
-  #   chrome_android: "103"
-  #   edge: "103"
-  #   firefox: "100"
-  #   firefox_android: "100"
-  #   safari: "16"
-  #   safari_ios: "16"
-  - api.AbortSignal.timeout_static
-
-  # baseline: low
   # baseline_low_date: 2024-04-18
   # support:
   #   chrome: "124"
@@ -1250,6 +1353,18 @@ compat_features:
   #   safari: "17.4"
   #   safari_ios: "17.4"
   - api.Element.attachShadow.options_clonable_parameter
+
+  # baseline: low
+  # baseline_low_date: 2024-09-16
+  # support:
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
+  #   firefox: "128"
+  #   firefox_android: "128"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.ShadowRoot.serializable
 
   # baseline: false
   # support:
@@ -1262,12 +1377,29 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "125"
-  #   chrome_android: "125"
-  #   edge: "125"
-  #   firefox: "128"
-  #   firefox_android: "128"
-  - api.ShadowRoot.serializable
+  #   chrome: "56"
+  #   chrome_android: "56"
+  #   edge: "79"
+  #   firefox: "50"
+  #   firefox_android: "50"
+  - api.Document.createElement.options_parameter
+  - api.Document.createElementNS.options_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "73"
+  #   chrome_android: "73"
+  #   edge: "79"
+  #   firefox: "84"
+  #   firefox_android: "84"
+  - api.EventTarget.addEventListener.options_parameter.options_passive_parameter_default_true_wheel
+
+  # baseline: false
+  # support:
+  #   chrome: "74"
+  #   chrome_android: "74"
+  #   edge: "79"
+  - api.Document.featurePolicy
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false

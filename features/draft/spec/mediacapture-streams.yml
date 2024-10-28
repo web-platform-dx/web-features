@@ -1,4 +1,4 @@
-draft_date: 2024-08-28
+draft_date: 2024-10-28
 name: Media Capture and Streams
 description: TODO
 spec: https://w3c.github.io/mediacapture-main/
@@ -8,6 +8,7 @@ compat_features:
   - api.MediaDeviceInfo.toJSON
   - api.MediaDevices.devicechange_event
   - api.MediaDevices.getSupportedConstraints
+  - api.MediaDevices.getUserMedia.secure_context_required
   - api.MediaStream
   - api.MediaStream.MediaStream
   - api.MediaStream.active
@@ -47,9 +48,12 @@ compat_features:
   - api.MediaStreamTrackEvent.MediaStreamTrackEvent
   - api.MediaStreamTrackEvent.track
   - api.Navigator.mediaDevices
+  - api.Navigator.mediaDevices.secure_context_required
   - api.OverconstrainedError
   - api.OverconstrainedError.OverconstrainedError
   - api.OverconstrainedError.constraint
+  - html.elements.iframe.allow.camera
+  - html.elements.iframe.allow.microphone
   - http.headers.Permissions-Policy.camera
   - http.headers.Permissions-Policy.microphone
 

@@ -1,4 +1,4 @@
-draft_date: 2024-08-28
+draft_date: 2024-10-28
 name: Window Management
 description: TODO
 spec: https://w3c.github.io/window-management/
@@ -22,4 +22,5 @@ compat_features:
   - api.ScreenDetails.screens
   - api.ScreenDetails.screenschange_event
   - api.Window.getScreenDetails
+  - html.elements.iframe.allow.window-management
   - http.headers.Permissions-Policy.window-management

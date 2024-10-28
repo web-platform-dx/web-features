@@ -1,6 +1,12 @@
-draft_date: 2024-08-28
+draft_date: 2024-10-21
 name: Import Attributes
 description: TODO
 spec: https://tc39.es/proposal-import-attributes/
 compat_features:
   - javascript.statements.import.import_attributes
+
+# The following features in the spec are already part of web-features:
+# - CSS import attributes:
+#   - javascript.statements.import.import_attributes.type_css
+# - JSON import attributes:
+#   - javascript.statements.import.import_attributes.type_json

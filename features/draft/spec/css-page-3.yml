@@ -1,19 +1,38 @@
-draft_date: 2024-08-28
+draft_date: 2024-10-23
 name: CSS Paged Media Module Level 3
 description: TODO
 spec: https://drafts.csswg.org/css-page-3/
 compat_features:
-  - css.at-rules.page
-  - css.at-rules.page.page-orientation
-  - css.at-rules.page.size
-  - css.at-rules.page.size.jis-b4
-  - css.at-rules.page.size.jis-b5
-  - css.properties.page
-  - css.selectors.first
-  - css.selectors.left
-  - css.selectors.right
+  - css.at-rules.page.bottom-center
+  - css.at-rules.page.bottom-left
+  - css.at-rules.page.bottom-left-corner
+  - css.at-rules.page.bottom-right
+  - css.at-rules.page.bottom-right-corner
+  - css.at-rules.page.left-bottom
+  - css.at-rules.page.left-middle
+  - css.at-rules.page.left-top
+  - css.at-rules.page.right-bottom
+  - css.at-rules.page.right-middle
+  - css.at-rules.page.right-top
+  - css.at-rules.page.top-center
+  - css.at-rules.page.top-left
+  - css.at-rules.page.top-left-corner
+  - css.at-rules.page.top-right
+  - css.at-rules.page.top-right-corner
 
 # The following features in the spec are already part of web-features:
+# - Page setup:
+#   - css.at-rules.page
+#   - css.at-rules.page.size
+#   - css.at-rules.page.size.jis-b4
+#   - css.at-rules.page.size.jis-b5
+# - page-orientation:
+#   - css.at-rules.page.page-orientation
+# - Page selectors:
+#   - css.properties.page
+#   - css.selectors.first
+#   - css.selectors.left
+#   - css.selectors.right
 # - Page breaks:
 #   - css.properties.page-break-after
 #   - css.properties.page-break-before

@@ -99,6 +99,32 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
+  #   chrome: "37"
+  #   chrome_android: "37"
+  #   edge: "79"
+  #   firefox: "48"
+  #   firefox_android: "48"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.crypto.worker_support
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "37"
+  #   chrome_android: "37"
+  #   edge: "79"
+  #   firefox: "48"
+  #   firefox_android: "48"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.SubtleCrypto.worker_support
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
   #   chrome: "41"
   #   chrome_android: "41"
   #   edge: "79"
@@ -108,23 +134,26 @@ compat_features:
   #   safari_ios: "11"
   - api.SubtleCrypto.deriveBits
   - api.SubtleCrypto.deriveKey
-
-  # baseline: high
-  # baseline_low_date: ≤2020-03-24
-  # baseline_high_date: ≤2022-09-24
-  # support:
-  #   chrome: "41"
-  #   chrome_android: "41"
-  #   edge: "79"
-  #   firefox: "34"
-  #   firefox_android: "34"
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
   - api.SubtleCrypto.deriveKey.derivedKeyAlgorithm_option_aes
   - api.SubtleCrypto.deriveKey.derivedKeyAlgorithm_option_hmac
 
-  # baseline: low
+  # baseline: high
+  # baseline_low_date: 2021-09-20
+  # baseline_high_date: 2024-03-20
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "79"
+  #   firefox: "75"
+  #   firefox_android: "79"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - api.Crypto.subtle.secure_context_required
+  - api.SubtleCrypto.secure_context_required
+
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "92"
   #   chrome_android: "92"
@@ -143,8 +172,8 @@ compat_features:
   #   edge: "79"
   #   firefox: "119"
   #   firefox_android: "119"
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
+  #   safari: "11"
+  #   safari_ios: "11"
   - api.SubtleCrypto.deriveKey.derivedKeyAlgorithm_option_hkdf
   - api.SubtleCrypto.deriveKey.derivedKeyAlgorithm_option_pbkdf2
 

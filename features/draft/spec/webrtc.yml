@@ -1,4 +1,4 @@
-draft_date: 2024-08-28
+draft_date: 2024-10-21
 name: "WebRTC: Real-Time Communication in Browsers"
 description: TODO
 spec: https://w3c.github.io/webrtc-pc/
@@ -15,6 +15,8 @@ compat_features:
   - api.RTCDTMFToneChangeEvent.RTCDTMFToneChangeEvent
   - api.RTCDTMFToneChangeEvent.tone
   - api.RTCDataChannel.binaryType
+  - api.RTCDataChannel.binaryType.arraybuffer_value
+  - api.RTCDataChannel.binaryType.blob_value
   - api.RTCDataChannel.bufferedAmount
   - api.RTCDataChannel.bufferedAmountLowThreshold
   - api.RTCDataChannel.bufferedamountlow_event
@@ -32,14 +34,17 @@ compat_features:
   - api.RTCDataChannel.ordered
   - api.RTCDataChannel.protocol
   - api.RTCDataChannel.readyState
+  - api.RTCDataChannel.sctp_sdp_21
   - api.RTCDataChannel.send
   - api.RTCDataChannelEvent
   - api.RTCDataChannelEvent.RTCDataChannelEvent
   - api.RTCDataChannelEvent.channel
   - api.RTCDtlsTransport
+  - api.RTCDtlsTransport.error_event
   - api.RTCDtlsTransport.getRemoteCertificates
   - api.RTCDtlsTransport.iceTransport
   - api.RTCDtlsTransport.state
+  - api.RTCDtlsTransport.statechange_event
   - api.RTCError
   - api.RTCError.RTCError
   - api.RTCError.errorDetail
@@ -84,30 +89,44 @@ compat_features:
   - api.RTCPeerConnection.RTCPeerConnection
   - api.RTCPeerConnection.RTCPeerConnection.configuration_bundlePolicy_parameter
   - api.RTCPeerConnection.RTCPeerConnection.configuration_certificates_parameter
+  - api.RTCPeerConnection.RTCPeerConnection.configuration_iceCandidatePoolSize_parameter
   - api.RTCPeerConnection.RTCPeerConnection.configuration_iceServers_parameter
   - api.RTCPeerConnection.RTCPeerConnection.configuration_iceServers_parameter.credential_parameter
   - api.RTCPeerConnection.RTCPeerConnection.configuration_iceServers_parameter.urls_parameter
   - api.RTCPeerConnection.RTCPeerConnection.configuration_iceServers_parameter.username_parameter
   - api.RTCPeerConnection.RTCPeerConnection.configuration_iceTransportPolicy_parameter
+  - api.RTCPeerConnection.RTCPeerConnection.configuration_peerIdentity_parameter
+  - api.RTCPeerConnection.RTCPeerConnection.configuration_rtcpMuxPolicy_parameter
   - api.RTCPeerConnection.addIceCandidate
+  - api.RTCPeerConnection.addIceCandidate.returns_promise
   - api.RTCPeerConnection.addTrack
   - api.RTCPeerConnection.addTransceiver
+  - api.RTCPeerConnection.addTransceiver.init_direction_parameter
+  - api.RTCPeerConnection.addTransceiver.init_sendEncodings_parameter
+  - api.RTCPeerConnection.addTransceiver.init_streams_parameter
   - api.RTCPeerConnection.canTrickleIceCandidates
   - api.RTCPeerConnection.close
   - api.RTCPeerConnection.connectionState
   - api.RTCPeerConnection.connectionstatechange_event
   - api.RTCPeerConnection.createAnswer
+  - api.RTCPeerConnection.createAnswer.returns_promise
   - api.RTCPeerConnection.createDataChannel
   - api.RTCPeerConnection.createOffer
+  - api.RTCPeerConnection.createOffer.returns_promise
   - api.RTCPeerConnection.currentLocalDescription
   - api.RTCPeerConnection.currentRemoteDescription
   - api.RTCPeerConnection.datachannel_event
   - api.RTCPeerConnection.generateCertificate_static
   - api.RTCPeerConnection.getConfiguration
   - api.RTCPeerConnection.getReceivers
+  - api.RTCPeerConnection.getReceivers.stopped_transceivers_removed
   - api.RTCPeerConnection.getSenders
+  - api.RTCPeerConnection.getSenders.stopped_transceivers_removed
   - api.RTCPeerConnection.getStats
+  - api.RTCPeerConnection.getStats.returns_promise
+  - api.RTCPeerConnection.getStats.selector_parameter
   - api.RTCPeerConnection.getTransceivers
+  - api.RTCPeerConnection.getTransceivers.stopped_transceivers_removed
   - api.RTCPeerConnection.iceConnectionState
   - api.RTCPeerConnection.iceGatheringState
   - api.RTCPeerConnection.icecandidate_event
@@ -123,7 +142,11 @@ compat_features:
   - api.RTCPeerConnection.restartIce
   - api.RTCPeerConnection.setConfiguration
   - api.RTCPeerConnection.setLocalDescription
+  - api.RTCPeerConnection.setLocalDescription.description_parameter_optional
+  - api.RTCPeerConnection.setLocalDescription.returns_promise
   - api.RTCPeerConnection.setRemoteDescription
+  - api.RTCPeerConnection.setRemoteDescription.implicit_rollback
+  - api.RTCPeerConnection.setRemoteDescription.returns_promise
   - api.RTCPeerConnection.signalingState
   - api.RTCPeerConnection.signalingstatechange_event
   - api.RTCPeerConnection.track_event
@@ -139,22 +162,28 @@ compat_features:
   - api.RTCPeerConnectionIceEvent.candidate
   - api.RTCPeerConnectionIceEvent.url
   - api.RTCRtpReceiver
+  - api.RTCRtpReceiver.createEncodedStreams
   - api.RTCRtpReceiver.getCapabilities_static
   - api.RTCRtpReceiver.getContributingSources
   - api.RTCRtpReceiver.getContributingSources.audioLevel
+  - api.RTCRtpReceiver.getContributingSources.audio_tracks_supported
   - api.RTCRtpReceiver.getContributingSources.rtpTimestamp
   - api.RTCRtpReceiver.getContributingSources.source
   - api.RTCRtpReceiver.getContributingSources.timestamp
+  - api.RTCRtpReceiver.getContributingSources.video_tracks_supported
   - api.RTCRtpReceiver.getParameters
   - api.RTCRtpReceiver.getParameters.return_object_property_codecs
   - api.RTCRtpReceiver.getParameters.return_object_property_headerExtensions
   - api.RTCRtpReceiver.getParameters.return_object_property_rtcp
   - api.RTCRtpReceiver.getStats
   - api.RTCRtpReceiver.getSynchronizationSources
+  - api.RTCRtpReceiver.getSynchronizationSources.audio_tracks_supported
+  - api.RTCRtpReceiver.getSynchronizationSources.video_tracks_supported
   - api.RTCRtpReceiver.jitterBufferTarget
   - api.RTCRtpReceiver.track
   - api.RTCRtpReceiver.transport
   - api.RTCRtpSender
+  - api.RTCRtpSender.createEncodedStreams
   - api.RTCRtpSender.dtmf
   - api.RTCRtpSender.getCapabilities_static
   - api.RTCRtpSender.getParameters
@@ -168,8 +197,10 @@ compat_features:
   - api.RTCRtpSender.setParameters
   - api.RTCRtpSender.setParameters.parameters_codecs_parameter
   - api.RTCRtpSender.setParameters.parameters_encodings_parameter
+  - api.RTCRtpSender.setParameters.parameters_encodings_parameter.active
   - api.RTCRtpSender.setParameters.parameters_encodings_parameter.maxBitrate
   - api.RTCRtpSender.setParameters.parameters_encodings_parameter.maxFramerate
+  - api.RTCRtpSender.setParameters.parameters_encodings_parameter.rid
   - api.RTCRtpSender.setParameters.parameters_encodings_parameter.scaleResolutionDownBy
   - api.RTCRtpSender.setParameters.parameters_headerExtensions_parameter
   - api.RTCRtpSender.setParameters.parameters_rtcp_parameter
@@ -192,12 +223,14 @@ compat_features:
   - api.RTCSessionDescription.toJSON
   - api.RTCSessionDescription.type
   - api.RTCStatsReport
+  - api.RTCStatsReport.@@iterator
   - api.RTCStatsReport.entries
   - api.RTCStatsReport.forEach
   - api.RTCStatsReport.get
   - api.RTCStatsReport.has
   - api.RTCStatsReport.keys
   - api.RTCStatsReport.size
+  - api.RTCStatsReport.values
   - api.RTCTrackEvent
   - api.RTCTrackEvent.RTCTrackEvent
   - api.RTCTrackEvent.receiver
@@ -215,4 +248,5 @@ compat_features:
 #   - api.RTCSctpTransport.maxChannels
 #   - api.RTCSctpTransport.maxMessageSize
 #   - api.RTCSctpTransport.state
+#   - api.RTCSctpTransport.statechange_event
 #   - api.RTCSctpTransport.transport

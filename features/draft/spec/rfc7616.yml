@@ -1,7 +1,11 @@
-draft_date: 2024-08-28
+draft_date: 2024-10-21
 name: HTTP Digest Access Authentication
 description: TODO
 spec: https://httpwg.org/specs/rfc7616.html
 compat_features:
   - http.headers.Authorization.Digest
+  - http.headers.Authorization.Digest.SHA-256
+  - http.headers.Authorization.Digest.md5
   - http.headers.WWW-Authenticate.Digest
+  - http.headers.WWW-Authenticate.Digest.SHA-256
+  - http.headers.WWW-Authenticate.Digest.md5

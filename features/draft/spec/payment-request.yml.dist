@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "88"
-    chrome_android: "88"
-    edge: "88"
+    chrome: "122"
+    chrome_android: "122"
+    edge: "122"
 compat_features:
   # baseline: false
   # support:
@@ -26,6 +26,10 @@ compat_features:
   - api.PaymentResponse.complete
   - api.PaymentResponse.details
   - api.PaymentResponse.methodName
+  - api.PaymentResponse.payerEmail
+  - api.PaymentResponse.payerPhone
+  - api.PaymentResponse.shippingAddress
+  - api.PaymentResponse.shippingOption
 
   # baseline: false
   # support:
@@ -39,12 +43,39 @@ compat_features:
   # baseline: false
   # support:
   #   chrome: "60"
+  #   chrome_android: "55"
+  #   edge: "15"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - api.PaymentResponse.toJSON
+
+  # baseline: false
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "56"
+  #   edge: "15"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - api.PaymentResponse.payerName
+
+  # baseline: false
+  # support:
+  #   chrome: "60"
   #   chrome_android: "60"
   #   edge: "16"
   #   safari: "11.1"
   #   safari_ios: "11.3"
   - api.PaymentRequest.id
   - api.PaymentResponse.requestId
+
+  # baseline: false
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "79"
+  #   firefox: "74"
+  #   firefox_android: "79"
+  - html.elements.iframe.allow.payment
 
   # baseline: false
   # support:
@@ -68,10 +99,33 @@ compat_features:
   #   safari_ios: "11.3"
   - api.PaymentResponse.retry
 
-  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "78"
+  #   chrome_android: "78"
+  #   edge: "79"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - api.PaymentResponse.payerdetailchange_event
+
   # baseline: false
   # support:
   #   chrome: "88"
   #   chrome_android: "88"
   #   edge: "88"
   - http.headers.Permissions-Policy.payment
+
+  # baseline: false
+  # support:
+  #   chrome: "95"
+  #   chrome_android: "95"
+  #   edge: "95"
+  - api.PaymentRequest.PaymentRequest.secure_payment_confirmation_method
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "122"
+  #   chrome_android: "122"
+  #   edge: "122"
+  - api.PaymentRequestUpdateEvent.secure_context_required

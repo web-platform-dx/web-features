@@ -2,7 +2,7 @@
 
 By the [W3C WebDX Community Group](https://www.w3.org/community/webdx/) and contributors.
 
-`web-features` is an effort to build a shared catalog of features of the web platform.
+[`web-features`](https://web-platform-dx.github.io/web-features/web-features/) is an effort to build a shared catalog of features of the web platform.
 By creating a common list of features and their definitions, `web-features` aims to improve understanding of what web developers get and want from the web.
 `web-features` does this by:
 
@@ -18,7 +18,7 @@ By creating a common nomenclature for web platform features, `web-features` inte
 To get feature identifiers, Baseline support data, or cross-references to other resources (such as specifications and caniuse), use [the `web-features` npm package](https://www.npmjs.com/package/web-features).
 [Read the package README](./packages/web-features/README.md) for more information.
 
-To contribute to feature identification, definition, Baseline support statuses, or to update the status on MDN, jump to [Contribute](#contribute).
+To contribute to feature identification, definition, Baseline support statuses, or to update the status on MDN, read [`CONTRIBUTING.md`](./docs/CONTRIBUTING.md).
 
 ## Background
 

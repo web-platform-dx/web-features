@@ -1,4 +1,4 @@
-draft_date: 2024-08-28
+draft_date: 2024-10-28
 name: Local Font Access
 description: TODO
 spec: https://wicg.github.io/local-font-access/
@@ -10,4 +10,5 @@ compat_features:
   - api.FontData.postscriptName
   - api.FontData.style
   - api.Window.queryLocalFonts
+  - html.elements.iframe.allow.local-fonts
   - http.headers.Permissions-Policy.local-fonts

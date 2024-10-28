@@ -1,30 +1,35 @@
-draft_date: 2024-08-28
+draft_date: 2024-10-17
 name: CSS Transitions Level 2
 description: TODO
 spec: https://drafts.csswg.org/css-transitions-2/
 compat_features:
-  - api.CSSTransition
-  - api.CSSTransition.transitionProperty
-  - api.Element.transitioncancel_event
-  - api.Element.transitionend_event
-  - api.Element.transitionrun_event
-  - api.Element.transitionstart_event
-  - api.TransitionEvent
-  - api.TransitionEvent.TransitionEvent
-  - api.TransitionEvent.elapsedTime
-  - api.TransitionEvent.propertyName
-  - api.TransitionEvent.pseudoElement
-  - css.properties.transition
-  - css.properties.transition-delay
-  - css.properties.transition-duration
-  - css.properties.transition-property
-  - css.properties.transition-property.all
-  - css.properties.transition-property.none
-  - css.properties.transition-timing-function
+  - css.properties.transition-property.IDENT_value
+  - css.properties.transition-timing-function.jump
+  - css.properties.transition.gradients_can_animate
+  - css.properties.transition.transition-behavior
 
 # The following features in the spec are already part of web-features:
 # - @starting-style:
 #   - api.CSSStartingStyleRule
 #   - css.at-rules.starting-style
+# - Transitions (CSS):
+#   - api.CSSTransition
+#   - api.CSSTransition.transitionProperty
+#   - api.Element.transitioncancel_event
+#   - api.Element.transitionend_event
+#   - api.Element.transitionrun_event
+#   - api.Element.transitionstart_event
+#   - api.TransitionEvent
+#   - api.TransitionEvent.TransitionEvent
+#   - api.TransitionEvent.elapsedTime
+#   - api.TransitionEvent.propertyName
+#   - api.TransitionEvent.pseudoElement
+#   - css.properties.transition
+#   - css.properties.transition-delay
+#   - css.properties.transition-duration
+#   - css.properties.transition-property
+#   - css.properties.transition-property.all
+#   - css.properties.transition-property.none
+#   - css.properties.transition-timing-function
 # - transition-behavior:
 #   - css.properties.transition-behavior

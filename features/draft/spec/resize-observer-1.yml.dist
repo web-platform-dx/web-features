@@ -30,8 +30,9 @@ compat_features:
   - api.ResizeObserverEntry.contentRect
   - api.ResizeObserverEntry.target
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "84"
   #   chrome_android: "84"
@@ -40,12 +41,14 @@ compat_features:
   #   firefox_android: "79"
   #   safari: "15.4"
   #   safari_ios: "15.4"
+  - api.ResizeObserver.observe.options_box_parameter
   - api.ResizeObserverSize
   - api.ResizeObserverSize.blockSize
   - api.ResizeObserverSize.inlineSize
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "84"
   #   chrome_android: "84"

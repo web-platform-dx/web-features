@@ -4,28 +4,8 @@
 status:
   baseline: false
   support:
-    chrome: "101"
-    chrome_android: "101"
-    edge: "101"
+    chrome: "60"
+    chrome_android: "60"
+    edge: "79"
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "70"
-  #   chrome_android: "70"
-  #   edge: "79"
-  - api.WorkerNavigator.usb
-
-  # baseline: false
-  # support:
-  #   chrome: "88"
-  #   chrome_android: "88"
-  #   edge: "88"
-  - http.headers.Permissions-Policy.usb
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "101"
-  #   chrome_android: "101"
-  #   edge: "101"
-  - api.USBDevice.forget
+  - html.elements.iframe.allow.usb
