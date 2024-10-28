@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-28
 name: Payment Handler API
 description: TODO
 spec: https://w3c.github.io/payment-handler/
@@ -8,6 +8,7 @@ compat_features:
   - api.CanMakePaymentEvent.respondWith
   - api.PaymentManager
   - api.PaymentManager.enableDelegations
+  - api.PaymentManager.secure_context_required
   - api.PaymentManager.userHint
   - api.PaymentRequestEvent
   - api.PaymentRequestEvent.PaymentRequestEvent

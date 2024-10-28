@@ -2948,17 +2948,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - http.headers.X-Frame-Options.SAMEORIGIN
-
-  # baseline: false
-  # support:
   #   chrome: "1"
   #   chrome_android: "18"
   #   edge: "12"
@@ -3248,6 +3237,15 @@ compat_features:
   #   safari: "15"
   #   safari_ios: "15.5"
   - api.HTMLElement.focus.options_preventScroll_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "64"
+  #   chrome_android: "64"
+  #   edge: "79"
+  #   firefox: "74"
+  #   firefox_android: "79"
+  - html.elements.iframe.allow.autoplay
 
   # baseline: false
   # support:
@@ -3682,6 +3680,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "87"
+  #   chrome_android: "87"
+  #   edge: "87"
+  - html.elements.iframe.allow.cross-origin-isolated
+
+  # baseline: false
+  # support:
   #   chrome: "88"
   #   chrome_android: "88"
   #   edge: "88"
@@ -3725,6 +3730,7 @@ compat_features:
   #   chrome_android: "108"
   #   edge: "108"
   - html.elements.form.autocomplete.webauthn
+  - html.elements.iframe.allow.wildcards
   - html.elements.textarea.autocomplete.webauthn
 
   # baseline: false
@@ -3825,6 +3831,12 @@ compat_features:
   #   firefox_android: "67"
   - html.elements.form.autocomplete.new-password
   - html.elements.textarea.autocomplete.new-password
+
+  # baseline: false
+  # support:
+  #   firefox: "74"
+  #   firefox_android: "79"
+  - html.elements.iframe.allow.document-domain
 
   # baseline: false
   # support:
