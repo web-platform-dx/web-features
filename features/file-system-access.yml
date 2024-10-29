@@ -4,8 +4,18 @@ spec: https://wicg.github.io/file-system-access/
 caniuse: native-filesystem-api
 group: file-system
 compat_features:
+  - api.FileSystemDirectoryHandle.@@asyncIterator
+  - api.FileSystemFileHandle.createWritable
   - api.FileSystemHandle.queryPermission
   - api.FileSystemHandle.requestPermission
+  - api.FileSystemSyncAccessHandle.close.sync_version
+  - api.FileSystemSyncAccessHandle.flush.sync_version
+  - api.FileSystemSyncAccessHandle.getSize.sync_version
+  - api.FileSystemSyncAccessHandle.truncate.sync_version
+  - api.FileSystemWritableFileStream
+  - api.FileSystemWritableFileStream.seek
+  - api.FileSystemWritableFileStream.truncate
+  - api.FileSystemWritableFileStream.write
   - api.Window.showDirectoryPicker
   - api.Window.showOpenFilePicker
   - api.Window.showSaveFilePicker

@@ -2,39 +2,3 @@ name: Origin private file system
 description: The `navigator.storage.getDirectory()` method returns a `FileSystemDirectoryHandle` that is restricted to a specific origin and invisible to the user's actual file system for faster file-based applications, such as SQLite databases.
 spec: https://fs.spec.whatwg.org/#origin-private-file-system
 group: file-system
-status:
-  compute_from: api.FileSystemFileHandle.createSyncAccessHandle
-compat_features:
-  - api.FileSystemDirectoryHandle
-  - api.FileSystemDirectoryHandle.@@asyncIterator
-  - api.FileSystemDirectoryHandle.entries
-  - api.FileSystemDirectoryHandle.getDirectoryHandle
-  - api.FileSystemDirectoryHandle.getFileHandle
-  - api.FileSystemDirectoryHandle.keys
-  - api.FileSystemDirectoryHandle.removeEntry
-  - api.FileSystemDirectoryHandle.resolve
-  - api.FileSystemDirectoryHandle.values
-  - api.FileSystemFileHandle
-  - api.FileSystemFileHandle.createSyncAccessHandle
-  - api.FileSystemFileHandle.createWritable
-  - api.FileSystemFileHandle.getFile
-  - api.FileSystemHandle
-  - api.FileSystemHandle.isSameEntry
-  - api.FileSystemHandle.kind
-  - api.FileSystemHandle.name
-  - api.FileSystemSyncAccessHandle
-  - api.FileSystemSyncAccessHandle.close
-  - api.FileSystemSyncAccessHandle.close.sync_version
-  - api.FileSystemSyncAccessHandle.flush
-  - api.FileSystemSyncAccessHandle.flush.sync_version
-  - api.FileSystemSyncAccessHandle.getSize
-  - api.FileSystemSyncAccessHandle.getSize.sync_version
-  - api.FileSystemSyncAccessHandle.read
-  - api.FileSystemSyncAccessHandle.truncate
-  - api.FileSystemSyncAccessHandle.truncate.sync_version
-  - api.FileSystemSyncAccessHandle.write
-  - api.FileSystemWritableFileStream
-  - api.FileSystemWritableFileStream.seek
-  - api.FileSystemWritableFileStream.truncate
-  - api.FileSystemWritableFileStream.write
-  - api.StorageManager.getDirectory
