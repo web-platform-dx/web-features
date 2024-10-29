@@ -45,6 +45,7 @@ compat_features:
   - css.properties.transition-delay
   - css.properties.transition-duration
   - css.properties.transition-property
+  - css.properties.transition-property.IDENT_value
   - css.properties.transition-property.all
   - css.properties.transition-property.none
   - css.properties.transition-timing-function
@@ -117,6 +118,19 @@ compat_features:
   - api.CSSTransition.transitionProperty
 
   # baseline: high
+  # baseline_low_date: 2020-09-16
+  # baseline_high_date: 2023-03-16
+  # support:
+  #   chrome: "77"
+  #   chrome_android: "77"
+  #   edge: "79"
+  #   firefox: "65"
+  #   firefox_android: "65"
+  #   safari: "14"
+  #   safari_ios: "14"
+  - css.properties.transition-timing-function.jump
+
+  # baseline: high
   # baseline_low_date: 2020-11-19
   # baseline_high_date: 2023-05-19
   # support:
@@ -128,3 +142,14 @@ compat_features:
   #   safari: "13.1"
   #   safari_ios: "13.4"
   - api.Element.transitioncancel_event
+
+  # baseline: false
+  # support:
+  #   chrome: "117"
+  #   chrome_android: "117"
+  #   edge: "117"
+  - css.properties.transition.transition-behavior
+
+  # baseline: false
+  # support: {}
+  - css.properties.transition.gradients_can_animate
