@@ -1,0 +1,10 @@
+name: Numeric types (CSS)
+description: The `integer`, `number`, and `percentage` CSS types represent quantities, indexes, or positions depending on the CSS property to which they are assigned. The `dimension` CSS type represents a value of a specific unit, such as pixels or ems. The `dimension` subtypes define which units are valid for that type.
+spec: https://drafts.csswg.org/css-values-4/#numeric-types
+group: types
+compat_features:
+  - css.types.dimension
+  - css.types.integer
+  - css.types.number
+  - css.types.number.scientific_notation
+  - css.types.percentage
