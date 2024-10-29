@@ -3,8 +3,12 @@ description: The `text-overflow` CSS property sets how hidden overflow content a
 spec: https://drafts.csswg.org/css-overflow-4/#text-overflow
 group: css
 caniuse: text-overflow
+status:
+  compute_from: css.properties.text-overflow
 compat_features:
   - css.properties.text-overflow
   - css.properties.text-overflow.clip
   - css.properties.text-overflow.ellipsis
   - svg.global_attributes.text-overflow
+  - css.properties.text-overflow.string
+  - css.properties.text-overflow.two_value_syntax
