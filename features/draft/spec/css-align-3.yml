@@ -1,43 +1,80 @@
-draft_date: 2024-10-10
+draft_date: 2024-10-28
 name: CSS Box Alignment Module Level 3
 description: TODO
 spec: https://drafts.csswg.org/css-align-3/
 compat_features:
   - css.properties.align-content
   - css.properties.align-content.block_context
+  - css.properties.align-content.flex_context.baseline
+  - css.properties.align-content.flex_context.first_baseline
+  - css.properties.align-content.flex_context.last_baseline
+  - css.properties.align-content.flex_context.safe_unsafe
+  - css.properties.align-content.flex_context.space-evenly
+  - css.properties.align-content.flex_context.start_end
   - css.properties.align-items
+  - css.properties.align-items.flex_context.first_baseline
+  - css.properties.align-items.flex_context.last_baseline
+  - css.properties.align-items.flex_context.safe_unsafe
+  - css.properties.align-items.flex_context.start_end
   - css.properties.align-self
+  - css.properties.align-self.flex_context.first_baseline
+  - css.properties.align-self.flex_context.last_baseline
+  - css.properties.align-self.flex_context.safe_unsafe
+  - css.properties.align-self.flex_context.start_end
+  - css.properties.align-self.positioned_boxes
   - css.properties.gap
   - css.properties.gap.multicol_context
   - css.properties.justify-content
+  - css.properties.justify-content.flex_context.left_right
+  - css.properties.justify-content.flex_context.safe_unsafe
+  - css.properties.justify-content.flex_context.space-evenly
+  - css.properties.justify-content.flex_context.start_end
   - css.properties.justify-items
   - css.properties.justify-self
+  - css.properties.justify-self.positioned_boxes
   - css.properties.place-content
   - css.properties.place-items
   - css.properties.place-self
+  - css.properties.place-self.positioned_boxes
   - css.properties.row-gap
 
 # The following features in the spec are already part of web-features:
 # - Flexbox:
 #   - css.properties.align-content.flex_context
+#   - css.properties.align-content.flex_context.stretch
 #   - css.properties.align-items.flex_context
+#   - css.properties.align-items.flex_context.baseline
 #   - css.properties.align-self.flex_context
+#   - css.properties.align-self.flex_context.baseline
+#   - css.properties.align-self.flex_context.stretch
 #   - css.properties.justify-content.flex_context
+#   - css.properties.justify-content.flex_context.stretch
 #   - css.properties.justify-items.flex_context
+#   - css.properties.place-content.flex_context
+#   - css.properties.place-items.flex_context
+#   - css.properties.place-self.flex_context
 # - Grid:
 #   - css.properties.align-content.grid_context
 #   - css.properties.align-items.grid_context
+#   - css.properties.align-items.grid_context.start_end
 #   - css.properties.align-self.grid_context
 #   - css.properties.column-gap.grid_context
 #   - css.properties.gap.grid_context
+#   - css.properties.gap.grid_context.calc_values
+#   - css.properties.gap.grid_context.percentage_values
 #   - css.properties.justify-content.grid_context
 #   - css.properties.justify-items.grid_context
 #   - css.properties.justify-self.grid_context
+#   - css.properties.place-content.grid_context
+#   - css.properties.place-items.grid_context
+#   - css.properties.place-self.grid_context
 #   - css.properties.row-gap.grid_context
 # - Multi-column layout:
 #   - css.properties.align-content.multicol_context
 #   - css.properties.column-gap
 #   - css.properties.column-gap.multicol_context
+#   - css.properties.column-gap.multicol_context.calc_values
+#   - css.properties.column-gap.multicol_context.percentage_values
 # - Flexbox gap:
 #   - css.properties.column-gap.flex_context
 #   - css.properties.gap.flex_context

@@ -26,6 +26,7 @@ compat_features:
   #   chrome_android: "90"
   #   edge: "90"
   - api.Navigator.userAgentData
+  - api.Navigator.userAgentData.secure_context_required
   - api.NavigatorUAData
   - api.NavigatorUAData.brands
   - api.NavigatorUAData.getHighEntropyValues

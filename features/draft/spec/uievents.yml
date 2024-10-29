@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-10-21
 name: UI Events
 description: TODO
 spec: https://w3c.github.io/uievents/
@@ -7,12 +7,15 @@ compat_features:
   - api.CompositionEvent.CompositionEvent
   - api.CompositionEvent.data
   - api.Element.auxclick_event
+  - api.Element.auxclick_event.type_pointerevent
   - api.Element.beforeinput_event
   - api.Element.blur_event
+  - api.Element.click_event.type_pointerevent
   - api.Element.compositionend_event
   - api.Element.compositionstart_event
   - api.Element.compositionupdate_event
   - api.Element.contextmenu_event
+  - api.Element.contextmenu_event.type_pointerevent
   - api.Element.focus_event
   - api.Element.focusin_event
   - api.Element.focusout_event
@@ -23,14 +26,28 @@ compat_features:
   - api.FocusEvent.FocusEvent
   - api.FocusEvent.relatedTarget
   - api.HTMLElement.error_event
+  - api.InputEvent.inputType.insertFromPasteAsQuotation
   - api.KeyboardEvent
   - api.KeyboardEvent.KeyboardEvent
   - api.KeyboardEvent.altKey
   - api.KeyboardEvent.code
   - api.KeyboardEvent.ctrlKey
   - api.KeyboardEvent.getModifierState
+  - api.KeyboardEvent.getModifierState.key_parameter_alt
+  - api.KeyboardEvent.getModifierState.key_parameter_altgraph
+  - api.KeyboardEvent.getModifierState.key_parameter_capslock
+  - api.KeyboardEvent.getModifierState.key_parameter_control
+  - api.KeyboardEvent.getModifierState.key_parameter_fn
+  - api.KeyboardEvent.getModifierState.key_parameter_meta
+  - api.KeyboardEvent.getModifierState.key_parameter_numlock
+  - api.KeyboardEvent.getModifierState.key_parameter_scrolllock
+  - api.KeyboardEvent.getModifierState.key_parameter_shift
+  - api.KeyboardEvent.getModifierState.key_parameter_symbol
   - api.KeyboardEvent.isComposing
   - api.KeyboardEvent.key
+  - api.KeyboardEvent.key.dead_key
+  - api.KeyboardEvent.key.non_printable_keys
+  - api.KeyboardEvent.key.printable_key
   - api.KeyboardEvent.location
   - api.KeyboardEvent.metaKey
   - api.KeyboardEvent.repeat
@@ -45,6 +62,7 @@ compat_features:
   - api.WheelEvent.deltaX
   - api.WheelEvent.deltaY
   - api.WheelEvent.deltaZ
+  - api.WheelEvent.pinch_to_zoom_support
   - api.Window.blur_event
   - api.Window.focus_event
   - api.Window.load_event

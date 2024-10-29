@@ -1,27 +1,37 @@
-draft_date: 2024-09-30
+draft_date: 2024-10-23
 name: CSS Writing Modes Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-writing-modes-4/
 compat_features:
-  - css.properties.direction
-  - css.properties.direction.ltr
-  - css.properties.direction.rtl
+  - css.properties.direction.vertical_slider_direction
   - css.properties.text-combine-upright
   - css.properties.text-orientation
   - css.properties.text-orientation.mixed
   - css.properties.text-orientation.sideways
   - css.properties.text-orientation.upright
-  - css.properties.unicode-bidi
-  - css.properties.unicode-bidi.bidi-override
-  - css.properties.unicode-bidi.embed
-  - css.properties.unicode-bidi.isolate
-  - css.properties.unicode-bidi.isolate-override
-  - css.properties.unicode-bidi.normal
-  - css.properties.unicode-bidi.plaintext
-  - svg.global_attributes.direction
-  - svg.global_attributes.unicode-bidi
 
 # The following features in the spec are already part of web-features:
+# - Layout direction override:
+#   - css.properties.direction
+#   - css.properties.direction.ltr
+#   - css.properties.direction.rtl
+#   - css.properties.unicode-bidi
+#   - css.properties.unicode-bidi.bidi-override
+#   - css.properties.unicode-bidi.embed
+#   - css.properties.unicode-bidi.isolate
+#   - css.properties.unicode-bidi.isolate-override
+#   - css.properties.unicode-bidi.normal
+#   - css.properties.unicode-bidi.plaintext
 # - writing-mode:
 #   - css.properties.writing-mode
+#   - css.properties.writing-mode.horizontal-tb
+#   - css.properties.writing-mode.sideways-lr
+#   - css.properties.writing-mode.sideways-rl
+#   - css.properties.writing-mode.vertical-lr
+#   - css.properties.writing-mode.vertical-rl
 #   - svg.global_attributes.writing-mode
+# - Vertical form controls:
+#   - css.properties.writing-mode.vertical_oriented_form_controls
+# - SVG:
+#   - svg.global_attributes.direction
+#   - svg.global_attributes.unicode-bidi
