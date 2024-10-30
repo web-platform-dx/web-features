@@ -1,7 +1,7 @@
-draft_date: 2024-09-09
-name: Long Animation Frames API
-description: TODO
+name: Long animation frames
+description: The `long-animation-frame` performance event type and the `PerformanceLongAnimationFrameTiming` API provide information about rendering updates that take longer than 50 milliseconds. Also known as LoAFs.
 spec: https://w3c.github.io/long-animation-frames/
+group: performance
 compat_features:
   - api.PerformanceLongAnimationFrameTiming
   - api.PerformanceLongAnimationFrameTiming.blockingDuration

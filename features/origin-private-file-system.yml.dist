@@ -3,15 +3,15 @@
 
 status:
   baseline: low
-  baseline_low_date: 2023-03-14
+  baseline_low_date: 2023-03-27
   support:
-    chrome: "102"
+    chrome: "108"
     chrome_android: "109"
-    edge: "102"
+    edge: "108"
     firefox: "111"
     firefox_android: "111"
-    safari: "15.2"
-    safari_ios: "15.2"
+    safari: "16.4"
+    safari_ios: "16.4"
 compat_features:
   # baseline: low
   # baseline_low_date: 2023-03-14
@@ -50,7 +50,6 @@ compat_features:
   #   safari_ios: "15.2"
   - api.StorageManager.getDirectory
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2023-03-14
   # support:
@@ -69,3 +68,19 @@ compat_features:
   - api.FileSystemSyncAccessHandle.read
   - api.FileSystemSyncAccessHandle.truncate
   - api.FileSystemSyncAccessHandle.write
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "108"
+  #   chrome_android: "109"
+  #   edge: "108"
+  #   firefox: "111"
+  #   firefox_android: "111"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.FileSystemSyncAccessHandle.close.sync_version
+  - api.FileSystemSyncAccessHandle.flush.sync_version
+  - api.FileSystemSyncAccessHandle.getSize.sync_version
+  - api.FileSystemSyncAccessHandle.truncate.sync_version
