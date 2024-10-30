@@ -3,15 +3,21 @@
 
 status:
   baseline: false
-  support:
-    chrome: "94"
-    chrome_android: "94"
-    edge: "93"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "93"
+  - api.DelegatedInkTrailPresenter
+  - api.DelegatedInkTrailPresenter.presentationArea
+  - api.DelegatedInkTrailPresenter.updateInkTrailStartPoint
   - api.Ink
   - api.Ink.requestPresenter
-  - api.InkPresenter
-  - api.InkPresenter.expectedImprovement
-  - api.InkPresenter.presentationArea
-  - api.InkPresenter.updateInkTrailStartPoint
   - api.Navigator.ink
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.DelegatedInkTrailPresenter.expectedImprovement
