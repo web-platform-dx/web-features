@@ -159,6 +159,16 @@ function build() {
   run("npm run build");
 }
 
+function prettyJson(sourceFp: string): string {
+  return (
+    JSON.stringify(
+      JSON.parse(readFileSync(sourceFp, { encoding: "utf-8" })),
+      undefined,
+      2,
+    ) + "\n"
+  );
+}
+
 function readPackageJSON(packageDir) {
   return JSON.parse(
     readFileSync(join(packageDir, "package.json"), {
@@ -182,11 +192,9 @@ function diffJson(from: string = "latest", to?: string): string {
       "web-features",
       "data.json",
     );
-    const prettyJson = execSync(`jq . "${pkgJson}"`, {
-      encoding: "utf-8",
-    });
+    const prettyPkgJson = prettyJson(pkgJson);
     const fp = join(temporaryDir, `data.${version}.json`);
-    writeFileSync(fp, prettyJson);
+    writeFileSync(fp, prettyPkgJson);
     return fp;
   }
 
@@ -197,9 +205,7 @@ function diffJson(from: string = "latest", to?: string): string {
     } else {
       build();
       const preparedJson = join(packages["web-features"], "data.json");
-      const prettyPreparedJson = execSync(`jq . "${preparedJson}"`, {
-        encoding: "utf-8",
-      });
+      const prettyPreparedJson = prettyJson(preparedJson);
       const fp = join(temporaryDir, "data.HEAD.json");
       writeFileSync(fp, prettyPreparedJson);
       return fp;
@@ -267,16 +273,6 @@ function preflight(options: PreflightOptions): void {
       err.error,
     );
     logger.error(err.stderr);
-    process.exit(1);
-  }
-
-  logger.verbose("Confirming jq is installed");
-  const jqVersionCmd = "jq --version";
-  try {
-    logger.debug(jqVersionCmd);
-    execSync(jqVersionCmd);
-  } catch (err) {
-    logger.error("jq failed to run. Do you have it installed?", err.error);
     process.exit(1);
   }
 

@@ -1,4 +1,4 @@
-draft_date: 2024-10-28
+draft_date: 2024-10-30
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -92,6 +92,7 @@ compat_features:
   - api.HTMLAllCollection.length
   - api.HTMLAllCollection.namedItem
   - api.HTMLAnchorElement.download
+  - api.HTMLAnchorElement.hrefTranslate
   - api.HTMLAnchorElement.ping
   - api.HTMLAnchorElement.referrerPolicy.no-referrer-when-downgrade
   - api.HTMLAnchorElement.referrerPolicy.origin-when-cross-origin
@@ -470,6 +471,7 @@ compat_features:
   - html.elements.a.download
   - html.elements.a.href.href_sms
   - html.elements.a.href.href_top
+  - html.elements.a.hreftranslate
   - html.elements.a.implicit_noopener
   - html.elements.a.ping
   - html.elements.a.referrerpolicy.no-referrer-when-downgrade
@@ -571,7 +573,6 @@ compat_features:
   - html.elements.link.referrerpolicy.no-referrer-when-downgrade
   - html.elements.link.referrerpolicy.origin-when-cross-origin
   - html.elements.link.referrerpolicy.unsafe-url
-  - html.elements.link.rel.alternate_stylesheet
   - html.elements.link.rel.dns-prefetch
   - html.elements.link.rel.expect
   - html.elements.link.rel.icon
@@ -2241,6 +2242,8 @@ compat_features:
 #   - html.elements.ins.datetime
 # - <kbd>:
 #   - html.elements.kbd
+# - Alternative style sheets:
+#   - html.elements.link.rel.alternate_stylesheet
 # - <link rel="modulepreload">:
 #   - html.elements.link.rel.modulepreload
 # - <main>:
