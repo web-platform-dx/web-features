@@ -1,5 +1,5 @@
 name: Events
-description: "Events are notifications of significant things occurring in the web page, such as documents or images loading, or user clicks. The Events APIs let you listen for these events, and react to them."
+description: Events fire when significant things happen in the page, such as an image loading or a user clicking. You can use the `addEventListener()` method on objects that receive events (event targets), such as windows, documents, and elements, to set a function to be called when an event fires.
 spec:
   - https://html.spec.whatwg.org/multipage/indices.html#events-2
   - https://dom.spec.whatwg.org/#interface-customevent
