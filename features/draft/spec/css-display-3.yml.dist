@@ -3,12 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "65"
-    chrome_android: "65"
-    edge: "79"
-    firefox: "59"
-    firefox_android: "59"
+  support: {}
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -23,7 +18,6 @@ compat_features:
   #   safari_ios: "11.3"
   - css.properties.display.contents
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "65"
@@ -32,3 +26,8 @@ compat_features:
   #   firefox: "59"
   #   firefox_android: "59"
   - css.properties.display.contents.contents_unusual
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.display.contents.focusable_elements
