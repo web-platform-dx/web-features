@@ -1988,19 +1988,6 @@ compat_features:
   #   chrome: "6"
   #   chrome_android: "18"
   #   edge: "79"
-  #   firefox: "53"
-  #   firefox_android: "53"
-  #   safari: "5"
-  #   safari_ios: "5"
-  - api.EventSource.worker_support
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "6"
-  #   chrome_android: "18"
-  #   edge: "79"
   #   firefox: ≤49
   #   firefox_android: "49"
   #   safari: "5"
@@ -3064,6 +3051,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "6"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   safari: "5"
+  #   safari_ios: "5"
+  - api.EventSource.worker_support
+
+  # baseline: false
+  # support:
   #   chrome: "8"
   #   chrome_android: "18"
   #   edge: "12"
@@ -3815,6 +3811,12 @@ compat_features:
 
   # baseline: false
   # support:
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.HTMLElement.autocorrect
+
+  # baseline: false
+  # support:
   #   firefox: "34"
   #   firefox_android: "34"
   - api.Worker.worker_support
@@ -3863,7 +3865,6 @@ compat_features:
   # support: {}
   - api.HTMLButtonElement.command
   - api.HTMLButtonElement.commandfor
-  - api.HTMLElement.autocorrect
   - api.HTMLElement.command_event
   - api.Navigator.authentication
   - html.elements.hr.hr_in_select

@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "125"
+    firefox_android: "125"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-09-30
@@ -246,15 +248,6 @@ compat_features:
   - css.properties.align-items.flex_context.safe_unsafe
   - css.properties.align-self.flex_context.safe_unsafe
   - css.properties.justify-content.flex_context.safe_unsafe
-
-  # baseline: false
-  # support:
-  #   chrome: "122"
-  #   chrome_android: "122"
-  #   edge: "122"
-  - css.properties.align-self.positioned_boxes
-  - css.properties.justify-self.positioned_boxes
-  - css.properties.place-self.positioned_boxes
 
   # baseline: false
   # support:
