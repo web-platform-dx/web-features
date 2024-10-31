@@ -1,5 +1,5 @@
 name: attr
-description: The `attr()` CSS function returns the value of the specified attribute of an element. A default value may be provided if the attribute is missing or does not parse as the required type.
+description: The `attr()` CSS function returns the value of an HTML element's attribute, which can then be used as a typed value in a CSS declaration (types include length, number, angle, color, …). For example `width: attr(length);`. A default value may be provided if the attribute is missing or invalid.
 spec: https://drafts.csswg.org/css-values-5/#attr-notation
 caniuse: css3-attr
 group: css
