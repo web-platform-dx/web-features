@@ -3,13 +3,15 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "130"
 compat_features:
   # baseline: false
   # support:
   #   chrome: "89"
   #   chrome_android: "89"
   #   edge: "89"
+  - html.elements.iframe.allow.serial
   - http.headers.Permissions-Policy.serial
 
   # baseline: false
@@ -40,5 +42,6 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "130"
   - api.SerialPort.connected

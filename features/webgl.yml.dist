@@ -416,3 +416,19 @@ compat_features:
   #   chrome_android: "126"
   #   edge: "126"
   - api.WebGLObject
+
+  # baseline: false
+  # support:
+  #   firefox: "105"
+  #   firefox_android: "105"
+  - api.WebGLActiveInfo.worker_support
+  - api.WebGLBuffer.worker_support
+  - api.WebGLContextEvent.worker_support
+  - api.WebGLFramebuffer.worker_support
+  - api.WebGLProgram.worker_support
+  - api.WebGLRenderbuffer.worker_support
+  - api.WebGLRenderingContext.worker_support
+  - api.WebGLShader.worker_support
+  - api.WebGLShaderPrecisionFormat.worker_support
+  - api.WebGLTexture.worker_support
+  - api.WebGLUniformLocation.worker_support

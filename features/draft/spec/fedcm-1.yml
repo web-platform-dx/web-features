@@ -1,4 +1,4 @@
-draft_date: 2024-10-07
+draft_date: 2024-10-28
 name: Federated Credential Management API
 description: TODO
 spec: https://w3c-fedid.github.io/FedCM/
@@ -10,6 +10,7 @@ compat_features:
   - api.Navigator.login
   - api.NavigatorLogin
   - api.NavigatorLogin.setStatus
+  - html.elements.iframe.allow.identity-credentials-get
   - http.headers.Permissions-Policy.identity-credentials-get
   - http.headers.Set-Login
 

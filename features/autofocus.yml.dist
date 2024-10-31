@@ -14,7 +14,6 @@ compat_features:
   #   safari_ios: "15.4"
   - api.HTMLElement.autofocus
   - api.SVGElement.autofocus
-  - html.global_attributes.autofocus
 
   # baseline: low
   # baseline_low_date: 2023-02-14
@@ -27,3 +26,15 @@ compat_features:
   #   safari: "15.4"
   #   safari_ios: "15.4"
   - api.MathMLElement.autofocus
+
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "79"
+  #   chrome_android: "79"
+  #   edge: "79"
+  #   firefox: "110"
+  #   firefox_android: "110"
+  #   safari: "15.4"
+  #   safari_ios: "16.4"
+  - html.global_attributes.autofocus

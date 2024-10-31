@@ -1,15 +1,15 @@
-draft_date: 2024-10-10
+draft_date: 2024-10-28
 name: WebXR Device API
 description: TODO
 spec: https://immersive-web.github.io/webxr/
 compat_features:
-  - api.WebGL2RenderingContext.makeXRCompatible
-  - api.WebGLRenderingContext.makeXRCompatible
-  - http.headers.Permissions-Policy.xr-spatial-tracking
+  - html.elements.iframe.allow.xr-spatial-tracking
 
 # The following features in the spec are already part of web-features:
 # - WebXR:
 #   - api.Navigator.xr
+#   - api.WebGL2RenderingContext.makeXRCompatible
+#   - api.WebGLRenderingContext.makeXRCompatible
 #   - api.XRBoundedReferenceSpace
 #   - api.XRBoundedReferenceSpace.boundsGeometry
 #   - api.XRFrame
@@ -23,7 +23,12 @@ compat_features:
 #   - api.XRInputSource.targetRayMode
 #   - api.XRInputSource.targetRaySpace
 #   - api.XRInputSourceArray
+#   - api.XRInputSourceArray.@@iterator
+#   - api.XRInputSourceArray.entries
+#   - api.XRInputSourceArray.forEach
+#   - api.XRInputSourceArray.keys
 #   - api.XRInputSourceArray.length
+#   - api.XRInputSourceArray.values
 #   - api.XRInputSourceEvent
 #   - api.XRInputSourceEvent.XRInputSourceEvent
 #   - api.XRInputSourceEvent.frame
@@ -107,3 +112,4 @@ compat_features:
 #   - api.XRWebGLLayer.getNativeFramebufferScaleFactor_static
 #   - api.XRWebGLLayer.getViewport
 #   - api.XRWebGLLayer.ignoreDepthValues
+#   - http.headers.Permissions-Policy.xr-spatial-tracking

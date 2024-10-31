@@ -1,0 +1,8 @@
+name: Selection composed ranges
+description: The `window.getSelection().getComposedRanges()` method returns ranges that represent the current user selection, even if the selection spans across shadow tree boundaries.
+spec: https://w3c.github.io/selection-api/#dom-selection-getcomposedranges
+group:
+  - selection
+  - web-components
+compat_features:
+  - api.Selection.getComposedRanges

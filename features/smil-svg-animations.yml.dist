@@ -41,28 +41,16 @@ compat_features:
   - api.SVGAnimatedNumber.animVal
   - api.SVGAnimatedNumber.baseVal
   - api.SVGAnimatedRect
-  - api.SVGPolygonElement.animatedPoints
-  - api.SVGPolylineElement.animatedPoints
-  - api.SVGSVGElement.pauseAnimations
-  - api.SVGSVGElement.unpauseAnimations
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1.5"
-  #   firefox_android: "4"
-  #   safari: ≤4
-  #   safari_ios: "1"
   - api.SVGAnimatedString
   - api.SVGAnimatedString.animVal
   - api.SVGAnimatedString.baseVal
   - api.SVGAnimatedTransformList
   - api.SVGAnimatedTransformList.animVal
   - api.SVGAnimatedTransformList.baseVal
+  - api.SVGPolygonElement.animatedPoints
+  - api.SVGPolylineElement.animatedPoints
+  - api.SVGSVGElement.pauseAnimations
+  - api.SVGSVGElement.unpauseAnimations
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -336,6 +324,15 @@ compat_features:
   - api.SVGAnimationElement.beginEvent_event
   - api.SVGAnimationElement.endEvent_event
   - api.SVGAnimationElement.repeatEvent_event
+
+  # baseline: false
+  # support:
+  #   firefox: "4"
+  #   firefox_android: "4"
+  - api.TimeEvent
+  - api.TimeEvent.detail
+  - api.TimeEvent.initTimeEvent
+  - api.TimeEvent.view
 
   # baseline: false
   # support:

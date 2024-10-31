@@ -6,39 +6,28 @@ status:
   support: {}
 compat_features:
   # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
   # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "1"
-  #   safari_ios: "1"
-  - css.properties.display
-  - css.properties.display.block
-  - css.properties.display.inline
-  - css.properties.display.list-item
-  - css.properties.display.none
-  - css.properties.visibility
-  - css.properties.visibility.hidden
-  - css.properties.visibility.visible
+  #   chrome: "65"
+  #   chrome_android: "65"
+  #   edge: "79"
+  #   firefox: "37"
+  #   firefox_android: "37"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - css.properties.display.contents
 
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
+  # baseline: false
   # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "1.3"
-  #   safari_ios: "1"
-  - css.properties.visibility.collapse
+  #   chrome: "65"
+  #   chrome_android: "65"
+  #   edge: "79"
+  #   firefox: "59"
+  #   firefox_android: "59"
+  - css.properties.display.contents.contents_unusual
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - css.properties.reading-flow
+  - css.properties.display.contents.focusable_elements
