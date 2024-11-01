@@ -2,3 +2,16 @@ name: font-synthesis
 description: The `font-synthesis` CSS shorthand property disables all font synthesis except the given kinds. To disable a specific kind of font synthesis, instead use the longhand properties such as `font-synthesis-style` and `font-synthesis-weight`.
 spec: https://drafts.csswg.org/css-fonts-4/#font-synthesis
 group: font-synthesis
+status:
+  compute_from: css.properties.font-synthesis
+compat_features:
+  - css.properties.font-synthesis
+  # The font-synthesis shorthand and longhand properties work inversely (e.g.
+  # `font-synthesis-wieght: none` affects weight, while `font-synthesis: weight`
+  # affects all options but weight). So these keys cannot be included in
+  # the longhand features.
+  # See https://github.com/w3c/csswg-drafts/issues/1641.
+  - css.properties.font-synthesis.position
+  - css.properties.font-synthesis.small-caps
+  - css.properties.font-synthesis.style
+  - css.properties.font-synthesis.weight
