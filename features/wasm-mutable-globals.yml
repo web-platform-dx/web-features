@@ -1,6 +1,6 @@
-name: WebAssembly import and export of mutable globals
-description: An extension to WebAssembly for importing and exporting mutable global variables.
-spec: https://webassembly.github.io/gc/core/bikeshed/
+name: Import and export of mutable globals (WebAssembly)
+description: Mutable global variables can be imported and exported. 
+spec: https://webassembly.github.io/spec/js-api/#dom-globaldescriptor-mutable
 caniuse: wasm-mutable-globals
 compat_features:
   - webassembly.mutable-globals

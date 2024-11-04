@@ -1,6 +1,6 @@
-name: WebAssembly bulk memory operations
-description: An extension to WebAssembly adding bulk memory operations and conditional segment initialization.
-spec: https://webassembly.github.io/gc/core/bikeshed/
+name: Bulk memory operations (WebAssembly)
+description: Bulk memory operations such as `copy` and `init` similar to the native `memcpy` and `memmove` functions.
+spec: https://github.com/WebAssembly/spec/blob/main/proposals/bulk-memory-operations/Overview.md
 caniuse: wasm-bulk-memory
 compat_features:
   - webassembly.bulk-memory-operations

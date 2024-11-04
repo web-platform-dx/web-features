@@ -1,6 +1,6 @@
-name: WebAssembly reference types
-description: An extension to WebAssembly allowing opaque references as first-class types, and multiple tables.
-spec: https://webassembly.github.io/gc/core/bikeshed/
+name: Reference types (WebAssembly)
+description: The `externref` type can be used as both a value types and a table element type. The `funcref`can be used as a value type.
+spec: https://github.com/WebAssembly/spec/blob/main/proposals/reference-types/Overview.md
 caniuse: wasm-reference-types
 compat_features:
   - webassembly.reference-types

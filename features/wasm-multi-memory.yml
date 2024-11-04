@@ -1,5 +1,5 @@
-name: WebAssembly multi-memory
-description: An extension to WebAssembly to allow the use of multiple memories within a single module.
-spec: https://webassembly.github.io/gc/core/bikeshed/
+name: Multi-memory (WebAssembly)
+description: A single module in WebAssembly can have multiple memories.
+spec: https://github.com/WebAssembly/multi-memory/blob/main/proposals/multi-memory/Overview.md
 compat_features:
   - webassembly.multiMemory

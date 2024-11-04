@@ -1,5 +1,5 @@
-name: WebAssembly extended constant expressions
-description: An extension to WebAssembly adding new instructions (`i32.add`, `i32.sub`, `i32.mul`, `i64.add`, `i64.sub`, `i64.mul`) to the list of valid constant expressions.
-spec: https://webassembly.github.io/gc/core/bikeshed/
+name: Extended constant expressions (WebAssembly)
+description: New valid constant expressions (`i32.add`, `i32.sub`, `i32.mul`, `i64.add`, `i64.sub`, `i64.mul`).
+spec: https://github.com/WebAssembly/extended-const/blob/main/proposals/extended-const/Overview.md
 compat_features:
   - webassembly.extended-constant-expressions

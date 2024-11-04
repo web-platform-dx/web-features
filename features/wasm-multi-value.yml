@@ -1,6 +1,6 @@
-name: WebAssembly multi-value
-description: An extension to WebAssembly allowing instructions, blocks and functions to produce multiple result values.
-spec: https://webassembly.github.io/gc/core/bikeshed/
+name: Multi-value (WebAssembly)
+description: Instructions, blocks and can produce multiple result values.
+spec: https://github.com/WebAssembly/spec/blob/main/proposals/multi-value/Overview.md
 caniuse: wasm-multi-value
 compat_features:
   - webassembly.multi-value

@@ -1,6 +1,6 @@
-name: WebAssembly exception handling
-description: An extension to WebAssembly adding break control flow when an exception is thrown.
-spec: https://webassembly.github.io/exception-handling/js-api/
+name: Exception handling (WebAssembly)
+description: Exceptions break the normal control flow of execution to represent exceptional behavior, such as an error. You can respond to the exception in JavaScript code.
+spec: https://github.com/WebAssembly/exception-handling/blob/main/proposals/exception-handling/Exceptions.md
 status:
   compute_from: webassembly.api.Exception
 compat_features:

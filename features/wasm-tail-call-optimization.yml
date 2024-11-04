@@ -1,5 +1,5 @@
-name: WebAssembly tail call optimization
-description: An extension to WebAssembly to optimize tail calls by discarding the caller frame and replacing the call with a jump.
-spec: https://webassembly.github.io/gc/core/bikeshed/
+name: Tail call optimization (WebAssembly)
+description: Tail call optimization discards a caller frame and replaces the call with a jump instruction.
+spec: https://github.com/WebAssembly/tail-call/blob/main/proposals/tail-call/Overview.md
 compat_features:
   - webassembly.tail-calls
