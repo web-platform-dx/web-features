@@ -99,6 +99,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "43"
+  #   edge: "17"
+  #   firefox: "132"
+  #   firefox_android: "132"
+  #   safari: "16.6"
+  #   safari_ios: "16.6"
+  - api.Notification.silent
+
+  # baseline: false
+  # support:
   #   chrome: "44"
   #   edge: "16"
   #   firefox: "34"
@@ -189,14 +199,6 @@ compat_features:
   #   firefox: "41"
   #   firefox_android: "41"
   - api.Notification.worker_support
-
-  # baseline: false
-  # support:
-  #   chrome: "43"
-  #   edge: "17"
-  #   safari: "16.6"
-  #   safari_ios: "16.6"
-  - api.Notification.silent
 
   # baseline: false
   # support:
