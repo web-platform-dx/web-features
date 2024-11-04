@@ -1,7 +1,8 @@
-name: ""
-description: ""
+name: ":nth-of-type() pseudo-classes"
+description: "The `:nth-of-type()` CSS functional pseudo-classes match elements based on their position among siblings of the same type (first, second, third, fourth, and so on), counted from the first or last sibling. The `:only-of-type` pseudo-class matches any element that is the only child of its type, of its parent."
 spec: https://drafts.csswg.org/selectors-4/#typed-child-index
-caniuse: ""
+caniuse: css-sel3
+group: selectors
 compat_features:
   - css.selectors.nth-last-of-type
   - css.selectors.first-of-type
