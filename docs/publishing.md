@@ -37,6 +37,7 @@ These are the steps to publish a regular release on NPM and as a GitHub release:
 
 1. Remove all lines from Dependabot.
 1. Publish the GitHub release.
+1. (*Optional*) If this release contained schema changes, notify highly-visible donwstream consumers, such as Can I Use (@Fryd), MDN (@LeoMcA), or webstatus.dev (@jcscottiii).
 1. Remove the "[major version required][major-version]" and "[minor version required][minor-version]" labels from any pull requests that were included in the release.
 
 [major-version]: https://github.com/web-platform-dx/web-features/pulls?q=is%3Apr+is%3Amerged+label%3A%22major+version+required%22+sort%3Aupdated-desc

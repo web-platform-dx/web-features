@@ -1,3 +1,6 @@
+> [!Note]
+> **This document should be seen as historical**. It was put together in 2022, when the web-features project started, to inform initial development discussions. The web-features project has made significant progress towards establishing a common list of web features since then. Learnings from this work have not been reflected back in this document.
+
 # Towards a common list of web features
 
 ## Abstract

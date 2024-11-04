@@ -1,4 +1,4 @@
-draft_date: 2024-10-21
+draft_date: 2024-10-30
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -54,7 +54,6 @@ compat_features:
   - api.Document.referrer
   - api.Document.scripts
   - api.Document.scroll_event
-  - api.Document.securitypolicyviolation_event
   - api.Document.title
   - api.Document.visibilityState
   - api.Document.visibilitychange_event
@@ -73,7 +72,6 @@ compat_features:
   - api.Element.keyup_event
   - api.Element.outerHTML
   - api.Element.scroll_event
-  - api.Element.securitypolicyviolation_event
   - api.Element.wheel_event
   - api.ElementInternals.shadowRoot
   - api.ErrorEvent
@@ -94,6 +92,7 @@ compat_features:
   - api.HTMLAllCollection.length
   - api.HTMLAllCollection.namedItem
   - api.HTMLAnchorElement.download
+  - api.HTMLAnchorElement.hrefTranslate
   - api.HTMLAnchorElement.ping
   - api.HTMLAnchorElement.referrerPolicy.no-referrer-when-downgrade
   - api.HTMLAnchorElement.referrerPolicy.origin-when-cross-origin
@@ -256,24 +255,7 @@ compat_features:
   - api.MediaError.code
   - api.MediaError.message
   - api.MessagePort.worker_support
-  - api.NavigateEvent.canIntercept
-  - api.NavigateEvent.hasUAVisualTransition
-  - api.NavigateEvent.intercept
-  - api.NavigateEvent.scroll
-  - api.Navigation.activation
-  - api.NavigationActivation
-  - api.NavigationActivation.entry
-  - api.NavigationActivation.from
-  - api.NavigationActivation.navigationType
-  - api.Navigator
   - api.Navigator.authentication
-  - api.Navigator.cookieEnabled
-  - api.Navigator.hardwareConcurrency
-  - api.Navigator.language
-  - api.Navigator.languages
-  - api.Navigator.onLine
-  - api.Navigator.pdfViewerEnabled
-  - api.Navigator.registerProtocolHandler
   - api.Navigator.registerProtocolHandler.scheme_parameter_bitcoin
   - api.Navigator.registerProtocolHandler.scheme_parameter_ftp
   - api.Navigator.registerProtocolHandler.scheme_parameter_ftps
@@ -299,19 +281,8 @@ compat_features:
   - api.Navigator.registerProtocolHandler.scheme_parameter_wtai
   - api.Navigator.registerProtocolHandler.scheme_parameter_xmpp
   - api.Navigator.registerProtocolHandler.secure_context_required
-  - api.Navigator.unregisterProtocolHandler
-  - api.Navigator.userAgent
-  - api.NotRestoredReasonDetails
-  - api.NotRestoredReasonDetails.reason
   - api.NotRestoredReasonDetails.toJSON
-  - api.NotRestoredReasons
-  - api.NotRestoredReasons.children
-  - api.NotRestoredReasons.id
-  - api.NotRestoredReasons.name
-  - api.NotRestoredReasons.reasons
-  - api.NotRestoredReasons.src
   - api.NotRestoredReasons.toJSON
-  - api.NotRestoredReasons.url
   - api.OffscreenCanvas.convertToBlob.option_type_parameter_webp
   - api.OffscreenCanvas.getContext.webgl2_context
   - api.OffscreenCanvas.getContext.webgl_context
@@ -390,11 +361,6 @@ compat_features:
   - api.TrackEvent
   - api.TrackEvent.TrackEvent
   - api.TrackEvent.track
-  - api.VisibilityStateEntry
-  - api.VisibilityStateEntry.duration
-  - api.VisibilityStateEntry.entryType
-  - api.VisibilityStateEntry.name
-  - api.VisibilityStateEntry.startTime
   - api.Window
   - api.Window.DOMContentLoaded_event
   - api.Window.alert
@@ -409,13 +375,9 @@ compat_features:
   - api.Window.frameElement
   - api.Window.frames
   - api.Window.history
-  - api.Window.languagechange_event
   - api.Window.length
   - api.Window.load_event
   - api.Window.name
-  - api.Window.navigator
-  - api.Window.offline_event
-  - api.Window.online_event
   - api.Window.open
   - api.Window.open.features_parameter_attributionsrc
   - api.Window.open.features_parameter_popup
@@ -449,11 +411,8 @@ compat_features:
   - api.WorkerGlobalScope.error_event
   - api.WorkerGlobalScope.importScripts
   - api.WorkerGlobalScope.importScripts.mime_checks
-  - api.WorkerGlobalScope.languagechange_event
   - api.WorkerGlobalScope.location
   - api.WorkerGlobalScope.navigator
-  - api.WorkerGlobalScope.offline_event
-  - api.WorkerGlobalScope.online_event
   - api.WorkerGlobalScope.rejectionhandled_event
   - api.WorkerGlobalScope.self
   - api.WorkerGlobalScope.unhandledrejection_event
@@ -469,11 +428,6 @@ compat_features:
   - api.WorkerLocation.search
   - api.WorkerLocation.toString
   - api.WorkerNavigator
-  - api.WorkerNavigator.hardwareConcurrency
-  - api.WorkerNavigator.language
-  - api.WorkerNavigator.languages
-  - api.WorkerNavigator.onLine
-  - api.WorkerNavigator.userAgent
   - api.Worklet
   - api.Worklet.addModule
   - api.Worklet.ecmascript_modules
@@ -517,6 +471,7 @@ compat_features:
   - html.elements.a.download
   - html.elements.a.href.href_sms
   - html.elements.a.href.href_top
+  - html.elements.a.hreftranslate
   - html.elements.a.implicit_noopener
   - html.elements.a.ping
   - html.elements.a.referrerpolicy.no-referrer-when-downgrade
@@ -539,6 +494,10 @@ compat_features:
   - html.elements.form.autocomplete.webauthn
   - html.elements.hr.hr_in_select
   - html.elements.html.xmlns
+  - html.elements.iframe.allow.autoplay
+  - html.elements.iframe.allow.cross-origin-isolated
+  - html.elements.iframe.allow.document-domain
+  - html.elements.iframe.allow.wildcards
   - html.elements.iframe.referrerpolicy.no-referrer-when-downgrade
   - html.elements.iframe.referrerpolicy.origin-when-cross-origin
   - html.elements.iframe.referrerpolicy.unsafe-url
@@ -614,7 +573,6 @@ compat_features:
   - html.elements.link.referrerpolicy.no-referrer-when-downgrade
   - html.elements.link.referrerpolicy.origin-when-cross-origin
   - html.elements.link.referrerpolicy.unsafe-url
-  - html.elements.link.rel.alternate_stylesheet
   - html.elements.link.rel.dns-prefetch
   - html.elements.link.rel.expect
   - html.elements.link.rel.icon
@@ -628,7 +586,6 @@ compat_features:
   - html.elements.link.rel.preload.as-script
   - html.elements.link.rel.preload.as-style
   - html.elements.link.rel.preload.as-track
-  - html.elements.meta.http-equiv.content-security-policy
   - html.elements.meta.http-equiv.content-type
   - html.elements.meta.name.theme-color
   - html.elements.meter
@@ -687,7 +644,6 @@ compat_features:
   - http.headers.Permissions-Policy.cross-origin-isolated
   - http.headers.Permissions-Policy.document-domain
   - http.headers.Refresh
-  - http.headers.X-Frame-Options.SAMEORIGIN
   - http.status.103
   - http.status.103.preconnect
   - http.status.103.preload
@@ -984,6 +940,10 @@ compat_features:
 # - scrollend:
 #   - api.Document.scrollend_event
 #   - api.Element.scrollend_event
+# - Content Security Policy (CSP):
+#   - api.Document.securitypolicyviolation_event
+#   - api.Element.securitypolicyviolation_event
+#   - html.elements.meta.http-equiv.content-security-policy
 # - Mouse events:
 #   - api.Element.click_event
 #   - api.Element.dblclick_event
@@ -2021,15 +1981,20 @@ compat_features:
 # - Navigation API:
 #   - api.NavigateEvent
 #   - api.NavigateEvent.NavigateEvent
+#   - api.NavigateEvent.canIntercept
 #   - api.NavigateEvent.destination
 #   - api.NavigateEvent.downloadRequest
 #   - api.NavigateEvent.formData
+#   - api.NavigateEvent.hasUAVisualTransition
 #   - api.NavigateEvent.hashChange
 #   - api.NavigateEvent.info
+#   - api.NavigateEvent.intercept
 #   - api.NavigateEvent.navigationType
+#   - api.NavigateEvent.scroll
 #   - api.NavigateEvent.signal
 #   - api.NavigateEvent.userInitiated
 #   - api.Navigation
+#   - api.Navigation.activation
 #   - api.Navigation.back
 #   - api.Navigation.canGoBack
 #   - api.Navigation.canGoForward
@@ -2045,6 +2010,10 @@ compat_features:
 #   - api.Navigation.transition
 #   - api.Navigation.traverseTo
 #   - api.Navigation.updateCurrentEntry
+#   - api.NavigationActivation
+#   - api.NavigationActivation.entry
+#   - api.NavigationActivation.from
+#   - api.NavigationActivation.navigationType
 #   - api.NavigationCurrentEntryChangeEvent
 #   - api.NavigationCurrentEntryChangeEvent.NavigationCurrentEntryChangeEvent
 #   - api.NavigationCurrentEntryChangeEvent.from
@@ -2069,11 +2038,51 @@ compat_features:
 #   - api.NavigationTransition.from
 #   - api.NavigationTransition.navigationType
 #   - api.Window.navigation
+# - Navigator:
+#   - api.Navigator
+#   - api.Window.navigator
+# - cookieEnabled:
+#   - api.Navigator.cookieEnabled
+# - hardwareConcurrency:
+#   - api.Navigator.hardwareConcurrency
+#   - api.WorkerNavigator.hardwareConcurrency
+# - Language:
+#   - api.Navigator.language
+#   - api.Navigator.languages
+#   - api.Window.languagechange_event
+#   - api.WorkerGlobalScope.languagechange_event
+#   - api.WorkerNavigator.language
+#   - api.WorkerNavigator.languages
+# - Online status:
+#   - api.Navigator.onLine
+#   - api.Window.offline_event
+#   - api.Window.online_event
+#   - api.WorkerGlobalScope.offline_event
+#   - api.WorkerGlobalScope.online_event
+#   - api.WorkerNavigator.onLine
+# - pdfViewerEnabled:
+#   - api.Navigator.pdfViewerEnabled
+# - registerProtocolHandler:
+#   - api.Navigator.registerProtocolHandler
+#   - api.Navigator.unregisterProtocolHandler
 # - User activation:
 #   - api.Navigator.userActivation
 #   - api.UserActivation
 #   - api.UserActivation.hasBeenActive
 #   - api.UserActivation.isActive
+# - User agent sniffing:
+#   - api.Navigator.userAgent
+#   - api.WorkerNavigator.userAgent
+# - Back/forward cache blocking reasons:
+#   - api.NotRestoredReasonDetails
+#   - api.NotRestoredReasonDetails.reason
+#   - api.NotRestoredReasons
+#   - api.NotRestoredReasons.children
+#   - api.NotRestoredReasons.id
+#   - api.NotRestoredReasons.name
+#   - api.NotRestoredReasons.reasons
+#   - api.NotRestoredReasons.src
+#   - api.NotRestoredReasons.url
 # - paint():
 #   - api.PaintRenderingContext2D.beginPath
 #   - api.PaintRenderingContext2D.clearRect
@@ -2135,6 +2144,12 @@ compat_features:
 #   - api.Window.localStorage
 #   - api.Window.sessionStorage
 #   - api.Window.storage_event
+# - Page visibility state:
+#   - api.VisibilityStateEntry
+#   - api.VisibilityStateEntry.duration
+#   - api.VisibilityStateEntry.entryType
+#   - api.VisibilityStateEntry.name
+#   - api.VisibilityStateEntry.startTime
 # - Print events:
 #   - api.Window.afterprint_event
 #   - api.Window.beforeprint_event
@@ -2227,6 +2242,8 @@ compat_features:
 #   - html.elements.ins.datetime
 # - <kbd>:
 #   - html.elements.kbd
+# - Alternative style sheets:
+#   - html.elements.link.rel.alternate_stylesheet
 # - <link rel="modulepreload">:
 #   - html.elements.link.rel.modulepreload
 # - <main>:

@@ -1,0 +1,15 @@
+name: Scroll snap events
+description: The `scrollsnapchanging` and `scrollsnapchange` events fire when a scroll gesture changes the selected scroll snap target.
+spec: https://drafts.csswg.org/css-scroll-snap-2/#scrollsnapchange-and-scrollsnapchanging
+group: scrolling
+compat_features:
+  - api.Document.scrollsnapchange_event
+  - api.Document.scrollsnapchanging_event
+  - api.Element.scrollsnapchange_event
+  - api.Element.scrollsnapchanging_event
+  - api.SnapEvent
+  - api.SnapEvent.SnapEvent
+  - api.SnapEvent.snapTargetBlock
+  - api.SnapEvent.snapTargetInline
+  - api.Window.scrollsnapchange_event
+  - api.Window.scrollsnapchanging_event

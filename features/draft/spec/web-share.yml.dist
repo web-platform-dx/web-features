@@ -27,6 +27,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "86"
+  #   chrome_android: "86"
+  #   edge: "86"
+  #   firefox: "81"
+  #   firefox_android: "81"
+  - html.elements.iframe.allow.web-share
+
+  # baseline: false
+  # support:
   #   chrome_android: "76"
   #   edge: "93"
   #   safari: "14"
