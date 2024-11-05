@@ -1,0 +1,42 @@
+name: WebAssembly
+description: The `WebAssembly.instantiate()` and `WebAssembly.instantiateStreaming()` global static methods load WebAssembly code (also known as Wasm), a portable binary instruction format.
+spec: https://webassembly.github.io/gc/core/bikeshed/
+group: webassembly
+caniuse: wasm
+status:
+  compute_from: webassembly.api
+compat_features:
+  - webassembly.api
+  - webassembly.api.compile_static
+  - webassembly.api.CompileError
+  - webassembly.api.CompileError.CompileError
+  - webassembly.api.compileStreaming_static
+  - webassembly.api.Global
+  - webassembly.api.Global.Global
+  - webassembly.api.Global.value
+  - webassembly.api.Global.valueOf
+  - webassembly.api.Instance
+  - webassembly.api.Instance.exports
+  - webassembly.api.Instance.Instance
+  - webassembly.api.instantiate_static
+  - webassembly.api.instantiateStreaming_static
+  - webassembly.api.LinkError
+  - webassembly.api.LinkError.LinkError
+  - webassembly.api.Memory
+  - webassembly.api.Memory.buffer
+  - webassembly.api.Memory.grow
+  - webassembly.api.Memory.Memory
+  - webassembly.api.Module
+  - webassembly.api.Module.customSections_static
+  - webassembly.api.Module.exports_static
+  - webassembly.api.Module.imports_static
+  - webassembly.api.Module.Module
+  - webassembly.api.RuntimeError
+  - webassembly.api.RuntimeError.RuntimeError
+  - webassembly.api.Table
+  - webassembly.api.Table.get
+  - webassembly.api.Table.grow
+  - webassembly.api.Table.length
+  - webassembly.api.Table.set
+  - webassembly.api.Table.Table
+  - webassembly.api.validate_static
