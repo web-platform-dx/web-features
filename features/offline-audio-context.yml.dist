@@ -62,6 +62,19 @@ compat_features:
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
   # support:
+  #   chrome: "42"
+  #   chrome_android: "42"
+  #   edge: ≤18
+  #   firefox: "37"
+  #   firefox_android: "37"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.OfflineAudioContext.startRendering.returns_promise
+
+  # baseline: high
+  # baseline_low_date: 2021-04-26
+  # baseline_high_date: 2023-10-26
+  # support:
   #   chrome: "51"
   #   chrome_android: "51"
   #   edge: "14"
@@ -70,6 +83,19 @@ compat_features:
   #   safari: "14.1"
   #   safari_ios: "14.5"
   - api.OfflineAudioContext.length
+
+  # baseline: high
+  # baseline_low_date: 2021-04-26
+  # baseline_high_date: 2023-10-26
+  # support:
+  #   chrome: "62"
+  #   chrome_android: "62"
+  #   edge: ≤79
+  #   firefox: "57"
+  #   firefox_android: "57"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.OfflineAudioContext.OfflineAudioContext.options_parameter
 
   # baseline: false
   # support:

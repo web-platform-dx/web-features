@@ -149,3 +149,8 @@ compat_features:
   #   firefox_android: "79"
   - css.properties.break-after.always
   - css.properties.break-before.always
+
+  # baseline: false
+  # support: {}
+  - css.properties.break-after.paged_context.recto
+  - css.properties.break-before.paged_context.recto

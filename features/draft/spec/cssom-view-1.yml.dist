@@ -31,7 +31,6 @@ compat_features:
   - api.Screen.width
   - api.Window.moveBy
   - api.Window.moveTo
-  - api.Window.open
   - api.Window.resizeBy
   - api.Window.resizeTo
   - api.Window.screen
@@ -230,19 +229,6 @@ compat_features:
   - api.Window.screenTop
 
   # baseline: high
-  # baseline_low_date: 2019-01-29
-  # baseline_high_date: 2021-07-29
-  # support:
-  #   chrome: "23"
-  #   chrome_android: "25"
-  #   edge: "12"
-  #   firefox: "65"
-  #   firefox_android: "65"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - api.Window.open.once_per_event
-
-  # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
@@ -342,6 +328,26 @@ compat_features:
   #   safari_ios: "13"
   - api.VisualViewport.resize_event
   - api.VisualViewport.scroll_event
+
+  # baseline: false
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "1"
+  - api.Window.open
+
+  # baseline: false
+  # support:
+  #   chrome: "23"
+  #   chrome_android: "25"
+  #   edge: "12"
+  #   firefox: "65"
+  #   firefox_android: "65"
+  #   safari: "11"
+  - api.Window.open.once_per_event
 
   # baseline: false
   # support:

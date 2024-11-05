@@ -10,8 +10,10 @@ compat_features:
   - api.OfflineAudioCompletionEvent.renderedBuffer
   - api.OfflineAudioContext
   - api.OfflineAudioContext.OfflineAudioContext
+  - api.OfflineAudioContext.OfflineAudioContext.options_parameter
   - api.OfflineAudioContext.complete_event
   - api.OfflineAudioContext.length
   - api.OfflineAudioContext.resume
   - api.OfflineAudioContext.startRendering
+  - api.OfflineAudioContext.startRendering.returns_promise
   - api.OfflineAudioContext.suspend

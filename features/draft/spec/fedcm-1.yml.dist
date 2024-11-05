@@ -13,6 +13,7 @@ compat_features:
   #   chrome: "110"
   #   chrome_android: "110"
   #   edge: "110"
+  - html.elements.iframe.allow.identity-credentials-get
   - http.headers.Permissions-Policy.identity-credentials-get
 
   # baseline: false
