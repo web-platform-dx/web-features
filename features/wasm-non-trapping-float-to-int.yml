@@ -1,5 +1,5 @@
 name: Non-trapping float-to-int conversion (WebAssembly)
-description: Floating-point to integer conversion operators which saturate instead of trapping (on positive or negative overflow, they return the maximum or minimum integer value, respectively, and do not trap.)
+description: Saturating floating-point to integer conversion operators return the maximum or minimum integer value on overflow instead of trapping.
 spec: https://github.com/WebAssembly/spec/blob/main/proposals/nontrapping-float-to-int-conversion/Overview.md
 group: webassembly
 caniuse: wasm-nontrapping-fptoint
