@@ -1,0 +1,7 @@
+name: Import and export of mutable globals (WebAssembly)
+description: Mutable global variables are importable and exportable.
+spec: https://webassembly.github.io/spec/js-api/#dom-globaldescriptor-mutable
+group: webassembly
+caniuse: wasm-mutable-globals
+compat_features:
+  - webassembly.mutable-globals

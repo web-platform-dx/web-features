@@ -1,4 +1,4 @@
-draft_date: 2024-10-23
+draft_date: 2024-11-04
 name: Scalable Vector Graphics (SVG) 2
 description: TODO
 spec: https://svgwg.org/svg2-draft/
@@ -29,11 +29,7 @@ compat_features:
   - css.properties.x
   - css.properties.y
   - svg.elements.a.ping
-  - svg.elements.cursor.systemLanguage
   - svg.elements.script.type.module
-  - svg.elements.tref.fill
-  - svg.elements.tref.fill.context-fill
-  - svg.elements.tref.systemLanguage
 
 # The following features in the spec are already part of web-features:
 # - SVG:
@@ -612,6 +608,8 @@ compat_features:
 #   - svg.global_attributes.stroke.context-stroke
 # - clip-path:
 #   - svg.elements.clipPath.systemLanguage
+# - Autofocus:
+#   - svg.global_attributes.autofocus
 # - Opacity (SVG):
 #   - svg.global_attributes.fill-opacity
 #   - svg.global_attributes.stroke-opacity

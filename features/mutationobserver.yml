@@ -1,0 +1,19 @@
+name: MutationObserver
+description: The `MutationObserver` API watches for changes to the DOM tree and calls a callback function when DOM changes occur.
+spec: https://dom.spec.whatwg.org/#interface-mutationobserver
+compat_features:
+  - api.MutationObserver
+  - api.MutationObserver.MutationObserver
+  - api.MutationObserver.disconnect
+  - api.MutationObserver.observe
+  - api.MutationObserver.takeRecords
+  - api.MutationRecord
+  - api.MutationRecord.addedNodes
+  - api.MutationRecord.attributeName
+  - api.MutationRecord.attributeNamespace
+  - api.MutationRecord.nextSibling
+  - api.MutationRecord.oldValue
+  - api.MutationRecord.previousSibling
+  - api.MutationRecord.removedNodes
+  - api.MutationRecord.target
+  - api.MutationRecord.type

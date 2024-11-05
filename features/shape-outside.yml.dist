@@ -37,5 +37,14 @@ compat_features:
   - css.properties.shape-outside.polygon
 
   # baseline: false
+  # support:
+  #   chrome: "78"
+  #   chrome_android: "78"
+  #   edge: "79"
+  #   firefox: "70"
+  #   firefox_android: "79"
+  - css.properties.shape-image-threshold.percentages
+
+  # baseline: false
   # support: {}
   - css.properties.shape-outside.path
