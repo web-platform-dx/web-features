@@ -1,0 +1,8 @@
+name: getComputedStyle()
+description: The `getComputedStyle()` global method returns an `CSSStyleDeclaration` object that represents all CSS declarations applied to a given element.
+spec: https://drafts.csswg.org/cssom-1/#extensions-to-the-window-interface
+caniuse: getcomputedstyle
+group: cssom
+compat_features:
+  - api.Window.getComputedStyle
+  - api.Window.getComputedStyle.pseudo_element_support

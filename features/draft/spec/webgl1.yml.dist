@@ -4,9 +4,13 @@
 status:
   baseline: false
   support:
-    firefox: "105"
-    firefox_android: "105"
+    chrome: "60"
+    chrome_android: "60"
+    edge: "79"
+    firefox: "79"
+    firefox_android: "79"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "60"
@@ -39,20 +43,3 @@ compat_features:
   - api.WebGLRenderingContext.vertexAttrib2fv.value_param_accepts_SharedArrayBuffer
   - api.WebGLRenderingContext.vertexAttrib3fv.value_param_accepts_SharedArrayBuffer
   - api.WebGLRenderingContext.vertexAttrib4fv.value_param_accepts_SharedArrayBuffer
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   firefox: "105"
-  #   firefox_android: "105"
-  - api.WebGLActiveInfo.worker_support
-  - api.WebGLBuffer.worker_support
-  - api.WebGLContextEvent.worker_support
-  - api.WebGLFramebuffer.worker_support
-  - api.WebGLProgram.worker_support
-  - api.WebGLRenderbuffer.worker_support
-  - api.WebGLRenderingContext.worker_support
-  - api.WebGLShader.worker_support
-  - api.WebGLShaderPrecisionFormat.worker_support
-  - api.WebGLTexture.worker_support
-  - api.WebGLUniformLocation.worker_support

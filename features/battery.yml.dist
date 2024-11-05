@@ -30,3 +30,11 @@ compat_features:
   #   edge: "79"
   - api.BatteryManager.chargingTime
   - api.BatteryManager.dischargingTime
+
+  # baseline: false
+  # support:
+  #   chrome: "103"
+  #   chrome_android: "103"
+  #   edge: "103"
+  - api.BatteryManager.secure_context_required
+  - api.Navigator.getBattery.secure_context_required

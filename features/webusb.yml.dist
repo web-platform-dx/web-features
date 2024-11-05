@@ -120,4 +120,17 @@ compat_features:
 
   # baseline: false
   # support: {}
+  - api.USB.worker_support
+  - api.USBAlternateInterface.worker_support
+  - api.USBConfiguration.worker_support
+  - api.USBConnectionEvent.worker_support
+  - api.USBDevice.worker_support
+  - api.USBEndpoint.worker_support
+  - api.USBInTransferResult.worker_support
+  - api.USBInterface.worker_support
+  - api.USBIsochronousInTransferPacket.worker_support
+  - api.USBIsochronousInTransferResult.worker_support
+  - api.USBIsochronousOutTransferPacket.worker_support
+  - api.USBIsochronousOutTransferResult.worker_support
+  - api.USBOutTransferResult.worker_support
   - api.WorkerNavigator.usb

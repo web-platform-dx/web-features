@@ -28,6 +28,21 @@ compat_features:
   - http.headers.Referrer-Policy
 
   # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "61"
+  #   chrome_android: "61"
+  #   edge: "79"
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "11.1"
+  #   safari_ios: "12"
+  - http.headers.Referrer-Policy.same-origin
+  - http.headers.Referrer-Policy.strict-origin
+  - http.headers.Referrer-Policy.strict-origin-when-cross-origin
+
+  # baseline: high
   # baseline_low_date: 2020-09-16
   # baseline_high_date: 2023-03-16
   # support:
@@ -124,3 +139,12 @@ compat_features:
   #   safari: "15"
   #   safari_ios: "15"
   - http.headers.Referrer-Policy.default_strict-origin-when-cross-origin
+
+  # baseline: false
+  # support:
+  #   chrome: "56"
+  #   chrome_android: "56"
+  #   edge: "79"
+  - http.headers.Referrer-Policy.no-referrer-when-downgrade
+  - http.headers.Referrer-Policy.origin-when-cross-origin
+  - http.headers.Referrer-Policy.unsafe-url

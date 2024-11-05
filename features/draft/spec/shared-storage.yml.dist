@@ -4,8 +4,12 @@
 status:
   baseline: false
   support:
-    chrome: "117"
-    chrome_android: "117"
-    edge: "117"
+    chrome: "126"
+    chrome_android: "126"
+    edge: "126"
 compat_features:
-  - api.WorkletSharedStorage.@@asyncIterator
+  - api.SharedStorage.createWorklet
+  - api.SharedStorage.get
+  - api.SharedStorage.run
+  - api.SharedStorage.selectURL
+  - api.SharedStorage.worklet
