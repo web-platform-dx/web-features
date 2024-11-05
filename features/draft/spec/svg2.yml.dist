@@ -80,7 +80,6 @@ compat_features:
   #   firefox_android: "79"
   #   safari: ≤13.1
   #   safari_ios: ≤13.4
-  - css.properties.dominant-baseline
   - css.properties.stop-color
   - css.properties.stop-opacity
 
@@ -92,30 +91,6 @@ compat_features:
   #   firefox: "97"
   #   firefox_android: "97"
   - css.properties.d
-
-  # baseline: false
-  # support:
-  #   chrome: ≤80
-  #   chrome_android: "80"
-  #   edge: ≤80
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
-  - css.properties.alignment-baseline
-
-  # baseline: false
-  # support:
-  #   chrome: ≤80
-  #   chrome_android: "80"
-  #   edge: "80"
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
-  - css.properties.alignment-baseline.alphabetic
-  - css.properties.alignment-baseline.baseline
-  - css.properties.alignment-baseline.central
-  - css.properties.alignment-baseline.ideographic
-  - css.properties.alignment-baseline.mathematical
-  - css.properties.alignment-baseline.middle
-  - css.properties.baseline-shift
 
   # baseline: false
   # support:
@@ -151,7 +126,3 @@ compat_features:
   # support: {}
   - api.SVGAElement.ping
   - svg.elements.a.ping
-  - svg.elements.cursor.systemLanguage
-  - svg.elements.tref.fill
-  - svg.elements.tref.fill.context-fill
-  - svg.elements.tref.systemLanguage

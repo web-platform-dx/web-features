@@ -1,4 +1,4 @@
-draft_date: 2024-10-21
+draft_date: 2024-10-30
 name: Selectors Level 4
 description: TODO
 spec: https://drafts.csswg.org/selectors-4/
@@ -55,7 +55,6 @@ compat_features:
   - css.selectors.optional
   - css.selectors.out-of-range
   - css.selectors.past
-  - css.selectors.picture-in-picture
   - css.selectors.required
   - css.selectors.root
   - css.selectors.scope
@@ -106,6 +105,8 @@ compat_features:
 # - :nth-child() of <selector>:
 #   - css.selectors.nth-child.of_syntax
 #   - css.selectors.nth-last-child.of_syntax
+# - Picture-in-picture (video):
+#   - css.selectors.picture-in-picture
 # - :placeholder-shown:
 #   - css.selectors.placeholder-shown
 #   - css.selectors.placeholder-shown.non_text_types

@@ -1,9 +1,9 @@
-draft_date: 2024-10-17
+draft_date: 2024-10-28
 name: Web MIDI API
 description: TODO
 spec: https://webaudio.github.io/web-midi-api/
 compat_features:
-  - api.Navigator.requestMIDIAccess.secure_context_required
+  - html.elements.iframe.allow.midi
 
 # The following features in the spec are already part of web-features:
 # - Web MIDI:
@@ -53,5 +53,6 @@ compat_features:
 #   - api.MIDIPort.type
 #   - api.MIDIPort.version
 #   - api.Navigator.requestMIDIAccess
+#   - api.Navigator.requestMIDIAccess.secure_context_required
 #   - api.Permissions.permission_midi
 #   - http.headers.Permissions-Policy.midi

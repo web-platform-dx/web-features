@@ -1,9 +1,13 @@
-draft_date: 2024-10-17
+draft_date: 2024-10-30
 name: Shared Storage API
 description: TODO
 spec: https://wicg.github.io/shared-storage/
 compat_features:
-  - api.WorkletSharedStorage.@@asyncIterator
+  - api.SharedStorage.createWorklet
+  - api.SharedStorage.get
+  - api.SharedStorage.run
+  - api.SharedStorage.selectURL
+  - api.SharedStorage.worklet
 
 # The following features in the spec are already part of web-features:
 # - Shared storage:
@@ -31,6 +35,7 @@ compat_features:
 #   - api.WindowSharedStorage.selectURL
 #   - api.WindowSharedStorage.worklet
 #   - api.WorkletSharedStorage
+#   - api.WorkletSharedStorage.@@asyncIterator
 #   - api.WorkletSharedStorage.entries
 #   - api.WorkletSharedStorage.get
 #   - api.WorkletSharedStorage.keys

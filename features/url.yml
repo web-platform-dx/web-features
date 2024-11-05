@@ -23,18 +23,23 @@ compat_features:
   - api.URL.toString
   - api.URL.username
   - api.URLSearchParams
+  - api.URLSearchParams.@@iterator
   - api.URLSearchParams.URLSearchParams
+  - api.URLSearchParams.URLSearchParams.USVString
+  - api.URLSearchParams.URLSearchParams.record
+  - api.URLSearchParams.URLSearchParams.sequence
   - api.URLSearchParams.append
   - api.URLSearchParams.delete
+  - api.URLSearchParams.delete.value_parameter
   - api.URLSearchParams.entries
   - api.URLSearchParams.forEach
   - api.URLSearchParams.get
   - api.URLSearchParams.getAll
   - api.URLSearchParams.has
+  - api.URLSearchParams.has.value_parameter
   - api.URLSearchParams.keys
   - api.URLSearchParams.set
   - api.URLSearchParams.size
   - api.URLSearchParams.sort
   - api.URLSearchParams.toString
   - api.URLSearchParams.values
-  - api.URLSearchParams.@@iterator
