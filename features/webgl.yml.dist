@@ -133,10 +133,8 @@ compat_features:
   - api.WebGLRenderingContext.stencilMaskSeparate
   - api.WebGLRenderingContext.stencilOp
   - api.WebGLRenderingContext.stencilOpSeparate
-  - api.WebGLRenderingContext.texImage2D
   - api.WebGLRenderingContext.texParameterf
   - api.WebGLRenderingContext.texParameteri
-  - api.WebGLRenderingContext.texSubImage2D
   - api.WebGLRenderingContext.uniform1f
   - api.WebGLRenderingContext.uniform1fv
   - api.WebGLRenderingContext.uniform1i
@@ -249,6 +247,17 @@ compat_features:
   #   safari: "10.1"
   #   safari_ios: "10.3"
   - api.HTMLCanvasElement.getContext.webgl_context.options_failIfMajorPerformanceCaveat_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "9"
+  #   chrome_android: "25"
+  #   edge: "12"
+  #   firefox: "4"
+  #   safari: "5.1"
+  #   safari_ios: "8"
+  - api.WebGLRenderingContext.texImage2D
+  - api.WebGLRenderingContext.texSubImage2D
 
   # baseline: false
   # support:
