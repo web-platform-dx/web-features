@@ -1,0 +1,12 @@
+name: Uint8Array base64 and hex conversion
+description: The `Uint8Array` class provides the `Uint8Array.fromBase64()`, `toBase64()`, and `setFromBase64()` methods for conversion to/from base64 strings, as well as the `Uint8Array.fromHex()`, `toHex()`, and `setFromHex()` methods for conversion to/from hex strings.
+spec: https://tc39.es/proposal-arraybuffer-base64/spec/
+group:
+  - typed-arrays
+compat_features:
+  - javascript.builtins.Uint8Array.fromBase64
+  - javascript.builtins.Uint8Array.fromHex
+  - javascript.builtins.Uint8Array.setFromBase64
+  - javascript.builtins.Uint8Array.setFromHex
+  - javascript.builtins.Uint8Array.toBase64
+  - javascript.builtins.Uint8Array.toHex
