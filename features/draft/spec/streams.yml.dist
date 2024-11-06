@@ -3,9 +3,7 @@
 
 status:
   baseline: false
-  support:
-    firefox: "117"
-    firefox_android: "117"
+  support: {}
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -174,9 +172,13 @@ compat_features:
   - api.ReadableStreamBYOBReader.releaseLock.reject_pending_read_request
   - api.ReadableStreamDefaultReader.releaseLock.reject_pending_read_request
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "117"
   #   firefox_android: "117"
   - api.ReadableStream.from_static
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.ReadableStreamBYOBReader.read.options_min_parameter
