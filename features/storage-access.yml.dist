@@ -41,6 +41,7 @@ compat_features:
   #   chrome: "113"
   #   chrome_android: "113"
   #   edge: "113"
+  - html.elements.iframe.allow.storage-access
   - http.headers.Permissions-Policy.storage-access
 
   # baseline: false
