@@ -1,9 +1,8 @@
-draft_date: 2024-10-28
+draft_date: 2024-11-06
 name: Fullscreen API Standard
 description: TODO
 spec: https://fullscreen.spec.whatwg.org/
 compat_features:
-  - api.Element
   - api.Element.requestFullscreen.options_navigationUI_parameter
   - css.selectors.fullscreen.all_elements
   - html.elements.iframe.allow.fullscreen
@@ -23,3 +22,5 @@ compat_features:
 #   - api.Element.requestFullscreen.returns_promise
 #   - api.ShadowRoot.fullscreenElement
 #   - css.selectors.fullscreen
+# - DOM:
+#   - api.Element

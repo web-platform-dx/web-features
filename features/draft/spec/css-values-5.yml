@@ -1,4 +1,4 @@
-draft_date: 2024-11-04
+draft_date: 2024-11-06
 name: CSS Values and Units Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-values-5/
@@ -9,23 +9,7 @@ compat_features:
   - css.types.angle.grad
   - css.types.angle.rad
   - css.types.angle.turn
-  - css.types.attr
-  - css.types.attr.fallback
-  - css.types.attr.type-or-unit
-  - css.types.attr.type-or-unit.angle
-  - css.types.attr.type-or-unit.color
-  - css.types.attr.type-or-unit.frequency
-  - css.types.attr.type-or-unit.integer
-  - css.types.attr.type-or-unit.length
-  - css.types.attr.type-or-unit.number
-  - css.types.attr.type-or-unit.percentage
-  - css.types.attr.type-or-unit.time
-  - css.types.attr.type-or-unit.url
-  - css.types.calc-size
   - css.types.calc.color_component
-  - css.types.calc.gradient_color_stops
-  - css.types.calc.nested
-  - css.types.calc.number_values
   - css.types.dimension
   - css.types.frequency
   - css.types.frequency-percentage
@@ -68,14 +52,33 @@ compat_features:
 #   - css.types.cos
 #   - css.types.sin
 #   - css.types.tan
+# - attr() (content only):
+#   - css.types.attr
+# - attr():
+#   - css.types.attr.fallback
+#   - css.types.attr.type-or-unit
+#   - css.types.attr.type-or-unit.angle
+#   - css.types.attr.type-or-unit.color
+#   - css.types.attr.type-or-unit.frequency
+#   - css.types.attr.type-or-unit.integer
+#   - css.types.attr.type-or-unit.length
+#   - css.types.attr.type-or-unit.number
+#   - css.types.attr.type-or-unit.percentage
+#   - css.types.attr.type-or-unit.time
+#   - css.types.attr.type-or-unit.url
 # - calc():
 #   - css.types.calc
+#   - css.types.calc.gradient_color_stops
+#   - css.types.calc.nested
+#   - css.types.calc.number_values
 # - calc() constants:
 #   - css.types.calc-constant
 #   - css.types.calc-constant.NaN
 #   - css.types.calc-constant.e
 #   - css.types.calc-constant.infinity
 #   - css.types.calc-constant.pi
+# - calc-size():
+#   - css.types.calc-size
 # - min(), max(), and clamp():
 #   - css.types.clamp
 #   - css.types.max

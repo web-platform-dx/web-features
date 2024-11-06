@@ -8,6 +8,13 @@ status:
     chrome_android: "61"
     edge: "79"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "79"
+  - html.elements.iframe.allow.usb
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
