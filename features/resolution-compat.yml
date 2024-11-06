@@ -1,0 +1,8 @@
+name: resolution media query (compatibility prefixes)
+description: The `-webkit-device-pixel-ratio`, `-webkit-min-device-pixel-ratio`, and `-webkit-max-device-pixel-ratio` CSS media queries are standardized compatibility alternatives to `resolution` media queries.
+spec: https://compat.spec.whatwg.org/#css-media-queries-webkit-device-pixel-ratio
+group: media-queries
+compat_features:
+  - css.at-rules.media.-webkit-device-pixel-ratio
+  - css.at-rules.media.-webkit-max-device-pixel-ratio
+  - css.at-rules.media.-webkit-min-device-pixel-ratio
