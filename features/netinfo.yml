@@ -1,5 +1,5 @@
 name: Network Information
-description: The `NetworkInformation` interface provides information about the connection a device is using to communicate with the network and provides a means for scripts to be notified if the connection type changes.
+description: The `navigator.connection` API provides information about the network connection a device is using and fires events when the connection type changes.
 spec: https://wicg.github.io/netinfo/
 compat_features:
   - api.Navigator.connection
