@@ -30,16 +30,19 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "129"
+  #   chrome_android: "129"
+  #   edge: "129"
+  #   firefox: "105"
+  #   firefox_android: "105"
+  - css.at-rules.media.prefers-color-scheme.respects-inherited-scheme
+
+  # baseline: false
+  # support:
   #   chrome: "93"
   #   chrome_android: "93"
   #   edge: "93"
   - http.headers.Sec-CH-Prefers-Color-Scheme
-
-  # baseline: false
-  # support:
-  #   firefox: "105"
-  #   firefox_android: "105"
-  - css.at-rules.media.prefers-color-scheme.respects-inherited-scheme
 
   # baseline: false
   # support: {}

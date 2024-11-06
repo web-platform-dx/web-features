@@ -1,0 +1,11 @@
+name: OES_vertex_array_object WebGL extension
+description: The `OES_vertex_array_object` extension for WebGL 1.0 contexts adds vertex array objects (VAOs) which encapsulate vertex array states. These objects keep pointers to vertex data and names for different sets of vertex data.
+spec: https://registry.khronos.org/webgl/extensions/OES_vertex_array_object/
+group: webgl-extensions
+compat_features:
+  - api.OES_vertex_array_object
+  - api.OES_vertex_array_object.bindVertexArrayOES
+  - api.OES_vertex_array_object.createVertexArrayOES
+  - api.OES_vertex_array_object.deleteVertexArrayOES
+  - api.OES_vertex_array_object.isVertexArrayOES
+  - api.WebGLVertexArrayObjectOES
