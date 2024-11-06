@@ -1,0 +1,10 @@
+name: interpolate-size
+description: The `interpolate-size` CSS property sets whether animations and transitions interpolate between a numeric value and a keyword value, such as from a fixed length to `auto` or `fit-content`.
+spec: https://drafts.csswg.org/css-values-5/#interpolate-size
+group:
+  - transitions
+  - animation
+compat_features:
+  - css.properties.interpolate-size
+  - css.properties.interpolate-size.allow-keywords
+  - css.properties.interpolate-size.numeric-only

@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2024-11-06
 name: Streams Standard
 description: TODO
 spec: https://streams.spec.whatwg.org/
@@ -17,7 +17,9 @@ compat_features:
   - api.ReadableStreamBYOBReader.cancel
   - api.ReadableStreamBYOBReader.closed
   - api.ReadableStreamBYOBReader.read
+  - api.ReadableStreamBYOBReader.read.options_min_parameter
   - api.ReadableStreamBYOBReader.releaseLock
+  - api.ReadableStreamBYOBReader.releaseLock.reject_pending_read_request
   - api.ReadableStreamBYOBRequest
   - api.ReadableStreamBYOBRequest.respond
   - api.ReadableStreamBYOBRequest.respondWithNewView
@@ -33,6 +35,7 @@ compat_features:
   - api.ReadableStreamDefaultReader.closed
   - api.ReadableStreamDefaultReader.read
   - api.ReadableStreamDefaultReader.releaseLock
+  - api.ReadableStreamDefaultReader.releaseLock.reject_pending_read_request
   - api.TextDecoderStream.readable
   - api.TextDecoderStream.writable
   - api.TextEncoderStream.readable

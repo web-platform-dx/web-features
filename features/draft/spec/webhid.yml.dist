@@ -4,7 +4,8 @@
 status:
   baseline: false
   support:
-    chrome: "100"
-    edge: "100"
+    chrome: "89"
+    chrome_android: "89"
+    edge: "89"
 compat_features:
-  - api.HIDDevice.forget
+  - html.elements.iframe.allow.hid

@@ -1,0 +1,8 @@
+name: WEBGL_lose_context WebGL extension
+description: The `WEBGL_lose_context` extension for WebGL 1.0 and 2.0 contexts simulates losing and restoring a `WebGLRenderingContext` or `WebGL2RenderingContext`.
+spec: https://registry.khronos.org/webgl/extensions/WEBGL_lose_context/
+group: webgl-extensions
+compat_features:
+  - api.WEBGL_lose_context
+  - api.WEBGL_lose_context.loseContext
+  - api.WEBGL_lose_context.restoreContext

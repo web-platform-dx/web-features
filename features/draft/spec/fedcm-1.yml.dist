@@ -13,6 +13,7 @@ compat_features:
   #   chrome: "110"
   #   chrome_android: "110"
   #   edge: "110"
+  - html.elements.iframe.allow.identity-credentials-get
   - http.headers.Permissions-Policy.identity-credentials-get
 
   # baseline: false
@@ -20,8 +21,6 @@ compat_features:
   #   chrome: "116"
   #   chrome_android: "116"
   #   edge: "116"
-  - api.CredentialsContainer.get.identity_option.context_option
-  - api.CredentialsContainer.get.identity_option.loginHint
   - api.IdentityProvider
   - api.IdentityProvider.getUserInfo_static
 

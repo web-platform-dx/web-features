@@ -1,18 +1,23 @@
-draft_date: 2024-09-23
+draft_date: 2024-10-21
 name: CSS Logical Properties and Values Level 1
 description: TODO
 spec: https://drafts.csswg.org/css-logical-1/
 compat_features:
-  - css.at-rules.page
-  - css.properties.border-color
   - css.properties.caption-side
+  - css.properties.caption-side.bottom
+  - css.properties.caption-side.top
+  - css.properties.caption-side.writing-mode_relative_values
   - css.properties.clear
   - css.properties.float
-  - css.properties.text-align
 
 # The following features in the spec are already part of web-features:
+# - Page setup:
+#   - css.at-rules.page
 # - Logical properties:
 #   - css.properties.block-size
+#   - css.properties.block-size.fit-content
+#   - css.properties.block-size.max-content
+#   - css.properties.block-size.min-content
 #   - css.properties.border-block
 #   - css.properties.border-block-color
 #   - css.properties.border-block-end
@@ -46,6 +51,9 @@ compat_features:
 #   - css.properties.float.inline-end
 #   - css.properties.float.inline-start
 #   - css.properties.inline-size
+#   - css.properties.inline-size.fit-content
+#   - css.properties.inline-size.max-content
+#   - css.properties.inline-size.min-content
 #   - css.properties.inset
 #   - css.properties.inset-block
 #   - css.properties.inset-block-end
@@ -60,15 +68,38 @@ compat_features:
 #   - css.properties.margin-inline-end
 #   - css.properties.margin-inline-start
 #   - css.properties.max-block-size
+#   - css.properties.max-block-size.fit-content
+#   - css.properties.max-block-size.max-content
+#   - css.properties.max-block-size.min-content
 #   - css.properties.max-inline-size
+#   - css.properties.max-inline-size.fit-content
+#   - css.properties.max-inline-size.max-content
+#   - css.properties.max-inline-size.min-content
 #   - css.properties.min-block-size
+#   - css.properties.min-block-size.fit-content
+#   - css.properties.min-block-size.max-content
+#   - css.properties.min-block-size.min-content
 #   - css.properties.min-inline-size
+#   - css.properties.min-inline-size.fit-content
+#   - css.properties.min-inline-size.max-content
+#   - css.properties.min-inline-size.min-content
 #   - css.properties.padding-block
 #   - css.properties.padding-block-end
 #   - css.properties.padding-block-start
 #   - css.properties.padding-inline
 #   - css.properties.padding-inline-end
 #   - css.properties.padding-inline-start
+# - fit-content():
+#   - css.properties.block-size.fit-content_function
+#   - css.properties.inline-size.fit-content_function
+#   - css.properties.max-block-size.fit-content_function
+#   - css.properties.max-inline-size.fit-content_function
+#   - css.properties.min-block-size.fit-content_function
+#   - css.properties.min-inline-size.fit-content_function
+# - Borders:
+#   - css.properties.border-color
 # - Page breaks:
 #   - css.properties.page-break-after
 #   - css.properties.page-break-before
+# - text-align:
+#   - css.properties.text-align

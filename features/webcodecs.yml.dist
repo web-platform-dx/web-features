@@ -155,6 +155,22 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "110"
+  #   chrome_android: "110"
+  #   edge: "110"
+  #   firefox: "130"
+  - api.AudioEncoder.configure.opus
+
+  # baseline: false
+  # support:
+  #   chrome: "119"
+  #   chrome_android: "119"
+  #   edge: "119"
+  #   firefox: "130"
+  - api.AudioEncoder.configure.bitrateMode
+
+  # baseline: false
+  # support:
   #   chrome: "94"
   #   chrome_android: "94"
   #   edge: "94"
@@ -178,20 +194,6 @@ compat_features:
   - api.ImageTrackList.ready
   - api.ImageTrackList.selectedIndex
   - api.ImageTrackList.selectedTrack
-
-  # baseline: false
-  # support:
-  #   chrome: "110"
-  #   chrome_android: "110"
-  #   edge: "110"
-  - api.AudioEncoder.configure.opus
-
-  # baseline: false
-  # support:
-  #   chrome: "119"
-  #   chrome_android: "119"
-  #   edge: "119"
-  - api.AudioEncoder.configure.bitrateMode
 
   # baseline: false
   # support:

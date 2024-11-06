@@ -1,0 +1,42 @@
+name: Drag and Drop
+description: "The Drag and Drop API lets users drag and drop elements and external files such as images onto web pages. Developers can customize which elements can become draggable, the type of feedback the draggable elements produce, and the droppable elements."
+spec: https://html.spec.whatwg.org/multipage/dnd.html#dnd
+caniuse: dragndrop
+# This gets closest to matching what Caniuse has.
+status:
+  compute_from: api.DataTransfer
+compat_features:
+  - api.DataTransfer
+  - api.DataTransfer.DataTransfer
+  - api.DataTransfer.clearData
+  - api.DataTransfer.dropEffect
+  - api.DataTransfer.effectAllowed
+  - api.DataTransfer.files
+  - api.DataTransfer.getData
+  - api.DataTransfer.items
+  - api.DataTransfer.setData
+  - api.DataTransfer.setDragImage
+  - api.DataTransfer.types
+  - api.DataTransferItem
+  - api.DataTransferItem.getAsFile
+  # api.DataTransferItem.getAsFileSystemHandle was in the file-system-access feature, but it can't be in both features at once. See https://github.com/web-platform-dx/web-features/issues/1173 for details
+  - api.DataTransferItem.getAsFileSystemHandle
+  - api.DataTransferItem.getAsString
+  - api.DataTransferItem.kind
+  - api.DataTransferItem.type
+  - api.DataTransferItemList
+  - api.DataTransferItemList.add
+  - api.DataTransferItemList.clear
+  - api.DataTransferItemList.length
+  - api.DataTransferItemList.remove
+  - api.DragEvent
+  - api.DragEvent.DragEvent
+  - api.DragEvent.dataTransfer
+  - api.HTMLElement.drag_event
+  - api.HTMLElement.dragend_event
+  - api.HTMLElement.dragenter_event
+  - api.HTMLElement.draggable
+  - api.HTMLElement.dragleave_event
+  - api.HTMLElement.dragover_event
+  - api.HTMLElement.dragstart_event
+  - api.HTMLElement.drop_event

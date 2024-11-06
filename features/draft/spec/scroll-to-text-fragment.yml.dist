@@ -7,12 +7,16 @@ status:
     chrome: "86"
     chrome_android: "86"
     edge: "86"
+    firefox: "131"
+    firefox_android: "131"
 compat_features:
   # baseline: false
   # support:
   #   chrome: "81"
   #   chrome_android: "81"
   #   edge: "83"
+  #   firefox: "131"
+  #   firefox_android: "131"
   - api.FragmentDirective
 
   # ⬇️ Same status as overall feature ⬇️
@@ -21,4 +25,6 @@ compat_features:
   #   chrome: "86"
   #   chrome_android: "86"
   #   edge: "86"
+  #   firefox: "131"
+  #   firefox_android: "131"
   - api.Document.fragmentDirective

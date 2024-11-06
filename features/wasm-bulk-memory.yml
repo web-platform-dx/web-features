@@ -1,0 +1,7 @@
+name: Bulk memory operations (WebAssembly)
+description: Bulk memory operations, such as `copy` and `init`, mirror the efficiency of native `memcpy` and `memmove` operations.
+spec: https://github.com/WebAssembly/spec/blob/main/proposals/bulk-memory-operations/Overview.md
+caniuse: wasm-bulk-memory
+group: webassembly
+compat_features:
+  - webassembly.bulk-memory-operations

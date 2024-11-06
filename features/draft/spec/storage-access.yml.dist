@@ -4,22 +4,8 @@
 status:
   baseline: false
   support:
-    chrome: "119"
-    chrome_android: "120"
+    chrome: "113"
+    chrome_android: "113"
     edge: "113"
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "119"
-  #   chrome_android: "120"
-  #   edge: "85"
-  #   firefox: "117"
-  #   firefox_android: "117"
-  - api.Permissions.permission_storage-access
-
-  # baseline: false
-  # support:
-  #   chrome: "113"
-  #   chrome_android: "113"
-  #   edge: "113"
-  - http.headers.Permissions-Policy.storage-access
+  - html.elements.iframe.allow.storage-access
