@@ -1,7 +1,10 @@
-name: ""
-description: ""
+name: Link selectors
+description: The `:link` CSS pseudo-class matches unvistied links, `:visited` matches visited links, and `:any-link` matches both.
 spec: https://drafts.csswg.org/selectors-4/#location
-caniuse: ""
+caniuse: css-any-link
+group: selectors
+status:
+  compute_from: css.selectors.any-link
 compat_features:
   - css.selectors.any-link
   - css.selectors.any-link.not_match_link

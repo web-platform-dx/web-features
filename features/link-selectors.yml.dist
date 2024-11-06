@@ -3,16 +3,16 @@
 
 status:
   baseline: high
-  baseline_low_date: 2021-09-20
-  baseline_high_date: 2024-03-20
+  baseline_low_date: 2020-01-15
+  baseline_high_date: 2022-07-15
   support:
     chrome: "65"
     chrome_android: "65"
     edge: "79"
-    firefox: "87"
-    firefox_android: "87"
-    safari: "15"
-    safari_ios: "15"
+    firefox: "50"
+    firefox_android: "50"
+    safari: "9"
+    safari_ios: "9"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -53,6 +53,7 @@ compat_features:
   #   safari_ios: "4.2"
   - css.selectors.visited.privacy_measures
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
@@ -80,7 +81,6 @@ compat_features:
   - css.selectors.link.not_match_link
   - css.selectors.visited.not_match_link
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2021-09-20
   # baseline_high_date: 2024-03-20

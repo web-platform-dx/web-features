@@ -1,7 +1,12 @@
-name: ""
-description: ""
+name: Form validity pseudos
+description: "The form validity CSS pseudo-classes match <form> elements that are `:valid` or `:invalid`, `:optional` or `:required`, in or out of acceptable range."
 spec: https://drafts.csswg.org/selectors-4/#ui-validity
-caniuse: ""
+caniuse:
+  - css-optional-pseudo
+  - css-in-out-of-range
+group: selectors
+status:
+  compute_from: css.selectors.optional
 compat_features:
   - css.selectors.invalid.form
   - css.selectors.valid.form
