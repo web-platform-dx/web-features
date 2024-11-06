@@ -3,9 +3,6 @@ description: The `resolution` CSS media query sets styles based on the pixel den
 spec: https://drafts.csswg.org/mediaqueries-5/#resolution
 caniuse: css-media-resolution
 group: media-queries
-# Compute from picked so prefixed rules don't impact baseline.
-status:
-  compute_from: css.types.resolution.x
 compat_features:
   - css.at-rules.media.resolution
   - css.types.resolution
@@ -13,6 +10,3 @@ compat_features:
   - css.types.resolution.dpi
   - css.types.resolution.dppx
   - css.types.resolution.x
-  - css.at-rules.media.-webkit-device-pixel-ratio
-  - css.at-rules.media.-webkit-max-device-pixel-ratio
-  - css.at-rules.media.-webkit-min-device-pixel-ratio
