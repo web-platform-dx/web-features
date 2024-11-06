@@ -1,10 +1,37 @@
-draft_date: 2024-10-30
+draft_date: 2024-11-06
 name: WebGPU
 description: TODO
 spec: https://gpuweb.github.io/gpuweb/
 compat_features:
+  - api.GPUCommandEncoder.beginComputePass.timestampWrites
+  - api.GPUCommandEncoder.beginRenderPass.depthSlice_option
+  - api.GPUCommandEncoder.beginRenderPass.timestampWrites
+  - api.GPUDevice.createComputePipeline.optional_entryPoint
+  - api.GPUDevice.createComputePipelineAsync.optional_entryPoint
+  - api.GPUDevice.createQuerySet.timestamp
+  - api.GPUDevice.createRenderPipeline.dual-source-blending
+  - api.GPUDevice.createRenderPipeline.optional_entryPoint
   - api.GPUDevice.createRenderPipeline.validates_depth_bias_for_line_and_point_topologies
+  - api.GPUDevice.createRenderPipelineAsync.dual-source-blending
+  - api.GPUDevice.createRenderPipelineAsync.optional_entryPoint
   - api.GPUDevice.createRenderPipelineAsync.validates_depth_bias_for_line_and_point_topologies
+  - api.GPUQuerySet.type.timestamp
+  - api.GPUQueue.copyExternalImageToTexture.htmlimageelement_imagedata_source
+  - api.GPUQueue.submit.validates_command_buffer_uniqueness
+  - api.GPUSupportedFeatures.feature_bgra8unorm-storage
+  - api.GPUSupportedFeatures.feature_clip-distances
+  - api.GPUSupportedFeatures.feature_depth-clip-control
+  - api.GPUSupportedFeatures.feature_depth32float-stencil8
+  - api.GPUSupportedFeatures.feature_dual-source-blending
+  - api.GPUSupportedFeatures.feature_float32-blendable
+  - api.GPUSupportedFeatures.feature_float32-filterable
+  - api.GPUSupportedFeatures.feature_indirect-first-instance
+  - api.GPUSupportedFeatures.feature_rg11b10ufloat-renderable
+  - api.GPUSupportedFeatures.feature_shader-f16
+  - api.GPUSupportedFeatures.feature_texture-compression-astc
+  - api.GPUSupportedFeatures.feature_texture-compression-bc
+  - api.GPUSupportedFeatures.feature_texture-compression-etc2
+  - api.GPUSupportedFeatures.feature_timestamp-query
 
 # The following features in the spec are already part of web-features:
 # - WebGPU:
