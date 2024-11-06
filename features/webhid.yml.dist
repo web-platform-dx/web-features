@@ -7,6 +7,13 @@ status:
     chrome: "89"
     edge: "89"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "89"
+  #   chrome_android: "89"
+  #   edge: "89"
+  - html.elements.iframe.allow.hid
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
