@@ -1,7 +1,8 @@
-draft_date: 2024-10-28
-name: Web Share API
-description: TODO
+name: Web Share
+description: The `navigator.share()` method invokes the native sharing mechanism of the underlying operating system and passes text, links, files, and other content to share targets.
 spec: https://w3c.github.io/web-share/
+status:
+  compute_from: api.Navigator.share
 compat_features:
   - api.Navigator.canShare
   - api.Navigator.canShare.data_files_parameter
