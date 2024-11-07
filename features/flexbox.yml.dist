@@ -26,12 +26,15 @@ compat_features:
   #   firefox_android: "20"
   #   safari: "9"
   #   safari_ios: "9"
+  - css.properties.align-items
+  - css.properties.align-self
   - css.properties.display.flex
   - css.properties.display.inline-flex
   - css.properties.flex
   - css.properties.flex-direction
   - css.properties.flex-grow
   - css.properties.flex-shrink
+  - css.properties.justify-content
   - css.properties.order
 
   # baseline: high
@@ -59,9 +62,13 @@ compat_features:
   #   firefox_android: "28"
   #   safari: "9"
   #   safari_ios: "9"
+  - css.properties.align-content
   - css.properties.align-content.flex_context
   - css.properties.flex-flow
   - css.properties.flex-wrap
+  - css.properties.flex-wrap.nowrap
+  - css.properties.flex-wrap.wrap
+  - css.properties.flex-wrap.wrap-reverse
 
   # baseline: high
   # baseline_low_date: 2015-09-30
@@ -147,6 +154,20 @@ compat_features:
   - css.properties.place-self.flex_context
 
   # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "79"
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - css.properties.align-content.flex_context.space-evenly
+  - css.properties.justify-content.flex_context.space-evenly
+
+  # baseline: high
   # baseline_low_date: ≤2020-01-15
   # baseline_high_date: ≤2022-07-15
   # support:
@@ -171,3 +192,172 @@ compat_features:
   #   safari: "9"
   #   safari_ios: "9"
   - css.properties.align-items.flex_context.baseline
+
+  # baseline: high
+  # baseline_low_date: ≤2020-01-15
+  # baseline_high_date: ≤2022-07-15
+  # support:
+  #   chrome: "57"
+  #   chrome_android: "57"
+  #   edge: ≤79
+  #   firefox: "45"
+  #   firefox_android: "45"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - css.properties.align-content.flex_context.baseline
+
+  # baseline: high
+  # baseline_low_date: ≤2020-01-15
+  # baseline_high_date: ≤2022-07-15
+  # support:
+  #   chrome: "59"
+  #   chrome_android: "59"
+  #   edge: ≤79
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - css.properties.align-content.flex_context.first_baseline
+  - css.properties.align-items.flex_context.first_baseline
+  - css.properties.align-self.flex_context.first_baseline
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "29"
+  #   chrome_android: "29"
+  #   edge: "12"
+  #   firefox: ≤72
+  #   firefox_android: "79"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - css.properties.flex-direction.column
+  - css.properties.flex-direction.row
+  - css.properties.flex.none
+
+  # baseline: high
+  # baseline_low_date: 2020-09-22
+  # baseline_high_date: 2023-03-22
+  # support:
+  #   chrome: "29"
+  #   chrome_android: "29"
+  #   edge: "12"
+  #   firefox: "81"
+  #   firefox_android: "81"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - css.properties.flex-direction.column-reverse
+  - css.properties.flex-direction.row-reverse
+
+  # baseline: high
+  # baseline_low_date: 2021-09-02
+  # baseline_high_date: 2024-03-02
+  # support:
+  #   chrome: "93"
+  #   chrome_android: "93"
+  #   edge: "93"
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - css.properties.justify-content.flex_context.left_right
+
+  # baseline: high
+  # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
+  # support:
+  #   chrome: "93"
+  #   chrome_android: "93"
+  #   edge: "93"
+  #   firefox: "45"
+  #   firefox_android: "45"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - css.properties.align-items.flex_context.start_end
+  - css.properties.align-self.flex_context.start_end
+  - css.properties.justify-content.flex_context.start_end
+
+  # baseline: high
+  # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "94"
+  #   firefox: "61"
+  #   firefox_android: "61"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - css.properties.flex-basis.content
+
+  # baseline: low
+  # baseline_low_date: 2022-07-20
+  # support:
+  #   chrome: "93"
+  #   chrome_android: "93"
+  #   edge: "93"
+  #   firefox: "45"
+  #   firefox_android: "45"
+  #   safari: "15.6"
+  #   safari_ios: "15.6"
+  - css.properties.align-content.flex_context.start_end
+
+  # baseline: low
+  # baseline_low_date: 2022-09-12
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "94"
+  #   firefox: "66"
+  #   firefox_android: "66"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - css.properties.flex-basis.max-content
+  - css.properties.flex-basis.min-content
+
+  # baseline: low
+  # baseline_low_date: 2022-09-12
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "94"
+  #   firefox: "94"
+  #   firefox_android: "94"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - css.properties.flex-basis.fit-content
+
+  # baseline: low
+  # baseline_low_date: 2022-12-13
+  # support:
+  #   chrome: "108"
+  #   chrome_android: "108"
+  #   edge: "108"
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "16.2"
+  #   safari_ios: "16.2"
+  - css.properties.align-items.flex_context.last_baseline
+  - css.properties.align-self.flex_context.last_baseline
+
+  # baseline: low
+  # baseline_low_date: 2024-07-29
+  # support:
+  #   chrome: "115"
+  #   chrome_android: "115"
+  #   edge: "115"
+  #   firefox: "63"
+  #   firefox_android: "63"
+  #   safari: "17.6"
+  #   safari_ios: "17.6"
+  - css.properties.align-content.flex_context.safe_unsafe
+  - css.properties.align-items.flex_context.safe_unsafe
+  - css.properties.align-self.flex_context.safe_unsafe
+  - css.properties.justify-content.flex_context.safe_unsafe
+
+  # baseline: false
+  # support:
+  #   firefox: "52"
+  #   firefox_android: "52"
+  - css.properties.align-content.flex_context.last_baseline
