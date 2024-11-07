@@ -5,10 +5,6 @@ group: payments
 status:
   compute_from: api.PaymentManager
 compat_features:
-  - api.PaymentManager
-  - api.PaymentManager.enableDelegations
-  - api.PaymentManager.instruments
-  - api.PaymentManager.userHint
   - api.CanMakePaymentEvent
   - api.CanMakePaymentEvent.CanMakePaymentEvent
   - api.CanMakePaymentEvent.methodData
@@ -16,6 +12,11 @@ compat_features:
   - api.CanMakePaymentEvent.paymentRequestOrigin
   - api.CanMakePaymentEvent.respondWith
   - api.CanMakePaymentEvent.topOrigin
+  - api.PaymentManager
+  - api.PaymentManager.enableDelegations
+  - api.PaymentManager.instruments
+  - api.PaymentManager.secure_context_required
+  - api.PaymentManager.userHint
   - api.PaymentRequestEvent
   - api.PaymentRequestEvent.PaymentRequestEvent
   - api.PaymentRequestEvent.changePaymentMethod

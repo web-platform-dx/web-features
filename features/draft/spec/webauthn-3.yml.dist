@@ -5,8 +5,33 @@ status:
   baseline: false
   support:
     firefox: "123"
-    firefox_android: "123"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2019-09-19
+  # baseline_high_date: 2022-03-19
+  # support:
+  #   chrome: "67"
+  #   chrome_android: "70"
+  #   edge: "18"
+  #   firefox: "60"
+  #   firefox_android: "60"
+  #   safari: "13"
+  #   safari_ios: "13"
+  - api.CredentialsContainer.create.publicKey_option.attestation
+  - api.CredentialsContainer.create.publicKey_option.attestation.indirect
+  - api.CredentialsContainer.create.publicKey_option.attestation.none
+
+  # baseline: false
+  # support:
+  #   chrome: "67"
+  #   chrome_android: "70"
+  #   edge: "18"
+  #   firefox: "60"
+  #   safari: "13"
+  #   safari_ios: "13"
+  - api.CredentialsContainer.create.publicKey_option.attestation.direct
+  - api.CredentialsContainer.create.publicKey_option.attestation.enterprise
+
   # baseline: false
   # support:
   #   chrome: "84"
@@ -16,7 +41,6 @@ compat_features:
   #   firefox_android: "118"
   - html.elements.iframe.allow.publickey-credentials-get
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "123"

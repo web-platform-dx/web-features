@@ -39,5 +39,7 @@ compat_features:
   - api.PublicKeyCredential.rawId
   - api.PublicKeyCredential.response
   - api.PublicKeyCredential.toJSON
+  - html.elements.iframe.allow.publickey-credentials-create
+  - html.elements.iframe.allow.publickey-credentials-get
   - http.headers.Permissions-Policy.publickey-credentials-create
   - http.headers.Permissions-Policy.publickey-credentials-get

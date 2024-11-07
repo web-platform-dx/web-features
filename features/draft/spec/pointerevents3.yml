@@ -1,9 +1,8 @@
-draft_date: 2024-10-21
+draft_date: 2024-11-06
 name: Pointer Events
 description: TODO
 spec: https://w3c.github.io/pointerevents/
 compat_features:
-  - api.Element
   - api.Element.gotpointercapture_event
   - api.Element.hasPointerCapture
   - api.Element.lostpointercapture_event
@@ -49,3 +48,7 @@ compat_features:
   - css.properties.touch-action.pan-x
   - css.properties.touch-action.pan-y
   - css.properties.touch-action.pinch-zoom
+
+# The following features in the spec are already part of web-features:
+# - DOM:
+#   - api.Element
