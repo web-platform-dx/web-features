@@ -1,14 +1,9 @@
-draft_date: 2024-10-23
+draft_date: 2024-11-07
 name: CSS Writing Modes Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-writing-modes-4/
 compat_features:
   - css.properties.direction.vertical_slider_direction
-  - css.properties.text-combine-upright
-  - css.properties.text-orientation
-  - css.properties.text-orientation.mixed
-  - css.properties.text-orientation.sideways
-  - css.properties.text-orientation.upright
 
 # The following features in the spec are already part of web-features:
 # - Layout direction override:
@@ -22,6 +17,13 @@ compat_features:
 #   - css.properties.unicode-bidi.isolate-override
 #   - css.properties.unicode-bidi.normal
 #   - css.properties.unicode-bidi.plaintext
+# - text-combine-upright:
+#   - css.properties.text-combine-upright
+# - text-orientation:
+#   - css.properties.text-orientation
+#   - css.properties.text-orientation.mixed
+#   - css.properties.text-orientation.sideways
+#   - css.properties.text-orientation.upright
 # - writing-mode:
 #   - css.properties.writing-mode
 #   - css.properties.writing-mode.horizontal-tb
