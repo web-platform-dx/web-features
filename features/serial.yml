@@ -1,7 +1,8 @@
-draft_date: 2024-10-28
-name: Web Serial API
-description: TODO
+name: Web serial
+description: The `navigator.serial` API communicates with devices over serial ports, such as microcontrollers.
 spec: https://wicg.github.io/serial/
+status:
+  compute_from: api.Navigator.serial
 compat_features:
   - api.Navigator.serial
   - api.Serial
