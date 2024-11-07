@@ -1,0 +1,6 @@
+name: Save-Data
+description: When a client enables a data-saving mode, the browser sends a `Save-Data` request header which should be used as a signal to reduce data sent to the client. If enabled, websites are encouraged to deliver alternative content, such as smaller image and video resources, or different markup and styling.
+spec: https://wicg.github.io/savedata/
+compat_features:
+  - api.NetworkInformation.saveData
+  - http.headers.Save-Data
