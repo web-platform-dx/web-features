@@ -1,0 +1,7 @@
+name: Upgrade insecure requests
+description: The `Upgrade-Insecure-Requests` HTTP header instructs a user agent to upgrade insecure resource requests to secure transport before fetching them.
+spec: https://w3c.github.io/webappsec-upgrade-insecure-requests/
+group: security
+compat_features:
+  - http.headers.Upgrade-Insecure-Requests
+  - http.headers.Content-Security-Policy.upgrade-insecure-requests
