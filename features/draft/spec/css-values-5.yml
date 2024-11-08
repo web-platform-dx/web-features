@@ -1,59 +1,26 @@
-draft_date: 2024-10-21
+draft_date: 2024-11-07
 name: CSS Values and Units Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-values-5/
 compat_features:
-  - css.properties.interpolate-size
-  - css.properties.interpolate-size.allow-keywords
-  - css.properties.interpolate-size.numeric-only
-  - css.types.angle
-  - css.types.angle-percentage
-  - css.types.angle.deg
-  - css.types.angle.grad
-  - css.types.angle.rad
-  - css.types.angle.turn
-  - css.types.attr
-  - css.types.attr.fallback
-  - css.types.attr.type-or-unit
-  - css.types.attr.type-or-unit.angle
-  - css.types.attr.type-or-unit.color
-  - css.types.attr.type-or-unit.frequency
-  - css.types.attr.type-or-unit.integer
-  - css.types.attr.type-or-unit.length
-  - css.types.attr.type-or-unit.number
-  - css.types.attr.type-or-unit.percentage
-  - css.types.attr.type-or-unit.time
-  - css.types.attr.type-or-unit.url
-  - css.types.calc-size
   - css.types.calc.color_component
-  - css.types.calc.gradient_color_stops
-  - css.types.calc.nested
-  - css.types.calc.number_values
-  - css.types.dimension
   - css.types.frequency
   - css.types.frequency-percentage
   - css.types.frequency.hz
   - css.types.frequency.khz
-  - css.types.integer
-  - css.types.length
-  - css.types.length-percentage
-  - css.types.number
-  - css.types.number.scientific_notation
-  - css.types.percentage
-  - css.types.position
-  - css.types.position.four_value_syntax
-  - css.types.position.keyword_value_syntax
-  - css.types.string
-  - css.types.string.unicode_escaped_characters
-  - css.types.time
   - css.types.time-percentage
-  - css.types.url
 
 # The following features in the spec are already part of web-features:
 # - Media queries:
 #   - css.at-rules.media.calc
 # - Content:
 #   - css.properties.content.url
+#   - css.types.string
+#   - css.types.string.unicode_escaped_characters
+# - interpolate-size:
+#   - css.properties.interpolate-size
+#   - css.properties.interpolate-size.allow-keywords
+#   - css.properties.interpolate-size.numeric-only
 # - tab-size:
 #   - css.properties.tab-size.length
 # - abs() and sign():
@@ -67,24 +34,60 @@ compat_features:
 #   - css.types.cos
 #   - css.types.sin
 #   - css.types.tan
+# - 2D transforms:
+#   - css.types.angle
+#   - css.types.angle.deg
+#   - css.types.angle.grad
+#   - css.types.angle.rad
+#   - css.types.angle.turn
+#   - css.types.angle-percentage
+#   - css.types.position
+#   - css.types.position.four_value_syntax
+#   - css.types.position.keyword_value_syntax
+# - attr() (content only):
+#   - css.types.attr
+# - attr():
+#   - css.types.attr.fallback
+#   - css.types.attr.type-or-unit
+#   - css.types.attr.type-or-unit.angle
+#   - css.types.attr.type-or-unit.color
+#   - css.types.attr.type-or-unit.frequency
+#   - css.types.attr.type-or-unit.integer
+#   - css.types.attr.type-or-unit.length
+#   - css.types.attr.type-or-unit.number
+#   - css.types.attr.type-or-unit.percentage
+#   - css.types.attr.type-or-unit.time
+#   - css.types.attr.type-or-unit.url
 # - calc():
 #   - css.types.calc
+#   - css.types.calc.gradient_color_stops
+#   - css.types.calc.nested
+#   - css.types.calc.number_values
 # - calc() constants:
 #   - css.types.calc-constant
 #   - css.types.calc-constant.NaN
 #   - css.types.calc-constant.e
 #   - css.types.calc-constant.infinity
 #   - css.types.calc-constant.pi
+# - calc-size():
+#   - css.types.calc-size
 # - min(), max(), and clamp():
 #   - css.types.clamp
 #   - css.types.max
 #   - css.types.min
+# - Width and height:
+#   - css.types.dimension
+#   - css.types.length
+#   - css.types.length-percentage
+#   - css.types.percentage
 # - pow(), sqrt(), hypot(), log(), and exp():
 #   - css.types.exp
 #   - css.types.hypot
 #   - css.types.log
 #   - css.types.pow
 #   - css.types.sqrt
+# - z-index:
+#   - css.types.integer
 # - Q unit:
 #   - css.types.length.Q
 # - cap unit:
@@ -128,9 +131,16 @@ compat_features:
 #   - css.types.mod
 #   - css.types.rem
 #   - css.types.round
+# - opacity:
+#   - css.types.number
+#   - css.types.number.scientific_notation
 # - resolution media query:
 #   - css.types.resolution
 #   - css.types.resolution.dpcm
 #   - css.types.resolution.dpi
 #   - css.types.resolution.dppx
 #   - css.types.resolution.x
+# - Animations (CSS):
+#   - css.types.time
+# - @font-face:
+#   - css.types.url

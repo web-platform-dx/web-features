@@ -1,0 +1,15 @@
+name: text-box
+description: "The `text-box` CSS property sets the spacing above and below text based on a font's typographic features. For example, `text-box: trim-both ex alphabetic` trims the top to the top of the letter x and the bottom to the bottom of most letters, without descenders."
+spec: https://drafts.csswg.org/css-inline-3/#leading-trim
+group: text
+caniuse: css-text-box-trim
+compat_features:
+  - css.properties.text-box
+  - css.properties.text-box-edge
+  - css.properties.text-box-edge.auto
+  - css.properties.text-box-trim
+  - css.properties.text-box-trim.none
+  - css.properties.text-box-trim.trim-both
+  - css.properties.text-box-trim.trim-end
+  - css.properties.text-box-trim.trim-start
+  - css.properties.text-box.normal

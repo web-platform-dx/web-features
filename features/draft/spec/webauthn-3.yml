@@ -1,10 +1,13 @@
-draft_date: 2024-10-28
+draft_date: 2024-11-07
 name: "Web Authentication: An API for accessing Public Key Credentials - Level 3"
 description: TODO
 spec: https://w3c.github.io/webauthn/
 compat_features:
-  - html.elements.iframe.allow.publickey-credentials-create
-  - html.elements.iframe.allow.publickey-credentials-get
+  - api.CredentialsContainer.create.publicKey_option.attestation
+  - api.CredentialsContainer.create.publicKey_option.attestation.direct
+  - api.CredentialsContainer.create.publicKey_option.attestation.enterprise
+  - api.CredentialsContainer.create.publicKey_option.attestation.indirect
+  - api.CredentialsContainer.create.publicKey_option.attestation.none
 
 # The following features in the spec are already part of web-features:
 # - Web authentication:
@@ -41,6 +44,8 @@ compat_features:
 #   - api.PublicKeyCredential.rawId
 #   - api.PublicKeyCredential.response
 #   - api.PublicKeyCredential.toJSON
+#   - html.elements.iframe.allow.publickey-credentials-create
+#   - html.elements.iframe.allow.publickey-credentials-get
 #   - http.headers.Permissions-Policy.publickey-credentials-create
 #   - http.headers.Permissions-Policy.publickey-credentials-get
 # - Web authentication easy public key access:

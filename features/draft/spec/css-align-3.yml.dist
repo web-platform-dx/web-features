@@ -252,9 +252,9 @@ compat_features:
   #   chrome: "122"
   #   chrome_android: "122"
   #   edge: "122"
-  - css.properties.align-self.positioned_boxes
-  - css.properties.justify-self.positioned_boxes
-  - css.properties.place-self.positioned_boxes
+  - css.properties.align-self.position_absolute_context
+  - css.properties.justify-self.position_absolute_context
+  - css.properties.place-self.position_absolute_context
 
   # baseline: false
   # support:

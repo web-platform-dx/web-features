@@ -12,7 +12,7 @@ compat_features:
   #   chrome: "89"
   #   chrome_android: "89"
   #   edge: "89"
-  - http.headers.Permissions-Policy.hid
+  - html.elements.iframe.allow.hid
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
@@ -44,6 +44,7 @@ compat_features:
   - api.HIDInputReportEvent.device
   - api.HIDInputReportEvent.reportId
   - api.Navigator.hid
+  - http.headers.Permissions-Policy.hid
 
   # baseline: false
   # support:

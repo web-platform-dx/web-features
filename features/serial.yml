@@ -1,0 +1,25 @@
+name: Web serial
+description: The `navigator.serial` API communicates with devices over serial ports, such as microcontrollers.
+spec: https://wicg.github.io/serial/
+status:
+  compute_from: api.Navigator.serial
+compat_features:
+  - api.Navigator.serial
+  - api.Serial
+  - api.Serial.getPorts
+  - api.Serial.requestPort
+  - api.SerialPort
+  - api.SerialPort.close
+  - api.SerialPort.connect_event
+  - api.SerialPort.connected
+  - api.SerialPort.disconnect_event
+  - api.SerialPort.forget
+  - api.SerialPort.getInfo
+  - api.SerialPort.getSignals
+  - api.SerialPort.open
+  - api.SerialPort.readable
+  - api.SerialPort.setSignals
+  - api.SerialPort.writable
+  - api.WorkerNavigator.serial
+  - html.elements.iframe.allow.serial
+  - http.headers.Permissions-Policy.serial
