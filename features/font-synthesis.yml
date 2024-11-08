@@ -7,7 +7,7 @@ status:
 compat_features:
   - css.properties.font-synthesis
   # The font-synthesis shorthand and longhand properties work inversely (e.g.
-  # `font-synthesis-wieght: none` affects weight, while `font-synthesis: weight`
+  # `font-synthesis-weight: none` affects weight, while `font-synthesis: weight`
   # affects all options but weight). So these keys cannot be included in
   # the longhand features.
   # See https://github.com/w3c/csswg-drafts/issues/1641.
