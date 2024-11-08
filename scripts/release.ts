@@ -164,7 +164,9 @@ function makePullBody(newVersion: string, previousVersion: string) {
   );
   const body = [
     readFileSync(bodyFile, { encoding: "utf-8" }),
+    "```markdown",
     ...relNotesLines,
+    "```",
   ].join("\n");
   return body;
 }
