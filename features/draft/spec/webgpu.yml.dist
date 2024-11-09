@@ -78,10 +78,15 @@ compat_features:
   - api.GPUDevice.createRenderPipelineAsync.dual-source-blending
   - api.GPUSupportedFeatures.feature_dual-source-blending
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "131"
+  #   chrome_android: "131"
   - api.GPUDevice.createRenderPipeline.validates_depth_bias_for_line_and_point_topologies
   - api.GPUDevice.createRenderPipelineAsync.validates_depth_bias_for_line_and_point_topologies
   - api.GPUSupportedFeatures.feature_clip-distances
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
   - api.GPUSupportedFeatures.feature_float32-blendable
