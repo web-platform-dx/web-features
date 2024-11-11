@@ -2802,6 +2802,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "39"
+  #   chrome_android: "39"
+  #   edge: "79"
+  #   firefox_android: "58"
+  #   safari: "17"
+  #   safari_ios: "11.3"
+  - html.elements.link.rel.manifest
+
+  # baseline: false
+  # support:
   #   chrome: "43"
   #   chrome_android: "43"
   #   edge: "79"
@@ -2894,15 +2904,6 @@ compat_features:
   #   safari: "8"
   #   safari_ios: "8"
   - api.CanvasRenderingContext2D.drawFocusIfNeeded.path_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "39"
-  #   chrome_android: "39"
-  #   edge: "79"
-  #   firefox_android: "58"
-  #   safari_ios: "11.3"
-  - html.elements.link.rel.manifest
 
   # baseline: false
   # support:
@@ -3638,6 +3639,12 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "131"
+  #   chrome_android: "131"
+  - http.headers.Cross-Origin-Opener-Policy.noopener-allow-popups
+
+  # baseline: false
+  # support:
   #   firefox: ≤55
   #   firefox_android: "55"
   - html.elements.th.rowspan.rowspan_zero
@@ -3654,5 +3661,4 @@ compat_features:
   - html.elements.hr.hr_in_select
   - html.elements.track.kind.descriptions
   - html.global_attributes.autocorrect
-  - http.headers.Cross-Origin-Opener-Policy.noopener-allow-popups
   - http.headers.Permissions-Policy.document-domain
