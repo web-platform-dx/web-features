@@ -5,18 +5,14 @@ status:
   baseline: false
   support: {}
 compat_features:
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
+  # baseline: false
   # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "1"
-  #   safari_ios: "1"
-  - api.Element
+  #   chrome: "62"
+  #   chrome_android: "62"
+  #   edge: "79"
+  #   firefox: "80"
+  #   firefox_android: "80"
+  - html.elements.iframe.allow.fullscreen
 
   # baseline: false
   # support:

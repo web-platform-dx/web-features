@@ -1,0 +1,6 @@
+name: Garbage collection (WebAssembly)
+description: Garbage collection tracks references for better memory management with garbage-collected languages running in WebAssmbly.
+spec: https://webassembly.github.io/gc/core/bikeshed/#garbage-collection①
+group: webassembly
+compat_features:
+  - webassembly.garbage-collection

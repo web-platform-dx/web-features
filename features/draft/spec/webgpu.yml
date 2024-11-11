@@ -1,21 +1,44 @@
-draft_date: 2024-10-21
+draft_date: 2024-11-06
 name: WebGPU
 description: TODO
 spec: https://gpuweb.github.io/gpuweb/
 compat_features:
-  - api.GPU.requestAdapter.discrete_adapter_default_ac
-  - api.GPUAdapter.requestDevice.lost_device_on_duplicate
-  - api.GPUDevice.importExternalTexture.videoframe_source
-  - api.GPUPipelineError.GPUPipelineError.message_optional
-  - api.GPUQueue.copyExternalImageToTexture.videoframe_source
-  - api.GPURenderBundleEncoder.setVertexBuffer.unset_vertex_buffer
-  - api.GPURenderPassEncoder.setVertexBuffer.unset_vertex_buffer
+  - api.GPUCommandEncoder.beginComputePass.timestampWrites
+  - api.GPUCommandEncoder.beginRenderPass.depthSlice_option
+  - api.GPUCommandEncoder.beginRenderPass.timestampWrites
+  - api.GPUDevice.createComputePipeline.optional_entryPoint
+  - api.GPUDevice.createComputePipelineAsync.optional_entryPoint
+  - api.GPUDevice.createQuerySet.timestamp
+  - api.GPUDevice.createRenderPipeline.dual-source-blending
+  - api.GPUDevice.createRenderPipeline.optional_entryPoint
+  - api.GPUDevice.createRenderPipeline.validates_depth_bias_for_line_and_point_topologies
+  - api.GPUDevice.createRenderPipelineAsync.dual-source-blending
+  - api.GPUDevice.createRenderPipelineAsync.optional_entryPoint
+  - api.GPUDevice.createRenderPipelineAsync.validates_depth_bias_for_line_and_point_topologies
+  - api.GPUQuerySet.type.timestamp
+  - api.GPUQueue.copyExternalImageToTexture.htmlimageelement_imagedata_source
+  - api.GPUQueue.submit.validates_command_buffer_uniqueness
+  - api.GPUSupportedFeatures.feature_bgra8unorm-storage
+  - api.GPUSupportedFeatures.feature_clip-distances
+  - api.GPUSupportedFeatures.feature_depth-clip-control
+  - api.GPUSupportedFeatures.feature_depth32float-stencil8
+  - api.GPUSupportedFeatures.feature_dual-source-blending
+  - api.GPUSupportedFeatures.feature_float32-blendable
+  - api.GPUSupportedFeatures.feature_float32-filterable
+  - api.GPUSupportedFeatures.feature_indirect-first-instance
+  - api.GPUSupportedFeatures.feature_rg11b10ufloat-renderable
+  - api.GPUSupportedFeatures.feature_shader-f16
+  - api.GPUSupportedFeatures.feature_texture-compression-astc
+  - api.GPUSupportedFeatures.feature_texture-compression-bc
+  - api.GPUSupportedFeatures.feature_texture-compression-etc2
+  - api.GPUSupportedFeatures.feature_timestamp-query
 
 # The following features in the spec are already part of web-features:
 # - WebGPU:
 #   - api.GPU
 #   - api.GPU.getPreferredCanvasFormat
 #   - api.GPU.requestAdapter
+#   - api.GPU.requestAdapter.discrete_adapter_default_ac
 #   - api.GPU.wgslLanguageFeatures
 #   - api.GPUAdapter
 #   - api.GPUAdapter.features
@@ -23,6 +46,7 @@ compat_features:
 #   - api.GPUAdapter.isFallbackAdapter
 #   - api.GPUAdapter.limits
 #   - api.GPUAdapter.requestDevice
+#   - api.GPUAdapter.requestDevice.lost_device_on_duplicate
 #   - api.GPUAdapterInfo
 #   - api.GPUAdapterInfo.architecture
 #   - api.GPUAdapterInfo.description
@@ -104,6 +128,7 @@ compat_features:
 #   - api.GPUDevice.destroy
 #   - api.GPUDevice.features
 #   - api.GPUDevice.importExternalTexture
+#   - api.GPUDevice.importExternalTexture.videoframe_source
 #   - api.GPUDevice.label
 #   - api.GPUDevice.limits
 #   - api.GPUDevice.lost
@@ -124,6 +149,7 @@ compat_features:
 #   - api.GPUOutOfMemoryError.GPUOutOfMemoryError
 #   - api.GPUPipelineError
 #   - api.GPUPipelineError.GPUPipelineError
+#   - api.GPUPipelineError.GPUPipelineError.message_optional
 #   - api.GPUPipelineError.reason
 #   - api.GPUPipelineLayout
 #   - api.GPUPipelineLayout.label
@@ -134,6 +160,7 @@ compat_features:
 #   - api.GPUQuerySet.type
 #   - api.GPUQueue
 #   - api.GPUQueue.copyExternalImageToTexture
+#   - api.GPUQueue.copyExternalImageToTexture.videoframe_source
 #   - api.GPUQueue.label
 #   - api.GPUQueue.onSubmittedWorkDone
 #   - api.GPUQueue.submit
@@ -155,6 +182,7 @@ compat_features:
 #   - api.GPURenderBundleEncoder.setIndexBuffer
 #   - api.GPURenderBundleEncoder.setPipeline
 #   - api.GPURenderBundleEncoder.setVertexBuffer
+#   - api.GPURenderBundleEncoder.setVertexBuffer.unset_vertex_buffer
 #   - api.GPURenderPassEncoder
 #   - api.GPURenderPassEncoder.beginOcclusionQuery
 #   - api.GPURenderPassEncoder.draw
@@ -175,6 +203,7 @@ compat_features:
 #   - api.GPURenderPassEncoder.setScissorRect
 #   - api.GPURenderPassEncoder.setStencilReference
 #   - api.GPURenderPassEncoder.setVertexBuffer
+#   - api.GPURenderPassEncoder.setVertexBuffer.unset_vertex_buffer
 #   - api.GPURenderPassEncoder.setViewport
 #   - api.GPURenderPipeline
 #   - api.GPURenderPipeline.getBindGroupLayout
