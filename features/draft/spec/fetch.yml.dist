@@ -144,8 +144,12 @@ compat_features:
   #   firefox_android: "115"
   - http.headers.Sec-Purpose.prefetch
 
+  # baseline: false
+  # support:
+  #   chrome: "131"
+  - api.Request.duplex
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - api.Request.duplex
   - http.headers.Access-Control-Allow-Headers.authorization_not_covered_by_wildcard

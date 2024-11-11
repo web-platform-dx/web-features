@@ -3,49 +3,11 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "123"
+    chrome_android: "123"
+    edge: "123"
 compat_features:
-  # baseline: high
-  # baseline_low_date: 2015-09-30
-  # baseline_high_date: 2018-03-30
-  # support:
-  #   chrome: "29"
-  #   chrome_android: "29"
-  #   edge: "12"
-  #   firefox: "20"
-  #   firefox_android: "20"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - css.properties.align-items
-  - css.properties.align-self
-  - css.properties.justify-content
-
-  # baseline: high
-  # baseline_low_date: 2015-09-30
-  # baseline_high_date: 2018-03-30
-  # support:
-  #   chrome: "29"
-  #   chrome_android: "29"
-  #   edge: "12"
-  #   firefox: "28"
-  #   firefox_android: "28"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - css.properties.align-content
-
-  # baseline: high
-  # baseline_low_date: 2016-07-27
-  # baseline_high_date: 2019-01-27
-  # support:
-  #   chrome: "52"
-  #   chrome_android: "52"
-  #   edge: "12"
-  #   firefox: "20"
-  #   firefox_android: "20"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - css.properties.justify-items
-
   # baseline: high
   # baseline_low_date: 2017-10-17
   # baseline_high_date: 2020-04-17
@@ -113,48 +75,6 @@ compat_features:
   - css.properties.place-self
 
   # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "60"
-  #   chrome_android: "60"
-  #   edge: "79"
-  #   firefox: "52"
-  #   firefox_android: "52"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - css.properties.align-content.flex_context.space-evenly
-  - css.properties.justify-content.flex_context.space-evenly
-
-  # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
-  # support:
-  #   chrome: "57"
-  #   chrome_android: "57"
-  #   edge: ≤79
-  #   firefox: "45"
-  #   firefox_android: "45"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - css.properties.align-content.flex_context.baseline
-
-  # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
-  # support:
-  #   chrome: "59"
-  #   chrome_android: "59"
-  #   edge: ≤79
-  #   firefox: "52"
-  #   firefox_android: "52"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - css.properties.align-content.flex_context.first_baseline
-  - css.properties.align-items.flex_context.first_baseline
-  - css.properties.align-self.flex_context.first_baseline
-
-  # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
   # support:
@@ -166,59 +86,6 @@ compat_features:
   #   safari: "14.1"
   #   safari_ios: "14.5"
   - css.properties.gap.multicol_context
-
-  # baseline: high
-  # baseline_low_date: 2021-09-02
-  # baseline_high_date: 2024-03-02
-  # support:
-  #   chrome: "93"
-  #   chrome_android: "93"
-  #   edge: "93"
-  #   firefox: "52"
-  #   firefox_android: "52"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - css.properties.justify-content.flex_context.left_right
-
-  # baseline: high
-  # baseline_low_date: 2022-03-14
-  # baseline_high_date: 2024-09-14
-  # support:
-  #   chrome: "93"
-  #   chrome_android: "93"
-  #   edge: "93"
-  #   firefox: "45"
-  #   firefox_android: "45"
-  #   safari: "15.4"
-  #   safari_ios: "15.4"
-  - css.properties.align-items.flex_context.start_end
-  - css.properties.align-self.flex_context.start_end
-  - css.properties.justify-content.flex_context.start_end
-
-  # baseline: low
-  # baseline_low_date: 2022-07-20
-  # support:
-  #   chrome: "93"
-  #   chrome_android: "93"
-  #   edge: "93"
-  #   firefox: "45"
-  #   firefox_android: "45"
-  #   safari: "15.6"
-  #   safari_ios: "15.6"
-  - css.properties.align-content.flex_context.start_end
-
-  # baseline: low
-  # baseline_low_date: 2022-12-13
-  # support:
-  #   chrome: "108"
-  #   chrome_android: "108"
-  #   edge: "108"
-  #   firefox: "52"
-  #   firefox_android: "52"
-  #   safari: "16.2"
-  #   safari_ios: "16.2"
-  - css.properties.align-items.flex_context.last_baseline
-  - css.properties.align-self.flex_context.last_baseline
 
   # baseline: low
   # baseline_low_date: 2024-04-16
@@ -232,21 +99,6 @@ compat_features:
   #   safari_ios: "17.4"
   - css.properties.align-content.block_context
 
-  # baseline: low
-  # baseline_low_date: 2024-07-29
-  # support:
-  #   chrome: "115"
-  #   chrome_android: "115"
-  #   edge: "115"
-  #   firefox: "63"
-  #   firefox_android: "63"
-  #   safari: "17.6"
-  #   safari_ios: "17.6"
-  - css.properties.align-content.flex_context.safe_unsafe
-  - css.properties.align-items.flex_context.safe_unsafe
-  - css.properties.align-self.flex_context.safe_unsafe
-  - css.properties.justify-content.flex_context.safe_unsafe
-
   # baseline: false
   # support:
   #   chrome: "122"
@@ -255,9 +107,3 @@ compat_features:
   - css.properties.align-self.position_absolute_context
   - css.properties.justify-self.position_absolute_context
   - css.properties.place-self.position_absolute_context
-
-  # baseline: false
-  # support:
-  #   firefox: "52"
-  #   firefox_android: "52"
-  - css.properties.align-content.flex_context.last_baseline
