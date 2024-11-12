@@ -359,6 +359,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "49"
+  #   chrome_android: "49"
+  #   edge: "79"
+  #   firefox: "32"
+  #   firefox_android: "32"
+  - css.properties.flex-grow.less_than_zero_animate
+
+  # baseline: false
+  # support:
   #   firefox: "52"
   #   firefox_android: "52"
   - css.properties.align-content.flex_context.last_baseline
