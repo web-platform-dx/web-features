@@ -39,6 +39,7 @@ compat_features:
   #   safari: "9"
   #   safari_ios: "9"
   - css.properties.column-width
+  - css.properties.column-width.auto
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: high
@@ -72,6 +73,19 @@ compat_features:
   #   safari: "10"
   #   safari_ios: "10"
   - css.properties.column-gap.multicol_context
+
+  # baseline: high
+  # baseline_low_date: 2021-04-26
+  # baseline_high_date: 2023-10-26
+  # support:
+  #   chrome: "66"
+  #   chrome_android: "66"
+  #   edge: "16"
+  #   firefox: "61"
+  #   firefox_android: "61"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - css.properties.gap.multicol_context
 
   # baseline: false
   # support:

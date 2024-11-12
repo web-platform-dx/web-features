@@ -138,6 +138,14 @@ compat_features:
   #   firefox_android: "118"
   - css.properties.font-synthesis.position
 
+  # baseline: false
+  # support:
+  #   chrome: "131"
+  - css.properties.font-variant-emoji.emoji
+  - css.properties.font-variant-emoji.normal
+  - css.properties.font-variant-emoji.text
+  - css.properties.font-variant-emoji.unicode
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}

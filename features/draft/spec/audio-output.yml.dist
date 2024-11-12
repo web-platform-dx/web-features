@@ -3,7 +3,8 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "116"
 compat_features:
   # baseline: false
   # support:
@@ -13,12 +14,9 @@ compat_features:
   - api.HTMLMediaElement.setSinkId
   - api.HTMLMediaElement.sinkId
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "116"
   - api.MediaDevices.selectAudioOutput
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - http.headers.Permissions-Policy.speaker-selection
+  - html.elements.iframe.allow.speaker-selection

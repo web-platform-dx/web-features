@@ -1,4 +1,30 @@
 name: Intersection observer
 description: The Intersection Observer API asynchronously observes changes in the intersection of a target element with an ancestor element or with a top-level document's viewport.
 spec: https://w3c.github.io/IntersectionObserver/
+status:
+  compute_from: api.IntersectionObserverEntry.isIntersecting
 caniuse: intersectionobserver
+compat_features:
+  - api.IntersectionObserver
+  - api.IntersectionObserver.IntersectionObserver
+  - api.IntersectionObserver.IntersectionObserver.options_root_parameter_Document
+  - api.IntersectionObserver.delay
+  - api.IntersectionObserver.disconnect
+  - api.IntersectionObserver.observe
+  - api.IntersectionObserver.root
+  - api.IntersectionObserver.rootMargin
+  - api.IntersectionObserver.scrollMargin
+  - api.IntersectionObserver.takeRecords
+  - api.IntersectionObserver.thresholds
+  - api.IntersectionObserver.trackVisibility
+  - api.IntersectionObserver.unobserve
+  - api.IntersectionObserverEntry
+  - api.IntersectionObserverEntry.IntersectionObserverEntry
+  - api.IntersectionObserverEntry.boundingClientRect
+  - api.IntersectionObserverEntry.intersectionRatio
+  - api.IntersectionObserverEntry.intersectionRect
+  - api.IntersectionObserverEntry.isIntersecting
+  - api.IntersectionObserverEntry.isVisible
+  - api.IntersectionObserverEntry.rootBounds
+  - api.IntersectionObserverEntry.target
+  - api.IntersectionObserverEntry.time

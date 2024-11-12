@@ -110,6 +110,7 @@ compat_features:
   - api.SVGFEFuncGElement
   - api.SVGFEFuncRElement
   - api.SVGFEGaussianBlurElement
+  - api.SVGFEGaussianBlurElement.edgeMode
   - api.SVGFEGaussianBlurElement.height
   - api.SVGFEGaussianBlurElement.in1
   - api.SVGFEGaussianBlurElement.result
@@ -120,6 +121,7 @@ compat_features:
   - api.SVGFEGaussianBlurElement.x
   - api.SVGFEGaussianBlurElement.y
   - api.SVGFEImageElement
+  - api.SVGFEImageElement.crossOrigin
   - api.SVGFEImageElement.height
   - api.SVGFEImageElement.href
   - api.SVGFEImageElement.preserveAspectRatio
@@ -161,6 +163,8 @@ compat_features:
   - api.SVGFESpecularLightingElement
   - api.SVGFESpecularLightingElement.height
   - api.SVGFESpecularLightingElement.in1
+  - api.SVGFESpecularLightingElement.kernelUnitLengthX
+  - api.SVGFESpecularLightingElement.kernelUnitLengthY
   - api.SVGFESpecularLightingElement.result
   - api.SVGFESpecularLightingElement.specularConstant
   - api.SVGFESpecularLightingElement.specularExponent
@@ -204,6 +208,14 @@ compat_features:
   - api.SVGFilterElement.width
   - api.SVGFilterElement.x
   - api.SVGFilterElement.y
+  - css.properties.color-interpolation-filters
+  - css.properties.color-interpolation-filters.auto
+  - css.properties.color-interpolation-filters.linearRGB
+  - css.properties.color-interpolation-filters.sRGB
+  - css.properties.filter.svg_elements
+  - css.properties.flood-color
+  - css.properties.flood-opacity
+  - css.properties.lighting-color
   - svg.elements.feBlend
   - svg.elements.feBlend.in
   - svg.elements.feBlend.in2
@@ -261,9 +273,11 @@ compat_features:
   - svg.elements.feFuncG
   - svg.elements.feFuncR
   - svg.elements.feGaussianBlur
+  - svg.elements.feGaussianBlur.edgeMode
   - svg.elements.feGaussianBlur.in
   - svg.elements.feGaussianBlur.stdDeviation
   - svg.elements.feImage
+  - svg.elements.feImage.crossorigin
   - svg.elements.feImage.href
   - svg.elements.feImage.preserveAspectRatio
   - svg.elements.feMerge
@@ -283,6 +297,7 @@ compat_features:
   - svg.elements.fePointLight.z
   - svg.elements.feSpecularLighting
   - svg.elements.feSpecularLighting.in
+  - svg.elements.feSpecularLighting.kernelUnitLength
   - svg.elements.feSpecularLighting.specularConstant
   - svg.elements.feSpecularLighting.specularExponent
   - svg.elements.feSpecularLighting.surfaceScale
@@ -310,14 +325,6 @@ compat_features:
   - svg.elements.filter.width
   - svg.elements.filter.x
   - svg.elements.filter.y
-  - api.SVGFESpecularLightingElement.kernelUnitLengthX
-  - api.SVGFESpecularLightingElement.kernelUnitLengthY
-  - svg.elements.feSpecularLighting.kernelUnitLength
-  - api.SVGFEGaussianBlurElement.edgeMode
-  - svg.elements.feGaussianBlur.edgeMode
-  - api.SVGFEImageElement.crossOrigin
-  - svg.elements.feImage.crossorigin
   - svg.global_attributes.filter
-  - css.properties.filter.svg_elements
   - svg.global_attributes.flood-color
   - svg.global_attributes.flood-opacity
