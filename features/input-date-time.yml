@@ -10,7 +10,6 @@ caniuse: input-datetime
 compat_features:
   - html.elements.input.type_date
   - html.elements.input.type_datetime-local
-  # Excluded because of a non-real value
-  # - html.elements.input.type_month
+  - html.elements.input.type_month
   - html.elements.input.type_time
   - html.elements.input.type_week
