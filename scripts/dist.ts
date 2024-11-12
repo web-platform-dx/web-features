@@ -201,7 +201,7 @@ function toDist(sourcePath: string): YAML.Document {
   if (source.compat_features) {
     source.compat_features.sort();
     if (isDeepStrictEqual(source.compat_features, taggedCompatFeatures)) {
-      logger.warn(
+      logger.silly(
         `${id}: compat_features override matches tags in @mdn/browser-compat-data. Consider deleting the compat_features override.`,
       );
     }
@@ -234,9 +234,10 @@ function toDist(sourcePath: string): YAML.Document {
   });
 
   if (computedStatus.discouraged) {
-    logger.warn(
+    logger.error(
       `${id}: contains at least one deprecated compat feature and can never be Baseline. Was this intentional?`,
     );
+    exitStatus = 1;
   }
 
   computedStatus = JSON.parse(computedStatus.toJSON());
