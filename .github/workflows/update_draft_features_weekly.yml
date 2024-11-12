@@ -29,6 +29,8 @@ jobs:
           body: |
             This is an auto-generated PR with draft features by spec updates.
 
+            To let the tests run, close this PR then immediately reopen it.
+
             See https://github.com/web-platform-dx/web-features/blob/main/.github/workflows/update_draft_features_weekly.yml for details.
           labels: |
             generated

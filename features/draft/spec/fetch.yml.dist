@@ -106,6 +106,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "66"
+  #   chrome_android: "66"
+  #   edge: "15"
+  #   safari: "13"
+  #   safari_ios: "13"
+  - api.Request.Request.init_keepalive_parameter
+
+  # baseline: false
+  # support:
   #   chrome: "110"
   #   chrome_android: "110"
   #   edge: "110"
@@ -134,6 +143,11 @@ compat_features:
   #   firefox: "115"
   #   firefox_android: "115"
   - http.headers.Sec-Purpose.prefetch
+
+  # baseline: false
+  # support:
+  #   chrome: "131"
+  - api.Request.duplex
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false

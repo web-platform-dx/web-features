@@ -1,0 +1,6 @@
+name: Tail call optimization (WebAssembly)
+description: Tail call optimization discards a caller frame and replaces the call with a jump instruction.
+spec: https://github.com/WebAssembly/tail-call/blob/main/proposals/tail-call/Overview.md
+group: webassembly
+compat_features:
+  - webassembly.tail-calls

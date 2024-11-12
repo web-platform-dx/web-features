@@ -1,0 +1,7 @@
+name: BigInt to i64 conversion (WebAssembly)
+description: Integer values pass bidirectionally between JavaScript and WebAssembly, converted to i64 values in WebAssembly or BigInt values in JavaScript.
+spec: https://webassembly.github.io/spec/js-api/#ref-for-syntax-numtype①⓪
+group: webassembly
+caniuse: wasm-bigint
+compat_features:
+  - webassembly.BigInt-to-i64-integration

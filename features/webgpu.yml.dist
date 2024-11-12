@@ -310,5 +310,7 @@ compat_features:
   - api.WGSLLanguageFeatures.values
 
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "131"
+  #   chrome_android: "131"
   - api.GPUCanvasContext.getConfiguration

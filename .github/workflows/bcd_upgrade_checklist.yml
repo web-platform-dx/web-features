@@ -1,0 +1,36 @@
+name: BCD upgrade
+
+on:
+  pull_request:
+    types: [opened]
+permissions:
+  pull-requests: write
+jobs:
+  post-comment:
+    name: "Post checklist"
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    steps:
+      - name: Fetch Dependabot metadata
+        id: dependabot-metadata
+        continue-on-error: true
+        uses: dependabot/fetch-metadata@dbb049abf0d677abbd7f7eee0375145b417fdd34 #v2.2.0
+
+      - if: ${{ contains(steps.dependabot-metadata.outputs.dependency-names, '@mdn/browser-compat-data') }}
+        continue-on-error: true
+        uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 #v4.0.0
+        with:
+          issue-number: ${{ github.event.number }}
+          body: |
+            Complete this checklist for every `@mdn/browser-compat-data` upgrade PR.
+
+            - [ ] Check out this branch locally.
+            - [ ] If any keys were removed in the release, delete them from `.yml` files and commit your changes.
+            - [ ] Run `npm install && npm run dist && npm test && git commit --all --message="Refresh dist" && git push`.
+            - [ ] Review the diff. Watch out for Baseline regressions; if applicable, add a comment (see [#1971](/web-platform-dx/web-features/issues/1971)).
+            - [ ] Merge this PR.
+
+            After merging, do these steps:
+
+            - [ ] Start a PR to [publish the next web-features release](https://github.com/web-platform-dx/web-features/blob/main/docs/publishing.md#regular-releases).
+            - [ ] [Trigger a drafts update workflow run](https://github.com/web-platform-dx/web-features/actions/workflows/update_draft_features_weekly.yml).

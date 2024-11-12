@@ -1,0 +1,12 @@
+name: Language
+description: "The `navigator.language` read-only property returns a string representing the preferred language of the user, usually the language of the browser UI. The `navigator.languages` read-only property returns an array of strings representing the user's preferred languages."
+spec: https://html.spec.whatwg.org/multipage/system-state.html#language-preferences
+status:
+  compute_from: api.Navigator.language
+compat_features:
+  - api.Navigator.language
+  - api.Navigator.languages
+  - api.Window.languagechange_event
+  - api.WorkerGlobalScope.languagechange_event
+  - api.WorkerNavigator.language
+  - api.WorkerNavigator.languages

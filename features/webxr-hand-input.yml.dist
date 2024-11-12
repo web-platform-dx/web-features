@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "131"
+    chrome_android: "131"
 compat_features:
   - api.XRFrame.fillJointRadii
   - api.XRFrame.fillPoses
