@@ -11,6 +11,13 @@ compat_features:
   - api.NavigatorUAData.platform
   - api.NavigatorUAData.toJSON
   - api.WorkerNavigator.userAgentData
+  - http.headers.Accept-CH.Sec-CH-UA
+  - http.headers.Accept-CH.Sec-CH-UA-Arch
+  - http.headers.Accept-CH.Sec-CH-UA-Full-Version
+  - http.headers.Accept-CH.Sec-CH-UA-Mobile
+  - http.headers.Accept-CH.Sec-CH-UA-Model
+  - http.headers.Accept-CH.Sec-CH-UA-Platform
+  - http.headers.Accept-CH.Sec-CH-UA-Platform-Version
   - http.headers.Sec-CH-UA
   - http.headers.Sec-CH-UA-Arch
   - http.headers.Sec-CH-UA-Bitness
