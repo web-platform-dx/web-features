@@ -78,6 +78,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "79"
+  #   firefox: "74"
+  #   firefox_android: "79"
+  - html.elements.iframe.allow.payment
+
+  # baseline: false
+  # support:
   #   chrome: "76"
   #   chrome_android: "76"
   #   edge: "79"
@@ -120,6 +129,13 @@ compat_features:
   #   chrome_android: "95"
   #   edge: "95"
   - api.PaymentRequest.PaymentRequest.secure_payment_confirmation_method
+
+  # baseline: false
+  # support:
+  #   chrome: "122"
+  #   chrome_android: "122"
+  #   edge: "122"
+  - api.PaymentRequestUpdateEvent.secure_context_required
 
   # baseline: false
   # support:
