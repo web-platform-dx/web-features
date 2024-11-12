@@ -1,4 +1,4 @@
-draft_date: 2024-10-21
+draft_date: 2024-11-06
 name: Media Source Extensions™
 description: TODO
 spec: https://w3c.github.io/media-source/
@@ -8,6 +8,7 @@ compat_features:
   - api.BufferedChangeEvent.BufferedChangeEvent
   - api.BufferedChangeEvent.addedRanges
   - api.BufferedChangeEvent.removedRanges
+  - api.HTMLMediaElement.srcObject
   - api.MediaSource.MediaSource
   - api.MediaSource.activeSourceBuffers
   - api.MediaSource.addSourceBuffer

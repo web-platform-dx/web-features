@@ -41,6 +41,9 @@ compat_features:
   - api.CharacterData.length
   - api.CharacterData.replaceData
   - api.CharacterData.substringData
+  - api.DOMException
+  - api.DOMException.message
+  - api.DOMException.name
   - api.DOMImplementation
   - api.DOMImplementation.createDocument
   - api.DOMImplementation.createDocumentType
@@ -1142,6 +1145,19 @@ compat_features:
   #   safari: "12"
   #   safari_ios: "12"
   - api.Element.toggleAttribute
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "46"
+  #   chrome_android: "46"
+  #   edge: "79"
+  #   firefox: "37"
+  #   firefox_android: "37"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.DOMException.DOMException
 
   # baseline: high
   # baseline_low_date: 2020-01-15
