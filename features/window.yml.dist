@@ -34,7 +34,6 @@ compat_features:
   - api.Window.frames
   - api.Window.length
   - api.Window.name
-  - api.Window.open
   - api.Window.opener
 
   # baseline: high
@@ -133,6 +132,16 @@ compat_features:
   #   safari_ios: "11.3"
   - api.Window.rejectionhandled_event
   - api.Window.unhandledrejection_event
+
+  # baseline: false
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "1"
+  - api.Window.open
 
   # baseline: false
   # support:
