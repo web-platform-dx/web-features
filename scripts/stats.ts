@@ -41,3 +41,16 @@ const stats = {
 };
 
 console.log(JSON.stringify(stats, undefined, 2));
+
+const todoKeys = [...new Compat().walk()]
+  .filter((f) => !f.id.startsWith("webextensions") && !f.deprecated)
+  .map((f) => f.id);
+
+const doneKeys = Object.values(features).flatMap(
+  (f) => f.compat_features ?? [],
+);
+
+let symDifference = todoKeys
+  .filter((x) => !doneKeys.includes(x))
+  .concat(doneKeys.filter((x) => !todoKeys.includes(x)));
+console.dir(symDifference, { maxArrayLength: null });
