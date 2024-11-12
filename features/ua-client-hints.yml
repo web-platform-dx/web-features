@@ -1,5 +1,5 @@
 name: User agent client hints
-description: User agent (UA) client hint headers allow a server to vary responses based on the user agent (browser), operating system, and device.
+description: The `Sec-CH-UA` HTTP request header and the `navigator.userAgentData` API expose browser and platform information used to vary responses and application logic. User agent client hints are similar to user agent strings but more privacy-preserving and more robust.
 spec: https://wicg.github.io/ua-client-hints/
 compat_features:
   - api.Navigator.userAgentData
