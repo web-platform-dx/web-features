@@ -3,3 +3,20 @@ description: The `border-image` CSS property draws an image around an element.
 spec: https://drafts.csswg.org/css-backgrounds-3/#border-images
 caniuse: border-image
 group: borders-outlines
+status:
+  compute_from: css.properties.border-image-repeat.space
+compat_features:
+  - css.properties.border-image
+  - css.properties.border-image-outset
+  - css.properties.border-image-repeat
+  - css.properties.border-image-repeat.repeat
+  - css.properties.border-image-repeat.round
+  - css.properties.border-image-repeat.space
+  - css.properties.border-image-repeat.stretch
+  - css.properties.border-image-slice
+  - css.properties.border-image-source
+  - css.properties.border-image-width
+  - css.properties.border-image-width.auto
+  - css.properties.border-image.fill
+  - css.properties.border-image.gradient
+  - css.properties.border-image.optional_border_image_slice

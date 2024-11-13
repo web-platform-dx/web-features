@@ -125,11 +125,6 @@ async function main() {
   // Iterate BCD and group compat features by spec.
   const specToCompatFeatures = new Map<WebSpecsSpec, Set<string>>();
   for (const feature of compat.walk()) {
-    // Skip deprecated and non-standard features.
-    if (feature.deprecated || !feature.standard_track) {
-      continue;
-    }
-
     // A few null values remain in BCD. They are being removed in
     // https://github.com/mdn/browser-compat-data/pull/23774.
     // TODO: Remove this workaround when BCD is free or true/null values.
@@ -167,11 +162,15 @@ async function main() {
         if (!selectedKeys) console.warn(`${url} not matched to any spec`);
         continue;
       }
-      const keys = specToCompatFeatures.get(spec);
-      if (keys) {
+
+      let keys = specToCompatFeatures.get(spec);
+      if (!keys) {
+        keys = new Set([]);
+        specToCompatFeatures.set(spec, keys);
+      }
+
+      if (!feature.deprecated && feature.standard_track) {
         keys.add(feature.id);
-      } else {
-        specToCompatFeatures.set(spec, new Set([feature.id]));
       }
     }
   }
