@@ -1,5 +1,5 @@
 name: Form validity pseudo-classes
-description: "The form validity CSS pseudo-classes match <form> elements that are `:valid` or `:invalid`, `:optional` or `:required`, or in or out of an acceptable range."
+description: "The form validity CSS pseudo-classes match `<form>` elements based on the constraints of a form field, such as validity (`:valid`, `:invalid`, `:in-range`, `:out-of-range`) and necessity (`:optional` or `:required`)."
 spec: https://drafts.csswg.org/selectors-4/#ui-validity
 caniuse:
   - css-optional-pseudo
