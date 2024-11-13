@@ -7,10 +7,11 @@ import { fileURLToPath } from "node:url";
 import Path from "path";
 import webSpecs from "web-specs" assert { type: "json" };
 import winston from "winston";
-import { Document } from "yaml";
+import { Document, parse } from "yaml";
 import yargs from "yargs";
 
 import { features } from "../index.js";
+import { FeatureData } from "../types.js";
 
 type WebSpecsSpec = (typeof webSpecs)[number];
 
@@ -269,6 +270,27 @@ async function main() {
 
     await fs.writeFile(destination, proposedFile);
     logger.info(`${destination}: updated`);
+  }
+
+  // Clean up completed specs, even if they've been superseded
+  const assignedKeys = Object.values(features).flatMap(
+    (f) => f.compat_features ?? [],
+  );
+  for (const spec of webSpecs) {
+    const id = formatIdentifier(spec.shortname);
+    const destination = `features/draft/spec/${id}.yml`;
+
+    if (!fsSync.existsSync(destination)) {
+      continue;
+    }
+
+    const source = fsSync.readFileSync(destination, { encoding: "utf-8" });
+    const { compat_features } = parse(source) as FeatureData;
+
+    if ((compat_features ?? []).every((key) => assignedKeys.includes(key))) {
+      fsSync.rmSync(destination);
+      logger.warn(`${destination}: deleted (all keys accounted for)`);
+    }
   }
 }
 
