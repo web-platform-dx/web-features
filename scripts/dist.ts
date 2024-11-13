@@ -234,10 +234,18 @@ function toDist(sourcePath: string): YAML.Document {
   });
 
   if (computedStatus.discouraged) {
-    logger.error(
-      `${id}: contains at least one deprecated compat feature and can never be Baseline. Was this intentional?`,
-    );
-    exitStatus = 1;
+    const isDraft: boolean = source.draft_date ?? false;
+
+    if (!source.draft_date) {
+      logger.error(
+        `${id}: contains at least one deprecated compat feature and can never be Baseline. This is forbidden for published features.`,
+      );
+      exitStatus = 1;
+    } else {
+      logger.warn(
+        `${id}: draft contains at least one deprecated compat feature and can never be Baseline. Was this intentional?`,
+      );
+    }
   }
 
   computedStatus = JSON.parse(computedStatus.toJSON());
