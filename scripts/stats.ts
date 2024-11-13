@@ -44,7 +44,7 @@ export function stats(detailed: boolean = false) {
   const result = {
     features: featureCount,
     compatKeys: doneKeys.length,
-    compatKeysUnmapped: toDoKeys.length,
+    compatKeysUnmapped: toDoKeys.length + deprecatedNonStandardKeys.length,
     compatCoverage: doneKeys.length / keys.length,
     compatKeysPerFeatureMean: doneKeys.length / featureCount,
     compatKeysPerFeatureMedian: (() => {
@@ -65,11 +65,12 @@ export function stats(detailed: boolean = false) {
         )
         .pop()[0];
     })(),
-    toBeMapped: undefined,
+    currentBurndown: undefined,
+    currentBurndownSize: toDoKeys.length,
   };
 
   if (detailed) {
-    result.toBeMapped = toDoKeys;
+    result.currentBurndown = toDoKeys;
   }
 
   return result;
