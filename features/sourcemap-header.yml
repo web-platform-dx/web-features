@@ -1,0 +1,5 @@
+name: Sourcemap header
+description: The `Sourcemap` HTTP response header links generated code to a source map, so the browser shows the original source in a debugger. This makes it easier to work with minified or transpiled code.
+spec: https://tc39.es/source-map/
+compat_features:
+  - http.headers.SourceMap
