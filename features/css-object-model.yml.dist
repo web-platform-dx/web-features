@@ -261,10 +261,14 @@ compat_features:
   - api.CSSPageRule.style.type_CSSPageDescriptors
 
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "131"
   - api.CSSMarginRule
   - api.CSSMarginRule.name
   - api.CSSMarginRule.style
+
+  # baseline: false
+  # support: {}
   - api.CSSPseudoElement
   - api.CSSPseudoElement.element
   - api.CSSPseudoElement.type

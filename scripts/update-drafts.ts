@@ -7,10 +7,11 @@ import { fileURLToPath } from "node:url";
 import Path from "path";
 import webSpecs from "web-specs" assert { type: "json" };
 import winston from "winston";
-import { Document } from "yaml";
+import { Document, parse } from "yaml";
 import yargs from "yargs";
 
 import { features } from "../index.js";
+import { FeatureData } from "../types.js";
 
 type WebSpecsSpec = (typeof webSpecs)[number];
 
@@ -125,11 +126,6 @@ async function main() {
   // Iterate BCD and group compat features by spec.
   const specToCompatFeatures = new Map<WebSpecsSpec, Set<string>>();
   for (const feature of compat.walk()) {
-    // Skip deprecated and non-standard features.
-    if (feature.deprecated || !feature.standard_track) {
-      continue;
-    }
-
     // A few null values remain in BCD. They are being removed in
     // https://github.com/mdn/browser-compat-data/pull/23774.
     // TODO: Remove this workaround when BCD is free or true/null values.
@@ -167,11 +163,15 @@ async function main() {
         if (!selectedKeys) console.warn(`${url} not matched to any spec`);
         continue;
       }
-      const keys = specToCompatFeatures.get(spec);
-      if (keys) {
+
+      let keys = specToCompatFeatures.get(spec);
+      if (!keys) {
+        keys = new Set([]);
+        specToCompatFeatures.set(spec, keys);
+      }
+
+      if (!feature.deprecated && feature.standard_track) {
         keys.add(feature.id);
-      } else {
-        specToCompatFeatures.set(spec, new Set([feature.id]));
       }
     }
   }
@@ -196,19 +196,7 @@ async function main() {
 
     // If all features are already part of web-features
     if (compatFeatures.size === 0) {
-      const dist = `${destination}.dist`;
-      try {
-        await fs.rm(destination);
-        logger.warn(`${destination}: deleted`);
-      } catch (error) {
-        logger.debug(`${destination}: deletion failed`);
-      }
-      try {
-        await fs.rm(dist);
-        logger.warn(`${dist}: deleted`);
-      } catch (error) {
-        logger.debug(`${dist}: deletion failed`);
-      }
+      await rmFeatureFiles(destination);
       continue;
     }
 
@@ -270,6 +258,47 @@ async function main() {
 
     await fs.writeFile(destination, proposedFile);
     logger.info(`${destination}: updated`);
+  }
+
+  // Clean up completed specs, even if they've been superseded
+  const assignedKeys = Object.values(features).flatMap(
+    (f) => f.compat_features ?? [],
+  );
+  for (const spec of webSpecs) {
+    const id = formatIdentifier(spec.shortname);
+    const destination = `features/draft/spec/${id}.yml`;
+
+    if (!fsSync.existsSync(destination)) {
+      continue;
+    }
+
+    const source = fsSync.readFileSync(destination, { encoding: "utf-8" });
+    const { compat_features } = parse(source) as FeatureData;
+
+    if ((compat_features ?? []).every((key) => assignedKeys.includes(key))) {
+      await rmFeatureFiles(destination);
+    }
+  }
+}
+
+/**
+ * Delete an authored YAML file and its dist file.
+ *
+ * @param {string} destination The path to the authored .yml file.
+ */
+async function rmFeatureFiles(destination: string) {
+  const dist = `${destination}.dist`;
+  try {
+    await fs.rm(destination);
+    logger.warn(`${destination}: deleted`);
+  } catch (error) {
+    logger.debug(`${destination}: deletion failed`);
+  }
+  try {
+    await fs.rm(dist);
+    logger.warn(`${dist}: deleted`);
+  } catch (error) {
+    logger.debug(`${dist}: deletion failed`);
   }
 }
 
