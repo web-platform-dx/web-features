@@ -1,0 +1,10 @@
+name: :lang()
+description: The `:lang()` CSS functional pseudo-class matches elements based on their content language.
+spec: https://drafts.csswg.org/selectors-4/#the-lang-pseudo
+group: selectors
+status:
+  compute_from: css.selectors.lang
+compat_features:
+  - css.selectors.lang
+  - css.selectors.lang.argument_list
+  - css.selectors.lang.wildcards
