@@ -282,6 +282,20 @@ function toDist(sourcePath: string): YAML.Document {
       );
       exitStatus = 1;
     }
+
+    for (const key of compatFeatures) {
+      // This is super slow and wasteful. We already run `getStatus` for all these keys, but getStatus doesn't include discouraged.
+      const { discouraged } = computeBaseline({
+        compatKeys: [key],
+        checkAncestors: true,
+      });
+      if (discouraged) {
+        logger.error(
+          `${id}: contains deprecated compat feature ${key}, which can never be Baseline. This is forbidden.`,
+        );
+        exitStatus = 1;
+      }
+    }
   }
 
   const sortedStatus = Array.from(groups.keys()).sort(compareStatus);
