@@ -196,19 +196,7 @@ async function main() {
 
     // If all features are already part of web-features
     if (compatFeatures.size === 0) {
-      const dist = `${destination}.dist`;
-      try {
-        await fs.rm(destination);
-        logger.warn(`${destination}: deleted`);
-      } catch (error) {
-        logger.debug(`${destination}: deletion failed`);
-      }
-      try {
-        await fs.rm(dist);
-        logger.warn(`${dist}: deleted`);
-      } catch (error) {
-        logger.debug(`${dist}: deletion failed`);
-      }
+      await rmFeatureFiles(destination);
       continue;
     }
 
@@ -288,9 +276,29 @@ async function main() {
     const { compat_features } = parse(source) as FeatureData;
 
     if ((compat_features ?? []).every((key) => assignedKeys.includes(key))) {
-      fsSync.rmSync(destination);
-      logger.warn(`${destination}: deleted (all keys accounted for)`);
+      await rmFeatureFiles(destination);
     }
+  }
+}
+
+/**
+ * Delete an authored YAML file and its dist file.
+ *
+ * @param {string} destination The path to the authored .yml file.
+ */
+async function rmFeatureFiles(destination: string) {
+  const dist = `${destination}.dist`;
+  try {
+    await fs.rm(destination);
+    logger.warn(`${destination}: deleted`);
+  } catch (error) {
+    logger.debug(`${destination}: deletion failed`);
+  }
+  try {
+    await fs.rm(dist);
+    logger.warn(`${dist}: deleted`);
+  } catch (error) {
+    logger.debug(`${dist}: deletion failed`);
   }
 }
 
