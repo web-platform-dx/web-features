@@ -1,19 +1,11 @@
-draft_date: 2024-11-09
+draft_date: 2024-11-13
 name: CSS Box Alignment Module Level 3
 description: TODO
 spec: https://drafts.csswg.org/css-align-3/
 compat_features:
-  - css.properties.align-content.block_context
-  - css.properties.align-self.position_absolute_context
-  - css.properties.gap
-  - css.properties.gap.multicol_context
-  - css.properties.justify-self
-  - css.properties.justify-self.position_absolute_context
   - css.properties.place-content
   - css.properties.place-items
   - css.properties.place-self
-  - css.properties.place-self.position_absolute_context
-  - css.properties.row-gap
 
 # The following features in the spec are already part of web-features:
 # - Flexbox:
@@ -53,21 +45,26 @@ compat_features:
 #   - css.properties.place-content.flex_context
 #   - css.properties.place-items.flex_context
 #   - css.properties.place-self.flex_context
+# - align-content in block layouts:
+#   - css.properties.align-content.block_context
 # - Grid:
 #   - css.properties.align-content.grid_context
 #   - css.properties.align-items.grid_context
 #   - css.properties.align-items.grid_context.start_end
 #   - css.properties.align-self.grid_context
 #   - css.properties.column-gap.grid_context
+#   - css.properties.gap
 #   - css.properties.gap.grid_context
 #   - css.properties.gap.grid_context.calc_values
 #   - css.properties.gap.grid_context.percentage_values
 #   - css.properties.justify-content.grid_context
 #   - css.properties.justify-items.grid_context
+#   - css.properties.justify-self
 #   - css.properties.justify-self.grid_context
 #   - css.properties.place-content.grid_context
 #   - css.properties.place-items.grid_context
 #   - css.properties.place-self.grid_context
+#   - css.properties.row-gap
 #   - css.properties.row-gap.grid_context
 # - Multi-column layout:
 #   - css.properties.align-content.multicol_context
@@ -75,6 +72,11 @@ compat_features:
 #   - css.properties.column-gap.multicol_context
 #   - css.properties.column-gap.multicol_context.calc_values
 #   - css.properties.column-gap.multicol_context.percentage_values
+#   - css.properties.gap.multicol_context
+# - Absolute positioning:
+#   - css.properties.align-self.position_absolute_context
+#   - css.properties.justify-self.position_absolute_context
+#   - css.properties.place-self.position_absolute_context
 # - Flexbox gap:
 #   - css.properties.column-gap.flex_context
 #   - css.properties.gap.flex_context
