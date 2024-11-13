@@ -1,5 +1,5 @@
 name: ":nth-child() (initial support)"
-description: "The `:nth-child()` and `:nth-last-child()` CSS functional pseudo-classes match elements based on their relative position within a list of elements, counted from the first or last sibling. The `:first-child` and `:last-child` pseudo-classes match the first and last element in a list, and the `:only-child` pseudo-class matches an element with no siblings."
+description: "The `:nth-child()` and `:nth-last-child()` CSS functional pseudo-classes match elements based on their index within a list of elements. The `:first-child` and `:last-child` pseudo-classes match the first and last element in a list, and the `:only-child` pseudo-class matches an element with no siblings."
 spec:
   - https://drafts.csswg.org/selectors-3/#nth-child-pseudo
   - https://drafts.csswg.org/selectors-3/#nth-last-child-pseudo
