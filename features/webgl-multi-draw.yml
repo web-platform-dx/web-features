@@ -1,0 +1,10 @@
+name: WEBGL_multi_draw WebGL extension
+description: The `WEBGL_multi_draw` extension for WebGL 1.0 and 2.0 contexts renders more than one primitive with a single function call.
+spec: https://registry.khronos.org/webgl/extensions/WEBGL_multi_draw/
+group: webgl-extensions
+compat_features:
+  - api.WEBGL_multi_draw
+  - api.WEBGL_multi_draw.multiDrawArraysInstancedWEBGL
+  - api.WEBGL_multi_draw.multiDrawArraysWEBGL
+  - api.WEBGL_multi_draw.multiDrawElementsInstancedWEBGL
+  - api.WEBGL_multi_draw.multiDrawElementsWEBGL

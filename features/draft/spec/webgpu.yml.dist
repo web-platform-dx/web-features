@@ -5,5 +5,88 @@ status:
   baseline: false
   support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "113"
+  #   chrome_android: "121"
+  #   edge: "113"
+  - api.GPUSupportedFeatures.feature_bgra8unorm-storage
+  - api.GPUSupportedFeatures.feature_depth-clip-control
+  - api.GPUSupportedFeatures.feature_depth32float-stencil8
+  - api.GPUSupportedFeatures.feature_indirect-first-instance
+  - api.GPUSupportedFeatures.feature_rg11b10ufloat-renderable
+  - api.GPUSupportedFeatures.feature_texture-compression-astc
+  - api.GPUSupportedFeatures.feature_texture-compression-bc
+  - api.GPUSupportedFeatures.feature_texture-compression-etc2
+
+  # baseline: false
+  # support:
+  #   chrome: "118"
+  #   chrome_android: "121"
+  #   edge: "118"
+  - api.GPUQueue.copyExternalImageToTexture.htmlimageelement_imagedata_source
+
+  # baseline: false
+  # support:
+  #   chrome: "119"
+  #   chrome_android: "121"
+  #   edge: "119"
+  - api.GPUSupportedFeatures.feature_float32-filterable
+
+  # baseline: false
+  # support:
+  #   chrome: "120"
+  #   chrome_android: "121"
+  #   edge: "120"
+  - api.GPUSupportedFeatures.feature_shader-f16
+
+  # baseline: false
+  # support:
+  #   chrome: "121"
+  #   chrome_android: "121"
+  #   edge: "121"
+  - api.GPUCommandEncoder.beginComputePass.timestampWrites
+  - api.GPUCommandEncoder.beginRenderPass.timestampWrites
+  - api.GPUDevice.createComputePipeline.optional_entryPoint
+  - api.GPUDevice.createComputePipelineAsync.optional_entryPoint
+  - api.GPUDevice.createQuerySet.timestamp
+  - api.GPUDevice.createRenderPipeline.optional_entryPoint
+  - api.GPUDevice.createRenderPipelineAsync.optional_entryPoint
+  - api.GPUQuerySet.type.timestamp
+  - api.GPUSupportedFeatures.feature_timestamp-query
+
+  # baseline: false
+  # support:
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
+  - api.GPUCommandEncoder.beginRenderPass.depthSlice_option
+
+  # baseline: false
+  # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  - api.GPUQueue.submit.validates_command_buffer_uniqueness
+
+  # baseline: false
+  # support:
+  #   chrome: "130"
+  #   chrome_android: "130"
+  #   edge: "130"
+  - api.GPUDevice.createRenderPipeline.dual-source-blending
+  - api.GPUDevice.createRenderPipelineAsync.dual-source-blending
+  - api.GPUSupportedFeatures.feature_dual-source-blending
+
+  # baseline: false
+  # support:
+  #   chrome: "131"
+  #   chrome_android: "131"
   - api.GPUDevice.createRenderPipeline.validates_depth_bias_for_line_and_point_topologies
   - api.GPUDevice.createRenderPipelineAsync.validates_depth_bias_for_line_and_point_topologies
+  - api.GPUSupportedFeatures.feature_clip-distances
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.GPUSupportedFeatures.feature_float32-blendable

@@ -6,21 +6,25 @@ caniuse: css-grid
 status:
   compute_from: css.properties.grid
 compat_features:
-  - css.types.flex
   - css.properties.align-content.grid_context
   - css.properties.align-items.grid_context
+  - css.properties.align-items.grid_context.start_end
   - css.properties.align-self.grid_context
-  - css.properties.justify-content.grid_context
-  - css.properties.justify-items.grid_context
-  - css.properties.justify-self.grid_context
+  - css.properties.column-gap.grid_context
   - css.properties.display.grid
   - css.properties.display.inline-grid
+  - css.properties.gap
+  - css.properties.gap.grid_context
+  - css.properties.gap.grid_context.calc_values
+  - css.properties.gap.grid_context.percentage_values
   - css.properties.grid
   - css.properties.grid-area
+  - css.properties.grid-auto-columns
   - css.properties.grid-auto-flow
   - css.properties.grid-auto-flow.column
   - css.properties.grid-auto-flow.dense
   - css.properties.grid-auto-flow.row
+  - css.properties.grid-auto-rows
   - css.properties.grid-column
   - css.properties.grid-column-end
   - css.properties.grid-column-start
@@ -28,7 +32,6 @@ compat_features:
   - css.properties.grid-row-end
   - css.properties.grid-row-start
   - css.properties.grid-template
-  - css.properties.grid-template.none
   - css.properties.grid-template-areas
   - css.properties.grid-template-areas.none
   - css.properties.grid-template-columns
@@ -38,23 +41,23 @@ compat_features:
   - css.properties.grid-template-columns.min-content
   - css.properties.grid-template-columns.minmax
   - css.properties.grid-template-columns.none
+  - css.properties.grid-template-columns.repeat
   - css.properties.grid-template-rows
-  - css.properties.grid-template-rows.fit-content
-  - css.properties.grid-template-rows.minmax
   - css.properties.grid-template-rows.auto
+  - css.properties.grid-template-rows.fit-content
   - css.properties.grid-template-rows.max-content
   - css.properties.grid-template-rows.min-content
+  - css.properties.grid-template-rows.minmax
   - css.properties.grid-template-rows.none
-  - css.properties.column-gap.grid_context
-  - css.properties.gap.grid_context
-  - css.properties.gap.grid_context.percentage_values
-  - css.properties.row-gap.grid_context
-  - css.properties.gap.grid_context.calc_values
-  - css.properties.align-items.grid_context.start_end
+  - css.properties.grid-template-rows.repeat
+  - css.properties.grid-template.none
+  - css.properties.justify-content.grid_context
+  - css.properties.justify-items.grid_context
+  - css.properties.justify-self
+  - css.properties.justify-self.grid_context
+  - css.properties.place-content.grid_context
   - css.properties.place-items.grid_context
   - css.properties.place-self.grid_context
-  - css.properties.place-content.grid_context
-  - css.properties.grid-auto-columns
-  - css.properties.grid-auto-rows
-  - css.properties.grid-template-columns.repeat
-  - css.properties.grid-template-rows.repeat
+  - css.properties.row-gap
+  - css.properties.row-gap.grid_context
+  - css.types.flex

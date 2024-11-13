@@ -1,0 +1,19 @@
+name: touch-action
+description: The `touch-action` CSS property sets whether an element on a touch screen can be panned or pinched to zoom.
+spec:
+  - https://w3c.github.io/pointerevents/#the-touch-action-css-property
+  - https://compat.spec.whatwg.org/#touch-action
+caniuse: css-touch-action
+status:
+  compute_from: css.properties.touch-action
+compat_features:
+  - css.properties.touch-action
+  - css.properties.touch-action.manipulation
+  - css.properties.touch-action.none
+  - css.properties.touch-action.pan-down
+  - css.properties.touch-action.pan-left
+  - css.properties.touch-action.pan-right
+  - css.properties.touch-action.pan-up
+  - css.properties.touch-action.pan-x
+  - css.properties.touch-action.pan-y
+  - css.properties.touch-action.pinch-zoom
