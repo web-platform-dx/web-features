@@ -53,15 +53,6 @@ compat_features:
   - html.elements.input.readonly
   - html.elements.input.size
   - html.elements.input.src
-  - html.elements.input.type_button
-  - html.elements.input.type_checkbox
-  - html.elements.input.type_file
-  - html.elements.input.type_hidden
-  - html.elements.input.type_image
-  - html.elements.input.type_password
-  - html.elements.input.type_radio
-  - html.elements.input.type_reset
-  - html.elements.input.type_submit
   - html.elements.input.type_text
 
   # baseline: high
@@ -365,9 +356,3 @@ compat_features:
   #   safari_ios: "4"
   - api.HTMLInputElement.stepDown
   - api.HTMLInputElement.stepUp
-
-  # baseline: false
-  # support:
-  #   firefox: "52"
-  #   firefox_android: "52"
-  - html.elements.input.type_password.insecure_login_handling
