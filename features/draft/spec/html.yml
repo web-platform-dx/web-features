@@ -1,4 +1,4 @@
-draft_date: 2024-10-30
+draft_date: 2024-11-14
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -20,43 +20,13 @@ compat_features:
   - api.CustomElementRegistry.whenDefined
   - api.DOMParser.parseFromString.html
   - api.DOMParser.parseFromString.xml
-  - api.DOMStringList
-  - api.DOMStringList.contains
-  - api.DOMStringList.item
-  - api.DOMStringList.length
   - api.DedicatedWorkerGlobalScope
   - api.DedicatedWorkerGlobalScope.close
   - api.DedicatedWorkerGlobalScope.name
-  - api.Document
-  - api.Document.DOMContentLoaded_event
-  - api.Document.activeElement
-  - api.Document.body
-  - api.Document.close
   - api.Document.cookie
-  - api.Document.currentScript
-  - api.Document.defaultView
   - api.Document.designMode
-  - api.Document.dir
-  - api.Document.embeds
   - api.Document.featurePolicy
-  - api.Document.forms
-  - api.Document.getElementsByName
-  - api.Document.hasFocus
-  - api.Document.head
-  - api.Document.hidden
-  - api.Document.images
-  - api.Document.lastModified
-  - api.Document.links
-  - api.Document.open
-  - api.Document.plugins
-  - api.Document.readyState
-  - api.Document.readystatechange_event
-  - api.Document.referrer
-  - api.Document.scripts
   - api.Document.scroll_event
-  - api.Document.title
-  - api.Document.visibilityState
-  - api.Document.visibilitychange_event
   - api.Document.write
   - api.Document.writeln
   - api.Element.auxclick_event
@@ -66,11 +36,8 @@ compat_features:
   - api.Element.click_event.type_pointerevent
   - api.Element.focus_event
   - api.Element.getHTML
-  - api.Element.innerHTML
-  - api.Element.insertAdjacentHTML
   - api.Element.keydown_event
   - api.Element.keyup_event
-  - api.Element.outerHTML
   - api.Element.scroll_event
   - api.Element.wheel_event
   - api.ElementInternals.shadowRoot
@@ -94,18 +61,12 @@ compat_features:
   - api.HTMLAnchorElement.download
   - api.HTMLAnchorElement.hrefTranslate
   - api.HTMLAnchorElement.ping
-  - api.HTMLAnchorElement.referrerPolicy.no-referrer-when-downgrade
-  - api.HTMLAnchorElement.referrerPolicy.origin-when-cross-origin
-  - api.HTMLAnchorElement.referrerPolicy.unsafe-url
   - api.HTMLAreaElement.download
   - api.HTMLAreaElement.ping
-  - api.HTMLAreaElement.referrerPolicy.no-referrer-when-downgrade
-  - api.HTMLAreaElement.referrerPolicy.origin-when-cross-origin
-  - api.HTMLAreaElement.referrerPolicy.unsafe-url
   - api.HTMLBaseElement.href.forbid_data_javascript_urls
   - api.HTMLBaseElement.href.forbid_special_characters
   - api.HTMLButtonElement.command
-  - api.HTMLButtonElement.commandfor
+  - api.HTMLButtonElement.commandForElement
   - api.HTMLCanvasElement.getContext.2d_context
   - api.HTMLCanvasElement.getContext.bitmaprenderer_context
   - api.HTMLCanvasElement.getContext.bitmaprenderer_context.options_alpha_parameter
@@ -120,8 +81,6 @@ compat_features:
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
   - api.HTMLDListElement
   - api.HTMLDetailsElement.toggle_event
-  - api.HTMLDocument
-  - api.HTMLElement
   - api.HTMLElement.accessKey
   - api.HTMLElement.accessKeyLabel
   - api.HTMLElement.autocapitalize
@@ -132,32 +91,22 @@ compat_features:
   - api.HTMLElement.command_event
   - api.HTMLElement.contentEditable
   - api.HTMLElement.contentEditable.plaintext-only
-  - api.HTMLElement.dir
   - api.HTMLElement.enterKeyHint
   - api.HTMLElement.focus
   - api.HTMLElement.focus.options_focusVisible_parameter
   - api.HTMLElement.focus.options_preventScroll_parameter
-  - api.HTMLElement.hidden
-  - api.HTMLElement.innerText
   - api.HTMLElement.inputMode
   - api.HTMLElement.isContentEditable
   - api.HTMLElement.lang
   - api.HTMLElement.nonce
-  - api.HTMLElement.outerText
   - api.HTMLElement.spellcheck
   - api.HTMLElement.title
   - api.HTMLElement.togglePopover.returns_boolean
   - api.HTMLFormControlsCollection
   - api.HTMLFormControlsCollection.namedItem
   - api.HTMLIFrameElement.featurePolicy
-  - api.HTMLIFrameElement.referrerPolicy.no-referrer-when-downgrade
-  - api.HTMLIFrameElement.referrerPolicy.origin-when-cross-origin
-  - api.HTMLIFrameElement.referrerPolicy.unsafe-url
   - api.HTMLIFrameElement.sandbox
   - api.HTMLImageElement.currentSrc
-  - api.HTMLImageElement.referrerPolicy.no-referrer-when-downgrade
-  - api.HTMLImageElement.referrerPolicy.origin-when-cross-origin
-  - api.HTMLImageElement.referrerPolicy.unsafe-url
   - api.HTMLImageElement.sizes
   - api.HTMLImageElement.sizes.auto
   - api.HTMLImageElement.srcset
@@ -214,9 +163,6 @@ compat_features:
   - api.HTMLInputElement.valueAsDate
   - api.HTMLInputElement.valueAsNumber
   - api.HTMLInputElement.width
-  - api.HTMLLinkElement.referrerPolicy.no-referrer-when-downgrade
-  - api.HTMLLinkElement.referrerPolicy.origin-when-cross-origin
-  - api.HTMLLinkElement.referrerPolicy.unsafe-url
   - api.HTMLMediaElement.getStartDate
   - api.HTMLMediaElement.srcObject
   - api.HTMLMediaElement.textTracks
@@ -234,9 +180,6 @@ compat_features:
   - api.HTMLOptionsCollection.remove
   - api.HTMLOptionsCollection.selectedIndex
   - api.HTMLScriptElement.noModule
-  - api.HTMLScriptElement.referrerPolicy.no-referrer-when-downgrade
-  - api.HTMLScriptElement.referrerPolicy.origin-when-cross-origin
-  - api.HTMLScriptElement.referrerPolicy.unsafe-url
   - api.HTMLSourceElement
   - api.HTMLSourceElement.height
   - api.HTMLSourceElement.media
@@ -301,9 +244,6 @@ compat_features:
   - api.PageSwapEvent.PageSwapEvent
   - api.PageSwapEvent.activation
   - api.PageSwapEvent.viewTransition
-  - api.PageTransitionEvent
-  - api.PageTransitionEvent.PageTransitionEvent
-  - api.PageTransitionEvent.persisted
   - api.Path2D
   - api.Path2D.Path2D
   - api.Path2D.addPath
@@ -385,10 +325,6 @@ compat_features:
   - api.Window.open.relative-multi-screen
   - api.Window.opener
   - api.Window.originAgentCluster
-  - api.Window.pagehide_event
-  - api.Window.pagereveal_event
-  - api.Window.pageshow_event
-  - api.Window.pageswap_event
   - api.Window.parent
   - api.Window.popstate_event
   - api.Window.postMessage.transfer_parameter
@@ -474,16 +410,12 @@ compat_features:
   - html.elements.a.hreftranslate
   - html.elements.a.implicit_noopener
   - html.elements.a.ping
-  - html.elements.a.referrerpolicy.no-referrer-when-downgrade
-  - html.elements.a.referrerpolicy.origin-when-cross-origin
-  - html.elements.a.referrerpolicy.unsafe-url
   - html.elements.a.target.unfencedTop
   - html.elements.a.text_fragments
   - html.elements.area.download
   - html.elements.area.ping
-  - html.elements.area.referrerpolicy.no-referrer-when-downgrade
-  - html.elements.area.referrerpolicy.origin-when-cross-origin
-  - html.elements.area.referrerpolicy.unsafe-url
+  - html.elements.button.command
+  - html.elements.button.commandfor
   - html.elements.dd
   - html.elements.dl
   - html.elements.dt
@@ -498,9 +430,6 @@ compat_features:
   - html.elements.iframe.allow.cross-origin-isolated
   - html.elements.iframe.allow.document-domain
   - html.elements.iframe.allow.wildcards
-  - html.elements.iframe.referrerpolicy.no-referrer-when-downgrade
-  - html.elements.iframe.referrerpolicy.origin-when-cross-origin
-  - html.elements.iframe.referrerpolicy.unsafe-url
   - html.elements.iframe.sandbox
   - html.elements.iframe.sandbox.allow-downloads
   - html.elements.iframe.sandbox.allow-forms
@@ -514,9 +443,6 @@ compat_features:
   - html.elements.iframe.sandbox.allow-top-navigation
   - html.elements.iframe.sandbox.allow-top-navigation-by-user-activation
   - html.elements.iframe.sandbox.allow-top-navigation-to-custom-protocols
-  - html.elements.img.referrerpolicy.no-referrer-when-downgrade
-  - html.elements.img.referrerpolicy.origin-when-cross-origin
-  - html.elements.img.referrerpolicy.unsafe-url
   - html.elements.img.sizes
   - html.elements.img.sizes.auto
   - html.elements.img.srcset
@@ -570,9 +496,6 @@ compat_features:
   - html.elements.input.type_time
   - html.elements.input.type_url
   - html.elements.input.type_week
-  - html.elements.link.referrerpolicy.no-referrer-when-downgrade
-  - html.elements.link.referrerpolicy.origin-when-cross-origin
-  - html.elements.link.referrerpolicy.unsafe-url
   - html.elements.link.rel.dns-prefetch
   - html.elements.link.rel.expect
   - html.elements.link.rel.icon
@@ -586,7 +509,6 @@ compat_features:
   - html.elements.link.rel.preload.as-script
   - html.elements.link.rel.preload.as-style
   - html.elements.link.rel.preload.as-track
-  - html.elements.meta.http-equiv.content-type
   - html.elements.meta.name.theme-color
   - html.elements.meter
   - html.elements.meter.high
@@ -595,23 +517,18 @@ compat_features:
   - html.elements.meter.min
   - html.elements.meter.optimum
   - html.elements.meter.value
-  - html.elements.script.referrerpolicy.no-referrer-when-downgrade
-  - html.elements.script.referrerpolicy.origin-when-cross-origin
-  - html.elements.script.referrerpolicy.unsafe-url
   - html.elements.script.type.importmap.integrity
   - html.elements.select.autocomplete
   - html.elements.source.sizes
   - html.elements.source.srcset
   - html.elements.summary
   - html.elements.summary.display_list_item
-  - html.elements.td.rowspan.rowspan_zero
   - html.elements.template.shadowrootclonable
   - html.elements.template.shadowrootdelegatesfocus
   - html.elements.template.shadowrootserializable
   - html.elements.textarea.autocomplete.new-password
   - html.elements.textarea.autocomplete.one-time-code
   - html.elements.textarea.autocomplete.webauthn
-  - html.elements.th.rowspan.rowspan_zero
   - html.elements.track.kind.descriptions
   - html.elements.video.playsinline
   - html.global_attributes.accesskey
@@ -857,6 +774,43 @@ compat_features:
 #   - api.DOMParser
 #   - api.DOMParser.DOMParser
 #   - api.DOMParser.parseFromString
+# - DOM:
+#   - api.DOMStringList
+#   - api.DOMStringList.contains
+#   - api.DOMStringList.item
+#   - api.DOMStringList.length
+#   - api.Document
+#   - api.Document.DOMContentLoaded_event
+#   - api.Document.activeElement
+#   - api.Document.body
+#   - api.Document.close
+#   - api.Document.currentScript
+#   - api.Document.defaultView
+#   - api.Document.dir
+#   - api.Document.embeds
+#   - api.Document.forms
+#   - api.Document.getElementsByName
+#   - api.Document.hasFocus
+#   - api.Document.head
+#   - api.Document.images
+#   - api.Document.lastModified
+#   - api.Document.links
+#   - api.Document.open
+#   - api.Document.plugins
+#   - api.Document.readyState
+#   - api.Document.readystatechange_event
+#   - api.Document.referrer
+#   - api.Document.scripts
+#   - api.Document.title
+#   - api.Element.innerHTML
+#   - api.Element.insertAdjacentHTML
+#   - api.Element.outerHTML
+#   - api.HTMLDocument
+#   - api.HTMLElement
+#   - api.HTMLElement.dir
+#   - api.HTMLElement.hidden
+#   - api.HTMLElement.innerText
+#   - api.HTMLElement.outerText
 # - Dataset:
 #   - api.DOMStringMap
 #   - api.HTMLElement.dataset
@@ -915,6 +869,10 @@ compat_features:
 #   - api.DedicatedWorkerGlobalScope.messageerror_event
 #   - api.MessagePort.messageerror_event
 #   - api.Window.messageerror_event
+# - Page visibility:
+#   - api.Document.hidden
+#   - api.Document.visibilityState
+#   - api.Document.visibilitychange_event
 # - Location:
 #   - api.Document.location
 #   - api.Location
@@ -1012,17 +970,53 @@ compat_features:
 #   - html.elements.a.type
 # - Referrer policy:
 #   - api.HTMLAnchorElement.referrerPolicy
+#   - api.HTMLAnchorElement.referrerPolicy.no-referrer-when-downgrade
+#   - api.HTMLAnchorElement.referrerPolicy.origin-when-cross-origin
+#   - api.HTMLAnchorElement.referrerPolicy.unsafe-url
 #   - api.HTMLAreaElement.referrerPolicy
+#   - api.HTMLAreaElement.referrerPolicy.no-referrer-when-downgrade
+#   - api.HTMLAreaElement.referrerPolicy.origin-when-cross-origin
+#   - api.HTMLAreaElement.referrerPolicy.unsafe-url
 #   - api.HTMLIFrameElement.referrerPolicy
+#   - api.HTMLIFrameElement.referrerPolicy.no-referrer-when-downgrade
+#   - api.HTMLIFrameElement.referrerPolicy.origin-when-cross-origin
+#   - api.HTMLIFrameElement.referrerPolicy.unsafe-url
 #   - api.HTMLImageElement.referrerPolicy
+#   - api.HTMLImageElement.referrerPolicy.no-referrer-when-downgrade
+#   - api.HTMLImageElement.referrerPolicy.origin-when-cross-origin
+#   - api.HTMLImageElement.referrerPolicy.unsafe-url
 #   - api.HTMLLinkElement.referrerPolicy
+#   - api.HTMLLinkElement.referrerPolicy.no-referrer-when-downgrade
+#   - api.HTMLLinkElement.referrerPolicy.origin-when-cross-origin
+#   - api.HTMLLinkElement.referrerPolicy.unsafe-url
 #   - api.HTMLScriptElement.referrerPolicy
+#   - api.HTMLScriptElement.referrerPolicy.no-referrer-when-downgrade
+#   - api.HTMLScriptElement.referrerPolicy.origin-when-cross-origin
+#   - api.HTMLScriptElement.referrerPolicy.unsafe-url
 #   - html.elements.a.referrerpolicy
+#   - html.elements.a.referrerpolicy.no-referrer-when-downgrade
+#   - html.elements.a.referrerpolicy.origin-when-cross-origin
+#   - html.elements.a.referrerpolicy.unsafe-url
 #   - html.elements.area.referrerpolicy
+#   - html.elements.area.referrerpolicy.no-referrer-when-downgrade
+#   - html.elements.area.referrerpolicy.origin-when-cross-origin
+#   - html.elements.area.referrerpolicy.unsafe-url
 #   - html.elements.iframe.referrerpolicy
+#   - html.elements.iframe.referrerpolicy.no-referrer-when-downgrade
+#   - html.elements.iframe.referrerpolicy.origin-when-cross-origin
+#   - html.elements.iframe.referrerpolicy.unsafe-url
 #   - html.elements.img.referrerpolicy
+#   - html.elements.img.referrerpolicy.no-referrer-when-downgrade
+#   - html.elements.img.referrerpolicy.origin-when-cross-origin
+#   - html.elements.img.referrerpolicy.unsafe-url
 #   - html.elements.link.referrerpolicy
+#   - html.elements.link.referrerpolicy.no-referrer-when-downgrade
+#   - html.elements.link.referrerpolicy.origin-when-cross-origin
+#   - html.elements.link.referrerpolicy.unsafe-url
 #   - html.elements.script.referrerpolicy
+#   - html.elements.script.referrerpolicy.no-referrer-when-downgrade
+#   - html.elements.script.referrerpolicy.origin-when-cross-origin
+#   - html.elements.script.referrerpolicy.unsafe-url
 # - Image maps:
 #   - api.HTMLAreaElement
 #   - api.HTMLAreaElement.alt
@@ -1659,6 +1653,7 @@ compat_features:
 #   - html.elements.meta.charset
 #   - html.elements.meta.content
 #   - html.elements.meta.http-equiv
+#   - html.elements.meta.http-equiv.content-type
 #   - html.elements.meta.http-equiv.refresh
 #   - html.elements.meta.name
 #   - html.elements.meta.name.referrer
@@ -1863,12 +1858,14 @@ compat_features:
 #   - html.elements.td.colspan
 #   - html.elements.td.headers
 #   - html.elements.td.rowspan
+#   - html.elements.td.rowspan.rowspan_zero
 #   - html.elements.tfoot
 #   - html.elements.th
 #   - html.elements.th.abbr
 #   - html.elements.th.colspan
 #   - html.elements.th.headers
 #   - html.elements.th.rowspan
+#   - html.elements.th.rowspan.rowspan_zero
 #   - html.elements.th.scope
 #   - html.elements.thead
 #   - html.elements.tr
@@ -2083,6 +2080,12 @@ compat_features:
 #   - api.NotRestoredReasons.reasons
 #   - api.NotRestoredReasons.src
 #   - api.NotRestoredReasons.url
+# - Page transition events:
+#   - api.PageTransitionEvent
+#   - api.PageTransitionEvent.PageTransitionEvent
+#   - api.PageTransitionEvent.persisted
+#   - api.Window.pagehide_event
+#   - api.Window.pageshow_event
 # - paint():
 #   - api.PaintRenderingContext2D.beginPath
 #   - api.PaintRenderingContext2D.clearRect
@@ -2156,6 +2159,9 @@ compat_features:
 # - requestAnimationFrame():
 #   - api.Window.cancelAnimationFrame
 #   - api.Window.requestAnimationFrame
+# - View transitions:
+#   - api.Window.pagereveal_event
+#   - api.Window.pageswap_event
 # - window.print():
 #   - api.Window.print
 # - JavaScript modules in workers:

@@ -15,6 +15,11 @@ compat_features:
   - api.AuthenticatorResponse
   - api.AuthenticatorResponse.clientDataJSON
   - api.CredentialsContainer.create.publicKey_option
+  - api.CredentialsContainer.create.publicKey_option.attestation
+  - api.CredentialsContainer.create.publicKey_option.attestation.direct
+  - api.CredentialsContainer.create.publicKey_option.attestation.enterprise
+  - api.CredentialsContainer.create.publicKey_option.attestation.indirect
+  - api.CredentialsContainer.create.publicKey_option.attestation.none
   - api.CredentialsContainer.create.publicKey_option.extensions
   - api.CredentialsContainer.create.publicKey_option.extensions.appidExclude
   - api.CredentialsContainer.create.publicKey_option.extensions.credProps
@@ -39,5 +44,7 @@ compat_features:
   - api.PublicKeyCredential.rawId
   - api.PublicKeyCredential.response
   - api.PublicKeyCredential.toJSON
+  - html.elements.iframe.allow.publickey-credentials-create
+  - html.elements.iframe.allow.publickey-credentials-get
   - http.headers.Permissions-Policy.publickey-credentials-create
   - http.headers.Permissions-Policy.publickey-credentials-get
