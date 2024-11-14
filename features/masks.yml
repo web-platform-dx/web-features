@@ -8,6 +8,10 @@ status:
 compat_features:
   - css.properties.mask
   - css.properties.mask-clip
+  - css.properties.mask-clip.border
+  - css.properties.mask-clip.content
+  - css.properties.mask-clip.padding
+  - css.properties.mask-clip.text
   - css.properties.mask-composite
   - css.properties.mask-composite.add
   - css.properties.mask-composite.exclude
@@ -24,6 +28,9 @@ compat_features:
   - css.properties.mask-origin.fill-box
   - css.properties.mask-origin.stroke-box
   - css.properties.mask-origin.view-box
+  - css.properties.mask-origin.border
+  - css.properties.mask-origin.content
+  - css.properties.mask-origin.padding
   - css.properties.mask-position
   - css.properties.mask-repeat
   - css.properties.mask-size
