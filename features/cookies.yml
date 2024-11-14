@@ -1,8 +1,10 @@
-draft_date: 2024-10-21
-name: HTTP State Management Mechanism
-description: TODO
+name: Cookies
+description: Cookies store limited amounts of data and remember state information.
 spec: https://httpwg.org/specs/rfc6265.html
+status:
+  compute_from: http.headers.Cookie
 compat_features:
+  - api.Document.cookie
   - http.headers.Cookie
   - http.headers.Set-Cookie
   - http.headers.Set-Cookie.HttpOnly
