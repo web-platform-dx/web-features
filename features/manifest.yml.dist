@@ -8,7 +8,29 @@ status:
     chrome_android: "53"
     edge: "79"
     firefox_android: "79"
+    safari: "17"
+    safari_ios: "15.4"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "39"
+  #   chrome_android: "39"
+  #   edge: "79"
+  #   firefox_android: "47"
+  #   safari: "17"
+  #   safari_ios: "11.3"
+  - html.manifest.display
+
+  # baseline: false
+  # support:
+  #   chrome: "39"
+  #   chrome_android: "39"
+  #   edge: "79"
+  #   firefox_android: "58"
+  #   safari: "17"
+  #   safari_ios: "11.3"
+  - html.elements.link.rel.manifest
+
   # baseline: false
   # support:
   #   chrome: "39"
@@ -53,29 +75,12 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "39"
-  #   chrome_android: "39"
-  #   edge: "79"
-  #   firefox_android: "58"
-  #   safari_ios: "11.3"
-  - html.elements.link.rel.manifest
-
-  # baseline: false
-  # support:
   #   chrome: "96"
   #   chrome_android: "96"
   #   edge: "96"
   #   safari: "17"
   #   safari_ios: "16.4"
   - html.manifest.id
-
-  # baseline: false
-  # support:
-  #   chrome: "39"
-  #   chrome_android: "39"
-  #   edge: "79"
-  #   firefox_android: "47"
-  - html.manifest.display
 
   # baseline: false
   # support:
