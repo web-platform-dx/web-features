@@ -1,40 +1,25 @@
-draft_date: 2024-10-23
+draft_date: 2024-11-13
 name: CSS Fonts Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-fonts-5/
 compat_features:
-  - css.at-rules.font-face.OpenType_CBDT_CBLC
-  - css.at-rules.font-face.OpenType_COLRv0
-  - css.at-rules.font-face.OpenType_SBIX
-  - css.at-rules.font-face.src.drop_invalid_item
-  - css.at-rules.font-face.src.format_keyword
-  - css.at-rules.font-face.src.tech_keyword
-  - css.properties.font-synthesis.position
-  - css.properties.font-synthesis.small-caps
-  - css.properties.font-synthesis.style
-  - css.properties.font-synthesis.weight
   - css.properties.font-variant-emoji.emoji
   - css.properties.font-variant-emoji.normal
   - css.properties.font-variant-emoji.text
   - css.properties.font-variant-emoji.unicode
-  - css.properties.font-variant.css_fonts_shorthand
-  - css.properties.font-variant.greek_accented_characters
-  - css.properties.font-variant.uppercase_eszett
-  - css.properties.font.caption
-  - css.properties.font.font_stretch_support
-  - css.properties.font.icon
-  - css.properties.font.menu
-  - css.properties.font.message-box
-  - css.properties.font.small-caption
-  - css.properties.font.status-bar
 
 # The following features in the spec are already part of web-features:
 # - @font-face:
 #   - api.CSSFontFaceRule
 #   - api.CSSFontFaceRule.style
 #   - css.at-rules.font-face
+#   - css.at-rules.font-face.OpenType_CBDT_CBLC
+#   - css.at-rules.font-face.OpenType_SBIX
 #   - css.at-rules.font-face.font-family
 #   - css.at-rules.font-face.src
+#   - css.at-rules.font-face.src.drop_invalid_item
+#   - css.at-rules.font-face.src.format_keyword
+#   - css.at-rules.font-face.src.tech_keyword
 #   - css.at-rules.font-face.unicode-range
 # - font-variant-alternates:
 #   - api.CSSFontFeatureValuesMap
@@ -88,6 +73,8 @@ compat_features:
 #   - css.properties.font-palette.dark
 #   - css.properties.font-palette.light
 #   - css.properties.font-palette.normal
+# - COLRv0:
+#   - css.at-rules.font-face.OpenType_COLRv0
 # - COLRv1:
 #   - css.at-rules.font-face.OpenType_COLRv1
 # - SVG:
@@ -104,6 +91,7 @@ compat_features:
 #   - css.properties.font-feature-settings.normal
 # - font-stretch:
 #   - css.at-rules.font-face.font-stretch
+#   - css.properties.font.font_stretch_support
 #   - css.properties.font-stretch
 #   - css.properties.font-stretch.percentage
 #   - svg.global_attributes.font-stretch
@@ -117,12 +105,15 @@ compat_features:
 # - font-variant:
 #   - css.at-rules.font-face.font-variant
 #   - css.properties.font-variant
+#   - css.properties.font-variant.css_fonts_shorthand
+#   - css.properties.font-variant.greek_accented_characters
 #   - css.properties.font-variant.historical-forms
 #   - css.properties.font-variant.none
 #   - css.properties.font-variant.normal
 #   - css.properties.font-variant.sub
 #   - css.properties.font-variant.super
 #   - css.properties.font-variant.turkic_is
+#   - css.properties.font-variant.uppercase_eszett
 #   - svg.global_attributes.font-variant
 # - font-variation-settings:
 #   - css.at-rules.font-face.font-variation-settings
@@ -145,6 +136,12 @@ compat_features:
 #   - svg.global_attributes.font-size-adjust
 # - Font shorthand:
 #   - css.properties.font
+#   - css.properties.font.caption
+#   - css.properties.font.icon
+#   - css.properties.font.menu
+#   - css.properties.font.message-box
+#   - css.properties.font.small-caption
+#   - css.properties.font.status-bar
 # - font-family:
 #   - css.properties.font-family
 #   - svg.global_attributes.font-family
@@ -172,6 +169,10 @@ compat_features:
 #   - css.properties.font-size.math
 # - font-synthesis:
 #   - css.properties.font-synthesis
+#   - css.properties.font-synthesis.position
+#   - css.properties.font-synthesis.small-caps
+#   - css.properties.font-synthesis.style
+#   - css.properties.font-synthesis.weight
 # - font-synthesis-position:
 #   - css.properties.font-synthesis-position
 #   - css.properties.font-synthesis-position.auto

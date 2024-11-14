@@ -3,7 +3,11 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "72"
+    edge: "79"
+    firefox: "33"
+    safari: "13"
 compat_features:
   # baseline: false
   # support:
@@ -23,6 +27,7 @@ compat_features:
   #   safari_ios: "11.3"
   - api.MediaStreamTrack.applyConstraints.displaySurface_constraint
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "72"
