@@ -5,6 +5,8 @@ group:
   - forms
   - html-elements
 caniuse: input-number
+status:
+  compute_from: html.elements.input.type_number
 compat_features:
   - api.HTMLInputElement.valueAsNumber
   - api.HTMLInputElement.max
