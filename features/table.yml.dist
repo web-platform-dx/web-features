@@ -203,9 +203,24 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "65"
+  #   chrome_android: "65"
+  #   edge: "79"
+  #   firefox: ≤55
+  #   firefox_android: "55"
+  - html.elements.td.rowspan.rowspan_zero
+
+  # baseline: false
+  # support:
   #   firefox: "42"
   #   firefox_android: "42"
   - css.properties.caption-side.writing-mode_relative_values
+
+  # baseline: false
+  # support:
+  #   firefox: ≤55
+  #   firefox_android: "55"
+  - html.elements.th.rowspan.rowspan_zero
 
   # baseline: false
   # support: {}
