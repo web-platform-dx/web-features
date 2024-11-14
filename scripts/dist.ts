@@ -233,6 +233,21 @@ function toDist(sourcePath: string): YAML.Document {
     checkAncestors: true,
   });
 
+  if (computedStatus.discouraged) {
+    const isDraft: boolean = source.draft_date ?? false;
+
+    if (!source.draft_date) {
+      logger.error(
+        `${id}: contains at least one deprecated compat feature and can never be Baseline. This is forbidden for published features.`,
+      );
+      exitStatus = 1;
+    } else {
+      logger.warn(
+        `${id}: draft contains at least one deprecated compat feature and can never be Baseline. Was this intentional?`,
+      );
+    }
+  }
+
   computedStatus = JSON.parse(computedStatus.toJSON());
 
   if (source.status) {
@@ -271,16 +286,10 @@ function toDist(sourcePath: string): YAML.Document {
     for (const key of compatFeatures) {
       const f = feature(key);
       if (f.deprecated) {
-        if (source.draft_date) {
-          logger.warn(
-            `${id}: draft contains deprecated compat feature ${f.id}. Was this intentional?`,
-          );
-        } else {
-          logger.error(
-            `${id}: contains deprecated compat feature ${f.id}. This is forbidden for published features.`,
-          );
-          exitStatus = 1;
-        }
+        logger.error(
+          `${id}: contains deprecated compat feature ${key}, which can never be Baseline. This is forbidden.`,
+        );
+        exitStatus = 1;
       }
     }
   }
