@@ -1,6 +1,5 @@
-draft_date: 2024-10-21
-name: Fenced Frame
-description: TODO
+name: <fencedframe>
+description: The `<fencedframe>` element embeds content in a more secure and privacy-preserving way compared to `<iframe>` elements.
 spec: https://wicg.github.io/fenced-frame/
 compat_features:
   - api.Fence
@@ -20,3 +19,7 @@ compat_features:
   - html.elements.fencedframe
   - html.elements.fencedframe.allow
   - http.headers.Content-Security-Policy.fenced-frame-src
+  - html.elements.a.target.unfencedTop
+  - html.elements.fencedframe.height
+  - html.elements.fencedframe.width
+  - http.headers.Sec-Fetch-Dest.fencedframe
