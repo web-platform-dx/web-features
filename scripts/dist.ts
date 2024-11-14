@@ -286,15 +286,15 @@ function toDist(sourcePath: string): YAML.Document {
     for (const key of compatFeatures) {
       const f = feature(key);
       if (f.deprecated) {
-        if (source.draft_date) {
-          logger.warn(
-            `${id}: draft contains deprecated compat feature ${f.id}. Was this intentional?`,
-          );
-        } else {
+        if (!source.draft_date) {
           logger.error(
             `${id}: contains contains deprecated compat feature ${f.id}. This is forbidden for published features.`,
           );
           exitStatus = 1;
+        } else {
+          logger.warn(
+            `${id}: draft contains deprecated compat feature ${f.id}. Was this intentional?`,
+          );
         }
       }
     }
