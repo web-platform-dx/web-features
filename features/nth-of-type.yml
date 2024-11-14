@@ -1,0 +1,10 @@
+name: ":nth-of-type() pseudo-classes"
+description: "The `:nth-of-type()` and `:nth-last-of-type()` CSS functional pseudo-classes match elements based on their position among siblings of the same type. The `:first-of-type`, `:last-of-type`, and :only-of-type` pseudo-classes match the first, last, and only elements of its type."
+spec: https://drafts.csswg.org/selectors-4/#typed-child-index
+group: selectors
+compat_features:
+  - css.selectors.nth-last-of-type
+  - css.selectors.first-of-type
+  - css.selectors.last-of-type
+  - css.selectors.nth-of-type
+  - css.selectors.only-of-type
