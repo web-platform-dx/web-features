@@ -14,6 +14,19 @@ status:
     safari: "14.1"
     safari_ios: "5"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2017-11-28
+  # baseline_high_date: 2020-05-28
+  # support:
+  #   chrome: "5"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "57"
+  #   firefox_android: "57"
+  #   safari: "5"
+  #   safari_ios: "4"
+  - api.HTMLInputElement.valueAsDate
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2021-04-26

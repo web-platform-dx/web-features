@@ -8,6 +8,7 @@ status:
   compute_from: html.elements.input.type_date
 caniuse: input-datetime
 compat_features:
+  - api.HTMLInputElement.valueAsDate
   - html.elements.input.type_date
   - html.elements.input.type_datetime-local
   - html.elements.input.type_month
