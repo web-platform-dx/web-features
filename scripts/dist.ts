@@ -286,10 +286,16 @@ function toDist(sourcePath: string): YAML.Document {
     for (const key of compatFeatures) {
       const f = feature(key);
       if (f.deprecated) {
-        logger.error(
-          `${id}: contains deprecated compat feature ${key}, which can never be Baseline. This is forbidden.`,
-        );
-        exitStatus = 1;
+        if (source.draft_date) {
+          logger.warn(
+            `${id}: draft contains deprecated compat feature ${f.id} and can never be Baseline. Was this intentional?`,
+          );
+        } else {
+          logger.error(
+            `${id}: contains contains deprecated compat feature ${f.id} and can never be Baseline. This is forbidden for published features.`,
+          );
+          exitStatus = 1;
+        }
       }
     }
   }
