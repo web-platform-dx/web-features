@@ -1,0 +1,22 @@
+name: background-position
+description: The `background-position` CSS property offsets the initial position of background images relative to the background origin.
+spec: https://drafts.csswg.org/css-backgrounds-3/#background-position
+group: background
+caniuse:
+  - css-background-offsets
+  - background-position-x-y
+status:
+  compute_from: css.properties.background-position.side-relative_values
+compat_features:
+  - css.properties.background-position
+  - css.properties.background-position-x
+  - css.properties.background-position-x.side-relative_values
+  - css.properties.background-position-y
+  - css.properties.background-position-y.side-relative_values
+  - css.properties.background-position.bottom
+  - css.properties.background-position.center
+  - css.properties.background-position.left
+  - css.properties.background-position.multiple_backgrounds
+  - css.properties.background-position.right
+  - css.properties.background-position.side-relative_values
+  - css.properties.background-position.top

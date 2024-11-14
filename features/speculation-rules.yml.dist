@@ -7,12 +7,29 @@ status:
 compat_features:
   # baseline: false
   # support:
+  #   chrome: "108"
+  #   chrome_android: "57"
+  #   edge: "108"
+  - api.PerformanceNavigationTiming.activationStart
+
+  # baseline: false
+  # support:
+  #   chrome: "108"
+  #   chrome_android: "108"
+  #   edge: "108"
+  - api.Document.prerendering
+  - api.Document.prerenderingchange_event
+
+  # baseline: false
+  # support:
   #   chrome: "109"
   #   chrome_android: "109"
   #   edge: "109"
   - html.elements.script.type.speculationrules
   - html.elements.script.type.speculationrules.prerender
   - html.elements.script.type.speculationrules.urls
+  - http.headers.Supports-Loading-Mode
+  - http.headers.Supports-Loading-Mode.credentialed-prerender
 
   # baseline: false
   # support:
@@ -35,6 +52,13 @@ compat_features:
   #   chrome_android: "111"
   #   edge: "111"
   - html.elements.script.type.speculationrules.referrer_policy
+
+  # baseline: false
+  # support:
+  #   chrome: "117"
+  #   chrome_android: "117"
+  #   edge: "117"
+  - http.headers.Supports-Loading-Mode.fenced-frames
 
   # baseline: false
   # support:

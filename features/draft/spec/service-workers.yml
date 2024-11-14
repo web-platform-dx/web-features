@@ -1,4 +1,4 @@
-draft_date: 2024-10-21
+draft_date: 2024-11-13
 name: Service Workers
 description: TODO
 spec: https://w3c.github.io/ServiceWorker/
@@ -76,6 +76,7 @@ compat_features:
   - api.ServiceWorkerContainer.ready
   - api.ServiceWorkerContainer.register
   - api.ServiceWorkerContainer.startMessages
+  - api.ServiceWorkerContainer.worker_support
   - api.ServiceWorkerGlobalScope
   - api.ServiceWorkerGlobalScope.activate_event
   - api.ServiceWorkerGlobalScope.clients
