@@ -1,14 +1,17 @@
-draft_date: 2024-10-21
+draft_date: 2024-11-14
 name: HTTP Client Hints
 description: TODO
 spec: https://www.rfc-editor.org/rfc/rfc8942
 compat_features:
   - http.headers.Accept-CH
   - http.headers.Accept-CH.Device-Memory
-  - http.headers.Accept-CH.Sec-CH-UA
-  - http.headers.Accept-CH.Sec-CH-UA-Arch
-  - http.headers.Accept-CH.Sec-CH-UA-Full-Version
-  - http.headers.Accept-CH.Sec-CH-UA-Mobile
-  - http.headers.Accept-CH.Sec-CH-UA-Model
-  - http.headers.Accept-CH.Sec-CH-UA-Platform
-  - http.headers.Accept-CH.Sec-CH-UA-Platform-Version
+
+# The following features in the spec are already part of web-features:
+# - User agent client hints:
+#   - http.headers.Accept-CH.Sec-CH-UA
+#   - http.headers.Accept-CH.Sec-CH-UA-Arch
+#   - http.headers.Accept-CH.Sec-CH-UA-Full-Version
+#   - http.headers.Accept-CH.Sec-CH-UA-Mobile
+#   - http.headers.Accept-CH.Sec-CH-UA-Model
+#   - http.headers.Accept-CH.Sec-CH-UA-Platform
+#   - http.headers.Accept-CH.Sec-CH-UA-Platform-Version
