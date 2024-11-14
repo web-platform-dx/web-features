@@ -1,7 +1,9 @@
-draft_date: 2024-09-09
-name: Mixed Content
-description: TODO
+´name: Mixed content
+description: Mixed content refers to securely loaded web pages (HTTPS) that use resources to be fetched via HTTP or another insecure protocol.
 spec: https://w3c.github.io/webappsec-mixed-content/
+group: security
+status:
+  compute_from: http.mixed-content
 compat_features:
   - http.mixed-content
   - http.mixed-content.allow_file_urls
