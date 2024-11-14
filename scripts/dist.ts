@@ -5,7 +5,7 @@ import {
   parseRangedDateString,
   setLogger,
 } from "compute-baseline";
-import { Compat, Feature } from "compute-baseline/browser-compat-data";
+import { Compat, feature, Feature } from "compute-baseline/browser-compat-data";
 import { fdir } from "fdir";
 import fs from "node:fs";
 import path from "node:path";
@@ -284,12 +284,8 @@ function toDist(sourcePath: string): YAML.Document {
     }
 
     for (const key of compatFeatures) {
-      // This is super slow and wasteful. We already run `getStatus` for all these keys, but getStatus doesn't include discouraged.
-      const { discouraged } = computeBaseline({
-        compatKeys: [key],
-        checkAncestors: true,
-      });
-      if (discouraged) {
+      const f = feature(key);
+      if (f.deprecated) {
         logger.error(
           `${id}: contains deprecated compat feature ${key}, which can never be Baseline. This is forbidden.`,
         );
