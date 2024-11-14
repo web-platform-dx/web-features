@@ -28,6 +28,10 @@ compat_features:
   - api.CharacterData.substringData
   - api.Comment
   - api.Comment.Comment
+  - api.DOMException
+  - api.DOMException.DOMException
+  - api.DOMException.message
+  - api.DOMException.name
   - api.DOMImplementation
   - api.DOMImplementation.createDocument
   - api.DOMImplementation.createDocumentType
@@ -59,8 +63,8 @@ compat_features:
   - api.DOMTokenList.value
   - api.DOMTokenList.values
   - api.Document
-  - api.Document.Document
   - api.Document.DOMContentLoaded_event
+  - api.Document.Document
   - api.Document.URL
   - api.Document.activeElement
   - api.Document.adoptNode
@@ -93,14 +97,13 @@ compat_features:
   - api.Document.embeds
   - api.Document.firstElementChild
   - api.Document.forms
-  - api.Document.getElementsByName
   - api.Document.getElementById
   - api.Document.getElementsByClassName
+  - api.Document.getElementsByName
   - api.Document.getElementsByTagName
   - api.Document.getElementsByTagNameNS
   - api.Document.hasFocus
   - api.Document.head
-  - api.Document.hidden
   - api.Document.images
   - api.Document.implementation
   - api.Document.importNode
@@ -118,8 +121,6 @@ compat_features:
   - api.Document.replaceChildren
   - api.Document.scripts
   - api.Document.title
-  - api.Document.visibilityState
-  - api.Document.visibilitychange_event
   - api.DocumentFragment
   - api.DocumentFragment.DocumentFragment
   - api.DocumentFragment.append
@@ -144,7 +145,6 @@ compat_features:
   - api.Element.after
   - api.Element.append
   - api.Element.attributes
-  - api.Element.outerHTML
   - api.Element.before
   - api.Element.childElementCount
   - api.Element.children
@@ -175,6 +175,7 @@ compat_features:
   - api.Element.matches
   - api.Element.namespaceURI
   - api.Element.nextElementSibling
+  - api.Element.outerHTML
   - api.Element.prefix
   - api.Element.prepend
   - api.Element.previousElementSibling
