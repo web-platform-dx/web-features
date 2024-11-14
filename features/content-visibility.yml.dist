@@ -24,6 +24,9 @@ compat_features:
   #   safari: "18"
   #   safari_ios: "18"
   - css.properties.content-visibility
+  - css.properties.content-visibility.auto
+  - css.properties.content-visibility.hidden
+  - css.properties.content-visibility.visible
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: low
@@ -39,3 +42,12 @@ compat_features:
   - api.ContentVisibilityAutoStateChangeEvent
   - api.ContentVisibilityAutoStateChangeEvent.ContentVisibilityAutoStateChangeEvent
   - api.ContentVisibilityAutoStateChangeEvent.skipped
+
+  # baseline: false
+  # support:
+  #   chrome: "108"
+  #   chrome_android: "108"
+  #   edge: "108"
+  #   firefox: "130"
+  #   firefox_android: "130"
+  - api.Element.contentvisibilityautostatechange_event
