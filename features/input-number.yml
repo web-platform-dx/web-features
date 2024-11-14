@@ -6,6 +6,11 @@ group:
   - html-elements
 caniuse: input-number
 compat_features:
+  - api.HTMLInputElement.max
+  - api.HTMLInputElement.min
+  - api.HTMLInputElement.step
+  - api.HTMLInputElement.stepDown
+  - api.HTMLInputElement.stepUp
   - html.elements.input.max
   - html.elements.input.min
   - html.elements.input.step
