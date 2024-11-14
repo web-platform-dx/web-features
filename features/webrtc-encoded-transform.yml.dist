@@ -3,11 +3,7 @@
 
 status:
   baseline: false
-  support:
-    firefox: "117"
-    firefox_android: "117"
-    safari: "15.4"
-    safari_ios: "15.4"
+  support: {}
 compat_features:
   # baseline: low
   # baseline_low_date: 2023-08-29
@@ -27,7 +23,6 @@ compat_features:
   - api.RTCEncodedVideoFrame.getMetadata
   - api.RTCEncodedVideoFrame.type
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "117"
@@ -47,3 +42,11 @@ compat_features:
   - api.RTCRtpSender.transform
   - api.RTCTransformEvent
   - api.RTCTransformEvent.transformer
+
+  # baseline: false
+  # support:
+  #   chrome: "127"
+  #   chrome_android: "127"
+  #   edge: "127"
+  - api.RTCEncodedAudioFrame.RTCEncodedAudioFrame
+  - api.RTCEncodedVideoFrame.RTCEncodedVideoFrame
