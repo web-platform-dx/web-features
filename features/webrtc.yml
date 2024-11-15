@@ -38,6 +38,7 @@ compat_features:
   - api.RTCDataChannel.readyState
   - api.RTCDataChannel.sctp_sdp_21
   - api.RTCDataChannel.send
+  - api.RTCDataChannel.transferable
   - api.RTCDataChannelEvent
   - api.RTCDataChannelEvent.RTCDataChannelEvent
   - api.RTCDataChannelEvent.channel
@@ -50,6 +51,8 @@ compat_features:
   - api.RTCError
   - api.RTCError.RTCError
   - api.RTCError.errorDetail
+  # in the identity spec?
+  #- api.RTCError.httpRequestStatusCode
   - api.RTCError.receivedAlert
   - api.RTCError.sctpCauseCode
   - api.RTCError.sdpLineNumber
@@ -216,10 +219,13 @@ compat_features:
   - api.RTCRtpTransceiver.currentDirection.stopped_value
   - api.RTCRtpTransceiver.direction
   - api.RTCRtpTransceiver.direction.value_stopped
+  - api.RTCRtpTransceiver.getHeaderExtensionsToNegotiate
+  - api.RTCRtpTransceiver.getNegotiatedHeaderExtensions
   - api.RTCRtpTransceiver.mid
   - api.RTCRtpTransceiver.receiver
   - api.RTCRtpTransceiver.sender
   - api.RTCRtpTransceiver.setCodecPreferences
+  - api.RTCRtpTransceiver.setHeaderExtensionsToNegotiate
   - api.RTCRtpTransceiver.stop
   - api.RTCSessionDescription
   - api.RTCSessionDescription.sdp

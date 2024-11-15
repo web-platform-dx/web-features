@@ -1270,6 +1270,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "130"
+  #   chrome_android: "130"
+  #   edge: "130"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - api.RTCDataChannel.transferable
+
+  # baseline: false
+  # support:
   #   chrome: "75"
   #   chrome_android: "75"
   #   edge: "13"
@@ -1292,6 +1301,15 @@ compat_features:
   #   edge: "86"
   - api.RTCRtpReceiver.createEncodedStreams
   - api.RTCRtpSender.createEncodedStreams
+
+  # baseline: false
+  # support:
+  #   chrome: "117"
+  #   chrome_android: "117"
+  #   edge: "117"
+  - api.RTCRtpTransceiver.getHeaderExtensionsToNegotiate
+  - api.RTCRtpTransceiver.getNegotiatedHeaderExtensions
+  - api.RTCRtpTransceiver.setHeaderExtensionsToNegotiate
 
   # baseline: false
   # support:
