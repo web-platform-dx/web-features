@@ -12,6 +12,22 @@ compat_features:
   #   chrome: "58"
   #   chrome_android: "58"
   #   edge: "79"
+  #   firefox: "27"
+  #   firefox_android: "27"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.RTCStatsReport
+  - api.RTCStatsReport.forEach
+  - api.RTCStatsReport.get
+  - api.RTCStatsReport.has
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "58"
+  #   chrome_android: "58"
+  #   edge: "79"
   #   firefox: "29"
   #   firefox_android: "29"
   #   safari: "11"
@@ -28,6 +44,22 @@ compat_features:
   #   chrome: "58"
   #   chrome_android: "58"
   #   edge: "79"
+  #   firefox: "48"
+  #   firefox_android: "48"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.RTCStatsReport.@@iterator
+  - api.RTCStatsReport.entries
+  - api.RTCStatsReport.keys
+  - api.RTCStatsReport.values
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "58"
+  #   chrome_android: "58"
+  #   edge: "79"
   #   firefox: "56"
   #   firefox_android: "56"
   #   safari: "11"
@@ -36,6 +68,19 @@ compat_features:
   - api.RTCStatsReport.type_candidate-pair.bytesSent
   - api.RTCStatsReport.type_candidate-pair.nominated
   - api.RTCStatsReport.type_candidate-pair.transportId
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "59"
+  #   chrome_android: "59"
+  #   edge: "79"
+  #   firefox: "48"
+  #   firefox_android: "48"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.RTCStatsReport.size
 
   # baseline: high
   # baseline_low_date: 2020-01-15
