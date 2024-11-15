@@ -3,6 +3,8 @@ description: The WebRTC API establishes real-time communication channels directl
 spec: https://w3c.github.io/webrtc-pc/
 group: webrtc
 caniuse: rtcpeerconnection
+status:
+  compute_from: api.RTCPeerConnection
 compat_features:
   - api.RTCCertificate
   - api.RTCCertificate.expires
@@ -51,8 +53,6 @@ compat_features:
   - api.RTCError
   - api.RTCError.RTCError
   - api.RTCError.errorDetail
-  # in the identity spec?
-  #- api.RTCError.httpRequestStatusCode
   - api.RTCError.receivedAlert
   - api.RTCError.sctpCauseCode
   - api.RTCError.sdpLineNumber
