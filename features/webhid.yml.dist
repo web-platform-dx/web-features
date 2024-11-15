@@ -53,9 +53,13 @@ compat_features:
   - api.HIDDevice.forget
 
   # baseline: false
+  # support:
+  #   chrome: "131"
+  - api.WorkerNavigator.hid
+
+  # baseline: false
   # support: {}
   - api.HID.worker_support
   - api.HIDConnectionEvent.worker_support
   - api.HIDDevice.worker_support
   - api.HIDInputReportEvent.worker_support
-  - api.WorkerNavigator.hid

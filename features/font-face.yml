@@ -5,13 +5,21 @@ group: fonts
 caniuse:
   - fontface
   - font-unicode-range
+status:
+  compute_from: css.at-rules.font-face.WOFF_2
 compat_features:
-  - css.at-rules.font-face
-  - css.at-rules.font-face.font-family
-  - css.at-rules.font-face.src
-  - css.at-rules.font-face.WOFF
-  - css.at-rules.font-face.WOFF_2
   - api.CSSFontFaceRule
   - api.CSSFontFaceRule.style
+  - css.at-rules.font-face
+  - css.at-rules.font-face.font-family
+  - css.at-rules.font-face.OpenType_CBDT_CBLC
+  - css.at-rules.font-face.OpenType_SBIX
+  - css.at-rules.font-face.src
+  - css.at-rules.font-face.src.drop_invalid_item
+  - css.at-rules.font-face.src.format_keyword
+  - css.at-rules.font-face.src.format_variations
+  - css.at-rules.font-face.src.tech_keyword
   - css.at-rules.font-face.unicode-range
+  - css.at-rules.font-face.WOFF
+  - css.at-rules.font-face.WOFF_2
   - css.types.url

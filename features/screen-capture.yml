@@ -1,0 +1,21 @@
+name: Screen capture
+description: The `navigator.mediaDevices.getDisplayMedia()` method asks the user to choose a screen or portion of a screen (such as a window) to capture as a media stream.
+spec: https://w3c.github.io/mediacapture-screen-share/
+status:
+  compute_from: api.MediaDevices.getDisplayMedia
+compat_features:
+  - api.CaptureController
+  - api.CaptureController.CaptureController
+  - api.CaptureController.setFocusBehavior
+  - api.MediaDevices.getDisplayMedia
+  - api.MediaDevices.getDisplayMedia.audio_capture_support
+  - api.MediaDevices.getDisplayMedia.controller_option
+  - api.MediaDevices.getDisplayMedia.monitorTypeSurfaces_option
+  - api.MediaDevices.getDisplayMedia.selfBrowserSurface_option
+  - api.MediaDevices.getDisplayMedia.surfaceSwitching_option
+  - api.MediaDevices.getDisplayMedia.systemAudio_option
+  - api.MediaStreamTrack.applyConstraints.displaySurface_constraint
+  - api.MediaStreamTrack.applyConstraints.logicalSurface_constraint
+  - api.MediaStreamTrack.applyConstraints.suppressLocalAudioPlayback_constraint
+  - html.elements.iframe.allow.display-capture
+  - http.headers.Permissions-Policy.display-capture

@@ -1,4 +1,4 @@
-draft_date: 2024-10-28
+draft_date: 2024-11-13
 name: Fetch Standard
 description: TODO
 spec: https://fetch.spec.whatwg.org/
@@ -21,7 +21,6 @@ compat_features:
   - http.headers.Access-Control-Request-Method
   - http.headers.Authorization.authorization_removed_cross_origin
   - http.headers.Cross-Origin-Resource-Policy
-  - http.headers.Origin
   - http.headers.Sec-Purpose
   - http.headers.Sec-Purpose.prefetch
   - http.headers.Sec-Purpose.speculationrules
@@ -109,3 +108,5 @@ compat_features:
 # - Abortable fetch:
 #   - api.Request.signal
 #   - api.fetch.init_signal_parameter
+# - HTTP/1.1:
+#   - http.headers.Origin
