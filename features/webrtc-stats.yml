@@ -3,6 +3,11 @@ description: The WebRTC Statistics API gives applications access to detailed inf
 spec: https://w3c.github.io/webrtc-stats/
 group: webrtc
 compat_features:
+  - api.RTCPeerConnection.getStats
+  - api.RTCPeerConnection.getStats.returns_promise
+  - api.RTCPeerConnection.getStats.selector_parameter
+  - api.RTCRtpReceiver.getStats
+  - api.RTCRtpSender.getStats
   - api.RTCStatsReport
   - api.RTCStatsReport.@@iterator
   - api.RTCStatsReport.entries

@@ -66,7 +66,6 @@ compat_features:
   - api.RTCPeerConnection.close
   - api.RTCPeerConnection.createAnswer
   - api.RTCPeerConnection.createOffer
-  - api.RTCPeerConnection.getStats
   - api.RTCPeerConnection.iceConnectionState
   - api.RTCPeerConnection.iceGatheringState
   - api.RTCPeerConnection.icecandidate_event
@@ -174,20 +173,6 @@ compat_features:
   #   safari_ios: "12.2"
   - api.RTCRtpReceiver.getContributingSources
   - api.RTCRtpReceiver.getContributingSources.audio_tracks_supported
-
-  # baseline: high
-  # baseline_low_date: 2019-03-25
-  # baseline_high_date: 2021-09-25
-  # support:
-  #   chrome: "67"
-  #   chrome_android: "67"
-  #   edge: "13"
-  #   firefox: "55"
-  #   firefox_android: "55"
-  #   safari: "12.1"
-  #   safari_ios: "12.2"
-  - api.RTCRtpReceiver.getStats
-  - api.RTCRtpSender.getStats
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -369,19 +354,6 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - api.RTCDataChannel.bufferedamountlow_event
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "58"
-  #   chrome_android: "58"
-  #   edge: "79"
-  #   firefox: "44"
-  #   firefox_android: "44"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - api.RTCPeerConnection.getStats.returns_promise
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -584,19 +556,6 @@ compat_features:
   #   safari_ios: "12.2"
   - api.RTCRtpReceiver.getContributingSources.source
   - api.RTCRtpReceiver.getContributingSources.timestamp
-
-  # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
-  # support:
-  #   chrome: "67"
-  #   chrome_android: "67"
-  #   edge: ≤79
-  #   firefox: "44"
-  #   firefox_android: "44"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - api.RTCPeerConnection.getStats.selector_parameter
 
   # baseline: high
   # baseline_low_date: ≤2020-01-15

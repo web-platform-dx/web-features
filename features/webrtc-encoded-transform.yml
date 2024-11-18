@@ -4,8 +4,8 @@ spec: https://w3c.github.io/webrtc-encoded-transform/
 group: webrtc
 status:
   compute_from:
-  - api.RTCRtpReceiver.transform
-  - api.RTCRtpSender.transform
+    - api.RTCRtpReceiver.transform
+    - api.RTCRtpSender.transform
 compat_features:
   - api.DedicatedWorkerGlobalScope.rtctransform_event
   - api.RTCEncodedAudioFrame

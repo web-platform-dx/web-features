@@ -128,9 +128,6 @@ compat_features:
   - api.RTCPeerConnection.getReceivers.stopped_transceivers_removed
   - api.RTCPeerConnection.getSenders
   - api.RTCPeerConnection.getSenders.stopped_transceivers_removed
-  - api.RTCPeerConnection.getStats
-  - api.RTCPeerConnection.getStats.returns_promise
-  - api.RTCPeerConnection.getStats.selector_parameter
   - api.RTCPeerConnection.getTransceivers
   - api.RTCPeerConnection.getTransceivers.stopped_transceivers_removed
   - api.RTCPeerConnection.iceConnectionState
@@ -181,7 +178,6 @@ compat_features:
   - api.RTCRtpReceiver.getParameters.return_object_property_codecs
   - api.RTCRtpReceiver.getParameters.return_object_property_headerExtensions
   - api.RTCRtpReceiver.getParameters.return_object_property_rtcp
-  - api.RTCRtpReceiver.getStats
   - api.RTCRtpReceiver.getSynchronizationSources
   - api.RTCRtpReceiver.getSynchronizationSources.audio_tracks_supported
   - api.RTCRtpReceiver.getSynchronizationSources.video_tracks_supported
@@ -198,7 +194,6 @@ compat_features:
   - api.RTCRtpSender.getParameters.return_object_property_headerExtensions
   - api.RTCRtpSender.getParameters.return_object_property_rtcp
   - api.RTCRtpSender.getParameters.return_object_property_transactionId
-  - api.RTCRtpSender.getStats
   - api.RTCRtpSender.replaceTrack
   - api.RTCRtpSender.setParameters
   - api.RTCRtpSender.setParameters.parameters_codecs_parameter

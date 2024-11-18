@@ -6,6 +6,33 @@ status:
   support: {}
 compat_features:
   # baseline: high
+  # baseline_low_date: 2017-09-19
+  # baseline_high_date: 2020-03-19
+  # support:
+  #   chrome: "56"
+  #   chrome_android: "56"
+  #   edge: "15"
+  #   firefox: "44"
+  #   firefox_android: "44"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.RTCPeerConnection.getStats
+
+  # baseline: high
+  # baseline_low_date: 2019-03-25
+  # baseline_high_date: 2021-09-25
+  # support:
+  #   chrome: "67"
+  #   chrome_android: "67"
+  #   edge: "13"
+  #   firefox: "55"
+  #   firefox_android: "55"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - api.RTCRtpReceiver.getStats
+  - api.RTCRtpSender.getStats
+
+  # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
@@ -36,6 +63,19 @@ compat_features:
   - api.RTCStatsReport.type_candidate-pair.localCandidateId
   - api.RTCStatsReport.type_candidate-pair.remoteCandidateId
   - api.RTCStatsReport.type_candidate-pair.state
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "58"
+  #   chrome_android: "58"
+  #   edge: "79"
+  #   firefox: "44"
+  #   firefox_android: "44"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.RTCPeerConnection.getStats.returns_promise
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -94,6 +134,19 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - api.RTCStatsReport.type_inbound-rtp
+
+  # baseline: high
+  # baseline_low_date: ≤2020-01-15
+  # baseline_high_date: ≤2022-07-15
+  # support:
+  #   chrome: "67"
+  #   chrome_android: "67"
+  #   edge: ≤79
+  #   firefox: "44"
+  #   firefox_android: "44"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.RTCPeerConnection.getStats.selector_parameter
 
   # baseline: high
   # baseline_low_date: 2020-02-07
