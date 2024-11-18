@@ -1,5 +1,5 @@
-name: Error.cause property
-description: The `cause` property of errors indicates the specific original cause of the error.
+name: Error cause
+description: The `cause` property of errors records the specific original cause of the error, particularly for errors that have been re-thrown.
 spec:
   - https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-installerrorcause
 compat_features:
