@@ -119,6 +119,7 @@ compat_features:
   - api.ProcessingInstruction.target
   - api.Text
   - api.Text.splitText
+  - api.Window.document
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -630,20 +631,6 @@ compat_features:
   #   safari: "8"
   #   safari_ios: "8"
   - api.Document.currentScript
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "33"
-  #   chrome_android: "33"
-  #   edge: "12"
-  #   firefox: "18"
-  #   firefox_android: "18"
-  #   safari: "7"
-  #   safari_ios: "7"
-  - api.Document.hidden
-  - api.Document.visibilityState
 
   # baseline: high
   # baseline_low_date: 2015-11-12
@@ -1186,19 +1173,6 @@ compat_features:
   - api.Document.replaceChildren
   - api.DocumentFragment.replaceChildren
   - api.Element.replaceChildren
-
-  # baseline: high
-  # baseline_low_date: 2021-04-26
-  # baseline_high_date: 2023-10-26
-  # support:
-  #   chrome: "62"
-  #   chrome_android: "62"
-  #   edge: "18"
-  #   firefox: "56"
-  #   firefox_android: "56"
-  #   safari: "14.1"
-  #   safari_ios: "14.5"
-  - api.Document.visibilitychange_event
 
   # baseline: high
   # baseline_low_date: 2022-03-08
