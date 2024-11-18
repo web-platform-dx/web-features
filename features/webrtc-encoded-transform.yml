@@ -2,6 +2,10 @@ name: WebRTC encoded transform
 description: The WebRTC encoded transform API allows you to modify audio and video streams in WebRTC connections. For example, it can be used for visual effects or custom codecs.
 spec: https://w3c.github.io/webrtc-encoded-transform/
 group: webrtc
+status:
+  compute_from:
+  - api.RTCRtpReceiver.transform
+  - api.RTCRtpSender.transform
 compat_features:
   - api.DedicatedWorkerGlobalScope.rtctransform_event
   - api.RTCEncodedAudioFrame
