@@ -1,5 +1,5 @@
 name: Upgrade insecure requests
-description: The `Upgrade-Insecure-Requests` HTTP header instructs a user agent to upgrade insecure resource requests to secure transport before fetching them.
+description: The `Upgrade-Insecure-Requests` HTTP request header tells the server that the response should redirect to a secure (HTTPS) resource.
 spec: https://w3c.github.io/webappsec-upgrade-insecure-requests/
 group: security
 compat_features:
