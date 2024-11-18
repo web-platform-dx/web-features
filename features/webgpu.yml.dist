@@ -286,6 +286,13 @@ compat_features:
   #   edge: "129"
   - api.GPUCanvasContext.configure.toneMapping
 
+  # baseline: false
+  # support:
+  #   chrome: "131"
+  #   chrome_android: "131"
+  #   edge: "131"
+  - api.GPUCanvasContext.getConfiguration
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
@@ -308,9 +315,3 @@ compat_features:
   - api.WGSLLanguageFeatures.keys
   - api.WGSLLanguageFeatures.size
   - api.WGSLLanguageFeatures.values
-
-  # baseline: false
-  # support:
-  #   chrome: "131"
-  #   chrome_android: "131"
-  - api.GPUCanvasContext.getConfiguration
