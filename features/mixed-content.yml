@@ -1,5 +1,5 @@
-´name: Mixed content
-description: Mixed content refers to securely loaded web pages (HTTPS) that use resources to be fetched via HTTP or another insecure protocol.
+´name: Mixed content handling
+description: If a document is loaded over HTTPS and any of its resources are loaded over an insecure protocol, then depending on the resource type, the browser will either attempt to load the insecure resource over HTTPS or block it.
 spec: https://w3c.github.io/webappsec-mixed-content/
 group: security
 status:
