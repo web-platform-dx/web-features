@@ -82,6 +82,7 @@ compat_features:
   # support:
   #   chrome: "131"
   #   chrome_android: "131"
+  #   edge: "131"
   - api.GPUDevice.createRenderPipeline.validates_depth_bias_for_line_and_point_topologies
   - api.GPUDevice.createRenderPipelineAsync.validates_depth_bias_for_line_and_point_topologies
   - api.GPUSupportedFeatures.feature_clip-distances

@@ -1391,19 +1391,6 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
-  #   chrome: "36"
-  #   chrome_android: "36"
-  #   edge: "79"
-  #   firefox: "49"
-  #   firefox_android: "49"
-  #   safari: "10.1"
-  #   safari_ios: "10.3"
-  - api.HTMLDetailsElement.toggle_event
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
   #   chrome: "46"
   #   chrome_android: "46"
   #   edge: "79"
@@ -2858,6 +2845,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "131"
+  #   chrome_android: "131"
+  #   edge: "131"
+  - http.headers.Cross-Origin-Opener-Policy.noopener-allow-popups
+
+  # baseline: false
+  # support:
   #   safari: "9"
   #   safari_ios: "9"
   - api.HTMLMediaElement.getStartDate
@@ -2925,12 +2919,6 @@ compat_features:
   #   firefox: "104"
   #   firefox_android: "104"
   - api.HTMLElement.focus.options_focusVisible_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "131"
-  #   chrome_android: "131"
-  - http.headers.Cross-Origin-Opener-Policy.noopener-allow-popups
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
