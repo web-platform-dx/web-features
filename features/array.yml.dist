@@ -14,6 +14,18 @@ status:
     safari: "1"
     safari_ios: "1"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "1"
+  #   safari_ios: "1"
   - javascript.builtins.Array
   - javascript.builtins.Array.Array
   - javascript.builtins.Array.concat
@@ -28,3 +40,29 @@ compat_features:
   - javascript.builtins.Array.toString
   - javascript.builtins.Array.unshift
   - javascript.grammar.array_literals
+
+  # baseline: high
+  # baseline_low_date: 2016-09-20
+  # baseline_high_date: 2019-03-20
+  # support:
+  #   chrome: "38"
+  #   chrome_android: "38"
+  #   edge: "12"
+  #   firefox: "48"
+  #   firefox_android: "48"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - javascript.builtins.Array.@@unscopables
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "51"
+  #   chrome_android: "51"
+  #   edge: "79"
+  #   firefox: "48"
+  #   firefox_android: "48"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - javascript.builtins.Array.@@species
