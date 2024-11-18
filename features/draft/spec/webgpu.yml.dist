@@ -21,6 +21,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "117"
+  #   chrome_android: "121"
+  #   edge: "117"
+  - api.GPUComputePassEncoder.setBindGroup.unset_bind_group
+  - api.GPURenderBundleEncoder.setBindGroup.unset_bind_group
+  - api.GPURenderPassEncoder.setBindGroup.unset_bind_group
+
+  # baseline: false
+  # support:
   #   chrome: "118"
   #   chrome_android: "121"
   #   edge: "118"
