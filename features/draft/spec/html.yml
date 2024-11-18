@@ -84,6 +84,8 @@ compat_features:
   - api.HTMLElement.accessKeyLabel
   - api.HTMLElement.autocapitalize
   - api.HTMLElement.autocorrect
+  - api.HTMLElement.beforetoggle_event
+  - api.HTMLElement.beforetoggle_event.dialog_elements
   - api.HTMLElement.blur
   - api.HTMLElement.change_event
   - api.HTMLElement.click
@@ -101,6 +103,9 @@ compat_features:
   - api.HTMLElement.spellcheck
   - api.HTMLElement.title
   - api.HTMLElement.togglePopover.returns_boolean
+  - api.HTMLElement.toggle_event
+  - api.HTMLElement.toggle_event.details_elements
+  - api.HTMLElement.toggle_event.dialog_elements
   - api.HTMLFormControlsCollection
   - api.HTMLFormControlsCollection.namedItem
   - api.HTMLIFrameElement.featurePolicy
@@ -447,7 +452,6 @@ compat_features:
   - http.status.103.preconnect
   - http.status.103.preload
   - javascript.builtins.Promise.incumbent_settings_object_tracking
-  - javascript.operators.import_meta
   - javascript.operators.import_meta.resolve
 
 # The following features in the spec are already part of web-features:
@@ -1048,12 +1052,12 @@ compat_features:
 # - Popover:
 #   - api.HTMLButtonElement.popoverTargetAction
 #   - api.HTMLButtonElement.popoverTargetElement
-#   - api.HTMLElement.beforetoggle_event
+#   - api.HTMLElement.beforetoggle_event.popover_elements
 #   - api.HTMLElement.hidePopover
 #   - api.HTMLElement.popover
 #   - api.HTMLElement.showPopover
 #   - api.HTMLElement.togglePopover
-#   - api.HTMLElement.toggle_event
+#   - api.HTMLElement.toggle_event.popover_elements
 #   - api.HTMLInputElement.popoverTargetAction
 #   - api.HTMLInputElement.popoverTargetElement
 #   - api.ToggleEvent
@@ -1192,6 +1196,7 @@ compat_features:
 #   - html.global_attributes.autofocus
 # - Inert elements:
 #   - api.HTMLElement.inert
+#   - api.HTMLElement.inert.ignores_find_in_page
 #   - html.global_attributes.inert
 # - tabindex:
 #   - api.HTMLElement.tabIndex
