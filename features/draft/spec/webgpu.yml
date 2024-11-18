@@ -1,4 +1,4 @@
-draft_date: 2024-11-06
+draft_date: 2024-11-18
 name: WebGPU
 description: TODO
 spec: https://gpuweb.github.io/gpuweb/
@@ -6,6 +6,7 @@ compat_features:
   - api.GPUCommandEncoder.beginComputePass.timestampWrites
   - api.GPUCommandEncoder.beginRenderPass.depthSlice_option
   - api.GPUCommandEncoder.beginRenderPass.timestampWrites
+  - api.GPUComputePassEncoder.setBindGroup.unset_bind_group
   - api.GPUDevice.createComputePipeline.optional_entryPoint
   - api.GPUDevice.createComputePipelineAsync.optional_entryPoint
   - api.GPUDevice.createQuerySet.timestamp
@@ -18,6 +19,8 @@ compat_features:
   - api.GPUQuerySet.type.timestamp
   - api.GPUQueue.copyExternalImageToTexture.htmlimageelement_imagedata_source
   - api.GPUQueue.submit.validates_command_buffer_uniqueness
+  - api.GPURenderBundleEncoder.setBindGroup.unset_bind_group
+  - api.GPURenderPassEncoder.setBindGroup.unset_bind_group
   - api.GPUSupportedFeatures.feature_bgra8unorm-storage
   - api.GPUSupportedFeatures.feature_clip-distances
   - api.GPUSupportedFeatures.feature_depth-clip-control
