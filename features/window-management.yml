@@ -1,5 +1,5 @@
 name: Window management
-description: "The Window Management API makes it possible to build multi-screen applications by providing access to information about the screens on a device, and to place content on a specific screen."
+description: "The `window.getScreenDetails()` method gets information about the screens on a device, which you can use to place new windows on a specific screen with `window.open()`.
 spec: https://w3c.github.io/window-management/
 compat_features:
   - api.Element.requestFullscreen.options_screen_parameter
