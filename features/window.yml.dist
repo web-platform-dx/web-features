@@ -29,7 +29,6 @@ compat_features:
   - api.Window
   - api.Window.close
   - api.Window.closed
-  - api.Window.document
   - api.Window.focus
   - api.Window.frames
   - api.Window.length
@@ -119,20 +118,6 @@ compat_features:
   #   safari_ios: "1"
   - api.Window.stop
 
-  # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
-  # support:
-  #   chrome: "49"
-  #   chrome_android: "49"
-  #   edge: "79"
-  #   firefox: "69"
-  #   firefox_android: "79"
-  #   safari: "11"
-  #   safari_ios: "11.3"
-  - api.Window.rejectionhandled_event
-  - api.Window.unhandledrejection_event
-
   # baseline: false
   # support:
   #   chrome: "1"
@@ -142,10 +127,3 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "1"
   - api.Window.open
-
-  # baseline: false
-  # support:
-  #   chrome: "90"
-  #   chrome_android: "90"
-  #   edge: "90"
-  - api.Window.originAgentCluster
