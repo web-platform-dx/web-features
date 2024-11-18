@@ -127,6 +127,19 @@ compat_features:
   #   safari_ios: "15"
   - api.ShadowRoot.delegatesFocus
 
+  # baseline: high
+  # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
+  # support:
+  #   chrome: "98"
+  #   chrome_android: "98"
+  #   edge: "98"
+  #   firefox: "97"
+  #   firefox_android: "97"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - api.AbortController.abort.reason_parameter
+
   # baseline: low
   # baseline_low_date: 2024-04-18
   # support:
