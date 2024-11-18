@@ -1,0 +1,7 @@
+name: Error.cause property
+description: The `cause` property of errors indicates the specific original cause of the error.
+spec:
+  - https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-installerrorcause
+compat_features:
+  - javascript.builtins.Error.Error.options_cause_parameter
+  - javascript.builtins.Error.cause
