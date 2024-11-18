@@ -18,22 +18,6 @@ compat_features:
   #   safari_ios: "1"
   - api.Document.cookie
   - api.Document.write
-  - api.HTMLInputElement
-  - api.HTMLInputElement.accept
-  - api.HTMLInputElement.alt
-  - api.HTMLInputElement.checked
-  - api.HTMLInputElement.defaultChecked
-  - api.HTMLInputElement.defaultValue
-  - api.HTMLInputElement.disabled
-  - api.HTMLInputElement.form
-  - api.HTMLInputElement.maxLength
-  - api.HTMLInputElement.name
-  - api.HTMLInputElement.readOnly
-  - api.HTMLInputElement.select
-  - api.HTMLInputElement.size
-  - api.HTMLInputElement.src
-  - api.HTMLInputElement.type
-  - api.HTMLInputElement.value
   - api.Range.createContextualFragment
   - api.Window
   - api.Window.alert
@@ -48,48 +32,9 @@ compat_features:
   - api.Window.name
   - api.Window.opener
   - api.Window.prompt
-  - css.selectors.active
-  - css.selectors.active.non_a_elements
-  - css.selectors.focus
-  - css.selectors.visited
   - html.elements.html.xmlns
-  - html.elements.input
-  - html.elements.input.accept
-  - html.elements.input.alt
-  - html.elements.input.checked
-  - html.elements.input.disabled
-  - html.elements.input.form
-  - html.elements.input.maxlength
-  - html.elements.input.name
-  - html.elements.input.readonly
-  - html.elements.input.size
-  - html.elements.input.src
-  - html.elements.input.type_button
-  - html.elements.input.type_checkbox
-  - html.elements.input.type_file
-  - html.elements.input.type_hidden
-  - html.elements.input.type_image
-  - html.elements.input.type_password
-  - html.elements.input.type_radio
-  - html.elements.input.type_reset
-  - html.elements.input.type_submit
-  - html.elements.input.type_text
-  - html.elements.input.type_url
   - html.global_attributes.style
   - http.headers.Refresh
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "1"
-  #   safari_ios: "3.2"
-  - css.selectors.link
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -118,36 +63,8 @@ compat_features:
   #   safari: "1.3"
   #   safari_ios: "1"
   - api.DOMParser.parseFromString.xml
-  - api.HTMLInputElement.selectionEnd
-  - api.HTMLInputElement.selectionStart
   - api.Window.load_event
   - api.Window.parent
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "1.3"
-  #   safari_ios: "2"
-  - css.selectors.target
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "2"
-  #   safari_ios: "1"
-  - css.selectors.hover
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -164,7 +81,6 @@ compat_features:
   - api.HTMLElement.lang
   - api.HTMLElement.title
   - api.HTMLFormControlsCollection
-  - api.HTMLInputElement.setSelectionRange
   - api.HTMLOptionsCollection
   - api.HTMLOptionsCollection.add
   - api.HTMLOptionsCollection.length
@@ -199,9 +115,6 @@ compat_features:
   #   safari: "3.1"
   #   safari_ios: "2"
   - api.Window.DOMContentLoaded_event
-  - css.selectors.checked
-  - css.selectors.disabled
-  - css.selectors.enabled
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -282,19 +195,6 @@ compat_features:
   #   chrome: "1"
   #   chrome_android: "18"
   #   edge: "12"
-  #   firefox: "3.6"
-  #   firefox_android: "4"
-  #   safari: "3"
-  #   safari_ios: "1"
-  - api.HTMLInputElement.indeterminate
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
   #   firefox: "4"
   #   firefox_android: "4"
   #   safari: "3"
@@ -313,19 +213,6 @@ compat_features:
   #   safari: "3.1"
   #   safari_ios: "1"
   - api.HTMLOptionsCollection.remove
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "6"
-  #   firefox_android: "6"
-  #   safari: "1"
-  #   safari_ios: "1"
-  - api.HTMLInputElement.select_event
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -442,19 +329,6 @@ compat_features:
   #   firefox: "3"
   #   firefox_android: "4"
   #   safari: "4"
-  #   safari_ios: "3"
-  - api.HTMLInputElement.files
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "2"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3"
-  #   firefox_android: "4"
-  #   safari: "4"
   #   safari_ios: "3.2"
   - api.FileList
 
@@ -471,20 +345,6 @@ compat_features:
   #   safari_ios: "5"
   - api.Worker
   - api.Worker.terminate
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "2"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.6"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - api.HTMLInputElement.multiple
-  - html.elements.input.multiple
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -530,33 +390,6 @@ compat_features:
   #   safari_ios: "2"
   - api.MediaError
   - api.MediaError.code
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3"
-  - html.elements.input.type_tel
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "3"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - api.HTMLInputElement.placeholder
-  - html.elements.input.placeholder
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -649,44 +482,10 @@ compat_features:
   #   edge: "12"
   #   firefox: "4"
   #   firefox_android: "4"
-  #   safari: "5"
-  #   safari_ios: "4"
-  - api.HTMLInputElement.formNoValidate
-  - api.HTMLInputElement.pattern
-  - api.HTMLInputElement.required
-  - html.elements.input.formnovalidate
-  - html.elements.input.pattern
-  - html.elements.input.required
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
   #   safari: "6"
   #   safari_ios: "6"
   - api.PopStateEvent
   - api.PopStateEvent.state
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "16"
-  #   firefox_android: "16"
-  #   safari: "5"
-  #   safari_ios: "4"
-  - api.HTMLInputElement.max
-  - api.HTMLInputElement.min
-  - html.elements.input.max
-  - html.elements.input.min
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -700,19 +499,6 @@ compat_features:
   #   safari: "5"
   #   safari_ios: "4"
   - api.Window.postMessage.transfer_parameter
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "5"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "5"
-  #   safari_ios: "3"
-  - html.elements.input.type_email
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -740,21 +526,6 @@ compat_features:
   #   safari_ios: "5"
   - api.Window.blur_event
   - api.Window.focus_event
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "5"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "16"
-  #   firefox_android: "16"
-  #   safari: "5"
-  #   safari_ios: "4"
-  - api.HTMLInputElement.step
-  - api.HTMLInputElement.valueAsNumber
-  - html.elements.input.step
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -808,19 +579,6 @@ compat_features:
   #   chrome: "6"
   #   chrome_android: "18"
   #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "5"
-  #   safari_ios: "4.2"
-  - css.selectors.visited.privacy_measures
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "6"
-  #   chrome_android: "18"
-  #   edge: "12"
   #   firefox: "16"
   #   firefox_android: "16"
   #   safari: "6"
@@ -857,19 +615,6 @@ compat_features:
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
   # support:
-  #   chrome: "7"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "29"
-  #   firefox_android: "29"
-  #   safari: "5.1"
-  #   safari_ios: "5"
-  - html.elements.input.type_number
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
   #   chrome: "9"
   #   chrome_android: "18"
   #   edge: "12"
@@ -891,42 +636,6 @@ compat_features:
   #   safari: "6"
   #   safari_ios: "6"
   - api.HTMLElement.click
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "9"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "5"
-  #   safari_ios: "4.2"
-  - api.HTMLInputElement.formAction
-  - api.HTMLInputElement.formEnctype
-  - api.HTMLInputElement.formMethod
-  - api.HTMLInputElement.formTarget
-  - html.elements.input.formaction
-  - html.elements.input.formenctype
-  - html.elements.input.formmethod
-  - html.elements.input.formtarget
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "10"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "5"
-  #   safari_ios: "5"
-  - css.selectors.invalid
-  - css.selectors.optional
-  - css.selectors.required
-  - css.selectors.valid
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -981,7 +690,6 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "6"
   #   safari_ios: "6"
-  - api.HTMLInputElement.autocomplete
   - html.elements.input.autocomplete
 
   # baseline: high
@@ -1022,20 +730,6 @@ compat_features:
   #   safari: "6"
   #   safari_ios: "6"
   - html.elements.iframe.sandbox.allow-popups
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "21"
-  #   chrome_android: "25"
-  #   edge: "12"
-  #   firefox: "16"
-  #   firefox_android: "16"
-  #   safari: "7"
-  #   safari_ios: "7"
-  - api.HTMLInputElement.height
-  - api.HTMLInputElement.width
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -1134,33 +828,6 @@ compat_features:
   - api.HTMLMeterElement.min
   - api.HTMLMeterElement.optimum
   - api.HTMLMeterElement.value
-
-  # baseline: high
-  # baseline_low_date: 2015-11-12
-  # baseline_high_date: 2018-05-12
-  # support:
-  #   chrome: "10"
-  #   chrome_android: "18"
-  #   edge: "13"
-  #   firefox: "29"
-  #   firefox_android: "16"
-  #   safari: "5.1"
-  #   safari_ios: "5"
-  - css.selectors.in-range
-  - css.selectors.out-of-range
-
-  # baseline: high
-  # baseline_low_date: 2015-11-12
-  # baseline_high_date: 2018-05-12
-  # support:
-  #   chrome: "15"
-  #   chrome_android: "18"
-  #   edge: "13"
-  #   firefox: "8"
-  #   firefox_android: "8"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - api.HTMLInputElement.selectionDirection
 
   # baseline: high
   # baseline_low_date: 2016-03-21
@@ -1359,19 +1026,6 @@ compat_features:
   - api.WorkerLocation.origin
 
   # baseline: high
-  # baseline_low_date: 2017-03-16
-  # baseline_high_date: 2019-09-16
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "57"
-  #   edge: "12"
-  #   firefox: "23"
-  #   firefox_android: "52"
-  #   safari: "3.1"
-  #   safari_ios: "5"
-  - html.elements.input.type_range
-
-  # baseline: high
   # baseline_low_date: 2017-03-27
   # baseline_high_date: 2019-09-27
   # support:
@@ -1442,19 +1096,6 @@ compat_features:
   #   safari: "10.1"
   #   safari_ios: "10.3"
   - api.HTMLAreaElement.download
-
-  # baseline: high
-  # baseline_low_date: 2017-11-28
-  # baseline_high_date: 2020-05-28
-  # support:
-  #   chrome: "5"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "57"
-  #   firefox_android: "57"
-  #   safari: "5"
-  #   safari_ios: "4"
-  - api.HTMLInputElement.valueAsDate
 
   # baseline: high
   # baseline_low_date: 2017-11-28
@@ -1561,20 +1202,6 @@ compat_features:
   - api.ServiceWorker.error_event
 
   # baseline: high
-  # baseline_low_date: 2018-04-30
-  # baseline_high_date: 2020-10-30
-  # support:
-  #   chrome: "40"
-  #   chrome_android: "40"
-  #   edge: "17"
-  #   firefox: "51"
-  #   firefox_android: "51"
-  #   safari: "10.1"
-  #   safari_ios: "10.3"
-  - api.HTMLInputElement.minLength
-  - html.elements.input.minlength
-
-  # baseline: high
   # baseline_low_date: 2018-05-09
   # baseline_high_date: 2020-11-09
   # support:
@@ -1586,19 +1213,6 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - api.HTMLScriptElement.noModule
-
-  # baseline: high
-  # baseline_low_date: 2018-10-02
-  # baseline_high_date: 2021-04-02
-  # support:
-  #   chrome: "6"
-  #   chrome_android: "18"
-  #   edge: "18"
-  #   firefox: "56"
-  #   firefox_android: "56"
-  #   safari: "5"
-  #   safari_ios: "4.2"
-  - api.HTMLInputElement.labels
 
   # baseline: high
   # baseline_low_date: 2018-10-02
@@ -1652,33 +1266,6 @@ compat_features:
   #   safari_ios: "9.3"
   - html.elements.source.sizes
   - html.elements.source.srcset
-
-  # baseline: high
-  # baseline_low_date: 2018-12-11
-  # baseline_high_date: 2021-06-11
-  # support:
-  #   chrome: "10"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "64"
-  #   safari: "5"
-  #   safari_ios: "5"
-  - api.HTMLInputElement.invalid_event
-
-  # baseline: high
-  # baseline_low_date: 2019-03-25
-  # baseline_high_date: 2021-09-25
-  # support:
-  #   chrome: "20"
-  #   chrome_android: "25"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "12.1"
-  #   safari_ios: "12.2"
-  - api.HTMLInputElement.list
-  - html.elements.input.list
 
   # baseline: high
   # baseline_low_date: 2019-03-25
@@ -1765,19 +1352,6 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
-  #   chrome: "24"
-  #   chrome_android: "25"
-  #   edge: "79"
-  #   firefox: "27"
-  #   firefox_android: "27"
-  #   safari: "7"
-  #   safari_ios: "7"
-  - api.HTMLInputElement.setRangeText
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
   #   chrome: "26"
   #   chrome_android: "26"
   #   edge: "79"
@@ -1825,20 +1399,6 @@ compat_features:
   #   safari: "10.1"
   #   safari_ios: "10.3"
   - api.HTMLDetailsElement.toggle_event
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "40"
-  #   chrome_android: "40"
-  #   edge: "79"
-  #   firefox: "13"
-  #   firefox_android: "14"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - css.selectors.invalid.form
-  - css.selectors.valid.form
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -2162,20 +1722,6 @@ compat_features:
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
   # support:
-  #   chrome: "20"
-  #   chrome_android: "25"
-  #   edge: "12"
-  #   firefox: "57"
-  #   firefox_android: "57"
-  #   safari: "14.1"
-  #   safari_ios: "5"
-  - html.elements.input.type_date
-  - html.elements.input.type_time
-
-  # baseline: high
-  # baseline_low_date: 2021-04-26
-  # baseline_high_date: 2023-10-26
-  # support:
   #   chrome: "65"
   #   chrome_android: "65"
   #   edge: "79"
@@ -2186,20 +1732,6 @@ compat_features:
   - api.Worklet
   - api.Worklet.addModule
   - api.WorkletGlobalScope
-
-  # baseline: high
-  # baseline_low_date: 2021-09-20
-  # baseline_high_date: 2024-03-20
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "87"
-  #   firefox_android: "87"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - css.selectors.link.not_match_link
-  - css.selectors.visited.not_match_link
 
   # baseline: high
   # baseline_low_date: 2021-09-20
@@ -2268,19 +1800,6 @@ compat_features:
   #   safari_ios: "15"
   - api.SubmitEvent
   - api.SubmitEvent.SubmitEvent
-
-  # baseline: high
-  # baseline_low_date: 2021-10-05
-  # baseline_high_date: 2024-04-05
-  # support:
-  #   chrome: "20"
-  #   chrome_android: "25"
-  #   edge: "12"
-  #   firefox: "93"
-  #   firefox_android: "93"
-  #   safari: "14.1"
-  #   safari_ios: "5"
-  - html.elements.input.type_datetime-local
 
   # baseline: high
   # baseline_low_date: 2021-11-02
@@ -2428,18 +1947,6 @@ compat_features:
   - html.elements.textarea.autocomplete.one-time-code
 
   # baseline: low
-  # baseline_low_date: 2023-01-17
-  # support:
-  #   chrome: ≤67
-  #   chrome_android: "67"
-  #   edge: ≤79
-  #   firefox: "109"
-  #   firefox_android: "109"
-  #   safari: "12.1"
-  #   safari_ios: "12.2"
-  - html.elements.input.type_range.tick_marks
-
-  # baseline: low
   # baseline_low_date: 2023-03-27
   # support:
   #   chrome: "88"
@@ -2486,18 +1993,6 @@ compat_features:
   #   safari: "16"
   #   safari_ios: "16"
   - api.Path2D.roundRect
-
-  # baseline: low
-  # baseline_low_date: 2023-05-05
-  # support:
-  #   chrome: "113"
-  #   chrome_android: "113"
-  #   edge: "113"
-  #   firefox: "91"
-  #   firefox_android: "91"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - api.HTMLInputElement.cancel_event
 
   # baseline: low
   # baseline_low_date: 2023-06-06
@@ -2573,18 +2068,6 @@ compat_features:
   #   safari: "17"
   #   safari_ios: "17"
   - api.HTMLElement.togglePopover.returns_boolean
-
-  # baseline: low
-  # baseline_low_date: 2024-04-16
-  # support:
-  #   chrome: "124"
-  #   chrome_android: "124"
-  #   edge: "12"
-  #   firefox: "120"
-  #   firefox_android: "120"
-  #   safari: "16.5"
-  #   safari_ios: "16.5"
-  - html.elements.input.type_range.vertical_orientation
 
   # baseline: low
   # baseline_low_date: 2024-07-09
@@ -2696,16 +2179,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "20"
-  #   chrome_android: "25"
-  #   edge: "14"
-  #   firefox: "29"
-  #   safari: "12.1"
-  #   safari_ios: "12.2"
-  - html.elements.input.type_color
-
-  # baseline: false
-  # support:
   #   chrome: "23"
   #   chrome_android: "25"
   #   edge: "12"
@@ -2766,16 +2239,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "5"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   safari: "5"
-  #   safari_ios: "4"
-  - api.HTMLInputElement.stepDown
-  - api.HTMLInputElement.stepUp
-
-  # baseline: false
-  # support:
   #   chrome: "6"
   #   chrome_android: "18"
   #   edge: "79"
@@ -2820,15 +2283,6 @@ compat_features:
   #   firefox: "96"
   #   firefox_android: "96"
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
-
-  # baseline: false
-  # support:
-  #   chrome: "20"
-  #   chrome_android: "25"
-  #   edge: "12"
-  #   firefox_android: "18"
-  #   safari_ios: ≤11.3
-  - html.elements.input.type_month
 
   # baseline: false
   # support:
@@ -3142,14 +2596,6 @@ compat_features:
   #   firefox: "2"
   #   firefox_android: "4"
   - api.Navigator.registerProtocolHandler.scheme_parameter_irc
-
-  # baseline: false
-  # support:
-  #   chrome: "20"
-  #   chrome_android: "25"
-  #   edge: "12"
-  #   firefox_android: "18"
-  - html.elements.input.type_week
 
   # baseline: false
   # support:
