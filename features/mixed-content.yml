@@ -1,5 +1,5 @@
-´name: Mixed content handling
-description: If a document is loaded over HTTPS and any of its resources are loaded over an insecure protocol, then depending on the resource type, the browser will either attempt to load the insecure resource over HTTPS or block it.
+name: Mixed content handling
+description: When a document is loaded over HTTPS, browsers ensure that none of the document's resources are loaded over an insecure protocol. Instead, resources that the document attempts to load over an insecure protocol are either loaded over HTTPS or are blocked.
 spec: https://w3c.github.io/webappsec-mixed-content/
 group: security
 status:
