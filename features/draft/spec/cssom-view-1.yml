@@ -1,4 +1,4 @@
-draft_date: 2024-11-06
+draft_date: 2024-11-19
 name: CSSOM View Module
 description: TODO
 spec: https://drafts.csswg.org/cssom-view-1/
@@ -73,7 +73,6 @@ compat_features:
   - api.Window.moveBy
   - api.Window.moveTo
   - api.Window.moveTo.relative-multi-screen
-  - api.Window.open
   - api.Window.open.features_parameter_attributionsrc
   - api.Window.open.features_parameter_popup
   - api.Window.open.once_per_event
@@ -151,3 +150,5 @@ compat_features:
 #   - api.VisualViewport.scale
 #   - api.VisualViewport.width
 #   - api.Window.visualViewport
+# - Window:
+#   - api.Window.open

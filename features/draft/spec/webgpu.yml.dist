@@ -21,6 +21,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "117"
+  #   chrome_android: "121"
+  #   edge: "117"
+  - api.GPUComputePassEncoder.setBindGroup.unset_bind_group
+  - api.GPURenderBundleEncoder.setBindGroup.unset_bind_group
+  - api.GPURenderPassEncoder.setBindGroup.unset_bind_group
+
+  # baseline: false
+  # support:
   #   chrome: "118"
   #   chrome_android: "121"
   #   edge: "118"
@@ -82,6 +91,7 @@ compat_features:
   # support:
   #   chrome: "131"
   #   chrome_android: "131"
+  #   edge: "131"
   - api.GPUDevice.createRenderPipeline.validates_depth_bias_for_line_and_point_topologies
   - api.GPUDevice.createRenderPipelineAsync.validates_depth_bias_for_line_and_point_topologies
   - api.GPUSupportedFeatures.feature_clip-distances

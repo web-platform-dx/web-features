@@ -5,3 +5,20 @@ snapshot: ecmascript-2015
 group: sets
 status:
   compute_from: javascript.builtins.Set.Set
+compat_features:
+  - javascript.builtins.Set
+  - javascript.builtins.Set.Set
+  - javascript.builtins.Set.add
+  - javascript.builtins.Set.delete
+  - javascript.builtins.Set.has
+  - javascript.builtins.Set.clear
+  - javascript.builtins.Set.size
+  - javascript.builtins.Set.entries
+  - javascript.builtins.Set.keys
+  - javascript.builtins.Set.values
+  - javascript.builtins.Set.forEach
+  - javascript.builtins.Set.Set.iterable_allowed
+  - javascript.builtins.Set.key_equality_for_zeros
+  - javascript.builtins.Set.Set.null_allowed
+  - javascript.builtins.Set.@@iterator
+  - javascript.builtins.Set.@@species

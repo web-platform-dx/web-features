@@ -1,0 +1,6 @@
+name: Zstandard compression
+description: Zstandard or `zstd` is fast lossless compression algorithm. When used as a content encoding, it is often faster and offers better compression than brotli.
+spec: https://www.rfc-editor.org/rfc/rfc8878
+caniuse: zstd
+compat_features:
+  - http.headers.Content-Encoding.zstd
