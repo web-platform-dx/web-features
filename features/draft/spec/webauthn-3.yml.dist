@@ -3,22 +3,8 @@
 
 status:
   baseline: false
-  support:
-    firefox: "123"
-    firefox_android: "123"
+  support: {}
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "84"
-  #   chrome_android: "84"
-  #   edge: "84"
-  #   firefox: "118"
-  #   firefox_android: "118"
-  - html.elements.iframe.allow.publickey-credentials-get
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   firefox: "123"
-  #   firefox_android: "123"
-  - html.elements.iframe.allow.publickey-credentials-create
+  - api.PublicKeyCredential.signalAllAcceptedCredentials_static
+  - api.PublicKeyCredential.signalCurrentUserDetails_static
+  - api.PublicKeyCredential.signalUnknownCredential_static

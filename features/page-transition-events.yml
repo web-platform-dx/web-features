@@ -1,0 +1,12 @@
+name: Page transition events
+description: "The `pageshow` and `pagehide` transition events fire when a document loads or unloads due to a navigation, such as clicking on a link on a page or the back button in a browser."
+spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-pagetransitionevent-interface
+caniuse: page-transition-events
+status:
+  compute_from: api.PageTransitionEvent
+compat_features:
+  - api.PageTransitionEvent
+  - api.PageTransitionEvent.PageTransitionEvent
+  - api.PageTransitionEvent.persisted
+  - api.Window.pagehide_event
+  - api.Window.pageshow_event

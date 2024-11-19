@@ -1,0 +1,7 @@
+name: WEBGL_debug_shaders WebGL extension
+description: The `WEBGL_debug_shaders` extension for WebGL 1.0 and 2.0 contexts adds the `getTranslatedShaderSource()` method to debug shaders from privileged contexts.
+spec: https://registry.khronos.org/webgl/extensions/WEBGL_debug_shaders/
+group: webgl-extensions
+compat_features:
+  - api.WEBGL_debug_shaders
+  - api.WEBGL_debug_shaders.getTranslatedShaderSource

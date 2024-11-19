@@ -296,6 +296,7 @@ compat_features:
   - css.properties.fill-rule.evenodd
   - css.properties.fill-rule.nonzero
   - css.properties.letter-spacing.svg_elements
+  - css.properties.stroke-color
   - css.properties.stroke-dasharray
   - css.properties.stroke-dasharray.none
   - css.properties.stroke-dashoffset
@@ -332,7 +333,6 @@ compat_features:
   - svg.elements.ellipse.rx
   - svg.elements.ellipse.ry
   - svg.elements.ellipse.systemLanguage
-
   - svg.elements.foreignObject
   - svg.elements.foreignObject.height
   - svg.elements.foreignObject.systemLanguage
@@ -583,3 +583,26 @@ compat_features:
   - svg.global_attributes.color-interpolation
   - svg.global_attributes.color-interpolation.sRGB
   - svg.elements.use.data_uri
+  - css.properties.color-interpolation
+  - css.properties.color-interpolation.linearGradient
+  - css.properties.color-interpolation.sRGB
+  - css.properties.cx
+  - css.properties.cy
+  - css.properties.d
+  - css.properties.marker
+  - css.properties.marker-end
+  - css.properties.marker-mid
+  - css.properties.marker-start
+  - css.properties.r
+  - css.properties.rx
+  - css.properties.ry
+  - css.properties.shape-rendering
+  - css.properties.stop-color
+  - css.properties.stop-opacity
+  - css.properties.stroke
+  - css.properties.text-anchor
+  - css.properties.text-rendering
+  - css.properties.vector-effect
+  - css.properties.x
+  - css.properties.y
+  - svg.elements.script.type.module

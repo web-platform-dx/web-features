@@ -3,3 +3,12 @@ description: CSS nesting allows for shorter selectors, easier reading, and more 
 spec: https://drafts.csswg.org/css-nesting-1/
 group: css
 caniuse: css-nesting
+status:
+  compute_from: css.selectors.nesting
+compat_features:
+  - api.CSSStyleRule.cssRules
+  - api.CSSStyleRule.deleteRule
+  - api.CSSStyleRule.insertRule
+  - api.CSSNestedDeclarations
+  - api.CSSNestedDeclarations.style
+  - css.selectors.nesting
