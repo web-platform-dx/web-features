@@ -1,6 +1,7 @@
 name: CORS
 description: Cross-Origin Resource Sharing is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources. Also known as CORS.
 spec: https://fetch.spec.whatwg.org/#http-cors-protocol
+group: security
 status:
   compute_from: http.headers.Access-Control-Allow-Origin
 compat_features:
