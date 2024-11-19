@@ -2,6 +2,8 @@ name: WebRTC statistics
 description: The `RTCPeerConnection.getStats()`, `RTCRtpSender.getStats()`, and `RTCRtpReceiver.getStats()` methods return detailed information about the status, performance, network, and media for a given WebRTC connection.
 spec: https://w3c.github.io/webrtc-stats/
 group: webrtc
+status:
+  compute_from: api.RTCPeerConnection.getStats.returns_promise
 compat_features:
   - api.RTCPeerConnection.getStats
   - api.RTCPeerConnection.getStats.returns_promise
