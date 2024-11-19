@@ -2,3 +2,38 @@ name: Push messages
 description: The Push API subscribes to and receives server-initiated messages. Subscribers receive pushed messages in the background, even after periods inactive or offline.
 spec: https://w3c.github.io/push-api/
 caniuse: push-api
+status:
+  compute_from: api.PushManager
+compat_features:
+  - api.PushEvent
+  - api.PushEvent.PushEvent
+  - api.PushEvent.data
+  - api.PushManager
+  - api.PushManager.getSubscription
+  - api.PushManager.permissionState
+  - api.PushManager.subscribe
+  - api.PushManager.supportedContentEncodings_static
+  - api.PushMessageData
+  - api.PushMessageData.arrayBuffer
+  - api.PushMessageData.blob
+  - api.PushMessageData.bytes
+  - api.PushMessageData.json
+  - api.PushMessageData.text
+  - api.PushSubscription
+  - api.PushSubscription.endpoint
+  - api.PushSubscription.expirationTime
+  - api.PushSubscription.getKey
+  - api.PushSubscription.options
+  - api.PushSubscription.toJSON
+  - api.PushSubscription.unsubscribe
+  - api.PushSubscriptionChangeEvent
+  - api.PushSubscriptionChangeEvent.PushSubscriptionChangeEvent
+  - api.PushSubscriptionChangeEvent.newSubscription
+  - api.PushSubscriptionChangeEvent.oldSubscription
+  - api.PushSubscriptionOptions
+  - api.PushSubscriptionOptions.applicationServerKey
+  - api.PushSubscriptionOptions.userVisibleOnly
+  - api.ServiceWorkerGlobalScope.push_event
+  - api.ServiceWorkerGlobalScope.pushsubscriptionchange_event
+  - api.ServiceWorkerRegistration
+  - api.ServiceWorkerRegistration.pushManager
