@@ -1,4 +1,4 @@
-draft_date: 2024-11-13
+draft_date: 2024-11-19
 name: Fetch Standard
 description: TODO
 spec: https://fetch.spec.whatwg.org/
@@ -19,7 +19,6 @@ compat_features:
   - http.headers.Access-Control-Max-Age
   - http.headers.Access-Control-Request-Headers
   - http.headers.Access-Control-Request-Method
-  - http.headers.Authorization.authorization_removed_cross_origin
   - http.headers.Cross-Origin-Resource-Policy
   - http.headers.Sec-Purpose
   - http.headers.Sec-Purpose.prefetch
@@ -108,5 +107,7 @@ compat_features:
 # - Abortable fetch:
 #   - api.Request.signal
 #   - api.fetch.init_signal_parameter
+# - HTTP authentication:
+#   - http.headers.Authorization.authorization_removed_cross_origin
 # - HTTP/1.1:
 #   - http.headers.Origin
