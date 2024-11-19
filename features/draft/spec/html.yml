@@ -1,4 +1,4 @@
-draft_date: 2024-11-18
+draft_date: 2024-11-19
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -257,40 +257,17 @@ compat_features:
   - api.TrackEvent
   - api.TrackEvent.TrackEvent
   - api.TrackEvent.track
-  - api.Window
-  - api.Window.DOMContentLoaded_event
   - api.Window.alert
-  - api.Window.blur_event
-  - api.Window.close
-  - api.Window.closed
   - api.Window.confirm
-  - api.Window.document
-  - api.Window.error_event
-  - api.Window.focus
-  - api.Window.focus_event
-  - api.Window.frameElement
-  - api.Window.frames
-  - api.Window.history
-  - api.Window.length
-  - api.Window.load_event
-  - api.Window.name
-  - api.Window.open
   - api.Window.open.features_parameter_attributionsrc
   - api.Window.open.features_parameter_popup
   - api.Window.open.once_per_event
   - api.Window.open.relative-multi-screen
-  - api.Window.opener
   - api.Window.originAgentCluster
-  - api.Window.parent
-  - api.Window.popstate_event
   - api.Window.postMessage.transfer_parameter
   - api.Window.prompt
   - api.Window.rejectionhandled_event
-  - api.Window.self
-  - api.Window.stop
-  - api.Window.top
   - api.Window.unhandledrejection_event
-  - api.Window.window
   - api.Worker
   - api.Worker.Worker
   - api.Worker.Worker.mime_checks
@@ -345,7 +322,6 @@ compat_features:
   - html.elements.a.hreftranslate
   - html.elements.a.implicit_noopener
   - html.elements.a.ping
-  - html.elements.a.target.unfencedTop
   - html.elements.a.text_fragments
   - html.elements.area.download
   - html.elements.area.ping
@@ -354,8 +330,6 @@ compat_features:
   - html.elements.dd
   - html.elements.dl
   - html.elements.dt
-  - html.elements.fencedframe.height
-  - html.elements.fencedframe.width
   - html.elements.form.autocomplete.new-password
   - html.elements.form.autocomplete.one-time-code
   - html.elements.form.autocomplete.webauthn
@@ -451,7 +425,6 @@ compat_features:
   - http.status.103
   - http.status.103.preconnect
   - http.status.103.preload
-  - javascript.builtins.Promise.incumbent_settings_object_tracking
   - javascript.operators.import_meta.resolve
 
 # The following features in the spec are already part of web-features:
@@ -697,6 +670,7 @@ compat_features:
 #   - api.HTMLElement.hidden
 #   - api.HTMLElement.innerText
 #   - api.HTMLElement.outerText
+#   - api.Window.document
 # - Dataset:
 #   - api.DOMStringMap
 #   - api.HTMLElement.dataset
@@ -1919,6 +1893,8 @@ compat_features:
 #   - api.History.replaceState
 #   - api.History.scrollRestoration
 #   - api.History.state
+#   - api.Window.history
+#   - api.Window.popstate_event
 # - createImageBitmap:
 #   - api.ImageBitmap
 #   - api.ImageBitmap.close
@@ -2129,6 +2105,27 @@ compat_features:
 #   - api.VisibilityStateEntry.entryType
 #   - api.VisibilityStateEntry.name
 #   - api.VisibilityStateEntry.startTime
+# - Window:
+#   - api.Window
+#   - api.Window.DOMContentLoaded_event
+#   - api.Window.blur_event
+#   - api.Window.close
+#   - api.Window.closed
+#   - api.Window.error_event
+#   - api.Window.focus
+#   - api.Window.focus_event
+#   - api.Window.frameElement
+#   - api.Window.frames
+#   - api.Window.length
+#   - api.Window.load_event
+#   - api.Window.name
+#   - api.Window.open
+#   - api.Window.opener
+#   - api.Window.parent
+#   - api.Window.self
+#   - api.Window.stop
+#   - api.Window.top
+#   - api.Window.window
 # - Print events:
 #   - api.Window.afterprint_event
 #   - api.Window.beforeprint_event
@@ -2202,6 +2199,10 @@ compat_features:
 #   - css.selectors.read-write
 # - :target:
 #   - css.selectors.target
+# - <fencedframe>:
+#   - html.elements.a.target.unfencedTop
+#   - html.elements.fencedframe.height
+#   - html.elements.fencedframe.width
 # - <abbr>:
 #   - html.elements.abbr
 # - <address>:
@@ -2323,3 +2324,5 @@ compat_features:
 #   - html.elements.wbr
 # - hidden="until-found":
 #   - html.global_attributes.hidden.until-found_value
+# - Promise (initial support):
+#   - javascript.builtins.Promise.incumbent_settings_object_tracking

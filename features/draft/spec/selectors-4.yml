@@ -1,23 +1,16 @@
-draft_date: 2024-11-18
+draft_date: 2024-11-19
 name: Selectors Level 4
 description: TODO
 spec: https://drafts.csswg.org/selectors-4/
 compat_features:
   - css.selectors.attribute
-  - css.selectors.attribute.case_insensitive_modifier
-  - css.selectors.attribute.case_sensitive_modifier
   - css.selectors.child
   - css.selectors.class
-  - css.selectors.closed
   - css.selectors.descendant
-  - css.selectors.future
   - css.selectors.id
   - css.selectors.list
   - css.selectors.next-sibling
-  - css.selectors.open
-  - css.selectors.past
   - css.selectors.subsequent-sibling
-  - css.selectors.target-within
   - css.selectors.type
   - css.selectors.type.namespaces
   - css.selectors.universal
@@ -37,6 +30,10 @@ compat_features:
 #   - css.selectors.visited
 #   - css.selectors.visited.not_match_link
 #   - css.selectors.visited.privacy_measures
+# - Case-insensitive attribute selector:
+#   - css.selectors.attribute.case_insensitive_modifier
+# - Case-sensitive attribute selector:
+#   - css.selectors.attribute.case_sensitive_modifier
 # - Media element pseudo-classes:
 #   - css.selectors.buffering
 #   - css.selectors.muted
@@ -49,6 +46,9 @@ compat_features:
 #   - css.selectors.checked
 #   - css.selectors.disabled
 #   - css.selectors.enabled
+# - Open and closed selectors:
+#   - css.selectors.closed
+#   - css.selectors.open
 # - :default:
 #   - css.selectors.default
 # - :dir():
@@ -77,6 +77,9 @@ compat_features:
 #   - css.selectors.focus-visible
 # - :focus-within:
 #   - css.selectors.focus-within
+# - Time-relative pseudo-selectors:
+#   - css.selectors.future
+#   - css.selectors.past
 # - :has():
 #   - css.selectors.has
 # - Form validity pseudo-classes:
@@ -123,6 +126,8 @@ compat_features:
 #   - css.selectors.scope.dom_api
 # - :target:
 #   - css.selectors.target
+# - :target-within:
+#   - css.selectors.target-within
 # - :user-valid and :user-invalid:
 #   - css.selectors.user-invalid
 #   - css.selectors.user-valid
