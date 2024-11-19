@@ -1,0 +1,15 @@
+name: Mixed content handling
+description: When a document is loaded over HTTPS, browsers ensure that none of the document's resources are loaded over an insecure protocol. Instead, resources that the document attempts to load over an insecure protocol are either loaded over HTTPS or are blocked.
+spec: https://w3c.github.io/webappsec-mixed-content/
+group: security
+status:
+  compute_from: http.mixed-content
+compat_features:
+  - http.mixed-content
+  - http.mixed-content.allow_file_urls
+  - http.mixed-content.allow_localhost_url
+  - http.mixed-content.allow_loopback_url
+  - http.mixed-content.auto_upgrade_images
+  - http.mixed-content.auto_upgrade_video_audio
+  - http.mixed-content.block_mixed_downloads
+  - http.mixed-content.blockable_mixed_content

@@ -4,11 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "111"
-    chrome_android: "111"
-    edge: "111"
-    safari: "18"
-    safari_ios: "18"
+    chrome: "124"
+    chrome_android: "124"
+    edge: "124"
 compat_features:
   # baseline: false
   # support:
@@ -23,7 +21,6 @@ compat_features:
   - css.selectors.view-transition-new
   - css.selectors.view-transition-old
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "111"
@@ -39,3 +36,18 @@ compat_features:
   - api.ViewTransition.updateCallbackDone
   - css.properties.view-transition-name
   - css.properties.view-transition-name.none
+
+  # baseline: false
+  # support:
+  #   chrome: "123"
+  #   chrome_android: "123"
+  #   edge: "123"
+  - api.Window.pagereveal_event
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "124"
+  #   chrome_android: "124"
+  #   edge: "124"
+  - api.Window.pageswap_event
