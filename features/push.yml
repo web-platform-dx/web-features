@@ -5,6 +5,7 @@ caniuse: push-api
 status:
   compute_from: api.PushManager
 compat_features:
+  - api.Permissions.permission_push
   - api.PushEvent
   - api.PushEvent.PushEvent
   - api.PushEvent.data
