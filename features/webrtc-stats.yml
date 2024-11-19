@@ -1,8 +1,23 @@
-draft_date: 2024-09-09
-name: Identifiers for WebRTC's Statistics API
-description: TODO
+name: WebRTC statistics
+description: The `RTCPeerConnection.getStats()`, `RTCRtpSender.getStats()`, and `RTCRtpReceiver.getStats()` methods return detailed information about the status, performance, network, and media for a given WebRTC connection.
 spec: https://w3c.github.io/webrtc-stats/
+group: webrtc
+status:
+  compute_from: api.RTCPeerConnection.getStats.returns_promise
 compat_features:
+  - api.RTCPeerConnection.getStats
+  - api.RTCPeerConnection.getStats.returns_promise
+  - api.RTCPeerConnection.getStats.selector_parameter
+  - api.RTCRtpReceiver.getStats
+  - api.RTCRtpSender.getStats
+  - api.RTCStatsReport
+  - api.RTCStatsReport.@@iterator
+  - api.RTCStatsReport.entries
+  - api.RTCStatsReport.forEach
+  - api.RTCStatsReport.get
+  - api.RTCStatsReport.has
+  - api.RTCStatsReport.keys
+  - api.RTCStatsReport.size
   - api.RTCStatsReport.type_candidate-pair
   - api.RTCStatsReport.type_candidate-pair.availableOutgoingBitrate
   - api.RTCStatsReport.type_candidate-pair.bytesDiscardedOnSend
@@ -239,3 +254,4 @@ compat_features:
   - api.RTCStatsReport.type_transport.timestamp
   - api.RTCStatsReport.type_transport.tlsVersion
   - api.RTCStatsReport.type_transport.type
+  - api.RTCStatsReport.values
