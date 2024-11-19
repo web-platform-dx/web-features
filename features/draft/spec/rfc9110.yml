@@ -1,15 +1,13 @@
-draft_date: 2024-11-13
+draft_date: 2024-11-19
 name: HTTP Semantics
 description: TODO
 spec: https://httpwg.org/specs/rfc9110.html
 compat_features:
-  - http.headers.Authorization.NTLM
   - http.headers.Content-Length.cors_response_safelist
   - http.headers.Range.cors_safe
   - http.headers.Referer.length_limit_4096B
   - http.headers.Retry-After
   - http.headers.Upgrade
-  - http.headers.WWW-Authenticate.NTLM
   - http.status.308
 
 # The following features in the spec are already part of web-features:
@@ -18,7 +16,6 @@ compat_features:
 #   - http.headers.Accept-Encoding
 #   - http.headers.Accept-Language
 #   - http.headers.Accept-Ranges
-#   - http.headers.Authorization
 #   - http.headers.Connection
 #   - http.headers.Content-Encoding
 #   - http.headers.Content-Language
@@ -46,7 +43,6 @@ compat_features:
 #   - http.headers.User-Agent
 #   - http.headers.Vary
 #   - http.headers.Via
-#   - http.headers.WWW-Authenticate
 #   - http.methods.CONNECT
 #   - http.methods.DELETE
 #   - http.methods.GET
@@ -54,3 +50,8 @@ compat_features:
 #   - http.methods.OPTIONS
 #   - http.methods.POST
 #   - http.methods.PUT
+# - HTTP authentication:
+#   - http.headers.Authorization
+#   - http.headers.Authorization.NTLM
+#   - http.headers.WWW-Authenticate
+#   - http.headers.WWW-Authenticate.NTLM
