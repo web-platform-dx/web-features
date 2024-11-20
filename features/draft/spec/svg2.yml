@@ -1,35 +1,12 @@
-draft_date: 2024-11-04
+draft_date: 2024-11-20
 name: Scalable Vector Graphics (SVG) 2
 description: TODO
 spec: https://svgwg.org/svg2-draft/
 compat_features:
   - api.SVGAElement.ping
-  - css.properties.color-interpolation
-  - css.properties.color-interpolation.linearGradient
-  - css.properties.color-interpolation.sRGB
-  - css.properties.cx
-  - css.properties.cy
-  - css.properties.d
-  - css.properties.marker
-  - css.properties.marker-end
-  - css.properties.marker-mid
-  - css.properties.marker-start
   - css.properties.pointer-events
   - css.properties.pointer-events.html_elements
-  - css.properties.r
-  - css.properties.rx
-  - css.properties.ry
-  - css.properties.shape-rendering
-  - css.properties.stop-color
-  - css.properties.stop-opacity
-  - css.properties.stroke
-  - css.properties.text-anchor
-  - css.properties.text-rendering
-  - css.properties.vector-effect
-  - css.properties.x
-  - css.properties.y
   - svg.elements.a.ping
-  - svg.elements.script.type.module
 
 # The following features in the spec are already part of web-features:
 # - SVG:
@@ -304,6 +281,28 @@ compat_features:
 #   - api.SVGViewElement
 #   - api.SVGViewElement.preserveAspectRatio
 #   - api.SVGViewElement.viewBox
+#   - css.properties.color-interpolation
+#   - css.properties.color-interpolation.linearGradient
+#   - css.properties.color-interpolation.sRGB
+#   - css.properties.cx
+#   - css.properties.cy
+#   - css.properties.d
+#   - css.properties.marker
+#   - css.properties.marker-end
+#   - css.properties.marker-mid
+#   - css.properties.marker-start
+#   - css.properties.r
+#   - css.properties.rx
+#   - css.properties.ry
+#   - css.properties.shape-rendering
+#   - css.properties.stop-color
+#   - css.properties.stop-opacity
+#   - css.properties.stroke
+#   - css.properties.text-anchor
+#   - css.properties.text-rendering
+#   - css.properties.vector-effect
+#   - css.properties.x
+#   - css.properties.y
 #   - svg.elements.a
 #   - svg.elements.a.download
 #   - svg.elements.a.href
@@ -421,6 +420,7 @@ compat_features:
 #   - svg.elements.script.defer
 #   - svg.elements.script.href
 #   - svg.elements.script.type
+#   - svg.elements.script.type.module
 #   - svg.elements.script.xlink_href
 #   - svg.elements.set.systemLanguage
 #   - svg.elements.stop
