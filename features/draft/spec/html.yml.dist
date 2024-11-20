@@ -18,7 +18,6 @@ compat_features:
   #   safari_ios: "1"
   - api.Document.cookie
   - api.Document.write
-  - api.Range.createContextualFragment
   - api.Window.alert
   - api.Window.confirm
   - api.Window.prompt
@@ -1316,7 +1315,6 @@ compat_features:
   #   firefox_android: "49"
   #   safari: "10.1"
   #   safari_ios: "10.3"
-  - api.HTMLElement.toggle_event
   - api.HTMLElement.toggle_event.details_elements
 
   # baseline: high
@@ -1962,18 +1960,6 @@ compat_features:
   #   safari_ios: "17"
   - http.status.103
   - http.status.103.preconnect
-
-  # baseline: low
-  # baseline_low_date: 2024-04-16
-  # support:
-  #   chrome: "114"
-  #   chrome_android: "114"
-  #   edge: "114"
-  #   firefox: "125"
-  #   firefox_android: "125"
-  #   safari: "17"
-  #   safari_ios: "17"
-  - api.HTMLElement.beforetoggle_event
 
   # baseline: low
   # baseline_low_date: 2024-04-16
