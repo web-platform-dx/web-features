@@ -1,4 +1,4 @@
-draft_date: 2024-11-19
+draft_date: 2024-11-20
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -84,7 +84,6 @@ compat_features:
   - api.HTMLElement.accessKeyLabel
   - api.HTMLElement.autocapitalize
   - api.HTMLElement.autocorrect
-  - api.HTMLElement.beforetoggle_event
   - api.HTMLElement.beforetoggle_event.dialog_elements
   - api.HTMLElement.blur
   - api.HTMLElement.change_event
@@ -103,7 +102,6 @@ compat_features:
   - api.HTMLElement.spellcheck
   - api.HTMLElement.title
   - api.HTMLElement.togglePopover.returns_boolean
-  - api.HTMLElement.toggle_event
   - api.HTMLElement.toggle_event.details_elements
   - api.HTMLElement.toggle_event.dialog_elements
   - api.HTMLFormControlsCollection
@@ -223,7 +221,6 @@ compat_features:
   - api.PromiseRejectionEvent.reason
   - api.RadioNodeList
   - api.RadioNodeList.value
-  - api.Range.createContextualFragment
   - api.ServiceWorker.error_event
   - api.ShadowRoot.activeElement
   - api.ShadowRoot.getHTML
@@ -1026,11 +1023,13 @@ compat_features:
 # - Popover:
 #   - api.HTMLButtonElement.popoverTargetAction
 #   - api.HTMLButtonElement.popoverTargetElement
+#   - api.HTMLElement.beforetoggle_event
 #   - api.HTMLElement.beforetoggle_event.popover_elements
 #   - api.HTMLElement.hidePopover
 #   - api.HTMLElement.popover
 #   - api.HTMLElement.showPopover
 #   - api.HTMLElement.togglePopover
+#   - api.HTMLElement.toggle_event
 #   - api.HTMLElement.toggle_event.popover_elements
 #   - api.HTMLInputElement.popoverTargetAction
 #   - api.HTMLInputElement.popoverTargetElement
@@ -2079,6 +2078,8 @@ compat_features:
 #   - api.PaintRenderingContext2D.strokeStyle
 #   - api.PaintRenderingContext2D.transform
 #   - api.PaintRenderingContext2D.translate
+# - Selection:
+#   - api.Range.createContextualFragment
 # - JavaScript modules in shared workers:
 #   - api.SharedWorker.SharedWorker.ecmascript_modules
 #   - api.SharedWorker.SharedWorker.options_type_parameter
