@@ -1,58 +1,12 @@
-draft_date: 2024-11-06
+draft_date: 2024-11-20
 name: ECMAScript Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
 compat_features:
   - javascript.builtins.Array.@@species
   - javascript.builtins.Array.@@unscopables
-  - javascript.builtins.Atomics.Atomic_operations_on_non_shared_buffers
-  - javascript.builtins.Error.Error.options_cause_parameter
-  - javascript.builtins.Error.cause
-  - javascript.builtins.FinalizationRegistry.symbol_as_target
-  - javascript.builtins.Function.toString.toString_revision
-  - javascript.builtins.Map.@@species
-  - javascript.builtins.Object
-  - javascript.builtins.Object.Object
-  - javascript.builtins.Object.assign
-  - javascript.builtins.Object.constructor
-  - javascript.builtins.Object.create
-  - javascript.builtins.Object.defineProperties
-  - javascript.builtins.Object.defineProperty
-  - javascript.builtins.Object.entries
-  - javascript.builtins.Object.freeze
-  - javascript.builtins.Object.fromEntries
-  - javascript.builtins.Object.getOwnPropertyDescriptor
-  - javascript.builtins.Object.getOwnPropertyDescriptors
-  - javascript.builtins.Object.getOwnPropertyNames
-  - javascript.builtins.Object.getOwnPropertySymbols
-  - javascript.builtins.Object.getPrototypeOf
-  - javascript.builtins.Object.hasOwn
-  - javascript.builtins.Object.hasOwnProperty
-  - javascript.builtins.Object.is
-  - javascript.builtins.Object.isExtensible
-  - javascript.builtins.Object.isFrozen
-  - javascript.builtins.Object.isPrototypeOf
-  - javascript.builtins.Object.isSealed
-  - javascript.builtins.Object.keys
-  - javascript.builtins.Object.preventExtensions
-  - javascript.builtins.Object.preventExtensions.ES2015_behavior
-  - javascript.builtins.Object.propertyIsEnumerable
-  - javascript.builtins.Object.seal
-  - javascript.builtins.Object.setPrototypeOf
-  - javascript.builtins.Object.toString
-  - javascript.builtins.Object.valueOf
-  - javascript.builtins.Object.values
-  - javascript.builtins.Promise.@@species
-  - javascript.builtins.Set.@@species
-  - javascript.builtins.WeakRef.symbol_as_target
   - javascript.builtins.globalThis
   - javascript.builtins.parseInt.leading_zero_strings_as_decimal
-  - javascript.classes.private_class_fields
-  - javascript.classes.private_class_fields_in
-  - javascript.classes.private_class_methods
-  - javascript.classes.public_class_fields
-  - javascript.classes.static_class_fields
-  - javascript.classes.static_initialization_blocks
   - javascript.grammar.hashbang_comments
   - javascript.grammar.hexadecimal_escape_sequences
   - javascript.grammar.numeric_separators
@@ -64,7 +18,6 @@ compat_features:
   - javascript.grammar.unicode_escape_sequences
   - javascript.grammar.unicode_point_escapes
   - javascript.operators.await.top_level
-  - javascript.operators.class
   - javascript.operators.destructuring
   - javascript.operators.destructuring.computed_property_names
   - javascript.operators.destructuring.rest_in_arrays
@@ -75,15 +28,8 @@ compat_features:
   - javascript.operators.import_meta
   - javascript.operators.logical_and_assignment
   - javascript.operators.logical_or_assignment
-  - javascript.operators.new_target
   - javascript.operators.nullish_coalescing
   - javascript.operators.nullish_coalescing_assignment
-  - javascript.operators.object_initializer
-  - javascript.operators.object_initializer.computed_property_names
-  - javascript.operators.object_initializer.shorthand_method_names
-  - javascript.operators.object_initializer.shorthand_property_names
-  - javascript.operators.object_initializer.spread_properties
-  - javascript.operators.optional_chaining
   - javascript.operators.spread
   - javascript.operators.spread.spread_in_arrays
   - javascript.operators.spread.spread_in_function_calls
@@ -323,6 +269,7 @@ compat_features:
 #   - javascript.statements.for_of.async_iterators
 # - SharedArrayBuffer and Atomics:
 #   - javascript.builtins.Atomics
+#   - javascript.builtins.Atomics.Atomic_operations_on_non_shared_buffers
 #   - javascript.builtins.Atomics.add
 #   - javascript.builtins.Atomics.and
 #   - javascript.builtins.Atomics.compareExchange
@@ -507,14 +454,19 @@ compat_features:
 #   - javascript.builtins.Date.toTimeString
 #   - javascript.builtins.Date.toUTCString
 #   - javascript.builtins.Date.valueOf
+# - Error cause:
+#   - javascript.builtins.Error.Error.options_cause_parameter
+#   - javascript.builtins.Error.cause
 # - Weak references:
 #   - javascript.builtins.FinalizationRegistry
 #   - javascript.builtins.FinalizationRegistry.FinalizationRegistry
 #   - javascript.builtins.FinalizationRegistry.register
+#   - javascript.builtins.FinalizationRegistry.symbol_as_target
 #   - javascript.builtins.FinalizationRegistry.unregister
 #   - javascript.builtins.WeakRef
 #   - javascript.builtins.WeakRef.WeakRef
 #   - javascript.builtins.WeakRef.deref
+#   - javascript.builtins.WeakRef.symbol_as_target
 # - Float16Array:
 #   - javascript.builtins.Float16Array.Float16Array
 # - Functions:
@@ -531,6 +483,7 @@ compat_features:
 #   - javascript.builtins.Function.name.configurable_true
 #   - javascript.builtins.Function.name.inferred_names
 #   - javascript.builtins.Function.toString
+#   - javascript.builtins.Function.toString.toString_revision
 #   - javascript.functions
 #   - javascript.functions.arguments
 #   - javascript.functions.arguments.@@iterator
@@ -657,6 +610,7 @@ compat_features:
 # - Map (initial support):
 #   - javascript.builtins.Map
 #   - javascript.builtins.Map.@@iterator
+#   - javascript.builtins.Map.@@species
 #   - javascript.builtins.Map.Map
 #   - javascript.builtins.Map.Map.iterable_allowed
 #   - javascript.builtins.Map.Map.null_allowed
@@ -674,8 +628,47 @@ compat_features:
 # - Array grouping:
 #   - javascript.builtins.Map.groupBy
 #   - javascript.builtins.Object.groupBy
+# - Object:
+#   - javascript.builtins.Object
+#   - javascript.builtins.Object.Object
+#   - javascript.builtins.Object.assign
+#   - javascript.builtins.Object.constructor
+#   - javascript.builtins.Object.create
+#   - javascript.builtins.Object.defineProperties
+#   - javascript.builtins.Object.defineProperty
+#   - javascript.builtins.Object.entries
+#   - javascript.builtins.Object.freeze
+#   - javascript.builtins.Object.fromEntries
+#   - javascript.builtins.Object.getOwnPropertyDescriptor
+#   - javascript.builtins.Object.getOwnPropertyDescriptors
+#   - javascript.builtins.Object.getOwnPropertyNames
+#   - javascript.builtins.Object.getOwnPropertySymbols
+#   - javascript.builtins.Object.getPrototypeOf
+#   - javascript.builtins.Object.hasOwn
+#   - javascript.builtins.Object.hasOwnProperty
+#   - javascript.builtins.Object.is
+#   - javascript.builtins.Object.isExtensible
+#   - javascript.builtins.Object.isFrozen
+#   - javascript.builtins.Object.isPrototypeOf
+#   - javascript.builtins.Object.isSealed
+#   - javascript.builtins.Object.keys
+#   - javascript.builtins.Object.preventExtensions
+#   - javascript.builtins.Object.preventExtensions.ES2015_behavior
+#   - javascript.builtins.Object.propertyIsEnumerable
+#   - javascript.builtins.Object.seal
+#   - javascript.builtins.Object.setPrototypeOf
+#   - javascript.builtins.Object.toString
+#   - javascript.builtins.Object.valueOf
+#   - javascript.builtins.Object.values
+#   - javascript.operators.object_initializer
+#   - javascript.operators.object_initializer.computed_property_names
+#   - javascript.operators.object_initializer.shorthand_method_names
+#   - javascript.operators.object_initializer.shorthand_property_names
+#   - javascript.operators.object_initializer.spread_properties
+#   - javascript.operators.optional_chaining
 # - Promise (initial support):
 #   - javascript.builtins.Promise
+#   - javascript.builtins.Promise.@@species
 #   - javascript.builtins.Promise.Promise
 #   - javascript.builtins.Promise.all
 #   - javascript.builtins.Promise.catch
@@ -775,6 +768,7 @@ compat_features:
 # - Set (initial support):
 #   - javascript.builtins.Set
 #   - javascript.builtins.Set.@@iterator
+#   - javascript.builtins.Set.@@species
 #   - javascript.builtins.Set.Set
 #   - javascript.builtins.Set.Set.iterable_allowed
 #   - javascript.builtins.Set.Set.null_allowed
@@ -901,7 +895,15 @@ compat_features:
 #   - javascript.classes
 #   - javascript.classes.constructor
 #   - javascript.classes.extends
+#   - javascript.classes.private_class_fields
+#   - javascript.classes.private_class_fields_in
+#   - javascript.classes.private_class_methods
+#   - javascript.classes.public_class_fields
 #   - javascript.classes.static
+#   - javascript.classes.static_class_fields
+#   - javascript.classes.static_initialization_blocks
+#   - javascript.operators.class
+#   - javascript.operators.new_target
 #   - javascript.operators.super
 #   - javascript.statements.class
 # - JavaScript modules in workers:

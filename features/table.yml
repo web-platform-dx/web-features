@@ -53,16 +53,26 @@ compat_features:
   - html.elements.td.colspan
   - html.elements.td.headers
   - html.elements.td.rowspan
-  # Excluded because of a non-real value
-  # - html.elements.td.rowspan.rowspan_zero
+  - html.elements.td.rowspan.rowspan_zero
   - html.elements.tfoot
   - html.elements.th
   - html.elements.th.abbr
   - html.elements.th.colspan
   - html.elements.th.headers
   - html.elements.th.rowspan
-  # Excluded because of a non-real value
-  # - html.elements.th.rowspan.rowspan_zero
+  - html.elements.th.rowspan.rowspan_zero
   - html.elements.th.scope
   - html.elements.thead
   - html.elements.tr
+  - css.properties.border-collapse
+  - css.properties.border-collapse.collapse
+  - css.properties.border-collapse.separate
+  - css.properties.border-spacing
+  - css.properties.caption-side
+  - css.properties.caption-side.bottom
+  - css.properties.caption-side.bottom-outside
+  - css.properties.caption-side.top
+  - css.properties.caption-side.top-outside
+  - css.properties.caption-side.writing-mode_relative_values
+  - css.properties.empty-cells
+  - css.properties.table-layout
