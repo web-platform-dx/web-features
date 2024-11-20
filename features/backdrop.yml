@@ -1,0 +1,10 @@
+name: "::backdrop"
+description: The `::backdrop` CSS pseudo-element is a box underneath an element in the top layer, such as a `<dialog>`. It can be used to create obscuring effects distinguishing a modal element from the elements underneath.
+spec: https://drafts.csswg.org/css-position-4/#backdrop
+group: selectors
+status:
+  compute_from: css.selectors.backdrop
+compat_features:
+  - css.selectors.backdrop
+  - css.selectors.backdrop.dialog
+  - css.selectors.backdrop.inherit_from_originating_element

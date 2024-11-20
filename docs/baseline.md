@@ -121,7 +121,7 @@ This is but one of several possible stories to help keep in mind the needs and c
 The WebDX community group, through the [web-platform-dx/web-features-set owners group](../GOVERNANCE.md), maintains this document.
 Based on WebDX community group research, the web-features owners group decides matters such as the core browser set, releases, editorial overrides, and so on.
 
-The status definition is due for review by the governance group on 7 November 2024.
+The status definition is due for review by the governance group on 1 June 2025.
 
 ## Status definition
 

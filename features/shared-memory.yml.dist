@@ -57,3 +57,9 @@ compat_features:
   - javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
   - javascript.builtins.SharedArrayBuffer.byteLength
   - javascript.builtins.SharedArrayBuffer.slice
+
+  # baseline: false
+  # support:
+  #   firefox: "79"
+  #   firefox_android: "79"
+  - javascript.builtins.Atomics.Atomic_operations_on_non_shared_buffers

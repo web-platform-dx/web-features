@@ -1,0 +1,14 @@
+name: navigator.share()
+description: The `navigator.share()` method invokes the device's native sharing mechanism and passes text, links, files, and other content to share targets.
+spec: https://w3c.github.io/web-share/
+status:
+  compute_from: api.Navigator.share
+compat_features:
+  - api.Navigator.canShare
+  - api.Navigator.canShare.data_files_parameter
+  - api.Navigator.canShare.data_text_parameter
+  - api.Navigator.share
+  - api.Navigator.share.data_files_parameter
+  - api.Navigator.share.data_text_parameter
+  - html.elements.iframe.allow.web-share
+  - http.headers.Permissions-Policy.web-share

@@ -2,26 +2,114 @@ name: MathML
 description: MathML, or the Mathematical Markup Language, describes mathematical notation, such as expressions and formulas. Also known as MathML Core.
 spec: https://w3c.github.io/mathml-core/
 caniuse: mathml
-# MathML has evolved for more than 20 years and computing its status from BCD is
-# challenging. To represent basic support for MathML, the following statuses
-# match the earliest support claimed by caniuse.com or BCD:
-# https://caniuse.com/mathml
-# https://developer.mozilla.org/en-US/docs/Web/MathML/Element/math
-#
-# Note that there are minor disagreements between sources about initial support
-# in different browsers. Where either source claims partial support, the
-# versions were increased. Following this method, Firefox was increased due to
-# BCD, and Safari due to caniuse.com.
-#
-# TODO: Partial support in Firefox <4 and Safari <10, with notes.
 status:
-  baseline: low
-  baseline_low_date: 2023-01-12
-  support:
-    chrome: "109"
-    chrome_android: "109"
-    edge: "109"
-    firefox: "4"
-    firefox_android: "4"
-    safari: "10"
-    safari_ios: "10"
+  compute_from: mathml.elements.math
+compat_features:
+  - api.MathMLElement
+  - api.MathMLElement.attributeStyleMap
+  - api.MathMLElement.blur
+  - api.MathMLElement.focus
+  - api.MathMLElement.nonce
+  - api.MathMLElement.style
+  - api.MathMLElement.tabIndex
+  - css.properties.display.math
+  - css.properties.font-size.math
+  - css.properties.math-depth
+  - css.properties.math-shift
+  - css.properties.math-style
+  - css.properties.text-transform.math-auto
+  - mathml.attribute_values.named_space
+  - mathml.attribute_values.nonzero_unitless_values
+  - mathml.elements.annotation
+  - mathml.elements.annotation-xml
+  - mathml.elements.math
+  - mathml.elements.math.display
+  - mathml.elements.menclose
+  - mathml.elements.menclose.notation
+  - mathml.elements.menclose.notation.actuarial
+  - mathml.elements.menclose.notation.bottom
+  - mathml.elements.menclose.notation.box
+  - mathml.elements.menclose.notation.circle
+  - mathml.elements.menclose.notation.downdiagonalstrike
+  - mathml.elements.menclose.notation.horizontalstrike
+  - mathml.elements.menclose.notation.left
+  - mathml.elements.menclose.notation.longdiv
+  - mathml.elements.menclose.notation.madruwb
+  - mathml.elements.menclose.notation.phasorangle
+  - mathml.elements.menclose.notation.right
+  - mathml.elements.menclose.notation.roundedbox
+  - mathml.elements.menclose.notation.top
+  - mathml.elements.menclose.notation.updiagonalarrow
+  - mathml.elements.menclose.notation.updiagonalstrike
+  - mathml.elements.menclose.notation.verticalstrike
+  - mathml.elements.merror
+  - mathml.elements.mfrac
+  - mathml.elements.mfrac.linethickness
+  - mathml.elements.mi
+  - mathml.elements.mi.mathvariant
+  - mathml.elements.mmultiscripts
+  - mathml.elements.mn
+  - mathml.elements.mo
+  - mathml.elements.mo.accent
+  - mathml.elements.mo.form
+  - mathml.elements.mo.largeop
+  - mathml.elements.mo.lspace
+  - mathml.elements.mo.maxsize
+  - mathml.elements.mo.minsize
+  - mathml.elements.mo.movablelimits
+  - mathml.elements.mo.rspace
+  - mathml.elements.mo.stretchy
+  - mathml.elements.mo.symmetric
+  - mathml.elements.mover
+  - mathml.elements.mover.accent
+  - mathml.elements.mpadded
+  - mathml.elements.mpadded.depth
+  - mathml.elements.mpadded.height
+  - mathml.elements.mpadded.lspace
+  - mathml.elements.mpadded.relative_values
+  - mathml.elements.mpadded.voffset
+  - mathml.elements.mpadded.width
+  - mathml.elements.mphantom
+  - mathml.elements.mprescripts
+  - mathml.elements.mroot
+  - mathml.elements.mrow
+  - mathml.elements.ms
+  - mathml.elements.mspace
+  - mathml.elements.mspace.depth
+  - mathml.elements.mspace.height
+  - mathml.elements.mspace.width
+  - mathml.elements.msqrt
+  - mathml.elements.mstyle
+  - mathml.elements.msub
+  - mathml.elements.msubsup
+  - mathml.elements.msup
+  - mathml.elements.mtable
+  - mathml.elements.mtable.align
+  - mathml.elements.mtable.columnalign
+  - mathml.elements.mtable.columnlines
+  - mathml.elements.mtable.columnspacing
+  - mathml.elements.mtable.frame
+  - mathml.elements.mtable.framespacing
+  - mathml.elements.mtable.rowalign
+  - mathml.elements.mtable.rowlines
+  - mathml.elements.mtable.rowspacing
+  - mathml.elements.mtable.width
+  - mathml.elements.mtd
+  - mathml.elements.mtd.columnalign
+  - mathml.elements.mtd.columnspan
+  - mathml.elements.mtd.rowalign
+  - mathml.elements.mtd.rowspan
+  - mathml.elements.mtext
+  - mathml.elements.mtr
+  - mathml.elements.mtr.columnalign
+  - mathml.elements.mtr.rowalign
+  - mathml.elements.munder
+  - mathml.elements.munder.accentunder
+  - mathml.elements.munderover
+  - mathml.elements.munderover.accent
+  - mathml.elements.munderover.accentunder
+  - mathml.elements.semantics
+  - mathml.global_attributes.dir
+  - mathml.global_attributes.displaystyle
+  - mathml.global_attributes.href
+  - mathml.global_attributes.scriptlevel

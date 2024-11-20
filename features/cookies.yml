@@ -1,0 +1,19 @@
+name: Cookies
+description: The `Set-Cookie` HTTP header stores limited amounts of data that persist across request and response, creating shared state between the browser and server.
+spec: https://httpwg.org/specs/rfc6265.html
+status:
+  compute_from: http.headers.Cookie
+compat_features:
+  - api.Document.cookie
+  - http.headers.Cookie
+  - http.headers.Set-Cookie
+  - http.headers.Set-Cookie.HttpOnly
+  - http.headers.Set-Cookie.Max-Age
+  - http.headers.Set-Cookie.SameSite
+  - http.headers.Set-Cookie.SameSite.Lax
+  - http.headers.Set-Cookie.SameSite.Lax_default
+  - http.headers.Set-Cookie.SameSite.None
+  - http.headers.Set-Cookie.SameSite.Strict
+  - http.headers.Set-Cookie.SameSite.none_requires_secure
+  - http.headers.Set-Cookie.SameSite.schemeful
+  - http.headers.Set-Cookie.cookie_prefixes

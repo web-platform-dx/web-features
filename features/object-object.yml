@@ -1,0 +1,44 @@
+name: Object
+description: Objects in JavaScript are collections of key-value pairs.
+spec: https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object-objects
+status:
+  compute_from: javascript.builtins.Object
+compat_features:
+  - javascript.builtins.Object
+  - javascript.builtins.Object.Object
+  - javascript.builtins.Object.assign
+  - javascript.builtins.Object.constructor
+  - javascript.builtins.Object.create
+  - javascript.builtins.Object.defineProperties
+  - javascript.builtins.Object.defineProperty
+  - javascript.builtins.Object.entries
+  - javascript.builtins.Object.freeze
+  - javascript.builtins.Object.fromEntries
+  - javascript.builtins.Object.getOwnPropertyDescriptor
+  - javascript.builtins.Object.getOwnPropertyDescriptors
+  - javascript.builtins.Object.getOwnPropertyNames
+  - javascript.builtins.Object.getOwnPropertySymbols
+  - javascript.builtins.Object.getPrototypeOf
+  - javascript.builtins.Object.hasOwn
+  - javascript.builtins.Object.hasOwnProperty
+  - javascript.builtins.Object.is
+  - javascript.builtins.Object.isExtensible
+  - javascript.builtins.Object.isFrozen
+  - javascript.builtins.Object.isPrototypeOf
+  - javascript.builtins.Object.isSealed
+  - javascript.builtins.Object.keys
+  - javascript.builtins.Object.preventExtensions
+  - javascript.builtins.Object.preventExtensions.ES2015_behavior
+  - javascript.builtins.Object.propertyIsEnumerable
+  - javascript.builtins.Object.seal
+  - javascript.builtins.Object.setPrototypeOf
+  - javascript.builtins.Object.toString
+  - javascript.builtins.Object.valueOf
+  - javascript.builtins.Object.values
+  - javascript.operators.object_initializer
+  - javascript.operators.object_initializer.computed_property_names
+  - javascript.operators.object_initializer.shorthand_method_names
+  - javascript.operators.object_initializer.shorthand_property_names
+  - javascript.operators.object_initializer.spread_properties
+  - javascript.operators.optional_chaining
+  - javascript.grammar.shorthand_object_literals
