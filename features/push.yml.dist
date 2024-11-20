@@ -5,8 +5,8 @@ status:
   baseline: low
   baseline_low_date: 2023-03-27
   support:
-    chrome: "42"
-    chrome_android: "42"
+    chrome: "50"
+    chrome_android: "50"
     edge: "17"
     firefox: "44"
     firefox_android: "48"
@@ -39,7 +39,6 @@ compat_features:
   - api.ServiceWorkerGlobalScope.push_event
   - api.ServiceWorkerRegistration.pushManager
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2023-03-27
   # support:
@@ -84,6 +83,7 @@ compat_features:
   #   safari_ios: "16.4"
   - api.PushManager.permissionState
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2023-03-27
   # support:
