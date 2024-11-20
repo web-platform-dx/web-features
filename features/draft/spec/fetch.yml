@@ -1,4 +1,4 @@
-draft_date: 2024-11-19
+draft_date: 2024-11-20
 name: Fetch Standard
 description: TODO
 spec: https://fetch.spec.whatwg.org/
@@ -7,18 +7,6 @@ compat_features:
   - api.Request.Request.init_keepalive_parameter
   - api.Request.duplex
   - api.XMLHttpRequest.authorization_removed_cross_origin
-  - http.headers.Access-Control-Allow-Credentials
-  - http.headers.Access-Control-Allow-Headers
-  - http.headers.Access-Control-Allow-Headers.authorization_not_covered_by_wildcard
-  - http.headers.Access-Control-Allow-Headers.wildcard
-  - http.headers.Access-Control-Allow-Methods
-  - http.headers.Access-Control-Allow-Methods.wildcard
-  - http.headers.Access-Control-Allow-Origin
-  - http.headers.Access-Control-Expose-Headers
-  - http.headers.Access-Control-Expose-Headers.wildcard
-  - http.headers.Access-Control-Max-Age
-  - http.headers.Access-Control-Request-Headers
-  - http.headers.Access-Control-Request-Method
   - http.headers.Cross-Origin-Resource-Policy
   - http.headers.Sec-Purpose
   - http.headers.Sec-Purpose.prefetch
@@ -107,6 +95,19 @@ compat_features:
 # - Abortable fetch:
 #   - api.Request.signal
 #   - api.fetch.init_signal_parameter
+# - CORS:
+#   - http.headers.Access-Control-Allow-Credentials
+#   - http.headers.Access-Control-Allow-Headers
+#   - http.headers.Access-Control-Allow-Headers.authorization_not_covered_by_wildcard
+#   - http.headers.Access-Control-Allow-Headers.wildcard
+#   - http.headers.Access-Control-Allow-Methods
+#   - http.headers.Access-Control-Allow-Methods.wildcard
+#   - http.headers.Access-Control-Allow-Origin
+#   - http.headers.Access-Control-Expose-Headers
+#   - http.headers.Access-Control-Expose-Headers.wildcard
+#   - http.headers.Access-Control-Max-Age
+#   - http.headers.Access-Control-Request-Headers
+#   - http.headers.Access-Control-Request-Method
 # - HTTP authentication:
 #   - http.headers.Authorization.authorization_removed_cross_origin
 # - HTTP/1.1:

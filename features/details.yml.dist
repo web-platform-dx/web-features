@@ -42,3 +42,16 @@ compat_features:
   #   safari_ios: "6"
   - html.elements.details
   - html.elements.details.open
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "36"
+  #   chrome_android: "36"
+  #   edge: "79"
+  #   firefox: "49"
+  #   firefox_android: "49"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.HTMLElement.toggle_event
