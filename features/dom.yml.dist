@@ -169,7 +169,6 @@ compat_features:
   - api.Comment
   - api.Document.adoptNode
   - api.Document.characterSet
-  - api.Document.createExpression
   - api.Document.createNodeIterator
   - api.DocumentFragment
   - api.DocumentType
@@ -1197,10 +1196,3 @@ compat_features:
   #   firefox_android: "50"
   - api.Document.createElement.options_parameter
   - api.Document.createElementNS.options_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "74"
-  #   chrome_android: "74"
-  #   edge: "79"
-  - api.Document.featurePolicy

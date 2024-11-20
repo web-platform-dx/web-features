@@ -2,6 +2,12 @@ name: Touch events
 description: Touch events `touchstart`, `touchmove`, `touchend`, and `touchcancel` fire when users interact with a touch-sensitive surface, such as a screen or drawing tablet. These events are similar to mouse events.
 spec: https://w3c.github.io/touch-events/
 caniuse: touch
+status:
+  compute_from:
+    - api.Element.touchcancel_event
+    - api.Element.touchend_event
+    - api.Element.touchmove_event
+    - api.Element.touchstart_event
 compat_features:
   - api.Element.touchcancel_event
   - api.Element.touchend_event
