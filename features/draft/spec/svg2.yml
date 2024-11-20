@@ -1,10 +1,12 @@
-draft_date: 2024-11-15
+draft_date: 2024-11-20
 name: Scalable Vector Graphics (SVG) 2
 description: TODO
 spec: https://svgwg.org/svg2-draft/
 compat_features:
+  - api.SVGAElement.ping
   - css.properties.pointer-events
   - css.properties.pointer-events.html_elements
+  - svg.elements.a.ping
 
 # The following features in the spec are already part of web-features:
 # - SVG:
@@ -12,7 +14,6 @@ compat_features:
 #   - api.SVGAElement.download
 #   - api.SVGAElement.href
 #   - api.SVGAElement.hreflang
-#   - api.SVGAElement.ping
 #   - api.SVGAElement.referrerPolicy
 #   - api.SVGAElement.rel
 #   - api.SVGAElement.relList
@@ -306,7 +307,6 @@ compat_features:
 #   - svg.elements.a.download
 #   - svg.elements.a.href
 #   - svg.elements.a.hreflang
-#   - svg.elements.a.ping
 #   - svg.elements.a.referrerpolicy
 #   - svg.elements.a.referrerpolicy.no-referrer-when-downgrade
 #   - svg.elements.a.referrerpolicy.origin-when-cross-origin
