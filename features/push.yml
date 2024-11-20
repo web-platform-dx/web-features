@@ -3,7 +3,7 @@ description: The Push API subscribes to and receives server-initiated messages. 
 spec: https://w3c.github.io/push-api/
 caniuse: push-api
 status:
-  compute_from: api.PushManager
+  compute_from: api.PushMessageData
 compat_features:
   - api.Permissions.permission_push
   - api.PushEvent
