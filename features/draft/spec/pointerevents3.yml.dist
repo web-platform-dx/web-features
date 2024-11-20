@@ -3,37 +3,8 @@
 
 status:
   baseline: false
-  support:
-    chrome: "128"
-    chrome_android: "128"
-    edge: "128"
+  support: {}
 compat_features:
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "1"
-  #   safari_ios: "1"
-  - api.Element
-
-  # baseline: high
-  # baseline_low_date: 2019-09-19
-  # baseline_high_date: 2022-03-19
-  # support:
-  #   chrome: "36"
-  #   chrome_android: "36"
-  #   edge: "12"
-  #   firefox: "52"
-  #   firefox_android: "52"
-  #   safari: "13"
-  #   safari_ios: "9.3"
-  - css.properties.touch-action
-
   # baseline: high
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
@@ -143,6 +114,18 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "86"
+  #   chrome_android: "86"
+  #   edge: "86"
+  #   firefox: "131"
+  #   firefox_android: "131"
+  - api.PointerEvent.PointerEvent.options_altitudeAngle_parameter
+  - api.PointerEvent.PointerEvent.options_azimuthAngle_parameter
+  - api.PointerEvent.altitudeAngle
+  - api.PointerEvent.azimuthAngle
+
+  # baseline: false
+  # support:
   #   chrome: "58"
   #   chrome_android: "58"
   #   edge: "79"
@@ -158,16 +141,12 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "86"
-  #   chrome_android: "86"
-  #   edge: "86"
-  - api.PointerEvent.altitudeAngle
-  - api.PointerEvent.azimuthAngle
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
   #   chrome: "128"
   #   chrome_android: "128"
   #   edge: "128"
   - api.PointerEvent.persistentDeviceId
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.PointerEvent.pointerType.fractional_coordinates

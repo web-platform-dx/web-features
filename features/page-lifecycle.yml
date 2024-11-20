@@ -1,0 +1,7 @@
+name: Page lifecycle
+description: "The page lifecycle API helps you safely handle page suspensions or discards from memory. The `freeze` and `resume` events fire when the browser suspends or resumes a page from memory while the `document.wasDiscarded` property reports whether the page was reloaded after being dropped."
+spec: https://wicg.github.io/page-lifecycle/
+compat_features:
+  - api.Document.freeze_event
+  - api.Document.resume_event
+  - api.Document.wasDiscarded

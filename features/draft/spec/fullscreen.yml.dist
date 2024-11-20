@@ -3,23 +3,16 @@
 
 status:
   baseline: false
-  support:
-    chrome: "88"
-    chrome_android: "88"
-    edge: "88"
+  support: {}
 compat_features:
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
+  # baseline: false
   # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "1"
-  #   safari_ios: "1"
-  - api.Element
+  #   chrome: "62"
+  #   chrome_android: "62"
+  #   edge: "79"
+  #   firefox: "80"
+  #   firefox_android: "80"
+  - html.elements.iframe.allow.fullscreen
 
   # baseline: false
   # support:
@@ -29,10 +22,15 @@ compat_features:
   #   safari: "16.4"
   - api.Element.requestFullscreen.options_navigationUI_parameter
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "88"
   #   chrome_android: "88"
   #   edge: "88"
   - http.headers.Permissions-Policy.fullscreen
+
+  # baseline: false
+  # support:
+  #   firefox: "64"
+  #   firefox_android: "64"
+  - css.selectors.fullscreen.all_elements

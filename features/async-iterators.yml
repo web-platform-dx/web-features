@@ -1,0 +1,13 @@
+name: Async iterators and the for await..of loop
+description: Asynchronous iterator objects, such as those returned by promises or generator functions, are iterable with the `for await .. of` loop.
+group: iterators
+snapshot: ecmascript-2018
+spec:
+  - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-asynciteratorprototype
+  - https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#sec-for-in-and-for-of-statements
+compat_features:
+  - javascript.builtins.AsyncIterator
+  - javascript.builtins.AsyncIterator.@@asyncIterator
+  - javascript.builtins.Symbol.asyncIterator
+  - javascript.statements.for_await_of
+  - javascript.statements.for_of.async_iterators

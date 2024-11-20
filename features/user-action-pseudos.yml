@@ -1,0 +1,12 @@
+name: User action pseudo-classes
+description: The `:active`, `:focus`, and `:hover` CSS pseudo-classes match elements based on how users are interacting with them.
+spec:
+  - https://drafts.csswg.org/selectors-4/#the-hover-pseudo
+  - https://drafts.csswg.org/selectors-4/#the-active-pseudo
+  - https://drafts.csswg.org/selectors-4/#the-focus-pseudo
+group: selectors
+compat_features:
+  - css.selectors.active
+  - css.selectors.active.non_a_elements
+  - css.selectors.focus
+  - css.selectors.hover

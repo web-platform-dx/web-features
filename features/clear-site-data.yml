@@ -1,0 +1,14 @@
+name: Clearing site data
+description: The `Clear-Site-Data` header deletes browsing data (such as cookies, storage, or cache) associated with the requesting website.
+spec: https://w3c.github.io/webappsec-clear-site-data/
+status:
+  compute_from: http.headers.Clear-Site-Data.wildcard
+compat_features:
+  - http.headers.Clear-Site-Data
+  - http.headers.Clear-Site-Data.cache
+  - http.headers.Clear-Site-Data.clientHints
+  - http.headers.Clear-Site-Data.cookies
+  - http.headers.Clear-Site-Data.executionContexts
+  - http.headers.Clear-Site-Data.secure_context_required
+  - http.headers.Clear-Site-Data.storage
+  - http.headers.Clear-Site-Data.wildcard

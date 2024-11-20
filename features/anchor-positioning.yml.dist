@@ -190,5 +190,12 @@ compat_features:
   - css.properties.position-area.y-start
 
   # baseline: false
+  # support:
+  #   chrome: "131"
+  - css.properties.anchor-scope
+  - css.properties.anchor-scope.all
+  - css.properties.anchor-scope.none
+
+  # baseline: false
   # support: {}
   - css.properties.position-anchor.auto

@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "117"
-    chrome_android: "117"
-    edge: "117"
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -17,10 +14,22 @@ compat_features:
   #   firefox_android: "115"
   - http.headers.Sec-Purpose
 
-  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "110"
+  #   chrome_android: "110"
+  #   edge: "110"
+  - http.headers.Sec-Purpose.speculationrules
+
   # baseline: false
   # support:
   #   chrome: "117"
   #   chrome_android: "117"
   #   edge: "117"
   - api.PerformanceResourceTiming.deliveryType.navigational-prefetch
+
+  # baseline: false
+  # support:
+  #   firefox: "115"
+  #   firefox_android: "115"
+  - http.headers.Sec-Purpose.prefetch

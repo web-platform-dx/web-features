@@ -1,0 +1,11 @@
+name: fit-content
+description: The `fit-content` CSS keyword expands a box as needed to fit its contents until the maximum size is reached, preserving the content's preferred aspect ratio.
+spec: https://drafts.csswg.org/css-sizing-4/#valdef-width-fit-content
+group: layout
+compat_features:
+  - css.properties.height.fit-content
+  - css.properties.max-height.fit-content
+  - css.properties.max-width.fit-content
+  - css.properties.min-height.fit-content
+  - css.properties.min-width.fit-content
+  - css.properties.width.fit-content

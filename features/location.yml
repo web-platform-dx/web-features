@@ -1,0 +1,24 @@
+name: Location
+description: The `location` global object represents the current page's address. You can use it to get the parts of the address (such as `location.hostname` or `location.pathname`) or navigate to another URL.
+spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-location-interface
+# `ancestorOrigins` makes this baseline false but is not required for usage of the feature.
+status:
+  compute_from: api.Window.location
+compat_features:
+  - api.Document.location
+  - api.Location
+  - api.Location.ancestorOrigins
+  - api.Location.assign
+  - api.Location.hash
+  - api.Location.host
+  - api.Location.hostname
+  - api.Location.href
+  - api.Location.origin
+  - api.Location.pathname
+  - api.Location.port
+  - api.Location.protocol
+  - api.Location.reload
+  - api.Location.replace
+  - api.Location.search
+  - api.Location.toString
+  - api.Window.location
