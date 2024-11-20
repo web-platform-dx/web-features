@@ -1,0 +1,10 @@
+name: Composition events
+description: Composition Events are a method of adding text containing characters that might not be commonly available on keyboard, from emoji to logograms in Asian languages to input from speech recognition processors.
+spec: https://w3c.github.io/uievents/#events-compositionevents
+compat_features:
+  - api.CompositionEvent
+  - api.CompositionEvent.CompositionEvent
+  - api.CompositionEvent.data
+  - api.Element.compositionend_event
+  - api.Element.compositionstart_event
+  - api.Element.compositionupdate_event

@@ -1,0 +1,17 @@
+name: Input events
+description: The `input` event fires when a form control changes or an element with the `contenteditable` attribute changes.
+spec: https://w3c.github.io/uievents/#event-type-input
+caniuse: input-event
+status:
+  compute_from: api.Element.input_event
+compat_features:
+  - api.Element.beforeinput_event
+  - api.Element.input_event
+  - api.InputEvent
+  - api.InputEvent.InputEvent
+  - api.InputEvent.inputType
+  - api.InputEvent.data
+  - api.InputEvent.dataTransfer
+  - api.InputEvent.getTargetRanges
+  - api.InputEvent.inputType.insertFromPasteAsQuotation
+  - api.InputEvent.isComposing
