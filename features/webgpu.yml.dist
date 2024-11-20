@@ -119,6 +119,7 @@ compat_features:
   - api.GPUOutOfMemoryError.GPUOutOfMemoryError
   - api.GPUPipelineError
   - api.GPUPipelineError.GPUPipelineError
+  - api.GPUPipelineError.GPUPipelineError.message_optional
   - api.GPUPipelineError.reason
   - api.GPUPipelineLayout
   - api.GPUPipelineLayout.label
@@ -252,7 +253,35 @@ compat_features:
   #   chrome: "115"
   #   chrome_android: "121"
   #   edge: "115"
+  - api.GPU.requestAdapter.discrete_adapter_default_ac
   - api.GPU.wgslLanguageFeatures
+
+  # baseline: false
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "121"
+  #   edge: "116"
+  - api.GPUAdapter.requestDevice.lost_device_on_duplicate
+  - api.GPUDevice.importExternalTexture.videoframe_source
+  - api.GPUQueue.copyExternalImageToTexture.videoframe_source
+
+  # baseline: false
+  # support:
+  #   chrome: "117"
+  #   chrome_android: "121"
+  #   edge: "117"
+  - api.GPUComputePassEncoder.setBindGroup.unset_bind_group
+  - api.GPURenderBundleEncoder.setBindGroup.unset_bind_group
+  - api.GPURenderBundleEncoder.setVertexBuffer.unset_vertex_buffer
+  - api.GPURenderPassEncoder.setBindGroup.unset_bind_group
+  - api.GPURenderPassEncoder.setVertexBuffer.unset_vertex_buffer
+
+  # baseline: false
+  # support:
+  #   chrome: "118"
+  #   chrome_android: "121"
+  #   edge: "118"
+  - api.GPUQueue.copyExternalImageToTexture.htmlimageelement_imagedata_source
 
   # baseline: false
   # support:
@@ -297,6 +326,13 @@ compat_features:
   #   chrome_android: "126"
   #   edge: "126"
   - api.GPUQueue.submit.validates_command_buffer_uniqueness
+
+  # baseline: false
+  # support:
+  #   chrome: "127"
+  #   chrome_android: "127"
+  #   edge: "127"
+  - api.GPUAdapter.info
 
   # baseline: false
   # support:
