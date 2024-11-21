@@ -1,4 +1,4 @@
-draft_date: 2024-11-20
+draft_date: 2024-11-21
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -23,7 +23,6 @@ compat_features:
   - api.DedicatedWorkerGlobalScope
   - api.DedicatedWorkerGlobalScope.close
   - api.DedicatedWorkerGlobalScope.name
-  - api.Document.cookie
   - api.Document.designMode
   - api.Document.featurePolicy
   - api.Document.scroll_event
@@ -254,15 +253,9 @@ compat_features:
   - api.TrackEvent
   - api.TrackEvent.TrackEvent
   - api.TrackEvent.track
-  - api.Window.alert
-  - api.Window.confirm
   - api.Window.open.features_parameter_attributionsrc
-  - api.Window.open.features_parameter_popup
-  - api.Window.open.once_per_event
-  - api.Window.open.relative-multi-screen
   - api.Window.originAgentCluster
   - api.Window.postMessage.transfer_parameter
-  - api.Window.prompt
   - api.Window.rejectionhandled_event
   - api.Window.unhandledrejection_event
   - api.Worker
@@ -726,6 +719,8 @@ compat_features:
 #   - api.DedicatedWorkerGlobalScope.messageerror_event
 #   - api.MessagePort.messageerror_event
 #   - api.Window.messageerror_event
+# - Cookies:
+#   - api.Document.cookie
 # - Page visibility:
 #   - api.Document.hidden
 #   - api.Document.visibilityState
@@ -1029,7 +1024,6 @@ compat_features:
 #   - api.HTMLElement.popover
 #   - api.HTMLElement.showPopover
 #   - api.HTMLElement.togglePopover
-#   - api.HTMLElement.toggle_event
 #   - api.HTMLElement.toggle_event.popover_elements
 #   - api.HTMLInputElement.popoverTargetAction
 #   - api.HTMLInputElement.popoverTargetElement
@@ -1143,6 +1137,7 @@ compat_features:
 # - <details>:
 #   - api.HTMLDetailsElement
 #   - api.HTMLDetailsElement.open
+#   - api.HTMLElement.toggle_event
 #   - html.elements.details
 #   - html.elements.details.open
 # - Mutually exclusive <details> elements:
@@ -2121,6 +2116,8 @@ compat_features:
 #   - api.Window.load_event
 #   - api.Window.name
 #   - api.Window.open
+#   - api.Window.open.features_parameter_popup
+#   - api.Window.open.once_per_event
 #   - api.Window.opener
 #   - api.Window.parent
 #   - api.Window.self
@@ -2130,9 +2127,15 @@ compat_features:
 # - Print events:
 #   - api.Window.afterprint_event
 #   - api.Window.beforeprint_event
+# - Alerts:
+#   - api.Window.alert
+#   - api.Window.confirm
+#   - api.Window.prompt
 # - requestAnimationFrame():
 #   - api.Window.cancelAnimationFrame
 #   - api.Window.requestAnimationFrame
+# - Window management:
+#   - api.Window.open.relative-multi-screen
 # - View transitions:
 #   - api.Window.pagereveal_event
 #   - api.Window.pageswap_event
