@@ -16,12 +16,7 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "1"
   #   safari_ios: "1"
-  - api.Document.cookie
   - api.Document.write
-  - api.Range.createContextualFragment
-  - api.Window.alert
-  - api.Window.confirm
-  - api.Window.prompt
   - html.elements.html.xmlns
   - html.global_attributes.style
   - http.headers.Refresh
@@ -1316,7 +1311,6 @@ compat_features:
   #   firefox_android: "49"
   #   safari: "10.1"
   #   safari_ios: "10.3"
-  - api.HTMLElement.toggle_event
   - api.HTMLElement.toggle_event.details_elements
 
   # baseline: high
@@ -1966,18 +1960,6 @@ compat_features:
   # baseline: low
   # baseline_low_date: 2024-04-16
   # support:
-  #   chrome: "114"
-  #   chrome_android: "114"
-  #   edge: "114"
-  #   firefox: "125"
-  #   firefox_android: "125"
-  #   safari: "17"
-  #   safari_ios: "17"
-  - api.HTMLElement.beforetoggle_event
-
-  # baseline: low
-  # baseline_low_date: 2024-04-16
-  # support:
   #   chrome: "116"
   #   chrome_android: "116"
   #   edge: "116"
@@ -2084,16 +2066,6 @@ compat_features:
   - api.SharedWorker.SharedWorker
   - api.SharedWorker.error_event
   - api.SharedWorker.port
-
-  # baseline: false
-  # support:
-  #   chrome: "23"
-  #   chrome_android: "25"
-  #   edge: "12"
-  #   firefox: "65"
-  #   firefox_android: "65"
-  #   safari: "11"
-  - api.Window.open.once_per_event
 
   # baseline: false
   # support:
@@ -2357,15 +2329,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "98"
-  #   chrome_android: "98"
-  #   edge: "98"
-  #   firefox: "96"
-  #   firefox_android: "96"
-  - api.Window.open.features_parameter_popup
-
-  # baseline: false
-  # support:
   #   chrome: "99"
   #   chrome_android: "99"
   #   edge: "99"
@@ -2410,15 +2373,6 @@ compat_features:
   #   firefox_android: "117"
   - api.OffscreenCanvasRenderingContext2D.fontStretch
   - api.OffscreenCanvasRenderingContext2D.fontVariantCaps
-
-  # baseline: false
-  # support:
-  #   chrome: "100"
-  #   chrome_android: "100"
-  #   edge: "100"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  - api.Window.open.relative-multi-screen
 
   # baseline: false
   # support:
