@@ -4,6 +4,7 @@ spec: https://dom.spec.whatwg.org/#xpath
 group: xml
 caniuse: document-evaluate-xpath
 compat_features:
+  - api.Document.createExpression
   - api.Document.evaluate
   - api.XPathEvaluator
   - api.XPathEvaluator.XPathEvaluator
