@@ -16,11 +16,7 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "1"
   #   safari_ios: "1"
-  - api.Document.cookie
   - api.Document.write
-  - api.Window.alert
-  - api.Window.confirm
-  - api.Window.prompt
   - html.elements.html.xmlns
   - html.global_attributes.style
   - http.headers.Refresh
@@ -2075,16 +2071,6 @@ compat_features:
   # support:
   #   chrome: "23"
   #   chrome_android: "25"
-  #   edge: "12"
-  #   firefox: "65"
-  #   firefox_android: "65"
-  #   safari: "11"
-  - api.Window.open.once_per_event
-
-  # baseline: false
-  # support:
-  #   chrome: "23"
-  #   chrome_android: "25"
   #   edge: "79"
   #   firefox: ≤49
   #   firefox_android: "49"
@@ -2343,15 +2329,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "98"
-  #   chrome_android: "98"
-  #   edge: "98"
-  #   firefox: "96"
-  #   firefox_android: "96"
-  - api.Window.open.features_parameter_popup
-
-  # baseline: false
-  # support:
   #   chrome: "99"
   #   chrome_android: "99"
   #   edge: "99"
@@ -2396,15 +2373,6 @@ compat_features:
   #   firefox_android: "117"
   - api.OffscreenCanvasRenderingContext2D.fontStretch
   - api.OffscreenCanvasRenderingContext2D.fontVariantCaps
-
-  # baseline: false
-  # support:
-  #   chrome: "100"
-  #   chrome_android: "100"
-  #   edge: "100"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  - api.Window.open.relative-multi-screen
 
   # baseline: false
   # support:

@@ -1,4 +1,4 @@
-draft_date: 2024-11-04
+draft_date: 2024-11-21
 name: Permissions
 description: TODO
 spec: https://w3c.github.io/permissions/
@@ -15,7 +15,6 @@ compat_features:
   - api.Permissions.permission_microphone
   - api.Permissions.permission_notifications
   - api.Permissions.permission_persistent-storage
-  - api.Permissions.permission_push
   - api.WorkerNavigator.permissions
 
 # The following features in the spec are already part of web-features:
@@ -31,3 +30,5 @@ compat_features:
 #   - api.Permissions.permission_gyroscope
 # - Payment handler:
 #   - api.Permissions.permission_payment-handler
+# - Push messages:
+#   - api.Permissions.permission_push
