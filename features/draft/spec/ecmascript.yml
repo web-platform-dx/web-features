@@ -1,12 +1,10 @@
-draft_date: 2024-11-19
+draft_date: 2024-11-20
 name: ECMAScript Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
 compat_features:
   - javascript.builtins.Array.@@species
   - javascript.builtins.Array.@@unscopables
-  - javascript.builtins.Error.Error.options_cause_parameter
-  - javascript.builtins.Error.cause
   - javascript.builtins.globalThis
   - javascript.builtins.parseInt.leading_zero_strings_as_decimal
   - javascript.grammar.hashbang_comments
@@ -456,6 +454,9 @@ compat_features:
 #   - javascript.builtins.Date.toTimeString
 #   - javascript.builtins.Date.toUTCString
 #   - javascript.builtins.Date.valueOf
+# - Error cause:
+#   - javascript.builtins.Error.Error.options_cause_parameter
+#   - javascript.builtins.Error.cause
 # - Weak references:
 #   - javascript.builtins.FinalizationRegistry
 #   - javascript.builtins.FinalizationRegistry.FinalizationRegistry

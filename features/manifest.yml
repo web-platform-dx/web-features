@@ -1,0 +1,51 @@
+name: Web app manifest
+description: A web app manifest file provides metadata about the site. The browser can use the metadata to install the site as a standalone application on the user's device. The metadata usually includes the app's name, icon, description, and ways in which the app wishes to integrate with the device.
+spec: https://w3c.github.io/manifest/
+group: progressive-web-app
+status:
+  compute_from:
+    - html.elements.link.rel.manifest
+    - html.manifest.display
+    - html.manifest.name
+    - html.manifest.short_name
+    - html.manifest.start_url
+    - html.manifest.icons
+    - html.manifest.theme_color
+    - html.manifest.scope
+compat_features:
+  - html.elements.link.rel.manifest
+
+  # While not all display modes are supported in all browsers, the display member itself
+  # is supported, and very important on Safari iOS. On Safari iOS, using the default
+  # display mode is not enough to really "install" an app to the home screen. For example
+  # notifications won't work.
+  - html.manifest.display
+
+  - html.manifest.name
+  - html.manifest.short_name
+  - html.manifest.start_url
+  - html.manifest.icons
+  - html.manifest.theme_color
+  - html.manifest.scope
+
+  # Missing in Firefox for Android. Not considered a developer feature yet.
+  # Ignored from compute_from for now.
+  - html.manifest.id
+
+  # Missing in Safari. While interesting separate features we can create
+  # them later.
+  # Ignored from compute_from for now.
+  - html.manifest.background_color
+  - html.manifest.orientation
+
+  # Description is only used in Chromium in the PWA rich install dialog.
+  # Ignored from compute_from for now.
+  - html.manifest.description
+
+  # Used to install a web payment service worker on the fly, which is
+  # a separate feature.
+  # Ignored from compute_from for now.
+  - html.manifest.serviceworker
+  - html.manifest.serviceworker.scope
+  - html.manifest.serviceworker.src
+  - html.manifest.serviceworker.use_cache
