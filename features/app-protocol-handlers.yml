@@ -1,0 +1,8 @@
+name: Protocol handlers
+description: The `protocol_handlers` web app manifest member registers an installed web app as a handler for a specific protocol. When a user follows a link with the specified protocol, the installed app opens the link.
+spec: https://wicg.github.io/manifest-incubations/#protocol_handlers-member
+group: progressive-web-app
+compat_features:
+  - html.manifest.protocol_handlers
+  - html.manifest.protocol_handlers.protocol
+  - html.manifest.protocol_handlers.url

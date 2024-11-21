@@ -1,8 +1,10 @@
-draft_date: 2024-10-21
-name: HTTP State Management Mechanism
-description: TODO
+name: Cookies
+description: The `Set-Cookie` HTTP header stores limited amounts of data that persist across request and response, creating shared state between the browser and server.
 spec: https://httpwg.org/specs/rfc6265.html
+status:
+  compute_from: http.headers.Cookie
 compat_features:
+  - api.Document.cookie
   - http.headers.Cookie
   - http.headers.Set-Cookie
   - http.headers.Set-Cookie.HttpOnly
