@@ -5,6 +5,9 @@ group: forms
 status:
   compute_from: html.elements.form
 compat_features:
+  - api.FormDataEvent
+  - api.FormDataEvent.FormDataEvent
+  - api.FormDataEvent.formData
   - api.HTMLFormElement
   - api.HTMLFormElement.acceptCharset
   - api.HTMLFormElement.action

@@ -123,6 +123,9 @@ compat_features:
   #   firefox_android: "79"
   #   safari: "15"
   #   safari_ios: "15"
+  - api.FormDataEvent
+  - api.FormDataEvent.FormDataEvent
+  - api.FormDataEvent.formData
   - api.HTMLFormElement.formdata_event
 
   # baseline: low
