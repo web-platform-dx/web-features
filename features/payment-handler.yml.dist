@@ -64,12 +64,3 @@ compat_features:
   #   chrome_android: "122"
   #   edge: "122"
   - api.PaymentManager.secure_context_required
-
-  # baseline: false
-  # support: {}
-  - api.CanMakePaymentEvent.methodData
-  - api.CanMakePaymentEvent.modifiers
-  - api.CanMakePaymentEvent.paymentRequestOrigin
-  - api.CanMakePaymentEvent.topOrigin
-  - api.PaymentManager.instruments
-  - api.PaymentRequestEvent.instrumentKey
