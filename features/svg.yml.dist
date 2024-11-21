@@ -1162,6 +1162,7 @@ compat_features:
   #   firefox_android: "46"
   #   safari: "5"
   #   safari_ios: "4.2"
+  - css.properties.text-rendering
   - svg.global_attributes.text-rendering
 
   # baseline: high
@@ -1448,10 +1449,23 @@ compat_features:
   #   safari: ≤13.1
   #   safari_ios: ≤13.4
   - css.properties.clip-rule
+  - css.properties.cx
+  - css.properties.cy
   - css.properties.fill
+  - css.properties.marker
+  - css.properties.marker-end
+  - css.properties.marker-mid
+  - css.properties.marker-start
+  - css.properties.r
+  - css.properties.shape-rendering
+  - css.properties.stroke
   - css.properties.stroke-dashoffset
   - css.properties.stroke-miterlimit
   - css.properties.stroke-width
+  - css.properties.text-anchor
+  - css.properties.vector-effect
+  - css.properties.x
+  - css.properties.y
   - svg.global_attributes.clip-rule
   - svg.global_attributes.marker-end
   - svg.global_attributes.marker-mid
@@ -1478,6 +1492,8 @@ compat_features:
   - css.properties.fill-rule
   - css.properties.fill-rule.evenodd
   - css.properties.fill-rule.nonzero
+  - css.properties.stop-color
+  - css.properties.stop-opacity
   - css.properties.stroke-dasharray
   - css.properties.stroke-dasharray.none
   - css.properties.stroke-linecap
@@ -1548,8 +1564,9 @@ compat_features:
   #   safari_ios: "15.4"
   - api.SVGElement.nonce
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-05-16
+  # baseline_high_date: 2024-11-16
   # support:
   #   chrome: "78"
   #   chrome_android: "78"
@@ -1688,9 +1705,28 @@ compat_features:
   #   chrome: ≤80
   #   chrome_android: "80"
   #   edge: ≤80
+  #   firefox: "97"
+  #   firefox_android: "97"
+  - css.properties.d
+
+  # baseline: false
+  # support:
+  #   chrome: ≤80
+  #   chrome_android: "80"
+  #   edge: ≤80
   #   safari: ≤13.1
   #   safari_ios: ≤13.4
   - svg.global_attributes.alignment-baseline
+
+  # baseline: false
+  # support:
+  #   chrome: ≤80
+  #   chrome_android: "80"
+  #   edge: ≤80
+  #   firefox: ≤72
+  #   firefox_android: "79"
+  - css.properties.rx
+  - css.properties.ry
 
   # baseline: false
   # support:
@@ -1785,11 +1821,13 @@ compat_features:
   - api.SVGScriptElement.defer
   - svg.elements.script.async
   - svg.elements.script.defer
+  - svg.elements.script.type.module
 
   # baseline: false
   # support:
   #   firefox: "123"
   #   firefox_android: "123"
+  - css.properties.color-interpolation.linearGradient
   - svg.global_attributes.color-interpolation.linearGradient
 
   # baseline: false
@@ -1802,6 +1840,8 @@ compat_features:
   # support:
   #   firefox: ≤72
   #   firefox_android: "79"
+  - css.properties.color-interpolation
+  - css.properties.color-interpolation.sRGB
   - svg.global_attributes.color-interpolation
   - svg.global_attributes.color-interpolation.sRGB
 

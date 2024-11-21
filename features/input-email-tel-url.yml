@@ -1,0 +1,14 @@
+name: Email, telephone, and URL <input> types
+description: The `<input type="email">`, `<input type="tel">`, and `<input type="url">` HTML elements represent email address, telephone number, and URL fields in a form.
+spec:
+  - https://html.spec.whatwg.org/multipage/input.html#email-state-(type=email)
+  - https://html.spec.whatwg.org/multipage/input.html#telephone-state-(type=tel)
+  - https://html.spec.whatwg.org/multipage/input.html#url-state-(type=url)
+group:
+  - forms
+  - html-elements
+caniuse: input-email-tel-url
+compat_features:
+  - html.elements.input.type_email
+  - html.elements.input.type_tel
+  - html.elements.input.type_url

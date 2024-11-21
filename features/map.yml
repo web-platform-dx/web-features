@@ -19,3 +19,21 @@ snapshot: ecmascript-2015
 group: maps
 status:
   compute_from: javascript.builtins.Map.Map
+compat_features:
+  - javascript.builtins.Map
+  - javascript.builtins.Map.@@iterator
+  - javascript.builtins.Map.@@species
+  - javascript.builtins.Map.Map
+  - javascript.builtins.Map.Map.iterable_allowed
+  - javascript.builtins.Map.Map.null_allowed
+  - javascript.builtins.Map.clear
+  - javascript.builtins.Map.delete
+  - javascript.builtins.Map.entries
+  - javascript.builtins.Map.forEach
+  - javascript.builtins.Map.get
+  - javascript.builtins.Map.has
+  - javascript.builtins.Map.key_equality_for_zeros
+  - javascript.builtins.Map.keys
+  - javascript.builtins.Map.set
+  - javascript.builtins.Map.size
+  - javascript.builtins.Map.values

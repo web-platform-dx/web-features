@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "114"
+    firefox_android: "114"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -16,15 +18,9 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "1"
   #   safari_ios: "1"
-  - javascript.builtins.Object
-  - javascript.builtins.Object.Object
-  - javascript.builtins.Object.constructor
-  - javascript.builtins.Object.toString
-  - javascript.builtins.Object.valueOf
   - javascript.grammar.hexadecimal_escape_sequences
   - javascript.grammar.trailing_commas
   - javascript.grammar.unicode_escape_sequences
-  - javascript.operators.object_initializer
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -37,71 +33,7 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "3"
   #   safari_ios: "1"
-  - javascript.builtins.Object.hasOwnProperty
-  - javascript.builtins.Object.isPrototypeOf
-  - javascript.builtins.Object.propertyIsEnumerable
   - javascript.grammar.trailing_commas.trailing_commas_in_object_literals
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "5"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "5"
-  #   safari_ios: "5"
-  - javascript.builtins.Object.getPrototypeOf
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "5"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "5"
-  #   safari_ios: "5"
-  - javascript.builtins.Object.create
-  - javascript.builtins.Object.defineProperties
-  - javascript.builtins.Object.getOwnPropertyDescriptor
-  - javascript.builtins.Object.getOwnPropertyNames
-  - javascript.builtins.Object.keys
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "5"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "5.1"
-  #   safari_ios: "6"
-  - javascript.builtins.Object.defineProperty
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "6"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "5.1"
-  #   safari_ios: "5"
-  - javascript.builtins.Object.freeze
-  - javascript.builtins.Object.isExtensible
-  - javascript.builtins.Object.isFrozen
-  - javascript.builtins.Object.isSealed
-  - javascript.builtins.Object.preventExtensions
-  - javascript.builtins.Object.seal
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -133,45 +65,6 @@ compat_features:
   # baseline_low_date: 2015-09-30
   # baseline_high_date: 2018-03-30
   # support:
-  #   chrome: "19"
-  #   chrome_android: "25"
-  #   edge: "12"
-  #   firefox: "22"
-  #   firefox_android: "22"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.builtins.Object.is
-
-  # baseline: high
-  # baseline_low_date: 2015-09-30
-  # baseline_high_date: 2018-03-30
-  # support:
-  #   chrome: "34"
-  #   chrome_android: "34"
-  #   edge: "12"
-  #   firefox: "31"
-  #   firefox_android: "31"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.builtins.Object.setPrototypeOf
-
-  # baseline: high
-  # baseline_low_date: 2015-09-30
-  # baseline_high_date: 2018-03-30
-  # support:
-  #   chrome: "38"
-  #   chrome_android: "38"
-  #   edge: "12"
-  #   firefox: "36"
-  #   firefox_android: "36"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.builtins.Object.getOwnPropertySymbols
-
-  # baseline: high
-  # baseline_low_date: 2015-09-30
-  # baseline_high_date: 2018-03-30
-  # support:
   #   chrome: "41"
   #   chrome_android: "41"
   #   edge: "12"
@@ -188,37 +81,11 @@ compat_features:
   #   chrome: "44"
   #   chrome_android: "44"
   #   edge: "12"
-  #   firefox: "35"
-  #   firefox_android: "35"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.builtins.Object.preventExtensions.ES2015_behavior
-
-  # baseline: high
-  # baseline_low_date: 2015-09-30
-  # baseline_high_date: 2018-03-30
-  # support:
-  #   chrome: "44"
-  #   chrome_android: "44"
-  #   edge: "12"
   #   firefox: "40"
   #   firefox_android: "40"
   #   safari: "9"
   #   safari_ios: "9"
   - javascript.grammar.unicode_point_escapes
-
-  # baseline: high
-  # baseline_low_date: 2015-09-30
-  # baseline_high_date: 2018-03-30
-  # support:
-  #   chrome: "45"
-  #   chrome_android: "45"
-  #   edge: "12"
-  #   firefox: "34"
-  #   firefox_android: "34"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.builtins.Object.assign
 
   # baseline: high
   # baseline_low_date: 2015-10-14
@@ -246,58 +113,6 @@ compat_features:
   #   safari: "8"
   #   safari_ios: "8"
   - javascript.operators.spread.spread_in_function_calls
-
-  # baseline: high
-  # baseline_low_date: 2015-12-02
-  # baseline_high_date: 2018-06-02
-  # support:
-  #   chrome: "47"
-  #   chrome_android: "47"
-  #   edge: "12"
-  #   firefox: "33"
-  #   firefox_android: "33"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.operators.object_initializer.shorthand_property_names
-
-  # baseline: high
-  # baseline_low_date: 2015-12-02
-  # baseline_high_date: 2018-06-02
-  # support:
-  #   chrome: "47"
-  #   chrome_android: "47"
-  #   edge: "12"
-  #   firefox: "34"
-  #   firefox_android: "34"
-  #   safari: "8"
-  #   safari_ios: "8"
-  - javascript.operators.object_initializer.computed_property_names
-
-  # baseline: high
-  # baseline_low_date: 2015-12-02
-  # baseline_high_date: 2018-06-02
-  # support:
-  #   chrome: "47"
-  #   chrome_android: "47"
-  #   edge: "12"
-  #   firefox: "34"
-  #   firefox_android: "34"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.operators.object_initializer.shorthand_method_names
-
-  # baseline: high
-  # baseline_low_date: 2016-03-08
-  # baseline_high_date: 2018-09-08
-  # support:
-  #   chrome: "42"
-  #   chrome_android: "42"
-  #   edge: "13"
-  #   firefox: "45"
-  #   firefox_android: "45"
-  #   safari: "7"
-  #   safari_ios: "7"
-  - javascript.operators.class
 
   # baseline: high
   # baseline_low_date: 2016-08-02
@@ -352,20 +167,6 @@ compat_features:
   - javascript.statements.let
 
   # baseline: high
-  # baseline_low_date: 2016-09-20
-  # baseline_high_date: 2019-03-20
-  # support:
-  #   chrome: "51"
-  #   chrome_android: "51"
-  #   edge: "13"
-  #   firefox: "41"
-  #   firefox_android: "41"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.builtins.Map.@@species
-  - javascript.builtins.Set.@@species
-
-  # baseline: high
   # baseline_low_date: 2017-03-27
   # baseline_high_date: 2019-09-27
   # support:
@@ -380,33 +181,6 @@ compat_features:
   - javascript.operators.exponentiation_assignment
 
   # baseline: high
-  # baseline_low_date: 2017-03-27
-  # baseline_high_date: 2019-09-27
-  # support:
-  #   chrome: "54"
-  #   chrome_android: "54"
-  #   edge: "14"
-  #   firefox: "47"
-  #   firefox_android: "47"
-  #   safari: "10.1"
-  #   safari_ios: "10.3"
-  - javascript.builtins.Object.entries
-  - javascript.builtins.Object.values
-
-  # baseline: high
-  # baseline_low_date: 2017-04-05
-  # baseline_high_date: 2019-10-05
-  # support:
-  #   chrome: "54"
-  #   chrome_android: "54"
-  #   edge: "15"
-  #   firefox: "50"
-  #   firefox_android: "50"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - javascript.builtins.Object.getOwnPropertyDescriptors
-
-  # baseline: high
   # baseline_low_date: 2017-04-25
   # baseline_high_date: 2019-10-25
   # support:
@@ -418,19 +192,6 @@ compat_features:
   #   safari: "10"
   #   safari_ios: "10"
   - javascript.grammar.trailing_commas.trailing_commas_in_functions
-
-  # baseline: high
-  # baseline_low_date: 2017-09-19
-  # baseline_high_date: 2020-03-19
-  # support:
-  #   chrome: "46"
-  #   chrome_android: "46"
-  #   edge: "13"
-  #   firefox: "41"
-  #   firefox_android: "41"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - javascript.operators.new_target
 
   # baseline: high
   # baseline_low_date: 2017-10-17
@@ -457,7 +218,6 @@ compat_features:
   #   safari: "10"
   #   safari_ios: "10"
   - javascript.builtins.Array.@@species
-  - javascript.builtins.Promise.@@species
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -471,7 +231,6 @@ compat_features:
   #   safari: "11.1"
   #   safari_ios: "11.3"
   - javascript.operators.destructuring.rest_in_objects
-  - javascript.operators.object_initializer.spread_properties
   - javascript.operators.spread.spread_in_object_literals
 
   # baseline: high
@@ -540,19 +299,6 @@ compat_features:
   - javascript.builtins.globalThis
 
   # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "73"
-  #   chrome_android: "73"
-  #   edge: "79"
-  #   firefox: "63"
-  #   firefox_android: "63"
-  #   safari: "12.1"
-  #   safari_ios: "12.2"
-  - javascript.builtins.Object.fromEntries
-
-  # baseline: high
   # baseline_low_date: 2020-03-24
   # baseline_high_date: 2022-09-24
   # support:
@@ -592,19 +338,6 @@ compat_features:
   - javascript.operators.nullish_coalescing
 
   # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
-  # support:
-  #   chrome: "80"
-  #   chrome_android: "80"
-  #   edge: "80"
-  #   firefox: "74"
-  #   firefox_android: "79"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
-  - javascript.operators.optional_chaining
-
-  # baseline: high
   # baseline_low_date: 2020-09-16
   # baseline_high_date: 2023-03-16
   # support:
@@ -626,50 +359,11 @@ compat_features:
   #   chrome: "72"
   #   chrome_android: "72"
   #   edge: "79"
-  #   firefox: "75"
-  #   firefox_android: "79"
-  #   safari: "14.1"
-  #   safari_ios: "14.5"
-  - javascript.classes.static_class_fields
-
-  # baseline: high
-  # baseline_low_date: 2021-04-26
-  # baseline_high_date: 2023-10-26
-  # support:
-  #   chrome: "72"
-  #   chrome_android: "72"
-  #   edge: "79"
   #   firefox: "80"
   #   firefox_android: "80"
   #   safari: "14.1"
   #   safari_ios: "14.5"
   - javascript.statements.export.namespace
-
-  # baseline: high
-  # baseline_low_date: 2021-07-13
-  # baseline_high_date: 2024-01-13
-  # support:
-  #   chrome: "74"
-  #   chrome_android: "74"
-  #   edge: "79"
-  #   firefox: "90"
-  #   firefox_android: "90"
-  #   safari: "14.1"
-  #   safari_ios: "14.5"
-  - javascript.classes.private_class_fields
-
-  # baseline: high
-  # baseline_low_date: 2021-09-20
-  # baseline_high_date: 2024-03-20
-  # support:
-  #   chrome: "84"
-  #   chrome_android: "84"
-  #   edge: "84"
-  #   firefox: "90"
-  #   firefox_android: "90"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - javascript.classes.private_class_methods
 
   # baseline: high
   # baseline_low_date: 2021-09-20
@@ -684,98 +378,7 @@ compat_features:
   #   safari_ios: "15"
   - javascript.operators.await.top_level
 
-  # baseline: high
-  # baseline_low_date: 2021-09-20
-  # baseline_high_date: 2024-03-20
-  # support:
-  #   chrome: "91"
-  #   chrome_android: "91"
-  #   edge: "91"
-  #   firefox: "90"
-  #   firefox_android: "90"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - javascript.classes.private_class_fields_in
-
-  # baseline: high
-  # baseline_low_date: 2021-09-20
-  # baseline_high_date: 2024-03-20
-  # support:
-  #   chrome: "93"
-  #   chrome_android: "93"
-  #   edge: "93"
-  #   firefox: "91"
-  #   firefox_android: "91"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - javascript.builtins.Error.Error.options_cause_parameter
-  - javascript.builtins.Error.cause
-
-  # baseline: high
-  # baseline_low_date: 2022-03-14
-  # baseline_high_date: 2024-09-14
-  # support:
-  #   chrome: "93"
-  #   chrome_android: "93"
-  #   edge: "93"
-  #   firefox: "92"
-  #   firefox_android: "92"
-  #   safari: "15.4"
-  #   safari_ios: "15.4"
-  - javascript.builtins.Object.hasOwn
-
-  # baseline: low
-  # baseline_low_date: 2022-09-12
-  # support:
-  #   chrome: "72"
-  #   chrome_android: "72"
-  #   edge: "79"
-  #   firefox: "69"
-  #   firefox_android: "79"
-  #   safari: "16"
-  #   safari_ios: "16"
-  - javascript.classes.public_class_fields
-
-  # baseline: low
-  # baseline_low_date: 2023-03-27
-  # support:
-  #   chrome: "94"
-  #   chrome_android: "94"
-  #   edge: "94"
-  #   firefox: "93"
-  #   firefox_android: "93"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - javascript.classes.static_initialization_blocks
-
-  # baseline: low
-  # baseline_low_date: 2023-09-18
-  # support:
-  #   chrome: "66"
-  #   chrome_android: "66"
-  #   edge: "79"
-  #   firefox: "54"
-  #   firefox_android: "54"
-  #   safari: "17"
-  #   safari_ios: "17"
-  - javascript.builtins.Function.toString.toString_revision
-
-  # baseline: false
-  # support:
-  #   chrome: "109"
-  #   chrome_android: "109"
-  #   edge: "109"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - javascript.builtins.FinalizationRegistry.symbol_as_target
-  - javascript.builtins.WeakRef.symbol_as_target
-
-  # baseline: false
-  # support:
-  #   firefox: "79"
-  #   firefox_android: "79"
-  - javascript.builtins.Atomics.Atomic_operations_on_non_shared_buffers
-
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "114"
