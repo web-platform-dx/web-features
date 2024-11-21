@@ -13,7 +13,7 @@ web-features is an effort to build a shared catalog of features of the web platf
 
 Think of features as individual components of the web platform that web developers can use to achieve specific tasks.
 
-As such, a feature has no specific size. A feature might cover a single CSS property, an entire JavaScript APIs with multiple interfaces, methods, and properties, or a combination of CSS properties, HTML elements, and JavaScript APIs. As long as a web developer would use the feature to achieve a specific goal, it's a feature.
+As such, a feature has no specific size. A feature might cover a single CSS property, an entire JavaScript API with multiple interfaces, methods, and properties, or a combination of CSS properties, HTML elements, and JavaScript APIs. As long as a web developer would use the feature to achieve a specific goal, it's a feature.
 
 For example, the `fetch()` API is a feature, the `:has()` CSS pseudo-class function too, and so is the Web Audio API.
 
