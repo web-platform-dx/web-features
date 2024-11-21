@@ -1,0 +1,45 @@
+name: URL
+description: A `URL` object represents a web address, like `https://example.com/`, and parts of the address, such as the domain, path, and query string (as `URLSearchParams`).
+spec: https://url.spec.whatwg.org/
+caniuse: url
+status:
+  compute_from: api.URL
+compat_features:
+  - api.URL
+  - api.URL.URL
+  - api.URL.hash
+  - api.URL.host
+  - api.URL.hostname
+  - api.URL.href
+  - api.URL.origin
+  - api.URL.parse_static
+  - api.URL.password
+  - api.URL.pathname
+  - api.URL.port
+  - api.URL.protocol
+  - api.URL.search
+  - api.URL.searchParams
+  - api.URL.toJSON
+  - api.URL.toString
+  - api.URL.username
+  - api.URLSearchParams
+  - api.URLSearchParams.@@iterator
+  - api.URLSearchParams.URLSearchParams
+  - api.URLSearchParams.URLSearchParams.USVString
+  - api.URLSearchParams.URLSearchParams.record
+  - api.URLSearchParams.URLSearchParams.sequence
+  - api.URLSearchParams.append
+  - api.URLSearchParams.delete
+  - api.URLSearchParams.delete.value_parameter
+  - api.URLSearchParams.entries
+  - api.URLSearchParams.forEach
+  - api.URLSearchParams.get
+  - api.URLSearchParams.getAll
+  - api.URLSearchParams.has
+  - api.URLSearchParams.has.value_parameter
+  - api.URLSearchParams.keys
+  - api.URLSearchParams.set
+  - api.URLSearchParams.size
+  - api.URLSearchParams.sort
+  - api.URLSearchParams.toString
+  - api.URLSearchParams.values

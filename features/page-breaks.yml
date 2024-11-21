@@ -1,5 +1,57 @@
 name: Page breaks
 description: The `break-after`, `break-before`, `break-inside` CSS properties (along with `page-break-` aliases) control where printed pages start and end. Also known as pagination or page breaking.
-spec: https://drafts.csswg.org/css-break-3/#breaking-controls
+spec: https://drafts.csswg.org/css-break-4/#breaking-controls
 group: layout
 caniuse: css-page-break
+status:
+  # TODO: review this when https://github.com/web-platform-dx/web-features/issues/1878 is resolved
+  compute_from: css.properties.page-break-after.avoid
+compat_features:
+  - css.properties.break-after
+  - css.properties.break-after.always
+  - css.properties.break-after.auto
+  - css.properties.break-after.avoid
+  - css.properties.break-after.avoid-page
+  - css.properties.break-after.left
+  - css.properties.break-after.page
+  - css.properties.break-after.paged_context
+  - css.properties.break-after.paged_context.avoid-page
+  - css.properties.break-after.paged_context.page
+  - css.properties.break-after.paged_context.recto
+  - css.properties.break-after.recto
+  - css.properties.break-after.right
+  - css.properties.break-after.verso
+  - css.properties.break-before
+  - css.properties.break-before.always
+  - css.properties.break-before.auto
+  - css.properties.break-before.avoid
+  - css.properties.break-before.avoid-page
+  - css.properties.break-before.left
+  - css.properties.break-before.page
+  - css.properties.break-before.paged_context
+  - css.properties.break-before.paged_context.page
+  - css.properties.break-before.paged_context.recto
+  - css.properties.break-before.recto
+  - css.properties.break-before.right
+  - css.properties.break-before.verso
+  - css.properties.break-inside
+  - css.properties.break-inside.auto
+  - css.properties.break-inside.avoid
+  - css.properties.break-inside.avoid-page
+  - css.properties.break-inside.paged_context
+  - css.properties.break-inside.paged_context.avoid-page
+  - css.properties.page-break-after
+  - css.properties.page-break-after.always
+  - css.properties.page-break-after.auto
+  - css.properties.page-break-after.avoid
+  - css.properties.page-break-after.left
+  - css.properties.page-break-after.right
+  - css.properties.page-break-before
+  - css.properties.page-break-before.always
+  - css.properties.page-break-before.auto
+  - css.properties.page-break-before.avoid
+  - css.properties.page-break-before.left
+  - css.properties.page-break-before.right
+  - css.properties.page-break-inside
+  - css.properties.page-break-inside.auto
+  - css.properties.page-break-inside.avoid

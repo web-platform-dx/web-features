@@ -1,0 +1,10 @@
+name: Raw camera access for WebXR
+description: The `XRView.camera` property provides direct access to pose-synchronized camera images within a WebXR session.
+spec: https://immersive-web.github.io/raw-camera-access/
+group: webxr
+compat_features:
+  - api.XRCamera
+  - api.XRCamera.width
+  - api.XRCamera.height
+  - api.XRView.camera
+  - api.XRWebGLBinding.getCameraImage

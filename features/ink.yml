@@ -1,0 +1,10 @@
+name: Ink
+description: The `navigator.ink` API uses the system compositor to draw to a `<canvas>` element ahead of pointer events, reducing the delay between moving a stylus or cursor and a pen stroke appearing on screen.
+spec: https://wicg.github.io/ink-enhancement/
+compat_features:
+  - api.Ink
+  - api.Ink.requestPresenter
+  - api.DelegatedInkTrailPresenter
+  - api.DelegatedInkTrailPresenter.presentationArea
+  - api.DelegatedInkTrailPresenter.updateInkTrailStartPoint
+  - api.Navigator.ink

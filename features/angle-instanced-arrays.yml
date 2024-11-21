@@ -1,0 +1,9 @@
+name: ANGLE_instanced_arrays WebGL extension
+description: The `ANGLE_instanced_arrays` extension for WebGL 1.0 contexts draws the same object multiple times or groups of similar objects multiple times, if the group shares the same vertex data, primitive count and type.
+spec: https://registry.khronos.org/webgl/extensions/ANGLE_instanced_arrays/
+group: webgl-extensions
+compat_features:
+  - api.ANGLE_instanced_arrays
+  - api.ANGLE_instanced_arrays.drawArraysInstancedANGLE
+  - api.ANGLE_instanced_arrays.drawElementsInstancedANGLE
+  - api.ANGLE_instanced_arrays.vertexAttribDivisorANGLE

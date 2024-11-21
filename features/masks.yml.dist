@@ -13,6 +13,17 @@ status:
     safari: "15.4"
     safari_ios: "15.4"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2023-12-07
+  # support:
+  #   chrome: "120"
+  #   chrome_android: "120"
+  #   edge: "120"
+  #   firefox: "53"
+  #   firefox_android: "53"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
   - css.properties.mask
   - css.properties.mask-clip
   - css.properties.mask-composite
@@ -31,3 +42,34 @@ compat_features:
   - css.properties.mask-position
   - css.properties.mask-repeat
   - css.properties.mask-size
+
+  # baseline: false
+  # support:
+  #   chrome: "120"
+  #   chrome_android: "120"
+  #   edge: "120"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - css.properties.mask-clip.border
+  - css.properties.mask-clip.content
+  - css.properties.mask-clip.padding
+  - css.properties.mask-clip.text
+
+  # baseline: false
+  # support:
+  #   chrome: "120"
+  #   chrome_android: "120"
+  #   edge: "120"
+  #   firefox: "53"
+  #   firefox_android: "53"
+  - css.properties.mask-origin.fill-box
+  - css.properties.mask-origin.stroke-box
+  - css.properties.mask-origin.view-box
+
+  # baseline: false
+  # support:
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - css.properties.mask-origin.border
+  - css.properties.mask-origin.content
+  - css.properties.mask-origin.padding

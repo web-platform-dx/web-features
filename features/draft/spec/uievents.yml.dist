@@ -28,19 +28,6 @@ compat_features:
   #   chrome: "1"
   #   chrome_android: "18"
   #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "1.3"
-  #   safari_ios: "1"
-  - api.Window.load_event
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
   #   firefox: "1.5"
   #   firefox_android: "4"
   #   safari: "1.2"
@@ -103,20 +90,6 @@ compat_features:
   #   safari: "3.1"
   #   safari_ios: "2"
   - api.Element.focus_event
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "5"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "6"
-  #   firefox_android: "6"
-  #   safari: "5.1"
-  #   safari_ios: "5"
-  - api.Window.blur_event
-  - api.Window.focus_event
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -242,6 +215,22 @@ compat_features:
   #   safari: "10.1"
   #   safari_ios: "10.3"
   - api.KeyboardEvent.getModifierState
+  - api.KeyboardEvent.getModifierState.key_parameter_alt
+  - api.KeyboardEvent.getModifierState.key_parameter_control
+  - api.KeyboardEvent.getModifierState.key_parameter_shift
+
+  # baseline: high
+  # baseline_low_date: 2017-03-27
+  # baseline_high_date: 2019-09-27
+  # support:
+  #   chrome: "48"
+  #   chrome_android: "48"
+  #   edge: "12"
+  #   firefox: "15"
+  #   firefox_android: "15"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.KeyboardEvent.getModifierState.key_parameter_capslock
 
   # baseline: high
   # baseline_low_date: 2017-03-27
@@ -255,6 +244,20 @@ compat_features:
   #   safari: "10.1"
   #   safari_ios: "10.3"
   - api.KeyboardEvent.key
+  - api.KeyboardEvent.key.non_printable_keys
+
+  # baseline: high
+  # baseline_low_date: 2017-03-27
+  # baseline_high_date: 2019-09-27
+  # support:
+  #   chrome: "51"
+  #   chrome_android: "51"
+  #   edge: "12"
+  #   firefox: "29"
+  #   firefox_android: "29"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.KeyboardEvent.key.printable_key
 
   # baseline: high
   # baseline_low_date: 2017-04-19
@@ -268,6 +271,32 @@ compat_features:
   #   safari: "7"
   #   safari_ios: "7"
   - api.CompositionEvent.CompositionEvent
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "30"
+  #   chrome_android: "30"
+  #   edge: "79"
+  #   firefox: "15"
+  #   firefox_android: "15"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.KeyboardEvent.getModifierState.key_parameter_meta
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "48"
+  #   chrome_android: "48"
+  #   edge: "79"
+  #   firefox: "15"
+  #   firefox_android: "15"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.KeyboardEvent.getModifierState.key_parameter_altgraph
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -294,6 +323,19 @@ compat_features:
   #   safari: "10.1"
   #   safari_ios: "10.3"
   - api.KeyboardEvent.isComposing
+
+  # baseline: high
+  # baseline_low_date: ≤2020-01-15
+  # baseline_high_date: ≤2022-07-15
+  # support:
+  #   chrome: "51"
+  #   chrome_android: "51"
+  #   edge: ≤79
+  #   firefox: "37"
+  #   firefox_android: "37"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.KeyboardEvent.key.dead_key
 
   # baseline: high
   # baseline_low_date: 2021-03-23
@@ -330,12 +372,41 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "31"
+  #   chrome_android: "31"
+  #   edge: "79"
+  #   firefox: "55"
+  #   firefox_android: "55"
+  #   safari: "15"
+  - api.WheelEvent.pinch_to_zoom_support
+
+  # baseline: false
+  # support:
   #   edge: "12"
   #   firefox: "28"
   #   firefox_android: "28"
   #   safari: "10.1"
   #   safari_ios: "10.3"
   - api.KeyboardEvent.repeat
+
+  # baseline: false
+  # support:
+  #   chrome: "48"
+  #   chrome_android: "48"
+  #   edge: "79"
+  #   firefox: "15"
+  #   firefox_android: "15"
+  - api.KeyboardEvent.getModifierState.key_parameter_fn
+  - api.KeyboardEvent.getModifierState.key_parameter_scrolllock
+
+  # baseline: false
+  # support:
+  #   chrome: "48"
+  #   chrome_android: "48"
+  #   edge: ≤79
+  #   firefox: "15"
+  #   firefox_android: "15"
+  - api.KeyboardEvent.getModifierState.key_parameter_numlock
 
   # baseline: false
   # support:
@@ -348,7 +419,29 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "48"
+  #   chrome_android: "48"
+  #   edge: "79"
+  - api.KeyboardEvent.getModifierState.key_parameter_symbol
+
+  # baseline: false
+  # support:
+  #   chrome: "92"
+  #   chrome_android: "92"
+  #   edge: "92"
+  - api.Element.auxclick_event.type_pointerevent
+  - api.Element.click_event.type_pointerevent
+  - api.Element.contextmenu_event.type_pointerevent
+
+  # baseline: false
+  # support:
   #   safari: "5"
   #   safari_ios: "4.2"
   - api.Element.focusin_event
   - api.Element.focusout_event
+
+  # baseline: false
+  # support:
+  #   firefox: "67"
+  #   firefox_android: "67"
+  - api.InputEvent.inputType.insertFromPasteAsQuotation

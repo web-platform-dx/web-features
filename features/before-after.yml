@@ -1,0 +1,13 @@
+name: ::before and ::after
+description: The `::before` and `::after` CSS pseudo-elements select inline boxes preceding and following an element. They are often used with the `content` property to generate cosmetic content.
+spec: https://drafts.csswg.org/css-pseudo-4/#generated-content
+caniuse: css-gencontent
+status:
+  compute_from:
+    - css.selectors.before
+    - css.selectors.after
+compat_features:
+  - css.selectors.before
+  - css.selectors.before.animation_and_transition_support
+  - css.selectors.after
+  - css.selectors.after.animation_and_transition_support

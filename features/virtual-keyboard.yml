@@ -1,0 +1,13 @@
+name: Virtual keyboard
+description: The `navigator.virtualKeyboard` API inspects and controls on-screen virtual keyboards. You can use it to programmatically hide or show a virtual keyboard or respond to the keyboard disappearing or appearing.
+spec: https://w3c.github.io/virtual-keyboard/
+compat_features:
+  - api.HTMLElement.virtualKeyboardPolicy
+  - api.Navigator.virtualKeyboard
+  - api.VirtualKeyboard
+  - api.VirtualKeyboard.boundingRect
+  - api.VirtualKeyboard.geometrychange_event
+  - api.VirtualKeyboard.hide
+  - api.VirtualKeyboard.overlaysContent
+  - api.VirtualKeyboard.show
+  - html.global_attributes.virtualkeyboardpolicy

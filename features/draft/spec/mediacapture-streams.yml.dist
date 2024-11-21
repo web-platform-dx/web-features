@@ -248,6 +248,19 @@ compat_features:
   - api.InputDeviceInfo
 
   # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "53"
+  #   chrome_android: "53"
+  #   edge: "79"
+  #   firefox: "68"
+  #   firefox_android: "68"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.MediaDevices.getUserMedia.secure_context_required
+
+  # baseline: high
   # baseline_low_date: ≤2020-01-15
   # baseline_high_date: ≤2022-07-15
   # support:
@@ -304,6 +317,32 @@ compat_features:
   #   safari_ios: "11"
   - api.MediaStreamTrack.applyConstraints.groupId_constraint
 
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "64"
+  #   chrome_android: "64"
+  #   edge: "79"
+  #   firefox: "74"
+  #   firefox_android: "79"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - html.elements.iframe.allow.camera
+  - html.elements.iframe.allow.microphone
+
+  # baseline: low
+  # baseline_low_date: 2024-10-29
+  # support:
+  #   chrome: "59"
+  #   chrome_android: "59"
+  #   edge: "12"
+  #   firefox: "132"
+  #   firefox_android: "132"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.MediaStreamTrack.getCapabilities
+
   # baseline: false
   # support:
   #   chrome: "57"
@@ -326,21 +365,22 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "74"
+  #   chrome_android: "74"
+  #   edge: "79"
+  #   firefox: "69"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.Navigator.mediaDevices.secure_context_required
+
+  # baseline: false
+  # support:
   #   chrome: "38"
   #   chrome_android: "38"
   #   edge: "12"
   #   safari: "11"
   #   safari_ios: "11"
   - api.MediaStreamTrack.muted
-
-  # baseline: false
-  # support:
-  #   chrome: "59"
-  #   chrome_android: "59"
-  #   edge: "12"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - api.MediaStreamTrack.getCapabilities
 
   # baseline: false
   # support:

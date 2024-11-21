@@ -1,0 +1,11 @@
+name: Data URLs
+description: Data URLs are URLs that start with the `data:` scheme and which directly contain data rather than point to remote resources.
+spec: https://www.rfc-editor.org/rfc/rfc2397
+status:
+  compute_from: http.data-url
+compat_features:
+  - http.data-url
+  - http.data-url.css_files
+  - http.data-url.html_files
+  - http.data-url.js_files
+  - http.data-url.top_level_navigation_blocked
