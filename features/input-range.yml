@@ -1,0 +1,13 @@
+name: '<input type="range">'
+description: The `<input type="range">` element represents a slider for choosing an inexact value between a minimum and maximum value.
+spec: https://html.spec.whatwg.org/multipage/input.html#range-state-(type=range)
+group:
+  - forms
+  - html-elements
+caniuse: input-range
+status:
+  compute_from: html.elements.input.type_range
+compat_features:
+  - html.elements.input.type_range
+  - html.elements.input.type_range.vertical_orientation
+  - html.elements.input.type_range.tick_marks

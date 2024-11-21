@@ -1,0 +1,6 @@
+name: HTTP Strict Transport Security
+description: The `Strict-Transport-Security` HTTP response header informs browsers that the site should only be accessed using HTTPS, and that any future attempts to access it using HTTP should automatically be converted to HTTPS. Also known as HSTS.
+spec: https://www.rfc-editor.org/rfc/rfc6797
+group: security
+compat_features:
+  - http.headers.Strict-Transport-Security

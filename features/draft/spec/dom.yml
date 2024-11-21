@@ -1,23 +1,13 @@
-draft_date: 2024-11-06
+draft_date: 2024-11-21
 name: DOM Standard
 description: TODO
 spec: https://dom.spec.whatwg.org/
 compat_features:
-  - api.CustomEvent.worker_support
-  - api.Document.createElement.options_parameter
-  - api.Document.createElementNS.options_parameter
   - api.Document.createEvent
-  - api.Document.createExpression
   - api.Document.featurePolicy
   - api.Element.attachShadow.options_clonable_parameter
   - api.Element.attachShadow.options_delegatesFocus_parameter
   - api.Element.attachShadow.options_serializable_parameter
-  - api.EventTarget.addEventListener.options_parameter
-  - api.EventTarget.addEventListener.options_parameter.options_passive_parameter_default_true_touch
-  - api.EventTarget.addEventListener.options_parameter.options_passive_parameter_default_true_wheel
-  - api.EventTarget.addEventListener.useCapture_parameter_optional
-  - api.EventTarget.removeEventListener.options_parameter
-  - api.EventTarget.removeEventListener.useCapture_parameter_optional
   - api.Range.collapse.toStart_parameter_optional
   - api.ShadowRoot.delegatesFocus
   - api.ShadowRoot.serializable
@@ -27,6 +17,7 @@ compat_features:
 #   - api.AbortController
 #   - api.AbortController.AbortController
 #   - api.AbortController.abort
+#   - api.AbortController.abort.reason_parameter
 #   - api.AbortController.signal
 #   - api.AbortSignal
 #   - api.AbortSignal.abort_event
@@ -149,7 +140,9 @@ compat_features:
 #   - api.Document.createComment
 #   - api.Document.createDocumentFragment
 #   - api.Document.createElement
+#   - api.Document.createElement.options_parameter
 #   - api.Document.createElementNS
+#   - api.Document.createElementNS.options_parameter
 #   - api.Document.createNodeIterator
 #   - api.Document.createProcessingInstruction
 #   - api.Document.createTextNode
@@ -319,6 +312,7 @@ compat_features:
 #   - api.CustomEvent
 #   - api.CustomEvent.CustomEvent
 #   - api.CustomEvent.detail
+#   - api.CustomEvent.worker_support
 #   - api.Event
 #   - api.Event.Event
 #   - api.Event.bubbles
@@ -336,13 +330,20 @@ compat_features:
 #   - api.EventTarget
 #   - api.EventTarget.EventTarget
 #   - api.EventTarget.addEventListener
+#   - api.EventTarget.addEventListener.options_parameter
 #   - api.EventTarget.addEventListener.options_parameter.options_capture_parameter
 #   - api.EventTarget.addEventListener.options_parameter.options_once_parameter
 #   - api.EventTarget.addEventListener.options_parameter.options_passive_parameter
+#   - api.EventTarget.addEventListener.options_parameter.options_passive_parameter_default_true_touch
+#   - api.EventTarget.addEventListener.options_parameter.options_passive_parameter_default_true_wheel
 #   - api.EventTarget.addEventListener.options_parameter.options_signal_parameter
+#   - api.EventTarget.addEventListener.useCapture_parameter_optional
 #   - api.EventTarget.dispatchEvent
 #   - api.EventTarget.removeEventListener
+#   - api.EventTarget.removeEventListener.options_parameter
+#   - api.EventTarget.removeEventListener.useCapture_parameter_optional
 # - XPath:
+#   - api.Document.createExpression
 #   - api.Document.evaluate
 #   - api.XPathEvaluator
 #   - api.XPathEvaluator.XPathEvaluator

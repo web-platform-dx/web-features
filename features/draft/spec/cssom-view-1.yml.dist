@@ -331,26 +331,6 @@ compat_features:
   #   chrome: "1"
   #   chrome_android: "18"
   #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "1"
-  - api.Window.open
-
-  # baseline: false
-  # support:
-  #   chrome: "23"
-  #   chrome_android: "25"
-  #   edge: "12"
-  #   firefox: "65"
-  #   firefox_android: "65"
-  #   safari: "11"
-  - api.Window.open.once_per_event
-
-  # baseline: false
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
   #   firefox: "18"
   #   firefox_android: "18"
   - api.Window.devicePixelRatio
@@ -367,22 +347,12 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "98"
-  #   chrome_android: "98"
-  #   edge: "98"
-  #   firefox: "96"
-  #   firefox_android: "96"
-  - api.Window.open.features_parameter_popup
-
-  # baseline: false
-  # support:
   #   chrome: "100"
   #   chrome_android: "100"
   #   edge: "100"
   #   firefox: "1"
   #   firefox_android: "4"
   - api.Window.moveTo.relative-multi-screen
-  - api.Window.open.relative-multi-screen
   - api.Window.screenX.relative-multi-screen
 
   # baseline: false

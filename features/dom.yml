@@ -82,7 +82,9 @@ compat_features:
   - api.Document.createComment
   - api.Document.createDocumentFragment
   - api.Document.createElement
+  - api.Document.createElement.options_parameter
   - api.Document.createElementNS
+  - api.Document.createElementNS.options_parameter
   - api.Document.createNodeIterator
   - api.Document.createProcessingInstruction
   - api.Document.createTextNode
@@ -274,4 +276,5 @@ compat_features:
   - api.TreeWalker.previousSibling
   - api.TreeWalker.root
   - api.TreeWalker.whatToShow
+  - api.Window.document
   - api.XMLDocument

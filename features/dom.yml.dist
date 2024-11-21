@@ -119,6 +119,7 @@ compat_features:
   - api.ProcessingInstruction.target
   - api.Text
   - api.Text.splitText
+  - api.Window.document
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -1185,3 +1186,13 @@ compat_features:
   #   safari: "1.3"
   #   safari_ios: "1"
   - api.HTMLElement.outerText
+
+  # baseline: false
+  # support:
+  #   chrome: "56"
+  #   chrome_android: "56"
+  #   edge: "79"
+  #   firefox: "50"
+  #   firefox_android: "50"
+  - api.Document.createElement.options_parameter
+  - api.Document.createElementNS.options_parameter
