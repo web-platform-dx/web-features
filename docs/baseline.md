@@ -168,6 +168,15 @@ The _core browser set_ shall be defined as:
 * Mozilla Firefox (Android)
 * Mozilla Firefox (desktop)
 
+> [!NOTE]
+> How Baseline statuses change based on the introduction of a new browser to the existing core browser set is not yet defined.
+> If you need this to adopt Baseline in your tool or process, file an issue describing your use case.
+> See issue [#2133](https://github.com/web-platform-dx/web-features/issues/2133) for further discussion.
+
+> [!NOTE]
+> Baseline status before the release of Edge 12 (the first release of the newest browser in the core browser set) is not defined.
+> If you need Baseline statuses for 2014 or earlier, file an issue describing your use case.
+
 ## Future considerations
 
 There are many things Baseline does not cover.
