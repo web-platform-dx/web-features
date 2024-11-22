@@ -5,7 +5,7 @@ import {
   parseRangedDateString,
   setLogger,
 } from "compute-baseline";
-import { Compat, Feature } from "compute-baseline/browser-compat-data";
+import { Compat, feature, Feature } from "compute-baseline/browser-compat-data";
 import { fdir } from "fdir";
 import fs from "node:fs";
 import path from "node:path";
@@ -238,12 +238,12 @@ function toDist(sourcePath: string): YAML.Document {
 
     if (!source.draft_date) {
       logger.error(
-        `${id}: contains at least one deprecated compat feature and can never be Baseline. This is forbidden for published features.`,
+        `${id}: contains at least one deprecated compat feature. This is forbidden for published features.`,
       );
       exitStatus = 1;
     } else {
       logger.warn(
-        `${id}: draft contains at least one deprecated compat feature and can never be Baseline. Was this intentional?`,
+        `${id}: draft contains at least one deprecated compat feature. Was this intentional?`,
       );
     }
   }
@@ -281,6 +281,22 @@ function toDist(sourcePath: string): YAML.Document {
         `${id}: uses compute_from which must not be used when the overall status does not differ from the per-key statuses. Delete the status override.`,
       );
       exitStatus = 1;
+    }
+
+    for (const key of compatFeatures) {
+      const f = feature(key);
+      if (f.deprecated) {
+        if (!source.draft_date) {
+          logger.error(
+            `${id}: contains contains deprecated compat feature ${f.id}. This is forbidden for published features.`,
+          );
+          exitStatus = 1;
+        } else {
+          logger.warn(
+            `${id}: draft contains deprecated compat feature ${f.id}. Was this intentional?`,
+          );
+        }
+      }
     }
   }
 
