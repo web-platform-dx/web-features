@@ -1,4 +1,4 @@
-draft_date: 2024-10-21
+draft_date: 2024-11-21
 name: CSS Color Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-color-5/
@@ -9,11 +9,7 @@ compat_features:
   - css.types.color.color.relative_syntax
   - css.types.color.hsl.relative_syntax
   - css.types.color.hwb.relative_syntax
-  - css.types.color.lab.mixed_type_parameters
-  - css.types.color.lch.mixed_type_parameters
   - css.types.color.lch.relative_syntax
-  - css.types.color.oklab.mixed_type_parameters
-  - css.types.color.oklch.mixed_type_parameters
   - css.types.color.oklch.relative_syntax
   - css.types.color.rgb.relative_syntax
 
@@ -39,7 +35,9 @@ compat_features:
 #   - css.types.color.hwb.mixed_type_parameters
 # - Lab and LCH:
 #   - css.types.color.lab
+#   - css.types.color.lab.mixed_type_parameters
 #   - css.types.color.lch
+#   - css.types.color.lch.mixed_type_parameters
 # - Relative colors:
 #   - css.types.color.lab.relative_syntax
 #   - css.types.color.oklab.relative_syntax
@@ -51,7 +49,9 @@ compat_features:
 #   - css.types.color.named-color.transparent
 # - Oklab and Oklch:
 #   - css.types.color.oklab
+#   - css.types.color.oklab.mixed_type_parameters
 #   - css.types.color.oklch
+#   - css.types.color.oklch.mixed_type_parameters
 # - RGB:
 #   - css.types.color.rgb
 #   - css.types.color.rgb.alpha_parameter

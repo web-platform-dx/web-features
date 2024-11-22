@@ -4,8 +4,14 @@
 status:
   baseline: false
   support:
-    safari_ios: "10"
+    chrome: "22"
+    chrome_android: "25"
+    edge: "12"
+    firefox: "52"
+    firefox_android: "6"
+    safari_ios: ≤3
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "22"
@@ -110,7 +116,6 @@ compat_features:
   #   safari_ios: "3.2"
   - api.TouchEvent.TouchEvent
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   safari_ios: "10"

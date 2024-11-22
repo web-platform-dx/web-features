@@ -1,4 +1,4 @@
-draft_date: 2024-11-13
+draft_date: 2024-11-21
 name: Service Workers
 description: TODO
 spec: https://w3c.github.io/ServiceWorker/
@@ -87,7 +87,6 @@ compat_features:
   - api.ServiceWorkerGlobalScope.registration
   - api.ServiceWorkerGlobalScope.serviceWorker
   - api.ServiceWorkerGlobalScope.skipWaiting
-  - api.ServiceWorkerRegistration
   - api.ServiceWorkerRegistration.active
   - api.ServiceWorkerRegistration.installing
   - api.ServiceWorkerRegistration.navigationPreload
@@ -114,3 +113,5 @@ compat_features:
 #   - api.ServiceWorker.ecmascript_modules
 # - messageerror:
 #   - api.ServiceWorkerContainer.messageerror_event
+# - Push messages:
+#   - api.ServiceWorkerRegistration
