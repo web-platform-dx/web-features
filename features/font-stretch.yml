@@ -1,0 +1,14 @@
+name: font-stretch
+description: The `font-stretch` CSS property selects a font face from a font family based on width, either by a keyword such as `condensed` or a percentage.
+# Note: `font-stretch` will become an alias to `font-width`: https://drafts.csswg.org/css-fonts/#font-stretch-desc
+spec: https://drafts.csswg.org/css-fonts-4/#font-stretch-prop
+group: fonts
+caniuse: css-font-stretch
+status:
+  compute_from: css.properties.font-stretch
+compat_features:
+  - css.at-rules.font-face.font-stretch
+  - css.properties.font-stretch
+  - css.properties.font-stretch.percentage
+  - css.properties.font.font_stretch_support
+  - svg.global_attributes.font-stretch

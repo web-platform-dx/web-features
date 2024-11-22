@@ -1,3 +1,18 @@
 name: Scheduler API
 description: The `scheduler` API provides a way to prioritize all tasks belonging to an application.
 spec: https://wicg.github.io/scheduling-apis/
+compat_features:
+  - api.TaskSignal.any_static
+  - api.TaskSignal.prioritychange_event
+  - api.Scheduler
+  - api.Scheduler.postTask
+  - api.Scheduler.yield
+  - api.TaskController
+  - api.TaskController.TaskController
+  - api.TaskController.setPriority
+  - api.TaskPriorityChangeEvent
+  - api.TaskPriorityChangeEvent.TaskPriorityChangeEvent
+  - api.TaskPriorityChangeEvent.previousPriority
+  - api.TaskSignal
+  - api.TaskSignal.priority
+  - api.scheduler

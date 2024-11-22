@@ -1,12 +1,14 @@
-draft_date: 2024-09-09
+draft_date: 2024-11-06
 name: Pointer Lock 2.0
 description: TODO
 spec: https://w3c.github.io/pointerlock/
 compat_features:
-  - api.Document
+  - api.Document.featurePolicy
   - api.ShadowRoot.pointerLockElement
 
 # The following features in the spec are already part of web-features:
+# - DOM:
+#   - api.Document
 # - Pointer lock:
 #   - api.Document.exitPointerLock
 #   - api.Document.pointerLockElement

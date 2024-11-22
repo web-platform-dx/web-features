@@ -1,0 +1,8 @@
+name: Time-relative pseudo-selectors
+description: The `:future` and `:past` CSS pseudo-classes match upcoming or prior elements during media playback.
+spec: https://drafts.csswg.org/selectors-4/#time-pseudos
+group: selectors
+compat_features:
+  - css.selectors.future
+  - css.selectors.past
+  # Note: `:current` has no support anywhere yet.

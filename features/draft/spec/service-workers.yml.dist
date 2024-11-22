@@ -18,6 +18,20 @@ compat_features:
   #   safari_ios: "11.3"
   - api.Cache
   - api.caches
+  - api.caches.worker_support
+
+  # baseline: high
+  # baseline_low_date: 2018-04-12
+  # baseline_high_date: 2020-10-12
+  # support:
+  #   chrome: "40"
+  #   chrome_android: "40"
+  #   edge: "16"
+  #   firefox: "44"
+  #   firefox_android: "44"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - api.Cache.worker_support
 
   # baseline: high
   # baseline_low_date: 2018-04-12
@@ -39,6 +53,19 @@ compat_features:
   - api.CacheStorage.has
   - api.CacheStorage.keys
   - api.CacheStorage.open
+
+  # baseline: high
+  # baseline_low_date: 2018-04-12
+  # baseline_high_date: 2020-10-12
+  # support:
+  #   chrome: "43"
+  #   chrome_android: "43"
+  #   edge: "16"
+  #   firefox: "44"
+  #   firefox_android: "44"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - api.CacheStorage.worker_support
 
   # baseline: high
   # baseline_low_date: 2018-04-12
@@ -133,7 +160,6 @@ compat_features:
   - api.ServiceWorkerGlobalScope.fetch_event
   - api.ServiceWorkerGlobalScope.install_event
   - api.ServiceWorkerGlobalScope.message_event
-  - api.ServiceWorkerRegistration
   - api.ServiceWorkerRegistration.active
   - api.ServiceWorkerRegistration.installing
   - api.ServiceWorkerRegistration.scope
@@ -280,6 +306,19 @@ compat_features:
   #   chrome: "60"
   #   chrome_android: "60"
   #   edge: "17"
+  #   firefox: "53"
+  #   firefox_android: "53"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - api.ExtendableEvent.waitUntil.async_waitUntil
+
+  # baseline: high
+  # baseline_low_date: 2018-04-30
+  # baseline_high_date: 2020-10-30
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "17"
   #   firefox: "54"
   #   firefox_android: "54"
   #   safari: "11.1"
@@ -303,6 +342,19 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
+  #   chrome: "65"
+  #   chrome_android: "65"
+  #   edge: "79"
+  #   firefox: "44"
+  #   firefox_android: "44"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - api.CacheStorage.secure_context_required
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
   #   chrome: "74"
   #   chrome_android: "74"
   #   edge: "79"
@@ -312,8 +364,9 @@ compat_features:
   #   safari_ios: "11.3"
   - api.ServiceWorkerContainer.startMessages
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-04-05
+  # baseline_high_date: 2024-10-05
   # support:
   #   chrome: "59"
   #   chrome_android: "59"
@@ -324,8 +377,9 @@ compat_features:
   #   safari_ios: "15.4"
   - api.ServiceWorkerRegistration.navigationPreload
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-04-05
+  # baseline_high_date: 2024-10-05
   # support:
   #   chrome: "59"
   #   chrome_android: "59"
@@ -340,6 +394,18 @@ compat_features:
   - api.NavigationPreloadManager.enable
   - api.NavigationPreloadManager.getState
   - api.NavigationPreloadManager.setHeaderValue
+
+  # baseline: low
+  # baseline_low_date: 2022-07-26
+  # support:
+  #   chrome: "65"
+  #   chrome_android: "65"
+  #   edge: "79"
+  #   firefox: "103"
+  #   firefox_android: "103"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - api.caches.secure_context_required
 
   # baseline: low
   # baseline_low_date: 2022-09-12
@@ -388,6 +454,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "66"
+  #   chrome_android: "66"
+  #   edge: "79"
+  #   firefox: "59"
+  #   firefox_android: "59"
+  - api.FetchEvent.respondWith.networkerror_on_same-origin_cors
+
+  # baseline: false
+  # support:
   #   chrome: "79"
   #   chrome_android: "79"
   #   edge: "79"
@@ -406,6 +481,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "40"
+  #   chrome_android: "40"
+  #   edge: "79"
+  - api.InstallEvent.InstallEvent
+
+  # baseline: false
+  # support:
   #   chrome: "123"
   #   chrome_android: "123"
   #   edge: "123"
@@ -415,6 +497,7 @@ compat_features:
   # support:
   #   safari: "11.1"
   #   safari_ios: "11.3"
+  - api.ServiceWorkerContainer.worker_support
   - api.WorkerNavigator.serviceWorker
 
   # baseline: false
@@ -423,7 +506,8 @@ compat_features:
   #   safari_ios: "16"
   - api.WindowClient.ancestorOrigins
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
-  - api.FetchEvent.replacesClientId
+  # support:
+  #   firefox: "59"
+  #   firefox_android: "59"
+  - api.FetchEvent.respondWith.resource_url

@@ -149,6 +149,7 @@ compat_features:
   # support:
   #   chrome: "129"
   #   chrome_android: "129"
+  #   edge: "129"
   - api.CSSPositionTryDescriptors.position-area
   - api.CSSPositionTryDescriptors.positionArea
   - css.properties.position-area
@@ -187,6 +188,13 @@ compat_features:
   - css.properties.position-area.y-self-end
   - css.properties.position-area.y-self-start
   - css.properties.position-area.y-start
+
+  # baseline: false
+  # support:
+  #   chrome: "131"
+  - css.properties.anchor-scope
+  - css.properties.anchor-scope.all
+  - css.properties.anchor-scope.none
 
   # baseline: false
   # support: {}

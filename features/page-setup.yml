@@ -1,0 +1,30 @@
+name: Page setup
+description: The `@page` CSS at-rule sets the page-specific dimensions and margins for content such as printed documents, ebooks, or slides.
+spec: https://drafts.csswg.org/css-page-3/#at-page-rule
+group:
+  - layout
+  - print
+caniuse: css-paged-media
+status:
+  compute_from: css.at-rules.page.size
+compat_features:
+  - css.at-rules.page
+  - css.at-rules.page.bottom-center
+  - css.at-rules.page.bottom-left
+  - css.at-rules.page.bottom-left-corner
+  - css.at-rules.page.bottom-right
+  - css.at-rules.page.bottom-right-corner
+  - css.at-rules.page.left-bottom
+  - css.at-rules.page.left-middle
+  - css.at-rules.page.left-top
+  - css.at-rules.page.right-bottom
+  - css.at-rules.page.right-middle
+  - css.at-rules.page.right-top
+  - css.at-rules.page.size
+  - css.at-rules.page.size.jis-b4
+  - css.at-rules.page.size.jis-b5
+  - css.at-rules.page.top-center
+  - css.at-rules.page.top-left
+  - css.at-rules.page.top-left-corner
+  - css.at-rules.page.top-right
+  - css.at-rules.page.top-right-corner

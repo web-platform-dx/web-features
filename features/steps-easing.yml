@@ -1,0 +1,9 @@
+name: steps() easing
+description: The `steps()` CSS easing function divides an animation or transition into equidistant intervals, jumping from value to value. The `step-start` and `step-end` keyword values are presets with a single interval.
+spec: https://drafts.csswg.org/css-easing-2/#step-easing-functions
+group:
+  - animation
+  - transitions
+compat_features:
+  - css.types.easing-function.steps
+  - css.types.easing-function.steps.jump

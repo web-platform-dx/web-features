@@ -203,3 +203,17 @@ compat_features:
   - css.properties.clear.inline-start
   - css.properties.float.inline-end
   - css.properties.float.inline-start
+
+  # baseline: false
+  # support:
+  #   firefox: "69"
+  #   firefox_android: "79"
+  - css.properties.overflow-block
+  - css.properties.overflow-inline
+
+  # baseline: false
+  # support:
+  #   firefox: "112"
+  #   firefox_android: "112"
+  - css.properties.overflow-block.overlay
+  - css.properties.overflow-inline.overlay

@@ -1,106 +1,43 @@
-draft_date: 2024-09-18
+draft_date: 2024-11-21
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
-  - api.BarProp
-  - api.BarProp.visible
-  - api.BeforeUnloadEvent
-  - api.CanvasPattern
-  - api.CanvasPattern.setTransform
-  - api.CloseWatcher
-  - api.CloseWatcher.CloseWatcher
-  - api.CloseWatcher.cancel_event
-  - api.CloseWatcher.close
-  - api.CloseWatcher.close_event
-  - api.CloseWatcher.destroy
-  - api.CloseWatcher.requestClose
+  - api.BeforeUnloadEvent.user_interaction
+  - api.CanvasPattern.setTransform.dommatrix
+  - api.CanvasRenderingContext2D.clip.path_parameter
+  - api.CanvasRenderingContext2D.drawFocusIfNeeded.path_parameter
+  - api.CanvasRenderingContext2D.drawImage.ImageBitmap_source_image
+  - api.CanvasRenderingContext2D.fill.path_parameter
+  - api.CanvasRenderingContext2D.isPointInPath.path_parameter
+  - api.CanvasRenderingContext2D.isPointInStroke.path_parameter
+  - api.CanvasRenderingContext2D.setTransform.matrix_parameter
+  - api.CanvasRenderingContext2D.stroke.path_parameter
+  - api.CustomElementRegistry.define.disabledFeatures_static_property
   - api.CustomElementRegistry.get
   - api.CustomElementRegistry.getName
   - api.CustomElementRegistry.upgrade
   - api.CustomElementRegistry.whenDefined
-  - api.DOMParser
-  - api.DOMParser.DOMParser
-  - api.DOMParser.parseFromString
-  - api.DOMStringList
-  - api.DOMStringList.contains
-  - api.DOMStringList.item
-  - api.DOMStringList.length
-  - api.DOMStringMap
-  - api.DataTransfer
-  - api.DataTransfer.DataTransfer
-  - api.DataTransfer.clearData
-  - api.DataTransfer.dropEffect
-  - api.DataTransfer.effectAllowed
-  - api.DataTransfer.files
-  - api.DataTransfer.getData
-  - api.DataTransfer.items
-  - api.DataTransfer.setData
-  - api.DataTransfer.setDragImage
-  - api.DataTransfer.types
-  - api.DataTransferItem
-  - api.DataTransferItem.getAsFile
-  - api.DataTransferItem.getAsString
-  - api.DataTransferItem.kind
-  - api.DataTransferItem.type
-  - api.DataTransferItemList
-  - api.DataTransferItemList.add
-  - api.DataTransferItemList.clear
-  - api.DataTransferItemList.length
-  - api.DataTransferItemList.remove
+  - api.DOMParser.parseFromString.html
+  - api.DOMParser.parseFromString.xml
   - api.DedicatedWorkerGlobalScope
   - api.DedicatedWorkerGlobalScope.close
-  - api.DedicatedWorkerGlobalScope.message_event
   - api.DedicatedWorkerGlobalScope.name
-  - api.DedicatedWorkerGlobalScope.postMessage
-  - api.Document
-  - api.Document.DOMContentLoaded_event
-  - api.Document.activeElement
-  - api.Document.body
-  - api.Document.close
-  - api.Document.cookie
-  - api.Document.currentScript
-  - api.Document.defaultView
   - api.Document.designMode
-  - api.Document.dir
-  - api.Document.embeds
-  - api.Document.forms
-  - api.Document.getElementsByName
-  - api.Document.hasFocus
-  - api.Document.head
-  - api.Document.hidden
-  - api.Document.images
-  - api.Document.lastModified
-  - api.Document.links
-  - api.Document.location
-  - api.Document.open
-  - api.Document.plugins
-  - api.Document.readyState
-  - api.Document.readystatechange_event
-  - api.Document.referrer
-  - api.Document.scripts
+  - api.Document.featurePolicy
   - api.Document.scroll_event
-  - api.Document.securitypolicyviolation_event
-  - api.Document.title
-  - api.Document.visibilityState
-  - api.Document.visibilitychange_event
   - api.Document.write
   - api.Document.writeln
-  - api.DragEvent
-  - api.DragEvent.DragEvent
-  - api.DragEvent.dataTransfer
   - api.Element.auxclick_event
+  - api.Element.auxclick_event.type_pointerevent
   - api.Element.beforematch_event
   - api.Element.blur_event
+  - api.Element.click_event.type_pointerevent
   - api.Element.focus_event
   - api.Element.getHTML
-  - api.Element.innerHTML
-  - api.Element.insertAdjacentHTML
   - api.Element.keydown_event
   - api.Element.keyup_event
-  - api.Element.outerHTML
   - api.Element.scroll_event
-  - api.Element.securitypolicyviolation_event
   - api.Element.wheel_event
   - api.ElementInternals.shadowRoot
   - api.ErrorEvent
@@ -110,15 +47,8 @@ compat_features:
   - api.ErrorEvent.filename
   - api.ErrorEvent.lineno
   - api.ErrorEvent.message
-  - api.EventSource
-  - api.EventSource.EventSource
-  - api.EventSource.close
-  - api.EventSource.error_event
-  - api.EventSource.message_event
-  - api.EventSource.open_event
-  - api.EventSource.readyState
-  - api.EventSource.url
-  - api.EventSource.withCredentials
+  - api.EventSource.EventSource.options_withCredentials_parameter
+  - api.EventSource.worker_support
   - api.FileList
   - api.FormDataEvent
   - api.FormDataEvent.FormDataEvent
@@ -128,97 +58,64 @@ compat_features:
   - api.HTMLAllCollection.length
   - api.HTMLAllCollection.namedItem
   - api.HTMLAnchorElement.download
+  - api.HTMLAnchorElement.hrefTranslate
   - api.HTMLAnchorElement.ping
   - api.HTMLAreaElement.download
   - api.HTMLAreaElement.ping
+  - api.HTMLBaseElement.href.forbid_data_javascript_urls
+  - api.HTMLBaseElement.href.forbid_special_characters
+  - api.HTMLButtonElement.command
+  - api.HTMLButtonElement.commandForElement
+  - api.HTMLCanvasElement.getContext.2d_context
+  - api.HTMLCanvasElement.getContext.bitmaprenderer_context
   - api.HTMLCanvasElement.getContext.bitmaprenderer_context.options_alpha_parameter
+  - api.HTMLCanvasElement.getContext.webgl2_context
+  - api.HTMLCanvasElement.getContext.webgl_context
+  - api.HTMLCanvasElement.toBlob.quality_parameter
+  - api.HTMLCanvasElement.toBlob.type_parameter_jpeg
+  - api.HTMLCanvasElement.toBlob.type_parameter_png
+  - api.HTMLCanvasElement.toBlob.type_parameter_webp
+  - api.HTMLCanvasElement.toDataURL.type_parameter_jpeg
+  - api.HTMLCanvasElement.toDataURL.type_parameter_png
+  - api.HTMLCanvasElement.toDataURL.type_parameter_webp
   - api.HTMLDListElement
-  - api.HTMLDetailsElement.toggle_event
-  - api.HTMLDocument
-  - api.HTMLElement
   - api.HTMLElement.accessKey
   - api.HTMLElement.accessKeyLabel
   - api.HTMLElement.autocapitalize
+  - api.HTMLElement.autocorrect
+  - api.HTMLElement.beforetoggle_event.dialog_elements
   - api.HTMLElement.blur
   - api.HTMLElement.change_event
   - api.HTMLElement.click
+  - api.HTMLElement.command_event
   - api.HTMLElement.contentEditable
-  - api.HTMLElement.dataset
-  - api.HTMLElement.dir
-  - api.HTMLElement.drag_event
-  - api.HTMLElement.dragend_event
-  - api.HTMLElement.dragenter_event
-  - api.HTMLElement.draggable
-  - api.HTMLElement.dragleave_event
-  - api.HTMLElement.dragover_event
-  - api.HTMLElement.dragstart_event
-  - api.HTMLElement.drop_event
+  - api.HTMLElement.contentEditable.plaintext-only
   - api.HTMLElement.enterKeyHint
   - api.HTMLElement.focus
-  - api.HTMLElement.hidden
-  - api.HTMLElement.innerText
+  - api.HTMLElement.focus.options_focusVisible_parameter
+  - api.HTMLElement.focus.options_preventScroll_parameter
   - api.HTMLElement.inputMode
   - api.HTMLElement.isContentEditable
   - api.HTMLElement.lang
   - api.HTMLElement.nonce
-  - api.HTMLElement.outerText
   - api.HTMLElement.spellcheck
   - api.HTMLElement.title
+  - api.HTMLElement.togglePopover.returns_boolean
+  - api.HTMLElement.toggle_event.details_elements
+  - api.HTMLElement.toggle_event.dialog_elements
   - api.HTMLFormControlsCollection
   - api.HTMLFormControlsCollection.namedItem
+  - api.HTMLIFrameElement.featurePolicy
   - api.HTMLIFrameElement.sandbox
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes
   - api.HTMLImageElement.sizes.auto
   - api.HTMLImageElement.srcset
-  - api.HTMLInputElement
-  - api.HTMLInputElement.accept
-  - api.HTMLInputElement.alt
-  - api.HTMLInputElement.autocomplete
-  - api.HTMLInputElement.cancel_event
-  - api.HTMLInputElement.checked
-  - api.HTMLInputElement.defaultChecked
-  - api.HTMLInputElement.defaultValue
-  - api.HTMLInputElement.disabled
-  - api.HTMLInputElement.files
-  - api.HTMLInputElement.form
-  - api.HTMLInputElement.formAction
-  - api.HTMLInputElement.formEnctype
-  - api.HTMLInputElement.formMethod
-  - api.HTMLInputElement.formNoValidate
-  - api.HTMLInputElement.formTarget
-  - api.HTMLInputElement.height
-  - api.HTMLInputElement.indeterminate
-  - api.HTMLInputElement.invalid_event
-  - api.HTMLInputElement.labels
-  - api.HTMLInputElement.list
-  - api.HTMLInputElement.max
-  - api.HTMLInputElement.maxLength
-  - api.HTMLInputElement.min
-  - api.HTMLInputElement.minLength
-  - api.HTMLInputElement.multiple
-  - api.HTMLInputElement.name
-  - api.HTMLInputElement.pattern
-  - api.HTMLInputElement.placeholder
-  - api.HTMLInputElement.readOnly
-  - api.HTMLInputElement.required
-  - api.HTMLInputElement.select
-  - api.HTMLInputElement.select_event
-  - api.HTMLInputElement.selectionDirection
-  - api.HTMLInputElement.selectionEnd
-  - api.HTMLInputElement.selectionStart
-  - api.HTMLInputElement.setRangeText
-  - api.HTMLInputElement.setSelectionRange
-  - api.HTMLInputElement.size
-  - api.HTMLInputElement.src
-  - api.HTMLInputElement.step
-  - api.HTMLInputElement.stepDown
-  - api.HTMLInputElement.stepUp
-  - api.HTMLInputElement.type
-  - api.HTMLInputElement.value
-  - api.HTMLInputElement.valueAsDate
-  - api.HTMLInputElement.valueAsNumber
-  - api.HTMLInputElement.width
+  - api.HTMLInputElement.showPicker.autocomplete_input
+  - api.HTMLInputElement.showPicker.datalist_input
+  - api.HTMLInputElement.showPicker.month_input
+  - api.HTMLInputElement.showPicker.time_input
+  - api.HTMLInputElement.showPicker.week_input
   - api.HTMLMediaElement.getStartDate
   - api.HTMLMediaElement.srcObject
   - api.HTMLMediaElement.textTracks
@@ -249,99 +146,42 @@ compat_features:
   - api.HTMLTemplateElement.shadowRootSerializable
   - api.HTMLUnknownElement
   - api.HTMLVideoElement.playsInline
-  - api.HashChangeEvent
-  - api.HashChangeEvent.HashChangeEvent
-  - api.HashChangeEvent.newURL
-  - api.HashChangeEvent.oldURL
-  - api.History
-  - api.History.back
-  - api.History.forward
-  - api.History.go
-  - api.History.length
-  - api.History.pushState
-  - api.History.replaceState
-  - api.History.scrollRestoration
-  - api.History.state
-  - api.ImageBitmap
-  - api.ImageBitmap.close
-  - api.ImageBitmap.height
-  - api.ImageBitmap.width
-  - api.ImageBitmapRenderingContext
-  - api.ImageBitmapRenderingContext.canvas
-  - api.ImageBitmapRenderingContext.transferFromImageBitmap
-  - api.ImageData
-  - api.ImageData.ImageData
-  - api.ImageData.colorSpace
-  - api.ImageData.data
-  - api.ImageData.height
-  - api.ImageData.width
-  - api.Location
-  - api.Location.ancestorOrigins
-  - api.Location.assign
-  - api.Location.hash
-  - api.Location.host
-  - api.Location.hostname
-  - api.Location.href
-  - api.Location.origin
-  - api.Location.pathname
-  - api.Location.port
-  - api.Location.protocol
-  - api.Location.reload
-  - api.Location.replace
-  - api.Location.search
-  - api.Location.toString
-  - api.MathMLElement.blur
-  - api.MathMLElement.dataset
-  - api.MathMLElement.focus
-  - api.MathMLElement.nonce
-  - api.MathMLElement.tabIndex
+  - api.ImageData.worker_support
   - api.MediaError
   - api.MediaError.code
   - api.MediaError.message
-  - api.MessageChannel
-  - api.MessageChannel.MessageChannel
-  - api.MessageChannel.port1
-  - api.MessageChannel.port2
-  - api.MessageEvent
-  - api.MessageEvent.MessageEvent
-  - api.MessageEvent.data
-  - api.MessageEvent.lastEventId
-  - api.MessageEvent.origin
-  - api.MessageEvent.ports
-  - api.MessageEvent.source
-  - api.MessagePort
-  - api.MessagePort.close
-  - api.MessagePort.message_event
-  - api.MessagePort.postMessage
-  - api.MessagePort.start
-  - api.NavigateEvent.canIntercept
-  - api.NavigateEvent.hasUAVisualTransition
-  - api.NavigateEvent.intercept
-  - api.NavigateEvent.scroll
-  - api.Navigation.activation
-  - api.NavigationActivation
-  - api.NavigationActivation.entry
-  - api.NavigationActivation.from
-  - api.NavigationActivation.navigationType
-  - api.Navigator
-  - api.Navigator.cookieEnabled
-  - api.Navigator.hardwareConcurrency
-  - api.Navigator.language
-  - api.Navigator.languages
-  - api.Navigator.onLine
-  - api.Navigator.pdfViewerEnabled
-  - api.Navigator.registerProtocolHandler
-  - api.Navigator.unregisterProtocolHandler
-  - api.Navigator.userAgent
-  - api.NotRestoredReasonDetails
-  - api.NotRestoredReasonDetails.reason
-  - api.NotRestoredReasons
-  - api.NotRestoredReasons.children
-  - api.NotRestoredReasons.id
-  - api.NotRestoredReasons.name
-  - api.NotRestoredReasons.reasons
-  - api.NotRestoredReasons.src
-  - api.NotRestoredReasons.url
+  - api.MessagePort.worker_support
+  - api.Navigator.authentication
+  - api.Navigator.registerProtocolHandler.scheme_parameter_bitcoin
+  - api.Navigator.registerProtocolHandler.scheme_parameter_ftp
+  - api.Navigator.registerProtocolHandler.scheme_parameter_ftps
+  - api.Navigator.registerProtocolHandler.scheme_parameter_geo
+  - api.Navigator.registerProtocolHandler.scheme_parameter_im
+  - api.Navigator.registerProtocolHandler.scheme_parameter_irc
+  - api.Navigator.registerProtocolHandler.scheme_parameter_ircs
+  - api.Navigator.registerProtocolHandler.scheme_parameter_magnet
+  - api.Navigator.registerProtocolHandler.scheme_parameter_mailto
+  - api.Navigator.registerProtocolHandler.scheme_parameter_matrix
+  - api.Navigator.registerProtocolHandler.scheme_parameter_mms
+  - api.Navigator.registerProtocolHandler.scheme_parameter_news
+  - api.Navigator.registerProtocolHandler.scheme_parameter_nntp
+  - api.Navigator.registerProtocolHandler.scheme_parameter_openpgp4fpr
+  - api.Navigator.registerProtocolHandler.scheme_parameter_sftp
+  - api.Navigator.registerProtocolHandler.scheme_parameter_sip
+  - api.Navigator.registerProtocolHandler.scheme_parameter_sms
+  - api.Navigator.registerProtocolHandler.scheme_parameter_smsto
+  - api.Navigator.registerProtocolHandler.scheme_parameter_ssh
+  - api.Navigator.registerProtocolHandler.scheme_parameter_tel
+  - api.Navigator.registerProtocolHandler.scheme_parameter_urn
+  - api.Navigator.registerProtocolHandler.scheme_parameter_webcal
+  - api.Navigator.registerProtocolHandler.scheme_parameter_wtai
+  - api.Navigator.registerProtocolHandler.scheme_parameter_xmpp
+  - api.Navigator.registerProtocolHandler.secure_context_required
+  - api.NotRestoredReasonDetails.toJSON
+  - api.NotRestoredReasons.toJSON
+  - api.OffscreenCanvas.convertToBlob.option_type_parameter_webp
+  - api.OffscreenCanvas.getContext.webgl2_context
+  - api.OffscreenCanvas.getContext.webgl_context
   - api.OffscreenCanvasRenderingContext2D.filter
   - api.OffscreenCanvasRenderingContext2D.fontKerning
   - api.OffscreenCanvasRenderingContext2D.fontStretch
@@ -357,49 +197,6 @@ compat_features:
   - api.PageSwapEvent.PageSwapEvent
   - api.PageSwapEvent.activation
   - api.PageSwapEvent.viewTransition
-  - api.PageTransitionEvent
-  - api.PageTransitionEvent.PageTransitionEvent
-  - api.PageTransitionEvent.persisted
-  - api.PaintRenderingContext2D.beginPath
-  - api.PaintRenderingContext2D.clearRect
-  - api.PaintRenderingContext2D.clip
-  - api.PaintRenderingContext2D.createLinearGradient
-  - api.PaintRenderingContext2D.createPattern
-  - api.PaintRenderingContext2D.createRadialGradient
-  - api.PaintRenderingContext2D.drawImage
-  - api.PaintRenderingContext2D.fill
-  - api.PaintRenderingContext2D.fillRect
-  - api.PaintRenderingContext2D.fillStyle
-  - api.PaintRenderingContext2D.filter
-  - api.PaintRenderingContext2D.getLineDash
-  - api.PaintRenderingContext2D.getTransform
-  - api.PaintRenderingContext2D.globalAlpha
-  - api.PaintRenderingContext2D.globalCompositeOperation
-  - api.PaintRenderingContext2D.imageSmoothingEnabled
-  - api.PaintRenderingContext2D.imageSmoothingQuality
-  - api.PaintRenderingContext2D.isPointInPath
-  - api.PaintRenderingContext2D.isPointInStroke
-  - api.PaintRenderingContext2D.lineCap
-  - api.PaintRenderingContext2D.lineDashOffset
-  - api.PaintRenderingContext2D.lineJoin
-  - api.PaintRenderingContext2D.lineWidth
-  - api.PaintRenderingContext2D.miterLimit
-  - api.PaintRenderingContext2D.resetTransform
-  - api.PaintRenderingContext2D.restore
-  - api.PaintRenderingContext2D.rotate
-  - api.PaintRenderingContext2D.save
-  - api.PaintRenderingContext2D.scale
-  - api.PaintRenderingContext2D.setLineDash
-  - api.PaintRenderingContext2D.setTransform
-  - api.PaintRenderingContext2D.shadowBlur
-  - api.PaintRenderingContext2D.shadowColor
-  - api.PaintRenderingContext2D.shadowOffsetX
-  - api.PaintRenderingContext2D.shadowOffsetY
-  - api.PaintRenderingContext2D.stroke
-  - api.PaintRenderingContext2D.strokeRect
-  - api.PaintRenderingContext2D.strokeStyle
-  - api.PaintRenderingContext2D.transform
-  - api.PaintRenderingContext2D.translate
   - api.Path2D
   - api.Path2D.Path2D
   - api.Path2D.addPath
@@ -423,39 +220,21 @@ compat_features:
   - api.PromiseRejectionEvent.reason
   - api.RadioNodeList
   - api.RadioNodeList.value
-  - api.Range.createContextualFragment
-  - api.SVGElement.blur
-  - api.SVGElement.dataset
-  - api.SVGElement.focus
-  - api.SVGElement.nonce
-  - api.SVGElement.tabIndex
-  - api.SVGImageElement.decode
-  - api.SVGImageElement.decoding
   - api.ServiceWorker.error_event
   - api.ShadowRoot.activeElement
   - api.ShadowRoot.getHTML
   - api.ShadowRoot.innerHTML
   - api.SharedWorker
   - api.SharedWorker.SharedWorker
+  - api.SharedWorker.SharedWorker.mime_checks
+  - api.SharedWorker.SharedWorker.options_name_parameter
   - api.SharedWorker.error_event
   - api.SharedWorker.port
   - api.SharedWorkerGlobalScope
   - api.SharedWorkerGlobalScope.close
   - api.SharedWorkerGlobalScope.connect_event
   - api.SharedWorkerGlobalScope.name
-  - api.Storage
-  - api.Storage.clear
-  - api.Storage.getItem
-  - api.Storage.key
-  - api.Storage.length
-  - api.Storage.removeItem
-  - api.Storage.setItem
-  - api.StorageEvent
-  - api.StorageEvent.key
-  - api.StorageEvent.newValue
-  - api.StorageEvent.oldValue
-  - api.StorageEvent.storageArea
-  - api.StorageEvent.url
+  - api.StorageEvent.StorageEvent
   - api.SubmitEvent
   - api.SubmitEvent.SubmitEvent
   - api.SubmitEvent.submitter
@@ -474,77 +253,25 @@ compat_features:
   - api.TrackEvent
   - api.TrackEvent.TrackEvent
   - api.TrackEvent.track
-  - api.VisibilityStateEntry
-  - api.VisibilityStateEntry.duration
-  - api.VisibilityStateEntry.entryType
-  - api.VisibilityStateEntry.name
-  - api.VisibilityStateEntry.startTime
-  - api.Window
-  - api.Window.DOMContentLoaded_event
-  - api.Window.alert
-  - api.Window.beforeunload_event
-  - api.Window.blur_event
-  - api.Window.close
-  - api.Window.closed
-  - api.Window.confirm
-  - api.Window.document
-  - api.Window.error_event
-  - api.Window.focus
-  - api.Window.focus_event
-  - api.Window.frameElement
-  - api.Window.frames
-  - api.Window.hashchange_event
-  - api.Window.history
-  - api.Window.languagechange_event
-  - api.Window.length
-  - api.Window.load_event
-  - api.Window.localStorage
-  - api.Window.location
-  - api.Window.locationbar
-  - api.Window.menubar
-  - api.Window.message_event
-  - api.Window.name
-  - api.Window.navigator
-  - api.Window.offline_event
-  - api.Window.online_event
-  - api.Window.open
-  - api.Window.opener
+  - api.Window.open.features_parameter_attributionsrc
   - api.Window.originAgentCluster
-  - api.Window.pagehide_event
-  - api.Window.pagereveal_event
-  - api.Window.pageshow_event
-  - api.Window.pageswap_event
-  - api.Window.parent
-  - api.Window.personalbar
-  - api.Window.popstate_event
-  - api.Window.postMessage
-  - api.Window.prompt
+  - api.Window.postMessage.transfer_parameter
   - api.Window.rejectionhandled_event
-  - api.Window.scrollbars
-  - api.Window.self
-  - api.Window.sessionStorage
-  - api.Window.statusbar
-  - api.Window.stop
-  - api.Window.storage_event
-  - api.Window.toolbar
-  - api.Window.top
   - api.Window.unhandledrejection_event
-  - api.Window.window
   - api.Worker
   - api.Worker.Worker
+  - api.Worker.Worker.mime_checks
+  - api.Worker.Worker.options_name_parameter
   - api.Worker.error_event
-  - api.Worker.message_event
   - api.Worker.messageerror_event
-  - api.Worker.postMessage
   - api.Worker.terminate
+  - api.Worker.worker_support
   - api.WorkerGlobalScope
   - api.WorkerGlobalScope.error_event
   - api.WorkerGlobalScope.importScripts
-  - api.WorkerGlobalScope.languagechange_event
+  - api.WorkerGlobalScope.importScripts.mime_checks
   - api.WorkerGlobalScope.location
   - api.WorkerGlobalScope.navigator
-  - api.WorkerGlobalScope.offline_event
-  - api.WorkerGlobalScope.online_event
   - api.WorkerGlobalScope.rejectionhandled_event
   - api.WorkerGlobalScope.self
   - api.WorkerGlobalScope.unhandledrejection_event
@@ -560,51 +287,48 @@ compat_features:
   - api.WorkerLocation.search
   - api.WorkerLocation.toString
   - api.WorkerNavigator
-  - api.WorkerNavigator.hardwareConcurrency
-  - api.WorkerNavigator.language
-  - api.WorkerNavigator.languages
-  - api.WorkerNavigator.onLine
-  - api.WorkerNavigator.userAgent
   - api.Worklet
   - api.Worklet.addModule
+  - api.Worklet.ecmascript_modules
   - api.WorkletGlobalScope
-  - api.atob
-  - api.btoa
-  - api.clearInterval
-  - api.clearTimeout
-  - api.createImageBitmap
+  - api.atob.worker_support
+  - api.btoa.worker_support
+  - api.clearInterval.worker_support
+  - api.clearTimeout.worker_support
+  - api.createImageBitmap.options_imageOrientation_parameter.from-image
   - api.crossOriginIsolated
   - api.isSecureContext
+  - api.isSecureContext.worker_support
   - api.origin
   - api.queueMicrotask
   - api.reportError
-  - api.setInterval
-  - api.setTimeout
-  - css.selectors.active
-  - css.selectors.checked
-  - css.selectors.disabled
-  - css.selectors.enabled
-  - css.selectors.focus
-  - css.selectors.hover
-  - css.selectors.in-range
-  - css.selectors.invalid
-  - css.selectors.link
-  - css.selectors.optional
-  - css.selectors.out-of-range
-  - css.selectors.required
-  - css.selectors.target
-  - css.selectors.valid
-  - css.selectors.visited
+  - api.setInterval.supports_parameters_for_callback
+  - api.setInterval.worker_support
+  - api.setTimeout.supports_parameters_for_callback
+  - api.setTimeout.worker_support
   - html.elements.a.download
+  - html.elements.a.href.href_sms
+  - html.elements.a.href.href_top
+  - html.elements.a.hreftranslate
+  - html.elements.a.implicit_noopener
   - html.elements.a.ping
+  - html.elements.a.text_fragments
   - html.elements.area.download
   - html.elements.area.ping
+  - html.elements.button.command
+  - html.elements.button.commandfor
   - html.elements.dd
   - html.elements.dl
   - html.elements.dt
-  - html.elements.fencedframe.height
-  - html.elements.fencedframe.width
+  - html.elements.form.autocomplete.new-password
+  - html.elements.form.autocomplete.one-time-code
   - html.elements.form.autocomplete.webauthn
+  - html.elements.hr.hr_in_select
+  - html.elements.html.xmlns
+  - html.elements.iframe.allow.autoplay
+  - html.elements.iframe.allow.cross-origin-isolated
+  - html.elements.iframe.allow.document-domain
+  - html.elements.iframe.allow.wildcards
   - html.elements.iframe.sandbox
   - html.elements.iframe.sandbox.allow-downloads
   - html.elements.iframe.sandbox.allow-forms
@@ -621,62 +345,21 @@ compat_features:
   - html.elements.img.sizes
   - html.elements.img.sizes.auto
   - html.elements.img.srcset
-  - html.elements.input
-  - html.elements.input.accept
-  - html.elements.input.alt
+  - html.elements.img.usemap.case_sensitive
   - html.elements.input.autocomplete
-  - html.elements.input.checked
-  - html.elements.input.disabled
-  - html.elements.input.form
-  - html.elements.input.formaction
-  - html.elements.input.formenctype
-  - html.elements.input.formmethod
-  - html.elements.input.formnovalidate
-  - html.elements.input.formtarget
-  - html.elements.input.list
-  - html.elements.input.max
-  - html.elements.input.maxlength
-  - html.elements.input.min
-  - html.elements.input.minlength
-  - html.elements.input.multiple
-  - html.elements.input.name
-  - html.elements.input.pattern
-  - html.elements.input.placeholder
-  - html.elements.input.readonly
-  - html.elements.input.required
-  - html.elements.input.size
-  - html.elements.input.src
-  - html.elements.input.step
-  - html.elements.input.type_button
-  - html.elements.input.type_checkbox
-  - html.elements.input.type_color
-  - html.elements.input.type_date
-  - html.elements.input.type_datetime-local
-  - html.elements.input.type_email
-  - html.elements.input.type_file
-  - html.elements.input.type_hidden
-  - html.elements.input.type_image
-  - html.elements.input.type_month
-  - html.elements.input.type_number
-  - html.elements.input.type_password
-  - html.elements.input.type_radio
-  - html.elements.input.type_range
-  - html.elements.input.type_reset
-  - html.elements.input.type_submit
-  - html.elements.input.type_tel
-  - html.elements.input.type_text
-  - html.elements.input.type_time
-  - html.elements.input.type_url
-  - html.elements.input.type_week
-  - html.elements.link.rel.alternate_stylesheet
   - html.elements.link.rel.dns-prefetch
   - html.elements.link.rel.expect
+  - html.elements.link.rel.icon
   - html.elements.link.rel.manifest
   - html.elements.link.rel.preconnect
   - html.elements.link.rel.prefetch
   - html.elements.link.rel.preload
-  - html.elements.meta.http-equiv.content-security-policy
-  - html.elements.meta.http-equiv.content-type
+  - html.elements.link.rel.preload.as-fetch
+  - html.elements.link.rel.preload.as-font
+  - html.elements.link.rel.preload.as-image
+  - html.elements.link.rel.preload.as-script
+  - html.elements.link.rel.preload.as-style
+  - html.elements.link.rel.preload.as-track
   - html.elements.meta.name.theme-color
   - html.elements.meter
   - html.elements.meter.high
@@ -690,15 +373,21 @@ compat_features:
   - html.elements.source.sizes
   - html.elements.source.srcset
   - html.elements.summary
+  - html.elements.summary.display_list_item
   - html.elements.template.shadowrootclonable
   - html.elements.template.shadowrootdelegatesfocus
   - html.elements.template.shadowrootserializable
+  - html.elements.textarea.autocomplete.new-password
+  - html.elements.textarea.autocomplete.one-time-code
   - html.elements.textarea.autocomplete.webauthn
+  - html.elements.track.kind.descriptions
   - html.elements.video.playsinline
   - html.global_attributes.accesskey
   - html.global_attributes.autocapitalize
+  - html.global_attributes.autocorrect
   - html.global_attributes.class
   - html.global_attributes.contenteditable
+  - html.global_attributes.contenteditable.plaintext-only
   - html.global_attributes.data_attributes
   - html.global_attributes.dir
   - html.global_attributes.draggable
@@ -708,23 +397,25 @@ compat_features:
   - html.global_attributes.inputmode
   - html.global_attributes.lang
   - html.global_attributes.nonce
+  - html.global_attributes.nonce.nonce_hiding
   - html.global_attributes.spellcheck
   - html.global_attributes.style
   - html.global_attributes.title
+  - html.global_attributes.title.multi-line_titles
   - http.headers.Cross-Origin-Embedder-Policy
   - http.headers.Cross-Origin-Embedder-Policy.credentialless
   - http.headers.Cross-Origin-Opener-Policy
+  - http.headers.Cross-Origin-Opener-Policy.noopener-allow-popups
+  - http.headers.Link.expect
   - http.headers.Origin-Agent-Cluster
   - http.headers.Permissions-Policy.autoplay
   - http.headers.Permissions-Policy.cross-origin-isolated
   - http.headers.Permissions-Policy.document-domain
   - http.headers.Refresh
-  - http.headers.X-Frame-Options
   - http.status.103
-  - javascript.builtins.Promise.incumbent_settings_object_tracking
-  - javascript.operators.import_meta
+  - http.status.103.preconnect
+  - http.status.103.preload
   - javascript.operators.import_meta.resolve
-  - svg.elements.image.decoding
 
 # The following features in the spec are already part of web-features:
 # - Audio and video tracks:
@@ -755,6 +446,20 @@ compat_features:
 #   - api.VideoTrackList.length
 #   - api.VideoTrackList.removetrack_event
 #   - api.VideoTrackList.selectedIndex
+# - BarProp:
+#   - api.BarProp
+#   - api.BarProp.visible
+#   - api.BarProp.visible.returns_popup
+#   - api.Window.locationbar
+#   - api.Window.menubar
+#   - api.Window.personalbar
+#   - api.Window.scrollbars
+#   - api.Window.statusbar
+#   - api.Window.toolbar
+# - Beforeunload:
+#   - api.BeforeUnloadEvent
+#   - api.Window.beforeunload_event
+#   - api.Window.beforeunload_event.preventdefault_activation
 # - BroadcastChannel:
 #   - api.BroadcastChannel
 #   - api.BroadcastChannel.BroadcastChannel
@@ -766,6 +471,8 @@ compat_features:
 # - 2D canvas:
 #   - api.CanvasGradient
 #   - api.CanvasGradient.addColorStop
+#   - api.CanvasPattern
+#   - api.CanvasPattern.setTransform
 #   - api.CanvasRenderingContext2D
 #   - api.CanvasRenderingContext2D.arc
 #   - api.CanvasRenderingContext2D.arcTo
@@ -835,6 +542,12 @@ compat_features:
 #   - api.CanvasRenderingContext2D.transform
 #   - api.CanvasRenderingContext2D.translate
 #   - api.CanvasRenderingContext2D.wordSpacing
+#   - api.ImageData
+#   - api.ImageData.ImageData
+#   - api.ImageData.colorSpace
+#   - api.ImageData.data
+#   - api.ImageData.height
+#   - api.ImageData.width
 #   - api.TextMetrics
 #   - api.TextMetrics.alphabeticBaseline
 #   - api.TextMetrics.hangingBaseline
@@ -843,6 +556,17 @@ compat_features:
 # - Canvas createConicGradient():
 #   - api.CanvasRenderingContext2D.createConicGradient
 #   - api.OffscreenCanvasRenderingContext2D.createConicGradient
+# - SVG:
+#   - api.CanvasRenderingContext2D.drawImage.SVGImageElement_source_image
+#   - api.DOMParser.parseFromString.svg
+#   - api.SVGElement.blur
+#   - api.SVGElement.focus
+#   - api.SVGElement.focus.options_preventScroll_parameter
+#   - api.SVGElement.nonce
+#   - api.SVGElement.tabIndex
+#   - api.SVGImageElement.decode
+#   - api.SVGImageElement.decoding
+#   - svg.elements.image.decoding
 # - contextlost and contextrestored:
 #   - api.CanvasRenderingContext2D.isContextLost
 #   - api.HTMLCanvasElement.contextlost_event
@@ -856,11 +580,22 @@ compat_features:
 # - Canvas roundRect():
 #   - api.CanvasRenderingContext2D.roundRect
 #   - api.OffscreenCanvasRenderingContext2D.roundRect
+# - CloseWatcher:
+#   - api.CloseWatcher
+#   - api.CloseWatcher.CloseWatcher
+#   - api.CloseWatcher.cancel_event
+#   - api.CloseWatcher.close
+#   - api.CloseWatcher.close_event
+#   - api.CloseWatcher.destroy
+#   - api.CloseWatcher.requestClose
 # - Autonomous custom elements:
 #   - api.CustomElementRegistry
 #   - api.CustomElementRegistry.define
 #   - api.Window.customElements
 #   - css.selectors.defined
+# - Customized built-in elements:
+#   - api.CustomElementRegistry.builtin_element_support
+#   - html.global_attributes.is
 # - :state():
 #   - api.CustomStateSet
 #   - api.CustomStateSet.@@iterator
@@ -884,13 +619,130 @@ compat_features:
 #   - javascript.builtins.SyntaxError.serializable_object
 #   - javascript.builtins.TypeError.serializable_object
 #   - javascript.builtins.URIError.serializable_object
+# - DOMParser:
+#   - api.DOMParser
+#   - api.DOMParser.DOMParser
+#   - api.DOMParser.parseFromString
+# - DOM:
+#   - api.DOMStringList
+#   - api.DOMStringList.contains
+#   - api.DOMStringList.item
+#   - api.DOMStringList.length
+#   - api.Document
+#   - api.Document.DOMContentLoaded_event
+#   - api.Document.activeElement
+#   - api.Document.body
+#   - api.Document.close
+#   - api.Document.currentScript
+#   - api.Document.defaultView
+#   - api.Document.dir
+#   - api.Document.embeds
+#   - api.Document.forms
+#   - api.Document.getElementsByName
+#   - api.Document.hasFocus
+#   - api.Document.head
+#   - api.Document.images
+#   - api.Document.lastModified
+#   - api.Document.links
+#   - api.Document.open
+#   - api.Document.plugins
+#   - api.Document.readyState
+#   - api.Document.readystatechange_event
+#   - api.Document.referrer
+#   - api.Document.scripts
+#   - api.Document.title
+#   - api.Element.innerHTML
+#   - api.Element.insertAdjacentHTML
+#   - api.Element.outerHTML
+#   - api.HTMLDocument
+#   - api.HTMLElement
+#   - api.HTMLElement.dir
+#   - api.HTMLElement.hidden
+#   - api.HTMLElement.innerText
+#   - api.HTMLElement.outerText
+#   - api.Window.document
+# - Dataset:
+#   - api.DOMStringMap
+#   - api.HTMLElement.dataset
+#   - api.MathMLElement.dataset
+#   - api.SVGElement.dataset
+# - Drag and Drop:
+#   - api.DataTransfer
+#   - api.DataTransfer.DataTransfer
+#   - api.DataTransfer.clearData
+#   - api.DataTransfer.dropEffect
+#   - api.DataTransfer.effectAllowed
+#   - api.DataTransfer.files
+#   - api.DataTransfer.getData
+#   - api.DataTransfer.items
+#   - api.DataTransfer.setData
+#   - api.DataTransfer.setDragImage
+#   - api.DataTransfer.types
+#   - api.DataTransferItem
+#   - api.DataTransferItem.getAsFile
+#   - api.DataTransferItem.getAsString
+#   - api.DataTransferItem.kind
+#   - api.DataTransferItem.type
+#   - api.DataTransferItemList
+#   - api.DataTransferItemList.add
+#   - api.DataTransferItemList.clear
+#   - api.DataTransferItemList.length
+#   - api.DataTransferItemList.remove
+#   - api.DragEvent
+#   - api.DragEvent.DragEvent
+#   - api.DragEvent.dataTransfer
+#   - api.HTMLElement.drag_event
+#   - api.HTMLElement.dragend_event
+#   - api.HTMLElement.dragenter_event
+#   - api.HTMLElement.draggable
+#   - api.HTMLElement.dragleave_event
+#   - api.HTMLElement.dragover_event
+#   - api.HTMLElement.dragstart_event
+#   - api.HTMLElement.drop_event
 # - requestAnimationFrame() in workers:
 #   - api.DedicatedWorkerGlobalScope.cancelAnimationFrame
 #   - api.DedicatedWorkerGlobalScope.requestAnimationFrame
+# - postMessage:
+#   - api.DedicatedWorkerGlobalScope.message_event
+#   - api.DedicatedWorkerGlobalScope.postMessage
+#   - api.MessageEvent
+#   - api.MessageEvent.MessageEvent
+#   - api.MessageEvent.data
+#   - api.MessageEvent.lastEventId
+#   - api.MessageEvent.origin
+#   - api.MessageEvent.source
+#   - api.Window.message_event
+#   - api.Window.postMessage
+#   - api.Worker.message_event
+#   - api.Worker.postMessage
 # - messageerror:
 #   - api.DedicatedWorkerGlobalScope.messageerror_event
 #   - api.MessagePort.messageerror_event
 #   - api.Window.messageerror_event
+# - Cookies:
+#   - api.Document.cookie
+# - Page visibility:
+#   - api.Document.hidden
+#   - api.Document.visibilityState
+#   - api.Document.visibilitychange_event
+# - Location:
+#   - api.Document.location
+#   - api.Location
+#   - api.Location.ancestorOrigins
+#   - api.Location.assign
+#   - api.Location.hash
+#   - api.Location.host
+#   - api.Location.hostname
+#   - api.Location.href
+#   - api.Location.origin
+#   - api.Location.pathname
+#   - api.Location.port
+#   - api.Location.protocol
+#   - api.Location.reload
+#   - api.Location.replace
+#   - api.Location.search
+#   - api.Location.toString
+#   - api.Window.location
 # - Unsanitized HTML parsing methods:
 #   - api.Document.parseHTMLUnsafe_static
 #   - api.Element.setHTMLUnsafe
@@ -898,6 +750,10 @@ compat_features:
 # - scrollend:
 #   - api.Document.scrollend_event
 #   - api.Element.scrollend_event
+# - Content Security Policy (CSP):
+#   - api.Document.securitypolicyviolation_event
+#   - api.Element.securitypolicyviolation_event
+#   - html.elements.meta.http-equiv.content-security-policy
 # - Mouse events:
 #   - api.Element.click_event
 #   - api.Element.dblclick_event
@@ -926,6 +782,16 @@ compat_features:
 #   - api.ElementInternals.validity
 #   - api.ElementInternals.willValidate
 #   - api.HTMLElement.attachInternals
+# - Server-sent events:
+#   - api.EventSource
+#   - api.EventSource.EventSource
+#   - api.EventSource.close
+#   - api.EventSource.error_event
+#   - api.EventSource.message_event
+#   - api.EventSource.open_event
+#   - api.EventSource.readyState
+#   - api.EventSource.url
+#   - api.EventSource.withCredentials
 # - <a>:
 #   - api.HTMLAnchorElement
 #   - api.HTMLAnchorElement.hash
@@ -956,17 +822,53 @@ compat_features:
 #   - html.elements.a.type
 # - Referrer policy:
 #   - api.HTMLAnchorElement.referrerPolicy
+#   - api.HTMLAnchorElement.referrerPolicy.no-referrer-when-downgrade
+#   - api.HTMLAnchorElement.referrerPolicy.origin-when-cross-origin
+#   - api.HTMLAnchorElement.referrerPolicy.unsafe-url
 #   - api.HTMLAreaElement.referrerPolicy
+#   - api.HTMLAreaElement.referrerPolicy.no-referrer-when-downgrade
+#   - api.HTMLAreaElement.referrerPolicy.origin-when-cross-origin
+#   - api.HTMLAreaElement.referrerPolicy.unsafe-url
 #   - api.HTMLIFrameElement.referrerPolicy
+#   - api.HTMLIFrameElement.referrerPolicy.no-referrer-when-downgrade
+#   - api.HTMLIFrameElement.referrerPolicy.origin-when-cross-origin
+#   - api.HTMLIFrameElement.referrerPolicy.unsafe-url
 #   - api.HTMLImageElement.referrerPolicy
+#   - api.HTMLImageElement.referrerPolicy.no-referrer-when-downgrade
+#   - api.HTMLImageElement.referrerPolicy.origin-when-cross-origin
+#   - api.HTMLImageElement.referrerPolicy.unsafe-url
 #   - api.HTMLLinkElement.referrerPolicy
+#   - api.HTMLLinkElement.referrerPolicy.no-referrer-when-downgrade
+#   - api.HTMLLinkElement.referrerPolicy.origin-when-cross-origin
+#   - api.HTMLLinkElement.referrerPolicy.unsafe-url
 #   - api.HTMLScriptElement.referrerPolicy
+#   - api.HTMLScriptElement.referrerPolicy.no-referrer-when-downgrade
+#   - api.HTMLScriptElement.referrerPolicy.origin-when-cross-origin
+#   - api.HTMLScriptElement.referrerPolicy.unsafe-url
 #   - html.elements.a.referrerpolicy
+#   - html.elements.a.referrerpolicy.no-referrer-when-downgrade
+#   - html.elements.a.referrerpolicy.origin-when-cross-origin
+#   - html.elements.a.referrerpolicy.unsafe-url
 #   - html.elements.area.referrerpolicy
+#   - html.elements.area.referrerpolicy.no-referrer-when-downgrade
+#   - html.elements.area.referrerpolicy.origin-when-cross-origin
+#   - html.elements.area.referrerpolicy.unsafe-url
 #   - html.elements.iframe.referrerpolicy
+#   - html.elements.iframe.referrerpolicy.no-referrer-when-downgrade
+#   - html.elements.iframe.referrerpolicy.origin-when-cross-origin
+#   - html.elements.iframe.referrerpolicy.unsafe-url
 #   - html.elements.img.referrerpolicy
+#   - html.elements.img.referrerpolicy.no-referrer-when-downgrade
+#   - html.elements.img.referrerpolicy.origin-when-cross-origin
+#   - html.elements.img.referrerpolicy.unsafe-url
 #   - html.elements.link.referrerpolicy
+#   - html.elements.link.referrerpolicy.no-referrer-when-downgrade
+#   - html.elements.link.referrerpolicy.origin-when-cross-origin
+#   - html.elements.link.referrerpolicy.unsafe-url
 #   - html.elements.script.referrerpolicy
+#   - html.elements.script.referrerpolicy.no-referrer-when-downgrade
+#   - html.elements.script.referrerpolicy.origin-when-cross-origin
+#   - html.elements.script.referrerpolicy.unsafe-url
 # - Image maps:
 #   - api.HTMLAreaElement
 #   - api.HTMLAreaElement.alt
@@ -996,6 +898,7 @@ compat_features:
 #   - html.elements.area.alt
 #   - html.elements.area.coords
 #   - html.elements.area.href
+#   - html.elements.area.implicit_noopener
 #   - html.elements.area.rel
 #   - html.elements.area.rel.noopener
 #   - html.elements.area.rel.noreferrer
@@ -1004,6 +907,7 @@ compat_features:
 #   - html.elements.img.ismap
 #   - html.elements.img.usemap
 #   - html.elements.map
+#   - html.elements.map.name
 # - <audio>:
 #   - api.HTMLAudioElement
 #   - api.HTMLAudioElement.Audio
@@ -1024,6 +928,8 @@ compat_features:
 #   - api.HTMLBaseElement.target
 #   - html.elements.base
 #   - html.elements.base.href
+#   - html.elements.base.href.forbid_data_javascript_urls
+#   - html.elements.base.href.relative_url
 #   - html.elements.base.target
 # - <body>:
 #   - api.HTMLBodyElement
@@ -1043,6 +949,15 @@ compat_features:
 #   - api.HTMLButtonElement.value
 #   - html.elements.button
 #   - html.elements.button.disabled
+#   - html.elements.button.form
+#   - html.elements.button.formaction
+#   - html.elements.button.formenctype
+#   - html.elements.button.formmethod
+#   - html.elements.button.formnovalidate
+#   - html.elements.button.formtarget
+#   - html.elements.button.name
+#   - html.elements.button.type
+#   - html.elements.button.value
 # - Constraint validation API:
 #   - api.HTMLButtonElement.checkValidity
 #   - api.HTMLButtonElement.reportValidity
@@ -1104,11 +1019,12 @@ compat_features:
 #   - api.HTMLButtonElement.popoverTargetAction
 #   - api.HTMLButtonElement.popoverTargetElement
 #   - api.HTMLElement.beforetoggle_event
+#   - api.HTMLElement.beforetoggle_event.popover_elements
 #   - api.HTMLElement.hidePopover
 #   - api.HTMLElement.popover
 #   - api.HTMLElement.showPopover
 #   - api.HTMLElement.togglePopover
-#   - api.HTMLElement.toggle_event
+#   - api.HTMLElement.toggle_event.popover_elements
 #   - api.HTMLInputElement.popoverTargetAction
 #   - api.HTMLInputElement.popoverTargetElement
 #   - api.ToggleEvent
@@ -1145,6 +1061,8 @@ compat_features:
 #   - api.OffscreenCanvas.OffscreenCanvas
 #   - api.OffscreenCanvas.convertToBlob
 #   - api.OffscreenCanvas.getContext
+#   - api.OffscreenCanvas.getContext.2d_context
+#   - api.OffscreenCanvas.getContext.bitmaprenderer_context
 #   - api.OffscreenCanvas.height
 #   - api.OffscreenCanvas.transferToImageBitmap
 #   - api.OffscreenCanvas.width
@@ -1219,9 +1137,12 @@ compat_features:
 # - <details>:
 #   - api.HTMLDetailsElement
 #   - api.HTMLDetailsElement.open
+#   - api.HTMLElement.toggle_event
 #   - html.elements.details
+#   - html.elements.details.open
 # - Mutually exclusive <details> elements:
 #   - api.HTMLDetailsElement.name
+#   - html.elements.details.name
 # - <dialog>:
 #   - api.HTMLDialogElement
 #   - api.HTMLDialogElement.cancel_event
@@ -1232,6 +1153,7 @@ compat_features:
 #   - api.HTMLDialogElement.show
 #   - api.HTMLDialogElement.showModal
 #   - html.elements.dialog
+#   - html.elements.dialog.open
 # - <div>:
 #   - api.HTMLDivElement
 #   - html.elements.div
@@ -1242,6 +1164,7 @@ compat_features:
 #   - html.global_attributes.autofocus
 # - Inert elements:
 #   - api.HTMLElement.inert
+#   - api.HTMLElement.inert.ignores_find_in_page
 #   - html.global_attributes.inert
 # - tabindex:
 #   - api.HTMLElement.tabIndex
@@ -1268,6 +1191,7 @@ compat_features:
 #   - api.HTMLFieldSetElement
 #   - api.HTMLFieldSetElement.disabled
 #   - api.HTMLFieldSetElement.elements
+#   - api.HTMLFieldSetElement.elements.type_HTMLCollection
 #   - api.HTMLFieldSetElement.form
 #   - api.HTMLFieldSetElement.name
 #   - api.HTMLFieldSetElement.type
@@ -1380,13 +1304,107 @@ compat_features:
 #   - html.elements.img.fetchpriority
 #   - html.elements.link.fetchpriority
 #   - html.elements.script.fetchpriority
+#   - http.headers.Link.fetchpriority
+# - <input>:
+#   - api.HTMLInputElement
+#   - api.HTMLInputElement.accept
+#   - api.HTMLInputElement.alt
+#   - api.HTMLInputElement.autocomplete
+#   - api.HTMLInputElement.cancel_event
+#   - api.HTMLInputElement.checked
+#   - api.HTMLInputElement.defaultValue
+#   - api.HTMLInputElement.disabled
+#   - api.HTMLInputElement.form
+#   - api.HTMLInputElement.formAction
+#   - api.HTMLInputElement.formEnctype
+#   - api.HTMLInputElement.formMethod
+#   - api.HTMLInputElement.formNoValidate
+#   - api.HTMLInputElement.formTarget
+#   - api.HTMLInputElement.height
+#   - api.HTMLInputElement.invalid_event
+#   - api.HTMLInputElement.labels
+#   - api.HTMLInputElement.list
+#   - api.HTMLInputElement.maxLength
+#   - api.HTMLInputElement.minLength
+#   - api.HTMLInputElement.multiple
+#   - api.HTMLInputElement.name
+#   - api.HTMLInputElement.pattern
+#   - api.HTMLInputElement.placeholder
+#   - api.HTMLInputElement.readOnly
+#   - api.HTMLInputElement.required
+#   - api.HTMLInputElement.select
+#   - api.HTMLInputElement.select_event
+#   - api.HTMLInputElement.selectionDirection
+#   - api.HTMLInputElement.selectionEnd
+#   - api.HTMLInputElement.selectionStart
+#   - api.HTMLInputElement.setRangeText
+#   - api.HTMLInputElement.setSelectionRange
+#   - api.HTMLInputElement.size
+#   - api.HTMLInputElement.type
+#   - api.HTMLInputElement.value
+#   - api.HTMLInputElement.width
+#   - html.elements.input
+#   - html.elements.input.accept
+#   - html.elements.input.alt
+#   - html.elements.input.checked
+#   - html.elements.input.disabled
+#   - html.elements.input.form
+#   - html.elements.input.formaction
+#   - html.elements.input.formenctype
+#   - html.elements.input.formmethod
+#   - html.elements.input.formnovalidate
+#   - html.elements.input.formtarget
+#   - html.elements.input.list
+#   - html.elements.input.maxlength
+#   - html.elements.input.minlength
+#   - html.elements.input.multiple
+#   - html.elements.input.name
+#   - html.elements.input.pattern
+#   - html.elements.input.placeholder
+#   - html.elements.input.readonly
+#   - html.elements.input.required
+#   - html.elements.input.size
+#   - html.elements.input.src
+#   - html.elements.input.type_text
+# - <input type="checkbox">:
+#   - api.HTMLInputElement.defaultChecked
+#   - api.HTMLInputElement.indeterminate
+#   - html.elements.input.type_checkbox
 # - dirname:
 #   - api.HTMLInputElement.dirName
 #   - api.HTMLTextAreaElement.dirName
 #   - html.elements.input.dirname
 #   - html.elements.textarea.dirname
+# - <input type="file">:
+#   - api.HTMLInputElement.files
+#   - html.elements.input.type_file
+# - <input type="number">:
+#   - api.HTMLInputElement.max
+#   - api.HTMLInputElement.min
+#   - api.HTMLInputElement.step
+#   - api.HTMLInputElement.stepDown
+#   - api.HTMLInputElement.stepUp
+#   - api.HTMLInputElement.valueAsNumber
+#   - html.elements.input.max
+#   - html.elements.input.min
+#   - html.elements.input.step
+#   - html.elements.input.type_number
 # - showPicker() for <input>:
 #   - api.HTMLInputElement.showPicker
+#   - api.HTMLInputElement.showPicker.color_input
+#   - api.HTMLInputElement.showPicker.date_input
+#   - api.HTMLInputElement.showPicker.datetime_local_input
+#   - api.HTMLInputElement.showPicker.file_input
+# - <input type="image">:
+#   - api.HTMLInputElement.src
+#   - html.elements.input.type_image
+# - Date and time <input> types:
+#   - api.HTMLInputElement.valueAsDate
+#   - html.elements.input.type_date
+#   - html.elements.input.type_datetime-local
+#   - html.elements.input.type_month
+#   - html.elements.input.type_time
+#   - html.elements.input.type_week
 # - <ol>, <ul>, and <li>:
 #   - api.HTMLLIElement
 #   - api.HTMLLIElement.value
@@ -1440,6 +1458,7 @@ compat_features:
 #   - html.elements.link.blocking
 #   - html.elements.script.blocking
 #   - html.elements.style.blocking
+#   - http.headers.Link.blocking
 # - Preloading responsive images:
 #   - api.HTMLLinkElement.imageSizes
 #   - api.HTMLLinkElement.imageSrcset
@@ -1477,6 +1496,7 @@ compat_features:
 #   - api.HTMLMediaElement.pause_event
 #   - api.HTMLMediaElement.paused
 #   - api.HTMLMediaElement.play
+#   - api.HTMLMediaElement.play.returns_promise
 #   - api.HTMLMediaElement.play_event
 #   - api.HTMLMediaElement.playbackRate
 #   - api.HTMLMediaElement.played
@@ -1577,6 +1597,7 @@ compat_features:
 #   - html.elements.meta.charset
 #   - html.elements.meta.content
 #   - html.elements.meta.http-equiv
+#   - html.elements.meta.http-equiv.content-type
 #   - html.elements.meta.http-equiv.refresh
 #   - html.elements.meta.name
 #   - html.elements.meta.name.referrer
@@ -1585,6 +1606,8 @@ compat_features:
 #   - api.HTMLModElement.cite
 #   - api.HTMLModElement.dateTime
 #   - html.elements.del
+#   - html.elements.del.cite
+#   - html.elements.del.datetime
 # - <object>:
 #   - api.HTMLObjectElement
 #   - api.HTMLObjectElement.contentDocument
@@ -1619,6 +1642,7 @@ compat_features:
 #   - api.HTMLOptionElement.value
 #   - api.HTMLSelectElement
 #   - api.HTMLSelectElement.add
+#   - api.HTMLSelectElement.add.index_before_parameter
 #   - api.HTMLSelectElement.autocomplete
 #   - api.HTMLSelectElement.disabled
 #   - api.HTMLSelectElement.form
@@ -1647,6 +1671,7 @@ compat_features:
 #   - html.elements.select
 #   - html.elements.select.disabled
 #   - html.elements.select.form
+#   - html.elements.select.hr_in_select
 #   - html.elements.select.multiple
 #   - html.elements.select.name
 #   - html.elements.select.required
@@ -1715,6 +1740,7 @@ compat_features:
 #   - api.HTMLSlotElement.name
 #   - api.HTMLSlotElement.slotchange_event
 #   - html.elements.slot
+#   - html.elements.slot.name
 #   - html.global_attributes.slot
 # - Imperative slot assignment:
 #   - api.HTMLSlotElement.assign
@@ -1757,6 +1783,8 @@ compat_features:
 #   - api.HTMLTableRowElement.cells
 #   - api.HTMLTableRowElement.deleteCell
 #   - api.HTMLTableRowElement.insertCell
+#   - api.HTMLTableRowElement.insertCell.index_parameter_negative_one
+#   - api.HTMLTableRowElement.insertCell.index_parameter_optional
 #   - api.HTMLTableRowElement.rowIndex
 #   - api.HTMLTableRowElement.sectionRowIndex
 #   - api.HTMLTableSectionElement
@@ -1771,8 +1799,18 @@ compat_features:
 #   - html.elements.table
 #   - html.elements.tbody
 #   - html.elements.td
+#   - html.elements.td.colspan
+#   - html.elements.td.headers
+#   - html.elements.td.rowspan
+#   - html.elements.td.rowspan.rowspan_zero
 #   - html.elements.tfoot
 #   - html.elements.th
+#   - html.elements.th.abbr
+#   - html.elements.th.colspan
+#   - html.elements.th.headers
+#   - html.elements.th.rowspan
+#   - html.elements.th.rowspan.rowspan_zero
+#   - html.elements.th.scope
 #   - html.elements.thead
 #   - html.elements.tr
 # - <template>:
@@ -1817,30 +1855,89 @@ compat_features:
 #   - html.elements.textarea.minlength
 #   - html.elements.textarea.name
 #   - html.elements.textarea.placeholder
+#   - html.elements.textarea.placeholder.line_breaks
 #   - html.elements.textarea.readonly
 #   - html.elements.textarea.required
 #   - html.elements.textarea.rows
+#   - html.elements.textarea.spellcheck
 #   - html.elements.textarea.wrap
+#   - html.elements.textarea.wrap.hard
 # - <time>:
 #   - api.HTMLTimeElement
 #   - api.HTMLTimeElement.dateTime
 #   - html.elements.time
+#   - html.elements.time.datetime
 # - <title>:
 #   - api.HTMLTitleElement
 #   - api.HTMLTitleElement.text
 #   - html.elements.title
+# - hashchange:
+#   - api.HashChangeEvent
+#   - api.HashChangeEvent.HashChangeEvent
+#   - api.HashChangeEvent.newURL
+#   - api.HashChangeEvent.oldURL
+#   - api.Window.hashchange_event
+# - History:
+#   - api.History
+#   - api.History.back
+#   - api.History.forward
+#   - api.History.go
+#   - api.History.length
+#   - api.History.pushState
+#   - api.History.replaceState
+#   - api.History.scrollRestoration
+#   - api.History.state
+#   - api.Window.history
+#   - api.Window.popstate_event
+# - createImageBitmap:
+#   - api.ImageBitmap
+#   - api.ImageBitmap.close
+#   - api.ImageBitmap.height
+#   - api.ImageBitmap.width
+#   - api.ImageBitmapRenderingContext
+#   - api.ImageBitmapRenderingContext.canvas
+#   - api.ImageBitmapRenderingContext.transferFromImageBitmap
+#   - api.createImageBitmap
+#   - api.createImageBitmap.options_colorSpaceConversion_parameter
+#   - api.createImageBitmap.options_imageOrientation_parameter
+#   - api.createImageBitmap.options_premultiplyAlpha_parameter
+#   - api.createImageBitmap.options_resizeHeight_parameter
+#   - api.createImageBitmap.options_resizeQuality_parameter
+#   - api.createImageBitmap.options_resizeWidth_parameter
+#   - api.createImageBitmap.svgimageelement_as_source_image
+# - MathML:
+#   - api.MathMLElement.blur
+#   - api.MathMLElement.focus
+#   - api.MathMLElement.nonce
+#   - api.MathMLElement.tabIndex
+# - Channel messaging:
+#   - api.MessageChannel
+#   - api.MessageChannel.MessageChannel
+#   - api.MessageChannel.port1
+#   - api.MessageChannel.port2
+#   - api.MessageEvent.ports
+#   - api.MessagePort
+#   - api.MessagePort.close
+#   - api.MessagePort.message_event
+#   - api.MessagePort.postMessage
+#   - api.MessagePort.start
 # - Navigation API:
 #   - api.NavigateEvent
 #   - api.NavigateEvent.NavigateEvent
+#   - api.NavigateEvent.canIntercept
 #   - api.NavigateEvent.destination
 #   - api.NavigateEvent.downloadRequest
 #   - api.NavigateEvent.formData
+#   - api.NavigateEvent.hasUAVisualTransition
 #   - api.NavigateEvent.hashChange
 #   - api.NavigateEvent.info
+#   - api.NavigateEvent.intercept
 #   - api.NavigateEvent.navigationType
+#   - api.NavigateEvent.scroll
 #   - api.NavigateEvent.signal
 #   - api.NavigateEvent.userInitiated
 #   - api.Navigation
+#   - api.Navigation.activation
 #   - api.Navigation.back
 #   - api.Navigation.canGoBack
 #   - api.Navigation.canGoForward
@@ -1856,6 +1953,10 @@ compat_features:
 #   - api.Navigation.transition
 #   - api.Navigation.traverseTo
 #   - api.Navigation.updateCurrentEntry
+#   - api.NavigationActivation
+#   - api.NavigationActivation.entry
+#   - api.NavigationActivation.from
+#   - api.NavigationActivation.navigationType
 #   - api.NavigationCurrentEntryChangeEvent
 #   - api.NavigationCurrentEntryChangeEvent.NavigationCurrentEntryChangeEvent
 #   - api.NavigationCurrentEntryChangeEvent.from
@@ -1880,21 +1981,185 @@ compat_features:
 #   - api.NavigationTransition.from
 #   - api.NavigationTransition.navigationType
 #   - api.Window.navigation
+# - Navigator:
+#   - api.Navigator
+#   - api.Window.navigator
+# - cookieEnabled:
+#   - api.Navigator.cookieEnabled
+# - hardwareConcurrency:
+#   - api.Navigator.hardwareConcurrency
+#   - api.WorkerNavigator.hardwareConcurrency
+# - Language:
+#   - api.Navigator.language
+#   - api.Navigator.languages
+#   - api.Window.languagechange_event
+#   - api.WorkerGlobalScope.languagechange_event
+#   - api.WorkerNavigator.language
+#   - api.WorkerNavigator.languages
+# - Online status:
+#   - api.Navigator.onLine
+#   - api.Window.offline_event
+#   - api.Window.online_event
+#   - api.WorkerGlobalScope.offline_event
+#   - api.WorkerGlobalScope.online_event
+#   - api.WorkerNavigator.onLine
+# - pdfViewerEnabled:
+#   - api.Navigator.pdfViewerEnabled
+# - registerProtocolHandler:
+#   - api.Navigator.registerProtocolHandler
+#   - api.Navigator.unregisterProtocolHandler
 # - User activation:
 #   - api.Navigator.userActivation
 #   - api.UserActivation
 #   - api.UserActivation.hasBeenActive
 #   - api.UserActivation.isActive
+# - User agent sniffing:
+#   - api.Navigator.userAgent
+#   - api.WorkerNavigator.userAgent
+# - Back/forward cache blocking reasons:
+#   - api.NotRestoredReasonDetails
+#   - api.NotRestoredReasonDetails.reason
+#   - api.NotRestoredReasons
+#   - api.NotRestoredReasons.children
+#   - api.NotRestoredReasons.id
+#   - api.NotRestoredReasons.name
+#   - api.NotRestoredReasons.reasons
+#   - api.NotRestoredReasons.src
+#   - api.NotRestoredReasons.url
+# - Page transition events:
+#   - api.PageTransitionEvent
+#   - api.PageTransitionEvent.PageTransitionEvent
+#   - api.PageTransitionEvent.persisted
+#   - api.Window.pagehide_event
+#   - api.Window.pageshow_event
+# - paint():
+#   - api.PaintRenderingContext2D.beginPath
+#   - api.PaintRenderingContext2D.clearRect
+#   - api.PaintRenderingContext2D.clip
+#   - api.PaintRenderingContext2D.createLinearGradient
+#   - api.PaintRenderingContext2D.createPattern
+#   - api.PaintRenderingContext2D.createRadialGradient
+#   - api.PaintRenderingContext2D.drawImage
+#   - api.PaintRenderingContext2D.fill
+#   - api.PaintRenderingContext2D.fillRect
+#   - api.PaintRenderingContext2D.fillStyle
+#   - api.PaintRenderingContext2D.filter
+#   - api.PaintRenderingContext2D.getLineDash
+#   - api.PaintRenderingContext2D.getTransform
+#   - api.PaintRenderingContext2D.globalAlpha
+#   - api.PaintRenderingContext2D.globalCompositeOperation
+#   - api.PaintRenderingContext2D.imageSmoothingEnabled
+#   - api.PaintRenderingContext2D.imageSmoothingQuality
+#   - api.PaintRenderingContext2D.isPointInPath
+#   - api.PaintRenderingContext2D.isPointInStroke
+#   - api.PaintRenderingContext2D.lineCap
+#   - api.PaintRenderingContext2D.lineDashOffset
+#   - api.PaintRenderingContext2D.lineJoin
+#   - api.PaintRenderingContext2D.lineWidth
+#   - api.PaintRenderingContext2D.miterLimit
+#   - api.PaintRenderingContext2D.resetTransform
+#   - api.PaintRenderingContext2D.restore
+#   - api.PaintRenderingContext2D.rotate
+#   - api.PaintRenderingContext2D.save
+#   - api.PaintRenderingContext2D.scale
+#   - api.PaintRenderingContext2D.setLineDash
+#   - api.PaintRenderingContext2D.setTransform
+#   - api.PaintRenderingContext2D.shadowBlur
+#   - api.PaintRenderingContext2D.shadowColor
+#   - api.PaintRenderingContext2D.shadowOffsetX
+#   - api.PaintRenderingContext2D.shadowOffsetY
+#   - api.PaintRenderingContext2D.stroke
+#   - api.PaintRenderingContext2D.strokeRect
+#   - api.PaintRenderingContext2D.strokeStyle
+#   - api.PaintRenderingContext2D.transform
+#   - api.PaintRenderingContext2D.translate
+# - Selection:
+#   - api.Range.createContextualFragment
+# - JavaScript modules in shared workers:
+#   - api.SharedWorker.SharedWorker.ecmascript_modules
+#   - api.SharedWorker.SharedWorker.options_type_parameter
+# - localStorage and sessionStorage:
+#   - api.Storage
+#   - api.Storage.clear
+#   - api.Storage.getItem
+#   - api.Storage.key
+#   - api.Storage.length
+#   - api.Storage.removeItem
+#   - api.Storage.setItem
+#   - api.StorageEvent
+#   - api.StorageEvent.key
+#   - api.StorageEvent.newValue
+#   - api.StorageEvent.oldValue
+#   - api.StorageEvent.storageArea
+#   - api.StorageEvent.url
+#   - api.Window.localStorage
+#   - api.Window.sessionStorage
+#   - api.Window.storage_event
+# - Page visibility state:
+#   - api.VisibilityStateEntry
+#   - api.VisibilityStateEntry.duration
+#   - api.VisibilityStateEntry.entryType
+#   - api.VisibilityStateEntry.name
+#   - api.VisibilityStateEntry.startTime
+# - Window:
+#   - api.Window
+#   - api.Window.DOMContentLoaded_event
+#   - api.Window.blur_event
+#   - api.Window.close
+#   - api.Window.closed
+#   - api.Window.error_event
+#   - api.Window.focus
+#   - api.Window.focus_event
+#   - api.Window.frameElement
+#   - api.Window.frames
+#   - api.Window.length
+#   - api.Window.load_event
+#   - api.Window.name
+#   - api.Window.open
+#   - api.Window.open.features_parameter_popup
+#   - api.Window.open.once_per_event
+#   - api.Window.opener
+#   - api.Window.parent
+#   - api.Window.self
+#   - api.Window.stop
+#   - api.Window.top
+#   - api.Window.window
 # - Print events:
 #   - api.Window.afterprint_event
 #   - api.Window.beforeprint_event
+# - Alerts:
+#   - api.Window.alert
+#   - api.Window.confirm
+#   - api.Window.prompt
 # - requestAnimationFrame():
 #   - api.Window.cancelAnimationFrame
 #   - api.Window.requestAnimationFrame
+# - Window management:
+#   - api.Window.open.relative-multi-screen
+# - View transitions:
+#   - api.Window.pagereveal_event
+#   - api.Window.pageswap_event
 # - window.print():
 #   - api.Window.print
+# - JavaScript modules in workers:
+#   - api.Worker.Worker.ecmascript_modules
+#   - api.Worker.Worker.options_type_parameter
+# - Base64 encoding and decoding:
+#   - api.atob
+#   - api.btoa
+# - setInterval:
+#   - api.clearInterval
+#   - api.setInterval
+# - setTimeout:
+#   - api.clearTimeout
+#   - api.setTimeout
 # - structuredClone():
 #   - api.structuredClone
+# - User action pseudo-classes:
+#   - css.selectors.active
+#   - css.selectors.active.non_a_elements
+#   - css.selectors.focus
+#   - css.selectors.hover
 # - :autofill:
 #   - css.selectors.autofill
 # - Media element pseudo-classes:
@@ -1905,15 +2170,43 @@ compat_features:
 #   - css.selectors.seeking
 #   - css.selectors.stalled
 #   - css.selectors.volume-locked
+# - Input selectors:
+#   - css.selectors.checked
+#   - css.selectors.disabled
+#   - css.selectors.enabled
 # - :default:
 #   - css.selectors.default
 # - :dir():
 #   - css.selectors.dir
+# - Form validity pseudo-classes:
+#   - css.selectors.in-range
+#   - css.selectors.invalid
+#   - css.selectors.invalid.form
+#   - css.selectors.optional
+#   - css.selectors.out-of-range
+#   - css.selectors.required
+#   - css.selectors.valid
+#   - css.selectors.valid.form
 # - :indeterminate:
 #   - css.selectors.indeterminate
+#   - css.selectors.indeterminate.checkbox
+#   - css.selectors.indeterminate.progress
+#   - css.selectors.indeterminate.radio
+# - Link selectors:
+#   - css.selectors.link
+#   - css.selectors.link.not_match_link
+#   - css.selectors.visited
+#   - css.selectors.visited.not_match_link
+#   - css.selectors.visited.privacy_measures
 # - :read-only and :read-write:
 #   - css.selectors.read-only
 #   - css.selectors.read-write
+# - :target:
+#   - css.selectors.target
+# - <fencedframe>:
+#   - html.elements.a.target.unfencedTop
+#   - html.elements.fencedframe.height
+#   - html.elements.fencedframe.width
 # - <abbr>:
 #   - html.elements.abbr
 # - <address>:
@@ -1930,6 +2223,7 @@ compat_features:
 #   - html.elements.bdo
 # - <blockquote>:
 #   - html.elements.blockquote
+#   - html.elements.blockquote.cite
 # - <cite>:
 #   - html.elements.cite
 # - <code>:
@@ -1950,12 +2244,41 @@ compat_features:
 #   - html.elements.i
 # - Presentation API:
 #   - html.elements.iframe.sandbox.allow-presentation
+# - aspect-ratio:
+#   - html.elements.img.aspect_ratio_computed_from_attributes
+#   - html.elements.video.aspect_ratio_computed_from_attributes
+# - <input type="button">:
+#   - html.elements.input.type_button
+# - <input type="color">:
+#   - html.elements.input.type_color
+# - Email, telephone, and URL <input> types:
+#   - html.elements.input.type_email
+#   - html.elements.input.type_tel
+#   - html.elements.input.type_url
+# - <input type="hidden">:
+#   - html.elements.input.type_hidden
+# - <input type="password">:
+#   - html.elements.input.type_password
+# - <input type="radio">:
+#   - html.elements.input.type_radio
+# - <input type="range">:
+#   - html.elements.input.type_range
+#   - html.elements.input.type_range.tick_marks
+#   - html.elements.input.type_range.vertical_orientation
+# - <input type="reset">:
+#   - html.elements.input.type_reset
 # - <input type="search">:
 #   - html.elements.input.type_search
+# - <input type="submit">:
+#   - html.elements.input.type_submit
 # - <ins>:
 #   - html.elements.ins
+#   - html.elements.ins.cite
+#   - html.elements.ins.datetime
 # - <kbd>:
 #   - html.elements.kbd
+# - Alternative style sheets:
+#   - html.elements.link.rel.alternate_stylesheet
 # - <link rel="modulepreload">:
 #   - html.elements.link.rel.modulepreload
 # - <main>:
@@ -1976,6 +2299,7 @@ compat_features:
 #   - html.elements.samp
 # - JavaScript modules:
 #   - html.elements.script.nomodule
+#   - html.elements.script.type.module
 # - Import maps:
 #   - html.elements.script.type.importmap
 # - <search>:
@@ -2004,5 +2328,5 @@ compat_features:
 #   - html.elements.wbr
 # - hidden="until-found":
 #   - html.global_attributes.hidden.until-found_value
-# - Customized built-in elements:
-#   - html.global_attributes.is
+# - Promise (initial support):
+#   - javascript.builtins.Promise.incumbent_settings_object_tracking
