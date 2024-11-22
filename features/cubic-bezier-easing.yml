@@ -1,0 +1,9 @@
+name: cubic-bezier() easing
+description: The `cubic-bezier()` CSS easing function interpolates along a smooth curve, creating animations and transitions with continuous changes in speed. The `ease`, `ease-in`, `ease-out`, and `ease-in-out` keyword values are presets for common Bézier curves.
+spec: https://drafts.csswg.org/css-easing-2/#cubic-bezier-easing-functions
+group:
+  - animation
+  - transitions
+compat_features:
+  - css.types.easing-function
+  - css.types.easing-function.cubic-bezier

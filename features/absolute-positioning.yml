@@ -1,0 +1,11 @@
+name: Absolute positioning
+description: "The `position: absolute` CSS declaration removes an element from the normal flow and positions it relative to its containing block, which is often the root element, or closest positioned ancestor."
+spec: https://drafts.csswg.org/css-position-3/#abspos-insets
+group: positioning
+status:
+  compute_from: css.properties.position.absolute
+compat_features:
+  - css.properties.position.absolute
+  - css.properties.place-self.position_absolute_context
+  - css.properties.align-self.position_absolute_context
+  - css.properties.justify-self.position_absolute_context

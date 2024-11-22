@@ -3,14 +3,18 @@ description: "The CIE Lab color space expresses colors in terms of lightness and
 spec: https://drafts.csswg.org/css-color-4/#cie-lab
 caniuse: css-lch-lab
 group: color-types
-# Editorial override has been applied to ignore mixed_type_parameters.
 # TODO: The behavior of lightness gradients requiring gamut mapping is a
 # topic of debate, and at least these browser bugs:
 # https://crbug.com/329106317
 # https://webkit.org/b/255939
 # These problems should be captured in notes when we support notes.
+# Editorial override has been applied to ignore mixed_type_parameters.
+status:
+  compute_from:
+    - css.types.color.lab
+    - css.types.color.lch
 compat_features:
   - css.types.color.lab
-  # - css.types.color.lab.mixed_type_parameters
+  - css.types.color.lab.mixed_type_parameters
   - css.types.color.lch
-  # - css.types.color.lch.mixed_type_parameters
+  - css.types.color.lch.mixed_type_parameters

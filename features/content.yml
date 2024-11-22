@@ -1,0 +1,16 @@
+name: Content
+description: The `content` CSS property sets the content inside of an element or pseudo-element, replacing the current value. It's often used with the `::before` and `::after` pseudo-elements to generate cosmetic content.
+spec: https://drafts.csswg.org/css-content-3/#content-property
+group: css
+status:
+  compute_from: css.properties.content
+compat_features:
+  - css.properties.content
+  - css.properties.content.element_replacement
+  - css.properties.content.gradient
+  - css.properties.content.none
+  - css.properties.content.none_applies_to_elements
+  - css.properties.content.normal
+  - css.properties.content.url
+  - css.types.string
+  - css.types.string.unicode_escaped_characters

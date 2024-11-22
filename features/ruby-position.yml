@@ -1,0 +1,12 @@
+name: ruby-position
+description: The `ruby-position` CSS property sets the position of a ruby annotation in relation to its base text. Annotations can display over, under, or interleaved with the base text.
+spec: https://drafts.csswg.org/css-ruby-1/#rubypos
+group: ruby
+status:
+  compute_from: css.properties.ruby-position
+compat_features:
+  - css.properties.ruby-position
+  - css.properties.ruby-position.alternate
+  - css.properties.ruby-position.inter-character
+  - css.properties.ruby-position.over
+  - css.properties.ruby-position.under

@@ -1,0 +1,39 @@
+name: SharedArrayBuffer in WebGL
+description: "`SharedArrayBuffer` objects can be used in WebGL APIs that previously only worked with `ArrayBuffer` objects."
+spec:
+  - https://registry.khronos.org/webgl/specs/latest/1.0/
+  - https://registry.khronos.org/webgl/specs/latest/2.0/
+group: webgl
+compat_features:
+  - api.WebGL2RenderingContext.bufferData.srcData_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.bufferSubData.srcData_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.clearBufferfv.values_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.clearBufferiv.values_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.clearBufferuiv.values_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.compressedTexImage2D.pixels_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.compressedTexImage3D.pixels_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.compressedTexSubImage2D.srcData_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.getBufferSubData.dstData_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.readPixels.pixels_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.texImage3D.srcData_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.texSubImage3D.srcData_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.uniformMatrix2fv.value_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.uniformMatrix2x3fv.data_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.uniformMatrix2x4fv.data_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.uniformMatrix3fv.value_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.uniformMatrix3x2fv.data_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.uniformMatrix3x4fv.data_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.uniformMatrix4fv.value_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.uniformMatrix4x2fv.data_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.uniformMatrix4x3fv.data_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.vertexAttrib1fv.value_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.vertexAttrib2fv.value_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.vertexAttrib3fv.value_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.vertexAttrib4fv.value_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.vertexAttribI4iv.value_param_accepts_SharedArrayBuffer
+  - api.WebGL2RenderingContext.vertexAttribI4uiv.value_param_accepts_SharedArrayBuffer
+  - api.WebGLRenderingContext.compressedTexImage2D.pixels_param_accepts_SharedArrayBuffer
+  - api.WebGLRenderingContext.vertexAttrib1fv.value_param_accepts_SharedArrayBuffer
+  - api.WebGLRenderingContext.vertexAttrib2fv.value_param_accepts_SharedArrayBuffer
+  - api.WebGLRenderingContext.vertexAttrib3fv.value_param_accepts_SharedArrayBuffer
+  - api.WebGLRenderingContext.vertexAttrib4fv.value_param_accepts_SharedArrayBuffer

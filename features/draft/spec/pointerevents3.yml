@@ -1,9 +1,8 @@
-draft_date: 2024-09-09
+draft_date: 2024-11-07
 name: Pointer Events
 description: TODO
 spec: https://w3c.github.io/pointerevents/
 compat_features:
-  - api.Element
   - api.Element.gotpointercapture_event
   - api.Element.hasPointerCapture
   - api.Element.lostpointercapture_event
@@ -21,6 +20,8 @@ compat_features:
   - api.Navigator.maxTouchPoints
   - api.PointerEvent
   - api.PointerEvent.PointerEvent
+  - api.PointerEvent.PointerEvent.options_altitudeAngle_parameter
+  - api.PointerEvent.PointerEvent.options_azimuthAngle_parameter
   - api.PointerEvent.altitudeAngle
   - api.PointerEvent.azimuthAngle
   - api.PointerEvent.getCoalescedEvents
@@ -30,10 +31,25 @@ compat_features:
   - api.PointerEvent.persistentDeviceId
   - api.PointerEvent.pointerId
   - api.PointerEvent.pointerType
+  - api.PointerEvent.pointerType.fractional_coordinates
   - api.PointerEvent.pressure
   - api.PointerEvent.tangentialPressure
   - api.PointerEvent.tiltX
   - api.PointerEvent.tiltY
   - api.PointerEvent.twist
   - api.PointerEvent.width
-  - css.properties.touch-action
+
+# The following features in the spec are already part of web-features:
+# - DOM:
+#   - api.Element
+# - touch-action:
+#   - css.properties.touch-action
+#   - css.properties.touch-action.manipulation
+#   - css.properties.touch-action.none
+#   - css.properties.touch-action.pan-down
+#   - css.properties.touch-action.pan-left
+#   - css.properties.touch-action.pan-right
+#   - css.properties.touch-action.pan-up
+#   - css.properties.touch-action.pan-x
+#   - css.properties.touch-action.pan-y
+#   - css.properties.touch-action.pinch-zoom

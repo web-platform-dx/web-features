@@ -1,0 +1,7 @@
+name: Reference types (WebAssembly)
+description: The `externref` type can be both a value type and a table element type, while `funcref` can be a value type.
+spec: https://github.com/WebAssembly/spec/blob/main/proposals/reference-types/Overview.md
+group: webassembly
+caniuse: wasm-reference-types
+compat_features:
+  - webassembly.reference-types

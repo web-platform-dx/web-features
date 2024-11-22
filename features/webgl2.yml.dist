@@ -206,13 +206,11 @@ compat_features:
   - api.WebGL2RenderingContext.stencilMaskSeparate
   - api.WebGL2RenderingContext.stencilOp
   - api.WebGL2RenderingContext.stencilOpSeparate
-  - api.WebGL2RenderingContext.texImage2D
   - api.WebGL2RenderingContext.texImage3D
   - api.WebGL2RenderingContext.texParameterf
   - api.WebGL2RenderingContext.texParameteri
   - api.WebGL2RenderingContext.texStorage2D
   - api.WebGL2RenderingContext.texStorage3D
-  - api.WebGL2RenderingContext.texSubImage2D
   - api.WebGL2RenderingContext.texSubImage3D
   - api.WebGL2RenderingContext.transformFeedbackVaryings
   - api.WebGL2RenderingContext.uniform1f
@@ -273,6 +271,17 @@ compat_features:
   - api.WebGLSync
   - api.WebGLTransformFeedback
   - api.WebGLVertexArrayObject
+
+  # baseline: false
+  # support:
+  #   chrome: "56"
+  #   chrome_android: "58"
+  #   edge: "79"
+  #   firefox: "51"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - api.WebGL2RenderingContext.texImage2D
+  - api.WebGL2RenderingContext.texSubImage2D
 
   # baseline: false
   # support:

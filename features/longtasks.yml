@@ -1,0 +1,14 @@
+name: Long tasks
+description: The `longtask` performance event type and the `PerformanceLongTaskTiming` API provides information about tasks that occupy the UI thread for 50 milliseconds or more, a metric for input latency, delayed animations, and other sources of "jank."
+spec: https://w3c.github.io/longtasks/
+group: performance
+compat_features:
+  - api.PerformanceLongTaskTiming
+  - api.PerformanceLongTaskTiming.attribution
+  - api.PerformanceLongTaskTiming.toJSON
+  - api.TaskAttributionTiming
+  - api.TaskAttributionTiming.containerId
+  - api.TaskAttributionTiming.containerName
+  - api.TaskAttributionTiming.containerSrc
+  - api.TaskAttributionTiming.containerType
+  - api.TaskAttributionTiming.toJSON

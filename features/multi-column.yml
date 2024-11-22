@@ -1,0 +1,22 @@
+name: Multi-column layout
+description: Multi-column layout flows an element's content across one or more columns in a single row, without affecting the `display` property of its children.
+spec: https://drafts.csswg.org/css-multicol-1/
+group: multi-column
+status:
+  compute_from: css.properties.columns
+compat_features:
+  - css.properties.align-content.multicol_context
+  - css.properties.column-count
+  - css.properties.column-count.auto
+  - css.properties.column-width
+  - css.properties.column-width.auto
+  - css.properties.columns
+  - css.properties.column-gap
+  - css.properties.column-gap.multicol_context
+  - css.properties.column-gap.multicol_context.calc_values
+  - css.properties.column-gap.multicol_context.percentage_values
+  - css.properties.column-rule
+  - css.properties.column-rule-color
+  - css.properties.column-rule-style
+  - css.properties.column-rule-width
+  - css.properties.gap.multicol_context

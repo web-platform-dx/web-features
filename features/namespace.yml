@@ -1,0 +1,15 @@
+name: "@namespace"
+description: The `@namespace` CSS rule sets a default namespace or namespace prefix. Namespace prefixes allow CSS selectors to distinguish elements with the same name but different document types, such as the HTML `<a>` element and the SVG `<a>` element.
+spec: https://drafts.csswg.org/css-namespaces-3/#declaration
+caniuse: css-namespaces
+group:
+  - css
+  - selectors
+status:
+  compute_from: css.at-rules.namespace
+compat_features:
+  - css.at-rules.namespace
+  - css.selectors.namespace
+  - api.CSSNamespaceRule
+  - api.CSSNamespaceRule.namespaceURI
+  - api.CSSNamespaceRule.prefix

@@ -1,0 +1,69 @@
+name: <input>
+description: The `<input type="text">` HTML element allows the user to enter information into a form. By default, an `<input>` element is a text input.
+spec: https://html.spec.whatwg.org/multipage/input.html#the-input-element
+group:
+  - forms
+  - html-elements
+status:
+  compute_from: html.elements.input
+compat_features:
+  - api.HTMLInputElement
+  - api.HTMLInputElement.accept
+  - api.HTMLInputElement.alt
+  - api.HTMLInputElement.autocomplete
+  - api.HTMLInputElement.cancel_event
+  - api.HTMLInputElement.checked
+  - api.HTMLInputElement.defaultValue
+  - api.HTMLInputElement.disabled
+  - api.HTMLInputElement.form
+  - api.HTMLInputElement.formAction
+  - api.HTMLInputElement.formEnctype
+  - api.HTMLInputElement.formMethod
+  - api.HTMLInputElement.formNoValidate
+  - api.HTMLInputElement.formTarget
+  - api.HTMLInputElement.height
+  - api.HTMLInputElement.invalid_event
+  - api.HTMLInputElement.labels
+  - api.HTMLInputElement.list
+  - api.HTMLInputElement.maxLength
+  - api.HTMLInputElement.minLength
+  - api.HTMLInputElement.multiple
+  - api.HTMLInputElement.name
+  - api.HTMLInputElement.pattern
+  - api.HTMLInputElement.placeholder
+  - api.HTMLInputElement.readOnly
+  - api.HTMLInputElement.required
+  - api.HTMLInputElement.select
+  - api.HTMLInputElement.select_event
+  - api.HTMLInputElement.selectionDirection
+  - api.HTMLInputElement.selectionEnd
+  - api.HTMLInputElement.selectionStart
+  - api.HTMLInputElement.setRangeText
+  - api.HTMLInputElement.setSelectionRange
+  - api.HTMLInputElement.size
+  - api.HTMLInputElement.type
+  - api.HTMLInputElement.value
+  - api.HTMLInputElement.width
+  - html.elements.input
+  - html.elements.input.accept
+  - html.elements.input.alt
+  - html.elements.input.checked
+  - html.elements.input.disabled
+  - html.elements.input.form
+  - html.elements.input.formaction
+  - html.elements.input.formenctype
+  - html.elements.input.formmethod
+  - html.elements.input.formnovalidate
+  - html.elements.input.formtarget
+  - html.elements.input.list
+  - html.elements.input.maxlength
+  - html.elements.input.minlength
+  - html.elements.input.multiple
+  - html.elements.input.name
+  - html.elements.input.pattern
+  - html.elements.input.placeholder
+  - html.elements.input.readonly
+  - html.elements.input.required
+  - html.elements.input.size
+  - html.elements.input.src
+  - html.elements.input.type_text
