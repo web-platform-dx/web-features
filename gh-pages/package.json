@@ -10,13 +10,14 @@
   "engines": {
     "node": ">=18.19.0"
   },
+  "type": "module",
   "scripts": {
     "build:dev": "eleventy",
     "build:prod": "eleventy --pathprefix=web-features",
     "dev": "eleventy --serve"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "^3.0.0",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.1.0"
   }

@@ -1,8 +1,10 @@
-const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
-const markdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
+import markdownIt from "markdown-it";
+import markdownItAnchor from "markdown-it-anchor";
+import UpgradeHelper from "@11ty/eleventy-upgrade-help";
 
-module.exports = function (eleventyConfig) {
+
+export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/img");
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
   eleventyConfig.addPassthroughCopy("./src/assets/css");
@@ -13,6 +15,7 @@ module.exports = function (eleventyConfig) {
     linkify: true,
   };
   eleventyConfig.setLibrary("md", markdownIt(mdOpts).use(markdownItAnchor));
+  eleventyConfig.addPlugin(UpgradeHelper);
   return {
     dir: {
       input: "src",
