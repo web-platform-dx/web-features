@@ -17,6 +17,10 @@ updates:
     directory: packages/compute-baseline
     schedule:
       interval: daily
+  - package-ecosystem: npm
+    directory: gh-pages
+    schedule:
+      interval: daily
 
   - package-ecosystem: github-actions
     directory: "/"
