@@ -1,11 +1,11 @@
-draft_date: 2024-11-20
+draft_date: 2024-11-25
 name: Scalable Vector Graphics (SVG) 2
 description: TODO
 spec: https://svgwg.org/svg2-draft/
 compat_features:
   - api.SVGAElement.ping
-  - css.properties.pointer-events
-  - css.properties.pointer-events.html_elements
+  - css.properties.text-rendering.auto
+  - css.properties.text-rendering.geometricPrecision
   - svg.elements.a.ping
 
 # The following features in the spec are already part of web-features:
@@ -507,7 +507,6 @@ compat_features:
 #   - svg.global_attributes.overflow
 #   - svg.global_attributes.pointer-events
 #   - svg.global_attributes.shape-rendering
-#   - svg.global_attributes.stop-color
 #   - svg.global_attributes.stroke
 #   - svg.global_attributes.stroke-dasharray
 #   - svg.global_attributes.stroke-dashoffset
@@ -593,6 +592,9 @@ compat_features:
 # - paint-order:
 #   - css.properties.paint-order
 #   - svg.global_attributes.paint-order
+# - pointer-events:
+#   - css.properties.pointer-events
+#   - css.properties.pointer-events.html_elements
 # - path():
 #   - css.types.basic-shape.path.d
 # - context-fill and context-stroke:
