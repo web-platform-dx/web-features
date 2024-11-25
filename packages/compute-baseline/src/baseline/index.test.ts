@@ -95,16 +95,21 @@ describe("computeBaseline", function () {
   });
 
   it("finds discrepancies with ancestors (checkAncestors)", function () {
+    // If the features change, you can find new test cases with the
+    // `find-troublesome-ancestors.ts` script.
     const result = computeBaseline({
-      compatKeys: ["api.Notification.body"],
+      compatKeys: ["api.Document.exitFullscreen.returns_promise"],
       checkAncestors: false,
     });
     const resultExplicit = computeBaseline({
-      compatKeys: ["api.Notification", "api.Notification.body"],
+      compatKeys: [
+        "api.Document.exitFullscreen",
+        "api.Document.exitFullscreen.returns_promise",
+      ],
       checkAncestors: false,
     });
     const resultWithAncestors = computeBaseline({
-      compatKeys: ["api.Notification.body"],
+      compatKeys: ["api.Document.exitFullscreen.returns_promise"],
       checkAncestors: true,
     });
 

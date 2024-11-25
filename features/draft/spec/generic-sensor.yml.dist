@@ -11,7 +11,6 @@ compat_features:
   #   chrome_android: "66"
   #   edge: "79"
   - html.elements.iframe.allow.accelerometer
-  - html.elements.iframe.allow.gyroscope
   - html.elements.iframe.allow.magnetometer
 
   # baseline: false
@@ -37,7 +36,6 @@ compat_features:
   #   chrome: "88"
   #   chrome_android: "88"
   #   edge: "88"
-  - http.headers.Permissions-Policy.gyroscope
   - http.headers.Permissions-Policy.magnetometer
 
   # ⬇️ Same status as overall feature ⬇️
