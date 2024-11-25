@@ -41,7 +41,11 @@ jobs:
         with:
           cache: npm
           node-version-file: .node-version
-      - name: NPM Install
+      - name: NPM Install web-features
+        run: npm ci
+      - name: NPM Build web-features
+        run: npm run build
+      - name: NPM Install gh-pages
         run: npm ci
         working-directory: gh-pages/
       - name: Build pages
