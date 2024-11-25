@@ -451,15 +451,15 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "117"
-  #   chrome_android: "117"
-  #   edge: "117"
-  - api.Request.Request.init_attributionReporting_parameter
-  - api.fetch.init_attributionReporting_parameter
-
-  # baseline: false
-  # support:
   #   chrome: "124"
   #   chrome_android: "124"
   #   edge: "124"
   - api.Request.targetAddressSpace
+
+  # baseline: false
+  # support:
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
+  - api.Request.Request.init_attributionReporting_parameter
+  - api.fetch.init_attributionReporting_parameter
