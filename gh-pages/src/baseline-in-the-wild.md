@@ -23,6 +23,7 @@ You can find Baseline in the following places. If you spot somewhere else using 
 
 - [Baseline web features for the win](https://www.w3.org/2024/09/TPAC/demo-baseline.html) by Patrick Brosset, TPAC, August 2024.
 - [Baseline features and webstatus.dev](https://www.youtube.com/watch?v=pTsMpoXGlqE) ([slides](https://docs.google.com/presentation/d/1dRWC7aH-FQTj2JVFIaRvrHNylaRKAUCnQ5Y4odRhGGY/edit#slide=id.g2f87bb2d5eb_0_4)) by Kadir Topal and James Scott, BlinkOn, October 2024.
+- [Baseline and Web Features](https://www.oddbird.net/2024/11/19/winging-it-13/) by Miriam Suzanne and James Stuckey Weber, Winging It Live, November 2024.
 
 ## More
 
