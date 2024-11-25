@@ -30,7 +30,7 @@ These are the steps to publish a regular release on npm and as a GitHub release:
 
 1. Review the PR.
    
-   1. Close and reopen the relase PR, to allow the tests to run.
+   1. Close and reopen the release PR, to allow the tests to run.
    1. Review and approve the changes.
    1. When you're ready to complete the remaining steps, merge the PR.
 
