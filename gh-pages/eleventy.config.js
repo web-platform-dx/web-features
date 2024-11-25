@@ -3,7 +3,6 @@ import markdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
 import UpgradeHelper from "@11ty/eleventy-upgrade-help";
 
-
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/img");
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
@@ -22,4 +21,4 @@ export default function (eleventyConfig) {
       output: "../_site",
     },
   };
-};
+}
