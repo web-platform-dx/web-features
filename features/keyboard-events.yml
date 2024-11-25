@@ -2,7 +2,9 @@ name: Keyboard events
 description: Keyboard events describe a single interaction between the user and a key (or combination of a key with modifier keys) on the keyboard.
 spec: https://w3c.github.io/uievents/#events-keyboardevents
 status:
-  compute_from: api.KeyboardEvent.KeyboardEvent
+  compute_from:
+  - api.Element.keydown_event
+  - api.Element.keyup_event
 compat_features:
   - api.Element.keydown_event
   - api.Element.keyup_event
