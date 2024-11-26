@@ -70,6 +70,9 @@ function cleanup(sourcePath: string): void {
   if (data) {
     const features = data.items.map((item) => item.value).sort();
     if (isDeepStrictEqual(features, taggedCompatFeatures)) {
+      if (data.commentBefore) {
+        source.comment = data.commentBefore;
+      }
       source.contents.delete("compat_features");
       fs.writeFileSync(sourcePath, source.toString({ lineWidth: 0 }));
       logger.info(`${id}: removed compat_features in favor of tag`);
