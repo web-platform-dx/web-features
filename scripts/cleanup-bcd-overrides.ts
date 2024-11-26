@@ -1,18 +1,12 @@
-import { Temporal } from "@js-temporal/polyfill";
-import {
-  computeBaseline,
-  getStatus,
-  parseRangedDateString,
-  setLogger,
-} from "compute-baseline";
-import { Compat, feature, Feature } from "compute-baseline/browser-compat-data";
+import { setLogger } from "compute-baseline";
+import { Compat, Feature } from "compute-baseline/browser-compat-data";
 import { fdir } from "fdir";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { isDeepStrictEqual } from "node:util";
 import winston from "winston";
-import YAML, { Document, Scalar, YAMLSeq } from "yaml";
+import YAML from "yaml";
 import yargs from "yargs";
 
 const compat = new Compat();
