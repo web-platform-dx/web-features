@@ -72,7 +72,7 @@ function cleanup(sourcePath: string): void {
     if (isDeepStrictEqual(features, taggedCompatFeatures)) {
       const comment = data.comment || data.commentBefore;
       if (comment) {
-        source.comment += comment;
+        source.comment = (source.comment || "") + comment;
       }
       source.contents.delete("compat_features");
       fs.writeFileSync(sourcePath, source.toString({ lineWidth: 0 }));
