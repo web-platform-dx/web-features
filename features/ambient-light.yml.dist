@@ -8,3 +8,6 @@ compat_features:
   - api.AmbientLightSensor
   - api.AmbientLightSensor.AmbientLightSensor
   - api.AmbientLightSensor.illuminance
+  - api.Permissions.permission_ambient-light-sensor
+  - html.elements.iframe.allow.ambient-light-sensor
+  - http.headers.Permissions-Policy.ambient-light-sensor
