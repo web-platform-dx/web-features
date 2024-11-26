@@ -2,3 +2,14 @@ name: WebVTT
 description: WebVTT is a captions and subtitles format. WebVTT files are loaded using the `<track>` element, and the `VTTCue` API can be used to create or update cues dynamically.
 spec: https://w3c.github.io/webvtt/
 caniuse: webvtt
+
+# The VTTCue constructor came a bit later as it was originally the
+# TextTrackCue constructor.
+# - api.VTTCue.VTTCue
+# Cue settings should be a separate feature
+# - api.VTTCue.align
+# - api.VTTCue.line
+# - api.VTTCue.position
+# - api.VTTCue.size
+# - api.VTTCue.snapToLines
+# - api.VTTCue.vertical
