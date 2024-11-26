@@ -1,12 +1,13 @@
 name: Focus events
-description: The `blur`, `focus`, `focusin` and `focusout` events fire when there are changes in focus for the elements or windows involved.
+description: Focus events, such as `focus` and `blur`, fire when an element gets or loses focus.
 spec: https://w3c.github.io/uievents/#events-focusevent
-
-# Caniuse vs BCD is conflicting, so not adding the Caniuse field nor
-# computing status here yet until figured out in this issue:
-#
+compute_from:
+  - api.Element.blur_event
+  - api.Element.focus_event
+# It's possible that caniuse's `focusin-focusout-events` could be linked here
+# or broken out into a separate feature. But caniuse and BCD conflict,
+# making this difficult. See this issue to help resolve this:
 # https://github.com/web-platform-dx/web-features/issues/2327
-
 compat_features:
   - api.Element.blur_event
   - api.Element.focus_event
