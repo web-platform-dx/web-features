@@ -7,17 +7,11 @@ caniuse: webvtt
 # be used to compute the status. It matches https://caniuse.com/webvtt other
 # than the Safari iOS version. TODO: Research whether WebVTT was shipped in
 # iOS 6, 7, or 8, and align all sources on the right answer.
+status:
+  compute_from: api.VTTCue
 compat_features:
   - api.VTTCue
   - api.VTTCue.getCueAsHTML
   - api.VTTCue.text
-  # The VTTCue constructor came a bit later as it was originally the
-  # TextTrackCue constructor.
-  # - api.VTTCue.VTTCue
-  # Cue settings should be a separate feature
-  # - api.VTTCue.align
-  # - api.VTTCue.line
-  # - api.VTTCue.position
-  # - api.VTTCue.size
-  # - api.VTTCue.snapToLines
-  # - api.VTTCue.vertical
+  - api.VTTCue.text.all_html_character_references
+  - api.VTTCue.VTTCue
