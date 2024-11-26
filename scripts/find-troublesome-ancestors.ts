@@ -1,6 +1,9 @@
 import { computeBaseline } from "compute-baseline";
 import { Compat } from "compute-baseline/browser-compat-data";
 
+// For applications of this script, see:
+// /packages/compute-baseline/src/baseline/index.test.ts#L97
+
 const c = new Compat();
 const needles = [];
 

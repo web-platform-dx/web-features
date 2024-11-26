@@ -12,6 +12,15 @@ compat_features:
   #   chrome: "100"
   #   chrome_android: "100"
   #   edge: "100"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  - api.Window.open.relative-multi-screen
+
+  # baseline: false
+  # support:
+  #   chrome: "100"
+  #   chrome_android: "100"
+  #   edge: "100"
   - api.Screen.change_event
   - api.Screen.isExtended
   - api.Window.getScreenDetails
