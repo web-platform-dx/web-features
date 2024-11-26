@@ -19,11 +19,14 @@ const compat = new Compat();
 
 const argv = yargs(process.argv.slice(2))
   .scriptName("cleanup-bcd-overrides")
-  .usage("$0 [paths..]", "Remove unneeded `compat_features` overrides from files", (yargs) =>
-    yargs.positional("paths", {
-      describe: "Directories or files to check/update.",
-      default: ["features"],
-    }),
+  .usage(
+    "$0 [paths..]",
+    "Remove unneeded `compat_features` overrides from files",
+    (yargs) =>
+      yargs.positional("paths", {
+        describe: "Directories or files to check/update.",
+        default: ["features"],
+      }),
   ).argv;
 
 const logger = winston.createLogger({
@@ -89,7 +92,9 @@ function checkForStaleCompat(): void {
 }
 
 function cleanup(sourcePath: string): void {
-  const source = YAML.parseDocument(fs.readFileSync(sourcePath, { encoding: "utf-8" }));
+  const source = YAML.parseDocument(
+    fs.readFileSync(sourcePath, { encoding: "utf-8" }),
+  );
   const { name: id } = path.parse(sourcePath);
 
   // Collect tagged compat features. A `compat_features` list in the source
@@ -98,12 +103,12 @@ function cleanup(sourcePath: string): void {
     .map((f) => `${f.id}`)
     .sort();
 
-  const data = source.contents.get('compat_features');
+  const data = source.contents.get("compat_features");
 
   if (data) {
-    const features = data.items.map(item => item.value).sort();
+    const features = data.items.map((item) => item.value).sort();
     if (isDeepStrictEqual(features, taggedCompatFeatures)) {
-      source.contents.delete('compat_features');
+      source.contents.delete("compat_features");
       fs.writeFileSync(sourcePath, source.toString({ lineWidth: 0 }));
     }
   }
@@ -114,7 +119,7 @@ function main() {
     if (fs.statSync(fileOrDirectory).isDirectory()) {
       return new fdir()
         .withBasePath()
-        .filter(path => path.endsWith(".yml"))
+        .filter((path) => path.endsWith(".yml"))
         .crawl(fileOrDirectory)
         .sync();
     }
