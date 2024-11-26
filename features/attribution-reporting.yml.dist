@@ -4,10 +4,28 @@
 status:
   baseline: false
   support:
-    chrome: "117"
-    chrome_android: "117"
-    edge: "117"
+    chrome: "125"
+    chrome_android: "125"
+    edge: "125"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "117"
+  #   chrome_android: "117"
+  #   edge: "117"
+  - html.elements.iframe.allow.attribution-reporting
+  - http.headers.Attribution-Reporting-Eligible
+  - http.headers.Attribution-Reporting-Register-Source
+  - http.headers.Attribution-Reporting-Register-Trigger
+  - http.headers.Attribution-Reporting-Support
+  - http.headers.Permissions-Policy.attribution-reporting
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
   - api.HTMLAnchorElement.attributionSrc
   - api.HTMLImageElement.attributionSrc
   - api.HTMLScriptElement.attributionSrc
@@ -15,11 +33,5 @@ compat_features:
   - api.XMLHttpRequest.setAttributionReporting
   - api.fetch.init_attributionReporting_parameter
   - html.elements.a.attributionsrc
-  - html.elements.iframe.allow.attribution-reporting
   - html.elements.img.attributionsrc
   - html.elements.script.attributionsrc
-  - http.headers.Attribution-Reporting-Eligible
-  - http.headers.Attribution-Reporting-Register-Source
-  - http.headers.Attribution-Reporting-Register-Trigger
-  - http.headers.Attribution-Reporting-Support
-  - http.headers.Permissions-Policy.attribution-reporting
