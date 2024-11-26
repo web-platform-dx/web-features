@@ -8,6 +8,7 @@ import { isDeepStrictEqual } from "node:util";
 import winston from "winston";
 import YAML from "yaml";
 import yargs from "yargs";
+import {checkForStaleCompat} from "./dist.ts";
 
 const compat = new Compat();
 
@@ -51,39 +52,6 @@ const tagsToFeatures: Map<string, Feature[]> = (() => {
   }
   return map;
 })();
-
-/**
- * Check that the installed @mdn/browser-compat-data (BCD) package matches the
- * one pinned in `package.json`. BCD updates frequently, leading to surprising
- * error messages if you haven't run `npm install` recently.
- */
-function checkForStaleCompat(): void {
-  const packageBCDVersionSpecifier: string = (() => {
-    const packageJSON: unknown = JSON.parse(
-      fs.readFileSync(process.env.npm_package_json, {
-        encoding: "utf-8",
-      }),
-    );
-    if (typeof packageJSON === "object" && "devDependencies" in packageJSON) {
-      const bcd = packageJSON.devDependencies["@mdn/browser-compat-data"];
-      if (typeof bcd === "string") {
-        return bcd;
-      }
-      throw new Error(
-        "@mdn/browser-compat-data version not found in package.json",
-      );
-    }
-  })();
-  const installedBCDVersion = compat.version;
-
-  if (!packageBCDVersionSpecifier.includes(installedBCDVersion)) {
-    logger.error(
-      `Installed @mdn/browser-compat-data (${installedBCDVersion}) does not match package.json version (${packageBCDVersionSpecifier})`,
-    );
-    logger.error("Run `npm install` and try again.");
-    process.exit(1);
-  }
-}
 
 function cleanup(sourcePath: string): void {
   const source = YAML.parseDocument(
