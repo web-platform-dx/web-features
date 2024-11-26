@@ -481,6 +481,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   firefox: "133"
+  #   firefox_android: "133"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - api.ServiceWorkerContainer.worker_support
+  - api.WorkerNavigator.serviceWorker
+
+  # baseline: false
+  # support:
   #   chrome: "40"
   #   chrome_android: "40"
   #   edge: "79"
@@ -492,13 +501,6 @@ compat_features:
   #   chrome_android: "123"
   #   edge: "123"
   - api.InstallEvent.addRoutes
-
-  # baseline: false
-  # support:
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - api.ServiceWorkerContainer.worker_support
-  - api.WorkerNavigator.serviceWorker
 
   # baseline: false
   # support:

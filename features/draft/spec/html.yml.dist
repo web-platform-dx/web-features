@@ -1911,6 +1911,18 @@ compat_features:
   #   safari_ios: "16.1"
   - html.elements.a.text_fragments
 
+  # baseline: low
+  # baseline_low_date: 2024-11-26
+  # support:
+  #   chrome: "6"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: "133"
+  #   firefox_android: "133"
+  #   safari: "5"
+  #   safari_ios: "5"
+  - api.EventSource.worker_support
+
   # baseline: false
   # support:
   #   chrome: "4"
@@ -1986,15 +1998,6 @@ compat_features:
   #   firefox_android: "111"
   #   safari_ios: "10.3"
   - api.HTMLElement.autocapitalize
-
-  # baseline: false
-  # support:
-  #   chrome: "6"
-  #   chrome_android: "18"
-  #   edge: "79"
-  #   safari: "5"
-  #   safari_ios: "5"
-  - api.EventSource.worker_support
 
   # baseline: false
   # support:
@@ -2614,14 +2617,19 @@ compat_features:
   #   firefox_android: "104"
   - api.HTMLElement.focus.options_focusVisible_parameter
 
+  # baseline: false
+  # support:
+  #   firefox: "133"
+  #   firefox_android: "133"
+  - api.HTMLElement.beforetoggle_event.dialog_elements
+  - api.HTMLElement.toggle_event.dialog_elements
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.HTMLButtonElement.command
   - api.HTMLButtonElement.commandForElement
-  - api.HTMLElement.beforetoggle_event.dialog_elements
   - api.HTMLElement.command_event
-  - api.HTMLElement.toggle_event.dialog_elements
   - api.Navigator.authentication
   - html.elements.button.command
   - html.elements.button.commandfor
