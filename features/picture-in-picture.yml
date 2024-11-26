@@ -4,23 +4,3 @@ spec: https://w3c.github.io/picture-in-picture/
 caniuse: picture-in-picture
 status:
   compute_from: api.Document.pictureInPictureElement
-compat_features:
-  - api.Document.exitPictureInPicture
-  - api.Document.pictureInPictureElement
-  - api.Document.pictureInPictureEnabled
-  - api.HTMLVideoElement.disablePictureInPicture
-  - api.HTMLVideoElement.enterpictureinpicture_event
-  - api.HTMLVideoElement.leavepictureinpicture_event
-  - api.HTMLVideoElement.requestPictureInPicture
-  - api.PictureInPictureWindow
-  - api.PictureInPictureWindow.height
-  - api.PictureInPictureWindow.resize_event
-  - api.PictureInPictureWindow.width
-  - api.ShadowRoot.pictureInPictureElement
-  - html.elements.video.disablepictureinpicture
-  - api.PictureInPictureEvent
-  - api.PictureInPictureEvent.PictureInPictureEvent
-  - api.PictureInPictureEvent.pictureInPictureWindow
-  - css.selectors.picture-in-picture
-  - html.elements.iframe.allow.picture-in-picture
-  - http.headers.Permissions-Policy.picture-in-picture
