@@ -5,10 +5,3 @@ spec:
   - https://drafts.csswg.org/cssom-1/#dom-documentorshadowroot-adoptedstylesheets
 status:
   compute_from: api.CSSStyleSheet.CSSStyleSheet
-compat_features:
-  - api.CSSStyleSheet.CSSStyleSheet
-  - api.CSSStyleSheet.replace
-  - api.CSSStyleSheet.replaceSync
-  - api.Document.adoptedStyleSheets
-  - api.ShadowRoot.adoptedStyleSheets
-  - api.CSSStyleSheet.CSSStyleSheet.options_baseURL_parameter
