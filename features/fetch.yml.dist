@@ -455,11 +455,3 @@ compat_features:
   #   chrome_android: "124"
   #   edge: "124"
   - api.Request.targetAddressSpace
-
-  # baseline: false
-  # support:
-  #   chrome: "125"
-  #   chrome_android: "125"
-  #   edge: "125"
-  - api.Request.Request.init_attributionReporting_parameter
-  - api.fetch.init_attributionReporting_parameter
