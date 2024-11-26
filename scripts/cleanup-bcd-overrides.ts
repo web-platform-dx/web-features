@@ -21,7 +21,7 @@ const argv = yargs(process.argv.slice(2))
   .scriptName("cleanup-bcd-overrides")
   .usage(
     "$0 [paths..]",
-    "Remove unneeded `compat_features` overrides from files",
+    "Remove `compat_features` from `.yml` files that have an equivalently tagged set of features in @mdn/browser-compat-data",
     (yargs) =>
       yargs.positional("paths", {
         describe: "Directories or files to check/update.",
@@ -110,6 +110,7 @@ function cleanup(sourcePath: string): void {
     if (isDeepStrictEqual(features, taggedCompatFeatures)) {
       source.contents.delete("compat_features");
       fs.writeFileSync(sourcePath, source.toString({ lineWidth: 0 }));
+      logger.info(`${id}: removed compat_features in favor of tag`);
     }
   }
 }
@@ -126,7 +127,6 @@ function main() {
     return fileOrDirectory.endsWith(".yml") ? fileOrDirectory : [];
   });
 
-  // Update dist in place.
   for (const sourcePath of filePaths) {
     cleanup(sourcePath);
   }
