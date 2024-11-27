@@ -1,4 +1,4 @@
-draft_date: 2024-11-25
+draft_date: 2024-11-27
 name: CSS Images Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-images-4/
@@ -11,7 +11,6 @@ compat_features:
 #   - css.types.image.element
 # - Gradients:
 #   - css.properties.background-image.gradients
-#   - css.types.image
 #   - css.types.gradient
 #   - css.types.gradient.linear-gradient
 #   - css.types.gradient.linear-gradient.doubleposition
@@ -33,6 +32,7 @@ compat_features:
 #   - css.types.gradient.repeating-radial-gradient.at
 #   - css.types.gradient.repeating-radial-gradient.doubleposition
 #   - css.types.gradient.repeating-radial-gradient.interpolation_hints
+#   - css.types.image
 # - image-set():
 #   - css.properties.background-image.image-set
 #   - css.properties.content.image-set
@@ -66,8 +66,6 @@ compat_features:
 # - shape-outside:
 #   - css.properties.shape-outside.gradient
 #   - css.properties.shape-outside.image
-# - cross-fade():
-#   - css.types.image.cross-fade
 # - Conic gradients:
 #   - css.types.gradient.conic-gradient
 #   - css.types.gradient.conic-gradient.doubleposition
@@ -85,7 +83,7 @@ compat_features:
 #   - css.types.gradient.repeating-linear-gradient.interpolation_color_space
 #   - css.types.gradient.repeating-radial-gradient.hue_interpolation_method
 #   - css.types.gradient.repeating-radial-gradient.interpolation_color_space
-# - image():
-#   - css.types.image.image
+# - cross-fade():
+#   - css.types.image.cross-fade
 # - SVG:
 #   - svg.global_attributes.image-rendering
