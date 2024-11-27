@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "103"
+    edge: "103"
 compat_features:
   # baseline: low
   # baseline_low_date: 2022-09-12
@@ -82,13 +84,9 @@ compat_features:
   - api.Permissions.permission_background-sync
   - api.Permissions.permission_magnetometer
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "103"
   #   edge: "103"
   - api.Permissions.permission_local-fonts
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - api.Permissions.permission_ambient-light-sensor
