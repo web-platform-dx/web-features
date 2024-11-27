@@ -515,7 +515,6 @@ compat_features:
   - svg.global_attributes.pointer-events
   - svg.global_attributes.requiredExtensions
   - svg.global_attributes.shape-rendering
-  - svg.global_attributes.stop-color
   - svg.global_attributes.stroke
   - svg.global_attributes.stroke-dasharray
   - svg.global_attributes.stroke-dashoffset
@@ -602,6 +601,8 @@ compat_features:
   - css.properties.stroke
   - css.properties.text-anchor
   - css.properties.text-rendering
+  - css.properties.text-rendering.auto
+  - css.properties.text-rendering.geometricPrecision
   - css.properties.vector-effect
   - css.properties.x
   - css.properties.y
