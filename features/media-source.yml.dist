@@ -3,8 +3,15 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "31"
+    chrome_android: "31"
+    edge: "12"
+    firefox: "42"
+    firefox_android: "41"
+    safari: "8"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "31"
@@ -193,7 +200,6 @@ compat_features:
   - api.SourceBuffer.videoTracks
   - api.TextTrack.sourceBuffer
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.SourceBuffer.audioTracks.worker_support
