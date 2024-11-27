@@ -7,9 +7,11 @@ spec: https://w3c.github.io/media-capabilities/
 status:
   compute_from: api.MediaCapabilities
 compat_features:
+  - api.InputDeviceInfo.getCapabilities
   - api.MediaCapabilities
   - api.MediaCapabilities.decodingInfo
   - api.MediaCapabilities.decodingInfo.configuration_keySystemConfiguration_parameter
   - api.MediaCapabilities.encodingInfo
+  - api.MediaStreamTrack.getCapabilities
   - api.Navigator.mediaCapabilities
   - api.WorkerNavigator.mediaCapabilities

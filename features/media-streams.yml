@@ -4,7 +4,6 @@ description: TODO
 spec: https://w3c.github.io/mediacapture-main/
 compat_features:
   - api.InputDeviceInfo
-  - api.InputDeviceInfo.getCapabilities
   - api.MediaDeviceInfo.toJSON
   - api.MediaDevices.devicechange_event
   - api.MediaDevices.getSupportedConstraints
@@ -37,7 +36,6 @@ compat_features:
   - api.MediaStreamTrack.applyConstraints.width_constraint
   - api.MediaStreamTrack.clone
   - api.MediaStreamTrack.ended_event
-  - api.MediaStreamTrack.getCapabilities
   - api.MediaStreamTrack.getConstraints
   - api.MediaStreamTrack.getSettings
   - api.MediaStreamTrack.mute_event
