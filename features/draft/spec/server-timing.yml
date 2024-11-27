@@ -1,0 +1,16 @@
+draft_date: 2024-11-25
+name: Server Timing
+description: TODO
+spec: https://w3c.github.io/server-timing/
+compat_features:
+  - http.headers.Server-Timing.trailer
+
+# The following features in the spec are already part of web-features:
+# - Server timing:
+#   - api.PerformanceResourceTiming.serverTiming
+#   - api.PerformanceServerTiming
+#   - api.PerformanceServerTiming.description
+#   - api.PerformanceServerTiming.duration
+#   - api.PerformanceServerTiming.name
+#   - api.PerformanceServerTiming.toJSON
+#   - http.headers.Server-Timing

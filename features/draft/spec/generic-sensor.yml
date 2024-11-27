@@ -1,4 +1,4 @@
-draft_date: 2024-10-28
+draft_date: 2024-11-27
 name: Generic Sensor API
 description: TODO
 spec: https://w3c.github.io/sensors/
@@ -16,14 +16,16 @@ compat_features:
   - api.SensorErrorEvent.SensorErrorEvent
   - api.SensorErrorEvent.error
   - html.elements.iframe.allow.accelerometer
-  - html.elements.iframe.allow.ambient-light-sensor
-  - html.elements.iframe.allow.gyroscope
   - html.elements.iframe.allow.magnetometer
-  - http.headers.Permissions-Policy.ambient-light-sensor
-  - http.headers.Permissions-Policy.gyroscope
   - http.headers.Permissions-Policy.magnetometer
 
 # The following features in the spec are already part of web-features:
+# - Ambient light sensor:
+#   - html.elements.iframe.allow.ambient-light-sensor
+#   - http.headers.Permissions-Policy.ambient-light-sensor
+# - Gyroscope:
+#   - html.elements.iframe.allow.gyroscope
+#   - http.headers.Permissions-Policy.gyroscope
 # - Accelerometer:
 #   - http.headers.Permissions-Policy.accelerometer
 # - Virtual sensors:

@@ -6,3 +6,16 @@ group:
   - web-components
 status:
   compute_from: html.elements.slot
+compat_features:
+  - api.Element.assignedSlot
+  - api.Element.slot
+  - api.HTMLSlotElement
+  - api.HTMLSlotElement.assignedElements
+  - api.HTMLSlotElement.assignedNodes
+  - api.HTMLSlotElement.name
+  - api.HTMLSlotElement.slotchange_event
+  - api.Text.assignedSlot
+  - css.selectors.slotted
+  - html.elements.slot
+  - html.elements.slot.name
+  - html.global_attributes.slot
