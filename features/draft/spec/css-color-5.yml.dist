@@ -19,30 +19,42 @@ compat_features:
   - css.properties.color
   - css.types.color
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2024-09-16
   # support:
   #   chrome: "119"
   #   chrome_android: "119"
   #   edge: "119"
   #   firefox: "128"
   #   firefox_android: "128"
+  #   safari: "18"
+  #   safari_ios: "18"
   - css.types.color.color.relative_syntax
   - css.types.color.lch.relative_syntax
   - css.types.color.oklch.relative_syntax
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2024-09-16
   # support:
   #   chrome: "122"
   #   chrome_android: "122"
   #   edge: "122"
   #   firefox: "128"
   #   firefox_android: "128"
+  #   safari: "18"
+  #   safari_ios: "18"
   - css.types.color.rgb.relative_syntax
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2024-09-16
   # support:
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
   #   firefox: "128"
   #   firefox_android: "128"
+  #   safari: "18"
+  #   safari_ios: "18"
   - css.types.color.hsl.relative_syntax
   - css.types.color.hwb.relative_syntax
 
