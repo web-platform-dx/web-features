@@ -122,7 +122,7 @@ const getDownstreamBrowsers = (inputArray, minOnly = true) => {
 }
 
 const baselineBrowserMapping = {
-    getMinimumWidelyAvailable (includeDownstream = false) {
+    getMinimumWidelyAvailable(includeDownstream = false) {
         const date30MonthsAgo = new Date().setMonth(new Date().getMonth() - 30);
         let coreBrowserArray = getCoreVersionsByDate(date30MonthsAgo);
         if (!includeDownstream) {
@@ -131,16 +131,16 @@ const baselineBrowserMapping = {
             return getDownstreamBrowsers(coreBrowserArray);
         }
     },
-    getAllWidelyAvailable (includeDownstream = false) {
+    getAllWidelyAvailable(includeDownstream = false) {
         const date30MonthsAgo = new Date().setMonth(new Date().getMonth() - 30);
-        let coreBrowserArray =  getCoreVersionsByDate(date30MonthsAgo, false);
+        let coreBrowserArray = getCoreVersionsByDate(date30MonthsAgo, false);
         if (!includeDownstream) {
             return coreBrowserArray;
         } else {
             return getDownstreamBrowsers(coreBrowserArray, false);
         }
     },
-    getMinimumWidelyAvailableOnDate (dateString, includeDownstream = false) {
+    getMinimumWidelyAvailableOnDate(dateString, includeDownstream = false) {
         const givenDate = new Date(Date.parse(dateString));
         const givenDateLess30Months = new Date(givenDate.setMonth(givenDate.getMonth() - 30));
         let coreBrowserArray = getCoreVersionsByDate(givenDateLess30Months);
@@ -150,7 +150,7 @@ const baselineBrowserMapping = {
             return getDownstreamBrowsers(coreBrowserArray);
         }
     },
-    getAllWidelyAvailableOnDate (dateString, includeDownstream = false) {
+    getAllWidelyAvailableOnDate(dateString, includeDownstream = false) {
         const givenDate = new Date(Date.parse(dateString));
         const givenDateLess30Months = new Date(givenDate.setMonth(givenDate.getMonth() - 30));
         let coreBrowserArray = getCoreVersionsByDate(givenDateLess30Months, false);
@@ -160,7 +160,7 @@ const baselineBrowserMapping = {
             return getDownstreamBrowsers(coreBrowserArray, false);
         }
     },
-    getMinimumByYear (year, includeDownstream = false) {
+    getMinimumByYear(year, includeDownstream = false) {
         const date = new Date(parseInt(year) + 1, 0, 1);
         let coreBrowserArray = getCoreVersionsByDate(date);
         if (!includeDownstream) {
@@ -169,7 +169,7 @@ const baselineBrowserMapping = {
             return getDownstreamBrowsers(coreBrowserArray);
         }
     },
-    getAllByYear (year, includeDownstream = false) {
+    getAllByYear(year, includeDownstream = false) {
         const date = new Date(parseInt(year) + 1, 0, 1);
         let coreBrowserArray = getCoreVersionsByDate(date, false);
         if (!includeDownstream) {
