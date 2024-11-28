@@ -1,10 +1,6 @@
 import https from 'node:https'
 import fs from 'node:fs'
 
-const findLatestVersion = (releases) => {
-  return Object.entries(releases).sort((a, b) => parseFloat(a[0]) - parseFloat(b[0])).pop();
-}
-
 const compareVersions = (incomingVersionString, previousVersionString) => {
   console.log(`comparing ${incomingVersionString} to ${previousVersionString}`)
   let [incomingVersionStringMajor, incomingVersionStringMinor] = incomingVersionString.split(".");
@@ -28,8 +24,10 @@ const compareVersions = (incomingVersionString, previousVersionString) => {
       return false
     }
   }
+}
 
-
+const findLatestVersion = (releases) => {
+  return Object.entries(releases).sort((a, b) => compareVersions(a[0], b[0])).pop();
 }
 
 const handleUas = (uaObject) => {
@@ -44,17 +42,17 @@ const handleUas = (uaObject) => {
     {
       name: "qq_android",
       latestExistingVersion: findLatestVersion(existingData.browsers["uc_android"].releases),
-      regex: new RegExp("chrome|Chrome\/(\\d+).*MQQBrowser\/(\\d+\\.\\d.)")
+      regex: new RegExp("chrome|Chrome\/(\\d+).*MQQBrowser\/(\\d+\\.\\d+)")
     },
     {
       name: "uc_android",
       latestExistingVersion: findLatestVersion(existingData.browsers["uc_android"].releases),
-      regex: new RegExp("chrome|Chrome\/(\\d+).*UCBrowser\/(\\d+\\.\\d.)")
+      regex: new RegExp("chrome|Chrome\/(\\d+).*UCBrowser\/(\\d+\\.\\d+)")
     },
     {
       name: "ya_android",
       latestExistingVersion: findLatestVersion(existingData.browsers["ya_android"].releases),
-      regex: new RegExp("android|Android.*chrome|Chrome\/(\\d+).*YaBrowser\/(\\d+\\.\\d.)")
+      regex: new RegExp("android|Android.*chrome|Chrome\/(\\d+).*YaBrowser\/(\\d+\\.\\d+)")
     },
     /* More work to be done building out mappings for other browsers */
     // { name: "CocCocBrowser", regex: new RegExp("coc_coc_browser\/(\\d+).*Chrome\/(\\d+).") }
