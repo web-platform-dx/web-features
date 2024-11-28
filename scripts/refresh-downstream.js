@@ -5,6 +5,33 @@ const findLatestVersion = (releases) => {
   return Object.entries(releases).sort((a, b) => parseFloat(a[0]) - parseFloat(b[0])).pop();
 }
 
+const compareVersions = (incomingVersionString, previousVersionString) => {
+  console.log(`comparing ${incomingVersionString} to ${previousVersionString}`)
+  let [incomingVersionStringMajor, incomingVersionStringMinor] = incomingVersionString.split(".");
+  let [previousVersionStringMajor, previousVersionStringMinor] = previousVersionString.split(".");
+
+  console.log(incomingVersionStringMajor, incomingVersionStringMinor, previousVersionStringMajor, previousVersionStringMinor);
+  if (incomingVersionStringMinor) {
+    if (
+      parseInt(incomingVersionStringMajor) >= parseInt(previousVersionStringMajor)
+      &&
+      parseInt(incomingVersionStringMinor) > parseInt(previousVersionStringMinor)
+    ) {
+      return true
+    } else {
+      return false
+    }
+  } else {
+    if (incomingVersionStringMajor > incomingVersionStringMinor) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+
+}
+
 const handleUas = (uaObject) => {
 
   let somethingChanged = false;
@@ -15,22 +42,21 @@ const handleUas = (uaObject) => {
 
   const browsers = [
     {
-      name: "uc_android",
+      name: "qq_android",
       latestExistingVersion: findLatestVersion(existingData.browsers["uc_android"].releases),
-      regex: new RegExp("chrome|Chrome\/(\\d+).*MQQBrowser\/(\\d+\\.\\d)")
+      regex: new RegExp("chrome|Chrome\/(\\d+).*MQQBrowser\/(\\d+\\.\\d.)")
     },
     {
       name: "uc_android",
       latestExistingVersion: findLatestVersion(existingData.browsers["uc_android"].releases),
-      regex: new RegExp("chrome|Chrome\/(\\d+).*UCBrowser\/(\\d+\\.\\d)")
+      regex: new RegExp("chrome|Chrome\/(\\d+).*UCBrowser\/(\\d+\\.\\d.)")
     },
     {
       name: "ya_android",
       latestExistingVersion: findLatestVersion(existingData.browsers["ya_android"].releases),
-      regex: new RegExp("chrome|Chrome\/(\\d+).*YaBrowser\/(\\d+\\.\\d)")
+      regex: new RegExp("android|Android.*chrome|Chrome\/(\\d+).*YaBrowser\/(\\d+\\.\\d.)")
     },
-    /* More work to be done building out mappings for these two browsers */
-    // { name: "YABrowser", regex: new RegExp("chrome|Chrome\/(\\d+).*YaBrowser\/(\\d+\\.\\d)") },
+    /* More work to be done building out mappings for other browsers */
     // { name: "CocCocBrowser", regex: new RegExp("coc_coc_browser\/(\\d+).*Chrome\/(\\d+).") }
   ];
 
@@ -42,29 +68,32 @@ const handleUas = (uaObject) => {
         let browserVersion;
         let chromiumVersion;
         if (browserVersionMatch[0] == "coc_coc_browser") {
-          browserVersion = browserVersionMatch[3];
-          chromiumVersion = browserVersionMatch[2];
+          browserVersion = browserVersionMatch[3].toString().trim();
+          chromiumVersion = browserVersionMatch[2].toString().trim();
         } else {
-          browserVersion = browserVersionMatch[3];
-          chromiumVersion = browserVersionMatch[1];
+          browserVersion = browserVersionMatch[2].toString().trim();
+          chromiumVersion = browserVersionMatch[1].toString().trim();
         }
-        if (
-          parseFloat(browserVersion) > parseFloat(browser.latestExistingVersion[0])
-          &&
-          parseFloat(chromiumVersion) >= parseFloat(browser.latestExistingVersion[1].engine_version)
-          &&
-          !Object.keys(existingData.browsers[browserName].releases).includes(browserVersion.toString())
-        ) {
-          console.log(ua);
-          console.log("adding ", browserName, " version ", browserVersion, " with Chromium version ", chromiumVersion, " and release date ", ua.firstSeen);
-          existingData.browsers[browserName].releases[browserVersion] = {
-            "engine": "Blink",
-            "engine_version": chromiumVersion,
-            "status": "unknown",
-            "release_date": ua.firstSeen
+        console.log(browserName, browserVersion)
+        if (browserVersion != undefined) {
+          if (
+            compareVersions(browserVersion, browser.latestExistingVersion[0])
+            &&
+            parseFloat(chromiumVersion) >= parseFloat(browser.latestExistingVersion[1].engine_version)
+            &&
+            !Object.keys(existingData.browsers[browserName].releases).includes(browserVersion.toString())
+          ) {
+            console.log("adding ", browserName, " version ", browserVersion, " with Chromium version ", chromiumVersion, " and release date ", ua.firstSeen);
+            existingData.browsers[browserName].releases[browserVersion] = {
+              "engine": "Blink",
+              "engine_version": chromiumVersion,
+              "status": "unknown",
+              "release_date": ua.firstSeen
+            }
+            somethingChanged = true;
           }
-          somethingChanged = true;
         }
+
       }
     })
   });
