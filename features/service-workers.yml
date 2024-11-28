@@ -5,7 +5,8 @@ caniuse: serviceworkers
 # Status computed to match Caniuse.
 status:
   compute_from:
-    - api.ServiceWorkerContainer.getRegistrations
+    - api.ServiceWorkerContainer.register
+    - api.ServiceWorkerRegistration.update
 compat_features:
   - api.Cache
   - api.Cache.add
