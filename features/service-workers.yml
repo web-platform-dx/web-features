@@ -1,5 +1,5 @@
 name: Service workers
-description: Service Workers are scripts that act as local servers, intercepting network requests to create effective offline experiences or update assets residing on the server. They also allow access to the push notifications and background sync APIs.
+description: The service worker of a website is a script that runs in its own thread and which acts as local proxy that intercepts network requests from the website. Use a service worker to implement advanced caching strategies, offline support, background tasks, or push notification support on your website.
 spec: https://w3c.github.io/ServiceWorker/
 caniuse: serviceworkers
 # Status computed to match Caniuse.
