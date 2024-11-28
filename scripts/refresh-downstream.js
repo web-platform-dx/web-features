@@ -130,8 +130,14 @@ if (process.argv.length === 2) {
       latestUas = JSON.parse(Buffer.concat(output).toString());
       let [willWrite, fileOutput] = handleUas(latestUas);
       if (willWrite) {
+
         fileOutput.lastUpdated = new Date();
         fs.writeFileSync('../packages/baseline-browser-mapping/data/downstream-browsers.json', JSON.stringify(fileOutput, null, 2), { flags: 'w' })
+
+        let packageJson = JSON.parse(fs.readFileSync('../packages/baseline-browser-mapping/package.json', { encoding: 'utf8' }));
+        let currentVersion = packageJson.version.split(".");
+        packageJson.version = `${currentVersion[0]}.${currentVersion[1]}.${parseInt(currentVersion[2]) + 1}`
+        fs.writeFileSync('../packages/baseline-browser-mapping/package.json', JSON.stringify(packageJson, null, 2), { encoding: 'utf8' });
       } else {
         console.log("no updates at this time");
       }
