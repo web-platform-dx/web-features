@@ -1,7 +1,11 @@
-draft_date: 2024-11-21
-name: Service Workers
-description: TODO
+name: Service workers
+description: Service Workers are scripts that act as local servers, intercepting network requests to create effective offline experiences or update assets residing on the server. They also allow access to the push notifications and background sync APIs.
 spec: https://w3c.github.io/ServiceWorker/
+caniuse: serviceworkers
+# Status computed to match Caniuse.
+status:
+  compute_from:
+    - api.ServiceWorkerContainer.getRegistrations
 compat_features:
   - api.Cache
   - api.Cache.add
@@ -107,11 +111,3 @@ compat_features:
   - api.caches.secure_context_required
   - api.caches.worker_support
   - http.headers.Service-Worker-Navigation-Preload
-
-# The following features in the spec are already part of web-features:
-# - JavaScript modules in service workers:
-#   - api.ServiceWorker.ecmascript_modules
-# - messageerror:
-#   - api.ServiceWorkerContainer.messageerror_event
-# - Push messages:
-#   - api.ServiceWorkerRegistration
