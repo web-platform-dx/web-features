@@ -2,7 +2,7 @@ import https from 'node:https'
 import fs from 'node:fs'
 
 const compareVersions = (incomingVersionString, previousVersionString) => {
-  console.log(`comparing ${incomingVersionString} to ${previousVersionString}`)
+
   let [incomingVersionStringMajor, incomingVersionStringMinor] = incomingVersionString.split(".");
   let [previousVersionStringMajor, previousVersionStringMinor] = previousVersionString.split(".");
 
@@ -14,16 +14,13 @@ const compareVersions = (incomingVersionString, previousVersionString) => {
       parseInt(incomingVersionStringMinor) > parseInt(previousVersionStringMinor)
     ) {
       return true
-    } else {
-      return false
     }
   } else {
     if (incomingVersionStringMajor > incomingVersionStringMinor) {
       return true
-    } else {
-      return false
     }
   }
+  return false
 }
 
 const findLatestVersion = (releases) => {
@@ -72,7 +69,7 @@ const handleUas = (uaObject) => {
           browserVersion = browserVersionMatch[2].toString().trim();
           chromiumVersion = browserVersionMatch[1].toString().trim();
         }
-        console.log(browserName, browserVersion)
+
         if (browserVersion != undefined) {
           if (
             compareVersions(browserVersion, browser.latestExistingVersion[0])
@@ -126,7 +123,7 @@ if (process.argv.length === 2) {
     });
 
     res.on('end', () => {
-      console.log('no more data');
+
       latestUas = JSON.parse(Buffer.concat(output).toString());
       let [willWrite, fileOutput] = handleUas(latestUas);
       if (willWrite) {
@@ -138,6 +135,7 @@ if (process.argv.length === 2) {
         let currentVersion = packageJson.version.split(".");
         packageJson.version = `${currentVersion[0]}.${currentVersion[1]}.${parseInt(currentVersion[2]) + 1}`
         fs.writeFileSync('../packages/baseline-browser-mapping/package.json', JSON.stringify(packageJson, null, 2), { encoding: 'utf8' });
+
       } else {
         console.log("no updates at this time");
       }
