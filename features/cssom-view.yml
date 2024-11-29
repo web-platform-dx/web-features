@@ -19,14 +19,16 @@ compat_features:
   #- api.Document.scroll_event
   #- api.Document.scrollingElement
 
-  - api.Element.clientHeight
-  - api.Element.clientLeft
-  - api.Element.clientTop
-  - api.Element.clientWidth
-  - api.Element.currentCSSZoom
-  - api.Element.getBoundingClientRect
+  # moved to dom
+  #- api.Element.clientHeight
+  #- api.Element.clientLeft
+  #- api.Element.clientTop
+  #- api.Element.clientWidth
+  #- api.Element.currentCSSZoom
+  #- api.Element.getBoundingClientRect
+  #- api.Element.getClientRects
+
   - api.Element.getBoxQuads
-  - api.Element.getClientRects
 
   # moved to scroll-elements
   #- api.Element.scroll
@@ -47,11 +49,12 @@ compat_features:
   #- api.Element.scrollWidth
   #- api.Element.scroll_event
 
-  - api.HTMLElement.offsetHeight
-  - api.HTMLElement.offsetLeft
-  - api.HTMLElement.offsetParent
-  - api.HTMLElement.offsetTop
-  - api.HTMLElement.offsetWidth
+  # moved to dom
+  #- api.HTMLElement.offsetHeight
+  #- api.HTMLElement.offsetLeft
+  #- api.HTMLElement.offsetParent
+  #- api.HTMLElement.offsetTop
+  #- api.HTMLElement.offsetWidth
 
   # moved to img
   #- api.HTMLImageElement.x
@@ -91,14 +94,16 @@ compat_features:
   # moved to devicepixelratio
   #- api.Window.devicePixelRatio
 
-  - api.Window.innerHeight
-  - api.Window.innerWidth
+  # moved to window
+  #- api.Window.innerHeight
+  #- api.Window.innerWidth
 
   # moved to matchmedia
   #- api.Window.matchMedia
 
-  - api.Window.moveBy
-  - api.Window.moveTo
+  # moved to window
+  #- api.Window.moveBy
+  #- api.Window.moveTo
 
   # moved to window-management
   #- api.Window.moveTo.relative-multi-screen
@@ -106,16 +111,17 @@ compat_features:
   # moved to attribution-reporting
   #- api.Window.open.features_parameter_attributionsrc
 
-  - api.Window.outerHeight
-  - api.Window.outerWidth
-  - api.Window.resizeBy
-  - api.Window.resizeTo
-  - api.Window.resize_event
-  - api.Window.screen
-  - api.Window.screenLeft
-  - api.Window.screenTop
-  - api.Window.screenX
-  - api.Window.screenY
+  # moved to window
+  #- api.Window.outerHeight
+  #- api.Window.outerWidth
+  #- api.Window.resizeBy
+  #- api.Window.resizeTo
+  #- api.Window.resize_event
+  #- api.Window.screen
+  #- api.Window.screenLeft
+  #- api.Window.screenTop
+  #- api.Window.screenX
+  #- api.Window.screenY
 
   # moved to window-management
   #- api.Window.screenLeft.relative-multi-screen
