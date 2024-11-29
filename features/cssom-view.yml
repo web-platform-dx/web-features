@@ -72,13 +72,15 @@ compat_features:
   #- api.Range.getBoundingClientRect
   #- api.Range.getClientRects
 
-  - api.Screen
-  - api.Screen.availHeight
-  - api.Screen.availWidth
-  - api.Screen.colorDepth
-  - api.Screen.height
-  - api.Screen.pixelDepth
-  - api.Screen.width
+  # moved to screen
+  #- api.Screen
+  #- api.Screen.availHeight
+  #- api.Screen.availWidth
+  #- api.Screen.colorDepth
+  #- api.Screen.height
+  #- api.Screen.pixelDepth
+  #- api.Screen.width
+
   - api.Text.getBoxQuads
 
   # moved to visual-viewport
