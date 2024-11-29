@@ -57,15 +57,16 @@ compat_features:
   #- api.HTMLImageElement.x
   #- api.HTMLImageElement.y
 
-  - api.MediaQueryList
-  - api.MediaQueryList.EventTarget_inheritance
-  - api.MediaQueryList.change_event
-  - api.MediaQueryList.matches
-  - api.MediaQueryList.media
-  - api.MediaQueryListEvent
-  - api.MediaQueryListEvent.MediaQueryListEvent
-  - api.MediaQueryListEvent.matches
-  - api.MediaQueryListEvent.media
+  # moved to matchmedia
+  #- api.MediaQueryList
+  #- api.MediaQueryList.EventTarget_inheritance
+  #- api.MediaQueryList.change_event
+  #- api.MediaQueryList.matches
+  #- api.MediaQueryList.media
+  #- api.MediaQueryListEvent
+  #- api.MediaQueryListEvent.MediaQueryListEvent
+  #- api.MediaQueryListEvent.matches
+  #- api.MediaQueryListEvent.media
 
   # moved to selection-api
   #- api.Range.getBoundingClientRect
@@ -85,10 +86,15 @@ compat_features:
   #- api.VisualViewport.scroll_event
   #- api.VisualViewport.scrollend_event
 
-  - api.Window.devicePixelRatio
+  # moved to devicepixelratio
+  #- api.Window.devicePixelRatio
+
   - api.Window.innerHeight
   - api.Window.innerWidth
-  - api.Window.matchMedia
+
+  # moved to matchmedia
+  #- api.Window.matchMedia
+
   - api.Window.moveBy
   - api.Window.moveTo
 
