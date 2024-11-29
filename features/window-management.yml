@@ -23,4 +23,8 @@ compat_features:
   - api.Window.getScreenDetails
   - api.Window.moveTo.relative-multi-screen
   - api.Window.open.relative-multi-screen
+  - api.Window.screenLeft.relative-multi-screen
+  - api.Window.screenTop.relative-multi-screen
+  - api.Window.screenX.relative-multi-screen
+  - api.Window.screenY.relative-multi-screen
   - http.headers.Permissions-Policy.window-management

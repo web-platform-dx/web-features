@@ -113,13 +113,15 @@ compat_features:
   - api.Window.resize_event
   - api.Window.screen
   - api.Window.screenLeft
-  - api.Window.screenLeft.relative-multi-screen
   - api.Window.screenTop
-  - api.Window.screenTop.relative-multi-screen
   - api.Window.screenX
-  - api.Window.screenX.relative-multi-screen
   - api.Window.screenY
-  - api.Window.screenY.relative-multi-screen
+
+  # moved to window-management
+  #- api.Window.screenLeft.relative-multi-screen
+  #- api.Window.screenTop.relative-multi-screen
+  #- api.Window.screenX.relative-multi-screen
+  #- api.Window.screenY.relative-multi-screen
 
   # moved to scroll-elements
   #- api.Window.scroll
