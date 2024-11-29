@@ -39,8 +39,109 @@ Updating this module and browser-compat-data regularly is recommended if you are
 
 ## Usage
 
-### 
+### Import the module
 
+First, import the module:
+
+```javascript
+import baselineBrowserMapping from "baseline-browser-mapping";
+```
+
+### Get Baseline Widely Available browser versions
+
+To get the current list of minimum browser versions compatible with Baseline Widely Available features from the core browser set, call the `getMinimumWidelyAvailable` method:
+
+```javascript
+baselineBrowserMapping.getMinimumWidelyAvailable()
+```
+
+Executed on 29th November 2024, the above code returns the final version of each core browser released on or before 24th May 2022 i.e. 30 months before the date of execution:
+
+```javascript
+[
+  {
+    browser: 'chrome',
+    version: '102',
+    release_date: '2022-05-24',
+    engine: null,
+    engine_version: null
+  },
+  {
+    browser: 'chrome_android',
+    version: '102',
+    release_date: '2022-05-24',
+    engine: null,
+    engine_version: null
+  },
+  {
+    browser: 'edge',
+    version: '101',
+    release_date: '2022-04-28',
+    engine: null,
+    engine_version: null
+  },
+  {
+    browser: 'firefox',
+    version: '100',
+    release_date: '2022-05-03',
+    engine: null,
+    engine_version: null
+  },
+  {
+    browser: 'firefox_android',
+    version: '100',
+    release_date: '2022-05-03',
+    engine: null,
+    engine_version: null
+  },
+  {
+    browser: 'safari',
+    version: '15.5',
+    release_date: '2022-05-16',
+    engine: null,
+    engine_version: null
+  },
+  {
+    browser: 'safari_ios',
+    version: '15.5',
+    release_date: '2022-05-16',
+    engine: null,
+    engine_version: null
+  }
+]
+```
+
+If you need a list of _all_ compatible versions, you can call:
+
+```javascript
+baselineBrowserMapping.getAllWidelyAvailable()
+```
+
+If you want to include downstream browsers in the results of either function, pass `true` as an argument:
+
+```javascript
+baselineBrowserMapping.getMinimumWidelyAvailable(true)
+```
+### Get Baseline Widely Available browser versions as of a specific date
+
+If you want to know the minimum browser versions that supported Baseline Widely Available on a specific date, call `getMinimumWidelyAvailableOnDate` or `geAllWidelyAvailableOnDate`, passing the desired date in the format `YYYY-MM-DD`:
+
+```javascript
+baselineBrowserMapping.getMinimumWidelyAvailableOnDate('2021-03-19')
+```
+
+This would return the final version of each core browser released on or before 19th September 2018 i.e. 30 months before 19th March 2021.
+
+If you want to include downstream browsers, pass `true` as a second argument:
+
+```javascript
+baselineBrowserMapping.getMinimumWidelyAvailableOnDate('2021-03-19', true)
+```
+
+## Currently included browsers
+
+> **Note**
+> This is a note
 
 ## Helping out and getting help
 
