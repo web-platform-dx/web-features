@@ -1,7 +1,12 @@
-draft_date: 2024-11-21
-name: Service Workers
-description: TODO
+name: Service workers
+description: The service worker of a website is a script that runs in its own thread and which acts as local proxy that intercepts network requests from the website. Use a service worker to implement advanced caching strategies, offline support, background tasks, or push notification support on your website.
 spec: https://w3c.github.io/ServiceWorker/
+caniuse: serviceworkers
+# Status computed to match Caniuse.
+status:
+  compute_from:
+    - api.ServiceWorkerContainer.register
+    - api.ServiceWorkerRegistration.update
 compat_features:
   - api.Cache
   - api.Cache.add
@@ -107,11 +112,3 @@ compat_features:
   - api.caches.secure_context_required
   - api.caches.worker_support
   - http.headers.Service-Worker-Navigation-Preload
-
-# The following features in the spec are already part of web-features:
-# - JavaScript modules in service workers:
-#   - api.ServiceWorker.ecmascript_modules
-# - messageerror:
-#   - api.ServiceWorkerContainer.messageerror_event
-# - Push messages:
-#   - api.ServiceWorkerRegistration
