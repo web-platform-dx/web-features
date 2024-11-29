@@ -140,9 +140,26 @@ baselineBrowserMapping.getMinimumWidelyAvailableOnDate('2021-03-19', true)
 
 ## Currently included browsers
 
-> **Note**
-> This is a note
+| Browser               | ID                        | Is core | Source                    |
+| --------------------- | ------------------------- | ------- | ------------------------- |
+| Chrome                | `chrome`                  | `true`  | MDN `browser-compat-data` |
+| Chrome  for Android   | `chrome_android`          | `true`  | MDN `browser-compat-data` |
+| Edge                  | `edge`                    | `true`  | MDN `browser-compat-data` |
+| Firefox               | `firefox`                 | `true`  | MDN `browser-compat-data` |
+| Firefox for Android   | `firefox_android`         | `true`  | MDN `browser-compat-data` |
+| Safari                | `safari`                  | `true`  | MDN `browser-compat-data` |
+| Safari on iOS         | `safari_ios`              | `true`  | MDN `browser-compat-data` |
+| Opera                 | `opera`                   | `false` | MDN `browser-compat-data` |
+| Opera Android         | `opera_android`           | `false` | MDN `browser-compat-data` |
+| Samsung Internet      | `samsunginternet_android` | `false` | MDN `browser-compat-data` |
+| WebView Android       | `webview_android`         | `false` | MDN `browser-compat-data` |
+| QQ Browser Mobile     | `qq_android`              | `false` | useragents.io             |
+| UC Browser Mobile     | `UC_android`              | `false` | useragents.io             |
+| Yandex Browser Mobile | `ya_android`              | `false` | useragents.io             |
 
+> **Note**
+> All the non-core browsers currently included implement Chromium.  Their inclusion in any of the above functions is based on the Baseline feature set supported by the Chromium version they implement, not their release date.
+ 
 ## Helping out and getting help
 
 `compute-baseline` is part of the W3C WebDX Community Group's web-features project.
