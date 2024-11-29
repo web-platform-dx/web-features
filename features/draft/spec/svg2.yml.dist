@@ -5,34 +5,5 @@ status:
   baseline: false
   support: {}
 compat_features:
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "79"
-  #   firefox: "1"
-  #   firefox_android: "46"
-  #   safari: "5"
-  #   safari_ios: "4.2"
-  - css.properties.text-rendering.auto
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "13"
-  #   chrome_android: "18"
-  #   edge: "79"
-  #   firefox: "1"
-  #   firefox_android: "46"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - css.properties.text-rendering.geometricPrecision
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
   - api.SVGAElement.ping
   - svg.elements.a.ping
