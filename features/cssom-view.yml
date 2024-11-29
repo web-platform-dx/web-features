@@ -15,8 +15,10 @@ compat_features:
   - api.Document.featurePolicy
 
   - api.Document.getBoxQuads
-  - api.Document.scroll_event
-  - api.Document.scrollingElement
+
+  # moved to scroll-elements
+  #- api.Document.scroll_event
+  #- api.Document.scrollingElement
 
   - api.Element.clientHeight
   - api.Element.clientLeft
@@ -27,23 +29,24 @@ compat_features:
   - api.Element.getBoxQuads
   - api.Element.getClientRects
 
-  - api.Element.scroll
-  - api.Element.scroll.options_behavior_parameter
-  - api.Element.scroll.options_left_parameter
-  - api.Element.scroll.options_top_parameter
-  - api.Element.scrollBy
-  - api.Element.scrollBy.options_behavior_parameter
-  - api.Element.scrollBy.options_left_parameter
-  - api.Element.scrollBy.options_top_parameter
-  - api.Element.scrollHeight
-  - api.Element.scrollLeft
-  - api.Element.scrollTo
-  - api.Element.scrollTo.options_behavior_parameter
-  - api.Element.scrollTo.options_left_parameter
-  - api.Element.scrollTo.options_top_parameter
-  - api.Element.scrollTop
-  - api.Element.scrollWidth
-  - api.Element.scroll_event
+  # moved to scroll-elements
+  #- api.Element.scroll
+  #- api.Element.scroll.options_behavior_parameter
+  #- api.Element.scroll.options_left_parameter
+  #- api.Element.scroll.options_top_parameter
+  #- api.Element.scrollBy
+  #- api.Element.scrollBy.options_behavior_parameter
+  #- api.Element.scrollBy.options_left_parameter
+  #- api.Element.scrollBy.options_top_parameter
+  #- api.Element.scrollHeight
+  #- api.Element.scrollLeft
+  #- api.Element.scrollTo
+  #- api.Element.scrollTo.options_behavior_parameter
+  #- api.Element.scrollTo.options_left_parameter
+  #- api.Element.scrollTo.options_top_parameter
+  #- api.Element.scrollTop
+  #- api.Element.scrollWidth
+  #- api.Element.scroll_event
 
   - api.HTMLElement.offsetHeight
   - api.HTMLElement.offsetLeft
@@ -64,8 +67,9 @@ compat_features:
   - api.MediaQueryListEvent.matches
   - api.MediaQueryListEvent.media
 
-  - api.Range.getBoundingClientRect
-  - api.Range.getClientRects
+  # moved to selection-api
+  #- api.Range.getBoundingClientRect
+  #- api.Range.getClientRects
 
   - api.Screen
   - api.Screen.availHeight
@@ -109,23 +113,23 @@ compat_features:
   - api.Window.screenY
   - api.Window.screenY.relative-multi-screen
 
-  - api.Window.scroll
-  - api.Window.scroll.options_behavior_parameter
-  - api.Window.scroll.options_left_parameter
-  - api.Window.scroll.options_top_parameter
-  - api.Window.scrollBy
-  - api.Window.scrollBy.options_behavior_parameter
-  - api.Window.scrollBy.options_left_parameter
-  - api.Window.scrollBy.options_top_parameter
-  - api.Window.scrollTo
-  - api.Window.scrollTo.options_behavior_parameter
-  - api.Window.scrollTo.options_left_parameter
-  - api.Window.scrollTo.options_top_parameter
-  - api.Window.scrollX
-  - api.Window.scrollX.subpixel_precision
-  - api.Window.scrollY
-  - api.Window.scrollY.subpixel_precision
-
+  # moved to scroll-elements
+  #- api.Window.scroll
+  #- api.Window.scroll.options_behavior_parameter
+  #- api.Window.scroll.options_left_parameter
+  #- api.Window.scroll.options_top_parameter
+  #- api.Window.scrollBy
+  #- api.Window.scrollBy.options_behavior_parameter
+  #- api.Window.scrollBy.options_left_parameter
+  #- api.Window.scrollBy.options_top_parameter
+  #- api.Window.scrollTo
+  #- api.Window.scrollTo.options_behavior_parameter
+  #- api.Window.scrollTo.options_left_parameter
+  #- api.Window.scrollTo.options_top_parameter
+  #- api.Window.scrollX
+  #- api.Window.scrollX.subpixel_precision
+  #- api.Window.scrollY
+  #- api.Window.scrollY.subpixel_precision
 # The following features in the spec are already part of web-features:
 # - DOM:
 #   - api.Document

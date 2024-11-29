@@ -1,0 +1,43 @@
+name: Scroll methods on elements
+description: Scrolling methods such as `scroll`, `scrollBy` and `scrollTo` change the scroll position of an element. Similar to setting th `scrollTop` and `scrollLeft` properties, but also allows options to be passed to define the scroll behavior.
+spec: https://drafts.csswg.org/cssom-view-1/#dom-element-scroll
+caniuse: element-scroll-methods
+status:
+  compute_from:
+    - api.Element.scroll
+compat_features:
+  - api.Document.scroll_event
+  - api.Document.scrollingElement
+  - api.Element.scroll
+  - api.Element.scroll.options_behavior_parameter
+  - api.Element.scroll.options_left_parameter
+  - api.Element.scroll.options_top_parameter
+  - api.Element.scrollBy
+  - api.Element.scrollBy.options_behavior_parameter
+  - api.Element.scrollBy.options_left_parameter
+  - api.Element.scrollBy.options_top_parameter
+  - api.Element.scrollHeight
+  - api.Element.scrollLeft
+  - api.Element.scrollTo
+  - api.Element.scrollTo.options_behavior_parameter
+  - api.Element.scrollTo.options_left_parameter
+  - api.Element.scrollTo.options_top_parameter
+  - api.Element.scrollTop
+  - api.Element.scrollWidth
+  - api.Element.scroll_event
+  - api.Window.scroll
+  - api.Window.scroll.options_behavior_parameter
+  - api.Window.scroll.options_left_parameter
+  - api.Window.scroll.options_top_parameter
+  - api.Window.scrollBy
+  - api.Window.scrollBy.options_behavior_parameter
+  - api.Window.scrollBy.options_left_parameter
+  - api.Window.scrollBy.options_top_parameter
+  - api.Window.scrollTo
+  - api.Window.scrollTo.options_behavior_parameter
+  - api.Window.scrollTo.options_left_parameter
+  - api.Window.scrollTo.options_top_parameter
+  - api.Window.scrollX
+  - api.Window.scrollX.subpixel_precision
+  - api.Window.scrollY
+  - api.Window.scrollY.subpixel_precision
