@@ -7,7 +7,20 @@ status:
     chrome: "128"
     chrome_android: "128"
     edge: "128"
-    firefox: "20"
-    firefox_android: "20"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  #   firefox: "20"
+  #   firefox_android: "20"
   - api.Document.caretPositionFromPoint
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  - api.Document.caretPositionFromPoint.options_parameter
