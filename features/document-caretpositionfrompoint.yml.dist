@@ -15,7 +15,19 @@ compat_features:
   #   edge: "128"
   #   firefox: "20"
   #   firefox_android: "20"
+  - api.CaretPosition
+  - api.CaretPosition.offset
+  - api.CaretPosition.offsetNode
   - api.Document.caretPositionFromPoint
+
+  # baseline: false
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  #   firefox: "23"
+  #   firefox_android: "23"
+  - api.CaretPosition.getClientRect
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
