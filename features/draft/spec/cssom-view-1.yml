@@ -1,148 +1,155 @@
+draft_date: 2024-11-21
 name: CSSOM View Module
-description: The CSS Object Model (CSSOM) View Module is for inspecting and manipulating the visual view of a document. This includes getting the position of element layout boxes, obtaining the width of the viewport through script, and also scrolling an element.
+description: TODO
 spec: https://drafts.csswg.org/cssom-view-1/
 compat_features:
-  # moved to document-caretpositionfrompoint
-  #- api.CaretPosition
-  #- api.CaretPosition.getClientRect
-  #- api.CaretPosition.offset
-  #- api.CaretPosition.offsetNode
-  #- api.Document.caretPositionFromPoint.options_parameter
-
-  # feature policy will be a feature
+  - api.CaretPosition
+  - api.CaretPosition.getClientRect
+  - api.CaretPosition.offset
+  - api.CaretPosition.offsetNode
+  - api.Document.caretPositionFromPoint.options_parameter
   - api.Document.featurePolicy
-
-  # maybe this goes in geometry?
   - api.Document.getBoxQuads
-
-  # moved to scroll-elements
-  #- api.Document.scroll_event
-  #- api.Document.scrollingElement
-
-  # moved to dom
-  #- api.Element.clientHeight
-  #- api.Element.clientLeft
-  #- api.Element.clientTop
-  #- api.Element.clientWidth
-  #- api.Element.currentCSSZoom
-  #- api.Element.getBoundingClientRect
-  #- api.Element.getClientRects
-
+  - api.Document.scroll_event
+  - api.Document.scrollingElement
+  - api.Element.clientHeight
+  - api.Element.clientLeft
+  - api.Element.clientTop
+  - api.Element.clientWidth
+  - api.Element.currentCSSZoom
+  - api.Element.getBoundingClientRect
   - api.Element.getBoxQuads
-
-  # moved to scroll-elements
-  #- api.Element.scroll
-  #- api.Element.scroll.options_behavior_parameter
-  #- api.Element.scroll.options_left_parameter
-  #- api.Element.scroll.options_top_parameter
-  #- api.Element.scrollBy
-  #- api.Element.scrollBy.options_behavior_parameter
-  #- api.Element.scrollBy.options_left_parameter
-  #- api.Element.scrollBy.options_top_parameter
-  #- api.Element.scrollHeight
-  #- api.Element.scrollLeft
-  #- api.Element.scrollTo
-  #- api.Element.scrollTo.options_behavior_parameter
-  #- api.Element.scrollTo.options_left_parameter
-  #- api.Element.scrollTo.options_top_parameter
-  #- api.Element.scrollTop
-  #- api.Element.scrollWidth
-  #- api.Element.scroll_event
-
-  # moved to dom
-  #- api.HTMLElement.offsetHeight
-  #- api.HTMLElement.offsetLeft
-  #- api.HTMLElement.offsetParent
-  #- api.HTMLElement.offsetTop
-  #- api.HTMLElement.offsetWidth
-
-  # moved to img
-  #- api.HTMLImageElement.x
-  #- api.HTMLImageElement.y
-
-  # moved to matchmedia
-  #- api.MediaQueryList
-  #- api.MediaQueryList.EventTarget_inheritance
-  #- api.MediaQueryList.change_event
-  #- api.MediaQueryList.matches
-  #- api.MediaQueryList.media
-  #- api.MediaQueryListEvent
-  #- api.MediaQueryListEvent.MediaQueryListEvent
-  #- api.MediaQueryListEvent.matches
-  #- api.MediaQueryListEvent.media
-
-  # moved to selection-api
-  #- api.Range.getBoundingClientRect
-  #- api.Range.getClientRects
-
-  # moved to screen
-  #- api.Screen
-  #- api.Screen.availHeight
-  #- api.Screen.availWidth
-  #- api.Screen.colorDepth
-  #- api.Screen.height
-  #- api.Screen.pixelDepth
-  #- api.Screen.width
-
+  - api.Element.getClientRects
+  - api.Element.scroll
+  - api.Element.scroll.options_behavior_parameter
+  - api.Element.scroll.options_left_parameter
+  - api.Element.scroll.options_top_parameter
+  - api.Element.scrollBy
+  - api.Element.scrollBy.options_behavior_parameter
+  - api.Element.scrollBy.options_left_parameter
+  - api.Element.scrollBy.options_top_parameter
+  - api.Element.scrollHeight
+  - api.Element.scrollLeft
+  - api.Element.scrollTo
+  - api.Element.scrollTo.options_behavior_parameter
+  - api.Element.scrollTo.options_left_parameter
+  - api.Element.scrollTo.options_top_parameter
+  - api.Element.scrollTop
+  - api.Element.scrollWidth
+  - api.Element.scroll_event
+  - api.HTMLElement.offsetHeight
+  - api.HTMLElement.offsetLeft
+  - api.HTMLElement.offsetParent
+  - api.HTMLElement.offsetTop
+  - api.HTMLElement.offsetWidth
+  - api.HTMLImageElement.x
+  - api.HTMLImageElement.y
+  - api.MediaQueryList
+  - api.MediaQueryList.EventTarget_inheritance
+  - api.MediaQueryList.change_event
+  - api.MediaQueryList.matches
+  - api.MediaQueryList.media
+  - api.MediaQueryListEvent
+  - api.MediaQueryListEvent.MediaQueryListEvent
+  - api.MediaQueryListEvent.matches
+  - api.MediaQueryListEvent.media
+  - api.Range.getBoundingClientRect
+  - api.Range.getClientRects
+  - api.Screen
+  - api.Screen.availHeight
+  - api.Screen.availWidth
+  - api.Screen.colorDepth
+  - api.Screen.height
+  - api.Screen.pixelDepth
+  - api.Screen.width
   - api.Text.getBoxQuads
+  - api.VisualViewport.resize_event
+  - api.VisualViewport.scroll_event
+  - api.VisualViewport.scrollend_event
+  - api.Window.devicePixelRatio
+  - api.Window.innerHeight
+  - api.Window.innerWidth
+  - api.Window.matchMedia
+  - api.Window.moveBy
+  - api.Window.moveTo
+  - api.Window.moveTo.relative-multi-screen
+  - api.Window.open.features_parameter_attributionsrc
+  - api.Window.outerHeight
+  - api.Window.outerWidth
+  - api.Window.resizeBy
+  - api.Window.resizeTo
+  - api.Window.resize_event
+  - api.Window.screen
+  - api.Window.screenLeft
+  - api.Window.screenLeft.relative-multi-screen
+  - api.Window.screenTop
+  - api.Window.screenTop.relative-multi-screen
+  - api.Window.screenX
+  - api.Window.screenX.relative-multi-screen
+  - api.Window.screenY
+  - api.Window.screenY.relative-multi-screen
+  - api.Window.scroll
+  - api.Window.scroll.options_behavior_parameter
+  - api.Window.scroll.options_left_parameter
+  - api.Window.scroll.options_top_parameter
+  - api.Window.scrollBy
+  - api.Window.scrollBy.options_behavior_parameter
+  - api.Window.scrollBy.options_left_parameter
+  - api.Window.scrollBy.options_top_parameter
+  - api.Window.scrollTo
+  - api.Window.scrollTo.options_behavior_parameter
+  - api.Window.scrollTo.options_left_parameter
+  - api.Window.scrollTo.options_top_parameter
+  - api.Window.scrollX
+  - api.Window.scrollX.subpixel_precision
+  - api.Window.scrollY
+  - api.Window.scrollY.subpixel_precision
 
-  # moved to visual-viewport
-  #- api.VisualViewport.resize_event
-  #- api.VisualViewport.scroll_event
-  #- api.VisualViewport.scrollend_event
-
-  # moved to devicepixelratio
-  #- api.Window.devicePixelRatio
-
-  # moved to window
-  #- api.Window.innerHeight
-  #- api.Window.innerWidth
-
-  # moved to matchmedia
-  #- api.Window.matchMedia
-
-  # moved to window
-  #- api.Window.moveBy
-  #- api.Window.moveTo
-
-  # moved to window-management
-  #- api.Window.moveTo.relative-multi-screen
-
-  # moved to attribution-reporting
-  #- api.Window.open.features_parameter_attributionsrc
-
-  # moved to window
-  #- api.Window.outerHeight
-  #- api.Window.outerWidth
-  #- api.Window.resizeBy
-  #- api.Window.resizeTo
-  #- api.Window.resize_event
-  #- api.Window.screen
-  #- api.Window.screenLeft
-  #- api.Window.screenTop
-  #- api.Window.screenX
-  #- api.Window.screenY
-
-  # moved to window-management
-  #- api.Window.screenLeft.relative-multi-screen
-  #- api.Window.screenTop.relative-multi-screen
-  #- api.Window.screenX.relative-multi-screen
-  #- api.Window.screenY.relative-multi-screen
-
-  # moved to scroll-elements
-  #- api.Window.scroll
-  #- api.Window.scroll.options_behavior_parameter
-  #- api.Window.scroll.options_left_parameter
-  #- api.Window.scroll.options_top_parameter
-  #- api.Window.scrollBy
-  #- api.Window.scrollBy.options_behavior_parameter
-  #- api.Window.scrollBy.options_left_parameter
-  #- api.Window.scrollBy.options_top_parameter
-  #- api.Window.scrollTo
-  #- api.Window.scrollTo.options_behavior_parameter
-  #- api.Window.scrollTo.options_left_parameter
-  #- api.Window.scrollTo.options_top_parameter
-  #- api.Window.scrollX
-  #- api.Window.scrollX.subpixel_precision
-  #- api.Window.scrollY
-  #- api.Window.scrollY.subpixel_precision
+# The following features in the spec are already part of web-features:
+# - DOM:
+#   - api.Document
+#   - api.Element
+# - document.caretPositionFromPoint():
+#   - api.Document.caretPositionFromPoint
+# - document.elementFromPoint() and document.elementsFromPoint():
+#   - api.Document.elementFromPoint
+#   - api.Document.elementsFromPoint
+# - scrollend:
+#   - api.Document.scrollend_event
+#   - api.Element.scrollend_event
+# - checkVisibility():
+#   - api.Element.checkVisibility
+#   - api.Element.checkVisibility.options_checkOpacity_parameter
+#   - api.Element.checkVisibility.options_checkVisibilityCSS_parameter
+#   - api.Element.checkVisibility.options_contentVisibilityAuto_parameter
+#   - api.Element.checkVisibility.options_opacityProperty_parameter
+#   - api.Element.checkVisibility.options_visibilityProperty_parameter
+# - scrollIntoView():
+#   - api.Element.scrollIntoView
+#   - api.Element.scrollIntoView.options_parameter
+# - Mouse events:
+#   - api.MouseEvent
+#   - api.MouseEvent.offsetX
+#   - api.MouseEvent.offsetY
+#   - api.MouseEvent.pageX
+#   - api.MouseEvent.pageY
+#   - api.MouseEvent.x
+#   - api.MouseEvent.y
+# - Selection:
+#   - api.Range
+# - Visual viewport API:
+#   - api.VisualViewport
+#   - api.VisualViewport.height
+#   - api.VisualViewport.offsetLeft
+#   - api.VisualViewport.offsetTop
+#   - api.VisualViewport.pageLeft
+#   - api.VisualViewport.pageTop
+#   - api.VisualViewport.scale
+#   - api.VisualViewport.width
+#   - api.Window.visualViewport
+# - Window:
+#   - api.Window.open
+#   - api.Window.open.features_parameter_popup
+#   - api.Window.open.once_per_event
+# - Window management:
+#   - api.Window.open.relative-multi-screen
