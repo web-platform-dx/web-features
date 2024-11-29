@@ -35,7 +35,8 @@ const handleUas = (uaObject) => {
 
   const existingData = JSON.parse(
     fs.readFileSync(
-      "../packages/baseline-browser-mapping/data/downstream-browsers.json",
+      process.cwd() +
+        "/packages/baseline-browser-mapping/data/downstream-browsers.json",
       { encoding: "utf8" },
     ),
   );
@@ -151,21 +152,23 @@ if (process.argv.length === 2) {
         if (willWrite) {
           fileOutput.lastUpdated = new Date();
           fs.writeFileSync(
-            "../packages/baseline-browser-mapping/data/downstream-browsers.json",
+            process.cwd() +
+              "/packages/baseline-browser-mapping/data/downstream-browsers.json",
             JSON.stringify(fileOutput, null, 2),
             { flags: "w" },
           );
 
           let packageJson = JSON.parse(
             fs.readFileSync(
-              "../packages/baseline-browser-mapping/package.json",
+              process.cwd() + "/packages/baseline-browser-mapping/package.json",
               { encoding: "utf8" },
             ),
           );
           let currentVersion = packageJson.version.split(".");
-          packageJson.version = `${currentVersion[0]}.${currentVersion[1]}.${parseInt(currentVersion[2]) + 1}`;
+          currentVersion[2]++;
+          packageJson.version = currentVersion.join(".");
           fs.writeFileSync(
-            "../packages/baseline-browser-mapping/package.json",
+            process.cwd() + "/packages/baseline-browser-mapping/package.json",
             JSON.stringify(packageJson, null, 2),
             { encoding: "utf8" },
           );
