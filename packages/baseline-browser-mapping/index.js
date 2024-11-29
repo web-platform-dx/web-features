@@ -1,3 +1,3 @@
-import baselineBrowserMapping from './scripts/baseline-browser-versions.js'
+import baselineBrowserMapping from "./scripts/baseline-browser-versions.js";
 
 export default baselineBrowserMapping;
