@@ -1,4 +1,4 @@
-draft_date: 2024-11-25
+draft_date: 2024-11-27
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -62,7 +62,6 @@ compat_features:
   - api.HTMLCanvasElement.toDataURL.type_parameter_jpeg
   - api.HTMLCanvasElement.toDataURL.type_parameter_png
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
-  - api.HTMLDListElement
   - api.HTMLElement.accessKey
   - api.HTMLElement.accessKeyLabel
   - api.HTMLElement.autocapitalize
@@ -90,7 +89,6 @@ compat_features:
   - api.HTMLFormControlsCollection
   - api.HTMLFormControlsCollection.namedItem
   - api.HTMLIFrameElement.featurePolicy
-  - api.HTMLIFrameElement.sandbox
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes
   - api.HTMLImageElement.sizes.auto
@@ -301,9 +299,6 @@ compat_features:
   - html.elements.area.ping
   - html.elements.button.command
   - html.elements.button.commandfor
-  - html.elements.dd
-  - html.elements.dl
-  - html.elements.dt
   - html.elements.form.autocomplete.new-password
   - html.elements.form.autocomplete.one-time-code
   - html.elements.form.autocomplete.webauthn
@@ -313,19 +308,8 @@ compat_features:
   - html.elements.iframe.allow.cross-origin-isolated
   - html.elements.iframe.allow.document-domain
   - html.elements.iframe.allow.wildcards
-  - html.elements.iframe.sandbox
-  - html.elements.iframe.sandbox.allow-downloads
-  - html.elements.iframe.sandbox.allow-forms
-  - html.elements.iframe.sandbox.allow-modals
   - html.elements.iframe.sandbox.allow-orientation-lock
   - html.elements.iframe.sandbox.allow-pointer-lock
-  - html.elements.iframe.sandbox.allow-popups
-  - html.elements.iframe.sandbox.allow-popups-to-escape-sandbox
-  - html.elements.iframe.sandbox.allow-same-origin
-  - html.elements.iframe.sandbox.allow-scripts
-  - html.elements.iframe.sandbox.allow-top-navigation
-  - html.elements.iframe.sandbox.allow-top-navigation-by-user-activation
-  - html.elements.iframe.sandbox.allow-top-navigation-to-custom-protocols
   - html.elements.img.sizes
   - html.elements.img.sizes.auto
   - html.elements.img.srcset
@@ -1124,6 +1108,11 @@ compat_features:
 #   - api.OffscreenCanvasRenderingContext2D.textBaseline
 #   - api.OffscreenCanvasRenderingContext2D.transform
 #   - api.OffscreenCanvasRenderingContext2D.translate
+# - Description list:
+#   - api.HTMLDListElement
+#   - html.elements.dd
+#   - html.elements.dl
+#   - html.elements.dt
 # - <data>:
 #   - api.HTMLDataElement
 #   - api.HTMLDataElement.value
@@ -1273,6 +1262,19 @@ compat_features:
 #   - api.HTMLImageElement.loading
 #   - html.elements.iframe.loading
 #   - html.elements.img.loading
+# - Sandboxed iframes:
+#   - api.HTMLIFrameElement.sandbox
+#   - html.elements.iframe.sandbox
+#   - html.elements.iframe.sandbox.allow-downloads
+#   - html.elements.iframe.sandbox.allow-forms
+#   - html.elements.iframe.sandbox.allow-modals
+#   - html.elements.iframe.sandbox.allow-popups
+#   - html.elements.iframe.sandbox.allow-popups-to-escape-sandbox
+#   - html.elements.iframe.sandbox.allow-same-origin
+#   - html.elements.iframe.sandbox.allow-scripts
+#   - html.elements.iframe.sandbox.allow-top-navigation
+#   - html.elements.iframe.sandbox.allow-top-navigation-by-user-activation
+#   - html.elements.iframe.sandbox.allow-top-navigation-to-custom-protocols
 # - srcdoc:
 #   - api.HTMLIFrameElement.srcdoc
 #   - html.elements.iframe.srcdoc

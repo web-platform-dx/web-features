@@ -97,6 +97,18 @@ compat_features:
   #   safari_ios: "11.3"
   - html.elements.iframe.sandbox.allow-top-navigation-by-user-activation
 
+  # baseline: low
+  # baseline_low_date: 2023-09-18
+  # support:
+  #   chrome: "83"
+  #   chrome_android: "83"
+  #   edge: "83"
+  #   firefox: "82"
+  #   firefox_android: "82"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - html.elements.iframe.sandbox.allow-downloads
+
   # baseline: false
   # support:
   #   firefox: "101"

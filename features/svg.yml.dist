@@ -1163,7 +1163,21 @@ compat_features:
   #   safari: "5"
   #   safari_ios: "4.2"
   - css.properties.text-rendering
+  - css.properties.text-rendering.auto
   - svg.global_attributes.text-rendering
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "13"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: "1"
+  #   firefox_android: "46"
+  #   safari: "6"
+  #   safari_ios: "6"
+  - css.properties.text-rendering.geometricPrecision
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -1792,13 +1806,6 @@ compat_features:
   #   firefox: "14"
   #   firefox_android: "14"
   - api.SVGScriptElement.crossOrigin
-
-  # baseline: false
-  # support:
-  #   firefox: "20"
-  #   firefox_android: "20"
-  - api.SVGAElement.download
-  - svg.elements.a.download
 
   # baseline: false
   # support:
