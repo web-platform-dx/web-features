@@ -3,7 +3,12 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "89"
+    chrome_android: "89"
+    edge: "89"
+    firefox: "102"
+    firefox_android: "102"
 compat_features:
   # baseline: high
   # baseline_low_date: 2019-01-29
@@ -246,6 +251,7 @@ compat_features:
   - api.TransformStream.transferable
   - api.WritableStream.transferable
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "89"
@@ -292,7 +298,6 @@ compat_features:
   #   firefox_android: "117"
   - api.ReadableStream.from_static
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.ReadableStreamBYOBReader.read.options_min_parameter

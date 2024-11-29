@@ -3,6 +3,11 @@ description: The streams API creates, composes, and consumes continuously genera
 spec: https://streams.spec.whatwg.org/
 caniuse: streams
 group: streams
+# Computing status to match Caniuse, which considers support beginning
+# at BYOB shipping.
+status:
+  compute_from:
+    - api.ReadableByteStreamController
 compat_features:
   - api.ReadableByteStreamController
   - api.ReadableByteStreamController.byobRequest
@@ -13,7 +18,6 @@ compat_features:
   - api.ReadableStream.from_static
   - api.ReadableStream.transferable
   - api.ReadableStream.values
-  # TODO: consider BYOB feature
   - api.ReadableStreamBYOBReader
   - api.ReadableStreamBYOBReader.ReadableStreamBYOBReader
   - api.ReadableStreamBYOBReader.cancel
