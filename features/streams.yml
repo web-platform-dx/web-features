@@ -7,7 +7,7 @@ group: streams
 # at BYOB shipping.
 status:
   compute_from:
-    - api.ReadableByteStreamController
+    - api.ReadableStreamBYOBReader
 compat_features:
   - api.ReadableByteStreamController
   - api.ReadableByteStreamController.byobRequest
