@@ -22,5 +22,11 @@ body:
     required: true
 - type: textarea
   attributes:
+    label: Documentation
+    description: Link to documentation and demos of the feature.
+  validations:
+    required: true
+- type: textarea
+  attributes:
     label: Browser support
     description: If you have a caniuse.com link or other information about browser support, please share here.

@@ -1,0 +1,6 @@
+name: Brotli compression
+description: Brotli is a lossless data compression algorithm. When used as a content encoding, it often provides better compression than gzip.
+spec: https://www.rfc-editor.org/rfc/rfc7932
+caniuse: brotli
+compat_features:
+  - http.headers.Content-Encoding.br

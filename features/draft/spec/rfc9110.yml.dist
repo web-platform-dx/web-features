@@ -19,46 +19,7 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "1"
   #   safari_ios: "1"
-  - http.headers.Accept
-  - http.headers.Accept-Encoding
-  - http.headers.Accept-Language
-  - http.headers.Accept-Ranges
-  - http.headers.Authorization
-  - http.headers.Connection
-  - http.headers.Content-Encoding
-  - http.headers.Content-Language
-  - http.headers.Content-Length
-  - http.headers.Content-Location
-  - http.headers.Content-Range
-  - http.headers.Content-Type
-  - http.headers.Date
-  - http.headers.ETag
-  - http.headers.From
-  - http.headers.Host
-  - http.headers.If-Match
-  - http.headers.If-Modified-Since
-  - http.headers.If-None-Match
-  - http.headers.If-Range
-  - http.headers.If-Unmodified-Since
-  - http.headers.Last-Modified
-  - http.headers.Location
-  - http.headers.Proxy-Authenticate
-  - http.headers.Range
-  - http.headers.Referer
-  - http.headers.Server
-  - http.headers.TE
-  - http.headers.Trailer
   - http.headers.Upgrade
-  - http.headers.User-Agent
-  - http.headers.Vary
-  - http.headers.Via
-  - http.headers.WWW-Authenticate
-  - http.methods.CONNECT
-  - http.methods.DELETE
-  - http.methods.HEAD
-  - http.methods.OPTIONS
-  - http.methods.POST
-  - http.methods.PUT
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -72,20 +33,6 @@ compat_features:
   #   safari: "7"
   #   safari_ios: "7"
   - http.status.308
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "79"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: ≤7
-  #   safari_ios: ≤7
-  - http.headers.Authorization.NTLM
-  - http.headers.WWW-Authenticate.NTLM
 
   # baseline: high
   # baseline_low_date: 2020-09-16

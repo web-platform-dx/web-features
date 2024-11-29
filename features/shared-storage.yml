@@ -8,8 +8,13 @@ compat_features:
   - api.SharedStorage
   - api.SharedStorage.append
   - api.SharedStorage.clear
+  - api.SharedStorage.createWorklet
   - api.SharedStorage.delete
+  - api.SharedStorage.get
+  - api.SharedStorage.run
+  - api.SharedStorage.selectURL
   - api.SharedStorage.set
+  - api.SharedStorage.worklet
   - api.SharedStorageOperation
   - api.SharedStorageRunOperation
   - api.SharedStorageRunOperation.run

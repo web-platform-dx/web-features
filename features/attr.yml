@@ -1,0 +1,19 @@
+name: attr()
+description: "The `attr()` CSS function, in the context of any property, returns the value of an attribute of an HTML element, with the option to return it as a specific type or unit. You can set a default value for missing or invalid attributes."
+spec: https://drafts.csswg.org/css-values-5/#attr-notation
+caniuse: css3-attr
+group: css
+compat_features:
+  # The css.types.attr key makes sense here but is already used in `contents-attr`
+  #- css.types.attr
+  - css.types.attr.fallback
+  - css.types.attr.type-or-unit
+  - css.types.attr.type-or-unit.angle
+  - css.types.attr.type-or-unit.color
+  - css.types.attr.type-or-unit.frequency
+  - css.types.attr.type-or-unit.integer
+  - css.types.attr.type-or-unit.length
+  - css.types.attr.type-or-unit.number
+  - css.types.attr.type-or-unit.percentage
+  - css.types.attr.type-or-unit.time
+  - css.types.attr.type-or-unit.url
