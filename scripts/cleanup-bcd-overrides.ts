@@ -65,7 +65,7 @@ function cleanup(sourcePath: string): void {
     .map((f) => `${f.id}`)
     .sort();
 
-  const data = source.contents.get("compat_features");
+  const data = (source.contents as any).get("compat_features");
 
   if (data) {
     const features = data.items.map((item) => item.value).sort();
@@ -83,7 +83,7 @@ function cleanup(sourcePath: string): void {
       }
 
       // Delete the key
-      source.contents.delete("compat_features");
+      (source.contents as any).delete("compat_features");
       fs.writeFileSync(sourcePath, source.toString({ lineWidth: 0 }));
       logger.info(`${id}: removed compat_features in favor of tag`);
     }
