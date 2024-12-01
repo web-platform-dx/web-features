@@ -70,19 +70,22 @@ function cleanup(sourcePath: string): void {
   if (data) {
     const features = data.items.map((item) => item.value).sort();
     if (isDeepStrictEqual(features, taggedCompatFeatures)) {
- const comments = data.commentBefore ? [data.commentBefore] : [];
-      data.items.reduce((acc, item )=>{
-        if(item.commentBefore) acc.push(item.commentBefore)
-        if(item.comment) acc.push(item.comment)
+      // Preserve comments around the compat_features key
+      const comments = data.commentBefore ? [data.commentBefore] : [];
+      data.items.reduce((acc, item) => {
+        if (item.commentBefore) acc.push(item.commentBefore);
+        if (item.comment) acc.push(item.comment);
         return acc;
-      }, comments)
-      if(data.comment) comments.push(data.comment);
+      }, comments);
+      if (data.comment) comments.push(data.comment);
       if (comments.length) {
-        source.comment = (source.comment || "") + comments.join('\n');
+        source.comment = (source.comment || "") + comments.join("\n");
       }
       if (comment) {
         source.comment = (source.comment || "") + comment;
       }
+
+      // Delete the key
       source.contents.delete("compat_features");
       fs.writeFileSync(sourcePath, source.toString({ lineWidth: 0 }));
       logger.info(`${id}: removed compat_features in favor of tag`);
