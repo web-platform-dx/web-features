@@ -81,9 +81,6 @@ function cleanup(sourcePath: string): void {
       if (comments.length) {
         source.comment = (source.comment || "") + comments.join("\n");
       }
-      if (comment) {
-        source.comment = (source.comment || "") + comment;
-      }
 
       // Delete the key
       source.contents.delete("compat_features");
