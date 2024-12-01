@@ -70,7 +70,16 @@ function cleanup(sourcePath: string): void {
   if (data) {
     const features = data.items.map((item) => item.value).sort();
     if (isDeepStrictEqual(features, taggedCompatFeatures)) {
-      const comment = data.comment || data.commentBefore;
+ const comments = data.commentBefore ? [data.commentBefore] : [];
+      data.items.reduce((acc, item )=>{
+        if(item.commentBefore) acc.push(item.commentBefore)
+        if(item.comment) acc.push(item.comment)
+        return acc;
+      }, comments)
+      if(data.comment) comments.push(data.comment);
+      if (comments.length) {
+        source.comment = (source.comment || "") + comments.join('\n');
+      }
       if (comment) {
         source.comment = (source.comment || "") + comment;
       }
