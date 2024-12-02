@@ -172,20 +172,6 @@ compat_features:
   #   edge: "12"
   #   firefox: "6"
   #   firefox_android: "6"
-  #   safari: "1.2"
-  #   safari_ios: "1"
-  - api.Element.keydown_event
-  - api.Element.keyup_event
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "6"
-  #   firefox_android: "6"
   #   safari: "1.3"
   #   safari_ios: "1"
   - api.Element.scroll_event
@@ -210,37 +196,11 @@ compat_features:
   #   chrome: "1"
   #   chrome_android: "18"
   #   edge: "12"
-  #   firefox: "6"
-  #   firefox_android: "6"
-  #   safari: "3.1"
-  #   safari_ios: "2"
-  - api.Element.blur_event
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
   #   firefox: "10"
   #   firefox_android: "10"
   #   safari: ≤4
   #   safari_ios: ≤3.2
   - html.elements.a.href.href_top
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "24"
-  #   firefox_android: "24"
-  #   safari: "3.1"
-  #   safari_ios: "2"
-  - api.Element.focus_event
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -888,19 +848,6 @@ compat_features:
   # baseline_low_date: 2017-03-27
   # baseline_high_date: 2019-09-27
   # support:
-  #   chrome: "15"
-  #   chrome_android: "18"
-  #   edge: "13"
-  #   firefox: "20"
-  #   firefox_android: "20"
-  #   safari: "10.1"
-  #   safari_ios: "10.3"
-  - api.HTMLAnchorElement.download
-
-  # baseline: high
-  # baseline_low_date: 2017-03-27
-  # baseline_high_date: 2019-09-27
-  # support:
   #   chrome: "38"
   #   chrome_android: "38"
   #   edge: "13"
@@ -910,32 +857,6 @@ compat_features:
   #   safari_ios: "10.3"
   - api.HTMLSourceElement.sizes
   - api.HTMLSourceElement.srcset
-
-  # baseline: high
-  # baseline_low_date: 2017-03-27
-  # baseline_high_date: 2019-09-27
-  # support:
-  #   chrome: "54"
-  #   chrome_android: "54"
-  #   edge: "12"
-  #   firefox: "20"
-  #   firefox_android: "20"
-  #   safari: "10.1"
-  #   safari_ios: "10.3"
-  - html.elements.area.download
-
-  # baseline: high
-  # baseline_low_date: 2017-03-27
-  # baseline_high_date: 2019-09-27
-  # support:
-  #   chrome: "54"
-  #   chrome_android: "54"
-  #   edge: "13"
-  #   firefox: "20"
-  #   firefox_android: "20"
-  #   safari: "10.1"
-  #   safari_ios: "10.3"
-  - api.HTMLAreaElement.download
 
   # baseline: high
   # baseline_low_date: 2017-11-28
@@ -1120,19 +1041,6 @@ compat_features:
   #   safari_ios: "12.2"
   - api.DedicatedWorkerGlobalScope.name
   - api.Worker.Worker.options_name_parameter
-
-  # baseline: high
-  # baseline_low_date: 2019-09-19
-  # baseline_high_date: 2022-03-19
-  # support:
-  #   chrome: "14"
-  #   chrome_android: "18"
-  #   edge: "18"
-  #   firefox: "20"
-  #   firefox_android: "20"
-  #   safari: "10.1"
-  #   safari_ios: "13"
-  - html.elements.a.download
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -1873,16 +1781,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "31"
-  #   chrome_android: "31"
-  #   edge: "12"
-  #   firefox: "17"
-  #   firefox_android: "17"
-  #   safari: "7"
-  - api.Element.wheel_event
-
-  # baseline: false
-  # support:
   #   chrome: "43"
   #   chrome_android: "43"
   #   edge: "79"
@@ -1909,26 +1807,6 @@ compat_features:
   #   firefox: "2"
   #   firefox_android: "4"
   - html.elements.link.rel.prefetch
-
-  # baseline: false
-  # support:
-  #   chrome: "12"
-  #   chrome_android: "18"
-  #   edge: "17"
-  #   safari: "5.1"
-  #   safari_ios: "5"
-  - api.HTMLAnchorElement.ping
-  - api.HTMLAreaElement.ping
-
-  # baseline: false
-  # support:
-  #   chrome: "12"
-  #   chrome_android: "18"
-  #   edge: "17"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - html.elements.a.ping
-  - html.elements.area.ping
 
   # baseline: false
   # support:
@@ -1974,15 +1852,6 @@ compat_features:
   #   safari: ≤13.1
   #   safari_ios: ≤13.4
   - html.global_attributes.contenteditable.plaintext-only
-
-  # baseline: false
-  # support:
-  #   chrome: "55"
-  #   chrome_android: "55"
-  #   edge: "79"
-  #   firefox: "53"
-  #   firefox_android: "53"
-  - api.Element.auxclick_event
 
   # baseline: false
   # support:
@@ -2362,14 +2231,6 @@ compat_features:
   #   edge: "90"
   - api.Window.originAgentCluster
   - http.headers.Origin-Agent-Cluster
-
-  # baseline: false
-  # support:
-  #   chrome: "92"
-  #   chrome_android: "92"
-  #   edge: "92"
-  - api.Element.auxclick_event.type_pointerevent
-  - api.Element.click_event.type_pointerevent
 
   # baseline: false
   # support:
