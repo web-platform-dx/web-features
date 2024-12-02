@@ -37,7 +37,7 @@ const compareVersions = (
     previousVersionString.split(".");
 
   if (!incomingVersionStringMajor || !previousVersionStringMajor) {
-    throw Error(
+    throw new Error(
       "One of these version strings is broken: " +
         incomingVersionString +
         " or " +
