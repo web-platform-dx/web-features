@@ -1,7 +1,12 @@
-draft_date: 2024-10-21
-name: File API
-description: TODO
+name: File
+description: The `File` API provides information about files and allows JavaScript in a web page to access their content.
 spec: https://w3c.github.io/FileAPI/
+caniuse: fileapi
+# Compute status to match Caniuse while also pointing at the main entry point.
+status:
+  compute_from:
+    - api.FileList
+    - api.File.File
 compat_features:
   - api.Blob
   - api.Blob.Blob
