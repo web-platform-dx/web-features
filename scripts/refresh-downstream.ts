@@ -80,7 +80,7 @@ const handleUas = (
   const existingData: DownstreamBrowsersData = JSON.parse(
     readFileSync(
       process.cwd() +
-        "/packages/baseline-browser-mapping/data/downstream-browsers.json",
+        "/packages/baseline-browser-mapping/src/data/downstream-browsers.json",
       { encoding: "utf8" },
     ),
   );
@@ -122,8 +122,10 @@ const handleUas = (
           browserVersion = browserVersionMatch[3].toString().trim();
           chromiumVersion = browserVersionMatch[2].toString().trim();
         } else {
-          browserVersion = browserVersionMatch[2].toString().trim();
-          chromiumVersion = browserVersionMatch[1].toString().trim();
+          if (browserVersionMatch[1] && browserVersionMatch[2]) {
+            browserVersion = browserVersionMatch[2].toString().trim();
+            chromiumVersion = browserVersionMatch[1].toString().trim();            
+          }
         }
 
         if (browserVersion != undefined) {
@@ -198,7 +200,7 @@ if (process.argv.length === 2) {
           fileOutput.lastUpdated = new Date().toISOString();
           writeFileSync(
             process.cwd() +
-              "/packages/baseline-browser-mapping/data/downstream-browsers.json",
+              "/packages/baseline-browser-mapping/src/data/downstream-browsers.json",
             JSON.stringify(fileOutput, null, 2),
             { flag: "w" },
           );

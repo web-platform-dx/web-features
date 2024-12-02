@@ -14,14 +14,22 @@ The browser versions in this module come from two different sources:
 
 MDN `browser-compat-data` is an authoritative source of information for the browsers it contains. The release dates for the Baseline core browser set and the mapping of downstream browsers to Chromium versions should be considered accurate.
 
-Browser mappings from useragents.io are provided on a best effort basis. They assume that browser vendors are accurately stating the Chromium version they have implemented.
-
-> **TODO** Add details on how downstream mappings were created and are updated once script and action are in place and tested in @tonypconway 's fork.
-
-Unfortunately, useragents.io does not have "first seen" dates prior to June 2020. However, these browsers' Baseline compatibility is determined by their Chromium version, so their release dates are more informative than critical.
-
 > **Note**
 > At present, the selection criteria for core browser versions compatible with a given feature set is: the final version of each browser prior to the cut off date for that feature set. In the case of Widely Available, this is 30 months in the past and in the case of Baseline years, this is the end of the year specified. In future, when the `web-features` repository is data complete, it should be possible to determine if earlier browser versions support the specified feature set.
+
+Browser mappings from useragents.io are provided on a best effort basis. They assume that browser vendors are accurately stating the Chromium version they have implemented. The initial set of version mappings was derived from a bulk export in November 2024. This version was iterated over with a Regex match looking for a major Chrome version and a corresponding version of the browser in question, e.g.:
+
+`Mozilla/5.0 (Linux; U; Android 10; en-US; STK-L21 Build/HUAWEISTK-L21) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.58 UCBrowser/13.8.2.1324 Mobile Safari/537.36`
+
+Shows UC Browse Mobile 13.8 implementing Chromium 100, and:
+
+`Mozilla/5.0 (Linux; arm_64; Android 11; Redmi Note 8 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.6613.123 YaBrowser/24.10.2.123.00 SA/3 Mobile Safari/537.36`
+
+Shows Yandex Browser Mobile 24.10 implementing Chromium 128. The Chromium version from this string is mapped to the main Chrome version from MDN `browser-compat-data`.
+
+> **Note** Where possible, approximate release dates have been included based on useragents.io "first seen" data. However, useragents.io does not have "first seen" dates prior to June 2020. However, these browsers' Baseline compatibility is determined by their Chromium version, so their release dates are more informative than critical.
+
+This data is updated on a daily basis using a [script](https://github.com/web-platform-dx/web-features/tree/main/scripts/refresh-downstream.ts) triggered by a GitHub [action](https://github.com/web-platform-dx/web-features/tree/main/.github/workflows/refresh_downstream.yml). Useragents.io provides a private API for this module which exposes the last 7 days of newly seen user agents for the currently tracked browsers. If a new major version of one of the tracked browsers is encountered with a Chromium version that meets or exceeds the previous latest version of that browser, it is added to the [src/data/downstream-browsers.json](src/data/downstream-browsers.json) file with the date it was first seen by useragents.io as its release date.
 
 ## Prerequisites
 
