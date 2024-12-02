@@ -1,0 +1,32 @@
+draft_date: 2024-12-02
+name: Web Serial API
+description: TODO
+spec: https://wicg.github.io/serial/
+compat_features:
+  - api.Serial.requestPort.allowedBluetoothServiceClassIds_option
+  - api.Serial.requestPort.filters_bluetoothServiceClassId
+  - api.SerialPort.connect_event.bluetooth_rfcomm
+  - api.SerialPort.disconnect_event.bluetooth_rfcomm
+  - api.SerialPort.getInfo.bluetoothServiceClassId
+
+# The following features in the spec are already part of web-features:
+# - Web serial:
+#   - api.Navigator.serial
+#   - api.Serial
+#   - api.Serial.getPorts
+#   - api.Serial.requestPort
+#   - api.SerialPort
+#   - api.SerialPort.close
+#   - api.SerialPort.connect_event
+#   - api.SerialPort.connected
+#   - api.SerialPort.disconnect_event
+#   - api.SerialPort.forget
+#   - api.SerialPort.getInfo
+#   - api.SerialPort.getSignals
+#   - api.SerialPort.open
+#   - api.SerialPort.readable
+#   - api.SerialPort.setSignals
+#   - api.SerialPort.writable
+#   - api.WorkerNavigator.serial
+#   - html.elements.iframe.allow.serial
+#   - http.headers.Permissions-Policy.serial

@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "88"
+    chrome_android: "88"
+    edge: "88"
 compat_features:
   # baseline: false
   # support:
@@ -22,15 +25,10 @@ compat_features:
   #   safari: "16.4"
   - api.Element.requestFullscreen.options_navigationUI_parameter
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "88"
   #   chrome_android: "88"
   #   edge: "88"
   - http.headers.Permissions-Policy.fullscreen
-
-  # baseline: false
-  # support:
-  #   firefox: "64"
-  #   firefox_android: "64"
-  - css.selectors.fullscreen.all_elements

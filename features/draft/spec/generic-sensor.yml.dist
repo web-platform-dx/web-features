@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "88"
+    chrome_android: "88"
+    edge: "88"
 compat_features:
   # baseline: false
   # support:
@@ -31,15 +34,10 @@ compat_features:
   - api.SensorErrorEvent.SensorErrorEvent
   - api.SensorErrorEvent.error
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "88"
   #   chrome_android: "88"
   #   edge: "88"
   - http.headers.Permissions-Policy.magnetometer
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - html.elements.iframe.allow.ambient-light-sensor
-  - http.headers.Permissions-Policy.ambient-light-sensor
