@@ -170,7 +170,7 @@ const getDownstreamBrowsers = (
           return false;
         }
         if (
-          compareVersions(versionData.engine_version, minimumChromeVersion) == 0
+          parseInt(versionData.engine_version) < parseInt(minimumChromeVersion)
         ) {
           return false;
         }
