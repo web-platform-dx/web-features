@@ -44,20 +44,14 @@ Updating this module and `@mdn/browser-compat-data` regularly is recommended to 
 
 ## Usage
 
-### Import the module
-
-First, import the module:
-
-```javascript
-import baselineBrowserMapping from "baseline-browser-mapping";
-```
-
 ### Get Baseline Widely Available browser versions
 
 To get the current list of minimum browser versions compatible with Baseline Widely Available features from the core browser set, call the `getMinimumWidelyAvailable` method:
 
 ```javascript
-baselineBrowserMapping.getMinimumWidelyAvailable();
+import { getMinimumWidelyAvailable } from "baseline-browser-mapping";
+
+getMinimumWidelyAvailable();
 ```
 
 Executed on 29th November 2024, the above code returns the final version of each core browser released on or before 24th May 2022 i.e. 30 months before the date of execution:
@@ -116,10 +110,12 @@ Executed on 29th November 2024, the above code returns the final version of each
 ];
 ```
 
-If you need a list of _all_ compatible versions, you can call:
+If you need a list of _all_ compatible versions, you can import and call:
 
 ```javascript
-baselineBrowserMapping.getAllWidelyAvailable();
+import { getMinimumWidelyAvailable } from "baseline-browser-mapping";
+
+getAllWidelyAvailable();
 ```
 
 ### Get Baseline Widely Available compatible browser versions as of a specific date
@@ -127,17 +123,37 @@ baselineBrowserMapping.getAllWidelyAvailable();
 To get the minimum browser versions that supported Baseline Widely Available on a specific date, call `getMinimumWidelyAvailableOnDate` or `geAllWidelyAvailableOnDate`, passing the desired date in the format `YYYY-MM-DD`:
 
 ```javascript
-baselineBrowserMapping.getMinimumWidelyAvailableOnDate("2021-03-19");
+import { getMinimumWidelyAvailableOnDate } from "baseline-browser-mapping";
+
+getMinimumWidelyAvailableOnDate("2021-03-19");
 ```
 
 This would return the final version of each core browser released on or before 19th September 2018 i.e. 30 months before 19th March 2021.
+
+If you need a list of _all_ compatible versions, you can import and call:
+
+```javascript
+import { getAllWidelyAvailableOnDate } from "baseline-browser-mapping";
+
+getAllWidelyAvailableOnDate("2021-03-19");
+```
 
 ### Get Baseline year compatible browser versions
 
 To get the list of browser versions that support a particular year's Baseline feature set, call `getMinimumByYear` or `getAllByYear` passing the desired year in the format YYYY:
 
 ```javascript
-baselineBrowserMapping.getMinimumByYear("2020");
+import { getMinimumByYear } from "baseline-browser-mapping";
+
+getMinimumByYear("2020");
+```
+
+If you need a list of _all_ compatible versions, you can import and call:
+
+```javascript
+import { getAllByYear } from "baseline-browser-mapping";
+
+getAllByYear("2020");
 ```
 
 ### Including downstreambrowsers
@@ -145,11 +161,11 @@ baselineBrowserMapping.getMinimumByYear("2020");
 Each of the methods above can take an optional final boolean parameter `includeDownstream`. The default for this in all functions is `false`. To include downstream browsers, pass `true` as the final parameter when you call the function:
 
 ```javascript
-baselineBrowserMapping.getAllWidelyAvailable(true)
+getAllWidelyAvailable(true)
 
-baselineBrowserMapping.getMinimumWidelyAvailableOnDate('2021-03-19' true)
+getMinimumWidelyAvailableOnDate('2021-03-19' true)
 
-baselineBrowserMapping.getMinimumByYear('2020', true)
+getMinimumByYear('2020', true)
 ```
 
 Passing `true` will include the appropriate versions of the browsers listed as "Core" = `false` below.
@@ -170,11 +186,11 @@ Passing `true` will include the appropriate versions of the browsers listed as "
 | Samsung Internet      | `samsunginternet_android` | `false` | MDN `browser-compat-data` |
 | WebView Android       | `webview_android`         | `false` | MDN `browser-compat-data` |
 | QQ Browser Mobile     | `qq_android`              | `false` | useragents.io             |
-| UC Browser Mobile     | `UC_android`              | `false` | useragents.io             |
+| UC Browser Mobile     | `uc_android`              | `false` | useragents.io             |
 | Yandex Browser Mobile | `ya_android`              | `false` | useragents.io             |
 
 > **Note**
-> All the non-core browsers currently included implement Chromium. Their inclusion in any of the above functions is based on the Baseline feature set supported by the Chromium version they implement, not their release date.
+> All the non-core browsers currently included implement Chromium. Their inclusion in any of the above methods is based on the Baseline feature set supported by the Chromium version they implement, not their release date.
 
 ## Helping out and getting help
 
