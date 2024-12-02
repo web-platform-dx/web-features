@@ -3,12 +3,12 @@
 
 status:
   baseline: high
-  baseline_low_date: ≤2018-10-02
-  baseline_high_date: ≤2021-04-02
+  baseline_low_date: 2017-03-27
+  baseline_high_date: 2019-09-27
   support:
     chrome: "38"
     chrome_android: "38"
-    edge: ≤18
+    edge: "13"
     firefox: "38"
     firefox_android: "38"
     safari: "10.1"
@@ -26,6 +26,21 @@ compat_features:
   #   safari: "8"
   #   safari_ios: "8"
   - api.HTMLImageElement.srcset
+  - html.elements.img.srcset
+
+  # baseline: high
+  # baseline_low_date: 2016-03-21
+  # baseline_high_date: 2018-09-21
+  # support:
+  #   chrome: "34"
+  #   chrome_android: "34"
+  #   edge: "13"
+  #   firefox: "38"
+  #   firefox_android: "38"
+  #   safari: "9.1"
+  #   safari_ios: "9.3"
+  - html.elements.source.sizes
+  - html.elements.source.srcset
 
   # baseline: high
   # baseline_low_date: 2016-03-21
@@ -53,6 +68,7 @@ compat_features:
   #   safari_ios: "9.3"
   - api.HTMLImageElement.sizes
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2017-03-27
   # baseline_high_date: 2019-09-27
@@ -66,30 +82,3 @@ compat_features:
   #   safari_ios: "10.3"
   - api.HTMLSourceElement.sizes
   - api.HTMLSourceElement.srcset
-
-  # baseline: high
-  # baseline_low_date: ≤2018-10-02
-  # baseline_high_date: ≤2021-04-02
-  # support:
-  #   chrome: "34"
-  #   chrome_android: "34"
-  #   edge: ≤18
-  #   firefox: "38"
-  #   firefox_android: "38"
-  #   safari: "8"
-  #   safari_ios: "8"
-  - html.elements.img.srcset
-
-  # baseline: high
-  # baseline_low_date: ≤2018-10-02
-  # baseline_high_date: ≤2021-04-02
-  # support:
-  #   chrome: "34"
-  #   chrome_android: "34"
-  #   edge: ≤18
-  #   firefox: "38"
-  #   firefox_android: "38"
-  #   safari: "9.1"
-  #   safari_ios: "9.3"
-  - html.elements.source.sizes
-  - html.elements.source.srcset
