@@ -1,18 +1,40 @@
 import https from "node:https";
-import fs from "node:fs";
+import {writeFileSync, readFileSync} from "node:fs";
 
-const compareVersions = (incomingVersionString, previousVersionString) => {
-  let [incomingVersionStringMajor, incomingVersionStringMinor] =
-    incomingVersionString.split(".");
-  let [previousVersionStringMajor, previousVersionStringMinor] =
-    previousVersionString.split(".");
+interface BrowserRelease {
+  engine: string;
+  engine_version: string;
+  status: string;
+  release_date: string;
+}
+
+interface BrowserData {
+  name: string;
+  releases: { [version: string]: BrowserRelease };
+}
+
+interface DownstreamBrowsersData {
+  browsers: { [browserName: string]: BrowserData };
+  lastUpdated: string;
+}
+
+interface UserAgent {
+  ua: string;
+  firstSeen: string;
+}
+
+interface UserAgentData {
+  uas: UserAgent[];
+}
+
+const compareVersions = (incomingVersionString: string, previousVersionString: string): boolean => {
+  let [incomingVersionStringMajor, incomingVersionStringMinor] = incomingVersionString.split(".");
+  let [previousVersionStringMajor, previousVersionStringMinor] = previousVersionString.split(".");
 
   if (incomingVersionStringMinor) {
     if (
-      parseInt(incomingVersionStringMajor) >=
-        parseInt(previousVersionStringMajor) &&
-      parseInt(incomingVersionStringMinor) >
-        parseInt(previousVersionStringMinor)
+      parseInt(incomingVersionStringMajor) >= parseInt(previousVersionStringMajor) &&
+      parseInt(incomingVersionStringMinor) > parseInt(previousVersionStringMinor)
     ) {
       return true;
     }
@@ -24,51 +46,39 @@ const compareVersions = (incomingVersionString, previousVersionString) => {
   return false;
 };
 
-const findLatestVersion = (releases) => {
+const findLatestVersion = (releases: { [version: string]: BrowserRelease }): [string, BrowserRelease] | undefined => {
   return Object.entries(releases)
-    .sort((a, b) => compareVersions(a[0], b[0]))
+    .sort((a, b) => compareVersions(a[0], b[0]) ? 1 : -1)
     .pop();
 };
 
-const handleUas = (uaObject) => {
+const handleUas = (uaObject: UserAgentData): [boolean, DownstreamBrowsersData] => {
+
   let somethingChanged = false;
 
-  const existingData = JSON.parse(
-    fs.readFileSync(
-      process.cwd() +
-        "/packages/baseline-browser-mapping/data/downstream-browsers.json",
-      { encoding: "utf8" },
-    ),
+  const existingData: DownstreamBrowsersData = JSON.parse(
+    readFileSync(
+      process.cwd() + "/packages/baseline-browser-mapping/data/downstream-browsers.json",
+      { encoding: "utf8" }
+    )
   );
-
-  const versionMappings = new Object();
 
   const browsers = [
     {
       name: "qq_android",
-      latestExistingVersion: findLatestVersion(
-        existingData.browsers["uc_android"].releases,
-      ),
-      regex: new RegExp("chrome|Chrome\/(\\d+).*MQQBrowser\/(\\d+\\.\\d+)"),
+      latestExistingVersion: findLatestVersion(existingData.browsers["uc_android"].releases),
+      regex: new RegExp("chrome|Chrome\/(\\d+).*MQQBrowser\/(\\d+\\.\\d+)")
     },
     {
       name: "uc_android",
-      latestExistingVersion: findLatestVersion(
-        existingData.browsers["uc_android"].releases,
-      ),
-      regex: new RegExp("chrome|Chrome\/(\\d+).*UCBrowser\/(\\d+\\.\\d+)"),
+      latestExistingVersion: findLatestVersion(existingData.browsers["uc_android"].releases),
+      regex: new RegExp("chrome|Chrome\/(\\d+).*UCBrowser\/(\\d+\\.\\d+)")
     },
     {
       name: "ya_android",
-      latestExistingVersion: findLatestVersion(
-        existingData.browsers["ya_android"].releases,
-      ),
-      regex: new RegExp(
-        "android|Android.*chrome|Chrome\/(\\d+).*YaBrowser\/(\\d+\\.\\d+)",
-      ),
-    },
-    /* More work to be done building out mappings for other browsers */
-    // { name: "CocCocBrowser", regex: new RegExp("coc_coc_browser\/(\\d+).*Chrome\/(\\d+).") }
+      latestExistingVersion: findLatestVersion(existingData.browsers["ya_android"].releases),
+      regex: new RegExp("android|Android.*chrome|Chrome\/(\\d+).*YaBrowser\/(\\d+\\.\\d+)")
+    }
   ];
 
   uaObject.uas.reverse().forEach((ua) => {
@@ -88,12 +98,9 @@ const handleUas = (uaObject) => {
 
         if (browserVersion != undefined) {
           if (
-            compareVersions(browserVersion, browser.latestExistingVersion[0]) &&
-            parseFloat(chromiumVersion) >=
-              parseFloat(browser.latestExistingVersion[1].engine_version) &&
-            !Object.keys(existingData.browsers[browserName].releases).includes(
-              browserVersion.toString(),
-            )
+            compareVersions(browserVersion, browser.latestExistingVersion?.[0] ?? "") &&
+            parseFloat(chromiumVersion) >= parseFloat(browser.latestExistingVersion?.[1].engine_version ?? "") &&
+            !Object.keys(existingData.browsers[browserName].releases).includes(browserVersion.toString())
           ) {
             console.log(
               "adding ",
@@ -103,13 +110,13 @@ const handleUas = (uaObject) => {
               " with Chromium version ",
               chromiumVersion,
               " and release date ",
-              ua.firstSeen,
+              ua.firstSeen
             );
             existingData.browsers[browserName].releases[browserVersion] = {
               engine: "Blink",
               engine_version: chromiumVersion,
               status: "unknown",
-              release_date: ua.firstSeen,
+              release_date: ua.firstSeen
             };
             somethingChanged = true;
           }
@@ -132,15 +139,15 @@ if (process.argv.length === 2) {
     method: "GET",
     headers: {
       "x-api-key": `Bearer ${process.argv[2]}`,
-      "Content-Type": " application/json",
-    },
+      "Content-Type": " application/json"
+    }
   };
 
-  let latestUas = new String();
+  let latestUas: UserAgentData;
 
   https
     .request(options, (res) => {
-      let output = [];
+      let output: Buffer[] = [];
       console.log("status code: ", res.statusCode);
       res.on("data", (d) => {
         output.push(d);
@@ -150,27 +157,26 @@ if (process.argv.length === 2) {
         latestUas = JSON.parse(Buffer.concat(output).toString());
         let [willWrite, fileOutput] = handleUas(latestUas);
         if (willWrite) {
-          fileOutput.lastUpdated = new Date();
-          fs.writeFileSync(
-            process.cwd() +
-              "/packages/baseline-browser-mapping/data/downstream-browsers.json",
+          fileOutput.lastUpdated = new Date().toISOString();
+          writeFileSync(
+            process.cwd() + "/packages/baseline-browser-mapping/data/downstream-browsers.json",
             JSON.stringify(fileOutput, null, 2),
-            { flags: "w" },
+            { flag: "w" }
           );
 
           let packageJson = JSON.parse(
-            fs.readFileSync(
+            readFileSync(
               process.cwd() + "/packages/baseline-browser-mapping/package.json",
-              { encoding: "utf8" },
-            ),
+              { encoding: "utf8" }
+            )
           );
           let currentVersion = packageJson.version.split(".");
           currentVersion[2]++;
           packageJson.version = currentVersion.join(".");
-          fs.writeFileSync(
+          writeFileSync(
             process.cwd() + "/packages/baseline-browser-mapping/package.json",
             JSON.stringify(packageJson, null, 2),
-            { encoding: "utf8" },
+            { encoding: "utf8" }
           );
         } else {
           console.log("no updates at this time");
