@@ -39,10 +39,10 @@ const compareVersions = (
   if (!incomingVersionStringMajor || !previousVersionStringMajor) {
     throw Error(
       "One of these version strings is broken: " +
-      incomingVersionString +
-      " or " +
-      previousVersionString +
-      ""
+        incomingVersionString +
+        " or " +
+        previousVersionString +
+        "",
     );
   }
 
