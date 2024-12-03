@@ -1,0 +1,61 @@
+name: Refresh downstream-browsers.json
+
+on:
+  #   schedule:
+  #     - cron: '0 14 * * *'
+  workflow_dispatch:
+
+env:
+  package_dir: "packages/baseline-browser-mapping"
+
+jobs:
+  refresh-downstream-browsers:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+
+      - name: Run refresh-downstream script
+        run: |
+          npm run refresh-downstream ${{secrets.USERAGENTSIOKEY}}
+
+      - name: Prepare for push and publish
+        run: |
+          cd packages/baseline-browser-mapping
+          npm run prepare
+
+      - name: Commit and push changes
+        run: |
+          #!/bin/bash
+
+          if [[ -n "$(git diff)" ]]; then
+            echo "changes have occurred, committing to main"
+            git config --global user.name 'github-actions[bot]'
+            git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+            git add .
+            git commit -m 'Updating downstream-browsers'
+            git push origin main
+          else
+            echo "no changes made, doing nothing"
+          fi
+
+  publish:
+    if: github.repository == 'web-platform-dx/web-features'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+          registry-url: "https://registry.npmjs.org"
+      - run: npm publish
+        working-directory: ${{ env.package_dir }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
