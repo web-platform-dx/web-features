@@ -1,8 +1,8 @@
 name: Refresh downstream-browsers.json
 
 on:
-  #   schedule:
-  #     - cron: '0 14 * * *'
+  schedule:
+    - cron: '0 14 * * *'
   workflow_dispatch:
 
 env:
