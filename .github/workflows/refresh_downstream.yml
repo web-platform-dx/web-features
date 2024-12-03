@@ -23,6 +23,7 @@ jobs:
 
       - name: Run refresh-downstream script
         run: |
+          npm i
           npm run refresh-downstream ${{secrets.USERAGENTSIOKEY}}
 
       - name: Prepare for push and publish
