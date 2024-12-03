@@ -1,7 +1,12 @@
-draft_date: 2024-10-21
-name: Encoding Standard
-description: TODO
+name: Text encoding and decoding
+description: " The `TextEncoder` API generates a byte stream with UTF-8 encoding from a stream of code points, and `TextDecoder` does the reverse."
 spec: https://encoding.spec.whatwg.org/
+caniuse: textencoder
+# Status generated to match Caniuse.
+status:
+  compute_from:
+    - api.TextDecoder
+    - api.TextEncoder
 compat_features:
   - api.TextDecoder
   - api.TextDecoder.TextDecoder
