@@ -126,7 +126,7 @@ describe("features", function () {
       it("returns mixed results for (un)prefixed features", function () {
         const fx = browser("firefox");
         const actual = feature(
-          "css.types.image.gradient.repeating-linear-gradient",
+          "css.types.gradient.repeating-linear-gradient",
         ).supportedInDetails(fx.version("100"));
         assert.equal(actual.length, 3); // unprefixed, -moz-, and -webkit-
         assert(actual.some((s) => s.supported && "qualifications" in s));

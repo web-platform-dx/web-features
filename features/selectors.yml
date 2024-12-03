@@ -1,0 +1,17 @@
+name: Selectors (core)
+description: CSS selectors match elements based on their type, attributes, and relationship to other elements. They define the specific elements to which a block of styles will be applied. This feature represents the oldest selectors of CSS.
+spec: https://drafts.csswg.org/selectors-4/
+group: selectors
+compat_features:
+  - css.selectors.child
+  - css.selectors.class
+  - css.selectors.descendant
+  - css.selectors.id
+  - css.selectors.list
+  - css.selectors.next-sibling
+  - css.selectors.type
+  - css.selectors.universal
+  - css.selectors.type.namespaces
+  - css.selectors.universal.namespaces
+  - css.selectors.attribute
+  - css.selectors.subsequent-sibling
