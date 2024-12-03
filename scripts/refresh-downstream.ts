@@ -124,7 +124,7 @@ const handleUas = (
         } else {
           if (browserVersionMatch[1] && browserVersionMatch[2]) {
             browserVersion = browserVersionMatch[2].toString().trim();
-            chromiumVersion = browserVersionMatch[1].toString().trim();            
+            chromiumVersion = browserVersionMatch[1].toString().trim();
           }
         }
 
