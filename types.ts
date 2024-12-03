@@ -45,6 +45,8 @@ export interface FeatureData {
     status: SupportStatus;
     /** Sources of support data for this feature */
     compat_features?: string[];
+    /** Whether developers are formally discouraged from using this feature */
+    discouraged?: Discouraged;
 }
 
 type BrowserIdentifier = "chrome" | "chrome_android" | "edge" | "firefox" | "firefox_android" | "safari" | "safari_ios";
@@ -69,10 +71,20 @@ interface SupportStatus extends Status {
     by_compat_key?: Record<string, Status>
 }
 
-/** Specification URL
+interface Discouraged {
+    /** Links to a formal discouragement notice, such as specification text, intent-to-unship, etc. */
+    according_to: uri[];
+    /** IDs for features that substitute some or all of this feature's utility */
+    alternatives?: (keyof WebFeaturesData["features"])[];
+}
+
+/** URI
  * @format uri
-*/
-type specification_url = string;
+ */
+type uri = string;
+
+/** Specification URL */
+type specification_url = uri;
 
 export interface GroupData {
     /** Short name */

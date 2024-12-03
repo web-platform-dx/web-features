@@ -233,7 +233,7 @@ function toDist(sourcePath: string): YAML.Document {
     checkAncestors: true,
   });
 
-  if (computedStatus.discouraged) {
+  if (computedStatus.discouraged && !source.discouraged) {
     const isDraft: boolean = source.draft_date ?? false;
 
     if (!source.draft_date) {
