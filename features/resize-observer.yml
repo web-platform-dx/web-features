@@ -1,6 +1,8 @@
-name: Resize Observer
-description: TODO
+name: Resize observer
+description: The `ResizeObserver` API is for observing and reacting to changes in the size of DOM elements.
 spec: https://drafts.csswg.org/resize-observer-1/
+caniuse: resizeobserver
+# Computed to match Caniuse.
 status:
   compute_from: api.ResizeObserver
 compat_features:
