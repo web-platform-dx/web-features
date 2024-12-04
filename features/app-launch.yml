@@ -1,6 +1,7 @@
-name: Web App Launch Handler API
-description: TODO
+name: Launch handler
+description: The Launch Handler API allows developers to control how a progressive web app (PWA) is launched, for example if it uses an existing window or creates a new one, and how the app's target launch URL is handled.
 spec: https://wicg.github.io/web-app-launch/
+group: progressive-web-app
 compat_features:
   - api.LaunchParams
   - api.LaunchParams.targetURL
