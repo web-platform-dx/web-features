@@ -1,0 +1,10 @@
+name: contain
+description: "The `contain` CSS property sets limits to the scope of styles, layout, and paint rendering for speed and efficiency. The `none` keyword value disables containment, `strict` is equivalent to `contain: size layout style paint`, and `content` is equivalent to `contain: layout style paint`."
+spec: https://drafts.csswg.org/css-contain-2/#contain-property
+group: containment
+caniuse: css-containment
+compat_features:
+  - css.properties.contain
+  - css.properties.contain.content
+  - css.properties.contain.none
+  - css.properties.contain.strict
