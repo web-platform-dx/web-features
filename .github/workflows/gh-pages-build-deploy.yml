@@ -33,7 +33,15 @@ jobs:
   # Build the site
   build:
     runs-on: ubuntu-latest
+    outputs:
+      html_url: ${{ steps.pages.outputs.html_url }}
     steps:
+      - name: Get GitHub Pages URL
+        id: pages
+        run: echo "html_url=$(gh api '/repos/{owner}/{repo}/pages' | jq '.html_url // false')" >> "$GITHUB_OUTPUT"
+        env:
+          GH_REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ github.token }}
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Node
@@ -48,11 +56,13 @@ jobs:
         run: npm run build:prod
         working-directory: gh-pages/
       - name: Upload artifact
+        if: ${{ fromJSON(steps.pages.outputs.html_url) }} # Skip if GitHub Pages is not turned on for the current repository
         uses: actions/upload-pages-artifact@v3
 
 
   # Deployment job
   deploy:
+    if: ${{ fromJSON(needs.build.outputs.html_url) }} # Skip if GitHub Pages is not turned on for the current repository
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
