@@ -9,15 +9,12 @@ env:
   package_dir: "packages/baseline-browser-mapping"
 
 jobs:
-  refresh-downstream-browsers:
+  refresh-downstream-browsers-json:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
           node-version: "16"
 
@@ -26,12 +23,34 @@ jobs:
           npm ci
           npm run refresh-downstream ${{secrets.USERAGENTSIOKEY}}
 
-      - name: Prepare for push and publish
+  publish:
+    if: ${{ (github.repository == 'web-platform-dx/web-features') ||  (github.repository == 'tonypconway/web-features') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+          registry-url: "https://registry.npmjs.org"
+      
+      - name: Publish to NPM if changed
         run: |
-          cd packages/baseline-browser-mapping
-          npm run prepare
+          npm ci
+          npm prepare
+          if [[ -n "$(git diff)" ]]; then
+            npm publish
+          else
+            echo "no changes made, don't publish"
+          fi
+        working-directory: ${{ env.package_dir }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Commit and push changes
+  push-to-main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Commit and push changes if available
         run: |
           #!/bin/bash
 
@@ -45,18 +64,3 @@ jobs:
           else
             echo "no changes made, doing nothing"
           fi
-
-  publish:
-    if: ${{ (github.repository == 'web-platform-dx/web-features') ||  (github.repository == 'tonypconway/web-features') }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: .node-version
-          cache: npm
-          registry-url: "https://registry.npmjs.org"
-      - run: npm publish
-        working-directory: ${{ env.package_dir }}
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
