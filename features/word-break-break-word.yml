@@ -1,0 +1,11 @@
+name: "`word-break: break-word`"
+description: "TODO Superceded by `overflow-wrap: anywhere`"
+spec: https://drafts.csswg.org/css-text/#word-break-property
+group: css
+discouraged:
+  according_to:
+    - https://drafts.csswg.org/css-text/#valdef-word-break-break-word
+  alternatives:
+    - overflow-wrap
+compat_features:
+  - css.properties.word-break.break-word
