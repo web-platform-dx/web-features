@@ -1,25 +1,9 @@
-draft_date: 2024-11-21
+draft_date: 2024-12-02
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
   - api.BeforeUnloadEvent.user_interaction
-  - api.CanvasPattern.setTransform.dommatrix
-  - api.CanvasRenderingContext2D.clip.path_parameter
-  - api.CanvasRenderingContext2D.drawFocusIfNeeded.path_parameter
-  - api.CanvasRenderingContext2D.drawImage.ImageBitmap_source_image
-  - api.CanvasRenderingContext2D.fill.path_parameter
-  - api.CanvasRenderingContext2D.isPointInPath.path_parameter
-  - api.CanvasRenderingContext2D.isPointInStroke.path_parameter
-  - api.CanvasRenderingContext2D.setTransform.matrix_parameter
-  - api.CanvasRenderingContext2D.stroke.path_parameter
-  - api.CustomElementRegistry.define.disabledFeatures_static_property
-  - api.CustomElementRegistry.get
-  - api.CustomElementRegistry.getName
-  - api.CustomElementRegistry.upgrade
-  - api.CustomElementRegistry.whenDefined
-  - api.DOMParser.parseFromString.html
-  - api.DOMParser.parseFromString.xml
   - api.DedicatedWorkerGlobalScope
   - api.DedicatedWorkerGlobalScope.close
   - api.DedicatedWorkerGlobalScope.name
@@ -28,17 +12,9 @@ compat_features:
   - api.Document.scroll_event
   - api.Document.write
   - api.Document.writeln
-  - api.Element.auxclick_event
-  - api.Element.auxclick_event.type_pointerevent
   - api.Element.beforematch_event
-  - api.Element.blur_event
-  - api.Element.click_event.type_pointerevent
-  - api.Element.focus_event
   - api.Element.getHTML
-  - api.Element.keydown_event
-  - api.Element.keyup_event
   - api.Element.scroll_event
-  - api.Element.wheel_event
   - api.ElementInternals.shadowRoot
   - api.ErrorEvent
   - api.ErrorEvent.ErrorEvent
@@ -57,11 +33,7 @@ compat_features:
   - api.HTMLAllCollection.item
   - api.HTMLAllCollection.length
   - api.HTMLAllCollection.namedItem
-  - api.HTMLAnchorElement.download
   - api.HTMLAnchorElement.hrefTranslate
-  - api.HTMLAnchorElement.ping
-  - api.HTMLAreaElement.download
-  - api.HTMLAreaElement.ping
   - api.HTMLBaseElement.href.forbid_data_javascript_urls
   - api.HTMLBaseElement.href.forbid_special_characters
   - api.HTMLButtonElement.command
@@ -78,7 +50,6 @@ compat_features:
   - api.HTMLCanvasElement.toDataURL.type_parameter_jpeg
   - api.HTMLCanvasElement.toDataURL.type_parameter_png
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
-  - api.HTMLDListElement
   - api.HTMLElement.accessKey
   - api.HTMLElement.accessKeyLabel
   - api.HTMLElement.autocapitalize
@@ -106,7 +77,6 @@ compat_features:
   - api.HTMLFormControlsCollection
   - api.HTMLFormControlsCollection.namedItem
   - api.HTMLIFrameElement.featurePolicy
-  - api.HTMLIFrameElement.sandbox
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes
   - api.HTMLImageElement.sizes.auto
@@ -306,20 +276,13 @@ compat_features:
   - api.setInterval.worker_support
   - api.setTimeout.supports_parameters_for_callback
   - api.setTimeout.worker_support
-  - html.elements.a.download
   - html.elements.a.href.href_sms
   - html.elements.a.href.href_top
   - html.elements.a.hreftranslate
   - html.elements.a.implicit_noopener
-  - html.elements.a.ping
   - html.elements.a.text_fragments
-  - html.elements.area.download
-  - html.elements.area.ping
   - html.elements.button.command
   - html.elements.button.commandfor
-  - html.elements.dd
-  - html.elements.dl
-  - html.elements.dt
   - html.elements.form.autocomplete.new-password
   - html.elements.form.autocomplete.one-time-code
   - html.elements.form.autocomplete.webauthn
@@ -329,19 +292,8 @@ compat_features:
   - html.elements.iframe.allow.cross-origin-isolated
   - html.elements.iframe.allow.document-domain
   - html.elements.iframe.allow.wildcards
-  - html.elements.iframe.sandbox
-  - html.elements.iframe.sandbox.allow-downloads
-  - html.elements.iframe.sandbox.allow-forms
-  - html.elements.iframe.sandbox.allow-modals
   - html.elements.iframe.sandbox.allow-orientation-lock
   - html.elements.iframe.sandbox.allow-pointer-lock
-  - html.elements.iframe.sandbox.allow-popups
-  - html.elements.iframe.sandbox.allow-popups-to-escape-sandbox
-  - html.elements.iframe.sandbox.allow-same-origin
-  - html.elements.iframe.sandbox.allow-scripts
-  - html.elements.iframe.sandbox.allow-top-navigation
-  - html.elements.iframe.sandbox.allow-top-navigation-by-user-activation
-  - html.elements.iframe.sandbox.allow-top-navigation-to-custom-protocols
   - html.elements.img.sizes
   - html.elements.img.sizes.auto
   - html.elements.img.srcset
@@ -350,7 +302,6 @@ compat_features:
   - html.elements.link.rel.dns-prefetch
   - html.elements.link.rel.expect
   - html.elements.link.rel.icon
-  - html.elements.link.rel.manifest
   - html.elements.link.rel.preconnect
   - html.elements.link.rel.prefetch
   - html.elements.link.rel.preload
@@ -473,6 +424,7 @@ compat_features:
 #   - api.CanvasGradient.addColorStop
 #   - api.CanvasPattern
 #   - api.CanvasPattern.setTransform
+#   - api.CanvasPattern.setTransform.dommatrix
 #   - api.CanvasRenderingContext2D
 #   - api.CanvasRenderingContext2D.arc
 #   - api.CanvasRenderingContext2D.arcTo
@@ -481,6 +433,7 @@ compat_features:
 #   - api.CanvasRenderingContext2D.canvas
 #   - api.CanvasRenderingContext2D.clearRect
 #   - api.CanvasRenderingContext2D.clip
+#   - api.CanvasRenderingContext2D.clip.path_parameter
 #   - api.CanvasRenderingContext2D.closePath
 #   - api.CanvasRenderingContext2D.createImageData
 #   - api.CanvasRenderingContext2D.createLinearGradient
@@ -488,9 +441,12 @@ compat_features:
 #   - api.CanvasRenderingContext2D.createRadialGradient
 #   - api.CanvasRenderingContext2D.direction
 #   - api.CanvasRenderingContext2D.drawFocusIfNeeded
+#   - api.CanvasRenderingContext2D.drawFocusIfNeeded.path_parameter
 #   - api.CanvasRenderingContext2D.drawImage
+#   - api.CanvasRenderingContext2D.drawImage.ImageBitmap_source_image
 #   - api.CanvasRenderingContext2D.ellipse
 #   - api.CanvasRenderingContext2D.fill
+#   - api.CanvasRenderingContext2D.fill.path_parameter
 #   - api.CanvasRenderingContext2D.fillRect
 #   - api.CanvasRenderingContext2D.fillStyle
 #   - api.CanvasRenderingContext2D.fillText
@@ -508,7 +464,9 @@ compat_features:
 #   - api.CanvasRenderingContext2D.imageSmoothingEnabled
 #   - api.CanvasRenderingContext2D.imageSmoothingQuality
 #   - api.CanvasRenderingContext2D.isPointInPath
+#   - api.CanvasRenderingContext2D.isPointInPath.path_parameter
 #   - api.CanvasRenderingContext2D.isPointInStroke
+#   - api.CanvasRenderingContext2D.isPointInStroke.path_parameter
 #   - api.CanvasRenderingContext2D.letterSpacing
 #   - api.CanvasRenderingContext2D.lineCap
 #   - api.CanvasRenderingContext2D.lineDashOffset
@@ -528,11 +486,13 @@ compat_features:
 #   - api.CanvasRenderingContext2D.scale
 #   - api.CanvasRenderingContext2D.setLineDash
 #   - api.CanvasRenderingContext2D.setTransform
+#   - api.CanvasRenderingContext2D.setTransform.matrix_parameter
 #   - api.CanvasRenderingContext2D.shadowBlur
 #   - api.CanvasRenderingContext2D.shadowColor
 #   - api.CanvasRenderingContext2D.shadowOffsetX
 #   - api.CanvasRenderingContext2D.shadowOffsetY
 #   - api.CanvasRenderingContext2D.stroke
+#   - api.CanvasRenderingContext2D.stroke.path_parameter
 #   - api.CanvasRenderingContext2D.strokeRect
 #   - api.CanvasRenderingContext2D.strokeStyle
 #   - api.CanvasRenderingContext2D.strokeText
@@ -591,6 +551,11 @@ compat_features:
 # - Autonomous custom elements:
 #   - api.CustomElementRegistry
 #   - api.CustomElementRegistry.define
+#   - api.CustomElementRegistry.define.disabledFeatures_static_property
+#   - api.CustomElementRegistry.get
+#   - api.CustomElementRegistry.getName
+#   - api.CustomElementRegistry.upgrade
+#   - api.CustomElementRegistry.whenDefined
 #   - api.Window.customElements
 #   - css.selectors.defined
 # - Customized built-in elements:
@@ -623,6 +588,8 @@ compat_features:
 #   - api.DOMParser
 #   - api.DOMParser.DOMParser
 #   - api.DOMParser.parseFromString
+#   - api.DOMParser.parseFromString.html
+#   - api.DOMParser.parseFromString.xml
 # - DOM:
 #   - api.DOMStringList
 #   - api.DOMStringList.contains
@@ -755,6 +722,7 @@ compat_features:
 #   - api.Element.securitypolicyviolation_event
 #   - html.elements.meta.http-equiv.content-security-policy
 # - Mouse events:
+#   - api.Element.auxclick_event
 #   - api.Element.click_event
 #   - api.Element.dblclick_event
 #   - api.Element.mousedown_event
@@ -764,12 +732,23 @@ compat_features:
 #   - api.Element.mouseout_event
 #   - api.Element.mouseover_event
 #   - api.Element.mouseup_event
+# - Pointer Events:
+#   - api.Element.auxclick_event.type_pointerevent
+#   - api.Element.click_event.type_pointerevent
+# - Focus events:
+#   - api.Element.blur_event
+#   - api.Element.focus_event
 # - Clipboard events:
 #   - api.Element.copy_event
 #   - api.Element.cut_event
 #   - api.Element.paste_event
-# - input (event):
+# - Input events:
 #   - api.Element.input_event
+# - Keyboard events:
+#   - api.Element.keydown_event
+#   - api.Element.keyup_event
+# - Wheel events:
+#   - api.Element.wheel_event
 # - Form-associated custom elements:
 #   - api.ElementInternals
 #   - api.ElementInternals.checkValidity
@@ -820,6 +799,16 @@ compat_features:
 #   - html.elements.a.rel.noreferrer
 #   - html.elements.a.target
 #   - html.elements.a.type
+# - download:
+#   - api.HTMLAnchorElement.download
+#   - api.HTMLAreaElement.download
+#   - html.elements.a.download
+#   - html.elements.area.download
+# - ping:
+#   - api.HTMLAnchorElement.ping
+#   - api.HTMLAreaElement.ping
+#   - html.elements.a.ping
+#   - html.elements.area.ping
 # - Referrer policy:
 #   - api.HTMLAnchorElement.referrerPolicy
 #   - api.HTMLAnchorElement.referrerPolicy.no-referrer-when-downgrade
@@ -1125,6 +1114,11 @@ compat_features:
 #   - api.OffscreenCanvasRenderingContext2D.textBaseline
 #   - api.OffscreenCanvasRenderingContext2D.transform
 #   - api.OffscreenCanvasRenderingContext2D.translate
+# - Description list:
+#   - api.HTMLDListElement
+#   - html.elements.dd
+#   - html.elements.dl
+#   - html.elements.dt
 # - <data>:
 #   - api.HTMLDataElement
 #   - api.HTMLDataElement.value
@@ -1274,6 +1268,19 @@ compat_features:
 #   - api.HTMLImageElement.loading
 #   - html.elements.iframe.loading
 #   - html.elements.img.loading
+# - Sandboxed iframes:
+#   - api.HTMLIFrameElement.sandbox
+#   - html.elements.iframe.sandbox
+#   - html.elements.iframe.sandbox.allow-downloads
+#   - html.elements.iframe.sandbox.allow-forms
+#   - html.elements.iframe.sandbox.allow-modals
+#   - html.elements.iframe.sandbox.allow-popups
+#   - html.elements.iframe.sandbox.allow-popups-to-escape-sandbox
+#   - html.elements.iframe.sandbox.allow-same-origin
+#   - html.elements.iframe.sandbox.allow-scripts
+#   - html.elements.iframe.sandbox.allow-top-navigation
+#   - html.elements.iframe.sandbox.allow-top-navigation-by-user-activation
+#   - html.elements.iframe.sandbox.allow-top-navigation-to-custom-protocols
 # - srcdoc:
 #   - api.HTMLIFrameElement.srcdoc
 #   - html.elements.iframe.srcdoc
@@ -2043,7 +2050,6 @@ compat_features:
 #   - api.PaintRenderingContext2D.fill
 #   - api.PaintRenderingContext2D.fillRect
 #   - api.PaintRenderingContext2D.fillStyle
-#   - api.PaintRenderingContext2D.filter
 #   - api.PaintRenderingContext2D.getLineDash
 #   - api.PaintRenderingContext2D.getTransform
 #   - api.PaintRenderingContext2D.globalAlpha
@@ -2279,6 +2285,8 @@ compat_features:
 #   - html.elements.kbd
 # - Alternative style sheets:
 #   - html.elements.link.rel.alternate_stylesheet
+# - Web app manifest:
+#   - html.elements.link.rel.manifest
 # - <link rel="modulepreload">:
 #   - html.elements.link.rel.modulepreload
 # - <main>:
