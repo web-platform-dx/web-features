@@ -1,19 +1,14 @@
-draft_date: 2024-11-21
+draft_date: 2024-12-02
 name: CSS Color Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-color-5/
 compat_features:
-  - css.properties.color
-  - css.types.color
   - css.types.color.color-contrast
-  - css.types.color.color.relative_syntax
-  - css.types.color.hsl.relative_syntax
-  - css.types.color.hwb.relative_syntax
-  - css.types.color.lch.relative_syntax
-  - css.types.color.oklch.relative_syntax
-  - css.types.color.rgb.relative_syntax
 
 # The following features in the spec are already part of web-features:
+# - Color:
+#   - css.properties.color
+#   - css.types.color
 # - opacity:
 #   - css.properties.opacity
 #   - css.properties.opacity.percentages
@@ -21,6 +16,15 @@ compat_features:
 # - color():
 #   - css.types.color.color
 #   - css.types.color.color.mixed_type_parameters
+# - Relative colors:
+#   - css.types.color.color.relative_syntax
+#   - css.types.color.hsl.relative_syntax
+#   - css.types.color.hwb.relative_syntax
+#   - css.types.color.lab.relative_syntax
+#   - css.types.color.lch.relative_syntax
+#   - css.types.color.oklab.relative_syntax
+#   - css.types.color.oklch.relative_syntax
+#   - css.types.color.rgb.relative_syntax
 # - color-mix():
 #   - css.types.color.color-mix
 # - currentColor:
@@ -38,9 +42,6 @@ compat_features:
 #   - css.types.color.lab.mixed_type_parameters
 #   - css.types.color.lch
 #   - css.types.color.lch.mixed_type_parameters
-# - Relative colors:
-#   - css.types.color.lab.relative_syntax
-#   - css.types.color.oklab.relative_syntax
 # - light-dark():
 #   - css.types.color.light-dark
 # - Named colors:
