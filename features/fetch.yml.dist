@@ -139,6 +139,7 @@ compat_features:
   #   firefox_android: "44"
   #   safari: "10.1"
   #   safari_ios: "10.3"
+  - api.Headers.@@iterator
   - api.Headers.entries
   - api.Headers.keys
   - api.Headers.values
@@ -194,6 +195,19 @@ compat_features:
   #   safari: "10.1"
   #   safari_ios: "10.3"
   - api.Headers.iterate_combined_duplicates
+
+  # baseline: high
+  # baseline_low_date: 2018-01-23
+  # baseline_high_date: 2020-07-23
+  # support:
+  #   chrome: "64"
+  #   chrome_android: "64"
+  #   edge: "12"
+  #   firefox: "50"
+  #   firefox_android: "50"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - http.headers.X-Content-Type-Options
 
   # baseline: high
   # baseline_low_date: 2018-01-23
@@ -313,6 +327,19 @@ compat_features:
   - api.Response.Response.accept_readablestream
 
   # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "73"
+  #   chrome_android: "73"
+  #   edge: "79"
+  #   firefox: "74"
+  #   firefox_android: "79"
+  #   safari: "12"
+  #   safari_ios: "12"
+  - http.headers.Cross-Origin-Resource-Policy
+
+  # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
   # support:
@@ -360,6 +387,7 @@ compat_features:
   #   firefox_android: "133"
   #   safari: "13"
   #   safari_ios: "13"
+  - api.Request.Request.init_keepalive_parameter
   - api.Request.keepalive
   - api.fetch.init_keepalive_parameter
 
@@ -414,6 +442,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "110"
+  #   chrome_android: "110"
+  #   edge: "110"
+  #   firefox: "115"
+  #   firefox_android: "115"
+  - http.headers.Sec-Purpose
+
+  # baseline: false
+  # support:
   #   chrome: "116"
   #   chrome_android: "116"
   #   edge: "116"
@@ -454,7 +491,25 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "110"
+  #   chrome_android: "110"
+  #   edge: "110"
+  - http.headers.Sec-Purpose.speculationrules
+
+  # baseline: false
+  # support:
   #   chrome: "124"
   #   chrome_android: "124"
   #   edge: "124"
   - api.Request.targetAddressSpace
+
+  # baseline: false
+  # support:
+  #   firefox: "115"
+  #   firefox_android: "115"
+  - http.headers.Sec-Purpose.prefetch
+
+  # baseline: false
+  # support:
+  #   chrome: "131"
+  - api.Request.duplex
