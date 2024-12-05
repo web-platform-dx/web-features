@@ -38,7 +38,7 @@ jobs:
       - name: Publish to NPM if changed
         run: |
           npm i
-          npm prepare
+          npm run prepare
           if [[ -n "$(git diff)" ]]; then
             npm publish
           else
