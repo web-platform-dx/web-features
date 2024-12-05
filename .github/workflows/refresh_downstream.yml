@@ -23,7 +23,8 @@ jobs:
           npm ci
           npm run refresh-downstream ${{secrets.USERAGENTSIOKEY}}
 
-  publish:
+  publish-to-npm:
+    needs: refresh-downstream-browsers-json
     if: ${{ (github.repository == 'web-platform-dx/web-features') ||  (github.repository == 'tonypconway/web-features') }}
     runs-on: ubuntu-latest
     steps:
@@ -48,6 +49,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   push-to-main:
+    needs: [refresh-downstream-browsers-json, publish-to-npm]
     runs-on: ubuntu-latest
     steps:
       - name: Commit and push changes if available
