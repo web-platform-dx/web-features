@@ -68,7 +68,7 @@ const findLatestVersion = (releases: {
   [version: string]: BrowserRelease;
 }): [string, BrowserRelease] | undefined => {
   return Object.entries(releases)
-    .sort((a, b) => (compareVersions(a[0], b[0]) ? 1 : -1))
+    .sort((a, b) => compareVersions(a[0], b[0]))
     .pop();
 };
 
@@ -89,7 +89,7 @@ const handleUas = (
     {
       name: "qq_android",
       latestExistingVersion: findLatestVersion(
-        existingData.browsers["uc_android"].releases,
+        existingData.browsers["qq_android"].releases,
       ),
       regex: new RegExp("chrome|Chrome\/(\\d+).*MQQBrowser\/(\\d+\\.\\d+)"),
     },
@@ -114,6 +114,9 @@ const handleUas = (
   uaObject.uas.reverse().forEach((ua) => {
     browsers.forEach((browser) => {
       let browserVersionMatch = ua.ua.match(browser.regex);
+      // if (browser.name == "qq_android" && browserVersionMatch) {
+      //   console.log(ua, browser, browserVersionMatch);
+      // }
       if (browserVersionMatch) {
         let browserName = browser.name;
         let browserVersion;
@@ -127,7 +130,9 @@ const handleUas = (
             chromiumVersion = browserVersionMatch[1].toString().trim();
           }
         }
-
+        if (browserName == "qq_android") {
+          console.log(browserVersion, chromiumVersion, browser);
+        }
         if (browserVersion != undefined) {
           if (
             compareVersions(
