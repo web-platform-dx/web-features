@@ -1,0 +1,14 @@
+name: clip
+description: TODO
+spec: https://drafts.fxtf.org/css-masking/#clip-property
+group: clipping-shapes-masking
+discouraged:
+  according_to:
+    - https://drafts.fxtf.org/css-masking/#clip-property
+  alternatives:
+    - clip-path
+compat_features:
+  - css.properties.clip
+  - css.properties.clip.auto
+  - css.types.shape
+  - css.types.shape.rect
