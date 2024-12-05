@@ -4,12 +4,12 @@
 status:
   baseline: false
   support:
-    chrome: "1"
-    chrome_android: "18"
-    edge: "12"
-    firefox: "67"
-    firefox_android: "67"
-    safari: "3"
-    safari_ios: "2"
+    chrome: "15"
+    chrome_android: "100"
+    edge: "79"
+    firefox: "112"
+    firefox_android: "112"
+    safari: ≤13.1
+    safari_ios: ≤13.4
 compat_features:
-  - css.properties.word-break.break-word
+  - css.types.overflow.overlay
