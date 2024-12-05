@@ -93,6 +93,11 @@ compat_features:
   #   safari_ios: "6"
   - api.WebSocket.extensions
   - api.WebSocket.protocol_rfc_6455
+  - http.headers.Sec-WebSocket-Accept
+  - http.headers.Sec-WebSocket-Extensions
+  - http.headers.Sec-WebSocket-Key
+  - http.headers.Sec-WebSocket-Protocol
+  - http.headers.Sec-WebSocket-Version
 
   # baseline: high
   # baseline_low_date: 2015-07-29

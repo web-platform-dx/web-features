@@ -42,3 +42,9 @@ compat_features:
   #   safari: "16.4"
   #   safari_ios: "16.4"
   - http.headers.Server-Timing
+
+  # baseline: false
+  # support:
+  #   firefox: "71"
+  #   firefox_android: "79"
+  - http.headers.Server-Timing.trailer

@@ -1,8 +1,13 @@
-draft_date: 2024-11-07
 name: Pointer Events
-description: TODO
+description: Pointer events, such as `pointerdown`, and the `PointerEvent` API, represent general pointing inputs, from a wide range of devices, such as a mouse, pen or stylus, or touch with one or more fingers. Not to be confused with the `pointer-events` CSS property.
 spec: https://w3c.github.io/pointerevents/
+caniuse: pointer
+status:
+  compute_from: api.Element.pointerdown_event
 compat_features:
+  - api.Element.auxclick_event.type_pointerevent
+  - api.Element.click_event.type_pointerevent
+  - api.Element.contextmenu_event.type_pointerevent
   - api.Element.gotpointercapture_event
   - api.Element.hasPointerCapture
   - api.Element.lostpointercapture_event
@@ -38,18 +43,3 @@ compat_features:
   - api.PointerEvent.tiltY
   - api.PointerEvent.twist
   - api.PointerEvent.width
-
-# The following features in the spec are already part of web-features:
-# - DOM:
-#   - api.Element
-# - touch-action:
-#   - css.properties.touch-action
-#   - css.properties.touch-action.manipulation
-#   - css.properties.touch-action.none
-#   - css.properties.touch-action.pan-down
-#   - css.properties.touch-action.pan-left
-#   - css.properties.touch-action.pan-right
-#   - css.properties.touch-action.pan-up
-#   - css.properties.touch-action.pan-x
-#   - css.properties.touch-action.pan-y
-#   - css.properties.touch-action.pinch-zoom
