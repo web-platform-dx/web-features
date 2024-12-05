@@ -1,0 +1,11 @@
+name: "`overflow: overlay`"
+description: "TODO Superceded by `overflow: auto`"
+spec: https://drafts.csswg.org/css-overflow/#propdef-overflow
+group: css
+discouraged:
+  according_to:
+    - https://drafts.csswg.org/css-overflow/#valdef-overflow-overlay
+  alternatives:
+    - overflow-shorthand
+compat_features:
+  - css.properties.word-break.break-word
