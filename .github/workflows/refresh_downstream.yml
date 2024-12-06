@@ -24,6 +24,7 @@ jobs:
           npm run refresh-downstream ${{secrets.USERAGENTSIOKEY}}
 
   check-if-there-are-commits:
+    needs: refresh-downstream-browsers-json
     runs-on: ubuntu-latest
     outputs:
       there-are-commits: ${{ steps.check.outputs.there-are-commits }}
