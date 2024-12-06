@@ -22,9 +22,12 @@ jobs:
           node-version: "16"
           registry-url: 'https://registry.npmjs.org'
 
-      - id: refresh-downstream-script
+      - name: Install environment
+        run: npm ci
+
+      - name: Run refresh-downstream.ts
+        id: refresh-downstream-script
         run: |
-          npm ci
           npm run refresh-downstream ${{secrets.USERAGENTSIOKEY}}
           if [[ -n "$(git diff)" ]]; then
             echo "changes-available=TRUE" >> $GITHUB_OUTPUT
@@ -32,7 +35,8 @@ jobs:
             echo "changes-available=FALSE" >> $GITHUB_OUTPUT
           fi
 
-      - if: steps.refresh-downstream-script.outputs.changes-available == 'TRUE'
+      - name: Publish new version to NPM
+        if: steps.refresh-downstream-script.outputs.changes-available == 'TRUE'
         id: publish-to-npm
         run: |
           echo "publishing"
@@ -42,7 +46,8 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - if: steps.publish-to-npm.outcome == 'success'
+      - name: Push changes to main
+        if: steps.publish-to-npm.outcome == 'success'
         id: push-to-main
         run: |
           echo "changes have occurred, committing to main"
