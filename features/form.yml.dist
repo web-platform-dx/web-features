@@ -25,6 +25,7 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "3"
   #   safari_ios: "1"
+  - api.HTMLFormControlsCollection
   - api.HTMLFormElement
   - api.HTMLFormElement.acceptCharset
   - api.HTMLFormElement.action
@@ -71,6 +72,19 @@ compat_features:
   #   safari: "3"
   #   safari_ios: "1"
   - api.HTMLFormElement.reset_event
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "33"
+  #   firefox_android: "33"
+  #   safari: "3"
+  #   safari_ios: "1"
+  - api.HTMLFormControlsCollection.namedItem
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -123,6 +137,9 @@ compat_features:
   #   firefox_android: "79"
   #   safari: "15"
   #   safari_ios: "15"
+  - api.FormDataEvent
+  - api.FormDataEvent.FormDataEvent
+  - api.FormDataEvent.formData
   - api.HTMLFormElement.formdata_event
 
   # baseline: high

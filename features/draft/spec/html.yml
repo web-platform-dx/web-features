@@ -1,4 +1,4 @@
-draft_date: 2024-12-02
+draft_date: 2024-12-05
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -78,9 +78,7 @@ compat_features:
   - api.HTMLFormControlsCollection.namedItem
   - api.HTMLIFrameElement.featurePolicy
   - api.HTMLImageElement.currentSrc
-  - api.HTMLImageElement.sizes
   - api.HTMLImageElement.sizes.auto
-  - api.HTMLImageElement.srcset
   - api.HTMLInputElement.showPicker.autocomplete_input
   - api.HTMLInputElement.showPicker.datalist_input
   - api.HTMLInputElement.showPicker.month_input
@@ -106,9 +104,7 @@ compat_features:
   - api.HTMLSourceElement
   - api.HTMLSourceElement.height
   - api.HTMLSourceElement.media
-  - api.HTMLSourceElement.sizes
   - api.HTMLSourceElement.src
-  - api.HTMLSourceElement.srcset
   - api.HTMLSourceElement.type
   - api.HTMLSourceElement.width
   - api.HTMLTemplateElement.shadowRootClonable
@@ -294,9 +290,7 @@ compat_features:
   - html.elements.iframe.allow.wildcards
   - html.elements.iframe.sandbox.allow-orientation-lock
   - html.elements.iframe.sandbox.allow-pointer-lock
-  - html.elements.img.sizes
   - html.elements.img.sizes.auto
-  - html.elements.img.srcset
   - html.elements.img.usemap.case_sensitive
   - html.elements.input.autocomplete
   - html.elements.link.rel.dns-prefetch
@@ -321,8 +315,6 @@ compat_features:
   - html.elements.meter.value
   - html.elements.script.type.importmap.integrity
   - html.elements.select.autocomplete
-  - html.elements.source.sizes
-  - html.elements.source.srcset
   - html.elements.summary
   - html.elements.summary.display_list_item
   - html.elements.template.shadowrootclonable
@@ -1312,6 +1304,15 @@ compat_features:
 #   - html.elements.link.fetchpriority
 #   - html.elements.script.fetchpriority
 #   - http.headers.Link.fetchpriority
+# - srcset and sizes:
+#   - api.HTMLImageElement.sizes
+#   - api.HTMLImageElement.srcset
+#   - api.HTMLSourceElement.sizes
+#   - api.HTMLSourceElement.srcset
+#   - html.elements.img.sizes
+#   - html.elements.img.srcset
+#   - html.elements.source.sizes
+#   - html.elements.source.srcset
 # - <input>:
 #   - api.HTMLInputElement
 #   - api.HTMLInputElement.accept
