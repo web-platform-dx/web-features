@@ -51,6 +51,7 @@ jobs:
           registry-url: "https://registry.npmjs.org"
       - name: Publish to NPM if changed
         run: |
+          npm ci
           cd packages/baseline-browser-mapping
           npm run prepare
           npm publish
