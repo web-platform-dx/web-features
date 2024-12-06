@@ -32,10 +32,11 @@ jobs:
       - name: Check to see if there are commits
         run: |
           if [[ -n "$(git diff)" ]]; then
-            echo "::set-output name=there-are-commits::true"
+            echo "there-are-commits=true" >> $GITHUB_OUTPUT
           else
-            echo "::set-output name=there-are-commits::false"
+            echo "there-are-commits=false" >> $GITHUB_OUTPUT
           fi
+        working-directory: ${{ env.package_dir }}
 
   publish-to-npm:
     # needs: refresh-downstream-browsers-json
