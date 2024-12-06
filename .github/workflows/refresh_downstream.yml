@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     outputs:
-      changes-available: ${{ steps.check.outputs.changes-available }}
+      changes-available: ${{ steps.check-for-commits.outputs.changes-available }}
 
     steps:
       - uses: actions/checkout@v2
@@ -21,10 +21,13 @@ jobs:
         with:
           node-version: "16"
 
-      - name: Run refresh-downstream script
+      - id: refresh-downstream-script
         run: |
           npm ci
           npm run refresh-downstream ${{secrets.USERAGENTSIOKEY}}
+        
+      - id: check-for-commits
+        run: |
           if [[ -n "$(git diff)" ]]; then
             echo "changes made"
             echo "changes-available=true" >> $GITHUB_OUTPUT
@@ -32,19 +35,20 @@ jobs:
             echo "no changes made"
             echo "changes-available=false" >> $GITHUB_OUTPUT
           fi
+          
 
   publish-to-npm:
     needs: refresh-downstream-browsers-json
     if: ((github.repository == 'web-platform-dx/web-features') || (github.repository == 'tonypconway/web-features')) && needs.refresh-downstream-browsers-json.outputs.changes-available == 'true' 
     runs-on: ubuntu-latest
     steps:
+
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version-file: .node-version
           cache: npm
           registry-url: "https://registry.npmjs.org"
-      
       - name: Publish to NPM if changed
         run: |
           npm i
