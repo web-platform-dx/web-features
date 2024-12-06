@@ -51,10 +51,9 @@ jobs:
           registry-url: "https://registry.npmjs.org"
       - name: Publish to NPM if changed
         run: |
-          npm i
+          cd packages/baseline-browser-mapping
           npm run prepare
           npm publish
-        working-directory: ${{ env.package_dir }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
