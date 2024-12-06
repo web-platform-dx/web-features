@@ -1,5 +1,5 @@
 name: Scroll methods on elements
-description: Scrolling methods such as `scroll`, `scrollBy` and `scrollTo` change the scroll position of an element. Similar to setting th `scrollTop` and `scrollLeft` properties, but also allows options to be passed to define the scroll behavior.
+description: Scrolling methods such as `scroll()`, `scrollBy()`, and `scrollTo()` change the scroll position of overflow content within an element. Similar to setting `scrollTop` and `scrollLeft` properties, but also allows options defining whether the scroll should animate smoothly or jump.
 spec: https://drafts.csswg.org/cssom-view-1/#dom-element-scroll
 caniuse: element-scroll-methods
 status:
