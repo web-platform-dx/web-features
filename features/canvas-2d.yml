@@ -93,6 +93,19 @@ compat_features:
   - api.ImageData.data
   - api.ImageData.height
   - api.ImageData.width
+  - api.Path2D
+  - api.Path2D.Path2D
+  - api.Path2D.addPath
+  - api.Path2D.arc
+  - api.Path2D.arcTo
+  - api.Path2D.bezierCurveTo
+  - api.Path2D.closePath
+  - api.Path2D.ellipse
+  - api.Path2D.lineTo
+  - api.Path2D.moveTo
+  - api.Path2D.quadraticCurveTo
+  - api.Path2D.rect
+  - api.Path2D.roundRect
   - api.TextMetrics
   - api.TextMetrics.alphabeticBaseline
   - api.TextMetrics.hangingBaseline

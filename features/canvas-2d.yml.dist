@@ -243,6 +243,41 @@ compat_features:
   # baseline_low_date: 2016-08-02
   # baseline_high_date: 2019-02-02
   # support:
+  #   chrome: "36"
+  #   chrome_android: "36"
+  #   edge: "14"
+  #   firefox: "31"
+  #   firefox_android: "31"
+  #   safari: "8"
+  #   safari_ios: "8"
+  - api.Path2D
+  - api.Path2D.Path2D
+  - api.Path2D.arc
+  - api.Path2D.arcTo
+  - api.Path2D.bezierCurveTo
+  - api.Path2D.closePath
+  - api.Path2D.lineTo
+  - api.Path2D.moveTo
+  - api.Path2D.quadraticCurveTo
+  - api.Path2D.rect
+
+  # baseline: high
+  # baseline_low_date: 2016-08-02
+  # baseline_high_date: 2019-02-02
+  # support:
+  #   chrome: "36"
+  #   chrome_android: "36"
+  #   edge: "14"
+  #   firefox: "48"
+  #   firefox_android: "48"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - api.Path2D.ellipse
+
+  # baseline: high
+  # baseline_low_date: 2016-08-02
+  # baseline_high_date: 2019-02-02
+  # support:
   #   chrome: "37"
   #   chrome_android: "37"
   #   edge: "14"
@@ -318,6 +353,19 @@ compat_features:
   - api.CanvasPattern.setTransform
 
   # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "68"
+  #   chrome_android: "68"
+  #   edge: "79"
+  #   firefox: "34"
+  #   firefox_android: "34"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - api.Path2D.addPath
+
+  # baseline: high
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
   # support:
@@ -369,6 +417,18 @@ compat_features:
   #   safari: "9"
   #   safari_ios: "9"
   - api.CanvasRenderingContext2D.direction
+
+  # baseline: low
+  # baseline_low_date: 2023-04-11
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "112"
+  #   firefox_android: "112"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - api.Path2D.roundRect
 
   # baseline: low
   # baseline_low_date: 2023-08-29

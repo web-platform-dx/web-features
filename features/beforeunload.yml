@@ -4,6 +4,7 @@ spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-beforeunl
 # The commented out keys below are deprecated.
 compat_features:
   - api.BeforeUnloadEvent
+  - api.BeforeUnloadEvent.user_interaction
   - api.Window.beforeunload_event
   #- api.Window.beforeunload_event.event_returnvalue_activation
   #- api.Window.beforeunload_event.generic_string_displayed
