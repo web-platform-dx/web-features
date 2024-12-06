@@ -12,9 +12,6 @@ jobs:
   refresh-downstream-browsers-json:
     runs-on: ubuntu-latest
 
-    outputs:
-      changes-available: ${{ steps.check-for-commits.outputs.changes-available }}
-
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
@@ -25,45 +22,22 @@ jobs:
         run: |
           npm ci
           npm run refresh-downstream ${{secrets.USERAGENTSIOKEY}}
-        
-      - id: check-for-commits
-        run: |
           if [[ -n "$(git diff)" ]]; then
-            echo "changes made"
-            echo "changes-available=true" >> $GITHUB_OUTPUT
+            echo "changes-available=TRUE" >> $GITHUB_OUTPUT
           else
-            echo "no changes made"
-            echo "changes-available=false" >> $GITHUB_OUTPUT
+            echo "changes-available=FALSE" >> $GITHUB_OUTPUT
           fi
-          
 
-  publish-to-npm:
-    needs: refresh-downstream-browsers-json
-    if: ((github.repository == 'web-platform-dx/web-features') || (github.repository == 'tonypconway/web-features')) && needs.refresh-downstream-browsers-json.outputs.changes-available == 'true' 
-    runs-on: ubuntu-latest
-    steps:
-
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: .node-version
-          cache: npm
-          registry-url: "https://registry.npmjs.org"
-      - name: Publish to NPM if changed
+      - if: steps.refresh-downstream-script.outputs.changes-available == 'TRUE'
+        id: publish-to-npm
         run: |
-          npm ci
+          echo "publishing"
           cd packages/baseline-browser-mapping
           npm run prepare
           npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-  push-to-main:
-    needs: [publish-to-npm, refresh-downstream-browsers-json]
-    if: needs.refresh-downstream-browsers-json.outputs.changes-available == 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Commit and push changes if available
+      - if: steps.publish-to-npm.outcome == 'success'
+        id: push-to-main
         run: |
           echo "changes have occurred, committing to main"
           git config --global user.name 'github-actions[bot]'
