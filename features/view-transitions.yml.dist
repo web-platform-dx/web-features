@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "124"
-    chrome_android: "124"
-    edge: "124"
+    chrome: "128"
+    chrome_android: "128"
+    edge: "128"
 compat_features:
   # baseline: false
   # support:
@@ -42,12 +42,31 @@ compat_features:
   #   chrome: "123"
   #   chrome_android: "123"
   #   edge: "123"
+  - api.PageRevealEvent
   - api.Window.pagereveal_event
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "124"
   #   chrome_android: "124"
   #   edge: "124"
+  - api.PageSwapEvent
+  - api.PageSwapEvent.activation
   - api.Window.pageswap_event
+
+  # baseline: false
+  # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  - api.PageRevealEvent.viewTransition
+  - api.PageSwapEvent.viewTransition
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  - api.PageRevealEvent.PageRevealEvent
+  - api.PageSwapEvent.PageSwapEvent
