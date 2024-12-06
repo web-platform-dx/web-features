@@ -1,0 +1,12 @@
+name: Destructuring
+description: The destructuring assignment syntax is a JavaScript expression that unpacks values from arrays, or properties from objects, into distinct variables.
+spec:
+  - https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#sec-destructuring-assignment
+  - https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#sec-destructuring-binding-patterns
+snapshot: ecmascript-2015
+group: javascript
+compat_features:
+  - javascript.operators.destructuring
+  - javascript.operators.destructuring.computed_property_names
+  - javascript.operators.destructuring.rest_in_arrays
+  - javascript.operators.destructuring.rest_in_objects
