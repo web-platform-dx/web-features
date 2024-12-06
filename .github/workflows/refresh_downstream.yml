@@ -12,6 +12,9 @@ jobs:
   refresh-downstream-browsers-json:
     runs-on: ubuntu-latest
 
+    outputs:
+      changes-available: ${{ steps.check.outputs.changes-available }}
+
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
@@ -22,33 +25,17 @@ jobs:
         run: |
           npm ci
           npm run refresh-downstream ${{secrets.USERAGENTSIOKEY}}
-
-  check-if-there-are-commits:
-    needs: refresh-downstream-browsers-json
-    runs-on: ubuntu-latest
-    outputs:
-      there-are-commits: ${{ steps.check.outputs.there-are-commits }}
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: "16"
-      - name: Check to see if there are commits
-        run: |
           if [[ -n "$(git diff)" ]]; then
-            echo "there-are-commits=true" >> $GITHUB_OUTPUT
+            echo "changes made"
+            echo "changes-available=true" >> $GITHUB_OUTPUT
           else
-            echo "there-are-commits=false" >> $GITHUB_OUTPUT
+            echo "no changes made"
+            echo "changes-available=false" >> $GITHUB_OUTPUT
           fi
 
   publish-to-npm:
-    needs: check-if-there-are-commits
-    if: |
-      (
-        (github.repository == 'web-platform-dx/web-features') ||  
-        (github.repository == 'tonypconway/web-features')
-      ) && 
-      needs.check-if-there-are-commits.outputs.there-are-commits == 'true' 
+    needs: refresh-downstream-browsers-json
+    if: ((github.repository == 'web-platform-dx/web-features') || (github.repository == 'tonypconway/web-features')) && needs.refresh-downstream-browsers-json.outputs.changes-available == 'true' 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -68,9 +55,8 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   push-to-main:
-    needs: [publish-to-npm, check-if-there-are-commits]
-    if: |
-      needs.check-if-there-are-commits.outputs.there-are-commits == 'true'
+    needs: [publish-to-npm, refresh-downstream-browsers-json]
+    if: needs.refresh-downstream-browsers-json.outputs.changes-available == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Commit and push changes if available
