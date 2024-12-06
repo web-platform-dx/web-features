@@ -114,9 +114,6 @@ const handleUas = (
   uaObject.uas.reverse().forEach((ua) => {
     browsers.forEach((browser) => {
       let browserVersionMatch = ua.ua.match(browser.regex);
-      // if (browser.name == "qq_android" && browserVersionMatch) {
-      //   console.log(ua, browser, browserVersionMatch);
-      // }
       if (browserVersionMatch) {
         let browserName = browser.name;
         let browserVersion;
@@ -129,9 +126,6 @@ const handleUas = (
             browserVersion = browserVersionMatch[2].toString().trim();
             chromiumVersion = browserVersionMatch[1].toString().trim();
           }
-        }
-        if (browserName == "qq_android") {
-          console.log(browserVersion, chromiumVersion, browser);
         }
         if (browserVersion != undefined) {
           if (
