@@ -17,6 +17,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "16"
+          registry-url: 'https://registry.npmjs.org'
 
       - id: refresh-downstream-script
         run: |
@@ -34,7 +35,7 @@ jobs:
           echo "publishing"
           cd packages/baseline-browser-mapping
           npm run prepare
-          npm publish
+          npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
