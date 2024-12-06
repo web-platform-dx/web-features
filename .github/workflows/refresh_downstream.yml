@@ -42,7 +42,7 @@ jobs:
           fi
 
   publish-to-npm:
-    # needs: refresh-downstream-browsers-json
+    needs: check-if-there-are-commits
     if: |
       (
         (github.repository == 'web-platform-dx/web-features') ||  
@@ -68,7 +68,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   push-to-main:
-    # needs: [refresh-downstream-browsers-json, publish-to-npm]
+    needs: [publish-to-npm, check-if-there-are-commits]
     if: |
       needs.check-if-there-are-commits.outputs.there-are-commits == 'true'
     runs-on: ubuntu-latest
