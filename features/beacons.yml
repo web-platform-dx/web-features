@@ -1,0 +1,5 @@
+name: Beacons
+description: The `navigator.sendBeacon()` method asynchronously sends an HTTP POST request with a limited amount of data, typically for app state, events, and analytics data. The one-way beacon is guaranteed to be initiated before the browser unloads the page, but the sender does not get to handle the response.
+spec: https://w3c.github.io/beacon/
+compat_features:
+  - api.Navigator.sendBeacon
