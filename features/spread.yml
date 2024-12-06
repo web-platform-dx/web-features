@@ -1,0 +1,10 @@
+name: Spread syntax
+description: The spread (`...`) syntax allows an iterable, such as an array or string, to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected.
+spec: https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-SpreadElement
+group: javascript
+snapshot: ecmascript-2015
+compat_features:
+  - javascript.operators.spread
+  - javascript.operators.spread.spread_in_arrays
+  - javascript.operators.spread.spread_in_function_calls
+  - javascript.operators.spread.spread_in_object_literals
