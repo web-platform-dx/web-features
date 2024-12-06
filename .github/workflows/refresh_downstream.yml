@@ -29,6 +29,10 @@ jobs:
     outputs:
       there-are-commits: ${{ steps.check.outputs.there-are-commits }}
     steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16"
       - name: Check to see if there are commits
         run: |
           if [[ -n "$(git diff)" ]]; then
@@ -36,7 +40,6 @@ jobs:
           else
             echo "there-are-commits=false" >> $GITHUB_OUTPUT
           fi
-        working-directory: ${{ env.package_dir }}
 
   publish-to-npm:
     # needs: refresh-downstream-browsers-json
