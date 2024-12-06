@@ -23,9 +23,27 @@ jobs:
           npm ci
           npm run refresh-downstream ${{secrets.USERAGENTSIOKEY}}
 
+  check-if-there-are-commits:
+    runs-on: ubuntu-latest
+    outputs:
+      there-are-commits: ${{ steps.check.outputs.there-are-commits }}
+    steps:
+      - name: Check to see if there are commits
+        run: |
+          if [[ -n "$(git diff)" ]]; then
+            echo "::set-output name=there-are-commits::true"
+          else
+            echo "::set-output name=there-are-commits::false"
+          fi
+
   publish-to-npm:
-    needs: refresh-downstream-browsers-json
-    if: ${{ (github.repository == 'web-platform-dx/web-features') ||  (github.repository == 'tonypconway/web-features') }}
+    # needs: refresh-downstream-browsers-json
+    if: |
+      (
+        (github.repository == 'web-platform-dx/web-features') ||  
+        (github.repository == 'tonypconway/web-features')
+      ) && 
+      needs.check-if-there-are-commits.outputs.there-are-commits == 'true' 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -39,30 +57,22 @@ jobs:
         run: |
           npm i
           npm run prepare
-          if [[ -n "$(git diff)" ]]; then
-            npm publish
-          else
-            echo "no changes made, don't publish"
-          fi
+          npm publish
         working-directory: ${{ env.package_dir }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   push-to-main:
-    needs: [refresh-downstream-browsers-json, publish-to-npm]
+    # needs: [refresh-downstream-browsers-json, publish-to-npm]
+    if: |
+      needs.check-if-there-are-commits.outputs.there-are-commits == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Commit and push changes if available
         run: |
-          #!/bin/bash
-
-          if [[ -n "$(git diff)" ]]; then
-            echo "changes have occurred, committing to main"
-            git config --global user.name 'github-actions[bot]'
-            git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-            git add .
-            git commit -m 'Updating downstream-browsers'
-            git push origin main
-          else
-            echo "no changes made, doing nothing"
-          fi
+          echo "changes have occurred, committing to main"
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add .
+          git commit -m 'Updating downstream-browsers'
+          git push origin main
