@@ -1,6 +1,33 @@
 name: Device orientation events
-# TODO: Add a note that coordinates can differ noticeably between platforms and devices
-description: The `DeviceMotion` and `DeviceOrientation` events report the movement and orientation of the browser's device in physical space.
+description: The `DeviceMotion` and `DeviceOrientation` events report the movement and orientation of the browser's device in physical space. Note that coordinates can differ noticeably between platforms and devices.
 spec: https://w3c.github.io/deviceorientation/
 caniuse: deviceorientation
 group: sensors
+status:
+  compute_from: api.DeviceMotionEvent
+compat_features:
+  - api.DeviceMotionEvent
+  - api.DeviceMotionEvent.DeviceMotionEvent
+  - api.DeviceMotionEvent.acceleration
+  - api.DeviceMotionEvent.accelerationIncludingGravity
+  - api.DeviceMotionEvent.interval
+  - api.DeviceMotionEvent.requestPermission_static
+  - api.DeviceMotionEvent.rotationRate
+  - api.DeviceMotionEventAcceleration
+  - api.DeviceMotionEventAcceleration.x
+  - api.DeviceMotionEventAcceleration.y
+  - api.DeviceMotionEventAcceleration.z
+  - api.DeviceMotionEventRotationRate
+  - api.DeviceMotionEventRotationRate.alpha
+  - api.DeviceMotionEventRotationRate.beta
+  - api.DeviceMotionEventRotationRate.gamma
+  - api.DeviceOrientationEvent
+  - api.DeviceOrientationEvent.DeviceOrientationEvent
+  - api.DeviceOrientationEvent.absolute
+  - api.DeviceOrientationEvent.alpha
+  - api.DeviceOrientationEvent.beta
+  - api.DeviceOrientationEvent.gamma
+  - api.DeviceOrientationEvent.requestPermission_static
+  - api.Window.devicemotion_event
+  - api.Window.deviceorientation_event
+  - api.Window.deviceorientationabsolute_event
