@@ -393,6 +393,22 @@ compat_features:
   - api.CanvasPattern.setTransform.dommatrix
 
   # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "77"
+  #   chrome_android: "77"
+  #   edge: "79"
+  #   firefox: "74"
+  #   firefox_android: "79"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - api.TextMetrics.actualBoundingBoxAscent
+  - api.TextMetrics.actualBoundingBoxDescent
+  - api.TextMetrics.actualBoundingBoxLeft
+  - api.TextMetrics.actualBoundingBoxRight
+
+  # baseline: high
   # baseline_low_date: 2021-09-20
   # baseline_high_date: 2024-03-20
   # support:
@@ -429,6 +445,19 @@ compat_features:
   #   safari: "16"
   #   safari_ios: "16"
   - api.Path2D.roundRect
+
+  # baseline: low
+  # baseline_low_date: 2023-08-01
+  # support:
+  #   chrome: "87"
+  #   chrome_android: "87"
+  #   edge: "87"
+  #   firefox: "116"
+  #   firefox_android: "116"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - api.TextMetrics.fontBoundingBoxAscent
+  - api.TextMetrics.fontBoundingBoxDescent
 
   # baseline: low
   # baseline_low_date: 2023-08-29
@@ -529,3 +558,12 @@ compat_features:
   #   firefox_android: "117"
   - api.CanvasRenderingContext2D.fontStretch
   - api.CanvasRenderingContext2D.fontVariantCaps
+
+  # baseline: false
+  # support:
+  #   firefox: "118"
+  #   firefox_android: "118"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - api.TextMetrics.emHeightAscent
+  - api.TextMetrics.emHeightDescent
