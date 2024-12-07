@@ -8,6 +8,7 @@ status:
 compat_features:
   - api.EventSource
   - api.EventSource.EventSource
+  - api.EventSource.EventSource.options_withCredentials_parameter
   - api.EventSource.close
   - api.EventSource.error_event
   - api.EventSource.message_event
@@ -15,3 +16,4 @@ compat_features:
   - api.EventSource.readyState
   - api.EventSource.url
   - api.EventSource.withCredentials
+  - api.EventSource.worker_support

@@ -10,11 +10,13 @@ status:
 compat_features:
   - api.NotRestoredReasonDetails
   - api.NotRestoredReasonDetails.reason
+  - api.NotRestoredReasonDetails.toJSON
   - api.NotRestoredReasons
   - api.NotRestoredReasons.children
   - api.NotRestoredReasons.id
   - api.NotRestoredReasons.name
   - api.NotRestoredReasons.reasons
   - api.NotRestoredReasons.src
+  - api.NotRestoredReasons.toJSON
   - api.NotRestoredReasons.url
   - api.PerformanceNavigationTiming.notRestoredReasons
