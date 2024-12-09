@@ -1,4 +1,4 @@
-draft_date: 2024-11-20
+draft_date: 2024-12-09
 name: ECMAScript Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
@@ -30,10 +30,6 @@ compat_features:
   - javascript.operators.logical_or_assignment
   - javascript.operators.nullish_coalescing
   - javascript.operators.nullish_coalescing_assignment
-  - javascript.operators.spread
-  - javascript.operators.spread.spread_in_arrays
-  - javascript.operators.spread.spread_in_function_calls
-  - javascript.operators.spread.spread_in_object_literals
   - javascript.statements.const
   - javascript.statements.export.namespace
   - javascript.statements.import.worklet_support
@@ -909,6 +905,11 @@ compat_features:
 # - JavaScript modules in workers:
 #   - javascript.operators.import.worker_support
 #   - javascript.statements.import.worker_support
+# - Spread syntax:
+#   - javascript.operators.spread
+#   - javascript.operators.spread.spread_in_arrays
+#   - javascript.operators.spread.spread_in_function_calls
+#   - javascript.operators.spread.spread_in_object_literals
 # - JavaScript modules:
 #   - javascript.statements.export
 #   - javascript.statements.export.default
