@@ -1,7 +1,13 @@
 name: Deprecated Performance API
-description: The `PerformanceNavigation` and `PerformanceTiming` APIs are deprecated. Use `PerformanceNavigationTiming` instead.
+description: The `PerformanceNavigation` and `PerformanceTiming` APIs are legacy interfaces kept for backwards compatibility and contain properties that offer performance timing information for events which occur during the loading and use of the current page.
 spec: https://w3c.github.io/navigation-timing/#obsolete
 group: performance
+discouraged:
+   according_to:
+     - https://w3c.github.io/navigation-timing/#obsolete
+   alternatives:
+     - performance
+     - navigation-timing
 compat_features:
   - api.Performance.navigation
   - api.Performance.timing
