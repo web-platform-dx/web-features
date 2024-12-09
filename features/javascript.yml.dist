@@ -51,7 +51,10 @@ compat_features:
   - javascript.builtins.parseFloat
   - javascript.builtins.undefined
   - javascript.grammar.boolean_literals
+  - javascript.grammar.hexadecimal_escape_sequences
   - javascript.grammar.null_literal
+  - javascript.grammar.trailing_commas
+  - javascript.grammar.unicode_escape_sequences
   - javascript.operators.addition
   - javascript.operators.addition_assignment
   - javascript.operators.assignment
@@ -130,6 +133,19 @@ compat_features:
   - javascript.builtins.decodeURIComponent
   - javascript.builtins.encodeURI
   - javascript.builtins.encodeURIComponent
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "3"
+  #   safari_ios: "1"
+  - javascript.grammar.trailing_commas.trailing_commas_in_object_literals
 
   # baseline: high
   # baseline_low_date: 2015-07-29
