@@ -49,7 +49,6 @@ compat_features:
   #   safari_ios: "1"
   - api.HTMLElement.lang
   - api.HTMLElement.title
-  - api.HTMLFormControlsCollection
   - api.HTMLOptionsCollection
   - api.HTMLOptionsCollection.add
   - api.HTMLOptionsCollection.length
@@ -214,19 +213,6 @@ compat_features:
   #   safari: "1"
   #   safari_ios: "1"
   - html.global_attributes.id
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "33"
-  #   firefox_android: "33"
-  #   safari: "3"
-  #   safari_ios: "1"
-  - api.HTMLFormControlsCollection.namedItem
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -1305,21 +1291,6 @@ compat_features:
   #   safari: "15"
   #   safari_ios: "15"
   - api.MediaError.message
-
-  # baseline: high
-  # baseline_low_date: 2021-09-20
-  # baseline_high_date: 2024-03-20
-  # support:
-  #   chrome: "77"
-  #   chrome_android: "77"
-  #   edge: "79"
-  #   firefox: "72"
-  #   firefox_android: "79"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - api.FormDataEvent
-  - api.FormDataEvent.FormDataEvent
-  - api.FormDataEvent.formData
 
   # baseline: high
   # baseline_low_date: 2021-09-20
