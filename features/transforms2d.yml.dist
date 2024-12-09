@@ -10,7 +10,7 @@ status:
     chrome_android: "36"
     edge: "12"
     firefox: ≤16
-    firefox_android: "16"
+    firefox_android: ≤16
     safari: "9"
     safari_ios: "9"
 compat_features:
@@ -104,7 +104,7 @@ compat_features:
   #   chrome_android: "36"
   #   edge: "12"
   #   firefox: ≤16
-  #   firefox_android: "16"
+  #   firefox_android: ≤16
   #   safari: "9"
   #   safari_ios: "9"
   - css.properties.transform
@@ -124,14 +124,14 @@ compat_features:
   - css.properties.transform-origin.three_value_syntax
 
   # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
+  # baseline_low_date: ≤2020-07-28
+  # baseline_high_date: ≤2023-01-28
   # support:
   #   chrome: "36"
   #   chrome_android: "36"
   #   edge: "12"
   #   firefox: ≤72
-  #   firefox_android: "79"
+  #   firefox_android: ≤79
   #   safari: "9"
   #   safari_ios: "9"
   - css.properties.transform-origin.bottom

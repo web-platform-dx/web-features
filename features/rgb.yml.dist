@@ -69,11 +69,14 @@ compat_features:
   #   safari_ios: "12.2"
   - css.types.color.rgb.float_values
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2024-09-16
   # support:
   #   chrome: "122"
   #   chrome_android: "122"
   #   edge: "122"
   #   firefox: "113"
   #   firefox_android: "113"
+  #   safari: "18"
+  #   safari_ios: "18"
   - css.types.color.rgb.mixed_type_parameters
