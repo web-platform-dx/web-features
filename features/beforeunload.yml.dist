@@ -7,8 +7,8 @@ status:
     chrome: "119"
     chrome_android: "119"
     edge: "119"
-    firefox: "6"
-    firefox_android: "6"
+    firefox: "44"
+    firefox_android: "44"
     safari: "11"
 compat_features:
   # baseline: high
@@ -37,7 +37,19 @@ compat_features:
   #   safari_ios: "7"
   - api.BeforeUnloadEvent
 
-  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "79"
+  #   firefox: "44"
+  #   firefox_android: "44"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.BeforeUnloadEvent.user_interaction
+
   # baseline: false
   # support:
   #   chrome: "119"
