@@ -844,14 +844,14 @@ compat_features:
   - api.Document.writeln
 
   # baseline: high
-  # baseline_low_date: 2018-01-23
-  # baseline_high_date: 2020-07-23
+  # baseline_low_date: ≤2018-01-23
+  # baseline_high_date: ≤2020-07-23
   # support:
   #   chrome: ≤64
-  #   chrome_android: "64"
+  #   chrome_android: ≤64
   #   edge: "12"
   #   firefox: ≤58
-  #   firefox_android: "58"
+  #   firefox_android: ≤58
   #   safari: ≤11
   #   safari_ios: ≤11
   - html.global_attributes.title.multi-line_titles
@@ -1707,7 +1707,7 @@ compat_features:
   #   chrome_android: "25"
   #   edge: "79"
   #   firefox: ≤49
-  #   firefox_android: "49"
+  #   firefox_android: ≤49
   #   safari: "10.1"
   - html.elements.iframe.sandbox.allow-pointer-lock
 
@@ -1827,7 +1827,7 @@ compat_features:
   #   chrome_android: "68"
   #   edge: "79"
   #   firefox: ≤49
-  #   firefox_android: "49"
+  #   firefox_android: ≤49
   - html.elements.iframe.sandbox.allow-orientation-lock
 
   # baseline: false

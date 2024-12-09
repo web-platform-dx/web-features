@@ -624,7 +624,7 @@ compat_features:
   #   chrome_android: "79"
   #   edge: "79"
   #   firefox: ≤73
-  #   firefox_android: "79"
+  #   firefox_android: ≤79
   - api.RTCStatsReport.type_inbound-rtp.framesDecoded
 
   # baseline: false
@@ -739,7 +739,7 @@ compat_features:
   #   chrome_android: "80"
   #   edge: "80"
   #   firefox: ≤73
-  #   firefox_android: "79"
+  #   firefox_android: ≤79
   - api.RTCStatsReport.type_outbound-rtp.framesEncoded
   - api.RTCStatsReport.type_outbound-rtp.qpSum
 
