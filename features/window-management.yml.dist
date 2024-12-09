@@ -14,7 +14,20 @@ compat_features:
   #   edge: "100"
   #   firefox: "1"
   #   firefox_android: "4"
+  - api.Window.moveTo.relative-multi-screen
   - api.Window.open.relative-multi-screen
+  - api.Window.screenX.relative-multi-screen
+
+  # baseline: false
+  # support:
+  #   chrome: "100"
+  #   chrome_android: "100"
+  #   edge: "100"
+  #   firefox: "64"
+  #   firefox_android: "64"
+  - api.Window.screenLeft.relative-multi-screen
+  - api.Window.screenTop.relative-multi-screen
+  - api.Window.screenY.relative-multi-screen
 
   # baseline: false
   # support:
