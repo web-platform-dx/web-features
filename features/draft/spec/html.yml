@@ -1,4 +1,4 @@
-draft_date: 2024-12-05
+draft_date: 2024-12-09
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -26,9 +26,6 @@ compat_features:
   - api.EventSource.EventSource.options_withCredentials_parameter
   - api.EventSource.worker_support
   - api.FileList
-  - api.FormDataEvent
-  - api.FormDataEvent.FormDataEvent
-  - api.FormDataEvent.formData
   - api.HTMLAllCollection
   - api.HTMLAllCollection.item
   - api.HTMLAllCollection.length
@@ -74,11 +71,11 @@ compat_features:
   - api.HTMLElement.togglePopover.returns_boolean
   - api.HTMLElement.toggle_event.details_elements
   - api.HTMLElement.toggle_event.dialog_elements
-  - api.HTMLFormControlsCollection
-  - api.HTMLFormControlsCollection.namedItem
   - api.HTMLIFrameElement.featurePolicy
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes.auto
+  - api.HTMLInputElement.alpha
+  - api.HTMLInputElement.colorSpace
   - api.HTMLInputElement.showPicker.autocomplete_input
   - api.HTMLInputElement.showPicker.datalist_input
   - api.HTMLInputElement.showPicker.month_input
@@ -292,7 +289,9 @@ compat_features:
   - html.elements.iframe.sandbox.allow-pointer-lock
   - html.elements.img.sizes.auto
   - html.elements.img.usemap.case_sensitive
+  - html.elements.input.alpha
   - html.elements.input.autocomplete
+  - html.elements.input.colorspace
   - html.elements.link.rel.dns-prefetch
   - html.elements.link.rel.expect
   - html.elements.link.rel.icon
@@ -763,6 +762,42 @@ compat_features:
 #   - api.EventSource.readyState
 #   - api.EventSource.url
 #   - api.EventSource.withCredentials
+# - <form>:
+#   - api.FormDataEvent
+#   - api.FormDataEvent.FormDataEvent
+#   - api.FormDataEvent.formData
+#   - api.HTMLFormControlsCollection
+#   - api.HTMLFormControlsCollection.namedItem
+#   - api.HTMLFormElement
+#   - api.HTMLFormElement.acceptCharset
+#   - api.HTMLFormElement.action
+#   - api.HTMLFormElement.autocomplete
+#   - api.HTMLFormElement.elements
+#   - api.HTMLFormElement.encoding
+#   - api.HTMLFormElement.enctype
+#   - api.HTMLFormElement.formdata_event
+#   - api.HTMLFormElement.length
+#   - api.HTMLFormElement.method
+#   - api.HTMLFormElement.name
+#   - api.HTMLFormElement.noValidate
+#   - api.HTMLFormElement.rel
+#   - api.HTMLFormElement.relList
+#   - api.HTMLFormElement.requestSubmit
+#   - api.HTMLFormElement.reset
+#   - api.HTMLFormElement.reset_event
+#   - api.HTMLFormElement.submit
+#   - api.HTMLFormElement.submit_event
+#   - api.HTMLFormElement.target
+#   - html.elements.form
+#   - html.elements.form.accept-charset
+#   - html.elements.form.action
+#   - html.elements.form.autocomplete
+#   - html.elements.form.enctype
+#   - html.elements.form.method
+#   - html.elements.form.name
+#   - html.elements.form.novalidate
+#   - html.elements.form.rel
+#   - html.elements.form.target
 # - <a>:
 #   - api.HTMLAnchorElement
 #   - api.HTMLAnchorElement.hash
@@ -1188,37 +1223,6 @@ compat_features:
 #   - html.elements.fieldset.form
 #   - html.elements.fieldset.name
 #   - html.elements.legend
-# - <form>:
-#   - api.HTMLFormElement
-#   - api.HTMLFormElement.acceptCharset
-#   - api.HTMLFormElement.action
-#   - api.HTMLFormElement.autocomplete
-#   - api.HTMLFormElement.elements
-#   - api.HTMLFormElement.encoding
-#   - api.HTMLFormElement.enctype
-#   - api.HTMLFormElement.formdata_event
-#   - api.HTMLFormElement.length
-#   - api.HTMLFormElement.method
-#   - api.HTMLFormElement.name
-#   - api.HTMLFormElement.noValidate
-#   - api.HTMLFormElement.rel
-#   - api.HTMLFormElement.relList
-#   - api.HTMLFormElement.requestSubmit
-#   - api.HTMLFormElement.reset
-#   - api.HTMLFormElement.reset_event
-#   - api.HTMLFormElement.submit
-#   - api.HTMLFormElement.submit_event
-#   - api.HTMLFormElement.target
-#   - html.elements.form
-#   - html.elements.form.accept-charset
-#   - html.elements.form.action
-#   - html.elements.form.autocomplete
-#   - html.elements.form.enctype
-#   - html.elements.form.method
-#   - html.elements.form.name
-#   - html.elements.form.novalidate
-#   - html.elements.form.rel
-#   - html.elements.form.target
 # - <hr>:
 #   - api.HTMLHRElement
 #   - html.elements.hr
