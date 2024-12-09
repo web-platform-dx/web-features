@@ -1,0 +1,26 @@
+name: HTTP authentication
+description: The `Authorization` and `WWW-Authenticate` headers authenticate a user with a server.
+spec:
+  - https://httpwg.org/specs/rfc9110.html#authentication
+  - https://httpwg.org/specs/rfc7616.html
+  - https://www.rfc-editor.org/rfc/rfc4120
+status:
+  compute_from:
+    - http.headers.Authorization
+    - http.headers.WWW-Authenticate
+compat_features:
+  - http.headers.Authorization
+  - http.headers.Authorization.Basic
+  - http.headers.Authorization.Digest
+  - http.headers.Authorization.Digest.SHA-256
+  - http.headers.Authorization.Digest.md5
+  - http.headers.Authorization.NTLM
+  - http.headers.Authorization.Negotiate
+  - http.headers.Authorization.authorization_removed_cross_origin
+  - http.headers.WWW-Authenticate
+  - http.headers.WWW-Authenticate.Basic
+  - http.headers.WWW-Authenticate.Digest
+  - http.headers.WWW-Authenticate.Digest.SHA-256
+  - http.headers.WWW-Authenticate.Digest.md5
+  - http.headers.WWW-Authenticate.NTLM
+  - http.headers.WWW-Authenticate.Negotiate

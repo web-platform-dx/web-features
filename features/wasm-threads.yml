@@ -1,0 +1,8 @@
+name: Threads and atomics (WebAssembly)
+description: Threads in WebAssembly run code in parallel, while atomic memory instructions can guarantee that no two threads can read or write to shared memory at the same time.
+spec: https://github.com/WebAssembly/threads/blob/main/proposals/threads/Overview.md
+group: webassembly
+caniuse: wasm-threads
+compat_features:
+  - webassembly.api.Memory.Memory.shared
+  - webassembly.threads-and-atomics

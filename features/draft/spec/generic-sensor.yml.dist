@@ -3,8 +3,19 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "88"
+    chrome_android: "88"
+    edge: "88"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "66"
+  #   chrome_android: "66"
+  #   edge: "79"
+  - html.elements.iframe.allow.accelerometer
+  - html.elements.iframe.allow.magnetometer
+
   # baseline: false
   # support:
   #   chrome: "67"
@@ -23,15 +34,10 @@ compat_features:
   - api.SensorErrorEvent.SensorErrorEvent
   - api.SensorErrorEvent.error
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "88"
   #   chrome_android: "88"
   #   edge: "88"
-  - http.headers.Permissions-Policy.gyroscope
   - http.headers.Permissions-Policy.magnetometer
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - http.headers.Permissions-Policy.ambient-light-sensor

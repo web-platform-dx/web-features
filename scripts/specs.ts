@@ -32,6 +32,50 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://www.w3.org/TR/webnn/",
         "Allowed because this URL actually serves the same content as the Editor Draft URL, and because the ED URL is a bit verbose. See https://github.com/mdn/browser-compat-data/pull/22569#issuecomment-1992632118."
+    ],
+    [
+        "https://github.com/WebAssembly/spec/blob/main/proposals/bulk-memory-operations/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://github.com/WebAssembly/exception-handling/blob/main/proposals/exception-handling/Exceptions.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://github.com/WebAssembly/extended-const/blob/main/proposals/extended-const/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://github.com/WebAssembly/multi-memory/blob/main/proposals/multi-memory/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://github.com/WebAssembly/spec/blob/main/proposals/multi-value/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://github.com/WebAssembly/spec/blob/main/proposals/nontrapping-float-to-int-conversion/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://github.com/WebAssembly/spec/blob/main/proposals/reference-types/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://github.com/WebAssembly/spec/blob/main/proposals/sign-extension-ops/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://github.com/WebAssembly/relaxed-simd/blob/main/proposals/relaxed-simd/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://github.com/WebAssembly/tail-call/blob/main/proposals/tail-call/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://github.com/WebAssembly/threads/blob/main/proposals/threads/Overview.md",
+        "Allowed because there is no other specification to link to."
     ]
 ];
 

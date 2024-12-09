@@ -9,6 +9,7 @@ compat_features:
   - api.CanvasGradient.addColorStop
   - api.CanvasPattern
   - api.CanvasPattern.setTransform
+  - api.CanvasPattern.setTransform.dommatrix
   - api.CanvasRenderingContext2D
   - api.CanvasRenderingContext2D.arc
   - api.CanvasRenderingContext2D.arcTo
@@ -17,6 +18,7 @@ compat_features:
   - api.CanvasRenderingContext2D.canvas
   - api.CanvasRenderingContext2D.clearRect
   - api.CanvasRenderingContext2D.clip
+  - api.CanvasRenderingContext2D.clip.path_parameter
   - api.CanvasRenderingContext2D.closePath
   - api.CanvasRenderingContext2D.createImageData
   - api.CanvasRenderingContext2D.createLinearGradient
@@ -24,9 +26,12 @@ compat_features:
   - api.CanvasRenderingContext2D.createRadialGradient
   - api.CanvasRenderingContext2D.direction
   - api.CanvasRenderingContext2D.drawFocusIfNeeded
+  - api.CanvasRenderingContext2D.drawFocusIfNeeded.path_parameter
   - api.CanvasRenderingContext2D.drawImage
+  - api.CanvasRenderingContext2D.drawImage.ImageBitmap_source_image
   - api.CanvasRenderingContext2D.ellipse
   - api.CanvasRenderingContext2D.fill
+  - api.CanvasRenderingContext2D.fill.path_parameter
   - api.CanvasRenderingContext2D.fillRect
   - api.CanvasRenderingContext2D.fillStyle
   - api.CanvasRenderingContext2D.fillText
@@ -44,7 +49,9 @@ compat_features:
   - api.CanvasRenderingContext2D.imageSmoothingEnabled
   - api.CanvasRenderingContext2D.imageSmoothingQuality
   - api.CanvasRenderingContext2D.isPointInPath
+  - api.CanvasRenderingContext2D.isPointInPath.path_parameter
   - api.CanvasRenderingContext2D.isPointInStroke
+  - api.CanvasRenderingContext2D.isPointInStroke.path_parameter
   - api.CanvasRenderingContext2D.letterSpacing
   - api.CanvasRenderingContext2D.lineCap
   - api.CanvasRenderingContext2D.lineDashOffset
@@ -64,11 +71,13 @@ compat_features:
   - api.CanvasRenderingContext2D.scale
   - api.CanvasRenderingContext2D.setLineDash
   - api.CanvasRenderingContext2D.setTransform
+  - api.CanvasRenderingContext2D.setTransform.matrix_parameter
   - api.CanvasRenderingContext2D.shadowBlur
   - api.CanvasRenderingContext2D.shadowColor
   - api.CanvasRenderingContext2D.shadowOffsetX
   - api.CanvasRenderingContext2D.shadowOffsetY
   - api.CanvasRenderingContext2D.stroke
+  - api.CanvasRenderingContext2D.stroke.path_parameter
   - api.CanvasRenderingContext2D.strokeRect
   - api.CanvasRenderingContext2D.strokeStyle
   - api.CanvasRenderingContext2D.strokeText

@@ -1,0 +1,20 @@
+name: '<input type="number">'
+description: The `<input type="number">` HTML element represents numeric input data.
+spec: https://html.spec.whatwg.org/multipage/input.html#number-state-(type=number)
+group:
+  - forms
+  - html-elements
+caniuse: input-number
+status:
+  compute_from: html.elements.input.type_number
+compat_features:
+  - api.HTMLInputElement.valueAsNumber
+  - api.HTMLInputElement.max
+  - api.HTMLInputElement.min
+  - api.HTMLInputElement.step
+  - api.HTMLInputElement.stepDown
+  - api.HTMLInputElement.stepUp
+  - html.elements.input.max
+  - html.elements.input.min
+  - html.elements.input.step
+  - html.elements.input.type_number

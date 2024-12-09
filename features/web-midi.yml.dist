@@ -18,6 +18,15 @@ compat_features:
   #   firefox_android: "110"
   - api.Permissions.permission_midi
 
+  # baseline: false
+  # support:
+  #   chrome: "64"
+  #   chrome_android: "64"
+  #   edge: "79"
+  #   firefox: "74"
+  #   firefox_android: "79"
+  - html.elements.iframe.allow.midi
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:

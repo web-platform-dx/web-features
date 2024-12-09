@@ -6,26 +6,6 @@ status:
   support: {}
 compat_features:
   # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - http.headers.Access-Control-Allow-Credentials
-  - http.headers.Access-Control-Allow-Headers
-  - http.headers.Access-Control-Allow-Methods
-  - http.headers.Access-Control-Allow-Origin
-  - http.headers.Access-Control-Expose-Headers
-  - http.headers.Access-Control-Max-Age
-  - http.headers.Access-Control-Request-Headers
-  - http.headers.Access-Control-Request-Method
-
-  # baseline: high
   # baseline_low_date: 2017-10-17
   # baseline_high_date: 2020-04-17
   # support:
@@ -55,46 +35,6 @@ compat_features:
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
   # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "70"
-  #   firefox_android: "79"
-  #   safari: "1"
-  #   safari_ios: "1"
-  - http.headers.Origin
-
-  # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
-  # support:
-  #   chrome: "63"
-  #   chrome_android: "63"
-  #   edge: "79"
-  #   firefox: "69"
-  #   firefox_android: "79"
-  #   safari: "13"
-  #   safari_ios: "13"
-  - http.headers.Access-Control-Allow-Headers.wildcard
-  - http.headers.Access-Control-Allow-Methods.wildcard
-
-  # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
-  # support:
-  #   chrome: "65"
-  #   chrome_android: "65"
-  #   edge: "79"
-  #   firefox: "69"
-  #   firefox_android: "79"
-  #   safari: "13"
-  #   safari_ios: "13"
-  - http.headers.Access-Control-Expose-Headers.wildcard
-
-  # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
-  # support:
   #   chrome: "73"
   #   chrome_android: "73"
   #   edge: "79"
@@ -103,6 +43,18 @@ compat_features:
   #   safari: "12"
   #   safari_ios: "12"
   - http.headers.Cross-Origin-Resource-Policy
+
+  # baseline: low
+  # baseline_low_date: 2024-11-26
+  # support:
+  #   chrome: "66"
+  #   chrome_android: "66"
+  #   edge: "15"
+  #   firefox: "133"
+  #   firefox_android: "133"
+  #   safari: "13"
+  #   safari_ios: "13"
+  - api.Request.Request.init_keepalive_parameter
 
   # baseline: false
   # support:
@@ -120,7 +72,6 @@ compat_features:
   #   safari: "16.1"
   #   safari_ios: "16.1"
   - api.XMLHttpRequest.authorization_removed_cross_origin
-  - http.headers.Authorization.authorization_removed_cross_origin
 
   # baseline: false
   # support:
@@ -135,8 +86,8 @@ compat_features:
   #   firefox_android: "115"
   - http.headers.Sec-Purpose.prefetch
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "131"
+  #   edge: "131"
   - api.Request.duplex
-  - http.headers.Access-Control-Allow-Headers.authorization_not_covered_by_wildcard

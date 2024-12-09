@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "103"
+    edge: "103"
 compat_features:
   # baseline: low
   # baseline_low_date: 2022-09-12
@@ -43,22 +45,13 @@ compat_features:
   - api.Permissions.permission_notifications
 
   # baseline: low
-  # baseline_low_date: 2023-05-18
+  # baseline_low_date: 2024-11-26
   # support:
   #   chrome: "43"
   #   chrome_android: "43"
   #   edge: "79"
-  #   firefox: "46"
-  #   firefox_android: "46"
-  #   safari: "16.5"
-  #   safari_ios: "16.5"
-  - api.Permissions.permission_push
-
-  # baseline: false
-  # support:
-  #   chrome: "43"
-  #   chrome_android: "43"
-  #   edge: "79"
+  #   firefox: "133"
+  #   firefox_android: "133"
   #   safari: "16.4"
   #   safari_ios: "16.4"
   - api.WorkerNavigator.permissions
@@ -91,27 +84,9 @@ compat_features:
   - api.Permissions.permission_background-sync
   - api.Permissions.permission_magnetometer
 
-  # baseline: false
-  # support:
-  #   chrome: "66"
-  #   chrome_android: "66"
-  #   edge: "79"
-  - api.Permissions.permission_payment-handler
-
-  # baseline: false
-  # support:
-  #   chrome: "104"
-  #   chrome_android: "104"
-  #   edge: "104"
-  - api.Permissions.permission_bluetooth
-
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "103"
   #   edge: "103"
   - api.Permissions.permission_local-fonts
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - api.Permissions.permission_ambient-light-sensor

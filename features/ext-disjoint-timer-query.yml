@@ -1,0 +1,15 @@
+name: EXT_disjoint_timer_query WebGL extension
+description: The `EXT_disjoint_timer_query` extension for WebGL 1.0 contexts measures the duration of a set of GL commands, without stalling the rendering pipeline.
+spec: https://registry.khronos.org/webgl/extensions/EXT_disjoint_timer_query/
+group: webgl-extensions
+compat_features:
+  - api.EXT_disjoint_timer_query
+  - api.EXT_disjoint_timer_query.beginQueryEXT
+  - api.EXT_disjoint_timer_query.createQueryEXT
+  - api.EXT_disjoint_timer_query.deleteQueryEXT
+  - api.EXT_disjoint_timer_query.endQueryEXT
+  - api.EXT_disjoint_timer_query.getQueryEXT
+  - api.EXT_disjoint_timer_query.getQueryObjectEXT
+  - api.EXT_disjoint_timer_query.isQueryEXT
+  - api.EXT_disjoint_timer_query.queryCounterEXT
+  - api.WebGLTimerQueryEXT

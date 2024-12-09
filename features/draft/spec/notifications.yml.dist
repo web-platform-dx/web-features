@@ -35,60 +35,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "20"
-  #   edge: "14"
-  #   firefox: "22"
-  #   firefox_android: "22"
-  #   safari: "7"
-  #   safari_ios: "16.4"
-  - api.Notification
-  - api.Notification.Notification
-  - api.Notification.close
-
-  # baseline: false
-  # support:
-  #   chrome: "20"
-  #   edge: "14"
-  #   firefox: "22"
-  #   firefox_android: "22"
-  #   safari: "15"
-  #   safari_ios: "16.4"
-  - api.Notification.requestPermission_static
-
-  # baseline: false
-  # support:
-  #   chrome: "20"
-  #   edge: "14"
-  #   firefox: "26"
-  #   firefox_android: "26"
-  #   safari: "7"
-  #   safari_ios: "16.4"
-  - api.Notification.dir
-
-  # baseline: false
-  # support:
-  #   chrome: "32"
-  #   edge: "14"
-  #   firefox: "22"
-  #   firefox_android: "22"
-  #   safari: "7"
-  #   safari_ios: "16.4"
-  - api.Notification.permission_static
-
-  # baseline: false
-  # support:
-  #   chrome: "33"
-  #   edge: "14"
-  #   firefox: "26"
-  #   firefox_android: "26"
-  #   safari: "11"
-  #   safari_ios: "16.4"
-  - api.Notification.body
-  - api.Notification.lang
-  - api.Notification.title
-
-  # baseline: false
-  # support:
   #   chrome: "40"
   #   chrome_android: "40"
   #   edge: "17"
@@ -96,26 +42,6 @@ compat_features:
   #   firefox_android: "44"
   #   safari: "16"
   - api.ServiceWorkerGlobalScope.notificationclick_event
-
-  # baseline: false
-  # support:
-  #   chrome: "44"
-  #   edge: "16"
-  #   firefox: "34"
-  #   firefox_android: "34"
-  #   safari: "16"
-  #   safari_ios: "16.4"
-  - api.Notification.data
-
-  # baseline: false
-  # support:
-  #   chrome: "47"
-  #   edge: "79"
-  #   firefox: "46"
-  #   firefox_android: "46"
-  #   safari: "15"
-  #   safari_ios: "16.4"
-  - api.Notification.requestPermission_static.returns_promise
 
   # baseline: false
   # support:
@@ -134,10 +60,51 @@ compat_features:
   #   firefox: "22"
   #   firefox_android: "22"
   #   safari: "7"
+  - api.Notification
+  - api.Notification.Notification
   - api.Notification.click_event
+  - api.Notification.close
   - api.Notification.close_event
   - api.Notification.error_event
   - api.Notification.show_event
+
+  # baseline: false
+  # support:
+  #   chrome: "20"
+  #   edge: "14"
+  #   firefox: "22"
+  #   firefox_android: "22"
+  #   safari: "15"
+  - api.Notification.requestPermission_static
+
+  # baseline: false
+  # support:
+  #   chrome: "20"
+  #   edge: "14"
+  #   firefox: "26"
+  #   firefox_android: "26"
+  #   safari: "7"
+  - api.Notification.dir
+
+  # baseline: false
+  # support:
+  #   chrome: "32"
+  #   edge: "14"
+  #   firefox: "22"
+  #   firefox_android: "22"
+  #   safari: "7"
+  - api.Notification.permission_static
+
+  # baseline: false
+  # support:
+  #   chrome: "33"
+  #   edge: "14"
+  #   firefox: "26"
+  #   firefox_android: "26"
+  #   safari: "11"
+  - api.Notification.body
+  - api.Notification.lang
+  - api.Notification.title
 
   # baseline: false
   # support:
@@ -147,6 +114,33 @@ compat_features:
   #   firefox: "44"
   #   firefox_android: "44"
   - api.NotificationEvent.notification
+
+  # baseline: false
+  # support:
+  #   chrome: "43"
+  #   edge: "17"
+  #   firefox: "132"
+  #   firefox_android: "132"
+  #   safari: "16.6"
+  - api.Notification.silent
+
+  # baseline: false
+  # support:
+  #   chrome: "44"
+  #   edge: "16"
+  #   firefox: "34"
+  #   firefox_android: "34"
+  #   safari: "16"
+  - api.Notification.data
+
+  # baseline: false
+  # support:
+  #   chrome: "47"
+  #   edge: "79"
+  #   firefox: "46"
+  #   firefox_android: "46"
+  #   safari: "15"
+  - api.Notification.requestPermission_static.returns_promise
 
   # baseline: false
   # support:
@@ -192,22 +186,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "43"
-  #   edge: "17"
-  #   safari: "16.6"
-  #   safari_ios: "16.6"
-  - api.Notification.silent
-
-  # baseline: false
-  # support:
-  #   chrome: "53"
-  #   edge: "18"
-  #   safari: "17"
-  #   safari_ios: "16.4"
-  - api.Notification.badge
-
-  # baseline: false
-  # support:
   #   chrome: "62"
   #   edge: "79"
   #   firefox: "67"
@@ -241,6 +219,13 @@ compat_features:
   #   chrome_android: "50"
   #   edge: ≤79
   - api.ServiceWorkerRegistration.showNotification.options_renotify_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "53"
+  #   edge: "18"
+  #   safari: "17"
+  - api.Notification.badge
 
   # baseline: false
   # support:

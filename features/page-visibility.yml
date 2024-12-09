@@ -1,0 +1,10 @@
+name: Page visibility
+description: "The `document.visibilityState` and `document.hidden` properties tell you whether the page is visible to the user (for example, it's not minimized or in a background tab)."
+spec: https://html.spec.whatwg.org/multipage/interaction.html#page-visibility
+caniuse: pagevisibility
+status:
+  compute_from: api.Document.hidden
+compat_features:
+  - api.Document.hidden
+  - api.Document.visibilityState
+  - api.Document.visibilitychange_event

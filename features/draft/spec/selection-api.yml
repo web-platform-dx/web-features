@@ -1,9 +1,8 @@
-draft_date: 2024-10-21
+draft_date: 2024-11-06
 name: Selection API
 description: TODO
 spec: https://w3c.github.io/selection-api/
 compat_features:
-  - api.Document
   - api.Document.featurePolicy
   - api.Selection.collapse.accepts_nodes_in_shadow_trees
   - api.Selection.collapse.node_parameter_nullable
@@ -14,6 +13,8 @@ compat_features:
   - api.Selection.setBaseAndExtent.accepts_nodes_in_shadow_trees
 
 # The following features in the spec are already part of web-features:
+# - DOM:
+#   - api.Document
 # - Selection:
 #   - api.Document.getSelection
 #   - api.Document.selectionchange_event

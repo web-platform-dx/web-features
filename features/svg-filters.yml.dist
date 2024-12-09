@@ -178,6 +178,9 @@ compat_features:
   - api.SVGFilterElement.width
   - api.SVGFilterElement.x
   - api.SVGFilterElement.y
+  - css.properties.flood-color
+  - css.properties.flood-opacity
+  - css.properties.lighting-color
   - svg.elements.feColorMatrix
   - svg.elements.feColorMatrix.in
   - svg.elements.feColorMatrix.type
@@ -191,7 +194,6 @@ compat_features:
   - svg.elements.feDisplacementMap.in2
   - svg.elements.feDisplacementMap.scale
   - svg.elements.feFlood
-  - svg.elements.feFlood.flood-color
   - svg.elements.feFuncA
   - svg.elements.feFuncB
   - svg.elements.feFuncG
@@ -374,7 +376,6 @@ compat_features:
   - svg.elements.feDisplacementMap.yChannelSelector
   - svg.elements.feDistantLight.azimuth
   - svg.elements.feDistantLight.elevation
-  - svg.elements.feFlood.flood-opacity
   - svg.elements.feSpecularLighting.surfaceScale
   - svg.elements.feTurbulence.numOctaves
   - svg.elements.feTurbulence.stitchTiles
@@ -476,6 +477,34 @@ compat_features:
   - svg.elements.feComposite.k2
   - svg.elements.feComposite.k3
   - svg.elements.feComposite.k4
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: ≤80
+  #   chrome_android: "80"
+  #   edge: "80"
+  #   firefox: ≤72
+  #   firefox_android: "79"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
+  - css.properties.color-interpolation-filters
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: ≤83
+  #   chrome_android: "83"
+  #   edge: "83"
+  #   firefox: ≤72
+  #   firefox_android: "79"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
+  - css.properties.color-interpolation-filters.auto
+  - css.properties.color-interpolation-filters.linearRGB
+  - css.properties.color-interpolation-filters.sRGB
 
   # baseline: high
   # baseline_low_date: 2021-02-23

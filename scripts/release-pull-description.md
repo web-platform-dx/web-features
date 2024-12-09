@@ -1,1 +1,1 @@
-⚠ Caution! Merging this PR triggers a release. Continue reading before merging. ⚠
+This is a generated release pull request. Don't merge if you're not ready to carry out the release.
