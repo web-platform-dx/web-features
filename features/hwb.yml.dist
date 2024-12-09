@@ -28,11 +28,14 @@ compat_features:
   #   safari_ios: "15"
   - css.types.color.hwb
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2024-09-16
   # support:
   #   chrome: "121"
   #   chrome_android: "121"
   #   edge: "121"
   #   firefox: "122"
   #   firefox_android: "122"
+  #   safari: "18"
+  #   safari_ios: "18"
   - css.types.color.hwb.mixed_type_parameters
