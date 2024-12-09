@@ -1,0 +1,12 @@
+name: Invoker Commands
+description: Adding commandfor and command attributes to elements would allow to assign interactions in a more accessible and declarative way, while reducing bugs and simplifying the amount of JavaScript pages are required to ship for interactivity.
+spec: https://open-ui.org/components/invokers.explainer/
+compat_features:
+  - api.CommandEvent
+  - api.HTMLElement.command_event
+  - api.HTMLButtonElement.command
+  - api.HTMLButtonElement.commandForElement
+  - html.elements.button.command
+  - html.elements.button.commandfor
+
+  
