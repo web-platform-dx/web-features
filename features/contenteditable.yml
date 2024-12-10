@@ -1,0 +1,9 @@
+name: Contenteditable
+description: The `contenteditable` attribute represents whether the element should be editable by the user. If so, the browser modifies its widget to allow editing.
+spec: https://html.spec.whatwg.org/multipage/interaction.html#contenteditable
+caniuse: contenteditable
+compat_features:
+  - api.HTMLElement.contentEditable
+  - api.HTMLElement.contentEditable.plaintext-only
+  - api.HTMLElement.inputMode
+  - api.HTMLElement.isContentEditable
