@@ -429,15 +429,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "110"
-  #   chrome_android: "110"
-  #   edge: "110"
-  #   firefox: "115"
-  #   firefox_android: "115"
-  - http.headers.Sec-Purpose
-
-  # baseline: false
-  # support:
   #   chrome: "116"
   #   chrome_android: "116"
   #   edge: "116"
@@ -482,12 +473,6 @@ compat_features:
   #   chrome_android: "124"
   #   edge: "124"
   - api.Request.targetAddressSpace
-
-  # baseline: false
-  # support:
-  #   firefox: "115"
-  #   firefox_android: "115"
-  - http.headers.Sec-Purpose.prefetch
 
   # baseline: false
   # support:
