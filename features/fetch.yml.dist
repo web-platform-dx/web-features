@@ -327,19 +327,6 @@ compat_features:
   - api.Response.Response.accept_readablestream
 
   # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
-  # support:
-  #   chrome: "73"
-  #   chrome_android: "73"
-  #   edge: "79"
-  #   firefox: "74"
-  #   firefox_android: "79"
-  #   safari: "12"
-  #   safari_ios: "12"
-  - http.headers.Cross-Origin-Resource-Policy
-
-  # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
   # support:
@@ -491,13 +478,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "110"
-  #   chrome_android: "110"
-  #   edge: "110"
-  - http.headers.Sec-Purpose.speculationrules
-
-  # baseline: false
-  # support:
   #   chrome: "124"
   #   chrome_android: "124"
   #   edge: "124"
@@ -512,4 +492,5 @@ compat_features:
   # baseline: false
   # support:
   #   chrome: "131"
+  #   edge: "131"
   - api.Request.duplex
