@@ -7,7 +7,10 @@ status:
     chrome: "128"
     chrome_android: "128"
     edge: "128"
+    firefox: "20"
+    firefox_android: "20"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "128"
@@ -28,11 +31,3 @@ compat_features:
   #   firefox: "23"
   #   firefox_android: "23"
   - api.CaretPosition.getClientRect
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "128"
-  #   chrome_android: "128"
-  #   edge: "128"
-  - api.Document.caretPositionFromPoint.options_parameter
