@@ -120,6 +120,20 @@ compat_features:
   #   safari_ios: "3.2"
   - api.Document.getSelection
 
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "4"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "4"
+  #   firefox_android: "4"
+  #   safari: "5"
+  #   safari_ios: "4"
+  - api.Range.getBoundingClientRect
+  - api.Range.getClientRects
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2017-03-07

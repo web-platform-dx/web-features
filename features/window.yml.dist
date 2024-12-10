@@ -32,8 +32,28 @@ compat_features:
   - api.Window.focus
   - api.Window.frames
   - api.Window.length
+  - api.Window.moveBy
+  - api.Window.moveTo
   - api.Window.name
   - api.Window.opener
+  - api.Window.resizeBy
+  - api.Window.resizeTo
+  - api.Window.screen
+  - api.Window.screenX
+  - api.Window.screenY
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "1.1"
+  #   safari_ios: "1"
+  - api.Window.resize_event
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -61,9 +81,25 @@ compat_features:
   #   safari: "3"
   #   safari_ios: "1"
   - api.Window.frameElement
+  - api.Window.innerHeight
+  - api.Window.innerWidth
   - api.Window.self
   - api.Window.top
   - api.Window.window
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "3"
+  #   safari_ios: "3"
+  - api.Window.outerHeight
+  - api.Window.outerWidth
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -117,6 +153,20 @@ compat_features:
   #   safari: "3"
   #   safari_ios: "1"
   - api.Window.stop
+
+  # baseline: high
+  # baseline_low_date: 2018-12-11
+  # baseline_high_date: 2021-06-11
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "64"
+  #   firefox_android: "64"
+  #   safari: "1"
+  #   safari_ios: "1"
+  - api.Window.screenLeft
+  - api.Window.screenTop
 
   # baseline: false
   # support:
