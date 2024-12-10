@@ -1,0 +1,6 @@
+name: Exception references with exnref (WebAssembly)
+description: When caught, an exception is reified into an exception reference, a value of the new type `exnref`.
+spec: https://github.com/WebAssembly/exception-handling/blob/main/proposals/exception-handling/Exceptions.md
+group: webassembly
+compat_features:
+  - webassembly.exceptionsFinal
