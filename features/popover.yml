@@ -12,11 +12,13 @@ compat_features:
   - api.HTMLButtonElement.popoverTargetAction
   - api.HTMLButtonElement.popoverTargetElement
   - api.HTMLElement.beforetoggle_event
+  - api.HTMLElement.beforetoggle_event.dialog_elements
   - api.HTMLElement.beforetoggle_event.popover_elements
   - api.HTMLElement.hidePopover
   - api.HTMLElement.popover
   - api.HTMLElement.showPopover
   - api.HTMLElement.togglePopover
+  - api.HTMLElement.togglePopover.returns_boolean
   - api.HTMLElement.toggle_event.popover_elements
   - api.HTMLInputElement.popoverTargetAction
   - api.HTMLInputElement.popoverTargetElement
