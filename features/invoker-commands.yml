@@ -1,0 +1,12 @@
+name: Invoker Commands
+description:  The `command` HTML attribute declaratively creates an interaction on a `<button>` element without JavaScript. The interaction target is specified with the `commandFor` HTML attribute on the same `<button>` element. 
+spec: https://open-ui.org/components/invokers.explainer/
+compat_features:
+  - api.CommandEvent
+  - api.HTMLElement.command_event
+  - api.HTMLButtonElement.command
+  - api.HTMLButtonElement.commandForElement
+  - html.elements.button.command
+  - html.elements.button.commandfor
+
+  
