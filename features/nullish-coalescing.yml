@@ -1,0 +1,8 @@
+name: Nullish coalescing
+description: The nullish coalescing (`??`) and nullish coalescing assignment (`??=`) operators return (or assign) its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.
+spec: https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-CoalesceExpression
+snapshot: ecmascript-2020
+group: javascript
+compat_features:
+  - javascript.operators.nullish_coalescing
+  - javascript.operators.nullish_coalescing_assignment
