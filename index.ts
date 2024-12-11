@@ -182,6 +182,15 @@ for (const [key, data] of yamlEntries('features')) {
     features[key] = data;
 }
 
+// Assert that discouraged feature's alternatives are valid
+for (const [id, feature] of Object.entries(features)) {
+    for (const alternative of feature.discouraged?.alternatives ?? []) {
+        if (!(alternative in features)) {
+            throw new Error(`${id}'s alternative "${alternative}" is not a valid feature ID`);
+        }
+    }
+}
+
 const compat = new Compat();
 const browsers: Partial<WebFeaturesData["browsers"]> = {};
 for (const browser of coreBrowserSet.map(identifier => compat.browser(identifier))) {
