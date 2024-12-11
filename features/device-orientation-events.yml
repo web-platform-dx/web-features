@@ -4,3 +4,27 @@ description: The `DeviceMotion` and `DeviceOrientation` events report the moveme
 spec: https://w3c.github.io/deviceorientation/
 caniuse: deviceorientation
 group: sensors
+compat_features:
+  - api.DeviceOrientationEvent
+  - api.DeviceOrientationEvent.alpha
+  - api.DeviceOrientationEvent.beta
+  - api.DeviceOrientationEvent.gamma
+  - api.Window.deviceorientation_event
+  - api.DeviceMotionEvent
+  - api.DeviceMotionEvent.acceleration
+  - api.DeviceMotionEvent.accelerationIncludingGravity
+  - api.DeviceMotionEvent.interval
+  - api.DeviceMotionEvent.rotationRate
+  - api.Window.devicemotion_event
+  - api.Sensor
+  - api.Sensor.activate_event
+  - api.Sensor.activated
+  - api.Sensor.error_event
+  - api.Sensor.hasReading
+  - api.Sensor.reading_event
+  - api.Sensor.start
+  - api.Sensor.stop
+  - api.Sensor.timestamp
+  - api.SensorErrorEvent
+  - api.SensorErrorEvent.SensorErrorEvent
+  - api.SensorErrorEvent.error
