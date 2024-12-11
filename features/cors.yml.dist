@@ -62,6 +62,19 @@ compat_features:
   #   safari_ios: "13"
   - http.headers.Access-Control-Expose-Headers.wildcard
 
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "73"
+  #   chrome_android: "73"
+  #   edge: "79"
+  #   firefox: "74"
+  #   firefox_android: "79"
+  #   safari: "12"
+  #   safari_ios: "12"
+  - http.headers.Cross-Origin-Resource-Policy
+
   # baseline: false
   # support: {}
   - http.headers.Access-Control-Allow-Headers.authorization_not_covered_by_wildcard

@@ -1,0 +1,16 @@
+name: Resource hints
+description: TODO - collection of `<link rel="">` values related to resource hinting. Whole feature or many small ones?
+spec:
+  - https://html.spec.whatwg.org/multipage/links.html#link-type-prefetch
+compat_features:
+  - html.elements.link.rel.dns-prefetch
+  - html.elements.link.rel.expect
+  - html.elements.link.rel.preconnect
+  - html.elements.link.rel.prefetch
+  - html.elements.link.rel.preload
+  - html.elements.link.rel.preload.as-fetch
+  - html.elements.link.rel.preload.as-font
+  - html.elements.link.rel.preload.as-image
+  - html.elements.link.rel.preload.as-script
+  - html.elements.link.rel.preload.as-style
+  - html.elements.link.rel.preload.as-track
