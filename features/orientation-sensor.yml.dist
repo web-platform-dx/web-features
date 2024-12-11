@@ -15,3 +15,15 @@ compat_features:
   - api.OrientationSensor.quaternion
   - api.RelativeOrientationSensor
   - api.RelativeOrientationSensor.RelativeOrientationSensor
+  - api.Sensor
+  - api.Sensor.activate_event
+  - api.Sensor.activated
+  - api.Sensor.error_event
+  - api.Sensor.hasReading
+  - api.Sensor.reading_event
+  - api.Sensor.start
+  - api.Sensor.stop
+  - api.Sensor.timestamp
+  - api.SensorErrorEvent
+  - api.SensorErrorEvent.SensorErrorEvent
+  - api.SensorErrorEvent.error
