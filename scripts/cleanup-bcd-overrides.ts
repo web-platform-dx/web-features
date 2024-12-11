@@ -65,18 +65,21 @@ function cleanup(sourcePath: string): void {
     .map((f) => `${f.id}`)
     .sort();
 
-  const data = (source.contents as any).get("compat_features");
+  const { key: keyData, value: data } = (source.contents as any).items.find(
+    (p) => p.key.value === "compat_features",
+  );
 
   if (data) {
     const features = data.items.map((item) => item.value).sort();
     if (isDeepStrictEqual(features, taggedCompatFeatures)) {
       // Preserve comments around the compat_features key
-      const comments = data.commentBefore ? [data.commentBefore] : [];
+      const comments = keyData.commentBefore ? [keyData.commentBefore] : [];
       data.items.reduce((acc, item) => {
         if (item.commentBefore) acc.push(item.commentBefore);
         if (item.comment) acc.push(item.comment);
         return acc;
       }, comments);
+      if (data.commentBefore) comments.push(data.commentBefore);
       if (data.comment) comments.push(data.comment);
       if (comments.length) {
         source.comment = (source.comment || "") + comments.join("\n");
