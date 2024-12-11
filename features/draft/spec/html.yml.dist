@@ -49,7 +49,6 @@ compat_features:
   #   safari_ios: "1"
   - api.HTMLElement.lang
   - api.HTMLElement.title
-  - api.HTMLFormControlsCollection
   - api.HTMLOptionsCollection
   - api.HTMLOptionsCollection.add
   - api.HTMLOptionsCollection.length
@@ -214,19 +213,6 @@ compat_features:
   #   safari: "1"
   #   safari_ios: "1"
   - html.global_attributes.id
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "33"
-  #   firefox_android: "33"
-  #   safari: "3"
-  #   safari_ios: "1"
-  - api.HTMLFormControlsCollection.namedItem
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -844,14 +830,14 @@ compat_features:
   - api.Document.writeln
 
   # baseline: high
-  # baseline_low_date: 2018-01-23
-  # baseline_high_date: 2020-07-23
+  # baseline_low_date: ≤2018-01-23
+  # baseline_high_date: ≤2020-07-23
   # support:
   #   chrome: ≤64
-  #   chrome_android: "64"
+  #   chrome_android: ≤64
   #   edge: "12"
   #   firefox: ≤58
-  #   firefox_android: "58"
+  #   firefox_android: ≤58
   #   safari: ≤11
   #   safari_ios: ≤11
   - html.global_attributes.title.multi-line_titles
@@ -1310,21 +1296,6 @@ compat_features:
   # baseline_low_date: 2021-09-20
   # baseline_high_date: 2024-03-20
   # support:
-  #   chrome: "77"
-  #   chrome_android: "77"
-  #   edge: "79"
-  #   firefox: "72"
-  #   firefox_android: "79"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - api.FormDataEvent
-  - api.FormDataEvent.FormDataEvent
-  - api.FormDataEvent.formData
-
-  # baseline: high
-  # baseline_low_date: 2021-09-20
-  # baseline_high_date: 2024-03-20
-  # support:
   #   chrome: "81"
   #   chrome_android: "81"
   #   edge: "81"
@@ -1707,7 +1678,7 @@ compat_features:
   #   chrome_android: "25"
   #   edge: "79"
   #   firefox: ≤49
-  #   firefox_android: "49"
+  #   firefox_android: ≤49
   #   safari: "10.1"
   - html.elements.iframe.sandbox.allow-pointer-lock
 
@@ -1827,7 +1798,7 @@ compat_features:
   #   chrome_android: "68"
   #   edge: "79"
   #   firefox: ≤49
-  #   firefox_android: "49"
+  #   firefox_android: ≤49
   - html.elements.iframe.sandbox.allow-orientation-lock
 
   # baseline: false
@@ -2129,13 +2100,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome_android: "80"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - html.elements.meta.name.theme-color
-
-  # baseline: false
-  # support:
   #   chrome: "80"
   #   edge: "79"
   #   firefox: "62"
@@ -2163,6 +2127,13 @@ compat_features:
   #   edge: "90"
   - api.Window.originAgentCluster
   - http.headers.Origin-Agent-Cluster
+
+  # baseline: false
+  # support:
+  #   chrome_android: "92"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - html.elements.meta.name.theme-color
 
   # baseline: false
   # support:
@@ -2317,10 +2288,14 @@ compat_features:
   - api.HTMLButtonElement.command
   - api.HTMLButtonElement.commandForElement
   - api.HTMLElement.command_event
+  - api.HTMLInputElement.alpha
+  - api.HTMLInputElement.colorSpace
   - api.Navigator.authentication
   - html.elements.button.command
   - html.elements.button.commandfor
   - html.elements.hr.hr_in_select
+  - html.elements.input.alpha
+  - html.elements.input.colorspace
   - html.elements.track.kind.descriptions
   - html.global_attributes.autocorrect
   - http.headers.Permissions-Policy.document-domain
