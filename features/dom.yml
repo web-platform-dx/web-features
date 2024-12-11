@@ -92,6 +92,7 @@ compat_features:
   - api.Document.createTreeWalker.whatToShow_filter_parameters_optional
   - api.Document.currentScript
   - api.Document.defaultView
+  - api.Document.designMode
   - api.Document.dir
   - api.Document.doctype
   - api.Document.documentElement
@@ -122,7 +123,10 @@ compat_features:
   - api.Document.referrer
   - api.Document.replaceChildren
   - api.Document.scripts
+  - api.Document.scroll_event
   - api.Document.title
+  - api.Document.write
+  - api.Document.writeln
   - api.DocumentFragment
   - api.DocumentFragment.DocumentFragment
   - api.DocumentFragment.append
@@ -148,6 +152,7 @@ compat_features:
   - api.Element.append
   - api.Element.attributes
   - api.Element.before
+  - api.Element.beforematch_event
   - api.Element.childElementCount
   - api.Element.children
   - api.Element.classList
@@ -164,6 +169,7 @@ compat_features:
   - api.Element.getElementsByTagName.all_elements_selector
   - api.Element.getElementsByTagNameNS
   - api.Element.getElementsByTagNameNS.all_elements_selector
+  - api.Element.getHTML
   - api.Element.hasAttribute
   - api.Element.hasAttributeNS
   - api.Element.hasAttributes
@@ -189,6 +195,7 @@ compat_features:
   - api.Element.removeAttributeNode
   - api.Element.replaceChildren
   - api.Element.replaceWith
+  - api.Element.scroll_event
   - api.Element.setAttribute
   - api.Element.setAttributeNS
   - api.Element.setAttributeNode

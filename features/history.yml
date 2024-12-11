@@ -15,5 +15,9 @@ compat_features:
   - api.History.replaceState
   - api.History.scrollRestoration
   - api.History.state
+  - api.PopStateEvent
+  - api.PopStateEvent.PopStateEvent
+  - api.PopStateEvent.hasUAVisualTransition
+  - api.PopStateEvent.state
   - api.Window.history
   - api.Window.popstate_event

@@ -5,6 +5,13 @@ caniuse: view-transitions
 group: view-transitions
 compat_features:
   - api.Document.startViewTransition
+  - api.PageRevealEvent
+  - api.PageRevealEvent.PageRevealEvent
+  - api.PageRevealEvent.viewTransition
+  - api.PageSwapEvent
+  - api.PageSwapEvent.PageSwapEvent
+  - api.PageSwapEvent.activation
+  - api.PageSwapEvent.viewTransition
   - api.ViewTransition
   - api.ViewTransition.finished
   - api.ViewTransition.ready
