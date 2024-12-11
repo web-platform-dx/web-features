@@ -18,10 +18,13 @@ compat_features:
   - api.Element.fullscreenchange_event
   - api.Element.fullscreenerror_event
   - api.Element.requestFullscreen
+  - api.Element.requestFullscreen.options_navigationUI_parameter
   - api.Element.requestFullscreen.returns_promise
   - api.HTMLIFrameElement.allowFullscreen
   - api.ShadowRoot.fullscreenElement
   - css.selectors.backdrop.fullscreen
   - css.selectors.fullscreen
   - css.selectors.fullscreen.all_elements
+  - html.elements.iframe.allow.fullscreen
   - html.elements.iframe.allowfullscreen
+  - http.headers.Permissions-Policy.fullscreen

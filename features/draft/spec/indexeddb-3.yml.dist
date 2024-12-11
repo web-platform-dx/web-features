@@ -44,7 +44,6 @@ compat_features:
   - api.IDBFactory
   - api.IDBFactory.cmp
   - api.IDBFactory.deleteDatabase
-  - api.IDBFactory.open
   - api.IDBIndex
   - api.IDBIndex.count
   - api.IDBIndex.get
@@ -311,6 +310,19 @@ compat_features:
   #   safari: "10.1"
   #   safari_ios: "10.3"
   - api.IDBCursor.key.binary_keys
+
+  # baseline: high
+  # baseline_low_date: 2021-09-20
+  # baseline_high_date: 2024-03-20
+  # support:
+  #   chrome: "24"
+  #   chrome_android: "25"
+  #   edge: "12"
+  #   firefox: "16"
+  #   firefox_android: "22"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - api.IDBFactory.open
 
   # baseline: high
   # baseline_low_date: 2021-09-20

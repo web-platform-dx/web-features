@@ -90,11 +90,11 @@ compat_features:
   - http.headers.Content-Security-Policy.child-src
 
   # baseline: high
-  # baseline_low_date: 2017-06-06
-  # baseline_high_date: 2019-12-06
+  # baseline_low_date: ≤2017-06-06
+  # baseline_high_date: ≤2019-12-06
   # support:
   #   chrome: ≤59
-  #   chrome_android: "59"
+  #   chrome_android: ≤59
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"

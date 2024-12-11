@@ -189,3 +189,22 @@ compat_features:
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - api.MouseEvent.getModifierState
+
+  # baseline: false
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "6"
+  #   firefox_android: "6"
+  #   safari: "3"
+  - api.Element.contextmenu_event
+
+  # baseline: false
+  # support:
+  #   chrome: "55"
+  #   chrome_android: "55"
+  #   edge: "79"
+  #   firefox: "53"
+  #   firefox_android: "53"
+  - api.Element.auxclick_event
