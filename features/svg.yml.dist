@@ -1426,6 +1426,30 @@ compat_features:
   - svg.global_attributes.fill-rule
 
   # baseline: high
+  # baseline_low_date: ≤2020-03-24
+  # baseline_high_date: ≤2022-09-24
+  # support:
+  #   chrome: ≤80
+  #   chrome_android: ≤80
+  #   edge: ≤80
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
+  - css.properties.stroke-dasharray
+  - css.properties.stroke-dashoffset
+  - css.properties.stroke-linecap
+  - css.properties.stroke-linejoin
+  - css.properties.stroke-miterlimit
+  - css.properties.stroke-width
+  - svg.global_attributes.stroke-dasharray
+  - svg.global_attributes.stroke-dashoffset
+  - svg.global_attributes.stroke-linecap
+  - svg.global_attributes.stroke-linejoin
+  - svg.global_attributes.stroke-miterlimit
+  - svg.global_attributes.stroke-width
+
+  # baseline: high
   # baseline_low_date: 2020-04-13
   # baseline_high_date: 2022-10-13
   # support:
@@ -1492,19 +1516,13 @@ compat_features:
   - css.properties.stop-color
   - css.properties.stop-opacity
   - css.properties.stroke
-  - css.properties.stroke-dasharray
   - css.properties.stroke-dasharray.none
-  - css.properties.stroke-dashoffset
-  - css.properties.stroke-linecap
   - css.properties.stroke-linecap.butt
   - css.properties.stroke-linecap.round
   - css.properties.stroke-linecap.square
-  - css.properties.stroke-linejoin
   - css.properties.stroke-linejoin.bevel
   - css.properties.stroke-linejoin.miter
   - css.properties.stroke-linejoin.round
-  - css.properties.stroke-miterlimit
-  - css.properties.stroke-width
   - css.properties.text-anchor
   - css.properties.vector-effect
   - css.properties.x
@@ -1517,12 +1535,6 @@ compat_features:
   - svg.global_attributes.marker-start
   - svg.global_attributes.shape-rendering
   - svg.global_attributes.stroke
-  - svg.global_attributes.stroke-dasharray
-  - svg.global_attributes.stroke-dashoffset
-  - svg.global_attributes.stroke-linecap
-  - svg.global_attributes.stroke-linejoin
-  - svg.global_attributes.stroke-miterlimit
-  - svg.global_attributes.stroke-width
   - svg.global_attributes.text-anchor
   - svg.global_attributes.vector-effect
 
