@@ -309,3 +309,42 @@ For example, don't assign a feature to both `css` and `fonts`, since `css` is th
 
 Do assign features to groups when there's an opportunity for future feature composition (see [#971](https://github.com/web-platform-dx/web-features/issues/971)).
 For example, several features for the JavaScript `Array` interface are members of the `array` group.
+
+## Discouraged
+
+Rarely, the developers should not use a platform feature because it's the consensus of relevant stakeholders (i.e., a standards body and implementers), even if that feature is still implemented in browsers.
+Mark a feature as discouraged when:
+
+- The specification adopts clear language directing developers to stop using that feature or to prefer to an alternative.
+  This is often through terms like "deprecated", "obsolete", "legacy", or "non-standard."
+  They can also be in the form of one-off recommendations to use alternatives (such as "[…ought to be used instead](https://dom.spec.whatwg.org/#ref-for-concept-event%E2%91%A4%E2%91%A3)").
+
+- The specification removes that feature from the specification without a succession plan (such as moving it to another specification).
+
+- The specification editors intend to discourage or remove the feature from the specification.
+  For example, meeting minutes show that a committee achieved consensus to remove a feature from a specification, even if the removal is not complete.
+
+- All of the (present) implementers issue warnings when using that feature or have published something expressing an intention to unship that feature.
+
+
+Do not mark a feature as discouraged when:
+
+- The feature is merely old or unpopular, no matter how many [_considered harmful_](https://en.wikipedia.org/wiki/Considered_harmful) blog posts it may have garnered.
+  For example, despite the existence of `fetch`, `XMLHttpRequest` is not a discouraged feature.
+
+- The feature is controversial.
+  Opposition to a feature (without consensus) is not sufficient to mark a feature as discouraged.
+  For example, do not mark a feature as discouraged because a vendor has given it a negative standards position.
+
+- The feature is buggy or not implemented in one or more browsers.
+  Contribute to accurate support data instead.
+
+When you set a `discouraged` block in a feature file, do:
+
+- Set a (required) `according_to` URL, linking to evidence that the feature is discouraged.
+  If possible, use the single most broadly applicable reference, such as specification text.
+  If a feature is removed from a specification, link to an issue, pull request, or commit showing the removal.
+
+- Set one or more (optional) `alternative` feature IDs that are whole or partial substitutes for the discouraged feature.
+  An alternative doesn't have to be a narrow drop-in replacement for the discouraged feature but it must handle some use case of the discouraged feature.
+  Guide developers to the most relevant features that would help them stop using the discouraged feature.
