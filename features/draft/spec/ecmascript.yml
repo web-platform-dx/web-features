@@ -1,4 +1,4 @@
-draft_date: 2024-12-11
+draft_date: 2024-12-12
 name: ECMAScript Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
@@ -15,15 +15,11 @@ compat_features:
   - javascript.operators.await.top_level
   - javascript.operators.exponentiation
   - javascript.operators.exponentiation_assignment
-  - javascript.operators.import
-  - javascript.operators.import_meta
   - javascript.operators.logical_and_assignment
   - javascript.operators.logical_or_assignment
   - javascript.operators.nullish_coalescing
   - javascript.operators.nullish_coalescing_assignment
   - javascript.statements.const
-  - javascript.statements.export.namespace
-  - javascript.statements.import.worklet_support
   - javascript.statements.let
   - javascript.statements.try_catch.optional_catch_binding
 
@@ -903,6 +899,14 @@ compat_features:
 #   - javascript.operators.destructuring.computed_property_names
 #   - javascript.operators.destructuring.rest_in_arrays
 #   - javascript.operators.destructuring.rest_in_objects
+# - JavaScript modules:
+#   - javascript.operators.import
+#   - javascript.operators.import_meta
+#   - javascript.statements.export
+#   - javascript.statements.export.default
+#   - javascript.statements.export.namespace
+#   - javascript.statements.import
+#   - javascript.statements.import.worklet_support
 # - JavaScript modules in workers:
 #   - javascript.operators.import.worker_support
 #   - javascript.statements.import.worker_support
@@ -911,10 +915,6 @@ compat_features:
 #   - javascript.operators.spread.spread_in_arrays
 #   - javascript.operators.spread.spread_in_function_calls
 #   - javascript.operators.spread.spread_in_object_literals
-# - JavaScript modules:
-#   - javascript.statements.export
-#   - javascript.statements.export.default
-#   - javascript.statements.import
 # - JavaScript modules in service workers:
 #   - javascript.statements.import.service_worker_support
 # - WebAssembly:
