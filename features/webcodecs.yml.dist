@@ -97,6 +97,34 @@ compat_features:
   - api.VideoDecoder.dequeue_event
   - api.VideoEncoder.dequeue_event
 
+  # baseline: false
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "94"
+  #   firefox: "133"
+  #   firefox_android: "133"
+  - api.ImageDecoder
+  - api.ImageDecoder.ImageDecoder
+  - api.ImageDecoder.close
+  - api.ImageDecoder.complete
+  - api.ImageDecoder.completed
+  - api.ImageDecoder.decode
+  - api.ImageDecoder.isTypeSupported_static
+  - api.ImageDecoder.reset
+  - api.ImageDecoder.tracks
+  - api.ImageDecoder.type
+  - api.ImageTrack
+  - api.ImageTrack.animated
+  - api.ImageTrack.frameCount
+  - api.ImageTrack.repetitionCount
+  - api.ImageTrack.selected
+  - api.ImageTrackList
+  - api.ImageTrackList.length
+  - api.ImageTrackList.ready
+  - api.ImageTrackList.selectedIndex
+  - api.ImageTrackList.selectedTrack
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
@@ -168,32 +196,6 @@ compat_features:
   #   edge: "119"
   #   firefox: "130"
   - api.AudioEncoder.configure.bitrateMode
-
-  # baseline: false
-  # support:
-  #   chrome: "94"
-  #   chrome_android: "94"
-  #   edge: "94"
-  - api.ImageDecoder
-  - api.ImageDecoder.ImageDecoder
-  - api.ImageDecoder.close
-  - api.ImageDecoder.complete
-  - api.ImageDecoder.completed
-  - api.ImageDecoder.decode
-  - api.ImageDecoder.isTypeSupported_static
-  - api.ImageDecoder.reset
-  - api.ImageDecoder.tracks
-  - api.ImageDecoder.type
-  - api.ImageTrack
-  - api.ImageTrack.animated
-  - api.ImageTrack.frameCount
-  - api.ImageTrack.repetitionCount
-  - api.ImageTrack.selected
-  - api.ImageTrackList
-  - api.ImageTrackList.length
-  - api.ImageTrackList.ready
-  - api.ImageTrackList.selectedIndex
-  - api.ImageTrackList.selectedTrack
 
   # baseline: false
   # support:

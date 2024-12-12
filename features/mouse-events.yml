@@ -9,7 +9,9 @@ status:
   compute_from:
     - api.MouseEvent
 compat_features:
+  - api.Element.auxclick_event
   - api.Element.click_event
+  - api.Element.contextmenu_event
   - api.Element.dblclick_event
   - api.Element.mousedown_event
   - api.Element.mouseup_event

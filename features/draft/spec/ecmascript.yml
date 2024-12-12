@@ -1,44 +1,25 @@
-draft_date: 2024-11-19
+draft_date: 2024-12-12
 name: ECMAScript Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
 compat_features:
   - javascript.builtins.Array.@@species
   - javascript.builtins.Array.@@unscopables
-  - javascript.builtins.Error.Error.options_cause_parameter
-  - javascript.builtins.Error.cause
   - javascript.builtins.globalThis
-  - javascript.builtins.parseInt.leading_zero_strings_as_decimal
   - javascript.grammar.hashbang_comments
-  - javascript.grammar.hexadecimal_escape_sequences
   - javascript.grammar.numeric_separators
   - javascript.grammar.template_literals
   - javascript.grammar.template_literals.template_literal_revision
-  - javascript.grammar.trailing_commas
   - javascript.grammar.trailing_commas.trailing_commas_in_functions
-  - javascript.grammar.trailing_commas.trailing_commas_in_object_literals
-  - javascript.grammar.unicode_escape_sequences
   - javascript.grammar.unicode_point_escapes
   - javascript.operators.await.top_level
-  - javascript.operators.destructuring
-  - javascript.operators.destructuring.computed_property_names
-  - javascript.operators.destructuring.rest_in_arrays
-  - javascript.operators.destructuring.rest_in_objects
   - javascript.operators.exponentiation
   - javascript.operators.exponentiation_assignment
-  - javascript.operators.import
-  - javascript.operators.import_meta
   - javascript.operators.logical_and_assignment
   - javascript.operators.logical_or_assignment
   - javascript.operators.nullish_coalescing
   - javascript.operators.nullish_coalescing_assignment
-  - javascript.operators.spread
-  - javascript.operators.spread.spread_in_arrays
-  - javascript.operators.spread.spread_in_function_calls
-  - javascript.operators.spread.spread_in_object_literals
   - javascript.statements.const
-  - javascript.statements.export.namespace
-  - javascript.statements.import.worklet_support
   - javascript.statements.let
   - javascript.statements.try_catch.optional_catch_binding
 
@@ -339,7 +320,11 @@ compat_features:
 #   - javascript.builtins.parseFloat
 #   - javascript.builtins.undefined
 #   - javascript.grammar.boolean_literals
+#   - javascript.grammar.hexadecimal_escape_sequences
 #   - javascript.grammar.null_literal
+#   - javascript.grammar.trailing_commas
+#   - javascript.grammar.trailing_commas.trailing_commas_in_object_literals
+#   - javascript.grammar.unicode_escape_sequences
 #   - javascript.operators.addition
 #   - javascript.operators.addition_assignment
 #   - javascript.operators.assignment
@@ -456,6 +441,9 @@ compat_features:
 #   - javascript.builtins.Date.toTimeString
 #   - javascript.builtins.Date.toUTCString
 #   - javascript.builtins.Date.valueOf
+# - Error cause:
+#   - javascript.builtins.Error.Error.options_cause_parameter
+#   - javascript.builtins.Error.cause
 # - Weak references:
 #   - javascript.builtins.FinalizationRegistry
 #   - javascript.builtins.FinalizationRegistry.FinalizationRegistry
@@ -591,6 +579,7 @@ compat_features:
 #   - javascript.builtins.Number.valueOf
 #   - javascript.builtins.isNaN
 #   - javascript.builtins.parseInt
+#   - javascript.builtins.parseInt.leading_zero_strings_as_decimal
 #   - javascript.grammar.binary_numeric_literals
 #   - javascript.grammar.decimal_numeric_literals
 #   - javascript.grammar.hexadecimal_numeric_literals
@@ -905,13 +894,27 @@ compat_features:
 #   - javascript.operators.new_target
 #   - javascript.operators.super
 #   - javascript.statements.class
+# - Destructuring:
+#   - javascript.operators.destructuring
+#   - javascript.operators.destructuring.computed_property_names
+#   - javascript.operators.destructuring.rest_in_arrays
+#   - javascript.operators.destructuring.rest_in_objects
+# - JavaScript modules:
+#   - javascript.operators.import
+#   - javascript.operators.import_meta
+#   - javascript.statements.export
+#   - javascript.statements.export.default
+#   - javascript.statements.export.namespace
+#   - javascript.statements.import
+#   - javascript.statements.import.worklet_support
 # - JavaScript modules in workers:
 #   - javascript.operators.import.worker_support
 #   - javascript.statements.import.worker_support
-# - JavaScript modules:
-#   - javascript.statements.export
-#   - javascript.statements.export.default
-#   - javascript.statements.import
+# - Spread syntax:
+#   - javascript.operators.spread
+#   - javascript.operators.spread.spread_in_arrays
+#   - javascript.operators.spread.spread_in_function_calls
+#   - javascript.operators.spread.spread_in_object_literals
 # - JavaScript modules in service workers:
 #   - javascript.statements.import.service_worker_support
 # - WebAssembly:
