@@ -1,17 +1,10 @@
-name: Gamepad extensions
-description: The `hand` and `pose` properties of a `Gamepad` object represent the position in space and the hand that WebXR controllers are held in.
+name: Gamepad VR hands and poses
+description: The `hand` and `pose` properties of a `Gamepad` object represent the position in space and the hand that WebVR controllers are held in.
 spec: https://w3c.github.io/gamepad/extensions.html
 group: gamepad
-status:
-  compute_from: api.GamepadPose
 compat_features:
-  - api.Gamepad.displayId
   - api.Gamepad.hand
-  - api.Gamepad.hapticActuators
   - api.Gamepad.pose
-  - api.GamepadHapticActuator.canPlayEffectType
-  - api.GamepadHapticActuator.pulse
-  - api.GamepadHapticActuator.type
   - api.GamepadPose
   - api.GamepadPose.angularAcceleration
   - api.GamepadPose.angularVelocity

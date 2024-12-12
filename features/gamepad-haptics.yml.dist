@@ -47,3 +47,10 @@ compat_features:
   - api.GamepadHapticActuator.playEffect.params_leftTrigger_parameter
   - api.GamepadHapticActuator.playEffect.params_rightTrigger_parameter
   - api.GamepadHapticActuator.playEffect.type_trigger-rumble
+
+  # baseline: false
+  # support:
+  #   firefox: "55"
+  #   firefox_android: "55"
+  - api.Gamepad.hapticActuators
+  - api.GamepadHapticActuator.pulse

@@ -5,6 +5,8 @@ group: gamepad
 status:
   compute_from: api.Gamepad.vibrationActuator
 compat_features:
+  - api.Gamepad.hapticActuators
+  - api.GamepadHapticActuator.pulse
   - api.Gamepad.vibrationActuator
   - api.GamepadHapticActuator
   - api.GamepadHapticActuator.effects
