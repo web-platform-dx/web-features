@@ -103,24 +103,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "67"
-  #   chrome_android: "67"
-  #   edge: "79"
-  - api.Sensor
-  - api.Sensor.activate_event
-  - api.Sensor.activated
-  - api.Sensor.error_event
-  - api.Sensor.hasReading
-  - api.Sensor.reading_event
-  - api.Sensor.start
-  - api.Sensor.stop
-  - api.Sensor.timestamp
-  - api.SensorErrorEvent
-  - api.SensorErrorEvent.SensorErrorEvent
-  - api.SensorErrorEvent.error
-
-  # baseline: false
-  # support:
   #   safari_ios: "14.5"
   - api.DeviceMotionEvent.requestPermission_static
   - api.DeviceOrientationEvent.requestPermission_static

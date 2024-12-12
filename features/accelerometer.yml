@@ -18,15 +18,16 @@ compat_features:
   - api.LinearAccelerationSensor.LinearAccelerationSensor
   - api.Permissions.permission_accelerometer
   - http.headers.Permissions-Policy.accelerometer
-  - api.Sensor
-  - api.Sensor.activate_event
-  - api.Sensor.activated
-  - api.Sensor.error_event
-  - api.Sensor.hasReading
-  - api.Sensor.reading_event
-  - api.Sensor.start
-  - api.Sensor.stop
-  - api.Sensor.timestamp
-  - api.SensorErrorEvent
-  - api.SensorErrorEvent.SensorErrorEvent
-  - api.SensorErrorEvent.error
+# Enable when overlapping keys are allowed, https://github.com/web-platform-dx/web-features/issues/1173
+#  - api.Sensor
+#  - api.Sensor.activate_event
+#  - api.Sensor.activated
+#  - api.Sensor.error_event
+#  - api.Sensor.hasReading
+#  - api.Sensor.reading_event
+#  - api.Sensor.start
+#  - api.Sensor.stop
+#  - api.Sensor.timestamp
+#  - api.SensorErrorEvent
+#  - api.SensorErrorEvent.SensorErrorEvent
+#  - api.SensorErrorEvent.error
