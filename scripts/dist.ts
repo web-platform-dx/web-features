@@ -234,7 +234,6 @@ function toDist(sourcePath: string): YAML.Document {
   });
 
   if (computedStatus.discouraged && !source.discouraged) {
-    const isDraft: boolean = source.draft_date ?? false;
 
     if (!source.draft_date) {
       logger.error(
