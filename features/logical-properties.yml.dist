@@ -143,7 +143,7 @@ compat_features:
   #   chrome_android: "87"
   #   edge: "87"
   #   firefox: ≤72
-  #   firefox_android: "79"
+  #   firefox_android: ≤79
   #   safari: "14.1"
   #   safari_ios: "14.5"
   - css.properties.inset-block-end.auto
@@ -210,3 +210,10 @@ compat_features:
   #   firefox_android: "79"
   - css.properties.overflow-block
   - css.properties.overflow-inline
+
+  # baseline: false
+  # support:
+  #   firefox: "112"
+  #   firefox_android: "112"
+  - css.properties.overflow-block.overlay
+  - css.properties.overflow-inline.overlay

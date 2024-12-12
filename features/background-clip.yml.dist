@@ -6,15 +6,39 @@ status:
   baseline_low_date: 2015-07-29
   baseline_high_date: 2018-01-29
   support:
-    chrome: "1"
-    chrome_android: "18"
+    chrome: "21"
+    chrome_android: "25"
     edge: "12"
-    firefox: "4"
-    firefox_android: "4"
-    safari: "5"
+    firefox: "22"
+    firefox_android: "22"
+    safari: "5.1"
     safari_ios: "5"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "4"
+  #   firefox_android: "4"
+  #   safari: "5"
+  #   safari_ios: "5"
   - css.properties.background-clip
   - css.properties.background-clip.border-box
   - css.properties.background-clip.content-box
   - css.properties.background-clip.padding-box
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "21"
+  #   chrome_android: "25"
+  #   edge: "12"
+  #   firefox: "22"
+  #   firefox_android: "22"
+  #   safari: "5.1"
+  #   safari_ios: "4"
+  - css.properties.background.background-clip

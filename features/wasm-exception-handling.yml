@@ -1,0 +1,17 @@
+name: Exception handling (WebAssembly)
+description: Exceptions break the normal control flow of execution to represent exceptional behavior, such as an error. You can respond to the exception in JavaScript code.
+spec: https://github.com/WebAssembly/exception-handling/blob/main/proposals/exception-handling/legacy/Exceptions.md
+group: webassembly
+status:
+  compute_from: webassembly.api.Exception
+compat_features:
+  - webassembly.exception-handling
+  - webassembly.api.Exception
+  - webassembly.api.Exception.Exception
+  - webassembly.api.Exception.getArg
+  - webassembly.api.Exception.is
+  - webassembly.api.Tag
+  - webassembly.api.Tag.Tag
+  - webassembly.api.Tag.type
+  - webassembly.api.Exception.Exception.options_parameter_traceStack
+  - webassembly.api.Exception.stack

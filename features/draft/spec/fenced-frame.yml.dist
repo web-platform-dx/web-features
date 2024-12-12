@@ -4,23 +4,8 @@
 status:
   baseline: false
   support:
-    chrome: "117"
-    chrome_android: "117"
-    edge: "117"
+    chrome: "115"
+    chrome_android: "115"
+    edge: "115"
 compat_features:
-  - api.Fence
-  - api.Fence.getNestedConfigs
-  - api.Fence.reportEvent
-  - api.Fence.setReportEventDataForAutomaticBeacons
-  - api.FencedFrameConfig
-  - api.FencedFrameConfig.setSharedStorageContext
-  - api.HTMLFencedFrameElement
-  - api.HTMLFencedFrameElement.allow
-  - api.HTMLFencedFrameElement.config
-  - api.HTMLFencedFrameElement.height
-  - api.HTMLFencedFrameElement.width
-  - api.Navigator.deprecatedReplaceInURN
-  - api.Window.fence
-  - html.elements.fencedframe
-  - html.elements.fencedframe.allow
-  - http.headers.Content-Security-Policy.fenced-frame-src
+  - api.HTMLFencedFrameElement.sandbox

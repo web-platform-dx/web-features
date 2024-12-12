@@ -8,22 +8,23 @@ status:
   compute_from: javascript.functions
 compat_features:
   - javascript.builtins.Function
+  - javascript.builtins.Function.@@hasInstance
   - javascript.builtins.Function.Function
   - javascript.builtins.Function.apply
   - javascript.builtins.Function.apply.generic_arrays_as_arguments
   - javascript.builtins.Function.bind
   - javascript.builtins.Function.call
   - javascript.builtins.Function.length
-  - javascript.builtins.Function.toString
   - javascript.builtins.Function.length.configurable_true
   - javascript.builtins.Function.name
   - javascript.builtins.Function.name.configurable_true
   - javascript.builtins.Function.name.inferred_names
-  - javascript.builtins.Function.@@hasInstance
+  - javascript.builtins.Function.toString
+  - javascript.builtins.Function.toString.toString_revision
   - javascript.functions
   - javascript.functions.arguments
-  - javascript.functions.arguments.length
   - javascript.functions.arguments.@@iterator
+  - javascript.functions.arguments.length
   - javascript.functions.arrow_functions
   - javascript.functions.arrow_functions.trailing_comma
   - javascript.functions.block_level_functions
@@ -43,3 +44,4 @@ compat_features:
   - javascript.operators.function.trailing_comma
   - javascript.statements.function
   - javascript.statements.function.trailing_comma_in_parameters
+  - javascript.grammar.trailing_commas.trailing_commas_in_functions

@@ -9,11 +9,25 @@ status:
     chrome: "36"
     chrome_android: "36"
     edge: "12"
-    firefox: ≤16
+    firefox: "16"
     firefox_android: "16"
     safari: "9"
     safari_ios: "9"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "1"
+  #   safari_ios: "1"
+  - css.types.position
+  - css.types.position.keyword_value_syntax
+
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -38,20 +52,50 @@ compat_features:
   - css.types.transform-function.translateX
   - css.types.transform-function.translateY
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
-  # baseline_low_date: 2015-09-30
-  # baseline_high_date: 2018-03-30
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
   # support:
-  #   chrome: "36"
-  #   chrome_android: "36"
+  #   chrome: "2"
+  #   chrome_android: "18"
   #   edge: "12"
-  #   firefox: ≤16
-  #   firefox_android: "16"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - css.properties.transform
+  #   firefox: "3.6"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - css.types.angle
+  - css.types.angle-percentage
+  - css.types.angle.deg
+  - css.types.angle.grad
+  - css.types.angle.rad
 
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "2"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "13"
+  #   firefox_android: "14"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - css.types.angle.turn
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "25"
+  #   chrome_android: "25"
+  #   edge: "12"
+  #   firefox: "13"
+  #   firefox_android: "14"
+  #   safari: "7"
+  #   safari_ios: "7"
+  - css.types.position.four_value_syntax
+
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-09-30
   # baseline_high_date: 2018-03-30
@@ -63,17 +107,19 @@ compat_features:
   #   firefox_android: "16"
   #   safari: "9"
   #   safari_ios: "9"
+  - css.properties.transform
   - css.properties.transform-origin
+  - css.properties.transform-origin.three_value_syntax
 
   # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
+  # baseline_low_date: ≤2020-07-28
+  # baseline_high_date: ≤2023-01-28
   # support:
   #   chrome: "36"
   #   chrome_android: "36"
   #   edge: "12"
   #   firefox: ≤72
-  #   firefox_android: "79"
+  #   firefox_android: ≤79
   #   safari: "9"
   #   safari_ios: "9"
   - css.properties.transform-origin.bottom

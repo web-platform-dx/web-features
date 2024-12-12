@@ -5,51 +5,6 @@ status:
   baseline: false
   support: {}
 compat_features:
-  # baseline: low
-  # baseline_low_date: 2023-10-24
-  # support:
-  #   chrome: "108"
-  #   chrome_android: "108"
-  #   edge: "108"
-  #   firefox: "119"
-  #   firefox_android: "119"
-  #   safari: "16"
-  #   safari_ios: "16"
-  - api.PublicKeyCredential.isConditionalMediationAvailable_static
-
-  # baseline: low
-  # baseline_low_date: 2023-11-21
-  # support:
-  #   chrome: "98"
-  #   chrome_android: "98"
-  #   edge: "98"
-  #   firefox: "120"
-  #   firefox_android: "120"
-  #   safari: "15.5"
-  #   safari_ios: "15.5"
-  - api.PublicKeyCredential.authenticatorAttachment
-
-  # baseline: false
-  # support:
-  #   chrome: "129"
-  #   chrome_android: "129"
-  #   edge: "129"
-  #   firefox: "119"
-  #   firefox_android: "119"
-  - api.PublicKeyCredential.parseCreationOptionsFromJSON_static
-  - api.PublicKeyCredential.parseRequestOptionsFromJSON_static
-  - api.PublicKeyCredential.toJSON
-
-  # baseline: false
-  # support:
-  #   chrome: "88"
-  #   chrome_android: "88"
-  #   edge: "88"
-  - http.headers.Permissions-Policy.publickey-credentials-create
-  - http.headers.Permissions-Policy.publickey-credentials-get
-
-  # baseline: false
-  # support:
-  #   safari: "17.4"
-  #   safari_ios: "17.4"
-  - api.PublicKeyCredential.getClientCapabilities_static
+  - api.PublicKeyCredential.signalAllAcceptedCredentials_static
+  - api.PublicKeyCredential.signalCurrentUserDetails_static
+  - api.PublicKeyCredential.signalUnknownCredential_static

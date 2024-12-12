@@ -1,0 +1,29 @@
+name: Transitions (CSS)
+description: The `transition` shorthand CSS property sets how changes to an element's styles may occur over time. Transitions can be applied to specific CSS properties, all properties, or none.
+spec: https://drafts.csswg.org/css-transitions-2/
+caniuse: css-transitions
+group: transitions
+status:
+  compute_from: css.properties.transition
+compat_features:
+  - api.CSSTransition
+  - api.CSSTransition.transitionProperty
+  - api.Element.transitioncancel_event
+  - api.Element.transitionend_event
+  - api.Element.transitionrun_event
+  - api.Element.transitionstart_event
+  - api.TransitionEvent
+  - api.TransitionEvent.elapsedTime
+  - api.TransitionEvent.propertyName
+  - api.TransitionEvent.pseudoElement
+  - api.TransitionEvent.TransitionEvent
+  - css.properties.transition
+  - css.properties.transition-delay
+  - css.properties.transition-duration
+  - css.properties.transition-property
+  - css.properties.transition-property.all
+  - css.properties.transition-property.IDENT_value
+  - css.properties.transition-property.none
+  - css.properties.transition-timing-function
+  - css.properties.transition-timing-function.jump
+  - css.properties.transition.gradients_can_animate

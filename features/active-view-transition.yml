@@ -1,0 +1,21 @@
+name: Active view transition
+description: The `:active-view-transition` CSS pseudo-class matches the root element when a view transition is active. The `:active-view-transition-type()` CSS pseudo-class matches only when the active view transition was started with the specified type.
+spec: https://drafts.csswg.org/css-view-transitions-2/#the-active-view-transition-pseudo
+group:
+  - view-transitions
+  - selectors
+compat_features:
+  - api.ViewTransition.types
+  - api.ViewTransitionTypeSet
+  - api.ViewTransitionTypeSet.@@iterator
+  - api.ViewTransitionTypeSet.add
+  - api.ViewTransitionTypeSet.clear
+  - api.ViewTransitionTypeSet.delete
+  - api.ViewTransitionTypeSet.entries
+  - api.ViewTransitionTypeSet.forEach
+  - api.ViewTransitionTypeSet.has
+  - api.ViewTransitionTypeSet.keys
+  - api.ViewTransitionTypeSet.size
+  - api.ViewTransitionTypeSet.values
+  - css.selectors.active-view-transition
+  - css.selectors.active-view-transition-type

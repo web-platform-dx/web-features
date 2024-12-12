@@ -1,0 +1,6 @@
+name: Relaxed-width SIMD (WebAssembly)
+description: Relaxed SIMD (Single Instruction Multiple Data) introduces local non-determinism, where the results of the instructions may vary based on hardware support.
+spec: https://github.com/WebAssembly/relaxed-simd/blob/main/proposals/relaxed-simd/Overview.md
+group: webassembly
+compat_features:
+  - webassembly.relaxed-SIMD

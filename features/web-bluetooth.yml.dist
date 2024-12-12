@@ -4,6 +4,14 @@
 compat_features:
   # baseline: false
   # support:
+  #   chrome: "104"
+  #   chrome_android: "104"
+  #   edge: "104"
+  - html.elements.iframe.allow.bluetooth
+  - http.headers.Permissions-Policy.bluetooth
+
+  # baseline: false
+  # support:
   #   chrome_android: "56"
   - api.Bluetooth
   - api.Bluetooth.requestDevice
@@ -73,6 +81,16 @@ compat_features:
   #   chrome_android: "85"
   - api.BluetoothRemoteGATTCharacteristic.writeValueWithResponse
   - api.BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse
+
+  # baseline: false
+  # support:
+  #   chrome_android: "92"
+  - api.Bluetooth.requestDevice.options_filter_manufacturerData_parameter
+
+  # baseline: false
+  # support:
+  #   chrome_android: "114"
+  - api.Bluetooth.requestDevice.options_exclusionFilters_parameter
 
   # baseline: false
   # support: {}

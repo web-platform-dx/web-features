@@ -8,4 +8,6 @@ status:
     chrome_android: "83"
     edge: "83"
 compat_features:
+  - api.Element.beforexrselect_event
   - api.XRSession.domOverlayState
+  - css.selectors.xr-overlay

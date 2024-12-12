@@ -57,17 +57,30 @@ compat_features:
   - css.properties.font-variant.turkic_is
 
   # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
   # support:
-  #   chrome: ≤83
-  #   chrome_android: "83"
-  #   edge: "83"
-  #   firefox: ≤72
-  #   firefox_android: "79"
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
+  #   chrome: "52"
+  #   chrome_android: "52"
+  #   edge: "79"
+  #   firefox: "34"
+  #   firefox_android: "34"
+  #   safari: "9"
+  #   safari_ios: "9"
   - css.properties.font-variant.none
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "52"
+  #   chrome_android: "52"
+  #   edge: "79"
+  #   firefox: "34"
+  #   firefox_android: "34"
+  #   safari: "9.1"
+  #   safari_ios: "9.3"
+  - css.properties.font-variant.css_fonts_shorthand
 
   # baseline: low
   # baseline_low_date: 2023-02-09
@@ -93,3 +106,8 @@ compat_features:
   #   safari: "9.1"
   #   safari_ios: "9.3"
   - css.properties.font-variant.historical-forms
+
+  # baseline: false
+  # support: {}
+  - css.properties.font-variant.greek_accented_characters
+  - css.properties.font-variant.uppercase_eszett

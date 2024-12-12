@@ -66,14 +66,14 @@ compat_features:
   - css.properties.break-inside.paged_context
 
   # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
+  # baseline_low_date: ≤2020-07-28
+  # baseline_high_date: ≤2023-01-28
   # support:
   #   chrome: ≤80
-  #   chrome_android: "80"
+  #   chrome_android: ≤80
   #   edge: ≤80
   #   firefox: ≤72
-  #   firefox_android: "79"
+  #   firefox_android: ≤79
   #   safari: ≤13.1
   #   safari_ios: ≤13.4
   - css.properties.break-after.auto
@@ -94,7 +94,7 @@ compat_features:
   # baseline_high_date: 2024-03-07
   # support:
   #   chrome: ≤80
-  #   chrome_android: "80"
+  #   chrome_android: ≤80
   #   edge: ≤80
   #   firefox: "92"
   #   firefox_android: "92"
@@ -123,7 +123,7 @@ compat_features:
   # baseline: false
   # support:
   #   chrome: ≤80
-  #   chrome_android: "80"
+  #   chrome_android: ≤80
   #   edge: ≤80
   #   safari: ≤13.1
   #   safari_ios: ≤13.4
@@ -146,6 +146,11 @@ compat_features:
   # baseline: false
   # support:
   #   firefox: ≤72
-  #   firefox_android: "79"
+  #   firefox_android: ≤79
   - css.properties.break-after.always
   - css.properties.break-before.always
+
+  # baseline: false
+  # support: {}
+  - css.properties.break-after.paged_context.recto
+  - css.properties.break-before.paged_context.recto

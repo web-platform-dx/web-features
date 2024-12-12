@@ -1,0 +1,5 @@
+name: RegExp.escape()
+description: The `RegExp.escape()` static method takes a string and replaces any characters that are potentially special characters of a regular expression with equivalent escape sequences. For example, `RegExp.escape("[abc]")` returns `"\\[abc\\]"`.
+spec: https://tc39.es/proposal-regex-escaping/
+compat_features:
+  - javascript.builtins.RegExp.escape
