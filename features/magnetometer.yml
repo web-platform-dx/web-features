@@ -1,18 +1,13 @@
-name: Gyroscope
-description: The `Gyroscope` API reads the angular velocity of a device in three dimensions.
-spec: https://w3c.github.io/gyroscope/#gyroscope-interface
+name: Magnetometer
+description: The `Magnetometer` API reads magnetic field sensor data from the device's magnetometer.
+spec: https://w3c.github.io/magnetometer/
 group: sensors
-status:
-  compute_from: api.Gyroscope
 compat_features:
-  - api.Gyroscope
-  - api.Gyroscope.Gyroscope
-  - api.Gyroscope.x
-  - api.Gyroscope.y
-  - api.Gyroscope.z
-  - api.Permissions.permission_gyroscope
-  - html.elements.iframe.allow.gyroscope
-  - http.headers.Permissions-Policy.gyroscope
+  - api.Magnetometer
+  - api.Magnetometer.Magnetometer
+  - api.Magnetometer.x
+  - api.Magnetometer.y
+  - api.Magnetometer.z
 # Enable when overlapping keys are allowed, https://github.com/web-platform-dx/web-features/issues/1173
 #  - api.Sensor
 #  - api.Sensor.activate_event

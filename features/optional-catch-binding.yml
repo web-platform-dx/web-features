@@ -1,0 +1,7 @@
+name: Optional catch binding
+description: Omit the the binding parameter of a `catch` clause when you don't need information about the exception in a `try ... catch` statement.
+spec: https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#sec-try-statement
+group: javascript
+snapshot: ecmascript-2019
+compat_features:
+  - javascript.statements.try_catch.optional_catch_binding
