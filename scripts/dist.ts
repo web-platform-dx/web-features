@@ -234,7 +234,6 @@ function toDist(sourcePath: string): YAML.Document {
   });
 
   if (computedStatus.discouraged && !source.discouraged) {
-
     if (!source.draft_date) {
       logger.error(
         `${id}: contains at least one deprecated compat feature. This is forbidden for published features.`,
