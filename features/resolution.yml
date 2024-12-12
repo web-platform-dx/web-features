@@ -1,0 +1,12 @@
+name: resolution media query
+description: The `resolution` CSS media query sets styles based on the pixel density, or how many pixels a device uses to display a single CSS pixel.
+spec: https://drafts.csswg.org/mediaqueries-5/#resolution
+caniuse: css-media-resolution
+group: media-queries
+compat_features:
+  - css.at-rules.media.resolution
+  - css.types.resolution
+  - css.types.resolution.dpcm
+  - css.types.resolution.dpi
+  - css.types.resolution.dppx
+  - css.types.resolution.x

@@ -1,0 +1,7 @@
+name: File handlers
+description: The `file_handlers` web app manifest member registers an installed web app as a handler for files with specific file extensions or MIME types.
+spec: https://wicg.github.io/manifest-incubations/#file_handlers-member
+group: progressive-web-app
+compat_features:
+  - html.manifest.file_handlers
+  - api.LaunchParams.files

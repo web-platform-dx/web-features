@@ -1,0 +1,28 @@
+name: User agent client hints
+description: The `Sec-CH-UA` HTTP request header and the `navigator.userAgentData` API expose browser and platform information used to vary responses and application logic. User agent client hints are similar to user agent strings but more privacy-preserving and safer to parse.
+spec: https://wicg.github.io/ua-client-hints/
+compat_features:
+  - api.Navigator.userAgentData
+  - api.Navigator.userAgentData.secure_context_required
+  - api.NavigatorUAData
+  - api.NavigatorUAData.brands
+  - api.NavigatorUAData.getHighEntropyValues
+  - api.NavigatorUAData.mobile
+  - api.NavigatorUAData.platform
+  - api.NavigatorUAData.toJSON
+  - api.WorkerNavigator.userAgentData
+  - http.headers.Accept-CH.Sec-CH-UA
+  - http.headers.Accept-CH.Sec-CH-UA-Arch
+  - http.headers.Accept-CH.Sec-CH-UA-Full-Version
+  - http.headers.Accept-CH.Sec-CH-UA-Mobile
+  - http.headers.Accept-CH.Sec-CH-UA-Model
+  - http.headers.Accept-CH.Sec-CH-UA-Platform
+  - http.headers.Accept-CH.Sec-CH-UA-Platform-Version
+  - http.headers.Sec-CH-UA
+  - http.headers.Sec-CH-UA-Arch
+  - http.headers.Sec-CH-UA-Bitness
+  - http.headers.Sec-CH-UA-Full-Version-List
+  - http.headers.Sec-CH-UA-Mobile
+  - http.headers.Sec-CH-UA-Model
+  - http.headers.Sec-CH-UA-Platform
+  - http.headers.Sec-CH-UA-Platform-Version

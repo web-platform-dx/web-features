@@ -1,0 +1,8 @@
+name: DOM overlays for WebXR
+description: A DOM overlay shows 2D DOM content as an interactive, transparent layer on top of a WebXR application's WebGL content and camera image.
+spec: https://immersive-web.github.io/dom-overlays/
+group: webxr
+compat_features:
+  - api.Element.beforexrselect_event
+  - api.XRSession.domOverlayState
+  - css.selectors.xr-overlay

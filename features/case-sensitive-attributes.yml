@@ -1,0 +1,6 @@
+name: Case-sensitive attribute selector
+description: The `s` identifier in a CSS attribute selector matches attribute values case-sensitively in document languages like HTML where attribute values are case-insensitive.
+spec: https://drafts.csswg.org/selectors-4/#attribute-case
+group: selectors
+compat_features:
+  - css.selectors.attribute.case_sensitive_modifier

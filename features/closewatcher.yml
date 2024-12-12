@@ -1,0 +1,11 @@
+name: CloseWatcher
+description: "The `CloseWatcher` API listens and responds to close requests on in-page components, such as modals, popovers, and sidebars."
+spec: https://html.spec.whatwg.org/multipage/interaction.html#close-requests-and-close-watchers
+compat_features:
+  - api.CloseWatcher
+  - api.CloseWatcher.CloseWatcher
+  - api.CloseWatcher.cancel_event
+  - api.CloseWatcher.close
+  - api.CloseWatcher.close_event
+  - api.CloseWatcher.destroy
+  - api.CloseWatcher.requestClose

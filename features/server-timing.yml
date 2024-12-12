@@ -2,3 +2,15 @@ name: Server timing
 description: The `serverTiming` property of the `PerformanceResourceTiming` API contains server timing information about network requests.
 spec: https://w3c.github.io/server-timing/
 caniuse: server-timing
+group: performance
+status:
+  compute_from: api.PerformanceResourceTiming.serverTiming
+compat_features:
+  - api.PerformanceResourceTiming.serverTiming
+  - api.PerformanceServerTiming
+  - api.PerformanceServerTiming.description
+  - api.PerformanceServerTiming.duration
+  - api.PerformanceServerTiming.name
+  - api.PerformanceServerTiming.toJSON
+  - http.headers.Server-Timing
+  - http.headers.Server-Timing.trailer

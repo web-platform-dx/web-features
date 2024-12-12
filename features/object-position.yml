@@ -1,0 +1,8 @@
+name: object-position
+description: The `object-position` CSS property places images, videos, and other replaced elements within their boxes.
+spec: https://drafts.csswg.org/css-images-3/#the-object-position
+# object-fit on caniuse includes both object-fit and object-position.
+# `caniuse: object-fit` is set in object-fit.yml
+compat_features:
+  - css.properties.object-position
+  # TODO: Compat data is unclear on which elements are supported, and needs to be resolved upstream in https://github.com/mdn/browser-compat-data/issues/23586.

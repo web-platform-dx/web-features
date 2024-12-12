@@ -2,7 +2,7 @@
 
 By the [W3C WebDX Community Group](https://www.w3.org/community/webdx/) and contributors.
 
-`web-features` is an effort to build a shared catalog of features of the web platform.
+[`web-features`](https://web-platform-dx.github.io/web-features/web-features/) is an effort to build a shared catalog of features of the web platform.
 By creating a common list of features and their definitions, `web-features` aims to improve understanding of what web developers get and want from the web.
 `web-features` does this by:
 

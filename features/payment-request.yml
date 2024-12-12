@@ -1,0 +1,38 @@
+name: Payment request
+description: The `PaymentRequest` API prompts the user to make a payment through the browser's user interface.
+spec: https://w3c.github.io/payment-request/
+group: payments
+status:
+  compute_from: api.PaymentRequest
+compat_features:
+  - api.PaymentMethodChangeEvent
+  - api.PaymentMethodChangeEvent.PaymentMethodChangeEvent
+  - api.PaymentMethodChangeEvent.methodDetails
+  - api.PaymentMethodChangeEvent.methodName
+  - api.PaymentRequest
+  - api.PaymentRequest.PaymentRequest
+  - api.PaymentRequest.PaymentRequest.secure_payment_confirmation_method
+  - api.PaymentRequest.abort
+  - api.PaymentRequest.canMakePayment
+  - api.PaymentRequest.id
+  - api.PaymentRequest.paymentmethodchange_event
+  - api.PaymentRequest.show
+  - api.PaymentRequestUpdateEvent
+  - api.PaymentRequestUpdateEvent.PaymentRequestUpdateEvent
+  - api.PaymentRequestUpdateEvent.secure_context_required
+  - api.PaymentRequestUpdateEvent.updateWith
+  - api.PaymentResponse
+  - api.PaymentResponse.complete
+  - api.PaymentResponse.details
+  - api.PaymentResponse.methodName
+  - api.PaymentResponse.payerEmail
+  - api.PaymentResponse.payerName
+  - api.PaymentResponse.payerPhone
+  - api.PaymentResponse.payerdetailchange_event
+  - api.PaymentResponse.requestId
+  - api.PaymentResponse.retry
+  - api.PaymentResponse.shippingAddress
+  - api.PaymentResponse.shippingOption
+  - api.PaymentResponse.toJSON
+  - html.elements.iframe.allow.payment
+  - http.headers.Permissions-Policy.payment

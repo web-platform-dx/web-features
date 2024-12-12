@@ -94,7 +94,7 @@ describe("features", function () {
 
       it("returns null for unknown support", function () {
         const edge = browser("edge");
-        const f = feature("svg.elements.animate"); // { version_added: "≤79" }
+        const f = feature("api.IDBCursor.key.binary_keys"); // { version_added: "≤79" }
 
         assert.equal(f.supportedIn(edge.version("12")), null);
         assert.equal(f.supportedIn(edge.version("79")), true);
@@ -126,7 +126,7 @@ describe("features", function () {
       it("returns mixed results for (un)prefixed features", function () {
         const fx = browser("firefox");
         const actual = feature(
-          "css.types.image.gradient.repeating-linear-gradient",
+          "css.types.gradient.repeating-linear-gradient",
         ).supportedInDetails(fx.version("100"));
         assert.equal(actual.length, 3); // unprefixed, -moz-, and -webkit-
         assert(actual.some((s) => s.supported && "qualifications" in s));
@@ -135,7 +135,7 @@ describe("features", function () {
 
       it("returns unknown support before version ranges", function () {
         const edge = browser("edge");
-        const f = feature("svg.elements.animate");
+        const f = feature("api.FileSystem");
         const unknown = f.supportedInDetails(edge.version("12"));
         assert.equal(unknown.length, 1);
         assert.equal(unknown[0]?.supported, null);

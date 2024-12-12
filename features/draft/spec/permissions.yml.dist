@@ -4,12 +4,21 @@
 status:
   baseline: false
   support:
-    chrome: "97"
-    chrome_android: "97"
-    edge: "97"
-    safari: "16.4"
-    safari_ios: "16.4"
+    chrome: "103"
+    edge: "103"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2022-09-12
+  # support:
+  #   chrome: "43"
+  #   chrome_android: "43"
+  #   edge: "79"
+  #   firefox: "46"
+  #   firefox_android: "46"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - api.Permissions.permission_geolocation
+
   # baseline: low
   # baseline_low_date: 2022-09-12
   # support:
@@ -33,12 +42,54 @@ compat_features:
   #   safari: "16.4"
   #   safari_ios: "16.4"
   - api.PermissionStatus.change_event
+  - api.Permissions.permission_notifications
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2024-10-29
+  # support:
+  #   chrome: "64"
+  #   chrome_android: "64"
+  #   edge: "79"
+  #   firefox: "132"
+  #   firefox_android: "132"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - api.Permissions.permission_camera
+  - api.Permissions.permission_microphone
+
+  # baseline: low
+  # baseline_low_date: 2024-11-26
   # support:
   #   chrome: "43"
   #   chrome_android: "43"
   #   edge: "79"
+  #   firefox: "133"
+  #   firefox_android: "133"
   #   safari: "16.4"
   #   safari_ios: "16.4"
   - api.WorkerNavigator.permissions
+
+  # baseline: false
+  # support:
+  #   chrome: "71"
+  #   chrome_android: "71"
+  #   edge: "79"
+  #   firefox: "53"
+  #   firefox_android: "53"
+  - api.Permissions.permission_persistent-storage
+
+  # baseline: false
+  # support:
+  #   chrome: "62"
+  #   chrome_android: "62"
+  #   edge: "79"
+  - api.Permissions.permission_accessibility-events
+  - api.Permissions.permission_background-sync
+  - api.Permissions.permission_magnetometer
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "103"
+  #   edge: "103"
+  - api.Permissions.permission_local-fonts

@@ -1,7 +1,16 @@
 name: Scroll-driven animations
-description: CSS scroll-driven animations are a type of CSS animations that don't run over time, but are instead driven by the user's scroll position.
+description: The `animation-timeline`, `scroll-timeline`, and `view-timeline` CSS properties advance animations based on the user's scroll position.
 spec: https://drafts.csswg.org/scroll-animations-1/
-group: scrolling
+group:
+  - scrolling
+  - animation
+# css.properties.animation.animation-timeline_included is not necessary to use
+# the feature, and is not supported. See https://crbug.com/337580010
+status:
+  compute_from:
+    - css.properties.animation-timeline
+    - css.properties.scroll-timeline
+    - css.properties.view-timeline
 compat_features:
   - api.ScrollTimeline
   - api.ScrollTimeline.axis
@@ -14,19 +23,29 @@ compat_features:
   - api.ViewTimeline.ViewTimeline
   - css.properties.animation-range
   - css.properties.animation-range-end
+  - css.properties.animation-range-end.normal
   - css.properties.animation-range-start
+  - css.properties.animation-range-start.normal
   - css.properties.animation-timeline
   - css.properties.animation-timeline.scroll
   - css.properties.animation-timeline.view
-  # https://crbug.com/337580010 tracks this bug, but setting the timeline via
-  # the animation shorthand is not necessary to use the feature.
-  # - css.properties.animation.animation-timeline_included
+  - css.properties.animation.animation-timeline_included
   - css.properties.scroll-timeline
   - css.properties.scroll-timeline-axis
+  - css.properties.scroll-timeline-axis.block
+  - css.properties.scroll-timeline-axis.inline
+  - css.properties.scroll-timeline-axis.x
+  - css.properties.scroll-timeline-axis.y
   - css.properties.scroll-timeline-name
-  # Later addition (Chrome 116)
-  # - css.properties.timeline-scope
+  - css.properties.timeline-scope
+  - css.properties.timeline-scope.all
+  - css.properties.timeline-scope.none
   - css.properties.view-timeline
   - css.properties.view-timeline-axis
+  - css.properties.view-timeline-axis.block
+  - css.properties.view-timeline-axis.inline
+  - css.properties.view-timeline-axis.x
+  - css.properties.view-timeline-axis.y
   - css.properties.view-timeline-inset
+  - css.properties.view-timeline-inset.auto
   - css.properties.view-timeline-name

@@ -15,12 +15,12 @@ exports[`computeBaseline finds discrepancies with ancestors (checkAncestors) 1`]
   \\"baseline\\": \\"low\\",
   \\"baseline_low_date\\": \\"2023-03-27\\",
   \\"support\\": {
-    \\"chrome\\": \\"33\\",
-    \\"chrome_android\\": \\"42\\",
-    \\"edge\\": \\"14\\",
-    \\"firefox\\": \\"26\\",
-    \\"firefox_android\\": \\"26\\",
-    \\"safari\\": \\"11\\",
+    \\"chrome\\": \\"69\\",
+    \\"chrome_android\\": \\"69\\",
+    \\"edge\\": \\"79\\",
+    \\"firefox\\": \\"64\\",
+    \\"firefox_android\\": \\"64\\",
+    \\"safari\\": \\"16.4\\",
     \\"safari_ios\\": \\"16.4\\"
   }
 }"
@@ -30,12 +30,12 @@ exports[`computeBaseline finds discrepancies with ancestors (checkAncestors) 2`]
 "{
   \\"baseline\\": false,
   \\"support\\": {
-    \\"chrome\\": \\"33\\",
-    \\"edge\\": \\"14\\",
-    \\"firefox\\": \\"26\\",
-    \\"firefox_android\\": \\"26\\",
-    \\"safari\\": \\"11\\",
-    \\"safari_ios\\": \\"16.4\\"
+    \\"chrome\\": \\"71\\",
+    \\"chrome_android\\": \\"71\\",
+    \\"edge\\": \\"79\\",
+    \\"firefox\\": \\"64\\",
+    \\"firefox_android\\": \\"64\\",
+    \\"safari\\": \\"16.4\\"
   }
 }"
 `;
@@ -44,12 +44,12 @@ exports[`computeBaseline finds discrepancies with ancestors (checkAncestors) 3`]
 "{
   \\"baseline\\": false,
   \\"support\\": {
-    \\"chrome\\": \\"33\\",
-    \\"edge\\": \\"14\\",
-    \\"firefox\\": \\"26\\",
-    \\"firefox_android\\": \\"26\\",
-    \\"safari\\": \\"11\\",
-    \\"safari_ios\\": \\"16.4\\"
+    \\"chrome\\": \\"71\\",
+    \\"chrome_android\\": \\"71\\",
+    \\"edge\\": \\"79\\",
+    \\"firefox\\": \\"64\\",
+    \\"firefox_android\\": \\"64\\",
+    \\"safari\\": \\"16.4\\"
   }
 }"
 `;
@@ -125,8 +125,25 @@ Object {
   }
 }",
   "css.types.basic-shape.path": "{
+  \\"baseline\\": \\"high\\",
+  \\"baseline_low_date\\": \\"2020-07-28\\",
+  \\"baseline_high_date\\": \\"2023-01-28\\",
+  \\"support\\": {
+    \\"chrome\\": \\"52\\",
+    \\"chrome_android\\": \\"52\\",
+    \\"edge\\": \\"79\\",
+    \\"firefox\\": \\"72\\",
+    \\"firefox_android\\": \\"79\\",
+    \\"safari\\": \\"13.1\\",
+    \\"safari_ios\\": \\"13\\"
+  }
+}",
+  "css.types.image.cross-fade": "{
   \\"baseline\\": false,
-  \\"support\\": {}
+  \\"support\\": {
+    \\"safari\\": \\"10\\",
+    \\"safari_ios\\": \\"9.3\\"
+  }
 }",
 }
 `;

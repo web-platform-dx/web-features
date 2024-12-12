@@ -298,6 +298,7 @@ compat_features:
   #   firefox_android: "52"
   #   safari: "10"
   #   safari_ios: "10"
+  - javascript.grammar.trailing_commas.trailing_commas_in_functions
   - javascript.operators.function.trailing_comma
   - javascript.statements.function.trailing_comma_in_parameters
 
@@ -326,3 +327,15 @@ compat_features:
   #   safari: "10"
   #   safari_ios: "10"
   - javascript.builtins.Function.name.inferred_names
+
+  # baseline: low
+  # baseline_low_date: 2023-09-18
+  # support:
+  #   chrome: "66"
+  #   chrome_android: "66"
+  #   edge: "79"
+  #   firefox: "54"
+  #   firefox_android: "54"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - javascript.builtins.Function.toString.toString_revision

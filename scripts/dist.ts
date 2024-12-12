@@ -5,7 +5,7 @@ import {
   parseRangedDateString,
   setLogger,
 } from "compute-baseline";
-import { Compat, Feature } from "compute-baseline/browser-compat-data";
+import { Compat, feature, Feature } from "compute-baseline/browser-compat-data";
 import { fdir } from "fdir";
 import fs from "node:fs";
 import path from "node:path";
@@ -201,7 +201,7 @@ function toDist(sourcePath: string): YAML.Document {
   if (source.compat_features) {
     source.compat_features.sort();
     if (isDeepStrictEqual(source.compat_features, taggedCompatFeatures)) {
-      logger.warn(
+      logger.silly(
         `${id}: compat_features override matches tags in @mdn/browser-compat-data. Consider deleting the compat_features override.`,
       );
     }
@@ -234,9 +234,18 @@ function toDist(sourcePath: string): YAML.Document {
   });
 
   if (computedStatus.discouraged) {
-    logger.warn(
-      `${id}: contains at least one deprecated compat feature and can never be Baseline. Was this intentional?`,
-    );
+    const isDraft: boolean = source.draft_date ?? false;
+
+    if (!source.draft_date) {
+      logger.error(
+        `${id}: contains at least one deprecated compat feature. This is forbidden for published features.`,
+      );
+      exitStatus = 1;
+    } else {
+      logger.warn(
+        `${id}: draft contains at least one deprecated compat feature. Was this intentional?`,
+      );
+    }
   }
 
   computedStatus = JSON.parse(computedStatus.toJSON());
@@ -272,6 +281,22 @@ function toDist(sourcePath: string): YAML.Document {
         `${id}: uses compute_from which must not be used when the overall status does not differ from the per-key statuses. Delete the status override.`,
       );
       exitStatus = 1;
+    }
+
+    for (const key of compatFeatures) {
+      const f = feature(key);
+      if (f.deprecated) {
+        if (!source.draft_date) {
+          logger.error(
+            `${id}: contains contains deprecated compat feature ${f.id}. This is forbidden for published features.`,
+          );
+          exitStatus = 1;
+        } else {
+          logger.warn(
+            `${id}: draft contains deprecated compat feature ${f.id}. Was this intentional?`,
+          );
+        }
+      }
     }
   }
 
@@ -353,16 +378,33 @@ const tagsToFeatures: Map<string, Feature[]> = (() => {
   return map;
 })();
 
+/**
+ * Check if a file is an authored definition or dist file. Throws on likely
+ * mistakes, such as `.yaml` files.
+ */
+function isDistOrDistable(path: string): boolean {
+  if (path.endsWith(".yaml.dist") || path.endsWith(".yaml")) {
+    throw new Error(
+      `YAML files must use .yml extension; ${path} has invalid extension`,
+    );
+  }
+  if (path.endsWith(".yml.dist") || path.endsWith(".yml")) {
+    return true;
+  }
+  logger.debug(`${path} is not a likely YAML file, skipping`);
+  return false;
+}
+
 function main() {
-  const filePaths = argv.paths.flatMap((fileOrDirectory) => {
+  const filePaths: string[] = argv.paths.flatMap((fileOrDirectory) => {
     if (fs.statSync(fileOrDirectory).isDirectory()) {
       return new fdir()
         .withBasePath()
-        .filter((fp) => !(fp.endsWith(".md") || fp.endsWith(".DS_Store")))
+        .filter(isDistOrDistable)
         .crawl(fileOrDirectory)
         .sync();
     }
-    return fileOrDirectory;
+    return isDistOrDistable(fileOrDirectory) ? fileOrDirectory : [];
   });
 
   // Map from .yml to .yml.dist to filter out duplicates.

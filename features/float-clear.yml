@@ -1,0 +1,15 @@
+name: float and clear
+description: The `float` CSS property aligns an element to either side of its container, allowing text and inline elements to flow around it. The `clear` CSS property sets whether an element is moved below floating elements that proceed it.
+spec:
+  - https://drafts.csswg.org/css2/#propdef-float
+  - https://drafts.csswg.org/css2/#propdef-clear
+group: css
+compat_features:
+  - css.properties.clear
+  - css.properties.clear.both
+  - css.properties.clear.left
+  - css.properties.clear.right
+  - css.properties.float
+  - css.properties.float.left
+  - css.properties.float.none
+  - css.properties.float.right

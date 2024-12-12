@@ -1,0 +1,11 @@
+name: Hanging punctuation
+description: The `hanging-punctuation` CSS property puts punctuation characters outside of the box to align the text with the rest of the document.
+spec: https://drafts.csswg.org/css-text-4/#hanging-punctuation-property
+# TODO: Enable once  https://github.com/Fyrd/caniuse/issues/7184 is resolved.
+# caniuse: css-hanging-punctuation
+compat_features:
+  - css.properties.hanging-punctuation
+  - css.properties.hanging-punctuation.allow-end
+  - css.properties.hanging-punctuation.first
+  - css.properties.hanging-punctuation.last
+  - css.properties.hanging-punctuation.none

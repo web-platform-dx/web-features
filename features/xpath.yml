@@ -1,0 +1,24 @@
+name: XPath
+description: "The `document.evaluate()` method selects elements in an HTML or XML document based on an expression of XPath, a domain specific language for querying XML documents. Also known as XML Path Language."
+spec: https://dom.spec.whatwg.org/#xpath
+group: xml
+caniuse: document-evaluate-xpath
+compat_features:
+  - api.Document.createExpression
+  - api.Document.evaluate
+  - api.XPathEvaluator
+  - api.XPathEvaluator.XPathEvaluator
+  - api.XPathEvaluator.createExpression
+  - api.XPathEvaluator.evaluate
+  - api.XPathExpression
+  - api.XPathExpression.evaluate
+  - api.XPathResult
+  - api.XPathResult.booleanValue
+  - api.XPathResult.invalidIteratorState
+  - api.XPathResult.iterateNext
+  - api.XPathResult.numberValue
+  - api.XPathResult.resultType
+  - api.XPathResult.singleNodeValue
+  - api.XPathResult.snapshotItem
+  - api.XPathResult.snapshotLength
+  - api.XPathResult.stringValue

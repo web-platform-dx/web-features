@@ -16,7 +16,7 @@ There are multiple ways to contribute to the web-features repository, such as:
 * Adding a missing feature to the repository, from scratch.
 * Adding a missing feature to the repository, by updating a feature that was already drafted.
 * Updating an existing feature, for example to change its name, description, support data, or other fields.
-* Reviewing a pull request that was submitted by someone else, to check if the feature is correctly authored.
+* [Reviewing a pull request](./reviewing.md) that was submitted by someone else, to check if the feature is correctly authored.
 
 In any case, **thank you** for wanting to help. This document will guide you through the process of contributing to the web-features repository.
 
