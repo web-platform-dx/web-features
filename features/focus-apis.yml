@@ -1,6 +1,10 @@
 name: Focus and blur
 description: The `focus` and `blur` element APIs put an element in or out of focus.
 spec: https://html.spec.whatwg.org/multipage/interaction.html#dom-focus-dev
+status:
+  compute_from:
+    - api.HTMLElement.blur
+    - api.HTMLElement.focus
 compat_features:
   - api.HTMLElement.blur
   - api.HTMLElement.focus
