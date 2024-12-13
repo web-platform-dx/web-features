@@ -1,7 +1,7 @@
-name: Resource hints
-description: TODO - collection of `<link rel="">` values related to resource hinting. Whole feature or many small ones?
-spec:
-  - https://html.spec.whatwg.org/multipage/links.html#link-type-prefetch
+name: '<link rel="prefetch">'
+description: The `rel="prefetch"` attribute for the `<link>` HTML element hints to browsers that the user is likely to need the target resource for future navigations, so the browser should preemptively fetch and cache the resource.
+spec: https://html.spec.whatwg.org/multipage/links.html#link-type-prefetch
+caniuse: link-rel-prefetch
 compat_features:
   - html.elements.link.rel.dns-prefetch
   - html.elements.link.rel.expect
