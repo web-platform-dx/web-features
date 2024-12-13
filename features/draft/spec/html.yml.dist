@@ -1464,18 +1464,6 @@ compat_features:
   - api.ElementInternals.shadowRoot
 
   # baseline: low
-  # baseline_low_date: 2023-03-27
-  # support:
-  #   chrome: "105"
-  #   chrome_android: "105"
-  #   edge: "105"
-  #   firefox: "106"
-  #   firefox_android: "106"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - javascript.operators.import_meta.resolve
-
-  # baseline: low
   # baseline_low_date: 2023-04-06
   # support:
   #   chrome: "112"
@@ -2100,13 +2088,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome_android: "80"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - html.elements.meta.name.theme-color
-
-  # baseline: false
-  # support:
   #   chrome: "80"
   #   edge: "79"
   #   firefox: "62"
@@ -2134,6 +2115,13 @@ compat_features:
   #   edge: "90"
   - api.Window.originAgentCluster
   - http.headers.Origin-Agent-Cluster
+
+  # baseline: false
+  # support:
+  #   chrome_android: "92"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - html.elements.meta.name.theme-color
 
   # baseline: false
   # support:
