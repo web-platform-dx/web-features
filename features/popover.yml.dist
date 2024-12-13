@@ -4,8 +4,12 @@
 status:
   baseline: false
   support:
-    firefox: "133"
-    firefox_android: "133"
+    chrome: "114"
+    chrome_android: "114"
+    edge: "114"
+    firefox: "125"
+    firefox_android: "125"
+    safari: "17"
 compat_features:
   # baseline: low
   # baseline_low_date: 2023-11-21
@@ -62,6 +66,7 @@ compat_features:
   #   safari_ios: "17"
   - api.HTMLElement.togglePopover.returns_boolean
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "114"
@@ -72,7 +77,6 @@ compat_features:
   #   safari: "17"
   - api.HTMLElement.popover
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "133"
