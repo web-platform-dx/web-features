@@ -33,7 +33,7 @@ For Baseline iconography, follow this procedure for each feature:
 1. If `status.baseline` is `"low"`, then show an affirmative "newly available" icon.
 1. If `status.baseline` is `false`, then show a "limited availability" non-Baseline icon.
 
-   **Note**: All features that have the `discouraged` property are, by definition, non-Baseline.
+   **Note**: All features that have the `discouraged` property are, by definition, non-Baseline, and `status.baseline` will be `false`.
    If a feature has the `discouraged` property, consider showing a message describing the feature's discouraged status instead of Baseline iconography.
    Showing Baseline iconography for discouraged features may confuse readers.
 
