@@ -185,6 +185,7 @@ for (const [key, data] of yamlEntries('features')) {
 // Assert that discouraged feature's alternatives are valid
 for (const [id, feature] of Object.entries(features)) {
     for (const alternative of feature.discouraged?.alternatives ?? []) {
+        console.log(`Confirming ${alternative} in feature set`);
         if (!(alternative in features)) {
             throw new Error(`${id}'s alternative "${alternative}" is not a valid feature ID`);
         }
