@@ -1,5 +1,5 @@
 name: Prefetch
-description: The `Sec-Purpose` HTTP header with a value of `prefetch` indicates that a resource can be requested in anticipation of a near future navigation, such as a page linked in search results or a link that a user has hovered over.
+description: The `Sec-Purpose` HTTP header with a value of `prefetch` signals that a resource can be requested in anticipation of a near future navigation, such as a page linked in search results or a link that a user has hovered over.
 spec: https://wicg.github.io/nav-speculation/prefetch.html
 compat_features:
   - api.PerformanceResourceTiming.deliveryType.navigational-prefetch
