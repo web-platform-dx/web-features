@@ -3,6 +3,8 @@ description: View transitions allow you to create animated visual transitions be
 spec: https://drafts.csswg.org/css-view-transitions-1/
 caniuse: view-transitions
 group: view-transitions
+status:
+  compute_from: api.ViewTransition
 compat_features:
   - api.Document.startViewTransition
   - api.PageRevealEvent
