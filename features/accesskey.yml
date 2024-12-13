@@ -1,11 +1,7 @@
 name: AccessKey global attribute
-description: The `accessKey` global attribute gives a hint for generating a keyboard shortcut for the current element. The attribute value must consist of a single printable character.
+description: The `accessKey` global attribute and property gives a hint for generating a keyboard shortcut for the current element. The attribute value must consist of a single printable character.
 spec: https://html.spec.whatwg.org/multipage/interaction.html#the-accesskey-attribute
 compat_features:
   - api.HTMLElement.accessKey
   - api.HTMLElement.accessKeyLabel
-#   - api.HTMLElement.autocapitalize
-#   - api.HTMLElement.autocorrect
-#   - api.HTMLElement.click
-#   - api.HTMLElement.command_event
-#   - api.HTMLElement.spellcheck
+  - html.global_attributes.accesskey
