@@ -33,7 +33,11 @@ compat_features:
   - javascript.builtins.parseFloat
   - javascript.builtins.undefined
   - javascript.grammar.boolean_literals
+  - javascript.grammar.hexadecimal_escape_sequences
   - javascript.grammar.null_literal
+  - javascript.grammar.trailing_commas
+  - javascript.grammar.trailing_commas.trailing_commas_in_object_literals
+  - javascript.grammar.unicode_escape_sequences
   - javascript.operators.addition
   - javascript.operators.addition_assignment
   - javascript.operators.assignment

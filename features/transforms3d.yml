@@ -3,3 +3,6 @@ description: The `transform` CSS property and its 3D transform functions allow r
 caniuse: transforms3d
 spec: https://drafts.csswg.org/css-transforms-2/
 group: transforms
+# Compute from unprefixed backface-visibility to sync with caniuse
+status:
+  compute_from: css.properties.backface-visibility

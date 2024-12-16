@@ -142,5 +142,7 @@ compat_features:
   - css.at-rules.media.media_query_values
 
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "78"
+  #   firefox_android: "79"
   - css.types.ratio.number_value
