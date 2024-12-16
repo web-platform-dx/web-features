@@ -45,6 +45,8 @@ compat_features:
   #   chrome: "123"
   #   chrome_android: "123"
   #   edge: "123"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
   - api.PageRevealEvent
   - api.Window.pagereveal_event
 
@@ -53,6 +55,8 @@ compat_features:
   #   chrome: "124"
   #   chrome_android: "124"
   #   edge: "124"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
   - api.PageSwapEvent
   - api.PageSwapEvent.activation
   - api.Window.pageswap_event
@@ -62,6 +66,8 @@ compat_features:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
   - api.PageRevealEvent.viewTransition
   - api.PageSwapEvent.viewTransition
 
@@ -70,5 +76,7 @@ compat_features:
   #   chrome: "128"
   #   chrome_android: "128"
   #   edge: "128"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
   - api.PageRevealEvent.PageRevealEvent
   - api.PageSwapEvent.PageSwapEvent
