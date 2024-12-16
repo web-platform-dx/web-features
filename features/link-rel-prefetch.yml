@@ -3,4 +3,7 @@ description: The `rel="prefetch"` attribute for the `<link>` HTML element hints 
 spec: https://html.spec.whatwg.org/multipage/links.html#link-type-prefetch
 caniuse: link-rel-prefetch
 compat_features:
+  - api.PerformanceResourceTiming.deliveryType.navigational-prefetch
   - html.elements.link.rel.prefetch
+  - http.headers.Sec-Purpose
+  - http.headers.Sec-Purpose.prefetch
