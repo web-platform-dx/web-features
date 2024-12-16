@@ -6,6 +6,8 @@ name: Notifications
 # browsers that have platform-specific requirements and aligns with Caniuse.
 description: The Notifications API displays messages to the user, typically using the notification system of the host operating system.
 spec: https://notifications.spec.whatwg.org/
+status:
+  compute_from: api.Notification.Notification
 compat_features:
   - api.Notification
   - api.Notification.Notification
