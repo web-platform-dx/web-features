@@ -23,7 +23,7 @@ compat_features:
   #   firefox_android: "108"
   #   safari: "15.4"
   #   safari_ios: "15.4"
-  - css.types.calc-constant
+  - css.types.calc-keyword
 
   # baseline: low
   # baseline_low_date: 2023-01-12
@@ -35,7 +35,7 @@ compat_features:
   #   firefox_android: "108"
   #   safari: "15.4"
   #   safari_ios: "15.4"
-  - css.types.calc-constant.pi
+  - css.types.calc-keyword.pi
 
   # baseline: low
   # baseline_low_date: 2023-02-09
@@ -47,7 +47,7 @@ compat_features:
   #   firefox_android: "108"
   #   safari: "15.4"
   #   safari_ios: "15.4"
-  - css.types.calc-constant.e
+  - css.types.calc-keyword.e
 
   # baseline: low
   # baseline_low_date: 2023-06-06
@@ -59,5 +59,5 @@ compat_features:
   #   firefox_android: "114"
   #   safari: "16"
   #   safari_ios: "16"
-  - css.types.calc-constant.NaN
-  - css.types.calc-constant.infinity
+  - css.types.calc-keyword.NaN
+  - css.types.calc-keyword.infinity
