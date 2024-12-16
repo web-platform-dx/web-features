@@ -1464,18 +1464,6 @@ compat_features:
   - api.ElementInternals.shadowRoot
 
   # baseline: low
-  # baseline_low_date: 2023-03-27
-  # support:
-  #   chrome: "105"
-  #   chrome_android: "105"
-  #   edge: "105"
-  #   firefox: "106"
-  #   firefox_android: "106"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - javascript.operators.import_meta.resolve
-
-  # baseline: low
   # baseline_low_date: 2023-04-06
   # support:
   #   chrome: "112"
@@ -1917,9 +1905,28 @@ compat_features:
   #   chrome: "123"
   #   chrome_android: "123"
   #   edge: "123"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
+  - api.PageRevealEvent
+
+  # baseline: false
+  # support:
+  #   chrome: "123"
+  #   chrome_android: "123"
+  #   edge: "123"
   #   firefox: "123"
   #   firefox_android: "123"
   - html.elements.template.shadowrootdelegatesfocus
+
+  # baseline: false
+  # support:
+  #   chrome: "124"
+  #   chrome_android: "124"
+  #   edge: "124"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
+  - api.PageSwapEvent
+  - api.PageSwapEvent.activation
 
   # baseline: false
   # support:
@@ -1932,12 +1939,32 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
+  - api.PageRevealEvent.viewTransition
+  - api.PageSwapEvent.viewTransition
+
+  # baseline: false
+  # support:
   #   chrome: "127"
   #   chrome_android: "127"
   #   edge: "127"
   #   safari: "18"
   #   safari_ios: "18"
   - html.elements.script.type.importmap.integrity
+
+  # baseline: false
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
+  - api.PageRevealEvent.PageRevealEvent
+  - api.PageSwapEvent.PageSwapEvent
 
   # baseline: false
   # support:
@@ -2100,13 +2127,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome_android: "80"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - html.elements.meta.name.theme-color
-
-  # baseline: false
-  # support:
   #   chrome: "80"
   #   edge: "79"
   #   firefox: "62"
@@ -2137,6 +2157,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome_android: "92"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - html.elements.meta.name.theme-color
+
+  # baseline: false
+  # support:
   #   chrome: "99"
   #   chrome_android: "99"
   #   edge: "99"
@@ -2161,18 +2188,9 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "123"
-  #   chrome_android: "123"
-  #   edge: "123"
-  - api.PageRevealEvent
-
-  # baseline: false
-  # support:
   #   chrome: "124"
   #   chrome_android: "124"
   #   edge: "124"
-  - api.PageSwapEvent
-  - api.PageSwapEvent.activation
   - html.elements.link.rel.expect
   - http.headers.Link.expect
 
@@ -2192,17 +2210,7 @@ compat_features:
   #   chrome_android: "126"
   #   edge: "126"
   - api.HTMLImageElement.sizes.auto
-  - api.PageRevealEvent.viewTransition
-  - api.PageSwapEvent.viewTransition
   - html.elements.img.sizes.auto
-
-  # baseline: false
-  # support:
-  #   chrome: "128"
-  #   chrome_android: "128"
-  #   edge: "128"
-  - api.PageRevealEvent.PageRevealEvent
-  - api.PageSwapEvent.PageSwapEvent
 
   # baseline: false
   # support:
