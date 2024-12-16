@@ -280,8 +280,9 @@ compat_features:
   #   safari_ios: "15"
   - api.PerformanceObserver.takeRecords
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-05-31
+  # baseline_high_date: 2024-11-30
   # support:
   #   chrome: "76"
   #   chrome_android: "76"
@@ -292,8 +293,9 @@ compat_features:
   #   safari_ios: "14.5"
   - api.PerformanceMark.PerformanceMark
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-05-31
+  # baseline_high_date: 2024-11-30
   # support:
   #   chrome: "78"
   #   chrome_android: "78"

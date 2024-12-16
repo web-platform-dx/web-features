@@ -1,4 +1,4 @@
-draft_date: 2024-11-27
+draft_date: 2024-12-12
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -12,17 +12,9 @@ compat_features:
   - api.Document.scroll_event
   - api.Document.write
   - api.Document.writeln
-  - api.Element.auxclick_event
-  - api.Element.auxclick_event.type_pointerevent
   - api.Element.beforematch_event
-  - api.Element.blur_event
-  - api.Element.click_event.type_pointerevent
-  - api.Element.focus_event
   - api.Element.getHTML
-  - api.Element.keydown_event
-  - api.Element.keyup_event
   - api.Element.scroll_event
-  - api.Element.wheel_event
   - api.ElementInternals.shadowRoot
   - api.ErrorEvent
   - api.ErrorEvent.ErrorEvent
@@ -34,18 +26,11 @@ compat_features:
   - api.EventSource.EventSource.options_withCredentials_parameter
   - api.EventSource.worker_support
   - api.FileList
-  - api.FormDataEvent
-  - api.FormDataEvent.FormDataEvent
-  - api.FormDataEvent.formData
   - api.HTMLAllCollection
   - api.HTMLAllCollection.item
   - api.HTMLAllCollection.length
   - api.HTMLAllCollection.namedItem
-  - api.HTMLAnchorElement.download
   - api.HTMLAnchorElement.hrefTranslate
-  - api.HTMLAnchorElement.ping
-  - api.HTMLAreaElement.download
-  - api.HTMLAreaElement.ping
   - api.HTMLBaseElement.href.forbid_data_javascript_urls
   - api.HTMLBaseElement.href.forbid_special_characters
   - api.HTMLButtonElement.command
@@ -86,13 +71,11 @@ compat_features:
   - api.HTMLElement.togglePopover.returns_boolean
   - api.HTMLElement.toggle_event.details_elements
   - api.HTMLElement.toggle_event.dialog_elements
-  - api.HTMLFormControlsCollection
-  - api.HTMLFormControlsCollection.namedItem
   - api.HTMLIFrameElement.featurePolicy
   - api.HTMLImageElement.currentSrc
-  - api.HTMLImageElement.sizes
   - api.HTMLImageElement.sizes.auto
-  - api.HTMLImageElement.srcset
+  - api.HTMLInputElement.alpha
+  - api.HTMLInputElement.colorSpace
   - api.HTMLInputElement.showPicker.autocomplete_input
   - api.HTMLInputElement.showPicker.datalist_input
   - api.HTMLInputElement.showPicker.month_input
@@ -118,9 +101,7 @@ compat_features:
   - api.HTMLSourceElement
   - api.HTMLSourceElement.height
   - api.HTMLSourceElement.media
-  - api.HTMLSourceElement.sizes
   - api.HTMLSourceElement.src
-  - api.HTMLSourceElement.srcset
   - api.HTMLSourceElement.type
   - api.HTMLSourceElement.width
   - api.HTMLTemplateElement.shadowRootClonable
@@ -288,15 +269,11 @@ compat_features:
   - api.setInterval.worker_support
   - api.setTimeout.supports_parameters_for_callback
   - api.setTimeout.worker_support
-  - html.elements.a.download
   - html.elements.a.href.href_sms
   - html.elements.a.href.href_top
   - html.elements.a.hreftranslate
   - html.elements.a.implicit_noopener
-  - html.elements.a.ping
   - html.elements.a.text_fragments
-  - html.elements.area.download
-  - html.elements.area.ping
   - html.elements.button.command
   - html.elements.button.commandfor
   - html.elements.form.autocomplete.new-password
@@ -310,11 +287,11 @@ compat_features:
   - html.elements.iframe.allow.wildcards
   - html.elements.iframe.sandbox.allow-orientation-lock
   - html.elements.iframe.sandbox.allow-pointer-lock
-  - html.elements.img.sizes
   - html.elements.img.sizes.auto
-  - html.elements.img.srcset
   - html.elements.img.usemap.case_sensitive
+  - html.elements.input.alpha
   - html.elements.input.autocomplete
+  - html.elements.input.colorspace
   - html.elements.link.rel.dns-prefetch
   - html.elements.link.rel.expect
   - html.elements.link.rel.icon
@@ -337,8 +314,6 @@ compat_features:
   - html.elements.meter.value
   - html.elements.script.type.importmap.integrity
   - html.elements.select.autocomplete
-  - html.elements.source.sizes
-  - html.elements.source.srcset
   - html.elements.summary
   - html.elements.summary.display_list_item
   - html.elements.template.shadowrootclonable
@@ -382,7 +357,6 @@ compat_features:
   - http.status.103
   - http.status.103.preconnect
   - http.status.103.preload
-  - javascript.operators.import_meta.resolve
 
 # The following features in the spec are already part of web-features:
 # - Audio and video tracks:
@@ -738,6 +712,7 @@ compat_features:
 #   - api.Element.securitypolicyviolation_event
 #   - html.elements.meta.http-equiv.content-security-policy
 # - Mouse events:
+#   - api.Element.auxclick_event
 #   - api.Element.click_event
 #   - api.Element.dblclick_event
 #   - api.Element.mousedown_event
@@ -747,12 +722,23 @@ compat_features:
 #   - api.Element.mouseout_event
 #   - api.Element.mouseover_event
 #   - api.Element.mouseup_event
+# - Pointer Events:
+#   - api.Element.auxclick_event.type_pointerevent
+#   - api.Element.click_event.type_pointerevent
+# - Focus events:
+#   - api.Element.blur_event
+#   - api.Element.focus_event
 # - Clipboard events:
 #   - api.Element.copy_event
 #   - api.Element.cut_event
 #   - api.Element.paste_event
-# - input (event):
+# - Input events:
 #   - api.Element.input_event
+# - Keyboard events:
+#   - api.Element.keydown_event
+#   - api.Element.keyup_event
+# - Wheel events:
+#   - api.Element.wheel_event
 # - Form-associated custom elements:
 #   - api.ElementInternals
 #   - api.ElementInternals.checkValidity
@@ -775,6 +761,42 @@ compat_features:
 #   - api.EventSource.readyState
 #   - api.EventSource.url
 #   - api.EventSource.withCredentials
+# - <form>:
+#   - api.FormDataEvent
+#   - api.FormDataEvent.FormDataEvent
+#   - api.FormDataEvent.formData
+#   - api.HTMLFormControlsCollection
+#   - api.HTMLFormControlsCollection.namedItem
+#   - api.HTMLFormElement
+#   - api.HTMLFormElement.acceptCharset
+#   - api.HTMLFormElement.action
+#   - api.HTMLFormElement.autocomplete
+#   - api.HTMLFormElement.elements
+#   - api.HTMLFormElement.encoding
+#   - api.HTMLFormElement.enctype
+#   - api.HTMLFormElement.formdata_event
+#   - api.HTMLFormElement.length
+#   - api.HTMLFormElement.method
+#   - api.HTMLFormElement.name
+#   - api.HTMLFormElement.noValidate
+#   - api.HTMLFormElement.rel
+#   - api.HTMLFormElement.relList
+#   - api.HTMLFormElement.requestSubmit
+#   - api.HTMLFormElement.reset
+#   - api.HTMLFormElement.reset_event
+#   - api.HTMLFormElement.submit
+#   - api.HTMLFormElement.submit_event
+#   - api.HTMLFormElement.target
+#   - html.elements.form
+#   - html.elements.form.accept-charset
+#   - html.elements.form.action
+#   - html.elements.form.autocomplete
+#   - html.elements.form.enctype
+#   - html.elements.form.method
+#   - html.elements.form.name
+#   - html.elements.form.novalidate
+#   - html.elements.form.rel
+#   - html.elements.form.target
 # - <a>:
 #   - api.HTMLAnchorElement
 #   - api.HTMLAnchorElement.hash
@@ -803,6 +825,16 @@ compat_features:
 #   - html.elements.a.rel.noreferrer
 #   - html.elements.a.target
 #   - html.elements.a.type
+# - download:
+#   - api.HTMLAnchorElement.download
+#   - api.HTMLAreaElement.download
+#   - html.elements.a.download
+#   - html.elements.area.download
+# - ping:
+#   - api.HTMLAnchorElement.ping
+#   - api.HTMLAreaElement.ping
+#   - html.elements.a.ping
+#   - html.elements.area.ping
 # - Referrer policy:
 #   - api.HTMLAnchorElement.referrerPolicy
 #   - api.HTMLAnchorElement.referrerPolicy.no-referrer-when-downgrade
@@ -1190,37 +1222,6 @@ compat_features:
 #   - html.elements.fieldset.form
 #   - html.elements.fieldset.name
 #   - html.elements.legend
-# - <form>:
-#   - api.HTMLFormElement
-#   - api.HTMLFormElement.acceptCharset
-#   - api.HTMLFormElement.action
-#   - api.HTMLFormElement.autocomplete
-#   - api.HTMLFormElement.elements
-#   - api.HTMLFormElement.encoding
-#   - api.HTMLFormElement.enctype
-#   - api.HTMLFormElement.formdata_event
-#   - api.HTMLFormElement.length
-#   - api.HTMLFormElement.method
-#   - api.HTMLFormElement.name
-#   - api.HTMLFormElement.noValidate
-#   - api.HTMLFormElement.rel
-#   - api.HTMLFormElement.relList
-#   - api.HTMLFormElement.requestSubmit
-#   - api.HTMLFormElement.reset
-#   - api.HTMLFormElement.reset_event
-#   - api.HTMLFormElement.submit
-#   - api.HTMLFormElement.submit_event
-#   - api.HTMLFormElement.target
-#   - html.elements.form
-#   - html.elements.form.accept-charset
-#   - html.elements.form.action
-#   - html.elements.form.autocomplete
-#   - html.elements.form.enctype
-#   - html.elements.form.method
-#   - html.elements.form.name
-#   - html.elements.form.novalidate
-#   - html.elements.form.rel
-#   - html.elements.form.target
 # - <hr>:
 #   - api.HTMLHRElement
 #   - html.elements.hr
@@ -1306,6 +1307,15 @@ compat_features:
 #   - html.elements.link.fetchpriority
 #   - html.elements.script.fetchpriority
 #   - http.headers.Link.fetchpriority
+# - srcset and sizes:
+#   - api.HTMLImageElement.sizes
+#   - api.HTMLImageElement.srcset
+#   - api.HTMLSourceElement.sizes
+#   - api.HTMLSourceElement.srcset
+#   - html.elements.img.sizes
+#   - html.elements.img.srcset
+#   - html.elements.source.sizes
+#   - html.elements.source.srcset
 # - <input>:
 #   - api.HTMLInputElement
 #   - api.HTMLInputElement.accept
@@ -2302,6 +2312,7 @@ compat_features:
 # - JavaScript modules:
 #   - html.elements.script.nomodule
 #   - html.elements.script.type.module
+#   - javascript.operators.import_meta.resolve
 # - Import maps:
 #   - html.elements.script.type.importmap
 # - <search>:

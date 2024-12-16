@@ -88,7 +88,7 @@ function valid(data: any): boolean {
   if (!valid) {
     // TODO: turn on strictNullChecks, fix all the errors, and replace this with:
     // const errors = validate.errors;
-    const errors = (valid as any).errors as DefinedError[];
+    const errors = validate.errors as DefinedError[];
     for (const error of errors) {
       logger.error(`${error.instancePath}: ${error.message}`);
     }
