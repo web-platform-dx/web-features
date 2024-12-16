@@ -1,0 +1,6 @@
+name: Top-level await
+description: The `await` keyword, when used at the top level of a module (outside of an async function), delays parent module execution until after a promise fulfills.
+spec: https://tc39.es/ecma262/multipage/ecmascript-language-functions-and-classes.html#sec-async-function-definitions
+group: javascript
+compat_features:
+  - javascript.operators.await.top_level
