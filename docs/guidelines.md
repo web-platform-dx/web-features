@@ -316,7 +316,7 @@ Rarely, the developers should not use a platform feature because it's the consen
 Mark a feature as discouraged when:
 
 - The specification adopts clear language directing developers to stop using that feature or to prefer to an alternative.
-  This is often through terms like "deprecated", "obsolete", "legacy", or "non-standard."
+  This is often through terms like "deprecated", "obsolete", or "legacy."
   They can also be in the form of one-off recommendations to use alternatives (such as "[…ought to be used instead](https://dom.spec.whatwg.org/#ref-for-concept-event%E2%91%A4%E2%91%A3)").
 
 - The specification removes that feature from the specification without a succession plan (such as moving it to another specification).
