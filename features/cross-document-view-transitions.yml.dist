@@ -8,7 +8,21 @@ status:
     chrome_android: "126"
     edge: "126"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
   - api.CSSViewTransitionRule
   - api.CSSViewTransitionRule.navigation
   - api.CSSViewTransitionRule.types
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
   - css.at-rules.view-transition
