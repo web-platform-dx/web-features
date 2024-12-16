@@ -40,7 +40,7 @@
               "type": "array"
             }
           ],
-          "description": "caniuse.com identifier"
+          "description": "caniuse.com identifier(s)"
         },
         "compat_features": {
           "description": "Sources of support data for this feature",
@@ -94,7 +94,7 @@
               "type": "array"
             }
           ],
-          "description": "Group identifier"
+          "description": "Group identifier(s)"
         },
         "name": {
           "description": "Short name",
@@ -113,26 +113,22 @@
               "type": "array"
             }
           ],
-          "description": "Snapshot identifier"
+          "description": "Snapshot identifier(s)"
         },
         "spec": {
           "anyOf": [
             {
-              "description": "Specification URL",
-              "format": "uri",
               "type": "string"
             },
             {
               "items": {
-                "description": "Specification URL",
-                "format": "uri",
                 "type": "string"
               },
               "minItems": 2,
               "type": "array"
             }
           ],
-          "description": "Specification"
+          "description": "Specification URL(s)"
         },
         "status": {
           "additionalProperties": false,
@@ -310,7 +306,6 @@
         },
         "spec": {
           "description": "Specification",
-          "format": "uri",
           "type": "string"
         }
       },

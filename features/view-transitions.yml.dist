@@ -7,6 +7,8 @@ status:
     chrome: "124"
     chrome_android: "124"
     edge: "124"
+    safari: "18.2"
+    safari_ios: "18.2"
 compat_features:
   # baseline: false
   # support:
@@ -42,6 +44,8 @@ compat_features:
   #   chrome: "123"
   #   chrome_android: "123"
   #   edge: "123"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
   - api.Window.pagereveal_event
 
   # ⬇️ Same status as overall feature ⬇️
@@ -50,4 +54,6 @@ compat_features:
   #   chrome: "124"
   #   chrome_android: "124"
   #   edge: "124"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
   - api.Window.pageswap_event
