@@ -4,8 +4,11 @@
 status:
   baseline: false
   support:
-    chrome: "56"
-    edge: "79"
+    chrome: "20"
+    edge: "14"
+    firefox: "22"
+    firefox_android: "22"
+    safari: "7"
 compat_features:
   # baseline: low
   # baseline_low_date: 2023-03-27
@@ -53,6 +56,7 @@ compat_features:
   #   safari: "16"
   - api.ServiceWorkerGlobalScope.notificationclose_event
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "20"
