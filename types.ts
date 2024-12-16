@@ -33,13 +33,13 @@ export interface FeatureData {
     description: string;
     /** Short description of the feature, as an HTML string */
     description_html: string;
-    /** Specification */
-    spec: specification_url | [specification_url, specification_url, ...specification_url[]];
-    /** Group identifier */
+    /** Specification URL(s) */
+    spec: string | [string, string, ...string[]];
+    /** Group identifier(s) */
     group?: string | [string, string, ...string[]];
-    /** Snapshot identifier */
+    /** Snapshot identifier(s) */
     snapshot?: string | [string, string, ...string[]];
-    /** caniuse.com identifier */
+    /** caniuse.com identifier(s) */
     caniuse?: string | [string, string, ...string[]];
     /** Whether a feature is considered a "baseline" web platform feature and when it achieved that status */
     status: SupportStatus;
@@ -69,11 +69,6 @@ interface SupportStatus extends Status {
     by_compat_key?: Record<string, Status>
 }
 
-/** Specification URL
- * @format uri
-*/
-type specification_url = string;
-
 export interface GroupData {
     /** Short name */
     name: string;
@@ -85,5 +80,5 @@ export interface SnapshotData {
     /** Short name */
     name: string;
     /** Specification */
-    spec: specification_url;
+    spec: string;
 }
