@@ -74,27 +74,15 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Remove the existing pre-release
-        run: gh release delete "$TAG" --cleanup-tag --yes || true
-        env:
-          GH_TOKEN: ${{ github.token }}
-          TAG: ${{ env.dist_tag }}
-
       - name: Publish pre-release on GitHub
-        run: >
-          gh release create
-          --title "$PACKAGE@$TAG"
-          --notes "$NOTES"
-          --prerelease
-          --latest=false
-          "$TAG"
-          $ARTIFACTS
-        env:
-          GH_TOKEN: ${{ github.token }}
-          PACKAGE: ${{ env.package }}
-          TAG: ${{ env.dist_tag }}
-          NOTES: This is a continuously-updated prerelease generated from `main` (currently at ${{ steps.timestamp_and_hash.outputs.SHORT_HASH }}).
-          ARTIFACTS: >
+        uses: softprops/action-gh-release@c062e08bd532815e2082a85e87e3ef29c3e6d191 #v2.0.8
+        with:
+          files: |
             schemas/data.schema.json
             ${{ env.package_dir }}/data.json
             data.extended.json
+          prerelease: true
+          name: web-features@next
+          body: This is a continuously-updated prerelease generated from `main` (currently at ${{ steps.timestamp_and_hash.outputs.SHORT_HASH }}).
+          tag_name: ${{ env.dist_tag }}
+          fail_on_unmatched_files: true
