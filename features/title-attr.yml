@@ -1,5 +1,5 @@
 name: Title
-description: The `title` global attribute and property represents the title of an element, with the attribute value typically displayed in a 'tooltip' popup when the mouse is over the node.
+description: The `title` global attribute sets information about the element it belongs to. The attribute value is typically displayed as a tooltip that appears on mouse over, which can cause accessibility issues for touch-only, keyboard-only, or assistive technology users.
 spec: https://html.spec.whatwg.org/multipage/dom.html#dom-title
 compat_features:
   - api.HTMLElement.title
