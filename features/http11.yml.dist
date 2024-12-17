@@ -58,7 +58,6 @@ compat_features:
   - http.headers.Referer
   - http.headers.Server
   - http.headers.TE
-  - http.headers.Trailer
   - http.headers.Transfer-Encoding
   - http.headers.User-Agent
   - http.headers.Vary
@@ -83,3 +82,7 @@ compat_features:
   #   safari: "1"
   #   safari_ios: "1"
   - http.headers.Origin
+
+  # baseline: false
+  # support: {}
+  - http.headers.Trailer

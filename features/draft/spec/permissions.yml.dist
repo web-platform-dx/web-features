@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "103"
+    edge: "103"
 compat_features:
   # baseline: low
   # baseline_low_date: 2022-09-12
@@ -42,24 +44,30 @@ compat_features:
   - api.PermissionStatus.change_event
   - api.Permissions.permission_notifications
 
-  # baseline: false
-  # support:
-  #   chrome: "43"
-  #   chrome_android: "43"
-  #   edge: "79"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - api.WorkerNavigator.permissions
-
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2024-10-29
   # support:
   #   chrome: "64"
   #   chrome_android: "64"
   #   edge: "79"
+  #   firefox: "132"
+  #   firefox_android: "132"
   #   safari: "16"
   #   safari_ios: "16"
   - api.Permissions.permission_camera
   - api.Permissions.permission_microphone
+
+  # baseline: low
+  # baseline_low_date: 2024-11-26
+  # support:
+  #   chrome: "43"
+  #   chrome_android: "43"
+  #   edge: "79"
+  #   firefox: "133"
+  #   firefox_android: "133"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.WorkerNavigator.permissions
 
   # baseline: false
   # support:
@@ -79,13 +87,9 @@ compat_features:
   - api.Permissions.permission_background-sync
   - api.Permissions.permission_magnetometer
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "103"
   #   edge: "103"
   - api.Permissions.permission_local-fonts
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - api.Permissions.permission_ambient-light-sensor
