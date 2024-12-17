@@ -61,8 +61,8 @@ compat_features:
   #   chrome_android: "25"
   #   edge: "12"
   #   firefox_android: "18"
-  #   safari_ios: ≤11.3
-  - html.elements.input.type_month
+  #   safari_ios: "18.2"
+  - html.elements.input.type_week
 
   # baseline: false
   # support:
@@ -70,4 +70,5 @@ compat_features:
   #   chrome_android: "25"
   #   edge: "12"
   #   firefox_android: "18"
-  - html.elements.input.type_week
+  #   safari_ios: ≤11.3
+  - html.elements.input.type_month
