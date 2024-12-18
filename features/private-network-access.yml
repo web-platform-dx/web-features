@@ -1,0 +1,7 @@
+name: Private Network Access
+description: The Private Network Access feature is a set of modifications to Fetch and HTML which are intended to mitigate the risks associated with unintentional exposure of devices and servers on a client’s internal network to the web at large.
+spec: https://wicg.github.io/private-network-access/
+compat_features:
+  - http.mixed-content.private_network_access
+  # This key is in the Fetch feature, maybe should move here.
+  #- api.Request.targetAddressSpace
