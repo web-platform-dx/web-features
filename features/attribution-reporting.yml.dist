@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "125"
+    chrome_android: "125"
+    edge: "125"
 compat_features:
   # baseline: false
   # support:
@@ -17,6 +20,7 @@ compat_features:
   - http.headers.Attribution-Reporting-Support
   - http.headers.Permissions-Policy.attribution-reporting
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "125"
