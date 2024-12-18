@@ -6,8 +6,8 @@ status:
   support:
     firefox: "59"
     firefox_android: "59"
-    safari: "12.1"
-    safari_ios: "12.2"
+    safari: "14.1"
+    safari_ios: "14.5"
 compat_features:
   # baseline: false
   # support:
@@ -25,7 +25,6 @@ compat_features:
   - api.VTTRegion.viewportAnchorY
   - api.VTTRegion.width
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "59"
@@ -33,3 +32,12 @@ compat_features:
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - api.VTTRegion.lines
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   firefox: "59"
+  #   firefox_android: "59"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.VTTCue.region
