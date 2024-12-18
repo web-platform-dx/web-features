@@ -7,6 +7,11 @@ status:
     firefox: "55"
     firefox_android: "55"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   firefox: "55"
+  #   firefox_android: "55"
   - api.Gamepad.hand
   - api.Gamepad.pose
   - api.GamepadPose
@@ -18,3 +23,9 @@ compat_features:
   - api.GamepadPose.linearVelocity
   - api.GamepadPose.orientation
   - api.GamepadPose.position
+
+  # baseline: false
+  # support:
+  #   firefox: "91"
+  #   firefox_android: "91"
+  - api.GamepadPose.secure_context_required
