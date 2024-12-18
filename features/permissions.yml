@@ -1,6 +1,8 @@
 name: Permissions
 description: The `navigator.permissions` API checks whether a permission, such as access to geolocation data, has been granted.
-spec: https://w3c.github.io/permissions/
+spec:
+  - https://w3c.github.io/permissions/
+  - https://wicg.github.io/permissions-request/#dom-permissions-request
 caniuse: permissions-api
 group: security
 status:
