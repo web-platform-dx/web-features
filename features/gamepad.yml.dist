@@ -74,3 +74,20 @@ compat_features:
   #   safari_ios: "16"
   - api.Window.gamepadconnected_event
   - api.Window.gamepaddisconnected_event
+
+  # baseline: false
+  # support:
+  #   firefox: "91"
+  #   firefox_android: "91"
+  - api.Gamepad.secure_context_required
+  - api.GamepadButton.secure_context_required
+  - api.GamepadEvent.secure_context_required
+
+  # baseline: false
+  # support:
+  #   firefox: "91"
+  - api.Navigator.getGamepads.secure_context_required
+
+  # baseline: false
+  # support: {}
+  - html.elements.iframe.allow.gamepad
