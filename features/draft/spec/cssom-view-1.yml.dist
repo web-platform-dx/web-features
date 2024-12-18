@@ -397,15 +397,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "128"
-  #   chrome_android: "128"
-  #   edge: "128"
-  #   firefox: "131"
-  #   firefox_android: "131"
-  - api.Document.caretPositionFromPoint.options_parameter
-
-  # baseline: false
-  # support:
   #   chrome: "74"
   #   chrome_android: "74"
   #   edge: "79"
@@ -413,9 +404,9 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "117"
-  #   chrome_android: "117"
-  #   edge: "117"
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
   - api.Window.open.features_parameter_attributionsrc
 
   # baseline: false
@@ -424,6 +415,13 @@ compat_features:
   #   chrome_android: "126"
   #   edge: "126"
   - api.VisualViewport.scrollend_event
+
+  # baseline: false
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  - api.Document.caretPositionFromPoint.options_parameter
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false

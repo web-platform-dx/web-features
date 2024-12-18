@@ -1,4 +1,4 @@
-draft_date: 2024-11-21
+draft_date: 2024-11-27
 name: Permissions
 description: TODO
 spec: https://w3c.github.io/permissions/
@@ -6,7 +6,6 @@ compat_features:
   - api.PermissionStatus.change_event
   - api.PermissionStatus.name
   - api.Permissions.permission_accessibility-events
-  - api.Permissions.permission_ambient-light-sensor
   - api.Permissions.permission_background-sync
   - api.Permissions.permission_camera
   - api.Permissions.permission_geolocation
@@ -26,6 +25,8 @@ compat_features:
 #   - api.Permissions.query
 # - Accelerometer:
 #   - api.Permissions.permission_accelerometer
+# - Ambient light sensor:
+#   - api.Permissions.permission_ambient-light-sensor
 # - Gyroscope:
 #   - api.Permissions.permission_gyroscope
 # - Payment handler:
