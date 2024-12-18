@@ -3,3 +3,12 @@ description: The `navigator.permissions` API checks whether a permission, such a
 spec: https://w3c.github.io/permissions/
 caniuse: permissions-api
 group: security
+status:
+  compute_from: api.PermissionStatus.state
+compat_features:
+  - api.Navigator.permissions
+  - api.PermissionStatus
+  - api.PermissionStatus.state
+  - api.Permissions
+  - api.Permissions.query
+  - api.Permissions.request
