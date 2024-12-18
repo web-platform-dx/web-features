@@ -1,0 +1,7 @@
+name: Device memory
+description: The `Navigator.deviceMemory` API exposes the approximate amount of device memory available, in gigabytes.
+spec: https://www.w3.org/TR/device-memory/
+compat_features:
+  - api.Navigator.deviceMemory
+  - api.WorkerNavigator.deviceMemory
+  - http.headers.Device-Memory
