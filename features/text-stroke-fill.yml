@@ -1,0 +1,10 @@
+name: Text stroke and fill  (compatibility prefixes)
+description: The `-webkit-text-stroke-width` and `-webkit-text-stroke-color` CSS properties set the thickness and color of text outlines. The `-webkit-text-fill-color` sets the color within text character outlines. Both default to the text color.
+group: css
+caniuse: text-stroke
+spec: https://compat.spec.whatwg.org/#text-fill-and-stroking
+compat_features:
+  - css.properties.-webkit-text-fill-color
+  - css.properties.-webkit-text-stroke
+  - css.properties.-webkit-text-stroke-color
+  - css.properties.-webkit-text-stroke-width

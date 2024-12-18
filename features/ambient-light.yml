@@ -1,0 +1,24 @@
+name: Ambient light sensor
+description: The `AmbientLightSensor` interface returns the current light level in lux of the ambient light level around the device.
+spec: https://w3c.github.io/ambient-light/
+group: sensors
+compat_features:
+  - api.AmbientLightSensor
+  - api.AmbientLightSensor.AmbientLightSensor
+  - api.AmbientLightSensor.illuminance
+  - api.Permissions.permission_ambient-light-sensor
+  - html.elements.iframe.allow.ambient-light-sensor
+  - http.headers.Permissions-Policy.ambient-light-sensor
+# Enable when overlapping keys are allowed, https://github.com/web-platform-dx/web-features/issues/1173
+#  - api.Sensor
+#  - api.Sensor.activate_event
+#  - api.Sensor.activated
+#  - api.Sensor.error_event
+#  - api.Sensor.hasReading
+#  - api.Sensor.reading_event
+#  - api.Sensor.start
+#  - api.Sensor.stop
+#  - api.Sensor.timestamp
+#  - api.SensorErrorEvent
+#  - api.SensorErrorEvent.SensorErrorEvent
+#  - api.SensorErrorEvent.error

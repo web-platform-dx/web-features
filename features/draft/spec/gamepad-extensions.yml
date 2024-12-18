@@ -1,21 +1,26 @@
-draft_date: 2024-10-21
+draft_date: 2024-12-18
 name: Gamepad Extensions
 description: TODO
 spec: https://w3c.github.io/gamepad/extensions.html
 compat_features:
-  - api.Gamepad
-  - api.Gamepad.hand
-  - api.Gamepad.hapticActuators
-  - api.Gamepad.pose
   - api.Gamepad.secure_context_required
-  - api.GamepadHapticActuator.pulse
-  - api.GamepadPose
-  - api.GamepadPose.angularAcceleration
-  - api.GamepadPose.angularVelocity
-  - api.GamepadPose.hasOrientation
-  - api.GamepadPose.hasPosition
-  - api.GamepadPose.linearAcceleration
-  - api.GamepadPose.linearVelocity
-  - api.GamepadPose.orientation
-  - api.GamepadPose.position
   - api.GamepadPose.secure_context_required
+
+# The following features in the spec are already part of web-features:
+# - Gamepad:
+#   - api.Gamepad
+# - Gamepad VR hands and poses:
+#   - api.Gamepad.hand
+#   - api.Gamepad.pose
+#   - api.GamepadPose
+#   - api.GamepadPose.angularAcceleration
+#   - api.GamepadPose.angularVelocity
+#   - api.GamepadPose.hasOrientation
+#   - api.GamepadPose.hasPosition
+#   - api.GamepadPose.linearAcceleration
+#   - api.GamepadPose.linearVelocity
+#   - api.GamepadPose.orientation
+#   - api.GamepadPose.position
+# - Gamepad haptic feedback:
+#   - api.Gamepad.hapticActuators
+#   - api.GamepadHapticActuator.pulse

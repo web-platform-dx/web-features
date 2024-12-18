@@ -1,0 +1,20 @@
+name: WebVTT cue settings
+description: The `VTTCue` API updates various aspects of cues dynamically, such as alignment, size and position.
+spec: https://w3c.github.io/webvtt/#the-vttcue-interface
+status:
+  compute_from:
+    - api.VTTCue.align
+    - api.VTTCue.line
+    - api.VTTCue.position
+    - api.VTTCue.size
+    - api.VTTCue.snapToLines
+    - api.VTTCue.vertical
+compat_features:
+  - api.VTTCue.align
+  - api.VTTCue.line
+  - api.VTTCue.position
+  - api.VTTCue.size
+  - api.VTTCue.snapToLines
+  - api.VTTCue.vertical
+  - css.selectors.cue
+  - css.selectors.cue.selector_argument
