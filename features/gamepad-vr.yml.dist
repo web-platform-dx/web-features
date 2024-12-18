@@ -4,9 +4,10 @@
 status:
   baseline: false
   support:
-    firefox: "91"
-    firefox_android: "91"
+    firefox: "55"
+    firefox_android: "55"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "55"
@@ -23,7 +24,6 @@ compat_features:
   - api.GamepadPose.orientation
   - api.GamepadPose.position
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "91"
