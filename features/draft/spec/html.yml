@@ -1,4 +1,4 @@
-draft_date: 2024-12-09
+draft_date: 2024-12-18
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -115,31 +115,6 @@ compat_features:
   - api.MediaError.message
   - api.MessagePort.worker_support
   - api.Navigator.authentication
-  - api.Navigator.registerProtocolHandler.scheme_parameter_bitcoin
-  - api.Navigator.registerProtocolHandler.scheme_parameter_ftp
-  - api.Navigator.registerProtocolHandler.scheme_parameter_ftps
-  - api.Navigator.registerProtocolHandler.scheme_parameter_geo
-  - api.Navigator.registerProtocolHandler.scheme_parameter_im
-  - api.Navigator.registerProtocolHandler.scheme_parameter_irc
-  - api.Navigator.registerProtocolHandler.scheme_parameter_ircs
-  - api.Navigator.registerProtocolHandler.scheme_parameter_magnet
-  - api.Navigator.registerProtocolHandler.scheme_parameter_mailto
-  - api.Navigator.registerProtocolHandler.scheme_parameter_matrix
-  - api.Navigator.registerProtocolHandler.scheme_parameter_mms
-  - api.Navigator.registerProtocolHandler.scheme_parameter_news
-  - api.Navigator.registerProtocolHandler.scheme_parameter_nntp
-  - api.Navigator.registerProtocolHandler.scheme_parameter_openpgp4fpr
-  - api.Navigator.registerProtocolHandler.scheme_parameter_sftp
-  - api.Navigator.registerProtocolHandler.scheme_parameter_sip
-  - api.Navigator.registerProtocolHandler.scheme_parameter_sms
-  - api.Navigator.registerProtocolHandler.scheme_parameter_smsto
-  - api.Navigator.registerProtocolHandler.scheme_parameter_ssh
-  - api.Navigator.registerProtocolHandler.scheme_parameter_tel
-  - api.Navigator.registerProtocolHandler.scheme_parameter_urn
-  - api.Navigator.registerProtocolHandler.scheme_parameter_webcal
-  - api.Navigator.registerProtocolHandler.scheme_parameter_wtai
-  - api.Navigator.registerProtocolHandler.scheme_parameter_xmpp
-  - api.Navigator.registerProtocolHandler.secure_context_required
   - api.NotRestoredReasonDetails.toJSON
   - api.NotRestoredReasons.toJSON
   - api.OffscreenCanvas.convertToBlob.option_type_parameter_webp
@@ -304,7 +279,6 @@ compat_features:
   - html.elements.link.rel.preload.as-script
   - html.elements.link.rel.preload.as-style
   - html.elements.link.rel.preload.as-track
-  - html.elements.meta.name.theme-color
   - html.elements.meter
   - html.elements.meter.high
   - html.elements.meter.low
@@ -357,7 +331,6 @@ compat_features:
   - http.status.103
   - http.status.103.preconnect
   - http.status.103.preload
-  - javascript.operators.import_meta.resolve
 
 # The following features in the spec are already part of web-features:
 # - Audio and video tracks:
@@ -2019,6 +1992,31 @@ compat_features:
 #   - api.Navigator.pdfViewerEnabled
 # - registerProtocolHandler:
 #   - api.Navigator.registerProtocolHandler
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_bitcoin
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_ftp
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_ftps
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_geo
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_im
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_irc
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_ircs
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_magnet
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_mailto
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_matrix
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_mms
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_news
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_nntp
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_openpgp4fpr
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_sftp
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_sip
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_sms
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_smsto
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_ssh
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_tel
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_urn
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_webcal
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_wtai
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_xmpp
+#   - api.Navigator.registerProtocolHandler.secure_context_required
 #   - api.Navigator.unregisterProtocolHandler
 # - User activation:
 #   - api.Navigator.userActivation
@@ -2300,6 +2298,8 @@ compat_features:
 #   - html.elements.mark
 # - color-scheme:
 #   - html.elements.meta.name.color-scheme
+# - <meta name="theme-color">:
+#   - html.elements.meta.name.theme-color
 # - <nav>:
 #   - html.elements.nav
 # - <ruby>:
@@ -2313,6 +2313,7 @@ compat_features:
 # - JavaScript modules:
 #   - html.elements.script.nomodule
 #   - html.elements.script.type.module
+#   - javascript.operators.import_meta.resolve
 # - Import maps:
 #   - html.elements.script.type.importmap
 # - <search>:

@@ -1,10 +1,12 @@
-draft_date: 2024-10-21
-name: Geometry Interfaces Module Level 1
-description: TODO
+name: DOM Geometry
+description: The `DOMMatrix`, `DOMPoint`, `DOMQuad` and `DOMRect` interfaces offer a way to represent points, rectangles, quadrilaterals and transformation matrices within JavaScript. They can be used in transformations in CSS, `<canvas>`, and SVG.
 spec: https://drafts.fxtf.org/geometry-1/
+status:
+  compute_from: api.DOMMatrix
 compat_features:
   - api.DOMMatrix
   - api.DOMMatrix.DOMMatrix
+  - api.DOMMatrix.worker_support
   - api.DOMMatrix.a
   - api.DOMMatrix.b
   - api.DOMMatrix.c
@@ -42,9 +44,9 @@ compat_features:
   - api.DOMMatrix.skewXSelf
   - api.DOMMatrix.skewYSelf
   - api.DOMMatrix.translateSelf
-  - api.DOMMatrix.worker_support
   - api.DOMMatrixReadOnly
   - api.DOMMatrixReadOnly.DOMMatrixReadOnly
+  - api.DOMMatrixReadOnly.worker_support
   - api.DOMMatrixReadOnly.a
   - api.DOMMatrixReadOnly.b
   - api.DOMMatrixReadOnly.c
@@ -89,27 +91,27 @@ compat_features:
   - api.DOMMatrixReadOnly.toString
   - api.DOMMatrixReadOnly.transformPoint
   - api.DOMMatrixReadOnly.translate
-  - api.DOMMatrixReadOnly.worker_support
   - api.DOMPoint
   - api.DOMPoint.DOMPoint
+  - api.DOMPoint.worker_support
   - api.DOMPoint.fromPoint_static
   - api.DOMPoint.w
-  - api.DOMPoint.worker_support
   - api.DOMPoint.x
   - api.DOMPoint.y
   - api.DOMPoint.z
   - api.DOMPointReadOnly
   - api.DOMPointReadOnly.DOMPointReadOnly
+  - api.DOMPointReadOnly.worker_support
   - api.DOMPointReadOnly.fromPoint_static
   - api.DOMPointReadOnly.matrixTransform
   - api.DOMPointReadOnly.toJSON
   - api.DOMPointReadOnly.w
-  - api.DOMPointReadOnly.worker_support
   - api.DOMPointReadOnly.x
   - api.DOMPointReadOnly.y
   - api.DOMPointReadOnly.z
   - api.DOMQuad
   - api.DOMQuad.DOMQuad
+  - api.DOMQuad.worker_support
   - api.DOMQuad.fromQuad_static
   - api.DOMQuad.fromRect_static
   - api.DOMQuad.getBounds
@@ -118,13 +120,12 @@ compat_features:
   - api.DOMQuad.p3
   - api.DOMQuad.p4
   - api.DOMQuad.toJSON
-  - api.DOMQuad.worker_support
   - api.DOMRect
   - api.DOMRect.DOMRect
+  - api.DOMRect.worker_support
   - api.DOMRect.fromRect_static
   - api.DOMRect.height
   - api.DOMRect.width
-  - api.DOMRect.worker_support
   - api.DOMRect.x
   - api.DOMRect.y
   - api.DOMRectList
@@ -132,6 +133,7 @@ compat_features:
   - api.DOMRectList.length
   - api.DOMRectReadOnly
   - api.DOMRectReadOnly.DOMRectReadOnly
+  - api.DOMRectReadOnly.worker_support
   - api.DOMRectReadOnly.bottom
   - api.DOMRectReadOnly.fromRect_static
   - api.DOMRectReadOnly.height
@@ -140,14 +142,5 @@ compat_features:
   - api.DOMRectReadOnly.toJSON
   - api.DOMRectReadOnly.top
   - api.DOMRectReadOnly.width
-  - api.DOMRectReadOnly.worker_support
   - api.DOMRectReadOnly.x
   - api.DOMRectReadOnly.y
-
-# The following features in the spec are already part of web-features:
-# - SVG:
-#   - api.SVGRect
-#   - api.SVGRect.height
-#   - api.SVGRect.width
-#   - api.SVGRect.x
-#   - api.SVGRect.y

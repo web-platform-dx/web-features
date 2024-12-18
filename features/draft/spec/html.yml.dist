@@ -623,7 +623,7 @@ compat_features:
   #   firefox: "41"
   #   firefox_android: "41"
   #   safari: "5"
-  #   safari_ios: "5"
+  #   safari_ios: "4.2"
   - api.MessagePort.worker_support
 
   # baseline: high
@@ -1464,18 +1464,6 @@ compat_features:
   - api.ElementInternals.shadowRoot
 
   # baseline: low
-  # baseline_low_date: 2023-03-27
-  # support:
-  #   chrome: "105"
-  #   chrome_android: "105"
-  #   edge: "105"
-  #   firefox: "106"
-  #   firefox_android: "106"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - javascript.operators.import_meta.resolve
-
-  # baseline: low
   # baseline_low_date: 2023-04-06
   # support:
   #   chrome: "112"
@@ -1917,9 +1905,28 @@ compat_features:
   #   chrome: "123"
   #   chrome_android: "123"
   #   edge: "123"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
+  - api.PageRevealEvent
+
+  # baseline: false
+  # support:
+  #   chrome: "123"
+  #   chrome_android: "123"
+  #   edge: "123"
   #   firefox: "123"
   #   firefox_android: "123"
   - html.elements.template.shadowrootdelegatesfocus
+
+  # baseline: false
+  # support:
+  #   chrome: "124"
+  #   chrome_android: "124"
+  #   edge: "124"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
+  - api.PageSwapEvent
+  - api.PageSwapEvent.activation
 
   # baseline: false
   # support:
@@ -1932,6 +1939,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
+  - api.PageRevealEvent.viewTransition
+  - api.PageSwapEvent.viewTransition
+
+  # baseline: false
+  # support:
   #   chrome: "127"
   #   chrome_android: "127"
   #   edge: "127"
@@ -1941,87 +1958,21 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
+  - api.PageRevealEvent.PageRevealEvent
+  - api.PageSwapEvent.PageSwapEvent
+
+  # baseline: false
+  # support:
   #   firefox: "8"
   #   firefox_android: "8"
   #   safari: "14"
   #   safari_ios: "14"
   - api.HTMLElement.accessKeyLabel
-
-  # baseline: false
-  # support:
-  #   chrome: "13"
-  #   edge: "79"
-  #   firefox: "2"
-  #   firefox_android: "4"
-  - api.Navigator.registerProtocolHandler.scheme_parameter_mailto
-  - api.Navigator.registerProtocolHandler.scheme_parameter_mms
-  - api.Navigator.registerProtocolHandler.scheme_parameter_news
-  - api.Navigator.registerProtocolHandler.scheme_parameter_nntp
-  - api.Navigator.registerProtocolHandler.scheme_parameter_sms
-  - api.Navigator.registerProtocolHandler.scheme_parameter_tel
-  - api.Navigator.registerProtocolHandler.scheme_parameter_urn
-  - api.Navigator.registerProtocolHandler.scheme_parameter_webcal
-
-  # baseline: false
-  # support:
-  #   chrome: "15"
-  #   edge: "79"
-  #   firefox: "2"
-  #   firefox_android: "4"
-  - api.Navigator.registerProtocolHandler.scheme_parameter_irc
-
-  # baseline: false
-  # support:
-  #   chrome: "26"
-  #   edge: "79"
-  #   firefox: "2"
-  #   firefox_android: "4"
-  - api.Navigator.registerProtocolHandler.scheme_parameter_smsto
-
-  # baseline: false
-  # support:
-  #   chrome: "28"
-  #   edge: "79"
-  #   firefox: "2"
-  #   firefox_android: "4"
-  - api.Navigator.registerProtocolHandler.scheme_parameter_bitcoin
-
-  # baseline: false
-  # support:
-  #   chrome: "30"
-  #   edge: "79"
-  #   firefox: "2"
-  #   firefox_android: "4"
-  - api.Navigator.registerProtocolHandler.scheme_parameter_geo
-  - api.Navigator.registerProtocolHandler.scheme_parameter_im
-  - api.Navigator.registerProtocolHandler.scheme_parameter_ircs
-  - api.Navigator.registerProtocolHandler.scheme_parameter_magnet
-  - api.Navigator.registerProtocolHandler.scheme_parameter_sip
-  - api.Navigator.registerProtocolHandler.scheme_parameter_xmpp
-
-  # baseline: false
-  # support:
-  #   chrome: "31"
-  #   edge: "79"
-  #   firefox: "2"
-  #   firefox_android: "4"
-  - api.Navigator.registerProtocolHandler.scheme_parameter_wtai
-
-  # baseline: false
-  # support:
-  #   chrome: "41"
-  #   edge: "79"
-  #   firefox: "2"
-  #   firefox_android: "4"
-  - api.Navigator.registerProtocolHandler.scheme_parameter_ssh
-
-  # baseline: false
-  # support:
-  #   chrome: "42"
-  #   edge: "79"
-  #   firefox: "2"
-  #   firefox_android: "4"
-  - api.Navigator.registerProtocolHandler.scheme_parameter_openpgp4fpr
 
   # baseline: false
   # support:
@@ -2047,14 +1998,6 @@ compat_features:
   #   safari_ios: "16"
   - api.SharedWorker.SharedWorker.mime_checks
   - api.Worker.Worker.mime_checks
-
-  # baseline: false
-  # support:
-  #   chrome: "92"
-  #   edge: "92"
-  #   firefox: "90"
-  #   firefox_android: "90"
-  - api.Navigator.registerProtocolHandler.scheme_parameter_matrix
 
   # baseline: false
   # support:
@@ -2097,20 +2040,6 @@ compat_features:
   #   edge: "79"
   - api.Document.featurePolicy
   - api.HTMLIFrameElement.featurePolicy
-
-  # baseline: false
-  # support:
-  #   chrome_android: "80"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - html.elements.meta.name.theme-color
-
-  # baseline: false
-  # support:
-  #   chrome: "80"
-  #   edge: "79"
-  #   firefox: "62"
-  - api.Navigator.registerProtocolHandler.secure_context_required
 
   # baseline: false
   # support:
@@ -2161,18 +2090,9 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "123"
-  #   chrome_android: "123"
-  #   edge: "123"
-  - api.PageRevealEvent
-
-  # baseline: false
-  # support:
   #   chrome: "124"
   #   chrome_android: "124"
   #   edge: "124"
-  - api.PageSwapEvent
-  - api.PageSwapEvent.activation
   - html.elements.link.rel.expect
   - http.headers.Link.expect
 
@@ -2192,17 +2112,7 @@ compat_features:
   #   chrome_android: "126"
   #   edge: "126"
   - api.HTMLImageElement.sizes.auto
-  - api.PageRevealEvent.viewTransition
-  - api.PageSwapEvent.viewTransition
   - html.elements.img.sizes.auto
-
-  # baseline: false
-  # support:
-  #   chrome: "128"
-  #   chrome_android: "128"
-  #   edge: "128"
-  - api.PageRevealEvent.PageRevealEvent
-  - api.PageSwapEvent.PageSwapEvent
 
   # baseline: false
   # support:
@@ -2260,14 +2170,6 @@ compat_features:
   #   chrome_android: "81"
   - api.HTMLAnchorElement.hrefTranslate
   - html.elements.a.hreftranslate
-
-  # baseline: false
-  # support:
-  #   firefox: "98"
-  #   firefox_android: "98"
-  - api.Navigator.registerProtocolHandler.scheme_parameter_ftp
-  - api.Navigator.registerProtocolHandler.scheme_parameter_ftps
-  - api.Navigator.registerProtocolHandler.scheme_parameter_sftp
 
   # baseline: false
   # support:
