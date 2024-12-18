@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "114"
-    chrome_android: "114"
-    edge: "114"
+    chrome: "116"
+    chrome_android: "116"
+    edge: "116"
     firefox: "125"
     firefox_android: "125"
     safari: "17"
@@ -54,7 +54,18 @@ compat_features:
   - html.elements.input.popovertargetaction
   - html.global_attributes.popover
 
-  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2024-04-16
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "116"
+  #   edge: "116"
+  #   firefox: "125"
+  #   firefox_android: "125"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - api.HTMLElement.togglePopover.returns_boolean
+
   # baseline: false
   # support:
   #   chrome: "114"
