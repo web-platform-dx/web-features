@@ -2,4 +2,5 @@ name: Contenteditable plaintext-only
 description: The `contenteditable` attribute with a value of `plaintext-only` makes an element's raw text editable, but disables rich text formatting on it.
 spec: https://html.spec.whatwg.org/multipage/interaction.html#attr-contenteditable-plaintextonly-state
 compat_features:
+  - html.global_attributes.contenteditable.plaintext-only
   - api.HTMLElement.contentEditable.plaintext-only
