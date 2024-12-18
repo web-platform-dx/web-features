@@ -356,6 +356,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "61"
+  #   chrome_android: "61"
+  #   edge: "79"
+  #   firefox: "75"
+  #   firefox_android: "79"
+  - html.global_attributes.nonce.nonce_hiding
+
+  # baseline: false
+  # support:
   #   chrome: "70"
   #   chrome_android: "70"
   #   edge: "79"
