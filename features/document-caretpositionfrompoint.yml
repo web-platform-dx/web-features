@@ -1,8 +1,6 @@
 name: document.caretPositionFromPoint()
 description: The `document.caretPositionFromPoint()` method finds an insertion point, represented by a DOM node and an offset within that node, for given coordinates in the viewport.
 spec: https://drafts.csswg.org/cssom-view-1/#dom-document-caretpositionfrompoint
-status:
-  compute_from: api.Document.caretPositionFromPoint
 compat_features:
   - api.CaretPosition
   - api.CaretPosition.getClientRect
