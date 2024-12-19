@@ -21,6 +21,11 @@ compat_features:
   - api.ScreenDetails.screens
   - api.ScreenDetails.screenschange_event
   - api.Window.getScreenDetails
+  - api.Window.moveTo.relative-multi-screen
   - api.Window.open.relative-multi-screen
+  - api.Window.screenLeft.relative-multi-screen
+  - api.Window.screenTop.relative-multi-screen
+  - api.Window.screenX.relative-multi-screen
+  - api.Window.screenY.relative-multi-screen
   - html.elements.iframe.allow.window-management
   - http.headers.Permissions-Policy.window-management
