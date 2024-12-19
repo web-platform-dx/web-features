@@ -1,4 +1,4 @@
-draft_date: 2024-12-18
+draft_date: 2024-12-19
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -47,30 +47,7 @@ compat_features:
   - api.HTMLCanvasElement.toDataURL.type_parameter_jpeg
   - api.HTMLCanvasElement.toDataURL.type_parameter_png
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
-  - api.HTMLElement.accessKey
-  - api.HTMLElement.accessKeyLabel
-  - api.HTMLElement.autocapitalize
-  - api.HTMLElement.autocorrect
-  - api.HTMLElement.beforetoggle_event.dialog_elements
-  - api.HTMLElement.blur
-  - api.HTMLElement.change_event
-  - api.HTMLElement.click
   - api.HTMLElement.command_event
-  - api.HTMLElement.contentEditable
-  - api.HTMLElement.contentEditable.plaintext-only
-  - api.HTMLElement.enterKeyHint
-  - api.HTMLElement.focus
-  - api.HTMLElement.focus.options_focusVisible_parameter
-  - api.HTMLElement.focus.options_preventScroll_parameter
-  - api.HTMLElement.inputMode
-  - api.HTMLElement.isContentEditable
-  - api.HTMLElement.lang
-  - api.HTMLElement.nonce
-  - api.HTMLElement.spellcheck
-  - api.HTMLElement.title
-  - api.HTMLElement.togglePopover.returns_boolean
-  - api.HTMLElement.toggle_event.details_elements
-  - api.HTMLElement.toggle_event.dialog_elements
   - api.HTMLIFrameElement.featurePolicy
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes.auto
@@ -248,7 +225,6 @@ compat_features:
   - html.elements.a.href.href_top
   - html.elements.a.hreftranslate
   - html.elements.a.implicit_noopener
-  - html.elements.a.text_fragments
   - html.elements.button.command
   - html.elements.button.commandfor
   - html.elements.form.autocomplete.new-password
@@ -298,25 +274,14 @@ compat_features:
   - html.elements.textarea.autocomplete.webauthn
   - html.elements.track.kind.descriptions
   - html.elements.video.playsinline
-  - html.global_attributes.accesskey
-  - html.global_attributes.autocapitalize
-  - html.global_attributes.autocorrect
   - html.global_attributes.class
-  - html.global_attributes.contenteditable
-  - html.global_attributes.contenteditable.plaintext-only
   - html.global_attributes.data_attributes
   - html.global_attributes.dir
   - html.global_attributes.draggable
-  - html.global_attributes.enterkeyhint
   - html.global_attributes.hidden
   - html.global_attributes.id
   - html.global_attributes.inputmode
-  - html.global_attributes.lang
-  - html.global_attributes.nonce
-  - html.global_attributes.nonce.nonce_hiding
-  - html.global_attributes.spellcheck
   - html.global_attributes.style
-  - html.global_attributes.title
   - html.global_attributes.title.multi-line_titles
   - http.headers.Cross-Origin-Embedder-Policy
   - http.headers.Cross-Origin-Embedder-Policy.credentialless
@@ -684,7 +649,10 @@ compat_features:
 # - Content Security Policy (CSP):
 #   - api.Document.securitypolicyviolation_event
 #   - api.Element.securitypolicyviolation_event
+#   - api.HTMLElement.nonce
 #   - html.elements.meta.http-equiv.content-security-policy
+#   - html.global_attributes.nonce
+#   - html.global_attributes.nonce.nonce_hiding
 # - Mouse events:
 #   - api.Element.auxclick_event
 #   - api.Element.click_event
@@ -696,12 +664,17 @@ compat_features:
 #   - api.Element.mouseout_event
 #   - api.Element.mouseover_event
 #   - api.Element.mouseup_event
+#   - api.HTMLElement.click
 # - Pointer Events:
 #   - api.Element.auxclick_event.type_pointerevent
 #   - api.Element.click_event.type_pointerevent
 # - Focus events:
 #   - api.Element.blur_event
 #   - api.Element.focus_event
+#   - api.HTMLElement.blur
+#   - api.HTMLElement.focus
+#   - api.HTMLElement.focus.options_focusVisible_parameter
+#   - api.HTMLElement.focus.options_preventScroll_parameter
 # - Clipboard events:
 #   - api.Element.copy_event
 #   - api.Element.cut_event
@@ -1013,6 +986,7 @@ compat_features:
 #   - api.HTMLElement.popover
 #   - api.HTMLElement.showPopover
 #   - api.HTMLElement.togglePopover
+#   - api.HTMLElement.togglePopover.returns_boolean
 #   - api.HTMLElement.toggle_event.popover_elements
 #   - api.HTMLInputElement.popoverTargetAction
 #   - api.HTMLInputElement.popoverTargetElement
@@ -1132,6 +1106,7 @@ compat_features:
 #   - api.HTMLDetailsElement
 #   - api.HTMLDetailsElement.open
 #   - api.HTMLElement.toggle_event
+#   - api.HTMLElement.toggle_event.details_elements
 #   - html.elements.details
 #   - html.elements.details.open
 # - Mutually exclusive <details> elements:
@@ -1146,23 +1121,57 @@ compat_features:
 #   - api.HTMLDialogElement.returnValue
 #   - api.HTMLDialogElement.show
 #   - api.HTMLDialogElement.showModal
+#   - api.HTMLElement.beforetoggle_event.dialog_elements
+#   - api.HTMLElement.toggle_event.dialog_elements
 #   - html.elements.dialog
 #   - html.elements.dialog.open
 # - <div>:
 #   - api.HTMLDivElement
 #   - html.elements.div
+# - Accesskey:
+#   - api.HTMLElement.accessKey
+#   - api.HTMLElement.accessKeyLabel
+#   - html.global_attributes.accesskey
+# - Autocapitalize:
+#   - api.HTMLElement.autocapitalize
+#   - html.global_attributes.autocapitalize
+# - Autocorrect:
+#   - api.HTMLElement.autocorrect
+#   - html.global_attributes.autocorrect
 # - Autofocus:
 #   - api.HTMLElement.autofocus
 #   - api.MathMLElement.autofocus
 #   - api.SVGElement.autofocus
 #   - html.global_attributes.autofocus
+# - Change event:
+#   - api.HTMLElement.change_event
+# - Contenteditable:
+#   - api.HTMLElement.contentEditable
+#   - api.HTMLElement.inputMode
+#   - api.HTMLElement.isContentEditable
+#   - html.global_attributes.contenteditable
+# - contenteditable="plaintext-only":
+#   - api.HTMLElement.contentEditable.plaintext-only
+#   - html.global_attributes.contenteditable.plaintext-only
+# - Enterkeyhint:
+#   - api.HTMLElement.enterKeyHint
+#   - html.global_attributes.enterkeyhint
 # - Inert elements:
 #   - api.HTMLElement.inert
 #   - api.HTMLElement.inert.ignores_find_in_page
 #   - html.global_attributes.inert
+# - Lang:
+#   - api.HTMLElement.lang
+#   - html.global_attributes.lang
+# - Spellcheck:
+#   - api.HTMLElement.spellcheck
+#   - html.global_attributes.spellcheck
 # - tabindex:
 #   - api.HTMLElement.tabIndex
 #   - html.global_attributes.tabindex
+# - Title:
+#   - api.HTMLElement.title
+#   - html.global_attributes.title
 # - translate attribute:
 #   - api.HTMLElement.translate
 #   - html.global_attributes.translate
@@ -2216,6 +2225,8 @@ compat_features:
 #   - html.elements.a.target.unfencedTop
 #   - html.elements.fencedframe.height
 #   - html.elements.fencedframe.width
+# - Scroll to text fragment:
+#   - html.elements.a.text_fragments
 # - <abbr>:
 #   - html.elements.abbr
 # - <address>:
