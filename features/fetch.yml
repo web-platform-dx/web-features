@@ -6,6 +6,7 @@ status:
   compute_from: api.fetch
 compat_features:
   - api.Headers
+  - api.Headers.@@iterator
   - api.Headers.Headers
   - api.Headers.append
   - api.Headers.delete
@@ -22,6 +23,7 @@ compat_features:
   - api.Request
   - api.Request.Request
   - api.Request.Request.cross_origin_stripped
+  - api.Request.Request.init_keepalive_parameter
   - api.Request.Request.init_referrer_parameter
   - api.Request.Request.request_body_readablestream
   - api.Request.Request.response_body_readablestream
@@ -36,6 +38,7 @@ compat_features:
   - api.Request.credentials
   - api.Request.credentials.default_same-origin
   - api.Request.destination
+  - api.Request.duplex
   - api.Request.formData
   - api.Request.integrity
   - api.Request.isHistoryNavigation

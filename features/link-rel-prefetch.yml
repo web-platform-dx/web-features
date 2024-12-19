@@ -1,0 +1,9 @@
+name: '<link rel="prefetch">'
+description: The `rel="prefetch"` attribute for the `<link>` HTML element is a hint to the browser that the user is likely to navigate to a resource, so the browser should preemptively fetch and cache the resource.
+spec: https://html.spec.whatwg.org/multipage/links.html#link-type-prefetch
+caniuse: link-rel-prefetch
+compat_features:
+  - api.PerformanceResourceTiming.deliveryType.navigational-prefetch
+  - html.elements.link.rel.prefetch
+  - http.headers.Sec-Purpose
+  - http.headers.Sec-Purpose.prefetch
