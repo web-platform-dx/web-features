@@ -4,9 +4,21 @@
 status:
   baseline: false
   support:
+    chrome: "81"
+    edge: "81"
     safari: "17"
     safari_ios: "16.4"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "81"
+  #   chrome_android: "81"
+  #   edge: "81"
+  #   safari: "17"
+  #   safari_ios: "16.4"
+  - api.Navigator.clearAppBadge
+
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "81"
@@ -14,10 +26,3 @@ compat_features:
   #   safari: "17"
   #   safari_ios: "16.4"
   - api.Navigator.setAppBadge
-
-  # baseline: false
-  # support:
-  #   chrome_android: "81"
-  #   safari: "17"
-  #   safari_ios: "16.4"
-  - api.Navigator.clearAppBadge

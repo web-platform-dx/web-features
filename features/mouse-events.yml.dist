@@ -99,6 +99,19 @@ compat_features:
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
   # support:
+  #   chrome: "9"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3"
+  #   firefox_android: "4"
+  #   safari: "6"
+  #   safari_ios: "6"
+  - api.HTMLElement.click
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
   #   chrome: "26"
   #   chrome_android: "26"
   #   edge: "12"
