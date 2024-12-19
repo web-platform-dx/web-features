@@ -58,7 +58,6 @@ compat_features:
   - api.TransformStreamDefaultController.terminate
   - api.WritableStream.close
   - api.WritableStream.transferable
-  # TODO: consider abortable stream feature
   - api.WritableStreamDefaultController.signal
   - api.WritableStreamDefaultWriter.WritableStreamDefaultWriter
   - api.ByteLengthQueuingStrategy
