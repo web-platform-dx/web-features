@@ -3,8 +3,11 @@ description: The streams API creates, composes, and consumes continuously genera
 spec: https://streams.spec.whatwg.org/
 caniuse: streams
 group: streams
-# Computing status to match Caniuse, which considers support beginning
-# at BYOB shipping.
+# TODO: https://github.com/web-platform-dx/web-features/issues/1971
+# Status changed: https://github.com/web-platform-dx/web-features/pull/2358
+# 2024-12-19 — low → false — Regressed status to match Caniuse, which considers support beginning at BYOB shipping.
+# References:
+# - https://caniuse.com/streams
 status:
   compute_from:
     - api.ReadableStreamBYOBReader
