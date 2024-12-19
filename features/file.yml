@@ -1,7 +1,12 @@
-draft_date: 2024-10-21
 name: File API
-description: TODO
+description: The File API represents and reads from file data and metadata. Typically, you get files through other APIs, such as the `<input type="file">` element or drag-and-drop events. You may also send file data to other APIs, such as creating images or drawing on canvases.
 spec: https://w3c.github.io/FileAPI/
+caniuse: fileapi
+# Compute status to match Caniuse while also pointing at the main entry point.
+status:
+  compute_from:
+    - api.FileList
+    - api.File.File
 compat_features:
   - api.Blob
   - api.Blob.Blob
