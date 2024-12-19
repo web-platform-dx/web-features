@@ -233,9 +233,7 @@ function toDist(sourcePath: string): YAML.Document {
     checkAncestors: true,
   });
 
-  if (computedStatus.discouraged) {
-    const isDraft: boolean = source.draft_date ?? false;
-
+  if (computedStatus.discouraged && !source.discouraged) {
     if (!source.draft_date) {
       logger.error(
         `${id}: contains at least one deprecated compat feature. This is forbidden for published features.`,
