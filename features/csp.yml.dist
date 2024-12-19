@@ -236,6 +236,32 @@ compat_features:
   # baseline_low_date: 2022-03-14
   # baseline_high_date: 2024-09-14
   # support:
+  #   chrome: "61"
+  #   chrome_android: "61"
+  #   edge: "79"
+  #   firefox: "31"
+  #   firefox_android: "31"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - html.global_attributes.nonce
+
+  # baseline: high
+  # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
+  # support:
+  #   chrome: "61"
+  #   chrome_android: "61"
+  #   edge: "79"
+  #   firefox: "75"
+  #   firefox_android: "79"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - api.HTMLElement.nonce
+
+  # baseline: high
+  # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
+  # support:
   #   chrome: "76"
   #   chrome_android: "76"
   #   edge: "79"
@@ -327,6 +353,15 @@ compat_features:
   #   firefox: "63"
   #   firefox_android: "63"
   - api.SecurityPolicyViolationEvent.worker_support
+
+  # baseline: false
+  # support:
+  #   chrome: "61"
+  #   chrome_android: "61"
+  #   edge: "79"
+  #   firefox: "75"
+  #   firefox_android: "79"
+  - html.global_attributes.nonce.nonce_hiding
 
   # baseline: false
   # support:
