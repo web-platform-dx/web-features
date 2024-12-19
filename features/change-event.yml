@@ -1,0 +1,7 @@
+name: Change event
+description: The `change` event for `<input>`, `<select>`, and `<textarea>` elements fires when the user modifies the element's value. Unlike the `input` event, the change event does not necessarily fire on every alteration to an element's value.
+spec:
+  - https://html.spec.whatwg.org/multipage/indices.html#event-change
+  - https://html.spec.whatwg.org/multipage/webappapis.html#handler-onchange
+compat_features:
+  - api.HTMLElement.change_event

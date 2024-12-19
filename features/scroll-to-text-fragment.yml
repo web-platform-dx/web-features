@@ -5,18 +5,13 @@ group:
   - text-fragments
   - scrolling
 caniuse: url-scroll-to-text-fragment
-# This feature isn't in BCD, so the status manually matches caniuse instead:
+# Set status to match caniuse and not be impacted by feature detection issues.
 status:
-  baseline: false
-  support:
-    chrome: "81"
-    chrome_android: "81"
-    edge: "83"
-    safari: "16.1"
-    safari_ios: "16.1"
-# document.fragmentDirective cannot be considered part of this feature due to
-# https://webkit.org/b/273466. TODO: Consider partial support for this feature
+  compute_from: html.elements.a.text_fragments
+# document.fragmentDirective delayed by https://webkit.org/b/273466.
+# TODO: Consider partial support for this feature
 # depending on https://github.com/WICG/scroll-to-text-fragment/issues/257.
-# compat_features:
-#   - api.Document.fragmentDirective
-#   - api.FragmentDirective
+compat_features:
+  - api.Document.fragmentDirective
+  - api.FragmentDirective
+  - html.elements.a.text_fragments

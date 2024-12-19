@@ -74,21 +74,32 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Remove the existing pre-release
-        run: gh release delete "$TAG" --cleanup-tag --yes || true
+      - name: Set existing release to draft
+        run: gh release edit --draft "$TAG"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ env.dist_tag }}
+
+      - name: Update the tag
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag --force "$TAG"
+          git push --force origin "$TAG"
         env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ env.dist_tag }}
 
       - name: Publish pre-release on GitHub
-        run: >
-          gh release create
-          --title "$PACKAGE@$TAG"
-          --notes "$NOTES"
-          --prerelease
-          --latest=false
-          "$TAG"
-          $ARTIFACTS
+        run: |
+          gh release edit \
+            --verify-tag \
+            --title "$PACKAGE@$TAG" \
+            --notes "$NOTES" \
+            --prerelease \
+            --draft=false \
+            "$TAG"
+          gh release upload --clobber "$TAG" $ARTIFACTS
         env:
           GH_TOKEN: ${{ github.token }}
           PACKAGE: ${{ env.package }}
