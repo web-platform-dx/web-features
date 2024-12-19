@@ -57,6 +57,28 @@
           "description": "Short description of the feature, as an HTML string",
           "type": "string"
         },
+        "discouraged": {
+          "additionalProperties": false,
+          "description": "Whether developers are formally discouraged from using this feature",
+          "properties": {
+            "according_to": {
+              "description": "Links to a formal discouragement notice, such as specification text, intent-to-unship, etc.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "alternatives": {
+              "description": "IDs for features that substitute some or all of this feature's utility",
+              "items": {},
+              "type": "array"
+            }
+          },
+          "required": [
+            "according_to"
+          ],
+          "type": "object"
+        },
         "group": {
           "anyOf": [
             {

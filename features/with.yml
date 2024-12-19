@@ -1,0 +1,24 @@
+name: with
+description: The `with` JavaScript statement adds a given object to the chain of scopes used to evaluate names.
+spec: https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#sec-with-statement
+group: javascript
+discouraged:
+  # One thing that is potentially missing here is a "reason" like this:
+
+  # reason: browser-warning
+  # reason: spec-caution
+  # reason: pending-removal
+
+  # This would allow us to signal to tools how "fatal" the discouragement is
+  # (e.g., pending-removal should trigger noisy errors for developers but spec
+  # caution would not). I'm not sure the full range of these yet; I think it
+  # might be easier to choose the set of reasons after we've enumerated a bunch
+  # of discouraged features.
+  according_to:
+    - https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#sec-with-statement
+  alternatives:
+    - destructuring
+compat_features:
+  - javascript.statements.with
+  - javascript.builtins.Symbol.unscopables
+  - javascript.builtins.Array.@@unscopables
