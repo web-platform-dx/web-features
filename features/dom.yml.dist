@@ -177,7 +177,14 @@ compat_features:
   - api.DocumentType.name
   - api.DocumentType.publicId
   - api.DocumentType.systemId
+  - api.Element.clientHeight
+  - api.Element.clientWidth
   - api.HTMLElement.dir
+  - api.HTMLElement.offsetHeight
+  - api.HTMLElement.offsetLeft
+  - api.HTMLElement.offsetParent
+  - api.HTMLElement.offsetTop
+  - api.HTMLElement.offsetWidth
   - api.Node.isDefaultNamespace
   - api.Node.isEqualNode
   - api.Node.lookupNamespaceURI
@@ -251,6 +258,20 @@ compat_features:
   #   safari: "5.1"
   #   safari_ios: "5"
   - api.DOMStringList.contains
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3"
+  #   firefox_android: "4"
+  #   safari: "3"
+  #   safari_ios: "1"
+  - api.Element.clientLeft
+  - api.Element.clientTop
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -474,6 +495,8 @@ compat_features:
   #   safari_ios: "3.2"
   - api.Document.activeElement
   - api.Document.hasFocus
+  - api.Element.getBoundingClientRect
+  - api.Element.getClientRects
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -1225,6 +1248,15 @@ compat_features:
   #   firefox_android: "50"
   - api.Document.createElement.options_parameter
   - api.Document.createElementNS.options_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  #   firefox: "126"
+  #   firefox_android: "126"
+  - api.Element.currentCSSZoom
 
   # baseline: false
   # support:
