@@ -3,5 +3,4 @@ description: The Private Network Access feature is a set of modifications to Fet
 spec: https://wicg.github.io/private-network-access/
 compat_features:
   - http.mixed-content.private_network_access
-  # This key is in the Fetch feature, maybe should move here.
-  #- api.Request.targetAddressSpace
+  - api.Request.targetAddressSpace
