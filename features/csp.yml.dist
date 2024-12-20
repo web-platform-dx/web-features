@@ -284,6 +284,19 @@ compat_features:
   #   safari_ios: "15.5"
   - http.headers.Content-Security-Policy.worker-src
 
+  # baseline: high
+  # baseline_low_date: 2022-05-16
+  # baseline_high_date: 2024-11-16
+  # support:
+  #   chrome: "61"
+  #   chrome_android: "61"
+  #   edge: "79"
+  #   firefox: "75"
+  #   firefox_android: "79"
+  #   safari: "15.5"
+  #   safari_ios: "15.5"
+  - html.global_attributes.nonce.nonce_hiding
+
   # baseline: low
   # baseline_low_date: 2022-09-12
   # support:
@@ -353,15 +366,6 @@ compat_features:
   #   firefox: "63"
   #   firefox_android: "63"
   - api.SecurityPolicyViolationEvent.worker_support
-
-  # baseline: false
-  # support:
-  #   chrome: "61"
-  #   chrome_android: "61"
-  #   edge: "79"
-  #   firefox: "75"
-  #   firefox_android: "79"
-  - html.global_attributes.nonce.nonce_hiding
 
   # baseline: false
   # support:
