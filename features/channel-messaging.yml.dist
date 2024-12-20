@@ -47,3 +47,17 @@ compat_features:
   - api.MessagePort.message_event
   - api.MessagePort.postMessage
   - api.MessagePort.start
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2015-09-22
+  # baseline_high_date: 2018-03-22
+  # support:
+  #   chrome: "4"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "41"
+  #   firefox_android: "41"
+  #   safari: "5"
+  #   safari_ios: "4.2"
+  - api.MessagePort.worker_support
