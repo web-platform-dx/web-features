@@ -5,6 +5,19 @@ status:
   baseline: false
   support: {}
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: "1.5"
+  #   firefox_android: "4"
+  #   safari: "3"
+  #   safari_ios: "2"
+  - svg.elements.script.xlink_href
+
   # baseline: false
   # support:
   #   chrome: "1"

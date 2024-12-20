@@ -1,7 +1,11 @@
-draft_date: 2024-10-085
-name: svg-deprecated
-description: Placeholder for deprecated or non-real features
+name: SVG (deprecated)
+description: SVG 2 deprecated or removed a significant number of features defined in SVG 1.1, including features related to fonts, alternate glyphs, the `xlink` namespace, and the `<cursor>` and `<tref>` elements.
 spec: https://svgwg.org/svg2-draft/
+discouraged:
+  according_to:
+    - https://svgwg.org/svg2-draft/changes.html#substantial
+  alternatives:
+    - svg
 compat_features:
   - api.SVGAElement.ping
   - api.SVGAElement.text
@@ -123,8 +127,6 @@ compat_features:
   - svg.elements.vkern.k
   - svg.elements.vkern.u1
   - svg.elements.vkern.u2
-
-  # Confirmed to be DEPRECATED
   - svg.global_attributes.glyph-orientation-horizontal
   - svg.global_attributes.glyph-orientation-vertical
   - api.SVGSVGElement.currentView
@@ -181,3 +183,4 @@ compat_features:
   - api.SVGPoint.matrixTransform
   - api.SVGPoint.x
   - api.SVGPoint.y
+  - svg.elements.script.xlink_href
