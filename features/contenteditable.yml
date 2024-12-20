@@ -1,0 +1,9 @@
+name: Contenteditable
+description: The `contenteditable` global HTML attribute allows the user to edit the content of an element, such as inserting or deleting text.
+spec: https://html.spec.whatwg.org/multipage/interaction.html#contenteditable
+caniuse: contenteditable
+compat_features:
+  - html.global_attributes.contenteditable
+  - api.HTMLElement.contentEditable
+  - api.HTMLElement.inputMode
+  - api.HTMLElement.isContentEditable

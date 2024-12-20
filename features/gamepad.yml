@@ -4,7 +4,7 @@ spec: https://w3c.github.io/gamepad/
 caniuse: gamepad
 group: gamepad
 status:
-  compute_from: api.Gamepad
+  compute_from: api.Navigator.getGamepads
 compat_features:
   - api.Gamepad
   - api.Gamepad.axes
@@ -13,13 +13,18 @@ compat_features:
   - api.Gamepad.id
   - api.Gamepad.index
   - api.Gamepad.mapping
+  - api.Gamepad.secure_context_required
   - api.Gamepad.timestamp
   - api.GamepadButton
   - api.GamepadButton.pressed
+  - api.GamepadButton.secure_context_required
   - api.GamepadButton.value
   - api.Navigator.getGamepads
+  - api.Navigator.getGamepads.secure_context_required
   - api.GamepadEvent
   - api.GamepadEvent.GamepadEvent
   - api.GamepadEvent.gamepad
+  - api.GamepadEvent.secure_context_required
   - api.Window.gamepadconnected_event
   - api.Window.gamepaddisconnected_event
+  - html.elements.iframe.allow.gamepad
