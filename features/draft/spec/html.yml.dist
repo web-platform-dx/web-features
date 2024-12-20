@@ -16,7 +16,6 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "1"
   #   safari_ios: "1"
-  - api.Document.write
   - html.elements.html.xmlns
   - html.global_attributes.style
   - http.headers.Refresh
@@ -1422,6 +1421,17 @@ compat_features:
   #   safari: "5"
   #   safari_ios: "5"
   - api.EventSource.worker_support
+
+  # baseline: false
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "1"
+  #   safari_ios: "1"
+  - api.Document.write
 
   # baseline: false
   # support:
