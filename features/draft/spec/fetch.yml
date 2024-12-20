@@ -1,21 +1,15 @@
-draft_date: 2024-11-20
+draft_date: 2024-12-20
 name: Fetch Standard
 description: TODO
 spec: https://fetch.spec.whatwg.org/
 compat_features:
-  - api.Headers.@@iterator
-  - api.Request.Request.init_keepalive_parameter
-  - api.Request.duplex
-  - api.XMLHttpRequest.authorization_removed_cross_origin
   - http.headers.Cross-Origin-Resource-Policy
-  - http.headers.Sec-Purpose
-  - http.headers.Sec-Purpose.prefetch
-  - http.headers.Sec-Purpose.speculationrules
   - http.headers.X-Content-Type-Options
 
 # The following features in the spec are already part of web-features:
 # - Fetch:
 #   - api.Headers
+#   - api.Headers.@@iterator
 #   - api.Headers.Headers
 #   - api.Headers.append
 #   - api.Headers.delete
@@ -32,6 +26,7 @@ compat_features:
 #   - api.Request
 #   - api.Request.Request
 #   - api.Request.Request.cross_origin_stripped
+#   - api.Request.Request.init_keepalive_parameter
 #   - api.Request.Request.init_referrer_parameter
 #   - api.Request.Request.request_body_readablestream
 #   - api.Request.Request.response_body_readablestream
@@ -46,6 +41,7 @@ compat_features:
 #   - api.Request.credentials
 #   - api.Request.credentials.default_same-origin
 #   - api.Request.destination
+#   - api.Request.duplex
 #   - api.Request.formData
 #   - api.Request.headers
 #   - api.Request.integrity
@@ -95,6 +91,8 @@ compat_features:
 # - Abortable fetch:
 #   - api.Request.signal
 #   - api.fetch.init_signal_parameter
+# - XMLHttpRequest:
+#   - api.XMLHttpRequest.authorization_removed_cross_origin
 # - CORS:
 #   - http.headers.Access-Control-Allow-Credentials
 #   - http.headers.Access-Control-Allow-Headers
@@ -112,3 +110,8 @@ compat_features:
 #   - http.headers.Authorization.authorization_removed_cross_origin
 # - HTTP/1.1:
 #   - http.headers.Origin
+# - <link rel="prefetch">:
+#   - http.headers.Sec-Purpose
+#   - http.headers.Sec-Purpose.prefetch
+# - Speculation rules:
+#   - http.headers.Sec-Purpose.speculationrules
