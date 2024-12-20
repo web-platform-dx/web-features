@@ -5,6 +5,7 @@ group: performance
 compat_features:
   - api.PerformanceNavigationTiming.notRestoredReasons
   - api.NotRestoredReasonDetails
+  - api.NotRestoredReasonDetails.toJSON
   - api.NotRestoredReasonDetails.reason
   - api.NotRestoredReasons
   - api.NotRestoredReasons.children
@@ -12,4 +13,5 @@ compat_features:
   - api.NotRestoredReasons.name
   - api.NotRestoredReasons.reasons
   - api.NotRestoredReasons.src
+  - api.NotRestoredReasons.toJSON
   - api.NotRestoredReasons.url

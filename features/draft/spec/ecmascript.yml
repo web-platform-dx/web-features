@@ -1,27 +1,10 @@
-draft_date: 2024-12-12
+draft_date: 2024-12-16
 name: ECMAScript Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
 compat_features:
   - javascript.builtins.Array.@@species
   - javascript.builtins.Array.@@unscopables
-  - javascript.builtins.globalThis
-  - javascript.grammar.hashbang_comments
-  - javascript.grammar.numeric_separators
-  - javascript.grammar.template_literals
-  - javascript.grammar.template_literals.template_literal_revision
-  - javascript.grammar.trailing_commas.trailing_commas_in_functions
-  - javascript.grammar.unicode_point_escapes
-  - javascript.operators.await.top_level
-  - javascript.operators.exponentiation
-  - javascript.operators.exponentiation_assignment
-  - javascript.operators.logical_and_assignment
-  - javascript.operators.logical_or_assignment
-  - javascript.operators.nullish_coalescing
-  - javascript.operators.nullish_coalescing_assignment
-  - javascript.statements.const
-  - javascript.statements.let
-  - javascript.statements.try_catch.optional_catch_binding
 
 # The following features in the spec are already part of web-features:
 # - Promise.any():
@@ -490,6 +473,7 @@ compat_features:
 #   - javascript.functions.rest_parameters.destructuring
 #   - javascript.functions.set
 #   - javascript.functions.set.computed_property_names
+#   - javascript.grammar.trailing_commas.trailing_commas_in_functions
 #   - javascript.operators.function
 #   - javascript.operators.function.trailing_comma
 #   - javascript.statements.function
@@ -879,6 +863,8 @@ compat_features:
 #   - javascript.builtins.WeakSet.delete
 #   - javascript.builtins.WeakSet.has
 #   - javascript.builtins.WeakSet.symbol_as_keys
+# - globalThis:
+#   - javascript.builtins.globalThis
 # - Classes:
 #   - javascript.classes
 #   - javascript.classes.constructor
@@ -894,11 +880,25 @@ compat_features:
 #   - javascript.operators.new_target
 #   - javascript.operators.super
 #   - javascript.statements.class
+# - Hashbang comments:
+#   - javascript.grammar.hashbang_comments
+# - Numeric separators:
+#   - javascript.grammar.numeric_separators
+# - Template literals:
+#   - javascript.grammar.template_literals
+#   - javascript.grammar.template_literals.template_literal_revision
+# - Unicode point escapes:
+#   - javascript.grammar.unicode_point_escapes
+# - Top-level await:
+#   - javascript.operators.await.top_level
 # - Destructuring:
 #   - javascript.operators.destructuring
 #   - javascript.operators.destructuring.computed_property_names
 #   - javascript.operators.destructuring.rest_in_arrays
 #   - javascript.operators.destructuring.rest_in_objects
+# - Exponentiation operator:
+#   - javascript.operators.exponentiation
+#   - javascript.operators.exponentiation_assignment
 # - JavaScript modules:
 #   - javascript.operators.import
 #   - javascript.operators.import_meta
@@ -910,13 +910,24 @@ compat_features:
 # - JavaScript modules in workers:
 #   - javascript.operators.import.worker_support
 #   - javascript.statements.import.worker_support
+# - Logical assignments:
+#   - javascript.operators.logical_and_assignment
+#   - javascript.operators.logical_or_assignment
+# - Nullish coalescing:
+#   - javascript.operators.nullish_coalescing
+#   - javascript.operators.nullish_coalescing_assignment
 # - Spread syntax:
 #   - javascript.operators.spread
 #   - javascript.operators.spread.spread_in_arrays
 #   - javascript.operators.spread.spread_in_function_calls
 #   - javascript.operators.spread.spread_in_object_literals
+# - Let and const:
+#   - javascript.statements.const
+#   - javascript.statements.let
 # - JavaScript modules in service workers:
 #   - javascript.statements.import.service_worker_support
+# - Optional catch binding:
+#   - javascript.statements.try_catch.optional_catch_binding
 # - WebAssembly:
 #   - webassembly.api.CompileError
 #   - webassembly.api.CompileError.CompileError
