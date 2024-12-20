@@ -17,6 +17,7 @@ compat_features:
   - api.LinearAccelerationSensor
   - api.LinearAccelerationSensor.LinearAccelerationSensor
   - api.Permissions.permission_accelerometer
+  - html.elements.iframe.allow.accelerometer
   - http.headers.Permissions-Policy.accelerometer
 # Enable when overlapping keys are allowed, https://github.com/web-platform-dx/web-features/issues/1173
 #  - api.Sensor
