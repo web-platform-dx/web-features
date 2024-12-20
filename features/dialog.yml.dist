@@ -14,6 +14,18 @@ status:
     safari: "15.4"
     safari_ios: "15.4"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
+  # support:
+  #   chrome: "37"
+  #   chrome_android: "37"
+  #   edge: "79"
+  #   firefox: "98"
+  #   firefox_android: "98"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
   - api.HTMLDialogElement
   - api.HTMLDialogElement.cancel_event
   - api.HTMLDialogElement.close
@@ -24,3 +36,10 @@ compat_features:
   - api.HTMLDialogElement.showModal
   - html.elements.dialog
   - html.elements.dialog.open
+
+  # baseline: false
+  # support:
+  #   firefox: "133"
+  #   firefox_android: "133"
+  - api.HTMLElement.beforetoggle_event.dialog_elements
+  - api.HTMLElement.toggle_event.dialog_elements

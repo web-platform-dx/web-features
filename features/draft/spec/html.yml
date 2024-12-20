@@ -1,20 +1,12 @@
-draft_date: 2024-12-12
+draft_date: 2024-12-20
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
-  - api.BeforeUnloadEvent.user_interaction
   - api.DedicatedWorkerGlobalScope
   - api.DedicatedWorkerGlobalScope.close
   - api.DedicatedWorkerGlobalScope.name
-  - api.Document.designMode
   - api.Document.featurePolicy
-  - api.Document.scroll_event
-  - api.Document.write
-  - api.Document.writeln
-  - api.Element.beforematch_event
-  - api.Element.getHTML
-  - api.Element.scroll_event
   - api.ElementInternals.shadowRoot
   - api.ErrorEvent
   - api.ErrorEvent.ErrorEvent
@@ -23,9 +15,6 @@ compat_features:
   - api.ErrorEvent.filename
   - api.ErrorEvent.lineno
   - api.ErrorEvent.message
-  - api.EventSource.EventSource.options_withCredentials_parameter
-  - api.EventSource.worker_support
-  - api.FileList
   - api.HTMLAllCollection
   - api.HTMLAllCollection.item
   - api.HTMLAllCollection.length
@@ -47,30 +36,7 @@ compat_features:
   - api.HTMLCanvasElement.toDataURL.type_parameter_jpeg
   - api.HTMLCanvasElement.toDataURL.type_parameter_png
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
-  - api.HTMLElement.accessKey
-  - api.HTMLElement.accessKeyLabel
-  - api.HTMLElement.autocapitalize
-  - api.HTMLElement.autocorrect
-  - api.HTMLElement.beforetoggle_event.dialog_elements
-  - api.HTMLElement.blur
-  - api.HTMLElement.change_event
-  - api.HTMLElement.click
   - api.HTMLElement.command_event
-  - api.HTMLElement.contentEditable
-  - api.HTMLElement.contentEditable.plaintext-only
-  - api.HTMLElement.enterKeyHint
-  - api.HTMLElement.focus
-  - api.HTMLElement.focus.options_focusVisible_parameter
-  - api.HTMLElement.focus.options_preventScroll_parameter
-  - api.HTMLElement.inputMode
-  - api.HTMLElement.isContentEditable
-  - api.HTMLElement.lang
-  - api.HTMLElement.nonce
-  - api.HTMLElement.spellcheck
-  - api.HTMLElement.title
-  - api.HTMLElement.togglePopover.returns_boolean
-  - api.HTMLElement.toggle_event.details_elements
-  - api.HTMLElement.toggle_event.dialog_elements
   - api.HTMLIFrameElement.featurePolicy
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes.auto
@@ -113,70 +79,7 @@ compat_features:
   - api.MediaError
   - api.MediaError.code
   - api.MediaError.message
-  - api.MessagePort.worker_support
   - api.Navigator.authentication
-  - api.Navigator.registerProtocolHandler.scheme_parameter_bitcoin
-  - api.Navigator.registerProtocolHandler.scheme_parameter_ftp
-  - api.Navigator.registerProtocolHandler.scheme_parameter_ftps
-  - api.Navigator.registerProtocolHandler.scheme_parameter_geo
-  - api.Navigator.registerProtocolHandler.scheme_parameter_im
-  - api.Navigator.registerProtocolHandler.scheme_parameter_irc
-  - api.Navigator.registerProtocolHandler.scheme_parameter_ircs
-  - api.Navigator.registerProtocolHandler.scheme_parameter_magnet
-  - api.Navigator.registerProtocolHandler.scheme_parameter_mailto
-  - api.Navigator.registerProtocolHandler.scheme_parameter_matrix
-  - api.Navigator.registerProtocolHandler.scheme_parameter_mms
-  - api.Navigator.registerProtocolHandler.scheme_parameter_news
-  - api.Navigator.registerProtocolHandler.scheme_parameter_nntp
-  - api.Navigator.registerProtocolHandler.scheme_parameter_openpgp4fpr
-  - api.Navigator.registerProtocolHandler.scheme_parameter_sftp
-  - api.Navigator.registerProtocolHandler.scheme_parameter_sip
-  - api.Navigator.registerProtocolHandler.scheme_parameter_sms
-  - api.Navigator.registerProtocolHandler.scheme_parameter_smsto
-  - api.Navigator.registerProtocolHandler.scheme_parameter_ssh
-  - api.Navigator.registerProtocolHandler.scheme_parameter_tel
-  - api.Navigator.registerProtocolHandler.scheme_parameter_urn
-  - api.Navigator.registerProtocolHandler.scheme_parameter_webcal
-  - api.Navigator.registerProtocolHandler.scheme_parameter_wtai
-  - api.Navigator.registerProtocolHandler.scheme_parameter_xmpp
-  - api.Navigator.registerProtocolHandler.secure_context_required
-  - api.NotRestoredReasonDetails.toJSON
-  - api.NotRestoredReasons.toJSON
-  - api.OffscreenCanvas.convertToBlob.option_type_parameter_webp
-  - api.OffscreenCanvas.getContext.webgl2_context
-  - api.OffscreenCanvas.getContext.webgl_context
-  - api.OffscreenCanvasRenderingContext2D.filter
-  - api.OffscreenCanvasRenderingContext2D.fontKerning
-  - api.OffscreenCanvasRenderingContext2D.fontStretch
-  - api.OffscreenCanvasRenderingContext2D.fontVariantCaps
-  - api.OffscreenCanvasRenderingContext2D.imageSmoothingQuality
-  - api.OffscreenCanvasRenderingContext2D.letterSpacing
-  - api.OffscreenCanvasRenderingContext2D.textRendering
-  - api.OffscreenCanvasRenderingContext2D.wordSpacing
-  - api.PageRevealEvent
-  - api.PageRevealEvent.PageRevealEvent
-  - api.PageRevealEvent.viewTransition
-  - api.PageSwapEvent
-  - api.PageSwapEvent.PageSwapEvent
-  - api.PageSwapEvent.activation
-  - api.PageSwapEvent.viewTransition
-  - api.Path2D
-  - api.Path2D.Path2D
-  - api.Path2D.addPath
-  - api.Path2D.arc
-  - api.Path2D.arcTo
-  - api.Path2D.bezierCurveTo
-  - api.Path2D.closePath
-  - api.Path2D.ellipse
-  - api.Path2D.lineTo
-  - api.Path2D.moveTo
-  - api.Path2D.quadraticCurveTo
-  - api.Path2D.rect
-  - api.Path2D.roundRect
-  - api.PopStateEvent
-  - api.PopStateEvent.PopStateEvent
-  - api.PopStateEvent.hasUAVisualTransition
-  - api.PopStateEvent.state
   - api.PromiseRejectionEvent
   - api.PromiseRejectionEvent.PromiseRejectionEvent
   - api.PromiseRejectionEvent.promise
@@ -185,7 +88,6 @@ compat_features:
   - api.RadioNodeList.value
   - api.ServiceWorker.error_event
   - api.ShadowRoot.activeElement
-  - api.ShadowRoot.getHTML
   - api.ShadowRoot.innerHTML
   - api.SharedWorker
   - api.SharedWorker.SharedWorker
@@ -197,18 +99,6 @@ compat_features:
   - api.SharedWorkerGlobalScope.close
   - api.SharedWorkerGlobalScope.connect_event
   - api.SharedWorkerGlobalScope.name
-  - api.StorageEvent.StorageEvent
-  - api.SubmitEvent
-  - api.SubmitEvent.SubmitEvent
-  - api.SubmitEvent.submitter
-  - api.TextMetrics.actualBoundingBoxAscent
-  - api.TextMetrics.actualBoundingBoxDescent
-  - api.TextMetrics.actualBoundingBoxLeft
-  - api.TextMetrics.actualBoundingBoxRight
-  - api.TextMetrics.emHeightAscent
-  - api.TextMetrics.emHeightDescent
-  - api.TextMetrics.fontBoundingBoxAscent
-  - api.TextMetrics.fontBoundingBoxDescent
   - api.TimeRanges
   - api.TimeRanges.end
   - api.TimeRanges.length
@@ -216,7 +106,6 @@ compat_features:
   - api.TrackEvent
   - api.TrackEvent.TrackEvent
   - api.TrackEvent.track
-  - api.Window.open.features_parameter_attributionsrc
   - api.Window.originAgentCluster
   - api.Window.postMessage.transfer_parameter
   - api.Window.rejectionhandled_event
@@ -273,7 +162,6 @@ compat_features:
   - html.elements.a.href.href_top
   - html.elements.a.hreftranslate
   - html.elements.a.implicit_noopener
-  - html.elements.a.text_fragments
   - html.elements.button.command
   - html.elements.button.commandfor
   - html.elements.form.autocomplete.new-password
@@ -292,19 +180,7 @@ compat_features:
   - html.elements.input.alpha
   - html.elements.input.autocomplete
   - html.elements.input.colorspace
-  - html.elements.link.rel.dns-prefetch
-  - html.elements.link.rel.expect
   - html.elements.link.rel.icon
-  - html.elements.link.rel.preconnect
-  - html.elements.link.rel.prefetch
-  - html.elements.link.rel.preload
-  - html.elements.link.rel.preload.as-fetch
-  - html.elements.link.rel.preload.as-font
-  - html.elements.link.rel.preload.as-image
-  - html.elements.link.rel.preload.as-script
-  - html.elements.link.rel.preload.as-style
-  - html.elements.link.rel.preload.as-track
-  - html.elements.meta.name.theme-color
   - html.elements.meter
   - html.elements.meter.high
   - html.elements.meter.low
@@ -324,25 +200,14 @@ compat_features:
   - html.elements.textarea.autocomplete.webauthn
   - html.elements.track.kind.descriptions
   - html.elements.video.playsinline
-  - html.global_attributes.accesskey
-  - html.global_attributes.autocapitalize
-  - html.global_attributes.autocorrect
   - html.global_attributes.class
-  - html.global_attributes.contenteditable
-  - html.global_attributes.contenteditable.plaintext-only
   - html.global_attributes.data_attributes
   - html.global_attributes.dir
   - html.global_attributes.draggable
-  - html.global_attributes.enterkeyhint
   - html.global_attributes.hidden
   - html.global_attributes.id
   - html.global_attributes.inputmode
-  - html.global_attributes.lang
-  - html.global_attributes.nonce
-  - html.global_attributes.nonce.nonce_hiding
-  - html.global_attributes.spellcheck
   - html.global_attributes.style
-  - html.global_attributes.title
   - html.global_attributes.title.multi-line_titles
   - http.headers.Cross-Origin-Embedder-Policy
   - http.headers.Cross-Origin-Embedder-Policy.credentialless
@@ -399,6 +264,7 @@ compat_features:
 #   - api.Window.toolbar
 # - Beforeunload:
 #   - api.BeforeUnloadEvent
+#   - api.BeforeUnloadEvent.user_interaction
 #   - api.Window.beforeunload_event
 #   - api.Window.beforeunload_event.preventdefault_activation
 # - BroadcastChannel:
@@ -498,8 +364,29 @@ compat_features:
 #   - api.ImageData.data
 #   - api.ImageData.height
 #   - api.ImageData.width
+#   - api.Path2D
+#   - api.Path2D.Path2D
+#   - api.Path2D.addPath
+#   - api.Path2D.arc
+#   - api.Path2D.arcTo
+#   - api.Path2D.bezierCurveTo
+#   - api.Path2D.closePath
+#   - api.Path2D.ellipse
+#   - api.Path2D.lineTo
+#   - api.Path2D.moveTo
+#   - api.Path2D.quadraticCurveTo
+#   - api.Path2D.rect
+#   - api.Path2D.roundRect
 #   - api.TextMetrics
+#   - api.TextMetrics.actualBoundingBoxAscent
+#   - api.TextMetrics.actualBoundingBoxDescent
+#   - api.TextMetrics.actualBoundingBoxLeft
+#   - api.TextMetrics.actualBoundingBoxRight
 #   - api.TextMetrics.alphabeticBaseline
+#   - api.TextMetrics.emHeightAscent
+#   - api.TextMetrics.emHeightDescent
+#   - api.TextMetrics.fontBoundingBoxAscent
+#   - api.TextMetrics.fontBoundingBoxDescent
 #   - api.TextMetrics.hangingBaseline
 #   - api.TextMetrics.ideographicBaseline
 #   - api.TextMetrics.width
@@ -592,6 +479,7 @@ compat_features:
 #   - api.Document.close
 #   - api.Document.currentScript
 #   - api.Document.defaultView
+#   - api.Document.designMode
 #   - api.Document.dir
 #   - api.Document.embeds
 #   - api.Document.forms
@@ -608,6 +496,7 @@ compat_features:
 #   - api.Document.referrer
 #   - api.Document.scripts
 #   - api.Document.title
+#   - api.Document.writeln
 #   - api.Element.innerHTML
 #   - api.Element.insertAdjacentHTML
 #   - api.Element.outerHTML
@@ -704,13 +593,19 @@ compat_features:
 #   - api.Document.parseHTMLUnsafe_static
 #   - api.Element.setHTMLUnsafe
 #   - api.ShadowRoot.setHTMLUnsafe
+# - Scroll methods on elements:
+#   - api.Document.scroll_event
+#   - api.Element.scroll_event
 # - scrollend:
 #   - api.Document.scrollend_event
 #   - api.Element.scrollend_event
 # - Content Security Policy (CSP):
 #   - api.Document.securitypolicyviolation_event
 #   - api.Element.securitypolicyviolation_event
+#   - api.HTMLElement.nonce
 #   - html.elements.meta.http-equiv.content-security-policy
+#   - html.global_attributes.nonce
+#   - html.global_attributes.nonce.nonce_hiding
 # - Mouse events:
 #   - api.Element.auxclick_event
 #   - api.Element.click_event
@@ -722,16 +617,27 @@ compat_features:
 #   - api.Element.mouseout_event
 #   - api.Element.mouseover_event
 #   - api.Element.mouseup_event
+#   - api.HTMLElement.click
 # - Pointer Events:
 #   - api.Element.auxclick_event.type_pointerevent
 #   - api.Element.click_event.type_pointerevent
+# - hidden="until-found":
+#   - api.Element.beforematch_event
+#   - html.global_attributes.hidden.until-found
 # - Focus events:
 #   - api.Element.blur_event
 #   - api.Element.focus_event
+#   - api.HTMLElement.blur
+#   - api.HTMLElement.focus
+#   - api.HTMLElement.focus.options_focusVisible_parameter
+#   - api.HTMLElement.focus.options_preventScroll_parameter
 # - Clipboard events:
 #   - api.Element.copy_event
 #   - api.Element.cut_event
 #   - api.Element.paste_event
+# - getHTML:
+#   - api.Element.getHTML
+#   - api.ShadowRoot.getHTML
 # - Input events:
 #   - api.Element.input_event
 # - Keyboard events:
@@ -754,6 +660,7 @@ compat_features:
 # - Server-sent events:
 #   - api.EventSource
 #   - api.EventSource.EventSource
+#   - api.EventSource.EventSource.options_withCredentials_parameter
 #   - api.EventSource.close
 #   - api.EventSource.error_event
 #   - api.EventSource.message_event
@@ -761,6 +668,9 @@ compat_features:
 #   - api.EventSource.readyState
 #   - api.EventSource.url
 #   - api.EventSource.withCredentials
+#   - api.EventSource.worker_support
+# - File API:
+#   - api.FileList
 # - <form>:
 #   - api.FormDataEvent
 #   - api.FormDataEvent.FormDataEvent
@@ -787,6 +697,9 @@ compat_features:
 #   - api.HTMLFormElement.submit
 #   - api.HTMLFormElement.submit_event
 #   - api.HTMLFormElement.target
+#   - api.SubmitEvent
+#   - api.SubmitEvent.SubmitEvent
+#   - api.SubmitEvent.submitter
 #   - html.elements.form
 #   - html.elements.form.accept-charset
 #   - html.elements.form.action
@@ -1039,6 +952,7 @@ compat_features:
 #   - api.HTMLElement.popover
 #   - api.HTMLElement.showPopover
 #   - api.HTMLElement.togglePopover
+#   - api.HTMLElement.togglePopover.returns_boolean
 #   - api.HTMLElement.toggle_event.popover_elements
 #   - api.HTMLInputElement.popoverTargetAction
 #   - api.HTMLInputElement.popoverTargetElement
@@ -1075,9 +989,12 @@ compat_features:
 #   - api.OffscreenCanvas
 #   - api.OffscreenCanvas.OffscreenCanvas
 #   - api.OffscreenCanvas.convertToBlob
+#   - api.OffscreenCanvas.convertToBlob.option_type_parameter_webp
 #   - api.OffscreenCanvas.getContext
 #   - api.OffscreenCanvas.getContext.2d_context
 #   - api.OffscreenCanvas.getContext.bitmaprenderer_context
+#   - api.OffscreenCanvas.getContext.webgl2_context
+#   - api.OffscreenCanvas.getContext.webgl_context
 #   - api.OffscreenCanvas.height
 #   - api.OffscreenCanvas.transferToImageBitmap
 #   - api.OffscreenCanvas.width
@@ -1101,15 +1018,21 @@ compat_features:
 #   - api.OffscreenCanvasRenderingContext2D.fillRect
 #   - api.OffscreenCanvasRenderingContext2D.fillStyle
 #   - api.OffscreenCanvasRenderingContext2D.fillText
+#   - api.OffscreenCanvasRenderingContext2D.filter
 #   - api.OffscreenCanvasRenderingContext2D.font
+#   - api.OffscreenCanvasRenderingContext2D.fontKerning
+#   - api.OffscreenCanvasRenderingContext2D.fontStretch
+#   - api.OffscreenCanvasRenderingContext2D.fontVariantCaps
 #   - api.OffscreenCanvasRenderingContext2D.getImageData
 #   - api.OffscreenCanvasRenderingContext2D.getLineDash
 #   - api.OffscreenCanvasRenderingContext2D.getTransform
 #   - api.OffscreenCanvasRenderingContext2D.globalAlpha
 #   - api.OffscreenCanvasRenderingContext2D.globalCompositeOperation
 #   - api.OffscreenCanvasRenderingContext2D.imageSmoothingEnabled
+#   - api.OffscreenCanvasRenderingContext2D.imageSmoothingQuality
 #   - api.OffscreenCanvasRenderingContext2D.isPointInPath
 #   - api.OffscreenCanvasRenderingContext2D.isPointInStroke
+#   - api.OffscreenCanvasRenderingContext2D.letterSpacing
 #   - api.OffscreenCanvasRenderingContext2D.lineCap
 #   - api.OffscreenCanvasRenderingContext2D.lineDashOffset
 #   - api.OffscreenCanvasRenderingContext2D.lineJoin
@@ -1138,8 +1061,10 @@ compat_features:
 #   - api.OffscreenCanvasRenderingContext2D.strokeText
 #   - api.OffscreenCanvasRenderingContext2D.textAlign
 #   - api.OffscreenCanvasRenderingContext2D.textBaseline
+#   - api.OffscreenCanvasRenderingContext2D.textRendering
 #   - api.OffscreenCanvasRenderingContext2D.transform
 #   - api.OffscreenCanvasRenderingContext2D.translate
+#   - api.OffscreenCanvasRenderingContext2D.wordSpacing
 # - Description list:
 #   - api.HTMLDListElement
 #   - html.elements.dd
@@ -1158,6 +1083,7 @@ compat_features:
 #   - api.HTMLDetailsElement
 #   - api.HTMLDetailsElement.open
 #   - api.HTMLElement.toggle_event
+#   - api.HTMLElement.toggle_event.details_elements
 #   - html.elements.details
 #   - html.elements.details.open
 # - Mutually exclusive <details> elements:
@@ -1172,23 +1098,57 @@ compat_features:
 #   - api.HTMLDialogElement.returnValue
 #   - api.HTMLDialogElement.show
 #   - api.HTMLDialogElement.showModal
+#   - api.HTMLElement.beforetoggle_event.dialog_elements
+#   - api.HTMLElement.toggle_event.dialog_elements
 #   - html.elements.dialog
 #   - html.elements.dialog.open
 # - <div>:
 #   - api.HTMLDivElement
 #   - html.elements.div
+# - Accesskey:
+#   - api.HTMLElement.accessKey
+#   - api.HTMLElement.accessKeyLabel
+#   - html.global_attributes.accesskey
+# - Autocapitalize:
+#   - api.HTMLElement.autocapitalize
+#   - html.global_attributes.autocapitalize
+# - Autocorrect:
+#   - api.HTMLElement.autocorrect
+#   - html.global_attributes.autocorrect
 # - Autofocus:
 #   - api.HTMLElement.autofocus
 #   - api.MathMLElement.autofocus
 #   - api.SVGElement.autofocus
 #   - html.global_attributes.autofocus
+# - Change event:
+#   - api.HTMLElement.change_event
+# - Contenteditable:
+#   - api.HTMLElement.contentEditable
+#   - api.HTMLElement.inputMode
+#   - api.HTMLElement.isContentEditable
+#   - html.global_attributes.contenteditable
+# - contenteditable="plaintext-only":
+#   - api.HTMLElement.contentEditable.plaintext-only
+#   - html.global_attributes.contenteditable.plaintext-only
+# - Enterkeyhint:
+#   - api.HTMLElement.enterKeyHint
+#   - html.global_attributes.enterkeyhint
 # - Inert elements:
 #   - api.HTMLElement.inert
 #   - api.HTMLElement.inert.ignores_find_in_page
 #   - html.global_attributes.inert
+# - Lang:
+#   - api.HTMLElement.lang
+#   - html.global_attributes.lang
+# - Spellcheck:
+#   - api.HTMLElement.spellcheck
+#   - html.global_attributes.spellcheck
 # - tabindex:
 #   - api.HTMLElement.tabIndex
 #   - html.global_attributes.tabindex
+# - Title:
+#   - api.HTMLElement.title
+#   - html.global_attributes.title
 # - translate attribute:
 #   - api.HTMLElement.translate
 #   - html.global_attributes.translate
@@ -1898,6 +1858,10 @@ compat_features:
 #   - api.History.replaceState
 #   - api.History.scrollRestoration
 #   - api.History.state
+#   - api.PopStateEvent
+#   - api.PopStateEvent.PopStateEvent
+#   - api.PopStateEvent.hasUAVisualTransition
+#   - api.PopStateEvent.state
 #   - api.Window.history
 #   - api.Window.popstate_event
 # - createImageBitmap:
@@ -1932,6 +1896,7 @@ compat_features:
 #   - api.MessagePort.message_event
 #   - api.MessagePort.postMessage
 #   - api.MessagePort.start
+#   - api.MessagePort.worker_support
 # - Navigation API:
 #   - api.NavigateEvent
 #   - api.NavigateEvent.NavigateEvent
@@ -2018,6 +1983,31 @@ compat_features:
 #   - api.Navigator.pdfViewerEnabled
 # - registerProtocolHandler:
 #   - api.Navigator.registerProtocolHandler
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_bitcoin
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_ftp
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_ftps
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_geo
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_im
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_irc
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_ircs
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_magnet
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_mailto
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_matrix
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_mms
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_news
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_nntp
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_openpgp4fpr
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_sftp
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_sip
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_sms
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_smsto
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_ssh
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_tel
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_urn
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_webcal
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_wtai
+#   - api.Navigator.registerProtocolHandler.scheme_parameter_xmpp
+#   - api.Navigator.registerProtocolHandler.secure_context_required
 #   - api.Navigator.unregisterProtocolHandler
 # - User activation:
 #   - api.Navigator.userActivation
@@ -2030,13 +2020,25 @@ compat_features:
 # - Back/forward cache blocking reasons:
 #   - api.NotRestoredReasonDetails
 #   - api.NotRestoredReasonDetails.reason
+#   - api.NotRestoredReasonDetails.toJSON
 #   - api.NotRestoredReasons
 #   - api.NotRestoredReasons.children
 #   - api.NotRestoredReasons.id
 #   - api.NotRestoredReasons.name
 #   - api.NotRestoredReasons.reasons
 #   - api.NotRestoredReasons.src
+#   - api.NotRestoredReasons.toJSON
 #   - api.NotRestoredReasons.url
+# - View transitions:
+#   - api.PageRevealEvent
+#   - api.PageRevealEvent.PageRevealEvent
+#   - api.PageRevealEvent.viewTransition
+#   - api.PageSwapEvent
+#   - api.PageSwapEvent.PageSwapEvent
+#   - api.PageSwapEvent.activation
+#   - api.PageSwapEvent.viewTransition
+#   - api.Window.pagereveal_event
+#   - api.Window.pageswap_event
 # - Page transition events:
 #   - api.PageTransitionEvent
 #   - api.PageTransitionEvent.PageTransitionEvent
@@ -2097,6 +2099,7 @@ compat_features:
 #   - api.Storage.removeItem
 #   - api.Storage.setItem
 #   - api.StorageEvent
+#   - api.StorageEvent.StorageEvent
 #   - api.StorageEvent.key
 #   - api.StorageEvent.newValue
 #   - api.StorageEvent.oldValue
@@ -2144,11 +2147,10 @@ compat_features:
 # - requestAnimationFrame():
 #   - api.Window.cancelAnimationFrame
 #   - api.Window.requestAnimationFrame
+# - Attribution reporting:
+#   - api.Window.open.features_parameter_attributionsrc
 # - Window management:
 #   - api.Window.open.relative-multi-screen
-# - View transitions:
-#   - api.Window.pagereveal_event
-#   - api.Window.pageswap_event
 # - window.print():
 #   - api.Window.print
 # - JavaScript modules in workers:
@@ -2217,6 +2219,8 @@ compat_features:
 #   - html.elements.a.target.unfencedTop
 #   - html.elements.fencedframe.height
 #   - html.elements.fencedframe.width
+# - Scroll to text fragment:
+#   - html.elements.a.text_fragments
 # - <abbr>:
 #   - html.elements.abbr
 # - <address>:
@@ -2289,16 +2293,34 @@ compat_features:
 #   - html.elements.kbd
 # - Alternative style sheets:
 #   - html.elements.link.rel.alternate_stylesheet
+# - <link rel="dns-prefetch">:
+#   - html.elements.link.rel.dns-prefetch
+# - <link rel="expect">:
+#   - html.elements.link.rel.expect
 # - Web app manifest:
 #   - html.elements.link.rel.manifest
 # - <link rel="modulepreload">:
 #   - html.elements.link.rel.modulepreload
+# - <link rel="preconnect">:
+#   - html.elements.link.rel.preconnect
+# - <link rel="prefetch">:
+#   - html.elements.link.rel.prefetch
+# - <link rel="preload">:
+#   - html.elements.link.rel.preload
+#   - html.elements.link.rel.preload.as-fetch
+#   - html.elements.link.rel.preload.as-font
+#   - html.elements.link.rel.preload.as-image
+#   - html.elements.link.rel.preload.as-script
+#   - html.elements.link.rel.preload.as-style
+#   - html.elements.link.rel.preload.as-track
 # - <main>:
 #   - html.elements.main
 # - <mark>:
 #   - html.elements.mark
 # - color-scheme:
 #   - html.elements.meta.name.color-scheme
+# - <meta name="theme-color">:
+#   - html.elements.meta.name.theme-color
 # - <nav>:
 #   - html.elements.nav
 # - <ruby>:
@@ -2339,7 +2361,5 @@ compat_features:
 #   - html.elements.var
 # - <wbr>:
 #   - html.elements.wbr
-# - hidden="until-found":
-#   - html.global_attributes.hidden.until-found_value
 # - Promise (initial support):
 #   - javascript.builtins.Promise.incumbent_settings_object_tracking

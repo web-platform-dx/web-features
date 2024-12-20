@@ -1,0 +1,5 @@
+name: '<link rel="preconnect">'
+description: The `rel="preconnect"` attribute for the `<link>` HTML element is a hint to the browser that the page or user is likely to request resources from another origin, so the browser should preemptively start a connection to the `href` value's origin.
+spec: https://html.spec.whatwg.org/multipage/links.html#link-type-preconnect
+compat_features:
+  - html.elements.link.rel.preconnect

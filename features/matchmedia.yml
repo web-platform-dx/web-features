@@ -1,0 +1,17 @@
+name: matchMedia
+description: The `window.matchMedia()` method checks whether a media query applies to the document.
+spec: https://drafts.csswg.org/cssom-view-1/#dom-window-matchmedia
+caniuse: matchmedia
+status:
+  compute_from: api.Window.matchMedia
+compat_features:
+  - api.MediaQueryList
+  - api.MediaQueryList.EventTarget_inheritance
+  - api.MediaQueryList.change_event
+  - api.MediaQueryList.matches
+  - api.MediaQueryList.media
+  - api.MediaQueryListEvent
+  - api.MediaQueryListEvent.MediaQueryListEvent
+  - api.MediaQueryListEvent.matches
+  - api.MediaQueryListEvent.media
+  - api.Window.matchMedia

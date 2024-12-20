@@ -1,0 +1,6 @@
+name: Private network access
+description: "The `Access-Control-Request-Private-Network: true` and `Access-Control-Allow-Private-Network: true` HTTP request and response headers establish permission for websites to make requests to internal networks, such as to routers."
+spec: https://wicg.github.io/private-network-access/
+compat_features:
+  - http.mixed-content.private_network_access
+  - api.Request.targetAddressSpace
