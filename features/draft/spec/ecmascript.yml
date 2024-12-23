@@ -1,10 +1,9 @@
-draft_date: 2024-12-16
+draft_date: 2024-12-23
 name: ECMAScript Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
 compat_features:
   - javascript.builtins.Array.@@species
-  - javascript.builtins.Array.@@unscopables
 
 # The following features in the spec are already part of web-features:
 # - Promise.any():
@@ -32,6 +31,9 @@ compat_features:
 #   - javascript.builtins.Array.entries
 #   - javascript.builtins.Array.keys
 #   - javascript.builtins.Array.values
+# - with:
+#   - javascript.builtins.Array.@@unscopables
+#   - javascript.builtins.Symbol.unscopables
 # - Array at():
 #   - javascript.builtins.Array.at
 #   - javascript.builtins.TypedArray.at
@@ -827,7 +829,6 @@ compat_features:
 #   - javascript.builtins.Symbol.toString
 #   - javascript.builtins.Symbol.toStringTag
 #   - javascript.builtins.Symbol.toStringTag.dom_objects
-#   - javascript.builtins.Symbol.unscopables
 #   - javascript.builtins.Symbol.valueOf
 # - Typed array iterators:
 #   - javascript.builtins.TypedArray.@@iterator
