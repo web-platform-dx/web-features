@@ -240,17 +240,6 @@ compat_features:
   #   firefox_android: "100"
   - api.ReadableStreamDefaultReader.ReadableStreamDefaultReader
 
-  # baseline: false
-  # support:
-  #   chrome: "87"
-  #   chrome_android: "87"
-  #   edge: "87"
-  #   firefox: "103"
-  #   firefox_android: "103"
-  - api.ReadableStream.transferable
-  - api.TransformStream.transferable
-  - api.WritableStream.transferable
-
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:

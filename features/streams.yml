@@ -19,7 +19,6 @@ compat_features:
   - api.ReadableByteStreamController.enqueue
   - api.ReadableByteStreamController.error
   - api.ReadableStream.from_static
-  - api.ReadableStream.transferable
   - api.ReadableStreamBYOBReader
   - api.ReadableStreamBYOBReader.ReadableStreamBYOBReader
   - api.ReadableStreamBYOBReader.cancel
@@ -51,7 +50,6 @@ compat_features:
   - api.TransformStream
   - api.TransformStream.TransformStream
   - api.TransformStream.readable
-  - api.TransformStream.transferable
   - api.TransformStream.writable
   - api.TransformStreamDefaultController
   - api.TransformStreamDefaultController.desiredSize
@@ -59,7 +57,6 @@ compat_features:
   - api.TransformStreamDefaultController.error
   - api.TransformStreamDefaultController.terminate
   - api.WritableStream.close
-  - api.WritableStream.transferable
   - api.WritableStreamDefaultController.signal
   - api.WritableStreamDefaultWriter.WritableStreamDefaultWriter
   - api.ByteLengthQueuingStrategy
