@@ -273,11 +273,5 @@ compat_features:
   - api.ReadableStreamDefaultReader.releaseLock.reject_pending_read_request
 
   # baseline: false
-  # support:
-  #   firefox: "117"
-  #   firefox_android: "117"
-  - api.ReadableStream.from_static
-
-  # baseline: false
   # support: {}
   - api.ReadableStreamBYOBReader.read.options_min_parameter
