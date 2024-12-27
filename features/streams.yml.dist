@@ -278,15 +278,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "124"
-  #   chrome_android: "124"
-  #   edge: "124"
-  #   firefox: "110"
-  #   firefox_android: "110"
-  - api.ReadableStream.values
-
-  # baseline: false
-  # support:
   #   firefox: "102"
   #   firefox_android: "102"
   - api.ReadableStreamBYOBReader.releaseLock.reject_pending_read_request
