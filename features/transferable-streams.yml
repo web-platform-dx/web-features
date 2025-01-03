@@ -1,0 +1,8 @@
+name: Transferable streams
+description: Streams are transferable objects, allowing you to move them from one context to another (for example, to a worker).
+spec: https://streams.spec.whatwg.org/#rs-transfer
+group: streams
+compat_features:
+  - api.ReadableStream.transferable
+  - api.TransformStream.transferable
+  - api.WritableStream.transferable

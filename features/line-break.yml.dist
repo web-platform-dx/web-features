@@ -9,10 +9,10 @@ status:
     chrome: "83"
     chrome_android: "83"
     edge: "83"
-    firefox: ≤72
+    firefox: "69"
     firefox_android: "79"
-    safari: ≤13.1
-    safari_ios: ≤13.4
+    safari: "13"
+    safari_ios: "13"
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-07-28
@@ -34,12 +34,16 @@ compat_features:
   #   chrome: "58"
   #   chrome_android: "58"
   #   edge: "79"
-  #   firefox: ≤72
+  #   firefox: "69"
   #   firefox_android: "79"
   #   safari: "11"
   #   safari_ios: "11"
+  - css.properties.line-break.auto
+  - css.properties.line-break.loose
   - css.properties.line-break.normal
+  - css.properties.line-break.strict
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
@@ -52,18 +56,3 @@ compat_features:
   #   safari: "13"
   #   safari_ios: "13"
   - css.properties.line-break.anywhere
-
-  # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
-  # support:
-  #   chrome: ≤83
-  #   chrome_android: ≤83
-  #   edge: ≤83
-  #   firefox: ≤72
-  #   firefox_android: "79"
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
-  - css.properties.line-break.auto
-  - css.properties.line-break.loose
-  - css.properties.line-break.strict
