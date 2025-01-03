@@ -172,8 +172,9 @@ compat_features:
   #   safari_ios: "14.5"
   - api.WritableStream.close
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-06-28
+  # baseline_high_date: 2024-12-28
   # support:
   #   chrome: "59"
   #   chrome_android: "59"
@@ -184,8 +185,9 @@ compat_features:
   #   safari_ios: "10.3"
   - api.ReadableStream.pipeThrough
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-06-28
+  # baseline_high_date: 2024-12-28
   # support:
   #   chrome: "67"
   #   chrome_android: "67"

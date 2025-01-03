@@ -990,7 +990,6 @@ compat_features:
   - svg.elements.radialGradient.r
   - svg.elements.radialGradient.spreadMethod
   - svg.elements.script.type
-  - svg.elements.script.xlink_href
   - svg.elements.style.media
   - svg.elements.style.title
   - svg.elements.style.type
@@ -1662,6 +1661,17 @@ compat_features:
   #   safari_ios: "17.2"
   - api.SVGImageElement.crossOrigin
   - svg.elements.image.crossorigin
+
+  # baseline: false
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: "1.5"
+  #   firefox_android: "4"
+  #   safari: "3"
+  #   safari_ios: "2"
+  - svg.elements.script.xlink_href
 
   # baseline: false
   # support:
