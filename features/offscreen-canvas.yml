@@ -3,16 +3,18 @@ description: The `OffscreenCanvas` API provides a canvas that can be drawn to of
 spec: https://html.spec.whatwg.org/multipage/canvas.html#the-offscreencanvas-interface
 group: canvas
 caniuse: offscreencanvas
+status:
+  compute_from: api.OffscreenCanvas
 compat_features:
   - api.HTMLCanvasElement.transferControlToOffscreen
   - api.OffscreenCanvas
   - api.OffscreenCanvas.convertToBlob
+  - api.OffscreenCanvas.convertToBlob.option_type_parameter_webp
   - api.OffscreenCanvas.getContext
   - api.OffscreenCanvas.getContext.2d_context
   - api.OffscreenCanvas.getContext.bitmaprenderer_context
-  # TODO: later additions:
-  # - api.OffscreenCanvas.getContext.webgl2_context
-  # - api.OffscreenCanvas.getContext.webgl_context
+  - api.OffscreenCanvas.getContext.webgl2_context
+  - api.OffscreenCanvas.getContext.webgl_context
   - api.OffscreenCanvas.height
   - api.OffscreenCanvas.OffscreenCanvas
   - api.OffscreenCanvas.transferToImageBitmap
@@ -41,6 +43,10 @@ compat_features:
   - api.OffscreenCanvasRenderingContext2D.fillRect
   - api.OffscreenCanvasRenderingContext2D.fillStyle
   - api.OffscreenCanvasRenderingContext2D.fillText
+  - api.OffscreenCanvasRenderingContext2D.filter
+  - api.OffscreenCanvasRenderingContext2D.fontKerning
+  - api.OffscreenCanvasRenderingContext2D.fontStretch
+  - api.OffscreenCanvasRenderingContext2D.fontVariantCaps
   - api.OffscreenCanvasRenderingContext2D.font
   - api.OffscreenCanvasRenderingContext2D.getImageData
   - api.OffscreenCanvasRenderingContext2D.getLineDash
@@ -48,8 +54,10 @@ compat_features:
   - api.OffscreenCanvasRenderingContext2D.globalAlpha
   - api.OffscreenCanvasRenderingContext2D.globalCompositeOperation
   - api.OffscreenCanvasRenderingContext2D.imageSmoothingEnabled
+  - api.OffscreenCanvasRenderingContext2D.imageSmoothingQuality
   - api.OffscreenCanvasRenderingContext2D.isPointInPath
   - api.OffscreenCanvasRenderingContext2D.isPointInStroke
+  - api.OffscreenCanvasRenderingContext2D.letterSpacing
   - api.OffscreenCanvasRenderingContext2D.lineCap
   - api.OffscreenCanvasRenderingContext2D.lineDashOffset
   - api.OffscreenCanvasRenderingContext2D.lineJoin
@@ -78,5 +86,7 @@ compat_features:
   - api.OffscreenCanvasRenderingContext2D.strokeText
   - api.OffscreenCanvasRenderingContext2D.textAlign
   - api.OffscreenCanvasRenderingContext2D.textBaseline
+  - api.OffscreenCanvasRenderingContext2D.textRendering
   - api.OffscreenCanvasRenderingContext2D.transform
   - api.OffscreenCanvasRenderingContext2D.translate
+  - api.OffscreenCanvasRenderingContext2D.wordSpacing
