@@ -30,3 +30,8 @@ compat_features:
   #   safari_ios: "6"
   - html.elements.a.ping
   - html.elements.area.ping
+
+  # baseline: false
+  # support: {}
+  - api.SVGAElement.ping
+  - svg.elements.a.ping
