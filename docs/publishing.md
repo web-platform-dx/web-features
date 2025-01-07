@@ -73,7 +73,8 @@ You can install these prereleases using a command such as `npm install web-featu
 
 Publishing requires the `NPM_TOKEN` repository secret.
 
-Set the secret by running `gh secret set --repo=web-platform-dx/web-features NPM_TOKEN`
+Set the secret by running `gh secret set --repo=web-platform-dx/web-features NPM_TOKEN`,
+which prompts you to paste the secret,
 or via the repository settings (_Settings_ → _Secrets and variables_ → _Actions_).
 
 If you're replacing this token, then use the following settings:
