@@ -4,9 +4,13 @@
 status:
   baseline: false
   support:
-    chrome: "116"
-    edge: "116"
+    chrome: "130"
+    edge: "130"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "116"
+  #   edge: "116"
   - api.DocumentPictureInPicture
   - api.DocumentPictureInPicture.enter_event
   - api.DocumentPictureInPicture.requestWindow
@@ -15,3 +19,16 @@ compat_features:
   - api.DocumentPictureInPictureEvent.DocumentPictureInPictureEvent
   - api.DocumentPictureInPictureEvent.window
   - api.Window.documentPictureInPicture
+
+  # baseline: false
+  # support:
+  #   chrome: "124"
+  #   edge: "124"
+  - api.DocumentPictureInPicture.requestWindow.option_disallowReturnToOpener
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "130"
+  #   edge: "130"
+  - api.DocumentPictureInPicture.requestWindow.option_preferInitialWindowPlacement

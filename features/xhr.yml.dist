@@ -450,3 +450,11 @@ compat_features:
   #   safari: "10"
   #   safari_ios: "10"
   - api.ProgressEvent.worker_support
+
+  # baseline: false
+  # support:
+  #   firefox: "111"
+  #   firefox_android: "111"
+  #   safari: "16.1"
+  #   safari_ios: "16.1"
+  - api.XMLHttpRequest.authorization_removed_cross_origin

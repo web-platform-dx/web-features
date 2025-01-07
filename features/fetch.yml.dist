@@ -139,6 +139,7 @@ compat_features:
   #   firefox_android: "44"
   #   safari: "10.1"
   #   safari_ios: "10.3"
+  - api.Headers.@@iterator
   - api.Headers.entries
   - api.Headers.keys
   - api.Headers.values
@@ -350,6 +351,20 @@ compat_features:
   #   safari_ios: "17"
   - api.Headers.getSetCookie
 
+  # baseline: low
+  # baseline_low_date: 2024-11-26
+  # support:
+  #   chrome: "66"
+  #   chrome_android: "66"
+  #   edge: "15"
+  #   firefox: "133"
+  #   firefox_android: "133"
+  #   safari: "13"
+  #   safari_ios: "13"
+  - api.Request.Request.init_keepalive_parameter
+  - api.Request.keepalive
+  - api.fetch.init_keepalive_parameter
+
   # baseline: false
   # support:
   #   chrome: "43"
@@ -389,16 +404,6 @@ compat_features:
   #   safari: "10.1"
   #   safari_ios: "10.3"
   - api.Request.cache.only-if-cached
-
-  # baseline: false
-  # support:
-  #   chrome: "66"
-  #   chrome_android: "66"
-  #   edge: "15"
-  #   safari: "13"
-  #   safari_ios: "13"
-  - api.Request.keepalive
-  - api.fetch.init_keepalive_parameter
 
   # baseline: false
   # support:
@@ -451,15 +456,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "117"
-  #   chrome_android: "117"
-  #   edge: "117"
-  - api.Request.Request.init_attributionReporting_parameter
-  - api.fetch.init_attributionReporting_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "124"
-  #   chrome_android: "124"
-  #   edge: "124"
-  - api.Request.targetAddressSpace
+  #   chrome: "131"
+  #   edge: "131"
+  - api.Request.duplex

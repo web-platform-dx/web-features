@@ -26,6 +26,7 @@ compat_features:
   - api.CSPViolationReportBody.toJSON
   - api.Document.securitypolicyviolation_event
   - api.Element.securitypolicyviolation_event
+  - api.HTMLElement.nonce
   - api.HTMLIFrameElement.csp
   - api.SecurityPolicyViolationEvent
   - api.SecurityPolicyViolationEvent.SecurityPolicyViolationEvent
@@ -45,6 +46,8 @@ compat_features:
   - api.WorkerGlobalScope.securitypolicyviolation_event
   - html.elements.iframe.csp
   - html.elements.meta.http-equiv.content-security-policy
+  - html.global_attributes.nonce
+  - html.global_attributes.nonce.nonce_hiding
   - http.headers.Content-Security-Policy
   - http.headers.Content-Security-Policy-Report-Only
   - http.headers.Content-Security-Policy.base-uri

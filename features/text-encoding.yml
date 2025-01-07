@@ -1,0 +1,31 @@
+name: Text encoding and decoding
+description: "The `TextEncoder` API transforms a stream of code points into a byte stream with UTF-8 encoding, and `TextDecoder` does the reverse."
+spec: https://encoding.spec.whatwg.org/
+caniuse: textencoder
+# Status generated to match Caniuse.
+status:
+  compute_from:
+    - api.TextDecoder
+    - api.TextEncoder
+compat_features:
+  - api.TextDecoder
+  - api.TextDecoder.TextDecoder
+  - api.TextDecoder.decode
+  - api.TextDecoder.encoding
+  - api.TextDecoder.fatal
+  - api.TextDecoder.ignoreBOM
+  - api.TextDecoder.worker_support
+  - api.TextDecoderStream
+  - api.TextDecoderStream.TextDecoderStream
+  - api.TextDecoderStream.encoding
+  - api.TextDecoderStream.fatal
+  - api.TextDecoderStream.ignoreBOM
+  - api.TextEncoder
+  - api.TextEncoder.TextEncoder
+  - api.TextEncoder.encode
+  - api.TextEncoder.encodeInto
+  - api.TextEncoder.encoding
+  - api.TextEncoder.worker_support
+  - api.TextEncoderStream
+  - api.TextEncoderStream.TextEncoderStream
+  - api.TextEncoderStream.encoding

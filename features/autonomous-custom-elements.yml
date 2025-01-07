@@ -4,3 +4,15 @@ spec: https://html.spec.whatwg.org/multipage/custom-elements.html#autonomous-cus
 group: custom-elements
 # Note that https://caniuse.com/custom-elementsv1 covers both autonomous custom
 # elements and customized built-in elements, so it is not linked here.
+status:
+  compute_from: api.CustomElementRegistry
+compat_features:
+  - css.selectors.defined
+  - api.CustomElementRegistry
+  - api.CustomElementRegistry.define
+  - api.CustomElementRegistry.define.disabledFeatures_static_property
+  - api.CustomElementRegistry.get
+  - api.CustomElementRegistry.getName
+  - api.CustomElementRegistry.upgrade
+  - api.CustomElementRegistry.whenDefined
+  - api.Window.customElements

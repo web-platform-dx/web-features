@@ -8,14 +8,19 @@ ignore-hidden = false
 extend-ignore-re = [
     "\\bext-shader-texture-lod\\b",
     "\\bhttp\\.headers\\.ECT\\b",
+    "detail \\(LOD\\)",
 ]
 
 [default.extend-words]
+"clonable" = "clonable"
 "seeked" = "seeked"
 
 [default.extend-identifiers]
-"is_transitionable" = "is_transitionable"
 "EXT_shader_texture_lod" = "EXT_shader_texture_lod"
+"gatherND" = "gatherND"
+"is_transitionable" = "is_transitionable"
+"scatterND" = "scatterND"
+"scheme_parameter_openpgp4fpr" = "scheme_parameter_openpgp4fpr"
 
 # Typos
 "Github" = "GitHub"

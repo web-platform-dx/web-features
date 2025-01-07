@@ -1,38 +1,44 @@
 name: Notifications
-description: The notifications API sends system notifications to the user, often even when the page or browser is not the foreground application.
+# This feature is the general Notifications API, and does not anchor to the
+# Caniuse feature.
+#
+# See `features/notifications-apps.yml` for the Notifications feature for mobile
+# browsers that have platform-specific requirements and aligns with Caniuse.
+description: The `Notification()` constructor shows a message to the user, typically using the notification system of the host operating system.
 spec: https://notifications.spec.whatwg.org/
-caniuse: notifications
-# Notifications support is complicated and this entry is unusual. It represents
-# some kind of notification support available to web pages. More fine-grained
-# features could be added to represent specific things that work.
-#
-# https://caniuse.com/notifications marks iOS support as partial with this note:
-# "Requires website to first be added to the Home Screen."
-#
-# BCD doesn't use partial_implementation for safari_ios, but has this note:
-# "Notifications are supported in web apps saved to the home screen."
-#
-# We do not have the concept of partial support or notes:
-# https://github.com/web-platform-dx/web-features/issues/915
-#
-# Another complication is the two entry points to this API:
-# - new Notification() for non-persistent notifications.
-# - showNotification() in service workers for persistent notifications.
-#
-# Finally, BCD and caniuse.com disagree about whether it was Safari 6 or 7 that
-# first supported notifications, and BCD originally agreed with caniuse.com:
-# https://github.com/mdn/browser-compat-data/pull/7949
-#
-# Due to this complexity, manually combine these 3 data points:
-# https://developer.mozilla.org/en-US/docs/Web/API/Notification/Notification#browser_compatibility
-# https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification#browser_compatibility
-# https://caniuse.com/notifications (excluding partial support on iOS)
 status:
-  baseline: false
-  support:
-    chrome: "20"
-    chrome_android: "42"
-    edge: "14"
-    firefox: "22"
-    firefox_android: "22"
-    safari: "6"
+  compute_from: api.Notification.Notification
+compat_features:
+  - api.Notification
+  - api.Notification.Notification
+  - api.Notification.actions
+  - api.Notification.badge
+  - api.Notification.body
+  - api.Notification.click_event
+  - api.Notification.close
+  - api.Notification.close_event
+  - api.Notification.data
+  - api.Notification.dir
+  - api.Notification.error_event
+  - api.Notification.icon
+  - api.Notification.image
+  - api.Notification.lang
+  - api.Notification.maxActions_static
+  - api.Notification.permission_static
+  - api.Notification.renotify
+  - api.Notification.requestPermission_static
+  - api.Notification.requireInteraction
+  - api.Notification.show_event
+  - api.Notification.silent
+  - api.Notification.tag
+  - api.Notification.timestamp
+  - api.Notification.title
+  - api.Notification.vibrate
+  - api.NotificationEvent
+  - api.NotificationEvent.NotificationEvent
+  - api.NotificationEvent.action
+  - api.NotificationEvent.notification
+  - api.ServiceWorkerGlobalScope.notificationclick_event
+  - api.ServiceWorkerGlobalScope.notificationclose_event
+  - api.ServiceWorkerRegistration.getNotifications
+  - api.ServiceWorkerRegistration.showNotification
