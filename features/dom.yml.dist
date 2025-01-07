@@ -152,6 +152,7 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "1.2"
   #   safari_ios: "1"
+  - api.Document.designMode
   - api.Node.childNodes
 
   # baseline: high
@@ -886,6 +887,7 @@ compat_features:
   #   safari_ios: "11"
   - api.Document.close
   - api.Document.open
+  - api.Document.writeln
 
   # baseline: high
   # baseline_low_date: 2018-04-30

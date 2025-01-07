@@ -1,11 +1,14 @@
-draft_date: 2024-10-085
-name: svg-deprecated
-description: Placeholder for deprecated or non-real features
-spec: https://svgwg.org/svg2-draft/
+name: SVG 1.1 (discouraged)
+description: The SVG 1.1 image format has several components that were excluded from SVG 2, such as fonts, alternate glyphs, and the `xlink` namespace.
+spec: https://www.w3.org/TR/SVG11/
+discouraged:
+  according_to:
+    - https://svgwg.org/svg2-draft/changes.html#substantial
+  alternatives:
+    - svg
+    - font-face
 compat_features:
-  - api.SVGAElement.ping
   - api.SVGAElement.text
-  - api.SVGCursorElement
   - api.SVGFontElement
   - api.SVGFontFaceElement
   - api.SVGFontFaceFormatElement
@@ -24,15 +27,7 @@ compat_features:
   - api.SVGHKernElement
   - api.SVGMissingGlyphElement
   - api.SVGRenderingIntent
-  - api.SVGTRefElement
   - api.SVGVKernElement
-  - svg.elements.a.ping
-  - svg.elements.cursor
-  - svg.elements.cursor.href
-  - svg.elements.cursor.systemLanguage
-  - svg.elements.cursor.x
-  - svg.elements.cursor.xlink_href
-  - svg.elements.cursor.y
   - svg.elements.font
   - svg.elements.font-face
   - svg.elements.font-face-format
@@ -112,19 +107,12 @@ compat_features:
   - svg.elements.missing-glyph.vert-adv-y
   - svg.elements.missing-glyph.vert-origin-x
   - svg.elements.missing-glyph.vert-origin-y
-  - svg.elements.tref
-  - svg.elements.tref.fill
-  - svg.elements.tref.fill.context-fill
-  - svg.elements.tref.systemLanguage
-  - svg.elements.tref.xlink_href
   - svg.elements.vkern
   - svg.elements.vkern.g1
   - svg.elements.vkern.g2
   - svg.elements.vkern.k
   - svg.elements.vkern.u1
   - svg.elements.vkern.u2
-
-  # Confirmed to be DEPRECATED
   - svg.global_attributes.glyph-orientation-horizontal
   - svg.global_attributes.glyph-orientation-vertical
   - api.SVGSVGElement.currentView
@@ -181,3 +169,4 @@ compat_features:
   - api.SVGPoint.matrixTransform
   - api.SVGPoint.x
   - api.SVGPoint.y
+  - svg.elements.script.xlink_href
