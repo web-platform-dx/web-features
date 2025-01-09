@@ -1,4 +1,4 @@
-draft_date: 2025-01-02
+draft_date: 2025-01-07
 name: HTML Standard
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -2209,11 +2209,21 @@ compat_features:
 #   - css.selectors.visited
 #   - css.selectors.visited.not_match_link
 #   - css.selectors.visited.privacy_measures
+# - :modal:
+#   - css.selectors.modal
+# - Open and closed selectors:
+#   - css.selectors.open
+# - :placeholder-shown:
+#   - css.selectors.placeholder-shown
+#   - css.selectors.placeholder-shown.non_text_types
 # - :read-only and :read-write:
 #   - css.selectors.read-only
 #   - css.selectors.read-write
 # - :target:
 #   - css.selectors.target
+# - :user-valid and :user-invalid:
+#   - css.selectors.user-invalid
+#   - css.selectors.user-valid
 # - <fencedframe>:
 #   - html.elements.a.target.unfencedTop
 #   - html.elements.fencedframe.height
