@@ -1,0 +1,6 @@
+name: Private click measurement
+description: The `attributionsourceid` and `attributiondestination` attributes for `<a>` elements measure clicks across websites without associating a click to a specific session. Not to be confused with attribution reporting. Also known as PCM.
+spec: https://privacycg.github.io/private-click-measurement/
+compat_features:
+  - api.HTMLAnchorElement.attributionSourceId
+  - html.elements.a.attributionsourceid
