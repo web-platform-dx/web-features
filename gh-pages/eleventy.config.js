@@ -1,7 +1,6 @@
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import markdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
-import UpgradeHelper from "@11ty/eleventy-upgrade-help";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/img");
@@ -14,7 +13,6 @@ export default function (eleventyConfig) {
     linkify: true,
   };
   eleventyConfig.setLibrary("md", markdownIt(mdOpts).use(markdownItAnchor));
-  eleventyConfig.addPlugin(UpgradeHelper);
   return {
     dir: {
       input: "src",
