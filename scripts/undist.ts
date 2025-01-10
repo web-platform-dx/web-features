@@ -61,6 +61,9 @@ async function main() {
   const distData = YAML.parse(distContents);
 
   const compatFeatures = distData.compat_features;
+  if (!compatFeatures) {
+    throw new Error(`No 'compat_features' found in ${dist}`)
+  }
   if (additions.length > 0) {
     compatFeatures.push(...additions);
   }
