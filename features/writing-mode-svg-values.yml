@@ -1,0 +1,16 @@
+name: writing-mode SVG 1.1 values
+description: The `lr`, `lr-tb`, `rl`, `rl-tb`, `tb`, and `tb-rl` keyword values for the `writing-mode` CSS property set the text direction for elements in SVG 1.1 documents.
+spec: https://drafts.csswg.org/css-writing-modes-4/#block-flow
+group: css
+discouraged:
+  according_to:
+    - https://drafts.csswg.org/css-writing-modes-4/#svg-writing-mode
+  alternatives:
+    - writing-mode
+compat_features:
+  - css.properties.writing-mode.lr
+  - css.properties.writing-mode.lr-tb
+  - css.properties.writing-mode.rl
+  - css.properties.writing-mode.rl-tb
+  - css.properties.writing-mode.tb
+  - css.properties.writing-mode.tb-rl
