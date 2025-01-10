@@ -1,0 +1,17 @@
+name: Media capabilities
+description: The `MediaCapabilities` API lets you query the decoding abilities of the device, system and browser about supported codecs, resolutions, and bitrates.
+spec: https://w3c.github.io/media-capabilities/
+# Computing status because core feature is baseline but this decoding
+# parameter is not, but doesn't prevent use.
+#  - api.MediaCapabilities.decodingInfo.configuration_keySystemConfiguration_parameter
+status:
+  compute_from: api.MediaCapabilities
+compat_features:
+  - api.InputDeviceInfo.getCapabilities
+  - api.MediaCapabilities
+  - api.MediaCapabilities.decodingInfo
+  - api.MediaCapabilities.decodingInfo.configuration_keySystemConfiguration_parameter
+  - api.MediaCapabilities.encodingInfo
+  - api.MediaStreamTrack.getCapabilities
+  - api.Navigator.mediaCapabilities
+  - api.WorkerNavigator.mediaCapabilities
