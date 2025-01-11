@@ -1,0 +1,12 @@
+name: In-app install experience
+description: On browsers that support installing Progressive Web Apps (PWAs), the `beforeinstallprompt` event can be used to defer the browser installation flow until when the user interacts with an in-app install button.
+spec: https://wicg.github.io/manifest-incubations/
+group: progressive-web-app
+compat_features:
+  - api.Window.beforeinstallprompt_event
+  - api.BeforeInstallPromptEvent
+  - api.BeforeInstallPromptEvent.BeforeInstallPromptEvent
+  - api.BeforeInstallPromptEvent.platforms
+  - api.BeforeInstallPromptEvent.prompt
+  - api.BeforeInstallPromptEvent.userChoice
+  - api.Window.appinstalled_event
