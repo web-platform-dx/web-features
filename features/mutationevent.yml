@@ -1,5 +1,5 @@
 name: Mutation events
-description: Legacy mutation events like `DOMSubtreeModified`, `DOMNodeInserted`, or `DOMNodeRemoved` watch for changes to the DOM and run an event listener callback when DOM changes occur.
+description: Mutation events like `DOMSubtreeModified`, `DOMNodeInserted`, or `DOMNodeRemoved` fire when the DOM changes occur.
 # The latest spec doesn't mention them at all anymore.
 spec: https://w3c.github.io/uievents/
 discouraged:
