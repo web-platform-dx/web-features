@@ -139,6 +139,28 @@ compat_features:
   #   safari_ios: "16.5"
   - api.Permissions.permission_push
 
+  # baseline: low
+  # baseline_low_date: 2025-01-07
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "17"
+  #   firefox: "134"
+  #   firefox_android: "134"
+  #   safari: "16"
+  #   safari_ios: "16.4"
+  - api.PushManager.supportedContentEncodings_static
+
+  # baseline: false
+  # support:
+  #   chrome: "132"
+  #   chrome_android: "132"
+  #   firefox: "128"
+  #   firefox_android: "128"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.PushMessageData.bytes
+
   # baseline: false
   # support:
   #   chrome: "54"
@@ -147,23 +169,6 @@ compat_features:
   #   safari: "16"
   #   safari_ios: "16.4"
   - api.PushSubscriptionOptions.userVisibleOnly
-
-  # baseline: false
-  # support:
-  #   chrome: "60"
-  #   chrome_android: "60"
-  #   edge: "17"
-  #   safari: "16"
-  #   safari_ios: "16.4"
-  - api.PushManager.supportedContentEncodings_static
-
-  # baseline: false
-  # support:
-  #   firefox: "128"
-  #   firefox_android: "128"
-  #   safari: "18"
-  #   safari_ios: "18"
-  - api.PushMessageData.bytes
 
   # baseline: false
   # support:
