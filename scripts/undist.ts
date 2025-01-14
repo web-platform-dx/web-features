@@ -1,6 +1,7 @@
 import yargs from "yargs";
 import { fileURLToPath } from "node:url";
 import fs from "node:fs";
+import path from "node:path";
 import YAML from "yaml";
 
 const argv = yargs(process.argv.slice(2))
@@ -25,23 +26,18 @@ const argv = yargs(process.argv.slice(2))
   }).argv;
 
 // Support `path/to/feature.yml.dist`, `path/to/feature.yml`, or `path/to/feature`
-function getPaths(path: string): { yml: string; dist: string } {
-  let base = path;
-  if (path.endsWith(".yml.dist")) {
-    base = path.slice(0, -9);
-  } else if (path.endsWith(".yml")) {
-    base = path.slice(0, -4);
-  }
+function getPaths(featurePath: string): { yml: string; dist: string } {
+  const { name, ext, dir } = path.parse(featurePath);
+  const id = ext === ".dist" ? path.basename(name) : `${name}.yml`;
+
   return {
-    yml: `${base}.yml`,
-    dist: `${base}.yml.dist`,
+    yml: path.join(dir, id),
+    dist: path.join(dir, `${id}.dist`),
   };
 }
 
 async function main() {
   const { path, sort, add = [] } = argv;
-  // Accept `-a key1,key2,key3` as well as `-a key1 -a key2 -a key3`
-  const additions = add.flatMap((addition) => addition.split(","));
 
   const { yml, dist } = getPaths(path);
 
@@ -64,11 +60,13 @@ async function main() {
   if (!compatFeatures) {
     throw new Error(`No 'compat_features' found in ${dist}`);
   }
-  if (additions.length > 0) {
-    compatFeatures.push(...additions);
+  if (add.length > 0) {
+    compatFeatures.push(...add);
   }
-  if (sort) compatFeatures.sort();
 
+  if (sort) {
+    compatFeatures.sort();
+  }
   ymlData.set("compat_features", compatFeatures);
 
   fs.writeFileSync(yml, ymlData.toString({ lineWidth: 0 }));
