@@ -3,7 +3,9 @@ description: The `mediaKeys` property of `HTMLMediaElement` and the `navigator.r
 spec: https://w3c.github.io/encrypted-media/
 caniuse: eme
 status:
-  compute_from: api.Navigator.requestMediaKeySystemAccess
+  compute_from:
+    - api.Navigator.requestMediaKeySystemAccess
+    - api.HTMLMediaElement.mediaKeys
 compat_features:
   - api.HTMLMediaElement.encrypted_event
   - api.HTMLMediaElement.mediaKeys
