@@ -1,5 +1,5 @@
 name: Media capabilities
-description: The `MediaCapabilities` API lets you query the decoding abilities of the device, system and browser about supported codecs, resolutions, and bitrates.
+description: The `navigator.mediaCapabilities` API queries the encoding and decoding abilities of the device, such as supported codecs, resolutions, and bitrates.
 spec: https://w3c.github.io/media-capabilities/
 # Computing status because core feature is baseline but this decoding
 # parameter is not, but doesn't prevent use.
