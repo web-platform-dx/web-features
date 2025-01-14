@@ -1,8 +1,11 @@
 name: Encrypted media extensions
-description: Encrypted Media Extensions control the playback of content which is subject to a digital restrictions management scheme.
+description: The `mediaKeys` property of `HTMLMediaElement` and the `navigator.requestMediaKeySystemAccess()` method control the playback of content subject to digital rights management. Also known as EME.
 spec: https://w3c.github.io/encrypted-media/
+caniuse: eme
 status:
-  compute_from: api.Navigator.requestMediaKeySystemAccess
+  compute_from:
+    - api.Navigator.requestMediaKeySystemAccess
+    - api.HTMLMediaElement.mediaKeys
 compat_features:
   - api.HTMLMediaElement.encrypted_event
   - api.HTMLMediaElement.mediaKeys
