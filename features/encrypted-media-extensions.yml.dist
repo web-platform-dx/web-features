@@ -171,6 +171,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "80"
+  #   chrome_android: "80"
+  #   edge: "80"
+  #   firefox: "129"
+  #   firefox_android: "129"
+  - api.MediaCapabilities.decodingInfo.configuration_keySystemConfiguration_parameter
+
+  # baseline: false
+  # support:
   #   chrome: "88"
   #   chrome_android: "88"
   #   edge: "88"
