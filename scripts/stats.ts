@@ -44,7 +44,7 @@ export function stats(detailed: boolean = false) {
   const result = {
     features: featureCount,
     compatKeys: doneKeys.length,
-    compatKeysUnmapped: toDoKeys.length + deprecatedNonStandardKeys.length,
+    compatKeysUnmapped: keys.length - doneKeys.length,
     compatCoverage: doneKeys.length / keys.length,
     compatKeysPerFeatureMean: doneKeys.length / featureCount,
     compatKeysPerFeatureMedian: (() => {
