@@ -17,8 +17,8 @@ export function stats(detailed: boolean = false) {
   const featureCount = Object.keys(features).length;
 
   const keys = [];
-  const doneKeys = Object.values(features).flatMap(
-    (f) => f.compat_features ?? [],
+  const doneKeys = Array.from(
+    new Set(Object.values(features).flatMap((f) => f.compat_features ?? [])),
   );
   const toDoKeys = [];
   const deprecatedNonStandardKeys = [];
