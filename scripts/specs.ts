@@ -95,7 +95,7 @@ const defaultAllowlist: allowlistItem[] = [
     ],
     [
         "https://immersive-web.github.io/webvr/spec/1.1/",
-        "Allowed because this is the legacy spec that defines WebVR"
+        "Allowed because this is the legacy spec that defines WebVR."
     ]
 ];
 
