@@ -1,5 +1,5 @@
 name: "`overflow: overlay`"
-description: "The `overflow: overlay` CSS declaration sets the behavior for when content doesn't fit in an element. It is superceded by `overflow: auto`."
+description: "The `overflow: overlay` CSS declaration is an alias to `overflow: auto`. Historically, it caused non-standard behavior, allowing scrollbars to overlay content without taking up layout space."
 spec: https://drafts.csswg.org/css-overflow-3/#propdef-overflow
 group: css
 caniuse: css-overflow-overlay
