@@ -1,5 +1,5 @@
-name: Deprecated Performance API
-description: The `PerformanceNavigation` and `PerformanceTiming` APIs are legacy interfaces kept for backwards compatibility and contain properties that offer performance timing information for events which occur during the loading and use of the current page.
+name: PerformanceTiming and PerformanceNavigation
+description: The `window.performance.timing` and `window.performance.navigation` APIs report performance timing information for events that occur during the loading and use of the current page.
 spec: https://w3c.github.io/navigation-timing/#obsolete
 group: performance
 discouraged:
