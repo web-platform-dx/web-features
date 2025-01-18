@@ -13,7 +13,7 @@ import { checkForStaleCompat } from "./dist";
 const compat = new Compat();
 
 const argv = yargs(process.argv.slice(2))
-  .scriptName("cleanup-bcd-overrides")
+  .scriptName("remove-tagged-compat-features")
   .usage(
     "$0 [paths..]",
     "Remove `compat_features` from `.yml` files that have an equivalently tagged set of features in @mdn/browser-compat-data",
