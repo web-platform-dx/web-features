@@ -4,9 +4,8 @@
 status:
   baseline: false
   support:
-    chrome: "128"
-    chrome_android: "128"
-    edge: "128"
+    chrome: "132"
+    chrome_android: "132"
 compat_features:
   # baseline: false
   # support:
@@ -23,7 +22,6 @@ compat_features:
   - api.ProtectedAudience
   - api.ProtectedAudience.queryFeatureSupport
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "128"
@@ -38,3 +36,10 @@ compat_features:
   - api.Navigator.protectedAudience
   - api.Navigator.runAdAuction
   - api.Navigator.updateAdInterestGroups
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "132"
+  #   chrome_android: "132"
+  - api.Navigator.getInterestGroupAdAuctionData
