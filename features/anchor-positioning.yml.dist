@@ -192,10 +192,39 @@ compat_features:
   # baseline: false
   # support:
   #   chrome: "131"
+  #   chrome_android: "131"
   #   edge: "131"
   - css.properties.anchor-scope
   - css.properties.anchor-scope.all
   - css.properties.anchor-scope.none
+
+  # baseline: false
+  # support:
+  #   chrome: "132"
+  #   chrome_android: "132"
+  - css.properties.bottom.anchor-size
+  - css.properties.inset-block-end.anchor-size
+  - css.properties.inset-block-start.anchor-size
+  - css.properties.inset-block.anchor-size
+  - css.properties.inset-inline-end.anchor-size
+  - css.properties.inset-inline-start.anchor-size
+  - css.properties.inset-inline.anchor-size
+  - css.properties.inset.anchor-size
+  - css.properties.left.anchor-size
+  - css.properties.margin-block-end.anchor-size
+  - css.properties.margin-block-start.anchor-size
+  - css.properties.margin-block.anchor-size
+  - css.properties.margin-bottom.anchor-size
+  - css.properties.margin-inline-end.anchor-size
+  - css.properties.margin-inline-start.anchor-size
+  - css.properties.margin-inline.anchor-size
+  - css.properties.margin-left.anchor-size
+  - css.properties.margin-right.anchor-size
+  - css.properties.margin-top.anchor-size
+  - css.properties.margin.anchor-size
+  - css.properties.right.anchor-size
+  - css.properties.top.anchor-size
+  - css.types.anchor-size.inset_margin
 
   # baseline: false
   # support: {}

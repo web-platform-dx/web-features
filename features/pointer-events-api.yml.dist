@@ -113,22 +113,28 @@ compat_features:
   #   safari_ios: "13"
   - api.PointerEvent.tangentialPressure
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2024-12-11
   # support:
   #   chrome: "77"
   #   chrome_android: "77"
   #   edge: "79"
   #   firefox: "89"
   #   firefox_android: "89"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
   - api.PointerEvent.getPredictedEvents
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2024-12-11
   # support:
   #   chrome: "86"
   #   chrome_android: "86"
   #   edge: "86"
   #   firefox: "131"
   #   firefox_android: "131"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
   - api.PointerEvent.PointerEvent.options_altitudeAngle_parameter
   - api.PointerEvent.PointerEvent.options_azimuthAngle_parameter
   - api.PointerEvent.altitudeAngle
@@ -140,6 +146,8 @@ compat_features:
   #   chrome_android: "58"
   #   edge: "79"
   #   firefox: "59"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
   - api.PointerEvent.getCoalescedEvents
 
   # baseline: false

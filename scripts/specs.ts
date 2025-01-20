@@ -92,6 +92,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/WebAssembly/exception-handling/blob/main/proposals/exception-handling/legacy/Exceptions.md",
         "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://immersive-web.github.io/webvr/spec/1.1/",
+        "Allowed because this is the legacy spec that defines WebVR."
     ]
 ];
 

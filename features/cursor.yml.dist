@@ -4,12 +4,12 @@
 status:
   baseline: false
   support:
-    chrome: ≤83
-    chrome_android: ≤83
-    edge: ≤83
-    firefox: ≤72
+    chrome: "68"
+    chrome_android: "68"
+    edge: "79"
+    firefox: "27"
     firefox_android: "95"
-    safari: ≤13.1
+    safari: "11"
 compat_features:
   # baseline: high
   # baseline_low_date: 2021-12-07
@@ -143,10 +143,10 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
-  #   chrome: ≤83
-  #   chrome_android: ≤83
-  #   edge: ≤83
-  #   firefox: ≤72
+  #   chrome: "68"
+  #   chrome_android: "68"
+  #   edge: "79"
+  #   firefox: "27"
   #   firefox_android: "95"
-  #   safari: ≤13.1
+  #   safari: "11"
   - css.properties.cursor.grabbing

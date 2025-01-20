@@ -139,6 +139,7 @@ compat_features:
   #   firefox_android: "44"
   #   safari: "10.1"
   #   safari_ios: "10.3"
+  - api.Headers.@@iterator
   - api.Headers.entries
   - api.Headers.keys
   - api.Headers.values
@@ -360,6 +361,7 @@ compat_features:
   #   firefox_android: "133"
   #   safari: "13"
   #   safari_ios: "13"
+  - api.Request.Request.init_keepalive_parameter
   - api.Request.keepalive
   - api.fetch.init_keepalive_parameter
 
@@ -405,6 +407,17 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "132"
+  #   chrome_android: "132"
+  #   firefox: "128"
+  #   firefox_android: "128"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.Request.bytes
+  - api.Response.bytes
+
+  # baseline: false
+  # support:
   #   chrome: "105"
   #   chrome_android: "105"
   #   edge: "105"
@@ -431,15 +444,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   firefox: "128"
-  #   firefox_android: "128"
-  #   safari: "18"
-  #   safari_ios: "18"
-  - api.Request.bytes
-  - api.Response.bytes
-
-  # baseline: false
-  # support:
   #   chrome: "69"
   #   chrome_android: "69"
   #   edge: "79"
@@ -454,7 +458,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "124"
-  #   chrome_android: "124"
-  #   edge: "124"
-  - api.Request.targetAddressSpace
+  #   chrome: "131"
+  #   edge: "131"
+  - api.Request.duplex

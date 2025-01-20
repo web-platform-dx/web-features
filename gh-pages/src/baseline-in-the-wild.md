@@ -15,6 +15,7 @@ You can find Baseline in the following places. If you spot somewhere else using 
 - [`<baseline-status>` web component](https://github.com/web-platform-dx/baseline-status)
 - [BCD Watch](https://bcd-watch.igalia.com/)
 - [Can I Use](https://caniuse.com/)
+- [Can I WebView](https://caniwebview.com/search/?cat=web_feature)
 - [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Baseline/Compatibility)
 - [RUM Archive Insights](https://rumarchive.com/insights/)
 - [web-features explorer](https://web-platform-dx.github.io/web-features-explorer/)
