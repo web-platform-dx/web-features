@@ -1,12 +1,17 @@
-draft_date: 2024-10-28
-name: Encrypted Media Extensions
-description: TODO
+name: Encrypted media extensions
+description: The `mediaKeys` property of `HTMLMediaElement` and the `navigator.requestMediaKeySystemAccess()` method control the playback of content subject to digital rights management. Also known as EME.
 spec: https://w3c.github.io/encrypted-media/
+caniuse: eme
+status:
+  compute_from:
+    - api.Navigator.requestMediaKeySystemAccess
+    - api.HTMLMediaElement.mediaKeys
 compat_features:
   - api.HTMLMediaElement.encrypted_event
   - api.HTMLMediaElement.mediaKeys
   - api.HTMLMediaElement.setMediaKeys
   - api.HTMLMediaElement.waitingforkey_event
+  - api.MediaCapabilities.decodingInfo.configuration_keySystemConfiguration_parameter
   - api.MediaEncryptedEvent
   - api.MediaEncryptedEvent.MediaEncryptedEvent
   - api.MediaEncryptedEvent.initData

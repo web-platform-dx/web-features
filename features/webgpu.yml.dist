@@ -403,5 +403,11 @@ compat_features:
   - api.GPUSupportedFeatures.feature_clip-distances
 
   # baseline: false
+  # support:
+  #   chrome: "132"
+  #   chrome_android: "132"
+  - api.GPUDevice.adapterInfo
+
+  # baseline: false
   # support: {}
   - api.GPUSupportedFeatures.feature_float32-blendable
