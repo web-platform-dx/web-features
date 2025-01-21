@@ -1,5 +1,5 @@
 import { setLogger } from "compute-baseline";
-import { Compat } from "compute-baseline/browser-compat-data";
+import { Compat, Feature } from "compute-baseline/browser-compat-data";
 import { fdir } from "fdir";
 import fs from "node:fs";
 import path from "node:path";
