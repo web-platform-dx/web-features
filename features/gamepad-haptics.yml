@@ -1,0 +1,19 @@
+name: Gamepad haptic feedback
+description: The `gamepad.vibrationActuator` property represents a gamepad's haptics hardware, which allows you to control the vibration motors in a gamepad.
+spec: https://w3c.github.io/gamepad/#gamepadhapticactuator-interface
+group: gamepad
+status:
+  compute_from: api.Gamepad.vibrationActuator
+compat_features:
+  - api.Gamepad.hapticActuators
+  - api.GamepadHapticActuator.pulse
+  - api.Gamepad.vibrationActuator
+  - api.GamepadHapticActuator
+  - api.GamepadHapticActuator.effects
+  - api.GamepadHapticActuator.effects.type_trigger-rumble
+  - api.GamepadHapticActuator.playEffect
+  - api.GamepadHapticActuator.playEffect.params_leftTrigger_parameter
+  - api.GamepadHapticActuator.playEffect.params_rightTrigger_parameter
+  - api.GamepadHapticActuator.playEffect.type_trigger-rumble
+  - api.GamepadHapticActuator.reset
+  - api.GamepadHapticActuator.secure_context_required

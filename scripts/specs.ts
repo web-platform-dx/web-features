@@ -76,6 +76,26 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/WebAssembly/threads/blob/main/proposals/threads/Overview.md",
         "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://github.com/WebAssembly/function-references/blob/main/proposals/function-references/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://github.com/WebAssembly/memory64/blob/main/proposals/memory64/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://github.com/WebAssembly/exception-handling/blob/main/proposals/exception-handling/legacy/Exceptions.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://immersive-web.github.io/webvr/spec/1.1/",
+        "Allowed because this is the legacy spec that defines WebVR."
     ]
 ];
 

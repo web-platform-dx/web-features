@@ -56,7 +56,7 @@ setLogger(logger);
  * one pinned in `package.json`. BCD updates frequently, leading to surprising
  * error messages if you haven't run `npm install` recently.
  */
-function checkForStaleCompat(): void {
+export function checkForStaleCompat(): void {
   const packageBCDVersionSpecifier: string = (() => {
     const packageJSON: unknown = JSON.parse(
       fs.readFileSync(process.env.npm_package_json, {
@@ -233,9 +233,7 @@ function toDist(sourcePath: string): YAML.Document {
     checkAncestors: true,
   });
 
-  if (computedStatus.discouraged) {
-    const isDraft: boolean = source.draft_date ?? false;
-
+  if (computedStatus.discouraged && !source.discouraged) {
     if (!source.draft_date) {
       logger.error(
         `${id}: contains at least one deprecated compat feature. This is forbidden for published features.`,

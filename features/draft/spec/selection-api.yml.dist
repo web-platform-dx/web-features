@@ -55,6 +55,7 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
+  - api.Document.moveBefore
   - api.Selection.collapse.accepts_nodes_in_shadow_trees
   - api.Selection.extend.accepts_nodes_in_shadow_trees
   - api.Selection.setBaseAndExtent.accepts_nodes_in_shadow_trees
