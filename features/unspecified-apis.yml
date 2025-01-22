@@ -4,9 +4,18 @@ spec: link to our own documentation explaining ourselves in more detail
 discouraged:
   according_to:
     - TODO link to our own documentation explaining ourselves in more detail
-compat_features: 
+compat_features:
+  # Chrome implemented these APIs while they were in a PR for the spec, which
+  # was subsequently not included in the ultimately merged changes.
+  # https://github.com/w3c/payment-handler/pull/170#issuecomment-483453062
+  # https://issues.chromium.org/issues/40527525
+  - api.AbortPaymentEvent
+  - api.AbortPaymentEvent.AbortPaymentEvent
+  - api.AbortPaymentEvent.respondWith
+
   # These `Screen` properties are broadly interoperable but unspecified.
-  # https://github.com/w3c/window-management/pull/76#discussion_r780596068 contains the only discussion I could find of this fact.
+  # https://github.com/w3c/window-management/pull/76#discussion_r780596068
+  # contains the only discussion I could find of this fact.
   - api.Screen.availLeft
   - api.Screen.availLeft.relative-multi-screen
   - api.Screen.availTop
