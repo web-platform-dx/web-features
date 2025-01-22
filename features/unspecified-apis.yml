@@ -1,0 +1,13 @@
+name: Unspecified APIs
+description: Some browsers implement unspecified APIs. This is an artificial feature that contains references to browser compatibility data entries for those additions. You should not use or rely on anything referenced by this feature.
+spec: link to our own documentation explaining ourselves in more detail
+discouraged:
+  according_to:
+    - TODO link to our own documentation explaining ourselves in more detail
+compat_features: 
+  # These `Screen` properties are broadly interoperable but unspecified.
+  # https://github.com/w3c/window-management/pull/76#discussion_r780596068 contains the only discussion I could find of this fact.
+  - api.Screen.availLeft
+  - api.Screen.availLeft.relative-multi-screen
+  - api.Screen.availTop
+  - api.Screen.availTop.relative-multi-screen
