@@ -5,6 +5,15 @@ discouraged:
   according_to:
     - TODO link to our own documentation explaining ourselves in more detail
 compat_features:
+  # Firefox-only Function property
+  - javascript.builtins.Function.displayName
+
+  # Firefox-only InternalError object
+  # Thrown on "too much recursion" while Safari and Chrome throw RangeError
+  # https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Too_much_recursion
+  - javascript.builtins.InternalError
+  - javascript.builtins.InternalError.InternalError
+
   # Firefox-only Erorr properties
   - javascript.builtins.Error.Error.lineNumber_parameter
   - javascript.builtins.Error.lineNumber
