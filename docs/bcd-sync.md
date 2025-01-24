@@ -1,10 +1,10 @@
 # BCD synchronization
 
-The [web-platform-dx/web-features](https://github.com/web-platform-dx/web-features/) and the [mdn/browser-compat-data](https://github.com/mdn/browser-compat-data/) repositories depend on, and complement each other. This document describes how the two projects get synchronized and how BCD and web-features maintainers should work with both repositories. If you are a consumer of web-features data, these internal steps are mostly opaque to you. If you are a web-features maintainer, read this document to decide how to map or tag BCD keys. Note that either way is fine. If you're authoring a new feature, add the keys in web-features. If you're changing keys in BCD, make the change there. The goal is to limit the times where you have to make PRs in both repositories and this document helps you to understand how this is achieved.
+The [web-platform-dx/web-features](https://github.com/web-platform-dx/web-features/) and the [mdn/browser-compat-data](https://github.com/mdn/browser-compat-data/) (BCD) repositories depend on, and complement each other. This document describes how the two projects get synchronized and how BCD and web-features maintainers should work with both repositories. If you are a consumer of web-features data, these internal steps are mostly opaque to you. If you are a web-features maintainer, read this document to decide how to map or tag BCD keys. Note that either way is fine. If you're authoring a new feature, add the keys in web-features. If you're changing keys in BCD, make the change there. The goal is to limit the times where you have to make pull requests (PRs) in both repositories and this document helps you to understand how this is achieved.
 
 ## BCD keys in `compat_features`
 
-The source YAML files, that define each feature in the web-features, might contain a `compat_features` field.
+The source YAML files, that define each feature in web-features, might contain a `compat_features` field.
 
 When present, the `compat_features` field consists of a list of browser-compat-data (BCD) entry keys that make up this feature (e.g., `css.properties.background-color`).
 
@@ -19,8 +19,8 @@ One way to map keys to web-features is that keys are tagged in BCD from inceptio
 For example, a typical scenario could look like this:
 
 - a new key appears in BCD (e.g., via a [Collector](https://github.com/openwebdocs/mdn-bcd-collector) PR).
-- The author of the BCD PR knew which feature the key belongs to (e.g., due to a key being renamed) and tags the key with the correct `web-features:*` tag.
-- A few days later, that data is released by BCD. That triggers the next `@mdn/browser-compat-data` Dependabot upgrade PR, where we regenerate web-features data based on the updated tag and remove the `compat_features` list from the YAML file (if the list and tagged keys match).
+- The author of the BCD PR knows which feature the key belongs to (e.g., due to a key being renamed) and tags the key with the correct `web-features:*` tag.
+- A few days later, that data is released by BCD. That triggers the next `@mdn/browser-compat-data` Dependabot upgrade PR in the web-features repository, where we regenerate web-features data based on the updated tag and remove the `compat_features` list from the source YAML file (if the list and tagged keys match).
 
  If necessary (e.g., a tag was assigned by BCD maintainers in error), a web-features maintainer can update a `compat_features` list in web-features and the data gets synchronized to BCD as described in the next section.
 
@@ -32,9 +32,9 @@ For example, a typical scenario would look like this:
 
 - a new key appears in BCD (e.g., via a [Collector](https://github.com/openwebdocs/mdn-bcd-collector PR).
 - The author of the BCD PR doesn't know or doesn't care which feature that key belongs to and does not tag it.
-- A few days later, that data is released by BCD. That triggers the next `@mdn/browser-compat-data` Dependabot upgrade PR. After that PR merges, we run the "Update draft features" workflow, which makes the new keys to appear in the `features/draft` folder.
+- A few days later, that data is released by BCD. That triggers the next `@mdn/browser-compat-data` Dependabot upgrade PR in the web-features repository. After that PR merges, we run the "Update draft features" workflow, which makes the new keys to appear in the `features/draft` folder.
 - At this point, a web-features maintainer can assign the key to an existing feature or author a new feature.
-- A few days later, that data is released by web-features. When BCD upgrades `web-features`, it'll automatically apply tags to each feature according to the `compat_features` list.
+- A few days later, that data is released by web-features. When BCD upgrades `web-features`, it'll automatically add/remove tags to/from each key according to the `compat_features` list.
 
 ## Circular changes
 
