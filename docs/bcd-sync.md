@@ -1,6 +1,6 @@
 # BCD synchronization
 
-The [web-platform-dx/web-features](https://github.com/web-platform-dx/web-features/) and the [mdn/browser-compat-data](https://github.com/mdn/browser-compat-data/) repositories depend on, and complement each other. This document describes how the two projects get synchronized and how BCD and web-features maintainers should work with both repositories. If you are a consumer of web-features data, these internal steps are mostly opaque to you. If you are a web-features maintainer, read this document to decide how to map or tag BCD keys.
+The [web-platform-dx/web-features](https://github.com/web-platform-dx/web-features/) and the [mdn/browser-compat-data](https://github.com/mdn/browser-compat-data/) repositories depend on, and complement each other. This document describes how the two projects get synchronized and how BCD and web-features maintainers should work with both repositories. If you are a consumer of web-features data, these internal steps are mostly opaque to you. If you are a web-features maintainer, read this document to decide how to map or tag BCD keys. Note that either way is fine. If you're authoring a new feature, add the keys in web-features. If you're changing keys in BCD, make the change there. The goal is to limit the times where you have to make PRs in both repositories and this document helps you to understand how this is achieved.
 
 ## BCD keys in `compat_features`
 
@@ -40,7 +40,7 @@ For example, a typical scenario would look like this:
 
 To prevent circular changes:
 
-- BCD contributors must never create a new tag before the corresponding ID appears in web-features.
+- BCD contributors must never create a new tag before the corresponding ID appears in web-features. (linters in BCD will prevent this from happening)
 - web-features contributors must never manually remove a `compat_features` list from a feature.
 
 To ensure ongoing completeness, web-features maintainers ought to strive to keep generated drafts to an absolute minimum.
