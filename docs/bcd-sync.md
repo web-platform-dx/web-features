@@ -40,7 +40,7 @@ For example, a typical scenario would look like this:
 
 To prevent circular changes:
 
-- BCD contributors must never create a new tag before the corresponding ID appears in web-features. (linters in BCD will prevent this from happening)
+- BCD contributors must never create a new tag before the corresponding ID appears in web-features. (linters in BCD will prevent this from happening). See [Contributing features to web-features](https://github.com/web-platform-dx/web-features/blob/main/docs/CONTRIBUTING.md#contributing-features-to-the-repository) for how to suggest a new feature.
 - web-features contributors must never manually remove a `compat_features` list from a feature.
 
 To ensure ongoing completeness, web-features maintainers ought to strive to keep generated drafts to an absolute minimum.
