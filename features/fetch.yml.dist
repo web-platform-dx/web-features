@@ -365,6 +365,19 @@ compat_features:
   - api.Request.keepalive
   - api.fetch.init_keepalive_parameter
 
+  # baseline: low
+  # baseline_low_date: 2025-01-17
+  # support:
+  #   chrome: "132"
+  #   chrome_android: "132"
+  #   edge: "132"
+  #   firefox: "128"
+  #   firefox_android: "128"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.Request.bytes
+  - api.Response.bytes
+
   # baseline: false
   # support:
   #   chrome: "43"
@@ -404,17 +417,6 @@ compat_features:
   #   safari: "10.1"
   #   safari_ios: "10.3"
   - api.Request.cache.only-if-cached
-
-  # baseline: false
-  # support:
-  #   chrome: "132"
-  #   chrome_android: "132"
-  #   firefox: "128"
-  #   firefox_android: "128"
-  #   safari: "18"
-  #   safari_ios: "18"
-  - api.Request.bytes
-  - api.Response.bytes
 
   # baseline: false
   # support:
