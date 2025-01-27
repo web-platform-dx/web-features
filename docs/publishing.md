@@ -1,9 +1,24 @@
-# Publishing
+# Publishing releases
+
+## Announcements
+
+web-features uses a GitHub Discussions thread to give notice of breaking changes and other major changes to interested web-features consumers.
+
+If you want to receive these announcements, subscribe to the [Upcoming changes](https://github.com/web-platform-dx/web-features/discussions/123456789) <!-- TODO: link to the actual discussion thread, after it's created --> announcements thread or to all discussions through the repository's _Watch_ menu.
+
+> [!NOTE]
+> The remainder of this section is for [project owners](../GOVERNANCE.md#roles-and-responsibilities).
+
+If you're planning to publish a breaking release (see [Regular releases](#regular-releases)) in the next two weeks, then post a message to the [Upcoming changes](https://github.com/web-platform-dx/web-features/discussions/123456789) <!-- TODO: link to the actual discussion thread, after it's created --> announcements thread.
+Include a summary of the expected changes, citing relevant issues and pull requests.
+
+Note that an announcement is not a substitute for seeking consumer feedback early in the design and implementation process.
+Announcements should not provoke surprising responses from consumers.
 
 ## Regular releases
 
 > [!NOTE]
-> This information is for [project owners](../GOVERNANCE.md#roles-and-responsibilities).
+> This section is for [project owners](../GOVERNANCE.md#roles-and-responsibilities).
 
 These are the steps to publish a regular release on npm and as a GitHub release:
 
@@ -69,7 +84,7 @@ You can install these prereleases using a command such as `npm install web-featu
 ## Secrets
 
 > [!NOTE]
-> This information is for [project owners](../GOVERNANCE.md#roles-and-responsibilities).
+> This section is for [project owners](../GOVERNANCE.md#roles-and-responsibilities).
 
 Publishing requires the `NPM_TOKEN` repository secret.
 
