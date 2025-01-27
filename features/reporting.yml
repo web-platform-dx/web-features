@@ -1,0 +1,18 @@
+name: Reporting API
+description: The Reporting API makes consistent reports about Content Security Policy violations, Permissions-Policy violations, deprecated feature usage, crashes, and other web platform features available to your server endpoints.
+spec: https://w3c.github.io/reporting/
+compat_features:
+  - api.Report
+  - api.Report.body
+  - api.Report.toJSON
+  - api.Report.type
+  - api.Report.url
+  - api.ReportBody
+  - api.ReportBody.toJSON
+  - api.ReportingObserver
+  - api.ReportingObserver.ReportingObserver
+  - api.ReportingObserver.disconnect
+  - api.ReportingObserver.observe
+  - api.ReportingObserver.takeRecords
+  - api.ReportingObserver.worker_support
+  - http.headers.Reporting-Endpoints

@@ -1,0 +1,33 @@
+name: registerProtocolHandler
+description: "The `navigator.registerProtocolHandler()` method declares a site's ability to handle an address scheme (also known as a protocol). For example, an email site can register to open `mailto:` URLs or a VoIP site to open `tel:` URLs."
+spec: https://html.spec.whatwg.org/multipage/system-state.html#custom-handlers
+status:
+  compute_from: api.Navigator.registerProtocolHandler
+compat_features:
+  - api.Navigator.registerProtocolHandler
+  - api.Navigator.registerProtocolHandler.scheme_parameter_bitcoin
+  - api.Navigator.registerProtocolHandler.scheme_parameter_ftp
+  - api.Navigator.registerProtocolHandler.scheme_parameter_ftps
+  - api.Navigator.registerProtocolHandler.scheme_parameter_geo
+  - api.Navigator.registerProtocolHandler.scheme_parameter_im
+  - api.Navigator.registerProtocolHandler.scheme_parameter_irc
+  - api.Navigator.registerProtocolHandler.scheme_parameter_ircs
+  - api.Navigator.registerProtocolHandler.scheme_parameter_magnet
+  - api.Navigator.registerProtocolHandler.scheme_parameter_mailto
+  - api.Navigator.registerProtocolHandler.scheme_parameter_matrix
+  - api.Navigator.registerProtocolHandler.scheme_parameter_mms
+  - api.Navigator.registerProtocolHandler.scheme_parameter_news
+  - api.Navigator.registerProtocolHandler.scheme_parameter_nntp
+  - api.Navigator.registerProtocolHandler.scheme_parameter_openpgp4fpr
+  - api.Navigator.registerProtocolHandler.scheme_parameter_sftp
+  - api.Navigator.registerProtocolHandler.scheme_parameter_sip
+  - api.Navigator.registerProtocolHandler.scheme_parameter_sms
+  - api.Navigator.registerProtocolHandler.scheme_parameter_smsto
+  - api.Navigator.registerProtocolHandler.scheme_parameter_ssh
+  - api.Navigator.registerProtocolHandler.scheme_parameter_tel
+  - api.Navigator.registerProtocolHandler.scheme_parameter_urn
+  - api.Navigator.registerProtocolHandler.scheme_parameter_webcal
+  - api.Navigator.registerProtocolHandler.scheme_parameter_wtai
+  - api.Navigator.registerProtocolHandler.scheme_parameter_xmpp
+  - api.Navigator.registerProtocolHandler.secure_context_required
+  - api.Navigator.unregisterProtocolHandler

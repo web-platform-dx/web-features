@@ -8,9 +8,24 @@ status:
     chrome_android: "105"
     edge: "105"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "105"
+  #   chrome_android: "105"
+  #   edge: "105"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
   - api.HTMLLinkElement.blocking
   - api.HTMLScriptElement.blocking
   - api.HTMLStyleElement.blocking
   - html.elements.link.blocking
   - html.elements.script.blocking
   - html.elements.style.blocking
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "105"
+  #   chrome_android: "105"
+  #   edge: "105"
+  - http.headers.Link.blocking

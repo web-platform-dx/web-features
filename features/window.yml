@@ -1,0 +1,42 @@
+name: Window
+description: "The `window` global object represents a browser tab or iframe and its relationship to the document and other tabs. It's also a generic global object, under which many other APIs are located."
+spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-window-object
+status:
+  compute_from: api.Window
+compat_features:
+  - api.Window
+  - api.Window.DOMContentLoaded_event
+  - api.Window.blur_event
+  - api.Window.close
+  - api.Window.closed
+  - api.Window.error_event
+  - api.Window.focus
+  - api.Window.focus_event
+  - api.Window.frameElement
+  - api.Window.frames
+  - api.Window.innerHeight
+  - api.Window.innerWidth
+  - api.Window.length
+  - api.Window.load_event
+  - api.Window.moveBy
+  - api.Window.moveTo
+  - api.Window.name
+  - api.Window.open
+  - api.Window.open.features_parameter_popup
+  - api.Window.open.once_per_event
+  - api.Window.opener
+  - api.Window.outerHeight
+  - api.Window.outerWidth
+  - api.Window.parent
+  - api.Window.resizeBy
+  - api.Window.resizeTo
+  - api.Window.resize_event
+  - api.Window.screen
+  - api.Window.screenLeft
+  - api.Window.screenTop
+  - api.Window.screenX
+  - api.Window.screenY
+  - api.Window.self
+  - api.Window.stop
+  - api.Window.top
+  - api.Window.window

@@ -1,0 +1,35 @@
+name: Keyboard events
+description: The `keydown` and `keyup` events fire for each key press (or, with modifier keys, a combination of key presses) on a keyboard.
+spec: https://w3c.github.io/uievents/#events-keyboardevents
+status:
+  compute_from:
+    - api.Element.keydown_event
+    - api.Element.keyup_event
+compat_features:
+  - api.Element.keydown_event
+  - api.Element.keyup_event
+  - api.KeyboardEvent
+  - api.KeyboardEvent.KeyboardEvent
+  - api.KeyboardEvent.altKey
+  - api.KeyboardEvent.code
+  - api.KeyboardEvent.ctrlKey
+  - api.KeyboardEvent.getModifierState
+  - api.KeyboardEvent.getModifierState.key_parameter_alt
+  - api.KeyboardEvent.getModifierState.key_parameter_altgraph
+  - api.KeyboardEvent.getModifierState.key_parameter_capslock
+  - api.KeyboardEvent.getModifierState.key_parameter_control
+  - api.KeyboardEvent.getModifierState.key_parameter_fn
+  - api.KeyboardEvent.getModifierState.key_parameter_meta
+  - api.KeyboardEvent.getModifierState.key_parameter_numlock
+  - api.KeyboardEvent.getModifierState.key_parameter_scrolllock
+  - api.KeyboardEvent.getModifierState.key_parameter_shift
+  - api.KeyboardEvent.getModifierState.key_parameter_symbol
+  - api.KeyboardEvent.isComposing
+  - api.KeyboardEvent.key
+  - api.KeyboardEvent.key.dead_key
+  - api.KeyboardEvent.key.non_printable_keys
+  - api.KeyboardEvent.key.printable_key
+  - api.KeyboardEvent.location
+  - api.KeyboardEvent.metaKey
+  - api.KeyboardEvent.repeat
+  - api.KeyboardEvent.shiftKey

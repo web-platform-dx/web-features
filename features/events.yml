@@ -1,0 +1,42 @@
+name: Events
+description: The `Event` API and the `addEventListener()` method on objects that receive events (event targets) represent and handle significant things happening on a page. Many APIs fire events for a wide range of situations relating to those APIs, such as an image loading, a user clicking, or a value changing.
+spec:
+  - https://html.spec.whatwg.org/multipage/indices.html#events-2
+  - https://dom.spec.whatwg.org/#interface-customevent
+  - https://dom.spec.whatwg.org/#interface-eventtarget
+status:
+  compute_from: api.EventTarget.addEventListener
+compat_features:
+  - api.CustomEvent
+  - api.CustomEvent.CustomEvent
+  - api.CustomEvent.detail
+  - api.CustomEvent.worker_support
+  - api.Event
+  - api.Event.Event
+  - api.Event.bubbles
+  - api.Event.cancelable
+  - api.Event.currentTarget
+  - api.Event.defaultPrevented
+  - api.Event.eventPhase
+  - api.Event.isTrusted
+  - api.Event.preventDefault
+  - api.Event.stopImmediatePropagation
+  - api.Event.stopPropagation
+  - api.Event.target
+  - api.Event.timeStamp
+  - api.Event.type
+  - api.EventTarget
+  - api.EventTarget.EventTarget
+  - api.EventTarget.addEventListener
+  - api.EventTarget.addEventListener.options_parameter
+  - api.EventTarget.addEventListener.options_parameter.options_capture_parameter
+  - api.EventTarget.addEventListener.options_parameter.options_once_parameter
+  - api.EventTarget.addEventListener.options_parameter.options_passive_parameter
+  - api.EventTarget.addEventListener.options_parameter.options_passive_parameter_default_true_touch
+  - api.EventTarget.addEventListener.options_parameter.options_passive_parameter_default_true_wheel
+  - api.EventTarget.addEventListener.useCapture_parameter_optional
+  - api.EventTarget.removeEventListener.options_parameter
+  - api.EventTarget.removeEventListener.useCapture_parameter_optional
+  - api.EventTarget.addEventListener.options_parameter.options_signal_parameter
+  - api.EventTarget.dispatchEvent
+  - api.EventTarget.removeEventListener

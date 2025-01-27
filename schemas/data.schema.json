@@ -1,6 +1,29 @@
 {
+  "$ref": "#/definitions/WebFeaturesData",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
+    "BrowserData": {
+      "additionalProperties": false,
+      "description": "Browser information",
+      "properties": {
+        "name": {
+          "description": "The name of the browser, as in \"Edge\" or \"Safari on iOS\"",
+          "type": "string"
+        },
+        "releases": {
+          "description": "The browser's releases",
+          "items": {
+            "$ref": "#/definitions/Release"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "releases"
+      ],
+      "type": "object"
+    },
     "FeatureData": {
       "additionalProperties": false,
       "properties": {
@@ -17,7 +40,7 @@
               "type": "array"
             }
           ],
-          "description": "caniuse.com identifier"
+          "description": "caniuse.com identifier(s)"
         },
         "compat_features": {
           "description": "Sources of support data for this feature",
@@ -34,6 +57,28 @@
           "description": "Short description of the feature, as an HTML string",
           "type": "string"
         },
+        "discouraged": {
+          "additionalProperties": false,
+          "description": "Whether developers are formally discouraged from using this feature",
+          "properties": {
+            "according_to": {
+              "description": "Links to a formal discouragement notice, such as specification text, intent-to-unship, etc.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "alternatives": {
+              "description": "IDs for features that substitute some or all of this feature's utility",
+              "items": {},
+              "type": "array"
+            }
+          },
+          "required": [
+            "according_to"
+          ],
+          "type": "object"
+        },
         "group": {
           "anyOf": [
             {
@@ -47,7 +92,7 @@
               "type": "array"
             }
           ],
-          "description": "Group identifier"
+          "description": "Group identifier(s)"
         },
         "name": {
           "description": "Short name",
@@ -66,26 +111,22 @@
               "type": "array"
             }
           ],
-          "description": "Snapshot identifier"
+          "description": "Snapshot identifier(s)"
         },
         "spec": {
           "anyOf": [
             {
-              "description": "Specification URL",
-              "format": "uri",
               "type": "string"
             },
             {
               "items": {
-                "description": "Specification URL",
-                "format": "uri",
                 "type": "string"
               },
               "minItems": 2,
               "type": "array"
             }
           ],
-          "description": "Specification"
+          "description": "Specification URL(s)"
         },
         "status": {
           "additionalProperties": false,
@@ -110,6 +151,68 @@
             "baseline_low_date": {
               "description": "Date the feature achieved Baseline low status",
               "type": "string"
+            },
+            "by_compat_key": {
+              "additionalProperties": {
+                "additionalProperties": false,
+                "properties": {
+                  "baseline": {
+                    "description": "Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false)",
+                    "enum": [
+                      "high",
+                      "low",
+                      false
+                    ],
+                    "type": [
+                      "string",
+                      "boolean"
+                    ]
+                  },
+                  "baseline_high_date": {
+                    "description": "Date the feature achieved Baseline high status",
+                    "type": "string"
+                  },
+                  "baseline_low_date": {
+                    "description": "Date the feature achieved Baseline low status",
+                    "type": "string"
+                  },
+                  "support": {
+                    "additionalProperties": false,
+                    "description": "Browser versions that most-recently introduced the feature",
+                    "properties": {
+                      "chrome": {
+                        "type": "string"
+                      },
+                      "chrome_android": {
+                        "type": "string"
+                      },
+                      "edge": {
+                        "type": "string"
+                      },
+                      "firefox": {
+                        "type": "string"
+                      },
+                      "firefox_android": {
+                        "type": "string"
+                      },
+                      "safari": {
+                        "type": "string"
+                      },
+                      "safari_ios": {
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "baseline",
+                  "support"
+                ],
+                "type": "object"
+              },
+              "description": "Statuses for each key in the feature's compat_features list, if applicable. Not available to the npm release of web-features.",
+              "type": "object"
             },
             "support": {
               "additionalProperties": false,
@@ -173,6 +276,25 @@
       ],
       "type": "object"
     },
+    "Release": {
+      "additionalProperties": false,
+      "description": "Browser release information",
+      "properties": {
+        "date": {
+          "description": "The release date, as in \"2023-12-11\"",
+          "type": "string"
+        },
+        "version": {
+          "description": "The version string, as in \"10\" or \"17.1\"",
+          "type": "string"
+        }
+      },
+      "required": [
+        "version",
+        "date"
+      ],
+      "type": "object"
+    },
     "SnapshotData": {
       "additionalProperties": false,
       "properties": {
@@ -182,7 +304,6 @@
         },
         "spec": {
           "description": "Specification",
-          "format": "uri",
           "type": "string"
         }
       },
@@ -195,6 +316,43 @@
     "WebFeaturesData": {
       "additionalProperties": false,
       "properties": {
+        "browsers": {
+          "additionalProperties": false,
+          "description": "Browsers and browser release data",
+          "properties": {
+            "chrome": {
+              "$ref": "#/definitions/BrowserData"
+            },
+            "chrome_android": {
+              "$ref": "#/definitions/BrowserData"
+            },
+            "edge": {
+              "$ref": "#/definitions/BrowserData"
+            },
+            "firefox": {
+              "$ref": "#/definitions/BrowserData"
+            },
+            "firefox_android": {
+              "$ref": "#/definitions/BrowserData"
+            },
+            "safari": {
+              "$ref": "#/definitions/BrowserData"
+            },
+            "safari_ios": {
+              "$ref": "#/definitions/BrowserData"
+            }
+          },
+          "required": [
+            "chrome",
+            "chrome_android",
+            "edge",
+            "firefox",
+            "firefox_android",
+            "safari",
+            "safari_ios"
+          ],
+          "type": "object"
+        },
         "features": {
           "additionalProperties": {
             "$ref": "#/definitions/FeatureData"
@@ -218,6 +376,7 @@
         }
       },
       "required": [
+        "browsers",
         "features",
         "groups",
         "snapshots"

@@ -1,0 +1,10 @@
+name: Screen wake lock
+description: The `navigator.wakeLock.request("screen")` API prevents the device's screen from dimming or being turned off.
+spec: https://w3c.github.io/screen-wake-lock/
+caniuse: wake-lock
+# TODO: resolve these minor differences with caniuse:
+#  - Chrome 84 vs. 85
+#  - Edge 84 vs. 90
+status:
+  compute_from:
+    - api.WakeLock.request

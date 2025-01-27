@@ -1,0 +1,24 @@
+name: Shared storage
+description: The `sharedStorage` API stores data to a shared space where the data can then be processed without the ability to track users across the different sites they visit. A common use case is measuring the reach of third-party ads without using user-tracking cookies."
+spec: https://wicg.github.io/shared-storage/
+group: storage
+compat_features:
+  - api.HTMLIFrameElement.sharedStorageWritable
+  - api.HTMLImageElement.sharedStorageWritable
+  - api.SharedStorage
+  - api.SharedStorage.append
+  - api.SharedStorage.clear
+  - api.SharedStorage.createWorklet
+  - api.SharedStorage.delete
+  - api.SharedStorage.get
+  - api.SharedStorage.run
+  - api.SharedStorage.selectURL
+  - api.SharedStorage.set
+  - api.SharedStorage.worklet
+  - api.SharedStorageWorklet
+  - api.SharedStorageWorklet.run
+  - api.SharedStorageWorklet.selectURL
+  - api.SharedStorageWorkletGlobalScope
+  - api.SharedStorageWorkletGlobalScope.register
+  - api.SharedStorageWorkletGlobalScope.sharedStorage
+  - api.Window.sharedStorage

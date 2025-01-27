@@ -1,0 +1,17 @@
+name: Back/forward cache blocking reasons
+description: The `notRestoredReasons` property of a `PerformanceNavigationTiming` object explains why the current document was blocked from using the back/forward cache (also known as the bfcache) on navigation.
+spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-notrestoredreasons-interface
+group: performance
+compat_features:
+  - api.PerformanceNavigationTiming.notRestoredReasons
+  - api.NotRestoredReasonDetails
+  - api.NotRestoredReasonDetails.toJSON
+  - api.NotRestoredReasonDetails.reason
+  - api.NotRestoredReasons
+  - api.NotRestoredReasons.children
+  - api.NotRestoredReasons.id
+  - api.NotRestoredReasons.name
+  - api.NotRestoredReasons.reasons
+  - api.NotRestoredReasons.src
+  - api.NotRestoredReasons.toJSON
+  - api.NotRestoredReasons.url

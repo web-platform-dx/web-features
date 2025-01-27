@@ -1,0 +1,105 @@
+name: Selection
+description: The Selection API controls and modifies user text selections within the page.
+spec: https://w3c.github.io/selection-api/
+caniuse: selection-api
+group: selection
+status:
+  compute_from:
+    # This makes it roughly match caniuse data.
+    - api.Window.getSelection
+    - api.Document.selectionchange_event
+compat_features:
+  - api.AbstractRange
+  - api.AbstractRange.collapsed
+  - api.AbstractRange.endContainer
+  - api.AbstractRange.endOffset
+  - api.AbstractRange.startContainer
+  - api.AbstractRange.startOffset
+  - api.Document.createRange
+  - api.Document.getSelection
+  - api.Document.selectionchange_event
+  - api.Range
+  - api.Range.Range
+  - api.Range.cloneContents
+  - api.Range.cloneRange
+  - api.Range.collapse
+  - api.Range.collapsed
+  - api.Range.commonAncestorContainer
+  - api.Range.compareBoundaryPoints
+  - api.Range.comparePoint
+  - api.Range.createContextualFragment
+  - api.Range.deleteContents
+  - api.Range.detach
+  - api.Range.endContainer
+  - api.Range.endOffset
+  - api.Range.extractContents
+  - api.Range.getBoundingClientRect
+  - api.Range.getClientRects
+  - api.Range.insertNode
+  - api.Range.intersectsNode
+  - api.Range.isPointInRange
+  - api.Range.selectNode
+  - api.Range.selectNodeContents
+  - api.Range.setEnd
+  - api.Range.setEndAfter
+  - api.Range.setEndBefore
+  - api.Range.setStart
+  - api.Range.setStartAfter
+  - api.Range.setStartBefore
+  - api.Range.startContainer
+  - api.Range.startOffset
+  - api.Range.surroundContents
+  - api.Range.toString
+  - api.Selection
+  - api.Selection.addRange
+  - api.Selection.anchorNode
+  - api.Selection.anchorOffset
+  - api.Selection.collapse
+  - api.Selection.collapseToEnd
+  - api.Selection.collapseToStart
+  - api.Selection.containsNode
+  - api.Selection.deleteFromDocument
+  - api.Selection.empty
+  - api.Selection.extend
+  - api.Selection.focusNode
+  - api.Selection.focusOffset
+  - api.Selection.getRangeAt
+  - api.Selection.isCollapsed
+  - api.Selection.rangeCount
+  - api.Selection.removeAllRanges
+  - api.Selection.selectAllChildren
+  - api.Selection.setBaseAndExtent
+  - api.Selection.setPosition
+  - api.Selection.toString
+  - api.Selection.type
+  - api.Window.getSelection
+
+  # The selectionchange events on <input> and <textarea> are not really needed.
+  # The event is fired on document too and this is what developers use.
+  - api.HTMLInputElement.selectionchange_event
+  - api.HTMLTextAreaElement.selectionchange_event
+
+  # The node.selectstart event is not supported on Safari iOS.
+  # Unclear if developers need it because selectionchange is supported.
+  - api.Node.selectstart_event
+
+  # Direction is supported only on Firefox and Safari.
+  # Maybe split into a separate feature.
+  - api.Selection.direction
+
+  # Modify seems like a nice-to-have, you can do the same thing with other methods.
+  # Edge only added support for this in 79, even though the rest of the API was
+  # supported much earlier. And Firefox doesn't support all modify commands.
+  - api.Selection.modify
+
+  # removeRange is baseline low because it was only added in Safari 17.
+  # Maybe split into a separate feature.
+  - api.Selection.removeRange
+
+  - api.StaticRange
+  - api.StaticRange.StaticRange
+  - api.StaticRange.collapsed
+  - api.StaticRange.endContainer
+  - api.StaticRange.endOffset
+  - api.StaticRange.startContainer
+  - api.StaticRange.startOffset

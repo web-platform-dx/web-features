@@ -1,0 +1,8 @@
+name: CSS.supports()
+description: The `CSS.supports()` static method returns whether the browser supports a CSS declaration (given by two arguments, a property and value) or an `@supports` at-rule condition string.
+spec: https://drafts.csswg.org/css-conditional-3/#the-css-namespace
+caniuse: css-supports-api
+group: css
+compat_features:
+  - api.CSS.supports_static
+  - api.CSS.supports_static.optional_parens

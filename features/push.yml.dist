@@ -13,6 +13,19 @@ status:
     safari: "16"
     safari_ios: "16.4"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2018-04-30
+  # baseline_high_date: 2020-10-30
+  # support:
+  #   chrome: "40"
+  #   chrome_android: "40"
+  #   edge: "17"
+  #   firefox: "44"
+  #   firefox_android: "44"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - api.ServiceWorkerRegistration
+
   # baseline: low
   # baseline_low_date: 2023-03-27
   # support:
@@ -40,6 +53,7 @@ compat_features:
   - api.PushEvent.PushEvent
   - api.PushManager
   - api.PushManager.getSubscription
+  - api.PushManager.subscribe
   - api.PushSubscription
   - api.PushSubscription.endpoint
   - api.PushSubscription.getKey
@@ -86,3 +100,93 @@ compat_features:
   - api.PushMessageData.blob
   - api.PushMessageData.json
   - api.PushMessageData.text
+
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "54"
+  #   chrome_android: "54"
+  #   edge: "17"
+  #   firefox: "44"
+  #   firefox_android: "48"
+  #   safari: "16"
+  #   safari_ios: "16.4"
+  - api.PushSubscription.options
+  - api.PushSubscriptionOptions
+  - api.PushSubscriptionOptions.applicationServerKey
+
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "17"
+  #   firefox: "96"
+  #   firefox_android: "96"
+  #   safari: "16"
+  #   safari_ios: "16.4"
+  - api.PushSubscription.expirationTime
+
+  # baseline: low
+  # baseline_low_date: 2023-05-18
+  # support:
+  #   chrome: "43"
+  #   chrome_android: "43"
+  #   edge: "79"
+  #   firefox: "46"
+  #   firefox_android: "46"
+  #   safari: "16.5"
+  #   safari_ios: "16.5"
+  - api.Permissions.permission_push
+
+  # baseline: low
+  # baseline_low_date: 2025-01-07
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "17"
+  #   firefox: "134"
+  #   firefox_android: "134"
+  #   safari: "16"
+  #   safari_ios: "16.4"
+  - api.PushManager.supportedContentEncodings_static
+
+  # baseline: low
+  # baseline_low_date: 2025-01-17
+  # support:
+  #   chrome: "132"
+  #   chrome_android: "132"
+  #   edge: "132"
+  #   firefox: "128"
+  #   firefox_android: "128"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.PushMessageData.bytes
+
+  # baseline: false
+  # support:
+  #   chrome: "54"
+  #   chrome_android: "54"
+  #   edge: "17"
+  #   safari: "16"
+  #   safari_ios: "16.4"
+  - api.PushSubscriptionOptions.userVisibleOnly
+
+  # baseline: false
+  # support:
+  #   safari: "16"
+  #   safari_ios: "16.4"
+  - api.PushSubscriptionChangeEvent
+  - api.PushSubscriptionChangeEvent.newSubscription
+  - api.PushSubscriptionChangeEvent.oldSubscription
+
+  # baseline: false
+  # support:
+  #   safari: "16.1"
+  #   safari_ios: "16.4"
+  - api.PushSubscriptionChangeEvent.PushSubscriptionChangeEvent
+
+  # baseline: false
+  # support:
+  #   safari: "16"
+  - api.ServiceWorkerGlobalScope.pushsubscriptionchange_event

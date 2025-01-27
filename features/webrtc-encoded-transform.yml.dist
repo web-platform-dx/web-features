@@ -22,11 +22,9 @@ compat_features:
   - api.RTCEncodedAudioFrame
   - api.RTCEncodedAudioFrame.data
   - api.RTCEncodedAudioFrame.getMetadata
-  - api.RTCEncodedAudioFrame.timestamp
   - api.RTCEncodedVideoFrame
   - api.RTCEncodedVideoFrame.data
   - api.RTCEncodedVideoFrame.getMetadata
-  - api.RTCEncodedVideoFrame.timestamp
   - api.RTCEncodedVideoFrame.type
 
   # ⬇️ Same status as overall feature ⬇️
@@ -49,3 +47,11 @@ compat_features:
   - api.RTCRtpSender.transform
   - api.RTCTransformEvent
   - api.RTCTransformEvent.transformer
+
+  # baseline: false
+  # support:
+  #   chrome: "127"
+  #   chrome_android: "127"
+  #   edge: "127"
+  - api.RTCEncodedAudioFrame.RTCEncodedAudioFrame
+  - api.RTCEncodedVideoFrame.RTCEncodedVideoFrame

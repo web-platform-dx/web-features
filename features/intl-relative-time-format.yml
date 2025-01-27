@@ -1,0 +1,15 @@
+name: Intl.RelativeTimeFormat
+description: "The `Intl.RelativeTimeFormat` API creates a locale-aware formatter that turns an object representing a relative time (such as '1 day ago') into a localized string."
+group: intl
+spec: https://tc39.es/ecma402/#relativetimeformat-objects
+compat_features:
+  - javascript.builtins.Intl.RelativeTimeFormat
+  - javascript.builtins.Intl.RelativeTimeFormat.RelativeTimeFormat
+  - javascript.builtins.Intl.RelativeTimeFormat.RelativeTimeFormat.locales_parameter
+  - javascript.builtins.Intl.RelativeTimeFormat.RelativeTimeFormat.options_parameter.options_localeMatcher_parameter
+  - javascript.builtins.Intl.RelativeTimeFormat.RelativeTimeFormat.options_parameter.options_numberingSystem_parameter
+  - javascript.builtins.Intl.RelativeTimeFormat.RelativeTimeFormat.options_parameter.options_numeric_parameter
+  - javascript.builtins.Intl.RelativeTimeFormat.format
+  - javascript.builtins.Intl.RelativeTimeFormat.formatToParts
+  - javascript.builtins.Intl.RelativeTimeFormat.resolvedOptions
+  - javascript.builtins.Intl.RelativeTimeFormat.supportedLocalesOf

@@ -1,16 +1,34 @@
 name: Accelerometer
-description: The `Accelerometer` and `LinearAccelerationSensor` APIs read the acceleration applied to a device in three dimensions, either including the effect of gravity or not, respectively.
-spec: https://w3c.github.io/accelerometer/#accelerometer-interface
+description: The `Accelerometer`, `LinearAccelerationSensor` and `GravitySensor` APIs read the acceleration applied to a device in three dimensions, either including the effect of gravity, without its effect, or only its effect, respectively.
+spec: https://w3c.github.io/accelerometer/
 group: sensors
 status:
-  compute_from: api.Accelerometer.Accelerometer
+  compute_from:
+    - api.Accelerometer.Accelerometer
+    - api.GravitySensor
 compat_features:
   - api.Accelerometer
   - api.Accelerometer.Accelerometer
   - api.Accelerometer.x
   - api.Accelerometer.y
   - api.Accelerometer.z
+  - api.GravitySensor
+  - api.GravitySensor.GravitySensor
   - api.LinearAccelerationSensor
   - api.LinearAccelerationSensor.LinearAccelerationSensor
   - api.Permissions.permission_accelerometer
+  - html.elements.iframe.allow.accelerometer
   - http.headers.Permissions-Policy.accelerometer
+# Enable when overlapping keys are allowed, https://github.com/web-platform-dx/web-features/issues/1173
+#  - api.Sensor
+#  - api.Sensor.activate_event
+#  - api.Sensor.activated
+#  - api.Sensor.error_event
+#  - api.Sensor.hasReading
+#  - api.Sensor.reading_event
+#  - api.Sensor.start
+#  - api.Sensor.stop
+#  - api.Sensor.timestamp
+#  - api.SensorErrorEvent
+#  - api.SensorErrorEvent.SensorErrorEvent
+#  - api.SensorErrorEvent.error

@@ -9,37 +9,38 @@ status:
   compute_from:
     - api.MouseEvent
 compat_features:
+  - api.Element.auxclick_event
   - api.Element.click_event
+  - api.Element.contextmenu_event
   - api.Element.dblclick_event
   - api.Element.mousedown_event
-  - api.Element.mouseup_event
+  - api.Element.mouseenter_event
+  - api.Element.mouseleave_event
   - api.Element.mousemove_event
   - api.Element.mouseout_event
   - api.Element.mouseover_event
+  - api.Element.mouseup_event
+  - api.HTMLElement.click
   - api.MouseEvent
+  - api.MouseEvent.MouseEvent
   - api.MouseEvent.altKey
   - api.MouseEvent.button
+  - api.MouseEvent.buttons
   - api.MouseEvent.clientX
   - api.MouseEvent.clientY
   - api.MouseEvent.ctrlKey
+  - api.MouseEvent.getModifierState
   - api.MouseEvent.metaKey
+  # The next two were specified with `pointer-lock`, but work independently of it.
+  - api.MouseEvent.movementX
+  - api.MouseEvent.movementY
+  - api.MouseEvent.offsetX
+  - api.MouseEvent.offsetY
   - api.MouseEvent.pageX
   - api.MouseEvent.pageY
   - api.MouseEvent.relatedTarget
   - api.MouseEvent.screenX
   - api.MouseEvent.screenY
   - api.MouseEvent.shiftKey
-
-  - api.Element.mouseenter_event
-  - api.Element.mouseleave_event
-  - api.MouseEvent.MouseEvent
-  - api.MouseEvent.buttons
-  - api.MouseEvent.getModifierState
-  - api.MouseEvent.offsetX
-  - api.MouseEvent.offsetY
   - api.MouseEvent.x
   - api.MouseEvent.y
-
-  # Note that the next two were specified with `pointer-lock`, but work independently of it.
-  - api.MouseEvent.movementX
-  - api.MouseEvent.movementY

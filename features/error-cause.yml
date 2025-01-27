@@ -1,0 +1,6 @@
+name: Error cause
+description: The `cause` property of errors records the specific original cause of the error, particularly for errors that have been re-thrown.
+spec: https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-installerrorcause
+compat_features:
+  - javascript.builtins.Error.Error.options_cause_parameter
+  - javascript.builtins.Error.cause

@@ -1,0 +1,19 @@
+name: CORS
+description: Cross-Origin Resource Sharing is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources. Also known as CORS.
+spec: https://fetch.spec.whatwg.org/#http-cors-protocol
+group: security
+status:
+  compute_from: http.headers.Access-Control-Allow-Origin
+compat_features:
+  - http.headers.Access-Control-Allow-Credentials
+  - http.headers.Access-Control-Allow-Headers
+  - http.headers.Access-Control-Allow-Headers.authorization_not_covered_by_wildcard
+  - http.headers.Access-Control-Allow-Headers.wildcard
+  - http.headers.Access-Control-Allow-Methods
+  - http.headers.Access-Control-Allow-Methods.wildcard
+  - http.headers.Access-Control-Allow-Origin
+  - http.headers.Access-Control-Expose-Headers
+  - http.headers.Access-Control-Expose-Headers.wildcard
+  - http.headers.Access-Control-Max-Age
+  - http.headers.Access-Control-Request-Headers
+  - http.headers.Access-Control-Request-Method

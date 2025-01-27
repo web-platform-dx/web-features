@@ -7,12 +7,16 @@ status:
     chrome: "111"
     chrome_android: "111"
     edge: "111"
+    safari: "18"
+    safari_ios: "18"
 compat_features:
   # baseline: false
   # support:
   #   chrome: "109"
   #   chrome_android: "109"
   #   edge: "109"
+  #   safari: "18"
+  #   safari_ios: "18"
   - css.selectors.view-transition
   - css.selectors.view-transition-group
   - css.selectors.view-transition-image-pair
@@ -25,6 +29,8 @@ compat_features:
   #   chrome: "111"
   #   chrome_android: "111"
   #   edge: "111"
+  #   safari: "18"
+  #   safari_ios: "18"
   - api.Document.startViewTransition
   - api.ViewTransition
   - api.ViewTransition.finished
@@ -32,3 +38,45 @@ compat_features:
   - api.ViewTransition.skipTransition
   - api.ViewTransition.updateCallbackDone
   - css.properties.view-transition-name
+  - css.properties.view-transition-name.none
+
+  # baseline: false
+  # support:
+  #   chrome: "123"
+  #   chrome_android: "123"
+  #   edge: "123"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
+  - api.PageRevealEvent
+  - api.Window.pagereveal_event
+
+  # baseline: false
+  # support:
+  #   chrome: "124"
+  #   chrome_android: "124"
+  #   edge: "124"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
+  - api.PageSwapEvent
+  - api.PageSwapEvent.activation
+  - api.Window.pageswap_event
+
+  # baseline: false
+  # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
+  - api.PageRevealEvent.viewTransition
+  - api.PageSwapEvent.viewTransition
+
+  # baseline: false
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
+  - api.PageRevealEvent.PageRevealEvent
+  - api.PageSwapEvent.PageSwapEvent

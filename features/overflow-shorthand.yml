@@ -1,4 +1,29 @@
 name: overflow
 description: The `overflow` CSS property sets the behavior for when content doesn't fit in an element.
 spec: https://drafts.csswg.org/css-overflow-3/#propdef-overflow
+group: css
 caniuse: css-overflow
+status:
+  compute_from: css.properties.overflow.clip
+compat_features:
+  - css.properties.overflow
+  - css.properties.overflow-x
+  - css.properties.overflow-x.auto
+  - css.properties.overflow-x.clip
+  - css.properties.overflow-x.hidden
+  - css.properties.overflow-x.scroll
+  - css.properties.overflow-x.visible
+  - css.properties.overflow-y
+  - css.properties.overflow-y.auto
+  - css.properties.overflow-y.clip
+  - css.properties.overflow-y.hidden
+  - css.properties.overflow-y.scroll
+  - css.properties.overflow-y.visible
+  - css.properties.overflow.auto
+  - css.properties.overflow.clip
+  - css.properties.overflow.hidden
+  - css.properties.overflow.multiple_keywords
+  - css.properties.overflow.scroll
+  - css.properties.overflow.visible
+  - css.types.overflow
+  - css.types.overflow.clip

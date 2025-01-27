@@ -92,6 +92,12 @@ compat_features:
   #   safari: "6"
   #   safari_ios: "6"
   - api.WebSocket.extensions
+  - api.WebSocket.protocol_rfc_6455
+  - http.headers.Sec-WebSocket-Accept
+  - http.headers.Sec-WebSocket-Extensions
+  - http.headers.Sec-WebSocket-Key
+  - http.headers.Sec-WebSocket-Protocol
+  - http.headers.Sec-WebSocket-Version
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -118,6 +124,18 @@ compat_features:
   #   safari: "6"
   #   safari_ios: "6"
   - api.CloseEvent.CloseEvent
+
+  # baseline: low
+  # baseline_low_date: 2024-05-17
+  # support:
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
+  #   firefox: "124"
+  #   firefox_android: "124"
+  #   safari: "17.3"
+  #   safari_ios: "17.3"
+  - api.WebSocket.WebSocket.url_parameter_http_https_relative
 
   # baseline: false
   # support:

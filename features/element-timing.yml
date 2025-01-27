@@ -1,0 +1,17 @@
+name: Element timing
+description: The `element` performance entry and the `PerformanceElementTiming` API measures the time to render elements that have the `elementtiming` attribute.
+spec: https://w3c.github.io/element-timing/
+group: performance
+compat_features:
+  - api.Element.elementTiming
+  - api.PerformanceElementTiming
+  - api.PerformanceElementTiming.element
+  - api.PerformanceElementTiming.id
+  - api.PerformanceElementTiming.identifier
+  - api.PerformanceElementTiming.intersectionRect
+  - api.PerformanceElementTiming.loadTime
+  - api.PerformanceElementTiming.naturalHeight
+  - api.PerformanceElementTiming.naturalWidth
+  - api.PerformanceElementTiming.renderTime
+  - api.PerformanceElementTiming.toJSON
+  - api.PerformanceElementTiming.url

@@ -1,0 +1,33 @@
+name: Gradients
+description: The `linear-gradient()` and `radial-gradient()` CSS functions and their repeating counterparts create backgrounds that progress smoothly between multiple colors.
+spec: https://drafts.csswg.org/css-images-3/#gradients
+# TODO: caniuse support needs to be reconciled for Safari and Firefox.
+# caniuse: css-gradients
+group: gradients
+status:
+  compute_from: css.types.gradient
+# TODO: we should have separate linear and radial gradients when https://github.com/web-platform-dx/web-features/issues/971 is resolved.
+compat_features:
+  - css.properties.background-image.gradients
+  - css.types.image
+  - css.types.gradient
+  - css.types.gradient.linear-gradient
+  - css.types.gradient.linear-gradient.doubleposition
+  - css.types.gradient.linear-gradient.interpolation_hints
+  - css.types.gradient.linear-gradient.premultiplied_gradients
+  - css.types.gradient.linear-gradient.to
+  - css.types.gradient.linear-gradient.unitless_0_angle
+  - css.types.gradient.repeating-linear-gradient
+  - css.types.gradient.repeating-linear-gradient.doubleposition
+  - css.types.gradient.repeating-linear-gradient.interpolation_hints
+  - css.types.gradient.repeating-linear-gradient.to
+  - css.types.gradient.repeating-linear-gradient.unitless_0_angle
+  - css.types.gradient.radial-gradient
+  - css.types.gradient.radial-gradient.at
+  - css.types.gradient.radial-gradient.doubleposition
+  - css.types.gradient.radial-gradient.interpolation_hints
+  - css.types.gradient.radial-gradient.premultiplied_gradients
+  - css.types.gradient.repeating-radial-gradient
+  - css.types.gradient.repeating-radial-gradient.at
+  - css.types.gradient.repeating-radial-gradient.doubleposition
+  - css.types.gradient.repeating-radial-gradient.interpolation_hints

@@ -1,13 +1,14 @@
-draft_date: 2024-07-11
+draft_date: 2024-11-25
 name: Web App Launch Handler API
 description: TODO
 spec: https://wicg.github.io/web-app-launch/
 compat_features:
   - api.LaunchParams
-  - api.LaunchParams.files
   - api.LaunchParams.targetURL
   - api.LaunchQueue
   - api.LaunchQueue.setConsumer
   - api.Window.launchQueue
-  - html.manifest.launch_handler
-  - html.manifest.launch_handler.client_mode
+
+# The following features in the spec are already part of web-features:
+# - File handlers:
+#   - api.LaunchParams.files

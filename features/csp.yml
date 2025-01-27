@@ -1,0 +1,80 @@
+name: Content Security Policy (CSP)
+description: Content Security Policy (CSP) helps to mitigate certain security threats, including cross-site scripting (XSS) and clickjacking attacks. It consists of a set of directives from a website to a browser, which instruct the browser to restrict the things that the site is allowed to do.
+spec: https://w3c.github.io/webappsec-csp/
+caniuse:
+  - contentsecuritypolicy
+  - contentsecuritypolicy2
+group: security
+status:
+  compute_from: http.headers.Content-Security-Policy
+compat_features:
+  # - http.headers.Content-Security-Policy.block-all-mixed-content (deprecated in BCD)
+  # - http.headers.Content-Security-Policy.prefetch-src (deprecated in BCD)
+  # - http.headers.Content-Security-Policy.report-uri (deprecated in BCD)
+  - api.CSPViolationReportBody
+  - api.CSPViolationReportBody.blockedURL
+  - api.CSPViolationReportBody.columnNumber
+  - api.CSPViolationReportBody.disposition
+  - api.CSPViolationReportBody.documentURL
+  - api.CSPViolationReportBody.effectiveDirective
+  - api.CSPViolationReportBody.lineNumber
+  - api.CSPViolationReportBody.originalPolicy
+  - api.CSPViolationReportBody.referrer
+  - api.CSPViolationReportBody.sample
+  - api.CSPViolationReportBody.sourceFile
+  - api.CSPViolationReportBody.statusCode
+  - api.CSPViolationReportBody.toJSON
+  - api.Document.securitypolicyviolation_event
+  - api.Element.securitypolicyviolation_event
+  - api.HTMLElement.nonce
+  - api.HTMLIFrameElement.csp
+  - api.SecurityPolicyViolationEvent
+  - api.SecurityPolicyViolationEvent.SecurityPolicyViolationEvent
+  - api.SecurityPolicyViolationEvent.blockedURI
+  - api.SecurityPolicyViolationEvent.columnNumber
+  - api.SecurityPolicyViolationEvent.disposition
+  - api.SecurityPolicyViolationEvent.documentURI
+  - api.SecurityPolicyViolationEvent.effectiveDirective
+  - api.SecurityPolicyViolationEvent.lineNumber
+  - api.SecurityPolicyViolationEvent.originalPolicy
+  - api.SecurityPolicyViolationEvent.referrer
+  - api.SecurityPolicyViolationEvent.sample
+  - api.SecurityPolicyViolationEvent.sourceFile
+  - api.SecurityPolicyViolationEvent.statusCode
+  - api.SecurityPolicyViolationEvent.violatedDirective
+  - api.SecurityPolicyViolationEvent.worker_support
+  - api.WorkerGlobalScope.securitypolicyviolation_event
+  - html.elements.iframe.csp
+  - html.elements.meta.http-equiv.content-security-policy
+  - html.global_attributes.nonce
+  - html.global_attributes.nonce.nonce_hiding
+  - http.headers.Content-Security-Policy
+  - http.headers.Content-Security-Policy-Report-Only
+  - http.headers.Content-Security-Policy.base-uri
+  - http.headers.Content-Security-Policy.child-src
+  - http.headers.Content-Security-Policy.connect-src
+  - http.headers.Content-Security-Policy.default-src
+  - http.headers.Content-Security-Policy.font-src
+  - http.headers.Content-Security-Policy.form-action
+  - http.headers.Content-Security-Policy.frame-ancestors
+  - http.headers.Content-Security-Policy.frame-src
+  - http.headers.Content-Security-Policy.img-src
+  - http.headers.Content-Security-Policy.manifest-src
+  - http.headers.Content-Security-Policy.media-src
+  - http.headers.Content-Security-Policy.meta-element-support
+  - http.headers.Content-Security-Policy.object-src
+  - http.headers.Content-Security-Policy.report-sample
+  - http.headers.Content-Security-Policy.report-to
+  - http.headers.Content-Security-Policy.sandbox
+  - http.headers.Content-Security-Policy.script-src
+  - http.headers.Content-Security-Policy.script-src-attr
+  - http.headers.Content-Security-Policy.script-src-elem
+  - http.headers.Content-Security-Policy.script-src.external_scripts
+  - http.headers.Content-Security-Policy.script-src.wasm-unsafe-eval
+  - http.headers.Content-Security-Policy.strict-dynamic
+  - http.headers.Content-Security-Policy.style-src
+  - http.headers.Content-Security-Policy.style-src-attr
+  - http.headers.Content-Security-Policy.style-src-elem
+  - http.headers.Content-Security-Policy.unsafe-hashes
+  - http.headers.Content-Security-Policy.worker-src
+  - http.headers.Content-Security-Policy.worker_support

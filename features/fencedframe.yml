@@ -1,0 +1,26 @@
+name: <fencedframe>
+description: The `<fencedframe>` element embeds another HTML page into the current page in a more secure and privacy-preserving way than `<iframe>` elements.
+spec: https://wicg.github.io/fenced-frame/
+compat_features:
+  - api.Fence
+  - api.Fence.getNestedConfigs
+  - api.Fence.reportEvent
+  - api.Fence.setReportEventDataForAutomaticBeacons
+  - api.Fence.setReportEventDataForAutomaticBeacons.start_commit_eventType
+  - api.FencedFrameConfig
+  - api.FencedFrameConfig.setSharedStorageContext
+  - api.HTMLFencedFrameElement
+  - api.HTMLFencedFrameElement.allow
+  - api.HTMLFencedFrameElement.config
+  - api.HTMLFencedFrameElement.height
+  - api.HTMLFencedFrameElement.sandbox
+  - api.HTMLFencedFrameElement.width
+  - api.Navigator.deprecatedReplaceInURN
+  - api.Window.fence
+  - html.elements.fencedframe
+  - html.elements.fencedframe.allow
+  - http.headers.Content-Security-Policy.fenced-frame-src
+  - html.elements.a.target.unfencedTop
+  - html.elements.fencedframe.height
+  - html.elements.fencedframe.width
+  - http.headers.Sec-Fetch-Dest.fencedframe

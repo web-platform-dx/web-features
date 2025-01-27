@@ -1,0 +1,13 @@
+name: Local fonts
+description: The `window.queryLocalFonts()` method returns an array of locally-installed fonts, each represented by a `FontData` object.
+spec: https://wicg.github.io/local-font-access/
+compat_features:
+  - api.FontData
+  - api.FontData.blob
+  - api.FontData.family
+  - api.FontData.fullName
+  - api.FontData.postscriptName
+  - api.FontData.style
+  - api.Window.queryLocalFonts
+  - html.elements.iframe.allow.local-fonts
+  - http.headers.Permissions-Policy.local-fonts

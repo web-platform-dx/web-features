@@ -2,6 +2,8 @@ name: Web MIDI
 description: The Web MIDI API enables selecting MIDI input and output devices and sending and receiving MIDI messages.
 spec: https://webaudio.github.io/web-midi-api/
 caniuse: midi
+status:
+  compute_from: api.Navigator.requestMIDIAccess
 compat_features:
   - api.MIDIAccess
   - api.MIDIAccess.inputs
@@ -26,6 +28,7 @@ compat_features:
   - api.MIDIMessageEvent.MIDIMessageEvent
   - api.MIDIMessageEvent.data
   - api.MIDIOutput
+  - api.MIDIOutput.clear
   - api.MIDIOutput.send
   - api.MIDIOutputMap
   - api.MIDIOutputMap.entries
@@ -48,7 +51,7 @@ compat_features:
   - api.MIDIPort.type
   - api.MIDIPort.version
   - api.Navigator.requestMIDIAccess
-  # Later additions:
-  # - api.MIDIOutput.clear
-  # - api.Permissions.permission_midi
-  # - http.headers.Permissions-Policy.midi
+  - api.Navigator.requestMIDIAccess.secure_context_required
+  - api.Permissions.permission_midi
+  - http.headers.Permissions-Policy.midi
+  - html.elements.iframe.allow.midi

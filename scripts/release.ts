@@ -62,49 +62,17 @@ yargs(process.argv.slice(2))
           choices: semverChoices,
           default: "patch",
         })
+        .option("reviewers", {
+          describe: "Comma-separated list of users to request reviews from",
+          nargs: 1,
+        })
         .demandOption("semverlevel", "You must provide a semver level");
     },
     handler: init,
-  })
-  .command({
-    command: "update <pr>",
-    describe: "Update an existing release pull request",
-    builder: (yargs) => {
-      return yargs
-        .positional("pr", {
-          describe: "the PR (URL, number, or branch) to rebase and update",
-          type: "string",
-        })
-        .option("bump", {
-          describe: "Update the Semantic Versioning level for the release",
-          nargs: 1,
-          choices: semverChoices,
-        })
-        .option("base", {
-          describe: "Branch to rebase against",
-          type: "string",
-          default: "main",
-        });
-    },
-    handler: update,
-  })
-  .command({
-    command: "publish",
-    describe: "Publish the package to npm",
-    builder: (yargs) => {
-      return yargs.option("dry-run", {
-        type: "boolean",
-        describe: "Do everything short of publishing",
-        default: true,
-      });
-    },
-    handler: publish,
   }).argv;
 
 function init(args) {
   preflight({ expectedBranch: "main" });
-
-  const diff = diffJson();
 
   // Start a release branch
   // Convention borrowed from https://github.com/w3c/webref/blob/60ebf71b9d555c523975cfefb08f5420d12b7293/tools/prepare-release.js#L164-L165
@@ -121,6 +89,10 @@ function init(args) {
   logger.debug(checkoutCmd);
   execSync(checkoutCmd);
 
+  const { version: previousVersion } = readPackageJSON(
+    packages["web-features"],
+  );
+
   // Bump version (no tag)
   const newVersion = bumpVersion(args.semverlevel);
 
@@ -132,13 +104,13 @@ function init(args) {
   // Create PR
   const title = [pullTitleBase, newVersion].join("");
   logger.info(`Creating PR: ${title}`);
-  const reviewer = "ddbeck";
-  const body = makePullBody(diff);
+  const reviewers = args.reviewers.split(",");
+  const body = makePullBody(newVersion, previousVersion);
 
   const pullRequestCmd = [
     "gh pr create",
     `--title="${title}"`,
-    `--reviewer="${reviewer}"`,
+    ...reviewers.map((r) => `--reviewer=${r}`),
     `--body-file=-`,
     `--base="main"`,
     `--head="${releaseBranch}"`,
@@ -166,119 +138,40 @@ function bumpVersion(semverlevel: typeof semverChoices): string {
   return version;
 }
 
-function makePullBody(diff: string) {
+function makePullBody(newVersion: string, previousVersion: string) {
+  // https://docs.github.com/en/rest/releases/releases?apiVersion=2022-11-28#generate-release-notes-content-for-a-release
+  const relnotesCmd = [
+    "gh",
+    "api",
+    "--method POST",
+    `-H "Accept: application/vnd.github+json"`,
+    `-H "X-GitHub-Api-Version: 2022-11-28"`,
+    "/repos/{owner}/{repo}/releases/generate-notes",
+    `-f "tag_name=v${newVersion}"`,
+    `-f "target_commitish=main"`,
+    `-f "previous_tag_name=v${previousVersion}"`,
+  ].join(" ");
+  const relNotes = execSync(relnotesCmd, {
+    cwd: packages["web-features"],
+    encoding: "utf-8",
+  });
+  const relNotesLines = JSON.parse(relNotes).body.split("\n");
+
   const bodyFile = fileURLToPath(
     new URL("release-pull-description.md", import.meta.url),
   );
   const body = [
     readFileSync(bodyFile, { encoding: "utf-8" }),
-    "```diff",
-    diff,
+    "```markdown",
+    ...relNotesLines,
     "```",
   ].join("\n");
   return body;
 }
 
-function update(args) {
-  preflight({ expectedPull: args.pr, targetRepo: args.targetRepo });
-  build();
-
-  logger.verbose("Adding rebase-in-progress notice to PR description");
-  const { body } = JSON.parse(
-    execSync(
-      `gh pr view --repo="${args.targetRepo}" "${args.pr}" --json body`,
-      {
-        encoding: "utf-8",
-      },
-    ),
-  );
-  const notice = "⛔️ Update in progress! ⛔️\n";
-  const editBodyCmd = `gh pr edit --repo="${args.targetRepo}" "${args.pr}" --body-file=-`;
-  execSync(editBodyCmd, {
-    input: [notice, body].join("\n\n"),
-    stdio: ["pipe", "inherit", "inherit"],
-  });
-
-  logger.verbose("Rebasing");
-  try {
-    run(`git rebase ${args.base}`);
-  } catch (err) {
-    logger.error("Rebasing failed. Abandoning PR.");
-    run(`git rebase --abort`);
-    run(
-      `gh pr comment --repo="${args.targetRepo}" "${args.pr}" --body="😱 Rebasing failed. Closing this PR. 😱"`,
-    );
-    run(`gh pr close --repo="${args.targetRepo}" "${args.pr}"`);
-    process.exit(1);
-  }
-
-  const diff = diffJson();
-
-  if (args.bump) {
-    const newVersion = bumpVersion(args.bump);
-
-    logger.info("Pushing release branch");
-    run(`git push origin HEAD`);
-
-    logger.verbose("Updating PR title");
-    run(
-      `gh pr edit --repo="${args.targetRepo}" "${args.pr}" --title="${pullTitleBase}${newVersion}"`,
-    );
-  }
-
-  logger.verbose("Removing update-in-progress notice from PR description");
-  execSync(editBodyCmd, { input: body, stdio: ["pipe", "inherit", "inherit"] });
-
-  const updatedBody = makePullBody(diff);
-  execSync(
-    `gh pr edit --repo="${args.targetRepo}" "${args.pr}" --body-file=-`,
-    {
-      input: updatedBody,
-      stdio: ["pipe", "inherit", "inherit"],
-    },
-  );
-}
-
 function diff(args) {
   const diff = diffJson(args.from, args.to);
   console.log(diff);
-}
-
-function publish(args) {
-  preflight({ expectedBranch: "main" });
-
-  try {
-    const accessList = execSync("npm access list packages --json", {
-      stdio: "pipe",
-      encoding: "utf-8",
-    });
-    if (JSON.parse(accessList)["web-features"] !== "read-write") {
-      logger.error(
-        "Write access to the package is required. Try setting the repository secret or run `npm adduser`.",
-      );
-      process.exit(1);
-    }
-  } catch (err) {
-    logger.error(
-      "The exit status of `npm access list packages` was non-zero. Do you have an `.npmrc` file? If not, try running `npm adduser`.",
-      err.error,
-    );
-    logger.error(err.stderr);
-    process.exit(1);
-  }
-
-  build();
-  const { version } = readPackageJSON(packages["web-features"]);
-  const tag = `web-features/${version}`;
-  run(`git tag --annotate "${tag}" --message="web-features ${version}"`);
-  run(`git push origin ${tag}`);
-
-  logger.info("Publishing release");
-  let publishCmd = `npm publish`;
-  if (args.dryRun) {
-    publishCmd = `${publishCmd} --dry-run`;
-  }
-  execSync(publishCmd, { cwd: packages["web-features"], stdio: "inherit" });
 }
 
 function run(cmd: string) {
@@ -288,6 +181,16 @@ function run(cmd: string) {
 function build() {
   logger.info("Building release");
   run("npm run build");
+}
+
+function prettyJson(sourceFp: string): string {
+  return (
+    JSON.stringify(
+      JSON.parse(readFileSync(sourceFp, { encoding: "utf-8" })),
+      undefined,
+      2,
+    ) + "\n"
+  );
 }
 
 function readPackageJSON(packageDir) {
@@ -313,11 +216,9 @@ function diffJson(from: string = "latest", to?: string): string {
       "web-features",
       "data.json",
     );
-    const prettyJson = execSync(`jq . "${pkgJson}"`, {
-      encoding: "utf-8",
-    });
+    const prettyPkgJson = prettyJson(pkgJson);
     const fp = join(temporaryDir, `data.${version}.json`);
-    writeFileSync(fp, prettyJson);
+    writeFileSync(fp, prettyPkgJson);
     return fp;
   }
 
@@ -328,9 +229,7 @@ function diffJson(from: string = "latest", to?: string): string {
     } else {
       build();
       const preparedJson = join(packages["web-features"], "data.json");
-      const prettyPreparedJson = execSync(`jq . "${preparedJson}"`, {
-        encoding: "utf-8",
-      });
+      const prettyPreparedJson = prettyJson(preparedJson);
       const fp = join(temporaryDir, "data.HEAD.json");
       writeFileSync(fp, prettyPreparedJson);
       return fp;
@@ -398,16 +297,6 @@ function preflight(options: PreflightOptions): void {
       err.error,
     );
     logger.error(err.stderr);
-    process.exit(1);
-  }
-
-  logger.verbose("Confirming jq is installed");
-  const jqVersionCmd = "jq --version";
-  try {
-    logger.debug(jqVersionCmd);
-    execSync(jqVersionCmd);
-  } catch (err) {
-    logger.error("jq failed to run. Do you have it installed?", err.error);
     process.exit(1);
   }
 

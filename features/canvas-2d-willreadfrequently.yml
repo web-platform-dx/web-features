@@ -1,0 +1,6 @@
+name: willReadFrequently
+description: The optional `willReadFrequently` parameter of a canvas's `getContext()` method permits the browser to optimize for frequent `getImageData()` calls by avoiding hardware acceleration. Also known as multiple readback.
+spec: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently
+group: canvas
+compat_features:
+  - api.HTMLCanvasElement.getContext.2d_context.options_willReadFrequently_parameter

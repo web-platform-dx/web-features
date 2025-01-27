@@ -3,6 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    safari: "18.2"
+    safari_ios: "18.2"
 compat_features:
   - css.properties.line-clamp
+  - css.properties.line-clamp.none

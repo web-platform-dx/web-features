@@ -8,6 +8,19 @@ status:
     chrome_android: "61"
     edge: "79"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "79"
+  - html.elements.iframe.allow.usb
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "61"
+  #   chrome_android: "61"
+  #   edge: "79"
   - api.Navigator.usb
   - api.USB
   - api.USB.connect_event
@@ -97,3 +110,34 @@ compat_features:
   - api.USBOutTransferResult.USBOutTransferResult
   - api.USBOutTransferResult.bytesWritten
   - api.USBOutTransferResult.status
+
+  # baseline: false
+  # support:
+  #   chrome: "88"
+  #   chrome_android: "88"
+  #   edge: "88"
+  - http.headers.Permissions-Policy.usb
+
+  # baseline: false
+  # support:
+  #   chrome: "101"
+  #   chrome_android: "101"
+  #   edge: "101"
+  - api.USBDevice.forget
+
+  # baseline: false
+  # support: {}
+  - api.USB.worker_support
+  - api.USBAlternateInterface.worker_support
+  - api.USBConfiguration.worker_support
+  - api.USBConnectionEvent.worker_support
+  - api.USBDevice.worker_support
+  - api.USBEndpoint.worker_support
+  - api.USBInTransferResult.worker_support
+  - api.USBInterface.worker_support
+  - api.USBIsochronousInTransferPacket.worker_support
+  - api.USBIsochronousInTransferResult.worker_support
+  - api.USBIsochronousOutTransferPacket.worker_support
+  - api.USBIsochronousOutTransferResult.worker_support
+  - api.USBOutTransferResult.worker_support
+  - api.WorkerNavigator.usb

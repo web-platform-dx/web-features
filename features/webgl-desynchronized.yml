@@ -1,0 +1,6 @@
+name: Desynchronized WebGL canvas
+description: The optional `desynchronized` parameter of a canvas's `getContext()` method permits the browser to draw a WebGL canvas independently of the event loop. This can reduce drawing latency.
+spec: https://registry.khronos.org/webgl/specs/latest/1.0/#5.2.1
+group: webgl
+compat_features:
+  - api.HTMLCanvasElement.getContext.webgl_context.options_desynchronized_parameter

@@ -3,18 +3,19 @@
 
 status:
   baseline: low
-  baseline_low_date: 2023-08-21
+  baseline_low_date: 2022-09-12
   support:
-    chrome: "116"
-    chrome_android: "116"
-    edge: "116"
+    chrome: "55"
+    chrome_android: "55"
+    edge: "79"
     firefox: "72"
     firefox_android: "79"
     safari: "16"
     safari_ios: "16"
 compat_features:
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
   # support:
   #   chrome: "55"
   #   chrome_android: "55"
@@ -25,6 +26,7 @@ compat_features:
   #   safari_ios: "15.4"
   - css.properties.offset-path
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2022-09-12
   # support:
@@ -49,6 +51,8 @@ compat_features:
   #   safari: "16"
   #   safari_ios: "16"
   - css.properties.offset-rotate
+  - css.properties.offset-rotate.auto
+  - css.properties.offset-rotate.reverse
 
   # baseline: low
   # baseline_low_date: 2022-09-12
@@ -62,7 +66,6 @@ compat_features:
   #   safari_ios: "16"
   - css.properties.offset-path.path
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2023-08-21
   # support:
@@ -74,3 +77,91 @@ compat_features:
   #   safari: "16"
   #   safari_ios: "16"
   - css.properties.offset-anchor
+  - css.properties.offset-anchor.auto
+  - css.properties.offset-anchor.bottom
+  - css.properties.offset-anchor.center
+  - css.properties.offset-anchor.left
+  - css.properties.offset-anchor.right
+  - css.properties.offset-anchor.top
+
+  # baseline: low
+  # baseline_low_date: 2024-01-23
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "116"
+  #   edge: "116"
+  #   firefox: "122"
+  #   firefox_android: "122"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - css.properties.offset-path.ray
+  - css.properties.offset-position
+  - css.properties.offset-position.auto
+  - css.properties.offset-position.bottom
+  - css.properties.offset-position.center
+  - css.properties.offset-position.left
+  - css.properties.offset-position.right
+  - css.properties.offset-position.top
+  - css.types.ray
+
+  # baseline: low
+  # baseline_low_date: 2024-01-23
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "116"
+  #   edge: "116"
+  #   firefox: "122"
+  #   firefox_android: "122"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - css.properties.offset-path.url
+  - css.types.ray.size
+
+  # baseline: low
+  # baseline_low_date: 2024-01-23
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "116"
+  #   edge: "116"
+  #   firefox: "122"
+  #   firefox_android: "122"
+  #   safari: "17.2"
+  #   safari_ios: "17.2"
+  - css.properties.offset-position.normal
+  - css.types.ray.position
+
+  # baseline: low
+  # baseline_low_date: 2024-09-16
+  # support:
+  #   chrome: "80"
+  #   chrome_android: "80"
+  #   edge: "80"
+  #   firefox: "72"
+  #   firefox_android: "79"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - css.properties.offset-path.none
+
+  # baseline: low
+  # baseline_low_date: 2024-09-16
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "116"
+  #   edge: "116"
+  #   firefox: "122"
+  #   firefox_android: "122"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - css.properties.offset-path.basic_shape
+  - css.properties.offset-path.border-box
+  - css.properties.offset-path.content-box
+  - css.properties.offset-path.fill-box
+  - css.properties.offset-path.padding-box
+  - css.properties.offset-path.stroke-box
+  - css.properties.offset-path.view-box
+
+  # baseline: false
+  # support:
+  #   safari: "18"
+  #   safari_ios: "18"
+  - css.properties.offset-path.margin-box

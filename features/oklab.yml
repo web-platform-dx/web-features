@@ -1,14 +1,19 @@
 name: Oklab and Oklch
 description: "The Oklab color space expresses colors in terms of lightness and how red/green and blue/yellow a color is, aiming to match how humans perceive colors. Oklch is a variant of Oklab with polar coordinates. These color spaces can be used with the CSS `color()`, `oklab()`, and `oklch()` functions."
 spec: https://drafts.csswg.org/css-color-4/#ok-lab
-# Editorial override has been applied to ignore mixed_type_parameters.
+group: color-types
 # TODO: The behavior of lightness gradients requiring gamut mapping is a
 # topic of debate, and at least these browser bugs:
 # https://crbug.com/329106317
 # https://webkit.org/b/255939
 # These problems should be captured in notes when we support notes.
+# Editorial override has been applied to ignore mixed_type_parameters.
+status:
+  compute_from:
+    - css.types.color.oklab
+    - css.types.color.oklch
 compat_features:
   - css.types.color.oklab
-  # - css.types.color.oklab.mixed_type_parameters
+  - css.types.color.oklab.mixed_type_parameters
   - css.types.color.oklch
-  # - css.types.color.oklch.mixed_type_parameters
+  - css.types.color.oklch.mixed_type_parameters

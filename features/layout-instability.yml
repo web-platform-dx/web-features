@@ -1,0 +1,16 @@
+name: Layout instability
+description: The `layout-shift` performance entry and `LayoutShift` API measures the layout stability of web pages based on movements of the elements on the page.
+spec: https://wicg.github.io/layout-instability/
+group: performance
+compat_features:
+  - api.LayoutShift
+  - api.LayoutShift.hadRecentInput
+  - api.LayoutShift.lastInputTime
+  - api.LayoutShift.sources
+  - api.LayoutShift.toJSON
+  - api.LayoutShift.value
+  - api.LayoutShiftAttribution
+  - api.LayoutShiftAttribution.currentRect
+  - api.LayoutShiftAttribution.node
+  - api.LayoutShiftAttribution.previousRect
+  - api.LayoutShiftAttribution.toJSON

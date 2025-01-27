@@ -1,12 +1,47 @@
 import { Compat } from "compute-baseline/browser-compat-data";
+import * as diff from "diff";
+import { fdir } from "fdir";
+import fsSync from "node:fs";
 import fs from "node:fs/promises";
 import { fileURLToPath } from "node:url";
+import Path from "path";
 import webSpecs from "web-specs" assert { type: "json" };
-import { Document } from "yaml";
+import winston from "winston";
+import { Document, parse } from "yaml";
+import yargs from "yargs";
 
 import { features } from "../index.js";
+import { FeatureData } from "../types.js";
 
 type WebSpecsSpec = (typeof webSpecs)[number];
+
+const argv = yargs(process.argv.slice(2))
+  .scriptName("update-drafts")
+  .usage("$0", "Update draft features with BCD keys mentioned in specs.")
+  .option("keys", {
+    type: "array",
+    describe: "Keys to match",
+  })
+  .option("paths", {
+    type: "array",
+    describe: "Draft feature files to update",
+  })
+  .option("verbose", {
+    alias: "v",
+    describe: "Show more information about what files are modified",
+    type: "count",
+    default: 0,
+    defaultDescription: "warn",
+  }).argv;
+
+const logger = winston.createLogger({
+  level: argv.verbose > 0 ? "debug" : "info",
+  format: winston.format.combine(
+    winston.format.colorize(),
+    winston.format.simple(),
+  ),
+  transports: new winston.transports.Console(),
+});
 
 function* getPages(spec): Generator<string> {
   yield spec.url;
@@ -42,6 +77,8 @@ function formatIdentifier(s: string): string {
 }
 
 async function main() {
+  const { keys: filterKeys, paths: filterPaths } = argv;
+
   const compat = new Compat();
 
   // Build a map of used BCD keys to feature.
@@ -56,7 +93,31 @@ async function main() {
 
   // Build a map from URLs to spec.
   const pageToSpec = new Map<string, WebSpecsSpec>();
-  for (const spec of webSpecs) {
+
+  let selectedSpecs = webSpecs;
+  let selectedKeys = filterKeys ?? [];
+
+  if (filterPaths?.length) {
+    const filePaths = filterPaths.flatMap((fileOrDirectory) => {
+      if (fsSync.statSync(fileOrDirectory).isDirectory()) {
+        return new fdir()
+          .withBasePath()
+          .filter((fp) => fp.endsWith(".yml"))
+          .crawl(fileOrDirectory)
+          .sync();
+      }
+      return fileOrDirectory;
+    });
+    selectedKeys.push(...filePaths.map((fp) => Path.parse(fp).name));
+  }
+
+  if (selectedKeys?.length) {
+    selectedSpecs = selectedSpecs.filter((ws) =>
+      selectedKeys.some((selectedKey) => ws.shortname.includes(selectedKey)),
+    );
+  }
+
+  for (const spec of selectedSpecs) {
     for (const page of getPages(spec)) {
       pageToSpec.set(normalize(page), spec);
     }
@@ -65,27 +126,52 @@ async function main() {
   // Iterate BCD and group compat features by spec.
   const specToCompatFeatures = new Map<WebSpecsSpec, Set<string>>();
   for (const feature of compat.walk()) {
-    // Skip deprecated and non-standard features.
-    if (feature.deprecated || !feature.standard_track) {
+    // A few null values remain in BCD. They are being removed in
+    // https://github.com/mdn/browser-compat-data/pull/23774.
+    // TODO: Remove this workaround when BCD is free or true/null values.
+    if (feature.id.startsWith("html.manifest.")) {
       continue;
     }
 
-    const spec_url = feature.data.__compat.spec_url;
-    if (!spec_url) {
-      continue;
-    }
+    let parent_url: string | string[] = null;
+    if (!feature.spec_url.length) {
+      const parent_urls: (string | string[])[] = [];
+      const path = feature.id.split(".");
 
-    for (const url of feature.spec_url) {
+      let parentPath: string[] = [];
+      while (path.length > 0) {
+        parentPath.push(path.shift());
+        const parent_spec =
+          compat.features.get(parentPath.join("."))?.spec_url ?? [];
+        if (parent_spec.length) {
+          parent_urls.push(parent_spec);
+        }
+      }
+      if (!parent_urls.length) {
+        continue;
+      } else {
+        const mostSpecific = parent_urls.pop();
+        parent_url = Array.isArray(mostSpecific)
+          ? mostSpecific
+          : [mostSpecific];
+      }
+    }
+    const urls = parent_url ?? feature.spec_url;
+    for (const url of urls) {
       const spec = pageToSpec.get(normalize(url));
       if (!spec) {
-        console.warn(`${url} not matched to any spec`);
+        if (!selectedKeys) console.warn(`${url} not matched to any spec`);
         continue;
       }
-      const keys = specToCompatFeatures.get(spec);
-      if (keys) {
+
+      let keys = specToCompatFeatures.get(spec);
+      if (!keys) {
+        keys = new Set([]);
+        specToCompatFeatures.set(spec, keys);
+      }
+
+      if (!feature.deprecated && feature.standard_track) {
         keys.add(feature.id);
-      } else {
-        specToCompatFeatures.set(spec, new Set([feature.id]));
       }
     }
   }
@@ -105,13 +191,14 @@ async function main() {
       }
     }
 
-    // If all features are already part of web-features, skip this spec.
+    const id = formatIdentifier(spec.shortname);
+    const destination = `features/draft/spec/${id}.yml`;
+
+    // If all features are already part of web-features
     if (compatFeatures.size === 0) {
+      await rmFeatureFiles(destination);
       continue;
     }
-
-    // Write out draft feature per spec.
-    const id = formatIdentifier(spec.shortname);
 
     const feature = new Document({
       draft_date: new Date().toISOString().substring(0, 10),
@@ -129,7 +216,89 @@ async function main() {
 
       feature.comment = usedFeaturesComment.trimEnd();
     }
-    await fs.writeFile(`features/draft/spec/${id}.yml`, feature.toString());
+
+    const proposedFile = feature.toString();
+
+    let originalFile: string;
+    try {
+      originalFile = await fs.readFile(destination, { encoding: "utf-8" });
+    } catch (err: unknown) {
+      // If there's no file for this spec already, write a new one immediately.
+      if (typeof err === "object" && "code" in err && err.code === "ENOENT") {
+        await fs.writeFile(destination, proposedFile);
+        logger.info(`${destination}: new spec file added`);
+        continue;
+      }
+      throw err;
+    }
+
+    // If there's a file for this spec already, write updates only if something
+    // other than the `draft_date` changed. Because changes can be comments, we
+    // have to check a diff rather than parsing and comparing values.
+    const changes = diff.diffLines(originalFile, proposedFile);
+
+    // When there are no changes, diffLines returns 1 "change" with nothing
+    // added or removed.
+    const noChanges =
+      changes.length === 1 && !changes[0].added && !changes[0].removed;
+
+    // When there are date-only changes, diffLines returns 3 "changes" (one added, one
+    // removed, the rest with nothing added or removed).
+    const onlyDateChanges =
+      !noChanges &&
+      changes.length === 3 &&
+      changes
+        .filter((change) => change.added || change.removed)
+        .every((change) => change.value.includes("draft_date: "));
+
+    if (noChanges || onlyDateChanges) {
+      logger.debug(`${destination}: no changes, skipped`);
+      continue;
+    }
+
+    await fs.writeFile(destination, proposedFile);
+    logger.info(`${destination}: updated`);
+  }
+
+  // Clean up completed specs, even if they've been superseded
+  const assignedKeys = Object.values(features).flatMap(
+    (f) => f.compat_features ?? [],
+  );
+  for (const spec of webSpecs) {
+    const id = formatIdentifier(spec.shortname);
+    const destination = `features/draft/spec/${id}.yml`;
+
+    if (!fsSync.existsSync(destination)) {
+      continue;
+    }
+
+    const source = fsSync.readFileSync(destination, { encoding: "utf-8" });
+    const { compat_features } = parse(source) as FeatureData;
+
+    if ((compat_features ?? []).every((key) => assignedKeys.includes(key))) {
+      await rmFeatureFiles(destination);
+    }
+  }
+}
+
+/**
+ * Delete an authored YAML file and its dist file.
+ *
+ * @param {string} destination The path to the authored .yml file.
+ */
+async function rmFeatureFiles(destination: string) {
+  const dist = `${destination}.dist`;
+  try {
+    await fs.rm(destination);
+    logger.warn(`${destination}: deleted`);
+  } catch (error) {
+    logger.debug(`${destination}: deletion failed`);
+  }
+  try {
+    await fs.rm(dist);
+    logger.warn(`${dist}: deleted`);
+  } catch (error) {
+    logger.debug(`${dist}: deletion failed`);
   }
 }
 

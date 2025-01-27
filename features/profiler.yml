@@ -1,0 +1,9 @@
+name: Profiler
+description: The `Profiler` API records data about the execution of a page, which you can send to a server for later analysis. Also known as self-profiling.
+spec: https://wicg.github.io/js-self-profiling/
+compat_features:
+  - api.Profiler
+  - api.Profiler.Profiler
+  - api.Profiler.sampleInterval
+  - api.Profiler.stop
+  - api.Profiler.stopped

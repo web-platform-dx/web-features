@@ -5,11 +5,10 @@ status:
   baseline: false
   support:
     chrome: "22"
-    chrome_android: "25"
+    chrome_android: "132"
     edge: "79"
     firefox: "52"
     safari: "11.1"
-    safari_ios: "11.3"
 compat_features:
   # baseline: high
   # baseline_low_date: ≤2018-10-02
@@ -91,16 +90,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "7"
-  #   chrome_android: "18"
-  #   edge: "13"
-  #   firefox: "50"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - api.HTMLInputElement.webkitdirectory
-
-  # baseline: false
-  # support:
   #   chrome: "13"
   #   chrome_android: "18"
   #   edge: "13"
@@ -128,3 +117,12 @@ compat_features:
   #   safari: "11.1"
   #   safari_ios: "11.3"
   - api.HTMLInputElement.webkitEntries
+
+  # baseline: false
+  # support:
+  #   chrome: "7"
+  #   chrome_android: "132"
+  #   edge: "13"
+  #   firefox: "50"
+  #   safari: "11.1"
+  - api.HTMLInputElement.webkitdirectory

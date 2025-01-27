@@ -1,0 +1,47 @@
+name: Font loading
+description: The `document.fonts` API dynamically loads custom fonts and tracks when fonts are loading or ready to use.
+spec: https://drafts.csswg.org/css-font-loading-3/
+caniuse: font-loading
+status:
+  compute_from: api.FontFace
+compat_features:
+  - api.Document.fonts
+  - api.FontFace
+  - api.FontFace.FontFace
+  - api.FontFace.worker_support
+  - api.FontFace.display
+  - api.FontFace.family
+  - api.FontFace.featureSettings
+  - api.FontFace.load
+  - api.FontFace.loaded
+  - api.FontFace.status
+  - api.FontFace.stretch
+  - api.FontFace.style
+  - api.FontFace.unicodeRange
+  - api.FontFace.variant
+  - api.FontFace.variationSettings
+  - api.FontFace.weight
+  - api.FontFaceSet
+  - api.FontFaceSet.worker_support
+  - api.FontFaceSet.add
+  - api.FontFaceSet.check
+  - api.FontFaceSet.clear
+  - api.FontFaceSet.delete
+  - api.FontFaceSet.entries
+  - api.FontFaceSet.forEach
+  - api.FontFaceSet.has
+  - api.FontFaceSet.keys
+  - api.FontFaceSet.load
+  - api.FontFaceSet.loading_event
+  - api.FontFaceSet.loadingdone_event
+  - api.FontFaceSet.loadingerror_event
+  - api.FontFaceSet.ready
+  - api.FontFaceSet.size
+  - api.FontFaceSet.status
+  - api.FontFaceSet.values
+  - api.FontFaceSet.@@iterator
+  - api.FontFaceSetLoadEvent
+  - api.FontFaceSetLoadEvent.FontFaceSetLoadEvent
+  - api.FontFaceSetLoadEvent.worker_support
+  - api.FontFaceSetLoadEvent.fontfaces
+  - api.WorkerGlobalScope.fonts

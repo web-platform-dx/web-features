@@ -1,0 +1,10 @@
+name: "@import"
+description: The `@import` CSS at-rule loads styles from another stylesheet.
+spec: https://drafts.csswg.org/css-cascade-5/#at-import
+group: css
+compat_features:
+  - css.at-rules.import
+  - api.CSSImportRule
+  - api.CSSImportRule.href
+  - api.CSSImportRule.media
+  - api.CSSImportRule.styleSheet

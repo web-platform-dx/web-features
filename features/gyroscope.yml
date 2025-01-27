@@ -2,6 +2,8 @@ name: Gyroscope
 description: The `Gyroscope` API reads the angular velocity of a device in three dimensions.
 spec: https://w3c.github.io/gyroscope/#gyroscope-interface
 group: sensors
+status:
+  compute_from: api.Gyroscope
 compat_features:
   - api.Gyroscope
   - api.Gyroscope.Gyroscope
@@ -9,5 +11,18 @@ compat_features:
   - api.Gyroscope.y
   - api.Gyroscope.z
   - api.Permissions.permission_gyroscope
-  # Later addition
-  # - http.headers.Permissions-Policy.gyroscope
+  - html.elements.iframe.allow.gyroscope
+  - http.headers.Permissions-Policy.gyroscope
+# Enable when overlapping keys are allowed, https://github.com/web-platform-dx/web-features/issues/1173
+#  - api.Sensor
+#  - api.Sensor.activate_event
+#  - api.Sensor.activated
+#  - api.Sensor.error_event
+#  - api.Sensor.hasReading
+#  - api.Sensor.reading_event
+#  - api.Sensor.start
+#  - api.Sensor.stop
+#  - api.Sensor.timestamp
+#  - api.SensorErrorEvent
+#  - api.SensorErrorEvent.SensorErrorEvent
+#  - api.SensorErrorEvent.error

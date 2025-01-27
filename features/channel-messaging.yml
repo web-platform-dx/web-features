@@ -1,0 +1,17 @@
+name: Channel messaging
+description: "Channel messaging communicates one-to-one between browsing contexts on the same origin, such as between `<iframe>` elements or two documents using a shared worker."
+spec: https://html.spec.whatwg.org/multipage/web-messaging.html#channel-messaging
+caniuse: channel-messaging
+group: messaging
+compat_features:
+  - api.MessageChannel
+  - api.MessageChannel.MessageChannel
+  - api.MessageChannel.port1
+  - api.MessageChannel.port2
+  - api.MessageEvent.ports
+  - api.MessagePort
+  - api.MessagePort.close
+  - api.MessagePort.message_event
+  - api.MessagePort.postMessage
+  - api.MessagePort.start
+  - api.MessagePort.worker_support

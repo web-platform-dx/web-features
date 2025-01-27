@@ -1,0 +1,14 @@
+name: Beforeunload
+description: "The `beforeunload` event is fired when the current window is about to be unloaded. Typically this is used to display a dialog to confirm if users really want to leave the page when there is unsaved data that would be lost."
+spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-beforeunloadevent-interface
+status:
+  compute_from: api.Window.beforeunload_event
+# The commented out keys below are deprecated.
+compat_features:
+  - api.BeforeUnloadEvent
+  - api.BeforeUnloadEvent.user_interaction
+  - api.Window.beforeunload_event
+  #- api.Window.beforeunload_event.event_returnvalue_activation
+  #- api.Window.beforeunload_event.generic_string_displayed
+  - api.Window.beforeunload_event.preventdefault_activation
+  #- api.Window.beforeunload_event.return_string_activation

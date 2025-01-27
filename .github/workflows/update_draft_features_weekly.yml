@@ -1,0 +1,38 @@
+name: Update Draft Features
+
+on:
+  # Runs at midnight on Mondays and Thursdays 05:30 UTC, or manually triggered
+  schedule:
+    - cron: "30 5 * * 1,4"
+  workflow_dispatch:
+
+jobs:
+  update-drafts:
+    if: github.repository == 'web-platform-dx/web-features'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - run: npm run update-drafts
+      - run: npm run dist
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          add-paths: |
+            features/draft/spec/
+          commit-message: Update draft features
+          title: "Update draft features"
+          body: |
+            This is an auto-generated PR with draft features by spec updates.
+
+            To let the tests run, close this PR then immediately reopen it.
+
+            See https://github.com/web-platform-dx/web-features/blob/main/.github/workflows/update_draft_features_weekly.yml for details.
+          labels: |
+            generated
+          branch: update-draft-features-${{ github.run_number }}
+          delete-branch: true

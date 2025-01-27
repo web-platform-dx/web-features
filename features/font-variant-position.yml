@@ -1,0 +1,10 @@
+name: font-variant-position
+description: The `font-variant-position` CSS property sets whether to use alternate glyphs for subscript and superscript text.
+spec: https://drafts.csswg.org/css-fonts-4/#font-variant-position-prop
+group: font-features
+# TODO: https://github.com/web-platform-dx/web-features/issues/1971
+# Status changed: https://github.com/web-platform-dx/web-features/pull/1958
+# 2024-10-15 — low → false — Chrome, Edge, and Safari do not implement font synthesis for missing superscript or subscript glyphs.
+# References:
+# - https://issues.chromium.org/issues/352218916
+# - https://bugs.webkit.org/show_bug.cgi?id=151471

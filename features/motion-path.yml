@@ -1,4 +1,44 @@
 name: Motion path
 description: The `offset` CSS property animates an element along a defined motion path.
 spec: https://drafts.fxtf.org/motion-1/
+group: css
 caniuse: css-motion-paths
+status:
+  compute_from: css.properties.offset
+compat_features:
+  - css.properties.offset
+  - css.properties.offset-path
+  - css.properties.offset-path.basic_shape
+  - css.properties.offset-path.path
+  - css.properties.offset-path.ray
+  - css.properties.offset-path.url
+  - css.properties.offset-path.border-box
+  - css.properties.offset-path.content-box
+  - css.properties.offset-path.fill-box
+  - css.properties.offset-path.margin-box
+  - css.properties.offset-path.none
+  - css.properties.offset-path.padding-box
+  - css.properties.offset-path.stroke-box
+  - css.properties.offset-path.view-box
+  - css.properties.offset-position
+  - css.properties.offset-position.auto
+  - css.properties.offset-position.bottom
+  - css.properties.offset-position.center
+  - css.properties.offset-position.left
+  - css.properties.offset-position.normal
+  - css.properties.offset-position.right
+  - css.properties.offset-position.top
+  - css.properties.offset-distance
+  - css.properties.offset-rotate
+  - css.properties.offset-rotate.auto
+  - css.properties.offset-rotate.reverse
+  - css.properties.offset-anchor
+  - css.properties.offset-anchor.auto
+  - css.properties.offset-anchor.bottom
+  - css.properties.offset-anchor.center
+  - css.properties.offset-anchor.left
+  - css.properties.offset-anchor.right
+  - css.properties.offset-anchor.top
+  - css.types.ray
+  - css.types.ray.position
+  - css.types.ray.size

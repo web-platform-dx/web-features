@@ -7,9 +7,9 @@ status:
 compat_features:
   - api.ML
   - api.ML.createContext
-  - api.MLActivation
   - api.MLContext
-  - api.MLContext.compute
+  - api.MLContext.dispatch
+  - api.MLContext.opSupportLimits
   - api.MLGraph
   - api.MLGraphBuilder
   - api.MLGraphBuilder.MLGraphBuilder
@@ -28,6 +28,8 @@ compat_features:
   - api.MLGraphBuilder.conv2d
   - api.MLGraphBuilder.convTranspose2d
   - api.MLGraphBuilder.cos
+  - api.MLGraphBuilder.cumulativeSum
+  - api.MLGraphBuilder.dequantizeLinear
   - api.MLGraphBuilder.div
   - api.MLGraphBuilder.elu
   - api.MLGraphBuilder.equal
@@ -36,6 +38,8 @@ compat_features:
   - api.MLGraphBuilder.expand
   - api.MLGraphBuilder.floor
   - api.MLGraphBuilder.gather
+  - api.MLGraphBuilder.gatherElements
+  - api.MLGraphBuilder.gatherND
   - api.MLGraphBuilder.gemm
   - api.MLGraphBuilder.greater
   - api.MLGraphBuilder.greaterOrEqual
@@ -53,6 +57,10 @@ compat_features:
   - api.MLGraphBuilder.lesserOrEqual
   - api.MLGraphBuilder.linear
   - api.MLGraphBuilder.log
+  - api.MLGraphBuilder.logicalAnd
+  - api.MLGraphBuilder.logicalNot
+  - api.MLGraphBuilder.logicalOr
+  - api.MLGraphBuilder.logicalXor
   - api.MLGraphBuilder.lstm
   - api.MLGraphBuilder.lstmCell
   - api.MLGraphBuilder.matmul
@@ -61,10 +69,10 @@ compat_features:
   - api.MLGraphBuilder.min
   - api.MLGraphBuilder.mul
   - api.MLGraphBuilder.neg
-  - api.MLGraphBuilder.not
   - api.MLGraphBuilder.pad
   - api.MLGraphBuilder.pow
   - api.MLGraphBuilder.prelu
+  - api.MLGraphBuilder.quantizeLinear
   - api.MLGraphBuilder.reciprocal
   - api.MLGraphBuilder.reduceL1
   - api.MLGraphBuilder.reduceL2
@@ -79,7 +87,10 @@ compat_features:
   - api.MLGraphBuilder.relu
   - api.MLGraphBuilder.resample2d
   - api.MLGraphBuilder.reshape
+  - api.MLGraphBuilder.scatterElements
+  - api.MLGraphBuilder.scatterND
   - api.MLGraphBuilder.sigmoid
+  - api.MLGraphBuilder.sign
   - api.MLGraphBuilder.sin
   - api.MLGraphBuilder.slice
   - api.MLGraphBuilder.softmax
@@ -90,11 +101,11 @@ compat_features:
   - api.MLGraphBuilder.sub
   - api.MLGraphBuilder.tan
   - api.MLGraphBuilder.tanh
+  - api.MLGraphBuilder.tile
   - api.MLGraphBuilder.transpose
   - api.MLGraphBuilder.triangular
   - api.MLGraphBuilder.where
   - api.MLOperand
-  - api.MLOperand.dataType
-  - api.MLOperand.shape
+  - api.MLOperand.MLNumber
   - api.Navigator.ml
   - api.WorkerNavigator.ml

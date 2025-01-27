@@ -1,0 +1,16 @@
+name: Background sync
+description: The background synchronization API registers a service worker callback to run only when the device is no longer offline. You can use this to let users continue using your app while offline and synchronize with a server after reconnecting.
+spec: https://wicg.github.io/background-sync/spec/
+status:
+  compute_from: api.SyncManager
+compat_features:
+  - api.ServiceWorkerGlobalScope.sync_event
+  - api.ServiceWorkerRegistration.sync
+  - api.SyncEvent
+  - api.SyncEvent.SyncEvent
+  - api.SyncEvent.lastChance
+  - api.SyncEvent.tag
+  - api.SyncManager
+  - api.SyncManager.getTags
+  - api.SyncManager.register
+  - api.SyncManager.worker_support

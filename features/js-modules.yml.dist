@@ -43,3 +43,75 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - html.elements.script.nomodule
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "63"
+  #   chrome_android: "63"
+  #   edge: "79"
+  #   firefox: "67"
+  #   firefox_android: "67"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - javascript.operators.import
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "64"
+  #   chrome_android: "64"
+  #   edge: "79"
+  #   firefox: "62"
+  #   firefox_android: "62"
+  #   safari: "11.1"
+  #   safari_ios: "12"
+  - javascript.operators.import_meta
+
+  # baseline: high
+  # baseline_low_date: 2021-04-26
+  # baseline_high_date: 2023-10-26
+  # support:
+  #   chrome: "72"
+  #   chrome_android: "72"
+  #   edge: "79"
+  #   firefox: "80"
+  #   firefox_android: "80"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - javascript.statements.export.namespace
+
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "105"
+  #   chrome_android: "105"
+  #   edge: "105"
+  #   firefox: "106"
+  #   firefox_android: "106"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - javascript.operators.import_meta.resolve
+
+  # baseline: false
+  # support:
+  #   chrome: "123"
+  #   chrome_android: "123"
+  #   edge: "123"
+  #   safari: "17.2"
+  #   safari_ios: "17.2"
+  - javascript.statements.import.import_attributes
+
+  # baseline: false
+  # support:
+  #   firefox: "114"
+  #   firefox_android: "114"
+  - javascript.statements.import.worklet_support
+
+  # baseline: false
+  # support:
+  #   firefox: "117"
+  #   firefox_android: "117"
+  - svg.elements.script.type.module

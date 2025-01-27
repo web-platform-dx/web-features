@@ -1,0 +1,55 @@
+name: Date
+description: The `Date` object represents a single moment in time.
+spec: https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date-objects
+group: primitive-types
+status:
+  compute_from: javascript.builtins.Date
+compat_features:
+  - javascript.builtins.Date
+  - javascript.builtins.Date.Date
+  - javascript.builtins.Date.UTC
+  - javascript.builtins.Date.UTC.optional_monthIndex
+  - javascript.builtins.Date.getDate
+  - javascript.builtins.Date.getDay
+  - javascript.builtins.Date.getFullYear
+  - javascript.builtins.Date.getHours
+  - javascript.builtins.Date.getMilliseconds
+  - javascript.builtins.Date.getMinutes
+  - javascript.builtins.Date.getMonth
+  - javascript.builtins.Date.getSeconds
+  - javascript.builtins.Date.getTime
+  - javascript.builtins.Date.getTimezoneOffset
+  - javascript.builtins.Date.getUTCDate
+  - javascript.builtins.Date.getUTCDay
+  - javascript.builtins.Date.getUTCFullYear
+  - javascript.builtins.Date.getUTCHours
+  - javascript.builtins.Date.getUTCMilliseconds
+  - javascript.builtins.Date.getUTCMinutes
+  - javascript.builtins.Date.getUTCMonth
+  - javascript.builtins.Date.getUTCSeconds
+  - javascript.builtins.Date.now
+  - javascript.builtins.Date.parse
+  - javascript.builtins.Date.parse.iso_8601
+  - javascript.builtins.Date.setDate
+  - javascript.builtins.Date.setFullYear
+  - javascript.builtins.Date.setHours
+  - javascript.builtins.Date.setMilliseconds
+  - javascript.builtins.Date.setMinutes
+  - javascript.builtins.Date.setMonth
+  - javascript.builtins.Date.setSeconds
+  - javascript.builtins.Date.setTime
+  - javascript.builtins.Date.setUTCDate
+  - javascript.builtins.Date.setUTCFullYear
+  - javascript.builtins.Date.setUTCHours
+  - javascript.builtins.Date.setUTCMilliseconds
+  - javascript.builtins.Date.setUTCMinutes
+  - javascript.builtins.Date.setUTCMonth
+  - javascript.builtins.Date.setUTCSeconds
+  - javascript.builtins.Date.toDateString
+  - javascript.builtins.Date.toISOString
+  - javascript.builtins.Date.toJSON
+  - javascript.builtins.Date.toString
+  - javascript.builtins.Date.toTimeString
+  - javascript.builtins.Date.toUTCString
+  - javascript.builtins.Date.valueOf
+  - javascript.builtins.Date.@@toPrimitive

@@ -1,0 +1,9 @@
+name: box-sizing
+description: The `box-sizing` CSS property sets whether an element's width and height are calculated based on the `content-box`, which does not count the size of borders or padding, or `border-box`, which does count them.
+spec: https://drafts.csswg.org/css-sizing-3/#propdef-box-sizing
+caniuse: css3-boxsizing
+group: layout
+compat_features:
+  - css.properties.box-sizing
+  - css.properties.box-sizing.border-box
+  - css.properties.box-sizing.content-box

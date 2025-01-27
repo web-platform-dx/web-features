@@ -234,13 +234,16 @@ compat_features:
   - api.HTMLTextAreaElement.autocomplete
   - html.elements.textarea.autocomplete
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2022-09-12
   # support:
   #   chrome: "36"
   #   chrome_android: "36"
   #   edge: "12"
   #   firefox: "59"
   #   firefox_android: "59"
+  #   safari: "16"
+  #   safari_ios: "16"
   - html.elements.textarea.placeholder.line_breaks
 
   # baseline: false

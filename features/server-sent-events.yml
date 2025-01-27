@@ -1,0 +1,19 @@
+name: Server-sent events
+description: The `EventSource` API creates a connection to a server and listens to a stream of events sent by the server.
+spec: https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events
+caniuse: eventsource
+group: messaging
+status:
+  compute_from: api.EventSource
+compat_features:
+  - api.EventSource
+  - api.EventSource.EventSource
+  - api.EventSource.EventSource.options_withCredentials_parameter
+  - api.EventSource.close
+  - api.EventSource.error_event
+  - api.EventSource.message_event
+  - api.EventSource.open_event
+  - api.EventSource.readyState
+  - api.EventSource.url
+  - api.EventSource.withCredentials
+  - api.EventSource.worker_support

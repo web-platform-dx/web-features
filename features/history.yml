@@ -1,0 +1,23 @@
+name: History
+description: "The `window.history` API manipulates the browser session history, from navigations to state management, in the tab or frame that the current page is loaded in."
+spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#the-history-interface
+caniuse: history
+# This gets the feature closest to matching Caniuse.
+status:
+  compute_from: api.History.pushState
+compat_features:
+  - api.History
+  - api.History.back
+  - api.History.forward
+  - api.History.go
+  - api.History.length
+  - api.History.pushState
+  - api.History.replaceState
+  - api.History.scrollRestoration
+  - api.History.state
+  - api.PopStateEvent
+  - api.PopStateEvent.PopStateEvent
+  - api.PopStateEvent.hasUAVisualTransition
+  - api.PopStateEvent.state
+  - api.Window.history
+  - api.Window.popstate_event

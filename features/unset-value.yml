@@ -1,0 +1,7 @@
+name: unset
+description: The `unset` keyword resets any CSS property, removing any values previously set by the author, user, or browser. Inherited properties (like `color`) reset to the parent element's computed value. Non-inherited properties (like `display`) reset to the specified initial value (`inline`).
+group: explicit-defaults
+spec: https://drafts.csswg.org/css-cascade-3/#inherit-initial
+caniuse: css-unset-value
+compat_features:
+  - css.types.global_keywords.unset

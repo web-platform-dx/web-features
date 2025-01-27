@@ -1,0 +1,31 @@
+name: Window management
+description: "The `window.getScreenDetails()` method gets information about the screens on a device, which you can use to place new windows on a specific screen with `window.open()`."
+spec: https://w3c.github.io/window-management/
+compat_features:
+  - api.Element.requestFullscreen.options_screen_parameter
+  - api.Permissions.permission_window-management
+  - api.Screen.change_event
+  - api.Screen.isExtended
+  - api.ScreenDetailed
+  - api.ScreenDetailed.availLeft
+  - api.ScreenDetailed.availTop
+  - api.ScreenDetailed.devicePixelRatio
+  - api.ScreenDetailed.isInternal
+  - api.ScreenDetailed.isPrimary
+  - api.ScreenDetailed.label
+  - api.ScreenDetailed.left
+  - api.ScreenDetailed.top
+  - api.ScreenDetails
+  - api.ScreenDetails.currentScreen
+  - api.ScreenDetails.currentscreenchange_event
+  - api.ScreenDetails.screens
+  - api.ScreenDetails.screenschange_event
+  - api.Window.getScreenDetails
+  - api.Window.moveTo.relative-multi-screen
+  - api.Window.open.relative-multi-screen
+  - api.Window.screenLeft.relative-multi-screen
+  - api.Window.screenTop.relative-multi-screen
+  - api.Window.screenX.relative-multi-screen
+  - api.Window.screenY.relative-multi-screen
+  - html.elements.iframe.allow.window-management
+  - http.headers.Permissions-Policy.window-management

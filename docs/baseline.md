@@ -1,4 +1,4 @@
-## Baseline
+# Baseline
 
 This document describes what Baseline intends to do and specifies how features are to receive a Baseline status.
 
@@ -121,7 +121,7 @@ This is but one of several possible stories to help keep in mind the needs and c
 The WebDX community group, through the [web-platform-dx/web-features-set owners group](../GOVERNANCE.md), maintains this document.
 Based on WebDX community group research, the web-features owners group decides matters such as the core browser set, releases, editorial overrides, and so on.
 
-The status definition is due for review by the governance group on 7 November 2024.
+The status definition is due for review by the governance group on 1 June 2025.
 
 ## Status definition
 
@@ -167,6 +167,15 @@ The _core browser set_ shall be defined as:
 * Microsoft Edge (desktop)
 * Mozilla Firefox (Android)
 * Mozilla Firefox (desktop)
+
+> [!NOTE]
+> How Baseline statuses change based on the introduction of a new browser to the existing core browser set is not yet defined.
+> If you need this to adopt Baseline in your tool or process, file an issue describing your use case.
+> See issue [#2133](https://github.com/web-platform-dx/web-features/issues/2133) for further discussion.
+
+> [!NOTE]
+> Baseline status before the release of Edge 12 (the first release of the newest browser in the core browser set) is not defined.
+> If you need Baseline statuses for 2014 or earlier, file an issue describing your use case.
 
 ## Future considerations
 

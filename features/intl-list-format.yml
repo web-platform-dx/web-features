@@ -1,0 +1,11 @@
+name: Intl.ListFormat
+description: "The `Intl.ListFormat` API creates a locale-aware formatter that turns iterable objects into localized strings."
+group: intl
+spec: https://tc39.es/ecma402/#listformat-objects
+compat_features:
+  - javascript.builtins.Intl.ListFormat
+  - javascript.builtins.Intl.ListFormat.ListFormat
+  - javascript.builtins.Intl.ListFormat.format
+  - javascript.builtins.Intl.ListFormat.formatToParts
+  - javascript.builtins.Intl.ListFormat.resolvedOptions
+  - javascript.builtins.Intl.ListFormat.supportedLocalesOf

@@ -1,0 +1,26 @@
+name: localStorage and sessionStorage
+description: The `localStorage` and `sessionStorage` APIs store data as key-value pairs. While `localStorage` persists across sessions, `sessionStorage` data is discarded when the page is closed.
+spec: https://storage.spec.whatwg.org/
+group: storage
+caniuse: namevalue-storage
+# Computing from here aligns the feature with Caniuse
+status:
+  compute_from: api.Storage
+compat_features:
+  - api.Storage
+  - api.Storage.clear
+  - api.Storage.getItem
+  - api.Storage.key
+  - api.Storage.length
+  - api.Storage.removeItem
+  - api.Storage.setItem
+  - api.StorageEvent
+  - api.StorageEvent.StorageEvent
+  - api.StorageEvent.key
+  - api.StorageEvent.newValue
+  - api.StorageEvent.oldValue
+  - api.StorageEvent.storageArea
+  - api.StorageEvent.url
+  - api.Window.localStorage
+  - api.Window.sessionStorage
+  - api.Window.storage_event
