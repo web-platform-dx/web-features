@@ -1,5 +1,5 @@
-draft_date: 2025-01-20
-name: HTML Standard
+draft_date: 2025-01-27
+name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
@@ -79,6 +79,7 @@ compat_features:
   - api.MediaError
   - api.MediaError.code
   - api.MediaError.message
+  - api.MouseEvent.relatedTarget.drag_events
   - api.Navigator.authentication
   - api.PromiseRejectionEvent
   - api.PromiseRejectionEvent.PromiseRejectionEvent
@@ -218,6 +219,8 @@ compat_features:
   - http.headers.Permissions-Policy.cross-origin-isolated
   - http.headers.Permissions-Policy.document-domain
   - http.headers.Refresh
+  - http.headers.X-Frame-Options
+  - http.headers.X-Frame-Options.SAMEORIGIN
   - http.status.103
   - http.status.103.preconnect
   - http.status.103.preload

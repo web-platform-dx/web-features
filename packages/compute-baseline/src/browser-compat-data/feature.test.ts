@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 
 import { feature } from "./feature.js";
-import { browser, Compat } from "./index.js";
+import { browser } from "./index.js";
 
 describe("features", function () {
   describe("feature()", function () {
@@ -104,7 +104,6 @@ describe("features", function () {
 
     describe("supportedIn()", function () {
       it("returns support for features supported with and without qualification", function () {
-        const compat = new Compat();
         const cr = browser("chrome");
 
         // { version_added: "…" }
