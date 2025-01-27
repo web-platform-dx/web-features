@@ -391,6 +391,20 @@ compat_features:
   - javascript.builtins.Intl.Collator.Collator.options_collation_parameter
 
   # baseline: high
+  # baseline_low_date: 2021-05-27
+  # baseline_high_date: 2023-11-27
+  # support:
+  #   chrome: "91"
+  #   chrome_android: "91"
+  #   edge: "91"
+  #   firefox: "54"
+  #   firefox_android: "56"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - javascript.builtins.Intl.DateTimeFormat.DateTimeFormat.IntlLegacyConstructedSymbol
+  - javascript.builtins.Intl.NumberFormat.NumberFormat.IntlLegacyConstructedSymbol
+
+  # baseline: high
   # baseline_low_date: 2021-07-22
   # baseline_high_date: 2024-01-22
   # support:
