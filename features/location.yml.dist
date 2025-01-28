@@ -26,7 +26,6 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "1"
   #   safari_ios: "1"
-  - api.Document.location
   - api.Location
   - api.Location.hash
   - api.Location.host
@@ -52,6 +51,19 @@ compat_features:
   #   safari: "3"
   #   safari_ios: "1"
   - api.Location.assign
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - api.Document.location
 
   # baseline: high
   # baseline_low_date: 2015-07-29

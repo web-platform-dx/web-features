@@ -26,7 +26,6 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "1"
   #   safari_ios: "1"
-  - api.Document.cookie
   - http.headers.Cookie
   - http.headers.Set-Cookie
   - http.headers.Set-Cookie.Max-Age
@@ -43,6 +42,19 @@ compat_features:
   #   safari: "5"
   #   safari_ios: "4"
   - http.headers.Set-Cookie.HttpOnly
+
+  # baseline: high
+  # baseline_low_date: 2019-07-09
+  # baseline_high_date: 2022-01-09
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "68"
+  #   firefox_android: "68"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - api.Document.cookie
 
   # baseline: high
   # baseline_low_date: 2019-09-19
