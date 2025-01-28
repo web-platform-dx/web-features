@@ -66,6 +66,12 @@ compat_features:
   - svg.elements.a.xlink_href
   - svg.elements.a.xlink_show
   - svg.elements.a.xlink_title
+  - svg.elements.cursor
+  - svg.elements.cursor.href
+  - svg.elements.cursor.systemLanguage
+  - svg.elements.cursor.x
+  - svg.elements.cursor.xlink_href
+  - svg.elements.cursor.y
   - svg.elements.feImage.xlink_href
   - svg.elements.filter.xlink_href
   - svg.elements.font
@@ -157,6 +163,11 @@ compat_features:
   - svg.elements.svg.version
   - svg.elements.svg.zoomAndPan
   - svg.elements.textPath.xlink_href
+  - svg.elements.tref
+  - svg.elements.tref.fill
+  - svg.elements.tref.fill.context-fill
+  - svg.elements.tref.systemLanguage
+  - svg.elements.tref.xlink_href
   - svg.elements.use.xlink_href
   - svg.elements.view.zoomAndPan
   - svg.elements.vkern
