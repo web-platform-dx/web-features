@@ -34,3 +34,4 @@ jobs:
 
             - [ ] Start a PR to [publish the next web-features release](https://github.com/web-platform-dx/web-features/blob/main/docs/publishing.md#regular-releases).
             - [ ] [Trigger a drafts update workflow run](https://github.com/web-platform-dx/web-features/actions/workflows/update_draft_features_weekly.yml).
+            - [ ] [Trigger a workflow run to remove tagged compat features](https://github.com/web-platform-dx/web-features/actions/workflows/remove_tagged_compat_features.yml).
