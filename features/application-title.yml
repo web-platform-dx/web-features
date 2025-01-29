@@ -1,0 +1,9 @@
+name: application-title
+description: The `application-title` metadata name, used as `<meta name="application-title" content="">`, sets the text content that appears in the title bar of an installed web application.
+# No spec yet. Inclusion in the HTML spec depends on multi-vendor implementation.
+# See https://github.com/whatwg/html/issues/8909
+# So, for now, the Edge explainer is the closest thing to a spec.
+spec: https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/DocumentSubtitle/explainer.md
+group: progressive-web-app
+compat_features:
+  - html.elements.meta.name.application-title
