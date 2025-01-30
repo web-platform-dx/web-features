@@ -5,8 +5,10 @@ status:
   baseline: false
   support:
     chrome: "113"
+    chrome_android: "121"
     edge: "113"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "113"
@@ -247,6 +249,10 @@ compat_features:
   - api.GPUUncapturedErrorEvent.error
   - api.GPUValidationError
   - api.GPUValidationError.GPUValidationError
+  - api.HTMLCanvasElement.getContext.webgpu_context
+  - api.Navigator.gpu
+  - api.OffscreenCanvas.getContext.webgpu_context
+  - api.WorkerNavigator.gpu
 
   # baseline: false
   # support:
@@ -255,6 +261,14 @@ compat_features:
   #   edge: "115"
   - api.GPU.requestAdapter.discrete_adapter_default_ac
   - api.GPU.wgslLanguageFeatures
+  - api.WGSLLanguageFeatures
+  - api.WGSLLanguageFeatures.@@iterator
+  - api.WGSLLanguageFeatures.entries
+  - api.WGSLLanguageFeatures.forEach
+  - api.WGSLLanguageFeatures.has
+  - api.WGSLLanguageFeatures.keys
+  - api.WGSLLanguageFeatures.size
+  - api.WGSLLanguageFeatures.values
 
   # baseline: false
   # support:
@@ -288,13 +302,23 @@ compat_features:
   #   chrome: "119"
   #   chrome_android: "121"
   #   edge: "119"
+  - api.GPUDevice.createBindGroupLayout.texture_rgb10a2uint
+  - api.GPUDevice.createRenderPipeline.texture_rgb10a2uint
+  - api.GPUDevice.createRenderPipeline.vertex_unorm10-10-10-2
+  - api.GPUDevice.createRenderPipelineAsync.texture_rgb10a2uint
+  - api.GPUDevice.createRenderPipelineAsync.vertex_unorm10-10-10-2
+  - api.GPUDevice.createTexture.texture_rgb10a2uint
   - api.GPUSupportedFeatures.feature_float32-filterable
+  - api.GPUTexture.createView.texture_rgb10a2uint
+  - api.GPUTexture.format.texture_rgb10a2uint
 
   # baseline: false
   # support:
   #   chrome: "120"
   #   chrome_android: "121"
   #   edge: "120"
+  - api.GPUDevice.createRenderPipeline.optional_depthcompare_depthwriteenabled
+  - api.GPUDevice.createRenderPipelineAsync.optional_depthcompare_depthwriteenabled
   - api.GPUSupportedFeatures.feature_shader-f16
   - api.GPUSupportedLimits.maxBindGroupsPlusVertexBuffers
 
@@ -310,8 +334,26 @@ compat_features:
   - api.GPUDevice.createQuerySet.timestamp
   - api.GPUDevice.createRenderPipeline.optional_entryPoint
   - api.GPUDevice.createRenderPipelineAsync.optional_entryPoint
+  - api.GPUDevice.importExternalTexture.color_space_display-p3
   - api.GPUQuerySet.type.timestamp
   - api.GPUSupportedFeatures.feature_timestamp-query
+
+  # baseline: false
+  # support:
+  #   chrome: "123"
+  #   chrome_android: "123"
+  #   edge: "123"
+  - api.GPUCommandEncoder.beginRenderPass.separate_depth_stencil_read-only
+  - api.WGSLLanguageFeatures.extension_packed_4x8_integer_dot_product
+  - api.WGSLLanguageFeatures.extension_unrestricted_pointer_parameters
+
+  # baseline: false
+  # support:
+  #   chrome: "124"
+  #   chrome_android: "124"
+  #   edge: "124"
+  - api.GPUDevice.createBindGroupLayout.storageTexture_access_read-write_read-only
+  - api.WGSLLanguageFeatures.extension_readonly_and_readwrite_storage_textures
 
   # baseline: false
   # support:
@@ -360,28 +402,12 @@ compat_features:
   - api.GPUDevice.createRenderPipelineAsync.validates_depth_bias_for_line_and_point_topologies
   - api.GPUSupportedFeatures.feature_clip-distances
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
-  #   chrome: "113"
-  #   edge: "113"
-  - api.HTMLCanvasElement.getContext.webgpu_context
-  - api.Navigator.gpu
-  - api.OffscreenCanvas.getContext.webgpu_context
-  - api.WorkerNavigator.gpu
-
-  # baseline: false
-  # support:
-  #   chrome: "115"
-  #   edge: "115"
-  - api.WGSLLanguageFeatures
-  - api.WGSLLanguageFeatures.@@iterator
-  - api.WGSLLanguageFeatures.entries
-  - api.WGSLLanguageFeatures.forEach
-  - api.WGSLLanguageFeatures.has
-  - api.WGSLLanguageFeatures.keys
-  - api.WGSLLanguageFeatures.size
-  - api.WGSLLanguageFeatures.values
+  #   chrome: "132"
+  #   chrome_android: "132"
+  #   edge: "132"
+  - api.GPUDevice.adapterInfo
 
   # baseline: false
   # support: {}

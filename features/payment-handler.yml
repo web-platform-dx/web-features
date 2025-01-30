@@ -7,14 +7,9 @@ status:
 compat_features:
   - api.CanMakePaymentEvent
   - api.CanMakePaymentEvent.CanMakePaymentEvent
-  - api.CanMakePaymentEvent.methodData
-  - api.CanMakePaymentEvent.modifiers
-  - api.CanMakePaymentEvent.paymentRequestOrigin
   - api.CanMakePaymentEvent.respondWith
-  - api.CanMakePaymentEvent.topOrigin
   - api.PaymentManager
   - api.PaymentManager.enableDelegations
-  - api.PaymentManager.instruments
   - api.PaymentManager.secure_context_required
   - api.PaymentManager.userHint
   - api.PaymentRequestEvent
@@ -22,7 +17,6 @@ compat_features:
   - api.PaymentRequestEvent.changePaymentMethod
   - api.PaymentRequestEvent.changeShippingAddress
   - api.PaymentRequestEvent.changeShippingOption
-  - api.PaymentRequestEvent.instrumentKey
   - api.PaymentRequestEvent.methodData
   - api.PaymentRequestEvent.modifiers
   - api.PaymentRequestEvent.openWindow

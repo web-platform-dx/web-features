@@ -1,0 +1,20 @@
+name: Attribution reporting
+description: The Attribution Reporting API measures when an ad click or view leads to a conversion, such as a purchase on an advertiser site.
+spec: https://wicg.github.io/attribution-reporting-api/
+compat_features:
+  - api.HTMLAnchorElement.attributionSrc
+  - api.HTMLImageElement.attributionSrc
+  - api.HTMLScriptElement.attributionSrc
+  - api.Request.Request.init_attributionReporting_parameter
+  - api.Window.open.features_parameter_attributionsrc
+  - api.XMLHttpRequest.setAttributionReporting
+  - api.fetch.init_attributionReporting_parameter
+  - html.elements.a.attributionsrc
+  - html.elements.iframe.allow.attribution-reporting
+  - html.elements.img.attributionsrc
+  - html.elements.script.attributionsrc
+  - http.headers.Attribution-Reporting-Eligible
+  - http.headers.Attribution-Reporting-Register-Source
+  - http.headers.Attribution-Reporting-Register-Trigger
+  - http.headers.Attribution-Reporting-Support
+  - http.headers.Permissions-Policy.attribution-reporting

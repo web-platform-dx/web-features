@@ -5,6 +5,11 @@ group: forms
 status:
   compute_from: html.elements.form
 compat_features:
+  - api.FormDataEvent
+  - api.FormDataEvent.FormDataEvent
+  - api.FormDataEvent.formData
+  - api.HTMLFormControlsCollection
+  - api.HTMLFormControlsCollection.namedItem
   - api.HTMLFormElement
   - api.HTMLFormElement.acceptCharset
   - api.HTMLFormElement.action
@@ -35,3 +40,6 @@ compat_features:
   - html.elements.form.novalidate
   - html.elements.form.rel
   - html.elements.form.target
+  - api.SubmitEvent
+  - api.SubmitEvent.SubmitEvent
+  - api.SubmitEvent.submitter

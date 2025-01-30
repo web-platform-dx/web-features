@@ -76,6 +76,30 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/WebAssembly/threads/blob/main/proposals/threads/Overview.md",
         "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://github.com/WebAssembly/function-references/blob/main/proposals/function-references/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://github.com/WebAssembly/memory64/blob/main/proposals/memory64/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://github.com/WebAssembly/exception-handling/blob/main/proposals/exception-handling/legacy/Exceptions.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://immersive-web.github.io/webvr/spec/1.1/",
+        "Allowed because this is the legacy spec that defines WebVR."
+    ],
+    [
+        "https://github.com/tc39/proposal-import-attributes/tree/abca60286360b47f9a6be25a28f489c2cb157beb",
+        "Allowed because import assertions were replaced in-place by import attributes. Remove this exception when javascript.statements.import.import_assertions is dropped from BCD in June 2026."
     ]
 ];
 

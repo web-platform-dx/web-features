@@ -17,11 +17,10 @@ export function stats(detailed: boolean = false) {
   const featureCount = Object.keys(features).length;
 
   const keys = [];
-  const doneKeys = Object.values(features).flatMap(
-    (f) => f.compat_features ?? [],
+  const doneKeys = Array.from(
+    new Set(Object.values(features).flatMap((f) => f.compat_features ?? [])),
   );
   const toDoKeys = [];
-  const deprecatedNonStandardKeys = [];
 
   for (const f of new Compat().walk()) {
     if (!f.id.startsWith("webextensions")) {
@@ -31,8 +30,6 @@ export function stats(detailed: boolean = false) {
         if (!doneKeys.includes(f.id)) {
           toDoKeys.push(f.id);
         }
-      } else {
-        deprecatedNonStandardKeys.push(f.id);
       }
     }
   }
@@ -44,7 +41,7 @@ export function stats(detailed: boolean = false) {
   const result = {
     features: featureCount,
     compatKeys: doneKeys.length,
-    compatKeysUnmapped: toDoKeys.length + deprecatedNonStandardKeys.length,
+    compatKeysUnmapped: keys.length - doneKeys.length,
     compatCoverage: doneKeys.length / keys.length,
     compatKeysPerFeatureMean: doneKeys.length / featureCount,
     compatKeysPerFeatureMedian: (() => {
@@ -60,9 +57,7 @@ export function stats(detailed: boolean = false) {
         frequencyMap.set(size, (frequencyMap.get(size) ?? 0) + 1);
       }
       return [...frequencyMap.entries()]
-        .sort(
-          ([sizeA, frequencyA], [sizeB, frequencyB]) => frequencyA - frequencyB,
-        )
+        .sort(([, frequencyA], [, frequencyB]) => frequencyA - frequencyB)
         .pop()[0];
     })(),
     currentBurndown: undefined,
