@@ -1,5 +1,5 @@
-draft_date: 2025-01-07
-name: HTML Standard
+draft_date: 2025-01-27
+name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
@@ -7,6 +7,7 @@ compat_features:
   - api.DedicatedWorkerGlobalScope.close
   - api.DedicatedWorkerGlobalScope.name
   - api.Document.featurePolicy
+  - api.Document.moveBefore
   - api.ElementInternals.shadowRoot
   - api.ErrorEvent
   - api.ErrorEvent.ErrorEvent
@@ -48,7 +49,6 @@ compat_features:
   - api.HTMLInputElement.showPicker.time_input
   - api.HTMLInputElement.showPicker.week_input
   - api.HTMLMediaElement.getStartDate
-  - api.HTMLMediaElement.srcObject
   - api.HTMLMediaElement.textTracks
   - api.HTMLMeterElement
   - api.HTMLMeterElement.high
@@ -79,6 +79,7 @@ compat_features:
   - api.MediaError
   - api.MediaError.code
   - api.MediaError.message
+  - api.MouseEvent.relatedTarget.drag_events
   - api.Navigator.authentication
   - api.PromiseRejectionEvent
   - api.PromiseRejectionEvent.PromiseRejectionEvent
@@ -218,6 +219,8 @@ compat_features:
   - http.headers.Permissions-Policy.cross-origin-isolated
   - http.headers.Permissions-Policy.document-domain
   - http.headers.Refresh
+  - http.headers.X-Frame-Options
+  - http.headers.X-Frame-Options.SAMEORIGIN
   - http.status.103
   - http.status.103.preconnect
   - http.status.103.preload
@@ -634,7 +637,7 @@ compat_features:
 #   - api.Element.copy_event
 #   - api.Element.cut_event
 #   - api.Element.paste_event
-# - getHTML:
+# - getHTML():
 #   - api.Element.getHTML
 #   - api.ShadowRoot.getHTML
 # - Input events:
@@ -1554,6 +1557,8 @@ compat_features:
 #   - api.HTMLMediaElement.fastSeek
 # - preservesPitch:
 #   - api.HTMLMediaElement.preservesPitch
+# - Media source:
+#   - api.HTMLMediaElement.srcObject
 # - <menu>:
 #   - api.HTMLMenuElement
 #   - html.elements.menu

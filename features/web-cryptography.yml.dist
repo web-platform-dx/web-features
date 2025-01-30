@@ -85,7 +85,6 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - api.SubtleCrypto.decrypt
-  - api.SubtleCrypto.digest
   - api.SubtleCrypto.encrypt
   - api.SubtleCrypto.exportKey
   - api.SubtleCrypto.generateKey
@@ -136,6 +135,7 @@ compat_features:
   - api.SubtleCrypto.deriveKey
   - api.SubtleCrypto.deriveKey.derivedKeyAlgorithm_option_aes
   - api.SubtleCrypto.deriveKey.derivedKeyAlgorithm_option_hmac
+  - api.SubtleCrypto.digest
 
   # baseline: high
   # baseline_low_date: 2021-09-20

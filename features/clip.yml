@@ -1,0 +1,14 @@
+name: clip
+description: The `clip` CSS property sets the visible area of an absolutely positioned element.
+spec: https://drafts.fxtf.org/css-masking-1/#clip-property
+group: clipping-shapes-masking
+discouraged:
+  according_to:
+    - https://drafts.fxtf.org/css-masking-1/#clip-property
+  alternatives:
+    - clip-path
+compat_features:
+  - css.properties.clip
+  - css.properties.clip.auto
+  - css.types.shape
+  - css.types.shape.rect

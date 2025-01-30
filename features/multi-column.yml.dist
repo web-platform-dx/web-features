@@ -75,6 +75,32 @@ compat_features:
   - css.properties.column-gap.multicol_context
 
   # baseline: high
+  # baseline_low_date: 2018-09-17
+  # baseline_high_date: 2021-03-17
+  # support:
+  #   chrome: "66"
+  #   chrome_android: "66"
+  #   edge: "16"
+  #   firefox: "61"
+  #   firefox_android: "61"
+  #   safari: "12"
+  #   safari_ios: "12"
+  - css.properties.column-gap.multicol_context.percentage_values
+
+  # baseline: high
+  # baseline_low_date: 2019-03-25
+  # baseline_high_date: 2021-09-25
+  # support:
+  #   chrome: "66"
+  #   chrome_android: "66"
+  #   edge: "16"
+  #   firefox: "61"
+  #   firefox_android: "61"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - css.properties.column-gap.multicol_context.calc_values
+
+  # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
   # support:
@@ -86,16 +112,6 @@ compat_features:
   #   safari: "14.1"
   #   safari_ios: "14.5"
   - css.properties.gap.multicol_context
-
-  # baseline: false
-  # support:
-  #   chrome: "66"
-  #   chrome_android: "66"
-  #   edge: "16"
-  #   firefox: "61"
-  #   firefox_android: "61"
-  - css.properties.column-gap.multicol_context.calc_values
-  - css.properties.column-gap.multicol_context.percentage_values
 
   # baseline: false
   # support:
