@@ -1,0 +1,13 @@
+name: Content Index
+description: The Content Index API allows developers to register their offline enabled content with the browser.
+spec: https://wicg.github.io/content-index/spec/
+compat_features:
+  - api.ContentIndex
+  - api.ContentIndex.add
+  - api.ContentIndex.delete
+  - api.ContentIndex.getAll
+  - api.ContentIndexEvent
+  - api.ContentIndexEvent.ContentIndexEvent
+  - api.ContentIndexEvent.id
+  - api.ServiceWorkerGlobalScope.contentdelete_event
+  - api.ServiceWorkerRegistration.index

@@ -1,0 +1,27 @@
+name: Cookie store
+description: The `CookieStore` interface is an asynchronous and promise-based API for managing cookies. It does not rely on document and so is available to service workers as well.
+spec: https://wicg.github.io/cookie-store/
+caniuse: cookie-store-api
+compat_features:
+  - api.CookieStore
+  - api.CookieStore.change_event
+  - api.CookieStore.delete
+  - api.CookieStore.get
+  - api.CookieStore.getAll
+  - api.CookieStore.set
+  - api.CookieStoreManager
+  - api.CookieStoreManager.getSubscriptions
+  - api.CookieStoreManager.subscribe
+  - api.CookieStoreManager.unsubscribe
+  - api.ServiceWorkerRegistration.cookies
+  - api.CookieChangeEvent
+  - api.CookieChangeEvent.changed
+  - api.CookieChangeEvent.CookieChangeEvent
+  - api.CookieChangeEvent.deleted
+  - api.ExtendableCookieChangeEvent
+  - api.ExtendableCookieChangeEvent.changed
+  - api.ExtendableCookieChangeEvent.deleted
+  - api.ExtendableCookieChangeEvent.ExtendableCookieChangeEvent
+  - api.ServiceWorkerGlobalScope.cookieStore
+  - api.Window.cookieStore
+  - api.ServiceWorkerGlobalScope.cookiechange_event

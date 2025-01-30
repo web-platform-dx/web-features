@@ -3,15 +3,66 @@
 
 status:
   baseline: low
-  baseline_low_date: 2024-07-09
+  baseline_low_date: 2024-09-16
   support:
-    chrome: "119"
-    chrome_android: "119"
-    edge: "119"
+    chrome: "125"
+    chrome_android: "125"
+    edge: "125"
     firefox: "128"
     firefox_android: "128"
-    safari: "16.4"
-    safari_ios: "16.4"
+    safari: "18"
+    safari_ios: "18"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2024-07-09
+  # support:
+  #   chrome: "119"
+  #   chrome_android: "119"
+  #   edge: "119"
+  #   firefox: "128"
+  #   firefox_android: "128"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - css.types.calc.color_component
   - css.types.color.lab.relative_syntax
   - css.types.color.oklab.relative_syntax
+
+  # baseline: low
+  # baseline_low_date: 2024-09-16
+  # support:
+  #   chrome: "119"
+  #   chrome_android: "119"
+  #   edge: "119"
+  #   firefox: "128"
+  #   firefox_android: "128"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - css.types.color.color.relative_syntax
+  - css.types.color.lch.relative_syntax
+  - css.types.color.oklch.relative_syntax
+
+  # baseline: low
+  # baseline_low_date: 2024-09-16
+  # support:
+  #   chrome: "122"
+  #   chrome_android: "122"
+  #   edge: "122"
+  #   firefox: "128"
+  #   firefox_android: "128"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - css.types.color.rgb.relative_syntax
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2024-09-16
+  # support:
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
+  #   firefox: "128"
+  #   firefox_android: "128"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - css.types.color.hsl.relative_syntax
+  - css.types.color.hwb.relative_syntax

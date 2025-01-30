@@ -4,8 +4,15 @@ import tseslint from "typescript-eslint";
 export default tseslint.config(tseslint.configs.base, {
   plugins: { newWithError },
   rules: {
-    "no-throw-literal": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        caughtErrors: "none",
+      },
+    ],
     "newWithError/new-with-error": "error",
+    "no-duplicate-imports": "error",
+    "no-throw-literal": "error",
   },
   files: ["**/*.ts"],
 });

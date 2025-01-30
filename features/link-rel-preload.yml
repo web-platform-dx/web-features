@@ -1,0 +1,14 @@
+name: '<link rel="preload">'
+description: The `rel="preload"` attribute for the `<link>` HTML element requests resources, such as images or style sheets, that the page needs soon, so the browser may prioritize them for loading before rendering begins.
+spec: https://html.spec.whatwg.org/multipage/links.html#link-type-preload
+caniuse: link-rel-preload
+status:
+  compute_from: html.elements.link.rel.preload
+compat_features:
+  - html.elements.link.rel.preload
+  - html.elements.link.rel.preload.as-fetch
+  - html.elements.link.rel.preload.as-font
+  - html.elements.link.rel.preload.as-image
+  - html.elements.link.rel.preload.as-script
+  - html.elements.link.rel.preload.as-style
+  - html.elements.link.rel.preload.as-track

@@ -226,14 +226,14 @@ compat_features:
   - css.properties.align-self.flex_context.first_baseline
 
   # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
+  # baseline_low_date: ≤2020-07-28
+  # baseline_high_date: ≤2023-01-28
   # support:
   #   chrome: "29"
   #   chrome_android: "29"
   #   edge: "12"
   #   firefox: ≤72
-  #   firefox_android: "79"
+  #   firefox_android: ≤79
   #   safari: "9"
   #   safari_ios: "9"
   - css.properties.flex-direction.column
@@ -295,8 +295,9 @@ compat_features:
   #   safari_ios: "15.4"
   - css.properties.flex-basis.content
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-07-20
+  # baseline_high_date: 2025-01-20
   # support:
   #   chrome: "93"
   #   chrome_android: "93"

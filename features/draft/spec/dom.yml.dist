@@ -3,24 +3,8 @@
 
 status:
   baseline: false
-  support:
-    chrome: "125"
-    chrome_android: "125"
-    edge: "125"
+  support: {}
 compat_features:
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: "1"
-  #   safari_ios: "1"
-  - api.Document.createEvent
-
   # baseline: high
   # baseline_low_date: ≤2020-01-15
   # baseline_high_date: ≤2022-07-15
@@ -91,10 +75,16 @@ compat_features:
   #   edge: "79"
   - api.Document.featurePolicy
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "125"
   #   chrome_android: "125"
   #   edge: "125"
   - api.Element.attachShadow.options_serializable_parameter
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.Document.moveBefore
+  - api.DocumentFragment.moveBefore
+  - api.Element.moveBefore

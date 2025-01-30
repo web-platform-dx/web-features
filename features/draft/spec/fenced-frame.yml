@@ -1,0 +1,27 @@
+draft_date: 2025-01-07
+name: Fenced Frame
+description: TODO
+spec: https://wicg.github.io/fenced-frame/
+compat_features:
+  - api.Navigator.adAuctionComponents
+
+# The following features in the spec are already part of web-features:
+# - <fencedframe>:
+#   - api.Fence
+#   - api.Fence.getNestedConfigs
+#   - api.Fence.reportEvent
+#   - api.Fence.setReportEventDataForAutomaticBeacons
+#   - api.Fence.setReportEventDataForAutomaticBeacons.start_commit_eventType
+#   - api.FencedFrameConfig
+#   - api.FencedFrameConfig.setSharedStorageContext
+#   - api.HTMLFencedFrameElement
+#   - api.HTMLFencedFrameElement.allow
+#   - api.HTMLFencedFrameElement.config
+#   - api.HTMLFencedFrameElement.height
+#   - api.HTMLFencedFrameElement.sandbox
+#   - api.HTMLFencedFrameElement.width
+#   - api.Navigator.deprecatedReplaceInURN
+#   - api.Window.fence
+#   - html.elements.fencedframe
+#   - html.elements.fencedframe.allow
+#   - http.headers.Content-Security-Policy.fenced-frame-src

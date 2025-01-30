@@ -45,7 +45,67 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "100"
+  #   chrome_android: "100"
+  #   edge: "100"
+  #   firefox: "125"
+  #   firefox_android: "125"
+  - api.WebTransport.WebTransport.options_serverCertificateHashes_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  #   firefox: "114"
+  #   firefox_android: "114"
+  - api.WebTransport.byob_readers
+
+  # baseline: false
+  # support:
   #   chrome: "97"
   #   chrome_android: "97"
   #   edge: "97"
   - api.WebTransport.createUnidirectionalStream
+
+  # baseline: false
+  # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  - api.WebTransport.createUnidirectionalStream.byob_readers
+  - api.WebTransportDatagramDuplexStream.byob_readers
+
+  # baseline: false
+  # support:
+  #   firefox: "114"
+  #   firefox_android: "114"
+  - api.WebTransport.WebTransport.options_allowPooling_parameter
+  - api.WebTransport.WebTransport.options_congestionControl_parameter
+  - api.WebTransport.WebTransport.options_requireUnreliable_parameter
+  - api.WebTransport.congestionControl
+  - api.WebTransport.reliability
+  - api.WebTransportBidirectionalStream.readable.returns_WebTransportReceiveStream
+  - api.WebTransportBidirectionalStream.writable.returns_WebTransportSendStream
+  - api.WebTransportReceiveStream
+  - api.WebTransportReceiveStream.getStats
+  - api.WebTransportSendStream
+  - api.WebTransportSendStream.getStats
+  - api.WebTransportSendStream.getWriter
+
+  # baseline: false
+  # support:
+  #   firefox: "119"
+  #   firefox_android: "119"
+  - api.WebTransport.createBidirectionalStream.options_sendOrder_parameter
+
+  # baseline: false
+  # support:
+  #   firefox: "121"
+  #   firefox_android: "121"
+  - api.WebTransportSendStream.sendOrder
+
+  # baseline: false
+  # support: {}
+  - api.WebTransport.createUnidirectionalStream.options_sendOrder_parameter
+  - api.WebTransport.getStats
