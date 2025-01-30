@@ -1,4 +1,4 @@
-draft_date: 2024-12-20
+draft_date: 2025-01-20
 name: CSSOM View Module
 description: TODO
 spec: https://drafts.csswg.org/cssom-view-1/
@@ -6,7 +6,9 @@ compat_features:
   - api.Document.caretPositionFromPoint.options_parameter
   - api.Document.featurePolicy
   - api.Document.getBoxQuads
+  - api.Document.moveBefore
   - api.Element.getBoxQuads
+  - api.Element.moveBefore
   - api.Text.getBoxQuads
 
 # The following features in the spec are already part of web-features:

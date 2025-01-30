@@ -233,6 +233,18 @@ compat_features:
   #   safari_ios: "16.4"
   - api.WritableStreamDefaultController.signal
 
+  # baseline: low
+  # baseline_low_date: 2023-09-18
+  # support:
+  #   chrome: "105"
+  #   chrome_android: "105"
+  #   edge: "105"
+  #   firefox: "102"
+  #   firefox_android: "102"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - api.ReadableStreamDefaultReader.releaseLock.reject_pending_read_request
+
   # baseline: false
   # support:
   #   chrome: "78"
@@ -269,7 +281,9 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "105"
+  #   chrome_android: "105"
+  #   edge: "105"
   #   firefox: "102"
   #   firefox_android: "102"
   - api.ReadableStreamBYOBReader.releaseLock.reject_pending_read_request
-  - api.ReadableStreamDefaultReader.releaseLock.reject_pending_read_request

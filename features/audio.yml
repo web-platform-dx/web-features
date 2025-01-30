@@ -7,16 +7,5 @@ group:
 caniuse: audio
 status:
   compute_from: html.elements.audio
-# TODO: Include relevant parts of HTMLMediaElement when possible:
+# TODO: Tag relevant parts of HTMLMediaElement when possible:
 # https://github.com/web-platform-dx/web-features/issues/1173
-compat_features:
-  - api.HTMLAudioElement
-  - api.HTMLAudioElement.Audio
-  - html.elements.audio
-  - html.elements.audio.autoplay
-  - html.elements.audio.controls
-  - html.elements.audio.crossorigin
-  - html.elements.audio.loop
-  - html.elements.audio.muted
-  - html.elements.audio.preload
-  - html.elements.audio.src

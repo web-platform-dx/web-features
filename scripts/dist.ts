@@ -56,7 +56,7 @@ setLogger(logger);
  * one pinned in `package.json`. BCD updates frequently, leading to surprising
  * error messages if you haven't run `npm install` recently.
  */
-function checkForStaleCompat(): void {
+export function checkForStaleCompat(): void {
   const packageBCDVersionSpecifier: string = (() => {
     const packageJSON: unknown = JSON.parse(
       fs.readFileSync(process.env.npm_package_json, {
