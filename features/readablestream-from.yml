@@ -1,0 +1,6 @@
+name: ReadableStream.from()
+description: The `ReadableStream.from()` static method wraps iterable and async iterable objects, such as arrays or async generator functions, as a readable stream.
+spec: https://streams.spec.whatwg.org/#rs-from
+group: streams
+compat_features:
+  - api.ReadableStream.from_static
