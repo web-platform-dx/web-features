@@ -1,8 +1,4 @@
 name: contrast-color()
-description: "The `contrast-color()` CSS function picks a color that has guaranteed contrast with the color passed as an argument."
+description: "The `contrast-color()` CSS function picks a text color that has guaranteed contrast with a background color."
 spec: https://drafts.csswg.org/css-color-5/#contrast-color
 group: color-types
-compat_features:
-  # BCD is out of date with the spec.
-  # See https://github.com/mdn/content/issues/36904
-  - css.types.color.color-contrast
