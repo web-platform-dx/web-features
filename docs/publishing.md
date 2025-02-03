@@ -65,6 +65,12 @@ These are the steps to publish a regular release on npm and as a GitHub release:
       ```
 
    1. Remove all lines from Dependabot.
+   1. Append this message to the end of the release notes:
+
+      ```markdown
+      Subscribe to our [Upcoming changes](https://github.com/web-platform-dx/web-features/discussions/123456789) <!-- TODO: link to the actual discussion thread, after it's created --> announcements thread, for advance notice of breaking changes or other significant changes.
+      ```
+
    1. Click **Publish release**.
 
    Publishing the GitHub release creates the tag. This triggers the [Publish web-features GitHub Actions workflows](https://github.com/web-platform-dx/web-features/blob/main/.github/workflows/publish_web-features.yml), uploads GitHub release artifacts and publishes the package to npm.
