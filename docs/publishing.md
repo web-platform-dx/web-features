@@ -68,7 +68,7 @@ These are the steps to publish a regular release on npm and as a GitHub release:
    1. Append this message to the end of the release notes:
 
       ```markdown
-      Subscribe to our [Upcoming changes](https://github.com/web-platform-dx/web-features/discussions/123456789) <!-- TODO: link to the actual discussion thread, after it's created --> announcements thread, for advance notice of breaking changes or other significant changes.
+      Subscribe to the [Upcoming changes](https://github.com/web-platform-dx/web-features/discussions/123456789) <!-- TODO: link to the actual discussion thread, after it's created --> announcements thread for news about upcoming releases, such as breaking changes or major features.
       ```
 
    1. Click **Publish release**.
