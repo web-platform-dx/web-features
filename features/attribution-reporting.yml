@@ -3,6 +3,7 @@ description: The Attribution Reporting API measures when an ad click or view lea
 spec: https://wicg.github.io/attribution-reporting-api/
 compat_features:
   - api.HTMLAnchorElement.attributionSrc
+  - api.HTMLAreaElement.attributionSrc
   - api.HTMLImageElement.attributionSrc
   - api.HTMLScriptElement.attributionSrc
   - api.Request.Request.init_attributionReporting_parameter
@@ -10,6 +11,7 @@ compat_features:
   - api.XMLHttpRequest.setAttributionReporting
   - api.fetch.init_attributionReporting_parameter
   - html.elements.a.attributionsrc
+  - html.elements.area.attributionsrc
   - html.elements.iframe.allow.attribution-reporting
   - html.elements.img.attributionsrc
   - html.elements.script.attributionsrc
