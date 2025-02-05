@@ -7,4 +7,16 @@ status:
     chrome: "133"
     chrome_android: "133"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
+  - html.elements.area.attributionsrc
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "133"
+  #   chrome_android: "133"
   - api.HTMLAreaElement.attributionSrc
