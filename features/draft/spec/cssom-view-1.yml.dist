@@ -19,11 +19,16 @@ compat_features:
   #   edge: "128"
   - api.Document.caretPositionFromPoint.options_parameter
 
+  # baseline: false
+  # support:
+  #   chrome: "133"
+  #   chrome_android: "133"
+  - api.Document.moveBefore
+  - api.Element.moveBefore
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.Document.getBoxQuads
-  - api.Document.moveBefore
   - api.Element.getBoxQuads
-  - api.Element.moveBefore
   - api.Text.getBoxQuads
