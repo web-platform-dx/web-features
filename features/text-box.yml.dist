@@ -3,10 +3,12 @@
 
 status:
   baseline: false
-  support:
-    safari: "18.2"
-    safari_ios: "18.2"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
   - css.properties.text-box
   - css.properties.text-box-edge
   - css.properties.text-box-edge.auto
@@ -16,3 +18,14 @@ compat_features:
   - css.properties.text-box-trim.trim-end
   - css.properties.text-box-trim.trim-start
   - css.properties.text-box.normal
+  - css.types.text-edge
+  - css.types.text-edge.alphabetic
+  - css.types.text-edge.cap
+  - css.types.text-edge.ex
+  - css.types.text-edge.text
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.types.text-edge.ideographic
+  - css.types.text-edge.ideographic-ink
