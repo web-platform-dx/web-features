@@ -102,6 +102,18 @@ compat_features:
   #   safari_ios: "11"
   - api.PerformanceResourceTiming.secureConnectionStart
 
+  # baseline: low
+  # baseline_low_date: 2025-02-04
+  # support:
+  #   chrome: "133"
+  #   chrome_android: "133"
+  #   edge: "12"
+  #   firefox: "35"
+  #   firefox_android: "35"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.PerformanceResourceTiming.responseStart
+
   # baseline: false
   # support:
   #   chrome: "43"
@@ -111,15 +123,6 @@ compat_features:
   #   firefox_android: "60"
   #   safari: "12"
   - api.PerformanceResourceTiming.worker_support
-
-  # baseline: false
-  # support:
-  #   edge: "12"
-  #   firefox: "35"
-  #   firefox_android: "35"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - api.PerformanceResourceTiming.responseStart
 
   # baseline: false
   # support:
