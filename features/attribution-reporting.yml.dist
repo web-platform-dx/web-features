@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "133"
+    chrome_android: "133"
 compat_features:
   # baseline: false
   # support:
@@ -30,10 +32,13 @@ compat_features:
   - api.XMLHttpRequest.setAttributionReporting
   - api.fetch.init_attributionReporting_parameter
   - html.elements.a.attributionsrc
+  - html.elements.area.attributionsrc
   - html.elements.img.attributionsrc
   - html.elements.script.attributionsrc
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "133"
+  #   chrome_android: "133"
   - api.HTMLAreaElement.attributionSrc
