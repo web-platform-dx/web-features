@@ -36,6 +36,18 @@ compat_features:
   - api.NotificationEvent.NotificationEvent
   - api.ServiceWorkerRegistration.showNotification
 
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "43"
+  #   chrome_android: "43"
+  #   edge: "79"
+  #   firefox: "46"
+  #   firefox_android: "46"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.Permissions.permission_notifications
+
   # baseline: false
   # support:
   #   chrome: "40"
