@@ -11,6 +11,8 @@ status:
 compat_features:
   - api.Notification
   - api.Notification.Notification
+  - api.Notification.worker_support
+  - api.Notification.secure_context_required
   - api.Notification.actions
   - api.Notification.badge
   - api.Notification.body
@@ -27,6 +29,7 @@ compat_features:
   - api.Notification.permission_static
   - api.Notification.renotify
   - api.Notification.requestPermission_static
+  - api.Notification.requestPermission_static.returns_promise
   - api.Notification.requireInteraction
   - api.Notification.show_event
   - api.Notification.silent
@@ -43,3 +46,10 @@ compat_features:
   - api.ServiceWorkerGlobalScope.notificationclose_event
   - api.ServiceWorkerRegistration.getNotifications
   - api.ServiceWorkerRegistration.showNotification
+  - api.ServiceWorkerRegistration.showNotification.options_actions_parameter
+  - api.ServiceWorkerRegistration.showNotification.options_badge_parameter
+  - api.ServiceWorkerRegistration.showNotification.options_data_parameter
+  - api.ServiceWorkerRegistration.showNotification.options_image_parameter
+  - api.ServiceWorkerRegistration.showNotification.options_renotify_parameter
+  - api.ServiceWorkerRegistration.showNotification.options_requireInteraction_parameter
+  - api.ServiceWorkerRegistration.showNotification.options_vibrate_parameter
