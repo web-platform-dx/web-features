@@ -179,18 +179,8 @@ compat_features:
 
   # baseline: false
   # support:
-  #   firefox: "129"
-  #   firefox_android: "129"
-  #   safari: "17"
-  #   safari_ios: "17"
-  - api.SubtleCrypto.exportKey.ed25519
-  - api.SubtleCrypto.generateKey.ed25519
-  - api.SubtleCrypto.importKey.ed25519
-  - api.SubtleCrypto.sign.ed25519
-  - api.SubtleCrypto.verify.ed25519
-
-  # baseline: false
-  # support:
+  #   chrome: "133"
+  #   chrome_android: "133"
   #   firefox: "130"
   #   firefox_android: "130"
   #   safari: "17"
@@ -200,3 +190,15 @@ compat_features:
   - api.SubtleCrypto.exportKey.x25519
   - api.SubtleCrypto.generateKey.x25519
   - api.SubtleCrypto.importKey.x25519
+
+  # baseline: false
+  # support:
+  #   firefox: "129"
+  #   firefox_android: "129"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - api.SubtleCrypto.exportKey.ed25519
+  - api.SubtleCrypto.generateKey.ed25519
+  - api.SubtleCrypto.importKey.ed25519
+  - api.SubtleCrypto.sign.ed25519
+  - api.SubtleCrypto.verify.ed25519
