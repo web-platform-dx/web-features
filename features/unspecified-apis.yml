@@ -20,3 +20,8 @@ compat_features:
   - api.Screen.availLeft.relative-multi-screen
   - api.Screen.availTop
   - api.Screen.availTop.relative-multi-screen
+
+  # Dropped from Accessibility Object Model spec and potentially never shipped
+  # anywhere. https://wicg.github.io/aom/spec/phase2.html#privacy-concerns
+  # https://github.com/mdn/browser-compat-data/pull/25860
+  - api.Permissions.permission_accessibility-events
