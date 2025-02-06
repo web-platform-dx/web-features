@@ -320,19 +320,6 @@ compat_features:
   #   chrome: "6"
   #   chrome_android: "18"
   #   edge: "12"
-  #   firefox: "16"
-  #   firefox_android: "16"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - api.HTMLMeterElement
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "6"
-  #   chrome_android: "18"
-  #   edge: "12"
   #   firefox: "32"
   #   firefox_android: "32"
   #   safari: "5"
@@ -462,24 +449,6 @@ compat_features:
   - api.ErrorEvent.colno
 
   # baseline: high
-  # baseline_low_date: 2015-11-12
-  # baseline_high_date: 2018-05-12
-  # support:
-  #   chrome: "6"
-  #   chrome_android: "18"
-  #   edge: "13"
-  #   firefox: "16"
-  #   firefox_android: "16"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - api.HTMLMeterElement.high
-  - api.HTMLMeterElement.low
-  - api.HTMLMeterElement.max
-  - api.HTMLMeterElement.min
-  - api.HTMLMeterElement.optimum
-  - api.HTMLMeterElement.value
-
-  # baseline: high
   # baseline_low_date: 2016-03-21
   # baseline_high_date: 2018-09-21
   # support:
@@ -572,38 +541,6 @@ compat_features:
   - api.WorkerLocation.origin
 
   # baseline: high
-  # baseline_low_date: 2017-03-27
-  # baseline_high_date: 2019-09-27
-  # support:
-  #   chrome: "6"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "16"
-  #   firefox_android: "16"
-  #   safari: "6"
-  #   safari_ios: "10.3"
-  - html.elements.meter
-  - html.elements.meter.high
-  - html.elements.meter.low
-  - html.elements.meter.max
-  - html.elements.meter.min
-  - html.elements.meter.optimum
-  - html.elements.meter.value
-
-  # baseline: high
-  # baseline_low_date: ≤2018-01-23
-  # baseline_high_date: ≤2020-07-23
-  # support:
-  #   chrome: ≤64
-  #   chrome_android: ≤64
-  #   edge: "12"
-  #   firefox: ≤58
-  #   firefox_android: ≤58
-  #   safari: ≤11
-  #   safari_ios: ≤11
-  - html.global_attributes.title.multi-line_titles
-
-  # baseline: high
   # baseline_low_date: 2018-04-12
   # baseline_high_date: 2020-10-12
   # support:
@@ -672,19 +609,6 @@ compat_features:
   # baseline_low_date: 2018-10-02
   # baseline_high_date: 2021-04-02
   # support:
-  #   chrome: "6"
-  #   chrome_android: "18"
-  #   edge: "18"
-  #   firefox: "56"
-  #   firefox_android: "56"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - api.HTMLMeterElement.labels
-
-  # baseline: high
-  # baseline_low_date: 2018-10-02
-  # baseline_high_date: 2021-04-02
-  # support:
   #   chrome: "59"
   #   chrome_android: "59"
   #   edge: "18"
@@ -720,19 +644,6 @@ compat_features:
   #   safari: ≤4
   #   safari_ios: ≤3.2
   - html.global_attributes.dir
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "12"
-  #   chrome_android: "18"
-  #   edge: "79"
-  #   firefox: "49"
-  #   firefox_android: "49"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - html.elements.summary
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -1228,15 +1139,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "89"
-  #   chrome_android: "89"
-  #   edge: "89"
-  #   firefox: "49"
-  #   firefox_android: "49"
-  - html.elements.summary.display_list_item
-
-  # baseline: false
-  # support:
   #   chrome: "99"
   #   chrome_android: "99"
   #   edge: "99"
@@ -1445,10 +1347,16 @@ compat_features:
   - api.HTMLAnchorElement.hrefTranslate
   - html.elements.a.hreftranslate
 
+  # baseline: false
+  # support:
+  #   chrome: "133"
+  #   chrome_android: "133"
+  - api.Document.moveBefore
+  - html.elements.script.type.importmap.multiple_import_maps
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - api.Document.moveBefore
   - api.HTMLButtonElement.command
   - api.HTMLButtonElement.commandForElement
   - api.HTMLElement.command_event
