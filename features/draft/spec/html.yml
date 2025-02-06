@@ -1,4 +1,4 @@
-draft_date: 2025-01-27
+draft_date: 2025-02-05
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -50,14 +50,6 @@ compat_features:
   - api.HTMLInputElement.showPicker.week_input
   - api.HTMLMediaElement.getStartDate
   - api.HTMLMediaElement.textTracks
-  - api.HTMLMeterElement
-  - api.HTMLMeterElement.high
-  - api.HTMLMeterElement.labels
-  - api.HTMLMeterElement.low
-  - api.HTMLMeterElement.max
-  - api.HTMLMeterElement.min
-  - api.HTMLMeterElement.optimum
-  - api.HTMLMeterElement.value
   - api.HTMLOptionsCollection
   - api.HTMLOptionsCollection.add
   - api.HTMLOptionsCollection.length
@@ -182,17 +174,9 @@ compat_features:
   - html.elements.input.autocomplete
   - html.elements.input.colorspace
   - html.elements.link.rel.icon
-  - html.elements.meter
-  - html.elements.meter.high
-  - html.elements.meter.low
-  - html.elements.meter.max
-  - html.elements.meter.min
-  - html.elements.meter.optimum
-  - html.elements.meter.value
   - html.elements.script.type.importmap.integrity
+  - html.elements.script.type.importmap.multiple_import_maps
   - html.elements.select.autocomplete
-  - html.elements.summary
-  - html.elements.summary.display_list_item
   - html.elements.template.shadowrootclonable
   - html.elements.template.shadowrootdelegatesfocus
   - html.elements.template.shadowrootserializable
@@ -208,7 +192,6 @@ compat_features:
   - html.global_attributes.hidden
   - html.global_attributes.id
   - html.global_attributes.inputmode
-  - html.global_attributes.title.multi-line_titles
   - http.headers.Cross-Origin-Embedder-Policy
   - http.headers.Cross-Origin-Embedder-Policy.credentialless
   - http.headers.Cross-Origin-Opener-Policy
@@ -1088,6 +1071,8 @@ compat_features:
 #   - api.HTMLElement.toggle_event.details_elements
 #   - html.elements.details
 #   - html.elements.details.open
+#   - html.elements.summary
+#   - html.elements.summary.display_list_item
 # - Mutually exclusive <details> elements:
 #   - api.HTMLDetailsElement.name
 #   - html.elements.details.name
@@ -1148,9 +1133,10 @@ compat_features:
 # - tabindex:
 #   - api.HTMLElement.tabIndex
 #   - html.global_attributes.tabindex
-# - Title:
+# - title (attribute):
 #   - api.HTMLElement.title
 #   - html.global_attributes.title
+#   - html.global_attributes.title.multi-line_titles
 # - translate attribute:
 #   - api.HTMLElement.translate
 #   - html.global_attributes.translate
@@ -1576,6 +1562,22 @@ compat_features:
 #   - html.elements.meta.http-equiv.refresh
 #   - html.elements.meta.name
 #   - html.elements.meta.name.referrer
+# - <meter>:
+#   - api.HTMLMeterElement
+#   - api.HTMLMeterElement.high
+#   - api.HTMLMeterElement.labels
+#   - api.HTMLMeterElement.low
+#   - api.HTMLMeterElement.max
+#   - api.HTMLMeterElement.min
+#   - api.HTMLMeterElement.optimum
+#   - api.HTMLMeterElement.value
+#   - html.elements.meter
+#   - html.elements.meter.high
+#   - html.elements.meter.low
+#   - html.elements.meter.max
+#   - html.elements.meter.min
+#   - html.elements.meter.optimum
+#   - html.elements.meter.value
 # - <del>:
 #   - api.HTMLModElement
 #   - api.HTMLModElement.cite

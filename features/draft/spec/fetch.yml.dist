@@ -5,7 +5,6 @@ status:
   baseline: false
   support:
     chrome: "105"
-    chrome_android: "105"
     edge: "105"
 compat_features:
   # baseline: high
@@ -34,10 +33,17 @@ compat_features:
   #   safari_ios: "12"
   - http.headers.Cross-Origin-Resource-Policy
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "105"
   #   chrome_android: "105"
   #   edge: "105"
   - api.fetch.body_readablestream
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "105"
+  #   edge: "105"
+  - api.Request.Request.init_duplex_parameter
+  - api.fetch.init_duplex_parameter
