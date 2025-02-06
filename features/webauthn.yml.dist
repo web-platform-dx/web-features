@@ -110,6 +110,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "133"
+  #   chrome_android: "133"
+  #   firefox: "135"
+  #   firefox_android: "135"
+  #   safari: "17.4"
+  #   safari_ios: "17.4"
+  - api.PublicKeyCredential.getClientCapabilities_static
+
+  # baseline: false
+  # support:
   #   chrome: "84"
   #   chrome_android: "84"
   #   edge: "84"
@@ -198,12 +208,6 @@ compat_features:
   #   chrome_android: "113"
   #   edge: "113"
   - api.CredentialsContainer.get.publicKey_option.extensions.largeBlob
-
-  # baseline: false
-  # support:
-  #   safari: "17.4"
-  #   safari_ios: "17.4"
-  - api.PublicKeyCredential.getClientCapabilities_static
 
   # baseline: false
   # support:
