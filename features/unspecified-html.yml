@@ -1,0 +1,11 @@
+name: Unspecified HTML
+description: Some browsers implement unspecified HTML elements and attributes. This is an artificial feature that contains references to browser compatibility data entries for those additions.
+spec: TODO link to our own documentation explaining ourselves in more detail
+discouraged:
+  according_to:
+    - TODO link to our own documentation explaining ourselves in more detail
+compat_features:
+  # Stuck in WHATWG PR limbo:
+  # https://github.com/mdn/browser-compat-data/pull/25863
+  - api.HTMLAnchorElement.hrefTranslate
+  - html.elements.a.hreftranslate
