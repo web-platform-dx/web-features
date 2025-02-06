@@ -5,7 +5,9 @@ discouraged:
   according_to:
     - TODO link to our own documentation explaining ourselves in more detail
 compat_features:
-  # Firefox-only Function property
+  # Firefox-only Function property.
+  # There exists some discussion of getting rid
+  # of it: https://github.com/tc39/proposal-error-stacks/issues/14
   - javascript.builtins.Function.displayName
 
   # Firefox-only InternalError object
