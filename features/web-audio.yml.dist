@@ -638,6 +638,18 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "14"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "25"
+  #   firefox_android: "25"
+  #   safari: "6"
+  #   safari_ios: "6"
+  - api.AudioListener.setOrientation
+  - api.AudioListener.setPosition
+
+  # baseline: false
+  # support:
   #   chrome: "52"
   #   chrome_android: "52"
   #   edge: "79"
