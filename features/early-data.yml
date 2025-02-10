@@ -1,0 +1,6 @@
+name: Early data
+description: TLS 1.3 sessions may be resumed more quickly by sending so-called early data to servers before the TLS handshake has finished. Also known as zero round-trip time resumption or 0-RTT.
+spec: https://httpwg.org/specs/rfc8470.html
+compat_features:
+  - http.headers.Early-Data
+  - http.status.425

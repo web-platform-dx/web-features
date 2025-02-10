@@ -14,7 +14,7 @@ jobs:
       - name: Fetch Dependabot metadata
         id: dependabot-metadata
         continue-on-error: true
-        uses: dependabot/fetch-metadata@dbb049abf0d677abbd7f7eee0375145b417fdd34 #v2.2.0
+        uses: dependabot/fetch-metadata@d7267f607e9d3fb96fc2fbe83e0af444713e90b7 #v2.3.0
 
       - if: ${{ contains(steps.dependabot-metadata.outputs.dependency-names, '@mdn/browser-compat-data') }}
         continue-on-error: true
@@ -32,5 +32,6 @@ jobs:
 
             After merging, do these steps:
 
-            - [ ] Start a PR to [publish the next web-features release](https://github.com/web-platform-dx/web-features/blob/main/docs/publishing.md#regular-releases).
             - [ ] [Trigger a drafts update workflow run](https://github.com/web-platform-dx/web-features/actions/workflows/update_draft_features_weekly.yml).
+            - [ ] (Optional) [Trigger a workflow run to remove tagged compat features](https://github.com/web-platform-dx/web-features/actions/workflows/remove_tagged_compat_features.yml).
+            - [ ] Start a PR to [publish the next web-features release](https://github.com/web-platform-dx/web-features/blob/main/docs/publishing.md#regular-releases).
