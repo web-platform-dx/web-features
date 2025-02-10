@@ -66,6 +66,11 @@ compat_features:
   - api.AudioListener.upX
   - api.AudioListener.upY
   - api.AudioListener.upZ
+  # The following 2 keys are deprecated, but are currently the only way to set
+  # the listener orientation and position in Firefox. So we're keeping them here
+  # for now.
+  - api.AudioListener.setOrientation
+  - api.AudioListener.setPosition
   - api.AudioNode
   - api.AudioNode.channelCount
   - api.AudioNode.channelCountMode
