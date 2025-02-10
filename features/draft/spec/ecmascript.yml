@@ -1,9 +1,8 @@
-draft_date: 2025-01-30
-name: ECMAScript Language Specification
+draft_date: 2025-02-10
+name: ECMAScript® 2025 Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
 compat_features:
-  - javascript.builtins.AggregateError.serializable_object
   - javascript.builtins.Array.@@species
 
 # The following features in the spec are already part of web-features:
@@ -11,6 +10,7 @@ compat_features:
 #   - javascript.builtins.AggregateError
 #   - javascript.builtins.AggregateError.AggregateError
 #   - javascript.builtins.AggregateError.errors
+#   - javascript.builtins.AggregateError.serializable_object
 #   - javascript.builtins.Promise.any
 # - Array (initial support):
 #   - javascript.builtins.Array

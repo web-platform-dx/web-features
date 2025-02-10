@@ -124,8 +124,8 @@ export class Feature {
   /**
    * Find out whether this feature's support data says that a given browser
    * release is supported (`true`), unsupported (`false`), or unknown (`null`).
-   * Note that this ignores qualifications such as partial implementations,
-   * prefixes, alternative names, and flags.
+   * Note that this treats qualifications such as partial implementations,
+   * prefixes, alternative names, and flags as wholly unsupported.
    */
   supportedIn(release: Release): boolean | null {
     let unknown = false;
