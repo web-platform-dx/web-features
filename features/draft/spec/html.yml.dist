@@ -1272,6 +1272,14 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "133"
+  #   chrome_android: "133"
+  #   edge: "133"
+  - api.Document.moveBefore
+  - html.elements.script.type.importmap.multiple_import_maps
+
+  # baseline: false
+  # support:
   #   safari: "9"
   #   safari_ios: "9"
   - api.HTMLMediaElement.getStartDate
@@ -1301,13 +1309,6 @@ compat_features:
   #   chrome_android: "81"
   - api.HTMLAnchorElement.hrefTranslate
   - html.elements.a.hreftranslate
-
-  # baseline: false
-  # support:
-  #   chrome: "133"
-  #   chrome_android: "133"
-  - api.Document.moveBefore
-  - html.elements.script.type.importmap.multiple_import_maps
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
