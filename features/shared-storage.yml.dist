@@ -51,3 +51,16 @@ compat_features:
   - api.SharedStorage.run
   - api.SharedStorage.selectURL
   - api.SharedStorage.worklet
+
+  # baseline: false
+  # support: {}
+  - api.SharedStorage.batchUpdate
+  - api.SharedStorageAppendMethod
+  - api.SharedStorageAppendMethod.SharedStorageAppendMethod
+  - api.SharedStorageClearMethod
+  - api.SharedStorageClearMethod.SharedStorageClearMethod
+  - api.SharedStorageDeleteMethod
+  - api.SharedStorageDeleteMethod.SharedStorageDeleteMethod
+  - api.SharedStorageModifierMethod
+  - api.SharedStorageSetMethod
+  - api.SharedStorageSetMethod.SharedStorageSetMethod
