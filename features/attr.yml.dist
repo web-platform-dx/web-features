@@ -7,14 +7,23 @@ status:
 compat_features:
   # baseline: false
   # support:
+  #   chrome: "133"
+  #   chrome_android: "133"
+  #   edge: "133"
   #   firefox: "119"
   #   firefox_android: "119"
   - css.types.attr.fallback
 
+  # baseline: false
+  # support:
+  #   chrome: "133"
+  #   chrome_android: "133"
+  #   edge: "133"
+  - css.types.attr.type-or-unit
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - css.types.attr.type-or-unit
   - css.types.attr.type-or-unit.angle
   - css.types.attr.type-or-unit.color
   - css.types.attr.type-or-unit.frequency
