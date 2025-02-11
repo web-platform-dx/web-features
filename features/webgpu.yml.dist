@@ -411,4 +411,6 @@ compat_features:
 
   # baseline: false
   # support: {}
+  - api.GPUAdapterInfo.subgroupMaxSize
+  - api.GPUAdapterInfo.subgroupMinSize
   - api.GPUSupportedFeatures.feature_float32-blendable

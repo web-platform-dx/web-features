@@ -49,6 +49,7 @@ compat_features:
   - api.PerformanceResourceTiming.redirectStart
   - api.PerformanceResourceTiming.requestStart
   - api.PerformanceResourceTiming.responseEnd
+  - api.PerformanceResourceTiming.responseStart
 
   # baseline: high
   # baseline_low_date: 2017-10-17
@@ -111,15 +112,6 @@ compat_features:
   #   firefox_android: "60"
   #   safari: "12"
   - api.PerformanceResourceTiming.worker_support
-
-  # baseline: false
-  # support:
-  #   edge: "12"
-  #   firefox: "35"
-  #   firefox_android: "35"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - api.PerformanceResourceTiming.responseStart
 
   # baseline: false
   # support:

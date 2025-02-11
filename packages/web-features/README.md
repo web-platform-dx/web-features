@@ -1,5 +1,9 @@
 # Curated list of Web platform features
 
+[web-features](https://web-platform-dx.github.io/web-features/web-features/) is the package that describes Web platform features and provides [Baseline](https://web-platform-dx.github.io/web-features/) status reports.
+
+Subscribe to the [Upcoming changes](https://github.com/web-platform-dx/web-features/discussions/2613) announcements thread for news about upcoming releases, such as breaking changes or major features.
+
 ## Usage
 
 ```sh

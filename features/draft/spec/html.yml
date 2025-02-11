@@ -1,4 +1,4 @@
-draft_date: 2025-01-30
+draft_date: 2025-02-10
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -20,7 +20,6 @@ compat_features:
   - api.HTMLAllCollection.item
   - api.HTMLAllCollection.length
   - api.HTMLAllCollection.namedItem
-  - api.HTMLAnchorElement.hrefTranslate
   - api.HTMLBaseElement.href.forbid_data_javascript_urls
   - api.HTMLBaseElement.href.forbid_special_characters
   - api.HTMLButtonElement.command
@@ -37,7 +36,10 @@ compat_features:
   - api.HTMLCanvasElement.toDataURL.type_parameter_jpeg
   - api.HTMLCanvasElement.toDataURL.type_parameter_png
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
+  - api.HTMLDialogElement.closedBy
+  - api.HTMLDialogElement.requestClose
   - api.HTMLElement.command_event
+  - api.HTMLElement.popover.hint
   - api.HTMLIFrameElement.featurePolicy
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes.auto
@@ -73,6 +75,7 @@ compat_features:
   - api.MediaError.message
   - api.MouseEvent.relatedTarget.drag_events
   - api.Navigator.authentication
+  - api.OffscreenCanvasRenderingContext2D.getContextAttributes
   - api.PromiseRejectionEvent
   - api.PromiseRejectionEvent.PromiseRejectionEvent
   - api.PromiseRejectionEvent.promise
@@ -151,12 +154,9 @@ compat_features:
   - api.setInterval.worker_support
   - api.setTimeout.supports_parameters_for_callback
   - api.setTimeout.worker_support
-  - html.elements.a.href.href_sms
-  - html.elements.a.href.href_top
-  - html.elements.a.hreftranslate
-  - html.elements.a.implicit_noopener
   - html.elements.button.command
   - html.elements.button.commandfor
+  - html.elements.dialog.closedby
   - html.elements.form.autocomplete.new-password
   - html.elements.form.autocomplete.one-time-code
   - html.elements.form.autocomplete.webauthn
@@ -175,6 +175,7 @@ compat_features:
   - html.elements.input.colorspace
   - html.elements.link.rel.icon
   - html.elements.script.type.importmap.integrity
+  - html.elements.script.type.importmap.multiple_import_maps
   - html.elements.select.autocomplete
   - html.elements.template.shadowrootclonable
   - html.elements.template.shadowrootdelegatesfocus
@@ -190,7 +191,7 @@ compat_features:
   - html.global_attributes.draggable
   - html.global_attributes.hidden
   - html.global_attributes.id
-  - html.global_attributes.inputmode
+  - html.global_attributes.popover.hint
   - http.headers.Cross-Origin-Embedder-Policy
   - http.headers.Cross-Origin-Embedder-Policy.credentialless
   - http.headers.Cross-Origin-Opener-Policy
@@ -716,7 +717,10 @@ compat_features:
 #   - api.HTMLAnchorElement.username
 #   - html.elements.a
 #   - html.elements.a.href
+#   - html.elements.a.href.href_sms
+#   - html.elements.a.href.href_top
 #   - html.elements.a.hreflang
+#   - html.elements.a.implicit_noopener
 #   - html.elements.a.rel
 #   - html.elements.a.rel.noopener
 #   - html.elements.a.rel.noreferrer
@@ -1110,7 +1114,6 @@ compat_features:
 #   - api.HTMLElement.change_event
 # - Contenteditable:
 #   - api.HTMLElement.contentEditable
-#   - api.HTMLElement.inputMode
 #   - api.HTMLElement.isContentEditable
 #   - html.global_attributes.contenteditable
 # - contenteditable="plaintext-only":
@@ -1123,6 +1126,9 @@ compat_features:
 #   - api.HTMLElement.inert
 #   - api.HTMLElement.inert.ignores_find_in_page
 #   - html.global_attributes.inert
+# - inputmode:
+#   - api.HTMLElement.inputMode
+#   - html.global_attributes.inputmode
 # - Lang:
 #   - api.HTMLElement.lang
 #   - html.global_attributes.lang
