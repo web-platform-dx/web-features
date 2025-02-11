@@ -5,3 +5,14 @@ group:
   - html
   - web-components
 caniuse: declarative-shadow-dom
+status:
+  compute_from: html.elements.template.shadowrootmode
+compat_features:
+  - api.HTMLTemplateElement.shadowRootClonable
+  - api.HTMLTemplateElement.shadowRootMode
+  - api.HTMLTemplateElement.shadowRootDelegatesFocus
+  - api.HTMLTemplateElement.shadowRootSerializable
+  - html.elements.template.shadowrootmode
+  - html.elements.template.shadowrootclonable
+  - html.elements.template.shadowrootdelegatesfocus
+  - html.elements.template.shadowrootserializable
