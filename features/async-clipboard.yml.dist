@@ -82,9 +82,12 @@ compat_features:
   #   safari_ios: "13.4"
   - api.Clipboard.type_text-html
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-02-06
   # support:
+  #   chrome: "133"
   #   chrome_android: "98"
+  #   edge: "133"
   #   firefox: "127"
   #   firefox_android: "127"
   #   safari: "13.1"

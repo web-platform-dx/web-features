@@ -98,6 +98,10 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because this is the legacy spec that defines WebVR."
     ],
     [
+        "https://github.com/tc39/proposal-import-attributes/tree/abca60286360b47f9a6be25a28f489c2cb157beb",
+        "Allowed because import assertions were replaced in-place by import attributes. Remove this exception when javascript.statements.import.import_assertions is dropped from BCD in June 2026."
+    ],
+    [
         "https://web-platform-dx.github.io/unspecified/",
         "Allowed as a fallback for unspecified- features."
     ]

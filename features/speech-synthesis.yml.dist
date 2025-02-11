@@ -39,7 +39,6 @@ compat_features:
   - api.SpeechSynthesisEvent.charIndex
   - api.SpeechSynthesisEvent.elapsedTime
   - api.SpeechSynthesisEvent.name
-  - api.SpeechSynthesisEvent.utterance
   - api.SpeechSynthesisUtterance
   - api.SpeechSynthesisUtterance.SpeechSynthesisUtterance
   - api.SpeechSynthesisUtterance.end_event
@@ -87,6 +86,7 @@ compat_features:
   #   safari: "16"
   #   safari_ios: "16"
   - api.SpeechSynthesis.voiceschanged_event
+  - api.SpeechSynthesisEvent.utterance
 
   # baseline: low
   # baseline_low_date: 2022-09-12

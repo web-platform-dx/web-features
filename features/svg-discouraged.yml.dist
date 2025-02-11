@@ -255,6 +255,12 @@ compat_features:
   - api.SVGMissingGlyphElement
   - api.SVGRenderingIntent
   - api.SVGVKernElement
+  - svg.elements.cursor
+  - svg.elements.cursor.href
+  - svg.elements.cursor.systemLanguage
+  - svg.elements.cursor.x
+  - svg.elements.cursor.xlink_href
+  - svg.elements.cursor.y
   - svg.elements.font
   - svg.elements.font-face
   - svg.elements.font-face-format
@@ -334,6 +340,11 @@ compat_features:
   - svg.elements.missing-glyph.vert-adv-y
   - svg.elements.missing-glyph.vert-origin-x
   - svg.elements.missing-glyph.vert-origin-y
+  - svg.elements.tref
+  - svg.elements.tref.fill
+  - svg.elements.tref.fill.context-fill
+  - svg.elements.tref.systemLanguage
+  - svg.elements.tref.xlink_href
   - svg.elements.vkern
   - svg.elements.vkern.g1
   - svg.elements.vkern.g2

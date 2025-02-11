@@ -9,6 +9,7 @@ discouraged:
     - font-face
 compat_features:
   - api.SVGAElement.text
+  - api.SVGElement.className
   - api.SVGFontElement
   - api.SVGFontFaceElement
   - api.SVGFontFaceFormatElement
@@ -26,8 +27,53 @@ compat_features:
   - api.SVGGlyphRefElement.y
   - api.SVGHKernElement
   - api.SVGMissingGlyphElement
+  - api.SVGPathElement.createSVGPathSegArcAbs
+  - api.SVGPathElement.createSVGPathSegArcRel
+  - api.SVGPathElement.createSVGPathSegClosePath
+  - api.SVGPathElement.createSVGPathSegCurvetoCubicAbs
+  - api.SVGPathElement.createSVGPathSegCurvetoCubicRel
+  - api.SVGPathElement.createSVGPathSegCurvetoCubicSmoothAbs
+  - api.SVGPathElement.createSVGPathSegCurvetoCubicSmoothRel
+  - api.SVGPathElement.createSVGPathSegCurvetoQuadraticAbs
+  - api.SVGPathElement.createSVGPathSegCurvetoQuadraticRel
+  - api.SVGPathElement.createSVGPathSegCurvetoQuadraticSmoothAbs
+  - api.SVGPathElement.createSVGPathSegCurvetoQuadraticSmoothRel
+  - api.SVGPathElement.createSVGPathSegLinetoAbs
+  - api.SVGPathElement.createSVGPathSegLinetoHorizontalAbs
+  - api.SVGPathElement.createSVGPathSegLinetoHorizontalRel
+  - api.SVGPathElement.createSVGPathSegLinetoRel
+  - api.SVGPathElement.createSVGPathSegLinetoVerticalAbs
+  - api.SVGPathElement.createSVGPathSegLinetoVerticalRel
+  - api.SVGPathElement.createSVGPathSegMovetoAbs
+  - api.SVGPathElement.createSVGPathSegMovetoRel
+  - api.SVGPathElement.getPathSegAtLength
+  - api.SVGPoint
+  - api.SVGPoint.matrixTransform
+  - api.SVGPoint.x
+  - api.SVGPoint.y
   - api.SVGRenderingIntent
+  - api.SVGSVGElement.currentView
+  - api.SVGSVGElement.forceRedraw
+  - api.SVGSVGElement.suspendRedraw
+  - api.SVGSVGElement.unsuspendRedraw
+  - api.SVGSVGElement.unsuspendRedrawAll
+  - api.SVGSVGElement.useCurrentView
+  - api.SVGStyleElement.type
+  - api.SVGTextContentElement.selectSubString
   - api.SVGVKernElement
+  - css.at-rules.font-face.SVG_fonts
+  - svg.elements.a.xlink_actuate
+  - svg.elements.a.xlink_href
+  - svg.elements.a.xlink_show
+  - svg.elements.a.xlink_title
+  - svg.elements.cursor
+  - svg.elements.cursor.href
+  - svg.elements.cursor.systemLanguage
+  - svg.elements.cursor.x
+  - svg.elements.cursor.xlink_href
+  - svg.elements.cursor.y
+  - svg.elements.feImage.xlink_href
+  - svg.elements.filter.xlink_href
   - svg.elements.font
   - svg.elements.font-face
   - svg.elements.font-face-format
@@ -101,72 +147,37 @@ compat_features:
   - svg.elements.hkern.k
   - svg.elements.hkern.u1
   - svg.elements.hkern.u2
+  - svg.elements.image.xlink_href
+  - svg.elements.linearGradient.xlink_href
   - svg.elements.missing-glyph
   - svg.elements.missing-glyph.d
   - svg.elements.missing-glyph.horiz-adv-x
   - svg.elements.missing-glyph.vert-adv-y
   - svg.elements.missing-glyph.vert-origin-x
   - svg.elements.missing-glyph.vert-origin-y
+  - svg.elements.mpath.xlink_href
+  - svg.elements.pattern.xlink_href
+  - svg.elements.radialGradient.xlink_href
+  - svg.elements.script.xlink_href
+  - svg.elements.svg.baseProfile
+  - svg.elements.svg.version
+  - svg.elements.svg.zoomAndPan
+  - svg.elements.textPath.xlink_href
+  - svg.elements.tref
+  - svg.elements.tref.fill
+  - svg.elements.tref.fill.context-fill
+  - svg.elements.tref.systemLanguage
+  - svg.elements.tref.xlink_href
+  - svg.elements.use.xlink_href
+  - svg.elements.view.zoomAndPan
   - svg.elements.vkern
   - svg.elements.vkern.g1
   - svg.elements.vkern.g2
   - svg.elements.vkern.k
   - svg.elements.vkern.u1
   - svg.elements.vkern.u2
+  - svg.global_attributes.clip
   - svg.global_attributes.glyph-orientation-horizontal
   - svg.global_attributes.glyph-orientation-vertical
-  - api.SVGSVGElement.currentView
-  - api.SVGSVGElement.useCurrentView
-  - css.at-rules.font-face.SVG_fonts
-  - api.SVGPathElement.createSVGPathSegArcAbs
-  - api.SVGPathElement.createSVGPathSegArcRel
-  - api.SVGPathElement.createSVGPathSegClosePath
-  - api.SVGPathElement.createSVGPathSegCurvetoCubicAbs
-  - api.SVGPathElement.createSVGPathSegCurvetoCubicRel
-  - api.SVGPathElement.createSVGPathSegCurvetoCubicSmoothAbs
-  - api.SVGPathElement.createSVGPathSegCurvetoCubicSmoothRel
-  - api.SVGPathElement.createSVGPathSegCurvetoQuadraticAbs
-  - api.SVGPathElement.createSVGPathSegCurvetoQuadraticRel
-  - api.SVGPathElement.createSVGPathSegCurvetoQuadraticSmoothAbs
-  - api.SVGPathElement.createSVGPathSegCurvetoQuadraticSmoothRel
-  - api.SVGPathElement.createSVGPathSegLinetoAbs
-  - api.SVGPathElement.createSVGPathSegLinetoHorizontalAbs
-  - api.SVGPathElement.createSVGPathSegLinetoHorizontalRel
-  - api.SVGPathElement.createSVGPathSegLinetoRel
-  - api.SVGPathElement.createSVGPathSegLinetoVerticalAbs
-  - api.SVGPathElement.createSVGPathSegLinetoVerticalRel
-  - api.SVGPathElement.createSVGPathSegMovetoAbs
-  - api.SVGPathElement.createSVGPathSegMovetoRel
-  - api.SVGPathElement.getPathSegAtLength
-  - svg.elements.mpath.xlink_href
-  - svg.elements.textPath.xlink_href
-  - svg.elements.pattern.xlink_href
-  - svg.elements.image.xlink_href
-  - svg.elements.linearGradient.xlink_href
-  - svg.elements.radialGradient.xlink_href
-  - svg.elements.a.xlink_actuate
-  - svg.elements.a.xlink_show
-  - svg.elements.a.xlink_title
-  - svg.elements.svg.baseProfile
-  - svg.elements.svg.version
-  - svg.elements.svg.zoomAndPan
-  - svg.elements.view.zoomAndPan
-  - svg.elements.feImage.xlink_href
-  - svg.elements.filter.xlink_href
-  - svg.global_attributes.xml_space
-  - api.SVGSVGElement.forceRedraw
-  - api.SVGSVGElement.suspendRedraw
-  - api.SVGSVGElement.unsuspendRedraw
-  - api.SVGSVGElement.unsuspendRedrawAll
-  - api.SVGStyleElement.type
-  - api.SVGTextContentElement.selectSubString
-  - svg.elements.use.xlink_href
-  - svg.elements.a.xlink_href
-  - api.SVGElement.className
-  - svg.global_attributes.clip
   - svg.global_attributes.xml_lang
-  - api.SVGPoint
-  - api.SVGPoint.matrixTransform
-  - api.SVGPoint.x
-  - api.SVGPoint.y
-  - svg.elements.script.xlink_href
+  - svg.global_attributes.xml_space
