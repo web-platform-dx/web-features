@@ -1,6 +1,8 @@
 name: Protected Audience
 description: The Protected Audience API facilitates advertisement sales by allowing sites to register users as part of an interest group or to choose which ads appear based on those interest groups, while minimizing the ability of advertisers to track specific members of the interest group. Also known as FLEDGE.
 spec: https://wicg.github.io/turtledove/
+status:
+  compute_from: api.Navigator.getInterestGroupAdAuctionData
 compat_features:
   - api.HTMLIFrameElement.adAuctionHeaders
   - api.Navigator.canLoadAdAuctionFencedFrame
@@ -15,3 +17,4 @@ compat_features:
   - api.Navigator.updateAdInterestGroups
   - api.ProtectedAudience
   - api.ProtectedAudience.queryFeatureSupport
+  - api.SharedStorageWorkletGlobalScope.interestGroups

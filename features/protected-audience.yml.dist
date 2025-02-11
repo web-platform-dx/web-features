@@ -45,3 +45,7 @@ compat_features:
   #   chrome_android: "132"
   #   edge: "132"
   - api.Navigator.getInterestGroupAdAuctionData
+
+  # baseline: false
+  # support: {}
+  - api.SharedStorageWorkletGlobalScope.interestGroups
