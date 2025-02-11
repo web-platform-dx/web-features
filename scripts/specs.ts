@@ -100,6 +100,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/tc39/proposal-import-attributes/tree/abca60286360b47f9a6be25a28f489c2cb157beb",
         "Allowed because import assertions were replaced in-place by import attributes. Remove this exception when javascript.statements.import.import_assertions is dropped from BCD in June 2026."
+    ],
+    [
+        "https://open-ui.org/components/customizableselect/",
+        "Allowed because customizable select doesn't yet have a spec URL. And even when it does, it will be defined in multiple HTML, CSS, and ARIA specs. The OpenUI explainer is the only central place that defines the component at the moment."
     ]
 ];
 
