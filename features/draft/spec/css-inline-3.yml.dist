@@ -3,22 +3,15 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "133"
+    chrome_android: "133"
+    edge: "133"
+    safari: "18.2"
+    safari_ios: "18.2"
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "133"
-  #   chrome_android: "133"
-  #   safari: "18.2"
-  #   safari_ios: "18.2"
   - css.types.text-edge
   - css.types.text-edge.alphabetic
   - css.types.text-edge.cap
   - css.types.text-edge.ex
   - css.types.text-edge.text
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - css.types.text-edge.ideographic
-  - css.types.text-edge.ideographic-ink

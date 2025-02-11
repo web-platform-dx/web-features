@@ -97,6 +97,18 @@ compat_features:
   #   safari_ios: "15.5"
   - api.PublicKeyCredential.authenticatorAttachment
 
+  # baseline: low
+  # baseline_low_date: 2025-02-06
+  # support:
+  #   chrome: "133"
+  #   chrome_android: "133"
+  #   edge: "133"
+  #   firefox: "135"
+  #   firefox_android: "135"
+  #   safari: "17.4"
+  #   safari_ios: "17.4"
+  - api.PublicKeyCredential.getClientCapabilities_static
+
   # baseline: false
   # support:
   #   chrome: "67"
@@ -107,16 +119,6 @@ compat_features:
   #   safari_ios: "13"
   - api.CredentialsContainer.create.publicKey_option.attestation.direct
   - api.CredentialsContainer.create.publicKey_option.attestation.enterprise
-
-  # baseline: false
-  # support:
-  #   chrome: "133"
-  #   chrome_android: "133"
-  #   firefox: "135"
-  #   firefox_android: "135"
-  #   safari: "17.4"
-  #   safari_ios: "17.4"
-  - api.PublicKeyCredential.getClientCapabilities_static
 
   # baseline: false
   # support:

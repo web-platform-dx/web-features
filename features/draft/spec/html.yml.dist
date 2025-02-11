@@ -95,19 +95,6 @@ compat_features:
   #   chrome: "1"
   #   chrome_android: "18"
   #   edge: "12"
-  #   firefox: "10"
-  #   firefox_android: "10"
-  #   safari: ≤4
-  #   safari_ios: ≤3.2
-  - html.elements.a.href.href_top
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
   #   firefox: "32"
   #   firefox_android: "32"
   #   safari: "1"
@@ -786,19 +773,6 @@ compat_features:
   - api.queueMicrotask
 
   # baseline: high
-  # baseline_low_date: 2021-01-21
-  # baseline_high_date: 2023-07-21
-  # support:
-  #   chrome: "88"
-  #   chrome_android: "88"
-  #   edge: "88"
-  #   firefox: "79"
-  #   firefox_android: "79"
-  #   safari: "12.1"
-  #   safari_ios: "12.2"
-  - html.elements.a.implicit_noopener
-
-  # baseline: high
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
   # support:
@@ -838,19 +812,6 @@ compat_features:
   #   safari: "15"
   #   safari_ios: "15"
   - api.MediaError.message
-
-  # baseline: high
-  # baseline_low_date: 2021-12-07
-  # baseline_high_date: 2024-06-07
-  # support:
-  #   chrome: "66"
-  #   chrome_android: "66"
-  #   edge: "79"
-  #   firefox: "95"
-  #   firefox_android: "79"
-  #   safari: "12.1"
-  #   safari_ios: "12.2"
-  - html.global_attributes.inputmode
 
   # baseline: high
   # baseline_low_date: 2021-12-13
@@ -1311,15 +1272,19 @@ compat_features:
 
   # baseline: false
   # support:
-  #   safari: "9"
-  #   safari_ios: "9"
-  - api.HTMLMediaElement.getStartDate
+  #   chrome: "133"
+  #   chrome_android: "133"
+  #   edge: "133"
+  - api.Document.moveBefore
+  - api.HTMLElement.popover.hint
+  - html.elements.script.type.importmap.multiple_import_maps
+  - html.global_attributes.popover.hint
 
   # baseline: false
   # support:
-  #   firefox: "12"
-  #   firefox_android: "14"
-  - html.elements.a.href.href_sms
+  #   safari: "9"
+  #   safari_ios: "9"
+  - api.HTMLMediaElement.getStartDate
 
   # baseline: false
   # support:
@@ -1340,31 +1305,21 @@ compat_features:
   #   firefox_android: "79"
   - html.elements.iframe.allow.document-domain
 
-  # baseline: false
-  # support:
-  #   chrome: "81"
-  #   chrome_android: "81"
-  - api.HTMLAnchorElement.hrefTranslate
-  - html.elements.a.hreftranslate
-
-  # baseline: false
-  # support:
-  #   chrome: "133"
-  #   chrome_android: "133"
-  - api.Document.moveBefore
-  - html.elements.script.type.importmap.multiple_import_maps
-
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.HTMLButtonElement.command
   - api.HTMLButtonElement.commandForElement
+  - api.HTMLDialogElement.closedBy
+  - api.HTMLDialogElement.requestClose
   - api.HTMLElement.command_event
   - api.HTMLInputElement.alpha
   - api.HTMLInputElement.colorSpace
   - api.Navigator.authentication
+  - api.OffscreenCanvasRenderingContext2D.getContextAttributes
   - html.elements.button.command
   - html.elements.button.commandfor
+  - html.elements.dialog.closedby
   - html.elements.hr.hr_in_select
   - html.elements.input.alpha
   - html.elements.input.colorspace
