@@ -104,6 +104,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://www.w3.org/TR/DOM-Level-2-Style/",
         "Allowed because the css-object-model-discouraged feature points to it."
+    ],
+    [
+        "https://patcg-individual-drafts.github.io/topics/",
+        "Allowed because the Topics API isn't on a standards track yet. Remove this exception when it is."
     ]
 ];
 
