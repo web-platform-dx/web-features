@@ -1,4 +1,4 @@
-draft_date: 2025-01-30
+draft_date: 2025-02-10
 name: Fetch
 description: TODO
 spec: https://fetch.spec.whatwg.org/
@@ -35,7 +35,6 @@ compat_features:
 #   - api.Request.Request.response_body_readablestream
 #   - api.Request.arrayBuffer
 #   - api.Request.blob
-#   - api.Request.body
 #   - api.Request.bodyUsed
 #   - api.Request.bytes
 #   - api.Request.cache
@@ -91,6 +90,8 @@ compat_features:
 # - Fetch priority:
 #   - api.Request.Request.init_priority_parameter
 #   - api.fetch.init_priority_parameter
+# - Fetch request streams:
+#   - api.Request.body
 # - Abortable fetch:
 #   - api.Request.signal
 #   - api.fetch.init_signal_parameter

@@ -177,10 +177,12 @@ compat_features:
   - api.SubtleCrypto.deriveKey.derivedKeyAlgorithm_option_hkdf
   - api.SubtleCrypto.deriveKey.derivedKeyAlgorithm_option_pbkdf2
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-02-06
   # support:
   #   chrome: "133"
   #   chrome_android: "133"
+  #   edge: "133"
   #   firefox: "130"
   #   firefox_android: "130"
   #   safari: "17"

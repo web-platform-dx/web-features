@@ -3,19 +3,13 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "132"
+    chrome_android: "132"
+    edge: "132"
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "132"
-  #   chrome_android: "132"
-  #   edge: "132"
   - api.DevicePosture
   - api.DevicePosture.change_event
   - api.DevicePosture.type
   - api.Navigator.devicePosture
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
   - css.at-rules.media.device-posture
