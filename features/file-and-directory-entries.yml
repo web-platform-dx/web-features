@@ -1,4 +1,3 @@
-draft_date: 2024-05-07
 name: File and directory entries
 description: File and directory entries represent a virtual file system for working with files and directories dragged and dropped into the browser.
 spec: https://wicg.github.io/entries-api/
@@ -11,14 +10,15 @@ compat_features:
   - api.FileSystemDirectoryEntry.createReader
   - api.FileSystemDirectoryEntry.getDirectory
   - api.FileSystemDirectoryEntry.getFile
-  - api.FileSystemDirectoryHandle
-  - api.FileSystemDirectoryHandle.entries
-  - api.FileSystemDirectoryHandle.getDirectoryHandle
-  - api.FileSystemDirectoryHandle.getFileHandle
-  - api.FileSystemDirectoryHandle.keys
-  - api.FileSystemDirectoryHandle.removeEntry
-  - api.FileSystemDirectoryHandle.resolve
-  - api.FileSystemDirectoryHandle.values
+  # Uncomment on resolving https://github.com/web-platform-dx/web-features/issues/1173
+  # - api.FileSystemDirectoryHandle
+  # - api.FileSystemDirectoryHandle.entries
+  # - api.FileSystemDirectoryHandle.getDirectoryHandle
+  # - api.FileSystemDirectoryHandle.getFileHandle
+  # - api.FileSystemDirectoryHandle.keys
+  # - api.FileSystemDirectoryHandle.removeEntry
+  # - api.FileSystemDirectoryHandle.resolve
+  # - api.FileSystemDirectoryHandle.values
   - api.FileSystemDirectoryHandle.@@asyncIterator
   - api.FileSystemDirectoryReader
   - api.FileSystemDirectoryReader.readEntries
@@ -31,10 +31,11 @@ compat_features:
   - api.FileSystemEntry.name
   - api.FileSystemFileEntry
   - api.FileSystemFileEntry.file
-  - api.FileSystemFileHandle
-  - api.FileSystemFileHandle.getFile
-  - api.FileSystemHandle
-  - api.FileSystemHandle.isSameEntry
-  - api.FileSystemHandle.kind
-  - api.FileSystemHandle.name
+  # Uncomment on resolving https://github.com/web-platform-dx/web-features/issues/1173
+  # - api.FileSystemFileHandle
+  # - api.FileSystemFileHandle.getFile
+  # - api.FileSystemHandle
+  # - api.FileSystemHandle.isSameEntry
+  # - api.FileSystemHandle.kind
+  # - api.FileSystemHandle.name
   - api.HTMLInputElement.webkitEntries
