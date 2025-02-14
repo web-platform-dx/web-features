@@ -1,5 +1,5 @@
 name: execCommand()
-description: The `execCommand()` method accesses the clipboard and performs editing commands on the document, while multiple `queryCommand*()` methods report whether commands are enabled, supported, or applied.
+description: The `execCommand()` method reads and writes from the clipboard and performs editing commands on an editable text selection, such as changing the font name or style. Related methods check whether commands are supported, enabled, or applied.
 spec: https://w3c.github.io/editing/docs/execCommand/
 group: clipboard
 discouraged:
