@@ -1,0 +1,11 @@
+name: Scroll markers
+description: The `::scroll-marker` CSS pseudo-element is a focusable control within its ancestor scroll container's `::scroll-marker-group` that scrolls to its originating element.
+spec: https://drafts.csswg.org/css-overflow-5/#scroll-markers
+group: scrolling
+caniuse: css-scroll-markers
+status:
+  compute_from: css.properties.scroll-marker-group
+compat_features:
+  - css.selectors.scroll-marker
+  - css.selectors.scroll-marker-group
+  - css.properties.scroll-marker-group
