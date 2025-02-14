@@ -1,0 +1,9 @@
+name: ::column pseudo-element
+description: The `::column` CSS pseudo-element represents the individual columns in a multi-column container and can snapped to and given associated `::scroll-marker` pseudo-elements.
+spec: https://drafts.csswg.org/css-multicol-2/#column-pseudo
+group: multi-column
+caniuse: css-column-pseudo
+status:
+  compute_from: css.selectors.column
+compat_features:
+  - css.selectors.column
