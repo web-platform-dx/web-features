@@ -104,6 +104,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://www.w3.org/TR/DOM-Level-2-Style/",
         "Allowed because the css-object-model-discouraged feature points to it."
+    ],
+    [
+        "https://github.com/whatwg/dom/issues/1255",
+        "This is only place moveBefore() is spec'd. Remove this exception when https://github.com/whatwg/dom/issues/1255 merges."
     ]
 ];
 

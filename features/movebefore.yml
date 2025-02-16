@@ -1,0 +1,8 @@
+name: moveBefore()
+description: The `moveBefore()` DOM methods relocate a node while preserving its state. For example, you can move an element without disrupting focus or move an iframe without reloading it.
+spec: https://github.com/whatwg/dom/issues/1255
+group: dom
+compat_features:
+  - api.Document.moveBefore
+  - api.DocumentFragment.moveBefore
+  - api.Element.moveBefore
