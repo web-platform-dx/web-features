@@ -1,0 +1,13 @@
+draft_date: 2025-02-16
+name: Feature policy
+description: The `Feature-Policy` response header sets whether a policy-controlled feature, such as an API, may be used in a document. Not to be confused with permissions policy.
+spec: https://www.w3.org/TR/2019/WD-feature-policy-1-20190416/
+caniuse: feature-policy
+discouraged:
+  according_to:
+    - https://github.com/w3c/webappsec-permissions-policy/pull/379
+  alternatives:
+    - permissions-policy
+compat_features:
+  - api.Document.featurePolicy
+  - api.HTMLIFrameElement.featurePolicy

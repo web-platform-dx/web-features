@@ -104,6 +104,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://www.w3.org/TR/DOM-Level-2-Style/",
         "Allowed because the css-object-model-discouraged feature points to it."
+    ],
+    [
+        "https://www.w3.org/TR/2019/WD-feature-policy-1-20190416/",
+        "Allowed because feature policy was replaced by permissions policy."
     ]
 ];
 

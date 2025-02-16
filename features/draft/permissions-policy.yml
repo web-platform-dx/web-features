@@ -1,0 +1,8 @@
+draft_date: 2025-02-16
+name: Permissions policy
+description: The `Permissions-Policy` response header sets whether a policy-controlled feature, such as an API, may be used in a document.
+spec: https://w3c.github.io/webappsec-permissions-policy/
+caniuse: permissions-policy
+compat_features:
+  - http.headers.Permissions-Policy
+  - http.headers.Permissions-Policy.wildcards
