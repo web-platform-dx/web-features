@@ -108,6 +108,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://www.w3.org/TR/DOM-Level-2-Style/",
         "Allowed because the css-object-model-discouraged feature points to it."
+    ],
+    [
+        "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/DocumentSubtitle/explainer.md",
+        "Allowed because this is where the application-title meta tag is spec'd at the moment. Remove when https://github.com/whatwg/html/issues/8909 is fixed."
     ]
 ];
 
