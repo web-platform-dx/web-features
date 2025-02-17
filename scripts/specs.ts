@@ -108,6 +108,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://www.w3.org/TR/DOM-Level-2-Style/",
         "Allowed because the css-object-model-discouraged feature points to it."
+    ],
+    [
+        "https://w3c.github.io/editing/docs/execCommand/",
+        "Allowed because the execCommand feature points to it, to inform users that the feature is obsolete. The spec exists in a draft state only and will never move out of draft. It serves as a reference."
     ]
 ];
 
