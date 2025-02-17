@@ -1,5 +1,5 @@
 name: JavaScript built-ins (legacy)
-description: 
+description: [This feature is being decomposed.]
 spec: https://tc39.es/ecma262/multipage/
 group: javascript
 discouraged:
@@ -10,8 +10,6 @@ discouraged:
 compat_features:
   # The following properties are legacy according to:
   # https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers
-  - javascript.builtins.escape
-  - javascript.builtins.unescape
   - javascript.builtins.String.anchor
   - javascript.builtins.String.big
   - javascript.builtins.String.blink
