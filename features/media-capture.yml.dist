@@ -463,6 +463,19 @@ compat_features:
   #   safari_ios: "11"
   - api.MediaDevices.enumerateDevices
 
+  # baseline: low
+  # baseline_low_date: 2024-10-29
+  # support:
+  #   chrome: "64"
+  #   chrome_android: "64"
+  #   edge: "79"
+  #   firefox: "132"
+  #   firefox_android: "132"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - api.Permissions.permission_camera
+  - api.Permissions.permission_microphone
+
   # baseline: false
   # support:
   #   chrome: "57"
