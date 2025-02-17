@@ -2,6 +2,7 @@ name: Dedicated workers
 description: The `Worker()` constructor runs a script in its own thread, which can send and receive messages with the script that created it. Also known as web workers.
 spec: https://html.spec.whatwg.org/multipage/workers.html#workers
 caniuse: webworkers
+group: workers
 status:
   compute_from: api.WorkerGlobalScope.importScripts
 compat_features:
