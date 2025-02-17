@@ -1,4 +1,4 @@
-draft_date: 2025-01-27
+draft_date: 2025-02-12
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -20,7 +20,6 @@ compat_features:
   - api.HTMLAllCollection.item
   - api.HTMLAllCollection.length
   - api.HTMLAllCollection.namedItem
-  - api.HTMLAnchorElement.hrefTranslate
   - api.HTMLBaseElement.href.forbid_data_javascript_urls
   - api.HTMLBaseElement.href.forbid_special_characters
   - api.HTMLButtonElement.command
@@ -37,7 +36,10 @@ compat_features:
   - api.HTMLCanvasElement.toDataURL.type_parameter_jpeg
   - api.HTMLCanvasElement.toDataURL.type_parameter_png
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
+  - api.HTMLDialogElement.closedBy
+  - api.HTMLDialogElement.requestClose
   - api.HTMLElement.command_event
+  - api.HTMLElement.popover.hint
   - api.HTMLIFrameElement.featurePolicy
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes.auto
@@ -50,14 +52,6 @@ compat_features:
   - api.HTMLInputElement.showPicker.week_input
   - api.HTMLMediaElement.getStartDate
   - api.HTMLMediaElement.textTracks
-  - api.HTMLMeterElement
-  - api.HTMLMeterElement.high
-  - api.HTMLMeterElement.labels
-  - api.HTMLMeterElement.low
-  - api.HTMLMeterElement.max
-  - api.HTMLMeterElement.min
-  - api.HTMLMeterElement.optimum
-  - api.HTMLMeterElement.value
   - api.HTMLOptionsCollection
   - api.HTMLOptionsCollection.add
   - api.HTMLOptionsCollection.length
@@ -70,9 +64,6 @@ compat_features:
   - api.HTMLSourceElement.src
   - api.HTMLSourceElement.type
   - api.HTMLSourceElement.width
-  - api.HTMLTemplateElement.shadowRootClonable
-  - api.HTMLTemplateElement.shadowRootDelegatesFocus
-  - api.HTMLTemplateElement.shadowRootSerializable
   - api.HTMLUnknownElement
   - api.HTMLVideoElement.playsInline
   - api.ImageData.worker_support
@@ -81,6 +72,7 @@ compat_features:
   - api.MediaError.message
   - api.MouseEvent.relatedTarget.drag_events
   - api.Navigator.authentication
+  - api.OffscreenCanvasRenderingContext2D.getContextAttributes
   - api.PromiseRejectionEvent
   - api.PromiseRejectionEvent.PromiseRejectionEvent
   - api.PromiseRejectionEvent.promise
@@ -159,12 +151,9 @@ compat_features:
   - api.setInterval.worker_support
   - api.setTimeout.supports_parameters_for_callback
   - api.setTimeout.worker_support
-  - html.elements.a.href.href_sms
-  - html.elements.a.href.href_top
-  - html.elements.a.hreftranslate
-  - html.elements.a.implicit_noopener
   - html.elements.button.command
   - html.elements.button.commandfor
+  - html.elements.dialog.closedby
   - html.elements.form.autocomplete.new-password
   - html.elements.form.autocomplete.one-time-code
   - html.elements.form.autocomplete.webauthn
@@ -182,20 +171,9 @@ compat_features:
   - html.elements.input.autocomplete
   - html.elements.input.colorspace
   - html.elements.link.rel.icon
-  - html.elements.meter
-  - html.elements.meter.high
-  - html.elements.meter.low
-  - html.elements.meter.max
-  - html.elements.meter.min
-  - html.elements.meter.optimum
-  - html.elements.meter.value
   - html.elements.script.type.importmap.integrity
+  - html.elements.script.type.importmap.multiple_import_maps
   - html.elements.select.autocomplete
-  - html.elements.summary
-  - html.elements.summary.display_list_item
-  - html.elements.template.shadowrootclonable
-  - html.elements.template.shadowrootdelegatesfocus
-  - html.elements.template.shadowrootserializable
   - html.elements.textarea.autocomplete.new-password
   - html.elements.textarea.autocomplete.one-time-code
   - html.elements.textarea.autocomplete.webauthn
@@ -207,8 +185,7 @@ compat_features:
   - html.global_attributes.draggable
   - html.global_attributes.hidden
   - html.global_attributes.id
-  - html.global_attributes.inputmode
-  - html.global_attributes.title.multi-line_titles
+  - html.global_attributes.popover.hint
   - http.headers.Cross-Origin-Embedder-Policy
   - http.headers.Cross-Origin-Embedder-Policy.credentialless
   - http.headers.Cross-Origin-Opener-Policy
@@ -734,7 +711,10 @@ compat_features:
 #   - api.HTMLAnchorElement.username
 #   - html.elements.a
 #   - html.elements.a.href
+#   - html.elements.a.href.href_sms
+#   - html.elements.a.href.href_top
 #   - html.elements.a.hreflang
+#   - html.elements.a.implicit_noopener
 #   - html.elements.a.rel
 #   - html.elements.a.rel.noopener
 #   - html.elements.a.rel.noreferrer
@@ -1088,6 +1068,8 @@ compat_features:
 #   - api.HTMLElement.toggle_event.details_elements
 #   - html.elements.details
 #   - html.elements.details.open
+#   - html.elements.summary
+#   - html.elements.summary.display_list_item
 # - Mutually exclusive <details> elements:
 #   - api.HTMLDetailsElement.name
 #   - html.elements.details.name
@@ -1126,7 +1108,6 @@ compat_features:
 #   - api.HTMLElement.change_event
 # - Contenteditable:
 #   - api.HTMLElement.contentEditable
-#   - api.HTMLElement.inputMode
 #   - api.HTMLElement.isContentEditable
 #   - html.global_attributes.contenteditable
 # - contenteditable="plaintext-only":
@@ -1139,6 +1120,9 @@ compat_features:
 #   - api.HTMLElement.inert
 #   - api.HTMLElement.inert.ignores_find_in_page
 #   - html.global_attributes.inert
+# - inputmode:
+#   - api.HTMLElement.inputMode
+#   - html.global_attributes.inputmode
 # - Lang:
 #   - api.HTMLElement.lang
 #   - html.global_attributes.lang
@@ -1148,9 +1132,10 @@ compat_features:
 # - tabindex:
 #   - api.HTMLElement.tabIndex
 #   - html.global_attributes.tabindex
-# - Title:
+# - title (attribute):
 #   - api.HTMLElement.title
 #   - html.global_attributes.title
+#   - html.global_attributes.title.multi-line_titles
 # - translate attribute:
 #   - api.HTMLElement.translate
 #   - html.global_attributes.translate
@@ -1576,6 +1561,22 @@ compat_features:
 #   - html.elements.meta.http-equiv.refresh
 #   - html.elements.meta.name
 #   - html.elements.meta.name.referrer
+# - <meter>:
+#   - api.HTMLMeterElement
+#   - api.HTMLMeterElement.high
+#   - api.HTMLMeterElement.labels
+#   - api.HTMLMeterElement.low
+#   - api.HTMLMeterElement.max
+#   - api.HTMLMeterElement.min
+#   - api.HTMLMeterElement.optimum
+#   - api.HTMLMeterElement.value
+#   - html.elements.meter
+#   - html.elements.meter.high
+#   - html.elements.meter.low
+#   - html.elements.meter.max
+#   - html.elements.meter.min
+#   - html.elements.meter.optimum
+#   - html.elements.meter.value
 # - <del>:
 #   - api.HTMLModElement
 #   - api.HTMLModElement.cite
@@ -1793,8 +1794,14 @@ compat_features:
 #   - api.HTMLTemplateElement.content
 #   - html.elements.template
 # - Declarative shadow DOM:
+#   - api.HTMLTemplateElement.shadowRootClonable
+#   - api.HTMLTemplateElement.shadowRootDelegatesFocus
 #   - api.HTMLTemplateElement.shadowRootMode
+#   - api.HTMLTemplateElement.shadowRootSerializable
+#   - html.elements.template.shadowrootclonable
+#   - html.elements.template.shadowrootdelegatesfocus
 #   - html.elements.template.shadowrootmode
+#   - html.elements.template.shadowrootserializable
 # - <textarea>:
 #   - api.HTMLTextAreaElement
 #   - api.HTMLTextAreaElement.autocomplete
