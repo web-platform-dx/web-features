@@ -9,4 +9,9 @@ status:
     edge: "79"
 compat_features:
   - api.Document.featurePolicy
+  - api.FeaturePolicy
+  - api.FeaturePolicy.allowedFeatures
+  - api.FeaturePolicy.allowsFeature
+  - api.FeaturePolicy.features
+  - api.FeaturePolicy.getAllowlistForFeature
   - api.HTMLIFrameElement.featurePolicy
