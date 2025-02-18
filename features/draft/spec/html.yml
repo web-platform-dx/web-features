@@ -1,4 +1,4 @@
-draft_date: 2025-02-10
+draft_date: 2025-02-12
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -64,9 +64,6 @@ compat_features:
   - api.HTMLSourceElement.src
   - api.HTMLSourceElement.type
   - api.HTMLSourceElement.width
-  - api.HTMLTemplateElement.shadowRootClonable
-  - api.HTMLTemplateElement.shadowRootDelegatesFocus
-  - api.HTMLTemplateElement.shadowRootSerializable
   - api.HTMLUnknownElement
   - api.HTMLVideoElement.playsInline
   - api.ImageData.worker_support
@@ -177,9 +174,6 @@ compat_features:
   - html.elements.script.type.importmap.integrity
   - html.elements.script.type.importmap.multiple_import_maps
   - html.elements.select.autocomplete
-  - html.elements.template.shadowrootclonable
-  - html.elements.template.shadowrootdelegatesfocus
-  - html.elements.template.shadowrootserializable
   - html.elements.textarea.autocomplete.new-password
   - html.elements.textarea.autocomplete.one-time-code
   - html.elements.textarea.autocomplete.webauthn
@@ -1800,8 +1794,14 @@ compat_features:
 #   - api.HTMLTemplateElement.content
 #   - html.elements.template
 # - Declarative shadow DOM:
+#   - api.HTMLTemplateElement.shadowRootClonable
+#   - api.HTMLTemplateElement.shadowRootDelegatesFocus
 #   - api.HTMLTemplateElement.shadowRootMode
+#   - api.HTMLTemplateElement.shadowRootSerializable
+#   - html.elements.template.shadowrootclonable
+#   - html.elements.template.shadowrootdelegatesfocus
 #   - html.elements.template.shadowrootmode
+#   - html.elements.template.shadowrootserializable
 # - <textarea>:
 #   - api.HTMLTextAreaElement
 #   - api.HTMLTextAreaElement.autocomplete
