@@ -1,5 +1,8 @@
-import bcdBrowsers from "@mdn/browser-compat-data" assert { type: "json" };
-import otherBrowsers from "../data/downstream-browsers.json" assert { type: "json" };
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+
+const bcdBrowsers = require("@mdn/browser-compat-data");
+const otherBrowsers = require("../data/downstream-browsers.json");
 
 const bcdCoreBrowserNames: string[] = [
   "chrome",
@@ -11,25 +14,28 @@ const bcdCoreBrowserNames: string[] = [
   "safari_ios",
 ];
 
-const coreBrowserData = Object.entries(bcdBrowsers.browsers).filter(
-  ([browserName, browserData]) => bcdCoreBrowserNames.includes(browserName),
-);
+type BrowserData = {
+  [key: string]: {
+    releases: {
+      [key: string]: {
+        status: string;
+        release_date?: string;
+      };
+    };
+  };
+};
 
-const bcdDownstreamBrowserNames: string[] = [
-  "webview_android",
-  "samsunginternet_android",
-  "opera_android",
-  "opera",
-];
-
-const downstreamBrowserData = [
-  ...Object.entries(bcdBrowsers.browsers).filter(([browserName, browserData]) =>
-    bcdDownstreamBrowserNames.includes(browserName),
-  ),
-  ...Object.entries(otherBrowsers.browsers),
-];
-
-const acceptableStatuses: string[] = ["current", "esr", "retired", "unknown"];
+interface Browser {
+  name: string;
+  releases: {
+    [version: string]: {
+      status: string;
+      release_date?: string;
+      engine?: string;
+      engine_version?: string;
+    };
+  };
+}
 
 interface BrowserVersion {
   browser: string;
@@ -38,6 +44,31 @@ interface BrowserVersion {
   engine: string | null;
   engine_version: string | null;
 }
+
+const coreBrowserData: [string, Browser][] = Object.entries(
+  bcdBrowsers.browsers as BrowserData,
+).filter(([browserName, browserData]) =>
+  bcdCoreBrowserNames.includes(browserName),
+) as [string, Browser][];
+
+const bcdDownstreamBrowserNames: string[] = [
+  "webview_android",
+  "samsunginternet_android",
+  "opera_android",
+  "opera",
+];
+const downstreamBrowserData: [string, Browser][] = [
+  ...(Object.entries(bcdBrowsers.browsers as BrowserData).filter(
+    ([browserName, browserData]) =>
+      bcdDownstreamBrowserNames.includes(browserName),
+  ) as [string, Browser][]),
+  ...(Object.entries(otherBrowsers.browsers as BrowserData) as [
+    string,
+    Browser,
+  ][]),
+];
+
+const acceptableStatuses: string[] = ["current", "esr", "retired", "unknown"];
 
 const compareVersions = (
   incomingVersionString: string,
@@ -103,9 +134,7 @@ const getCoreVersionsByDate = (
         return true;
       })
       .sort((a, b) => {
-        {
-          return compareVersions(a[0], b[0]);
-        }
+        return compareVersions(a[0], b[0]);
       });
     for (let i = 1; i < sortedVersions.length; i++) {
       const thisVersion = sortedVersions[i];
@@ -161,6 +190,7 @@ const getDownstreamBrowsers = (
   let downstreamArray: BrowserVersion[] = new Array();
 
   downstreamBrowserData.forEach(([browserName, browserData]) => {
+    if (!browserData.releases) return;
     let sortedAndFilteredVersions = Object.entries(browserData.releases)
       .filter(([versionNumber, versionData]) => {
         if (!versionData.engine) {
@@ -170,7 +200,8 @@ const getDownstreamBrowsers = (
           return false;
         }
         if (
-          parseInt(versionData.engine_version) < parseInt(minimumChromeVersion)
+          versionData.engine_version &&
+          parseInt(versionData.engine_version) < parseInt(minimumChromeVersion!)
         ) {
           return false;
         }
@@ -187,9 +218,9 @@ const getDownstreamBrowsers = (
         downstreamArray.push({
           browser: browserName,
           version: versionNumber,
-          release_date: versionData.release_date,
-          engine: versionData.engine,
-          engine_version: versionData.engine_version,
+          release_date: versionData.release_date ?? "unknown",
+          engine: versionData.engine ?? null,
+          engine_version: versionData.engine_version ?? null,
         });
         if (minOnly) {
           break;
