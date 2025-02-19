@@ -21,3 +21,8 @@ compat_features:
   - javascript.builtins.Error.lineNumber
   - javascript.builtins.Error.Error.fileName_parameter
   - javascript.builtins.Error.fileName
+  - javascript.builtins.Error.columnNumber
+
+  # Error.prototype.stack is a candidate for future standardization
+  # https://github.com/tc39/proposal-error-stacks
+  - javascript.builtins.Error.stack
