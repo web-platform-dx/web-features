@@ -7,5 +7,6 @@ discouraged:
   # No `alternatives` because it would be `alternatives: [regexp]`. In the
   # future it'd be nice to have an internal reference to the RegExp()
   # constructor instead.
+  # See: https://github.com/web-platform-dx/web-features/issues/2676
 compat_features:
   - javascript.builtins.RegExp.compile

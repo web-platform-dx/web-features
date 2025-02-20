@@ -8,6 +8,7 @@ discouraged:
   # No `alternatives` because it would be `alternatives: [javascript]`. In the
   # future it'd be nice to have an internal reference to encodeURI(),
   # decodeURI(), encodeURIComponent(), and decodeURIComponent() instead.
+  # See: https://github.com/web-platform-dx/web-features/issues/2676
 compat_features:
   - javascript.builtins.escape
   - javascript.builtins.unescape
