@@ -106,8 +106,8 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because the css-object-model-discouraged feature points to it."
     ],
     [
-        "https://github.com/whatwg/dom/issues/1255",
-        "This is only place moveBefore() is spec'd. Remove this exception when https://github.com/whatwg/dom/issues/1255 is fixed."
+        "https://github.com/whatwg/dom/pull/1307",
+        "This is only place moveBefore() is spec'd. Remove this exception when https://github.com/whatwg/dom/pull/1307 merges."
     ]
 ];
 
