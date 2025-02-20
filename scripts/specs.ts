@@ -107,7 +107,7 @@ const defaultAllowlist: allowlistItem[] = [
     ],
     [
         "https://github.com/whatwg/dom/issues/1255",
-        "This is only place moveBefore() is spec'd. Remove this exception when https://github.com/whatwg/dom/issues/1255 merges."
+        "This is only place moveBefore() is spec'd. Remove this exception when https://github.com/whatwg/dom/issues/1255 is fixed."
     ]
 ];
 
