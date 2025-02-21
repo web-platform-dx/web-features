@@ -1,0 +1,28 @@
+draft_date: 2025-02-20
+name: Unspecified APIs
+description: Some browsers implement unspecified APIs. This is an artificial feature that contains references to browser compatibility data entries for those additions.
+spec: https://web-platform-dx.github.io/unspecified/
+discouraged:
+  according_to:
+    - https://web-platform-dx.github.io/unspecified/
+compat_features:
+  # Chrome implemented these APIs while they were in a PR for the spec, which
+  # was subsequently not included in the ultimately merged changes.
+  # https://github.com/w3c/payment-handler/pull/170#issuecomment-483453062
+  # https://issues.chromium.org/issues/40527525
+  - api.AbortPaymentEvent
+  - api.AbortPaymentEvent.AbortPaymentEvent
+  - api.AbortPaymentEvent.respondWith
+
+  # These `Screen` properties are broadly interoperable but unspecified.
+  # https://github.com/w3c/window-management/pull/76#discussion_r780596068
+  # contains the only discussion I could find of this fact.
+  - api.Screen.availLeft
+  - api.Screen.availLeft.relative-multi-screen
+  - api.Screen.availTop
+  - api.Screen.availTop.relative-multi-screen
+
+  # Dropped from Accessibility Object Model spec and potentially never shipped
+  # anywhere. https://wicg.github.io/aom/spec/phase2.html#privacy-concerns
+  # https://github.com/mdn/browser-compat-data/pull/25860
+  - api.Permissions.permission_accessibility-events

@@ -1,0 +1,29 @@
+draft_date: 2025-02-20
+name: Unspecified JavaScript
+description: Some browsers implement unspecified JavaScript properties or methods. This is an artificial feature that contains references to browser compatibility data entries for those additions.
+spec: https://web-platform-dx.github.io/unspecified/
+discouraged:
+  according_to:
+    - https://web-platform-dx.github.io/unspecified/
+compat_features:
+  # Firefox-only Function property.
+  # There exists some discussion of getting rid
+  # of it: https://github.com/tc39/proposal-error-stacks/issues/14
+  - javascript.builtins.Function.displayName
+
+  # Firefox-only InternalError object
+  # Thrown on "too much recursion" while Safari and Chrome throw RangeError
+  # https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Too_much_recursion
+  - javascript.builtins.InternalError
+  - javascript.builtins.InternalError.InternalError
+
+  # Firefox-only Error properties
+  - javascript.builtins.Error.Error.lineNumber_parameter
+  - javascript.builtins.Error.lineNumber
+  - javascript.builtins.Error.Error.fileName_parameter
+  - javascript.builtins.Error.fileName
+  - javascript.builtins.Error.columnNumber
+
+  # Error.prototype.stack is a candidate for future standardization
+  # https://github.com/tc39/proposal-error-stacks
+  - javascript.builtins.Error.stack
