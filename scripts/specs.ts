@@ -112,6 +112,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://w3c.github.io/editing/docs/execCommand/",
         "Allowed because the execCommand feature points to it, to inform users that the feature is obsolete. The spec exists in a draft state only and will never move out of draft. It serves as a reference."
+    ],
+    [
+        "https://github.com/tc39/proposal-regexp-legacy-features",
+        "Allowed because it's the most spec-like thing that exists for discouraged RegExp static properties. Remove when https://github.com/tc39/ecma262/issues/137 is resolved."
     ]
 ];
 
