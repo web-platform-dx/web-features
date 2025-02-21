@@ -10,6 +10,8 @@ discouraged:
     - dom
 compat_features:
   - api.Document.write
+  - api.Document.write.accepts_TrustedHTML
   - api.Document.writeln
+  - api.Document.writeln.accepts_TrustedHTML
   - api.Document.open
   - api.Document.close
