@@ -4,7 +4,8 @@ spec: https://wicg.github.io/file-system-access/
 caniuse: native-filesystem-api
 group: file-system
 compat_features:
-  - api.FileSystemDirectoryHandle.@@asyncIterator
+  # Uncomment on resolving https://github.com/web-platform-dx/web-features/issues/1173
+  # - api.FileSystemDirectoryHandle.@@asyncIterator
   - api.FileSystemFileHandle.createWritable
   - api.FileSystemHandle.queryPermission
   - api.FileSystemHandle.requestPermission
