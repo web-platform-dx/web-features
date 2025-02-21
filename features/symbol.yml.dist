@@ -156,6 +156,19 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
+  #   chrome: "51"
+  #   chrome_android: "51"
+  #   edge: "79"
+  #   firefox: "48"
+  #   firefox_android: "48"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - javascript.builtins.Array.@@species
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
   #   chrome: "70"
   #   chrome_android: "70"
   #   edge: "79"

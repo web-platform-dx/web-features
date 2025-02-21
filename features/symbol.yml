@@ -4,7 +4,9 @@ spec: https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-symbol-obje
 group: primitive-types
 status:
   compute_from: javascript.builtins.Symbol
+# TODO: move javascript.builtins.Array.@@species to `array` when https://github.com/web-platform-dx/web-features/issues/91 is resolved
 compat_features:
+  - javascript.builtins.Array.@@species
   - javascript.builtins.Symbol
   - javascript.builtins.Symbol.Symbol
   - javascript.builtins.Symbol.description
