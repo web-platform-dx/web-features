@@ -8,6 +8,8 @@ discouraged:
     - https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#document.write()
   alternatives:
     - dom
+status:
+  compute_from: api.Document.write
 compat_features:
   - api.Document.write
   - api.Document.write.accepts_TrustedHTML
