@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "98"
-    chrome_android: "98"
-    edge: "98"
+    chrome: "124"
+    chrome_android: "124"
+    edge: "124"
 compat_features:
   # baseline: false
   # support:
@@ -49,10 +49,24 @@ compat_features:
   - api.NavigatorUAData.toJSON
   - http.headers.Sec-CH-UA-Bitness
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "98"
   #   chrome_android: "98"
   #   edge: "98"
   - http.headers.Sec-CH-UA-Full-Version-List
+
+  # baseline: false
+  # support:
+  #   chrome: "100"
+  #   chrome_android: "100"
+  #   edge: "100"
+  - http.headers.Sec-CH-UA-WoW64
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "124"
+  #   chrome_android: "124"
+  #   edge: "124"
+  - http.headers.Sec-CH-UA-Form-Factors
