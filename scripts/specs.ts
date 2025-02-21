@@ -112,6 +112,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://w3c.github.io/editing/docs/execCommand/",
         "Allowed because the execCommand feature points to it, to inform users that the feature is obsolete. The spec exists in a draft state only and will never move out of draft. It serves as a reference."
+    ],
+    [
+        "https://github.com/whatwg/dom/pull/1307",
+        "This is only place moveBefore() is spec'd. Remove this exception when https://github.com/whatwg/dom/pull/1307 merges."
     ]
 ];
 
