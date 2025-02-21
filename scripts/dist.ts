@@ -281,7 +281,7 @@ function toDist(sourcePath: string): YAML.Document {
       const f = feature(key);
       if (f.deprecated && !deprecatedKeysAllowed) {
         logger.error(
-          `${id}: contains contains deprecated compat feature ${f.id}. This is forbidden for non-discouraged published features. [2]`,
+          `${id}: contains contains deprecated compat feature ${f.id}. This is forbidden for non-discouraged published features.`,
         );
         exitStatus = 1;
       }
