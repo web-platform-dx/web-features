@@ -112,6 +112,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://w3c.github.io/editing/docs/execCommand/",
         "Allowed because the execCommand feature points to it, to inform users that the feature is obsolete. The spec exists in a draft state only and will never move out of draft. It serves as a reference."
+    ],
+    [
+        "https://www.w3.org/TR/2019/WD-feature-policy-1-20190416/",
+        "Allowed because feature policy was replaced by permissions policy."
     ]
 ];
 
