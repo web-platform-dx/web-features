@@ -1149,6 +1149,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "86"
+  #   chrome_android: "86"
+  #   edge: "86"
+  - api.Document.writeln.accepts_TrustedHTML
+
+  # baseline: false
+  # support:
   #   chrome: "87"
   #   chrome_android: "87"
   #   edge: "87"
@@ -1215,7 +1222,15 @@ compat_features:
   #   chrome_android: "133"
   #   edge: "133"
   - api.Document.moveBefore
+  - api.HTMLButtonElement.popoverTargetElement.implicit_anchor_reference
   - api.HTMLElement.popover.hint
+  - api.HTMLElement.showPopover.source
+  - api.HTMLElement.showPopover.source.implicit_anchor_reference
+  - api.HTMLElement.togglePopover.source
+  - api.HTMLElement.togglePopover.source.implicit_anchor_reference
+  - api.HTMLInputElement.popoverTargetElement.implicit_anchor_reference
+  - html.elements.button.popovertarget.implicit_anchor_reference
+  - html.elements.input.popovertarget.implicit_anchor_reference
   - html.elements.script.type.importmap.multiple_import_maps
   - html.global_attributes.popover.hint
 
