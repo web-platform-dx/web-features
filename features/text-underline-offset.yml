@@ -1,0 +1,10 @@
+name: text-underline-offset
+description: "The `text-underline-offset` CSS property shifts underlines on text from the initial position by a given distance. The initial position is affected by the `text-underline-position` property."
+spec: https://drafts.csswg.org/css-text-decor-4/#underline-offset
+group: text
+status:
+  compute_from: css.properties.text-underline-offset
+compat_features:
+  - css.properties.text-underline-offset
+  - css.properties.text-underline-offset.auto
+  - css.properties.text-underline-offset.percentage

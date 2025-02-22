@@ -233,17 +233,13 @@ function toDist(sourcePath: string): YAML.Document {
     checkAncestors: true,
   });
 
-  if (computedStatus.discouraged && !source.discouraged) {
-    if (!source.draft_date) {
-      logger.error(
-        `${id}: contains at least one deprecated compat feature. This is forbidden for published features.`,
-      );
-      exitStatus = 1;
-    } else {
-      logger.warn(
-        `${id}: draft contains at least one deprecated compat feature. Was this intentional?`,
-      );
-    }
+  const deprecatedKeysAllowed = source.draft_date || source.discouraged;
+
+  if (computedStatus.discouraged && !deprecatedKeysAllowed) {
+    logger.error(
+      `${id}: contains at least one deprecated compat feature. This is forbidden for non-discouraged published features.`,
+    );
+    exitStatus = 1;
   }
 
   computedStatus = JSON.parse(computedStatus.toJSON());
@@ -283,17 +279,11 @@ function toDist(sourcePath: string): YAML.Document {
 
     for (const key of compatFeatures) {
       const f = feature(key);
-      if (f.deprecated) {
-        if (!source.draft_date) {
-          logger.error(
-            `${id}: contains contains deprecated compat feature ${f.id}. This is forbidden for published features.`,
-          );
-          exitStatus = 1;
-        } else {
-          logger.warn(
-            `${id}: draft contains deprecated compat feature ${f.id}. Was this intentional?`,
-          );
-        }
+      if (f.deprecated && !deprecatedKeysAllowed) {
+        logger.error(
+          `${id}: contains contains deprecated compat feature ${f.id}. This is forbidden for non-discouraged published features.`,
+        );
+        exitStatus = 1;
       }
     }
   }
