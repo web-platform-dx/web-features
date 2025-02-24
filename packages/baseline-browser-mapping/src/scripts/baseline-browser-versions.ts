@@ -25,7 +25,7 @@ type BrowserData = {
   };
 };
 
-interface Browser {
+type Browser = {
   name: string;
   releases: {
     [version: string]: {
@@ -35,15 +35,15 @@ interface Browser {
       engine_version?: string;
     };
   };
-}
+};
 
-interface BrowserVersion {
+type BrowserVersion = {
   browser: string;
   version: string;
   release_date: string;
   engine: string | null;
   engine_version: string | null;
-}
+};
 
 const coreBrowserData: [string, Browser][] = Object.entries(
   bcdBrowsers.browsers as BrowserData,
