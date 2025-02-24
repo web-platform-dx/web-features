@@ -14,7 +14,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "prettier . --write; tsc"
+    "prepare": "rm -rf dist; prettier . --write; tsc"
   },
   "license": "Apache-2.0",
   "dependencies": {
