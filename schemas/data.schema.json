@@ -70,7 +70,9 @@
             },
             "alternatives": {
               "description": "IDs for features that substitute some or all of this feature's utility",
-              "items": {},
+              "items": {
+                "type": "string"
+              },
               "type": "array"
             }
           },
