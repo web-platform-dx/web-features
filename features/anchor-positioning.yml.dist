@@ -228,5 +228,17 @@ compat_features:
   - css.types.anchor-size.inset_margin
 
   # baseline: false
+  # support:
+  #   chrome: "133"
+  #   chrome_android: "133"
+  #   edge: "133"
+  - api.HTMLButtonElement.popoverTargetElement.implicit_anchor_reference
+  - api.HTMLElement.showPopover.source.implicit_anchor_reference
+  - api.HTMLElement.togglePopover.source.implicit_anchor_reference
+  - api.HTMLInputElement.popoverTargetElement.implicit_anchor_reference
+  - html.elements.button.popovertarget.implicit_anchor_reference
+  - html.elements.input.popovertarget.implicit_anchor_reference
+
+  # baseline: false
   # support: {}
   - css.properties.position-anchor.auto
