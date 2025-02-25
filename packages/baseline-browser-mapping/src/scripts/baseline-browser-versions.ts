@@ -47,9 +47,10 @@ type BrowserVersion = {
 
 const coreBrowserData: [string, Browser][] = Object.entries(
   bcdBrowsers.browsers as BrowserData,
-).filter(([browserName, browserData]) =>
-  bcdCoreBrowserNames.includes(browserName),
-) as [string, Browser][];
+).filter(([browserName]) => bcdCoreBrowserNames.includes(browserName)) as [
+  string,
+  Browser,
+][];
 
 const bcdDownstreamBrowserNames: string[] = [
   "webview_android",
@@ -59,8 +60,7 @@ const bcdDownstreamBrowserNames: string[] = [
 ];
 const downstreamBrowserData: [string, Browser][] = [
   ...(Object.entries(bcdBrowsers.browsers as BrowserData).filter(
-    ([browserName, browserData]) =>
-      bcdDownstreamBrowserNames.includes(browserName),
+    ([browserName]) => bcdDownstreamBrowserNames.includes(browserName),
   ) as [string, Browser][]),
   ...(Object.entries(otherBrowsers.browsers as BrowserData) as [
     string,
@@ -127,7 +127,7 @@ const getCoreVersionsByDate = (
 
   coreBrowserData.forEach(([browserName, browserData]) => {
     let sortedVersions = Object.entries(browserData.releases)
-      .filter(([versionNumber, versionData]) => {
+      .filter(([, versionData]) => {
         if (!acceptableStatuses.includes(versionData.status)) {
           return false;
         }
@@ -192,7 +192,7 @@ const getDownstreamBrowsers = (
   downstreamBrowserData.forEach(([browserName, browserData]) => {
     if (!browserData.releases) return;
     let sortedAndFilteredVersions = Object.entries(browserData.releases)
-      .filter(([versionNumber, versionData]) => {
+      .filter(([, versionData]) => {
         if (!versionData.engine) {
           return false;
         }
