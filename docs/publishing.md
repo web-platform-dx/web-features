@@ -1,9 +1,24 @@
-# Publishing
+# Publishing releases
+
+## Announcements
+
+web-features uses a GitHub Discussions thread to give notice of breaking changes and other major changes to interested web-features consumers.
+
+If you want to receive these announcements, subscribe to the [Upcoming changes](https://github.com/web-platform-dx/web-features/discussions/2613) announcements thread or to all discussions through the repository's _Watch_ menu.
+
+> [!NOTE]
+> The remainder of this section is for [project owners](../GOVERNANCE.md#roles-and-responsibilities).
+
+If you're planning to publish a breaking release (see [Regular releases](#regular-releases)) in the next two weeks, then post a message to the [Upcoming changes](https://github.com/web-platform-dx/web-features/discussions/2613) announcements thread.
+Include a summary of the expected changes, citing relevant issues and pull requests.
+
+Note that an announcement is not a substitute for seeking consumer feedback early in the design and implementation process.
+Announcements should not provoke surprising responses from consumers.
 
 ## Regular releases
 
 > [!NOTE]
-> This information is for [project owners](../GOVERNANCE.md#roles-and-responsibilities).
+> This section is for [project owners](../GOVERNANCE.md#roles-and-responsibilities).
 
 These are the steps to publish a regular release on npm and as a GitHub release:
 
@@ -50,6 +65,12 @@ These are the steps to publish a regular release on npm and as a GitHub release:
       ```
 
    1. Remove all lines from Dependabot.
+   1. Append this message to the end of the release notes:
+
+      ```markdown
+      Subscribe to the [Upcoming changes](https://github.com/web-platform-dx/web-features/discussions/2613) announcements thread for news about upcoming releases, such as breaking changes or major features.
+      ```
+
    1. Click **Publish release**.
 
    Publishing the GitHub release creates the tag. This triggers the [Publish web-features GitHub Actions workflows](https://github.com/web-platform-dx/web-features/blob/main/.github/workflows/publish_web-features.yml), uploads GitHub release artifacts and publishes the package to npm.
@@ -69,9 +90,14 @@ You can install these prereleases using a command such as `npm install web-featu
 ## Secrets
 
 > [!NOTE]
-> This information is for [project owners](../GOVERNANCE.md#roles-and-responsibilities).
+> This section is for [project owners](../GOVERNANCE.md#roles-and-responsibilities).
 
-Publishing requires the `NPM_TOKEN` repository secret (set via _Settings_ → _Secrets and variables_ → _Actions_).
+Publishing requires the `NPM_TOKEN` repository secret.
+
+Set the secret by running `gh secret set --repo=web-platform-dx/web-features NPM_TOKEN`,
+which prompts you to paste the secret,
+or via the repository settings (_Settings_ → _Secrets and variables_ → _Actions_).
+
 If you're replacing this token, then use the following settings:
 
 | Setting                         | Value                                                                                                      |

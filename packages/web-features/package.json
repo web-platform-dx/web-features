@@ -1,7 +1,7 @@
 {
   "name": "web-features",
   "description": "Curated list of Web platform features",
-  "version": "2.12.0",
+  "version": "2.24.0",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
@@ -25,7 +25,8 @@
     "prepare": "tsc && rm types.js && tsup ./index.ts --dts-only --format=esm --out-dir=."
   },
   "devDependencies": {
-    "tsup": "^8.3.5",
-    "typescript": "^5.7.2"
+    "@types/node": "^18.19.76",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
   }
 }

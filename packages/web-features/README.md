@@ -1,6 +1,8 @@
 # Curated list of Web platform features
 
-This package is experimental, expect frequent breaking changes!
+[web-features](https://web-platform-dx.github.io/web-features/web-features/) is the package that describes Web platform features and provides [Baseline](https://web-platform-dx.github.io/web-features/) status reports.
+
+Subscribe to the [Upcoming changes](https://github.com/web-platform-dx/web-features/discussions/2613) announcements thread for news about upcoming releases, such as breaking changes or major features.
 
 ## Usage
 
@@ -27,13 +29,18 @@ import schema from "web-features/data.schema.json" with { type: "json" };
 
 ## Rendering Baseline statuses with `web-features`
 
-If you're using `web-features` to render Baseline iconography or browser logos with support markers, then you must follow these procedures to ensure consistent usage.
+If you're using `web-features` to render Baseline iconography or browser logos with support markers, then you must follow the [name and logo usage guidelines](https://web-platform-dx.github.io/web-features/name-and-logo-usage-guidelines/).
 
 For Baseline iconography, follow this procedure for each feature:
 
 1. If `status.baseline` is `"high"`, then show an affirmative "widely available" icon.
 1. If `status.baseline` is `"low"`, then show an affirmative "newly available" icon.
 1. If `status.baseline` is `false`, then show a "limited availability" non-Baseline icon.
+
+   **Note**: All features that have the `discouraged` property are, by definition, non-Baseline, and `status.baseline` will be `false`.
+   If a feature has the `discouraged` property, consider showing a message describing the feature's discouraged status instead of Baseline iconography.
+   Showing Baseline iconography for discouraged features may confuse readers.
+
 1. If `status.baseline` is `undefined`, then **do not** show any Baseline or non-Baseline badge.
 
 For browser support iconography (that is, browser logos and checkmarks and Xs), follow this procedure for each browser:

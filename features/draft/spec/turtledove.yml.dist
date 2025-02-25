@@ -4,8 +4,44 @@
 status:
   baseline: false
   support:
-    chrome: "122"
-    chrome_android: "122"
-    edge: "122"
+    chrome: "132"
+    chrome_android: "132"
+    edge: "132"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "122"
+  #   chrome_android: "122"
+  #   edge: "122"
   - api.HTMLIFrameElement.adAuctionHeaders
+
+  # baseline: false
+  # support:
+  #   chrome: "127"
+  #   chrome_android: "127"
+  #   edge: "127"
+  - api.ProtectedAudience
+  - api.ProtectedAudience.queryFeatureSupport
+
+  # baseline: false
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  - api.Navigator.canLoadAdAuctionFencedFrame
+  - api.Navigator.clearOriginJoinedAdInterestGroups
+  - api.Navigator.createAuctionNonce
+  - api.Navigator.deprecatedRunAdAuctionEnforcesKAnonymity
+  - api.Navigator.joinAdInterestGroup
+  - api.Navigator.leaveAdInterestGroup
+  - api.Navigator.protectedAudience
+  - api.Navigator.runAdAuction
+  - api.Navigator.updateAdInterestGroups
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "132"
+  #   chrome_android: "132"
+  #   edge: "132"
+  - api.Navigator.getInterestGroupAdAuctionData

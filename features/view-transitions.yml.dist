@@ -4,9 +4,11 @@
 status:
   baseline: false
   support:
-    chrome: "124"
-    chrome_android: "124"
-    edge: "124"
+    chrome: "111"
+    chrome_android: "111"
+    edge: "111"
+    safari: "18"
+    safari_ios: "18"
 compat_features:
   # baseline: false
   # support:
@@ -21,6 +23,7 @@ compat_features:
   - css.selectors.view-transition-new
   - css.selectors.view-transition-old
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "111"
@@ -42,12 +45,38 @@ compat_features:
   #   chrome: "123"
   #   chrome_android: "123"
   #   edge: "123"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
+  - api.PageRevealEvent
   - api.Window.pagereveal_event
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "124"
   #   chrome_android: "124"
   #   edge: "124"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
+  - api.PageSwapEvent
+  - api.PageSwapEvent.activation
   - api.Window.pageswap_event
+
+  # baseline: false
+  # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
+  - api.PageRevealEvent.viewTransition
+  - api.PageSwapEvent.viewTransition
+
+  # baseline: false
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
+  - api.PageRevealEvent.PageRevealEvent
+  - api.PageSwapEvent.PageSwapEvent

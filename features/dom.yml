@@ -73,7 +73,6 @@ compat_features:
   - api.Document.characterSet
   - api.Document.childElementCount
   - api.Document.children
-  - api.Document.close
   - api.Document.compatMode
   - api.Document.contentType
   - api.Document.createAttribute
@@ -92,6 +91,7 @@ compat_features:
   - api.Document.createTreeWalker.whatToShow_filter_parameters_optional
   - api.Document.currentScript
   - api.Document.defaultView
+  - api.Document.designMode
   - api.Document.dir
   - api.Document.doctype
   - api.Document.documentElement
@@ -112,7 +112,6 @@ compat_features:
   - api.Document.lastElementChild
   - api.Document.lastModified
   - api.Document.links
-  - api.Document.open
   - api.Document.plugins
   - api.Document.prepend
   - api.Document.querySelector
@@ -152,13 +151,20 @@ compat_features:
   - api.Element.children
   - api.Element.classList
   - api.Element.className
+  - api.Element.clientHeight
+  - api.Element.clientLeft
+  - api.Element.clientTop
+  - api.Element.clientWidth
   - api.Element.closest
+  - api.Element.currentCSSZoom
   - api.Element.firstElementChild
   - api.Element.getAttribute
   - api.Element.getAttributeNS
   - api.Element.getAttributeNames
   - api.Element.getAttributeNode
   - api.Element.getAttributeNodeNS
+  - api.Element.getBoundingClientRect
+  - api.Element.getClientRects
   - api.Element.getElementsByClassName
   - api.Element.getElementsByTagName
   - api.Element.getElementsByTagName.all_elements_selector
@@ -204,6 +210,11 @@ compat_features:
   - api.HTMLElement.dir
   - api.HTMLElement.hidden
   - api.HTMLElement.innerText
+  - api.HTMLElement.offsetHeight
+  - api.HTMLElement.offsetLeft
+  - api.HTMLElement.offsetParent
+  - api.HTMLElement.offsetTop
+  - api.HTMLElement.offsetWidth
   - api.HTMLElement.outerText
   - api.NamedNodeMap
   - api.NamedNodeMap.getNamedItem

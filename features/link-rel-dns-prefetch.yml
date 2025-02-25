@@ -1,0 +1,6 @@
+name: '<link rel="dns-prefetch">'
+description: The `rel="dns-prefetch"` attribute for the `<link>` HTML element is a hint to the browser that the page or user is likely to request resources from another domain, so the browser should preemptively resolve DNS for the `href` value's domain.
+spec: https://html.spec.whatwg.org/multipage/links.html#link-type-dns-prefetch
+caniuse: link-rel-dns-prefetch
+compat_features:
+  - html.elements.link.rel.dns-prefetch

@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "125"
-    chrome_android: "125"
-    edge: "125"
+    chrome: "133"
+    chrome_android: "133"
+    edge: "133"
 compat_features:
   # baseline: false
   # support:
@@ -20,7 +20,6 @@ compat_features:
   - http.headers.Attribution-Reporting-Support
   - http.headers.Permissions-Policy.attribution-reporting
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "125"
@@ -30,8 +29,18 @@ compat_features:
   - api.HTMLImageElement.attributionSrc
   - api.HTMLScriptElement.attributionSrc
   - api.Request.Request.init_attributionReporting_parameter
+  - api.Window.open.features_parameter_attributionsrc
   - api.XMLHttpRequest.setAttributionReporting
   - api.fetch.init_attributionReporting_parameter
   - html.elements.a.attributionsrc
+  - html.elements.area.attributionsrc
   - html.elements.img.attributionsrc
   - html.elements.script.attributionsrc
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "133"
+  #   chrome_android: "133"
+  #   edge: "133"
+  - api.HTMLAreaElement.attributionSrc
