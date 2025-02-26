@@ -1,4 +1,4 @@
-draft_date: 2025-02-21
+draft_date: 2025-02-24
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -8,7 +8,6 @@ compat_features:
   - api.DedicatedWorkerGlobalScope.name
   - api.Document.featurePolicy
   - api.Document.moveBefore
-  - api.Document.writeln.accepts_TrustedHTML
   - api.ElementInternals.shadowRoot
   - api.ErrorEvent
   - api.ErrorEvent.ErrorEvent
@@ -41,7 +40,6 @@ compat_features:
   - api.HTMLDialogElement.closedBy
   - api.HTMLDialogElement.requestClose
   - api.HTMLElement.command_event
-  - api.HTMLElement.popover.hint
   - api.HTMLElement.showPopover.source
   - api.HTMLElement.showPopover.source.implicit_anchor_reference
   - api.HTMLElement.togglePopover.source
@@ -194,7 +192,6 @@ compat_features:
   - html.global_attributes.draggable
   - html.global_attributes.hidden
   - html.global_attributes.id
-  - html.global_attributes.popover.hint
   - http.headers.Cross-Origin-Embedder-Policy
   - http.headers.Cross-Origin-Embedder-Policy.credentialless
   - http.headers.Cross-Origin-Opener-Policy
@@ -464,7 +461,6 @@ compat_features:
 #   - api.Document.DOMContentLoaded_event
 #   - api.Document.activeElement
 #   - api.Document.body
-#   - api.Document.close
 #   - api.Document.currentScript
 #   - api.Document.defaultView
 #   - api.Document.designMode
@@ -477,14 +473,12 @@ compat_features:
 #   - api.Document.images
 #   - api.Document.lastModified
 #   - api.Document.links
-#   - api.Document.open
 #   - api.Document.plugins
 #   - api.Document.readyState
 #   - api.Document.readystatechange_event
 #   - api.Document.referrer
 #   - api.Document.scripts
 #   - api.Document.title
-#   - api.Document.writeln
 #   - api.Element.innerHTML
 #   - api.Element.insertAdjacentHTML
 #   - api.Element.outerHTML
@@ -553,6 +547,11 @@ compat_features:
 #   - api.DedicatedWorkerGlobalScope.messageerror_event
 #   - api.MessagePort.messageerror_event
 #   - api.Window.messageerror_event
+# - document.write():
+#   - api.Document.close
+#   - api.Document.open
+#   - api.Document.writeln
+#   - api.Document.writeln.accepts_TrustedHTML
 # - Cookies:
 #   - api.Document.cookie
 # - Page visibility:
@@ -1135,6 +1134,9 @@ compat_features:
 # - Lang:
 #   - api.HTMLElement.lang
 #   - html.global_attributes.lang
+# - popover="hint":
+#   - api.HTMLElement.popover.hint
+#   - html.global_attributes.popover.hint
 # - Spellcheck:
 #   - api.HTMLElement.spellcheck
 #   - html.global_attributes.spellcheck
