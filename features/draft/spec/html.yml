@@ -1,4 +1,4 @@
-draft_date: 2025-02-12
+draft_date: 2025-02-24
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -24,6 +24,7 @@ compat_features:
   - api.HTMLBaseElement.href.forbid_special_characters
   - api.HTMLButtonElement.command
   - api.HTMLButtonElement.commandForElement
+  - api.HTMLButtonElement.popoverTargetElement.implicit_anchor_reference
   - api.HTMLCanvasElement.getContext.2d_context
   - api.HTMLCanvasElement.getContext.bitmaprenderer_context
   - api.HTMLCanvasElement.getContext.bitmaprenderer_context.options_alpha_parameter
@@ -39,12 +40,16 @@ compat_features:
   - api.HTMLDialogElement.closedBy
   - api.HTMLDialogElement.requestClose
   - api.HTMLElement.command_event
-  - api.HTMLElement.popover.hint
+  - api.HTMLElement.showPopover.source
+  - api.HTMLElement.showPopover.source.implicit_anchor_reference
+  - api.HTMLElement.togglePopover.source
+  - api.HTMLElement.togglePopover.source.implicit_anchor_reference
   - api.HTMLIFrameElement.featurePolicy
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes.auto
   - api.HTMLInputElement.alpha
   - api.HTMLInputElement.colorSpace
+  - api.HTMLInputElement.popoverTargetElement.implicit_anchor_reference
   - api.HTMLInputElement.showPicker.autocomplete_input
   - api.HTMLInputElement.showPicker.datalist_input
   - api.HTMLInputElement.showPicker.month_input
@@ -153,6 +158,7 @@ compat_features:
   - api.setTimeout.worker_support
   - html.elements.button.command
   - html.elements.button.commandfor
+  - html.elements.button.popovertarget.implicit_anchor_reference
   - html.elements.dialog.closedby
   - html.elements.form.autocomplete.new-password
   - html.elements.form.autocomplete.one-time-code
@@ -170,6 +176,7 @@ compat_features:
   - html.elements.input.alpha
   - html.elements.input.autocomplete
   - html.elements.input.colorspace
+  - html.elements.input.popovertarget.implicit_anchor_reference
   - html.elements.link.rel.icon
   - html.elements.script.type.importmap.integrity
   - html.elements.script.type.importmap.multiple_import_maps
@@ -185,7 +192,6 @@ compat_features:
   - html.global_attributes.draggable
   - html.global_attributes.hidden
   - html.global_attributes.id
-  - html.global_attributes.popover.hint
   - http.headers.Cross-Origin-Embedder-Policy
   - http.headers.Cross-Origin-Embedder-Policy.credentialless
   - http.headers.Cross-Origin-Opener-Policy
@@ -455,7 +461,6 @@ compat_features:
 #   - api.Document.DOMContentLoaded_event
 #   - api.Document.activeElement
 #   - api.Document.body
-#   - api.Document.close
 #   - api.Document.currentScript
 #   - api.Document.defaultView
 #   - api.Document.designMode
@@ -468,14 +473,12 @@ compat_features:
 #   - api.Document.images
 #   - api.Document.lastModified
 #   - api.Document.links
-#   - api.Document.open
 #   - api.Document.plugins
 #   - api.Document.readyState
 #   - api.Document.readystatechange_event
 #   - api.Document.referrer
 #   - api.Document.scripts
 #   - api.Document.title
-#   - api.Document.writeln
 #   - api.Element.innerHTML
 #   - api.Element.insertAdjacentHTML
 #   - api.Element.outerHTML
@@ -544,6 +547,11 @@ compat_features:
 #   - api.DedicatedWorkerGlobalScope.messageerror_event
 #   - api.MessagePort.messageerror_event
 #   - api.Window.messageerror_event
+# - document.write():
+#   - api.Document.close
+#   - api.Document.open
+#   - api.Document.writeln
+#   - api.Document.writeln.accepts_TrustedHTML
 # - Cookies:
 #   - api.Document.cookie
 # - Page visibility:
@@ -1126,6 +1134,9 @@ compat_features:
 # - Lang:
 #   - api.HTMLElement.lang
 #   - html.global_attributes.lang
+# - popover="hint":
+#   - api.HTMLElement.popover.hint
+#   - html.global_attributes.popover.hint
 # - Spellcheck:
 #   - api.HTMLElement.spellcheck
 #   - html.global_attributes.spellcheck
