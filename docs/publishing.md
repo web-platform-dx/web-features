@@ -1,9 +1,24 @@
-# Publishing
+# Publishing releases
+
+## Announcements
+
+web-features uses a GitHub Discussions thread to give notice of breaking changes and other major changes to interested web-features consumers.
+
+If you want to receive these announcements, subscribe to the [Upcoming changes](https://github.com/web-platform-dx/web-features/discussions/2613) announcements thread or to all discussions through the repository's _Watch_ menu.
+
+> [!NOTE]
+> The remainder of this section is for [project owners](../GOVERNANCE.md#roles-and-responsibilities).
+
+If you're planning to publish a breaking release (see [Regular releases](#regular-releases)) in the next two weeks, then post a message to the [Upcoming changes](https://github.com/web-platform-dx/web-features/discussions/2613) announcements thread.
+Include a summary of the expected changes, citing relevant issues and pull requests.
+
+Note that an announcement is not a substitute for seeking consumer feedback early in the design and implementation process.
+Announcements should not provoke surprising responses from consumers.
 
 ## Regular releases
 
 > [!NOTE]
-> This information is for [project owners](../GOVERNANCE.md#roles-and-responsibilities).
+> This section is for [project owners](../GOVERNANCE.md#roles-and-responsibilities).
 
 These are the steps to publish a regular release on npm and as a GitHub release:
 
@@ -29,7 +44,7 @@ These are the steps to publish a regular release on npm and as a GitHub release:
    When the workflow finishes, your review is requested on a new release pull request.
 
 1. Review the PR.
-   
+
    1. Close and reopen the release PR, to allow the tests to run.
    1. Review and approve the changes.
    1. When you're ready to complete the remaining steps, merge the PR.
@@ -50,13 +65,19 @@ These are the steps to publish a regular release on npm and as a GitHub release:
       ```
 
    1. Remove all lines from Dependabot.
+   1. Append this message to the end of the release notes:
+
+      ```markdown
+      Subscribe to the [Upcoming changes](https://github.com/web-platform-dx/web-features/discussions/2613) announcements thread for news about upcoming releases, such as breaking changes or major features.
+      ```
+
    1. Click **Publish release**.
 
    Publishing the GitHub release creates the tag. This triggers the [Publish web-features GitHub Actions workflows](https://github.com/web-platform-dx/web-features/blob/main/.github/workflows/publish_web-features.yml), uploads GitHub release artifacts and publishes the package to npm.
 
 1. Remove the "[major version required][major-version]" and "[minor version required][minor-version]" labels from any pull requests that were included in the release.
 
-1. (*Optional*) If this release contained schema changes, notify highly-visible donwstream consumers, such as Can I Use (@Fryd), MDN (@LeoMcA), or webstatus.dev (@jcscottiii).
+1. (_Optional_) If this release contained schema changes, notify highly-visible downstream consumers, such as Can I Use (@Fyrd), MDN (@LeoMcA), or webstatus.dev (@jcscottiii).
 
 [major-version]: https://github.com/web-platform-dx/web-features/pulls?q=is%3Apr+is%3Amerged+label%3A%22major+version+required%22+sort%3Aupdated-desc
 [minor-version]: https://github.com/web-platform-dx/web-features/pulls?q=is%3Apr+is%3Amerged+label%3A%22minor+version+required%22+sort%3Aupdated-desc
@@ -69,16 +90,21 @@ You can install these prereleases using a command such as `npm install web-featu
 ## Secrets
 
 > [!NOTE]
-> This information is for [project owners](../GOVERNANCE.md#roles-and-responsibilities).
+> This section is for [project owners](../GOVERNANCE.md#roles-and-responsibilities).
 
-Publishing requires the `NPM_TOKEN` repository secret (set via _Settings_ → _Secrets and variables_ → _Actions_).
+Publishing requires the `NPM_TOKEN` repository secret.
+
+Set the secret by running `gh secret set --repo=web-platform-dx/web-features NPM_TOKEN`,
+which prompts you to paste the secret,
+or via the repository settings (_Settings_ → _Secrets and variables_ → _Actions_).
+
 If you're replacing this token, then use the following settings:
 
-| Setting                          | Value                                                                                                      |
-| -------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| Token type                       | _Granular Access Token_                                                                                    |
-| Expiration                       | The first day of the next quarter (1 January, 1 April, 1 July, or 1 October) or the first weekday after it |
-| Packages and scopes permsissions | _Read and write_                                                                                           |
-| Select packages                  | _Only select packages and scopes_                                                                          |
-| Select packages and scopes       | `compute-baseline` and `web-features`                                                                      |
-| Organizations                    | _No access_                                                                                                |
+| Setting                         | Value                                                                                                      |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Token type                      | _Granular Access Token_                                                                                    |
+| Expiration                      | The first day of the next quarter (1 January, 1 April, 1 July, or 1 October) or the first weekday after it |
+| Packages and scopes permissions | _Read and write_                                                                                           |
+| Select packages                 | _Only select packages and scopes_                                                                          |
+| Select packages and scopes      | `compute-baseline` and `web-features`                                                                      |
+| Organizations                   | _No access_                                                                                                |

@@ -1,0 +1,21 @@
+name: Gamepad VR hands and poses
+description: The `hand` and `pose` properties of a `Gamepad` object represent the position in space and the hand that WebVR controllers are held in.
+spec: https://w3c.github.io/gamepad/extensions.html
+group: gamepad
+status:
+  compute_from:
+    - api.Gamepad.hand
+    - api.Gamepad.pose
+compat_features:
+  - api.Gamepad.hand
+  - api.Gamepad.pose
+  - api.GamepadPose
+  - api.GamepadPose.angularAcceleration
+  - api.GamepadPose.angularVelocity
+  - api.GamepadPose.hasOrientation
+  - api.GamepadPose.hasPosition
+  - api.GamepadPose.linearAcceleration
+  - api.GamepadPose.linearVelocity
+  - api.GamepadPose.orientation
+  - api.GamepadPose.position
+  - api.GamepadPose.secure_context_required

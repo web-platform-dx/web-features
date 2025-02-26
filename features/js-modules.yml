@@ -6,15 +6,22 @@ spec:
   - https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html#sec-modules
 snapshot: ecmascript-2015
 group: js-modules
+status:
+  compute_from:
+    - html.elements.script.type.module
+    - html.elements.script.nomodule
+    - javascript.statements.export
+    - javascript.statements.import
 compat_features:
-  # TODO: Consider notes or partial implementation for Safari 10.1 due to the
-  # lack of support for nomodule. It's important for fallback behavior, but in
-  # the long term not important if JS modules support is completely ubiquitous.
   - html.elements.script.nomodule
   - html.elements.script.type.module
   - javascript.statements.export
   - javascript.statements.export.default
+  - javascript.statements.export.namespace
+  - javascript.statements.import.import_attributes
+  - javascript.statements.import.worklet_support
   - javascript.statements.import
-  # Excluded because SVG is not essential for using JS modules, the 99% use case
-  # would be in HTML even if SVG was perfectly supported.
-  # - svg.elements.script.type.module
+  - javascript.operators.import
+  - javascript.operators.import_meta
+  - javascript.operators.import_meta.resolve
+  - svg.elements.script.type.module

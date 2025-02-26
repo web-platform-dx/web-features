@@ -33,18 +33,20 @@ export interface FeatureData {
     description: string;
     /** Short description of the feature, as an HTML string */
     description_html: string;
-    /** Specification */
-    spec: specification_url | [specification_url, specification_url, ...specification_url[]];
-    /** Group identifier */
+    /** Specification URL(s) */
+    spec: string | [string, string, ...string[]];
+    /** Group identifier(s) */
     group?: string | [string, string, ...string[]];
-    /** Snapshot identifier */
+    /** Snapshot identifier(s) */
     snapshot?: string | [string, string, ...string[]];
-    /** caniuse.com identifier */
+    /** caniuse.com identifier(s) */
     caniuse?: string | [string, string, ...string[]];
     /** Whether a feature is considered a "baseline" web platform feature and when it achieved that status */
     status: SupportStatus;
     /** Sources of support data for this feature */
     compat_features?: string[];
+    /** Whether developers are formally discouraged from using this feature */
+    discouraged?: Discouraged;
 }
 
 type BrowserIdentifier = "chrome" | "chrome_android" | "edge" | "firefox" | "firefox_android" | "safari" | "safari_ios";
@@ -69,10 +71,12 @@ interface SupportStatus extends Status {
     by_compat_key?: Record<string, Status>
 }
 
-/** Specification URL
- * @format uri
-*/
-type specification_url = string;
+interface Discouraged {
+    /** Links to a formal discouragement notice, such as specification text, intent-to-unship, etc. */
+    according_to: string[];
+    /** IDs for features that substitute some or all of this feature's utility */
+    alternatives?: (keyof WebFeaturesData["features"])[];
+}
 
 export interface GroupData {
     /** Short name */
@@ -85,5 +89,5 @@ export interface SnapshotData {
     /** Short name */
     name: string;
     /** Specification */
-    spec: specification_url;
+    spec: string;
 }

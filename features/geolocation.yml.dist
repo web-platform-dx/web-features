@@ -88,6 +88,18 @@ compat_features:
   - api.GeolocationPositionError.secure_context_required
 
   # baseline: low
+  # baseline_low_date: 2022-09-12
+  # support:
+  #   chrome: "43"
+  #   chrome_android: "43"
+  #   edge: "79"
+  #   firefox: "46"
+  #   firefox_android: "46"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - api.Permissions.permission_geolocation
+
+  # baseline: low
   # baseline_low_date: 2024-09-16
   # support:
   #   chrome: "126"

@@ -1,0 +1,12 @@
+name: String builtins (WebAssembly)
+description: The WebAssembly builtin string functions mirror a subset of the JavaScript `String` API and adapt it to be efficiently callable without JavaScript glue code.
+spec: https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md
+group: webassembly
+compat_features:
+  - webassembly.jsStringBuiltins
+  - webassembly.api.Module.Module.compile_options
+  - webassembly.api.compile_static.compile_options
+  - webassembly.api.compileStreaming_static.compile_options
+  - webassembly.api.instantiate_static.compile_options
+  - webassembly.api.instantiateStreaming_static.compile_options
+  - webassembly.api.validate_static.compile_options

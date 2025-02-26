@@ -308,8 +308,9 @@ compat_features:
   - api.Performance.mark.returns_performancemark
   - api.PerformanceMark.detail
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-07-26
+  # baseline_high_date: 2025-01-26
   # support:
   #   chrome: "77"
   #   chrome_android: "77"
@@ -320,8 +321,9 @@ compat_features:
   #   safari_ios: "14.5"
   - api.Performance.measure.measureOptions_parameter
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-07-26
+  # baseline_high_date: 2025-01-26
   # support:
   #   chrome: "78"
   #   chrome_android: "78"

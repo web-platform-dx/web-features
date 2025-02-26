@@ -1,0 +1,26 @@
+name: Magnetometer
+description: The `Magnetometer` API reads magnetic field sensor data from the device's magnetometer.
+spec: https://w3c.github.io/magnetometer/
+group: sensors
+compat_features:
+  - api.Magnetometer
+  - api.Magnetometer.Magnetometer
+  - api.Magnetometer.x
+  - api.Magnetometer.y
+  - api.Magnetometer.z
+  - api.Permissions.permission_magnetometer
+  - html.elements.iframe.allow.magnetometer
+  - http.headers.Permissions-Policy.magnetometer
+# Enable when overlapping keys are allowed, https://github.com/web-platform-dx/web-features/issues/1173
+#  - api.Sensor
+#  - api.Sensor.activate_event
+#  - api.Sensor.activated
+#  - api.Sensor.error_event
+#  - api.Sensor.hasReading
+#  - api.Sensor.reading_event
+#  - api.Sensor.start
+#  - api.Sensor.stop
+#  - api.Sensor.timestamp
+#  - api.SensorErrorEvent
+#  - api.SensorErrorEvent.SensorErrorEvent
+#  - api.SensorErrorEvent.error

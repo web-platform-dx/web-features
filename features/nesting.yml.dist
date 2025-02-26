@@ -40,11 +40,15 @@ compat_features:
   #   safari_ios: "17.2"
   - css.selectors.nesting
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2024-12-11
   # support:
   #   chrome: "130"
   #   chrome_android: "130"
   #   edge: "130"
   #   firefox: "132"
+  #   firefox_android: "132"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
   - api.CSSNestedDeclarations
   - api.CSSNestedDeclarations.style

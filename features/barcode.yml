@@ -1,0 +1,8 @@
+name: Barcode detector
+description: The `BarcodeDetector` API recognizes various barcode formats in images.
+spec: https://wicg.github.io/shape-detection-api/#barcode-detection-api
+compat_features:
+  - api.BarcodeDetector
+  - api.BarcodeDetector.BarcodeDetector
+  - api.BarcodeDetector.detect
+  - api.BarcodeDetector.getSupportedFormats_static

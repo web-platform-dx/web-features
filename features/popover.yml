@@ -8,6 +8,10 @@ group: html
 # References:
 # - https://github.com/mdn/browser-compat-data/issues/22927
 # - https://bugs.webkit.org/show_bug.cgi?id=267688
+status:
+  compute_from:
+    - api.HTMLElement.popover
+    - api.HTMLElement.togglePopover.returns_boolean
 compat_features:
   - api.HTMLButtonElement.popoverTargetAction
   - api.HTMLButtonElement.popoverTargetElement
@@ -16,7 +20,10 @@ compat_features:
   - api.HTMLElement.hidePopover
   - api.HTMLElement.popover
   - api.HTMLElement.showPopover
+  - api.HTMLElement.showPopover.source
   - api.HTMLElement.togglePopover
+  - api.HTMLElement.togglePopover.returns_boolean
+  - api.HTMLElement.togglePopover.source
   - api.HTMLElement.toggle_event.popover_elements
   - api.HTMLInputElement.popoverTargetAction
   - api.HTMLInputElement.popoverTargetElement

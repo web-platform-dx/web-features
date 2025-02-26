@@ -52,6 +52,13 @@ compat_features:
   #   edge: "79"
   - api.Document.featurePolicy
 
+  # baseline: false
+  # support:
+  #   chrome: "133"
+  #   chrome_android: "133"
+  #   edge: "133"
+  - api.Document.moveBefore
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}

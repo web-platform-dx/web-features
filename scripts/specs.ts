@@ -76,6 +76,46 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/WebAssembly/threads/blob/main/proposals/threads/Overview.md",
         "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://github.com/WebAssembly/function-references/blob/main/proposals/function-references/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://github.com/WebAssembly/js-string-builtins/blob/main/proposals/js-string-builtins/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://github.com/WebAssembly/memory64/blob/main/proposals/memory64/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://github.com/WebAssembly/exception-handling/blob/main/proposals/exception-handling/legacy/Exceptions.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://immersive-web.github.io/webvr/spec/1.1/",
+        "Allowed because this is the legacy spec that defines WebVR."
+    ],
+    [
+        "https://github.com/tc39/proposal-import-attributes/tree/abca60286360b47f9a6be25a28f489c2cb157beb",
+        "Allowed because import assertions were replaced in-place by import attributes. Remove this exception when javascript.statements.import.import_assertions is dropped from BCD in June 2026."
+    ],
+    [
+        "https://open-ui.org/components/customizableselect/",
+        "Allowed because customizable select doesn't have a spec URL yet. And even when it does, it will be defined in multiple HTML, CSS, and ARIA specs. This OpenUI explainer is the only central place that currently defines the component. Remove this exception when customizable select has one or more spec URLs. See: #10557, #10586, #10629, #10633, and #10670 at github.com/whatwg/html/, #10691, #10865, #10936, and #10986 at github.com/w3c/csswg-drafts/, #2369, #2344, and #2360 at github.com/w3c/aria/, and #528 at github.com/w3c/html-aria"
+    ],
+    [
+        "https://www.w3.org/TR/DOM-Level-2-Style/",
+        "Allowed because the css-object-model-discouraged feature points to it."
+    ],
+    [
+        "https://w3c.github.io/editing/docs/execCommand/",
+        "Allowed because the execCommand feature points to it, to inform users that the feature is obsolete. The spec exists in a draft state only and will never move out of draft. It serves as a reference."
+    ],
+    [
+        "https://github.com/tc39/proposal-regexp-legacy-features",
+        "Allowed because it's the most spec-like thing that exists for discouraged RegExp static properties. Remove when https://github.com/tc39/ecma262/issues/137 is resolved."
     ]
 ];
 

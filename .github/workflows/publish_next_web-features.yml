@@ -68,20 +68,44 @@ jobs:
           VERSION: ${{ steps.version.outputs.VERSION }}
           TIMESTAMP: ${{ steps.timestamp_and_hash.outputs.TIMESTAMP }}
           SHORT_HASH: ${{ steps.timestamp_and_hash.outputs.SHORT_HASH }}
-      - run: npm publish --tag ${{ env.dist_tag }}
+      - if: ${{ env.NODE_AUTH_TOKEN }}
+        run: npm publish --tag ${{ env.dist_tag }}
         working-directory: ${{ env.package_dir }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      - name: Set existing release to draft
+        run: gh release edit --draft "$TAG"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ env.dist_tag }}
+
+      - name: Update the tag
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag --force "$TAG"
+          git push --force origin "$TAG"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ env.dist_tag }}
+
       - name: Publish pre-release on GitHub
-        uses: softprops/action-gh-release@c062e08bd532815e2082a85e87e3ef29c3e6d191 #v2.0.8
-        with:
-          files: |
+        run: |
+          gh release edit \
+            --verify-tag \
+            --title "$PACKAGE@$TAG" \
+            --notes "$NOTES" \
+            --prerelease \
+            --draft=false \
+            "$TAG"
+          gh release upload --clobber "$TAG" $ARTIFACTS
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PACKAGE: ${{ env.package }}
+          TAG: ${{ env.dist_tag }}
+          NOTES: This is a continuously-updated prerelease generated from `main` (currently at ${{ steps.timestamp_and_hash.outputs.SHORT_HASH }}).
+          ARTIFACTS: >
             schemas/data.schema.json
             ${{ env.package_dir }}/data.json
             data.extended.json
-          prerelease: true
-          name: web-features@next
-          body: This is a continuously-updated prerelease generated from `main` (currently at ${{ steps.timestamp_and_hash.outputs.SHORT_HASH }}).
-          tag_name: ${{ env.dist_tag }}
-          fail_on_unmatched_files: true

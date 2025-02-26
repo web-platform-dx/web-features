@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "127"
+    chrome_android: "127"
 compat_features:
   # baseline: false
   # support:
@@ -45,6 +47,7 @@ compat_features:
   #   chrome_android: "110"
   #   edge: "110"
   - http.headers.Content-Security-Policy.script-src.inline-speculation-rules
+  - http.headers.Sec-Purpose.speculationrules
 
   # baseline: false
   # support:
@@ -79,11 +82,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "127"
+  #   chrome_android: "127"
+  #   edge: "127"
+  - html.elements.script.type.speculationrules.expects_no_vary_search
+
+  # baseline: false
+  # support:
   #   chrome: "110"
   #   chrome_android: "109"
   - html.elements.script.type.speculationrules.requires.anonymous-client-ip-when-cross-origin
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - html.elements.script.type.speculationrules.expects_no_vary_search

@@ -5,8 +5,10 @@ status:
   baseline: false
   support:
     chrome: "113"
+    chrome_android: "121"
     edge: "113"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "113"
@@ -247,6 +249,10 @@ compat_features:
   - api.GPUUncapturedErrorEvent.error
   - api.GPUValidationError
   - api.GPUValidationError.GPUValidationError
+  - api.HTMLCanvasElement.getContext.webgpu_context
+  - api.Navigator.gpu
+  - api.OffscreenCanvas.getContext.webgpu_context
+  - api.WorkerNavigator.gpu
 
   # baseline: false
   # support:
@@ -396,16 +402,15 @@ compat_features:
   - api.GPUDevice.createRenderPipelineAsync.validates_depth_bias_for_line_and_point_topologies
   - api.GPUSupportedFeatures.feature_clip-distances
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
-  #   chrome: "113"
-  #   edge: "113"
-  - api.HTMLCanvasElement.getContext.webgpu_context
-  - api.Navigator.gpu
-  - api.OffscreenCanvas.getContext.webgpu_context
-  - api.WorkerNavigator.gpu
+  #   chrome: "132"
+  #   chrome_android: "132"
+  #   edge: "132"
+  - api.GPUDevice.adapterInfo
 
   # baseline: false
   # support: {}
+  - api.GPUAdapterInfo.subgroupMaxSize
+  - api.GPUAdapterInfo.subgroupMinSize
   - api.GPUSupportedFeatures.feature_float32-blendable
