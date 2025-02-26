@@ -1,0 +1,43 @@
+name: JavaScript built-ins (legacy)
+description: 
+spec: https://tc39.es/ecma262/multipage/
+group: javascript
+discouraged:
+  according_to:
+    - https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers
+    - https://tc39.es/ecma262/#sec-object.prototype-legacy-accessor-methods
+    - https://tc39.es/ecma262/#sec-object.prototype.__proto__
+compat_features:
+  # The following properties are legacy according to:
+  # https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers
+  - javascript.builtins.escape
+  - javascript.builtins.unescape
+  - javascript.builtins.String.anchor
+  - javascript.builtins.String.big
+  - javascript.builtins.String.blink
+  - javascript.builtins.String.bold
+  - javascript.builtins.String.fixed
+  - javascript.builtins.String.fontcolor
+  - javascript.builtins.String.fontsize
+  - javascript.builtins.String.italics
+  - javascript.builtins.String.link
+  - javascript.builtins.String.small
+  - javascript.builtins.String.strike
+  - javascript.builtins.String.sub
+  - javascript.builtins.String.substr
+  - javascript.builtins.String.sup
+  - javascript.builtins.Date.getYear
+  - javascript.builtins.Date.setYear
+  - javascript.builtins.Date.toGMTString
+  - javascript.builtins.RegExp.compile
+
+  # The following properties are legacy according to:
+  # https://tc39.es/ecma262/#sec-object.prototype-legacy-accessor-methods
+  - javascript.builtins.Object.defineGetter
+  - javascript.builtins.Object.defineSetter
+  - javascript.builtins.Object.lookupGetter
+  - javascript.builtins.Object.lookupSetter
+
+  # The following properties are legacy according to:
+  # https://tc39.es/ecma262/#sec-object.prototype.__proto__
+  - javascript.builtins.Object.proto
