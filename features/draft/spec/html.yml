@@ -1,8 +1,12 @@
-draft_date: 2025-02-24
+draft_date: 2025-02-26
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
+  - api.CommandEvent
+  - api.CommandEvent.CommandEvent
+  - api.CommandEvent.command
+  - api.CommandEvent.source
   - api.DedicatedWorkerGlobalScope
   - api.DedicatedWorkerGlobalScope.close
   - api.DedicatedWorkerGlobalScope.name
@@ -24,7 +28,6 @@ compat_features:
   - api.HTMLBaseElement.href.forbid_special_characters
   - api.HTMLButtonElement.command
   - api.HTMLButtonElement.commandForElement
-  - api.HTMLButtonElement.popoverTargetElement.implicit_anchor_reference
   - api.HTMLCanvasElement.getContext.2d_context
   - api.HTMLCanvasElement.getContext.bitmaprenderer_context
   - api.HTMLCanvasElement.getContext.bitmaprenderer_context.options_alpha_parameter
@@ -40,16 +43,11 @@ compat_features:
   - api.HTMLDialogElement.closedBy
   - api.HTMLDialogElement.requestClose
   - api.HTMLElement.command_event
-  - api.HTMLElement.showPopover.source
-  - api.HTMLElement.showPopover.source.implicit_anchor_reference
-  - api.HTMLElement.togglePopover.source
-  - api.HTMLElement.togglePopover.source.implicit_anchor_reference
   - api.HTMLIFrameElement.featurePolicy
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes.auto
   - api.HTMLInputElement.alpha
   - api.HTMLInputElement.colorSpace
-  - api.HTMLInputElement.popoverTargetElement.implicit_anchor_reference
   - api.HTMLInputElement.showPicker.autocomplete_input
   - api.HTMLInputElement.showPicker.datalist_input
   - api.HTMLInputElement.showPicker.month_input
@@ -158,7 +156,6 @@ compat_features:
   - api.setTimeout.worker_support
   - html.elements.button.command
   - html.elements.button.commandfor
-  - html.elements.button.popovertarget.implicit_anchor_reference
   - html.elements.dialog.closedby
   - html.elements.form.autocomplete.new-password
   - html.elements.form.autocomplete.one-time-code
@@ -176,7 +173,6 @@ compat_features:
   - html.elements.input.alpha
   - html.elements.input.autocomplete
   - html.elements.input.colorspace
-  - html.elements.input.popovertarget.implicit_anchor_reference
   - html.elements.link.rel.icon
   - html.elements.script.type.importmap.integrity
   - html.elements.script.type.importmap.multiple_import_maps
@@ -941,8 +937,10 @@ compat_features:
 #   - api.HTMLElement.hidePopover
 #   - api.HTMLElement.popover
 #   - api.HTMLElement.showPopover
+#   - api.HTMLElement.showPopover.source
 #   - api.HTMLElement.togglePopover
 #   - api.HTMLElement.togglePopover.returns_boolean
+#   - api.HTMLElement.togglePopover.source
 #   - api.HTMLElement.toggle_event.popover_elements
 #   - api.HTMLInputElement.popoverTargetAction
 #   - api.HTMLInputElement.popoverTargetElement
@@ -956,6 +954,13 @@ compat_features:
 #   - html.elements.input.popovertarget
 #   - html.elements.input.popovertargetaction
 #   - html.global_attributes.popover
+# - Anchor positioning:
+#   - api.HTMLButtonElement.popoverTargetElement.implicit_anchor_reference
+#   - api.HTMLElement.showPopover.source.implicit_anchor_reference
+#   - api.HTMLElement.togglePopover.source.implicit_anchor_reference
+#   - api.HTMLInputElement.popoverTargetElement.implicit_anchor_reference
+#   - html.elements.button.popovertarget.implicit_anchor_reference
+#   - html.elements.input.popovertarget.implicit_anchor_reference
 # - <canvas>:
 #   - api.HTMLCanvasElement
 #   - api.HTMLCanvasElement.getContext
