@@ -20,7 +20,18 @@ Announcements should not provoke surprising responses from consumers.
 > [!NOTE]
 > This section is for [project owners](../GOVERNANCE.md#roles-and-responsibilities).
 
-These are the steps to publish a regular release on npm and as a GitHub release:
+These are the steps to publish a regular release on npm and as a GitHub release.
+Typically, a maintainer follows these steps shortly after merging Dependabot PR that upgrades `@mdn/browser-compat-data`.
+
+> [!TIP]
+> Running these commands at the start of the release process or after you've opened the PR version bump PR, can speed up this process:
+> 
+> ```sh
+> $ git checkout PREVIOUS_RELEASE_TAG && npm install && npx tsx ./scripts/stats.ts
+> $ git fetch origin main && git checkout origin/main && npm install && npx tsx ./scripts/stats.ts
+> ```
+
+To publish a release:
 
 1. Determine if it should be a major, minor, or patch release.
 
@@ -29,7 +40,7 @@ These are the steps to publish a regular release on npm and as a GitHub release:
    - Previously valid references are invalid (for example, a group ID is renamed or a feature ID is removed).
    - Types have incompatibly narrowed, widened, or otherwise changed (for example, a string value now accepts an array of strings or an ID has become a URL). Changes to `data.schema.json` often indicates a major or minor version is required.
 
-   A minor version is required for releases that contain only additions, such as new feature or new properties on existing types.
+   A minor version is required for releases that contain only additions, such as new features or new properties on existing types.
 
    Patch versions are required for releases that contain only routine data changes, such as updates to `compat_features` arrays or `support` objects.
 
@@ -54,6 +65,10 @@ These are the steps to publish a regular release on npm and as a GitHub release:
    1. Go to https://github.com/web-platform-dx/web-features/releases/new to start a new draft release.
    1. Fill in the tag name `vX.Y.Z` manually as both the tag and release title.
    1. For minor releases, add a `## What's New` section to the top of the release notes, before all other sections.
+
+      1. In this section, add a line `* X features`, where `X` is the number of features new in this release.
+      1. In this section, add a line `* Y% coverage of BCD`, where `Y` is the coverage percentage for this release.
+
    1. For major releases, add a `## Breaking Changes` section to the top of the release notes, before all other sections.
    1. Click **Generate release notes**.
    1. In the release description, find unescaped `<` characters and make sure that HTML elements are enclosed with backticks.
@@ -64,7 +79,12 @@ These are the steps to publish a regular release on npm and as a GitHub release:
       / (?<!`)<(.*?)> /
       ```
 
-   1. Remove all lines from Dependabot.
+   1. Remove all generated lines for:
+   
+      - `Update draft features by @github-actions`
+      - Dependabot PRs except `@mdn/browser-compat-data` upgrades
+      - `📦 Release web-features`
+
    1. Append this message to the end of the release notes:
 
       ```markdown
@@ -78,6 +98,8 @@ These are the steps to publish a regular release on npm and as a GitHub release:
 1. Remove the "[major version required][major-version]" and "[minor version required][minor-version]" labels from any pull requests that were included in the release.
 
 1. (_Optional_) If this release contained schema changes, notify highly-visible downstream consumers, such as Can I Use (@Fyrd), MDN (@LeoMcA), or webstatus.dev (@jcscottiii).
+
+1. Post a message to the WebDX Matrix chat to announce the release.
 
 [major-version]: https://github.com/web-platform-dx/web-features/pulls?q=is%3Apr+is%3Amerged+label%3A%22major+version+required%22+sort%3Aupdated-desc
 [minor-version]: https://github.com/web-platform-dx/web-features/pulls?q=is%3Apr+is%3Amerged+label%3A%22minor+version+required%22+sort%3Aupdated-desc
