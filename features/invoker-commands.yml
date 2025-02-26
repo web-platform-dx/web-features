@@ -1,5 +1,5 @@
 name: Invoker commands
-description: The `command` and `commandfor` attributes for the `<button>` HTML element set a name and target to dispatch to an event when the button is invoked (by click or keystroke), as a declarative alternative to `addEventListener()` calls or `onclick` attribute handlers.
+description: The `command` and `commandfor` attributes for the `<button>` HTML element dispatch an action to an element when the button is invoked (by click or keystroke), as a declarative alternative to `addEventListener()` calls or `onclick` attribute handlers.
 spec: https://html.spec.whatwg.org/multipage/form-elements.html#attr-button-command
 compat_features:
   - api.CommandEvent
