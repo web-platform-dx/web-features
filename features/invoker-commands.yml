@@ -1,12 +1,13 @@
-name: Invoker Commands
-description:  The `command` HTML attribute declaratively creates an interaction on a `<button>` element without JavaScript. The interaction target is specified with the `commandFor` HTML attribute on the same `<button>` element. 
-spec: https://open-ui.org/components/invokers.explainer/
+name: Invoker commands
+description: The `command` and `commandfor` attributes for the `<button>` HTML element set a name and target to dispatch to an event when the button is invoked (by click or keystroke), as a declarative alternative to `addEventListener()` calls or `onclick` attribute handlers.
+spec: https://html.spec.whatwg.org/multipage/form-elements.html#attr-button-command
 compat_features:
   - api.CommandEvent
+  - api.CommandEvent.CommandEvent
+  - api.CommandEvent.command
+  - api.CommandEvent.source
   - api.HTMLElement.command_event
   - api.HTMLButtonElement.command
   - api.HTMLButtonElement.commandForElement
   - html.elements.button.command
   - html.elements.button.commandfor
-
-  
