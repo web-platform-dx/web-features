@@ -27,20 +27,20 @@ To publish a release:
 
 1. Determine if it should be a major, minor, or patch release.
 
-   > [!TIP]
-   > 
-   > Running the stats for the `main` branch and previous release can help you determine the next release's version number and writing the release notes.
-   > Run these commands to get stats for the previous release:
-   > 
-   > ```sh
-   > $ PREVIOUS_RELEASE_TAG=$(gh release view --json tagName --jq .tagName)
-   > $ git fetch --tags && git checkout "$PREVIOUS_RELEASE_TAG" && npm install && npx tsx ./scripts/stats.ts
-   > ```
-   > Run these commands to get stats for the `main` branch:
-   > 
-   > ```sh
-   > $ git fetch origin main && git checkout origin/main && npm install && npx tsx ./scripts/stats.ts
-   > ```
+> [!TIP]
+> 
+> Running the stats for the `main` branch and previous release can help you determine the next release's version number and writing the release notes.
+> Run these commands to get stats for the previous release:
+> 
+> ```sh
+> $ PREVIOUS_RELEASE_TAG=$(gh release view --json tagName --jq .tagName)
+> $ git fetch --tags && git checkout "$PREVIOUS_RELEASE_TAG" && npm install && npx tsx ./scripts/stats.ts
+> ```
+> Run these commands to get stats for the `main` branch:
+> 
+> ```sh
+> $ git fetch origin main && git checkout origin/main && npm install && npx tsx ./scripts/stats.ts
+> ```
 
    A major version is required for releases when:
 
