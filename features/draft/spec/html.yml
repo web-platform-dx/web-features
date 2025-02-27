@@ -1,12 +1,8 @@
-draft_date: 2025-02-26
+draft_date: 2025-02-27
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
-  - api.CommandEvent
-  - api.CommandEvent.CommandEvent
-  - api.CommandEvent.command
-  - api.CommandEvent.source
   - api.DedicatedWorkerGlobalScope
   - api.DedicatedWorkerGlobalScope.close
   - api.DedicatedWorkerGlobalScope.name
@@ -26,8 +22,6 @@ compat_features:
   - api.HTMLAllCollection.namedItem
   - api.HTMLBaseElement.href.forbid_data_javascript_urls
   - api.HTMLBaseElement.href.forbid_special_characters
-  - api.HTMLButtonElement.command
-  - api.HTMLButtonElement.commandForElement
   - api.HTMLCanvasElement.getContext.2d_context
   - api.HTMLCanvasElement.getContext.bitmaprenderer_context
   - api.HTMLCanvasElement.getContext.bitmaprenderer_context.options_alpha_parameter
@@ -42,7 +36,6 @@ compat_features:
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
   - api.HTMLDialogElement.closedBy
   - api.HTMLDialogElement.requestClose
-  - api.HTMLElement.command_event
   - api.HTMLIFrameElement.featurePolicy
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes.auto
@@ -154,8 +147,6 @@ compat_features:
   - api.setInterval.worker_support
   - api.setTimeout.supports_parameters_for_callback
   - api.setTimeout.worker_support
-  - html.elements.button.command
-  - html.elements.button.commandfor
   - html.elements.dialog.closedby
   - html.elements.form.autocomplete.new-password
   - html.elements.form.autocomplete.one-time-code
@@ -406,6 +397,16 @@ compat_features:
 #   - api.CloseWatcher.close_event
 #   - api.CloseWatcher.destroy
 #   - api.CloseWatcher.requestClose
+# - Invoker commands:
+#   - api.CommandEvent
+#   - api.CommandEvent.CommandEvent
+#   - api.CommandEvent.command
+#   - api.CommandEvent.source
+#   - api.HTMLButtonElement.command
+#   - api.HTMLButtonElement.commandForElement
+#   - api.HTMLElement.command_event
+#   - html.elements.button.command
+#   - html.elements.button.commandfor
 # - Autonomous custom elements:
 #   - api.CustomElementRegistry
 #   - api.CustomElementRegistry.define
