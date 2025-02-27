@@ -21,10 +21,10 @@ Announcements should not provoke surprising responses from consumers.
 > This section is for [project owners](../GOVERNANCE.md#roles-and-responsibilities).
 
 These are the steps to publish a regular release on npm and as a GitHub release.
-Typically, a maintainer follows these steps shortly after merging Dependabot PR that upgrades `@mdn/browser-compat-data`.
+Typically, a maintainer follows these steps shortly after merging a Dependabot PR that upgrades `@mdn/browser-compat-data`.
 
 > [!TIP]
-> Running these commands at the start of the release process or after you've opened the PR version bump PR, can speed up this process:
+> Running these commands at the start of the release process (or after you've opened the version-incrementing PR) can speed up this process:
 > 
 > ```sh
 > $ git checkout PREVIOUS_RELEASE_TAG && npm install && npx tsx ./scripts/stats.ts
