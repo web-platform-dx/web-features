@@ -83,6 +83,20 @@ compat_features:
   #   safari_ios: "14.5"
   - javascript.statements.export.namespace
 
+  # baseline: high
+  # baseline_low_date: 2021-04-26
+  # baseline_high_date: 2023-10-26
+  # support:
+  #   chrome: "88"
+  #   chrome_android: "88"
+  #   edge: "88"
+  #   firefox: "87"
+  #   firefox_android: "87"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - javascript.statements.export.arbitrary_module_namespace_identifier_names
+  - javascript.statements.import.arbitrary_module_namespace_identifier_names
+
   # baseline: low
   # baseline_low_date: 2023-03-27
   # support:
