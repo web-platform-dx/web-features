@@ -952,42 +952,6 @@ compat_features:
   #   safari_ios: "16"
   - api.HTMLBaseElement.href.forbid_special_characters
 
-  # baseline: low
-  # baseline_low_date: 2024-09-16
-  # support:
-  #   chrome: "123"
-  #   chrome_android: "123"
-  #   edge: "123"
-  #   firefox: "123"
-  #   firefox_android: "123"
-  #   safari: "18"
-  #   safari_ios: "18"
-  - api.HTMLTemplateElement.shadowRootDelegatesFocus
-
-  # baseline: low
-  # baseline_low_date: 2024-09-16
-  # support:
-  #   chrome: "124"
-  #   chrome_android: "124"
-  #   edge: "124"
-  #   firefox: "125"
-  #   firefox_android: "125"
-  #   safari: "18"
-  #   safari_ios: "18"
-  - api.HTMLTemplateElement.shadowRootClonable
-
-  # baseline: low
-  # baseline_low_date: 2024-09-16
-  # support:
-  #   chrome: "125"
-  #   chrome_android: "125"
-  #   edge: "125"
-  #   firefox: "128"
-  #   firefox_android: "128"
-  #   safari: "18"
-  #   safari_ios: "18"
-  - api.HTMLTemplateElement.shadowRootSerializable
-
   # baseline: false
   # support:
   #   chrome: "4"
@@ -1118,24 +1082,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "123"
-  #   chrome_android: "123"
-  #   edge: "123"
-  #   firefox: "123"
-  #   firefox_android: "123"
-  - html.elements.template.shadowrootdelegatesfocus
-
-  # baseline: false
-  # support:
-  #   chrome: "124"
-  #   chrome_android: "124"
-  #   edge: "124"
-  #   firefox: "125"
-  #   firefox_android: "125"
-  - html.elements.template.shadowrootclonable
-
-  # baseline: false
-  # support:
   #   chrome: "127"
   #   chrome_android: "127"
   #   edge: "127"
@@ -1250,13 +1196,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "125"
-  #   chrome_android: "125"
-  #   edge: "125"
-  - html.elements.template.shadowrootserializable
-
-  # baseline: false
-  # support:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
@@ -1276,9 +1215,7 @@ compat_features:
   #   chrome_android: "133"
   #   edge: "133"
   - api.Document.moveBefore
-  - api.HTMLElement.popover.hint
   - html.elements.script.type.importmap.multiple_import_maps
-  - html.global_attributes.popover.hint
 
   # baseline: false
   # support:
@@ -1308,17 +1245,12 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - api.HTMLButtonElement.command
-  - api.HTMLButtonElement.commandForElement
   - api.HTMLDialogElement.closedBy
   - api.HTMLDialogElement.requestClose
-  - api.HTMLElement.command_event
   - api.HTMLInputElement.alpha
   - api.HTMLInputElement.colorSpace
   - api.Navigator.authentication
   - api.OffscreenCanvasRenderingContext2D.getContextAttributes
-  - html.elements.button.command
-  - html.elements.button.commandfor
   - html.elements.dialog.closedby
   - html.elements.hr.hr_in_select
   - html.elements.input.alpha
