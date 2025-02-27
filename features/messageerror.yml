@@ -4,3 +4,15 @@ spec:
   - https://html.spec.whatwg.org/multipage/indices.html#event-messageerror
   - https://w3c.github.io/ServiceWorker/#eventdef-serviceworkerglobalscope-messageerror
 group: messaging
+status:
+  compute_from:
+    - api.DedicatedWorkerGlobalScope.messageerror_event
+    - api.MessagePort.messageerror_event
+    - api.ServiceWorkerContainer.messageerror_event
+    - api.Window.messageerror_event
+compat_features:
+  - api.DedicatedWorkerGlobalScope.messageerror_event
+  - api.MessagePort.messageerror_event
+  - api.ServiceWorkerContainer.messageerror_event
+  - api.Window.messageerror_event
+  - api.Worker.messageerror_event
