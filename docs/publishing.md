@@ -23,28 +23,35 @@ Announcements should not provoke surprising responses from consumers.
 These are the steps to publish a regular release on npm and as a GitHub release.
 Typically, a maintainer follows these steps shortly after merging a Dependabot PR that upgrades `@mdn/browser-compat-data`.
 
-> [!TIP]
-> Running these commands at the start of the release process (or after you've opened the version-incrementing PR) can speed up this process:
-> 
-> ```sh
-> $ git checkout PREVIOUS_RELEASE_TAG && npm install && npx tsx ./scripts/stats.ts
-> $ git fetch origin main && git checkout origin/main && npm install && npx tsx ./scripts/stats.ts
-> ```
-
 To publish a release:
 
 1. Determine if it should be a major, minor, or patch release.
 
+   > [!TIP]
+   > 
+   > Running the stats for the `main` branch and previous release can help you determine the next release's version number and writing the release notes.
+   > Run these commands to get stats for the previous release:
+   > 
+   > ```sh
+   > $ PREVIOUS_RELEASE_TAG=$(gh release view --json tagName --jq .tagName)
+   > $ git fetch --tags && git checkout "$PREVIOUS_RELEASE_TAG" && npm install && npx tsx ./scripts/stats.ts
+   > ```
+   > Run these commands to get stats for the `main` branch:
+   > 
+   > ```sh
+   > $ git fetch origin main && git checkout origin/main && npm install && npx tsx ./scripts/stats.ts
+   > ```
+
    A major version is required for releases when:
 
-   - Previously valid references are invalid (for example, a group ID is renamed or a feature ID is removed).
-   - Types have incompatibly narrowed, widened, or otherwise changed (for example, a string value now accepts an array of strings or an ID has become a URL). Changes to `data.schema.json` often indicates a major or minor version is required.
+   - The schema changes such that types have incompatibly narrowed, widened, or otherwise changed (for example, a string value now accepts an array of strings or an ID has become a URL). Changes to `data.schema.json` often indicates a major or minor version is required.
+   - A group or feature ID is removed, or any other previously valid references becomes undefined.
 
    A minor version is required for releases that contain only additions, such as new features or new properties on existing types.
 
    Patch versions are required for releases that contain only routine data changes, such as updates to `compat_features` arrays or `support` objects.
 
-   The "[major version required][major-version]" and "[minor version required][minor-version]" labels should be used to support this decision.
+   Check "[major version required][major-version]" and "[minor version required][minor-version]" labels for pull requests or issues that require versioning.
 
 1. Trigger the [Prepare web-features release workflow](https://github.com/web-platform-dx/web-features/actions/workflows/prepare_release.yml).
 
@@ -59,11 +66,13 @@ To publish a release:
    1. Close and reopen the release PR, to allow the tests to run.
    1. Review and approve the changes.
    1. When you're ready to complete the remaining steps, merge the PR.
+      To avoid re-doing release prep (such as having to change the semver level), don't delay any of the remaining steps after merging.
 
 1. Create the GitHub release.
 
    1. Go to https://github.com/web-platform-dx/web-features/releases/new to start a new draft release.
-   1. Fill in the tag name `vX.Y.Z` manually as both the tag and release title.
+   1. Create a new tag in the pattern `vX.Y.Z`.
+   1. Fill in the release title `vX.Y.Z`.
    1. For minor releases, add a `## What's New` section to the top of the release notes, before all other sections.
 
       1. In this section, add a line `* X features`, where `X` is the number of features new in this release.
@@ -100,6 +109,8 @@ To publish a release:
 1. (_Optional_) If this release contained schema changes, notify highly-visible downstream consumers, such as Can I Use (@Fyrd), MDN (@LeoMcA), or webstatus.dev (@jcscottiii).
 
 1. Post a message to the WebDX Matrix chat to announce the release.
+
+Congratulations, you've released web-features. 🎉
 
 [major-version]: https://github.com/web-platform-dx/web-features/pulls?q=is%3Apr+is%3Amerged+label%3A%22major+version+required%22+sort%3Aupdated-desc
 [minor-version]: https://github.com/web-platform-dx/web-features/pulls?q=is%3Apr+is%3Amerged+label%3A%22minor+version+required%22+sort%3Aupdated-desc
