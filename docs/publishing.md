@@ -23,10 +23,6 @@ Announcements should not provoke surprising responses from consumers.
 These are the steps to publish a regular release on npm and as a GitHub release.
 Typically, a maintainer follows these steps shortly after merging a Dependabot PR that upgrades `@mdn/browser-compat-data`.
 
-To publish a release:
-
-1. Determine if it should be a major, minor, or patch release.
-
 > [!TIP]
 > 
 > Running the stats for the `main` branch and previous release can help you determine the next release's version number and writing the release notes.
@@ -41,6 +37,10 @@ To publish a release:
 > ```sh
 > $ git fetch origin main && git checkout origin/main && npm install && npx tsx ./scripts/stats.ts
 > ```
+
+To publish a release:
+
+1. Determine if it should be a major, minor, or patch release.
 
    A major version is required for releases when:
 
