@@ -1,0 +1,14 @@
+name: Container scroll-state queries
+description: Container scroll-state queries with the `@container scroll-state(...)` at-rule apply styles to an element based on the sticky positioning, snapped, and scrollable state of the container.
+# Note that a fourth state for scroll direction is being discussed:
+# https://github.com/w3c/csswg-drafts/issues/6400
+# https://github.com/w3c/csswg-drafts/issues/11191
+# TODO: If shipped, update the description or split into smaller features.
+spec: https://drafts.csswg.org/css-conditional-5/#scroll-state-container
+group: container-queries
+compat_features:
+  - css.at-rules.container.scroll-state_queries
+  - css.at-rules.container.scroll-state_queries.scrollable
+  - css.at-rules.container.scroll-state_queries.snapped
+  - css.at-rules.container.scroll-state_queries.stuck
+  - css.properties.container-type.scroll-state

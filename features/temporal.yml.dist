@@ -5,6 +5,7 @@ status:
   baseline: false
   support: {}
 compat_features:
+  - javascript.builtins.Date.toTemporalInstant
   - javascript.builtins.Temporal
   - javascript.builtins.Temporal.Duration
   - javascript.builtins.Temporal.Duration.Duration
@@ -57,7 +58,7 @@ compat_features:
   - javascript.builtins.Temporal.Now.plainDateISO
   - javascript.builtins.Temporal.Now.plainDateTimeISO
   - javascript.builtins.Temporal.Now.plainTimeISO
-  - javascript.builtins.Temporal.Now.timeZoneID
+  - javascript.builtins.Temporal.Now.timeZoneId
   - javascript.builtins.Temporal.Now.zonedDateTimeISO
   - javascript.builtins.Temporal.PlainDate
   - javascript.builtins.Temporal.PlainDate.PlainDate
