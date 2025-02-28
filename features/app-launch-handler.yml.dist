@@ -19,5 +19,15 @@ compat_features:
   # support:
   #   chrome: "102"
   #   edge: "102"
+  - api.LaunchParams
+  - api.LaunchParams.files
   - api.LaunchQueue
+  - api.LaunchQueue.setConsumer
   - api.Window.launchQueue
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "110"
+  #   edge: "110"
+  - api.LaunchParams.targetURL
