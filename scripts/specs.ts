@@ -120,6 +120,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/DocumentSubtitle/explainer.md",
         "Allowed because this is where the application-title meta tag is spec'd at the moment. Remove when https://github.com/whatwg/html/issues/8909 is fixed."
+    ],
+    [
+        "https://web-platform-dx.github.io/unspecified/",
+        "Allowed as a fallback for unspecified- features."
     ]
 ];
 
