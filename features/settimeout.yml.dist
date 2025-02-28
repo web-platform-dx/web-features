@@ -6,13 +6,13 @@ status:
   baseline_low_date: 2015-07-29
   baseline_high_date: 2018-01-29
   support:
-    chrome: "1"
+    chrome: "3"
     chrome_android: "18"
     edge: "12"
-    firefox: "1"
+    firefox: "3.5"
     firefox_android: "4"
     safari: "4"
-    safari_ios: "1"
+    safari_ios: "5"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -27,7 +27,6 @@ compat_features:
   #   safari_ios: "1"
   - api.setTimeout
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -40,3 +39,18 @@ compat_features:
   #   safari: "4"
   #   safari_ios: "1"
   - api.clearTimeout
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "3"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3.5"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "5"
+  - api.clearTimeout.worker_support
+  - api.setTimeout.worker_support

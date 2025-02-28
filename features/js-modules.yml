@@ -16,8 +16,11 @@ compat_features:
   - html.elements.script.nomodule
   - html.elements.script.type.module
   - javascript.statements.export
+  - javascript.statements.export.arbitrary_module_namespace_identifier_names
   - javascript.statements.export.default
   - javascript.statements.export.namespace
+  - javascript.statements.import.arbitrary_module_namespace_identifier_names
+  # TODO: move next key to json-modules and css-modules when https://github.com/web-platform-dx/web-features/issues/1173 is resolved
   - javascript.statements.import.import_attributes
   - javascript.statements.import.worklet_support
   - javascript.statements.import

@@ -3,11 +3,15 @@
 
 status:
   baseline: false
-  support:
-    safari: "13.1"
-    safari_ios: "13.4"
+  support: {}
 compat_features:
-  - css.properties.font-family.ui-monospace
-  - css.properties.font-family.ui-rounded
-  - css.properties.font-family.ui-sans-serif
-  - css.properties.font-family.ui-serif
+  - css.properties.font-width
+  - css.properties.font-width.condensed
+  - css.properties.font-width.expanded
+  - css.properties.font-width.extra-condensed
+  - css.properties.font-width.extra-expanded
+  - css.properties.font-width.normal
+  - css.properties.font-width.semi-condensed
+  - css.properties.font-width.semi-expanded
+  - css.properties.font-width.ultra-condensed
+  - css.properties.font-width.ultra-expanded
