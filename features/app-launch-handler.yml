@@ -1,9 +1,13 @@
-name: Launch Handler
-description: The `launch_handler` manifest member is used to configure how web app launches should behave with respect to already open web app instances.
-spec: https://wicg.github.io/web-app-launch/#dfn-launch_handler
+name: Launch handlers
+description: The `launch_handler` and `client_mode` web app manifest members configure how web app launches should behave when an instance of the app is already open. For example, you can choose to focus on an existing app instead of launching a new one.
+spec: https://wicg.github.io/web-app-launch/
 group: progressive-web-app
 compat_features:
+  - api.LaunchParams
+  - api.LaunchParams.files
+  - api.LaunchParams.targetURL
   - api.LaunchQueue
+  - api.LaunchQueue.setConsumer
   - api.Window.launchQueue
   - html.manifest.launch_handler
   - html.manifest.launch_handler.client_mode
