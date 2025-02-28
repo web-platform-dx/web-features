@@ -79,3 +79,11 @@ compat_features:
   #   safari: "17"
   #   safari_ios: "18.3"
   - api.HTMLElement.popover
+
+  # baseline: false
+  # support:
+  #   chrome: "133"
+  #   chrome_android: "133"
+  #   edge: "133"
+  - api.HTMLElement.showPopover.source
+  - api.HTMLElement.togglePopover.source

@@ -5,16 +5,6 @@ status:
   baseline: false
   support: {}
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "88"
-  #   chrome_android: "88"
-  #   edge: "88"
-  - http.headers.Permissions-Policy.magnetometer
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
   - api.Magnetometer
   - api.Magnetometer.Magnetometer
   - api.Magnetometer.x
@@ -22,3 +12,4 @@ compat_features:
   - api.Magnetometer.z
   - api.Permissions.permission_magnetometer
   - html.elements.iframe.allow.magnetometer
+  - http.headers.Permissions-Policy.magnetometer
