@@ -116,6 +116,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/tc39/proposal-regexp-legacy-features",
         "Allowed because it's the most spec-like thing that exists for discouraged RegExp static properties. Remove when https://github.com/tc39/ecma262/issues/137 is resolved."
+    ],
+    [
+        "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/DocumentSubtitle/explainer.md",
+        "Allowed because this is where the application-title meta tag is spec'd at the moment. Remove when https://github.com/whatwg/html/issues/8909 is fixed."
     ]
 ];
 

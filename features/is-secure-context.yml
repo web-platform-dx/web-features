@@ -1,0 +1,6 @@
+name: isSecureContext
+description: The `isSecureContext` global property is a boolean for whether the current browsing context is secure. This is primarily a check that the page has been served over an HTTPS URL.
+spec: https://html.spec.whatwg.org/multipage/webappapis.html#dom-issecurecontext-dev
+compat_features:
+  - api.isSecureContext
+  - api.isSecureContext.worker_support

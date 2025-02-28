@@ -75,7 +75,11 @@ interface Discouraged {
     /** Links to a formal discouragement notice, such as specification text, intent-to-unship, etc. */
     according_to: string[];
     /** IDs for features that substitute some or all of this feature's utility */
-    alternatives?: (keyof WebFeaturesData["features"])[];
+    alternatives?: string[];
+    // TODO: alternatives ought to be `(keyof WebFeaturesData["features"])[]`
+    // but ts-json-schema-generator seems to have long-standing unresolved bugs
+    // around this. Remove this when
+    // https://github.com/web-platform-dx/web-features/issues/2722 is resolved.
 }
 
 export interface GroupData {
