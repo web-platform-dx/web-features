@@ -1,5 +1,5 @@
 name: Reporting API
-description: The `Reporting-Endpoints` HTTP header specifies URLs to receive reports of Content Security Policy (CSP) violations, Permissions-Policy violations, deprecated feature usage, and crashes, while the `ReportingObsever()` API dispatches reports to a callback function.
+description: The `Reporting-Endpoints` HTTP header and `ReportingObsever()` API send reports of Content Security Policy (CSP) violations, Permissions-Policy violations, deprecated feature usage, browser interventions, and crashes to a nominated URL or callback function.
 spec:
   - https://w3c.github.io/reporting/
   - https://wicg.github.io/intervention-reporting/
