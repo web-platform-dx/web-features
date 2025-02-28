@@ -21,6 +21,8 @@ jobs:
         uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 #v4.0.0
         with:
           issue-number: ${{ github.event.number }}
+          # TODO: reinstate this post-merge checklist item when https://github.com/web-platform-dx/web-features/issues/1672 is resolved
+          # - [ ] (Optional) [Trigger a workflow run to remove tagged compat features](https://github.com/web-platform-dx/web-features/actions/workflows/remove_tagged_compat_features.yml).
           body: |
             Complete this checklist for every `@mdn/browser-compat-data` upgrade PR.
 
@@ -33,5 +35,4 @@ jobs:
             After merging, do these steps:
 
             - [ ] [Trigger a drafts update workflow run](https://github.com/web-platform-dx/web-features/actions/workflows/update_draft_features_weekly.yml).
-            - [ ] (Optional) [Trigger a workflow run to remove tagged compat features](https://github.com/web-platform-dx/web-features/actions/workflows/remove_tagged_compat_features.yml).
             - [ ] Start a PR to [publish the next web-features release](https://github.com/web-platform-dx/web-features/blob/main/docs/publishing.md#regular-releases).

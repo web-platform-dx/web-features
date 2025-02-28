@@ -114,6 +114,14 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because the execCommand feature points to it, to inform users that the feature is obsolete. The spec exists in a draft state only and will never move out of draft. It serves as a reference."
     ],
     [
+        "https://github.com/tc39/proposal-regexp-legacy-features",
+        "Allowed because it's the most spec-like thing that exists for discouraged RegExp static properties. Remove when https://github.com/tc39/ecma262/issues/137 is resolved."
+    ],
+    [
+        "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/DocumentSubtitle/explainer.md",
+        "Allowed because this is where the application-title meta tag is spec'd at the moment. Remove when https://github.com/whatwg/html/issues/8909 is fixed."
+    ],
+    [
         "https://www.w3.org/TR/2019/WD-feature-policy-1-20190416/",
         "Allowed because feature policy was replaced by permissions policy."
     ]
