@@ -30,3 +30,10 @@ compat_features:
   #   chrome_android: "61"
   #   edge: "79"
   - api.SyncManager.worker_support
+
+  # baseline: false
+  # support:
+  #   chrome: "62"
+  #   chrome_android: "62"
+  #   edge: "79"
+  - api.Permissions.permission_background-sync
