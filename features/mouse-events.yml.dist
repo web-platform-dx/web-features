@@ -28,7 +28,6 @@ compat_features:
   #   safari_ios: "1"
   - api.MouseEvent
   - api.MouseEvent.button
-  - api.MouseEvent.clientX
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -147,7 +146,6 @@ compat_features:
   #   safari: "9"
   #   safari_ios: "8"
   - api.MouseEvent.movementX
-  - api.MouseEvent.movementY
 
   # baseline: high
   # baseline_low_date: 2015-12-15
@@ -202,6 +200,30 @@ compat_features:
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - api.MouseEvent.getModifierState
+
+  # baseline: low
+  # baseline_low_date: 2023-09-18
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "1"
+  #   safari_ios: "17"
+  - api.MouseEvent.clientX
+
+  # baseline: low
+  # baseline_low_date: 2023-09-18
+  # support:
+  #   chrome: "37"
+  #   chrome_android: "37"
+  #   edge: "13"
+  #   firefox: "41"
+  #   firefox_android: "41"
+  #   safari: "9"
+  #   safari_ios: "17"
+  - api.MouseEvent.movementY
 
   # baseline: low
   # baseline_low_date: 2024-12-11
