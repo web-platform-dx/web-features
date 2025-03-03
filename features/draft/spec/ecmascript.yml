@@ -1,13 +1,9 @@
-draft_date: 2025-02-26
+draft_date: 2025-03-03
 name: ECMAScript® 2025 Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
 compat_features:
-  - javascript.builtins.Array.@@species
-  - javascript.grammar.trailing_commas.trailing_commas_in_dynamic_import
   - javascript.operators.import.options_parameter
-  - javascript.statements.export.arbitrary_module_namespace_identifier_names
-  - javascript.statements.import.arbitrary_module_namespace_identifier_names
 
 # The following features in the spec are already part of web-features:
 # - Promise.any():
@@ -36,6 +32,28 @@ compat_features:
 #   - javascript.builtins.Array.entries
 #   - javascript.builtins.Array.keys
 #   - javascript.builtins.Array.values
+# - Symbol:
+#   - javascript.builtins.Array.@@species
+#   - javascript.builtins.Symbol
+#   - javascript.builtins.Symbol.@@toPrimitive
+#   - javascript.builtins.Symbol.Symbol
+#   - javascript.builtins.Symbol.description
+#   - javascript.builtins.Symbol.for
+#   - javascript.builtins.Symbol.hasInstance
+#   - javascript.builtins.Symbol.isConcatSpreadable
+#   - javascript.builtins.Symbol.iterator
+#   - javascript.builtins.Symbol.keyFor
+#   - javascript.builtins.Symbol.match
+#   - javascript.builtins.Symbol.matchAll
+#   - javascript.builtins.Symbol.replace
+#   - javascript.builtins.Symbol.search
+#   - javascript.builtins.Symbol.species
+#   - javascript.builtins.Symbol.split
+#   - javascript.builtins.Symbol.toPrimitive
+#   - javascript.builtins.Symbol.toString
+#   - javascript.builtins.Symbol.toStringTag
+#   - javascript.builtins.Symbol.toStringTag.dom_objects
+#   - javascript.builtins.Symbol.valueOf
 # - with:
 #   - javascript.builtins.Array.@@unscopables
 #   - javascript.builtins.Symbol.unscopables
@@ -814,27 +832,6 @@ compat_features:
 # - String trimStart() and trimEnd():
 #   - javascript.builtins.String.trimEnd
 #   - javascript.builtins.String.trimStart
-# - Symbol:
-#   - javascript.builtins.Symbol
-#   - javascript.builtins.Symbol.@@toPrimitive
-#   - javascript.builtins.Symbol.Symbol
-#   - javascript.builtins.Symbol.description
-#   - javascript.builtins.Symbol.for
-#   - javascript.builtins.Symbol.hasInstance
-#   - javascript.builtins.Symbol.isConcatSpreadable
-#   - javascript.builtins.Symbol.iterator
-#   - javascript.builtins.Symbol.keyFor
-#   - javascript.builtins.Symbol.match
-#   - javascript.builtins.Symbol.matchAll
-#   - javascript.builtins.Symbol.replace
-#   - javascript.builtins.Symbol.search
-#   - javascript.builtins.Symbol.species
-#   - javascript.builtins.Symbol.split
-#   - javascript.builtins.Symbol.toPrimitive
-#   - javascript.builtins.Symbol.toString
-#   - javascript.builtins.Symbol.toStringTag
-#   - javascript.builtins.Symbol.toStringTag.dom_objects
-#   - javascript.builtins.Symbol.valueOf
 # - Typed array iterators:
 #   - javascript.builtins.TypedArray.@@iterator
 #   - javascript.builtins.TypedArray.entries
@@ -893,6 +890,8 @@ compat_features:
 # - Template literals:
 #   - javascript.grammar.template_literals
 #   - javascript.grammar.template_literals.template_literal_revision
+# - JSON import attributes:
+#   - javascript.grammar.trailing_commas.trailing_commas_in_dynamic_import
 # - Unicode point escapes:
 #   - javascript.grammar.unicode_point_escapes
 # - Top-level await:
@@ -909,9 +908,11 @@ compat_features:
 #   - javascript.operators.import
 #   - javascript.operators.import_meta
 #   - javascript.statements.export
+#   - javascript.statements.export.arbitrary_module_namespace_identifier_names
 #   - javascript.statements.export.default
 #   - javascript.statements.export.namespace
 #   - javascript.statements.import
+#   - javascript.statements.import.arbitrary_module_namespace_identifier_names
 #   - javascript.statements.import.worklet_support
 # - JavaScript modules in workers:
 #   - javascript.operators.import.worker_support
