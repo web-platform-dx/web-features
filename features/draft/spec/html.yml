@@ -1,4 +1,4 @@
-draft_date: 2025-01-30
+draft_date: 2025-03-03
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -7,7 +7,6 @@ compat_features:
   - api.DedicatedWorkerGlobalScope.close
   - api.DedicatedWorkerGlobalScope.name
   - api.Document.featurePolicy
-  - api.Document.moveBefore
   - api.ElementInternals.shadowRoot
   - api.ErrorEvent
   - api.ErrorEvent.ErrorEvent
@@ -20,11 +19,8 @@ compat_features:
   - api.HTMLAllCollection.item
   - api.HTMLAllCollection.length
   - api.HTMLAllCollection.namedItem
-  - api.HTMLAnchorElement.hrefTranslate
   - api.HTMLBaseElement.href.forbid_data_javascript_urls
   - api.HTMLBaseElement.href.forbid_special_characters
-  - api.HTMLButtonElement.command
-  - api.HTMLButtonElement.commandForElement
   - api.HTMLCanvasElement.getContext.2d_context
   - api.HTMLCanvasElement.getContext.bitmaprenderer_context
   - api.HTMLCanvasElement.getContext.bitmaprenderer_context.options_alpha_parameter
@@ -37,7 +33,8 @@ compat_features:
   - api.HTMLCanvasElement.toDataURL.type_parameter_jpeg
   - api.HTMLCanvasElement.toDataURL.type_parameter_png
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
-  - api.HTMLElement.command_event
+  - api.HTMLDialogElement.closedBy
+  - api.HTMLDialogElement.requestClose
   - api.HTMLIFrameElement.featurePolicy
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes.auto
@@ -62,17 +59,14 @@ compat_features:
   - api.HTMLSourceElement.src
   - api.HTMLSourceElement.type
   - api.HTMLSourceElement.width
-  - api.HTMLTemplateElement.shadowRootClonable
-  - api.HTMLTemplateElement.shadowRootDelegatesFocus
-  - api.HTMLTemplateElement.shadowRootSerializable
   - api.HTMLUnknownElement
   - api.HTMLVideoElement.playsInline
-  - api.ImageData.worker_support
   - api.MediaError
   - api.MediaError.code
   - api.MediaError.message
   - api.MouseEvent.relatedTarget.drag_events
   - api.Navigator.authentication
+  - api.OffscreenCanvasRenderingContext2D.getContextAttributes
   - api.PromiseRejectionEvent
   - api.PromiseRejectionEvent.PromiseRejectionEvent
   - api.PromiseRejectionEvent.promise
@@ -136,27 +130,13 @@ compat_features:
   - api.Worklet.addModule
   - api.Worklet.ecmascript_modules
   - api.WorkletGlobalScope
-  - api.atob.worker_support
-  - api.btoa.worker_support
-  - api.clearInterval.worker_support
-  - api.clearTimeout.worker_support
-  - api.createImageBitmap.options_imageOrientation_parameter.from-image
   - api.crossOriginIsolated
-  - api.isSecureContext
-  - api.isSecureContext.worker_support
   - api.origin
   - api.queueMicrotask
   - api.reportError
   - api.setInterval.supports_parameters_for_callback
-  - api.setInterval.worker_support
   - api.setTimeout.supports_parameters_for_callback
-  - api.setTimeout.worker_support
-  - html.elements.a.href.href_sms
-  - html.elements.a.href.href_top
-  - html.elements.a.hreftranslate
-  - html.elements.a.implicit_noopener
-  - html.elements.button.command
-  - html.elements.button.commandfor
+  - html.elements.dialog.closedby
   - html.elements.form.autocomplete.new-password
   - html.elements.form.autocomplete.one-time-code
   - html.elements.form.autocomplete.webauthn
@@ -175,10 +155,8 @@ compat_features:
   - html.elements.input.colorspace
   - html.elements.link.rel.icon
   - html.elements.script.type.importmap.integrity
+  - html.elements.script.type.importmap.multiple_import_maps
   - html.elements.select.autocomplete
-  - html.elements.template.shadowrootclonable
-  - html.elements.template.shadowrootdelegatesfocus
-  - html.elements.template.shadowrootserializable
   - html.elements.textarea.autocomplete.new-password
   - html.elements.textarea.autocomplete.one-time-code
   - html.elements.textarea.autocomplete.webauthn
@@ -190,7 +168,6 @@ compat_features:
   - html.global_attributes.draggable
   - html.global_attributes.hidden
   - html.global_attributes.id
-  - html.global_attributes.inputmode
   - http.headers.Cross-Origin-Embedder-Policy
   - http.headers.Cross-Origin-Embedder-Policy.credentialless
   - http.headers.Cross-Origin-Opener-Policy
@@ -348,6 +325,7 @@ compat_features:
 #   - api.ImageData.data
 #   - api.ImageData.height
 #   - api.ImageData.width
+#   - api.ImageData.worker_support
 #   - api.Path2D
 #   - api.Path2D.Path2D
 #   - api.Path2D.addPath
@@ -409,6 +387,16 @@ compat_features:
 #   - api.CloseWatcher.close_event
 #   - api.CloseWatcher.destroy
 #   - api.CloseWatcher.requestClose
+# - Invoker commands:
+#   - api.CommandEvent
+#   - api.CommandEvent.CommandEvent
+#   - api.CommandEvent.command
+#   - api.CommandEvent.source
+#   - api.HTMLButtonElement.command
+#   - api.HTMLButtonElement.commandForElement
+#   - api.HTMLElement.command_event
+#   - html.elements.button.command
+#   - html.elements.button.commandfor
 # - Autonomous custom elements:
 #   - api.CustomElementRegistry
 #   - api.CustomElementRegistry.define
@@ -460,7 +448,6 @@ compat_features:
 #   - api.Document.DOMContentLoaded_event
 #   - api.Document.activeElement
 #   - api.Document.body
-#   - api.Document.close
 #   - api.Document.currentScript
 #   - api.Document.defaultView
 #   - api.Document.designMode
@@ -473,14 +460,12 @@ compat_features:
 #   - api.Document.images
 #   - api.Document.lastModified
 #   - api.Document.links
-#   - api.Document.open
 #   - api.Document.plugins
 #   - api.Document.readyState
 #   - api.Document.readystatechange_event
 #   - api.Document.referrer
 #   - api.Document.scripts
 #   - api.Document.title
-#   - api.Document.writeln
 #   - api.Element.innerHTML
 #   - api.Element.insertAdjacentHTML
 #   - api.Element.outerHTML
@@ -549,6 +534,11 @@ compat_features:
 #   - api.DedicatedWorkerGlobalScope.messageerror_event
 #   - api.MessagePort.messageerror_event
 #   - api.Window.messageerror_event
+# - document.write():
+#   - api.Document.close
+#   - api.Document.open
+#   - api.Document.writeln
+#   - api.Document.writeln.accepts_TrustedHTML
 # - Cookies:
 #   - api.Document.cookie
 # - Page visibility:
@@ -573,6 +563,8 @@ compat_features:
 #   - api.Location.search
 #   - api.Location.toString
 #   - api.Window.location
+# - moveBefore():
+#   - api.Document.moveBefore
 # - Unsanitized HTML parsing methods:
 #   - api.Document.parseHTMLUnsafe_static
 #   - api.Element.setHTMLUnsafe
@@ -716,7 +708,10 @@ compat_features:
 #   - api.HTMLAnchorElement.username
 #   - html.elements.a
 #   - html.elements.a.href
+#   - html.elements.a.href.href_sms
+#   - html.elements.a.href.href_top
 #   - html.elements.a.hreflang
+#   - html.elements.a.implicit_noopener
 #   - html.elements.a.rel
 #   - html.elements.a.rel.noopener
 #   - html.elements.a.rel.noreferrer
@@ -935,8 +930,10 @@ compat_features:
 #   - api.HTMLElement.hidePopover
 #   - api.HTMLElement.popover
 #   - api.HTMLElement.showPopover
+#   - api.HTMLElement.showPopover.source
 #   - api.HTMLElement.togglePopover
 #   - api.HTMLElement.togglePopover.returns_boolean
+#   - api.HTMLElement.togglePopover.source
 #   - api.HTMLElement.toggle_event.popover_elements
 #   - api.HTMLInputElement.popoverTargetAction
 #   - api.HTMLInputElement.popoverTargetElement
@@ -950,6 +947,13 @@ compat_features:
 #   - html.elements.input.popovertarget
 #   - html.elements.input.popovertargetaction
 #   - html.global_attributes.popover
+# - Anchor positioning:
+#   - api.HTMLButtonElement.popoverTargetElement.implicit_anchor_reference
+#   - api.HTMLElement.showPopover.source.implicit_anchor_reference
+#   - api.HTMLElement.togglePopover.source.implicit_anchor_reference
+#   - api.HTMLInputElement.popoverTargetElement.implicit_anchor_reference
+#   - html.elements.button.popovertarget.implicit_anchor_reference
+#   - html.elements.input.popovertarget.implicit_anchor_reference
 # - <canvas>:
 #   - api.HTMLCanvasElement
 #   - api.HTMLCanvasElement.getContext
@@ -1110,7 +1114,6 @@ compat_features:
 #   - api.HTMLElement.change_event
 # - Contenteditable:
 #   - api.HTMLElement.contentEditable
-#   - api.HTMLElement.inputMode
 #   - api.HTMLElement.isContentEditable
 #   - html.global_attributes.contenteditable
 # - contenteditable="plaintext-only":
@@ -1123,9 +1126,15 @@ compat_features:
 #   - api.HTMLElement.inert
 #   - api.HTMLElement.inert.ignores_find_in_page
 #   - html.global_attributes.inert
+# - inputmode:
+#   - api.HTMLElement.inputMode
+#   - html.global_attributes.inputmode
 # - Lang:
 #   - api.HTMLElement.lang
 #   - html.global_attributes.lang
+# - popover="hint":
+#   - api.HTMLElement.popover.hint
+#   - html.global_attributes.popover.hint
 # - Spellcheck:
 #   - api.HTMLElement.spellcheck
 #   - html.global_attributes.spellcheck
@@ -1794,8 +1803,14 @@ compat_features:
 #   - api.HTMLTemplateElement.content
 #   - html.elements.template
 # - Declarative shadow DOM:
+#   - api.HTMLTemplateElement.shadowRootClonable
+#   - api.HTMLTemplateElement.shadowRootDelegatesFocus
 #   - api.HTMLTemplateElement.shadowRootMode
+#   - api.HTMLTemplateElement.shadowRootSerializable
+#   - html.elements.template.shadowrootclonable
+#   - html.elements.template.shadowrootdelegatesfocus
 #   - html.elements.template.shadowrootmode
+#   - html.elements.template.shadowrootserializable
 # - <textarea>:
 #   - api.HTMLTextAreaElement
 #   - api.HTMLTextAreaElement.autocomplete
@@ -1880,6 +1895,7 @@ compat_features:
 #   - api.createImageBitmap
 #   - api.createImageBitmap.options_colorSpaceConversion_parameter
 #   - api.createImageBitmap.options_imageOrientation_parameter
+#   - api.createImageBitmap.options_imageOrientation_parameter.from-image
 #   - api.createImageBitmap.options_premultiplyAlpha_parameter
 #   - api.createImageBitmap.options_resizeHeight_parameter
 #   - api.createImageBitmap.options_resizeQuality_parameter
@@ -2163,13 +2179,22 @@ compat_features:
 #   - api.Worker.Worker.options_type_parameter
 # - Base64 encoding and decoding:
 #   - api.atob
+#   - api.atob.worker_support
 #   - api.btoa
+#   - api.btoa.worker_support
 # - setInterval:
 #   - api.clearInterval
+#   - api.clearInterval.worker_support
 #   - api.setInterval
+#   - api.setInterval.worker_support
 # - setTimeout:
 #   - api.clearTimeout
+#   - api.clearTimeout.worker_support
 #   - api.setTimeout
+#   - api.setTimeout.worker_support
+# - isSecureContext:
+#   - api.isSecureContext
+#   - api.isSecureContext.worker_support
 # - structuredClone():
 #   - api.structuredClone
 # - User action pseudo-classes:

@@ -4,8 +4,8 @@
 status:
   baseline: false
   support:
-    chrome: "66"
-    chrome_android: "66"
+    chrome: "59"
+    chrome_android: "59"
     edge: "79"
     safari: "17.2"
     safari_ios: "17.2"
@@ -117,6 +117,18 @@ compat_features:
   #   safari: "15"
   #   safari_ios: "15"
   - api.createImageBitmap.options_colorSpaceConversion_parameter
+
+  # baseline: low
+  # baseline_low_date: 2023-04-06
+  # support:
+  #   chrome: "112"
+  #   chrome_android: "112"
+  #   edge: "112"
+  #   firefox: "111"
+  #   firefox_android: "111"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - api.createImageBitmap.options_imageOrientation_parameter.from-image
 
   # baseline: low
   # baseline_low_date: 2023-09-18

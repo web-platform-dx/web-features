@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "128"
+    chrome_android: "128"
+    edge: "128"
 compat_features:
   # baseline: false
   # support:
@@ -12,18 +15,10 @@ compat_features:
   #   edge: "79"
   - api.Document.featurePolicy
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "128"
   #   chrome_android: "128"
   #   edge: "128"
   - api.Document.caretPositionFromPoint.options_parameter
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - api.Document.getBoxQuads
-  - api.Document.moveBefore
-  - api.Element.getBoxQuads
-  - api.Element.moveBefore
-  - api.Text.getBoxQuads

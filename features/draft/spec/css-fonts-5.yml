@@ -1,12 +1,9 @@
-draft_date: 2025-01-27
+draft_date: 2025-03-03
 name: CSS Fonts Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-fonts-5/
 compat_features:
-  - css.properties.font-family.ui-monospace
-  - css.properties.font-family.ui-rounded
-  - css.properties.font-family.ui-sans-serif
-  - css.properties.font-family.ui-serif
+  - css.properties.font.font-width_keyword_values
 
 # The following features in the spec are already part of web-features:
 # - @font-face:
@@ -89,12 +86,6 @@ compat_features:
 #   - css.at-rules.font-face.font-feature-settings
 #   - css.properties.font-feature-settings
 #   - css.properties.font-feature-settings.normal
-# - font-stretch:
-#   - css.at-rules.font-face.font-stretch
-#   - css.properties.font.font_stretch_support
-#   - css.properties.font-stretch
-#   - css.properties.font-stretch.percentage
-#   - svg.global_attributes.font-stretch
 # - font-style:
 #   - css.at-rules.font-face.font-style
 #   - css.properties.font-style
@@ -136,6 +127,11 @@ compat_features:
 #   - css.properties.font-family.math
 # - System font:
 #   - css.properties.font-family.system-ui
+# - UI fonts:
+#   - css.properties.font-family.ui-monospace
+#   - css.properties.font-family.ui-rounded
+#   - css.properties.font-family.ui-sans-serif
+#   - css.properties.font-family.ui-serif
 # - font-kerning:
 #   - css.properties.font-kerning
 # - font-language-override:
@@ -243,3 +239,14 @@ compat_features:
 #   - css.properties.font-variant-position.normal
 #   - css.properties.font-variant-position.sub
 #   - css.properties.font-variant-position.super
+# - font-width:
+#   - css.properties.font-width
+#   - css.properties.font-width.condensed
+#   - css.properties.font-width.expanded
+#   - css.properties.font-width.extra-condensed
+#   - css.properties.font-width.extra-expanded
+#   - css.properties.font-width.normal
+#   - css.properties.font-width.semi-condensed
+#   - css.properties.font-width.semi-expanded
+#   - css.properties.font-width.ultra-condensed
+#   - css.properties.font-width.ultra-expanded

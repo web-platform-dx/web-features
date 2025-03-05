@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "74"
+    chrome_android: "74"
+    edge: "79"
 compat_features:
   # baseline: false
   # support:
@@ -15,14 +18,10 @@ compat_features:
   #   safari: "10.1"
   - api.ShadowRoot.pointerLockElement
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "74"
   #   chrome_android: "74"
   #   edge: "79"
   - api.Document.featurePolicy
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - api.Document.moveBefore

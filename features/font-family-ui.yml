@@ -1,0 +1,10 @@
+name: UI fonts
+description: The `ui-serif`, `ui-sans-serif`, `ui-monospace` and `ui-rounded` values for the `font-family` CSS property use device-default user interface fonts for text.
+spec: https://drafts.csswg.org/css-fonts-4/#ui-serif-def
+caniuse: extended-system-fonts
+group: fonts
+compat_features:
+  - css.properties.font-family.ui-monospace
+  - css.properties.font-family.ui-rounded
+  - css.properties.font-family.ui-sans-serif
+  - css.properties.font-family.ui-serif
