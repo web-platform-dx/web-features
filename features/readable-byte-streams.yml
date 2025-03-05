@@ -1,5 +1,5 @@
 name: Readable byte streams
-description: "A `ReadableStream` constructed with `{ type: \"bytes\" }` reads bytes from a stream without making extra copies, improving efficiency for streams of large chunks. Also known as BYOB or bring your own buffer."
+description: 'A `ReadableStream` constructed with `{ type: "bytes" }` reads bytes from a stream without making extra copies, improving efficiency for streams of large chunks. Also known as BYOB or bring your own buffer.'
 spec: https://streams.spec.whatwg.org/
 caniuse: streams
 group: streams
