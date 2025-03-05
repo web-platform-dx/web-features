@@ -1,0 +1,24 @@
+name: HTML wrapper methods
+description: JavaScript built-in methods such as, `String.bold()` and `String.italics()`, wrap strings in (often historic) HTML.
+spec: https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-additional-properties-of-the-string.prototype-object
+group: javascript
+discouraged:
+  according_to:
+    - https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-additional-ecmascript-features-for-web-browsers
+  alternatives:
+    - dom
+compat_features:
+  - javascript.builtins.String.anchor
+  - javascript.builtins.String.big
+  - javascript.builtins.String.blink
+  - javascript.builtins.String.bold
+  - javascript.builtins.String.fixed
+  - javascript.builtins.String.fontcolor
+  - javascript.builtins.String.fontsize
+  - javascript.builtins.String.italics
+  - javascript.builtins.String.link
+  - javascript.builtins.String.small
+  - javascript.builtins.String.strike
+  - javascript.builtins.String.sub
+  - javascript.builtins.String.substr
+  - javascript.builtins.String.sup

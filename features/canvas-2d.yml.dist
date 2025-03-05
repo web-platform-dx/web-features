@@ -176,7 +176,6 @@ compat_features:
   #   safari_ios: "3.2"
   - api.CanvasRenderingContext2D.createImageData
   - api.CanvasRenderingContext2D.fillText
-  - api.CanvasRenderingContext2D.font
   - api.CanvasRenderingContext2D.measureText
   - api.CanvasRenderingContext2D.strokeText
   - api.CanvasRenderingContext2D.textAlign
@@ -209,6 +208,19 @@ compat_features:
   #   safari: "9"
   #   safari_ios: "9"
   - api.CanvasRenderingContext2D.ellipse
+
+  # baseline: high
+  # baseline_low_date: 2016-08-02
+  # baseline_high_date: 2019-02-02
+  # support:
+  #   chrome: "36"
+  #   chrome_android: "36"
+  #   edge: "14"
+  #   firefox: "25"
+  #   firefox_android: "25"
+  #   safari: "7"
+  #   safari_ios: "7"
+  - api.ImageData.worker_support
 
   # baseline: high
   # baseline_low_date: 2016-08-02
@@ -484,6 +496,15 @@ compat_features:
   - api.TextMetrics.alphabeticBaseline
   - api.TextMetrics.hangingBaseline
   - api.TextMetrics.ideographicBaseline
+
+  # baseline: false
+  # support:
+  #   chrome: "2"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3.5"
+  #   firefox_android: "4"
+  - api.CanvasRenderingContext2D.font
 
   # baseline: false
   # support:
