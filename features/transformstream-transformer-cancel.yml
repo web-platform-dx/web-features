@@ -1,0 +1,6 @@
+name: TransformStream transformer cancel() method
+description: The `cancel()` method of a `TransformStream` transformer cleans up resources when the readable side cancels or the writable side aborts.
+spec: https://streams.spec.whatwg.org/#dom-transformer-cancel
+group: streams
+compat_features:
+  - api.TransformStream.TransformStream.transformer_cancel

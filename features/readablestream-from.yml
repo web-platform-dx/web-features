@@ -1,0 +1,6 @@
+name: ReadableStream.from()
+description: The `ReadableStream.from()` static method converts an iterable or async iterable object, such as an array or async generator function, into a readable stream.
+spec: https://streams.spec.whatwg.org/#rs-from
+group: streams
+compat_features:
+  - api.ReadableStream.from_static
