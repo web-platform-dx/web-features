@@ -43,3 +43,9 @@ compat_features:
   #   firefox: "102"
   #   firefox_android: "102"
   - api.ReadableStreamBYOBReader.releaseLock.reject_pending_read_request
+
+  # baseline: false
+  # support:
+  #   firefox: "134"
+  #   firefox_android: "134"
+  - api.ReadableStreamBYOBReader.read.options_min_parameter
