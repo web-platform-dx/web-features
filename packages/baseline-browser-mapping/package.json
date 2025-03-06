@@ -1,6 +1,6 @@
 {
   "name": "baseline-browser-mapping",
-  "version": "0.3.1",
+  "version": "1.0.0",
   "description": "A library for obtaining browser versions with their maximum supported Baseline feature set and Widely Available status.",
   "exports": {
     ".": "./dist/index.js"
@@ -18,7 +18,8 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@mdn/browser-compat-data": "latest"
+    "@mdn/browser-compat-data": "latest",
+    "web-features": "latest"
   },
   "devDependencies": {
     "@types/node": "^22.13.5",
