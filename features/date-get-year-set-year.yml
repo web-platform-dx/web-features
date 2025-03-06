@@ -1,0 +1,14 @@
+name: getYear() and setYear()
+description: The `getYear()` and `setYear()` methods of `Date` objects get and set the year as an offset to 1900.
+spec: https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-date.prototype.getyear
+group: javascript
+discouraged:
+  according_to:
+    - https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-additional-ecmascript-features-for-web-browsers
+  # No `alternatives` because it would be `alternatives: [date]`. In the future
+  # it'd be nice to have an internal reference to getFullYear() and
+  # setFullYear() instead.
+  # See: https://github.com/web-platform-dx/web-features/issues/2676
+compat_features:
+  - javascript.builtins.Date.getYear
+  - javascript.builtins.Date.setYear
