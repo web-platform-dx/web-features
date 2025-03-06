@@ -100,10 +100,10 @@ const compareVersions = (
   if (!incomingVersionStringMajor || !previousVersionStringMajor) {
     throw new Error(
       "One of these version strings is broken: " +
-      incomingVersionString +
-      " or " +
-      previousVersionString +
-      "",
+        incomingVersionString +
+        " or " +
+        previousVersionString +
+        "",
     );
   }
 
@@ -116,10 +116,10 @@ const compareVersions = (
   if (incomingVersionStringMinor) {
     if (
       parseInt(incomingVersionStringMajor) ==
-      parseInt(previousVersionStringMajor) &&
+        parseInt(previousVersionStringMajor) &&
       (!previousVersionStringMinor ||
         parseInt(incomingVersionStringMinor) >
-        parseInt(previousVersionStringMinor))
+          parseInt(previousVersionStringMinor))
     ) {
       return 1;
     }
@@ -246,15 +246,17 @@ const getCoreVersionsByDate = (
   if (minOnly) {
     return minimumVersions;
   } else {
-    return [...minimumVersions, ...getSubsequentVersions(minimumVersions)].sort((a, b) => {
-      if (a.browser < b.browser) {
-        return -1;
-      } else if (a.browser > b.browser) {
-        return 1;
-      } else {
-        return compareVersions(a.version, b.version)
-      }
-    });
+    return [...minimumVersions, ...getSubsequentVersions(minimumVersions)].sort(
+      (a, b) => {
+        if (a.browser < b.browser) {
+          return -1;
+        } else if (a.browser > b.browser) {
+          return 1;
+        } else {
+          return compareVersions(a.version, b.version);
+        }
+      },
+    );
   }
 };
 
