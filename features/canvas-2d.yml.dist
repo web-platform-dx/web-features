@@ -176,7 +176,6 @@ compat_features:
   #   safari_ios: "3.2"
   - api.CanvasRenderingContext2D.createImageData
   - api.CanvasRenderingContext2D.fillText
-  - api.CanvasRenderingContext2D.font
   - api.CanvasRenderingContext2D.measureText
   - api.CanvasRenderingContext2D.strokeText
   - api.CanvasRenderingContext2D.textAlign
@@ -497,6 +496,15 @@ compat_features:
   - api.TextMetrics.alphabeticBaseline
   - api.TextMetrics.hangingBaseline
   - api.TextMetrics.ideographicBaseline
+
+  # baseline: false
+  # support:
+  #   chrome: "2"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3.5"
+  #   firefox_android: "4"
+  - api.CanvasRenderingContext2D.font
 
   # baseline: false
   # support:
