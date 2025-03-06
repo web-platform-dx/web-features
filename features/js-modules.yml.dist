@@ -109,6 +109,18 @@ compat_features:
   #   safari_ios: "16.4"
   - javascript.operators.import_meta.resolve
 
+  # baseline: low
+  # baseline_low_date: 2023-06-06
+  # support:
+  #   chrome: "80"
+  #   chrome_android: "80"
+  #   edge: "80"
+  #   firefox: "114"
+  #   firefox_android: "114"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - api.Worklet.ecmascript_modules
+
   # baseline: false
   # support:
   #   chrome: "123"

@@ -1,0 +1,18 @@
+name: Shared worker
+description: The `SharedWorker()` constructor runs a script in its own thread, which can send and receive messages with other scripts running at the same origin.
+spec: https://html.spec.whatwg.org/multipage/workers.html#shared-workers-introduction
+caniuse: sharedworkers
+group: workers
+status:
+  compute_from: api.SharedWorker
+compat_features:
+  - api.SharedWorker
+  - api.SharedWorker.SharedWorker
+  - api.SharedWorker.SharedWorker.mime_checks
+  - api.SharedWorker.SharedWorker.options_name_parameter
+  - api.SharedWorker.error_event
+  - api.SharedWorker.port
+  - api.SharedWorkerGlobalScope
+  - api.SharedWorkerGlobalScope.close
+  - api.SharedWorkerGlobalScope.connect_event
+  - api.SharedWorkerGlobalScope.name
