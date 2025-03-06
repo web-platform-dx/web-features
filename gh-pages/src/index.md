@@ -12,6 +12,8 @@ Baseline features are available across popular browsers. Baseline has two stages
 - **Newly available**: The feature works across the latest devices and browser versions. The feature might not work in older devices or browsers. Indicated with a blue icon.
 - **Widely available**: The feature is well established and works across many devices and browser versions. It’s been available across browsers for at least 2½ years (30 months). Indicated with a green icon.
 
+Prior to being newly available, a feature has **Limited availability** when it's not yet available across all browsers.
+
 Baseline is calculated using the following core browser set:
 
 - Apple Safari (macOS and iOS)
