@@ -331,9 +331,25 @@ const getDownstreamBrowsers = (
 };
 
 type Options = {
+  /**
+   * Whether to include only the minimum compatible browser versions or all compatible versions.
+   * Defaults to `false`.
+   */
   listAllCompatibleVersions?: boolean;
+  /**
+   * Whether to include browsers that use the same engines as a core Baseline browser.
+   * Defaults to `false`.
+   */
   includeDownstreamBrowsers?: boolean;
+  /**
+   * Pass a date in the format 'YYYY-MM-DD' to get versions compatible with Widely available on the specified date.
+   * If left undefined and a `targetYear` is not passed, defaults to Widely Available as of the current date.
+   */
   widelyAvailableOnDate?: string | number;
+  /**
+   * Pass a year between 2016 and the current year to get browser versions compatible with all
+   * Newly Available features as of the end of the year specified.
+   */
   targetYear?: number;
 };
 
