@@ -5,7 +5,8 @@ discouraged:
   # SpeechGrammar and SpeechGrammarList have been removed from the Web Speech API spec.
   # There is no alternative API to point to because speech recognition has improved
   # significantly, removing the need for grammar-based recognition.
-  according_to: https://github.com/WebAudio/web-speech-api/pull/117
+  according_to:
+    - https://github.com/WebAudio/web-speech-api/pull/117
 group: speech
 compat_features:
   # These BCD keys are now marked as deprecated in BCD.
