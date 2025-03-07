@@ -5,32 +5,6 @@ By the [W3C WebDX Community Group](https://www.w3.org/community/webdx/) and cont
 `baseline-browser-mapping` exposes arrays of browsers compatible with Baseline Widely Available and specified Baseline year feature sets.
 You can use `baseline-browser-mapping` to help you determine minimum browser version support for your chosen Baseline feature set.
 
-## Limitations
-
-The browser versions in this module come from two different sources:
-
-- MDN's `browser-compat-data` module.
-- Parsed user agent strings provided by [useragents.io](https://useragents.io/)
-
-MDN `browser-compat-data` is an authoritative source of information for the browsers it contains. The release dates for the Baseline core browser set and the mapping of downstream browsers to Chromium versions should be considered accurate.
-
-> **Note**
-> At present, the selection criteria for core browser versions compatible with a given feature set is: the final version of each browser prior to the cut off date for that feature set. In the case of Widely Available, this is 30 months in the past and in the case of Baseline years, this is the end of the year specified. In future, when the `web-features` repository is data complete, it should be possible to determine if earlier browser versions support the specified feature set.
-
-Browser mappings from useragents.io are provided on a best effort basis. They assume that browser vendors are accurately stating the Chromium version they have implemented. The initial set of version mappings was derived from a bulk export in November 2024. This version was iterated over with a Regex match looking for a major Chrome version and a corresponding version of the browser in question, e.g.:
-
-`Mozilla/5.0 (Linux; U; Android 10; en-US; STK-L21 Build/HUAWEISTK-L21) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.58 UCBrowser/13.8.2.1324 Mobile Safari/537.36`
-
-Shows UC Browse Mobile 13.8 implementing Chromium 100, and:
-
-`Mozilla/5.0 (Linux; arm_64; Android 11; Redmi Note 8 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.6613.123 YaBrowser/24.10.2.123.00 SA/3 Mobile Safari/537.36`
-
-Shows Yandex Browser Mobile 24.10 implementing Chromium 128. The Chromium version from this string is mapped to the main Chrome version from MDN `browser-compat-data`.
-
-> **Note** Where possible, approximate release dates have been included based on useragents.io "first seen" data. However, useragents.io does not have "first seen" dates prior to June 2020. However, these browsers' Baseline compatibility is determined by their Chromium version, so their release dates are more informative than critical.
-
-This data is updated on a daily basis using a [script](https://github.com/web-platform-dx/web-features/tree/main/scripts/refresh-downstream.ts) triggered by a GitHub [action](https://github.com/web-platform-dx/web-features/tree/main/.github/workflows/refresh_downstream.yml). Useragents.io provides a private API for this module which exposes the last 7 days of newly seen user agents for the currently tracked browsers. If a new major version of one of the tracked browsers is encountered with a Chromium version that meets or exceeds the previous latest version of that browser, it is added to the [src/data/downstream-browsers.json](src/data/downstream-browsers.json) file with the date it was first seen by useragents.io as its release date.
-
 ## Prerequisites
 
 To use this package, you'll need:
@@ -43,142 +17,168 @@ To install the package, run:
 
 `npm install --save baseline-browser-mapping`
 
-If you wish to specify which version of `@mdn/browser-compat-data` (or manage its upgrades explicitly, such as with Dependabot), then install the latest `@mdn/browser-compat-data` too.
-Run:
+`baseline-browser-mapping` depends on `web-features` and `@mdn/browser-compat-data` for version selection. It is strongly recommended that you update this module and it's dependencies often to ensure you have the most accurate data. Consider adding a script to your `package.json` and using it as a build step:
 
-`npm install --save @mdn/browser-compat-data@latest`
-
-Updating this module and `@mdn/browser-compat-data` regularly is recommended to ensure you have the most up to date downstream browsers.
+```javascript
+"scripts": [
+  "refresh-baseline-browser-mapping": "npm i --save baseline-browser-mapping@latest web-features@latest @mdn/browser-compat-data@latest"
+]
+```
 
 ## Usage
 
 ### Get Baseline Widely Available browser versions
 
-To get the current list of minimum browser versions compatible with Baseline Widely Available features from the core browser set, call the `getMinimumWidelyAvailable` method:
+To get the current list of minimum browser versions compatible with Baseline Widely Available features from the core browser set, call the `getCompatibleVersions()` function with:
 
 ```javascript
-import { getMinimumWidelyAvailable } from "baseline-browser-mapping";
+import { getCompatibleVersions } from "baseline-browser-mapping";
 
-getMinimumWidelyAvailable();
+getCompatibleVersions();
 ```
 
-Executed on 29th November 2024, the above code returns the final version of each core browser released on or before 24th May 2022 i.e. 30 months before the date of execution:
+Executed on 7th March 2025, the above code returns the following browser versions:
 
 ```javascript
 [
-  {
-    browser: "chrome",
-    version: "102",
-    release_date: "2022-05-24",
-    engine: null,
-    engine_version: null,
-  },
+  { browser: "chrome", version: "105", release_date: "2022-09-02" },
   {
     browser: "chrome_android",
-    version: "102",
-    release_date: "2022-05-24",
-    engine: null,
-    engine_version: null,
+    version: "105",
+    release_date: "2022-09-02",
   },
-  {
-    browser: "edge",
-    version: "101",
-    release_date: "2022-04-28",
-    engine: null,
-    engine_version: null,
-  },
-  {
-    browser: "firefox",
-    version: "100",
-    release_date: "2022-05-03",
-    engine: null,
-    engine_version: null,
-  },
+  { browser: "edge", version: "105", release_date: "2022-09-02" },
+  { browser: "firefox", version: "104", release_date: "2022-08-23" },
   {
     browser: "firefox_android",
-    version: "100",
-    release_date: "2022-05-03",
-    engine: null,
-    engine_version: null,
+    version: "104",
+    release_date: "2022-08-23",
   },
-  {
-    browser: "safari",
-    version: "15.5",
-    release_date: "2022-05-16",
-    engine: null,
-    engine_version: null,
-  },
+  { browser: "safari", version: "15.6", release_date: "2022-09-02" },
   {
     browser: "safari_ios",
-    version: "15.5",
-    release_date: "2022-05-16",
-    engine: null,
-    engine_version: null,
+    version: "15.6",
+    release_date: "2022-09-02",
   },
 ];
 ```
 
-If you need a list of _all_ compatible versions, you can import and call:
+> [!NOTE]  
+> The minimum versions of each browser are not strictly the final release before the Widely Available cutoff date of `TODAY - 30 MONTHS`. Some earlier versions will have supported the full Widely Available feature set.
+
+### Configuration options
+
+`getCompatibleVersions()` accepts an `Object` as an argument with configuration options. The defaults are as follows:
 
 ```javascript
-import { getMinimumWidelyAvailable } from "baseline-browser-mapping";
-
-getAllWidelyAvailable();
+{
+  targetYear: undefined,
+  widelyAvailableOnDate: undefined,
+  includeDownstreamBrowsers: false,
+  listAllCompatibleVersions: false
+}
 ```
 
-### Get Baseline Widely Available compatible browser versions as of a specific date
+#### `targetYear`
 
-To get the minimum browser versions that supported Baseline Widely Available on a specific date, call `getMinimumWidelyAvailableOnDate` or `geAllWidelyAvailableOnDate`, passing the desired date in the format `YYYY-MM-DD`:
+The `targetYear` option returns the minimum browser versions compatible with all interoperable features at the end of the specific calendar year. For example, calling:
 
 ```javascript
-import { getMinimumWidelyAvailableOnDate } from "baseline-browser-mapping";
-
-getMinimumWidelyAvailableOnDate("2021-03-19");
+getCompatibleVersions({
+  targetYear: 2020,
+});
 ```
 
-This would return the final version of each core browser released on or before 19th September 2018 i.e. 30 months before 19th March 2021.
-
-If you need a list of _all_ compatible versions, you can import and call:
+Returns the following versions:
 
 ```javascript
-import { getAllWidelyAvailableOnDate } from "baseline-browser-mapping";
-
-getAllWidelyAvailableOnDate("2021-03-19");
+[
+  { browser: "chrome", version: "87", release_date: "2020-11-19" },
+  {
+    browser: "chrome_android",
+    version: "87",
+    release_date: "2020-11-19",
+  },
+  { browser: "edge", version: "87", release_date: "2020-11-19" },
+  { browser: "firefox", version: "83", release_date: "2020-11-17" },
+  {
+    browser: "firefox_android",
+    version: "83",
+    release_date: "2020-11-17",
+  },
+  { browser: "safari", version: "14", release_date: "2020-09-16" },
+  { browser: "safari_ios", version: "14", release_date: "2020-09-16" },
+];
 ```
 
-### Get Baseline year compatible browser versions
+> [!NOTE]  
+> The minimum version of each browser is not necessarily the final version released in that calendar year. In the above example, Firefox 84 was the final version released in 2020; however Firefox 83 supported all of the features that were interoperable at the end of 2020.
 
-To get the list of browser versions that support a particular year's Baseline feature set, call `getMinimumByYear` or `getAllByYear` passing the desired year in the format YYYY:
+> [!WARNING]  
+> You cannot use `targetYear` and `widelyAavailableDate` together. Please only use one of these options at a time.
+
+#### `widelyAvailableOnDate`
+
+The `widelyAvailableOnDate` options returns the minimum versions compatible with Baseline Widely Available on a specified date in the formay `YYYY-MM-DD`:
 
 ```javascript
-import { getMinimumByYear } from "baseline-browser-mapping";
-
-getMinimumByYear("2020");
+getCompatibleVersions({
+  widelyAvailableOnDate: `2023-04-05`,
+});
 ```
 
-If you need a list of _all_ compatible versions, you can import and call:
+> [!TIP]  
+> This can be particularly useful if you provide a versioned library that target Baseline Widely Available on each version's release date and want to provide a table of minimum supported browsers in your documentation.
+
+#### `includeDownstreamBrowsers`
+
+Setting `includeDownstreamBrowsers` to `true` will include browsers outside of the Baseline core browser set where it is possible to map those browsers to an upstream Chromium version:
 
 ```javascript
-import { getAllByYear } from "baseline-browser-mapping";
-
-getAllByYear("2020");
+getCompatibleVersions({
+  widelyAvailableOnDate: `2023-04-05`,
+});
 ```
 
-### Including downstreambrowsers
+For more information on downstream browsers, see [the section on downstream browsers](#downstream-browsers) below.
 
-Each of the methods above can take an optional final boolean parameter `includeDownstream`. The default for this in all functions is `false`. To include downstream browsers, pass `true` as the final parameter when you call the function:
+#### `listAllCompatibleVersions`
+
+If you need a list of all compatible versions, pass an object with the `listAllCompatibleVersions` :
 
 ```javascript
-getAllWidelyAvailable(true)
-
-getMinimumWidelyAvailableOnDate('2021-03-19' true)
-
-getMinimumByYear('2020', true)
+getCompatibleVersions({
+  listAllCompatibleVersions: true,
+});
 ```
 
-Passing `true` will include the appropriate versions of the browsers listed as "Core" = `false` below.
+## Downstream browsers
 
-## Currently included browsers
+### Limitations
+
+The browser versions in this module come from two different sources:
+
+- MDN's `browser-compat-data` module.
+- Parsed user agent strings provided by [useragents.io](https://useragents.io/)
+
+MDN `browser-compat-data` is an authoritative source of information for the browsers it contains. The release dates for the Baseline core browser set and the mapping of downstream browsers to Chromium versions should be considered accurate.
+
+Browser mappings from useragents.io are provided on a best effort basis. They assume that browser vendors are accurately stating the Chromium version they have implemented. The initial set of version mappings was derived from a bulk export in November 2024. This version was iterated over with a Regex match looking for a major Chrome version and a corresponding version of the browser in question, e.g.:
+
+`Mozilla/5.0 (Linux; U; Android 10; en-US; STK-L21 Build/HUAWEISTK-L21) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/100.0.4896.58 UCBrowser/13.8.2.1324 Mobile Safari/537.36`
+
+Shows UC Browser Mobile 13.8 implementing Chromium 100, and:
+
+`Mozilla/5.0 (Linux; arm_64; Android 11; Redmi Note 8 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.6613.123 YaBrowser/24.10.2.123.00 SA/3 Mobile Safari/537.36`
+
+Shows Yandex Browser Mobile 24.10 implementing Chromium 128. The Chromium version from this string is mapped to the main Chrome version from MDN `browser-compat-data`.
+
+> [!NOTE]  
+> Where possible, approximate release dates have been included based on useragents.io "first seen" data. useragents.io does not have "first seen" dates prior to June 2020. However, these browsers' Baseline compatibility is determined by their Chromium version, so their release dates are more informative than critical.
+
+This data is updated on a daily basis using a [script](https://github.com/web-platform-dx/web-features/tree/main/scripts/refresh-downstream.ts) triggered by a GitHub [action](https://github.com/web-platform-dx/web-features/tree/main/.github/workflows/refresh_downstream.yml). Useragents.io provides a private API for this module which exposes the last 7 days of newly seen user agents for the currently tracked browsers. If a new major version of one of the tracked browsers is encountered with a Chromium version that meets or exceeds the previous latest version of that browser, it is added to the [src/data/downstream-browsers.json](src/data/downstream-browsers.json) file with the date it was first seen by useragents.io as its release date.
+
+### List of downstream browsers
 
 | Browser               | ID                        | Core    | Source                    |
 | --------------------- | ------------------------- | ------- | ------------------------- |
@@ -197,7 +197,7 @@ Passing `true` will include the appropriate versions of the browsers listed as "
 | UC Browser Mobile     | `uc_android`              | `false` | useragents.io             |
 | Yandex Browser Mobile | `ya_android`              | `false` | useragents.io             |
 
-> **Note**
+> [!NOTE]  
 > All the non-core browsers currently included implement Chromium. Their inclusion in any of the above methods is based on the Baseline feature set supported by the Chromium version they implement, not their release date.
 
 ## Helping out and getting help

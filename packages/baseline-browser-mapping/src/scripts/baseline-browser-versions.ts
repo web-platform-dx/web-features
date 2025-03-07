@@ -226,7 +226,7 @@ const getSubsequentVersions = (
 
 const getCoreVersionsByDate = (
   date: Date,
-  minOnly: boolean = true,
+  listAllCompatibleVersions: boolean = false,
 ): BrowserVersion[] => {
   if (date.getFullYear() < 2015) {
     throw new Error(
@@ -243,7 +243,7 @@ const getCoreVersionsByDate = (
   const compatibleFeatures = getCompatibleFeaturesByDate(date);
   const minimumVersions = getMinimumVersionsFromFeatures(compatibleFeatures);
 
-  if (minOnly) {
+  if (!listAllCompatibleVersions) {
     return minimumVersions;
   } else {
     return [...minimumVersions, ...getSubsequentVersions(minimumVersions)].sort(
@@ -262,7 +262,7 @@ const getCoreVersionsByDate = (
 
 const getDownstreamBrowsers = (
   inputArray: BrowserVersion[] = [],
-  minOnly: boolean = true,
+  listAllCompatibleVersions: boolean = true,
 ): BrowserVersion[] => {
   let minimumChromeVersion: string | undefined = undefined;
   if (inputArray && inputArray.length > 0) {
@@ -320,7 +320,7 @@ const getDownstreamBrowsers = (
 
         downstreamArray.push(outputObject);
 
-        if (minOnly) {
+        if (!listAllCompatibleVersions) {
           break;
         }
       }
@@ -330,82 +330,58 @@ const getDownstreamBrowsers = (
   return outputArray;
 };
 
-export function getMinimumWidelyAvailable(
-  includeDownstream: boolean = false,
-): BrowserVersion[] {
-  const date30MonthsAgo = new Date();
-  date30MonthsAgo.setMonth(new Date().getMonth() - 30);
-  let coreBrowserArray = getCoreVersionsByDate(date30MonthsAgo);
-  if (!includeDownstream) {
-    return coreBrowserArray;
-  } else {
-    return getDownstreamBrowsers(coreBrowserArray);
-  }
-}
+type Options = {
+  listAllCompatibleVersions?: boolean;
+  includeDownstreamBrowsers?: boolean;
+  widelyAvailableOnDate?: string | number;
+  targetYear?: number;
+};
 
-export function getAllWidelyAvailable(
-  includeDownstream: boolean = false,
-): BrowserVersion[] {
-  let date30MonthsAgo = new Date();
-  date30MonthsAgo.setMonth(new Date().getMonth() - 30);
-  let coreBrowserArray = getCoreVersionsByDate(date30MonthsAgo, false);
-  if (!includeDownstream) {
-    return coreBrowserArray;
-  } else {
-    return getDownstreamBrowsers(coreBrowserArray, false);
+export function getCompatibleVersions(userOptions: Options): BrowserVersion[] {
+  let incomingOptions = userOptions ?? {};
+
+  let options: Options = {
+    listAllCompatibleVersions:
+      incomingOptions.listAllCompatibleVersions ?? false,
+    includeDownstreamBrowsers:
+      incomingOptions.includeDownstreamBrowsers ?? false,
+    widelyAvailableOnDate: incomingOptions.widelyAvailableOnDate ?? undefined,
+    targetYear: incomingOptions.targetYear ?? undefined,
+  };
+
+  let targetDate: Date = new Date();
+
+  if (!options.widelyAvailableOnDate && !options.targetYear) {
+    targetDate = new Date();
+  } else if (options.targetYear && options.widelyAvailableOnDate) {
+    console.log(
+      new Error(
+        "You cannot use targetYear and widelyAvailableOnDate at the same time.  Please remove one of these options and try again.",
+      ),
+    );
+    process.exit(1);
+  } else if (options.widelyAvailableOnDate) {
+    targetDate = new Date(options.widelyAvailableOnDate);
+  } else if (options.targetYear) {
+    targetDate = new Date(`${options.targetYear}-12-31`);
   }
-}
-export function getMinimumWidelyAvailableOnDate(
-  dateString: string,
-  includeDownstream: boolean = false,
-): BrowserVersion[] {
-  const givenDate = new Date(Date.parse(dateString));
-  const givenDateLess30Months = new Date(
-    givenDate.setMonth(givenDate.getMonth() - 30),
+
+  // Sets a cutoff date for feature interoperability 30 months before the stated date
+  if (options.widelyAvailableOnDate || options.targetYear === undefined) {
+    targetDate.setMonth(new Date().getMonth() - 30);
+  }
+
+  let coreBrowserArray = getCoreVersionsByDate(
+    targetDate,
+    options.listAllCompatibleVersions,
   );
-  let coreBrowserArray = getCoreVersionsByDate(givenDateLess30Months);
-  if (!includeDownstream) {
+
+  if (options.includeDownstreamBrowsers === false) {
     return coreBrowserArray;
   } else {
-    return getDownstreamBrowsers(coreBrowserArray);
-  }
-}
-export function getAllWidelyAvailableOnDate(
-  dateString: string,
-  includeDownstream: boolean = false,
-): BrowserVersion[] {
-  const givenDate = new Date(Date.parse(dateString));
-  const givenDateLess30Months = new Date(
-    givenDate.setMonth(givenDate.getMonth() - 30),
-  );
-  let coreBrowserArray = getCoreVersionsByDate(givenDateLess30Months, false);
-  if (!includeDownstream) {
-    return coreBrowserArray;
-  } else {
-    return getDownstreamBrowsers(coreBrowserArray, false);
-  }
-}
-export function getMinimumByYear(
-  year: string,
-  includeDownstream: boolean = false,
-): BrowserVersion[] {
-  const date = new Date(parseInt(year) + 1, 0, 1);
-  let coreBrowserArray = getCoreVersionsByDate(date);
-  if (!includeDownstream) {
-    return coreBrowserArray;
-  } else {
-    return getDownstreamBrowsers(coreBrowserArray);
-  }
-}
-export function getAllByYear(
-  year: string,
-  includeDownstream: boolean = false,
-): BrowserVersion[] {
-  const date = new Date(parseInt(year) + 1, 0, 1);
-  let coreBrowserArray = getCoreVersionsByDate(date, false);
-  if (!includeDownstream) {
-    return coreBrowserArray;
-  } else {
-    return getDownstreamBrowsers(coreBrowserArray, false);
+    return getDownstreamBrowsers(
+      coreBrowserArray,
+      options.listAllCompatibleVersions,
+    );
   }
 }
