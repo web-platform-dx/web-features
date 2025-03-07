@@ -408,9 +408,16 @@ compat_features:
   #   chrome_android: "132"
   #   edge: "132"
   - api.GPUDevice.adapterInfo
+  - api.GPUTexture.createView.usage
+
+  # baseline: false
+  # support:
+  #   chrome: "134"
+  #   chrome_android: "134"
+  #   edge: "134"
+  - api.GPUAdapterInfo.subgroupMaxSize
+  - api.GPUAdapterInfo.subgroupMinSize
 
   # baseline: false
   # support: {}
-  - api.GPUAdapterInfo.subgroupMaxSize
-  - api.GPUAdapterInfo.subgroupMinSize
   - api.GPUSupportedFeatures.feature_float32-blendable
