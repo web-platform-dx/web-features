@@ -638,6 +638,17 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "14"
+  #   edge: "12"
+  #   firefox: "134"
+  #   firefox_android: "134"
+  #   safari: "6"
+  #   safari_ios: "6"
+  - api.AudioParam.exponentialRampToValueAtTime
+  - api.AudioParam.linearRampToValueAtTime
+
+  # baseline: false
+  # support:
   #   chrome: "52"
   #   chrome_android: "52"
   #   edge: "79"
@@ -688,15 +699,6 @@ compat_features:
   #   firefox: "70"
   #   firefox_android: "79"
   - api.AudioContext.outputLatency
-
-  # baseline: false
-  # support:
-  #   chrome: "14"
-  #   edge: "12"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - api.AudioParam.exponentialRampToValueAtTime
-  - api.AudioParam.linearRampToValueAtTime
 
   # baseline: false
   # support:
