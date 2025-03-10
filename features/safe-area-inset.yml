@@ -2,6 +2,8 @@ name: Safe area inset environment variables
 description: The `safe-area-inset-` CSS environment variables represent a rectangle that cannot cut off content within a non-rectangular screen. For example, `top:\ env(safe-area-inset-top);` positions the top of an element below the notch on an iPhone.
 spec: https://drafts.csswg.org/css-env-1/#safe-area-insets
 group: environment-variables
+# Caniuse is for env(), and this was the first env var that was supported.
+caniuse: css-env-function
 compat_features:
   - css.types.env.safe-area-inset-bottom
   - css.types.env.safe-area-inset-left
