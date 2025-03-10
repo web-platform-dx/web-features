@@ -1,11 +1,9 @@
-draft_date: 2025-03-03
+draft_date: 2025-03-10
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
-  - api.DedicatedWorkerGlobalScope
-  - api.DedicatedWorkerGlobalScope.close
-  - api.DedicatedWorkerGlobalScope.name
+  - api.CanvasRenderingContext2D.lang
   - api.Document.featurePolicy
   - api.ElementInternals.shadowRoot
   - api.ErrorEvent
@@ -61,12 +59,16 @@ compat_features:
   - api.HTMLSourceElement.width
   - api.HTMLUnknownElement
   - api.HTMLVideoElement.playsInline
+  - api.ImageData.ImageData.settings_parameter
+  - api.ImageData.ImageData.settings_parameter.colorSpace_option
   - api.MediaError
   - api.MediaError.code
   - api.MediaError.message
   - api.MouseEvent.relatedTarget.drag_events
+  - api.NavigateEvent.sourceElement
   - api.Navigator.authentication
   - api.OffscreenCanvasRenderingContext2D.getContextAttributes
+  - api.OffscreenCanvasRenderingContext2D.lang
   - api.PromiseRejectionEvent
   - api.PromiseRejectionEvent.PromiseRejectionEvent
   - api.PromiseRejectionEvent.promise
@@ -76,16 +78,6 @@ compat_features:
   - api.ServiceWorker.error_event
   - api.ShadowRoot.activeElement
   - api.ShadowRoot.innerHTML
-  - api.SharedWorker
-  - api.SharedWorker.SharedWorker
-  - api.SharedWorker.SharedWorker.mime_checks
-  - api.SharedWorker.SharedWorker.options_name_parameter
-  - api.SharedWorker.error_event
-  - api.SharedWorker.port
-  - api.SharedWorkerGlobalScope
-  - api.SharedWorkerGlobalScope.close
-  - api.SharedWorkerGlobalScope.connect_event
-  - api.SharedWorkerGlobalScope.name
   - api.TimeRanges
   - api.TimeRanges.end
   - api.TimeRanges.length
@@ -93,43 +85,12 @@ compat_features:
   - api.TrackEvent
   - api.TrackEvent.TrackEvent
   - api.TrackEvent.track
+  - api.Window.fetchLater
   - api.Window.originAgentCluster
+  - api.Window.postMessage.options_delegate_parameter
   - api.Window.postMessage.transfer_parameter
   - api.Window.rejectionhandled_event
   - api.Window.unhandledrejection_event
-  - api.Worker
-  - api.Worker.Worker
-  - api.Worker.Worker.mime_checks
-  - api.Worker.Worker.options_name_parameter
-  - api.Worker.error_event
-  - api.Worker.messageerror_event
-  - api.Worker.terminate
-  - api.Worker.worker_support
-  - api.WorkerGlobalScope
-  - api.WorkerGlobalScope.error_event
-  - api.WorkerGlobalScope.importScripts
-  - api.WorkerGlobalScope.importScripts.mime_checks
-  - api.WorkerGlobalScope.location
-  - api.WorkerGlobalScope.navigator
-  - api.WorkerGlobalScope.rejectionhandled_event
-  - api.WorkerGlobalScope.self
-  - api.WorkerGlobalScope.unhandledrejection_event
-  - api.WorkerLocation
-  - api.WorkerLocation.hash
-  - api.WorkerLocation.host
-  - api.WorkerLocation.hostname
-  - api.WorkerLocation.href
-  - api.WorkerLocation.origin
-  - api.WorkerLocation.pathname
-  - api.WorkerLocation.port
-  - api.WorkerLocation.protocol
-  - api.WorkerLocation.search
-  - api.WorkerLocation.toString
-  - api.WorkerNavigator
-  - api.Worklet
-  - api.Worklet.addModule
-  - api.Worklet.ecmascript_modules
-  - api.WorkletGlobalScope
   - api.crossOriginIsolated
   - api.origin
   - api.queueMicrotask
@@ -514,6 +475,38 @@ compat_features:
 #   - api.HTMLElement.dragover_event
 #   - api.HTMLElement.dragstart_event
 #   - api.HTMLElement.drop_event
+# - Dedicated workers:
+#   - api.DedicatedWorkerGlobalScope
+#   - api.DedicatedWorkerGlobalScope.close
+#   - api.DedicatedWorkerGlobalScope.name
+#   - api.Worker
+#   - api.Worker.Worker
+#   - api.Worker.Worker.mime_checks
+#   - api.Worker.Worker.options_name_parameter
+#   - api.Worker.error_event
+#   - api.Worker.terminate
+#   - api.Worker.worker_support
+#   - api.WorkerGlobalScope
+#   - api.WorkerGlobalScope.error_event
+#   - api.WorkerGlobalScope.importScripts
+#   - api.WorkerGlobalScope.importScripts.mime_checks
+#   - api.WorkerGlobalScope.location
+#   - api.WorkerGlobalScope.navigator
+#   - api.WorkerGlobalScope.rejectionhandled_event
+#   - api.WorkerGlobalScope.self
+#   - api.WorkerGlobalScope.unhandledrejection_event
+#   - api.WorkerLocation
+#   - api.WorkerLocation.hash
+#   - api.WorkerLocation.host
+#   - api.WorkerLocation.hostname
+#   - api.WorkerLocation.href
+#   - api.WorkerLocation.origin
+#   - api.WorkerLocation.pathname
+#   - api.WorkerLocation.port
+#   - api.WorkerLocation.protocol
+#   - api.WorkerLocation.search
+#   - api.WorkerLocation.toString
+#   - api.WorkerNavigator
 # - requestAnimationFrame() in workers:
 #   - api.DedicatedWorkerGlobalScope.cancelAnimationFrame
 #   - api.DedicatedWorkerGlobalScope.requestAnimationFrame
@@ -534,6 +527,7 @@ compat_features:
 #   - api.DedicatedWorkerGlobalScope.messageerror_event
 #   - api.MessagePort.messageerror_event
 #   - api.Window.messageerror_event
+#   - api.Worker.messageerror_event
 # - document.write():
 #   - api.Document.close
 #   - api.Document.open
@@ -1126,6 +1120,7 @@ compat_features:
 #   - api.HTMLElement.inert
 #   - api.HTMLElement.inert.ignores_find_in_page
 #   - html.global_attributes.inert
+#   - html.global_attributes.inert.ignores_find_in_page
 # - inputmode:
 #   - api.HTMLElement.inputMode
 #   - html.global_attributes.inputmode
@@ -2108,6 +2103,17 @@ compat_features:
 #   - api.PaintRenderingContext2D.translate
 # - Selection:
 #   - api.Range.createContextualFragment
+# - Shared worker:
+#   - api.SharedWorker
+#   - api.SharedWorker.SharedWorker
+#   - api.SharedWorker.SharedWorker.mime_checks
+#   - api.SharedWorker.SharedWorker.options_name_parameter
+#   - api.SharedWorker.error_event
+#   - api.SharedWorker.port
+#   - api.SharedWorkerGlobalScope
+#   - api.SharedWorkerGlobalScope.close
+#   - api.SharedWorkerGlobalScope.connect_event
+#   - api.SharedWorkerGlobalScope.name
 # - JavaScript modules in shared workers:
 #   - api.SharedWorker.SharedWorker.ecmascript_modules
 #   - api.SharedWorker.SharedWorker.options_type_parameter
@@ -2177,6 +2183,15 @@ compat_features:
 # - JavaScript modules in workers:
 #   - api.Worker.Worker.ecmascript_modules
 #   - api.Worker.Worker.options_type_parameter
+# - AudioWorklet:
+#   - api.Worklet
+#   - api.Worklet.addModule
+#   - api.WorkletGlobalScope
+# - JavaScript modules:
+#   - api.Worklet.ecmascript_modules
+#   - html.elements.script.nomodule
+#   - html.elements.script.type.module
+#   - javascript.operators.import_meta.resolve
 # - Base64 encoding and decoding:
 #   - api.atob
 #   - api.atob.worker_support
@@ -2371,10 +2386,6 @@ compat_features:
 #   - html.elements.s
 # - <samp>:
 #   - html.elements.samp
-# - JavaScript modules:
-#   - html.elements.script.nomodule
-#   - html.elements.script.type.module
-#   - javascript.operators.import_meta.resolve
 # - Import maps:
 #   - html.elements.script.type.importmap
 # - <search>:
