@@ -1137,6 +1137,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "134"
+  #   chrome_android: "134"
+  #   edge: "134"
+  - api.HTMLDialogElement.closedBy
+  - api.HTMLDialogElement.requestClose
+  - api.OffscreenCanvasRenderingContext2D.getContextAttributes
+  - html.elements.dialog.closedby
+
+  # baseline: false
+  # support:
   #   safari: "9"
   #   safari_ios: "9"
   - api.HTMLMediaElement.getStartDate
@@ -1163,13 +1173,9 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - api.HTMLDialogElement.closedBy
-  - api.HTMLDialogElement.requestClose
   - api.HTMLInputElement.alpha
   - api.HTMLInputElement.colorSpace
   - api.Navigator.authentication
-  - api.OffscreenCanvasRenderingContext2D.getContextAttributes
-  - html.elements.dialog.closedby
   - html.elements.hr.hr_in_select
   - html.elements.input.alpha
   - html.elements.input.colorspace
