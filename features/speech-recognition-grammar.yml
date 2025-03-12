@@ -1,0 +1,23 @@
+name: Speech recognition grammar
+description: "The `SpeechRecognition.grammars` property of the Web Speech API represents a set of words or patterns of words that the recognition service should recognize, used for when the recognition service's accuracy is low. This feature has been removed due to advancements in speech recognition."
+spec: https://webaudio.github.io/web-speech-api/#speechreco-section
+discouraged:
+  # SpeechGrammar and SpeechGrammarList have been removed from the Web Speech API spec.
+  # There is no alternative API to point to because speech recognition has improved
+  # significantly, removing the need for grammar-based recognition.
+  according_to:
+    - https://github.com/WebAudio/web-speech-api/pull/117
+group: speech
+compat_features:
+  # These BCD keys are now marked as deprecated in BCD.
+  # They will eventually be removed.
+  - api.SpeechGrammar
+  - api.SpeechGrammar.src
+  - api.SpeechGrammar.weight
+  - api.SpeechGrammarList
+  - api.SpeechGrammarList.SpeechGrammarList
+  - api.SpeechGrammarList.addFromString
+  - api.SpeechGrammarList.addFromURI
+  - api.SpeechGrammarList.item
+  - api.SpeechGrammarList.length
+  - api.SpeechRecognition.grammars

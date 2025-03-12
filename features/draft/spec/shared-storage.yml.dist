@@ -3,16 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "134"
+    chrome_android: "134"
+    edge: "134"
 compat_features:
-  - api.SharedStorage.batchUpdate
-  - api.SharedStorageAppendMethod
-  - api.SharedStorageAppendMethod.SharedStorageAppendMethod
-  - api.SharedStorageClearMethod
-  - api.SharedStorageClearMethod.SharedStorageClearMethod
-  - api.SharedStorageDeleteMethod
-  - api.SharedStorageDeleteMethod.SharedStorageDeleteMethod
-  - api.SharedStorageModifierMethod
-  - api.SharedStorageSetMethod
-  - api.SharedStorageSetMethod.SharedStorageSetMethod
   - api.SharedStorageWorkletGlobalScope.interestGroups

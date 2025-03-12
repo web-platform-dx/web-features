@@ -1,0 +1,27 @@
+name: Readable byte streams
+description: 'A `ReadableStream` constructed with `{ type: "bytes" }` reads bytes from a stream without making extra copies, improving efficiency for streams of large chunks. Also known as BYOB or bring your own buffer.'
+spec: https://streams.spec.whatwg.org/
+caniuse: streams
+group: streams
+status:
+  compute_from:
+    - api.ReadableStreamBYOBReader
+compat_features:
+  - api.ReadableByteStreamController
+  - api.ReadableByteStreamController.byobRequest
+  - api.ReadableByteStreamController.close
+  - api.ReadableByteStreamController.desiredSize
+  - api.ReadableByteStreamController.enqueue
+  - api.ReadableByteStreamController.error
+  - api.ReadableStreamBYOBReader
+  - api.ReadableStreamBYOBReader.ReadableStreamBYOBReader
+  - api.ReadableStreamBYOBReader.cancel
+  - api.ReadableStreamBYOBReader.closed
+  - api.ReadableStreamBYOBReader.read
+  - api.ReadableStreamBYOBReader.releaseLock
+  - api.ReadableStreamBYOBReader.releaseLock.reject_pending_read_request
+  - api.ReadableStreamBYOBRequest
+  - api.ReadableStreamBYOBRequest.respond
+  - api.ReadableStreamBYOBRequest.respondWithNewView
+  - api.ReadableStreamBYOBRequest.view
+  - api.ReadableStreamBYOBReader.read.options_min_parameter

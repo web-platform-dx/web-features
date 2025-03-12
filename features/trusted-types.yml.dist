@@ -14,6 +14,10 @@ compat_features:
   #   chrome: "83"
   #   chrome_android: "83"
   #   edge: "83"
+  - api.Element.innerHTML.accepts_TrustedHTML
+  - api.HTMLScriptElement.src.accepts_TrustedScriptURL
+  - api.HTMLScriptElement.text.accepts_TrustedScript
+  - api.ShadowRoot.innerHTML.accepts_TrustedHTML
   - api.TrustedHTML
   - api.TrustedHTML.toString
   - api.TrustedScript
@@ -35,6 +39,8 @@ compat_features:
   - api.TrustedTypePolicyFactory.isHTML
   - api.TrustedTypePolicyFactory.isScript
   - api.TrustedTypePolicyFactory.isScriptURL
+  - api.setInterval.code_param_accepts_trustedScript
+  - api.setTimeout.code_param_accepts_trustedScript
   - api.trustedTypes
   - http.headers.Content-Security-Policy.require-trusted-types-for
   - http.headers.Content-Security-Policy.trusted-types
@@ -47,3 +53,10 @@ compat_features:
   - api.TrustedHTML.toJSON
   - api.TrustedScript.toJSON
   - api.TrustedScriptURL.toJSON
+
+  # baseline: false
+  # support:
+  #   chrome: "83"
+  #   chrome_android: "83"
+  - api.HTMLElement.innerText.scripts_accept_TrustedScript
+  - api.Node.textContent.scripts_accept_TrustedScript
