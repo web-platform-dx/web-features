@@ -1,13 +1,10 @@
-name: Text underline position
-description: "The `text-underline-position` and `text-underline-offset` CSS properties set the position and distance from initial position of text underlines on text with `text-decoration: underline`."
-spec: https://drafts.csswg.org/css-text-decor-4/#line-decoration
+name: text-underline-position
+description: "The `text-underline-position` CSS property sets the position of underlines on text. For example, `text-underline-position: under` places the underline below the text, avoiding crossing descenders. The underline may be further adjusted by the `text-underline-offset` property."
+spec: https://drafts.csswg.org/css-text-decor-4/#text-underline-position-property
 group: text
 status:
-  compute_from: css.properties.text-underline-offset
+  compute_from: css.properties.text-underline-position
 compat_features:
-  - css.properties.text-underline-offset
-  - css.properties.text-underline-offset.auto
-  - css.properties.text-underline-offset.percentage
   - css.properties.text-underline-position
   - css.properties.text-underline-position.from-font
   - css.properties.text-underline-position.left

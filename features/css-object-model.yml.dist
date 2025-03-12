@@ -243,6 +243,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "131"
+  #   chrome_android: "131"
+  #   edge: "131"
+  - api.CSSMarginRule
+  - api.CSSMarginRule.name
+  - api.CSSMarginRule.style
+
+  # baseline: false
+  # support:
   #   firefox: "129"
   #   firefox_android: "129"
   - api.CSSPageDescriptors
@@ -259,14 +268,6 @@ compat_features:
   - api.CSSPageDescriptors.pageOrientation
   - api.CSSPageDescriptors.size
   - api.CSSPageRule.style.type_CSSPageDescriptors
-
-  # baseline: false
-  # support:
-  #   chrome: "131"
-  #   edge: "131"
-  - api.CSSMarginRule
-  - api.CSSMarginRule.name
-  - api.CSSMarginRule.style
 
   # baseline: false
   # support: {}

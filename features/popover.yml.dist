@@ -79,3 +79,8 @@ compat_features:
   #   safari: "17"
   #   safari_ios: "18.3"
   - api.HTMLElement.popover
+
+  # baseline: false
+  # support: {}
+  - api.HTMLElement.showPopover.source
+  - api.HTMLElement.togglePopover.source

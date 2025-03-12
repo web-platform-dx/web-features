@@ -39,15 +39,6 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - api.SpeechGrammar
-  - api.SpeechGrammar.src
-  - api.SpeechGrammar.weight
-  - api.SpeechGrammarList
-  - api.SpeechGrammarList.SpeechGrammarList
-  - api.SpeechGrammarList.addFromString
-  - api.SpeechGrammarList.addFromURI
-  - api.SpeechGrammarList.item
-  - api.SpeechGrammarList.length
   - api.SpeechRecognition
   - api.SpeechRecognition.SpeechRecognition
   - api.SpeechRecognition.abort
@@ -56,7 +47,6 @@ compat_features:
   - api.SpeechRecognition.continuous
   - api.SpeechRecognition.end_event
   - api.SpeechRecognition.error_event
-  - api.SpeechRecognition.grammars
   - api.SpeechRecognition.interimResults
   - api.SpeechRecognition.lang
   - api.SpeechRecognition.maxAlternatives

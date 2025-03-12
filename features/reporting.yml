@@ -1,7 +1,39 @@
 name: Reporting API
-description: The Reporting API makes consistent reports about Content Security Policy violations, Permissions-Policy violations, deprecated feature usage, crashes, and other web platform features available to your server endpoints.
-spec: https://w3c.github.io/reporting/
+description: The `Reporting-Endpoints` HTTP header and `ReportingObserver()` API send reports of Content Security Policy (CSP) violations, Permissions-Policy violations, deprecated feature usage, browser interventions, and crashes to a nominated URL or callback function.
+spec:
+  - https://w3c.github.io/reporting/
+  - https://wicg.github.io/intervention-reporting/
+  - https://wicg.github.io/deprecation-reporting/
+  - https://w3c.github.io/webappsec-csp/#reporting
 compat_features:
+  - api.CSPViolationReportBody
+  - api.CSPViolationReportBody.blockedURL
+  - api.CSPViolationReportBody.columnNumber
+  - api.CSPViolationReportBody.disposition
+  - api.CSPViolationReportBody.documentURL
+  - api.CSPViolationReportBody.effectiveDirective
+  - api.CSPViolationReportBody.lineNumber
+  - api.CSPViolationReportBody.originalPolicy
+  - api.CSPViolationReportBody.referrer
+  - api.CSPViolationReportBody.sample
+  - api.CSPViolationReportBody.sourceFile
+  - api.CSPViolationReportBody.statusCode
+  - api.CSPViolationReportBody.toJSON
+  - api.DeprecationReportBody
+  - api.DeprecationReportBody.anticipatedRemoval
+  - api.DeprecationReportBody.columnNumber
+  - api.DeprecationReportBody.id
+  - api.DeprecationReportBody.lineNumber
+  - api.DeprecationReportBody.message
+  - api.DeprecationReportBody.sourceFile
+  - api.DeprecationReportBody.toJSON
+  - api.InterventionReportBody
+  - api.InterventionReportBody.columnNumber
+  - api.InterventionReportBody.id
+  - api.InterventionReportBody.lineNumber
+  - api.InterventionReportBody.message
+  - api.InterventionReportBody.sourceFile
+  - api.InterventionReportBody.toJSON
   - api.Report
   - api.Report.body
   - api.Report.toJSON
