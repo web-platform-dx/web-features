@@ -105,20 +105,6 @@ compat_features:
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
   # support:
-  #   chrome: "2"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "5"
-  - api.Worker
-  - api.Worker.terminate
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
   #   chrome: "3"
   #   chrome_android: "18"
   #   edge: "12"
@@ -177,68 +163,12 @@ compat_features:
   #   chrome: "4"
   #   chrome_android: "18"
   #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "5"
-  - api.DedicatedWorkerGlobalScope
-  - api.DedicatedWorkerGlobalScope.close
-  - api.Worker.Worker
-  - api.Worker.error_event
-  - api.WorkerGlobalScope
-  - api.WorkerGlobalScope.error_event
-  - api.WorkerGlobalScope.location
-  - api.WorkerLocation
-  - api.WorkerLocation.hash
-  - api.WorkerLocation.host
-  - api.WorkerLocation.hostname
-  - api.WorkerLocation.href
-  - api.WorkerLocation.pathname
-  - api.WorkerLocation.port
-  - api.WorkerLocation.protocol
-  - api.WorkerLocation.search
-  - api.WorkerLocation.toString
-  - api.WorkerNavigator
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "34"
-  #   safari: "4"
-  #   safari_ios: "5"
-  - api.WorkerGlobalScope.self
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
   #   firefox: "4"
   #   firefox_android: "4"
   #   safari: "4"
   #   safari_ios: "3.2"
   - http.headers.X-Frame-Options
   - http.headers.X-Frame-Options.SAMEORIGIN
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "5"
-  - api.WorkerGlobalScope.importScripts
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -472,32 +402,6 @@ compat_features:
   - api.ErrorEvent.error
 
   # baseline: high
-  # baseline_low_date: 2016-09-20
-  # baseline_high_date: 2019-03-20
-  # support:
-  #   chrome: "38"
-  #   chrome_android: "38"
-  #   edge: "14"
-  #   firefox: "29"
-  #   firefox_android: "29"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - api.WorkerLocation.origin
-
-  # baseline: high
-  # baseline_low_date: 2018-04-30
-  # baseline_high_date: 2020-10-30
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "17"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "5"
-  - api.WorkerGlobalScope.navigator
-
-  # baseline: high
   # baseline_low_date: 2018-04-30
   # baseline_high_date: 2020-10-30
   # support:
@@ -535,20 +439,6 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - api.origin
-
-  # baseline: high
-  # baseline_low_date: 2019-03-25
-  # baseline_high_date: 2021-09-25
-  # support:
-  #   chrome: "70"
-  #   chrome_android: "70"
-  #   edge: "18"
-  #   firefox: "55"
-  #   firefox_android: "55"
-  #   safari: "12.1"
-  #   safari_ios: "12.2"
-  - api.DedicatedWorkerGlobalScope.name
-  - api.Worker.Worker.options_name_parameter
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -668,20 +558,6 @@ compat_features:
   #   firefox: "69"
   #   firefox_android: "79"
   #   safari: "11"
-  #   safari_ios: "11"
-  - api.WorkerGlobalScope.rejectionhandled_event
-  - api.WorkerGlobalScope.unhandledrejection_event
-
-  # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
-  # support:
-  #   chrome: "49"
-  #   chrome_android: "49"
-  #   edge: "79"
-  #   firefox: "69"
-  #   firefox_android: "79"
-  #   safari: "11"
   #   safari_ios: "11.3"
   - api.PromiseRejectionEvent
   - api.PromiseRejectionEvent.PromiseRejectionEvent
@@ -702,21 +578,6 @@ compat_features:
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - api.queueMicrotask
-
-  # baseline: high
-  # baseline_low_date: 2021-04-26
-  # baseline_high_date: 2023-10-26
-  # support:
-  #   chrome: "65"
-  #   chrome_android: "65"
-  #   edge: "79"
-  #   firefox: "76"
-  #   firefox_android: "79"
-  #   safari: "14.1"
-  #   safari_ios: "14.5"
-  - api.Worklet
-  - api.Worklet.addModule
-  - api.WorkletGlobalScope
 
   # baseline: high
   # baseline_low_date: 2021-09-20
@@ -785,18 +646,6 @@ compat_features:
   - api.reportError
 
   # baseline: low
-  # baseline_low_date: 2022-09-12
-  # support:
-  #   chrome: "71"
-  #   chrome_android: "71"
-  #   edge: "79"
-  #   firefox: "67"
-  #   firefox_android: "67"
-  #   safari: "16"
-  #   safari_ios: "16"
-  - api.WorkerGlobalScope.importScripts.mime_checks
-
-  # baseline: low
   # baseline_low_date: 2022-12-13
   # support:
   #   chrome: "90"
@@ -835,18 +684,6 @@ compat_features:
   - api.ElementInternals.shadowRoot
 
   # baseline: low
-  # baseline_low_date: 2023-06-06
-  # support:
-  #   chrome: "80"
-  #   chrome_android: "80"
-  #   edge: "80"
-  #   firefox: "114"
-  #   firefox_android: "114"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - api.Worklet.ecmascript_modules
-
-  # baseline: low
   # baseline_low_date: 2023-11-21
   # support:
   #   chrome: "103"
@@ -880,32 +717,6 @@ compat_features:
   #   firefox_android: "4"
   #   safari: ≤4
   - html.elements.link.rel.icon
-
-  # baseline: false
-  # support:
-  #   chrome: "4"
-  #   edge: "79"
-  #   firefox: "29"
-  #   firefox_android: "29"
-  #   safari: "16"
-  #   safari_ios: "16"
-  - api.SharedWorkerGlobalScope
-  - api.SharedWorkerGlobalScope.close
-  - api.SharedWorkerGlobalScope.connect_event
-  - api.SharedWorkerGlobalScope.name
-
-  # baseline: false
-  # support:
-  #   chrome: "5"
-  #   edge: "79"
-  #   firefox: "29"
-  #   firefox_android: "33"
-  #   safari: "16"
-  #   safari_ios: "16"
-  - api.SharedWorker
-  - api.SharedWorker.SharedWorker
-  - api.SharedWorker.error_event
-  - api.SharedWorker.port
 
   # baseline: false
   # support:
@@ -983,6 +794,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "92"
+  #   chrome_android: "92"
+  #   edge: "92"
+  #   safari: "15.2"
+  #   safari_ios: "15.2"
+  - api.ImageData.ImageData.settings_parameter
+  - api.ImageData.ImageData.settings_parameter.colorSpace_option
+
+  # baseline: false
+  # support:
   #   chrome: "99"
   #   chrome_android: "99"
   #   edge: "99"
@@ -1007,31 +828,6 @@ compat_features:
   #   safari: "18"
   #   safari_ios: "18"
   - html.elements.script.type.importmap.integrity
-
-  # baseline: false
-  # support:
-  #   firefox: "57"
-  #   firefox_android: "57"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - api.Worker.messageerror_event
-
-  # baseline: false
-  # support:
-  #   chrome: "70"
-  #   edge: "79"
-  #   firefox: "55"
-  #   firefox_android: "55"
-  - api.SharedWorker.SharedWorker.options_name_parameter
-
-  # baseline: false
-  # support:
-  #   firefox: "81"
-  #   firefox_android: "81"
-  #   safari: "16"
-  #   safari_ios: "16"
-  - api.SharedWorker.SharedWorker.mime_checks
-  - api.Worker.Worker.mime_checks
 
   # baseline: false
   # support:
@@ -1099,6 +895,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "100"
+  #   chrome_android: "100"
+  #   edge: "100"
+  - api.Window.postMessage.options_delegate_parameter
+
+  # baseline: false
+  # support:
   #   chrome: "108"
   #   chrome_android: "108"
   #   edge: "108"
@@ -1137,15 +940,19 @@ compat_features:
 
   # baseline: false
   # support:
-  #   safari: "9"
-  #   safari_ios: "9"
-  - api.HTMLMediaElement.getStartDate
+  #   chrome: "134"
+  #   chrome_android: "134"
+  #   edge: "134"
+  - api.HTMLDialogElement.closedBy
+  - api.HTMLDialogElement.requestClose
+  - api.OffscreenCanvasRenderingContext2D.getContextAttributes
+  - html.elements.dialog.closedby
 
   # baseline: false
   # support:
-  #   firefox: "34"
-  #   firefox_android: "34"
-  - api.Worker.worker_support
+  #   safari: "9"
+  #   safari_ios: "9"
+  - api.HTMLMediaElement.getStartDate
 
   # baseline: false
   # support:
@@ -1163,13 +970,13 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - api.HTMLDialogElement.closedBy
-  - api.HTMLDialogElement.requestClose
+  - api.CanvasRenderingContext2D.lang
   - api.HTMLInputElement.alpha
   - api.HTMLInputElement.colorSpace
+  - api.NavigateEvent.sourceElement
   - api.Navigator.authentication
-  - api.OffscreenCanvasRenderingContext2D.getContextAttributes
-  - html.elements.dialog.closedby
+  - api.OffscreenCanvasRenderingContext2D.lang
+  - api.Window.fetchLater
   - html.elements.hr.hr_in_select
   - html.elements.input.alpha
   - html.elements.input.colorspace
