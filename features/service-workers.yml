@@ -2,7 +2,7 @@ name: Service workers
 description: The service worker of a website is a script that runs in its own thread and which acts as local proxy that intercepts network requests from the website. Use a service worker to implement advanced caching strategies, offline support, background tasks, or push notification support on your website.
 spec: https://w3c.github.io/ServiceWorker/
 caniuse: serviceworkers
-# Status computed to match Caniuse.
+group: workers
 status:
   compute_from:
     - api.ServiceWorkerContainer.register
