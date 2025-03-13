@@ -1,0 +1,7 @@
+name: fetchLater
+description: The `fetchLater()` method requests a deferred fetch. After this method is called, the network request is queued by the browser, and is then invoked either when the document is destroyed, or after a certain time. When the request is eventually sent, the response is ignored by the browser.
+spec: https://github.com/whatwg/fetch/pull/1647
+compat_features:
+  - api.FetchLaterResult
+  - api.FetchLaterResult.activated
+  - api.Window.fetchLater
