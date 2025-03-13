@@ -1,0 +1,91 @@
+draft_date: 2025-03-10
+name: CSS Images Module Level 4
+description: TODO
+spec: https://drafts.csswg.org/css-images-4/
+compat_features:
+  - css.types.gradient.conic-gradient.single_color_stop
+  - css.types.gradient.linear-gradient.single_color_stop
+  - css.types.gradient.radial-gradient.single_color_stop
+
+# The following features in the spec are already part of web-features:
+# - element():
+#   - css.properties.background-image.element
+#   - css.types.image.element
+# - Gradients:
+#   - css.properties.background-image.gradients
+#   - css.types.gradient
+#   - css.types.gradient.linear-gradient
+#   - css.types.gradient.linear-gradient.doubleposition
+#   - css.types.gradient.linear-gradient.interpolation_hints
+#   - css.types.gradient.linear-gradient.premultiplied_gradients
+#   - css.types.gradient.linear-gradient.to
+#   - css.types.gradient.linear-gradient.unitless_0_angle
+#   - css.types.gradient.radial-gradient
+#   - css.types.gradient.radial-gradient.at
+#   - css.types.gradient.radial-gradient.doubleposition
+#   - css.types.gradient.radial-gradient.interpolation_hints
+#   - css.types.gradient.radial-gradient.premultiplied_gradients
+#   - css.types.gradient.repeating-linear-gradient
+#   - css.types.gradient.repeating-linear-gradient.doubleposition
+#   - css.types.gradient.repeating-linear-gradient.interpolation_hints
+#   - css.types.gradient.repeating-linear-gradient.to
+#   - css.types.gradient.repeating-linear-gradient.unitless_0_angle
+#   - css.types.gradient.repeating-radial-gradient
+#   - css.types.gradient.repeating-radial-gradient.at
+#   - css.types.gradient.repeating-radial-gradient.doubleposition
+#   - css.types.gradient.repeating-radial-gradient.interpolation_hints
+#   - css.types.image
+# - image-set():
+#   - css.properties.background-image.image-set
+#   - css.properties.content.image-set
+#   - css.types.image.image-set
+# - Content:
+#   - css.properties.content.gradient
+# - image-orientation:
+#   - css.properties.image-orientation
+#   - css.properties.image-orientation.from-image
+#   - css.properties.image-orientation.none
+# - image-rendering:
+#   - css.properties.image-rendering
+#   - css.properties.image-rendering.auto
+#   - css.properties.image-rendering.pixelated
+# - crisp-edges:
+#   - css.properties.image-rendering.crisp-edges
+# - smooth:
+#   - css.properties.image-rendering.smooth
+# - object-fit:
+#   - css.properties.object-fit
+#   - css.properties.object-fit.contain
+#   - css.properties.object-fit.cover
+#   - css.properties.object-fit.fill
+#   - css.properties.object-fit.none
+#   - css.properties.object-fit.scale-down
+# - object-position:
+#   - css.properties.object-position
+# - object-view-box:
+#   - css.properties.object-view-box
+#   - css.properties.object-view-box.none
+# - shape-outside:
+#   - css.properties.shape-outside.gradient
+#   - css.properties.shape-outside.image
+# - Conic gradients:
+#   - css.types.gradient.conic-gradient
+#   - css.types.gradient.conic-gradient.doubleposition
+#   - css.types.gradient.repeating-conic-gradient
+# - Gradient interpolation:
+#   - css.types.gradient.conic-gradient.hue_interpolation_method
+#   - css.types.gradient.conic-gradient.interpolation_color_space
+#   - css.types.gradient.linear-gradient.hue_interpolation_method
+#   - css.types.gradient.linear-gradient.interpolation_color_space
+#   - css.types.gradient.radial-gradient.hue_interpolation_method
+#   - css.types.gradient.radial-gradient.interpolation_color_space
+#   - css.types.gradient.repeating-conic-gradient.hue_interpolation_method
+#   - css.types.gradient.repeating-conic-gradient.interpolation_color_space
+#   - css.types.gradient.repeating-linear-gradient.hue_interpolation_method
+#   - css.types.gradient.repeating-linear-gradient.interpolation_color_space
+#   - css.types.gradient.repeating-radial-gradient.hue_interpolation_method
+#   - css.types.gradient.repeating-radial-gradient.interpolation_color_space
+# - cross-fade():
+#   - css.types.image.cross-fade
+# - SVG:
+#   - svg.global_attributes.image-rendering
