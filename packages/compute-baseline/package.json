@@ -2,6 +2,11 @@
   "name": "compute-baseline",
   "version": "0.3.0",
   "description": "A library for computing web-features statuses from browser compatibility data",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web-platform-dx/web-features.git",
+    "directory": "packages/compute-baseline"
+  },
   "exports": {
     ".": "./dist/baseline/index.js",
     "./browser-compat-data": "./dist/browser-compat-data/index.js"
