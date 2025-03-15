@@ -16,6 +16,7 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "1"
   #   safari_ios: "1"
+  - api.HTMLElement.error_event
   - html.elements.html.xmlns
   - http.headers.Refresh
 
@@ -32,6 +33,19 @@ compat_features:
   #   safari_ios: "1"
   - api.setInterval.supports_parameters_for_callback
   - api.setTimeout.supports_parameters_for_callback
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "1.3"
+  #   safari_ios: "1"
+  - api.HTMLElement.load_event
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -971,6 +985,7 @@ compat_features:
   # baseline: false
   # support: {}
   - api.CanvasRenderingContext2D.lang
+  - api.HTMLButtonElement.command.request-close
   - api.HTMLInputElement.alpha
   - api.HTMLInputElement.colorSpace
   - api.NavigateEvent.sourceElement
