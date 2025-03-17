@@ -836,6 +836,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "108"
+  #   chrome_android: "108"
+  #   edge: "108"
+  #   firefox: "122"
+  #   firefox_android: "122"
+  - html.elements.form.autocomplete.webauthn
+
+  # baseline: false
+  # support:
   #   chrome: "127"
   #   chrome_android: "127"
   #   edge: "127"
@@ -919,7 +928,6 @@ compat_features:
   #   chrome: "108"
   #   chrome_android: "108"
   #   edge: "108"
-  - html.elements.form.autocomplete.webauthn
   - html.elements.iframe.allow.wildcards
   - html.elements.textarea.autocomplete.webauthn
 

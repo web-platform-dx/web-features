@@ -1500,6 +1500,8 @@ compat_features:
   #   firefox_android: ≤79
   #   safari: ≤13.1
   #   safari_ios: ≤13.4
+  - css.properties.color-interpolation
+  - css.properties.color-interpolation.sRGB
   - css.properties.cx
   - css.properties.cy
   - css.properties.fill
@@ -1837,8 +1839,6 @@ compat_features:
   # support:
   #   firefox: ≤72
   #   firefox_android: ≤79
-  - css.properties.color-interpolation
-  - css.properties.color-interpolation.sRGB
   - svg.global_attributes.color-interpolation
   - svg.global_attributes.color-interpolation.sRGB
 
