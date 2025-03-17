@@ -1,4 +1,4 @@
-draft_date: 2025-03-10
+draft_date: 2025-03-15
 name: CSS Overflow Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-overflow-5/
@@ -18,24 +18,25 @@ compat_features:
 # - overflow:
 #   - css.properties.overflow
 #   - css.properties.overflow.auto
-#   - css.properties.overflow.clip
 #   - css.properties.overflow.hidden
 #   - css.properties.overflow.multiple_keywords
 #   - css.properties.overflow.scroll
 #   - css.properties.overflow.visible
 #   - css.properties.overflow-x
 #   - css.properties.overflow-x.auto
-#   - css.properties.overflow-x.clip
 #   - css.properties.overflow-x.hidden
 #   - css.properties.overflow-x.scroll
 #   - css.properties.overflow-x.visible
 #   - css.properties.overflow-y
 #   - css.properties.overflow-y.auto
-#   - css.properties.overflow-y.clip
 #   - css.properties.overflow-y.hidden
 #   - css.properties.overflow-y.scroll
 #   - css.properties.overflow-y.visible
 #   - css.types.overflow
+# - overflow: clip:
+#   - css.properties.overflow.clip
+#   - css.properties.overflow-x.clip
+#   - css.properties.overflow-y.clip
 #   - css.types.overflow.clip
 # - Logical properties:
 #   - css.properties.overflow-block
