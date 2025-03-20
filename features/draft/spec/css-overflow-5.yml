@@ -1,14 +1,8 @@
-draft_date: 2025-03-15
+draft_date: 2025-03-20
 name: CSS Overflow Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-overflow-5/
 compat_features:
-  - css.properties.scroll-marker-group
-  - css.properties.scroll-marker-group.after
-  - css.properties.scroll-marker-group.before
-  - css.properties.scroll-marker-group.none
-  - css.selectors.scroll-marker
-  - css.selectors.scroll-marker-group
   - css.selectors.target-current
 
 # The following features in the spec are already part of web-features:
@@ -52,6 +46,13 @@ compat_features:
 #   - css.properties.scroll-behavior
 #   - css.properties.scroll-behavior.auto
 #   - css.properties.scroll-behavior.smooth
+# - Scroll markers:
+#   - css.properties.scroll-marker-group
+#   - css.properties.scroll-marker-group.after
+#   - css.properties.scroll-marker-group.before
+#   - css.properties.scroll-marker-group.none
+#   - css.selectors.scroll-marker
+#   - css.selectors.scroll-marker-group
 # - scrollbar-gutter:
 #   - css.properties.scrollbar-gutter
 #   - css.properties.scrollbar-gutter.auto
