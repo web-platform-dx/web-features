@@ -1,0 +1,11 @@
+name: Scroll markers
+description: A scroll container can be navigated by activating `::scroll-marker` pseudo-elements which appear in a generated `::scroll-marker-group` pseudo-element, either before or after the scroll container.
+spec: https://drafts.csswg.org/css-overflow-5/#scroll-markers
+group: scrolling
+compat_features:
+  - css.selectors.scroll-marker
+  - css.selectors.scroll-marker-group
+  - css.properties.scroll-marker-group
+  - css.properties.scroll-marker-group.after
+  - css.properties.scroll-marker-group.before
+  - css.properties.scroll-marker-group.none
