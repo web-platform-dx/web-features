@@ -124,6 +124,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/whatwg/dom/pull/1307",
         "This is only place moveBefore() is spec'd. Remove this exception when https://github.com/whatwg/dom/pull/1307 merges."
+    ],
+    [
+        "https://www.w3.org/TR/2018/SPSD-html5-20180327/embedded-content-0.html#synchronising-multiple-media-elements",
+        "Allowed for the mediacontroller feature. This is the superseded HTML5 spec that still contains MediaController."
     ]
 ];
 
