@@ -1,0 +1,29 @@
+name: MediaController
+description: "The playback of multiple `<video>` or `<audio>` elements can be coordinated by a `MediaController` instance, for example to synchronize a sign-language interpreter track with the main video track."
+spec: https://w3c.github.io/media-source/
+discouraged:
+  according_to:
+    # The PR that removed the feature from the HTML spec was https://github.com/w3c/html/pull/357.
+    # Linking to the issue discussion seems more appropriate.
+    - https://github.com/w3c/html/issues/246
+  alternatives:
+    # According to https://stackoverflow.com/questions/64839836/playing-one-of-multiple-audio-tracks-in-sync-with-a-video
+    - media-source
+compat_features:
+  - api.HTMLMediaElement.controller
+  - api.MediaController.MediaController
+  - api.MediaController
+  - api.MediaController.buffered
+  - api.MediaController.currentTime
+  - api.MediaController.defaultPlaybackRate
+  - api.MediaController.duration
+  - api.MediaController.muted
+  - api.MediaController.pause
+  - api.MediaController.paused
+  - api.MediaController.play
+  - api.MediaController.playbackRate
+  - api.MediaController.playbackState
+  - api.MediaController.played
+  - api.MediaController.seekable
+  - api.MediaController.unpause
+  - api.MediaController.volume
