@@ -124,6 +124,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/whatwg/dom/pull/1307",
         "This is only place moveBefore() is spec'd. Remove this exception when https://github.com/whatwg/dom/pull/1307 merges."
+    ],
+    [
+        "https://github.com/whatwg/fetch/pull/1647",
+        "This is where fetchLater() is in the process of being spec'd. Once the PR merges, change the spec url in fetchlater.yml, and remove this exception."
     ]
 ];
 
