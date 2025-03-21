@@ -30,6 +30,19 @@ compat_features:
   - api.UIEvent.detail
   - api.UIEvent.view
 
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "1.3"
+  #   safari_ios: "1"
+  - api.HTMLElement.load_event
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29

@@ -4,3 +4,18 @@
 status:
   baseline: false
   support: {}
+compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "134"
+  #   chrome_android: "134"
+  #   edge: "134"
+  - css.selectors.checkmark
+  - css.selectors.picker
+  - css.selectors.picker-icon
+  - html.elements.selectedcontent
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.appearance.base

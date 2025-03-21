@@ -1,4 +1,4 @@
-draft_date: 2025-03-10
+draft_date: 2025-03-15
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -19,6 +19,7 @@ compat_features:
   - api.HTMLAllCollection.namedItem
   - api.HTMLBaseElement.href.forbid_data_javascript_urls
   - api.HTMLBaseElement.href.forbid_special_characters
+  - api.HTMLButtonElement.command.request-close
   - api.HTMLCanvasElement.getContext.2d_context
   - api.HTMLCanvasElement.getContext.bitmaprenderer_context
   - api.HTMLCanvasElement.getContext.bitmaprenderer_context.options_alpha_parameter
@@ -33,6 +34,8 @@ compat_features:
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
   - api.HTMLDialogElement.closedBy
   - api.HTMLDialogElement.requestClose
+  - api.HTMLElement.error_event
+  - api.HTMLElement.load_event
   - api.HTMLIFrameElement.featurePolicy
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes.auto
@@ -1089,34 +1092,34 @@ compat_features:
 # - <div>:
 #   - api.HTMLDivElement
 #   - html.elements.div
-# - Accesskey:
+# - accesskey:
 #   - api.HTMLElement.accessKey
 #   - api.HTMLElement.accessKeyLabel
 #   - html.global_attributes.accesskey
-# - Autocapitalize:
+# - autocapitalize:
 #   - api.HTMLElement.autocapitalize
 #   - html.global_attributes.autocapitalize
-# - Autocorrect:
+# - autocorrect:
 #   - api.HTMLElement.autocorrect
 #   - html.global_attributes.autocorrect
-# - Autofocus:
+# - autofocus:
 #   - api.HTMLElement.autofocus
 #   - api.MathMLElement.autofocus
 #   - api.SVGElement.autofocus
 #   - html.global_attributes.autofocus
 # - Change event:
 #   - api.HTMLElement.change_event
-# - Contenteditable:
+# - contenteditable:
 #   - api.HTMLElement.contentEditable
 #   - api.HTMLElement.isContentEditable
 #   - html.global_attributes.contenteditable
 # - contenteditable="plaintext-only":
 #   - api.HTMLElement.contentEditable.plaintext-only
 #   - html.global_attributes.contenteditable.plaintext-only
-# - Enterkeyhint:
+# - enterkeyhint:
 #   - api.HTMLElement.enterKeyHint
 #   - html.global_attributes.enterkeyhint
-# - Inert elements:
+# - inert:
 #   - api.HTMLElement.inert
 #   - api.HTMLElement.inert.ignores_find_in_page
 #   - html.global_attributes.inert
@@ -1124,13 +1127,13 @@ compat_features:
 # - inputmode:
 #   - api.HTMLElement.inputMode
 #   - html.global_attributes.inputmode
-# - Lang:
+# - lang:
 #   - api.HTMLElement.lang
 #   - html.global_attributes.lang
 # - popover="hint":
 #   - api.HTMLElement.popover.hint
 #   - html.global_attributes.popover.hint
-# - Spellcheck:
+# - spellcheck:
 #   - api.HTMLElement.spellcheck
 #   - html.global_attributes.spellcheck
 # - tabindex:
@@ -1140,7 +1143,7 @@ compat_features:
 #   - api.HTMLElement.title
 #   - html.global_attributes.title
 #   - html.global_attributes.title.multi-line_titles
-# - translate attribute:
+# - translate:
 #   - api.HTMLElement.translate
 #   - html.global_attributes.translate
 # - writingsuggestions:
