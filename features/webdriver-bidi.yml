@@ -1,17 +1,79 @@
 name: WebDriver BiDi
 description: WebDriver BiDi is a bidirectional protocol that allows a WebDriver client and a browser to communicate with each other.
 spec: https://w3c.github.io/webdriver-bidi/
-# WebDriver BiDi is not in BCD, see https://github.com/mdn/browser-compat-data/issues/20207
-# The browser releases listed here are from:
-# https://developer.chrome.com/blog/webdriver-bidi-2023
-# https://bugs.chromium.org/p/chromedriver/issues/detail?id=4016
-# https://bugzilla.mozilla.org/show_bug.cgi?id=1753997
 group: webdriver
-status:
-  baseline: false
-  support:
-    chrome: "106"
-    chrome_android: "106"
-    edge: "106"
-    firefox: "102"
-    firefox_android: "102"
+compat_features:
+  - webdriver.bidi.browser
+  - webdriver.bidi.browser.close
+  - webdriver.bidi.browser.createUserContext
+  - webdriver.bidi.browser.getClientWindows
+  - webdriver.bidi.browser.getUserContexts
+  - webdriver.bidi.browser.removeUserContext
+  - webdriver.bidi.browsingContext
+  - webdriver.bidi.browsingContext.activate
+  - webdriver.bidi.browsingContext.captureScreenshot
+  - webdriver.bidi.browsingContext.close
+  - webdriver.bidi.browsingContext.contextCreated_event
+  - webdriver.bidi.browsingContext.contextDestroyed_event
+  - webdriver.bidi.browsingContext.create
+  - webdriver.bidi.browsingContext.domContentLoaded_event
+  - webdriver.bidi.browsingContext.fragmentNavigated_event
+  - webdriver.bidi.browsingContext.getTree
+  - webdriver.bidi.browsingContext.handleUserPrompt
+  - webdriver.bidi.browsingContext.load_event
+  - webdriver.bidi.browsingContext.locateNodes
+  - webdriver.bidi.browsingContext.navigate
+  - webdriver.bidi.browsingContext.navigationCommitted_event
+  - webdriver.bidi.browsingContext.navigationFailed_event
+  - webdriver.bidi.browsingContext.navigationStarted_event
+  - webdriver.bidi.browsingContext.print
+  - webdriver.bidi.browsingContext.reload
+  - webdriver.bidi.browsingContext.setViewport
+  - webdriver.bidi.browsingContext.traverseHistory
+  - webdriver.bidi.browsingContext.userPromptClosed_event
+  - webdriver.bidi.browsingContext.userPromptOpened_event
+  - webdriver.bidi.input
+  - webdriver.bidi.input.performActions
+  - webdriver.bidi.input.releaseActions
+  - webdriver.bidi.input.setFiles
+  - webdriver.bidi.log
+  - webdriver.bidi.log.entryAdded_event
+  - webdriver.bidi.network
+  - webdriver.bidi.network.addIntercept
+  - webdriver.bidi.network.authRequired_event
+  - webdriver.bidi.network.beforeRequestSent_event
+  - webdriver.bidi.network.continueRequest
+  - webdriver.bidi.network.continueResponse
+  - webdriver.bidi.network.continueWithAuth
+  - webdriver.bidi.network.failRequest
+  - webdriver.bidi.network.fetchError_event
+  - webdriver.bidi.network.provideResponse
+  - webdriver.bidi.network.removeIntercept
+  - webdriver.bidi.network.responseCompleted_event
+  - webdriver.bidi.network.responseStarted_event
+  - webdriver.bidi.network.setCacheBehavior
+  - webdriver.bidi.permission
+  - webdriver.bidi.permission.setPermission
+  - webdriver.bidi.script
+  - webdriver.bidi.script.addPreloadScript
+  - webdriver.bidi.script.callFunction
+  - webdriver.bidi.script.disown
+  - webdriver.bidi.script.evaluate
+  - webdriver.bidi.script.getRealms
+  - webdriver.bidi.script.message_event
+  - webdriver.bidi.script.realmCreated_event
+  - webdriver.bidi.script.realmDestroyed_event
+  - webdriver.bidi.script.removePreloadScript
+  - webdriver.bidi.session
+  - webdriver.bidi.session.end
+  - webdriver.bidi.session.new
+  - webdriver.bidi.session.status
+  - webdriver.bidi.session.subscribe
+  - webdriver.bidi.session.unsubscribe
+  - webdriver.bidi.storage
+  - webdriver.bidi.storage.deleteCookies
+  - webdriver.bidi.storage.getCookies
+  - webdriver.bidi.storage.setCookie
+  - webdriver.bidi.webExtension
+  - webdriver.bidi.webExtension.install
+  - webdriver.bidi.webExtension.uninstall
