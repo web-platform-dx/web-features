@@ -1,0 +1,8 @@
+draft_date: 2025-03-21
+name: WebGPU subgroups
+# Description taken from https://learn.microsoft.com/en-us/microsoft-edge/web-platform/release-notes/134#webgpu-subgroups, and needs more work. Can we mention entry points to the feature? Can we clarify/shorten
+# the description?
+description: The subgroups WbGPU feature allows SIMD parallelism. By using subgroups, threads within a group can perform collective operations. This provides efficient communication and data sharing among groups of invocations. These operations can be used to accelerate applications, by reducing memory overhead that's incurred by inter-invocation communication.
+spec: https://gpuweb.github.io/gpuweb/#subgroups
+compat_features:
+  - api.GPUSupportedFeatures.feature_subgroups
