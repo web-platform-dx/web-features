@@ -1,0 +1,6 @@
+name: dialog.requestClose()
+description: The `requestClose()` method of a `<dialog>` HTML element closes the dialog, firing a `cancel` event first, which listeners can use to prevent the dialog from closing. This differs from the `close()` method, which only fires the non-cancelable `close` event.
+spec: https://html.spec.whatwg.org/multipage/interactive-elements.html#dom-dialog-requestclose
+group: html-elements
+compat_features:
+  - api.HTMLDialogElement.requestClose
