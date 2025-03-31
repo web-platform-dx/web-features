@@ -1,4 +1,4 @@
-draft_date: 2025-03-15
+draft_date: 2025-03-31
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -33,7 +33,6 @@ compat_features:
   - api.HTMLCanvasElement.toDataURL.type_parameter_png
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
   - api.HTMLDialogElement.closedBy
-  - api.HTMLDialogElement.requestClose
   - api.HTMLElement.error_event
   - api.HTMLElement.load_event
   - api.HTMLIFrameElement.featurePolicy
@@ -1089,6 +1088,8 @@ compat_features:
 #   - api.HTMLElement.toggle_event.dialog_elements
 #   - html.elements.dialog
 #   - html.elements.dialog.open
+# - dialog.requestClose():
+#   - api.HTMLDialogElement.requestClose
 # - <div>:
 #   - api.HTMLDivElement
 #   - html.elements.div
