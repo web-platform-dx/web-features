@@ -7,6 +7,6 @@ status:
     chrome: "96"
     edge: "96"
 compat_features:
-  - html.manifest.protocol_handlers
-  - html.manifest.protocol_handlers.protocol
-  - html.manifest.protocol_handlers.url
+  - manifests.webapp.protocol_handlers
+  - manifests.webapp.protocol_handlers.protocol
+  - manifests.webapp.protocol_handlers.url

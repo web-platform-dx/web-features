@@ -3,6 +3,6 @@ description: The `protocol_handlers` web app manifest member registers an instal
 spec: https://wicg.github.io/manifest-incubations/#protocol_handlers-member
 group: progressive-web-app
 compat_features:
-  - html.manifest.protocol_handlers
-  - html.manifest.protocol_handlers.protocol
-  - html.manifest.protocol_handlers.url
+  - manifests.webapp.protocol_handlers
+  - manifests.webapp.protocol_handlers.protocol
+  - manifests.webapp.protocol_handlers.url
