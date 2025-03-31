@@ -1,0 +1,35 @@
+name: MediaController
+description: "The playback of multiple `<video>` or `<audio>` elements can be coordinated by a `MediaController` instance, for example to synchronize a sign-language interpreter track with the main video track."
+spec: https://www.w3.org/TR/2018/SPSD-html5-20180327/embedded-content-0.html#synchronising-multiple-media-elements
+discouraged:
+  according_to:
+    # The PR that removed the feature from the HTML spec was https://github.com/w3c/html/pull/357.
+    # Linking to the issue discussion seems more appropriate.
+    - https://github.com/w3c/html/issues/246
+  # No real alternative to point people to.
+  # The main alternative is really "do it yourself" in practice: monitor playback
+  # across your sources and adjust the playback rate individually as needed to
+  # keep things in sync.
+  # Work was done on this in the (now closed) Multi-Device Timing CG, linked to
+  # the Timing Object spec proposal (which did not get much traction, hence the
+  # closure): https://webtiming.github.io/timingobject/.
+  # The timingsrc library (https://webtiming.github.io/timingsrc/) provides a
+  # polyfill and works very well across browsers.
+compat_features:
+  - api.HTMLMediaElement.controller
+  - api.MediaController.MediaController
+  - api.MediaController
+  - api.MediaController.buffered
+  - api.MediaController.currentTime
+  - api.MediaController.defaultPlaybackRate
+  - api.MediaController.duration
+  - api.MediaController.muted
+  - api.MediaController.pause
+  - api.MediaController.paused
+  - api.MediaController.play
+  - api.MediaController.playbackRate
+  - api.MediaController.playbackState
+  - api.MediaController.played
+  - api.MediaController.seekable
+  - api.MediaController.unpause
+  - api.MediaController.volume
