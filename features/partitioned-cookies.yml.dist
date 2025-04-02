@@ -8,23 +8,9 @@ status:
     chrome_android: "114"
     edge: "114"
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "114"
-  #   chrome_android: "114"
-  #   edge: "114"
-  #   firefox: "136"
-  #   firefox_android: "136"
   - api.CookieStore.delete.partitioned_option
-  - api.CookieStore.set.partitioned_option
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "114"
-  #   chrome_android: "114"
-  #   edge: "114"
   - api.CookieStore.get.partitioned_return_property
+  - api.CookieStore.set.partitioned_option
   - api.ExtendableCookieChangeEvent.changed.partitioned_property
   - api.ExtendableCookieChangeEvent.deleted.partitioned_property
   - http.headers.Set-Cookie.Partitioned
