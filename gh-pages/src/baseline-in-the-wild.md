@@ -3,7 +3,7 @@ title: Baseline in the wild
 layout: "default.html"
 ---
 
-You can find web-features and Baseline data in the places listed below. If you spot somewhere else using Baseline, or are using Baseline on your own site, or to convey compat information in your library, [create a pull request to add it to the list](https://github.com/web-platform-dx/web-features/edit/pages/main/gh-pages/baseline-in-the-wild.md).
+You can find web-features and Baseline data in the places listed below. If you spot somewhere else using Baseline, or are using Baseline on your own site, or to convey compat information in your library, [create a pull request to add it to the list](https://github.com/web-platform-dx/web-features/edit/main/gh-pages/src/baseline-in-the-wild.md).
 
 ## From browser vendors
 
@@ -19,7 +19,7 @@ You can find web-features and Baseline data in the places listed below. If you s
 
 ## Tools
 
-- [require-baseline](https://github.com/eslint/css/blob/main/docs/rules/require-baseline.md), an ESLint CSS Language Plugin rule to enforce the use of Baseline features.
+- [use-baseline](https://github.com/eslint/css/blob/main/docs/rules/use-baseline.md), an ESLint CSS Language Plugin rule to enforce the use of Baseline features.
 - [`<baseline-status>` web component](https://github.com/web-platform-dx/baseline-status), for displaying Baseline status on your own site.
 - [Baseline Status in a WordPress Block](https://css-tricks.com/baseline-status-in-a-wordpress-block/), to display the `<baseline-status>` web component in a WordPress block.
 - [Baseline status of a web platform feature on a Hugo website](https://pawelgrzybek.com/baseline-status-of-a-web-platform-feature-on-a-hugo-website/), to display Baseline data on a static Hugo website.
