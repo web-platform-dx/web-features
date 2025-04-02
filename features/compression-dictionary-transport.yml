@@ -1,6 +1,6 @@
 name: Compression Dictionary Transport
 description: Compression Dictionary Transport is a mechanism for using designated HTTP responses as an external dictionary for future HTTP responses for compression schemes that support using external dictionaries (e.g., Brotli and Zstandard)
-spec: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary.html
+spec: https://httpwg.org/http-extensions/draft-ietf-httpbis-compression-dictionary.html
 compat_features:
   - html.elements.link.rel.compression-dictionary
   - http.headers.Accept-Encoding.dcb
