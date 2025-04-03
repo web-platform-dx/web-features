@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "135"
+    chrome_android: "135"
 compat_features:
   - api.FetchLaterResult
   - api.FetchLaterResult.activated
