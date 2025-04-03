@@ -37,14 +37,14 @@
     "remove-tagged-compat-features": "tsx scripts/remove-tagged-compat-features.ts && npm run format"
   },
   "devDependencies": {
-    "@eslint/js": "^9.22.0",
-    "@js-temporal/polyfill": "^0.4.4",
-    "@mdn/browser-compat-data": "^5.7.4",
+    "@eslint/js": "^9.23.0",
+    "@js-temporal/polyfill": "^0.5.1",
+    "@mdn/browser-compat-data": "^6.0.2",
     "@types/caniuse-lite": "^1.0.4",
-    "@types/diff": "^7.0.1",
-    "@types/node": "^18.19.81",
+    "@types/diff": "^7.0.2",
+    "@types/node": "^18.19.86",
     "ajv": "^8.17.1",
-    "caniuse-lite": "^1.0.30001706",
+    "caniuse-lite": "^1.0.30001707",
     "diff": "^7.0.0",
     "eslint-plugin-new-with-error": "^5.0.0",
     "fast-json-stable-stringify": "^2.1.0",
@@ -57,11 +57,11 @@
     "ts-json-schema-generator": "^2.3.0",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2",
-    "typescript-eslint": "^8.27.0",
+    "typescript-eslint": "^8.29.0",
     "unified": "^11.0.5",
-    "web-specs": "^3.43.0",
+    "web-specs": "^3.46.0",
     "winston": "^3.17.0",
-    "yaml": "^2.7.0",
+    "yaml": "^2.7.1",
     "yargs": "^17.7.2"
   }
 }

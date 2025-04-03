@@ -1,0 +1,10 @@
+draft_date: 2025-03-31
+name: Zstandard Compression and the 'application/zstd' Media Type
+description: TODO
+spec: https://www.rfc-editor.org/rfc/rfc8878
+compat_features:
+  - http.headers.Accept-Encoding.zstd
+
+# The following features in the spec are already part of web-features:
+# - Zstandard compression:
+#   - http.headers.Content-Encoding.zstd

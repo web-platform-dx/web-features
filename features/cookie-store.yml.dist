@@ -13,8 +13,8 @@ compat_features:
   #   chrome: "87"
   #   chrome_android: "87"
   #   edge: "87"
-  #   firefox: "136"
-  #   firefox_android: "136"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
   - api.CookieChangeEvent
   - api.CookieChangeEvent.CookieChangeEvent
   - api.CookieChangeEvent.changed
@@ -23,10 +23,12 @@ compat_features:
   - api.CookieStore.change_event
   - api.CookieStore.delete
   - api.CookieStore.get
-  - api.CookieStore.get.name_return_property
-  - api.CookieStore.get.value_return_property
   - api.CookieStore.getAll
   - api.CookieStore.set
+  - api.ExtendableCookieChangeEvent
+  - api.ExtendableCookieChangeEvent.ExtendableCookieChangeEvent
+  - api.ExtendableCookieChangeEvent.changed
+  - api.ExtendableCookieChangeEvent.deleted
   - api.ServiceWorkerGlobalScope.cookieStore
   - api.Window.cookieStore
 
@@ -38,16 +40,14 @@ compat_features:
   #   edge: "87"
   - api.CookieStore.get.domain_return_property
   - api.CookieStore.get.expires_return_property
+  - api.CookieStore.get.name_return_property
   - api.CookieStore.get.path_return_property
   - api.CookieStore.get.sameSite_return_property
   - api.CookieStore.get.secure_return_property
+  - api.CookieStore.get.value_return_property
   - api.CookieStoreManager
   - api.CookieStoreManager.getSubscriptions
   - api.CookieStoreManager.subscribe
   - api.CookieStoreManager.unsubscribe
-  - api.ExtendableCookieChangeEvent
-  - api.ExtendableCookieChangeEvent.ExtendableCookieChangeEvent
-  - api.ExtendableCookieChangeEvent.changed
-  - api.ExtendableCookieChangeEvent.deleted
   - api.ServiceWorkerGlobalScope.cookiechange_event
   - api.ServiceWorkerRegistration.cookies

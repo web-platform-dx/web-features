@@ -208,6 +208,29 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   firefox: "136"
+  #   firefox_android: "136"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.Element.ariaActiveDescendantElement
+  - api.Element.ariaControlsElements
+  - api.Element.ariaDescribedByElements
+  - api.Element.ariaDetailsElements
+  - api.Element.ariaErrorMessageElements
+  - api.Element.ariaFlowToElements
+  - api.Element.ariaLabelledByElements
+  - api.ElementInternals.ariaActiveDescendantElement
+  - api.ElementInternals.ariaControlsElements
+  - api.ElementInternals.ariaDescribedByElements
+  - api.ElementInternals.ariaDetailsElements
+  - api.ElementInternals.ariaErrorMessageElements
+  - api.ElementInternals.ariaFlowToElements
+  - api.ElementInternals.ariaLabelledByElements
+
+  # baseline: false
+  # support:
   #   chrome: "83"
   #   chrome_android: "83"
   #   edge: "83"
@@ -233,19 +256,5 @@ compat_features:
   #   firefox_android: "136"
   #   safari: "16.4"
   #   safari_ios: "16.4"
-  - api.Element.ariaActiveDescendantElement
-  - api.Element.ariaControlsElements
-  - api.Element.ariaDescribedByElements
-  - api.Element.ariaDetailsElements
-  - api.Element.ariaErrorMessageElements
-  - api.Element.ariaFlowToElements
-  - api.Element.ariaLabelledByElements
   - api.Element.ariaOwnsElements
-  - api.ElementInternals.ariaActiveDescendantElement
-  - api.ElementInternals.ariaControlsElements
-  - api.ElementInternals.ariaDescribedByElements
-  - api.ElementInternals.ariaDetailsElements
-  - api.ElementInternals.ariaErrorMessageElements
-  - api.ElementInternals.ariaFlowToElements
-  - api.ElementInternals.ariaLabelledByElements
   - api.ElementInternals.ariaOwnsElements
