@@ -128,6 +128,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://www.w3.org/TR/2018/SPSD-html5-20180327/embedded-content-0.html#synchronising-multiple-media-elements",
         "Allowed for the mediacontroller feature. This is the superseded HTML5 spec that still contains MediaController."
+    ],
+    [
+        "https://github.com/whatwg/fetch/pull/1647",
+        "This is where fetchLater() is in the process of being spec'd. Once the PR merges, change the spec url in fetchlater.yml, and remove this exception."
     ]
 ];
 
