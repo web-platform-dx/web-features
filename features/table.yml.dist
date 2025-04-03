@@ -53,9 +53,9 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
-  #   safari: "1.2"
+  #   safari: "1.1"
   #   safari_ios: "1"
-  - css.properties.empty-cells
+  - css.properties.border-collapse
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -67,8 +67,8 @@ compat_features:
   #   firefox: "1"
   #   firefox_android: "4"
   #   safari: "1.2"
-  #   safari_ios: "3"
-  - css.properties.border-collapse
+  #   safari_ios: "1"
+  - css.properties.empty-cells
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -186,20 +186,32 @@ compat_features:
   - api.HTMLTableElement.createTBody
 
   # baseline: high
-  # baseline_low_date: ≤2020-07-28
-  # baseline_high_date: ≤2023-01-28
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
   # support:
-  #   chrome: ≤80
-  #   chrome_android: ≤80
-  #   edge: ≤80
-  #   firefox: ≤72
-  #   firefox_android: ≤79
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
-  - css.properties.border-collapse.collapse
-  - css.properties.border-collapse.separate
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "1"
+  #   safari_ios: "1"
   - css.properties.caption-side.bottom
   - css.properties.caption-side.top
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "1.1"
+  #   safari_ios: "1"
+  - css.properties.border-collapse.collapse
+  - css.properties.border-collapse.separate
 
   # baseline: false
   # support:

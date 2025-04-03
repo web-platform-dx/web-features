@@ -104,11 +104,19 @@ compat_features:
   #   chrome: "93"
   #   chrome_android: "93"
   #   edge: "93"
-  - api.MediaSession.setActionHandler.hangup_type
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
   - api.MediaSession.setActionHandler.togglecamera_type
   - api.MediaSession.setActionHandler.togglemicrophone_type
   - api.MediaSession.setCameraActive
   - api.MediaSession.setMicrophoneActive
+
+  # baseline: false
+  # support:
+  #   chrome: "93"
+  #   chrome_android: "93"
+  #   edge: "93"
+  - api.MediaSession.setActionHandler.hangup_type
 
   # baseline: false
   # support:
@@ -130,5 +138,7 @@ compat_features:
   - api.MediaMetadata.chapterInfo
 
   # baseline: false
-  # support: {}
+  # support:
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
   - api.MediaSession.setScreenshareActive
