@@ -497,14 +497,30 @@ compat_features:
   - api.TextMetrics.hangingBaseline
   - api.TextMetrics.ideographicBaseline
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-03-31
   # support:
   #   chrome: "2"
   #   chrome_android: "18"
   #   edge: "12"
   #   firefox: "3.5"
   #   firefox_android: "4"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
   - api.CanvasRenderingContext2D.font
+
+  # baseline: low
+  # baseline_low_date: 2025-03-31
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "115"
+  #   firefox_android: "115"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - api.CanvasRenderingContext2D.letterSpacing
+  - api.CanvasRenderingContext2D.wordSpacing
 
   # baseline: false
   # support:
@@ -550,16 +566,6 @@ compat_features:
   #   firefox: "104"
   #   firefox_android: "104"
   - api.CanvasRenderingContext2D.fontKerning
-
-  # baseline: false
-  # support:
-  #   chrome: "99"
-  #   chrome_android: "99"
-  #   edge: "99"
-  #   firefox: "115"
-  #   firefox_android: "115"
-  - api.CanvasRenderingContext2D.letterSpacing
-  - api.CanvasRenderingContext2D.wordSpacing
 
   # baseline: false
   # support:

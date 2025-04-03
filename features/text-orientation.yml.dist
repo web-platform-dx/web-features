@@ -27,6 +27,8 @@ compat_features:
   #   safari: "14"
   #   safari_ios: "14"
   - css.properties.text-orientation
+  - css.properties.text-orientation.mixed
+  - css.properties.text-orientation.upright
 
   # baseline: high
   # baseline_low_date: 2020-09-16
@@ -40,17 +42,3 @@ compat_features:
   #   safari: "14"
   #   safari_ios: "14"
   - css.properties.text-orientation.sideways
-
-  # baseline: high
-  # baseline_low_date: 2020-09-16
-  # baseline_high_date: 2023-03-16
-  # support:
-  #   chrome: ≤83
-  #   chrome_android: ≤83
-  #   edge: ≤83
-  #   firefox: ≤72
-  #   firefox_android: ≤79
-  #   safari: "14"
-  #   safari_ios: "14"
-  - css.properties.text-orientation.mixed
-  - css.properties.text-orientation.upright

@@ -854,6 +854,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "131"
+  #   chrome_android: "131"
+  #   edge: "131"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - http.headers.Cross-Origin-Opener-Policy.noopener-allow-popups
+
+  # baseline: false
+  # support:
   #   chrome: "96"
   #   chrome_android: "96"
   #   edge: "96"
@@ -948,13 +957,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "131"
-  #   chrome_android: "131"
-  #   edge: "131"
-  - http.headers.Cross-Origin-Opener-Policy.noopener-allow-popups
-
-  # baseline: false
-  # support:
   #   chrome: "133"
   #   chrome_android: "133"
   #   edge: "133"
@@ -977,6 +979,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - api.HTMLInputElement.alpha
+  - api.HTMLInputElement.colorSpace
+
+  # baseline: false
+  # support:
   #   firefox: "67"
   #   firefox_android: "67"
   - html.elements.form.autocomplete.new-password
@@ -988,17 +997,24 @@ compat_features:
   #   firefox_android: "79"
   - html.elements.iframe.allow.document-domain
 
+  # baseline: false
+  # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  - api.Window.fetchLater
+
+  # baseline: false
+  # support:
+  #   chrome: "135"
+  - api.NavigateEvent.sourceElement
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.CanvasRenderingContext2D.lang
   - api.HTMLButtonElement.command.request-close
-  - api.HTMLInputElement.alpha
-  - api.HTMLInputElement.colorSpace
-  - api.NavigateEvent.sourceElement
   - api.Navigator.authentication
   - api.OffscreenCanvasRenderingContext2D.lang
-  - api.Window.fetchLater
   - html.elements.hr.hr_in_select
   - html.elements.input.alpha
   - html.elements.input.colorspace

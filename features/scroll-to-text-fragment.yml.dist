@@ -26,20 +26,26 @@ compat_features:
   #   safari_ios: "16.1"
   - html.elements.a.text_fragments
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-03-31
   # support:
   #   chrome: "81"
   #   chrome_android: "81"
   #   edge: "83"
   #   firefox: "131"
   #   firefox_android: "131"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
   - api.FragmentDirective
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-03-31
   # support:
   #   chrome: "86"
   #   chrome_android: "86"
   #   edge: "86"
   #   firefox: "131"
   #   firefox_android: "131"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
   - api.Document.fragmentDirective
