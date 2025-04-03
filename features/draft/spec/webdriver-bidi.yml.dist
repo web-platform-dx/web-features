@@ -108,7 +108,6 @@ compat_features:
   #   firefox_android: "114"
   - webdriver.bidi.input.performActions
   - webdriver.bidi.input.releaseActions
-  - webdriver.bidi.script.addPreloadScript
   - webdriver.bidi.script.message_event
 
   # baseline: false
@@ -179,6 +178,7 @@ compat_features:
   #   edge: "126"
   #   firefox: "136"
   #   firefox_android: "136"
+  - webdriver.bidi.script.addPreloadScript
   - webdriver.bidi.session.subscribe
   - webdriver.bidi.session.unsubscribe
 

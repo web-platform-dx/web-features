@@ -128,6 +128,31 @@ compat_features:
   - api.OffscreenCanvas.getContext.webgl2_context
   - api.OffscreenCanvas.getContext.webgl_context
 
+  # baseline: low
+  # baseline_low_date: 2025-03-31
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "69"
+  #   edge: "79"
+  #   firefox: "105"
+  #   firefox_android: "105"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - api.OffscreenCanvasRenderingContext2D.font
+
+  # baseline: low
+  # baseline_low_date: 2025-03-31
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "115"
+  #   firefox_android: "115"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - api.OffscreenCanvasRenderingContext2D.letterSpacing
+  - api.OffscreenCanvasRenderingContext2D.wordSpacing
+
   # baseline: false
   # support:
   #   chrome: "69"
@@ -145,7 +170,6 @@ compat_features:
   #   firefox: "105"
   #   firefox_android: "105"
   - api.OffscreenCanvas.convertToBlob.option_type_parameter_webp
-  - api.OffscreenCanvasRenderingContext2D.font
 
   # baseline: false
   # support:
@@ -164,16 +188,6 @@ compat_features:
   #   firefox: "105"
   #   firefox_android: "105"
   - api.OffscreenCanvasRenderingContext2D.fontKerning
-
-  # baseline: false
-  # support:
-  #   chrome: "99"
-  #   chrome_android: "99"
-  #   edge: "99"
-  #   firefox: "115"
-  #   firefox_android: "115"
-  - api.OffscreenCanvasRenderingContext2D.letterSpacing
-  - api.OffscreenCanvasRenderingContext2D.wordSpacing
 
   # baseline: false
   # support:
