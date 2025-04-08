@@ -234,6 +234,13 @@ compat_features:
   #   firefox_android: "134"
   - webdriver.bidi.browser.getClientWindows
 
+  # baseline: false
+  # support:
+  #   firefox: "137"
+  #   firefox_android: "137"
+  - webdriver.bidi.webExtension
+  - webdriver.bidi.webExtension.uninstall
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
@@ -244,6 +251,4 @@ compat_features:
   - webdriver.bidi.network.provideResponse
   - webdriver.bidi.network.responseCompleted_event
   - webdriver.bidi.network.responseStarted_event
-  - webdriver.bidi.webExtension
   - webdriver.bidi.webExtension.install
-  - webdriver.bidi.webExtension.uninstall
