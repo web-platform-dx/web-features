@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "134"
-    chrome_android: "134"
-    edge: "134"
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -15,10 +12,14 @@ compat_features:
   #   edge: "133"
   - api.GPUAdapter.requestDevice.undefined_limits
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "134"
   #   chrome_android: "134"
   #   edge: "134"
   - api.GPUSupportedFeatures.feature_subgroups
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.GPUAdapterInfo.isFallbackAdapter
