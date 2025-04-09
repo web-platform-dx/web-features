@@ -3,11 +3,9 @@
 
 status:
   baseline: false
-  support:
-    chrome: "135"
-    chrome_android: "135"
+  support: {}
 compat_features:
   - css.properties.dynamic-range-limit
-  - css.properties.dynamic-range-limit.constrained-high
-  - css.properties.dynamic-range-limit.high
+  - css.properties.dynamic-range-limit.constrained
+  - css.properties.dynamic-range-limit.no-limit
   - css.properties.dynamic-range-limit.standard
