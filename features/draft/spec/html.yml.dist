@@ -942,13 +942,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "124"
-  #   chrome_android: "124"
-  #   edge: "124"
-  - http.headers.Link.expect
-
-  # baseline: false
-  # support:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
@@ -970,6 +963,13 @@ compat_features:
   - api.HTMLDialogElement.closedBy
   - api.OffscreenCanvasRenderingContext2D.getContextAttributes
   - html.elements.dialog.closedby
+
+  # baseline: false
+  # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
+  - api.Window.fetchLater
 
   # baseline: false
   # support:
@@ -1000,12 +1000,7 @@ compat_features:
   # baseline: false
   # support:
   #   chrome: "135"
-  #   chrome_android: "135"
-  - api.Window.fetchLater
-
-  # baseline: false
-  # support:
-  #   chrome: "135"
+  #   edge: "135"
   - api.NavigateEvent.sourceElement
 
   # ⬇️ Same status as overall feature ⬇️

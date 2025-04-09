@@ -35,17 +35,18 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - css.types.basic-shape.shape
+
+  # baseline: false
+  # support:
   #   firefox: "122"
   #   firefox_android: "122"
   #   safari: "17.2"
   #   safari_ios: "17.2"
   - css.types.basic-shape.rect
   - css.types.basic-shape.xywh
-
-  # baseline: false
-  # support:
-  #   chrome: "135"
-  #   chrome_android: "135"
-  #   safari: "18.4"
-  #   safari_ios: "18.4"
-  - css.types.basic-shape.shape
