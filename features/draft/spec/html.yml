@@ -99,8 +99,6 @@ compat_features:
   - api.reportError
   - api.setInterval.supports_parameters_for_callback
   - api.setTimeout.supports_parameters_for_callback
-  - css.selectors.hover.a_elements
-  - css.selectors.hover.all_elements
   - html.elements.dialog.closedby
   - html.elements.form.autocomplete.new-password
   - html.elements.form.autocomplete.one-time-code
@@ -2222,6 +2220,8 @@ compat_features:
 #   - css.selectors.active.non_a_elements
 #   - css.selectors.focus
 #   - css.selectors.hover
+#   - css.selectors.hover.a_elements
+#   - css.selectors.hover.all_elements
 # - :autofill:
 #   - css.selectors.autofill
 # - Media element pseudo-classes:
