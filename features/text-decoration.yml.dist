@@ -110,19 +110,21 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "121"
+  #   chrome_android: "121"
+  #   edge: "121"
+  #   firefox: "137"
+  #   firefox_android: "137"
+  - css.properties.text-decoration-line.grammar-error
+  - css.properties.text-decoration-line.spelling-error
+
+  # baseline: false
+  # support:
   #   firefox: "75"
   #   firefox_android: "79"
   #   safari: "15.4"
   #   safari_ios: "15.4"
   - css.properties.text-decoration-skip-ink.all
-
-  # baseline: false
-  # support:
-  #   chrome: "121"
-  #   chrome_android: "121"
-  #   edge: "121"
-  - css.properties.text-decoration-line.grammar-error
-  - css.properties.text-decoration-line.spelling-error
 
   # baseline: false
   # support:

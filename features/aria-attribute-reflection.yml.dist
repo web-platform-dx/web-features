@@ -206,10 +206,12 @@ compat_features:
   - api.ElementInternals.ariaBrailleLabel
   - api.ElementInternals.ariaBrailleRoleDescription
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-04-04
   # support:
   #   chrome: "135"
   #   chrome_android: "135"
+  #   edge: "135"
   #   firefox: "136"
   #   firefox_android: "136"
   #   safari: "16.4"

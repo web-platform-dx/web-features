@@ -56,6 +56,20 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
+  #   safari: "2"
+  #   safari_ios: "1"
+  - css.selectors.hover.a_elements
+  - css.selectors.hover.all_elements
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
   #   safari: "3"
   #   safari_ios: "1"
   - api.HTMLOptionsCollection
@@ -942,13 +956,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "124"
-  #   chrome_android: "124"
-  #   edge: "124"
-  - http.headers.Link.expect
-
-  # baseline: false
-  # support:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
@@ -960,6 +967,7 @@ compat_features:
   #   chrome: "133"
   #   chrome_android: "133"
   #   edge: "133"
+  - api.CustomElementRegistry.define.connectedMoveCallback_lifecycle_callback
   - html.elements.script.type.importmap.multiple_import_maps
 
   # baseline: false
@@ -1000,12 +1008,7 @@ compat_features:
   # baseline: false
   # support:
   #   chrome: "135"
-  #   chrome_android: "135"
-  - api.Window.fetchLater
-
-  # baseline: false
-  # support:
-  #   chrome: "135"
+  #   edge: "135"
   - api.NavigateEvent.sourceElement
 
   # ⬇️ Same status as overall feature ⬇️
