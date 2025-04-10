@@ -109,18 +109,6 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - css.properties.scroll-snap-type
-
-  # baseline: high
-  # baseline_low_date: 2022-04-05
-  # baseline_high_date: 2024-10-05
-  # support:
-  #   chrome: "69"
-  #   chrome_android: "69"
-  #   edge: "79"
-  #   firefox: "99"
-  #   firefox_android: "39"
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
   - css.properties.scroll-snap-type.none
 
   # baseline: high
@@ -132,8 +120,8 @@ compat_features:
   #   edge: "79"
   #   firefox: "99"
   #   firefox_android: "68"
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
+  #   safari: "11"
+  #   safari_ios: "11"
   - css.properties.scroll-snap-type.block
   - css.properties.scroll-snap-type.both
   - css.properties.scroll-snap-type.inline

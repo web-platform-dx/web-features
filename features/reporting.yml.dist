@@ -30,6 +30,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "96"
+  #   chrome_android: "96"
+  #   edge: "96"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - http.headers.Reporting-Endpoints
+
+  # baseline: false
+  # support:
   #   chrome: "69"
   #   chrome_android: "69"
   #   edge: "79"
@@ -80,11 +89,3 @@ compat_features:
   #   chrome_android: "84"
   #   edge: "84"
   - api.ReportingObserver.worker_support
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "96"
-  #   chrome_android: "96"
-  #   edge: "96"
-  - http.headers.Reporting-Endpoints
