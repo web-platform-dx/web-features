@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "132"
-    chrome_android: "132"
-    edge: "132"
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -39,10 +36,14 @@ compat_features:
   #   edge: "122"
   - api.IdentityCredential.disconnect_static
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "132"
   #   chrome_android: "132"
   #   edge: "132"
   - api.IdentityProvider.resolve_static
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.IdentityCredential.configURL

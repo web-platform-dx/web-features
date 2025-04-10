@@ -1,9 +1,10 @@
-draft_date: 2025-03-31
+draft_date: 2025-04-10
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
   - api.CanvasRenderingContext2D.lang
+  - api.CustomElementRegistry.define.connectedMoveCallback_lifecycle_callback
   - api.Document.featurePolicy
   - api.ElementInternals.shadowRoot
   - api.ErrorEvent
@@ -87,7 +88,6 @@ compat_features:
   - api.TrackEvent
   - api.TrackEvent.TrackEvent
   - api.TrackEvent.track
-  - api.Window.fetchLater
   - api.Window.originAgentCluster
   - api.Window.postMessage.options_delegate_parameter
   - api.Window.postMessage.transfer_parameter
@@ -558,8 +558,6 @@ compat_features:
 #   - api.Location.search
 #   - api.Location.toString
 #   - api.Window.location
-# - moveBefore():
-#   - api.Document.moveBefore
 # - Unsanitized HTML parsing methods:
 #   - api.Document.parseHTMLUnsafe_static
 #   - api.Element.setHTMLUnsafe
@@ -2177,6 +2175,8 @@ compat_features:
 # - requestAnimationFrame():
 #   - api.Window.cancelAnimationFrame
 #   - api.Window.requestAnimationFrame
+# - fetchLater:
+#   - api.Window.fetchLater
 # - Attribution reporting:
 #   - api.Window.open.features_parameter_attributionsrc
 # - Window management:
@@ -2220,6 +2220,8 @@ compat_features:
 #   - css.selectors.active.non_a_elements
 #   - css.selectors.focus
 #   - css.selectors.hover
+#   - css.selectors.hover.a_elements
+#   - css.selectors.hover.all_elements
 # - :autofill:
 #   - css.selectors.autofill
 # - Media element pseudo-classes:

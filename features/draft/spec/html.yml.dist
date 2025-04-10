@@ -953,6 +953,7 @@ compat_features:
   #   chrome: "133"
   #   chrome_android: "133"
   #   edge: "133"
+  - api.CustomElementRegistry.define.connectedMoveCallback_lifecycle_callback
   - html.elements.script.type.importmap.multiple_import_maps
 
   # baseline: false
@@ -963,13 +964,6 @@ compat_features:
   - api.HTMLDialogElement.closedBy
   - api.OffscreenCanvasRenderingContext2D.getContextAttributes
   - html.elements.dialog.closedby
-
-  # baseline: false
-  # support:
-  #   chrome: "135"
-  #   chrome_android: "135"
-  #   edge: "135"
-  - api.Window.fetchLater
 
   # baseline: false
   # support:
