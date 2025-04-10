@@ -1,9 +1,10 @@
-draft_date: 2025-04-09
+draft_date: 2025-04-10
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
   - api.CanvasRenderingContext2D.lang
+  - api.CustomElementRegistry.define.connectedMoveCallback_lifecycle_callback
   - api.Document.featurePolicy
   - api.ElementInternals.shadowRoot
   - api.ErrorEvent
@@ -98,6 +99,8 @@ compat_features:
   - api.reportError
   - api.setInterval.supports_parameters_for_callback
   - api.setTimeout.supports_parameters_for_callback
+  - css.selectors.hover.a_elements
+  - css.selectors.hover.all_elements
   - html.elements.dialog.closedby
   - html.elements.form.autocomplete.new-password
   - html.elements.form.autocomplete.one-time-code
