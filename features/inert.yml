@@ -2,7 +2,7 @@ name: inert
 description: The `inert` HTML attribute marks an element and its descendants as non-interactive. Inert elements don't get focus or fire `click` events.
 spec: https://html.spec.whatwg.org/multipage/interaction.html#inert-subtrees
 group: html
-# Status is overridden to avoid Safari partial implementation in BCD due to
+# Status is overridden to avoid the ignores_find_in_page subfeatures and
 # https://webkit.org/b/269909 causing the feature to be not Baseline.
 status:
   compute_from: html.global_attributes.inert
