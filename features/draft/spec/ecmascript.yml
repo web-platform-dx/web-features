@@ -1,8 +1,9 @@
-draft_date: 2025-03-03
-name: ECMAScript® 2025 Language Specification
+draft_date: 2025-04-17
+name: ECMAScript® 2026 Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
 compat_features:
+  - javascript.builtins.FinalizationRegistry.unregister.symbol_as_target
   - javascript.operators.import.options_parameter
 
 # The following features in the spec are already part of web-features:
@@ -456,12 +457,12 @@ compat_features:
 #   - javascript.builtins.FinalizationRegistry
 #   - javascript.builtins.FinalizationRegistry.FinalizationRegistry
 #   - javascript.builtins.FinalizationRegistry.register
-#   - javascript.builtins.FinalizationRegistry.symbol_as_target
+#   - javascript.builtins.FinalizationRegistry.register.symbol_as_target
 #   - javascript.builtins.FinalizationRegistry.unregister
 #   - javascript.builtins.WeakRef
 #   - javascript.builtins.WeakRef.WeakRef
+#   - javascript.builtins.WeakRef.WeakRef.symbol_as_target
 #   - javascript.builtins.WeakRef.deref
-#   - javascript.builtins.WeakRef.symbol_as_target
 # - Float16Array:
 #   - javascript.builtins.Float16Array.Float16Array
 # - Functions:
