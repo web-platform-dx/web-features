@@ -711,6 +711,18 @@ compat_features:
   - http.status.103.preconnect
 
   # baseline: low
+  # baseline_low_date: 2024-01-23
+  # support:
+  #   chrome: "108"
+  #   chrome_android: "108"
+  #   edge: "108"
+  #   firefox: "122"
+  #   firefox_android: "122"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - html.elements.form.autocomplete.webauthn
+
+  # baseline: low
   # baseline_low_date: 2024-07-09
   # support:
   #   chrome: "61"
@@ -833,15 +845,6 @@ compat_features:
   #   firefox: "123"
   #   firefox_android: "123"
   - http.status.103.preload
-
-  # baseline: false
-  # support:
-  #   chrome: "108"
-  #   chrome_android: "108"
-  #   edge: "108"
-  #   firefox: "122"
-  #   firefox_android: "122"
-  - html.elements.form.autocomplete.webauthn
 
   # baseline: false
   # support:
