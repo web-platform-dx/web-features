@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "120"
-    chrome_android: "120"
-    edge: "120"
+    chrome: "128"
+    chrome_android: "128"
+    edge: "128"
 compat_features:
   # baseline: false
   # support:
@@ -25,7 +25,6 @@ compat_features:
   - api.HTMLFencedFrameElement.height
   - api.HTMLFencedFrameElement.sandbox
   - api.HTMLFencedFrameElement.width
-  - api.Navigator.deprecatedReplaceInURN
   - api.Window.fence
   - html.elements.a.target.unfencedTop
   - html.elements.fencedframe
@@ -35,10 +34,17 @@ compat_features:
   - http.headers.Content-Security-Policy.fenced-frame-src
   - http.headers.Sec-Fetch-Dest.fencedframe
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "120"
   #   chrome_android: "120"
   #   edge: "120"
   - api.Fence.setReportEventDataForAutomaticBeacons.start_commit_eventType
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  - api.Navigator.deprecatedReplaceInURN
