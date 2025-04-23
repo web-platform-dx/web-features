@@ -22,7 +22,6 @@ compat_features:
   - api.SharedStorageWorkletGlobalScope
   - api.SharedStorageWorkletGlobalScope.register
   - api.SharedStorageWorkletGlobalScope.sharedStorage
-  - api.Window.sharedStorage
 
   # baseline: false
   # support:
@@ -51,3 +50,4 @@ compat_features:
   - api.SharedStorage.run
   - api.SharedStorage.selectURL
   - api.SharedStorage.worklet
+  - api.Window.sharedStorage

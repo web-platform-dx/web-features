@@ -10,9 +10,28 @@ status:
     safari: "18.4"
     safari_ios: "18.4"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2025-03-31
+  # support:
+  #   chrome: "114"
+  #   chrome_android: "114"
+  #   edge: "114"
+  #   firefox: "136"
+  #   firefox_android: "136"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
   - api.CookieStore.delete.partitioned_option
-  - api.CookieStore.get.partitioned_return_property
   - api.CookieStore.set.partitioned_option
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "114"
+  #   chrome_android: "114"
+  #   edge: "114"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - api.CookieStore.get.partitioned_return_property
   - api.ExtendableCookieChangeEvent.changed.partitioned_property
   - api.ExtendableCookieChangeEvent.deleted.partitioned_property
   - http.headers.Set-Cookie.Partitioned
