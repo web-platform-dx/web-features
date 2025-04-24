@@ -66,6 +66,9 @@ compat_features:
   - api.HTMLVideoElement.videoHeight
   - api.HTMLVideoElement.videoWidth
   - api.HTMLVideoElement.width
+  - api.MediaError
+  - api.MediaError.code
+  - api.MediaError.message
   - html.elements.video
   - html.elements.video.autoplay
   - html.elements.video.controls
