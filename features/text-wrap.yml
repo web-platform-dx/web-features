@@ -2,6 +2,19 @@ name: text-wrap
 description: The `text-wrap` CSS property sets how lines break in text that overflows the container. It is a shorthand for `text-wrap-style` and `text-wrap-mode`.
 spec: https://drafts.csswg.org/css-text-4/#text-wrap-shorthand
 group: text-wrap
+status:
+  compute_from:
+  - css.properties.text-wrap
+  - css.properties.text-wrap-mode
+  - css.properties.text-wrap-style
 compat_features:
   - css.properties.text-wrap
   - css.properties.text-wrap.wrap
+  - css.properties.text-wrap-mode
+  - css.properties.text-wrap-mode.nowrap
+  - css.properties.text-wrap-mode.wrap
+  - css.properties.text-wrap.nowrap
+  - css.properties.text-wrap.stable
+  - css.properties.text-wrap-style
+  - css.properties.text-wrap-style.auto
+  - css.properties.text-wrap-style.stable
