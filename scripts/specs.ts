@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 
-import webSpecs from 'web-specs' assert { type: 'json' };
+import webSpecs from 'web-specs' with { type: 'json' };
 
 import { features } from '../index.js';
 
