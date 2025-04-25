@@ -107,6 +107,20 @@ compat_features:
   #   firefox: "4"
   #   firefox_android: "4"
   #   safari: "3.1"
+  #   safari_ios: "2"
+  - api.MediaError
+  - api.MediaError.code
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "3"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "4"
+  #   firefox_android: "4"
+  #   safari: "3.1"
   #   safari_ios: "3"
   - api.HTMLMediaElement.buffered
   - html.elements.video.preload
@@ -321,6 +335,19 @@ compat_features:
   #   safari: "10"
   #   safari_ios: "10"
   - html.elements.video.crossorigin
+
+  # baseline: high
+  # baseline_low_date: 2021-09-20
+  # baseline_high_date: 2024-03-20
+  # support:
+  #   chrome: "59"
+  #   chrome_android: "59"
+  #   edge: "79"
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - api.MediaError.message
 
   # baseline: false
   # support:
