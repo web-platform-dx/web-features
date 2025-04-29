@@ -46,14 +46,25 @@ compat_features:
   #   firefox_android: "34"
   #   safari: "16.2"
   #   safari_ios: "16.2"
-  - api.CSSFontFeatureValuesRule
-  - api.CSSFontFeatureValuesRule.fontFamily
   - css.properties.font-variant-alternates.annotation
   - css.properties.font-variant-alternates.character_variant
   - css.properties.font-variant-alternates.ornaments
   - css.properties.font-variant-alternates.styleset
   - css.properties.font-variant-alternates.stylistic
   - css.properties.font-variant-alternates.swash
+
+  # baseline: low
+  # baseline_low_date: 2025-03-06
+  # support:
+  #   chrome: "134"
+  #   chrome_android: "134"
+  #   edge: "134"
+  #   firefox: "34"
+  #   firefox_android: "34"
+  #   safari: "16.2"
+  #   safari_ios: "16.2"
+  - api.CSSFontFeatureValuesRule
+  - api.CSSFontFeatureValuesRule.fontFamily
 
   # baseline: false
   # support:
@@ -72,6 +83,12 @@ compat_features:
   - api.CSSFontFeatureValuesMap.set
   - api.CSSFontFeatureValuesMap.size
   - api.CSSFontFeatureValuesMap.values
+
+  # baseline: false
+  # support:
+  #   chrome: "134"
+  #   chrome_android: "134"
+  #   edge: "134"
   - api.CSSFontFeatureValuesRule.annotation
   - api.CSSFontFeatureValuesRule.characterVariant
   - api.CSSFontFeatureValuesRule.ornaments
