@@ -8,11 +8,11 @@ status:
   compute_from:
     - api.DedicatedWorkerGlobalScope.messageerror_event
     - api.MessagePort.messageerror_event
-    - api.ServiceWorkerContainer.messageerror_event
     - api.Window.messageerror_event
 compat_features:
   - api.DedicatedWorkerGlobalScope.messageerror_event
   - api.MessagePort.messageerror_event
   - api.ServiceWorkerContainer.messageerror_event
+  - api.ServiceWorkerGlobalScope.messageerror_event
   - api.Window.messageerror_event
   - api.Worker.messageerror_event
