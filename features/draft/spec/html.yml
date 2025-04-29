@@ -1,4 +1,4 @@
-draft_date: 2025-04-28
+draft_date: 2025-04-29
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -47,7 +47,6 @@ compat_features:
   - api.HTMLInputElement.showPicker.time_input
   - api.HTMLInputElement.showPicker.week_input
   - api.HTMLMediaElement.getStartDate
-  - api.HTMLMediaElement.textTracks
   - api.HTMLOptionsCollection
   - api.HTMLOptionsCollection.add
   - api.HTMLOptionsCollection.length
@@ -78,10 +77,6 @@ compat_features:
   - api.ServiceWorker.error_event
   - api.ShadowRoot.activeElement
   - api.ShadowRoot.innerHTML
-  - api.TimeRanges
-  - api.TimeRanges.end
-  - api.TimeRanges.length
-  - api.TimeRanges.start
   - api.TrackEvent
   - api.TrackEvent.TrackEvent
   - api.TrackEvent.track
@@ -1486,6 +1481,10 @@ compat_features:
 #   - api.MediaError
 #   - api.MediaError.code
 #   - api.MediaError.message
+#   - api.TimeRanges
+#   - api.TimeRanges.end
+#   - api.TimeRanges.length
+#   - api.TimeRanges.start
 #   - html.elements.video
 #   - html.elements.video.autoplay
 #   - html.elements.video.controls
@@ -1499,6 +1498,7 @@ compat_features:
 #   - html.elements.video.width
 # - Text tracks:
 #   - api.HTMLMediaElement.addTextTrack
+#   - api.HTMLMediaElement.textTracks
 #   - api.HTMLTrackElement
 #   - api.HTMLTrackElement.cuechange_event
 #   - api.HTMLTrackElement.default
