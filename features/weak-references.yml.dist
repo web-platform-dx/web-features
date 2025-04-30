@@ -41,5 +41,5 @@ compat_features:
   #   edge: "109"
   #   safari: "16.4"
   #   safari_ios: "16.4"
-  - javascript.builtins.FinalizationRegistry.symbol_as_target
-  - javascript.builtins.WeakRef.symbol_as_target
+  - javascript.builtins.FinalizationRegistry.register.symbol_as_target
+  - javascript.builtins.WeakRef.WeakRef.symbol_as_target

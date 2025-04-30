@@ -1,0 +1,88 @@
+draft_date: 2025-04-17
+name: CSS Multi-column Layout Module Level 2
+description: TODO
+spec: https://drafts.csswg.org/css-multicol-2/
+compat_features:
+  - css.selectors.column
+  - css.selectors.column.nested_scroll-marker
+
+# The following features in the spec are already part of web-features:
+# - Multi-column layout:
+#   - css.properties.align-content.multicol_context
+#   - css.properties.column-count
+#   - css.properties.column-count.auto
+#   - css.properties.column-gap
+#   - css.properties.column-gap.multicol_context
+#   - css.properties.column-gap.multicol_context.calc_values
+#   - css.properties.column-gap.multicol_context.percentage_values
+#   - css.properties.column-rule
+#   - css.properties.column-rule-color
+#   - css.properties.column-rule-style
+#   - css.properties.column-rule-width
+#   - css.properties.column-width
+#   - css.properties.column-width.auto
+#   - css.properties.columns
+# - Page breaks:
+#   - css.properties.break-after
+#   - css.properties.break-after.always
+#   - css.properties.break-after.auto
+#   - css.properties.break-after.avoid
+#   - css.properties.break-after.avoid-page
+#   - css.properties.break-after.left
+#   - css.properties.break-after.page
+#   - css.properties.break-after.paged_context
+#   - css.properties.break-after.paged_context.avoid-page
+#   - css.properties.break-after.paged_context.page
+#   - css.properties.break-after.paged_context.recto
+#   - css.properties.break-after.recto
+#   - css.properties.break-after.right
+#   - css.properties.break-after.verso
+#   - css.properties.break-before
+#   - css.properties.break-before.always
+#   - css.properties.break-before.auto
+#   - css.properties.break-before.avoid
+#   - css.properties.break-before.avoid-page
+#   - css.properties.break-before.left
+#   - css.properties.break-before.page
+#   - css.properties.break-before.paged_context
+#   - css.properties.break-before.paged_context.page
+#   - css.properties.break-before.paged_context.recto
+#   - css.properties.break-before.recto
+#   - css.properties.break-before.right
+#   - css.properties.break-before.verso
+#   - css.properties.break-inside
+#   - css.properties.break-inside.auto
+#   - css.properties.break-inside.avoid
+#   - css.properties.break-inside.avoid-page
+#   - css.properties.break-inside.paged_context
+#   - css.properties.break-inside.paged_context.avoid-page
+# - Column breaks:
+#   - css.properties.break-after.avoid-column
+#   - css.properties.break-after.column
+#   - css.properties.break-after.multicol_context
+#   - css.properties.break-after.multicol_context.avoid
+#   - css.properties.break-after.multicol_context.avoid-column
+#   - css.properties.break-after.multicol_context.column
+#   - css.properties.break-before.avoid-column
+#   - css.properties.break-before.column
+#   - css.properties.break-before.multicol_context
+#   - css.properties.break-before.multicol_context.avoid
+#   - css.properties.break-before.multicol_context.avoid-column
+#   - css.properties.break-before.multicol_context.column
+#   - css.properties.break-inside.avoid-column
+#   - css.properties.break-inside.multicol_context
+#   - css.properties.break-inside.multicol_context.avoid-column
+# - column-fill:
+#   - css.properties.column-fill
+#   - css.properties.column-fill.auto
+#   - css.properties.column-fill.balance
+# - Flexbox gap:
+#   - css.properties.column-gap.flex_context
+# - Grid:
+#   - css.properties.column-gap.grid_context
+# - column-span:
+#   - css.properties.column-span
+#   - css.properties.column-span.all
+#   - css.properties.column-span.none
+# - Widows and orphans:
+#   - css.properties.widows

@@ -26,6 +26,7 @@ You can find web-features and Baseline data in the places listed below. If you s
 - [Baseline Status Astro Embed](https://astro-embed.netlify.app/components/baseline-status/), to display Baseline data without client-side JavaScript on an Astro website.
 - [RUMvision Baseline integration](https://www.rumvision.com/help-center/monitoring/dashboard/baseline/), a real user monitoring solution, which uses Baseline statuses show which features are safe to use based on actual audience data.
 - [RUM Archive Insights](https://rumarchive.com/insights/), a collection of RUM Archive data visualizations, including yearly Baseline features.
+- [Baseline MCP Server](https://github.com/yamanoku/baseline-mcp-server), a Model Context Protocol (MCP) server that provides Baseline information for web features.
 
 ## Web feature dashboards
 
