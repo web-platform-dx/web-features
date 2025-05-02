@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "136"
+    chrome_android: "136"
+    edge: "136"
 compat_features:
   # baseline: false
   # support:
@@ -21,5 +24,8 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "136"
+  #   chrome_android: "136"
+  #   edge: "136"
   - api.GPUAdapterInfo.isFallbackAdapter
