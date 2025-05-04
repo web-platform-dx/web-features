@@ -1,10 +1,18 @@
 name: Web animations
-description: The `animate()` method of `Element` objects programmatically animates elements over time and can synchronize the animations of multiple elements.
+description: The web animation API programmatically creates, inspects, and controls elements' animations, to change and synchronize elements' appearance over time.
 spec: https://drafts.csswg.org/web-animations-1/
 caniuse: web-animation
 group: animation
 status:
-  compute_from: api.Element.animate
+  compute_from:
+    - api.Animation.Animation
+    - api.Animation.cancel
+    - api.Animation.pause
+    - api.Animation.play
+    - api.Animation.reverse
+    - api.Document.getAnimations
+    - api.Element.animate
+    - api.Element.getAnimations
 compat_features:
   - api.Element.animate
   - api.Animation
