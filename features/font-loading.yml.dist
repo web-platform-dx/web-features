@@ -93,6 +93,19 @@ compat_features:
   #   safari_ios: "11.3"
   - api.FontFace.display
 
+  # baseline: high
+  # baseline_low_date: 2022-09-20
+  # baseline_high_date: 2025-03-20
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "69"
+  #   edge: "79"
+  #   firefox: "105"
+  #   firefox_android: "105"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - api.WorkerGlobalScope.fonts
+
   # baseline: low
   # baseline_low_date: 2023-12-07
   # support:

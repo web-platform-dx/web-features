@@ -23,6 +23,7 @@ compat_features:
   - api.Range.cloneContents
   - api.Range.cloneRange
   - api.Range.collapse
+  - api.Range.collapse.toStart_parameter_optional
   - api.Range.collapsed
   - api.Range.commonAncestorContainer
   - api.Range.compareBoundaryPoints
@@ -33,6 +34,8 @@ compat_features:
   - api.Range.endContainer
   - api.Range.endOffset
   - api.Range.extractContents
+  - api.Range.getBoundingClientRect
+  - api.Range.getClientRects
   - api.Range.insertNode
   - api.Range.intersectsNode
   - api.Range.isPointInRange

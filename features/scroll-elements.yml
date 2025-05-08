@@ -1,0 +1,44 @@
+name: Scroll methods on elements
+description: The `scroll()` and `scrollBy()` methods change the scroll position of overflow content within an element. Similar to setting `scrollTop` and `scrollLeft` properties, but with options setting whether the scroll should animate smoothly or jump. Note that `scrollTo()` is an alias for `scroll()`.
+spec: https://drafts.csswg.org/cssom-view-1/#dom-element-scroll
+caniuse: element-scroll-methods
+status:
+  compute_from:
+    - api.Element.scroll
+    - api.Element.scroll.options_behavior_parameter
+compat_features:
+  - api.Document.scroll_event
+  - api.Document.scrollingElement
+  - api.Element.scroll
+  - api.Element.scroll.options_behavior_parameter
+  - api.Element.scroll.options_left_parameter
+  - api.Element.scroll.options_top_parameter
+  - api.Element.scrollBy
+  - api.Element.scrollBy.options_behavior_parameter
+  - api.Element.scrollBy.options_left_parameter
+  - api.Element.scrollBy.options_top_parameter
+  - api.Element.scrollHeight
+  - api.Element.scrollLeft
+  - api.Element.scrollTo
+  - api.Element.scrollTo.options_behavior_parameter
+  - api.Element.scrollTo.options_left_parameter
+  - api.Element.scrollTo.options_top_parameter
+  - api.Element.scrollTop
+  - api.Element.scrollWidth
+  - api.Element.scroll_event
+  - api.Window.scroll
+  - api.Window.scroll.options_behavior_parameter
+  - api.Window.scroll.options_left_parameter
+  - api.Window.scroll.options_top_parameter
+  - api.Window.scrollBy
+  - api.Window.scrollBy.options_behavior_parameter
+  - api.Window.scrollBy.options_left_parameter
+  - api.Window.scrollBy.options_top_parameter
+  - api.Window.scrollTo
+  - api.Window.scrollTo.options_behavior_parameter
+  - api.Window.scrollTo.options_left_parameter
+  - api.Window.scrollTo.options_top_parameter
+  - api.Window.scrollX
+  - api.Window.scrollX.subpixel_precision
+  - api.Window.scrollY
+  - api.Window.scrollY.subpixel_precision

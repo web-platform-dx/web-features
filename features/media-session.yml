@@ -1,3 +1,40 @@
 name: Media session
 description: The `navigator.mediaSession` API integrates with platform UI for media playback. It can be used to set metadata such as title and artwork, and to handle user actions like playing, pausing, or seeking.
 spec: https://w3c.github.io/mediasession/
+status:
+  compute_from: api.MediaSession
+compat_features:
+  - api.ChapterInformation
+  - api.ChapterInformation.artwork
+  - api.ChapterInformation.startTime
+  - api.ChapterInformation.title
+  - api.MediaMetadata
+  - api.MediaMetadata.MediaMetadata
+  - api.MediaMetadata.album
+  - api.MediaMetadata.artist
+  - api.MediaMetadata.artwork
+  - api.MediaMetadata.chapterInfo
+  - api.MediaMetadata.title
+  - api.MediaSession
+  - api.MediaSession.metadata
+  - api.MediaSession.playbackState
+  - api.MediaSession.setActionHandler
+  - api.MediaSession.setActionHandler.hangup_type
+  - api.MediaSession.setActionHandler.nextslide_type
+  - api.MediaSession.setActionHandler.nexttrack_type
+  - api.MediaSession.setActionHandler.pause_type
+  - api.MediaSession.setActionHandler.play_type
+  - api.MediaSession.setActionHandler.previousslide_type
+  - api.MediaSession.setActionHandler.previoustrack_type
+  - api.MediaSession.setActionHandler.seekbackward_type
+  - api.MediaSession.setActionHandler.seekforward_type
+  - api.MediaSession.setActionHandler.seekto_type
+  - api.MediaSession.setActionHandler.skipad_type
+  - api.MediaSession.setActionHandler.stop_type
+  - api.MediaSession.setActionHandler.togglecamera_type
+  - api.MediaSession.setActionHandler.togglemicrophone_type
+  - api.MediaSession.setCameraActive
+  - api.MediaSession.setMicrophoneActive
+  - api.MediaSession.setScreenshareActive
+  - api.MediaSession.setPositionState
+  - api.Navigator.mediaSession

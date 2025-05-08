@@ -1,0 +1,7 @@
+name: getBoxQuads()
+description: The `getBoxQuads()` method, when called on a document, element, pseudo-element, or text node, returns the list of `DOMQuad` objects that represent the CSS boxes used to render the node.
+spec: https://drafts.csswg.org/cssom-view-1/
+compat_features:
+  - api.Document.getBoxQuads
+  - api.Element.getBoxQuads
+  - api.Text.getBoxQuads

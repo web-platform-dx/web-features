@@ -11,21 +11,9 @@ compat_features:
   # - http.headers.Content-Security-Policy.block-all-mixed-content (deprecated in BCD)
   # - http.headers.Content-Security-Policy.prefetch-src (deprecated in BCD)
   # - http.headers.Content-Security-Policy.report-uri (deprecated in BCD)
-  - api.CSPViolationReportBody
-  - api.CSPViolationReportBody.blockedURL
-  - api.CSPViolationReportBody.columnNumber
-  - api.CSPViolationReportBody.disposition
-  - api.CSPViolationReportBody.documentURL
-  - api.CSPViolationReportBody.effectiveDirective
-  - api.CSPViolationReportBody.lineNumber
-  - api.CSPViolationReportBody.originalPolicy
-  - api.CSPViolationReportBody.referrer
-  - api.CSPViolationReportBody.sample
-  - api.CSPViolationReportBody.sourceFile
-  - api.CSPViolationReportBody.statusCode
-  - api.CSPViolationReportBody.toJSON
   - api.Document.securitypolicyviolation_event
   - api.Element.securitypolicyviolation_event
+  - api.HTMLElement.nonce
   - api.HTMLIFrameElement.csp
   - api.SecurityPolicyViolationEvent
   - api.SecurityPolicyViolationEvent.SecurityPolicyViolationEvent
@@ -45,6 +33,8 @@ compat_features:
   - api.WorkerGlobalScope.securitypolicyviolation_event
   - html.elements.iframe.csp
   - html.elements.meta.http-equiv.content-security-policy
+  - html.global_attributes.nonce
+  - html.global_attributes.nonce.nonce_hiding
   - http.headers.Content-Security-Policy
   - http.headers.Content-Security-Policy-Report-Only
   - http.headers.Content-Security-Policy.base-uri

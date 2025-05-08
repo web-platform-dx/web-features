@@ -5,5 +5,16 @@ status:
   baseline: false
   support: {}
 compat_features:
-  - css.selectors.closed
+  # baseline: false
+  # support:
+  #   chrome: "133"
+  #   chrome_android: "133"
+  #   edge: "133"
+  #   firefox: "136"
+  #   firefox_android: "136"
   - css.selectors.open
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.selectors.closed

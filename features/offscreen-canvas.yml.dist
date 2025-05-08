@@ -5,14 +5,15 @@ status:
   baseline: low
   baseline_low_date: 2023-03-27
   support:
-    chrome: "80"
-    chrome_android: "80"
-    edge: "80"
+    chrome: "69"
+    chrome_android: "69"
+    edge: "79"
     firefox: "105"
     firefox_android: "105"
     safari: "16.4"
     safari_ios: "16.4"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2023-03-27
   # support:
@@ -52,7 +53,6 @@ compat_features:
   - api.OffscreenCanvasRenderingContext2D.fillRect
   - api.OffscreenCanvasRenderingContext2D.fillStyle
   - api.OffscreenCanvasRenderingContext2D.fillText
-  - api.OffscreenCanvasRenderingContext2D.font
   - api.OffscreenCanvasRenderingContext2D.getImageData
   - api.OffscreenCanvasRenderingContext2D.getLineDash
   - api.OffscreenCanvasRenderingContext2D.globalAlpha
@@ -103,7 +103,6 @@ compat_features:
   #   safari_ios: "16.4"
   - api.OffscreenCanvas.getContext.bitmaprenderer_context
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2023-03-27
   # support:
@@ -115,3 +114,96 @@ compat_features:
   #   safari: "16.4"
   #   safari_ios: "16.4"
   - api.OffscreenCanvasRenderingContext2D.getTransform
+
+  # baseline: low
+  # baseline_low_date: 2023-09-18
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "69"
+  #   edge: "79"
+  #   firefox: "105"
+  #   firefox_android: "105"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - api.OffscreenCanvas.getContext.webgl2_context
+  - api.OffscreenCanvas.getContext.webgl_context
+
+  # baseline: low
+  # baseline_low_date: 2025-03-31
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "69"
+  #   edge: "79"
+  #   firefox: "105"
+  #   firefox_android: "105"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - api.OffscreenCanvasRenderingContext2D.font
+
+  # baseline: low
+  # baseline_low_date: 2025-03-31
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "115"
+  #   firefox_android: "115"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - api.OffscreenCanvasRenderingContext2D.letterSpacing
+  - api.OffscreenCanvasRenderingContext2D.wordSpacing
+
+  # baseline: false
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "69"
+  #   edge: "79"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.OffscreenCanvasRenderingContext2D.imageSmoothingQuality
+
+  # baseline: false
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "69"
+  #   edge: "79"
+  #   firefox: "105"
+  #   firefox_android: "105"
+  - api.OffscreenCanvas.convertToBlob.option_type_parameter_webp
+
+  # baseline: false
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "69"
+  #   edge: "79"
+  #   firefox: "116"
+  #   firefox_android: "116"
+  - api.OffscreenCanvasRenderingContext2D.filter
+
+  # baseline: false
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "105"
+  #   firefox_android: "105"
+  - api.OffscreenCanvasRenderingContext2D.fontKerning
+
+  # baseline: false
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "116"
+  #   firefox_android: "116"
+  - api.OffscreenCanvasRenderingContext2D.textRendering
+
+  # baseline: false
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "117"
+  #   firefox_android: "117"
+  - api.OffscreenCanvasRenderingContext2D.fontStretch
+  - api.OffscreenCanvasRenderingContext2D.fontVariantCaps

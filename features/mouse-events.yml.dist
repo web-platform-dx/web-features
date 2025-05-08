@@ -99,6 +99,19 @@ compat_features:
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
   # support:
+  #   chrome: "9"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3"
+  #   firefox_android: "4"
+  #   safari: "6"
+  #   safari_ios: "6"
+  - api.HTMLElement.click
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
   #   chrome: "26"
   #   chrome_android: "26"
   #   edge: "12"
@@ -121,20 +134,6 @@ compat_features:
   #   safari_ios: "7"
   - api.Element.mouseenter_event
   - api.Element.mouseleave_event
-
-  # baseline: high
-  # baseline_low_date: 2015-11-12
-  # baseline_high_date: 2018-05-12
-  # support:
-  #   chrome: "37"
-  #   chrome_android: "37"
-  #   edge: "13"
-  #   firefox: "41"
-  #   firefox_android: "41"
-  #   safari: "9"
-  #   safari_ios: "8"
-  - api.MouseEvent.movementX
-  - api.MouseEvent.movementY
 
   # baseline: high
   # baseline_low_date: 2015-12-15
@@ -189,6 +188,19 @@ compat_features:
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - api.MouseEvent.getModifierState
+
+  # baseline: low
+  # baseline_low_date: 2023-09-18
+  # support:
+  #   chrome: "37"
+  #   chrome_android: "37"
+  #   edge: "13"
+  #   firefox: "41"
+  #   firefox_android: "41"
+  #   safari: "9"
+  #   safari_ios: "17"
+  - api.MouseEvent.movementX
+  - api.MouseEvent.movementY
 
   # baseline: low
   # baseline_low_date: 2024-12-11

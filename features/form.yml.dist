@@ -142,8 +142,36 @@ compat_features:
   - api.FormDataEvent.formData
   - api.HTMLFormElement.formdata_event
 
-  # baseline: low
+  # baseline: high
+  # baseline_low_date: 2021-09-20
+  # baseline_high_date: 2024-03-20
+  # support:
+  #   chrome: "81"
+  #   chrome_android: "81"
+  #   edge: "81"
+  #   firefox: "75"
+  #   firefox_android: "79"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - api.SubmitEvent
+  - api.SubmitEvent.SubmitEvent
+
+  # baseline: high
+  # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
+  # support:
+  #   chrome: "81"
+  #   chrome_android: "81"
+  #   edge: "81"
+  #   firefox: "75"
+  #   firefox_android: "79"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - api.SubmitEvent.submitter
+
+  # baseline: high
   # baseline_low_date: 2022-09-12
+  # baseline_high_date: 2025-03-12
   # support:
   #   chrome: "76"
   #   chrome_android: "76"

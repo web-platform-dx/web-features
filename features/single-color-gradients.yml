@@ -1,0 +1,11 @@
+name: Single color stop gradients
+description: A single color stop can be provided to the `linear-gradient()`, `radial-gradient()`, and `conic-gradient()` CSS functions, and their repeating counterparts, to create a solid color background.
+spec: https://drafts.csswg.org/css-images-4/#color-stop-syntax
+group: gradients
+compat_features:
+  - css.types.gradient.conic-gradient.single_color_stop
+  - css.types.gradient.linear-gradient.single_color_stop
+  - css.types.gradient.radial-gradient.single_color_stop
+  - css.types.gradient.repeating-conic-gradient.single_color_stop
+  - css.types.gradient.repeating-linear-gradient.single_color_stop
+  - css.types.gradient.repeating-radial-gradient.single_color_stop

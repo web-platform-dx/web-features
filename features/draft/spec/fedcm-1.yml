@@ -1,18 +1,17 @@
-draft_date: 2024-10-28
+draft_date: 2025-04-09
 name: Federated Credential Management API
 description: TODO
 spec: https://w3c-fedid.github.io/FedCM/
 compat_features:
+  - api.IdentityCredential.configURL
   - api.IdentityCredential.disconnect_static
+  - api.IdentityCredential.isAutoSelected
   - api.IdentityProvider
   - api.IdentityProvider.close_static
   - api.IdentityProvider.getUserInfo_static
-  - api.Navigator.login
-  - api.NavigatorLogin
-  - api.NavigatorLogin.setStatus
+  - api.IdentityProvider.resolve_static
   - html.elements.iframe.allow.identity-credentials-get
   - http.headers.Permissions-Policy.identity-credentials-get
-  - http.headers.Set-Login
 
 # The following features in the spec are already part of web-features:
 # - Federated credential management:

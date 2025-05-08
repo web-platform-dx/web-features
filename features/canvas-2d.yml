@@ -88,13 +88,35 @@ compat_features:
   - api.CanvasRenderingContext2D.translate
   - api.CanvasRenderingContext2D.wordSpacing
   - api.ImageData
+  - api.ImageData.worker_support
   - api.ImageData.ImageData
   - api.ImageData.colorSpace
   - api.ImageData.data
   - api.ImageData.height
   - api.ImageData.width
+  - api.Path2D
+  - api.Path2D.Path2D
+  - api.Path2D.addPath
+  - api.Path2D.arc
+  - api.Path2D.arcTo
+  - api.Path2D.bezierCurveTo
+  - api.Path2D.closePath
+  - api.Path2D.ellipse
+  - api.Path2D.lineTo
+  - api.Path2D.moveTo
+  - api.Path2D.quadraticCurveTo
+  - api.Path2D.rect
+  - api.Path2D.roundRect
   - api.TextMetrics
+  - api.TextMetrics.actualBoundingBoxAscent
+  - api.TextMetrics.actualBoundingBoxDescent
+  - api.TextMetrics.actualBoundingBoxLeft
+  - api.TextMetrics.actualBoundingBoxRight
   - api.TextMetrics.alphabeticBaseline
+  - api.TextMetrics.emHeightAscent
+  - api.TextMetrics.emHeightDescent
+  - api.TextMetrics.fontBoundingBoxAscent
+  - api.TextMetrics.fontBoundingBoxDescent
   - api.TextMetrics.hangingBaseline
   - api.TextMetrics.ideographicBaseline
   - api.TextMetrics.width

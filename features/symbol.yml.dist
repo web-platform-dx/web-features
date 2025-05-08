@@ -46,19 +46,6 @@ compat_features:
   - javascript.builtins.Symbol.keyFor
 
   # baseline: high
-  # baseline_low_date: 2016-08-02
-  # baseline_high_date: 2019-02-02
-  # support:
-  #   chrome: "38"
-  #   chrome_android: "38"
-  #   edge: "12"
-  #   firefox: "48"
-  #   firefox_android: "48"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - javascript.builtins.Symbol.unscopables
-
-  # baseline: high
   # baseline_low_date: 2016-09-20
   # baseline_high_date: 2019-03-20
   # support:
@@ -164,6 +151,19 @@ compat_features:
   - javascript.builtins.Symbol.replace
   - javascript.builtins.Symbol.search
   - javascript.builtins.Symbol.split
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "51"
+  #   chrome_android: "51"
+  #   edge: "79"
+  #   firefox: "48"
+  #   firefox_android: "48"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - javascript.builtins.Array.@@species
 
   # baseline: high
   # baseline_low_date: 2020-01-15

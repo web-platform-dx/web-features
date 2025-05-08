@@ -1,0 +1,13 @@
+name: "text-decoration-line: blink"
+description: "The `text-decoration: blink` CSS declaration flashes text between visible and invisible."
+spec: https://drafts.csswg.org/css-text-decor-3/#valdef-text-decoration-line-blink
+group:
+  - animation
+  - css
+discouraged:
+  according_to:
+    - https://drafts.csswg.org/css-text-decor-3/#valdef-text-decoration-line-blink
+  alternatives:
+    - animations-css
+compat_features:
+  - css.properties.text-decoration-line.blink

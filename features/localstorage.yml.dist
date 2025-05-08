@@ -114,3 +114,16 @@ compat_features:
   #   safari: "4"
   #   safari_ios: "4"
   - api.Window.storage_event
+
+  # baseline: high
+  # baseline_low_date: 2018-04-30
+  # baseline_high_date: 2020-10-30
+  # support:
+  #   chrome: "17"
+  #   chrome_android: "18"
+  #   edge: "17"
+  #   firefox: "13"
+  #   firefox_android: "14"
+  #   safari: "6"
+  #   safari_ios: "6"
+  - api.StorageEvent.StorageEvent

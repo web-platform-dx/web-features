@@ -1,15 +1,9 @@
-draft_date: 2024-11-25
-name: DOM Standard
+draft_date: 2025-03-03
+name: DOM
 description: TODO
 spec: https://dom.spec.whatwg.org/
 compat_features:
   - api.Document.featurePolicy
-  - api.Element.attachShadow.options_clonable_parameter
-  - api.Element.attachShadow.options_delegatesFocus_parameter
-  - api.Element.attachShadow.options_serializable_parameter
-  - api.Range.collapse.toStart_parameter_optional
-  - api.ShadowRoot.delegatesFocus
-  - api.ShadowRoot.serializable
 
 # The following features in the spec are already part of web-features:
 # - AbortController and AbortSignal:
@@ -41,6 +35,7 @@ compat_features:
 #   - api.Range.cloneContents
 #   - api.Range.cloneRange
 #   - api.Range.collapse
+#   - api.Range.collapse.toStart_parameter_optional
 #   - api.Range.collapsed
 #   - api.Range.commonAncestorContainer
 #   - api.Range.compareBoundaryPoints
@@ -360,6 +355,10 @@ compat_features:
 #   - api.XPathResult.snapshotItem
 #   - api.XPathResult.snapshotLength
 #   - api.XPathResult.stringValue
+# - moveBefore():
+#   - api.Document.moveBefore
+#   - api.DocumentFragment.moveBefore
+#   - api.Element.moveBefore
 # - <slot>:
 #   - api.Element.assignedSlot
 #   - api.Element.slot
@@ -370,6 +369,9 @@ compat_features:
 #   - html.global_attributes.slot
 # - Shadow DOM:
 #   - api.Element.attachShadow
+#   - api.Element.attachShadow.options_clonable_parameter
+#   - api.Element.attachShadow.options_delegatesFocus_parameter
+#   - api.Element.attachShadow.options_serializable_parameter
 #   - api.Element.shadowRoot
 #   - api.Event.composed
 #   - api.Event.composedPath
@@ -377,8 +379,10 @@ compat_features:
 #   - api.Node.isConnected
 #   - api.ShadowRoot
 #   - api.ShadowRoot.clonable
+#   - api.ShadowRoot.delegatesFocus
 #   - api.ShadowRoot.host
 #   - api.ShadowRoot.mode
+#   - api.ShadowRoot.serializable
 # - MutationObserver:
 #   - api.MutationObserver
 #   - api.MutationObserver.MutationObserver

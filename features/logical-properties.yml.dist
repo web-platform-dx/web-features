@@ -105,10 +105,16 @@ compat_features:
   #   safari_ios: "14.5"
   - css.properties.inset-block
   - css.properties.inset-block-end
+  - css.properties.inset-block-end.auto
   - css.properties.inset-block-start
+  - css.properties.inset-block-start.auto
+  - css.properties.inset-block.auto
   - css.properties.inset-inline
   - css.properties.inset-inline-end
+  - css.properties.inset-inline-end.auto
   - css.properties.inset-inline-start
+  - css.properties.inset-inline-start.auto
+  - css.properties.inset-inline.auto
 
   # baseline: high
   # baseline_low_date: 2021-04-26
@@ -130,29 +136,11 @@ compat_features:
   - css.properties.border-inline-style
   - css.properties.border-inline-width
   - css.properties.inset
+  - css.properties.inset.auto
   - css.properties.margin-block
   - css.properties.margin-inline
   - css.properties.padding-block
   - css.properties.padding-inline
-
-  # baseline: high
-  # baseline_low_date: 2021-04-26
-  # baseline_high_date: 2023-10-26
-  # support:
-  #   chrome: "87"
-  #   chrome_android: "87"
-  #   edge: "87"
-  #   firefox: ≤72
-  #   firefox_android: ≤79
-  #   safari: "14.1"
-  #   safari_ios: "14.5"
-  - css.properties.inset-block-end.auto
-  - css.properties.inset-block-start.auto
-  - css.properties.inset-block.auto
-  - css.properties.inset-inline-end.auto
-  - css.properties.inset-inline-start.auto
-  - css.properties.inset-inline.auto
-  - css.properties.inset.auto
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: high
@@ -206,6 +194,9 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
   #   firefox: "69"
   #   firefox_android: "79"
   - css.properties.overflow-block
@@ -213,6 +204,9 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
   #   firefox: "112"
   #   firefox_android: "112"
   - css.properties.overflow-block.overlay

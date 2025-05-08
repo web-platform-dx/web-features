@@ -18,27 +18,10 @@ compat_features:
   - api.SharedStorage.clear
   - api.SharedStorage.delete
   - api.SharedStorage.set
-  - api.SharedStorageOperation
-  - api.SharedStorageRunOperation
-  - api.SharedStorageRunOperation.run
-  - api.SharedStorageSelectURLOperation
-  - api.SharedStorageSelectURLOperation.run
   - api.SharedStorageWorklet
   - api.SharedStorageWorkletGlobalScope
   - api.SharedStorageWorkletGlobalScope.register
   - api.SharedStorageWorkletGlobalScope.sharedStorage
-  - api.Window.sharedStorage
-  - api.WindowSharedStorage
-  - api.WindowSharedStorage.run
-  - api.WindowSharedStorage.selectURL
-  - api.WindowSharedStorage.worklet
-  - api.WorkletSharedStorage
-  - api.WorkletSharedStorage.@@asyncIterator
-  - api.WorkletSharedStorage.entries
-  - api.WorkletSharedStorage.get
-  - api.WorkletSharedStorage.keys
-  - api.WorkletSharedStorage.length
-  - api.WorkletSharedStorage.remainingBudget
 
   # baseline: false
   # support:
@@ -67,3 +50,4 @@ compat_features:
   - api.SharedStorage.run
   - api.SharedStorage.selectURL
   - api.SharedStorage.worklet
+  - api.Window.sharedStorage

@@ -45,6 +45,8 @@ export interface FeatureData {
     status: SupportStatus;
     /** Sources of support data for this feature */
     compat_features?: string[];
+    /** Whether developers are formally discouraged from using this feature */
+    discouraged?: Discouraged;
 }
 
 type BrowserIdentifier = "chrome" | "chrome_android" | "edge" | "firefox" | "firefox_android" | "safari" | "safari_ios";
@@ -67,6 +69,17 @@ interface Status {
 interface SupportStatus extends Status {
     /** Statuses for each key in the feature's compat_features list, if applicable. Not available to the npm release of web-features. */
     by_compat_key?: Record<string, Status>
+}
+
+interface Discouraged {
+    /** Links to a formal discouragement notice, such as specification text, intent-to-unship, etc. */
+    according_to: string[];
+    /** IDs for features that substitute some or all of this feature's utility */
+    alternatives?: string[];
+    // TODO: alternatives ought to be `(keyof WebFeaturesData["features"])[]`
+    // but ts-json-schema-generator seems to have long-standing unresolved bugs
+    // around this. Remove this when
+    // https://github.com/web-platform-dx/web-features/issues/2722 is resolved.
 }
 
 export interface GroupData {

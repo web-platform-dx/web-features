@@ -512,6 +512,11 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - api.RTCPeerConnection.RTCPeerConnection.configuration_bundlePolicy_parameter
+  - api.RTCPeerConnection.RTCPeerConnection.configuration_iceServers_parameter
+  - api.RTCPeerConnection.RTCPeerConnection.configuration_iceServers_parameter.credential_parameter
+  - api.RTCPeerConnection.RTCPeerConnection.configuration_iceServers_parameter.urls_parameter
+  - api.RTCPeerConnection.RTCPeerConnection.configuration_iceServers_parameter.username_parameter
+  - api.RTCPeerConnection.RTCPeerConnection.configuration_iceTransportPolicy_parameter
 
   # baseline: high
   # baseline_low_date: ≤2020-01-15
@@ -525,23 +530,6 @@ compat_features:
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - api.RTCPeerConnection.RTCPeerConnection.configuration_certificates_parameter
-
-  # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
-  # support:
-  #   chrome: "56"
-  #   chrome_android: "57"
-  #   edge: ≤79
-  #   firefox: "44"
-  #   firefox_android: "44"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - api.RTCPeerConnection.RTCPeerConnection.configuration_iceServers_parameter
-  - api.RTCPeerConnection.RTCPeerConnection.configuration_iceServers_parameter.credential_parameter
-  - api.RTCPeerConnection.RTCPeerConnection.configuration_iceServers_parameter.urls_parameter
-  - api.RTCPeerConnection.RTCPeerConnection.configuration_iceServers_parameter.username_parameter
-  - api.RTCPeerConnection.RTCPeerConnection.configuration_iceTransportPolicy_parameter
 
   # baseline: high
   # baseline_low_date: ≤2020-01-15
@@ -1040,6 +1028,18 @@ compat_features:
   #   safari_ios: "11"
   - api.RTCDataChannel.binaryType.blob_value
 
+  # baseline: low
+  # baseline_low_date: 2025-04-29
+  # support:
+  #   chrome: "61"
+  #   chrome_android: "61"
+  #   edge: "79"
+  #   firefox: "138"
+  #   firefox_android: "138"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - api.RTCCertificate.getFingerprints
+
   # baseline: false
   # support:
   #   chrome: "74"
@@ -1049,15 +1049,6 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - api.RTCRtpSender.setParameters.parameters_encodings_parameter.scaleResolutionDownBy
-
-  # baseline: false
-  # support:
-  #   chrome: "56"
-  #   chrome_android: "57"
-  #   edge: ≤79
-  #   safari: "11"
-  #   safari_ios: "11"
-  - api.RTCPeerConnection.RTCPeerConnection.configuration_iceCandidatePoolSize_parameter
 
   # baseline: false
   # support:
@@ -1079,12 +1070,12 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "61"
-  #   chrome_android: "61"
-  #   edge: "79"
-  #   safari: "12.1"
-  #   safari_ios: "12.2"
-  - api.RTCCertificate.getFingerprints
+  #   chrome: "59"
+  #   chrome_android: "59"
+  #   edge: ≤79
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.RTCPeerConnection.RTCPeerConnection.configuration_iceCandidatePoolSize_parameter
 
   # baseline: false
   # support:

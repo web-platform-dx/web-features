@@ -1,11 +1,12 @@
 {
   "name": "web-features",
   "description": "Curated list of Web platform features",
-  "version": "2.14.0",
+  "version": "2.34.2",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/web-platform-dx/web-features.git"
+    "url": "git+https://github.com/web-platform-dx/web-features.git",
+    "directory": "packages/web-features"
   },
   "type": "module",
   "main": "index.js",
@@ -25,7 +26,8 @@
     "prepare": "tsc && rm types.js && tsup ./index.ts --dts-only --format=esm --out-dir=."
   },
   "devDependencies": {
-    "tsup": "^8.3.5",
-    "typescript": "^5.7.2"
+    "@types/node": "^20.17.45",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
   }
 }

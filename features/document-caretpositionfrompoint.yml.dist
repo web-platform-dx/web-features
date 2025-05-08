@@ -10,4 +10,45 @@ status:
     firefox: "20"
     firefox_android: "20"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2025-03-31
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  #   firefox: "20"
+  #   firefox_android: "20"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - api.CaretPosition
+  - api.CaretPosition.offset
+  - api.CaretPosition.offsetNode
+
+  # baseline: low
+  # baseline_low_date: 2025-03-31
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  #   firefox: "23"
+  #   firefox_android: "23"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - api.CaretPosition.getClientRect
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  #   firefox: "20"
+  #   firefox_android: "20"
   - api.Document.caretPositionFromPoint
+
+  # baseline: false
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  - api.Document.caretPositionFromPoint.options_parameter

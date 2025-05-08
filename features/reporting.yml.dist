@@ -30,15 +30,66 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "84"
-  #   chrome_android: "84"
-  #   edge: "84"
-  - api.ReportingObserver.worker_support
+  #   chrome: "74"
+  #   chrome_android: "74"
+  #   edge: "79"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - api.CSPViolationReportBody
+  - api.CSPViolationReportBody.blockedURL
+  - api.CSPViolationReportBody.columnNumber
+  - api.CSPViolationReportBody.disposition
+  - api.CSPViolationReportBody.documentURL
+  - api.CSPViolationReportBody.effectiveDirective
+  - api.CSPViolationReportBody.lineNumber
+  - api.CSPViolationReportBody.originalPolicy
+  - api.CSPViolationReportBody.referrer
+  - api.CSPViolationReportBody.sample
+  - api.CSPViolationReportBody.sourceFile
+  - api.CSPViolationReportBody.statusCode
 
-  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "80"
+  #   chrome_android: "80"
+  #   edge: "80"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - api.CSPViolationReportBody.toJSON
+
   # baseline: false
   # support:
   #   chrome: "96"
   #   chrome_android: "96"
   #   edge: "96"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
   - http.headers.Reporting-Endpoints
+
+  # baseline: false
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "69"
+  #   edge: "79"
+  - api.DeprecationReportBody
+  - api.DeprecationReportBody.anticipatedRemoval
+  - api.DeprecationReportBody.columnNumber
+  - api.DeprecationReportBody.id
+  - api.DeprecationReportBody.lineNumber
+  - api.DeprecationReportBody.message
+  - api.DeprecationReportBody.sourceFile
+  - api.DeprecationReportBody.toJSON
+  - api.InterventionReportBody
+  - api.InterventionReportBody.columnNumber
+  - api.InterventionReportBody.id
+  - api.InterventionReportBody.lineNumber
+  - api.InterventionReportBody.message
+  - api.InterventionReportBody.sourceFile
+  - api.InterventionReportBody.toJSON
+
+  # baseline: false
+  # support:
+  #   chrome: "84"
+  #   chrome_android: "84"
+  #   edge: "84"
+  - api.ReportingObserver.worker_support

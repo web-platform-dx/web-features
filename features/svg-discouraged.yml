@@ -1,0 +1,69 @@
+name: SVG 1.1 (discouraged)
+description: The SVG 1.1 image format has several components that were excluded from SVG 2, such as fonts, alternate glyphs, and the `xlink` namespace.
+spec: https://www.w3.org/TR/SVG11/
+discouraged:
+  according_to:
+    - https://svgwg.org/svg2-draft/changes.html#substantial
+  alternatives:
+    - svg
+    - font-face
+compat_features:
+  - api.SVGAElement.text
+  - api.SVGElement.className
+  - api.SVGPathElement.createSVGPathSegArcAbs
+  - api.SVGPathElement.createSVGPathSegArcRel
+  - api.SVGPathElement.createSVGPathSegClosePath
+  - api.SVGPathElement.createSVGPathSegCurvetoCubicAbs
+  - api.SVGPathElement.createSVGPathSegCurvetoCubicRel
+  - api.SVGPathElement.createSVGPathSegCurvetoCubicSmoothAbs
+  - api.SVGPathElement.createSVGPathSegCurvetoCubicSmoothRel
+  - api.SVGPathElement.createSVGPathSegCurvetoQuadraticAbs
+  - api.SVGPathElement.createSVGPathSegCurvetoQuadraticRel
+  - api.SVGPathElement.createSVGPathSegCurvetoQuadraticSmoothAbs
+  - api.SVGPathElement.createSVGPathSegCurvetoQuadraticSmoothRel
+  - api.SVGPathElement.createSVGPathSegLinetoAbs
+  - api.SVGPathElement.createSVGPathSegLinetoHorizontalAbs
+  - api.SVGPathElement.createSVGPathSegLinetoHorizontalRel
+  - api.SVGPathElement.createSVGPathSegLinetoRel
+  - api.SVGPathElement.createSVGPathSegLinetoVerticalAbs
+  - api.SVGPathElement.createSVGPathSegLinetoVerticalRel
+  - api.SVGPathElement.createSVGPathSegMovetoAbs
+  - api.SVGPathElement.createSVGPathSegMovetoRel
+  - api.SVGPathElement.getPathSegAtLength
+  - api.SVGPoint
+  - api.SVGPoint.matrixTransform
+  - api.SVGPoint.x
+  - api.SVGPoint.y
+  - api.SVGRenderingIntent
+  - api.SVGSVGElement.currentView
+  - api.SVGSVGElement.forceRedraw
+  - api.SVGSVGElement.suspendRedraw
+  - api.SVGSVGElement.unsuspendRedraw
+  - api.SVGSVGElement.unsuspendRedrawAll
+  - api.SVGSVGElement.useCurrentView
+  - api.SVGStyleElement.type
+  - api.SVGTextContentElement.selectSubString
+  - css.at-rules.font-face.SVG_fonts
+  - svg.elements.a.xlink_actuate
+  - svg.elements.a.xlink_href
+  - svg.elements.a.xlink_show
+  - svg.elements.a.xlink_title
+  - svg.elements.feImage.xlink_href
+  - svg.elements.filter.xlink_href
+  - svg.elements.image.xlink_href
+  - svg.elements.linearGradient.xlink_href
+  - svg.elements.mpath.xlink_href
+  - svg.elements.pattern.xlink_href
+  - svg.elements.radialGradient.xlink_href
+  - svg.elements.script.xlink_href
+  - svg.elements.svg.baseProfile
+  - svg.elements.svg.version
+  - svg.elements.svg.zoomAndPan
+  - svg.elements.textPath.xlink_href
+  - svg.elements.use.xlink_href
+  - svg.elements.view.zoomAndPan
+  - svg.global_attributes.clip
+  - svg.global_attributes.glyph-orientation-horizontal
+  - svg.global_attributes.glyph-orientation-vertical
+  - svg.global_attributes.xml_lang
+  - svg.global_attributes.xml_space

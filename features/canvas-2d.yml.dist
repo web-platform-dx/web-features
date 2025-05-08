@@ -176,7 +176,6 @@ compat_features:
   #   safari_ios: "3.2"
   - api.CanvasRenderingContext2D.createImageData
   - api.CanvasRenderingContext2D.fillText
-  - api.CanvasRenderingContext2D.font
   - api.CanvasRenderingContext2D.measureText
   - api.CanvasRenderingContext2D.strokeText
   - api.CanvasRenderingContext2D.textAlign
@@ -217,6 +216,19 @@ compat_features:
   #   chrome: "36"
   #   chrome_android: "36"
   #   edge: "14"
+  #   firefox: "25"
+  #   firefox_android: "25"
+  #   safari: "7"
+  #   safari_ios: "7"
+  - api.ImageData.worker_support
+
+  # baseline: high
+  # baseline_low_date: 2016-08-02
+  # baseline_high_date: 2019-02-02
+  # support:
+  #   chrome: "36"
+  #   chrome_android: "36"
+  #   edge: "14"
   #   firefox: "29"
   #   firefox_android: "29"
   #   safari: "8"
@@ -238,6 +250,41 @@ compat_features:
   - api.CanvasRenderingContext2D.fill.path_parameter
   - api.CanvasRenderingContext2D.isPointInPath.path_parameter
   - api.CanvasRenderingContext2D.stroke.path_parameter
+
+  # baseline: high
+  # baseline_low_date: 2016-08-02
+  # baseline_high_date: 2019-02-02
+  # support:
+  #   chrome: "36"
+  #   chrome_android: "36"
+  #   edge: "14"
+  #   firefox: "31"
+  #   firefox_android: "31"
+  #   safari: "8"
+  #   safari_ios: "8"
+  - api.Path2D
+  - api.Path2D.Path2D
+  - api.Path2D.arc
+  - api.Path2D.arcTo
+  - api.Path2D.bezierCurveTo
+  - api.Path2D.closePath
+  - api.Path2D.lineTo
+  - api.Path2D.moveTo
+  - api.Path2D.quadraticCurveTo
+  - api.Path2D.rect
+
+  # baseline: high
+  # baseline_low_date: 2016-08-02
+  # baseline_high_date: 2019-02-02
+  # support:
+  #   chrome: "36"
+  #   chrome_android: "36"
+  #   edge: "14"
+  #   firefox: "48"
+  #   firefox_android: "48"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - api.Path2D.ellipse
 
   # baseline: high
   # baseline_low_date: 2016-08-02
@@ -318,6 +365,19 @@ compat_features:
   - api.CanvasPattern.setTransform
 
   # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "68"
+  #   chrome_android: "68"
+  #   edge: "79"
+  #   firefox: "34"
+  #   firefox_android: "34"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - api.Path2D.addPath
+
+  # baseline: high
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
   # support:
@@ -343,6 +403,22 @@ compat_features:
   #   safari: "11.1"
   #   safari_ios: "11.3"
   - api.CanvasPattern.setTransform.dommatrix
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "77"
+  #   chrome_android: "77"
+  #   edge: "79"
+  #   firefox: "74"
+  #   firefox_android: "79"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - api.TextMetrics.actualBoundingBoxAscent
+  - api.TextMetrics.actualBoundingBoxDescent
+  - api.TextMetrics.actualBoundingBoxLeft
+  - api.TextMetrics.actualBoundingBoxRight
 
   # baseline: high
   # baseline_low_date: 2021-09-20
@@ -371,6 +447,31 @@ compat_features:
   - api.CanvasRenderingContext2D.direction
 
   # baseline: low
+  # baseline_low_date: 2023-04-11
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "112"
+  #   firefox_android: "112"
+  #   safari: "16"
+  #   safari_ios: "16"
+  - api.Path2D.roundRect
+
+  # baseline: low
+  # baseline_low_date: 2023-08-01
+  # support:
+  #   chrome: "87"
+  #   chrome_android: "87"
+  #   edge: "87"
+  #   firefox: "116"
+  #   firefox_android: "116"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - api.TextMetrics.fontBoundingBoxAscent
+  - api.TextMetrics.fontBoundingBoxDescent
+
+  # baseline: low
   # baseline_low_date: 2023-08-29
   # support:
   #   chrome: "73"
@@ -395,6 +496,31 @@ compat_features:
   - api.TextMetrics.alphabeticBaseline
   - api.TextMetrics.hangingBaseline
   - api.TextMetrics.ideographicBaseline
+
+  # baseline: low
+  # baseline_low_date: 2025-03-31
+  # support:
+  #   chrome: "2"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3.5"
+  #   firefox_android: "4"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - api.CanvasRenderingContext2D.font
+
+  # baseline: low
+  # baseline_low_date: 2025-03-31
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "115"
+  #   firefox_android: "115"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - api.CanvasRenderingContext2D.letterSpacing
+  - api.CanvasRenderingContext2D.wordSpacing
 
   # baseline: false
   # support:
@@ -446,16 +572,6 @@ compat_features:
   #   chrome: "99"
   #   chrome_android: "99"
   #   edge: "99"
-  #   firefox: "115"
-  #   firefox_android: "115"
-  - api.CanvasRenderingContext2D.letterSpacing
-  - api.CanvasRenderingContext2D.wordSpacing
-
-  # baseline: false
-  # support:
-  #   chrome: "99"
-  #   chrome_android: "99"
-  #   edge: "99"
   #   firefox: "116"
   #   firefox_android: "116"
   - api.CanvasRenderingContext2D.textRendering
@@ -469,3 +585,12 @@ compat_features:
   #   firefox_android: "117"
   - api.CanvasRenderingContext2D.fontStretch
   - api.CanvasRenderingContext2D.fontVariantCaps
+
+  # baseline: false
+  # support:
+  #   firefox: "118"
+  #   firefox_android: "118"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - api.TextMetrics.emHeightAscent
+  - api.TextMetrics.emHeightDescent

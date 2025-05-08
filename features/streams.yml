@@ -1,42 +1,75 @@
 name: Streams
 description: The streams API creates, composes, and consumes continuously generated data.
 spec: https://streams.spec.whatwg.org/
-caniuse: streams
 group: streams
-# TODO: Later support
-# - api.ReadableStreamDefaultController
-# - api.ReadableStreamDefaultController.close
-# - api.ReadableStreamDefaultController.desiredSize
-# - api.ReadableStreamDefaultController.enqueue
-# - api.ReadableStreamDefaultController.error
-# - api.ReadableStreamDefaultReader
-# - api.ReadableStreamDefaultReader.cancel
-# - api.ReadableStreamDefaultReader.closed
-# - api.ReadableStreamDefaultReader.read
-# - api.ReadableStreamDefaultReader.releaseLock
-# - api.TransformStream
-# - api.TransformStream.TransformStream
-# - api.TransformStream.readable
-# - api.TransformStream.writable
-# - api.TransformStreamDefaultController
-# - api.TransformStreamDefaultController.desiredSize
-# - api.TransformStreamDefaultController.enqueue
-# - api.TransformStreamDefaultController.error
-# - api.TransformStreamDefaultController.terminate
-# - api.WritableStream.close
-# - api.WritableStreamDefaultWriter.WritableStreamDefaultWriter
-
-# TODO: consider BYOB feature
-# - api.ReadableStreamBYOBReader
-# - api.ReadableStreamBYOBReader.ReadableStreamBYOBReader
-# - api.ReadableStreamBYOBReader.cancel
-# - api.ReadableStreamBYOBReader.closed
-# - api.ReadableStreamBYOBReader.read
-# - api.ReadableStreamBYOBReader.releaseLock
-# - api.ReadableStreamBYOBRequest
-# - api.ReadableStreamBYOBRequest.respond
-# - api.ReadableStreamBYOBRequest.respondWithNewView
-# - api.ReadableStreamBYOBRequest.view
-
-# TODO: consider abortable stream feature
-# - api.WritableStreamDefaultController.signal
+# TODO: https://github.com/web-platform-dx/web-features/issues/1971
+# Status changed: https://github.com/web-platform-dx/web-features/pull/2358, https://github.com/web-platform-dx/web-features/pull/2491
+# 2024-12-19 — low → false — Regressed status to match Caniuse, which considers support beginning at BYOB shipping.
+# 2025-01-30 — false → high — Split BYOB into a separate "readable-byte-streams" feature. Linked that one to Caniuse.
+# References:
+# - https://caniuse.com/streams
+status:
+  compute_from:
+    - api.ReadableStream
+    - api.TransformStream
+    - api.WritableStream
+compat_features:
+  - api.ReadableStreamDefaultController
+  - api.ReadableStreamDefaultController.close
+  - api.ReadableStreamDefaultController.desiredSize
+  - api.ReadableStreamDefaultController.enqueue
+  - api.ReadableStreamDefaultController.error
+  - api.ReadableStreamDefaultReader
+  - api.ReadableStreamDefaultReader.ReadableStreamDefaultReader
+  - api.ReadableStreamDefaultReader.cancel
+  - api.ReadableStreamDefaultReader.closed
+  - api.ReadableStreamDefaultReader.read
+  - api.ReadableStreamDefaultReader.releaseLock
+  - api.ReadableStreamDefaultReader.releaseLock.reject_pending_read_request
+  - api.TextDecoderStream.readable
+  - api.TextDecoderStream.writable
+  - api.TextEncoderStream.readable
+  - api.TextEncoderStream.writable
+  - api.TransformStream
+  - api.TransformStream.TransformStream
+  - api.TransformStream.readable
+  - api.TransformStream.writable
+  - api.TransformStreamDefaultController
+  - api.TransformStreamDefaultController.desiredSize
+  - api.TransformStreamDefaultController.enqueue
+  - api.TransformStreamDefaultController.error
+  - api.TransformStreamDefaultController.terminate
+  - api.WritableStream.close
+  - api.WritableStreamDefaultController.signal
+  - api.WritableStreamDefaultWriter.WritableStreamDefaultWriter
+  - api.ByteLengthQueuingStrategy
+  - api.ByteLengthQueuingStrategy.ByteLengthQueuingStrategy
+  - api.ByteLengthQueuingStrategy.highWaterMark
+  - api.ByteLengthQueuingStrategy.size
+  - api.CountQueuingStrategy
+  - api.CountQueuingStrategy.CountQueuingStrategy
+  - api.CountQueuingStrategy.highWaterMark
+  - api.CountQueuingStrategy.size
+  - api.ReadableStream
+  - api.ReadableStream.ReadableStream
+  - api.ReadableStream.cancel
+  - api.ReadableStream.getReader
+  - api.ReadableStream.locked
+  - api.ReadableStream.pipeThrough
+  - api.ReadableStream.pipeTo
+  - api.ReadableStream.tee
+  - api.WritableStream
+  - api.WritableStream.WritableStream
+  - api.WritableStream.abort
+  - api.WritableStream.getWriter
+  - api.WritableStream.locked
+  - api.WritableStreamDefaultController
+  - api.WritableStreamDefaultController.error
+  - api.WritableStreamDefaultWriter
+  - api.WritableStreamDefaultWriter.abort
+  - api.WritableStreamDefaultWriter.close
+  - api.WritableStreamDefaultWriter.closed
+  - api.WritableStreamDefaultWriter.desiredSize
+  - api.WritableStreamDefaultWriter.ready
+  - api.WritableStreamDefaultWriter.releaseLock
+  - api.WritableStreamDefaultWriter.write

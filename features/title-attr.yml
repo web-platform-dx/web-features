@@ -1,0 +1,13 @@
+name: title (attribute)
+description: The `title` global HTML attribute sets information about an element, such as a name or description. The value is typically shown as a tooltip that appears on mouse over. Since it's not often available to touch-only, keyboard-only, or assistive technology users, it's not a substitute for other text.
+spec: https://html.spec.whatwg.org/multipage/dom.html#attr-title
+# Don't mark this feature as discouraged. The specification note narrowly
+# discourages certain kinds of uses for title, but not the attribute in general.
+# See: https://github.com/web-platform-dx/web-features/issues/2461 and
+# https://github.com/whatwg/html/issues/10875
+status:
+  compute_from: html.global_attributes.title
+compat_features:
+  - api.HTMLElement.title
+  - html.global_attributes.title
+  - html.global_attributes.title.multi-line_titles

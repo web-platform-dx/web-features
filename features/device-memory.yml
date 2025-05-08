@@ -1,0 +1,7 @@
+name: Device memory
+description: The `navigator.deviceMemory` property is the approximate amount of device memory, in gigabytes.
+spec: https://www.w3.org/TR/device-memory/
+compat_features:
+  - api.Navigator.deviceMemory
+  - api.WorkerNavigator.deviceMemory
+  - http.headers.Device-Memory
