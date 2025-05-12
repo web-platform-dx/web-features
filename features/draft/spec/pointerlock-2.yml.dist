@@ -4,8 +4,8 @@
 status:
   baseline: false
   support:
-    chrome: "74"
-    edge: "79"
+    chrome: "88"
+    edge: "88"
 compat_features:
   # baseline: false
   # support:
@@ -22,3 +22,10 @@ compat_features:
   #   chrome_android: "74"
   #   edge: "79"
   - api.Document.featurePolicy
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "88"
+  #   edge: "88"
+  - api.Element.requestPointerLock.options_unadjustedMovement_parameter
