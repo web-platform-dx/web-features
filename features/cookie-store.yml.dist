@@ -23,6 +23,8 @@ compat_features:
   - api.CookieStore.change_event
   - api.CookieStore.delete
   - api.CookieStore.get
+  - api.CookieStore.get.name_return_property
+  - api.CookieStore.get.value_return_property
   - api.CookieStore.getAll
   - api.CookieStore.set
   - api.ExtendableCookieChangeEvent
@@ -40,11 +42,9 @@ compat_features:
   #   edge: "87"
   - api.CookieStore.get.domain_return_property
   - api.CookieStore.get.expires_return_property
-  - api.CookieStore.get.name_return_property
   - api.CookieStore.get.path_return_property
   - api.CookieStore.get.sameSite_return_property
   - api.CookieStore.get.secure_return_property
-  - api.CookieStore.get.value_return_property
   - api.CookieStoreManager
   - api.CookieStoreManager.getSubscriptions
   - api.CookieStoreManager.subscribe
