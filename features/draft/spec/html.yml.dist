@@ -373,6 +373,19 @@ compat_features:
   - api.ErrorEvent.error
 
   # baseline: high
+  # baseline_low_date: ≤2017-04-05
+  # baseline_high_date: ≤2019-10-05
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: ≤15
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: ≤4
+  #   safari_ios: ≤3.2
+  - html.global_attributes.dir
+
+  # baseline: high
   # baseline_low_date: 2018-04-30
   # baseline_high_date: 2020-10-30
   # support:
@@ -410,19 +423,6 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - api.origin
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "79"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: ≤4
-  #   safari_ios: ≤3.2
-  - html.global_attributes.dir
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -702,22 +702,21 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "23"
-  #   chrome_android: "25"
-  #   edge: "79"
-  #   firefox: ≤49
-  #   firefox_android: ≤49
-  #   safari: "10.1"
-  - html.elements.iframe.sandbox.allow-pointer-lock
-
-  # baseline: false
-  # support:
   #   chrome: "17"
   #   chrome_android: "18"
   #   edge: "79"
   #   firefox: "96"
   #   firefox_android: "96"
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
+
+  # baseline: false
+  # support:
+  #   chrome: "23"
+  #   edge: "79"
+  #   firefox: ≤49
+  #   firefox_android: ≤49
+  #   safari: "10.1"
+  - html.elements.iframe.sandbox.allow-pointer-lock
 
   # baseline: false
   # support:

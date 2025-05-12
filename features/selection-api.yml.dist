@@ -339,6 +339,19 @@ compat_features:
   #   safari_ios: "17"
   - api.Selection.removeRange
 
+  # baseline: low
+  # baseline_low_date: 2024-09-16
+  # support:
+  #   chrome: "127"
+  #   chrome_android: "127"
+  #   edge: "127"
+  #   firefox: "92"
+  #   firefox_android: "92"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.HTMLInputElement.selectionchange_event
+  - api.HTMLTextAreaElement.selectionchange_event
+
   # baseline: false
   # support:
   #   chrome: "1"
@@ -365,10 +378,3 @@ compat_features:
   #   safari: "17"
   #   safari_ios: "17"
   - api.Selection.direction
-
-  # baseline: false
-  # support:
-  #   firefox: "92"
-  #   firefox_android: "92"
-  - api.HTMLInputElement.selectionchange_event
-  - api.HTMLTextAreaElement.selectionchange_event

@@ -123,14 +123,14 @@ compat_features:
   - javascript.builtins.Date.@@toPrimitive
 
   # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
+  # baseline_low_date: ≤2017-04-05
+  # baseline_high_date: ≤2019-10-05
   # support:
-  #   chrome: "57"
-  #   chrome_android: "57"
-  #   edge: "79"
-  #   firefox: "54"
-  #   firefox_android: "54"
-  #   safari: "12"
-  #   safari_ios: "12"
+  #   chrome: ≤15
+  #   chrome_android: "18"
+  #   edge: ≤15
+  #   firefox: ≤4
+  #   firefox_android: "4"
+  #   safari: ≤10.1
+  #   safari_ios: ≤10.3
   - javascript.builtins.Date.UTC.optional_monthIndex

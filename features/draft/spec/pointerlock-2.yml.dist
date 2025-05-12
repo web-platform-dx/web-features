@@ -5,20 +5,17 @@ status:
   baseline: false
   support:
     chrome: "74"
-    chrome_android: "74"
     edge: "79"
 compat_features:
   # baseline: false
   # support:
   #   chrome: "53"
-  #   chrome_android: "53"
   #   edge: "79"
   #   firefox: "63"
   #   firefox_android: "63"
   #   safari: "10.1"
   - api.ShadowRoot.pointerLockElement
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "74"
