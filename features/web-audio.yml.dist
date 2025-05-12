@@ -636,6 +636,18 @@ compat_features:
   #   safari_ios: "14.5"
   - api.AudioContext.AudioContext.options_sampleRate_parameter
 
+  # baseline: low
+  # baseline_low_date: 2025-03-31
+  # support:
+  #   chrome: "102"
+  #   chrome_android: "102"
+  #   edge: "102"
+  #   firefox: "70"
+  #   firefox_android: "79"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - api.AudioContext.outputLatency
+
   # baseline: false
   # support:
   #   chrome: "14"
@@ -690,15 +702,6 @@ compat_features:
   #   safari: "14"
   #   safari_ios: "14"
   - api.AudioParam.automationRate
-
-  # baseline: false
-  # support:
-  #   chrome: "102"
-  #   chrome_android: "102"
-  #   edge: "102"
-  #   firefox: "70"
-  #   firefox_android: "79"
-  - api.AudioContext.outputLatency
 
   # baseline: false
   # support:

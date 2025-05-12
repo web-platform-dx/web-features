@@ -10,13 +10,14 @@ status:
 compat_features:
   # baseline: false
   # support:
-  #   chrome: "115"
-  #   chrome_android: "115"
-  #   edge: "115"
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
   - api.Fence
   - api.Fence.getNestedConfigs
   - api.Fence.reportEvent
   - api.Fence.setReportEventDataForAutomaticBeacons
+  - api.Fence.setReportEventDataForAutomaticBeacons.start_commit_eventType
   - api.FencedFrameConfig
   - api.FencedFrameConfig.setSharedStorageContext
   - api.HTMLFencedFrameElement
@@ -33,13 +34,6 @@ compat_features:
   - html.elements.fencedframe.width
   - http.headers.Content-Security-Policy.fenced-frame-src
   - http.headers.Sec-Fetch-Dest.fencedframe
-
-  # baseline: false
-  # support:
-  #   chrome: "120"
-  #   chrome_android: "120"
-  #   edge: "120"
-  - api.Fence.setReportEventDataForAutomaticBeacons.start_commit_eventType
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
