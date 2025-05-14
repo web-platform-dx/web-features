@@ -3,10 +3,23 @@
 
 status:
   baseline: false
-  support:
-    firefox: "137"
-    firefox_android: "137"
+  support: {}
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "33"
+  #   chrome_android: "33"
+  #   edge: "79"
+  #   firefox: "32"
+  #   firefox_android: "32"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - css.properties.font-kerning.auto
+  - css.properties.font-kerning.none
+  - css.properties.font-kerning.normal
+
   # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
@@ -20,9 +33,14 @@ compat_features:
   #   safari_ios: "11"
   - css.properties.font.font-width_keyword_values
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "137"
   #   firefox_android: "137"
   - css.properties.font-synthesis-style.oblique-only
+
+  # baseline: false
+  # support:
+  #   safari: "18.4"
+  - css.at-rules.font-face.font-width
+  - css.properties.font-width.percentage

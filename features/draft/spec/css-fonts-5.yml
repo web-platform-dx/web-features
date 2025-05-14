@@ -1,9 +1,14 @@
-draft_date: 2025-05-12
+draft_date: 2025-05-14
 name: CSS Fonts Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-fonts-5/
 compat_features:
+  - css.at-rules.font-face.font-width
+  - css.properties.font-kerning.auto
+  - css.properties.font-kerning.none
+  - css.properties.font-kerning.normal
   - css.properties.font-synthesis-style.oblique-only
+  - css.properties.font-width.percentage
   - css.properties.font.font-width_keyword_values
 
 # The following features in the spec are already part of web-features:
