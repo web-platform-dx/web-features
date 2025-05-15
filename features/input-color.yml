@@ -5,5 +5,12 @@ group:
   - forms
   - html-elements
 caniuse: input-color
+status:
+  compute_from:
+    - html.elements.input.type_color
 compat_features:
+  - api.HTMLInputElement.alpha
+  - api.HTMLInputElement.colorSpace
+  - html.elements.input.alpha
+  - html.elements.input.colorspace
   - html.elements.input.type_color
