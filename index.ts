@@ -25,6 +25,7 @@ const descriptionMaxLength = 300;
 // of a draft directory doesn't work.
 const draft = Symbol('draft');
 
+// This must match the definition in docs/guidelines.md
 const identifierPattern = /^[a-z][a-z0-9]*(-[a-z0-9]+)*$/;
 
 function* yamlEntries(root: string): Generator<[string, any]> {
