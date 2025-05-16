@@ -62,7 +62,7 @@ Feature authors should (in descending order of priority):
 
 A feature's identifier is the feature's filename before the `.yml` extension.
 
-Feature identifiers must start with a lowercase letter (a-z) and contain only lowercase alphanumeric characters (a-z and 0-9) plus the `-` character (hyphen or minus sign) as a word separator.
+Feature identifiers must start with a lowercase alphabetic character (a-z) and contain only lowercase alphanumeric characters (a-z and 0-9) plus the `-` character (hyphen or minus sign) as a word separator.
 
 The identifier should match the name, with these additional guidelines:
 

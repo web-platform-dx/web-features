@@ -39,7 +39,7 @@ function* yamlEntries(root: string): Generator<[string, any]> {
         const { name: key } = path.parse(fp);
 
         if (!identifierPattern.test(key)) {
-            throw new Error(`${key} is not a valid identifier (must start with a letter and consist of alphanumerical words separated by hyphens)`);
+            throw new Error(`${key} is not a valid identifier (see guidelines)`);
         }
 
         const data = YAML.parse(fs.readFileSync(fp, { encoding: 'utf-8'}));
