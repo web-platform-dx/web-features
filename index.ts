@@ -167,15 +167,8 @@ for (const [key, data] of yamlEntries('features')) {
         // no effect on what web-features users see.
         data.compat_features.sort();
 
-        // Check that no BCD key is used twice until the meaning is made clear in
-        // https://github.com/web-platform-dx/web-features/issues/1173.
         for (const bcdKey of data.compat_features) {
-            const otherKey = bcdToFeatureId.get(bcdKey);
-            if (otherKey) {
-                throw new Error(`BCD key ${bcdKey} is used in both ${otherKey} and ${key}, which creates ambiguity for some consumers. Please see https://github.com/web-platform-dx/web-features/issues/1173 and help us find a good solution to allow this.`);
-            } else {
-                bcdToFeatureId.set(bcdKey, key);
-            }
+            bcdToFeatureId.set(bcdKey, key);
         }
     }
 
