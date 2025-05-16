@@ -25,7 +25,7 @@ const descriptionMaxLength = 300;
 // of a draft directory doesn't work.
 const draft = Symbol('draft');
 
-const identifierPattern = /^[a-z0-9-]*$/;
+const identifierPattern = /^[a-z][a-z0-9]*(-[a-z0-9]+)*$/;
 
 function* yamlEntries(root: string): Generator<[string, any]> {
     const filePaths = new fdir()
@@ -39,7 +39,7 @@ function* yamlEntries(root: string): Generator<[string, any]> {
         const { name: key } = path.parse(fp);
 
         if (!identifierPattern.test(key)) {
-            throw new Error(`${key} is not a valid identifier (must be lowercase a-z, 0-9, and hyphens)`);
+            throw new Error(`${key} is not a valid identifier (must start with a letter and consist of alphanumerical words separated by hyphens)`);
         }
 
         const data = YAML.parse(fs.readFileSync(fp, { encoding: 'utf-8'}));
