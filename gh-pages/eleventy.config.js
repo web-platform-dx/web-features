@@ -1,8 +1,8 @@
-const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
-const markdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
+import markdownIt from "markdown-it";
+import markdownItAnchor from "markdown-it-anchor";
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/img");
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
   eleventyConfig.addPassthroughCopy("./src/assets/css");
@@ -19,4 +19,4 @@ module.exports = function (eleventyConfig) {
       output: "../_site",
     },
   };
-};
+}
