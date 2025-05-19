@@ -1,10 +1,9 @@
-draft_date: 2025-03-15
+draft_date: 2025-05-19
 name: UI Events
 description: TODO
 spec: https://w3c.github.io/uievents/
 compat_features:
   - api.HTMLElement.error_event
-  - api.HTMLElement.load_event
   - api.UIEvent
   - api.UIEvent.UIEvent
   - api.UIEvent.detail
@@ -101,6 +100,8 @@ compat_features:
 #   - api.WheelEvent.deltaY
 #   - api.WheelEvent.deltaZ
 #   - api.WheelEvent.pinch_to_zoom_support
+# - DOM:
+#   - api.HTMLElement.load_event
 # - Window:
 #   - api.Window.blur_event
 #   - api.Window.focus_event

@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "135"
-    chrome_android: "135"
-    edge: "135"
+    chrome: "108"
+    chrome_android: "108"
+    edge: "108"
 compat_features:
   # baseline: false
   # support:
@@ -15,18 +15,10 @@ compat_features:
   #   edge: "88"
   - http.headers.Permissions-Policy
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "108"
   #   chrome_android: "108"
   #   edge: "108"
   - http.headers.Permissions-Policy.wildcards
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "135"
-  #   chrome_android: "135"
-  #   edge: "135"
-  - http.headers.Permissions-Policy.deferred-fetch
-  - http.headers.Permissions-Policy.deferred-fetch-minimal

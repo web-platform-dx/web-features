@@ -1,10 +1,9 @@
-draft_date: 2025-04-29
+draft_date: 2025-05-19
 name: Web Audio API 1.1
 description: TODO
 spec: https://webaudio.github.io/web-audio-api/
 compat_features:
   - api.AudioWorklet.port
-  - api.AudioWorkletGlobalScope.port
 
 # The following features in the spec are already part of web-features:
 # - Web Audio:
@@ -217,6 +216,7 @@ compat_features:
 #   - api.AudioWorkletGlobalScope
 #   - api.AudioWorkletGlobalScope.currentFrame
 #   - api.AudioWorkletGlobalScope.currentTime
+#   - api.AudioWorkletGlobalScope.port
 #   - api.AudioWorkletGlobalScope.registerProcessor
 #   - api.AudioWorkletGlobalScope.sampleRate
 #   - api.AudioWorkletNode

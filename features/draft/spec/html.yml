@@ -1,9 +1,8 @@
-draft_date: 2025-05-12
+draft_date: 2025-05-19
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
-  - api.CanvasRenderingContext2D.lang
   - api.CustomElementRegistry.define.connectedMoveCallback_lifecycle_callback
   - api.Document.featurePolicy
   - api.ElementInternals.shadowRoot
@@ -35,7 +34,6 @@ compat_features:
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
   - api.HTMLDialogElement.closedBy
   - api.HTMLElement.error_event
-  - api.HTMLElement.load_event
   - api.HTMLIFrameElement.featurePolicy
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes.auto
@@ -239,6 +237,7 @@ compat_features:
 #   - api.CanvasRenderingContext2D.isPointInPath.path_parameter
 #   - api.CanvasRenderingContext2D.isPointInStroke
 #   - api.CanvasRenderingContext2D.isPointInStroke.path_parameter
+#   - api.CanvasRenderingContext2D.lang
 #   - api.CanvasRenderingContext2D.letterSpacing
 #   - api.CanvasRenderingContext2D.lineCap
 #   - api.CanvasRenderingContext2D.lineDashOffset
@@ -429,6 +428,7 @@ compat_features:
 #   - api.HTMLElement.dir
 #   - api.HTMLElement.hidden
 #   - api.HTMLElement.innerText
+#   - api.HTMLElement.load_event
 #   - api.HTMLElement.outerText
 #   - api.Window.document
 # - Dataset:
