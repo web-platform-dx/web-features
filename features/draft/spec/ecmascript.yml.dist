@@ -4,27 +4,10 @@
 status:
   baseline: false
   support:
-    chrome: "109"
-    chrome_android: "109"
-    edge: "109"
-    safari: "16.4"
-    safari_ios: "16.4"
+    chrome: "91"
+    chrome_android: "91"
+    edge: "91"
+    safari: "15"
+    safari_ios: "15"
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "91"
-  #   chrome_android: "91"
-  #   edge: "91"
-  #   safari: "15"
-  #   safari_ios: "15"
   - javascript.operators.import.options_parameter
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "109"
-  #   chrome_android: "109"
-  #   edge: "109"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - javascript.builtins.FinalizationRegistry.unregister.symbol_as_target
