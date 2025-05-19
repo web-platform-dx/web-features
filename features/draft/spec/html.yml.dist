@@ -926,13 +926,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   safari: "18.4"
-  #   safari_ios: "18.4"
-  - api.HTMLInputElement.alpha
-  - api.HTMLInputElement.colorSpace
-
-  # baseline: false
-  # support:
   #   firefox: "67"
   #   firefox_android: "67"
   - html.elements.form.autocomplete.new-password
@@ -957,7 +950,5 @@ compat_features:
   - api.ImageData.pixelFormat
   - api.Navigator.authentication
   - html.elements.hr.hr_in_select
-  - html.elements.input.alpha
-  - html.elements.input.colorspace
   - html.elements.track.kind.descriptions
   - http.headers.Permissions-Policy.document-domain
