@@ -2,7 +2,6 @@
 /**/*.dist
 /**/dist
 
-
 # Exclude the website includes since these are typically fragments, or include
 # things that makes Prettier unhappy.
 /gh-pages/src/_includes/**
@@ -18,7 +17,7 @@ towards-features.md
 /docs
 !/docs/publishing.md
 /features/draft
-/schemas
+/schemas/data.schema.json
 /scripts/caniuse.ts
 /scripts/schema.ts
 /scripts/specs.ts

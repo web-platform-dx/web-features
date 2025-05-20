@@ -11,7 +11,7 @@ import { Document, parse } from "yaml";
 import yargs from "yargs";
 
 import { features } from "../index.js";
-import { FeatureData } from "../types.js";
+import { FeatureData } from "../newtypes.js";
 
 type WebSpecsSpec = (typeof webSpecs)[number];
 

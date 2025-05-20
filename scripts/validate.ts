@@ -1,7 +1,7 @@
 import Ajv from "ajv";
 import assert from "node:assert/strict";
 
-import * as schema from "../schemas/data.schema.json" with { type: "json" };
+import * as schema from "../schemas/new.schema.json" with { type: "json" };
 
 const ajv = new Ajv({ allErrors: true, allowUnionTypes: true });
 // TODO: turn on strictNullChecks, fix all the errors, and replace this with:
