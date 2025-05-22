@@ -1,5 +1,5 @@
 name: '<img sizes="auto" loading="lazy">'
-description: The `sizes="auto"` attribute, when set on a `<img>` element which also has the `loading="lazy"` attribute, allows the browser to automatically reserve space for the image in the layout.
+description: The `sizes="auto"` attribute for the `<img>` HTML element reserves layout space for an image before it loads, avoiding some layout shifts. This attribute only applies to images with the `loading="lazy"` attribute.
 spec: https://html.spec.whatwg.org/multipage/images.html#valdef-sizes-auto
 group: images
 compat_features:
