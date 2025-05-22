@@ -1,0 +1,35 @@
+name: File and Directory Entries
+description: The File and Directory Entries API accesses items that are provided by the user either via an `<input type="file">` HTML element or a drag-and-drop operation as a list of files and directories.
+spec: https://wicg.github.io/entries-api/
+group: file-system
+compat_features:
+  - api.FileSystem
+  - api.FileSystem.name
+  - api.FileSystem.root
+
+  - api.FileSystemEntry
+  - api.FileSystemEntry.filesystem
+  - api.FileSystemEntry.fullPath
+  - api.FileSystemEntry.getParent
+  - api.FileSystemEntry.isDirectory
+  - api.FileSystemEntry.isFile
+  - api.FileSystemEntry.name
+
+  - api.FileSystemFileEntry
+  - api.FileSystemFileEntry.file
+
+  - api.FileSystemDirectoryEntry
+  - api.FileSystemDirectoryEntry.createReader
+  - api.FileSystemDirectoryEntry.getDirectory
+  - api.FileSystemDirectoryEntry.getFile
+
+  - api.FileSystemDirectoryReader
+  - api.FileSystemDirectoryReader.readEntries
+
+  - api.File.webkitRelativePath
+
+  # These are the real entry points to the API.
+  # They were never implemented in Firefox for Android.
+  - api.HTMLInputElement.webkitEntries
+  - api.HTMLInputElement.webkitdirectory
+  - api.DataTransferItem.webkitGetAsEntry
