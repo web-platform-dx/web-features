@@ -1,0 +1,20 @@
+name: Summarizer
+description: The `Summarizer` API uses an on-device language model to summarize text.
+spec: https://webmachinelearning.github.io/writing-assistance-apis/
+compat_features:
+  - api.Summarizer
+  - api.Summarizer.availability_static
+  - api.Summarizer.create_static
+  - api.Summarizer.destroy
+  - api.Summarizer.expectedContextLanguages
+  - api.Summarizer.expectedInputLanguages
+  - api.Summarizer.format
+  - api.Summarizer.inputQuota
+  - api.Summarizer.length
+  - api.Summarizer.measureInputUsage
+  - api.Summarizer.outputLanguage
+  - api.Summarizer.sharedContext
+  - api.Summarizer.summarize
+  - api.Summarizer.summarizeStreaming
+  - api.Summarizer.type
+  - http.headers.Permissions-Policy.summarizer
