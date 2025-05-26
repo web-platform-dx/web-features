@@ -160,6 +160,22 @@
       "required": ["name"],
       "additionalProperties": false
     },
+    "Release": {
+      "description": "Browser release information",
+      "type": "object",
+      "properties": {
+        "version": {
+          "description": "The version string, as in \"10\" or \"17.1\"",
+          "type": "string"
+        },
+        "date": {
+          "description": " The release date, as in \"2023-12-11\"",
+          "type": "string"
+        }
+      },
+      "required": ["version", "date"],
+      "additionalProperties": false
+    },
     "Status": {
       "type": "object",
       "properties": {
@@ -223,22 +239,6 @@
           }
         }
       ]
-    },
-    "Release": {
-      "description": "Browser release information",
-      "type": "object",
-      "properties": {
-        "version": {
-          "description": "The version string, as in \"10\" or \"17.1\"",
-          "type": "string"
-        },
-        "date": {
-          "description": " The release date, as in \"2023-12-11\"",
-          "type": "string"
-        }
-      },
-      "required": ["version", "date"],
-      "additionalProperties": false
     },
     "SnapshotData": {
       "type": "object",
