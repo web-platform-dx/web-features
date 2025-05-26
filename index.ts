@@ -4,7 +4,7 @@ import path from 'path';
 import { Temporal } from '@js-temporal/polyfill';
 import { fdir } from 'fdir';
 import YAML from 'yaml';
-import { FeatureData, GroupData, SnapshotData, WebFeaturesData } from './newtypes';
+import { FeatureData, GroupData, SnapshotData, WebFeaturesData } from './types';
 
 import { toString as hastTreeToString } from 'hast-util-to-string';
 import rehypeStringify from 'rehype-stringify';
