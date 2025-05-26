@@ -7,6 +7,7 @@ status:
 compat_features:
   - api.CreateMonitor
   - api.CreateMonitor.downloadprogress_event
+  - api.LanguageDetector.destroy
   - api.Summarizer
   - api.Summarizer.availability_static
   - api.Summarizer.create_static
@@ -22,4 +23,5 @@ compat_features:
   - api.Summarizer.summarize
   - api.Summarizer.summarizeStreaming
   - api.Summarizer.type
+  - api.Translator.destroy
   - http.headers.Permissions-Policy.summarizer
