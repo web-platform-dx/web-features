@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "60"
-    chrome_android: "60"
-    edge: "79"
+  support: {}
 compat_features:
   # baseline: high
   # baseline_low_date: 2021-04-26
@@ -20,12 +17,16 @@ compat_features:
   #   safari: "14.1"
   #   safari_ios: "14.5"
   - api.PerformancePaintTiming
+
+  # baseline: false
+  # support:
+  #   firefox: "84"
+  #   firefox_android: "84"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
   - api.PerformancePaintTiming.first-contentful-paint
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support:
-  #   chrome: "60"
-  #   chrome_android: "60"
-  #   edge: "79"
+  # support: {}
   - api.PerformancePaintTiming.first-paint
