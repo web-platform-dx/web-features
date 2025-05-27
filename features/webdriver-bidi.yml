@@ -19,7 +19,7 @@ status:
     # See https://github.com/web-platform-dx/web-features/issues/915.
     # As a result, we're commenting these keys out for now, even though they
     # should really be part of the compute_from list.
-    
+
     # - webdriver.bidi.session.new
     # - webdriver.bidi.session.end
     - webdriver.bidi.session.status
@@ -123,7 +123,7 @@ compat_features:
   - webdriver.bidi.browsingContext.setViewport
   # Optional.
   - webdriver.bidi.browsingContext.traverseHistory
-  
+
   # ---------------------
   # Input module.
   - webdriver.bidi.input
