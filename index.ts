@@ -184,12 +184,21 @@ for (const [key, data] of yamlEntries('features')) {
 }
 
 // Assert that feature references are valid
+
+function assertValidReference(sourceID: string, targetID: string): void {
+    if (targetID in features) {
+        if (isRedirectData(features[targetID])) {
+            throw new Error(`${sourceID} references a redirect "${targetID}" instead of an ordinary feature ID`);
+        }
+        return;
+    }
+    throw new Error(`${sourceID}'s reference to "${targetID}" is not a valid feature ID`);
+}
+
 for (const [id, feature] of Object.entries(features)) {
     if (isOrdinaryFeatureData(feature)) {
         for (const alternative of feature.discouraged?.alternatives ?? []) {
-            if (!(alternative in features)) {
-                throw new Error(`${id}'s alternative "${alternative}" is not a valid feature ID`);
-            }
+            assertValidReference(id, alternative);
         }
     }
 
@@ -197,15 +206,11 @@ for (const [id, feature] of Object.entries(features)) {
         const { reason } = feature.redirect;
         switch (reason) {
             case 'moved':
-                if (!(feature.redirect.target in features)) {
-                    throw new Error(`${id}'s redirect target "${feature.redirect.target} is not a valid feature ID`);
-                }
+                assertValidReference(id, feature.redirect.target);
                 break;
             case 'split':
                 for (const target of feature.redirect.targets) {
-                    if (!(target in features)) {
-                        throw new Error(`${id}'s redirect target "${target}" is not a valid feature ID`);
-                    }
+                    assertValidReference(id, target);
                 }
                 break;
             default:
