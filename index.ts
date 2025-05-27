@@ -4,7 +4,7 @@ import path from 'path';
 import { Temporal } from '@js-temporal/polyfill';
 import { fdir } from 'fdir';
 import YAML from 'yaml';
-import { FeatureData, GroupData, SnapshotData, WebFeaturesData } from './types';
+import { GroupData, SnapshotData, WebFeaturesData } from './types';
 
 import { toString as hastTreeToString } from 'hast-util-to-string';
 import rehypeStringify from 'rehype-stringify';
@@ -14,6 +14,7 @@ import { unified } from 'unified';
 
 import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, parseRangedDateString } from 'compute-baseline';
 import { Compat } from 'compute-baseline/browser-compat-data';
+import { isOrdinaryFeatureData, isRedirectData } from './type-guards';
 
 // The longest name allowed, to allow for compact display.
 const nameMaxLength = 80;
@@ -117,7 +118,7 @@ function convertMarkdown(markdown: string) {
 // Map from BCD keys/paths to web-features identifiers.
 const bcdToFeatureId: Map<string, string> = new Map();
 
-const features: { [key: string]: FeatureData } = {};
+const features: WebFeaturesData["features"] = {};
 for (const [key, data] of yamlEntries('features')) {
     // Draft features reserve an identifier but aren't complete yet. Skip them.
     if (data[draft]) {
@@ -182,11 +183,34 @@ for (const [key, data] of yamlEntries('features')) {
     features[key] = data;
 }
 
-// Assert that discouraged feature's alternatives are valid
+// Assert that feature references are valid
 for (const [id, feature] of Object.entries(features)) {
-    for (const alternative of feature.discouraged?.alternatives ?? []) {
-        if (!(alternative in features)) {
-            throw new Error(`${id}'s alternative "${alternative}" is not a valid feature ID`);
+    if (isOrdinaryFeatureData(feature)) {
+        for (const alternative of feature.discouraged?.alternatives ?? []) {
+            if (!(alternative in features)) {
+                throw new Error(`${id}'s alternative "${alternative}" is not a valid feature ID`);
+            }
+        }
+    }
+
+    if (isRedirectData(feature)) {
+        const { reason } = feature.redirect;
+        switch (reason) {
+            case 'moved':
+                if (!(feature.redirect.target in features)) {
+                    throw new Error(`${id}'s redirect target "${feature.redirect.target} is not a valid feature ID`);
+                }
+                break;
+            case 'split':
+                for (const target of feature.redirect.targets) {
+                    if (!(target in features)) {
+                        throw new Error(`${id}'s redirect target "${target}" is not a valid feature ID`);
+                    }
+                }
+                break;
+            default:
+                reason satisfies never;
+                throw new Error(`Unhandled redirect reason ${reason}}`);
         }
     }
 }

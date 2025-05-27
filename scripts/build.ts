@@ -68,6 +68,10 @@ function buildPackage() {
 
 function buildExtendedJSON() {
   for (const [id, featureData] of Object.entries(data.features)) {
+    if ("redirect" in featureData) {
+      continue;
+    }
+
     if (
       Array.isArray(featureData.compat_features) &&
       featureData.compat_features.length &&
