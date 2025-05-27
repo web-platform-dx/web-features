@@ -3,7 +3,12 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "126"
+    chrome_android: "126"
+    edge: "126"
+    firefox: "136"
+    firefox_android: "136"
 compat_features:
   # baseline: false
   # support:
@@ -108,7 +113,6 @@ compat_features:
   #   firefox_android: "114"
   - webdriver.bidi.input.performActions
   - webdriver.bidi.input.releaseActions
-  - webdriver.bidi.script.addPreloadScript
   - webdriver.bidi.script.message_event
 
   # baseline: false
@@ -202,6 +206,7 @@ compat_features:
   - webdriver.bidi.browsingContext.close
   - webdriver.bidi.browsingContext.handleUserPrompt
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "126"
@@ -209,6 +214,7 @@ compat_features:
   #   edge: "126"
   #   firefox: "136"
   #   firefox_android: "136"
+  - webdriver.bidi.script.addPreloadScript
   - webdriver.bidi.session.subscribe
   - webdriver.bidi.session.unsubscribe
 
@@ -273,7 +279,13 @@ compat_features:
   #   firefox_android: "134"
   - webdriver.bidi.browser.getClientWindows
 
-  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   firefox: "137"
+  #   firefox_android: "137"
+  - webdriver.bidi.webExtension
+  - webdriver.bidi.webExtension.uninstall
+
   # baseline: false
   # support: {}
   - webdriver.bidi.browsingContext.print
@@ -285,6 +297,4 @@ compat_features:
   - webdriver.bidi.network.responseCompleted_event
   - webdriver.bidi.network.responseStarted_event
   - webdriver.bidi.session.end
-  - webdriver.bidi.webExtension
   - webdriver.bidi.webExtension.install
-  - webdriver.bidi.webExtension.uninstall

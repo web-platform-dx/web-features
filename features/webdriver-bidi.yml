@@ -2,43 +2,148 @@ name: WebDriver BiDi
 description: WebDriver BiDi is a bidirectional protocol that allows a WebDriver client and a browser to communicate with each other.
 spec: https://w3c.github.io/webdriver-bidi/
 group: webdriver
+# WebDriver BiDi has many BCD keys but, for now, we're not trying to track
+# them all as individual features, even if some parts could be standalone
+#  (e.g. webdriver.bidi.webExtension or webdriver.bidi.network).
+# Instead, we're pinning this feature to a few keys in compute_from below,
+# to track initial support for the feature. Later, we can move some of the
+# individual keys to other features as needed.
+status:
+  compute_from:
+    # The following keys are a subset of the compat_features below.
+    # They are the most critical keys for using the WebDriver BiDi protocol.
+
+    # BiDi is generally supported in Firefox and Chromium, however, not all
+    # of the keys below are fully supported in BCD. Some of them are marked
+    # as partially supported, which makes them unsupported in web-features.
+    # See https://github.com/web-platform-dx/web-features/issues/915.
+    # As a result, we're commenting these keys out for now, even though they
+    # should really be part of the compute_from list.
+    
+    # - webdriver.bidi.session.new
+    # - webdriver.bidi.session.end
+    - webdriver.bidi.session.status
+    - webdriver.bidi.session.subscribe
+    - webdriver.bidi.session.unsubscribe
+    - webdriver.bidi.script.evaluate
+    - webdriver.bidi.script.callFunction
+    - webdriver.bidi.browser.close
+    # - webdriver.bidi.browsingContext.navigate
+    # - webdriver.bidi.browsingContext.create
+    - webdriver.bidi.browsingContext.load_event
+    # - webdriver.bidi.browsingContext.getTree
+    - webdriver.bidi.browsingContext.close
+    # - webdriver.bidi.browsingContext.contextCreated_event
+    # - webdriver.bidi.browsingContext.contextDestroyed_event
+    - webdriver.bidi.input.performActions
+    - webdriver.bidi.input.releaseActions
+
 compat_features:
+  # Below is the entire list of current BCD keys for WebDriver BiDi.
+  # The keys are grouped by modules, and commentary is provided
+  # on which keys are critical, important, or optional for using
+  # the WebDriver BiDi protocol in tests.
+
+  # ---------------------
+  # Session module.
+  - webdriver.bidi.session
+  # Critical. Every test needs a session.
+  - webdriver.bidi.session.new
+  - webdriver.bidi.session.end
+  - webdriver.bidi.session.status
+  # Critical. All BiDi events go through these.
+  - webdriver.bidi.session.subscribe
+  - webdriver.bidi.session.unsubscribe
+
+  # ---------------------
+  # Script module.
+  - webdriver.bidi.script
+  # Critical. Run JS on the tested page.
+  - webdriver.bidi.script.evaluate
+  - webdriver.bidi.script.callFunction
+  # Optional.
+  - webdriver.bidi.script.addPreloadScript
+  - webdriver.bidi.script.disown
+  - webdriver.bidi.script.getRealms
+  - webdriver.bidi.script.message_event
+  - webdriver.bidi.script.realmCreated_event
+  - webdriver.bidi.script.realmDestroyed_event
+  - webdriver.bidi.script.removePreloadScript
+
+  # ---------------------
+  # Browser module.
   - webdriver.bidi.browser
+  # Important. To close the browser window after a test.
   - webdriver.bidi.browser.close
+  # Optional. To manage user contexts, such as containers in firefox.
   - webdriver.bidi.browser.createUserContext
-  - webdriver.bidi.browser.getClientWindows
   - webdriver.bidi.browser.getUserContexts
   - webdriver.bidi.browser.removeUserContext
+  # Optional. To get top level windows.
+  - webdriver.bidi.browser.getClientWindows
+
+  # ---------------------
+  # Browsing context module.
   - webdriver.bidi.browsingContext
-  - webdriver.bidi.browsingContext.activate
-  - webdriver.bidi.browsingContext.captureScreenshot
+  # Critical. To navigate to a page.
+  - webdriver.bidi.browsingContext.navigate
+  # Critical. To create a new tab.
+  - webdriver.bidi.browsingContext.create
+  # Critical. To know when the page has loaded.
+  - webdriver.bidi.browsingContext.load_event
+  # Critical. To list tabs, iframes, etc.
+  - webdriver.bidi.browsingContext.getTree
+  # Important. To close a tab.
   - webdriver.bidi.browsingContext.close
+  # Important. To open other tabs, which can't be done without events.
   - webdriver.bidi.browsingContext.contextCreated_event
   - webdriver.bidi.browsingContext.contextDestroyed_event
-  - webdriver.bidi.browsingContext.create
+  # Optional. To simulate user activation, for some web features that need it.
+  - webdriver.bidi.browsingContext.activate
+  # Optional.
+  - webdriver.bidi.browsingContext.captureScreenshot
+  # Optional. Nice event to listen to, but can also use the load event.
   - webdriver.bidi.browsingContext.domContentLoaded_event
+  # Optional. Useful for test frameworks mostly.
   - webdriver.bidi.browsingContext.fragmentNavigated_event
-  - webdriver.bidi.browsingContext.getTree
-  - webdriver.bidi.browsingContext.handleUserPrompt
-  - webdriver.bidi.browsingContext.load_event
-  - webdriver.bidi.browsingContext.locateNodes
-  - webdriver.bidi.browsingContext.navigate
   - webdriver.bidi.browsingContext.navigationCommitted_event
   - webdriver.bidi.browsingContext.navigationFailed_event
   - webdriver.bidi.browsingContext.navigationStarted_event
-  - webdriver.bidi.browsingContext.print
-  - webdriver.bidi.browsingContext.reload
-  - webdriver.bidi.browsingContext.setViewport
-  - webdriver.bidi.browsingContext.traverseHistory
+  # Optional. To manage dialog windows.
+  - webdriver.bidi.browsingContext.handleUserPrompt
   - webdriver.bidi.browsingContext.userPromptClosed_event
   - webdriver.bidi.browsingContext.userPromptOpened_event
+  # Optional. To get nodes via css selectors, etc. But can also be done via JS.
+  - webdriver.bidi.browsingContext.locateNodes
+  # Optional.
+  - webdriver.bidi.browsingContext.print
+  # Optional, same as navigate.
+  - webdriver.bidi.browsingContext.reload
+  # Optional. Nice to have for responsive design testing.
+  - webdriver.bidi.browsingContext.setViewport
+  # Optional.
+  - webdriver.bidi.browsingContext.traverseHistory
+  
+  # ---------------------
+  # Input module.
   - webdriver.bidi.input
+  # Critical. To simulate user input.
+  # (although this can also be done by eval'ing JS)
   - webdriver.bidi.input.performActions
   - webdriver.bidi.input.releaseActions
+  # Optional. For file input only.
   - webdriver.bidi.input.setFiles
+
+  # ---------------------
+  # Log module.
   - webdriver.bidi.log
+  # Optional.
   - webdriver.bidi.log.entryAdded_event
+
+  # ---------------------
+  # Network module.
   - webdriver.bidi.network
+  # Optional. To mock responses, etc.
   - webdriver.bidi.network.addIntercept
   - webdriver.bidi.network.authRequired_event
   - webdriver.bidi.network.beforeRequestSent_event
@@ -52,28 +157,25 @@ compat_features:
   - webdriver.bidi.network.responseCompleted_event
   - webdriver.bidi.network.responseStarted_event
   - webdriver.bidi.network.setCacheBehavior
+
+  # ---------------------
+  # Permission module.
   - webdriver.bidi.permission
+  # Optional
   - webdriver.bidi.permission.setPermission
-  - webdriver.bidi.script
-  - webdriver.bidi.script.addPreloadScript
-  - webdriver.bidi.script.callFunction
-  - webdriver.bidi.script.disown
-  - webdriver.bidi.script.evaluate
-  - webdriver.bidi.script.getRealms
-  - webdriver.bidi.script.message_event
-  - webdriver.bidi.script.realmCreated_event
-  - webdriver.bidi.script.realmDestroyed_event
-  - webdriver.bidi.script.removePreloadScript
-  - webdriver.bidi.session
-  - webdriver.bidi.session.end
-  - webdriver.bidi.session.new
-  - webdriver.bidi.session.status
-  - webdriver.bidi.session.subscribe
-  - webdriver.bidi.session.unsubscribe
+
+  # ---------------------
+  # Storage module.
   - webdriver.bidi.storage
+  # Optional.
   - webdriver.bidi.storage.deleteCookies
   - webdriver.bidi.storage.getCookies
   - webdriver.bidi.storage.setCookie
+
+  # ---------------------
+  # WebExtension module.
   - webdriver.bidi.webExtension
+  # Optional. Useful in some niche cases./
+  # For example, Cypress uses it to install web extensions during tests.
   - webdriver.bidi.webExtension.install
   - webdriver.bidi.webExtension.uninstall
