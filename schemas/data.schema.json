@@ -44,7 +44,17 @@
       "description": "Feature identifiers and data",
       "type": "object",
       "additionalProperties": {
-        "$ref": "#/definitions/FeatureData"
+        "oneOf": [
+          {
+            "$ref": "#/definitions/FeatureData"
+          },
+          {
+            "$ref": "#/definitions/FeatureMovedData"
+          },
+          {
+            "$ref": "#/definitions/FeatureSplitData"
+          }
+        ]
       }
     },
     "groups": {
@@ -174,6 +184,50 @@
         }
       },
       "required": ["version", "date"],
+      "additionalProperties": false
+    },
+    "FeatureMovedData": {
+      "description": "A feature has permanently moved to exactly one other ID",
+      "type": "object",
+      "properties": {
+        "redirect": {
+          "type": "object",
+          "properties": {
+            "reason": {
+              "const": "moved"
+            },
+            "target": {
+              "description": "The new ID for this feature",
+              "type": "string"
+            }
+          },
+          "required": ["reason", "target"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["redirect"],
+      "additionalProperties": false
+    },
+    "FeatureSplitData": {
+      "description": "A feature has split into two or more other features",
+      "type": "object",
+      "properties": {
+        "redirect": {
+          "type": "object",
+          "properties": {
+            "reason": {
+              "const": "split"
+            },
+            "targets": {
+              "description": "The new IDs for this feature",
+              "$ref": "#/definitions/Strings"
+            }
+          },
+          "required": ["reason", "targets"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["redirect"],
       "additionalProperties": false
     },
     "Status": {

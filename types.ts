@@ -11,6 +11,7 @@ import type {
   GroupData,
   FeatureData as QuicktypeMonolithicFeatureData,
   WebFeaturesData as QuicktypeWebFeaturesData,
+  Redirect,
   Release,
   SnapshotData,
   Status,
@@ -34,7 +35,9 @@ export type {
 
 export interface WebFeaturesData
   extends Pick<QuicktypeWebFeaturesData, "browsers" | "groups" | "snapshots"> {
-  features: { [key: string]: FeatureData };
+  features: {
+    [key: string]: FeatureData | FeatureMovedData | FeatureSplitData;
+  };
 }
 
 export type FeatureData = Required<
@@ -49,6 +52,28 @@ export type FeatureData = Required<
       "caniuse" | "compat_features" | "discouraged"
     >
   >;
+
+export type FeatureRedirectData = Required<
+  Pick<QuicktypeMonolithicFeatureData, "redirect">
+>;
+
+export interface Moved extends Exclude<Redirect, "targets"> {
+  reason: "moved";
+  target: Redirect["target"];
+}
+
+export interface Split extends Exclude<Redirect, "target"> {
+  reason: "split";
+  targets: Redirect["targets"];
+}
+
+export interface FeatureMovedData extends FeatureRedirectData {
+  redirect: Moved;
+}
+
+export interface FeatureSplitData extends FeatureRedirectData {
+  redirect: Split;
+}
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const t1: FeatureData = {

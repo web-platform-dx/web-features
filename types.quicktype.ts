@@ -60,6 +60,10 @@ export interface Release {
 
 /**
  * A feature data entry
+ *
+ * A feature has permanently moved to exactly one other ID
+ *
+ * A feature has split into two or more other features
  */
 export interface FeatureData {
   /**
@@ -73,11 +77,11 @@ export interface FeatureData {
   /**
    * Short description of the feature, as a plain text string
    */
-  description: string;
+  description?: string;
   /**
    * Short description of the feature, as an HTML string
    */
-  description_html: string;
+  description_html?: string;
   /**
    * Whether developers are formally discouraged from using this feature
    */
@@ -89,7 +93,7 @@ export interface FeatureData {
   /**
    * Short name
    */
-  name: string;
+  name?: string;
   /**
    * Snapshot identifier(s)
    */
@@ -97,12 +101,13 @@ export interface FeatureData {
   /**
    * Specification URL(s)
    */
-  spec: string[] | string;
+  spec?: string[] | string;
   /**
    * Whether a feature is considered a "Baseline" web platform feature and when it achieved
    * that status
    */
   status?: StatusHeadline;
+  redirect?: Redirect;
   [property: string]: any;
 }
 
@@ -120,6 +125,20 @@ export interface Discouraged {
    */
   alternatives?: string[];
 }
+
+export interface Redirect {
+  reason: Reason;
+  /**
+   * The new ID for this feature
+   */
+  target?: string;
+  /**
+   * The new IDs for this feature
+   */
+  targets?: string[];
+}
+
+export type Reason = "moved" | "split";
 
 /**
  * Whether a feature is considered a "Baseline" web platform feature and when it achieved
