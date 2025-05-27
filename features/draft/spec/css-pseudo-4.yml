@@ -1,0 +1,45 @@
+draft_date: 2025-04-09
+name: CSS Pseudo-Elements Module Level 4
+description: TODO
+spec: https://drafts.csswg.org/css-pseudo-4/
+compat_features:
+  - css.selectors.after.nested_marker
+  - css.selectors.before.nested_marker
+
+# The following features in the spec are already part of web-features:
+# - CSS object model:
+#   - api.CSSPseudoElement
+#   - api.CSSPseudoElement.element
+#   - api.CSSPseudoElement.type
+# - ::before and ::after:
+#   - css.selectors.after
+#   - css.selectors.after.animation_and_transition_support
+#   - css.selectors.before
+#   - css.selectors.before.animation_and_transition_support
+# - ::details-content:
+#   - css.selectors.details-content
+# - ::file-selector-button:
+#   - css.selectors.file-selector-button
+# - ::first-letter:
+#   - css.selectors.first-letter
+#   - css.selectors.first-letter.dutch_ij_digraph
+#   - css.selectors.first-letter.svg_text_element
+# - ::first-line:
+#   - css.selectors.first-line
+#   - css.selectors.first-line.svg_text_element
+# - ::spelling-error and ::grammar-error:
+#   - css.selectors.grammar-error
+#   - css.selectors.spelling-error
+# - Custom highlights:
+#   - css.selectors.highlight
+# - ::marker:
+#   - css.selectors.marker
+#   - css.selectors.marker.animation_and_transition_support
+# - ::placeholder:
+#   - css.selectors.placeholder
+# - ::selection:
+#   - css.selectors.selection
+# - text-decoration in ::selection:
+#   - css.selectors.selection.text-decoration
+# - ::target-text:
+#   - css.selectors.target-text

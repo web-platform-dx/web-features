@@ -10,6 +10,25 @@ status:
     firefox: "135"
     firefox_android: "135"
 compat_features:
-  - javascript.builtins.JSON.isRawJSON
+  # baseline: low
+  # baseline_low_date: 2025-03-31
+  # support:
+  #   chrome: "114"
+  #   chrome_android: "114"
+  #   edge: "114"
+  #   firefox: "135"
+  #   firefox_android: "135"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
   - javascript.builtins.JSON.parse.reviver_parameter_context_argument
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "114"
+  #   chrome_android: "114"
+  #   edge: "114"
+  #   firefox: "135"
+  #   firefox_android: "135"
+  - javascript.builtins.JSON.isRawJSON
   - javascript.builtins.JSON.rawJSON

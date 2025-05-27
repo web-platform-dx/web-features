@@ -1,9 +1,10 @@
-draft_date: 2025-03-03
+draft_date: 2025-05-12
 name: Pointer Lock 2.0
 description: TODO
 spec: https://w3c.github.io/pointerlock/
 compat_features:
   - api.Document.featurePolicy
+  - api.Element.requestPointerLock.options_unadjustedMovement_parameter
   - api.ShadowRoot.pointerLockElement
 
 # The following features in the spec are already part of web-features:
@@ -15,8 +16,6 @@ compat_features:
 #   - api.Document.pointerlockchange_event
 #   - api.Document.pointerlockerror_event
 #   - api.Element.requestPointerLock
-# - moveBefore():
-#   - api.Document.moveBefore
 # - Mouse events:
 #   - api.MouseEvent
 #   - api.MouseEvent.movementX

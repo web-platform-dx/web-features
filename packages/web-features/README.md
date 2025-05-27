@@ -45,7 +45,10 @@ For Baseline iconography, follow this procedure for each feature:
 
 For browser support iconography (that is, browser logos and checkmarks and Xs), follow this procedure for each browser:
 
-1. **Do not** show a version number, whether one is provided.
 1. If `status.baseline` is `"high"` or `"low"`, then show a green checkmark (✅, "supported") beside each browser's logo icon.
 1. If `status.baseline` is `false` and the browser's `status.support` key (for example, `status.support.edge`) is `undefined` or `false`, then show a gray X ("unsupported") beside the browser's logo icon.
 1. If `status.baseline` is `"high"` or `"low"` and the browser's `status.support` key is a string, then show a green checkmark ("supported") beside the browser's logo icon.
+
+If you wish to report browser version numbers, avoid showing version numbers alone.
+Developers and users often do not know whether a version number refers to a very recent or old release.
+If you must show a version number, consider contextualizing that number by showing a release date, a relative date (such as "Released … years ago"), an offset (such as "… releases ago"), or usage statistics relevant to your audience (such as "…% of your visitors in the last 90 days").

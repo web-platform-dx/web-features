@@ -41,11 +41,14 @@ compat_features:
   #   safari_ios: "17"
   - http.headers.Clear-Site-Data.wildcard
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-04-29
   # support:
-  #   chrome: "61"
-  #   chrome_android: "61"
+  #   chrome: "65"
+  #   chrome_android: "65"
   #   edge: ≤79
+  #   firefox: "138"
+  #   firefox_android: "138"
   #   safari: "17"
   #   safari_ios: "17"
   - http.headers.Clear-Site-Data.cache

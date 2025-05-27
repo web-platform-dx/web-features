@@ -1,9 +1,11 @@
-draft_date: 2025-03-03
+draft_date: 2025-05-19
 name: CSS Fonts Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-fonts-5/
 compat_features:
-  - css.properties.font.font-width_keyword_values
+  - css.at-rules.font-face.font-width
+  - css.properties.font-synthesis-style.oblique-only
+  - css.properties.font-width.percentage
 
 # The following features in the spec are already part of web-features:
 # - @font-face:
@@ -120,6 +122,8 @@ compat_features:
 #   - css.properties.font.message-box
 #   - css.properties.font.small-caption
 #   - css.properties.font.status-bar
+# - font-stretch:
+#   - css.properties.font.font-width_keyword_values
 # - font-family:
 #   - css.properties.font-family
 #   - svg.global_attributes.font-family
@@ -134,6 +138,9 @@ compat_features:
 #   - css.properties.font-family.ui-serif
 # - font-kerning:
 #   - css.properties.font-kerning
+#   - css.properties.font-kerning.auto
+#   - css.properties.font-kerning.none
+#   - css.properties.font-kerning.normal
 # - font-language-override:
 #   - css.properties.font-language-override
 # - font-optical-sizing:

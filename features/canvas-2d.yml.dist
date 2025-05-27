@@ -424,8 +424,8 @@ compat_features:
   # baseline_low_date: 2021-09-20
   # baseline_high_date: 2024-03-20
   # support:
-  #   chrome: "30"
-  #   chrome_android: "30"
+  #   chrome: "50"
+  #   chrome_android: "50"
   #   edge: "79"
   #   firefox: "42"
   #   firefox_android: "42"
@@ -497,14 +497,30 @@ compat_features:
   - api.TextMetrics.hangingBaseline
   - api.TextMetrics.ideographicBaseline
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-03-31
   # support:
   #   chrome: "2"
   #   chrome_android: "18"
   #   edge: "12"
   #   firefox: "3.5"
   #   firefox_android: "4"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
   - api.CanvasRenderingContext2D.font
+
+  # baseline: low
+  # baseline_low_date: 2025-03-31
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "115"
+  #   firefox_android: "115"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - api.CanvasRenderingContext2D.letterSpacing
+  - api.CanvasRenderingContext2D.wordSpacing
 
   # baseline: false
   # support:
@@ -556,16 +572,6 @@ compat_features:
   #   chrome: "99"
   #   chrome_android: "99"
   #   edge: "99"
-  #   firefox: "115"
-  #   firefox_android: "115"
-  - api.CanvasRenderingContext2D.letterSpacing
-  - api.CanvasRenderingContext2D.wordSpacing
-
-  # baseline: false
-  # support:
-  #   chrome: "99"
-  #   chrome_android: "99"
-  #   edge: "99"
   #   firefox: "116"
   #   firefox_android: "116"
   - api.CanvasRenderingContext2D.textRendering
@@ -588,3 +594,10 @@ compat_features:
   #   safari_ios: "11.3"
   - api.TextMetrics.emHeightAscent
   - api.TextMetrics.emHeightDescent
+
+  # baseline: false
+  # support:
+  #   chrome: "136"
+  #   chrome_android: "136"
+  #   edge: "136"
+  - api.CanvasRenderingContext2D.lang

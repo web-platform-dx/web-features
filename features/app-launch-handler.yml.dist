@@ -12,8 +12,8 @@ compat_features:
   #   chrome: "110"
   #   chrome_android: "110"
   #   edge: "110"
-  - html.manifest.launch_handler
-  - html.manifest.launch_handler.client_mode
+  - manifests.webapp.launch_handler
+  - manifests.webapp.launch_handler.client_mode
 
   # baseline: false
   # support:

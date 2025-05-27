@@ -157,11 +157,5 @@ compat_features:
   #   firefox_android: "128"
   #   safari: "18"
   #   safari_ios: "18"
-  - api.ShadowRoot.serializable
-
-  # baseline: false
-  # support:
-  #   chrome: "125"
-  #   chrome_android: "125"
-  #   edge: "125"
   - api.Element.attachShadow.options_serializable_parameter
+  - api.ShadowRoot.serializable

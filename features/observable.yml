@@ -1,0 +1,34 @@
+name: Observable
+description: The `when()` method on a event target returns an `Observable` object, which provides a declarative API for subscribing to and operating on events. It's an alternative to `addEventListener()` callbacks.
+spec: https://wicg.github.io/observable/
+compat_features:
+  - api.EventTarget.when
+  - api.Observable
+  - api.Observable.Observable
+  - api.Observable.catch
+  - api.Observable.drop
+  - api.Observable.every
+  - api.Observable.filter
+  - api.Observable.finally
+  - api.Observable.find
+  - api.Observable.first
+  - api.Observable.flatMap
+  - api.Observable.forEach
+  - api.Observable.from_static
+  - api.Observable.inspect
+  - api.Observable.last
+  - api.Observable.map
+  - api.Observable.reduce
+  - api.Observable.some
+  - api.Observable.subscribe
+  - api.Observable.switchMap
+  - api.Observable.take
+  - api.Observable.takeUntil
+  - api.Observable.toArray
+  - api.Subscriber
+  - api.Subscriber.active
+  - api.Subscriber.addTeardown
+  - api.Subscriber.complete
+  - api.Subscriber.error
+  - api.Subscriber.next
+  - api.Subscriber.signal
