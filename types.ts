@@ -29,7 +29,7 @@ export type {
   SnapshotData,
   Status,
   Support,
-  SupportStatus
+  SupportStatus,
 };
 
 export interface WebFeaturesData
