@@ -3,3 +3,10 @@ description: Speculation rules are hints to the browser to proactively download 
 spec:
   - https://wicg.github.io/nav-speculation/speculation-rules.html
   - https://wicg.github.io/nav-speculation/prerendering.html
+status:
+  # Pinning the feature to the support for the <script type=speculationrules>
+  # element, which was introduced in Chrome/Edge 109.
+  # See https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script/type/speculationrules
+  # This is when the feature because broadly usable. Other parts of the feature
+  # came later, but don't prevent the use of the basic functionality.
+  compute_from: html.elements.script.type.speculationrules
