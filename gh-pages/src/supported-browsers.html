@@ -3,10 +3,74 @@ title: Supported browsers
 layout: "default.html"
 ---
 
+<style>
+  #downstreamContainer {
+    display: none;
+  }
+</style>
 <script type="module">
   import { getCompatibleVersions } from '/assets/js/baseline-browser-mapping.js'
-  console.log(getCompatibleVersions())
-</script>
-<ul>
 
-</ul>
+  const nameMappings = {
+    "chrome": "Chrome",
+    "chrome_android": "Chrome for Android",
+    "edge": "Edge",
+    "firefox": "Firefox",
+    "firefox_android": "Firefox for Android",
+    "safari": "Safari",
+    "safari_ios": "Safari on iOS",
+    "opera": "Opera",
+    "opera_android": "Opera Android",
+    "samsunginternet_android": "Samsung Internet",
+    "webview_android": "WebView Android",
+    "qq_android": "QQ Browser Mobile",
+    "uc_android": "UC Browser Mobile",
+    "ya_android": "Yandex Browser Mobile",
+  }
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const configObject = {
+    includeDownstreamBrowsers: urlParams.get('includeDownstream') === 'true'
+  }
+  if (urlParams.get('targetYear')) {
+    configObject.targetYear = parseInt(urlParams.get('targetYear'));
+  } else if (urlParams.get('widelyAvailableOnDate')) {
+    configObject.widelyAvailableOnDate = urlParams.get('widelyAvailableOnDate');
+  }
+  else {
+    if (urlParams.get('target') === 'newlyAvailable') {
+      let date30MonthsFromNow = new Date();
+      date30MonthsFromNow.setMonth(date30MonthsFromNow.getMonth() + 30);
+      configObject.widelyAvailableOnDate = date30MonthsFromNow.toISOString().split('T')[0];
+    }
+  }
+
+  try {
+    let versions = getCompatibleVersions(configObject);
+
+    document.getElementById('supportedVersions').innerHTML = versions.slice(0, 7).map(version => {
+      return `<li>${nameMappings[version.browser]} ${version.version}</li>`;
+    }).join('');
+    if (configObject.includeDownstreamBrowsers) {
+      document.getElementById('downstreamContainer').style.display = 'block';
+      document.getElementById('downstreamVersions').innerHTML = versions.slice(7).map(version => {
+        return `<li>${nameMappings[version.browser]} ${version.version}</li>`;
+      }).join('');
+    }
+  } catch (error) {
+    console.error('Error fetching compatible versions:', error);
+    document.getElementById('supportedVersions').innerHTML = `<li>Error fetching compatible browsers.</li><li>${error.message}</li>`;
+  }
+
+
+
+
+</script>
+<h2>Core browsers</h2>
+<ul id="supportedVersions"></ul>
+<div id="downstreamContainer">
+  <h2>Downstream browsers</h2>
+  <p>These browsers are not directly supported by the Baseline core definition, but are based on the core browsers
+    listed above. Approach these with caution.</p>
+  <ul id="downstreamVersions"></ul>
+</div>

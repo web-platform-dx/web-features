@@ -1,6 +1,6 @@
-import bcdBrowsers from 'https://unpkg.com/@mdn/browser-compat-data' with { type: 'json' };
-import otherBrowsers from "https://unpkg.com/baseline-browser-mapping/dist/data/downstream-browsers.json" with {type: "json"}
-import webFeatures from "https://unpkg.com/web-features/data.json" with {type: "json"}
+import bcdBrowsers from 'https://cdn.jsdelivr.net/npm/@mdn/browser-compat-data' with { type: 'json' };
+import otherBrowsers from "https://cdn.jsdelivr.net/npm/baseline-browser-mapping/dist/data/downstream-browsers.json" with {type: "json"}
+import webFeatures from "https://cdn.jsdelivr.net/npm/web-features/data.json" with {type: "json"}
 const features = webFeatures.features;
 const bcdCoreBrowserNames = [
   "chrome",
