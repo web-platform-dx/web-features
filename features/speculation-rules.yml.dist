@@ -102,3 +102,7 @@ compat_features:
   #   chrome: "110"
   #   chrome_android: "109"
   - html.elements.script.type.speculationrules.requires.anonymous-client-ip-when-cross-origin
+
+  # baseline: false
+  # support: {}
+  - html.elements.script.type.speculationrules.target_hint
