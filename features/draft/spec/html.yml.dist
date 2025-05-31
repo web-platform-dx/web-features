@@ -919,6 +919,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "137"
+  #   chrome_android: "137"
+  #   edge: "137"
+  - api.ImageData.pixelFormat
+
+  # baseline: false
+  # support:
   #   safari: "9"
   #   safari_ios: "9"
   - api.HTMLMediaElement.getStartDate
@@ -946,7 +953,6 @@ compat_features:
   # baseline: false
   # support: {}
   - api.HTMLButtonElement.command.request-close
-  - api.ImageData.pixelFormat
   - api.Navigator.authentication
   - html.elements.hr.hr_in_select
   - html.elements.track.kind.descriptions
