@@ -8,6 +8,21 @@ status:
     chrome_android: "132"
     edge: "132"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "116"
+  #   edge: "116"
+  #   firefox: "139"
+  - api.CredentialsContainer.create.publicKey_option.extensions.prf
+  - api.CredentialsContainer.get.publicKey_option.extensions.prf
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "132"
+  #   chrome_android: "132"
+  #   edge: "132"
   - api.PublicKeyCredential.signalAllAcceptedCredentials_static
   - api.PublicKeyCredential.signalCurrentUserDetails_static
   - api.PublicKeyCredential.signalUnknownCredential_static
