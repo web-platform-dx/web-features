@@ -3,8 +3,11 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "139"
+    firefox_android: "139"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "139"
@@ -250,7 +253,6 @@ compat_features:
   - javascript.builtins.Temporal.ZonedDateTime.year
   - javascript.builtins.Temporal.ZonedDateTime.yearOfWeek
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - javascript.builtins.Temporal.PlainDate.withCalendar
