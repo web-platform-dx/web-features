@@ -4,8 +4,21 @@
 status:
   baseline: false
   support:
-    chrome: "117"
-    chrome_android: "117"
-    edge: "117"
+    chrome: "130"
+    chrome_android: "130"
+    edge: "130"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "117"
+  #   chrome_android: "117"
+  #   edge: "117"
   - css.properties.text-wrap.pretty
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "130"
+  #   chrome_android: "130"
+  #   edge: "130"
+  - css.properties.text-wrap-style.pretty
