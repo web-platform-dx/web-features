@@ -6,7 +6,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/img");
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
   eleventyConfig.addPassthroughCopy("./src/assets/css");
-  eleventyConfig.addPassthroughCopy("./src/assets/js");
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/baseline-browser-mapping/dist/baseline-browser-mapping.js": "assets/js/baseline-browser-mapping.js"
+  });
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   const mdOpts = {
     html: true,

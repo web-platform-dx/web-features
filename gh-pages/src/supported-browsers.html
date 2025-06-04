@@ -4,12 +4,34 @@ layout: "default.html"
 ---
 
 <style>
-  #downstreamContainer {
+  #downstreamContainer,
+  #widelyAvailableOnDateLabel {
     display: none;
+  }
+
+  #controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin: 0 0 1em 0;
   }
 </style>
 <script type="module">
   import { getCompatibleVersions } from '/assets/js/baseline-browser-mapping.js'
+
+  const insertVersions = (versions) => {
+
+    document.getElementById('supportedVersions').innerHTML = versions.slice(0, 7).map(version => {
+      return `<li>${nameMappings[version.browser]} ${version.version}</li>`;
+    }).join('');
+    if (configObject && configObject.includeDownstreamBrowsers) {
+      document.getElementById('downstreamContainer').style.display = 'block';
+      document.getElementById('downstreamBrowsersCheckbox').checked = true;
+      document.getElementById('downstreamVersions').innerHTML = versions.slice(7).map(version => {
+        return `<li>${nameMappings[version.browser]} ${version.version}</li>`;
+      }).join('');
+    }
+  }
 
   const nameMappings = {
     "chrome": "Chrome",
@@ -18,7 +40,7 @@ layout: "default.html"
     "firefox": "Firefox",
     "firefox_android": "Firefox for Android",
     "safari": "Safari",
-    "safari_ios": "Safari on iOS",
+    "safari_ios": "Safari for iOS",
     "opera": "Opera",
     "opera_android": "Opera Android",
     "samsunginternet_android": "Samsung Internet",
@@ -28,14 +50,41 @@ layout: "default.html"
     "ya_android": "Yandex Browser Mobile",
   }
 
+  const nextYear = new Date().getFullYear() + 1;
+  const maxWaDate = new Date();
+  maxWaDate.setMonth(new Date().getMonth() + 30);
+
+  const yearArray = [...Array(nextYear).keys()].slice(2015).reverse();
+
+  yearArray.forEach(year => {
+    let newElement = document.createElement('option');
+    newElement.setAttribute('value', year);
+    newElement.innerText = year;
+    document.getElementById('targetSelect').appendChild(
+      newElement
+    )
+  });
+
+  const datePicker = document.getElementById('widelyAvailableOnDatePicker');
+  datePicker.setAttribute('max', maxWaDate.toISOString().slice(0, 10));
+
   const urlParams = new URLSearchParams(window.location.search);
   const configObject = {
     includeDownstreamBrowsers: urlParams.get('includeDownstream') === 'true'
   }
   if (urlParams.get('targetYear')) {
     configObject.targetYear = parseInt(urlParams.get('targetYear'));
+    document.getElementById('targetSelect').value = configObject.targetYear;
   } else if (urlParams.get('widelyAvailableOnDate')) {
     configObject.widelyAvailableOnDate = urlParams.get('widelyAvailableOnDate');
+    datePicker.setAttribute('value', urlParams.get('widelyAvailableOnDate'));
+    document.getElementById('widelyAvailableOnDateLabel').style.display = 'block';
+    document.getElementById('targetSelect').value = 'widelyAvailableOnDate';
+  }
+  else if (urlParams.get('target')) {
+    if (urlParams.get('target') === 'newlyAvailable') {
+      configObject = { widelyAvailableOnDate: maxWaDate }
+    }
   }
   else {
     if (urlParams.get('target') === 'newlyAvailable') {
@@ -46,28 +95,84 @@ layout: "default.html"
   }
 
   try {
-    let versions = getCompatibleVersions(configObject);
 
-    document.getElementById('supportedVersions').innerHTML = versions.slice(0, 7).map(version => {
-      return `<li>${nameMappings[version.browser]} ${version.version}</li>`;
-    }).join('');
-    if (configObject.includeDownstreamBrowsers) {
-      document.getElementById('downstreamContainer').style.display = 'block';
-      document.getElementById('downstreamVersions').innerHTML = versions.slice(7).map(version => {
-        return `<li>${nameMappings[version.browser]} ${version.version}</li>`;
-      }).join('');
-    }
+    let versions = getCompatibleVersions(configObject);
+    insertVersions(versions);
+
   } catch (error) {
     console.error('Error fetching compatible versions:', error);
     document.getElementById('supportedVersions').innerHTML = `<li>Error fetching compatible browsers.</li><li>${error.message}</li>`;
   }
 
+  document.getElementById('downstreamBrowsersCheckbox').addEventListener('change', (e) => {
+    urlParams.set("includeDownstream", e.target.checked);
+    history.replaceState(null, null, "?" + urlParams.toString());
+    document.getElementById('downstreamContainer').style.display = e.target.checked ? 'block' : 'none'
+    return
+  });
 
+  document.getElementById('targetSelect').addEventListener('change', (e) => {
+    e.preventDefault();
+    const target = e.target.value;
+    console.log(target);
+    if (target == 'widelyAvailable' || target == 'newlyAvailable') {
+      if (target == 'newlyAvailable') insertVersions(getCompatibleVersions({ includeDownstreamBrowsers: true, widelyAvailableOnDate: maxWaDate }));
+      else insertVersions(getCompatibleVersions({ includeDownstreamBrowsers: true }));
+      document.getElementById('widelyAvailableOnDateLabel').style.display = 'none';
+      urlParams.delete('widelyAvailableOnDate');
+      urlParams.delete('targetYear');
+      urlParams.set("target", e.target.value);
+      history.replaceState(null, null, "?" + urlParams.toString());
+      return
+    }
+    if (target == 'widelyAvailableOnDate') {
+      insertVersions(getCompatibleVersions({ includeDownstreamBrowsers: true, widelyAvailableOnDate: document.getElementById('widelyAvailableOnDatePicker').value }));
+      document.getElementById('widelyAvailableOnDateLabel').style.display = 'block';
+      urlParams.delete('target');
+      urlParams.delete('targetYear');
+      urlParams.set("widelyAvailableOnDate", target);
+      history.replaceState(null, null, "?" + urlParams.toString());
+      return
+    }
+    insertVersions(getCompatibleVersions({ includeDownstreamBrowsers: true, targetYear: target }));
+    urlParams.delete('target');
+    urlParams.delete('widelyAvailableOnDate');
+    urlParams.set('targetYear', target);
+    history.replaceState(null, null, "?" + urlParams.toString());
+    document.getElementById('widelyAvailableOnDateLabel').style.display = 'none';
+    return
+  });
 
+  document.getElementById('widelyAvailableOnDatePicker').addEventListener('change', (e) => {
+    insertVersions(getCompatibleVersions({ includeDownstreamBrowsers: true, widelyAvailableOnDate: e.target.value }))
+    urlParams.set("widelyAvailableOnDate", e.target.value);
+    history.replaceState(null, null, "?" + urlParams.toString());
+  });
 
 </script>
+<div id="controls">
+  <label id="targetSelectLabel">
+    Target:
+    <select name="target" id="targetSelect">
+      <option value="widelyAvailable">Widely available</option>
+      <option value="widelyAvailableOnDate">Widely available on date</option>
+      <option value="newlyAvailable">Newly available</option>
+    </select>
+  </label>
+  <label id="widelyAvailableOnDateLabel">
+    <input id="widelyAvailableOnDatePicker" min="2018-01-29" type="date">
+  </label>
+
+  <label id="showDownstreamLabel">
+    <input id="downstreamBrowsersCheckbox" type="checkbox" />
+    Show downstream browsers
+  </label>
+</div>
+
 <h2>Core browsers</h2>
-<ul id="supportedVersions"></ul>
+<ul id="supportedVersions">
+  <li>Loading...</li>
+</ul>
 <div id="downstreamContainer">
   <h2>Downstream browsers</h2>
   <p>These browsers are not directly supported by the Baseline core definition, but are based on the core browsers
