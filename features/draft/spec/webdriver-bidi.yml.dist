@@ -118,6 +118,7 @@ compat_features:
   #   firefox: "117"
   #   firefox_android: "117"
   - webdriver.bidi.browser
+  - webdriver.bidi.browsingContext.create
   - webdriver.bidi.browsingContext.fragmentNavigated_event
 
   # baseline: false
@@ -198,7 +199,6 @@ compat_features:
   #   edge: "126"
   - webdriver.bidi.browsingContext.contextCreated_event
   - webdriver.bidi.browsingContext.contextDestroyed_event
-  - webdriver.bidi.browsingContext.create
   - webdriver.bidi.browsingContext.locateNodes
   - webdriver.bidi.browsingContext.navigate
   - webdriver.bidi.browsingContext.navigationCommitted_event
