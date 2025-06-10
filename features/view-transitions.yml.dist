@@ -90,3 +90,10 @@ compat_features:
   #   safari_ios: "18.2"
   - api.PageRevealEvent.PageRevealEvent
   - api.PageSwapEvent.PageSwapEvent
+
+  # baseline: false
+  # support:
+  #   chrome: "137"
+  #   chrome_android: "137"
+  #   edge: "137"
+  - css.properties.view-transition-name.match-element
