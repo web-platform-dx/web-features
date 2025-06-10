@@ -143,7 +143,8 @@
           "$ref": "#/definitions/Discouraged"
         }
       },
-      "required": ["name", "description", "description_html", "spec", "status"]
+      "required": ["name", "description", "description_html", "spec", "status"],
+      "additionalProperties": false
     },
     "GroupData": {
       "type": "object",
@@ -208,22 +209,22 @@
     },
     "StatusHeadline": {
       "type": "object",
-      "allOf": [
-        { "$ref": "#/definitions/Status" },
-        {
+      "allOf": [{ "$ref": "#/definitions/Status" }],
+      "properties": {
+        "baseline": {},
+        "baseline_high_date": {},
+        "baseline_low_date": {},
+        "support": {},
+        "by_compat_key": {
+          "description": "Statuses for each key in the feature's compat_features list, if applicable. Not available to the npm release of web-features.",
           "type": "object",
-          "properties": {
-            "by_compat_key": {
-              "description": "Statuses for each key in the feature's compat_features list, if applicable. Not available to the npm release of web-features.",
-              "type": "object",
-              "additionalProperties": {
-                "$ref": "#/definitions/Status"
-              }
-            }
+          "additionalProperties": {
+            "$ref": "#/definitions/Status"
           }
         }
-      ],
-      "required": ["baseline", "support"]
+      },
+      "required": ["baseline", "support"],
+      "additionalProperties": false
     },
     "Release": {
       "description": "Browser release information",
@@ -253,7 +254,8 @@
           "$ref": "#/definitions/URL"
         }
       },
-      "required": ["name", "spec"]
+      "required": ["name", "spec"],
+      "additionalProperties": false
     },
     "StringOrStrings": {
       "oneOf": [
