@@ -352,6 +352,18 @@ compat_features:
   - api.HTMLInputElement.selectionchange_event
   - api.HTMLTextAreaElement.selectionchange_event
 
+  # baseline: low
+  # baseline_low_date: 2025-05-29
+  # support:
+  #   chrome: "137"
+  #   chrome_android: "137"
+  #   edge: "137"
+  #   firefox: "126"
+  #   firefox_android: "126"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - api.Selection.direction
+
   # baseline: false
   # support:
   #   chrome: "1"
@@ -370,11 +382,3 @@ compat_features:
   #   safari: "1"
   #   safari_ios: "1"
   - api.Range.detach
-
-  # baseline: false
-  # support:
-  #   firefox: "126"
-  #   firefox_android: "126"
-  #   safari: "17"
-  #   safari_ios: "17"
-  - api.Selection.direction

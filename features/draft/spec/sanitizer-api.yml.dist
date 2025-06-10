@@ -5,8 +5,10 @@ status:
   baseline: false
   support: {}
 compat_features:
+  - api.Document.parseHTMLUnsafe_static.options_sanitizer_parameter
   - api.Document.parseHTML_static
   - api.Element.setHTML
+  - api.Element.setHTMLUnsafe.options_sanitizer_parameter
   - api.Sanitizer
   - api.Sanitizer.Sanitizer
   - api.Sanitizer.allowAttribute
@@ -18,3 +20,5 @@ compat_features:
   - api.Sanitizer.replaceElementWithChildren
   - api.Sanitizer.setComments
   - api.Sanitizer.setDataAttributes
+  - api.ShadowRoot.setHTML
+  - api.ShadowRoot.setHTMLUnsafe.options_sanitizer_parameter

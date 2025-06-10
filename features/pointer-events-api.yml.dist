@@ -188,5 +188,7 @@ compat_features:
   - api.PointerEvent.persistentDeviceId
 
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "135"
+  #   firefox_android: "135"
   - api.PointerEvent.pointerType.fractional_coordinates

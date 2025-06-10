@@ -1,4 +1,4 @@
-draft_date: 2025-05-19
+draft_date: 2025-05-31
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -92,6 +92,7 @@ compat_features:
   - html.elements.form.autocomplete.new-password
   - html.elements.form.autocomplete.one-time-code
   - html.elements.form.autocomplete.webauthn
+  - html.elements.h1.no_ua_styles_in_article_aside_nav_section
   - html.elements.hr.hr_in_select
   - html.elements.html.xmlns
   - html.elements.iframe.allow.autoplay
@@ -100,7 +101,6 @@ compat_features:
   - html.elements.iframe.allow.wildcards
   - html.elements.iframe.sandbox.allow-orientation-lock
   - html.elements.iframe.sandbox.allow-pointer-lock
-  - html.elements.img.sizes.auto
   - html.elements.img.usemap.case_sensitive
   - html.elements.input.autocomplete
   - html.elements.link.rel.icon
@@ -2322,6 +2322,8 @@ compat_features:
 # - aspect-ratio:
 #   - html.elements.img.aspect_ratio_computed_from_attributes
 #   - html.elements.video.aspect_ratio_computed_from_attributes
+# - <img sizes="auto" loading="lazy">:
+#   - html.elements.img.sizes.auto
 # - <input type="button">:
 #   - html.elements.input.type_button
 # - Email, telephone, and URL <input> types:
