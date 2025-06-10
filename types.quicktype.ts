@@ -102,7 +102,7 @@ export interface FeatureData {
    * Whether a feature is considered a "Baseline" web platform feature and when it achieved
    * that status
    */
-  status?: StatusHeadline;
+  status: StatusHeadline;
   [property: string]: any;
 }
 
@@ -131,6 +131,10 @@ export interface StatusHeadline {
    */
   baseline: boolean | BaselineEnum;
   /**
+   * Browser versions that most-recently introduced the feature
+   */
+  support: Support;
+  /**
    * Date the feature achieved Baseline high status
    */
   baseline_high_date?: string;
@@ -138,10 +142,6 @@ export interface StatusHeadline {
    * Date the feature achieved Baseline low status
    */
   baseline_low_date?: string;
-  /**
-   * Browser versions that most-recently introduced the feature
-   */
-  support: Support;
   /**
    * Statuses for each key in the feature's compat_features list, if applicable. Not available
    * to the npm release of web-features.
@@ -200,10 +200,10 @@ export interface SnapshotData {
   /**
    * Short name
    */
-  name?: string;
+  name: string;
   /**
    * Specification
    */
-  spec?: string;
+  spec: string;
   [property: string]: any;
 }
