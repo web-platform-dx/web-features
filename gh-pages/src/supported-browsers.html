@@ -21,7 +21,7 @@ layout: "default.html"
   }
 </style>
 <script type="module">
-  import { getCompatibleVersions } from '/assets/js/baseline-browser-mapping.js'
+  import { getCompatibleVersions } from '{% if eleventy.env.runMode != "serve" %}/web-features{% endif %}/assets/js/baseline-browser-mapping.js'
 
   // Declare globally useful variables
   const urlParams = new URLSearchParams(window.location.search);
