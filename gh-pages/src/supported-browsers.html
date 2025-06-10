@@ -21,6 +21,7 @@ layout: "default.html"
   }
 </style>
 <script type="module">
+  // Conditional equired as 11ty cannot resolve module import URLs in github pages
   import { getCompatibleVersions } from '{% if eleventy.env.runMode != "serve" %}/web-features{% endif %}/assets/js/baseline-browser-mapping.js'
 
   // Declare globally useful variables
