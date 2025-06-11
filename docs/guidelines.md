@@ -79,6 +79,11 @@ The identifier should match the name, with these additional guidelines:
 
 ## Descriptions
 
+> [!TIP]
+> Some description rules are enforced by linting with Vale.
+> A workflow reviews files that you change in your pull request and suggest changes.
+> To run the Vale linter locally, [install Vale](https://vale.sh/docs/install) and run `vale .` from the root of the repository.
+
 The `description` field contains a short description of the feature in Markdown-formatted text, which is converted to HTML in the published package.
 Follow the general writing guidelines in this section, but see the [word and phrase list](#word-and-phrase-list) for specific usage instructions.
 
@@ -158,11 +163,15 @@ Avoid.
 See [sets](#sets).
 ([#727](https://github.com/web-platform-dx/web-features/pull/727#discussion_r1537635491))
 
+⚠️ Warned by vale: [`Substitute.yml`](/.vale/web-features-styles/Substitute.yml)
+
 #### determines
 
 Avoid.
 See [sets](#sets).
 ([#727](https://github.com/web-platform-dx/web-features/pull/727#discussion_r1537635491))
+
+⚠️ Warned by vale: [`Substitute.yml`](/.vale/web-features-styles/Substitute.yml)
 
 #### device
 
@@ -194,6 +203,8 @@ For example, this is an example.
 Omit "is used" where there's no loss in meaning.
 For example, prefer "The feature reads…" over "The feature is used to read…"
 ([#727](https://github.com/web-platform-dx/web-features/pull/727#discussion_r1537635981))
+
+✅ Required by vale: [`Avoid.yml`](/.vale/web-features-styles/Avoid.yml)
 
 #### longhands and shorthands
 
@@ -230,6 +241,8 @@ Use "The property sets…" but never "The property defines…."
 Avoid.
 See [sets](#sets).
 ([#727](https://github.com/web-platform-dx/web-features/pull/727#discussion_r1537635491))
+
+⚠️ Warned by vale: [`Substitute.yml`](/.vale/web-features-styles/Substitute.yml)
 
 #### styling … as … by default
 
