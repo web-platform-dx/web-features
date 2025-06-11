@@ -219,3 +219,8 @@ compat_features:
   #   edge: "126"
   - api.AudioEncoder.configure.opus.opus_application
   - api.AudioEncoder.configure.opus.opus_signal
+
+  # baseline: false
+  # support: {}
+  - api.VideoFrame.flip
+  - api.VideoFrame.rotation
