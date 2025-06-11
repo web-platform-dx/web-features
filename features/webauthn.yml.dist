@@ -123,18 +123,6 @@ compat_features:
   - api.PublicKeyCredential.parseRequestOptionsFromJSON_static
   - api.PublicKeyCredential.toJSON
 
-  # baseline: low
-  # baseline_low_date: 2025-05-27
-  # support:
-  #   chrome: "113"
-  #   chrome_android: "113"
-  #   edge: "113"
-  #   firefox: "139"
-  #   firefox_android: "139"
-  #   safari: "17"
-  #   safari_ios: "17"
-  - api.CredentialsContainer.create.publicKey_option.extensions.largeBlob
-
   # baseline: false
   # support:
   #   chrome: "67"
@@ -145,6 +133,16 @@ compat_features:
   #   safari_ios: "13"
   - api.CredentialsContainer.create.publicKey_option.attestation.direct
   - api.CredentialsContainer.create.publicKey_option.attestation.enterprise
+
+  # baseline: false
+  # support:
+  #   chrome: "113"
+  #   edge: "113"
+  #   firefox: "139"
+  #   firefox_android: "139"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - api.CredentialsContainer.create.publicKey_option.extensions.largeBlob
 
   # baseline: false
   # support:

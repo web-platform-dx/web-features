@@ -273,7 +273,6 @@ compat_features:
   - svg.elements.tspan
   - svg.elements.tspan.dx
   - svg.elements.tspan.dy
-  - svg.elements.tspan.textLength
   - svg.elements.tspan.x
   - svg.elements.tspan.y
   - svg.elements.use
@@ -1058,7 +1057,6 @@ compat_features:
   - svg.elements.symbol.viewBox
   - svg.elements.text.fill
   - svg.elements.tspan.fill
-  - svg.elements.tspan.lengthAdjust
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -1750,6 +1748,19 @@ compat_features:
   - svg.elements.image.crossorigin
 
   # baseline: low
+  # baseline_low_date: 2024-03-05
+  # support:
+  #   chrome: "43"
+  #   chrome_android: "43"
+  #   edge: "79"
+  #   firefox: "69"
+  #   firefox_android: "79"
+  #   safari: "17.4"
+  #   safari_ios: "17.4"
+  - css.properties.rx
+  - css.properties.ry
+
+  # baseline: low
   # baseline_low_date: 2025-03-31
   # support:
   #   chrome: "64"
@@ -1802,13 +1813,21 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "43"
-  #   chrome_android: "43"
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   safari: "3"
+  #   safari_ios: "2"
+  - svg.elements.tspan.textLength
+
+  # baseline: false
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
   #   edge: "79"
-  #   firefox: "69"
-  #   firefox_android: "79"
-  - css.properties.rx
-  - css.properties.ry
+  #   safari: "3"
+  #   safari_ios: "2"
+  - svg.elements.tspan.lengthAdjust
 
   # baseline: false
   # support:
