@@ -19,6 +19,25 @@ layout: "default.html"
     gap: 1em;
     margin: 0 0 1em 0;
   }
+
+  th:nth-child(1),
+  td:nth-child(1) {
+    text-align: left;
+  }
+
+  th:nth-child(2),
+  td:nth-child(2),
+  #downstreamVersionsList td:nth-child(3),
+  #downstreamVersionsList th:nth-child(3) {
+    text-align: center
+  }
+
+  #supportedVersionsList th:nth-child(3),
+  #supportedVersionsList td:nth-child(3),
+  #downstreamVersionsList th:nth-child(4),
+  #downstreamVersionsList td:nth-child(4) {
+    text-align: right;
+  }
 </style>
 <script type="module">
   // Conditional equired as 11ty cannot resolve module import URLs in github pages
@@ -57,13 +76,34 @@ layout: "default.html"
       includeDownstreamBrowsers: true
     })
 
-    document.getElementById('supportedVersionsList').innerHTML = versions.slice(0, 7).map(version => {
-      return `<li>${nameMappings[version.browser]} ${version.version}</li>`;
-    }).join('');
+    document.getElementById('supportedVersionsList').innerHTML =
+      `<tr>
+        <th>Browser</th>
+        <th>Version</th>
+        <th>Release date</th>
+      </tr>` +
+      versions.slice(0, 7).map(version => {
+        return `<tr>` +
+          `<td>${nameMappings[version.browser]}</td><td>${version.version}</td><td>${version.release_date}</td>` +
+          `</tr>`;
+      }).join('');
 
-    document.getElementById('downstreamVersionsList').innerHTML = versions.slice(7).map(version => {
-      return `<li>${nameMappings[version.browser]} ${version.version}</li>`;
-    }).join('');
+    document.getElementById('downstreamVersionsList').innerHTML =
+      `<tr>
+        <th>Browser</th>
+        <th>Version</th>
+        <th>Chromium version</th>
+        <th>Release date</th>
+      </tr>` +
+      versions.slice(7).map(version => {
+        return `<tr>` +
+          `<td>${nameMappings[version.browser]}</td>
+          <td>${version.version}</td>
+          <td>${version.engine_version}</td>
+          <td>${version.release_date}</td>` +
+          `</tr>`
+          ;
+      }).join('');
 
   }
 
@@ -222,18 +262,20 @@ layout: "default.html"
 
 <div id="supportedVersions">
   <h2>Core browser set</h2>
-  <ul id="supportedVersionsList">
-  </ul>
+  <table id="supportedVersionsList">
+
+  </table>
 </div>
 
 <div id="downstreamContainer">
   <h2>Downstream browsers</h2>
-  <p>These browsers are not directly supported by the Baseline core definition, but are based on the engine from one of
+  <p>These browsers are not part of the <a href="/">main Baseline definition</a>, but are based on the engine from one
+    of
     the core browsers
     listed above. This information is provided on a best-effort basis, and you should always test in these browsers if
     they make up a significant portion of your user base. To learn more about how these version mappings were
     calculated, see <a
       href="https://github.com/web-platform-dx/baseline-browser-mapping/#downstream-browsers">baseline-browser-mapping</a>.
   </p>
-  <ul id="downstreamVersionsList"></ul>
+  <table id="downstreamVersionsList"></table>
 </div>
