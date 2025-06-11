@@ -3,6 +3,16 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "137"
+    chrome_android: "137"
+    edge: "137"
 compat_features:
   - css.properties.reading-flow
+  - css.properties.reading-flow.flex-flow
+  - css.properties.reading-flow.flex-visual
+  - css.properties.reading-flow.grid-columns
+  - css.properties.reading-flow.grid-order
+  - css.properties.reading-flow.grid-rows
+  - css.properties.reading-flow.normal
+  - css.properties.reading-flow.source-order

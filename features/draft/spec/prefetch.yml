@@ -1,9 +1,10 @@
-draft_date: 2025-04-17
+draft_date: 2025-05-31
 name: Prefetch
 description: TODO
 spec: https://wicg.github.io/nav-speculation/prefetch.html
 compat_features:
-  - http.headers.Sec-Speculation-Tags
+  - http.headers.Clear-Site-Data.prefetchCache
+  - http.headers.Clear-Site-Data.prerenderCache
 
 # The following features in the spec are already part of web-features:
 # - <link rel="prefetch">:
@@ -12,3 +13,4 @@ compat_features:
 #   - http.headers.Sec-Purpose.prefetch
 # - Speculation rules:
 #   - http.headers.Sec-Purpose.speculationrules
+#   - http.headers.Sec-Speculation-Tags

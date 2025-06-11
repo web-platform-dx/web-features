@@ -64,6 +64,7 @@ compat_features:
   - api.CanvasRenderingContext2D.strokeRect
   - api.CanvasRenderingContext2D.strokeStyle
   - api.CanvasRenderingContext2D.translate
+  - api.HTMLCanvasElement.getContext.2d_context
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -594,3 +595,10 @@ compat_features:
   #   safari_ios: "11.3"
   - api.TextMetrics.emHeightAscent
   - api.TextMetrics.emHeightDescent
+
+  # baseline: false
+  # support:
+  #   chrome: "136"
+  #   chrome_android: "136"
+  #   edge: "136"
+  - api.CanvasRenderingContext2D.lang

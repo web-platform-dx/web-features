@@ -1,9 +1,8 @@
-draft_date: 2025-05-12
+draft_date: 2025-05-31
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
-  - api.CanvasRenderingContext2D.lang
   - api.CustomElementRegistry.define.connectedMoveCallback_lifecycle_callback
   - api.Document.featurePolicy
   - api.ElementInternals.shadowRoot
@@ -35,12 +34,9 @@ compat_features:
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
   - api.HTMLDialogElement.closedBy
   - api.HTMLElement.error_event
-  - api.HTMLElement.load_event
   - api.HTMLIFrameElement.featurePolicy
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes.auto
-  - api.HTMLInputElement.alpha
-  - api.HTMLInputElement.colorSpace
   - api.HTMLInputElement.showPicker.autocomplete_input
   - api.HTMLInputElement.showPicker.datalist_input
   - api.HTMLInputElement.showPicker.month_input
@@ -96,6 +92,7 @@ compat_features:
   - html.elements.form.autocomplete.new-password
   - html.elements.form.autocomplete.one-time-code
   - html.elements.form.autocomplete.webauthn
+  - html.elements.h1.no_ua_styles_in_article_aside_nav_section
   - html.elements.hr.hr_in_select
   - html.elements.html.xmlns
   - html.elements.iframe.allow.autoplay
@@ -104,11 +101,8 @@ compat_features:
   - html.elements.iframe.allow.wildcards
   - html.elements.iframe.sandbox.allow-orientation-lock
   - html.elements.iframe.sandbox.allow-pointer-lock
-  - html.elements.img.sizes.auto
   - html.elements.img.usemap.case_sensitive
-  - html.elements.input.alpha
   - html.elements.input.autocomplete
-  - html.elements.input.colorspace
   - html.elements.link.rel.icon
   - html.elements.script.type.importmap.integrity
   - html.elements.script.type.importmap.multiple_import_maps
@@ -131,7 +125,6 @@ compat_features:
   - http.headers.Origin-Agent-Cluster
   - http.headers.Permissions-Policy.autoplay
   - http.headers.Permissions-Policy.cross-origin-isolated
-  - http.headers.Permissions-Policy.document-domain
   - http.headers.Refresh
   - http.headers.X-Frame-Options
   - http.headers.X-Frame-Options.SAMEORIGIN
@@ -239,6 +232,7 @@ compat_features:
 #   - api.CanvasRenderingContext2D.isPointInPath.path_parameter
 #   - api.CanvasRenderingContext2D.isPointInStroke
 #   - api.CanvasRenderingContext2D.isPointInStroke.path_parameter
+#   - api.CanvasRenderingContext2D.lang
 #   - api.CanvasRenderingContext2D.letterSpacing
 #   - api.CanvasRenderingContext2D.lineCap
 #   - api.CanvasRenderingContext2D.lineDashOffset
@@ -429,6 +423,7 @@ compat_features:
 #   - api.HTMLElement.dir
 #   - api.HTMLElement.hidden
 #   - api.HTMLElement.innerText
+#   - api.HTMLElement.load_event
 #   - api.HTMLElement.outerText
 #   - api.Window.document
 # - Dataset:
@@ -1322,6 +1317,12 @@ compat_features:
 #   - html.elements.input.size
 #   - html.elements.input.src
 #   - html.elements.input.type_text
+# - <input type="color">:
+#   - api.HTMLInputElement.alpha
+#   - api.HTMLInputElement.colorSpace
+#   - html.elements.input.alpha
+#   - html.elements.input.colorspace
+#   - html.elements.input.type_color
 # - <input type="checkbox">:
 #   - api.HTMLInputElement.defaultChecked
 #   - api.HTMLInputElement.indeterminate
@@ -1847,7 +1848,6 @@ compat_features:
 #   - html.elements.textarea.readonly
 #   - html.elements.textarea.required
 #   - html.elements.textarea.rows
-#   - html.elements.textarea.spellcheck
 #   - html.elements.textarea.wrap
 #   - html.elements.textarea.wrap.hard
 # - <time>:
@@ -2322,10 +2322,10 @@ compat_features:
 # - aspect-ratio:
 #   - html.elements.img.aspect_ratio_computed_from_attributes
 #   - html.elements.video.aspect_ratio_computed_from_attributes
+# - <img sizes="auto" loading="lazy">:
+#   - html.elements.img.sizes.auto
 # - <input type="button">:
 #   - html.elements.input.type_button
-# - <input type="color">:
-#   - html.elements.input.type_color
 # - Email, telephone, and URL <input> types:
 #   - html.elements.input.type_email
 #   - html.elements.input.type_tel

@@ -1,15 +1,8 @@
-draft_date: 2025-05-12
+draft_date: 2025-05-19
 name: CSS Display Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-display-4/
 compat_features:
-  - css.properties.reading-flow.flex-flow
-  - css.properties.reading-flow.flex-visual
-  - css.properties.reading-flow.grid-columns
-  - css.properties.reading-flow.grid-order
-  - css.properties.reading-flow.grid-rows
-  - css.properties.reading-flow.normal
-  - css.properties.reading-flow.source-order
   - css.properties.reading-order
 
 # The following features in the spec are already part of web-features:
@@ -61,6 +54,13 @@ compat_features:
 #   - css.properties.display.ruby-text-container
 # - reading-flow:
 #   - css.properties.reading-flow
+#   - css.properties.reading-flow.flex-flow
+#   - css.properties.reading-flow.flex-visual
+#   - css.properties.reading-flow.grid-columns
+#   - css.properties.reading-flow.grid-order
+#   - css.properties.reading-flow.grid-rows
+#   - css.properties.reading-flow.normal
+#   - css.properties.reading-flow.source-order
 # - visibility:
 #   - css.properties.visibility
 #   - css.properties.visibility.collapse

@@ -104,6 +104,8 @@ compat_features:
   #   firefox_android: "105"
   #   safari: "15"
   #   safari_ios: "15"
+  - api.FontFace.worker_support
+  - api.FontFaceSet.worker_support
   - api.WorkerGlobalScope.fonts
 
   # baseline: low
@@ -137,16 +139,6 @@ compat_features:
   #   firefox: "41"
   #   firefox_android: "41"
   - api.FontFaceSetLoadEvent.FontFaceSetLoadEvent
-
-  # baseline: false
-  # support:
-  #   chrome: "69"
-  #   chrome_android: "69"
-  #   edge: "79"
-  #   firefox: "105"
-  #   firefox_android: "105"
-  - api.FontFace.worker_support
-  - api.FontFaceSet.worker_support
 
   # baseline: false
   # support:
