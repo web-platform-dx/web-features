@@ -1,0 +1,25 @@
+name: Audit Consumers
+
+on:
+  # TODO: revert before landing
+  push:
+    branches:
+      - audit-consumers
+  # Runs at midnight on Mondays 03:45 UTC, or manually triggered
+  schedule:
+    - cron: "45 3 * * 1"
+  workflow_dispatch:
+
+jobs:
+  audit-consumers:
+    if: github.repository == 'web-platform-dx/web-features'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run audit-consumers
