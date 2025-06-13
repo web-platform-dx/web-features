@@ -5,6 +5,7 @@ spec: https://registry.khronos.org/webgl/specs/latest/2.0/
 status:
   compute_from: api.WebGL2RenderingContext
 compat_features:
+  - api.HTMLCanvasElement.getContext.webgl2_context
   - api.HTMLCanvasElement.getContext.webgl2_context.options_alpha_parameter
   - api.HTMLCanvasElement.getContext.webgl2_context.options_failIfMajorPerformanceCaveat_parameter
   - api.HTMLCanvasElement.getContext.webgl2_context.options_powerPreference_parameter
