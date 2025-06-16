@@ -17,7 +17,6 @@ compat_features:
   #   safari_ios: "18.4"
   - api.ExtendableCookieChangeEvent.changed.partitioned_property
   - api.ExtendableCookieChangeEvent.deleted.partitioned_property
-  - http.headers.Set-Cookie.Partitioned
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
@@ -28,3 +27,4 @@ compat_features:
   - api.CookieStore.delete.partitioned_option
   - api.CookieStore.get.partitioned_return_property
   - api.CookieStore.set.partitioned_option
+  - http.headers.Set-Cookie.Partitioned
