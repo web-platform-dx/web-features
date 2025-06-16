@@ -70,19 +70,6 @@ compat_features:
   #   chrome: "1"
   #   chrome_android: "18"
   #   edge: "12"
-  #   firefox: "1.5"
-  #   firefox_android: "4"
-  #   safari: "2"
-  #   safari_ios: "1"
-  - api.HTMLCanvasElement.getContext.2d_context
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
   #   firefox: "4"
   #   firefox_android: "4"
   #   safari: "3.1"
@@ -906,9 +893,7 @@ compat_features:
   #   chrome: "134"
   #   chrome_android: "134"
   #   edge: "134"
-  - api.HTMLDialogElement.closedBy
   - api.OffscreenCanvasRenderingContext2D.getContextAttributes
-  - html.elements.dialog.closedby
 
   # baseline: false
   # support:
