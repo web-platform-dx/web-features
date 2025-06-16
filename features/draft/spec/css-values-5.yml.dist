@@ -3,9 +3,17 @@
 
 status:
   baseline: false
-  support:
-    chrome: "137"
-    chrome_android: "137"
-    edge: "137"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "137"
+  #   chrome_android: "137"
+  #   edge: "137"
   - css.types.if
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.types.sibling-count
+  - css.types.sibling-index
