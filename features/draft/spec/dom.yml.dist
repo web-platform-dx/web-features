@@ -3,9 +3,18 @@
 
 status:
   baseline: false
-  support:
-    chrome: "74"
-    chrome_android: "74"
-    edge: "79"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "74"
+  #   chrome_android: "74"
+  #   edge: "79"
   - api.Document.featurePolicy
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.Document.customElementRegistry
+  - api.Element.customElementRegistry
+  - api.ShadowRoot.customElementRegistry

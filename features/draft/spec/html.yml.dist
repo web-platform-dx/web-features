@@ -402,19 +402,6 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
-  #   chrome: "33"
-  #   chrome_android: "33"
-  #   edge: "79"
-  #   firefox: "24"
-  #   firefox_android: "24"
-  #   safari: "8"
-  #   safari_ios: "8"
-  - api.HTMLCanvasElement.getContext.webgl_context
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
   #   chrome: "50"
   #   chrome_android: "50"
   #   edge: "79"
@@ -523,19 +510,6 @@ compat_features:
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - api.queueMicrotask
-
-  # baseline: high
-  # baseline_low_date: 2021-09-20
-  # baseline_high_date: 2024-03-20
-  # support:
-  #   chrome: "56"
-  #   chrome_android: "56"
-  #   edge: "79"
-  #   firefox: "51"
-  #   firefox_android: "51"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - api.HTMLCanvasElement.getContext.webgl2_context
 
   # baseline: high
   # baseline_low_date: 2021-12-13
@@ -938,7 +912,10 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
+  - api.CustomElementRegistry.CustomElementRegistry
+  - api.CustomElementRegistry.initialize
   - api.HTMLButtonElement.command.request-close
+  - api.HTMLTemplateElement.shadowRootCustomElementRegistry
   - api.Navigator.authentication
   - html.elements.h1.no_ua_styles_in_article_aside_nav_section
   - html.elements.hr.hr_in_select

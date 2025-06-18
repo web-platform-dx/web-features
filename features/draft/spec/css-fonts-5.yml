@@ -1,8 +1,28 @@
-draft_date: 2025-05-19
+draft_date: 2025-06-18
 name: CSS Fonts Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-fonts-5/
 compat_features:
+  - api.CSSFontFaceDescriptors
+  - api.CSSFontFaceDescriptors.font-display
+  - api.CSSFontFaceDescriptors.font-family
+  - api.CSSFontFaceDescriptors.font-feature-settings
+  - api.CSSFontFaceDescriptors.font-stretch
+  - api.CSSFontFaceDescriptors.font-style
+  - api.CSSFontFaceDescriptors.font-weight
+  - api.CSSFontFaceDescriptors.font-width
+  - api.CSSFontFaceDescriptors.fontDisplay
+  - api.CSSFontFaceDescriptors.fontFamily
+  - api.CSSFontFaceDescriptors.fontFeatureSettings
+  - api.CSSFontFaceDescriptors.fontStretch
+  - api.CSSFontFaceDescriptors.fontStyle
+  - api.CSSFontFaceDescriptors.fontWeight
+  - api.CSSFontFaceDescriptors.fontWidth
+  - api.CSSFontFaceDescriptors.size-adjust
+  - api.CSSFontFaceDescriptors.sizeAdjust
+  - api.CSSFontFaceDescriptors.src
+  - api.CSSFontFaceDescriptors.unicode-range
+  - api.CSSFontFaceDescriptors.unicodeRange
   - css.at-rules.font-face.font-width
   - css.properties.font-synthesis-style.oblique-only
   - css.properties.font-width.percentage
