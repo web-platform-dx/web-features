@@ -8,6 +8,16 @@ status:
     chrome_android: "121"
     edge: "113"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "113"
+  #   chrome_android: "121"
+  #   edge: "113"
+  #   safari: "18.5"
+  #   safari_ios: "18.5"
+  - api.GPUOutOfMemoryError
+  - api.GPUOutOfMemoryError.GPUOutOfMemoryError
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
@@ -117,8 +127,6 @@ compat_features:
   - api.GPUExternalTexture.label
   - api.GPUInternalError
   - api.GPUInternalError.GPUInternalError
-  - api.GPUOutOfMemoryError
-  - api.GPUOutOfMemoryError.GPUOutOfMemoryError
   - api.GPUPipelineError
   - api.GPUPipelineError.GPUPipelineError
   - api.GPUPipelineError.GPUPipelineError.message_optional
