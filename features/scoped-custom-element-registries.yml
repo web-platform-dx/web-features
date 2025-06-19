@@ -1,6 +1,8 @@
 name: Scoped custom element registries
-description: The `CustomElementRegistry()` constructor creates multiple custom element registries so that multiple custom element definitions for a single tag name can exist without conflicts. This is useful if more than one library is used, for example.
-spec: https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-api
+description: The `CustomElementRegistry()` constructor creates a new custom element registry that's separate from the global `window.customElements` registry. Creating more than one registry is useful to register multiple custom elements that have the same tag name.
+spec:
+  - https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-api
+  - https://dom.spec.whatwg.org/#element-custom-element-registry
 group: custom-elements
 compat_features:
   - api.CustomElementRegistry.CustomElementRegistry
