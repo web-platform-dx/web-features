@@ -1,4 +1,4 @@
-draft_date: 2025-06-16
+draft_date: 2025-06-19
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -22,8 +22,6 @@ compat_features:
   - api.HTMLButtonElement.command.request-close
   - api.HTMLCanvasElement.getContext.bitmaprenderer_context
   - api.HTMLCanvasElement.getContext.bitmaprenderer_context.options_alpha_parameter
-  - api.HTMLCanvasElement.getContext.webgl2_context
-  - api.HTMLCanvasElement.getContext.webgl_context
   - api.HTMLCanvasElement.toBlob.quality_parameter
   - api.HTMLCanvasElement.toBlob.type_parameter_jpeg
   - api.HTMLCanvasElement.toBlob.type_parameter_png
@@ -354,6 +352,10 @@ compat_features:
 #   - api.CustomElementRegistry.whenDefined
 #   - api.Window.customElements
 #   - css.selectors.defined
+# - Scoped custom element registries:
+#   - api.CustomElementRegistry.CustomElementRegistry
+#   - api.CustomElementRegistry.initialize
+#   - api.HTMLTemplateElement.shadowRootCustomElementRegistry
 # - Customized built-in elements:
 #   - api.CustomElementRegistry.builtin_element_support
 #   - html.global_attributes.is
@@ -518,8 +520,6 @@ compat_features:
 # - document.write():
 #   - api.Document.close
 #   - api.Document.open
-#   - api.Document.writeln
-#   - api.Document.writeln.accepts_TrustedHTML
 # - Cookies:
 #   - api.Document.cookie
 # - Page visibility:
@@ -951,6 +951,10 @@ compat_features:
 #   - api.HTMLCanvasElement.getContext.2d_context.options_desynchronized_parameter
 # - willReadFrequently:
 #   - api.HTMLCanvasElement.getContext.2d_context.options_willReadFrequently_parameter
+# - WebGL2:
+#   - api.HTMLCanvasElement.getContext.webgl2_context
+# - WebGL:
+#   - api.HTMLCanvasElement.getContext.webgl_context
 # - Offscreen canvas:
 #   - api.HTMLCanvasElement.transferControlToOffscreen
 #   - api.OffscreenCanvas

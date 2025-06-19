@@ -1,4 +1,4 @@
-draft_date: 2025-03-03
+draft_date: 2025-06-19
 name: DOM
 description: TODO
 spec: https://dom.spec.whatwg.org/
@@ -355,6 +355,10 @@ compat_features:
 #   - api.XPathResult.snapshotItem
 #   - api.XPathResult.snapshotLength
 #   - api.XPathResult.stringValue
+# - Scoped custom element registries:
+#   - api.Document.customElementRegistry
+#   - api.Element.customElementRegistry
+#   - api.ShadowRoot.customElementRegistry
 # - moveBefore():
 #   - api.Document.moveBefore
 #   - api.DocumentFragment.moveBefore
