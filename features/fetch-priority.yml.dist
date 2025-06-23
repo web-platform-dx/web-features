@@ -55,3 +55,9 @@ compat_features:
   #   safari: "17.2"
   #   safari_ios: "17.2"
   - http.headers.Link.fetchpriority
+
+  # baseline: false
+  # support: {}
+  - svg.elements.feImage.fetchpriority
+  - svg.elements.image.fetchpriority
+  - svg.elements.script.fetchpriority
