@@ -1,4 +1,4 @@
-draft_date: 2025-06-19
+draft_date: 2025-06-23
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -2201,6 +2201,10 @@ compat_features:
 #   - html.elements.script.nomodule
 #   - html.elements.script.type.module
 #   - javascript.operators.import_meta.resolve
+# - XMLSerializer:
+#   - api.XMLSerializer
+#   - api.XMLSerializer.XMLSerializer
+#   - api.XMLSerializer.serializeToString
 # - Base64 encoding and decoding:
 #   - api.atob
 #   - api.atob.worker_support
