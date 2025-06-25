@@ -193,14 +193,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "48"
-  #   edge: "18"
-  #   firefox: "138"
-  #   firefox_android: "138"
-  - api.Notification.maxActions_static
-
-  # baseline: false
-  # support:
   #   chrome: "62"
   #   edge: "79"
   #   firefox: "67"
@@ -260,6 +252,12 @@ compat_features:
   #   chrome: "47"
   #   edge: "17"
   - api.Notification.requireInteraction
+
+  # baseline: false
+  # support:
+  #   chrome: "48"
+  #   edge: "18"
+  - api.Notification.maxActions_static
 
   # baseline: false
   # support:

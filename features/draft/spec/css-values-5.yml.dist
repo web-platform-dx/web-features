@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "138"
+    chrome_android: "138"
 compat_features:
   # baseline: false
   # support:
@@ -14,6 +16,8 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
   - css.types.sibling-count
   - css.types.sibling-index

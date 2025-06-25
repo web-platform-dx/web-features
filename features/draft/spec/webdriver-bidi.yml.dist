@@ -206,6 +206,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  #   firefox: "140"
+  #   firefox_android: "140"
+  - webdriver.bidi.browsingContext.navigationCommitted_event
+
+  # baseline: false
+  # support:
   #   chrome: "131"
   #   chrome_android: "131"
   #   edge: "131"
@@ -231,7 +240,6 @@ compat_features:
   - webdriver.bidi.browsingContext.contextDestroyed_event
   - webdriver.bidi.browsingContext.locateNodes
   - webdriver.bidi.browsingContext.navigate
-  - webdriver.bidi.browsingContext.navigationCommitted_event
   - webdriver.bidi.browsingContext.navigationFailed_event
   - webdriver.bidi.browsingContext.reload
   - webdriver.bidi.browsingContext.setViewport

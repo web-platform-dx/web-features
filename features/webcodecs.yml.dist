@@ -221,6 +221,8 @@ compat_features:
   - api.AudioEncoder.configure.opus.opus_signal
 
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
   - api.VideoFrame.flip
   - api.VideoFrame.rotation
