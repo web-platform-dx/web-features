@@ -3,7 +3,8 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "138"
 compat_features:
   # baseline: false
   # support:
@@ -26,7 +27,8 @@ compat_features:
   - manifests.webapp.note_taking
   - manifests.webapp.note_taking.new_note_url
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
   - manifests.webapp.scope_extensions
