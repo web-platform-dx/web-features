@@ -5,6 +5,7 @@ status:
   baseline: false
   support:
     chrome: "138"
+    edge: "138"
 compat_features:
   # baseline: false
   # support:
@@ -22,13 +23,14 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
+  #   edge: "138"
+  - manifests.webapp.scope_extensions
+
+  # baseline: false
+  # support:
   #   chrome: "95"
   #   edge: "95"
   - manifests.webapp.note_taking
   - manifests.webapp.note_taking.new_note_url
-
-  # baseline: false
-  # support:
-  #   chrome: "138"
-  #   chrome_android: "138"
-  - manifests.webapp.scope_extensions
