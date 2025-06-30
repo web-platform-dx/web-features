@@ -118,6 +118,7 @@ compat_features:
   #   firefox: "117"
   #   firefox_android: "117"
   - webdriver.bidi.browser
+  - webdriver.bidi.browsingContext.create
   - webdriver.bidi.browsingContext.fragmentNavigated_event
 
   # baseline: false
@@ -158,6 +159,27 @@ compat_features:
   #   firefox_android: "124"
   - webdriver.bidi.browser.createUserContext
   - webdriver.bidi.browser.getUserContexts
+  - webdriver.bidi.storage
+
+  # baseline: false
+  # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  #   firefox: "126"
+  #   firefox_android: "126"
+  - webdriver.bidi.storage.deleteCookies
+  - webdriver.bidi.storage.getCookies
+  - webdriver.bidi.storage.setCookie
+
+  # baseline: false
+  # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  #   firefox: "127"
+  #   firefox_android: "127"
+  - webdriver.bidi.permission
 
   # baseline: false
   # support:
@@ -184,6 +206,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  #   firefox: "140"
+  #   firefox_android: "140"
+  - webdriver.bidi.browsingContext.navigationCommitted_event
+
+  # baseline: false
+  # support:
   #   chrome: "131"
   #   chrome_android: "131"
   #   edge: "131"
@@ -193,15 +224,22 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "132"
+  #   chrome_android: "132"
+  #   edge: "132"
+  #   firefox: "130"
+  #   firefox_android: "130"
+  - webdriver.bidi.network.setCacheBehavior
+
+  # baseline: false
+  # support:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
   - webdriver.bidi.browsingContext.contextCreated_event
   - webdriver.bidi.browsingContext.contextDestroyed_event
-  - webdriver.bidi.browsingContext.create
   - webdriver.bidi.browsingContext.locateNodes
   - webdriver.bidi.browsingContext.navigate
-  - webdriver.bidi.browsingContext.navigationCommitted_event
   - webdriver.bidi.browsingContext.navigationFailed_event
   - webdriver.bidi.browsingContext.reload
   - webdriver.bidi.browsingContext.setViewport
@@ -241,14 +279,24 @@ compat_features:
   - webdriver.bidi.webExtension
   - webdriver.bidi.webExtension.uninstall
 
+  # baseline: false
+  # support:
+  #   firefox: "139"
+  #   firefox_android: "139"
+  - webdriver.bidi.emulation
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
+  - webdriver.bidi.browsingContext.historyUpdated_event
   - webdriver.bidi.browsingContext.print
+  - webdriver.bidi.emulation.setGeolocationOverride
+  - webdriver.bidi.network.addIntercept
   - webdriver.bidi.network.beforeRequestSent_event
   - webdriver.bidi.network.continueRequest
   - webdriver.bidi.network.continueResponse
   - webdriver.bidi.network.provideResponse
   - webdriver.bidi.network.responseCompleted_event
   - webdriver.bidi.network.responseStarted_event
+  - webdriver.bidi.session.end
   - webdriver.bidi.webExtension.install

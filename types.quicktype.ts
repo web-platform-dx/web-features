@@ -108,7 +108,6 @@ export interface FeatureData {
    */
   status?: StatusHeadline;
   redirect?: Redirect;
-  [property: string]: any;
 }
 
 /**
@@ -158,15 +157,14 @@ export interface StatusHeadline {
    */
   baseline_low_date?: string;
   /**
-   * Browser versions that most-recently introduced the feature
-   */
-  support: Support;
-  /**
    * Statuses for each key in the feature's compat_features list, if applicable. Not available
    * to the npm release of web-features.
    */
   by_compat_key?: { [key: string]: Status };
-  [property: string]: any;
+  /**
+   * Browser versions that most-recently introduced the feature
+   */
+  support: Support;
 }
 
 export type BaselineEnum = "high" | "low";
@@ -219,10 +217,9 @@ export interface SnapshotData {
   /**
    * Short name
    */
-  name?: string;
+  name: string;
   /**
    * Specification
    */
-  spec?: string;
-  [property: string]: any;
+  spec: string;
 }

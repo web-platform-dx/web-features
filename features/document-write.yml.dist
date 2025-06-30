@@ -25,7 +25,6 @@ compat_features:
   #   safari_ios: "11"
   - api.Document.close
   - api.Document.open
-  - api.Document.writeln
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
@@ -38,6 +37,7 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - api.Document.write
+  - api.Document.writeln
 
   # baseline: false
   # support:

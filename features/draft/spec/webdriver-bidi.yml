@@ -1,4 +1,4 @@
-draft_date: 2025-03-10
+draft_date: 2025-06-05
 name: WebDriver BiDi
 description: TODO
 spec: https://w3c.github.io/webdriver-bidi/
@@ -20,6 +20,7 @@ compat_features:
   - webdriver.bidi.browsingContext.fragmentNavigated_event
   - webdriver.bidi.browsingContext.getTree
   - webdriver.bidi.browsingContext.handleUserPrompt
+  - webdriver.bidi.browsingContext.historyUpdated_event
   - webdriver.bidi.browsingContext.load_event
   - webdriver.bidi.browsingContext.locateNodes
   - webdriver.bidi.browsingContext.navigate
@@ -32,6 +33,8 @@ compat_features:
   - webdriver.bidi.browsingContext.traverseHistory
   - webdriver.bidi.browsingContext.userPromptClosed_event
   - webdriver.bidi.browsingContext.userPromptOpened_event
+  - webdriver.bidi.emulation
+  - webdriver.bidi.emulation.setGeolocationOverride
   - webdriver.bidi.input
   - webdriver.bidi.input.performActions
   - webdriver.bidi.input.releaseActions
@@ -39,6 +42,7 @@ compat_features:
   - webdriver.bidi.log
   - webdriver.bidi.log.entryAdded_event
   - webdriver.bidi.network
+  - webdriver.bidi.network.addIntercept
   - webdriver.bidi.network.authRequired_event
   - webdriver.bidi.network.beforeRequestSent_event
   - webdriver.bidi.network.continueRequest
@@ -50,6 +54,8 @@ compat_features:
   - webdriver.bidi.network.removeIntercept
   - webdriver.bidi.network.responseCompleted_event
   - webdriver.bidi.network.responseStarted_event
+  - webdriver.bidi.network.setCacheBehavior
+  - webdriver.bidi.permission
   - webdriver.bidi.script
   - webdriver.bidi.script.addPreloadScript
   - webdriver.bidi.script.callFunction
@@ -61,10 +67,15 @@ compat_features:
   - webdriver.bidi.script.realmDestroyed_event
   - webdriver.bidi.script.removePreloadScript
   - webdriver.bidi.session
+  - webdriver.bidi.session.end
   - webdriver.bidi.session.new
   - webdriver.bidi.session.status
   - webdriver.bidi.session.subscribe
   - webdriver.bidi.session.unsubscribe
+  - webdriver.bidi.storage
+  - webdriver.bidi.storage.deleteCookies
+  - webdriver.bidi.storage.getCookies
+  - webdriver.bidi.storage.setCookie
   - webdriver.bidi.webExtension
   - webdriver.bidi.webExtension.install
   - webdriver.bidi.webExtension.uninstall
