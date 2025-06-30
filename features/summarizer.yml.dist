@@ -6,6 +6,16 @@ status:
   support:
     chrome: "138"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "138"
+  #   edge: "138"
+  - http.headers.Permissions-Policy.summarizer
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "138"
   - api.Summarizer
   - api.Summarizer.availability_static
   - api.Summarizer.create_static
@@ -21,4 +31,3 @@ compat_features:
   - api.Summarizer.summarize
   - api.Summarizer.summarizeStreaming
   - api.Summarizer.type
-  - http.headers.Permissions-Policy.summarizer
