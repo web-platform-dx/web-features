@@ -1,0 +1,8 @@
+name: Box alignment of absolute positioned elements
+description: The `align-self` and `justify-self` properties, and their `place-self` shorthand, align an absolute positioned element within its containing block, outside of a flex or grid layout.
+spec: https://drafts.csswg.org/css-align/#justify-abspos
+group: positioning
+compat_features:
+  - css.properties.place-self.position_absolute_context
+  - css.properties.align-self.position_absolute_context
+  - css.properties.justify-self.position_absolute_context
