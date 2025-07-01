@@ -18,7 +18,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - run: npm run audit-consumers | tee issue-body.md
+      - run: npm run audit-consumers --silent | tee issue-body.md
       - uses: peter-evans/create-issue-from-file@v5
         with:
           title: Automated report on web-features consumers
