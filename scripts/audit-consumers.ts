@@ -6,6 +6,12 @@ import { Octokit } from "@octokit/rest";
 
 import { features as webFeatures } from "../index.js";
 
+interface Report {
+  heading: string;
+  items: string[];
+  trailer: string;
+}
+
 // Yield all entries from chromestatus.com. Because the newest entry is returned
 // first and entries might be created while we're iterating, it's possible that
 // the same entry is yielded multiple times. If this is a problem they have to be
@@ -36,7 +42,7 @@ async function* chromeStatusFeatures() {
   }
 }
 
-async function chromiumSourceFile(path) {
+async function chromiumSourceFile(path: string) {
   const url = `https://github.com/chromium/chromium/raw/refs/heads/main/${path}`;
   const resp = await fetch(url);
   if (!resp.ok) {
@@ -45,13 +51,13 @@ async function chromiumSourceFile(path) {
   return await resp.text();
 }
 
-async function chromiumUseCounters() {
+async function chromiumUseCounters(): Promise<Map<string, number>> {
   const text = await chromiumSourceFile(
     "tools/metrics/histograms/metadata/blink/enums.xml",
   );
   const $ = cheerio.load(text);
   const $elems = $('enum[name="WebDXFeatureObserver"]').find("[value][label]");
-  const counters = new Map();
+  const counters = new Map<string, number>();
   for (const e of $elems) {
     const value = parseInt($(e).attr("value"));
     const label = $(e).attr("label");
@@ -60,7 +66,7 @@ async function chromiumUseCounters() {
   return counters;
 }
 
-async function useCounterReport() {
+async function useCounterReport(): Promise<Report> {
   const counters = await chromiumUseCounters();
 
   // Convert feature-name to FeatureName following the same rules as
@@ -105,7 +111,7 @@ async function useCounterReport() {
   };
 }
 
-async function chromeStatusReport() {
+async function chromeStatusReport(): Promise<Report> {
   const items = [];
 
   for await (const f of chromeStatusFeatures()) {
@@ -125,7 +131,7 @@ async function chromeStatusReport() {
   };
 }
 
-async function wptReport() {
+async function wptReport(): Promise<Report> {
   const octokit = new Octokit();
 
   const params = { owner: "web-platform-tests", repo: "wpt" };
