@@ -1,0 +1,122 @@
+draft_date: 2025-06-19
+name: CSS Object Model (CSSOM)
+description: TODO
+spec: https://drafts.csswg.org/cssom-1/
+compat_features:
+  - api.CSSStyleProperties
+  - api.CSSStyleProperties.cssFloat
+
+# The following features in the spec are already part of web-features:
+# - CSS object model:
+#   - api.CSS
+#   - api.CSSGroupingRule
+#   - api.CSSGroupingRule.cssRules
+#   - api.CSSGroupingRule.deleteRule
+#   - api.CSSGroupingRule.insertRule
+#   - api.CSSMarginRule
+#   - api.CSSMarginRule.name
+#   - api.CSSMarginRule.style
+#   - api.CSSPageDescriptors
+#   - api.CSSPageDescriptors.margin
+#   - api.CSSPageDescriptors.margin-bottom
+#   - api.CSSPageDescriptors.margin-left
+#   - api.CSSPageDescriptors.margin-right
+#   - api.CSSPageDescriptors.margin-top
+#   - api.CSSPageDescriptors.marginBottom
+#   - api.CSSPageDescriptors.marginLeft
+#   - api.CSSPageDescriptors.marginRight
+#   - api.CSSPageDescriptors.marginTop
+#   - api.CSSPageDescriptors.page-orientation
+#   - api.CSSPageDescriptors.pageOrientation
+#   - api.CSSPageDescriptors.size
+#   - api.CSSPageRule
+#   - api.CSSPageRule.selectorText
+#   - api.CSSPageRule.style
+#   - api.CSSPageRule.style.type_CSSPageDescriptors
+#   - api.CSSRule
+#   - api.CSSRule.cssText
+#   - api.CSSRule.parentRule
+#   - api.CSSRule.parentStyleSheet
+#   - api.CSSRuleList
+#   - api.CSSRuleList.item
+#   - api.CSSRuleList.length
+#   - api.CSSStyleDeclaration
+#   - api.CSSStyleDeclaration.@@iterator
+#   - api.CSSStyleDeclaration.cssFloat
+#   - api.CSSStyleDeclaration.cssText
+#   - api.CSSStyleDeclaration.getPropertyPriority
+#   - api.CSSStyleDeclaration.getPropertyValue
+#   - api.CSSStyleDeclaration.item
+#   - api.CSSStyleDeclaration.length
+#   - api.CSSStyleDeclaration.parentRule
+#   - api.CSSStyleDeclaration.removeProperty
+#   - api.CSSStyleDeclaration.setProperty
+#   - api.CSSStyleRule
+#   - api.CSSStyleRule.selectorText
+#   - api.CSSStyleRule.style
+#   - api.CSSStyleSheet
+#   - api.CSSStyleSheet.cssRules
+#   - api.CSSStyleSheet.deleteRule
+#   - api.CSSStyleSheet.insertRule
+#   - api.CSSStyleSheet.insertRule.index_parameter_optional
+#   - api.CSSStyleSheet.ownerRule
+#   - api.Document.styleSheets
+#   - api.HTMLElement.style
+#   - api.HTMLLinkElement.sheet
+#   - api.HTMLStyleElement.sheet
+#   - api.MediaList
+#   - api.MediaList.appendMedium
+#   - api.MediaList.deleteMedium
+#   - api.MediaList.item
+#   - api.MediaList.length
+#   - api.MediaList.mediaText
+#   - api.MediaList.toString
+#   - api.ProcessingInstruction.sheet
+#   - api.ShadowRoot.styleSheets
+#   - api.StyleSheet
+#   - api.StyleSheet.disabled
+#   - api.StyleSheet.href
+#   - api.StyleSheet.media
+#   - api.StyleSheet.ownerNode
+#   - api.StyleSheet.parentStyleSheet
+#   - api.StyleSheet.title
+#   - api.StyleSheet.type
+#   - api.StyleSheetList
+#   - api.StyleSheetList.item
+#   - api.StyleSheetList.length
+# - CSS.escape():
+#   - api.CSS.escape_static
+# - @import:
+#   - api.CSSImportRule
+#   - api.CSSImportRule.href
+#   - api.CSSImportRule.media
+#   - api.CSSImportRule.styleSheet
+# - Cascade layers:
+#   - api.CSSImportRule.layerName
+# - @supports:
+#   - api.CSSImportRule.supportsText
+# - @namespace:
+#   - api.CSSNamespaceRule
+#   - api.CSSNamespaceRule.namespaceURI
+#   - api.CSSNamespaceRule.prefix
+# - Nesting:
+#   - api.CSSStyleRule.cssRules
+#   - api.CSSStyleRule.deleteRule
+#   - api.CSSStyleRule.insertRule
+# - Constructed stylesheets:
+#   - api.CSSStyleSheet.CSSStyleSheet
+#   - api.CSSStyleSheet.CSSStyleSheet.options_baseURL_parameter
+#   - api.CSSStyleSheet.replace
+#   - api.CSSStyleSheet.replaceSync
+#   - api.Document.adoptedStyleSheets
+#   - api.ShadowRoot.adoptedStyleSheets
+# - MathML:
+#   - api.MathMLElement.style
+# - SVG:
+#   - api.SVGElement.style
+#   - api.SVGStyleElement.sheet
+# - getComputedStyle():
+#   - api.Window.getComputedStyle
+#   - api.Window.getComputedStyle.pseudo_element_support
+# - Alternative style sheets:
+#   - html.elements.link.rel.alternate_stylesheet

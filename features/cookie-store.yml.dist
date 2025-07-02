@@ -8,11 +8,14 @@ status:
     chrome_android: "87"
     edge: "87"
 compat_features:
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-06-24
   # support:
   #   chrome: "87"
   #   chrome_android: "87"
   #   edge: "87"
+  #   firefox: "140"
+  #   firefox_android: "140"
   #   safari: "18.4"
   #   safari_ios: "18.4"
   - api.CookieChangeEvent
@@ -34,6 +37,20 @@ compat_features:
   - api.ServiceWorkerGlobalScope.cookieStore
   - api.Window.cookieStore
 
+  # baseline: false
+  # support:
+  #   chrome: "87"
+  #   chrome_android: "87"
+  #   edge: "87"
+  #   firefox: "140"
+  #   firefox_android: "140"
+  - api.CookieStoreManager
+  - api.CookieStoreManager.getSubscriptions
+  - api.CookieStoreManager.subscribe
+  - api.CookieStoreManager.unsubscribe
+  - api.ServiceWorkerGlobalScope.cookiechange_event
+  - api.ServiceWorkerRegistration.cookies
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
@@ -45,9 +62,3 @@ compat_features:
   - api.CookieStore.get.path_return_property
   - api.CookieStore.get.sameSite_return_property
   - api.CookieStore.get.secure_return_property
-  - api.CookieStoreManager
-  - api.CookieStoreManager.getSubscriptions
-  - api.CookieStoreManager.subscribe
-  - api.CookieStoreManager.unsubscribe
-  - api.ServiceWorkerGlobalScope.cookiechange_event
-  - api.ServiceWorkerRegistration.cookies

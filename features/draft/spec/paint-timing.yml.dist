@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "140"
+    firefox_android: "140"
 compat_features:
   - api.LargestContentfulPaint.paintTime
   - api.LargestContentfulPaint.presentationTime
