@@ -1,5 +1,5 @@
 name: queueMicrotask()
-description: The `queueMicrotask()` method schedules a function that runs after the currently running synchronous JavaScript, before returning to the event loop.
+description: The `queueMicrotask()` method schedules a function to run after the currently running synchronous JavaScript finishes but before returning to the event loop.
 spec: https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing
 compat_features:
   - api.queueMicrotask
