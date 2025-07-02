@@ -41,7 +41,7 @@ layout: "default.html"
 </style>
 <script type="module">
   // Conditional equired as 11ty cannot resolve module import URLs in github pages
-  import { getCompatibleVersions } from '{% if eleventy.env.runMode != "serve" %}/web-features{% endif %}/assets/js/baseline-browser-mapping.js'
+  import { getCompatibleVersions } from '{% if eleventy.env.runMode != "serve" %}/web-features{% endif %}/assets/js/baseline-browser-mapping/index.js'
 
   // Declare globally useful variables
   const urlParams = new URLSearchParams(window.location.search);
