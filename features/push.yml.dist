@@ -165,15 +165,8 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "54"
-  #   chrome_android: "54"
-  #   edge: "17"
-  #   safari: "16"
-  #   safari_ios: "16.4"
-  - api.PushSubscriptionOptions.userVisibleOnly
-
-  # baseline: false
-  # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
   #   firefox: "137"
   #   firefox_android: "137"
   #   safari: "16"
@@ -184,6 +177,8 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
   #   firefox: "137"
   #   firefox_android: "137"
   #   safari: "16.1"
@@ -192,5 +187,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "54"
+  #   chrome_android: "54"
+  #   edge: "17"
+  #   safari: "16"
+  #   safari_ios: "16.4"
+  - api.PushSubscriptionOptions.userVisibleOnly
+
+  # baseline: false
+  # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
   #   safari: "16"
   - api.ServiceWorkerGlobalScope.pushsubscriptionchange_event

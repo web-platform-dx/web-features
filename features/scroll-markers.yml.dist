@@ -7,9 +7,20 @@ status:
     chrome: "135"
     edge: "135"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
+  - css.selectors.scroll-marker
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "135"
+  #   edge: "135"
   - css.properties.scroll-marker-group
   - css.properties.scroll-marker-group.after
   - css.properties.scroll-marker-group.before
   - css.properties.scroll-marker-group.none
-  - css.selectors.scroll-marker
   - css.selectors.scroll-marker-group

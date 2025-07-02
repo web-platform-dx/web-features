@@ -4,3 +4,9 @@ spec: https://html.spec.whatwg.org/multipage/links.html#link-type-dns-prefetch
 caniuse: link-rel-dns-prefetch
 compat_features:
   - html.elements.link.rel.dns-prefetch
+# TODO: https://github.com/web-platform-dx/web-features/issues/1971
+# Status changed: https://github.com/web-platform-dx/web-features/pull/3074/
+# 2025-06-23 — low → false — On iOS, it was erroneously reported that this feature was supported.
+# References:
+# - https://developer.apple.com/documentation/safari-release-notes/safari-26-release-notes#Networking
+# - https://github.com/mdn/browser-compat-data/pull/27057

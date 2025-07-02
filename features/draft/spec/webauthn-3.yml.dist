@@ -17,6 +17,14 @@ compat_features:
   - api.CredentialsContainer.create.publicKey_option.extensions.prf
   - api.CredentialsContainer.get.publicKey_option.extensions.prf
 
+  # baseline: false
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  - api.CredentialsContainer.create.publicKey_option.hints
+  - api.CredentialsContainer.get.publicKey_option.hints
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
