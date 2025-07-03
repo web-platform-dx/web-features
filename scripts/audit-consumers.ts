@@ -1,6 +1,3 @@
-import zlib from "node:zlib";
-import stream from "node:stream/promises";
-
 import * as cheerio from "cheerio";
 import { Octokit } from "@octokit/rest";
 
@@ -10,6 +7,12 @@ interface Report {
   heading: string;
   items: string[];
   trailer: string;
+}
+
+// Parse the contents of a stream as JSON. Inspired by Bun docs:
+// https://bun.sh/guides/streams/node-readable-to-json
+function json(stream: ReadableStream): Promise<any> {
+  return new Response(stream).json();
 }
 
 // Yield all entries from chromestatus.com. Because the newest entry is returned
@@ -155,13 +158,10 @@ async function wptReport(): Promise<Report> {
     throw new Error(`Failed to download ${asset.browser_download_url}`);
   }
 
-  const gunzip = zlib.createGunzip();
-  const chunks = [];
-  gunzip.on("data", (chunk) => chunks.push(chunk));
-  await stream.pipeline(response.body, gunzip);
-  const json = Buffer.concat(chunks).toString("utf-8");
+  const manifest = await json(
+    response.body.pipeThrough(new DecompressionStream("gzip")),
+  );
 
-  const manifest = JSON.parse(json);
   const ids = Object.keys(manifest.data);
 
   const items = [];
