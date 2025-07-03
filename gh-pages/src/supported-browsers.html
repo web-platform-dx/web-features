@@ -38,6 +38,34 @@ layout: "default.html"
   #downstreamVersionsList td:nth-child(4) {
     text-align: right;
   }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
+  ::view-transition-old(view-transition-*) {
+    animation: 1s fade-out ease-in-out;
+  }
+
+  ::view-transition-new(view-transition-*) {
+    animation: 1s fade-in ease-in-out;
+  }
 </style>
 <script type="module">
   // Conditional equired as 11ty cannot resolve module import URLs in github pages
@@ -69,13 +97,7 @@ layout: "default.html"
 
   // UI updating functions
 
-  const insertVersions = (config) => {
-
-    const versions = getCompatibleVersions({
-      ...config,
-      includeDownstreamBrowsers: true
-    })
-
+  const updateTables = (versions) => {
     document.getElementById('supportedVersionsList').innerHTML =
       `<tr>
         <th>Browser</th>
@@ -83,7 +105,7 @@ layout: "default.html"
         <th>Release date</th>
       </tr>` +
       versions.slice(0, 7).map(version => {
-        return `<tr>` +
+        return `<tr view-transition-name="view-transition-${version.browser}">` +
           `<td>${nameMappings[version.browser]}</td><td>${version.version}</td><td>${version.release_date}</td>` +
           `</tr>`;
       }).join('');
@@ -96,7 +118,7 @@ layout: "default.html"
         <th>Release date</th>
       </tr>` +
       versions.slice(7).map(version => {
-        return `<tr>` +
+        return `<tr view-transition-name="view-transition-${version.browser}">` +
           `<td>${nameMappings[version.browser]}</td>
           <td>${version.version}</td>
           <td>${version.engine_version}</td>
@@ -104,6 +126,25 @@ layout: "default.html"
           `</tr>`
           ;
       }).join('');
+
+    return
+  }
+
+  const insertVersions = (config) => {
+
+    const versions = getCompatibleVersions({
+      ...config,
+      includeDownstreamBrowsers: true
+    })
+
+    if (!document.startViewTransition) {
+      updateTables(versions);
+      return
+    }
+
+    document.startViewTransition(() => {
+      updateTables(versions);
+    });
 
   }
 
