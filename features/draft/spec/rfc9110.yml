@@ -1,4 +1,4 @@
-draft_date: 2024-11-19
+draft_date: 2025-07-03
 name: HTTP Semantics
 description: TODO
 spec: https://httpwg.org/specs/rfc9110.html
@@ -50,6 +50,14 @@ compat_features:
 #   - http.methods.OPTIONS
 #   - http.methods.POST
 #   - http.methods.PUT
+# - Compression Dictionary Transport:
+#   - http.headers.Accept-Encoding.dcb
+#   - http.headers.Accept-Encoding.dcz
+#   - http.headers.Content-Encoding.dcb
+#   - http.headers.Content-Encoding.dcz
+# - Zstandard compression:
+#   - http.headers.Accept-Encoding.zstd
+#   - http.headers.Content-Encoding.zstd
 # - HTTP authentication:
 #   - http.headers.Authorization
 #   - http.headers.Authorization.NTLM

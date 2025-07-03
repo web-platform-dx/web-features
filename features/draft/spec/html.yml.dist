@@ -669,6 +669,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "38"
+  #   chrome_android: "57"
+  #   edge: "79"
+  #   firefox: "77"
+  #   firefox_android: "79"
+  - html.elements.input.type_range.labeled_values
+
+  # baseline: false
+  # support:
   #   chrome: "50"
   #   chrome_android: "50"
   #   edge: "79"
@@ -759,6 +768,24 @@ compat_features:
   #   firefox: "123"
   #   firefox_android: "123"
   - http.status.103.preload
+
+  # baseline: false
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "116"
+  #   edge: "116"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - api.HTMLElement.togglePopover.force_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "130"
+  #   chrome_android: "130"
+  #   edge: "130"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - api.HTMLElement.togglePopover.options_force_parameter
 
   # baseline: false
   # support:
