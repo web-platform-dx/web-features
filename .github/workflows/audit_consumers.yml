@@ -1,9 +1,6 @@
 name: Audit Consumers
 
 on:
-  push:
-    branches:
-      - file-audit-issue
   # Runs on the 1st and 15th of every month, at 03:45 UTC, or manually triggered
   schedule:
     - cron: "45 3 1,15 * *"
