@@ -1,9 +1,12 @@
 name: Audit Consumers
 
 on:
-  # Runs at midnight on Mondays 03:45 UTC, or manually triggered
+  push:
+    branches:
+      - file-audit-issue
+  # Runs on the 1st and 15th of every month, at 03:45 UTC, or manually triggered
   schedule:
-    - cron: "45 3 * * 1"
+    - cron: "45 3 1,15 * *"
   workflow_dispatch:
 
 jobs:
@@ -19,8 +22,4 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm run audit-consumers --silent | tee issue-body.md
-      - uses: peter-evans/create-issue-from-file@v5
-        with:
-          title: Automated report on web-features consumers
-          content-filepath: issue-body.md
-          labels: generated
+      - run: gh issue create --title "web-features consumers report for $(date -I)" --label generated --body-file issue-body.md
