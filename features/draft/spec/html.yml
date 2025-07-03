@@ -1,4 +1,4 @@
-draft_date: 2025-06-23
+draft_date: 2025-07-03
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -30,6 +30,8 @@ compat_features:
   - api.HTMLCanvasElement.toDataURL.type_parameter_png
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
   - api.HTMLElement.error_event
+  - api.HTMLElement.togglePopover.force_parameter
+  - api.HTMLElement.togglePopover.options_force_parameter
   - api.HTMLIFrameElement.featurePolicy
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes.auto
@@ -98,6 +100,7 @@ compat_features:
   - html.elements.iframe.sandbox.allow-pointer-lock
   - html.elements.img.usemap.case_sensitive
   - html.elements.input.autocomplete
+  - html.elements.input.type_range.labeled_values
   - html.elements.link.rel.icon
   - html.elements.script.type.importmap.integrity
   - html.elements.script.type.importmap.multiple_import_maps
@@ -909,10 +912,10 @@ compat_features:
 #   - api.HTMLElement.hidePopover
 #   - api.HTMLElement.popover
 #   - api.HTMLElement.showPopover
-#   - api.HTMLElement.showPopover.source
+#   - api.HTMLElement.showPopover.options_source_parameter
 #   - api.HTMLElement.togglePopover
+#   - api.HTMLElement.togglePopover.options_source_parameter
 #   - api.HTMLElement.togglePopover.returns_boolean
-#   - api.HTMLElement.togglePopover.source
 #   - api.HTMLElement.toggle_event.popover_elements
 #   - api.HTMLInputElement.popoverTargetAction
 #   - api.HTMLInputElement.popoverTargetElement
@@ -928,8 +931,8 @@ compat_features:
 #   - html.global_attributes.popover
 # - Anchor positioning:
 #   - api.HTMLButtonElement.popoverTargetElement.implicit_anchor_reference
-#   - api.HTMLElement.showPopover.source.implicit_anchor_reference
-#   - api.HTMLElement.togglePopover.source.implicit_anchor_reference
+#   - api.HTMLElement.showPopover.options_source_parameter.implicit_anchor_reference
+#   - api.HTMLElement.togglePopover.options_source_parameter.implicit_anchor_reference
 #   - api.HTMLInputElement.popoverTargetElement.implicit_anchor_reference
 #   - html.elements.button.popovertarget.implicit_anchor_reference
 #   - html.elements.input.popovertarget.implicit_anchor_reference
@@ -1420,7 +1423,6 @@ compat_features:
 #   - html.elements.link.blocking
 #   - html.elements.script.blocking
 #   - html.elements.style.blocking
-#   - http.headers.Link.blocking
 # - Preloading responsive images:
 #   - api.HTMLLinkElement.imageSizes
 #   - api.HTMLLinkElement.imageSrcset

@@ -1,10 +1,19 @@
-import zlib from "node:zlib";
-import stream from "node:stream/promises";
-
 import * as cheerio from "cheerio";
 import { Octokit } from "@octokit/rest";
 
 import { features as webFeatures } from "../index.js";
+
+interface Report {
+  heading: string;
+  items: string[];
+  trailer: string;
+}
+
+// Parse the contents of a stream as JSON. Inspired by Bun docs:
+// https://bun.sh/guides/streams/node-readable-to-json
+function json(stream: ReadableStream): Promise<any> {
+  return new Response(stream).json();
+}
 
 // Yield all entries from chromestatus.com. Because the newest entry is returned
 // first and entries might be created while we're iterating, it's possible that
@@ -36,7 +45,7 @@ async function* chromeStatusFeatures() {
   }
 }
 
-async function chromiumSourceFile(path) {
+async function chromiumSourceFile(path: string) {
   const url = `https://github.com/chromium/chromium/raw/refs/heads/main/${path}`;
   const resp = await fetch(url);
   if (!resp.ok) {
@@ -45,13 +54,13 @@ async function chromiumSourceFile(path) {
   return await resp.text();
 }
 
-async function chromiumUseCounters() {
+async function chromiumUseCounters(): Promise<Map<string, number>> {
   const text = await chromiumSourceFile(
     "tools/metrics/histograms/metadata/blink/enums.xml",
   );
   const $ = cheerio.load(text);
   const $elems = $('enum[name="WebDXFeatureObserver"]').find("[value][label]");
-  const counters = new Map();
+  const counters = new Map<string, number>();
   for (const e of $elems) {
     const value = parseInt($(e).attr("value"));
     const label = $(e).attr("label");
@@ -60,7 +69,7 @@ async function chromiumUseCounters() {
   return counters;
 }
 
-async function useCounterReport() {
+async function useCounterReport(): Promise<Report> {
   const counters = await chromiumUseCounters();
 
   // Convert feature-name to FeatureName following the same rules as
@@ -105,7 +114,7 @@ async function useCounterReport() {
   };
 }
 
-async function chromeStatusReport() {
+async function chromeStatusReport(): Promise<Report> {
   const items = [];
 
   for await (const f of chromeStatusFeatures()) {
@@ -125,7 +134,7 @@ async function chromeStatusReport() {
   };
 }
 
-async function wptReport() {
+async function wptReport(): Promise<Report> {
   const octokit = new Octokit();
 
   const params = { owner: "web-platform-tests", repo: "wpt" };
@@ -149,13 +158,10 @@ async function wptReport() {
     throw new Error(`Failed to download ${asset.browser_download_url}`);
   }
 
-  const gunzip = zlib.createGunzip();
-  const chunks = [];
-  gunzip.on("data", (chunk) => chunks.push(chunk));
-  await stream.pipeline(response.body, gunzip);
-  const json = Buffer.concat(chunks).toString("utf-8");
+  const manifest = await json(
+    response.body.pipeThrough(new DecompressionStream("gzip")),
+  );
 
-  const manifest = JSON.parse(json);
   const ids = Object.keys(manifest.data);
 
   const items = [];
