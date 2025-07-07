@@ -7,24 +7,8 @@ status:
     chrome: "126"
     chrome_android: "126"
     edge: "126"
-    firefox: "128"
-    firefox_android: "128"
+    firefox: "127"
+    firefox_android: "127"
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "126"
-  #   chrome_android: "126"
-  #   edge: "126"
-  #   firefox: "127"
-  #   firefox_android: "127"
   - webdriver.bidi.permission
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "126"
-  #   chrome_android: "126"
-  #   edge: "126"
-  #   firefox: "128"
-  #   firefox_android: "128"
   - webdriver.bidi.permission.setPermission

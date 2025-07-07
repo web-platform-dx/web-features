@@ -19,9 +19,20 @@ compat_features:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
+  #   firefox: "93"
+  #   firefox_android: "93"
+  - webdriver.bidi.session.subscribe
+  - webdriver.bidi.session.unsubscribe
+
+  # baseline: false
+  # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
   #   firefox: "94"
   #   firefox_android: "94"
   - webdriver.bidi.log
+  - webdriver.bidi.log.entryAdded_event
 
   # baseline: false
   # support:
@@ -48,7 +59,18 @@ compat_features:
   #   edge: "126"
   #   firefox: "100"
   #   firefox_android: "100"
+  - webdriver.bidi.browsingContext.close
   - webdriver.bidi.browsingContext.getTree
+
+  # baseline: false
+  # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  #   firefox: "101"
+  #   firefox_android: "101"
+  - webdriver.bidi.browsingContext.create
+  - webdriver.bidi.browsingContext.navigate
 
   # baseline: false
   # support:
@@ -62,6 +84,7 @@ compat_features:
   - webdriver.bidi.script.callFunction
   - webdriver.bidi.script.disown
   - webdriver.bidi.script.evaluate
+  - webdriver.bidi.script.getRealms
 
   # baseline: false
   # support:
@@ -88,6 +111,7 @@ compat_features:
   #   edge: "126"
   #   firefox: "112"
   #   firefox_android: "112"
+  - webdriver.bidi.script.addPreloadScript
   - webdriver.bidi.script.removePreloadScript
 
   # baseline: false
@@ -98,6 +122,8 @@ compat_features:
   #   firefox: "113"
   #   firefox_android: "113"
   - webdriver.bidi.input
+  - webdriver.bidi.input.performActions
+  - webdriver.bidi.input.releaseActions
 
   # baseline: false
   # support:
@@ -106,8 +132,6 @@ compat_features:
   #   edge: "126"
   #   firefox: "114"
   #   firefox_android: "114"
-  - webdriver.bidi.input.performActions
-  - webdriver.bidi.input.releaseActions
   - webdriver.bidi.script.message_event
 
   # baseline: false
@@ -118,8 +142,9 @@ compat_features:
   #   firefox: "117"
   #   firefox_android: "117"
   - webdriver.bidi.browser
-  - webdriver.bidi.browsingContext.create
+  - webdriver.bidi.browser.close
   - webdriver.bidi.browsingContext.fragmentNavigated_event
+  - webdriver.bidi.browsingContext.setViewport
 
   # baseline: false
   # support:
@@ -129,6 +154,8 @@ compat_features:
   #   firefox: "118"
   #   firefox_android: "118"
   - webdriver.bidi.browsingContext.activate
+  - webdriver.bidi.browsingContext.userPromptOpened_event
+  - webdriver.bidi.network.addIntercept
   - webdriver.bidi.network.removeIntercept
 
   # baseline: false
@@ -139,7 +166,20 @@ compat_features:
   #   firefox: "119"
   #   firefox_android: "119"
   - webdriver.bidi.browsingContext.navigationStarted_event
+  - webdriver.bidi.browsingContext.reload
+  - webdriver.bidi.browsingContext.userPromptClosed_event
+  - webdriver.bidi.script.realmCreated_event
   - webdriver.bidi.script.realmDestroyed_event
+
+  # baseline: false
+  # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  #   firefox: "122"
+  #   firefox_android: "122"
+  - webdriver.bidi.browsingContext.traverseHistory
+  - webdriver.bidi.network.continueWithAuth
 
   # baseline: false
   # support:
@@ -148,6 +188,7 @@ compat_features:
   #   edge: "126"
   #   firefox: "123"
   #   firefox_android: "123"
+  - webdriver.bidi.browsingContext.locateNodes
   - webdriver.bidi.network.failRequest
 
   # baseline: false
@@ -159,16 +200,8 @@ compat_features:
   #   firefox_android: "124"
   - webdriver.bidi.browser.createUserContext
   - webdriver.bidi.browser.getUserContexts
+  - webdriver.bidi.browser.removeUserContext
   - webdriver.bidi.storage
-
-  # baseline: false
-  # support:
-  #   chrome: "126"
-  #   chrome_android: "126"
-  #   edge: "126"
-  #   firefox: "126"
-  #   firefox_android: "126"
-  - webdriver.bidi.storage.deleteCookies
   - webdriver.bidi.storage.getCookies
   - webdriver.bidi.storage.setCookie
 
@@ -177,23 +210,19 @@ compat_features:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
-  #   firefox: "129"
-  #   firefox_android: "129"
-  - webdriver.bidi.browser.close
-  - webdriver.bidi.browser.removeUserContext
-  - webdriver.bidi.browsingContext.close
-  - webdriver.bidi.browsingContext.handleUserPrompt
+  #   firefox: "125"
+  #   firefox_android: "125"
+  - webdriver.bidi.input.setFiles
+  - webdriver.bidi.storage.deleteCookies
 
   # baseline: false
   # support:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
-  #   firefox: "136"
-  #   firefox_android: "136"
-  - webdriver.bidi.script.addPreloadScript
-  - webdriver.bidi.session.subscribe
-  - webdriver.bidi.session.unsubscribe
+  #   firefox: "129"
+  #   firefox_android: "129"
+  - webdriver.bidi.browsingContext.handleUserPrompt
 
   # baseline: false
   # support:
@@ -209,8 +238,8 @@ compat_features:
   #   chrome: "131"
   #   chrome_android: "131"
   #   edge: "131"
-  #   firefox: "135"
-  #   firefox_android: "135"
+  #   firefox: "110"
+  #   firefox_android: "110"
   - webdriver.bidi.browsingContext.captureScreenshot
 
   # baseline: false
@@ -218,9 +247,28 @@ compat_features:
   #   chrome: "132"
   #   chrome_android: "132"
   #   edge: "132"
-  #   firefox: "130"
-  #   firefox_android: "130"
+  #   firefox: "129"
+  #   firefox_android: "129"
   - webdriver.bidi.network.setCacheBehavior
+
+  # baseline: false
+  # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
+  #   firefox: "137"
+  #   firefox_android: "137"
+  - webdriver.bidi.webExtension
+
+  # baseline: false
+  # support:
+  #   chrome: "137"
+  #   chrome_android: "137"
+  #   edge: "137"
+  #   firefox: "139"
+  #   firefox_android: "139"
+  - webdriver.bidi.emulation
+  - webdriver.bidi.emulation.setGeolocationOverride
 
   # baseline: false
   # support:
@@ -229,19 +277,7 @@ compat_features:
   #   edge: "126"
   - webdriver.bidi.browsingContext.contextCreated_event
   - webdriver.bidi.browsingContext.contextDestroyed_event
-  - webdriver.bidi.browsingContext.locateNodes
-  - webdriver.bidi.browsingContext.navigate
   - webdriver.bidi.browsingContext.navigationFailed_event
-  - webdriver.bidi.browsingContext.reload
-  - webdriver.bidi.browsingContext.setViewport
-  - webdriver.bidi.browsingContext.traverseHistory
-  - webdriver.bidi.browsingContext.userPromptClosed_event
-  - webdriver.bidi.browsingContext.userPromptOpened_event
-  - webdriver.bidi.input.setFiles
-  - webdriver.bidi.log.entryAdded_event
-  - webdriver.bidi.network.continueWithAuth
-  - webdriver.bidi.script.getRealms
-  - webdriver.bidi.script.realmCreated_event
   - webdriver.bidi.session.new
 
   # baseline: false
@@ -249,13 +285,34 @@ compat_features:
   #   chrome: "133"
   #   chrome_android: "133"
   #   edge: "133"
+  - webdriver.bidi.network.beforeRequestSent_event
   - webdriver.bidi.network.fetchError_event
+
+  # baseline: false
+  # support:
+  #   firefox: "112"
+  #   firefox_android: "112"
+  - webdriver.bidi.browsingContext.print
+
+  # baseline: false
+  # support:
+  #   firefox: "116"
+  #   firefox_android: "116"
+  - webdriver.bidi.session.end
 
   # baseline: false
   # support:
   #   firefox: "122"
   #   firefox_android: "122"
   - webdriver.bidi.network.authRequired_event
+
+  # baseline: false
+  # support:
+  #   firefox: "124"
+  #   firefox_android: "124"
+  - webdriver.bidi.network.continueRequest
+  - webdriver.bidi.network.continueResponse
+  - webdriver.bidi.network.provideResponse
 
   # baseline: false
   # support:
@@ -267,27 +324,12 @@ compat_features:
   # support:
   #   firefox: "137"
   #   firefox_android: "137"
-  - webdriver.bidi.webExtension
+  - webdriver.bidi.webExtension.install
   - webdriver.bidi.webExtension.uninstall
-
-  # baseline: false
-  # support:
-  #   firefox: "139"
-  #   firefox_android: "139"
-  - webdriver.bidi.emulation
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - webdriver.bidi.browsingContext.historyUpdated_event
-  - webdriver.bidi.browsingContext.print
-  - webdriver.bidi.emulation.setGeolocationOverride
-  - webdriver.bidi.network.addIntercept
-  - webdriver.bidi.network.beforeRequestSent_event
-  - webdriver.bidi.network.continueRequest
-  - webdriver.bidi.network.continueResponse
-  - webdriver.bidi.network.provideResponse
   - webdriver.bidi.network.responseCompleted_event
   - webdriver.bidi.network.responseStarted_event
-  - webdriver.bidi.session.end
-  - webdriver.bidi.webExtension.install
