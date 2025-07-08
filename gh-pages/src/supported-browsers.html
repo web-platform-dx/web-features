@@ -68,8 +68,21 @@ layout: "default.html"
   }
 </style>
 <script type="module">
-  // Conditional equired as 11ty cannot resolve module import URLs in github pages
-  import { getCompatibleVersions } from 'https://cdn.jsdelivr.net/npm/baseline-browser-mapping'
+  let getCompatibleVersions;
+  try {
+    getCompatibleVersions = await import("https://cdn.jsdelivr.net/npm/baseline-browser-mapping")
+      .then(response => response.getCompatibleVersions);
+  } catch {
+    console.log("Loading baseline-browser-mapping from cdn.jsdelivr.net failed, attempting to load from unpkg.com.")
+    try {
+      getCompatibleVersions = await import("https://unpkg.com/baseline-browser-mapping")
+        .then(response => response.getCompatibleVersions);;
+    }
+    catch {
+      document.getElementById('loadingContainer').innerText = "There was an error loading baseline-browser-mapping which is required for this page to work.  Please check your network connection and refresh the page.";
+      throw new Error("There was an error loading baseline-browser-mapping which is required for this page to work.  Please check your network connection and refresh the page.")
+    }
+  }
 
   // Declare globally useful variables
   const urlParams = new URLSearchParams(window.location.search);
