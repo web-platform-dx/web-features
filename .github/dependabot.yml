@@ -1,23 +1,38 @@
 version: 2
 updates:
   - package-ecosystem: npm
-    directory: /
+    directories:
+      - /
+      - packages/web-features
+      - packages/compute-baseline
     schedule:
       interval: daily
     ignore:
       - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
+    groups:
+      # Groups are applied in order, so narrowest groups go first
+      types-node:
+        patterns:
+          - "@types/node"
         update-types:
-          - "version-update:semver-major"
-  - package-ecosystem: npm
-    directory: packages/web-features
-    schedule:
-      interval: daily
-    versioning-strategy: increase
-  - package-ecosystem: npm
-    directory: packages/compute-baseline
-    schedule:
-      interval: daily
-
+          - "minor"
+          - "patch"
+      typescript:
+        patterns:
+          - "typescript"
+      production-dependencies:
+        dependency-type: "production"
+        exclude-patterns:
+          # Data packages are excluded from all groups, to get their own PRs
+          - "@mdn/browser-compat-data"
+      development-dependencies:
+        dependency-type: "development"
+        exclude-patterns:
+          # Data packages are excluded from all groups, to get their own PRs
+          - "@mdn/browser-compat-data"
+          - "web-specs"
+          - "caniuse-lite"
   - package-ecosystem: github-actions
     directory: "/"
     schedule:

@@ -108,14 +108,14 @@ Use the `toJSON()` method to get a `web-features`-like plain JSON representation
 
 Sometimes it can be helpful to know if parent features have less support than the specific feature you're checking (for example, the parent is behind a prefix or flag) when computing a status for a deeply-nested feature.
 This is typically most interesting when checking a single key.
-Use the `withAncestors` option:
+Use the `checkAncestors` option:
 
 ```javascript
 import { computeBaseline } from "compute-baseline";
 
 computeBaseline({
   compatKeys: ["api.Notification.body"],
-  withAncestors: true,
+  checkAncestors: true,
 });
 ```
 

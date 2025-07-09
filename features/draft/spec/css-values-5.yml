@@ -1,9 +1,10 @@
-draft_date: 2025-05-14
+draft_date: 2025-07-03
 name: CSS Values and Units Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-values-5/
 compat_features:
   - css.types.if
+  - css.types.progress
 
 # The following features in the spec are already part of web-features:
 # - Media queries:
@@ -137,6 +138,9 @@ compat_features:
 #   - css.types.resolution.dpi
 #   - css.types.resolution.dppx
 #   - css.types.resolution.x
+# - sibling-count() and sibling-index():
+#   - css.types.sibling-count
+#   - css.types.sibling-index
 # - Animations (CSS):
 #   - css.types.time
 # - @font-face:

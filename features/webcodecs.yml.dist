@@ -219,3 +219,11 @@ compat_features:
   #   edge: "126"
   - api.AudioEncoder.configure.opus.opus_application
   - api.AudioEncoder.configure.opus.opus_signal
+
+  # baseline: false
+  # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
+  #   edge: "138"
+  - api.VideoFrame.flip
+  - api.VideoFrame.rotation

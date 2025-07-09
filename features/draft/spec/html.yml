@@ -1,4 +1,4 @@
-draft_date: 2025-05-26
+draft_date: 2025-07-03
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -20,11 +20,8 @@ compat_features:
   - api.HTMLBaseElement.href.forbid_data_javascript_urls
   - api.HTMLBaseElement.href.forbid_special_characters
   - api.HTMLButtonElement.command.request-close
-  - api.HTMLCanvasElement.getContext.2d_context
   - api.HTMLCanvasElement.getContext.bitmaprenderer_context
   - api.HTMLCanvasElement.getContext.bitmaprenderer_context.options_alpha_parameter
-  - api.HTMLCanvasElement.getContext.webgl2_context
-  - api.HTMLCanvasElement.getContext.webgl_context
   - api.HTMLCanvasElement.toBlob.quality_parameter
   - api.HTMLCanvasElement.toBlob.type_parameter_jpeg
   - api.HTMLCanvasElement.toBlob.type_parameter_png
@@ -32,8 +29,9 @@ compat_features:
   - api.HTMLCanvasElement.toDataURL.type_parameter_jpeg
   - api.HTMLCanvasElement.toDataURL.type_parameter_png
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
-  - api.HTMLDialogElement.closedBy
   - api.HTMLElement.error_event
+  - api.HTMLElement.togglePopover.force_parameter
+  - api.HTMLElement.togglePopover.options_force_parameter
   - api.HTMLIFrameElement.featurePolicy
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes.auto
@@ -88,10 +86,10 @@ compat_features:
   - api.reportError
   - api.setInterval.supports_parameters_for_callback
   - api.setTimeout.supports_parameters_for_callback
-  - html.elements.dialog.closedby
   - html.elements.form.autocomplete.new-password
   - html.elements.form.autocomplete.one-time-code
   - html.elements.form.autocomplete.webauthn
+  - html.elements.h1.no_ua_styles_in_article_aside_nav_section
   - html.elements.hr.hr_in_select
   - html.elements.html.xmlns
   - html.elements.iframe.allow.autoplay
@@ -102,6 +100,7 @@ compat_features:
   - html.elements.iframe.sandbox.allow-pointer-lock
   - html.elements.img.usemap.case_sensitive
   - html.elements.input.autocomplete
+  - html.elements.input.type_range.labeled_values
   - html.elements.link.rel.icon
   - html.elements.script.type.importmap.integrity
   - html.elements.script.type.importmap.multiple_import_maps
@@ -267,6 +266,7 @@ compat_features:
 #   - api.CanvasRenderingContext2D.transform
 #   - api.CanvasRenderingContext2D.translate
 #   - api.CanvasRenderingContext2D.wordSpacing
+#   - api.HTMLCanvasElement.getContext.2d_context
 #   - api.ImageData
 #   - api.ImageData.ImageData
 #   - api.ImageData.colorSpace
@@ -355,6 +355,10 @@ compat_features:
 #   - api.CustomElementRegistry.whenDefined
 #   - api.Window.customElements
 #   - css.selectors.defined
+# - Scoped custom element registries:
+#   - api.CustomElementRegistry.CustomElementRegistry
+#   - api.CustomElementRegistry.initialize
+#   - api.HTMLTemplateElement.shadowRootCustomElementRegistry
 # - Customized built-in elements:
 #   - api.CustomElementRegistry.builtin_element_support
 #   - html.global_attributes.is
@@ -519,8 +523,6 @@ compat_features:
 # - document.write():
 #   - api.Document.close
 #   - api.Document.open
-#   - api.Document.writeln
-#   - api.Document.writeln.accepts_TrustedHTML
 # - Cookies:
 #   - api.Document.cookie
 # - Page visibility:
@@ -910,10 +912,10 @@ compat_features:
 #   - api.HTMLElement.hidePopover
 #   - api.HTMLElement.popover
 #   - api.HTMLElement.showPopover
-#   - api.HTMLElement.showPopover.source
+#   - api.HTMLElement.showPopover.options_source_parameter
 #   - api.HTMLElement.togglePopover
+#   - api.HTMLElement.togglePopover.options_source_parameter
 #   - api.HTMLElement.togglePopover.returns_boolean
-#   - api.HTMLElement.togglePopover.source
 #   - api.HTMLElement.toggle_event.popover_elements
 #   - api.HTMLInputElement.popoverTargetAction
 #   - api.HTMLInputElement.popoverTargetElement
@@ -929,8 +931,8 @@ compat_features:
 #   - html.global_attributes.popover
 # - Anchor positioning:
 #   - api.HTMLButtonElement.popoverTargetElement.implicit_anchor_reference
-#   - api.HTMLElement.showPopover.source.implicit_anchor_reference
-#   - api.HTMLElement.togglePopover.source.implicit_anchor_reference
+#   - api.HTMLElement.showPopover.options_source_parameter.implicit_anchor_reference
+#   - api.HTMLElement.togglePopover.options_source_parameter.implicit_anchor_reference
 #   - api.HTMLInputElement.popoverTargetElement.implicit_anchor_reference
 #   - html.elements.button.popovertarget.implicit_anchor_reference
 #   - html.elements.input.popovertarget.implicit_anchor_reference
@@ -952,6 +954,10 @@ compat_features:
 #   - api.HTMLCanvasElement.getContext.2d_context.options_desynchronized_parameter
 # - willReadFrequently:
 #   - api.HTMLCanvasElement.getContext.2d_context.options_willReadFrequently_parameter
+# - WebGL2:
+#   - api.HTMLCanvasElement.getContext.webgl2_context
+# - WebGL:
+#   - api.HTMLCanvasElement.getContext.webgl_context
 # - Offscreen canvas:
 #   - api.HTMLCanvasElement.transferControlToOffscreen
 #   - api.OffscreenCanvas
@@ -1072,6 +1078,9 @@ compat_features:
 #   - api.HTMLElement.toggle_event.dialog_elements
 #   - html.elements.dialog
 #   - html.elements.dialog.open
+# - <dialog closedby>:
+#   - api.HTMLDialogElement.closedBy
+#   - html.elements.dialog.closedby
 # - dialog.requestClose():
 #   - api.HTMLDialogElement.requestClose
 # - <div>:
@@ -1414,7 +1423,6 @@ compat_features:
 #   - html.elements.link.blocking
 #   - html.elements.script.blocking
 #   - html.elements.style.blocking
-#   - http.headers.Link.blocking
 # - Preloading responsive images:
 #   - api.HTMLLinkElement.imageSizes
 #   - api.HTMLLinkElement.imageSrcset
@@ -2195,6 +2203,10 @@ compat_features:
 #   - html.elements.script.nomodule
 #   - html.elements.script.type.module
 #   - javascript.operators.import_meta.resolve
+# - XMLSerializer:
+#   - api.XMLSerializer
+#   - api.XMLSerializer.XMLSerializer
+#   - api.XMLSerializer.serializeToString
 # - Base64 encoding and decoding:
 #   - api.atob
 #   - api.atob.worker_support
@@ -2205,7 +2217,7 @@ compat_features:
 #   - api.clearInterval.worker_support
 #   - api.setInterval
 #   - api.setInterval.worker_support
-# - setTimeout:
+# - setTimeout():
 #   - api.clearTimeout
 #   - api.clearTimeout.worker_support
 #   - api.setTimeout
