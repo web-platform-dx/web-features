@@ -1,6 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: npm
+    versioning-strategy: increase
     directories:
       - /
       - packages/web-features
@@ -15,9 +16,6 @@ updates:
       types-node:
         patterns:
           - "@types/node"
-        update-types:
-          - "minor"
-          - "patch"
       typescript:
         patterns:
           - "typescript"
