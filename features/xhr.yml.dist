@@ -445,6 +445,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "136"
+  #   chrome_android: "136"
+  #   edge: "136"
+  #   firefox: "138"
+  #   firefox_android: "138"
+  - api.ProgressEvent.ProgressEvent.loaded_total_options_accept_double
+
+  # baseline: false
+  # support:
   #   firefox: "54"
   #   firefox_android: "54"
   #   safari: "10"
