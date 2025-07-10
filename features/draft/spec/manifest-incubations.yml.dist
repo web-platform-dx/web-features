@@ -3,7 +3,8 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    edge: "138"
 compat_features:
   # baseline: false
   # support:
@@ -28,13 +29,14 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome_android: "44"
+  #   edge: "17"
+  - manifests.webapp.prefer_related_applications
+  - manifests.webapp.related_applications
+
+  # baseline: false
+  # support:
   #   chrome: "95"
   #   edge: "95"
   - manifests.webapp.note_taking
   - manifests.webapp.note_taking.new_note_url
-
-  # baseline: false
-  # support:
-  #   chrome_android: "44"
-  - manifests.webapp.prefer_related_applications
-  - manifests.webapp.related_applications

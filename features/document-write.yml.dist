@@ -44,5 +44,5 @@ compat_features:
   #   chrome: "86"
   #   chrome_android: "86"
   #   edge: "86"
-  - api.Document.write.accepts_TrustedHTML
-  - api.Document.writeln.accepts_TrustedHTML
+  - api.Document.write.enforces_trusted_types
+  - api.Document.writeln.enforces_trusted_types
