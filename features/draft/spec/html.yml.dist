@@ -919,6 +919,12 @@ compat_features:
 
   # baseline: false
   # support:
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - html.elements.input.type_color.accepts_css_colors
+
+  # baseline: false
+  # support:
   #   firefox: "67"
   #   firefox_android: "67"
   - html.elements.form.autocomplete.new-password
