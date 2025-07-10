@@ -9,6 +9,44 @@ discouraged:
   alternatives:
     - permissions-policy
 compat_features:
+  - http.headers.Feature-Policy
+  - http.headers.Feature-Policy.accelerometer
+  - http.headers.Feature-Policy.ambient-light-sensor
+  - http.headers.Feature-Policy.attribution-reporting
+  - http.headers.Feature-Policy.autoplay
+  - http.headers.Feature-Policy.bluetooth
+  - http.headers.Feature-Policy.browsing-topics
+  - http.headers.Feature-Policy.camera
+  - http.headers.Feature-Policy.compute-pressure
+  - http.headers.Feature-Policy.cross-origin-isolated
+  - http.headers.Feature-Policy.deferred-fetch
+  - http.headers.Feature-Policy.deferred-fetch-minimal
+  - http.headers.Feature-Policy.display-capture
+  - http.headers.Feature-Policy.document-domain
+  - http.headers.Feature-Policy.encrypted-media
+  - http.headers.Feature-Policy.fullscreen
+  - http.headers.Feature-Policy.geolocation
+  - http.headers.Feature-Policy.gyroscope
+  - http.headers.Feature-Policy.hid
+  - http.headers.Feature-Policy.identity-credentials-get
+  - http.headers.Feature-Policy.idle-detection
+  - http.headers.Feature-Policy.local-fonts
+  - http.headers.Feature-Policy.magnetometer
+  - http.headers.Feature-Policy.microphone
+  - http.headers.Feature-Policy.midi
+  - http.headers.Feature-Policy.otp-credentials
+  - http.headers.Feature-Policy.payment
+  - http.headers.Feature-Policy.picture-in-picture
+  - http.headers.Feature-Policy.publickey-credentials-create
+  - http.headers.Feature-Policy.publickey-credentials-get
+  - http.headers.Feature-Policy.screen-wake-lock
+  - http.headers.Feature-Policy.serial
+  - http.headers.Feature-Policy.storage-access
+  - http.headers.Feature-Policy.usb
+  - http.headers.Feature-Policy.web-share
+  - http.headers.Feature-Policy.wildcards
+  - http.headers.Feature-Policy.window-management
+  - http.headers.Feature-Policy.xr-spatial-tracking
   - api.Document.featurePolicy
   - api.FeaturePolicy
   - api.FeaturePolicy.allowedFeatures

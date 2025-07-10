@@ -3,11 +3,56 @@
 
 status:
   baseline: false
-  support:
-    chrome: "74"
-    chrome_android: "74"
-    edge: "79"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "79"
+  - http.headers.Feature-Policy
+  - http.headers.Feature-Policy.payment
+  - http.headers.Feature-Policy.usb
+
+  # baseline: false
+  # support:
+  #   chrome: "62"
+  #   chrome_android: "62"
+  #   edge: "79"
+  - http.headers.Feature-Policy.fullscreen
+
+  # baseline: false
+  # support:
+  #   chrome: "64"
+  #   chrome_android: "64"
+  #   edge: "79"
+  - http.headers.Feature-Policy.autoplay
+  - http.headers.Feature-Policy.camera
+  - http.headers.Feature-Policy.encrypted-media
+  - http.headers.Feature-Policy.geolocation
+  - http.headers.Feature-Policy.microphone
+  - http.headers.Feature-Policy.midi
+
+  # baseline: false
+  # support:
+  #   chrome: "66"
+  #   chrome_android: "66"
+  #   edge: "79"
+  - http.headers.Feature-Policy.accelerometer
+  - http.headers.Feature-Policy.gyroscope
+
+  # baseline: false
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "105"
+  #   edge: "79"
+  - http.headers.Feature-Policy.picture-in-picture
+
+  # baseline: false
+  # support:
+  #   chrome: "74"
+  #   chrome_android: "74"
+  #   edge: "79"
   - api.Document.featurePolicy
   - api.FeaturePolicy
   - api.FeaturePolicy.allowedFeatures
@@ -15,3 +60,137 @@ compat_features:
   - api.FeaturePolicy.features
   - api.FeaturePolicy.getAllowlistForFeature
   - api.HTMLIFrameElement.featurePolicy
+
+  # baseline: false
+  # support:
+  #   chrome: "79"
+  #   chrome_android: "79"
+  #   edge: "79"
+  - http.headers.Feature-Policy.xr-spatial-tracking
+
+  # baseline: false
+  # support:
+  #   chrome: "84"
+  #   chrome_android: "84"
+  #   edge: "84"
+  - http.headers.Feature-Policy.publickey-credentials-create
+  - http.headers.Feature-Policy.publickey-credentials-get
+  - http.headers.Feature-Policy.screen-wake-lock
+
+  # baseline: false
+  # support:
+  #   chrome: "86"
+  #   chrome_android: "86"
+  #   edge: "86"
+  - http.headers.Feature-Policy.web-share
+
+  # baseline: false
+  # support:
+  #   chrome: "87"
+  #   chrome_android: "87"
+  #   edge: "87"
+  - http.headers.Feature-Policy.cross-origin-isolated
+
+  # baseline: false
+  # support:
+  #   chrome: "89"
+  #   chrome_android: "89"
+  #   edge: "89"
+  - http.headers.Feature-Policy.serial
+
+  # baseline: false
+  # support:
+  #   chrome: "93"
+  #   chrome_android: "84"
+  #   edge: "93"
+  - http.headers.Feature-Policy.otp-credentials
+
+  # baseline: false
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "94"
+  - http.headers.Feature-Policy.display-capture
+  - http.headers.Feature-Policy.idle-detection
+
+  # baseline: false
+  # support:
+  #   chrome: "100"
+  #   chrome_android: "100"
+  #   edge: "100"
+  - http.headers.Feature-Policy.window-management
+
+  # baseline: false
+  # support:
+  #   chrome: "104"
+  #   chrome_android: "104"
+  #   edge: "104"
+  - http.headers.Feature-Policy.bluetooth
+
+  # baseline: false
+  # support:
+  #   chrome: "108"
+  #   chrome_android: "108"
+  #   edge: "108"
+  - http.headers.Feature-Policy.wildcards
+
+  # baseline: false
+  # support:
+  #   chrome: "110"
+  #   chrome_android: "110"
+  #   edge: "110"
+  - http.headers.Feature-Policy.identity-credentials-get
+
+  # baseline: false
+  # support:
+  #   chrome: "113"
+  #   chrome_android: "113"
+  #   edge: "113"
+  - http.headers.Feature-Policy.storage-access
+
+  # baseline: false
+  # support:
+  #   chrome: "115"
+  #   chrome_android: "115"
+  #   edge: "115"
+  - http.headers.Feature-Policy.browsing-topics
+
+  # baseline: false
+  # support:
+  #   chrome: "117"
+  #   chrome_android: "117"
+  #   edge: "117"
+  - http.headers.Feature-Policy.attribution-reporting
+
+  # baseline: false
+  # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
+  - http.headers.Feature-Policy.deferred-fetch
+  - http.headers.Feature-Policy.deferred-fetch-minimal
+
+  # baseline: false
+  # support:
+  #   chrome: "89"
+  #   edge: "89"
+  - http.headers.Feature-Policy.hid
+
+  # baseline: false
+  # support:
+  #   chrome: "103"
+  #   edge: "103"
+  - http.headers.Feature-Policy.local-fonts
+
+  # baseline: false
+  # support:
+  #   chrome: "125"
+  #   edge: "125"
+  - http.headers.Feature-Policy.compute-pressure
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - http.headers.Feature-Policy.ambient-light-sensor
+  - http.headers.Feature-Policy.document-domain
+  - http.headers.Feature-Policy.magnetometer
