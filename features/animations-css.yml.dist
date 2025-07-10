@@ -205,5 +205,13 @@ compat_features:
   #   chrome: "115"
   #   chrome_android: "115"
   #   edge: "115"
-  - css.at-rules.keyframes.named_range_keyframes
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
   - css.properties.animation-duration.auto
+
+  # baseline: false
+  # support:
+  #   chrome: "115"
+  #   chrome_android: "115"
+  #   edge: "115"
+  - css.at-rules.keyframes.named_range_keyframes

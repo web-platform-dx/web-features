@@ -8,6 +8,8 @@ discouraged:
   alternatives:
     - async-clipboard
     - contenteditable
+status:
+  compute_from: api.Document.execCommand
 compat_features:
   - api.Document.execCommand
   - api.Document.execCommand.copy

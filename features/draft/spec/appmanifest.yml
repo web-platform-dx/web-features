@@ -1,0 +1,24 @@
+draft_date: 2025-07-03
+name: Web Application Manifest
+description: TODO
+spec: https://w3c.github.io/manifest/
+compat_features:
+  - manifests.webapp.display.browser
+  - manifests.webapp.display.fullscreen
+  - manifests.webapp.display.minimal-ui
+  - manifests.webapp.display.standalone
+
+# The following features in the spec are already part of web-features:
+# - Web app manifest:
+#   - manifests.webapp.background_color
+#   - manifests.webapp.display
+#   - manifests.webapp.icons
+#   - manifests.webapp.id
+#   - manifests.webapp.name
+#   - manifests.webapp.orientation
+#   - manifests.webapp.scope
+#   - manifests.webapp.short_name
+#   - manifests.webapp.start_url
+#   - manifests.webapp.theme_color
+# - Application shortcuts:
+#   - manifests.webapp.shortcuts

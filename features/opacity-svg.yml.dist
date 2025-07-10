@@ -9,12 +9,47 @@ status:
     chrome: ≤80
     chrome_android: ≤80
     edge: ≤80
-    firefox: "1"
+    firefox: "1.5"
     firefox_android: "4"
     safari: ≤13.1
     safari_ios: ≤13.4
 compat_features:
+  # baseline: high
+  # baseline_low_date: ≤2017-04-05
+  # baseline_high_date: ≤2019-10-05
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: ≤15
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
   - css.properties.fill-opacity
+
+  # baseline: high
+  # baseline_low_date: ≤2017-04-05
+  # baseline_high_date: ≤2019-10-05
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: ≤15
+  #   firefox: "1.5"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
   - css.properties.stroke-opacity
+
+  # baseline: high
+  # baseline_low_date: ≤2020-03-24
+  # baseline_high_date: ≤2022-09-24
+  # support:
+  #   chrome: ≤80
+  #   chrome_android: ≤80
+  #   edge: ≤80
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: ≤13.1
+  #   safari_ios: ≤13.4
   - svg.global_attributes.fill-opacity
   - svg.global_attributes.stroke-opacity

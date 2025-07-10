@@ -201,6 +201,19 @@ compat_features:
   - api.Selection.setPosition
 
   # baseline: high
+  # baseline_low_date: 2017-10-17
+  # baseline_high_date: 2020-04-17
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "16"
+  #   firefox: "25"
+  #   firefox_android: "25"
+  #   safari: "1"
+  #   safari_ios: "1"
+  - api.Range.collapse.toStart_parameter_optional
+
+  # baseline: high
   # baseline_low_date: 2017-11-28
   # baseline_high_date: 2020-05-28
   # support:
@@ -266,19 +279,6 @@ compat_features:
   - api.Selection.modify
 
   # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: ≤79
-  #   firefox: "25"
-  #   firefox_android: "25"
-  #   safari: "1"
-  #   safari_ios: "1"
-  - api.Range.collapse.toStart_parameter_optional
-
-  # baseline: high
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
   # support:
@@ -339,6 +339,31 @@ compat_features:
   #   safari_ios: "17"
   - api.Selection.removeRange
 
+  # baseline: low
+  # baseline_low_date: 2024-09-16
+  # support:
+  #   chrome: "127"
+  #   chrome_android: "127"
+  #   edge: "127"
+  #   firefox: "92"
+  #   firefox_android: "92"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.HTMLInputElement.selectionchange_event
+  - api.HTMLTextAreaElement.selectionchange_event
+
+  # baseline: low
+  # baseline_low_date: 2025-05-29
+  # support:
+  #   chrome: "137"
+  #   chrome_android: "137"
+  #   edge: "137"
+  #   firefox: "126"
+  #   firefox_android: "126"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - api.Selection.direction
+
   # baseline: false
   # support:
   #   chrome: "1"
@@ -357,18 +382,3 @@ compat_features:
   #   safari: "1"
   #   safari_ios: "1"
   - api.Range.detach
-
-  # baseline: false
-  # support:
-  #   firefox: "126"
-  #   firefox_android: "126"
-  #   safari: "17"
-  #   safari_ios: "17"
-  - api.Selection.direction
-
-  # baseline: false
-  # support:
-  #   firefox: "92"
-  #   firefox_android: "92"
-  - api.HTMLInputElement.selectionchange_event
-  - api.HTMLTextAreaElement.selectionchange_event

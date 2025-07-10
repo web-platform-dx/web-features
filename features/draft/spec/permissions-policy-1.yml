@@ -1,7 +1,12 @@
-draft_date: 2024-10-21
+draft_date: 2025-05-19
 name: Permissions Policy
 description: TODO
 spec: https://w3c.github.io/webappsec-permissions-policy/
 compat_features:
   - http.headers.Permissions-Policy
   - http.headers.Permissions-Policy.wildcards
+
+# The following features in the spec are already part of web-features:
+# - fetchLater:
+#   - http.headers.Permissions-Policy.deferred-fetch
+#   - http.headers.Permissions-Policy.deferred-fetch-minimal

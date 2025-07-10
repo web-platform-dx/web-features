@@ -1,0 +1,9 @@
+name: fetchLater
+description: "The `fetchLater()` method requests a deferred fetch sent at an unknown time. The browser chooses a reliable time to send the request, ideally when the document is unloaded, and ignores the response. This API is useful for sending beacons to a server without expecting a particular response."
+spec: https://github.com/whatwg/fetch/pull/1647
+compat_features:
+  - api.FetchLaterResult
+  - api.FetchLaterResult.activated
+  - api.Window.fetchLater
+  - http.headers.Permissions-Policy.deferred-fetch
+  - http.headers.Permissions-Policy.deferred-fetch-minimal

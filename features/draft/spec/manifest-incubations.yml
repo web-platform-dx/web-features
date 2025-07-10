@@ -1,0 +1,23 @@
+draft_date: 2025-07-03
+name: Manifest Incubations
+description: TODO
+spec: https://wicg.github.io/manifest-incubations/
+compat_features:
+  - manifests.webapp.display_override
+  - manifests.webapp.display_override.tabbed
+  - manifests.webapp.note_taking
+  - manifests.webapp.note_taking.new_note_url
+  - manifests.webapp.prefer_related_applications
+  - manifests.webapp.related_applications
+  - manifests.webapp.scope_extensions
+
+# The following features in the spec are already part of web-features:
+# - beforeinstallprompt:
+#   - api.Window.appinstalled_event
+#   - api.Window.beforeinstallprompt_event
+# - File handlers:
+#   - manifests.webapp.file_handlers
+# - Protocol handlers:
+#   - manifests.webapp.protocol_handlers
+#   - manifests.webapp.protocol_handlers.protocol
+#   - manifests.webapp.protocol_handlers.url

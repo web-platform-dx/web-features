@@ -140,6 +140,19 @@ compat_features:
   - api.PointerEvent.altitudeAngle
   - api.PointerEvent.azimuthAngle
 
+  # baseline: low
+  # baseline_low_date: 2024-12-11
+  # support:
+  #   chrome: "92"
+  #   chrome_android: "92"
+  #   edge: "92"
+  #   firefox: "129"
+  #   firefox_android: "129"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
+  - api.Element.auxclick_event.type_pointerevent
+  - api.Element.click_event.type_pointerevent
+
   # baseline: false
   # support:
   #   chrome: "58"
@@ -152,19 +165,22 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "77"
-  #   chrome_android: "77"
-  #   edge: "79"
-  - api.Element.pointerrawupdate_event
-
-  # baseline: false
-  # support:
   #   chrome: "92"
   #   chrome_android: "92"
   #   edge: "92"
-  - api.Element.auxclick_event.type_pointerevent
-  - api.Element.click_event.type_pointerevent
+  #   firefox: "129"
+  #   firefox_android: "129"
+  #   safari: "18.2"
   - api.Element.contextmenu_event.type_pointerevent
+
+  # baseline: false
+  # support:
+  #   chrome: "77"
+  #   chrome_android: "77"
+  #   edge: "79"
+  #   firefox: "140"
+  #   firefox_android: "140"
+  - api.Element.pointerrawupdate_event
 
   # baseline: false
   # support:
@@ -174,5 +190,7 @@ compat_features:
   - api.PointerEvent.persistentDeviceId
 
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "135"
+  #   firefox_android: "135"
   - api.PointerEvent.pointerType.fractional_coordinates

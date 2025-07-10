@@ -4,14 +4,12 @@
 status:
   baseline: false
   support:
-    chrome: "133"
-    chrome_android: "133"
-    edge: "133"
+    chrome: "88"
+    edge: "88"
 compat_features:
   # baseline: false
   # support:
   #   chrome: "53"
-  #   chrome_android: "53"
   #   edge: "79"
   #   firefox: "63"
   #   firefox_android: "63"
@@ -28,7 +26,6 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
-  #   chrome: "133"
-  #   chrome_android: "133"
-  #   edge: "133"
-  - api.Document.moveBefore
+  #   chrome: "88"
+  #   edge: "88"
+  - api.Element.requestPointerLock.options_unadjustedMovement_parameter

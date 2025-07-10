@@ -1,18 +1,31 @@
-draft_date: 2025-02-26
+draft_date: 2025-06-19
 name: CSS Fonts Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-fonts-5/
 compat_features:
-  - css.properties.font-width
-  - css.properties.font-width.condensed
-  - css.properties.font-width.expanded
-  - css.properties.font-width.extra-condensed
-  - css.properties.font-width.extra-expanded
-  - css.properties.font-width.normal
-  - css.properties.font-width.semi-condensed
-  - css.properties.font-width.semi-expanded
-  - css.properties.font-width.ultra-condensed
-  - css.properties.font-width.ultra-expanded
+  - api.CSSFontFaceDescriptors
+  - api.CSSFontFaceDescriptors.font-display
+  - api.CSSFontFaceDescriptors.font-family
+  - api.CSSFontFaceDescriptors.font-feature-settings
+  - api.CSSFontFaceDescriptors.font-stretch
+  - api.CSSFontFaceDescriptors.font-style
+  - api.CSSFontFaceDescriptors.font-weight
+  - api.CSSFontFaceDescriptors.font-width
+  - api.CSSFontFaceDescriptors.fontDisplay
+  - api.CSSFontFaceDescriptors.fontFamily
+  - api.CSSFontFaceDescriptors.fontFeatureSettings
+  - api.CSSFontFaceDescriptors.fontStretch
+  - api.CSSFontFaceDescriptors.fontStyle
+  - api.CSSFontFaceDescriptors.fontWeight
+  - api.CSSFontFaceDescriptors.fontWidth
+  - api.CSSFontFaceDescriptors.size-adjust
+  - api.CSSFontFaceDescriptors.sizeAdjust
+  - api.CSSFontFaceDescriptors.src
+  - api.CSSFontFaceDescriptors.unicode-range
+  - api.CSSFontFaceDescriptors.unicodeRange
+  - css.at-rules.font-face.font-width
+  - css.properties.font-synthesis-style.oblique-only
+  - css.properties.font-width.percentage
 
 # The following features in the spec are already part of web-features:
 # - @font-face:
@@ -95,12 +108,6 @@ compat_features:
 #   - css.at-rules.font-face.font-feature-settings
 #   - css.properties.font-feature-settings
 #   - css.properties.font-feature-settings.normal
-# - font-stretch:
-#   - css.at-rules.font-face.font-stretch
-#   - css.properties.font.font_stretch_support
-#   - css.properties.font-stretch
-#   - css.properties.font-stretch.percentage
-#   - svg.global_attributes.font-stretch
 # - font-style:
 #   - css.at-rules.font-face.font-style
 #   - css.properties.font-style
@@ -135,6 +142,8 @@ compat_features:
 #   - css.properties.font.message-box
 #   - css.properties.font.small-caption
 #   - css.properties.font.status-bar
+# - font-stretch:
+#   - css.properties.font.font-width_keyword_values
 # - font-family:
 #   - css.properties.font-family
 #   - svg.global_attributes.font-family
@@ -149,6 +158,9 @@ compat_features:
 #   - css.properties.font-family.ui-serif
 # - font-kerning:
 #   - css.properties.font-kerning
+#   - css.properties.font-kerning.auto
+#   - css.properties.font-kerning.none
+#   - css.properties.font-kerning.normal
 # - font-language-override:
 #   - css.properties.font-language-override
 # - font-optical-sizing:
@@ -254,3 +266,14 @@ compat_features:
 #   - css.properties.font-variant-position.normal
 #   - css.properties.font-variant-position.sub
 #   - css.properties.font-variant-position.super
+# - font-width:
+#   - css.properties.font-width
+#   - css.properties.font-width.condensed
+#   - css.properties.font-width.expanded
+#   - css.properties.font-width.extra-condensed
+#   - css.properties.font-width.extra-expanded
+#   - css.properties.font-width.normal
+#   - css.properties.font-width.semi-condensed
+#   - css.properties.font-width.semi-expanded
+#   - css.properties.font-width.ultra-condensed
+#   - css.properties.font-width.ultra-expanded

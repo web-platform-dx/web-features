@@ -1,12 +1,9 @@
-draft_date: 2025-02-20
+draft_date: 2025-06-19
 name: DOM
 description: TODO
 spec: https://dom.spec.whatwg.org/
 compat_features:
   - api.Document.featurePolicy
-  - api.Document.moveBefore
-  - api.DocumentFragment.moveBefore
-  - api.Element.moveBefore
 
 # The following features in the spec are already part of web-features:
 # - AbortController and AbortSignal:
@@ -358,6 +355,14 @@ compat_features:
 #   - api.XPathResult.snapshotItem
 #   - api.XPathResult.snapshotLength
 #   - api.XPathResult.stringValue
+# - Scoped custom element registries:
+#   - api.Document.customElementRegistry
+#   - api.Element.customElementRegistry
+#   - api.ShadowRoot.customElementRegistry
+# - moveBefore():
+#   - api.Document.moveBefore
+#   - api.DocumentFragment.moveBefore
+#   - api.Element.moveBefore
 # - <slot>:
 #   - api.Element.assignedSlot
 #   - api.Element.slot

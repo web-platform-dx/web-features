@@ -5,7 +5,7 @@ import fsSync from "node:fs";
 import fs from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import Path from "path";
-import webSpecs from "web-specs" assert { type: "json" };
+import webSpecs from "web-specs" with { type: "json" };
 import winston from "winston";
 import { Document, parse } from "yaml";
 import yargs from "yargs";

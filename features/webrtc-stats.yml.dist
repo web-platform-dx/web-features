@@ -479,8 +479,9 @@ compat_features:
   - api.RTCStatsReport.type_inbound-rtp.silentConcealedSamples
   - api.RTCStatsReport.type_inbound-rtp.totalSamplesReceived
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-10-18
+  # baseline_high_date: 2025-04-18
   # support:
   #   chrome: "80"
   #   chrome_android: "80"
@@ -491,8 +492,9 @@ compat_features:
   #   safari_ios: "14.5"
   - api.RTCStatsReport.type_inbound-rtp.headerBytesReceived
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-10-18
+  # baseline_high_date: 2025-04-18
   # support:
   #   chrome: "81"
   #   chrome_android: "81"
@@ -504,8 +506,9 @@ compat_features:
   - api.RTCStatsReport.type_inbound-rtp.fecPacketsDiscarded
   - api.RTCStatsReport.type_inbound-rtp.fecPacketsReceived
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-10-18
+  # baseline_high_date: 2025-04-18
   # support:
   #   chrome: "86"
   #   chrome_android: "86"
@@ -624,21 +627,21 @@ compat_features:
   #   chrome: "79"
   #   chrome_android: "79"
   #   edge: "79"
-  #   firefox: "106"
-  #   firefox_android: "106"
-  - api.RTCStatsReport.type_inbound-rtp.qpSum
-  - api.RTCStatsReport.type_inbound-rtp.totalDecodeTime
-  - api.RTCStatsReport.type_inbound-rtp.totalInterFrameDelay
-  - api.RTCStatsReport.type_inbound-rtp.totalSquaredInterFrameDelay
+  #   firefox: "56"
+  #   firefox_android: "56"
+  - api.RTCStatsReport.type_inbound-rtp.framesDecoded
 
   # baseline: false
   # support:
   #   chrome: "79"
   #   chrome_android: "79"
   #   edge: "79"
-  #   firefox: ≤73
-  #   firefox_android: ≤79
-  - api.RTCStatsReport.type_inbound-rtp.framesDecoded
+  #   firefox: "106"
+  #   firefox_android: "106"
+  - api.RTCStatsReport.type_inbound-rtp.qpSum
+  - api.RTCStatsReport.type_inbound-rtp.totalDecodeTime
+  - api.RTCStatsReport.type_inbound-rtp.totalInterFrameDelay
+  - api.RTCStatsReport.type_inbound-rtp.totalSquaredInterFrameDelay
 
   # baseline: false
   # support:
@@ -703,6 +706,24 @@ compat_features:
   #   chrome: "80"
   #   chrome_android: "80"
   #   edge: "80"
+  #   firefox: "55"
+  #   firefox_android: "55"
+  - api.RTCStatsReport.type_outbound-rtp.framesEncoded
+
+  # baseline: false
+  # support:
+  #   chrome: "80"
+  #   chrome_android: "80"
+  #   edge: "80"
+  #   firefox: "66"
+  #   firefox_android: "66"
+  - api.RTCStatsReport.type_outbound-rtp.qpSum
+
+  # baseline: false
+  # support:
+  #   chrome: "80"
+  #   chrome_android: "80"
+  #   edge: "80"
   #   firefox: "72"
   #   firefox_android: "79"
   - api.RTCStatsReport.type_remote-inbound-rtp.jitter
@@ -745,16 +766,6 @@ compat_features:
   - api.RTCStatsReport.type_media-source.framesPerSecond
   - api.RTCStatsReport.type_media-source.height
   - api.RTCStatsReport.type_media-source.width
-
-  # baseline: false
-  # support:
-  #   chrome: "80"
-  #   chrome_android: "80"
-  #   edge: "80"
-  #   firefox: ≤73
-  #   firefox_android: ≤79
-  - api.RTCStatsReport.type_outbound-rtp.framesEncoded
-  - api.RTCStatsReport.type_outbound-rtp.qpSum
 
   # baseline: false
   # support:
@@ -903,6 +914,7 @@ compat_features:
   #   firefox: "135"
   #   firefox_android: "135"
   - api.RTCStatsReport.type_outbound-rtp.mid
+  - api.RTCStatsReport.type_outbound-rtp.rid
 
   # baseline: false
   # support:

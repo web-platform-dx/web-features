@@ -233,12 +233,12 @@ compat_features:
   #   chrome_android: "133"
   #   edge: "133"
   - api.HTMLButtonElement.popoverTargetElement.implicit_anchor_reference
-  - api.HTMLElement.showPopover.source.implicit_anchor_reference
-  - api.HTMLElement.togglePopover.source.implicit_anchor_reference
   - api.HTMLInputElement.popoverTargetElement.implicit_anchor_reference
   - html.elements.button.popovertarget.implicit_anchor_reference
   - html.elements.input.popovertarget.implicit_anchor_reference
 
   # baseline: false
   # support: {}
+  - api.HTMLElement.showPopover.options_source_parameter.implicit_anchor_reference
+  - api.HTMLElement.togglePopover.options_source_parameter.implicit_anchor_reference
   - css.properties.position-anchor.auto

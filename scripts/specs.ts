@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 
-import webSpecs from 'web-specs' assert { type: 'json' };
+import webSpecs from 'web-specs' with { type: 'json' };
 
 import { features } from '../index.js';
 
@@ -120,6 +120,18 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/DocumentSubtitle/explainer.md",
         "Allowed because this is where the application-title meta tag is spec'd at the moment. Remove when https://github.com/whatwg/html/issues/8909 is fixed."
+    ],
+    [
+        "https://github.com/whatwg/dom/pull/1307",
+        "This is only place moveBefore() is spec'd. Remove this exception when https://github.com/whatwg/dom/pull/1307 merges."
+    ],
+    [
+        "https://www.w3.org/TR/2018/SPSD-html5-20180327/embedded-content-0.html#synchronising-multiple-media-elements",
+        "Allowed for the mediacontroller feature. This is the superseded HTML5 spec that still contains MediaController."
+    ],
+    [
+        "https://github.com/whatwg/fetch/pull/1647",
+        "This is where fetchLater() is in the process of being spec'd. Once the PR merges, change the spec url in fetchlater.yml, and remove this exception."
     ],
     [
         "https://www.w3.org/TR/2019/WD-feature-policy-1-20190416/",

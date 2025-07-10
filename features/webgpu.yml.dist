@@ -19,7 +19,6 @@ compat_features:
   - api.GPU.requestAdapter
   - api.GPUAdapter
   - api.GPUAdapter.features
-  - api.GPUAdapter.isFallbackAdapter
   - api.GPUAdapter.limits
   - api.GPUAdapter.requestDevice
   - api.GPUAdapterInfo
@@ -212,7 +211,6 @@ compat_features:
   - api.GPUSupportedLimits.maxComputeWorkgroupsPerDimension
   - api.GPUSupportedLimits.maxDynamicStorageBuffersPerPipelineLayout
   - api.GPUSupportedLimits.maxDynamicUniformBuffersPerPipelineLayout
-  - api.GPUSupportedLimits.maxInterStageShaderComponents
   - api.GPUSupportedLimits.maxInterStageShaderVariables
   - api.GPUSupportedLimits.maxSampledTexturesPerShaderStage
   - api.GPUSupportedLimits.maxSamplersPerShaderStage
@@ -408,9 +406,13 @@ compat_features:
   #   chrome_android: "132"
   #   edge: "132"
   - api.GPUDevice.adapterInfo
+  - api.GPUSupportedFeatures.feature_float32-blendable
+  - api.GPUTexture.createView.usage
 
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "134"
+  #   chrome_android: "134"
+  #   edge: "134"
   - api.GPUAdapterInfo.subgroupMaxSize
   - api.GPUAdapterInfo.subgroupMinSize
-  - api.GPUSupportedFeatures.feature_float32-blendable

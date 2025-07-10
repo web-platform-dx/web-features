@@ -44,6 +44,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "117"
+  #   edge: "117"
+  - api.Serial.requestPort.allowedBluetoothServiceClassIds_option
+  - api.Serial.requestPort.filters_bluetoothServiceClassId
+  - api.SerialPort.getInfo.bluetoothServiceClassId
+
+  # baseline: false
+  # support:
   #   chrome: "130"
   #   edge: "130"
+  - api.SerialPort.connect_event.bluetooth_rfcomm
   - api.SerialPort.connected
+  - api.SerialPort.disconnect_event.bluetooth_rfcomm

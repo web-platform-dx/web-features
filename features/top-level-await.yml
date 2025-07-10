@@ -2,5 +2,16 @@ name: Top-level await
 description: The `await` keyword, when used at the top level of a module (outside of an async function), delays parent module execution until after a promise fulfills.
 spec: https://tc39.es/ecma262/multipage/ecmascript-language-functions-and-classes.html#sec-async-function-definitions
 group: javascript
-compat_features:
-  - javascript.operators.await.top_level
+# TODO: This feature may have regressed its status. See: https://github.com/web-platform-dx/web-features/issues/2957
+status:
+  baseline: high
+  baseline_low_date: 2021-09-20
+  baseline_high_date: 2024-03-20
+  support:
+    chrome: "89"
+    chrome_android: "89"
+    edge: "89"
+    firefox: "89"
+    firefox_android: "89"
+    safari: "15"
+    safari_ios: "15"

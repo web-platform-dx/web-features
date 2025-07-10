@@ -12,17 +12,17 @@ compat_features:
   #   chrome: "93"
   #   chrome_android: "93"
   #   edge: "93"
-  - css.properties.custom-property.env.titlebar-area-height
-  - css.properties.custom-property.env.titlebar-area-width
-  - css.properties.custom-property.env.titlebar-area-x
-  - css.properties.custom-property.env.titlebar-area-y
+  - css.types.env.titlebar-area-height
+  - css.types.env.titlebar-area-width
+  - css.types.env.titlebar-area-x
+  - css.types.env.titlebar-area-y
 
   # baseline: false
   # support:
   #   chrome: "105"
   #   chrome_android: "105"
   #   edge: "105"
-  - html.manifest.display_override.window-controls-overlay
+  - manifests.webapp.display_override.window-controls-overlay
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false

@@ -54,10 +54,14 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "71"
+  #   chrome: "69"
+  #   chrome_android: "105"
+  #   edge: "79"
   - html.elements.iframe.allow.picture-in-picture
 
   # baseline: false
   # support:
   #   chrome: "88"
+  #   chrome_android: "105"
+  #   edge: "88"
   - http.headers.Permissions-Policy.picture-in-picture

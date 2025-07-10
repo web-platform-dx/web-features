@@ -15,13 +15,6 @@ compat_features:
   #   edge: "79"
   #   safari: "16.4"
   #   safari_ios: "16.4"
-  - api.Report
-  - api.Report.body
-  - api.Report.toJSON
-  - api.Report.type
-  - api.Report.url
-  - api.ReportBody
-  - api.ReportBody.toJSON
   - api.ReportingObserver
   - api.ReportingObserver.ReportingObserver
   - api.ReportingObserver.disconnect
@@ -30,15 +23,37 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "96"
+  #   chrome_android: "96"
+  #   edge: "96"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - http.headers.Reporting-Endpoints
+
+  # baseline: false
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "69"
+  #   edge: "79"
+  - api.DeprecationReportBody
+  - api.DeprecationReportBody.anticipatedRemoval
+  - api.DeprecationReportBody.columnNumber
+  - api.DeprecationReportBody.id
+  - api.DeprecationReportBody.lineNumber
+  - api.DeprecationReportBody.message
+  - api.DeprecationReportBody.sourceFile
+  - api.DeprecationReportBody.toJSON
+  - api.InterventionReportBody
+  - api.InterventionReportBody.columnNumber
+  - api.InterventionReportBody.id
+  - api.InterventionReportBody.lineNumber
+  - api.InterventionReportBody.message
+  - api.InterventionReportBody.sourceFile
+  - api.InterventionReportBody.toJSON
+
+  # baseline: false
+  # support:
   #   chrome: "84"
   #   chrome_android: "84"
   #   edge: "84"
   - api.ReportingObserver.worker_support
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "96"
-  #   chrome_android: "96"
-  #   edge: "96"
-  - http.headers.Reporting-Endpoints

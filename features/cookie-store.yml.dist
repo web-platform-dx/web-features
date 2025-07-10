@@ -8,53 +8,57 @@ status:
     chrome_android: "87"
     edge: "87"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2025-06-24
+  # support:
+  #   chrome: "87"
+  #   chrome_android: "87"
+  #   edge: "87"
+  #   firefox: "140"
+  #   firefox_android: "140"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
   - api.CookieChangeEvent
   - api.CookieChangeEvent.CookieChangeEvent
   - api.CookieChangeEvent.changed
-  - api.CookieChangeEvent.changed.domain_property
-  - api.CookieChangeEvent.changed.expires_property
-  - api.CookieChangeEvent.changed.name_property
-  - api.CookieChangeEvent.changed.path_property
-  - api.CookieChangeEvent.changed.sameSite_property
-  - api.CookieChangeEvent.changed.secure_property
-  - api.CookieChangeEvent.changed.value_property
   - api.CookieChangeEvent.deleted
-  - api.CookieChangeEvent.deleted.domain_property
-  - api.CookieChangeEvent.deleted.expires_property
-  - api.CookieChangeEvent.deleted.name_property
-  - api.CookieChangeEvent.deleted.path_property
-  - api.CookieChangeEvent.deleted.sameSite_property
-  - api.CookieChangeEvent.deleted.secure_property
-  - api.CookieChangeEvent.deleted.value_property
   - api.CookieStore
   - api.CookieStore.change_event
   - api.CookieStore.delete
   - api.CookieStore.get
-  - api.CookieStore.get.domain_return_property
-  - api.CookieStore.get.expires_return_property
   - api.CookieStore.get.name_return_property
-  - api.CookieStore.get.path_return_property
-  - api.CookieStore.get.sameSite_return_property
-  - api.CookieStore.get.secure_return_property
   - api.CookieStore.get.value_return_property
   - api.CookieStore.getAll
-  - api.CookieStore.getAll.domain_return_property
-  - api.CookieStore.getAll.expires_return_property
-  - api.CookieStore.getAll.name_return_property
-  - api.CookieStore.getAll.path_return_property
-  - api.CookieStore.getAll.sameSite_return_property
-  - api.CookieStore.getAll.secure_return_property
-  - api.CookieStore.getAll.value_return_property
   - api.CookieStore.set
-  - api.CookieStoreManager
-  - api.CookieStoreManager.getSubscriptions
-  - api.CookieStoreManager.subscribe
-  - api.CookieStoreManager.unsubscribe
   - api.ExtendableCookieChangeEvent
   - api.ExtendableCookieChangeEvent.ExtendableCookieChangeEvent
   - api.ExtendableCookieChangeEvent.changed
   - api.ExtendableCookieChangeEvent.deleted
   - api.ServiceWorkerGlobalScope.cookieStore
+  - api.Window.cookieStore
+
+  # baseline: false
+  # support:
+  #   chrome: "87"
+  #   chrome_android: "87"
+  #   edge: "87"
+  #   firefox: "140"
+  #   firefox_android: "140"
+  - api.CookieStoreManager
+  - api.CookieStoreManager.getSubscriptions
+  - api.CookieStoreManager.subscribe
+  - api.CookieStoreManager.unsubscribe
   - api.ServiceWorkerGlobalScope.cookiechange_event
   - api.ServiceWorkerRegistration.cookies
-  - api.Window.cookieStore
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "87"
+  #   chrome_android: "87"
+  #   edge: "87"
+  - api.CookieStore.get.domain_return_property
+  - api.CookieStore.get.expires_return_property
+  - api.CookieStore.get.path_return_property
+  - api.CookieStore.get.sameSite_return_property
+  - api.CookieStore.get.secure_return_property

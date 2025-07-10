@@ -13,9 +13,10 @@
   "type": "module",
   "main": "index.ts",
   "engines": {
-    "node": ">=18.19.0"
+    "node": ">=20.10.0"
   },
   "scripts": {
+    "audit-consumers": "tsx scripts/audit-consumers.ts",
     "build:extended": "tsx scripts/build.ts extended-json",
     "build": "tsx scripts/build.ts package",
     "dist": "tsx scripts/dist.ts",
@@ -37,31 +38,32 @@
     "remove-tagged-compat-features": "tsx scripts/remove-tagged-compat-features.ts && npm run format"
   },
   "devDependencies": {
-    "@eslint/js": "^9.21.0",
-    "@js-temporal/polyfill": "^0.4.4",
-    "@mdn/browser-compat-data": "^5.6.42",
+    "@eslint/js": "^9.30.1",
+    "@js-temporal/polyfill": "^0.5.1",
+    "@mdn/browser-compat-data": "^6.0.30",
+    "@octokit/rest": "^22.0.0",
     "@types/caniuse-lite": "^1.0.4",
-    "@types/diff": "^7.0.1",
-    "@types/node": "^18.19.76",
+    "@types/node": "^20.19.6",
     "ajv": "^8.17.1",
-    "caniuse-lite": "^1.0.30001701",
-    "diff": "^7.0.0",
+    "caniuse-lite": "^1.0.30001727",
+    "cheerio": "^1.1.0",
+    "diff": "^8.0.2",
     "eslint-plugin-new-with-error": "^5.0.0",
     "fast-json-stable-stringify": "^2.1.0",
-    "fdir": "^6.4.3",
+    "fdir": "^6.4.6",
     "hast-util-to-string": "^3.0.1",
-    "prettier": "^3.5.2",
+    "prettier": "^3.6.2",
     "rehype-stringify": "^10.0.1",
     "remark-parse": "^11.0.0",
-    "remark-rehype": "^11.1.1",
-    "ts-json-schema-generator": "^2.3.0",
-    "tsx": "^4.19.3",
-    "typescript": "^5.7.3",
-    "typescript-eslint": "^8.25.0",
+    "remark-rehype": "^11.1.2",
+    "ts-json-schema-generator": "^2.4.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.36.0",
     "unified": "^11.0.5",
-    "web-specs": "^3.41.0",
+    "web-specs": "^3.56.0",
     "winston": "^3.17.0",
-    "yaml": "^2.7.0",
-    "yargs": "^17.7.2"
+    "yaml": "^2.8.0",
+    "yargs": "^18.0.0"
   }
 }

@@ -297,8 +297,9 @@ compat_features:
   #   safari_ios: "15.5"
   - html.global_attributes.nonce.nonce_hiding
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-09-12
+  # baseline_high_date: 2025-03-12
   # support:
   #   chrome: "97"
   #   chrome_android: "97"
@@ -309,8 +310,9 @@ compat_features:
   #   safari_ios: "16"
   - http.headers.Content-Security-Policy.script-src.wasm-unsafe-eval
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-12-13
+  # baseline_high_date: 2025-06-13
   # support:
   #   chrome: "75"
   #   chrome_android: "75"
@@ -383,28 +385,3 @@ compat_features:
   #   edge: "79"
   - api.HTMLIFrameElement.csp
   - html.elements.iframe.csp
-
-  # baseline: false
-  # support:
-  #   chrome: "74"
-  #   chrome_android: "74"
-  #   edge: "79"
-  - api.CSPViolationReportBody
-  - api.CSPViolationReportBody.blockedURL
-  - api.CSPViolationReportBody.columnNumber
-  - api.CSPViolationReportBody.disposition
-  - api.CSPViolationReportBody.documentURL
-  - api.CSPViolationReportBody.effectiveDirective
-  - api.CSPViolationReportBody.lineNumber
-  - api.CSPViolationReportBody.originalPolicy
-  - api.CSPViolationReportBody.referrer
-  - api.CSPViolationReportBody.sample
-  - api.CSPViolationReportBody.sourceFile
-  - api.CSPViolationReportBody.statusCode
-
-  # baseline: false
-  # support:
-  #   chrome: "80"
-  #   chrome_android: "80"
-  #   edge: "80"
-  - api.CSPViolationReportBody.toJSON

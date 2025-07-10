@@ -6,6 +6,7 @@ group: webgl
 status:
   compute_from: api.WebGLRenderingContext
 compat_features:
+  - api.HTMLCanvasElement.getContext.webgl_context
   - api.HTMLCanvasElement.getContext.webgl_context.options_alpha_parameter
   - api.HTMLCanvasElement.getContext.webgl_context.options_failIfMajorPerformanceCaveat_parameter
   - api.HTMLCanvasElement.getContext.webgl_context.options_powerPreference_parameter
