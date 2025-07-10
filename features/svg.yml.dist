@@ -1142,6 +1142,7 @@ compat_features:
   #   safari: "4"
   #   safari_ios: "3.2"
   - css.properties.color-interpolation
+  - css.properties.color-interpolation.sRGB
   - css.properties.shape-rendering
 
   # baseline: high
@@ -1609,7 +1610,6 @@ compat_features:
   #   firefox_android: ≤79
   #   safari: ≤13.1
   #   safari_ios: ≤13.4
-  - css.properties.color-interpolation.sRGB
   - svg.global_attributes.clip-rule
   - svg.global_attributes.color-interpolation-filters
   - svg.global_attributes.dominant-baseline
