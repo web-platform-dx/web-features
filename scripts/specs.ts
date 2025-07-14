@@ -132,6 +132,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/whatwg/fetch/pull/1647",
         "This is where fetchLater() is in the process of being spec'd. Once the PR merges, change the spec url in fetchlater.yml, and remove this exception."
+    ],
+    [
+        "https://www.w3.org/TR/2019/WD-feature-policy-1-20190416/",
+        "Allowed because feature policy was replaced by permissions policy."
     ]
 ];
 
