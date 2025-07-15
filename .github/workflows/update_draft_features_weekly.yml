@@ -1,7 +1,7 @@
 name: Update Draft Features
 
 on:
-  # Runs at midnight on Mondays and Thursdays 05:30 UTC, or manually triggered
+  # Runs on Mondays and Thursdays 05:30 UTC, or manually triggered
   schedule:
     - cron: "30 5 * * 1,4"
   workflow_dispatch:
