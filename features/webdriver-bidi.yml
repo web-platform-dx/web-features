@@ -13,7 +13,6 @@ status:
     # The following keys are a subset of the compat_features below.
     # They are the most critical keys for using the WebDriver BiDi protocol
     # - webdriver.bidi.session.new
-    # - webdriver.bidi.session.end
     - webdriver.bidi.session.status
     - webdriver.bidi.session.subscribe
     - webdriver.bidi.session.unsubscribe
@@ -42,7 +41,6 @@ compat_features:
   # Critical. Every test needs a session.
   - webdriver.bidi.session.new
   - webdriver.bidi.session.new.capabilities_parameter
-  - webdriver.bidi.session.end
   - webdriver.bidi.session.status
   # Critical. All BiDi events go through these.
   - webdriver.bidi.session.subscribe
@@ -52,6 +50,8 @@ compat_features:
   - webdriver.bidi.session.unsubscribe
   - webdriver.bidi.session.unsubscribe.contexts_parameter
   - webdriver.bidi.session.unsubscribe.events_parameter
+  # Optional. You can always end the session by closing the browser (browser.close command).
+  - webdriver.bidi.session.end
 
   # ---------------------
   # Script module.
