@@ -1,4 +1,4 @@
-draft_date: 2025-07-03
+draft_date: 2025-07-10
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -100,6 +100,7 @@ compat_features:
   - html.elements.iframe.sandbox.allow-pointer-lock
   - html.elements.img.usemap.case_sensitive
   - html.elements.input.autocomplete
+  - html.elements.input.type_color.accepts_css_colors
   - html.elements.input.type_range.labeled_values
   - html.elements.link.rel.icon
   - html.elements.script.type.importmap.integrity
