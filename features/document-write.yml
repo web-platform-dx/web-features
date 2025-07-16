@@ -12,8 +12,8 @@ status:
   compute_from: api.Document.write
 compat_features:
   - api.Document.write
-  - api.Document.write.accepts_TrustedHTML
+  - api.Document.write.enforces_trusted_types
   - api.Document.writeln
-  - api.Document.writeln.accepts_TrustedHTML
+  - api.Document.writeln.enforces_trusted_types
   - api.Document.open
   - api.Document.close

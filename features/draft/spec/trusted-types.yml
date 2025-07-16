@@ -1,0 +1,51 @@
+draft_date: 2025-07-10
+name: Trusted Types
+description: TODO
+spec: https://w3c.github.io/trusted-types/dist/spec/
+compat_features:
+  - api.DOMParser.parseFromString.enforces_trusted_types
+  - api.Document.parseHTMLUnsafe_static.enforces_trusted_types
+  - api.Element.insertAdjacentHTML.enforces_trusted_types
+  - api.Element.outerHTML.enforces_trusted_types
+  - api.Element.setHTMLUnsafe.enforces_trusted_types
+  - api.HTMLIFrameElement.srcdoc.enforces_trusted_types
+  - api.Range.createContextualFragment.enforces_trusted_types
+  - api.ShadowRoot.setHTMLUnsafe.enforces_trusted_types
+
+# The following features in the spec are already part of web-features:
+# - Trusted types:
+#   - api.Element.innerHTML.enforces_trusted_types
+#   - api.HTMLElement.innerText.scripts_accept_TrustedScript
+#   - api.HTMLScriptElement.src.accepts_TrustedScriptURL
+#   - api.HTMLScriptElement.text.accepts_TrustedScript
+#   - api.Node.textContent.scripts_accept_TrustedScript
+#   - api.ShadowRoot.innerHTML.enforces_trusted_types
+#   - api.TrustedHTML
+#   - api.TrustedHTML.toJSON
+#   - api.TrustedHTML.toString
+#   - api.TrustedScript
+#   - api.TrustedScript.toJSON
+#   - api.TrustedScript.toString
+#   - api.TrustedScriptURL
+#   - api.TrustedScriptURL.toJSON
+#   - api.TrustedScriptURL.toString
+#   - api.TrustedTypePolicy
+#   - api.TrustedTypePolicy.createHTML
+#   - api.TrustedTypePolicy.createScript
+#   - api.TrustedTypePolicy.createScriptURL
+#   - api.TrustedTypePolicy.name
+#   - api.TrustedTypePolicyFactory
+#   - api.TrustedTypePolicyFactory.createPolicy
+#   - api.TrustedTypePolicyFactory.defaultPolicy
+#   - api.TrustedTypePolicyFactory.emptyHTML
+#   - api.TrustedTypePolicyFactory.emptyScript
+#   - api.TrustedTypePolicyFactory.getAttributeType
+#   - api.TrustedTypePolicyFactory.getPropertyType
+#   - api.TrustedTypePolicyFactory.isHTML
+#   - api.TrustedTypePolicyFactory.isScript
+#   - api.TrustedTypePolicyFactory.isScriptURL
+#   - api.setInterval.code_param_accepts_trustedScript
+#   - api.setTimeout.code_param_accepts_trustedScript
+#   - api.trustedTypes
+#   - http.headers.Content-Security-Policy.require-trusted-types-for
+#   - http.headers.Content-Security-Policy.trusted-types

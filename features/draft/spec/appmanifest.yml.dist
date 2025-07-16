@@ -4,7 +4,10 @@
 status:
   baseline: false
   support:
-    chrome_android: "44"
+    chrome: "39"
+    chrome_android: "39"
+    edge: "79"
+    firefox_android: "47"
 compat_features:
   # baseline: false
   # support:
@@ -17,6 +20,7 @@ compat_features:
   - manifests.webapp.display.browser
   - manifests.webapp.display.standalone
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "39"
@@ -25,10 +29,3 @@ compat_features:
   #   firefox_android: "47"
   - manifests.webapp.display.fullscreen
   - manifests.webapp.display.minimal-ui
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome_android: "44"
-  - manifests.webapp.prefer_related_applications
-  - manifests.webapp.related_applications

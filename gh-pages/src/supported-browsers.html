@@ -1,0 +1,366 @@
+---
+title: Supported browsers
+layout: "default.html"
+---
+
+<style>
+  #downstreamContainer,
+  #widelyAvailableOnDateLabel {
+    display: none;
+  }
+
+  #downstreamContainer {
+    margin-top: 1em;
+  }
+
+  #controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin: 0 0 1em 0;
+  }
+
+  th:nth-child(1),
+  td:nth-child(1) {
+    text-align: left;
+  }
+
+  th:nth-child(2),
+  td:nth-child(2),
+  #downstreamVersionsList td:nth-child(3),
+  #downstreamVersionsList th:nth-child(3) {
+    text-align: center;
+  }
+
+  #supportedVersionsList th:nth-child(3),
+  #supportedVersionsList td:nth-child(3),
+  #downstreamVersionsList th:nth-child(4),
+  #downstreamVersionsList td:nth-child(4) {
+    text-align: right;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
+  ::view-transition-old(view-transition-*) {
+    animation: 1s fade-out ease-in-out;
+  }
+
+  ::view-transition-new(view-transition-*) {
+    animation: 1s fade-in ease-in-out;
+  }
+</style>
+<script type="module">
+  let getCompatibleVersions;
+  try {
+    getCompatibleVersions = await import(
+      "https://cdn.jsdelivr.net/npm/baseline-browser-mapping"
+    ).then((response) => response.getCompatibleVersions);
+  } catch {
+    console.log(
+      "Loading baseline-browser-mapping from cdn.jsdelivr.net failed, attempting to load from unpkg.com.",
+    );
+    try {
+      getCompatibleVersions = await import(
+        "https://unpkg.com/baseline-browser-mapping"
+      ).then((response) => response.getCompatibleVersions);
+    } catch {
+      document.getElementById("loadingContainer").innerText =
+        "There was an error loading baseline-browser-mapping which is required for this page to work.  Please check your network connection and refresh the page.";
+      throw new Error(
+        "There was an error loading baseline-browser-mapping which is required for this page to work.  Please check your network connection and refresh the page.",
+      );
+    }
+  }
+
+  // Declare globally useful variables
+  const urlParams = new URLSearchParams(window.location.search);
+  const nameMappings = {
+    chrome: "Chrome",
+    chrome_android: "Chrome for Android",
+    edge: "Edge",
+    firefox: "Firefox",
+    firefox_android: "Firefox for Android",
+    safari: "Safari",
+    safari_ios: "Safari for iOS",
+    opera: "Opera",
+    opera_android: "Opera Android",
+    samsunginternet_android: "Samsung Internet",
+    webview_android: "WebView Android",
+    qq_android: "QQ Browser Mobile",
+    uc_android: "UC Browser Mobile",
+    ya_android: "Yandex Browser Mobile",
+  };
+  const datePicker = document.getElementById("widelyAvailableOnDatePicker");
+  const targetSelect = document.getElementById("targetSelect");
+  const nextYear = new Date().getFullYear() + 1;
+  const maxWaDate = new Date();
+  maxWaDate.setMonth(new Date().getMonth() + 30);
+
+  // UI updating functions
+
+  const updateTables = (versions) => {
+    document.getElementById("supportedVersionsList").innerHTML =
+      `<tr>
+        <th>Browser</th>
+        <th>Version</th>
+        <th>Release date</th>
+      </tr>` +
+      versions
+        .slice(0, 7)
+        .map((version) => {
+          return (
+            `<tr view-transition-name="view-transition-${version.browser}">` +
+            `<td>${nameMappings[version.browser]}</td><td>${version.version}</td><td>${version.release_date}</td>` +
+            `</tr>`
+          );
+        })
+        .join("");
+
+    document.getElementById("downstreamVersionsList").innerHTML =
+      `<tr>
+        <th>Browser</th>
+        <th>Version</th>
+        <th>Chromium version</th>
+        <th>Release date</th>
+      </tr>` +
+      versions
+        .slice(7)
+        .map((version) => {
+          return (
+            `<tr view-transition-name="view-transition-${version.browser}">` +
+            `<td>${nameMappings[version.browser]}</td>
+          <td>${version.version}</td>
+          <td>${version.engine_version}</td>
+          <td>${version.release_date}</td>` +
+            `</tr>`
+          );
+        })
+        .join("");
+
+    return;
+  };
+
+  const insertVersions = (config) => {
+    const versions = getCompatibleVersions({
+      ...config,
+      includeDownstreamBrowsers: true,
+    });
+
+    if (!document.startViewTransition) {
+      updateTables(versions);
+      return;
+    }
+
+    document.startViewTransition(() => {
+      updateTables(versions);
+    });
+  };
+
+  const updateUrl = (urlParams, options) => {
+    if (options.delete) {
+      options.delete.forEach((key) => urlParams.delete(key));
+    }
+    if (options.set) {
+      Object.entries(options.set).forEach(([key, value]) =>
+        urlParams.set(key, value),
+      );
+    }
+    history.replaceState(null, null, "?" + urlParams.toString());
+    return;
+  };
+
+  const showHideElements = (id, show) => {
+    document.getElementById(id).style.display = show ? "block" : "none";
+    return;
+  };
+
+  const setInputValue = (input, value) => {
+    if (input.type === "checkbox") {
+      input.checked = value;
+      return;
+    }
+    input.value = value;
+    return;
+  };
+
+  // Init function to handle initial URL ingestion and setting UI
+  const init = () => {
+    const configObject = {};
+
+    // Add all available years to target drop down
+    const yearArray = [...Array(nextYear).keys()].slice(2015).reverse();
+    yearArray.forEach((year) => {
+      let newElement = document.createElement("option");
+      setInputValue(newElement, year);
+      newElement.innerText = year;
+      document.getElementById("targetSelect").appendChild(newElement);
+    });
+
+    // Set value and max on datepicker
+    setInputValue(datePicker, new Date().toISOString().slice(0, 10));
+    datePicker.setAttribute("max", maxWaDate.toISOString().slice(0, 10));
+
+    // Set downstream browser display
+    // NB: downstream browsers are always requested from baseline-browser-mapping
+    const includeDownstreamFromUrl =
+      urlParams.get("includeDownstream") === "true" ? true : false;
+    showHideElements("downstreamContainer", includeDownstreamFromUrl);
+    setInputValue(
+      document.getElementById("downstreamBrowsersCheckbox"),
+      includeDownstreamFromUrl,
+    );
+
+    // Look for target year in URL
+    if (urlParams.get("targetYear")) {
+      configObject.targetYear = parseInt(urlParams.get("targetYear"));
+      setInputValue(targetSelect, configObject.targetYear);
+    }
+    // Look for WA date in URL
+    else if (urlParams.get("widelyAvailableOnDate")) {
+      configObject.widelyAvailableOnDate = urlParams.get(
+        "widelyAvailableOnDate",
+      );
+      setInputValue(datePicker, configObject.widelyAvailableOnDate);
+      setInputValue(targetSelect, "widelyAvailableOnDate");
+      showHideElements("widelyAvailableOnDateLabel", true);
+    }
+    // Look for newly available in URL
+    else if (urlParams.get("target")) {
+      if (urlParams.get("target") === "newlyAvailable") {
+        setInputValue(targetSelect, "newlyAvailable");
+        configObject.widelyAvailableOnDate = maxWaDate;
+      }
+    }
+    try {
+      insertVersions(configObject);
+    } catch (error) {
+      console.error("Error fetching compatible versions:", error);
+      document.getElementById("supportedVersionsList").innerHTML =
+        `<li>Error fetching compatible browsers.</li><li>${error.message}</li>`;
+    }
+  };
+
+  // Event handlers for inputs
+  document
+    .getElementById("downstreamBrowsersCheckbox")
+    .addEventListener("change", (e) => {
+      updateUrl(urlParams, {
+        set: { includeDownstream: e.target.checked },
+      });
+      showHideElements("downstreamContainer", e.target.checked);
+      return;
+    });
+
+  document.getElementById("targetSelect").addEventListener("change", (e) => {
+    e.preventDefault();
+    const target = e.target.value;
+    if (target == "widelyAvailable" || target == "newlyAvailable") {
+      if (target == "newlyAvailable")
+        insertVersions({ widelyAvailableOnDate: maxWaDate });
+      else insertVersions();
+      showHideElements("widelyAvailableOnDateLabel", false);
+      updateUrl(urlParams, {
+        set: { target: target },
+        delete: ["widelyAvailableOnDate", "targetYear"],
+      });
+      return;
+    }
+    if (target == "widelyAvailableOnDate") {
+      insertVersions({
+        widelyAvailableOnDate: document.getElementById(
+          "widelyAvailableOnDatePicker",
+        ).value,
+      });
+      showHideElements("widelyAvailableOnDateLabel", true);
+
+      updateUrl(urlParams, {
+        set: { widelyAvailableOnDate: datePicker.value },
+        delete: ["target", "targetYear"],
+      });
+      return;
+    }
+    insertVersions({ targetYear: target });
+    updateUrl(urlParams, {
+      set: { targetYear: target },
+      delete: ["target", "widelyAvailableOnDate"],
+    });
+    showHideElements("widelyAvailableOnDateLabel", false);
+    return;
+  });
+
+  document
+    .getElementById("widelyAvailableOnDatePicker")
+    .addEventListener("change", (e) => {
+      insertVersions({ widelyAvailableOnDate: e.target.value });
+      urlParams.set("widelyAvailableOnDate", e.target.value);
+      history.replaceState(null, null, "?" + urlParams.toString());
+    });
+
+  // Call init function
+  init();
+</script>
+<p>
+  This page uses data from
+  <a href="https://github.com/web-platform-dx/web-features">web-features</a> to
+  determine which browser versions support all of the features in the selected
+  Baseline target.
+</p>
+<div id="controls">
+  <label id="targetSelectLabel">
+    Target:
+    <select name="target" id="targetSelect">
+      <option value="widelyAvailable">Widely available</option>
+      <option value="widelyAvailableOnDate">Widely available on date</option>
+      <option value="newlyAvailable">Newly available</option>
+    </select>
+  </label>
+  <label id="widelyAvailableOnDateLabel">
+    <input id="widelyAvailableOnDatePicker" min="2018-01-29" type="date" />
+  </label>
+
+  <label id="showDownstreamLabel">
+    <input id="downstreamBrowsersCheckbox" type="checkbox" />
+    Show downstream browsers
+  </label>
+</div>
+
+<div id="loadingContainer"></div>
+
+<div id="supportedVersions">
+  <h2>Core browser set</h2>
+  <table id="supportedVersionsList"></table>
+</div>
+
+<div id="downstreamContainer">
+  <h2>Downstream browsers</h2>
+  <p>
+    These browsers are not part of the <a href="/">main Baseline definition</a>,
+    but are based on the engine from one of the core browsers listed above. This
+    information is provided on a best-effort basis, and you should always test
+    in these browsers if they make up a significant portion of your user base.
+    To learn more about how these version mappings were calculated, see
+    <a
+      href="https://github.com/web-platform-dx/baseline-browser-mapping/#downstream-browsers"
+      >baseline-browser-mapping</a
+    >.
+  </p>
+  <table id="downstreamVersionsList"></table>
+</div>
