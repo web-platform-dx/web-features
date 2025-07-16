@@ -1,25 +1,23 @@
-draft_date: 2025-06-23
+draft_date: 2025-07-03
 name: Content Security Policy Level 3
 description: TODO
 spec: https://w3c.github.io/webappsec-csp/
 compat_features:
+  - api.CSPViolationReportBody
+  - api.CSPViolationReportBody.blockedURL
+  - api.CSPViolationReportBody.columnNumber
+  - api.CSPViolationReportBody.disposition
+  - api.CSPViolationReportBody.documentURL
+  - api.CSPViolationReportBody.effectiveDirective
+  - api.CSPViolationReportBody.lineNumber
+  - api.CSPViolationReportBody.originalPolicy
+  - api.CSPViolationReportBody.referrer
+  - api.CSPViolationReportBody.sample
+  - api.CSPViolationReportBody.sourceFile
+  - api.CSPViolationReportBody.statusCode
   - http.headers.Content-Security-Policy.script-src.trusted-types-eval
 
 # The following features in the spec are already part of web-features:
-# - Reporting API:
-#   - api.CSPViolationReportBody
-#   - api.CSPViolationReportBody.blockedURL
-#   - api.CSPViolationReportBody.columnNumber
-#   - api.CSPViolationReportBody.disposition
-#   - api.CSPViolationReportBody.documentURL
-#   - api.CSPViolationReportBody.effectiveDirective
-#   - api.CSPViolationReportBody.lineNumber
-#   - api.CSPViolationReportBody.originalPolicy
-#   - api.CSPViolationReportBody.referrer
-#   - api.CSPViolationReportBody.sample
-#   - api.CSPViolationReportBody.sourceFile
-#   - api.CSPViolationReportBody.statusCode
-#   - api.CSPViolationReportBody.toJSON
 # - Content Security Policy (CSP):
 #   - api.Element.securitypolicyviolation_event
 #   - api.SecurityPolicyViolationEvent

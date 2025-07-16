@@ -55,7 +55,6 @@ compat_features:
   #   safari: "3"
   #   safari_ios: "1"
   - api.HTMLOptGroupElement
-  - api.HTMLOptGroupElement.disabled
   - api.HTMLOptGroupElement.label
   - api.HTMLOptionElement.defaultSelected
   - api.HTMLOptionElement.disabled
@@ -107,7 +106,6 @@ compat_features:
   #   safari: ≤4
   #   safari_ios: ≤3.2
   - html.elements.optgroup
-  - html.elements.optgroup.disabled
   - html.elements.optgroup.label
   - html.elements.option
   - html.elements.option.disabled
@@ -193,6 +191,17 @@ compat_features:
   #   safari: "9.1"
   #   safari_ios: "9.3"
   - api.HTMLSelectElement.autocomplete
+
+  # baseline: false
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "7"
+  - api.HTMLOptGroupElement.disabled
+  - html.elements.optgroup.disabled
 
   # baseline: false
   # support:

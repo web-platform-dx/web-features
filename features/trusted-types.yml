@@ -6,12 +6,12 @@ group: security
 status:
   compute_from: api.trustedTypes
 compat_features:
-  - api.Element.innerHTML.accepts_TrustedHTML
+  - api.Element.innerHTML.enforces_trusted_types
   - api.HTMLElement.innerText.scripts_accept_TrustedScript
   - api.HTMLScriptElement.src.accepts_TrustedScriptURL
   - api.HTMLScriptElement.text.accepts_TrustedScript
   - api.Node.textContent.scripts_accept_TrustedScript
-  - api.ShadowRoot.innerHTML.accepts_TrustedHTML
+  - api.ShadowRoot.innerHTML.enforces_trusted_types
   - api.TrustedHTML
   - api.TrustedHTML.toJSON
   - api.TrustedHTML.toString

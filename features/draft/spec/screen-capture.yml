@@ -1,0 +1,24 @@
+draft_date: 2025-07-10
+name: Screen Capture
+description: TODO
+spec: https://w3c.github.io/mediacapture-screen-share/
+compat_features:
+  - api.MediaStreamTrack.getSettings.return_object_property_screenPixelRatio
+
+# The following features in the spec are already part of web-features:
+# - Screen capture:
+#   - api.CaptureController
+#   - api.CaptureController.CaptureController
+#   - api.CaptureController.setFocusBehavior
+#   - api.MediaDevices.getDisplayMedia
+#   - api.MediaDevices.getDisplayMedia.audio_capture_support
+#   - api.MediaDevices.getDisplayMedia.controller_option
+#   - api.MediaDevices.getDisplayMedia.monitorTypeSurfaces_option
+#   - api.MediaDevices.getDisplayMedia.selfBrowserSurface_option
+#   - api.MediaDevices.getDisplayMedia.surfaceSwitching_option
+#   - api.MediaDevices.getDisplayMedia.systemAudio_option
+#   - api.MediaStreamTrack.applyConstraints.displaySurface_constraint
+#   - api.MediaStreamTrack.applyConstraints.logicalSurface_constraint
+#   - api.MediaStreamTrack.applyConstraints.suppressLocalAudioPlayback_constraint
+#   - html.elements.iframe.allow.display-capture
+#   - http.headers.Permissions-Policy.display-capture
