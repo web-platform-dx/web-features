@@ -23,7 +23,7 @@
     "undist": "tsx scripts/undist.ts",
     "feature-init": "tsx scripts/feature-init.ts",
     "format": "npx prettier --write .",
-    "schematypes": "sh -c \"npx quicktype --lang='typescript' --src-lang schema --src ./schemas/data.schema.json --just-types='yes' --prefer-unions='yes' --prefer-const-values='yes' --top-level=WebFeaturesData | prettier --stdin-filepath ./types.quicktype.ts\"",
+    "schematypes": "sh -c \"npx quicktype --lang='typescript' --src-lang schema --src ./schemas/data.schema.json --just-types --prefer-unions --prefer-const-values --top-level=WebFeaturesData | prettier --stdin-filepath ./types.quicktype.ts\"",
     "schematypes:write": "npm run --silent schematypes > ./types.quicktype.ts",
     "test:caniuse": "tsx scripts/caniuse.ts",
     "test:coverage": "npm run --workspaces test:coverage",
