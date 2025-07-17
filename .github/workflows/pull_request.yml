@@ -29,6 +29,14 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
+  vale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: errata-ai/vale-action@d89dee975228ae261d22c15adcd03578634d429c # v2.1.1
+        with:
+          fail_on_error: true
+          version: 3.12.0
 
 env:
   FORCE_COLOR: 3
