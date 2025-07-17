@@ -3,6 +3,15 @@ description: "The `attr()` CSS function, in the context of any property, returns
 spec: https://drafts.csswg.org/css-values-5/#attr-notation
 caniuse: css3-attr
 group: css
+# There is no BCD entry for attr() support beyond the `contents` property
+# (a.k.a. advanced attr()) so the status here is maintained manually, matching
+# https://caniuse.com/css3-attr and https://chromestatus.com/feature/4680129030651904.
+status:
+  baseline: false
+  support:
+    chrome: "133"
+    chrome_android: "133"
+    edge: "133"
 compat_features:
   # The css.types.attr key makes sense here but is already used in `contents-attr`
   #- css.types.attr
