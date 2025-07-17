@@ -3,8 +3,17 @@
 
 status:
   baseline: false
-  support:
-    firefox: "138"
-    firefox_android: "138"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "136"
+  #   chrome_android: "136"
+  #   edge: "136"
+  - api.BaseAudioContext.state.interrupted
+
+  # baseline: false
+  # support:
+  #   firefox: "138"
+  #   firefox_android: "138"
   - api.AudioWorklet.port
