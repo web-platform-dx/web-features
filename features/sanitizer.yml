@@ -1,0 +1,39 @@
+name: Sanitizer API
+description: The `Element.setHTML()`, `ShadowRoot.setHTML()`, and `Document.parseHTML()`, along with their unsafe variants and the `Sanitizer` interface, parse and sanitize HTML content in a way that can prevent XSS attacks.
+spec:
+  - https://wicg.github.io/sanitizer-api/
+  - https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#unsafe-html-parsing-methods
+compat_features:
+  # The main entry points are Element.setHTML, ShadowRoot.setHTML,
+  # and Document.parseHTML. They come in pairs of methods: safe and
+  # unsafe.
+
+  - api.Element.setHTML
+  - api.Element.setHTMLUnsafe
+  - api.Element.setHTMLUnsafe.options_sanitizer_parameter
+  - api.Element.setHTMLUnsafe.enforces_trusted_types
+  
+  - api.ShadowRoot.setHTML
+  - api.ShadowRoot.setHTMLUnsafe
+  - api.ShadowRoot.setHTMLUnsafe.options_sanitizer_parameter
+  - api.ShadowRoot.setHTMLUnsafe.enforces_trusted_types
+  
+  - api.Document.parseHTML_static
+  - api.Document.parseHTMLUnsafe_static
+  - api.Document.parseHTMLUnsafe_static.options_sanitizer_parameter
+  - api.Document.parseHTMLUnsafe_static.enforces_trusted_types
+
+  # The Sanitizer interface can optionally be used to by the
+  # *Unsafe method variants to do custom HTML sanitizion.
+
+  - api.Sanitizer
+  - api.Sanitizer.Sanitizer
+  - api.Sanitizer.allowAttribute
+  - api.Sanitizer.allowElement
+  - api.Sanitizer.get
+  - api.Sanitizer.removeAttribute
+  - api.Sanitizer.removeElement
+  - api.Sanitizer.removeUnsafe
+  - api.Sanitizer.replaceElementWithChildren
+  - api.Sanitizer.setComments
+  - api.Sanitizer.setDataAttributes
