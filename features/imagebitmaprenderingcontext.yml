@@ -1,0 +1,13 @@
+name: ImageBitmapRenderingContext
+description: The `ImageBitmapRenderingContext` API is the `"bitmaprenderer"` rendering context for the `<canvas>` element. It is commonly used to transfer frames from an `OffscreenCanvas` to a user-visible `<canvas>` element.
+spec: https://html.spec.whatwg.org/multipage/canvas.html#the-imagebitmaprenderingcontext-interface
+status:
+  compute_from:
+    - api.HTMLCanvasElement.getContext.bitmaprenderer_context
+    - api.ImageBitmapRenderingContext.transferFromImageBitmap
+compat_features:
+  - api.HTMLCanvasElement.getContext.bitmaprenderer_context
+  - api.HTMLCanvasElement.getContext.bitmaprenderer_context.options_alpha_parameter
+  - api.ImageBitmapRenderingContext
+  - api.ImageBitmapRenderingContext.canvas
+  - api.ImageBitmapRenderingContext.transferFromImageBitmap
