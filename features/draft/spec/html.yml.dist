@@ -461,19 +461,6 @@ compat_features:
   #   chrome: "66"
   #   chrome_android: "66"
   #   edge: "79"
-  #   firefox: "46"
-  #   firefox_android: "46"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - api.HTMLCanvasElement.getContext.bitmaprenderer_context
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "66"
-  #   chrome_android: "66"
-  #   edge: "79"
   #   firefox: "59"
   #   firefox_android: "59"
   #   safari: "9.1"
@@ -565,8 +552,9 @@ compat_features:
   - api.HTMLSourceElement.height
   - api.HTMLSourceElement.width
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-01-17
+  # baseline_high_date: 2025-07-17
   # support:
   #   chrome: "93"
   #   chrome_android: "84"
@@ -669,6 +657,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "38"
+  #   chrome_android: "57"
+  #   edge: "79"
+  #   firefox: "77"
+  #   firefox_android: "79"
+  - html.elements.input.type_range.labeled_values
+
+  # baseline: false
+  # support:
   #   chrome: "50"
   #   chrome_android: "50"
   #   edge: "79"
@@ -693,15 +690,6 @@ compat_features:
   #   firefox: "74"
   #   firefox_android: "79"
   - html.elements.iframe.allow.autoplay
-
-  # baseline: false
-  # support:
-  #   chrome: "66"
-  #   chrome_android: "66"
-  #   edge: "79"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - api.HTMLCanvasElement.getContext.bitmaprenderer_context.options_alpha_parameter
 
   # baseline: false
   # support:
@@ -759,6 +747,24 @@ compat_features:
   #   firefox: "123"
   #   firefox_android: "123"
   - http.status.103.preload
+
+  # baseline: false
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "116"
+  #   edge: "116"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - api.HTMLElement.togglePopover.force_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "130"
+  #   chrome_android: "130"
+  #   edge: "130"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - api.HTMLElement.togglePopover.options_force_parameter
 
   # baseline: false
   # support:
@@ -892,6 +898,12 @@ compat_features:
 
   # baseline: false
   # support:
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - html.elements.input.type_color.accepts_css_colors
+
+  # baseline: false
+  # support:
   #   firefox: "67"
   #   firefox_android: "67"
   - html.elements.form.autocomplete.new-password
@@ -909,11 +921,16 @@ compat_features:
   #   edge: "135"
   - api.NavigateEvent.sourceElement
 
+  # baseline: false
+  # support:
+  #   firefox: "140"
+  #   firefox_android: "140"
+  - html.elements.h1.no_ua_styles_in_article_aside_nav_section
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.HTMLButtonElement.command.request-close
   - api.Navigator.authentication
-  - html.elements.h1.no_ua_styles_in_article_aside_nav_section
   - html.elements.hr.hr_in_select
   - html.elements.track.kind.descriptions

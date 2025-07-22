@@ -1,4 +1,4 @@
-draft_date: 2025-06-23
+draft_date: 2025-07-10
 name: ECMAScript® 2026 Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
@@ -400,6 +400,12 @@ compat_features:
 #   - javascript.statements.try_catch
 #   - javascript.statements.var
 #   - javascript.statements.while
+# - Float16Array:
+#   - javascript.builtins.DataView.getFloat16
+#   - javascript.builtins.DataView.setFloat16
+#   - javascript.builtins.Float16Array
+#   - javascript.builtins.Float16Array.Float16Array
+#   - javascript.builtins.Math.f16round
 # - Date:
 #   - javascript.builtins.Date
 #   - javascript.builtins.Date.@@toPrimitive
@@ -452,6 +458,8 @@ compat_features:
 # - Error cause:
 #   - javascript.builtins.Error.Error.options_cause_parameter
 #   - javascript.builtins.Error.cause
+# - Error.isError():
+#   - javascript.builtins.Error.isError
 # - Weak references:
 #   - javascript.builtins.FinalizationRegistry
 #   - javascript.builtins.FinalizationRegistry.FinalizationRegistry
@@ -463,8 +471,6 @@ compat_features:
 #   - javascript.builtins.WeakRef.WeakRef
 #   - javascript.builtins.WeakRef.WeakRef.symbol_as_target
 #   - javascript.builtins.WeakRef.deref
-# - Float16Array:
-#   - javascript.builtins.Float16Array.Float16Array
 # - Functions:
 #   - javascript.builtins.Function
 #   - javascript.builtins.Function.@@hasInstance
@@ -599,6 +605,20 @@ compat_features:
 #   - javascript.builtins.Iterator.@@iterator
 #   - javascript.statements.for_of
 #   - javascript.statements.for_of.closing_iterators
+# - Iterator methods:
+#   - javascript.builtins.Iterator.Iterator
+#   - javascript.builtins.Iterator.drop
+#   - javascript.builtins.Iterator.every
+#   - javascript.builtins.Iterator.filter
+#   - javascript.builtins.Iterator.find
+#   - javascript.builtins.Iterator.flatMap
+#   - javascript.builtins.Iterator.forEach
+#   - javascript.builtins.Iterator.from
+#   - javascript.builtins.Iterator.map
+#   - javascript.builtins.Iterator.reduce
+#   - javascript.builtins.Iterator.some
+#   - javascript.builtins.Iterator.take
+#   - javascript.builtins.Iterator.toArray
 # - JSON:
 #   - javascript.builtins.JSON
 #   - javascript.builtins.JSON.json_superset
@@ -678,6 +698,8 @@ compat_features:
 #   - javascript.builtins.Promise.allSettled
 # - Promise finally():
 #   - javascript.builtins.Promise.finally
+# - Promise.try():
+#   - javascript.builtins.Promise.try
 # - Promise.withResolvers():
 #   - javascript.builtins.Promise.withResolvers
 # - Proxy and Reflect:
@@ -755,6 +777,7 @@ compat_features:
 #   - javascript.regular_expressions.literal_character
 #   - javascript.regular_expressions.lookahead_assertion
 #   - javascript.regular_expressions.lookbehind_assertion
+#   - javascript.regular_expressions.modifier
 #   - javascript.regular_expressions.named_backreference
 #   - javascript.regular_expressions.named_capturing_group
 #   - javascript.regular_expressions.named_capturing_group.duplicate_named_capturing_groups
@@ -763,6 +786,8 @@ compat_features:
 #   - javascript.regular_expressions.unicode_character_class_escape
 #   - javascript.regular_expressions.wildcard
 #   - javascript.regular_expressions.word_boundary_assertion
+# - RegExp.escape():
+#   - javascript.builtins.RegExp.escape
 # - Set (initial support):
 #   - javascript.builtins.Set
 #   - javascript.builtins.Set.@@iterator
@@ -780,6 +805,14 @@ compat_features:
 #   - javascript.builtins.Set.keys
 #   - javascript.builtins.Set.size
 #   - javascript.builtins.Set.values
+# - Set methods:
+#   - javascript.builtins.Set.difference
+#   - javascript.builtins.Set.intersection
+#   - javascript.builtins.Set.isDisjointFrom
+#   - javascript.builtins.Set.isSubsetOf
+#   - javascript.builtins.Set.isSupersetOf
+#   - javascript.builtins.Set.symmetricDifference
+#   - javascript.builtins.Set.union
 # - String (initial support):
 #   - javascript.builtins.String
 #   - javascript.builtins.String.@@iterator
@@ -893,6 +926,7 @@ compat_features:
 #   - javascript.grammar.template_literals.template_literal_revision
 # - JSON import attributes:
 #   - javascript.grammar.trailing_commas.trailing_commas_in_dynamic_import
+#   - javascript.statements.import.import_attributes.type_json
 # - Unicode point escapes:
 #   - javascript.grammar.unicode_point_escapes
 # - Top-level await:
@@ -914,6 +948,7 @@ compat_features:
 #   - javascript.statements.export.namespace
 #   - javascript.statements.import
 #   - javascript.statements.import.arbitrary_module_namespace_identifier_names
+#   - javascript.statements.import.import_attributes
 #   - javascript.statements.import.worklet_support
 # - JavaScript modules in workers:
 #   - javascript.operators.import.worker_support
@@ -932,6 +967,8 @@ compat_features:
 # - Let and const:
 #   - javascript.statements.const
 #   - javascript.statements.let
+# - CSS import attributes:
+#   - javascript.statements.import.import_attributes.type_css
 # - JavaScript modules in service workers:
 #   - javascript.statements.import.service_worker_support
 # - Optional catch binding:

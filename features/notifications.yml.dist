@@ -193,14 +193,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "48"
-  #   edge: "18"
-  #   firefox: "138"
-  #   firefox_android: "138"
-  - api.Notification.maxActions_static
-
-  # baseline: false
-  # support:
   #   chrome: "62"
   #   edge: "79"
   #   firefox: "67"
@@ -211,14 +203,14 @@ compat_features:
   # support:
   #   chrome: "44"
   #   chrome_android: "44"
-  #   edge: ≤79
+  #   edge: "79"
   - api.ServiceWorkerRegistration.showNotification.options_data_parameter
 
   # baseline: false
   # support:
   #   chrome: "47"
   #   chrome_android: "47"
-  #   edge: ≤79
+  #   edge: "79"
   - api.ServiceWorkerRegistration.showNotification.options_requireInteraction_parameter
 
   # baseline: false
@@ -232,27 +224,27 @@ compat_features:
   # support:
   #   chrome: "50"
   #   chrome_android: "50"
-  #   edge: ≤79
+  #   edge: "79"
   - api.ServiceWorkerRegistration.showNotification.options_renotify_parameter
 
   # baseline: false
   # support:
   #   chrome: "53"
   #   chrome_android: "53"
-  #   edge: ≤79
+  #   edge: "79"
   - api.ServiceWorkerRegistration.showNotification.options_badge_parameter
 
   # baseline: false
   # support:
   #   chrome: "56"
   #   chrome_android: "56"
-  #   edge: ≤79
+  #   edge: "79"
   - api.ServiceWorkerRegistration.showNotification.options_image_parameter
 
   # baseline: false
   # support:
   #   chrome: "45"
-  #   edge: ≤79
+  #   edge: "79"
   - api.ServiceWorkerRegistration.showNotification.options_vibrate_parameter
 
   # baseline: false
@@ -260,6 +252,12 @@ compat_features:
   #   chrome: "47"
   #   edge: "17"
   - api.Notification.requireInteraction
+
+  # baseline: false
+  # support:
+  #   chrome: "48"
+  #   edge: "18"
+  - api.Notification.maxActions_static
 
   # baseline: false
   # support:

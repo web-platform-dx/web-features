@@ -57,7 +57,9 @@ compat_features:
   - http.headers.Link.fetchpriority
 
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "140"
+  #   firefox_android: "140"
   - svg.elements.feImage.fetchpriority
   - svg.elements.image.fetchpriority
   - svg.elements.script.fetchpriority
