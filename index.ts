@@ -129,6 +129,11 @@ for (const [key, data] of yamlEntries('features')) {
         continue;
     }
 
+    // Attach `kind: feature` to ordinary features
+    if (!isMoved(data) && !isSplit(data)) {
+        data.kind = "feature";
+    }
+
     // Convert markdown to text+HTML.
     if (data.description) {
         const { text, html } = convertMarkdown(data.description);

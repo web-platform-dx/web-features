@@ -339,7 +339,7 @@ function toDist(sourcePath: string): YAML.Document {
   }
 
   // Assemble and return the dist YAML.
-  const dist = new Document({ kind: "feature" });
+  const dist = new Document({});
 
   dist.commentBefore = [
     `Generated from: ${id}.yml`,

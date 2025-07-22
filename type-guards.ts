@@ -5,7 +5,7 @@ export function isOrdinaryFeatureData(x: unknown): x is FeatureData {
 }
 
 export function isSplit(x: unknown): x is FeatureSplitData {
-  return typeof x === "object" && "kind" in x && x.kind === "moved";
+  return typeof x === "object" && "kind" in x && x.kind === "split";
 }
 
 export function isMoved(x: unknown): x is FeatureMovedData {
