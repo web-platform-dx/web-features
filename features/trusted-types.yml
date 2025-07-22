@@ -7,10 +7,10 @@ status:
   compute_from: api.trustedTypes
 compat_features:
   - api.Element.innerHTML.enforces_trusted_types
-  - api.HTMLElement.innerText.scripts_accept_TrustedScript
-  - api.HTMLScriptElement.src.accepts_TrustedScriptURL
-  - api.HTMLScriptElement.text.accepts_TrustedScript
-  - api.Node.textContent.scripts_accept_TrustedScript
+  - api.HTMLElement.innerText.enforces_trusted_types
+  - api.HTMLScriptElement.src.enforces_trusted_types
+  - api.HTMLScriptElement.text.enforces_trusted_types
+  - api.Node.textContent.enforces_trusted_types
   - api.ShadowRoot.innerHTML.enforces_trusted_types
   - api.TrustedHTML
   - api.TrustedHTML.toJSON
@@ -36,8 +36,8 @@ compat_features:
   - api.TrustedTypePolicyFactory.isHTML
   - api.TrustedTypePolicyFactory.isScript
   - api.TrustedTypePolicyFactory.isScriptURL
-  - api.setInterval.code_param_accepts_trustedScript
-  - api.setTimeout.code_param_accepts_trustedScript
+  - api.setInterval.code_param_enforces_trusted_types
+  - api.setTimeout.code_param_enforces_trusted_types
   - api.trustedTypes
   - http.headers.Content-Security-Policy.require-trusted-types-for
   - http.headers.Content-Security-Policy.trusted-types

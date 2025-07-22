@@ -136,6 +136,19 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
+  #   chrome: "67"
+  #   chrome_android: "67"
+  #   edge: "79"
+  #   firefox: "44"
+  #   firefox_android: "44"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.RTCPeerConnection.getStats.selector_parameter
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
   #   chrome: "79"
   #   chrome_android: "79"
   #   edge: "79"
@@ -144,19 +157,6 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - api.RTCStatsReport.type_inbound-rtp
-
-  # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
-  # support:
-  #   chrome: "67"
-  #   chrome_android: "67"
-  #   edge: ≤79
-  #   firefox: "44"
-  #   firefox_android: "44"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - api.RTCPeerConnection.getStats.selector_parameter
 
   # baseline: high
   # baseline_low_date: 2020-02-07
