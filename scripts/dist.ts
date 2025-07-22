@@ -206,7 +206,7 @@ function toRedirectDist(
       comment.push(...source.redirect_targets.map((dest) => `  - ${dest}.yml`));
       break;
     default:
-      source satisfies never;
+      kind satisfies never;
       throw new Error(`Unhandled feature kind ${kind}}`);
   }
 
