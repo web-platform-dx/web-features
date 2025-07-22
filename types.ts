@@ -9,9 +9,9 @@ import type {
   Browsers,
   Discouraged,
   GroupData,
+  Kind,
   FeatureData as QuicktypeMonolithicFeatureData,
   WebFeaturesData as QuicktypeWebFeaturesData,
-  Redirect,
   Release,
   SnapshotData,
   Status,
@@ -40,10 +40,10 @@ export interface WebFeaturesData
   };
 }
 
-export type FeatureData = Required<
+export type FeatureData = { kind: "feature" } & Required<
   Pick<
     QuicktypeMonolithicFeatureData,
-    "description_html" | "description" | "name" | "spec" | "status"
+    "kind" | "description_html" | "description" | "name" | "spec" | "status"
   >
 > &
   Partial<
@@ -53,30 +53,23 @@ export type FeatureData = Required<
     >
   >;
 
-export type FeatureRedirectData = Required<
-  Pick<QuicktypeMonolithicFeatureData, "redirect">
+export type FeatureRedirectData = { kind: Exclude<Kind, "feature"> } & Required<
+  Pick<QuicktypeMonolithicFeatureData, "redirect_target" | "redirect_targets">
 >;
 
-export interface Moved extends Exclude<Redirect, "targets"> {
-  reason: "moved";
-  target: Redirect["target"];
+export interface FeatureMovedData
+  extends Omit<FeatureRedirectData, "redirect_targets"> {
+  kind: "moved";
 }
 
-export interface Split extends Exclude<Redirect, "target"> {
-  reason: "split";
-  targets: Redirect["targets"];
-}
-
-export interface FeatureMovedData extends FeatureRedirectData {
-  redirect: Moved;
-}
-
-export interface FeatureSplitData extends FeatureRedirectData {
-  redirect: Split;
+export interface FeatureSplitData
+  extends Omit<FeatureRedirectData, "redirect_target"> {
+  kind: "split";
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const t1: FeatureData = {
+  kind: "feature",
   name: "Test",
   description: "Hi",
   description_html: "Hi",
@@ -85,6 +78,18 @@ const t1: FeatureData = {
     baseline: false,
     support: {},
   },
+};
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const t2: FeatureMovedData = {
+  kind: "moved",
+  redirect_target: "",
+};
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const t3: FeatureSplitData = {
+  kind: "split",
+  redirect_targets: ["", ""],
 };
 
 export type BrowserIdentifier = keyof Browsers;

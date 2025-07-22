@@ -14,7 +14,7 @@ import { unified } from 'unified';
 
 import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, parseRangedDateString } from 'compute-baseline';
 import { Compat } from 'compute-baseline/browser-compat-data';
-import { isOrdinaryFeatureData, isRedirectData } from './type-guards';
+import { isMoved, isSplit } from './type-guards';
 
 // The longest name allowed, to allow for compact display.
 const nameMaxLength = 80;
@@ -188,7 +188,7 @@ for (const [key, data] of yamlEntries('features')) {
 
 function assertValidReference(sourceID: string, targetID: string): void {
     if (targetID in features) {
-        if (isRedirectData(features[targetID])) {
+        if (isMoved(features[targetID]) || isSplit(features[targetID])) {
             throw new Error(`${sourceID} references a redirect "${targetID}" instead of an ordinary feature ID`);
         }
         return;
@@ -197,27 +197,24 @@ function assertValidReference(sourceID: string, targetID: string): void {
 }
 
 for (const [id, feature] of Object.entries(features)) {
-    if (isOrdinaryFeatureData(feature)) {
-        for (const alternative of feature.discouraged?.alternatives ?? []) {
-            assertValidReference(id, alternative);
-        }
-    }
-
-    if (isRedirectData(feature)) {
-        const { reason } = feature.redirect;
-        switch (reason) {
-            case 'moved':
-                assertValidReference(id, feature.redirect.target);
-                break;
-            case 'split':
-                for (const target of feature.redirect.targets) {
-                    assertValidReference(id, target);
-                }
-                break;
-            default:
-                reason satisfies never;
-                throw new Error(`Unhandled redirect reason ${reason}}`);
-        }
+    const { kind } = feature;
+    switch (kind) {
+        case "feature":
+            for (const alternative of feature.discouraged?.alternatives ?? []) {
+                assertValidReference(id, alternative);
+            }
+            break;
+        case "moved":
+            assertValidReference(id, feature.redirect_target);
+            break;
+        case "split":
+            for (const target of feature.redirect_targets) {
+                assertValidReference(id, target);
+            }
+            break;
+        default:
+            kind satisfies never;
+            throw new Error(`Unhandled feature kind ${kind}}`);
     }
 }
 

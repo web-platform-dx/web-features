@@ -1,5 +1,4 @@
-redirect:
-  reason: split
-  targets:
-    - audio-codecs
-    - video-codecs
+kind: split
+redirect_targets:
+  - audio-codecs
+  - video-codecs

@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import webSpecs from 'web-specs' with { type: 'json' };
 
 import { features } from '../index.js';
-import { isRedirectData } from "../type-guards.js";
+import { isOrdinaryFeatureData } from "../type-guards.js";
 
 // Specs needs to be in "good standing". Nightly URLs are used if available,
 // otherwise the snapshot/versioned URL is used. See browser-specs/web-specs
@@ -192,7 +192,7 @@ for (const [allowedUrl, message] of defaultAllowlist) {
 }
 
 for (const [id, data] of Object.entries(features)) {
-    if (isRedirectData(data)) {
+    if (!isOrdinaryFeatureData(data)) {
         continue;
     }
 

@@ -1,9 +1,13 @@
-import type { FeatureData, FeatureRedirectData } from "./types";
+import type { FeatureData, FeatureMovedData, FeatureSplitData } from "./types";
 
 export function isOrdinaryFeatureData(x: unknown): x is FeatureData {
-  return typeof x === "object" && "name" in x;
+  return typeof x === "object" && "kind" in x && x.kind === "feature";
 }
 
-export function isRedirectData(x: unknown): x is FeatureRedirectData {
-  return typeof x === "object" && "redirect" in x;
+export function isSplit(x: unknown): x is FeatureSplitData {
+  return typeof x === "object" && "kind" in x && x.kind === "moved";
+}
+
+export function isMoved(x: unknown): x is FeatureMovedData {
+  return typeof x === "object" && "kind" in x && x.kind === "moved";
 }

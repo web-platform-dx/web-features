@@ -54,7 +54,8 @@
           {
             "$ref": "#/definitions/FeatureSplitData"
           }
-        ]
+        ],
+        "$comment": "Use the `kind` property as a discriminator."
       }
     },
     "groups": {
@@ -112,6 +113,9 @@
       "description": "A feature data entry",
       "type": "object",
       "properties": {
+        "kind": {
+          "const": "feature"
+        },
         "name": {
           "description": "Short name",
           "type": "string"
@@ -153,7 +157,14 @@
           "$ref": "#/definitions/Discouraged"
         }
       },
-      "required": ["name", "description", "description_html", "spec", "status"],
+      "required": [
+        "kind",
+        "name",
+        "description",
+        "description_html",
+        "spec",
+        "status"
+      ],
       "additionalProperties": false
     },
     "GroupData": {
@@ -191,44 +202,30 @@
       "description": "A feature has permanently moved to exactly one other ID",
       "type": "object",
       "properties": {
-        "redirect": {
-          "type": "object",
-          "properties": {
-            "reason": {
-              "const": "moved"
-            },
-            "target": {
-              "description": "The new ID for this feature",
-              "type": "string"
-            }
-          },
-          "required": ["reason", "target"],
-          "additionalProperties": false
+        "kind": {
+          "const": "moved"
+        },
+        "redirect_target": {
+          "description": "The new ID for this feature",
+          "type": "string"
         }
       },
-      "required": ["redirect"],
+      "required": ["kind", "redirect_target"],
       "additionalProperties": false
     },
     "FeatureSplitData": {
       "description": "A feature has split into two or more other features",
       "type": "object",
       "properties": {
-        "redirect": {
-          "type": "object",
-          "properties": {
-            "reason": {
-              "const": "split"
-            },
-            "targets": {
-              "description": "The new IDs for this feature",
-              "$ref": "#/definitions/Strings"
-            }
-          },
-          "required": ["reason", "targets"],
-          "additionalProperties": false
+        "kind": {
+          "const": "split"
+        },
+        "redirect_targets": {
+          "description": "The new IDs for this feature",
+          "$ref": "#/definitions/Strings"
         }
       },
-      "required": ["redirect"],
+      "required": ["kind", "redirect_targets"],
       "additionalProperties": false
     },
     "Status": {

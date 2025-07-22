@@ -90,6 +90,7 @@ export interface FeatureData {
    * Group identifier(s)
    */
   group?: string[] | string;
+  kind: Kind;
   /**
    * Short name
    */
@@ -107,7 +108,14 @@ export interface FeatureData {
    * that status
    */
   status?: StatusHeadline;
-  redirect?: Redirect;
+  /**
+   * The new ID for this feature
+   */
+  redirect_target?: string;
+  /**
+   * The new IDs for this feature
+   */
+  redirect_targets?: string[];
 }
 
 /**
@@ -125,19 +133,7 @@ export interface Discouraged {
   alternatives?: string[];
 }
 
-export interface Redirect {
-  reason: Reason;
-  /**
-   * The new ID for this feature
-   */
-  target?: string;
-  /**
-   * The new IDs for this feature
-   */
-  targets?: string[];
-}
-
-export type Reason = "moved" | "split";
+export type Kind = "feature" | "moved" | "split";
 
 /**
  * Whether a feature is considered a "Baseline" web platform feature and when it achieved
