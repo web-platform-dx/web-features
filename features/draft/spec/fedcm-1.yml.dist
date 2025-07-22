@@ -47,6 +47,9 @@ compat_features:
   #   chrome: "132"
   #   chrome_android: "132"
   #   edge: "132"
+  - api.CredentialsContainer.get.identity_option.mode_option
+  - api.CredentialsContainer.get.identity_option.providers_option_fields
+  - api.CredentialsContainer.get.identity_option.providers_option_params
   - api.IdentityProvider.resolve_static
 
   # ⬇️ Same status as overall feature ⬇️
@@ -55,4 +58,5 @@ compat_features:
   #   chrome: "136"
   #   chrome_android: "136"
   #   edge: "136"
+  - api.CredentialsContainer.get.identity_option.providers_multiple
   - api.IdentityCredential.configURL
