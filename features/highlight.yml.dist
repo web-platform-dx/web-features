@@ -3,12 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "105"
-    chrome_android: "105"
-    edge: "105"
-    safari: "17.2"
-    safari_ios: "17.2"
+  support: {}
 compat_features:
   # baseline: low
   # baseline_low_date: 2025-06-24
@@ -48,7 +43,6 @@ compat_features:
   - api.HighlightRegistry.size
   - api.HighlightRegistry.values
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "105"
@@ -57,3 +51,8 @@ compat_features:
   #   safari: "17.2"
   #   safari_ios: "17.2"
   - css.selectors.highlight
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.HighlightRegistry.highlightsFromPoint

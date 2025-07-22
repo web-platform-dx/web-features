@@ -1090,6 +1090,7 @@ compat_features:
   - svg.elements.symbol.viewBox
   - svg.elements.text.fill
   - svg.elements.tspan.fill
+  - svg.elements.tspan.rotate
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -1356,6 +1357,19 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
+  #   chrome: "55"
+  #   chrome_android: "55"
+  #   edge: "79"
+  #   firefox: "51"
+  #   firefox_android: "51"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - svg.global_attributes.data_attributes
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
   #   chrome: "56"
   #   chrome_android: "56"
   #   edge: "79"
@@ -1406,32 +1420,6 @@ compat_features:
   - css.properties.clip-rule
   - css.properties.clip-rule.evenodd
   - css.properties.clip-rule.nonzero
-
-  # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: ≤79
-  #   firefox: "1.5"
-  #   firefox_android: "4"
-  #   safari: "3"
-  #   safari_ios: "2"
-  - svg.elements.tspan.rotate
-
-  # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
-  # support:
-  #   chrome: "55"
-  #   chrome_android: "55"
-  #   edge: ≤79
-  #   firefox: "51"
-  #   firefox_android: "51"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - svg.global_attributes.data_attributes
 
   # baseline: high
   # baseline_low_date: 2020-03-24

@@ -94,10 +94,10 @@ describe("features", function () {
 
       it("returns null for unknown support", function () {
         const edge = browser("edge");
-        const f = feature("api.IDBCursor.key.binary_keys"); // { version_added: "≤79" }
+        const f = feature("api.FileSystem"); // { version_added: "≤79" }
 
-        assert.equal(f.supportedIn(edge.version("12")), null);
-        assert.equal(f.supportedIn(edge.version("79")), true);
+        assert.equal(f.supportedIn(edge.version("17")), null);
+        assert.equal(f.supportedIn(edge.version("18")), true);
         assert.equal(f.supportedIn(edge.version("80")), true);
       });
     });
