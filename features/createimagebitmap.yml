@@ -1,7 +1,11 @@
 name: createImageBitmap
 description: The `createImageBitmap()` global method creates an `ImageBitmap` object from a source such as an image, SVG, blob, or canvas. An `ImageBitmap` object represents pixel data that can be drawn to a canvas with lower latency than other types, such as `ImageData`.
 spec: https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#imagebitmap
-caniuse: createimagebitmap
+# We broke from caniuse's definition of this feature in
+# https://github.com/web-platform-dx/web-features/pull/3165 We could reinstate
+# this link if caniuse changes its definition or if we develop a way to convey
+# partially supported information
+# caniuse: createimagebitmap
 status:
   compute_from:
     - api.createImageBitmap
@@ -19,6 +23,3 @@ compat_features:
   - api.ImageBitmap.close
   - api.ImageBitmap.height
   - api.ImageBitmap.width
-  - api.ImageBitmapRenderingContext
-  - api.ImageBitmapRenderingContext.canvas
-  - api.ImageBitmapRenderingContext.transferFromImageBitmap
