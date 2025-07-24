@@ -52,3 +52,63 @@ For browser support iconography (that is, browser logos and checkmarks and Xs), 
 If you wish to report browser version numbers, avoid showing version numbers alone.
 Developers and users often do not know whether a version number refers to a very recent or old release.
 If you must show a version number, consider contextualizing that number by showing a release date, a relative date (such as "Released … years ago"), an offset (such as "… releases ago"), or usage statistics relevant to your audience (such as "…% of your visitors in the last 90 days").
+
+## Schema reference
+
+This part of the README is incomplete.
+See `data.schema.json` for a canonical reference.
+
+## `features`
+
+The `features` object contains data for features.
+Each key is a feature ID string and most of the values are ordinary feature objects with names, descriptions, and other data.
+Some features contain redirects to other features.
+You can distinguish feature objects with value of the `kind` property:
+
+* `"feature"` — ordinary features  
+* `"moved"` — the feature has a redirect to a new key  
+* `"split"` — the feature has a redirect to two or more keys
+
+### Feature objects
+
+A feature with the `kind` set to `"feature"` is an ordinary feature.
+It has the following properties:
+
+- `kind` (value: `"feature"`): A type discriminator
+- `name` (type: `string`): A plain-text human-readable name for the feature
+- `description` (type: `string`): A short plain-text description of the feature
+- `description_html` (type: `string`): A short HTML-formatted description of the feature
+- `spec` (type: `string | string[]`): A specification URL or an array of them
+- `status`: Support status data to be documented
+- `group` (optional, type: `string | string[]`): A `groups` key or an array of them
+- `snapshot` (optional, type: `string | string[]`): A `snapshots` key or an array of them
+- `caniuse` (optional, type: `string | string[]`): A caniuse feature ID that corresponds to the current feature, or an array of them.
+  Use it to look up caniuse data from a package like [`caniuse-lite`](https://www.npmjs.com/package/caniuse-lite) or construct a URL to a page on caniuse.com.
+- `compat_features` (optional, type: `string[]`): An array of `@mdn/browser-compat-data` feature key strings.
+- `discouraged`: Deprecation or obsolescence data to be documented
+
+### Moved objects
+
+A feature with the `kind` set to `"moved"` is a redirect to another feature.
+It says that this feature ID is actually best represented by the data given by another ID.
+If you’re showing web-features data to developers, then treat this like a 301 redirect and go directly to the feature it points to.
+
+A moved feature has the following properties:
+
+- `kind` (value: `"moved"`): A type discriminator
+- `redirect_target` (type: `string`): The ID of a feature (as in `features[redirect_target]`)
+  The ID is guaranteed to be an ordinary, non-redirecting feature.
+  Double redirects and cycles are forbidden.
+
+### Split objects
+
+A feature with the `kind` set to `"split"` is a redirect to multiple other features.
+It says that this feature ID is actually best represented by the data given by multiple other features and you (or your users) will have to make a choice about what to do.
+You can think of this kind of feature [like a Wikipedia disambiguation page](https://en.wikipedia.org/wiki/Joker).
+
+A split feature has the following properties:
+
+- `kind` (value: `"split"`): A type discriminator
+- `redirect_targets` (type: `string[]`): An array of two or more feature IDs.
+  The IDs are guaranteed to be ordinary, non-redirecting features.
+  Double redirects and cycles are forbidden.
