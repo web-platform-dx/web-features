@@ -77,6 +77,68 @@ The identifier should match the name, with these additional guidelines:
   - 👍 Recommended: `user-pseudos`
   - 👎 Not recommended: `user-valid-and-user-invalid`
 
+### Move a feature to a new ID
+
+It’s possible to change or substitute a feature’s ID by creating a redirect from the original ID pointing to a new ID.
+You can do this when:
+
+* The original feature ID is misspelled.  
+* The original feature ID breaks the identifier guidelines.  
+* Data consumers report that the original feature ID is confusing or misleading.  
+* The original feature should not have existed as an independent feature.
+
+To move the feature:
+
+1. If applicable, move the existing YAML files for the feature to the target ID filename.
+   For example, rename `features/numeric-seperators.yml` to `features/numeric-separators.yml`.
+
+   If the original feature is being replaced by another feature, then move on to the next step.
+
+2. Create a new YAML file for the original target ID filename.
+   For example, create an empty file `features/numeric-seperators.yml`.
+
+3. Populate the following data in the new YAML file:
+
+   ```yaml  
+   kind: moved  
+   redirect_target: TARGET-ID  
+   ```
+
+   where `TARGET-ID` is the target ID.
+
+4. Regenerate the dist files.
+   Run `npm run dist`.
+
+5. Commit your work and open a pull request.
+
+### Split a feature into two or more other features
+
+Some features may need to be split in two or more parts.
+You can do this when the original feature should not have existed as an independent feature in the first place.
+For example, similarly-named compat keys that ought to have been additions to existing features were erroneously combined and assigned to a new feature.
+
+To split the feature:
+
+1. If the feature to be split has any keys listed in `compat_features`, then reassign the keys to the target features.
+   
+   To get the list of keys, you may need to first run `npm run undist -- $feature` where `$feature` is the path to the YAML file of the feature to be split.
+
+2. Replace the contents of the original feature YAML file with the following data:
+
+   ```yaml
+   kind: split  
+   redirect_targets:  
+     - target-id1  
+     - target-id2  
+   ```
+
+   Replace the `target-id` values with two or more target ID strings.
+
+3. Regenerate the dist files.
+   Run `npm run dist`.
+
+4. Commit your work and open a pull request.
+
 ## Descriptions
 
 The `description` field contains a short description of the feature in Markdown-formatted text, which is converted to HTML in the published package.
