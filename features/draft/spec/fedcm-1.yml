@@ -1,10 +1,11 @@
-draft_date: 2025-07-22
+draft_date: 2025-07-24
 name: Federated Credential Management API
 description: TODO
 spec: https://w3c-fedid.github.io/FedCM/
 compat_features:
   - api.CredentialsContainer.get.identity_option.mode_option
   - api.CredentialsContainer.get.identity_option.providers_multiple
+  - api.CredentialsContainer.get.identity_option.providers_option_domainHint
   - api.CredentialsContainer.get.identity_option.providers_option_fields
   - api.CredentialsContainer.get.identity_option.providers_option_params
   - api.IdentityCredential.configURL

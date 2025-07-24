@@ -44,6 +44,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "123"
+  #   chrome_android: "123"
+  #   edge: "123"
+  - api.CredentialsContainer.get.identity_option.providers_option_domainHint
+
+  # baseline: false
+  # support:
   #   chrome: "132"
   #   chrome_android: "132"
   #   edge: "132"
