@@ -27,7 +27,7 @@ You can find web-features and Baseline data in the places listed below. If you s
 - [RUMvision Baseline integration](https://www.rumvision.com/help-center/monitoring/dashboard/baseline/), a real user monitoring solution, which uses Baseline statuses show which features are safe to use based on actual audience data.
 - [RUM Archive Insights](https://rumarchive.com/insights/), a collection of RUM Archive data visualizations, including yearly Baseline features.
 - [Baseline MCP Server](https://github.com/yamanoku/baseline-mcp-server), a Model Context Protocol (MCP) server that provides Baseline information for web features.
-- [browserslist-config-baseline](https://github.com/web-platform-dx/browserslist-config-baseline), a module that turns Baseline targets into [browserslist](https://github.com/browserslist/browserslist)-compatible lists of browser versions.  Dynamically target Widely available by installing the module using your package manager of choice and adding `"browserslist": "extends browserslist-config-baseline"` to your `package.json`.
+- [browserslist-config-baseline](https://github.com/web-platform-dx/browserslist-config-baseline), a module that turns Baseline targets into [browserslist](https://github.com/browserslist/browserslist)-compatible lists of browser versions. Dynamically target Widely available by installing the module using your package manager of choice and adding `"browserslist": "extends browserslist-config-baseline"` to your `package.json`.
 
 ## Web feature dashboards
 
