@@ -81,7 +81,7 @@
       "properties": {
         "according_to": {
           "description": "Links to a formal discouragement notice, such as specification text, intent-to-unship, etc.",
-          "$ref": "#/definitions/URLs"
+          "$ref": "#/definitions/Strings"
         },
         "alternatives": {
           "description": "IDs for features that substitute some or all of this feature's utility",
@@ -130,19 +130,19 @@
         },
         "spec": {
           "description": "Specification URL(s)",
-          "$ref": "#/definitions/URLOrURLs"
+          "$ref": "#/definitions/Strings"
         },
         "group": {
           "description": "Group identifier(s)",
-          "$ref": "#/definitions/StringOrStrings"
+          "$ref": "#/definitions/Strings"
         },
         "snapshot": {
           "description": "Snapshot identifier(s)",
-          "$ref": "#/definitions/StringOrStrings"
+          "$ref": "#/definitions/Strings"
         },
         "caniuse": {
           "description": "caniuse.com identifier(s)",
-          "$ref": "#/definitions/StringOrStrings"
+          "$ref": "#/definitions/Strings"
         },
         "compat_features": {
           "description": "Sources of support data for this feature",
@@ -310,25 +310,11 @@
         },
         "spec": {
           "description": "Specification",
-          "$ref": "#/definitions/URL"
+          "type": "string"
         }
       },
       "required": ["name", "spec"],
       "additionalProperties": false
-    },
-    "StringOrStrings": {
-      "oneOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "minItems": 2
-        }
-      ]
     },
     "Strings": {
       "type": "array",
@@ -336,30 +322,6 @@
         "type": "string"
       },
       "minItems": 1
-    },
-    "URL": {
-      "type": "string"
-    },
-    "URLs": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "minItems": 1
-    },
-    "URLOrURLs": {
-      "oneOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "minItems": 2
-        }
-      ]
     }
   }
 }

@@ -134,6 +134,28 @@ for (const [key, data] of yamlEntries('features')) {
         data.kind = "feature";
     }
 
+    // Upgrade authored strings to arrays of 1
+    const optionalArrays = [
+        "spec",
+        "group",
+        "snapshot",
+        "caniuse",
+        "foo"
+    ];
+    const stringToStringArray = (value: string | string[]) => typeof value === "string" ? [value] : value;
+    for (const optionalArray of optionalArrays) {
+        const value = data[optionalArray];
+        if (value) {
+            data[optionalArray] = stringToStringArray(value);
+        }
+    }
+    if (data.discouraged) {
+        const value = data.discouraged.according_to;
+        if (value) {
+            data.discouraged.according_to = stringToStringArray(value);
+        }
+    }
+
     // Convert markdown to text+HTML.
     if (data.description) {
         const { text, html } = convertMarkdown(data.description);
