@@ -73,7 +73,7 @@ const t1: FeatureData = {
   name: "Test",
   description: "Hi",
   description_html: "Hi",
-  spec: "",
+  spec: [""],
   status: {
     baseline: false,
     support: {},
