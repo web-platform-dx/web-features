@@ -2,12 +2,15 @@ name: Popover
 description: The `popover` HTML attribute creates an overlay to display content on top of other page content. Popovers can be shown declaratively using HTML, or using the `showPopover()` method.
 spec: https://html.spec.whatwg.org/multipage/popover.html
 group: html
-# TODO: https://github.com/web-platform-dx/web-features/issues/1971
-# Status changed: https://github.com/web-platform-dx/web-features/pull/1797
-# 2024-09-18 — low → false — Safari on iOS has a bug that prevents dismissing popovers by touch.
-# References:
-# - https://github.com/mdn/browser-compat-data/issues/22927
-# - https://bugs.webkit.org/show_bug.cgi?id=267688
+notes:
+  - date: 2024-09-18
+    category: baseline-regression
+    message: >
+      The popover feature regressed from newly available to limited availability.
+      Upstream data reported that Safari on iOS had a bug that prevented light dismiss (tapping outside the element to close it).
+    citations:
+      - https://bugs.webkit.org/show_bug.cgi?id=267688
+      - https://github.com/mdn/browser-compat-data/issues/22927
 status:
   compute_from:
     - api.HTMLElement.popover

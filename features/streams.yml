@@ -2,12 +2,6 @@ name: Streams
 description: The streams API creates, composes, and consumes continuously generated data.
 spec: https://streams.spec.whatwg.org/
 group: streams
-# TODO: https://github.com/web-platform-dx/web-features/issues/1971
-# Status changed: https://github.com/web-platform-dx/web-features/pull/2358, https://github.com/web-platform-dx/web-features/pull/2491
-# 2024-12-19 — low → false — Regressed status to match Caniuse, which considers support beginning at BYOB shipping.
-# 2025-01-30 — false → high — Split BYOB into a separate "readable-byte-streams" feature. Linked that one to Caniuse.
-# References:
-# - https://caniuse.com/streams
 status:
   compute_from:
     - api.ReadableStream
