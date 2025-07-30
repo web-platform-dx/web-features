@@ -4,8 +4,11 @@ description: Mutation events like `DOMSubtreeModified`, `DOMNodeInserted`, or `D
 spec: https://w3c.github.io/uievents/
 group: dom
 discouraged:
+  pending_removal: true
+  reason: Mutation events negatively impact performance and they were selected for removal from the web as part of Interop 2025.
   according_to:
     - https://www.w3.org/TR/2024/WD-uievents-20240906/#legacy-mutationevent-events
+    - https://github.com/web-platform-tests/interop/issues/784
   alternatives:
     - mutationobserver
 compat_features:
