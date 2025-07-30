@@ -461,19 +461,6 @@ compat_features:
   #   chrome: "66"
   #   chrome_android: "66"
   #   edge: "79"
-  #   firefox: "46"
-  #   firefox_android: "46"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - api.HTMLCanvasElement.getContext.bitmaprenderer_context
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "66"
-  #   chrome_android: "66"
-  #   edge: "79"
   #   firefox: "59"
   #   firefox_android: "59"
   #   safari: "9.1"
@@ -565,8 +552,9 @@ compat_features:
   - api.HTMLSourceElement.height
   - api.HTMLSourceElement.width
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-01-17
+  # baseline_high_date: 2025-07-17
   # support:
   #   chrome: "93"
   #   chrome_android: "84"
@@ -702,15 +690,6 @@ compat_features:
   #   firefox: "74"
   #   firefox_android: "79"
   - html.elements.iframe.allow.autoplay
-
-  # baseline: false
-  # support:
-  #   chrome: "66"
-  #   chrome_android: "66"
-  #   edge: "79"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - api.HTMLCanvasElement.getContext.bitmaprenderer_context.options_alpha_parameter
 
   # baseline: false
   # support:
