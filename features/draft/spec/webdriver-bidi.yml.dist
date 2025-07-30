@@ -484,6 +484,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
+  #   edge: "138"
+  #   firefox: "141"
+  #   firefox_android: "141"
+  - webdriver.bidi.browser.createUserContext.proxy_parameter
+
+  # baseline: false
+  # support:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
@@ -574,13 +583,6 @@ compat_features:
   #   chrome_android: "137"
   #   edge: "137"
   - webdriver.bidi.emulation.setGeolocationOverride.error_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "138"
-  #   chrome_android: "138"
-  #   edge: "138"
-  - webdriver.bidi.browser.createUserContext.proxy_parameter
 
   # baseline: false
   # support:
