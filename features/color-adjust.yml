@@ -3,6 +3,7 @@ description: The `color-adjust` shorthand CSS property allows multiple performan
 spec: https://drafts.csswg.org/css-color-adjust-1/#color-adjust
 group: print
 discouraged:
+  reason: The CSS Color Adjustment specification described the `color-adjust` as deprecated, to prevent authors from accidentally resetting color adjustments in unexpected contexts.
   according_to:
     - https://drafts.csswg.org/css-color-adjust-1/#color-adjust
   alternatives:
