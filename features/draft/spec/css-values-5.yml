@@ -1,9 +1,8 @@
-draft_date: 2025-07-03
+draft_date: 2025-07-15
 name: CSS Values and Units Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-values-5/
 compat_features:
-  - css.types.if
   - css.types.progress
 
 # The following features in the spec are already part of web-features:
@@ -84,6 +83,8 @@ compat_features:
 #   - css.types.log
 #   - css.types.pow
 #   - css.types.sqrt
+# - if():
+#   - css.types.if
 # - z-index:
 #   - css.types.integer
 # - Q unit:

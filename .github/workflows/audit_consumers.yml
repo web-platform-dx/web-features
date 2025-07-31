@@ -1,9 +1,9 @@
 name: Audit Consumers
 
 on:
-  # Runs at midnight on Mondays 03:45 UTC, or manually triggered
+  # Runs on the 1st and 15th of every month, at 03:45 UTC, or manually triggered
   schedule:
-    - cron: "45 3 * * 1"
+    - cron: "45 3 1,15 * *"
   workflow_dispatch:
 
 jobs:
@@ -18,4 +18,9 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - run: npm run audit-consumers
+      - run: npm run audit-consumers --silent | tee issue-body.md
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - run: gh issue create --title "web-features consumers report for $(date -I)" --label generated --body-file issue-body.md
+        env:
+          GH_TOKEN: ${{ github.token }}
