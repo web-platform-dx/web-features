@@ -1,4 +1,4 @@
-draft_date: 2025-07-10
+draft_date: 2025-07-30
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -20,8 +20,6 @@ compat_features:
   - api.HTMLBaseElement.href.forbid_data_javascript_urls
   - api.HTMLBaseElement.href.forbid_special_characters
   - api.HTMLButtonElement.command.request-close
-  - api.HTMLCanvasElement.getContext.bitmaprenderer_context
-  - api.HTMLCanvasElement.getContext.bitmaprenderer_context.options_alpha_parameter
   - api.HTMLCanvasElement.toBlob.quality_parameter
   - api.HTMLCanvasElement.toBlob.type_parameter_jpeg
   - api.HTMLCanvasElement.toBlob.type_parameter_png
@@ -72,6 +70,7 @@ compat_features:
   - api.ServiceWorker.error_event
   - api.ShadowRoot.activeElement
   - api.ShadowRoot.innerHTML
+  - api.ToggleEvent.source
   - api.TrackEvent
   - api.TrackEvent.TrackEvent
   - api.TrackEvent.track
@@ -955,6 +954,12 @@ compat_features:
 #   - api.HTMLCanvasElement.getContext.2d_context.options_desynchronized_parameter
 # - willReadFrequently:
 #   - api.HTMLCanvasElement.getContext.2d_context.options_willReadFrequently_parameter
+# - ImageBitmapRenderingContext:
+#   - api.HTMLCanvasElement.getContext.bitmaprenderer_context
+#   - api.HTMLCanvasElement.getContext.bitmaprenderer_context.options_alpha_parameter
+#   - api.ImageBitmapRenderingContext
+#   - api.ImageBitmapRenderingContext.canvas
+#   - api.ImageBitmapRenderingContext.transferFromImageBitmap
 # - WebGL2:
 #   - api.HTMLCanvasElement.getContext.webgl2_context
 # - WebGL:
@@ -1894,9 +1899,6 @@ compat_features:
 #   - api.ImageBitmap.close
 #   - api.ImageBitmap.height
 #   - api.ImageBitmap.width
-#   - api.ImageBitmapRenderingContext
-#   - api.ImageBitmapRenderingContext.canvas
-#   - api.ImageBitmapRenderingContext.transferFromImageBitmap
 #   - api.createImageBitmap
 #   - api.createImageBitmap.options_colorSpaceConversion_parameter
 #   - api.createImageBitmap.options_imageOrientation_parameter
@@ -2410,6 +2412,8 @@ compat_features:
 #   - html.elements.search
 # - <section>:
 #   - html.elements.section
+# - Customizable <select>:
+#   - html.elements.selectedcontent
 # - <small>:
 #   - html.elements.small
 # - <source>:
