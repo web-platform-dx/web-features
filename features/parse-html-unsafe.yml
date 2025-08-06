@@ -1,3 +1,8 @@
 name: Unsanitized HTML parsing methods
 description: The `Document.parseHTMLUnsafe()` static method parses HTML into a DOM tree, while the `setHTMLUnsafe()` method of `Element` and `ShadowRoot` parses and inserts HTML into an existing tree. No sanitization applies to these methods, so never call them with user-provided HTML strings.
 spec: https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#unsafe-html-parsing-methods
+# TODO: https://github.com/web-platform-dx/web-features/issues/1971
+# Status changed: https://github.com/web-platform-dx/web-features/pull/3200
+# 2025-08-06 - low → false - In Safari, if there are custom elements in the parsed HTML, then the elements' constructors and `connectedCallback()` methods are not called.
+# References:
+# - https://bugs.webkit.org/show_bug.cgi?id=296420
