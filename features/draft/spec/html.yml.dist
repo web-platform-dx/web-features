@@ -929,6 +929,12 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "139"
+  #   chrome_android: "139"
+  - api.HTMLButtonElement.command.request-close
+
+  # baseline: false
+  # support:
   #   firefox: "140"
   #   firefox_android: "140"
   - html.elements.h1.no_ua_styles_in_article_aside_nav_section
@@ -936,7 +942,6 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - api.HTMLButtonElement.command.request-close
   - api.Navigator.authentication
   - api.ToggleEvent.source
   - html.elements.hr.hr_in_select

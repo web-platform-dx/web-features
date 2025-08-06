@@ -264,6 +264,10 @@ compat_features:
   #   edge: "126"
   #   firefox: "121"
   #   firefox_android: "121"
+  - webdriver.bidi.browsingContext.contextDestroyed_event
+  - webdriver.bidi.browsingContext.contextDestroyed_event.context_parameter
+  - webdriver.bidi.browsingContext.contextDestroyed_event.parent_parameter
+  - webdriver.bidi.browsingContext.contextDestroyed_event.url_parameter
   - webdriver.bidi.browsingContext.userPromptOpened_event.defaultValue_parameter
   - webdriver.bidi.script.callFunction.userActivation_parameter
   - webdriver.bidi.script.evaluate.userActivation_parameter
@@ -306,6 +310,7 @@ compat_features:
   - webdriver.bidi.browser.createUserContext
   - webdriver.bidi.browser.getUserContexts
   - webdriver.bidi.browser.removeUserContext
+  - webdriver.bidi.browsingContext.contextDestroyed_event.userContext_parameter
   - webdriver.bidi.browsingContext.create.userContext_parameter
   - webdriver.bidi.script.addPreloadScript.contexts_parameter
   - webdriver.bidi.storage
@@ -397,6 +402,7 @@ compat_features:
   #   edge: "126"
   #   firefox: "140"
   #   firefox_android: "140"
+  - webdriver.bidi.browsingContext.contextDestroyed_event.clientWindow_parameter
   - webdriver.bidi.browsingContext.navigationCommitted_event
   - webdriver.bidi.browsingContext.navigationCommitted_event.context_parameter
   - webdriver.bidi.browsingContext.navigationCommitted_event.navigation_parameter
@@ -504,14 +510,8 @@ compat_features:
   - webdriver.bidi.browsingContext.contextCreated_event.parent_parameter
   - webdriver.bidi.browsingContext.contextCreated_event.url_parameter
   - webdriver.bidi.browsingContext.contextCreated_event.userContext_parameter
-  - webdriver.bidi.browsingContext.contextDestroyed_event
   - webdriver.bidi.browsingContext.contextDestroyed_event.children_parameter
-  - webdriver.bidi.browsingContext.contextDestroyed_event.clientWindow_parameter
-  - webdriver.bidi.browsingContext.contextDestroyed_event.context_parameter
   - webdriver.bidi.browsingContext.contextDestroyed_event.originalOpener_parameter
-  - webdriver.bidi.browsingContext.contextDestroyed_event.parent_parameter
-  - webdriver.bidi.browsingContext.contextDestroyed_event.url_parameter
-  - webdriver.bidi.browsingContext.contextDestroyed_event.userContext_parameter
   - webdriver.bidi.browsingContext.load_event.context_parameter
   - webdriver.bidi.browsingContext.load_event.url_parameter
   - webdriver.bidi.browsingContext.locateNodes.locator_parameter
@@ -669,10 +669,10 @@ compat_features:
   - webdriver.bidi.webExtension.uninstall
   - webdriver.bidi.webExtension.uninstall.extension_parameter
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
-  - webdriver.bidi.browser.createUserContext.unhandledPromptBehavior_parameter
+  # support:
+  #   chrome: "139"
+  #   chrome_android: "139"
   - webdriver.bidi.browsingContext.downloadEnd_event
   - webdriver.bidi.browsingContext.downloadEnd_event.context_parameter
   - webdriver.bidi.browsingContext.downloadEnd_event.filepath_parameter
@@ -680,6 +680,11 @@ compat_features:
   - webdriver.bidi.browsingContext.downloadEnd_event.status_parameter
   - webdriver.bidi.browsingContext.downloadEnd_event.timestamp_parameter
   - webdriver.bidi.browsingContext.downloadEnd_event.url_parameter
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - webdriver.bidi.browser.createUserContext.unhandledPromptBehavior_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event
   - webdriver.bidi.browsingContext.historyUpdated_event.context_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event.timestamp_parameter
