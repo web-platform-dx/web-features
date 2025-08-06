@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>1000 Te Amo</title>
+</head>
+<body>
+
+    <h1>1000 veces Te amo</h1>
+
+    <?php
+        // Este es un bucle que se repite 1000 veces
+        for ($i = 1; $i <= 1000; $i++) {
+            echo "<p>Te amo</p>";
+        }
+    ?>
+
+</body>
+</html>
