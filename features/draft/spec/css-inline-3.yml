@@ -1,0 +1,71 @@
+draft_date: 2025-08-06
+name: CSS Inline Layout Module Level 3
+description: TODO
+spec: https://drafts.csswg.org/css-inline-3/
+compat_features:
+  - css.properties.alignment-baseline.text-after-edge
+  - css.properties.alignment-baseline.text-before-edge
+
+# The following features in the spec are already part of web-features:
+# - alignment-baseline:
+#   - css.properties.alignment-baseline
+#   - css.properties.alignment-baseline.alphabetic
+#   - css.properties.alignment-baseline.baseline
+#   - css.properties.alignment-baseline.central
+#   - css.properties.alignment-baseline.ideographic
+#   - css.properties.alignment-baseline.mathematical
+#   - css.properties.alignment-baseline.middle
+# - baseline-shift:
+#   - css.properties.baseline-shift
+#   - css.properties.baseline-shift.baseline
+#   - css.properties.baseline-shift.sub
+#   - css.properties.baseline-shift.super
+# - baseline-source:
+#   - css.properties.baseline-source
+#   - css.properties.baseline-source.auto
+#   - css.properties.baseline-source.first
+#   - css.properties.baseline-source.last
+# - dominant-baseline:
+#   - css.properties.dominant-baseline
+#   - css.properties.dominant-baseline.alphabetic
+#   - css.properties.dominant-baseline.auto
+#   - css.properties.dominant-baseline.central
+#   - css.properties.dominant-baseline.hanging
+#   - css.properties.dominant-baseline.ideographic
+#   - css.properties.dominant-baseline.mathematical
+#   - css.properties.dominant-baseline.middle
+# - initial-letter:
+#   - css.properties.initial-letter
+#   - css.properties.initial-letter.normal
+# - line-height:
+#   - css.properties.line-height
+#   - css.properties.line-height.normal
+# - text-box:
+#   - css.properties.text-box
+#   - css.properties.text-box.normal
+#   - css.properties.text-box-edge
+#   - css.properties.text-box-edge.auto
+#   - css.properties.text-box-trim
+#   - css.properties.text-box-trim.none
+#   - css.properties.text-box-trim.trim-both
+#   - css.properties.text-box-trim.trim-end
+#   - css.properties.text-box-trim.trim-start
+#   - css.types.text-edge
+#   - css.types.text-edge.alphabetic
+#   - css.types.text-edge.cap
+#   - css.types.text-edge.ex
+#   - css.types.text-edge.text
+# - vertical-align:
+#   - css.properties.vertical-align
+#   - css.properties.vertical-align.baseline
+#   - css.properties.vertical-align.bottom
+#   - css.properties.vertical-align.middle
+#   - css.properties.vertical-align.sub
+#   - css.properties.vertical-align.super
+#   - css.properties.vertical-align.text-bottom
+#   - css.properties.vertical-align.text-top
+#   - css.properties.vertical-align.top
+# - SVG:
+#   - svg.global_attributes.alignment-baseline
+#   - svg.global_attributes.baseline-shift
+#   - svg.global_attributes.dominant-baseline

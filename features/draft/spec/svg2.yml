@@ -1,8 +1,10 @@
-draft_date: 2025-06-19
+draft_date: 2025-08-06
 name: Scalable Vector Graphics (SVG) 2
 description: TODO
 spec: https://svgwg.org/svg2-draft/
 compat_features:
+  - css.properties.alignment-baseline.text-after-edge
+  - css.properties.alignment-baseline.text-before-edge
   - svg.elements.use.omit_external_fragment
   - svg.global_attributes.transform.svg_root
 
