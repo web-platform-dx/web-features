@@ -3,8 +3,14 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "8"
+    chrome_android: "18"
+    edge: "12"
+    firefox: "2"
+    firefox_android: "4"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "8"
