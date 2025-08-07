@@ -54,7 +54,10 @@ export type FeatureData = { kind: "feature" } & Required<
   >;
 
 export type FeatureRedirectData = { kind: Exclude<Kind, "feature"> } & Required<
-  Pick<QuicktypeMonolithicFeatureData, "redirect_target" | "redirect_targets">
+  Pick<
+    QuicktypeMonolithicFeatureData,
+    "redirect_created_date" | "redirect_target" | "redirect_targets"
+  >
 >;
 
 export interface FeatureMovedData
@@ -83,12 +86,14 @@ const t1: FeatureData = {
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const t2: FeatureMovedData = {
   kind: "moved",
+  redirect_created_date: "2025-09-01",
   redirect_target: "",
 };
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const t3: FeatureSplitData = {
   kind: "split",
+  redirect_created_date: "2025-09-01",
   redirect_targets: ["", ""],
 };
 

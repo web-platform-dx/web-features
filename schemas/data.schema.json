@@ -205,12 +205,16 @@
         "kind": {
           "const": "moved"
         },
+        "redirect_created_date": {
+          "description": "The date this redirect was created",
+          "type": "string"
+        },
         "redirect_target": {
           "description": "The new ID for this feature",
           "type": "string"
         }
       },
-      "required": ["kind", "redirect_target"],
+      "required": ["kind", "redirect_created_date", "redirect_target"],
       "additionalProperties": false
     },
     "FeatureSplitData": {
@@ -220,12 +224,16 @@
         "kind": {
           "const": "split"
         },
+        "redirect_created_date": {
+          "description": "The date this redirect was created",
+          "type": "string"
+        },
         "redirect_targets": {
           "description": "The new IDs for this feature",
           "$ref": "#/definitions/Strings"
         }
       },
-      "required": ["kind", "redirect_targets"],
+      "required": ["kind", "redirect_created_date", "redirect_targets"],
       "additionalProperties": false
     },
     "Status": {
