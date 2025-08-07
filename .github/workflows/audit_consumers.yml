@@ -19,6 +19,8 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm run audit-consumers --silent | tee issue-body.md
+        env:
+          GH_TOKEN: ${{ github.token }}
       - run: gh issue create --title "web-features consumers report for $(date -I)" --label generated --body-file issue-body.md
         env:
           GH_TOKEN: ${{ github.token }}

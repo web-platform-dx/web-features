@@ -3,6 +3,8 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "139"
+    chrome_android: "139"
 compat_features:
   - api.PaymentRequest.securePaymentConfirmationAvailability_static
