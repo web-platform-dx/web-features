@@ -1089,3 +1089,13 @@ compat_features:
   #   firefox: "102"
   #   firefox_android: "102"
   - api.RTCStatsReport.type_outbound-rtp.totalEncodedBytesTarget
+
+  # baseline: false
+  # support: {}
+  - api.RTCStatsReport.type_inbound-rtp.estimatedPlayoutTimestamp
+  - api.RTCStatsReport.type_inbound-rtp.framesAssembledFromMultiplePackets
+  - api.RTCStatsReport.type_inbound-rtp.freezeCount
+  - api.RTCStatsReport.type_inbound-rtp.pauseCount
+  - api.RTCStatsReport.type_inbound-rtp.totalAssemblyTime
+  - api.RTCStatsReport.type_inbound-rtp.totalFreezesDuration
+  - api.RTCStatsReport.type_inbound-rtp.totalPausesDuration
