@@ -1,0 +1,19 @@
+draft_date: 2025-07-30
+name: CSS Environment Variables Module Level 1
+description: TODO
+spec: https://drafts.csswg.org/css-env-1/
+compat_features:
+  - css.types.env.viewport-segment-bottom
+  - css.types.env.viewport-segment-height
+  - css.types.env.viewport-segment-left
+  - css.types.env.viewport-segment-right
+  - css.types.env.viewport-segment-top
+  - css.types.env.viewport-segment-width
+
+# The following features in the spec are already part of web-features:
+# - Safe area inset environment variables:
+#   - css.types.env
+#   - css.types.env.safe-area-inset-bottom
+#   - css.types.env.safe-area-inset-left
+#   - css.types.env.safe-area-inset-right
+#   - css.types.env.safe-area-inset-top

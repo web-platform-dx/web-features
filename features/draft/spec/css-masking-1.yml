@@ -1,0 +1,89 @@
+draft_date: 2025-08-06
+name: CSS Masking Module Level 1
+description: TODO
+spec: https://drafts.fxtf.org/css-masking-1/
+compat_features:
+  - css.properties.mask-clip.border-box
+  - css.properties.mask-clip.content-box
+  - css.properties.mask-clip.fill-box
+  - css.properties.mask-clip.no-clip
+  - css.properties.mask-clip.padding-box
+  - css.properties.mask-clip.stroke-box
+  - css.properties.mask-clip.view-box
+  - css.properties.mask-origin.border-box
+  - css.properties.mask-origin.content-box
+  - css.properties.mask-origin.padding-box
+
+# The following features in the spec are already part of web-features:
+# - clip-path:
+#   - api.SVGClipPathElement
+#   - api.SVGClipPathElement.clipPathUnits
+#   - api.SVGClipPathElement.transform
+#   - css.properties.clip-path
+#   - css.properties.clip-path.html_elements
+#   - css.properties.clip-path.path
+#   - css.properties.clip-path.svg_elements
+#   - svg.elements.clipPath
+#   - svg.elements.clipPath.clipPathUnits
+#   - svg.global_attributes.clip-path
+# - SVG:
+#   - api.SVGMaskElement
+#   - api.SVGMaskElement.height
+#   - api.SVGMaskElement.maskContentUnits
+#   - api.SVGMaskElement.maskUnits
+#   - api.SVGMaskElement.width
+#   - api.SVGMaskElement.x
+#   - api.SVGMaskElement.y
+#   - css.properties.clip-rule
+#   - css.properties.clip-rule.evenodd
+#   - css.properties.clip-rule.nonzero
+#   - svg.elements.mask
+#   - svg.elements.mask.height
+#   - svg.elements.mask.maskContentUnits
+#   - svg.elements.mask.maskUnits
+#   - svg.elements.mask.width
+#   - svg.elements.mask.x
+#   - svg.elements.mask.y
+#   - svg.global_attributes.clip-rule
+#   - svg.global_attributes.mask
+# - Clip path boxes:
+#   - css.properties.clip-path.fill-box
+#   - css.properties.clip-path.stroke-box
+#   - css.properties.clip-path.view-box
+# - Animatable clipping paths:
+#   - css.properties.clip-path.is_animatable
+# - Masks:
+#   - css.properties.mask
+#   - css.properties.mask-clip
+#   - css.properties.mask-composite
+#   - css.properties.mask-composite.add
+#   - css.properties.mask-composite.exclude
+#   - css.properties.mask-composite.intersect
+#   - css.properties.mask-composite.subtract
+#   - css.properties.mask-image
+#   - css.properties.mask-image.multiple_mask_images
+#   - css.properties.mask-image.svg_masks
+#   - css.properties.mask-mode
+#   - css.properties.mask-mode.alpha
+#   - css.properties.mask-mode.luminance
+#   - css.properties.mask-mode.match-source
+#   - css.properties.mask-origin
+#   - css.properties.mask-origin.fill-box
+#   - css.properties.mask-origin.stroke-box
+#   - css.properties.mask-origin.view-box
+#   - css.properties.mask-position
+#   - css.properties.mask-repeat
+#   - css.properties.mask-size
+# - mask-border:
+#   - css.properties.mask-border
+#   - css.properties.mask-border-outset
+#   - css.properties.mask-border-repeat
+#   - css.properties.mask-border-slice
+#   - css.properties.mask-border-source
+#   - css.properties.mask-border-width
+# - mask-type:
+#   - css.properties.mask-type
+#   - css.properties.mask-type.alpha
+#   - css.properties.mask-type.luminance
+# - path():
+#   - css.types.basic-shape.path.clip-path
