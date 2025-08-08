@@ -1,4 +1,4 @@
-draft_date: 2025-07-22
+draft_date: 2025-08-06
 name: WebDriver BiDi
 description: TODO
 spec: https://w3c.github.io/webdriver-bidi/
@@ -151,6 +151,10 @@ compat_features:
   - webdriver.bidi.emulation.setScreenOrientationOverride.contexts_parameter
   - webdriver.bidi.emulation.setScreenOrientationOverride.screenOrientation_parameter
   - webdriver.bidi.emulation.setScreenOrientationOverride.userContexts_parameter
+  - webdriver.bidi.emulation.setTimezoneOverride
+  - webdriver.bidi.emulation.setTimezoneOverride.contexts_parameter
+  - webdriver.bidi.emulation.setTimezoneOverride.timezone_parameter
+  - webdriver.bidi.emulation.setTimezoneOverride.userContexts_parameter
   - webdriver.bidi.input
   - webdriver.bidi.input.fileDialogOpened_event
   - webdriver.bidi.input.fileDialogOpened_event.context_parameter

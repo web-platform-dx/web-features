@@ -238,7 +238,12 @@ compat_features:
   - html.elements.input.popovertarget.implicit_anchor_reference
 
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "141"
+  #   firefox_android: "141"
   - api.HTMLElement.showPopover.options_source_parameter.implicit_anchor_reference
   - api.HTMLElement.togglePopover.options_source_parameter.implicit_anchor_reference
+
+  # baseline: false
+  # support: {}
   - css.properties.position-anchor.auto
