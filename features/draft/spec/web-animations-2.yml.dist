@@ -3,9 +3,16 @@
 
 status:
   baseline: false
-  support:
-    chrome: "133"
-    chrome_android: "133"
-    edge: "133"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "133"
+  #   chrome_android: "133"
+  #   edge: "133"
   - api.Animation.overallProgress
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.Animation.commitStyles.endpoint_inclusive_commitStyles
