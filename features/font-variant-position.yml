@@ -5,8 +5,9 @@ group: font-features
 notes:
   - date: 2024-10-15
     category: baseline-regression
+    old_baseline_value: low
+    new_baseline_value: false
     message: >
-      The `font-variant-position` feature regressed from newly available to limited availability.
       Upstream data reported that Chrome, Edge, and Safari did not implement font synthesis for missing superscript or subscript glyphs.
     citations:
       - https://issues.chromium.org/issues/352218916

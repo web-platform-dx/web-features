@@ -5,8 +5,9 @@ caniuse: link-rel-dns-prefetch
 notes:
   - date: 2025-06-23
     category: baseline-regression
+    old_baseline_value: low
+    new_baseline_value: false
     message: >
-      The `<link rel="dns-prefetch">` feature regressed from newly available to limited availability.
       Upstream data corrected an earlier report that Safari on iOS supported this feature when it did not.
     citations:
       - https://github.com/mdn/browser-compat-data/pull/27057

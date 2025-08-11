@@ -6,8 +6,9 @@ caniuse: css-content-visibility
 notes:
   - category: baseline-regression
     date: 2025-01-30
+    old_baseline_value: low
+    new_baseline_value: false
     message: >
-      The `content-visibility` feature regressed from newly available to limited availability.
       Upstream data reported that Safari prevented text in `content-visibility: auto` elements from being found with browser's "Find…" user interface.
     citations:
       - https://bugs.webkit.org/show_bug.cgi?id=283846

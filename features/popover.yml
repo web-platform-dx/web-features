@@ -5,8 +5,9 @@ group: html
 notes:
   - date: 2024-09-18
     category: baseline-regression
+    old_baseline_value: low
+    new_baseline_value: false
     message: >
-      The popover feature regressed from newly available to limited availability.
       Upstream data reported that Safari on iOS had a bug that prevented light dismiss (tapping outside the element to close it).
     citations:
       - https://bugs.webkit.org/show_bug.cgi?id=267688
