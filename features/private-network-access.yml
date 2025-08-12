@@ -1,6 +1,12 @@
 name: Private network access
 description: "The `Access-Control-Request-Private-Network: true` and `Access-Control-Allow-Private-Network: true` HTTP request and response headers establish permission for websites to make requests to internal networks, such as to routers."
 spec: https://wicg.github.io/private-network-access/
+discouraged:
+  according_to:
+    - https://github.com/WICG/local-network-access?tab=readme-ov-file#local-network-access
+    - https://developer.chrome.com/blog/pna-on-hold
+  alternatives:
+    - local-network-access
 compat_features:
   - http.mixed-content.private_network_access
   - api.Request.targetAddressSpace
