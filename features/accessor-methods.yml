@@ -2,6 +2,7 @@ name: Accessor methods
 description: The `__defineGetter__()` and `__defineSetter__()` methods of objects bind a function to a property, which is called on setting or reading the property.
 spec: https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype-legacy-accessor-methods
 discouraged:
+  reason: TC39 included accessor methods in Annex B of the ECMAScript specification, which covers JavaScript features with "one or more undesirable characteristics and in the absence of legacy usage would be removed."
   according_to:
     - https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-additional-ecmascript-features-for-web-browsers
     # No `alternatives` because it would be `alternatives:
