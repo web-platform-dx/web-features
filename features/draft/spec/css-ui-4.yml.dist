@@ -3,10 +3,19 @@
 
 status:
   baseline: false
-  support:
-    chrome: "135"
-    edge: "135"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "135"
+  #   edge: "135"
   - css.properties.interactivity
   - css.properties.interactivity.auto
   - css.properties.interactivity.inert
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.caret-animation
+  - css.properties.caret-animation.auto
+  - css.properties.caret-animation.manual
