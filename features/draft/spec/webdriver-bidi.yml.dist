@@ -586,6 +586,19 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "139"
+  #   chrome_android: "139"
+  #   edge: "139"
+  - webdriver.bidi.browsingContext.downloadEnd_event
+  - webdriver.bidi.browsingContext.downloadEnd_event.context_parameter
+  - webdriver.bidi.browsingContext.downloadEnd_event.filepath_parameter
+  - webdriver.bidi.browsingContext.downloadEnd_event.navigation_parameter
+  - webdriver.bidi.browsingContext.downloadEnd_event.status_parameter
+  - webdriver.bidi.browsingContext.downloadEnd_event.timestamp_parameter
+  - webdriver.bidi.browsingContext.downloadEnd_event.url_parameter
+
+  # baseline: false
+  # support:
   #   firefox: "112"
   #   firefox_android: "112"
   - webdriver.bidi.browsingContext.print
@@ -668,18 +681,6 @@ compat_features:
   - webdriver.bidi.webExtension.install.extensionData_parameter
   - webdriver.bidi.webExtension.uninstall
   - webdriver.bidi.webExtension.uninstall.extension_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "139"
-  #   chrome_android: "139"
-  - webdriver.bidi.browsingContext.downloadEnd_event
-  - webdriver.bidi.browsingContext.downloadEnd_event.context_parameter
-  - webdriver.bidi.browsingContext.downloadEnd_event.filepath_parameter
-  - webdriver.bidi.browsingContext.downloadEnd_event.navigation_parameter
-  - webdriver.bidi.browsingContext.downloadEnd_event.status_parameter
-  - webdriver.bidi.browsingContext.downloadEnd_event.timestamp_parameter
-  - webdriver.bidi.browsingContext.downloadEnd_event.url_parameter
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
