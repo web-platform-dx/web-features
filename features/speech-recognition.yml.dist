@@ -5,6 +5,7 @@ status:
   baseline: false
   support:
     chrome: "139"
+    edge: "139"
 compat_features:
   # baseline: false
   # support:
@@ -28,6 +29,7 @@ compat_features:
   # support:
   #   chrome: "139"
   #   chrome_android: "139"
+  #   edge: "139"
   #   safari: "14.1"
   #   safari_ios: "14.5"
   - api.SpeechRecognitionErrorEvent
@@ -43,6 +45,7 @@ compat_features:
   # support:
   #   chrome: "139"
   #   chrome_android: "139"
+  #   edge: "139"
   - api.SpeechRecognition
   - api.SpeechRecognition.SpeechRecognition
   - api.SpeechRecognition.abort
@@ -67,4 +70,5 @@ compat_features:
   # baseline: false
   # support:
   #   chrome: "139"
+  #   edge: "139"
   - api.SpeechRecognition.continuous

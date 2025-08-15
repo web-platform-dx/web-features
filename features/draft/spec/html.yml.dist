@@ -898,6 +898,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "139"
+  #   chrome_android: "139"
+  #   edge: "139"
+  - api.HTMLButtonElement.command.request-close
+
+  # baseline: false
+  # support:
   #   safari: "9"
   #   safari_ios: "9"
   - api.HTMLMediaElement.getStartDate
@@ -926,12 +933,6 @@ compat_features:
   #   chrome: "135"
   #   edge: "135"
   - api.NavigateEvent.sourceElement
-
-  # baseline: false
-  # support:
-  #   chrome: "139"
-  #   chrome_android: "139"
-  - api.HTMLButtonElement.command.request-close
 
   # baseline: false
   # support:

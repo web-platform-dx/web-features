@@ -153,19 +153,8 @@ compat_features:
   - api.CSSPositionTryDescriptors.position-area
   - api.CSSPositionTryDescriptors.positionArea
   - css.properties.position-area
-  - css.properties.position-area.block-end
-  - css.properties.position-area.block-start
-  - css.properties.position-area.bottom
   - css.properties.position-area.center
-  - css.properties.position-area.end
-  - css.properties.position-area.inline-end
-  - css.properties.position-area.inline-start
-  - css.properties.position-area.left
   - css.properties.position-area.none
-  - css.properties.position-area.right
-  - css.properties.position-area.self-end
-  - css.properties.position-area.self-start
-  - css.properties.position-area.span-all
   - css.properties.position-area.span-block-end
   - css.properties.position-area.span-block-start
   - css.properties.position-area.span-bottom
@@ -179,15 +168,6 @@ compat_features:
   - css.properties.position-area.span-y-end
   - css.properties.position-area.span-y-start
   - css.properties.position-area.start
-  - css.properties.position-area.top
-  - css.properties.position-area.x-end
-  - css.properties.position-area.x-self-end
-  - css.properties.position-area.x-self-start
-  - css.properties.position-area.x-start
-  - css.properties.position-area.y-end
-  - css.properties.position-area.y-self-end
-  - css.properties.position-area.y-self-start
-  - css.properties.position-area.y-start
 
   # baseline: false
   # support:
@@ -247,3 +227,23 @@ compat_features:
   # baseline: false
   # support: {}
   - css.properties.position-anchor.auto
+  - css.properties.position-area.block-end
+  - css.properties.position-area.block-start
+  - css.properties.position-area.bottom
+  - css.properties.position-area.end
+  - css.properties.position-area.inline-end
+  - css.properties.position-area.inline-start
+  - css.properties.position-area.left
+  - css.properties.position-area.right
+  - css.properties.position-area.self-end
+  - css.properties.position-area.self-start
+  - css.properties.position-area.span-all
+  - css.properties.position-area.top
+  - css.properties.position-area.x-end
+  - css.properties.position-area.x-self-end
+  - css.properties.position-area.x-self-start
+  - css.properties.position-area.x-start
+  - css.properties.position-area.y-end
+  - css.properties.position-area.y-self-end
+  - css.properties.position-area.y-self-start
+  - css.properties.position-area.y-start
