@@ -31,13 +31,11 @@ jobs:
       - run: npm test
   vale:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write 
     steps:
       - uses: actions/checkout@v4
       - uses: errata-ai/vale-action@d89dee975228ae261d22c15adcd03578634d429c # v2.1.1
         with:
+          reporter: github-pr-annotations
           fail_on_error: true
           version: 3.12.0
 
