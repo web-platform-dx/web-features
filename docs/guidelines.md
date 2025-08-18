@@ -82,10 +82,17 @@ The identifier should match the name, with these additional guidelines:
 It’s possible to change or substitute a feature’s ID by creating a redirect from the original ID pointing to a new ID.
 You can do this when:
 
-* The original feature ID is misspelled.  
-* The original feature ID breaks the identifier guidelines.  
-* Data consumers report that the original feature ID is confusing or misleading.  
+* The original feature ID is misspelled.
+  For example, `numeric-seperators` (note spelling) data can be moved to `numeric-separators`.
+
+* The original feature ID breaks the identifier guidelines.
+  For example, `drones-initial-support` data can be moved to `drones`.
+
 * The original feature should not have existed as an independent feature.
+  For example, `single-color-gradients` was a poorly-conceived feature, where [a specification change](https://github.com/w3c/csswg-drafts/issues/10092) simplified the specification, implementation, and tools, but produced no novel browser behavior that developers could use in an application.
+  Instead, all the compatibility keys for the feature were reassigned to `gradients`.
+
+* Data consumers report that the original feature ID is confusing or misleading.
 
 To move the feature:
 
