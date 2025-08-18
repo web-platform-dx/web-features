@@ -1,4 +1,4 @@
-draft_date: 2025-07-03
+draft_date: 2025-08-15
 name: CSS Borders and Box Decorations Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-borders-4/
@@ -20,3 +20,12 @@ compat_features:
   - css.properties.corner-top-left-shape
   - css.properties.corner-top-right-shape
   - css.properties.corner-top-shape
+  - css.types.corner-shape-value
+  - css.types.corner-shape-value.bevel
+  - css.types.corner-shape-value.notch
+  - css.types.corner-shape-value.round
+  - css.types.corner-shape-value.scoop
+  - css.types.corner-shape-value.square
+  - css.types.corner-shape-value.squircle
+  - css.types.corner-shape-value.superellipse
+  - css.types.superellipse

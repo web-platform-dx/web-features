@@ -3,17 +3,18 @@
 
 status:
   baseline: high
-  baseline_low_date: 2020-09-16
-  baseline_high_date: 2023-03-16
+  baseline_low_date: 2020-01-15
+  baseline_high_date: 2022-07-15
   support:
-    chrome: "61"
-    chrome_android: "61"
+    chrome: "1"
+    chrome_android: "18"
     edge: "79"
-    firefox: "36"
-    firefox_android: "36"
-    safari: "14"
-    safari_ios: "14"
+    firefox: "1"
+    firefox_android: "4"
+    safari: "3"
+    safari_ios: "1"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
@@ -27,7 +28,6 @@ compat_features:
   #   safari_ios: "1"
   - api.Element.scrollIntoView
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-09-16
   # baseline_high_date: 2023-03-16
@@ -40,3 +40,7 @@ compat_features:
   #   safari: "14"
   #   safari_ios: "14"
   - api.Element.scrollIntoView.options_parameter
+
+  # baseline: false
+  # support: {}
+  - api.Element.scrollIntoView.options_container_parameter

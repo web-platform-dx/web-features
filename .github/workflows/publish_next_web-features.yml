@@ -24,7 +24,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/setup-node@v4
         with:
           node-version-file: .node-version
@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: "test"
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Get timestamp and short hash
         id: timestamp_and_hash
         run: |
