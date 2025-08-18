@@ -1,5 +1,5 @@
 name: Local network access
-description: Restricts the ability to send requests to servers on a user's local network and requiring the user grant the site permission before such requests can be made.
+description: The `"local-network-access"` user permission (and certain actions that imply this permission, such as a `fetch()` request with `{ targetAddressSpace: "local" }`) allows a site to send requests to servers on a user's local network.
 spec: https://wicg.github.io/local-network-access/
 compat_features:
   - api.Request.targetAddressSpace
