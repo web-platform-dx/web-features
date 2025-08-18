@@ -1,6 +1,5 @@
-draft_date: 2025-08-06
-name: ECMAScript Async Explicit Resource Management
-description: TODO
+name: Explicit resource management
+description: The `using` and `await using` declarations and the `dispose` and `asyncDispose` symbols control resources that are not automatically cleaned up by JavaScript. The `DisposableStack` and `AsyncDisposableStack` objects can group, dispose, and coordinate dependencies between multiple disposable resources.
 spec: https://tc39.es/proposal-async-explicit-resource-management/
 compat_features:
   - javascript.builtins.AsyncDisposableStack
