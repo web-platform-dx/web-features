@@ -193,8 +193,12 @@ compat_features:
   - api.SubtleCrypto.generateKey.x25519
   - api.SubtleCrypto.importKey.x25519
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-05-29
   # support:
+  #   chrome: "137"
+  #   chrome_android: "137"
+  #   edge: "137"
   #   firefox: "129"
   #   firefox_android: "129"
   #   safari: "17"

@@ -1,8 +1,11 @@
-draft_date: 2025-05-14
+draft_date: 2025-08-15
 name: CSS Basic User Interface Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-ui-4/
 compat_features:
+  - css.properties.caret-animation
+  - css.properties.caret-animation.auto
+  - css.properties.caret-animation.manual
   - css.properties.interactivity
   - css.properties.interactivity.auto
   - css.properties.interactivity.inert
@@ -69,10 +72,6 @@ compat_features:
 #   - css.properties.cursor.zoom-in
 #   - css.properties.cursor.zoom-out
 #   - svg.global_attributes.cursor
-# - field-sizing:
-#   - css.properties.field-sizing
-#   - css.properties.field-sizing.content
-#   - css.properties.field-sizing.fixed
 # - outline:
 #   - css.properties.outline
 # - Outlines:

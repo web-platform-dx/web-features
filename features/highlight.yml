@@ -1,3 +1,35 @@
 name: Custom highlights
 description: Custom highlights style arbitrary text ranges, without adding extra elements to the DOM.
 spec: https://drafts.csswg.org/css-highlight-api-1/
+status:
+  compute_from: css.selectors.highlight
+compat_features:
+  - api.CSS.highlights_static
+  - api.Highlight
+  - api.Highlight.@@iterator
+  - api.Highlight.Highlight
+  - api.Highlight.add
+  - api.Highlight.clear
+  - api.Highlight.delete
+  - api.Highlight.entries
+  - api.Highlight.forEach
+  - api.Highlight.has
+  - api.Highlight.keys
+  - api.Highlight.priority
+  - api.Highlight.size
+  - api.Highlight.type
+  - api.Highlight.values
+  - api.HighlightRegistry
+  - api.HighlightRegistry.@@iterator
+  - api.HighlightRegistry.clear
+  - api.HighlightRegistry.delete
+  - api.HighlightRegistry.entries
+  - api.HighlightRegistry.forEach
+  - api.HighlightRegistry.get
+  - api.HighlightRegistry.has
+  - api.HighlightRegistry.highlightsFromPoint
+  - api.HighlightRegistry.keys
+  - api.HighlightRegistry.set
+  - api.HighlightRegistry.size
+  - api.HighlightRegistry.values
+  - css.selectors.highlight

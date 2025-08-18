@@ -1,4 +1,4 @@
-draft_date: 2025-03-31
+draft_date: 2025-07-03
 name: Manifest Incubations
 description: TODO
 spec: https://wicg.github.io/manifest-incubations/
@@ -7,6 +7,9 @@ compat_features:
   - manifests.webapp.display_override.tabbed
   - manifests.webapp.note_taking
   - manifests.webapp.note_taking.new_note_url
+  - manifests.webapp.prefer_related_applications
+  - manifests.webapp.related_applications
+  - manifests.webapp.scope_extensions
 
 # The following features in the spec are already part of web-features:
 # - beforeinstallprompt:

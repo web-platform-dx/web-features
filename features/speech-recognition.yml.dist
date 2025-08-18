@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "139"
+    edge: "139"
 compat_features:
   # baseline: false
   # support:
@@ -25,6 +27,9 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "139"
+  #   chrome_android: "139"
+  #   edge: "139"
   #   safari: "14.1"
   #   safari_ios: "14.5"
   - api.SpeechRecognitionErrorEvent
@@ -36,15 +41,16 @@ compat_features:
   - api.SpeechRecognitionEvent.resultIndex
   - api.SpeechRecognitionEvent.results
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "139"
+  #   chrome_android: "139"
+  #   edge: "139"
   - api.SpeechRecognition
   - api.SpeechRecognition.SpeechRecognition
   - api.SpeechRecognition.abort
   - api.SpeechRecognition.audioend_event
   - api.SpeechRecognition.audiostart_event
-  - api.SpeechRecognition.continuous
   - api.SpeechRecognition.end_event
   - api.SpeechRecognition.error_event
   - api.SpeechRecognition.interimResults
@@ -59,3 +65,10 @@ compat_features:
   - api.SpeechRecognition.start
   - api.SpeechRecognition.start_event
   - api.SpeechRecognition.stop
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "139"
+  #   edge: "139"
+  - api.SpeechRecognition.continuous
