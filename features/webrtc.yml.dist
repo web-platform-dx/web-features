@@ -775,8 +775,9 @@ compat_features:
   #   safari_ios: "11"
   - api.RTCPeerConnection.setConfiguration
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-02-14
+  # baseline_high_date: 2025-08-14
   # support:
   #   chrome: "69"
   #   chrome_android: "69"
@@ -787,8 +788,9 @@ compat_features:
   #   safari_ios: "11.3"
   - api.RTCRtpSender.setParameters.parameters_encodings_parameter.active
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-02-14
+  # baseline_high_date: 2025-08-14
   # support:
   #   chrome: "69"
   #   chrome_android: "69"
