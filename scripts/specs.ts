@@ -132,6 +132,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/whatwg/fetch/pull/1647",
         "This is where fetchLater() is in the process of being spec'd. Once the PR merges, change the spec url in fetchlater.yml, and remove this exception."
+    ],
+    [
+        "https://wicg.github.io/local-network-access/",
+        "This is missing from web-specs. Remove this when https://github.com/w3c/browser-specs/issues/1953 is resolved."
     ]
 ];
 
