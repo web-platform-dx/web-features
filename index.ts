@@ -4,7 +4,7 @@ import path from 'path';
 import { Temporal } from '@js-temporal/polyfill';
 import { fdir } from 'fdir';
 import YAML from 'yaml';
-import { FeatureData, GroupData, SnapshotData, WebFeaturesData } from './types';
+import { GroupData, SnapshotData, WebFeaturesData } from './types';
 
 import { toString as hastTreeToString } from 'hast-util-to-string';
 import rehypeStringify from 'rehype-stringify';
@@ -14,6 +14,7 @@ import { unified } from 'unified';
 
 import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, parseRangedDateString } from 'compute-baseline';
 import { Compat } from 'compute-baseline/browser-compat-data';
+import { isMoved, isSplit } from './type-guards';
 
 // The longest name allowed, to allow for compact display.
 const nameMaxLength = 80;
@@ -139,7 +140,7 @@ function convertMarkdown(markdown: string) {
 // Map from BCD keys/paths to web-features identifiers.
 const bcdToFeatureId: Map<string, string> = new Map();
 
-const features: { [key: string]: FeatureData } = {};
+const features: WebFeaturesData["features"] = {};
 for (const [key, data] of yamlEntries('features')) {
     // Draft features reserve an identifier but aren't complete yet. Skip them.
     if (data[draft]) {
@@ -147,6 +148,33 @@ for (const [key, data] of yamlEntries('features')) {
             throw new Error(`The draft feature ${key} is missing the draft_date field. Set it to the current date.`);
         }
         continue;
+    }
+
+    // Attach `kind: feature` to ordinary features
+    if (!isMoved(data) && !isSplit(data)) {
+        data.kind = "feature";
+    }
+
+    // Upgrade authored strings to arrays of 1
+    const optionalArrays = [
+        "spec",
+        "group",
+        "snapshot",
+        "caniuse",
+        "foo"
+    ];
+    const stringToStringArray = (value: string | string[]) => typeof value === "string" ? [value] : value;
+    for (const optionalArray of optionalArrays) {
+        const value = data[optionalArray];
+        if (value) {
+            data[optionalArray] = stringToStringArray(value);
+        }
+    }
+    if (data.discouraged) {
+        const value = data.discouraged.according_to;
+        if (value) {
+            data.discouraged.according_to = stringToStringArray(value);
+        }
     }
 
     // Convert markdown to text+HTML.
@@ -204,12 +232,37 @@ for (const [key, data] of yamlEntries('features')) {
     features[key] = data;
 }
 
-// Assert that discouraged feature's alternatives are valid
-for (const [id, feature] of Object.entries(features)) {
-    for (const alternative of feature.discouraged?.alternatives ?? []) {
-        if (!(alternative in features)) {
-            throw new Error(`${id}'s alternative "${alternative}" is not a valid feature ID`);
+// Assert that feature references are valid
+
+function assertValidReference(sourceID: string, targetID: string): void {
+    if (targetID in features) {
+        if (isMoved(features[targetID]) || isSplit(features[targetID])) {
+            throw new Error(`${sourceID} references a redirect "${targetID}" instead of an ordinary feature ID`);
         }
+        return;
+    }
+    throw new Error(`${sourceID}'s reference to "${targetID}" is not a valid feature ID`);
+}
+
+for (const [id, feature] of Object.entries(features)) {
+    const { kind } = feature;
+    switch (kind) {
+        case "feature":
+            for (const alternative of feature.discouraged?.alternatives ?? []) {
+                assertValidReference(id, alternative);
+            }
+            break;
+        case "moved":
+            assertValidReference(id, feature.redirect_target);
+            break;
+        case "split":
+            for (const target of feature.redirect_targets) {
+                assertValidReference(id, target);
+            }
+            break;
+        default:
+            kind satisfies never;
+            throw new Error(`Unhandled feature kind ${kind}}`);
     }
 }
 
