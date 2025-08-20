@@ -1,0 +1,16 @@
+draft_date: 2025-08-20
+name: Web IDL
+description: TODO
+spec: https://webidl.spec.whatwg.org/
+compat_features:
+  - api.QuotaExceededError
+  - api.QuotaExceededError.QuotaExceededError
+  - api.QuotaExceededError.quota
+  - api.QuotaExceededError.requested
+
+# The following features in the spec are already part of web-features:
+# - DOM:
+#   - api.DOMException
+#   - api.DOMException.DOMException
+#   - api.DOMException.message
+#   - api.DOMException.name
