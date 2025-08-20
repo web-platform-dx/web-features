@@ -4,12 +4,12 @@
 status:
   baseline: false
   support:
-    chrome: "86"
-    chrome_android: "109"
-    edge: "86"
-    firefox: "111"
-    safari: "16.4"
-    safari_ios: "16.4"
+    chrome: "22"
+    chrome_android: "132"
+    edge: "79"
+    firefox: "52"
+    safari: "11.1"
+    safari_ios: "18.4"
 compat_features:
   # baseline: high
   # baseline_low_date: ≤2018-10-02
@@ -89,42 +89,25 @@ compat_features:
   #   safari_ios: "11.3"
   - api.FileSystemDirectoryEntry.createReader
 
-  # baseline: low
-  # baseline_low_date: 2023-03-14
+  # baseline: false
   # support:
-  #   chrome: "86"
-  #   chrome_android: "109"
-  #   edge: "86"
-  #   firefox: "111"
-  #   firefox_android: "111"
-  #   safari: "15.2"
-  #   safari_ios: "15.2"
-  - api.FileSystemDirectoryHandle
-  - api.FileSystemDirectoryHandle.entries
-  - api.FileSystemDirectoryHandle.getDirectoryHandle
-  - api.FileSystemDirectoryHandle.getFileHandle
-  - api.FileSystemDirectoryHandle.keys
-  - api.FileSystemDirectoryHandle.removeEntry
-  - api.FileSystemDirectoryHandle.resolve
-  - api.FileSystemDirectoryHandle.values
-  - api.FileSystemFileHandle
-  - api.FileSystemFileHandle.getFile
-  - api.FileSystemHandle
-  - api.FileSystemHandle.isSameEntry
-  - api.FileSystemHandle.kind
-  - api.FileSystemHandle.name
+  #   chrome: "7"
+  #   chrome_android: "132"
+  #   edge: "13"
+  #   firefox: "50"
+  #   safari: "11.1"
+  #   safari_ios: "18.4"
+  - api.HTMLInputElement.webkitdirectory
 
-  # baseline: low
-  # baseline_low_date: 2023-03-27
+  # baseline: false
   # support:
-  #   chrome: "86"
-  #   chrome_android: "109"
-  #   edge: "86"
-  #   firefox: "111"
-  #   firefox_android: "111"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - api.FileSystemDirectoryHandle.@@asyncIterator
+  #   chrome: "13"
+  #   chrome_android: "18"
+  #   edge: "13"
+  #   firefox: "50"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - api.File.webkitRelativePath
 
   # baseline: false
   # support:
