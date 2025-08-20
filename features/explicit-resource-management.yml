@@ -1,5 +1,5 @@
 name: Explicit resource management
-description: The `using` and `await using` declarations and the `dispose` and `asyncDispose` symbols control resources that are not automatically cleaned up by JavaScript. The `DisposableStack` and `AsyncDisposableStack` objects can group, dispose, and coordinate dependencies between multiple disposable resources.
+description: The `using` and `await using` declarations and the `dispose` and `asyncDispose` symbols manage the lifecycle of resources such as file handles and streams. The `DisposableStack` and `AsyncDisposableStack` objects can group, dispose, and coordinate dependencies between multiple disposable resources.
 spec: https://tc39.es/proposal-async-explicit-resource-management/
 compat_features:
   - javascript.builtins.AsyncDisposableStack
