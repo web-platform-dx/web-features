@@ -38,12 +38,12 @@ The majority of browsers outside the core browser set on Android, Windows and ma
 - Opera Desktop and Mobile
 - Samsung Internet
 - Android WebView
-- QQ Browser Mobile*
-- UC Browser Mobile*
-- Yandex Browser Mobile*
+- QQ Browser Mobile\*
+- UC Browser Mobile\*
+- Yandex Browser Mobile\*
 
 > **NOTE**
-> Baseline support for the browsers marked with an asterisk (*) is based on mapping their version number and stated Chromium version from user agent strings captured by [useragents.io](https://useragents.io). This information is provided on a best-effort basis. For more information on how these mappings are generated, please see [the `baseline-browser-mapping` README](https://github.com/web-platform-dx/baseline-browser-mapping/blob/main/README.md#downstream-browsers).
+> Baseline support for the browsers marked with an asterisk (\*) is based on mapping their version number and stated Chromium version from user agent strings captured by [useragents.io](https://useragents.io). This information is provided on a best-effort basis. For more information on how these mappings are generated, please see [the `baseline-browser-mapping` README](https://github.com/web-platform-dx/baseline-browser-mapping/blob/main/README.md#downstream-browsers).
 
 KaiOS - a feature phone operating system used for flip phones - implements the Gecko engine from Firefox. It is possible to derive feature support in KaiOS based on Gecko feature support, but please be aware that KaiOS has a significantly different set of UI limitations and interaction model compared to the other browsers on this page. For more information, see the [KaiOS developer documentation](https://developer.kaiostech.com/docs/sfp-3.0/).
 
