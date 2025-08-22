@@ -14,6 +14,8 @@ Baseline features are available across popular browsers. Baseline has two stages
 
 Prior to being newly available, a feature has **Limited availability** when it's not yet available across all browsers.
 
+All the features that were **Newly available** at the end of a given calendar year can be described as being in that Baseline year's feature set. For example, [overflow: clip](https://webstatus.dev/features/overflow-clip) became Newly available in September 2022, so it is part of [Baseline 2022](https://webstatus.dev/?q=baseline_date%3A2000-01-01..2022-12-31) and all subsequent Baseline years.
+
 Baseline is calculated using the following core browser set:
 
 - Apple Safari (macOS and iOS)
@@ -41,6 +43,8 @@ The majority of browsers outside the core browser set on Android, Windows and ma
 - QQ Browser Mobile\*
 - UC Browser Mobile\*
 - Yandex Browser Mobile\*
+
+See [supported browsers](/supported-browsers/?includeDownstream=true) to find out which minimum browser versions support different Baseline feature sets, includeing Newly and Widely available and Baseline years.
 
 > **NOTE**
 > Baseline support for the browsers marked with an asterisk (\*) is based on mapping their version number and stated Chromium version from user agent strings captured by [useragents.io](https://useragents.io). This information is provided on a best-effort basis. For more information on how these mappings are generated, please see [the `baseline-browser-mapping` README](https://github.com/web-platform-dx/baseline-browser-mapping/blob/main/README.md#downstream-browsers).
