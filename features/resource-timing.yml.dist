@@ -52,6 +52,20 @@ compat_features:
   - api.PerformanceResourceTiming.responseStart
 
   # baseline: high
+  # baseline_low_date: 2017-09-19
+  # baseline_high_date: 2020-03-19
+  # support:
+  #   chrome: "46"
+  #   chrome_android: "46"
+  #   edge: "12"
+  #   firefox: "35"
+  #   firefox_android: "35"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.Performance.clearResourceTimings
+  - api.Performance.setResourceTimingBufferSize
+
+  # baseline: high
   # baseline_low_date: 2017-10-17
   # baseline_high_date: 2020-04-17
   # support:
@@ -102,6 +116,19 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - api.PerformanceResourceTiming.secureConnectionStart
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "46"
+  #   chrome_android: "46"
+  #   edge: "79"
+  #   firefox: "35"
+  #   firefox_android: "35"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.Performance.resourcetimingbufferfull_event
 
   # baseline: false
   # support:

@@ -3,7 +3,6 @@ description: The `performance` global object and the `Performance` API provide a
 spec:
   - https://w3c.github.io/hr-time/
   - https://w3c.github.io/performance-timeline/
-  - https://w3c.github.io/resource-timing/
   - https://w3c.github.io/user-timing/#extensions-performance-interface
 caniuse:
   - user-timing
@@ -21,11 +20,8 @@ compat_features:
   - api.Performance.getEntries
   - api.Performance.getEntriesByName
   - api.Performance.getEntriesByType
-  - api.Performance.resourcetimingbufferfull_event
-  - api.Performance.setResourceTimingBufferSize
   - api.Performance.clearMarks
   - api.Performance.clearMeasures
-  - api.Performance.clearResourceTimings
   - api.Performance.mark
   - api.Performance.mark.markOptions_parameter
   - api.Performance.mark.returns_performancemark
