@@ -5,6 +5,7 @@ status:
   baseline: false
   support:
     chrome: "139"
+    chrome_android: "139"
     edge: "139"
 compat_features:
   # baseline: false
@@ -41,6 +42,7 @@ compat_features:
   - api.SpeechRecognitionEvent.resultIndex
   - api.SpeechRecognitionEvent.results
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "139"
@@ -66,7 +68,6 @@ compat_features:
   - api.SpeechRecognition.start_event
   - api.SpeechRecognition.stop
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "139"
