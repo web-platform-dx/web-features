@@ -224,22 +224,6 @@ compat_features:
   - api.TransformStreamDefaultController.error
   - api.TransformStreamDefaultController.terminate
 
-  # baseline: high
-  # baseline_low_date: 2022-09-20
-  # baseline_high_date: 2025-03-20
-  # support:
-  #   chrome: "71"
-  #   chrome_android: "71"
-  #   edge: "79"
-  #   firefox: "105"
-  #   firefox_android: "105"
-  #   safari: "14.1"
-  #   safari_ios: "14.5"
-  - api.TextDecoderStream.readable
-  - api.TextDecoderStream.writable
-  - api.TextEncoderStream.readable
-  - api.TextEncoderStream.writable
-
   # baseline: low
   # baseline_low_date: 2023-03-27
   # support:
