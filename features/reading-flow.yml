@@ -1,4 +1,14 @@
 name: reading-flow
-description: The `reading-flow` CSS property sets the order in which flex or grid elements are rendered to speech or reached via focus navigation.
+description: The `reading-flow` CSS property sets the order in which flex or grid elements are rendered to speech or reached via focus navigation. The `reading-order` property overrides this order.
 spec: https://drafts.csswg.org/css-display-4/#reading-flow
 group: css
+compat_features:
+  - css.properties.reading-flow
+  - css.properties.reading-flow.flex-flow
+  - css.properties.reading-flow.flex-visual
+  - css.properties.reading-flow.grid-columns
+  - css.properties.reading-flow.grid-order
+  - css.properties.reading-flow.grid-rows
+  - css.properties.reading-flow.normal
+  - css.properties.reading-flow.source-order
+  - css.properties.reading-order
