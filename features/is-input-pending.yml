@@ -1,0 +1,12 @@
+name: isInputPending()
+description: The `navigator.scheduling.isInputPending()` method checks if there are pending input events, such as touch or mouse events. This allows you to yield from long-running scripts that might be blocking user interaction.
+spec: https://wicg.github.io/is-input-pending/
+discouraged:
+  according_to:
+    - https://web.dev/articles/optimize-long-tasks#isinputpending
+  alternatives:
+    - scheduler
+compat_features:
+  - api.Navigator.scheduling
+  - api.Scheduling
+  - api.Scheduling.isInputPending
