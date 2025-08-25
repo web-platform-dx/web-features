@@ -55,7 +55,7 @@ If you must show a version number, consider contextualizing that number by showi
 
 ## Schema reference
 
-This part of the README is incomplete.
+This part of the README summarizes the schema for feature data.
 See `data.schema.json` for a canonical reference.
 
 ## `features`
@@ -66,7 +66,7 @@ Some features contain redirects to other features.
 You can distinguish feature objects with value of the `kind` property:
 
 * `"feature"` — ordinary features  
-* `"moved"` — the feature has a redirect to a new key  
+* `"moved"` — the feature has a redirect to a new key
 * `"split"` — the feature has a redirect to two or more keys
 
 ### Feature objects
@@ -79,13 +79,27 @@ It has the following properties:
 - `description` (type: `string`): A short plain-text description of the feature
 - `description_html` (type: `string`): A short HTML-formatted description of the feature
 - `spec` (type: `string | string[]`): A specification URL or an array of them
-- `status`: Support status data to be documented
+- `status`: Support status data.
+  It has the following properties:
+
+  - `baseline` (type: `"high" | "low" | false): Whether the feature Baseline widely available, Baseline newly available, or not Baseline.
+  - `baseline_low_date` (optional, type: `string`): When the feature reached Baseline newly available status.
+  - `baseline_high_date` (optional, type: `string`): When the feature reached Baseline widely available status.
+  - `support`: An object representing per-browser support information, showing the version number where each browser first started to support that feature.
+    All keys are optional.
+    Keys are one of: `"chrome"`, `"chrome_android"`, `"edge"`, `"firefox"`, `"firefox"`, `"firefox_android"`, `"safari"`, `"safari_ios"`.
+    Each value is a `string` (containing the version number).
+
 - `group` (optional, type: `string | string[]`): A `groups` key or an array of them
 - `snapshot` (optional, type: `string | string[]`): A `snapshots` key or an array of them
 - `caniuse` (optional, type: `string | string[]`): A caniuse feature ID that corresponds to the current feature, or an array of them.
   Use it to look up caniuse data from a package like [`caniuse-lite`](https://www.npmjs.com/package/caniuse-lite) or construct a URL to a page on caniuse.com.
 - `compat_features` (optional, type: `string[]`): An array of `@mdn/browser-compat-data` feature key strings.
-- `discouraged`: Deprecation or obsolescence data to be documented
+- `discouraged` (optional): An object indicating that web developers should avoid using the feature.
+  It has the following properties:
+
+  - `according_to` (type: `string[]`): One or more links to a formal discouragement notice, such as specification text or an intent-to-unship.
+  - `alternatives` (optional, type: `string[]`): One or more feature IDs (as in `features[alternatives[0]]`) that substitute some or all of this feature's utility.
 
 ### Moved objects
 
@@ -96,7 +110,7 @@ If you’re showing web-features data to developers, then treat this like a 301 
 A moved feature has the following properties:
 
 - `kind` (value: `"moved"`): A type discriminator
-- `redirect_target` (type: `string`): The ID of a feature (as in `features[redirect_target]`)
+- `redirect_target` (type: `string`): The ID of a feature (as in `features[redirect_target]`).
   The ID is guaranteed to be an ordinary, non-redirecting feature.
   Double redirects and cycles are forbidden.
 
