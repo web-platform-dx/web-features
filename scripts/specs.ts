@@ -134,8 +134,8 @@ const defaultAllowlist: allowlistItem[] = [
         "This is where fetchLater() is in the process of being spec'd. Once the PR merges, change the spec url in fetchlater.yml, and remove this exception."
     ],
     [
-        "https://wicg.github.io/local-network-access/",
-        "This is missing from web-specs. Remove this when https://github.com/w3c/browser-specs/issues/1953 is resolved."
+        "https://wicg.github.io/private-network-access/",
+        "Allowed for private-network-access feature. Feature and spec succeeded by local-network-access."
     ]
 ];
 
