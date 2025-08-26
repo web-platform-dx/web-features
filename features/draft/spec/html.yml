@@ -1,4 +1,4 @@
-draft_date: 2025-08-21
+draft_date: 2025-08-26
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -58,7 +58,20 @@ compat_features:
   - api.ImageData.pixelFormat
   - api.MouseEvent.relatedTarget.drag_events
   - api.NavigateEvent.sourceElement
+  - api.Navigator.appCodeName
+  - api.Navigator.appName
+  - api.Navigator.appVersion
   - api.Navigator.authentication
+  - api.Navigator.javaEnabled
+  - api.Navigator.mimeTypes
+  - api.Navigator.oscpu
+  - api.Navigator.platform
+  - api.Navigator.plugins
+  - api.Navigator.product
+  - api.Navigator.productSub
+  - api.Navigator.taintEnabled
+  - api.Navigator.vendor
+  - api.Navigator.vendorSub
   - api.OffscreenCanvasRenderingContext2D.getContextAttributes
   - api.OffscreenCanvasRenderingContext2D.lang
   - api.PromiseRejectionEvent

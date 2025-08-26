@@ -1,0 +1,10 @@
+draft_date: 2025-08-26
+name: Secure Payment Confirmation
+description: TODO
+spec: https://w3c.github.io/secure-payment-confirmation/
+compat_features:
+  - api.PaymentRequest.securePaymentConfirmationAvailability_static
+
+# The following features in the spec are already part of web-features:
+# - Web authentication:
+#   - api.CredentialsContainer.create.publicKey_option.extensions.payment
