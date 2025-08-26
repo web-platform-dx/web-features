@@ -29,6 +29,25 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
+  spelling:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          set -o pipefail
+          mkdir -p "${{ runner.temp }}/typos"
+          RELEASE_ASSET_URL="$(
+            gh api /repos/crate-ci/typos/releases/latest \
+              --jq '."assets"[] | select(."name" | test("^typos-.+-x86_64-unknown-linux-musl\\.tar\\.gz$")) | ."browser_download_url"'
+          )"
+          wget --quiet --output-document=- "${RELEASE_ASSET_URL}" \
+            | tar -xz -C "${{ runner.temp }}/typos" ./typos
+          git grep --files-with-matches --null -I -e '.' \
+            | xargs --null --verbose -- "${{ runner.temp }}/typos/typos" --format json \
+            | jq --raw-output '"::warning file=\(.path),line=\(.line_num),col=\(.byte_offset)::\"\(.typo)\" should be \"" + (.corrections // [] | join("\" or \"") + "\".")' \
+            || true
+        env:
+          GH_TOKEN: ${{ github.token }}
 
 env:
   FORCE_COLOR: 3
