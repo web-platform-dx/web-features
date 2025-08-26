@@ -17,6 +17,16 @@ compat_features:
   #   safari: "1"
   #   safari_ios: "1"
   - api.HTMLElement.error_event
+  - api.Navigator.appCodeName
+  - api.Navigator.appName
+  - api.Navigator.appVersion
+  - api.Navigator.javaEnabled
+  - api.Navigator.mimeTypes
+  - api.Navigator.platform
+  - api.Navigator.plugins
+  - api.Navigator.product
+  - api.Navigator.productSub
+  - api.Navigator.vendor
   - html.elements.html.xmlns
   - http.headers.Refresh
 
@@ -49,6 +59,7 @@ compat_features:
   - api.HTMLOptionsCollection.add
   - api.HTMLOptionsCollection.length
   - api.HTMLOptionsCollection.selectedIndex
+  - api.Navigator.vendorSub
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -902,6 +913,13 @@ compat_features:
   #   chrome_android: "139"
   #   edge: "139"
   - api.HTMLButtonElement.command.request-close
+
+  # baseline: false
+  # support:
+  #   firefox: "1"
+  #   firefox_android: "4"
+  - api.Navigator.oscpu
+  - api.Navigator.taintEnabled
 
   # baseline: false
   # support:
