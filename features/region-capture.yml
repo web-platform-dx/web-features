@@ -1,14 +1,5 @@
 name: Region capture
-description: |
-  Region Capture is an API for cropping video tracks derived from screen-capturing a tab.
-
-  The API consists of two parts.
-
-  First, a `CropTarget` object is minted from an HTMLElement `e`, representing an element within the captured tab.
-
-  Second, `cropTo()` is invoked on the video track, with the aforementioned `CropTarget` as input, after which frames deliver on that track will be cropped to `e`'s bounding box.
-
-  Calling `cropTo(null)` restores the track to its original, uncropped form.
+description: "When using `navigator.mediaDevices.getDisplayMedia()` to capture a browser tab as a video stream, the region capture API allows you to crop the video to the bounding box of a given element. In contrast to the element capture API, any content that overlays that element is also captured."
 spec: https://w3c.github.io/mediacapture-region/
 compat_features:
   - api.BrowserCaptureMediaStreamTrack
