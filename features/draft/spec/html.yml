@@ -1,4 +1,4 @@
-draft_date: 2025-08-26
+draft_date: 2025-08-28
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -52,7 +52,6 @@ compat_features:
   - api.HTMLSourceElement.type
   - api.HTMLSourceElement.width
   - api.HTMLUnknownElement
-  - api.HTMLVideoElement.playsInline
   - api.ImageData.ImageData.settings_parameter
   - api.ImageData.ImageData.settings_parameter.colorSpace_option
   - api.ImageData.pixelFormat
@@ -122,7 +121,6 @@ compat_features:
   - html.elements.textarea.autocomplete.one-time-code
   - html.elements.textarea.autocomplete.webauthn
   - html.elements.track.kind.descriptions
-  - html.elements.video.playsinline
   - html.global_attributes.class
   - html.global_attributes.data_attributes
   - html.global_attributes.dir
@@ -1501,6 +1499,7 @@ compat_features:
 #   - api.HTMLMediaElement.waiting_event
 #   - api.HTMLVideoElement
 #   - api.HTMLVideoElement.height
+#   - api.HTMLVideoElement.playsInline
 #   - api.HTMLVideoElement.poster
 #   - api.HTMLVideoElement.resize_event
 #   - api.HTMLVideoElement.videoHeight
@@ -1520,6 +1519,7 @@ compat_features:
 #   - html.elements.video.height
 #   - html.elements.video.loop
 #   - html.elements.video.muted
+#   - html.elements.video.playsinline
 #   - html.elements.video.poster
 #   - html.elements.video.preload
 #   - html.elements.video.src
