@@ -122,10 +122,6 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because this is where the application-title meta tag is spec'd at the moment. Remove when https://github.com/whatwg/html/issues/8909 is fixed."
     ],
     [
-        "https://github.com/whatwg/dom/pull/1307",
-        "This is only place moveBefore() is spec'd. Remove this exception when https://github.com/whatwg/dom/pull/1307 merges."
-    ],
-    [
         "https://www.w3.org/TR/2018/SPSD-html5-20180327/embedded-content-0.html#synchronising-multiple-media-elements",
         "Allowed for the mediacontroller feature. This is the superseded HTML5 spec that still contains MediaController."
     ],
