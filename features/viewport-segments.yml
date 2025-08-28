@@ -1,0 +1,19 @@
+name: Viewport segments
+description: "The `viewport-segment-` CSS environment variables, the `horizontal-viewport-segments` and `vertical-viewport-segments` media features, and the `viewport.segments` API allow you to adapt your layout to devices where the display is split, such as foldable devices."
+spec:
+  - https://drafts.csswg.org/css-env-1/#viewport-segments
+  - https://drafts.csswg.org/css-viewport/#segments
+  - https://drafts.csswg.org/mediaqueries-5/#mf-horizontal-viewport-segments
+  - https://drafts.csswg.org/mediaqueries-5/#mf-vertical-viewport-segments
+compat_features:
+  - api.Viewport
+  - api.Viewport.segments
+  - api.Window.viewport
+  - css.at-rules.media.horizontal-viewport-segments
+  - css.at-rules.media.vertical-viewport-segments
+  - css.types.env.viewport-segment-bottom
+  - css.types.env.viewport-segment-height
+  - css.types.env.viewport-segment-left
+  - css.types.env.viewport-segment-right
+  - css.types.env.viewport-segment-top
+  - css.types.env.viewport-segment-width
