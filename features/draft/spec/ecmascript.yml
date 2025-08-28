@@ -1,4 +1,4 @@
-draft_date: 2025-07-10
+draft_date: 2025-08-28
 name: ECMAScript® 2026 Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
@@ -662,7 +662,6 @@ compat_features:
 #   - javascript.builtins.Object.getOwnPropertyNames
 #   - javascript.builtins.Object.getOwnPropertySymbols
 #   - javascript.builtins.Object.getPrototypeOf
-#   - javascript.builtins.Object.hasOwn
 #   - javascript.builtins.Object.hasOwnProperty
 #   - javascript.builtins.Object.is
 #   - javascript.builtins.Object.isExtensible
@@ -684,6 +683,8 @@ compat_features:
 #   - javascript.operators.object_initializer.shorthand_property_names
 #   - javascript.operators.object_initializer.spread_properties
 #   - javascript.operators.optional_chaining
+# - Object.hasOwn():
+#   - javascript.builtins.Object.hasOwn
 # - Promise (initial support):
 #   - javascript.builtins.Promise
 #   - javascript.builtins.Promise.@@species
