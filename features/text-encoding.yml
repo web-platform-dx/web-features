@@ -20,6 +20,8 @@ compat_features:
   - api.TextDecoderStream.encoding
   - api.TextDecoderStream.fatal
   - api.TextDecoderStream.ignoreBOM
+  - api.TextDecoderStream.readable
+  - api.TextDecoderStream.writable
   - api.TextEncoder
   - api.TextEncoder.TextEncoder
   - api.TextEncoder.encode
@@ -29,3 +31,5 @@ compat_features:
   - api.TextEncoderStream
   - api.TextEncoderStream.TextEncoderStream
   - api.TextEncoderStream.encoding
+  - api.TextEncoderStream.readable
+  - api.TextEncoderStream.writable

@@ -17,6 +17,16 @@ compat_features:
   #   safari: "1"
   #   safari_ios: "1"
   - api.HTMLElement.error_event
+  - api.Navigator.appCodeName
+  - api.Navigator.appName
+  - api.Navigator.appVersion
+  - api.Navigator.javaEnabled
+  - api.Navigator.mimeTypes
+  - api.Navigator.platform
+  - api.Navigator.plugins
+  - api.Navigator.product
+  - api.Navigator.productSub
+  - api.Navigator.vendor
   - html.elements.html.xmlns
   - http.headers.Refresh
 
@@ -49,6 +59,7 @@ compat_features:
   - api.HTMLOptionsCollection.add
   - api.HTMLOptionsCollection.length
   - api.HTMLOptionsCollection.selectedIndex
+  - api.Navigator.vendorSub
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -726,16 +737,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "75"
-  #   chrome_android: "75"
-  #   edge: "79"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - api.HTMLVideoElement.playsInline
-  - html.elements.video.playsinline
-
-  # baseline: false
-  # support:
   #   chrome: "90"
   #   chrome_android: "90"
   #   edge: "90"
@@ -898,6 +899,20 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "139"
+  #   chrome_android: "139"
+  #   edge: "139"
+  - api.HTMLButtonElement.command.request-close
+
+  # baseline: false
+  # support:
+  #   firefox: "1"
+  #   firefox_android: "4"
+  - api.Navigator.oscpu
+  - api.Navigator.taintEnabled
+
+  # baseline: false
+  # support:
   #   safari: "9"
   #   safari_ios: "9"
   - api.HTMLMediaElement.getStartDate
@@ -926,12 +941,6 @@ compat_features:
   #   chrome: "135"
   #   edge: "135"
   - api.NavigateEvent.sourceElement
-
-  # baseline: false
-  # support:
-  #   chrome: "139"
-  #   chrome_android: "139"
-  - api.HTMLButtonElement.command.request-close
 
   # baseline: false
   # support:

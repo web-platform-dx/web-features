@@ -6,6 +6,7 @@ status:
   compute_from: api.MediaDevices.getUserMedia
 compat_features:
   - api.InputDeviceInfo
+  - api.InputDeviceInfo.getCapabilities
   - api.MediaDeviceInfo
   - api.MediaDeviceInfo.deviceId
   - api.MediaDeviceInfo.groupId
@@ -52,6 +53,7 @@ compat_features:
   - api.MediaStreamTrack.enabled
   - api.MediaStreamTrack.ended_event
   - api.MediaStreamTrack.id
+  - api.MediaStreamTrack.getCapabilities
   - api.MediaStreamTrack.getConstraints
   - api.MediaStreamTrack.getSettings
   - api.MediaStreamTrack.kind

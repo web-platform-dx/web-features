@@ -1,0 +1,148 @@
+draft_date: 2025-08-21
+name: Selectors Level 4
+description: TODO
+spec: https://drafts.csswg.org/selectors-4/
+compat_features:
+  - css.selectors.closed
+  - css.selectors.heading
+  - css.selectors.headingfunction
+
+# The following features in the spec are already part of web-features:
+# - User action pseudo-classes:
+#   - css.selectors.active
+#   - css.selectors.active.non_a_elements
+#   - css.selectors.focus
+#   - css.selectors.hover
+#   - css.selectors.hover.a_elements
+#   - css.selectors.hover.all_elements
+# - Link selectors:
+#   - css.selectors.any-link
+#   - css.selectors.any-link.not_match_link
+#   - css.selectors.link
+#   - css.selectors.link.not_match_link
+#   - css.selectors.visited
+#   - css.selectors.visited.not_match_link
+#   - css.selectors.visited.privacy_measures
+# - Selectors (core):
+#   - css.selectors.attribute
+#   - css.selectors.child
+#   - css.selectors.class
+#   - css.selectors.descendant
+#   - css.selectors.id
+#   - css.selectors.list
+#   - css.selectors.next-sibling
+#   - css.selectors.subsequent-sibling
+#   - css.selectors.type
+#   - css.selectors.type.namespaces
+#   - css.selectors.universal
+#   - css.selectors.universal.namespaces
+# - Case-insensitive attribute selector:
+#   - css.selectors.attribute.case_insensitive_modifier
+# - Case-sensitive attribute selector:
+#   - css.selectors.attribute.case_sensitive_modifier
+# - :autofill:
+#   - css.selectors.autofill
+# - Media element pseudo-classes:
+#   - css.selectors.buffering
+#   - css.selectors.muted
+#   - css.selectors.paused
+#   - css.selectors.playing
+#   - css.selectors.seeking
+#   - css.selectors.stalled
+#   - css.selectors.volume-locked
+# - Input selectors:
+#   - css.selectors.checked
+#   - css.selectors.disabled
+#   - css.selectors.enabled
+# - :default:
+#   - css.selectors.default
+# - Autonomous custom elements:
+#   - css.selectors.defined
+# - :dir():
+#   - css.selectors.dir
+# - :empty:
+#   - css.selectors.empty
+#   - css.selectors.empty.matches_whitespace
+# - :nth-child():
+#   - css.selectors.first-child
+#   - css.selectors.first-child.no_parent_required
+#   - css.selectors.last-child
+#   - css.selectors.last-child.no_parent_required
+#   - css.selectors.nth-child
+#   - css.selectors.nth-child.no_parent_required
+#   - css.selectors.nth-last-child
+#   - css.selectors.nth-last-child.no_parent_required
+#   - css.selectors.only-child
+#   - css.selectors.only-child.no_parent_required
+# - :nth-of-type() pseudo-classes:
+#   - css.selectors.first-of-type
+#   - css.selectors.last-of-type
+#   - css.selectors.nth-last-of-type
+#   - css.selectors.nth-of-type
+#   - css.selectors.only-of-type
+# - :focus-visible:
+#   - css.selectors.focus-visible
+# - :focus-within:
+#   - css.selectors.focus-within
+# - Fullscreen API:
+#   - css.selectors.fullscreen
+#   - css.selectors.fullscreen.all_elements
+# - Time-relative pseudo-selectors:
+#   - css.selectors.future
+#   - css.selectors.past
+# - :has():
+#   - css.selectors.has
+# - Form validity pseudo-classes:
+#   - css.selectors.in-range
+#   - css.selectors.invalid
+#   - css.selectors.invalid.form
+#   - css.selectors.optional
+#   - css.selectors.out-of-range
+#   - css.selectors.required
+#   - css.selectors.valid
+#   - css.selectors.valid.form
+# - :indeterminate:
+#   - css.selectors.indeterminate
+#   - css.selectors.indeterminate.checkbox
+#   - css.selectors.indeterminate.progress
+#   - css.selectors.indeterminate.radio
+# - :is():
+#   - css.selectors.is
+#   - css.selectors.is.forgiving_selector_list
+# - :lang():
+#   - css.selectors.lang
+#   - css.selectors.lang.argument_list
+#   - css.selectors.lang.wildcards
+# - :modal:
+#   - css.selectors.modal
+# - :not():
+#   - css.selectors.not
+#   - css.selectors.not.selector_list
+# - :nth-child() of <selector>:
+#   - css.selectors.nth-child.of_syntax
+#   - css.selectors.nth-last-child.of_syntax
+# - :open:
+#   - css.selectors.open
+# - Picture-in-picture (video):
+#   - css.selectors.picture-in-picture
+# - :placeholder-shown:
+#   - css.selectors.placeholder-shown
+#   - css.selectors.placeholder-shown.non_text_types
+# - Popover:
+#   - css.selectors.popover-open
+# - :read-only and :read-write:
+#   - css.selectors.read-only
+#   - css.selectors.read-write
+# - :root:
+#   - css.selectors.root
+# - :scope (pseudo-class):
+#   - css.selectors.scope
+#   - css.selectors.scope.dom_api
+# - :target:
+#   - css.selectors.target
+# - :user-valid and :user-invalid:
+#   - css.selectors.user-invalid
+#   - css.selectors.user-valid
+# - :where():
+#   - css.selectors.where
+#   - css.selectors.where.forgiving_selector_list

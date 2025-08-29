@@ -3,10 +3,20 @@
 
 status:
   baseline: false
-  support:
-    chrome: "138"
-    chrome_android: "138"
-    edge: "138"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
+  #   edge: "138"
   - http.headers.Integrity-Policy
   - http.headers.Integrity-Policy-Report-Only
+  - http.headers.Integrity-Policy-Report-Only.blocked-destinations_script
+  - http.headers.Integrity-Policy.blocked-destinations_script
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - http.headers.Integrity-Policy-Report-Only.blocked-destinations_style
+  - http.headers.Integrity-Policy.blocked-destinations_style
