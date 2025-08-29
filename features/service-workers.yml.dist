@@ -405,8 +405,9 @@ compat_features:
   - api.NavigationPreloadManager.getState
   - api.NavigationPreloadManager.setHeaderValue
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-07-26
+  # baseline_high_date: 2025-01-26
   # support:
   #   chrome: "65"
   #   chrome_android: "65"
@@ -417,8 +418,9 @@ compat_features:
   #   safari_ios: "11.3"
   - api.caches.secure_context_required
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-09-12
+  # baseline_high_date: 2025-03-12
   # support:
   #   chrome: "49"
   #   chrome_android: "49"
@@ -429,8 +431,9 @@ compat_features:
   #   safari_ios: "16"
   - api.WindowClient.navigate
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-09-12
+  # baseline_high_date: 2025-03-12
   # support:
   #   chrome: "72"
   #   chrome_android: "72"
@@ -441,8 +444,9 @@ compat_features:
   #   safari_ios: "16"
   - api.FetchEvent.resultingClientId
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-09-12
+  # baseline_high_date: 2025-03-12
   # support:
   #   chrome: "86"
   #   chrome_android: "86"
@@ -479,15 +483,6 @@ compat_features:
   #   safari: "15.4"
   #   safari_ios: "15.4"
   - api.ServiceWorkerGlobalScope.serviceWorker
-
-  # baseline: false
-  # support:
-  #   chrome: "81"
-  #   chrome_android: "81"
-  #   edge: "81"
-  #   firefox: "65"
-  #   firefox_android: "65"
-  - api.ServiceWorkerGlobalScope.messageerror_event
 
   # baseline: false
   # support:

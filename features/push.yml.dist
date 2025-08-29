@@ -139,6 +139,52 @@ compat_features:
   #   safari_ios: "16.5"
   - api.Permissions.permission_push
 
+  # baseline: low
+  # baseline_low_date: 2025-01-07
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "17"
+  #   firefox: "134"
+  #   firefox_android: "134"
+  #   safari: "16"
+  #   safari_ios: "16.4"
+  - api.PushManager.supportedContentEncodings_static
+
+  # baseline: low
+  # baseline_low_date: 2025-01-17
+  # support:
+  #   chrome: "132"
+  #   chrome_android: "132"
+  #   edge: "132"
+  #   firefox: "128"
+  #   firefox_android: "128"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.PushMessageData.bytes
+
+  # baseline: false
+  # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
+  #   firefox: "137"
+  #   firefox_android: "137"
+  #   safari: "16"
+  #   safari_ios: "16.4"
+  - api.PushSubscriptionChangeEvent
+  - api.PushSubscriptionChangeEvent.newSubscription
+  - api.PushSubscriptionChangeEvent.oldSubscription
+
+  # baseline: false
+  # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
+  #   firefox: "137"
+  #   firefox_android: "137"
+  #   safari: "16.1"
+  #   safari_ios: "16.4"
+  - api.PushSubscriptionChangeEvent.PushSubscriptionChangeEvent
+
   # baseline: false
   # support:
   #   chrome: "54"
@@ -150,36 +196,7 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "60"
-  #   chrome_android: "60"
-  #   edge: "17"
-  #   safari: "16"
-  #   safari_ios: "16.4"
-  - api.PushManager.supportedContentEncodings_static
-
-  # baseline: false
-  # support:
-  #   firefox: "128"
-  #   firefox_android: "128"
-  #   safari: "18"
-  #   safari_ios: "18"
-  - api.PushMessageData.bytes
-
-  # baseline: false
-  # support:
-  #   safari: "16"
-  #   safari_ios: "16.4"
-  - api.PushSubscriptionChangeEvent
-  - api.PushSubscriptionChangeEvent.newSubscription
-  - api.PushSubscriptionChangeEvent.oldSubscription
-
-  # baseline: false
-  # support:
-  #   safari: "16.1"
-  #   safari_ios: "16.4"
-  - api.PushSubscriptionChangeEvent.PushSubscriptionChangeEvent
-
-  # baseline: false
-  # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
   #   safari: "16"
   - api.ServiceWorkerGlobalScope.pushsubscriptionchange_event

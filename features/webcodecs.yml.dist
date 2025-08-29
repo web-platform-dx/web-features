@@ -9,12 +9,14 @@ status:
     edge: "94"
     firefox: "130"
 compat_features:
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2024-09-03
   # support:
   #   chrome: "94"
   #   chrome_android: "94"
   #   edge: "94"
   #   firefox: "130"
+  #   firefox_android: "130"
   #   safari: "15.4"
   #   safari_ios: "15.4"
   - api.VideoColorSpace
@@ -23,6 +25,45 @@ compat_features:
   - api.VideoColorSpace.primaries
   - api.VideoColorSpace.toJSON
   - api.VideoColorSpace.transfer
+
+  # baseline: low
+  # baseline_low_date: 2024-09-03
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "94"
+  #   firefox: "130"
+  #   firefox_android: "130"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.VideoFrame
+  - api.VideoFrame.VideoFrame
+  - api.VideoFrame.allocationSize
+  - api.VideoFrame.clone
+  - api.VideoFrame.close
+  - api.VideoFrame.codedHeight
+  - api.VideoFrame.codedRect
+  - api.VideoFrame.codedWidth
+  - api.VideoFrame.colorSpace
+  - api.VideoFrame.copyTo
+  - api.VideoFrame.displayHeight
+  - api.VideoFrame.displayWidth
+  - api.VideoFrame.duration
+  - api.VideoFrame.format
+  - api.VideoFrame.timestamp
+  - api.VideoFrame.visibleRect
+
+  # baseline: low
+  # baseline_low_date: 2024-09-03
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "94"
+  #   firefox: "130"
+  #   firefox_android: "130"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - api.VideoColorSpace.VideoColorSpace
 
   # baseline: false
   # support:
@@ -59,32 +100,6 @@ compat_features:
   - api.VideoEncoder.isConfigSupported_static
   - api.VideoEncoder.reset
   - api.VideoEncoder.state
-  - api.VideoFrame
-  - api.VideoFrame.VideoFrame
-  - api.VideoFrame.allocationSize
-  - api.VideoFrame.clone
-  - api.VideoFrame.close
-  - api.VideoFrame.codedHeight
-  - api.VideoFrame.codedRect
-  - api.VideoFrame.codedWidth
-  - api.VideoFrame.colorSpace
-  - api.VideoFrame.copyTo
-  - api.VideoFrame.displayHeight
-  - api.VideoFrame.displayWidth
-  - api.VideoFrame.duration
-  - api.VideoFrame.format
-  - api.VideoFrame.timestamp
-  - api.VideoFrame.visibleRect
-
-  # baseline: false
-  # support:
-  #   chrome: "94"
-  #   chrome_android: "94"
-  #   edge: "94"
-  #   firefox: "130"
-  #   safari: "17"
-  #   safari_ios: "17"
-  - api.VideoColorSpace.VideoColorSpace
 
   # baseline: false
   # support:
@@ -204,3 +219,17 @@ compat_features:
   #   edge: "126"
   - api.AudioEncoder.configure.opus.opus_application
   - api.AudioEncoder.configure.opus.opus_signal
+
+  # baseline: false
+  # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
+  #   edge: "138"
+  - api.VideoDecoder.configure.flip_option
+  - api.VideoDecoder.configure.rotation_option
+  - api.VideoDecoder.isConfigSupported_static.flip_option
+  - api.VideoDecoder.isConfigSupported_static.rotation_option
+  - api.VideoFrame.VideoFrame.flip_option
+  - api.VideoFrame.VideoFrame.rotation_option
+  - api.VideoFrame.flip
+  - api.VideoFrame.rotation

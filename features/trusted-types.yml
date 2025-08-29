@@ -5,3 +5,39 @@ caniuse: trusted-types
 group: security
 status:
   compute_from: api.trustedTypes
+compat_features:
+  - api.Element.innerHTML.enforces_trusted_types
+  - api.HTMLElement.innerText.enforces_trusted_types
+  - api.HTMLScriptElement.src.enforces_trusted_types
+  - api.HTMLScriptElement.text.enforces_trusted_types
+  - api.Node.textContent.enforces_trusted_types
+  - api.ShadowRoot.innerHTML.enforces_trusted_types
+  - api.TrustedHTML
+  - api.TrustedHTML.toJSON
+  - api.TrustedHTML.toString
+  - api.TrustedScript
+  - api.TrustedScript.toJSON
+  - api.TrustedScript.toString
+  - api.TrustedScriptURL
+  - api.TrustedScriptURL.toJSON
+  - api.TrustedScriptURL.toString
+  - api.TrustedTypePolicy
+  - api.TrustedTypePolicy.createHTML
+  - api.TrustedTypePolicy.createScript
+  - api.TrustedTypePolicy.createScriptURL
+  - api.TrustedTypePolicy.name
+  - api.TrustedTypePolicyFactory
+  - api.TrustedTypePolicyFactory.createPolicy
+  - api.TrustedTypePolicyFactory.defaultPolicy
+  - api.TrustedTypePolicyFactory.emptyHTML
+  - api.TrustedTypePolicyFactory.emptyScript
+  - api.TrustedTypePolicyFactory.getAttributeType
+  - api.TrustedTypePolicyFactory.getPropertyType
+  - api.TrustedTypePolicyFactory.isHTML
+  - api.TrustedTypePolicyFactory.isScript
+  - api.TrustedTypePolicyFactory.isScriptURL
+  - api.setInterval.code_param_enforces_trusted_types
+  - api.setTimeout.code_param_enforces_trusted_types
+  - api.trustedTypes
+  - http.headers.Content-Security-Policy.require-trusted-types-for
+  - http.headers.Content-Security-Policy.trusted-types

@@ -1,0 +1,6 @@
+name: Math.sumPrecise()
+description: The `Math.sumPrecise()` static method returns the sum of an iterable of numbers. It avoids the precision loss of intermediate partial sums, as found using `reduce()` or a loop to add together an array of values.
+spec: https://tc39.es/proposal-math-sum/
+group: javascript
+compat_features:
+  - javascript.builtins.Math.sumPrecise

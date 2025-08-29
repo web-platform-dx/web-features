@@ -1,13 +1,9 @@
-draft_date: 2024-12-20
+draft_date: 2025-08-15
 name: CSSOM View Module
 description: TODO
 spec: https://drafts.csswg.org/cssom-view-1/
 compat_features:
-  - api.Document.caretPositionFromPoint.options_parameter
   - api.Document.featurePolicy
-  - api.Document.getBoxQuads
-  - api.Element.getBoxQuads
-  - api.Text.getBoxQuads
 
 # The following features in the spec are already part of web-features:
 # - document.caretPositionFromPoint():
@@ -16,6 +12,7 @@ compat_features:
 #   - api.CaretPosition.offset
 #   - api.CaretPosition.offsetNode
 #   - api.Document.caretPositionFromPoint
+#   - api.Document.caretPositionFromPoint.options_parameter
 # - DOM:
 #   - api.Document
 #   - api.Element
@@ -34,6 +31,10 @@ compat_features:
 # - document.elementFromPoint() and document.elementsFromPoint():
 #   - api.Document.elementFromPoint
 #   - api.Document.elementsFromPoint
+# - getBoxQuads():
+#   - api.Document.getBoxQuads
+#   - api.Element.getBoxQuads
+#   - api.Text.getBoxQuads
 # - Scroll methods on elements:
 #   - api.Document.scroll_event
 #   - api.Document.scrollingElement
@@ -82,6 +83,7 @@ compat_features:
 #   - api.Element.checkVisibility.options_visibilityProperty_parameter
 # - scrollIntoView():
 #   - api.Element.scrollIntoView
+#   - api.Element.scrollIntoView.options_container_parameter
 #   - api.Element.scrollIntoView.options_parameter
 # - <img>:
 #   - api.HTMLImageElement.x

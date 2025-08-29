@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "138"
+    chrome_android: "138"
+    edge: "138"
 compat_features:
   - css.properties.height.stretch
   - css.properties.max-height.stretch

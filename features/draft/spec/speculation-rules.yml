@@ -1,0 +1,25 @@
+draft_date: 2025-07-17
+name: Speculation Rules
+description: TODO
+spec: https://wicg.github.io/nav-speculation/speculation-rules.html
+compat_features:
+  - api.Request.destination.speculationrules
+
+# The following features in the spec are already part of web-features:
+# - Speculation rules:
+#   - html.elements.script.type.speculationrules
+#   - html.elements.script.type.speculationrules.eagerness
+#   - html.elements.script.type.speculationrules.expects_no_vary_search
+#   - html.elements.script.type.speculationrules.prefetch
+#   - html.elements.script.type.speculationrules.prerender
+#   - html.elements.script.type.speculationrules.referrer_policy
+#   - html.elements.script.type.speculationrules.relative_to
+#   - html.elements.script.type.speculationrules.requires
+#   - html.elements.script.type.speculationrules.requires.anonymous-client-ip-when-cross-origin
+#   - html.elements.script.type.speculationrules.source_optional
+#   - html.elements.script.type.speculationrules.tag
+#   - html.elements.script.type.speculationrules.target_hint
+#   - html.elements.script.type.speculationrules.urls
+#   - html.elements.script.type.speculationrules.where
+#   - http.headers.Content-Security-Policy.script-src.inline-speculation-rules
+#   - http.headers.Speculation-Rules

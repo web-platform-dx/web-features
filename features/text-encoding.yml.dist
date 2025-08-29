@@ -100,8 +100,9 @@ compat_features:
   #   safari_ios: "14.5"
   - api.TextEncoder.encodeInto
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-09-20
+  # baseline_high_date: 2025-03-20
   # support:
   #   chrome: "71"
   #   chrome_android: "71"
@@ -115,6 +116,10 @@ compat_features:
   - api.TextDecoderStream.encoding
   - api.TextDecoderStream.fatal
   - api.TextDecoderStream.ignoreBOM
+  - api.TextDecoderStream.readable
+  - api.TextDecoderStream.writable
   - api.TextEncoderStream
   - api.TextEncoderStream.TextEncoderStream
   - api.TextEncoderStream.encoding
+  - api.TextEncoderStream.readable
+  - api.TextEncoderStream.writable

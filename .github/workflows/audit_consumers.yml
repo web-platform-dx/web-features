@@ -1,0 +1,26 @@
+name: Audit Consumers
+
+on:
+  # Runs on the 1st and 15th of every month, at 03:45 UTC, or manually triggered
+  schedule:
+    - cron: "45 3 1,15 * *"
+  workflow_dispatch:
+
+jobs:
+  audit-consumers:
+    if: github.repository == 'web-platform-dx/web-features'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run audit-consumers --silent | tee issue-body.md
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - run: gh issue create --title "web-features consumers report for $(date -I)" --label generated --body-file issue-body.md
+        env:
+          GH_TOKEN: ${{ github.token }}

@@ -273,7 +273,6 @@ compat_features:
   - svg.elements.tspan
   - svg.elements.tspan.dx
   - svg.elements.tspan.dy
-  - svg.elements.tspan.textLength
   - svg.elements.tspan.x
   - svg.elements.tspan.y
   - svg.elements.use
@@ -384,6 +383,23 @@ compat_features:
   - api.SVGGradientElement.href
   - api.SVGMarkerElement.preserveAspectRatio
   - api.SVGMarkerElement.viewBox
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "2"
+  #   firefox_android: "4"
+  #   safari: "3"
+  #   safari_ios: "3"
+  - svg.elements.foreignObject
+  - svg.elements.foreignObject.height
+  - svg.elements.foreignObject.width
+  - svg.elements.foreignObject.x
+  - svg.elements.foreignObject.y
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -577,6 +593,7 @@ compat_features:
   #   safari: "3"
   #   safari_ios: "3"
   - svg.elements.ellipse.systemLanguage
+  - svg.elements.foreignObject.systemLanguage
   - svg.elements.line.systemLanguage
   - svg.elements.path.systemLanguage
   - svg.elements.pattern.systemLanguage
@@ -670,6 +687,20 @@ compat_features:
   #   safari: "1.3"
   #   safari_ios: "1"
   - svg.global_attributes.unicode-bidi
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "2"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "4"
+  #   firefox_android: "4"
+  #   safari: "3"
+  #   safari_ios: "1"
+  - svg.elements.set
+  - svg.elements.set.to
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -823,6 +854,19 @@ compat_features:
   - svg.elements.use.external_uri
 
   # baseline: high
+  # baseline_low_date: ≤2016-08-02
+  # baseline_high_date: ≤2019-02-02
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: ≤14
+  #   firefox: "3"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - css.properties.text-anchor
+
+  # baseline: high
   # baseline_low_date: 2017-01-24
   # baseline_high_date: 2019-07-24
   # support:
@@ -834,6 +878,54 @@ compat_features:
   #   safari: ≤4
   #   safari_ios: ≤3.2
   - svg.global_attributes.tabindex
+
+  # baseline: high
+  # baseline_low_date: ≤2017-04-05
+  # baseline_high_date: ≤2019-10-05
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: ≤15
+  #   firefox: "1.5"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - css.properties.stroke
+  - css.properties.stroke-dasharray
+  - css.properties.stroke-dasharray.none
+  - css.properties.stroke-dashoffset
+  - css.properties.stroke-linecap
+  - css.properties.stroke-linecap.butt
+  - css.properties.stroke-linecap.round
+  - css.properties.stroke-linecap.square
+  - css.properties.stroke-linejoin
+  - css.properties.stroke-linejoin.bevel
+  - css.properties.stroke-linejoin.miter
+  - css.properties.stroke-linejoin.round
+  - css.properties.stroke-miterlimit
+  - css.properties.stroke-width
+
+  # baseline: high
+  # baseline_low_date: ≤2017-04-05
+  # baseline_high_date: ≤2019-10-05
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: ≤15
+  #   firefox: "3"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - css.properties.fill
+  - css.properties.fill-rule
+  - css.properties.fill-rule.evenodd
+  - css.properties.fill-rule.nonzero
+  - css.properties.marker
+  - css.properties.marker-end
+  - css.properties.marker-mid
+  - css.properties.marker-start
+  - css.properties.stop-color
+  - css.properties.stop-opacity
 
   # baseline: high
   # baseline_low_date: 2018-04-30
@@ -943,6 +1035,7 @@ compat_features:
   - svg.elements.linearGradient.href
   - svg.elements.radialGradient.href
   - svg.elements.script.href
+  - svg.elements.set.href
 
   # baseline: high
   # baseline_low_date: 2019-03-25
@@ -997,7 +1090,7 @@ compat_features:
   - svg.elements.symbol.viewBox
   - svg.elements.text.fill
   - svg.elements.tspan.fill
-  - svg.elements.tspan.lengthAdjust
+  - svg.elements.tspan.rotate
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -1070,6 +1163,21 @@ compat_features:
   - svg.elements.pattern.patternContentUnits
   - svg.elements.pattern.patternTransform
   - svg.elements.pattern.patternUnits
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: "3"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - css.properties.color-interpolation
+  - css.properties.color-interpolation.sRGB
+  - css.properties.shape-rendering
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -1169,6 +1277,19 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
+  #   chrome: "6"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: "15"
+  #   firefox_android: "15"
+  #   safari: "5.1"
+  #   safari_ios: "5"
+  - css.properties.vector-effect
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
   #   chrome: "13"
   #   chrome_android: "18"
   #   edge: "79"
@@ -1236,6 +1357,19 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
+  #   chrome: "55"
+  #   chrome_android: "55"
+  #   edge: "79"
+  #   firefox: "51"
+  #   firefox_android: "51"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - svg.global_attributes.data_attributes
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
   #   chrome: "56"
   #   chrome_android: "56"
   #   edge: "79"
@@ -1286,89 +1420,6 @@ compat_features:
   - css.properties.clip-rule
   - css.properties.clip-rule.evenodd
   - css.properties.clip-rule.nonzero
-
-  # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: ≤79
-  #   firefox: "1.5"
-  #   firefox_android: "4"
-  #   safari: "3"
-  #   safari_ios: "2"
-  - svg.elements.tspan.rotate
-
-  # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: ≤79
-  #   firefox: "2"
-  #   firefox_android: "4"
-  #   safari: "3"
-  #   safari_ios: "3"
-  - svg.elements.foreignObject
-  - svg.elements.foreignObject.height
-  - svg.elements.foreignObject.width
-  - svg.elements.foreignObject.x
-  - svg.elements.foreignObject.y
-
-  # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: ≤79
-  #   firefox: "12"
-  #   firefox_android: "14"
-  #   safari: "3"
-  #   safari_ios: "3"
-  - svg.elements.foreignObject.systemLanguage
-
-  # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
-  # support:
-  #   chrome: "2"
-  #   chrome_android: "18"
-  #   edge: ≤79
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "3"
-  #   safari_ios: "1"
-  - svg.elements.set
-  - svg.elements.set.to
-
-  # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
-  # support:
-  #   chrome: "50"
-  #   chrome_android: "50"
-  #   edge: ≤79
-  #   firefox: "51"
-  #   firefox_android: "51"
-  #   safari: "12.1"
-  #   safari_ios: "12.2"
-  - svg.elements.set.href
-
-  # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
-  # support:
-  #   chrome: "55"
-  #   chrome_android: "55"
-  #   edge: ≤79
-  #   firefox: "51"
-  #   firefox_android: "51"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - svg.global_attributes.data_attributes
 
   # baseline: high
   # baseline_low_date: 2020-03-24
@@ -1435,12 +1486,6 @@ compat_features:
   #   firefox_android: "4"
   #   safari: ≤13.1
   #   safari_ios: ≤13.4
-  - css.properties.stroke-dasharray
-  - css.properties.stroke-dashoffset
-  - css.properties.stroke-linecap
-  - css.properties.stroke-linejoin
-  - css.properties.stroke-miterlimit
-  - css.properties.stroke-width
   - svg.global_attributes.stroke-dasharray
   - svg.global_attributes.stroke-dashoffset
   - svg.global_attributes.stroke-linecap
@@ -1479,6 +1524,35 @@ compat_features:
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
   # support:
+  #   chrome: "42"
+  #   chrome_android: "42"
+  #   edge: "79"
+  #   firefox: "69"
+  #   firefox_android: "79"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - css.properties.x
+  - css.properties.y
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "43"
+  #   chrome_android: "43"
+  #   edge: "79"
+  #   firefox: "69"
+  #   firefox_android: "79"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - css.properties.cx
+  - css.properties.cy
+  - css.properties.r
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
   #   chrome: "56"
   #   chrome_android: "56"
   #   edge: "79"
@@ -1500,32 +1574,6 @@ compat_features:
   #   firefox_android: ≤79
   #   safari: ≤13.1
   #   safari_ios: ≤13.4
-  - css.properties.cx
-  - css.properties.cy
-  - css.properties.fill
-  - css.properties.fill-rule
-  - css.properties.fill-rule.evenodd
-  - css.properties.fill-rule.nonzero
-  - css.properties.marker
-  - css.properties.marker-end
-  - css.properties.marker-mid
-  - css.properties.marker-start
-  - css.properties.r
-  - css.properties.shape-rendering
-  - css.properties.stop-color
-  - css.properties.stop-opacity
-  - css.properties.stroke
-  - css.properties.stroke-dasharray.none
-  - css.properties.stroke-linecap.butt
-  - css.properties.stroke-linecap.round
-  - css.properties.stroke-linecap.square
-  - css.properties.stroke-linejoin.bevel
-  - css.properties.stroke-linejoin.miter
-  - css.properties.stroke-linejoin.round
-  - css.properties.text-anchor
-  - css.properties.vector-effect
-  - css.properties.x
-  - css.properties.y
   - svg.global_attributes.clip-rule
   - svg.global_attributes.color-interpolation-filters
   - svg.global_attributes.dominant-baseline
@@ -1582,15 +1630,16 @@ compat_features:
   # support:
   #   chrome: "78"
   #   chrome_android: "78"
-  #   edge: ≤79
+  #   edge: "17"
   #   firefox: "68"
   #   firefox_android: "68"
   #   safari: "15"
   #   safari_ios: "15.5"
   - api.SVGElement.focus.options_preventScroll_parameter
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-08-23
+  # baseline_high_date: 2025-02-23
   # support:
   #   chrome: "45"
   #   chrome_android: "45"
@@ -1601,8 +1650,9 @@ compat_features:
   #   safari_ios: "6"
   - api.SVGStyleElement.disabled
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-01-12
+  # baseline_high_date: 2025-07-12
   # support:
   #   chrome: "109"
   #   chrome_android: "109"
@@ -1662,6 +1712,57 @@ compat_features:
   - api.SVGImageElement.crossOrigin
   - svg.elements.image.crossorigin
 
+  # baseline: low
+  # baseline_low_date: 2024-03-05
+  # support:
+  #   chrome: "43"
+  #   chrome_android: "43"
+  #   edge: "79"
+  #   firefox: "69"
+  #   firefox_android: "79"
+  #   safari: "17.4"
+  #   safari_ios: "17.4"
+  - css.properties.rx
+  - css.properties.ry
+
+  # baseline: low
+  # baseline_low_date: 2025-03-31
+  # support:
+  #   chrome: "64"
+  #   chrome_android: "64"
+  #   edge: "79"
+  #   firefox: "68"
+  #   firefox_android: "68"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - api.SVGImageElement.decode
+
+  # baseline: low
+  # baseline_low_date: 2025-05-01
+  # support:
+  #   chrome: "136"
+  #   chrome_android: "136"
+  #   edge: "136"
+  #   firefox: "61"
+  #   firefox_android: "61"
+  #   safari: "14"
+  #   safari_ios: "14"
+  - api.SVGAElement.rel
+  - api.SVGAElement.relList
+
+  # baseline: low
+  # baseline_low_date: 2025-05-01
+  # support:
+  #   chrome: "136"
+  #   chrome_android: "136"
+  #   edge: "136"
+  #   firefox: "69"
+  #   firefox_android: "79"
+  #   safari: "12"
+  #   safari_ios: "12"
+  - api.SVGGeometryElement.isPointInFill.point_parameter_DOMPoint
+  - api.SVGGeometryElement.isPointInStroke.point_parameter_DOMPoint
+
   # baseline: false
   # support:
   #   chrome: "1"
@@ -1677,21 +1778,31 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   safari: "3"
+  #   safari_ios: "2"
+  - svg.elements.tspan.textLength
+
+  # baseline: false
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   safari: "3"
+  #   safari_ios: "2"
+  - svg.elements.tspan.lengthAdjust
+
+  # baseline: false
+  # support:
   #   chrome: "52"
   #   chrome_android: "52"
   #   edge: "79"
   #   firefox: "97"
   #   firefox_android: "97"
+  - css.properties.d
   - svg.elements.path.d.path
-
-  # baseline: false
-  # support:
-  #   chrome: "64"
-  #   chrome_android: "64"
-  #   edge: "79"
-  #   firefox: "68"
-  #   firefox_android: "68"
-  - api.SVGImageElement.decode
 
   # baseline: false
   # support:
@@ -1717,29 +1828,10 @@ compat_features:
   #   chrome: ≤80
   #   chrome_android: ≤80
   #   edge: ≤80
-  #   firefox: "97"
-  #   firefox_android: "97"
-  - css.properties.d
-
-  # baseline: false
-  # support:
-  #   chrome: ≤80
-  #   chrome_android: ≤80
-  #   edge: ≤80
   #   safari: ≤13.1
   #   safari_ios: ≤13.4
   - svg.global_attributes.alignment-baseline
   - svg.global_attributes.baseline-shift
-
-  # baseline: false
-  # support:
-  #   chrome: ≤80
-  #   chrome_android: ≤80
-  #   edge: ≤80
-  #   firefox: ≤72
-  #   firefox_android: ≤79
-  - css.properties.rx
-  - css.properties.ry
 
   # baseline: false
   # support:
@@ -1764,18 +1856,7 @@ compat_features:
   #   firefox_android: "61"
   #   safari: "14"
   #   safari_ios: "14"
-  - api.SVGAElement.rel
-  - api.SVGAElement.relList
   - svg.elements.a.rel
-
-  # baseline: false
-  # support:
-  #   firefox: "69"
-  #   firefox_android: "79"
-  #   safari: "12"
-  #   safari_ios: "12"
-  - api.SVGGeometryElement.isPointInFill.point_parameter_DOMPoint
-  - api.SVGGeometryElement.isPointInStroke.point_parameter_DOMPoint
 
   # baseline: false
   # support:
@@ -1785,6 +1866,12 @@ compat_features:
   - svg.elements.a.referrerpolicy.no-referrer-when-downgrade
   - svg.elements.a.referrerpolicy.origin-when-cross-origin
   - svg.elements.a.referrerpolicy.unsafe-url
+
+  # baseline: false
+  # support:
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - css.properties.stroke-color
 
   # baseline: false
   # support:
@@ -1828,16 +1915,8 @@ compat_features:
 
   # baseline: false
   # support:
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
-  - css.properties.stroke-color
-
-  # baseline: false
-  # support:
   #   firefox: ≤72
   #   firefox_android: ≤79
-  - css.properties.color-interpolation
-  - css.properties.color-interpolation.sRGB
   - svg.global_attributes.color-interpolation
   - svg.global_attributes.color-interpolation.sRGB
 

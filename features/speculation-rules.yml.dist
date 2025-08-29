@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "109"
+    chrome_android: "109"
+    edge: "109"
 compat_features:
   # baseline: false
   # support:
@@ -20,6 +23,7 @@ compat_features:
   - api.Document.prerendering
   - api.Document.prerenderingchange_event
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "109"
@@ -80,11 +84,25 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "127"
+  #   chrome_android: "127"
+  #   edge: "127"
+  - html.elements.script.type.speculationrules.expects_no_vary_search
+
+  # baseline: false
+  # support:
+  #   chrome: "136"
+  #   chrome_android: "136"
+  #   edge: "136"
+  - html.elements.script.type.speculationrules.tag
+  - http.headers.Sec-Speculation-Tags
+
+  # baseline: false
+  # support:
   #   chrome: "110"
   #   chrome_android: "109"
   - html.elements.script.type.speculationrules.requires.anonymous-client-ip-when-cross-origin
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - html.elements.script.type.speculationrules.expects_no_vary_search
+  - html.elements.script.type.speculationrules.target_hint

@@ -1,0 +1,84 @@
+draft_date: 2025-08-15
+name: CSS Overflow Module Level 5
+description: TODO
+spec: https://drafts.csswg.org/css-overflow-5/
+compat_features:
+  - css.properties.scroll-target-group
+  - css.properties.scroll-target-group.auto
+  - css.properties.scroll-target-group.none
+  - css.selectors.scroll-button
+  - css.selectors.scroll-button.block-end
+  - css.selectors.scroll-button.block-start
+  - css.selectors.scroll-button.down
+  - css.selectors.scroll-button.inline-end
+  - css.selectors.scroll-button.inline-start
+  - css.selectors.scroll-button.left
+  - css.selectors.scroll-button.next
+  - css.selectors.scroll-button.prev
+  - css.selectors.scroll-button.right
+  - css.selectors.scroll-button.star
+  - css.selectors.scroll-button.up
+  - css.selectors.target-current
+
+# The following features in the spec are already part of web-features:
+# - line-clamp:
+#   - css.properties.line-clamp
+#   - css.properties.line-clamp.none
+# - overflow:
+#   - css.properties.overflow
+#   - css.properties.overflow.auto
+#   - css.properties.overflow.hidden
+#   - css.properties.overflow.multiple_keywords
+#   - css.properties.overflow.scroll
+#   - css.properties.overflow.visible
+#   - css.properties.overflow-x
+#   - css.properties.overflow-x.auto
+#   - css.properties.overflow-x.hidden
+#   - css.properties.overflow-x.scroll
+#   - css.properties.overflow-x.visible
+#   - css.properties.overflow-y
+#   - css.properties.overflow-y.auto
+#   - css.properties.overflow-y.hidden
+#   - css.properties.overflow-y.scroll
+#   - css.properties.overflow-y.visible
+#   - css.types.overflow
+# - overflow: clip:
+#   - css.properties.overflow.clip
+#   - css.properties.overflow-x.clip
+#   - css.properties.overflow-y.clip
+#   - css.types.overflow.clip
+# - Logical properties:
+#   - css.properties.overflow-block
+#   - css.properties.overflow-block.overlay
+#   - css.properties.overflow-inline
+#   - css.properties.overflow-inline.overlay
+# - overflow-clip-margin:
+#   - css.properties.overflow-clip-margin
+#   - css.properties.overflow-clip-margin.border-box
+#   - css.properties.overflow-clip-margin.content-box
+#   - css.properties.overflow-clip-margin.padding-box
+# - scroll-behavior:
+#   - css.properties.scroll-behavior
+#   - css.properties.scroll-behavior.auto
+#   - css.properties.scroll-behavior.smooth
+# - Scroll markers:
+#   - css.properties.scroll-marker-group
+#   - css.properties.scroll-marker-group.after
+#   - css.properties.scroll-marker-group.before
+#   - css.properties.scroll-marker-group.none
+#   - css.selectors.scroll-marker
+#   - css.selectors.scroll-marker-group
+# - scrollbar-gutter:
+#   - css.properties.scrollbar-gutter
+#   - css.properties.scrollbar-gutter.auto
+#   - css.properties.scrollbar-gutter.stable
+# - Text overflow:
+#   - css.properties.text-overflow
+#   - css.properties.text-overflow.clip
+#   - css.properties.text-overflow.ellipsis
+#   - css.properties.text-overflow.two_value_syntax
+#   - svg.global_attributes.text-overflow
+# - Custom ellipses:
+#   - css.properties.text-overflow.string
+# - SVG:
+#   - svg.global_attributes.overflow

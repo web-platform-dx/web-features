@@ -1,7 +1,7 @@
 name: Update Draft Features
 
 on:
-  # Runs at midnight on Mondays and Thursdays 05:30 UTC, or manually triggered
+  # Runs on Mondays and Thursdays 05:30 UTC, or manually triggered
   schedule:
     - cron: "30 5 * * 1,4"
   workflow_dispatch:
@@ -11,7 +11,7 @@ jobs:
     if: github.repository == 'web-platform-dx/web-features'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/setup-node@v4
         with:
           node-version-file: .node-version

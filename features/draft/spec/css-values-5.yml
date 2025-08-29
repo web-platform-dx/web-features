@@ -1,0 +1,148 @@
+draft_date: 2025-07-15
+name: CSS Values and Units Module Level 5
+description: TODO
+spec: https://drafts.csswg.org/css-values-5/
+compat_features:
+  - css.types.progress
+
+# The following features in the spec are already part of web-features:
+# - Media queries:
+#   - css.at-rules.media.calc
+# - Content:
+#   - css.properties.content.url
+#   - css.types.string
+#   - css.types.string.unicode_escaped_characters
+# - interpolate-size:
+#   - css.properties.interpolate-size
+#   - css.properties.interpolate-size.allow-keywords
+#   - css.properties.interpolate-size.numeric-only
+# - tab-size:
+#   - css.properties.tab-size.length
+# - abs() and sign():
+#   - css.types.abs
+#   - css.types.sign
+# - sin(), cos(), tan(), asin(), acos(), atan(), and atan2() (CSS):
+#   - css.types.acos
+#   - css.types.asin
+#   - css.types.atan
+#   - css.types.atan2
+#   - css.types.cos
+#   - css.types.sin
+#   - css.types.tan
+# - 2D transforms:
+#   - css.types.angle
+#   - css.types.angle.deg
+#   - css.types.angle.grad
+#   - css.types.angle.rad
+#   - css.types.angle.turn
+#   - css.types.angle-percentage
+#   - css.types.position
+#   - css.types.position.four_value_syntax
+#   - css.types.position.keyword_value_syntax
+# - attr() (content only):
+#   - css.types.attr
+# - attr():
+#   - css.types.attr.fallback
+#   - css.types.attr.type-or-unit
+#   - css.types.attr.type-or-unit.angle
+#   - css.types.attr.type-or-unit.color
+#   - css.types.attr.type-or-unit.frequency
+#   - css.types.attr.type-or-unit.integer
+#   - css.types.attr.type-or-unit.length
+#   - css.types.attr.type-or-unit.number
+#   - css.types.attr.type-or-unit.percentage
+#   - css.types.attr.type-or-unit.time
+#   - css.types.attr.type-or-unit.url
+# - calc():
+#   - css.types.calc
+#   - css.types.calc.gradient_color_stops
+#   - css.types.calc.nested
+#   - css.types.calc.number_values
+# - Relative colors:
+#   - css.types.calc.color_component
+# - calc() keywords:
+#   - css.types.calc-keyword
+#   - css.types.calc-keyword.NaN
+#   - css.types.calc-keyword.e
+#   - css.types.calc-keyword.infinity
+#   - css.types.calc-keyword.pi
+# - calc-size():
+#   - css.types.calc-size
+# - min(), max(), and clamp():
+#   - css.types.clamp
+#   - css.types.max
+#   - css.types.min
+# - Width and height:
+#   - css.types.dimension
+#   - css.types.length
+#   - css.types.length-percentage
+#   - css.types.percentage
+# - pow(), sqrt(), hypot(), log(), and exp():
+#   - css.types.exp
+#   - css.types.hypot
+#   - css.types.log
+#   - css.types.pow
+#   - css.types.sqrt
+# - if():
+#   - css.types.if
+# - z-index:
+#   - css.types.integer
+# - Q unit:
+#   - css.types.length.Q
+# - cap unit:
+#   - css.types.length.cap
+# - ch unit:
+#   - css.types.length.ch
+# - Container queries:
+#   - css.types.length.container_query_length_units
+# - em unit:
+#   - css.types.length.em
+# - ex unit:
+#   - css.types.length.ex
+# - ic unit:
+#   - css.types.length.ic
+# - lh unit:
+#   - css.types.length.lh
+# - rcap unit:
+#   - css.types.length.rcap
+# - rch unit:
+#   - css.types.length.rch
+# - rem:
+#   - css.types.length.rem
+# - rex unit:
+#   - css.types.length.rex
+# - ric unit:
+#   - css.types.length.ric
+# - rlh unit:
+#   - css.types.length.rlh
+# - Small, large, and dynamic viewport units:
+#   - css.types.length.vb
+#   - css.types.length.vi
+#   - css.types.length.viewport_percentage_units_dynamic
+#   - css.types.length.viewport_percentage_units_large
+#   - css.types.length.viewport_percentage_units_small
+# - Viewport units:
+#   - css.types.length.vh
+#   - css.types.length.vmax
+#   - css.types.length.vmin
+#   - css.types.length.vw
+# - round(), mod(), and rem():
+#   - css.types.mod
+#   - css.types.rem
+#   - css.types.round
+# - opacity:
+#   - css.types.number
+#   - css.types.number.scientific_notation
+# - resolution media query:
+#   - css.types.resolution
+#   - css.types.resolution.dpcm
+#   - css.types.resolution.dpi
+#   - css.types.resolution.dppx
+#   - css.types.resolution.x
+# - sibling-count() and sibling-index():
+#   - css.types.sibling-count
+#   - css.types.sibling-index
+# - Animations (CSS):
+#   - css.types.time
+# - @font-face:
+#   - css.types.url

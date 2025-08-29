@@ -158,14 +158,14 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
-  #   chrome: "48"
-  #   chrome_android: "48"
+  #   chrome: "51"
+  #   chrome_android: "51"
   #   edge: "79"
-  #   firefox: "38"
-  #   firefox_android: "38"
+  #   firefox: "37"
+  #   firefox_android: "37"
   #   safari: "10.1"
   #   safari_ios: "10.3"
-  - api.KeyboardEvent.code
+  - api.KeyboardEvent.key.dead_key
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -179,19 +179,6 @@ compat_features:
   #   safari: "10.1"
   #   safari_ios: "10.3"
   - api.KeyboardEvent.isComposing
-
-  # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
-  # support:
-  #   chrome: "51"
-  #   chrome_android: "51"
-  #   edge: ≤79
-  #   firefox: "37"
-  #   firefox_android: "37"
-  #   safari: "10.1"
-  #   safari_ios: "10.3"
-  - api.KeyboardEvent.key.dead_key
 
   # baseline: false
   # support:
@@ -210,16 +197,17 @@ compat_features:
   #   firefox: "15"
   #   firefox_android: "15"
   - api.KeyboardEvent.getModifierState.key_parameter_fn
+  - api.KeyboardEvent.getModifierState.key_parameter_numlock
   - api.KeyboardEvent.getModifierState.key_parameter_scrolllock
 
   # baseline: false
   # support:
   #   chrome: "48"
-  #   chrome_android: "48"
-  #   edge: ≤79
-  #   firefox: "15"
-  #   firefox_android: "15"
-  - api.KeyboardEvent.getModifierState.key_parameter_numlock
+  #   edge: "79"
+  #   firefox: "38"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.KeyboardEvent.code
 
   # baseline: false
   # support:

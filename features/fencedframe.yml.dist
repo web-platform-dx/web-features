@@ -4,19 +4,21 @@
 status:
   baseline: false
   support:
-    chrome: "120"
-    chrome_android: "120"
-    edge: "120"
+    chrome: "126"
+    chrome_android: "126"
+    edge: "126"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
-  #   chrome: "115"
-  #   chrome_android: "115"
-  #   edge: "115"
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
   - api.Fence
   - api.Fence.getNestedConfigs
   - api.Fence.reportEvent
   - api.Fence.setReportEventDataForAutomaticBeacons
+  - api.Fence.setReportEventDataForAutomaticBeacons.start_commit_eventType
   - api.FencedFrameConfig
   - api.FencedFrameConfig.setSharedStorageContext
   - api.HTMLFencedFrameElement
@@ -25,7 +27,6 @@ compat_features:
   - api.HTMLFencedFrameElement.height
   - api.HTMLFencedFrameElement.sandbox
   - api.HTMLFencedFrameElement.width
-  - api.Navigator.deprecatedReplaceInURN
   - api.Window.fence
   - html.elements.a.target.unfencedTop
   - html.elements.fencedframe
@@ -35,10 +36,9 @@ compat_features:
   - http.headers.Content-Security-Policy.fenced-frame-src
   - http.headers.Sec-Fetch-Dest.fencedframe
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
-  #   chrome: "120"
-  #   chrome_android: "120"
-  #   edge: "120"
-  - api.Fence.setReportEventDataForAutomaticBeacons.start_commit_eventType
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  - api.Navigator.deprecatedReplaceInURN

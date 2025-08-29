@@ -1,0 +1,38 @@
+name: Remove tagged compat features
+
+on:
+  # Runs at midnight on Mondays and Thursdays 05:30 UTC, or manually triggered
+  # schedule:
+  #    - cron: "30 5 * * 1,4"
+  workflow_dispatch:
+
+jobs:
+  remove-tagged-compat-features:
+    if: github.repository == 'web-platform-dx/web-features'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - run: npm run remove-tagged-compat-features
+      - run: npm run dist
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          add-paths: |
+            features/
+          commit-message: Remove tagged compat features
+          title: "Remove tagged compat features"
+          body: |
+            This is an auto-generated PR that compat features that are already tagged in BCD.
+
+            To let the tests run, close this PR then immediately reopen it.
+
+            See https://github.com/web-platform-dx/web-features/blob/main/docs/bcd-sync.md for details.
+          labels: |
+            generated
+          branch: remove-tagged-compat-features-${{ github.run_number }}
+          delete-branch: true

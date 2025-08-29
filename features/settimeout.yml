@@ -1,6 +1,8 @@
-name: setTimeout
+name: setTimeout()
 description: "The `setTimeout()` global function executes provided code after a given duration of time, and the accompanying `clearTimeout()` cancels the timer."
 spec: https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#timers
 compat_features:
   - api.setTimeout
+  - api.setTimeout.worker_support
   - api.clearTimeout
+  - api.clearTimeout.worker_support

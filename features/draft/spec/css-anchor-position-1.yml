@@ -1,31 +1,22 @@
-draft_date: 2024-12-20
+draft_date: 2025-06-19
 name: CSS Anchor Positioning
 description: TODO
 spec: https://drafts.csswg.org/css-anchor-position-1/
 compat_features:
-  - css.properties.bottom.anchor-size
-  - css.properties.inset-block-end.anchor-size
-  - css.properties.inset-block-start.anchor-size
-  - css.properties.inset-block.anchor-size
-  - css.properties.inset-inline-end.anchor-size
-  - css.properties.inset-inline-start.anchor-size
-  - css.properties.inset-inline.anchor-size
-  - css.properties.inset.anchor-size
-  - css.properties.left.anchor-size
-  - css.properties.margin-block-end.anchor-size
-  - css.properties.margin-block-start.anchor-size
-  - css.properties.margin-block.anchor-size
-  - css.properties.margin-bottom.anchor-size
-  - css.properties.margin-inline-end.anchor-size
-  - css.properties.margin-inline-start.anchor-size
-  - css.properties.margin-inline.anchor-size
-  - css.properties.margin-left.anchor-size
-  - css.properties.margin-right.anchor-size
-  - css.properties.margin-top.anchor-size
-  - css.properties.margin.anchor-size
-  - css.properties.right.anchor-size
-  - css.properties.top.anchor-size
-  - css.types.anchor-size.inset_margin
+  - css.properties.position-area.self-block-end
+  - css.properties.position-area.self-block-start
+  - css.properties.position-area.self-inline-end
+  - css.properties.position-area.self-inline-start
+  - css.properties.position-area.span-self-block-end
+  - css.properties.position-area.span-self-block-start
+  - css.properties.position-area.span-self-end
+  - css.properties.position-area.span-self-inline-end
+  - css.properties.position-area.span-self-inline-start
+  - css.properties.position-area.span-self-start
+  - css.properties.position-area.span-x-self-end
+  - css.properties.position-area.span-x-self-start
+  - css.properties.position-area.span-y-self-end
+  - css.properties.position-area.span-y-self-start
 
 # The following features in the spec are already part of web-features:
 # - Anchor positioning:
@@ -113,18 +104,38 @@ compat_features:
 #   - css.properties.anchor-scope.none
 #   - css.properties.block-size.anchor-size
 #   - css.properties.bottom.anchor
+#   - css.properties.bottom.anchor-size
 #   - css.properties.height.anchor-size
 #   - css.properties.inline-size.anchor-size
 #   - css.properties.inset.anchor
+#   - css.properties.inset.anchor-size
 #   - css.properties.inset-block.anchor
+#   - css.properties.inset-block.anchor-size
 #   - css.properties.inset-block-end.anchor
+#   - css.properties.inset-block-end.anchor-size
 #   - css.properties.inset-block-start.anchor
+#   - css.properties.inset-block-start.anchor-size
 #   - css.properties.inset-inline.anchor
+#   - css.properties.inset-inline.anchor-size
 #   - css.properties.inset-inline-end.anchor
+#   - css.properties.inset-inline-end.anchor-size
 #   - css.properties.inset-inline-start.anchor
+#   - css.properties.inset-inline-start.anchor-size
 #   - css.properties.justify-items.anchor-center
 #   - css.properties.justify-self.anchor-center
 #   - css.properties.left.anchor
+#   - css.properties.left.anchor-size
+#   - css.properties.margin.anchor-size
+#   - css.properties.margin-block.anchor-size
+#   - css.properties.margin-block-end.anchor-size
+#   - css.properties.margin-block-start.anchor-size
+#   - css.properties.margin-bottom.anchor-size
+#   - css.properties.margin-inline.anchor-size
+#   - css.properties.margin-inline-end.anchor-size
+#   - css.properties.margin-inline-start.anchor-size
+#   - css.properties.margin-left.anchor-size
+#   - css.properties.margin-right.anchor-size
+#   - css.properties.margin-top.anchor-size
 #   - css.properties.max-block-size.anchor-size
 #   - css.properties.max-height.anchor-size
 #   - css.properties.max-inline-size.anchor-size
@@ -191,7 +202,10 @@ compat_features:
 #   - css.properties.position-visibility.anchors-visible
 #   - css.properties.position-visibility.no-overflow
 #   - css.properties.right.anchor
+#   - css.properties.right.anchor-size
 #   - css.properties.top.anchor
+#   - css.properties.top.anchor-size
 #   - css.properties.width.anchor-size
 #   - css.types.anchor
 #   - css.types.anchor-size
+#   - css.types.anchor-size.inset_margin

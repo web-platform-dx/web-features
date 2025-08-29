@@ -278,6 +278,19 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
+  #   chrome: "42"
+  #   chrome_android: "42"
+  #   edge: "79"
+  #   firefox: "59"
+  #   firefox_android: "59"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.Response.Response.body_parameter_optional
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
   #   chrome: "48"
   #   chrome_android: "48"
   #   edge: "79"
@@ -288,25 +301,12 @@ compat_features:
   - api.fetch.blob_data_support
 
   # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
-  # support:
-  #   chrome: "42"
-  #   chrome_android: "42"
-  #   edge: ≤79
-  #   firefox: "59"
-  #   firefox_android: "59"
-  #   safari: "10.1"
-  #   safari_ios: "10.3"
-  - api.Response.Response.body_parameter_optional
-
-  # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
   # support:
   #   chrome: "52"
   #   chrome_android: "52"
-  #   edge: ≤79
+  #   edge: "79"
   #   firefox: "39"
   #   firefox_android: "39"
   #   safari: "10.1"
@@ -365,11 +365,24 @@ compat_features:
   - api.Request.keepalive
   - api.fetch.init_keepalive_parameter
 
+  # baseline: low
+  # baseline_low_date: 2025-01-17
+  # support:
+  #   chrome: "132"
+  #   chrome_android: "132"
+  #   edge: "132"
+  #   firefox: "128"
+  #   firefox_android: "128"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.Request.bytes
+  - api.Response.bytes
+
   # baseline: false
   # support:
   #   chrome: "43"
   #   chrome_android: "43"
-  #   edge: ≤79
+  #   edge: "79"
   #   firefox: "65"
   #   firefox_android: "65"
   #   safari_ios: "10.3"
@@ -407,15 +420,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "105"
-  #   chrome_android: "105"
-  #   edge: "105"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - api.Request.body
-
-  # baseline: false
-  # support:
   #   chrome: "116"
   #   chrome_android: "116"
   #   edge: "116"
@@ -430,15 +434,6 @@ compat_features:
   #   safari: "16.1"
   #   safari_ios: "16.1"
   - api.fetch.authorization_removed_cross_origin
-
-  # baseline: false
-  # support:
-  #   firefox: "128"
-  #   firefox_android: "128"
-  #   safari: "18"
-  #   safari_ios: "18"
-  - api.Request.bytes
-  - api.Response.bytes
 
   # baseline: false
   # support:

@@ -181,12 +181,12 @@ compat_features:
   - http.headers.Content-Security-Policy.manifest-src
 
   # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
   # support:
   #   chrome: "56"
   #   chrome_android: "56"
-  #   edge: ≤79
+  #   edge: "79"
   #   firefox: "50"
   #   firefox_android: "50"
   #   safari: "10"
@@ -225,7 +225,7 @@ compat_features:
   # support:
   #   chrome: "59"
   #   chrome_android: "59"
-  #   edge: ≤79
+  #   edge: "79"
   #   firefox: "63"
   #   firefox_android: "63"
   #   safari: "15.4"
@@ -297,8 +297,9 @@ compat_features:
   #   safari_ios: "15.5"
   - html.global_attributes.nonce.nonce_hiding
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-09-12
+  # baseline_high_date: 2025-03-12
   # support:
   #   chrome: "97"
   #   chrome_android: "97"
@@ -309,8 +310,9 @@ compat_features:
   #   safari_ios: "16"
   - http.headers.Content-Security-Policy.script-src.wasm-unsafe-eval
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-12-13
+  # baseline_high_date: 2025-06-13
   # support:
   #   chrome: "75"
   #   chrome_android: "75"
@@ -324,8 +326,9 @@ compat_features:
   - http.headers.Content-Security-Policy.style-src-attr
   - http.headers.Content-Security-Policy.style-src-elem
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-01-17
+  # baseline_high_date: 2025-07-17
   # support:
   #   chrome: "69"
   #   chrome_android: "69"
@@ -341,7 +344,7 @@ compat_features:
   # support:
   #   chrome: "59"
   #   chrome_android: "59"
-  #   edge: ≤79
+  #   edge: "79"
   #   firefox: "116"
   #   firefox_android: "116"
   #   safari: "15.6"
@@ -383,28 +386,3 @@ compat_features:
   #   edge: "79"
   - api.HTMLIFrameElement.csp
   - html.elements.iframe.csp
-
-  # baseline: false
-  # support:
-  #   chrome: "74"
-  #   chrome_android: "74"
-  #   edge: "79"
-  - api.CSPViolationReportBody
-  - api.CSPViolationReportBody.blockedURL
-  - api.CSPViolationReportBody.columnNumber
-  - api.CSPViolationReportBody.disposition
-  - api.CSPViolationReportBody.documentURL
-  - api.CSPViolationReportBody.effectiveDirective
-  - api.CSPViolationReportBody.lineNumber
-  - api.CSPViolationReportBody.originalPolicy
-  - api.CSPViolationReportBody.referrer
-  - api.CSPViolationReportBody.sample
-  - api.CSPViolationReportBody.sourceFile
-  - api.CSPViolationReportBody.statusCode
-
-  # baseline: false
-  # support:
-  #   chrome: "80"
-  #   chrome_android: "80"
-  #   edge: "80"
-  - api.CSPViolationReportBody.toJSON

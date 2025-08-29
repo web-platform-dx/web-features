@@ -229,6 +229,19 @@ compat_features:
   #   chrome: "33"
   #   chrome_android: "33"
   #   edge: "79"
+  #   firefox: "24"
+  #   firefox_android: "24"
+  #   safari: "8"
+  #   safari_ios: "8"
+  - api.HTMLCanvasElement.getContext.webgl_context
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "33"
+  #   chrome_android: "33"
+  #   edge: "79"
   #   firefox: "30"
   #   firefox_android: "30"
   #   safari: "10.1"
@@ -261,15 +274,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "75"
-  #   chrome_android: "75"
-  #   edge: "79"
-  #   safari: "10.1"
-  #   safari_ios: "10.3"
-  - api.HTMLCanvasElement.getContext.webgl_context.options_powerPreference_parameter
-
-  # baseline: false
-  # support:
   #   chrome: "122"
   #   chrome_android: "122"
   #   edge: "122"
@@ -282,6 +286,12 @@ compat_features:
   #   chrome_android: "126"
   #   edge: "126"
   - api.WebGLObject
+
+  # baseline: false
+  # support:
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.HTMLCanvasElement.getContext.webgl_context.options_powerPreference_parameter
 
   # baseline: false
   # support:

@@ -3,16 +3,16 @@
 
 status:
   baseline: high
-  baseline_low_date: 2020-03-24
-  baseline_high_date: 2022-09-24
+  baseline_low_date: 2020-09-16
+  baseline_high_date: 2023-03-16
   support:
-    chrome: "36"
-    chrome_android: "36"
-    edge: "79"
-    firefox: "48"
-    firefox_android: "48"
-    safari: "13.1"
-    safari_ios: "13.4"
+    chrome: "84"
+    chrome_android: "84"
+    edge: "84"
+    firefox: "75"
+    firefox_android: "79"
+    safari: "14"
+    safari_ios: "14"
 compat_features:
   # baseline: high
   # baseline_low_date: 2019-12-17
@@ -29,7 +29,6 @@ compat_features:
   - api.Element.animationiteration_event
   - api.Element.animationstart_event
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-03-24
   # baseline_high_date: 2022-09-24
@@ -172,6 +171,7 @@ compat_features:
   - api.DocumentTimeline.DocumentTimeline
   - api.Element.getAnimations
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-09-16
   # baseline_high_date: 2023-03-16
@@ -188,8 +188,9 @@ compat_features:
   - api.KeyframeEffect.pseudoElement
   - api.ShadowRoot.getAnimations
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-09-12
+  # baseline_high_date: 2025-03-12
   # support:
   #   chrome: "84"
   #   chrome_android: "84"

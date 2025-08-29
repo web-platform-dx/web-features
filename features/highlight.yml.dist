@@ -10,6 +10,16 @@ status:
     safari: "17.2"
     safari_ios: "17.2"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2025-06-24
+  # support:
+  #   chrome: "105"
+  #   chrome_android: "105"
+  #   edge: "105"
+  #   firefox: "140"
+  #   firefox_android: "140"
+  #   safari: "17.2"
+  #   safari_ios: "17.2"
   - api.CSS.highlights_static
   - api.Highlight
   - api.Highlight.@@iterator
@@ -37,4 +47,17 @@ compat_features:
   - api.HighlightRegistry.set
   - api.HighlightRegistry.size
   - api.HighlightRegistry.values
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "105"
+  #   chrome_android: "105"
+  #   edge: "105"
+  #   safari: "17.2"
+  #   safari_ios: "17.2"
   - css.selectors.highlight
+
+  # baseline: false
+  # support: {}
+  - api.HighlightRegistry.highlightsFromPoint

@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 
 import { feature } from "./feature.js";
-import { browser, Compat } from "./index.js";
+import { browser } from "./index.js";
 
 describe("features", function () {
   describe("feature()", function () {
@@ -49,8 +49,8 @@ describe("features", function () {
         const oneSpec = feature("css.properties.grid").spec_url;
         assert.equal(oneSpec.length, 1);
 
-        const twoSpecs = feature("css.properties.width").spec_url;
-        assert.equal(twoSpecs.length, 2);
+        const twoSpecs = feature("css.properties.break-inside").spec_url;
+        assert.equal(twoSpecs.length, 3);
       });
     });
 
@@ -94,17 +94,16 @@ describe("features", function () {
 
       it("returns null for unknown support", function () {
         const edge = browser("edge");
-        const f = feature("api.IDBCursor.key.binary_keys"); // { version_added: "≤79" }
+        const f = feature("api.FileSystem"); // { version_added: "≤18" }
 
-        assert.equal(f.supportedIn(edge.version("12")), null);
-        assert.equal(f.supportedIn(edge.version("79")), true);
+        assert.equal(f.supportedIn(edge.version("17")), null);
+        assert.equal(f.supportedIn(edge.version("18")), true);
         assert.equal(f.supportedIn(edge.version("80")), true);
       });
     });
 
     describe("supportedIn()", function () {
       it("returns support for features supported with and without qualification", function () {
-        const compat = new Compat();
         const cr = browser("chrome");
 
         // { version_added: "…" }

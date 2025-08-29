@@ -1,12 +1,21 @@
-draft_date: 2024-12-20
-name: Fetch Standard
+draft_date: 2025-08-06
+name: Fetch
 description: TODO
 spec: https://fetch.spec.whatwg.org/
 compat_features:
+  - api.Request.Request.init_duplex_parameter
+  - api.fetch.body_readablestream
+  - api.fetch.init_duplex_parameter
   - http.headers.Cross-Origin-Resource-Policy
   - http.headers.X-Content-Type-Options
 
 # The following features in the spec are already part of web-features:
+# - fetchLater:
+#   - api.FetchLaterResult
+#   - api.FetchLaterResult.activated
+#   - api.Window.fetchLater
+#   - http.headers.Permissions-Policy.deferred-fetch
+#   - http.headers.Permissions-Policy.deferred-fetch-minimal
 # - Fetch:
 #   - api.Headers
 #   - api.Headers.@@iterator
@@ -32,7 +41,6 @@ compat_features:
 #   - api.Request.Request.response_body_readablestream
 #   - api.Request.arrayBuffer
 #   - api.Request.blob
-#   - api.Request.body
 #   - api.Request.bodyUsed
 #   - api.Request.bytes
 #   - api.Request.cache
@@ -88,6 +96,8 @@ compat_features:
 # - Fetch priority:
 #   - api.Request.Request.init_priority_parameter
 #   - api.fetch.init_priority_parameter
+# - Fetch upload streams:
+#   - api.Request.body
 # - Abortable fetch:
 #   - api.Request.signal
 #   - api.fetch.init_signal_parameter
