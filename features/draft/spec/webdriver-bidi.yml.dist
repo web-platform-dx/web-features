@@ -310,6 +310,7 @@ compat_features:
   - webdriver.bidi.browser.createUserContext
   - webdriver.bidi.browser.getUserContexts
   - webdriver.bidi.browser.removeUserContext
+  - webdriver.bidi.browser.removeUserContext.userContext_parameter
   - webdriver.bidi.browsingContext.contextDestroyed_event.userContext_parameter
   - webdriver.bidi.browsingContext.create.userContext_parameter
   - webdriver.bidi.script.addPreloadScript.contexts_parameter
@@ -632,7 +633,6 @@ compat_features:
   # support:
   #   firefox: "124"
   #   firefox_android: "124"
-  - webdriver.bidi.browser.removeUserContext.userContext_parameter
   - webdriver.bidi.network.authRequired_event.intercepts_parameter
   - webdriver.bidi.network.authRequired_event.isBlocked_parameter
   - webdriver.bidi.network.continueRequest

@@ -180,8 +180,11 @@ compat_features:
   #   safari_ios: "10.3"
   - api.KeyboardEvent.isComposing
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-05-27
   # support:
+  #   chrome: "137"
+  #   chrome_android: "137"
   #   edge: "12"
   #   firefox: "28"
   #   firefox_android: "28"
