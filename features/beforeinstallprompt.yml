@@ -1,5 +1,5 @@
-name: Installation events
-description: The `beforeinstallprompt` event fires when a Progressive Web App (PWA) is installable, usually on page load in browsers that support installing PWAs. You can use this event to prevent the install prompt from appearing until after the user interacts with an element on the page. The `appinstalled` event fires when the PWA is successfully installed.
+name: beforeinstallprompt
+description: The `beforeinstallprompt` event fires when a Progressive Web App (PWA) is installable. You can cancel the event and later call `event.prompt()` to control when the installation prompt is shown. The `appinstalled` event fires when the PWA is successfully installed.
 # The only engine where beforeinstallprompt is supported is Chromium, and its implementation differs from the spec.
 # BCD/MDN don't link to the spec because of this, and instead document what's in Chromium.
 spec: https://wicg.github.io/manifest-incubations/#installation-events
