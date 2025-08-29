@@ -42,8 +42,9 @@ export class SupportStatement {
   }
 
   /**
-   * A `true` value, if support exists but may be incompatible with other
-   * implementations; otherwise, `false`.
+   * A `true` value when evidence of support exists, such an API exposure, but
+   * its behavior is irregular (for example, by deviating from the
+   * specification). Otherwise, `false`.
    */
   get partial_implementation(): boolean {
     return this.data?.partial_implementation ?? false;
