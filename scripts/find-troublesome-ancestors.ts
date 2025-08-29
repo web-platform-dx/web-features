@@ -8,7 +8,7 @@ const c = new Compat();
 const needles = [];
 
 for (const feature of c.walk()) {
-  if (feature.id.startsWith("webextensions")) {
+  if (feature.id.startsWith("webextensions.")) {
     continue;
   }
 
