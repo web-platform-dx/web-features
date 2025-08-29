@@ -1,6 +1,7 @@
 import {
   FlagStatement,
   SimpleSupportStatement,
+  VersionValue,
 } from "@mdn/browser-compat-data";
 
 import { Browser } from "./browser.js";
@@ -33,23 +34,35 @@ export class SupportStatement {
     this.feature = feature;
   }
 
+  /**
+   * An array of `FlagStatement` objects. If there are no flags, then the array
+   * is empty.
+   */
   get flags(): FlagStatement[] {
     return this.data?.flags ?? [];
   }
 
+  /**
+   * A `true` value, if support exists but may be incompatible with other
+   * implementations; otherwise, `false`.
+   */
   get partial_implementation(): boolean {
-    // Strictness guarantee: unset partial_implementation returns false
     return this.data?.partial_implementation ?? false;
   }
 
   /**
-   * Get the `version_added` value
+   * A version string for the first supporting release. If the feature was never
+   * supported, then it is `false`.
    */
-  get version_added() {
+  get version_added(): VersionValue {
     return this.data?.version_added;
   }
 
-  get version_removed() {
+  /**
+   * A version string for the first unsupporting release after `version_added`.
+   * If the feature is still supported, then it is `undefined`.
+   */
+  get version_removed(): string | undefined {
     return this.data?.version_removed;
   }
 
