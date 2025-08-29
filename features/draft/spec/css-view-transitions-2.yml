@@ -1,0 +1,51 @@
+draft_date: 2025-08-15
+name: CSS View Transitions Module Level 2
+description: TODO
+spec: https://drafts.csswg.org/css-view-transitions-2/
+compat_features:
+  - css.properties.view-transition-group
+  - css.properties.view-transition-group.contain
+  - css.properties.view-transition-group.nearest
+  - css.properties.view-transition-group.normal
+
+# The following features in the spec are already part of web-features:
+# - Cross-document view transitions:
+#   - api.CSSViewTransitionRule
+#   - api.CSSViewTransitionRule.navigation
+#   - api.CSSViewTransitionRule.types
+#   - css.at-rules.view-transition
+# - View transitions:
+#   - api.Document.startViewTransition
+#   - api.Document.startViewTransition.callbackOptions_parameter
+#   - api.Document.startViewTransition.updateCallback_parameter
+#   - api.ViewTransition
+#   - api.ViewTransition.finished
+#   - api.ViewTransition.ready
+#   - api.ViewTransition.skipTransition
+#   - api.ViewTransition.updateCallbackDone
+#   - css.properties.view-transition-name
+#   - css.properties.view-transition-name.match-element
+#   - css.properties.view-transition-name.none
+#   - css.selectors.view-transition
+#   - css.selectors.view-transition-group
+#   - css.selectors.view-transition-image-pair
+#   - css.selectors.view-transition-new
+#   - css.selectors.view-transition-old
+# - Active view transition:
+#   - api.ViewTransition.types
+#   - api.ViewTransitionTypeSet
+#   - api.ViewTransitionTypeSet.@@iterator
+#   - api.ViewTransitionTypeSet.add
+#   - api.ViewTransitionTypeSet.clear
+#   - api.ViewTransitionTypeSet.delete
+#   - api.ViewTransitionTypeSet.entries
+#   - api.ViewTransitionTypeSet.forEach
+#   - api.ViewTransitionTypeSet.has
+#   - api.ViewTransitionTypeSet.keys
+#   - api.ViewTransitionTypeSet.size
+#   - api.ViewTransitionTypeSet.values
+#   - css.selectors.active-view-transition
+#   - css.selectors.active-view-transition-type
+# - view-transition-class:
+#   - css.properties.view-transition-class
+#   - css.properties.view-transition-class.none

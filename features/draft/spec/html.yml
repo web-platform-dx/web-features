@@ -1,4 +1,4 @@
-draft_date: 2025-08-06
+draft_date: 2025-08-28
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -52,13 +52,25 @@ compat_features:
   - api.HTMLSourceElement.type
   - api.HTMLSourceElement.width
   - api.HTMLUnknownElement
-  - api.HTMLVideoElement.playsInline
   - api.ImageData.ImageData.settings_parameter
   - api.ImageData.ImageData.settings_parameter.colorSpace_option
   - api.ImageData.pixelFormat
   - api.MouseEvent.relatedTarget.drag_events
   - api.NavigateEvent.sourceElement
+  - api.Navigator.appCodeName
+  - api.Navigator.appName
+  - api.Navigator.appVersion
   - api.Navigator.authentication
+  - api.Navigator.javaEnabled
+  - api.Navigator.mimeTypes
+  - api.Navigator.oscpu
+  - api.Navigator.platform
+  - api.Navigator.plugins
+  - api.Navigator.product
+  - api.Navigator.productSub
+  - api.Navigator.taintEnabled
+  - api.Navigator.vendor
+  - api.Navigator.vendorSub
   - api.OffscreenCanvasRenderingContext2D.getContextAttributes
   - api.OffscreenCanvasRenderingContext2D.lang
   - api.PromiseRejectionEvent
@@ -109,7 +121,6 @@ compat_features:
   - html.elements.textarea.autocomplete.one-time-code
   - html.elements.textarea.autocomplete.webauthn
   - html.elements.track.kind.descriptions
-  - html.elements.video.playsinline
   - html.global_attributes.class
   - html.global_attributes.data_attributes
   - html.global_attributes.dir
@@ -1488,6 +1499,7 @@ compat_features:
 #   - api.HTMLMediaElement.waiting_event
 #   - api.HTMLVideoElement
 #   - api.HTMLVideoElement.height
+#   - api.HTMLVideoElement.playsInline
 #   - api.HTMLVideoElement.poster
 #   - api.HTMLVideoElement.resize_event
 #   - api.HTMLVideoElement.videoHeight
@@ -1507,6 +1519,7 @@ compat_features:
 #   - html.elements.video.height
 #   - html.elements.video.loop
 #   - html.elements.video.muted
+#   - html.elements.video.playsinline
 #   - html.elements.video.poster
 #   - html.elements.video.preload
 #   - html.elements.video.src
@@ -2275,7 +2288,7 @@ compat_features:
 #   - css.selectors.visited.privacy_measures
 # - :modal:
 #   - css.selectors.modal
-# - Open and closed selectors:
+# - :open:
 #   - css.selectors.open
 # - :placeholder-shown:
 #   - css.selectors.placeholder-shown

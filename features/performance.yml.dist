@@ -135,8 +135,6 @@ compat_features:
   #   firefox_android: "35"
   #   safari: "11"
   #   safari_ios: "11"
-  - api.Performance.clearResourceTimings
-  - api.Performance.setResourceTimingBufferSize
   - api.PerformanceEntry
   - api.PerformanceEntry.duration
   - api.PerformanceEntry.entryType
@@ -168,19 +166,6 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - api.PerformanceEntry.worker_support
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "46"
-  #   chrome_android: "46"
-  #   edge: "79"
-  #   firefox: "35"
-  #   firefox_android: "35"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - api.Performance.resourcetimingbufferfull_event
 
   # baseline: high
   # baseline_low_date: 2020-01-15
