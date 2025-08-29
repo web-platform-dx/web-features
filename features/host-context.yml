@@ -6,3 +6,13 @@ group:
   - web-components
 compat_features:
   - css.selectors.host-context
+discouraged:
+  # reason: >
+  #   The CSS Working Group removed it from the specification, due to opposition
+  #   from vendors, performance considerations, and interest in alternatives.
+  according_to:
+    - https://github.com/w3c/csswg-drafts/issues/1914#issuecomment-2737310093
+  alternatives:
+    - container-style-queries
+  # There's an outside chance that this is a candidate for removal. See
+  # https://issues.chromium.org/issues/404839554
