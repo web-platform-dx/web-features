@@ -1,7 +1,6 @@
 import {
   FlagStatement,
   SimpleSupportStatement,
-  VersionValue,
 } from "@mdn/browser-compat-data";
 
 import { Browser } from "./browser.js";
@@ -54,7 +53,7 @@ export class SupportStatement {
    * A version string for the first supporting release. If the feature was never
    * supported, then it is `false`.
    */
-  get version_added(): VersionValue {
+  get version_added(): string | false {
     return this.data?.version_added;
   }
 
