@@ -27,6 +27,7 @@ You can find web-features and Baseline data in the places listed below. If you s
 - [RUMvision Baseline integration](https://www.rumvision.com/help-center/monitoring/dashboard/baseline/), a real user monitoring solution, which uses Baseline statuses show which features are safe to use based on actual audience data.
 - [RUM Archive Insights](https://rumarchive.com/insights/), a collection of RUM Archive data visualizations, including yearly Baseline features.
 - [Baseline MCP Server](https://github.com/yamanoku/baseline-mcp-server), a Model Context Protocol (MCP) server that provides Baseline information for web features.
+- [browserslist-config-baseline](https://github.com/web-platform-dx/browserslist-config-baseline), a module that turns Baseline targets into [browserslist](https://github.com/browserslist/browserslist)-compatible lists of browser versions. Dynamically target Widely available by installing the module using your package manager of choice and adding `"browserslist": "extends browserslist-config-baseline"` to your `package.json`.
 
 ## Web feature dashboards
 
@@ -34,6 +35,7 @@ You can find web-features and Baseline data in the places listed below. If you s
 - [Web Platform Status](https://webstatus.dev/), a visualization of the web-features data, together with web platform test results per feature, and additional filtering and sorting options, such as Baseline years.
 - [Web Platform Features](https://web-features.lttr.cz/), a visualization of the web-features data with filters and fuzzy search capabilities.
 - [Microsoft Edge - 2024 web platform top developer needs](https://microsoftedge.github.io/TopDeveloperNeeds/), a list of web features that developers need, based on data from the Microsoft Edge team.
+- [cssdb](https://cssdb.org/) is a list of CSS features and their positions in the process of becoming implemented web standards.
 
 ## Presentations
 

@@ -7,6 +7,8 @@ status:
     chrome: "95"
     chrome_android: "95"
     edge: "95"
+    firefox: "142"
+    firefox_android: "142"
 compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
@@ -14,6 +16,8 @@ compat_features:
   #   chrome: "95"
   #   chrome_android: "95"
   #   edge: "95"
+  #   firefox: "142"
+  #   firefox_android: "142"
   - api.URLPattern
   - api.URLPattern.URLPattern
   - api.URLPattern.exec
@@ -32,6 +36,8 @@ compat_features:
   #   chrome: "107"
   #   chrome_android: "107"
   #   edge: "107"
+  #   firefox: "142"
+  #   firefox_android: "142"
   - api.URLPattern.URLPattern.ignoreCase_option
 
   # baseline: false
@@ -39,4 +45,6 @@ compat_features:
   #   chrome: "122"
   #   chrome_android: "122"
   #   edge: "122"
+  #   firefox: "142"
+  #   firefox_android: "142"
   - api.URLPattern.hasRegExpGroups
