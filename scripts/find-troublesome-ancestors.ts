@@ -8,6 +8,10 @@ const c = new Compat();
 const needles = [];
 
 for (const feature of c.walk()) {
+  if (feature.id.startsWith("webextensions")) {
+    continue;
+  }
+
   try {
     const lone = computeBaseline({
       compatKeys: [feature.id],
@@ -25,10 +29,12 @@ for (const feature of c.walk()) {
       ]);
     }
   } catch (err) {
-    if (err instanceof Error) {
-      err.message.includes("contains non-real values");
+    if (
+      err instanceof Error &&
+      err.message.includes("contains no support data for")
+    ) {
       console.warn(
-        `${feature.id} or an ancestor contains non-real-values. Skipping.`,
+        `${feature.id} contains no support data for one or more core browser set browsers. Skipping.`,
       );
       continue;
     }
