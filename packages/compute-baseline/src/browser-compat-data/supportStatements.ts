@@ -54,7 +54,7 @@ export class SupportStatement {
    * supported, then it is `false`.
    */
   get version_added(): string | false {
-    return this.data?.version_added;
+    return this.data?.version_added ?? false;
   }
 
   /**
