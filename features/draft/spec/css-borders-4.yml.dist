@@ -6,6 +6,7 @@ status:
   support:
     chrome: "139"
     chrome_android: "139"
+    edge: "139"
 compat_features:
   - css.properties.corner-block-end-shape
   - css.properties.corner-block-start-shape
@@ -24,3 +25,12 @@ compat_features:
   - css.properties.corner-top-left-shape
   - css.properties.corner-top-right-shape
   - css.properties.corner-top-shape
+  - css.types.corner-shape-value
+  - css.types.corner-shape-value.bevel
+  - css.types.corner-shape-value.notch
+  - css.types.corner-shape-value.round
+  - css.types.corner-shape-value.scoop
+  - css.types.corner-shape-value.square
+  - css.types.corner-shape-value.squircle
+  - css.types.corner-shape-value.superellipse
+  - css.types.superellipse

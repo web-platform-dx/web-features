@@ -1,4 +1,4 @@
-draft_date: 2025-07-03
+draft_date: 2025-08-15
 name: CSS Functions and Mixins Module
 description: TODO
 spec: https://drafts.csswg.org/css-mixins-1/
@@ -11,3 +11,7 @@ compat_features:
   - api.CSSFunctionRule.getParameters
   - api.CSSFunctionRule.name
   - api.CSSFunctionRule.returnType
+  - css.at-rules.function
+  - css.at-rules.function.result
+  - css.types.dashed-function
+  - css.types.type

@@ -28,6 +28,15 @@ const draft = Symbol('draft');
 // This must match the definition in docs/guidelines.md
 const identifierPattern = /^[a-z][a-z0-9]*(-[a-z0-9]+)*$/;
 
+// All identifiers (including drafts) must be unique with respect to their
+// siblings. These maps track them with respect to file names, for clearer error
+// mesesages.
+const uniqueIdMaps = {
+    features: new Map<string, string>(),
+    groups: new Map<string, string>(),
+    snapshots: new Map<string, string>(),
+}
+
 function* yamlEntries(root: string): Generator<[string, any]> {
     const filePaths = new fdir()
         .withBasePath()
@@ -38,6 +47,18 @@ function* yamlEntries(root: string): Generator<[string, any]> {
     for (const fp of filePaths) {
         // The feature identifier/key is the filename without extension.
         const { name: key } = path.parse(fp);
+        const pathParts = fp.split(path.sep);
+
+        // Assert ID uniqueness
+        for (const [pool, map] of Object.entries(uniqueIdMaps)) {
+            if (!pathParts.includes("spec") && pathParts.includes(pool)) {
+                const otherFile: string | undefined = map.get(key);
+                if (otherFile) {
+                    throw new Error(`ID collision between ${fp} and ${otherFile}`);
+                }
+                map.set(key, fp);
+            }
+        }
 
         if (!identifierPattern.test(key)) {
             throw new Error(`${key} is not a valid identifier (see guidelines)`);
@@ -50,7 +71,7 @@ function* yamlEntries(root: string): Generator<[string, any]> {
             Object.assign(data, dist);
         }
 
-        if (fp.split(path.sep).includes('draft')) {
+        if (pathParts.includes('draft')) {
             data[draft] = true;
         }
 
