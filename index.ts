@@ -134,6 +134,13 @@ for (const [key, data] of yamlEntries('features')) {
         data.description = text;
         data.description_html = html;
     }
+    if (Array.isArray(data.notes)) {
+        for (const note of data.notes as FeatureData["notes"]) {
+            const { text, html } = convertMarkdown(data.description);
+            note.message = text;
+            note.message_html = html;
+        }
+    }
 
     // Compute Baseline high date from low date.
     if (data.status?.baseline === 'high') {
@@ -160,6 +167,15 @@ for (const [key, data] of yamlEntries('features')) {
     for (const snapshot of identifiers(data.snapshot)) {
         if (!Object.hasOwn(snapshots, snapshot)) {
             throw new Error(`snapshot ${snapshot} used in ${key}.yml is not a valid snapshot. Add it to snapshots/ if needed.`);
+        }
+    }
+
+    // Ensure regression notes are still relevant
+    if (Array.isArray(data.notes)) {
+        for (const [index, note] of (data.notes as FeatureData["notes"]).entries()) {
+            if (note.new_baseline_value !== data.status.baseline) {
+                throw new Error(`regression note ${index} on ${key}.yml no longer applies (status is ${data.status.baseline}, note is ${note.new_baseline_value}). Delete this note.`);
+            }
         }
     }
 

@@ -100,6 +100,69 @@
           "description": "Short name",
           "type": "string"
         },
+        "notes": {
+          "description": "Notes about this feature",
+          "items": {
+            "additionalProperties": false,
+            "description": "A note describing a Baseline status regression. For example, a feature that has moved from Baseline low to not Baseline.",
+            "properties": {
+              "category": {
+                "const": "baseline-regression",
+                "description": "The topic of this note. This field is also a discriminator for any future note types",
+                "type": "string"
+              },
+              "citations": {
+                "description": "One or more URLs, such as bugs, used to justify the regression",
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "date": {
+                "description": "The date that the regression was added to web-features data",
+                "type": "string"
+              },
+              "message": {
+                "description": "A short description of the cause of the regression as a plain text",
+                "type": "string"
+              },
+              "message_html": {
+                "description": "A short description of the cause of the regression as HTML",
+                "type": "string"
+              },
+              "new_baseline_value": {
+                "description": "The `baseline` status value after the regression",
+                "enum": [
+                  "low",
+                  false
+                ],
+                "type": [
+                  "string",
+                  "boolean"
+                ]
+              },
+              "old_baseline_value": {
+                "description": "The `baseline` status value before the regression",
+                "enum": [
+                  "high",
+                  "low"
+                ],
+                "type": "string"
+              }
+            },
+            "required": [
+              "category",
+              "date",
+              "message",
+              "message_html",
+              "citations",
+              "old_baseline_value",
+              "new_baseline_value"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
         "snapshot": {
           "anyOf": [
             {

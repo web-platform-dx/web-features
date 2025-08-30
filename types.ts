@@ -47,6 +47,8 @@ export interface FeatureData {
     compat_features?: string[];
     /** Whether developers are formally discouraged from using this feature */
     discouraged?: Discouraged;
+    /** Notes about this feature */
+    notes?: BaselineRegressionNote[];
 }
 
 type BrowserIdentifier = "chrome" | "chrome_android" | "edge" | "firefox" | "firefox_android" | "safari" | "safari_ios";
@@ -80,6 +82,27 @@ interface Discouraged {
     // but ts-json-schema-generator seems to have long-standing unresolved bugs
     // around this. Remove this when
     // https://github.com/web-platform-dx/web-features/issues/2722 is resolved.
+}
+
+/**
+ * A note describing a Baseline status regression.
+ * For example, a feature that has moved from Baseline low to not Baseline.
+ */
+interface BaselineRegressionNote {
+    /** The topic of this note. This field is also a discriminator for any future note types */
+    category: "baseline-regression";
+    /** The date that the regression was added to web-features data */
+    date: string;
+    /** A short description of the cause of the regression as a plain text */
+    message: string;
+    /** A short description of the cause of the regression as HTML */
+    message_html: string;
+    /** One or more URLs, such as bugs, used to justify the regression */
+    citations: string[];
+    /** The `baseline` status value before the regression */
+    old_baseline_value: "high" | "low";
+    /** The `baseline` status value after the regression */
+    new_baseline_value: "low" | false;
 }
 
 export interface GroupData {
