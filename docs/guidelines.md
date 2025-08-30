@@ -348,3 +348,20 @@ When you set a `discouraged` block in a feature file, do:
 - Set one or more (optional) `alternative` feature IDs that are whole or partial substitutes for the discouraged feature.
   An alternative doesn't have to be a narrow drop-in replacement for the discouraged feature but it must handle some use case of the discouraged feature.
   Guide developers to the most relevant features that would help them stop using the discouraged feature.
+
+## Notes
+
+Features may have notes.
+Presently, there is one type of note, a Baseline regression note.
+
+### Baseline regression note
+
+Use a note with a `category: baseline-regression` whenever the Baseline status goes backwards (such as from `"high"` to `"low"`).
+This note type applies to any regression, whether it was caused by changes in upstream data or an editorial override.
+
+In the `message` field, explain the cause of the regression.
+If the cause is a newly-discovered or reported bug, then briefly describe the nature of the bug.
+If the cause is a correction, then briefly describe the nature and origin of the correction (usually, upstream data).
+
+In the `citations` field, include the URLs that are most important to understanding the nature and origin of the change.
+For example, if BCD marked a feature as a `partial_implementation` due to a browser bug, include the URL for the browser bug and the BCD pull request or issue where the `partial_implementation` status was agreed.
