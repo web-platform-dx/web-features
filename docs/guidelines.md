@@ -360,8 +360,9 @@ Use a note with a `category: baseline-regression` whenever the Baseline status g
 This note type applies to any regression, whether it was caused by changes in upstream data or an editorial override.
 
 In the `message` field, explain the cause of the regression.
-If the cause is a newly-discovered or reported bug, then briefly describe the nature of the bug.
-If the cause is a correction, then briefly describe the nature and origin of the correction (usually, upstream data).
+Write the message to developers, to help them understand whether the regression applies to their use case.
+If the cause is a newly-discovered or reported bug then briefly describe the nature of the bug.
+If the cause is a correction then briefly describe the nature and origin of the correction (usually, upstream data).
 
 In the `citations` field, include the URLs that are most important to understanding the nature and origin of the change.
 For example, if BCD marked a feature as a `partial_implementation` due to a browser bug, include the URL for the browser bug and the BCD pull request or issue where the `partial_implementation` status was agreed.
