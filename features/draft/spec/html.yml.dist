@@ -482,6 +482,19 @@ compat_features:
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
   # support:
+  #   chrome: "36"
+  #   chrome_android: "36"
+  #   edge: "12"
+  #   firefox: "69"
+  #   firefox_android: "79"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.Document.designMode
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
   #   chrome: "49"
   #   chrome_android: "49"
   #   edge: "79"
@@ -737,16 +750,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "75"
-  #   chrome_android: "75"
-  #   edge: "79"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - api.HTMLVideoElement.playsInline
-  - html.elements.video.playsinline
-
-  # baseline: false
-  # support:
   #   chrome: "90"
   #   chrome_android: "90"
   #   edge: "90"
@@ -881,13 +884,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "133"
-  #   chrome_android: "133"
-  #   edge: "133"
-  - api.CustomElementRegistry.define.connectedMoveCallback_lifecycle_callback
-
-  # baseline: false
-  # support:
   #   chrome: "134"
   #   chrome_android: "134"
   #   edge: "134"
@@ -905,6 +901,7 @@ compat_features:
   #   chrome: "137"
   #   chrome_android: "137"
   #   edge: "137"
+  - api.ImageData.ImageData.settings_parameter.pixelFormat_option
   - api.ImageData.pixelFormat
 
   # baseline: false
@@ -913,6 +910,7 @@ compat_features:
   #   chrome_android: "139"
   #   edge: "139"
   - api.HTMLButtonElement.command.request-close
+  - html.elements.button.command.request-close
 
   # baseline: false
   # support:

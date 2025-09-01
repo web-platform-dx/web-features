@@ -1,0 +1,65 @@
+draft_date: 2025-09-01
+name: WebDriver
+description: TODO
+spec: https://w3c.github.io/webdriver/
+compat_features:
+  - webdriver.bidi.session.new.capabilities_parameter.capability_matching
+
+# The following features in the spec are already part of web-features:
+# - WebDriver:
+#   - api.Navigator.webdriver
+#   - webdriver.classic.AcceptAlert
+#   - webdriver.classic.AddCookie
+#   - webdriver.classic.Back
+#   - webdriver.classic.CloseWindow
+#   - webdriver.classic.DeleteAllCookies
+#   - webdriver.classic.DeleteCookie
+#   - webdriver.classic.DeleteSession
+#   - webdriver.classic.DismissAlert
+#   - webdriver.classic.ElementClear
+#   - webdriver.classic.ElementClick
+#   - webdriver.classic.ElementSendKeys
+#   - webdriver.classic.ExecuteAsyncScript
+#   - webdriver.classic.ExecuteScript
+#   - webdriver.classic.FindElement
+#   - webdriver.classic.FindElementFromElement
+#   - webdriver.classic.FindElements
+#   - webdriver.classic.FindElementsFromElement
+#   - webdriver.classic.Forward
+#   - webdriver.classic.FullscreenWindow
+#   - webdriver.classic.GetActiveElement
+#   - webdriver.classic.GetAlertText
+#   - webdriver.classic.GetAllCookies
+#   - webdriver.classic.GetCurrentURL
+#   - webdriver.classic.GetElementAttribute
+#   - webdriver.classic.GetElementCSSValue
+#   - webdriver.classic.GetElementProperty
+#   - webdriver.classic.GetElementRect
+#   - webdriver.classic.GetElementTagName
+#   - webdriver.classic.GetElementText
+#   - webdriver.classic.GetNamedCookie
+#   - webdriver.classic.GetPageSource
+#   - webdriver.classic.GetTimeouts
+#   - webdriver.classic.GetTitle
+#   - webdriver.classic.GetWindowHandle
+#   - webdriver.classic.GetWindowHandles
+#   - webdriver.classic.GetWindowRect
+#   - webdriver.classic.IsElementEnabled
+#   - webdriver.classic.IsElementSelected
+#   - webdriver.classic.MaximizeWindow
+#   - webdriver.classic.MinimizeWindow
+#   - webdriver.classic.NavigateTo
+#   - webdriver.classic.NewSession
+#   - webdriver.classic.NewWindow
+#   - webdriver.classic.PerformActions
+#   - webdriver.classic.Refresh
+#   - webdriver.classic.ReleaseActions
+#   - webdriver.classic.SendAlertText
+#   - webdriver.classic.SetTimeouts
+#   - webdriver.classic.SetWindowRect
+#   - webdriver.classic.Status
+#   - webdriver.classic.SwitchToFrame
+#   - webdriver.classic.SwitchToParentFrame
+#   - webdriver.classic.SwitchToWindow
+#   - webdriver.classic.TakeElementScreenshot
+#   - webdriver.classic.TakeScreenshot
