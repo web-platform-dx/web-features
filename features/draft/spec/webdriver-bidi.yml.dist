@@ -620,6 +620,22 @@ compat_features:
 
   # baseline: false
   # support:
+  #   firefox: "118"
+  #   firefox_android: "118"
+  - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.alert
+  - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.confirm
+  - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.prompt
+
+  # baseline: false
+  # support:
+  #   firefox: "119"
+  #   firefox_android: "119"
+  - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.alert
+  - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.confirm
+  - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.prompt
+
+  # baseline: false
+  # support:
   #   firefox: "122"
   #   firefox_android: "122"
   - webdriver.bidi.network.authRequired_event
@@ -686,10 +702,14 @@ compat_features:
   # baseline: false
   # support: {}
   - webdriver.bidi.browser.createUserContext.unhandledPromptBehavior_parameter
+  - webdriver.bidi.browser.setClientWindowState
+  - webdriver.bidi.browser.setClientWindowState.clientWindow_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event
   - webdriver.bidi.browsingContext.historyUpdated_event.context_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event.timestamp_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event.url_parameter
+  - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.beforeunload
+  - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.beforeunload
   - webdriver.bidi.emulation.setScreenOrientationOverride
   - webdriver.bidi.emulation.setScreenOrientationOverride.contexts_parameter
   - webdriver.bidi.emulation.setScreenOrientationOverride.screenOrientation_parameter

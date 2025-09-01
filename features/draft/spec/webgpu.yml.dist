@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "137"
-    chrome_android: "137"
-    edge: "137"
+    chrome: "139"
+    chrome_android: "139"
+    edge: "139"
 compat_features:
   # baseline: false
   # support:
@@ -29,7 +29,6 @@ compat_features:
   #   edge: "136"
   - api.GPUAdapterInfo.isFallbackAdapter
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "137"
@@ -37,3 +36,11 @@ compat_features:
   #   edge: "137"
   - api.GPUCommandEncoder.copyBufferToBuffer.offset_and_size_parameter_optional
   - api.GPUDevice.createBindGroup.descriptor_entries_option_accepts_GPUTextureView_resource
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "139"
+  #   chrome_android: "139"
+  #   edge: "139"
+  - api.GPUSupportedFeatures.feature_core-features-and-limits

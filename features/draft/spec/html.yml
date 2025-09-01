@@ -1,9 +1,9 @@
-draft_date: 2025-08-28
+draft_date: 2025-09-01
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
-  - api.CustomElementRegistry.define.connectedMoveCallback_lifecycle_callback
+  - api.Document.designMode
   - api.Document.featurePolicy
   - api.ElementInternals.shadowRoot
   - api.ErrorEvent
@@ -54,6 +54,7 @@ compat_features:
   - api.HTMLUnknownElement
   - api.ImageData.ImageData.settings_parameter
   - api.ImageData.ImageData.settings_parameter.colorSpace_option
+  - api.ImageData.ImageData.settings_parameter.pixelFormat_option
   - api.ImageData.pixelFormat
   - api.MouseEvent.relatedTarget.drag_events
   - api.NavigateEvent.sourceElement
@@ -97,6 +98,7 @@ compat_features:
   - api.reportError
   - api.setInterval.supports_parameters_for_callback
   - api.setTimeout.supports_parameters_for_callback
+  - html.elements.button.command.request-close
   - html.elements.form.autocomplete.new-password
   - html.elements.form.autocomplete.one-time-code
   - html.elements.form.autocomplete.webauthn
@@ -373,6 +375,8 @@ compat_features:
 # - Customized built-in elements:
 #   - api.CustomElementRegistry.builtin_element_support
 #   - html.global_attributes.is
+# - moveBefore():
+#   - api.CustomElementRegistry.define.connectedMoveCallback_lifecycle_callback
 # - :state():
 #   - api.CustomStateSet
 #   - api.CustomStateSet.@@iterator
@@ -413,7 +417,6 @@ compat_features:
 #   - api.Document.body
 #   - api.Document.currentScript
 #   - api.Document.defaultView
-#   - api.Document.designMode
 #   - api.Document.dir
 #   - api.Document.embeds
 #   - api.Document.forms
