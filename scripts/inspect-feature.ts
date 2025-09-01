@@ -3,7 +3,6 @@ import escapeHtml from "escape-html";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import winston from "winston";
 import YAML from "yaml";
 import yargs from "yargs";
 import { features } from "..";
@@ -33,15 +32,6 @@ const argv = yargs(process.argv.slice(2))
     default: 0,
     defaultDescription: "warn",
   }).argv as Args;
-
-const logger = winston.createLogger({
-  level: argv.verbose > 0 ? "debug" : "warn",
-  format: winston.format.combine(
-    winston.format.colorize(),
-    winston.format.simple(),
-  ),
-  transports: new winston.transports.Console(),
-});
 
 function main(): void {
   for (const filePath of argv.paths) {
@@ -78,7 +68,7 @@ function main(): void {
       console.log(
         `- ${compatKey}${status.baseline ? ` (${status.baseline})` : ""}`,
       );
-      for (const [browser, notes] of getNotes(compatKey, status).entries()) {
+      for (const [browser, notes] of getNotes(compatKey).entries()) {
         console.log(`    - ${browser}`);
         for (const note of notes) {
           console.log(`      - ${convertHTML(note).text}`);
@@ -88,10 +78,7 @@ function main(): void {
   }
 }
 
-function getNotes(
-  compatKey: string,
-  status: ReturnType<typeof getStatus>,
-): Map<string, string[]> {
+function getNotes(compatKey: string): Map<string, string[]> {
   const browserNotes = new Map<string, string[]>();
   const f = feature(compatKey);
   for (const browserKey of coreBrowserSet) {
