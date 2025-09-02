@@ -29,7 +29,7 @@ Many browsers outside the core browser set typically support the same Baseline f
 
 For example, many browsers on Android, Windows, and macOS are built on Chromium, the open source engine underpinning Chrome and Edge. On iOS, all browsers use the same engine, WebKit, that underpins that device's Safari browser.
 
-For a wider range of browsers, see [supported browsers](/supported-browsers/?includeDownstream=true) to find out which minimum browser versions support different Baseline feature sets, including Newly and Widely available and Baseline years.
+For a wider range of browsers, see [supported browsers](/supported-browsers/) to find out which minimum browser versions support different Baseline feature sets, including Newly and Widely available and Baseline years.
 
 The [`baseline-browser-mapping`](https://github.com/web-platform-dx/baseline-browser-mapping) module tracks these mappings to derive the feature set for browsers outside the core browser set.
 
