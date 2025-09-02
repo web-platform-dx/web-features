@@ -1,5 +1,7 @@
 name: outline
 description: The `outline` CSS shorthand sets the color, style, and width of a line around an element, outside of the border.
 spec: https://drafts.csswg.org/css-ui-4/#outline
+# https://caniuse.com/outline is not linked because it covers both shorthand and
+# longhands, which are split in web-features. TODO: merge the features.
 compat_features:
   - css.properties.outline

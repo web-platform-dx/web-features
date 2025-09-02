@@ -1,6 +1,7 @@
 name: Upgrade insecure requests
 description: The `Upgrade-Insecure-Requests` HTTP request header tells the server that the response should redirect to a secure (HTTPS) resource.
 spec: https://w3c.github.io/webappsec-upgrade-insecure-requests/
+caniuse: upgradeinsecurerequests
 group: security
 compat_features:
   - http.headers.Upgrade-Insecure-Requests
