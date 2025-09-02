@@ -1,9 +1,9 @@
-draft_date: 2025-07-10
+draft_date: 2025-09-01
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
-  - api.CustomElementRegistry.define.connectedMoveCallback_lifecycle_callback
+  - api.Document.designMode
   - api.Document.featurePolicy
   - api.ElementInternals.shadowRoot
   - api.ErrorEvent
@@ -20,8 +20,6 @@ compat_features:
   - api.HTMLBaseElement.href.forbid_data_javascript_urls
   - api.HTMLBaseElement.href.forbid_special_characters
   - api.HTMLButtonElement.command.request-close
-  - api.HTMLCanvasElement.getContext.bitmaprenderer_context
-  - api.HTMLCanvasElement.getContext.bitmaprenderer_context.options_alpha_parameter
   - api.HTMLCanvasElement.toBlob.quality_parameter
   - api.HTMLCanvasElement.toBlob.type_parameter_jpeg
   - api.HTMLCanvasElement.toBlob.type_parameter_png
@@ -54,13 +52,26 @@ compat_features:
   - api.HTMLSourceElement.type
   - api.HTMLSourceElement.width
   - api.HTMLUnknownElement
-  - api.HTMLVideoElement.playsInline
   - api.ImageData.ImageData.settings_parameter
   - api.ImageData.ImageData.settings_parameter.colorSpace_option
+  - api.ImageData.ImageData.settings_parameter.pixelFormat_option
   - api.ImageData.pixelFormat
   - api.MouseEvent.relatedTarget.drag_events
   - api.NavigateEvent.sourceElement
+  - api.Navigator.appCodeName
+  - api.Navigator.appName
+  - api.Navigator.appVersion
   - api.Navigator.authentication
+  - api.Navigator.javaEnabled
+  - api.Navigator.mimeTypes
+  - api.Navigator.oscpu
+  - api.Navigator.platform
+  - api.Navigator.plugins
+  - api.Navigator.product
+  - api.Navigator.productSub
+  - api.Navigator.taintEnabled
+  - api.Navigator.vendor
+  - api.Navigator.vendorSub
   - api.OffscreenCanvasRenderingContext2D.getContextAttributes
   - api.OffscreenCanvasRenderingContext2D.lang
   - api.PromiseRejectionEvent
@@ -72,6 +83,7 @@ compat_features:
   - api.ServiceWorker.error_event
   - api.ShadowRoot.activeElement
   - api.ShadowRoot.innerHTML
+  - api.ToggleEvent.source
   - api.TrackEvent
   - api.TrackEvent.TrackEvent
   - api.TrackEvent.track
@@ -86,6 +98,7 @@ compat_features:
   - api.reportError
   - api.setInterval.supports_parameters_for_callback
   - api.setTimeout.supports_parameters_for_callback
+  - html.elements.button.command.request-close
   - html.elements.form.autocomplete.new-password
   - html.elements.form.autocomplete.one-time-code
   - html.elements.form.autocomplete.webauthn
@@ -110,7 +123,6 @@ compat_features:
   - html.elements.textarea.autocomplete.one-time-code
   - html.elements.textarea.autocomplete.webauthn
   - html.elements.track.kind.descriptions
-  - html.elements.video.playsinline
   - html.global_attributes.class
   - html.global_attributes.data_attributes
   - html.global_attributes.dir
@@ -363,6 +375,8 @@ compat_features:
 # - Customized built-in elements:
 #   - api.CustomElementRegistry.builtin_element_support
 #   - html.global_attributes.is
+# - moveBefore():
+#   - api.CustomElementRegistry.define.connectedMoveCallback_lifecycle_callback
 # - :state():
 #   - api.CustomStateSet
 #   - api.CustomStateSet.@@iterator
@@ -403,7 +417,6 @@ compat_features:
 #   - api.Document.body
 #   - api.Document.currentScript
 #   - api.Document.defaultView
-#   - api.Document.designMode
 #   - api.Document.dir
 #   - api.Document.embeds
 #   - api.Document.forms
@@ -955,6 +968,12 @@ compat_features:
 #   - api.HTMLCanvasElement.getContext.2d_context.options_desynchronized_parameter
 # - willReadFrequently:
 #   - api.HTMLCanvasElement.getContext.2d_context.options_willReadFrequently_parameter
+# - ImageBitmapRenderingContext:
+#   - api.HTMLCanvasElement.getContext.bitmaprenderer_context
+#   - api.HTMLCanvasElement.getContext.bitmaprenderer_context.options_alpha_parameter
+#   - api.ImageBitmapRenderingContext
+#   - api.ImageBitmapRenderingContext.canvas
+#   - api.ImageBitmapRenderingContext.transferFromImageBitmap
 # - WebGL2:
 #   - api.HTMLCanvasElement.getContext.webgl2_context
 # - WebGL:
@@ -1483,6 +1502,7 @@ compat_features:
 #   - api.HTMLMediaElement.waiting_event
 #   - api.HTMLVideoElement
 #   - api.HTMLVideoElement.height
+#   - api.HTMLVideoElement.playsInline
 #   - api.HTMLVideoElement.poster
 #   - api.HTMLVideoElement.resize_event
 #   - api.HTMLVideoElement.videoHeight
@@ -1502,6 +1522,7 @@ compat_features:
 #   - html.elements.video.height
 #   - html.elements.video.loop
 #   - html.elements.video.muted
+#   - html.elements.video.playsinline
 #   - html.elements.video.poster
 #   - html.elements.video.preload
 #   - html.elements.video.src
@@ -1894,9 +1915,6 @@ compat_features:
 #   - api.ImageBitmap.close
 #   - api.ImageBitmap.height
 #   - api.ImageBitmap.width
-#   - api.ImageBitmapRenderingContext
-#   - api.ImageBitmapRenderingContext.canvas
-#   - api.ImageBitmapRenderingContext.transferFromImageBitmap
 #   - api.createImageBitmap
 #   - api.createImageBitmap.options_colorSpaceConversion_parameter
 #   - api.createImageBitmap.options_imageOrientation_parameter
@@ -2184,8 +2202,6 @@ compat_features:
 # - requestAnimationFrame():
 #   - api.Window.cancelAnimationFrame
 #   - api.Window.requestAnimationFrame
-# - fetchLater:
-#   - api.Window.fetchLater
 # - Attribution reporting:
 #   - api.Window.open.features_parameter_attributionsrc
 # - Window management:
@@ -2275,7 +2291,7 @@ compat_features:
 #   - css.selectors.visited.privacy_measures
 # - :modal:
 #   - css.selectors.modal
-# - Open and closed selectors:
+# - :open:
 #   - css.selectors.open
 # - :placeholder-shown:
 #   - css.selectors.placeholder-shown
@@ -2410,6 +2426,8 @@ compat_features:
 #   - html.elements.search
 # - <section>:
 #   - html.elements.section
+# - Customizable <select>:
+#   - html.elements.selectedcontent
 # - <small>:
 #   - html.elements.small
 # - <source>:

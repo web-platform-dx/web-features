@@ -17,6 +17,16 @@ compat_features:
   #   safari: "1"
   #   safari_ios: "1"
   - api.HTMLElement.error_event
+  - api.Navigator.appCodeName
+  - api.Navigator.appName
+  - api.Navigator.appVersion
+  - api.Navigator.javaEnabled
+  - api.Navigator.mimeTypes
+  - api.Navigator.platform
+  - api.Navigator.plugins
+  - api.Navigator.product
+  - api.Navigator.productSub
+  - api.Navigator.vendor
   - html.elements.html.xmlns
   - http.headers.Refresh
 
@@ -49,6 +59,7 @@ compat_features:
   - api.HTMLOptionsCollection.add
   - api.HTMLOptionsCollection.length
   - api.HTMLOptionsCollection.selectedIndex
+  - api.Navigator.vendorSub
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -461,24 +472,24 @@ compat_features:
   #   chrome: "66"
   #   chrome_android: "66"
   #   edge: "79"
-  #   firefox: "46"
-  #   firefox_android: "46"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - api.HTMLCanvasElement.getContext.bitmaprenderer_context
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "66"
-  #   chrome_android: "66"
-  #   edge: "79"
   #   firefox: "59"
   #   firefox_android: "59"
   #   safari: "9.1"
   #   safari_ios: "9.3"
   - html.elements.select.autocomplete
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "36"
+  #   chrome_android: "36"
+  #   edge: "12"
+  #   firefox: "69"
+  #   firefox_android: "79"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.Document.designMode
 
   # baseline: high
   # baseline_low_date: 2020-07-28
@@ -565,8 +576,9 @@ compat_features:
   - api.HTMLSourceElement.height
   - api.HTMLSourceElement.width
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-01-17
+  # baseline_high_date: 2025-07-17
   # support:
   #   chrome: "93"
   #   chrome_android: "84"
@@ -639,6 +651,30 @@ compat_features:
   #   safari_ios: "18"
   - html.elements.script.type.importmap.integrity
 
+  # baseline: low
+  # baseline_low_date: 2025-07-22
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "116"
+  #   edge: "116"
+  #   firefox: "141"
+  #   firefox_android: "141"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - api.HTMLElement.togglePopover.force_parameter
+
+  # baseline: low
+  # baseline_low_date: 2025-07-22
+  # support:
+  #   chrome: "130"
+  #   chrome_android: "130"
+  #   edge: "130"
+  #   firefox: "141"
+  #   firefox_android: "141"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - api.HTMLElement.togglePopover.options_force_parameter
+
   # baseline: false
   # support:
   #   chrome: "4"
@@ -705,31 +741,12 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "66"
-  #   chrome_android: "66"
-  #   edge: "79"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - api.HTMLCanvasElement.getContext.bitmaprenderer_context.options_alpha_parameter
-
-  # baseline: false
-  # support:
   #   chrome: "68"
   #   chrome_android: "68"
   #   edge: "79"
   #   firefox: ≤49
   #   firefox_android: ≤49
   - html.elements.iframe.sandbox.allow-orientation-lock
-
-  # baseline: false
-  # support:
-  #   chrome: "75"
-  #   chrome_android: "75"
-  #   edge: "79"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - api.HTMLVideoElement.playsInline
-  - html.elements.video.playsinline
 
   # baseline: false
   # support:
@@ -768,24 +785,6 @@ compat_features:
   #   firefox: "123"
   #   firefox_android: "123"
   - http.status.103.preload
-
-  # baseline: false
-  # support:
-  #   chrome: "116"
-  #   chrome_android: "116"
-  #   edge: "116"
-  #   safari: "17"
-  #   safari_ios: "17"
-  - api.HTMLElement.togglePopover.force_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "130"
-  #   chrome_android: "130"
-  #   edge: "130"
-  #   safari: "18.4"
-  #   safari_ios: "18.4"
-  - api.HTMLElement.togglePopover.options_force_parameter
 
   # baseline: false
   # support:
@@ -885,13 +884,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "133"
-  #   chrome_android: "133"
-  #   edge: "133"
-  - api.CustomElementRegistry.define.connectedMoveCallback_lifecycle_callback
-
-  # baseline: false
-  # support:
   #   chrome: "134"
   #   chrome_android: "134"
   #   edge: "134"
@@ -909,7 +901,23 @@ compat_features:
   #   chrome: "137"
   #   chrome_android: "137"
   #   edge: "137"
+  - api.ImageData.ImageData.settings_parameter.pixelFormat_option
   - api.ImageData.pixelFormat
+
+  # baseline: false
+  # support:
+  #   chrome: "139"
+  #   chrome_android: "139"
+  #   edge: "139"
+  - api.HTMLButtonElement.command.request-close
+  - html.elements.button.command.request-close
+
+  # baseline: false
+  # support:
+  #   firefox: "1"
+  #   firefox_android: "4"
+  - api.Navigator.oscpu
+  - api.Navigator.taintEnabled
 
   # baseline: false
   # support:
@@ -951,7 +959,7 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - api.HTMLButtonElement.command.request-close
   - api.Navigator.authentication
+  - api.ToggleEvent.source
   - html.elements.hr.hr_in_select
   - html.elements.track.kind.descriptions

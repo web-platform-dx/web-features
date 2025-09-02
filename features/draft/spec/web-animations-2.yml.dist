@@ -4,8 +4,21 @@
 status:
   baseline: false
   support:
-    chrome: "133"
-    chrome_android: "133"
-    edge: "133"
+    firefox: "142"
+    firefox_android: "142"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "133"
+  #   chrome_android: "133"
+  #   edge: "133"
+  #   firefox: "142"
+  #   firefox_android: "142"
   - api.Animation.overallProgress
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   firefox: "142"
+  #   firefox_android: "142"
+  - api.Animation.commitStyles.endpoint_inclusive_commitStyles

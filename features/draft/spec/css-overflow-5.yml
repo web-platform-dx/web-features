@@ -1,8 +1,11 @@
-draft_date: 2025-03-25
+draft_date: 2025-08-15
 name: CSS Overflow Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-overflow-5/
 compat_features:
+  - css.properties.scroll-target-group
+  - css.properties.scroll-target-group.auto
+  - css.properties.scroll-target-group.none
   - css.selectors.scroll-button
   - css.selectors.scroll-button.block-end
   - css.selectors.scroll-button.block-start

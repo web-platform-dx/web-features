@@ -1,0 +1,22 @@
+name: Sanitizer API
+description: The `Document.parseHTML()` static method and the `setHTML()` method of `Element` and `ShadowRoot` objects parse and insert HTML into the DOM in a way that can prevent cross-site scripting attacks. The `Sanitizer` API can customize the sanitization process.
+spec: https://wicg.github.io/sanitizer-api/
+compat_features:
+  # The main entry points.
+  # There are unsafe variants to these methods in `parse-html-unsafe.yml`.
+  - api.Element.setHTML
+  - api.ShadowRoot.setHTML
+  - api.Document.parseHTML_static
+  # The Sanitizer interface can optionally be used for custom HTML
+  # sanitization.
+  - api.Sanitizer
+  - api.Sanitizer.Sanitizer
+  - api.Sanitizer.allowAttribute
+  - api.Sanitizer.allowElement
+  - api.Sanitizer.get
+  - api.Sanitizer.removeAttribute
+  - api.Sanitizer.removeElement
+  - api.Sanitizer.removeUnsafe
+  - api.Sanitizer.replaceElementWithChildren
+  - api.Sanitizer.setComments
+  - api.Sanitizer.setDataAttributes
