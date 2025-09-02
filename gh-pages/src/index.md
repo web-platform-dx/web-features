@@ -23,35 +23,21 @@ Baseline is calculated using the following core browser set:
 - Microsoft Edge (desktop)
 - Mozilla Firefox (desktop and Android)
 
+## What about other browsers?
+
+Many browsers outside the core browser set typically support the same Baseline feature set as a browser in the core browser set.
+
+For example, many browsers on Android, Windows, and macOS are built on Chromium, the open source engine underpinning Chrome and Edge. On iOS, all browsers use the same engine, WebKit, that underpins that device's Safari browser.
+
+For a wider range of browsers, see [supported browsers](/supported-browsers/?includeDownstream=true) to find out which minimum browser versions support different Baseline feature sets, including Newly and Widely available and Baseline years.
+
+The [`baseline-browser-mapping`](https://github.com/web-platform-dx/baseline-browser-mapping) module tracks these mappings to derive the feature set for browsers outside the core browser set.
+
 ## How do I find the Baseline status of a feature?
 
 You can find at-a-glance Baseline statuses on [Can I Use](https://caniuse.com/) feature entries, and [MDN Web Docs](https://developer.mozilla.org/) reference pages. See [Baseline in the wild](/baseline-in-the-wild/) for more examples.
 
 You can [use Baseline on your site](/use-baseline/) too.
-
-## What about other browsers?
-
-Most modern browsers are built on the rendering engine from one of the browsers in the Baseline core browser set.
-
-All browsers on iOS currently implement WebKit, the Safari rendering engine.
-
-The majority of browsers outside the core browser set on Android, Windows and macOS are built on Chromium/Blink, the open source engine underpinning Chrome and Edge. These browsers can usually be mapped back to the Baseline feature set they support based on the Chromium version they implement. The [`baseline-browser-mapping`](https://github.com/web-platform-dx/baseline-browser-mapping) module tracks these mappings, and currently includes data on the following browsers:
-
-- Opera Desktop and Mobile
-- Samsung Internet
-- Android WebView
-- QQ Browser Mobile\*
-- UC Browser Mobile\*
-- Yandex Browser Mobile\*
-
-See [supported browsers](/supported-browsers/?includeDownstream=true) to find out which minimum browser versions support different Baseline feature sets, includeing Newly and Widely available and Baseline years.
-
-> **NOTE**
-> Baseline support for the browsers marked with an asterisk (\*) is based on mapping their version number and stated Chromium version from user agent strings captured by [useragents.io](https://useragents.io). This information is provided on a best-effort basis. For more information on how these mappings are generated, please see [the `baseline-browser-mapping` README](https://github.com/web-platform-dx/baseline-browser-mapping/blob/main/README.md#downstream-browsers).
-
-KaiOS - a feature phone operating system used for flip phones - implements the Gecko engine from Firefox. It is possible to derive feature support in KaiOS based on Gecko feature support, but please be aware that KaiOS has a significantly different set of UI limitations and interaction model compared to the other browsers on this page. For more information, see the [KaiOS developer documentation](https://developer.kaiostech.com/docs/sfp-3.0/).
-
-Other browsers built on Chromium/Blink, Gecko and WebKit will also support Baseline features, and the WebDX Community Group is continuing to work on mapping downstream browser versions back to the engine they implement. If you work on a browser and can provide data connecting your versions back to their upstream engine for `baseline-browser-mapping`, please [create an issue in the repository](https://github.com/web-platform-dx/baseline-browser-mapping/issues/new).
 
 ## Who owns and maintains Baseline?
 
