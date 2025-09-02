@@ -106,9 +106,9 @@ layout: "default.html"
     qq_android: "QQ Browser Mobile",
     uc_android: "UC Browser Mobile",
     ya_android: "Yandex Browser Mobile",
-    kai_os: "KaiOS"
+    kai_os: "KaiOS",
   };
-  const calloutDownstreamBrowsers = ["kai_os", "webview_android"]
+  const calloutDownstreamBrowsers = ["kai_os", "webview_android"];
   const datePicker = document.getElementById("widelyAvailableOnDatePicker");
   const targetSelect = document.getElementById("targetSelect");
   const nextYear = new Date().getFullYear() + 1;
@@ -148,7 +148,7 @@ layout: "default.html"
         .map((version) => {
           return (
             `<tr view-transition-name="view-transition-${version.browser}">` +
-            `<td>${nameMappings[version.browser]}${calloutDownstreamBrowsers.indexOf(version.browser) != -1 ? '*' : ''}</td>
+            `<td>${nameMappings[version.browser]}${calloutDownstreamBrowsers.indexOf(version.browser) != -1 ? "*" : ""}</td>
           <td>${version.version}</td>
           <td>${version.engine}</td>
           <td>${version.engine_version}</td>
@@ -165,7 +165,7 @@ layout: "default.html"
     const versions = getCompatibleVersions({
       ...config,
       includeDownstreamBrowsers: true,
-      includeKaiOS: true
+      includeKaiOS: true,
     });
 
     if (!document.startViewTransition) {
@@ -320,7 +320,6 @@ layout: "default.html"
   <label id="widelyAvailableOnDateLabel">
     <input id="widelyAvailableOnDatePicker" min="2018-01-29" type="date" />
   </label>
-
 </div>
 
 <div id="loadingContainer"></div>
@@ -339,24 +338,35 @@ layout: "default.html"
     in these browsers if they make up a significant portion of your user base.
     To learn more about how these version mappings were calculated, see
     <a
-      href="https://github.com/web-platform-dx/baseline-browser-mapping/#downstream-browsers">baseline-browser-mapping</a>.
+      href="https://github.com/web-platform-dx/baseline-browser-mapping/#downstream-browsers"
+      >baseline-browser-mapping</a
+    >.
   </p>
   <table id="downstreamVersionsList"></table>
-  <p><strong>* NOTE:</strong> Android WebView supports the majority of Baseline features. However, there are exceptions
-    that you should take into account if you rely heavily on webviews. For details on which APIs are unsupported in
-    Android and iOS webviews, see <a href="https://caniwebview.com">caniwebview.com</a></p>
-  <p><strong>* NOTE:</strong> KaiOS is a feature phone operating system used for flip phones which implements the Gecko
-    engine
-    from Firefox. It is possible
-    to derive feature support in KaiOS based on Gecko feature support, but please be aware that KaiOS has a
-    significantly
-    different set of UI limitations and interaction model compared to the other browsers on this page. For more
-    information,
-    see the KaiOS developer documentation.</p>
-  <p>Other browsers built on Chromium/Blink, Gecko and WebKit will also support Baseline features. If you work on a
-    browser and can provide data connecting your versions back to their upstream engine for
-    <code>baseline-browser-mapping</code>,
-    please
-    <a href="https://github.com/web-platform-dx/baseline-browser-mapping/issues" target="_blank">create an issue</a>.
+  <p>
+    <strong>* NOTE:</strong> Android WebView supports the majority of Baseline
+    features. However, there are exceptions that you should take into account if
+    you rely heavily on webviews. For details on which APIs are unsupported in
+    Android and iOS webviews, see
+    <a href="https://caniwebview.com">caniwebview.com</a>
+  </p>
+  <p>
+    <strong>* NOTE:</strong> KaiOS is a feature phone operating system used for
+    flip phones which implements the Gecko engine from Firefox. It is possible
+    to derive feature support in KaiOS based on Gecko feature support, but
+    please be aware that KaiOS has a significantly different set of UI
+    limitations and interaction model compared to the other browsers on this
+    page. For more information, see the KaiOS developer documentation.
+  </p>
+  <p>
+    Other browsers built on Chromium/Blink, Gecko and WebKit will also support
+    Baseline features. If you work on a browser and can provide data connecting
+    your versions back to their upstream engine for
+    <code>baseline-browser-mapping</code>, please
+    <a
+      href="https://github.com/web-platform-dx/baseline-browser-mapping/issues"
+      target="_blank"
+      >create an issue</a
+    >.
   </p>
 </div>
