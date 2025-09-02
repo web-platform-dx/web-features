@@ -4,8 +4,6 @@ import { Compat, defaultCompat } from "./compat.js";
 import { Release } from "./release.js";
 import {
   Qualifications,
-  RealSupportStatement,
-  statement,
   Supported,
   SupportStatement,
   UnknownSupport,
@@ -95,12 +93,11 @@ export class Feature {
   }
 
   /**
-   * Get this feature's `SupportStatement` or `RealSupportStatement` objects,
-   * for a given browser.
+   * Get this feature's `SupportStatement` objects, for a given browser.
    */
   supportStatements(browser: Browser): SupportStatement[] {
-    return this.rawSupportStatements(browser).map((raw) =>
-      statement(raw, browser, this),
+    return this.rawSupportStatements(browser).map(
+      (raw) => new SupportStatement(raw, browser, this),
     );
   }
 
@@ -114,8 +111,6 @@ export class Feature {
   ): (Supported | Unsupported | UnknownSupport)[] {
     const result = [];
     for (const s of this.supportStatements(release.browser)) {
-      this.assertRealSupportStatement(s, release.browser);
-
       result.push(s.supportedInDetails(release));
     }
     return result;
@@ -130,8 +125,6 @@ export class Feature {
   supportedIn(release: Release): boolean | null {
     let unknown = false;
     for (const s of this.supportStatements(release.browser)) {
-      this.assertRealSupportStatement(s, release.browser);
-
       const supported = s.supportedInDetails(release);
       if (supported.supported && !supported.qualifications) {
         return true;
@@ -152,8 +145,6 @@ export class Feature {
   ): { release: Release; qualifications?: Qualifications }[] {
     const result = [];
     for (const s of this.supportStatements(browser)) {
-      this.assertRealSupportStatement(s, browser);
-
       result.push(...s.supportedBy());
     }
 
@@ -174,18 +165,5 @@ export class Feature {
       result.push(...this._supportedBy(b));
     }
     return result;
-  }
-
-  /**
-   * Throws when a support statement contains non-real values.
-   */
-  assertRealSupportStatement(
-    statement: SupportStatement,
-    browser: Browser,
-  ): asserts statement is RealSupportStatement {
-    if (!(statement instanceof RealSupportStatement))
-      throw new Error(
-        `${this.id} contains non-real values for ${browser.name}. Cannot expand support.`,
-      );
   }
 }

@@ -1,10 +1,11 @@
-draft_date: 2025-06-19
+draft_date: 2025-09-01
 name: CSS Object Model (CSSOM)
 description: TODO
 spec: https://drafts.csswg.org/cssom-1/
 compat_features:
   - api.CSSStyleProperties
   - api.CSSStyleProperties.cssFloat
+  - api.Document.adoptedStyleSheets.mutable
 
 # The following features in the spec are already part of web-features:
 # - CSS object model:

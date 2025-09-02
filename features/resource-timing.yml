@@ -1,4 +1,4 @@
-name: Resource timing (initial support)
+name: Resource timing
 description: "`PerformanceResourceTiming` entries report when network events happen while loading a resource, such as when connections start and end. You can use this information to measure loading times."
 spec: https://w3c.github.io/resource-timing/
 group: performance
@@ -6,6 +6,9 @@ caniuse: resource-timing
 status:
   compute_from: api.PerformanceResourceTiming
 compat_features:
+  - api.Performance.clearResourceTimings
+  - api.Performance.resourcetimingbufferfull_event
+  - api.Performance.setResourceTimingBufferSize
   - api.PerformanceResourceTiming
   - api.PerformanceResourceTiming.connectEnd
   - api.PerformanceResourceTiming.connectStart
