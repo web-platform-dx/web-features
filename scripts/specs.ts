@@ -122,10 +122,6 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because this is where the application-title meta tag is spec'd at the moment. Remove when https://github.com/whatwg/html/issues/8909 is fixed."
     ],
     [
-        "https://github.com/whatwg/dom/pull/1307",
-        "This is only place moveBefore() is spec'd. Remove this exception when https://github.com/whatwg/dom/pull/1307 merges."
-    ],
-    [
         "https://www.w3.org/TR/2018/SPSD-html5-20180327/embedded-content-0.html#synchronising-multiple-media-elements",
         "Allowed for the mediacontroller feature. This is the superseded HTML5 spec that still contains MediaController."
     ],
@@ -134,8 +130,8 @@ const defaultAllowlist: allowlistItem[] = [
         "This is where fetchLater() is in the process of being spec'd. Once the PR merges, change the spec url in fetchlater.yml, and remove this exception."
     ],
     [
-        "https://wicg.github.io/local-network-access/",
-        "This is missing from web-specs. Remove this when https://github.com/w3c/browser-specs/issues/1953 is resolved."
+        "https://wicg.github.io/private-network-access/",
+        "Allowed for private-network-access feature. Feature and spec succeeded by local-network-access."
     ]
 ];
 

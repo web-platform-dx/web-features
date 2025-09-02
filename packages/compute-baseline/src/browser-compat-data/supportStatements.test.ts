@@ -1,30 +1,9 @@
 import assert from "node:assert/strict";
 
 import { browser } from "./browser.js";
-import {
-  RealSupportStatement,
-  SupportStatement,
-  statement,
-} from "./supportStatements.js";
+import { SupportStatement } from "./supportStatements.js";
 
 describe("statements", function () {
-  describe("statement()", function () {
-    it("upgrades support statements", function () {
-      const v1 = statement(new SupportStatement({ version_added: "1" }));
-      assert(v1 instanceof RealSupportStatement);
-    });
-
-    it("passes through real support statements", function () {
-      const original = new RealSupportStatement({ version_added: "2" });
-      assert(original === statement(original));
-    });
-
-    it("accepts raw support statement objects", function () {
-      const v3 = statement({ version_added: "3" });
-      assert(v3 instanceof RealSupportStatement);
-    });
-  });
-
   describe("SupportStatement", function () {
     describe("#flags", function () {
       const s = {
@@ -75,16 +54,6 @@ describe("statements", function () {
         });
         assert.equal(s.version_added, "1");
       });
-
-      it("returns false for undefined", function () {
-        const s = new SupportStatement({});
-        assert.equal(s.version_added, false);
-      });
-
-      it("returns null for null", function () {
-        const s = new SupportStatement({ version_added: null });
-        assert.equal(s.version_added, null);
-      });
     });
 
     describe("#version_removed", function () {
@@ -96,85 +65,15 @@ describe("statements", function () {
         assert.equal(s.version_removed, "2");
       });
 
-      it("returns false", function () {
-        const s = new SupportStatement({
-          version_added: "1",
-          version_removed: false,
-        });
-        assert.equal(s.version_removed, false);
-      });
-
       it("returns undefined", function () {
         const s = new SupportStatement({ version_added: "1" });
         assert.equal(s.version_removed, undefined);
       });
     });
-  });
-
-  describe("RealSupportStatement", function () {
-    describe("#constructor", function () {
-      it("throws for empty support statement", function () {
-        assert.throws(() => new RealSupportStatement({}));
-      });
-
-      it("throws for missing version_added", function () {
-        assert.throws(
-          () => new RealSupportStatement({ version_removed: false }),
-        );
-      });
-
-      it("throws for explicitly undefined version_added or version_removed", function () {
-        assert.throws(
-          () => new RealSupportStatement({ version_added: undefined }),
-        );
-        assert.throws(
-          () =>
-            new RealSupportStatement({
-              version_added: "1",
-              version_removed: undefined,
-            }),
-        );
-      });
-
-      it("throws for null version_added or version_removed", function () {
-        assert.throws(() => new RealSupportStatement({ version_added: null }));
-        assert.throws(
-          () =>
-            new RealSupportStatement({
-              version_added: "1",
-              version_removed: null,
-            }),
-        );
-      });
-
-      it("throws for true version_added or version_removed", function () {
-        assert.throws(() => new RealSupportStatement({ version_added: true }));
-        assert.throws(
-          () =>
-            new RealSupportStatement({
-              version_added: "1",
-              version_removed: true,
-            }),
-        );
-      });
-
-      it("does not throw for false version_added or version_removed", function () {
-        assert.doesNotThrow(
-          () => new RealSupportStatement({ version_added: false }),
-        );
-        assert.doesNotThrow(
-          () =>
-            new RealSupportStatement({
-              version_added: "1",
-              version_removed: false,
-            }),
-        );
-      });
-    });
 
     describe("#supportedBy", function () {
       it("returns an array of releases represented by the statement", function () {
-        const st = new RealSupportStatement(
+        const st = new SupportStatement(
           { version_added: "1" },
           browser("chrome"),
         );
@@ -187,7 +86,7 @@ describe("statements", function () {
       // of that range? If so, you should be able to opt-in to warnings or
       // errors about it.
       it("handles ≤ gracefully", function () {
-        const st = new RealSupportStatement(
+        const st = new SupportStatement(
           { version_added: "≤11" },
           browser("chrome"),
         );
@@ -199,12 +98,12 @@ describe("statements", function () {
     describe("supportedIn()", function () {
       it("throws when browser is undefined", function () {
         const cr = browser("chrome");
-        const statement = new RealSupportStatement({ version_added: "1" });
+        const statement = new SupportStatement({ version_added: "1" });
         assert.throws(() => statement.supportedInDetails(cr.current()), Error);
       });
 
       it("throws when release does not correspond to the statement's browser", function () {
-        const statement = new RealSupportStatement(
+        const statement = new SupportStatement(
           { version_added: "1" },
           browser("chrome"),
         );
@@ -216,8 +115,8 @@ describe("statements", function () {
 
       it("returns supported when release is on after version_added", function () {
         const cr = browser("chrome");
-        const unranged = new RealSupportStatement({ version_added: "100" }, cr);
-        const ranged = new RealSupportStatement({ version_added: "≤100" }, cr);
+        const unranged = new SupportStatement({ version_added: "100" }, cr);
+        const ranged = new SupportStatement({ version_added: "≤100" }, cr);
 
         assert.equal(
           unranged.supportedInDetails(cr.version("100")).supported,
@@ -254,11 +153,11 @@ describe("statements", function () {
 
       it("returns supported when release is on after version_added and before version_removed", function () {
         const cr = browser("chrome");
-        const unranged = new RealSupportStatement(
+        const unranged = new SupportStatement(
           { version_added: "100", version_removed: "125" },
           cr,
         );
-        const ranged = new RealSupportStatement(
+        const ranged = new SupportStatement(
           { version_added: "≤100", version_removed: "125" },
           cr,
         );
@@ -308,11 +207,8 @@ describe("statements", function () {
 
       it("returns unknown support when release is before ranged version_added", function () {
         const cr = browser("chrome");
-        const rangedOpen = new RealSupportStatement(
-          { version_added: "≤100" },
-          cr,
-        );
-        const rangedClosed = new RealSupportStatement(
+        const rangedOpen = new SupportStatement({ version_added: "≤100" }, cr);
+        const rangedClosed = new SupportStatement(
           { version_added: "≤100", version_removed: "125" },
           cr,
         );
@@ -329,7 +225,7 @@ describe("statements", function () {
 
       it("returns unknown support when release is after version_added and before ranged version_removed", function () {
         const cr = browser("chrome");
-        const rangedEnd = new RealSupportStatement(
+        const rangedEnd = new SupportStatement(
           { version_added: "100", version_removed: "≤125" },
           cr,
         );
@@ -354,10 +250,7 @@ describe("statements", function () {
 
       it("returns unsupported when statement is version_added false", function () {
         const cr = browser("chrome");
-        const statement = new RealSupportStatement(
-          { version_added: false },
-          cr,
-        );
+        const statement = new SupportStatement({ version_added: false }, cr);
 
         for (const release of cr.releases) {
           assert.equal(statement.supportedInDetails(release).supported, false);
@@ -366,7 +259,7 @@ describe("statements", function () {
 
       it("returns unsupported when release is before fixed version_added", function () {
         const cr = browser("chrome");
-        const unranged = new RealSupportStatement({ version_added: "100" }, cr);
+        const unranged = new SupportStatement({ version_added: "100" }, cr);
         assert.equal(
           unranged.supportedInDetails(cr.version("99")).supported,
           false,
@@ -376,7 +269,7 @@ describe("statements", function () {
       it("returns unsupported when release is on or after version_removed", function () {
         const cr = browser("chrome");
 
-        const unranged = new RealSupportStatement(
+        const unranged = new SupportStatement(
           { version_added: "1", version_removed: "10" },
           cr,
         );
@@ -397,7 +290,7 @@ describe("statements", function () {
           false,
         );
 
-        const ranged = new RealSupportStatement(
+        const ranged = new SupportStatement(
           { version_added: "≤5", version_removed: "10" },
           cr,
         );

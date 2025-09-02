@@ -1,6 +1,7 @@
 name: Cookies
 description: The `Set-Cookie` HTTP header stores limited amounts of data that persist across request and response, creating shared state between the browser and server.
 spec: https://httpwg.org/specs/rfc6265.html
+group: cookies
 status:
   compute_from: http.headers.Cookie
 compat_features:
