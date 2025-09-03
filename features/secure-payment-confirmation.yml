@@ -1,0 +1,7 @@
+name: Secure payment confirmation
+description: Secure payment confirmation (SPC) adds a `payment` extension to WebAuthn which allows a relying party (e.g. a bank) to create a `PublicKeyCredential` that can be queried by any merchant origin as part of an online checkout via the Payment Request API using the `secure-payment-confirmation` payment method.
+spec: https://w3c.github.io/secure-payment-confirmation/
+group: payments
+compat_features:
+  - api.CredentialsContainer.create.publicKey_option.extensions.payment
+  - api.PaymentRequest.securePaymentConfirmationAvailability_static
