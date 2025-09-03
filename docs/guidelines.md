@@ -94,6 +94,9 @@ You can do this when:
 
 * Data consumers report that the original feature ID is confusing or misleading.
 
+You must not do this when the feature has been superseded, such that the feature's name has changed and the exposed behaviors or API surface have changed (in shipping browsers, up to and including unshipping).
+Instead, use [`discouraged` data](#discouraged) with one or more `alternatives`.
+
 To move the feature:
 
 1. If applicable, move the existing YAML files for the feature to the target ID filename.
@@ -414,6 +417,6 @@ When you set a `discouraged` block in a feature file, do:
   If possible, use the single most broadly applicable reference, such as specification text.
   If a feature is removed from a specification, link to an issue, pull request, or commit showing the removal.
 
-- Set one or more (optional) `alternative` feature IDs that are whole or partial substitutes for the discouraged feature.
+- Set one or more (optional) `alternatives` feature IDs that are whole or partial substitutes for the discouraged feature.
   An alternative doesn't have to be a narrow drop-in replacement for the discouraged feature but it must handle some use case of the discouraged feature.
   Guide developers to the most relevant features that would help them stop using the discouraged feature.
