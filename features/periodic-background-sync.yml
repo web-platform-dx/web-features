@@ -1,5 +1,5 @@
 name: Periodic background sync
-description: The background synchronization API fires a recurring `periodicsync` event in a service worker. You can use this to update data in the background at regular intervals.
+description: The periodic background synchronization API fires a recurring `periodicsync` event in a service worker. You can use this to update data in the background at regular intervals.
 spec: https://wicg.github.io/periodic-background-sync/
 compat_features:
   - api.PeriodicSyncEvent
