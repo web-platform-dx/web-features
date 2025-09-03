@@ -1,4 +1,4 @@
-draft_date: 2025-08-15
+draft_date: 2025-09-01
 name: Selectors Level 4
 description: TODO
 spec: https://drafts.csswg.org/selectors-4/
@@ -53,9 +53,6 @@ compat_features:
 #   - css.selectors.checked
 #   - css.selectors.disabled
 #   - css.selectors.enabled
-# - Open and closed selectors:
-#   - css.selectors.closed
-#   - css.selectors.open
 # - :default:
 #   - css.selectors.default
 # - Autonomous custom elements:
@@ -123,6 +120,8 @@ compat_features:
 # - :nth-child() of <selector>:
 #   - css.selectors.nth-child.of_syntax
 #   - css.selectors.nth-last-child.of_syntax
+# - :open:
+#   - css.selectors.open
 # - Picture-in-picture (video):
 #   - css.selectors.picture-in-picture
 # - :placeholder-shown:

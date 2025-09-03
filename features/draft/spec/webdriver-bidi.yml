@@ -1,4 +1,4 @@
-draft_date: 2025-08-15
+draft_date: 2025-09-01
 name: WebDriver BiDi
 description: TODO
 spec: https://w3c.github.io/webdriver-bidi/
@@ -13,6 +13,8 @@ compat_features:
   - webdriver.bidi.browser.getUserContexts
   - webdriver.bidi.browser.removeUserContext
   - webdriver.bidi.browser.removeUserContext.userContext_parameter
+  - webdriver.bidi.browser.setClientWindowState
+  - webdriver.bidi.browser.setClientWindowState.clientWindow_parameter
   - webdriver.bidi.browsingContext
   - webdriver.bidi.browsingContext.activate
   - webdriver.bidi.browsingContext.activate.context_parameter
@@ -134,6 +136,10 @@ compat_features:
   - webdriver.bidi.browsingContext.userPromptClosed_event.accepted_parameter
   - webdriver.bidi.browsingContext.userPromptClosed_event.context_parameter
   - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter
+  - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.alert
+  - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.beforeunload
+  - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.confirm
+  - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.prompt
   - webdriver.bidi.browsingContext.userPromptClosed_event.userText_parameter
   - webdriver.bidi.browsingContext.userPromptOpened_event
   - webdriver.bidi.browsingContext.userPromptOpened_event.context_parameter
@@ -141,6 +147,10 @@ compat_features:
   - webdriver.bidi.browsingContext.userPromptOpened_event.handler_parameter
   - webdriver.bidi.browsingContext.userPromptOpened_event.message_parameter
   - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter
+  - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.alert
+  - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.beforeunload
+  - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.confirm
+  - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.prompt
   - webdriver.bidi.emulation
   - webdriver.bidi.emulation.setGeolocationOverride
   - webdriver.bidi.emulation.setGeolocationOverride.contexts_parameter
