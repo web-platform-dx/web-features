@@ -61,9 +61,10 @@ See `data.schema.json` for a canonical reference.
 ## `features`
 
 The `features` object contains data for features.
-Each key is a feature ID string and most of the values are ordinary feature objects with names, descriptions, and other data.
+Each key is a feature ID string and values describe the feature.
+Most values are ordinary feature objects with names, descriptions, and other data.
 Some features contain redirects to other features.
-You can distinguish feature objects with value of the `kind` property:
+You can distinguish between ordinary feature objects and redirects by using the `kind` property:
 
 * `"feature"` — ordinary features  
 * `"moved"` — the feature has a redirect to a new key
@@ -105,7 +106,7 @@ It has the following properties:
 
 A feature with the `kind` set to `"moved"` is a redirect to another feature.
 It says that this feature ID is actually best represented by the data given by another ID.
-If you’re showing web-features data to developers, then treat this like a 301 redirect and go directly to the feature it points to.
+If you’re showing web-features data to developers, then treat this like an HTTP 301 redirect and go directly to the feature it points to.
 
 A moved feature has the following properties:
 
@@ -118,7 +119,7 @@ A moved feature has the following properties:
 
 A feature with the `kind` set to `"split"` is a redirect to multiple other features.
 It says that this feature ID is actually best represented by the data given by multiple other features and you (or your users) will have to make a choice about what to do.
-You can think of this kind of feature [like a Wikipedia disambiguation page](https://en.wikipedia.org/wiki/Joker).
+You can think of this kind of feature like a [Wikipedia disambiguation page](https://en.wikipedia.org/wiki/Joker).
 
 A split feature has the following properties:
 
