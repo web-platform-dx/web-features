@@ -7,9 +7,6 @@ compat_features:
   - api.CredentialsContainer.create.publicKey_option.hints
   - api.CredentialsContainer.get.publicKey_option.extensions.prf
   - api.CredentialsContainer.get.publicKey_option.hints
-  - api.PublicKeyCredential.signalAllAcceptedCredentials_static
-  - api.PublicKeyCredential.signalCurrentUserDetails_static
-  - api.PublicKeyCredential.signalUnknownCredential_static
 
 # The following features in the spec are already part of web-features:
 # - Web authentication:
