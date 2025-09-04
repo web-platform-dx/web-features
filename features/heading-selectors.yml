@@ -1,5 +1,5 @@
 name: Heading pseudo-classes
-description: The `:heading` and `:heading()` CSS pseudo-classes match headings of varying levels. The `:heading` pseudo-class matches any heading (`<h1>` through `<h6>`). The `:heading(<integer>#)` selector matches any of the given levels, for example `:heading(1, 2)` will match headings level 1 and 2.
+description: The `:heading` and `:heading()` CSS pseudo-classes match headings of varying levels. The `:heading` pseudo-class matches any heading (`<h1>` through `<h6>`). The `:heading()` selector matches any of the given levels. For example, `:heading(1, 2)` matches headings level 1 and 2.
 spec: https://drafts.csswg.org/selectors-5/#headings
 group: selectors
 compat_features:
