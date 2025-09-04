@@ -74,9 +74,18 @@
                 "type": "string"
               },
               "type": "array"
+            },
+            "reason": {
+              "description": "A brief, developer-focused description of why the feature is discouraged",
+              "type": "string"
+            },
+            "removal_expected_date": {
+              "description": "A predicted removal date, as in \"2029-12-31\". Only set if there's an announced plan by all currently-implementing vendors to unship the feature.",
+              "type": "string"
             }
           },
           "required": [
+            "reason",
             "according_to"
           ],
           "type": "object"
