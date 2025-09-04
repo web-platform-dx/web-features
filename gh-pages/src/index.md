@@ -14,8 +14,6 @@ Baseline features are available across popular browsers. Baseline has two stages
 
 Prior to being newly available, a feature has **Limited availability** when it's not yet available across all browsers.
 
-All the features that were **Newly available** at the end of a given calendar year can be described as being in that Baseline year's feature set. For example, [overflow: clip](https://webstatus.dev/features/overflow-clip) became Newly available in September 2022, so it is part of [Baseline 2022](https://webstatus.dev/?q=baseline_date%3A2000-01-01..2022-12-31) and all subsequent Baseline years.
-
 Baseline is calculated using the following core browser set:
 
 - Apple Safari (macOS and iOS)
