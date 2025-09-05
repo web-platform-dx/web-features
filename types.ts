@@ -1,4 +1,4 @@
-// Quicktype produces a definitions that are correct, but not as narrow or
+// Quicktype produces definitions that are correct, but not as narrow or
 // well-named as hand-written type definition might produce. This module takes
 // the Quicktype-generated types as renames or modifies the types to be somewhat
 // nicer to work with in TypeScript.
