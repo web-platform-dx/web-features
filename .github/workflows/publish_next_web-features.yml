@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version-file: .node-version
           cache: npm
@@ -43,7 +43,7 @@ jobs:
           echo "TIMESTAMP=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_OUTPUT
           echo "SHORT_HASH=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version-file: .node-version
           cache: npm
