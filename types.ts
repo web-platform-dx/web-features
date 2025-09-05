@@ -10,12 +10,12 @@ import type {
   Discouraged,
   GroupData,
   FeatureData as QuicktypeMonolithicFeatureData,
+  StatusHeadline as QuicktypeStatusHeadline,
   WebFeaturesData as QuicktypeWebFeaturesData,
   Release,
   SnapshotData,
   Status,
   Support,
-  StatusHeadline as SupportStatus,
 } from "./types.quicktype";
 
 // Passthrough types
@@ -29,7 +29,31 @@ export type {
   SnapshotData,
   Status,
   Support,
-  SupportStatus,
+};
+
+export interface SupportStatus extends QuicktypeStatusHeadline {
+  baseline: false | BaselineHighLow;
+}
+
+// These are "tests" for our type definitions.
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const badQuicktypeStatusHeadline: QuicktypeStatusHeadline = {
+  baseline: true, // This is an improper value in our actual published data
+  support: {},
+};
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const badSupportStatus: SupportStatus = {
+  // This validates that we're actually overriding Quicktype (and correctly). If
+  // `baseline: true` ever becomes possible in the `SupportStatus`, then
+  // TypeScript will complain about the next line.
+  // @ts-expect-error
+  baseline: true,
+  support: {},
+};
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const goodSupportStatus: QuicktypeStatusHeadline | SupportStatus = {
+  baseline: false,
+  support: {},
 };
 
 export interface WebFeaturesData
@@ -51,7 +75,7 @@ export type FeatureData = Required<
   >;
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const t1: FeatureData = {
+const goodFeatureData: FeatureData = {
   name: "Test",
   description: "Hi",
   description_html: "Hi",
