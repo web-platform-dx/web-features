@@ -1,4 +1,4 @@
-draft_date: 2025-07-24
+draft_date: 2025-09-05
 name: Federated Credential Management API
 description: TODO
 spec: https://w3c-fedid.github.io/FedCM/
@@ -13,6 +13,7 @@ compat_features:
   - api.IdentityCredential.isAutoSelected
   - api.IdentityCredentialError
   - api.IdentityCredentialError.IdentityCredentialError
+  - api.IdentityCredentialError.error
   - api.IdentityCredentialError.url
   - api.IdentityProvider
   - api.IdentityProvider.close_static
