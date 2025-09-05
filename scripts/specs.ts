@@ -132,6 +132,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://wicg.github.io/private-network-access/",
         "Allowed for private-network-access feature. Feature and spec succeeded by local-network-access."
+    ],
+    [
+        "https://github.com/whatwg/html/pull/11426",
+        "This is where speculation rules' prefetch is in the process of being spec'd. Once the PR merges, change the spec url in `speculation-rules`, and remove this exception."
     ]
 ];
 
