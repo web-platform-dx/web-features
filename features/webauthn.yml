@@ -2,6 +2,7 @@ name: Web authentication
 description: The web authentication API allows you to create public key-based credentials and use them for authentication, such as when signing in. Also known as WebAuthn.
 spec: https://w3c.github.io/webauthn/
 caniuse: webauthn
+group: webauthn
 status:
   compute_from: api.AuthenticatorResponse
 compat_features:
