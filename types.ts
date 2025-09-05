@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // Quicktype produces definitions that are correct, but not as narrow or
 // well-named as hand-written type definition might produce. This module takes
 // the Quicktype-generated types as renames or modifies the types to be somewhat
@@ -10,11 +11,11 @@ import type {
   Discouraged,
   GroupData,
   FeatureData as QuicktypeMonolithicFeatureData,
+  Status as QuicktypeStatus,
   StatusHeadline as QuicktypeStatusHeadline,
   WebFeaturesData as QuicktypeWebFeaturesData,
   Release,
   SnapshotData,
-  Status,
   Support,
 } from "./types.quicktype";
 
@@ -27,21 +28,24 @@ export type {
   GroupData,
   Release,
   SnapshotData,
-  Status,
   Support,
 };
+
+export interface Status extends QuicktypeStatus {
+  baseline: false | BaselineHighLow;
+}
 
 export interface SupportStatus extends QuicktypeStatusHeadline {
   baseline: false | BaselineHighLow;
 }
 
 // These are "tests" for our type definitions.
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const badQuicktypeStatusHeadline: QuicktypeStatusHeadline = {
   baseline: true, // This is an improper value in our actual published data
   support: {},
 };
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const badQuicktypeStatus: QuicktypeStatus = badQuicktypeStatusHeadline;
+
 const badSupportStatus: SupportStatus = {
   // This validates that we're actually overriding Quicktype (and correctly). If
   // `baseline: true` ever becomes possible in the `SupportStatus`, then
@@ -50,7 +54,11 @@ const badSupportStatus: SupportStatus = {
   baseline: true,
   support: {},
 };
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const badStatus: Status = {
+  // @ts-expect-error
+  baseline: true,
+  support: {},
+};
 const goodSupportStatus: QuicktypeStatusHeadline | SupportStatus = {
   baseline: false,
   support: {},
@@ -74,7 +82,6 @@ export type FeatureData = Required<
     >
   >;
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const goodFeatureData: FeatureData = {
   name: "Test",
   description: "Hi",
