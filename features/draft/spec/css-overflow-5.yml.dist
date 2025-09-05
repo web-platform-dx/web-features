@@ -27,11 +27,16 @@ compat_features:
   #   edge: "135"
   - css.selectors.target-current
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
   - css.properties.scroll-target-group
   - css.properties.scroll-target-group.auto
   - css.properties.scroll-target-group.none
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
   - css.selectors.scroll-button.next
   - css.selectors.scroll-button.prev
