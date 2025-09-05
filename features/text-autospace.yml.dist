@@ -7,9 +7,21 @@ status:
     safari: "18.4"
     safari_ios: "18.4"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
   - css.properties.text-autospace
+  - css.properties.text-autospace.no-autospace
+  - css.properties.text-autospace.normal
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
   - css.properties.text-autospace.auto
   - css.properties.text-autospace.ideograph-alpha
   - css.properties.text-autospace.ideograph-numeric
-  - css.properties.text-autospace.no-autospace
-  - css.properties.text-autospace.normal
