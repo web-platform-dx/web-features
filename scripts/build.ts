@@ -35,7 +35,12 @@ yargs(process.argv.slice(2))
 
 function buildPackage() {
   const packageDir = new URL("./packages/web-features/", rootDir);
-  const filesToCopy = ["LICENSE.txt", "types.ts", "schemas/data.schema.json"];
+  const filesToCopy = [
+    "LICENSE.txt",
+    "types.quicktype.ts",
+    "types.ts",
+    "schemas/data.schema.json",
+  ];
 
   if (!valid(data)) {
     logger.error("Data failed schema validation. No package built.");
