@@ -703,6 +703,10 @@ compat_features:
   #   chrome: "140"
   #   chrome_android: "140"
   - webdriver.bidi.browser.createUserContext.unhandledPromptBehavior_parameter
+  - webdriver.bidi.emulation.setLocaleOverride
+  - webdriver.bidi.emulation.setLocaleOverride.contexts_parameter
+  - webdriver.bidi.emulation.setLocaleOverride.locale_parameter
+  - webdriver.bidi.emulation.setLocaleOverride.userContexts_parameter
   - webdriver.bidi.emulation.setScreenOrientationOverride
   - webdriver.bidi.emulation.setScreenOrientationOverride.contexts_parameter
   - webdriver.bidi.emulation.setScreenOrientationOverride.screenOrientation_parameter
