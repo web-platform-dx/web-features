@@ -1,4 +1,5 @@
-// Quicktype produces a definitions that are correct, but not as narrow or
+/* eslint-disable @typescript-eslint/no-unused-vars */
+// Quicktype produces definitions that are correct, but not as narrow or
 // well-named as hand-written type definition might produce. This module takes
 // the Quicktype-generated types as renames or modifies the types to be somewhat
 // nicer to work with in TypeScript.
@@ -11,12 +12,12 @@ import type {
   GroupData,
   Kind,
   FeatureData as QuicktypeMonolithicFeatureData,
+  Status as QuicktypeStatus,
+  StatusHeadline as QuicktypeStatusHeadline,
   WebFeaturesData as QuicktypeWebFeaturesData,
   Release,
   SnapshotData,
-  Status,
   Support,
-  StatusHeadline as SupportStatus,
 } from "./types.quicktype";
 
 // Passthrough types
@@ -28,9 +29,40 @@ export type {
   GroupData,
   Release,
   SnapshotData,
-  Status,
   Support,
-  SupportStatus,
+};
+
+export interface Status extends QuicktypeStatus {
+  baseline: false | BaselineHighLow;
+}
+
+export interface SupportStatus extends QuicktypeStatusHeadline {
+  baseline: false | BaselineHighLow;
+}
+
+// These are "tests" for our type definitions.
+const badQuicktypeStatusHeadline: QuicktypeStatusHeadline = {
+  baseline: true, // This is an improper value in our actual published data
+  support: {},
+};
+const badQuicktypeStatus: QuicktypeStatus = badQuicktypeStatusHeadline;
+
+const badSupportStatus: SupportStatus = {
+  // This validates that we're actually overriding Quicktype (and correctly). If
+  // `baseline: true` ever becomes possible in the `SupportStatus`, then
+  // TypeScript will complain about the next line.
+  // @ts-expect-error
+  baseline: true,
+  support: {},
+};
+const badStatus: Status = {
+  // @ts-expect-error
+  baseline: true,
+  support: {},
+};
+const goodSupportStatus: QuicktypeStatusHeadline | SupportStatus = {
+  baseline: false,
+  support: {},
 };
 
 export interface WebFeaturesData
@@ -53,25 +85,7 @@ export type FeatureData = { kind: "feature" } & Required<
     >
   >;
 
-export type FeatureRedirectData = { kind: Exclude<Kind, "feature"> } & Required<
-  Pick<
-    QuicktypeMonolithicFeatureData,
-    "redirect_created_date" | "redirect_target" | "redirect_targets"
-  >
->;
-
-export interface FeatureMovedData
-  extends Omit<FeatureRedirectData, "redirect_targets"> {
-  kind: "moved";
-}
-
-export interface FeatureSplitData
-  extends Omit<FeatureRedirectData, "redirect_target"> {
-  kind: "split";
-}
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const t1: FeatureData = {
+const goodFeatureData: FeatureData = {
   kind: "feature",
   name: "Test",
   description: "Hi",
@@ -83,18 +97,38 @@ const t1: FeatureData = {
   },
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const t2: FeatureMovedData = {
+export type FeatureRedirectData = { kind: Exclude<Kind, "feature"> } & Required<
+  Pick<QuicktypeMonolithicFeatureData, "redirect_target" | "redirect_targets">
+>;
+
+export interface FeatureMovedData
+  extends Omit<FeatureRedirectData, "redirect_targets"> {
+  kind: "moved";
+}
+
+const goodFeatureMovedData: FeatureMovedData = {
   kind: "moved",
-  redirect_created_date: "2025-09-01",
   redirect_target: "",
 };
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const t3: FeatureSplitData = {
-  kind: "split",
-  redirect_created_date: "2025-09-01",
+const badFeatureMovedData: FeatureMovedData = {
+  kind: "moved",
+  // @ts-expect-error
   redirect_targets: ["", ""],
+};
+
+export interface FeatureSplitData
+  extends Omit<FeatureRedirectData, "redirect_target"> {
+  kind: "split";
+}
+
+const goodFeatureSplitData: FeatureSplitData = {
+  kind: "split",
+  redirect_targets: ["", ""],
+};
+const badFeatureSplitData: FeatureSplitData = {
+  kind: "split",
+  // @ts-expect-error
+  redirect_target: "",
 };
 
 export type BrowserIdentifier = keyof Browsers;

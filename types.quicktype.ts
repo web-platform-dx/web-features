@@ -17,7 +17,7 @@ export interface WebFeaturesData {
   /**
    * Snapshot identifiers and data
    */
-  snapshots?: { [key: string]: SnapshotData };
+  snapshots: { [key: string]: SnapshotData };
 }
 
 /**

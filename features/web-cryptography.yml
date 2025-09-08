@@ -5,8 +5,22 @@ spec:
   - https://wicg.github.io/webcrypto-secure-curves/
 caniuse: cryptography
 group: security
+# Override the status to match caniuse. This is the same as one would get by
+# computing the status from api.SubtleCrypto.encrypt/decrypt/sign/verify, except
+# for Edge 12-18 where BCD has partial_implementation due to some unsupported
+# algorithms. However, the supported algorithms have changed over time, so it
+# seems more fair to treat it as supported in Edge 12-18.
 status:
-  compute_from: api.Crypto
+  baseline: high
+  baseline_low_date: 2015-07-29
+  support:
+    chrome: "37"
+    chrome_android: "37"
+    edge: "12"
+    firefox: "34"
+    firefox_android: "34"
+    safari: "11"
+    safari_ios: "11"
 compat_features:
   - api.Crypto
   - api.Crypto.getRandomValues

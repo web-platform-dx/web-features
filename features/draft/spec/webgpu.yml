@@ -1,4 +1,4 @@
-draft_date: 2025-07-03
+draft_date: 2025-09-01
 name: WebGPU
 description: TODO
 spec: https://gpuweb.github.io/gpuweb/
@@ -7,6 +7,7 @@ compat_features:
   - api.GPUAdapterInfo.isFallbackAdapter
   - api.GPUCommandEncoder.copyBufferToBuffer.offset_and_size_parameter_optional
   - api.GPUDevice.createBindGroup.descriptor_entries_option_accepts_GPUTextureView_resource
+  - api.GPUSupportedFeatures.feature_core-features-and-limits
   - api.GPUSupportedFeatures.feature_subgroups
 
 # The following features in the spec are already part of web-features:

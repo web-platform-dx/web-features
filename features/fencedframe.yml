@@ -1,6 +1,8 @@
 name: <fencedframe>
 description: The `<fencedframe>` element embeds another HTML page into the current page in a more secure and privacy-preserving way than `<iframe>` elements.
 spec: https://wicg.github.io/fenced-frame/
+status:
+  compute_from: html.elements.fencedframe
 compat_features:
   - api.Fence
   - api.Fence.getNestedConfigs
