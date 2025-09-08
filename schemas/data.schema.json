@@ -237,7 +237,7 @@
         },
         "spec": {
           "description": "Specification",
-          "$ref": "#/definitions/URLOrURLs"
+          "type": "string"
         }
       },
       "required": ["name", "spec"],
