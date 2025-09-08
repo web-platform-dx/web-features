@@ -221,5 +221,5 @@ export interface SnapshotData {
   /**
    * Specification
    */
-  spec: string;
+  spec: string[] | string;
 }

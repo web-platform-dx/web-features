@@ -42,5 +42,7 @@ compat_features:
   - api.Element.scrollIntoView.options_parameter
 
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
   - api.Element.scrollIntoView.options_container_parameter

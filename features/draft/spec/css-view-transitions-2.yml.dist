@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "140"
+    chrome_android: "140"
 compat_features:
   - css.properties.view-transition-group
   - css.properties.view-transition-group.contain

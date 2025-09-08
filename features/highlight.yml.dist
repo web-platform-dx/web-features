@@ -59,5 +59,7 @@ compat_features:
   - css.selectors.highlight
 
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
   - api.HighlightRegistry.highlightsFromPoint

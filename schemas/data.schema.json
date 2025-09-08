@@ -167,37 +167,6 @@
       ],
       "additionalProperties": false
     },
-    "GroupData": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "description": "Short name",
-          "type": "string"
-        },
-        "parent": {
-          "description": "Identifier of parent group",
-          "type": "string"
-        }
-      },
-      "required": ["name"],
-      "additionalProperties": false
-    },
-    "Release": {
-      "description": "Browser release information",
-      "type": "object",
-      "properties": {
-        "version": {
-          "description": "The version string, as in \"10\" or \"17.1\"",
-          "type": "string"
-        },
-        "date": {
-          "description": " The release date, as in \"2023-12-11\"",
-          "type": "string"
-        }
-      },
-      "required": ["version", "date"],
-      "additionalProperties": false
-    },
     "FeatureMovedData": {
       "description": "A feature has permanently moved to exactly one other ID",
       "type": "object",
@@ -234,6 +203,52 @@
         }
       },
       "required": ["kind", "redirect_created_date", "redirect_targets"],
+      "additionalProperties": false
+    },
+    "GroupData": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Short name",
+          "type": "string"
+        },
+        "parent": {
+          "description": "Identifier of parent group",
+          "type": "string"
+        }
+      },
+      "required": ["name"],
+      "additionalProperties": false
+    },
+    "Release": {
+      "description": "Browser release information",
+      "type": "object",
+      "properties": {
+        "version": {
+          "description": "The version string, as in \"10\" or \"17.1\"",
+          "type": "string"
+        },
+        "date": {
+          "description": " The release date, as in \"2023-12-11\"",
+          "type": "string"
+        }
+      },
+      "required": ["version", "date"],
+      "additionalProperties": false
+    },
+    "SnapshotData": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Short name",
+          "type": "string"
+        },
+        "spec": {
+          "description": "Specification",
+          "$ref": "#/definitions/URLOrURLs"
+        }
+      },
+      "required": ["name", "spec"],
       "additionalProperties": false
     },
     "Status": {
@@ -299,21 +314,6 @@
         }
       },
       "required": ["baseline", "support"],
-      "additionalProperties": false
-    },
-    "SnapshotData": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "description": "Short name",
-          "type": "string"
-        },
-        "spec": {
-          "description": "Specification",
-          "$ref": "#/definitions/URL"
-        }
-      },
-      "required": ["name", "spec"],
       "additionalProperties": false
     },
     "StringOrStrings": {

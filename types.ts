@@ -75,7 +75,7 @@ export interface WebFeaturesData
 export type FeatureData = { kind: "feature" } & Required<
   Pick<
     QuicktypeMonolithicFeatureData,
-    "kind" | "description_html" | "description" | "name" | "spec" | "status"
+    "description_html" | "description" | "name" | "spec" | "status"
   >
 > &
   Partial<
