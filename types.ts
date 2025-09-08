@@ -97,7 +97,7 @@ const goodFeatureData: FeatureData = {
   },
 };
 
-export type FeatureRedirectData = { kind: Exclude<Kind, "feature"> } & Required<
+type FeatureRedirectData = { kind: Exclude<Kind, "feature"> } & Required<
   Pick<QuicktypeMonolithicFeatureData, "redirect_target" | "redirect_targets">
 >;
 
