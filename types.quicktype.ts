@@ -109,10 +109,6 @@ export interface FeatureData {
    */
   status?: StatusHeadline;
   /**
-   * The date this redirect was created
-   */
-  redirect_created_date?: string;
-  /**
    * The new ID for this feature
    */
   redirect_target?: string;
