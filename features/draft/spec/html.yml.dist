@@ -914,6 +914,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
+  - api.ToggleEvent.source
+
+  # baseline: false
+  # support:
   #   firefox: "1"
   #   firefox_android: "4"
   - api.Navigator.oscpu
@@ -949,12 +956,6 @@ compat_features:
   #   chrome: "135"
   #   edge: "135"
   - api.NavigateEvent.sourceElement
-
-  # baseline: false
-  # support:
-  #   chrome: "140"
-  #   chrome_android: "140"
-  - api.ToggleEvent.source
 
   # baseline: false
   # support:
