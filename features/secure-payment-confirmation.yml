@@ -1,0 +1,7 @@
+name: Secure payment confirmation
+description: The `payment` extension of a web authentication credential allows a relying party (such as a bank) to create a credential that can be queried by any merchant origin as part of an online checkout that uses the Payment Request API's `secure-payment-confirmation` payment method. Also known as SPC.
+spec: https://w3c.github.io/secure-payment-confirmation/
+group: payments
+compat_features:
+  - api.CredentialsContainer.create.publicKey_option.extensions.payment
+  - api.PaymentRequest.securePaymentConfirmationAvailability_static

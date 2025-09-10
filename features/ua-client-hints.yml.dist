@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "124"
-    chrome_android: "124"
-    edge: "124"
+    chrome: "90"
+    chrome_android: "90"
+    edge: "90"
 compat_features:
   # baseline: false
   # support:
@@ -27,6 +27,7 @@ compat_features:
   - http.headers.Sec-CH-UA-Platform
   - http.headers.Sec-CH-UA-Platform-Version
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "90"
@@ -63,7 +64,6 @@ compat_features:
   #   edge: "100"
   - http.headers.Sec-CH-UA-WoW64
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "124"
