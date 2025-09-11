@@ -27,6 +27,35 @@ To import the JSON schema with or without Node.js:
 import schema from "web-features/data.schema.json" with { type: "json" };
 ```
 
+### Extended data with per-key Baseline statuses
+
+For use cases that need detailed Baseline statuses for individual BCD keys, you can use the extended data. It includes a `by_compat_key` property in each feature's status, containing Baseline status information for each individual BCD key.
+
+```js
+import { browsers, features, groups, snapshots, getStatus } from "web-features/extended";
+```
+
+Or, without Node.js:
+
+```js
+import data from "web-features/data.extended.json" with { type: "json" };
+const { browsers, features, groups, snapshots, getStatus } = data;
+```
+
+#### `getStatus` convenience method
+
+The extended module also provides a `getStatus()` function to facilitate looking up the Baseline status of a particular BCD key:
+
+```js
+import { getStatus } from "web-features/extended";
+
+// Fast lookup when you know the feature ID (recommended)
+const status = getStatus("flexbox", "css.properties.flex");
+
+// Slower lookup when the feature ID is unknown
+const unknownStatus = getStatus(undefined, "api.HTMLElement.focus");
+```
+
 ## Rendering Baseline statuses with `web-features`
 
 If you're using `web-features` to render Baseline iconography or browser logos with support markers, then you must follow the [name and logo usage guidelines](https://web-platform-dx.github.io/web-features/name-and-logo-usage-guidelines/).

@@ -53,7 +53,7 @@ type BrowserIdentifier = "chrome" | "chrome_android" | "edge" | "firefox" | "fir
 
 type BaselineHighLow = "high" | "low";
 
-interface Status {
+export interface Status {
     /** Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false) */
     baseline: BaselineHighLow | false;
     /** Date the feature achieved Baseline low status */
