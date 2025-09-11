@@ -79,7 +79,10 @@ function buildExtendedJSON() {
   }
 
   const packageDir = new URL("./packages/web-features/", rootDir);
-  fs.writeFileSync(new URL("./data.extended.json", packageDir), stringify(data));
+  fs.writeFileSync(
+    new URL("./data.extended.json", packageDir),
+    stringify(data),
+  );
 }
 
 function valid(data: any): boolean {
