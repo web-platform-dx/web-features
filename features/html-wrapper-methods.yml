@@ -3,6 +3,7 @@ description: JavaScript built-in methods such as, `String.bold()` and `String.it
 spec: https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-additional-properties-of-the-string.prototype-object
 group: javascript
 discouraged:
+  reason: HTML wrapper methods exist only for backwards compatibility. Use DOM APIs to create elements instead.
   according_to:
     - https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-additional-ecmascript-features-for-web-browsers
   alternatives:
