@@ -9,6 +9,7 @@ import { GroupData, SnapshotData, WebFeaturesData } from './types';
 
 import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, parseRangedDateString } from 'compute-baseline';
 import { Compat } from 'compute-baseline/browser-compat-data';
+import { assertValidFeatureReference } from './assertions';
 import { isMoved, isSplit } from './type-guards';
 
 // The longest name allowed, to allow for compact display.
@@ -191,32 +192,20 @@ for (const [key, data] of yamlEntries('features')) {
     features[key] = data;
 }
 
-// Assert that feature references are valid
-
-function assertValidReference(sourceID: string, targetID: string): void {
-    if (targetID in features) {
-        if (isMoved(features[targetID]) || isSplit(features[targetID])) {
-            throw new Error(`${sourceID} references a redirect "${targetID}" instead of an ordinary feature ID`);
-        }
-        return;
-    }
-    throw new Error(`${sourceID}'s reference to "${targetID}" is not a valid feature ID`);
-}
-
 for (const [id, feature] of Object.entries(features)) {
     const { kind } = feature;
     switch (kind) {
         case "feature":
             for (const alternative of feature.discouraged?.alternatives ?? []) {
-                assertValidReference(id, alternative);
+                assertValidFeatureReference(id, alternative, features)
             }
             break;
         case "moved":
-            assertValidReference(id, feature.redirect_target);
+            assertValidFeatureReference(id, feature.redirect_target, features);
             break;
         case "split":
             for (const target of feature.redirect_targets) {
-                assertValidReference(id, target);
+                assertValidFeatureReference(id, target, features);
             }
             break;
         default:
