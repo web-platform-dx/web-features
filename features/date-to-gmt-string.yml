@@ -2,8 +2,10 @@ name: toGMTString()
 description: The `toGMTString()` method of `Date` objects is an alias to the `toUTCString()` method.
 spec: https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-date.prototype.togmtstring
 discouraged:
+  reason: The method exists "principally for compatibility with old code."
   according_to:
     - https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-additional-ecmascript-features-for-web-browsers
+    - https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-date.prototype.togmtstring
   # No `alternatives` because it would be `alternatives: [date]`. In the future
   # it'd be nice to have an internal reference to the `toUTCString()` method
   # instead.
