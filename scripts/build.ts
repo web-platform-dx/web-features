@@ -26,11 +26,6 @@ yargs(process.argv.slice(2))
     describe: "Generate the web-features npm package",
     handler: buildPackage,
   })
-  .command({
-    command: "extended-json",
-    describe: "Generate a web-features JSON file with BCD per-key statuses",
-    handler: buildExtendedJSON,
-  })
   .parseSync();
 
 function buildPackage() {
@@ -45,6 +40,9 @@ function buildPackage() {
   const json = stringify(data);
   const path = new URL("data.json", packageDir);
   fs.writeFileSync(path, json);
+
+  buildExtendedJSON();
+
   for (const file of filesToCopy) {
     fs.copyFileSync(
       new URL(file, rootDir),
@@ -80,7 +78,8 @@ function buildExtendedJSON() {
     process.exit(1);
   }
 
-  fs.writeFileSync(new URL("./data.extended.json", rootDir), stringify(data));
+  const packageDir = new URL("./packages/web-features/", rootDir);
+  fs.writeFileSync(new URL("./data.extended.json", packageDir), stringify(data));
 }
 
 function valid(data: any): boolean {

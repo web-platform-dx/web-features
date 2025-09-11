@@ -51,7 +51,6 @@ jobs:
       - run: npm ci
 
       - run: npm run build
-      - run: npm run build:extended
 
       - name: Get package.json version
         id: version
@@ -108,4 +107,4 @@ jobs:
           ARTIFACTS: >
             schemas/data.schema.json
             ${{ env.package_dir }}/data.json
-            data.extended.json
+            ${{ env.package_dir }}/data.extended.json

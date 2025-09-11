@@ -12,18 +12,23 @@
   "main": "index.js",
   "exports": {
     ".": "./index.js",
+    "./extended": "./extended.js",
     "./data.json": "./data.json",
+    "./data.extended.json": "./data.extended.json",
     "./data.schema.json": "./data.schema.json"
   },
   "types": "./index.d.ts",
   "files": [
     "index.d.ts",
     "index.js",
+    "extended.d.ts",
+    "extended.js",
     "data.json",
+    "data.extended.json",
     "data.schema.json"
   ],
   "scripts": {
-    "prepare": "tsc && rm types.js && tsup ./index.ts --dts-only --format=esm --out-dir=."
+    "prepare": "tsc && rm types.js && tsup ./index.ts ./extended.ts --dts-only --format=esm --out-dir=."
   },
   "devDependencies": {
     "@types/node": "^20.19.13",
