@@ -1,0 +1,9 @@
+name: rect() and xywh()
+description: The `rect()` CSS function creates a shape with insets from the edges of an element, and the `xywh()` CSS function creates a shape with an `x` and `y` distance, and a width and height. They can be used with `clip-path` and `shape-outside`.
+spec: 
+  - https://drafts.csswg.org/css-shapes-1/#funcdef-basic-shape-xywh
+  - https://drafts.csswg.org/css-shapes-1/#funcdef-basic-shape-rect
+group: clipping-shapes-masking
+compat_features:
+  - css.types.basic-shape.rect
+  - css.types.basic-shape.xywh
