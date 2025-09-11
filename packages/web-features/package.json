@@ -28,7 +28,7 @@
     "data.schema.json"
   ],
   "scripts": {
-    "prepare": "tsc && rm types.js && tsup ./index.ts ./extended.ts --dts-only --format=esm --out-dir=."
+    "prepare": "tsc && rm types.js && tsup ./index.ts ./extended.ts --dts-only --format=esm --out-dir=. && npx prettier --write *.js"
   },
   "devDependencies": {
     "@types/node": "^20.19.13",
