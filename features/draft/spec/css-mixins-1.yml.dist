@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "139"
+    chrome_android: "139"
+    edge: "139"
 compat_features:
   - api.CSSFunctionDeclarations
   - api.CSSFunctionDeclarations.style
@@ -13,3 +16,7 @@ compat_features:
   - api.CSSFunctionRule.getParameters
   - api.CSSFunctionRule.name
   - api.CSSFunctionRule.returnType
+  - css.at-rules.function
+  - css.at-rules.function.result
+  - css.types.dashed-function
+  - css.types.type

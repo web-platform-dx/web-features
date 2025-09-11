@@ -1,0 +1,71 @@
+draft_date: 2025-08-06
+name: CSS Color Module Level 5
+description: TODO
+spec: https://drafts.csswg.org/css-color-5/
+compat_features:
+  - css.types.color.transparent
+
+# The following features in the spec are already part of web-features:
+# - Color:
+#   - css.properties.color
+#   - css.types.color
+# - opacity:
+#   - css.properties.opacity
+#   - css.properties.opacity.percentages
+#   - svg.global_attributes.opacity
+# - color():
+#   - css.types.color.color
+#   - css.types.color.color.mixed_type_parameters
+# - Relative colors:
+#   - css.types.color.color.relative_syntax
+#   - css.types.color.hsl.relative_syntax
+#   - css.types.color.hwb.relative_syntax
+#   - css.types.color.lab.relative_syntax
+#   - css.types.color.lch.relative_syntax
+#   - css.types.color.oklab.relative_syntax
+#   - css.types.color.oklch.relative_syntax
+#   - css.types.color.rgb.relative_syntax
+# - color-mix():
+#   - css.types.color.color-mix
+# - contrast-color():
+#   - css.types.color.contrast-color
+# - currentColor:
+#   - css.types.color.currentcolor
+# - HSL:
+#   - css.types.color.hsl
+#   - css.types.color.hsl.alpha_parameter
+#   - css.types.color.hsl.mixed_type_parameters
+#   - css.types.color.hsl.space_separated_parameters
+# - HWB:
+#   - css.types.color.hwb
+#   - css.types.color.hwb.mixed_type_parameters
+# - Lab and LCH:
+#   - css.types.color.lab
+#   - css.types.color.lab.mixed_type_parameters
+#   - css.types.color.lch
+#   - css.types.color.lch.mixed_type_parameters
+# - light-dark():
+#   - css.types.color.light-dark
+# - Named colors:
+#   - css.types.color.named-color
+#   - css.types.color.named-color.rebeccapurple
+#   - css.types.color.named-color.transparent
+# - Oklab and Oklch:
+#   - css.types.color.oklab
+#   - css.types.color.oklab.mixed_type_parameters
+#   - css.types.color.oklch
+#   - css.types.color.oklch.mixed_type_parameters
+# - RGB:
+#   - css.types.color.rgb
+#   - css.types.color.rgb.alpha_parameter
+#   - css.types.color.rgb.float_values
+#   - css.types.color.rgb.mixed_type_parameters
+#   - css.types.color.rgb.space_separated_parameters
+#   - css.types.color.rgb_hexadecimal_notation
+#   - css.types.color.rgb_hexadecimal_notation.alpha_hexadecimal_notation
+# - System colors:
+#   - css.types.color.system-color
+#   - css.types.color.system-color.accentcolor_accentcolortext
+#   - css.types.color.system-color.mark_marktext_buttonborder
+# - SVG:
+#   - svg.global_attributes.color

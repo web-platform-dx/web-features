@@ -81,6 +81,8 @@ compat_features:
   - api.HTMLElement.popover
 
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "141"
+  #   firefox_android: "141"
   - api.HTMLElement.showPopover.options_source_parameter
   - api.HTMLElement.togglePopover.options_source_parameter

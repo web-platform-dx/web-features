@@ -49,8 +49,8 @@ describe("features", function () {
         const oneSpec = feature("css.properties.grid").spec_url;
         assert.equal(oneSpec.length, 1);
 
-        const twoSpecs = feature("css.properties.width").spec_url;
-        assert.equal(twoSpecs.length, 2);
+        const twoSpecs = feature("css.properties.break-inside").spec_url;
+        assert.equal(twoSpecs.length, 3);
       });
     });
 

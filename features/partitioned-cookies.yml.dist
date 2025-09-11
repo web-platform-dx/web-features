@@ -28,6 +28,15 @@ compat_features:
   - api.CookieStore.delete.partitioned_option
   - api.CookieStore.set.partitioned_option
 
+  # baseline: false
+  # support:
+  #   chrome: "114"
+  #   chrome_android: "114"
+  #   edge: "114"
+  #   firefox: "141"
+  #   firefox_android: "141"
+  - http.headers.Set-Cookie.Partitioned
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
@@ -35,4 +44,3 @@ compat_features:
   #   chrome_android: "114"
   #   edge: "114"
   - api.CookieStore.get.partitioned_return_property
-  - http.headers.Set-Cookie.Partitioned

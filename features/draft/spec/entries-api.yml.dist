@@ -89,22 +89,26 @@ compat_features:
   #   safari_ios: "11.3"
   - api.FileSystemDirectoryEntry.createReader
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-08-19
   # support:
   #   chrome: "7"
   #   chrome_android: "132"
   #   edge: "13"
   #   firefox: "50"
+  #   firefox_android: "142"
   #   safari: "11.1"
   #   safari_ios: "18.4"
   - api.HTMLInputElement.webkitdirectory
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-08-19
   # support:
   #   chrome: "13"
   #   chrome_android: "18"
   #   edge: "13"
   #   firefox: "50"
+  #   firefox_android: "142"
   #   safari: "11.1"
   #   safari_ios: "11.3"
   - api.File.webkitRelativePath

@@ -1,11 +1,11 @@
-draft_date: 2025-07-03
+draft_date: 2025-08-28
 name: CSS Basic User Interface Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-ui-4/
 compat_features:
-  - css.properties.interactivity
-  - css.properties.interactivity.auto
-  - css.properties.interactivity.inert
+  - css.properties.caret-animation
+  - css.properties.caret-animation.auto
+  - css.properties.caret-animation.manual
 
 # The following features in the spec are already part of web-features:
 # - accent-color:
@@ -69,6 +69,10 @@ compat_features:
 #   - css.properties.cursor.zoom-in
 #   - css.properties.cursor.zoom-out
 #   - svg.global_attributes.cursor
+# - interactivity:
+#   - css.properties.interactivity
+#   - css.properties.interactivity.auto
+#   - css.properties.interactivity.inert
 # - outline:
 #   - css.properties.outline
 # - Outlines:

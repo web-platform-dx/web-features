@@ -5,6 +5,10 @@ spec:
   - https://wicg.github.io/intervention-reporting/
   - https://wicg.github.io/deprecation-reporting/
   - https://w3c.github.io/webappsec-csp/#reporting
+status:
+  compute_from:
+    - api.ReportingObserver.ReportingObserver
+    - http.headers.Reporting-Endpoints
 compat_features:
   - api.DeprecationReportBody
   - api.DeprecationReportBody.anticipatedRemoval

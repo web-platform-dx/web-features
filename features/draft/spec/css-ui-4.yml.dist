@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "135"
-    edge: "135"
+    chrome: "140"
+    chrome_android: "140"
 compat_features:
-  - css.properties.interactivity
-  - css.properties.interactivity.auto
-  - css.properties.interactivity.inert
+  - css.properties.caret-animation
+  - css.properties.caret-animation.auto
+  - css.properties.caret-animation.manual

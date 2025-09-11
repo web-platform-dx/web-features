@@ -83,19 +83,21 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "120"
+  #   chrome_android: "120"
+  #   edge: "120"
+  #   firefox: "141"
+  #   firefox_android: "141"
+  - api.IntersectionObserver.scrollMargin
+
+  # baseline: false
+  # support:
   #   chrome: "74"
   #   chrome_android: "74"
   #   edge: "79"
   - api.IntersectionObserver.delay
   - api.IntersectionObserver.trackVisibility
   - api.IntersectionObserverEntry.isVisible
-
-  # baseline: false
-  # support:
-  #   chrome: "120"
-  #   chrome_android: "120"
-  #   edge: "120"
-  - api.IntersectionObserver.scrollMargin
 
   # baseline: false
   # support:

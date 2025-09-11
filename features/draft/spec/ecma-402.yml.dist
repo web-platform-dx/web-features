@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "141"
+    firefox_android: "141"
 compat_features:
   # baseline: high
   # baseline_low_date: 2022-03-14
@@ -25,5 +27,7 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "141"
+  #   firefox_android: "141"
   - javascript.builtins.Intl.Locale.variants

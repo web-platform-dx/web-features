@@ -4,13 +4,8 @@ import path from 'path';
 import { Temporal } from '@js-temporal/polyfill';
 import { fdir } from 'fdir';
 import YAML from 'yaml';
+import { convertMarkdown } from "./text";
 import { FeatureData, GroupData, SnapshotData, WebFeaturesData } from './types';
-
-import { toString as hastTreeToString } from 'hast-util-to-string';
-import rehypeStringify from 'rehype-stringify';
-import remarkParse from 'remark-parse';
-import remarkRehype from 'remark-rehype';
-import { unified } from 'unified';
 
 import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, parseRangedDateString } from 'compute-baseline';
 import { Compat } from 'compute-baseline/browser-compat-data';
@@ -28,6 +23,15 @@ const draft = Symbol('draft');
 // This must match the definition in docs/guidelines.md
 const identifierPattern = /^[a-z][a-z0-9]*(-[a-z0-9]+)*$/;
 
+// All identifiers (including drafts) must be unique with respect to their
+// siblings. These maps track them with respect to file names, for clearer error
+// mesesages.
+const uniqueIdMaps = {
+    features: new Map<string, string>(),
+    groups: new Map<string, string>(),
+    snapshots: new Map<string, string>(),
+}
+
 function* yamlEntries(root: string): Generator<[string, any]> {
     const filePaths = new fdir()
         .withBasePath()
@@ -38,6 +42,18 @@ function* yamlEntries(root: string): Generator<[string, any]> {
     for (const fp of filePaths) {
         // The feature identifier/key is the filename without extension.
         const { name: key } = path.parse(fp);
+        const pathParts = fp.split(path.sep);
+
+        // Assert ID uniqueness
+        for (const [pool, map] of Object.entries(uniqueIdMaps)) {
+            if (!pathParts.includes("spec") && pathParts.includes(pool)) {
+                const otherFile: string | undefined = map.get(key);
+                if (otherFile) {
+                    throw new Error(`ID collision between ${fp} and ${otherFile}`);
+                }
+                map.set(key, fp);
+            }
+        }
 
         if (!identifierPattern.test(key)) {
             throw new Error(`${key} is not a valid identifier (see guidelines)`);
@@ -50,7 +66,7 @@ function* yamlEntries(root: string): Generator<[string, any]> {
             Object.assign(data, dist);
         }
 
-        if (fp.split(path.sep).includes('draft')) {
+        if (pathParts.includes('draft')) {
             data[draft] = true;
         }
 
@@ -100,20 +116,6 @@ function* identifiers(value) {
     }
 }
 
-function convertMarkdown(markdown: string) {
-    const mdTree = unified().use(remarkParse).parse(markdown);
-    const htmlTree = unified().use(remarkRehype).runSync(mdTree);
-    const text = hastTreeToString(htmlTree);
-
-    let html = unified().use(rehypeStringify).stringify(htmlTree);
-    // Remove leading <p> and trailing </p> if there is only one of each in the
-    // description. (If there are multiple paragraphs, let them be.)
-    if (html.lastIndexOf('<p>') === 0 && html.indexOf('</p>') === html.length - 4) {
-      html = html.substring(3, html.length - 4);
-    }
-
-    return { text, html };
-}
 
 // Map from BCD keys/paths to web-features identifiers.
 const bcdToFeatureId: Map<string, string> = new Map();

@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "139"
+    chrome_android: "139"
+    edge: "139"
 compat_features:
   - api.XRSession.depthActive
   - api.XRSession.depthType
