@@ -74,8 +74,8 @@ interface SupportStatus extends Status {
 interface Discouraged {
     /** A brief, developer-focused description of why the feature is discouraged */
     reason: string;
-    /** A predicted removal date, as in "2029-12-31". Only set if there's an announced plan by all currently-implementing vendors to unship the feature. */
-    removal_expected_date?: string;
+    /** An expected or actual removal date, as in "2029-12-31". Only set if there's an announced plan by all currently-implementing vendors to unship the feature, or the feature has already been unshipped from all browsers. */
+    removal_date?: string;
     /** Links to a formal discouragement notice, such as specification text, intent-to-unship, etc. */
     according_to: string[];
     /** IDs for features that substitute some or all of this feature's utility */
