@@ -17,7 +17,7 @@ export interface WebFeaturesData {
   /**
    * Snapshot identifiers and data
    */
-  snapshots?: { [key: string]: SnapshotData };
+  snapshots: { [key: string]: SnapshotData };
 }
 
 /**
@@ -108,10 +108,6 @@ export interface FeatureData {
    * that status
    */
   status?: StatusHeadline;
-  /**
-   * The date this redirect was created
-   */
-  redirect_created_date?: string;
   /**
    * The new ID for this feature
    */
