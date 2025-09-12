@@ -44,7 +44,18 @@
       "description": "Feature identifiers and data",
       "type": "object",
       "additionalProperties": {
-        "$ref": "#/definitions/FeatureData"
+        "oneOf": [
+          {
+            "$ref": "#/definitions/FeatureData"
+          },
+          {
+            "$ref": "#/definitions/FeatureMovedData"
+          },
+          {
+            "$ref": "#/definitions/FeatureSplitData"
+          }
+        ],
+        "$comment": "Use the `kind` property as a discriminator."
       }
     },
     "groups": {
@@ -102,6 +113,9 @@
       "description": "A feature data entry",
       "type": "object",
       "properties": {
+        "kind": {
+          "const": "feature"
+        },
         "name": {
           "description": "Short name",
           "type": "string"
@@ -143,7 +157,44 @@
           "$ref": "#/definitions/Discouraged"
         }
       },
-      "required": ["name", "description", "description_html", "spec", "status"],
+      "required": [
+        "kind",
+        "name",
+        "description",
+        "description_html",
+        "spec",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "FeatureMovedData": {
+      "description": "A feature has permanently moved to exactly one other ID",
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "moved"
+        },
+        "redirect_target": {
+          "description": "The new ID for this feature",
+          "type": "string"
+        }
+      },
+      "required": ["kind", "redirect_target"],
+      "additionalProperties": false
+    },
+    "FeatureSplitData": {
+      "description": "A feature has split into two or more other features",
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "split"
+        },
+        "redirect_targets": {
+          "description": "The new IDs for this feature",
+          "$ref": "#/definitions/Strings"
+        }
+      },
+      "required": ["kind", "redirect_targets"],
       "additionalProperties": false
     },
     "GroupData": {
@@ -159,6 +210,37 @@
         }
       },
       "required": ["name"],
+      "additionalProperties": false
+    },
+    "Release": {
+      "description": "Browser release information",
+      "type": "object",
+      "properties": {
+        "version": {
+          "description": "The version string, as in \"10\" or \"17.1\"",
+          "type": "string"
+        },
+        "date": {
+          "description": " The release date, as in \"2023-12-11\"",
+          "type": "string"
+        }
+      },
+      "required": ["version", "date"],
+      "additionalProperties": false
+    },
+    "SnapshotData": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Short name",
+          "type": "string"
+        },
+        "spec": {
+          "description": "Specification",
+          "type": "string"
+        }
+      },
+      "required": ["name", "spec"],
       "additionalProperties": false
     },
     "Status": {
@@ -224,37 +306,6 @@
         }
       },
       "required": ["baseline", "support"],
-      "additionalProperties": false
-    },
-    "Release": {
-      "description": "Browser release information",
-      "type": "object",
-      "properties": {
-        "version": {
-          "description": "The version string, as in \"10\" or \"17.1\"",
-          "type": "string"
-        },
-        "date": {
-          "description": " The release date, as in \"2023-12-11\"",
-          "type": "string"
-        }
-      },
-      "required": ["version", "date"],
-      "additionalProperties": false
-    },
-    "SnapshotData": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "description": "Short name",
-          "type": "string"
-        },
-        "spec": {
-          "description": "Specification",
-          "$ref": "#/definitions/URL"
-        }
-      },
-      "required": ["name", "spec"],
       "additionalProperties": false
     },
     "StringOrStrings": {

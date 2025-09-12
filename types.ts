@@ -10,6 +10,7 @@ import type {
   Browsers,
   Discouraged,
   GroupData,
+  Kind,
   FeatureData as QuicktypeMonolithicFeatureData,
   Status as QuicktypeStatus,
   StatusHeadline as QuicktypeStatusHeadline,
@@ -66,10 +67,12 @@ const goodSupportStatus: QuicktypeStatusHeadline | SupportStatus = {
 
 export interface WebFeaturesData
   extends Pick<QuicktypeWebFeaturesData, "browsers" | "groups" | "snapshots"> {
-  features: { [key: string]: FeatureData };
+  features: {
+    [key: string]: FeatureData | FeatureMovedData | FeatureSplitData;
+  };
 }
 
-export type FeatureData = Required<
+export type FeatureData = { kind: "feature" } & Required<
   Pick<
     QuicktypeMonolithicFeatureData,
     "description_html" | "description" | "name" | "spec" | "status"
@@ -83,6 +86,7 @@ export type FeatureData = Required<
   >;
 
 const goodFeatureData: FeatureData = {
+  kind: "feature",
   name: "Test",
   description: "Hi",
   description_html: "Hi",
@@ -91,6 +95,40 @@ const goodFeatureData: FeatureData = {
     baseline: false,
     support: {},
   },
+};
+
+type FeatureRedirectData = { kind: Exclude<Kind, "feature"> } & Required<
+  Pick<QuicktypeMonolithicFeatureData, "redirect_target" | "redirect_targets">
+>;
+
+export interface FeatureMovedData
+  extends Omit<FeatureRedirectData, "redirect_targets"> {
+  kind: "moved";
+}
+
+const goodFeatureMovedData: FeatureMovedData = {
+  kind: "moved",
+  redirect_target: "",
+};
+const badFeatureMovedData: FeatureMovedData = {
+  kind: "moved",
+  // @ts-expect-error
+  redirect_targets: ["", ""],
+};
+
+export interface FeatureSplitData
+  extends Omit<FeatureRedirectData, "redirect_target"> {
+  kind: "split";
+}
+
+const goodFeatureSplitData: FeatureSplitData = {
+  kind: "split",
+  redirect_targets: ["", ""],
+};
+const badFeatureSplitData: FeatureSplitData = {
+  kind: "split",
+  // @ts-expect-error
+  redirect_target: "",
 };
 
 export type BrowserIdentifier = keyof Browsers;
