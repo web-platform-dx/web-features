@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "136"
-    chrome_android: "136"
-    edge: "136"
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -59,7 +56,6 @@ compat_features:
   - api.CredentialsContainer.get.identity_option.providers_option_params
   - api.IdentityProvider.resolve_static
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "136"
@@ -67,3 +63,8 @@ compat_features:
   #   edge: "136"
   - api.CredentialsContainer.get.identity_option.providers_multiple
   - api.IdentityCredential.configURL
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.IdentityCredentialError.error
