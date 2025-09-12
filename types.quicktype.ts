@@ -69,7 +69,7 @@ export interface FeatureData {
   /**
    * caniuse.com identifier(s)
    */
-  caniuse?: string[] | string;
+  caniuse?: string[];
   /**
    * Sources of support data for this feature
    */
@@ -89,7 +89,7 @@ export interface FeatureData {
   /**
    * Group identifier(s)
    */
-  group?: string[] | string;
+  group?: string[];
   kind: Kind;
   /**
    * Short name
@@ -98,11 +98,11 @@ export interface FeatureData {
   /**
    * Snapshot identifier(s)
    */
-  snapshot?: string[] | string;
+  snapshot?: string[];
   /**
    * Specification URL(s)
    */
-  spec?: string[] | string;
+  spec?: string[];
   /**
    * Whether a feature is considered a "Baseline" web platform feature and when it achieved
    * that status
