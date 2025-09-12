@@ -4,13 +4,8 @@ import path from 'path';
 import { Temporal } from '@js-temporal/polyfill';
 import { fdir } from 'fdir';
 import YAML from 'yaml';
+import { convertMarkdown } from "./text";
 import { FeatureData, GroupData, SnapshotData, WebFeaturesData } from './types';
-
-import { toString as hastTreeToString } from 'hast-util-to-string';
-import rehypeStringify from 'rehype-stringify';
-import remarkParse from 'remark-parse';
-import remarkRehype from 'remark-rehype';
-import { unified } from 'unified';
 
 import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, parseRangedDateString } from 'compute-baseline';
 import { Compat } from 'compute-baseline/browser-compat-data';
@@ -121,20 +116,6 @@ function* identifiers(value) {
     }
 }
 
-function convertMarkdown(markdown: string) {
-    const mdTree = unified().use(remarkParse).parse(markdown);
-    const htmlTree = unified().use(remarkRehype).runSync(mdTree);
-    const text = hastTreeToString(htmlTree);
-
-    let html = unified().use(rehypeStringify).stringify(htmlTree);
-    // Remove leading <p> and trailing </p> if there is only one of each in the
-    // description. (If there are multiple paragraphs, let them be.)
-    if (html.lastIndexOf('<p>') === 0 && html.indexOf('</p>') === html.length - 4) {
-      html = html.substring(3, html.length - 4);
-    }
-
-    return { text, html };
-}
 
 // Map from BCD keys/paths to web-features identifiers.
 const bcdToFeatureId: Map<string, string> = new Map();

@@ -1,4 +1,4 @@
-draft_date: 2025-08-15
+draft_date: 2025-09-08
 name: CSS Overflow Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-overflow-5/
@@ -6,18 +6,6 @@ compat_features:
   - css.properties.scroll-target-group
   - css.properties.scroll-target-group.auto
   - css.properties.scroll-target-group.none
-  - css.selectors.scroll-button
-  - css.selectors.scroll-button.block-end
-  - css.selectors.scroll-button.block-start
-  - css.selectors.scroll-button.down
-  - css.selectors.scroll-button.inline-end
-  - css.selectors.scroll-button.inline-start
-  - css.selectors.scroll-button.left
-  - css.selectors.scroll-button.next
-  - css.selectors.scroll-button.prev
-  - css.selectors.scroll-button.right
-  - css.selectors.scroll-button.star
-  - css.selectors.scroll-button.up
   - css.selectors.target-current
 
 # The following features in the spec are already part of web-features:
@@ -80,5 +68,18 @@ compat_features:
 #   - svg.global_attributes.text-overflow
 # - Custom ellipses:
 #   - css.properties.text-overflow.string
+# - ::scroll-button:
+#   - css.selectors.scroll-button
+#   - css.selectors.scroll-button.block-end
+#   - css.selectors.scroll-button.block-start
+#   - css.selectors.scroll-button.down
+#   - css.selectors.scroll-button.inline-end
+#   - css.selectors.scroll-button.inline-start
+#   - css.selectors.scroll-button.left
+#   - css.selectors.scroll-button.next
+#   - css.selectors.scroll-button.prev
+#   - css.selectors.scroll-button.right
+#   - css.selectors.scroll-button.star
+#   - css.selectors.scroll-button.up
 # - SVG:
 #   - svg.global_attributes.overflow

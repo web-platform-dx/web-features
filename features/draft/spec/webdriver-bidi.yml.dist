@@ -310,6 +310,7 @@ compat_features:
   - webdriver.bidi.browser.createUserContext
   - webdriver.bidi.browser.getUserContexts
   - webdriver.bidi.browser.removeUserContext
+  - webdriver.bidi.browser.removeUserContext.userContext_parameter
   - webdriver.bidi.browsingContext.contextDestroyed_event.userContext_parameter
   - webdriver.bidi.browsingContext.create.userContext_parameter
   - webdriver.bidi.script.addPreloadScript.contexts_parameter
@@ -599,6 +600,34 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
+  - webdriver.bidi.browser.createUserContext.unhandledPromptBehavior_parameter
+  - webdriver.bidi.emulation.setLocaleOverride
+  - webdriver.bidi.emulation.setLocaleOverride.contexts_parameter
+  - webdriver.bidi.emulation.setLocaleOverride.locale_parameter
+  - webdriver.bidi.emulation.setLocaleOverride.userContexts_parameter
+  - webdriver.bidi.emulation.setScreenOrientationOverride
+  - webdriver.bidi.emulation.setScreenOrientationOverride.contexts_parameter
+  - webdriver.bidi.emulation.setScreenOrientationOverride.screenOrientation_parameter
+  - webdriver.bidi.emulation.setScreenOrientationOverride.userContexts_parameter
+  - webdriver.bidi.emulation.setTimezoneOverride
+  - webdriver.bidi.emulation.setTimezoneOverride.contexts_parameter
+  - webdriver.bidi.emulation.setTimezoneOverride.timezone_parameter
+  - webdriver.bidi.emulation.setTimezoneOverride.userContexts_parameter
+  - webdriver.bidi.network.disownData.collector_parameter
+  - webdriver.bidi.network.disownData.dataType_parameter
+  - webdriver.bidi.network.disownData.request_parameter
+  - webdriver.bidi.network.getData.collector_parameter
+  - webdriver.bidi.network.getData.dataType_parameter
+  - webdriver.bidi.network.getData.disown_parameter
+  - webdriver.bidi.network.getData.request_parameter
+  - webdriver.bidi.network.removeDataCollector
+  - webdriver.bidi.network.removeDataCollector.collector_parameter
+
+  # baseline: false
+  # support:
   #   firefox: "112"
   #   firefox_android: "112"
   - webdriver.bidi.browsingContext.print
@@ -619,6 +648,22 @@ compat_features:
 
   # baseline: false
   # support:
+  #   firefox: "118"
+  #   firefox_android: "118"
+  - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.alert
+  - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.confirm
+  - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.prompt
+
+  # baseline: false
+  # support:
+  #   firefox: "119"
+  #   firefox_android: "119"
+  - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.alert
+  - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.confirm
+  - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.prompt
+
+  # baseline: false
+  # support:
   #   firefox: "122"
   #   firefox_android: "122"
   - webdriver.bidi.network.authRequired_event
@@ -632,7 +677,6 @@ compat_features:
   # support:
   #   firefox: "124"
   #   firefox_android: "124"
-  - webdriver.bidi.browser.removeUserContext.userContext_parameter
   - webdriver.bidi.network.authRequired_event.intercepts_parameter
   - webdriver.bidi.network.authRequired_event.isBlocked_parameter
   - webdriver.bidi.network.continueRequest
@@ -685,23 +729,18 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - webdriver.bidi.browser.createUserContext.unhandledPromptBehavior_parameter
+  - webdriver.bidi.browser.setClientWindowState
+  - webdriver.bidi.browser.setClientWindowState.clientWindow_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event
   - webdriver.bidi.browsingContext.historyUpdated_event.context_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event.timestamp_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event.url_parameter
-  - webdriver.bidi.emulation.setScreenOrientationOverride
-  - webdriver.bidi.emulation.setScreenOrientationOverride.contexts_parameter
-  - webdriver.bidi.emulation.setScreenOrientationOverride.screenOrientation_parameter
-  - webdriver.bidi.emulation.setScreenOrientationOverride.userContexts_parameter
+  - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.beforeunload
+  - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.beforeunload
   - webdriver.bidi.emulation.setScriptingEnabled
   - webdriver.bidi.emulation.setScriptingEnabled.contexts_parameter
   - webdriver.bidi.emulation.setScriptingEnabled.enabled_parameter
   - webdriver.bidi.emulation.setScriptingEnabled.userContexts_parameter
-  - webdriver.bidi.emulation.setTimezoneOverride
-  - webdriver.bidi.emulation.setTimezoneOverride.contexts_parameter
-  - webdriver.bidi.emulation.setTimezoneOverride.timezone_parameter
-  - webdriver.bidi.emulation.setTimezoneOverride.userContexts_parameter
   - webdriver.bidi.network.addDataCollector
   - webdriver.bidi.network.addDataCollector.collectorType_parameter
   - webdriver.bidi.network.addDataCollector.contexts_parameter
@@ -709,20 +748,11 @@ compat_features:
   - webdriver.bidi.network.addDataCollector.maxEncodedDataSize_parameter
   - webdriver.bidi.network.addDataCollector.userContexts_parameter
   - webdriver.bidi.network.authRequired_event.response_parameter
-  - webdriver.bidi.network.disownData.collector_parameter
-  - webdriver.bidi.network.disownData.dataType_parameter
-  - webdriver.bidi.network.disownData.request_parameter
-  - webdriver.bidi.network.getData.collector_parameter
-  - webdriver.bidi.network.getData.dataType_parameter
-  - webdriver.bidi.network.getData.disown_parameter
-  - webdriver.bidi.network.getData.request_parameter
   - webdriver.bidi.network.provideResponse.body_parameter
   - webdriver.bidi.network.provideResponse.cookies_parameter
   - webdriver.bidi.network.provideResponse.headers_parameter
   - webdriver.bidi.network.provideResponse.reasonPhrase_parameter
   - webdriver.bidi.network.provideResponse.statusCode_parameter
-  - webdriver.bidi.network.removeDataCollector
-  - webdriver.bidi.network.removeDataCollector.collector_parameter
   - webdriver.bidi.network.responseCompleted_event
   - webdriver.bidi.network.responseCompleted_event.context_parameter
   - webdriver.bidi.network.responseCompleted_event.intercepts_parameter
