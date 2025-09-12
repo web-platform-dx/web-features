@@ -2,6 +2,7 @@ import { Compat } from "compute-baseline/browser-compat-data";
 import { fileURLToPath } from "node:url";
 import yargs from "yargs";
 import { features } from "../index.js";
+import { isOrdinaryFeatureData } from "../type-guards.js";
 
 const argv = yargs(process.argv.slice(2))
   .scriptName("stats")
@@ -14,11 +15,20 @@ const argv = yargs(process.argv.slice(2))
   }).argv;
 
 export function stats(detailed: boolean = false) {
-  const featureCount = Object.keys(features).length;
+  const featureCount = Object.values(features).filter(
+    isOrdinaryFeatureData,
+  ).length;
 
   const keys = [];
   const doneKeys = Array.from(
-    new Set(Object.values(features).flatMap((f) => f.compat_features ?? [])),
+    new Set(
+      Object.values(features).flatMap((f) => {
+        if (isOrdinaryFeatureData(f)) {
+          return f.compat_features ?? [];
+        }
+        return [];
+      }),
+    ),
   );
   const toDoKeys = [];
 
@@ -35,6 +45,7 @@ export function stats(detailed: boolean = false) {
   }
 
   const featureSizes = Object.values(features)
+    .filter(isOrdinaryFeatureData)
     .map((feature) => (feature.compat_features ?? []).length)
     .sort((a, b) => a - b);
 
