@@ -83,13 +83,13 @@ It has the following properties:
 - `status`: Support status data.
   It has the following properties:
 
-  - `baseline` (type: `"high" | "low" | false): Whether the feature Baseline widely available, Baseline newly available, or not Baseline.
-  - `baseline_low_date` (optional, type: `string`): When the feature reached Baseline newly available status.
-  - `baseline_high_date` (optional, type: `string`): When the feature reached Baseline widely available status.
+  - `baseline` (type: `"high" | "low" | false`): Whether the feature Baseline widely available, Baseline newly available, or not Baseline
+  - `baseline_low_date` (optional, type: `string`): When the feature reached Baseline newly available status
+  - `baseline_high_date` (optional, type: `string`): When the feature reached Baseline widely available status
   - `support`: An object representing per-browser support information, showing the version number where each browser first started to support that feature.
     All keys are optional.
     Keys are one of: `"chrome"`, `"chrome_android"`, `"edge"`, `"firefox"`, `"firefox"`, `"firefox_android"`, `"safari"`, `"safari_ios"`.
-    Each value is a `string` (containing the version number).
+    Each value is a `string` containing the version number.
 
 - `group` (optional, type: `string | string[]`): A `groups` key or an array of them
 - `snapshot` (optional, type: `string | string[]`): A `snapshots` key or an array of them
@@ -99,8 +99,8 @@ It has the following properties:
 - `discouraged` (optional): An object indicating that web developers should avoid using the feature.
   It has the following properties:
 
-  - `according_to` (type: `string[]`): One or more links to a formal discouragement notice, such as specification text or an intent-to-unship.
-  - `alternatives` (optional, type: `string[]`): One or more feature IDs (as in `features[alternatives[0]]`) that substitute some or all of this feature's utility.
+  - `according_to` (type: `string[]`): One or more links to a formal discouragement notice, such as specification text or an intent-to-unship
+  - `alternatives` (optional, type: `string[]`): One or more feature IDs (as in `features[alternatives[0]]`) that substitute some or all of this feature's utility
 
 ### Moved objects
 
