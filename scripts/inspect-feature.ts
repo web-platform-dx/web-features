@@ -3,6 +3,7 @@ import escapeHtml from "escape-html";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import winston from "winston";
 import YAML from "yaml";
 import yargs from "yargs";
 import { features } from "..";
@@ -33,6 +34,15 @@ const argv = yargs(process.argv.slice(2))
     defaultDescription: "warn",
   }).argv as Args;
 
+const logger = winston.createLogger({
+  level: argv.verbose > 0 ? "debug" : "warn",
+  format: winston.format.combine(
+    winston.format.colorize(),
+    winston.format.simple(),
+  ),
+  transports: new winston.transports.Console(),
+});
+
 function main(): void {
   for (const filePath of argv.paths) {
     const { name, ext, dir } = path.parse(filePath);
@@ -44,6 +54,12 @@ function main(): void {
     const feature = features[id];
     if (!feature) {
       throw new Error(`No feature found for ID ${id}`);
+    }
+    if (feature.kind === "moved" || feature.kind === "split") {
+      logger.warn(
+        `${id} is a ${feature.kind} feature. Did you mean to inspect this?`,
+      );
+      continue;
     }
 
     const { compat_features } = feature;
