@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import webSpecs from 'web-specs' with { type: 'json' };
 
 import { features } from '../index.js';
+import { isOrdinaryFeatureData } from "../type-guards.js";
 
 // Specs needs to be in "good standing". Nightly URLs are used if available,
 // otherwise the snapshot/versioned URL is used. See browser-specs/web-specs
@@ -195,6 +196,10 @@ for (const [allowedUrl, message] of defaultAllowlist) {
 }
 
 for (const [id, data] of Object.entries(features)) {
+    if (!isOrdinaryFeatureData(data)) {
+        continue;
+    }
+
     const specs = Array.isArray(data.spec) ? data.spec : [data.spec];
     for (const spec of specs) {
         let url: URL;
