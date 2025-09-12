@@ -5,5 +5,20 @@ status:
   baseline: false
   support: {}
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2023-03-27
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "101"
+  #   firefox_android: "101"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.Document.adoptedStyleSheets.mutable
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
   - api.CSSStyleProperties
   - api.CSSStyleProperties.cssFloat
