@@ -143,6 +143,9 @@ To split the feature:
    ```
 
    Replace the `target-id` values with two or more target ID strings.
+   Order `redirect_targets` by the most widely-relevant features first.
+   For example, if the feature is split to separate a Baseline subset of a feature from a non-Baseline subset, then put the Baseline feature first.
+   If you must break a tie, use alphabetical order.
 
 3. Regenerate the dist files.
    Run `npm run dist`.
