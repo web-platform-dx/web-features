@@ -1,0 +1,10 @@
+name: clipboardchange
+description: The `"clipboardchange"` event of the Clipboard API fires when the user modifies the clipboard's contents.
+spec: https://w3c.github.io/clipboard-apis/#clipboard-event-clipboardchange
+group: clipboard
+status:
+  # clipboardchange is not in BCD yet.
+  # It is implemented in Chromium, and available only as an origin trial
+  # in Chrome 140 to 142.
+  # See https://chromestatus.com/feature/5085102657503232
+  baseline: false
