@@ -124,6 +124,6 @@ You can think of this kind of feature like a [Wikipedia disambiguation page](htt
 A split feature has the following properties:
 
 - `kind` (value: `"split"`): A type discriminator
-- `redirect_targets` (type: `string[]`): An array of two or more feature IDs.
+- `redirect_targets` (type: `string[]`): An array of two or more feature IDs, in order of greatest relevance or importance (as judged by the web-features maintainers).
   The IDs are guaranteed to be ordinary, non-redirecting features.
   Double redirects and cycles are forbidden.
