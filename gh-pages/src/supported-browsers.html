@@ -150,7 +150,7 @@ layout: "default.html"
         .map((version) => {
           return (
             `<tr view-transition-name="view-transition-${version.browser}">` +
-            `<td>${nameMappings[version.browser]}${calloutDownstreamBrowsers.indexOf(version.browser) != -1 ? "*" : ""}</td>
+            `<td>${nameMappings[version.browser] ? nameMappings[version.browser] : version.browser}${calloutDownstreamBrowsers.indexOf(version.browser) != -1 ? "*" : ""}</td>
           <td>${version.version}</td>
           <td>${version.engine}</td>
           <td>${version.engine_version}</td>
