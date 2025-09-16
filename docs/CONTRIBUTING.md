@@ -271,8 +271,8 @@ To set the status of your new feature, you must associate your feature with one 
 
   You can also use the `npm run traverse | grep -i <keyword>` command in BCD to list all BCD keys that match a certain keyword.
 
-[!NOTE]
-In some cases, a feature may be so new that it doesn't have any corresponding BCD keys, for example when it's not supported by any browsers yet. Emerging features like this may still be added to the repository by omitting the `compat_features` property. As soon as BCD keys do become available for this feature, the steps above should be followed to ensure that they are properly associated with the feature.
+> [!NOTE]
+> In some cases, a feature may be so new that it doesn't have any corresponding BCD keys, for example when it's not supported by any browsers yet. Emerging features like this may still be added to the repository by omitting the `compat_features` property. As soon as BCD keys do become available for this feature, the steps above should be followed to ensure that they are properly associated with the feature.
 
 #### Generate and check the dist file
 
