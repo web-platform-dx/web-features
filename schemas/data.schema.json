@@ -129,19 +129,19 @@
           "type": "string"
         },
         "spec": {
-          "description": "Specification URL(s)",
+          "description": "Specification URLs",
           "$ref": "#/definitions/Strings"
         },
         "group": {
-          "description": "Group identifier(s)",
+          "description": "Group identifiers",
           "$ref": "#/definitions/Strings"
         },
         "snapshot": {
-          "description": "Snapshot identifier(s)",
+          "description": "Snapshot identifiers",
           "$ref": "#/definitions/Strings"
         },
         "caniuse": {
-          "description": "caniuse.com identifier(s)",
+          "description": "caniuse.com identifiers",
           "$ref": "#/definitions/Strings"
         },
         "compat_features": {

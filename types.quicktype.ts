@@ -67,7 +67,7 @@ export interface Release {
  */
 export interface FeatureData {
   /**
-   * caniuse.com identifier(s)
+   * caniuse.com identifiers
    */
   caniuse?: string[];
   /**
@@ -87,7 +87,7 @@ export interface FeatureData {
    */
   discouraged?: Discouraged;
   /**
-   * Group identifier(s)
+   * Group identifiers
    */
   group?: string[];
   kind: Kind;
@@ -96,11 +96,11 @@ export interface FeatureData {
    */
   name?: string;
   /**
-   * Snapshot identifier(s)
+   * Snapshot identifiers
    */
   snapshot?: string[];
   /**
-   * Specification URL(s)
+   * Specification URLs
    */
   spec?: string[];
   /**

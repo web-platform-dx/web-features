@@ -79,7 +79,7 @@ It has the following properties:
 - `name` (type: `string`): A plain-text human-readable name for the feature
 - `description` (type: `string`): A short plain-text description of the feature
 - `description_html` (type: `string`): A short HTML-formatted description of the feature
-- `spec` (type: `string | string[]`): A specification URL or an array of them
+- `spec` (type: `string[]`): A specification URL or an array of them
 - `status`: Support status data.
   It has the following properties:
 
@@ -91,9 +91,9 @@ It has the following properties:
     Keys are one of: `"chrome"`, `"chrome_android"`, `"edge"`, `"firefox"`, `"firefox"`, `"firefox_android"`, `"safari"`, `"safari_ios"`.
     Each value is a `string` containing the version number.
 
-- `group` (optional, type: `string | string[]`): A `groups` key or an array of them
-- `snapshot` (optional, type: `string | string[]`): A `snapshots` key or an array of them
-- `caniuse` (optional, type: `string | string[]`): A caniuse feature ID that corresponds to the current feature, or an array of them.
+- `group` (optional, type: `string[]`): A `groups` key or an array of them
+- `snapshot` (optional, type: `string[]`): A `snapshots` key or an array of them
+- `caniuse` (optional, type: `string[]`): A caniuse feature ID that corresponds to the current feature, or an array of them.
   Use it to look up caniuse data from a package like [`caniuse-lite`](https://www.npmjs.com/package/caniuse-lite) or construct a URL to a page on caniuse.com.
 - `compat_features` (optional, type: `string[]`): An array of `@mdn/browser-compat-data` feature key strings.
 - `discouraged` (optional): An object indicating that web developers should avoid using the feature.
