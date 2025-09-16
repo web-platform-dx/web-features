@@ -67,9 +67,9 @@ export interface Release {
  */
 export interface FeatureData {
   /**
-   * caniuse.com identifier(s)
+   * caniuse.com identifiers
    */
-  caniuse?: string[] | string;
+  caniuse?: string[];
   /**
    * Sources of support data for this feature
    */
@@ -87,22 +87,22 @@ export interface FeatureData {
    */
   discouraged?: Discouraged;
   /**
-   * Group identifier(s)
+   * Group identifiers
    */
-  group?: string[] | string;
+  group?: string[];
   kind: Kind;
   /**
    * Short name
    */
   name?: string;
   /**
-   * Snapshot identifier(s)
+   * Snapshot identifiers
    */
-  snapshot?: string[] | string;
+  snapshot?: string[];
   /**
-   * Specification URL(s)
+   * Specification URLs
    */
-  spec?: string[] | string;
+  spec?: string[];
   /**
    * Whether a feature is considered a "Baseline" web platform feature and when it achieved
    * that status

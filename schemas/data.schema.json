@@ -81,7 +81,7 @@
       "properties": {
         "according_to": {
           "description": "Links to a formal discouragement notice, such as specification text, intent-to-unship, etc.",
-          "$ref": "#/definitions/URLs"
+          "$ref": "#/definitions/Strings"
         },
         "alternatives": {
           "description": "IDs for features that substitute some or all of this feature's utility",
@@ -129,20 +129,20 @@
           "type": "string"
         },
         "spec": {
-          "description": "Specification URL(s)",
-          "$ref": "#/definitions/URLOrURLs"
+          "description": "Specification URLs",
+          "$ref": "#/definitions/Strings"
         },
         "group": {
-          "description": "Group identifier(s)",
-          "$ref": "#/definitions/StringOrStrings"
+          "description": "Group identifiers",
+          "$ref": "#/definitions/Strings"
         },
         "snapshot": {
-          "description": "Snapshot identifier(s)",
-          "$ref": "#/definitions/StringOrStrings"
+          "description": "Snapshot identifiers",
+          "$ref": "#/definitions/Strings"
         },
         "caniuse": {
-          "description": "caniuse.com identifier(s)",
-          "$ref": "#/definitions/StringOrStrings"
+          "description": "caniuse.com identifiers",
+          "$ref": "#/definitions/Strings"
         },
         "compat_features": {
           "description": "Sources of support data for this feature",
@@ -308,50 +308,12 @@
       "required": ["baseline", "support"],
       "additionalProperties": false
     },
-    "StringOrStrings": {
-      "oneOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "minItems": 2
-        }
-      ]
-    },
     "Strings": {
       "type": "array",
       "items": {
         "type": "string"
       },
       "minItems": 1
-    },
-    "URL": {
-      "type": "string"
-    },
-    "URLs": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "minItems": 1
-    },
-    "URLOrURLs": {
-      "oneOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "minItems": 2
-        }
-      ]
     }
   }
 }
