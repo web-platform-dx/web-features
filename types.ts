@@ -81,7 +81,7 @@ export type FeatureData = { kind: "feature" } & Required<
   Partial<
     Pick<
       QuicktypeMonolithicFeatureData,
-      "caniuse" | "compat_features" | "discouraged"
+      "caniuse" | "compat_features" | "discouraged" | "group" | "snapshot"
     >
   >;
 
@@ -91,6 +91,13 @@ const goodFeatureData: FeatureData = {
   description: "Hi",
   description_html: "Hi",
   spec: [""],
+  snapshot: [""],
+  group: [""],
+  caniuse: [""],
+  discouraged: {
+    according_to: [""],
+    alternatives: [""],
+  },
   status: {
     baseline: false,
     support: {},
