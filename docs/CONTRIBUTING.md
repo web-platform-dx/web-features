@@ -30,8 +30,6 @@ As such, a feature has no specific size. A feature might cover a single CSS prop
 
 For example, the `fetch()` API is a feature, the `:has()` CSS pseudo-class function too, and so is the Web Audio API.
 
-For the time being, this repository focuses only on features that are implemented in some browser and that are already documented on MDN.
-
 ### Hints for distinguishing features
 
 Sometimes it can be hard to tell whether something (like an HTML attribute or JavaScript method) is a distinct feature or part of another feature.
@@ -272,6 +270,9 @@ To set the status of your new feature, you must associate your feature with one 
   To identify the BCD keys that you need, check the browser compatibility tables displayed at the end of the MDN pages that document your new feature, and then search the BCD source code for the names that appear in the table.
 
   You can also use the `npm run traverse | grep -i <keyword>` command in BCD to list all BCD keys that match a certain keyword.
+
+[!NOTE]
+In some cases, a feature may be so new that it doesn't have any corresponding BCD keys, for example when it's not supported by any browsers yet. Emerging features like this may still be added to the repository by omitting the `compat_features` property. As soon as BCD keys do become available for this feature, the steps above should be followed to ensure that they are properly associated with the feature.
 
 #### Generate and check the dist file
 
