@@ -20,13 +20,16 @@ compat_features:
   #   safari_ios: "16.4"
   - api.FileSystemDirectoryHandle.@@asyncIterator
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-09-15
   # support:
   #   chrome: "86"
   #   chrome_android: "109"
   #   edge: "86"
   #   firefox: "111"
   #   firefox_android: "111"
+  #   safari: "26"
+  #   safari_ios: "26"
   - api.FileSystemFileHandle.createWritable
   - api.FileSystemWritableFileStream
   - api.FileSystemWritableFileStream.seek

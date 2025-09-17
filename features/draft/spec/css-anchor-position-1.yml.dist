@@ -3,13 +3,17 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    safari: "26"
+    safari_ios: "26"
 compat_features:
   # baseline: false
   # support:
   #   chrome: "129"
   #   chrome_android: "129"
   #   edge: "129"
+  #   safari: "26"
+  #   safari_ios: "26"
   - css.properties.position-area.span-self-block-end
   - css.properties.position-area.span-self-block-start
   - css.properties.position-area.span-self-end
@@ -23,7 +27,9 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   safari: "26"
+  #   safari_ios: "26"
   - css.properties.position-area.self-block-end
   - css.properties.position-area.self-block-start
   - css.properties.position-area.self-inline-end
