@@ -2,8 +2,12 @@ name: RegExp static properties
 description: The `RegExp` object has several static properties to access the input and results of the most-recent regular expression match.
 spec: https://github.com/tc39/proposal-regexp-legacy-features
 discouraged:
+  reason: The `RegExp` static properties may have unintended side effects.
   according_to:
     - https://github.com/tc39/proposal-regexp-legacy-features
+  # No `alternatives` because it would be `alternatives: [regexp]`. In the
+  # future it'd be nice to have an internal reference to the RegExp instance
+  # methods. See: https://github.com/web-platform-dx/web-features/issues/2676
 compat_features:
   - javascript.builtins.RegExp.input
   - javascript.builtins.RegExp.lastMatch
