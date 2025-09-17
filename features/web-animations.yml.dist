@@ -222,6 +222,17 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "115"
+  #   chrome_android: "115"
+  #   edge: "115"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.AnimationTimeline.duration
+  - api.Element.animate.options_rangeEnd_parameter
+  - api.Element.animate.options_rangeStart_parameter
+
+  # baseline: false
+  # support:
   #   firefox: "54"
   #   firefox_android: "54"
   #   safari: "13.1"
@@ -235,15 +246,6 @@ compat_features:
   #   safari: "16.4"
   #   safari_ios: "16.4"
   - api.KeyframeEffect.iterationComposite
-
-  # baseline: false
-  # support:
-  #   chrome: "115"
-  #   chrome_android: "115"
-  #   edge: "115"
-  - api.AnimationTimeline.duration
-  - api.Element.animate.options_rangeEnd_parameter
-  - api.Element.animate.options_rangeStart_parameter
 
   # baseline: false
   # support:
