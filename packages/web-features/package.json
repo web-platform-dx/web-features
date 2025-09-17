@@ -18,12 +18,14 @@
   "types": "./index.d.ts",
   "files": [
     "index.d.ts",
+    "types.d.ts",
+    "types.quicktype.d.ts",
     "index.js",
     "data.json",
     "data.schema.json"
   ],
   "scripts": {
-    "prepare": "tsc && rm types.js && tsup ./index.ts --dts-only --format=esm --out-dir=."
+    "prepare": "tsc && rm types.js && rm types.quicktype.js"
   },
   "devDependencies": {
     "@types/node": "^20.19.16",

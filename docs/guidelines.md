@@ -77,6 +77,81 @@ The identifier should match the name, with these additional guidelines:
   - 👍 Recommended: `user-pseudos`
   - 👎 Not recommended: `user-valid-and-user-invalid`
 
+### Move a feature to a new ID
+
+It’s possible to change or substitute a feature’s ID by creating a redirect from the original ID pointing to a new ID.
+You can do this when:
+
+* The original feature ID is misspelled.
+  For example, `numeric-seperators` (note spelling) data can be moved to `numeric-separators`.
+
+* The original feature ID breaks the identifier guidelines.
+  For example, `drones-initial-support` data can be moved to `drones`.
+
+* The original feature should not have existed as an independent feature.
+  For example, `single-color-gradients` was a poorly-conceived feature, where [a specification change](https://github.com/w3c/csswg-drafts/issues/10092) simplified the specification, implementation, and tools, but produced no novel browser behavior that developers could use in an application.
+  Instead, all the compatibility keys for the feature were reassigned to `gradients`.
+
+* Data consumers report that the original feature ID is confusing or misleading.
+
+You must not do this when the feature has been superseded, such that the feature's name has changed and the exposed behaviors or API surface have changed (in shipping browsers, up to and including unshipping).
+Instead, use [`discouraged` data](#discouraged) with one or more `alternatives`.
+
+To move the feature:
+
+1. If applicable, move the existing YAML files for the feature to the target ID filename.
+   For example, rename `features/numeric-seperators.yml` to `features/numeric-separators.yml`.
+
+   If the original feature is being replaced by another feature, then move on to the next step.
+
+2. Create a new YAML file for the original target ID filename.
+   For example, create an empty file `features/numeric-seperators.yml`.
+
+3. Populate the following data in the new YAML file:
+
+   ```yaml  
+   kind: moved  
+   redirect_target: TARGET-ID  
+   ```
+
+   where `TARGET-ID` is the target ID.
+
+4. Regenerate the dist files.
+   Run `npm run dist`.
+
+5. Commit your work and open a pull request.
+
+### Split a feature into two or more other features
+
+Some features may need to be split in two or more parts.
+You can do this when the original feature should not have existed as an independent feature in the first place.
+For example, similarly-named compat keys that ought to have been additions to existing features were erroneously combined and assigned to a new feature.
+
+To split the feature:
+
+1. If the feature to be split has any keys listed in `compat_features`, then reassign the keys to the target features.
+   
+   To get the list of keys, you may need to first run `npm run undist -- $feature` where `$feature` is the path to the YAML file of the feature to be split.
+
+2. Replace the contents of the original feature YAML file with the following data:
+
+   ```yaml
+   kind: split  
+   redirect_targets:  
+     - target-id1  
+     - target-id2  
+   ```
+
+   Replace the `target-id` values with two or more target ID strings.
+   Order `redirect_targets` by the most widely-relevant features first.
+   For example, if the feature is split to separate a Baseline subset of a feature from a non-Baseline subset, then put the Baseline feature first.
+   If you must break a tie, use alphabetical order.
+
+3. Regenerate the dist files.
+   Run `npm run dist`.
+
+4. Commit your work and open a pull request.
+
 ## Descriptions
 
 The `description` field contains a short description of the feature in Markdown-formatted text, which is converted to HTML in the published package.
@@ -345,6 +420,6 @@ When you set a `discouraged` block in a feature file, do:
   If possible, use the single most broadly applicable reference, such as specification text.
   If a feature is removed from a specification, link to an issue, pull request, or commit showing the removal.
 
-- Set one or more (optional) `alternative` feature IDs that are whole or partial substitutes for the discouraged feature.
+- Set one or more (optional) `alternatives` feature IDs that are whole or partial substitutes for the discouraged feature.
   An alternative doesn't have to be a narrow drop-in replacement for the discouraged feature but it must handle some use case of the discouraged feature.
   Guide developers to the most relevant features that would help them stop using the discouraged feature.
