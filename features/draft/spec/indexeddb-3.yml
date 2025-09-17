@@ -1,8 +1,9 @@
-draft_date: 2025-09-08
+draft_date: 2025-09-17
 name: Indexed Database API 3.0
 description: TODO
 spec: https://w3c.github.io/IndexedDB/
 compat_features:
+  - api.IDBDatabase.abort_event
   - api.IDBIndex.getAllRecords
   - api.IDBObjectStore.getAllRecords
   - api.IDBRecord

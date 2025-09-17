@@ -7,12 +7,16 @@ status:
     chrome: "124"
     chrome_android: "124"
     edge: "124"
+    safari: "26"
+    safari_ios: "26"
 compat_features:
   # baseline: false
   # support:
   #   chrome: "83"
   #   chrome_android: "83"
   #   edge: "83"
+  #   safari: "26"
+  #   safari_ios: "26"
   - api.DOMParser.parseFromString.enforces_trusted_types
   - api.Element.insertAdjacentHTML.enforces_trusted_types
   - api.Element.outerHTML.enforces_trusted_types
@@ -25,6 +29,8 @@ compat_features:
   #   chrome: "124"
   #   chrome_android: "124"
   #   edge: "124"
+  #   safari: "26"
+  #   safari_ios: "26"
   - api.Document.parseHTMLUnsafe_static.enforces_trusted_types
   - api.Element.setHTMLUnsafe.enforces_trusted_types
   - api.ShadowRoot.setHTMLUnsafe.enforces_trusted_types
