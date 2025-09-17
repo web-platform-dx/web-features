@@ -1,5 +1,6 @@
-name: Fetch upload streams
-description: A `fetch()` request uploads a stream of data to the server when a request's `body` property is a `ReadableStream` object.
+name: Request body property
+description: A `ReadableStream` can be used as the body of a `Request` object.
 spec: https://fetch.spec.whatwg.org/#concept-body-stream
 compat_features:
   - api.Request.body
+  - api.Request.Request.request_body_readablestream
