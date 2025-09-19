@@ -1,7 +1,7 @@
 {
   "name": "web-features",
   "description": "Curated list of Web platform features",
-  "version": "2.48.1",
+  "version": "3.0.0",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
@@ -20,6 +20,8 @@
   "types": "./index.d.ts",
   "files": [
     "index.d.ts",
+    "types.d.ts",
+    "types.quicktype.d.ts",
     "index.js",
     "extended.d.ts",
     "extended.js",
@@ -28,10 +30,10 @@
     "data.schema.json"
   ],
   "scripts": {
-    "prepare": "tsc && rm types.js && tsup ./index.ts ./extended.ts --dts-only --format=esm --out-dir=. && npx prettier --write *.js"
+    "prepare": "tsc && rm types.js && rm types.quicktype.js"
   },
   "devDependencies": {
-    "@types/node": "^20.19.13",
+    "@types/node": "^20.19.17",
     "tsup": "^8.5.0",
     "typescript": "^5.9.2"
   }

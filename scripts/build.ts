@@ -7,6 +7,7 @@ import { basename } from "node:path";
 import winston from "winston";
 import yargs from "yargs";
 import * as data from "../index.js";
+import { isOrdinaryFeatureData } from "../type-guards.js";
 import { validate } from "./validate.js";
 
 const logger = winston.createLogger({
@@ -30,7 +31,12 @@ yargs(process.argv.slice(2))
 
 function buildPackage() {
   const packageDir = new URL("./packages/web-features/", rootDir);
-  const filesToCopy = ["LICENSE.txt", "types.ts", "schemas/data.schema.json"];
+  const filesToCopy = [
+    "LICENSE.txt",
+    "types.quicktype.ts",
+    "types.ts",
+    "schemas/data.schema.json",
+  ];
 
   if (!valid(data)) {
     logger.error("Data failed schema validation. No package built.");
@@ -61,6 +67,10 @@ function buildPackage() {
 
 function buildExtendedJSON() {
   for (const [id, featureData] of Object.entries(data.features)) {
+    if (!isOrdinaryFeatureData(featureData)) {
+      continue;
+    }
+
     if (
       Array.isArray(featureData.compat_features) &&
       featureData.compat_features.length &&

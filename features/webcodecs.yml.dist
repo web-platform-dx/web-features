@@ -8,6 +8,8 @@ status:
     chrome_android: "94"
     edge: "94"
     firefox: "130"
+    safari: "26"
+    safari_ios: "26"
 compat_features:
   # baseline: low
   # baseline_low_date: 2024-09-03
@@ -101,45 +103,6 @@ compat_features:
   - api.VideoEncoder.reset
   - api.VideoEncoder.state
 
-  # baseline: false
-  # support:
-  #   chrome: "106"
-  #   chrome_android: "106"
-  #   edge: "106"
-  #   firefox: "130"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - api.VideoDecoder.dequeue_event
-  - api.VideoEncoder.dequeue_event
-
-  # baseline: false
-  # support:
-  #   chrome: "94"
-  #   chrome_android: "94"
-  #   edge: "94"
-  #   firefox: "133"
-  #   firefox_android: "133"
-  - api.ImageDecoder
-  - api.ImageDecoder.ImageDecoder
-  - api.ImageDecoder.close
-  - api.ImageDecoder.complete
-  - api.ImageDecoder.completed
-  - api.ImageDecoder.decode
-  - api.ImageDecoder.isTypeSupported_static
-  - api.ImageDecoder.reset
-  - api.ImageDecoder.tracks
-  - api.ImageDecoder.type
-  - api.ImageTrack
-  - api.ImageTrack.animated
-  - api.ImageTrack.frameCount
-  - api.ImageTrack.repetitionCount
-  - api.ImageTrack.selected
-  - api.ImageTrackList
-  - api.ImageTrackList.length
-  - api.ImageTrackList.ready
-  - api.ImageTrackList.selectedIndex
-  - api.ImageTrackList.selectedTrack
-
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
@@ -147,6 +110,8 @@ compat_features:
   #   chrome_android: "94"
   #   edge: "94"
   #   firefox: "130"
+  #   safari: "26"
+  #   safari_ios: "26"
   - api.AudioData
   - api.AudioData.AudioData
   - api.AudioData.allocationSize
@@ -193,6 +158,19 @@ compat_features:
   #   chrome_android: "106"
   #   edge: "106"
   #   firefox: "130"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.VideoDecoder.dequeue_event
+  - api.VideoEncoder.dequeue_event
+
+  # baseline: false
+  # support:
+  #   chrome: "106"
+  #   chrome_android: "106"
+  #   edge: "106"
+  #   firefox: "130"
+  #   safari: "26"
+  #   safari_ios: "26"
   - api.AudioDecoder.dequeue_event
   - api.AudioEncoder.dequeue_event
 
@@ -202,6 +180,8 @@ compat_features:
   #   chrome_android: "110"
   #   edge: "110"
   #   firefox: "130"
+  #   safari: "26"
+  #   safari_ios: "26"
   - api.AudioEncoder.configure.opus
 
   # baseline: false
@@ -210,7 +190,37 @@ compat_features:
   #   chrome_android: "119"
   #   edge: "119"
   #   firefox: "130"
+  #   safari: "26"
+  #   safari_ios: "26"
   - api.AudioEncoder.configure.bitrateMode
+
+  # baseline: false
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "94"
+  #   firefox: "133"
+  #   firefox_android: "133"
+  - api.ImageDecoder
+  - api.ImageDecoder.ImageDecoder
+  - api.ImageDecoder.close
+  - api.ImageDecoder.complete
+  - api.ImageDecoder.completed
+  - api.ImageDecoder.decode
+  - api.ImageDecoder.isTypeSupported_static
+  - api.ImageDecoder.reset
+  - api.ImageDecoder.tracks
+  - api.ImageDecoder.type
+  - api.ImageTrack
+  - api.ImageTrack.animated
+  - api.ImageTrack.frameCount
+  - api.ImageTrack.repetitionCount
+  - api.ImageTrack.selected
+  - api.ImageTrackList
+  - api.ImageTrackList.length
+  - api.ImageTrackList.ready
+  - api.ImageTrackList.selectedIndex
+  - api.ImageTrackList.selectedTrack
 
   # baseline: false
   # support:

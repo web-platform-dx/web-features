@@ -8,7 +8,21 @@ status:
     chrome_android: "136"
     edge: "136"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "136"
+  #   chrome_android: "136"
+  #   edge: "136"
+  #   safari: "26"
+  #   safari_ios: "26"
   - css.properties.dynamic-range-limit
-  - css.properties.dynamic-range-limit.constrained
   - css.properties.dynamic-range-limit.no-limit
   - css.properties.dynamic-range-limit.standard
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "136"
+  #   chrome_android: "136"
+  #   edge: "136"
+  - css.properties.dynamic-range-limit.constrained
