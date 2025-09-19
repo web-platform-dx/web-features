@@ -57,13 +57,13 @@ function resolveFeatureId(featureId: string): string[] {
   if (!feature) {
     return [];
   }
-  if (feature.kind === 'feature') {
+  if (feature.kind === "feature") {
     return [featureId];
   }
-  if (feature.kind === 'moved') {
+  if (feature.kind === "moved") {
     return resolveFeatureId(feature.redirect_target);
   }
-  if (feature.kind === 'split') {
+  if (feature.kind === "split") {
     return feature.redirect_targets.flatMap(resolveFeatureId);
   }
   return [];

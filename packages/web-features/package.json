@@ -30,7 +30,8 @@
     "data.schema.json"
   ],
   "scripts": {
-    "prepare": "tsc && rm types.js && rm types.quicktype.js"
+    "prepare": "tsc && rm types.js && rm types.quicktype.js && npm run format",
+    "format": "npx prettier --write ."
   },
   "devDependencies": {
     "@types/node": "^20.19.17",
