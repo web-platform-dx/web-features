@@ -1,4 +1,4 @@
 name: 'Interest invokers'
-description: The `interestfor` global HTML attribute adds "interest" behaviors to the element, such that when the user "shows interest" in the element, actions are triggered on the target element, such as showing a popover. The user agent handles detecting when the user "shows interest" in the element, via methods such as hovering the element with a mouse, hitting special hotkeys on the keyboard, or long-pressing the element on touchscreens. When interest is shown or lost, an `InterestEvent` is fired on the target, which have default actions in the case of popovers - showing and hiding the popover.
+description: The `interestfor` global HTML attribute triggers actions on a target element when the user shows interest (e.g., hover, focus, long-press). The user agent detects this interest, firing an InterestEvent on the target. This event has default actions, like showing or hiding popovers.
 spec: https://github.com/whatwg/html/pull/11006
 group: html
