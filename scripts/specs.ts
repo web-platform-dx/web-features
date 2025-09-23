@@ -141,6 +141,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://www.w3.org/TR/2022/WD-selectors-4-20220507/#the-target-within-pseudo",
         "Allowed because this is where the feature last appeared in the spec before removal."
+    ],
+    [
+        "https://github.com/whatwg/html/pull/11006",
+        "Allowed because this spec PR hasn't landed yet. Once the PR merges, change the spec url and remove this exception."
     ]
 ];
 
