@@ -121,7 +121,7 @@ This is but one of several possible stories to help keep in mind the needs and c
 The WebDX community group, through the [web-platform-dx/web-features-set owners group](../GOVERNANCE.md), maintains this document.
 Based on WebDX community group research, the web-features owners group decides matters such as the core browser set, releases, editorial overrides, and so on.
 
-The status definition is due for review by the owners group on 1 June 2025.
+The status definition is due for review by the owners group on 9 September 2026.
 
 ## Status definition
 
@@ -182,12 +182,15 @@ The _core browser set_ shall be defined as:
 There are many things Baseline does not cover.
 Here are some areas for future consideration and not currently in-scope for Baseline, particularly other candidate states such as:
 
-<!-- TODO: Replace these with issues -->
-
+* Handling very broad feature definitions (e.g., some features cover a large API, such as the [DOM feature](/features/dom.yml) ([dist](/features/dom.yml.dist)), and "headline" statuses are not necessarily useful in such cases)
 * Upcoming (e.g., not yet shipped in all browsers)
 * Progressive enhancement safe (i.e., limited penalties for support failures)
 * Developer feedback requested
 * Buggy (e.g., supported but in ways that are surprising and semi-interoperable)
 * Support in assistive technology that is not built into browsers.
-* Obsolete/deprecated/legacy/etc. (i.e., flagged as such in the specification or dropped from newer versions of the specification)
 * Having high-quality polyfills available
+
+## See also
+
+* The `web-features` package reports when web developers are formally discouraged from using a platform feature.
+  See the data guidelines [Discouraged](guidelines.md#discouraged) section to learn when and how we mark a feature as discouraged.
