@@ -1,0 +1,8 @@
+name: Reference target
+description: The `referenceTarget` property of a `ShadowRoot` object forwards attributes such as `for` and `aria-labelledby` to elements inside a shadow DOM. This allows, for example, to link a `<label>` to its `<input>` even if the `<input>` is in the shadow DOM of a web component.
+spec: https://github.com/WICG/webcomponents/blob/gh-pages/proposals/reference-target-explainer.md
+group:
+  - web-components
+# No BCD keys yet as the feature hasn't shipped anywhere.
+# It's being implemented in Chromium, and has gone through an origin trial in 133-135:
+# https://chromestatus.com/feature/5188237101891584

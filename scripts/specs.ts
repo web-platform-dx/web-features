@@ -141,6 +141,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://www.w3.org/TR/2022/WD-selectors-4-20220507/#the-target-within-pseudo",
         "Allowed because this is where the feature last appeared in the spec before removal."
+    ],
+    [
+        "https://github.com/WICG/webcomponents/blob/gh-pages/proposals/reference-target-explainer.md",
+        "Allowed because the referencetarget feature isn't in a spec yet."
     ]
 ];
 
