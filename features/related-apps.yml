@@ -1,0 +1,8 @@
+name: Related apps
+description: The `related_applications` manifest member lists the OS-specific applications that are related to the current web app, such as a native Android app that provices similar functionality. The `getInstalledRelatedApps()` method lists which of those are installed on the curent device.
+spec: https://wicg.github.io/get-installed-related-apps/spec/
+group: progressive-web-app
+compat_features:
+  - api.Navigator.getInstalledRelatedApps
+  - manifests.webapp.prefer_related_applications
+  - manifests.webapp.related_applications
