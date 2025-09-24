@@ -1,0 +1,5 @@
+name: fetch ReadableStream body
+description: The `body` option passed to `fetch()` can be a `ReadableStream`.
+spec: https://fetch.spec.whatwg.org/#bodyinit
+compat_features:
+  - api.Request.Request.request_body_readablestream
