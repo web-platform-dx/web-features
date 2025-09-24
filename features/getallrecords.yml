@@ -1,0 +1,9 @@
+name: getAllRecords
+description: The `getAllRecords()` method of `IDBObjectStore` and `IDBIndex` return records and their primary keys from an IndexedDB store or index. The records can be read in batches and in reverse order. The `getAllRecords()` methods speed up read operations on large datasets.
+spec:
+  - https://w3c.github.io/IndexedDB/#dom-idbindex-getallrecords
+  - https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getallrecords
+group: indexeddb
+compat_features:
+  - api.IDBIndex.getAllRecords
+  - api.IDBObjectStore.getAllRecords
