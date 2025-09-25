@@ -141,6 +141,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://www.w3.org/TR/2022/WD-selectors-4-20220507/#the-target-within-pseudo",
         "Allowed because this is where the feature last appeared in the spec before removal."
+    ],
+    [
+        "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/Accessibility/AriaNotify/explainer.md",
+        "Allowed because the ariaNotify() method is not yet in a formal spec. Remove this exception when a formal spec is available."
     ]
 ];
 
