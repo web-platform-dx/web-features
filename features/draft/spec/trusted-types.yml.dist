@@ -10,6 +10,32 @@ status:
     safari: "26"
     safari_ios: "26"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "3"
+  #   safari_ios: "1"
+  - api.HTMLScriptElement.textContent
+
+  # baseline: high
+  # baseline_low_date: 2016-03-08
+  # baseline_high_date: 2018-09-08
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "45"
+  #   firefox_android: "45"
+  #   safari: "3"
+  #   safari_ios: "2"
+  - api.HTMLScriptElement.innerText
+
   # baseline: false
   # support:
   #   chrome: "83"
