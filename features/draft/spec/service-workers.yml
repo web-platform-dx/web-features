@@ -1,8 +1,9 @@
-draft_date: 2025-04-28
+draft_date: 2025-09-25
 name: Service Workers
 description: TODO
 spec: https://w3c.github.io/ServiceWorker/
 compat_features:
+  - api.ServiceWorkerContainer.register.enforces_trusted_types
   - http.headers.Service-Worker
   - http.headers.Service-Worker-Allowed
 

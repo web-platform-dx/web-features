@@ -757,8 +757,11 @@ compat_features:
   - webdriver.bidi.network.addDataCollector
   - webdriver.bidi.network.addDataCollector.contexts_parameter
   - webdriver.bidi.network.addDataCollector.dataTypes_parameter
+  - webdriver.bidi.network.addDataCollector.dataTypes_parameter.response
   - webdriver.bidi.network.addDataCollector.maxEncodedDataSize_parameter
   - webdriver.bidi.network.addDataCollector.userContexts_parameter
+  - webdriver.bidi.network.disownData.dataType_parameter.response
+  - webdriver.bidi.network.getData.dataType_parameter.response
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
