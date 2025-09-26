@@ -30,8 +30,6 @@ As such, a feature has no specific size. A feature might cover a single CSS prop
 
 For example, the `fetch()` API is a feature, the `:has()` CSS pseudo-class function too, and so is the Web Audio API.
 
-For the time being, this repository focuses only on features that are implemented in some browser and that are already documented on MDN.
-
 ### Hints for distinguishing features
 
 Sometimes it can be hard to tell whether something (like an HTML attribute or JavaScript method) is a distinct feature or part of another feature.
