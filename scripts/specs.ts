@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import webSpecs from 'web-specs' with { type: 'json' };
 
 import { features } from '../index.js';
+import { isOrdinaryFeatureData } from "../type-guards.js";
 
 // Specs needs to be in "good standing". Nightly URLs are used if available,
 // otherwise the snapshot/versioned URL is used. See browser-specs/web-specs
@@ -136,6 +137,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/whatwg/html/pull/11426",
         "This is where speculation rules' prefetch is in the process of being spec'd. Once the PR merges, change the spec url in `speculation-rules`, and remove this exception."
+    ],
+    [
+        "https://www.w3.org/TR/2022/WD-selectors-4-20220507/#the-target-within-pseudo",
+        "Allowed because this is where the feature last appeared in the spec before removal."
     ]
 ];
 
@@ -195,6 +200,10 @@ for (const [allowedUrl, message] of defaultAllowlist) {
 }
 
 for (const [id, data] of Object.entries(features)) {
+    if (!isOrdinaryFeatureData(data)) {
+        continue;
+    }
+
     const specs = Array.isArray(data.spec) ? data.spec : [data.spec];
     for (const spec of specs) {
         let url: URL;
