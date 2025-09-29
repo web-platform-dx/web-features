@@ -19,6 +19,7 @@ compat_features:
   #   safari: "26"
   #   safari_ios: "26"
   - api.Element.innerHTML.enforces_trusted_types
+  - api.HTMLScriptElement.innerText.enforces_trusted_types
   - api.HTMLScriptElement.src.enforces_trusted_types
   - api.HTMLScriptElement.text.enforces_trusted_types
   - api.ShadowRoot.innerHTML.enforces_trusted_types
@@ -64,8 +65,7 @@ compat_features:
   #   chrome_android: "83"
   #   safari: "26"
   #   safari_ios: "26"
-  - api.HTMLElement.innerText.enforces_trusted_types
-  - api.Node.textContent.enforces_trusted_types
+  - api.HTMLScriptElement.textContent.enforces_trusted_types
 
   # baseline: false
   # support:
