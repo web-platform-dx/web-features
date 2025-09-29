@@ -1,4 +1,4 @@
-draft_date: 2025-09-08
+draft_date: 2025-09-29
 name: WebDriver BiDi
 description: TODO
 spec: https://w3c.github.io/webdriver-bidi/
@@ -202,6 +202,7 @@ compat_features:
   - webdriver.bidi.network.addDataCollector.collectorType_parameter
   - webdriver.bidi.network.addDataCollector.contexts_parameter
   - webdriver.bidi.network.addDataCollector.dataTypes_parameter
+  - webdriver.bidi.network.addDataCollector.dataTypes_parameter.response
   - webdriver.bidi.network.addDataCollector.maxEncodedDataSize_parameter
   - webdriver.bidi.network.addDataCollector.userContexts_parameter
   - webdriver.bidi.network.addIntercept
@@ -245,6 +246,7 @@ compat_features:
   - webdriver.bidi.network.disownData
   - webdriver.bidi.network.disownData.collector_parameter
   - webdriver.bidi.network.disownData.dataType_parameter
+  - webdriver.bidi.network.disownData.dataType_parameter.response
   - webdriver.bidi.network.disownData.request_parameter
   - webdriver.bidi.network.failRequest
   - webdriver.bidi.network.failRequest.request_parameter
@@ -260,6 +262,7 @@ compat_features:
   - webdriver.bidi.network.getData
   - webdriver.bidi.network.getData.collector_parameter
   - webdriver.bidi.network.getData.dataType_parameter
+  - webdriver.bidi.network.getData.dataType_parameter.response
   - webdriver.bidi.network.getData.disown_parameter
   - webdriver.bidi.network.getData.request_parameter
   - webdriver.bidi.network.provideResponse
