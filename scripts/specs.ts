@@ -141,6 +141,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://www.w3.org/TR/2022/WD-selectors-4-20220507/#the-target-within-pseudo",
         "Allowed because this is where the feature last appeared in the spec before removal."
+    ],
+    [
+        "https://patcg-individual-drafts.github.io/topics/",
+        "Allowed because the Topics API isn't on a standards track yet. Remove this exception when it is."
     ]
 ];
 
