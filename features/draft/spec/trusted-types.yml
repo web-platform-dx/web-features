@@ -1,4 +1,4 @@
-draft_date: 2025-07-22
+draft_date: 2025-09-30
 name: Trusted Types
 description: TODO
 spec: https://w3c.github.io/trusted-types/dist/spec/
@@ -9,6 +9,8 @@ compat_features:
   - api.Element.outerHTML.enforces_trusted_types
   - api.Element.setHTMLUnsafe.enforces_trusted_types
   - api.HTMLIFrameElement.srcdoc.enforces_trusted_types
+  - api.HTMLScriptElement.innerText
+  - api.HTMLScriptElement.textContent
   - api.Range.createContextualFragment.enforces_trusted_types
   - api.ShadowRoot.setHTMLUnsafe.enforces_trusted_types
 
