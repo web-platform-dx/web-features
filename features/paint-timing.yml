@@ -4,16 +4,12 @@ spec: https://w3c.github.io/paint-timing/
 group: performance
 status:
   compute_from:
+    # This is what developers want out of this API, and these are implemented in all browsers.
     - api.PerformancePaintTiming
     - api.PerformancePaintTiming.first-contentful-paint
 compat_features:
   - api.PerformancePaintTiming
   - api.PerformancePaintTiming.first-contentful-paint
   - api.PerformancePaintTiming.toJSON
-
-  # first-paint isn't used in compute_from because user agents don't always report it, per spec.
+  # first-paint isn't part of compute_from because it's optional for user agents to report it.
   - api.PerformancePaintTiming.first-paint
-
-  # More recent additions which could be tracked separately if needed.
-  - api.PerformancePaintTiming.paintTime
-  - api.PerformancePaintTiming.presentationTime
