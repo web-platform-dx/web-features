@@ -1,5 +1,5 @@
 name: Topics
-description: The `browsingtopics` attribute for `<iframe>` elements and the `browsingTopics` option for the `fetch()` method enable interest-based advertising based on topics collected by the browser as the user navigates, without exposing the user's exact browsing history. Also known as the Topics API.
+description: The Topics API reports a user's likely subject-matter interests (as determined by the browser, known as topics) to iframes. This allows for interest-based advertising that does not rely on user's exact browsing history, third-party cookies, or fingerprinting.
 spec: https://patcg-individual-drafts.github.io/topics/
 compat_features:
   - api.Document.browsingTopics
