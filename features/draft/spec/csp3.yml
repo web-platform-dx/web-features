@@ -1,4 +1,4 @@
-draft_date: 2025-07-03
+draft_date: 2025-09-30
 name: Content Security Policy Level 3
 description: TODO
 spec: https://w3c.github.io/webappsec-csp/
@@ -66,3 +66,5 @@ compat_features:
 #   - http.headers.Content-Security-Policy.worker-src
 #   - http.headers.Content-Security-Policy.worker_support
 #   - http.headers.Content-Security-Policy-Report-Only
+# - Speculation rules:
+#   - http.headers.Content-Security-Policy.script-src.inline-speculation-rules
