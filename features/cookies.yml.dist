@@ -108,6 +108,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
+  #   firefox: "143"
+  #   firefox_android: "143"
+  - http.headers.Set-Cookie.http_host-http_prefixes
+
+  # baseline: false
+  # support:
   #   chrome: "80"
   #   chrome_android: "80"
   #   edge: "86"
@@ -119,10 +128,3 @@ compat_features:
   #   chrome_android: "91"
   #   edge: "91"
   - http.headers.Set-Cookie.SameSite.schemeful
-
-  # baseline: false
-  # support:
-  #   chrome: "140"
-  #   chrome_android: "140"
-  #   edge: "140"
-  - http.headers.Set-Cookie.http_host-http_prefixes
