@@ -1,0 +1,112 @@
+name: Table styling
+description: Attributes and properties of table elements, such as `align`, `vAlign`, `noWrap`, `bgcolor`, or `char` set various visual presentation properties of the table and its sections and cells. These are obsolete, and some of them have no effect. Use CSS instead.
+spec: https://html.spec.whatwg.org/multipage/obsolete.html
+group: html-elements
+discouraged:
+  according_to:
+    - https://html.spec.whatwg.org/multipage/obsolete.html
+  # No alternatives, because it would either be a long list of features, or just "CSS".
+compat_features:
+  # Table element
+  - html.elements.table.align
+  - html.elements.table.bgcolor
+  - html.elements.table.border
+  - html.elements.table.cellpadding
+  - html.elements.table.cellspacing
+  - html.elements.table.frame
+  - html.elements.table.rules
+  - html.elements.table.summary
+  - html.elements.table.width
+  # Corresponding table element API
+  - api.HTMLTableElement.align
+  - api.HTMLTableElement.bgColor
+  - api.HTMLTableElement.border
+  - api.HTMLTableElement.cellPadding
+  - api.HTMLTableElement.cellSpacing
+  - api.HTMLTableElement.frame
+  - api.HTMLTableElement.rules
+  - api.HTMLTableElement.summary
+  - api.HTMLTableElement.width
+
+  # Table sections like thead, tbody, and tfoot
+  - html.elements.tbody.align
+  - html.elements.tbody.bgcolor
+  - html.elements.tbody.char
+  - html.elements.tbody.charoff
+  - html.elements.tbody.valign
+  - html.elements.thead.align
+  - html.elements.thead.bgcolor
+  - html.elements.thead.char
+  - html.elements.thead.charoff
+  - html.elements.thead.valign
+  - html.elements.tfoot.align
+  - html.elements.tfoot.bgcolor
+  - html.elements.tfoot.char
+  - html.elements.tfoot.charoff
+  - html.elements.tfoot.valign
+  # Corresponding table section API
+  - api.HTMLTableSectionElement.align
+  - api.HTMLTableSectionElement.ch
+  - api.HTMLTableSectionElement.chOff
+  - api.HTMLTableSectionElement.vAlign
+
+  # Table cells
+  - html.elements.td.abbr
+  - html.elements.td.align
+  - html.elements.td.axis
+  - html.elements.td.bgcolor
+  - html.elements.td.char
+  - html.elements.td.charoff
+  - html.elements.td.scope
+  - html.elements.td.valign
+  - html.elements.td.width
+  - html.elements.th.align
+  - html.elements.th.axis
+  - html.elements.th.bgcolor
+  - html.elements.th.char
+  - html.elements.th.charoff
+  - html.elements.th.valign
+  - html.elements.th.width
+  # Corresponding table cell API
+  - api.HTMLTableCellElement.align
+  - api.HTMLTableCellElement.axis
+  - api.HTMLTableCellElement.bgColor
+  - api.HTMLTableCellElement.ch
+  - api.HTMLTableCellElement.chOff
+  - api.HTMLTableCellElement.height
+  - api.HTMLTableCellElement.noWrap
+  - api.HTMLTableCellElement.vAlign
+  - api.HTMLTableCellElement.width
+
+  # Table row, col, and colgroup elements
+  - html.elements.tr.align
+  - html.elements.tr.bgcolor
+  - html.elements.tr.char
+  - html.elements.tr.charoff
+  - html.elements.tr.valign
+  - html.elements.col.align
+  - html.elements.col.char
+  - html.elements.col.charoff
+  - html.elements.col.valign
+  - html.elements.col.width
+  - html.elements.colgroup.align
+  - html.elements.colgroup.char
+  - html.elements.colgroup.charoff
+  - html.elements.colgroup.valign
+  - html.elements.colgroup.width
+  # Corresponding table row/col API
+  - api.HTMLTableColElement.align
+  - api.HTMLTableColElement.ch
+  - api.HTMLTableColElement.chOff
+  - api.HTMLTableColElement.vAlign
+  - api.HTMLTableColElement.width
+  - api.HTMLTableRowElement.align
+  - api.HTMLTableRowElement.bgColor
+  - api.HTMLTableRowElement.ch
+  - api.HTMLTableRowElement.chOff
+  - api.HTMLTableRowElement.vAlign
+
+  # Table caption element
+  - html.elements.caption.align
+  # Corresponding table caption API
+  - api.HTMLTableCaptionElement.align

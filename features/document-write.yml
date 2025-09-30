@@ -1,0 +1,19 @@
+name: document.write()
+description: The `document.open()`, `document.write()`, `document.writeln()`, and `document.close()` methods write content to a document, possibly while that document is still loading.
+spec: https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html
+discouraged:
+  # The spec doesn't actually discourage against open and close, but these methods are
+  # really only useful for writing anyway, so we're marking the whole feature as discouraged.
+  according_to:
+    - https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#document.write()
+  alternatives:
+    - dom
+status:
+  compute_from: api.Document.write
+compat_features:
+  - api.Document.write
+  - api.Document.write.enforces_trusted_types
+  - api.Document.writeln
+  - api.Document.writeln.enforces_trusted_types
+  - api.Document.open
+  - api.Document.close

@@ -4,13 +4,13 @@
 status:
   baseline: false
   support:
-    chrome: ≤80
-    chrome_android: ≤80
-    edge: ≤80
-    firefox: ≤72
-    firefox_android: ≤79
-    safari: ≤13.1
-    safari_ios: ≤13.4
+    chrome: "1"
+    chrome_android: "18"
+    edge: "79"
+    firefox: "1"
+    firefox_android: "4"
+    safari: "1.3"
+    safari_ios: "1"
 compat_features:
   # baseline: false
   # support:
@@ -35,14 +35,13 @@ compat_features:
   - css.types.shape
   - css.types.shape.rect
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
-  #   chrome: ≤80
-  #   chrome_android: ≤80
-  #   edge: ≤80
-  #   firefox: ≤72
-  #   firefox_android: ≤79
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "1"
+  #   safari_ios: "1"
   - css.properties.clip.auto

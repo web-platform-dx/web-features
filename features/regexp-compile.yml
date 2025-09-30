@@ -1,0 +1,12 @@
+name: RegExp compile()
+description: The `compile()` method of `RegExp` objects recompiles an existing regular expression object using a new pattern and flags.
+spec: https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-regexp.prototype.compile
+discouraged:
+  according_to:
+    - https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-additional-ecmascript-features-for-web-browsers
+  # No `alternatives` because it would be `alternatives: [regexp]`. In the
+  # future it'd be nice to have an internal reference to the RegExp()
+  # constructor instead.
+  # See: https://github.com/web-platform-dx/web-features/issues/2676
+compat_features:
+  - javascript.builtins.RegExp.compile

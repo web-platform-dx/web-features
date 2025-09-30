@@ -2,7 +2,6 @@
 /**/*.dist
 /**/dist
 
-
 # Exclude the website includes since these are typically fragments, or include
 # things that makes Prettier unhappy.
 /gh-pages/src/_includes/**
@@ -11,14 +10,12 @@
 # TODO: Format all these files
 README.md
 index.ts
-types.ts
 2022-backgrounder.md
 towards-features.md
 /.github/**
 /docs
 !/docs/publishing.md
 /features/draft
-/schemas
 /scripts/caniuse.ts
 /scripts/schema.ts
 /scripts/specs.ts

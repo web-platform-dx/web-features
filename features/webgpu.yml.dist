@@ -7,6 +7,8 @@ status:
     chrome: "113"
     chrome_android: "121"
     edge: "113"
+    safari: "26"
+    safari_ios: "26"
 compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
@@ -14,12 +16,13 @@ compat_features:
   #   chrome: "113"
   #   chrome_android: "121"
   #   edge: "113"
+  #   safari: "26"
+  #   safari_ios: "26"
   - api.GPU
   - api.GPU.getPreferredCanvasFormat
   - api.GPU.requestAdapter
   - api.GPUAdapter
   - api.GPUAdapter.features
-  - api.GPUAdapter.isFallbackAdapter
   - api.GPUAdapter.limits
   - api.GPUAdapter.requestDevice
   - api.GPUAdapterInfo
@@ -107,12 +110,9 @@ compat_features:
   - api.GPUDevice.popErrorScope
   - api.GPUDevice.pushErrorScope
   - api.GPUDevice.queue
-  - api.GPUDevice.uncapturederror_event
   - api.GPUDeviceLostInfo
   - api.GPUDeviceLostInfo.message
   - api.GPUDeviceLostInfo.reason
-  - api.GPUError
-  - api.GPUError.message
   - api.GPUExternalTexture
   - api.GPUExternalTexture.label
   - api.GPUInternalError
@@ -185,14 +185,6 @@ compat_features:
   - api.GPUSupportedFeatures
   - api.GPUSupportedFeatures.@@iterator
   - api.GPUSupportedFeatures.entries
-  - api.GPUSupportedFeatures.feature_bgra8unorm-storage
-  - api.GPUSupportedFeatures.feature_depth-clip-control
-  - api.GPUSupportedFeatures.feature_depth32float-stencil8
-  - api.GPUSupportedFeatures.feature_indirect-first-instance
-  - api.GPUSupportedFeatures.feature_rg11b10ufloat-renderable
-  - api.GPUSupportedFeatures.feature_texture-compression-astc
-  - api.GPUSupportedFeatures.feature_texture-compression-bc
-  - api.GPUSupportedFeatures.feature_texture-compression-etc2
   - api.GPUSupportedFeatures.forEach
   - api.GPUSupportedFeatures.has
   - api.GPUSupportedFeatures.keys
@@ -212,7 +204,6 @@ compat_features:
   - api.GPUSupportedLimits.maxComputeWorkgroupsPerDimension
   - api.GPUSupportedLimits.maxDynamicStorageBuffersPerPipelineLayout
   - api.GPUSupportedLimits.maxDynamicUniformBuffersPerPipelineLayout
-  - api.GPUSupportedLimits.maxInterStageShaderComponents
   - api.GPUSupportedLimits.maxInterStageShaderVariables
   - api.GPUSupportedLimits.maxSampledTexturesPerShaderStage
   - api.GPUSupportedLimits.maxSamplersPerShaderStage
@@ -259,7 +250,8 @@ compat_features:
   #   chrome: "115"
   #   chrome_android: "121"
   #   edge: "115"
-  - api.GPU.requestAdapter.discrete_adapter_default_ac
+  #   safari: "26"
+  #   safari_ios: "26"
   - api.GPU.wgslLanguageFeatures
   - api.WGSLLanguageFeatures
   - api.WGSLLanguageFeatures.@@iterator
@@ -275,6 +267,8 @@ compat_features:
   #   chrome: "116"
   #   chrome_android: "121"
   #   edge: "116"
+  #   safari: "26"
+  #   safari_ios: "26"
   - api.GPUAdapter.requestDevice.lost_device_on_duplicate
   - api.GPUDevice.importExternalTexture.videoframe_source
   - api.GPUQueue.copyExternalImageToTexture.videoframe_source
@@ -284,11 +278,70 @@ compat_features:
   #   chrome: "117"
   #   chrome_android: "121"
   #   edge: "117"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.GPURenderBundleEncoder.setVertexBuffer.unset_vertex_buffer
+  - api.GPURenderPassEncoder.setVertexBuffer.unset_vertex_buffer
+
+  # baseline: false
+  # support:
+  #   chrome: "120"
+  #   chrome_android: "121"
+  #   edge: "120"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.GPUSupportedLimits.maxBindGroupsPlusVertexBuffers
+
+  # baseline: false
+  # support:
+  #   chrome: "127"
+  #   chrome_android: "127"
+  #   edge: "127"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.GPUAdapter.info
+
+  # baseline: false
+  # support:
+  #   chrome: "131"
+  #   chrome_android: "131"
+  #   edge: "131"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.GPUCanvasContext.getConfiguration
+
+  # baseline: false
+  # support:
+  #   chrome: "113"
+  #   chrome_android: "121"
+  #   edge: "113"
+  - api.GPUDevice.uncapturederror_event
+  - api.GPUError
+  - api.GPUError.message
+  - api.GPUSupportedFeatures.feature_bgra8unorm-storage
+  - api.GPUSupportedFeatures.feature_depth-clip-control
+  - api.GPUSupportedFeatures.feature_depth32float-stencil8
+  - api.GPUSupportedFeatures.feature_indirect-first-instance
+  - api.GPUSupportedFeatures.feature_rg11b10ufloat-renderable
+  - api.GPUSupportedFeatures.feature_texture-compression-astc
+  - api.GPUSupportedFeatures.feature_texture-compression-bc
+  - api.GPUSupportedFeatures.feature_texture-compression-etc2
+
+  # baseline: false
+  # support:
+  #   chrome: "115"
+  #   chrome_android: "121"
+  #   edge: "115"
+  - api.GPU.requestAdapter.discrete_adapter_default_ac
+
+  # baseline: false
+  # support:
+  #   chrome: "117"
+  #   chrome_android: "121"
+  #   edge: "117"
   - api.GPUComputePassEncoder.setBindGroup.unset_bind_group
   - api.GPURenderBundleEncoder.setBindGroup.unset_bind_group
-  - api.GPURenderBundleEncoder.setVertexBuffer.unset_vertex_buffer
   - api.GPURenderPassEncoder.setBindGroup.unset_bind_group
-  - api.GPURenderPassEncoder.setVertexBuffer.unset_vertex_buffer
 
   # baseline: false
   # support:
@@ -320,7 +373,6 @@ compat_features:
   - api.GPUDevice.createRenderPipeline.optional_depthcompare_depthwriteenabled
   - api.GPUDevice.createRenderPipelineAsync.optional_depthcompare_depthwriteenabled
   - api.GPUSupportedFeatures.feature_shader-f16
-  - api.GPUSupportedLimits.maxBindGroupsPlusVertexBuffers
 
   # baseline: false
   # support:
@@ -371,13 +423,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "127"
-  #   chrome_android: "127"
-  #   edge: "127"
-  - api.GPUAdapter.info
-
-  # baseline: false
-  # support:
   #   chrome: "129"
   #   chrome_android: "129"
   #   edge: "129"
@@ -397,7 +442,6 @@ compat_features:
   #   chrome: "131"
   #   chrome_android: "131"
   #   edge: "131"
-  - api.GPUCanvasContext.getConfiguration
   - api.GPUDevice.createRenderPipeline.validates_depth_bias_for_line_and_point_topologies
   - api.GPUDevice.createRenderPipelineAsync.validates_depth_bias_for_line_and_point_topologies
   - api.GPUSupportedFeatures.feature_clip-distances
@@ -408,9 +452,13 @@ compat_features:
   #   chrome_android: "132"
   #   edge: "132"
   - api.GPUDevice.adapterInfo
+  - api.GPUSupportedFeatures.feature_float32-blendable
+  - api.GPUTexture.createView.usage
 
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "134"
+  #   chrome_android: "134"
+  #   edge: "134"
   - api.GPUAdapterInfo.subgroupMaxSize
   - api.GPUAdapterInfo.subgroupMinSize
-  - api.GPUSupportedFeatures.feature_float32-blendable

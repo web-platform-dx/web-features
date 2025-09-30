@@ -1,13 +1,10 @@
-draft_date: 2025-02-10
+draft_date: 2025-08-06
 name: CSS Inline Layout Module Level 3
 description: TODO
 spec: https://drafts.csswg.org/css-inline-3/
 compat_features:
-  - css.types.text-edge
-  - css.types.text-edge.alphabetic
-  - css.types.text-edge.cap
-  - css.types.text-edge.ex
-  - css.types.text-edge.text
+  - css.properties.alignment-baseline.text-after-edge
+  - css.properties.alignment-baseline.text-before-edge
 
 # The following features in the spec are already part of web-features:
 # - alignment-baseline:
@@ -53,6 +50,11 @@ compat_features:
 #   - css.properties.text-box-trim.trim-both
 #   - css.properties.text-box-trim.trim-end
 #   - css.properties.text-box-trim.trim-start
+#   - css.types.text-edge
+#   - css.types.text-edge.alphabetic
+#   - css.types.text-edge.cap
+#   - css.types.text-edge.ex
+#   - css.types.text-edge.text
 # - vertical-align:
 #   - css.properties.vertical-align
 #   - css.properties.vertical-align.baseline

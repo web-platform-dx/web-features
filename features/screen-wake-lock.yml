@@ -8,3 +8,15 @@ caniuse: wake-lock
 status:
   compute_from:
     - api.WakeLock.request
+compat_features:
+  - api.Navigator.wakeLock
+  - api.Permissions.permission_screen-wake-lock
+  - api.WakeLock
+  - api.WakeLock.request
+  - api.WakeLockSentinel
+  - api.WakeLockSentinel.release
+  - api.WakeLockSentinel.release_event
+  - api.WakeLockSentinel.released
+  - api.WakeLockSentinel.type
+  - html.elements.iframe.allow.screen-wake-lock
+  - http.headers.Permissions-Policy.screen-wake-lock

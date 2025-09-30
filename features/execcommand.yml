@@ -1,0 +1,23 @@
+name: execCommand()
+description: The `execCommand()` method reads and writes from the clipboard and performs editing commands on editable text, such as changing the font name or style. Related methods check whether commands are supported, enabled, or applied.
+spec: https://w3c.github.io/editing/docs/execCommand/
+group: clipboard
+discouraged:
+  according_to:
+    - https://w3c.github.io/editing/docs/execCommand/
+  alternatives:
+    - async-clipboard
+    - contenteditable
+status:
+  compute_from: api.Document.execCommand
+compat_features:
+  - api.Document.execCommand
+  - api.Document.execCommand.copy
+  - api.Document.execCommand.cut
+  - api.Document.execCommand.defaultParagraphSeparator
+  - api.Document.execCommand.insertBrOnReturn
+  - api.Document.queryCommandEnabled
+  - api.Document.queryCommandIndeterm
+  - api.Document.queryCommandState
+  - api.Document.queryCommandSupported
+  - api.Document.queryCommandValue

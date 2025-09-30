@@ -3,6 +3,11 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "134"
+    chrome_android: "134"
+    edge: "134"
+    firefox: "136"
+    firefox_android: "136"
 compat_features:
   - css.selectors.has-slotted

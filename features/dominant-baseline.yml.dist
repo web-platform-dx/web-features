@@ -3,16 +3,16 @@
 
 status:
   baseline: high
-  baseline_low_date: ≤2020-03-24
-  baseline_high_date: ≤2022-09-24
+  baseline_low_date: 2020-01-15
+  baseline_high_date: 2022-07-15
   support:
-    chrome: ≤80
-    chrome_android: ≤80
-    edge: ≤80
+    chrome: "1"
+    chrome_android: "18"
+    edge: "79"
     firefox: "1"
     firefox_android: "4"
-    safari: ≤13.1
-    safari_ios: ≤13.4
+    safari: "4"
+    safari_ios: "3.2"
 compat_features:
   - css.properties.dominant-baseline
   - css.properties.dominant-baseline.alphabetic

@@ -1,0 +1,13 @@
+name: RegExp static properties
+description: The `RegExp` object has several static properties to access the input and results of the most-recent regular expression match.
+spec: https://github.com/tc39/proposal-regexp-legacy-features
+discouraged:
+  according_to:
+    - https://github.com/tc39/proposal-regexp-legacy-features
+compat_features:
+  - javascript.builtins.RegExp.input
+  - javascript.builtins.RegExp.lastMatch
+  - javascript.builtins.RegExp.lastParen
+  - javascript.builtins.RegExp.leftContext
+  - javascript.builtins.RegExp.n
+  - javascript.builtins.RegExp.rightContext

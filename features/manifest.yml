@@ -5,13 +5,13 @@ group: progressive-web-app
 status:
   compute_from:
     - html.elements.link.rel.manifest
-    - html.manifest.display
-    - html.manifest.name
-    - html.manifest.short_name
-    - html.manifest.start_url
-    - html.manifest.icons
-    - html.manifest.theme_color
-    - html.manifest.scope
+    - manifests.webapp.display
+    - manifests.webapp.name
+    - manifests.webapp.short_name
+    - manifests.webapp.start_url
+    - manifests.webapp.icons
+    - manifests.webapp.theme_color
+    - manifests.webapp.scope
 compat_features:
   - html.elements.link.rel.manifest
 
@@ -19,33 +19,33 @@ compat_features:
   # is supported, and very important on Safari iOS. On Safari iOS, using the default
   # display mode is not enough to really "install" an app to the home screen. For example
   # notifications won't work.
-  - html.manifest.display
+  - manifests.webapp.display
 
-  - html.manifest.name
-  - html.manifest.short_name
-  - html.manifest.start_url
-  - html.manifest.icons
-  - html.manifest.theme_color
-  - html.manifest.scope
+  - manifests.webapp.name
+  - manifests.webapp.short_name
+  - manifests.webapp.start_url
+  - manifests.webapp.icons
+  - manifests.webapp.theme_color
+  - manifests.webapp.scope
 
   # Missing in Firefox for Android. Not considered a developer feature yet.
   # Ignored from compute_from for now.
-  - html.manifest.id
+  - manifests.webapp.id
 
   # Missing in Safari. While interesting separate features we can create
   # them later.
   # Ignored from compute_from for now.
-  - html.manifest.background_color
-  - html.manifest.orientation
+  - manifests.webapp.background_color
+  - manifests.webapp.orientation
 
   # Description is only used in Chromium in the PWA rich install dialog.
   # Ignored from compute_from for now.
-  - html.manifest.description
+  - manifests.webapp.description
 
   # Used to install a web payment service worker on the fly, which is
   # a separate feature.
   # Ignored from compute_from for now.
-  - html.manifest.serviceworker
-  - html.manifest.serviceworker.scope
-  - html.manifest.serviceworker.src
-  - html.manifest.serviceworker.use_cache
+  - manifests.webapp.serviceworker
+  - manifests.webapp.serviceworker.scope
+  - manifests.webapp.serviceworker.src
+  - manifests.webapp.serviceworker.use_cache

@@ -1,0 +1,14 @@
+name: escape() and unescape()
+description: The `escape()` and `unescape()` built-in Javascript methods encode and unencode strings using percent encoding, where certain characters are replaced by hexadecimal escape sequences.
+spec: https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-escape-string
+group: javascript
+discouraged:
+  according_to:
+    - https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-additional-ecmascript-features-for-web-browsers
+  # No `alternatives` because it would be `alternatives: [javascript]`. In the
+  # future it'd be nice to have an internal reference to encodeURI(),
+  # decodeURI(), encodeURIComponent(), and decodeURIComponent() instead.
+  # See: https://github.com/web-platform-dx/web-features/issues/2676
+compat_features:
+  - javascript.builtins.escape
+  - javascript.builtins.unescape

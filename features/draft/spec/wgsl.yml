@@ -1,0 +1,13 @@
+draft_date: 2025-07-03
+name: WebGPU Shading Language
+description: TODO
+spec: https://gpuweb.github.io/gpuweb/wgsl/
+compat_features:
+  - api.WGSLLanguageFeatures.extension_pointer_composite_access
+
+# The following features in the spec are already part of web-features:
+# - WebGPU:
+#   - api.GPUDevice.createBindGroupLayout.storageTexture_access_read-write_read-only
+#   - api.WGSLLanguageFeatures.extension_packed_4x8_integer_dot_product
+#   - api.WGSLLanguageFeatures.extension_readonly_and_readwrite_storage_textures
+#   - api.WGSLLanguageFeatures.extension_unrestricted_pointer_parameters

@@ -128,15 +128,15 @@ compat_features:
   - api.PushSubscription.expirationTime
 
   # baseline: low
-  # baseline_low_date: 2023-05-18
+  # baseline_low_date: 2023-09-18
   # support:
   #   chrome: "43"
   #   chrome_android: "43"
   #   edge: "79"
   #   firefox: "46"
   #   firefox_android: "46"
-  #   safari: "16.5"
-  #   safari_ios: "16.5"
+  #   safari: "17"
+  #   safari_ios: "17"
   - api.Permissions.permission_push
 
   # baseline: low
@@ -165,6 +165,28 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
+  #   firefox: "137"
+  #   firefox_android: "137"
+  #   safari: "16"
+  #   safari_ios: "16.4"
+  - api.PushSubscriptionChangeEvent
+  - api.PushSubscriptionChangeEvent.newSubscription
+  - api.PushSubscriptionChangeEvent.oldSubscription
+
+  # baseline: false
+  # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
+  #   firefox: "137"
+  #   firefox_android: "137"
+  #   safari: "16.1"
+  #   safari_ios: "16.4"
+  - api.PushSubscriptionChangeEvent.PushSubscriptionChangeEvent
+
+  # baseline: false
+  # support:
   #   chrome: "54"
   #   chrome_android: "54"
   #   edge: "17"
@@ -174,19 +196,7 @@ compat_features:
 
   # baseline: false
   # support:
-  #   safari: "16"
-  #   safari_ios: "16.4"
-  - api.PushSubscriptionChangeEvent
-  - api.PushSubscriptionChangeEvent.newSubscription
-  - api.PushSubscriptionChangeEvent.oldSubscription
-
-  # baseline: false
-  # support:
-  #   safari: "16.1"
-  #   safari_ios: "16.4"
-  - api.PushSubscriptionChangeEvent.PushSubscriptionChangeEvent
-
-  # baseline: false
-  # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
   #   safari: "16"
   - api.ServiceWorkerGlobalScope.pushsubscriptionchange_event

@@ -1,0 +1,43 @@
+draft_date: 2025-07-03
+name: Permissions
+description: TODO
+spec: https://w3c.github.io/permissions/
+compat_features:
+  - webdriver.bidi.permission
+  - webdriver.bidi.permission.setPermission
+
+# The following features in the spec are already part of web-features:
+# - Permissions:
+#   - api.Navigator.permissions
+#   - api.PermissionStatus
+#   - api.PermissionStatus.change_event
+#   - api.PermissionStatus.name
+#   - api.PermissionStatus.state
+#   - api.Permissions
+#   - api.Permissions.query
+#   - api.WorkerNavigator.permissions
+# - Accelerometer:
+#   - api.Permissions.permission_accelerometer
+# - Ambient light sensor:
+#   - api.Permissions.permission_ambient-light-sensor
+# - Background sync:
+#   - api.Permissions.permission_background-sync
+# - Media capture:
+#   - api.Permissions.permission_camera
+#   - api.Permissions.permission_microphone
+# - Geolocation:
+#   - api.Permissions.permission_geolocation
+# - Gyroscope:
+#   - api.Permissions.permission_gyroscope
+# - Local fonts:
+#   - api.Permissions.permission_local-fonts
+# - Magnetometer:
+#   - api.Permissions.permission_magnetometer
+# - Notifications:
+#   - api.Permissions.permission_notifications
+# - Payment handler:
+#   - api.Permissions.permission_payment-handler
+# - Storage manager:
+#   - api.Permissions.permission_persistent-storage
+# - Push messages:
+#   - api.Permissions.permission_push

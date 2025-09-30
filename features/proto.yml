@@ -1,0 +1,12 @@
+name: __proto__
+description: The `__proto__` property of objects partially exposes the prototype of an object.
+spec: https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.__proto__
+discouraged:
+  according_to:
+    - https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-additional-ecmascript-features-for-web-browsers
+  # No `alternatives` because it would be `alternatives: [object]`. In the
+  # future it'd be nice to have an internal reference to `getPrototypeOf()` and
+  # `setPrototypeOf()` instead.
+  # See: https://github.com/web-platform-dx/web-features/issues/2676
+compat_features:
+  - javascript.builtins.Object.proto

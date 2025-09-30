@@ -1,38 +1,19 @@
 name: Streams
 description: The streams API creates, composes, and consumes continuously generated data.
 spec: https://streams.spec.whatwg.org/
-caniuse: streams
 group: streams
 # TODO: https://github.com/web-platform-dx/web-features/issues/1971
-# Status changed: https://github.com/web-platform-dx/web-features/pull/2358
+# Status changed: https://github.com/web-platform-dx/web-features/pull/2358, https://github.com/web-platform-dx/web-features/pull/2491
 # 2024-12-19 — low → false — Regressed status to match Caniuse, which considers support beginning at BYOB shipping.
+# 2025-01-30 — false → high — Split BYOB into a separate "readable-byte-streams" feature. Linked that one to Caniuse.
 # References:
 # - https://caniuse.com/streams
 status:
   compute_from:
-    - api.ReadableStreamBYOBReader
+    - api.ReadableStream
+    - api.TransformStream
+    - api.WritableStream
 compat_features:
-  - api.ReadableByteStreamController
-  - api.ReadableByteStreamController.byobRequest
-  - api.ReadableByteStreamController.close
-  - api.ReadableByteStreamController.desiredSize
-  - api.ReadableByteStreamController.enqueue
-  - api.ReadableByteStreamController.error
-  - api.ReadableStream.from_static
-  - api.ReadableStream.transferable
-  - api.ReadableStream.values
-  - api.ReadableStreamBYOBReader
-  - api.ReadableStreamBYOBReader.ReadableStreamBYOBReader
-  - api.ReadableStreamBYOBReader.cancel
-  - api.ReadableStreamBYOBReader.closed
-  - api.ReadableStreamBYOBReader.read
-  - api.ReadableStreamBYOBReader.read.options_min_parameter
-  - api.ReadableStreamBYOBReader.releaseLock
-  - api.ReadableStreamBYOBReader.releaseLock.reject_pending_read_request
-  - api.ReadableStreamBYOBRequest
-  - api.ReadableStreamBYOBRequest.respond
-  - api.ReadableStreamBYOBRequest.respondWithNewView
-  - api.ReadableStreamBYOBRequest.view
   - api.ReadableStreamDefaultController
   - api.ReadableStreamDefaultController.close
   - api.ReadableStreamDefaultController.desiredSize
@@ -45,14 +26,9 @@ compat_features:
   - api.ReadableStreamDefaultReader.read
   - api.ReadableStreamDefaultReader.releaseLock
   - api.ReadableStreamDefaultReader.releaseLock.reject_pending_read_request
-  - api.TextDecoderStream.readable
-  - api.TextDecoderStream.writable
-  - api.TextEncoderStream.readable
-  - api.TextEncoderStream.writable
   - api.TransformStream
   - api.TransformStream.TransformStream
   - api.TransformStream.readable
-  - api.TransformStream.transferable
   - api.TransformStream.writable
   - api.TransformStreamDefaultController
   - api.TransformStreamDefaultController.desiredSize
@@ -60,7 +36,6 @@ compat_features:
   - api.TransformStreamDefaultController.error
   - api.TransformStreamDefaultController.terminate
   - api.WritableStream.close
-  - api.WritableStream.transferable
   - api.WritableStreamDefaultController.signal
   - api.WritableStreamDefaultWriter.WritableStreamDefaultWriter
   - api.ByteLengthQueuingStrategy

@@ -33,8 +33,12 @@ compat_features:
   - css.types.basic-shape.inset
   - css.types.basic-shape.polygon
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2024-01-23
   # support:
+  #   chrome: "119"
+  #   chrome_android: "119"
+  #   edge: "119"
   #   firefox: "122"
   #   firefox_android: "122"
   #   safari: "17.2"
@@ -43,5 +47,10 @@ compat_features:
   - css.types.basic-shape.xywh
 
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
   - css.types.basic-shape.shape
