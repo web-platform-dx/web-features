@@ -3,3 +3,8 @@ description: The `CSS.highlights.highlightsFromPoint()` method returns an array 
 spec: https://drafts.csswg.org/css-highlight-api-1/#dom-highlightregistry-highlightsfrompoint
 compat_features:
   - api.HighlightRegistry.highlightsFromPoint
+# TODO: This feature should ideally be in highlight.yml, but was split out of it because support
+# is more recent than the rest of the parent feature.
+# Over time, it will make sense to merge it back into highlight.yml.
+# Also, see https://github.com/web-platform-dx/web-features/issues/2676 for a discussion about
+# the ability to reference sub-features that are part of a larger feature.
