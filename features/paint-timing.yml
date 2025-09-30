@@ -2,7 +2,18 @@ name: Paint timing
 description: The `paint` performance entry and the `PerformancePaintTiming` API measures the duration of "paint" (also called "render") operations as a page loads. The API measures the time to First Paint (FP) and First Contentful Paint (FCP), common metrics for perceived loading times.
 spec: https://w3c.github.io/paint-timing/
 group: performance
+status:
+  compute_from:
+    - api.PerformancePaintTiming
+    - api.PerformancePaintTiming.first-contentful-paint
 compat_features:
   - api.PerformancePaintTiming
   - api.PerformancePaintTiming.first-contentful-paint
+  - api.PerformancePaintTiming.toJSON
+
+  # first-paint isn't used in compute_from because user agents don't always report it, per spec.
   - api.PerformancePaintTiming.first-paint
+
+  # More recent additions which could be tracked separately if needed.
+  - api.PerformancePaintTiming.paintTime
+  - api.PerformancePaintTiming.presentationTime

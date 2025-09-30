@@ -3,7 +3,11 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "84"
+    firefox_android: "84"
+    safari: "14.1"
+    safari_ios: "14.5"
 compat_features:
   # baseline: high
   # baseline_low_date: 2021-04-26
@@ -17,7 +21,9 @@ compat_features:
   #   safari: "14.1"
   #   safari_ios: "14.5"
   - api.PerformancePaintTiming
+  - api.PerformancePaintTiming.toJSON
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "84"
@@ -26,7 +32,13 @@ compat_features:
   #   safari_ios: "14.5"
   - api.PerformancePaintTiming.first-contentful-paint
 
-  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   firefox: "140"
+  #   firefox_android: "140"
+  - api.PerformancePaintTiming.paintTime
+  - api.PerformancePaintTiming.presentationTime
+
   # baseline: false
   # support: {}
   - api.PerformancePaintTiming.first-paint
