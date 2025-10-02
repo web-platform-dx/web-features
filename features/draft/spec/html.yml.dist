@@ -901,6 +901,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
+  - api.HTMLSelectedContentElement
+
+  # baseline: false
+  # support:
   #   chrome: "136"
   #   chrome_android: "136"
   #   edge: "136"
@@ -911,6 +918,7 @@ compat_features:
   #   chrome: "137"
   #   chrome_android: "137"
   #   edge: "137"
+  - api.HTMLCanvasElement.getContext.2d_context.options_colorType_parameter
   - api.ImageData.ImageData.settings_parameter.pixelFormat_option
   - api.ImageData.pixelFormat
 

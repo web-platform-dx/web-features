@@ -1,4 +1,4 @@
-draft_date: 2025-09-30
+draft_date: 2025-10-02
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -20,6 +20,7 @@ compat_features:
   - api.HTMLBaseElement.href.forbid_data_javascript_urls
   - api.HTMLBaseElement.href.forbid_special_characters
   - api.HTMLButtonElement.command.request-close
+  - api.HTMLCanvasElement.getContext.2d_context.options_colorType_parameter
   - api.HTMLCanvasElement.toBlob.quality_parameter
   - api.HTMLCanvasElement.toBlob.type_parameter_jpeg
   - api.HTMLCanvasElement.toBlob.type_parameter_png
@@ -45,6 +46,7 @@ compat_features:
   - api.HTMLOptionsCollection.remove
   - api.HTMLOptionsCollection.selectedIndex
   - api.HTMLScriptElement.noModule
+  - api.HTMLSelectedContentElement
   - api.HTMLSourceElement
   - api.HTMLSourceElement.height
   - api.HTMLSourceElement.media
