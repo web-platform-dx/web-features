@@ -752,6 +752,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "141"
+  #   chrome_android: "141"
+  - webdriver.bidi.emulation.setScriptingEnabled
+  - webdriver.bidi.emulation.setScriptingEnabled.contexts_parameter
+  - webdriver.bidi.emulation.setScriptingEnabled.enabled_parameter
+  - webdriver.bidi.emulation.setScriptingEnabled.userContexts_parameter
+
+  # baseline: false
+  # support:
   #   firefox: "143"
   #   firefox_android: "143"
   - webdriver.bidi.network.addDataCollector
@@ -774,10 +783,6 @@ compat_features:
   - webdriver.bidi.browsingContext.historyUpdated_event.url_parameter
   - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.beforeunload
   - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.beforeunload
-  - webdriver.bidi.emulation.setScriptingEnabled
-  - webdriver.bidi.emulation.setScriptingEnabled.contexts_parameter
-  - webdriver.bidi.emulation.setScriptingEnabled.enabled_parameter
-  - webdriver.bidi.emulation.setScriptingEnabled.userContexts_parameter
   - webdriver.bidi.network.addDataCollector.collectorType_parameter
   - webdriver.bidi.network.authRequired_event.response_parameter
   - webdriver.bidi.network.provideResponse.body_parameter
