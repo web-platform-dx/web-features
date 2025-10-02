@@ -10,7 +10,7 @@ compat_features:
   - api.Element.scrollIntoView.options_parameter
   # TODO: decide whether to push out the baseline high date by including the
   # block and inline parameters. They are also baseline high by now, but were
-  # added quite a bit later than scrollIntoView itself. 
+  # added quite a bit later than scrollIntoView itself.
   - api.Element.scrollIntoView.options_parameter.block_option
   - api.Element.scrollIntoView.options_parameter.inline_option
   # TODO: decide whether to move this option to a separate feature. It's only
