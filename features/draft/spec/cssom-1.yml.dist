@@ -3,10 +3,13 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    safari: "26"
+    safari_ios: "26"
 compat_features:
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-03-27
+  # baseline_high_date: 2025-09-27
   # support:
   #   chrome: "99"
   #   chrome_android: "99"
@@ -19,6 +22,8 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   safari: "26"
+  #   safari_ios: "26"
   - api.CSSStyleProperties
   - api.CSSStyleProperties.cssFloat

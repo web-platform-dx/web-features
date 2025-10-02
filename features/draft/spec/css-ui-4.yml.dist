@@ -3,10 +3,22 @@
 
 status:
   baseline: false
-  support:
-    chrome: "140"
-    chrome_android: "140"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
   - css.properties.caret-animation
   - css.properties.caret-animation.auto
   - css.properties.caret-animation.manual
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.caret-shape
+  - css.properties.caret-shape.auto
+  - css.properties.caret-shape.bar
+  - css.properties.caret-shape.block
+  - css.properties.caret-shape.underscore
