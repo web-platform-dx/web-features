@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "141"
+    chrome_android: "141"
 compat_features:
   # baseline: false
   # support:
@@ -25,5 +27,7 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "141"
+  #   chrome_android: "141"
   - api.SVGAnimatedString.baseVal.enforces_trusted_types
