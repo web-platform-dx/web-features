@@ -806,6 +806,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
+  #   edge: "138"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.WorkerGlobalScope.importScripts.enforces_trusted_types
+
+  # baseline: false
+  # support:
   #   chrome: "96"
   #   chrome_android: "96"
   #   edge: "96"
