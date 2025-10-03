@@ -27,6 +27,41 @@ To import the JSON schema with or without Node.js:
 import schema from "web-features/data.schema.json" with { type: "json" };
 ```
 
+### Extended data with per-key Baseline statuses
+
+For use cases that need detailed Baseline statuses for individual BCD keys, you can use the extended data. It includes a `by_compat_key` property in each feature's status, containing Baseline status information for each individual BCD key.
+
+```js
+import {
+  browsers,
+  features,
+  groups,
+  snapshots,
+  getStatus,
+} from "web-features/extended";
+```
+
+Or, without Node.js:
+
+```js
+import data from "web-features/data.extended.json" with { type: "json" };
+const { browsers, features, groups, snapshots, getStatus } = data;
+```
+
+#### `getStatus` convenience method
+
+The extended module also provides a `getStatus()` function to facilitate looking up the Baseline status of a particular BCD key:
+
+```js
+import { getStatus } from "web-features/extended";
+
+// Fast lookup when you know the feature ID (recommended)
+const status = getStatus("flexbox", "css.properties.flex");
+
+// Slower lookup when the feature ID is unknown
+const unknownStatus = getStatus(undefined, "api.HTMLElement.focus");
+```
+
 ## Rendering Baseline statuses with `web-features`
 
 If you're using `web-features` to render Baseline iconography or browser logos with support markers, then you must follow the [name and logo usage guidelines](https://web-platform-dx.github.io/web-features/name-and-logo-usage-guidelines/).
@@ -66,9 +101,9 @@ Most values are ordinary feature objects with names, descriptions, and other dat
 Some features contain redirects to other features.
 You can distinguish between ordinary feature objects and redirects by using the `kind` property:
 
-* `"feature"` — ordinary features  
-* `"moved"` — the feature has a redirect to a new key
-* `"split"` — the feature has a redirect to two or more keys
+- `"feature"` — ordinary features
+- `"moved"` — the feature has a redirect to a new key
+- `"split"` — the feature has a redirect to two or more keys
 
 ### Feature objects
 
@@ -82,7 +117,6 @@ It has the following properties:
 - `spec` (type: `string[]`): A specification URL or an array of them
 - `status`: Support status data.
   It has the following properties:
-
   - `baseline` (type: `"high" | "low" | false`): Whether the feature Baseline widely available, Baseline newly available, or not Baseline
   - `baseline_low_date` (optional, type: `string`): When the feature reached Baseline newly available status
   - `baseline_high_date` (optional, type: `string`): When the feature reached Baseline widely available status
@@ -98,7 +132,6 @@ It has the following properties:
 - `compat_features` (optional, type: `string[]`): An array of `@mdn/browser-compat-data` feature key strings.
 - `discouraged` (optional): An object indicating that web developers should avoid using the feature.
   It has the following properties:
-
   - `according_to` (type: `string[]`): One or more links to a formal discouragement notice, such as specification text or an intent-to-unship
   - `alternatives` (optional, type: `string[]`): One or more feature IDs (as in `features[alternatives[0]]`) that substitute some or all of this feature's utility
 
