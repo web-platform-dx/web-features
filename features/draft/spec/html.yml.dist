@@ -590,8 +590,9 @@ compat_features:
   - html.elements.form.autocomplete.one-time-code
   - html.elements.textarea.autocomplete.one-time-code
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-03-27
+  # baseline_high_date: 2025-09-27
   # support:
   #   chrome: "88"
   #   chrome_android: "88"
@@ -806,6 +807,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
+  #   edge: "138"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.WorkerGlobalScope.importScripts.enforces_trusted_types
+
+  # baseline: false
+  # support:
   #   chrome: "96"
   #   chrome_android: "96"
   #   edge: "96"
@@ -891,6 +901,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
+  - api.HTMLSelectedContentElement
+
+  # baseline: false
+  # support:
   #   chrome: "136"
   #   chrome_android: "136"
   #   edge: "136"
@@ -901,6 +918,7 @@ compat_features:
   #   chrome: "137"
   #   chrome_android: "137"
   #   edge: "137"
+  - api.HTMLCanvasElement.getContext.2d_context.options_colorType_parameter
   - api.ImageData.ImageData.settings_parameter.pixelFormat_option
   - api.ImageData.pixelFormat
 

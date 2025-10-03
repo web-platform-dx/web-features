@@ -4,21 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "137"
-    chrome_android: "137"
-    edge: "137"
+    chrome: "141"
+    chrome_android: "141"
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "79"
-  #   safari: "5.1"
-  #   safari_ios: "5"
-  - css.properties.alignment-baseline.text-after-edge
-  - css.properties.alignment-baseline.text-before-edge
-
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "137"
@@ -26,3 +14,10 @@ compat_features:
   #   edge: "137"
   - svg.elements.use.omit_external_fragment
   - svg.global_attributes.transform.svg_root
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "141"
+  #   chrome_android: "141"
+  - api.SVGAnimatedString.baseVal.enforces_trusted_types
