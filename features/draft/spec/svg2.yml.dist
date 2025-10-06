@@ -3,18 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "141"
+    chrome_android: "141"
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "79"
-  #   safari: "5.1"
-  #   safari_ios: "5"
-  - css.properties.alignment-baseline.text-after-edge
-  - css.properties.alignment-baseline.text-before-edge
-
   # baseline: false
   # support:
   #   chrome: "137"
@@ -25,5 +17,7 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "141"
+  #   chrome_android: "141"
   - api.SVGAnimatedString.baseVal.enforces_trusted_types
