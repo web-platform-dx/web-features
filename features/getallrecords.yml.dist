@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "141"
+    chrome_android: "141"
 compat_features:
   - api.IDBIndex.getAllRecords
   - api.IDBObjectStore.getAllRecords
