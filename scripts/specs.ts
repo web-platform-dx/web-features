@@ -143,6 +143,10 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because this is where the feature last appeared in the spec before removal."
     ],
     [
+        "https://patcg-individual-drafts.github.io/topics/",
+        "Allowed because the Topics API isn't on a standards track yet. Remove this exception when it is."
+    ],
+    [
         "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/Accessibility/AriaNotify/explainer.md",
         "Allowed because the ariaNotify() method is not yet in a formal spec. Remove this exception when a formal spec is available."
     ]

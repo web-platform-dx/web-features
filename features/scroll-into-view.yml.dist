@@ -41,9 +41,23 @@ compat_features:
   #   safari_ios: "14"
   - api.Element.scrollIntoView.options_parameter
 
+  # baseline: high
+  # baseline_low_date: 2020-09-16
+  # baseline_high_date: 2023-03-16
+  # support:
+  #   chrome: "61"
+  #   chrome_android: "61"
+  #   edge: "79"
+  #   firefox: "58"
+  #   firefox_android: "58"
+  #   safari: "14"
+  #   safari_ios: "14"
+  - api.Element.scrollIntoView.options_parameter.block_option
+  - api.Element.scrollIntoView.options_parameter.inline_option
+
   # baseline: false
   # support:
   #   chrome: "140"
   #   chrome_android: "140"
   #   edge: "140"
-  - api.Element.scrollIntoView.options_container_parameter
+  - api.Element.scrollIntoView.options_parameter.container_option
