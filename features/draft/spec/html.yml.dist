@@ -939,6 +939,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "141"
+  #   chrome_android: "141"
+  #   edge: "141"
+  - api.NavigationPrecommitController
+  - api.NavigationPrecommitController.redirect
+  - api.NavigationTransition.committed
+
+  # baseline: false
+  # support:
   #   firefox: "1"
   #   firefox_android: "4"
   - api.Navigator.oscpu
