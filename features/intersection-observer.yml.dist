@@ -81,13 +81,16 @@ compat_features:
   #   safari_ios: "14"
   - api.IntersectionObserver.IntersectionObserver.options_root_parameter_Document
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-09-15
   # support:
   #   chrome: "120"
   #   chrome_android: "120"
   #   edge: "120"
   #   firefox: "141"
   #   firefox_android: "141"
+  #   safari: "26"
+  #   safari_ios: "26"
   - api.IntersectionObserver.scrollMargin
 
   # baseline: false
