@@ -90,6 +90,7 @@ compat_features:
   - api.CSSPositionTryRule
   - api.CSSPositionTryRule.name
   - api.CSSPositionTryRule.style
+  - css.at-rules.position-try
   - css.properties.align-items.anchor-center
   - css.properties.align-self.anchor-center
   - css.properties.anchor-name
@@ -226,10 +227,18 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "137"
+  #   chrome_android: "137"
+  #   edge: "137"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.HTMLElement.togglePopover.options_source_parameter.implicit_anchor_reference
+
+  # baseline: false
+  # support:
   #   chrome: "125"
   #   chrome_android: "125"
   #   edge: "125"
-  - css.at-rules.position-try
   - css.properties.position-visibility
   - css.properties.position-visibility.always
   - css.properties.position-visibility.anchors-visible
@@ -244,6 +253,13 @@ compat_features:
   - api.HTMLInputElement.popoverTargetElement.implicit_anchor_reference
   - html.elements.button.popovertarget.implicit_anchor_reference
   - html.elements.input.popovertarget.implicit_anchor_reference
+
+  # baseline: false
+  # support:
+  #   chrome: "137"
+  #   chrome_android: "137"
+  #   edge: "137"
+  - api.HTMLElement.showPopover.options_source_parameter.implicit_anchor_reference
 
   # baseline: false
   # support:
@@ -274,10 +290,3 @@ compat_features:
   - css.properties.position-area.y-self-end
   - css.properties.position-area.y-self-start
   - css.properties.position-area.y-start
-
-  # baseline: false
-  # support:
-  #   firefox: "141"
-  #   firefox_android: "141"
-  - api.HTMLElement.showPopover.options_source_parameter.implicit_anchor_reference
-  - api.HTMLElement.togglePopover.options_source_parameter.implicit_anchor_reference

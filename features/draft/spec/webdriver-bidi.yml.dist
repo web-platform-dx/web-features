@@ -652,6 +652,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "141"
+  #   chrome_android: "141"
+  #   edge: "141"
+  - webdriver.bidi.emulation.setScriptingEnabled
+  - webdriver.bidi.emulation.setScriptingEnabled.contexts_parameter
+  - webdriver.bidi.emulation.setScriptingEnabled.enabled_parameter
+  - webdriver.bidi.emulation.setScriptingEnabled.userContexts_parameter
+
+  # baseline: false
+  # support:
   #   firefox: "112"
   #   firefox_android: "112"
   - webdriver.bidi.browsingContext.print
@@ -749,15 +759,6 @@ compat_features:
   - webdriver.bidi.webExtension.install.extensionData_parameter
   - webdriver.bidi.webExtension.uninstall
   - webdriver.bidi.webExtension.uninstall.extension_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "141"
-  #   chrome_android: "141"
-  - webdriver.bidi.emulation.setScriptingEnabled
-  - webdriver.bidi.emulation.setScriptingEnabled.contexts_parameter
-  - webdriver.bidi.emulation.setScriptingEnabled.enabled_parameter
-  - webdriver.bidi.emulation.setScriptingEnabled.userContexts_parameter
 
   # baseline: false
   # support:
