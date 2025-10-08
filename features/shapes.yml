@@ -1,10 +1,8 @@
 name: shapes
-description: The `circle()`, `ellipse()`, `inset()`, `polygon()`, `rect()`, and `xywh()` CSS shape functions create shapes for use with `clip-path` and `shape-outside`.
+description: The `circle()`, `ellipse()`, `inset()`, and `polygon()` CSS shape functions create shapes for use with `clip-path` and `shape-outside`.
 spec: https://drafts.csswg.org/css-shapes-1/#basic-shape-functions
 caniuse: css-shapes
 group: clipping-shapes-masking
-status:
-  compute_from: css.types.basic-shape
 compat_features:
   - css.types.basic-shape
   - css.types.basic-shape.animation
@@ -12,6 +10,3 @@ compat_features:
   - css.types.basic-shape.ellipse
   - css.types.basic-shape.inset
   - css.types.basic-shape.polygon
-  - css.types.basic-shape.rect
-  - css.types.basic-shape.shape
-  - css.types.basic-shape.xywh
