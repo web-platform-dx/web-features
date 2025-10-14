@@ -1,5 +1,5 @@
 name: at-rule()
-description: "The `at-rule` feature detection is an expansion to feature detection in CSS that allows authors to detect support for at-rules. Example: `@supports at-rule(@starting-style)`"
+description: "The `at-rule()` function, when used with `@supports`, checks if a CSS at-rule is supported. For example `@supports at-rule(@starting-style)`" checks if the `@starting-style` at-rule is supported.
 spec: 
   https://www.w3.org/TR/css-conditional-5/
   https://github.com/w3c/csswg-drafts/pull/12945
