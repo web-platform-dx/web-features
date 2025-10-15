@@ -3,19 +3,25 @@
 
 status:
   baseline: false
-  support:
-    chrome: "140"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
+  - css.properties.scroll-target-group
+  - css.properties.scroll-target-group.auto
+  - css.properties.scroll-target-group.none
+
   # baseline: false
   # support:
   #   chrome: "135"
   #   edge: "135"
   - css.selectors.target-current
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support:
-  #   chrome: "140"
-  #   chrome_android: "140"
-  - css.properties.scroll-target-group
-  - css.properties.scroll-target-group.auto
-  - css.properties.scroll-target-group.none
+  # support: {}
+  - css.selectors.target-after
+  - css.selectors.target-before

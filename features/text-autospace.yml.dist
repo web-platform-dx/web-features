@@ -3,9 +3,7 @@
 
 status:
   baseline: false
-  support:
-    safari: "18.4"
-    safari_ios: "18.4"
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -17,10 +15,7 @@ compat_features:
   - css.properties.text-autospace
   - css.properties.text-autospace.no-autospace
   - css.properties.text-autospace.normal
-  - css.properties.text-autospace.punctuation
-  - css.properties.text-autospace.replace
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   safari: "18.4"
@@ -28,4 +23,10 @@ compat_features:
   - css.properties.text-autospace.auto
   - css.properties.text-autospace.ideograph-alpha
   - css.properties.text-autospace.ideograph-numeric
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
   - css.properties.text-autospace.insert
+  - css.properties.text-autospace.punctuation
+  - css.properties.text-autospace.replace
