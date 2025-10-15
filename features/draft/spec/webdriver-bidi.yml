@@ -1,4 +1,4 @@
-draft_date: 2025-10-08
+draft_date: 2025-10-15
 name: WebDriver BiDi
 description: TODO
 spec: https://w3c.github.io/webdriver-bidi/
@@ -165,6 +165,11 @@ compat_features:
   - webdriver.bidi.emulation.setLocaleOverride.contexts_parameter
   - webdriver.bidi.emulation.setLocaleOverride.locale_parameter
   - webdriver.bidi.emulation.setLocaleOverride.userContexts_parameter
+  - webdriver.bidi.emulation.setNetworkConditions
+  - webdriver.bidi.emulation.setNetworkConditions.contexts_parameter
+  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter
+  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter.offline
+  - webdriver.bidi.emulation.setNetworkConditions.userContexts_parameter
   - webdriver.bidi.emulation.setScreenOrientationOverride
   - webdriver.bidi.emulation.setScreenOrientationOverride.contexts_parameter
   - webdriver.bidi.emulation.setScreenOrientationOverride.screenOrientation_parameter
