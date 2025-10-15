@@ -1,4 +1,4 @@
-draft_date: 2025-10-13
+draft_date: 2025-10-15
 name: CSS Basic User Interface Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-ui-4/
@@ -6,11 +6,6 @@ compat_features:
   - css.properties.caret-animation
   - css.properties.caret-animation.auto
   - css.properties.caret-animation.manual
-  - css.properties.caret-shape
-  - css.properties.caret-shape.auto
-  - css.properties.caret-shape.bar
-  - css.properties.caret-shape.block
-  - css.properties.caret-shape.underscore
   - css.properties.interest-delay
   - css.properties.interest-delay-end
   - css.properties.interest-delay-end.normal
@@ -41,6 +36,12 @@ compat_features:
 #   - css.properties.appearance.base-select
 # - caret-color:
 #   - css.properties.caret-color
+# - caret-shape:
+#   - css.properties.caret-shape
+#   - css.properties.caret-shape.auto
+#   - css.properties.caret-shape.bar
+#   - css.properties.caret-shape.block
+#   - css.properties.caret-shape.underscore
 # - Cursor styles:
 #   - css.properties.cursor
 #   - css.properties.cursor.alias
