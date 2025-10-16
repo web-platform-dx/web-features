@@ -12,9 +12,7 @@
   "main": "index.js",
   "exports": {
     ".": "./index.js",
-    "./extended": "./extended.js",
     "./data.json": "./data.json",
-    "./data.extended.json": "./data.extended.json",
     "./data.schema.json": "./data.schema.json"
   },
   "types": "./index.d.ts",
@@ -23,15 +21,11 @@
     "types.d.ts",
     "types.quicktype.d.ts",
     "index.js",
-    "extended.d.ts",
-    "extended.js",
     "data.json",
-    "data.extended.json",
     "data.schema.json"
   ],
   "scripts": {
-    "prepare": "tsc && rm types.js && rm types.quicktype.js && npm run format",
-    "format": "npx prettier --write ."
+    "prepare": "tsc && rm types.js && rm types.quicktype.js"
   },
   "devDependencies": {
     "@types/node": "^20.19.21",
