@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "144"
+    firefox_android: "144"
 compat_features:
   - javascript.builtins.Map.getOrInsert
   - javascript.builtins.Map.getOrInsertComputed
