@@ -20,13 +20,20 @@ compat_features:
   #   safari_ios: "16.4"
   - api.Document.adoptedStyleSheets.mutable
 
+  # baseline: false
+  # support:
+  #   firefox: "144"
+  #   firefox_android: "144"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.CSSStyleProperties
+  - api.CSSStyleProperties.cssFloat
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   safari: "26"
   #   safari_ios: "26"
-  - api.CSSStyleProperties
-  - api.CSSStyleProperties.cssFloat
   - api.CSSStyleRule.style.returns_CSSStyleProperties
   - api.HTMLElement.style.returns_CSSStyleProperties
   - api.MathMLElement.style.returns_CSSStyleProperties

@@ -803,6 +803,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "139"
+  #   chrome_android: "139"
+  #   edge: "139"
+  #   firefox: "144"
+  #   firefox_android: "144"
+  - api.HTMLButtonElement.command.request-close
+  - html.elements.button.command.request-close
+
+  # baseline: false
+  # support:
   #   chrome: "96"
   #   chrome_android: "96"
   #   edge: "96"
@@ -908,14 +918,6 @@ compat_features:
   - api.HTMLCanvasElement.getContext.2d_context.options_colorType_parameter
   - api.ImageData.ImageData.settings_parameter.pixelFormat_option
   - api.ImageData.pixelFormat
-
-  # baseline: false
-  # support:
-  #   chrome: "139"
-  #   chrome_android: "139"
-  #   edge: "139"
-  - api.HTMLButtonElement.command.request-close
-  - html.elements.button.command.request-close
 
   # baseline: false
   # support:
