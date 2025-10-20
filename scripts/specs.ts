@@ -127,10 +127,6 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed for the mediacontroller feature. This is the superseded HTML5 spec that still contains MediaController."
     ],
     [
-        "https://github.com/whatwg/fetch/pull/1647",
-        "This is where fetchLater() is in the process of being spec'd. Once the PR merges, change the spec url in fetchlater.yml, and remove this exception."
-    ],
-    [
         "https://wicg.github.io/private-network-access/",
         "Allowed for private-network-access feature. Feature and spec succeeded by local-network-access."
     ],
