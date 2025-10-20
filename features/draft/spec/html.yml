@@ -1,4 +1,4 @@
-draft_date: 2025-10-08
+draft_date: 2025-10-15
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -100,7 +100,6 @@ compat_features:
   - api.WorkerGlobalScope.importScripts.enforces_trusted_types
   - api.crossOriginIsolated
   - api.origin
-  - api.queueMicrotask
   - api.reportError
   - api.setInterval.supports_parameters_for_callback
   - api.setTimeout.supports_parameters_for_callback
@@ -821,7 +820,6 @@ compat_features:
 #   - api.HTMLAudioElement
 #   - api.HTMLAudioElement.Audio
 #   - html.elements.audio
-#   - html.elements.audio.autoplay
 #   - html.elements.audio.controls
 #   - html.elements.audio.crossorigin
 #   - html.elements.audio.loop
@@ -2247,6 +2245,8 @@ compat_features:
 # - isSecureContext:
 #   - api.isSecureContext
 #   - api.isSecureContext.worker_support
+# - queueMicrotask():
+#   - api.queueMicrotask
 # - structuredClone():
 #   - api.structuredClone
 # - User action pseudo-classes:

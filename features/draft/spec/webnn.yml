@@ -1,19 +1,30 @@
-draft_date: 2025-10-13
+draft_date: 2025-10-15
 name: Web Neural Network API
 description: TODO
 spec: https://webmachinelearning.github.io/webnn/
 compat_features:
+  - api.MLContext.createConstantTensor
   - api.MLContext.createTensor
   - api.MLContext.destroy
+  - api.MLContext.lost
   - api.MLContext.readTensor
   - api.MLContext.writeTensor
   - api.MLGraph.destroy
+  - api.MLGraphBuilder.gelu
   - api.MLGraphBuilder.isInfinite
   - api.MLGraphBuilder.isNaN
+  - api.MLGraphBuilder.notEqual
   - api.MLGraphBuilder.reverse
   - api.MLGraphBuilder.roundEven
+  - api.MLOperand.dataType
+  - api.MLOperand.shape
   - api.MLTensor
+  - api.MLTensor.constant
+  - api.MLTensor.dataType
   - api.MLTensor.destroy
+  - api.MLTensor.readable
+  - api.MLTensor.shape
+  - api.MLTensor.writable
 
 # The following features in the spec are already part of web-features:
 # - WebNN:
