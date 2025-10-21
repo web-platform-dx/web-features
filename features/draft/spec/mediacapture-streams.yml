@@ -1,4 +1,4 @@
-draft_date: 2025-10-15
+draft_date: 2025-10-21
 name: Media Capture and Streams
 description: TODO
 spec: https://w3c.github.io/mediacapture-main/
@@ -19,6 +19,8 @@ compat_features:
   - api.MediaDevices.getSupportedConstraints.return_object_property_sampleSize
   - api.MediaDevices.getSupportedConstraints.return_object_property_width
   - api.MediaDevices.getUserMedia.constraints_resizeMode_parameter
+  - api.MediaStreamTrack.applyConstraints.echoCancellation_constraint.all
+  - api.MediaStreamTrack.applyConstraints.echoCancellation_constraint.remote-only
 
 # The following features in the spec are already part of web-features:
 # - Media capture:
