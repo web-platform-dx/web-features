@@ -236,6 +236,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "137"
+  #   chrome_android: "137"
+  #   edge: "137"
+  #   firefox: "144"
+  #   firefox_android: "144"
+  - api.HTMLElement.showPopover.options_source_parameter.implicit_anchor_reference
+
+  # baseline: false
+  # support:
   #   chrome: "125"
   #   chrome_android: "125"
   #   edge: "125"
@@ -253,13 +262,6 @@ compat_features:
   - api.HTMLInputElement.popoverTargetElement.implicit_anchor_reference
   - html.elements.button.popovertarget.implicit_anchor_reference
   - html.elements.input.popovertarget.implicit_anchor_reference
-
-  # baseline: false
-  # support:
-  #   chrome: "137"
-  #   chrome_android: "137"
-  #   edge: "137"
-  - api.HTMLElement.showPopover.options_source_parameter.implicit_anchor_reference
 
   # baseline: false
   # support:
