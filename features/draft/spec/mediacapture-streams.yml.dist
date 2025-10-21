@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "72"
-    chrome_android: "72"
-    edge: "79"
+    chrome: "141"
+    chrome_android: "141"
+    edge: "141"
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -104,3 +104,12 @@ compat_features:
   #   chrome_android: "53"
   #   edge: "79"
   - api.MediaDevices.getSupportedConstraints.return_object_property_latency
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "141"
+  #   chrome_android: "141"
+  #   edge: "141"
+  - api.MediaStreamTrack.applyConstraints.echoCancellation_constraint.all
+  - api.MediaStreamTrack.applyConstraints.echoCancellation_constraint.remote-only

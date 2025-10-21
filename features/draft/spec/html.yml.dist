@@ -931,6 +931,7 @@ compat_features:
   #   chrome: "141"
   #   chrome_android: "141"
   #   edge: "141"
+  - api.NavigateEvent.intercept.precommitHandler_option
   - api.NavigationPrecommitController
   - api.NavigationPrecommitController.redirect
   - api.NavigationTransition.committed

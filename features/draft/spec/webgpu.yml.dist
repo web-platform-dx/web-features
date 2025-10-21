@@ -32,6 +32,11 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome_android: "135"
+  - api.GPUDevice.createPipelineLayout.descriptor_bindGroupLayouts_parameter_accepts_null_values
+
+  # baseline: false
+  # support:
   #   chrome_android: "137"
   - api.GPUCommandEncoder.copyBufferToBuffer.offset_and_size_parameter_optional
   - api.GPUDevice.createBindGroup.descriptor_entries_option_accepts_GPUTextureView_resource
@@ -40,3 +45,6 @@ compat_features:
   # baseline: false
   # support: {}
   - api.GPUSupportedFeatures.feature_core-features-and-limits
+  - api.GPUSupportedFeatures.feature_primitive-index
+  - api.GPUSupportedFeatures.feature_texture-formats-tier1
+  - api.GPUSupportedFeatures.feature_texture-formats-tier2
