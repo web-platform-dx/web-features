@@ -7,9 +7,9 @@ import YAML from 'yaml';
 import { convertMarkdown } from "./text";
 import { GroupData, SnapshotData, WebFeaturesData } from './types';
 
-import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, parseRangedDateString, getStatus } from 'compute-baseline';
+import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, getStatus, parseRangedDateString } from 'compute-baseline';
 import { Compat } from 'compute-baseline/browser-compat-data';
-import { assertValidFeatureReference } from './assertions';
+import { assertRequiredRemovalDateSet, assertValidFeatureReference } from './assertions';
 import { isMoved, isSplit } from './type-guards';
 
 // The longest name allowed, to allow for compact display.
@@ -218,6 +218,8 @@ for (const [key, data] of yamlEntries('features')) {
             }
         }
     }
+
+   assertRequiredRemovalDateSet(key, data);
 
     features[key] = data;
 }
