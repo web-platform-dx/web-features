@@ -3,7 +3,7 @@ description: The `with` JavaScript statement adds a given object to the chain of
 spec: https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#sec-with-statement
 group: javascript
 discouraged:
-  reason: The `with` statement is not available in strict mode code.
+  reason: JavaScript strict mode prohibits the `with` statement.
   according_to:
     - https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#sec-with-statement
   alternatives:

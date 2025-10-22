@@ -3,7 +3,7 @@ description: The `caller` and `arguments` properties of a non-strict mode `Funct
 group: javascript
 spec: https://tc39.es/ecma262/multipage/error-handling-and-language-extensions.html#sec-forbidden-extensions
 discouraged:
-  reason: The `caller` and `arguments` properties of a `Function` object are not available in strict mode code.
+  reason: JavaScript strict mode prohibits accessing the `caller` and `arguments` properties of a `Function` object.
   according_to:
     - https://tc39.es/ecma262/multipage/error-handling-and-language-extensions.html#sec-forbidden-extensions
 compat_features:
