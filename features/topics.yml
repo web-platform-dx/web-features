@@ -1,0 +1,13 @@
+name: Topics
+description: The Topics API reports a user's likely subject-matter interests (as determined by the browser, known as topics) to iframes. This allows for interest-based advertising that does not rely on user's exact browsing history, third-party cookies, or fingerprinting.
+spec: https://patcg-individual-drafts.github.io/topics/
+compat_features:
+  - api.Document.browsingTopics
+  - html.elements.iframe.browsingtopics
+  - html.elements.iframe.allow.browsing-topics
+  - api.HTMLIFrameElement.browsingTopics
+  - api.Request.Request.init_browsingTopics_parameter
+  - api.fetch.init_browsingTopics_parameter
+  - http.headers.Observe-Browsing-Topics
+  - http.headers.Permissions-Policy.browsing-topics
+  - http.headers.Sec-Browsing-Topics

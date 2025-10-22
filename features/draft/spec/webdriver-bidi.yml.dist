@@ -412,6 +412,23 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  #   firefox: "143"
+  #   firefox_android: "143"
+  - webdriver.bidi.browsingContext.contextCreated_event
+  - webdriver.bidi.browsingContext.contextCreated_event.children_parameter
+  - webdriver.bidi.browsingContext.contextCreated_event.clientWindow_parameter
+  - webdriver.bidi.browsingContext.contextCreated_event.context_parameter
+  - webdriver.bidi.browsingContext.contextCreated_event.parent_parameter
+  - webdriver.bidi.browsingContext.contextCreated_event.url_parameter
+  - webdriver.bidi.browsingContext.contextCreated_event.userContext_parameter
+  - webdriver.bidi.network.disownData
+  - webdriver.bidi.network.getData
+
+  # baseline: false
+  # support:
   #   chrome: "131"
   #   chrome_android: "131"
   #   edge: "131"
@@ -500,17 +517,51 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
+  #   firefox: "142"
+  #   firefox_android: "142"
+  - webdriver.bidi.emulation.setLocaleOverride
+  - webdriver.bidi.emulation.setLocaleOverride.contexts_parameter
+  - webdriver.bidi.emulation.setLocaleOverride.locale_parameter
+  - webdriver.bidi.emulation.setLocaleOverride.userContexts_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
+  #   firefox: "143"
+  #   firefox_android: "143"
+  - webdriver.bidi.network.disownData.collector_parameter
+  - webdriver.bidi.network.disownData.dataType_parameter
+  - webdriver.bidi.network.disownData.request_parameter
+  - webdriver.bidi.network.getData.collector_parameter
+  - webdriver.bidi.network.getData.dataType_parameter
+  - webdriver.bidi.network.getData.disown_parameter
+  - webdriver.bidi.network.getData.request_parameter
+  - webdriver.bidi.network.removeDataCollector
+
+  # baseline: false
+  # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
+  #   firefox: "144"
+  #   firefox_android: "144"
+  - webdriver.bidi.emulation.setScreenOrientationOverride
+  - webdriver.bidi.emulation.setTimezoneOverride
+  - webdriver.bidi.emulation.setTimezoneOverride.contexts_parameter
+  - webdriver.bidi.emulation.setTimezoneOverride.timezone_parameter
+  - webdriver.bidi.emulation.setTimezoneOverride.userContexts_parameter
+
+  # baseline: false
+  # support:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
-  - webdriver.bidi.browsingContext.contextCreated_event
-  - webdriver.bidi.browsingContext.contextCreated_event.children_parameter
-  - webdriver.bidi.browsingContext.contextCreated_event.clientWindow_parameter
-  - webdriver.bidi.browsingContext.contextCreated_event.context_parameter
   - webdriver.bidi.browsingContext.contextCreated_event.originalOpener_parameter
-  - webdriver.bidi.browsingContext.contextCreated_event.parent_parameter
-  - webdriver.bidi.browsingContext.contextCreated_event.url_parameter
-  - webdriver.bidi.browsingContext.contextCreated_event.userContext_parameter
   - webdriver.bidi.browsingContext.contextDestroyed_event.children_parameter
   - webdriver.bidi.browsingContext.contextDestroyed_event.originalOpener_parameter
   - webdriver.bidi.browsingContext.load_event.context_parameter
@@ -526,8 +577,6 @@ compat_features:
   - webdriver.bidi.log.entryAdded_event.args_parameter
   - webdriver.bidi.log.entryAdded_event.source_parameter
   - webdriver.bidi.log.entryAdded_event.stackTrace_parameter
-  - webdriver.bidi.network.disownData
-  - webdriver.bidi.network.getData
   - webdriver.bidi.script.realmCreated_event.owners_parameter
   - webdriver.bidi.session.new
   - webdriver.bidi.session.new.capabilities_parameter
@@ -603,28 +652,22 @@ compat_features:
   #   chrome: "140"
   #   chrome_android: "140"
   #   edge: "140"
+  - webdriver.bidi.bluetooth
   - webdriver.bidi.browser.createUserContext.unhandledPromptBehavior_parameter
-  - webdriver.bidi.emulation.setLocaleOverride
-  - webdriver.bidi.emulation.setLocaleOverride.contexts_parameter
-  - webdriver.bidi.emulation.setLocaleOverride.locale_parameter
-  - webdriver.bidi.emulation.setLocaleOverride.userContexts_parameter
-  - webdriver.bidi.emulation.setScreenOrientationOverride
   - webdriver.bidi.emulation.setScreenOrientationOverride.contexts_parameter
   - webdriver.bidi.emulation.setScreenOrientationOverride.screenOrientation_parameter
   - webdriver.bidi.emulation.setScreenOrientationOverride.userContexts_parameter
-  - webdriver.bidi.emulation.setTimezoneOverride
-  - webdriver.bidi.emulation.setTimezoneOverride.contexts_parameter
-  - webdriver.bidi.emulation.setTimezoneOverride.timezone_parameter
-  - webdriver.bidi.emulation.setTimezoneOverride.userContexts_parameter
-  - webdriver.bidi.network.disownData.collector_parameter
-  - webdriver.bidi.network.disownData.dataType_parameter
-  - webdriver.bidi.network.disownData.request_parameter
-  - webdriver.bidi.network.getData.collector_parameter
-  - webdriver.bidi.network.getData.dataType_parameter
-  - webdriver.bidi.network.getData.disown_parameter
-  - webdriver.bidi.network.getData.request_parameter
-  - webdriver.bidi.network.removeDataCollector
   - webdriver.bidi.network.removeDataCollector.collector_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "141"
+  #   chrome_android: "141"
+  #   edge: "141"
+  - webdriver.bidi.emulation.setScriptingEnabled
+  - webdriver.bidi.emulation.setScriptingEnabled.contexts_parameter
+  - webdriver.bidi.emulation.setScriptingEnabled.enabled_parameter
+  - webdriver.bidi.emulation.setScriptingEnabled.userContexts_parameter
 
   # baseline: false
   # support:
@@ -726,27 +769,43 @@ compat_features:
   - webdriver.bidi.webExtension.uninstall
   - webdriver.bidi.webExtension.uninstall.extension_parameter
 
+  # baseline: false
+  # support:
+  #   firefox: "143"
+  #   firefox_android: "143"
+  - webdriver.bidi.network.addDataCollector
+  - webdriver.bidi.network.addDataCollector.contexts_parameter
+  - webdriver.bidi.network.addDataCollector.dataTypes_parameter
+  - webdriver.bidi.network.addDataCollector.dataTypes_parameter.response
+  - webdriver.bidi.network.addDataCollector.maxEncodedDataSize_parameter
+  - webdriver.bidi.network.addDataCollector.userContexts_parameter
+  - webdriver.bidi.network.disownData.dataType_parameter.response
+  - webdriver.bidi.network.getData.dataType_parameter.response
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - webdriver.bidi.browser.setClientWindowState
   - webdriver.bidi.browser.setClientWindowState.clientWindow_parameter
+  - webdriver.bidi.browser.setDownloadBehavior
+  - webdriver.bidi.browser.setDownloadBehavior.downloadBehavior_parameter
+  - webdriver.bidi.browser.setDownloadBehavior.userContexts_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event
   - webdriver.bidi.browsingContext.historyUpdated_event.context_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event.timestamp_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event.url_parameter
   - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.beforeunload
   - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.beforeunload
-  - webdriver.bidi.emulation.setScriptingEnabled
-  - webdriver.bidi.emulation.setScriptingEnabled.contexts_parameter
-  - webdriver.bidi.emulation.setScriptingEnabled.enabled_parameter
-  - webdriver.bidi.emulation.setScriptingEnabled.userContexts_parameter
-  - webdriver.bidi.network.addDataCollector
+  - webdriver.bidi.emulation.setNetworkConditions
+  - webdriver.bidi.emulation.setNetworkConditions.contexts_parameter
+  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter
+  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter.offline
+  - webdriver.bidi.emulation.setNetworkConditions.userContexts_parameter
+  - webdriver.bidi.emulation.setUserAgentOverride
+  - webdriver.bidi.emulation.setUserAgentOverride.contexts_parameter
+  - webdriver.bidi.emulation.setUserAgentOverride.userAgent_parameter
+  - webdriver.bidi.emulation.setUserAgentOverride.userContexts_parameter
   - webdriver.bidi.network.addDataCollector.collectorType_parameter
-  - webdriver.bidi.network.addDataCollector.contexts_parameter
-  - webdriver.bidi.network.addDataCollector.dataTypes_parameter
-  - webdriver.bidi.network.addDataCollector.maxEncodedDataSize_parameter
-  - webdriver.bidi.network.addDataCollector.userContexts_parameter
   - webdriver.bidi.network.authRequired_event.response_parameter
   - webdriver.bidi.network.provideResponse.body_parameter
   - webdriver.bidi.network.provideResponse.cookies_parameter

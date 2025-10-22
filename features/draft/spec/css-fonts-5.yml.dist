@@ -7,19 +7,8 @@ status:
 compat_features:
   # baseline: false
   # support:
-  #   firefox: "137"
-  #   firefox_android: "137"
-  - css.properties.font-synthesis-style.oblique-only
-
-  # baseline: false
-  # support:
-  #   safari: "18.4"
-  - css.at-rules.font-face.font-width
-  - css.properties.font-width.percentage
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
+  #   safari: "26"
+  #   safari_ios: "26"
   - api.CSSFontFaceDescriptors
   - api.CSSFontFaceDescriptors.font-display
   - api.CSSFontFaceDescriptors.font-family
@@ -40,3 +29,15 @@ compat_features:
   - api.CSSFontFaceDescriptors.src
   - api.CSSFontFaceDescriptors.unicode-range
   - api.CSSFontFaceDescriptors.unicodeRange
+
+  # baseline: false
+  # support:
+  #   firefox: "137"
+  #   firefox_android: "137"
+  - css.properties.font-synthesis-style.oblique-only
+
+  # baseline: false
+  # support:
+  #   safari: "18.4"
+  - css.at-rules.font-face.font-width
+  - css.properties.font-width.percentage

@@ -1,6 +1,7 @@
 name: RegExp compile()
 description: The `compile()` method of `RegExp` objects recompiles an existing regular expression object using a new pattern and flags.
 spec: https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-regexp.prototype.compile
+group: regexps
 discouraged:
   reason: The `compile()` method duplicates behavior of the `RegExp()` constructor and it exists only for backwards compatibility.
   according_to:
