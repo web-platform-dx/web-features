@@ -165,6 +165,11 @@ for (const [key, data] of yamlEntries('features')) {
         data.description = text;
         data.description_html = html;
     }
+    if (data.discouraged) {
+        const { text, html } = convertMarkdown(data.discouraged.reason);
+        data.discouraged.reason = text;
+        data.discouraged.reason_html = html;
+    }
 
     // Compute Baseline high date from low date.
     if (data.status?.baseline === 'high') {

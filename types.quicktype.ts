@@ -136,6 +136,11 @@ export interface Discouraged {
    */
   reason: string;
   /**
+   * A brief, developer-focused description of why the feature is discouraged, as an HTML
+   * string
+   */
+  reason_html: string;
+  /**
    * An expected or actual removal date, as in "2029-12-31". Only set if there's an announced
    * plan by all currently-implementing vendors to unship the feature or the feature has
    * already been unshipped from all browsers.

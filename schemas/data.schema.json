@@ -92,12 +92,16 @@
           "description": "A brief, developer-focused description of why the feature is discouraged",
           "type": "string"
         },
+        "reason_html": {
+          "description": "A brief, developer-focused description of why the feature is discouraged, as an HTML string",
+          "type": "string"
+        },
         "removal_date": {
           "description": "An expected or actual removal date, as in \"2029-12-31\". Only set if there's an announced plan by all currently-implementing vendors to unship the feature or the feature has already been unshipped from all browsers.",
           "type": "string"
         }
       },
-      "required": ["according_to", "reason"],
+      "required": ["according_to", "reason", "reason_html"],
       "additionalProperties": false
     },
     "BrowserData": {
