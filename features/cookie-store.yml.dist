@@ -30,10 +30,6 @@ compat_features:
   - api.CookieStore.get.value_return_property
   - api.CookieStore.getAll
   - api.CookieStore.set
-  - api.ExtendableCookieChangeEvent
-  - api.ExtendableCookieChangeEvent.ExtendableCookieChangeEvent
-  - api.ExtendableCookieChangeEvent.changed
-  - api.ExtendableCookieChangeEvent.deleted
   - api.ServiceWorkerGlobalScope.cookieStore
   - api.Window.cookieStore
 
@@ -48,6 +44,10 @@ compat_features:
   - api.CookieStoreManager.getSubscriptions
   - api.CookieStoreManager.subscribe
   - api.CookieStoreManager.unsubscribe
+  - api.ExtendableCookieChangeEvent
+  - api.ExtendableCookieChangeEvent.ExtendableCookieChangeEvent
+  - api.ExtendableCookieChangeEvent.changed
+  - api.ExtendableCookieChangeEvent.deleted
   - api.ServiceWorkerGlobalScope.cookiechange_event
   - api.ServiceWorkerRegistration.cookies
 

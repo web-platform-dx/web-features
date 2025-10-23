@@ -80,9 +80,15 @@ compat_features:
   #   safari_ios: "18.3"
   - api.HTMLElement.popover
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-10-14
   # support:
-  #   firefox: "141"
-  #   firefox_android: "141"
+  #   chrome: "137"
+  #   chrome_android: "137"
+  #   edge: "137"
+  #   firefox: "144"
+  #   firefox_android: "144"
+  #   safari: "26"
+  #   safari_ios: "26"
   - api.HTMLElement.showPopover.options_source_parameter
   - api.HTMLElement.togglePopover.options_source_parameter

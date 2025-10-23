@@ -10,9 +10,34 @@ status:
     edge: "125"
     firefox: "118"
     firefox_android: "118"
-    safari: "15.4"
-    safari_ios: "15.4"
+    safari: "17.2"
+    safari_ios: "17.2"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2024-05-17
+  # support:
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
+  #   firefox: "118"
+  #   firefox_android: "118"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
   - css.types.mod
   - css.types.rem
   - css.types.round
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2024-05-17
+  # support:
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
+  #   firefox: "118"
+  #   firefox_android: "118"
+  #   safari: "17.2"
+  #   safari_ios: "17.2"
+  - css.types.mod.mixed_type_parameters
+  - css.types.rem.mixed_type_parameters
+  - css.types.round.mixed_type_parameters

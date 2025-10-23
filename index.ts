@@ -7,7 +7,7 @@ import YAML from 'yaml';
 import { convertMarkdown } from "./text";
 import { GroupData, SnapshotData, WebFeaturesData } from './types';
 
-import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, parseRangedDateString } from 'compute-baseline';
+import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, parseRangedDateString, getStatus } from 'compute-baseline';
 import { Compat } from 'compute-baseline/browser-compat-data';
 import { assertValidFeatureReference } from './assertions';
 import { isMoved, isSplit } from './type-guards';
@@ -207,6 +207,14 @@ for (const [key, data] of yamlEntries('features')) {
                 throw new Error(`BCD key ${bcdKey} is used in both ${otherKey} and ${key}, which creates ambiguity for some consumers. Please see https://github.com/web-platform-dx/web-features/issues/1173 and help us find a good solution to allow this.`);
             } else {
                 bcdToFeatureId.set(bcdKey, key);
+            }
+        }
+
+        // Generate by_compat_key data.
+        if (data.status) {
+            data.status.by_compat_key = {};
+            for (const bcdKey of data.compat_features) {
+                data.status.by_compat_key[bcdKey] = getStatus(key, bcdKey);
             }
         }
     }

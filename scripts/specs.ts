@@ -127,10 +127,6 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed for the mediacontroller feature. This is the superseded HTML5 spec that still contains MediaController."
     ],
     [
-        "https://github.com/whatwg/fetch/pull/1647",
-        "This is where fetchLater() is in the process of being spec'd. Once the PR merges, change the spec url in fetchlater.yml, and remove this exception."
-    ],
-    [
         "https://wicg.github.io/private-network-access/",
         "Allowed for private-network-access feature. Feature and spec succeeded by local-network-access."
     ],
@@ -145,6 +141,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://patcg-individual-drafts.github.io/topics/",
         "Allowed because the Topics API isn't on a standards track yet. Remove this exception when it is."
+    ],
+    [
+        "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/Accessibility/AriaNotify/explainer.md",
+        "Allowed because the ariaNotify() method is not yet in a formal spec. Remove this exception when a formal spec is available."
     ]
 ];
 

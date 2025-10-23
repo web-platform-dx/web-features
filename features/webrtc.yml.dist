@@ -1006,6 +1006,30 @@ compat_features:
   #   safari_ios: "12.2"
   - api.RTCCertificate.getFingerprints
 
+  # baseline: low
+  # baseline_low_date: 2025-10-14
+  # support:
+  #   chrome: "81"
+  #   chrome_android: "81"
+  #   edge: "81"
+  #   firefox: "144"
+  #   firefox_android: "144"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - api.RTCDataChannel.closing_event
+
+  # baseline: low
+  # baseline_low_date: 2025-10-14
+  # support:
+  #   chrome: "130"
+  #   chrome_android: "130"
+  #   edge: "130"
+  #   firefox: "144"
+  #   firefox_android: "144"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - api.RTCDataChannel.transferable
+
   # baseline: false
   # support:
   #   chrome: "74"
@@ -1157,15 +1181,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "81"
-  #   chrome_android: "81"
-  #   edge: "81"
-  #   safari: "15.4"
-  #   safari_ios: "15.4"
-  - api.RTCDataChannel.closing_event
-
-  # baseline: false
-  # support:
   #   chrome: "88"
   #   chrome_android: "88"
   #   edge: "88"
@@ -1193,15 +1208,6 @@ compat_features:
   #   firefox: "115"
   #   firefox_android: "115"
   - api.RTCRtpReceiver.jitterBufferTarget
-
-  # baseline: false
-  # support:
-  #   chrome: "130"
-  #   chrome_android: "130"
-  #   edge: "130"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - api.RTCDataChannel.transferable
 
   # baseline: false
   # support:

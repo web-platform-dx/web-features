@@ -3,9 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "140"
-    edge: "140"
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -21,3 +19,9 @@ compat_features:
   #   chrome: "135"
   #   edge: "135"
   - css.selectors.target-current
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.selectors.target-after
+  - css.selectors.target-before
