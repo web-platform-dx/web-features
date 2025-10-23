@@ -7,19 +7,12 @@ status:
 compat_features:
   # baseline: false
   # support:
-  #   chrome: "135"
-  #   chrome_android: "135"
-  #   edge: "135"
-  - css.selectors.scroll-button
-  - css.selectors.scroll-button.block-end
-  - css.selectors.scroll-button.block-start
-  - css.selectors.scroll-button.down
-  - css.selectors.scroll-button.inline-end
-  - css.selectors.scroll-button.inline-start
-  - css.selectors.scroll-button.left
-  - css.selectors.scroll-button.right
-  - css.selectors.scroll-button.star
-  - css.selectors.scroll-button.up
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
+  - css.properties.scroll-target-group
+  - css.properties.scroll-target-group.auto
+  - css.properties.scroll-target-group.none
 
   # baseline: false
   # support:
@@ -30,8 +23,5 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - css.properties.scroll-target-group
-  - css.properties.scroll-target-group.auto
-  - css.properties.scroll-target-group.none
-  - css.selectors.scroll-button.next
-  - css.selectors.scroll-button.prev
+  - css.selectors.target-after
+  - css.selectors.target-before

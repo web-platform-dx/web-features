@@ -7,15 +7,19 @@ status:
 compat_features:
   # baseline: false
   # support:
-  #   chrome: "135"
-  #   edge: "135"
-  - css.properties.interactivity
-  - css.properties.interactivity.auto
-  - css.properties.interactivity.inert
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
+  - css.properties.caret-animation
+  - css.properties.caret-animation.auto
+  - css.properties.caret-animation.manual
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - css.properties.caret-animation
-  - css.properties.caret-animation.auto
-  - css.properties.caret-animation.manual
+  - css.properties.interest-delay
+  - css.properties.interest-delay-end
+  - css.properties.interest-delay-end.normal
+  - css.properties.interest-delay-start
+  - css.properties.interest-delay-start.normal
+  - css.properties.interest-delay.normal

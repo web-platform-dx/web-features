@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    safari: "26"
+    safari_ios: "26"
 compat_features:
   # baseline: false
   # support:
@@ -27,5 +29,7 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   safari: "26"
+  #   safari_ios: "26"
   - http.headers.Content-Security-Policy.script-src.trusted-types-eval

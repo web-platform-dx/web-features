@@ -28,6 +28,30 @@ compat_features:
   - html.elements.template.shadowrootmode
 
   # baseline: low
+  # baseline_low_date: 2024-03-22
+  # support:
+  #   chrome: "123"
+  #   chrome_android: "123"
+  #   edge: "123"
+  #   firefox: "123"
+  #   firefox_android: "123"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - html.elements.template.shadowrootdelegatesfocus
+
+  # baseline: low
+  # baseline_low_date: 2024-05-13
+  # support:
+  #   chrome: "124"
+  #   chrome_android: "124"
+  #   edge: "124"
+  #   firefox: "125"
+  #   firefox_android: "125"
+  #   safari: "17.5"
+  #   safari_ios: "17.5"
+  - html.elements.template.shadowrootclonable
+
+  # baseline: low
   # baseline_low_date: 2024-09-16
   # support:
   #   chrome: "123"
@@ -65,25 +89,9 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "123"
-  #   chrome_android: "123"
-  #   edge: "123"
-  #   firefox: "123"
-  #   firefox_android: "123"
-  - html.elements.template.shadowrootdelegatesfocus
-
-  # baseline: false
-  # support:
-  #   chrome: "124"
-  #   chrome_android: "124"
-  #   edge: "124"
-  #   firefox: "125"
-  #   firefox_android: "125"
-  - html.elements.template.shadowrootclonable
-
-  # baseline: false
-  # support:
   #   chrome: "125"
   #   chrome_android: "125"
   #   edge: "125"
+  #   safari: "18"
+  #   safari_ios: "18"
   - html.elements.template.shadowrootserializable

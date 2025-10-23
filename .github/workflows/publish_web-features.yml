@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
           cache: npm
@@ -26,15 +26,14 @@ jobs:
     needs: "test"
     steps:
       - uses: actions/checkout@v5
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
           cache: npm
           registry-url: "https://registry.npmjs.org"
       - run: npm ci
       - run: npm run build
-      - run: npm run build:extended
-      - run: gh release upload ${{ github.ref_name }} packages/web-features/data.json schemas/data.schema.json data.extended.json
+      - run: gh release upload ${{ github.ref_name }} packages/web-features/data.json data.extended.json schemas/data.schema.json
         env:
           GH_TOKEN: ${{ github.token }}
   publish:
@@ -43,7 +42,7 @@ jobs:
     needs: "test"
     steps:
       - uses: actions/checkout@v5
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
           cache: npm
