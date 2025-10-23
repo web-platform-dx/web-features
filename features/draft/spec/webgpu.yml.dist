@@ -39,6 +39,12 @@ compat_features:
   # support:
   #   chrome_android: "137"
   - api.GPUCommandEncoder.copyBufferToBuffer.offset_and_size_parameter_optional
+  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTextureView
+
+  # baseline: false
+  # support:
+  #   chrome_android: "138"
+  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUBuffer
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
