@@ -1,0 +1,16 @@
+name: '<input type="file" multiple>'
+description: The `<input type="file" multiple>` HTML element shows a file picker from which users can choose one or more files to upload with the form.
+spec: https://html.spec.whatwg.org/multipage/input.html#attr-input-multiple
+caniuse: input-file-multiple
+group:
+  - forms
+  - file-system
+compat_features:
+  - api.HTMLInputElement.webkitEntries
+  # These interfaces are plausbily part of this feature, but the upstream data is not right.
+  # See https://github.com/mdn/browser-compat-data/issues/19304
+  # - api.FileSystemDirectoryEntry
+  # - api.FileSystemDirectoryReader
+  # - api.FileSystemEntry
+  # - api.FileSystemFileEntry
+  # - api.FileSystem
