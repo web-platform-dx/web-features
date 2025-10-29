@@ -17,7 +17,6 @@
   },
   "scripts": {
     "audit-consumers": "tsx scripts/audit-consumers.ts",
-    "build:extended": "tsx scripts/build.ts extended-json",
     "build": "tsx scripts/build.ts package",
     "dist": "tsx scripts/dist.ts",
     "undist": "tsx scripts/undist.ts",
@@ -39,14 +38,14 @@
     "remove-tagged-compat-features": "tsx scripts/remove-tagged-compat-features.ts && npm run format"
   },
   "devDependencies": {
-    "@eslint/js": "^9.37.0",
+    "@eslint/js": "^9.38.0",
     "@js-temporal/polyfill": "^0.5.1",
-    "@mdn/browser-compat-data": "7.1.12",
+    "@mdn/browser-compat-data": "7.1.15",
     "@octokit/rest": "^22.0.0",
     "@types/caniuse-lite": "^1.0.4",
-    "@types/node": "^20.19.21",
+    "@types/node": "^20.19.23",
     "ajv": "^8.17.1",
-    "caniuse-lite": "^1.0.30001750",
+    "caniuse-lite": "^1.0.30001751",
     "cheerio": "^1.1.2",
     "diff": "^8.0.2",
     "escape-html": "^1.0.3",
@@ -64,9 +63,9 @@
     "ts-json-schema-generator": "^2.4.0",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.0",
+    "typescript-eslint": "^8.46.2",
     "unified": "^11.0.5",
-    "web-specs": "^3.67.0",
+    "web-specs": "^3.68.0",
     "winston": "^3.18.3",
     "yaml": "^2.8.1",
     "yargs": "^18.0.0"

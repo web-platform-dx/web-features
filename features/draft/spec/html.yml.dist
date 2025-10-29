@@ -510,19 +510,6 @@ compat_features:
   - api.Window.unhandledrejection_event
 
   # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
-  # support:
-  #   chrome: "71"
-  #   chrome_android: "71"
-  #   edge: "79"
-  #   firefox: "69"
-  #   firefox_android: "79"
-  #   safari: "12.1"
-  #   safari_ios: "12.2"
-  - api.queueMicrotask
-
-  # baseline: high
   # baseline_low_date: 2021-12-13
   # baseline_high_date: 2024-06-13
   # support:
@@ -816,6 +803,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "139"
+  #   chrome_android: "139"
+  #   edge: "139"
+  #   firefox: "144"
+  #   firefox_android: "144"
+  - api.HTMLButtonElement.command.request-close
+  - html.elements.button.command.request-close
+
+  # baseline: false
+  # support:
   #   chrome: "96"
   #   chrome_android: "96"
   #   edge: "96"
@@ -924,14 +921,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "139"
-  #   chrome_android: "139"
-  #   edge: "139"
-  - api.HTMLButtonElement.command.request-close
-  - html.elements.button.command.request-close
-
-  # baseline: false
-  # support:
   #   chrome: "140"
   #   chrome_android: "140"
   #   edge: "140"
@@ -942,6 +931,7 @@ compat_features:
   #   chrome: "141"
   #   chrome_android: "141"
   #   edge: "141"
+  - api.NavigateEvent.intercept.precommitHandler_option
   - api.NavigationPrecommitController
   - api.NavigationPrecommitController.redirect
   - api.NavigationTransition.committed
