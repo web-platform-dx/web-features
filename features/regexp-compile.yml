@@ -3,6 +3,7 @@ description: The `compile()` method of `RegExp` objects recompiles an existing r
 spec: https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-regexp.prototype.compile
 group: regexps
 discouraged:
+  reason: The `compile()` method duplicates behavior of the `RegExp()` constructor and it exists only for backwards compatibility.
   according_to:
     - https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-additional-ecmascript-features-for-web-browsers
   # No `alternatives` because it would be `alternatives: [regexp]`. In the

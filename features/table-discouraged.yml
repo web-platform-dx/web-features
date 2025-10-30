@@ -1,8 +1,9 @@
 name: Table styling
-description: Attributes and properties of table elements, such as `align`, `vAlign`, `noWrap`, `bgcolor`, or `char` set various visual presentation properties of the table and its sections and cells. These are obsolete, and some of them have no effect. Use CSS instead.
+description: Attributes and properties of table elements, such as `align`, `vAlign`, `noWrap`, `bgcolor`, or `char` set various visual presentation properties of the table and its sections and cells.
 spec: https://html.spec.whatwg.org/multipage/obsolete.html
 group: html-elements
 discouraged:
+  reason: Some table styling attributes have no effect. They are superseded by CSS.
   according_to:
     - https://html.spec.whatwg.org/multipage/obsolete.html
   # No alternatives, because it would either be a long list of features, or just "CSS".

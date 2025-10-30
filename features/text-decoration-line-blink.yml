@@ -5,6 +5,7 @@ group:
   - animation
   - css
 discouraged:
+  reason: Browsers may ignore the `blink` value.
   according_to:
     - https://drafts.csswg.org/css-text-decor-3/#valdef-text-decoration-line-blink
   alternatives:
