@@ -135,8 +135,12 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because this is where the feature last appeared in the spec before removal."
     ],
     [
-        "https://github.com/WICG/webcomponents/blob/gh-pages/proposals/reference-target-explainer.md",
-        "Allowed because the referencetarget feature isn't in a spec yet."
+        "https://github.com/whatwg/dom/pull/1353",
+        "Allowed because this is where the referencetarget feature is being added to the DOM spec"
+    ],
+    [
+        "https://github.com/whatwg/html/pull/10995",
+        "Allowed because this is where the referencetarget feature is being added to the HTML spec"
     ],
     [
         "https://patcg-individual-drafts.github.io/topics/",
