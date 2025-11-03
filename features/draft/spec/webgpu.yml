@@ -1,13 +1,15 @@
-draft_date: 2025-10-23
+draft_date: 2025-11-03
 name: WebGPU
 description: TODO
 spec: https://gpuweb.github.io/gpuweb/
 compat_features:
   - api.GPUAdapter.requestDevice.undefined_limits
   - api.GPUAdapterInfo.isFallbackAdapter
+  - api.GPUCommandEncoder.beginRenderPass.accepts_GPUTexture_resources
   - api.GPUCommandEncoder.copyBufferToBuffer.offset_and_size_parameter_optional
   - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUBuffer
   - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTextureView
+  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTexture_resource
   - api.GPUDevice.createPipelineLayout.descriptor_bindGroupLayouts_parameter_accepts_null_values
   - api.GPUSupportedFeatures.feature_core-features-and-limits
   - api.GPUSupportedFeatures.feature_primitive-index

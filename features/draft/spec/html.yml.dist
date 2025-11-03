@@ -861,6 +861,14 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "96"
+  #   chrome_android: "96"
+  #   edge: "96"
+  - http.headers.Cross-Origin-Embedder-Policy.report-to_parameter
+  - http.headers.Cross-Origin-Opener-Policy.report-to_parameter
+
+  # baseline: false
+  # support:
   #   chrome: "99"
   #   chrome_android: "99"
   #   edge: "99"

@@ -48,6 +48,12 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome_android: "140"
+  - api.GPUCommandEncoder.beginRenderPass.accepts_GPUTexture_resources
+  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTexture_resource
+
+  # baseline: false
+  # support:
   #   chrome_android: "142"
   - api.GPUSupportedFeatures.feature_primitive-index
   - api.GPUSupportedFeatures.feature_texture-formats-tier1

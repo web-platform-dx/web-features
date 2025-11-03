@@ -1,9 +1,14 @@
-draft_date: 2025-10-02
+draft_date: 2025-11-03
 name: CSS Conditional Rules Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-conditional-5/
 compat_features:
   - css.properties.container-type.weak_containment
+  - css.properties.container.inline-size
+  - css.properties.container.none
+  - css.properties.container.normal
+  - css.properties.container.scroll-state
+  - css.properties.container.size
 
 # The following features in the spec are already part of web-features:
 # - CSS.supports():
