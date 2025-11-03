@@ -1,0 +1,43 @@
+draft_date: 2025-11-03
+name: CSS Easing Functions Level 2
+description: TODO
+spec: https://drafts.csswg.org/css-easing-2/
+compat_features:
+  - css.properties.animation-timing-function.ease
+  - css.properties.animation-timing-function.ease-in
+  - css.properties.animation-timing-function.ease-in-out
+  - css.properties.animation-timing-function.ease-out
+  - css.properties.animation-timing-function.linear
+  - css.properties.animation-timing-function.step-end
+  - css.properties.animation-timing-function.step-start
+  - css.properties.animation.ease
+  - css.properties.animation.ease-in
+  - css.properties.animation.ease-in-out
+  - css.properties.animation.ease-out
+  - css.properties.animation.linear
+  - css.properties.animation.step-end
+  - css.properties.animation.step-start
+  - css.properties.transition-timing-function.ease
+  - css.properties.transition-timing-function.ease-in
+  - css.properties.transition-timing-function.ease-in-out
+  - css.properties.transition-timing-function.ease-out
+  - css.properties.transition-timing-function.linear
+  - css.properties.transition-timing-function.step-end
+  - css.properties.transition-timing-function.step-start
+  - css.properties.transition.ease
+  - css.properties.transition.ease-in
+  - css.properties.transition.ease-in-out
+  - css.properties.transition.ease-out
+  - css.properties.transition.linear
+  - css.properties.transition.step-end
+  - css.properties.transition.step-start
+
+# The following features in the spec are already part of web-features:
+# - cubic-bezier() easing:
+#   - css.types.easing-function
+#   - css.types.easing-function.cubic-bezier
+# - linear() easing:
+#   - css.types.easing-function.linear-function
+# - steps() easing:
+#   - css.types.easing-function.steps
+#   - css.types.easing-function.steps.jump

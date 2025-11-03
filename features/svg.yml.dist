@@ -1663,8 +1663,9 @@ compat_features:
   #   safari_ios: "8"
   - svg.global_attributes.requiredExtensions.mathml
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-03-27
+  # baseline_high_date: 2025-09-27
   # support:
   #   chrome: "38"
   #   chrome_android: "38"
@@ -1860,6 +1861,14 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  #   firefox: "117"
+  #   firefox_android: "117"
+  - api.SVGScriptElement.async
+
+  # baseline: false
+  # support:
   #   chrome: "51"
   #   chrome_android: "51"
   #   edge: "79"
@@ -1901,7 +1910,6 @@ compat_features:
   # support:
   #   firefox: "117"
   #   firefox_android: "117"
-  - api.SVGScriptElement.async
   - api.SVGScriptElement.defer
   - svg.elements.script.async
   - svg.elements.script.defer

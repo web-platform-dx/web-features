@@ -1,4 +1,4 @@
-draft_date: 2025-08-15
+draft_date: 2025-10-02
 name: CSSOM View Module
 description: TODO
 spec: https://drafts.csswg.org/cssom-view-1/
@@ -83,8 +83,10 @@ compat_features:
 #   - api.Element.checkVisibility.options_visibilityProperty_parameter
 # - scrollIntoView():
 #   - api.Element.scrollIntoView
-#   - api.Element.scrollIntoView.options_container_parameter
 #   - api.Element.scrollIntoView.options_parameter
+#   - api.Element.scrollIntoView.options_parameter.block_option
+#   - api.Element.scrollIntoView.options_parameter.container_option
+#   - api.Element.scrollIntoView.options_parameter.inline_option
 # - <img>:
 #   - api.HTMLImageElement.x
 #   - api.HTMLImageElement.y
