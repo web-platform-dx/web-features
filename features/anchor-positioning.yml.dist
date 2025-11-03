@@ -90,6 +90,7 @@ compat_features:
   - api.CSSPositionTryRule
   - api.CSSPositionTryRule.name
   - api.CSSPositionTryRule.style
+  - css.at-rules.position-try
   - css.properties.align-items.anchor-center
   - css.properties.align-self.anchor-center
   - css.properties.anchor-name
@@ -164,11 +165,21 @@ compat_features:
   - css.properties.position-area.span-end
   - css.properties.position-area.span-inline-end
   - css.properties.position-area.span-inline-start
+  - css.properties.position-area.span-self-block-end
+  - css.properties.position-area.span-self-block-start
+  - css.properties.position-area.span-self-end
+  - css.properties.position-area.span-self-inline-end
+  - css.properties.position-area.span-self-inline-start
+  - css.properties.position-area.span-self-start
   - css.properties.position-area.span-start
   - css.properties.position-area.span-top
   - css.properties.position-area.span-x-end
+  - css.properties.position-area.span-x-self-end
+  - css.properties.position-area.span-x-self-start
   - css.properties.position-area.span-x-start
   - css.properties.position-area.span-y-end
+  - css.properties.position-area.span-y-self-end
+  - css.properties.position-area.span-y-self-start
   - css.properties.position-area.span-y-start
   - css.properties.position-area.start
 
@@ -216,10 +227,27 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "137"
+  #   chrome_android: "137"
+  #   edge: "137"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.HTMLElement.togglePopover.options_source_parameter.implicit_anchor_reference
+
+  # baseline: false
+  # support:
+  #   chrome: "137"
+  #   chrome_android: "137"
+  #   edge: "137"
+  #   firefox: "144"
+  #   firefox_android: "144"
+  - api.HTMLElement.showPopover.options_source_parameter.implicit_anchor_reference
+
+  # baseline: false
+  # support:
   #   chrome: "125"
   #   chrome_android: "125"
   #   edge: "125"
-  - css.at-rules.position-try
   - css.properties.position-visibility
   - css.properties.position-visibility.always
   - css.properties.position-visibility.anchors-visible
@@ -248,7 +276,11 @@ compat_features:
   - css.properties.position-area.inline-start
   - css.properties.position-area.left
   - css.properties.position-area.right
+  - css.properties.position-area.self-block-end
+  - css.properties.position-area.self-block-start
   - css.properties.position-area.self-end
+  - css.properties.position-area.self-inline-end
+  - css.properties.position-area.self-inline-start
   - css.properties.position-area.self-start
   - css.properties.position-area.span-all
   - css.properties.position-area.top
@@ -260,10 +292,3 @@ compat_features:
   - css.properties.position-area.y-self-end
   - css.properties.position-area.y-self-start
   - css.properties.position-area.y-start
-
-  # baseline: false
-  # support:
-  #   firefox: "141"
-  #   firefox_android: "141"
-  - api.HTMLElement.showPopover.options_source_parameter.implicit_anchor_reference
-  - api.HTMLElement.togglePopover.options_source_parameter.implicit_anchor_reference

@@ -153,8 +153,7 @@ export interface StatusHeadline {
    */
   baseline_low_date?: string;
   /**
-   * Statuses for each key in the feature's compat_features list, if applicable. Not available
-   * to the npm release of web-features.
+   * Statuses for each key in the feature's compat_features list, if applicable.
    */
   by_compat_key?: { [key: string]: Status };
   /**

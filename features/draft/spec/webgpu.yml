@@ -1,4 +1,4 @@
-draft_date: 2025-09-05
+draft_date: 2025-10-23
 name: WebGPU
 description: TODO
 spec: https://gpuweb.github.io/gpuweb/
@@ -6,11 +6,16 @@ compat_features:
   - api.GPUAdapter.requestDevice.undefined_limits
   - api.GPUAdapterInfo.isFallbackAdapter
   - api.GPUCommandEncoder.copyBufferToBuffer.offset_and_size_parameter_optional
-  - api.GPUDevice.createBindGroup.descriptor_entries_option_accepts_GPUTextureView_resource
+  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUBuffer
+  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTextureView
+  - api.GPUDevice.createPipelineLayout.descriptor_bindGroupLayouts_parameter_accepts_null_values
   - api.GPUSupportedFeatures.feature_core-features-and-limits
+  - api.GPUSupportedFeatures.feature_primitive-index
   - api.GPUSupportedFeatures.feature_subgroups
   - api.GPUSupportedFeatures.feature_texture-compression-astc-sliced-3d
   - api.GPUSupportedFeatures.feature_texture-compression-bc-sliced-3d
+  - api.GPUSupportedFeatures.feature_texture-formats-tier1
+  - api.GPUSupportedFeatures.feature_texture-formats-tier2
 
 # The following features in the spec are already part of web-features:
 # - WebGPU:
