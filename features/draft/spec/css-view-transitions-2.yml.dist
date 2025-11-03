@@ -4,11 +4,22 @@
 status:
   baseline: false
   support:
-    chrome: "140"
-    chrome_android: "140"
-    edge: "140"
+    chrome: "142"
+    chrome_android: "142"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
   - css.properties.view-transition-group
   - css.properties.view-transition-group.contain
   - css.properties.view-transition-group.nearest
   - css.properties.view-transition-group.normal
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  - api.Document.activeViewTransition
