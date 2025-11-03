@@ -5,6 +5,10 @@ caniuse: input-file-multiple
 group:
   - forms
   - file-system
+status:
+  compute_from:
+    - api.HTMLInputElement.multiple
+    - html.elements.input.multiple
 compat_features:
   - api.HTMLInputElement.multiple
   - api.HTMLInputElement.webkitEntries
