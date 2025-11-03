@@ -1,4 +1,4 @@
-draft_date: 2025-10-21
+draft_date: 2025-11-03
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -137,8 +137,10 @@ compat_features:
   - html.global_attributes.id
   - http.headers.Cross-Origin-Embedder-Policy
   - http.headers.Cross-Origin-Embedder-Policy.credentialless
+  - http.headers.Cross-Origin-Embedder-Policy.report-to_parameter
   - http.headers.Cross-Origin-Opener-Policy
   - http.headers.Cross-Origin-Opener-Policy.noopener-allow-popups
+  - http.headers.Cross-Origin-Opener-Policy.report-to_parameter
   - http.headers.Origin-Agent-Cluster
   - http.headers.Permissions-Policy.autoplay
   - http.headers.Permissions-Policy.cross-origin-isolated
