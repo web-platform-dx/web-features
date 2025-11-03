@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "142"
+    chrome_android: "142"
 compat_features:
   # baseline: false
   # support:
@@ -17,5 +19,7 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
   - api.Document.activeViewTransition

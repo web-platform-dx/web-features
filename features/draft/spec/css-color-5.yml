@@ -1,8 +1,78 @@
-draft_date: 2025-08-06
+draft_date: 2025-11-03
 name: CSS Color Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-color-5/
 compat_features:
+  - css.properties.background-color.currentColor
+  - css.properties.background-color.transparent
+  - css.properties.background.currentColor
+  - css.properties.background.transparent
+  - css.properties.border-block-color.currentColor
+  - css.properties.border-block-color.transparent
+  - css.properties.border-block-end-color.currentColor
+  - css.properties.border-block-end-color.transparent
+  - css.properties.border-block-end.currentColor
+  - css.properties.border-block-end.transparent
+  - css.properties.border-block-start-color.currentColor
+  - css.properties.border-block-start-color.transparent
+  - css.properties.border-block-start.currentColor
+  - css.properties.border-block-start.transparent
+  - css.properties.border-block.currentColor
+  - css.properties.border-block.transparent
+  - css.properties.border-bottom-color.currentColor
+  - css.properties.border-bottom-color.transparent
+  - css.properties.border-bottom.currentColor
+  - css.properties.border-bottom.transparent
+  - css.properties.border-color.currentColor
+  - css.properties.border-color.transparent
+  - css.properties.border-inline-color.currentColor
+  - css.properties.border-inline-color.transparent
+  - css.properties.border-inline-end-color.currentColor
+  - css.properties.border-inline-end-color.transparent
+  - css.properties.border-inline-end.currentColor
+  - css.properties.border-inline-end.transparent
+  - css.properties.border-inline-start-color.currentColor
+  - css.properties.border-inline-start-color.transparent
+  - css.properties.border-inline-start.currentColor
+  - css.properties.border-inline-start.transparent
+  - css.properties.border-inline.currentColor
+  - css.properties.border-inline.transparent
+  - css.properties.border-left-color.currentColor
+  - css.properties.border-left-color.transparent
+  - css.properties.border-left.currentColor
+  - css.properties.border-left.transparent
+  - css.properties.border-right-color.currentColor
+  - css.properties.border-right-color.transparent
+  - css.properties.border-right.currentColor
+  - css.properties.border-right.transparent
+  - css.properties.border-top-color.currentColor
+  - css.properties.border-top-color.transparent
+  - css.properties.border-top.currentColor
+  - css.properties.border-top.transparent
+  - css.properties.border.currentColor
+  - css.properties.border.transparent
+  - css.properties.caret-color.currentColor
+  - css.properties.caret-color.transparent
+  - css.properties.color.transparent
+  - css.properties.column-rule-color.transparent
+  - css.properties.column-rule.transparent
+  - css.properties.flood-color.currentColor
+  - css.properties.flood-color.transparent
+  - css.properties.lighting-color.currentColor
+  - css.properties.lighting-color.transparent
+  - css.properties.outline-color.transparent
+  - css.properties.outline.currentColor
+  - css.properties.outline.transparent
+  - css.properties.stroke-color.currentColor
+  - css.properties.stroke-color.transparent
+  - css.properties.text-decoration-color.currentColor
+  - css.properties.text-decoration-color.transparent
+  - css.properties.text-decoration.currentColor
+  - css.properties.text-decoration.transparent
+  - css.properties.text-emphasis-color.currentColor
+  - css.properties.text-emphasis-color.transparent
+  - css.properties.text-emphasis.currentColor
+  - css.properties.text-emphasis.transparent
   - css.types.color.transparent
 
 # The following features in the spec are already part of web-features:
