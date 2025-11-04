@@ -5,4 +5,8 @@ group: media-queries
 status:
   baseline: false
   support: {}
-# Custom media queries are not in BCD. So, there are no BCD keys we can list here yet.
+# Not in BCD yet, but expecting something like:
+# - css.at-rules.custom-media
+# - api.CSSCustomMediaRule
+# - api.CSSCustomMediaRule.name
+# - api.CSSCustomMediaRule.query
