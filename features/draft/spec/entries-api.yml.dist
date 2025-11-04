@@ -4,7 +4,7 @@
 status:
   baseline: false
   support:
-    chrome: "22"
+    chrome: "13"
     chrome_android: "132"
     edge: "79"
     firefox: "52"
@@ -101,18 +101,6 @@ compat_features:
   #   safari_ios: "18.4"
   - api.HTMLInputElement.webkitdirectory
 
-  # baseline: low
-  # baseline_low_date: 2025-08-19
-  # support:
-  #   chrome: "13"
-  #   chrome_android: "18"
-  #   edge: "13"
-  #   firefox: "50"
-  #   firefox_android: "142"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - api.File.webkitRelativePath
-
   # baseline: false
   # support:
   #   chrome: "13"
@@ -122,13 +110,3 @@ compat_features:
   #   safari: "11.1"
   #   safari_ios: "11.3"
   - api.DataTransferItem.webkitGetAsEntry
-
-  # baseline: false
-  # support:
-  #   chrome: "22"
-  #   chrome_android: "25"
-  #   edge: "79"
-  #   firefox: "50"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - api.HTMLInputElement.webkitEntries

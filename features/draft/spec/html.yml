@@ -1,4 +1,4 @@
-draft_date: 2025-11-03
+draft_date: 2025-11-04
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -1312,7 +1312,6 @@ compat_features:
 #   - api.HTMLInputElement.list
 #   - api.HTMLInputElement.maxLength
 #   - api.HTMLInputElement.minLength
-#   - api.HTMLInputElement.multiple
 #   - api.HTMLInputElement.name
 #   - api.HTMLInputElement.pattern
 #   - api.HTMLInputElement.placeholder
@@ -1343,7 +1342,6 @@ compat_features:
 #   - html.elements.input.list
 #   - html.elements.input.maxlength
 #   - html.elements.input.minlength
-#   - html.elements.input.multiple
 #   - html.elements.input.name
 #   - html.elements.input.pattern
 #   - html.elements.input.placeholder
@@ -1380,6 +1378,9 @@ compat_features:
 #   - html.elements.input.min
 #   - html.elements.input.step
 #   - html.elements.input.type_number
+# - <input type="file" multiple>:
+#   - api.HTMLInputElement.multiple
+#   - html.elements.input.multiple
 # - showPicker() for <input>:
 #   - api.HTMLInputElement.showPicker
 #   - api.HTMLInputElement.showPicker.color_input
