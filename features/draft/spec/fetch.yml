@@ -1,4 +1,4 @@
-draft_date: 2025-05-02
+draft_date: 2025-09-30
 name: Fetch
 description: TODO
 spec: https://fetch.spec.whatwg.org/
@@ -10,6 +10,12 @@ compat_features:
   - http.headers.X-Content-Type-Options
 
 # The following features in the spec are already part of web-features:
+# - fetchLater:
+#   - api.FetchLaterResult
+#   - api.FetchLaterResult.activated
+#   - api.Window.fetchLater
+#   - http.headers.Permissions-Policy.deferred-fetch
+#   - http.headers.Permissions-Policy.deferred-fetch-minimal
 # - Fetch:
 #   - api.Headers
 #   - api.Headers.@@iterator
@@ -92,6 +98,9 @@ compat_features:
 #   - api.fetch.init_priority_parameter
 # - Fetch upload streams:
 #   - api.Request.body
+# - Speculation rules:
+#   - api.Request.destination.speculationrules
+#   - http.headers.Sec-Purpose.speculationrules
 # - Abortable fetch:
 #   - api.Request.signal
 #   - api.fetch.init_signal_parameter
@@ -117,5 +126,3 @@ compat_features:
 # - <link rel="prefetch">:
 #   - http.headers.Sec-Purpose
 #   - http.headers.Sec-Purpose.prefetch
-# - Speculation rules:
-#   - http.headers.Sec-Purpose.speculationrules

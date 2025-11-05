@@ -3,8 +3,12 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "129"
+    chrome_android: "129"
+    edge: "129"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "129"
@@ -20,7 +24,6 @@ compat_features:
   - api.Window.scrollsnapchange_event
   - api.Window.scrollsnapchanging_event
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.SnapEvent.SnapEvent

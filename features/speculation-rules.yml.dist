@@ -63,13 +63,14 @@ compat_features:
   #   chrome: "117"
   #   chrome_android: "117"
   #   edge: "117"
-  - http.headers.Supports-Loading-Mode.fenced-frames
+  - http.headers.Supports-Loading-Mode.fenced-frame
 
   # baseline: false
   # support:
   #   chrome: "121"
   #   chrome_android: "121"
   #   edge: "121"
+  - api.Request.destination.speculationrules
   - html.elements.script.type.speculationrules.eagerness
   - html.elements.script.type.speculationrules.relative_to
   - html.elements.script.type.speculationrules.where

@@ -280,6 +280,19 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
+  #   chrome: "55"
+  #   chrome_android: "55"
+  #   edge: "79"
+  #   firefox: "49"
+  #   firefox_android: "49"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.IDBIndex.name.renaming_through_name_setter
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
   #   chrome: "58"
   #   chrome_android: "58"
   #   edge: "79"
@@ -290,25 +303,12 @@ compat_features:
   - api.IDBCursor.continuePrimaryKey
 
   # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
-  # support:
-  #   chrome: "55"
-  #   chrome_android: "55"
-  #   edge: ≤79
-  #   firefox: "49"
-  #   firefox_android: "49"
-  #   safari: "10.1"
-  #   safari_ios: "10.3"
-  - api.IDBIndex.name.renaming_through_name_setter
-
-  # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
   # support:
   #   chrome: "58"
   #   chrome_android: "58"
-  #   edge: ≤79
+  #   edge: "79"
   #   firefox: "51"
   #   firefox_android: "51"
   #   safari: "10.1"

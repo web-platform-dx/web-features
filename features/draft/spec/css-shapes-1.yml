@@ -1,0 +1,43 @@
+draft_date: 2025-11-03
+name: CSS Shapes Module Level 1
+description: TODO
+spec: https://drafts.csswg.org/css-shapes-1/
+compat_features:
+  - css.properties.clip-path.border-box
+  - css.properties.clip-path.content-box
+  - css.properties.clip-path.margin-box
+  - css.properties.clip-path.padding-box
+  - css.properties.shape-outside.border-box
+  - css.properties.shape-outside.content-box
+  - css.properties.shape-outside.margin-box
+  - css.properties.shape-outside.padding-box
+
+# The following features in the spec are already part of web-features:
+# - clip-path:
+#   - css.properties.clip-path.basic_shape
+# - shape-outside:
+#   - css.properties.shape-image-threshold
+#   - css.properties.shape-image-threshold.percentages
+#   - css.properties.shape-margin
+#   - css.properties.shape-outside
+#   - css.properties.shape-outside.circle
+#   - css.properties.shape-outside.inset
+#   - css.properties.shape-outside.none
+#   - css.properties.shape-outside.path
+#   - css.properties.shape-outside.polygon
+# - shapes:
+#   - css.types.basic-shape
+#   - css.types.basic-shape.animation
+#   - css.types.basic-shape.circle
+#   - css.types.basic-shape.ellipse
+#   - css.types.basic-shape.inset
+#   - css.types.basic-shape.polygon
+#   - css.types.basic-shape.rect
+#   - css.types.basic-shape.shape
+#   - css.types.basic-shape.xywh
+# - path():
+#   - css.types.basic-shape.path
+#   - css.types.basic-shape.path.clip-path
+#   - css.types.basic-shape.path.shape-outside
+# - SVG:
+#   - svg.elements.path.d.path

@@ -1,9 +1,10 @@
-draft_date: 2025-05-19
+draft_date: 2025-07-17
 name: Web Audio API 1.1
 description: TODO
 spec: https://webaudio.github.io/web-audio-api/
 compat_features:
   - api.AudioWorklet.port
+  - api.BaseAudioContext.state.interrupted
 
 # The following features in the spec are already part of web-features:
 # - Web Audio:

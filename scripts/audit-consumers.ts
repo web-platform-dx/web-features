@@ -135,7 +135,9 @@ async function chromeStatusReport(): Promise<Report> {
 }
 
 async function wptReport(): Promise<Report> {
-  const octokit = new Octokit();
+  const octokit = new Octokit({
+    auth: process.env.GH_TOKEN,
+  });
 
   const params = { owner: "web-platform-tests", repo: "wpt" };
   const release = await octokit.rest.repos.getLatestRelease(params);
@@ -204,4 +206,7 @@ async function main() {
   }
 }
 
-main();
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});

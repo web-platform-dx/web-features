@@ -3,23 +3,49 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "142"
 compat_features:
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-09-15
   # support:
   #   chrome: "135"
   #   chrome_android: "135"
   #   edge: "135"
-  - css.selectors.scroll-button
-  - css.selectors.scroll-button.block-end
-  - css.selectors.scroll-button.block-start
-  - css.selectors.scroll-button.down
-  - css.selectors.scroll-button.inline-end
-  - css.selectors.scroll-button.inline-start
-  - css.selectors.scroll-button.left
-  - css.selectors.scroll-button.right
-  - css.selectors.scroll-button.star
-  - css.selectors.scroll-button.up
+  #   firefox: "69"
+  #   firefox_android: "79"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - css.properties.overflow-block.auto
+  - css.properties.overflow-block.hidden
+  - css.properties.overflow-block.scroll
+  - css.properties.overflow-block.visible
+  - css.properties.overflow-inline.auto
+  - css.properties.overflow-inline.hidden
+  - css.properties.overflow-inline.scroll
+  - css.properties.overflow-inline.visible
+
+  # baseline: low
+  # baseline_low_date: 2025-09-15
+  # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
+  #   firefox: "81"
+  #   firefox_android: "81"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - css.properties.overflow-block.clip
+  - css.properties.overflow-inline.clip
+
+  # baseline: false
+  # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
+  - css.properties.scroll-target-group
+  - css.properties.scroll-target-group.auto
+  - css.properties.scroll-target-group.none
 
   # baseline: false
   # support:
@@ -27,8 +53,9 @@ compat_features:
   #   edge: "135"
   - css.selectors.target-current
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
-  - css.selectors.scroll-button.next
-  - css.selectors.scroll-button.prev
+  # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  - css.selectors.target-after
+  - css.selectors.target-before

@@ -3,22 +3,155 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "139"
+    chrome_android: "139"
+    edge: "139"
 compat_features:
-  - css.properties.corner-block-end-shape
-  - css.properties.corner-block-start-shape
-  - css.properties.corner-bottom-left-shape
-  - css.properties.corner-bottom-right-shape
-  - css.properties.corner-bottom-shape
-  - css.properties.corner-end-end-shape
-  - css.properties.corner-end-start-shape
-  - css.properties.corner-inline-end-shape
-  - css.properties.corner-inline-start-shape
-  - css.properties.corner-left-shape
-  - css.properties.corner-right-shape
-  - css.properties.corner-shape
-  - css.properties.corner-start-end-shape
-  - css.properties.corner-start-start-shape
-  - css.properties.corner-top-left-shape
-  - css.properties.corner-top-right-shape
-  - css.properties.corner-top-shape
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1.5"
+  #   firefox_android: "4"
+  #   safari: "1.2"
+  #   safari_ios: "1"
+  - css.properties.outline-width.medium
+  - css.properties.outline-width.thick
+  - css.properties.outline-width.thin
+
+  # baseline: high
+  # baseline_low_date: 2023-03-27
+  # baseline_high_date: 2025-09-27
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "94"
+  #   firefox: "88"
+  #   firefox_android: "88"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - css.properties.outline.dashed
+  - css.properties.outline.dotted
+  - css.properties.outline.double
+  - css.properties.outline.groove
+  - css.properties.outline.inset
+  - css.properties.outline.medium
+  - css.properties.outline.none
+  - css.properties.outline.outset
+  - css.properties.outline.ridge
+  - css.properties.outline.solid
+  - css.properties.outline.thick
+  - css.properties.outline.thin
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "139"
+  #   chrome_android: "139"
+  #   edge: "139"
+  - css.properties.corner-block-end-shape.bevel
+  - css.properties.corner-block-end-shape.notch
+  - css.properties.corner-block-end-shape.round
+  - css.properties.corner-block-end-shape.scoop
+  - css.properties.corner-block-end-shape.square
+  - css.properties.corner-block-end-shape.squircle
+  - css.properties.corner-block-start-shape.bevel
+  - css.properties.corner-block-start-shape.notch
+  - css.properties.corner-block-start-shape.round
+  - css.properties.corner-block-start-shape.scoop
+  - css.properties.corner-block-start-shape.square
+  - css.properties.corner-block-start-shape.squircle
+  - css.properties.corner-bottom-left-shape.bevel
+  - css.properties.corner-bottom-left-shape.notch
+  - css.properties.corner-bottom-left-shape.round
+  - css.properties.corner-bottom-left-shape.scoop
+  - css.properties.corner-bottom-left-shape.square
+  - css.properties.corner-bottom-left-shape.squircle
+  - css.properties.corner-bottom-right-shape.bevel
+  - css.properties.corner-bottom-right-shape.notch
+  - css.properties.corner-bottom-right-shape.round
+  - css.properties.corner-bottom-right-shape.scoop
+  - css.properties.corner-bottom-right-shape.square
+  - css.properties.corner-bottom-right-shape.squircle
+  - css.properties.corner-bottom-shape.bevel
+  - css.properties.corner-bottom-shape.notch
+  - css.properties.corner-bottom-shape.round
+  - css.properties.corner-bottom-shape.scoop
+  - css.properties.corner-bottom-shape.square
+  - css.properties.corner-bottom-shape.squircle
+  - css.properties.corner-end-end-shape.bevel
+  - css.properties.corner-end-end-shape.notch
+  - css.properties.corner-end-end-shape.round
+  - css.properties.corner-end-end-shape.scoop
+  - css.properties.corner-end-end-shape.square
+  - css.properties.corner-end-end-shape.squircle
+  - css.properties.corner-end-start-shape.bevel
+  - css.properties.corner-end-start-shape.notch
+  - css.properties.corner-end-start-shape.round
+  - css.properties.corner-end-start-shape.scoop
+  - css.properties.corner-end-start-shape.square
+  - css.properties.corner-end-start-shape.squircle
+  - css.properties.corner-inline-end-shape.bevel
+  - css.properties.corner-inline-end-shape.notch
+  - css.properties.corner-inline-end-shape.round
+  - css.properties.corner-inline-end-shape.scoop
+  - css.properties.corner-inline-end-shape.square
+  - css.properties.corner-inline-end-shape.squircle
+  - css.properties.corner-inline-start-shape.bevel
+  - css.properties.corner-inline-start-shape.notch
+  - css.properties.corner-inline-start-shape.round
+  - css.properties.corner-inline-start-shape.scoop
+  - css.properties.corner-inline-start-shape.square
+  - css.properties.corner-inline-start-shape.squircle
+  - css.properties.corner-left-shape.bevel
+  - css.properties.corner-left-shape.notch
+  - css.properties.corner-left-shape.round
+  - css.properties.corner-left-shape.scoop
+  - css.properties.corner-left-shape.square
+  - css.properties.corner-left-shape.squircle
+  - css.properties.corner-right-shape.bevel
+  - css.properties.corner-right-shape.notch
+  - css.properties.corner-right-shape.round
+  - css.properties.corner-right-shape.scoop
+  - css.properties.corner-right-shape.square
+  - css.properties.corner-right-shape.squircle
+  - css.properties.corner-shape.bevel
+  - css.properties.corner-shape.notch
+  - css.properties.corner-shape.round
+  - css.properties.corner-shape.scoop
+  - css.properties.corner-shape.square
+  - css.properties.corner-shape.squircle
+  - css.properties.corner-start-end-shape.bevel
+  - css.properties.corner-start-end-shape.notch
+  - css.properties.corner-start-end-shape.round
+  - css.properties.corner-start-end-shape.scoop
+  - css.properties.corner-start-end-shape.square
+  - css.properties.corner-start-end-shape.squircle
+  - css.properties.corner-start-start-shape.bevel
+  - css.properties.corner-start-start-shape.notch
+  - css.properties.corner-start-start-shape.round
+  - css.properties.corner-start-start-shape.scoop
+  - css.properties.corner-start-start-shape.square
+  - css.properties.corner-start-start-shape.squircle
+  - css.properties.corner-top-left-shape.bevel
+  - css.properties.corner-top-left-shape.notch
+  - css.properties.corner-top-left-shape.round
+  - css.properties.corner-top-left-shape.scoop
+  - css.properties.corner-top-left-shape.square
+  - css.properties.corner-top-left-shape.squircle
+  - css.properties.corner-top-right-shape.bevel
+  - css.properties.corner-top-right-shape.notch
+  - css.properties.corner-top-right-shape.round
+  - css.properties.corner-top-right-shape.scoop
+  - css.properties.corner-top-right-shape.square
+  - css.properties.corner-top-right-shape.squircle
+  - css.properties.corner-top-shape.bevel
+  - css.properties.corner-top-shape.notch
+  - css.properties.corner-top-shape.round
+  - css.properties.corner-top-shape.scoop
+  - css.properties.corner-top-shape.square
+  - css.properties.corner-top-shape.squircle
