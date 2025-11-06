@@ -1,0 +1,34 @@
+name: CSS object model (DOM level 2)
+description: The DOM level 2 style specification defined interfaces to access and modify CSS styles, such as `CSSValue` and `CSSPrimitiveValue`, that were later excluded from the CSS object model.
+spec: https://www.w3.org/TR/DOM-Level-2-Style/
+group: cssom
+discouraged:
+  according_to:
+    - https://www.w3.org/TR/DOM-Level-2-Style/#Overview-status
+  alternatives:
+    - css-object-model
+compat_features:
+  - api.CSSPrimitiveValue
+  - api.CSSPrimitiveValue.getCounterValue
+  - api.CSSPrimitiveValue.getFloatValue
+  - api.CSSPrimitiveValue.getRGBColorValue
+  - api.CSSPrimitiveValue.getRectValue
+  - api.CSSPrimitiveValue.getStringValue
+  - api.CSSPrimitiveValue.primitiveType
+  - api.CSSPrimitiveValue.setFloatValue
+  - api.CSSPrimitiveValue.setStringValue
+  - api.CSSValue
+  - api.CSSValue.cssText
+  - api.CSSValue.cssValueType
+  - api.CSSValueList
+  - api.CSSValueList.item
+  - api.CSSValueList.length
+  - api.Counter
+  - api.Counter.identifier
+  - api.Counter.listStyle
+  - api.Counter.separator
+  - api.Rect
+  - api.Rect.bottom
+  - api.Rect.left
+  - api.Rect.right
+  - api.Rect.top

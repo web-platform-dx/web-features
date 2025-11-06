@@ -4,20 +4,39 @@
 status:
   baseline: false
   support:
-    chrome: "64"
-    chrome_android: "61"
-    edge: "79"
+    edge: "138"
 compat_features:
   # baseline: false
   # support:
-  #   chrome: "61"
-  #   chrome_android: "61"
-  #   edge: "79"
-  - api.Window.beforeinstallprompt_event
+  #   chrome: "89"
+  #   chrome_android: "89"
+  #   edge: "89"
+  - manifests.webapp.display_override
 
   # baseline: false
   # support:
-  #   chrome: "64"
-  #   chrome_android: "57"
-  #   edge: "79"
-  - api.Window.appinstalled_event
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  - manifests.webapp.display_override.tabbed
+
+  # baseline: false
+  # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
+  #   edge: "138"
+  - manifests.webapp.scope_extensions
+
+  # baseline: false
+  # support:
+  #   chrome_android: "44"
+  #   edge: "17"
+  - manifests.webapp.prefer_related_applications
+  - manifests.webapp.related_applications
+
+  # baseline: false
+  # support:
+  #   chrome: "95"
+  #   edge: "95"
+  - manifests.webapp.note_taking
+  - manifests.webapp.note_taking.new_note_url

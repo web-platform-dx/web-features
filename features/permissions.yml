@@ -10,7 +10,10 @@ status:
 compat_features:
   - api.Navigator.permissions
   - api.PermissionStatus
+  - api.PermissionStatus.change_event
+  - api.PermissionStatus.name
   - api.PermissionStatus.state
   - api.Permissions
   - api.Permissions.query
   - api.Permissions.request
+  - api.WorkerNavigator.permissions

@@ -1,0 +1,7 @@
+name: Element capture
+description: The `restrictTo()` method on screen capture media tracks limits capture to a specific element, excluding content which might occlude the element itself, such as video conferencing controls.
+spec: https://screen-share.github.io/element-capture/
+compat_features:
+  - api.BrowserCaptureMediaStreamTrack.restrictTo
+  - api.RestrictionTarget
+  - api.RestrictionTarget.fromElement_static

@@ -74,8 +74,6 @@ yargs(process.argv.slice(2))
 function init(args) {
   preflight({ expectedBranch: "main" });
 
-  const diff = diffJson();
-
   // Start a release branch
   // Convention borrowed from https://github.com/w3c/webref/blob/60ebf71b9d555c523975cfefb08f5420d12b7293/tools/prepare-release.js#L164-L165
   const releaseBranch = `release/web-features/${new Date()

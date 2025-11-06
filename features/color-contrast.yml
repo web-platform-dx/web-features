@@ -1,0 +1,13 @@
+name: color-contrast()
+description: "The `color-contrast()` CSS function picks a color from a list that has the most contrast with another color."
+spec: https://drafts.csswg.org/css-color-5/#contrast-color
+group: color-types
+discouraged:
+  # See these CSSWG discussions
+  # https://github.com/w3c/csswg-drafts/issues/7557
+  # https://github.com/w3c/csswg-drafts/issues/7359
+  according_to:
+    - https://github.com/w3c/csswg-drafts/issues/7557
+    - https://github.com/w3c/csswg-drafts/commit/36594e9e8496a5ca83f1f1ee2b4a83bcdf28753b
+  alternatives:
+    - contrast-color

@@ -6,14 +6,6 @@ group:
   - html-elements
 status:
   compute_from: html.elements.source
-compat_features:
-  - html.elements.source
-  - html.elements.source.height
-  - html.elements.source.media
-  # Included in srcset (see #1448)
-  # - html.elements.source.sizes
-  - html.elements.source.src
-  # Included in srcset (see #1448)
-  # - html.elements.source.srcset
-  - html.elements.source.type
-  - html.elements.source.width
+# Included in srcset (see #1448)
+#   - html.elements.source.sizes
+#   - html.elements.source.srcset

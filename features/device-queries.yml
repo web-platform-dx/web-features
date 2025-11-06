@@ -1,0 +1,13 @@
+name: Device media queries
+description: The `device-aspect-ratio`, `device-height`, and `device-width` media features describe physical properties of the displaying output device.
+spec: https://drafts.csswg.org/mediaqueries-5/#mf-deprecated
+group: media-queries
+discouraged:
+  according_to:
+    - https://drafts.csswg.org/mediaqueries-5/#mf-deprecated
+  alternatives:
+    - media-queries
+compat_features:
+  - css.at-rules.media.device-aspect-ratio
+  - css.at-rules.media.device-height
+  - css.at-rules.media.device-width

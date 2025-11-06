@@ -135,8 +135,23 @@ compat_features:
   #   firefox_android: "131"
   #   safari: "18.2"
   #   safari_ios: "18.2"
+  - api.PointerEvent.PointerEvent.options_altitudeAngle_parameter
+  - api.PointerEvent.PointerEvent.options_azimuthAngle_parameter
   - api.PointerEvent.altitudeAngle
   - api.PointerEvent.azimuthAngle
+
+  # baseline: low
+  # baseline_low_date: 2024-12-11
+  # support:
+  #   chrome: "92"
+  #   chrome_android: "92"
+  #   edge: "92"
+  #   firefox: "129"
+  #   firefox_android: "129"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
+  - api.Element.auxclick_event.type_pointerevent
+  - api.Element.click_event.type_pointerevent
 
   # baseline: false
   # support:
@@ -150,37 +165,34 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "86"
-  #   chrome_android: "86"
-  #   edge: "86"
-  #   firefox: "131"
-  #   firefox_android: "131"
-  - api.PointerEvent.PointerEvent.options_altitudeAngle_parameter
-  - api.PointerEvent.PointerEvent.options_azimuthAngle_parameter
+  #   chrome: "92"
+  #   chrome_android: "92"
+  #   edge: "92"
+  #   firefox: "129"
+  #   firefox_android: "129"
+  #   safari: "18.2"
+  - api.Element.contextmenu_event.type_pointerevent
 
   # baseline: false
   # support:
   #   chrome: "77"
   #   chrome_android: "77"
   #   edge: "79"
+  #   firefox: "140"
+  #   firefox_android: "140"
   - api.Element.pointerrawupdate_event
-
-  # baseline: false
-  # support:
-  #   chrome: "92"
-  #   chrome_android: "92"
-  #   edge: "92"
-  - api.Element.auxclick_event.type_pointerevent
-  - api.Element.click_event.type_pointerevent
-  - api.Element.contextmenu_event.type_pointerevent
 
   # baseline: false
   # support:
   #   chrome: "128"
   #   chrome_android: "128"
   #   edge: "128"
+  #   firefox: "141"
+  #   firefox_android: "141"
   - api.PointerEvent.persistentDeviceId
 
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "135"
+  #   firefox_android: "135"
   - api.PointerEvent.pointerType.fractional_coordinates

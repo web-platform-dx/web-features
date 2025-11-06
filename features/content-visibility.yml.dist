@@ -3,15 +3,15 @@
 
 status:
   baseline: low
-  baseline_low_date: 2024-09-16
+  baseline_low_date: 2025-09-15
   support:
     chrome: "108"
     chrome_android: "108"
     edge: "108"
     firefox: "130"
     firefox_android: "130"
-    safari: "18"
-    safari_ios: "18"
+    safari: "26"
+    safari_ios: "26"
 compat_features:
   # baseline: low
   # baseline_low_date: 2024-09-16
@@ -24,7 +24,6 @@ compat_features:
   #   safari: "18"
   #   safari_ios: "18"
   - css.properties.content-visibility
-  - css.properties.content-visibility.auto
   - css.properties.content-visibility.hidden
   - css.properties.content-visibility.visible
 
@@ -42,7 +41,6 @@ compat_features:
   - api.ContentVisibilityAutoStateChangeEvent.ContentVisibilityAutoStateChangeEvent
   - api.ContentVisibilityAutoStateChangeEvent.skipped
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2024-09-16
   # support:
@@ -54,3 +52,15 @@ compat_features:
   #   safari: "18"
   #   safari_ios: "18"
   - api.Element.contentvisibilityautostatechange_event
+
+  # baseline: low
+  # baseline_low_date: 2025-09-15
+  # support:
+  #   chrome: "85"
+  #   chrome_android: "85"
+  #   edge: "85"
+  #   firefox: "125"
+  #   firefox_android: "125"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - css.properties.content-visibility.auto

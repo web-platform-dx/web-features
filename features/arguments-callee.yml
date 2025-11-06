@@ -1,0 +1,12 @@
+name: arguments.callee
+description: The `callee` property of the `arguments` variable in a non-strict function body's local scope is the function that `arguments` belongs to.
+spec: https://tc39.es/ecma262/multipage/ordinary-and-exotic-objects-behaviours.html#sec-arguments-exotic-objects
+group: javascript
+discouraged:
+  # From note 4: "The definition of this property […] exists to ensure that it
+  # is not defined in any other manner by conforming ECMAScript
+  # implementations."
+  according_to:
+    - https://tc39.es/ecma262/multipage/ordinary-and-exotic-objects-behaviours.html#sec-arguments-exotic-objects
+compat_features:
+  - javascript.functions.arguments.callee

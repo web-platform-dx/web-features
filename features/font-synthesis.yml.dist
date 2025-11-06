@@ -35,11 +35,12 @@ compat_features:
   #   chrome: "97"
   #   chrome_android: "97"
   #   edge: "97"
-  #   firefox: "93"
-  #   firefox_android: "93"
+  #   firefox: "34"
+  #   firefox_android: "34"
   #   safari: "10.1"
   #   safari_ios: "10.3"
-  - css.properties.font-synthesis.small-caps
+  - css.properties.font-synthesis.style
+  - css.properties.font-synthesis.weight
 
   # baseline: high
   # baseline_low_date: 2022-01-06
@@ -48,12 +49,11 @@ compat_features:
   #   chrome: "97"
   #   chrome_android: "97"
   #   edge: "97"
-  #   firefox: ≤72
-  #   firefox_android: ≤79
+  #   firefox: "93"
+  #   firefox_android: "93"
   #   safari: "10.1"
   #   safari_ios: "10.3"
-  - css.properties.font-synthesis.style
-  - css.properties.font-synthesis.weight
+  - css.properties.font-synthesis.small-caps
 
   # baseline: false
   # support:

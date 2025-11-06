@@ -1,8 +1,9 @@
 import assert from "node:assert/strict";
 
-import webSpecs from 'web-specs' assert { type: 'json' };
+import webSpecs from 'web-specs' with { type: 'json' };
 
 import { features } from '../index.js';
+import { isOrdinaryFeatureData } from "../type-guards.js";
 
 // Specs needs to be in "good standing". Nightly URLs are used if available,
 // otherwise the snapshot/versioned URL is used. See browser-specs/web-specs
@@ -92,6 +93,62 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/WebAssembly/exception-handling/blob/main/proposals/exception-handling/legacy/Exceptions.md",
         "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://immersive-web.github.io/webvr/spec/1.1/",
+        "Allowed because this is the legacy spec that defines WebVR."
+    ],
+    [
+        "https://github.com/tc39/proposal-import-attributes/tree/abca60286360b47f9a6be25a28f489c2cb157beb",
+        "Allowed because import assertions were replaced in-place by import attributes. Remove this exception when javascript.statements.import.import_assertions is dropped from BCD in June 2026."
+    ],
+    [
+        "https://open-ui.org/components/customizableselect/",
+        "Allowed because customizable select doesn't have a spec URL yet. And even when it does, it will be defined in multiple HTML, CSS, and ARIA specs. This OpenUI explainer is the only central place that currently defines the component. Remove this exception when customizable select has one or more spec URLs. See: #10557, #10586, #10629, #10633, and #10670 at github.com/whatwg/html/, #10691, #10865, #10936, and #10986 at github.com/w3c/csswg-drafts/, #2369, #2344, and #2360 at github.com/w3c/aria/, and #528 at github.com/w3c/html-aria"
+    ],
+    [
+        "https://www.w3.org/TR/DOM-Level-2-Style/",
+        "Allowed because the css-object-model-discouraged feature points to it."
+    ],
+    [
+        "https://w3c.github.io/editing/docs/execCommand/",
+        "Allowed because the execCommand feature points to it, to inform users that the feature is obsolete. The spec exists in a draft state only and will never move out of draft. It serves as a reference."
+    ],
+    [
+        "https://github.com/tc39/proposal-regexp-legacy-features",
+        "Allowed because it's the most spec-like thing that exists for discouraged RegExp static properties. Remove when https://github.com/tc39/ecma262/issues/137 is resolved."
+    ],
+    [
+        "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/DocumentSubtitle/explainer.md",
+        "Allowed because this is where the application-title meta tag is spec'd at the moment. Remove when https://github.com/whatwg/html/issues/8909 is fixed."
+    ],
+    [
+        "https://www.w3.org/TR/2018/SPSD-html5-20180327/embedded-content-0.html#synchronising-multiple-media-elements",
+        "Allowed for the mediacontroller feature. This is the superseded HTML5 spec that still contains MediaController."
+    ],
+    [
+        "https://wicg.github.io/private-network-access/",
+        "Allowed for private-network-access feature. Feature and spec succeeded by local-network-access."
+    ],
+    [
+        "https://www.w3.org/TR/2022/WD-selectors-4-20220507/#the-target-within-pseudo",
+        "Allowed because this is where the feature last appeared in the spec before removal."
+    ],
+    [
+        "https://github.com/whatwg/dom/pull/1353",
+        "Allowed because this is where the referencetarget feature is being added to the DOM spec"
+    ],
+    [
+        "https://github.com/whatwg/html/pull/10995",
+        "Allowed because this is where the referencetarget feature is being added to the HTML spec"
+    ],
+    [
+        "https://patcg-individual-drafts.github.io/topics/",
+        "Allowed because the Topics API isn't on a standards track yet. Remove this exception when it is."
+    ],
+    [
+        "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/Accessibility/AriaNotify/explainer.md",
+        "Allowed because the ariaNotify() method is not yet in a formal spec. Remove this exception when a formal spec is available."
     ]
 ];
 
@@ -151,6 +208,10 @@ for (const [allowedUrl, message] of defaultAllowlist) {
 }
 
 for (const [id, data] of Object.entries(features)) {
+    if (!isOrdinaryFeatureData(data)) {
+        continue;
+    }
+
     const specs = Array.isArray(data.spec) ? data.spec : [data.spec];
     for (const spec of specs) {
         let url: URL;

@@ -1,0 +1,11 @@
+name: color-adjust
+description: The `color-adjust` shorthand CSS property allows multiple performance related color adjustments to be set at once. Setting the `print-color-adjust` CSS property directly is preferred, as it is the only such adjustment so far defined.
+spec: https://drafts.csswg.org/css-color-adjust-1/#color-adjust
+group: print
+discouraged:
+  according_to:
+    - https://drafts.csswg.org/css-color-adjust-1/#color-adjust
+  alternatives:
+    - print-color-adjust
+compat_features:
+  - css.properties.color-adjust

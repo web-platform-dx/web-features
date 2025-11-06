@@ -10,14 +10,6 @@ status:
     firefox: "79"
     firefox_android: "79"
 compat_features:
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "60"
-  #   chrome_android: "60"
-  #   edge: "79"
-  #   firefox: "79"
-  #   firefox_android: "79"
   - api.WebGL2RenderingContext.bufferData.srcData_param_accepts_SharedArrayBuffer
   - api.WebGL2RenderingContext.bufferSubData.srcData_param_accepts_SharedArrayBuffer
   - api.WebGL2RenderingContext.clearBufferfv.values_param_accepts_SharedArrayBuffer
@@ -45,14 +37,6 @@ compat_features:
   - api.WebGL2RenderingContext.vertexAttrib4fv.value_param_accepts_SharedArrayBuffer
   - api.WebGL2RenderingContext.vertexAttribI4iv.value_param_accepts_SharedArrayBuffer
   - api.WebGL2RenderingContext.vertexAttribI4uiv.value_param_accepts_SharedArrayBuffer
-
-  # baseline: false
-  # support:
-  #   chrome: "60"
-  #   chrome_android: "60"
-  #   edge: ≤79
-  #   firefox: "79"
-  #   firefox_android: "79"
   - api.WebGLRenderingContext.compressedTexImage2D.pixels_param_accepts_SharedArrayBuffer
   - api.WebGLRenderingContext.vertexAttrib1fv.value_param_accepts_SharedArrayBuffer
   - api.WebGLRenderingContext.vertexAttrib2fv.value_param_accepts_SharedArrayBuffer

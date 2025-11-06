@@ -1,0 +1,12 @@
+name: Insertable streams for MediaStreamTrack
+description: The `MediaStreamTrackProcessor` and `MediaStreamTrackGenerator` APIs modify the contents of a media track for merging streams, applying real-time effects like funny hats, and content overlays.
+spec: https://w3c.github.io/mediacapture-transform/
+compat_features:
+  - api.MediaStreamTrackProcessor
+  - api.MediaStreamTrackProcessor.MediaStreamTrackProcessor
+  - api.MediaStreamTrackProcessor.readable
+  - api.VideoTrackGenerator
+  - api.VideoTrackGenerator.VideoTrackGenerator
+  - api.VideoTrackGenerator.muted
+  - api.VideoTrackGenerator.track
+  - api.VideoTrackGenerator.writable

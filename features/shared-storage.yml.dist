@@ -8,46 +8,22 @@ status:
     chrome_android: "126"
     edge: "126"
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "117"
-  #   chrome_android: "117"
-  #   edge: "117"
+  - api.HTMLIFrameElement.sharedStorageWritable
+  - api.HTMLImageElement.sharedStorageWritable
   - api.SharedStorage
   - api.SharedStorage.append
   - api.SharedStorage.clear
+  - api.SharedStorage.createWorklet
   - api.SharedStorage.delete
+  - api.SharedStorage.get
+  - api.SharedStorage.run
+  - api.SharedStorage.selectURL
   - api.SharedStorage.set
+  - api.SharedStorage.worklet
   - api.SharedStorageWorklet
+  - api.SharedStorageWorklet.run
+  - api.SharedStorageWorklet.selectURL
   - api.SharedStorageWorkletGlobalScope
   - api.SharedStorageWorkletGlobalScope.register
   - api.SharedStorageWorkletGlobalScope.sharedStorage
   - api.Window.sharedStorage
-
-  # baseline: false
-  # support:
-  #   chrome: "124"
-  #   chrome_android: "124"
-  #   edge: "124"
-  - api.HTMLIFrameElement.sharedStorageWritable
-  - api.HTMLImageElement.sharedStorageWritable
-
-  # baseline: false
-  # support:
-  #   chrome: "125"
-  #   chrome_android: "125"
-  #   edge: "125"
-  - api.SharedStorageWorklet.run
-  - api.SharedStorageWorklet.selectURL
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "126"
-  #   chrome_android: "126"
-  #   edge: "126"
-  - api.SharedStorage.createWorklet
-  - api.SharedStorage.get
-  - api.SharedStorage.run
-  - api.SharedStorage.selectURL
-  - api.SharedStorage.worklet

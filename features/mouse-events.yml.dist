@@ -136,20 +136,6 @@ compat_features:
   - api.Element.mouseleave_event
 
   # baseline: high
-  # baseline_low_date: 2015-11-12
-  # baseline_high_date: 2018-05-12
-  # support:
-  #   chrome: "37"
-  #   chrome_android: "37"
-  #   edge: "13"
-  #   firefox: "41"
-  #   firefox_android: "41"
-  #   safari: "9"
-  #   safari_ios: "8"
-  - api.MouseEvent.movementX
-  - api.MouseEvent.movementY
-
-  # baseline: high
   # baseline_low_date: 2015-12-15
   # baseline_high_date: 2018-06-15
   # support:
@@ -224,3 +210,14 @@ compat_features:
   #   firefox_android: "6"
   #   safari: "3"
   - api.Element.contextmenu_event
+
+  # baseline: false
+  # support:
+  #   chrome: "37"
+  #   edge: "13"
+  #   firefox: "41"
+  #   firefox_android: "41"
+  #   safari: "9"
+  #   safari_ios: "17"
+  - api.MouseEvent.movementX
+  - api.MouseEvent.movementY

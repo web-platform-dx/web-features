@@ -1,0 +1,40 @@
+name: PerformanceTiming and PerformanceNavigation
+description: The `window.performance.timing` and `window.performance.navigation` APIs report performance timing information for events that occur during the loading and use of the current page.
+spec: https://w3c.github.io/navigation-timing/#obsolete
+group: performance
+discouraged:
+  according_to:
+    - https://w3c.github.io/navigation-timing/#obsolete
+  alternatives:
+    - performance
+    - navigation-timing
+compat_features:
+  - api.Performance.navigation
+  - api.Performance.timing
+  - api.PerformanceNavigation
+  - api.PerformanceNavigation.redirectCount
+  - api.PerformanceNavigation.toJSON
+  - api.PerformanceNavigation.type
+  - api.PerformanceTiming
+  - api.PerformanceTiming.connectEnd
+  - api.PerformanceTiming.connectStart
+  - api.PerformanceTiming.domComplete
+  - api.PerformanceTiming.domContentLoadedEventEnd
+  - api.PerformanceTiming.domContentLoadedEventStart
+  - api.PerformanceTiming.domInteractive
+  - api.PerformanceTiming.domLoading
+  - api.PerformanceTiming.domainLookupEnd
+  - api.PerformanceTiming.domainLookupStart
+  - api.PerformanceTiming.fetchStart
+  - api.PerformanceTiming.loadEventEnd
+  - api.PerformanceTiming.loadEventStart
+  - api.PerformanceTiming.navigationStart
+  - api.PerformanceTiming.redirectEnd
+  - api.PerformanceTiming.redirectStart
+  - api.PerformanceTiming.requestStart
+  - api.PerformanceTiming.responseEnd
+  - api.PerformanceTiming.responseStart
+  - api.PerformanceTiming.secureConnectionStart
+  - api.PerformanceTiming.toJSON
+  - api.PerformanceTiming.unloadEventEnd
+  - api.PerformanceTiming.unloadEventStart

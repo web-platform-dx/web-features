@@ -1,0 +1,9 @@
+name: Media playback quality
+description: The `getVideoPlaybackQuality()` method of `HTMLVideoElement` returns metrics that can be used to determine the playback quality of a video, such as how many frames were dropped.
+spec: https://w3c.github.io/media-playback-quality/
+compat_features:
+  - api.HTMLVideoElement.getVideoPlaybackQuality
+  - api.VideoPlaybackQuality
+  - api.VideoPlaybackQuality.creationTime
+  - api.VideoPlaybackQuality.droppedVideoFrames
+  - api.VideoPlaybackQuality.totalVideoFrames

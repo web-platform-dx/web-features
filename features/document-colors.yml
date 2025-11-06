@@ -1,0 +1,17 @@
+name: Document colors
+description: A document's `bgColor`, `fgColor`, `alinkColor`, `linkColor`, and `vlinkColor` properties get and set the background, foreground, active link, link, and visited link colors of that document.
+spec: https://html.spec.whatwg.org/multipage/obsolete.html
+discouraged:
+  according_to:
+    - https://html.spec.whatwg.org/multipage/obsolete.html
+  alternatives:
+    - background-color
+    - color
+    - css-object-model
+    - get-computed-style
+compat_features:
+  - api.Document.bgColor
+  - api.Document.fgColor
+  - api.Document.alinkColor
+  - api.Document.linkColor
+  - api.Document.vlinkColor

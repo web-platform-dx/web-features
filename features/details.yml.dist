@@ -42,6 +42,7 @@ compat_features:
   #   safari_ios: "6"
   - html.elements.details
   - html.elements.details.open
+  - html.elements.summary
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -56,3 +57,12 @@ compat_features:
   #   safari_ios: "10.3"
   - api.HTMLElement.toggle_event
   - api.HTMLElement.toggle_event.details_elements
+
+  # baseline: false
+  # support:
+  #   chrome: "89"
+  #   chrome_android: "89"
+  #   edge: "89"
+  #   firefox: "49"
+  #   firefox_android: "49"
+  - html.elements.summary.display_list_item

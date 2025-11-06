@@ -1,4 +1,4 @@
-draft_date: 2025-01-07
+draft_date: 2025-01-20
 name: Protected Audience (formerly FLEDGE)
 description: TODO
 spec: https://wicg.github.io/turtledove/
@@ -8,6 +8,7 @@ compat_features:
   - api.Navigator.clearOriginJoinedAdInterestGroups
   - api.Navigator.createAuctionNonce
   - api.Navigator.deprecatedRunAdAuctionEnforcesKAnonymity
+  - api.Navigator.getInterestGroupAdAuctionData
   - api.Navigator.joinAdInterestGroup
   - api.Navigator.leaveAdInterestGroup
   - api.Navigator.protectedAudience

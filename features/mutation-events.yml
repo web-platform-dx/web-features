@@ -1,0 +1,18 @@
+name: Mutation events
+description: Mutation events like `DOMSubtreeModified`, `DOMNodeInserted`, or `DOMNodeRemoved` fire when DOM changes occur.
+# The latest spec doesn't mention them at all anymore.
+spec: https://w3c.github.io/uievents/
+group: dom
+discouraged:
+  according_to:
+    - https://www.w3.org/TR/2024/WD-uievents-20240906/#legacy-mutationevent-events
+  alternatives:
+    - mutationobserver
+compat_features:
+  - api.MutationEvent
+  - api.MutationEvent.attrChange
+  - api.MutationEvent.attrName
+  - api.MutationEvent.initMutationEvent
+  - api.MutationEvent.newValue
+  - api.MutationEvent.prevValue
+  - api.MutationEvent.relatedNode

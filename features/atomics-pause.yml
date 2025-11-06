@@ -1,0 +1,5 @@
+name: Atomics.pause()
+description: The `Atomics.pause()` static method gives a hint to the CPU that the code calling the method is in a short-duration wait for shared memory, known as spinning or a spinlock.
+spec: https://tc39.es/proposal-atomics-microwait/
+compat_features:
+  - javascript.builtins.Atomics.pause

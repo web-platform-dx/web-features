@@ -5,12 +5,13 @@ import fsSync from "node:fs";
 import fs from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import Path from "path";
-import webSpecs from "web-specs" assert { type: "json" };
+import webSpecs from "web-specs" with { type: "json" };
 import winston from "winston";
 import { Document, parse } from "yaml";
 import yargs from "yargs";
 
 import { features } from "../index.js";
+import { isOrdinaryFeatureData } from "../type-guards.js";
 import { FeatureData } from "../types.js";
 
 type WebSpecsSpec = (typeof webSpecs)[number];
@@ -84,7 +85,7 @@ async function main() {
   // Build a map of used BCD keys to feature.
   const webFeatures = new Map<string, string>();
   Object.values(features).map((data) => {
-    if (data.compat_features) {
+    if (isOrdinaryFeatureData(data) && data.compat_features) {
       for (const compatFeature of data.compat_features) {
         webFeatures.set(compatFeature, data.name);
       }
@@ -261,9 +262,12 @@ async function main() {
   }
 
   // Clean up completed specs, even if they've been superseded
-  const assignedKeys = Object.values(features).flatMap(
-    (f) => f.compat_features ?? [],
-  );
+  const assignedKeys = Object.values(features).flatMap((f) => {
+    if (isOrdinaryFeatureData(f)) {
+      return f.compat_features ?? [];
+    }
+    return [];
+  });
   for (const spec of webSpecs) {
     const id = formatIdentifier(spec.shortname);
     const destination = `features/draft/spec/${id}.yml`;

@@ -1,0 +1,12 @@
+name: "overflow: overlay"
+description: "The `overflow: overlay` CSS declaration is an alias to `overflow: auto`. Historically, it caused non-standard behavior, allowing scrollbars to overlay content without taking up layout space."
+spec: https://drafts.csswg.org/css-overflow-3/#propdef-overflow
+group: css
+caniuse: css-overflow-overlay
+discouraged:
+  according_to:
+    - https://drafts.csswg.org/css-overflow-3/#valdef-overflow-overlay
+  alternatives:
+    - overflow-shorthand
+compat_features:
+  - css.types.overflow.overlay

@@ -1,0 +1,13 @@
+name: Portals
+description: The `<portal>` HTML element embeds another page into the current page as a non-interactive preview.
+spec: https://wicg.github.io/portals/
+caniuse: portals
+discouraged:
+  # "The Portals proposal is not currently being actively pursued."
+  according_to:
+    - https://github.com/WICG/portals/blob/421e74f5bb3e12d6d439ad19654a1463a5cb9b0a/README.md?plain=1#L1
+  alternatives:
+    - fencedframe
+    - link-rel-prefetch
+    - speculation-rules
+    - view-transitions

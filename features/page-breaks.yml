@@ -1,11 +1,13 @@
 name: Page breaks
-description: The `break-after`, `break-before`, `break-inside` CSS properties (along with `page-break-` aliases) control where printed pages start and end. Also known as pagination or page breaking.
+description: In printed page layouts, the `break-after`, `break-before`, `break-inside` CSS properties control where printed pages start and end. Also known as pagination or page breaking.
 spec: https://drafts.csswg.org/css-break-4/#breaking-controls
 group: layout
-caniuse: css-page-break
+# TODO: review this when https://github.com/web-platform-dx/web-features/issues/1878 is resolved
 status:
-  # TODO: review this when https://github.com/web-platform-dx/web-features/issues/1878 is resolved
-  compute_from: css.properties.page-break-after.avoid
+  compute_from:
+    - css.properties.break-before.paged_context
+    - css.properties.break-inside.paged_context
+    - css.properties.break-after.paged_context
 compat_features:
   - css.properties.break-after
   - css.properties.break-after.always
@@ -40,18 +42,3 @@ compat_features:
   - css.properties.break-inside.avoid-page
   - css.properties.break-inside.paged_context
   - css.properties.break-inside.paged_context.avoid-page
-  - css.properties.page-break-after
-  - css.properties.page-break-after.always
-  - css.properties.page-break-after.auto
-  - css.properties.page-break-after.avoid
-  - css.properties.page-break-after.left
-  - css.properties.page-break-after.right
-  - css.properties.page-break-before
-  - css.properties.page-break-before.always
-  - css.properties.page-break-before.auto
-  - css.properties.page-break-before.avoid
-  - css.properties.page-break-before.left
-  - css.properties.page-break-before.right
-  - css.properties.page-break-inside
-  - css.properties.page-break-inside.auto
-  - css.properties.page-break-inside.avoid

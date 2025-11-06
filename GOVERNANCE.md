@@ -75,13 +75,8 @@ Inactive _Peers_ (no activity on the project for months or more) might be marked
 
 #### List of current Peers
 
-- Adriana Jara ([@tropicadri](https://github.com/tropicadri))
-- Brian Kardell ([@bkardell](https://github.com/bkardell))
-- Dietrich Ayala ([@autonome](https://github.com/autonome/))
 - James Stuckey Weber ([@jamesnw](https://github.com/jamesnw))
-- Mariko Kosaka ([@kosamari](https://github.com/kosamari))
-- Patrick Brosset ([@captainbrosset](https://github.com/captainbrosset))
-- Pete LePage ([@petele](https://github.com/petele))
+- Rick Viscomi ([@rviscomi](https://github.com/rviscomi))
 
 A _Peer_ who shows an above-average level of contribution to the project, particularly with respect to its strategic direction and long-term health, may be nominated to become an _Owner_, described below.
 
@@ -144,6 +139,7 @@ If the nominee accepts the invitation, then the _Owners_ group adds the new _Own
 - James Graham ([@jgraham](https://github.com/jgraham))
 - Kadir Topal ([@atopal](https://github.com/atopal))
 - Leo McArdle ([@LeoMcA](https://github.com/LeoMcA))
+- Patrick Brosset ([@captainbrosset](https://github.com/captainbrosset))
 - Philip Jägenstedt ([@foolip](https://github.com/foolip))
 
 ## Additional paths to becoming a Peer or Owner
@@ -397,13 +393,15 @@ The chair is responsible for summarizing the discussion of each agenda item and 
   </tbody>
 </table>
 
-<!--
 ## Peers and owners emeriti
 
-The project would like to thank the following former Owners and Peers for their contributions and the countless hours invested.
+The project would like to thank the following inactive Owners and Peers for their contributions.
 
-* (This list is currently empty.)
--->
+- Adriana Jara ([@tropicadri](https://github.com/tropicadri))
+- Brian Kardell ([@bkardell](https://github.com/bkardell))
+- Dietrich Ayala ([@autonome](https://github.com/autonome/))
+- Mariko Kosaka ([@kosamari](https://github.com/kosamari))
+- Pete LePage ([@petele](https://github.com/petele))
 
 ## Credits
 

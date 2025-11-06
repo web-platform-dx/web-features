@@ -1,0 +1,26 @@
+name: Page break aliases
+description: The `page-break-before`, `page-break-inside`, and `page-break-after` CSS properties are aliases to the `break-before`, `break-inside`, and `break-after` properties.
+spec: https://drafts.csswg.org/css-break-4/#page-break-properties
+group: layout
+discouraged:
+  according_to:
+    - https://drafts.csswg.org/css-break-4/#page-break-properties
+  alternatives:
+    - page-breaks
+# TODO: review this when https://github.com/web-platform-dx/web-features/issues/1878 is resolved
+compat_features:
+  - css.properties.page-break-after
+  - css.properties.page-break-after.always
+  - css.properties.page-break-after.auto
+  - css.properties.page-break-after.avoid
+  - css.properties.page-break-after.left
+  - css.properties.page-break-after.right
+  - css.properties.page-break-before
+  - css.properties.page-break-before.always
+  - css.properties.page-break-before.auto
+  - css.properties.page-break-before.avoid
+  - css.properties.page-break-before.left
+  - css.properties.page-break-before.right
+  - css.properties.page-break-inside
+  - css.properties.page-break-inside.auto
+  - css.properties.page-break-inside.avoid

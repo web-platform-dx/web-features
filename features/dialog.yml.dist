@@ -37,9 +37,15 @@ compat_features:
   - html.elements.dialog
   - html.elements.dialog.open
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-09-15
   # support:
+  #   chrome: "132"
+  #   chrome_android: "132"
+  #   edge: "132"
   #   firefox: "133"
   #   firefox_android: "133"
+  #   safari: "26"
+  #   safari_ios: "26"
   - api.HTMLElement.beforetoggle_event.dialog_elements
   - api.HTMLElement.toggle_event.dialog_elements

@@ -3,8 +3,16 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "139"
+    firefox_android: "139"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   firefox: "139"
+  #   firefox_android: "139"
+  - javascript.builtins.Date.toTemporalInstant
   - javascript.builtins.Temporal
   - javascript.builtins.Temporal.Duration
   - javascript.builtins.Temporal.Duration.Duration
@@ -57,7 +65,7 @@ compat_features:
   - javascript.builtins.Temporal.Now.plainDateISO
   - javascript.builtins.Temporal.Now.plainDateTimeISO
   - javascript.builtins.Temporal.Now.plainTimeISO
-  - javascript.builtins.Temporal.Now.timeZoneID
+  - javascript.builtins.Temporal.Now.timeZoneId
   - javascript.builtins.Temporal.Now.zonedDateTimeISO
   - javascript.builtins.Temporal.PlainDate
   - javascript.builtins.Temporal.PlainDate.PlainDate
@@ -91,7 +99,6 @@ compat_features:
   - javascript.builtins.Temporal.PlainDate.valueOf
   - javascript.builtins.Temporal.PlainDate.weekOfYear
   - javascript.builtins.Temporal.PlainDate.with
-  - javascript.builtins.Temporal.PlainDate.withCalendar
   - javascript.builtins.Temporal.PlainDate.year
   - javascript.builtins.Temporal.PlainDate.yearOfWeek
   - javascript.builtins.Temporal.PlainDateTime
@@ -132,7 +139,6 @@ compat_features:
   - javascript.builtins.Temporal.PlainDateTime.valueOf
   - javascript.builtins.Temporal.PlainDateTime.weekOfYear
   - javascript.builtins.Temporal.PlainDateTime.with
-  - javascript.builtins.Temporal.PlainDateTime.withCalendar
   - javascript.builtins.Temporal.PlainDateTime.withPlainTime
   - javascript.builtins.Temporal.PlainDateTime.year
   - javascript.builtins.Temporal.PlainDateTime.yearOfWeek
@@ -242,8 +248,13 @@ compat_features:
   - javascript.builtins.Temporal.ZonedDateTime.valueOf
   - javascript.builtins.Temporal.ZonedDateTime.weekOfYear
   - javascript.builtins.Temporal.ZonedDateTime.with
-  - javascript.builtins.Temporal.ZonedDateTime.withCalendar
   - javascript.builtins.Temporal.ZonedDateTime.withPlainTime
   - javascript.builtins.Temporal.ZonedDateTime.withTimeZone
   - javascript.builtins.Temporal.ZonedDateTime.year
   - javascript.builtins.Temporal.ZonedDateTime.yearOfWeek
+
+  # baseline: false
+  # support: {}
+  - javascript.builtins.Temporal.PlainDate.withCalendar
+  - javascript.builtins.Temporal.PlainDateTime.withCalendar
+  - javascript.builtins.Temporal.ZonedDateTime.withCalendar

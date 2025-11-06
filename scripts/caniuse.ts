@@ -5,7 +5,7 @@ import { features } from '../index.js';
 
 const logger = winston.createLogger({
     level: 'info',
-    format: winston.format.printf(({level, message}) => `${message}`)
+    format: winston.format.printf(({message}) => `${message}`)
 })
 
 if (process.argv.includes("--quiet")) {

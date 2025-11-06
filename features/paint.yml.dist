@@ -31,7 +31,6 @@ compat_features:
   - api.PaintRenderingContext2D.globalAlpha
   - api.PaintRenderingContext2D.globalCompositeOperation
   - api.PaintRenderingContext2D.imageSmoothingEnabled
-  - api.PaintRenderingContext2D.imageSmoothingQuality
   - api.PaintRenderingContext2D.isPointInPath
   - api.PaintRenderingContext2D.isPointInStroke
   - api.PaintRenderingContext2D.lineCap
@@ -69,6 +68,13 @@ compat_features:
   #   edge: "79"
   - api.PaintRenderingContext2D.getTransform
   - api.PaintRenderingContext2D.setTransform
+
+  # baseline: false
+  # support:
+  #   chrome: "134"
+  #   chrome_android: "134"
+  #   edge: "134"
+  - api.PaintRenderingContext2D.imageSmoothingQuality
 
   # baseline: false
   # support: {}

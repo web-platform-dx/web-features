@@ -14,7 +14,31 @@ status:
     safari: "14"
     safari_ios: "14"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2020-09-16
+  # baseline_high_date: 2023-03-16
+  # support:
+  #   chrome: "85"
+  #   chrome_android: "85"
+  #   edge: "85"
+  #   firefox: "79"
+  #   firefox_android: "79"
+  #   safari: "14"
+  #   safari_ios: "14"
   - javascript.builtins.AggregateError
   - javascript.builtins.AggregateError.AggregateError
   - javascript.builtins.AggregateError.errors
   - javascript.builtins.Promise.any
+
+  # baseline: low
+  # baseline_low_date: 2023-09-18
+  # support:
+  #   chrome: "98"
+  #   chrome_android: "98"
+  #   edge: "98"
+  #   firefox: "103"
+  #   firefox_android: "103"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - javascript.builtins.AggregateError.serializable_object

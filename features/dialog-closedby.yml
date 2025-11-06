@@ -1,0 +1,7 @@
+name: "<dialog closedby>"
+description: The `closedby` HTML attribute for `<dialog>` sets which user actions close a dialog. For example, `closedby="any"` allows the dialog to be closed by clicking outside of it.
+spec: https://html.spec.whatwg.org/multipage/interactive-elements.html#attr-dialog-closedby
+group: html-elements
+compat_features:
+  - api.HTMLDialogElement.closedBy
+  - html.elements.dialog.closedby

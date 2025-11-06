@@ -6,13 +6,13 @@ status:
   support:
     chrome: "61"
     chrome_android: "61"
-    edge: ≤79
+    edge: "79"
 compat_features:
   # baseline: false
   # support:
   #   chrome: "46"
   #   chrome_android: "46"
-  #   edge: ≤79
+  #   edge: "79"
   - http.headers.Accept-CH
 
   # ⬇️ Same status as overall feature ⬇️
@@ -20,5 +20,5 @@ compat_features:
   # support:
   #   chrome: "61"
   #   chrome_android: "61"
-  #   edge: ≤79
+  #   edge: "79"
   - http.headers.Accept-CH.Device-Memory

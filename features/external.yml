@@ -1,0 +1,10 @@
+name: window.external
+description: The `window.external.AddSearchProvider()` and `window.external.IsSearchProviderInstalled()` do nothing. Historically, they added external search providers to the browser.
+spec: https://html.spec.whatwg.org/multipage/obsolete.html#external
+discouraged:
+  according_to:
+    - https://html.spec.whatwg.org/multipage/obsolete.html#external
+compat_features:
+  - api.External
+  - api.External.AddSearchProvider
+  - api.External.IsSearchProviderInstalled

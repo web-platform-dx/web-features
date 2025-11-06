@@ -1,0 +1,10 @@
+name: Function caller and arguments
+description: The `caller` and `arguments` properties of a non-strict mode `Function` object are the function that called it and the arguments it was called with. Not to be confused with the `arguments` variable in a function body's local scope.
+group: javascript
+spec: https://tc39.es/ecma262/multipage/error-handling-and-language-extensions.html#sec-forbidden-extensions
+discouraged:
+  according_to:
+    - https://tc39.es/ecma262/multipage/error-handling-and-language-extensions.html#sec-forbidden-extensions
+compat_features:
+  - javascript.builtins.Function.arguments
+  - javascript.builtins.Function.caller

@@ -1,0 +1,39 @@
+draft_date: 2025-03-03
+name: Shared Storage API
+description: TODO
+spec: https://wicg.github.io/shared-storage/
+compat_features:
+  - api.SharedStorageWorkletGlobalScope.interestGroups
+
+# The following features in the spec are already part of web-features:
+# - Shared storage:
+#   - api.HTMLIFrameElement.sharedStorageWritable
+#   - api.HTMLImageElement.sharedStorageWritable
+#   - api.SharedStorage
+#   - api.SharedStorage.append
+#   - api.SharedStorage.clear
+#   - api.SharedStorage.createWorklet
+#   - api.SharedStorage.delete
+#   - api.SharedStorage.get
+#   - api.SharedStorage.run
+#   - api.SharedStorage.selectURL
+#   - api.SharedStorage.set
+#   - api.SharedStorage.worklet
+#   - api.SharedStorageWorklet
+#   - api.SharedStorageWorklet.run
+#   - api.SharedStorageWorklet.selectURL
+#   - api.SharedStorageWorkletGlobalScope
+#   - api.SharedStorageWorkletGlobalScope.register
+#   - api.SharedStorageWorkletGlobalScope.sharedStorage
+#   - api.Window.sharedStorage
+# - Shared storage locks:
+#   - api.SharedStorage.batchUpdate
+#   - api.SharedStorageAppendMethod
+#   - api.SharedStorageAppendMethod.SharedStorageAppendMethod
+#   - api.SharedStorageClearMethod
+#   - api.SharedStorageClearMethod.SharedStorageClearMethod
+#   - api.SharedStorageDeleteMethod
+#   - api.SharedStorageDeleteMethod.SharedStorageDeleteMethod
+#   - api.SharedStorageModifierMethod
+#   - api.SharedStorageSetMethod
+#   - api.SharedStorageSetMethod.SharedStorageSetMethod
