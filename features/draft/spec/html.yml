@@ -1,4 +1,4 @@
-draft_date: 2025-11-04
+draft_date: 2025-11-06
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -98,6 +98,7 @@ compat_features:
   - api.Window.postMessage.transfer_parameter
   - api.Window.rejectionhandled_event
   - api.Window.unhandledrejection_event
+  - api.Window.unload_event
   - api.WorkerGlobalScope.importScripts.enforces_trusted_types
   - api.crossOriginIsolated
   - api.origin
