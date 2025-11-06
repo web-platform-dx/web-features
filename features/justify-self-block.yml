@@ -4,7 +4,6 @@ description: >
   Likewise, the `justify-items` property sets a default `justify-self` value for all items in a container in a block layout.
 spec: https://drafts.csswg.org/css-align-3/#justify-block
 group: layout
-# No BCD keys yet but expecting:
-# compat_features:
-  # - css.properties.justify-items.block_context
-  # - css.properties.justify-self.block_context
+compat_features:
+  - css.properties.justify-items.block_context
+  - css.properties.justify-self.block_context
