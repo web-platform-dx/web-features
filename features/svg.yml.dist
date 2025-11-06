@@ -1826,6 +1826,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  #   edge: "142"
+  #   firefox: "117"
+  #   firefox_android: "117"
+  - api.SVGScriptElement.async
+
+  # baseline: false
+  # support:
   #   chrome: ≤80
   #   chrome_android: ≤80
   #   edge: ≤80
@@ -1858,14 +1867,6 @@ compat_features:
   #   safari: "14"
   #   safari_ios: "14"
   - svg.elements.a.rel
-
-  # baseline: false
-  # support:
-  #   chrome: "142"
-  #   chrome_android: "142"
-  #   firefox: "117"
-  #   firefox_android: "117"
-  - api.SVGScriptElement.async
 
   # baseline: false
   # support:
