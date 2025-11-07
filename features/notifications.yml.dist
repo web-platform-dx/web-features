@@ -10,8 +10,9 @@ status:
     firefox_android: "22"
     safari: "7"
 compat_features:
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-03-27
+  # baseline_high_date: 2025-09-27
   # support:
   #   chrome: "40"
   #   chrome_android: "40"
@@ -22,8 +23,9 @@ compat_features:
   #   safari_ios: "16.4"
   - api.ServiceWorkerRegistration.getNotifications
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-03-27
+  # baseline_high_date: 2025-09-27
   # support:
   #   chrome: "42"
   #   chrome_android: "42"
@@ -36,8 +38,9 @@ compat_features:
   - api.NotificationEvent.NotificationEvent
   - api.ServiceWorkerRegistration.showNotification
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-03-27
+  # baseline_high_date: 2025-09-27
   # support:
   #   chrome: "43"
   #   chrome_android: "43"

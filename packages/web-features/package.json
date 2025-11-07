@@ -1,7 +1,7 @@
 {
   "name": "web-features",
   "description": "Curated list of Web platform features",
-  "version": "3.1.0",
+  "version": "3.8.0",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
@@ -28,8 +28,8 @@
     "prepare": "tsc && rm types.js && rm types.quicktype.js"
   },
   "devDependencies": {
-    "@types/node": "^20.19.17",
+    "@types/node": "^20.19.24",
     "tsup": "^8.5.0",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   }
 }
