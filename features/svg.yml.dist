@@ -865,6 +865,9 @@ compat_features:
   #   safari: "4"
   #   safari_ios: "3.2"
   - css.properties.text-anchor
+  - css.properties.text-anchor.end
+  - css.properties.text-anchor.middle
+  - css.properties.text-anchor.start
 
   # baseline: high
   # baseline_low_date: 2017-01-24
@@ -904,6 +907,7 @@ compat_features:
   - css.properties.stroke-linejoin.round
   - css.properties.stroke-miterlimit
   - css.properties.stroke-width
+  - css.properties.stroke.none
 
   # baseline: high
   # baseline_low_date: ≤2017-04-05
@@ -920,10 +924,15 @@ compat_features:
   - css.properties.fill-rule
   - css.properties.fill-rule.evenodd
   - css.properties.fill-rule.nonzero
+  - css.properties.fill.none
   - css.properties.marker
   - css.properties.marker-end
+  - css.properties.marker-end.none
   - css.properties.marker-mid
+  - css.properties.marker-mid.none
   - css.properties.marker-start
+  - css.properties.marker-start.none
+  - css.properties.marker.none
   - css.properties.stop-color
   - css.properties.stop-opacity
 
@@ -1176,8 +1185,10 @@ compat_features:
   #   safari: "4"
   #   safari_ios: "3.2"
   - css.properties.color-interpolation
+  - css.properties.color-interpolation.auto
   - css.properties.color-interpolation.sRGB
   - css.properties.shape-rendering
+  - css.properties.shape-rendering.auto
 
   # baseline: high
   # baseline_low_date: 2020-01-15
