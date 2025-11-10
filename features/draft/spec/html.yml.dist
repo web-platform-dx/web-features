@@ -759,6 +759,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "97"
+  #   chrome_android: "97"
+  #   edge: "97"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.Worker.Worker.enforces_trusted_types
+
+  # baseline: false
+  # support:
   #   chrome: "99"
   #   chrome_android: "99"
   #   edge: "99"
@@ -819,6 +828,14 @@ compat_features:
   #   edge: "96"
   #   firefox: "119"
   - http.headers.Cross-Origin-Embedder-Policy.credentialless
+
+  # baseline: false
+  # support:
+  #   chrome: "97"
+  #   edge: "97"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.SharedWorker.SharedWorker.enforces_trusted_types
 
   # baseline: false
   # support:

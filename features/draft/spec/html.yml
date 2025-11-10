@@ -1,4 +1,4 @@
-draft_date: 2025-11-06
+draft_date: 2025-11-10
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -89,6 +89,7 @@ compat_features:
   - api.ServiceWorker.error_event
   - api.ShadowRoot.activeElement
   - api.ShadowRoot.innerHTML
+  - api.SharedWorker.SharedWorker.enforces_trusted_types
   - api.ToggleEvent.source
   - api.TrackEvent
   - api.TrackEvent.TrackEvent
@@ -99,6 +100,7 @@ compat_features:
   - api.Window.rejectionhandled_event
   - api.Window.unhandledrejection_event
   - api.Window.unload_event
+  - api.Worker.Worker.enforces_trusted_types
   - api.WorkerGlobalScope.importScripts.enforces_trusted_types
   - api.crossOriginIsolated
   - api.origin
