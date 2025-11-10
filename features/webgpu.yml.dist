@@ -22,7 +22,6 @@ compat_features:
   - api.GPUAdapter.features
   - api.GPUAdapter.limits
   - api.GPUAdapter.requestDevice
-  - api.GPUAdapter.requestDevice.lost_device_on_duplicate
   - api.GPUAdapterInfo
   - api.GPUAdapterInfo.architecture
   - api.GPUAdapterInfo.description
@@ -327,6 +326,11 @@ compat_features:
   # support:
   #   chrome_android: "132"
   - api.GPUTexture.createView.usage
+
+  # baseline: false
+  # support:
+  #   chrome_android: "140"
+  - api.GPUAdapter.requestDevice.handles_duplicate_calls
 
   # baseline: false
   # support: {}

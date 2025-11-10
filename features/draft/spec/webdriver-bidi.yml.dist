@@ -539,6 +539,7 @@ compat_features:
   - webdriver.bidi.network.disownData.request_parameter
   - webdriver.bidi.network.getData.collector_parameter
   - webdriver.bidi.network.getData.dataType_parameter
+  - webdriver.bidi.network.getData.dataType_parameter.response
   - webdriver.bidi.network.getData.disown_parameter
   - webdriver.bidi.network.getData.request_parameter
   - webdriver.bidi.network.removeDataCollector
@@ -671,6 +672,20 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  #   edge: "142"
+  - webdriver.bidi.browser.setDownloadBehavior
+  - webdriver.bidi.browser.setDownloadBehavior.downloadBehavior_parameter
+  - webdriver.bidi.browser.setDownloadBehavior.userContexts_parameter
+  - webdriver.bidi.emulation.setUserAgentOverride
+  - webdriver.bidi.emulation.setUserAgentOverride.contexts_parameter
+  - webdriver.bidi.emulation.setUserAgentOverride.userAgent_parameter
+  - webdriver.bidi.emulation.setUserAgentOverride.userContexts_parameter
+  - webdriver.bidi.network.getData.dataType_parameter.request
+
+  # baseline: false
+  # support:
   #   firefox: "112"
   #   firefox_android: "112"
   - webdriver.bidi.browsingContext.print
@@ -780,16 +795,12 @@ compat_features:
   - webdriver.bidi.network.addDataCollector.maxEncodedDataSize_parameter
   - webdriver.bidi.network.addDataCollector.userContexts_parameter
   - webdriver.bidi.network.disownData.dataType_parameter.response
-  - webdriver.bidi.network.getData.dataType_parameter.response
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - webdriver.bidi.browser.setClientWindowState
   - webdriver.bidi.browser.setClientWindowState.clientWindow_parameter
-  - webdriver.bidi.browser.setDownloadBehavior
-  - webdriver.bidi.browser.setDownloadBehavior.downloadBehavior_parameter
-  - webdriver.bidi.browser.setDownloadBehavior.userContexts_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event
   - webdriver.bidi.browsingContext.historyUpdated_event.context_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event.timestamp_parameter
@@ -801,10 +812,6 @@ compat_features:
   - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter
   - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter.offline
   - webdriver.bidi.emulation.setNetworkConditions.userContexts_parameter
-  - webdriver.bidi.emulation.setUserAgentOverride
-  - webdriver.bidi.emulation.setUserAgentOverride.contexts_parameter
-  - webdriver.bidi.emulation.setUserAgentOverride.userAgent_parameter
-  - webdriver.bidi.emulation.setUserAgentOverride.userContexts_parameter
   - webdriver.bidi.network.addDataCollector.collectorType_parameter
   - webdriver.bidi.network.authRequired_event.response_parameter
   - webdriver.bidi.network.provideResponse.body_parameter

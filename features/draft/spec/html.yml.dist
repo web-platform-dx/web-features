@@ -60,6 +60,7 @@ compat_features:
   - api.HTMLOptionsCollection.length
   - api.HTMLOptionsCollection.selectedIndex
   - api.Navigator.vendorSub
+  - api.Window.unload_event
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -758,6 +759,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "97"
+  #   chrome_android: "97"
+  #   edge: "97"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.Worker.Worker.enforces_trusted_types
+
+  # baseline: false
+  # support:
   #   chrome: "99"
   #   chrome_android: "99"
   #   edge: "99"
@@ -821,6 +831,14 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "97"
+  #   edge: "97"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.SharedWorker.SharedWorker.enforces_trusted_types
+
+  # baseline: false
+  # support:
   #   chrome: "99"
   #   chrome_android: "99"
   #   edge: "99"
@@ -858,6 +876,14 @@ compat_features:
   #   edge: "88"
   - http.headers.Permissions-Policy.autoplay
   - http.headers.Permissions-Policy.cross-origin-isolated
+
+  # baseline: false
+  # support:
+  #   chrome: "96"
+  #   chrome_android: "96"
+  #   edge: "96"
+  - http.headers.Cross-Origin-Embedder-Policy.report-to_parameter
+  - http.headers.Cross-Origin-Opener-Policy.report-to_parameter
 
   # baseline: false
   # support:
