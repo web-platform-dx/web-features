@@ -1,4 +1,4 @@
-draft_date: 2025-11-03
+draft_date: 2025-11-10
 name: CSS Shapes Module Level 1
 description: TODO
 spec: https://drafts.csswg.org/css-shapes-1/
@@ -32,12 +32,14 @@ compat_features:
 #   - css.types.basic-shape.ellipse
 #   - css.types.basic-shape.inset
 #   - css.types.basic-shape.polygon
-#   - css.types.basic-shape.rect
-#   - css.types.basic-shape.shape
-#   - css.types.basic-shape.xywh
 # - path():
 #   - css.types.basic-shape.path
 #   - css.types.basic-shape.path.clip-path
 #   - css.types.basic-shape.path.shape-outside
+# - rect() and xywh():
+#   - css.types.basic-shape.rect
+#   - css.types.basic-shape.xywh
+# - shape():
+#   - css.types.basic-shape.shape
 # - SVG:
 #   - svg.elements.path.d.path
