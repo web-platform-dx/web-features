@@ -8,8 +8,8 @@ status:
     chrome: "119"
     chrome_android: "119"
     edge: "119"
-    firefox: ≤72
-    firefox_android: ≤79
+    firefox: "54"
+    firefox_android: "54"
     safari: "13.1"
     safari_ios: "13.4"
 compat_features:
@@ -26,14 +26,15 @@ compat_features:
   - css.properties.clip-path.fill-box
   - css.properties.clip-path.stroke-box
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2023-11-02
   # support:
   #   chrome: "119"
   #   chrome_android: "119"
   #   edge: "119"
-  #   firefox: ≤72
-  #   firefox_android: ≤79
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
+  #   firefox: "54"
+  #   firefox_android: "54"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
   - css.properties.clip-path.view-box

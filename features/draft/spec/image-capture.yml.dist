@@ -7,29 +7,44 @@ status:
     chrome: "61"
     chrome_android: "61"
     edge: "79"
+    safari: "26"
+    safari_ios: "26"
 compat_features:
   # baseline: false
   # support:
   #   chrome: "59"
   #   chrome_android: "59"
   #   edge: "79"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
   - api.ImageCapture
   - api.ImageCapture.ImageCapture
   - api.ImageCapture.getPhotoCapabilities
-  - api.ImageCapture.grabFrame
   - api.ImageCapture.track
+
+  # baseline: false
+  # support:
+  #   chrome: "59"
+  #   chrome_android: "59"
+  #   edge: "79"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.ImageCapture.grabFrame
 
   # baseline: false
   # support:
   #   chrome: "60"
   #   chrome_android: "60"
   #   edge: "79"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
   - api.ImageCapture.takePhoto
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "61"
   #   chrome_android: "61"
   #   edge: "79"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
   - api.ImageCapture.getPhotoSettings

@@ -2,7 +2,9 @@ name: Container queries
 description: Container size queries with the `@container` at-rule apply styles to an element based on the dimensions of its container.
 spec: https://drafts.csswg.org/css-conditional-5/#container-queries
 group: container-queries
-caniuse: css-container-queries
+caniuse:
+  - css-container-queries
+  - css-container-query-units
 status:
   compute_from: css.at-rules.container
 compat_features:

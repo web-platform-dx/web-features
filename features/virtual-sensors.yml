@@ -5,7 +5,7 @@ group:
   - sensors
   - webdriver
 compat_features:
-  - webdriver.commands.CreateVirtualSensor
-  - webdriver.commands.DeleteVirtualSensor
-  - webdriver.commands.GetVirtualSensorInformation
-  - webdriver.commands.UpdateVirtualSensorReading
+  - webdriver.classic.CreateVirtualSensor
+  - webdriver.classic.DeleteVirtualSensor
+  - webdriver.classic.GetVirtualSensorInformation
+  - webdriver.classic.UpdateVirtualSensorReading

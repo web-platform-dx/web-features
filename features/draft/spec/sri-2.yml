@@ -1,0 +1,17 @@
+draft_date: 2025-08-15
+name: Subresource Integrity
+description: TODO
+spec: https://w3c.github.io/webappsec-subresource-integrity/
+compat_features:
+  - http.headers.Integrity-Policy
+  - http.headers.Integrity-Policy-Report-Only
+  - http.headers.Integrity-Policy-Report-Only.blocked-destinations_script
+  - http.headers.Integrity-Policy-Report-Only.blocked-destinations_style
+  - http.headers.Integrity-Policy.blocked-destinations_script
+  - http.headers.Integrity-Policy.blocked-destinations_style
+
+# The following features in the spec are already part of web-features:
+# - <link>:
+#   - html.elements.link.integrity
+# - <script> and <noscript>:
+#   - html.elements.script.integrity

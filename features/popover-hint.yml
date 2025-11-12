@@ -1,0 +1,7 @@
+name: 'popover="hint"'
+description: The `popover="hint"` global HTML attribute creates a popover that is subordinate to popovers with a `popover="auto"` attribute. You can use this to create tooltips that don't dismiss `auto` popovers.
+spec: https://html.spec.whatwg.org/multipage/popover.html#attr-popover-hint
+group: html
+compat_features:
+  - api.HTMLElement.popover.hint
+  - html.global_attributes.popover.hint

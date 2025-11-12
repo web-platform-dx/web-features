@@ -48,18 +48,6 @@ compat_features:
   #   chrome: "120"
   #   chrome_android: "120"
   #   edge: "120"
-  #   safari: "15.4"
-  #   safari_ios: "15.4"
-  - css.properties.mask-clip.border
-  - css.properties.mask-clip.content
-  - css.properties.mask-clip.padding
-  - css.properties.mask-clip.text
-
-  # baseline: false
-  # support:
-  #   chrome: "120"
-  #   chrome_android: "120"
-  #   edge: "120"
   #   firefox: "53"
   #   firefox_android: "53"
   - css.properties.mask-origin.fill-box
@@ -70,6 +58,10 @@ compat_features:
   # support:
   #   safari: "15.4"
   #   safari_ios: "15.4"
+  - css.properties.mask-clip.border
+  - css.properties.mask-clip.content
+  - css.properties.mask-clip.padding
+  - css.properties.mask-clip.text
   - css.properties.mask-origin.border
   - css.properties.mask-origin.content
   - css.properties.mask-origin.padding

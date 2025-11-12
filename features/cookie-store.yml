@@ -1,12 +1,20 @@
 name: Cookie store
-description: The `CookieStore` interface is an asynchronous and promise-based API for managing cookies. It does not rely on document and so is available to service workers as well.
-spec: https://wicg.github.io/cookie-store/
+description: The `CookieStore` API is an asynchronous and promise-based API for managing cookies. It does not rely on document and so is available to service workers as well.
+spec: https://cookiestore.spec.whatwg.org/
+group: cookies
 caniuse: cookie-store-api
 compat_features:
   - api.CookieStore
   - api.CookieStore.change_event
   - api.CookieStore.delete
   - api.CookieStore.get
+  - api.CookieStore.get.domain_return_property
+  - api.CookieStore.get.expires_return_property
+  - api.CookieStore.get.name_return_property
+  - api.CookieStore.get.path_return_property
+  - api.CookieStore.get.sameSite_return_property
+  - api.CookieStore.get.secure_return_property
+  - api.CookieStore.get.value_return_property
   - api.CookieStore.getAll
   - api.CookieStore.set
   - api.CookieStoreManager

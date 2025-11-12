@@ -3,4 +3,8 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    safari: "26"
+    safari_ios: "26"
+compat_features:
+  - css.types.color.contrast-color

@@ -131,19 +131,6 @@ compat_features:
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
   # support:
-  #   chrome: "9"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "2"
-  #   firefox_android: "4"
-  #   safari: "5.1"
-  #   safari_ios: "5"
-  - html.elements.textarea.spellcheck
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
   #   chrome: "16"
   #   chrome_android: "18"
   #   edge: "12"
@@ -234,8 +221,9 @@ compat_features:
   - api.HTMLTextAreaElement.autocomplete
   - html.elements.textarea.autocomplete
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2022-09-12
+  # baseline_high_date: 2025-03-12
   # support:
   #   chrome: "36"
   #   chrome_android: "36"

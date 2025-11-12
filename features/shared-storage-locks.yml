@@ -1,0 +1,19 @@
+name: Shared storage locks
+description: The `withLock` option to `set()`, `append()`, `delete()`, `clear()`, and `batchUpdate()` methods of the `sharedStorage` API prevents duplicate reporting from cross-site race conditions.
+spec: https://wicg.github.io/shared-storage/#web-locks-integration
+compat_features:
+  - api.SharedStorage.batchUpdate
+  - api.SharedStorageAppendMethod
+  - api.SharedStorageAppendMethod.SharedStorageAppendMethod
+  - api.SharedStorageClearMethod
+  - api.SharedStorageClearMethod.SharedStorageClearMethod
+  - api.SharedStorageDeleteMethod
+  - api.SharedStorageDeleteMethod.SharedStorageDeleteMethod
+  - api.SharedStorageModifierMethod
+  - api.SharedStorageSetMethod
+  - api.SharedStorageSetMethod.SharedStorageSetMethod
+  # It's possible that BCD could at some point record keys including:
+  # - api.SharedStorage.append.options_parameter.options_withLock_parameter
+  # - api.SharedStorage.clear.options_parameter.options_withLock_parameter
+  # - api.SharedStorage.delete.options_parameter.options_withLock_parameter
+  # - api.SharedStorage.set.options_parameter.options_withLock_parameter

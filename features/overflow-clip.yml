@@ -1,0 +1,9 @@
+name: "overflow: clip"
+description: "The `overflow: clip` CSS declaration clips an element's overflowing content to the box that's defined by the `overflow-clip-margin` property. Unlike `overflow: hidden`, it allows you to hide overflow on one axis while keeping overflow on the other axis visible."
+spec: https://drafts.csswg.org/css-overflow-3/#propdef-overflow
+group: css
+compat_features:
+  - css.properties.overflow.clip
+  - css.properties.overflow-x.clip
+  - css.properties.overflow-y.clip
+  - css.types.overflow.clip
