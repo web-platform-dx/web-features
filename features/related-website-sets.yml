@@ -1,0 +1,15 @@
+name: Related website sets
+description: Related website sets declares relationships between sites so the browser allows cookie and storage access between them through methods such as `document.requestStorageAccessFor()`.
+spec:
+  - https://wicg.github.io/first-party-sets/
+  - https://privacycg.github.io/requestStorageAccessFor/
+discouraged:
+  # removal_date: 2026-06-01 # Chrome 150
+  # reason: Due to declining interest from web developers and lack of interest from other browser vendors, Google decided to withdraw many Privacy Sandbox features including related website sets.
+  according_to:
+    - https://privacysandbox.com/news/update-on-plans-for-privacy-sandbox-technologies/
+    - https://chromestatus.com/feature/5162221567082496
+    - https://chromestatus.com/feature/5194473869017088
+compat_features:
+  - api.Document.requestStorageAccessFor
+  - api.Permissions.permission_top-level-storage-access
