@@ -1,6 +1,12 @@
 name: Topics
 description: The topics API reports a user's likely subject-matter interests (as determined by the browser, known as topics) to iframes. This allows for interest-based advertising that does not rely on user's exact browsing history, third-party cookies, or fingerprinting.
 spec: https://patcg-individual-drafts.github.io/topics/
+discouraged:
+  # removal_date: 2026-06-01 # Chrome 150
+  # reason: Due to declining interest from web developers and lack of interest from other browser vendors, Google decided to withdraw many Privacy Sandbox features including the topics API.
+  according_to:
+    - https://privacysandbox.com/news/update-on-plans-for-privacy-sandbox-technologies/
+    - https://chromestatus.com/feature/5135370673061888
 compat_features:
   - api.Document.browsingTopics
   - html.elements.iframe.browsingtopics
