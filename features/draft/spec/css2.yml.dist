@@ -41,19 +41,6 @@ compat_features:
   - css.properties.text-decoration.underline
 
   # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: ≤31
-  #   chrome_android: ≤31
-  #   edge: "12"
-  #   firefox: "3"
-  #   firefox_android: "4"
-  #   safari: "1"
-  #   safari_ios: "1"
-  - css.properties.text-decoration.blink
-
-  # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
@@ -66,6 +53,17 @@ compat_features:
   #   safari_ios: "12.2"
   - css.properties.max-block-size.none
   - css.properties.max-inline-size.none
+
+  # baseline: false
+  # support:
+  #   chrome: ≤31
+  #   chrome_android: ≤31
+  #   edge: "12"
+  #   firefox: "3"
+  #   firefox_android: "4"
+  #   safari: "1"
+  #   safari_ios: "1"
+  - css.properties.text-decoration.blink
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
