@@ -7,14 +7,31 @@ status:
     chrome: "83"
     chrome_android: "83"
     edge: "83"
+    safari: "26"
+    safari_ios: "26"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2025-11-11
+  # support:
+  #   chrome: "83"
+  #   chrome_android: "83"
+  #   edge: "83"
+  #   firefox: "145"
+  #   firefox_android: "145"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - http.headers.Content-Security-Policy.require-trusted-types-for
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "83"
   #   chrome_android: "83"
   #   edge: "83"
+  #   safari: "26"
+  #   safari_ios: "26"
   - api.Element.innerHTML.enforces_trusted_types
+  - api.HTMLScriptElement.innerText.enforces_trusted_types
   - api.HTMLScriptElement.src.enforces_trusted_types
   - api.HTMLScriptElement.text.enforces_trusted_types
   - api.ShadowRoot.innerHTML.enforces_trusted_types
@@ -42,7 +59,6 @@ compat_features:
   - api.setInterval.code_param_enforces_trusted_types
   - api.setTimeout.code_param_enforces_trusted_types
   - api.trustedTypes
-  - http.headers.Content-Security-Policy.require-trusted-types-for
   - http.headers.Content-Security-Policy.trusted-types
 
   # baseline: false
@@ -50,6 +66,8 @@ compat_features:
   #   chrome: "90"
   #   chrome_android: "90"
   #   edge: "90"
+  #   safari: "26"
+  #   safari_ios: "26"
   - api.TrustedHTML.toJSON
   - api.TrustedScript.toJSON
   - api.TrustedScriptURL.toJSON
@@ -58,5 +76,6 @@ compat_features:
   # support:
   #   chrome: "83"
   #   chrome_android: "83"
-  - api.HTMLElement.innerText.enforces_trusted_types
-  - api.Node.textContent.enforces_trusted_types
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.HTMLScriptElement.textContent.enforces_trusted_types

@@ -235,12 +235,22 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   safari: "1"
-  #   safari_ios: "1"
-  - api.CSSStyleDeclaration.cssFloat
+  #   firefox: "129"
+  #   firefox_android: "129"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.CSSPageDescriptors
+  - api.CSSPageDescriptors.margin
+  - api.CSSPageDescriptors.margin-bottom
+  - api.CSSPageDescriptors.margin-left
+  - api.CSSPageDescriptors.margin-right
+  - api.CSSPageDescriptors.margin-top
+  - api.CSSPageDescriptors.marginBottom
+  - api.CSSPageDescriptors.marginLeft
+  - api.CSSPageDescriptors.marginRight
+  - api.CSSPageDescriptors.marginTop
+  - api.CSSPageDescriptors.size
+  - api.CSSPageRule.style.type_CSSPageDescriptors
 
   # baseline: false
   # support:
@@ -255,20 +265,8 @@ compat_features:
   # support:
   #   firefox: "129"
   #   firefox_android: "129"
-  - api.CSSPageDescriptors
-  - api.CSSPageDescriptors.margin
-  - api.CSSPageDescriptors.margin-bottom
-  - api.CSSPageDescriptors.margin-left
-  - api.CSSPageDescriptors.margin-right
-  - api.CSSPageDescriptors.margin-top
-  - api.CSSPageDescriptors.marginBottom
-  - api.CSSPageDescriptors.marginLeft
-  - api.CSSPageDescriptors.marginRight
-  - api.CSSPageDescriptors.marginTop
   - api.CSSPageDescriptors.page-orientation
   - api.CSSPageDescriptors.pageOrientation
-  - api.CSSPageDescriptors.size
-  - api.CSSPageRule.style.type_CSSPageDescriptors
 
   # baseline: false
   # support: {}

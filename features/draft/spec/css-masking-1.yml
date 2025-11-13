@@ -1,8 +1,12 @@
-draft_date: 2025-08-06
+draft_date: 2025-11-03
 name: CSS Masking Module Level 1
 description: TODO
 spec: https://drafts.fxtf.org/css-masking-1/
 compat_features:
+  - css.properties.clip-path.border-box
+  - css.properties.clip-path.content-box
+  - css.properties.clip-path.margin-box
+  - css.properties.clip-path.padding-box
   - css.properties.mask-clip.border-box
   - css.properties.mask-clip.content-box
   - css.properties.mask-clip.fill-box

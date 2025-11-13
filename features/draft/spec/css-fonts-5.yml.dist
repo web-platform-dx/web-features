@@ -5,21 +5,57 @@ status:
   baseline: false
   support: {}
 compat_features:
-  # baseline: false
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
   # support:
-  #   firefox: "137"
-  #   firefox_android: "137"
-  - css.properties.font-synthesis-style.oblique-only
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "1"
+  #   safari_ios: "1"
+  - css.properties.font-family.cursive
+  - css.properties.font-family.fangsong
+  - css.properties.font-family.fantasy
+  - css.properties.font-family.kai
+  - css.properties.font-family.khmer-mul
+  - css.properties.font-family.monospace
+  - css.properties.font-family.nastaliq
+  - css.properties.font-family.sans-serif
+  - css.properties.font-family.serif
+
+  # baseline: high
+  # baseline_low_date: 2018-09-05
+  # baseline_high_date: 2021-03-05
+  # support:
+  #   chrome: "62"
+  #   chrome_android: "62"
+  #   edge: "17"
+  #   firefox: "62"
+  #   firefox_android: "62"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - css.properties.font-variation-settings.normal
+
+  # baseline: high
+  # baseline_low_date: 2022-01-06
+  # baseline_high_date: 2024-07-06
+  # support:
+  #   chrome: "97"
+  #   chrome_android: "97"
+  #   edge: "97"
+  #   firefox: "34"
+  #   firefox_android: "34"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - css.properties.font-synthesis.none
 
   # baseline: false
   # support:
-  #   safari: "18.4"
-  - css.at-rules.font-face.font-width
-  - css.properties.font-width.percentage
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
+  #   safari: "26"
+  #   safari_ios: "26"
   - api.CSSFontFaceDescriptors
   - api.CSSFontFaceDescriptors.font-display
   - api.CSSFontFaceDescriptors.font-family
@@ -40,3 +76,21 @@ compat_features:
   - api.CSSFontFaceDescriptors.src
   - api.CSSFontFaceDescriptors.unicode-range
   - api.CSSFontFaceDescriptors.unicodeRange
+
+  # baseline: false
+  # support:
+  #   firefox: "34"
+  #   firefox_android: "34"
+  - css.properties.font-language-override.normal
+
+  # baseline: false
+  # support:
+  #   firefox: "137"
+  #   firefox_android: "137"
+  - css.properties.font-synthesis-style.oblique-only
+
+  # baseline: false
+  # support:
+  #   safari: "18.4"
+  - css.at-rules.font-face.font-width
+  - css.properties.font-width.percentage

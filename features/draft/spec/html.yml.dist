@@ -60,6 +60,7 @@ compat_features:
   - api.HTMLOptionsCollection.length
   - api.HTMLOptionsCollection.selectedIndex
   - api.Navigator.vendorSub
+  - api.Window.unload_event
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -482,6 +483,19 @@ compat_features:
   # baseline_low_date: 2020-07-28
   # baseline_high_date: 2023-01-28
   # support:
+  #   chrome: "36"
+  #   chrome_android: "36"
+  #   edge: "12"
+  #   firefox: "69"
+  #   firefox_android: "79"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.Document.designMode
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
   #   chrome: "49"
   #   chrome_android: "49"
   #   edge: "79"
@@ -495,19 +509,6 @@ compat_features:
   - api.PromiseRejectionEvent.reason
   - api.Window.rejectionhandled_event
   - api.Window.unhandledrejection_event
-
-  # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
-  # support:
-  #   chrome: "71"
-  #   chrome_android: "71"
-  #   edge: "79"
-  #   firefox: "69"
-  #   firefox_android: "79"
-  #   safari: "12.1"
-  #   safari_ios: "12.2"
-  - api.queueMicrotask
 
   # baseline: high
   # baseline_low_date: 2021-12-13
@@ -577,8 +578,9 @@ compat_features:
   - html.elements.form.autocomplete.one-time-code
   - html.elements.textarea.autocomplete.one-time-code
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-03-27
+  # baseline_high_date: 2025-09-27
   # support:
   #   chrome: "88"
   #   chrome_android: "88"
@@ -674,6 +676,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "119"
+  #   edge: "119"
+  #   firefox: "122"
+  #   firefox_android: "145"
+  #   safari: "17"
+  #   safari_ios: "17.4"
+  - html.elements.hr.hr_in_select
+
+  # baseline: false
+  # support:
   #   chrome: "17"
   #   chrome_android: "18"
   #   edge: "79"
@@ -757,6 +769,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "97"
+  #   chrome_android: "97"
+  #   edge: "97"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.Worker.Worker.enforces_trusted_types
+
+  # baseline: false
+  # support:
   #   chrome: "99"
   #   chrome_android: "99"
   #   edge: "99"
@@ -793,11 +814,47 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
+  #   edge: "138"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.WorkerGlobalScope.importScripts.enforces_trusted_types
+
+  # baseline: false
+  # support:
+  #   chrome: "139"
+  #   chrome_android: "139"
+  #   edge: "139"
+  #   firefox: "144"
+  #   firefox_android: "144"
+  - api.HTMLButtonElement.command.request-close
+  - html.elements.button.command.request-close
+
+  # baseline: false
+  # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
+  #   firefox: "145"
+  #   firefox_android: "145"
+  - api.ToggleEvent.source
+
+  # baseline: false
+  # support:
   #   chrome: "96"
   #   chrome_android: "96"
   #   edge: "96"
   #   firefox: "119"
   - http.headers.Cross-Origin-Embedder-Policy.credentialless
+
+  # baseline: false
+  # support:
+  #   chrome: "97"
+  #   edge: "97"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.SharedWorker.SharedWorker.enforces_trusted_types
 
   # baseline: false
   # support:
@@ -841,6 +898,14 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "96"
+  #   chrome_android: "96"
+  #   edge: "96"
+  - http.headers.Cross-Origin-Embedder-Policy.report-to_parameter
+  - http.headers.Cross-Origin-Opener-Policy.report-to_parameter
+
+  # baseline: false
+  # support:
   #   chrome: "99"
   #   chrome_android: "99"
   #   edge: "99"
@@ -871,17 +936,17 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "133"
-  #   chrome_android: "133"
-  #   edge: "133"
-  - api.CustomElementRegistry.define.connectedMoveCallback_lifecycle_callback
-
-  # baseline: false
-  # support:
   #   chrome: "134"
   #   chrome_android: "134"
   #   edge: "134"
   - api.OffscreenCanvasRenderingContext2D.getContextAttributes
+
+  # baseline: false
+  # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
+  - api.HTMLSelectedContentElement
 
   # baseline: false
   # support:
@@ -895,14 +960,19 @@ compat_features:
   #   chrome: "137"
   #   chrome_android: "137"
   #   edge: "137"
+  - api.HTMLCanvasElement.getContext.2d_context.options_colorType_parameter
+  - api.ImageData.ImageData.settings_parameter.pixelFormat_option
   - api.ImageData.pixelFormat
 
   # baseline: false
   # support:
-  #   chrome: "139"
-  #   chrome_android: "139"
-  #   edge: "139"
-  - api.HTMLButtonElement.command.request-close
+  #   chrome: "141"
+  #   chrome_android: "141"
+  #   edge: "141"
+  - api.NavigateEvent.intercept.precommitHandler_option
+  - api.NavigationPrecommitController
+  - api.NavigationPrecommitController.redirect
+  - api.NavigationTransition.committed
 
   # baseline: false
   # support:
@@ -952,6 +1022,4 @@ compat_features:
   # baseline: false
   # support: {}
   - api.Navigator.authentication
-  - api.ToggleEvent.source
-  - html.elements.hr.hr_in_select
   - html.elements.track.kind.descriptions

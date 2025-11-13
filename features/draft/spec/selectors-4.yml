@@ -1,11 +1,10 @@
-draft_date: 2025-08-21
+draft_date: 2025-10-08
 name: Selectors Level 4
 description: TODO
 spec: https://drafts.csswg.org/selectors-4/
 compat_features:
-  - css.selectors.closed
-  - css.selectors.heading
-  - css.selectors.headingfunction
+  - css.selectors.interest-source
+  - css.selectors.interest-target
 
 # The following features in the spec are already part of web-features:
 # - User action pseudo-classes:
@@ -92,6 +91,9 @@ compat_features:
 #   - css.selectors.past
 # - :has():
 #   - css.selectors.has
+# - Heading pseudo-classes:
+#   - css.selectors.heading
+#   - css.selectors.headingfunction
 # - Form validity pseudo-classes:
 #   - css.selectors.in-range
 #   - css.selectors.invalid

@@ -3,10 +3,6 @@
 
 status:
   baseline: false
-  support:
-    chrome: "138"
-    chrome_android: "138"
-    edge: "138"
+  support: {}
 compat_features:
-  - css.at-rules.media.horizontal-viewport-segments
-  - css.at-rules.media.vertical-viewport-segments
+  - css.at-rules.custom-media
