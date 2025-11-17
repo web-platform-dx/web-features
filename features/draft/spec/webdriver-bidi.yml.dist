@@ -517,6 +517,21 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "139"
+  #   chrome_android: "139"
+  #   edge: "139"
+  #   firefox: "145"
+  #   firefox_android: "145"
+  - webdriver.bidi.browsingContext.downloadEnd_event
+  - webdriver.bidi.browsingContext.downloadEnd_event.context_parameter
+  - webdriver.bidi.browsingContext.downloadEnd_event.filepath_parameter
+  - webdriver.bidi.browsingContext.downloadEnd_event.navigation_parameter
+  - webdriver.bidi.browsingContext.downloadEnd_event.status_parameter
+  - webdriver.bidi.browsingContext.downloadEnd_event.timestamp_parameter
+  - webdriver.bidi.browsingContext.downloadEnd_event.url_parameter
+
+  # baseline: false
+  # support:
   #   chrome: "140"
   #   chrome_android: "140"
   #   edge: "140"
@@ -556,6 +571,18 @@ compat_features:
   - webdriver.bidi.emulation.setTimezoneOverride.contexts_parameter
   - webdriver.bidi.emulation.setTimezoneOverride.timezone_parameter
   - webdriver.bidi.emulation.setTimezoneOverride.userContexts_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  #   edge: "142"
+  #   firefox: "145"
+  #   firefox_android: "145"
+  - webdriver.bidi.emulation.setUserAgentOverride
+  - webdriver.bidi.emulation.setUserAgentOverride.contexts_parameter
+  - webdriver.bidi.emulation.setUserAgentOverride.userAgent_parameter
+  - webdriver.bidi.emulation.setUserAgentOverride.userContexts_parameter
 
   # baseline: false
   # support:
@@ -637,19 +664,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "139"
-  #   chrome_android: "139"
-  #   edge: "139"
-  - webdriver.bidi.browsingContext.downloadEnd_event
-  - webdriver.bidi.browsingContext.downloadEnd_event.context_parameter
-  - webdriver.bidi.browsingContext.downloadEnd_event.filepath_parameter
-  - webdriver.bidi.browsingContext.downloadEnd_event.navigation_parameter
-  - webdriver.bidi.browsingContext.downloadEnd_event.status_parameter
-  - webdriver.bidi.browsingContext.downloadEnd_event.timestamp_parameter
-  - webdriver.bidi.browsingContext.downloadEnd_event.url_parameter
-
-  # baseline: false
-  # support:
   #   chrome: "140"
   #   chrome_android: "140"
   #   edge: "140"
@@ -669,6 +683,16 @@ compat_features:
   - webdriver.bidi.emulation.setScriptingEnabled.contexts_parameter
   - webdriver.bidi.emulation.setScriptingEnabled.enabled_parameter
   - webdriver.bidi.emulation.setScriptingEnabled.userContexts_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  #   edge: "142"
+  - webdriver.bidi.browser.setDownloadBehavior
+  - webdriver.bidi.browser.setDownloadBehavior.downloadBehavior_parameter
+  - webdriver.bidi.browser.setDownloadBehavior.userContexts_parameter
+  - webdriver.bidi.network.getData.dataType_parameter.request
 
   # baseline: false
   # support:
@@ -769,18 +793,6 @@ compat_features:
   - webdriver.bidi.webExtension.install.extensionData_parameter
   - webdriver.bidi.webExtension.uninstall
   - webdriver.bidi.webExtension.uninstall.extension_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "142"
-  #   chrome_android: "142"
-  - webdriver.bidi.browser.setDownloadBehavior
-  - webdriver.bidi.browser.setDownloadBehavior.downloadBehavior_parameter
-  - webdriver.bidi.browser.setDownloadBehavior.userContexts_parameter
-  - webdriver.bidi.emulation.setUserAgentOverride
-  - webdriver.bidi.emulation.setUserAgentOverride.contexts_parameter
-  - webdriver.bidi.emulation.setUserAgentOverride.userAgent_parameter
-  - webdriver.bidi.emulation.setUserAgentOverride.userContexts_parameter
 
   # baseline: false
   # support:

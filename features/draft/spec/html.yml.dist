@@ -60,6 +60,7 @@ compat_features:
   - api.HTMLOptionsCollection.length
   - api.HTMLOptionsCollection.selectedIndex
   - api.Navigator.vendorSub
+  - api.Window.unload_event
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -675,6 +676,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "119"
+  #   edge: "119"
+  #   firefox: "122"
+  #   firefox_android: "145"
+  #   safari: "17"
+  #   safari_ios: "17.4"
+  - html.elements.hr.hr_in_select
+
+  # baseline: false
+  # support:
   #   chrome: "17"
   #   chrome_android: "18"
   #   edge: "79"
@@ -758,6 +769,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "97"
+  #   chrome_android: "97"
+  #   edge: "97"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.Worker.Worker.enforces_trusted_types
+
+  # baseline: false
+  # support:
   #   chrome: "99"
   #   chrome_android: "99"
   #   edge: "99"
@@ -813,11 +833,28 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
+  #   firefox: "145"
+  #   firefox_android: "145"
+  - api.ToggleEvent.source
+
+  # baseline: false
+  # support:
   #   chrome: "96"
   #   chrome_android: "96"
   #   edge: "96"
   #   firefox: "119"
   - http.headers.Cross-Origin-Embedder-Policy.credentialless
+
+  # baseline: false
+  # support:
+  #   chrome: "97"
+  #   edge: "97"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.SharedWorker.SharedWorker.enforces_trusted_types
 
   # baseline: false
   # support:
@@ -929,13 +966,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "140"
-  #   chrome_android: "140"
-  #   edge: "140"
-  - api.ToggleEvent.source
-
-  # baseline: false
-  # support:
   #   chrome: "141"
   #   chrome_android: "141"
   #   edge: "141"
@@ -992,5 +1022,4 @@ compat_features:
   # baseline: false
   # support: {}
   - api.Navigator.authentication
-  - html.elements.hr.hr_in_select
   - html.elements.track.kind.descriptions

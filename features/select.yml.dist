@@ -205,13 +205,19 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "119"
+  #   edge: "119"
+  #   firefox: "122"
+  #   firefox_android: "145"
+  #   safari: "17"
+  #   safari_ios: "17.4"
+  - html.elements.select.hr_in_select
+
+  # baseline: false
+  # support:
   #   chrome: "1"
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
   #   safari: "3"
   - html.elements.select.size
-
-  # baseline: false
-  # support: {}
-  - html.elements.select.hr_in_select
