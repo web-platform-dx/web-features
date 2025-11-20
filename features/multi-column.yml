@@ -4,3 +4,48 @@ spec: https://drafts.csswg.org/css-multicol-1/
 group: multi-column
 status:
   compute_from: css.properties.columns
+compat_features:
+  - css.properties.align-content.multicol_context
+  - css.properties.column-count
+  - css.properties.column-count.auto
+  - css.properties.column-gap
+  - css.properties.column-gap.multicol_context
+  - css.properties.column-gap.multicol_context.calc_values
+  - css.properties.column-gap.multicol_context.percentage_values
+  - css.properties.column-gap.normal
+  - css.properties.column-rule
+  - css.properties.column-rule.dashed
+  - css.properties.column-rule.dotted
+  - css.properties.column-rule.double
+  - css.properties.column-rule.groove
+  - css.properties.column-rule.hidden
+  - css.properties.column-rule.inset
+  - css.properties.column-rule.medium
+  - css.properties.column-rule.none
+  - css.properties.column-rule.outset
+  - css.properties.column-rule.ridge
+  - css.properties.column-rule.solid
+  - css.properties.column-rule.thick
+  - css.properties.column-rule.thin
+  - css.properties.column-rule.transparent
+  - css.properties.column-rule-color
+  - css.properties.column-rule-color.transparent
+  - css.properties.column-rule-style
+  - css.properties.column-rule-style.dashed
+  - css.properties.column-rule-style.dotted
+  - css.properties.column-rule-style.double
+  - css.properties.column-rule-style.groove
+  - css.properties.column-rule-style.hidden
+  - css.properties.column-rule-style.inset
+  - css.properties.column-rule-style.none
+  - css.properties.column-rule-style.outset
+  - css.properties.column-rule-style.ridge
+  - css.properties.column-rule-style.solid
+  - css.properties.column-rule-width
+  - css.properties.column-rule-width.medium
+  - css.properties.column-rule-width.thick
+  - css.properties.column-rule-width.thin
+  - css.properties.column-width
+  - css.properties.column-width.auto
+  - css.properties.columns
+  - css.properties.gap.multicol_context
