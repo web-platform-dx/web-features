@@ -39,9 +39,15 @@ export function assertRequiredRemovalDateSet(
   id: string,
   feature: FeatureData,
 ): void {
-  if (!feature.discouraged) return;
-  if (feature.discouraged.removal_date) return;
-  if (Object.keys(feature.status.support).length > 0) return;
+  if (!feature.discouraged) {
+    return;
+  }
+  if (feature.discouraged.removal_date) {
+    return;
+  }
+  if (Object.keys(feature.status.support).length > 0) {
+    return;
+  }
   if (
     feature.compat_features &&
     Object.keys(feature.status.by_compat_key).length > 0
