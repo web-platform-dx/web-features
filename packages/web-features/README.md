@@ -101,8 +101,8 @@ It has the following properties:
 - `discouraged` (optional): An object indicating that web developers should avoid using the feature.
   It has the following properties:
   - `according_to` (type: `string[]`): One or more links to a formal discouragement notice, such as specification text or an intent-to-unship
-  - `reason` (type: `string`): A brief, developer-focused description of why the feature is discouraged
-  - `reason_html` (type: `string`): A brief, developer-focused description of why the feature is discouraged, as an HTML string
+  - `reason` (type: `string`): A brief, developer-focused description of why the feature is discouraged.
+  - `reason_html` (type: `string`): A brief, developer-focused description of why the feature is discouraged, as an HTML string.
   - `alternatives` (optional, type: `string[]`): One or more feature IDs (as in `features[alternatives[0]]`) that substitute some or all of this feature's utility
   - `removal_date` (optional, type: `string`): An expected or actual removal date, as in `"2029-12-31"`.
      Only set if there's an announced plan by all currently-implementing vendors to unship the feature or the feature has already been unshipped from all browsers.
