@@ -96,6 +96,10 @@ export interface FeatureData {
    */
   name?: string;
   /**
+   * Notes about this feature
+   */
+  notes?: Note[];
+  /**
    * Snapshot identifiers
    */
   snapshot?: string[];
@@ -136,6 +140,46 @@ export interface Discouraged {
 export type Kind = "feature" | "moved" | "split";
 
 /**
+ * A note describing a Baseline status regression. For example, a feature that has moved
+ * from Baseline low to not Baseline.
+ */
+export interface Note {
+  /**
+   * The topic of this note. This field is also a discriminator for any future note types
+   */
+  category: "baseline-regression";
+  /**
+   * One or more URLs, such as bugs, used to justify the regression
+   */
+  citations: string[];
+  /**
+   * The date that the regression was added to web-features data
+   */
+  date: string;
+  /**
+   * A short description of the cause of the regression as a plain text
+   */
+  message: string;
+  /**
+   * A short description of the cause of the regression as HTML
+   */
+  message_html: string;
+  /**
+   * The `baseline` status value after the regression
+   */
+  new_baseline_value: boolean | "low";
+  /**
+   * The `baseline` status value before the regression
+   */
+  old_baseline_value: OldBaselineValue;
+}
+
+/**
+ * The `baseline` status value before the regression
+ */
+export type OldBaselineValue = "high" | "low";
+
+/**
  * Whether a feature is considered a "Baseline" web platform feature and when it achieved
  * that status
  */
@@ -143,7 +187,7 @@ export interface StatusHeadline {
   /**
    * Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false)
    */
-  baseline: boolean | BaselineEnum;
+  baseline: boolean | OldBaselineValue;
   /**
    * Date the feature achieved Baseline high status
    */
@@ -162,13 +206,11 @@ export interface StatusHeadline {
   support: Support;
 }
 
-export type BaselineEnum = "high" | "low";
-
 export interface Status {
   /**
    * Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false)
    */
-  baseline: boolean | BaselineEnum;
+  baseline: boolean | OldBaselineValue;
   /**
    * Date the feature achieved Baseline high status
    */

@@ -5,7 +5,7 @@
 // nicer to work with in TypeScript.
 
 import type {
-  BaselineEnum as BaselineHighLow,
+  OldBaselineValue as BaselineHighLow,
   BrowserData,
   Browsers,
   Discouraged,
@@ -81,7 +81,12 @@ export type FeatureData = { kind: "feature" } & Required<
   Partial<
     Pick<
       QuicktypeMonolithicFeatureData,
-      "caniuse" | "compat_features" | "discouraged" | "group" | "snapshot"
+      | "caniuse"
+      | "compat_features"
+      | "discouraged"
+      | "group"
+      | "snapshot"
+      | "notes"
     >
   >;
 
