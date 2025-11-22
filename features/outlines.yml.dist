@@ -26,6 +26,7 @@ compat_features:
   #   safari: "1.2"
   #   safari_ios: "1"
   - css.properties.outline-color
+  - css.properties.outline-color.transparent
   - css.properties.outline-style
   - css.properties.outline-style.auto
   - css.properties.outline-style.dashed
@@ -38,6 +39,9 @@ compat_features:
   - css.properties.outline-style.ridge
   - css.properties.outline-style.solid
   - css.properties.outline-width
+  - css.properties.outline-width.medium
+  - css.properties.outline-width.thick
+  - css.properties.outline-width.thin
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: high
