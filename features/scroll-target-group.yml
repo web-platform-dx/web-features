@@ -1,0 +1,10 @@
+name: scroll-target-group
+description: >
+  The `scroll-target-group` CSS property picks an element to be a scroll marker group container, which uses the anchor links within that element as scroll markers.
+  It's an alternative to the `::scroll-marker-group` pseudo-element, which uses generated elements as scroll markers.
+spec: https://drafts.csswg.org/css-overflow-5/#scroll-target-group
+group: scrolling
+compat_features:
+  - css.properties.scroll-target-group
+  - css.properties.scroll-target-group.auto
+  - css.properties.scroll-target-group.none
