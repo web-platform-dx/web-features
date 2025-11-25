@@ -1,0 +1,9 @@
+name: Range syntax for style queries
+description: The `@container style()` CSS at-rule and `if(style())` CSS function queries accept a range syntax, such as `>`, `<`, `>=`, `<=`, to query for inexact values.
+spec: https://drafts.csswg.org/css-conditional-5/#typedef-style-range
+group: container-queries
+# expected compat_features:
+#  - css.types.if.style.range_syntax
+#  - css.at-rules.container.style_queries_for_custom_properties.range_syntax
+# This is a bit of an oddity, where someday this feature will split in two,
+# merging its constituent parts into `container-style-queries` and `if`.
