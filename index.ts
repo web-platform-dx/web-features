@@ -167,7 +167,7 @@ for (const [key, data] of yamlEntries('features')) {
     }
     if (Array.isArray(data.notes)) {
         for (const note of data.notes as FeatureData["notes"]) {
-            const { text, html } = convertMarkdown(data.description);
+            const { text, html } = convertMarkdown(note.message);
             note.message = text;
             note.message_html = html;
         }
