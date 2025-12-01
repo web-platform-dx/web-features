@@ -95,6 +95,8 @@ const goodFeatureData: FeatureData = {
   group: [""],
   caniuse: [""],
   discouraged: {
+    reason: "",
+    reason_html: "",
     according_to: [""],
     alternatives: [""],
   },
