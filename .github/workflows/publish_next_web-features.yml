@@ -105,5 +105,6 @@ jobs:
           TAG: ${{ env.dist_tag }}
           NOTES: This is a continuously-updated prerelease generated from `main` (currently at ${{ steps.timestamp_and_hash.outputs.SHORT_HASH }}).
           ARTIFACTS: >
-            schemas/data.schema.json
             ${{ env.package_dir }}/data.json
+            data.extended.json
+            schemas/data.schema.json
