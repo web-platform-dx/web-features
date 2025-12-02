@@ -3,8 +3,8 @@ description: The `:target-within` CSS pseudo-class matches the element with an I
 spec: https://www.w3.org/TR/2022/WD-selectors-4-20220507/#the-target-within-pseudo
 group: selectors
 discouraged:
-  # reason: The `:target-within` pseudo-class was dropped from the specification in favor of `:has(:target)`.
-  # removal_date: 2023-08-16
+  reason: The `:target-within` pseudo-class was dropped from the specification in favor of `:has(:target)`.
+  removal_date: 2023-08-16
   according_to:
     - https://drafts.csswg.org/selectors-4/#the-target-pseudo
     - https://github.com/w3c/csswg-drafts/issues/8357
