@@ -7,6 +7,8 @@ on:
     paths:
       - packages/compute-baseline/**
 
+permissions: {}
+
 env:
   package: "compute-baseline"
   package_dir: "packages/compute-baseline"
@@ -15,6 +17,8 @@ env:
 jobs:
   test:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
@@ -27,6 +31,12 @@ jobs:
     if: github.repository == 'web-platform-dx/web-features'
     runs-on: ubuntu-latest
     needs: "test"
+    permissions:
+      contents: read
+      # Required for OIDC and trusted publishing. See:
+      # - https://docs.npmjs.com/trusted-publishers
+      # - https://docs.github.com/en/actions/concepts/security/openid-connect
+      id-token: write
     steps:
       - name: Get timestamp
         id: timestamp
@@ -37,6 +47,7 @@ jobs:
           node-version-file: .node-version
           cache: npm
           registry-url: "https://registry.npmjs.org"
+      - run: npm install -g 'npm@>=11.5.1  # required for trusted publishing
       - run: npm ci
       - name: Get package.json version
         id: version
@@ -49,5 +60,3 @@ jobs:
           VERSION: ${{ steps.version.outputs.VERSION }}
           TIMESTAMP: ${{ steps.timestamp.outputs.TIMESTAMP }}
       - run: npm publish --workspace=${{ env.package }} --tag ${{ env.dist_tag }}
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
