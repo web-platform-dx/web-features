@@ -1,4 +1,4 @@
 name: 'Interest invokers'
-description: The `interestfor` global HTML attribute triggers actions on a target element when the user shows interest (e.g., hover, focus, long-press). The user agent detects this interest, firing an InterestEvent on the target. This event has default actions, like showing or hiding popovers.
+description: Interest invokers, registered by the `interestfor` HTML attribute, trigger events and actions on a target element when a user shows interest in the element, through behaviors such as hover, focus, or long-press. Pseudo-elements apply styles to sources and targets of interest.
 spec: https://github.com/whatwg/html/pull/11006
 group: html
