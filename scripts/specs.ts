@@ -149,6 +149,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/Accessibility/AriaNotify/explainer.md",
         "Allowed because the ariaNotify() method is not yet in a formal spec. Remove this exception when a formal spec is available."
+    ],
+    [
+        "https://www.w3.org/TR/2019/WD-feature-policy-1-20190416/",
+        "Allowed because feature policy was replaced by permissions policy."
     ]
 ];
 
