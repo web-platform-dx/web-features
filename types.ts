@@ -5,13 +5,13 @@
 // nicer to work with in TypeScript.
 
 import type {
-  OldBaselineValue as BaselineHighLow,
   BrowserData,
   Browsers,
   Discouraged,
   GroupData,
   Kind,
   FeatureData as QuicktypeMonolithicFeatureData,
+  Note as QuicktypeNote,
   Status as QuicktypeStatus,
   StatusHeadline as QuicktypeStatusHeadline,
   WebFeaturesData as QuicktypeWebFeaturesData,
@@ -22,7 +22,6 @@ import type {
 
 // Passthrough types
 export type {
-  BaselineHighLow,
   BrowserData,
   Browsers,
   Discouraged,
@@ -32,12 +31,17 @@ export type {
   Support,
 };
 
+// Quicktype interprets the schema's `baseline: false | "high" | "low"` as
+// meaning `baseline: boolean | "high" | "low"`. `BaselineValue` patches it.
+export type BaselineValue = "high" | "low" | false;
 export interface Status extends QuicktypeStatus {
-  baseline: false | BaselineHighLow;
+  baseline: BaselineValue;
 }
-
 export interface SupportStatus extends QuicktypeStatusHeadline {
-  baseline: false | BaselineHighLow;
+  baseline: BaselineValue;
+}
+export interface RegressionNote extends QuicktypeNote {
+  old_baseline_value: BaselineValue;
 }
 
 // These are "tests" for our type definitions.

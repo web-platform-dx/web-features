@@ -76,6 +76,10 @@
   "required": ["browsers", "features", "groups", "snapshots"],
   "additionalProperties": false,
   "definitions": {
+    "BaselineValue": {
+      "description": "Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false)",
+      "enum": ["high", "low", false]
+    },
     "Discouraged": {
       "type": "object",
       "properties": {
@@ -168,13 +172,11 @@
               },
               "new_baseline_value": {
                 "description": "The `baseline` status value after the regression",
-                "enum": ["low", false],
-                "type": ["string", "boolean"]
+                "$ref": "#/definitions/BaselineValue"
               },
               "old_baseline_value": {
                 "description": "The `baseline` status value before the regression",
-                "enum": ["high", "low"],
-                "type": "string"
+                "$ref": "#/definitions/BaselineValue"
               }
             },
             "required": [
@@ -301,8 +303,8 @@
       "type": "object",
       "properties": {
         "baseline": {
-          "description": "Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false)",
-          "enum": ["high", "low", false]
+          "description": "Whether the feature is not Baseline, Baseline newly available, or Baseline widely available",
+          "$ref": "#/definitions/BaselineValue"
         },
         "baseline_high_date": {
           "description": "Date the feature achieved Baseline high status",

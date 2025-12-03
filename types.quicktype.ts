@@ -167,17 +167,14 @@ export interface Note {
   /**
    * The `baseline` status value after the regression
    */
-  new_baseline_value: boolean | "low";
+  new_baseline_value: boolean | BaselineValueEnum;
   /**
    * The `baseline` status value before the regression
    */
-  old_baseline_value: OldBaselineValue;
+  old_baseline_value: boolean | BaselineValueEnum;
 }
 
-/**
- * The `baseline` status value before the regression
- */
-export type OldBaselineValue = "high" | "low";
+export type BaselineValueEnum = "high" | "low";
 
 /**
  * Whether a feature is considered a "Baseline" web platform feature and when it achieved
@@ -185,9 +182,10 @@ export type OldBaselineValue = "high" | "low";
  */
 export interface StatusHeadline {
   /**
-   * Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false)
+   * Whether the feature is not Baseline, Baseline newly available, or Baseline widely
+   * available
    */
-  baseline: boolean | OldBaselineValue;
+  baseline: boolean | BaselineValueEnum;
   /**
    * Date the feature achieved Baseline high status
    */
@@ -208,9 +206,10 @@ export interface StatusHeadline {
 
 export interface Status {
   /**
-   * Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false)
+   * Whether the feature is not Baseline, Baseline newly available, or Baseline widely
+   * available
    */
-  baseline: boolean | OldBaselineValue;
+  baseline: boolean | BaselineValueEnum;
   /**
    * Date the feature achieved Baseline high status
    */
