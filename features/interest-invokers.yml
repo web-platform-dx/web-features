@@ -2,3 +2,17 @@ name: 'Interest invokers'
 description: Interest invokers, registered by the `interestfor` HTML attribute, trigger events and actions on a target element when a user shows interest in the element, through behaviors such as hover, focus, or long-press. Pseudo-elements apply styles to sources and targets of interest.
 spec: https://github.com/whatwg/html/pull/11006
 group: html
+compat_features:
+  - api.HTMLAnchorElement.interestForElement
+  - api.HTMLAreaElement.interestForElement
+  - api.HTMLButtonElement.interestForElement
+  - api.HTMLElement.interest_event
+  - api.HTMLElement.loseinterest_event
+  - api.InterestEvent
+  - api.InterestEvent.InterestEvent
+  - api.InterestEvent.source
+  - api.SVGAElement.interestForElement
+  - html.elements.a.interestfor
+  - html.elements.area.interestfor
+  - html.elements.button.interestfor
+  - svg.elements.a.interestfor
