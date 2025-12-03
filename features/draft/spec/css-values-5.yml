@@ -1,9 +1,18 @@
-draft_date: 2025-07-15
+draft_date: 2025-11-10
 name: CSS Values and Units Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-values-5/
 compat_features:
-  - css.types.progress
+  - css.properties.object-position.bottom
+  - css.properties.object-position.center
+  - css.properties.object-position.left
+  - css.properties.object-position.right
+  - css.properties.object-position.top
+  - css.properties.offset.bottom
+  - css.properties.offset.center
+  - css.properties.offset.left
+  - css.properties.offset.right
+  - css.properties.offset.top
 
 # The following features in the spec are already part of web-features:
 # - Media queries:
@@ -46,13 +55,11 @@ compat_features:
 #   - css.types.attr.type-or-unit
 #   - css.types.attr.type-or-unit.angle
 #   - css.types.attr.type-or-unit.color
-#   - css.types.attr.type-or-unit.frequency
 #   - css.types.attr.type-or-unit.integer
 #   - css.types.attr.type-or-unit.length
 #   - css.types.attr.type-or-unit.number
 #   - css.types.attr.type-or-unit.percentage
 #   - css.types.attr.type-or-unit.time
-#   - css.types.attr.type-or-unit.url
 # - calc():
 #   - css.types.calc
 #   - css.types.calc.gradient_color_stops
@@ -128,11 +135,16 @@ compat_features:
 #   - css.types.length.vw
 # - round(), mod(), and rem():
 #   - css.types.mod
+#   - css.types.mod.mixed_type_parameters
 #   - css.types.rem
+#   - css.types.rem.mixed_type_parameters
 #   - css.types.round
+#   - css.types.round.mixed_type_parameters
 # - opacity:
 #   - css.types.number
 #   - css.types.number.scientific_notation
+# - progress():
+#   - css.types.progress
 # - resolution media query:
 #   - css.types.resolution
 #   - css.types.resolution.dpcm

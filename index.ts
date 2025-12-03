@@ -7,9 +7,9 @@ import YAML from 'yaml';
 import { convertMarkdown } from "./text";
 import { GroupData, SnapshotData, WebFeaturesData } from './types';
 
-import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, parseRangedDateString } from 'compute-baseline';
+import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, getStatus, parseRangedDateString } from 'compute-baseline';
 import { Compat } from 'compute-baseline/browser-compat-data';
-import { assertValidFeatureReference } from './assertions';
+import { assertRequiredRemovalDateSet, assertValidFeatureReference } from './assertions';
 import { isMoved, isSplit } from './type-guards';
 
 // The longest name allowed, to allow for compact display.
@@ -165,6 +165,11 @@ for (const [key, data] of yamlEntries('features')) {
         data.description = text;
         data.description_html = html;
     }
+    if (data.discouraged) {
+        const { text, html } = convertMarkdown(data.discouraged.reason);
+        data.discouraged.reason = text;
+        data.discouraged.reason_html = html;
+    }
 
     // Compute Baseline high date from low date.
     if (data.status?.baseline === 'high') {
@@ -209,7 +214,17 @@ for (const [key, data] of yamlEntries('features')) {
                 bcdToFeatureId.set(bcdKey, key);
             }
         }
+
+        // Generate by_compat_key data.
+        if (data.status) {
+            data.status.by_compat_key = {};
+            for (const bcdKey of data.compat_features) {
+                data.status.by_compat_key[bcdKey] = getStatus(key, bcdKey);
+            }
+        }
     }
+
+   assertRequiredRemovalDateSet(key, data);
 
     features[key] = data;
 }

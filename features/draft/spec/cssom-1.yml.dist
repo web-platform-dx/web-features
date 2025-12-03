@@ -4,11 +4,14 @@
 status:
   baseline: false
   support:
+    firefox: "145"
+    firefox_android: "145"
     safari: "26"
     safari_ios: "26"
 compat_features:
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-03-27
+  # baseline_high_date: 2025-09-27
   # support:
   #   chrome: "99"
   #   chrome_android: "99"
@@ -19,10 +22,24 @@ compat_features:
   #   safari_ios: "16.4"
   - api.Document.adoptedStyleSheets.mutable
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
+  #   firefox: "144"
+  #   firefox_android: "144"
   #   safari: "26"
   #   safari_ios: "26"
   - api.CSSStyleProperties
   - api.CSSStyleProperties.cssFloat
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   firefox: "145"
+  #   firefox_android: "145"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.CSSStyleRule.style.returns_CSSStyleProperties
+  - api.HTMLElement.style.returns_CSSStyleProperties
+  - api.MathMLElement.style.returns_CSSStyleProperties
+  - api.SVGElement.style.returns_CSSStyleProperties
+  - api.Window.getComputedStyle.returns_CSSStyleProperties

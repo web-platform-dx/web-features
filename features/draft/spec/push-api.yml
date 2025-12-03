@@ -1,0 +1,42 @@
+draft_date: 2025-10-08
+name: Push API
+description: TODO
+spec: https://w3c.github.io/push-api/
+compat_features:
+  - api.PushEvent.notification
+  - api.Window.pushManager
+
+# The following features in the spec are already part of web-features:
+# - Push messages:
+#   - api.PushEvent
+#   - api.PushEvent.PushEvent
+#   - api.PushEvent.data
+#   - api.PushManager
+#   - api.PushManager.getSubscription
+#   - api.PushManager.permissionState
+#   - api.PushManager.subscribe
+#   - api.PushManager.supportedContentEncodings_static
+#   - api.PushMessageData
+#   - api.PushMessageData.arrayBuffer
+#   - api.PushMessageData.blob
+#   - api.PushMessageData.bytes
+#   - api.PushMessageData.json
+#   - api.PushMessageData.text
+#   - api.PushSubscription
+#   - api.PushSubscription.endpoint
+#   - api.PushSubscription.expirationTime
+#   - api.PushSubscription.getKey
+#   - api.PushSubscription.options
+#   - api.PushSubscription.toJSON
+#   - api.PushSubscription.unsubscribe
+#   - api.PushSubscriptionChangeEvent
+#   - api.PushSubscriptionChangeEvent.PushSubscriptionChangeEvent
+#   - api.PushSubscriptionChangeEvent.newSubscription
+#   - api.PushSubscriptionChangeEvent.oldSubscription
+#   - api.PushSubscriptionOptions
+#   - api.PushSubscriptionOptions.applicationServerKey
+#   - api.PushSubscriptionOptions.userVisibleOnly
+#   - api.ServiceWorkerGlobalScope.push_event
+#   - api.ServiceWorkerGlobalScope.pushsubscriptionchange_event
+#   - api.ServiceWorkerRegistration
+#   - api.ServiceWorkerRegistration.pushManager

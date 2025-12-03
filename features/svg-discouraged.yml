@@ -1,9 +1,10 @@
-name: SVG 1.1 (discouraged)
+name: SVG 1.1
 description: The SVG 1.1 image format has several components that were excluded from SVG 2, such as fonts, alternate glyphs, and the `xlink` namespace.
 spec: https://www.w3.org/TR/SVG11/
 discouraged:
   according_to:
     - https://svgwg.org/svg2-draft/changes.html#substantial
+  reason: SVG 2 omittted some parts of SVG 1.1 to "improv[e] the usability and precision of the language."
   alternatives:
     - svg
     - font-face
