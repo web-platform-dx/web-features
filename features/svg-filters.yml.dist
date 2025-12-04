@@ -179,8 +179,12 @@ compat_features:
   - api.SVGFilterElement.x
   - api.SVGFilterElement.y
   - css.properties.flood-color
+  - css.properties.flood-color.currentColor
+  - css.properties.flood-color.transparent
   - css.properties.flood-opacity
   - css.properties.lighting-color
+  - css.properties.lighting-color.currentColor
+  - css.properties.lighting-color.transparent
   - svg.elements.feColorMatrix
   - svg.elements.feColorMatrix.in
   - svg.elements.feColorMatrix.type
