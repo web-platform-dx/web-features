@@ -170,11 +170,7 @@
                 "description": "A short description of the cause of the regression as HTML",
                 "type": "string"
               },
-              "new_baseline_value": {
-                "description": "The `baseline` status value after the regression",
-                "$ref": "#/definitions/BaselineValue"
-              },
-              "old_baseline_value": {
+              "previous_baseline_value": {
                 "description": "The `baseline` status value before the regression",
                 "$ref": "#/definitions/BaselineValue"
               }
@@ -185,8 +181,7 @@
               "message",
               "message_html",
               "citations",
-              "old_baseline_value",
-              "new_baseline_value"
+              "previous_baseline_value"
             ],
             "type": "object"
           },

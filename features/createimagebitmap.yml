@@ -5,8 +5,7 @@ caniuse: createimagebitmap
 notes:
   - date: 2025-08-11
     category: baseline-regression
-    old_baseline_value: high
-    new_baseline_value: low
+    previous_baseline_value: high
     message: >
       This feature's status was recalculated to be more consistent with caniuse's criteria for full support, requiring `SVGImageElement` as a supported image source.
     citations:

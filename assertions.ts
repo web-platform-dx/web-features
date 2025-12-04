@@ -39,9 +39,9 @@ export function assertFreshRegressionNotes(
   const notes = data.notes ? data.notes : [];
 
   for (const [index, note] of notes.entries()) {
-    if (compareBaselineValue(note.old_baseline_value, baseline) <= 0) {
+    if (compareBaselineValue(note.previous_baseline_value, baseline) <= 0) {
       throw new Error(
-        `regression note ${index} on ${id}.yml no longer applies (status is ${baseline}, was ${note.old_baseline_value}). Delete this note.`,
+        `regression note ${index} on ${id}.yml no longer applies (status is ${baseline}, was ${note.previous_baseline_value}). Delete this note.`,
       );
     }
   }

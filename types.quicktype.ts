@@ -165,13 +165,9 @@ export interface Note {
    */
   message_html: string;
   /**
-   * The `baseline` status value after the regression
-   */
-  new_baseline_value: boolean | BaselineValueEnum;
-  /**
    * The `baseline` status value before the regression
    */
-  old_baseline_value: boolean | BaselineValueEnum;
+  previous_baseline_value: boolean | BaselineValueEnum;
 }
 
 export type BaselineValueEnum = "high" | "low";

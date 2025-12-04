@@ -41,7 +41,7 @@ export interface SupportStatus extends QuicktypeStatusHeadline {
   baseline: BaselineValue;
 }
 export interface RegressionNote extends QuicktypeNote {
-  old_baseline_value: BaselineValue;
+  previous_baseline_value: BaselineValue;
 }
 
 // These are "tests" for our type definitions.

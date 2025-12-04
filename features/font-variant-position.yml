@@ -5,8 +5,7 @@ group: font-features
 notes:
   - date: 2024-10-15
     category: baseline-regression
-    old_baseline_value: low
-    new_baseline_value: false
+    previous_baseline_value: low
     message: >
       Chrome, Edge, and Safari do not implement font synthesis for missing superscript or subscript glyphs.
     citations:

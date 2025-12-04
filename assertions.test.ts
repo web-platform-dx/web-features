@@ -47,7 +47,7 @@ describe("assertFreshRegressionNotes", function () {
       notes: [
         {
           category: "baseline-regression",
-          old_baseline_value: "low",
+          previous_baseline_value: "low",
         },
       ],
     } as Partial<FeatureData> as FeatureData;
@@ -63,7 +63,7 @@ describe("assertFreshRegressionNotes", function () {
       notes: [
         {
           category: "baseline-regression",
-          old_baseline_value: "low",
+          previous_baseline_value: "low",
         },
       ],
     } as Partial<FeatureData> as FeatureData;
@@ -77,7 +77,7 @@ describe("assertFreshRegressionNotes", function () {
       notes: [
         {
           category: "baseline-regression",
-          old_baseline_value: false,
+          previous_baseline_value: false,
         },
       ],
     } as Partial<FeatureData> as FeatureData;
@@ -91,7 +91,7 @@ describe("assertFreshRegressionNotes", function () {
       notes: [
         {
           category: "baseline-regression",
-          old_baseline_value: false,
+          previous_baseline_value: false,
         },
       ],
     } as Partial<FeatureData> as FeatureData;
@@ -107,7 +107,7 @@ describe("assertFreshRegressionNotes", function () {
       notes: [
         {
           category: "baseline-regression",
-          old_baseline_value: "high",
+          previous_baseline_value: "high",
         },
       ],
     } as Partial<FeatureData> as FeatureData;
@@ -119,7 +119,7 @@ describe("assertFreshRegressionNotes", function () {
       notes: [
         {
           category: "baseline-regression",
-          old_baseline_value: "low",
+          previous_baseline_value: "low",
         },
       ],
     } as Partial<FeatureData> as FeatureData;
@@ -131,7 +131,7 @@ describe("assertFreshRegressionNotes", function () {
       notes: [
         {
           category: "baseline-regression",
-          old_baseline_value: "high",
+          previous_baseline_value: "high",
         },
       ],
     } as Partial<FeatureData> as FeatureData;
