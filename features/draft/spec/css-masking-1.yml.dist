@@ -7,9 +7,31 @@ status:
     chrome: "120"
     chrome_android: "120"
     edge: "120"
-    firefox: "53"
-    firefox_android: "53"
+    firefox: "54"
+    firefox_android: "54"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2023-11-02
+  # support:
+  #   chrome: "119"
+  #   chrome_android: "119"
+  #   edge: "119"
+  #   firefox: "54"
+  #   firefox_android: "54"
+  #   safari: "13"
+  #   safari_ios: "13"
+  - css.properties.clip-path.border-box
+  - css.properties.clip-path.content-box
+  - css.properties.clip-path.margin-box
+  - css.properties.clip-path.padding-box
+
+  # baseline: false
+  # support:
+  #   chrome: "120"
+  #   chrome_android: "120"
+  #   edge: "120"
+  #   firefox: "53"
+  #   firefox_android: "53"
   - css.properties.mask-clip.border-box
   - css.properties.mask-clip.content-box
   - css.properties.mask-clip.fill-box

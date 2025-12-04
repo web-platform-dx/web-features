@@ -14,7 +14,16 @@ compat_features:
   #   chrome_android: "116"
   #   edge: "116"
   #   firefox: "139"
+  #   safari: "18"
+  #   safari_ios: "18"
   - api.CredentialsContainer.create.publicKey_option.extensions.prf
+
+  # baseline: false
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "116"
+  #   edge: "116"
+  #   firefox: "139"
   - api.CredentialsContainer.get.publicKey_option.extensions.prf
 
   # ⬇️ Same status as overall feature ⬇️

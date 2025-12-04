@@ -1,4 +1,4 @@
-draft_date: 2025-10-15
+draft_date: 2025-11-10
 name: WebDriver BiDi
 description: TODO
 spec: https://w3c.github.io/webdriver-bidi/
@@ -275,6 +275,7 @@ compat_features:
   - webdriver.bidi.network.getData
   - webdriver.bidi.network.getData.collector_parameter
   - webdriver.bidi.network.getData.dataType_parameter
+  - webdriver.bidi.network.getData.dataType_parameter.request
   - webdriver.bidi.network.getData.dataType_parameter.response
   - webdriver.bidi.network.getData.disown_parameter
   - webdriver.bidi.network.getData.request_parameter
