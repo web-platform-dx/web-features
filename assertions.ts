@@ -1,4 +1,5 @@
 import { isOrdinaryFeatureData } from "./type-guards";
+import { BaselineValue, FeatureData } from "./types";
 import { WebFeaturesData } from "./types.quicktype";
 
 /**
@@ -24,6 +25,35 @@ export function assertValidFeatureReference(
       `${sourceId} references a redirect "${targetId} instead of an ordinary feature ID`,
     );
   }
+}
+
+export function assertFreshRegressionNotes(
+  id: string,
+  data: FeatureData,
+): void {
+  if (!isOrdinaryFeatureData(data)) {
+    return;
+  }
+
+  const { baseline } = data.status;
+  const notes = data.notes ? data.notes : [];
+
+  for (const [index, note] of notes.entries()) {
+    if (compareBaselineValue(note.old_baseline_value, baseline) <= 0) {
+      throw new Error(
+        `regression note ${index} on ${id}.yml no longer applies (status is ${baseline}, was ${note.old_baseline_value}). Delete this note.`,
+      );
+    }
+  }
+}
+
+function compareBaselineValue(a: BaselineValue, b: BaselineValue): number {
+  const statusToNumber = new Map<BaselineValue, number>([
+    ["high", 2],
+    ["low", 1],
+    [false, 0],
+  ]);
+  return statusToNumber.get(a) - statusToNumber.get(b);
 }
 
 // TODO: assertValidSnapshotReference

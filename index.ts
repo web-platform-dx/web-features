@@ -7,7 +7,7 @@ import YAML from 'yaml';
 
 import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, getStatus, parseRangedDateString } from 'compute-baseline';
 import { Compat } from 'compute-baseline/browser-compat-data';
-import { assertValidFeatureReference } from './assertions';
+import { assertFreshRegressionNotes, assertValidFeatureReference } from './assertions';
 import { convertMarkdown } from "./text";
 import { isMoved, isSplit } from './type-guards';
 import { FeatureData, GroupData, SnapshotData, WebFeaturesData } from './types';
@@ -201,15 +201,6 @@ for (const [key, data] of yamlEntries('features')) {
         }
     }
 
-    // Ensure regression notes are still relevant
-    if (Array.isArray(data.notes)) {
-        for (const [index, note] of (data.notes as FeatureData["notes"]).entries()) {
-            if (note.new_baseline_value !== data.status.baseline) {
-                throw new Error(`regression note ${index} on ${key}.yml no longer applies (status is ${data.status.baseline}, note is ${note.new_baseline_value}). Delete this note.`);
-            }
-        }
-    }
-
     if (data.compat_features) {
         // Sort compat_features so that grouping and ordering in dist files has
         // no effect on what web-features users see.
@@ -242,6 +233,7 @@ for (const [id, feature] of Object.entries(features)) {
     const { kind } = feature;
     switch (kind) {
         case "feature":
+            assertFreshRegressionNotes(id, feature);
             for (const alternative of feature.discouraged?.alternatives ?? []) {
                 assertValidFeatureReference(id, alternative, features)
             }

@@ -76,7 +76,7 @@ export interface WebFeaturesData
   };
 }
 
-export type FeatureData = { kind: "feature" } & Required<
+type IntermediateFeatureData = { kind: "feature" } & Required<
   Pick<
     QuicktypeMonolithicFeatureData,
     "description_html" | "description" | "name" | "spec" | "status"
@@ -93,6 +93,11 @@ export type FeatureData = { kind: "feature" } & Required<
       | "notes"
     >
   >;
+
+export interface FeatureData extends IntermediateFeatureData {
+  status: Status;
+  notes?: RegressionNote[];
+}
 
 const goodFeatureData: FeatureData = {
   kind: "feature",
