@@ -145,7 +145,12 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/Accessibility/AriaNotify/explainer.md",
         "Allowed because the ariaNotify() method is not yet in a formal spec. Remove this exception when a formal spec is available."
+    ],
+    [
+        "https://github.com/w3c/manifest/pull/1175",
+        "Allowed because there is no spec yet for Web Install."
     ]
+
 ];
 
 function isOK(url: URL, allowlist: allowlistItem[] = defaultAllowlist) {
