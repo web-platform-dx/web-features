@@ -3,14 +3,8 @@
 
 status:
   baseline: false
-  support:
-    chrome: "125"
-    chrome_android: "125"
-    edge: "125"
-    safari: "26"
-    safari_ios: "26"
+  support: {}
 compat_features:
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "125"
@@ -285,6 +279,7 @@ compat_features:
   - css.properties.position-area.y-end
   - css.properties.position-area.y-start
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - css.properties.position-area.self-x-end

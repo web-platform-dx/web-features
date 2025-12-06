@@ -54,11 +54,14 @@ compat_features:
   - api.RTCTransformEvent
   - api.RTCTransformEvent.transformer
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-11-11
   # support:
   #   chrome: "127"
   #   chrome_android: "127"
   #   edge: "127"
+  #   firefox: "145"
+  #   firefox_android: "145"
   #   safari: "26"
   #   safari_ios: "26"
   - api.RTCEncodedAudioFrame.RTCEncodedAudioFrame
