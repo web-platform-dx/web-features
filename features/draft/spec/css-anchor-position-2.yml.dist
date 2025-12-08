@@ -3,12 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "129"
-    chrome_android: "129"
-    edge: "129"
-    safari: "26"
-    safari_ios: "26"
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -22,7 +17,6 @@ compat_features:
   - css.properties.position-try.flip-start
   - css.properties.position-try.none
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "129"
@@ -132,3 +126,11 @@ compat_features:
   - css.properties.position-try.y-self-end
   - css.properties.position-try.y-self-start
   - css.properties.position-try.y-start
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.position-try-fallbacks.flip-x
+  - css.properties.position-try-fallbacks.flip-y
+  - css.properties.position-try.flip-x
+  - css.properties.position-try.flip-y

@@ -1,4 +1,4 @@
-draft_date: 2025-11-03
+draft_date: 2025-12-08
 name: CSS Anchor Positioning Module Level 2
 description: TODO
 spec: https://drafts.csswg.org/css-anchor-position-2/
@@ -10,6 +10,8 @@ compat_features:
   - css.properties.position-try-fallbacks.bottom
   - css.properties.position-try-fallbacks.center
   - css.properties.position-try-fallbacks.end
+  - css.properties.position-try-fallbacks.flip-x
+  - css.properties.position-try-fallbacks.flip-y
   - css.properties.position-try-fallbacks.inline-end
   - css.properties.position-try-fallbacks.inline-start
   - css.properties.position-try-fallbacks.left
@@ -63,6 +65,8 @@ compat_features:
   - css.properties.position-try.flip-block
   - css.properties.position-try.flip-inline
   - css.properties.position-try.flip-start
+  - css.properties.position-try.flip-x
+  - css.properties.position-try.flip-y
   - css.properties.position-try.inline-end
   - css.properties.position-try.inline-start
   - css.properties.position-try.left
