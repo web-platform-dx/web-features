@@ -3,4 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "142"
+    chrome_android: "142"
+    edge: "142"
+compat_features:
+  - css.at-rules.container.style_queries_for_custom_properties.range_syntax
+  - css.types.if.style.range_syntax
