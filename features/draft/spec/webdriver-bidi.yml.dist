@@ -696,6 +696,17 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "143"
+  #   chrome_android: "143"
+  #   edge: "143"
+  - webdriver.bidi.emulation.setNetworkConditions
+  - webdriver.bidi.emulation.setNetworkConditions.contexts_parameter
+  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter
+  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter.offline
+  - webdriver.bidi.emulation.setNetworkConditions.userContexts_parameter
+
+  # baseline: false
+  # support:
   #   firefox: "112"
   #   firefox_android: "112"
   - webdriver.bidi.browsingContext.print
@@ -817,11 +828,6 @@ compat_features:
   - webdriver.bidi.browsingContext.historyUpdated_event.url_parameter
   - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.beforeunload
   - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.beforeunload
-  - webdriver.bidi.emulation.setNetworkConditions
-  - webdriver.bidi.emulation.setNetworkConditions.contexts_parameter
-  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter
-  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter.offline
-  - webdriver.bidi.emulation.setNetworkConditions.userContexts_parameter
   - webdriver.bidi.network.addDataCollector.collectorType_parameter
   - webdriver.bidi.network.authRequired_event.response_parameter
   - webdriver.bidi.network.provideResponse.body_parameter
