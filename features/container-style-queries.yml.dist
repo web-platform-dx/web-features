@@ -4,23 +4,10 @@
 status:
   baseline: false
   support:
-    chrome: "142"
-    chrome_android: "142"
-    edge: "142"
+    chrome: "111"
+    chrome_android: "111"
+    edge: "111"
+    safari: "18"
+    safari_ios: "18"
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "111"
-  #   chrome_android: "111"
-  #   edge: "111"
-  #   safari: "18"
-  #   safari_ios: "18"
   - css.at-rules.container.style_queries_for_custom_properties
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "142"
-  #   chrome_android: "142"
-  #   edge: "142"
-  - css.at-rules.container.style_queries_for_custom_properties.range_syntax
