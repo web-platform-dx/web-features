@@ -315,7 +315,7 @@ compat_features:
   - api.GPUSupportedFeatures.feature_texture-compression-bc
   - api.GPUSupportedFeatures.feature_texture-compression-etc2
   - api.GPUSupportedFeatures.feature_timestamp-query
-  - api.GPUTexture.createView.texture_rgb10a2uint
+  - api.GPUTexture.createView.descriptor_format_parameter_accepts_rgb10a2uint
   - api.GPUTexture.format.texture_rgb10a2uint
 
   # baseline: false
@@ -365,7 +365,7 @@ compat_features:
   #   chrome_android: "132"
   - api.GPUDevice.adapterInfo
   - api.GPUSupportedFeatures.feature_float32-blendable
-  - api.GPUTexture.createView.usage
+  - api.GPUTexture.createView.descriptor_usage_parameter
 
   # baseline: false
   # support:

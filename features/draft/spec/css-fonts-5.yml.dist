@@ -54,6 +54,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "143"
+  #   chrome_android: "143"
+  #   edge: "143"
+  #   firefox: "34"
+  #   firefox_android: "34"
+  - css.properties.font-language-override.normal
+
+  # baseline: false
+  # support:
   #   safari: "26"
   #   safari_ios: "26"
   - api.CSSFontFaceDescriptors
@@ -76,12 +85,6 @@ compat_features:
   - api.CSSFontFaceDescriptors.src
   - api.CSSFontFaceDescriptors.unicode-range
   - api.CSSFontFaceDescriptors.unicodeRange
-
-  # baseline: false
-  # support:
-  #   firefox: "34"
-  #   firefox_android: "34"
-  - css.properties.font-language-override.normal
 
   # baseline: false
   # support:
