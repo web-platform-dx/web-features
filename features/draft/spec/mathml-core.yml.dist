@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "109"
-    chrome_android: "109"
-    edge: "109"
+  support: {}
 compat_features:
   # baseline: low
   # baseline_low_date: 2023-08-29
@@ -30,7 +27,6 @@ compat_features:
   #   firefox_android: "117"
   - css.properties.math-depth.auto-add
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "109"
@@ -38,3 +34,8 @@ compat_features:
   #   edge: "109"
   - css.properties.math-shift.compact
   - css.properties.math-shift.normal
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - mathml.global_attributes.dir.rtl_operator_mirroring

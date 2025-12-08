@@ -1,4 +1,4 @@
-draft_date: 2025-11-03
+draft_date: 2025-12-08
 name: CSS Animations Level 2
 description: TODO
 spec: https://drafts.csswg.org/css-animations-2/
@@ -8,17 +8,7 @@ compat_features:
   - css.properties.animation-composition.replace
   - css.properties.animation-timeline.auto
   - css.properties.animation-timeline.none
-  - css.properties.animation.alternate
-  - css.properties.animation.alternate-reverse
-  - css.properties.animation.auto
-  - css.properties.animation.backwards
-  - css.properties.animation.both
-  - css.properties.animation.forwards
-  - css.properties.animation.infinite
-  - css.properties.animation.none
-  - css.properties.animation.normal
   - css.properties.animation.paused
-  - css.properties.animation.reverse
   - css.properties.animation.running
 
 # The following features in the spec are already part of web-features:
@@ -43,6 +33,16 @@ compat_features:
 #   - css.at-rules.keyframes
 #   - css.at-rules.keyframes.ignore_important_declarations
 #   - css.properties.animation
+#   - css.properties.animation.alternate
+#   - css.properties.animation.alternate-reverse
+#   - css.properties.animation.auto
+#   - css.properties.animation.backwards
+#   - css.properties.animation.both
+#   - css.properties.animation.forwards
+#   - css.properties.animation.infinite
+#   - css.properties.animation.none
+#   - css.properties.animation.normal
+#   - css.properties.animation.reverse
 #   - css.properties.animation-delay
 #   - css.properties.animation-direction
 #   - css.properties.animation-direction.alternate

@@ -1,10 +1,18 @@
-draft_date: 2025-07-03
+draft_date: 2025-12-08
 name: WebXR Device API
 description: TODO
 spec: https://immersive-web.github.io/webxr/
 compat_features:
   - api.XRDepthInformation.projectionMatrix
   - api.XRDepthInformation.transform
+  - api.XRView.index
+  - api.XRVisibilityMaskChangeEvent
+  - api.XRVisibilityMaskChangeEvent.XRVisibilityMaskChangeEvent
+  - api.XRVisibilityMaskChangeEvent.eye
+  - api.XRVisibilityMaskChangeEvent.index
+  - api.XRVisibilityMaskChangeEvent.indices
+  - api.XRVisibilityMaskChangeEvent.session
+  - api.XRVisibilityMaskChangeEvent.vertices
 
 # The following features in the spec are already part of web-features:
 # - WebXR:

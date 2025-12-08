@@ -18,6 +18,15 @@ compat_features:
   - api.TransitionEvent.pseudoElement
   - api.TransitionEvent.TransitionEvent
   - css.properties.transition
+  - css.properties.transition.all
+  - css.properties.transition.ease
+  - css.properties.transition.ease-in
+  - css.properties.transition.ease-in-out
+  - css.properties.transition.ease-out
+  - css.properties.transition.linear
+  - css.properties.transition.none
+  - css.properties.transition.step-end
+  - css.properties.transition.step-start
   - css.properties.transition-delay
   - css.properties.transition-duration
   - css.properties.transition-property
@@ -25,5 +34,12 @@ compat_features:
   - css.properties.transition-property.IDENT_value
   - css.properties.transition-property.none
   - css.properties.transition-timing-function
+  - css.properties.transition-timing-function.ease
+  - css.properties.transition-timing-function.ease-in
+  - css.properties.transition-timing-function.ease-in-out
+  - css.properties.transition-timing-function.ease-out
   - css.properties.transition-timing-function.jump
+  - css.properties.transition-timing-function.linear
+  - css.properties.transition-timing-function.step-end
+  - css.properties.transition-timing-function.step-start
   - css.properties.transition.gradients_can_animate
