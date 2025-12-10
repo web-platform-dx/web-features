@@ -28,21 +28,6 @@ compat_features:
   - css.properties.pointer-events.visible
 
   # baseline: high
-  # baseline_low_date: ≤2016-08-02
-  # baseline_high_date: ≤2019-02-02
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: ≤14
-  #   firefox: "3"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - css.properties.text-anchor.end
-  - css.properties.text-anchor.middle
-  - css.properties.text-anchor.start
-
-  # baseline: high
   # baseline_low_date: ≤2016-11-15
   # baseline_high_date: ≤2019-05-15
   # support:
@@ -56,50 +41,6 @@ compat_features:
   - css.properties.pointer-events.visibleFill
   - css.properties.pointer-events.visiblePainted
   - css.properties.pointer-events.visibleStroke
-
-  # baseline: high
-  # baseline_low_date: ≤2017-04-05
-  # baseline_high_date: ≤2019-10-05
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: ≤15
-  #   firefox: "1.5"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - css.properties.stroke.none
-
-  # baseline: high
-  # baseline_low_date: ≤2017-04-05
-  # baseline_high_date: ≤2019-10-05
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: ≤15
-  #   firefox: "3"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - css.properties.fill.none
-  - css.properties.marker-end.none
-  - css.properties.marker-mid.none
-  - css.properties.marker-start.none
-  - css.properties.marker.none
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "79"
-  #   firefox: "3"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - css.properties.color-interpolation.auto
-  - css.properties.shape-rendering.auto
 
   # baseline: high
   # baseline_low_date: 2020-01-15

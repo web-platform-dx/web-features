@@ -1,10 +1,8 @@
-draft_date: 2025-11-13
+draft_date: 2025-12-08
 name: Cascading Style Sheets Level 2
 description: TODO
 spec: https://drafts.csswg.org/css2/
 compat_features:
-  - css.properties.clear.none
-  - css.properties.font-style.oblique
   - css.properties.max-block-size.none
   - css.properties.max-inline-size.none
   - css.properties.text-decoration.dashed
@@ -36,11 +34,14 @@ compat_features:
 #   - css.properties.clear
 #   - css.properties.clear.both
 #   - css.properties.clear.left
+#   - css.properties.clear.none
 #   - css.properties.clear.right
 #   - css.properties.float
 #   - css.properties.float.left
 #   - css.properties.float.none
 #   - css.properties.float.right
+# - font-style:
+#   - css.properties.font-style.oblique
 # - z-index:
 #   - css.properties.z-index
 #   - css.properties.z-index.auto
