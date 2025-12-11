@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "146"
+    firefox_android: "146"
 compat_features:
   # baseline: low
   # baseline_low_date: 2023-08-29
@@ -32,10 +34,14 @@ compat_features:
   #   chrome: "109"
   #   chrome_android: "109"
   #   edge: "109"
+  #   firefox: "146"
+  #   firefox_android: "146"
   - css.properties.math-shift.compact
   - css.properties.math-shift.normal
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "146"
+  #   firefox_android: "146"
   - mathml.global_attributes.dir.rtl_operator_mirroring

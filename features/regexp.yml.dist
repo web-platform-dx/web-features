@@ -304,11 +304,14 @@ compat_features:
   #   safari_ios: "17"
   - javascript.regular_expressions.named_capturing_group.duplicate_named_capturing_groups
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-09-15
   # support:
   #   chrome: "125"
   #   chrome_android: "125"
   #   edge: "125"
   #   firefox: "132"
   #   firefox_android: "132"
+  #   safari: "26"
+  #   safari_ios: "26"
   - javascript.regular_expressions.modifier

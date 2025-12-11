@@ -586,6 +586,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  #   edge: "142"
+  #   firefox: "146"
+  #   firefox_android: "146"
+  - webdriver.bidi.network.getData.dataType_parameter.request
+
+  # baseline: false
+  # support:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
@@ -692,7 +701,6 @@ compat_features:
   - webdriver.bidi.browser.setDownloadBehavior
   - webdriver.bidi.browser.setDownloadBehavior.downloadBehavior_parameter
   - webdriver.bidi.browser.setDownloadBehavior.userContexts_parameter
-  - webdriver.bidi.network.getData.dataType_parameter.request
 
   # baseline: false
   # support:
