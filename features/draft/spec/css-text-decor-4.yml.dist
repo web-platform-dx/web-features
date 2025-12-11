@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "146"
+    firefox_android: "146"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -70,6 +72,8 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "146"
+  #   firefox_android: "146"
   - css.properties.text-decoration-inset
   - css.properties.text-decoration-inset.auto
