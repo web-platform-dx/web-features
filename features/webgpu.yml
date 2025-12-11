@@ -274,8 +274,8 @@ compat_features:
   - api.GPUSupportedLimits.minUniformBufferOffsetAlignment
   - api.GPUTexture
   - api.GPUTexture.createView
-  - api.GPUTexture.createView.texture_rgb10a2uint
-  - api.GPUTexture.createView.usage
+  - api.GPUTexture.createView.descriptor_format_parameter_accepts_rgb10a2uint
+  - api.GPUTexture.createView.descriptor_usage_parameter
   - api.GPUTexture.depthOrArrayLayers
   - api.GPUTexture.destroy
   - api.GPUTexture.dimension

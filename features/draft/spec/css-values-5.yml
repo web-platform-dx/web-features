@@ -1,4 +1,4 @@
-draft_date: 2025-11-10
+draft_date: 2025-12-11
 name: CSS Values and Units Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-values-5/
@@ -13,6 +13,7 @@ compat_features:
   - css.properties.offset.left
   - css.properties.offset.right
   - css.properties.offset.top
+  - css.types.if.style
 
 # The following features in the spec are already part of web-features:
 # - Media queries:
@@ -51,15 +52,20 @@ compat_features:
 # - attr() (content only):
 #   - css.types.attr
 # - attr():
-#   - css.types.attr.fallback
-#   - css.types.attr.type-or-unit
-#   - css.types.attr.type-or-unit.angle
-#   - css.types.attr.type-or-unit.color
-#   - css.types.attr.type-or-unit.integer
-#   - css.types.attr.type-or-unit.length
-#   - css.types.attr.type-or-unit.number
-#   - css.types.attr.type-or-unit.percentage
-#   - css.types.attr.type-or-unit.time
+#   - css.types.attr.declaration-value
+#   - css.types.attr.type_function
+#   - css.types.attr.type_function.angle
+#   - css.types.attr.type_function.custom-ident
+#   - css.types.attr.type_function.ident
+#   - css.types.attr.type_function.integer
+#   - css.types.attr.type_function.length
+#   - css.types.attr.type_function.length-percentage
+#   - css.types.attr.type_function.number
+#   - css.types.attr.type_function.percentage
+#   - css.types.attr.type_function.resolution
+#   - css.types.attr.type_function.string
+#   - css.types.attr.type_function.time
+#   - css.types.attr.type_function.url
 # - calc():
 #   - css.types.calc
 #   - css.types.calc.gradient_color_stops

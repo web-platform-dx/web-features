@@ -3,12 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "129"
-    chrome_android: "129"
-    edge: "129"
-    safari: "26"
-    safari_ios: "26"
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -22,7 +17,6 @@ compat_features:
   - css.properties.position-try.flip-start
   - css.properties.position-try.none
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "129"
@@ -132,3 +126,38 @@ compat_features:
   - css.properties.position-try.y-self-end
   - css.properties.position-try.y-self-start
   - css.properties.position-try.y-start
+
+  # baseline: false
+  # support:
+  #   chrome: "143"
+  #   chrome_android: "143"
+  #   edge: "143"
+  - css.at-rules.container.anchor_position_queries
+  - css.at-rules.container.anchor_position_queries.fallback
+  - css.at-rules.container.anchor_position_queries.fallback.any_value
+  - css.properties.container-type.anchored
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.position-try-fallbacks.flip-x
+  - css.properties.position-try-fallbacks.flip-y
+  - css.properties.position-try-fallbacks.self-x-end
+  - css.properties.position-try-fallbacks.self-x-start
+  - css.properties.position-try-fallbacks.self-y-end
+  - css.properties.position-try-fallbacks.self-y-start
+  - css.properties.position-try-fallbacks.span-self-x-end
+  - css.properties.position-try-fallbacks.span-self-x-start
+  - css.properties.position-try-fallbacks.span-self-y-end
+  - css.properties.position-try-fallbacks.span-self-y-start
+  - css.properties.position-try.flip-x
+  - css.properties.position-try.flip-y
+  - css.properties.position-try.self-x-end
+  - css.properties.position-try.self-x-start
+  - css.properties.position-try.self-y-end
+  - css.properties.position-try.self-y-start
+  - css.properties.position-try.span-self-x-end
+  - css.properties.position-try.span-self-x-start
+  - css.properties.position-try.span-self-y-end
+  - css.properties.position-try.span-self-y-start
+  - css.properties.position-visibility.anchors-valid

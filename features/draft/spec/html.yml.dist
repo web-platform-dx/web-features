@@ -676,6 +676,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "119"
+  #   edge: "119"
+  #   firefox: "122"
+  #   firefox_android: "145"
+  #   safari: "17"
+  #   safari_ios: "17.4"
+  - html.elements.hr.hr_in_select
+
+  # baseline: false
+  # support:
   #   chrome: "17"
   #   chrome_android: "18"
   #   edge: "79"
@@ -947,13 +957,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "140"
-  #   chrome_android: "140"
-  #   edge: "140"
-  - api.ToggleEvent.source
-
-  # baseline: false
-  # support:
   #   chrome: "141"
   #   chrome_android: "141"
   #   edge: "141"
@@ -1010,5 +1013,4 @@ compat_features:
   # baseline: false
   # support: {}
   - api.Navigator.authentication
-  - html.elements.hr.hr_in_select
   - html.elements.track.kind.descriptions

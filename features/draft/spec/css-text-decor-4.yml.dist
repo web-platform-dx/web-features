@@ -4,11 +4,8 @@
 status:
   baseline: false
   support:
-    chrome: "121"
-    chrome_android: "121"
-    edge: "121"
-    firefox: "137"
-    firefox_android: "137"
+    firefox: "146"
+    firefox_android: "146"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -63,7 +60,6 @@ compat_features:
   - css.properties.text-decoration.auto
   - css.properties.text-decoration.from-font
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "121"
@@ -73,3 +69,11 @@ compat_features:
   #   firefox_android: "137"
   - css.properties.text-decoration.grammar-error
   - css.properties.text-decoration.spelling-error
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   firefox: "146"
+  #   firefox_android: "146"
+  - css.properties.text-decoration-inset
+  - css.properties.text-decoration-inset.auto

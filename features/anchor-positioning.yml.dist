@@ -3,14 +3,8 @@
 
 status:
   baseline: false
-  support:
-    chrome: "125"
-    chrome_android: "125"
-    edge: "125"
-    safari: "26"
-    safari_ios: "26"
+  support: {}
 compat_features:
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "125"
@@ -261,6 +255,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "143"
+  #   chrome_android: "143"
+  #   edge: "143"
+  - css.properties.position-area.span-self-x-end
+  - css.properties.position-area.span-self-x-start
+  - css.properties.position-area.span-self-y-end
+  - css.properties.position-area.span-self-y-start
+
+  # baseline: false
+  # support:
   #   safari: "26"
   #   safari_ios: "26"
   - css.properties.position-anchor.auto
@@ -285,13 +289,10 @@ compat_features:
   - css.properties.position-area.y-end
   - css.properties.position-area.y-start
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - css.properties.position-area.self-x-end
   - css.properties.position-area.self-x-start
   - css.properties.position-area.self-y-end
   - css.properties.position-area.self-y-start
-  - css.properties.position-area.span-self-x-end
-  - css.properties.position-area.span-self-x-start
-  - css.properties.position-area.span-self-y-end
-  - css.properties.position-area.span-self-y-start

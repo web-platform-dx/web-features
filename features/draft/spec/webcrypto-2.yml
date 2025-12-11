@@ -1,0 +1,43 @@
+draft_date: 2025-12-11
+name: Web Cryptography Level 2
+description: TODO
+spec: https://w3c.github.io/webcrypto/
+compat_features:
+  - api.SubtleCrypto.importKey.ECDH
+  - api.SubtleCrypto.importKey.ECDH.compressed_elliptic_curve_points
+  - api.SubtleCrypto.importKey.ECDSA
+  - api.SubtleCrypto.importKey.ECDSA.compressed_elliptic_curve_points
+
+# The following features in the spec are already part of web-features:
+# - Web Cryptography:
+#   - api.Crypto
+#   - api.Crypto.getRandomValues
+#   - api.Crypto.randomUUID
+#   - api.Crypto.subtle
+#   - api.Crypto.subtle.secure_context_required
+#   - api.CryptoKey
+#   - api.CryptoKey.algorithm
+#   - api.CryptoKey.extractable
+#   - api.CryptoKey.type
+#   - api.CryptoKey.usages
+#   - api.SubtleCrypto
+#   - api.SubtleCrypto.decrypt
+#   - api.SubtleCrypto.deriveBits
+#   - api.SubtleCrypto.deriveKey
+#   - api.SubtleCrypto.deriveKey.derivedKeyAlgorithm_option_aes
+#   - api.SubtleCrypto.deriveKey.derivedKeyAlgorithm_option_hkdf
+#   - api.SubtleCrypto.deriveKey.derivedKeyAlgorithm_option_hmac
+#   - api.SubtleCrypto.deriveKey.derivedKeyAlgorithm_option_pbkdf2
+#   - api.SubtleCrypto.digest
+#   - api.SubtleCrypto.encrypt
+#   - api.SubtleCrypto.exportKey
+#   - api.SubtleCrypto.generateKey
+#   - api.SubtleCrypto.importKey
+#   - api.SubtleCrypto.secure_context_required
+#   - api.SubtleCrypto.sign
+#   - api.SubtleCrypto.unwrapKey
+#   - api.SubtleCrypto.verify
+#   - api.SubtleCrypto.worker_support
+#   - api.SubtleCrypto.wrapKey
+#   - api.crypto
+#   - api.crypto.worker_support
