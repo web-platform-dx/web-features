@@ -2,8 +2,8 @@ name: Anchor position container queries
 description: >
   Anchor position container queries with the `@container anchored(fallback: …)` at-rule apply styles to an element based on the element's anchor position.
 spec: https://drafts.csswg.org/css-anchor-position-2/#anchored-container-queries
-# Expected compat_features:
-# - css.properties.container-type.anchored
-# - css.at-rules.container.anchor_position_queries
-# - css.at-rules.container.anchor_position_queries.fallback
-# - css.at-rules.container.anchor_position_queries.fallback.any
+compat_features:
+  - css.properties.container-type.anchored
+  - css.at-rules.container.anchor_position_queries
+  - css.at-rules.container.anchor_position_queries.fallback
+  - css.at-rules.container.anchor_position_queries.fallback.any_value
