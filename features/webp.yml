@@ -2,15 +2,9 @@ name: WebP
 description: The WebP image format is a raster graphics file format that supports animation, alpha transparency, and lossy as well as lossless compression.
 spec: https://www.rfc-editor.org/rfc/rfc9649
 caniuse: webp
-# TODO: Add notes about animated WebP coming later in Chrome (but don't mark this as partially supported)
-status:
-  baseline: high
-  baseline_low_date: 2020-09-16
-  support:
-    chrome: "9"
-    chrome_android: "18"
-    edge: "18"
-    firefox: "65"
-    firefox_android: "65"
-    safari: "14"
-    safari_ios: "14"
+compat_features:
+  - mediatypes.image.webp
+  - mediatypes.image.webp.alpha
+  - mediatypes.image.webp.animation
+  - mediatypes.image.webp.lossless
+  - mediatypes.image.webp.lossy
