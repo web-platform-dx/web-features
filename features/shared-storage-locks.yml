@@ -1,6 +1,12 @@
 name: Shared storage locks
 description: The `withLock` option to `set()`, `append()`, `delete()`, `clear()`, and `batchUpdate()` methods of the `sharedStorage` API prevents duplicate reporting from cross-site race conditions.
 spec: https://wicg.github.io/shared-storage/#web-locks-integration
+discouraged:
+  removal_date: 2026-06-01 # Chrome 150
+  reason: Due to declining interest from web developers and lack of interest from other browser vendors, Google decided to withdraw many Privacy Sandbox features including shared storage locks.
+  according_to:
+    - https://privacysandbox.com/news/update-on-plans-for-privacy-sandbox-technologies/
+    - https://chromestatus.com/feature/5076349064708096
 compat_features:
   - api.SharedStorage.batchUpdate
   - api.SharedStorageAppendMethod

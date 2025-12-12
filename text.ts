@@ -5,7 +5,11 @@ import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
 
-export function convertMarkdown(markdown: string) {
+export function convertMarkdown(markdown: unknown) {
+  if (typeof markdown !== "string") {
+    throw new Error(`${markdown} is not a string!`);
+  }
+
   const mdTree = unified().use(remarkParse).parse(markdown);
   const htmlTree = unified().use(remarkRehype).runSync(mdTree);
   const text = hastTreeToString(htmlTree);
