@@ -2,8 +2,8 @@ name: Shared storage
 description: The `sharedStorage` API stores data to a shared space where the data can then be processed without the ability to track users across the different sites they visit. A common use case is measuring the reach of third-party ads without using user-tracking cookies."
 spec: https://wicg.github.io/shared-storage/
 discouraged:
-  # removal_date: 2026-06-01 # Chrome 150
-  # reason: Due to declining interest from web developers and lack of interest from other browser vendors, Google decided to withdraw many Privacy Sandbox features including shared storage.
+  removal_date: 2026-06-01 # Chrome 150
+  reason: Due to declining interest from web developers and lack of interest from other browser vendors, Google decided to withdraw many Privacy Sandbox features including shared storage.
   according_to:
     - https://privacysandbox.com/news/update-on-plans-for-privacy-sandbox-technologies/
     - https://chromestatus.com/feature/5076349064708096
