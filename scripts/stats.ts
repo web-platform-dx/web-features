@@ -4,17 +4,11 @@ import yargs from "yargs";
 import { features } from "../index.js";
 import { isOrdinaryFeatureData } from "../type-guards.js";
 
-const argv = yargs(process.argv.slice(2))
+yargs(process.argv.slice(2))
   .scriptName("stats")
-  .usage("$0", "Generate statistics")
-  .option("verbose", {
-    alias: "v",
-    describe: "Show more detailed stats",
-    type: "count",
-    default: 0,
-  }).argv;
+  .usage("$0", "Generate statistics").argv;
 
-export function stats(detailed: boolean = false) {
+export function stats() {
   const featureCount = Object.values(features).filter(
     isOrdinaryFeatureData,
   ).length;
@@ -30,17 +24,10 @@ export function stats(detailed: boolean = false) {
       }),
     ),
   );
-  const toDoKeys = [];
 
   for (const f of new Compat().walk()) {
     if (!f.id.startsWith("webextensions")) {
       keys.push(f.id);
-
-      if (!f.deprecated && f.standard_track) {
-        if (!doneKeys.includes(f.id)) {
-          toDoKeys.push(f.id);
-        }
-      }
     }
   }
 
@@ -71,19 +58,13 @@ export function stats(detailed: boolean = false) {
         .sort(([, frequencyA], [, frequencyB]) => frequencyA - frequencyB)
         .pop()[0];
     })(),
-    currentBurndown: undefined,
-    currentBurndownSize: toDoKeys.length,
   };
-
-  if (detailed) {
-    result.currentBurndown = toDoKeys;
-  }
 
   return result;
 }
 
 if (import.meta.url.startsWith("file:")) {
   if (process.argv[1] === fileURLToPath(import.meta.url)) {
-    console.log(JSON.stringify(stats(argv.verbose), undefined, 2));
+    console.log(JSON.stringify(stats(), undefined, 2));
   }
 }
