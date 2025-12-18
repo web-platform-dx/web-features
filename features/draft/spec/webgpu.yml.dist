@@ -3,7 +3,8 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome_android: "143"
 compat_features:
   # baseline: false
   # support:
@@ -48,6 +49,11 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome_android: "139"
+  - api.GPUSupportedFeatures.feature_core-features-and-limits
+
+  # baseline: false
+  # support:
   #   chrome_android: "140"
   - api.GPUCommandEncoder.beginRenderPass.accepts_GPUTexture_resources
   - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTexture_resource
@@ -61,5 +67,7 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
-  - api.GPUSupportedFeatures.feature_core-features-and-limits
+  # support:
+  #   chrome_android: "143"
+  - api.GPUSupportedFeatures.feature_texture-component-swizzle
+  - api.GPUTexture.createView.descriptor_swizzle_parameter

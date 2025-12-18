@@ -586,6 +586,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  #   edge: "142"
+  #   firefox: "146"
+  #   firefox_android: "146"
+  - webdriver.bidi.network.getData.dataType_parameter.request
+
+  # baseline: false
+  # support:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
@@ -692,7 +701,17 @@ compat_features:
   - webdriver.bidi.browser.setDownloadBehavior
   - webdriver.bidi.browser.setDownloadBehavior.downloadBehavior_parameter
   - webdriver.bidi.browser.setDownloadBehavior.userContexts_parameter
-  - webdriver.bidi.network.getData.dataType_parameter.request
+
+  # baseline: false
+  # support:
+  #   chrome: "143"
+  #   chrome_android: "143"
+  #   edge: "143"
+  - webdriver.bidi.emulation.setNetworkConditions
+  - webdriver.bidi.emulation.setNetworkConditions.contexts_parameter
+  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter
+  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter.offline
+  - webdriver.bidi.emulation.setNetworkConditions.userContexts_parameter
 
   # baseline: false
   # support:
@@ -817,11 +836,7 @@ compat_features:
   - webdriver.bidi.browsingContext.historyUpdated_event.url_parameter
   - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.beforeunload
   - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.beforeunload
-  - webdriver.bidi.emulation.setNetworkConditions
-  - webdriver.bidi.emulation.setNetworkConditions.contexts_parameter
-  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter
-  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter.offline
-  - webdriver.bidi.emulation.setNetworkConditions.userContexts_parameter
+  - webdriver.bidi.emulation.setScreenSettingsOverride
   - webdriver.bidi.network.addDataCollector.collectorType_parameter
   - webdriver.bidi.network.authRequired_event.response_parameter
   - webdriver.bidi.network.provideResponse.body_parameter

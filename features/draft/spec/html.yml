@@ -1,4 +1,4 @@
-draft_date: 2025-11-10
+draft_date: 2025-12-11
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -90,7 +90,6 @@ compat_features:
   - api.ShadowRoot.activeElement
   - api.ShadowRoot.innerHTML
   - api.SharedWorker.SharedWorker.enforces_trusted_types
-  - api.ToggleEvent.source
   - api.TrackEvent
   - api.TrackEvent.TrackEvent
   - api.TrackEvent.track
@@ -2173,6 +2172,8 @@ compat_features:
 #   - api.Window.localStorage
 #   - api.Window.sessionStorage
 #   - api.Window.storage_event
+# - ToggleEvent source:
+#   - api.ToggleEvent.source
 # - Page visibility state:
 #   - api.VisibilityStateEntry
 #   - api.VisibilityStateEntry.duration
