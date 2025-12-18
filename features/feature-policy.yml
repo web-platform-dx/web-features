@@ -7,6 +7,11 @@ discouraged:
     - https://github.com/w3c/webappsec-permissions-policy/pull/379
   alternatives:
     - permissions-policy
+status:
+  compute_from:
+    - http.headers.Feature-Policy
+    - api.Document.featurePolicy
+    - api.HTMLIFrameElement.featurePolicy
 compat_features:
   - http.headers.Feature-Policy
   - http.headers.Feature-Policy.accelerometer
