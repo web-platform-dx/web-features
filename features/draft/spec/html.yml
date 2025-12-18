@@ -1,4 +1,4 @@
-draft_date: 2025-12-11
+draft_date: 2025-12-18
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -107,6 +107,7 @@ compat_features:
   - api.setInterval.supports_parameters_for_callback
   - api.setTimeout.supports_parameters_for_callback
   - html.elements.button.command.request-close
+  - html.elements.details.search_match_opens
   - html.elements.form.autocomplete.new-password
   - html.elements.form.autocomplete.one-time-code
   - html.elements.form.autocomplete.webauthn
@@ -2213,8 +2214,6 @@ compat_features:
 # - requestAnimationFrame():
 #   - api.Window.cancelAnimationFrame
 #   - api.Window.requestAnimationFrame
-# - Attribution reporting:
-#   - api.Window.open.features_parameter_attributionsrc
 # - Window management:
 #   - api.Window.open.relative-multi-screen
 # - window.print():
