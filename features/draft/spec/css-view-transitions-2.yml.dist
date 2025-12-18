@@ -3,11 +3,17 @@
 
 status:
   baseline: false
-  support:
-    chrome: "142"
-    chrome_android: "142"
-    edge: "142"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  #   edge: "142"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - api.Document.activeViewTransition
+
   # baseline: false
   # support:
   #   chrome: "140"
@@ -17,11 +23,9 @@ compat_features:
   - css.properties.view-transition-group.contain
   - css.properties.view-transition-group.nearest
   - css.properties.view-transition-group.normal
+  - css.selectors.view-transition-group-children
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support:
-  #   chrome: "142"
-  #   chrome_android: "142"
-  #   edge: "142"
-  - api.Document.activeViewTransition
+  # support: {}
+  - api.ViewTransition.waitUntil

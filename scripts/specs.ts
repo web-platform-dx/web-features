@@ -151,6 +151,18 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because the ariaNotify() method is not yet in a formal spec. Remove this exception when a formal spec is available."
     ],
     [
+        "https://github.com/whatwg/html/pull/11006",
+        "Allowed because this spec PR hasn't landed yet. Once the PR merges, change the spec url and remove this exception."
+    ],
+    [
+        "https://github.com/w3c/manifest/pull/1175",
+        "Allowed because there is no spec yet for Web Install."
+    ],
+    [
+        "https://github.com/WebAssembly/branch-hinting/blob/main/proposals/branch-hinting/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
         "https://www.w3.org/TR/2019/WD-feature-policy-1-20190416/",
         "Allowed because feature policy was replaced by permissions policy."
     ]
