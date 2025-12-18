@@ -116,10 +116,8 @@ compat_features:
   #   chrome: "143"
   #   chrome_android: "143"
   #   edge: "143"
-  - css.at-rules.container.anchor_position_queries
-  - css.at-rules.container.anchor_position_queries.fallback
-  - css.at-rules.container.anchor_position_queries.fallback.any_value
-  - css.properties.container-type.anchored
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
   - css.properties.position-try-fallbacks.span-self-x-end
   - css.properties.position-try-fallbacks.span-self-x-start
   - css.properties.position-try-fallbacks.span-self-y-end
@@ -129,9 +127,20 @@ compat_features:
   - css.properties.position-try.span-self-y-end
   - css.properties.position-try.span-self-y-start
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "143"
+  #   chrome_android: "143"
+  #   edge: "143"
+  - css.at-rules.container.anchor_position_queries
+  - css.at-rules.container.anchor_position_queries.fallback
+  - css.at-rules.container.anchor_position_queries.fallback.any_value
+  - css.properties.container-type.anchored
+
+  # baseline: false
+  # support:
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
   - css.properties.position-try-fallbacks.flip-x
   - css.properties.position-try-fallbacks.flip-y
   - css.properties.position-try-fallbacks.self-x-end
@@ -144,4 +153,8 @@ compat_features:
   - css.properties.position-try.self-x-start
   - css.properties.position-try.self-y-end
   - css.properties.position-try.self-y-start
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
   - css.properties.position-visibility.anchors-valid

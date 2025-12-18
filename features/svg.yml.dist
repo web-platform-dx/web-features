@@ -1775,6 +1775,18 @@ compat_features:
   - api.SVGGeometryElement.isPointInFill.point_parameter_DOMPoint
   - api.SVGGeometryElement.isPointInStroke.point_parameter_DOMPoint
 
+  # baseline: low
+  # baseline_low_date: 2025-12-12
+  # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  #   edge: "142"
+  #   firefox: "117"
+  #   firefox_android: "117"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - api.SVGScriptElement.async
+
   # baseline: false
   # support:
   #   chrome: "1"
@@ -1837,15 +1849,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "142"
-  #   chrome_android: "142"
-  #   edge: "142"
-  #   firefox: "117"
-  #   firefox_android: "117"
-  - api.SVGScriptElement.async
-
-  # baseline: false
-  # support:
   #   chrome: ≤80
   #   chrome_android: ≤80
   #   edge: ≤80
@@ -1881,6 +1884,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   firefox: "61"
+  #   firefox_android: "61"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - api.SVGAElement.hreflang
+  - api.SVGAElement.type
+
+  # baseline: false
+  # support:
   #   chrome: "51"
   #   chrome_android: "51"
   #   edge: "79"
@@ -1910,9 +1922,7 @@ compat_features:
   # support:
   #   firefox: "61"
   #   firefox_android: "61"
-  - api.SVGAElement.hreflang
   - api.SVGAElement.referrerPolicy
-  - api.SVGAElement.type
   - svg.elements.a.hreflang
   - svg.elements.a.type
   - svg.elements.textPath.path

@@ -268,6 +268,18 @@ compat_features:
   - mathml.elements.mtd.columnspan
   - mathml.elements.mtd.rowspan
 
+  # baseline: low
+  # baseline_low_date: 2025-12-12
+  # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  #   firefox: "146"
+  #   firefox_android: "146"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - css.properties.math-shift
+
   # baseline: false
   # support:
   #   chrome: "109"
@@ -305,15 +317,6 @@ compat_features:
   - css.properties.font-size.math
   - css.properties.math-depth
   - css.properties.text-transform.math-auto
-
-  # baseline: false
-  # support:
-  #   chrome: "109"
-  #   chrome_android: "109"
-  #   edge: "109"
-  #   firefox: "146"
-  #   firefox_android: "146"
-  - css.properties.math-shift
 
   # baseline: false
   # support:

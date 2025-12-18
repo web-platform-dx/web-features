@@ -10,12 +10,31 @@ status:
     firefox: "144"
     firefox_android: "144"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2025-12-12
+  # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
+  #   firefox: "144"
+  #   firefox_android: "144"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
   - api.CommandEvent
   - api.CommandEvent.CommandEvent
   - api.CommandEvent.command
   - api.CommandEvent.source
   - api.HTMLButtonElement.command
   - api.HTMLButtonElement.commandForElement
-  - api.HTMLElement.command_event
   - html.elements.button.command
   - html.elements.button.commandfor
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
+  #   firefox: "144"
+  #   firefox_android: "144"
+  - api.HTMLElement.command_event
