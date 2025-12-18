@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "74"
+    chrome_android: "74"
+    edge: "79"
 compat_features:
   # baseline: false
   # support:
@@ -48,6 +51,7 @@ compat_features:
   #   edge: "79"
   - http.headers.Feature-Policy.picture-in-picture
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "74"
@@ -188,7 +192,6 @@ compat_features:
   #   edge: "125"
   - http.headers.Feature-Policy.compute-pressure
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - http.headers.Feature-Policy.ambient-light-sensor
