@@ -1,12 +1,8 @@
-draft_date: 2025-12-11
+draft_date: 2025-12-18
 name: CSS Anchor Positioning Module Level 2
 description: TODO
 spec: https://drafts.csswg.org/css-anchor-position-2/
 compat_features:
-  - css.at-rules.container.anchor_position_queries
-  - css.at-rules.container.anchor_position_queries.fallback
-  - css.at-rules.container.anchor_position_queries.fallback.any_value
-  - css.properties.container-type.anchored
   - css.properties.position-area.span-left
   - css.properties.position-area.span-right
   - css.properties.position-try-fallbacks.block-end
@@ -340,3 +336,8 @@ compat_features:
 #   - css.types.anchor
 #   - css.types.anchor-size
 #   - css.types.anchor-size.inset_margin
+# - Anchor position container queries:
+#   - css.at-rules.container.anchor_position_queries
+#   - css.at-rules.container.anchor_position_queries.fallback
+#   - css.at-rules.container.anchor_position_queries.fallback.any_value
+#   - css.properties.container-type.anchored
