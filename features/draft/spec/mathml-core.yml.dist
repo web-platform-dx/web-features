@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "146"
+    firefox_android: "146"
 compat_features:
   # baseline: low
   # baseline_low_date: 2023-08-29
@@ -18,6 +20,19 @@ compat_features:
   - css.properties.math-style.compact
   - css.properties.math-style.normal
 
+  # baseline: low
+  # baseline_low_date: 2025-12-12
+  # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  #   firefox: "146"
+  #   firefox_android: "146"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - css.properties.math-shift.compact
+  - css.properties.math-shift.normal
+
   # baseline: false
   # support:
   #   chrome: "109"
@@ -27,15 +42,9 @@ compat_features:
   #   firefox_android: "117"
   - css.properties.math-depth.auto-add
 
-  # baseline: false
-  # support:
-  #   chrome: "109"
-  #   chrome_android: "109"
-  #   edge: "109"
-  - css.properties.math-shift.compact
-  - css.properties.math-shift.normal
-
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "146"
+  #   firefox_android: "146"
   - mathml.global_attributes.dir.rtl_operator_mirroring
