@@ -3,6 +3,7 @@ description: The `Feature-Policy` response header sets whether a policy-controll
 spec: https://www.w3.org/TR/2019/WD-feature-policy-1-20190416/
 caniuse: feature-policy
 discouraged:
+  reason: Feature policy is superseded by permissions policy.
   according_to:
     - https://github.com/w3c/webappsec-permissions-policy/pull/379
   alternatives:
