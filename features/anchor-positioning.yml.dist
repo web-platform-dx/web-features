@@ -3,14 +3,8 @@
 
 status:
   baseline: false
-  support:
-    chrome: "125"
-    chrome_android: "125"
-    edge: "125"
-    safari: "26"
-    safari_ios: "26"
+  support: {}
 compat_features:
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "125"
@@ -135,6 +129,18 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - css.properties.position-visibility
+  - css.properties.position-visibility.always
+  - css.properties.position-visibility.anchors-visible
+  - css.properties.position-visibility.no-overflow
+
+  # baseline: false
+  # support:
   #   chrome: "128"
   #   chrome_android: "128"
   #   edge: "128"
@@ -165,6 +171,8 @@ compat_features:
   - css.properties.position-area.span-end
   - css.properties.position-area.span-inline-end
   - css.properties.position-area.span-inline-start
+  - css.properties.position-area.span-left
+  - css.properties.position-area.span-right
   - css.properties.position-area.span-self-block-end
   - css.properties.position-area.span-self-block-start
   - css.properties.position-area.span-self-end
@@ -174,12 +182,8 @@ compat_features:
   - css.properties.position-area.span-start
   - css.properties.position-area.span-top
   - css.properties.position-area.span-x-end
-  - css.properties.position-area.span-x-self-end
-  - css.properties.position-area.span-x-self-start
   - css.properties.position-area.span-x-start
   - css.properties.position-area.span-y-end
-  - css.properties.position-area.span-y-self-end
-  - css.properties.position-area.span-y-self-start
   - css.properties.position-area.span-y-start
   - css.properties.position-area.start
 
@@ -236,13 +240,32 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "125"
-  #   chrome_android: "125"
-  #   edge: "125"
-  - css.properties.position-visibility
-  - css.properties.position-visibility.always
-  - css.properties.position-visibility.anchors-visible
-  - css.properties.position-visibility.no-overflow
+  #   chrome: "137"
+  #   chrome_android: "137"
+  #   edge: "137"
+  #   firefox: "144"
+  #   firefox_android: "144"
+  - api.HTMLElement.showPopover.options_source_parameter.implicit_anchor_reference
+
+  # baseline: false
+  # support:
+  #   chrome: "143"
+  #   chrome_android: "143"
+  #   edge: "143"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - css.properties.position-area.span-self-x-end
+  - css.properties.position-area.span-self-x-start
+  - css.properties.position-area.span-self-y-end
+  - css.properties.position-area.span-self-y-start
+  - css.properties.position-try-fallbacks.span-self-x-end
+  - css.properties.position-try-fallbacks.span-self-x-start
+  - css.properties.position-try-fallbacks.span-self-y-end
+  - css.properties.position-try-fallbacks.span-self-y-start
+  - css.properties.position-try.span-self-x-end
+  - css.properties.position-try.span-self-x-start
+  - css.properties.position-try.span-self-y-end
+  - css.properties.position-try.span-self-y-start
 
   # baseline: false
   # support:
@@ -253,13 +276,6 @@ compat_features:
   - api.HTMLInputElement.popoverTargetElement.implicit_anchor_reference
   - html.elements.button.popovertarget.implicit_anchor_reference
   - html.elements.input.popovertarget.implicit_anchor_reference
-
-  # baseline: false
-  # support:
-  #   chrome: "137"
-  #   chrome_android: "137"
-  #   edge: "137"
-  - api.HTMLElement.showPopover.options_source_parameter.implicit_anchor_reference
 
   # baseline: false
   # support:
@@ -283,10 +299,28 @@ compat_features:
   - css.properties.position-area.span-all
   - css.properties.position-area.top
   - css.properties.position-area.x-end
-  - css.properties.position-area.x-self-end
-  - css.properties.position-area.x-self-start
   - css.properties.position-area.x-start
   - css.properties.position-area.y-end
-  - css.properties.position-area.y-self-end
-  - css.properties.position-area.y-self-start
   - css.properties.position-area.y-start
+
+  # baseline: false
+  # support:
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - css.properties.position-area.self-x-end
+  - css.properties.position-area.self-x-start
+  - css.properties.position-area.self-y-end
+  - css.properties.position-area.self-y-start
+  - css.properties.position-try-fallbacks.self-x-end
+  - css.properties.position-try-fallbacks.self-x-start
+  - css.properties.position-try-fallbacks.self-y-end
+  - css.properties.position-try-fallbacks.self-y-start
+  - css.properties.position-try.self-x-end
+  - css.properties.position-try.self-x-start
+  - css.properties.position-try.self-y-end
+  - css.properties.position-try.self-y-start
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.position-anchor.none

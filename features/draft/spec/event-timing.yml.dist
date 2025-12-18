@@ -3,6 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "144"
+    firefox_android: "144"
+    safari: "26.2"
+    safari_ios: "26.2"
 compat_features:
   - api.Performance.interactionCount

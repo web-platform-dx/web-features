@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "72"
-    chrome_android: "72"
-    edge: "79"
+    chrome: "141"
+    chrome_android: "141"
+    edge: "141"
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -90,6 +90,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "72"
+  #   chrome_android: "72"
+  #   edge: "79"
+  #   firefox: "144"
+  #   firefox_android: "144"
+  - api.MediaDevices.getSupportedConstraints.return_object_property_resizeMode
+  - api.MediaDevices.getUserMedia.constraints_resizeMode_parameter
+
+  # baseline: false
+  # support:
   #   chrome: "53"
   #   chrome_android: "53"
   #   edge: "79"
@@ -98,8 +108,8 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
-  #   chrome: "72"
-  #   chrome_android: "72"
-  #   edge: "79"
-  - api.MediaDevices.getSupportedConstraints.return_object_property_resizeMode
-  - api.MediaDevices.getUserMedia.constraints_resizeMode_parameter
+  #   chrome: "141"
+  #   chrome_android: "141"
+  #   edge: "141"
+  - api.MediaStreamTrack.applyConstraints.echoCancellation_constraint.all
+  - api.MediaStreamTrack.applyConstraints.echoCancellation_constraint.remote-only
