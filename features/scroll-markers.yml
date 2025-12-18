@@ -1,7 +1,7 @@
 name: Scroll markers
-description: A scroll container can be navigated by activating `::scroll-marker` pseudo-elements which appear in a generated `::scroll-marker-group` pseudo-element, either before or after the scroll container.
+description: A scroll marker scrolls a container to a scroll target. The `::scroll-marker` CSS pseudo-element selects a scroll marker in a `::scroll-marker-group` pseudo-element, generated before or after the scroll container. You can use them to navigate and style tables of contents, tab panels, and carousels.
 spec: https://drafts.csswg.org/css-overflow-5/#scroll-markers
-group: scrolling
+group: scroll-markers
 compat_features:
   - css.selectors.scroll-marker
   - css.selectors.scroll-marker-group

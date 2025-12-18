@@ -18,6 +18,32 @@ compat_features:
   # baseline_low_date: 2020-09-16
   # baseline_high_date: 2023-03-16
   # support:
+  #   chrome: "17"
+  #   chrome_android: "18"
+  #   edge: "18"
+  #   firefox: "65"
+  #   firefox_android: "65"
+  #   safari: "14"
+  #   safari_ios: "14"
+  - mediatypes.image.webp
+
+  # baseline: high
+  # baseline_low_date: 2020-09-16
+  # baseline_high_date: 2023-03-16
+  # support:
+  #   chrome: "17"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: "65"
+  #   firefox_android: "65"
+  #   safari: "14"
+  #   safari_ios: "14"
+  - mediatypes.image.webp.lossy
+
+  # baseline: high
+  # baseline_low_date: 2020-09-16
+  # baseline_high_date: 2023-03-16
+  # support:
   #   chrome: "23"
   #   chrome_android: "25"
   #   edge: "79"
@@ -25,10 +51,8 @@ compat_features:
   #   firefox_android: "65"
   #   safari: "14"
   #   safari_ios: "14"
-  - mediatypes.image.webp
   - mediatypes.image.webp.alpha
   - mediatypes.image.webp.lossless
-  - mediatypes.image.webp.lossy
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: high
