@@ -159,6 +159,8 @@ compat_features:
   - css.properties.position-area.span-end
   - css.properties.position-area.span-inline-end
   - css.properties.position-area.span-inline-start
+  - css.properties.position-area.span-left
+  - css.properties.position-area.span-right
   - css.properties.position-area.span-self-block-end
   - css.properties.position-area.span-self-block-start
   - css.properties.position-area.span-self-end
@@ -255,6 +257,24 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "143"
+  #   chrome_android: "143"
+  #   edge: "143"
+  - css.properties.position-area.span-self-x-end
+  - css.properties.position-area.span-self-x-start
+  - css.properties.position-area.span-self-y-end
+  - css.properties.position-area.span-self-y-start
+  - css.properties.position-try-fallbacks.span-self-x-end
+  - css.properties.position-try-fallbacks.span-self-x-start
+  - css.properties.position-try-fallbacks.span-self-y-end
+  - css.properties.position-try-fallbacks.span-self-y-start
+  - css.properties.position-try.span-self-x-end
+  - css.properties.position-try.span-self-x-start
+  - css.properties.position-try.span-self-y-end
+  - css.properties.position-try.span-self-y-start
+
+  # baseline: false
+  # support:
   #   safari: "26"
   #   safari_ios: "26"
   - css.properties.position-anchor.auto
@@ -282,11 +302,16 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
+  - css.properties.position-anchor.none
   - css.properties.position-area.self-x-end
   - css.properties.position-area.self-x-start
   - css.properties.position-area.self-y-end
   - css.properties.position-area.self-y-start
-  - css.properties.position-area.span-self-x-end
-  - css.properties.position-area.span-self-x-start
-  - css.properties.position-area.span-self-y-end
-  - css.properties.position-area.span-self-y-start
+  - css.properties.position-try-fallbacks.self-x-end
+  - css.properties.position-try-fallbacks.self-x-start
+  - css.properties.position-try-fallbacks.self-y-end
+  - css.properties.position-try-fallbacks.self-y-start
+  - css.properties.position-try.self-x-end
+  - css.properties.position-try.self-x-start
+  - css.properties.position-try.self-y-end
+  - css.properties.position-try.self-y-start

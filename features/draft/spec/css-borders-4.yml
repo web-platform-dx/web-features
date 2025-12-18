@@ -1,4 +1,4 @@
-draft_date: 2025-11-03
+draft_date: 2025-12-08
 name: CSS Borders and Box Decorations Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-borders-4/
@@ -105,21 +105,6 @@ compat_features:
   - css.properties.corner-top-shape.scoop
   - css.properties.corner-top-shape.square
   - css.properties.corner-top-shape.squircle
-  - css.properties.outline-width.medium
-  - css.properties.outline-width.thick
-  - css.properties.outline-width.thin
-  - css.properties.outline.dashed
-  - css.properties.outline.dotted
-  - css.properties.outline.double
-  - css.properties.outline.groove
-  - css.properties.outline.inset
-  - css.properties.outline.medium
-  - css.properties.outline.none
-  - css.properties.outline.outset
-  - css.properties.outline.ridge
-  - css.properties.outline.solid
-  - css.properties.outline.thick
-  - css.properties.outline.thin
 
 # The following features in the spec are already part of web-features:
 # - corner-shape:
@@ -149,3 +134,20 @@ compat_features:
 #   - css.types.corner-shape-value.squircle
 #   - css.types.corner-shape-value.superellipse
 #   - css.types.superellipse
+# - outline:
+#   - css.properties.outline.dashed
+#   - css.properties.outline.dotted
+#   - css.properties.outline.double
+#   - css.properties.outline.groove
+#   - css.properties.outline.inset
+#   - css.properties.outline.medium
+#   - css.properties.outline.none
+#   - css.properties.outline.outset
+#   - css.properties.outline.ridge
+#   - css.properties.outline.solid
+#   - css.properties.outline.thick
+#   - css.properties.outline.thin
+# - Outlines:
+#   - css.properties.outline-width.medium
+#   - css.properties.outline-width.thick
+#   - css.properties.outline-width.thin
