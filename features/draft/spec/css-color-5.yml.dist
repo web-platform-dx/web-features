@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    safari: "26.2"
+    safari_ios: "26.2"
 compat_features:
   # baseline: high
   # baseline_low_date: ≤2017-04-05
@@ -134,13 +136,16 @@ compat_features:
   #   safari_ios: "16.4"
   - css.properties.outline.currentColor
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-12-12
   # support:
   #   chrome: "57"
   #   chrome_android: "57"
   #   edge: "79"
   #   firefox: ≤50
   #   firefox_android: ≤50
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
   - css.properties.text-decoration.currentColor
   - css.properties.text-decoration.transparent
 
