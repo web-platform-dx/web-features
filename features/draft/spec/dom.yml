@@ -1,9 +1,8 @@
-draft_date: 2025-11-10
+draft_date: 2025-12-22
 name: DOM
 description: TODO
 spec: https://dom.spec.whatwg.org/
 compat_features:
-  - api.Document.featurePolicy
   - api.Element.setAttribute.enforces_trusted_types
   - api.Element.setAttributeNS.enforces_trusted_types
 
@@ -361,6 +360,8 @@ compat_features:
 #   - api.Document.customElementRegistry
 #   - api.Element.customElementRegistry
 #   - api.ShadowRoot.customElementRegistry
+# - Feature policy:
+#   - api.Document.featurePolicy
 # - moveBefore():
 #   - api.Document.moveBefore
 #   - api.DocumentFragment.moveBefore
