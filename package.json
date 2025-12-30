@@ -38,12 +38,12 @@
     "remove-tagged-compat-features": "tsx scripts/remove-tagged-compat-features.ts && npm run format"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.1",
+    "@eslint/js": "^9.39.2",
     "@js-temporal/polyfill": "^0.5.1",
     "@mdn/browser-compat-data": "7.2.2",
     "@octokit/rest": "^22.0.1",
     "@types/caniuse-lite": "^1.0.4",
-    "@types/node": "^20.19.26",
+    "@types/node": "^20.19.27",
     "ajv": "^8.17.1",
     "caniuse-lite": "^1.0.30001760",
     "cheerio": "^1.1.2",
@@ -63,7 +63,7 @@
     "ts-json-schema-generator": "^2.4.0",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.49.0",
+    "typescript-eslint": "^8.50.1",
     "unified": "^11.0.5",
     "web-specs": "^3.74.0",
     "winston": "^3.19.0",
