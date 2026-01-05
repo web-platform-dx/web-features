@@ -129,6 +129,18 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - css.properties.position-visibility
+  - css.properties.position-visibility.always
+  - css.properties.position-visibility.anchors-visible
+  - css.properties.position-visibility.no-overflow
+
+  # baseline: false
+  # support:
   #   chrome: "128"
   #   chrome_android: "128"
   #   edge: "128"
@@ -237,29 +249,11 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "125"
-  #   chrome_android: "125"
-  #   edge: "125"
-  - css.properties.position-visibility
-  - css.properties.position-visibility.always
-  - css.properties.position-visibility.anchors-visible
-  - css.properties.position-visibility.no-overflow
-
-  # baseline: false
-  # support:
-  #   chrome: "133"
-  #   chrome_android: "133"
-  #   edge: "133"
-  - api.HTMLButtonElement.popoverTargetElement.implicit_anchor_reference
-  - api.HTMLInputElement.popoverTargetElement.implicit_anchor_reference
-  - html.elements.button.popovertarget.implicit_anchor_reference
-  - html.elements.input.popovertarget.implicit_anchor_reference
-
-  # baseline: false
-  # support:
   #   chrome: "143"
   #   chrome_android: "143"
   #   edge: "143"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
   - css.properties.position-area.span-self-x-end
   - css.properties.position-area.span-self-x-start
   - css.properties.position-area.span-self-y-end
@@ -272,6 +266,16 @@ compat_features:
   - css.properties.position-try.span-self-x-start
   - css.properties.position-try.span-self-y-end
   - css.properties.position-try.span-self-y-start
+
+  # baseline: false
+  # support:
+  #   chrome: "133"
+  #   chrome_android: "133"
+  #   edge: "133"
+  - api.HTMLButtonElement.popoverTargetElement.implicit_anchor_reference
+  - api.HTMLInputElement.popoverTargetElement.implicit_anchor_reference
+  - html.elements.button.popovertarget.implicit_anchor_reference
+  - html.elements.input.popovertarget.implicit_anchor_reference
 
   # baseline: false
   # support:
@@ -299,10 +303,10 @@ compat_features:
   - css.properties.position-area.y-end
   - css.properties.position-area.y-start
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
-  - css.properties.position-anchor.none
+  # support:
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
   - css.properties.position-area.self-x-end
   - css.properties.position-area.self-x-start
   - css.properties.position-area.self-y-end
@@ -315,3 +319,8 @@ compat_features:
   - css.properties.position-try.self-x-start
   - css.properties.position-try.self-y-end
   - css.properties.position-try.self-y-start
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.position-anchor.none
