@@ -3,4 +3,12 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "143"
+    chrome_android: "143"
+    edge: "143"
+compat_features:
+  - css.at-rules.container.anchor_position_queries
+  - css.at-rules.container.anchor_position_queries.fallback
+  - css.at-rules.container.anchor_position_queries.fallback.any_value
+  - css.properties.container-type.anchored
