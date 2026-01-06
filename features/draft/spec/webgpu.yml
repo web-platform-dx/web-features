@@ -1,13 +1,25 @@
-draft_date: 2025-07-03
+draft_date: 2025-12-11
 name: WebGPU
 description: TODO
 spec: https://gpuweb.github.io/gpuweb/
 compat_features:
   - api.GPUAdapter.requestDevice.undefined_limits
   - api.GPUAdapterInfo.isFallbackAdapter
+  - api.GPUCommandEncoder.beginRenderPass.accepts_GPUTexture_resources
   - api.GPUCommandEncoder.copyBufferToBuffer.offset_and_size_parameter_optional
-  - api.GPUDevice.createBindGroup.descriptor_entries_option_accepts_GPUTextureView_resource
+  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUBuffer
+  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTextureView
+  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTexture_resource
+  - api.GPUDevice.createPipelineLayout.descriptor_bindGroupLayouts_parameter_accepts_null_values
+  - api.GPUSupportedFeatures.feature_core-features-and-limits
+  - api.GPUSupportedFeatures.feature_primitive-index
   - api.GPUSupportedFeatures.feature_subgroups
+  - api.GPUSupportedFeatures.feature_texture-component-swizzle
+  - api.GPUSupportedFeatures.feature_texture-compression-astc-sliced-3d
+  - api.GPUSupportedFeatures.feature_texture-compression-bc-sliced-3d
+  - api.GPUSupportedFeatures.feature_texture-formats-tier1
+  - api.GPUSupportedFeatures.feature_texture-formats-tier2
+  - api.GPUTexture.createView.descriptor_swizzle_parameter
 
 # The following features in the spec are already part of web-features:
 # - WebGPU:
@@ -21,7 +33,7 @@ compat_features:
 #   - api.GPUAdapter.info
 #   - api.GPUAdapter.limits
 #   - api.GPUAdapter.requestDevice
-#   - api.GPUAdapter.requestDevice.lost_device_on_duplicate
+#   - api.GPUAdapter.requestDevice.handles_duplicate_calls
 #   - api.GPUAdapterInfo
 #   - api.GPUAdapterInfo.architecture
 #   - api.GPUAdapterInfo.description
@@ -275,8 +287,8 @@ compat_features:
 #   - api.GPUSupportedLimits.minUniformBufferOffsetAlignment
 #   - api.GPUTexture
 #   - api.GPUTexture.createView
-#   - api.GPUTexture.createView.texture_rgb10a2uint
-#   - api.GPUTexture.createView.usage
+#   - api.GPUTexture.createView.descriptor_format_parameter_accepts_rgb10a2uint
+#   - api.GPUTexture.createView.descriptor_usage_parameter
 #   - api.GPUTexture.depthOrArrayLayers
 #   - api.GPUTexture.destroy
 #   - api.GPUTexture.dimension

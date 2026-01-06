@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import webSpecs from 'web-specs' with { type: 'json' };
 
 import { features } from '../index.js';
+import { isOrdinaryFeatureData } from "../type-guards.js";
 
 // Specs needs to be in "good standing". Nightly URLs are used if available,
 // otherwise the snapshot/versioned URL is used. See browser-specs/web-specs
@@ -126,12 +127,44 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed for the mediacontroller feature. This is the superseded HTML5 spec that still contains MediaController."
     ],
     [
-        "https://github.com/whatwg/fetch/pull/1647",
-        "This is where fetchLater() is in the process of being spec'd. Once the PR merges, change the spec url in fetchlater.yml, and remove this exception."
-    ],
-    [
         "https://wicg.github.io/private-network-access/",
         "Allowed for private-network-access feature. Feature and spec succeeded by local-network-access."
+    ],
+    [
+        "https://www.w3.org/TR/2022/WD-selectors-4-20220507/#the-target-within-pseudo",
+        "Allowed because this is where the feature last appeared in the spec before removal."
+    ],
+    [
+        "https://github.com/whatwg/dom/pull/1353",
+        "Allowed because this is where the referencetarget feature is being added to the DOM spec"
+    ],
+    [
+        "https://github.com/whatwg/html/pull/10995",
+        "Allowed because this is where the referencetarget feature is being added to the HTML spec"
+    ],
+    [
+        "https://patcg-individual-drafts.github.io/topics/",
+        "Allowed because the Topics API isn't on a standards track yet. Remove this exception when it is."
+    ],
+    [
+        "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/Accessibility/AriaNotify/explainer.md",
+        "Allowed because the ariaNotify() method is not yet in a formal spec. Remove this exception when a formal spec is available."
+    ],
+    [
+        "https://github.com/whatwg/html/pull/11006",
+        "Allowed because this spec PR hasn't landed yet. Once the PR merges, change the spec url and remove this exception."
+    ],
+    [
+        "https://github.com/w3c/manifest/pull/1175",
+        "Allowed because there is no spec yet for Web Install."
+    ],
+    [
+        "https://github.com/WebAssembly/branch-hinting/blob/main/proposals/branch-hinting/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://www.w3.org/TR/2019/WD-feature-policy-1-20190416/",
+        "Allowed because feature policy was replaced by permissions policy."
     ]
 ];
 
@@ -191,6 +224,10 @@ for (const [allowedUrl, message] of defaultAllowlist) {
 }
 
 for (const [id, data] of Object.entries(features)) {
+    if (!isOrdinaryFeatureData(data)) {
+        continue;
+    }
+
     const specs = Array.isArray(data.spec) ? data.spec : [data.spec];
     for (const spec of specs) {
         let url: URL;

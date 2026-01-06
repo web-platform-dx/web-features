@@ -3,8 +3,67 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "142"
+    chrome_android: "142"
+    edge: "142"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "57"
+  #   chrome_android: "57"
+  #   edge: "79"
+  #   firefox: "53"
+  #   firefox_android: "53"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - css.properties.caret-color.auto
+
+  # baseline: high
+  # baseline_low_date: 2023-03-27
+  # baseline_high_date: 2025-09-27
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "94"
+  #   firefox: "88"
+  #   firefox_android: "88"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - css.properties.outline.auto
+
+  # baseline: false
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: "4"
+  #   safari: "3"
+  - css.properties.resize.both
+  - css.properties.resize.horizontal
+  - css.properties.resize.none
+  - css.properties.resize.vertical
+
+  # baseline: false
+  # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
   - css.properties.caret-animation
   - css.properties.caret-animation.auto
   - css.properties.caret-animation.manual
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  #   edge: "142"
+  - css.properties.interest-delay
+  - css.properties.interest-delay-end
+  - css.properties.interest-delay-end.normal
+  - css.properties.interest-delay-start
+  - css.properties.interest-delay-start.normal
+  - css.properties.interest-delay.normal
