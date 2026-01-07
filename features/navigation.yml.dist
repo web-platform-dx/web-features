@@ -33,9 +33,13 @@ compat_features:
   - api.Navigation.canGoBack
   - api.Navigation.canGoForward
   - api.Navigation.currentEntry
+  - api.Navigation.currententrychange_event
   - api.Navigation.entries
   - api.Navigation.forward
   - api.Navigation.navigate
+  - api.Navigation.navigate_event
+  - api.Navigation.navigateerror_event
+  - api.Navigation.navigatesuccess_event
   - api.Navigation.reload
   - api.Navigation.transition
   - api.Navigation.traverseTo
@@ -102,8 +106,4 @@ compat_features:
   #   chrome: "102"
   #   chrome_android: "102"
   #   edge: "102"
-  - api.Navigation.currententrychange_event
-  - api.Navigation.navigate_event
-  - api.Navigation.navigateerror_event
-  - api.Navigation.navigatesuccess_event
   - api.NavigationHistoryEntry.dispose_event
