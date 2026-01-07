@@ -11,28 +11,6 @@ status:
     safari_ios: "26"
 compat_features:
   # baseline: high
-  # baseline_low_date: 2015-09-30
-  # baseline_high_date: 2018-03-30
-  # support:
-  #   chrome: "43"
-  #   chrome_android: "43"
-  #   edge: "12"
-  #   firefox: "16"
-  #   firefox_android: "16"
-  #   safari: "9"
-  #   safari_ios: "9"
-  - css.properties.animation.alternate
-  - css.properties.animation.alternate-reverse
-  - css.properties.animation.auto
-  - css.properties.animation.backwards
-  - css.properties.animation.both
-  - css.properties.animation.forwards
-  - css.properties.animation.infinite
-  - css.properties.animation.none
-  - css.properties.animation.normal
-  - css.properties.animation.reverse
-
-  # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
@@ -46,8 +24,9 @@ compat_features:
   - css.properties.animation.paused
   - css.properties.animation.running
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-07-04
+  # baseline_high_date: 2026-01-04
   # support:
   #   chrome: "112"
   #   chrome_android: "112"

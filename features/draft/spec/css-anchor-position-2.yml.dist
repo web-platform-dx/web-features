@@ -3,12 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "129"
-    chrome_android: "129"
-    edge: "129"
-    safari: "26"
-    safari_ios: "26"
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -22,7 +17,6 @@ compat_features:
   - css.properties.position-try.flip-start
   - css.properties.position-try.none
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "129"
@@ -30,8 +24,6 @@ compat_features:
   #   edge: "129"
   #   safari: "26"
   #   safari_ios: "26"
-  - css.properties.position-area.span-left
-  - css.properties.position-area.span-right
   - css.properties.position-try-fallbacks.block-end
   - css.properties.position-try-fallbacks.block-start
   - css.properties.position-try-fallbacks.bottom
@@ -65,22 +57,14 @@ compat_features:
   - css.properties.position-try-fallbacks.span-start
   - css.properties.position-try-fallbacks.span-top
   - css.properties.position-try-fallbacks.span-x-end
-  - css.properties.position-try-fallbacks.span-x-self-end
-  - css.properties.position-try-fallbacks.span-x-self-start
   - css.properties.position-try-fallbacks.span-x-start
   - css.properties.position-try-fallbacks.span-y-end
-  - css.properties.position-try-fallbacks.span-y-self-end
-  - css.properties.position-try-fallbacks.span-y-self-start
   - css.properties.position-try-fallbacks.span-y-start
   - css.properties.position-try-fallbacks.start
   - css.properties.position-try-fallbacks.top
   - css.properties.position-try-fallbacks.x-end
-  - css.properties.position-try-fallbacks.x-self-end
-  - css.properties.position-try-fallbacks.x-self-start
   - css.properties.position-try-fallbacks.x-start
   - css.properties.position-try-fallbacks.y-end
-  - css.properties.position-try-fallbacks.y-self-end
-  - css.properties.position-try-fallbacks.y-self-start
   - css.properties.position-try-fallbacks.y-start
   - css.properties.position-try.block-end
   - css.properties.position-try.block-start
@@ -115,20 +99,26 @@ compat_features:
   - css.properties.position-try.span-start
   - css.properties.position-try.span-top
   - css.properties.position-try.span-x-end
-  - css.properties.position-try.span-x-self-end
-  - css.properties.position-try.span-x-self-start
   - css.properties.position-try.span-x-start
   - css.properties.position-try.span-y-end
-  - css.properties.position-try.span-y-self-end
-  - css.properties.position-try.span-y-self-start
   - css.properties.position-try.span-y-start
   - css.properties.position-try.start
   - css.properties.position-try.top
   - css.properties.position-try.x-end
-  - css.properties.position-try.x-self-end
-  - css.properties.position-try.x-self-start
   - css.properties.position-try.x-start
   - css.properties.position-try.y-end
-  - css.properties.position-try.y-self-end
-  - css.properties.position-try.y-self-start
   - css.properties.position-try.y-start
+
+  # baseline: false
+  # support:
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - css.properties.position-try-fallbacks.flip-x
+  - css.properties.position-try-fallbacks.flip-y
+  - css.properties.position-try.flip-x
+  - css.properties.position-try.flip-y
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.position-visibility.anchors-valid

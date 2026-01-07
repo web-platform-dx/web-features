@@ -69,17 +69,19 @@ layout: "default.html"
 <script type="module">
   let getCompatibleVersions;
   try {
-    getCompatibleVersions = await import(
-      "https://cdn.jsdelivr.net/npm/baseline-browser-mapping"
-    ).then((response) => response.getCompatibleVersions);
+    getCompatibleVersions =
+      await import("https://cdn.jsdelivr.net/npm/baseline-browser-mapping").then(
+        (response) => response.getCompatibleVersions,
+      );
   } catch {
     console.log(
       "Loading baseline-browser-mapping from cdn.jsdelivr.net failed, attempting to load from unpkg.com.",
     );
     try {
-      getCompatibleVersions = await import(
-        "https://unpkg.com/baseline-browser-mapping"
-      ).then((response) => response.getCompatibleVersions);
+      getCompatibleVersions =
+        await import("https://unpkg.com/baseline-browser-mapping").then(
+          (response) => response.getCompatibleVersions,
+        );
     } catch {
       document.getElementById("loadingContainer").innerText =
         "There was an error loading baseline-browser-mapping which is required for this page to work.  Please check your network connection and refresh the page.";

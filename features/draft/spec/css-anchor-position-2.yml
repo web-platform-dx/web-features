@@ -1,15 +1,15 @@
-draft_date: 2025-11-03
+draft_date: 2025-12-18
 name: CSS Anchor Positioning Module Level 2
 description: TODO
 spec: https://drafts.csswg.org/css-anchor-position-2/
 compat_features:
-  - css.properties.position-area.span-left
-  - css.properties.position-area.span-right
   - css.properties.position-try-fallbacks.block-end
   - css.properties.position-try-fallbacks.block-start
   - css.properties.position-try-fallbacks.bottom
   - css.properties.position-try-fallbacks.center
   - css.properties.position-try-fallbacks.end
+  - css.properties.position-try-fallbacks.flip-x
+  - css.properties.position-try-fallbacks.flip-y
   - css.properties.position-try-fallbacks.inline-end
   - css.properties.position-try-fallbacks.inline-start
   - css.properties.position-try-fallbacks.left
@@ -38,22 +38,14 @@ compat_features:
   - css.properties.position-try-fallbacks.span-start
   - css.properties.position-try-fallbacks.span-top
   - css.properties.position-try-fallbacks.span-x-end
-  - css.properties.position-try-fallbacks.span-x-self-end
-  - css.properties.position-try-fallbacks.span-x-self-start
   - css.properties.position-try-fallbacks.span-x-start
   - css.properties.position-try-fallbacks.span-y-end
-  - css.properties.position-try-fallbacks.span-y-self-end
-  - css.properties.position-try-fallbacks.span-y-self-start
   - css.properties.position-try-fallbacks.span-y-start
   - css.properties.position-try-fallbacks.start
   - css.properties.position-try-fallbacks.top
   - css.properties.position-try-fallbacks.x-end
-  - css.properties.position-try-fallbacks.x-self-end
-  - css.properties.position-try-fallbacks.x-self-start
   - css.properties.position-try-fallbacks.x-start
   - css.properties.position-try-fallbacks.y-end
-  - css.properties.position-try-fallbacks.y-self-end
-  - css.properties.position-try-fallbacks.y-self-start
   - css.properties.position-try-fallbacks.y-start
   - css.properties.position-try.block-end
   - css.properties.position-try.block-start
@@ -63,6 +55,8 @@ compat_features:
   - css.properties.position-try.flip-block
   - css.properties.position-try.flip-inline
   - css.properties.position-try.flip-start
+  - css.properties.position-try.flip-x
+  - css.properties.position-try.flip-y
   - css.properties.position-try.inline-end
   - css.properties.position-try.inline-start
   - css.properties.position-try.left
@@ -92,23 +86,16 @@ compat_features:
   - css.properties.position-try.span-start
   - css.properties.position-try.span-top
   - css.properties.position-try.span-x-end
-  - css.properties.position-try.span-x-self-end
-  - css.properties.position-try.span-x-self-start
   - css.properties.position-try.span-x-start
   - css.properties.position-try.span-y-end
-  - css.properties.position-try.span-y-self-end
-  - css.properties.position-try.span-y-self-start
   - css.properties.position-try.span-y-start
   - css.properties.position-try.start
   - css.properties.position-try.top
   - css.properties.position-try.x-end
-  - css.properties.position-try.x-self-end
-  - css.properties.position-try.x-self-start
   - css.properties.position-try.x-start
   - css.properties.position-try.y-end
-  - css.properties.position-try.y-self-end
-  - css.properties.position-try.y-self-start
   - css.properties.position-try.y-start
+  - css.properties.position-visibility.anchors-valid
 
 # The following features in the spec are already part of web-features:
 # - Anchor positioning:
@@ -268,6 +255,8 @@ compat_features:
 #   - css.properties.position-area.span-end
 #   - css.properties.position-area.span-inline-end
 #   - css.properties.position-area.span-inline-start
+#   - css.properties.position-area.span-left
+#   - css.properties.position-area.span-right
 #   - css.properties.position-area.span-self-block-end
 #   - css.properties.position-area.span-self-block-start
 #   - css.properties.position-area.span-self-end
@@ -291,12 +280,28 @@ compat_features:
 #   - css.properties.position-area.y-end
 #   - css.properties.position-area.y-start
 #   - css.properties.position-try
+#   - css.properties.position-try.self-x-end
+#   - css.properties.position-try.self-x-start
+#   - css.properties.position-try.self-y-end
+#   - css.properties.position-try.self-y-start
+#   - css.properties.position-try.span-self-x-end
+#   - css.properties.position-try.span-self-x-start
+#   - css.properties.position-try.span-self-y-end
+#   - css.properties.position-try.span-self-y-start
 #   - css.properties.position-try-fallbacks
 #   - css.properties.position-try-fallbacks.flip-block
 #   - css.properties.position-try-fallbacks.flip-inline
 #   - css.properties.position-try-fallbacks.flip-start
 #   - css.properties.position-try-fallbacks.none
 #   - css.properties.position-try-fallbacks.position-area
+#   - css.properties.position-try-fallbacks.self-x-end
+#   - css.properties.position-try-fallbacks.self-x-start
+#   - css.properties.position-try-fallbacks.self-y-end
+#   - css.properties.position-try-fallbacks.self-y-start
+#   - css.properties.position-try-fallbacks.span-self-x-end
+#   - css.properties.position-try-fallbacks.span-self-x-start
+#   - css.properties.position-try-fallbacks.span-self-y-end
+#   - css.properties.position-try-fallbacks.span-self-y-start
 #   - css.properties.position-try-order
 #   - css.properties.position-try-order.most-block-size
 #   - css.properties.position-try-order.most-height
@@ -315,3 +320,8 @@ compat_features:
 #   - css.types.anchor
 #   - css.types.anchor-size
 #   - css.types.anchor-size.inset_margin
+# - Anchor position container queries:
+#   - css.at-rules.container.anchor_position_queries
+#   - css.at-rules.container.anchor_position_queries.fallback
+#   - css.at-rules.container.anchor_position_queries.fallback.any_value
+#   - css.properties.container-type.anchored

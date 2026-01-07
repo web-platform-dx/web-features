@@ -24,7 +24,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: "test"
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Get timestamp and short hash
         id: timestamp_and_hash
         run: |
@@ -105,5 +105,6 @@ jobs:
           TAG: ${{ env.dist_tag }}
           NOTES: This is a continuously-updated prerelease generated from `main` (currently at ${{ steps.timestamp_and_hash.outputs.SHORT_HASH }}).
           ARTIFACTS: >
-            schemas/data.schema.json
             ${{ env.package_dir }}/data.json
+            data.extended.json
+            schemas/data.schema.json

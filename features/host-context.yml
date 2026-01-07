@@ -7,9 +7,8 @@ group:
 compat_features:
   - css.selectors.host-context
 discouraged:
-  # reason: >
-  #   The CSS Working Group removed it from the specification, due to opposition
-  #   from vendors, performance considerations, and interest in alternatives.
+  reason: >
+    The CSS Working Group removed `:host-context()` from the specification, due to opposition from vendors, performance considerations, and interest in alternatives.
   according_to:
     - https://github.com/w3c/csswg-drafts/issues/1914#issuecomment-2737310093
   alternatives:

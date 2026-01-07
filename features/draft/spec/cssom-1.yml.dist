@@ -4,6 +4,8 @@
 status:
   baseline: false
   support:
+    firefox: "145"
+    firefox_android: "145"
     safari: "26"
     safari_ios: "26"
 compat_features:
@@ -32,6 +34,8 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
+  #   firefox: "145"
+  #   firefox_android: "145"
   #   safari: "26"
   #   safari_ios: "26"
   - api.CSSStyleRule.style.returns_CSSStyleProperties
