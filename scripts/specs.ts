@@ -165,6 +165,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://www.w3.org/TR/2019/WD-feature-policy-1-20190416/",
         "Allowed because feature policy was replaced by permissions policy."
+    ],
+    [
+        "https://github.com/WICG/view-transitions/blob/main/scoped-transitions.md",
+        "Allowed until there's proper spec text. Follow https://github.com/w3c/csswg-drafts/issues/9890 for details."
     ]
 ];
 
