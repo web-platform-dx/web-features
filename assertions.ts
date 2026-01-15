@@ -27,6 +27,20 @@ export function assertValidFeatureReference(
   }
 }
 
+/**
+ * Assert that a regression note is still relevant.
+ *
+ * A fresh regression note must represent a status change where the
+ * `previous_baseline_value` value is better than the current `status.baseline`
+ * value. A regression note must represent a change in status from high to low,
+ * high to not Baseline, or low to not Baseline. A regression note must not
+ * represent a status change that has aged, such that the current
+ * `status.baseline` value has progressed back to `previous_baseline_value`.
+ *
+ * @export
+ * @param {string} id The ID of the feature to be checked
+ * @param {FeatureData} data The ordinary feature data to be checked
+ */
 export function assertFreshRegressionNotes(
   id: string,
   data: FeatureData,
