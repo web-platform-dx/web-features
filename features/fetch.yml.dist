@@ -278,6 +278,19 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
+  #   chrome: "42"
+  #   chrome_android: "42"
+  #   edge: "79"
+  #   firefox: "59"
+  #   firefox_android: "59"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - api.Response.Response.body_parameter_optional
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
   #   chrome: "48"
   #   chrome_android: "48"
   #   edge: "79"
@@ -288,25 +301,12 @@ compat_features:
   - api.fetch.blob_data_support
 
   # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
-  # support:
-  #   chrome: "42"
-  #   chrome_android: "42"
-  #   edge: ≤79
-  #   firefox: "59"
-  #   firefox_android: "59"
-  #   safari: "10.1"
-  #   safari_ios: "10.3"
-  - api.Response.Response.body_parameter_optional
-
-  # baseline: high
-  # baseline_low_date: ≤2020-01-15
-  # baseline_high_date: ≤2022-07-15
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
   # support:
   #   chrome: "52"
   #   chrome_android: "52"
-  #   edge: ≤79
+  #   edge: "79"
   #   firefox: "39"
   #   firefox_android: "39"
   #   safari: "10.1"
@@ -382,7 +382,7 @@ compat_features:
   # support:
   #   chrome: "43"
   #   chrome_android: "43"
-  #   edge: ≤79
+  #   edge: "79"
   #   firefox: "65"
   #   firefox_android: "65"
   #   safari_ios: "10.3"

@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "132"
-    chrome_android: "132"
-    edge: "132"
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -29,6 +26,10 @@ compat_features:
   #   chrome: "120"
   #   chrome_android: "120"
   #   edge: "120"
+  - api.IdentityCredential.isAutoSelected
+  - api.IdentityCredentialError
+  - api.IdentityCredentialError.IdentityCredentialError
+  - api.IdentityCredentialError.url
   - api.IdentityProvider.close_static
 
   # baseline: false
@@ -38,10 +39,32 @@ compat_features:
   #   edge: "122"
   - api.IdentityCredential.disconnect_static
 
-  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "123"
+  #   chrome_android: "123"
+  #   edge: "123"
+  - api.CredentialsContainer.get.identity_option.providers_option_domainHint
+
   # baseline: false
   # support:
   #   chrome: "132"
   #   chrome_android: "132"
   #   edge: "132"
+  - api.CredentialsContainer.get.identity_option.mode_option
+  - api.CredentialsContainer.get.identity_option.providers_option_fields
+  - api.CredentialsContainer.get.identity_option.providers_option_params
   - api.IdentityProvider.resolve_static
+
+  # baseline: false
+  # support:
+  #   chrome: "136"
+  #   chrome_android: "136"
+  #   edge: "136"
+  - api.CredentialsContainer.get.identity_option.providers_multiple
+  - api.IdentityCredential.configURL
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.IdentityCredentialError.error

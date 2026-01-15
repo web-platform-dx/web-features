@@ -90,23 +90,42 @@ compat_features:
   #   safari_ios: "17.4"
   - css.properties.text-decoration-thickness.percentage
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-12-12
   # support:
   #   chrome: "57"
   #   chrome_android: "57"
   #   edge: "79"
   #   firefox: "6"
   #   firefox_android: "6"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
   - css.properties.text-decoration.includes_color-and-style
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-12-12
   # support:
   #   chrome: "87"
   #   chrome_android: "87"
   #   edge: "87"
   #   firefox: "70"
   #   firefox_android: "79"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
   - css.properties.text-decoration.includes_thickness
+
+  # baseline: low
+  # baseline_low_date: 2025-12-12
+  # support:
+  #   chrome: "121"
+  #   chrome_android: "121"
+  #   edge: "121"
+  #   firefox: "137"
+  #   firefox_android: "137"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - css.properties.text-decoration-line.grammar-error
+  - css.properties.text-decoration-line.spelling-error
 
   # baseline: false
   # support:
@@ -118,21 +137,8 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "121"
-  #   chrome_android: "121"
-  #   edge: "121"
-  - css.properties.text-decoration-line.grammar-error
-  - css.properties.text-decoration-line.spelling-error
-
-  # baseline: false
-  # support:
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - css.properties.text-decoration-skip
-
-  # baseline: false
-  # support:
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
   - css.properties.text-decoration-skip.auto
   - css.properties.text-decoration-skip.none

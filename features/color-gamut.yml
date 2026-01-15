@@ -2,5 +2,16 @@ name: color-gamut media query
 description: The `color-gamut` media query sets styles based on the colors a device can display.
 spec: https://drafts.csswg.org/mediaqueries-5/#color-gamut
 group: media-queries
+status:
+  baseline: low
+  baseline_low_date: 2023-02-14
+  support:
+    chrome: "58"
+    chrome_android: "58"
+    edge: "79"
+    firefox: "110"
+    firefox_android: "110"
+    safari: "10"
+    safari_ios: "10"
 compat_features:
   - css.at-rules.media.color-gamut

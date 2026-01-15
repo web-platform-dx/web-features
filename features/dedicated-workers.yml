@@ -1,0 +1,39 @@
+name: Dedicated workers
+description: The `Worker()` constructor runs a script in its own thread, which can send and receive messages with the script that created it. Also known as web workers.
+spec: https://html.spec.whatwg.org/multipage/workers.html#workers
+caniuse: webworkers
+group: workers
+status:
+  compute_from: api.WorkerGlobalScope.importScripts
+compat_features:
+  - api.DedicatedWorkerGlobalScope
+  - api.DedicatedWorkerGlobalScope.close
+  - api.DedicatedWorkerGlobalScope.name
+  - api.Worker
+  - api.Worker.Worker
+  - api.Worker.Worker.mime_checks
+  - api.Worker.Worker.options_name_parameter
+  - api.Worker.error_event
+  - api.Worker.terminate
+  - api.Worker.worker_support
+  - api.WorkerGlobalScope
+  - api.WorkerGlobalScope.error_event
+  - api.WorkerGlobalScope.importScripts
+  - api.WorkerGlobalScope.importScripts.mime_checks
+  - api.WorkerGlobalScope.location
+  - api.WorkerGlobalScope.navigator
+  - api.WorkerGlobalScope.rejectionhandled_event
+  - api.WorkerGlobalScope.self
+  - api.WorkerGlobalScope.unhandledrejection_event
+  - api.WorkerLocation
+  - api.WorkerLocation.hash
+  - api.WorkerLocation.host
+  - api.WorkerLocation.hostname
+  - api.WorkerLocation.href
+  - api.WorkerLocation.origin
+  - api.WorkerLocation.pathname
+  - api.WorkerLocation.port
+  - api.WorkerLocation.protocol
+  - api.WorkerLocation.search
+  - api.WorkerLocation.toString
+  - api.WorkerNavigator

@@ -4,6 +4,7 @@ spec: https://wicg.github.io/background-sync/spec/
 status:
   compute_from: api.SyncManager
 compat_features:
+  - api.Permissions.permission_background-sync
   - api.ServiceWorkerGlobalScope.sync_event
   - api.ServiceWorkerRegistration.sync
   - api.SyncEvent

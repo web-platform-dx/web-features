@@ -2,9 +2,13 @@ name: Mutation events
 description: Mutation events like `DOMSubtreeModified`, `DOMNodeInserted`, or `DOMNodeRemoved` fire when DOM changes occur.
 # The latest spec doesn't mention them at all anymore.
 spec: https://w3c.github.io/uievents/
+group: dom
 discouraged:
+  removal_date: 2025-09-15
+  reason: Mutation events negatively impact performance and they were selected for removal from the web as part of Interop 2025.
   according_to:
     - https://www.w3.org/TR/2024/WD-uievents-20240906/#legacy-mutationevent-events
+    - https://github.com/web-platform-tests/interop/issues/784
   alternatives:
     - mutationobserver
 compat_features:

@@ -206,6 +206,44 @@ compat_features:
   - api.ElementInternals.ariaBrailleLabel
   - api.ElementInternals.ariaBrailleRoleDescription
 
+  # baseline: low
+  # baseline_low_date: 2025-04-04
+  # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
+  #   firefox: "136"
+  #   firefox_android: "136"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.Element.ariaActiveDescendantElement
+  - api.Element.ariaControlsElements
+  - api.Element.ariaDescribedByElements
+  - api.Element.ariaDetailsElements
+  - api.Element.ariaErrorMessageElements
+  - api.Element.ariaFlowToElements
+  - api.Element.ariaLabelledByElements
+  - api.ElementInternals.ariaActiveDescendantElement
+  - api.ElementInternals.ariaControlsElements
+  - api.ElementInternals.ariaDescribedByElements
+  - api.ElementInternals.ariaDetailsElements
+  - api.ElementInternals.ariaErrorMessageElements
+  - api.ElementInternals.ariaFlowToElements
+  - api.ElementInternals.ariaLabelledByElements
+
+  # baseline: low
+  # baseline_low_date: 2025-12-12
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  #   firefox: "119"
+  #   firefox_android: "119"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - api.Element.ariaColIndexText
+  - api.Element.ariaRowIndexText
+
   # baseline: false
   # support:
   #   chrome: "83"
@@ -222,28 +260,14 @@ compat_features:
   #   edge: "128"
   #   firefox: "119"
   #   firefox_android: "119"
-  - api.Element.ariaColIndexText
-  - api.Element.ariaRowIndexText
   - api.ElementInternals.ariaColIndexText
   - api.ElementInternals.ariaRowIndexText
 
   # baseline: false
   # support:
+  #   firefox: "136"
+  #   firefox_android: "136"
   #   safari: "16.4"
   #   safari_ios: "16.4"
-  - api.Element.ariaActiveDescendantElement
-  - api.Element.ariaControlsElements
-  - api.Element.ariaDescribedByElements
-  - api.Element.ariaDetailsElements
-  - api.Element.ariaErrorMessageElements
-  - api.Element.ariaFlowToElements
-  - api.Element.ariaLabelledByElements
   - api.Element.ariaOwnsElements
-  - api.ElementInternals.ariaActiveDescendantElement
-  - api.ElementInternals.ariaControlsElements
-  - api.ElementInternals.ariaDescribedByElements
-  - api.ElementInternals.ariaDetailsElements
-  - api.ElementInternals.ariaErrorMessageElements
-  - api.ElementInternals.ariaFlowToElements
-  - api.ElementInternals.ariaLabelledByElements
   - api.ElementInternals.ariaOwnsElements

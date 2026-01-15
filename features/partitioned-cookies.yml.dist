@@ -8,14 +8,27 @@ status:
     chrome_android: "114"
     edge: "114"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2025-12-12
+  # support:
+  #   chrome: "114"
+  #   chrome_android: "114"
+  #   edge: "114"
+  #   firefox: "141"
+  #   firefox_android: "141"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - http.headers.Set-Cookie.Partitioned
+
   # baseline: false
   # support:
   #   chrome: "114"
   #   chrome_android: "114"
   #   edge: "114"
-  #   firefox: "131"
-  #   firefox_android: "131"
-  - http.headers.Set-Cookie.Partitioned
+  #   firefox: "140"
+  #   firefox_android: "140"
+  - api.CookieStore.delete.partitioned_option
+  - api.CookieStore.set.partitioned_option
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
@@ -23,11 +36,6 @@ compat_features:
   #   chrome: "114"
   #   chrome_android: "114"
   #   edge: "114"
-  - api.CookieChangeEvent.changed.partitioned_property
-  - api.CookieChangeEvent.deleted.partitioned_property
-  - api.CookieStore.delete.partitioned_option
   - api.CookieStore.get.partitioned_return_property
-  - api.CookieStore.getAll.partitioned_return_property
-  - api.CookieStore.set.partitioned_option
   - api.ExtendableCookieChangeEvent.changed.partitioned_property
   - api.ExtendableCookieChangeEvent.deleted.partitioned_property

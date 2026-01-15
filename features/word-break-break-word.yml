@@ -1,8 +1,10 @@
-name: "`word-break: break-word`"
-description: "The `word-break: break-word` CSS declaration sets word breaks to occur according to their customary rules. Superseded by `overflow-wrap: anywhere`."
+name: "word-break: break-word"
+description: "The `word-break: break-word` CSS declaration sets word breaks to occur according to their customary rules."
 spec: https://drafts.csswg.org/css-text-3/#word-break-property
 group: css
 discouraged:
+  reason: >
+    The `overflow-wrap: anywhere` CSS declaration supersedes `word-break: break-word`.
   according_to:
     - https://drafts.csswg.org/css-text/#valdef-word-break-break-word
   alternatives:

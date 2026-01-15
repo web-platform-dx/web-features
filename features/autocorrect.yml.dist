@@ -3,15 +3,11 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "136"
+    firefox_android: "136"
+    safari: "14.1"
+    safari_ios: "14.5"
 compat_features:
-  # baseline: false
-  # support:
-  #   safari: "14.1"
-  #   safari_ios: "14.5"
   - api.HTMLElement.autocorrect
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
   - html.global_attributes.autocorrect

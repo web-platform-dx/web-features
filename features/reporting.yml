@@ -1,14 +1,30 @@
 name: Reporting API
-description: The Reporting API makes consistent reports about Content Security Policy violations, Permissions-Policy violations, deprecated feature usage, crashes, and other web platform features available to your server endpoints.
-spec: https://w3c.github.io/reporting/
+description: The `Reporting-Endpoints` HTTP header and `ReportingObserver()` API send reports of Content Security Policy (CSP) violations, Permissions-Policy violations, deprecated feature usage, browser interventions, and crashes to a nominated URL or callback function.
+spec:
+  - https://w3c.github.io/reporting/
+  - https://wicg.github.io/intervention-reporting/
+  - https://wicg.github.io/deprecation-reporting/
+  - https://w3c.github.io/webappsec-csp/#reporting
+status:
+  compute_from:
+    - api.ReportingObserver.ReportingObserver
+    - http.headers.Reporting-Endpoints
 compat_features:
-  - api.Report
-  - api.Report.body
-  - api.Report.toJSON
-  - api.Report.type
-  - api.Report.url
-  - api.ReportBody
-  - api.ReportBody.toJSON
+  - api.DeprecationReportBody
+  - api.DeprecationReportBody.anticipatedRemoval
+  - api.DeprecationReportBody.columnNumber
+  - api.DeprecationReportBody.id
+  - api.DeprecationReportBody.lineNumber
+  - api.DeprecationReportBody.message
+  - api.DeprecationReportBody.sourceFile
+  - api.DeprecationReportBody.toJSON
+  - api.InterventionReportBody
+  - api.InterventionReportBody.columnNumber
+  - api.InterventionReportBody.id
+  - api.InterventionReportBody.lineNumber
+  - api.InterventionReportBody.message
+  - api.InterventionReportBody.sourceFile
+  - api.InterventionReportBody.toJSON
   - api.ReportingObserver
   - api.ReportingObserver.ReportingObserver
   - api.ReportingObserver.disconnect

@@ -4,8 +4,8 @@
 status:
   baseline: false
   support:
-    firefox: "38"
-    firefox_android: "38"
+    firefox: "88"
+    firefox_android: "88"
 compat_features:
   # baseline: false
   # support:
@@ -16,7 +16,6 @@ compat_features:
   - css.properties.display.ruby
   - css.properties.display.ruby-text
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "38"
@@ -24,3 +23,10 @@ compat_features:
   - css.properties.display.ruby-base
   - css.properties.display.ruby-base-container
   - css.properties.display.ruby-text-container
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   firefox: "88"
+  #   firefox_android: "88"
+  - css.properties.ruby-position.alternate

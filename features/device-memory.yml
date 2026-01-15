@@ -1,7 +1,11 @@
 name: Device memory
-description: The `navigator.deviceMemory` property returns the approximate amount of device memory, in gigabytes.
+description: The `navigator.deviceMemory` property is the approximate amount of device memory, in gigabytes.
 spec: https://www.w3.org/TR/device-memory/
 compat_features:
   - api.Navigator.deviceMemory
   - api.WorkerNavigator.deviceMemory
-  - http.headers.Device-Memory
+  - http.headers.Sec-CH-Device-Memory
+  # Chromium browsers used to support http.headers.Device-Memory instead, up until Chrome 61/Edged 79.
+  # This key is now deprecated in BCD.
+  # See https://github.com/mdn/browser-compat-data/pull/28636/changes#diff-cd2525c72475a0e409c329c3e0650ecfd41cb68309332f942fd097ccd66ce234
+  # Replaced by http.headers.Sec-CH-Device-Memory

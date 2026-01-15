@@ -7,4 +7,8 @@ description: Container scroll-state queries with the `@container scroll-state(..
 spec: https://drafts.csswg.org/css-conditional-5/#scroll-state-container
 group: container-queries
 compat_features:
+  - css.at-rules.container.scroll-state_queries
+  - css.at-rules.container.scroll-state_queries.scrollable
+  - css.at-rules.container.scroll-state_queries.snapped
+  - css.at-rules.container.scroll-state_queries.stuck
   - css.properties.container-type.scroll-state

@@ -36,23 +36,21 @@ compat_features:
   - css.properties.break-inside.paged_context
 
   # baseline: high
-  # baseline_low_date: ≤2020-07-28
-  # baseline_high_date: ≤2023-01-28
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
   # support:
-  #   chrome: ≤80
-  #   chrome_android: ≤80
-  #   edge: ≤80
-  #   firefox: ≤72
-  #   firefox_android: ≤79
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
+  #   chrome: "50"
+  #   chrome_android: "50"
+  #   edge: "79"
+  #   firefox: "65"
+  #   firefox_android: "65"
+  #   safari: "10"
+  #   safari_ios: "10"
   - css.properties.break-after.auto
-  - css.properties.break-after.avoid
   - css.properties.break-after.left
   - css.properties.break-after.page
   - css.properties.break-after.right
   - css.properties.break-before.auto
-  - css.properties.break-before.avoid
   - css.properties.break-before.left
   - css.properties.break-before.page
   - css.properties.break-before.right
@@ -63,13 +61,13 @@ compat_features:
   # baseline_low_date: 2021-09-07
   # baseline_high_date: 2024-03-07
   # support:
-  #   chrome: ≤80
-  #   chrome_android: ≤80
-  #   edge: ≤80
+  #   chrome: "50"
+  #   chrome_android: "50"
+  #   edge: "79"
   #   firefox: "92"
   #   firefox_android: "92"
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
+  #   safari: "10"
+  #   safari_ios: "10"
   - css.properties.break-inside.avoid-page
 
   # baseline: false
@@ -83,20 +81,11 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "51"
-  #   chrome_android: "51"
-  #   edge: "12"
-  #   firefox: "92"
-  #   firefox_android: "92"
-  - css.properties.break-inside.paged_context.avoid-page
-
-  # baseline: false
-  # support:
-  #   chrome: ≤80
-  #   chrome_android: ≤80
-  #   edge: ≤80
-  #   safari: ≤13.1
-  #   safari_ios: ≤13.4
+  #   chrome: "50"
+  #   chrome_android: "50"
+  #   edge: "79"
+  #   safari: "10"
+  #   safari_ios: "10"
   - css.properties.break-after.avoid-page
   - css.properties.break-after.recto
   - css.properties.break-after.verso
@@ -106,8 +95,25 @@ compat_features:
 
   # baseline: false
   # support:
-  #   firefox: ≤72
-  #   firefox_android: ≤79
+  #   chrome: "51"
+  #   chrome_android: "51"
+  #   edge: "12"
+  #   firefox: "92"
+  #   firefox_android: "92"
+  - css.properties.break-inside.paged_context.avoid-page
+
+  # baseline: false
+  # support:
+  #   chrome: "50"
+  #   chrome_android: "50"
+  #   edge: "79"
+  - css.properties.break-after.avoid
+  - css.properties.break-before.avoid
+
+  # baseline: false
+  # support:
+  #   firefox: "65"
+  #   firefox_android: "65"
   - css.properties.break-after.always
   - css.properties.break-before.always
 

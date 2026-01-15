@@ -8,5 +8,22 @@ status:
     chrome_android: "102"
     edge: "102"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2025-12-12
+  # support:
+  #   chrome: "102"
+  #   chrome_android: "102"
+  #   edge: "102"
+  #   firefox: "139"
+  #   firefox_android: "139"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
   - api.Element.beforematch_event
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "102"
+  #   chrome_android: "102"
+  #   edge: "102"
   - html.global_attributes.hidden.until-found

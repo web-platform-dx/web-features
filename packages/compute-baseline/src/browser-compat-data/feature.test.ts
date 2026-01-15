@@ -49,8 +49,8 @@ describe("features", function () {
         const oneSpec = feature("css.properties.grid").spec_url;
         assert.equal(oneSpec.length, 1);
 
-        const twoSpecs = feature("css.properties.width").spec_url;
-        assert.equal(twoSpecs.length, 2);
+        const twoSpecs = feature("css.properties.break-inside").spec_url;
+        assert.equal(twoSpecs.length, 3);
       });
     });
 
@@ -94,10 +94,10 @@ describe("features", function () {
 
       it("returns null for unknown support", function () {
         const edge = browser("edge");
-        const f = feature("api.IDBCursor.key.binary_keys"); // { version_added: "≤79" }
+        const f = feature("api.FileSystem"); // { version_added: "≤18" }
 
-        assert.equal(f.supportedIn(edge.version("12")), null);
-        assert.equal(f.supportedIn(edge.version("79")), true);
+        assert.equal(f.supportedIn(edge.version("17")), null);
+        assert.equal(f.supportedIn(edge.version("18")), true);
         assert.equal(f.supportedIn(edge.version("80")), true);
       });
     });

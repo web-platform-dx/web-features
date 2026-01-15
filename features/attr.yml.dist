@@ -3,33 +3,42 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "133"
+    chrome_android: "133"
+    edge: "133"
 compat_features:
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-03-31
   # support:
   #   chrome: "133"
   #   chrome_android: "133"
   #   edge: "133"
   #   firefox: "119"
   #   firefox_android: "119"
-  - css.types.attr.fallback
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - css.types.attr.declaration-value
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "133"
   #   chrome_android: "133"
   #   edge: "133"
-  - css.types.attr.type-or-unit
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - css.types.attr.type-or-unit.angle
-  - css.types.attr.type-or-unit.color
-  - css.types.attr.type-or-unit.frequency
-  - css.types.attr.type-or-unit.integer
-  - css.types.attr.type-or-unit.length
-  - css.types.attr.type-or-unit.number
-  - css.types.attr.type-or-unit.percentage
-  - css.types.attr.type-or-unit.time
-  - css.types.attr.type-or-unit.url
+  - css.types.attr.type_function
+  - css.types.attr.type_function.angle
+  - css.types.attr.type_function.color
+  - css.types.attr.type_function.custom-ident
+  - css.types.attr.type_function.ident
+  - css.types.attr.type_function.image
+  - css.types.attr.type_function.integer
+  - css.types.attr.type_function.length
+  - css.types.attr.type_function.length-percentage
+  - css.types.attr.type_function.number
+  - css.types.attr.type_function.percentage
+  - css.types.attr.type_function.resolution
+  - css.types.attr.type_function.string
+  - css.types.attr.type_function.time
+  - css.types.attr.type_function.transform-function
+  - css.types.attr.type_function.url
