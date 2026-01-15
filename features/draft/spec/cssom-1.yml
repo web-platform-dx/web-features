@@ -1,10 +1,16 @@
-draft_date: 2025-06-19
+draft_date: 2025-10-08
 name: CSS Object Model (CSSOM)
 description: TODO
 spec: https://drafts.csswg.org/cssom-1/
 compat_features:
   - api.CSSStyleProperties
   - api.CSSStyleProperties.cssFloat
+  - api.CSSStyleRule.style.returns_CSSStyleProperties
+  - api.Document.adoptedStyleSheets.mutable
+  - api.HTMLElement.style.returns_CSSStyleProperties
+  - api.MathMLElement.style.returns_CSSStyleProperties
+  - api.SVGElement.style.returns_CSSStyleProperties
+  - api.Window.getComputedStyle.returns_CSSStyleProperties
 
 # The following features in the spec are already part of web-features:
 # - CSS object model:
@@ -42,7 +48,6 @@ compat_features:
 #   - api.CSSRuleList.length
 #   - api.CSSStyleDeclaration
 #   - api.CSSStyleDeclaration.@@iterator
-#   - api.CSSStyleDeclaration.cssFloat
 #   - api.CSSStyleDeclaration.cssText
 #   - api.CSSStyleDeclaration.getPropertyPriority
 #   - api.CSSStyleDeclaration.getPropertyValue

@@ -7,6 +7,8 @@ status:
     chrome: "137"
     chrome_android: "137"
     edge: "137"
+    firefox: "142"
+    firefox_android: "142"
 compat_features:
   # baseline: high
   # baseline_low_date: 2018-04-30
@@ -48,19 +50,14 @@ compat_features:
   #   safari_ios: "1"
   - api.Selection.collapse.node_parameter_nullable
 
-  # baseline: false
-  # support:
-  #   chrome: "74"
-  #   chrome_android: "74"
-  #   edge: "79"
-  - api.Document.featurePolicy
-
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "137"
   #   chrome_android: "137"
   #   edge: "137"
+  #   firefox: "142"
+  #   firefox_android: "142"
   - api.Selection.collapse.accepts_nodes_in_shadow_trees
   - api.Selection.extend.accepts_nodes_in_shadow_trees
   - api.Selection.setBaseAndExtent.accepts_nodes_in_shadow_trees

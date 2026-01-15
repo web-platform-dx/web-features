@@ -231,6 +231,19 @@ compat_features:
   - api.ElementInternals.ariaFlowToElements
   - api.ElementInternals.ariaLabelledByElements
 
+  # baseline: low
+  # baseline_low_date: 2025-12-12
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "128"
+  #   edge: "128"
+  #   firefox: "119"
+  #   firefox_android: "119"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - api.Element.ariaColIndexText
+  - api.Element.ariaRowIndexText
+
   # baseline: false
   # support:
   #   chrome: "83"
@@ -247,8 +260,6 @@ compat_features:
   #   edge: "128"
   #   firefox: "119"
   #   firefox_android: "119"
-  - api.Element.ariaColIndexText
-  - api.Element.ariaRowIndexText
   - api.ElementInternals.ariaColIndexText
   - api.ElementInternals.ariaRowIndexText
 

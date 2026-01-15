@@ -1,4 +1,4 @@
-draft_date: 2025-06-19
+draft_date: 2025-12-08
 name: CSS Fonts Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-fonts-5/
@@ -24,7 +24,10 @@ compat_features:
   - api.CSSFontFaceDescriptors.unicode-range
   - api.CSSFontFaceDescriptors.unicodeRange
   - css.at-rules.font-face.font-width
+  - css.properties.font-language-override.normal
   - css.properties.font-synthesis-style.oblique-only
+  - css.properties.font-synthesis.none
+  - css.properties.font-variation-settings.normal
   - css.properties.font-width.percentage
 
 # The following features in the spec are already part of web-features:
@@ -146,6 +149,15 @@ compat_features:
 #   - css.properties.font.font-width_keyword_values
 # - font-family:
 #   - css.properties.font-family
+#   - css.properties.font-family.cursive
+#   - css.properties.font-family.fangsong
+#   - css.properties.font-family.fantasy
+#   - css.properties.font-family.kai
+#   - css.properties.font-family.khmer-mul
+#   - css.properties.font-family.monospace
+#   - css.properties.font-family.nastaliq
+#   - css.properties.font-family.sans-serif
+#   - css.properties.font-family.serif
 #   - svg.global_attributes.font-family
 # - Math font family:
 #   - css.properties.font-family.math

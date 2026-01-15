@@ -5,5 +5,22 @@ status:
   baseline: false
   support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "139"
+  #   chrome_android: "139"
+  #   edge: "139"
   - api.XRDepthInformation.projectionMatrix
   - api.XRDepthInformation.transform
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.XRView.index
+  - api.XRVisibilityMaskChangeEvent
+  - api.XRVisibilityMaskChangeEvent.XRVisibilityMaskChangeEvent
+  - api.XRVisibilityMaskChangeEvent.eye
+  - api.XRVisibilityMaskChangeEvent.index
+  - api.XRVisibilityMaskChangeEvent.indices
+  - api.XRVisibilityMaskChangeEvent.session
+  - api.XRVisibilityMaskChangeEvent.vertices
