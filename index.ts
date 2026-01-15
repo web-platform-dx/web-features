@@ -159,7 +159,6 @@ for (const [key, data] of yamlEntries('features')) {
         }
     }
 
-    // XXX clean me up
     if (isOrdinaryFeatureData(data)) {
         // Convert Markdown fields
         const description = data.description as unknown;
@@ -188,7 +187,6 @@ for (const [key, data] of yamlEntries('features')) {
             }
         }
     }
-
 
     // Compute Baseline high date from low date.
     if (data.status?.baseline === 'high') {
