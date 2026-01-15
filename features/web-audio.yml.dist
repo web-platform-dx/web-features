@@ -44,7 +44,6 @@ compat_features:
   - api.AudioBufferSourceNode.buffer
   - api.AudioBufferSourceNode.playbackRate
   - api.AudioDestinationNode
-  - api.AudioListener
   - api.AudioNode
   - api.AudioNode.connect
   - api.AudioNode.context
@@ -670,35 +669,6 @@ compat_features:
   #   safari_ios: "6"
   - api.AudioParam.exponentialRampToValueAtTime
   - api.AudioParam.linearRampToValueAtTime
-
-  # baseline: false
-  # support:
-  #   chrome: "14"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "25"
-  #   firefox_android: "25"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - api.AudioListener.setOrientation
-  - api.AudioListener.setPosition
-
-  # baseline: false
-  # support:
-  #   chrome: "52"
-  #   chrome_android: "52"
-  #   edge: "79"
-  #   safari: "14.1"
-  #   safari_ios: "14.5"
-  - api.AudioListener.forwardX
-  - api.AudioListener.forwardY
-  - api.AudioListener.forwardZ
-  - api.AudioListener.positionX
-  - api.AudioListener.positionY
-  - api.AudioListener.positionZ
-  - api.AudioListener.upX
-  - api.AudioListener.upY
-  - api.AudioListener.upZ
 
   # baseline: false
   # support:

@@ -1,0 +1,15 @@
+name: AudioListener
+description: The `AudioListener` API sets the position and orientation of a person listening to the audio scene, allowing you to spatialize audio.
+spec: https://webaudio.github.io/web-audio-api/#AudioListener
+group: web-audio
+compat_features:
+  - api.AudioListener
+  - api.AudioListener.forwardX
+  - api.AudioListener.forwardY
+  - api.AudioListener.forwardZ
+  - api.AudioListener.positionX
+  - api.AudioListener.positionY
+  - api.AudioListener.positionZ
+  - api.AudioListener.upX
+  - api.AudioListener.upY
+  - api.AudioListener.upZ
