@@ -56,4 +56,35 @@ function compareBaselineValue(a: BaselineValue, b: BaselineValue): number {
   return statusToNumber.get(a) - statusToNumber.get(b);
 }
 
+/**
+ * Assert that a discouraged feature with no supporting browsers has a
+ * `removal_date`.
+ *
+ * @export
+ * @param {string} id The ID of the feature to be checked
+ * @param {FeatureData} feature The ordinary feature data to be checked
+ */
+export function assertRequiredRemovalDateSet(
+  id: string,
+  feature: FeatureData,
+): void {
+  if (!feature.discouraged) {
+    return;
+  }
+  if (feature.discouraged.removal_date) {
+    return;
+  }
+  if (Object.keys(feature.status.support).length > 0) {
+    return;
+  }
+  if (
+    feature.compat_features &&
+    Object.keys(feature.status.by_compat_key).length > 0
+  )
+    return;
+  throw new Error(
+    `${id} is discouraged and has no reported support, so a removal date is required`,
+  );
+}
+
 // TODO: assertValidSnapshotReference

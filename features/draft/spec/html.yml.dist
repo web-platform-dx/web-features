@@ -664,6 +664,19 @@ compat_features:
   #   safari_ios: "18.4"
   - api.HTMLElement.togglePopover.options_force_parameter
 
+  # baseline: low
+  # baseline_low_date: 2025-12-12
+  # support:
+  #   chrome: "139"
+  #   chrome_android: "139"
+  #   edge: "139"
+  #   firefox: "144"
+  #   firefox_android: "144"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - api.HTMLButtonElement.command.request-close
+  - html.elements.button.command.request-close
+
   # baseline: false
   # support:
   #   chrome: "4"
@@ -814,31 +827,21 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - api.NavigateEvent.sourceElement
+
+  # baseline: false
+  # support:
   #   chrome: "138"
   #   chrome_android: "138"
   #   edge: "138"
   #   safari: "26"
   #   safari_ios: "26"
   - api.WorkerGlobalScope.importScripts.enforces_trusted_types
-
-  # baseline: false
-  # support:
-  #   chrome: "139"
-  #   chrome_android: "139"
-  #   edge: "139"
-  #   firefox: "144"
-  #   firefox_android: "144"
-  - api.HTMLButtonElement.command.request-close
-  - html.elements.button.command.request-close
-
-  # baseline: false
-  # support:
-  #   chrome: "140"
-  #   chrome_android: "140"
-  #   edge: "140"
-  #   firefox: "145"
-  #   firefox_android: "145"
-  - api.ToggleEvent.source
 
   # baseline: false
   # support:
@@ -875,11 +878,11 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "74"
-  #   chrome_android: "74"
-  #   edge: "79"
-  - api.Document.featurePolicy
-  - api.HTMLIFrameElement.featurePolicy
+  #   firefox: "140"
+  #   firefox_android: "140"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - html.elements.h1.no_ua_styles_in_article_aside_nav_section
 
   # baseline: false
   # support:
@@ -903,6 +906,13 @@ compat_features:
   #   edge: "96"
   - http.headers.Cross-Origin-Embedder-Policy.report-to_parameter
   - http.headers.Cross-Origin-Opener-Policy.report-to_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "97"
+  #   chrome_android: "97"
+  #   edge: "97"
+  - html.elements.details.search_match_opens
 
   # baseline: false
   # support:
@@ -1005,18 +1015,6 @@ compat_features:
   #   firefox: "74"
   #   firefox_android: "79"
   - html.elements.iframe.allow.document-domain
-
-  # baseline: false
-  # support:
-  #   chrome: "135"
-  #   edge: "135"
-  - api.NavigateEvent.sourceElement
-
-  # baseline: false
-  # support:
-  #   firefox: "140"
-  #   firefox_android: "140"
-  - html.elements.h1.no_ua_styles_in_article_aside_nav_section
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false

@@ -1,9 +1,11 @@
-draft_date: 2025-10-08
+draft_date: 2025-12-08
 name: WebAssembly JavaScript Interface
 description: TODO
 spec: https://webassembly.github.io/spec/js-api/
 compat_features:
   - webassembly.api.JSTag_static
+  - webassembly.api.Memory.toFixedLengthBuffer
+  - webassembly.api.Memory.toResizableBuffer
 
 # The following features in the spec are already part of web-features:
 # - BigInt to i64 conversion (WebAssembly):

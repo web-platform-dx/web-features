@@ -7,9 +7,9 @@ import YAML from 'yaml';
 
 import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, getStatus, parseRangedDateString } from 'compute-baseline';
 import { Compat } from 'compute-baseline/browser-compat-data';
-import { assertFreshRegressionNotes, assertValidFeatureReference } from './assertions';
+import { assertFreshRegressionNotes, assertRequiredRemovalDateSet, assertValidFeatureReference } from './assertions';
 import { convertMarkdown } from "./text";
-import { isMoved, isSplit } from './type-guards';
+import { isMoved, isOrdinaryFeatureData, isSplit } from './type-guards';
 import { FeatureData, GroupData, SnapshotData, WebFeaturesData } from './types';
 
 // The longest name allowed, to allow for compact display.
@@ -159,19 +159,36 @@ for (const [key, data] of yamlEntries('features')) {
         }
     }
 
-    // Convert markdown to text+HTML.
-    if (data.description) {
+    // XXX clean me up
+    if (isOrdinaryFeatureData(data)) {
+        // Convert Markdown fields
+        const description = data.description as unknown;
+        if (typeof description !== "string" || description.trim().length === 0) {
+            throw new Error(`${key}.yml is missing a description value!`);
+        }
         const { text, html } = convertMarkdown(data.description);
         data.description = text;
         data.description_html = html;
-    }
-    if (Array.isArray(data.notes)) {
-        for (const note of data.notes as FeatureData["notes"]) {
-            const { text, html } = convertMarkdown(note.message);
-            note.message = text;
-            note.message_html = html;
+
+        if ("discouraged" in data) {
+            const reason = data.discouraged.reason as unknown;
+            if (typeof reason !== "string" || reason.trim().length === 0) {
+                throw new Error(`${key}.yml is missing a discouraged reason value!`);
+            }
+            const { text, html } = convertMarkdown(data.discouraged.reason);
+            data.discouraged.reason = text;
+            data.discouraged.reason_html = html;
+        }
+
+        if (Array.isArray(data.notes)) {
+            for (const note of data.notes as FeatureData["notes"]) {
+                const { text, html } = convertMarkdown(note.message);
+                note.message = text;
+                note.message_html = html;
+            }
         }
     }
+
 
     // Compute Baseline high date from low date.
     if (data.status?.baseline === 'high') {
@@ -225,6 +242,8 @@ for (const [key, data] of yamlEntries('features')) {
             }
         }
     }
+
+    assertRequiredRemovalDateSet(key, data);
 
     features[key] = data;
 }

@@ -82,6 +82,7 @@
     },
     "Discouraged": {
       "type": "object",
+      "description": "Whether developers are formally discouraged from using this feature",
       "properties": {
         "according_to": {
           "description": "Links to a formal discouragement notice, such as specification text, intent-to-unship, etc.",
@@ -90,9 +91,21 @@
         "alternatives": {
           "description": "IDs for features that substitute some or all of this feature's utility",
           "$ref": "#/definitions/Strings"
+        },
+        "reason": {
+          "description": "A brief, developer-focused description of why the feature is discouraged",
+          "type": "string"
+        },
+        "reason_html": {
+          "description": "A brief, developer-focused description of why the feature is discouraged, as an HTML string",
+          "type": "string"
+        },
+        "removal_date": {
+          "description": "An expected or actual removal date, as in \"2029-12-31\". Only set if there's an announced plan by all currently-implementing vendors to unship the feature or the feature has already been unshipped from all browsers.",
+          "type": "string"
         }
       },
-      "required": ["according_to"],
+      "required": ["according_to", "reason", "reason_html"],
       "additionalProperties": false
     },
     "BrowserData": {

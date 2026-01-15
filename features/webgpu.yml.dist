@@ -8,6 +8,22 @@ status:
     safari: "26"
     safari_ios: "26"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome_android: "121"
+  #   firefox_android: "141"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.WGSLLanguageFeatures
+  - api.WGSLLanguageFeatures.@@iterator
+  - api.WGSLLanguageFeatures.entries
+  - api.WGSLLanguageFeatures.forEach
+  - api.WGSLLanguageFeatures.has
+  - api.WGSLLanguageFeatures.keys
+  - api.WGSLLanguageFeatures.size
+  - api.WGSLLanguageFeatures.values
+  - api.WorkerNavigator.gpu
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
@@ -245,15 +261,6 @@ compat_features:
   - api.HTMLCanvasElement.getContext.webgpu_context
   - api.Navigator.gpu
   - api.OffscreenCanvas.getContext.webgpu_context
-  - api.WGSLLanguageFeatures
-  - api.WGSLLanguageFeatures.@@iterator
-  - api.WGSLLanguageFeatures.entries
-  - api.WGSLLanguageFeatures.forEach
-  - api.WGSLLanguageFeatures.has
-  - api.WGSLLanguageFeatures.keys
-  - api.WGSLLanguageFeatures.size
-  - api.WGSLLanguageFeatures.values
-  - api.WorkerNavigator.gpu
 
   # baseline: false
   # support:
@@ -264,6 +271,7 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome_android: "131"
   #   safari: "26"
   #   safari_ios: "26"
   - api.GPUCanvasContext.getConfiguration
@@ -276,11 +284,15 @@ compat_features:
   - api.GPUCommandEncoder.beginRenderPass.timestampWrites
   - api.GPUComputePassEncoder.setBindGroup.unset_bind_group
   - api.GPUDevice.createBindGroupLayout.texture_rgb10a2uint
+  - api.GPUDevice.createComputePipeline.optional_entryPoint
+  - api.GPUDevice.createComputePipelineAsync.optional_entryPoint
   - api.GPUDevice.createQuerySet.timestamp
   - api.GPUDevice.createRenderPipeline.optional_depthcompare_depthwriteenabled
+  - api.GPUDevice.createRenderPipeline.optional_entryPoint
   - api.GPUDevice.createRenderPipeline.texture_rgb10a2uint
   - api.GPUDevice.createRenderPipeline.vertex_unorm10-10-10-2
   - api.GPUDevice.createRenderPipelineAsync.optional_depthcompare_depthwriteenabled
+  - api.GPUDevice.createRenderPipelineAsync.optional_entryPoint
   - api.GPUDevice.createRenderPipelineAsync.texture_rgb10a2uint
   - api.GPUDevice.createRenderPipelineAsync.vertex_unorm10-10-10-2
   - api.GPUDevice.createTexture.texture_rgb10a2uint
@@ -303,13 +315,21 @@ compat_features:
   - api.GPUSupportedFeatures.feature_texture-compression-bc
   - api.GPUSupportedFeatures.feature_texture-compression-etc2
   - api.GPUSupportedFeatures.feature_timestamp-query
-  - api.GPUTexture.createView.texture_rgb10a2uint
+  - api.GPUTexture.createView.descriptor_format_parameter_accepts_rgb10a2uint
   - api.GPUTexture.format.texture_rgb10a2uint
 
   # baseline: false
   # support:
   #   chrome_android: "123"
   - api.GPUCommandEncoder.beginRenderPass.separate_depth_stencil_read-only
+  - api.WGSLLanguageFeatures.extension_packed_4x8_integer_dot_product
+  - api.WGSLLanguageFeatures.extension_unrestricted_pointer_parameters
+
+  # baseline: false
+  # support:
+  #   chrome_android: "124"
+  - api.GPUDevice.createBindGroupLayout.storageTexture_access_read-write_read-only
+  - api.WGSLLanguageFeatures.extension_readonly_and_readwrite_storage_textures
 
   # baseline: false
   # support:
@@ -318,37 +338,42 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome_android: "126"
+  - api.GPUQueue.submit.validates_command_buffer_uniqueness
+
+  # baseline: false
+  # support:
+  #   chrome_android: "129"
+  - api.GPUCanvasContext.configure.toneMapping
+
+  # baseline: false
+  # support:
   #   chrome_android: "130"
   - api.GPUDevice.createRenderPipeline.dual-source-blending
   - api.GPUDevice.createRenderPipelineAsync.dual-source-blending
+  - api.GPUSupportedFeatures.feature_dual-source-blending
+
+  # baseline: false
+  # support:
+  #   chrome_android: "131"
+  - api.GPUDevice.createRenderPipeline.validates_depth_bias_for_line_and_point_topologies
+  - api.GPUDevice.createRenderPipelineAsync.validates_depth_bias_for_line_and_point_topologies
+  - api.GPUSupportedFeatures.feature_clip-distances
 
   # baseline: false
   # support:
   #   chrome_android: "132"
-  - api.GPUTexture.createView.usage
+  - api.GPUDevice.adapterInfo
+  - api.GPUSupportedFeatures.feature_float32-blendable
+  - api.GPUTexture.createView.descriptor_usage_parameter
+
+  # baseline: false
+  # support:
+  #   chrome_android: "134"
+  - api.GPUAdapterInfo.subgroupMaxSize
+  - api.GPUAdapterInfo.subgroupMinSize
 
   # baseline: false
   # support:
   #   chrome_android: "140"
   - api.GPUAdapter.requestDevice.handles_duplicate_calls
-
-  # baseline: false
-  # support: {}
-  - api.GPUAdapterInfo.subgroupMaxSize
-  - api.GPUAdapterInfo.subgroupMinSize
-  - api.GPUCanvasContext.configure.toneMapping
-  - api.GPUDevice.adapterInfo
-  - api.GPUDevice.createBindGroupLayout.storageTexture_access_read-write_read-only
-  - api.GPUDevice.createComputePipeline.optional_entryPoint
-  - api.GPUDevice.createComputePipelineAsync.optional_entryPoint
-  - api.GPUDevice.createRenderPipeline.optional_entryPoint
-  - api.GPUDevice.createRenderPipeline.validates_depth_bias_for_line_and_point_topologies
-  - api.GPUDevice.createRenderPipelineAsync.optional_entryPoint
-  - api.GPUDevice.createRenderPipelineAsync.validates_depth_bias_for_line_and_point_topologies
-  - api.GPUQueue.submit.validates_command_buffer_uniqueness
-  - api.GPUSupportedFeatures.feature_clip-distances
-  - api.GPUSupportedFeatures.feature_dual-source-blending
-  - api.GPUSupportedFeatures.feature_float32-blendable
-  - api.WGSLLanguageFeatures.extension_packed_4x8_integer_dot_product
-  - api.WGSLLanguageFeatures.extension_readonly_and_readwrite_storage_textures
-  - api.WGSLLanguageFeatures.extension_unrestricted_pointer_parameters
