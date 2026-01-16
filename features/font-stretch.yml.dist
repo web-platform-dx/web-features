@@ -3,18 +3,17 @@
 
 status:
   baseline: high
-  baseline_low_date: 2017-09-19
-  baseline_high_date: 2020-03-19
+  baseline_low_date: 2020-01-15
+  baseline_high_date: 2022-07-15
   support:
-    chrome: "60"
-    chrome_android: "60"
-    edge: "12"
-    firefox: "9"
-    firefox_android: "9"
-    safari: "11"
-    safari_ios: "11"
+    chrome: "62"
+    chrome_android: "62"
+    edge: "79"
+    firefox: "62"
+    firefox_android: "62"
+    safari: "11.1"
+    safari_ios: "11.3"
 compat_features:
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2017-09-19
   # baseline_high_date: 2020-03-19
@@ -27,6 +26,15 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - css.properties.font-stretch
+  - css.properties.font-stretch.condensed
+  - css.properties.font-stretch.expanded
+  - css.properties.font-stretch.extra-condensed
+  - css.properties.font-stretch.extra-expanded
+  - css.properties.font-stretch.normal
+  - css.properties.font-stretch.semi-condensed
+  - css.properties.font-stretch.semi-expanded
+  - css.properties.font-stretch.ultra-condensed
+  - css.properties.font-stretch.ultra-expanded
 
   # baseline: high
   # baseline_low_date: 2018-09-05
@@ -66,14 +74,3 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - css.properties.font.font-width_keyword_values
-
-  # baseline: false
-  # support:
-  #   chrome: "60"
-  #   chrome_android: "60"
-  #   edge: "12"
-  #   firefox: "9"
-  #   firefox_android: "9"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - svg.global_attributes.font-stretch
