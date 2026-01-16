@@ -1789,6 +1789,17 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   firefox: "61"
+  #   firefox_android: "61"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - api.SVGAElement.hreflang
+  - api.SVGAElement.type
+
+  # baseline: false
+  # support:
   #   chrome: "1"
   #   chrome_android: "18"
   #   edge: "12"
@@ -1884,12 +1895,11 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
   #   firefox: "61"
   #   firefox_android: "61"
-  #   safari: "26.2"
-  #   safari_ios: "26.2"
-  - api.SVGAElement.hreflang
-  - api.SVGAElement.type
+  - api.SVGAElement.referrerPolicy
 
   # baseline: false
   # support:
@@ -1922,7 +1932,6 @@ compat_features:
   # support:
   #   firefox: "61"
   #   firefox_android: "61"
-  - api.SVGAElement.referrerPolicy
   - svg.elements.a.hreflang
   - svg.elements.a.type
   - svg.elements.textPath.path

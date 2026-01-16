@@ -576,6 +576,19 @@ compat_features:
   - api.RTCRtpReceiver.getSynchronizationSources.video_tracks_supported
 
   # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "74"
+  #   chrome_android: "74"
+  #   edge: "79"
+  #   firefox: "64"
+  #   firefox_android: "64"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.RTCRtpSender.setParameters.parameters_encodings_parameter.scaleResolutionDownBy
+
+  # baseline: high
   # baseline_low_date: 2020-03-24
   # baseline_high_date: 2022-09-24
   # support:
@@ -1033,16 +1046,6 @@ compat_features:
   #   safari: "15"
   #   safari_ios: "15"
   - api.RTCDataChannel.transferable
-
-  # baseline: false
-  # support:
-  #   chrome: "74"
-  #   chrome_android: "74"
-  #   firefox: "64"
-  #   firefox_android: "64"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - api.RTCRtpSender.setParameters.parameters_encodings_parameter.scaleResolutionDownBy
 
   # baseline: false
   # support:
