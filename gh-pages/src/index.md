@@ -3,16 +3,31 @@ layout: "default.html"
 title: "What is Baseline?"
 ---
 
-Baseline gives you clear information about which web platform features work across our [core browser set](#how-do-features-become-part-of-baseline%3F) today. When reading an article, or choosing a library for your project, if the features used are all part of Baseline, you can trust the level of browser compatibility. By aligning with Baseline, there should be fewer surprises when testing your site.
+Baseline gives you summarized information about which web platform features work across our [core browser set](#which-browsers-are-in-the-core-browser-set) today.
+
+When you read an article about features of the web platform, or when you choose a library that uses web features for your project, if those features are all Baseline, you can make quicker decisions about using them. Baseline helps to reduce the number of cross-browser surprises when testing your site.
 
 ## How do features become part of Baseline?
 
-Baseline features are available across popular browsers. Baseline has two stages:
+Baseline has two stages:
 
-- **Newly available**: The feature works across the latest devices and browser versions. The feature might not work in older devices or browsers. Indicated with a blue icon.
-- **Widely available**: The feature is well established and works across many devices and browser versions. It’s been available across browsers for at least 2½ years (30 months). Indicated with a green icon.
+- **Newly available**
+  
+  The feature has recently become available in all the browsers of the core browser set. The feature might not work yet in older devices or browsers.
+  This status is indicated with the following blue icon: <img src="/assets/img/baseline-widely-icon.svg" alt="Baseline widely available icon" style="height:1em;">.
 
-Prior to being newly available, a feature has **Limited availability** when it's not yet available across all browsers.
+- **Widely available**
+
+  The feature has been available in all the browsers of the core browser set for at least 2½ years (30 months). It is now well established and works across many devices and browser versions.
+  This status is indicated with the following green icon: <img src="/assets/img/baseline-newly-icon.svg" alt="Baseline newly available icon" style="height:1em;">.
+
+Prior to being part of Baseline, a feature has **Limited availability** when it's not yet available across all the browsers of the core browser set.
+Limited availability features are indicated with the following grey and orange icon: <img src="/assets/img/baseline-limited-icon.svg" alt="Limited availability icon" style="height:1em;">
+
+Baseline is a simplification of the complex reality of web platform feature support, and it can't replace detailed testing for your specific use case.
+For example, a feature that's limited availability or Baseline newly available might still work well enough for your needs, or as a progressive enhancement. Or, a feature that's Baseline widely available might not work for your specific audience if they use older browsers or devices.
+
+## Which browsers are in the core browser set?
 
 Baseline is calculated using the following core browser set:
 
