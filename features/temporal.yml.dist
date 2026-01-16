@@ -4,12 +4,16 @@
 status:
   baseline: false
   support:
+    chrome: "144"
+    chrome_android: "144"
     firefox: "139"
     firefox_android: "139"
 compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
   #   firefox: "139"
   #   firefox_android: "139"
   - javascript.builtins.Date.toTemporalInstant
@@ -42,7 +46,6 @@ compat_features:
   - javascript.builtins.Temporal.Duration.with
   - javascript.builtins.Temporal.Duration.years
   - javascript.builtins.Temporal.Instant
-  - javascript.builtins.Temporal.Instant.Instant
   - javascript.builtins.Temporal.Instant.add
   - javascript.builtins.Temporal.Instant.compare
   - javascript.builtins.Temporal.Instant.epochMilliseconds
@@ -68,7 +71,6 @@ compat_features:
   - javascript.builtins.Temporal.Now.timeZoneId
   - javascript.builtins.Temporal.Now.zonedDateTimeISO
   - javascript.builtins.Temporal.PlainDate
-  - javascript.builtins.Temporal.PlainDate.PlainDate
   - javascript.builtins.Temporal.PlainDate.add
   - javascript.builtins.Temporal.PlainDate.calendarId
   - javascript.builtins.Temporal.PlainDate.compare
@@ -102,7 +104,6 @@ compat_features:
   - javascript.builtins.Temporal.PlainDate.year
   - javascript.builtins.Temporal.PlainDate.yearOfWeek
   - javascript.builtins.Temporal.PlainDateTime
-  - javascript.builtins.Temporal.PlainDateTime.PlainDateTime
   - javascript.builtins.Temporal.PlainDateTime.add
   - javascript.builtins.Temporal.PlainDateTime.calendarId
   - javascript.builtins.Temporal.PlainDateTime.compare
@@ -143,7 +144,6 @@ compat_features:
   - javascript.builtins.Temporal.PlainDateTime.year
   - javascript.builtins.Temporal.PlainDateTime.yearOfWeek
   - javascript.builtins.Temporal.PlainMonthDay
-  - javascript.builtins.Temporal.PlainMonthDay.PlainMonthDay
   - javascript.builtins.Temporal.PlainMonthDay.calendarId
   - javascript.builtins.Temporal.PlainMonthDay.day
   - javascript.builtins.Temporal.PlainMonthDay.equals
@@ -177,7 +177,6 @@ compat_features:
   - javascript.builtins.Temporal.PlainTime.valueOf
   - javascript.builtins.Temporal.PlainTime.with
   - javascript.builtins.Temporal.PlainYearMonth
-  - javascript.builtins.Temporal.PlainYearMonth.PlainYearMonth
   - javascript.builtins.Temporal.PlainYearMonth.add
   - javascript.builtins.Temporal.PlainYearMonth.calendarId
   - javascript.builtins.Temporal.PlainYearMonth.compare
@@ -202,7 +201,6 @@ compat_features:
   - javascript.builtins.Temporal.PlainYearMonth.with
   - javascript.builtins.Temporal.PlainYearMonth.year
   - javascript.builtins.Temporal.ZonedDateTime
-  - javascript.builtins.Temporal.ZonedDateTime.ZonedDateTime
   - javascript.builtins.Temporal.ZonedDateTime.add
   - javascript.builtins.Temporal.ZonedDateTime.calendarId
   - javascript.builtins.Temporal.ZonedDateTime.compare
@@ -254,7 +252,20 @@ compat_features:
   - javascript.builtins.Temporal.ZonedDateTime.yearOfWeek
 
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "139"
+  #   firefox_android: "139"
+  - javascript.builtins.Temporal.Instant.Instant
+  - javascript.builtins.Temporal.PlainDate.PlainDate
+  - javascript.builtins.Temporal.PlainDateTime.PlainDateTime
+  - javascript.builtins.Temporal.PlainMonthDay.PlainMonthDay
+  - javascript.builtins.Temporal.PlainYearMonth.PlainYearMonth
+  - javascript.builtins.Temporal.ZonedDateTime.ZonedDateTime
+
+  # baseline: false
+  # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
   - javascript.builtins.Temporal.PlainDate.withCalendar
   - javascript.builtins.Temporal.PlainDateTime.withCalendar
   - javascript.builtins.Temporal.ZonedDateTime.withCalendar

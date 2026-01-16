@@ -42,6 +42,7 @@ compat_features:
   #   firefox_android: "117"
   #   safari: "15.4"
   #   safari_ios: "15.4"
+  - api.DedicatedWorkerGlobalScope.rtctransform_event
   - api.RTCRtpReceiver.transform
   - api.RTCRtpScriptTransform
   - api.RTCRtpScriptTransform.RTCRtpScriptTransform
@@ -73,5 +74,4 @@ compat_features:
   #   firefox_android: "117"
   #   safari: "15.4"
   #   safari_ios: "15.4"
-  - api.DedicatedWorkerGlobalScope.rtctransform_event
   - api.RTCRtpScriptTransformer.generateKeyFrame
