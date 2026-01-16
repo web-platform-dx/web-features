@@ -4,3 +4,10 @@
 status:
   baseline: false
   support: {}
+compat_features:
+  - api.Origin
+  - api.Origin.Origin
+  - api.Origin.from_static
+  - api.Origin.isSameOrigin
+  - api.Origin.isSameSite
+  - api.Origin.opaque

@@ -3,11 +3,10 @@ description: >
   An `Origin` object represents an origin, as in a scheme, hostname, and port.
   You can use it to make same-site and same-origin comparisons.
 spec: https://html.spec.whatwg.org/multipage/browsers.html#the-origin-interface
-# Expected compat features
-# compat_features:
-# - api.Origin
-# - api.Origin.Origin
-# - api.Origin.from_static
-# - api.Origin.opaque
-# - api.Origin.isSameOrigin
-# - api.Origin.isSameSite
+compat_features:
+  - api.Origin
+  - api.Origin.Origin
+  - api.Origin.from_static
+  - api.Origin.opaque
+  - api.Origin.isSameOrigin
+  - api.Origin.isSameSite
