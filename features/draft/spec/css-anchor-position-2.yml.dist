@@ -3,13 +3,18 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "147"
+    firefox_android: "147"
 compat_features:
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-01-13
   # support:
   #   chrome: "125"
   #   chrome_android: "125"
   #   edge: "125"
+  #   firefox: "147"
+  #   firefox_android: "147"
   #   safari: "26"
   #   safari_ios: "26"
   - css.properties.position-try.flip-block
@@ -17,11 +22,14 @@ compat_features:
   - css.properties.position-try.flip-start
   - css.properties.position-try.none
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-01-13
   # support:
   #   chrome: "129"
   #   chrome_android: "129"
   #   edge: "129"
+  #   firefox: "147"
+  #   firefox_android: "147"
   #   safari: "26"
   #   safari_ios: "26"
   - css.properties.position-try-fallbacks.block-end
@@ -111,6 +119,10 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   firefox: "147"
+  #   firefox_android: "147"
   #   safari: "26.2"
   #   safari_ios: "26.2"
   - css.properties.position-try-fallbacks.flip-x
@@ -120,5 +132,7 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "147"
+  #   firefox_android: "147"
   - css.properties.position-visibility.anchors-valid

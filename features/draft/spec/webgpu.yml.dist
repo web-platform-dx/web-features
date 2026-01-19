@@ -3,8 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome_android: "143"
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -15,7 +14,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome_android: "139"
   #   safari: "26"
   #   safari_ios: "26"
   - api.GPUSupportedFeatures.feature_texture-compression-astc-sliced-3d
@@ -23,51 +21,22 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome_android: "133"
-  - api.GPUAdapter.requestDevice.undefined_limits
-
-  # baseline: false
-  # support:
-  #   chrome_android: "134"
-  - api.GPUSupportedFeatures.feature_subgroups
-
-  # baseline: false
-  # support:
-  #   chrome_android: "135"
-  - api.GPUDevice.createPipelineLayout.descriptor_bindGroupLayouts_parameter_accepts_null_values
-
-  # baseline: false
-  # support:
-  #   chrome_android: "137"
-  - api.GPUCommandEncoder.copyBufferToBuffer.offset_and_size_parameter_optional
-  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTextureView
-
-  # baseline: false
-  # support:
-  #   chrome_android: "138"
-  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUBuffer
-
-  # baseline: false
-  # support:
   #   chrome_android: "139"
   - api.GPUSupportedFeatures.feature_core-features-and-limits
 
-  # baseline: false
-  # support:
-  #   chrome_android: "140"
-  - api.GPUCommandEncoder.beginRenderPass.accepts_GPUTexture_resources
-  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTexture_resource
-
-  # baseline: false
-  # support:
-  #   chrome_android: "142"
-  - api.GPUSupportedFeatures.feature_primitive-index
-  - api.GPUSupportedFeatures.feature_texture-formats-tier1
-  - api.GPUSupportedFeatures.feature_texture-formats-tier2
-
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support:
-  #   chrome_android: "143"
+  # support: {}
+  - api.GPUAdapter.requestDevice.undefined_limits
+  - api.GPUCommandEncoder.beginRenderPass.accepts_GPUTexture_resources
+  - api.GPUCommandEncoder.copyBufferToBuffer.offset_and_size_parameter_optional
+  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUBuffer
+  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTextureView
+  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTexture_resource
+  - api.GPUDevice.createPipelineLayout.descriptor_bindGroupLayouts_parameter_accepts_null_values
+  - api.GPUSupportedFeatures.feature_primitive-index
+  - api.GPUSupportedFeatures.feature_subgroups
   - api.GPUSupportedFeatures.feature_texture-component-swizzle
+  - api.GPUSupportedFeatures.feature_texture-formats-tier1
+  - api.GPUSupportedFeatures.feature_texture-formats-tier2
   - api.GPUTexture.createView.descriptor_swizzle_parameter

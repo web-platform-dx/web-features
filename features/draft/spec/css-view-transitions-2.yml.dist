@@ -3,13 +3,18 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "144"
+    chrome_android: "144"
 compat_features:
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-01-13
   # support:
   #   chrome: "142"
   #   chrome_android: "142"
   #   edge: "142"
+  #   firefox: "147"
+  #   firefox_android: "147"
   #   safari: "26.2"
   #   safari_ios: "26.2"
   - api.Document.activeViewTransition
@@ -27,5 +32,7 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
   - api.ViewTransition.waitUntil
