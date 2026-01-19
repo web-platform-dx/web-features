@@ -24,3 +24,7 @@ compat_features:
   # baseline: false
   # support: {}
   - api.LargestContentfulPaint.presentationTime
+  - api.PerformanceElementTiming.paintTime
+  - api.PerformanceElementTiming.presentationTime
+  - api.PerformanceLongAnimationFrameTiming.paintTime
+  - api.PerformanceLongAnimationFrameTiming.presentationTime
