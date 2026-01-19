@@ -991,6 +991,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "141"
+  #   chrome_android: "141"
+  #   edge: "141"
+  - http.headers.No-Vary-Search.speculation_rules_prefetch
+
+  # baseline: false
+  # support:
   #   firefox: "1"
   #   firefox_android: "4"
   - api.Navigator.oscpu
@@ -1024,5 +1031,7 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
+  - api.NavigationPrecommitController.addHandler
+  - api.NavigationTransition.to
   - api.Navigator.authentication
   - html.elements.track.kind.descriptions
