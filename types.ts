@@ -5,13 +5,13 @@
 // nicer to work with in TypeScript.
 
 import type {
-  BaselineEnum as BaselineHighLow,
   BrowserData,
   Browsers,
   Discouraged,
   GroupData,
   Kind,
   FeatureData as QuicktypeMonolithicFeatureData,
+  Note as QuicktypeNote,
   Status as QuicktypeStatus,
   StatusHeadline as QuicktypeStatusHeadline,
   WebFeaturesData as QuicktypeWebFeaturesData,
@@ -22,7 +22,6 @@ import type {
 
 // Passthrough types
 export type {
-  BaselineHighLow,
   BrowserData,
   Browsers,
   Discouraged,
@@ -32,12 +31,17 @@ export type {
   Support,
 };
 
+// Quicktype interprets the schema's `baseline: false | "high" | "low"` as
+// meaning `baseline: boolean | "high" | "low"`. `BaselineValue` patches it.
+export type BaselineValue = "high" | "low" | false;
 export interface Status extends QuicktypeStatus {
-  baseline: false | BaselineHighLow;
+  baseline: BaselineValue;
 }
-
 export interface SupportStatus extends QuicktypeStatusHeadline {
-  baseline: false | BaselineHighLow;
+  baseline: BaselineValue;
+}
+export interface RegressionNote extends QuicktypeNote {
+  previous_baseline_value: BaselineValue;
 }
 
 // These are "tests" for our type definitions.
@@ -74,7 +78,7 @@ export interface WebFeaturesData extends Pick<
   };
 }
 
-export type FeatureData = { kind: "feature" } & Required<
+type IntermediateFeatureData = { kind: "feature" } & Required<
   Pick<
     QuicktypeMonolithicFeatureData,
     "description_html" | "description" | "name" | "spec" | "status"
@@ -83,9 +87,19 @@ export type FeatureData = { kind: "feature" } & Required<
   Partial<
     Pick<
       QuicktypeMonolithicFeatureData,
-      "caniuse" | "compat_features" | "discouraged" | "group" | "snapshot"
+      | "caniuse"
+      | "compat_features"
+      | "discouraged"
+      | "group"
+      | "snapshot"
+      | "notes"
     >
   >;
+
+export interface FeatureData extends IntermediateFeatureData {
+  status: Status;
+  notes?: RegressionNote[];
+}
 
 const goodFeatureData: FeatureData = {
   kind: "feature",
