@@ -1,6 +1,8 @@
 name: captureStream() for <audio> and <video>
 description: The `captureStream()` method for `<audio>` and `<video>` elements returns a `MediaStream` for the media element's content. You can use this to record media or send it elsewhere, such as a canvas or WebRTC connection.
 spec: https://w3c.github.io/mediacapture-fromelement/#html-media-element-media-capture-extensions
+# https://caniuse.com/mediacapture-fromelement is not linked because it covers
+# <audio>, <video>, and <canvas>, which are split here in web-features.
 group: media-elements
 compat_features:
   - api.HTMLMediaElement.captureStream
