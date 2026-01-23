@@ -1,10 +1,10 @@
-name: MathML 3 (discouraged)
-description: MathML 3.0 specifies several elements and attributes that are not included in MathML Core and which you should not use when developing for the web. Non web-based Math editors may implement these features, but they are discouraged for web use.
-spec: https://www.w3.org/TR/MathML3/
+name: MathML (discouraged)
+description: MathML specifies several elements and attributes that are not included in the MathML Core subset, and which you should not use when developing for the web. Non web-based Math editors may implement these features, but they are discouraged for web use.
+spec: https://www.w3.org/TR/mathml4/
 discouraged:
   according_to:
     - https://w3c.github.io/mathml-core/#introduction
-  reason: MathML 3.0 is hard to implement consistently across browsers and to integrate with other web technologies such as CSS. MathML Core is a subset which addresses these issues.
+  reason: MathML Full is hard to implement consistently across browsers and to integrate with other web technologies such as CSS. MathML Core is a subset which addresses these issues.
   alternatives:
     - mathml
 compat_features:
