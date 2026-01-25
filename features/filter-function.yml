@@ -1,0 +1,7 @@
+name: filter()
+description: The `filter()` CSS function applies one or more graphic effects to a CSS image, such as a background image. You can use functions, such as `blur()` and `drop-shadow()`, alone or combined to produce different effects. For instance, `background: filter(url(image.png), blur(2px))`.
+spec: https://drafts.csswg.org/filter-effects-1/#FilterCSSImageValue
+group: css
+caniuse: css-filter-function
+compat_features:
+  - css.types.image.filter
