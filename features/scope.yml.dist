@@ -3,17 +3,39 @@
 
 status:
   baseline: low
-  baseline_low_date: 2025-12-09
+  baseline_low_date: 2025-12-12
   support:
-    chrome: "118"
-    chrome_android: "118"
-    edge: "118"
+    chrome: "143"
+    chrome_android: "143"
+    edge: "143"
     firefox: "146"
     firefox_android: "146"
-    safari: "17.4"
-    safari_ios: "17.4"
+    safari: "26.2"
+    safari_ios: "26.2"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2025-12-09
+  # support:
+  #   chrome: "118"
+  #   chrome_android: "118"
+  #   edge: "118"
+  #   firefox: "146"
+  #   firefox_android: "146"
+  #   safari: "17.4"
+  #   safari_ios: "17.4"
   - api.CSSScopeRule
   - api.CSSScopeRule.end
   - api.CSSScopeRule.start
   - css.at-rules.scope
+
+  # baseline: low
+  # baseline_low_date: 2025-12-12
+  # support:
+  #   chrome: "143"
+  #   chrome_android: "143"
+  #   edge: "143"
+  #   firefox: "142"
+  #   firefox_android: "142"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - css.selectors.nesting.at-scope
