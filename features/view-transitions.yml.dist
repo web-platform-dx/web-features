@@ -61,6 +61,20 @@ compat_features:
   #   safari_ios: "18.4"
   - css.properties.view-transition-name.match-element
 
+  # baseline: low
+  # baseline_low_date: 2026-01-13
+  # support:
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
+  #   firefox: "147"
+  #   firefox_android: "147"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
+  - api.Document.startViewTransition.options_parameter
+  - api.Document.startViewTransition.options_parameter.types_parameter
+  - api.Document.startViewTransition.options_parameter.update_parameter
+
   # baseline: false
   # support:
   #   chrome: "111"
@@ -90,15 +104,6 @@ compat_features:
   - api.PageSwapEvent
   - api.PageSwapEvent.activation
   - api.Window.pageswap_event
-
-  # baseline: false
-  # support:
-  #   chrome: "125"
-  #   chrome_android: "125"
-  #   edge: "125"
-  #   safari: "18.2"
-  #   safari_ios: "18.2"
-  - api.Document.startViewTransition.callbackOptions_parameter
 
   # baseline: false
   # support:

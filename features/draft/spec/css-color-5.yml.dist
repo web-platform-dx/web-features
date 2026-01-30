@@ -149,8 +149,12 @@ compat_features:
   - css.properties.text-decoration.currentColor
   - css.properties.text-decoration.transparent
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-01-21
   # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
   #   firefox: "146"
   #   firefox_android: "146"
   #   safari: "26.2"

@@ -677,6 +677,18 @@ compat_features:
   - api.HTMLButtonElement.command.request-close
   - html.elements.button.command.request-close
 
+  # baseline: low
+  # baseline_low_date: 2026-01-13
+  # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
+  #   firefox: "147"
+  #   firefox_android: "147"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - api.NavigateEvent.sourceElement
+
   # baseline: false
   # support:
   #   chrome: "4"
@@ -827,21 +839,24 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "135"
-  #   chrome_android: "135"
-  #   edge: "135"
-  #   safari: "26.2"
-  #   safari_ios: "26.2"
-  - api.NavigateEvent.sourceElement
-
-  # baseline: false
-  # support:
   #   chrome: "138"
   #   chrome_android: "138"
   #   edge: "138"
   #   safari: "26"
   #   safari_ios: "26"
   - api.WorkerGlobalScope.importScripts.enforces_trusted_types
+
+  # baseline: false
+  # support:
+  #   chrome: "141"
+  #   chrome_android: "141"
+  #   edge: "141"
+  #   firefox: "147"
+  #   firefox_android: "147"
+  - api.NavigateEvent.intercept.precommitHandler_option
+  - api.NavigationPrecommitController
+  - api.NavigationPrecommitController.redirect
+  - api.NavigationTransition.committed
 
   # baseline: false
   # support:
@@ -979,10 +994,14 @@ compat_features:
   #   chrome: "141"
   #   chrome_android: "141"
   #   edge: "141"
-  - api.NavigateEvent.intercept.precommitHandler_option
-  - api.NavigationPrecommitController
-  - api.NavigationPrecommitController.redirect
-  - api.NavigationTransition.committed
+  - http.headers.No-Vary-Search.speculation_rules_prefetch
+
+  # baseline: false
+  # support:
+  #   firefox: "143"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - html.elements.input.type_color.accepts_css_colors
 
   # baseline: false
   # support:
@@ -996,12 +1015,6 @@ compat_features:
   #   safari: "9"
   #   safari_ios: "9"
   - api.HTMLMediaElement.getStartDate
-
-  # baseline: false
-  # support:
-  #   safari: "18.4"
-  #   safari_ios: "18.4"
-  - html.elements.input.type_color.accepts_css_colors
 
   # baseline: false
   # support:
@@ -1019,5 +1032,7 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
+  - api.NavigationPrecommitController.addHandler
+  - api.NavigationTransition.to
   - api.Navigator.authentication
   - html.elements.track.kind.descriptions

@@ -1,4 +1,4 @@
-draft_date: 2025-12-08
+draft_date: 2026-01-19
 name: CSS Fonts Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-fonts-5/
@@ -111,6 +111,20 @@ compat_features:
 #   - css.at-rules.font-face.font-feature-settings
 #   - css.properties.font-feature-settings
 #   - css.properties.font-feature-settings.normal
+# - font-stretch:
+#   - css.at-rules.font-face.font-stretch
+#   - css.properties.font.font-width_keyword_values
+#   - css.properties.font-stretch
+#   - css.properties.font-stretch.condensed
+#   - css.properties.font-stretch.expanded
+#   - css.properties.font-stretch.extra-condensed
+#   - css.properties.font-stretch.extra-expanded
+#   - css.properties.font-stretch.normal
+#   - css.properties.font-stretch.percentage
+#   - css.properties.font-stretch.semi-condensed
+#   - css.properties.font-stretch.semi-expanded
+#   - css.properties.font-stretch.ultra-condensed
+#   - css.properties.font-stretch.ultra-expanded
 # - font-style:
 #   - css.at-rules.font-face.font-style
 #   - css.properties.font-style
@@ -145,8 +159,6 @@ compat_features:
 #   - css.properties.font.message-box
 #   - css.properties.font.small-caption
 #   - css.properties.font.status-bar
-# - font-stretch:
-#   - css.properties.font.font-width_keyword_values
 # - font-family:
 #   - css.properties.font-family
 #   - css.properties.font-family.cursive

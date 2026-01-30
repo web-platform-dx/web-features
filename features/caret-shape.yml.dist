@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "144"
+    chrome_android: "144"
+    edge: "144"
 compat_features:
   - css.properties.caret-shape
   - css.properties.caret-shape.auto

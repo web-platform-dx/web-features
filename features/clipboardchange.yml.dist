@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "144"
+    chrome_android: "144"
+    edge: "144"
 compat_features:
   - api.ClipboardChangeEvent
   - api.ClipboardChangeEvent.ClipboardChangeEvent

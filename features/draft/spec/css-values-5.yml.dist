@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "137"
-    chrome_android: "137"
-    edge: "137"
+  support: {}
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -41,10 +38,15 @@ compat_features:
   - css.properties.offset.right
   - css.properties.offset.top
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "137"
   #   chrome_android: "137"
   #   edge: "137"
   - css.types.if.style
+
+  # baseline: false
+  # support:
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - css.types.random

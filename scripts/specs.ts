@@ -1,9 +1,19 @@
 import assert from "node:assert/strict";
 
 import webSpecs from 'web-specs' with { type: 'json' };
+import winston from "winston";
 
 import { features } from '../index.js';
 import { isOrdinaryFeatureData } from "../type-guards.js";
+
+const logger = winston.createLogger({
+  level: "warn",
+  format: winston.format.combine(
+    winston.format.colorize(),
+    winston.format.simple(),
+  ),
+  transports: new winston.transports.Console(),
+});
 
 // Specs needs to be in "good standing". Nightly URLs are used if available,
 // otherwise the snapshot/versioned URL is used. See browser-specs/web-specs
@@ -165,6 +175,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://www.w3.org/TR/2019/WD-feature-policy-1-20190416/",
         "Allowed because feature policy was replaced by permissions policy."
+    ],
+    [
+        "https://github.com/WICG/view-transitions/blob/main/scoped-transitions.md",
+        "Allowed until there's proper spec text. Follow https://github.com/w3c/csswg-drafts/issues/9890 for details."
     ]
 ];
 
@@ -178,7 +192,7 @@ function isOK(url: URL, allowlist: allowlistItem[] = defaultAllowlist) {
 
     for (const [specUrl, message] of allowlist) {
         if (specUrl === url.toString()) {
-            console.warn(`${specUrl}: ${message}`);
+            logger.warn(`${specUrl}: ${message}`);
             return true;
         }
     }
@@ -204,9 +218,9 @@ function suggestSpecs(bad: URL): void {
     const searchBy = bad.pathname.replaceAll("/", "");
     const suggestions = specUrls.filter((specUrl) => specUrl.toString().includes(searchBy)).map(u => `- ${u}`);
     if (suggestions.length > 0) {
-        console.warn("Did you mean one of these?");
-        console.warn(`${suggestions.join('\n')}`);
-        console.warn();
+        logger.error("Did you mean one of these?");
+        logger.error(`${suggestions.join('\n')}`);
+        logger.error("");
     }
 }
 
@@ -234,11 +248,11 @@ for (const [id, data] of Object.entries(features)) {
         try {
             url = new URL(spec);
         } catch (error) {
-            console.error(`Invalid URL "${spec}" found in spec for "${data.name}"`);
+            logger.error(`Invalid URL "${spec}" found in spec for "${data.name}"`);
             errors++;
         }
         if (url && !isOK(url)) {
-            console.error(`URL for ${id} not in web-specs: ${url.toString()}`);
+            logger.error(`URL for ${id} not in web-specs: ${url.toString()}`);
             suggestSpecs(url);
             errors++;
         }

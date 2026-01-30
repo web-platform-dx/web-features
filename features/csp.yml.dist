@@ -324,7 +324,6 @@ compat_features:
   - http.headers.Content-Security-Policy.script-src-attr
   - http.headers.Content-Security-Policy.script-src-elem
   - http.headers.Content-Security-Policy.style-src-attr
-  - http.headers.Content-Security-Policy.style-src-elem
 
   # baseline: high
   # baseline_low_date: 2023-01-17
@@ -350,6 +349,18 @@ compat_features:
   #   safari: "15.6"
   #   safari_ios: "15.6"
   - http.headers.Content-Security-Policy.script-src.external_scripts
+
+  # baseline: low
+  # baseline_low_date: 2025-12-12
+  # support:
+  #   chrome: "75"
+  #   chrome_android: "75"
+  #   edge: "79"
+  #   firefox: "108"
+  #   firefox_android: "108"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - http.headers.Content-Security-Policy.style-src-elem
 
   # baseline: false
   # support:

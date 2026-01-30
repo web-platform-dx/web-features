@@ -1,4 +1,4 @@
-draft_date: 2026-01-05
+draft_date: 2026-01-19
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -60,8 +60,10 @@ compat_features:
   - api.NavigateEvent.intercept.precommitHandler_option
   - api.NavigateEvent.sourceElement
   - api.NavigationPrecommitController
+  - api.NavigationPrecommitController.addHandler
   - api.NavigationPrecommitController.redirect
   - api.NavigationTransition.committed
+  - api.NavigationTransition.to
   - api.Navigator.appCodeName
   - api.Navigator.appName
   - api.Navigator.appVersion
@@ -142,6 +144,7 @@ compat_features:
   - http.headers.Cross-Origin-Opener-Policy
   - http.headers.Cross-Origin-Opener-Policy.noopener-allow-popups
   - http.headers.Cross-Origin-Opener-Policy.report-to_parameter
+  - http.headers.No-Vary-Search.speculation_rules_prefetch
   - http.headers.Origin-Agent-Cluster
   - http.headers.Permissions-Policy.autoplay
   - http.headers.Permissions-Policy.cross-origin-isolated
@@ -2085,6 +2088,13 @@ compat_features:
 #   - api.NotRestoredReasons.src
 #   - api.NotRestoredReasons.toJSON
 #   - api.NotRestoredReasons.url
+# - Origin:
+#   - api.Origin
+#   - api.Origin.Origin
+#   - api.Origin.from_static
+#   - api.Origin.isSameOrigin
+#   - api.Origin.isSameSite
+#   - api.Origin.opaque
 # - View transitions:
 #   - api.PageRevealEvent
 #   - api.PageRevealEvent.PageRevealEvent
