@@ -62,4 +62,7 @@ compat_features:
   # support:
   #   safari: "26"
   #   safari_ios: "26"
+  - javascript.builtins.AsyncFunction.AsyncFunction.enforces_trusted_types
+  - javascript.builtins.AsyncGeneratorFunction.AsyncGeneratorFunction.enforces_trusted_types
   - javascript.builtins.Function.Function.enforces_trusted_types
+  - javascript.builtins.GeneratorFunction.GeneratorFunction.enforces_trusted_types

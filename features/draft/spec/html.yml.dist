@@ -998,6 +998,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   firefox: "143"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - html.elements.input.type_color.accepts_css_colors
+
+  # baseline: false
+  # support:
   #   firefox: "1"
   #   firefox_android: "4"
   - api.Navigator.oscpu
@@ -1008,12 +1015,6 @@ compat_features:
   #   safari: "9"
   #   safari_ios: "9"
   - api.HTMLMediaElement.getStartDate
-
-  # baseline: false
-  # support:
-  #   safari: "18.4"
-  #   safari_ios: "18.4"
-  - html.elements.input.type_color.accepts_css_colors
 
   # baseline: false
   # support:
