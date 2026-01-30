@@ -1787,10 +1787,12 @@ compat_features:
   #   safari_ios: "26.2"
   - api.SVGScriptElement.async
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-01-21
   # support:
   #   chrome: "144"
   #   chrome_android: "144"
+  #   edge: "144"
   #   firefox: "61"
   #   firefox_android: "61"
   #   safari: "26.2"
@@ -1860,6 +1862,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
+  #   firefox: "61"
+  #   firefox_android: "61"
+  - api.SVGAElement.referrerPolicy
+
+  # baseline: false
+  # support:
   #   chrome: ≤80
   #   chrome_android: ≤80
   #   edge: ≤80
@@ -1892,14 +1903,6 @@ compat_features:
   #   safari: "14"
   #   safari_ios: "14"
   - svg.elements.a.rel
-
-  # baseline: false
-  # support:
-  #   chrome: "144"
-  #   chrome_android: "144"
-  #   firefox: "61"
-  #   firefox_android: "61"
-  - api.SVGAElement.referrerPolicy
 
   # baseline: false
   # support:

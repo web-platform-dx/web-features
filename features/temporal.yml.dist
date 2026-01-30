@@ -6,6 +6,7 @@ status:
   support:
     chrome: "144"
     chrome_android: "144"
+    edge: "144"
     firefox: "139"
     firefox_android: "139"
 compat_features:
@@ -14,6 +15,7 @@ compat_features:
   # support:
   #   chrome: "144"
   #   chrome_android: "144"
+  #   edge: "144"
   #   firefox: "139"
   #   firefox_android: "139"
   - javascript.builtins.Date.toTemporalInstant
@@ -253,6 +255,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
+  - javascript.builtins.Temporal.PlainDate.withCalendar
+  - javascript.builtins.Temporal.PlainDateTime.withCalendar
+  - javascript.builtins.Temporal.ZonedDateTime.withCalendar
+
+  # baseline: false
+  # support:
   #   firefox: "139"
   #   firefox_android: "139"
   - javascript.builtins.Temporal.Instant.Instant
@@ -261,11 +272,3 @@ compat_features:
   - javascript.builtins.Temporal.PlainMonthDay.PlainMonthDay
   - javascript.builtins.Temporal.PlainYearMonth.PlainYearMonth
   - javascript.builtins.Temporal.ZonedDateTime.ZonedDateTime
-
-  # baseline: false
-  # support:
-  #   chrome: "144"
-  #   chrome_android: "144"
-  - javascript.builtins.Temporal.PlainDate.withCalendar
-  - javascript.builtins.Temporal.PlainDateTime.withCalendar
-  - javascript.builtins.Temporal.ZonedDateTime.withCalendar
