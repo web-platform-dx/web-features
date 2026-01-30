@@ -320,6 +320,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
+  #   firefox: "146"
+  #   firefox_android: "146"
+  - mathml.global_attributes.dir.rtl_operator_mirroring
+
+  # baseline: false
+  # support:
   #   firefox: "1"
   #   firefox_android: "4"
   #   safari: "5.1"
@@ -379,14 +388,6 @@ compat_features:
   #   safari: "10"
   #   safari_ios: "10"
   - mathml.global_attributes.href
-
-  # baseline: false
-  # support:
-  #   chrome: "144"
-  #   chrome_android: "144"
-  #   firefox: "146"
-  #   firefox_android: "146"
-  - mathml.global_attributes.dir.rtl_operator_mirroring
 
   # baseline: false
   # support:
