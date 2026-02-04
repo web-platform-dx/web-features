@@ -1,4 +1,4 @@
-draft_date: 2026-01-26
+draft_date: 2026-02-04
 name: ECMAScript® 2026 Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
@@ -92,6 +92,8 @@ compat_features:
 # - Array.from():
 #   - javascript.builtins.Array.from
 #   - javascript.builtins.TypedArray.from
+# - Array.fromAsync():
+#   - javascript.builtins.Array.fromAsync
 # - Array includes():
 #   - javascript.builtins.Array.includes
 #   - javascript.builtins.TypedArray.includes
@@ -645,9 +647,16 @@ compat_features:
 #   - javascript.builtins.Map.set
 #   - javascript.builtins.Map.size
 #   - javascript.builtins.Map.values
+# - Map getOrInsert():
+#   - javascript.builtins.Map.getOrInsert
+#   - javascript.builtins.Map.getOrInsertComputed
+#   - javascript.builtins.WeakMap.getOrInsert
+#   - javascript.builtins.WeakMap.getOrInsertComputed
 # - Array grouping:
 #   - javascript.builtins.Map.groupBy
 #   - javascript.builtins.Object.groupBy
+# - Math.sumPrecise():
+#   - javascript.builtins.Math.sumPrecise
 # - Object:
 #   - javascript.builtins.Object
 #   - javascript.builtins.Object.Object
@@ -884,6 +893,13 @@ compat_features:
 #   - javascript.builtins.TypedArray.reduce
 #   - javascript.builtins.TypedArray.reduceRight
 #   - javascript.builtins.TypedArray.some
+# - Uint8Array base64 and hex conversion:
+#   - javascript.builtins.Uint8Array.fromBase64
+#   - javascript.builtins.Uint8Array.fromHex
+#   - javascript.builtins.Uint8Array.setFromBase64
+#   - javascript.builtins.Uint8Array.setFromHex
+#   - javascript.builtins.Uint8Array.toBase64
+#   - javascript.builtins.Uint8Array.toHex
 # - WeakMap:
 #   - javascript.builtins.WeakMap
 #   - javascript.builtins.WeakMap.WeakMap
