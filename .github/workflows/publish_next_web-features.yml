@@ -12,8 +12,7 @@ on:
       - index.ts
       - scripts/build.ts
 
-permissions:
-  contents: write
+permissions: {}
 
 env:
   package: "web-features"
@@ -23,9 +22,11 @@ env:
 jobs:
   test:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-node@v5
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
           cache: npm
@@ -35,23 +36,30 @@ jobs:
     if: github.repository == 'web-platform-dx/web-features'
     runs-on: ubuntu-latest
     needs: "test"
+    permissions:
+      contents: write
+      # Required for OIDC and trusted publishing. See:
+      # - https://docs.npmjs.com/trusted-publishers
+      # - https://docs.github.com/en/actions/concepts/security/openid-connect
+      id-token: write
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Get timestamp and short hash
         id: timestamp_and_hash
         run: |
           echo "TIMESTAMP=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_OUTPUT
           echo "SHORT_HASH=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
 
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
           cache: npm
           registry-url: "https://registry.npmjs.org"
+
+      - run: npm install -g 'npm@>=11.5.1'  # required for trusted publishing
       - run: npm ci
 
       - run: npm run build
-      - run: npm run build:extended
 
       - name: Get package.json version
         id: version
@@ -68,11 +76,8 @@ jobs:
           VERSION: ${{ steps.version.outputs.VERSION }}
           TIMESTAMP: ${{ steps.timestamp_and_hash.outputs.TIMESTAMP }}
           SHORT_HASH: ${{ steps.timestamp_and_hash.outputs.SHORT_HASH }}
-      - if: ${{ env.NODE_AUTH_TOKEN }}
-        run: npm publish --tag ${{ env.dist_tag }}
+      - run: npm publish --tag ${{ env.dist_tag }}
         working-directory: ${{ env.package_dir }}
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Set existing release to draft
         run: gh release edit --draft "$TAG"
@@ -106,6 +111,6 @@ jobs:
           TAG: ${{ env.dist_tag }}
           NOTES: This is a continuously-updated prerelease generated from `main` (currently at ${{ steps.timestamp_and_hash.outputs.SHORT_HASH }}).
           ARTIFACTS: >
-            schemas/data.schema.json
             ${{ env.package_dir }}/data.json
             data.extended.json
+            schemas/data.schema.json

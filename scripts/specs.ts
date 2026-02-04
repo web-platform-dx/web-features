@@ -1,9 +1,19 @@
 import assert from "node:assert/strict";
 
 import webSpecs from 'web-specs' with { type: 'json' };
+import winston from "winston";
 
 import { features } from '../index.js';
 import { isOrdinaryFeatureData } from "../type-guards.js";
+
+const logger = winston.createLogger({
+  level: "warn",
+  format: winston.format.combine(
+    winston.format.colorize(),
+    winston.format.simple(),
+  ),
+  transports: new winston.transports.Console(),
+});
 
 // Specs needs to be in "good standing". Nightly URLs are used if available,
 // otherwise the snapshot/versioned URL is used. See browser-specs/web-specs
@@ -127,20 +137,20 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed for the mediacontroller feature. This is the superseded HTML5 spec that still contains MediaController."
     ],
     [
-        "https://github.com/whatwg/fetch/pull/1647",
-        "This is where fetchLater() is in the process of being spec'd. Once the PR merges, change the spec url in fetchlater.yml, and remove this exception."
-    ],
-    [
         "https://wicg.github.io/private-network-access/",
         "Allowed for private-network-access feature. Feature and spec succeeded by local-network-access."
     ],
     [
-        "https://github.com/whatwg/html/pull/11426",
-        "This is where speculation rules' prefetch is in the process of being spec'd. Once the PR merges, change the spec url in `speculation-rules`, and remove this exception."
-    ],
-    [
         "https://www.w3.org/TR/2022/WD-selectors-4-20220507/#the-target-within-pseudo",
         "Allowed because this is where the feature last appeared in the spec before removal."
+    ],
+    [
+        "https://github.com/whatwg/dom/pull/1353",
+        "Allowed because this is where the referencetarget feature is being added to the DOM spec"
+    ],
+    [
+        "https://github.com/whatwg/html/pull/10995",
+        "Allowed because this is where the referencetarget feature is being added to the HTML spec"
     ],
     [
         "https://patcg-individual-drafts.github.io/topics/",
@@ -149,6 +159,26 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/Accessibility/AriaNotify/explainer.md",
         "Allowed because the ariaNotify() method is not yet in a formal spec. Remove this exception when a formal spec is available."
+    ],
+    [
+        "https://github.com/whatwg/html/pull/11006",
+        "Allowed because this spec PR hasn't landed yet. Once the PR merges, change the spec url and remove this exception."
+    ],
+    [
+        "https://github.com/w3c/manifest/pull/1175",
+        "Allowed because there is no spec yet for Web Install."
+    ],
+    [
+        "https://github.com/WebAssembly/branch-hinting/blob/main/proposals/branch-hinting/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
+        "https://www.w3.org/TR/2019/WD-feature-policy-1-20190416/",
+        "Allowed because feature policy was replaced by permissions policy."
+    ],
+    [
+        "https://github.com/WICG/view-transitions/blob/main/scoped-transitions.md",
+        "Allowed until there's proper spec text. Follow https://github.com/w3c/csswg-drafts/issues/9890 for details."
     ]
 ];
 
@@ -162,7 +192,7 @@ function isOK(url: URL, allowlist: allowlistItem[] = defaultAllowlist) {
 
     for (const [specUrl, message] of allowlist) {
         if (specUrl === url.toString()) {
-            console.warn(`${specUrl}: ${message}`);
+            logger.warn(`${specUrl}: ${message}`);
             return true;
         }
     }
@@ -188,9 +218,9 @@ function suggestSpecs(bad: URL): void {
     const searchBy = bad.pathname.replaceAll("/", "");
     const suggestions = specUrls.filter((specUrl) => specUrl.toString().includes(searchBy)).map(u => `- ${u}`);
     if (suggestions.length > 0) {
-        console.warn("Did you mean one of these?");
-        console.warn(`${suggestions.join('\n')}`);
-        console.warn();
+        logger.error("Did you mean one of these?");
+        logger.error(`${suggestions.join('\n')}`);
+        logger.error("");
     }
 }
 
@@ -218,11 +248,11 @@ for (const [id, data] of Object.entries(features)) {
         try {
             url = new URL(spec);
         } catch (error) {
-            console.error(`Invalid URL "${spec}" found in spec for "${data.name}"`);
+            logger.error(`Invalid URL "${spec}" found in spec for "${data.name}"`);
             errors++;
         }
         if (url && !isOK(url)) {
-            console.error(`URL for ${id} not in web-specs: ${url.toString()}`);
+            logger.error(`URL for ${id} not in web-specs: ${url.toString()}`);
             suggestSpecs(url);
             errors++;
         }

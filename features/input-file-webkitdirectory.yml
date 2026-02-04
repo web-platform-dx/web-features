@@ -1,0 +1,11 @@
+name: <input type="file" webkitdirectory>
+description: The `<input type="file" webkitdirectory>` HTML element shows a file picker from which users can choose a folder to upload with the form.
+spec: https://wicg.github.io/entries-api/#html-forms
+caniuse: input-file-directory
+group:
+  - forms
+  - file-system
+compat_features:
+  - api.File.webkitRelativePath
+  - api.HTMLInputElement.webkitdirectory
+  - html.elements.input.webkitdirectory

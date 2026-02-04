@@ -1,0 +1,14 @@
+name: AudioListener setPosition() and setOrientation()
+description: The `setPosition()` and `setOrientation()` methods of the `AudioListener` API set the virtual position and orientation of a person relative to sound sources, to spatialize audio in a Web Audio context.
+spec: https://webaudio.github.io/web-audio-api/#AudioListener
+group: web-audio
+discouraged:
+  reason: The `setPosition()` and `setOrientation()` methods are equivalent to using an `AudioListener` instances's `positionX`, `positionY`, `positionZ`, `forwardX`, `forwardY`, `forwardZ`, `upX`, `upY`, and `upZ` properties.
+  according_to:
+    - https://webaudio.github.io/web-audio-api/#dom-audiolistener-setposition
+    - https://webaudio.github.io/web-audio-api/#dom-audiolistener-setorientation
+  alternatives:
+    - audiolistener
+compat_features:
+  - api.AudioListener.setOrientation
+  - api.AudioListener.setPosition

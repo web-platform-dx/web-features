@@ -66,9 +66,9 @@ Most values are ordinary feature objects with names, descriptions, and other dat
 Some features contain redirects to other features.
 You can distinguish between ordinary feature objects and redirects by using the `kind` property:
 
-* `"feature"` — ordinary features  
-* `"moved"` — the feature has a redirect to a new key
-* `"split"` — the feature has a redirect to two or more keys
+- `"feature"` — ordinary features
+- `"moved"` — the feature has a redirect to a new key
+- `"split"` — the feature has a redirect to two or more keys
 
 ### Feature objects
 
@@ -82,14 +82,19 @@ It has the following properties:
 - `spec` (type: `string[]`): A specification URL or an array of them
 - `status`: Support status data.
   It has the following properties:
-
   - `baseline` (type: `"high" | "low" | false`): Whether the feature Baseline widely available, Baseline newly available, or not Baseline
-  - `baseline_low_date` (optional, type: `string`): When the feature reached Baseline newly available status
+  - `baseline_low_date` (optional, type: `string`): When the feature reached Baseline newly available status.
+
+     **Note**: This date is never before the release date of the youngest browser in the Baseline definition (presently 2015-07-28, the release date of Edge 12).
+
   - `baseline_high_date` (optional, type: `string`): When the feature reached Baseline widely available status
   - `support`: An object representing per-browser support information, showing the version number where each browser first started to support that feature.
     All keys are optional.
     Keys are one of: `"chrome"`, `"chrome_android"`, `"edge"`, `"firefox"`, `"firefox"`, `"firefox_android"`, `"safari"`, `"safari_ios"`.
     Each value is a `string` containing the version number.
+  - `by_compat_key` (optional, type: `object`): An object mapping each compat key from the feature's `compat_features` array to its individual support status data.
+    Each value follows the same structure as the main `status` object, with `baseline`, `baseline_low_date`, `baseline_high_date`, and `support` properties.
+    Only present for features that have `compat_features`.
 
 - `group` (optional, type: `string[]`): A `groups` key or an array of them
 - `snapshot` (optional, type: `string[]`): A `snapshots` key or an array of them
@@ -98,9 +103,12 @@ It has the following properties:
 - `compat_features` (optional, type: `string[]`): An array of `@mdn/browser-compat-data` feature key strings.
 - `discouraged` (optional): An object indicating that web developers should avoid using the feature.
   It has the following properties:
-
   - `according_to` (type: `string[]`): One or more links to a formal discouragement notice, such as specification text or an intent-to-unship
+  - `reason` (type: `string`): A brief, developer-focused description of why the feature is discouraged.
+  - `reason_html` (type: `string`): A brief, developer-focused description of why the feature is discouraged, as an HTML string.
   - `alternatives` (optional, type: `string[]`): One or more feature IDs (as in `features[alternatives[0]]`) that substitute some or all of this feature's utility
+  - `removal_date` (optional, type: `string`): An expected or actual removal date, as in `"2029-12-31"`.
+     Only set if there's an announced plan by all currently-implementing vendors to unship the feature or the feature has already been unshipped from all browsers.
 
 ### Moved objects
 

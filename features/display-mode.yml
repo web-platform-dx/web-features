@@ -1,7 +1,17 @@
 name: display-mode media query
-description: The `display-mode` CSS media query sets styles based on whether the web page is in `fullscreen`, `standalone`, `minimal-ui,` `browser`, or `picture-in-picture` mode.
+description: The `display-mode` CSS media query sets styles based on whether the web page is in an ordinary `browser` tab mode or another mode, such as `fullscreen`, `standalone`, or `minimal-ui`.
 spec: https://drafts.csswg.org/mediaqueries-5/#display-modes
 group: media-queries
 compat_features:
   - css.at-rules.media.display-mode
-  - css.at-rules.media.display-mode.picture-in-picture
+status:
+  baseline: low
+  baseline_low_date: 2023-08-01
+  support:
+    chrome: "42"
+    chrome_android: "42"
+    edge: "79"
+    firefox: "47"
+    firefox_android: "47"
+    safari: "13"
+    safari_ios: "12.2"

@@ -65,8 +65,10 @@ const goodSupportStatus: QuicktypeStatusHeadline | SupportStatus = {
   support: {},
 };
 
-export interface WebFeaturesData
-  extends Pick<QuicktypeWebFeaturesData, "browsers" | "groups" | "snapshots"> {
+export interface WebFeaturesData extends Pick<
+  QuicktypeWebFeaturesData,
+  "browsers" | "groups" | "snapshots"
+> {
   features: {
     [key: string]: FeatureData | FeatureMovedData | FeatureSplitData;
   };
@@ -95,6 +97,8 @@ const goodFeatureData: FeatureData = {
   group: [""],
   caniuse: [""],
   discouraged: {
+    reason: "",
+    reason_html: "",
     according_to: [""],
     alternatives: [""],
   },
@@ -108,8 +112,10 @@ type FeatureRedirectData = { kind: Exclude<Kind, "feature"> } & Required<
   Pick<QuicktypeMonolithicFeatureData, "redirect_target" | "redirect_targets">
 >;
 
-export interface FeatureMovedData
-  extends Omit<FeatureRedirectData, "redirect_targets"> {
+export interface FeatureMovedData extends Omit<
+  FeatureRedirectData,
+  "redirect_targets"
+> {
   kind: "moved";
 }
 
@@ -123,8 +129,10 @@ const badFeatureMovedData: FeatureMovedData = {
   redirect_targets: ["", ""],
 };
 
-export interface FeatureSplitData
-  extends Omit<FeatureRedirectData, "redirect_target"> {
+export interface FeatureSplitData extends Omit<
+  FeatureRedirectData,
+  "redirect_target"
+> {
   kind: "split";
 }
 

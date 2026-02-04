@@ -1,9 +1,36 @@
-draft_date: 2025-10-02
+draft_date: 2026-01-29
 name: Scalable Vector Graphics (SVG) 2
 description: TODO
 spec: https://svgwg.org/svg2-draft/
 compat_features:
   - api.SVGAnimatedString.baseVal.enforces_trusted_types
+  - css.properties.color-interpolation.linearRGB
+  - css.properties.d.none
+  - css.properties.paint-order.fill
+  - css.properties.paint-order.markers
+  - css.properties.paint-order.normal
+  - css.properties.paint-order.stroke
+  - css.properties.pointer-events.all
+  - css.properties.pointer-events.auto
+  - css.properties.pointer-events.bounding-box
+  - css.properties.pointer-events.fill
+  - css.properties.pointer-events.none
+  - css.properties.pointer-events.painted
+  - css.properties.pointer-events.stroke
+  - css.properties.pointer-events.visible
+  - css.properties.pointer-events.visibleFill
+  - css.properties.pointer-events.visiblePainted
+  - css.properties.pointer-events.visibleStroke
+  - css.properties.rx.auto
+  - css.properties.ry.auto
+  - css.properties.shape-rendering.crispEdges
+  - css.properties.shape-rendering.geometricPrecision
+  - css.properties.shape-rendering.optimizeSpeed
+  - css.properties.text-rendering.optimizeLegibility
+  - css.properties.text-rendering.optimizeSpeed
+  - css.properties.vector-effect.non-scaling-stroke
+  - css.properties.vector-effect.none
+  - mediatypes.image.svg
   - svg.elements.use.omit_external_fragment
   - svg.global_attributes.transform.svg_root
 
@@ -247,7 +274,6 @@ compat_features:
 #   - api.SVGTitleElement
 #   - api.SVGTransform
 #   - api.SVGTransform.angle
-#   - api.SVGTransform.matrix
 #   - api.SVGTransform.setMatrix
 #   - api.SVGTransform.setRotate
 #   - api.SVGTransform.setScale
@@ -278,24 +304,36 @@ compat_features:
 #   - api.SVGViewElement.preserveAspectRatio
 #   - api.SVGViewElement.viewBox
 #   - css.properties.color-interpolation
+#   - css.properties.color-interpolation.auto
 #   - css.properties.color-interpolation.linearGradient
 #   - css.properties.color-interpolation.sRGB
 #   - css.properties.cx
 #   - css.properties.cy
 #   - css.properties.d
+#   - css.properties.fill
+#   - css.properties.fill.none
 #   - css.properties.letter-spacing.svg_elements
 #   - css.properties.marker
+#   - css.properties.marker.none
 #   - css.properties.marker-end
+#   - css.properties.marker-end.none
 #   - css.properties.marker-mid
+#   - css.properties.marker-mid.none
 #   - css.properties.marker-start
+#   - css.properties.marker-start.none
 #   - css.properties.r
 #   - css.properties.rx
 #   - css.properties.ry
 #   - css.properties.shape-rendering
+#   - css.properties.shape-rendering.auto
 #   - css.properties.stop-color
 #   - css.properties.stop-opacity
 #   - css.properties.stroke
+#   - css.properties.stroke.none
 #   - css.properties.text-anchor
+#   - css.properties.text-anchor.end
+#   - css.properties.text-anchor.middle
+#   - css.properties.text-anchor.start
 #   - css.properties.text-rendering
 #   - css.properties.text-rendering.auto
 #   - css.properties.text-rendering.geometricPrecision

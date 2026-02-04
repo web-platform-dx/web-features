@@ -1,10 +1,9 @@
-draft_date: 2025-10-08
+draft_date: 2026-01-19
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
   - api.Document.designMode
-  - api.Document.featurePolicy
   - api.ElementInternals.shadowRoot
   - api.ErrorEvent
   - api.ErrorEvent.ErrorEvent
@@ -31,7 +30,6 @@ compat_features:
   - api.HTMLElement.error_event
   - api.HTMLElement.togglePopover.force_parameter
   - api.HTMLElement.togglePopover.options_force_parameter
-  - api.HTMLIFrameElement.featurePolicy
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes.auto
   - api.HTMLInputElement.showPicker.autocomplete_input
@@ -59,10 +57,13 @@ compat_features:
   - api.ImageData.ImageData.settings_parameter.pixelFormat_option
   - api.ImageData.pixelFormat
   - api.MouseEvent.relatedTarget.drag_events
+  - api.NavigateEvent.intercept.precommitHandler_option
   - api.NavigateEvent.sourceElement
   - api.NavigationPrecommitController
+  - api.NavigationPrecommitController.addHandler
   - api.NavigationPrecommitController.redirect
   - api.NavigationTransition.committed
+  - api.NavigationTransition.to
   - api.Navigator.appCodeName
   - api.Navigator.appName
   - api.Navigator.appVersion
@@ -88,7 +89,7 @@ compat_features:
   - api.ServiceWorker.error_event
   - api.ShadowRoot.activeElement
   - api.ShadowRoot.innerHTML
-  - api.ToggleEvent.source
+  - api.SharedWorker.SharedWorker.enforces_trusted_types
   - api.TrackEvent
   - api.TrackEvent.TrackEvent
   - api.TrackEvent.track
@@ -97,14 +98,16 @@ compat_features:
   - api.Window.postMessage.transfer_parameter
   - api.Window.rejectionhandled_event
   - api.Window.unhandledrejection_event
+  - api.Window.unload_event
+  - api.Worker.Worker.enforces_trusted_types
   - api.WorkerGlobalScope.importScripts.enforces_trusted_types
   - api.crossOriginIsolated
   - api.origin
-  - api.queueMicrotask
   - api.reportError
   - api.setInterval.supports_parameters_for_callback
   - api.setTimeout.supports_parameters_for_callback
   - html.elements.button.command.request-close
+  - html.elements.details.search_match_opens
   - html.elements.form.autocomplete.new-password
   - html.elements.form.autocomplete.one-time-code
   - html.elements.form.autocomplete.webauthn
@@ -137,8 +140,11 @@ compat_features:
   - html.global_attributes.id
   - http.headers.Cross-Origin-Embedder-Policy
   - http.headers.Cross-Origin-Embedder-Policy.credentialless
+  - http.headers.Cross-Origin-Embedder-Policy.report-to_parameter
   - http.headers.Cross-Origin-Opener-Policy
   - http.headers.Cross-Origin-Opener-Policy.noopener-allow-popups
+  - http.headers.Cross-Origin-Opener-Policy.report-to_parameter
+  - http.headers.No-Vary-Search.speculation_rules_prefetch
   - http.headers.Origin-Agent-Cluster
   - http.headers.Permissions-Policy.autoplay
   - http.headers.Permissions-Policy.cross-origin-isolated
@@ -545,6 +551,9 @@ compat_features:
 #   - api.Document.open
 # - Cookies:
 #   - api.Document.cookie
+# - Feature policy:
+#   - api.Document.featurePolicy
+#   - api.HTMLIFrameElement.featurePolicy
 # - Page visibility:
 #   - api.Document.hidden
 #   - api.Document.visibilityState
@@ -821,7 +830,6 @@ compat_features:
 #   - api.HTMLAudioElement
 #   - api.HTMLAudioElement.Audio
 #   - html.elements.audio
-#   - html.elements.audio.autoplay
 #   - html.elements.audio.controls
 #   - html.elements.audio.crossorigin
 #   - html.elements.audio.loop
@@ -1215,7 +1223,6 @@ compat_features:
 #   - html.elements.html
 # - <iframe>:
 #   - api.HTMLIFrameElement
-#   - api.HTMLIFrameElement.allow
 #   - api.HTMLIFrameElement.contentDocument
 #   - api.HTMLIFrameElement.contentWindow
 #   - api.HTMLIFrameElement.getSVGDocument
@@ -1224,11 +1231,13 @@ compat_features:
 #   - api.HTMLIFrameElement.src
 #   - api.HTMLIFrameElement.width
 #   - html.elements.iframe
-#   - html.elements.iframe.allow
 #   - html.elements.iframe.height
 #   - html.elements.iframe.name
 #   - html.elements.iframe.src
 #   - html.elements.iframe.width
+# - Permissions policy:
+#   - api.HTMLIFrameElement.allow
+#   - html.elements.iframe.allow
 # - Fullscreen API:
 #   - api.HTMLIFrameElement.allowFullscreen
 #   - html.elements.iframe.allowfullscreen
@@ -1311,7 +1320,6 @@ compat_features:
 #   - api.HTMLInputElement.list
 #   - api.HTMLInputElement.maxLength
 #   - api.HTMLInputElement.minLength
-#   - api.HTMLInputElement.multiple
 #   - api.HTMLInputElement.name
 #   - api.HTMLInputElement.pattern
 #   - api.HTMLInputElement.placeholder
@@ -1342,7 +1350,6 @@ compat_features:
 #   - html.elements.input.list
 #   - html.elements.input.maxlength
 #   - html.elements.input.minlength
-#   - html.elements.input.multiple
 #   - html.elements.input.name
 #   - html.elements.input.pattern
 #   - html.elements.input.placeholder
@@ -1379,6 +1386,9 @@ compat_features:
 #   - html.elements.input.min
 #   - html.elements.input.step
 #   - html.elements.input.type_number
+# - <input type="file" multiple>:
+#   - api.HTMLInputElement.multiple
+#   - html.elements.input.multiple
 # - showPicker() for <input>:
 #   - api.HTMLInputElement.showPicker
 #   - api.HTMLInputElement.showPicker.color_input
@@ -2078,6 +2088,13 @@ compat_features:
 #   - api.NotRestoredReasons.src
 #   - api.NotRestoredReasons.toJSON
 #   - api.NotRestoredReasons.url
+# - Origin:
+#   - api.Origin
+#   - api.Origin.Origin
+#   - api.Origin.from_static
+#   - api.Origin.isSameOrigin
+#   - api.Origin.isSameSite
+#   - api.Origin.opaque
 # - View transitions:
 #   - api.PageRevealEvent
 #   - api.PageRevealEvent.PageRevealEvent
@@ -2168,6 +2185,8 @@ compat_features:
 #   - api.Window.localStorage
 #   - api.Window.sessionStorage
 #   - api.Window.storage_event
+# - ToggleEvent source:
+#   - api.ToggleEvent.source
 # - Page visibility state:
 #   - api.VisibilityStateEntry
 #   - api.VisibilityStateEntry.duration
@@ -2207,8 +2226,6 @@ compat_features:
 # - requestAnimationFrame():
 #   - api.Window.cancelAnimationFrame
 #   - api.Window.requestAnimationFrame
-# - Attribution reporting:
-#   - api.Window.open.features_parameter_attributionsrc
 # - Window management:
 #   - api.Window.open.relative-multi-screen
 # - window.print():
@@ -2247,6 +2264,8 @@ compat_features:
 # - isSecureContext:
 #   - api.isSecureContext
 #   - api.isSecureContext.worker_support
+# - queueMicrotask():
+#   - api.queueMicrotask
 # - structuredClone():
 #   - api.structuredClone
 # - User action pseudo-classes:

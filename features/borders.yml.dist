@@ -28,14 +28,65 @@ compat_features:
   - css.properties.border
   - css.properties.border-bottom
   - css.properties.border-bottom-color
+  - css.properties.border-bottom-color.transparent
   - css.properties.border-bottom-style
+  - css.properties.border-bottom-style.dashed
+  - css.properties.border-bottom-style.dotted
+  - css.properties.border-bottom-style.double
+  - css.properties.border-bottom-style.groove
+  - css.properties.border-bottom-style.hidden
+  - css.properties.border-bottom-style.inset
+  - css.properties.border-bottom-style.none
+  - css.properties.border-bottom-style.outset
+  - css.properties.border-bottom-style.ridge
+  - css.properties.border-bottom-style.solid
   - css.properties.border-bottom-width
+  - css.properties.border-bottom-width.medium
+  - css.properties.border-bottom-width.thick
+  - css.properties.border-bottom-width.thin
+  - css.properties.border-bottom.dashed
+  - css.properties.border-bottom.dotted
+  - css.properties.border-bottom.double
+  - css.properties.border-bottom.groove
+  - css.properties.border-bottom.hidden
+  - css.properties.border-bottom.inset
+  - css.properties.border-bottom.medium
+  - css.properties.border-bottom.none
+  - css.properties.border-bottom.outset
+  - css.properties.border-bottom.ridge
+  - css.properties.border-bottom.solid
+  - css.properties.border-bottom.thick
+  - css.properties.border-bottom.thin
+  - css.properties.border-bottom.transparent
   - css.properties.border-color
+  - css.properties.border-color.transparent
   - css.properties.border-left
   - css.properties.border-left-color
+  - css.properties.border-left-color.transparent
   - css.properties.border-left-width
+  - css.properties.border-left-width.medium
+  - css.properties.border-left-width.thick
+  - css.properties.border-left-width.thin
+  - css.properties.border-left.dashed
+  - css.properties.border-left.dotted
+  - css.properties.border-left.double
+  - css.properties.border-left.groove
+  - css.properties.border-left.hidden
+  - css.properties.border-left.inset
+  - css.properties.border-left.medium
+  - css.properties.border-left.none
+  - css.properties.border-left.outset
+  - css.properties.border-left.ridge
+  - css.properties.border-left.solid
+  - css.properties.border-left.thick
+  - css.properties.border-left.thin
+  - css.properties.border-left.transparent
   - css.properties.border-right-color
+  - css.properties.border-right-color.transparent
   - css.properties.border-right-width
+  - css.properties.border-right-width.medium
+  - css.properties.border-right-width.thick
+  - css.properties.border-right-width.thin
   - css.properties.border-style
   - css.properties.border-style.dashed
   - css.properties.border-style.dotted
@@ -49,8 +100,50 @@ compat_features:
   - css.properties.border-style.solid
   - css.properties.border-top
   - css.properties.border-top-color
+  - css.properties.border-top-color.transparent
   - css.properties.border-top-style
+  - css.properties.border-top-style.dashed
+  - css.properties.border-top-style.dotted
+  - css.properties.border-top-style.double
+  - css.properties.border-top-style.groove
+  - css.properties.border-top-style.hidden
+  - css.properties.border-top-style.inset
+  - css.properties.border-top-style.none
+  - css.properties.border-top-style.outset
+  - css.properties.border-top-style.ridge
+  - css.properties.border-top-style.solid
   - css.properties.border-top-width
+  - css.properties.border-top-width.medium
+  - css.properties.border-top-width.thick
+  - css.properties.border-top-width.thin
+  - css.properties.border-top.dashed
+  - css.properties.border-top.dotted
+  - css.properties.border-top.double
+  - css.properties.border-top.groove
+  - css.properties.border-top.hidden
+  - css.properties.border-top.inset
+  - css.properties.border-top.medium
+  - css.properties.border-top.none
+  - css.properties.border-top.outset
+  - css.properties.border-top.ridge
+  - css.properties.border-top.solid
+  - css.properties.border-top.thick
+  - css.properties.border-top.thin
+  - css.properties.border-top.transparent
+  - css.properties.border.dashed
+  - css.properties.border.dotted
+  - css.properties.border.double
+  - css.properties.border.groove
+  - css.properties.border.hidden
+  - css.properties.border.inset
+  - css.properties.border.medium
+  - css.properties.border.none
+  - css.properties.border.outset
+  - css.properties.border.ridge
+  - css.properties.border.solid
+  - css.properties.border.thick
+  - css.properties.border.thin
+  - css.properties.border.transparent
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -64,6 +157,9 @@ compat_features:
   #   safari: "1"
   #   safari_ios: "3"
   - css.properties.border-width
+  - css.properties.border-width.medium
+  - css.properties.border-width.thick
+  - css.properties.border-width.thin
   - css.types.line-style
 
   # baseline: high
@@ -78,5 +174,39 @@ compat_features:
   #   safari: "1"
   #   safari_ios: "1"
   - css.properties.border-left-style
+  - css.properties.border-left-style.dashed
+  - css.properties.border-left-style.dotted
+  - css.properties.border-left-style.double
+  - css.properties.border-left-style.groove
+  - css.properties.border-left-style.hidden
+  - css.properties.border-left-style.inset
+  - css.properties.border-left-style.none
+  - css.properties.border-left-style.outset
+  - css.properties.border-left-style.ridge
+  - css.properties.border-left-style.solid
   - css.properties.border-right
   - css.properties.border-right-style
+  - css.properties.border-right-style.dashed
+  - css.properties.border-right-style.dotted
+  - css.properties.border-right-style.double
+  - css.properties.border-right-style.groove
+  - css.properties.border-right-style.hidden
+  - css.properties.border-right-style.inset
+  - css.properties.border-right-style.none
+  - css.properties.border-right-style.outset
+  - css.properties.border-right-style.ridge
+  - css.properties.border-right-style.solid
+  - css.properties.border-right.dashed
+  - css.properties.border-right.dotted
+  - css.properties.border-right.double
+  - css.properties.border-right.groove
+  - css.properties.border-right.hidden
+  - css.properties.border-right.inset
+  - css.properties.border-right.medium
+  - css.properties.border-right.none
+  - css.properties.border-right.outset
+  - css.properties.border-right.ridge
+  - css.properties.border-right.solid
+  - css.properties.border-right.thick
+  - css.properties.border-right.thin
+  - css.properties.border-right.transparent

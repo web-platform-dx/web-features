@@ -1,0 +1,24 @@
+draft_date: 2026-01-07
+name: CSS Viewport Module Level 1
+description: TODO
+spec: https://drafts.csswg.org/css-viewport/
+compat_features:
+  - html.elements.meta.name.viewport
+  - html.elements.meta.name.viewport.height
+  - html.elements.meta.name.viewport.initial-scale
+  - html.elements.meta.name.viewport.interactive-widget
+  - html.elements.meta.name.viewport.interactive-widget.overlays-content
+  - html.elements.meta.name.viewport.interactive-widget.resizes-content
+  - html.elements.meta.name.viewport.interactive-widget.resizes-visual
+  - html.elements.meta.name.viewport.maximum-scale
+  - html.elements.meta.name.viewport.minimum-scale
+  - html.elements.meta.name.viewport.user-scalable
+  - html.elements.meta.name.viewport.width
+
+# The following features in the spec are already part of web-features:
+# - Viewport segments:
+#   - api.Viewport
+#   - api.Viewport.segments
+#   - api.Window.viewport
+# - zoom:
+#   - css.properties.zoom
