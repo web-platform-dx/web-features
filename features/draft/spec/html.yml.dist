@@ -991,6 +991,20 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "141"
+  #   chrome_android: "141"
+  #   edge: "141"
+  - http.headers.No-Vary-Search.speculation_rules_prefetch
+
+  # baseline: false
+  # support:
+  #   firefox: "143"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - html.elements.input.type_color.accepts_css_colors
+
+  # baseline: false
+  # support:
   #   firefox: "1"
   #   firefox_android: "4"
   - api.Navigator.oscpu
@@ -1001,12 +1015,6 @@ compat_features:
   #   safari: "9"
   #   safari_ios: "9"
   - api.HTMLMediaElement.getStartDate
-
-  # baseline: false
-  # support:
-  #   safari: "18.4"
-  #   safari_ios: "18.4"
-  - html.elements.input.type_color.accepts_css_colors
 
   # baseline: false
   # support:
@@ -1024,5 +1032,7 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
+  - api.NavigationPrecommitController.addHandler
+  - api.NavigationTransition.to
   - api.Navigator.authentication
   - html.elements.track.kind.descriptions

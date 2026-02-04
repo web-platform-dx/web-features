@@ -114,6 +114,9 @@ For each feature definition in `web-features`, an interoperable status shall be 
 If the feature has the interoperable status, then the feature’s _keystone date_ shall be set to the last release date on which a browser introduced support for the feature
 If there was more than one introduction (e.g., a feature was withdrawn then reintroduced), then only the latest date applies.
 
+> [!NOTE]
+> As a consequence of the definition, the keystone date is never before the release date of the youngest browser in the core browser set (presently 2015-07-28, the release date of Edge 12).
+
 ### Wider-support (high) status
 
 For each feature definition in `web-features`, a wider-support status shall be conferred to the feature if the feature satisfies the following test:

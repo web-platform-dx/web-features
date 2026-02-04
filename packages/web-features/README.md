@@ -83,7 +83,10 @@ It has the following properties:
 - `status`: Support status data.
   It has the following properties:
   - `baseline` (type: `"high" | "low" | false`): Whether the feature Baseline widely available, Baseline newly available, or not Baseline
-  - `baseline_low_date` (optional, type: `string`): When the feature reached Baseline newly available status
+  - `baseline_low_date` (optional, type: `string`): When the feature reached Baseline newly available status.
+
+     **Note**: This date is never before the release date of the youngest browser in the Baseline definition (presently 2015-07-28, the release date of Edge 12).
+
   - `baseline_high_date` (optional, type: `string`): When the feature reached Baseline widely available status
   - `support`: An object representing per-browser support information, showing the version number where each browser first started to support that feature.
     All keys are optional.

@@ -1,0 +1,15 @@
+name: AudioListener
+description: An `AudioListener` object represents the virtual position and orientation of a person relative to sound sources, to spatialize audio in a Web Audio context.
+spec: https://webaudio.github.io/web-audio-api/#AudioListener
+group: web-audio
+compat_features:
+  - api.AudioListener
+  - api.AudioListener.forwardX
+  - api.AudioListener.forwardY
+  - api.AudioListener.forwardZ
+  - api.AudioListener.positionX
+  - api.AudioListener.positionY
+  - api.AudioListener.positionZ
+  - api.AudioListener.upX
+  - api.AudioListener.upY
+  - api.AudioListener.upZ
