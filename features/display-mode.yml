@@ -2,16 +2,14 @@ name: display-mode media query
 description: The `display-mode` CSS media query sets styles based on whether the web page is in an ordinary `browser` tab mode or another mode, such as `fullscreen`, `standalone`, or `minimal-ui`.
 spec: https://drafts.csswg.org/mediaqueries-5/#display-modes
 group: media-queries
+# TODO: https://github.com/web-platform-dx/web-features/issues/1971
+# Status changed: https://github.com/web-platform-dx/web-features/pull/3744
+# 2026-02-04 — low → false — Browsers inconsistently report the display mode depending on the app manifest, fullscreen API use, and other user interface conditions. This was not captured by support data previously.
+# References:
+# - https://github.com/mdn/browser-compat-data/pull/28868
 compat_features:
   - css.at-rules.media.display-mode
-status:
-  baseline: low
-  baseline_low_date: 2023-08-01
-  support:
-    chrome: "42"
-    chrome_android: "42"
-    edge: "79"
-    firefox: "47"
-    firefox_android: "47"
-    safari: "13"
-    safari_ios: "12.2"
+  - css.at-rules.media.display-mode.browser
+  - css.at-rules.media.display-mode.fullscreen
+  - css.at-rules.media.display-mode.minimal-ui
+  - css.at-rules.media.display-mode.standalone
