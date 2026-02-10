@@ -37,7 +37,6 @@ compat_features:
   - api.MIDIAccess
   - api.MIDIAccess.inputs
   - api.MIDIAccess.outputs
-  - api.MIDIAccess.statechange_event
   - api.MIDIAccess.sysexEnabled
   - api.MIDIConnectionEvent
   - api.MIDIConnectionEvent.MIDIConnectionEvent
@@ -80,6 +79,13 @@ compat_features:
   - api.MIDIPort.version
   - api.Navigator.requestMIDIAccess
   - api.Navigator.requestMIDIAccess.secure_context_required
+
+  # baseline: false
+  # support:
+  #   chrome: "43"
+  #   chrome_android: "43"
+  #   edge: "79"
+  - api.MIDIAccess.statechange_event
 
   # baseline: false
   # support:
