@@ -29,7 +29,8 @@ const argv = yargs(process.argv.slice(2))
     type: "count",
     default: 0,
     defaultDescription: "warn",
-  }).argv;
+  })
+  .parseSync();
 
 const logger = winston.createLogger({
   level: argv.verbose > 0 ? "debug" : "warn",

@@ -20,12 +20,11 @@ const compat = new Compat();
 
 const argv = yargs(process.argv.slice(2))
   .scriptName("dist")
-  .usage("$0 [paths..]", "Generate .yml.dist from .yml", (yargs) =>
-    yargs.positional("paths", {
-      describe: "Directories or files to check/update.",
-      default: ["features"],
-    }),
-  )
+  .usage("$0 [paths..]", "Generate .yml.dist from .yml")
+  .positional("paths", {
+    describe: "Directories or files to check/update.",
+    default: ["features"],
+  })
   .option("check", {
     boolean: true,
     default: false,
@@ -37,7 +36,8 @@ const argv = yargs(process.argv.slice(2))
     type: "count",
     default: 0,
     defaultDescription: "warn",
-  }).argv;
+  })
+  .parseSync();
 
 const logger = winston.createLogger({
   level: argv.verbose > 0 ? "debug" : "warn",

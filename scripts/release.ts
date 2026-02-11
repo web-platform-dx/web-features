@@ -30,16 +30,10 @@ const packages = {
 yargs(process.argv.slice(2))
   .scriptName("release")
   .usage("$0 <cmd> [args]")
-  .option("target-repo", {
-    describe: "Select upstream GitHub repository",
-    nargs: 1,
-    default: "web-platform-dx/web-features",
-  })
-  .command({
-    command: "diff [from [to]]",
-    describe:
-      "Compare the contents of a prior release to HEAD or another prior version",
-    builder: (yargs) => {
+  .command(
+    "diff [from [to]]",
+    "Compare the contents of a prior release to HEAD or another prior version",
+    (yargs) => {
       yargs.positional("from", {
         describe: "the published web-features release to compare against",
         type: "string",
@@ -50,8 +44,8 @@ yargs(process.argv.slice(2))
         type: "string",
       });
     },
-    handler: diff,
-  })
+    diff,
+  )
   .command({
     command: "init <semverlevel>",
     describe: "Start a new release pull request",
@@ -69,7 +63,13 @@ yargs(process.argv.slice(2))
         .demandOption("semverlevel", "You must provide a semver level");
     },
     handler: init,
-  }).argv;
+  })
+  .option("target-repo", {
+    describe: "Select upstream GitHub repository",
+    nargs: 1,
+    default: "web-platform-dx/web-features",
+  })
+  .parseSync();
 
 function init(args) {
   preflight({ expectedBranch: "main" });
