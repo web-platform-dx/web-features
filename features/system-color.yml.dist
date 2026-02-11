@@ -30,14 +30,27 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "101"
+  #   chrome_android: "101"
+  #   edge: "101"
+  #   firefox: "109"
+  #   firefox_android: "109"
+  - css.types.color.system-color.buttonborder
+
+  # baseline: false
+  # support:
+  #   chrome: "102"
+  #   chrome_android: "102"
+  #   edge: "102"
+  #   firefox: "109"
+  #   firefox_android: "109"
+  - css.types.color.system-color.mark
+  - css.types.color.system-color.marktext
+
+  # baseline: false
+  # support:
   #   firefox: "103"
   #   firefox_android: "103"
   #   safari: "16.5"
   #   safari_ios: "16.5"
   - css.types.color.system-color.accentcolor_accentcolortext
-
-  # baseline: false
-  # support:
-  #   firefox: "109"
-  #   firefox_android: "109"
-  - css.types.color.system-color.mark_marktext_buttonborder
