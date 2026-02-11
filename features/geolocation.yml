@@ -4,6 +4,8 @@ spec: https://w3c.github.io/geolocation/
 status:
   compute_from: api.Navigator.geolocation
 caniuse: geolocation
+group:
+  - geolocation
 compat_features:
   - api.Geolocation
   - api.Geolocation.clearWatch
