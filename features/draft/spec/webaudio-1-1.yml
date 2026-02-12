@@ -1,9 +1,10 @@
-draft_date: 2025-04-03
+draft_date: 2026-02-04
 name: Web Audio API 1.1
 description: TODO
 spec: https://webaudio.github.io/web-audio-api/
 compat_features:
   - api.AudioWorklet.port
+  - api.BaseAudioContext.state.interrupted
 
 # The following features in the spec are already part of web-features:
 # - Web Audio:
@@ -57,16 +58,6 @@ compat_features:
 #   - api.AudioContext.suspend
 #   - api.AudioDestinationNode
 #   - api.AudioDestinationNode.maxChannelCount
-#   - api.AudioListener
-#   - api.AudioListener.forwardX
-#   - api.AudioListener.forwardY
-#   - api.AudioListener.forwardZ
-#   - api.AudioListener.positionX
-#   - api.AudioListener.positionY
-#   - api.AudioListener.positionZ
-#   - api.AudioListener.upX
-#   - api.AudioListener.upY
-#   - api.AudioListener.upZ
 #   - api.AudioNode
 #   - api.AudioNode.channelCount
 #   - api.AudioNode.channelCountMode
@@ -211,11 +202,23 @@ compat_features:
 #   - api.WaveShaperNode.WaveShaperNode
 #   - api.WaveShaperNode.curve
 #   - api.WaveShaperNode.oversample
+# - AudioListener:
+#   - api.AudioListener
+#   - api.AudioListener.forwardX
+#   - api.AudioListener.forwardY
+#   - api.AudioListener.forwardZ
+#   - api.AudioListener.positionX
+#   - api.AudioListener.positionY
+#   - api.AudioListener.positionZ
+#   - api.AudioListener.upX
+#   - api.AudioListener.upY
+#   - api.AudioListener.upZ
 # - AudioWorklet:
 #   - api.AudioWorklet
 #   - api.AudioWorkletGlobalScope
 #   - api.AudioWorkletGlobalScope.currentFrame
 #   - api.AudioWorkletGlobalScope.currentTime
+#   - api.AudioWorkletGlobalScope.port
 #   - api.AudioWorkletGlobalScope.registerProcessor
 #   - api.AudioWorkletGlobalScope.sampleRate
 #   - api.AudioWorkletNode

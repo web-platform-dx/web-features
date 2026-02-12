@@ -7,19 +7,36 @@ status:
 compat_features:
   # baseline: false
   # support:
-  #   chrome: "133"
-  #   chrome_android: "133"
-  #   edge: "133"
-  - api.GPUAdapter.requestDevice.undefined_limits
+  #   chrome_android: "136"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.GPUAdapterInfo.isFallbackAdapter
 
   # baseline: false
   # support:
-  #   chrome: "134"
-  #   chrome_android: "134"
-  #   edge: "134"
-  - api.GPUSupportedFeatures.feature_subgroups
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.GPUSupportedFeatures.feature_texture-compression-astc-sliced-3d
+  - api.GPUSupportedFeatures.feature_texture-compression-bc-sliced-3d
+
+  # baseline: false
+  # support:
+  #   chrome_android: "139"
+  - api.GPUSupportedFeatures.feature_core-features-and-limits
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - api.GPUAdapterInfo.isFallbackAdapter
+  - api.GPUAdapter.requestDevice.undefined_limits
+  - api.GPUCommandEncoder.beginRenderPass.accepts_GPUTexture_resources
+  - api.GPUCommandEncoder.copyBufferToBuffer.offset_and_size_parameter_optional
+  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUBuffer
+  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTextureView
+  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTexture_resource
+  - api.GPUDevice.createPipelineLayout.descriptor_bindGroupLayouts_parameter_accepts_null_values
+  - api.GPUSupportedFeatures.feature_primitive-index
+  - api.GPUSupportedFeatures.feature_subgroups.subgroup_id_num_subgroups
+  - api.GPUSupportedFeatures.feature_texture-component-swizzle
+  - api.GPUSupportedFeatures.feature_texture-formats-tier1
+  - api.GPUSupportedFeatures.feature_texture-formats-tier2
+  - api.GPUTexture.createView.descriptor_swizzle_parameter

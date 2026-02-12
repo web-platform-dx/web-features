@@ -47,12 +47,10 @@ compat_features:
   #   safari: "10"
   #   safari_ios: "10"
   - css.properties.break-after.auto
-  - css.properties.break-after.avoid
   - css.properties.break-after.left
   - css.properties.break-after.page
   - css.properties.break-after.right
   - css.properties.break-before.auto
-  - css.properties.break-before.avoid
   - css.properties.break-before.left
   - css.properties.break-before.page
   - css.properties.break-before.right
@@ -103,6 +101,14 @@ compat_features:
   #   firefox: "92"
   #   firefox_android: "92"
   - css.properties.break-inside.paged_context.avoid-page
+
+  # baseline: false
+  # support:
+  #   chrome: "50"
+  #   chrome_android: "50"
+  #   edge: "79"
+  - css.properties.break-after.avoid
+  - css.properties.break-before.avoid
 
   # baseline: false
   # support:

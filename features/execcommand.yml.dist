@@ -4,9 +4,15 @@
 status:
   baseline: false
   support:
+    chrome: "1"
+    chrome_android: "18"
+    edge: "12"
     firefox: "69"
     firefox_android: "79"
+    safari: "1.3"
+    safari_ios: "1"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "1"
@@ -45,7 +51,6 @@ compat_features:
   - api.Document.execCommand.copy
   - api.Document.execCommand.cut
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "69"

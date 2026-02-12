@@ -314,6 +314,19 @@ compat_features:
   - svg.elements.animateMotion.href
   - svg.elements.animateTransform.href
 
+  # baseline: low
+  # baseline_low_date: 2025-12-12
+  # support:
+  #   chrome: "35"
+  #   chrome_android: "35"
+  #   edge: "79"
+  #   firefox: "93"
+  #   firefox_android: "93"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - api.SVGAnimationElement.beginEvent_event
+  - api.SVGAnimationElement.repeatEvent_event
+
   # baseline: false
   # support:
   #   chrome: "35"
@@ -321,9 +334,7 @@ compat_features:
   #   edge: "79"
   #   firefox: "93"
   #   firefox_android: "93"
-  - api.SVGAnimationElement.beginEvent_event
   - api.SVGAnimationElement.endEvent_event
-  - api.SVGAnimationElement.repeatEvent_event
 
   # baseline: false
   # support:

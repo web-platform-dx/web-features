@@ -8,13 +8,22 @@ status:
     chrome_android: "129"
     edge: "129"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "129"
+  #   chrome_android: "129"
+  #   edge: "129"
   - api.Document.scrollsnapchange_event
   - api.Document.scrollsnapchanging_event
   - api.Element.scrollsnapchange_event
   - api.Element.scrollsnapchanging_event
   - api.SnapEvent
-  - api.SnapEvent.SnapEvent
   - api.SnapEvent.snapTargetBlock
   - api.SnapEvent.snapTargetInline
   - api.Window.scrollsnapchange_event
   - api.Window.scrollsnapchanging_event
+
+  # baseline: false
+  # support: {}
+  - api.SnapEvent.SnapEvent

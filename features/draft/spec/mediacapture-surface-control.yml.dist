@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "136"
+    edge: "136"
 compat_features:
   - api.CaptureController.decreaseZoomLevel
   - api.CaptureController.forwardWheel
@@ -12,3 +14,5 @@ compat_features:
   - api.CaptureController.resetZoomLevel
   - api.CaptureController.zoomLevel
   - api.CaptureController.zoomlevelchange_event
+  - api.Permissions.permission_captured-surface-control
+  - http.headers.Permissions-Policy.captured-surface-control

@@ -10,8 +10,9 @@ status:
     firefox_android: "22"
     safari: "7"
 compat_features:
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-03-27
+  # baseline_high_date: 2025-09-27
   # support:
   #   chrome: "40"
   #   chrome_android: "40"
@@ -22,8 +23,9 @@ compat_features:
   #   safari_ios: "16.4"
   - api.ServiceWorkerRegistration.getNotifications
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-03-27
+  # baseline_high_date: 2025-09-27
   # support:
   #   chrome: "42"
   #   chrome_android: "42"
@@ -36,8 +38,9 @@ compat_features:
   - api.NotificationEvent.NotificationEvent
   - api.ServiceWorkerRegistration.showNotification
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-03-27
+  # baseline_high_date: 2025-09-27
   # support:
   #   chrome: "43"
   #   chrome_android: "43"
@@ -169,15 +172,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "53"
-  #   chrome_android: "53"
-  #   edge: ≤79
-  #   safari: "17"
-  #   safari_ios: "16.4"
-  - api.ServiceWorkerRegistration.showNotification.options_badge_parameter
-
-  # baseline: false
-  # support:
   #   chrome: "20"
   #   edge: "14"
   #   firefox: "26"
@@ -212,14 +206,14 @@ compat_features:
   # support:
   #   chrome: "44"
   #   chrome_android: "44"
-  #   edge: ≤79
+  #   edge: "79"
   - api.ServiceWorkerRegistration.showNotification.options_data_parameter
 
   # baseline: false
   # support:
   #   chrome: "47"
   #   chrome_android: "47"
-  #   edge: ≤79
+  #   edge: "79"
   - api.ServiceWorkerRegistration.showNotification.options_requireInteraction_parameter
 
   # baseline: false
@@ -233,27 +227,27 @@ compat_features:
   # support:
   #   chrome: "50"
   #   chrome_android: "50"
-  #   edge: ≤79
+  #   edge: "79"
   - api.ServiceWorkerRegistration.showNotification.options_renotify_parameter
 
   # baseline: false
   # support:
   #   chrome: "53"
-  #   edge: "18"
-  #   safari: "17"
-  - api.Notification.badge
+  #   chrome_android: "53"
+  #   edge: "79"
+  - api.ServiceWorkerRegistration.showNotification.options_badge_parameter
 
   # baseline: false
   # support:
   #   chrome: "56"
   #   chrome_android: "56"
-  #   edge: ≤79
+  #   edge: "79"
   - api.ServiceWorkerRegistration.showNotification.options_image_parameter
 
   # baseline: false
   # support:
   #   chrome: "45"
-  #   edge: ≤79
+  #   edge: "79"
   - api.ServiceWorkerRegistration.showNotification.options_vibrate_parameter
 
   # baseline: false
@@ -285,6 +279,7 @@ compat_features:
   #   chrome: "53"
   #   edge: "18"
   - api.Notification.actions
+  - api.Notification.badge
 
   # baseline: false
   # support:

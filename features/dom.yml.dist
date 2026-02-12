@@ -156,6 +156,19 @@ compat_features:
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
+  #   safari: "1.3"
+  #   safari_ios: "1"
+  - api.HTMLElement.load_event
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
   #   safari: "3"
   #   safari_ios: "1"
   - api.CDATASection
@@ -1251,19 +1264,6 @@ compat_features:
   #   safari: "10"
   #   safari_ios: "10"
   - api.NodeList.@@iterator
-
-  # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
-  # support:
-  #   chrome: "36"
-  #   chrome_android: "36"
-  #   edge: "12"
-  #   firefox: "69"
-  #   firefox_android: "79"
-  #   safari: "10.1"
-  #   safari_ios: "10.3"
-  - api.Document.designMode
 
   # baseline: high
   # baseline_low_date: 2020-10-20

@@ -1,0 +1,21 @@
+draft_date: 2025-05-26
+name: Translator and Language Detector APIs
+description: TODO
+spec: https://webmachinelearning.github.io/translation-api/
+compat_features:
+  - api.LanguageDetector
+  - api.LanguageDetector.availability_static
+  - api.LanguageDetector.create_static
+  - api.LanguageDetector.detect
+  - api.LanguageDetector.expectedInputLanguages
+  - api.LanguageDetector.inputQuota
+  - api.LanguageDetector.measureInputUsage
+  - api.Translator
+  - api.Translator.availability_static
+  - api.Translator.create_static
+  - api.Translator.inputQuota
+  - api.Translator.measureInputUsage
+  - api.Translator.sourceLanguage
+  - api.Translator.targetLanguage
+  - api.Translator.translate
+  - api.Translator.translateStreaming

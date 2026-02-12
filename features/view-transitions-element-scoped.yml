@@ -1,0 +1,13 @@
+name: Element-scoped view transitions
+description: >
+  The `startViewTransition()` method of an `Element` object starts a view transition that affects only that element's DOM tree.
+  The `contain: view-transition` CSS declaration contains the layout of the tree to be transitioned.
+  You can use this to run separate elements' transitions concurrently.
+spec: https://github.com/WICG/view-transitions/blob/main/scoped-transitions.md
+group: view-transitions
+# Expecting:
+# compat_features:
+#  - api.Element.startViewTransition
+#  - css.properties.contain.view-transition
+# This feature is subordinate to view-transitions. It should probably merge into
+# it one day.

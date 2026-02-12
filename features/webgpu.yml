@@ -1,6 +1,7 @@
 name: WebGPU
 description: The `navigator.gpu` API performs operations such as rendering and computation on dedicated graphics hardware (also known as a Graphics Processing Unit).
 spec: https://gpuweb.github.io/gpuweb/
+group: webgpu
 caniuse: webgpu
 status:
   compute_from: api.Navigator.gpu
@@ -13,10 +14,9 @@ compat_features:
   - api.GPUAdapter
   - api.GPUAdapter.features
   - api.GPUAdapter.info
-  - api.GPUAdapter.isFallbackAdapter
   - api.GPUAdapter.limits
   - api.GPUAdapter.requestDevice
-  - api.GPUAdapter.requestDevice.lost_device_on_duplicate
+  - api.GPUAdapter.requestDevice.handles_duplicate_calls
   - api.GPUAdapterInfo
   - api.GPUAdapterInfo.architecture
   - api.GPUAdapterInfo.description
@@ -275,8 +275,8 @@ compat_features:
   - api.GPUSupportedLimits.minUniformBufferOffsetAlignment
   - api.GPUTexture
   - api.GPUTexture.createView
-  - api.GPUTexture.createView.texture_rgb10a2uint
-  - api.GPUTexture.createView.usage
+  - api.GPUTexture.createView.descriptor_format_parameter_accepts_rgb10a2uint
+  - api.GPUTexture.createView.descriptor_usage_parameter
   - api.GPUTexture.depthOrArrayLayers
   - api.GPUTexture.destroy
   - api.GPUTexture.dimension

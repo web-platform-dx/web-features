@@ -97,8 +97,9 @@ compat_features:
   - javascript.statements.export.arbitrary_module_namespace_identifier_names
   - javascript.statements.import.arbitrary_module_namespace_identifier_names
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-03-27
+  # baseline_high_date: 2025-09-27
   # support:
   #   chrome: "105"
   #   chrome_android: "105"
@@ -109,8 +110,9 @@ compat_features:
   #   safari_ios: "16.4"
   - javascript.operators.import_meta.resolve
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-06-06
+  # baseline_high_date: 2025-12-06
   # support:
   #   chrome: "80"
   #   chrome_android: "80"
@@ -121,11 +123,14 @@ compat_features:
   #   safari_ios: "15"
   - api.Worklet.ecmascript_modules
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-04-29
   # support:
   #   chrome: "123"
   #   chrome_android: "123"
   #   edge: "123"
+  #   firefox: "138"
+  #   firefox_android: "138"
   #   safari: "17.2"
   #   safari_ios: "17.2"
   - javascript.statements.import.import_attributes

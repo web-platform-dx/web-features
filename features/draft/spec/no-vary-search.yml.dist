@@ -4,8 +4,21 @@
 status:
   baseline: false
   support:
-    chrome: "127"
-    chrome_android: "127"
-    edge: "127"
+    chrome: "141"
+    chrome_android: "144"
+    edge: "141"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "141"
+  #   chrome_android: "141"
+  #   edge: "141"
   - http.headers.No-Vary-Search
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "141"
+  #   chrome_android: "144"
+  #   edge: "141"
+  - http.headers.No-Vary-Search.http_cache

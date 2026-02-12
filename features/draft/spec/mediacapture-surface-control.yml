@@ -1,4 +1,4 @@
-draft_date: 2025-04-09
+draft_date: 2025-07-10
 name: Captured Surface Control
 description: TODO
 spec: https://w3c.github.io/mediacapture-surface-control/
@@ -10,3 +10,5 @@ compat_features:
   - api.CaptureController.resetZoomLevel
   - api.CaptureController.zoomLevel
   - api.CaptureController.zoomlevelchange_event
+  - api.Permissions.permission_captured-surface-control
+  - http.headers.Permissions-Policy.captured-surface-control

@@ -1,17 +1,28 @@
-draft_date: 2025-04-17
+draft_date: 2025-11-03
 name: CSS Basic User Interface Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-ui-4/
 compat_features:
-  - css.properties.interactivity
-  - css.properties.interactivity.auto
-  - css.properties.interactivity.inert
+  - css.properties.caret-animation
+  - css.properties.caret-animation.auto
+  - css.properties.caret-animation.manual
+  - css.properties.caret-color.auto
+  - css.properties.interest-delay
+  - css.properties.interest-delay-end
+  - css.properties.interest-delay-end.normal
+  - css.properties.interest-delay-start
+  - css.properties.interest-delay-start.normal
+  - css.properties.interest-delay.normal
+  - css.properties.outline.auto
+  - css.properties.resize.both
+  - css.properties.resize.horizontal
+  - css.properties.resize.none
+  - css.properties.resize.vertical
 
 # The following features in the spec are already part of web-features:
 # - accent-color:
 #   - css.properties.accent-color
 #   - css.properties.accent-color.auto
-#   - css.properties.accent-color.maintains_contrast
 # - appearance:
 #   - css.properties.appearance
 #   - css.properties.appearance.auto
@@ -27,8 +38,16 @@ compat_features:
 #   - css.properties.appearance.searchfield
 #   - css.properties.appearance.textarea
 #   - css.properties.appearance.textfield
+# - Customizable <select>:
+#   - css.properties.appearance.base-select
 # - caret-color:
 #   - css.properties.caret-color
+# - caret-shape:
+#   - css.properties.caret-shape
+#   - css.properties.caret-shape.auto
+#   - css.properties.caret-shape.bar
+#   - css.properties.caret-shape.block
+#   - css.properties.caret-shape.underscore
 # - Cursor styles:
 #   - css.properties.cursor
 #   - css.properties.cursor.alias
@@ -70,10 +89,10 @@ compat_features:
 #   - css.properties.cursor.zoom-in
 #   - css.properties.cursor.zoom-out
 #   - svg.global_attributes.cursor
-# - field-sizing:
-#   - css.properties.field-sizing
-#   - css.properties.field-sizing.content
-#   - css.properties.field-sizing.fixed
+# - interactivity:
+#   - css.properties.interactivity
+#   - css.properties.interactivity.auto
+#   - css.properties.interactivity.inert
 # - outline:
 #   - css.properties.outline
 # - Outlines:

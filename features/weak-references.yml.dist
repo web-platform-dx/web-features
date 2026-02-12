@@ -34,6 +34,19 @@ compat_features:
   - javascript.builtins.WeakRef.WeakRef
   - javascript.builtins.WeakRef.deref
 
+  # baseline: low
+  # baseline_low_date: 2025-12-09
+  # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  #   firefox: "146"
+  #   firefox_android: "146"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - javascript.builtins.FinalizationRegistry.register.symbol_as_target
+  - javascript.builtins.WeakRef.WeakRef.symbol_as_target
+
   # baseline: false
   # support:
   #   chrome: "109"
@@ -41,5 +54,4 @@ compat_features:
   #   edge: "109"
   #   safari: "16.4"
   #   safari_ios: "16.4"
-  - javascript.builtins.FinalizationRegistry.register.symbol_as_target
-  - javascript.builtins.WeakRef.WeakRef.symbol_as_target
+  - javascript.builtins.FinalizationRegistry.unregister.symbol_as_target

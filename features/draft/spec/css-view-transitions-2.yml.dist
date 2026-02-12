@@ -4,27 +4,37 @@
 status:
   baseline: false
   support:
-    chrome: "125"
-    chrome_android: "125"
-    edge: "125"
-    safari: "18.2"
-    safari_ios: "18.2"
+    chrome: "144"
+    chrome_android: "144"
+    edge: "144"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2026-01-13
+  # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  #   edge: "142"
+  #   firefox: "147"
+  #   firefox_android: "147"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - api.Document.activeViewTransition
+
   # baseline: false
   # support:
-  #   chrome: "111"
-  #   chrome_android: "111"
-  #   edge: "111"
-  #   safari: "18"
-  #   safari_ios: "18"
-  - api.Document.startViewTransition.updateCallback_parameter
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
+  - css.properties.view-transition-group
+  - css.properties.view-transition-group.contain
+  - css.properties.view-transition-group.nearest
+  - css.properties.view-transition-group.normal
+  - css.selectors.view-transition-group-children
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
-  #   chrome: "125"
-  #   chrome_android: "125"
-  #   edge: "125"
-  #   safari: "18.2"
-  #   safari_ios: "18.2"
-  - api.Document.startViewTransition.callbackOptions_parameter
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
+  - api.ViewTransition.waitUntil
