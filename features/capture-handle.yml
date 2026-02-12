@@ -1,6 +1,5 @@
-draft_date: 2024-09-09
-name: Capture Handle - Bootstrapping Collaboration when Screensharing
-description: TODO
+name: Capture Handle
+description: The capture handle API allows you to share a custom handle (a string) from a web application being captured by `getDisplayMedia()` to the capturing web application.
 spec: https://w3c.github.io/mediacapture-handle/identity/
 compat_features:
   - api.MediaDevices.setCaptureHandleConfig
