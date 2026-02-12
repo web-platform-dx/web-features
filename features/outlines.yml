@@ -5,6 +5,7 @@ spec: https://drafts.csswg.org/css-ui-4/#outline
 # longhands, which are split in web-features. TODO: merge the features.
 compat_features:
   - css.properties.outline-color
+  - css.properties.outline-color.transparent
   - css.properties.outline-offset
   - css.properties.outline-style
   - css.properties.outline-style.auto
@@ -18,3 +19,6 @@ compat_features:
   - css.properties.outline-style.ridge
   - css.properties.outline-style.solid
   - css.properties.outline-width
+  - css.properties.outline-width.medium
+  - css.properties.outline-width.thick
+  - css.properties.outline-width.thin

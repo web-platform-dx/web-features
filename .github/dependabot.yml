@@ -6,8 +6,16 @@ updates:
       - /
       - packages/web-features
       - packages/compute-baseline
+      - gh-pages
     schedule:
       interval: daily
+    cooldown:
+      default-days: 7
+      exclude:
+        # Data packages are excluded from cooldowns, since we want those more urgently
+        - "@mdn/browser-compat-data"
+        - "caniuse-lite"
+        - "web-specs"
     ignore:
       - dependency-name: "@types/node"
         update-types: ["version-update:semver-major"]
@@ -35,3 +43,5 @@ updates:
     directory: "/"
     schedule:
       interval: daily
+    cooldown:
+      default-days: 7

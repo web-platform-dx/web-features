@@ -17,6 +17,8 @@ A library maintainer or application vendor might have, at best, an indirect view
 Despite the glut of information about browser support, releases, and global usage, these developers are left on their own to draw a platform-wide support picture, with ample opportunity for errors and confusion.
 _Baseline_ (alongside related statuses) is intended to help these developers by offering a shortcut past the complexity.
 
+To help Baseline and web-features contributors understand the audience and applications for Baseline, see [Audience illustration for Baseline status](baseline-audience-illustration.md) for a persona.
+
 ## Goals
 
 _Baseline_ status is a wayfinding tool for web developers.
@@ -83,39 +85,6 @@ Baseline status cannot or will not satisfy the following non-goals:
   Baseline should seek to summarize underlying facts about web platform features, not canonize them.
   See also: [Future considerations](#future-considerations).
 
-## Audience illustration for Baseline status
-
-<!-- TODO: https://github.com/web-platform-dx/web-features/issues/438 -->
-
-Although Baseline is intended for web developers, “web developers” is an extremely broad category, which includes ranges of experience, goals, and motivations.
-It’s hard to make tools for a broad category.
-Instead, we can use a more specific example as a proxy for the group as a whole.
-
-The audience for Baseline status is illustrated through the following story.
-This is but one of several possible stories to help keep in mind the needs and constraints of web developers who use Baseline.
-
-> A web developer is responsible for the maintenance of a static site generator.
->
-> The application is typically used in a self-hosted manner: other, downstream web developers download, install, and run the application themselves.
-> The downstream developers rarely contribute to the application’s source code or documentation and even less rarely contribute funds for ongoing development.
-> But they are generous with bug reports and complaints.
->
-> The developer needs to make browser support decisions that work for them, for downstream developers (the site generator users), and for _their_ users (end users).
-> The developer wants to maximize backwards compatibility and minimize complaints from downstream developers about browser support issues.
->
-> But the developer has several constraints that influence their day-to-day decisions about whether to use a given web platform feature:
->
-> * The developer does not have access to downstream developers’ analytics and they don't use telemetry in the application itself, so they can’t directly know anything about end users’ browsers.
-> * The developer has limited time and budget to get relatively old or new devices and test with.
->   They use a 2-year old laptop that they keep _mostly_ up-to-date with OS and browser updates.
-> * The developer has limited time and interest to keep up with browser news.
->   They don’t routinely read web development blogs.
-> * The developer recently decided to stop worrying about end-of-life browsers.
->
-> Today, to decide whether to use a new-to-them web platform feature, the developer uses the same techniques taught by their mentors: skim _Can I use…?_ and MDN browser compatibility tables.
-> They mostly work on a gut feeling: is there _enough_ green in the table to use this feature?
-> This works some of the time, but they’ve been occasionally surprised by both “new” (and unfamiliar) features being long-supported and unexpected complaints of incompatibility.
-
 ## Ownership and maintenance
 
 The WebDX community group, through the [web-platform-dx/web-features-set owners group](../GOVERNANCE.md), maintains this document.
@@ -144,6 +113,9 @@ For each feature definition in `web-features`, an interoperable status shall be 
 
 If the feature has the interoperable status, then the feature’s _keystone date_ shall be set to the last release date on which a browser introduced support for the feature
 If there was more than one introduction (e.g., a feature was withdrawn then reintroduced), then only the latest date applies.
+
+> [!NOTE]
+> As a consequence of the definition, the keystone date is never before the release date of the youngest browser in the core browser set (presently 2015-07-28, the release date of Edge 12).
 
 ### Wider-support (high) status
 

@@ -576,6 +576,19 @@ compat_features:
   - api.RTCRtpReceiver.getSynchronizationSources.video_tracks_supported
 
   # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "74"
+  #   chrome_android: "74"
+  #   edge: "79"
+  #   firefox: "64"
+  #   firefox_android: "64"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.RTCRtpSender.setParameters.parameters_encodings_parameter.scaleResolutionDownBy
+
+  # baseline: high
   # baseline_low_date: 2020-03-24
   # baseline_high_date: 2022-09-24
   # support:
@@ -801,8 +814,9 @@ compat_features:
   #   safari_ios: "14.5"
   - api.RTCPeerConnection.addTransceiver.init_sendEncodings_parameter
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-05-09
+  # baseline_high_date: 2025-11-09
   # support:
   #   chrome: "59"
   #   chrome_android: "59"
@@ -813,8 +827,9 @@ compat_features:
   #   safari_ios: "12.2"
   - api.RTCRtpReceiver.getCapabilities_static
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-05-09
+  # baseline_high_date: 2025-11-09
   # support:
   #   chrome: "69"
   #   chrome_android: "69"
@@ -825,8 +840,9 @@ compat_features:
   #   safari_ios: "12.2"
   - api.RTCRtpSender.getCapabilities_static
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-05-09
+  # baseline_high_date: 2025-11-09
   # support:
   #   chrome: "72"
   #   chrome_android: "72"
@@ -838,8 +854,9 @@ compat_features:
   - api.RTCPeerConnection.connectionState
   - api.RTCPeerConnection.connectionstatechange_event
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-05-09
+  # baseline_high_date: 2025-11-09
   # support:
   #   chrome: "76"
   #   chrome_android: "76"
@@ -1006,15 +1023,29 @@ compat_features:
   #   safari_ios: "12.2"
   - api.RTCCertificate.getFingerprints
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-10-14
   # support:
-  #   chrome: "74"
-  #   chrome_android: "74"
-  #   firefox: "64"
-  #   firefox_android: "64"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - api.RTCRtpSender.setParameters.parameters_encodings_parameter.scaleResolutionDownBy
+  #   chrome: "81"
+  #   chrome_android: "81"
+  #   edge: "81"
+  #   firefox: "144"
+  #   firefox_android: "144"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - api.RTCDataChannel.closing_event
+
+  # baseline: low
+  # baseline_low_date: 2025-10-14
+  # support:
+  #   chrome: "130"
+  #   chrome_android: "130"
+  #   edge: "130"
+  #   firefox: "144"
+  #   firefox_android: "144"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - api.RTCDataChannel.transferable
 
   # baseline: false
   # support:
@@ -1157,15 +1188,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "81"
-  #   chrome_android: "81"
-  #   edge: "81"
-  #   safari: "15.4"
-  #   safari_ios: "15.4"
-  - api.RTCDataChannel.closing_event
-
-  # baseline: false
-  # support:
   #   chrome: "88"
   #   chrome_android: "88"
   #   edge: "88"
@@ -1193,15 +1215,6 @@ compat_features:
   #   firefox: "115"
   #   firefox_android: "115"
   - api.RTCRtpReceiver.jitterBufferTarget
-
-  # baseline: false
-  # support:
-  #   chrome: "130"
-  #   chrome_android: "130"
-  #   edge: "130"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - api.RTCDataChannel.transferable
 
   # baseline: false
   # support:

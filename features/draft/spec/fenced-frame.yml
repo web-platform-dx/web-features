@@ -1,4 +1,4 @@
-draft_date: 2025-01-07
+draft_date: 2025-09-30
 name: Fenced Frame
 description: TODO
 spec: https://wicg.github.io/fenced-frame/
@@ -11,7 +11,6 @@ compat_features:
 #   - api.Fence.getNestedConfigs
 #   - api.Fence.reportEvent
 #   - api.Fence.setReportEventDataForAutomaticBeacons
-#   - api.Fence.setReportEventDataForAutomaticBeacons.start_commit_eventType
 #   - api.FencedFrameConfig
 #   - api.FencedFrameConfig.setSharedStorageContext
 #   - api.HTMLFencedFrameElement
@@ -25,3 +24,5 @@ compat_features:
 #   - html.elements.fencedframe
 #   - html.elements.fencedframe.allow
 #   - http.headers.Content-Security-Policy.fenced-frame-src
+# - Speculation rules:
+#   - http.headers.Supports-Loading-Mode.fenced-frame

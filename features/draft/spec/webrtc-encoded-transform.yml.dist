@@ -8,4 +8,76 @@ status:
     chrome_android: "139"
     edge: "139"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2025-11-11
+  # support:
+  #   chrome: "127"
+  #   chrome_android: "127"
+  #   edge: "127"
+  #   firefox: "145"
+  #   firefox_android: "145"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.RTCEncodedAudioFrame.RTCEncodedAudioFrame.options_metadata_contributingSources_parameter
+  - api.RTCEncodedAudioFrame.RTCEncodedAudioFrame.options_metadata_payloadType_parameter
+  - api.RTCEncodedAudioFrame.RTCEncodedAudioFrame.options_metadata_rtpTimestamp_parameter
+  - api.RTCEncodedAudioFrame.RTCEncodedAudioFrame.options_metadata_sequenceNumber_parameter
+  - api.RTCEncodedAudioFrame.RTCEncodedAudioFrame.options_metadata_synchronizationSource_parameter
+  - api.RTCEncodedAudioFrame.getMetadata.return_object_property_contributingSources
+  - api.RTCEncodedAudioFrame.getMetadata.return_object_property_payloadType
+  - api.RTCEncodedAudioFrame.getMetadata.return_object_property_rtpTimestamp
+  - api.RTCEncodedAudioFrame.getMetadata.return_object_property_sequenceNumber
+  - api.RTCEncodedAudioFrame.getMetadata.return_object_property_synchronizationSource
+  - api.RTCEncodedVideoFrame.RTCEncodedVideoFrame.options_metadata_contributingSources_parameter
+  - api.RTCEncodedVideoFrame.RTCEncodedVideoFrame.options_metadata_dependencies_parameter
+  - api.RTCEncodedVideoFrame.RTCEncodedVideoFrame.options_metadata_frameId_parameter
+  - api.RTCEncodedVideoFrame.RTCEncodedVideoFrame.options_metadata_height_parameter
+  - api.RTCEncodedVideoFrame.RTCEncodedVideoFrame.options_metadata_payloadType_parameter
+  - api.RTCEncodedVideoFrame.RTCEncodedVideoFrame.options_metadata_spatialIndex_parameter
+  - api.RTCEncodedVideoFrame.RTCEncodedVideoFrame.options_metadata_synchronizationSource_parameter
+  - api.RTCEncodedVideoFrame.RTCEncodedVideoFrame.options_metadata_temporalIndex_parameter
+  - api.RTCEncodedVideoFrame.RTCEncodedVideoFrame.options_metadata_width_parameter
+  - api.RTCEncodedVideoFrame.getMetadata.return_object_property_contributingSources
+  - api.RTCEncodedVideoFrame.getMetadata.return_object_property_dependencies
+  - api.RTCEncodedVideoFrame.getMetadata.return_object_property_frameId
+  - api.RTCEncodedVideoFrame.getMetadata.return_object_property_height
+  - api.RTCEncodedVideoFrame.getMetadata.return_object_property_payloadType
+  - api.RTCEncodedVideoFrame.getMetadata.return_object_property_spatialIndex
+  - api.RTCEncodedVideoFrame.getMetadata.return_object_property_synchronizationSource
+  - api.RTCEncodedVideoFrame.getMetadata.return_object_property_temporalIndex
+  - api.RTCEncodedVideoFrame.getMetadata.return_object_property_width
+
+  # baseline: false
+  # support:
+  #   chrome: "127"
+  #   chrome_android: "127"
+  #   edge: "127"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.RTCEncodedAudioFrame.RTCEncodedAudioFrame.options_metadata_mimeType_parameter
+  - api.RTCEncodedAudioFrame.getMetadata.return_object_property_mimeType
+  - api.RTCEncodedVideoFrame.RTCEncodedVideoFrame.options_metadata_mimeType_parameter
+  - api.RTCEncodedVideoFrame.RTCEncodedVideoFrame.options_metadata_rtpTimestamp_parameter
+  - api.RTCEncodedVideoFrame.getMetadata.return_object_property_mimeType
+  - api.RTCEncodedVideoFrame.getMetadata.return_object_property_rtpTimestamp
+
+  # baseline: false
+  # support:
+  #   chrome: "127"
+  #   chrome_android: "127"
+  #   edge: "127"
+  - api.RTCEncodedAudioFrame.RTCEncodedAudioFrame.options_metadata_audioLevel_parameter
+  - api.RTCEncodedAudioFrame.RTCEncodedAudioFrame.options_metadata_captureTime_parameter
+  - api.RTCEncodedAudioFrame.RTCEncodedAudioFrame.options_metadata_receiveTime_parameter
+  - api.RTCEncodedAudioFrame.getMetadata.return_object_property_captureTime
+  - api.RTCEncodedAudioFrame.getMetadata.return_object_property_receiveTime
+  - api.RTCEncodedVideoFrame.RTCEncodedVideoFrame.options_metadata_receiveTime_parameter
+  - api.RTCEncodedVideoFrame.getMetadata.return_object_property_receiveTime
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "139"
+  #   chrome_android: "139"
+  #   edge: "139"
   - api.RTCEncodedAudioFrame.getMetadata.return_object_property_audioLevel

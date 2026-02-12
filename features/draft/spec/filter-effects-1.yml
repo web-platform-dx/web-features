@@ -1,18 +1,10 @@
-draft_date: 2025-08-06
+draft_date: 2026-02-12
 name: Filter Effects Module Level 1
 description: TODO
-spec: https://drafts.fxtf.org/filter-effects-1/
+spec: https://drafts.csswg.org/filter-effects-1/
 compat_features:
-  - css.properties.filter.blur
-  - css.properties.filter.brightness
-  - css.properties.filter.contrast
-  - css.properties.filter.drop-shadow
-  - css.properties.filter.grayscale
-  - css.properties.filter.hue-rotate
-  - css.properties.filter.invert
-  - css.properties.filter.opacity
-  - css.properties.filter.saturate
-  - css.properties.filter.sepia
+  - css.properties.backdrop-filter.none
+  - css.properties.filter.none
 
 # The following features in the spec are already part of web-features:
 # - SVG:
@@ -349,6 +341,16 @@ compat_features:
 #   - css.properties.backdrop-filter
 # - filter:
 #   - css.properties.filter
+#   - css.properties.filter.blur
+#   - css.properties.filter.brightness
+#   - css.properties.filter.contrast
+#   - css.properties.filter.drop-shadow
+#   - css.properties.filter.grayscale
+#   - css.properties.filter.hue-rotate
+#   - css.properties.filter.invert
+#   - css.properties.filter.opacity
+#   - css.properties.filter.saturate
+#   - css.properties.filter.sepia
 #   - css.types.filter-function
 #   - css.types.filter-function.blur
 #   - css.types.filter-function.brightness
@@ -360,3 +362,5 @@ compat_features:
 #   - css.types.filter-function.opacity
 #   - css.types.filter-function.saturate
 #   - css.types.filter-function.sepia
+# - filter():
+#   - css.types.image.filter

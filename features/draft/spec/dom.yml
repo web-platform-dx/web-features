@@ -1,9 +1,10 @@
-draft_date: 2025-06-19
+draft_date: 2026-02-04
 name: DOM
 description: TODO
 spec: https://dom.spec.whatwg.org/
 compat_features:
-  - api.Document.featurePolicy
+  - api.Element.setAttribute.enforces_trusted_types
+  - api.Element.setAttributeNS.enforces_trusted_types
 
 # The following features in the spec are already part of web-features:
 # - AbortController and AbortSignal:
@@ -41,7 +42,6 @@ compat_features:
 #   - api.Range.compareBoundaryPoints
 #   - api.Range.comparePoint
 #   - api.Range.deleteContents
-#   - api.Range.detach
 #   - api.Range.endContainer
 #   - api.Range.endOffset
 #   - api.Range.extractContents
@@ -359,6 +359,8 @@ compat_features:
 #   - api.Document.customElementRegistry
 #   - api.Element.customElementRegistry
 #   - api.ShadowRoot.customElementRegistry
+# - Feature policy:
+#   - api.Document.featurePolicy
 # - moveBefore():
 #   - api.Document.moveBefore
 #   - api.DocumentFragment.moveBefore

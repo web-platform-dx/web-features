@@ -1,10 +1,20 @@
 name: filter
-description: The `filter` CSS property applies one or more graphic effects to an element. You can use filter functions, such as `blur()` and `drop-shadow()`, alone or combined to produce different effects.
-spec: https://drafts.fxtf.org/filter-effects-1/#propdef-filter
+description: "The `filter` CSS property applies one or more graphic effects to an element. You can use filter functions, such as `blur()` and `drop-shadow()`, alone or combined to produce different effects. For instance, `filter: blur(2px)`."
+spec: https://drafts.csswg.org/filter-effects-1/#propdef-filter
 group: css
 caniuse: css-filters
 compat_features:
   - css.properties.filter
+  - css.properties.filter.blur
+  - css.properties.filter.brightness
+  - css.properties.filter.contrast
+  - css.properties.filter.drop-shadow
+  - css.properties.filter.grayscale
+  - css.properties.filter.hue-rotate
+  - css.properties.filter.invert
+  - css.properties.filter.opacity
+  - css.properties.filter.saturate
+  - css.properties.filter.sepia
   - css.types.filter-function
   - css.types.filter-function.blur
   - css.types.filter-function.brightness

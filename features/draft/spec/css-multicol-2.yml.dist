@@ -3,10 +3,28 @@
 
 status:
   baseline: false
-  support:
-    chrome: "135"
-    chrome_android: "135"
-    edge: "135"
+  support: {}
 compat_features:
-  - css.selectors.column
-  - css.selectors.column.nested_scroll-marker
+  # baseline: high
+  # baseline_low_date: 2017-03-07
+  # baseline_high_date: 2019-09-07
+  # support:
+  #   chrome: "50"
+  #   chrome_android: "50"
+  #   edge: "12"
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - css.properties.columns.auto
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.column-height
+  - css.properties.column-height.auto
+  - css.properties.column-wrap
+  - css.properties.column-wrap.auto
+  - css.properties.column-wrap.nowrap
+  - css.properties.column-wrap.wrap
+  - css.properties.columns.column-height

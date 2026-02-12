@@ -4,21 +4,159 @@
 status:
   baseline: false
   support:
-    chrome: "137"
-    chrome_android: "137"
-    edge: "137"
+    chrome: "141"
+    chrome_android: "141"
+    edge: "141"
 compat_features:
-  # baseline: false
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1.5"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - css.properties.pointer-events.all
+  - css.properties.pointer-events.auto
+  - css.properties.pointer-events.fill
+  - css.properties.pointer-events.none
+  - css.properties.pointer-events.painted
+  - css.properties.pointer-events.stroke
+  - css.properties.pointer-events.visible
+
+  # baseline: high
+  # baseline_low_date: ≤2016-11-15
+  # baseline_high_date: ≤2019-05-15
+  # support:
+  #   chrome: ≤31
+  #   chrome_android: ≤31
+  #   edge: "12"
+  #   firefox: ≤50
+  #   firefox_android: ≤50
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - css.properties.pointer-events.visibleFill
+  - css.properties.pointer-events.visiblePainted
+  - css.properties.pointer-events.visibleStroke
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
   # support:
   #   chrome: "1"
   #   chrome_android: "18"
   #   edge: "79"
+  #   firefox: "4"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - mediatypes.image.svg
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "6"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: "15"
+  #   firefox_android: "15"
   #   safari: "5.1"
   #   safari_ios: "5"
-  - css.properties.alignment-baseline.text-after-edge
-  - css.properties.alignment-baseline.text-before-edge
+  - css.properties.vector-effect.non-scaling-stroke
+  - css.properties.vector-effect.none
 
-  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: ≤31
+  #   chrome_android: ≤31
+  #   edge: "79"
+  #   firefox: "3"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - css.properties.color-interpolation.linearRGB
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: ≤31
+  #   chrome_android: ≤31
+  #   edge: "79"
+  #   firefox: ≤50
+  #   firefox_android: ≤50
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - css.properties.shape-rendering.crispEdges
+  - css.properties.shape-rendering.geometricPrecision
+  - css.properties.shape-rendering.optimizeSpeed
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: ≤31
+  #   chrome_android: ≤31
+  #   edge: "79"
+  #   firefox: ≤50
+  #   firefox_android: ≤50
+  #   safari: "5"
+  #   safari_ios: "4.2"
+  - css.properties.text-rendering.optimizeLegibility
+  - css.properties.text-rendering.optimizeSpeed
+
+  # baseline: low
+  # baseline_low_date: 2024-03-05
+  # support:
+  #   chrome: "53"
+  #   chrome_android: "53"
+  #   edge: "79"
+  #   firefox: "69"
+  #   firefox_android: "79"
+  #   safari: "17.4"
+  #   safari_ios: "17.4"
+  - css.properties.rx.auto
+  - css.properties.ry.auto
+
+  # baseline: low
+  # baseline_low_date: 2024-03-22
+  # support:
+  #   chrome: "123"
+  #   chrome_android: "123"
+  #   edge: "123"
+  #   firefox: "60"
+  #   firefox_android: "60"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - css.properties.paint-order.fill
+  - css.properties.paint-order.markers
+  - css.properties.paint-order.normal
+  - css.properties.paint-order.stroke
+
+  # baseline: false
+  # support:
+  #   chrome: "33"
+  #   chrome_android: "33"
+  #   edge: "79"
+  #   safari: "13"
+  #   safari_ios: "13"
+  - css.properties.pointer-events.bounding-box
+
+  # baseline: false
+  # support:
+  #   chrome: "52"
+  #   chrome_android: "52"
+  #   edge: "79"
+  #   firefox: "97"
+  #   firefox_android: "97"
+  - css.properties.d.none
+
   # baseline: false
   # support:
   #   chrome: "137"
@@ -26,3 +164,11 @@ compat_features:
   #   edge: "137"
   - svg.elements.use.omit_external_fragment
   - svg.global_attributes.transform.svg_root
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "141"
+  #   chrome_android: "141"
+  #   edge: "141"
+  - api.SVGAnimatedString.baseVal.enforces_trusted_types
