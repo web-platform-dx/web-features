@@ -1,0 +1,48 @@
+name: MathML (discouraged)
+description: MathML specifies several elements and attributes that are not included in the MathML Core subset, and which you should not use when developing for the web. Non web-based Math editors may implement these features, but they are discouraged for web use.
+spec: https://w3c.github.io/mathml/
+discouraged:
+  according_to:
+    - https://w3c.github.io/mathml-core/#introduction
+  reason: MathML Full is hard to implement consistently across browsers and to integrate with other web technologies such as CSS. MathML Core is a subset which addresses these issues.
+  alternatives:
+    - mathml
+compat_features:
+  - mathml.global_attributes.mathsize.small_normal_big
+  - mathml.global_attributes.mathsize.nonzero_unitless_values
+  - mathml.global_attributes.mathsize.named_spaces
+  - mathml.global_attributes.mathsize
+  - mathml.global_attributes.mathcolor
+  - mathml.global_attributes.mathbackground
+  - mathml.elements.semantics.advanced_visible_child_selection
+  - mathml.elements.mtable.width.named_spaces
+  - mathml.elements.msup.superscriptshift
+  - mathml.elements.msubsup.superscriptshift
+  - mathml.elements.msubsup.subscriptshift
+  - mathml.elements.msub.subscriptshift
+  - mathml.elements.mstyle.fontweight
+  - mathml.elements.mstyle.fontstyle
+  - mathml.elements.mstyle.fontsize
+  - mathml.elements.mstyle.color
+  - mathml.elements.mstyle.background
+  - mathml.elements.mspace.named_spaces
+  - mathml.elements.mpadded.scale_factor
+  - mathml.elements.mpadded.pseudo_units
+  - mathml.elements.mpadded.nonzero_unitless_values
+  - mathml.elements.mpadded.named_spaces
+  - mathml.elements.mo.nonzero_unitless_values
+  - mathml.elements.mo.named_spaces
+  - mathml.elements.mmultiscripts.superscriptshift
+  - mathml.elements.mmultiscripts.subscriptshift
+  - mathml.elements.mfrac.numalign
+  - mathml.elements.mfrac.linethickness.thin_medium_thick
+  - mathml.elements.mfrac.linethickness.nonzero_unitless_values
+  - mathml.elements.mfrac.linethickness.named_spaces
+  - mathml.elements.mfrac.denomalign
+  - mathml.elements.mfenced
+  - mathml.elements.maction
+  - mathml.elements.maction.selection
+  - mathml.elements.maction.actiontype.toggle
+  - mathml.elements.maction.actiontype
+  - mathml.attribute_values.named_space
+  - mathml.attribute_values.nonzero_unitless_values
