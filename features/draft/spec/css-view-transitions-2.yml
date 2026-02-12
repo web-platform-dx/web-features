@@ -1,12 +1,15 @@
-draft_date: 2025-08-15
+draft_date: 2026-01-19
 name: CSS View Transitions Module Level 2
 description: TODO
 spec: https://drafts.csswg.org/css-view-transitions-2/
 compat_features:
+  - api.Document.activeViewTransition
+  - api.ViewTransition.waitUntil
   - css.properties.view-transition-group
   - css.properties.view-transition-group.contain
   - css.properties.view-transition-group.nearest
   - css.properties.view-transition-group.normal
+  - css.selectors.view-transition-group-children
 
 # The following features in the spec are already part of web-features:
 # - Cross-document view transitions:
@@ -16,7 +19,9 @@ compat_features:
 #   - css.at-rules.view-transition
 # - View transitions:
 #   - api.Document.startViewTransition
-#   - api.Document.startViewTransition.callbackOptions_parameter
+#   - api.Document.startViewTransition.options_parameter
+#   - api.Document.startViewTransition.options_parameter.types_parameter
+#   - api.Document.startViewTransition.options_parameter.update_parameter
 #   - api.Document.startViewTransition.updateCallback_parameter
 #   - api.ViewTransition
 #   - api.ViewTransition.finished

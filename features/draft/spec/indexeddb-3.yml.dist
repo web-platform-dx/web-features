@@ -30,13 +30,19 @@ compat_features:
   #   safari_ios: "8"
   - api.IDBRequest.error.transient_unrecoverable_read_errors
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "141"
   #   chrome_android: "141"
-  - api.IDBIndex.getAllRecords
-  - api.IDBObjectStore.getAllRecords
+  #   edge: "141"
+  - api.IDBIndex.getAll.object_parameter
+  - api.IDBIndex.getAll.object_parameter.direction
+  - api.IDBIndex.getAllKeys.object_parameter
+  - api.IDBIndex.getAllKeys.object_parameter.direction
+  - api.IDBObjectStore.getAll.object_parameter
+  - api.IDBObjectStore.getAll.object_parameter.direction
+  - api.IDBObjectStore.getAllKeys.object_parameter
+  - api.IDBObjectStore.getAllKeys.object_parameter.direction
   - api.IDBRecord
   - api.IDBRecord.key
   - api.IDBRecord.primaryKey

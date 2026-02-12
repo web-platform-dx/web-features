@@ -1,12 +1,18 @@
-draft_date: 2025-09-08
+draft_date: 2025-12-18
 name: CSS Overflow Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-overflow-5/
 compat_features:
-  - css.properties.scroll-target-group
-  - css.properties.scroll-target-group.auto
-  - css.properties.scroll-target-group.none
-  - css.selectors.target-current
+  - css.properties.overflow-block.auto
+  - css.properties.overflow-block.clip
+  - css.properties.overflow-block.hidden
+  - css.properties.overflow-block.scroll
+  - css.properties.overflow-block.visible
+  - css.properties.overflow-inline.auto
+  - css.properties.overflow-inline.clip
+  - css.properties.overflow-inline.hidden
+  - css.properties.overflow-inline.scroll
+  - css.properties.overflow-inline.visible
 
 # The following features in the spec are already part of web-features:
 # - line-clamp:
@@ -56,6 +62,10 @@ compat_features:
 #   - css.properties.scroll-marker-group.none
 #   - css.selectors.scroll-marker
 #   - css.selectors.scroll-marker-group
+# - scroll-target-group:
+#   - css.properties.scroll-target-group
+#   - css.properties.scroll-target-group.auto
+#   - css.properties.scroll-target-group.none
 # - scrollbar-gutter:
 #   - css.properties.scrollbar-gutter
 #   - css.properties.scrollbar-gutter.auto
@@ -81,5 +91,9 @@ compat_features:
 #   - css.selectors.scroll-button.right
 #   - css.selectors.scroll-button.star
 #   - css.selectors.scroll-button.up
+# - Scroll marker target pseudo-classes:
+#   - css.selectors.target-after
+#   - css.selectors.target-before
+#   - css.selectors.target-current
 # - SVG:
 #   - svg.global_attributes.overflow

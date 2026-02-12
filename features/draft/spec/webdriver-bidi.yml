@@ -1,8 +1,9 @@
-draft_date: 2025-09-30
+draft_date: 2025-12-11
 name: WebDriver BiDi
 description: TODO
 spec: https://w3c.github.io/webdriver-bidi/
 compat_features:
+  - webdriver.bidi.bluetooth
   - webdriver.bidi.browser
   - webdriver.bidi.browser.close
   - webdriver.bidi.browser.createUserContext
@@ -15,6 +16,9 @@ compat_features:
   - webdriver.bidi.browser.removeUserContext.userContext_parameter
   - webdriver.bidi.browser.setClientWindowState
   - webdriver.bidi.browser.setClientWindowState.clientWindow_parameter
+  - webdriver.bidi.browser.setDownloadBehavior
+  - webdriver.bidi.browser.setDownloadBehavior.downloadBehavior_parameter
+  - webdriver.bidi.browser.setDownloadBehavior.userContexts_parameter
   - webdriver.bidi.browsingContext
   - webdriver.bidi.browsingContext.activate
   - webdriver.bidi.browsingContext.activate.context_parameter
@@ -161,10 +165,16 @@ compat_features:
   - webdriver.bidi.emulation.setLocaleOverride.contexts_parameter
   - webdriver.bidi.emulation.setLocaleOverride.locale_parameter
   - webdriver.bidi.emulation.setLocaleOverride.userContexts_parameter
+  - webdriver.bidi.emulation.setNetworkConditions
+  - webdriver.bidi.emulation.setNetworkConditions.contexts_parameter
+  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter
+  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter.offline
+  - webdriver.bidi.emulation.setNetworkConditions.userContexts_parameter
   - webdriver.bidi.emulation.setScreenOrientationOverride
   - webdriver.bidi.emulation.setScreenOrientationOverride.contexts_parameter
   - webdriver.bidi.emulation.setScreenOrientationOverride.screenOrientation_parameter
   - webdriver.bidi.emulation.setScreenOrientationOverride.userContexts_parameter
+  - webdriver.bidi.emulation.setScreenSettingsOverride
   - webdriver.bidi.emulation.setScriptingEnabled
   - webdriver.bidi.emulation.setScriptingEnabled.contexts_parameter
   - webdriver.bidi.emulation.setScriptingEnabled.enabled_parameter
@@ -173,6 +183,10 @@ compat_features:
   - webdriver.bidi.emulation.setTimezoneOverride.contexts_parameter
   - webdriver.bidi.emulation.setTimezoneOverride.timezone_parameter
   - webdriver.bidi.emulation.setTimezoneOverride.userContexts_parameter
+  - webdriver.bidi.emulation.setUserAgentOverride
+  - webdriver.bidi.emulation.setUserAgentOverride.contexts_parameter
+  - webdriver.bidi.emulation.setUserAgentOverride.userAgent_parameter
+  - webdriver.bidi.emulation.setUserAgentOverride.userContexts_parameter
   - webdriver.bidi.input
   - webdriver.bidi.input.fileDialogOpened_event
   - webdriver.bidi.input.fileDialogOpened_event.context_parameter
@@ -262,6 +276,7 @@ compat_features:
   - webdriver.bidi.network.getData
   - webdriver.bidi.network.getData.collector_parameter
   - webdriver.bidi.network.getData.dataType_parameter
+  - webdriver.bidi.network.getData.dataType_parameter.request
   - webdriver.bidi.network.getData.dataType_parameter.response
   - webdriver.bidi.network.getData.disown_parameter
   - webdriver.bidi.network.getData.request_parameter
