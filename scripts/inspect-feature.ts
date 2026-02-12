@@ -13,26 +13,21 @@ import { SupportStatement } from "../packages/compute-baseline/dist/browser-comp
 import { convertHTML } from "../text";
 import { FeatureData } from "../types";
 
-interface Args {
-  paths: string[];
-  verbose: number;
-}
-
 const argv = yargs(process.argv.slice(2))
   .scriptName("dist")
-  .usage("$0 [paths..]", "Inspect a .yml or .dist file", (yargs) =>
-    yargs.positional("paths", {
-      describe: "Directories or files to inspect.",
-      default: ["features/a.yml"],
-    }),
-  )
+  .usage("$0 [paths..]", "Inspect a .yml or .dist file")
+  .positional("paths", {
+    describe: "Directories or files to inspect.",
+    default: ["features/a.yml"],
+  })
   .option("verbose", {
     alias: "v",
     describe: "Show more detail",
     type: "count",
     default: 0,
     defaultDescription: "warn",
-  }).argv as Args;
+  })
+  .parseSync();
 
 const logger = winston.createLogger({
   level: argv.verbose > 0 ? "debug" : "warn",
