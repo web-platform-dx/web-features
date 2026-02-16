@@ -3,16 +3,56 @@ name: CSS Values and Units Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-values-5/
 compat_features:
+  - css.properties.background-position-x.x-end
+  - css.properties.background-position-x.x-start
+  - css.properties.background-position-y.y-end
+  - css.properties.background-position-y.y-start
+  - css.properties.background-position.x-end
+  - css.properties.background-position.x-start
+  - css.properties.background-position.y-end
+  - css.properties.background-position.y-start
+  - css.properties.background.x-end
+  - css.properties.background.x-start
+  - css.properties.background.y-end
+  - css.properties.background.y-start
+  - css.properties.mask-position.x-end
+  - css.properties.mask-position.x-start
+  - css.properties.mask-position.y-end
+  - css.properties.mask-position.y-start
+  - css.properties.mask.x-end
+  - css.properties.mask.x-start
+  - css.properties.mask.y-end
+  - css.properties.mask.y-start
   - css.properties.object-position.bottom
   - css.properties.object-position.center
   - css.properties.object-position.left
   - css.properties.object-position.right
   - css.properties.object-position.top
+  - css.properties.object-position.x-end
+  - css.properties.object-position.x-start
+  - css.properties.object-position.y-end
+  - css.properties.object-position.y-start
+  - css.properties.offset-anchor.x-end
+  - css.properties.offset-anchor.x-start
+  - css.properties.offset-anchor.y-end
+  - css.properties.offset-anchor.y-start
+  - css.properties.offset-position.x-end
+  - css.properties.offset-position.x-start
+  - css.properties.offset-position.y-end
+  - css.properties.offset-position.y-start
   - css.properties.offset.bottom
   - css.properties.offset.center
   - css.properties.offset.left
   - css.properties.offset.right
   - css.properties.offset.top
+  - css.properties.offset.x-end
+  - css.properties.offset.x-start
+  - css.properties.offset.y-end
+  - css.properties.offset.y-start
+  - css.properties.perspective-origin.x-end
+  - css.properties.perspective-origin.x-start
+  - css.properties.perspective-origin.y-end
+  - css.properties.perspective-origin.y-start
   - css.types.if.style
 
 # The following features in the spec are already part of web-features:
