@@ -1029,10 +1029,15 @@ compat_features:
   #   firefox_android: "79"
   - html.elements.iframe.allow.document-domain
 
+  # baseline: false
+  # support:
+  #   chrome: "145"
+  #   chrome_android: "145"
+  - api.NavigationTransition.to
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.NavigationPrecommitController.addHandler
-  - api.NavigationTransition.to
   - api.Navigator.authentication
   - html.elements.track.kind.descriptions

@@ -149,7 +149,6 @@ compat_features:
   - api.ExtendableEvent.waitUntil
   - api.FetchEvent
   - api.FetchEvent.request
-  - api.InstallEvent
   - api.Navigator.serviceWorker
   - api.ServiceWorker
   - api.ServiceWorker.postMessage
@@ -492,6 +491,13 @@ compat_features:
   #   safari_ios: "11.3"
   - api.ServiceWorkerContainer.worker_support
   - api.WorkerNavigator.serviceWorker
+
+  # baseline: false
+  # support:
+  #   chrome: "40"
+  #   chrome_android: "40"
+  #   edge: "17"
+  - api.InstallEvent
 
   # baseline: false
   # support:
