@@ -3,8 +3,18 @@
 
 status:
   baseline: false
-  support:
-    chrome: "144"
-    edge: "144"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "144"
+  #   edge: "144"
   - http.headers.Permissions-Policy.ch-ua-high-entropy-values
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - webdriver.bidi.userAgentClientHints.setClientHintsOverride
+  - webdriver.bidi.userAgentClientHints.setClientHintsOverride.clientHints_parameter
+  - webdriver.bidi.userAgentClientHints.setClientHintsOverride.contexts_parameter
+  - webdriver.bidi.userAgentClientHints.setClientHintsOverride.userContexts_parameter

@@ -1,4 +1,4 @@
-draft_date: 2026-01-19
+draft_date: 2026-02-16
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -1087,6 +1087,26 @@ compat_features:
 #   - api.HTMLDataListElement
 #   - api.HTMLDataListElement.options
 #   - html.elements.datalist
+#   - html.elements.datalist.input_type_color
+#   - html.elements.datalist.input_type_date
+#   - html.elements.datalist.input_type_email
+#   - html.elements.datalist.input_type_number
+#   - html.elements.datalist.input_type_range
+#   - html.elements.datalist.input_type_search
+#   - html.elements.datalist.input_type_tel
+#   - html.elements.datalist.input_type_text
+#   - html.elements.datalist.input_type_time
+#   - html.elements.datalist.input_type_url
+#   - html.elements.input.type_color.list
+#   - html.elements.input.type_date.list
+#   - html.elements.input.type_email.list
+#   - html.elements.input.type_number.list
+#   - html.elements.input.type_range.list
+#   - html.elements.input.type_search.list
+#   - html.elements.input.type_tel.list
+#   - html.elements.input.type_text.list
+#   - html.elements.input.type_time.list
+#   - html.elements.input.type_url.list
 # - <details>:
 #   - api.HTMLDetailsElement
 #   - api.HTMLDetailsElement.open
@@ -1347,7 +1367,6 @@ compat_features:
 #   - html.elements.input.formmethod
 #   - html.elements.input.formnovalidate
 #   - html.elements.input.formtarget
-#   - html.elements.input.list
 #   - html.elements.input.maxlength
 #   - html.elements.input.minlength
 #   - html.elements.input.name

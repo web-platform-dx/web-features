@@ -1,4 +1,4 @@
-draft_date: 2025-12-11
+draft_date: 2026-02-16
 name: WebDriver BiDi
 description: TODO
 spec: https://w3c.github.io/webdriver-bidi/
@@ -378,6 +378,7 @@ compat_features:
   - webdriver.bidi.storage.setCookie
   - webdriver.bidi.storage.setCookie.cookie_parameter
   - webdriver.bidi.storage.setCookie.partition_parameter
+  - webdriver.bidi.userAgentClientHints
   - webdriver.bidi.webExtension
   - webdriver.bidi.webExtension.install
   - webdriver.bidi.webExtension.install.extensionData_parameter
