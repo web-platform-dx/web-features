@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "145"
+    chrome_android: "145"
 compat_features:
   - api.PerformanceNavigationTiming.confidence
   - api.PerformanceTimingConfidence
