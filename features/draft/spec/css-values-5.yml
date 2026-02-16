@@ -1,4 +1,4 @@
-draft_date: 2026-01-29
+draft_date: 2026-02-16
 name: CSS Values and Units Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-values-5/
@@ -14,7 +14,6 @@ compat_features:
   - css.properties.offset.right
   - css.properties.offset.top
   - css.types.if.style
-  - css.types.random
 
 # The following features in the spec are already part of web-features:
 # - Media queries:
@@ -152,6 +151,8 @@ compat_features:
 #   - css.types.number.scientific_notation
 # - progress():
 #   - css.types.progress
+# - random():
+#   - css.types.random
 # - resolution media query:
 #   - css.types.resolution
 #   - css.types.resolution.dpcm
