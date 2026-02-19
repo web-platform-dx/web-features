@@ -1,6 +1,7 @@
 name: Network Information
 description: The `navigator.connection` API provides information about the network connection a device is using and fires events when the connection type changes.
 spec: https://wicg.github.io/netinfo/
+caniuse: netinfo
 compat_features:
   - api.Navigator.connection
   - api.NetworkInformation
