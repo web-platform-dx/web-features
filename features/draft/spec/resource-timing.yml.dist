@@ -4,8 +4,29 @@
 status:
   baseline: false
   support:
-    chrome: "133"
-    chrome_android: "133"
-    edge: "133"
+    chrome: "143"
+    chrome_android: "143"
+    edge: "143"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "133"
+  #   chrome_android: "133"
+  #   edge: "133"
   - api.PerformanceResourceTiming.finalResponseHeadersStart
+
+  # baseline: false
+  # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
+  - api.PerformanceResourceTiming.workerCacheLookupStart
+  - api.PerformanceResourceTiming.workerRouterEvaluationStart
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "143"
+  #   chrome_android: "143"
+  #   edge: "143"
+  - api.PerformanceResourceTiming.contentEncoding

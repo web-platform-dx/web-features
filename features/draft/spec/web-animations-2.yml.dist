@@ -3,22 +3,27 @@
 
 status:
   baseline: false
-  support:
-    firefox: "142"
-    firefox_android: "142"
+  support: {}
 compat_features:
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-12-12
   # support:
   #   chrome: "133"
   #   chrome_android: "133"
   #   edge: "133"
   #   firefox: "142"
   #   firefox_android: "142"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
   - api.Animation.overallProgress
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "142"
   #   firefox_android: "142"
   - api.Animation.commitStyles.endpoint_inclusive_commitStyles
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.AnimationTrigger

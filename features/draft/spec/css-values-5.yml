@@ -1,9 +1,59 @@
-draft_date: 2025-07-15
+draft_date: 2026-02-16
 name: CSS Values and Units Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-values-5/
 compat_features:
-  - css.types.progress
+  - css.properties.background-position-x.x-end
+  - css.properties.background-position-x.x-start
+  - css.properties.background-position-y.y-end
+  - css.properties.background-position-y.y-start
+  - css.properties.background-position.x-end
+  - css.properties.background-position.x-start
+  - css.properties.background-position.y-end
+  - css.properties.background-position.y-start
+  - css.properties.background.x-end
+  - css.properties.background.x-start
+  - css.properties.background.y-end
+  - css.properties.background.y-start
+  - css.properties.mask-position.x-end
+  - css.properties.mask-position.x-start
+  - css.properties.mask-position.y-end
+  - css.properties.mask-position.y-start
+  - css.properties.mask.x-end
+  - css.properties.mask.x-start
+  - css.properties.mask.y-end
+  - css.properties.mask.y-start
+  - css.properties.object-position.bottom
+  - css.properties.object-position.center
+  - css.properties.object-position.left
+  - css.properties.object-position.right
+  - css.properties.object-position.top
+  - css.properties.object-position.x-end
+  - css.properties.object-position.x-start
+  - css.properties.object-position.y-end
+  - css.properties.object-position.y-start
+  - css.properties.offset-anchor.x-end
+  - css.properties.offset-anchor.x-start
+  - css.properties.offset-anchor.y-end
+  - css.properties.offset-anchor.y-start
+  - css.properties.offset-position.x-end
+  - css.properties.offset-position.x-start
+  - css.properties.offset-position.y-end
+  - css.properties.offset-position.y-start
+  - css.properties.offset.bottom
+  - css.properties.offset.center
+  - css.properties.offset.left
+  - css.properties.offset.right
+  - css.properties.offset.top
+  - css.properties.offset.x-end
+  - css.properties.offset.x-start
+  - css.properties.offset.y-end
+  - css.properties.offset.y-start
+  - css.properties.perspective-origin.x-end
+  - css.properties.perspective-origin.x-start
+  - css.properties.perspective-origin.y-end
+  - css.properties.perspective-origin.y-start
+  - css.types.if.style
 
 # The following features in the spec are already part of web-features:
 # - Media queries:
@@ -42,17 +92,20 @@ compat_features:
 # - attr() (content only):
 #   - css.types.attr
 # - attr():
-#   - css.types.attr.fallback
-#   - css.types.attr.type-or-unit
-#   - css.types.attr.type-or-unit.angle
-#   - css.types.attr.type-or-unit.color
-#   - css.types.attr.type-or-unit.frequency
-#   - css.types.attr.type-or-unit.integer
-#   - css.types.attr.type-or-unit.length
-#   - css.types.attr.type-or-unit.number
-#   - css.types.attr.type-or-unit.percentage
-#   - css.types.attr.type-or-unit.time
-#   - css.types.attr.type-or-unit.url
+#   - css.types.attr.declaration-value
+#   - css.types.attr.type_function
+#   - css.types.attr.type_function.angle
+#   - css.types.attr.type_function.custom-ident
+#   - css.types.attr.type_function.ident
+#   - css.types.attr.type_function.integer
+#   - css.types.attr.type_function.length
+#   - css.types.attr.type_function.length-percentage
+#   - css.types.attr.type_function.number
+#   - css.types.attr.type_function.percentage
+#   - css.types.attr.type_function.resolution
+#   - css.types.attr.type_function.string
+#   - css.types.attr.type_function.time
+#   - css.types.attr.type_function.url
 # - calc():
 #   - css.types.calc
 #   - css.types.calc.gradient_color_stops
@@ -128,11 +181,18 @@ compat_features:
 #   - css.types.length.vw
 # - round(), mod(), and rem():
 #   - css.types.mod
+#   - css.types.mod.mixed_type_parameters
 #   - css.types.rem
+#   - css.types.rem.mixed_type_parameters
 #   - css.types.round
+#   - css.types.round.mixed_type_parameters
 # - opacity:
 #   - css.types.number
 #   - css.types.number.scientific_notation
+# - progress():
+#   - css.types.progress
+# - random():
+#   - css.types.random
 # - resolution media query:
 #   - css.types.resolution
 #   - css.types.resolution.dpcm

@@ -1,0 +1,15 @@
+name: Translator
+description: The `Translator` API translates some text from one natural language to another, using machine translation.
+spec: https://webmachinelearning.github.io/translation-api/#translator-api
+compat_features:
+  - api.Translator
+  - api.Translator.availability_static
+  - api.Translator.create_static
+  - api.Translator.destroy
+  - api.Translator.inputQuota
+  - api.Translator.measureInputUsage
+  - api.Translator.sourceLanguage
+  - api.Translator.targetLanguage
+  - api.Translator.translate
+  - api.Translator.translateStreaming
+# Missing from BCD: http.headers.Permissions-Policy.translator

@@ -30,7 +30,6 @@ compat_features:
   - api.FontFace
   - api.FontFace.FontFace
   - api.FontFace.family
-  - api.FontFace.featureSettings
   - api.FontFace.load
   - api.FontFace.status
   - api.FontFace.stretch
@@ -119,6 +118,18 @@ compat_features:
   #   safari: "10"
   #   safari_ios: "10"
   - api.FontFaceSet.check
+
+  # baseline: low
+  # baseline_low_date: 2025-09-05
+  # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
+  #   firefox: "41"
+  #   firefox_android: "41"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - api.FontFace.featureSettings
 
   # baseline: false
   # support:

@@ -1,10 +1,23 @@
-draft_date: 2025-09-10
+draft_date: 2026-02-16
 name: CSS Text Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-text-4/
 compat_features:
   - css.properties.hyphens.manual
   - css.properties.hyphens.none
+  - css.properties.text-align-last.center
+  - css.properties.text-align-last.end
+  - css.properties.text-align-last.justify
+  - css.properties.text-align-last.left
+  - css.properties.text-align-last.match-parent
+  - css.properties.text-align-last.right
+  - css.properties.text-align-last.start
+  - css.properties.text-wrap.auto
+  - css.properties.white-space.collapse
+  - css.properties.white-space.preserve
+  - css.properties.white-space.preserve-breaks
+  - css.properties.white-space.preserve-spaces
+  - css.properties.white-space.wrap
 
 # The following features in the spec are already part of web-features:
 # - Hanging punctuation:
@@ -163,25 +176,21 @@ compat_features:
 #   - css.properties.text-transform.math-auto
 # - text-wrap:
 #   - css.properties.text-wrap
-#   - css.properties.text-wrap.wrap
-# - text-wrap: balance:
-#   - css.properties.text-wrap.balance
-# - text-wrap: nowrap:
 #   - css.properties.text-wrap.nowrap
-# - text-wrap: pretty:
-#   - css.properties.text-wrap.pretty
-# - text-wrap: stable:
 #   - css.properties.text-wrap.stable
-# - text-wrap-mode:
+#   - css.properties.text-wrap.wrap
 #   - css.properties.text-wrap-mode
 #   - css.properties.text-wrap-mode.nowrap
 #   - css.properties.text-wrap-mode.wrap
-# - text-wrap-style:
 #   - css.properties.text-wrap-style
 #   - css.properties.text-wrap-style.auto
-#   - css.properties.text-wrap-style.balance
-#   - css.properties.text-wrap-style.pretty
 #   - css.properties.text-wrap-style.stable
+# - text-wrap: balance:
+#   - css.properties.text-wrap.balance
+#   - css.properties.text-wrap-style.balance
+# - text-wrap: pretty:
+#   - css.properties.text-wrap.pretty
+#   - css.properties.text-wrap-style.pretty
 # - white-space:
 #   - css.properties.white-space
 #   - css.properties.white-space.break-spaces

@@ -4,11 +4,24 @@
 status:
   baseline: false
   support:
-    chrome: "135"
-    chrome_android: "135"
-    edge: "135"
-    firefox: "143"
-    firefox_android: "143"
+    chrome: "144"
+    chrome_android: "144"
+    edge: "144"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
+  #   firefox: "143"
+  #   firefox_android: "143"
   - css.selectors.after.nested_marker
   - css.selectors.before.nested_marker
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
+  - css.selectors.search-text
