@@ -105,6 +105,10 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because there is no other specification to link to."
     ],
     [
+        "https://github.com/WebAssembly/js-promise-integration/blob/main/proposals/js-promise-integration/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
         "https://immersive-web.github.io/webvr/spec/1.1/",
         "Allowed because this is the legacy spec that defines WebVR."
     ],
