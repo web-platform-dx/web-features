@@ -1,0 +1,6 @@
+name: JavaScript promise integration (WebAssembly)
+description: The JavaScript Promise Integration API lets synchronous WebAssembly applications call asynchronous Web APIs. JSPI suspends the WebAssembly module when a `Promise` is returned, and resumes it when the `Promise` is resolved.
+spec: https://github.com/WebAssembly/js-promise-integration/blob/main/proposals/js-promise-integration/Overview.md
+group: webassembly
+compat_features:
+  - webassembly.jspi
