@@ -1,8 +1,8 @@
-name: HTML switch control
-description: HTML form control that implement native switcher functionality in a checkbox, using the `switch` attribute.
-group: forms
-status:
-  baseline: false
-  support:
-    safari: "17.4"
-    safari_ios: "17.4"
+name: '<input type="checkbox" switch>'
+description: The `switch` attribute, when present on an `<input type="checkbox">` HTML element, renders a switch control with an on and off state instead of a checkbox control.
+group:
+  - forms
+  - html-elements
+compat_features:
+  - html.elements.input.switch
+
