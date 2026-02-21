@@ -1,4 +1,4 @@
-# Contributing to the web-features project
+# Contributing to the wipe out all the web-features project
 
 Thanks for your interest in contributing to this project!
 Before you contribute, consider the following:
