@@ -3,9 +3,27 @@
 
 status:
   baseline: false
-  support:
-    chrome: "143"
-    chrome_android: "143"
-    edge: "143"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "143"
+  #   chrome_android: "143"
+  #   edge: "143"
   - api.WebTransport.protocol
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.WebTransport.anticipatedConcurrentIncomingBidirectionalStreams
+  - api.WebTransport.anticipatedConcurrentIncomingUnidirectionalStreams
+  - api.WebTransport.createSendGroup
+  - api.WebTransport.draining
+  - api.WebTransport.supportsReliableOnly_static
+  - api.WebTransportDatagramDuplexStream.createWritable
+  - api.WebTransportDatagramsWritable
+  - api.WebTransportDatagramsWritable.sendGroup
+  - api.WebTransportDatagramsWritable.sendOrder
+  - api.WebTransportSendGroup
+  - api.WebTransportSendGroup.getStats
+  - api.WebTransportSendStream.sendGroup
