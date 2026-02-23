@@ -853,9 +853,6 @@ compat_features:
   #   edge: "141"
   #   firefox: "147"
   #   firefox_android: "147"
-  - api.NavigateEvent.intercept.precommitHandler_option
-  - api.NavigationPrecommitController
-  - api.NavigationPrecommitController.redirect
   - api.NavigationTransition.committed
 
   # baseline: false
@@ -1038,6 +1035,5 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - api.NavigationPrecommitController.addHandler
   - api.Navigator.authentication
   - html.elements.track.kind.descriptions

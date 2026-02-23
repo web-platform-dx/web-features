@@ -1,4 +1,4 @@
-draft_date: 2026-02-16
+draft_date: 2026-02-23
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -57,11 +57,7 @@ compat_features:
   - api.ImageData.ImageData.settings_parameter.pixelFormat_option
   - api.ImageData.pixelFormat
   - api.MouseEvent.relatedTarget.drag_events
-  - api.NavigateEvent.intercept.precommitHandler_option
   - api.NavigateEvent.sourceElement
-  - api.NavigationPrecommitController
-  - api.NavigationPrecommitController.addHandler
-  - api.NavigationPrecommitController.redirect
   - api.NavigationTransition.committed
   - api.NavigationTransition.to
   - api.Navigator.appCodeName
@@ -2035,6 +2031,11 @@ compat_features:
 #   - api.NavigationTransition.from
 #   - api.NavigationTransition.navigationType
 #   - api.Window.navigation
+# - Navigation precommit handlers:
+#   - api.NavigateEvent.intercept.precommitHandler_option
+#   - api.NavigationPrecommitController
+#   - api.NavigationPrecommitController.addHandler
+#   - api.NavigationPrecommitController.redirect
 # - Navigator:
 #   - api.Navigator
 #   - api.Window.navigator
