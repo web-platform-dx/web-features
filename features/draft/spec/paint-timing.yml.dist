@@ -6,11 +6,14 @@ status:
   support:
     chrome: "145"
     chrome_android: "145"
+    edge: "145"
 compat_features:
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-02-14
   # support:
   #   chrome: "145"
   #   chrome_android: "145"
+  #   edge: "145"
   #   firefox: "140"
   #   firefox_android: "140"
   #   safari: "26.2"
@@ -21,6 +24,7 @@ compat_features:
   # support:
   #   chrome: "145"
   #   chrome_android: "145"
+  #   edge: "145"
   #   firefox: "140"
   #   firefox_android: "140"
   - api.PerformancePaintTiming.paintTime
@@ -31,6 +35,7 @@ compat_features:
   # support:
   #   chrome: "145"
   #   chrome_android: "145"
+  #   edge: "145"
   - api.LargestContentfulPaint.presentationTime
   - api.PerformanceElementTiming.paintTime
   - api.PerformanceElementTiming.presentationTime

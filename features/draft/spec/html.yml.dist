@@ -1002,6 +1002,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "145"
+  #   chrome_android: "145"
+  #   edge: "145"
+  - api.NavigationTransition.to
+
+  # baseline: false
+  # support:
   #   firefox: "1"
   #   firefox_android: "4"
   - api.Navigator.oscpu
@@ -1025,12 +1032,6 @@ compat_features:
   #   firefox: "74"
   #   firefox_android: "79"
   - html.elements.iframe.allow.document-domain
-
-  # baseline: false
-  # support:
-  #   chrome: "145"
-  #   chrome_android: "145"
-  - api.NavigationTransition.to
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
