@@ -20,9 +20,10 @@ compat_features:
 #   - api.AbortSignal.aborted
 #   - api.AbortSignal.reason
 #   - api.AbortSignal.throwIfAborted
-#   - api.AbortSignal.timeout_static
 # - AbortSignal.any():
 #   - api.AbortSignal.any_static
+# - AbortSignal.timeout():
+#   - api.AbortSignal.timeout_static
 # - Selection:
 #   - api.AbstractRange
 #   - api.AbstractRange.collapsed
