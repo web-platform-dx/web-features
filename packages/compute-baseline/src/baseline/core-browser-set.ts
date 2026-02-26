@@ -12,6 +12,8 @@ export const identifiers = [
 
 export const webViewIdentifiers = ["webview_android", "webview_ios"];
 
+export const allIdentifiers = [...identifiers, ...webViewIdentifiers];
+
 export function browsers(compat: Compat) {
   return identifiers.map((b) => compat.browser(b));
 }

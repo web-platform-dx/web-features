@@ -16,7 +16,7 @@ import {
 } from "./support.js";
 
 // Include this in the public API
-export { identifiers as coreBrowserSet } from "./core-browser-set.js";
+export { identifiers as coreBrowserSet, allIdentifiers } from "./core-browser-set.js";
 export { allBrowsers } from "./core-browser-set.js";
 export { parseRangedDateString } from "./date-utils.js";
 
@@ -119,6 +119,8 @@ export function computeBaseline(
     statuses.map((status) => status.supportForBaseline),
   );
   const support = collateSupport(statuses.map((status) => status.support));
+
+  //console.debug(support);
 
   const keystoneDate = findKeystoneDate(
     [...supportForBaseline.values()],
@@ -295,6 +297,7 @@ function jsonify(status: SupportDetails): string {
 
   for (const [browser, initialSupport] of status.support.entries()) {
     if (initialSupport !== undefined) {
+      //console.debug(`Browser ${browser} has initial support:`, initialSupport);
       support[browser.id] = initialSupport.text;
     }
   }
