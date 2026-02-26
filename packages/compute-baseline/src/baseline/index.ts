@@ -2,7 +2,7 @@ import { Temporal } from "@js-temporal/polyfill";
 import { Browser } from "../browser-compat-data/browser.js";
 import { Compat, defaultCompat } from "../browser-compat-data/compat.js";
 import { feature } from "../browser-compat-data/feature.js";
-import { browsers } from "./core-browser-set.js";
+import { browsers, allBrowsers } from "./core-browser-set.js";
 import {
   parseRangedDateString,
   toHighDate,
@@ -17,6 +17,7 @@ import {
 
 // Include this in the public API
 export { identifiers as coreBrowserSet } from "./core-browser-set.js";
+export { allBrowsers } from "./core-browser-set.js";
 export { parseRangedDateString } from "./date-utils.js";
 
 interface Logger {
@@ -113,10 +114,14 @@ export function computeBaseline(
     : compatKeys;
 
   const statuses = keys.map((key) => calculate(key, compat));
+  // For baseline status, use only core browsers; for support map, include all browsers (including webviews)
+  const supportForBaseline = collateSupport(
+    statuses.map((status) => status.supportForBaseline),
+  );
   const support = collateSupport(statuses.map((status) => status.support));
 
   const keystoneDate = findKeystoneDate(
-    statuses.flatMap((s) => [...s.support.values()]),
+    [...supportForBaseline.values()],
   );
   const discouraged = statuses.some((s) => s.discouraged);
   const { baseline, baseline_low_date, baseline_high_date } =
@@ -143,7 +148,8 @@ function calculate(compatKey: string, compat: Compat) {
 
   return {
     discouraged: f.deprecated ?? false,
-    support: support(f, browsers(compat)),
+    supportForBaseline: support(f, browsers(compat)),
+    support: support(f, allBrowsers(compat)),
   };
 }
 
