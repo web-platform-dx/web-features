@@ -31,6 +31,8 @@ export interface Browsers {
   firefox_android: BrowserData;
   safari: BrowserData;
   safari_ios: BrowserData;
+  webview_android: BrowserData;
+  webview_ios: BrowserData;
 }
 
 /**
@@ -210,6 +212,8 @@ export interface Support {
   firefox_android?: string;
   safari?: string;
   safari_ios?: string;
+  webview_android?: string;
+  webview_ios?: string;
 }
 
 export interface GroupData {
