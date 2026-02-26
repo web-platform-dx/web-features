@@ -198,6 +198,29 @@ describe("computeBaseline", function () {
     assert(androidWebviewSupport, "android_webview should have support data");
     assert(iosWebviewSupport, "ios_webview should have support data");
   });
+
+  it("shows no support for android and ios webviews", function () {
+    const result = computeBaseline({
+      compatKeys: ["api.ServiceWorkerRegistration.backgroundFetch"],
+      checkAncestors: true,
+    });
+
+      const androidWebview = [...result.support.keys()].find(
+      (b) => b.id === "webview_android",
+    );
+    const iosWebview = [...result.support.keys()].find(
+      (b) => b.id === "webview_ios",
+    );
+
+    assert(androidWebview, "android_webview should be present in support data");
+    assert(iosWebview, "ios_webview should be present in support data");
+
+    const androidWebviewSupport = result.support.get(androidWebview);
+    const iosWebviewSupport = result.support.get(iosWebview);
+
+    assert(!androidWebviewSupport, "android_webview should have no support data");
+    assert(!iosWebviewSupport, "ios_webview should have no support data");
+  });
 });
 
 describe("keystoneDateToStatus()", function () {
