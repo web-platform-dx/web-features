@@ -301,6 +301,7 @@ compat_features:
 
   # baseline: false
   # support: {}
+  - api.GPUAdapter.requestDevice.undefined_limits
   - api.GPUAdapterInfo.subgroupMaxSize
   - api.GPUAdapterInfo.subgroupMinSize
   - api.GPUCanvasContext.configure.toneMapping
