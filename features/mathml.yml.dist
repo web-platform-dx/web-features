@@ -320,6 +320,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
+  #   firefox: "146"
+  #   firefox_android: "146"
+  - mathml.global_attributes.dir.rtl_operator_mirroring
+
+  # baseline: false
+  # support:
   #   firefox: "1"
   #   firefox_android: "4"
   #   safari: "5.1"
@@ -362,7 +371,6 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "10"
   #   safari_ios: "10"
-  - mathml.attribute_values.named_space
   - mathml.elements.mo.accent
 
   # baseline: false
@@ -394,12 +402,6 @@ compat_features:
   #   firefox_android: "4"
   - mathml.elements.mpadded.relative_values
   - mathml.elements.mtable.align
-
-  # baseline: false
-  # support:
-  #   safari: "10"
-  #   safari_ios: "10"
-  - mathml.attribute_values.nonzero_unitless_values
 
   # baseline: false
   # support:
