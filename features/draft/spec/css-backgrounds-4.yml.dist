@@ -3,9 +3,7 @@
 
 status:
   baseline: false
-  support:
-    safari: "14.1"
-    safari_ios: "14.5"
+  support: {}
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -230,9 +228,8 @@ compat_features:
   - css.properties.border-inline.thick
   - css.properties.border-inline.thin
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support:
-  #   safari: "5"
-  #   safari_ios: "4.2"
+  # support: {}
   - css.properties.background-repeat-x
   - css.properties.background-repeat-y

@@ -175,6 +175,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "77"
+  #   chrome_android: "77"
+  #   edge: "79"
+  #   firefox: "148"
+  #   firefox_android: "148"
+  - api.Element.pointerrawupdate_event
+
+  # baseline: false
+  # support:
   #   chrome: "128"
   #   chrome_android: "128"
   #   edge: "128"
@@ -189,10 +198,3 @@ compat_features:
   #   safari: "26.2"
   #   safari_ios: "26.2"
   - api.PointerEvent.pointerType.fractional_coordinates
-
-  # baseline: false
-  # support:
-  #   chrome: "77"
-  #   chrome_android: "77"
-  #   edge: "79"
-  - api.Element.pointerrawupdate_event
