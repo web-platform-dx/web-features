@@ -1,0 +1,9 @@
+name: Signature-based integrity
+description: Signature-based integrity verifies a script's provenance by checking that the resource has been signed with a trusted key given by the `<script>` element's `integrity` attribute.
+spec: https://wicg.github.io/signature-based-sri/
+# Expected:
+# compat_features:
+#   - html.elements.script.integrity.ed25519_public_key
+#   - http.headers.Signature-Input
+#   - http.headers.Signature
+#   - http.headers.Unencoded-Digest
