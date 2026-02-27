@@ -1,6 +1,8 @@
 name: XMLSerializer
 description: The `XMLSerializer` API provides the `serializeToString()` method to construct an XML string representing a DOM tree.
 spec: https://w3c.github.io/DOM-Parsing/#the-xmlserializer-interface
+# https://caniuse.com/xml-serializer is not linked because it covers all of
+# DOMParser, XMLSerializer, innerHTML, outerHTML and insertAdjacentHTML.
 group:
   - parsing-and-serialization
   - xml
