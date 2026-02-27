@@ -80,6 +80,18 @@ compat_features:
   #   safari_ios: "2"
   - css.selectors.nth-last-child
 
+  # baseline: low
+  # baseline_low_date: 2023-09-18
+  # support:
+  #   chrome: "57"
+  #   chrome_android: "57"
+  #   edge: "79"
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - css.selectors.only-child.no_parent_required
+
   # baseline: false
   # support:
   #   chrome: "57"
@@ -91,4 +103,3 @@ compat_features:
   - css.selectors.last-child.no_parent_required
   - css.selectors.nth-child.no_parent_required
   - css.selectors.nth-last-child.no_parent_required
-  - css.selectors.only-child.no_parent_required

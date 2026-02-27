@@ -501,6 +501,18 @@ compat_features:
   - api.TextMetrics.ideographicBaseline
 
   # baseline: low
+  # baseline_low_date: 2024-09-16
+  # support:
+  #   chrome: "52"
+  #   chrome_android: "52"
+  #   edge: "79"
+  #   firefox: "49"
+  #   firefox_android: "49"
+  #   safari: "18"
+  #   safari_ios: "18"
+  - api.CanvasRenderingContext2D.filter
+
+  # baseline: low
   # baseline_low_date: 2025-03-31
   # support:
   #   chrome: "2"
@@ -533,15 +545,6 @@ compat_features:
   #   safari: "8"
   #   safari_ios: "8"
   - api.CanvasRenderingContext2D.drawFocusIfNeeded.path_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "52"
-  #   chrome_android: "52"
-  #   edge: "79"
-  #   firefox: "49"
-  #   firefox_android: "49"
-  - api.CanvasRenderingContext2D.filter
 
   # baseline: false
   # support:
