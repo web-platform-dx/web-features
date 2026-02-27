@@ -7,7 +7,7 @@ import YAML from 'yaml';
 import { convertMarkdown } from "./text";
 import { GroupData, SnapshotData, WebFeaturesData } from './types';
 
-import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, getStatus, parseRangedDateString } from 'compute-baseline';
+import { BASELINE_LOW_TO_HIGH_DURATION, allIdentifiers, getStatus, parseRangedDateString } from 'compute-baseline';
 import { Compat } from 'compute-baseline/browser-compat-data';
 import { assertRequiredRemovalDateSet, assertValidFeatureReference } from './assertions';
 import { isMoved, isOrdinaryFeatureData, isSplit } from './type-guards';
@@ -262,7 +262,7 @@ for (const [id, feature] of Object.entries(features)) {
 
 const compat = new Compat();
 const browsers: Partial<WebFeaturesData["browsers"]> = {};
-for (const browser of coreBrowserSet.map(identifier => compat.browser(identifier))) {
+for (const browser of allIdentifiers.map(identifier => compat.browser(identifier))) {
     const { id, name } = browser;
     const releases = browser.releases.filter(release => !release.isPrerelease()).map(release => ({
         version: release.version,
