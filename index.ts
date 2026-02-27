@@ -4,13 +4,13 @@ import path from 'path';
 import { Temporal } from '@js-temporal/polyfill';
 import { fdir } from 'fdir';
 import YAML from 'yaml';
-import { convertMarkdown } from "./text";
-import { GroupData, SnapshotData, WebFeaturesData } from './types';
 
 import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, getStatus, parseRangedDateString } from 'compute-baseline';
 import { Compat } from 'compute-baseline/browser-compat-data';
-import { assertRequiredRemovalDateSet, assertValidFeatureReference } from './assertions';
+import { assertFreshRegressionNotes, assertRequiredRemovalDateSet, assertValidFeatureReference } from './assertions';
+import { convertMarkdown } from "./text";
 import { isMoved, isOrdinaryFeatureData, isSplit } from './type-guards';
+import { FeatureData, GroupData, SnapshotData, WebFeaturesData } from './types';
 
 // The longest name allowed, to allow for compact display.
 const nameMaxLength = 80;
@@ -178,6 +178,14 @@ for (const [key, data] of yamlEntries('features')) {
             data.discouraged.reason = text;
             data.discouraged.reason_html = html;
         }
+
+        if (Array.isArray(data.notes)) {
+            for (const note of data.notes as FeatureData["notes"]) {
+                const { text, html } = convertMarkdown(note.message);
+                note.message = text;
+                note.message_html = html;
+            }
+        }
     }
 
     // Compute Baseline high date from low date.
@@ -233,7 +241,7 @@ for (const [key, data] of yamlEntries('features')) {
         }
     }
 
-   assertRequiredRemovalDateSet(key, data);
+    assertRequiredRemovalDateSet(key, data);
 
     features[key] = data;
 }
@@ -242,6 +250,7 @@ for (const [id, feature] of Object.entries(features)) {
     const { kind } = feature;
     switch (kind) {
         case "feature":
+            assertFreshRegressionNotes(id, feature);
             for (const alternative of feature.discouraged?.alternatives ?? []) {
                 assertValidFeatureReference(id, alternative, features)
             }
