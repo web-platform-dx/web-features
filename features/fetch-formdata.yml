@@ -1,0 +1,6 @@
+name: Request.formData() and Response.formData()
+description: The `Request.formData()` and `Response.formData()` methods read a request or response body and return a `Promise` that resolves to a `FormData` object. You can use it to access the fields of a form submission.
+spec: https://fetch.spec.whatwg.org/#body-mixin
+compat_features:
+  - api.Request.formData
+  - api.Response.formData
