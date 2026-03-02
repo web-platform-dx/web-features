@@ -4,9 +4,24 @@
 status:
   baseline: false
   support:
+    chrome: "145"
+    chrome_android: "145"
+    edge: "145"
     safari: "26"
     safari_ios: "26"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2026-02-24
+  # support:
+  #   chrome: "145"
+  #   chrome_android: "145"
+  #   edge: "145"
+  #   firefox: "148"
+  #   firefox_android: "148"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - http.headers.Content-Security-Policy.script-src.trusted-types-eval
+
   # baseline: false
   # support:
   #   chrome: "74"
@@ -26,10 +41,3 @@ compat_features:
   - api.CSPViolationReportBody.sample
   - api.CSPViolationReportBody.sourceFile
   - api.CSPViolationReportBody.statusCode
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   safari: "26"
-  #   safari_ios: "26"
-  - http.headers.Content-Security-Policy.script-src.trusted-types-eval
