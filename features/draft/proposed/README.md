@@ -29,7 +29,7 @@ feature is created as `proposed/html-pis.yml` file with this contents:
 ```yml
 # features/draft/proposed/html-pis.yml
 explainer: https://github.com/WICG/declarative-partial-updates/blob/main/patching-explainer.md
-chrometatus: https://chromestatus.com/feature/6534495085920256
+chromestatus: https://chromestatus.com/feature/6534495085920256
 ```
 
 When the real web-features entry is created, it is decided to consider this part
