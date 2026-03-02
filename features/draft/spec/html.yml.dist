@@ -803,6 +803,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "97"
+  #   chrome_android: "97"
+  #   edge: "97"
+  #   firefox: "148"
+  #   firefox_android: "148"
+  - html.elements.details.search_match_opens
+
+  # baseline: false
+  # support:
   #   chrome: "99"
   #   chrome_android: "99"
   #   edge: "99"
@@ -918,13 +927,6 @@ compat_features:
   #   edge: "96"
   - http.headers.Cross-Origin-Embedder-Policy.report-to_parameter
   - http.headers.Cross-Origin-Opener-Policy.report-to_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "97"
-  #   chrome_android: "97"
-  #   edge: "97"
-  - html.elements.details.search_match_opens
 
   # baseline: false
   # support:
