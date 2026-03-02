@@ -3,4 +3,12 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "141"
+    chrome_android: "141"
+    edge: "141"
+compat_features:
+  - html.elements.script.integrity.ed25519_public_key
+  - http.headers.Signature
+  - http.headers.Signature-Input
+  - http.headers.Unencoded-Digest
