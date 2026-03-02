@@ -89,3 +89,11 @@ compat_features:
   - css.properties.perspective-origin.x-start
   - css.properties.perspective-origin.y-end
   - css.properties.perspective-origin.y-start
+
+  # baseline: false
+  # support:
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - css.types.random.dashed-ident
+  - css.types.random.element-shared
+  - css.types.random.step

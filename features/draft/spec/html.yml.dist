@@ -592,6 +592,18 @@ compat_features:
   - api.ElementInternals.shadowRoot
 
   # baseline: low
+  # baseline_low_date: 2023-09-18
+  # support:
+  #   chrome: "66"
+  #   chrome_android: "66"
+  #   edge: "79"
+  #   firefox: "115"
+  #   firefox_android: "115"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - html.elements.link.rel.modulepreload.as-script
+
+  # baseline: low
   # baseline_low_date: 2023-11-21
   # support:
   #   chrome: "103"
@@ -687,7 +699,9 @@ compat_features:
   #   firefox_android: "147"
   #   safari: "26.2"
   #   safari_ios: "26.2"
+  - api.HTMLButtonElement.commandForElement.implicit_anchor_reference
   - api.NavigateEvent.sourceElement
+  - html.elements.button.commandfor.implicit_anchor_reference
 
   # baseline: false
   # support:
@@ -800,6 +814,15 @@ compat_features:
   #   safari: "26"
   #   safari_ios: "26"
   - api.Worker.Worker.enforces_trusted_types
+
+  # baseline: false
+  # support:
+  #   chrome: "97"
+  #   chrome_android: "97"
+  #   edge: "97"
+  #   firefox: "148"
+  #   firefox_android: "148"
+  - html.elements.details.search_match_opens
 
   # baseline: false
   # support:
@@ -921,13 +944,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "97"
-  #   chrome_android: "97"
-  #   edge: "97"
-  - html.elements.details.search_match_opens
-
-  # baseline: false
-  # support:
   #   chrome: "99"
   #   chrome_android: "99"
   #   edge: "99"
@@ -989,7 +1005,7 @@ compat_features:
   # baseline: false
   # support:
   #   chrome: "141"
-  #   chrome_android: "141"
+  #   chrome_android: "143"
   #   edge: "141"
   - http.headers.No-Vary-Search.speculation_rules_prefetch
 
@@ -1022,6 +1038,12 @@ compat_features:
 
   # baseline: false
   # support:
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - html.elements.link.rel.modulepreload.as-json
+
+  # baseline: false
+  # support:
   #   firefox: "67"
   #   firefox_android: "67"
   - html.elements.form.autocomplete.new-password
@@ -1037,4 +1059,5 @@ compat_features:
   # baseline: false
   # support: {}
   - api.Navigator.authentication
+  - html.elements.link.rel.modulepreload.as-style
   - html.elements.track.kind.descriptions

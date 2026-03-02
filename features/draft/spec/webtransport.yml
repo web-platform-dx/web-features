@@ -1,9 +1,21 @@
-draft_date: 2025-11-03
+draft_date: 2026-02-23
 name: WebTransport
 description: TODO
 spec: https://w3c.github.io/webtransport/
 compat_features:
+  - api.WebTransport.anticipatedConcurrentIncomingBidirectionalStreams
+  - api.WebTransport.anticipatedConcurrentIncomingUnidirectionalStreams
+  - api.WebTransport.createSendGroup
+  - api.WebTransport.draining
   - api.WebTransport.protocol
+  - api.WebTransport.supportsReliableOnly_static
+  - api.WebTransportDatagramDuplexStream.createWritable
+  - api.WebTransportDatagramsWritable
+  - api.WebTransportDatagramsWritable.sendGroup
+  - api.WebTransportDatagramsWritable.sendOrder
+  - api.WebTransportSendGroup
+  - api.WebTransportSendGroup.getStats
+  - api.WebTransportSendStream.sendGroup
 
 # The following features in the spec are already part of web-features:
 # - WebTransport:

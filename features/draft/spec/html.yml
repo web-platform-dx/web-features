@@ -1,4 +1,4 @@
-draft_date: 2026-02-23
+draft_date: 2026-03-02
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -19,6 +19,7 @@ compat_features:
   - api.HTMLBaseElement.href.forbid_data_javascript_urls
   - api.HTMLBaseElement.href.forbid_special_characters
   - api.HTMLButtonElement.command.request-close
+  - api.HTMLButtonElement.commandForElement.implicit_anchor_reference
   - api.HTMLCanvasElement.getContext.2d_context.options_colorType_parameter
   - api.HTMLCanvasElement.toBlob.quality_parameter
   - api.HTMLCanvasElement.toBlob.type_parameter_jpeg
@@ -103,6 +104,7 @@ compat_features:
   - api.setInterval.supports_parameters_for_callback
   - api.setTimeout.supports_parameters_for_callback
   - html.elements.button.command.request-close
+  - html.elements.button.commandfor.implicit_anchor_reference
   - html.elements.details.search_match_opens
   - html.elements.form.autocomplete.new-password
   - html.elements.form.autocomplete.one-time-code
@@ -121,6 +123,9 @@ compat_features:
   - html.elements.input.type_color.accepts_css_colors
   - html.elements.input.type_range.labeled_values
   - html.elements.link.rel.icon
+  - html.elements.link.rel.modulepreload.as-json
+  - html.elements.link.rel.modulepreload.as-script
+  - html.elements.link.rel.modulepreload.as-style
   - html.elements.script.type.importmap.integrity
   - html.elements.script.type.importmap.multiple_import_maps
   - html.elements.select.autocomplete
@@ -588,7 +593,6 @@ compat_features:
 #   - api.HTMLElement.nonce
 #   - html.elements.meta.http-equiv.content-security-policy
 #   - html.global_attributes.nonce
-#   - html.global_attributes.nonce.nonce_hiding
 # - Mouse events:
 #   - api.Element.auxclick_event
 #   - api.Element.click_event
