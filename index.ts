@@ -47,9 +47,9 @@ function* yamlEntries(root: string): Generator<[string, any]> {
         const pathParts = fp.split(path.sep);
         const isDraft = pathParts.includes('draft');
         const isSpec = isDraft && pathParts.includes('spec');
-        const isVendor = isDraft && pathParts.includes('vendor');
+        const isProposed = isDraft && pathParts.includes('proposed');
 
-        if (isVendor) {
+        if (isProposed) {
             continue;
         }
 

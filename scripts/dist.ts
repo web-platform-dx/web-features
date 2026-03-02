@@ -410,7 +410,7 @@ const tagsToFeatures: Map<string, Feature[]> = (() => {
  * mistakes, such as `.yaml` files.
  */
 function isDistOrDistable(path: string): boolean {
-  if (path.startsWith("features/draft/vendor/")) {
+  if (path.startsWith("features/draft/proposed/")) {
     return false;
   }
   if (path.endsWith(".yaml.dist") || path.endsWith(".yaml")) {
