@@ -803,6 +803,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "97"
+  #   chrome_android: "97"
+  #   edge: "97"
+  #   firefox: "148"
+  #   firefox_android: "148"
+  - html.elements.details.search_match_opens
+
+  # baseline: false
+  # support:
   #   chrome: "99"
   #   chrome_android: "99"
   #   edge: "99"
@@ -921,13 +930,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "97"
-  #   chrome_android: "97"
-  #   edge: "97"
-  - html.elements.details.search_match_opens
-
-  # baseline: false
-  # support:
   #   chrome: "99"
   #   chrome_android: "99"
   #   edge: "99"
@@ -989,7 +991,7 @@ compat_features:
   # baseline: false
   # support:
   #   chrome: "141"
-  #   chrome_android: "141"
+  #   chrome_android: "143"
   #   edge: "141"
   - http.headers.No-Vary-Search.speculation_rules_prefetch
 
