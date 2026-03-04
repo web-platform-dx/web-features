@@ -27,6 +27,12 @@
         },
         "safari_ios": {
           "$ref": "#/definitions/BrowserData"
+        },
+        "webview_android": {
+          "$ref": "#/definitions/BrowserData"
+        },
+        "webview_ios": {
+          "$ref": "#/definitions/BrowserData"
         }
       },
       "required": [
@@ -36,7 +42,9 @@
         "firefox",
         "firefox_android",
         "safari",
-        "safari_ios"
+        "safari_ios",
+        "webview_android",
+        "webview_ios"
       ],
       "additionalProperties": false
     },
@@ -294,6 +302,12 @@
               "type": "string"
             },
             "safari_ios": {
+              "type": "string"
+            },
+            "webview_android": {
+              "type": "string"
+            },
+            "webview_ios": {
               "type": "string"
             }
           },
