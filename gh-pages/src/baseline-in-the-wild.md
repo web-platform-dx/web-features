@@ -38,9 +38,11 @@ You can find web-features and Baseline data in the places listed below. If you s
 - [Web Platform Features](https://web-features.lttr.cz/), a visualization of the web-features data with filters and fuzzy search capabilities.
 - [Microsoft Edge - 2024 web platform top developer needs](https://microsoftedge.github.io/TopDeveloperNeeds/), a list of web features that developers need, based on data from the Microsoft Edge team.
 - [cssdb](https://cssdb.org/) is a list of CSS features and their positions in the process of becoming implemented web standards.
+- [modern-css.com](https://modern-css.com/), modern CSS snippets with Baseline status for each feature, showing native solutions next to old hacks.
 
 ## Presentations
 
+- [Improving the experience of developing for the web, one feature at a time](https://fosdem.org/2026/schedule/event/YWG7DK-improving_the_experience_of_developing_for_the_web_one_feature_at_a_time/) by Patrick Brosset, FOSDEM 2026, January 2026.
 - [web-features and Baseline](https://www.youtube.com/watch?v=QzfwNFIXOkM) ([slides](https://patrickbrosset.com/slides/AC-2025/)) by Patrick Brosset, W3C AC meeting, April 2025.
 - [Baseline and Web Features](https://www.oddbird.net/2024/11/19/winging-it-13/) by Miriam Suzanne and James Stuckey Weber, Winging It Live, November 2024.
 - [Baseline features and webstatus.dev](https://www.youtube.com/watch?v=pTsMpoXGlqE) ([slides](https://docs.google.com/presentation/d/1dRWC7aH-FQTj2JVFIaRvrHNylaRKAUCnQ5Y4odRhGGY/edit#slide=id.g2f87bb2d5eb_0_4)) by Kadir Topal and James Scott, BlinkOn, October 2024.
