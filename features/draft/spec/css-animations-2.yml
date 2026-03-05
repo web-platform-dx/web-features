@@ -1,4 +1,4 @@
-draft_date: 2025-12-08
+draft_date: 2026-02-16
 name: CSS Animations Level 2
 description: TODO
 spec: https://drafts.csswg.org/css-animations-2/
@@ -8,8 +8,22 @@ compat_features:
   - css.properties.animation-composition.replace
   - css.properties.animation-timeline.auto
   - css.properties.animation-timeline.none
+  - css.properties.animation-trigger
+  - css.properties.animation-trigger.none
   - css.properties.animation.paused
   - css.properties.animation.running
+  - css.properties.timeline-trigger
+  - css.properties.timeline-trigger-name
+  - css.properties.timeline-trigger-name.none
+  - css.properties.timeline-trigger-source
+  - css.properties.timeline-trigger-source.auto
+  - css.properties.timeline-trigger-source.none
+  - css.properties.timeline-trigger.auto
+  - css.properties.timeline-trigger.none
+  - css.properties.timeline-trigger.normal
+  - css.properties.trigger-scope
+  - css.properties.trigger-scope.all
+  - css.properties.trigger-scope.none
 
 # The following features in the spec are already part of web-features:
 # - Animations (CSS):

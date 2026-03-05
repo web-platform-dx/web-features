@@ -1,0 +1,23 @@
+name: <geolocation>
+description: The `<geolocation>` HTML element represents a button that, upon activation, prompts the user to choose whether to grant the page access to geolocation data.
+spec: https://wicg.github.io/PEPC/permission-elements.html#geolocation-element
+group:
+  - html-elements
+  - geolocation
+# Expected
+# compat_features:
+#   - html.elements.geolocation
+#   - html.elements.geolocation.autolocate
+#   - html.elements.geolocation.watch
+#   - api.HTMLGeolocationElement.HTMLGeolocationElement
+#   - api.HTMLGeolocationElement.position
+#   - api.HTMLGeolocationElement.error
+#   - api.HTMLGeolocationElement.autolocate
+#   - api.HTMLGeolocationElement.watch
+#   - api.HTMLGeolocationElement.isValid
+#   - api.HTMLGeolocationElement.invalidReason
+#   - api.HTMLGeolocationElement.initialPermissionStatus
+#   - api.HTMLGeolocationElement.permissionStatus
+#   - api.HTMLGeolocationElement.promptaction_event
+#   - api.HTMLGeolocationElement.promptdismiss_event
+#   - api.HTMLGeolocationElement.validationstatuschange_event

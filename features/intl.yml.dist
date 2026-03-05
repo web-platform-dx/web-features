@@ -130,7 +130,6 @@ compat_features:
   - javascript.builtins.Intl.NumberFormat.NumberFormat.options_parameter.options_minimumFractionDigits_parameter
   - javascript.builtins.Intl.NumberFormat.NumberFormat.options_parameter.options_minimumIntegerDigits_parameter
   - javascript.builtins.Intl.NumberFormat.NumberFormat.options_parameter.options_minimumSignificantDigits_parameter
-  - javascript.builtins.Intl.NumberFormat.NumberFormat.options_parameter.options_numberingSystem_parameter
   - javascript.builtins.Intl.NumberFormat.NumberFormat.options_parameter.options_style_parameter
   - javascript.builtins.Intl.NumberFormat.NumberFormat.options_parameter.options_useGrouping_parameter
   - javascript.builtins.Intl.NumberFormat.format
@@ -321,6 +320,19 @@ compat_features:
   # baseline_low_date: 2021-04-26
   # baseline_high_date: 2023-10-26
   # support:
+  #   chrome: "24"
+  #   chrome_android: "25"
+  #   edge: "12"
+  #   firefox: "76"
+  #   firefox_android: "56"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - javascript.builtins.Intl.NumberFormat.NumberFormat.options_parameter.options_numberingSystem_parameter
+
+  # baseline: high
+  # baseline_low_date: 2021-04-26
+  # baseline_high_date: 2023-10-26
+  # support:
   #   chrome: "76"
   #   chrome_android: "76"
   #   edge: "79"
@@ -338,12 +350,24 @@ compat_features:
   #   chrome: "77"
   #   chrome_android: "77"
   #   edge: "79"
+  #   firefox: "42"
+  #   firefox_android: "56"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - javascript.builtins.Intl.NumberFormat.NumberFormat.options_parameter.options_currencyDisplay_parameter
+
+  # baseline: high
+  # baseline_low_date: 2021-04-26
+  # baseline_high_date: 2023-10-26
+  # support:
+  #   chrome: "77"
+  #   chrome_android: "77"
+  #   edge: "79"
   #   firefox: "78"
   #   firefox_android: "79"
   #   safari: "14.1"
   #   safari_ios: "14.5"
   - javascript.builtins.Intl.NumberFormat.NumberFormat.options_parameter.options_compactDisplay_parameter
-  - javascript.builtins.Intl.NumberFormat.NumberFormat.options_parameter.options_currencyDisplay_parameter
   - javascript.builtins.Intl.NumberFormat.NumberFormat.options_parameter.options_currencySign_parameter
   - javascript.builtins.Intl.NumberFormat.NumberFormat.options_parameter.options_notation_parameter
   - javascript.builtins.Intl.NumberFormat.NumberFormat.options_parameter.options_signDisplay_parameter
@@ -457,8 +481,9 @@ compat_features:
   #   safari_ios: "15.4"
   - javascript.builtins.Intl.supportedValuesOf
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-08-01
+  # baseline_high_date: 2026-02-01
   # support:
   #   chrome: "106"
   #   chrome_android: "106"
@@ -476,8 +501,9 @@ compat_features:
   - javascript.builtins.Intl.NumberFormat.formatRange
   - javascript.builtins.Intl.NumberFormat.formatRangeToParts
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-08-01
+  # baseline_high_date: 2026-02-01
   # support:
   #   chrome: "106"
   #   chrome_android: "106"

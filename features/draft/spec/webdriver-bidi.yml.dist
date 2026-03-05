@@ -187,7 +187,6 @@ compat_features:
   - webdriver.bidi.script.message_event
   - webdriver.bidi.script.message_event.channel_parameter
   - webdriver.bidi.script.message_event.data_parameter
-  - webdriver.bidi.script.message_event.source_parameter
 
   # baseline: false
   # support:
@@ -626,6 +625,7 @@ compat_features:
   - webdriver.bidi.log.entryAdded_event.args_parameter
   - webdriver.bidi.log.entryAdded_event.source_parameter
   - webdriver.bidi.log.entryAdded_event.stackTrace_parameter
+  - webdriver.bidi.script.message_event.source_parameter
   - webdriver.bidi.script.realmCreated_event.owners_parameter
   - webdriver.bidi.session.new
   - webdriver.bidi.session.new.capabilities_parameter
@@ -869,3 +869,4 @@ compat_features:
   - webdriver.bidi.network.responseStarted_event.request_parameter
   - webdriver.bidi.network.responseStarted_event.response_parameter
   - webdriver.bidi.network.responseStarted_event.timestamp_parameter
+  - webdriver.bidi.userAgentClientHints

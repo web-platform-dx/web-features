@@ -1,9 +1,11 @@
-name: Geolocation
+name: Geolocation API
 description: The `navigator.geolocation` API requests the user's latitude, longitude, heading, and speed.
 spec: https://w3c.github.io/geolocation/
 status:
   compute_from: api.Navigator.geolocation
 caniuse: geolocation
+group:
+  - geolocation
 compat_features:
   - api.Geolocation
   - api.Geolocation.clearWatch

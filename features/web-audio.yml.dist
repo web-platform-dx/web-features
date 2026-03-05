@@ -661,17 +661,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "14"
-  #   edge: "12"
-  #   firefox: "134"
-  #   firefox_android: "134"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - api.AudioParam.exponentialRampToValueAtTime
-  - api.AudioParam.linearRampToValueAtTime
-
-  # baseline: false
-  # support:
   #   chrome: "57"
   #   chrome_android: "57"
   #   edge: "79"
@@ -696,6 +685,15 @@ compat_features:
   #   safari: "14"
   #   safari_ios: "14"
   - api.AudioParam.automationRate
+
+  # baseline: false
+  # support:
+  #   chrome: "14"
+  #   edge: "12"
+  #   safari: "6"
+  #   safari_ios: "6"
+  - api.AudioParam.exponentialRampToValueAtTime
+  - api.AudioParam.linearRampToValueAtTime
 
   # baseline: false
   # support:

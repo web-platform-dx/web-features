@@ -105,6 +105,10 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because there is no other specification to link to."
     ],
     [
+        "https://github.com/WebAssembly/js-promise-integration/blob/main/proposals/js-promise-integration/Overview.md",
+        "Allowed because there is no other specification to link to."
+    ],
+    [
         "https://immersive-web.github.io/webvr/spec/1.1/",
         "Allowed because this is the legacy spec that defines WebVR."
     ],
@@ -179,6 +183,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/WICG/view-transitions/blob/main/scoped-transitions.md",
         "Allowed until there's proper spec text. Follow https://github.com/w3c/csswg-drafts/issues/9890 for details."
+    ],
+    [
+        "https://github.com/WICG/install-element",
+        "Allowed because the <install> element is available in Chrome/Edge as an origin trial."
     ]
 ];
 

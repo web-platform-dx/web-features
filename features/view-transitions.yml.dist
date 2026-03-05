@@ -103,7 +103,6 @@ compat_features:
   #   safari_ios: "18.2"
   - api.PageSwapEvent
   - api.PageSwapEvent.activation
-  - api.Window.pageswap_event
 
   # baseline: false
   # support:
@@ -124,3 +123,10 @@ compat_features:
   #   safari_ios: "18.2"
   - api.PageRevealEvent.PageRevealEvent
   - api.PageSwapEvent.PageSwapEvent
+
+  # baseline: false
+  # support:
+  #   chrome: "124"
+  #   chrome_android: "124"
+  #   edge: "124"
+  - api.Window.pageswap_event

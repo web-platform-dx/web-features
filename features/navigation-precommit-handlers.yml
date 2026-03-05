@@ -1,0 +1,8 @@
+name: Navigation precommit handlers
+description: The `precommitHandler` callback option to `NavigateEvent`'s `intercept()` method returns a promise that defers navigation until the promise resolves. You can use this to change the navigation's URL, state, and history before navigation occurs.
+spec: https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-navigationinterceptoptions-precommithandler
+compat_features:
+  - api.NavigateEvent.intercept.precommitHandler_option
+  - api.NavigationPrecommitController
+  - api.NavigationPrecommitController.addHandler
+  - api.NavigationPrecommitController.redirect

@@ -1,12 +1,9 @@
-draft_date: 2026-01-29
+draft_date: 2026-02-16
 name: Media Queries Level 5
 description: TODO
 spec: https://drafts.csswg.org/mediaqueries-5/
 compat_features:
-  - css.at-rules.media.display-mode.browser
-  - css.at-rules.media.display-mode.fullscreen
-  - css.at-rules.media.display-mode.minimal-ui
-  - css.at-rules.media.display-mode.standalone
+  - css.at-rules.media.scan
 
 # The following features in the spec are already part of web-features:
 # - Custom media queries:
@@ -35,8 +32,15 @@ compat_features:
 #   - css.at-rules.media.pointer
 # - color-gamut media query:
 #   - css.at-rules.media.color-gamut
+#   - css.at-rules.media.color-gamut.p3
+#   - css.at-rules.media.color-gamut.rec2020
+#   - css.at-rules.media.color-gamut.srgb
 # - display-mode media query:
 #   - css.at-rules.media.display-mode
+#   - css.at-rules.media.display-mode.browser
+#   - css.at-rules.media.display-mode.fullscreen
+#   - css.at-rules.media.display-mode.minimal-ui
+#   - css.at-rules.media.display-mode.standalone
 # - Picture-in-picture (video):
 #   - css.at-rules.media.display-mode.picture-in-picture
 # - dynamic-range media query:

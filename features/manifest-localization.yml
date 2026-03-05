@@ -1,0 +1,10 @@
+name: Web app manifest localization
+description: The `_localized` suffixed members of the web app manifest set translated names, descriptions, icons, and shortcuts. The browser automatically selects resources based on the user's language and region settings.
+spec: https://w3c.github.io/manifest/#localized-members
+group: progressive-web-app
+# Expected compat keys:
+# - manifests.webapp.name_localized
+# - manifests.webapp.short_name_localized
+# - manifests.webapp.description_localized
+# - manifests.webapp.icons_localized
+# - manifests.webapp.shortcuts_localized

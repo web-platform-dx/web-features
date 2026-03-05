@@ -1,4 +1,4 @@
-draft_date: 2026-02-04
+draft_date: 2026-02-16
 name: WebGPU
 description: TODO
 spec: https://gpuweb.github.io/gpuweb/
@@ -19,7 +19,12 @@ compat_features:
   - api.GPUSupportedFeatures.feature_texture-compression-bc-sliced-3d
   - api.GPUSupportedFeatures.feature_texture-formats-tier1
   - api.GPUSupportedFeatures.feature_texture-formats-tier2
+  - api.GPUSupportedLimits.maxStorageBuffersInFragmentStage
+  - api.GPUSupportedLimits.maxStorageBuffersInVertexStage
+  - api.GPUSupportedLimits.maxStorageTexturesInFragmentStage
+  - api.GPUSupportedLimits.maxStorageTexturesInVertexStage
   - api.GPUTexture.createView.descriptor_swizzle_parameter
+  - api.GPUTexture.textureBindingViewDimension
 
 # The following features in the spec are already part of web-features:
 # - WebGPU:
