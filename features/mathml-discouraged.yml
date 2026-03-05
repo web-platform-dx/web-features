@@ -4,7 +4,7 @@ spec: https://w3c.github.io/mathml/
 discouraged:
   according_to:
     - https://w3c.github.io/mathml-core/#introduction
-  reason: MathML Full is hard to implement consistently across browsers and to integrate with other web technologies such as CSS. MathML Core is a subset which addresses these issues.
+  reason: Only MathML Core (a subset of MathML Full) is designed to work with web technologies, such as CSS.
   alternatives:
     - mathml
 compat_features:
