@@ -16,6 +16,9 @@ status:
     - css.properties.font-width.ultra-expanded
     - css.at-rules.font-face.font-width
 compat_features:
+  # This one key is excluded from the `compute_from`, since it shipped much later, but doesn't
+  # represent a distinct feature. This may change if other browsers ship this feature and the
+  # "floor" for this feature across browsers changes.
   - api.CSSFontFaceDescriptors.fontWidth
   - css.properties.font-width
   - css.properties.font-width.condensed
