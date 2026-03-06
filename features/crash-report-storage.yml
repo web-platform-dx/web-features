@@ -1,0 +1,9 @@
+name: Crash report storage
+description: The `window.crashReport` object is a key-value store to record information about your application's state. If there's a crash, then the data in the key-value store is sent to your crash reporting endpoint, to help you pinpoint the cause of the crash.
+spec: https://wicg.github.io/crash-reporting/#crash-report-storage
+compat_features:
+  - api.CrashReportContext
+  - api.CrashReportContext.delete
+  - api.CrashReportContext.initialize
+  - api.CrashReportContext.set
+  - api.Window.crashReport
