@@ -169,6 +169,10 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because this spec PR hasn't landed yet. Once the PR merges, change the spec url and remove this exception."
     ],
     [
+        "https://github.com/whatwg/html/pull/11980",
+        "Allowed because this spec PR hasn't landed yet. Once the PR merges, change the spec URL and remove this exception."
+    ],
+    [
         "https://github.com/w3c/manifest/pull/1175",
         "Allowed because there is no spec yet for Web Install."
     ],
