@@ -187,6 +187,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/WICG/install-element",
         "Allowed because the <install> element is available in Chrome/Edge as an origin trial."
+    ],
+    [
+        "https://github.com/whatwg/html/pull/11723",
+        "Allowed because the focusgroup spec PR hasn't landed yet. Once the PR merges, remove this and add the spec URL to the focusgroup feature."
     ]
 ];
 
