@@ -810,6 +810,20 @@ compat_features:
   #   edge: "79"
   #   firefox: "110"
   #   firefox_android: "110"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - api.RTCRtpSender.getParameters.return_object_property_transactionId
+  - api.RTCRtpSender.setParameters.parameters_transactionId_parameter
+
+  # baseline: high
+  # baseline_low_date: 2023-02-14
+  # baseline_high_date: 2025-08-14
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "69"
+  #   edge: "79"
+  #   firefox: "110"
+  #   firefox_android: "110"
   #   safari: "14.1"
   #   safari_ios: "14.5"
   - api.RTCPeerConnection.addTransceiver.init_sendEncodings_parameter
@@ -1091,9 +1105,7 @@ compat_features:
   #   edge: "79"
   #   safari: "12.1"
   #   safari_ios: "12.2"
-  - api.RTCRtpSender.getParameters.return_object_property_transactionId
   - api.RTCRtpSender.setParameters.parameters_headerExtensions_parameter
-  - api.RTCRtpSender.setParameters.parameters_transactionId_parameter
 
   # baseline: false
   # support:
