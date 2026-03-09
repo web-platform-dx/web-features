@@ -58,7 +58,6 @@ compat_features:
   - api.CSSFontFaceDescriptors.fontStretch
   - api.CSSFontFaceDescriptors.fontStyle
   - api.CSSFontFaceDescriptors.fontWeight
-  - api.CSSFontFaceDescriptors.fontWidth
   - api.CSSFontFaceDescriptors.size-adjust
   - api.CSSFontFaceDescriptors.sizeAdjust
   - api.CSSFontFaceDescriptors.src
@@ -74,5 +73,4 @@ compat_features:
   # baseline: false
   # support:
   #   safari: "18.4"
-  - css.at-rules.font-face.font-width
   - css.properties.font-width.percentage
