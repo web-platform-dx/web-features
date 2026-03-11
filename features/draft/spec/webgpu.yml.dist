@@ -27,7 +27,6 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - api.GPUAdapter.requestDevice.undefined_limits
   - api.GPUCommandEncoder.beginRenderPass.accepts_GPUTexture_resources
   - api.GPUCommandEncoder.copyBufferToBuffer.offset_and_size_parameter_optional
   - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUBuffer
