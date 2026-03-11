@@ -1,4 +1,4 @@
-draft_date: 2026-03-09
+draft_date: 2026-03-11
 name: CSS Fonts Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-fonts-5/
@@ -22,6 +22,7 @@ compat_features:
   - api.CSSFontFaceDescriptors.src
   - api.CSSFontFaceDescriptors.unicode-range
   - api.CSSFontFaceDescriptors.unicodeRange
+  - api.CSSFontFaceRule.style.type_CSSFontFaceDescriptors
   - css.properties.font-language-override.normal
   - css.properties.font-synthesis-style.oblique-only
   - css.properties.font-synthesis.none
