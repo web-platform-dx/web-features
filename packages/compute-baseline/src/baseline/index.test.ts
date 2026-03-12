@@ -205,7 +205,7 @@ describe("computeBaseline", function () {
       checkAncestors: true,
     });
 
-      const androidWebview = [...result.support.keys()].find(
+    const androidWebview = [...result.support.keys()].find(
       (b) => b.id === "webview_android",
     );
     const iosWebview = [...result.support.keys()].find(
@@ -218,7 +218,10 @@ describe("computeBaseline", function () {
     const androidWebviewSupport = result.support.get(androidWebview);
     const iosWebviewSupport = result.support.get(iosWebview);
 
-    assert(!androidWebviewSupport, "android_webview should have no support data");
+    assert(
+      !androidWebviewSupport,
+      "android_webview should have no support data",
+    );
     assert(!iosWebviewSupport, "ios_webview should have no support data");
   });
 });
