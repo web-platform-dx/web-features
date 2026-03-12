@@ -10,11 +10,11 @@ import yargs from "yargs";
 
 const argv = yargs(process.argv.slice(2))
   .scriptName("feature-init")
-  .usage("$0 <feature-identifier>", "Start a new feature YAML file", (yargs) =>
-    yargs.positional("feature-identifier", {
-      describe: "the feature key (i.e., the filename without `.yml`)",
-    }),
-  )
+  .usage("$0 <feature-identifier>", "Start a new feature YAML file")
+  .positional("feature-identifier", {
+    describe: "the feature key (i.e., the filename without `.yml`)",
+    type: "string",
+  })
   .option("dry-run", {
     alias: "n",
     boolean: true,
@@ -51,7 +51,8 @@ const argv = yargs(process.argv.slice(2))
     demandOption: true,
     default: "",
     describe: "A specification URL. Can be used multiple times.",
-  }).argv;
+  })
+  .parseSync();
 
 async function main() {
   const {

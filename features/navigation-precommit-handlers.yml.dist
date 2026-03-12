@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "148"
+    firefox_android: "148"
 compat_features:
   # baseline: false
   # support:
@@ -18,5 +20,7 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "148"
+  #   firefox_android: "148"
   - api.NavigationPrecommitController.addHandler
