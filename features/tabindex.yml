@@ -3,3 +3,13 @@ description: The `tabindex` HTML attribute make an element focusable, and sets t
 spec: https://html.spec.whatwg.org/multipage/interaction.html#attr-tabindex
 group: html
 caniuse: tabindex-attr
+status:
+  compute_from:
+    - api.HTMLElement.tabIndex
+    - html.global_attributes.tabindex
+compat_features:
+  - api.HTMLElement.tabIndex
+  - api.MathMLElement.tabIndex
+  - api.SVGElement.tabIndex
+  - html.global_attributes.tabindex
+  - svg.global_attributes.tabindex
