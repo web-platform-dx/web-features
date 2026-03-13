@@ -8,13 +8,18 @@ compat_features:
   - api.Serial
   - api.Serial.getPorts
   - api.Serial.requestPort
+  - api.Serial.requestPort.allowedBluetoothServiceClassIds_option
+  - api.Serial.requestPort.filters_bluetoothServiceClassId
   - api.SerialPort
   - api.SerialPort.close
   - api.SerialPort.connect_event
+  - api.SerialPort.connect_event.bluetooth_rfcomm
   - api.SerialPort.connected
   - api.SerialPort.disconnect_event
+  - api.SerialPort.disconnect_event.bluetooth_rfcomm
   - api.SerialPort.forget
   - api.SerialPort.getInfo
+  - api.SerialPort.getInfo.bluetoothServiceClassId
   - api.SerialPort.getSignals
   - api.SerialPort.open
   - api.SerialPort.readable

@@ -3,6 +3,7 @@ description: The `page-break-before`, `page-break-inside`, and `page-break-after
 spec: https://drafts.csswg.org/css-break-4/#page-break-properties
 group: layout
 discouraged:
+  reason: The `page-break-` alias properties exist only for backwards compatibility with pages that predate the `break-` properties.
   according_to:
     - https://drafts.csswg.org/css-break-4/#page-break-properties
   alternatives:

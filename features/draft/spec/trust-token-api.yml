@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2025-11-06
 name: Private State Token API
 description: TODO
 spec: https://wicg.github.io/trust-token-api/
@@ -6,4 +6,13 @@ compat_features:
   - api.Document.hasPrivateToken
   - api.Document.hasRedemptionRecord
   - api.HTMLIFrameElement.privateToken
+  - api.Request.Request.init_privateToken_parameter
   - api.XMLHttpRequest.setPrivateToken
+  - api.fetch.init_privateToken_parameter
+  - html.elements.iframe.privateToken
+  - http.headers.Permissions-Policy.private-state-token-issuance
+  - http.headers.Permissions-Policy.private-state-token-redemption
+  - http.headers.Sec-Private-State-Token
+  - http.headers.Sec-Private-State-Token-Crypto-Version
+  - http.headers.Sec-Private-State-Token-Lifetime
+  - http.headers.Sec-Redemption-Record

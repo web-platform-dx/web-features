@@ -7,12 +7,16 @@ status:
     chrome: "129"
     chrome_android: "129"
     edge: "129"
+    firefox: "142"
+    firefox_android: "142"
 compat_features:
   # baseline: false
   # support:
   #   chrome: "94"
   #   chrome_android: "94"
   #   edge: "94"
+  #   firefox: "142"
+  #   firefox_android: "142"
   - api.Scheduler
   - api.Scheduler.postTask
   - api.TaskController
@@ -31,6 +35,8 @@ compat_features:
   #   chrome: "116"
   #   chrome_android: "116"
   #   edge: "116"
+  #   firefox: "142"
+  #   firefox_android: "142"
   - api.TaskSignal.any_static
 
   # ⬇️ Same status as overall feature ⬇️
@@ -39,4 +45,6 @@ compat_features:
   #   chrome: "129"
   #   chrome_android: "129"
   #   edge: "129"
+  #   firefox: "142"
+  #   firefox_android: "142"
   - api.Scheduler.yield

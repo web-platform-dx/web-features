@@ -4,11 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "83"
-    chrome_android: "83"
-    edge: "83"
-    safari: "12.1"
-    safari_ios: "12.2"
+    chrome: "144"
+    chrome_android: "144"
+    edge: "144"
 compat_features:
   # baseline: low
   # baseline_low_date: 2025-04-29
@@ -31,3 +29,11 @@ compat_features:
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - api.MediaStreamTrack.contentHint
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
+  - api.RTCRtpSender.setParameters.parameters_degradationPreference_parameter.maintain-framerate-and-resolution_value

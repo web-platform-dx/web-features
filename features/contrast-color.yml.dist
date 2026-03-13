@@ -3,4 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "146"
+    firefox_android: "146"
+    safari: "26"
+    safari_ios: "26"
+compat_features:
+  - css.types.color.contrast-color

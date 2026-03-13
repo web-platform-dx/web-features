@@ -44,6 +44,7 @@ compat_features:
   - api.HTMLMediaElement.playbackRate
   - api.HTMLMediaElement.played
   - api.HTMLMediaElement.playing_event
+  - api.HTMLVideoElement.playsInline
   - api.HTMLMediaElement.preload
   - api.HTMLMediaElement.progress_event
   - api.HTMLMediaElement.ratechange_event
@@ -80,6 +81,7 @@ compat_features:
   - html.elements.video.height
   - html.elements.video.loop
   - html.elements.video.muted
+  - html.elements.video.playsinline
   - html.elements.video.poster
   - html.elements.video.preload
   - html.elements.video.src

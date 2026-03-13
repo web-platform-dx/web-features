@@ -1,10 +1,9 @@
-draft_date: 2025-03-15
+draft_date: 2026-02-23
 name: UI Events
 description: TODO
 spec: https://w3c.github.io/uievents/
 compat_features:
   - api.HTMLElement.error_event
-  - api.HTMLElement.load_event
   - api.UIEvent
   - api.UIEvent.UIEvent
   - api.UIEvent.detail
@@ -30,25 +29,11 @@ compat_features:
 #   - api.Element.mouseout_event
 #   - api.Element.mouseover_event
 #   - api.Element.mouseup_event
-#   - api.MouseEvent
-#   - api.MouseEvent.MouseEvent
-#   - api.MouseEvent.altKey
-#   - api.MouseEvent.button
-#   - api.MouseEvent.buttons
-#   - api.MouseEvent.clientX
-#   - api.MouseEvent.clientY
-#   - api.MouseEvent.ctrlKey
-#   - api.MouseEvent.getModifierState
-#   - api.MouseEvent.metaKey
-#   - api.MouseEvent.relatedTarget
-#   - api.MouseEvent.screenX
-#   - api.MouseEvent.screenY
-#   - api.MouseEvent.shiftKey
 # - Pointer Events:
 #   - api.Element.auxclick_event.type_pointerevent
 #   - api.Element.click_event.type_pointerevent
 #   - api.Element.contextmenu_event.type_pointerevent
-# - Input events:
+# - input (event):
 #   - api.Element.beforeinput_event
 #   - api.Element.input_event
 #   - api.InputEvent
@@ -94,13 +79,8 @@ compat_features:
 #   - api.KeyboardEvent.shiftKey
 # - Wheel events:
 #   - api.Element.wheel_event
-#   - api.WheelEvent
-#   - api.WheelEvent.WheelEvent
-#   - api.WheelEvent.deltaMode
-#   - api.WheelEvent.deltaX
-#   - api.WheelEvent.deltaY
-#   - api.WheelEvent.deltaZ
-#   - api.WheelEvent.pinch_to_zoom_support
+# - DOM:
+#   - api.HTMLElement.load_event
 # - Window:
 #   - api.Window.blur_event
 #   - api.Window.focus_event

@@ -17,12 +17,21 @@ const argv = yargs(process.argv.slice(2))
   .usage(
     "$0 [paths..]",
     "Remove `compat_features` from `.yml` files that have an equivalently tagged set of features in @mdn/browser-compat-data",
-    (yargs) =>
-      yargs.positional("paths", {
-        describe: "Directories or files to check/update.",
-        default: ["features"],
-      }),
-  ).argv;
+  )
+  .positional("paths", {
+    describe: "Directories or files to check/update.",
+    default: ["features"],
+  })
+  .option("force", {
+    alias: "f",
+    type: "boolean",
+  })
+  .option("verbose", {
+    alias: "v",
+    type: "count",
+    default: 0,
+  })
+  .parseSync();
 
 const logger = winston.createLogger({
   level: argv.verbose > 0 ? "debug" : "warn",
@@ -53,7 +62,9 @@ const tagsToFeatures: Map<string, Feature[]> = (() => {
   return map;
 })();
 
-function cleanup(sourcePath: string): void {
+function cleanup(sourcePath: string, options?: { force?: boolean }): void {
+  options = { ...options };
+
   const source = YAML.parseDocument(
     fs.readFileSync(sourcePath, { encoding: "utf-8" }),
   );
@@ -72,7 +83,7 @@ function cleanup(sourcePath: string): void {
   if (compat_features) {
     const { key: keyData, value: data } = compat_features;
     const features = data.items.map((item) => item.value).sort();
-    if (isDeepStrictEqual(features, taggedCompatFeatures)) {
+    if (options.force || isDeepStrictEqual(features, taggedCompatFeatures)) {
       // Preserve comments around the compat_features key
       const comments = keyData.commentBefore ? [keyData.commentBefore] : [];
       data.items.reduce((acc, item) => {
@@ -107,7 +118,7 @@ function main() {
   });
 
   for (const sourcePath of filePaths) {
-    cleanup(sourcePath);
+    cleanup(sourcePath, { force: argv.force });
   }
 }
 

@@ -1,0 +1,57 @@
+draft_date: 2025-11-03
+name: CSS Box Model Module Level 4
+description: TODO
+spec: https://drafts.csswg.org/css-box-4/
+compat_features:
+  - css.properties.background.border-box
+  - css.properties.background.content-box
+  - css.properties.background.padding-box
+  - css.properties.margin-block-end.auto
+  - css.properties.margin-block-start.auto
+  - css.properties.margin-block.auto
+  - css.properties.margin-inline-end.auto
+  - css.properties.margin-inline-start.auto
+  - css.properties.margin-inline.auto
+  - css.properties.offset.border-box
+  - css.properties.offset.content-box
+  - css.properties.offset.fill-box
+  - css.properties.offset.margin-box
+  - css.properties.offset.padding-box
+  - css.properties.offset.stroke-box
+  - css.properties.offset.view-box
+
+# The following features in the spec are already part of web-features:
+# - margin:
+#   - css.properties.margin
+#   - css.properties.margin.auto
+#   - css.properties.margin-bottom
+#   - css.properties.margin-bottom.auto
+#   - css.properties.margin-left
+#   - css.properties.margin-left.auto
+#   - css.properties.margin-right
+#   - css.properties.margin-right.auto
+#   - css.properties.margin-top
+#   - css.properties.margin-top.auto
+# - margin-trim:
+#   - css.properties.margin-trim
+#   - css.properties.margin-trim.block
+#   - css.properties.margin-trim.block-end
+#   - css.properties.margin-trim.block-start
+#   - css.properties.margin-trim.inline
+#   - css.properties.margin-trim.inline-end
+#   - css.properties.margin-trim.inline-start
+#   - css.properties.margin-trim.none
+# - Motion path:
+#   - css.properties.offset-path.border-box
+#   - css.properties.offset-path.content-box
+#   - css.properties.offset-path.fill-box
+#   - css.properties.offset-path.margin-box
+#   - css.properties.offset-path.padding-box
+#   - css.properties.offset-path.stroke-box
+#   - css.properties.offset-path.view-box
+# - padding:
+#   - css.properties.padding
+#   - css.properties.padding-bottom
+#   - css.properties.padding-left
+#   - css.properties.padding-right
+#   - css.properties.padding-top

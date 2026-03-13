@@ -11,3 +11,5 @@ compat_features:
   - api.FetchLaterResult
   - api.FetchLaterResult.activated
   - api.Window.fetchLater
+  - http.headers.Permissions-Policy.deferred-fetch
+  - http.headers.Permissions-Policy.deferred-fetch-minimal

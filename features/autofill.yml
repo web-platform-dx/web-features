@@ -2,3 +2,10 @@ name: ":autofill"
 description: "The `:autofill` pseudo-class matches `<input>` elements that have been filled in automatically by the browser."
 spec: https://html.spec.whatwg.org/multipage/semantics-other.html#selector-autofill
 group: forms
+# TODO: https://github.com/web-platform-dx/web-features/issues/1971
+# Status changed: https://github.com/web-platform-dx/web-features/pull/3731
+# 2026-01-29 — low → false — Firefox matches only for autofilled username and password fields, but not autocompleted inputs of all kinds. Upstream data was out of date and now reflects this.
+# References:
+# - https://bugzil.la/1923525
+compat_features:
+  - css.selectors.autofill

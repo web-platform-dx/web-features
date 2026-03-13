@@ -3,10 +3,12 @@ description: The `ruby-position` CSS property sets the position of a ruby annota
 spec: https://drafts.csswg.org/css-ruby-1/#rubypos
 group: ruby
 status:
-  compute_from: css.properties.ruby-position
+  compute_from:
+    - css.properties.ruby-position
+    - css.properties.ruby-position.over
+    - css.properties.ruby-position.under
 compat_features:
   - css.properties.ruby-position
-  - css.properties.ruby-position.alternate
   - css.properties.ruby-position.inter-character
   - css.properties.ruby-position.over
   - css.properties.ruby-position.under

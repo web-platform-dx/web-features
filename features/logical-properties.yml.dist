@@ -192,13 +192,16 @@ compat_features:
   - css.properties.float.inline-end
   - css.properties.float.inline-start
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-09-15
   # support:
   #   chrome: "135"
   #   chrome_android: "135"
   #   edge: "135"
   #   firefox: "69"
   #   firefox_android: "79"
+  #   safari: "26"
+  #   safari_ios: "26"
   - css.properties.overflow-block
   - css.properties.overflow-inline
 

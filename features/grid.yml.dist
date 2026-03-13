@@ -39,6 +39,7 @@ compat_features:
   #   safari: "10.1"
   #   safari_ios: "10.3"
   - css.properties.row-gap
+  - css.properties.row-gap.normal
 
   # baseline: high
   # baseline_low_date: 2017-10-17
@@ -86,6 +87,7 @@ compat_features:
   - css.properties.display.grid
   - css.properties.display.inline-grid
   - css.properties.gap
+  - css.properties.gap.normal
   - css.properties.grid
   - css.properties.grid-area
   - css.properties.grid-auto-flow
@@ -132,6 +134,23 @@ compat_features:
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - css.properties.gap.grid_context.calc_values
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "57"
+  #   chrome_android: "57"
+  #   edge: "79"
+  #   firefox: "45"
+  #   firefox_android: "45"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - css.properties.justify-self.auto
+  - css.properties.justify-self.left
+  - css.properties.justify-self.normal
+  - css.properties.justify-self.right
+  - css.properties.justify-self.stretch
 
   # baseline: high
   # baseline_low_date: 2020-01-15

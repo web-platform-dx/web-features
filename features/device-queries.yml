@@ -3,6 +3,7 @@ description: The `device-aspect-ratio`, `device-height`, and `device-width` medi
 spec: https://drafts.csswg.org/mediaqueries-5/#mf-deprecated
 group: media-queries
 discouraged:
+  reason: Device media queries do not reflect available layout, only the physical size of the device.
   according_to:
     - https://drafts.csswg.org/mediaqueries-5/#mf-deprecated
   alternatives:

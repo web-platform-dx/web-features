@@ -1,5 +1,4 @@
 import { DefinedError } from "ajv";
-import { getStatus } from "compute-baseline";
 import stringify from "fast-json-stable-stringify";
 import { execSync } from "node:child_process";
 import fs from "node:fs";
@@ -26,16 +25,16 @@ yargs(process.argv.slice(2))
     describe: "Generate the web-features npm package",
     handler: buildPackage,
   })
-  .command({
-    command: "extended-json",
-    describe: "Generate a web-features JSON file with BCD per-key statuses",
-    handler: buildExtendedJSON,
-  })
   .parseSync();
 
 function buildPackage() {
   const packageDir = new URL("./packages/web-features/", rootDir);
-  const filesToCopy = ["LICENSE.txt", "types.ts", "schemas/data.schema.json"];
+  const filesToCopy = [
+    "LICENSE.txt",
+    "types.quicktype.ts",
+    "types.ts",
+    "schemas/data.schema.json",
+  ];
 
   if (!valid(data)) {
     logger.error("Data failed schema validation. No package built.");
@@ -45,6 +44,11 @@ function buildPackage() {
   const json = stringify(data);
   const path = new URL("data.json", packageDir);
   fs.writeFileSync(path, json);
+
+  // TODO: Remove the extended data artifact in the next major release.
+  const extendedPath = new URL("data.extended.json", rootDir);
+  fs.writeFileSync(extendedPath, json);
+
   for (const file of filesToCopy) {
     fs.copyFileSync(
       new URL(file, rootDir),
@@ -59,28 +63,6 @@ function buildPackage() {
     cwd: "./packages/web-features",
     encoding: "utf-8",
   });
-}
-
-function buildExtendedJSON() {
-  for (const [id, featureData] of Object.entries(data.features)) {
-    if (
-      Array.isArray(featureData.compat_features) &&
-      featureData.compat_features.length &&
-      featureData.status
-    ) {
-      featureData.status.by_compat_key = {};
-      for (const key of featureData.compat_features) {
-        featureData.status.by_compat_key[key] = getStatus(id, key);
-      }
-    }
-  }
-
-  if (!valid(data)) {
-    logger.error("Data failed schema validation. No JSON file written.");
-    process.exit(1);
-  }
-
-  fs.writeFileSync(new URL("./data.extended.json", rootDir), stringify(data));
 }
 
 function valid(data: any): boolean {

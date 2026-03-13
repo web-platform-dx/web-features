@@ -190,19 +190,6 @@ compat_features:
   - api.MouseEvent.getModifierState
 
   # baseline: low
-  # baseline_low_date: 2023-09-18
-  # support:
-  #   chrome: "37"
-  #   chrome_android: "37"
-  #   edge: "13"
-  #   firefox: "41"
-  #   firefox_android: "41"
-  #   safari: "9"
-  #   safari_ios: "17"
-  - api.MouseEvent.movementX
-  - api.MouseEvent.movementY
-
-  # baseline: low
   # baseline_low_date: 2024-12-11
   # support:
   #   chrome: "55"
@@ -223,3 +210,14 @@ compat_features:
   #   firefox_android: "6"
   #   safari: "3"
   - api.Element.contextmenu_event
+
+  # baseline: false
+  # support:
+  #   chrome: "37"
+  #   edge: "13"
+  #   firefox: "41"
+  #   firefox_android: "41"
+  #   safari: "9"
+  #   safari_ios: "17"
+  - api.MouseEvent.movementX
+  - api.MouseEvent.movementY

@@ -69,6 +69,8 @@ compat_features:
   #   safari: "1.2"
   #   safari_ios: "1"
   - css.properties.empty-cells
+  - css.properties.empty-cells.hide
+  - css.properties.empty-cells.show
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -171,6 +173,8 @@ compat_features:
   #   safari: "1"
   #   safari_ios: "3"
   - css.properties.table-layout
+  - css.properties.table-layout.auto
+  - css.properties.table-layout.fixed
 
   # baseline: high
   # baseline_low_date: 2015-07-29

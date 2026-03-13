@@ -5,11 +5,12 @@ name: Notifications from service workers and installed apps
 # See `features/notifications.yml` for the full Notifications feature, which
 # does not align with Caniuse.
 description: Notifications via service worker registration's `showNotification()` method, sent from installed web applications (for example, saved to the Home Screen on Safari for iOS), show a message to the user, typically using the notification system of the host operating system.
-spec: https://notifications.spec.whatwg.org/
+spec: https://notifications.spec.whatwg.org/#service-worker-api
 caniuse: notifications
 status:
-  baseline: low
+  baseline: high
   baseline_low_date: 2023-03-27
+  baseline_high_date: 2025-09-27
   support:
     chrome: "20"
     chrome_android: "42"

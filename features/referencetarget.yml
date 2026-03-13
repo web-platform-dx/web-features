@@ -1,0 +1,10 @@
+name: Reference target
+description: The `referenceTarget` property of a `ShadowRoot` object forwards attributes such as `for` and `aria-labelledby` to elements inside a shadow DOM. You can use this to, for example, link a `<label>` to its `<input>` even if the `<input>` is in the shadow DOM of a web component.
+spec:
+  - https://github.com/whatwg/dom/pull/1353
+  - https://github.com/whatwg/html/pull/10995
+group:
+  - web-components
+# Expected keys via Chrome origin trial in 133-135 https://chromestatus.com/feature/5188237101891584
+# api.Element.attachShadow.options_referenceTarget_parameter
+# api.ShadowRoot.referenceTarget

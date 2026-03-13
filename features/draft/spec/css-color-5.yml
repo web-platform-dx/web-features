@@ -1,0 +1,153 @@
+draft_date: 2026-02-10
+name: CSS Color Module Level 5
+description: TODO
+spec: https://drafts.csswg.org/css-color-5/
+compat_features:
+  - css.properties.background-color.currentColor
+  - css.properties.background.currentColor
+  - css.properties.border-block-color.currentColor
+  - css.properties.border-block-color.transparent
+  - css.properties.border-block-end-color.currentColor
+  - css.properties.border-block-end-color.transparent
+  - css.properties.border-block-end.currentColor
+  - css.properties.border-block-end.transparent
+  - css.properties.border-block-start-color.currentColor
+  - css.properties.border-block-start-color.transparent
+  - css.properties.border-block-start.currentColor
+  - css.properties.border-block-start.transparent
+  - css.properties.border-block.currentColor
+  - css.properties.border-block.transparent
+  - css.properties.border-bottom-color.currentColor
+  - css.properties.border-bottom.currentColor
+  - css.properties.border-color.currentColor
+  - css.properties.border-inline-color.currentColor
+  - css.properties.border-inline-color.transparent
+  - css.properties.border-inline-end-color.currentColor
+  - css.properties.border-inline-end-color.transparent
+  - css.properties.border-inline-end.currentColor
+  - css.properties.border-inline-end.transparent
+  - css.properties.border-inline-start-color.currentColor
+  - css.properties.border-inline-start-color.transparent
+  - css.properties.border-inline-start.currentColor
+  - css.properties.border-inline-start.transparent
+  - css.properties.border-inline.currentColor
+  - css.properties.border-inline.transparent
+  - css.properties.border-left-color.currentColor
+  - css.properties.border-left.currentColor
+  - css.properties.border-right-color.currentColor
+  - css.properties.border-right.currentColor
+  - css.properties.border-top-color.currentColor
+  - css.properties.border-top.currentColor
+  - css.properties.border.currentColor
+  - css.properties.caret-color.currentColor
+  - css.properties.caret-color.transparent
+  - css.properties.outline.currentColor
+  - css.properties.stroke-color.currentColor
+  - css.properties.stroke-color.transparent
+  - css.properties.text-decoration-color.currentColor
+  - css.properties.text-decoration-color.transparent
+  - css.properties.text-decoration.currentColor
+  - css.properties.text-decoration.transparent
+  - css.properties.text-emphasis-color.currentColor
+  - css.properties.text-emphasis-color.transparent
+  - css.properties.text-emphasis.currentColor
+  - css.properties.text-emphasis.transparent
+  - css.types.color.color.colorSpace_parameter_accepts_display-p3-linear_value
+
+# The following features in the spec are already part of web-features:
+# - background:
+#   - css.properties.background.transparent
+# - background-color:
+#   - css.properties.background-color.transparent
+# - Borders:
+#   - css.properties.border.transparent
+#   - css.properties.border-bottom.transparent
+#   - css.properties.border-bottom-color.transparent
+#   - css.properties.border-color.transparent
+#   - css.properties.border-left.transparent
+#   - css.properties.border-left-color.transparent
+#   - css.properties.border-right.transparent
+#   - css.properties.border-right-color.transparent
+#   - css.properties.border-top.transparent
+#   - css.properties.border-top-color.transparent
+# - Color:
+#   - css.properties.color
+#   - css.properties.color.transparent
+#   - css.types.color
+#   - css.types.color.transparent
+# - Multi-column layout:
+#   - css.properties.column-rule.transparent
+#   - css.properties.column-rule-color.transparent
+# - SVG filters:
+#   - css.properties.flood-color.currentColor
+#   - css.properties.flood-color.transparent
+#   - css.properties.lighting-color.currentColor
+#   - css.properties.lighting-color.transparent
+# - opacity:
+#   - css.properties.opacity
+#   - css.properties.opacity.percentages
+#   - svg.global_attributes.opacity
+# - outline:
+#   - css.properties.outline.transparent
+# - Outlines:
+#   - css.properties.outline-color.transparent
+# - attr():
+#   - css.types.attr.type_function.color
+# - color():
+#   - css.types.color.color
+#   - css.types.color.color.mixed_type_parameters
+# - Relative colors:
+#   - css.types.color.color.relative_syntax
+#   - css.types.color.hsl.relative_syntax
+#   - css.types.color.hwb.relative_syntax
+#   - css.types.color.lab.relative_syntax
+#   - css.types.color.lch.relative_syntax
+#   - css.types.color.oklab.relative_syntax
+#   - css.types.color.oklch.relative_syntax
+#   - css.types.color.rgb.relative_syntax
+# - color-mix():
+#   - css.types.color.color-mix
+# - contrast-color():
+#   - css.types.color.contrast-color
+# - currentColor:
+#   - css.types.color.currentcolor
+# - HSL:
+#   - css.types.color.hsl
+#   - css.types.color.hsl.alpha_parameter
+#   - css.types.color.hsl.mixed_type_parameters
+#   - css.types.color.hsl.space_separated_parameters
+# - HWB:
+#   - css.types.color.hwb
+#   - css.types.color.hwb.mixed_type_parameters
+# - Lab and LCH:
+#   - css.types.color.lab
+#   - css.types.color.lab.mixed_type_parameters
+#   - css.types.color.lch
+#   - css.types.color.lch.mixed_type_parameters
+# - light-dark():
+#   - css.types.color.light-dark
+# - Named colors:
+#   - css.types.color.named-color
+#   - css.types.color.named-color.rebeccapurple
+#   - css.types.color.named-color.transparent
+# - Oklab and OkLCh:
+#   - css.types.color.oklab
+#   - css.types.color.oklab.mixed_type_parameters
+#   - css.types.color.oklch
+#   - css.types.color.oklch.mixed_type_parameters
+# - RGB:
+#   - css.types.color.rgb
+#   - css.types.color.rgb.alpha_parameter
+#   - css.types.color.rgb.float_values
+#   - css.types.color.rgb.mixed_type_parameters
+#   - css.types.color.rgb.space_separated_parameters
+#   - css.types.color.rgb_hexadecimal_notation
+#   - css.types.color.rgb_hexadecimal_notation.alpha_hexadecimal_notation
+# - System colors:
+#   - css.types.color.system-color
+#   - css.types.color.system-color.accentcolor_accentcolortext
+#   - css.types.color.system-color.buttonborder
+#   - css.types.color.system-color.mark
+#   - css.types.color.system-color.marktext
+# - SVG:
+#   - svg.global_attributes.color

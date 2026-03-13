@@ -1,7 +1,10 @@
 name: Import assertions
 description: 'Module `import … assert { type: "json" }` and `import … assert { type: "css" }` JavaScript statements load JSON and CSS data.'
 spec: https://github.com/tc39/proposal-import-attributes/tree/abca60286360b47f9a6be25a28f489c2cb157beb
+group: js-modules
 discouraged:
+  reason: Import assertions are superseded by import attributes.
+  removal_date: 2024-06-13
   according_to:
     - https://github.com/tc39/proposal-import-attributes/pull/131
   alternatives:

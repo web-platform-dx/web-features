@@ -1,0 +1,6 @@
+name: Branch hinting (WebAssembly)
+description: Branch hints in WebAssembly allows a browser to optimize performance when a branch is a likely to take a specific path.
+spec: https://github.com/WebAssembly/branch-hinting/blob/main/proposals/branch-hinting/Overview.md
+group: webassembly
+compat_features:
+  - webassembly.branch-hinting

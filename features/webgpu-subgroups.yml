@@ -1,0 +1,8 @@
+name: WebGPU subgroups
+description: The subgroups extension for the WebGPU Shading Language (WGSL) enables SIMD parallelism. Using subgroups, threads in a workgroup can efficiently communicate and perform collective operations.
+group: webgpu
+spec:
+  - https://gpuweb.github.io/gpuweb/#subgroups
+  - https://gpuweb.github.io/gpuweb/wgsl/#extension-subgroups
+compat_features:
+  - api.GPUSupportedFeatures.feature_subgroups

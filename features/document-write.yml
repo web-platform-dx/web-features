@@ -4,6 +4,7 @@ spec: https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html
 discouraged:
   # The spec doesn't actually discourage against open and close, but these methods are
   # really only useful for writing anyway, so we're marking the whole feature as discouraged.
+  reason: The dynamic markup insertion API, which includes `document.write()`, has "very idiosyncratic behavior" which can be difficult to debug.
   according_to:
     - https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#document.write()
   alternatives:
@@ -12,8 +13,8 @@ status:
   compute_from: api.Document.write
 compat_features:
   - api.Document.write
-  - api.Document.write.accepts_TrustedHTML
+  - api.Document.write.enforces_trusted_types
   - api.Document.writeln
-  - api.Document.writeln.accepts_TrustedHTML
+  - api.Document.writeln.enforces_trusted_types
   - api.Document.open
   - api.Document.close

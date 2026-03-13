@@ -66,8 +66,12 @@ compat_features:
   - api.GamepadEvent.GamepadEvent
   - api.Navigator.getGamepads
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-12-05
   # support:
+  #   chrome: "143"
+  #   chrome_android: "143"
+  #   edge: "143"
   #   firefox: "89"
   #   firefox_android: "89"
   #   safari: "16"

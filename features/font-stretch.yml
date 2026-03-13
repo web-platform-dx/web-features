@@ -1,17 +1,26 @@
 name: font-stretch
 description: The `font-stretch` CSS property selects a font face from a font family based on width, either by a keyword such as `condensed` or a percentage.
 spec: https://drafts.csswg.org/css-fonts-4/#font-stretch-prop
-discouraged:
-  according_to:
-    - https://drafts.csswg.org/css-fonts-4/#font-stretch-prop
-  alternatives:
-    - font-width
+# This was formerly discouraged with the reason "The `font-stretch` CSS property
+# is superseded by `font-width`." The spec describes this as a "legacy name
+# alias." See https://github.com/mdn/browser-compat-data/pull/28809 for more
+# information on why this was undeprecated in BCD (and consequently
+# undiscouraged in web-features). This discouragement may return in the future,
+# if `font-width`'s availability changes.
 group: fonts
 caniuse: css-font-stretch
-status:
-  compute_from: css.properties.font-stretch
 compat_features:
   - css.at-rules.font-face.font-stretch
   - css.properties.font-stretch
+  - css.properties.font-stretch.condensed
+  - css.properties.font-stretch.expanded
+  - css.properties.font-stretch.extra-condensed
+  - css.properties.font-stretch.extra-expanded
+  - css.properties.font-stretch.normal
   - css.properties.font-stretch.percentage
-  - svg.global_attributes.font-stretch
+  - css.properties.font-stretch.semi-condensed
+  - css.properties.font-stretch.semi-expanded
+  - css.properties.font-stretch.ultra-condensed
+  - css.properties.font-stretch.ultra-expanded
+  - css.properties.font.font-width_keyword_values
+  # - svg.global_attributes.font-stretch

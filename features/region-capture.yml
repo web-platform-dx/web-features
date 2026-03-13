@@ -1,5 +1,5 @@
 name: Region capture
-description: The `CropTarget` API crops an element from a video track derived from display-capture of the active browser tab. For example, you can crop out video conferencing during screen sharing.
+description: "When using `navigator.mediaDevices.getDisplayMedia()` to capture a browser tab as a video stream, the region capture API allows you to crop the video to the bounding box of a given element. In contrast to the element capture API, any content that overlays that element is also captured."
 spec: https://w3c.github.io/mediacapture-region/
 compat_features:
   - api.BrowserCaptureMediaStreamTrack

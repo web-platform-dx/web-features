@@ -3,6 +3,7 @@ description: Objects in JavaScript are collections of key-value pairs.
 spec: https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object-objects
 status:
   compute_from: javascript.builtins.Object
+group: javascript
 compat_features:
   - javascript.builtins.Object
   - javascript.builtins.Object.Object
@@ -19,7 +20,6 @@ compat_features:
   - javascript.builtins.Object.getOwnPropertyNames
   - javascript.builtins.Object.getOwnPropertySymbols
   - javascript.builtins.Object.getPrototypeOf
-  - javascript.builtins.Object.hasOwn
   - javascript.builtins.Object.hasOwnProperty
   - javascript.builtins.Object.is
   - javascript.builtins.Object.isExtensible
