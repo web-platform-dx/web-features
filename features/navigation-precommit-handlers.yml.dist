@@ -4,6 +4,8 @@
 status:
   baseline: false
   support:
+    chrome: "146"
+    chrome_android: "146"
     firefox: "148"
     firefox_android: "148"
 compat_features:
@@ -21,6 +23,8 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
+  #   chrome: "146"
+  #   chrome_android: "146"
   #   firefox: "148"
   #   firefox_android: "148"
   - api.NavigationPrecommitController.addHandler
