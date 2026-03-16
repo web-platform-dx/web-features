@@ -1,4 +1,4 @@
-draft_date: 2025-09-30
+draft_date: 2026-03-16
 name: Fetch
 description: TODO
 spec: https://fetch.spec.whatwg.org/
@@ -50,7 +50,6 @@ compat_features:
 #   - api.Request.credentials.default_same-origin
 #   - api.Request.destination
 #   - api.Request.duplex
-#   - api.Request.formData
 #   - api.Request.headers
 #   - api.Request.integrity
 #   - api.Request.isHistoryNavigation
@@ -76,7 +75,6 @@ compat_features:
 #   - api.Response.bytes
 #   - api.Response.clone
 #   - api.Response.error_static
-#   - api.Response.formData
 #   - api.Response.headers
 #   - api.Response.json
 #   - api.Response.json_static
@@ -101,6 +99,9 @@ compat_features:
 # - Speculation rules:
 #   - api.Request.destination.speculationrules
 #   - http.headers.Sec-Purpose.speculationrules
+# - Fetch form data:
+#   - api.Request.formData
+#   - api.Response.formData
 # - Abortable fetch:
 #   - api.Request.signal
 #   - api.fetch.init_signal_parameter
