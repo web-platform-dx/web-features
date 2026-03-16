@@ -4,8 +4,11 @@
 status:
   baseline: false
   support:
-    chrome: "146"
-    chrome_android: "146"
+    chrome: "115"
+    chrome_android: "115"
+    edge: "115"
+    safari: "26"
+    safari_ios: "26"
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -36,6 +39,7 @@ compat_features:
   - css.properties.animation-composition.add
   - css.properties.animation-composition.replace
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "115"
@@ -45,23 +49,3 @@ compat_features:
   #   safari_ios: "26"
   - css.properties.animation-timeline.auto
   - css.properties.animation-timeline.none
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "146"
-  #   chrome_android: "146"
-  - css.properties.animation-trigger
-  - css.properties.animation-trigger.none
-  - css.properties.timeline-trigger
-  - css.properties.timeline-trigger-name
-  - css.properties.timeline-trigger-name.none
-  - css.properties.timeline-trigger-source
-  - css.properties.timeline-trigger-source.auto
-  - css.properties.timeline-trigger-source.none
-  - css.properties.timeline-trigger.auto
-  - css.properties.timeline-trigger.none
-  - css.properties.timeline-trigger.normal
-  - css.properties.trigger-scope
-  - css.properties.trigger-scope.all
-  - css.properties.trigger-scope.none
