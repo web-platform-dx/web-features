@@ -6,12 +6,12 @@ import { fileURLToPath } from "node:url";
 import winston from "winston";
 import YAML from "yaml";
 import yargs from "yargs";
-import { features } from "..";
-import { defaultCompat } from "../packages/compute-baseline/dist/browser-compat-data/compat";
-import { feature } from "../packages/compute-baseline/dist/browser-compat-data/feature";
-import { SupportStatement } from "../packages/compute-baseline/dist/browser-compat-data/supportStatements";
-import { convertHTML } from "../text";
-import { FeatureData } from "../types";
+import { features } from "../index.js";
+import { defaultCompat } from "../packages/compute-baseline/dist/browser-compat-data/compat.js";
+import { feature } from "../packages/compute-baseline/dist/browser-compat-data/feature.js";
+import { SupportStatement } from "../packages/compute-baseline/dist/browser-compat-data/supportStatements.js";
+import { convertHTML } from "../text.js";
+import { FeatureData } from "../types.js";
 
 const argv = yargs(process.argv.slice(2))
   .scriptName("dist")

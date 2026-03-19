@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { assertValidFeatureReference } from "./assertions";
+import { assertValidFeatureReference } from "./assertions.js";
 
 describe("assertValidReference()", function () {
   it("throws if target ID is a move", function () {

@@ -1,6 +1,6 @@
-import { isOrdinaryFeatureData } from "./type-guards";
-import { FeatureData } from "./types";
-import { WebFeaturesData } from "./types.quicktype";
+import { isOrdinaryFeatureData } from "./type-guards.js";
+import { FeatureData } from "./types.js";
+import { WebFeaturesData } from "./types.quicktype.js";
 
 /**
  * Assert that a reference from one feature to another is an ordinary feature

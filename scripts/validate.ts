@@ -1,4 +1,4 @@
-import Ajv from "ajv";
+import { Ajv } from "ajv";
 import assert from "node:assert/strict";
 
 import * as schema from "../schemas/data.schema.json" with { type: "json" };

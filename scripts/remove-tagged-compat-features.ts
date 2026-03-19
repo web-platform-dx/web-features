@@ -8,7 +8,7 @@ import { isDeepStrictEqual } from "node:util";
 import winston from "winston";
 import YAML from "yaml";
 import yargs from "yargs";
-import { checkForStaleCompat } from "./dist";
+import { checkForStaleCompat } from "./dist.js";
 
 const compat = new Compat();
 
