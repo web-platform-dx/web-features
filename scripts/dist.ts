@@ -14,7 +14,11 @@ import { isDeepStrictEqual } from "node:util";
 import winston from "winston";
 import YAML, { Document, Scalar, YAMLSeq } from "yaml";
 import yargs from "yargs";
-import type { FeatureData, FeatureMovedData, FeatureSplitData } from "../types";
+import type {
+  FeatureData,
+  FeatureMovedData,
+  FeatureSplitData,
+} from "../types.js";
 
 const compat = new Compat();
 

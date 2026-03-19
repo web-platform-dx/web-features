@@ -1,4 +1,8 @@
-import type { FeatureData, FeatureMovedData, FeatureSplitData } from "./types";
+import type {
+  FeatureData,
+  FeatureMovedData,
+  FeatureSplitData,
+} from "./types.js";
 
 export function isOrdinaryFeatureData(x: unknown): x is FeatureData {
   return typeof x === "object" && "kind" in x && x.kind === "feature";
