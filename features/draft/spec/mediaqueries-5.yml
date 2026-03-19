@@ -1,8 +1,22 @@
-draft_date: 2026-02-16
+draft_date: 2026-03-11
 name: Media Queries Level 5
 description: TODO
 spec: https://drafts.csswg.org/mediaqueries-5/
 compat_features:
+  - api.Navigator.preferences
+  - api.PreferenceManager
+  - api.PreferenceManager.colorScheme
+  - api.PreferenceManager.contrast
+  - api.PreferenceManager.reducedData
+  - api.PreferenceManager.reducedMotion
+  - api.PreferenceManager.reducedTransparency
+  - api.PreferenceObject
+  - api.PreferenceObject.change_event
+  - api.PreferenceObject.clearOverride
+  - api.PreferenceObject.override
+  - api.PreferenceObject.requestOverride
+  - api.PreferenceObject.validValues
+  - api.PreferenceObject.value
   - css.at-rules.media.scan
 
 # The following features in the spec are already part of web-features:

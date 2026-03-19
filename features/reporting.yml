@@ -10,23 +10,15 @@ status:
     - api.ReportingObserver.ReportingObserver
     - http.headers.Reporting-Endpoints
 compat_features:
-  - api.DeprecationReportBody
-  - api.DeprecationReportBody.anticipatedRemoval
-  - api.DeprecationReportBody.columnNumber
-  - api.DeprecationReportBody.id
-  - api.DeprecationReportBody.lineNumber
-  - api.DeprecationReportBody.message
-  - api.DeprecationReportBody.sourceFile
-  - api.DeprecationReportBody.toJSON
-  - api.InterventionReportBody
-  - api.InterventionReportBody.columnNumber
-  - api.InterventionReportBody.id
-  - api.InterventionReportBody.lineNumber
-  - api.InterventionReportBody.message
-  - api.InterventionReportBody.sourceFile
-  - api.InterventionReportBody.toJSON
   - api.ReportingObserver
   - api.ReportingObserver.ReportingObserver
+  - api.ReportingObserver.ReportingObserver.options_parameter
+  - api.ReportingObserver.ReportingObserver.options_parameter.types_property
+  - api.ReportingObserver.ReportingObserver.options_parameter.types_property.coep
+  - api.ReportingObserver.ReportingObserver.options_parameter.types_property.csp-violation
+  - api.ReportingObserver.ReportingObserver.options_parameter.types_property.deprecation
+  - api.ReportingObserver.ReportingObserver.options_parameter.types_property.integrity-violation
+  - api.ReportingObserver.ReportingObserver.options_parameter.types_property.intervention
   - api.ReportingObserver.disconnect
   - api.ReportingObserver.observe
   - api.ReportingObserver.takeRecords

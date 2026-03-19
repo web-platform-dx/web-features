@@ -4,14 +4,15 @@
 status:
   baseline: false
   support:
-    chrome: "144"
-    chrome_android: "144"
-    edge: "144"
+    chrome: "109"
+    chrome_android: "109"
+    edge: "109"
     firefox: "146"
     firefox_android: "146"
 compat_features:
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-08-29
+  # baseline_high_date: 2026-02-28
   # support:
   #   chrome: "109"
   #   chrome_android: "109"
@@ -44,13 +45,3 @@ compat_features:
   #   firefox: "117"
   #   firefox_android: "117"
   - css.properties.math-depth.auto-add
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "144"
-  #   chrome_android: "144"
-  #   edge: "144"
-  #   firefox: "146"
-  #   firefox_android: "146"
-  - mathml.global_attributes.dir.rtl_operator_mirroring

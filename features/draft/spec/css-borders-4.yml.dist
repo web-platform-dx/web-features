@@ -3,11 +3,13 @@
 
 status:
   baseline: false
-  support:
-    chrome: "139"
-    chrome_android: "139"
-    edge: "139"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "139"
+  #   chrome_android: "139"
+  #   edge: "139"
   - css.properties.corner-block-end-shape.bevel
   - css.properties.corner-block-end-shape.notch
   - css.properties.corner-block-end-shape.round
@@ -110,3 +112,9 @@ compat_features:
   - css.properties.corner-top-shape.scoop
   - css.properties.corner-top-shape.square
   - css.properties.corner-top-shape.squircle
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.border-shape
+  - css.properties.border-shape.none
