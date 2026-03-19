@@ -1,8 +1,11 @@
-draft_date: 2025-12-08
+draft_date: 2026-03-16
 name: CSS Pseudo-Elements Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-pseudo-4/
 compat_features:
+  - api.CSSPseudoElement.parent
+  - api.CSSPseudoElement.pseudo
+  - api.Element.pseudo
   - css.selectors.after.nested_marker
   - css.selectors.before.nested_marker
   - css.selectors.search-text

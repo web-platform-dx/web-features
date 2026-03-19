@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "144"
-    chrome_android: "144"
-    edge: "144"
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -16,7 +13,6 @@ compat_features:
   - api.XRDepthInformation.projectionMatrix
   - api.XRDepthInformation.transform
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "144"
@@ -30,3 +26,15 @@ compat_features:
   - api.XRVisibilityMaskChangeEvent.indices
   - api.XRVisibilityMaskChangeEvent.session
   - api.XRVisibilityMaskChangeEvent.vertices
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.XRFrame.predictedDisplayTime
+  - api.XRInputSource.skipRendering
+  - api.XRRenderState.passthroughFullyObscured
+  - api.XRSession.frameRate
+  - api.XRSession.isSystemKeyboardSupported
+  - api.XRSession.supportedFrameRates
+  - api.XRSession.trackedSources
+  - api.XRSession.updateTargetFrameRate

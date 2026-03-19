@@ -24,6 +24,15 @@ compat_features:
   #   chrome_android: "139"
   - api.GPUSupportedFeatures.feature_core-features-and-limits
 
+  # baseline: false
+  # support:
+  #   chrome_android: "146"
+  - api.GPUSupportedLimits.maxStorageBuffersInFragmentStage
+  - api.GPUSupportedLimits.maxStorageBuffersInVertexStage
+  - api.GPUSupportedLimits.maxStorageTexturesInFragmentStage
+  - api.GPUSupportedLimits.maxStorageTexturesInVertexStage
+  - api.GPUTexture.textureBindingViewDimension
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
@@ -38,9 +47,4 @@ compat_features:
   - api.GPUSupportedFeatures.feature_texture-component-swizzle
   - api.GPUSupportedFeatures.feature_texture-formats-tier1
   - api.GPUSupportedFeatures.feature_texture-formats-tier2
-  - api.GPUSupportedLimits.maxStorageBuffersInFragmentStage
-  - api.GPUSupportedLimits.maxStorageBuffersInVertexStage
-  - api.GPUSupportedLimits.maxStorageTexturesInFragmentStage
-  - api.GPUSupportedLimits.maxStorageTexturesInVertexStage
   - api.GPUTexture.createView.descriptor_swizzle_parameter
-  - api.GPUTexture.textureBindingViewDimension
