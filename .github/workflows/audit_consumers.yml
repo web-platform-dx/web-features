@@ -1,9 +1,9 @@
 name: Audit Consumers
 
 on:
-  # Runs on the 1st and 15th of every month, at 03:45 UTC, or manually triggered
+  # Runs on the 1st of every month, at 03:45 UTC, or manually triggered
   schedule:
-    - cron: "45 3 1,15 * *"
+    - cron: "45 3 1 * *"
   workflow_dispatch:
 
 jobs:
