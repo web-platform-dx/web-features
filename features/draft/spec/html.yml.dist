@@ -591,8 +591,9 @@ compat_features:
   #   safari_ios: "16.4"
   - api.ElementInternals.shadowRoot
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-09-18
+  # baseline_high_date: 2026-03-18
   # support:
   #   chrome: "66"
   #   chrome_android: "66"
@@ -880,6 +881,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "146"
+  #   chrome_android: "146"
+  #   edge: "146"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - html.elements.template.shadowrootcustomelementregistry
+
+  # baseline: false
+  # support:
   #   chrome: "96"
   #   chrome_android: "96"
   #   edge: "96"
@@ -918,14 +928,6 @@ compat_features:
   #   safari: "26.2"
   #   safari_ios: "26.2"
   - html.elements.h1.no_ua_styles_in_article_aside_nav_section
-
-  # baseline: false
-  # support:
-  #   chrome: "146"
-  #   chrome_android: "146"
-  #   safari: "26"
-  #   safari_ios: "26"
-  - html.elements.template.shadowrootcustomelementregistry
 
   # baseline: false
   # support:
