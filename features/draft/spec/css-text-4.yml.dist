@@ -76,6 +76,19 @@ compat_features:
   #   safari_ios: "17.4"
   - css.properties.text-wrap.auto
 
+  # baseline: low
+  # baseline_low_date: 2026-02-14
+  # support:
+  #   chrome: "145"
+  #   chrome_android: "145"
+  #   edge: "145"
+  #   firefox: "45"
+  #   firefox_android: "45"
+  #   safari: "7"
+  #   safari_ios: "7"
+  - css.properties.letter-spacing.percentages
+  - css.properties.word-spacing.percentages
+
   # baseline: false
   # support:
   #   safari: "16"

@@ -1042,6 +1042,12 @@ compat_features:
 
   # baseline: false
   # support:
+  #   safari: "3.1"
+  #   safari_ios: "3"
+  - api.HTMLMediaElement.playbackRate.negative_values
+
+  # baseline: false
+  # support:
   #   safari: "9"
   #   safari_ios: "9"
   - api.HTMLMediaElement.getStartDate
