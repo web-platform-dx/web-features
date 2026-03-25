@@ -1,4 +1,4 @@
-draft_date: 2026-03-02
+draft_date: 2026-03-16
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -129,6 +129,7 @@ compat_features:
   - html.elements.script.type.importmap.integrity
   - html.elements.script.type.importmap.multiple_import_maps
   - html.elements.select.autocomplete
+  - html.elements.template.shadowrootcustomelementregistry
   - html.elements.textarea.autocomplete.new-password
   - html.elements.textarea.autocomplete.one-time-code
   - html.elements.textarea.autocomplete.webauthn
@@ -2177,6 +2178,8 @@ compat_features:
 #   - api.PaintRenderingContext2D.translate
 # - Selection:
 #   - api.Range.createContextualFragment
+# - Reporting API:
+#   - api.ReportingObserver.ReportingObserver.options_parameter.types_property.coep
 # - Shared worker:
 #   - api.SharedWorker
 #   - api.SharedWorker.SharedWorker
