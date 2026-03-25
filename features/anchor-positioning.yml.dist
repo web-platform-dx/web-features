@@ -116,7 +116,6 @@ compat_features:
   - css.properties.min-width.anchor-size
   - css.properties.place-items.anchor-center
   - css.properties.place-self.anchor-center
-  - css.properties.position-anchor
   - css.properties.position-try
   - css.properties.right.anchor
   - css.properties.top.anchor
@@ -386,12 +385,11 @@ compat_features:
   #   edge: "144"
   #   firefox: "147"
   #   firefox_android: "147"
+  - css.properties.position-anchor
   - css.properties.position-anchor.none
 
   # baseline: false
   # support:
   #   firefox: "147"
   #   firefox_android: "147"
-  #   safari: "26"
-  #   safari_ios: "26"
   - css.properties.position-anchor.auto
