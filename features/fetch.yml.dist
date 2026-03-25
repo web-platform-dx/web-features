@@ -313,8 +313,9 @@ compat_features:
   #   safari_ios: "10.3"
   - api.Response.Response.accept_readablestream
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-09-18
+  # baseline_high_date: 2026-03-18
   # support:
   #   chrome: "105"
   #   chrome_android: "105"
@@ -325,8 +326,9 @@ compat_features:
   #   safari_ios: "17"
   - api.Response.json_static
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-09-18
+  # baseline_high_date: 2026-03-18
   # support:
   #   chrome: "113"
   #   chrome_android: "113"

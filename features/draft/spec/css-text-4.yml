@@ -1,10 +1,11 @@
-draft_date: 2026-02-16
+draft_date: 2026-03-25
 name: CSS Text Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-text-4/
 compat_features:
   - css.properties.hyphens.manual
   - css.properties.hyphens.none
+  - css.properties.letter-spacing.percentages
   - css.properties.text-align-last.center
   - css.properties.text-align-last.end
   - css.properties.text-align-last.justify
@@ -18,6 +19,7 @@ compat_features:
   - css.properties.white-space.preserve-breaks
   - css.properties.white-space.preserve-spaces
   - css.properties.white-space.wrap
+  - css.properties.word-spacing.percentages
 
 # The following features in the spec are already part of web-features:
 # - Hanging punctuation:

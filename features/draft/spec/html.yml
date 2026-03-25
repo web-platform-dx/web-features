@@ -1,4 +1,4 @@
-draft_date: 2026-03-16
+draft_date: 2026-03-25
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -39,6 +39,7 @@ compat_features:
   - api.HTMLInputElement.showPicker.time_input
   - api.HTMLInputElement.showPicker.week_input
   - api.HTMLMediaElement.getStartDate
+  - api.HTMLMediaElement.playbackRate.negative_values
   - api.HTMLOptionsCollection
   - api.HTMLOptionsCollection.add
   - api.HTMLOptionsCollection.length
