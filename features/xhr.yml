@@ -3,6 +3,7 @@ description: The `XMLHttpRequest` API makes HTTP requests. It's the predecessor 
 spec: https://xhr.spec.whatwg.org/
 # https://caniuse.com/xhr2 is not linked here. It's for a subset of the API that
 # is baked into our definition of XHR. It's too old to split out.
+group: fetch
 status:
   compute_from: api.XMLHttpRequest.XMLHttpRequest
 compat_features:
