@@ -1,10 +1,9 @@
-# TODO: Revisit this once we have a process to handle new proposals.
-# See https://github.com/web-platform-dx/web-features/issues/3079
 name: clipboardchange
 description: The `clipboardchange` event for `navigator.clipboard` fires when the user modifies the clipboard's contents.
 spec: https://w3c.github.io/clipboard-apis/#clipboard-event-clipboardchange
 group: clipboard
-# clipboardchange is not in BCD yet.
-# It is implemented in Chromium, and available only as an origin trial
-# in Chrome 140 to 142.
-# See https://chromestatus.com/feature/5085102657503232
+compat_features:
+  - api.ClipboardChangeEvent
+  - api.ClipboardChangeEvent.ClipboardChangeEvent
+  - api.ClipboardChangeEvent.changeId
+  - api.ClipboardChangeEvent.types

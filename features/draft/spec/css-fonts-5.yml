@@ -1,4 +1,4 @@
-draft_date: 2025-12-08
+draft_date: 2026-03-11
 name: CSS Fonts Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-fonts-5/
@@ -17,13 +17,12 @@ compat_features:
   - api.CSSFontFaceDescriptors.fontStretch
   - api.CSSFontFaceDescriptors.fontStyle
   - api.CSSFontFaceDescriptors.fontWeight
-  - api.CSSFontFaceDescriptors.fontWidth
   - api.CSSFontFaceDescriptors.size-adjust
   - api.CSSFontFaceDescriptors.sizeAdjust
   - api.CSSFontFaceDescriptors.src
   - api.CSSFontFaceDescriptors.unicode-range
   - api.CSSFontFaceDescriptors.unicodeRange
-  - css.at-rules.font-face.font-width
+  - api.CSSFontFaceRule.style.type_CSSFontFaceDescriptors
   - css.properties.font-language-override.normal
   - css.properties.font-synthesis-style.oblique-only
   - css.properties.font-synthesis.none
@@ -31,6 +30,19 @@ compat_features:
   - css.properties.font-width.percentage
 
 # The following features in the spec are already part of web-features:
+# - font-width:
+#   - api.CSSFontFaceDescriptors.fontWidth
+#   - css.at-rules.font-face.font-width
+#   - css.properties.font-width
+#   - css.properties.font-width.condensed
+#   - css.properties.font-width.expanded
+#   - css.properties.font-width.extra-condensed
+#   - css.properties.font-width.extra-expanded
+#   - css.properties.font-width.normal
+#   - css.properties.font-width.semi-condensed
+#   - css.properties.font-width.semi-expanded
+#   - css.properties.font-width.ultra-condensed
+#   - css.properties.font-width.ultra-expanded
 # - @font-face:
 #   - api.CSSFontFaceRule
 #   - api.CSSFontFaceRule.style
@@ -111,6 +123,20 @@ compat_features:
 #   - css.at-rules.font-face.font-feature-settings
 #   - css.properties.font-feature-settings
 #   - css.properties.font-feature-settings.normal
+# - font-stretch:
+#   - css.at-rules.font-face.font-stretch
+#   - css.properties.font.font-width_keyword_values
+#   - css.properties.font-stretch
+#   - css.properties.font-stretch.condensed
+#   - css.properties.font-stretch.expanded
+#   - css.properties.font-stretch.extra-condensed
+#   - css.properties.font-stretch.extra-expanded
+#   - css.properties.font-stretch.normal
+#   - css.properties.font-stretch.percentage
+#   - css.properties.font-stretch.semi-condensed
+#   - css.properties.font-stretch.semi-expanded
+#   - css.properties.font-stretch.ultra-condensed
+#   - css.properties.font-stretch.ultra-expanded
 # - font-style:
 #   - css.at-rules.font-face.font-style
 #   - css.properties.font-style
@@ -145,8 +171,6 @@ compat_features:
 #   - css.properties.font.message-box
 #   - css.properties.font.small-caption
 #   - css.properties.font.status-bar
-# - font-stretch:
-#   - css.properties.font.font-width_keyword_values
 # - font-family:
 #   - css.properties.font-family
 #   - css.properties.font-family.cursive
@@ -278,14 +302,3 @@ compat_features:
 #   - css.properties.font-variant-position.normal
 #   - css.properties.font-variant-position.sub
 #   - css.properties.font-variant-position.super
-# - font-width:
-#   - css.properties.font-width
-#   - css.properties.font-width.condensed
-#   - css.properties.font-width.expanded
-#   - css.properties.font-width.extra-condensed
-#   - css.properties.font-width.extra-expanded
-#   - css.properties.font-width.normal
-#   - css.properties.font-width.semi-condensed
-#   - css.properties.font-width.semi-expanded
-#   - css.properties.font-width.ultra-condensed
-#   - css.properties.font-width.ultra-expanded

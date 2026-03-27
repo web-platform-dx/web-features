@@ -223,6 +223,19 @@ compat_features:
   # baseline_low_date: 2022-03-14
   # baseline_high_date: 2024-09-14
   # support:
+  #   chrome: "52"
+  #   chrome_android: "52"
+  #   edge: "79"
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - http.headers.Content-Security-Policy.strict-dynamic
+
+  # baseline: high
+  # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
+  # support:
   #   chrome: "59"
   #   chrome_android: "59"
   #   edge: "79"
@@ -231,19 +244,6 @@ compat_features:
   #   safari: "15.4"
   #   safari_ios: "15.4"
   - http.headers.Content-Security-Policy.report-sample
-
-  # baseline: high
-  # baseline_low_date: 2022-03-14
-  # baseline_high_date: 2024-09-14
-  # support:
-  #   chrome: "61"
-  #   chrome_android: "61"
-  #   edge: "79"
-  #   firefox: "31"
-  #   firefox_android: "31"
-  #   safari: "15.4"
-  #   safari_ios: "15.4"
-  - html.global_attributes.nonce
 
   # baseline: high
   # baseline_low_date: 2022-03-14
@@ -295,7 +295,7 @@ compat_features:
   #   firefox_android: "79"
   #   safari: "15.5"
   #   safari_ios: "15.5"
-  - html.global_attributes.nonce.nonce_hiding
+  - html.global_attributes.nonce
 
   # baseline: high
   # baseline_low_date: 2022-09-12
@@ -324,7 +324,6 @@ compat_features:
   - http.headers.Content-Security-Policy.script-src-attr
   - http.headers.Content-Security-Policy.script-src-elem
   - http.headers.Content-Security-Policy.style-src-attr
-  - http.headers.Content-Security-Policy.style-src-elem
 
   # baseline: high
   # baseline_low_date: 2023-01-17
@@ -339,8 +338,9 @@ compat_features:
   #   safari_ios: "15.4"
   - http.headers.Content-Security-Policy.unsafe-hashes
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-08-01
+  # baseline_high_date: 2026-02-01
   # support:
   #   chrome: "59"
   #   chrome_android: "59"
@@ -351,15 +351,17 @@ compat_features:
   #   safari_ios: "15.6"
   - http.headers.Content-Security-Policy.script-src.external_scripts
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-12-12
   # support:
-  #   chrome: "52"
-  #   chrome_android: "52"
+  #   chrome: "75"
+  #   chrome_android: "75"
   #   edge: "79"
-  #   firefox: "52"
-  #   safari: "15.4"
-  #   safari_ios: "15.4"
-  - http.headers.Content-Security-Policy.strict-dynamic
+  #   firefox: "108"
+  #   firefox_android: "108"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - http.headers.Content-Security-Policy.style-src-elem
 
   # baseline: false
   # support:

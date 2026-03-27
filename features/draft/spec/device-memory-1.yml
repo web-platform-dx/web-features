@@ -1,0 +1,12 @@
+draft_date: 2025-12-18
+name: Device Memory
+description: TODO
+spec: https://www.w3.org/TR/device-memory/
+compat_features:
+  - http.headers.Accept-CH.Sec-CH-Device-Memory
+
+# The following features in the spec are already part of web-features:
+# - Device memory:
+#   - api.Navigator.deviceMemory
+#   - api.WorkerNavigator.deviceMemory
+#   - http.headers.Sec-CH-Device-Memory

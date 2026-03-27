@@ -576,6 +576,19 @@ compat_features:
   - api.RTCRtpReceiver.getSynchronizationSources.video_tracks_supported
 
   # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "74"
+  #   chrome_android: "74"
+  #   edge: "79"
+  #   firefox: "64"
+  #   firefox_android: "64"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.RTCRtpSender.setParameters.parameters_encodings_parameter.scaleResolutionDownBy
+
+  # baseline: high
   # baseline_low_date: 2020-03-24
   # baseline_high_date: 2022-09-24
   # support:
@@ -787,6 +800,20 @@ compat_features:
   #   safari: "11.1"
   #   safari_ios: "11.3"
   - api.RTCRtpSender.setParameters.parameters_encodings_parameter.active
+
+  # baseline: high
+  # baseline_low_date: 2023-02-14
+  # baseline_high_date: 2025-08-14
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "69"
+  #   edge: "79"
+  #   firefox: "110"
+  #   firefox_android: "110"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - api.RTCRtpSender.getParameters.return_object_property_transactionId
+  - api.RTCRtpSender.setParameters.parameters_transactionId_parameter
 
   # baseline: high
   # baseline_low_date: 2023-02-14
@@ -1036,16 +1063,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "74"
-  #   chrome_android: "74"
-  #   firefox: "64"
-  #   firefox_android: "64"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - api.RTCRtpSender.setParameters.parameters_encodings_parameter.scaleResolutionDownBy
-
-  # baseline: false
-  # support:
   #   chrome: "57"
   #   chrome_android: "57"
   #   edge: "79"
@@ -1088,9 +1105,7 @@ compat_features:
   #   edge: "79"
   #   safari: "12.1"
   #   safari_ios: "12.2"
-  - api.RTCRtpSender.getParameters.return_object_property_transactionId
   - api.RTCRtpSender.setParameters.parameters_headerExtensions_parameter
-  - api.RTCRtpSender.setParameters.parameters_transactionId_parameter
 
   # baseline: false
   # support:
@@ -1254,12 +1269,6 @@ compat_features:
   #   edge: "124"
   - api.RTCIceCandidate.relayProtocol
   - api.RTCIceCandidate.url
-
-  # baseline: false
-  # support:
-  #   safari: "12"
-  #   safari_ios: "12"
-  - api.RTCPeerConnectionIceEvent.url
 
   # baseline: false
   # support:

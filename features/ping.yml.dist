@@ -32,6 +32,12 @@ compat_features:
   - html.elements.area.ping
 
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
   - api.SVGAElement.ping
+
+  # baseline: false
+  # support: {}
   - svg.elements.a.ping

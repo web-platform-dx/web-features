@@ -1687,8 +1687,9 @@ compat_features:
   #   safari_ios: "16.4"
   - api.SVGStyleElement.sheet
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-09-18
+  # baseline_high_date: 2026-03-18
   # support:
   #   chrome: "59"
   #   chrome_android: "59"
@@ -1775,6 +1776,31 @@ compat_features:
   - api.SVGGeometryElement.isPointInFill.point_parameter_DOMPoint
   - api.SVGGeometryElement.isPointInStroke.point_parameter_DOMPoint
 
+  # baseline: low
+  # baseline_low_date: 2025-12-12
+  # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  #   edge: "142"
+  #   firefox: "117"
+  #   firefox_android: "117"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - api.SVGScriptElement.async
+
+  # baseline: low
+  # baseline_low_date: 2026-01-21
+  # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
+  #   firefox: "61"
+  #   firefox_android: "61"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - api.SVGAElement.hreflang
+  - api.SVGAElement.type
+
   # baseline: false
   # support:
   #   chrome: "1"
@@ -1837,12 +1863,12 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "142"
-  #   chrome_android: "142"
-  #   edge: "142"
-  #   firefox: "117"
-  #   firefox_android: "117"
-  - api.SVGScriptElement.async
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
+  #   firefox: "61"
+  #   firefox_android: "61"
+  - api.SVGAElement.referrerPolicy
 
   # baseline: false
   # support:
@@ -1910,9 +1936,6 @@ compat_features:
   # support:
   #   firefox: "61"
   #   firefox_android: "61"
-  - api.SVGAElement.hreflang
-  - api.SVGAElement.referrerPolicy
-  - api.SVGAElement.type
   - svg.elements.a.hreflang
   - svg.elements.a.type
   - svg.elements.textPath.path

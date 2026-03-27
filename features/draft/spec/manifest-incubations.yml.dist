@@ -4,6 +4,7 @@
 status:
   baseline: false
   support:
+    chrome: "138"
     edge: "138"
 compat_features:
   # baseline: false
@@ -26,13 +27,6 @@ compat_features:
   #   chrome_android: "138"
   #   edge: "138"
   - manifests.webapp.scope_extensions
-
-  # baseline: false
-  # support:
-  #   chrome_android: "44"
-  #   edge: "17"
-  - manifests.webapp.prefer_related_applications
-  - manifests.webapp.related_applications
 
   # baseline: false
   # support:

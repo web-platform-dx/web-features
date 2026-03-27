@@ -15,7 +15,16 @@ compat_features:
   - css.selectors.after.nested_marker
   - css.selectors.before.nested_marker
 
+  # baseline: false
+  # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
+  - css.selectors.search-text
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - css.selectors.search-text
+  - api.CSSPseudoElement.parent
+  - api.CSSPseudoElement.pseudo
+  - api.Element.pseudo

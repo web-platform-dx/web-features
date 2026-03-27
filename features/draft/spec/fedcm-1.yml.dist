@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "144"
+    chrome_android: "144"
+    edge: "144"
 compat_features:
   # baseline: false
   # support:
@@ -66,5 +69,8 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
   - api.IdentityCredentialError.error

@@ -16,11 +16,110 @@ compat_features:
   - api.HTMLDataListElement
   - api.HTMLDataListElement.options
 
+  # baseline: high
+  # baseline_low_date: 2019-03-25
+  # baseline_high_date: 2021-09-25
+  # support:
+  #   chrome: "20"
+  #   chrome_android: "33"
+  #   edge: "12"
+  #   firefox: "4"
+  #   firefox_android: "4"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - html.elements.input.type_text.list
+
+  # baseline: high
+  # baseline_low_date: 2019-03-25
+  # baseline_high_date: 2021-09-25
+  # support:
+  #   chrome: "22"
+  #   chrome_android: "33"
+  #   edge: "12"
+  #   firefox: "4"
+  #   firefox_android: "4"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - html.elements.input.type_email.list
+  - html.elements.input.type_search.list
+  - html.elements.input.type_tel.list
+  - html.elements.input.type_url.list
+
+  # baseline: high
+  # baseline_low_date: 2019-03-25
+  # baseline_high_date: 2021-09-25
+  # support:
+  #   chrome: "22"
+  #   chrome_android: "33"
+  #   edge: "12"
+  #   firefox: "29"
+  #   firefox_android: "29"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - html.elements.input.type_number.list
+
   # baseline: false
   # support:
   #   chrome: "20"
   #   chrome_android: "33"
   #   edge: "12"
+  #   firefox: "4"
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - html.elements.datalist
+  - html.elements.datalist.input_type_text
+
+  # baseline: false
+  # support:
+  #   chrome: "20"
+  #   chrome_android: "57"
+  #   edge: "12"
+  #   firefox: "110"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - html.elements.datalist.input_type_range
+  - html.elements.input.type_range.list
+
+  # baseline: false
+  # support:
+  #   chrome: "22"
+  #   chrome_android: "33"
+  #   edge: "12"
+  #   firefox: "4"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - html.elements.datalist.input_type_email
+  - html.elements.datalist.input_type_number
+  - html.elements.datalist.input_type_search
+  - html.elements.datalist.input_type_tel
+  - html.elements.datalist.input_type_url
+
+  # baseline: false
+  # support:
+  #   chrome: "20"
+  #   chrome_android: "33"
+  #   edge: "12"
+  #   safari: "14.1"
+  #   safari_ios: "12.2"
+  - html.elements.datalist.input_type_time
+  - html.elements.input.type_time.list
+
+  # baseline: false
+  # support:
+  #   chrome: "20"
+  #   chrome_android: "33"
+  #   edge: "12"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - html.elements.datalist.input_type_date
+  - html.elements.input.type_date.list
+
+  # baseline: false
+  # support:
+  #   chrome: "20"
+  #   chrome_android: "33"
+  #   edge: "14"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - html.elements.datalist.input_type_color
+  - html.elements.input.type_color.list

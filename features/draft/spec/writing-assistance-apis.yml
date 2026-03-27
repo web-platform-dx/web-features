@@ -1,14 +1,14 @@
-draft_date: 2025-06-16
+draft_date: 2026-02-17
 name: Writing Assistance APIs
 description: TODO
 spec: https://webmachinelearning.github.io/writing-assistance-apis/
 compat_features:
   - api.CreateMonitor
   - api.CreateMonitor.downloadprogress_event
-  - api.LanguageDetector.destroy
-  - api.Translator.destroy
 
 # The following features in the spec are already part of web-features:
+# - Language detector:
+#   - api.LanguageDetector.destroy
 # - Summarizer:
 #   - api.Summarizer
 #   - api.Summarizer.availability_static
@@ -26,3 +26,5 @@ compat_features:
 #   - api.Summarizer.summarizeStreaming
 #   - api.Summarizer.type
 #   - http.headers.Permissions-Policy.summarizer
+# - Translator:
+#   - api.Translator.destroy

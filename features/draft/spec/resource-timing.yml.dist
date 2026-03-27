@@ -15,6 +15,14 @@ compat_features:
   #   edge: "133"
   - api.PerformanceResourceTiming.finalResponseHeadersStart
 
+  # baseline: false
+  # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
+  - api.PerformanceResourceTiming.workerCacheLookupStart
+  - api.PerformanceResourceTiming.workerRouterEvaluationStart
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
