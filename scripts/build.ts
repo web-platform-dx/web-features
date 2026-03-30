@@ -108,7 +108,9 @@ function buildProposed() {
     if (data.kind === undefined) {
       data.kind = "proposed";
     } else if (!["proposed", "moved", "split"].includes(data.kind)) {
-      console.log(`${fp} uses an unexpected kind ${JSON.stringify(data.kind)}. Skipping.`);
+      console.log(
+        `${fp} uses an unexpected kind ${JSON.stringify(data.kind)}. Skipping.`,
+      );
       continue;
     }
     features[key] = data;
