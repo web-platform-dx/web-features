@@ -27,12 +27,6 @@
         },
         "safari_ios": {
           "$ref": "#/definitions/BrowserData"
-        },
-        "webview_android": {
-          "$ref": "#/definitions/BrowserData"
-        },
-        "webview_ios": {
-          "$ref": "#/definitions/BrowserData"
         }
       },
       "required": [
@@ -42,9 +36,7 @@
         "firefox",
         "firefox_android",
         "safari",
-        "safari_ios",
-        "webview_android",
-        "webview_ios"
+        "safari_ios"
       ],
       "additionalProperties": false
     },
@@ -303,7 +295,14 @@
             },
             "safari_ios": {
               "type": "string"
-            },
+            }
+          },
+          "additionalProperties": false
+        },
+        "ecosystem_support": {
+          "description": "Support in user agents that are not part of the core browser set.",
+          "type": "object",
+          "properties": {
             "webview_android": {
               "type": "string"
             },
@@ -324,6 +323,7 @@
         "baseline_high_date": {},
         "baseline_low_date": {},
         "support": {},
+        "ecosystem_support": {},
         "by_compat_key": {
           "description": "Statuses for each key in the feature's compat_features list, if applicable.",
           "type": "object",

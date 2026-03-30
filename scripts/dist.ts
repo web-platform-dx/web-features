@@ -282,6 +282,7 @@ function toDist(sourcePath: string): YAML.Document {
   }
 
   computedStatus = JSON.parse(computedStatus.toJSON());
+  delete computedStatus.ecosystem_support;
 
   if (source.status) {
     if (isDeepStrictEqual(source.status, computedStatus)) {
@@ -294,7 +295,8 @@ function toDist(sourcePath: string): YAML.Document {
   // Map between status object and BCD keys with that computed status.
   const groups = new Map<SupportStatus, string[]>();
   for (const key of compatFeatures) {
-    const status = getStatus(id, key);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { ecosystem_support: _, ...status } = getStatus(id, key);
     let added = false;
     for (const [existingKey, list] of groups.entries()) {
       if (isDeepStrictEqual(status, existingKey)) {

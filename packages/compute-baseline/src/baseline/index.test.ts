@@ -182,18 +182,18 @@ describe("computeBaseline", function () {
       checkAncestors: true,
     });
 
-    const androidWebview = [...result.support.keys()].find(
+    const androidWebview = [...result.ecosystem_support.keys()].find(
       (b) => b.id === "webview_android",
     );
-    const iosWebview = [...result.support.keys()].find(
+    const iosWebview = [...result.ecosystem_support.keys()].find(
       (b) => b.id === "webview_ios",
     );
 
     assert(androidWebview, "android_webview should be present in support data");
     assert(iosWebview, "ios_webview should be present in support data");
 
-    const androidWebviewSupport = result.support.get(androidWebview);
-    const iosWebviewSupport = result.support.get(iosWebview);
+    const androidWebviewSupport = result.ecosystem_support.get(androidWebview);
+    const iosWebviewSupport = result.ecosystem_support.get(iosWebview);
 
     assert(androidWebviewSupport, "android_webview should have support data");
     assert(iosWebviewSupport, "ios_webview should have support data");
@@ -205,18 +205,18 @@ describe("computeBaseline", function () {
       checkAncestors: true,
     });
 
-    const androidWebview = [...result.support.keys()].find(
+    const androidWebview = [...result.ecosystem_support.keys()].find(
       (b) => b.id === "webview_android",
     );
-    const iosWebview = [...result.support.keys()].find(
+    const iosWebview = [...result.ecosystem_support.keys()].find(
       (b) => b.id === "webview_ios",
     );
 
     assert(androidWebview, "android_webview should be present in support data");
     assert(iosWebview, "ios_webview should be present in support data");
 
-    const androidWebviewSupport = result.support.get(androidWebview);
-    const iosWebviewSupport = result.support.get(iosWebview);
+    const androidWebviewSupport = result.ecosystem_support.get(androidWebview);
+    const iosWebviewSupport = result.ecosystem_support.get(iosWebview);
 
     assert(
       !androidWebviewSupport,
