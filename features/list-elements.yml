@@ -7,23 +7,20 @@ spec:
 group:
   - html-elements
   - lists
-status:
-  compute_from:
-    - html.elements.ol
-    - html.elements.ul
-    - html.elements.li
 compat_features:
-  - api.HTMLLIElement
-  - api.HTMLLIElement.value
-  - api.HTMLOListElement
-  - api.HTMLOListElement.reversed
-  - api.HTMLOListElement.start
-  - api.HTMLOListElement.type
-  - api.HTMLUListElement
-  - html.elements.li
-  - html.elements.li.value
-  - html.elements.ol
-  - html.elements.ol.reversed
-  - html.elements.ol.start
-  - html.elements.ol.type
-  - html.elements.ul
+  core_name_tbc:
+    - api.HTMLLIElement
+    - api.HTMLLIElement.value
+    - api.HTMLOListElement
+    - api.HTMLOListElement.start
+    - api.HTMLOListElement.type
+    - api.HTMLUListElement
+    - html.elements.li # former compute_from
+    - html.elements.li.value
+    - html.elements.ol # former compute_from
+    - html.elements.ol.start
+    - html.elements.ol.type
+    - html.elements.ul # former compute_from
+  modifiers_name_tbc:
+    - api.HTMLOListElement.reversed
+    - html.elements.ol.reversed
