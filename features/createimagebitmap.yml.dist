@@ -120,11 +120,14 @@ compat_features:
   #   safari_ios: "17.2"
   - api.createImageBitmap.svgimageelement_as_source_image
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-03-24
   # support:
   #   chrome: "54"
   #   chrome_android: "54"
   #   edge: "79"
+  #   firefox: "149"
+  #   firefox_android: "149"
   #   safari: "15"
   #   safari_ios: "15"
   - api.createImageBitmap.options_resizeQuality_parameter

@@ -915,6 +915,14 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "149"
+  - api.HTMLInputElement.showPicker.datalist_input
+
+  # baseline: false
+  # support:
   #   firefox: "127"
   #   firefox_android: "127"
   #   safari: "17.2"
@@ -958,7 +966,6 @@ compat_features:
   #   chrome_android: "99"
   #   edge: "99"
   - api.HTMLInputElement.showPicker.autocomplete_input
-  - api.HTMLInputElement.showPicker.datalist_input
 
   # baseline: false
   # support:

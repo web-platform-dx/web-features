@@ -33,9 +33,10 @@ compat_features:
   - css.properties.text-box.ideographic
   - css.properties.text-box.ideographic-ink
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "149"
+  #   firefox_android: "149"
   - css.properties.alignment-baseline.text-bottom
   - css.properties.alignment-baseline.text-top
   - css.properties.baseline-shift.bottom

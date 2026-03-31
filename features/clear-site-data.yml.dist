@@ -18,25 +18,16 @@ compat_features:
   - http.headers.Clear-Site-Data.secure_context_required
   - http.headers.Clear-Site-Data.storage
 
-  # baseline: high
-  # baseline_low_date: 2023-09-18
-  # baseline_high_date: 2026-03-18
+  # baseline: false
   # support:
-  #   chrome: "117"
-  #   chrome_android: "117"
-  #   edge: "117"
   #   firefox: "63"
   #   firefox_android: "63"
   #   safari: "17"
   #   safari_ios: "17"
   - http.headers.Clear-Site-Data.wildcard
 
-  # baseline: low
-  # baseline_low_date: 2025-04-29
+  # baseline: false
   # support:
-  #   chrome: "65"
-  #   chrome_android: "65"
-  #   edge: "79"
   #   firefox: "138"
   #   firefox_android: "138"
   #   safari: "17"
