@@ -1,8 +1,12 @@
-draft_date: 2026-02-04
+draft_date: 2026-03-31
 name: DOM
 description: TODO
 spec: https://dom.spec.whatwg.org/
 compat_features:
+  - api.Document.createElement.options_parameter.customElementRegistry_option
+  - api.Document.createElement.options_parameter.options_is_parameter
+  - api.Document.createElementNS.options_parameter.customElementRegistry_option
+  - api.Document.createElementNS.options_parameter.options_is_parameter
   - api.Element.setAttribute.enforces_trusted_types
   - api.Element.setAttributeNS.enforces_trusted_types
 

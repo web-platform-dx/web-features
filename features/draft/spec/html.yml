@@ -1,4 +1,4 @@
-draft_date: 2026-03-25
+draft_date: 2026-03-31
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -1612,6 +1612,10 @@ compat_features:
 #   - html.elements.track.srclang
 # - fastSeek():
 #   - api.HTMLMediaElement.fastSeek
+# - Lazy-loading media:
+#   - api.HTMLMediaElement.loading
+#   - html.elements.audio.loading
+#   - html.elements.video.autoplay.loading
 # - preservesPitch:
 #   - api.HTMLMediaElement.preservesPitch
 # - Media source:
