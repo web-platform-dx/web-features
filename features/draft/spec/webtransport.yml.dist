@@ -3,18 +3,24 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    safari: "26.4"
+    safari_ios: "26.4"
 compat_features:
   # baseline: false
   # support:
   #   chrome: "143"
   #   chrome_android: "143"
   #   edge: "143"
+  #   safari: "26.4"
+  #   safari_ios: "26.4"
   - api.WebTransport.protocol
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   safari: "26.4"
+  #   safari_ios: "26.4"
   - api.WebTransport.anticipatedConcurrentIncomingBidirectionalStreams
   - api.WebTransport.anticipatedConcurrentIncomingUnidirectionalStreams
   - api.WebTransport.createSendGroup

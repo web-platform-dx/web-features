@@ -1293,21 +1293,27 @@ compat_features:
   #   safari_ios: "1"
   - api.HTMLElement.outerText
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-09-15
   # support:
   #   chrome: "56"
   #   chrome_android: "56"
   #   edge: "79"
   #   firefox: "50"
   #   firefox_android: "50"
+  #   safari: "26"
+  #   safari_ios: "26"
   - api.Document.createElement.options_parameter
   - api.Document.createElementNS.options_parameter
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-03-24
   # support:
   #   chrome: "128"
   #   chrome_android: "128"
   #   edge: "128"
   #   firefox: "126"
   #   firefox_android: "126"
+  #   safari: "26.4"
+  #   safari_ios: "26.4"
   - api.Element.currentCSSZoom

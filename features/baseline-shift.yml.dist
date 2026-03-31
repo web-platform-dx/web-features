@@ -10,7 +10,26 @@ status:
     safari: "4"
     safari_ios: "3.2"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2026-03-24
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: "149"
+  #   firefox_android: "149"
+  #   safari: "4"
+  #   safari_ios: "3.2"
   - css.properties.baseline-shift
-  - css.properties.baseline-shift.baseline
   - css.properties.baseline-shift.sub
   - css.properties.baseline-shift.super
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - css.properties.baseline-shift.baseline

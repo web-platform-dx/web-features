@@ -7,7 +7,19 @@ status:
     safari: "18.4"
     safari_ios: "18.4"
 compat_features:
-  - api.HTMLInputElement.alpha
+  # baseline: false
+  # support:
+  #   firefox: "149"
+  #   firefox_android: "149"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
   - api.HTMLInputElement.colorSpace
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - api.HTMLInputElement.alpha
   - html.elements.input.alpha
   - html.elements.input.colorspace

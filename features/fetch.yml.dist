@@ -366,6 +366,18 @@ compat_features:
   - api.Request.bytes
   - api.Response.bytes
 
+  # baseline: low
+  # baseline_low_date: 2026-03-24
+  # support:
+  #   chrome: "116"
+  #   chrome_android: "116"
+  #   edge: "116"
+  #   firefox: "102"
+  #   firefox_android: "102"
+  #   safari: "26.4"
+  #   safari_ios: "26.4"
+  - api.Response.body.readable_byte_stream
+
   # baseline: false
   # support:
   #   chrome: "43"
@@ -405,15 +417,6 @@ compat_features:
   #   safari: "10.1"
   #   safari_ios: "10.3"
   - api.Request.cache.only-if-cached
-
-  # baseline: false
-  # support:
-  #   chrome: "116"
-  #   chrome_android: "116"
-  #   edge: "116"
-  #   firefox: "102"
-  #   firefox_android: "102"
-  - api.Response.body.readable_byte_stream
 
   # baseline: false
   # support:
