@@ -3,9 +3,7 @@
 
 status:
   baseline: false
-  support:
-    safari: "26.2"
-    safari_ios: "26.2"
+  support: {}
 compat_features:
   # baseline: high
   # baseline_low_date: ≤2017-04-05
@@ -167,3 +165,8 @@ compat_features:
   #   safari_ios: "11.3"
   - css.properties.stroke-color.currentColor
   - css.properties.stroke-color.transparent
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.types.color.color-mix.variadic_color_arguments

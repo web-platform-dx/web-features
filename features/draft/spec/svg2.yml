@@ -1,4 +1,4 @@
-draft_date: 2026-01-29
+draft_date: 2026-03-31
 name: Scalable Vector Graphics (SVG) 2
 description: TODO
 spec: https://svgwg.org/svg2-draft/
@@ -32,6 +32,7 @@ compat_features:
   - css.properties.vector-effect.none
   - mediatypes.image.svg
   - svg.elements.use.omit_external_fragment
+  - svg.global_attributes.font-stretch
   - svg.global_attributes.transform.svg_root
 
 # The following features in the spec are already part of web-features:
