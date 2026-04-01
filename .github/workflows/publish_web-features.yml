@@ -53,7 +53,7 @@ jobs:
       - run: npm run build
       - run: npm publish
         working-directory: ${{ env.package_dir }}
-      - run: gh release upload ${{ github.ref_name }} packages/web-features/data.json data.extended.json schemas/data.schema.json
+      - run: gh release upload "$GITHUB_REF_NAME" packages/web-features/data.json data.extended.json schemas/data.schema.json
         env:
           GH_TOKEN: ${{ github.token }}
 
@@ -89,8 +89,11 @@ jobs:
 
       - name: Get package.json version
         id: version
-        run: echo "VERSION=$(npm version --json | jq --raw-output '.["${{ env.package }}"]')" >> $GITHUB_OUTPUT
+        run: echo "VERSION=$(npm version --json | jq --arg package "$PACKAGE" --raw-output '.[$package]')" >> $GITHUB_OUTPUT
         working-directory: ${{ env.package_dir }}
+        env:
+          PACKAGE: ${{ env.package }}
+          PACKAGE_DIR: ${{ env.package_dir }}
       - run: npm install
         working-directory: ${{ env.package_dir }}
       - run: npm version --no-git-tag-version "$VERSION-dev-$TIMESTAMP-$SHORT_HASH"
@@ -102,8 +105,10 @@ jobs:
           VERSION: ${{ steps.version.outputs.VERSION }}
           TIMESTAMP: ${{ steps.timestamp_and_hash.outputs.TIMESTAMP }}
           SHORT_HASH: ${{ steps.timestamp_and_hash.outputs.SHORT_HASH }}
-      - run: npm publish --tag ${{ env.dist_tag }}
+      - run: npm publish --tag "$DIST_TAG"
         working-directory: ${{ env.package_dir }}
+        env:
+          DIST_TAG: ${{ env.dist_tag }}
 
       - name: Set existing release to draft
         run: gh release edit --draft "$TAG"
