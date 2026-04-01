@@ -7,7 +7,14 @@ spec: https://w3c.github.io/webappsec-clear-site-data/
 # - https://github.com/mdn/browser-compat-data/pull/29333
 # - https://issues.chromium.org/issues/364634040
 status:
-  compute_from: http.headers.Clear-Site-Data.wildcard
+  # Compute from the header and values implied by the description: cache, cookies,
+  # storage, and the wildcard (`*`, which invokes all of the preceding).
+  compute_from:
+    - http.headers.Clear-Site-Data
+    - http.headers.Clear-Site-Data.cache
+    - http.headers.Clear-Site-Data.cookies
+    - http.headers.Clear-Site-Data.storage
+    - http.headers.Clear-Site-Data.wildcard
 compat_features:
   - http.headers.Clear-Site-Data
   - http.headers.Clear-Site-Data.cache

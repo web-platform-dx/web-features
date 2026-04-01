@@ -4,8 +4,8 @@
 status:
   baseline: false
   support:
-    firefox: "63"
-    firefox_android: "63"
+    firefox: "138"
+    firefox_android: "138"
     safari: "17"
     safari_ios: "17"
 compat_features:
@@ -25,7 +25,6 @@ compat_features:
   - http.headers.Clear-Site-Data.secure_context_required
   - http.headers.Clear-Site-Data.storage
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "63"
@@ -34,6 +33,7 @@ compat_features:
   #   safari_ios: "17"
   - http.headers.Clear-Site-Data.wildcard
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "138"
