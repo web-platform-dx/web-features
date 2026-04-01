@@ -2,7 +2,7 @@ name: Clearing site data
 description: The `Clear-Site-Data` header deletes browsing data (such as cookies, storage, or cache) associated with the requesting website.
 spec: https://w3c.github.io/webappsec-clear-site-data/
 # TODO: https://github.com/web-platform-dx/web-features/issues/1971
-# YYYY-MM-DD — low → false — A bug in Chrome prevents `Clear-Site-Data` from taking full effect until after a hard refresh.
+# 2026-04-01 — low → false — A bug in Chrome prevents `Clear-Site-Data` from taking full effect until after a hard refresh.
 # References:
 # - https://github.com/mdn/browser-compat-data/pull/29333
 # - https://issues.chromium.org/issues/364634040
