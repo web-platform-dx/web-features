@@ -1,5 +1,5 @@
-name: App Migration
-description: Web Application Origin Migration allows a web application to indicate to the user agent that it moved from one origin to another (within the same site). This then enables the user agent to migrate an installed web application while preserving the user's installation and potentially their settings.
+name: Web app origin migration
+description: The `migrate_to` and `migrate_from` web app manifest members move an installed app from one origin to another, within the same site. They preserve the user's installation settings and OS integration.
 spec: https://wicg.github.io/manifest-incubations/#web-application-origin-migration
 group: progressive-web-app
 compat_features:
