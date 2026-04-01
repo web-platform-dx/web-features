@@ -103,7 +103,7 @@ jobs:
         env:
           PACKAGE: ${{ env.package }}
           PACKAGE_DIR: ${{ env.package_dir }}
-      - run: npm install
+      - run: npm ci
         working-directory: ${{ env.package_dir }}
       - run: npm version --no-git-tag-version "$VERSION-dev-$TIMESTAMP-$SHORT_HASH"
         # The version string template is: <package.json version>-dev-<timestamp>-<commit-hash>
