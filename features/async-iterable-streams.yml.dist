@@ -10,5 +10,24 @@ status:
     firefox: "110"
     firefox_android: "110"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2026-03-24
+  # support:
+  #   chrome: "124"
+  #   chrome_android: "124"
+  #   edge: "124"
+  #   firefox: "110"
+  #   firefox_android: "110"
+  #   safari: "26.4"
+  #   safari_ios: "26.4"
   - api.ReadableStream.@@asyncIterator
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "124"
+  #   chrome_android: "124"
+  #   edge: "124"
+  #   firefox: "110"
+  #   firefox_android: "110"
   - api.ReadableStream.values

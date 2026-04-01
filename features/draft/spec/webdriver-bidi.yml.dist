@@ -606,6 +606,17 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  #   edge: "142"
+  #   firefox: "149"
+  #   firefox_android: "149"
+  - webdriver.bidi.browser.setDownloadBehavior
+  - webdriver.bidi.browser.setDownloadBehavior.downloadBehavior_parameter
+  - webdriver.bidi.browser.setDownloadBehavior.userContexts_parameter
+
+  # baseline: false
+  # support:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
@@ -694,15 +705,6 @@ compat_features:
   - webdriver.bidi.emulation.setScriptingEnabled.contexts_parameter
   - webdriver.bidi.emulation.setScriptingEnabled.enabled_parameter
   - webdriver.bidi.emulation.setScriptingEnabled.userContexts_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "142"
-  #   chrome_android: "142"
-  #   edge: "142"
-  - webdriver.bidi.browser.setDownloadBehavior
-  - webdriver.bidi.browser.setDownloadBehavior.downloadBehavior_parameter
-  - webdriver.bidi.browser.setDownloadBehavior.userContexts_parameter
 
   # baseline: false
   # support:

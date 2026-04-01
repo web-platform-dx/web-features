@@ -282,6 +282,19 @@ compat_features:
   #   safari_ios: "26.2"
   - css.properties.math-shift
 
+  # baseline: low
+  # baseline_low_date: 2026-03-24
+  # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  #   firefox: "117"
+  #   firefox_android: "117"
+  #   safari: "26.4"
+  #   safari_ios: "26.4"
+  - css.properties.font-size.math
+  - css.properties.math-depth
+
   # baseline: false
   # support:
   #   chrome: "109"
@@ -316,8 +329,6 @@ compat_features:
   #   edge: "109"
   #   firefox: "117"
   #   firefox_android: "117"
-  - css.properties.font-size.math
-  - css.properties.math-depth
   - css.properties.text-transform.math-auto
 
   # baseline: false

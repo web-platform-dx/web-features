@@ -1,0 +1,38 @@
+draft_date: 2026-03-31
+name: Cookie Store API
+description: TODO
+spec: https://cookiestore.spec.whatwg.org/
+compat_features:
+  - api.CookieStore.set.maxAge_option
+
+# The following features in the spec are already part of web-features:
+# - Cookie store:
+#   - api.CookieChangeEvent
+#   - api.CookieChangeEvent.CookieChangeEvent
+#   - api.CookieChangeEvent.changed
+#   - api.CookieChangeEvent.deleted
+#   - api.CookieStore
+#   - api.CookieStore.change_event
+#   - api.CookieStore.delete
+#   - api.CookieStore.get
+#   - api.CookieStore.get.name_return_property
+#   - api.CookieStore.get.value_return_property
+#   - api.CookieStore.getAll
+#   - api.CookieStore.set
+#   - api.CookieStoreManager
+#   - api.CookieStoreManager.getSubscriptions
+#   - api.CookieStoreManager.subscribe
+#   - api.CookieStoreManager.unsubscribe
+#   - api.ExtendableCookieChangeEvent
+#   - api.ExtendableCookieChangeEvent.ExtendableCookieChangeEvent
+#   - api.ExtendableCookieChangeEvent.changed
+#   - api.ExtendableCookieChangeEvent.deleted
+#   - api.ServiceWorkerGlobalScope.cookieStore
+#   - api.ServiceWorkerGlobalScope.cookiechange_event
+#   - api.ServiceWorkerRegistration.cookies
+#   - api.Window.cookieStore
+# - Partitioned cookies:
+#   - api.CookieStore.delete.partitioned_option
+#   - api.CookieStore.set.partitioned_option
+#   - api.ExtendableCookieChangeEvent.changed.partitioned_property
+#   - api.ExtendableCookieChangeEvent.deleted.partitioned_property

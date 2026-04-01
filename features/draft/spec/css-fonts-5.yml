@@ -1,22 +1,32 @@
-draft_date: 2026-03-11
+draft_date: 2026-03-31
 name: CSS Fonts Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-fonts-5/
 compat_features:
   - api.CSSFontFaceDescriptors
+  - api.CSSFontFaceDescriptors.ascent-override
+  - api.CSSFontFaceDescriptors.ascentOverride
+  - api.CSSFontFaceDescriptors.descent-override
+  - api.CSSFontFaceDescriptors.descentOverride
   - api.CSSFontFaceDescriptors.font-display
   - api.CSSFontFaceDescriptors.font-family
   - api.CSSFontFaceDescriptors.font-feature-settings
+  - api.CSSFontFaceDescriptors.font-language-override
   - api.CSSFontFaceDescriptors.font-stretch
   - api.CSSFontFaceDescriptors.font-style
+  - api.CSSFontFaceDescriptors.font-variation-settings
   - api.CSSFontFaceDescriptors.font-weight
   - api.CSSFontFaceDescriptors.font-width
   - api.CSSFontFaceDescriptors.fontDisplay
   - api.CSSFontFaceDescriptors.fontFamily
   - api.CSSFontFaceDescriptors.fontFeatureSettings
+  - api.CSSFontFaceDescriptors.fontLanguageOverride
   - api.CSSFontFaceDescriptors.fontStretch
   - api.CSSFontFaceDescriptors.fontStyle
+  - api.CSSFontFaceDescriptors.fontVariationSettings
   - api.CSSFontFaceDescriptors.fontWeight
+  - api.CSSFontFaceDescriptors.line-gap-override
+  - api.CSSFontFaceDescriptors.lineGapOverride
   - api.CSSFontFaceDescriptors.size-adjust
   - api.CSSFontFaceDescriptors.sizeAdjust
   - api.CSSFontFaceDescriptors.src
@@ -28,6 +38,7 @@ compat_features:
   - css.properties.font-synthesis.none
   - css.properties.font-variation-settings.normal
   - css.properties.font-width.percentage
+  - svg.global_attributes.font-stretch
 
 # The following features in the spec are already part of web-features:
 # - font-width:
