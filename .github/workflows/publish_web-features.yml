@@ -35,7 +35,7 @@ jobs:
 
   publish_latest:
     name: Publish release
-    if: github.repository == 'web-platform-dx/web-features' && env.dist_tag == 'latest'
+    if: github.repository == 'web-platform-dx/web-features' && ${{ startsWith(github.ref, 'refs/tags/') && 'latest' || 'next' }} == 'latest'
     runs-on: ubuntu-latest
     needs: "test"
     permissions:
@@ -64,7 +64,7 @@ jobs:
 
   publish_next:
     name: Publish prerelease
-    if: github.repository == 'web-platform-dx/web-features' && env.dist_tag == 'next'
+    if: github.repository == 'web-platform-dx/web-features' && ${{ startsWith(github.ref, 'refs/tags/') && 'latest' || 'next' }} == 'next'
     runs-on: ubuntu-latest
     needs: "test"
     permissions:
