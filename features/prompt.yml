@@ -1,0 +1,17 @@
+name: Prompt
+description: The `Prompt` API gives web pages the ability to directly prompt a language model.
+spec: http://webmachinelearning.github.io/prompt-api/
+compat_features:
+  - api.LanguageModel
+  - api.LanguageModel.append
+  - api.LanguageModel.availability_static
+  - api.LanguageModel.clone
+  - api.LanguageModel.contextUsage
+  - api.LanguageModel.contextWindow
+  - api.LanguageModel.create_static
+  - api.LanguageModel.destroy
+  - api.LanguageModel.measureContextUsage
+  - api.LanguageModel.oncontextoverflow_event
+  - api.LanguageModel.prompt
+  - api.LanguageModel.promptStreaming
+  - http.headers.Permissions-Policy.language-model
