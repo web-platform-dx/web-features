@@ -1,0 +1,13 @@
+name: dynamic-range-limit
+description: >
+  The `dynamic-range-limit` CSS property controls the peak luminance of high dynamic range content.
+  You can use this to coordinate the apparent brightness of HDR and SDR content.
+spec: https://drafts.csswg.org/css-color-hdr-1/#controlling-dynamic-range
+group: css
+compat_features:
+  - css.properties.dynamic-range-limit
+  - css.properties.dynamic-range-limit.constrained
+  - css.properties.dynamic-range-limit.dynamic-range-limit-mix_values
+  - css.properties.dynamic-range-limit.no-limit
+  - css.properties.dynamic-range-limit.standard
+  - css.types.dynamic-range-limit-mix
