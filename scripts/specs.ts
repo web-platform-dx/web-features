@@ -195,6 +195,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/whatwg/html/pull/11723",
         "Allowed because the focusgroup spec PR hasn't landed yet. Once the PR merges, remove this and add the spec URL to the focusgroup feature."
+    ],
+    [
+        "http://webmachinelearning.github.io/prompt-api/",
+        "Allowed LanguageModel is available in Chrome/Edge as an origin trial."
     ]
 ];
 
