@@ -198,7 +198,7 @@ const defaultAllowlist: allowlistItem[] = [
     ],
     [
         "http://webmachinelearning.github.io/prompt-api/",
-        "Allowed LanguageModel is available in Chrome/Edge as an origin trial."
+        "Allowed because LanguageModel is available in Chrome/Edge as an origin trial."
     ]
 ];
 
