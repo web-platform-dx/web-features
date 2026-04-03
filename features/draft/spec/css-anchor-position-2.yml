@@ -1,8 +1,11 @@
-draft_date: 2025-12-18
+draft_date: 2026-03-25
 name: CSS Anchor Positioning Module Level 2
 description: TODO
 spec: https://drafts.csswg.org/css-anchor-position-2/
 compat_features:
+  - api.HTMLButtonElement.commandForElement.implicit_anchor_reference
+  - css.properties.anchor-name.position_after_layout
+  - css.properties.position-area.disables_auto_margins_and_insets
   - css.properties.position-try-fallbacks.block-end
   - css.properties.position-try-fallbacks.block-start
   - css.properties.position-try-fallbacks.bottom
@@ -96,6 +99,7 @@ compat_features:
   - css.properties.position-try.y-end
   - css.properties.position-try.y-start
   - css.properties.position-visibility.anchors-valid
+  - html.elements.button.commandfor.implicit_anchor_reference
 
 # The following features in the spec are already part of web-features:
 # - Anchor positioning:
@@ -173,6 +177,10 @@ compat_features:
 #   - api.CSSPositionTryRule
 #   - api.CSSPositionTryRule.name
 #   - api.CSSPositionTryRule.style
+#   - api.HTMLButtonElement.popoverTargetElement.implicit_anchor_reference
+#   - api.HTMLElement.showPopover.options_source_parameter.implicit_anchor_reference
+#   - api.HTMLElement.togglePopover.options_source_parameter.implicit_anchor_reference
+#   - api.HTMLInputElement.popoverTargetElement.implicit_anchor_reference
 #   - css.at-rules.position-try
 #   - css.properties.align-items.anchor-center
 #   - css.properties.align-self.anchor-center
@@ -227,6 +235,7 @@ compat_features:
 #   - css.properties.place-self.anchor-center
 #   - css.properties.position-anchor
 #   - css.properties.position-anchor.auto
+#   - css.properties.position-anchor.none
 #   - css.properties.position-area
 #   - css.properties.position-area.block-end
 #   - css.properties.position-area.block-start
@@ -320,6 +329,8 @@ compat_features:
 #   - css.types.anchor
 #   - css.types.anchor-size
 #   - css.types.anchor-size.inset_margin
+#   - html.elements.button.popovertarget.implicit_anchor_reference
+#   - html.elements.input.popovertarget.implicit_anchor_reference
 # - Anchor position container queries:
 #   - css.at-rules.container.anchor_position_queries
 #   - css.at-rules.container.anchor_position_queries.fallback

@@ -169,6 +169,10 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because this spec PR hasn't landed yet. Once the PR merges, change the spec url and remove this exception."
     ],
     [
+        "https://github.com/whatwg/html/pull/11980",
+        "Allowed because this spec PR hasn't landed yet. Once the PR merges, change the spec URL and remove this exception."
+    ],
+    [
         "https://github.com/w3c/manifest/pull/1175",
         "Allowed because there is no spec yet for Web Install."
     ],
@@ -187,6 +191,14 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/WICG/install-element",
         "Allowed because the <install> element is available in Chrome/Edge as an origin trial."
+    ],
+    [
+        "https://github.com/whatwg/html/pull/11723",
+        "Allowed because the focusgroup spec PR hasn't landed yet. Once the PR merges, remove this and add the spec URL to the focusgroup feature."
+    ],
+    [
+        "http://webmachinelearning.github.io/prompt-api/",
+        "Allowed because that's where LanguageModel (aka Prompt API) spec currently lives."
     ]
 ];
 

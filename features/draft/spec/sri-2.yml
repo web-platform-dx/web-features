@@ -1,4 +1,4 @@
-draft_date: 2025-08-15
+draft_date: 2026-03-16
 name: Subresource Integrity
 description: TODO
 spec: https://w3c.github.io/webappsec-subresource-integrity/
@@ -11,6 +11,8 @@ compat_features:
   - http.headers.Integrity-Policy.blocked-destinations_style
 
 # The following features in the spec are already part of web-features:
+# - Reporting API:
+#   - api.ReportingObserver.ReportingObserver.options_parameter.types_property.integrity-violation
 # - <link>:
 #   - html.elements.link.integrity
 # - <script> and <noscript>:

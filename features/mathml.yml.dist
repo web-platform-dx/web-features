@@ -243,8 +243,9 @@ compat_features:
   #   safari_ios: "14"
   - mathml.global_attributes.displaystyle
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-08-29
+  # baseline_high_date: 2026-02-28
   # support:
   #   chrome: "109"
   #   chrome_android: "109"
@@ -255,8 +256,9 @@ compat_features:
   #   safari_ios: "14.5"
   - css.properties.math-style
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-09-15
+  # baseline_high_date: 2026-03-15
   # support:
   #   chrome: "117"
   #   chrome_android: "117"
@@ -279,6 +281,19 @@ compat_features:
   #   safari: "26.2"
   #   safari_ios: "26.2"
   - css.properties.math-shift
+
+  # baseline: low
+  # baseline_low_date: 2026-03-24
+  # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  #   firefox: "117"
+  #   firefox_android: "117"
+  #   safari: "26.4"
+  #   safari_ios: "26.4"
+  - css.properties.font-size.math
+  - css.properties.math-depth
 
   # baseline: false
   # support:
@@ -314,9 +329,16 @@ compat_features:
   #   edge: "109"
   #   firefox: "117"
   #   firefox_android: "117"
-  - css.properties.font-size.math
-  - css.properties.math-depth
   - css.properties.text-transform.math-auto
+
+  # baseline: false
+  # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
+  #   firefox: "146"
+  #   firefox_android: "146"
+  - mathml.global_attributes.dir.rtl_operator_mirroring
 
   # baseline: false
   # support:
@@ -362,7 +384,6 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "10"
   #   safari_ios: "10"
-  - mathml.attribute_values.named_space
   - mathml.elements.mo.accent
 
   # baseline: false
@@ -394,12 +415,6 @@ compat_features:
   #   firefox_android: "4"
   - mathml.elements.mpadded.relative_values
   - mathml.elements.mtable.align
-
-  # baseline: false
-  # support:
-  #   safari: "10"
-  #   safari_ios: "10"
-  - mathml.attribute_values.nonzero_unitless_values
 
   # baseline: false
   # support:

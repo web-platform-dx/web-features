@@ -3,11 +3,7 @@
 
 status:
   baseline: false
-  support:
-    firefox: "147"
-    firefox_android: "147"
-    safari: "26.2"
-    safari_ios: "26.2"
+  support: {}
 compat_features:
   # baseline: low
   # baseline_low_date: 2026-01-13
@@ -120,6 +116,19 @@ compat_features:
   - css.properties.position-try.y-start
 
   # baseline: low
+  # baseline_low_date: 2026-01-13
+  # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
+  #   firefox: "147"
+  #   firefox_android: "147"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - api.HTMLButtonElement.commandForElement.implicit_anchor_reference
+  - html.elements.button.commandfor.implicit_anchor_reference
+
+  # baseline: low
   # baseline_low_date: 2026-01-21
   # support:
   #   chrome: "144"
@@ -134,7 +143,18 @@ compat_features:
   - css.properties.position-try.flip-x
   - css.properties.position-try.flip-y
 
-  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2026-02-24
+  # support:
+  #   chrome: "143"
+  #   chrome_android: "143"
+  #   edge: "143"
+  #   firefox: "148"
+  #   firefox_android: "148"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - css.properties.position-area.disables_auto_margins_and_insets
+
   # baseline: false
   # support:
   #   firefox: "147"
@@ -142,3 +162,10 @@ compat_features:
   #   safari: "26.2"
   #   safari_ios: "26.2"
   - css.properties.position-visibility.anchors-valid
+
+  # baseline: false
+  # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
+  - css.properties.anchor-name.position_after_layout

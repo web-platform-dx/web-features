@@ -51,7 +51,6 @@ compat_features:
   - api.AudioNode.numberOfInputs
   - api.AudioNode.numberOfOutputs
   - api.AudioParam
-  - api.AudioParam.cancelScheduledValues
   - api.AudioParam.defaultValue
   - api.AudioParam.setValueAtTime
   - api.AudioParam.setValueCurveAtTime
@@ -685,6 +684,15 @@ compat_features:
   #   safari: "14"
   #   safari_ios: "14"
   - api.AudioParam.automationRate
+
+  # baseline: false
+  # support:
+  #   chrome: "83"
+  #   chrome_android: "83"
+  #   edge: "83"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.AudioParam.cancelScheduledValues
 
   # baseline: false
   # support:

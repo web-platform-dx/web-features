@@ -43,9 +43,6 @@ compat_features:
   - api.FontFaceSet.forEach
   - api.FontFaceSet.has
   - api.FontFaceSet.load
-  - api.FontFaceSet.loading_event
-  - api.FontFaceSet.loadingdone_event
-  - api.FontFaceSet.loadingerror_event
   - api.FontFaceSet.ready
   - api.FontFaceSet.size
   - api.FontFaceSet.status
@@ -131,6 +128,18 @@ compat_features:
   #   safari_ios: "10"
   - api.FontFace.featureSettings
 
+  # baseline: low
+  # baseline_low_date: 2025-12-12
+  # support:
+  #   chrome: "35"
+  #   chrome_android: "35"
+  #   edge: "79"
+  #   firefox: "41"
+  #   firefox_android: "41"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - api.FontFaceSet.loading_event
+
   # baseline: false
   # support:
   #   chrome: "35"
@@ -139,6 +148,8 @@ compat_features:
   #   firefox: "41"
   #   firefox_android: "41"
   - api.FontFace.variant
+  - api.FontFaceSet.loadingdone_event
+  - api.FontFaceSet.loadingerror_event
   - api.FontFaceSetLoadEvent
   - api.FontFaceSetLoadEvent.fontfaces
 

@@ -591,6 +591,19 @@ compat_features:
   #   safari_ios: "16.4"
   - api.ElementInternals.shadowRoot
 
+  # baseline: high
+  # baseline_low_date: 2023-09-18
+  # baseline_high_date: 2026-03-18
+  # support:
+  #   chrome: "66"
+  #   chrome_android: "66"
+  #   edge: "79"
+  #   firefox: "115"
+  #   firefox_android: "115"
+  #   safari: "17"
+  #   safari_ios: "17"
+  - html.elements.link.rel.modulepreload.as-script
+
   # baseline: low
   # baseline_low_date: 2023-11-21
   # support:
@@ -687,7 +700,9 @@ compat_features:
   #   firefox_android: "147"
   #   safari: "26.2"
   #   safari_ios: "26.2"
+  - api.HTMLButtonElement.commandForElement.implicit_anchor_reference
   - api.NavigateEvent.sourceElement
+  - html.elements.button.commandfor.implicit_anchor_reference
 
   # baseline: false
   # support:
@@ -803,6 +818,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "97"
+  #   chrome_android: "97"
+  #   edge: "97"
+  #   firefox: "148"
+  #   firefox_android: "148"
+  - html.elements.details.search_match_opens
+
+  # baseline: false
+  # support:
   #   chrome: "99"
   #   chrome_android: "99"
   #   edge: "99"
@@ -857,6 +881,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "146"
+  #   chrome_android: "146"
+  #   edge: "146"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - html.elements.template.shadowrootcustomelementregistry
+
+  # baseline: false
+  # support:
   #   chrome: "96"
   #   chrome_android: "96"
   #   edge: "96"
@@ -879,6 +912,14 @@ compat_features:
   #   firefox_android: "121"
   - api.HTMLInputElement.showPicker.month_input
   - api.HTMLInputElement.showPicker.week_input
+
+  # baseline: false
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "149"
+  - api.HTMLInputElement.showPicker.datalist_input
 
   # baseline: false
   # support:
@@ -921,18 +962,10 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "97"
-  #   chrome_android: "97"
-  #   edge: "97"
-  - html.elements.details.search_match_opens
-
-  # baseline: false
-  # support:
   #   chrome: "99"
   #   chrome_android: "99"
   #   edge: "99"
   - api.HTMLInputElement.showPicker.autocomplete_input
-  - api.HTMLInputElement.showPicker.datalist_input
 
   # baseline: false
   # support:
@@ -989,7 +1022,7 @@ compat_features:
   # baseline: false
   # support:
   #   chrome: "141"
-  #   chrome_android: "141"
+  #   chrome_android: "143"
   #   edge: "141"
   - http.headers.No-Vary-Search.speculation_rules_prefetch
 
@@ -1016,9 +1049,21 @@ compat_features:
 
   # baseline: false
   # support:
+  #   safari: "3.1"
+  #   safari_ios: "3"
+  - api.HTMLMediaElement.playbackRate.negative_values
+
+  # baseline: false
+  # support:
   #   safari: "9"
   #   safari_ios: "9"
   - api.HTMLMediaElement.getStartDate
+
+  # baseline: false
+  # support:
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - html.elements.link.rel.modulepreload.as-json
 
   # baseline: false
   # support:
@@ -1037,4 +1082,5 @@ compat_features:
   # baseline: false
   # support: {}
   - api.Navigator.authentication
+  - html.elements.link.rel.modulepreload.as-style
   - html.elements.track.kind.descriptions

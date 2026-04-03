@@ -3,9 +3,7 @@
 
 status:
   baseline: false
-  support:
-    safari: "18.2"
-    safari_ios: "18.2"
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -22,7 +20,6 @@ compat_features:
   - css.properties.text-box.trim-end
   - css.properties.text-box.trim-start
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   safari: "18.2"
@@ -35,3 +32,18 @@ compat_features:
   - css.properties.text-box.ex
   - css.properties.text-box.ideographic
   - css.properties.text-box.ideographic-ink
+
+  # baseline: false
+  # support:
+  #   firefox: "149"
+  #   firefox_android: "149"
+  - css.properties.alignment-baseline.text-bottom
+  - css.properties.alignment-baseline.text-top
+  - css.properties.baseline-shift.bottom
+  - css.properties.baseline-shift.center
+  - css.properties.baseline-shift.top
+  - css.properties.dominant-baseline.text-bottom
+  - css.properties.dominant-baseline.text-top
+  - css.properties.vertical-align.center
+  - css.properties.vertical-align.first
+  - css.properties.vertical-align.last

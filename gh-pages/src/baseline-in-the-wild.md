@@ -42,6 +42,7 @@ You can find web-features and Baseline data in the places listed below. If you s
 
 ## Presentations
 
+- [A pragmatic guide to browser support](https://noti.st/rachelandrew/osjHV8/a-pragmatic-guide-to-browser-support) by Rachel Andrew, Web Day Out, March 2026.
 - [Improving the experience of developing for the web, one feature at a time](https://fosdem.org/2026/schedule/event/YWG7DK-improving_the_experience_of_developing_for_the_web_one_feature_at_a_time/) by Patrick Brosset, FOSDEM 2026, January 2026.
 - [web-features and Baseline](https://www.youtube.com/watch?v=QzfwNFIXOkM) ([slides](https://patrickbrosset.com/slides/AC-2025/)) by Patrick Brosset, W3C AC meeting, April 2025.
 - [Baseline and Web Features](https://www.oddbird.net/2024/11/19/winging-it-13/) by Miriam Suzanne and James Stuckey Weber, Winging It Live, November 2024.

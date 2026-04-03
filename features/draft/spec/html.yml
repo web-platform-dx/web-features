@@ -1,4 +1,4 @@
-draft_date: 2026-02-23
+draft_date: 2026-03-31
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -19,6 +19,7 @@ compat_features:
   - api.HTMLBaseElement.href.forbid_data_javascript_urls
   - api.HTMLBaseElement.href.forbid_special_characters
   - api.HTMLButtonElement.command.request-close
+  - api.HTMLButtonElement.commandForElement.implicit_anchor_reference
   - api.HTMLCanvasElement.getContext.2d_context.options_colorType_parameter
   - api.HTMLCanvasElement.toBlob.quality_parameter
   - api.HTMLCanvasElement.toBlob.type_parameter_jpeg
@@ -38,6 +39,7 @@ compat_features:
   - api.HTMLInputElement.showPicker.time_input
   - api.HTMLInputElement.showPicker.week_input
   - api.HTMLMediaElement.getStartDate
+  - api.HTMLMediaElement.playbackRate.negative_values
   - api.HTMLOptionsCollection
   - api.HTMLOptionsCollection.add
   - api.HTMLOptionsCollection.length
@@ -103,6 +105,7 @@ compat_features:
   - api.setInterval.supports_parameters_for_callback
   - api.setTimeout.supports_parameters_for_callback
   - html.elements.button.command.request-close
+  - html.elements.button.commandfor.implicit_anchor_reference
   - html.elements.details.search_match_opens
   - html.elements.form.autocomplete.new-password
   - html.elements.form.autocomplete.one-time-code
@@ -121,9 +124,13 @@ compat_features:
   - html.elements.input.type_color.accepts_css_colors
   - html.elements.input.type_range.labeled_values
   - html.elements.link.rel.icon
+  - html.elements.link.rel.modulepreload.as-json
+  - html.elements.link.rel.modulepreload.as-script
+  - html.elements.link.rel.modulepreload.as-style
   - html.elements.script.type.importmap.integrity
   - html.elements.script.type.importmap.multiple_import_maps
   - html.elements.select.autocomplete
+  - html.elements.template.shadowrootcustomelementregistry
   - html.elements.textarea.autocomplete.new-password
   - html.elements.textarea.autocomplete.one-time-code
   - html.elements.textarea.autocomplete.webauthn
@@ -1605,6 +1612,10 @@ compat_features:
 #   - html.elements.track.srclang
 # - fastSeek():
 #   - api.HTMLMediaElement.fastSeek
+# - Lazy-loading media:
+#   - api.HTMLMediaElement.loading
+#   - html.elements.audio.loading
+#   - html.elements.video.autoplay.loading
 # - preservesPitch:
 #   - api.HTMLMediaElement.preservesPitch
 # - Media source:
@@ -2172,6 +2183,8 @@ compat_features:
 #   - api.PaintRenderingContext2D.translate
 # - Selection:
 #   - api.Range.createContextualFragment
+# - Reporting API:
+#   - api.ReportingObserver.ReportingObserver.options_parameter.types_property.coep
 # - Shared worker:
 #   - api.SharedWorker
 #   - api.SharedWorker.SharedWorker

@@ -19,11 +19,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "146"
+  #   chrome_android: "146"
+  #   edge: "146"
+  - api.AnimationTrigger
+
+  # baseline: false
+  # support:
   #   firefox: "142"
   #   firefox_android: "142"
   - api.Animation.commitStyles.endpoint_inclusive_commitStyles
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - api.AnimationTrigger

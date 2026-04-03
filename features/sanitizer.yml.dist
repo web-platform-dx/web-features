@@ -3,9 +3,17 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "148"
+    firefox_android: "148"
 compat_features:
-  - api.Document.parseHTML_static
+  # baseline: false
+  # support:
+  #   chrome: "146"
+  #   chrome_android: "146"
+  #   edge: "146"
+  #   firefox: "148"
+  #   firefox_android: "148"
   - api.Element.setHTML
   - api.Sanitizer
   - api.Sanitizer.Sanitizer
@@ -18,4 +26,11 @@ compat_features:
   - api.Sanitizer.replaceElementWithChildren
   - api.Sanitizer.setComments
   - api.Sanitizer.setDataAttributes
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   firefox: "148"
+  #   firefox_android: "148"
+  - api.Document.parseHTML_static
   - api.ShadowRoot.setHTML

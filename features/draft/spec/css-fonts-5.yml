@@ -1,36 +1,59 @@
-draft_date: 2026-01-19
+draft_date: 2026-03-31
 name: CSS Fonts Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-fonts-5/
 compat_features:
   - api.CSSFontFaceDescriptors
+  - api.CSSFontFaceDescriptors.ascent-override
+  - api.CSSFontFaceDescriptors.ascentOverride
+  - api.CSSFontFaceDescriptors.descent-override
+  - api.CSSFontFaceDescriptors.descentOverride
   - api.CSSFontFaceDescriptors.font-display
   - api.CSSFontFaceDescriptors.font-family
   - api.CSSFontFaceDescriptors.font-feature-settings
+  - api.CSSFontFaceDescriptors.font-language-override
   - api.CSSFontFaceDescriptors.font-stretch
   - api.CSSFontFaceDescriptors.font-style
+  - api.CSSFontFaceDescriptors.font-variation-settings
   - api.CSSFontFaceDescriptors.font-weight
   - api.CSSFontFaceDescriptors.font-width
   - api.CSSFontFaceDescriptors.fontDisplay
   - api.CSSFontFaceDescriptors.fontFamily
   - api.CSSFontFaceDescriptors.fontFeatureSettings
+  - api.CSSFontFaceDescriptors.fontLanguageOverride
   - api.CSSFontFaceDescriptors.fontStretch
   - api.CSSFontFaceDescriptors.fontStyle
+  - api.CSSFontFaceDescriptors.fontVariationSettings
   - api.CSSFontFaceDescriptors.fontWeight
-  - api.CSSFontFaceDescriptors.fontWidth
+  - api.CSSFontFaceDescriptors.line-gap-override
+  - api.CSSFontFaceDescriptors.lineGapOverride
   - api.CSSFontFaceDescriptors.size-adjust
   - api.CSSFontFaceDescriptors.sizeAdjust
   - api.CSSFontFaceDescriptors.src
   - api.CSSFontFaceDescriptors.unicode-range
   - api.CSSFontFaceDescriptors.unicodeRange
-  - css.at-rules.font-face.font-width
+  - api.CSSFontFaceRule.style.type_CSSFontFaceDescriptors
   - css.properties.font-language-override.normal
   - css.properties.font-synthesis-style.oblique-only
   - css.properties.font-synthesis.none
   - css.properties.font-variation-settings.normal
   - css.properties.font-width.percentage
+  - svg.global_attributes.font-stretch
 
 # The following features in the spec are already part of web-features:
+# - font-width:
+#   - api.CSSFontFaceDescriptors.fontWidth
+#   - css.at-rules.font-face.font-width
+#   - css.properties.font-width
+#   - css.properties.font-width.condensed
+#   - css.properties.font-width.expanded
+#   - css.properties.font-width.extra-condensed
+#   - css.properties.font-width.extra-expanded
+#   - css.properties.font-width.normal
+#   - css.properties.font-width.semi-condensed
+#   - css.properties.font-width.semi-expanded
+#   - css.properties.font-width.ultra-condensed
+#   - css.properties.font-width.ultra-expanded
 # - @font-face:
 #   - api.CSSFontFaceRule
 #   - api.CSSFontFaceRule.style
@@ -290,14 +313,3 @@ compat_features:
 #   - css.properties.font-variant-position.normal
 #   - css.properties.font-variant-position.sub
 #   - css.properties.font-variant-position.super
-# - font-width:
-#   - css.properties.font-width
-#   - css.properties.font-width.condensed
-#   - css.properties.font-width.expanded
-#   - css.properties.font-width.extra-condensed
-#   - css.properties.font-width.extra-expanded
-#   - css.properties.font-width.normal
-#   - css.properties.font-width.semi-condensed
-#   - css.properties.font-width.semi-expanded
-#   - css.properties.font-width.ultra-condensed
-#   - css.properties.font-width.ultra-expanded
