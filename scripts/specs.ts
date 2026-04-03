@@ -197,6 +197,10 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because the focusgroup spec PR hasn't landed yet. Once the PR merges, remove this and add the spec URL to the focusgroup feature."
     ],
     [
+        "http://webmachinelearning.github.io/prompt-api/",
+        "Allowed because that's where LanguageModel (aka Prompt API) spec currently lives."
+    ],
+    [
         "https://jpeg.org/jpeg/#content",
         "Allowed because it's a spec not tracked in web-specs."
     ],
