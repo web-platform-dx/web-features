@@ -1,0 +1,19 @@
+draft_date: 2026-04-06
+name: Local Network Access
+description: TODO
+spec: https://wicg.github.io/local-network-access/
+compat_features:
+  - api.Permissions.permission_local-network
+  - api.Permissions.permission_local-network-access
+  - api.Permissions.permission_loopback-network
+  - api.Request.Request.init_targetAddressSpace_parameter
+  - api.fetch.init_targetAddressSpace_parameter
+  - http.headers.Permissions-Policy.local-network
+  - http.headers.Permissions-Policy.local-network-access
+  - http.headers.Permissions-Policy.loopback-network
+
+# The following features in the spec are already part of web-features:
+# - Local network access:
+#   - api.Request.targetAddressSpace
+# - Private network access:
+#   - http.mixed-content.private_network_access
