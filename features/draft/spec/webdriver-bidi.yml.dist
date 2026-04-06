@@ -840,6 +840,11 @@ compat_features:
   # support: {}
   - webdriver.bidi.browser.setClientWindowState
   - webdriver.bidi.browser.setClientWindowState.clientWindow_parameter
+  - webdriver.bidi.browser.setClientWindowState.height_parameter
+  - webdriver.bidi.browser.setClientWindowState.state_parameter
+  - webdriver.bidi.browser.setClientWindowState.width_parameter
+  - webdriver.bidi.browser.setClientWindowState.x_parameter
+  - webdriver.bidi.browser.setClientWindowState.y_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event
   - webdriver.bidi.browsingContext.historyUpdated_event.context_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event.timestamp_parameter
