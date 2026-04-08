@@ -2,7 +2,6 @@ name: Reporting API
 description: The `Reporting-Endpoints` HTTP header and `ReportingObserver()` API send selected reports, such as Content Security Policy (CSP) violation reports or crash reports, to a nominated URL or callback function.
 spec:
   - https://w3c.github.io/reporting/
-  - https://wicg.github.io/intervention-reporting/
   - https://wicg.github.io/deprecation-reporting/
   - https://w3c.github.io/webappsec-csp/#reporting
 status:
@@ -18,7 +17,6 @@ compat_features:
   - api.ReportingObserver.ReportingObserver.options_parameter.types_property.csp-violation
   - api.ReportingObserver.ReportingObserver.options_parameter.types_property.deprecation
   - api.ReportingObserver.ReportingObserver.options_parameter.types_property.integrity-violation
-  - api.ReportingObserver.ReportingObserver.options_parameter.types_property.intervention
   - api.ReportingObserver.disconnect
   - api.ReportingObserver.observe
   - api.ReportingObserver.takeRecords
