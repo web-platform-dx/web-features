@@ -199,6 +199,14 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "http://webmachinelearning.github.io/prompt-api/",
         "Allowed because that's where LanguageModel (aka Prompt API) spec currently lives."
+    ],
+    [
+        "https://jpeg.org/jpeg/#content",
+        "Allowed because it's a spec not tracked in web-specs."
+    ],
+    [
+        "https://www.rfc-editor.org/rfc/rfc7903#section-1.2",
+        "Allowed because it's a spec not tracked in web-specs."
     ]
 ];
 
