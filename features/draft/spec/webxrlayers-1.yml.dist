@@ -5,15 +5,23 @@ status:
   baseline: false
   support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "147"
+  #   chrome_android: "147"
   - api.XRCompositionLayer.forceMonoPresentation
   - api.XRCompositionLayer.opacity
-  - api.XRCompositionLayer.quality
   - api.XRProjectionLayer.deltaPose
   - api.XRSession.maxRenderLayers
-  - api.XRWebGLBinding.foveateBoundTexture
   - api.XRWebGLBinding.usesDepthValues
   - api.XRWebGLSubImage.depthStencilTextureHeight
   - api.XRWebGLSubImage.depthStencilTextureWidth
   - api.XRWebGLSubImage.motionVectorTexture
   - api.XRWebGLSubImage.motionVectorTextureHeight
   - api.XRWebGLSubImage.motionVectorTextureWidth
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.XRCompositionLayer.quality
+  - api.XRWebGLBinding.foveateBoundTexture
