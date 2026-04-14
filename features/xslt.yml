@@ -1,8 +1,19 @@
-# This has been proposed for removal, but not yet formally discouraged https://github.com/whatwg/html/issues/11523
 name: XSLT
 description: The `XSLTProcessor` API transforms XML documents into new XML or HTML documents, using XSLT stylesheets. You can use XSLT to convert data between different XML schemas or to convert XML data into web pages or PDF documents. Also known as Extensible Stylesheet Language Transformations.
 spec: https://dom.spec.whatwg.org/#xslt
 group: xml
+status:
+  baseline: high
+  baseline_low_date: 2015-07-29
+  baseline_high_date: 2018-01-29
+  support:
+    chrome: "1"
+    chrome_android: "18"
+    edge: "12"
+    firefox: "1"
+    firefox_android: "4"
+    safari: "3.1"
+    safari_ios: "2"
 compat_features:
   - api.XSLTProcessor
   - api.XSLTProcessor.XSLTProcessor
