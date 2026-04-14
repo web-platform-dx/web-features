@@ -1,4 +1,4 @@
-draft_date: 2026-04-09
+draft_date: 2026-04-14
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -97,6 +97,11 @@ compat_features:
   - api.Window.unload_event
   - api.Worker.Worker.enforces_trusted_types
   - api.WorkerGlobalScope.importScripts.enforces_trusted_types
+  - api.WorkerNavigator.appCodeName
+  - api.WorkerNavigator.appName
+  - api.WorkerNavigator.appVersion
+  - api.WorkerNavigator.platform
+  - api.WorkerNavigator.product
   - api.crossOriginIsolated
   - api.origin
   - api.reportError
