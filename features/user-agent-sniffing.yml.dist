@@ -3,16 +3,16 @@
 
 status:
   baseline: high
-  baseline_low_date: 2015-07-29
-  baseline_high_date: 2018-01-29
+  baseline_low_date: 2016-09-20
+  baseline_high_date: 2019-03-20
   support:
     chrome: "4"
     chrome_android: "18"
     edge: "12"
     firefox: "3.5"
     firefox_android: "4"
-    safari: "4"
-    safari_ios: "5"
+    safari: "10"
+    safari_ios: "10"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -25,9 +25,18 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "1"
   #   safari_ios: "1"
+  - api.Navigator.appCodeName
+  - api.Navigator.appName
+  - api.Navigator.appVersion
+  - api.Navigator.javaEnabled
+  - api.Navigator.mimeTypes
+  - api.Navigator.platform
+  - api.Navigator.plugins
+  - api.Navigator.product
+  - api.Navigator.productSub
   - api.Navigator.userAgent
+  - api.Navigator.vendor
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
@@ -39,4 +48,22 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "4"
   #   safari_ios: "5"
+  - api.WorkerNavigator.appName
+  - api.WorkerNavigator.appVersion
+  - api.WorkerNavigator.platform
   - api.WorkerNavigator.userAgent
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2016-09-20
+  # baseline_high_date: 2019-03-20
+  # support:
+  #   chrome: "4"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3.5"
+  #   firefox_android: "4"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - api.WorkerNavigator.appCodeName
+  - api.WorkerNavigator.product
