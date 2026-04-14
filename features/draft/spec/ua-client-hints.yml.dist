@@ -3,7 +3,8 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "147"
 compat_features:
   # baseline: false
   # support:
@@ -11,9 +12,10 @@ compat_features:
   #   edge: "144"
   - http.headers.Permissions-Policy.ch-ua-high-entropy-values
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "147"
+  #   chrome_android: "147"
   - webdriver.bidi.userAgentClientHints.setClientHintsOverride
   - webdriver.bidi.userAgentClientHints.setClientHintsOverride.clientHints_parameter
   - webdriver.bidi.userAgentClientHints.setClientHintsOverride.contexts_parameter
