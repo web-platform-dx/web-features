@@ -1,0 +1,7 @@
+name: referrer-policy() for url()
+description: >
+  The `url()' CSS function accepts a `referrer-policy()` modifier to choose which referrer to send when requesting the URL. 
+  For example, `url("https://example.com" referrer-policy(no-referrer)) does not send a referrer to the URL.
+spec: https://drafts.csswg.org/css-values-5/#typedef-request-url-modifier-referrer-policy-modifier
+compat_features:
+  - css.types.url.referrer-policy
