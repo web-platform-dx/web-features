@@ -149,6 +149,21 @@ compat_features:
   #   chrome: "4"
   #   chrome_android: "18"
   #   edge: "12"
+  #   firefox: "3.5"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "5"
+  - api.WorkerNavigator.appName
+  - api.WorkerNavigator.appVersion
+  - api.WorkerNavigator.platform
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "4"
+  #   chrome_android: "18"
+  #   edge: "12"
   #   firefox: "4"
   #   firefox_android: "4"
   #   safari: "4"
@@ -349,6 +364,20 @@ compat_features:
   # baseline_low_date: 2016-09-20
   # baseline_high_date: 2019-03-20
   # support:
+  #   chrome: "4"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3.5"
+  #   firefox_android: "4"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - api.WorkerNavigator.appCodeName
+  - api.WorkerNavigator.product
+
+  # baseline: high
+  # baseline_low_date: 2016-09-20
+  # baseline_high_date: 2019-03-20
+  # support:
   #   chrome: "30"
   #   chrome_android: "30"
   #   edge: "12"
@@ -421,9 +450,7 @@ compat_features:
   #   firefox_android: "18"
   #   safari: "11"
   #   safari_ios: "11"
-  - api.HTMLCanvasElement.toBlob.type_parameter_jpeg
   - api.HTMLCanvasElement.toBlob.type_parameter_png
-  - api.HTMLCanvasElement.toDataURL.type_parameter_jpeg
   - api.HTMLCanvasElement.toDataURL.type_parameter_png
 
   # baseline: high
@@ -939,6 +966,14 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "147"
+  #   chrome_android: "147"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - html.elements.link.rel.modulepreload.as-json
+
+  # baseline: false
+  # support:
   #   chrome: "87"
   #   chrome_android: "87"
   #   edge: "87"
@@ -1061,12 +1096,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   safari: "26.2"
-  #   safari_ios: "26.2"
-  - html.elements.link.rel.modulepreload.as-json
-
-  # baseline: false
-  # support:
   #   firefox: "67"
   #   firefox_android: "67"
   - html.elements.form.autocomplete.new-password
@@ -1078,9 +1107,14 @@ compat_features:
   #   firefox_android: "79"
   - html.elements.iframe.allow.document-domain
 
+  # baseline: false
+  # support:
+  #   chrome: "147"
+  #   chrome_android: "147"
+  - html.elements.link.rel.modulepreload.as-style
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.Navigator.authentication
-  - html.elements.link.rel.modulepreload.as-style
   - html.elements.track.kind.descriptions

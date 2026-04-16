@@ -1,10 +1,8 @@
-draft_date: 2026-03-16
+draft_date: 2026-04-06
 name: CSS Borders and Box Decorations Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-borders-4/
 compat_features:
-  - css.properties.border-shape
-  - css.properties.border-shape.none
   - css.properties.corner-block-end-shape.bevel
   - css.properties.corner-block-end-shape.notch
   - css.properties.corner-block-end-shape.round
@@ -109,6 +107,9 @@ compat_features:
   - css.properties.corner-top-shape.squircle
 
 # The following features in the spec are already part of web-features:
+# - border-shape:
+#   - css.properties.border-shape
+#   - css.properties.border-shape.none
 # - corner-shape:
 #   - css.properties.corner-block-end-shape
 #   - css.properties.corner-block-start-shape

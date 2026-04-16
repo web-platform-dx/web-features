@@ -1,4 +1,4 @@
-draft_date: 2026-03-31
+draft_date: 2026-04-14
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -22,10 +22,8 @@ compat_features:
   - api.HTMLButtonElement.commandForElement.implicit_anchor_reference
   - api.HTMLCanvasElement.getContext.2d_context.options_colorType_parameter
   - api.HTMLCanvasElement.toBlob.quality_parameter
-  - api.HTMLCanvasElement.toBlob.type_parameter_jpeg
   - api.HTMLCanvasElement.toBlob.type_parameter_png
   - api.HTMLCanvasElement.toBlob.type_parameter_webp
-  - api.HTMLCanvasElement.toDataURL.type_parameter_jpeg
   - api.HTMLCanvasElement.toDataURL.type_parameter_png
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
   - api.HTMLElement.error_event
@@ -99,6 +97,11 @@ compat_features:
   - api.Window.unload_event
   - api.Worker.Worker.enforces_trusted_types
   - api.WorkerGlobalScope.importScripts.enforces_trusted_types
+  - api.WorkerNavigator.appCodeName
+  - api.WorkerNavigator.appName
+  - api.WorkerNavigator.appVersion
+  - api.WorkerNavigator.platform
+  - api.WorkerNavigator.product
   - api.crossOriginIsolated
   - api.origin
   - api.reportError
@@ -971,7 +974,9 @@ compat_features:
 #   - api.HTMLCanvasElement.getContext
 #   - api.HTMLCanvasElement.height
 #   - api.HTMLCanvasElement.toBlob
+#   - api.HTMLCanvasElement.toBlob.type_parameter_jpeg
 #   - api.HTMLCanvasElement.toDataURL
+#   - api.HTMLCanvasElement.toDataURL.type_parameter_jpeg
 #   - api.HTMLCanvasElement.width
 #   - html.elements.canvas
 #   - html.elements.canvas.height
@@ -1615,7 +1620,7 @@ compat_features:
 # - Lazy-loading media:
 #   - api.HTMLMediaElement.loading
 #   - html.elements.audio.loading
-#   - html.elements.video.autoplay.loading
+#   - html.elements.video.loading
 # - preservesPitch:
 #   - api.HTMLMediaElement.preservesPitch
 # - Media source:

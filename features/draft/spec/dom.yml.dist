@@ -29,6 +29,23 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "143"
+  #   chrome_android: "143"
+  #   edge: "143"
+  #   firefox: "149"
+  #   firefox_android: "149"
+  - api.CustomElementRegistry.define.html_name_validity
+  - api.CustomElementRegistry.whenDefined.html_name_validity
+  - api.Document.createAttribute.html_name_validity
+  - api.Document.createAttributeNS.html_name_validity
+  - api.Document.createElement.html_name_validity
+  - api.Document.createElementNS.html_name_validity
+  - api.Element.setAttribute.html_name_validity
+  - api.Element.setAttributeNodeNS.html_name_validity
+  - api.Element.toggleAttribute.html_name_validity
+
+  # baseline: false
+  # support:
   #   chrome: "146"
   #   chrome_android: "146"
   #   edge: "146"
