@@ -94,7 +94,7 @@ export function getStatus(
  */
 export function computeBaseline(
   featureSelector: {
-    compatKeys: [string, ...string[]];
+    compatKeys: string[];
     checkAncestors?: boolean;
   },
   compat: Compat = defaultCompat,
