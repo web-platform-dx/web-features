@@ -59,7 +59,7 @@ jobs:
         working-directory: gh-pages/
       - name: Upload artifact
         if: ${{ fromJSON(steps.pages.outputs.html_url) }} # Skip if GitHub Pages is not turned on for the current repository
-        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4.0.0
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
 
 
   # Deployment job
