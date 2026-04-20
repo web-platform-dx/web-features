@@ -14,4 +14,29 @@ status:
     safari: "16.4"
     safari_ios: "16.4"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "1"
+  #   safari_ios: "1"
+  - api.Navigator.mimeTypes
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2023-03-27
+  # baseline_high_date: 2025-09-27
+  # support:
+  #   chrome: "94"
+  #   chrome_android: "94"
+  #   edge: "94"
+  #   firefox: "99"
+  #   firefox_android: "99"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
   - api.Navigator.pdfViewerEnabled
