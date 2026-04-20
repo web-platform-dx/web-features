@@ -5,18 +5,20 @@ status:
   baseline: false
   support:
     chrome: "147"
+    edge: "147"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "147"
+  #   chrome_android: "147"
+  #   edge: "147"
+  - webdriver.bidi.userAgentClientHints.setClientHintsOverride
+  - webdriver.bidi.userAgentClientHints.setClientHintsOverride.clientHints_parameter
+  - webdriver.bidi.userAgentClientHints.setClientHintsOverride.contexts_parameter
+  - webdriver.bidi.userAgentClientHints.setClientHintsOverride.userContexts_parameter
+
   # baseline: false
   # support:
   #   chrome: "144"
   #   edge: "144"
   - http.headers.Permissions-Policy.ch-ua-high-entropy-values
-
-  # baseline: false
-  # support:
-  #   chrome: "147"
-  #   chrome_android: "147"
-  - webdriver.bidi.userAgentClientHints.setClientHintsOverride
-  - webdriver.bidi.userAgentClientHints.setClientHintsOverride.clientHints_parameter
-  - webdriver.bidi.userAgentClientHints.setClientHintsOverride.contexts_parameter
-  - webdriver.bidi.userAgentClientHints.setClientHintsOverride.userContexts_parameter

@@ -14,6 +14,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome_android: "139"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.GPUSupportedFeatures.feature_core-features-and-limits
+
+  # baseline: false
+  # support:
   #   safari: "26"
   #   safari_ios: "26"
   - api.GPUSupportedFeatures.feature_texture-compression-astc-sliced-3d
@@ -21,8 +28,9 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome_android: "139"
-  - api.GPUSupportedFeatures.feature_core-features-and-limits
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - api.GPUSupportedFeatures.feature_texture-formats-tier1
 
   # baseline: false
   # support:
@@ -45,6 +53,5 @@ compat_features:
   - api.GPUSupportedFeatures.feature_primitive-index
   - api.GPUSupportedFeatures.feature_subgroups.subgroup_id_num_subgroups
   - api.GPUSupportedFeatures.feature_texture-component-swizzle
-  - api.GPUSupportedFeatures.feature_texture-formats-tier1
   - api.GPUSupportedFeatures.feature_texture-formats-tier2
   - api.GPUTexture.createView.descriptor_swizzle_parameter

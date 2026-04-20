@@ -186,6 +186,14 @@ compat_features:
   - api.GPUSupportedFeatures
   - api.GPUSupportedFeatures.@@iterator
   - api.GPUSupportedFeatures.entries
+  - api.GPUSupportedFeatures.feature_bgra8unorm-storage
+  - api.GPUSupportedFeatures.feature_depth-clip-control
+  - api.GPUSupportedFeatures.feature_depth32float-stencil8
+  - api.GPUSupportedFeatures.feature_indirect-first-instance
+  - api.GPUSupportedFeatures.feature_rg11b10ufloat-renderable
+  - api.GPUSupportedFeatures.feature_shader-f16
+  - api.GPUSupportedFeatures.feature_texture-compression-astc
+  - api.GPUSupportedFeatures.feature_texture-compression-etc2
   - api.GPUSupportedFeatures.forEach
   - api.GPUSupportedFeatures.has
   - api.GPUSupportedFeatures.keys
@@ -261,6 +269,8 @@ compat_features:
   #   safari_ios: "26"
   - api.GPUAdapter.info
   - api.GPUCanvasContext.getConfiguration
+  - api.GPUSupportedFeatures.feature_float32-blendable
+  - api.GPUSupportedFeatures.feature_timestamp-query
 
   # baseline: false
   # support:
@@ -281,16 +291,8 @@ compat_features:
   - api.GPUQueue.copyExternalImageToTexture.htmlimageelement_imagedata_source
   - api.GPURenderBundleEncoder.setBindGroup.unset_bind_group
   - api.GPURenderPassEncoder.setBindGroup.unset_bind_group
-  - api.GPUSupportedFeatures.feature_bgra8unorm-storage
-  - api.GPUSupportedFeatures.feature_depth-clip-control
-  - api.GPUSupportedFeatures.feature_depth32float-stencil8
   - api.GPUSupportedFeatures.feature_float32-filterable
-  - api.GPUSupportedFeatures.feature_indirect-first-instance
-  - api.GPUSupportedFeatures.feature_rg11b10ufloat-renderable
-  - api.GPUSupportedFeatures.feature_shader-f16
-  - api.GPUSupportedFeatures.feature_texture-compression-astc
   - api.GPUSupportedFeatures.feature_texture-compression-bc
-  - api.GPUSupportedFeatures.feature_texture-compression-etc2
   - api.GPUTexture.createView.descriptor_format_parameter_accepts_rgb10a2uint
   - api.GPUTexture.format.texture_rgb10a2uint
 
@@ -325,8 +327,6 @@ compat_features:
   - api.GPUQueue.submit.validates_command_buffer_uniqueness
   - api.GPUSupportedFeatures.feature_clip-distances
   - api.GPUSupportedFeatures.feature_dual-source-blending
-  - api.GPUSupportedFeatures.feature_float32-blendable
-  - api.GPUSupportedFeatures.feature_timestamp-query
   - api.GPUTexture.createView.descriptor_usage_parameter
   - api.WGSLLanguageFeatures.extension_packed_4x8_integer_dot_product
   - api.WGSLLanguageFeatures.extension_readonly_and_readwrite_storage_textures
