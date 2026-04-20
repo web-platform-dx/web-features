@@ -1,4 +1,4 @@
-draft_date: 2026-04-06
+draft_date: 2026-04-20
 name: WebDriver BiDi
 description: TODO
 spec: https://w3c.github.io/webdriver-bidi/
@@ -346,6 +346,7 @@ compat_features:
   - webdriver.bidi.script.getRealms
   - webdriver.bidi.script.getRealms.context_parameter
   - webdriver.bidi.script.getRealms.type_parameter
+  - webdriver.bidi.script.getRealms.type_parameter.worker
   - webdriver.bidi.script.message_event
   - webdriver.bidi.script.message_event.channel_parameter
   - webdriver.bidi.script.message_event.data_parameter
@@ -371,7 +372,6 @@ compat_features:
   - webdriver.bidi.session.subscribe.events_parameter
   - webdriver.bidi.session.subscribe.userContexts_parameter
   - webdriver.bidi.session.unsubscribe
-  - webdriver.bidi.session.unsubscribe.contexts_parameter
   - webdriver.bidi.session.unsubscribe.events_parameter
   - webdriver.bidi.storage
   - webdriver.bidi.storage.deleteCookies

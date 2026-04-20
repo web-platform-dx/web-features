@@ -17,16 +17,6 @@ compat_features:
   #   safari: "1"
   #   safari_ios: "1"
   - api.HTMLElement.error_event
-  - api.Navigator.appCodeName
-  - api.Navigator.appName
-  - api.Navigator.appVersion
-  - api.Navigator.javaEnabled
-  - api.Navigator.mimeTypes
-  - api.Navigator.platform
-  - api.Navigator.plugins
-  - api.Navigator.product
-  - api.Navigator.productSub
-  - api.Navigator.vendor
   - html.elements.html.xmlns
   - http.headers.Refresh
 
@@ -141,21 +131,6 @@ compat_features:
   #   safari: "5"
   #   safari_ios: "4.2"
   - html.global_attributes.draggable
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "5"
-  - api.WorkerNavigator.appName
-  - api.WorkerNavigator.appVersion
-  - api.WorkerNavigator.platform
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -359,20 +334,6 @@ compat_features:
   #   safari: "6"
   #   safari_ios: "7"
   - api.TrackEvent.TrackEvent
-
-  # baseline: high
-  # baseline_low_date: 2016-09-20
-  # baseline_high_date: 2019-03-20
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - api.WorkerNavigator.appCodeName
-  - api.WorkerNavigator.product
 
   # baseline: high
   # baseline_low_date: 2016-09-20
@@ -1118,5 +1079,7 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
+  - api.HTMLTemplateElement.shadowRootSlotAssignment
   - api.Navigator.authentication
+  - html.elements.template.shadowrootslotassignment
   - html.elements.track.kind.descriptions

@@ -1,0 +1,11 @@
+draft_date: 2026-04-20
+name: Permissions Policy
+description: TODO
+spec: https://w3c.github.io/webappsec-permissions-policy/
+compat_features:
+  - api.ReportingObserver.ReportingObserver.options_parameter.types_property.permissions-policy-violation
+
+# The following features in the spec are already part of web-features:
+# - Permissions policy:
+#   - http.headers.Permissions-Policy
+#   - http.headers.Permissions-Policy.wildcards
