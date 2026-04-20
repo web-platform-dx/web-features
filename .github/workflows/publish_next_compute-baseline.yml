@@ -47,7 +47,7 @@ jobs:
           node-version-file: .node-version
           cache: npm
           registry-url: "https://registry.npmjs.org"
-      - run: npm install -g 'npm@>=11.5.1  # required for trusted publishing
+      - run: npm install -g 'npm@>=11.5.1'  # required for trusted publishing
       - run: npm ci
       - name: Get package.json version
         id: version
