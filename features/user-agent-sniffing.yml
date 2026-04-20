@@ -1,9 +1,8 @@
 name: User agent sniffing
 description: >
-  The `navigator.userAgent` property is the user agent string for the current browser.
-  This property and several others loosely identify a browser.
-  Selectively showing content based on the user agent string, better known as user agent sniffing, is unreliable.
-  Consider using feature detection instead.
+  The `navigator.userAgent` property and several others loosely identify a browser.
+  Selectively showing content based on the user agent string, also known as user agent sniffing, is unreliable.
+  Consider using feature detection or user agent client hints instead.
 spec: https://html.spec.whatwg.org/multipage/system-state.html#the-navigator-object
 compat_features:
   - api.Navigator.userAgent
