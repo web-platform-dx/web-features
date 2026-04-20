@@ -1,4 +1,4 @@
-draft_date: 2026-04-14
+draft_date: 2026-04-20
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -51,6 +51,7 @@ compat_features:
   - api.HTMLSourceElement.src
   - api.HTMLSourceElement.type
   - api.HTMLSourceElement.width
+  - api.HTMLTemplateElement.shadowRootSlotAssignment
   - api.HTMLUnknownElement
   - api.ImageData.ImageData.settings_parameter
   - api.ImageData.ImageData.settings_parameter.colorSpace_option
@@ -60,19 +61,9 @@ compat_features:
   - api.NavigateEvent.sourceElement
   - api.NavigationTransition.committed
   - api.NavigationTransition.to
-  - api.Navigator.appCodeName
-  - api.Navigator.appName
-  - api.Navigator.appVersion
   - api.Navigator.authentication
-  - api.Navigator.javaEnabled
-  - api.Navigator.mimeTypes
   - api.Navigator.oscpu
-  - api.Navigator.platform
-  - api.Navigator.plugins
-  - api.Navigator.product
-  - api.Navigator.productSub
   - api.Navigator.taintEnabled
-  - api.Navigator.vendor
   - api.Navigator.vendorSub
   - api.OffscreenCanvasRenderingContext2D.getContextAttributes
   - api.OffscreenCanvasRenderingContext2D.lang
@@ -97,11 +88,6 @@ compat_features:
   - api.Window.unload_event
   - api.Worker.Worker.enforces_trusted_types
   - api.WorkerGlobalScope.importScripts.enforces_trusted_types
-  - api.WorkerNavigator.appCodeName
-  - api.WorkerNavigator.appName
-  - api.WorkerNavigator.appVersion
-  - api.WorkerNavigator.platform
-  - api.WorkerNavigator.product
   - api.crossOriginIsolated
   - api.origin
   - api.reportError
@@ -134,6 +120,7 @@ compat_features:
   - html.elements.script.type.importmap.multiple_import_maps
   - html.elements.select.autocomplete
   - html.elements.template.shadowrootcustomelementregistry
+  - html.elements.template.shadowrootslotassignment
   - html.elements.textarea.autocomplete.new-password
   - html.elements.textarea.autocomplete.one-time-code
   - html.elements.textarea.autocomplete.webauthn
@@ -2054,6 +2041,23 @@ compat_features:
 # - Navigator:
 #   - api.Navigator
 #   - api.Window.navigator
+# - User agent sniffing:
+#   - api.Navigator.appCodeName
+#   - api.Navigator.appName
+#   - api.Navigator.appVersion
+#   - api.Navigator.javaEnabled
+#   - api.Navigator.platform
+#   - api.Navigator.plugins
+#   - api.Navigator.product
+#   - api.Navigator.productSub
+#   - api.Navigator.userAgent
+#   - api.Navigator.vendor
+#   - api.WorkerNavigator.appCodeName
+#   - api.WorkerNavigator.appName
+#   - api.WorkerNavigator.appVersion
+#   - api.WorkerNavigator.platform
+#   - api.WorkerNavigator.product
+#   - api.WorkerNavigator.userAgent
 # - cookieEnabled:
 #   - api.Navigator.cookieEnabled
 # - hardwareConcurrency:
@@ -2066,6 +2070,9 @@ compat_features:
 #   - api.WorkerGlobalScope.languagechange_event
 #   - api.WorkerNavigator.language
 #   - api.WorkerNavigator.languages
+# - pdfViewerEnabled:
+#   - api.Navigator.mimeTypes
+#   - api.Navigator.pdfViewerEnabled
 # - Online status:
 #   - api.Navigator.onLine
 #   - api.Window.offline_event
@@ -2073,8 +2080,6 @@ compat_features:
 #   - api.WorkerGlobalScope.offline_event
 #   - api.WorkerGlobalScope.online_event
 #   - api.WorkerNavigator.onLine
-# - pdfViewerEnabled:
-#   - api.Navigator.pdfViewerEnabled
 # - registerProtocolHandler:
 #   - api.Navigator.registerProtocolHandler
 #   - api.Navigator.registerProtocolHandler.scheme_parameter_bitcoin
@@ -2108,9 +2113,6 @@ compat_features:
 #   - api.UserActivation
 #   - api.UserActivation.hasBeenActive
 #   - api.UserActivation.isActive
-# - User agent sniffing:
-#   - api.Navigator.userAgent
-#   - api.WorkerNavigator.userAgent
 # - Back/forward cache blocking reasons:
 #   - api.NotRestoredReasonDetails
 #   - api.NotRestoredReasonDetails.reason

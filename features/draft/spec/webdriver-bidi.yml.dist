@@ -25,7 +25,6 @@ compat_features:
   - webdriver.bidi.session.subscribe.contexts_parameter
   - webdriver.bidi.session.subscribe.events_parameter
   - webdriver.bidi.session.unsubscribe
-  - webdriver.bidi.session.unsubscribe.contexts_parameter
   - webdriver.bidi.session.unsubscribe.events_parameter
 
   # baseline: false
@@ -883,3 +882,4 @@ compat_features:
   - webdriver.bidi.network.responseStarted_event.request_parameter
   - webdriver.bidi.network.responseStarted_event.response_parameter
   - webdriver.bidi.network.responseStarted_event.timestamp_parameter
+  - webdriver.bidi.script.getRealms.type_parameter.worker

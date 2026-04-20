@@ -1,4 +1,4 @@
-draft_date: 2026-04-14
+draft_date: 2026-04-20
 name: CSS Values and Units Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-values-5/
@@ -57,8 +57,6 @@ compat_features:
   - css.types.random.dashed-ident
   - css.types.random.element-shared
   - css.types.random.step
-  - css.types.url.cross-origin
-  - css.types.url.referrer-policy
 
 # The following features in the spec are already part of web-features:
 # - Media queries:
@@ -211,3 +209,7 @@ compat_features:
 #   - css.types.time
 # - @font-face:
 #   - css.types.url
+# - cross-origin() for url():
+#   - css.types.url.cross-origin
+# - referrer-policy() for url():
+#   - css.types.url.referrer-policy
