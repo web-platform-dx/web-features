@@ -2,46 +2,53 @@ name: Publish web-features
 
 on:
   push:
+    branches:
+      - "main"
     # Tags on the form v1.2.3 are for releases. Any other tags are ignored.
     tags:
       - 'v[0-9]+.[0-9]+.[0-9]+'
 
+permissions: {}
+
 env:
+  package: "web-features"
   package_dir: "packages/web-features"
+  # Publish @next for main, @latest for tags
+  dist_tag: ${{ startsWith(github.ref, 'refs/tags/') && 'latest' || 'next' }}
 
 jobs:
   test:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
       - uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
           cache: npm
+      - run: npm install -g 'npm@>=11.5.1'  # required for trusted publishing
       - run: npm ci
       - run: npm test
-  artifacts:
-    if: github.repository == 'web-platform-dx/web-features'
+
+  publish_latest:
+    name: Publish release
+    if: github.repository == 'web-platform-dx/web-features' && ${{ startsWith(github.ref, 'refs/tags/') && 'latest' || 'next' }} == 'latest'
     runs-on: ubuntu-latest
     needs: "test"
+    permissions:
+      # Required to modify the release and upload release artifacts
+      contents: write
+      # Required for OIDC and trusted publishing. See:
+      # - https://docs.npmjs.com/trusted-publishers
+      # - https://docs.github.com/en/actions/concepts/security/openid-connect
+      id-token: write
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
         with:
-          node-version-file: .node-version
-          cache: npm
-          registry-url: "https://registry.npmjs.org"
-      - run: npm ci
-      - run: npm run build
-      - run: gh release upload ${{ github.ref_name }} packages/web-features/data.json data.extended.json schemas/data.schema.json
-        env:
-          GH_TOKEN: ${{ github.token }}
-  publish:
-    if: github.repository == 'web-platform-dx/web-features'
-    runs-on: ubuntu-latest
-    needs: "test"
-    steps:
-      - uses: actions/checkout@v6
+          persist-credentials: false
       - uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
@@ -51,5 +58,99 @@ jobs:
       - run: npm run build
       - run: npm publish
         working-directory: ${{ env.package_dir }}
+      - run: gh release upload "$GITHUB_REF_NAME" packages/web-features/data.json data.extended.json schemas/data.schema.json
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
+
+  publish_next:
+    name: Publish prerelease
+    if: github.repository == 'web-platform-dx/web-features' && ${{ startsWith(github.ref, 'refs/tags/') && 'latest' || 'next' }} == 'next'
+    runs-on: ubuntu-latest
+    needs: "test"
+    permissions:
+      # Required to modify the release and upload release artifacts
+      contents: write
+      # Required for OIDC and trusted publishing. See:
+      # - https://docs.npmjs.com/trusted-publishers
+      # - https://docs.github.com/en/actions/concepts/security/openid-connect
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          # Required for `git tag`
+          persist-credentials: true
+      - name: Get timestamp and short hash
+        id: timestamp_and_hash
+        run: |
+          echo "TIMESTAMP=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_OUTPUT
+          echo "SHORT_HASH=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+          cache: npm
+          registry-url: "https://registry.npmjs.org"
+
+      - run: npm install -g 'npm@>=11.5.1'  # required for trusted publishing
+      - run: npm ci
+
+      - run: npm run build
+
+      - name: Get package.json version
+        id: version
+        run: echo "VERSION=$(npm version --json | jq --arg package "$PACKAGE" --raw-output '.[$package]')" >> $GITHUB_OUTPUT
+        working-directory: ${{ env.package_dir }}
+        env:
+          PACKAGE: ${{ env.package }}
+          PACKAGE_DIR: ${{ env.package_dir }}
+      - run: npm ci
+        working-directory: ${{ env.package_dir }}
+      - run: npm version --no-git-tag-version "$VERSION-dev-$TIMESTAMP-$SHORT_HASH"
+        # The version string template is: <package.json version>-dev-<timestamp>-<commit-hash>
+        # Why not use SemVer build metadata with a plus sign for some of this?
+        # Because npm completely ignores it. 😒
+        working-directory: ${{ env.package_dir }}
+        env:
+          VERSION: ${{ steps.version.outputs.VERSION }}
+          TIMESTAMP: ${{ steps.timestamp_and_hash.outputs.TIMESTAMP }}
+          SHORT_HASH: ${{ steps.timestamp_and_hash.outputs.SHORT_HASH }}
+      - run: npm publish --tag "$DIST_TAG"
+        working-directory: ${{ env.package_dir }}
+        env:
+          DIST_TAG: ${{ env.dist_tag }}
+
+      - name: Set existing release to draft
+        run: gh release edit --draft "$TAG"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ env.dist_tag }}
+
+      - name: Update the tag
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag --force "$TAG"
+          git push --force origin "$TAG"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ env.dist_tag }}
+
+      - name: Publish pre-release on GitHub
+        run: |
+          gh release edit \
+            --verify-tag \
+            --title "$PACKAGE@$TAG" \
+            --notes "$NOTES" \
+            --prerelease \
+            --draft=false \
+            "$TAG"
+          gh release upload --clobber "$TAG" $ARTIFACTS
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PACKAGE: ${{ env.package }}
+          TAG: ${{ env.dist_tag }}
+          NOTES: This is a continuously-updated prerelease generated from `main` (currently at ${{ steps.timestamp_and_hash.outputs.SHORT_HASH }}).
+          ARTIFACTS: >
+            ${{ env.package_dir }}/data.json
+            data.extended.json
+            schemas/data.schema.json
