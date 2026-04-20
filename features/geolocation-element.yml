@@ -4,20 +4,21 @@ spec: https://wicg.github.io/PEPC/geolocation-element.html
 group:
   - html-elements
   - geolocation
-# Expected
-# compat_features:
-#   - html.elements.geolocation
-#   - html.elements.geolocation.autolocate
-#   - html.elements.geolocation.watch
-#   - api.HTMLGeolocationElement.HTMLGeolocationElement
-#   - api.HTMLGeolocationElement.position
-#   - api.HTMLGeolocationElement.error
-#   - api.HTMLGeolocationElement.autolocate
-#   - api.HTMLGeolocationElement.watch
-#   - api.HTMLGeolocationElement.isValid
-#   - api.HTMLGeolocationElement.invalidReason
-#   - api.HTMLGeolocationElement.initialPermissionStatus
-#   - api.HTMLGeolocationElement.permissionStatus
-#   - api.HTMLGeolocationElement.promptaction_event
-#   - api.HTMLGeolocationElement.promptdismiss_event
-#   - api.HTMLGeolocationElement.validationstatuschange_event
+compat_features:
+  - api.HTMLGeolocationElement
+  - api.HTMLGeolocationElement.HTMLGeolocationElement
+  - api.HTMLGeolocationElement.autolocate
+  - api.HTMLGeolocationElement.error
+  - api.HTMLGeolocationElement.initialPermissionStatus
+  - api.HTMLGeolocationElement.invalidReason
+  - api.HTMLGeolocationElement.isValid
+  - api.HTMLGeolocationElement.location_event
+  - api.HTMLGeolocationElement.permissionStatus
+  - api.HTMLGeolocationElement.position
+  - api.HTMLGeolocationElement.promptaction_event
+  - api.HTMLGeolocationElement.promptdismiss_event
+  - api.HTMLGeolocationElement.validationstatuschange_event
+  - api.HTMLGeolocationElement.watch
+  - html.elements.geolocation
+  - html.elements.geolocation.autolocate
+  - html.elements.geolocation.watch
