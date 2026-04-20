@@ -917,6 +917,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "147"
+  #   chrome_android: "147"
+  #   edge: "147"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - html.elements.link.rel.modulepreload.as-json
+
+  # baseline: false
+  # support:
   #   chrome: "96"
   #   chrome_android: "96"
   #   edge: "96"
@@ -963,14 +972,6 @@ compat_features:
   #   safari: "26.2"
   #   safari_ios: "26.2"
   - html.elements.h1.no_ua_styles_in_article_aside_nav_section
-
-  # baseline: false
-  # support:
-  #   chrome: "147"
-  #   chrome_android: "147"
-  #   safari: "26.2"
-  #   safari_ios: "26.2"
-  - html.elements.link.rel.modulepreload.as-json
 
   # baseline: false
   # support:
@@ -1077,6 +1078,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "147"
+  #   chrome_android: "147"
+  #   edge: "147"
+  - html.elements.link.rel.modulepreload.as-style
+
+  # baseline: false
+  # support:
   #   firefox: "1"
   #   firefox_android: "4"
   - api.Navigator.oscpu
@@ -1106,12 +1114,6 @@ compat_features:
   #   firefox: "74"
   #   firefox_android: "79"
   - html.elements.iframe.allow.document-domain
-
-  # baseline: false
-  # support:
-  #   chrome: "147"
-  #   chrome_android: "147"
-  - html.elements.link.rel.modulepreload.as-style
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false

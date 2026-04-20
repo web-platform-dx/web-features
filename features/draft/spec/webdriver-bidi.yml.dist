@@ -719,6 +719,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "147"
+  #   chrome_android: "147"
+  #   edge: "147"
+  - webdriver.bidi.userAgentClientHints
+
+  # baseline: false
+  # support:
   #   firefox: "112"
   #   firefox_android: "112"
   - webdriver.bidi.browsingContext.print
@@ -834,12 +841,6 @@ compat_features:
   #   firefox: "147"
   #   firefox_android: "147"
   - webdriver.bidi.emulation.setScreenSettingsOverride
-
-  # baseline: false
-  # support:
-  #   chrome: "147"
-  #   chrome_android: "147"
-  - webdriver.bidi.userAgentClientHints
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
