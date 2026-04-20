@@ -1,6 +1,6 @@
 name: cross-origin() for url()
 description: >
-  The `url()' CSS function accepts a `cross-origin()` modifier to control cross-origin resource sharing (CORS) when requesting the URL.
+  The `url()` CSS function accepts a `cross-origin()` modifier to control cross-origin resource sharing (CORS) when requesting the URL.
   For example, `url("https://example.com" cross-origin(anonymous))`) does not send credentials to the URL.
 spec: https://drafts.csswg.org/css-values-5/#typedef-request-url-modifier-cross-origin-modifier
 compat_features:
