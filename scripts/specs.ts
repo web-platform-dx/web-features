@@ -207,6 +207,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://www.rfc-editor.org/rfc/rfc7903#section-1.2",
         "Allowed because it's a spec not tracked in web-specs."
+    ],
+    [
+        "https://github.com/WICG/PEPC/blob/main/usermedia_element.md",
+        "Replace with https://w3c.github.io/mediacapture-extensions/#the-usermedia-html-element when https://github.com/w3c/mediacapture-extensions/pull/168 merges."
     ]
 ];
 
