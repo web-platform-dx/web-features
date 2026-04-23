@@ -1,12 +1,10 @@
-draft_date: 2026-04-06
+draft_date: 2026-04-23
 name: Manifest Incubations
 description: TODO
 spec: https://wicg.github.io/manifest-incubations/
 compat_features:
   - manifests.webapp.display_override
   - manifests.webapp.display_override.tabbed
-  - manifests.webapp.migrate_from
-  - manifests.webapp.migrate_to
   - manifests.webapp.note_taking
   - manifests.webapp.note_taking.new_note_url
   - manifests.webapp.scope_extensions
@@ -17,6 +15,9 @@ compat_features:
 #   - api.Window.beforeinstallprompt_event
 # - File handlers:
 #   - manifests.webapp.file_handlers
+# - Web app origin migration:
+#   - manifests.webapp.migrate_from
+#   - manifests.webapp.migrate_to
 # - Related apps:
 #   - manifests.webapp.prefer_related_applications
 #   - manifests.webapp.related_applications
