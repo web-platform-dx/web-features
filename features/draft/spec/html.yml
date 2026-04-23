@@ -1,4 +1,4 @@
-draft_date: 2026-04-20
+draft_date: 2026-04-23
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -36,6 +36,7 @@ compat_features:
   - api.HTMLInputElement.showPicker.month_input
   - api.HTMLInputElement.showPicker.time_input
   - api.HTMLInputElement.showPicker.week_input
+  - api.HTMLLinkElement.integrity
   - api.HTMLMediaElement.getStartDate
   - api.HTMLMediaElement.playbackRate.negative_values
   - api.HTMLOptionsCollection
@@ -51,7 +52,6 @@ compat_features:
   - api.HTMLSourceElement.src
   - api.HTMLSourceElement.type
   - api.HTMLSourceElement.width
-  - api.HTMLTemplateElement.shadowRootSlotAssignment
   - api.HTMLUnknownElement
   - api.ImageData.ImageData.settings_parameter
   - api.ImageData.ImageData.settings_parameter.colorSpace_option
@@ -1447,7 +1447,6 @@ compat_features:
 #   - api.HTMLLinkElement.disabled
 #   - api.HTMLLinkElement.href
 #   - api.HTMLLinkElement.hreflang
-#   - api.HTMLLinkElement.integrity
 #   - api.HTMLLinkElement.media
 #   - api.HTMLLinkElement.rel
 #   - api.HTMLLinkElement.relList
@@ -1459,7 +1458,6 @@ compat_features:
 #   - html.elements.link.disabled
 #   - html.elements.link.href
 #   - html.elements.link.hreflang
-#   - html.elements.link.integrity
 #   - html.elements.link.media
 #   - html.elements.link.rel
 #   - html.elements.link.sizes
@@ -1762,7 +1760,6 @@ compat_features:
 #   - api.HTMLScriptElement.async
 #   - api.HTMLScriptElement.crossOrigin
 #   - api.HTMLScriptElement.defer
-#   - api.HTMLScriptElement.integrity
 #   - api.HTMLScriptElement.src
 #   - api.HTMLScriptElement.supports_static
 #   - api.HTMLScriptElement.text
@@ -1772,9 +1769,12 @@ compat_features:
 #   - html.elements.script.async
 #   - html.elements.script.crossorigin
 #   - html.elements.script.defer
-#   - html.elements.script.integrity
 #   - html.elements.script.src
 #   - html.elements.script.type
+# - Subresource integrity:
+#   - api.HTMLScriptElement.integrity
+#   - html.elements.link.integrity
+#   - html.elements.script.integrity
 # - showPicker() for <select>:
 #   - api.HTMLSelectElement.showPicker
 # - <slot>:
@@ -1866,6 +1866,7 @@ compat_features:
 #   - api.HTMLTemplateElement.shadowRootDelegatesFocus
 #   - api.HTMLTemplateElement.shadowRootMode
 #   - api.HTMLTemplateElement.shadowRootSerializable
+#   - api.HTMLTemplateElement.shadowRootSlotAssignment
 #   - html.elements.template.shadowrootclonable
 #   - html.elements.template.shadowrootdelegatesfocus
 #   - html.elements.template.shadowrootmode

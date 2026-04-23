@@ -375,6 +375,19 @@ compat_features:
   - api.ServiceWorker.error_event
 
   # baseline: high
+  # baseline_low_date: 2018-04-30
+  # baseline_high_date: 2020-10-30
+  # support:
+  #   chrome: "45"
+  #   chrome_android: "45"
+  #   edge: "17"
+  #   firefox: "43"
+  #   firefox_android: "43"
+  #   safari: "11.1"
+  #   safari_ios: "11.3"
+  - api.HTMLLinkElement.integrity
+
+  # baseline: high
   # baseline_low_date: 2018-05-09
   # baseline_high_date: 2020-11-09
   # support:
@@ -1079,7 +1092,6 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - api.HTMLTemplateElement.shadowRootSlotAssignment
   - api.Navigator.authentication
   - html.elements.template.shadowrootslotassignment
   - html.elements.track.kind.descriptions

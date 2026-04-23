@@ -1,4 +1,4 @@
-draft_date: 2026-03-16
+draft_date: 2026-04-23
 name: Fetch
 description: TODO
 spec: https://fetch.spec.whatwg.org/
@@ -51,7 +51,6 @@ compat_features:
 #   - api.Request.destination
 #   - api.Request.duplex
 #   - api.Request.headers
-#   - api.Request.integrity
 #   - api.Request.isHistoryNavigation
 #   - api.Request.json
 #   - api.Request.keepalive
@@ -102,6 +101,8 @@ compat_features:
 # - Fetch form data:
 #   - api.Request.formData
 #   - api.Response.formData
+# - Subresource integrity:
+#   - api.Request.integrity
 # - Abortable fetch:
 #   - api.Request.signal
 #   - api.fetch.init_signal_parameter
