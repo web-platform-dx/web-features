@@ -2,7 +2,7 @@ import { Temporal } from "@js-temporal/polyfill";
 import { Browser } from "../browser-compat-data/browser.js";
 import { Compat, defaultCompat } from "../browser-compat-data/compat.js";
 import { feature } from "../browser-compat-data/feature.js";
-import { browsers } from "./core-browser-set.js";
+import { browsers, webViews } from "./core-browser-set.js";
 import {
   parseRangedDateString,
   toHighDate,
@@ -16,7 +16,7 @@ import {
 } from "./support.js";
 
 // Include this in the public API
-export { identifiers as coreBrowserSet } from "./core-browser-set.js";
+export { identifiers as coreBrowserSet, webViews } from "./core-browser-set.js";
 export { parseRangedDateString } from "./date-utils.js";
 
 interface Logger {
@@ -50,6 +50,7 @@ interface SupportDetails {
   baseline_high_date: BaselineDate;
   discouraged: boolean;
   support: Map<Browser, InitialSupport | undefined>;
+  ecosystem_support: Map<Browser, InitialSupport | undefined>;
   toJSON: () => string;
 }
 
@@ -59,6 +60,7 @@ interface SupportStatus {
   baseline_low_date: string;
   baseline_high_date?: string;
   support: Record<string, string>;
+  ecosystem_support?: Record<string, string>;
 }
 
 /**
@@ -114,6 +116,7 @@ export function computeBaseline(
 
   const statuses = keys.map((key) => calculate(key, compat));
   const support = collateSupport(statuses.map((status) => status.support));
+  const ecosystem_support = collateSupport(statuses.map((status) => status.ecosystem_support));
 
   const keystoneDate = findKeystoneDate(
     statuses.flatMap((s) => [...s.support.values()]),
@@ -128,6 +131,7 @@ export function computeBaseline(
     baseline_high_date,
     discouraged,
     support,
+    ecosystem_support,
     toJSON: function () {
       return jsonify(this);
     },
@@ -143,7 +147,9 @@ function calculate(compatKey: string, compat: Compat) {
 
   return {
     discouraged: f.deprecated ?? false,
+    supportForBaseline: support(f, browsers(compat)),
     support: support(f, browsers(compat)),
+    ecosystem_support: support(f, webViews(compat)),
   };
 }
 
@@ -286,10 +292,17 @@ function findKeystoneDate(
 function jsonify(status: SupportDetails): string {
   const { baseline_low_date, baseline_high_date } = status;
   const support: Record<string, string> = {};
+  const ecosystem_support: Record<string, string> = {};
 
   for (const [browser, initialSupport] of status.support.entries()) {
     if (initialSupport !== undefined) {
       support[browser.id] = initialSupport.text;
+    }
+  }
+
+  for (const [browser, initialSupport] of status.ecosystem_support.entries()) {
+    if (initialSupport !== undefined) {
+      ecosystem_support[browser.id] = initialSupport.text;
     }
   }
 
@@ -300,6 +313,7 @@ function jsonify(status: SupportDetails): string {
         baseline_low_date,
         baseline_high_date,
         support,
+        ecosystem_support
       },
       undefined,
       2,
@@ -312,6 +326,7 @@ function jsonify(status: SupportDetails): string {
         baseline: status.baseline,
         baseline_low_date,
         support,
+        ecosystem_support
       },
       undefined,
       2,
@@ -322,6 +337,7 @@ function jsonify(status: SupportDetails): string {
     {
       baseline: status.baseline,
       support,
+      ecosystem_support
     },
     undefined,
     2,

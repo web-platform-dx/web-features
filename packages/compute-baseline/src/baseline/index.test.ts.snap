@@ -6,6 +6,9 @@ exports[`computeBaseline disregards support that's been removed 1`] = `
   \\"support\\": {
     \\"safari\\": \\"8\\",
     \\"safari_ios\\": \\"8\\"
+  },
+  \\"ecosystem_support\\": {
+    \\"webview_ios\\": \\"8\\"
   }
 }"
 `;
@@ -23,6 +26,9 @@ exports[`computeBaseline finds discrepancies with ancestors (checkAncestors) 1`]
     \\"firefox_android\\": \\"64\\",
     \\"safari\\": \\"16.4\\",
     \\"safari_ios\\": \\"16.4\\"
+  },
+  \\"ecosystem_support\\": {
+    \\"webview_android\\": \\"69\\"
   }
 }"
 `;
@@ -37,6 +43,9 @@ exports[`computeBaseline finds discrepancies with ancestors (checkAncestors) 2`]
     \\"firefox\\": \\"64\\",
     \\"firefox_android\\": \\"64\\",
     \\"safari\\": \\"16.4\\"
+  },
+  \\"ecosystem_support\\": {
+    \\"webview_android\\": \\"71\\"
   }
 }"
 `;
@@ -51,6 +60,9 @@ exports[`computeBaseline finds discrepancies with ancestors (checkAncestors) 3`]
     \\"firefox\\": \\"64\\",
     \\"firefox_android\\": \\"64\\",
     \\"safari\\": \\"16.4\\"
+  },
+  \\"ecosystem_support\\": {
+    \\"webview_android\\": \\"71\\"
   }
 }"
 `;
@@ -62,7 +74,8 @@ Object {
   \\"support\\": {
     \\"firefox\\": \\"82\\",
     \\"firefox_android\\": \\"82\\"
-  }
+  },
+  \\"ecosystem_support\\": {}
 }",
   "html.elements.form.target": "{
   \\"baseline\\": \\"high\\",
@@ -76,6 +89,10 @@ Object {
     \\"firefox_android\\": \\"4\\",
     \\"safari\\": \\"3\\",
     \\"safari_ios\\": \\"2\\"
+  },
+  \\"ecosystem_support\\": {
+    \\"webview_android\\": \\"4.4\\",
+    \\"webview_ios\\": \\"2\\"
   }
 }",
   "html.global_attributes.exportparts": "{
@@ -90,6 +107,10 @@ Object {
     \\"firefox_android\\": \\"79\\",
     \\"safari\\": \\"13.1\\",
     \\"safari_ios\\": \\"13.4\\"
+  },
+  \\"ecosystem_support\\": {
+    \\"webview_android\\": \\"73\\",
+    \\"webview_ios\\": \\"13.4\\"
   }
 }",
 }
@@ -109,6 +130,10 @@ Object {
     \\"firefox_android\\": \\"33\\",
     \\"safari\\": \\"11\\",
     \\"safari_ios\\": \\"11\\"
+  },
+  \\"ecosystem_support\\": {
+    \\"webview_android\\": \\"61\\",
+    \\"webview_ios\\": \\"11\\"
   }
 }",
   "api.Document.visibilitychange_event": "{
@@ -123,6 +148,10 @@ Object {
     \\"firefox_android\\": \\"56\\",
     \\"safari\\": \\"14.1\\",
     \\"safari_ios\\": \\"14.5\\"
+  },
+  \\"ecosystem_support\\": {
+    \\"webview_android\\": \\"62\\",
+    \\"webview_ios\\": \\"14.5\\"
   }
 }",
   "css.types.basic-shape.path": "{
@@ -137,6 +166,10 @@ Object {
     \\"firefox_android\\": \\"79\\",
     \\"safari\\": \\"13.1\\",
     \\"safari_ios\\": \\"13\\"
+  },
+  \\"ecosystem_support\\": {
+    \\"webview_android\\": \\"52\\",
+    \\"webview_ios\\": \\"13\\"
   }
 }",
   "css.types.image.cross-fade": "{
@@ -144,6 +177,9 @@ Object {
   \\"support\\": {
     \\"safari\\": \\"10\\",
     \\"safari_ios\\": \\"9.3\\"
+  },
+  \\"ecosystem_support\\": {
+    \\"webview_ios\\": \\"9.3\\"
   }
 }",
 }
@@ -154,6 +190,10 @@ Object {
   "baseline": "high",
   "baseline_high_date": "2019-09-27",
   "baseline_low_date": "2017-03-27",
+  "ecosystem_support": Object {
+    "webview_android": "42",
+    "webview_ios": "10.3",
+  },
   "support": Object {
     "chrome": "42",
     "chrome_android": "42",

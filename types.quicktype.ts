@@ -172,6 +172,10 @@ export interface StatusHeadline {
    */
   by_compat_key?: { [key: string]: Status };
   /**
+   * Support in user agents that are not part of the core browser set.
+   */
+  ecosystem_support?: EcosystemSupport;
+  /**
    * Browser versions that most-recently introduced the feature
    */
   support: Support;
@@ -193,10 +197,22 @@ export interface Status {
    */
   baseline_low_date?: string;
   /**
+   * Support in user agents that are not part of the core browser set.
+   */
+  ecosystem_support?: EcosystemSupport;
+  /**
    * Browser versions that most-recently introduced the feature
    */
   support: Support;
   [property: string]: any;
+}
+
+/**
+ * Support in user agents that are not part of the core browser set.
+ */
+export interface EcosystemSupport {
+  webview_android?: string;
+  webview_ios?: string;
 }
 
 /**

@@ -175,6 +175,55 @@ describe("computeBaseline", function () {
     });
     assert.equal(actual.baseline, false);
   });
+
+  it("computes support data for android and ios webviews", function () {
+    const result = computeBaseline({
+      compatKeys: ["css.properties.border-color"],
+      checkAncestors: true,
+    });
+
+    const androidWebview = [...result.ecosystem_support.keys()].find(
+      (b) => b.id === "webview_android",
+    );
+    const iosWebview = [...result.ecosystem_support.keys()].find(
+      (b) => b.id === "webview_ios",
+    );
+
+    assert(androidWebview, "android_webview should be present in support data");
+    assert(iosWebview, "ios_webview should be present in support data");
+
+    const androidWebviewSupport = result.ecosystem_support.get(androidWebview);
+    const iosWebviewSupport = result.ecosystem_support.get(iosWebview);
+
+    assert(androidWebviewSupport, "android_webview should have support data");
+    assert(iosWebviewSupport, "ios_webview should have support data");
+  });
+
+  it("shows no support for android and ios webviews", function () {
+    const result = computeBaseline({
+      compatKeys: ["api.ServiceWorkerRegistration.backgroundFetch"],
+      checkAncestors: true,
+    });
+
+    const androidWebview = [...result.ecosystem_support.keys()].find(
+      (b) => b.id === "webview_android",
+    );
+    const iosWebview = [...result.ecosystem_support.keys()].find(
+      (b) => b.id === "webview_ios",
+    );
+
+    assert(androidWebview, "android_webview should be present in support data");
+    assert(iosWebview, "ios_webview should be present in support data");
+
+    const androidWebviewSupport = result.ecosystem_support.get(androidWebview);
+    const iosWebviewSupport = result.ecosystem_support.get(iosWebview);
+
+    assert(
+      !androidWebviewSupport,
+      "android_webview should have no support data",
+    );
+    assert(!iosWebviewSupport, "ios_webview should have no support data");
+  });
 });
 
 describe("keystoneDateToStatus()", function () {
