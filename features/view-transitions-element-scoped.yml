@@ -1,7 +1,7 @@
 name: Element-scoped view transitions
 description: >
   The `startViewTransition()` method of an `Element` object starts a view transition that affects only that element's DOM tree.
-  The `view-transition-scope` CSS property limits `view-transition-name` discovery to the element and its flat-tree descendants.
+  The `view-transition-scope` CSS property limits `view-transition-name` discovery to this element's subtree.
   You can use this to run separate elements' transitions concurrently.
 spec: https://drafts.csswg.org/css-view-transitions-2/#scoped-vt
 group: view-transitions
