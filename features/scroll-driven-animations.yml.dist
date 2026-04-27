@@ -10,6 +10,22 @@ status:
     safari: "26"
     safari_ios: "26"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2026-04-21
+  # support:
+  #   chrome: "115"
+  #   chrome_android: "115"
+  #   edge: "115"
+  #   firefox: "150"
+  #   firefox_android: "150"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - css.properties.animation-range
+  - css.properties.animation-range-end
+  - css.properties.animation-range-end.normal
+  - css.properties.animation-range-start
+  - css.properties.animation-range-start.normal
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
@@ -27,11 +43,6 @@ compat_features:
   - api.ViewTimeline.endOffset
   - api.ViewTimeline.startOffset
   - api.ViewTimeline.subject
-  - css.properties.animation-range
-  - css.properties.animation-range-end
-  - css.properties.animation-range-end.normal
-  - css.properties.animation-range-start
-  - css.properties.animation-range-start.normal
   - css.properties.animation-timeline
   - css.properties.animation-timeline.scroll
   - css.properties.animation-timeline.view

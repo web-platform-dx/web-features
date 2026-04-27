@@ -846,6 +846,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  #   firefox: "150"
+  #   firefox_android: "150"
+  - api.HTMLImageElement.sizes.auto
+
+  # baseline: false
+  # support:
   #   chrome: "131"
   #   chrome_android: "131"
   #   edge: "131"
@@ -991,13 +1000,6 @@ compat_features:
   #   edge: "108"
   - html.elements.iframe.allow.wildcards
   - html.elements.textarea.autocomplete.webauthn
-
-  # baseline: false
-  # support:
-  #   chrome: "126"
-  #   chrome_android: "126"
-  #   edge: "126"
-  - api.HTMLImageElement.sizes.auto
 
   # baseline: false
   # support:
