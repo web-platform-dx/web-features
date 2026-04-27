@@ -185,10 +185,6 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because feature policy was replaced by permissions policy."
     ],
     [
-        "https://github.com/WICG/view-transitions/blob/main/scoped-transitions.md",
-        "Allowed until there's proper spec text. Follow https://github.com/w3c/csswg-drafts/issues/9890 for details."
-    ],
-    [
         "https://github.com/WICG/install-element",
         "Allowed because the <install> element is available in Chrome/Edge as an origin trial."
     ],

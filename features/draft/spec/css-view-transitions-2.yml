@@ -4,17 +4,11 @@ description: TODO
 spec: https://drafts.csswg.org/css-view-transitions-2/
 compat_features:
   - api.Document.activeViewTransition
-  - api.Element.activeViewTransition
-  - api.Element.startViewTransition
-  - api.ViewTransition.transitionRoot
   - api.ViewTransition.waitUntil
   - css.properties.view-transition-group
   - css.properties.view-transition-group.contain
   - css.properties.view-transition-group.nearest
   - css.properties.view-transition-group.normal
-  - css.properties.view-transition-scope
-  - css.properties.view-transition-scope.all
-  - css.properties.view-transition-scope.none
   - css.selectors.view-transition-group-children
 
 # The following features in the spec are already part of web-features:
@@ -23,6 +17,13 @@ compat_features:
 #   - api.CSSViewTransitionRule.navigation
 #   - api.CSSViewTransitionRule.types
 #   - css.at-rules.view-transition
+# - Element-scoped view transitions:
+#   - api.Element.activeViewTransition
+#   - api.Element.startViewTransition
+#   - api.ViewTransition.transitionRoot
+#   - css.properties.view-transition-scope
+#   - css.properties.view-transition-scope.all
+#   - css.properties.view-transition-scope.none
 # - View transitions:
 #   - api.Document.startViewTransition
 #   - api.Document.startViewTransition.options_parameter
