@@ -2,3 +2,16 @@ name: Web authentication easy public key access
 description: The `getAuthenticatorData()`, `getPublicKey()`, and `getPublicKeyAlgorithm()` methods of `AuthenticatorAttestationResponse` access credential data inside `attestationObject` without the need to parse it.
 spec: https://w3c.github.io/webauthn/#sctn-public-key-easy
 group: webauthn
+# Status override to prevent regression
+# TODO: resolve alongside https://github.com/web-platform-dx/web-features/issues/3995
+status:
+  baseline: low
+  baseline_low_date: 2023-10-24
+  support:
+    chrome: "85"
+    chrome_android: "85"
+    edge: "85"
+    firefox: "119"
+    firefox_android: "119"
+    safari: "16"
+    safari_ios: "16"

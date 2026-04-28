@@ -1,17 +1,18 @@
 name: LanguageModel
 description: The `LanguageModel` API prompts an on-device language model. Also known as the Prompt API.
 spec: http://webmachinelearning.github.io/prompt-api/
-# compat_features:
-# Missing from BCD: api.LanguageModel
-# Missing from BCD: api.LanguageModel.append
-# Missing from BCD: api.LanguageModel.availability_static
-# Missing from BCD: api.LanguageModel.clone
-# Missing from BCD: api.LanguageModel.contextUsage
-# Missing from BCD: api.LanguageModel.contextWindow
-# Missing from BCD: api.LanguageModel.create_static
-# Missing from BCD: api.LanguageModel.destroy
-# Missing from BCD: api.LanguageModel.measureContextUsage
-# Missing from BCD: api.LanguageModel.oncontextoverflow_event
-# Missing from BCD: api.LanguageModel.prompt
-# Missing from BCD: api.LanguageModel.promptStreaming
-# Missing from BCD: http.headers.Permissions-Policy.language-model
+compat_features:
+  # The follow keys are expected, at the time this feature was authored:
+  # - api.LanguageModel.destroy
+  # - api.LanguageModel.oncontextoverflow_event
+  # - http.headers.Permissions-Policy.language-model
+  - api.LanguageModel
+  - api.LanguageModel.append
+  - api.LanguageModel.availability_static
+  - api.LanguageModel.clone
+  - api.LanguageModel.contextUsage
+  - api.LanguageModel.contextWindow
+  - api.LanguageModel.create_static
+  - api.LanguageModel.measureContextUsage
+  - api.LanguageModel.prompt
+  - api.LanguageModel.promptStreaming

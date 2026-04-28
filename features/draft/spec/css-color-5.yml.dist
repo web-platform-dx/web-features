@@ -6,16 +6,16 @@ status:
   support: {}
 compat_features:
   # baseline: high
-  # baseline_low_date: ≤2017-04-05
-  # baseline_high_date: ≤2019-10-05
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
   # support:
-  #   chrome: ≤31
-  #   chrome_android: ≤31
-  #   edge: ≤15
-  #   firefox: ≤50
-  #   firefox_android: ≤50
-  #   safari: ≤9.1
-  #   safari_ios: ≤9.3
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1.5"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
   - css.properties.background-color.currentColor
   - css.properties.background.currentColor
   - css.properties.border-bottom-color.currentColor
@@ -24,10 +24,22 @@ compat_features:
   - css.properties.border-left-color.currentColor
   - css.properties.border-left.currentColor
   - css.properties.border-right-color.currentColor
-  - css.properties.border-right.currentColor
   - css.properties.border-top-color.currentColor
   - css.properties.border-top.currentColor
   - css.properties.border.currentColor
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1.5"
+  #   firefox_android: "14"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - css.properties.border-right.currentColor
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -166,7 +178,8 @@ compat_features:
   - css.properties.stroke-color.currentColor
   - css.properties.stroke-color.transparent
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "150"
+  #   firefox_android: "150"
   - css.types.color.color-mix.variadic_color_arguments

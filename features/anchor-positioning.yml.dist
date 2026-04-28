@@ -378,18 +378,9 @@ compat_features:
   #   safari_ios: "26"
   - css.properties.position-area.span-all
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support:
-  #   chrome: "144"
-  #   chrome_android: "144"
-  #   edge: "144"
-  #   firefox: "147"
-  #   firefox_android: "147"
+  # support: {}
   - css.properties.position-anchor
-  - css.properties.position-anchor.none
-
-  # baseline: false
-  # support:
-  #   firefox: "147"
-  #   firefox_android: "147"
   - css.properties.position-anchor.auto
+  - css.properties.position-anchor.none
