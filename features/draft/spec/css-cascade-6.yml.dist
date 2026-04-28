@@ -3,4 +3,8 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "150"
+    firefox_android: "150"
+compat_features:
+  - css.types.global_keywords.revert-rule
