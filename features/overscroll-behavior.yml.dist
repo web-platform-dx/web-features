@@ -6,11 +6,10 @@ status:
   support:
     chrome: "144"
     chrome_android: "144"
-    edge: "18"
+    edge: "144"
     firefox: "150"
     firefox_android: "150"
 compat_features:
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "144"
@@ -39,6 +38,7 @@ compat_features:
   - css.properties.overscroll-behavior.contain
   - css.properties.overscroll-behavior.none
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "144"
