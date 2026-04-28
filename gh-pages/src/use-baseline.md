@@ -6,8 +6,8 @@ layout: "default.html"
 
 You can use Baseline to:
 
-- Make decisions about what web platform features to use in your sites and applications
-- Tell others whether features work across browsers
+- Make decisions about what web platform features to use in your sites and applications.
+- Tell others whether features work across browsers.
 
 ## Check if a feature works across browsers
 

@@ -3,10 +3,12 @@ title: web-features
 layout: "default.html"
 ---
 
-web-features is an effort to build a shared catalog of features of the web platform. By creating a common list of features and their definitions, web-features aims to improve understanding of what web developers get and want from the web. web-features does this by:
+web-features is an effort to build a shared catalog of features of the web platform.
 
-- Creating feature definitions, which identify and describe capabilities of the web.
-- Generating Baseline support data, which summarizes the availability of web features across key browsers and releases.
+By creating a common list of features and their definitions, web-features aims to improve understanding of what web developers get and want from the web. web-features does this by:
+
+- Creating feature definitions, which identify and describe capabilities of the web, maintained in the [web-features GitHub repo](https://github.com/web-platform-dx/web-features/).
+- Generating [Baseline](/baseline/) support data, which summarizes the availability of web features across key browsers and releases.
 - Publishing the [web-features npm package](https://www.npmjs.com/package/web-features), which bundles feature identifiers with Baseline statuses.
 
 ## What is a feature?
