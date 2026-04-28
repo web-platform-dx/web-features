@@ -207,6 +207,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://www.rfc-editor.org/rfc/rfc7903#section-1.2",
         "Allowed because it's a spec not tracked in web-specs."
+    ],
+    [
+        "https://github.com/WICG/html-in-canvas/blob/main/README.md",
+        "Remove when https://github.com/whatwg/html/pull/11588 merges."
     ]
 ];
 
