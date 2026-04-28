@@ -727,6 +727,12 @@ compat_features:
 
   # baseline: false
   # support:
+  #   firefox: "106"
+  #   firefox_android: "106"
+  - webdriver.bidi.script.getRealms.type_parameter.window
+
+  # baseline: false
+  # support:
   #   firefox: "112"
   #   firefox_android: "112"
   - webdriver.bidi.browsingContext.print

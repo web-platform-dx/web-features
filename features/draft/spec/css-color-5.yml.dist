@@ -16,17 +16,7 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "4"
   #   safari_ios: "3.2"
-  - css.properties.background-color.currentColor
-  - css.properties.background.currentColor
-  - css.properties.border-bottom-color.currentColor
-  - css.properties.border-bottom.currentColor
-  - css.properties.border-color.currentColor
-  - css.properties.border-left-color.currentColor
-  - css.properties.border-left.currentColor
-  - css.properties.border-right-color.currentColor
-  - css.properties.border-top-color.currentColor
-  - css.properties.border-top.currentColor
-  - css.properties.border.currentColor
+  - css.types.color.currentcolor
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -40,6 +30,33 @@ compat_features:
   #   safari: "4"
   #   safari_ios: "3.2"
   - css.properties.border-right.currentColor
+
+  # baseline: high
+  # baseline_low_date: 2017-03-07
+  # baseline_high_date: 2019-09-07
+  # support:
+  #   chrome: "50"
+  #   chrome_android: "50"
+  #   edge: "12"
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - css.properties.column-rule-color.currentColor
+  - css.properties.column-rule.currentColor
+
+  # baseline: high
+  # baseline_low_date: ≤2017-04-05
+  # baseline_high_date: ≤2019-10-05
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: ≤15
+  #   firefox: "3"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - css.properties.stop-color.currentColor
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -170,6 +187,14 @@ compat_features:
   #   safari: "26.2"
   #   safari_ios: "26.2"
   - css.types.color.color.colorSpace_parameter_accepts_display-p3-linear_value
+
+  # baseline: false
+  # support:
+  #   chrome: "93"
+  #   edge: "93"
+  #   firefox: "92"
+  #   firefox_android: "92"
+  - css.properties.accent-color.currentColor
 
   # baseline: false
   # support:
