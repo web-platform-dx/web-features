@@ -360,6 +360,9 @@ function insertCompatFeatures(yaml: Document, groups: Map<string, string[]>) {
  * mistakes, such as `.yaml` files.
  */
 function isDistOrDistable(path: string): boolean {
+  if (path.startsWith("features/draft/proposed/")) {
+    return false;
+  }
   if (path.endsWith(".yaml.dist") || path.endsWith(".yaml")) {
     throw new Error(
       `YAML files must use .yml extension; ${path} has invalid extension`,
