@@ -1,5 +1,5 @@
 name: HTML in canvas
-description: A `<canvas>` HTML element with the `layoutsubtree` attribute can draw descendant elements in the canvas's rendering context. You can use it to style and layout text in a canvas, improve canvas accessibility, and apply 2D and 3D effects to HTML.
+description: A `<canvas>` HTML element with the `layoutsubtree` attribute can draw descendant elements in its rendering context. You can use it to style and layout text in a canvas, expose canvas content to browser features (like accessibility, translate, or find-in-page) and apply 2D and 3D effects to HTML.
 spec: https://github.com/WICG/html-in-canvas/blob/main/README.md
 group:
   - html-elements
@@ -18,7 +18,7 @@ group:
 #   - api.HTMLCanvasElement.getElementTransform
 #   - api.HTMLCanvasElement.requestPaint
 #   - api.OffscreenCanvasRenderingContext2D.drawElementImage
-#   - api.WebGLRenderingContext.texElementImage2D 
+#   - api.WebGLRenderingContext.texElementImage2D
 #   - api.HTMLCanvasElement.layoutSubtree
-#   - api.PaintEvent 
+#   - api.PaintEvent
 #   - api.PaintEvent.changedElements
