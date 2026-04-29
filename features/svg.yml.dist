@@ -934,6 +934,7 @@ compat_features:
   - css.properties.marker-start.none
   - css.properties.marker.none
   - css.properties.stop-color
+  - css.properties.stop-color.currentColor
   - css.properties.stop-opacity
 
   # baseline: high
@@ -1919,6 +1920,8 @@ compat_features:
   #   safari: "11.1"
   #   safari_ios: "11.3"
   - css.properties.stroke-color
+  - css.properties.stroke-color.currentColor
+  - css.properties.stroke-color.transparent
 
   # baseline: false
   # support:
