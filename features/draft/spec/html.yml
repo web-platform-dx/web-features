@@ -1,4 +1,4 @@
-draft_date: 2026-04-23
+draft_date: 2026-04-27
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -36,7 +36,6 @@ compat_features:
   - api.HTMLInputElement.showPicker.month_input
   - api.HTMLInputElement.showPicker.time_input
   - api.HTMLInputElement.showPicker.week_input
-  - api.HTMLLinkElement.integrity
   - api.HTMLMediaElement.getStartDate
   - api.HTMLMediaElement.playbackRate.negative_values
   - api.HTMLOptionsCollection
@@ -1474,6 +1473,11 @@ compat_features:
 #   - api.HTMLLinkElement.imageSrcset
 #   - html.elements.link.imagesizes
 #   - html.elements.link.imagesrcset
+# - Subresource integrity:
+#   - api.HTMLLinkElement.integrity
+#   - api.HTMLScriptElement.integrity
+#   - html.elements.link.integrity
+#   - html.elements.script.integrity
 # - <video>:
 #   - api.HTMLMediaElement
 #   - api.HTMLMediaElement.abort_event
@@ -1771,10 +1775,6 @@ compat_features:
 #   - html.elements.script.defer
 #   - html.elements.script.src
 #   - html.elements.script.type
-# - Subresource integrity:
-#   - api.HTMLScriptElement.integrity
-#   - html.elements.link.integrity
-#   - html.elements.script.integrity
 # - showPicker() for <select>:
 #   - api.HTMLSelectElement.showPicker
 # - <slot>:

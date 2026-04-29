@@ -211,6 +211,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/OpaqueRange/explainer.md",
         "Spec changes not yet merged. Replace when https://github.com/whatwg/dom/pull/1404 and https://github.com/whatwg/html/pull/11741 merge."
+    ],
+    [
+        "https://github.com/WICG/html-in-canvas/blob/main/README.md",
+        "Remove when https://github.com/whatwg/html/pull/11588 merges."
     ]
 ];
 
