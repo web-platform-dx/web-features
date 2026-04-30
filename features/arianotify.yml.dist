@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "150"
+    firefox_android: "150"
 compat_features:
   - api.Document.ariaNotify
   - api.Element.ariaNotify

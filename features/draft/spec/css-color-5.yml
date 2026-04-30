@@ -1,10 +1,9 @@
-draft_date: 2026-04-23
+draft_date: 2026-04-28
 name: CSS Color Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-color-5/
 compat_features:
-  - css.properties.background-color.currentColor
-  - css.properties.background.currentColor
+  - css.properties.accent-color.currentColor
   - css.properties.border-block-color.currentColor
   - css.properties.border-block-color.transparent
   - css.properties.border-block-end-color.currentColor
@@ -17,9 +16,6 @@ compat_features:
   - css.properties.border-block-start.transparent
   - css.properties.border-block.currentColor
   - css.properties.border-block.transparent
-  - css.properties.border-bottom-color.currentColor
-  - css.properties.border-bottom.currentColor
-  - css.properties.border-color.currentColor
   - css.properties.border-inline-color.currentColor
   - css.properties.border-inline-color.transparent
   - css.properties.border-inline-end-color.currentColor
@@ -32,16 +28,13 @@ compat_features:
   - css.properties.border-inline-start.transparent
   - css.properties.border-inline.currentColor
   - css.properties.border-inline.transparent
-  - css.properties.border-left-color.currentColor
-  - css.properties.border-left.currentColor
-  - css.properties.border-right-color.currentColor
   - css.properties.border-right.currentColor
-  - css.properties.border-top-color.currentColor
-  - css.properties.border-top.currentColor
-  - css.properties.border.currentColor
   - css.properties.caret-color.currentColor
   - css.properties.caret-color.transparent
+  - css.properties.column-rule-color.currentColor
+  - css.properties.column-rule.currentColor
   - css.properties.outline.currentColor
+  - css.properties.stop-color.currentColor
   - css.properties.stroke-color.currentColor
   - css.properties.stroke-color.transparent
   - css.properties.text-decoration-color.currentColor
@@ -54,8 +47,23 @@ compat_features:
   - css.properties.text-emphasis.transparent
   - css.types.color.color-mix.variadic_color_arguments
   - css.types.color.color.colorSpace_parameter_accepts_display-p3-linear_value
+  - css.types.color.currentcolor
 
 # The following features in the spec are already part of web-features:
+# - currentColor:
+#   - css.properties.background.currentColor
+#   - css.properties.background-color.currentColor
+#   - css.properties.border.currentColor
+#   - css.properties.border-bottom.currentColor
+#   - css.properties.border-bottom-color.currentColor
+#   - css.properties.border-color.currentColor
+#   - css.properties.border-left.currentColor
+#   - css.properties.border-left-color.currentColor
+#   - css.properties.border-right-color.currentColor
+#   - css.properties.border-top.currentColor
+#   - css.properties.border-top-color.currentColor
+#   - css.properties.color.currentColor
+#   - css.properties.outline-color.currentColor
 # - background:
 #   - css.properties.background.transparent
 # - background-color:
@@ -110,8 +118,6 @@ compat_features:
 #   - css.types.color.color-mix
 # - contrast-color():
 #   - css.types.color.contrast-color
-# - currentColor:
-#   - css.types.color.currentcolor
 # - HSL:
 #   - css.types.color.hsl
 #   - css.types.color.hsl.alpha_parameter

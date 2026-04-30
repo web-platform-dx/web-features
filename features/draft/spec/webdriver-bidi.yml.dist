@@ -616,6 +616,19 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "143"
+  #   chrome_android: "143"
+  #   edge: "143"
+  #   firefox: "150"
+  #   firefox_android: "150"
+  - webdriver.bidi.emulation.setNetworkConditions
+  - webdriver.bidi.emulation.setNetworkConditions.contexts_parameter
+  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter
+  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter.offline
+  - webdriver.bidi.emulation.setNetworkConditions.userContexts_parameter
+
+  # baseline: false
+  # support:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
@@ -707,21 +720,16 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "143"
-  #   chrome_android: "143"
-  #   edge: "143"
-  - webdriver.bidi.emulation.setNetworkConditions
-  - webdriver.bidi.emulation.setNetworkConditions.contexts_parameter
-  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter
-  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter.offline
-  - webdriver.bidi.emulation.setNetworkConditions.userContexts_parameter
-
-  # baseline: false
-  # support:
   #   chrome: "147"
   #   chrome_android: "147"
   #   edge: "147"
   - webdriver.bidi.userAgentClientHints
+
+  # baseline: false
+  # support:
+  #   firefox: "106"
+  #   firefox_android: "106"
+  - webdriver.bidi.script.getRealms.type_parameter.window
 
   # baseline: false
   # support:
