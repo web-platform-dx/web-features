@@ -14,8 +14,8 @@ compat_features:
   #   chrome_android: "142"
   #   edge: "142"
   - api.Permissions.permission_local-network-access
-  - api.Request.Request.init_targetAddressSpace_parameter
-  - api.fetch.init_targetAddressSpace_parameter
+  - api.Request.Request.options_parameter.targetAddressSpace
+  - api.fetch.options_parameter.targetAddressSpace
   - http.headers.Permissions-Policy.local-network-access
 
   # ⬇️ Same status as overall feature ⬇️

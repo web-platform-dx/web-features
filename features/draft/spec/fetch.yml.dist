@@ -38,12 +38,12 @@ compat_features:
   #   chrome: "105"
   #   chrome_android: "105"
   #   edge: "105"
-  - api.fetch.body_readablestream
+  - api.fetch.options_parameter.body.accepts_readablestream
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "105"
   #   edge: "105"
-  - api.Request.Request.init_duplex_parameter
-  - api.fetch.init_duplex_parameter
+  - api.Request.Request.options_parameter.duplex
+  - api.fetch.options_parameter.duplex
