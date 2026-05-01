@@ -215,7 +215,23 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/WICG/html-in-canvas/blob/main/README.md",
         "Remove when https://github.com/whatwg/html/pull/11588 merges."
-    ]
+    ],
+    [
+        "https://wicg.github.io/attribution-reporting-api/",
+        "Discontinued spec allowed for discouraged feature."
+    ],
+    [
+        "https://privacycg.github.io/requestStorageAccessFor/",
+        "Discontinued spec allowed for discouraged feature."
+    ],
+    [
+        "https://wicg.github.io/shared-storage/#web-locks-integration",
+        "Discontinued spec allowed for discouraged feature."
+    ],
+    [
+        "https://wicg.github.io/shared-storage/",
+        "Discontinued spec allowed for discouraged feature."
+    ],
 ];
 
 function isOK(url: URL, allowlist: allowlistItem[] = defaultAllowlist) {
