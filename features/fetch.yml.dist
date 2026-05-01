@@ -35,6 +35,8 @@ compat_features:
   - api.Headers.set
   - api.Request
   - api.Request.Request
+  - api.Request.Request.options_parameter
+  - api.Request.Request.options_parameter.body
   - api.Request.arrayBuffer
   - api.Request.blob
   - api.Request.bodyUsed
@@ -62,6 +64,8 @@ compat_features:
   - api.Response.type
   - api.Response.url
   - api.fetch
+  - api.fetch.options_parameter
+  - api.fetch.options_parameter.body
 
   # baseline: high
   # baseline_low_date: 2017-03-27
