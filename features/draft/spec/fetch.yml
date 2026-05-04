@@ -1,4 +1,4 @@
-draft_date: 2026-04-23
+draft_date: 2026-05-04
 name: Fetch
 description: TODO
 spec: https://fetch.spec.whatwg.org/
@@ -35,9 +35,11 @@ compat_features:
 #   - api.Request
 #   - api.Request.Request
 #   - api.Request.Request.cross_origin_stripped
+#   - api.Request.Request.options_parameter
+#   - api.Request.Request.options_parameter.body
+#   - api.Request.Request.options_parameter.body.accepts_readablestream
 #   - api.Request.Request.options_parameter.keepalive
 #   - api.Request.Request.options_parameter.referrer
-#   - api.Request.Request.options_parameter.body.accepts_readablestream
 #   - api.Request.Request.response_body_readablestream
 #   - api.Request.arrayBuffer
 #   - api.Request.blob
@@ -88,6 +90,8 @@ compat_features:
 #   - api.fetch
 #   - api.fetch.authorization_removed_cross_origin
 #   - api.fetch.blob_data_support
+#   - api.fetch.options_parameter
+#   - api.fetch.options_parameter.body
 #   - api.fetch.options_parameter.keepalive
 #   - api.fetch.options_parameter.referrerPolicy
 # - Fetch priority:

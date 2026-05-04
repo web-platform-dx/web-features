@@ -1,4 +1,4 @@
-draft_date: 2026-04-27
+draft_date: 2026-05-04
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -76,6 +76,7 @@ compat_features:
   - api.ShadowRoot.activeElement
   - api.ShadowRoot.innerHTML
   - api.SharedWorker.SharedWorker.enforces_trusted_types
+  - api.SharedWorker.SharedWorker.options_extendedLifetime_parameter
   - api.TrackEvent
   - api.TrackEvent.TrackEvent
   - api.TrackEvent.track
@@ -821,6 +822,7 @@ compat_features:
 #   - api.HTMLAudioElement
 #   - api.HTMLAudioElement.Audio
 #   - html.elements.audio
+#   - html.elements.audio.autoplay
 #   - html.elements.audio.controls
 #   - html.elements.audio.crossorigin
 #   - html.elements.audio.loop

@@ -44,6 +44,7 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
+  - api.GPU.requestAdapter.options_featureLevel
   - api.GPUCommandEncoder.beginRenderPass.accepts_GPUTexture_resources
   - api.GPUCommandEncoder.copyBufferToBuffer.offset_and_size_parameter_optional
   - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUBuffer
