@@ -35,6 +35,8 @@ compat_features:
   - api.Headers.set
   - api.Request
   - api.Request.Request
+  - api.Request.Request.options_parameter
+  - api.Request.Request.options_parameter.body
   - api.Request.arrayBuffer
   - api.Request.blob
   - api.Request.bodyUsed
@@ -62,6 +64,8 @@ compat_features:
   - api.Response.type
   - api.Response.url
   - api.fetch
+  - api.fetch.options_parameter
+  - api.fetch.options_parameter.body
 
   # baseline: high
   # baseline_low_date: 2017-03-27
@@ -113,7 +117,7 @@ compat_features:
   #   firefox_android: "47"
   #   safari: "10.1"
   #   safari_ios: "10.3"
-  - api.Request.Request.init_referrer_parameter
+  - api.Request.Request.options_parameter.referrer
 
   # baseline: high
   # baseline_low_date: 2017-10-17
@@ -336,9 +340,9 @@ compat_features:
   #   firefox_android: "133"
   #   safari: "13"
   #   safari_ios: "13"
-  - api.Request.Request.init_keepalive_parameter
+  - api.Request.Request.options_parameter.keepalive
   - api.Request.keepalive
-  - api.fetch.init_keepalive_parameter
+  - api.fetch.options_parameter.keepalive
 
   # baseline: low
   # baseline_low_date: 2025-01-17
@@ -393,7 +397,7 @@ compat_features:
   #   firefox: "52"
   #   firefox_android: "52"
   #   safari: "11.1"
-  - api.fetch.init_referrerPolicy_parameter
+  - api.fetch.options_parameter.referrerPolicy
 
   # baseline: false
   # support:
@@ -425,7 +429,7 @@ compat_features:
   #   chrome: "105"
   #   chrome_android: "105"
   #   edge: "105"
-  - api.Request.Request.request_body_readablestream
+  - api.Request.Request.options_parameter.body.accepts_readablestream
 
   # baseline: false
   # support:
