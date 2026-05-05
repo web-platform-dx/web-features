@@ -41,11 +41,14 @@ compat_features:
   #   safari_ios: "26.2"
   - api.CaretPosition.getClientRect
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-04-21
   # support:
   #   chrome: "128"
   #   chrome_android: "128"
   #   edge: "128"
+  #   firefox: "150"
+  #   firefox_android: "150"
   #   safari: "26.2"
   #   safari_ios: "26.2"
   - api.Document.caretPositionFromPoint.options_parameter

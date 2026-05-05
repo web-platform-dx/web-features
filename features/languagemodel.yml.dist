@@ -4,3 +4,14 @@
 status:
   baseline: false
   support: {}
+compat_features:
+  - api.LanguageModel
+  - api.LanguageModel.append
+  - api.LanguageModel.availability_static
+  - api.LanguageModel.clone
+  - api.LanguageModel.contextUsage
+  - api.LanguageModel.contextWindow
+  - api.LanguageModel.create_static
+  - api.LanguageModel.measureContextUsage
+  - api.LanguageModel.prompt
+  - api.LanguageModel.promptStreaming
