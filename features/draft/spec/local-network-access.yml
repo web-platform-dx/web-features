@@ -6,8 +6,8 @@ compat_features:
   - api.Permissions.permission_local-network
   - api.Permissions.permission_local-network-access
   - api.Permissions.permission_loopback-network
-  - api.Request.Request.init_targetAddressSpace_parameter
-  - api.fetch.init_targetAddressSpace_parameter
+  - api.Request.Request.options_parameter.targetAddressSpace
+  - api.fetch.options_parameter.targetAddressSpace
   - http.headers.Permissions-Policy.local-network
   - http.headers.Permissions-Policy.local-network-access
   - http.headers.Permissions-Policy.loopback-network
