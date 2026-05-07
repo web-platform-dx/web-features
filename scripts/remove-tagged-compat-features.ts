@@ -8,7 +8,7 @@ import { isDeepStrictEqual } from "node:util";
 import winston from "winston";
 import YAML from "yaml";
 import yargs from "yargs";
-import { checkForStaleCompat } from "./dist";
+import { checkForStaleCompat } from "../compat-helpers";
 
 const compat = new Compat();
 
@@ -123,7 +123,7 @@ function main() {
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  checkForStaleCompat();
+  checkForStaleCompat(logger);
   main();
   process.exit(exitStatus);
 }

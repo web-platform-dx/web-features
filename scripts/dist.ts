@@ -5,7 +5,7 @@ import {
   parseRangedDateString,
   setLogger,
 } from "compute-baseline";
-import { Compat, feature, Feature } from "compute-baseline/browser-compat-data";
+import { feature } from "compute-baseline/browser-compat-data";
 import { fdir } from "fdir";
 import fs from "node:fs";
 import path from "node:path";
@@ -14,9 +14,8 @@ import { isDeepStrictEqual } from "node:util";
 import winston from "winston";
 import YAML, { Document, Scalar, YAMLSeq } from "yaml";
 import yargs from "yargs";
+import { checkForStaleCompat, tagsToFeatures } from "../compat-helpers";
 import type { FeatureData, FeatureMovedData, FeatureSplitData } from "../types";
-
-const compat = new Compat();
 
 const argv = yargs(process.argv.slice(2))
   .scriptName("dist")
@@ -51,39 +50,6 @@ const logger = winston.createLogger({
 let exitStatus = 0;
 
 setLogger(logger);
-
-/**
- * Check that the installed @mdn/browser-compat-data (BCD) package matches the
- * one pinned in `package.json`. BCD updates frequently, leading to surprising
- * error messages if you haven't run `npm install` recently.
- */
-export function checkForStaleCompat(): void {
-  const packageBCDVersionSpecifier: string = (() => {
-    const packageJSON: unknown = JSON.parse(
-      fs.readFileSync(process.env.npm_package_json, {
-        encoding: "utf-8",
-      }),
-    );
-    if (typeof packageJSON === "object" && "devDependencies" in packageJSON) {
-      const bcd = packageJSON.devDependencies["@mdn/browser-compat-data"];
-      if (typeof bcd === "string") {
-        return bcd;
-      }
-      throw new Error(
-        "@mdn/browser-compat-data version not found in package.json",
-      );
-    }
-  })();
-  const installedBCDVersion = compat.version;
-
-  if (!packageBCDVersionSpecifier.includes(installedBCDVersion)) {
-    logger.error(
-      `Installed @mdn/browser-compat-data (${installedBCDVersion}) does not match package.json version (${packageBCDVersionSpecifier})`,
-    );
-    logger.error("Run `npm install` and try again.");
-    process.exit(1);
-  }
-}
 
 /**
  * Update (or create) a dist YAML file from a feature definition YAML file.
@@ -389,22 +355,6 @@ function insertCompatFeatures(yaml: Document, groups: Map<string, string[]>) {
   yaml.set("compat_features", list);
 }
 
-const tagsToFeatures: Map<string, Feature[]> = (() => {
-  // TODO: Use Map.groupBy() instead, when it's available
-  const map = new Map();
-  for (const feature of compat.walk()) {
-    for (const tag of feature.tags) {
-      let features = map.get(tag);
-      if (!features) {
-        features = [];
-        map.set(tag, features);
-      }
-      features.push(feature);
-    }
-  }
-  return map;
-})();
-
 /**
  * Check if a file is an authored definition or dist file. Throws on likely
  * mistakes, such as `.yaml` files.
@@ -486,7 +436,7 @@ function main() {
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  checkForStaleCompat();
+  checkForStaleCompat(logger);
   main();
   process.exit(exitStatus);
 }

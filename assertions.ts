@@ -50,7 +50,7 @@ export function assertRequiredRemovalDateSet(
   }
   if (
     feature.compat_features &&
-    Object.keys(feature.status.by_compat_key).length > 0
+    Object.keys(feature.status.by_compat_key ?? {}).length > 0
   )
     return;
   throw new Error(

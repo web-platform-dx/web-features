@@ -1,4 +1,4 @@
-draft_date: 2026-02-16
+draft_date: 2026-04-28
 name: WebDriver BiDi
 description: TODO
 spec: https://w3c.github.io/webdriver-bidi/
@@ -16,6 +16,11 @@ compat_features:
   - webdriver.bidi.browser.removeUserContext.userContext_parameter
   - webdriver.bidi.browser.setClientWindowState
   - webdriver.bidi.browser.setClientWindowState.clientWindow_parameter
+  - webdriver.bidi.browser.setClientWindowState.height_parameter
+  - webdriver.bidi.browser.setClientWindowState.state_parameter
+  - webdriver.bidi.browser.setClientWindowState.width_parameter
+  - webdriver.bidi.browser.setClientWindowState.x_parameter
+  - webdriver.bidi.browser.setClientWindowState.y_parameter
   - webdriver.bidi.browser.setDownloadBehavior
   - webdriver.bidi.browser.setDownloadBehavior.downloadBehavior_parameter
   - webdriver.bidi.browser.setDownloadBehavior.userContexts_parameter
@@ -341,6 +346,8 @@ compat_features:
   - webdriver.bidi.script.getRealms
   - webdriver.bidi.script.getRealms.context_parameter
   - webdriver.bidi.script.getRealms.type_parameter
+  - webdriver.bidi.script.getRealms.type_parameter.window
+  - webdriver.bidi.script.getRealms.type_parameter.worker
   - webdriver.bidi.script.message_event
   - webdriver.bidi.script.message_event.channel_parameter
   - webdriver.bidi.script.message_event.data_parameter
@@ -366,7 +373,6 @@ compat_features:
   - webdriver.bidi.session.subscribe.events_parameter
   - webdriver.bidi.session.subscribe.userContexts_parameter
   - webdriver.bidi.session.unsubscribe
-  - webdriver.bidi.session.unsubscribe.contexts_parameter
   - webdriver.bidi.session.unsubscribe.events_parameter
   - webdriver.bidi.storage
   - webdriver.bidi.storage.deleteCookies

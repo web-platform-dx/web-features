@@ -6,18 +6,8 @@ status:
   support:
     firefox: "80"
     firefox_android: "80"
+    safari: "16.4"
+    safari_ios: "16.4"
 compat_features:
-  # baseline: false
-  # support:
-  #   firefox: "80"
-  #   firefox_android: "80"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - api.KeyframeEffect.iterationComposite
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   firefox: "80"
-  #   firefox_android: "80"
   - api.Element.animate.options_iterationComposite_parameter
+  - api.KeyframeEffect.iterationComposite

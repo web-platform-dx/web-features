@@ -1,6 +1,7 @@
 name: Crash reporting
 description: Crash reporting sends a report to a URL nominated by the `Reporting-Endpoints` header when a user is unable to continue using the page because the browser or tab crashed.
 spec: https://wicg.github.io/crash-reporting/
+group: reporting
 # This was first implemented in Chrome 72 via the now-deprecated `Report-To`
 # header. Crash reporting thus predates `Reporting-Endpoints`. This somewhat
 # strangely makes the `http.headers.Reporting-Endpoints` the de facto inception

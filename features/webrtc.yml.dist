@@ -1061,6 +1061,57 @@ compat_features:
   #   safari_ios: "15"
   - api.RTCDataChannel.transferable
 
+  # baseline: low
+  # baseline_low_date: 2026-04-21
+  # support:
+  #   chrome: "74"
+  #   chrome_android: "74"
+  #   edge: "79"
+  #   firefox: "150"
+  #   firefox_android: "150"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - api.RTCError
+  - api.RTCError.RTCError
+  - api.RTCError.errorDetail
+  - api.RTCError.receivedAlert
+  - api.RTCError.sctpCauseCode
+  - api.RTCError.sdpLineNumber
+  - api.RTCError.sentAlert
+  - api.RTCErrorEvent
+  - api.RTCErrorEvent.RTCErrorEvent
+  - api.RTCErrorEvent.error
+
+  # baseline: low
+  # baseline_low_date: 2026-04-21
+  # support:
+  #   chrome: "77"
+  #   chrome_android: "77"
+  #   edge: "79"
+  #   firefox: "150"
+  #   firefox_android: "150"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.RTCPeerConnection.icecandidateerror_event
+  - api.RTCPeerConnectionIceErrorEvent
+  - api.RTCPeerConnectionIceErrorEvent.RTCPeerConnectionIceErrorEvent
+  - api.RTCPeerConnectionIceErrorEvent.errorCode
+  - api.RTCPeerConnectionIceErrorEvent.errorText
+  - api.RTCPeerConnectionIceErrorEvent.url
+
+  # baseline: low
+  # baseline_low_date: 2026-04-21
+  # support:
+  #   chrome: "81"
+  #   chrome_android: "81"
+  #   edge: "81"
+  #   firefox: "150"
+  #   firefox_android: "150"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.RTCPeerConnectionIceErrorEvent.address
+  - api.RTCPeerConnectionIceErrorEvent.port
+
   # baseline: false
   # support:
   #   chrome: "57"
@@ -1130,21 +1181,12 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "74"
-  #   chrome_android: "74"
-  #   edge: "79"
-  #   safari: "15.4"
-  #   safari_ios: "15.4"
-  - api.RTCError
-  - api.RTCError.RTCError
-  - api.RTCError.errorDetail
-  - api.RTCError.receivedAlert
-  - api.RTCError.sctpCauseCode
-  - api.RTCError.sdpLineNumber
-  - api.RTCError.sentAlert
-  - api.RTCErrorEvent
-  - api.RTCErrorEvent.RTCErrorEvent
-  - api.RTCErrorEvent.error
+  #   chrome: "75"
+  #   chrome_android: "75"
+  #   edge: "13"
+  #   firefox: "150"
+  #   firefox_android: "150"
+  - api.RTCIceTransport.role
 
   # baseline: false
   # support:
@@ -1167,36 +1209,12 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "77"
-  #   chrome_android: "77"
-  #   edge: "79"
-  #   safari: "14.1"
-  #   safari_ios: "14.5"
-  - api.RTCPeerConnection.icecandidateerror_event
-  - api.RTCPeerConnectionIceErrorEvent
-  - api.RTCPeerConnectionIceErrorEvent.RTCPeerConnectionIceErrorEvent
-  - api.RTCPeerConnectionIceErrorEvent.errorCode
-  - api.RTCPeerConnectionIceErrorEvent.errorText
-  - api.RTCPeerConnectionIceErrorEvent.url
-
-  # baseline: false
-  # support:
   #   chrome: "81"
   #   chrome_android: "81"
   #   edge: "81"
   #   safari: "11"
   #   safari_ios: "11"
   - api.RTCRtpSender.setParameters.parameters_encodings_parameter.maxFramerate
-
-  # baseline: false
-  # support:
-  #   chrome: "81"
-  #   chrome_android: "81"
-  #   edge: "81"
-  #   safari: "14.1"
-  #   safari_ios: "14.5"
-  - api.RTCPeerConnectionIceErrorEvent.address
-  - api.RTCPeerConnectionIceErrorEvent.port
 
   # baseline: false
   # support:
@@ -1235,7 +1253,6 @@ compat_features:
   #   edge: "13"
   - api.RTCIceTransport.getRemoteCandidates
   - api.RTCIceTransport.getRemoteParameters
-  - api.RTCIceTransport.role
 
   # baseline: false
   # support:

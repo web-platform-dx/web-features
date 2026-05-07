@@ -1,4 +1,4 @@
-draft_date: 2026-03-31
+draft_date: 2026-05-04
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -22,10 +22,8 @@ compat_features:
   - api.HTMLButtonElement.commandForElement.implicit_anchor_reference
   - api.HTMLCanvasElement.getContext.2d_context.options_colorType_parameter
   - api.HTMLCanvasElement.toBlob.quality_parameter
-  - api.HTMLCanvasElement.toBlob.type_parameter_jpeg
   - api.HTMLCanvasElement.toBlob.type_parameter_png
   - api.HTMLCanvasElement.toBlob.type_parameter_webp
-  - api.HTMLCanvasElement.toDataURL.type_parameter_jpeg
   - api.HTMLCanvasElement.toDataURL.type_parameter_png
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
   - api.HTMLElement.error_event
@@ -62,19 +60,9 @@ compat_features:
   - api.NavigateEvent.sourceElement
   - api.NavigationTransition.committed
   - api.NavigationTransition.to
-  - api.Navigator.appCodeName
-  - api.Navigator.appName
-  - api.Navigator.appVersion
   - api.Navigator.authentication
-  - api.Navigator.javaEnabled
-  - api.Navigator.mimeTypes
   - api.Navigator.oscpu
-  - api.Navigator.platform
-  - api.Navigator.plugins
-  - api.Navigator.product
-  - api.Navigator.productSub
   - api.Navigator.taintEnabled
-  - api.Navigator.vendor
   - api.Navigator.vendorSub
   - api.OffscreenCanvasRenderingContext2D.getContextAttributes
   - api.OffscreenCanvasRenderingContext2D.lang
@@ -88,6 +76,7 @@ compat_features:
   - api.ShadowRoot.activeElement
   - api.ShadowRoot.innerHTML
   - api.SharedWorker.SharedWorker.enforces_trusted_types
+  - api.SharedWorker.SharedWorker.options_extendedLifetime_parameter
   - api.TrackEvent
   - api.TrackEvent.TrackEvent
   - api.TrackEvent.track
@@ -131,6 +120,7 @@ compat_features:
   - html.elements.script.type.importmap.multiple_import_maps
   - html.elements.select.autocomplete
   - html.elements.template.shadowrootcustomelementregistry
+  - html.elements.template.shadowrootslotassignment
   - html.elements.textarea.autocomplete.new-password
   - html.elements.textarea.autocomplete.one-time-code
   - html.elements.textarea.autocomplete.webauthn
@@ -832,6 +822,7 @@ compat_features:
 #   - api.HTMLAudioElement
 #   - api.HTMLAudioElement.Audio
 #   - html.elements.audio
+#   - html.elements.audio.autoplay
 #   - html.elements.audio.controls
 #   - html.elements.audio.crossorigin
 #   - html.elements.audio.loop
@@ -971,7 +962,9 @@ compat_features:
 #   - api.HTMLCanvasElement.getContext
 #   - api.HTMLCanvasElement.height
 #   - api.HTMLCanvasElement.toBlob
+#   - api.HTMLCanvasElement.toBlob.type_parameter_jpeg
 #   - api.HTMLCanvasElement.toDataURL
+#   - api.HTMLCanvasElement.toDataURL.type_parameter_jpeg
 #   - api.HTMLCanvasElement.width
 #   - html.elements.canvas
 #   - html.elements.canvas.height
@@ -1455,7 +1448,6 @@ compat_features:
 #   - api.HTMLLinkElement.disabled
 #   - api.HTMLLinkElement.href
 #   - api.HTMLLinkElement.hreflang
-#   - api.HTMLLinkElement.integrity
 #   - api.HTMLLinkElement.media
 #   - api.HTMLLinkElement.rel
 #   - api.HTMLLinkElement.relList
@@ -1467,7 +1459,6 @@ compat_features:
 #   - html.elements.link.disabled
 #   - html.elements.link.href
 #   - html.elements.link.hreflang
-#   - html.elements.link.integrity
 #   - html.elements.link.media
 #   - html.elements.link.rel
 #   - html.elements.link.sizes
@@ -1484,6 +1475,11 @@ compat_features:
 #   - api.HTMLLinkElement.imageSrcset
 #   - html.elements.link.imagesizes
 #   - html.elements.link.imagesrcset
+# - Subresource integrity:
+#   - api.HTMLLinkElement.integrity
+#   - api.HTMLScriptElement.integrity
+#   - html.elements.link.integrity
+#   - html.elements.script.integrity
 # - <video>:
 #   - api.HTMLMediaElement
 #   - api.HTMLMediaElement.abort_event
@@ -1615,7 +1611,7 @@ compat_features:
 # - Lazy-loading media:
 #   - api.HTMLMediaElement.loading
 #   - html.elements.audio.loading
-#   - html.elements.video.autoplay.loading
+#   - html.elements.video.loading
 # - preservesPitch:
 #   - api.HTMLMediaElement.preservesPitch
 # - Media source:
@@ -1770,7 +1766,6 @@ compat_features:
 #   - api.HTMLScriptElement.async
 #   - api.HTMLScriptElement.crossOrigin
 #   - api.HTMLScriptElement.defer
-#   - api.HTMLScriptElement.integrity
 #   - api.HTMLScriptElement.src
 #   - api.HTMLScriptElement.supports_static
 #   - api.HTMLScriptElement.text
@@ -1780,7 +1775,6 @@ compat_features:
 #   - html.elements.script.async
 #   - html.elements.script.crossorigin
 #   - html.elements.script.defer
-#   - html.elements.script.integrity
 #   - html.elements.script.src
 #   - html.elements.script.type
 # - showPicker() for <select>:
@@ -1874,6 +1868,7 @@ compat_features:
 #   - api.HTMLTemplateElement.shadowRootDelegatesFocus
 #   - api.HTMLTemplateElement.shadowRootMode
 #   - api.HTMLTemplateElement.shadowRootSerializable
+#   - api.HTMLTemplateElement.shadowRootSlotAssignment
 #   - html.elements.template.shadowrootclonable
 #   - html.elements.template.shadowrootdelegatesfocus
 #   - html.elements.template.shadowrootmode
@@ -2049,6 +2044,23 @@ compat_features:
 # - Navigator:
 #   - api.Navigator
 #   - api.Window.navigator
+# - User agent sniffing:
+#   - api.Navigator.appCodeName
+#   - api.Navigator.appName
+#   - api.Navigator.appVersion
+#   - api.Navigator.javaEnabled
+#   - api.Navigator.platform
+#   - api.Navigator.plugins
+#   - api.Navigator.product
+#   - api.Navigator.productSub
+#   - api.Navigator.userAgent
+#   - api.Navigator.vendor
+#   - api.WorkerNavigator.appCodeName
+#   - api.WorkerNavigator.appName
+#   - api.WorkerNavigator.appVersion
+#   - api.WorkerNavigator.platform
+#   - api.WorkerNavigator.product
+#   - api.WorkerNavigator.userAgent
 # - cookieEnabled:
 #   - api.Navigator.cookieEnabled
 # - hardwareConcurrency:
@@ -2061,6 +2073,9 @@ compat_features:
 #   - api.WorkerGlobalScope.languagechange_event
 #   - api.WorkerNavigator.language
 #   - api.WorkerNavigator.languages
+# - pdfViewerEnabled:
+#   - api.Navigator.mimeTypes
+#   - api.Navigator.pdfViewerEnabled
 # - Online status:
 #   - api.Navigator.onLine
 #   - api.Window.offline_event
@@ -2068,8 +2083,6 @@ compat_features:
 #   - api.WorkerGlobalScope.offline_event
 #   - api.WorkerGlobalScope.online_event
 #   - api.WorkerNavigator.onLine
-# - pdfViewerEnabled:
-#   - api.Navigator.pdfViewerEnabled
 # - registerProtocolHandler:
 #   - api.Navigator.registerProtocolHandler
 #   - api.Navigator.registerProtocolHandler.scheme_parameter_bitcoin
@@ -2103,9 +2116,6 @@ compat_features:
 #   - api.UserActivation
 #   - api.UserActivation.hasBeenActive
 #   - api.UserActivation.isActive
-# - User agent sniffing:
-#   - api.Navigator.userAgent
-#   - api.WorkerNavigator.userAgent
 # - Back/forward cache blocking reasons:
 #   - api.NotRestoredReasonDetails
 #   - api.NotRestoredReasonDetails.reason

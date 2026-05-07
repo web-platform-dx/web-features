@@ -25,7 +25,6 @@ compat_features:
   - webdriver.bidi.session.subscribe.contexts_parameter
   - webdriver.bidi.session.subscribe.events_parameter
   - webdriver.bidi.session.unsubscribe
-  - webdriver.bidi.session.unsubscribe.contexts_parameter
   - webdriver.bidi.session.unsubscribe.events_parameter
 
   # baseline: false
@@ -617,6 +616,19 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "143"
+  #   chrome_android: "143"
+  #   edge: "143"
+  #   firefox: "150"
+  #   firefox_android: "150"
+  - webdriver.bidi.emulation.setNetworkConditions
+  - webdriver.bidi.emulation.setNetworkConditions.contexts_parameter
+  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter
+  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter.offline
+  - webdriver.bidi.emulation.setNetworkConditions.userContexts_parameter
+
+  # baseline: false
+  # support:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
@@ -708,14 +720,16 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "143"
-  #   chrome_android: "143"
-  #   edge: "143"
-  - webdriver.bidi.emulation.setNetworkConditions
-  - webdriver.bidi.emulation.setNetworkConditions.contexts_parameter
-  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter
-  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter.offline
-  - webdriver.bidi.emulation.setNetworkConditions.userContexts_parameter
+  #   chrome: "147"
+  #   chrome_android: "147"
+  #   edge: "147"
+  - webdriver.bidi.userAgentClientHints
+
+  # baseline: false
+  # support:
+  #   firefox: "106"
+  #   firefox_android: "106"
+  - webdriver.bidi.script.getRealms.type_parameter.window
 
   # baseline: false
   # support:
@@ -840,6 +854,11 @@ compat_features:
   # support: {}
   - webdriver.bidi.browser.setClientWindowState
   - webdriver.bidi.browser.setClientWindowState.clientWindow_parameter
+  - webdriver.bidi.browser.setClientWindowState.height_parameter
+  - webdriver.bidi.browser.setClientWindowState.state_parameter
+  - webdriver.bidi.browser.setClientWindowState.width_parameter
+  - webdriver.bidi.browser.setClientWindowState.x_parameter
+  - webdriver.bidi.browser.setClientWindowState.y_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event
   - webdriver.bidi.browsingContext.historyUpdated_event.context_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event.timestamp_parameter
@@ -871,4 +890,4 @@ compat_features:
   - webdriver.bidi.network.responseStarted_event.request_parameter
   - webdriver.bidi.network.responseStarted_event.response_parameter
   - webdriver.bidi.network.responseStarted_event.timestamp_parameter
-  - webdriver.bidi.userAgentClientHints
+  - webdriver.bidi.script.getRealms.type_parameter.worker

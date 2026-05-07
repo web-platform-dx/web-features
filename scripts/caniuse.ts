@@ -1,73 +1,92 @@
-import lite from 'caniuse-lite';
+import lite from "caniuse-lite";
+import { fileURLToPath } from "node:url";
 import winston from "winston";
-
-import { features } from '../index.js';
+import { features } from "../index.js";
+import { isOrdinaryFeatureData } from "../type-guards.js";
 
 const logger = winston.createLogger({
-    level: 'info',
-    format: winston.format.printf(({message}) => `${message}`)
-})
+  format: winston.format.printf(({ message }) => `${message}`),
+});
 
-if (process.argv.includes("--quiet")) {
-    logger.add(new winston.transports.Console({ level: 'info'}));
-} else {
-    logger.add(new winston.transports.Console({ level: 'verbose' }));
-}
-
-// Create a map from caniuse feature identifiers to our identifiers, making
-// it possible to enumerate matched and unmatched features.
-const mapping = new Map<string, string | null>(
-    Object.keys(lite.features).sort().map(id => [id, null])
+export const hiddenCaniuseItems = new Set<string>(
+  (() => {
+    return Object.entries(lite.features)
+      .sort()
+      .flatMap(([id, data]) => {
+        return lite.feature(data).shown ? [] : [id];
+      });
+  })(),
 );
 
-const hiddenCaniuseItems = new Set<string>();
-for (const [id, data] of Object.entries(lite.features)) {
-    if (!lite.feature(data).shown) {
-        hiddenCaniuseItems.add(id);
-    }
-}
+export const caniuseToWebFeaturesId: Map<string, string | null> = (() => {
+  const mapping = new Map<string, string | null>(
+    Object.keys(lite.features)
+      .sort()
+      .map((id) => [id, null]),
+  );
 
-for (const [id, data] of Object.entries(features)) {
-    if (!('caniuse' in data)) {
-        continue;
+  for (const [id, data] of Object.entries(features)) {
+    if (!isOrdinaryFeatureData(data) || !data.caniuse) {
+      continue;
     }
-    const caniuseIds: string[] = typeof data.caniuse === "string" ? [data.caniuse] : data.caniuse;
-    for (const caniuseId of caniuseIds) {
-        if (!mapping.has(caniuseId)) {
-            throw new Error(`Invalid caniuse ID used for ${id}: ${caniuseId}`);
-        }
-        if(mapping.get(caniuseId)){
-            throw new Error(`Duplicate caniuse ID "${caniuseId}" used for "${id}" and "${mapping.get(caniuseId)}"`);
-        }
-        if (hiddenCaniuseItems.has(caniuseId)) {
-            throw new Error(`A caniuse ID used for "${id}" ("${caniuseId}") is hidden on caniuse.com`);
-        }
-        mapping.set(caniuseId, id);
+    for (const caniuseId of data.caniuse) {
+      if (!mapping.has(caniuseId)) {
+        throw new Error(`Invalid caniuse ID used for ${id}: ${caniuseId}`);
+      }
+      if (mapping.get(caniuseId)) {
+        throw new Error(
+          `Duplicate caniuse ID "${caniuseId}" used for "${id}" and "${mapping.get(caniuseId)}"`,
+        );
+      }
+      if (hiddenCaniuseItems.has(caniuseId)) {
+        throw new Error(
+          `A caniuse ID used for "${id}" ("${caniuseId}") is hidden on caniuse.com`,
+        );
+      }
+      mapping.set(caniuseId, id);
     }
-}
+  }
+  return mapping;
+})();
 
-let matched = 0;
+function main() {
+  if (process.argv.includes("--quiet")) {
+    logger.add(new winston.transports.Console({ level: "info" }));
+  } else {
+    logger.add(new winston.transports.Console({ level: "verbose" }));
+  }
 
-for (const [caniuseId, id] of mapping.entries()) {
+  let matched = 0;
+
+  for (const [caniuseId, id] of caniuseToWebFeaturesId.entries()) {
     const isHidden = hiddenCaniuseItems.has(caniuseId);
     const isComplete = id || isHidden;
 
     if (isComplete) {
-        matched++;
+      matched++;
     }
 
     const checkbox = isComplete ? "[x]" : "[ ]";
-    let details = '';
+    let details = "";
     if (id && id !== caniuseId) {
-        details = ` (as ${id})`;
+      details = ` (as ${id})`;
     }
     if (isHidden) {
-        details = " (hidden on caniuse.com 🤫)";
+      details = " (hidden on caniuse.com 🤫)";
     }
 
     const strike = isHidden ? "~~" : "";
     logger.verbose(`- ${checkbox} ${strike}${caniuseId}${strike}${details}`);
+  }
+
+  logger.verbose("");
+  logger.info(
+    `Summary: ${matched}/${caniuseToWebFeaturesId.size} features matched`,
+  );
 }
 
-logger.verbose("");
-logger.info(`Summary: ${matched}/${mapping.size} features matched`);
+if (import.meta.url.startsWith("file:")) {
+  if (process.argv[1] === fileURLToPath(import.meta.url)) {
+    main();
+  }
+}

@@ -5,7 +5,10 @@
     "moduleResolution": "Bundler",
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "noEmit": true
+    "noEmit": true,
+    "lib": ["ES2023"],
+    "types": ["node", "mocha"],
+    "strict": false
   },
   "exclude": ["packages/", "gh-pages/"]
 }

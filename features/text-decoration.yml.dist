@@ -40,6 +40,8 @@ compat_features:
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - css.properties.text-decoration-color
+  - css.properties.text-decoration-color.currentColor
+  - css.properties.text-decoration-color.transparent
   - css.properties.text-decoration-line
   - css.properties.text-decoration-line.line-through
   - css.properties.text-decoration-line.none
@@ -86,6 +88,19 @@ compat_features:
   #   safari: "26.2"
   #   safari_ios: "26.2"
   - css.properties.text-decoration.includes_color-and-style
+
+  # baseline: low
+  # baseline_low_date: 2025-12-12
+  # support:
+  #   chrome: "57"
+  #   chrome_android: "57"
+  #   edge: "79"
+  #   firefox: ≤50
+  #   firefox_android: ≤50
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - css.properties.text-decoration.currentColor
+  - css.properties.text-decoration.transparent
 
   # baseline: low
   # baseline_low_date: 2025-12-12
