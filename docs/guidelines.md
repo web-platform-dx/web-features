@@ -449,17 +449,6 @@ There are three ways to override a status, in order of preference:
       - x
   ```
 
-- Author a `compute_from` override in the feature's authored YAML file.
-  The `status: { compute_from: … }` override selects one or more compat keys from which to calculate a status for the whole feature.
-  This ignores any `compat_features` keys (or BCD-tagged keys) not in the `compute_from` array.
-
-  For example, this override sets the status on the basis of a single key:
-
-  ```yaml
-  status:
-    compute_from: html.elements.a
-  ```
-
 - Author a literal `status` override in the feature's authored YAML file.
   This provides an explicit, overriding status with a Baseline status level (false, `"low"`, or `"high"`), Baseline low date, and `support` information.
   Note that you may combine this with `modifiers` and `incidentals` in a `compat_features` list.
@@ -480,10 +469,25 @@ There are three ways to override a status, in order of preference:
       safari_ios: "3.2"
   ```
 
+- **Deprecated**:
+  Author a `compute_from` override in the feature's authored YAML file.
+  The `status: { compute_from: … }` override selects one or more compat keys from which to calculate a status for the whole feature.
+  This ignores any `compat_features` keys (or BCD-tagged keys) not in the `compute_from` array.
+
+  This method is deprecated and planned for removal.
+  Do not author new `compute_from` overrides.
+
+  For example, this override sets the status on the basis of a single key:
+
+  ```yaml
+  status:
+    compute_from: html.elements.a
+  ```
+
 Whenever possible, avoid overrides.
 Consider alternatives such as splitting a feature into two or more features or fixing upstream data.
 
-If you must override a status, prefer using `compat_features` with `core` and `modifiers` arrays over `incidentals`, `compute_from`, or a literal status override.
+If you must override a status, prefer using `compat_features` with `core` and `modifiers` arrays over `incidentals`, a literal status override, or a `compute_from`.
 
 You can use an override method in the following situations:
 
