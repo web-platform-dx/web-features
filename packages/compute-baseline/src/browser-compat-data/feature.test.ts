@@ -41,7 +41,7 @@ describe("features", function () {
 
     describe("spec_url", function () {
       it("returns an empty array if there's no spec_url", function () {
-        const noSpec = feature("javascript.builtins.Date.parse.iso_8601");
+        const noSpec = feature("api.AbortPaymentEvent");
         assert(noSpec.spec_url.length === 0);
       });
 
