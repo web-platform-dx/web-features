@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "147"
-    chrome_android: "147"
-    edge: "147"
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -27,10 +24,7 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support:
-  #   chrome: "147"
-  #   chrome_android: "147"
-  #   edge: "147"
+  # support: {}
   - api.CSSPseudoElement.parent
   - api.CSSPseudoElement.pseudo
   - api.Element.pseudo

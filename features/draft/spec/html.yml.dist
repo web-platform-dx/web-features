@@ -1048,6 +1048,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "148"
+  #   chrome_android: "148"
+  #   edge: "148"
+  - api.SharedWorker.SharedWorker.options_extendedLifetime_parameter
+
+  # baseline: false
+  # support:
   #   firefox: "1"
   #   firefox_android: "4"
   - api.Navigator.oscpu
@@ -1082,6 +1089,5 @@ compat_features:
   # baseline: false
   # support: {}
   - api.Navigator.authentication
-  - api.SharedWorker.SharedWorker.options_extendedLifetime_parameter
   - html.elements.template.shadowrootslotassignment
   - html.elements.track.kind.descriptions

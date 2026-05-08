@@ -238,6 +238,7 @@ compat_features:
   - css.properties.margin.anchor-size
   - css.properties.right.anchor-size
   - css.properties.top.anchor-size
+  - css.types.anchor-size.inset_margin
 
   # baseline: low
   # baseline_low_date: 2026-01-13
@@ -331,6 +332,7 @@ compat_features:
   - css.properties.position-area.self-inline-end
   - css.properties.position-area.self-inline-start
   - css.properties.position-area.self-start
+  - css.properties.position-area.span-all
   - css.properties.position-area.top
   - css.properties.position-area.x-end
   - css.properties.position-area.x-start
@@ -359,24 +361,6 @@ compat_features:
   - css.properties.position-try.self-x-start
   - css.properties.position-try.self-y-end
   - css.properties.position-try.self-y-start
-
-  # baseline: false
-  # support:
-  #   chrome: "132"
-  #   chrome_android: "132"
-  #   edge: "132"
-  #   safari: "26"
-  #   safari_ios: "26"
-  - css.types.anchor-size.inset_margin
-
-  # baseline: false
-  # support:
-  #   chrome: "144"
-  #   chrome_android: "144"
-  #   edge: "144"
-  #   safari: "26"
-  #   safari_ios: "26"
-  - css.properties.position-area.span-all
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false

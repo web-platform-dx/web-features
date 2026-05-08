@@ -5,6 +5,15 @@ status:
   baseline: false
   support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "148"
+  #   chrome_android: "148"
+  #   edge: "148"
   - api.HTMLMediaElement.loading
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
   - html.elements.audio.loading
   - html.elements.video.loading
