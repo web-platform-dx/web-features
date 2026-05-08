@@ -4,14 +4,14 @@ import path from 'path';
 import { Temporal } from '@js-temporal/polyfill';
 import { fdir } from 'fdir';
 import YAML from 'yaml';
-import { convertMarkdown } from "./text";
-import { GroupData, SnapshotData, WebFeaturesData } from './types';
+import { convertMarkdown } from "./text.ts";
+import type { GroupData, SnapshotData, WebFeaturesData } from './types.ts';
 
 import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, getStatus, parseRangedDateString } from 'compute-baseline';
 import { Compat } from 'compute-baseline/browser-compat-data';
-import { assertCompatSetConsistency, assertRequiredRemovalDateSet, assertValidFeatureReference } from './assertions';
-import { isMoved, isOrdinaryFeatureData, isSplit } from './type-guards';
-import { parseAuthoring, ParsedAuthoredData } from './parse';
+import { assertCompatSetConsistency, assertRequiredRemovalDateSet, assertValidFeatureReference } from './assertions.ts';
+import { parseAuthoring, type ParsedAuthoredData } from './parse.ts';
+import { isMoved, isOrdinaryFeatureData, isSplit } from './type-guards.ts';
 
 // The longest name allowed, to allow for compact display.
 const nameMaxLength = 80;

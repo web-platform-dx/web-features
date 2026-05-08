@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { makeCompatSets, parseAuthoring } from "./parse";
+import { makeCompatSets, parseAuthoring } from "./parse.ts";
 
 describe("makeCompatSets", function () {
   it("from explicit compat sets", function () {

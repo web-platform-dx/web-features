@@ -1,6 +1,6 @@
 import winston from "winston";
-import { tagsToFeatures } from "./compat-helpers";
-import { FeatureData } from "./types";
+import { tagsToFeatures } from "./compat-helpers.ts";
+import type { FeatureData } from "./types.ts";
 
 const logger = winston.createLogger({
   level: "error",
