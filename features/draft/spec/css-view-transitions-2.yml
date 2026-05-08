@@ -1,4 +1,4 @@
-draft_date: 2026-03-16
+draft_date: 2026-05-07
 name: CSS View Transitions Module Level 2
 description: TODO
 spec: https://drafts.csswg.org/css-view-transitions-2/
@@ -17,13 +17,6 @@ compat_features:
 #   - api.CSSViewTransitionRule.navigation
 #   - api.CSSViewTransitionRule.types
 #   - css.at-rules.view-transition
-# - Element-scoped view transitions:
-#   - api.Element.activeViewTransition
-#   - api.Element.startViewTransition
-#   - api.ViewTransition.transitionRoot
-#   - css.properties.view-transition-scope
-#   - css.properties.view-transition-scope.all
-#   - css.properties.view-transition-scope.none
 # - View transitions:
 #   - api.Document.startViewTransition
 #   - api.Document.startViewTransition.options_parameter
@@ -43,6 +36,13 @@ compat_features:
 #   - css.selectors.view-transition-image-pair
 #   - css.selectors.view-transition-new
 #   - css.selectors.view-transition-old
+# - Element-scoped view transitions:
+#   - api.Element.activeViewTransition
+#   - api.Element.startViewTransition
+#   - api.ViewTransition.transitionRoot
+#   - css.properties.view-transition-scope
+#   - css.properties.view-transition-scope.all
+#   - css.properties.view-transition-scope.none
 # - Active view transition:
 #   - api.ViewTransition.types
 #   - api.ViewTransitionTypeSet

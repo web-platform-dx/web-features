@@ -43,18 +43,6 @@ compat_features:
   - api.ReportingObserver.observe
   - api.ReportingObserver.takeRecords
 
-  # baseline: low
-  # baseline_low_date: 2026-03-24
-  # support:
-  #   chrome: "74"
-  #   chrome_android: "74"
-  #   edge: "79"
-  #   firefox: "149"
-  #   firefox_android: "149"
-  #   safari: "18.4"
-  #   safari_ios: "18.4"
-  - api.ReportingObserver.ReportingObserver.options_parameter.types_property.csp-violation
-
   # baseline: false
   # support:
   #   chrome: "84"
@@ -63,21 +51,3 @@ compat_features:
   #   firefox: "149"
   #   firefox_android: "149"
   - api.ReportingObserver.worker_support
-
-  # baseline: false
-  # support:
-  #   chrome: "138"
-  #   chrome_android: "138"
-  #   edge: "138"
-  #   firefox: "149"
-  #   firefox_android: "149"
-  - api.ReportingObserver.ReportingObserver.options_parameter.types_property.integrity-violation
-
-  # baseline: false
-  # support:
-  #   chrome: "69"
-  #   chrome_android: "69"
-  #   edge: "79"
-  - api.ReportingObserver.ReportingObserver.options_parameter.types_property.coep
-  - api.ReportingObserver.ReportingObserver.options_parameter.types_property.deprecation
-  - api.ReportingObserver.ReportingObserver.options_parameter.types_property.intervention
