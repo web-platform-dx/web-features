@@ -1,4 +1,4 @@
-draft_date: 2026-05-04
+draft_date: 2026-05-08
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -17,7 +17,6 @@ compat_features:
   - api.HTMLAllCollection.length
   - api.HTMLAllCollection.namedItem
   - api.HTMLBaseElement.href.forbid_data_javascript_urls
-  - api.HTMLBaseElement.href.forbid_special_characters
   - api.HTMLButtonElement.command.request-close
   - api.HTMLButtonElement.commandForElement.implicit_anchor_reference
   - api.HTMLCanvasElement.getContext.2d_context.options_colorType_parameter
@@ -31,7 +30,6 @@ compat_features:
   - api.HTMLElement.togglePopover.options_force_parameter
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes.auto
-  - api.HTMLInputElement.showPicker.autocomplete_input
   - api.HTMLInputElement.showPicker.datalist_input
   - api.HTMLInputElement.showPicker.month_input
   - api.HTMLInputElement.showPicker.time_input
@@ -60,7 +58,6 @@ compat_features:
   - api.NavigateEvent.sourceElement
   - api.NavigationTransition.committed
   - api.NavigationTransition.to
-  - api.Navigator.authentication
   - api.Navigator.oscpu
   - api.Navigator.taintEnabled
   - api.Navigator.vendorSub
@@ -81,7 +78,6 @@ compat_features:
   - api.TrackEvent.TrackEvent
   - api.TrackEvent.track
   - api.Window.originAgentCluster
-  - api.Window.postMessage.options_delegate_parameter
   - api.Window.postMessage.transfer_parameter
   - api.Window.rejectionhandled_event
   - api.Window.unhandledrejection_event
@@ -101,14 +97,11 @@ compat_features:
   - html.elements.form.autocomplete.webauthn
   - html.elements.h1.no_ua_styles_in_article_aside_nav_section
   - html.elements.hr.hr_in_select
-  - html.elements.html.xmlns
   - html.elements.iframe.allow.autoplay
   - html.elements.iframe.allow.cross-origin-isolated
   - html.elements.iframe.allow.document-domain
-  - html.elements.iframe.allow.wildcards
   - html.elements.iframe.sandbox.allow-orientation-lock
   - html.elements.iframe.sandbox.allow-pointer-lock
-  - html.elements.img.usemap.case_sensitive
   - html.elements.input.autocomplete
   - html.elements.input.type_color.accepts_css_colors
   - html.elements.input.type_range.labeled_values
@@ -133,7 +126,6 @@ compat_features:
   - html.global_attributes.id
   - http.headers.Cross-Origin-Embedder-Policy
   - http.headers.Cross-Origin-Embedder-Policy.credentialless
-  - http.headers.Cross-Origin-Embedder-Policy.report-to_parameter
   - http.headers.Cross-Origin-Opener-Policy
   - http.headers.Cross-Origin-Opener-Policy.noopener-allow-popups
   - http.headers.Cross-Origin-Opener-Policy.report-to_parameter
@@ -143,6 +135,7 @@ compat_features:
   - http.headers.Permissions-Policy.cross-origin-isolated
   - http.headers.Refresh
   - http.headers.X-Frame-Options
+  - http.headers.X-Frame-Options.DENY
   - http.headers.X-Frame-Options.SAMEORIGIN
   - http.status.103
   - http.status.103.preconnect
@@ -191,7 +184,6 @@ compat_features:
 #   - api.BeforeUnloadEvent
 #   - api.BeforeUnloadEvent.user_interaction
 #   - api.Window.beforeunload_event
-#   - api.Window.beforeunload_event.preventdefault_activation
 # - BroadcastChannel:
 #   - api.BroadcastChannel
 #   - api.BroadcastChannel.BroadcastChannel
@@ -331,7 +323,11 @@ compat_features:
 #   - api.SVGElement.tabIndex
 #   - api.SVGImageElement.decode
 #   - api.SVGImageElement.decoding
+#   - api.SVGScriptElement.async
+#   - api.SVGScriptElement.defer
 #   - svg.elements.image.decoding
+#   - svg.elements.script.async
+#   - svg.elements.script.defer
 # - contextlost and contextrestored:
 #   - api.CanvasRenderingContext2D.isContextLost
 #   - api.HTMLCanvasElement.contextlost_event
@@ -492,7 +488,6 @@ compat_features:
 #   - api.DedicatedWorkerGlobalScope.name
 #   - api.Worker
 #   - api.Worker.Worker
-#   - api.Worker.Worker.mime_checks
 #   - api.Worker.Worker.options_name_parameter
 #   - api.Worker.error_event
 #   - api.Worker.terminate
@@ -500,7 +495,6 @@ compat_features:
 #   - api.WorkerGlobalScope
 #   - api.WorkerGlobalScope.error_event
 #   - api.WorkerGlobalScope.importScripts
-#   - api.WorkerGlobalScope.importScripts.mime_checks
 #   - api.WorkerGlobalScope.location
 #   - api.WorkerGlobalScope.navigator
 #   - api.WorkerGlobalScope.rejectionhandled_event
@@ -544,9 +538,6 @@ compat_features:
 #   - api.Document.open
 # - Cookies:
 #   - api.Document.cookie
-# - Feature policy:
-#   - api.Document.featurePolicy
-#   - api.HTMLIFrameElement.featurePolicy
 # - Page visibility:
 #   - api.Document.hidden
 #   - api.Document.visibilityState
@@ -597,9 +588,6 @@ compat_features:
 #   - api.Element.mouseover_event
 #   - api.Element.mouseup_event
 #   - api.HTMLElement.click
-# - Pointer Events:
-#   - api.Element.auxclick_event.type_pointerevent
-#   - api.Element.click_event.type_pointerevent
 # - hidden="until-found":
 #   - api.Element.beforematch_event
 #   - html.global_attributes.hidden.until-found
@@ -689,6 +677,8 @@ compat_features:
 #   - html.elements.form.novalidate
 #   - html.elements.form.rel
 #   - html.elements.form.target
+# - WebGPU:
+#   - api.GPUDevice.importExternalTexture.color_space_display-p3
 # - <a>:
 #   - api.HTMLAnchorElement
 #   - api.HTMLAnchorElement.hash
@@ -711,8 +701,6 @@ compat_features:
 #   - api.HTMLAnchorElement.username
 #   - html.elements.a
 #   - html.elements.a.href
-#   - html.elements.a.href.href_sms
-#   - html.elements.a.href.href_top
 #   - html.elements.a.hreflang
 #   - html.elements.a.implicit_noopener
 #   - html.elements.a.rel
@@ -732,53 +720,17 @@ compat_features:
 #   - html.elements.area.ping
 # - Referrer policy:
 #   - api.HTMLAnchorElement.referrerPolicy
-#   - api.HTMLAnchorElement.referrerPolicy.no-referrer-when-downgrade
-#   - api.HTMLAnchorElement.referrerPolicy.origin-when-cross-origin
-#   - api.HTMLAnchorElement.referrerPolicy.unsafe-url
 #   - api.HTMLAreaElement.referrerPolicy
-#   - api.HTMLAreaElement.referrerPolicy.no-referrer-when-downgrade
-#   - api.HTMLAreaElement.referrerPolicy.origin-when-cross-origin
-#   - api.HTMLAreaElement.referrerPolicy.unsafe-url
 #   - api.HTMLIFrameElement.referrerPolicy
-#   - api.HTMLIFrameElement.referrerPolicy.no-referrer-when-downgrade
-#   - api.HTMLIFrameElement.referrerPolicy.origin-when-cross-origin
-#   - api.HTMLIFrameElement.referrerPolicy.unsafe-url
 #   - api.HTMLImageElement.referrerPolicy
-#   - api.HTMLImageElement.referrerPolicy.no-referrer-when-downgrade
-#   - api.HTMLImageElement.referrerPolicy.origin-when-cross-origin
-#   - api.HTMLImageElement.referrerPolicy.unsafe-url
 #   - api.HTMLLinkElement.referrerPolicy
-#   - api.HTMLLinkElement.referrerPolicy.no-referrer-when-downgrade
-#   - api.HTMLLinkElement.referrerPolicy.origin-when-cross-origin
-#   - api.HTMLLinkElement.referrerPolicy.unsafe-url
 #   - api.HTMLScriptElement.referrerPolicy
-#   - api.HTMLScriptElement.referrerPolicy.no-referrer-when-downgrade
-#   - api.HTMLScriptElement.referrerPolicy.origin-when-cross-origin
-#   - api.HTMLScriptElement.referrerPolicy.unsafe-url
 #   - html.elements.a.referrerpolicy
-#   - html.elements.a.referrerpolicy.no-referrer-when-downgrade
-#   - html.elements.a.referrerpolicy.origin-when-cross-origin
-#   - html.elements.a.referrerpolicy.unsafe-url
 #   - html.elements.area.referrerpolicy
-#   - html.elements.area.referrerpolicy.no-referrer-when-downgrade
-#   - html.elements.area.referrerpolicy.origin-when-cross-origin
-#   - html.elements.area.referrerpolicy.unsafe-url
 #   - html.elements.iframe.referrerpolicy
-#   - html.elements.iframe.referrerpolicy.no-referrer-when-downgrade
-#   - html.elements.iframe.referrerpolicy.origin-when-cross-origin
-#   - html.elements.iframe.referrerpolicy.unsafe-url
 #   - html.elements.img.referrerpolicy
-#   - html.elements.img.referrerpolicy.no-referrer-when-downgrade
-#   - html.elements.img.referrerpolicy.origin-when-cross-origin
-#   - html.elements.img.referrerpolicy.unsafe-url
 #   - html.elements.link.referrerpolicy
-#   - html.elements.link.referrerpolicy.no-referrer-when-downgrade
-#   - html.elements.link.referrerpolicy.origin-when-cross-origin
-#   - html.elements.link.referrerpolicy.unsafe-url
 #   - html.elements.script.referrerpolicy
-#   - html.elements.script.referrerpolicy.no-referrer-when-downgrade
-#   - html.elements.script.referrerpolicy.origin-when-cross-origin
-#   - html.elements.script.referrerpolicy.unsafe-url
 # - Image maps:
 #   - api.HTMLAreaElement
 #   - api.HTMLAreaElement.alt
@@ -2193,12 +2145,29 @@ compat_features:
 #   - api.PaintRenderingContext2D.translate
 # - Selection:
 #   - api.Range.createContextualFragment
-# - Reporting API:
+# - COEP violation reports:
 #   - api.ReportingObserver.ReportingObserver.options_parameter.types_property.coep
+#   - http.headers.Cross-Origin-Embedder-Policy.report-to_parameter
+# - Speculation rules:
+#   - api.Request.destination.speculationrules
+#   - html.elements.script.type.speculationrules
+#   - html.elements.script.type.speculationrules.eagerness
+#   - html.elements.script.type.speculationrules.expects_no_vary_search
+#   - html.elements.script.type.speculationrules.prefetch
+#   - html.elements.script.type.speculationrules.referrer_policy
+#   - html.elements.script.type.speculationrules.relative_to
+#   - html.elements.script.type.speculationrules.requires
+#   - html.elements.script.type.speculationrules.requires.anonymous-client-ip-when-cross-origin
+#   - html.elements.script.type.speculationrules.source_optional
+#   - html.elements.script.type.speculationrules.tag
+#   - html.elements.script.type.speculationrules.urls
+#   - html.elements.script.type.speculationrules.where
+#   - http.headers.Sec-Purpose.speculationrules
+#   - http.headers.Sec-Speculation-Tags
+#   - http.headers.Speculation-Rules
 # - Shared worker:
 #   - api.SharedWorker
 #   - api.SharedWorker.SharedWorker
-#   - api.SharedWorker.SharedWorker.mime_checks
 #   - api.SharedWorker.SharedWorker.options_name_parameter
 #   - api.SharedWorker.error_event
 #   - api.SharedWorker.port
@@ -2251,7 +2220,6 @@ compat_features:
 #   - api.Window.name
 #   - api.Window.open
 #   - api.Window.open.features_parameter_popup
-#   - api.Window.open.once_per_event
 #   - api.Window.opener
 #   - api.Window.parent
 #   - api.Window.self
@@ -2275,6 +2243,8 @@ compat_features:
 # - JavaScript modules in workers:
 #   - api.Worker.Worker.ecmascript_modules
 #   - api.Worker.Worker.options_type_parameter
+#   - javascript.operators.import.worker_support
+#   - javascript.statements.import.worker_support
 # - AudioWorklet:
 #   - api.Worklet
 #   - api.Worklet.addModule
@@ -2284,6 +2254,7 @@ compat_features:
 #   - html.elements.script.nomodule
 #   - html.elements.script.type.module
 #   - javascript.operators.import_meta.resolve
+#   - javascript.statements.import.worklet_support
 # - XMLSerializer:
 #   - api.XMLSerializer
 #   - api.XMLSerializer.XMLSerializer
@@ -2353,8 +2324,6 @@ compat_features:
 #   - css.selectors.link
 #   - css.selectors.link.not_match_link
 #   - css.selectors.visited
-#   - css.selectors.visited.not_match_link
-#   - css.selectors.visited.privacy_measures
 # - :modal:
 #   - css.selectors.modal
 # - :open:
@@ -2370,10 +2339,6 @@ compat_features:
 # - :user-valid and :user-invalid:
 #   - css.selectors.user-invalid
 #   - css.selectors.user-valid
-# - <fencedframe>:
-#   - html.elements.a.target.unfencedTop
-#   - html.elements.fencedframe.height
-#   - html.elements.fencedframe.width
 # - Scroll to text fragment:
 #   - html.elements.a.text_fragments
 # - <abbr>:
@@ -2401,6 +2366,9 @@ compat_features:
 #   - html.elements.dfn
 # - <em>:
 #   - html.elements.em
+# - <fencedframe>:
+#   - html.elements.fencedframe.height
+#   - html.elements.fencedframe.width
 # - <figure> and <figcaption>:
 #   - html.elements.figcaption
 #   - html.elements.figure
@@ -2434,8 +2402,6 @@ compat_features:
 #   - html.elements.input.type_radio
 # - <input type="range">:
 #   - html.elements.input.type_range
-#   - html.elements.input.type_range.tick_marks
-#   - html.elements.input.type_range.vertical_orientation
 # - <input type="reset">:
 #   - html.elements.input.type_reset
 # - <input type="search">:
@@ -2490,21 +2456,6 @@ compat_features:
 #   - html.elements.samp
 # - Import maps:
 #   - html.elements.script.type.importmap
-# - Speculation rules:
-#   - html.elements.script.type.speculationrules
-#   - html.elements.script.type.speculationrules.eagerness
-#   - html.elements.script.type.speculationrules.expects_no_vary_search
-#   - html.elements.script.type.speculationrules.prefetch
-#   - html.elements.script.type.speculationrules.referrer_policy
-#   - html.elements.script.type.speculationrules.relative_to
-#   - html.elements.script.type.speculationrules.requires
-#   - html.elements.script.type.speculationrules.requires.anonymous-client-ip-when-cross-origin
-#   - html.elements.script.type.speculationrules.source_optional
-#   - html.elements.script.type.speculationrules.tag
-#   - html.elements.script.type.speculationrules.urls
-#   - html.elements.script.type.speculationrules.where
-#   - http.headers.Sec-Speculation-Tags
-#   - http.headers.Speculation-Rules
 # - <search>:
 #   - html.elements.search
 # - <section>:
@@ -2533,5 +2484,11 @@ compat_features:
 #   - html.elements.wbr
 # - style (attribute):
 #   - html.global_attributes.style
+# - Promise.any():
+#   - javascript.builtins.AggregateError.serializable_object
 # - Promise (initial support):
 #   - javascript.builtins.Promise.incumbent_settings_object_tracking
+# - CSS import attributes:
+#   - javascript.statements.import.import_attributes.type_css
+# - JSON import attributes:
+#   - javascript.statements.import.import_attributes.type_json

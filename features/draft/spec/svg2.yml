@@ -1,4 +1,4 @@
-draft_date: 2026-04-20
+draft_date: 2026-05-08
 name: Scalable Vector Graphics (SVG) 2
 description: TODO
 spec: https://w3c.github.io/svgwg/svg2-draft/
@@ -78,9 +78,7 @@ compat_features:
 #   - api.SVGGeometryElement.getPointAtLength
 #   - api.SVGGeometryElement.getTotalLength
 #   - api.SVGGeometryElement.isPointInFill
-#   - api.SVGGeometryElement.isPointInFill.point_parameter_DOMPoint
 #   - api.SVGGeometryElement.isPointInStroke
-#   - api.SVGGeometryElement.isPointInStroke.point_parameter_DOMPoint
 #   - api.SVGGeometryElement.pathLength
 #   - api.SVGGradientElement
 #   - api.SVGGradientElement.gradientTransform
@@ -223,9 +221,7 @@ compat_features:
 #   - api.SVGSVGElement.x
 #   - api.SVGSVGElement.y
 #   - api.SVGScriptElement
-#   - api.SVGScriptElement.async
 #   - api.SVGScriptElement.crossOrigin
-#   - api.SVGScriptElement.defer
 #   - api.SVGScriptElement.href
 #   - api.SVGScriptElement.type
 #   - api.SVGStopElement
@@ -306,7 +302,6 @@ compat_features:
 #   - api.SVGViewElement.viewBox
 #   - css.properties.color-interpolation
 #   - css.properties.color-interpolation.auto
-#   - css.properties.color-interpolation.linearGradient
 #   - css.properties.color-interpolation.sRGB
 #   - css.properties.cx
 #   - css.properties.cy
@@ -346,9 +341,6 @@ compat_features:
 #   - svg.elements.a.href
 #   - svg.elements.a.hreflang
 #   - svg.elements.a.referrerpolicy
-#   - svg.elements.a.referrerpolicy.no-referrer-when-downgrade
-#   - svg.elements.a.referrerpolicy.origin-when-cross-origin
-#   - svg.elements.a.referrerpolicy.unsafe-url
 #   - svg.elements.a.rel
 #   - svg.elements.a.systemLanguage
 #   - svg.elements.a.target
@@ -454,8 +446,6 @@ compat_features:
 #   - svg.elements.rect.x
 #   - svg.elements.rect.y
 #   - svg.elements.script
-#   - svg.elements.script.async
-#   - svg.elements.script.defer
 #   - svg.elements.script.href
 #   - svg.elements.script.type
 #   - svg.elements.set.systemLanguage
@@ -466,13 +456,7 @@ compat_features:
 #   - svg.elements.style.title
 #   - svg.elements.style.type
 #   - svg.elements.svg
-#   - svg.elements.svg.height
-#   - svg.elements.svg.preserveAspectRatio
 #   - svg.elements.svg.systemLanguage
-#   - svg.elements.svg.viewBox
-#   - svg.elements.svg.width
-#   - svg.elements.svg.x
-#   - svg.elements.svg.y
 #   - svg.elements.switch
 #   - svg.elements.switch.systemLanguage
 #   - svg.elements.symbol
@@ -497,7 +481,6 @@ compat_features:
 #   - svg.elements.textPath.systemLanguage
 #   - svg.elements.textPath.textLength
 #   - svg.elements.title
-#   - svg.elements.title.tooltip_display
 #   - svg.elements.tspan
 #   - svg.elements.tspan.dx
 #   - svg.elements.tspan.dy
@@ -540,6 +523,8 @@ compat_features:
 #   - svg.global_attributes.marker-start
 #   - svg.global_attributes.overflow
 #   - svg.global_attributes.pointer-events
+#   - svg.global_attributes.requiredExtensions
+#   - svg.global_attributes.requiredExtensions.mathml
 #   - svg.global_attributes.shape-rendering
 #   - svg.global_attributes.stop-color
 #   - svg.global_attributes.stop-opacity
@@ -618,63 +603,18 @@ compat_features:
 #   - api.SVGFilterElement.href
 # - alignment-baseline:
 #   - css.properties.alignment-baseline
-#   - css.properties.alignment-baseline.alphabetic
-#   - css.properties.alignment-baseline.baseline
-#   - css.properties.alignment-baseline.central
-#   - css.properties.alignment-baseline.ideographic
-#   - css.properties.alignment-baseline.mathematical
-#   - css.properties.alignment-baseline.middle
-#   - css.properties.alignment-baseline.text-after-edge
-#   - css.properties.alignment-baseline.text-before-edge
 # - baseline-shift:
 #   - css.properties.baseline-shift
 # - Color:
 #   - css.properties.color
 # - Layout direction override:
 #   - css.properties.direction
-# - Vertical form controls:
-#   - css.properties.direction.vertical_slider_direction
-#   - css.properties.writing-mode.vertical_oriented_form_controls
 # - Display:
 #   - css.properties.display
-#   - css.properties.display.inline-block
-# - Flexbox:
-#   - css.properties.display.flex
-#   - css.properties.display.inline-flex
-# - display: flow-root:
-#   - css.properties.display.flow-root
-# - Grid:
-#   - css.properties.display.grid
-#   - css.properties.display.inline-grid
-# - display: table:
-#   - css.properties.display.inline-table
-#   - css.properties.display.table
-#   - css.properties.display.table-caption
-#   - css.properties.display.table-cell
-#   - css.properties.display.table-column
-#   - css.properties.display.table-column-group
-#   - css.properties.display.table-footer-group
-#   - css.properties.display.table-header-group
-#   - css.properties.display.table-row
-#   - css.properties.display.table-row-group
-# - MathML:
-#   - css.properties.display.math
-# - Two-value display property:
-#   - css.properties.display.multi-keyword_values
-# - display: ruby:
-#   - css.properties.display.ruby
-#   - css.properties.display.ruby-base
-#   - css.properties.display.ruby-base-container
-#   - css.properties.display.ruby-text
-#   - css.properties.display.ruby-text-container
 # - dominant-baseline:
 #   - css.properties.dominant-baseline
 # - font-variant:
 #   - css.properties.font-variant
-#   - css.properties.font-variant.css_fonts_shorthand
-#   - css.properties.font-variant.greek_accented_characters
-#   - css.properties.font-variant.turkic_is
-#   - css.properties.font-variant.uppercase_eszett
 #   - svg.global_attributes.font-variant
 # - image-rendering:
 #   - css.properties.image-rendering
@@ -683,11 +623,9 @@ compat_features:
 #   - svg.global_attributes.letter-spacing
 # - opacity:
 #   - css.properties.opacity
-#   - css.properties.opacity.percentages
 #   - svg.global_attributes.opacity
 # - overflow:
 #   - css.properties.overflow
-#   - css.properties.overflow.multiple_keywords
 # - paint-order:
 #   - css.properties.paint-order
 #   - svg.global_attributes.paint-order
@@ -700,14 +638,9 @@ compat_features:
 #   - css.properties.text-decoration.includes_thickness
 # - Text overflow:
 #   - css.properties.text-overflow
-#   - css.properties.text-overflow.two_value_syntax
 #   - svg.global_attributes.text-overflow
-# - Custom ellipses:
-#   - css.properties.text-overflow.string
 # - 2D transforms:
 #   - css.properties.transform
-# - 3D transforms:
-#   - css.properties.transform.3d
 # - visibility:
 #   - css.properties.visibility
 # - white-space:
@@ -721,11 +654,6 @@ compat_features:
 #   - svg.global_attributes.word-spacing
 # - writing-mode:
 #   - css.properties.writing-mode
-#   - css.properties.writing-mode.horizontal-tb
-#   - css.properties.writing-mode.sideways-lr
-#   - css.properties.writing-mode.sideways-rl
-#   - css.properties.writing-mode.vertical-lr
-#   - css.properties.writing-mode.vertical-rl
 #   - svg.global_attributes.writing-mode
 # - path():
 #   - css.types.basic-shape.path.d

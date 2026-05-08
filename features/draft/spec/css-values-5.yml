@@ -1,4 +1,4 @@
-draft_date: 2026-05-04
+draft_date: 2026-05-08
 name: CSS Values and Units Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-values-5/
@@ -54,7 +54,6 @@ compat_features:
   - css.properties.perspective-origin.y-end
   - css.properties.perspective-origin.y-start
   - css.types.attr.attr-name_accepts_namespaces
-  - css.types.if.style
   - css.types.random.dashed-ident
   - css.types.random.element-shared
   - css.types.random.step
@@ -62,16 +61,36 @@ compat_features:
 # The following features in the spec are already part of web-features:
 # - Media queries:
 #   - css.at-rules.media.calc
+# - Multi-column layout:
+#   - css.properties.column-gap.multicol_context.calc_values
 # - Content:
 #   - css.properties.content.url
 #   - css.types.string
 #   - css.types.string.unicode_escaped_characters
+# - font-stretch:
+#   - css.properties.font-stretch.percentage
+# - font-weight:
+#   - css.properties.font-weight.number
+# - Grid:
+#   - css.properties.gap.grid_context.calc_values
 # - interpolate-size:
 #   - css.properties.interpolate-size
 #   - css.properties.interpolate-size.allow-keywords
 #   - css.properties.interpolate-size.numeric-only
+# - List style:
+#   - css.properties.list-style-type.string
+# - opacity:
+#   - css.properties.opacity.percentages
+#   - css.types.number
+#   - css.types.number.scientific_notation
+# - shape-outside:
+#   - css.properties.shape-image-threshold.percentages
 # - tab-size:
 #   - css.properties.tab-size.length
+# - text-decoration:
+#   - css.properties.text-decoration-thickness.percentage
+# - Custom ellipses:
+#   - css.properties.text-overflow.string
 # - abs() and sign():
 #   - css.types.abs
 #   - css.types.sign
@@ -113,11 +132,8 @@ compat_features:
 #   - css.types.attr.type_function.url
 # - calc():
 #   - css.types.calc
-#   - css.types.calc.gradient_color_stops
 #   - css.types.calc.nested
 #   - css.types.calc.number_values
-# - Relative colors:
-#   - css.types.calc.color_component
 # - calc() keywords:
 #   - css.types.calc-keyword
 #   - css.types.calc-keyword.NaN
@@ -130,6 +146,21 @@ compat_features:
 #   - css.types.clamp
 #   - css.types.max
 #   - css.types.min
+# - color():
+#   - css.types.color.color.mixed_type_parameters
+# - HSL:
+#   - css.types.color.hsl.mixed_type_parameters
+# - HWB:
+#   - css.types.color.hwb.mixed_type_parameters
+# - Lab and LCH:
+#   - css.types.color.lab.mixed_type_parameters
+#   - css.types.color.lch.mixed_type_parameters
+# - Oklab and OkLCh:
+#   - css.types.color.oklab.mixed_type_parameters
+#   - css.types.color.oklch.mixed_type_parameters
+# - RGB:
+#   - css.types.color.rgb.float_values
+#   - css.types.color.rgb.mixed_type_parameters
 # - Width and height:
 #   - css.types.dimension
 #   - css.types.length
@@ -141,6 +172,9 @@ compat_features:
 #   - css.types.log
 #   - css.types.pow
 #   - css.types.sqrt
+# - Gradients:
+#   - css.types.gradient.linear-gradient.unitless_0_angle
+#   - css.types.gradient.repeating-linear-gradient.unitless_0_angle
 # - if():
 #   - css.types.if
 # - z-index:
@@ -151,8 +185,6 @@ compat_features:
 #   - css.types.length.cap
 # - ch unit:
 #   - css.types.length.ch
-# - Container queries:
-#   - css.types.length.container_query_length_units
 # - em unit:
 #   - css.types.length.em
 # - ex unit:
@@ -191,9 +223,6 @@ compat_features:
 #   - css.types.rem.mixed_type_parameters
 #   - css.types.round
 #   - css.types.round.mixed_type_parameters
-# - opacity:
-#   - css.types.number
-#   - css.types.number.scientific_notation
 # - progress():
 #   - css.types.progress
 # - random():

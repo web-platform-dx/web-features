@@ -1,4 +1,4 @@
-draft_date: 2026-02-16
+draft_date: 2026-05-08
 name: Permissions
 description: TODO
 spec: https://w3c.github.io/permissions/
@@ -21,28 +21,5 @@ compat_features:
 #   - api.Permissions
 #   - api.Permissions.query
 #   - api.WorkerNavigator.permissions
-# - Accelerometer:
-#   - api.Permissions.permission_accelerometer
-# - Ambient light sensor:
-#   - api.Permissions.permission_ambient-light-sensor
-# - Background sync:
-#   - api.Permissions.permission_background-sync
-# - Media capture:
-#   - api.Permissions.permission_camera
-#   - api.Permissions.permission_microphone
-# - Geolocation API:
-#   - api.Permissions.permission_geolocation
-# - Gyroscope:
-#   - api.Permissions.permission_gyroscope
-# - Local fonts:
-#   - api.Permissions.permission_local-fonts
-# - Magnetometer:
-#   - api.Permissions.permission_magnetometer
 # - Notifications:
-#   - api.Permissions.permission_notifications
-# - Payment handler:
-#   - api.Permissions.permission_payment-handler
-# - Storage manager:
-#   - api.Permissions.permission_persistent-storage
-# - Push messages:
-#   - api.Permissions.permission_push
+#   - api.Notification.secure_context_required

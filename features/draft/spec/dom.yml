@@ -1,4 +1,4 @@
-draft_date: 2026-04-14
+draft_date: 2026-05-08
 name: DOM
 description: TODO
 spec: https://dom.spec.whatwg.org/
@@ -13,9 +13,7 @@ compat_features:
   - api.Document.createElementNS.html_name_validity
   - api.Document.createElementNS.options_parameter.customElementRegistry_option
   - api.Document.createElementNS.options_parameter.options_is_parameter
-  - api.Element.setAttribute.enforces_trusted_types
   - api.Element.setAttribute.html_name_validity
-  - api.Element.setAttributeNS.enforces_trusted_types
   - api.Element.setAttributeNodeNS.html_name_validity
   - api.Element.toggleAttribute.html_name_validity
 
@@ -373,8 +371,6 @@ compat_features:
 #   - api.Document.customElementRegistry
 #   - api.Element.customElementRegistry
 #   - api.ShadowRoot.customElementRegistry
-# - Feature policy:
-#   - api.Document.featurePolicy
 # - moveBefore():
 #   - api.Document.moveBefore
 #   - api.DocumentFragment.moveBefore
@@ -385,7 +381,6 @@ compat_features:
 #   - api.HTMLSlotElement.slotchange_event
 #   - api.Text.assignedSlot
 #   - html.elements.slot
-#   - html.elements.slot.name
 #   - html.global_attributes.slot
 # - Shadow DOM:
 #   - api.Element.attachShadow
@@ -421,6 +416,8 @@ compat_features:
 #   - api.MutationRecord.type
 # - Imperative slot assignment:
 #   - api.ShadowRoot.slotAssignment
+# - beforeunload:
+#   - api.Window.beforeunload_event.preventdefault_activation
 # - XSLT:
 #   - api.XSLTProcessor
 #   - api.XSLTProcessor.XSLTProcessor

@@ -1,4 +1,4 @@
-draft_date: 2026-05-04
+draft_date: 2026-05-08
 name: CSS Shapes Module Level 1
 description: TODO
 spec: https://drafts.csswg.org/css-shapes-1/
@@ -17,9 +17,10 @@ compat_features:
 # The following features in the spec are already part of web-features:
 # - clip-path:
 #   - css.properties.clip-path.basic_shape
+# - Motion path:
+#   - css.properties.offset-path.path
 # - shape-outside:
 #   - css.properties.shape-image-threshold
-#   - css.properties.shape-image-threshold.percentages
 #   - css.properties.shape-margin
 #   - css.properties.shape-outside
 #   - css.properties.shape-outside.circle
@@ -29,7 +30,6 @@ compat_features:
 #   - css.properties.shape-outside.polygon
 # - shapes:
 #   - css.types.basic-shape
-#   - css.types.basic-shape.animation
 #   - css.types.basic-shape.circle
 #   - css.types.basic-shape.ellipse
 #   - css.types.basic-shape.inset

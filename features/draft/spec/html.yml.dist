@@ -17,7 +17,6 @@ compat_features:
   #   safari: "1"
   #   safari_ios: "1"
   - api.HTMLElement.error_event
-  - html.elements.html.xmlns
   - http.headers.Refresh
 
   # baseline: high
@@ -144,6 +143,7 @@ compat_features:
   #   safari: "4"
   #   safari_ios: "3.2"
   - http.headers.X-Frame-Options
+  - http.headers.X-Frame-Options.DENY
   - http.headers.X-Frame-Options.SAMEORIGIN
 
   # baseline: high
@@ -445,19 +445,6 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
-  #   chrome: "58"
-  #   chrome_android: "58"
-  #   edge: "79"
-  #   firefox: "51"
-  #   firefox_android: "53"
-  #   safari: ≤11
-  #   safari_ios: ≤11
-  - html.elements.img.usemap.case_sensitive
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
   #   chrome: "66"
   #   chrome_android: "66"
   #   edge: "79"
@@ -616,18 +603,6 @@ compat_features:
   #   safari: "16.4"
   #   safari_ios: "16.4"
   - html.elements.form.autocomplete.webauthn
-
-  # baseline: low
-  # baseline_low_date: 2024-07-09
-  # support:
-  #   chrome: "61"
-  #   chrome_android: "61"
-  #   edge: "79"
-  #   firefox: "128"
-  #   firefox_android: "128"
-  #   safari: "16"
-  #   safari_ios: "16"
-  - api.HTMLBaseElement.href.forbid_special_characters
 
   # baseline: low
   # baseline_low_date: 2025-04-29
@@ -963,29 +938,13 @@ compat_features:
   #   chrome: "96"
   #   chrome_android: "96"
   #   edge: "96"
-  - http.headers.Cross-Origin-Embedder-Policy.report-to_parameter
   - http.headers.Cross-Origin-Opener-Policy.report-to_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "99"
-  #   chrome_android: "99"
-  #   edge: "99"
-  - api.HTMLInputElement.showPicker.autocomplete_input
-
-  # baseline: false
-  # support:
-  #   chrome: "100"
-  #   chrome_android: "100"
-  #   edge: "100"
-  - api.Window.postMessage.options_delegate_parameter
 
   # baseline: false
   # support:
   #   chrome: "108"
   #   chrome_android: "108"
   #   edge: "108"
-  - html.elements.iframe.allow.wildcards
   - html.elements.textarea.autocomplete.webauthn
 
   # baseline: false
@@ -1088,6 +1047,5 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - api.Navigator.authentication
   - html.elements.template.shadowrootslotassignment
   - html.elements.track.kind.descriptions

@@ -4,7 +4,16 @@
 status:
   baseline: false
   support:
-    chrome: "138"
+    chrome: "148"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "148"
+  #   edge: "148"
+  - api.LanguageModel.destroy
+
+  # baseline: false
+  # support:
+  #   chrome: "138"
   - api.CreateMonitor
   - api.CreateMonitor.downloadprogress_event

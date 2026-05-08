@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "142"
+    chrome_android: "142"
+    edge: "142"
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -45,13 +48,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "135"
-  #   chrome_android: "135"
-  #   edge: "135"
-  - css.properties.appearance.base-select.single_dropdown
-
-  # baseline: false
-  # support:
   #   chrome: "140"
   #   chrome_android: "140"
   #   edge: "140"
@@ -59,6 +55,7 @@ compat_features:
   - css.properties.caret-animation.auto
   - css.properties.caret-animation.manual
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "142"
@@ -70,15 +67,3 @@ compat_features:
   - css.properties.interest-delay-start
   - css.properties.interest-delay-start.normal
   - css.properties.interest-delay.normal
-
-  # baseline: false
-  # support:
-  #   chrome: "145"
-  #   chrome_android: "145"
-  #   edge: "145"
-  - css.properties.appearance.base-select.listbox
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - css.properties.appearance.base-select.multiple_dropdown

@@ -8,5 +8,17 @@ status:
     chrome_android: "120"
     edge: "120"
 compat_features:
-  - api.ReportingObserver.ReportingObserver.options_parameter.types_property.permissions-policy-violation
+  # baseline: false
+  # support:
+  #   chrome: "108"
+  #   chrome_android: "108"
+  #   edge: "108"
+  - html.elements.iframe.allow.wildcards
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "120"
+  #   chrome_android: "120"
+  #   edge: "120"
   - http.headers.Permissions-Policy-Report-Only

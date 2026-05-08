@@ -1,4 +1,4 @@
-draft_date: 2026-02-23
+draft_date: 2026-05-08
 name: UI Events
 description: TODO
 spec: https://w3c.github.io/uievents/
@@ -39,7 +39,6 @@ compat_features:
 #   - api.InputEvent
 #   - api.InputEvent.InputEvent
 #   - api.InputEvent.inputType
-#   - api.InputEvent.inputType.insertFromPasteAsQuotation
 #   - api.InputEvent.isComposing
 # - Focus events:
 #   - api.Element.blur_event
@@ -58,16 +57,6 @@ compat_features:
 #   - api.KeyboardEvent.code
 #   - api.KeyboardEvent.ctrlKey
 #   - api.KeyboardEvent.getModifierState
-#   - api.KeyboardEvent.getModifierState.key_parameter_alt
-#   - api.KeyboardEvent.getModifierState.key_parameter_altgraph
-#   - api.KeyboardEvent.getModifierState.key_parameter_capslock
-#   - api.KeyboardEvent.getModifierState.key_parameter_control
-#   - api.KeyboardEvent.getModifierState.key_parameter_fn
-#   - api.KeyboardEvent.getModifierState.key_parameter_meta
-#   - api.KeyboardEvent.getModifierState.key_parameter_numlock
-#   - api.KeyboardEvent.getModifierState.key_parameter_scrolllock
-#   - api.KeyboardEvent.getModifierState.key_parameter_shift
-#   - api.KeyboardEvent.getModifierState.key_parameter_symbol
 #   - api.KeyboardEvent.isComposing
 #   - api.KeyboardEvent.key
 #   - api.KeyboardEvent.key.dead_key

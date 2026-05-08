@@ -1,4 +1,4 @@
-draft_date: 2026-05-04
+draft_date: 2026-05-08
 name: Fetch
 description: TODO
 spec: https://fetch.spec.whatwg.org/
@@ -6,7 +6,9 @@ compat_features:
   - api.Request.Request.options_parameter.duplex
   - api.fetch.options_parameter.body.accepts_readablestream
   - api.fetch.options_parameter.duplex
+  - http.headers.Content-Length.cors_response_safelist
   - http.headers.Cross-Origin-Resource-Policy
+  - http.headers.Range.cors_safe
   - http.headers.X-Content-Type-Options
 
 # The following features in the spec are already part of web-features:
@@ -94,14 +96,14 @@ compat_features:
 #   - api.fetch.options_parameter.body
 #   - api.fetch.options_parameter.keepalive
 #   - api.fetch.options_parameter.referrerPolicy
+# - Custom highlights:
+#   - api.Highlight.delete
+#   - api.Highlight.has
 # - Fetch priority:
 #   - api.Request.Request.options_parameter.priority
 #   - api.fetch.options_parameter.priority
 # - Fetch upload streams:
 #   - api.Request.body
-# - Speculation rules:
-#   - api.Request.destination.speculationrules
-#   - http.headers.Sec-Purpose.speculationrules
 # - Fetch form data:
 #   - api.Request.formData
 #   - api.Response.formData
@@ -112,6 +114,12 @@ compat_features:
 #   - api.fetch.options_parameter.signal
 # - XMLHttpRequest:
 #   - api.XMLHttpRequest.authorization_removed_cross_origin
+#   - api.XMLHttpRequest.getAllResponseHeaders.header_names_lowercase
+#   - api.XMLHttpRequest.send.body_ArrayBufferView_type
+#   - api.XMLHttpRequest.send.body_ArrayBuffer_type
+#   - api.XMLHttpRequest.send.body_Blob_type
+#   - api.XMLHttpRequest.send.body_FormData_type
+#   - api.XMLHttpRequest.send.body_URLSearchParams_type
 # - CORS:
 #   - http.headers.Access-Control-Allow-Credentials
 #   - http.headers.Access-Control-Allow-Headers

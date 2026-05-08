@@ -8,19 +8,6 @@ status:
     chrome_android: "145"
     edge: "145"
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "139"
-  #   chrome_android: "139"
-  #   edge: "139"
-  - http.headers.Reporting-Endpoints.crash-reporting
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "145"
-  #   chrome_android: "145"
-  #   edge: "145"
   - api.CrashReportContext
   - api.CrashReportContext.delete
   - api.CrashReportContext.initialize
