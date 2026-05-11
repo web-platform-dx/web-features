@@ -1,8 +1,18 @@
-draft_date: 2025-07-17
+draft_date: 2026-03-16
 name: Web Audio API 1.1
 description: TODO
 spec: https://webaudio.github.io/web-audio-api/
 compat_features:
+  - api.AudioContext.playbackStats
+  - api.AudioPlaybackStats
+  - api.AudioPlaybackStats.averageLatency
+  - api.AudioPlaybackStats.maximumLatency
+  - api.AudioPlaybackStats.minimumLatency
+  - api.AudioPlaybackStats.resetLatency
+  - api.AudioPlaybackStats.toJSON
+  - api.AudioPlaybackStats.totalDuration
+  - api.AudioPlaybackStats.underrunDuration
+  - api.AudioPlaybackStats.underrunEvents
   - api.AudioWorklet.port
   - api.BaseAudioContext.state.interrupted
 
@@ -58,16 +68,6 @@ compat_features:
 #   - api.AudioContext.suspend
 #   - api.AudioDestinationNode
 #   - api.AudioDestinationNode.maxChannelCount
-#   - api.AudioListener
-#   - api.AudioListener.forwardX
-#   - api.AudioListener.forwardY
-#   - api.AudioListener.forwardZ
-#   - api.AudioListener.positionX
-#   - api.AudioListener.positionY
-#   - api.AudioListener.positionZ
-#   - api.AudioListener.upX
-#   - api.AudioListener.upY
-#   - api.AudioListener.upZ
 #   - api.AudioNode
 #   - api.AudioNode.channelCount
 #   - api.AudioNode.channelCountMode
@@ -212,6 +212,17 @@ compat_features:
 #   - api.WaveShaperNode.WaveShaperNode
 #   - api.WaveShaperNode.curve
 #   - api.WaveShaperNode.oversample
+# - AudioListener:
+#   - api.AudioListener
+#   - api.AudioListener.forwardX
+#   - api.AudioListener.forwardY
+#   - api.AudioListener.forwardZ
+#   - api.AudioListener.positionX
+#   - api.AudioListener.positionY
+#   - api.AudioListener.positionZ
+#   - api.AudioListener.upX
+#   - api.AudioListener.upY
+#   - api.AudioListener.upZ
 # - AudioWorklet:
 #   - api.AudioWorklet
 #   - api.AudioWorkletGlobalScope

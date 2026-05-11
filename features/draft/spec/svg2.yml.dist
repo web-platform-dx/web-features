@@ -43,6 +43,19 @@ compat_features:
   - css.properties.pointer-events.visibleStroke
 
   # baseline: high
+  # baseline_low_date: 2017-09-19
+  # baseline_high_date: 2020-03-19
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "12"
+  #   firefox: "9"
+  #   firefox_android: "9"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - svg.global_attributes.font-stretch
+
+  # baseline: high
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:

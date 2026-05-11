@@ -15,8 +15,10 @@ compat_features:
   #   edge: "97"
   - http.headers.Accept-CH.Sec-CH-DPR
   - http.headers.Accept-CH.Sec-CH-Viewport-Width
+  - http.headers.Accept-CH.Sec-CH-Width
   - http.headers.Sec-CH-DPR
   - http.headers.Sec-CH-Viewport-Width
+  - http.headers.Sec-CH-Width
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false

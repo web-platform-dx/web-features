@@ -1,6 +1,7 @@
 name: MathML
 description: MathML, or the Mathematical Markup Language, describes mathematical notation, such as expressions and formulas. Also known as MathML Core.
 spec: https://w3c.github.io/mathml-core/
+group: mathml
 caniuse: mathml
 status:
   compute_from: mathml.elements.math
@@ -18,8 +19,6 @@ compat_features:
   - css.properties.math-shift
   - css.properties.math-style
   - css.properties.text-transform.math-auto
-  - mathml.attribute_values.named_space
-  - mathml.attribute_values.nonzero_unitless_values
   - mathml.elements.annotation
   - mathml.elements.annotation-xml
   - mathml.elements.math
@@ -110,6 +109,7 @@ compat_features:
   - mathml.elements.munderover.accentunder
   - mathml.elements.semantics
   - mathml.global_attributes.dir
+  - mathml.global_attributes.dir.rtl_operator_mirroring
   - mathml.global_attributes.displaystyle
   - mathml.global_attributes.href
   - mathml.global_attributes.scriptlevel

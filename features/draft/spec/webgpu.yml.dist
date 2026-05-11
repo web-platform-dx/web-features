@@ -3,9 +3,15 @@
 
 status:
   baseline: false
-  support:
-    chrome_android: "143"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome_android: "121"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.GPUDevice.createTexture.descriptor_usage_parameter
+
   # baseline: false
   # support:
   #   chrome_android: "136"
@@ -18,56 +24,45 @@ compat_features:
   #   chrome_android: "139"
   #   safari: "26"
   #   safari_ios: "26"
+  - api.GPUSupportedFeatures.feature_core-features-and-limits
+
+  # baseline: false
+  # support:
+  #   safari: "26"
+  #   safari_ios: "26"
   - api.GPUSupportedFeatures.feature_texture-compression-astc-sliced-3d
   - api.GPUSupportedFeatures.feature_texture-compression-bc-sliced-3d
 
   # baseline: false
   # support:
-  #   chrome_android: "133"
-  - api.GPUAdapter.requestDevice.undefined_limits
-
-  # baseline: false
-  # support:
-  #   chrome_android: "134"
-  - api.GPUSupportedFeatures.feature_subgroups
-
-  # baseline: false
-  # support:
-  #   chrome_android: "135"
-  - api.GPUDevice.createPipelineLayout.descriptor_bindGroupLayouts_parameter_accepts_null_values
-
-  # baseline: false
-  # support:
-  #   chrome_android: "137"
-  - api.GPUCommandEncoder.copyBufferToBuffer.offset_and_size_parameter_optional
-  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTextureView
-
-  # baseline: false
-  # support:
-  #   chrome_android: "138"
-  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUBuffer
-
-  # baseline: false
-  # support:
-  #   chrome_android: "139"
-  - api.GPUSupportedFeatures.feature_core-features-and-limits
-
-  # baseline: false
-  # support:
-  #   chrome_android: "140"
-  - api.GPUCommandEncoder.beginRenderPass.accepts_GPUTexture_resources
-  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTexture_resource
-
-  # baseline: false
-  # support:
-  #   chrome_android: "142"
-  - api.GPUSupportedFeatures.feature_primitive-index
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
   - api.GPUSupportedFeatures.feature_texture-formats-tier1
-  - api.GPUSupportedFeatures.feature_texture-formats-tier2
+
+  # baseline: false
+  # support:
+  #   chrome_android: "146"
+  - api.GPUSupportedLimits.maxStorageBuffersInFragmentStage
+  - api.GPUSupportedLimits.maxStorageBuffersInVertexStage
+  - api.GPUSupportedLimits.maxStorageTexturesInFragmentStage
+  - api.GPUSupportedLimits.maxStorageTexturesInVertexStage
+  - api.GPUTexture.textureBindingViewDimension
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support:
-  #   chrome_android: "143"
+  # support: {}
+  - api.GPU.requestAdapter.options_featureLevel
+  - api.GPUCommandEncoder.beginRenderPass.accepts_GPUTexture_resources
+  - api.GPUCommandEncoder.copyBufferToBuffer.offset_and_size_parameter_optional
+  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUBuffer
+  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTextureView
+  - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTexture_resource
+  - api.GPUDevice.createPipelineLayout.descriptor_bindGroupLayouts_parameter_accepts_null_values
+  - api.GPUDevice.createTexture.descriptor_usage_parameter.accept_transient_attachment
+  - api.GPUSupportedFeatures.feature_primitive-index
+  - api.GPUSupportedFeatures.feature_subgroups.subgroup_id_num_subgroups
   - api.GPUSupportedFeatures.feature_texture-component-swizzle
+  - api.GPUSupportedFeatures.feature_texture-formats-tier2
   - api.GPUTexture.createView.descriptor_swizzle_parameter
+  - api.GPUTexture.createView.descriptor_usage_parameter.transient_attachment
+  - api.GPUTexture.usage.transient_attachment

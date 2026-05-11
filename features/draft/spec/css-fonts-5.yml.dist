@@ -6,6 +6,19 @@ status:
   support: {}
 compat_features:
   # baseline: high
+  # baseline_low_date: 2017-09-19
+  # baseline_high_date: 2020-03-19
+  # support:
+  #   chrome: "60"
+  #   chrome_android: "60"
+  #   edge: "12"
+  #   firefox: "9"
+  #   firefox_android: "9"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - svg.global_attributes.font-stretch
+
+  # baseline: high
   # baseline_low_date: 2018-09-05
   # baseline_high_date: 2021-03-05
   # support:
@@ -42,6 +55,8 @@ compat_features:
 
   # baseline: false
   # support:
+  #   firefox: "150"
+  #   firefox_android: "150"
   #   safari: "26"
   #   safari_ios: "26"
   - api.CSSFontFaceDescriptors
@@ -51,19 +66,24 @@ compat_features:
   - api.CSSFontFaceDescriptors.font-stretch
   - api.CSSFontFaceDescriptors.font-style
   - api.CSSFontFaceDescriptors.font-weight
-  - api.CSSFontFaceDescriptors.font-width
   - api.CSSFontFaceDescriptors.fontDisplay
   - api.CSSFontFaceDescriptors.fontFamily
   - api.CSSFontFaceDescriptors.fontFeatureSettings
   - api.CSSFontFaceDescriptors.fontStretch
   - api.CSSFontFaceDescriptors.fontStyle
   - api.CSSFontFaceDescriptors.fontWeight
-  - api.CSSFontFaceDescriptors.fontWidth
   - api.CSSFontFaceDescriptors.size-adjust
   - api.CSSFontFaceDescriptors.sizeAdjust
   - api.CSSFontFaceDescriptors.src
   - api.CSSFontFaceDescriptors.unicode-range
   - api.CSSFontFaceDescriptors.unicodeRange
+  - api.CSSFontFaceRule.style.type_CSSFontFaceDescriptors
+
+  # baseline: false
+  # support:
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.CSSFontFaceDescriptors.font-width
 
   # baseline: false
   # support:
@@ -73,6 +93,20 @@ compat_features:
 
   # baseline: false
   # support:
+  #   firefox: "150"
+  #   firefox_android: "150"
+  - api.CSSFontFaceDescriptors.ascent-override
+  - api.CSSFontFaceDescriptors.ascentOverride
+  - api.CSSFontFaceDescriptors.descent-override
+  - api.CSSFontFaceDescriptors.descentOverride
+  - api.CSSFontFaceDescriptors.font-language-override
+  - api.CSSFontFaceDescriptors.font-variation-settings
+  - api.CSSFontFaceDescriptors.fontLanguageOverride
+  - api.CSSFontFaceDescriptors.fontVariationSettings
+  - api.CSSFontFaceDescriptors.line-gap-override
+  - api.CSSFontFaceDescriptors.lineGapOverride
+
+  # baseline: false
+  # support:
   #   safari: "18.4"
-  - css.at-rules.font-face.font-width
   - css.properties.font-width.percentage

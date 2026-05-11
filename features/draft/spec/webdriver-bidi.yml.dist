@@ -25,7 +25,6 @@ compat_features:
   - webdriver.bidi.session.subscribe.contexts_parameter
   - webdriver.bidi.session.subscribe.events_parameter
   - webdriver.bidi.session.unsubscribe
-  - webdriver.bidi.session.unsubscribe.contexts_parameter
   - webdriver.bidi.session.unsubscribe.events_parameter
 
   # baseline: false
@@ -187,7 +186,6 @@ compat_features:
   - webdriver.bidi.script.message_event
   - webdriver.bidi.script.message_event.channel_parameter
   - webdriver.bidi.script.message_event.data_parameter
-  - webdriver.bidi.script.message_event.source_parameter
 
   # baseline: false
   # support:
@@ -486,6 +484,18 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
+  #   firefox: "147"
+  #   firefox_android: "147"
+  - webdriver.bidi.input.fileDialogOpened_event
+  - webdriver.bidi.input.fileDialogOpened_event.context_parameter
+  - webdriver.bidi.input.fileDialogOpened_event.element_parameter
+  - webdriver.bidi.input.fileDialogOpened_event.multiple_parameter
+
+  # baseline: false
+  # support:
   #   chrome: "137"
   #   chrome_android: "137"
   #   edge: "137"
@@ -595,6 +605,30 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  #   edge: "142"
+  #   firefox: "149"
+  #   firefox_android: "149"
+  - webdriver.bidi.browser.setDownloadBehavior
+  - webdriver.bidi.browser.setDownloadBehavior.downloadBehavior_parameter
+  - webdriver.bidi.browser.setDownloadBehavior.userContexts_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "143"
+  #   chrome_android: "143"
+  #   edge: "143"
+  #   firefox: "150"
+  #   firefox_android: "150"
+  - webdriver.bidi.emulation.setNetworkConditions
+  - webdriver.bidi.emulation.setNetworkConditions.contexts_parameter
+  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter
+  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter.offline
+  - webdriver.bidi.emulation.setNetworkConditions.userContexts_parameter
+
+  # baseline: false
+  # support:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
@@ -614,6 +648,7 @@ compat_features:
   - webdriver.bidi.log.entryAdded_event.args_parameter
   - webdriver.bidi.log.entryAdded_event.source_parameter
   - webdriver.bidi.log.entryAdded_event.stackTrace_parameter
+  - webdriver.bidi.script.message_event.source_parameter
   - webdriver.bidi.script.realmCreated_event.owners_parameter
   - webdriver.bidi.session.new
   - webdriver.bidi.session.new.capabilities_parameter
@@ -641,16 +676,6 @@ compat_features:
   - webdriver.bidi.network.fetchError_event.redirectCount_parameter
   - webdriver.bidi.network.fetchError_event.request_parameter
   - webdriver.bidi.network.fetchError_event.timestamp_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "135"
-  #   chrome_android: "135"
-  #   edge: "135"
-  - webdriver.bidi.input.fileDialogOpened_event
-  - webdriver.bidi.input.fileDialogOpened_event.context_parameter
-  - webdriver.bidi.input.fileDialogOpened_event.element_parameter
-  - webdriver.bidi.input.fileDialogOpened_event.multiple_parameter
 
   # baseline: false
   # support:
@@ -695,23 +720,16 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "142"
-  #   chrome_android: "142"
-  #   edge: "142"
-  - webdriver.bidi.browser.setDownloadBehavior
-  - webdriver.bidi.browser.setDownloadBehavior.downloadBehavior_parameter
-  - webdriver.bidi.browser.setDownloadBehavior.userContexts_parameter
+  #   chrome: "147"
+  #   chrome_android: "147"
+  #   edge: "147"
+  - webdriver.bidi.userAgentClientHints
 
   # baseline: false
   # support:
-  #   chrome: "143"
-  #   chrome_android: "143"
-  #   edge: "143"
-  - webdriver.bidi.emulation.setNetworkConditions
-  - webdriver.bidi.emulation.setNetworkConditions.contexts_parameter
-  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter
-  - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter.offline
-  - webdriver.bidi.emulation.setNetworkConditions.userContexts_parameter
+  #   firefox: "106"
+  #   firefox_android: "106"
+  - webdriver.bidi.script.getRealms.type_parameter.window
 
   # baseline: false
   # support:
@@ -825,18 +843,28 @@ compat_features:
   - webdriver.bidi.network.addDataCollector.userContexts_parameter
   - webdriver.bidi.network.disownData.dataType_parameter.response
 
+  # baseline: false
+  # support:
+  #   firefox: "147"
+  #   firefox_android: "147"
+  - webdriver.bidi.emulation.setScreenSettingsOverride
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - webdriver.bidi.browser.setClientWindowState
   - webdriver.bidi.browser.setClientWindowState.clientWindow_parameter
+  - webdriver.bidi.browser.setClientWindowState.height_parameter
+  - webdriver.bidi.browser.setClientWindowState.state_parameter
+  - webdriver.bidi.browser.setClientWindowState.width_parameter
+  - webdriver.bidi.browser.setClientWindowState.x_parameter
+  - webdriver.bidi.browser.setClientWindowState.y_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event
   - webdriver.bidi.browsingContext.historyUpdated_event.context_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event.timestamp_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event.url_parameter
   - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.beforeunload
   - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.beforeunload
-  - webdriver.bidi.emulation.setScreenSettingsOverride
   - webdriver.bidi.network.addDataCollector.collectorType_parameter
   - webdriver.bidi.network.authRequired_event.response_parameter
   - webdriver.bidi.network.provideResponse.body_parameter
@@ -862,3 +890,4 @@ compat_features:
   - webdriver.bidi.network.responseStarted_event.request_parameter
   - webdriver.bidi.network.responseStarted_event.response_parameter
   - webdriver.bidi.network.responseStarted_event.timestamp_parameter
+  - webdriver.bidi.script.getRealms.type_parameter.worker

@@ -114,7 +114,7 @@ const snapshots: { [key: string]: SnapshotData } = Object.fromEntries(yamlEntrie
 // TODO: validate the snapshot data.
 
 // Helper to iterate an optional string-or-array-of-strings value.
-function* identifiers(value) {
+function* identifiers(value: undefined | string | string[]) {
     if (value === undefined) {
         return;
     }

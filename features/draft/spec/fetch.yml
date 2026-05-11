@@ -1,12 +1,14 @@
-draft_date: 2025-09-30
+draft_date: 2026-05-08
 name: Fetch
 description: TODO
 spec: https://fetch.spec.whatwg.org/
 compat_features:
-  - api.Request.Request.init_duplex_parameter
-  - api.fetch.body_readablestream
-  - api.fetch.init_duplex_parameter
+  - api.Request.Request.options_parameter.duplex
+  - api.fetch.options_parameter.body.accepts_readablestream
+  - api.fetch.options_parameter.duplex
+  - http.headers.Content-Length.cors_response_safelist
   - http.headers.Cross-Origin-Resource-Policy
+  - http.headers.Range.cors_safe
   - http.headers.X-Content-Type-Options
 
 # The following features in the spec are already part of web-features:
@@ -35,9 +37,11 @@ compat_features:
 #   - api.Request
 #   - api.Request.Request
 #   - api.Request.Request.cross_origin_stripped
-#   - api.Request.Request.init_keepalive_parameter
-#   - api.Request.Request.init_referrer_parameter
-#   - api.Request.Request.request_body_readablestream
+#   - api.Request.Request.options_parameter
+#   - api.Request.Request.options_parameter.body
+#   - api.Request.Request.options_parameter.body.accepts_readablestream
+#   - api.Request.Request.options_parameter.keepalive
+#   - api.Request.Request.options_parameter.referrer
 #   - api.Request.Request.response_body_readablestream
 #   - api.Request.arrayBuffer
 #   - api.Request.blob
@@ -50,9 +54,7 @@ compat_features:
 #   - api.Request.credentials.default_same-origin
 #   - api.Request.destination
 #   - api.Request.duplex
-#   - api.Request.formData
 #   - api.Request.headers
-#   - api.Request.integrity
 #   - api.Request.isHistoryNavigation
 #   - api.Request.json
 #   - api.Request.keepalive
@@ -76,7 +78,6 @@ compat_features:
 #   - api.Response.bytes
 #   - api.Response.clone
 #   - api.Response.error_static
-#   - api.Response.formData
 #   - api.Response.headers
 #   - api.Response.json
 #   - api.Response.json_static
@@ -91,21 +92,34 @@ compat_features:
 #   - api.fetch
 #   - api.fetch.authorization_removed_cross_origin
 #   - api.fetch.blob_data_support
-#   - api.fetch.init_keepalive_parameter
-#   - api.fetch.init_referrerPolicy_parameter
+#   - api.fetch.options_parameter
+#   - api.fetch.options_parameter.body
+#   - api.fetch.options_parameter.keepalive
+#   - api.fetch.options_parameter.referrerPolicy
+# - Custom highlights:
+#   - api.Highlight.delete
+#   - api.Highlight.has
 # - Fetch priority:
-#   - api.Request.Request.init_priority_parameter
-#   - api.fetch.init_priority_parameter
+#   - api.Request.Request.options_parameter.priority
+#   - api.fetch.options_parameter.priority
 # - Fetch upload streams:
 #   - api.Request.body
-# - Speculation rules:
-#   - api.Request.destination.speculationrules
-#   - http.headers.Sec-Purpose.speculationrules
+# - Fetch form data:
+#   - api.Request.formData
+#   - api.Response.formData
+# - Subresource integrity:
+#   - api.Request.integrity
 # - Abortable fetch:
 #   - api.Request.signal
-#   - api.fetch.init_signal_parameter
+#   - api.fetch.options_parameter.signal
 # - XMLHttpRequest:
 #   - api.XMLHttpRequest.authorization_removed_cross_origin
+#   - api.XMLHttpRequest.getAllResponseHeaders.header_names_lowercase
+#   - api.XMLHttpRequest.send.body_ArrayBufferView_type
+#   - api.XMLHttpRequest.send.body_ArrayBuffer_type
+#   - api.XMLHttpRequest.send.body_Blob_type
+#   - api.XMLHttpRequest.send.body_FormData_type
+#   - api.XMLHttpRequest.send.body_URLSearchParams_type
 # - CORS:
 #   - http.headers.Access-Control-Allow-Credentials
 #   - http.headers.Access-Control-Allow-Headers

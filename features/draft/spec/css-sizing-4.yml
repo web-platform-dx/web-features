@@ -1,4 +1,4 @@
-draft_date: 2025-11-03
+draft_date: 2026-05-08
 name: CSS Box Sizing Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-sizing-4/
@@ -24,7 +24,6 @@ compat_features:
 #   - css.properties.aspect-ratio
 #   - css.properties.aspect-ratio.auto
 # - Logical properties:
-#   - css.properties.block-size
 #   - css.properties.block-size.fit-content
 #   - css.properties.block-size.max-content
 #   - css.properties.block-size.min-content
@@ -65,9 +64,6 @@ compat_features:
 #   - css.properties.box-sizing
 #   - css.properties.box-sizing.border-box
 #   - css.properties.box-sizing.content-box
-# - Multi-column layout:
-#   - css.properties.column-width
-#   - css.properties.column-width.auto
 # - contain-intrinsic-size:
 #   - css.properties.contain-intrinsic-block-size
 #   - css.properties.contain-intrinsic-block-size.none
@@ -80,6 +76,10 @@ compat_features:
 #   - css.properties.contain-intrinsic-size.none
 #   - css.properties.contain-intrinsic-width
 #   - css.properties.contain-intrinsic-width.none
+# - Flexbox:
+#   - css.properties.flex-basis.fit-content
+#   - css.properties.flex-basis.max-content
+#   - css.properties.flex-basis.min-content
 # - Width and height:
 #   - css.properties.height
 #   - css.properties.height.auto

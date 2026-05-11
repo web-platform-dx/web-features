@@ -6,7 +6,6 @@ updates:
       - /
       - packages/web-features
       - packages/compute-baseline
-      - gh-pages
     schedule:
       interval: daily
     cooldown:
@@ -43,3 +42,5 @@ updates:
     directory: "/"
     schedule:
       interval: daily
+    cooldown:
+      default-days: 7

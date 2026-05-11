@@ -90,7 +90,7 @@ Baseline status cannot or will not satisfy the following non-goals:
 The WebDX community group, through the [web-platform-dx/web-features-set owners group](../GOVERNANCE.md), maintains this document.
 Based on WebDX community group research, the web-features owners group decides matters such as the core browser set, releases, editorial overrides, and so on.
 
-The status definition is due for review by the owners group on 1 June 2025.
+The status definition is due for review by the owners group on 9 September 2026.
 
 ## Status definition
 
@@ -113,6 +113,9 @@ For each feature definition in `web-features`, an interoperable status shall be 
 
 If the feature has the interoperable status, then the feature’s _keystone date_ shall be set to the last release date on which a browser introduced support for the feature
 If there was more than one introduction (e.g., a feature was withdrawn then reintroduced), then only the latest date applies.
+
+> [!NOTE]
+> As a consequence of the definition, the keystone date is never before the release date of the youngest browser in the core browser set (presently 2015-07-28, the release date of Edge 12).
 
 ### Wider-support (high) status
 
@@ -151,12 +154,15 @@ The _core browser set_ shall be defined as:
 There are many things Baseline does not cover.
 Here are some areas for future consideration and not currently in-scope for Baseline, particularly other candidate states such as:
 
-<!-- TODO: Replace these with issues -->
-
+* Handling very broad feature definitions (e.g., some features cover a large API, such as the [DOM feature](/features/dom.yml) ([dist](/features/dom.yml.dist)), and "headline" statuses are not necessarily useful in such cases)
 * Upcoming (e.g., not yet shipped in all browsers)
 * Progressive enhancement safe (i.e., limited penalties for support failures)
 * Developer feedback requested
 * Buggy (e.g., supported but in ways that are surprising and semi-interoperable)
 * Support in assistive technology that is not built into browsers.
-* Obsolete/deprecated/legacy/etc. (i.e., flagged as such in the specification or dropped from newer versions of the specification)
 * Having high-quality polyfills available
+
+## See also
+
+* The `web-features` package reports when web developers are formally discouraged from using a platform feature.
+  See the data guidelines [Discouraged](guidelines.md#discouraged) section to learn when and how we mark a feature as discouraged.
