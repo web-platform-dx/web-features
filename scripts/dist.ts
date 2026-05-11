@@ -360,6 +360,10 @@ function insertCompatFeatures(yaml: Document, groups: Map<string, string[]>) {
  * mistakes, such as `.yaml` files.
  */
 function isDistOrDistable(path: string): boolean {
+  if (path.includes("_overlap_allowlist.yml")) {
+    return false;
+  }
+
   if (path.startsWith("features/draft/proposed/")) {
     return false;
   }

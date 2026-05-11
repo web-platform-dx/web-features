@@ -423,3 +423,35 @@ When you set a `discouraged` block in a feature file, do:
 - Set one or more (optional) `alternatives` feature IDs that are whole or partial substitutes for the discouraged feature.
   An alternative doesn't have to be a narrow drop-in replacement for the discouraged feature but it must handle some use case of the discouraged feature.
   Guide developers to the most relevant features that would help them stop using the discouraged feature.
+
+## Overlapping `compat_features` keys
+
+Typically, an `@mdn/browser-compat-data` (BCD) key is assigned to one and only one feature.
+Rarely, two or more features have equal claim to a key and their sets of `compat_features` keys must overlap.
+You can add a single key to two or more `compat_features` lists when independent features share some interface and one of these situations applies:
+
+- No feature has any claim to being first and the shared interface does not represent a useful feature on its own.
+  This sometimes happens when two independent features share a common interface.
+  For example, the `HTMLMediaElement` interface is required for both the `<video>` and `<audio>` elements, but there's no application for the `HTMLMediaElement` alone.
+
+- The computed status would be misleading without the shared interface.
+  For example, features where the `Reporting-Endpoints` header replaced the now-deprecated `Report-To` header might have a deceptively early status without the key for `Reporting-Endpoints`.
+
+Do not overlap keys for completeness or relatedness alone.
+Instead, prefer to assign such keys to the oldest, most foundational feature where that key might plausibly belong.
+For example, do not add `api.HTMLElement` to every HTML element feature (for example, `<div>`, `<span>`, and so on).
+Instead, assign `api.HTMLElement` to the DOM feature.
+
+Overlaps are forbidden by default and cause an error.
+If you must overlap a key between two features, then first exempt the relevant keys in [`features/_overlap_allowlist.yml`](../features/_overlap_allowlist.yml).
+The allowlist is an array of records that declare which features are to share some keys and which keys those features are allowed to share.
+Here's an example, where two features share two keys:
+
+```
+- features:
+    - audio
+    - video
+  keys:
+    - api.HTMLMediaElement
+    - api.HTMLMediaElement.abort_event
+```
