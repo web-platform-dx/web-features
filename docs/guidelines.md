@@ -431,10 +431,10 @@ Most features compute a status from `@mdn/browser-compat-data` (BCD) compat keys
 Nevertheless, some features require some finessing to make sensible headline statuses.
 There are three ways to override a status, in order of preference:
 
-- Author a `compat_features` object with `core`, `modifiers`, and `incidentals` arrays of compat keys.
+- Author a `compat_features` object with `core`, `modifier`, and `spare` arrays of compat keys.
   The `core` array is used to calculate a status (like a flat `compat_features` array).
-  The keys in `modifiers` are validated to have the same status _level_ as the `core` keys (for example, if the `core` set of keys is newly available, then the keys in `modifiers` must be too), but not necessarily the same Baseline dates or initial browser releases.
-  The keys in `incidentals` relate to the feature but do not affect the feature's status.
+  The keys in `modifier` are validated to have the same status _level_ as the `core` keys (for example, if the `core` set of keys is newly available, then the keys in `modifier` must be too), but not necessarily the same Baseline dates or initial browser releases.
+  The keys in `spare` relate to the feature but do not affect the feature's status.
 
   For example, this override sets the status on the basis of key `a` and `b`, validates that key `c` is at the same level as `core`, and ignores `x` for the purpose of calculating a status.
 
@@ -443,15 +443,15 @@ There are three ways to override a status, in order of preference:
     core:
       - a
       - b
-    modifiers:
+    modifier:
       - c
-    incidentals:
+    spare:
       - x
   ```
 
 - Author a literal `status` override in the feature's authored YAML file.
   This provides an explicit, overriding status with a Baseline status level (false, `"low"`, or `"high"`), Baseline low date, and `support` information.
-  Note that you may combine this with `modifiers` and `incidentals` in a `compat_features` list.
+  Note that you may combine this with `modifier` and `spare` in a `compat_features` list.
 
   For example, this sets a status that completely ignores any BCD keys that might exist:
 
@@ -487,7 +487,7 @@ There are three ways to override a status, in order of preference:
 Whenever possible, avoid overrides.
 Consider alternatives such as splitting a feature into two or more features or fixing upstream data.
 
-If you must override a status, prefer using `compat_features` with `core` and `modifiers` arrays over `incidentals`, a literal status override, or a `compute_from`.
+If you must override a status, prefer using `compat_features` with `core` and `modifier` arrays over `spare`, a literal status override, or a `compute_from`.
 
 You can use an override method in the following situations:
 

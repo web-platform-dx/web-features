@@ -12,6 +12,6 @@ compat_features:
     - api.SyncManager # former compute_from
     - api.SyncManager.getTags
     - api.SyncManager.register
-  modifiers:
+  modifier:
     - api.Permissions.permission_background-sync
     - api.SyncManager.worker_support

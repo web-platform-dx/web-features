@@ -55,7 +55,7 @@ compat_features:
     - api.StyleSheetList
     - api.StyleSheetList.item
     - api.StyleSheetList.length
-  modifiers:
+  modifier:
     - api.CSSConditionRule
     - api.CSSConditionRule.conditionText
     - api.CSSGroupingRule
@@ -67,7 +67,7 @@ compat_features:
     - api.CSSStyleSheet.insertRule.index_parameter_optional
     - api.ProcessingInstruction.sheet
     - api.ShadowRoot.styleSheets
-  incidentals:
+  spare:
     - api.CSSMarginRule
     - api.CSSMarginRule.name
     - api.CSSMarginRule.style

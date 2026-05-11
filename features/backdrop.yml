@@ -5,7 +5,7 @@ group: selectors
 compat_features:
   core:
     - css.selectors.backdrop # former compute_from
-  modifiers:
+  modifier:
     - css.selectors.backdrop.dialog
-  incidentals:
+  spare:
     - css.selectors.backdrop.inherit_from_originating_element

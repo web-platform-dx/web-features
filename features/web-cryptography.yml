@@ -31,7 +31,7 @@ compat_features:
     - api.crypto
     - api.Crypto
     - api.Crypto.getRandomValues
-  modifiers:
+  modifier:
     - api.Crypto.randomUUID
     - api.Crypto.subtle
     - api.Crypto.subtle.secure_context_required
@@ -55,7 +55,7 @@ compat_features:
     - api.SubtleCrypto.worker_support
     - api.SubtleCrypto.wrapKey
     - api.crypto.worker_support
-  incidentals:
+  spare:
     - api.SubtleCrypto.exportKey.ed25519
     - api.SubtleCrypto.generateKey.ed25519
     - api.SubtleCrypto.importKey.ed25519

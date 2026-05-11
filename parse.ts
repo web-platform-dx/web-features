@@ -13,14 +13,14 @@ const logger = winston.createLogger({
 
 interface CompatSets {
   core: string[];
-  modifiers: string[];
-  incidentals: string[];
+  modifier: string[];
+  spare: string[];
 }
 
 interface AuthoredCompatSets {
   core: string[];
-  modifiers?: string[];
-  incidentals?: string[];
+  modifier?: string[];
+  spare?: string[];
 }
 
 export interface ParsedAuthoredData extends Partial<FeatureData> {
@@ -94,8 +94,8 @@ export function parseAuthoring(
     compatFeatures: {
       all: [
         ...compatFeatures.core,
-        ...compatFeatures.modifiers,
-        ...compatFeatures.incidentals,
+        ...compatFeatures.modifier,
+        ...compatFeatures.spare,
       ].toSorted(),
       ...compatFeatures,
     },
@@ -134,8 +134,8 @@ export function makeCompatSets(
   if (setsOrKeysOrId === undefined) {
     return {
       core: [],
-      modifiers: [],
-      incidentals: [],
+      modifier: [],
+      spare: [],
     };
   }
 
@@ -143,8 +143,8 @@ export function makeCompatSets(
     const sets = setsOrKeysOrId;
     return {
       core: (sets.core ? sets.core : []).toSorted(),
-      modifiers: (sets.modifiers ? sets.modifiers : []).toSorted(),
-      incidentals: (sets.incidentals ? sets.incidentals : []).toSorted(),
+      modifier: (sets.modifier ? sets.modifier : []).toSorted(),
+      spare: (sets.spare ? sets.spare : []).toSorted(),
     };
   }
 
@@ -161,14 +161,14 @@ export function makeCompatSets(
 
     return {
       core: computeFrom.toSorted(),
-      modifiers: [],
-      incidentals: keys.filter((k) => !computeFrom.includes(k)).toSorted(),
+      modifier: [],
+      spare: keys.filter((k) => !computeFrom.includes(k)).toSorted(),
     };
   }
   return {
     core: keys.toSorted(),
-    modifiers: [],
-    incidentals: [],
+    modifier: [],
+    spare: [],
   };
 }
 
@@ -195,8 +195,7 @@ function isComputeFromOverride(
 
 function isAuthoredCompatSets(value: unknown): value is AuthoredCompatSets {
   return (
-    isRecord(value) &&
-    ["core", "modifiers", "incidentals"].some((key) => key in value)
+    isRecord(value) && ["core", "modifier", "spare"].some((key) => key in value)
   );
 }
 

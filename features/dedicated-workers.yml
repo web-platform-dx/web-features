@@ -26,7 +26,7 @@ compat_features:
     - api.WorkerLocation.search
     - api.WorkerLocation.toString
     - api.WorkerNavigator
-  modifiers:
+  modifier:
     - api.DedicatedWorkerGlobalScope.name
     - api.Worker.Worker.options_name_parameter
     - api.WorkerGlobalScope.importScripts.mime_checks
@@ -35,6 +35,6 @@ compat_features:
     - api.WorkerGlobalScope.self
     - api.WorkerGlobalScope.unhandledrejection_event
     - api.WorkerLocation.origin
-  incidentals:
+  spare:
     - api.Worker.Worker.mime_checks
     - api.Worker.worker_support

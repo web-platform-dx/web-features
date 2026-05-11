@@ -69,7 +69,7 @@ export function assertCompatSetConsistency(
   headline: Status,
   featureData: ParsedAuthoredData,
 ) {
-  const { core, modifiers } = featureData.compatFeatures;
+  const { core, modifier } = featureData.compatFeatures;
   for (const key of core) {
     const perKeyStatus = headline.by_compat_key[key];
     if (compareBaselineLevel(headline, perKeyStatus) > 0) {
@@ -87,11 +87,11 @@ export function assertCompatSetConsistency(
     }
   }
 
-  for (const key of modifiers) {
+  for (const key of modifier) {
     const perKeyStatus = headline.by_compat_key[key];
     if (compareBaselineLevel(headline, perKeyStatus) > 0) {
       throw new Error(
-        `${id}: modifiers ${key} must be Baseline ${headline.baseline} or better (got ${perKeyStatus.baseline})`,
+        `${id}: modifier ${key} must be Baseline ${headline.baseline} or better (got ${perKeyStatus.baseline})`,
       );
     }
   }

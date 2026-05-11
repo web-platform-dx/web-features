@@ -5,12 +5,12 @@ describe("makeCompatSets", function () {
   it("from explicit compat sets", function () {
     const set = makeCompatSets({
       core: ["html.elements.a"],
-      modifiers: ["api.HTMLAnchorElement"],
-      incidentals: ["html.elements.a.href.href_sms"],
+      modifier: ["api.HTMLAnchorElement"],
+      spare: ["html.elements.a.href.href_sms"],
     });
     assert.deepEqual(set.core, ["html.elements.a"]);
-    assert.deepEqual(set.modifiers, ["api.HTMLAnchorElement"]);
-    assert.deepEqual(set.incidentals, ["html.elements.a.href.href_sms"]);
+    assert.deepEqual(set.modifier, ["api.HTMLAnchorElement"]);
+    assert.deepEqual(set.spare, ["html.elements.a.href.href_sms"]);
   });
 
   it("from compute_from and flat compat_features", function () {
@@ -23,8 +23,8 @@ describe("makeCompatSets", function () {
       ["html.elements.a"],
     );
     assert.deepEqual(set.core, ["html.elements.a"]);
-    assert.deepEqual(set.modifiers, []);
-    assert.deepEqual(set.incidentals, [
+    assert.deepEqual(set.modifier, []);
+    assert.deepEqual(set.spare, [
       "api.HTMLAnchorElement",
       "html.elements.a.href.href_sms",
     ]);
@@ -33,7 +33,7 @@ describe("makeCompatSets", function () {
   it("from compute_from and implicit keys", function () {
     const set = makeCompatSets("a", ["html.elements.a"]);
     assert.deepEqual(set.core, ["html.elements.a"]);
-    assert(set.incidentals.includes("api.HTMLAnchorElement"));
+    assert(set.spare.includes("api.HTMLAnchorElement"));
   });
 
   it("from flat compat_features", function () {
@@ -57,15 +57,15 @@ describe("makeCompatSets", function () {
   it("from implicit keys, keylessly", function () {
     const set = makeCompatSets("http3");
     assert.equal(set.core.length, 0);
-    assert.equal(set.modifiers.length, 0);
-    assert.equal(set.incidentals.length, 0);
+    assert.equal(set.modifier.length, 0);
+    assert.equal(set.spare.length, 0);
   });
 
   it("keylessly", function () {
     const set = makeCompatSets();
     assert.deepEqual(set.core, []);
-    assert.deepEqual(set.modifiers, []);
-    assert.deepEqual(set.incidentals, []);
+    assert.deepEqual(set.modifier, []);
+    assert.deepEqual(set.spare, []);
   });
 
   it("throws if compute_from is not a strict subset of a feature's keys", function () {

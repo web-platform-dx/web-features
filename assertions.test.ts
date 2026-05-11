@@ -3,8 +3,8 @@ import {
   assertCompatSetConsistency,
   assertValidFeatureReference,
 } from "./assertions";
-import { Status } from "./types";
 import { ParsedAuthoredData } from "./parse";
+import { Status } from "./types";
 
 describe("assertValidReference()", function () {
   it("throws if target ID is a move", function () {
@@ -50,7 +50,7 @@ describe("assertCompatSetConsistency()", function () {
           by_compat_key: { example: { baseline: "low" } },
         } as unknown as Status,
         {
-          compatFeatures: { core: ["example"], modifiers: [], incidentals: [] },
+          compatFeatures: { core: ["example"], modifier: [], spare: [] },
         } as unknown as ParsedAuthoredData,
       );
     });
@@ -68,7 +68,7 @@ describe("assertCompatSetConsistency()", function () {
           },
         } as unknown as Status,
         {
-          compatFeatures: { core: ["example"], modifiers: [], incidentals: [] },
+          compatFeatures: { core: ["example"], modifier: [], spare: [] },
         } as unknown as ParsedAuthoredData,
       );
     });
@@ -85,7 +85,7 @@ describe("assertCompatSetConsistency()", function () {
         },
       } as unknown as Status,
       {
-        compatFeatures: { core: ["example"], modifiers: [], incidentals: [] },
+        compatFeatures: { core: ["example"], modifier: [], spare: [] },
       } as unknown as ParsedAuthoredData,
     );
   });
@@ -101,7 +101,7 @@ describe("assertCompatSetConsistency()", function () {
         },
       } as unknown as Status,
       {
-        compatFeatures: { core: ["example"], modifiers: [], incidentals: [] },
+        compatFeatures: { core: ["example"], modifier: [], spare: [] },
       } as unknown as ParsedAuthoredData,
     );
 
@@ -115,12 +115,12 @@ describe("assertCompatSetConsistency()", function () {
         },
       } as unknown as Status,
       {
-        compatFeatures: { core: ["example"], modifiers: [], incidentals: [] },
+        compatFeatures: { core: ["example"], modifier: [], spare: [] },
       } as unknown as ParsedAuthoredData,
     );
   });
 
-  it("throws when modifiers keys have worse status than headline", function () {
+  it("throws when modifier keys have worse status than headline", function () {
     assert.throws(() => {
       assertCompatSetConsistency(
         "foo",
@@ -129,13 +129,13 @@ describe("assertCompatSetConsistency()", function () {
           by_compat_key: { example: { baseline: "low" } },
         } as unknown as Status,
         {
-          compatFeatures: { core: [], modifiers: ["example"], incidentals: [] },
+          compatFeatures: { core: [], modifier: ["example"], spare: [] },
         } as unknown as ParsedAuthoredData,
       );
     });
   });
 
-  it("does not throw when modifiers keys have same status as headline", function () {
+  it("does not throw when modifier keys have same status as headline", function () {
     assertCompatSetConsistency(
       "foo",
       {
@@ -143,7 +143,7 @@ describe("assertCompatSetConsistency()", function () {
         by_compat_key: { example: { baseline: "low" } },
       } as unknown as Status,
       {
-        compatFeatures: { core: [], modifiers: ["example"], incidentals: [] },
+        compatFeatures: { core: [], modifier: ["example"], spare: [] },
       } as unknown as ParsedAuthoredData,
     );
   });
