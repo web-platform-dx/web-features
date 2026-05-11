@@ -56,7 +56,12 @@ jobs:
           cache: npm
           registry-url: "https://registry.npmjs.org"
 
-      - run: npm install -g 'npm@>=11.5.1'  # required for trusted publishing
+      # A two-step install is required to work around a bad `npm` version that
+      # comes bundled with Node 22.22.
+      # See https://github.com/npm/cli/issues/9151#issuecomment-4129185112
+      - run: |
+          npm install -g 'npm@10'
+          npm install -g 'npm@>=11.5.1'  # required for trusted publishing
       - run: npm ci
 
       - run: npm run build
