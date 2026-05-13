@@ -303,7 +303,7 @@ To fix data discrepancies in your dist file, open the dist file and, under `comp
 
 Look for the feature's entrypoint in the dist file. The entrypoint of a feature is the property, interface, method, or other constituent part of the feature which web developers use first. For example, the Web Audio API feature has the `AudioContext` interface as its entrypoint. Before doing anything else, developers will first instantiate an `AudioContext` object by doing `const audioContext = new AudioContext()`.
 
-If your feature's entrypoint doesn't have the same status as the overall feature, use the `compute_from` field in your feature file to flag the BCD key (or keys) that represent the minimum viable set of constituent parts of a feature that make it usable.
+If your feature's entrypoint doesn't have the same status as the overall feature, see [_Status overrides_](./guidelines.md#status-overrides) for ways to override the computed status.
 
 ### Create a GitHub Pull Request to review and merge your changes
 
