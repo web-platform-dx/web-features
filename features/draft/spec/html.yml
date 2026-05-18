@@ -1,4 +1,4 @@
-draft_date: 2026-05-08
+draft_date: 2026-05-18
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -18,7 +18,6 @@ compat_features:
   - api.HTMLAllCollection.namedItem
   - api.HTMLBaseElement.href.forbid_data_javascript_urls
   - api.HTMLButtonElement.command.request-close
-  - api.HTMLButtonElement.commandForElement.implicit_anchor_reference
   - api.HTMLCanvasElement.getContext.2d_context.options_colorType_parameter
   - api.HTMLCanvasElement.toBlob.quality_parameter
   - api.HTMLCanvasElement.toBlob.type_parameter_png
@@ -90,7 +89,6 @@ compat_features:
   - api.setInterval.supports_parameters_for_callback
   - api.setTimeout.supports_parameters_for_callback
   - html.elements.button.command.request-close
-  - html.elements.button.commandfor.implicit_anchor_reference
   - html.elements.details.search_match_opens
   - html.elements.form.autocomplete.new-password
   - html.elements.form.autocomplete.one-time-code
@@ -133,7 +131,6 @@ compat_features:
   - http.headers.Origin-Agent-Cluster
   - http.headers.Permissions-Policy.autoplay
   - http.headers.Permissions-Policy.cross-origin-isolated
-  - http.headers.Refresh
   - http.headers.X-Frame-Options
   - http.headers.X-Frame-Options.DENY
   - http.headers.X-Frame-Options.SAMEORIGIN
@@ -877,6 +874,15 @@ compat_features:
 #   - api.ValidityState.typeMismatch
 #   - api.ValidityState.valid
 #   - api.ValidityState.valueMissing
+# - Anchor positioning:
+#   - api.HTMLButtonElement.commandForElement.implicit_anchor_reference
+#   - api.HTMLButtonElement.popoverTargetElement.implicit_anchor_reference
+#   - api.HTMLElement.showPopover.options_source_parameter.implicit_anchor_reference
+#   - api.HTMLElement.togglePopover.options_source_parameter.implicit_anchor_reference
+#   - api.HTMLInputElement.popoverTargetElement.implicit_anchor_reference
+#   - html.elements.button.commandfor.implicit_anchor_reference
+#   - html.elements.button.popovertarget.implicit_anchor_reference
+#   - html.elements.input.popovertarget.implicit_anchor_reference
 # - Popover:
 #   - api.HTMLButtonElement.popoverTargetAction
 #   - api.HTMLButtonElement.popoverTargetElement
@@ -902,13 +908,6 @@ compat_features:
 #   - html.elements.input.popovertarget
 #   - html.elements.input.popovertargetaction
 #   - html.global_attributes.popover
-# - Anchor positioning:
-#   - api.HTMLButtonElement.popoverTargetElement.implicit_anchor_reference
-#   - api.HTMLElement.showPopover.options_source_parameter.implicit_anchor_reference
-#   - api.HTMLElement.togglePopover.options_source_parameter.implicit_anchor_reference
-#   - api.HTMLInputElement.popoverTargetElement.implicit_anchor_reference
-#   - html.elements.button.popovertarget.implicit_anchor_reference
-#   - html.elements.input.popovertarget.implicit_anchor_reference
 # - <canvas>:
 #   - api.HTMLCanvasElement
 #   - api.HTMLCanvasElement.getContext
@@ -1582,7 +1581,6 @@ compat_features:
 #   - html.elements.meta.content
 #   - html.elements.meta.http-equiv
 #   - html.elements.meta.http-equiv.content-type
-#   - html.elements.meta.http-equiv.refresh
 #   - html.elements.meta.name
 #   - html.elements.meta.name.referrer
 # - <meter>:
@@ -2440,6 +2438,9 @@ compat_features:
 #   - html.elements.main
 # - <mark>:
 #   - html.elements.mark
+# - Meta refresh:
+#   - html.elements.meta.http-equiv.refresh
+#   - http.headers.Refresh
 # - color-scheme:
 #   - html.elements.meta.name.color-scheme
 # - <meta name="theme-color">:
