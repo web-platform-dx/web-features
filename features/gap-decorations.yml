@@ -6,12 +6,15 @@ group:
   - flexbox
   - multi-column
 compat_features:
-  # Subset of the keys for the column-rule CSS property, which aren't yet in multi-column.yml.
-  # These were added for the gap decorations feature, for symmetry with the row-rule property.
+  # Keys for the column-rule CSS property.
+  - css.properties.column-rule
   - css.properties.column-rule-break
   - css.properties.column-rule-break.intersection
   - css.properties.column-rule-break.none
   - css.properties.column-rule-break.normal
+  - css.properties.column-rule-color
+  - css.properties.column-rule-color.currentColor
+  - css.properties.column-rule-color.transparent
   - css.properties.column-rule-inset
   - css.properties.column-rule-inset-cap
   - css.properties.column-rule-inset-cap-end
@@ -21,13 +24,44 @@ compat_features:
   - css.properties.column-rule-inset-junction-end
   - css.properties.column-rule-inset-junction-start
   - css.properties.column-rule-inset-start
+  - css.properties.column-rule-style
+  - css.properties.column-rule-style.dashed
+  - css.properties.column-rule-style.dotted
+  - css.properties.column-rule-style.double
+  - css.properties.column-rule-style.groove
+  - css.properties.column-rule-style.hidden
+  - css.properties.column-rule-style.inset
+  - css.properties.column-rule-style.none
+  - css.properties.column-rule-style.outset
+  - css.properties.column-rule-style.ridge
+  - css.properties.column-rule-style.solid
   - css.properties.column-rule-visibility-items
   - css.properties.column-rule-visibility-items.all
   - css.properties.column-rule-visibility-items.around
   - css.properties.column-rule-visibility-items.between
   - css.properties.column-rule-visibility-items.normal
+  - css.properties.column-rule-width
+  - css.properties.column-rule-width.medium
+  - css.properties.column-rule-width.thick
+  - css.properties.column-rule-width.thin
+  - css.properties.column-rule.currentColor
+  - css.properties.column-rule.dashed
+  - css.properties.column-rule.dotted
+  - css.properties.column-rule.double
+  - css.properties.column-rule.groove
+  - css.properties.column-rule.hidden
+  - css.properties.column-rule.inset
+  - css.properties.column-rule.medium
+  - css.properties.column-rule.none
+  - css.properties.column-rule.outset
+  - css.properties.column-rule.ridge
+  - css.properties.column-rule.solid
+  - css.properties.column-rule.thick
+  - css.properties.column-rule.thin
+  - css.properties.column-rule.transparent
 
   # Keys for the row-rule CSS property.
+  - css.properties.row-rule
   - css.properties.row-rule-break
   - css.properties.row-rule-break.intersection
   - css.properties.row-rule-break.none
@@ -35,15 +69,15 @@ compat_features:
   - css.properties.row-rule-color
   - css.properties.row-rule-color.currentColor
   - css.properties.row-rule-color.transparent
+  - css.properties.row-rule-inset
+  - css.properties.row-rule-inset-cap
   - css.properties.row-rule-inset-cap-end
   - css.properties.row-rule-inset-cap-start
-  - css.properties.row-rule-inset-cap
   - css.properties.row-rule-inset-end
+  - css.properties.row-rule-inset-junction
   - css.properties.row-rule-inset-junction-end
   - css.properties.row-rule-inset-junction-start
-  - css.properties.row-rule-inset-junction
   - css.properties.row-rule-inset-start
-  - css.properties.row-rule-inset
   - css.properties.row-rule-style
   - css.properties.row-rule-style.dashed
   - css.properties.row-rule-style.dotted
@@ -64,7 +98,6 @@ compat_features:
   - css.properties.row-rule-width.medium
   - css.properties.row-rule-width.thick
   - css.properties.row-rule-width.thin
-  - css.properties.row-rule
   - css.properties.row-rule.currentColor
   - css.properties.row-rule.dashed
   - css.properties.row-rule.dotted
@@ -83,21 +116,6 @@ compat_features:
 
   # Keys for the various rule* shorthand CSS properties.
   - css.properties.rule
-  - css.properties.rule.currentColor
-  - css.properties.rule.dashed
-  - css.properties.rule.dotted
-  - css.properties.rule.double
-  - css.properties.rule.groove
-  - css.properties.rule.hidden
-  - css.properties.rule.inset
-  - css.properties.rule.medium
-  - css.properties.rule.none
-  - css.properties.rule.outset
-  - css.properties.rule.ridge
-  - css.properties.rule.solid
-  - css.properties.rule.thick
-  - css.properties.rule.thin
-  - css.properties.rule.transparent
   - css.properties.rule-break
   - css.properties.rule-break.intersection
   - css.properties.rule-break.none
@@ -133,3 +151,18 @@ compat_features:
   - css.properties.rule-width.medium
   - css.properties.rule-width.thick
   - css.properties.rule-width.thin
+  - css.properties.rule.currentColor
+  - css.properties.rule.dashed
+  - css.properties.rule.dotted
+  - css.properties.rule.double
+  - css.properties.rule.groove
+  - css.properties.rule.hidden
+  - css.properties.rule.inset
+  - css.properties.rule.medium
+  - css.properties.rule.none
+  - css.properties.rule.outset
+  - css.properties.rule.ridge
+  - css.properties.rule.solid
+  - css.properties.rule.thick
+  - css.properties.rule.thin
+  - css.properties.rule.transparent
