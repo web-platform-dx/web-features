@@ -8,6 +8,19 @@ status:
     chrome_android: "146"
     edge: "146"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2023-03-27
+  # baseline_high_date: 2025-09-27
+  # support:
+  #   chrome: "86"
+  #   chrome_android: "86"
+  #   edge: "86"
+  #   firefox: "92"
+  #   firefox_android: "92"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.Element.attachShadow.options_slotAssignment_parameter
+
   # baseline: false
   # support:
   #   chrome: "56"

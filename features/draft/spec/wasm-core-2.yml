@@ -1,0 +1,12 @@
+draft_date: 2026-05-18
+name: WebAssembly Core Specification
+description: TODO
+spec: https://webassembly.github.io/spec/core/bikeshed/
+compat_features:
+  - webassembly.definitions.global
+  - webassembly.instructions.global_get
+  - webassembly.instructions.global_set
+
+# The following features in the spec are already part of web-features:
+# - Import and export of mutable globals (WebAssembly):
+#   - webassembly.definitions.global.mut
