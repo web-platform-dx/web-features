@@ -1,4 +1,4 @@
-draft_date: 2026-05-08
+draft_date: 2026-05-18
 name: Crash Reporting
 description: TODO
 spec: https://wicg.github.io/crash-reporting/
@@ -8,6 +8,7 @@ compat_features:
   - api.CrashReportContext.initialize
   - api.CrashReportContext.set
   - api.Window.crashReport
+  - http.headers.Reporting-Endpoints.default.receives_crash_type
 
 # The following features in the spec are already part of web-features:
 # - Crash reporting:
