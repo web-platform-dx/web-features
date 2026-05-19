@@ -1,0 +1,90 @@
+name: BCD upgrade automation
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  check-metadata:
+    name: Check if BCD upgrade
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    outputs:
+      is-bcd-upgrade: ${{ steps.metadata.outputs.is-bcd-upgrade }}
+    steps:
+      - name: Fetch Dependabot metadata
+        id: fetch-metadata
+        continue-on-error: true
+        uses: dependabot/fetch-metadata@08eff52bf64351f401fb50d4972fa95b9f2c2d1b #v2.4.0
+
+      - id: metadata
+        run: echo "is-bcd-upgrade=${{ contains(steps.fetch-metadata.outputs.dependency-names, '@mdn/browser-compat-data') }}" >> "$GITHUB_OUTPUT"
+
+  automate:
+    name: Automate BCD upgrade
+    needs: check-metadata
+    if: needs.check-metadata.outputs.is-bcd-upgrade == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          npm install
+
+      - name: Remove deleted BCD keys and snapshot baseline
+        id: pre-dist
+        run: |
+          npx tsx scripts/bcd-upgrade.ts pre-dist --state-path bcd-update-state.json
+
+      - name: Commit key removals
+        run: |
+          if ! git diff --quiet features/; then
+            git add features/
+            git commit -m "Remove deleted BCD keys from web-features definitions"
+          fi
+
+      - name: Rebuild dist files
+        if: steps.pre-dist.outcome == 'success'
+        run: npm run dist
+
+      - name: Commit dist changes
+        if: steps.pre-dist.outcome == 'success'
+        run: |
+          if ! git diff --quiet features/; then
+            git add features/
+            git commit -m "Refresh dist"
+          fi
+
+      - name: Push changes
+        run: git push origin ${{ github.head_ref }}
+
+      - name: Format PR comment
+        id: comment
+        run: |
+          BODY=$(npx tsx scripts/bcd-upgrade.ts post-dist \
+            --state-path bcd-update-state.json)
+          {
+            echo 'body<<EOF'
+            echo "$BODY"
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Post PR comment
+        if: steps.comment.outputs.body != ''
+        uses: peter-evans/create-or-update-comment@71345be0265236311c031f5c7866368bd1eff043 #v4.0.0
+        with:
+          issue-number: ${{ github.event.number }}
+          body: ${{ steps.comment.outputs.body }}
