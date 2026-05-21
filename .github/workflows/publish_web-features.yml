@@ -15,6 +15,12 @@ env:
   package_dir: "packages/web-features"
   # Publish @next for main, @latest for tags
   dist_tag: ${{ startsWith(github.ref, 'refs/tags/') && 'latest' || 'next' }}
+  artifacts: >
+    packages/web-features/data.json
+    data.extended.json
+    schemas/data.schema.json
+    data.proposed.json
+    schemas/data.proposed.schema.json
 
 jobs:
   test:
@@ -58,9 +64,10 @@ jobs:
       - run: npm run build
       - run: npm publish
         working-directory: ${{ env.package_dir }}
-      - run: gh release upload "$GITHUB_REF_NAME" packages/web-features/data.json data.extended.json schemas/data.schema.json data.proposed.json schemas/data.proposed.schema.json
+      - run: gh release upload "$GITHUB_REF_NAME" $ARTIFACTS
         env:
           GH_TOKEN: ${{ github.token }}
+          ARTIFACTS: ${{ env.artifacts }}
 
   publish_next:
     name: Publish prerelease
@@ -150,9 +157,4 @@ jobs:
           PACKAGE: ${{ env.package }}
           TAG: ${{ env.dist_tag }}
           NOTES: This is a continuously-updated prerelease generated from `main` (currently at ${{ steps.timestamp_and_hash.outputs.SHORT_HASH }}).
-          ARTIFACTS: >
-            ${{ env.package_dir }}/data.json
-            data.extended.json
-            schemas/data.schema.json
-            data.proposed.json
-            schemas/data.proposed.schema.json
+          ARTIFACTS: ${{ env.artifacts }}
