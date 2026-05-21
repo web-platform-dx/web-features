@@ -235,6 +235,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/WICG/privacy-preserving-ads",
         "Discontinued spec allowed for discouraged feature."
+    ],
+    [
+        "https://wicg.github.io/turtledove/",
+        "Discontinued spec allowed for discouraged feature."
     ]
 ];
 
