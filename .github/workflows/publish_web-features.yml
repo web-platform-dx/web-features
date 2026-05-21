@@ -84,8 +84,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          # Required for `git tag`
-          persist-credentials: true
+          persist-credentials: false
       - name: Get timestamp and short hash
         id: timestamp_and_hash
         run: |
@@ -136,10 +135,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:$GH_TOKEN@github.com/$GH_REPO"
           git tag --force "$TAG"
           git push --force origin "$TAG"
         env:
           GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
           TAG: ${{ env.dist_tag }}
 
       - name: Publish pre-release on GitHub
