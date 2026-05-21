@@ -1,4 +1,4 @@
-draft_date: 2026-03-31
+draft_date: 2026-05-08
 name: CSS Fonts Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-fonts-5/
@@ -143,7 +143,6 @@ compat_features:
 #   - css.properties.font-stretch.extra-condensed
 #   - css.properties.font-stretch.extra-expanded
 #   - css.properties.font-stretch.normal
-#   - css.properties.font-stretch.percentage
 #   - css.properties.font-stretch.semi-condensed
 #   - css.properties.font-stretch.semi-expanded
 #   - css.properties.font-stretch.ultra-condensed
@@ -165,7 +164,6 @@ compat_features:
 #   - css.properties.font-weight.bolder
 #   - css.properties.font-weight.lighter
 #   - css.properties.font-weight.normal
-#   - css.properties.font-weight.number
 #   - svg.global_attributes.font-weight
 # - font-size-adjust:
 #   - css.at-rules.font-face.size-adjust
@@ -185,12 +183,8 @@ compat_features:
 # - font-family:
 #   - css.properties.font-family
 #   - css.properties.font-family.cursive
-#   - css.properties.font-family.fangsong
 #   - css.properties.font-family.fantasy
-#   - css.properties.font-family.kai
-#   - css.properties.font-family.khmer-mul
 #   - css.properties.font-family.monospace
-#   - css.properties.font-family.nastaliq
 #   - css.properties.font-family.sans-serif
 #   - css.properties.font-family.serif
 #   - svg.global_attributes.font-family
@@ -249,14 +243,11 @@ compat_features:
 # - font-variant:
 #   - css.properties.font-variant
 #   - css.properties.font-variant.css_fonts_shorthand
-#   - css.properties.font-variant.greek_accented_characters
 #   - css.properties.font-variant.historical-forms
 #   - css.properties.font-variant.none
 #   - css.properties.font-variant.normal
 #   - css.properties.font-variant.sub
 #   - css.properties.font-variant.super
-#   - css.properties.font-variant.turkic_is
-#   - css.properties.font-variant.uppercase_eszett
 #   - svg.global_attributes.font-variant
 # - font-variant-caps:
 #   - css.properties.font-variant-caps
@@ -313,3 +304,5 @@ compat_features:
 #   - css.properties.font-variant-position.normal
 #   - css.properties.font-variant-position.sub
 #   - css.properties.font-variant-position.super
+# - <meta name="text-scale">:
+#   - html.elements.meta.name.text-scale

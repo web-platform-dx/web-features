@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "description": "Proposed web-features data",
+  "type": "object",
+  "properties": {
+    "features": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "enum": ["proposed", "moved", "split"]
+          }
+        },
+        "required": ["kind"],
+        "additionalProperties": true
+      }
+    }
+  },
+  "required": ["features"],
+  "additionalProperties": false
+}

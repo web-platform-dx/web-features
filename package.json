@@ -13,7 +13,7 @@
   "type": "module",
   "main": "index.ts",
   "engines": {
-    "node": ">=20.10.0"
+    "node": ">=22.22.0"
   },
   "scripts": {
     "audit-consumers": "tsx scripts/audit-consumers.ts",
@@ -40,34 +40,34 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@js-temporal/polyfill": "^0.5.1",
-    "@mdn/browser-compat-data": "7.3.9",
+    "@mdn/browser-compat-data": "7.3.16",
     "@octokit/rest": "^22.0.1",
     "@types/caniuse-lite": "^1.0.4",
-    "@types/node": "^20.19.37",
+    "@types/node": "^22.19.19",
     "@types/yargs": "^17.0.35",
-    "ajv": "^8.18.0",
-    "caniuse-lite": "^1.0.30001782",
+    "ajv": "^8.20.0",
+    "caniuse-lite": "^1.0.30001793",
     "cheerio": "^1.2.0",
-    "diff": "^8.0.4",
+    "diff": "^9.0.0",
     "escape-html": "^1.0.3",
     "eslint-plugin-new-with-error": "^5.0.0",
     "fast-json-stable-stringify": "^2.1.0",
     "fdir": "^6.5.0",
     "hast-util-to-string": "^3.0.1",
     "mocha": "^11.7.5",
-    "prettier": "^3.8.1",
+    "prettier": "^3.8.3",
     "quicktype": "^23.2.6",
     "rehype-parse": "^9.0.1",
     "rehype-stringify": "^10.0.1",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.57.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.3",
     "unified": "^11.0.5",
-    "web-specs": "^3.82.0",
+    "web-specs": "^3.86.0",
     "winston": "^3.19.0",
-    "yaml": "^2.8.3",
+    "yaml": "^2.9.0",
     "yargs": "^18.0.0"
   }
 }

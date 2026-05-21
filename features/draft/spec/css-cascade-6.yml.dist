@@ -3,6 +3,11 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "148"
+    chrome_android: "148"
+    edge: "148"
+    firefox: "150"
+    firefox_android: "150"
 compat_features:
-  - css.properties.all.revert-rule
+  - css.types.global_keywords.revert-rule

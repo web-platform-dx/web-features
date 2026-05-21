@@ -7,4 +7,6 @@ status:
 compat_features:
   - api.Document.parseHTMLUnsafe_static.options_sanitizer_parameter
   - api.Element.setHTMLUnsafe.options_sanitizer_parameter
+  - api.Sanitizer.allowProcessingInstruction
+  - api.Sanitizer.removeProcessingInstruction
   - api.ShadowRoot.setHTMLUnsafe.options_sanitizer_parameter
