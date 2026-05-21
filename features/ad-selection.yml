@@ -1,0 +1,14 @@
+name: Ad selection
+description: The ad selection API
+spec: https://github.com/WICG/privacy-preserving-ads
+discouraged:
+  removal_date: 2026-06-01
+  reason: Following the announcement that Chrome will maintain its current approach to third-party cookies, Chrome decided to withdraw certain Privacy Sandbox features including the protected audience API, which shares some interfaces with the ad selection API.
+  according_to:
+    - https://groups.google.com/a/chromium.org/g/blink-dev/c/k_nubsMb97g/m/aAp_5MTXBQAJ
+    - https://chromestatus.com/feature/6552486106234880
+# Uncomment when overlapping keys are allowed, https://github.com/web-platform-dx/web-features/issues/1173
+# compat_features:
+#   - api.Navigator.getInterestGroupAdAuctionData
+#   - api.Navigator.runAdAuction
+#   - api.Navigator.joinAdInterestGroup

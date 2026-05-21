@@ -231,6 +231,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/WICG/PEPC/blob/main/usermedia_element.md",
         "Replace with https://w3c.github.io/mediacapture-extensions/#the-usermedia-html-element when https://github.com/w3c/mediacapture-extensions/pull/168 merges."
+    ],
+    [
+        "https://github.com/WICG/privacy-preserving-ads",
+        "Discontinued spec allowed for discouraged feature."
     ]
 ];
 

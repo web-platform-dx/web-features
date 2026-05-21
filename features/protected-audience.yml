@@ -7,6 +7,7 @@ discouraged:
   according_to:
     - https://privacysandbox.com/news/update-on-plans-for-privacy-sandbox-technologies/
     - https://chromestatus.com/feature/6552486106234880
+# TODO: remove this override when https://github.com/mdn/browser-compat-data/pull/29723 merges and appears in a BCD release
 status:
   compute_from: api.Navigator.getInterestGroupAdAuctionData
 compat_features:
