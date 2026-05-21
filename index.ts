@@ -7,10 +7,10 @@ import YAML from 'yaml';
 import { convertMarkdown } from "./text";
 import { GroupData, SnapshotData, WebFeaturesData } from './types';
 
-import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, parseRangedDateString, getStatus } from 'compute-baseline';
+import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, getStatus, parseRangedDateString } from 'compute-baseline';
 import { Compat } from 'compute-baseline/browser-compat-data';
-import { assertValidFeatureReference } from './assertions';
-import { isMoved, isSplit } from './type-guards';
+import { assertRequiredRemovalDateSet, assertValidFeatureReference } from './assertions';
+import { isMoved, isOrdinaryFeatureData, isSplit } from './type-guards';
 
 // The longest name allowed, to allow for compact display.
 const nameMaxLength = 80;
@@ -45,10 +45,17 @@ function* yamlEntries(root: string): Generator<[string, any]> {
         // The feature identifier/key is the filename without extension.
         const { name: key } = path.parse(fp);
         const pathParts = fp.split(path.sep);
+        const isDraft = pathParts.includes('draft');
+        const isSpec = isDraft && pathParts.includes('spec');
+        const isProposed = isDraft && pathParts.includes('proposed');
+
+        if (isProposed) {
+            continue;
+        }
 
         // Assert ID uniqueness
         for (const [pool, map] of Object.entries(uniqueIdMaps)) {
-            if (!pathParts.includes("spec") && pathParts.includes(pool)) {
+            if (!isSpec && pathParts.includes(pool)) {
                 const otherFile: string | undefined = map.get(key);
                 if (otherFile) {
                     throw new Error(`ID collision between ${fp} and ${otherFile}`);
@@ -68,7 +75,7 @@ function* yamlEntries(root: string): Generator<[string, any]> {
             Object.assign(data, dist);
         }
 
-        if (pathParts.includes('draft')) {
+        if (isDraft) {
             data[draft] = true;
         }
 
@@ -107,7 +114,7 @@ const snapshots: { [key: string]: SnapshotData } = Object.fromEntries(yamlEntrie
 // TODO: validate the snapshot data.
 
 // Helper to iterate an optional string-or-array-of-strings value.
-function* identifiers(value) {
+function* identifiers(value: undefined | string | string[]) {
     if (value === undefined) {
         return;
     }
@@ -159,11 +166,25 @@ for (const [key, data] of yamlEntries('features')) {
         }
     }
 
-    // Convert markdown to text+HTML.
-    if (data.description) {
+    if (isOrdinaryFeatureData(data)) {
+        // Convert Markdown fields
+        const description = data.description as unknown;
+        if (typeof description !== "string" || description.trim().length === 0) {
+            throw new Error(`${key}.yml is missing a description value!`);
+        }
         const { text, html } = convertMarkdown(data.description);
         data.description = text;
         data.description_html = html;
+
+        if ("discouraged" in data) {
+            const reason = data.discouraged.reason as unknown;
+            if (typeof reason !== "string" || reason.trim().length === 0) {
+                throw new Error(`${key}.yml is missing a discouraged reason value!`);
+            }
+            const { text, html } = convertMarkdown(data.discouraged.reason);
+            data.discouraged.reason = text;
+            data.discouraged.reason_html = html;
+        }
     }
 
     // Compute Baseline high date from low date.
@@ -218,6 +239,8 @@ for (const [key, data] of yamlEntries('features')) {
             }
         }
     }
+
+   assertRequiredRemovalDateSet(key, data);
 
     features[key] = data;
 }

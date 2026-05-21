@@ -1,6 +1,6 @@
 # Curated list of Web platform features
 
-[web-features](https://web-platform-dx.github.io/web-features/web-features/) is the package that describes Web platform features and provides [Baseline](https://web-platform-dx.github.io/web-features/) status reports.
+[web-features](https://web-platform-dx.github.io/web-features-project/) is the package that describes Web platform features and provides [Baseline](https://web-platform-dx.github.io/baseline/) status reports.
 
 Subscribe to the [Upcoming changes](https://github.com/web-platform-dx/web-features/discussions/2613) announcements thread for news about upcoming releases, such as breaking changes or major features.
 
@@ -29,7 +29,7 @@ import schema from "web-features/data.schema.json" with { type: "json" };
 
 ## Rendering Baseline statuses with `web-features`
 
-If you're using `web-features` to render Baseline iconography or browser logos with support markers, then you must follow the [name and logo usage guidelines](https://web-platform-dx.github.io/web-features/name-and-logo-usage-guidelines/).
+If you're using `web-features` to render Baseline iconography or browser logos with support markers, then you must follow the [name and logo usage guidelines](https://web-platform-dx.github.io/name-and-logo-usage-guidelines/).
 
 For Baseline iconography, follow this procedure for each feature:
 
@@ -83,7 +83,10 @@ It has the following properties:
 - `status`: Support status data.
   It has the following properties:
   - `baseline` (type: `"high" | "low" | false`): Whether the feature Baseline widely available, Baseline newly available, or not Baseline
-  - `baseline_low_date` (optional, type: `string`): When the feature reached Baseline newly available status
+  - `baseline_low_date` (optional, type: `string`): When the feature reached Baseline newly available status.
+
+     **Note**: This date is never before the release date of the youngest browser in the Baseline definition (presently 2015-07-28, the release date of Edge 12).
+
   - `baseline_high_date` (optional, type: `string`): When the feature reached Baseline widely available status
   - `support`: An object representing per-browser support information, showing the version number where each browser first started to support that feature.
     All keys are optional.
@@ -101,7 +104,11 @@ It has the following properties:
 - `discouraged` (optional): An object indicating that web developers should avoid using the feature.
   It has the following properties:
   - `according_to` (type: `string[]`): One or more links to a formal discouragement notice, such as specification text or an intent-to-unship
+  - `reason` (type: `string`): A brief, developer-focused description of why the feature is discouraged.
+  - `reason_html` (type: `string`): A brief, developer-focused description of why the feature is discouraged, as an HTML string.
   - `alternatives` (optional, type: `string[]`): One or more feature IDs (as in `features[alternatives[0]]`) that substitute some or all of this feature's utility
+  - `removal_date` (optional, type: `string`): An expected or actual removal date, as in `"2029-12-31"`.
+     Only set if there's an announced plan by all currently-implementing vendors to unship the feature or the feature has already been unshipped from all browsers.
 
 ### Moved objects
 

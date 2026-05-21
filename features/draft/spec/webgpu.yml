@@ -1,9 +1,9 @@
-draft_date: 2025-11-10
+draft_date: 2026-05-08
 name: WebGPU
 description: TODO
 spec: https://gpuweb.github.io/gpuweb/
 compat_features:
-  - api.GPUAdapter.requestDevice.undefined_limits
+  - api.GPU.requestAdapter.options_featureLevel
   - api.GPUAdapterInfo.isFallbackAdapter
   - api.GPUCommandEncoder.beginRenderPass.accepts_GPUTexture_resources
   - api.GPUCommandEncoder.copyBufferToBuffer.offset_and_size_parameter_optional
@@ -11,20 +11,30 @@ compat_features:
   - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTextureView
   - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTexture_resource
   - api.GPUDevice.createPipelineLayout.descriptor_bindGroupLayouts_parameter_accepts_null_values
+  - api.GPUDevice.createTexture.descriptor_usage_parameter
+  - api.GPUDevice.createTexture.descriptor_usage_parameter.accept_transient_attachment
   - api.GPUSupportedFeatures.feature_core-features-and-limits
   - api.GPUSupportedFeatures.feature_primitive-index
-  - api.GPUSupportedFeatures.feature_subgroups
+  - api.GPUSupportedFeatures.feature_subgroups.subgroup_id_num_subgroups
+  - api.GPUSupportedFeatures.feature_texture-component-swizzle
   - api.GPUSupportedFeatures.feature_texture-compression-astc-sliced-3d
   - api.GPUSupportedFeatures.feature_texture-compression-bc-sliced-3d
   - api.GPUSupportedFeatures.feature_texture-formats-tier1
   - api.GPUSupportedFeatures.feature_texture-formats-tier2
+  - api.GPUSupportedLimits.maxStorageBuffersInFragmentStage
+  - api.GPUSupportedLimits.maxStorageBuffersInVertexStage
+  - api.GPUSupportedLimits.maxStorageTexturesInFragmentStage
+  - api.GPUSupportedLimits.maxStorageTexturesInVertexStage
+  - api.GPUTexture.createView.descriptor_swizzle_parameter
+  - api.GPUTexture.createView.descriptor_usage_parameter.transient_attachment
+  - api.GPUTexture.textureBindingViewDimension
+  - api.GPUTexture.usage.transient_attachment
 
 # The following features in the spec are already part of web-features:
 # - WebGPU:
 #   - api.GPU
 #   - api.GPU.getPreferredCanvasFormat
 #   - api.GPU.requestAdapter
-#   - api.GPU.requestAdapter.discrete_adapter_default_ac
 #   - api.GPU.wgslLanguageFeatures
 #   - api.GPUAdapter
 #   - api.GPUAdapter.features
@@ -138,7 +148,6 @@ compat_features:
 #   - api.GPUDevice.destroy
 #   - api.GPUDevice.features
 #   - api.GPUDevice.importExternalTexture
-#   - api.GPUDevice.importExternalTexture.color_space_display-p3
 #   - api.GPUDevice.importExternalTexture.videoframe_source
 #   - api.GPUDevice.label
 #   - api.GPUDevice.limits
@@ -285,8 +294,8 @@ compat_features:
 #   - api.GPUSupportedLimits.minUniformBufferOffsetAlignment
 #   - api.GPUTexture
 #   - api.GPUTexture.createView
-#   - api.GPUTexture.createView.texture_rgb10a2uint
-#   - api.GPUTexture.createView.usage
+#   - api.GPUTexture.createView.descriptor_format_parameter_accepts_rgb10a2uint
+#   - api.GPUTexture.createView.descriptor_usage_parameter
 #   - api.GPUTexture.depthOrArrayLayers
 #   - api.GPUTexture.destroy
 #   - api.GPUTexture.dimension
@@ -317,3 +326,5 @@ compat_features:
 #   - api.WGSLLanguageFeatures.size
 #   - api.WGSLLanguageFeatures.values
 #   - api.WorkerNavigator.gpu
+# - WebGPU subgroups:
+#   - api.GPUSupportedFeatures.feature_subgroups

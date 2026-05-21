@@ -2,3 +2,9 @@ name: Web authentication easy public key access
 description: The `getAuthenticatorData()`, `getPublicKey()`, and `getPublicKeyAlgorithm()` methods of `AuthenticatorAttestationResponse` access credential data inside `attestationObject` without the need to parse it.
 spec: https://w3c.github.io/webauthn/#sctn-public-key-easy
 group: webauthn
+status:
+  compute_from:
+    - api.AuthenticatorAttestationResponse.getAuthenticatorData
+    - api.AuthenticatorAttestationResponse.getPublicKeyAlgorithm
+    - api.AuthenticatorAttestationResponse.getPublicKey
+    - api.AuthenticatorAttestationResponse.getPublicKey.algorithm_es256

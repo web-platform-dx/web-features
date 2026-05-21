@@ -143,6 +143,7 @@ compat_features:
   #   safari_ios: ≤3.2
   - html.elements.caption
   - html.elements.col
+  - html.elements.col.span
   - html.elements.colgroup
   - html.elements.colgroup.span
 
@@ -215,15 +216,6 @@ compat_features:
   #   safari_ios: "1"
   - css.properties.border-collapse.collapse
   - css.properties.border-collapse.separate
-
-  # baseline: false
-  # support:
-  #   edge: "12"
-  #   firefox: "1"
-  #   firefox_android: "4"
-  #   safari: ≤4
-  #   safari_ios: ≤3.2
-  - html.elements.col.span
 
   # baseline: false
   # support:

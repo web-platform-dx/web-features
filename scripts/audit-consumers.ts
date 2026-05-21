@@ -1,10 +1,11 @@
-import * as cheerio from "cheerio";
 import { Octokit } from "@octokit/rest";
+import * as cheerio from "cheerio";
 
 import { features as webFeatures } from "../index.js";
 
 interface Report {
   heading: string;
+  description: string;
   items: string[];
   trailer: string;
 }
@@ -108,6 +109,7 @@ async function useCounterReport(): Promise<Report> {
 
   return {
     heading: "Chromium use counters",
+    description: `Chromium use counters that don't have an associated feature. To resolve these, find a corresponding feature or the issue or pull request to create a feature.`,
     items,
     trailer:
       "Source: [webdx_feature.mojom](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/public/mojom/use_counter/metrics/webdx_feature.mojom)",
@@ -129,6 +131,8 @@ async function chromeStatusReport(): Promise<Report> {
 
   return {
     heading: "Chromestatus entries",
+    description:
+      "Chrome Platform Status entries that don't have an associated feature. To resolve these, find a corresponding feature or the issue or pull request to create a feature.",
     items,
     trailer: "Source: [chromestatus.com](https://chromestatus.com/)",
   };
@@ -179,6 +183,8 @@ async function wptReport(): Promise<Report> {
 
   return {
     heading: "web-platform-tests",
+    description:
+      "Web platform tests (WPT) that reference a non-existent feature. To resolve these, find a corresponding feature or the issue or pull request to create a feature.",
     items,
     trailer: `Source: [WEB_FEATURES_MANIFEST.json](${asset.browser_download_url})`,
   };
@@ -191,18 +197,18 @@ async function main() {
     wptReport(),
   ]);
 
-  for (const { heading, items, trailer } of reports) {
-    console.log(`## ${heading}`);
-    console.log();
+  for (const { heading, description, items, trailer } of reports) {
     if (items.length) {
+      console.log(`## ${heading}`);
+      console.log();
+      console.log(description);
+      console.log();
       for (const item of items) {
         console.log(`- [ ] ${item}`);
       }
-    } else {
-      console.log("Nothing to see here!");
+      console.log();
+      console.log(trailer);
     }
-    console.log();
-    console.log(trailer);
   }
 }
 

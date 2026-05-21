@@ -41,7 +41,7 @@ describe("features", function () {
 
     describe("spec_url", function () {
       it("returns an empty array if there's no spec_url", function () {
-        const noSpec = feature("javascript.builtins.Date.parse.iso_8601");
+        const noSpec = feature("api.AbortPaymentEvent");
         assert(noSpec.spec_url.length === 0);
       });
 
@@ -118,8 +118,15 @@ describe("features", function () {
           "css.properties.line-clamp",
         ).supportedInDetails(cr.version("100"));
         assert.equal(lineClamp.length, 1);
-        assert.equal(lineClamp[0]?.supported, true);
-        assert.equal(lineClamp[0]?.qualifications?.prefix, "-webkit-");
+        const release = lineClamp[0];
+        assert("supported" in release);
+        assert(release.supported === true);
+        assert(release.supported !== null);
+        if ("qualifications" in release) {
+          assert.equal(release.qualifications.prefix, "-webkit-");
+        } else {
+          assert(false);
+        }
       });
 
       it("returns mixed results for (un)prefixed features", function () {

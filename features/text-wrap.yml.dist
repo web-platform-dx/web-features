@@ -3,15 +3,15 @@
 
 status:
   baseline: low
-  baseline_low_date: 2024-03-19
+  baseline_low_date: 2024-10-17
   support:
-    chrome: "114"
-    chrome_android: "114"
-    edge: "114"
+    chrome: "130"
+    chrome_android: "130"
+    edge: "130"
     firefox: "124"
     firefox_android: "124"
-    safari: "17.4"
-    safari_ios: "17.4"
+    safari: "17.5"
+    safari_ios: "17.5"
 compat_features:
   # baseline: low
   # baseline_low_date: 2024-03-05
@@ -25,7 +25,6 @@ compat_features:
   #   safari_ios: "17.4"
   - css.properties.text-wrap
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2024-03-19
   # support:
@@ -36,4 +35,46 @@ compat_features:
   #   firefox_android: "124"
   #   safari: "17.4"
   #   safari_ios: "17.4"
+  - css.properties.text-wrap.nowrap
   - css.properties.text-wrap.wrap
+
+  # baseline: low
+  # baseline_low_date: 2024-10-17
+  # support:
+  #   chrome: "130"
+  #   chrome_android: "130"
+  #   edge: "130"
+  #   firefox: "121"
+  #   firefox_android: "121"
+  #   safari: "17.5"
+  #   safari_ios: "17.5"
+  - css.properties.text-wrap.stable
+
+  # baseline: low
+  # baseline_low_date: 2024-10-17
+  # support:
+  #   chrome: "130"
+  #   chrome_android: "130"
+  #   edge: "130"
+  #   firefox: "124"
+  #   firefox_android: "124"
+  #   safari: "17.4"
+  #   safari_ios: "17.4"
+  - css.properties.text-wrap-mode
+  - css.properties.text-wrap-mode.nowrap
+  - css.properties.text-wrap-mode.wrap
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2024-10-17
+  # support:
+  #   chrome: "130"
+  #   chrome_android: "130"
+  #   edge: "130"
+  #   firefox: "124"
+  #   firefox_android: "124"
+  #   safari: "17.5"
+  #   safari_ios: "17.5"
+  - css.properties.text-wrap-style
+  - css.properties.text-wrap-style.auto
+  - css.properties.text-wrap-style.stable

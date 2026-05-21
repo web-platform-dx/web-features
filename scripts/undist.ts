@@ -1,18 +1,17 @@
-import yargs from "yargs";
-import { fileURLToPath } from "node:url";
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import YAML from "yaml";
+import yargs from "yargs";
 
 const argv = yargs(process.argv.slice(2))
   .scriptName("undist")
-  .usage("$0 path", "Generate .yml from .yml.dist", (yargs) =>
-    yargs.positional("path", {
-      type: "string",
-      describe: "Path to feature.yml.dist file",
-      demandOption: true,
-    }),
-  )
+  .usage("$0 path", "Generate .yml from .yml.dist")
+  .positional("path", {
+    type: "string",
+    describe: "Path to feature.yml.dist file",
+    demandOption: true,
+  })
   .option("add", {
     alias: "a",
     type: "array",
@@ -23,7 +22,8 @@ const argv = yargs(process.argv.slice(2))
     type: "boolean",
     default: true,
     describe: "Sort the compat_features array",
-  }).argv;
+  })
+  .parseSync();
 
 // Support `path/to/feature.yml.dist`, `path/to/feature.yml`, or `path/to/feature`
 function getPaths(featurePath: string): { yml: string; dist: string } {

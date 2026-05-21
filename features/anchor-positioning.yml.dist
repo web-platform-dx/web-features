@@ -3,19 +3,16 @@
 
 status:
   baseline: false
-  support:
-    chrome: "125"
-    chrome_android: "125"
-    edge: "125"
-    safari: "26"
-    safari_ios: "26"
+  support: {}
 compat_features:
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-01-13
   # support:
   #   chrome: "125"
   #   chrome_android: "125"
   #   edge: "125"
+  #   firefox: "147"
+  #   firefox_android: "147"
   #   safari: "26"
   #   safari_ios: "26"
   - api.CSSPositionTryDescriptors
@@ -119,25 +116,40 @@ compat_features:
   - css.properties.min-width.anchor-size
   - css.properties.place-items.anchor-center
   - css.properties.place-self.anchor-center
-  - css.properties.position-anchor
   - css.properties.position-try
-  - css.properties.position-try-order
-  - css.properties.position-try-order.most-block-size
-  - css.properties.position-try-order.most-height
-  - css.properties.position-try-order.most-inline-size
-  - css.properties.position-try-order.most-width
-  - css.properties.position-try-order.normal
+  - css.properties.position-try.flip-block
+  - css.properties.position-try.flip-inline
+  - css.properties.position-try.flip-start
+  - css.properties.position-try.none
   - css.properties.right.anchor
   - css.properties.top.anchor
   - css.properties.width.anchor-size
   - css.types.anchor
   - css.types.anchor-size
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-01-13
+  # support:
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
+  #   firefox: "147"
+  #   firefox_android: "147"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - css.properties.position-visibility
+  - css.properties.position-visibility.always
+  - css.properties.position-visibility.anchors-visible
+  - css.properties.position-visibility.no-overflow
+
+  # baseline: low
+  # baseline_low_date: 2026-01-13
   # support:
   #   chrome: "128"
   #   chrome_android: "128"
   #   edge: "128"
+  #   firefox: "147"
+  #   firefox_android: "147"
   #   safari: "26"
   #   safari_ios: "26"
   - css.properties.position-try-fallbacks
@@ -147,11 +159,14 @@ compat_features:
   - css.properties.position-try-fallbacks.none
   - css.properties.position-try-fallbacks.position-area
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-01-13
   # support:
   #   chrome: "129"
   #   chrome_android: "129"
   #   edge: "129"
+  #   firefox: "147"
+  #   firefox_android: "147"
   #   safari: "26"
   #   safari_ios: "26"
   - api.CSSPositionTryDescriptors.position-area
@@ -165,6 +180,8 @@ compat_features:
   - css.properties.position-area.span-end
   - css.properties.position-area.span-inline-end
   - css.properties.position-area.span-inline-start
+  - css.properties.position-area.span-left
+  - css.properties.position-area.span-right
   - css.properties.position-area.span-self-block-end
   - css.properties.position-area.span-self-block-start
   - css.properties.position-area.span-self-end
@@ -178,23 +195,113 @@ compat_features:
   - css.properties.position-area.span-y-end
   - css.properties.position-area.span-y-start
   - css.properties.position-area.start
+  - css.properties.position-try-fallbacks.block-end
+  - css.properties.position-try-fallbacks.block-start
+  - css.properties.position-try-fallbacks.bottom
+  - css.properties.position-try-fallbacks.center
+  - css.properties.position-try-fallbacks.end
+  - css.properties.position-try-fallbacks.inline-end
+  - css.properties.position-try-fallbacks.inline-start
+  - css.properties.position-try-fallbacks.left
+  - css.properties.position-try-fallbacks.right
+  - css.properties.position-try-fallbacks.self-block-end
+  - css.properties.position-try-fallbacks.self-block-start
+  - css.properties.position-try-fallbacks.self-end
+  - css.properties.position-try-fallbacks.self-inline-end
+  - css.properties.position-try-fallbacks.self-inline-start
+  - css.properties.position-try-fallbacks.self-start
+  - css.properties.position-try-fallbacks.span-all
+  - css.properties.position-try-fallbacks.span-block-end
+  - css.properties.position-try-fallbacks.span-block-start
+  - css.properties.position-try-fallbacks.span-bottom
+  - css.properties.position-try-fallbacks.span-end
+  - css.properties.position-try-fallbacks.span-inline-end
+  - css.properties.position-try-fallbacks.span-inline-start
+  - css.properties.position-try-fallbacks.span-left
+  - css.properties.position-try-fallbacks.span-right
+  - css.properties.position-try-fallbacks.span-self-block-end
+  - css.properties.position-try-fallbacks.span-self-block-start
+  - css.properties.position-try-fallbacks.span-self-end
+  - css.properties.position-try-fallbacks.span-self-inline-end
+  - css.properties.position-try-fallbacks.span-self-inline-start
+  - css.properties.position-try-fallbacks.span-self-start
+  - css.properties.position-try-fallbacks.span-start
+  - css.properties.position-try-fallbacks.span-top
+  - css.properties.position-try-fallbacks.span-x-end
+  - css.properties.position-try-fallbacks.span-x-start
+  - css.properties.position-try-fallbacks.span-y-end
+  - css.properties.position-try-fallbacks.span-y-start
+  - css.properties.position-try-fallbacks.start
+  - css.properties.position-try-fallbacks.top
+  - css.properties.position-try-fallbacks.x-end
+  - css.properties.position-try-fallbacks.x-start
+  - css.properties.position-try-fallbacks.y-end
+  - css.properties.position-try-fallbacks.y-start
+  - css.properties.position-try.block-end
+  - css.properties.position-try.block-start
+  - css.properties.position-try.bottom
+  - css.properties.position-try.center
+  - css.properties.position-try.end
+  - css.properties.position-try.inline-end
+  - css.properties.position-try.inline-start
+  - css.properties.position-try.left
+  - css.properties.position-try.right
+  - css.properties.position-try.self-block-end
+  - css.properties.position-try.self-block-start
+  - css.properties.position-try.self-end
+  - css.properties.position-try.self-inline-end
+  - css.properties.position-try.self-inline-start
+  - css.properties.position-try.self-start
+  - css.properties.position-try.span-all
+  - css.properties.position-try.span-block-end
+  - css.properties.position-try.span-block-start
+  - css.properties.position-try.span-bottom
+  - css.properties.position-try.span-end
+  - css.properties.position-try.span-inline-end
+  - css.properties.position-try.span-inline-start
+  - css.properties.position-try.span-left
+  - css.properties.position-try.span-right
+  - css.properties.position-try.span-self-block-end
+  - css.properties.position-try.span-self-block-start
+  - css.properties.position-try.span-self-end
+  - css.properties.position-try.span-self-inline-end
+  - css.properties.position-try.span-self-inline-start
+  - css.properties.position-try.span-self-start
+  - css.properties.position-try.span-start
+  - css.properties.position-try.span-top
+  - css.properties.position-try.span-x-end
+  - css.properties.position-try.span-x-start
+  - css.properties.position-try.span-y-end
+  - css.properties.position-try.span-y-start
+  - css.properties.position-try.start
+  - css.properties.position-try.top
+  - css.properties.position-try.x-end
+  - css.properties.position-try.x-start
+  - css.properties.position-try.y-end
+  - css.properties.position-try.y-start
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-01-13
   # support:
   #   chrome: "131"
   #   chrome_android: "131"
   #   edge: "131"
+  #   firefox: "147"
+  #   firefox_android: "147"
   #   safari: "26"
   #   safari_ios: "26"
   - css.properties.anchor-scope
   - css.properties.anchor-scope.all
   - css.properties.anchor-scope.none
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-01-13
   # support:
   #   chrome: "132"
   #   chrome_android: "132"
   #   edge: "132"
+  #   firefox: "147"
+  #   firefox_android: "147"
   #   safari: "26"
   #   safari_ios: "26"
   - css.properties.bottom.anchor-size
@@ -221,49 +328,124 @@ compat_features:
   - css.properties.top.anchor-size
   - css.types.anchor-size.inset_margin
 
-  # baseline: false
-  # support:
-  #   chrome: "137"
-  #   chrome_android: "137"
-  #   edge: "137"
-  #   safari: "26"
-  #   safari_ios: "26"
-  - api.HTMLElement.togglePopover.options_source_parameter.implicit_anchor_reference
-
-  # baseline: false
-  # support:
-  #   chrome: "137"
-  #   chrome_android: "137"
-  #   edge: "137"
-  #   firefox: "144"
-  #   firefox_android: "144"
-  - api.HTMLElement.showPopover.options_source_parameter.implicit_anchor_reference
-
-  # baseline: false
-  # support:
-  #   chrome: "125"
-  #   chrome_android: "125"
-  #   edge: "125"
-  - css.properties.position-visibility
-  - css.properties.position-visibility.always
-  - css.properties.position-visibility.anchors-visible
-  - css.properties.position-visibility.no-overflow
-
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-01-13
   # support:
   #   chrome: "133"
   #   chrome_android: "133"
   #   edge: "133"
+  #   firefox: "147"
+  #   firefox_android: "147"
+  #   safari: "26"
+  #   safari_ios: "26"
   - api.HTMLButtonElement.popoverTargetElement.implicit_anchor_reference
   - api.HTMLInputElement.popoverTargetElement.implicit_anchor_reference
   - html.elements.button.popovertarget.implicit_anchor_reference
   - html.elements.input.popovertarget.implicit_anchor_reference
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-01-13
   # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
+  #   firefox: "147"
+  #   firefox_android: "147"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - api.HTMLButtonElement.commandForElement.implicit_anchor_reference
+  - html.elements.button.commandfor.implicit_anchor_reference
+
+  # baseline: low
+  # baseline_low_date: 2026-01-13
+  # support:
+  #   chrome: "137"
+  #   chrome_android: "137"
+  #   edge: "137"
+  #   firefox: "147"
+  #   firefox_android: "147"
   #   safari: "26"
   #   safari_ios: "26"
-  - css.properties.position-anchor.auto
+  - api.HTMLElement.showPopover.options_source_parameter.implicit_anchor_reference
+  - api.HTMLElement.togglePopover.options_source_parameter.implicit_anchor_reference
+
+  # baseline: low
+  # baseline_low_date: 2026-01-13
+  # support:
+  #   chrome: "143"
+  #   chrome_android: "143"
+  #   edge: "143"
+  #   firefox: "147"
+  #   firefox_android: "147"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - css.properties.position-area.span-self-x-end
+  - css.properties.position-area.span-self-x-start
+  - css.properties.position-area.span-self-y-end
+  - css.properties.position-area.span-self-y-start
+  - css.properties.position-try-fallbacks.span-self-x-end
+  - css.properties.position-try-fallbacks.span-self-x-start
+  - css.properties.position-try-fallbacks.span-self-y-end
+  - css.properties.position-try-fallbacks.span-self-y-start
+  - css.properties.position-try.span-self-x-end
+  - css.properties.position-try.span-self-x-start
+  - css.properties.position-try.span-self-y-end
+  - css.properties.position-try.span-self-y-start
+
+  # baseline: low
+  # baseline_low_date: 2026-01-21
+  # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
+  #   firefox: "147"
+  #   firefox_android: "147"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - css.properties.position-try-fallbacks.flip-x
+  - css.properties.position-try-fallbacks.flip-y
+  - css.properties.position-try.flip-x
+  - css.properties.position-try.flip-y
+
+  # baseline: low
+  # baseline_low_date: 2026-02-24
+  # support:
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
+  #   firefox: "148"
+  #   firefox_android: "148"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - css.properties.position-try-order
+  - css.properties.position-try-order.most-block-size
+  - css.properties.position-try-order.most-height
+  - css.properties.position-try-order.most-inline-size
+  - css.properties.position-try-order.most-width
+  - css.properties.position-try-order.normal
+
+  # baseline: low
+  # baseline_low_date: 2026-02-24
+  # support:
+  #   chrome: "143"
+  #   chrome_android: "143"
+  #   edge: "143"
+  #   firefox: "148"
+  #   firefox_android: "148"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - css.properties.position-area.disables_auto_margins_and_insets
+
+  # baseline: low
+  # baseline_low_date: 2026-02-24
+  # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
+  #   firefox: "148"
+  #   firefox_android: "148"
+  #   safari: "26"
+  #   safari_ios: "26"
   - css.properties.position-area.block-end
   - css.properties.position-area.block-start
   - css.properties.position-area.bottom
@@ -285,13 +467,48 @@ compat_features:
   - css.properties.position-area.y-end
   - css.properties.position-area.y-start
 
-  # baseline: false
-  # support: {}
+  # baseline: low
+  # baseline_low_date: 2026-02-24
+  # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
+  #   firefox: "148"
+  #   firefox_android: "148"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
   - css.properties.position-area.self-x-end
   - css.properties.position-area.self-x-start
   - css.properties.position-area.self-y-end
   - css.properties.position-area.self-y-start
-  - css.properties.position-area.span-self-x-end
-  - css.properties.position-area.span-self-x-start
-  - css.properties.position-area.span-self-y-end
-  - css.properties.position-area.span-self-y-start
+  - css.properties.position-try-fallbacks.self-x-end
+  - css.properties.position-try-fallbacks.self-x-start
+  - css.properties.position-try-fallbacks.self-y-end
+  - css.properties.position-try-fallbacks.self-y-start
+  - css.properties.position-try.self-x-end
+  - css.properties.position-try.self-x-start
+  - css.properties.position-try.self-y-end
+  - css.properties.position-try.self-y-start
+
+  # baseline: false
+  # support:
+  #   firefox: "147"
+  #   firefox_android: "147"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - css.properties.position-visibility.anchors-valid
+
+  # baseline: false
+  # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
+  - css.properties.anchor-name.position_after_layout
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.position-anchor
+  - css.properties.position-anchor.auto
+  - css.properties.position-anchor.none
+  - css.properties.position-anchor.normal

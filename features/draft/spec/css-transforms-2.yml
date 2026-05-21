@@ -1,4 +1,4 @@
-draft_date: 2025-11-03
+draft_date: 2025-12-11
 name: CSS Transforms Module Level 2
 description: TODO
 spec: https://drafts.csswg.org/css-transforms-2/
@@ -7,7 +7,6 @@ compat_features:
   - css.properties.backface-visibility.visible
   - css.properties.transform-style.flat
   - css.properties.transform-style.preserve-3d
-  - css.properties.transform.none
   - svg.global_attributes.transform.svg_root
 
 # The following features in the spec are already part of web-features:
@@ -44,6 +43,7 @@ compat_features:
 #   - css.properties.translate.none
 # - 2D transforms:
 #   - css.properties.transform
+#   - css.properties.transform.none
 #   - css.properties.transform-origin
 #   - css.properties.transform-origin.bottom
 #   - css.properties.transform-origin.center
@@ -74,3 +74,5 @@ compat_features:
 #   - css.properties.transform-origin.svg_elements
 #   - svg.global_attributes.transform
 #   - svg.global_attributes.transform-origin
+# - attr():
+#   - css.types.attr.type_function.transform-function

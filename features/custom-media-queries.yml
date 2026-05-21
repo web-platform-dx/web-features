@@ -2,8 +2,9 @@ name: Custom media queries
 description: The `@custom-media` CSS at-rule names a media query, which you can reuse in multiple `@media` rules.
 spec: https://drafts.csswg.org/mediaqueries-5/#custom-mq
 group: media-queries
-# Not in BCD yet, but expecting something like:
-# - css.at-rules.custom-media
-# - api.CSSCustomMediaRule
+# Not in BCD yet, but expecting:
 # - api.CSSCustomMediaRule.name
 # - api.CSSCustomMediaRule.query
+compat_features:
+  - css.at-rules.custom-media
+  - api.CSSCustomMediaRule

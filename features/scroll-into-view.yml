@@ -13,6 +13,3 @@ compat_features:
   # added quite a bit later than scrollIntoView itself.
   - api.Element.scrollIntoView.options_parameter.block_option
   - api.Element.scrollIntoView.options_parameter.inline_option
-  # TODO: decide whether to move this option to a separate feature. It's only
-  # in Chromium 140+.
-  - api.Element.scrollIntoView.options_parameter.container_option
