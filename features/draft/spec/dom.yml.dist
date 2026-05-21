@@ -8,6 +8,19 @@ status:
     chrome_android: "146"
     edge: "146"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2023-03-27
+  # baseline_high_date: 2025-09-27
+  # support:
+  #   chrome: "86"
+  #   chrome_android: "86"
+  #   edge: "86"
+  #   firefox: "92"
+  #   firefox_android: "92"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.Element.attachShadow.options_slotAssignment_parameter
+
   # baseline: false
   # support:
   #   chrome: "56"
@@ -16,16 +29,6 @@ compat_features:
   #   safari: "26"
   #   safari_ios: "26"
   - api.Document.createElement.options_parameter.options_is_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "83"
-  #   chrome_android: "83"
-  #   edge: "83"
-  #   safari: "26"
-  #   safari_ios: "26"
-  - api.Element.setAttribute.enforces_trusted_types
-  - api.Element.setAttributeNS.enforces_trusted_types
 
   # baseline: false
   # support:

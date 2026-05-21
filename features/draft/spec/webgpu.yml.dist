@@ -7,6 +7,13 @@ status:
 compat_features:
   # baseline: false
   # support:
+  #   chrome_android: "121"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.GPUDevice.createTexture.descriptor_usage_parameter
+
+  # baseline: false
+  # support:
   #   chrome_android: "136"
   #   safari: "26"
   #   safari_ios: "26"
@@ -51,8 +58,11 @@ compat_features:
   - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTextureView
   - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTexture_resource
   - api.GPUDevice.createPipelineLayout.descriptor_bindGroupLayouts_parameter_accepts_null_values
+  - api.GPUDevice.createTexture.descriptor_usage_parameter.accept_transient_attachment
   - api.GPUSupportedFeatures.feature_primitive-index
   - api.GPUSupportedFeatures.feature_subgroups.subgroup_id_num_subgroups
   - api.GPUSupportedFeatures.feature_texture-component-swizzle
   - api.GPUSupportedFeatures.feature_texture-formats-tier2
   - api.GPUTexture.createView.descriptor_swizzle_parameter
+  - api.GPUTexture.createView.descriptor_usage_parameter.transient_attachment
+  - api.GPUTexture.usage.transient_attachment

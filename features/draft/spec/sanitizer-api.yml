@@ -1,10 +1,12 @@
-draft_date: 2025-07-30
+draft_date: 2026-05-08
 name: HTML Sanitizer API
 description: TODO
 spec: https://wicg.github.io/sanitizer-api/
 compat_features:
   - api.Document.parseHTMLUnsafe_static.options_sanitizer_parameter
   - api.Element.setHTMLUnsafe.options_sanitizer_parameter
+  - api.Sanitizer.allowProcessingInstruction
+  - api.Sanitizer.removeProcessingInstruction
   - api.ShadowRoot.setHTMLUnsafe.options_sanitizer_parameter
 
 # The following features in the spec are already part of web-features:

@@ -1,4 +1,4 @@
-draft_date: 2026-04-28
+draft_date: 2026-05-08
 name: CSS Conditional Rules Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-conditional-5/
@@ -12,6 +12,7 @@ compat_features:
   - css.properties.container.normal
   - css.properties.container.scroll-state
   - css.properties.container.size
+  - css.types.if.style
 
 # The following features in the spec are already part of web-features:
 # - CSS.supports():
@@ -34,6 +35,7 @@ compat_features:
 #   - css.properties.container-type.inline-size
 #   - css.properties.container-type.normal
 #   - css.properties.container-type.size
+#   - css.types.length.container_query_length_units
 # - @supports:
 #   - api.CSSSupportsRule
 #   - css.at-rules.supports
@@ -56,6 +58,3 @@ compat_features:
 #   - css.at-rules.media.media_features
 #   - css.at-rules.media.media_query_values
 #   - css.at-rules.media.nested-queries
-#   - css.at-rules.media.or_syntax
-# - Media query range syntax:
-#   - css.at-rules.media.range_syntax

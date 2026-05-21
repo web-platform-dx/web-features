@@ -169,13 +169,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "148"
+  #   chrome_android: "148"
+  #   edge: "148"
+  #   firefox: "129"
+  #   firefox_android: "129"
+  - api.PerformanceResourceTiming.contentType
+
+  # baseline: false
+  # support:
   #   chrome: "107"
   #   chrome_android: "107"
   #   edge: "107"
   - api.PerformanceResourceTiming.renderBlockingStatus
-
-  # baseline: false
-  # support:
-  #   firefox: "129"
-  #   firefox_android: "129"
-  - api.PerformanceResourceTiming.contentType

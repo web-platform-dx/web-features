@@ -263,16 +263,13 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "147"
-  #   chrome_android: "147"
-  #   edge: "147"
-  - api.CSSPseudoElement
-  - api.CSSPseudoElement.element
-  - api.CSSPseudoElement.type
-
-  # baseline: false
-  # support:
   #   firefox: "129"
   #   firefox_android: "129"
   - api.CSSPageDescriptors.page-orientation
   - api.CSSPageDescriptors.pageOrientation
+
+  # baseline: false
+  # support: {}
+  - api.CSSPseudoElement
+  - api.CSSPseudoElement.element
+  - api.CSSPseudoElement.type

@@ -46,13 +46,24 @@ compat_features:
   #   safari_ios: "18.4"
   - css.properties.container-type.weak_containment
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-05-07
   # support:
+  #   chrome: "148"
+  #   chrome_android: "148"
+  #   edge: "148"
   #   firefox: "149"
   #   firefox_android: "149"
   #   safari: "26.4"
   #   safari_ios: "26.4"
   - css.at-rules.container.container-query_optional
+
+  # baseline: false
+  # support:
+  #   chrome: "137"
+  #   chrome_android: "137"
+  #   edge: "137"
+  - css.types.if.style
 
   # baseline: false
   # support:

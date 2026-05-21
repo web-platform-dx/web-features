@@ -46,10 +46,17 @@ function* yamlEntries(root: string): Generator<[id: string, data: any, authored:
         // The feature identifier/key is the filename without extension.
         const { name: key } = path.parse(fp);
         const pathParts = fp.split(path.sep);
+        const isDraft = pathParts.includes('draft');
+        const isSpec = isDraft && pathParts.includes('spec');
+        const isProposed = isDraft && pathParts.includes('proposed');
+
+        if (isProposed) {
+            continue;
+        }
 
         // Assert ID uniqueness
         for (const [pool, map] of Object.entries(uniqueIdMaps)) {
-            if (!pathParts.includes("spec") && pathParts.includes(pool)) {
+            if (!isSpec && pathParts.includes(pool)) {
                 const otherFile: string | undefined = map.get(key);
                 if (otherFile) {
                     throw new Error(`ID collision between ${fp} and ${otherFile}`);
@@ -76,7 +83,7 @@ function* yamlEntries(root: string): Generator<[id: string, data: any, authored:
             Object.assign(data, dist);
         }
 
-        if (pathParts.includes('draft')) {
+        if (isDraft) {
             data[draft] = true;
         }
 

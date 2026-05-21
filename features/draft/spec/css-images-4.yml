@@ -1,4 +1,4 @@
-draft_date: 2025-12-11
+draft_date: 2026-05-08
 name: CSS Images Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-images-4/
@@ -18,7 +18,6 @@ compat_features:
 #   - css.types.gradient.linear-gradient.premultiplied_gradients
 #   - css.types.gradient.linear-gradient.single_color_stop
 #   - css.types.gradient.linear-gradient.to
-#   - css.types.gradient.linear-gradient.unitless_0_angle
 #   - css.types.gradient.radial-gradient
 #   - css.types.gradient.radial-gradient.at
 #   - css.types.gradient.radial-gradient.doubleposition
@@ -30,7 +29,6 @@ compat_features:
 #   - css.types.gradient.repeating-linear-gradient.interpolation_hints
 #   - css.types.gradient.repeating-linear-gradient.single_color_stop
 #   - css.types.gradient.repeating-linear-gradient.to
-#   - css.types.gradient.repeating-linear-gradient.unitless_0_angle
 #   - css.types.gradient.repeating-radial-gradient
 #   - css.types.gradient.repeating-radial-gradient.at
 #   - css.types.gradient.repeating-radial-gradient.doubleposition
@@ -41,6 +39,8 @@ compat_features:
 #   - css.properties.background-image.image-set
 #   - css.properties.content.image-set
 #   - css.types.image.image-set
+# - Border images:
+#   - css.properties.border-image.gradient
 # - Content:
 #   - css.properties.content.gradient
 # - image-orientation:
@@ -70,18 +70,18 @@ compat_features:
 # - shape-outside:
 #   - css.properties.shape-outside.gradient
 #   - css.properties.shape-outside.image
+# - Transitions (CSS):
+#   - css.properties.transition.gradients_can_animate
 # - attr():
 #   - css.types.attr.type_function.image
+# - calc():
+#   - css.types.calc.gradient_color_stops
 # - Conic gradients:
 #   - css.types.gradient.conic-gradient
 #   - css.types.gradient.conic-gradient.doubleposition
 #   - css.types.gradient.conic-gradient.single_color_stop
 #   - css.types.gradient.repeating-conic-gradient
 # - Gradient interpolation:
-#   - css.types.gradient.conic-gradient.hue_interpolation_method
-#   - css.types.gradient.conic-gradient.interpolation_color_space
-#   - css.types.gradient.linear-gradient.hue_interpolation_method
-#   - css.types.gradient.linear-gradient.interpolation_color_space
 #   - css.types.gradient.radial-gradient.hue_interpolation_method
 #   - css.types.gradient.radial-gradient.interpolation_color_space
 #   - css.types.gradient.repeating-conic-gradient.hue_interpolation_method

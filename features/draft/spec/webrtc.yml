@@ -1,4 +1,4 @@
-draft_date: 2026-02-16
+draft_date: 2026-05-08
 name: "WebRTC: Real-Time Communication in Browsers"
 description: TODO
 spec: https://w3c.github.io/webrtc-pc/
@@ -20,8 +20,6 @@ compat_features:
 #   - api.RTCDTMFToneChangeEvent.tone
 #   - api.RTCDataChannel
 #   - api.RTCDataChannel.binaryType
-#   - api.RTCDataChannel.binaryType.arraybuffer_value
-#   - api.RTCDataChannel.binaryType.blob_value
 #   - api.RTCDataChannel.bufferedAmount
 #   - api.RTCDataChannel.bufferedAmountLowThreshold
 #   - api.RTCDataChannel.bufferedamountlow_event
@@ -39,7 +37,6 @@ compat_features:
 #   - api.RTCDataChannel.ordered
 #   - api.RTCDataChannel.protocol
 #   - api.RTCDataChannel.readyState
-#   - api.RTCDataChannel.sctp_sdp_21
 #   - api.RTCDataChannel.send
 #   - api.RTCDataChannelEvent
 #   - api.RTCDataChannelEvent.RTCDataChannelEvent
@@ -101,7 +98,6 @@ compat_features:
 #   - api.RTCPeerConnection.RTCPeerConnection.configuration_iceServers_parameter.urls_parameter
 #   - api.RTCPeerConnection.RTCPeerConnection.configuration_iceServers_parameter.username_parameter
 #   - api.RTCPeerConnection.RTCPeerConnection.configuration_iceTransportPolicy_parameter
-#   - api.RTCPeerConnection.RTCPeerConnection.configuration_peerIdentity_parameter
 #   - api.RTCPeerConnection.RTCPeerConnection.configuration_rtcpMuxPolicy_parameter
 #   - api.RTCPeerConnection.addIceCandidate
 #   - api.RTCPeerConnection.addIceCandidate.returns_promise
@@ -164,7 +160,6 @@ compat_features:
 #   - api.RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent
 #   - api.RTCPeerConnectionIceEvent.candidate
 #   - api.RTCRtpReceiver
-#   - api.RTCRtpReceiver.createEncodedStreams
 #   - api.RTCRtpReceiver.getCapabilities_static
 #   - api.RTCRtpReceiver.getContributingSources
 #   - api.RTCRtpReceiver.getContributingSources.audioLevel
@@ -184,7 +179,6 @@ compat_features:
 #   - api.RTCRtpReceiver.track
 #   - api.RTCRtpReceiver.transport
 #   - api.RTCRtpSender
-#   - api.RTCRtpSender.createEncodedStreams
 #   - api.RTCRtpSender.dtmf
 #   - api.RTCRtpSender.getCapabilities_static
 #   - api.RTCRtpSender.getParameters

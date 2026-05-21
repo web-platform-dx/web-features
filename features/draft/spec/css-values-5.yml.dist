@@ -40,13 +40,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "137"
-  #   chrome_android: "137"
-  #   edge: "137"
-  - css.types.if.style
-
-  # baseline: false
-  # support:
   #   safari: "26"
   #   safari_ios: "26"
   - css.properties.background-position-x.x-end
@@ -102,3 +95,4 @@ compat_features:
   # baseline: false
   # support: {}
   - css.types.attr.attr-name_accepts_namespaces
+  - css.types.url.integrity

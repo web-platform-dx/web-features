@@ -1,4 +1,4 @@
-draft_date: 2026-03-16
+draft_date: 2026-05-08
 name: CSS Animations Level 2
 description: TODO
 spec: https://drafts.csswg.org/css-animations-2/
@@ -64,14 +64,15 @@ compat_features:
 #   - css.properties.animation-play-state.paused
 #   - css.properties.animation-play-state.running
 #   - css.properties.animation-timing-function
-#   - css.properties.animation-timing-function.jump
 # - Web animations:
 #   - api.Element.animationcancel_event
 #   - api.Element.animationend_event
 #   - api.Element.animationiteration_event
 #   - api.Element.animationstart_event
-# - Scroll-driven animations:
-#   - css.properties.animation.animation-timeline_included
-#   - css.properties.animation-timeline
 # - animation-composition:
 #   - css.properties.animation-composition
+# - Scroll-driven animations:
+#   - css.properties.animation-timeline
+# - Grid animation:
+#   - css.properties.grid-template-columns.animation
+#   - css.properties.grid-template-rows.animation
