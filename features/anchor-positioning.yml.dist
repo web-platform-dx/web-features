@@ -505,9 +505,10 @@ compat_features:
   #   edge: "144"
   - css.properties.anchor-name.position_after_layout
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "151"
+  #   firefox_android: "151"
   - css.properties.position-anchor
   - css.properties.position-anchor.auto
   - css.properties.position-anchor.none

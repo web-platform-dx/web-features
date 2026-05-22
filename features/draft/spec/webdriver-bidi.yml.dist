@@ -849,13 +849,19 @@ compat_features:
   #   firefox_android: "147"
   - webdriver.bidi.emulation.setScreenSettingsOverride
 
+  # baseline: false
+  # support:
+  #   firefox: "151"
+  #   firefox_android: "151"
+  - webdriver.bidi.browser.setClientWindowState
+  - webdriver.bidi.browser.setClientWindowState.clientWindow_parameter
+  - webdriver.bidi.browser.setClientWindowState.state_parameter
+  - webdriver.bidi.script.getRealms.type_parameter.worker
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - webdriver.bidi.browser.setClientWindowState
-  - webdriver.bidi.browser.setClientWindowState.clientWindow_parameter
   - webdriver.bidi.browser.setClientWindowState.height_parameter
-  - webdriver.bidi.browser.setClientWindowState.state_parameter
   - webdriver.bidi.browser.setClientWindowState.width_parameter
   - webdriver.bidi.browser.setClientWindowState.x_parameter
   - webdriver.bidi.browser.setClientWindowState.y_parameter
@@ -890,4 +896,3 @@ compat_features:
   - webdriver.bidi.network.responseStarted_event.request_parameter
   - webdriver.bidi.network.responseStarted_event.response_parameter
   - webdriver.bidi.network.responseStarted_event.timestamp_parameter
-  - webdriver.bidi.script.getRealms.type_parameter.worker

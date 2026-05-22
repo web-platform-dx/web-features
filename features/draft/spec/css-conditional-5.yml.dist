@@ -72,7 +72,8 @@ compat_features:
   #   edge: "144"
   - css.at-rules.container.scroll-state_queries.scrolled
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "151"
+  #   firefox_android: "151"
   - api.CSSContainerRule.conditions
