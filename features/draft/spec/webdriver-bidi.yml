@@ -1,9 +1,8 @@
-draft_date: 2026-04-28
+draft_date: 2026-05-22
 name: WebDriver BiDi
 description: TODO
 spec: https://w3c.github.io/webdriver-bidi/
 compat_features:
-  - webdriver.bidi.bluetooth
   - webdriver.bidi.browser
   - webdriver.bidi.browser.close
   - webdriver.bidi.browser.createUserContext
@@ -384,7 +383,6 @@ compat_features:
   - webdriver.bidi.storage.setCookie
   - webdriver.bidi.storage.setCookie.cookie_parameter
   - webdriver.bidi.storage.setCookie.partition_parameter
-  - webdriver.bidi.userAgentClientHints
   - webdriver.bidi.webExtension
   - webdriver.bidi.webExtension.install
   - webdriver.bidi.webExtension.install.extensionData_parameter

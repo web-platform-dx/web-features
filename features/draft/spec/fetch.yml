@@ -1,10 +1,9 @@
-draft_date: 2026-05-08
+draft_date: 2026-05-22
 name: Fetch
 description: TODO
 spec: https://fetch.spec.whatwg.org/
 compat_features:
   - api.Request.Request.options_parameter.duplex
-  - api.fetch.options_parameter.body.accepts_readablestream
   - api.fetch.options_parameter.duplex
   - http.headers.Content-Length.cors_response_safelist
   - http.headers.Cross-Origin-Resource-Policy
@@ -39,7 +38,6 @@ compat_features:
 #   - api.Request.Request.cross_origin_stripped
 #   - api.Request.Request.options_parameter
 #   - api.Request.Request.options_parameter.body
-#   - api.Request.Request.options_parameter.body.accepts_readablestream
 #   - api.Request.Request.options_parameter.keepalive
 #   - api.Request.Request.options_parameter.referrer
 #   - api.Request.Request.response_body_readablestream
@@ -99,11 +97,13 @@ compat_features:
 # - Custom highlights:
 #   - api.Highlight.delete
 #   - api.Highlight.has
+# - Fetch upload streams:
+#   - api.Request.Request.options_parameter.body.accepts_readablestream
+#   - api.Request.body
+#   - api.fetch.options_parameter.body.accepts_readablestream
 # - Fetch priority:
 #   - api.Request.Request.options_parameter.priority
 #   - api.fetch.options_parameter.priority
-# - Fetch upload streams:
-#   - api.Request.body
 # - Fetch form data:
 #   - api.Request.formData
 #   - api.Response.formData

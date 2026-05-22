@@ -1,9 +1,8 @@
-draft_date: 2026-05-18
+draft_date: 2026-05-22
 name: UI Events
 description: TODO
 spec: https://w3c.github.io/uievents/
 compat_features:
-  - api.HTMLElement.error_event
   - api.UIEvent
   - api.UIEvent.UIEvent
   - api.UIEvent.detail
@@ -51,6 +50,7 @@ compat_features:
 #   - api.KeyboardEvent.repeat
 #   - api.KeyboardEvent.shiftKey
 # - DOM:
+#   - api.HTMLElement.error_event
 #   - api.HTMLElement.load_event
 # - Window:
 #   - api.Window.blur_event
