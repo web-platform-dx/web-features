@@ -701,7 +701,6 @@ compat_features:
   #   chrome: "140"
   #   chrome_android: "140"
   #   edge: "140"
-  - webdriver.bidi.bluetooth
   - webdriver.bidi.browser.createUserContext.unhandledPromptBehavior_parameter
   - webdriver.bidi.emulation.setScreenOrientationOverride.contexts_parameter
   - webdriver.bidi.emulation.setScreenOrientationOverride.screenOrientation_parameter
@@ -717,13 +716,6 @@ compat_features:
   - webdriver.bidi.emulation.setScriptingEnabled.contexts_parameter
   - webdriver.bidi.emulation.setScriptingEnabled.enabled_parameter
   - webdriver.bidi.emulation.setScriptingEnabled.userContexts_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "147"
-  #   chrome_android: "147"
-  #   edge: "147"
-  - webdriver.bidi.userAgentClientHints
 
   # baseline: false
   # support:
