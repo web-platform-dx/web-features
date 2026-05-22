@@ -7,12 +7,6 @@ discouraged:
   according_to:
     - https://groups.google.com/a/chromium.org/g/blink-dev/c/k_nubsMb97g/m/aAp_5MTXBQAJ
     - https://chromestatus.com/feature/6552486106234880
-# TODO: remove this override when https://github.com/mdn/browser-compat-data/pull/29723 merges and appears in a BCD release
-status:
-  baseline: false
-  support:
-    chrome: "134"
-    chrome_android: "134"
 compat_features:
   - api.HTMLIFrameElement.adAuctionHeaders
   - api.Navigator.canLoadAdAuctionFencedFrame
