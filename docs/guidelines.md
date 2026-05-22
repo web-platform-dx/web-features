@@ -436,16 +436,17 @@ There are three ways to override a status, in order of preference:
   The keys in `modifier` are validated to have the same status _level_ as the `core` keys (for example, if the `core` set of keys is newly available, then the keys in `modifier` must be too), but not necessarily the same Baseline dates or initial browser releases.
   The keys in `spare` relate to the feature but do not affect the feature's status.
 
-  For example, this override sets the status on the basis of key `html.elements.input.type_range`, validates that key `html.elements.input.type_range.tick_marks` is at the same level as `core`, and ignores `html.elements.input.type_range.vertical_orientation` for the purpose of calculating a status.
+  For example, this override sets the status on the basis of key `a` and `b`, validates that key `c` is at the same level as `core`, and ignores `x` for the purpose of calculating a status.
 
   ```yaml
   compat_features:
     core:
-      - html.elements.input.type_range # former compute_from
+      - a
+      - b
     modifier:
-      - html.elements.input.type_range.tick_marks
+      - c
     spare:
-      - html.elements.input.type_range.vertical_orientation
+      - x
   ```
 
 - Author a literal `status` override in the feature's authored YAML file.
