@@ -76,6 +76,10 @@
   "required": ["browsers", "features", "groups", "snapshots"],
   "additionalProperties": false,
   "definitions": {
+    "BaselineValue": {
+      "description": "Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false)",
+      "enum": ["high", "low", false]
+    },
     "Discouraged": {
       "type": "object",
       "description": "Whether developers are formally discouraged from using this feature",
@@ -148,6 +152,53 @@
         "group": {
           "description": "Group identifiers",
           "$ref": "#/definitions/Strings"
+        },
+        "notes": {
+          "description": "Notes about this feature",
+          "items": {
+            "additionalProperties": false,
+            "description": "A note describing a Baseline status regression. For example, a feature that has moved from Baseline low to not Baseline.",
+            "properties": {
+              "category": {
+                "const": "baseline-regression",
+                "description": "The topic of this note. This field is also a discriminator for any future note types.",
+                "type": "string"
+              },
+              "citations": {
+                "description": "One or more URLs, such as bugs, used to justify the regression",
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "date": {
+                "description": "The date that the regression was added to web-features data",
+                "type": "string"
+              },
+              "message": {
+                "description": "A short description of the cause of the regression as a plain text",
+                "type": "string"
+              },
+              "message_html": {
+                "description": "A short description of the cause of the regression as HTML",
+                "type": "string"
+              },
+              "previous_baseline_value": {
+                "description": "The `baseline` status value before the regression",
+                "$ref": "#/definitions/BaselineValue"
+              }
+            },
+            "required": [
+              "category",
+              "date",
+              "message",
+              "message_html",
+              "citations",
+              "previous_baseline_value"
+            ],
+            "type": "object"
+          },
+          "type": "array"
         },
         "snapshot": {
           "description": "Snapshot identifiers",
@@ -260,8 +311,8 @@
       "type": "object",
       "properties": {
         "baseline": {
-          "description": "Whether the feature is Baseline (low substatus), Baseline (high substatus), or not (false)",
-          "enum": ["high", "low", false]
+          "description": "Whether the feature is not Baseline, Baseline newly available, or Baseline widely available",
+          "$ref": "#/definitions/BaselineValue"
         },
         "baseline_high_date": {
           "description": "Date the feature achieved Baseline high status",
