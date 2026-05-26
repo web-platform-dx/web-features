@@ -55,35 +55,51 @@ export function stats(previous: Partial<Result>): Result {
     }),
   );
 
-  let compatKeys = 0;
-  let unmappedCompatKeys = 0;
-  let unmappedCompatKeysNormal = 0;
-  let unmappedCompatKeysDiscourageable = 0;
+  const inScopeCompatKeys = new Set<string>();
+  const deprecatedCompatKeys = new Set<string>();
+  const nonstandardCompatKeys = new Set<string>();
   for (const f of new Compat().walk()) {
     if (!f.id.startsWith("webextensions.")) {
-      compatKeys += 1;
-      unmappedCompatKeys += mappedCompatKeys.has(f.id) ? 0 : 1;
-      if (f.deprecated || !f.standard_track) {
-        unmappedCompatKeysNormal += 1;
-      } else {
-        unmappedCompatKeysDiscourageable += 1;
+      inScopeCompatKeys.add(f.id);
+      if (f.deprecated) {
+        deprecatedCompatKeys.add(f.id);
+      }
+      if (!f.standard_track) {
+        nonstandardCompatKeys.add(f.id);
       }
     }
   }
 
+  const discourageableCompatKeys = deprecatedCompatKeys.union(
+    nonstandardCompatKeys,
+  );
+  const normalCompatKeys = inScopeCompatKeys.difference(
+    discourageableCompatKeys,
+  );
+  const mappableKeys = inScopeCompatKeys.difference(mappedCompatKeys);
+
+  let compatKeys = inScopeCompatKeys.size;
+  let unmappedCompatKeys = mappableKeys.size;
+  let unmappedCompatKeysNormal = mappableKeys.difference(
+    discourageableCompatKeys,
+  ).size;
+  let unmappedCompatKeysDiscourageable =
+    mappableKeys.difference(normalCompatKeys).size;
+
   const featuresToDays = compatFeaturesToCumulativeDaysShipped();
-  const unmappedCompatKeysCumulativeShippingDaysDiscourageable = [
-    ...featuresToDays.values(),
-  ].reduce((prev, curr) => prev + curr, 0);
-  const unmappedCompatKeysCumulativeShippingDaysNormal = (() => {
-    let sum = 0;
-    for (const [feature, days] of featuresToDays.entries()) {
-      if (!feature.deprecated && feature.standard_track) {
-        sum += days;
-      }
-    }
-    return sum;
-  })();
+  const unmappedCompatKeysCumulativeShippingDaysDiscourageable = Array.from(
+    featuresToDays.entries(),
+  )
+    .filter(([f, days]) => discourageableCompatKeys.has(f.id))
+    .map(([f, days]) => days)
+    .reduce((prev, curr) => prev + curr, 0);
+  const unmappedCompatKeysCumulativeShippingDaysNormal = Array.from(
+    featuresToDays.entries(),
+  )
+    .filter(([f, days]) => normalCompatKeys.has(f.id))
+    .map(([f, days]) => days)
+    .reduce((prev, curr) => prev + curr, 0);
+
   const unmappedCompatKeysCumulativeShippingDays =
     unmappedCompatKeysCumulativeShippingDaysDiscourageable +
     unmappedCompatKeysCumulativeShippingDaysNormal;
