@@ -9,8 +9,9 @@ import { GroupData, SnapshotData, WebFeaturesData } from './types';
 
 import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, getStatus, parseRangedDateString } from 'compute-baseline';
 import { Compat } from 'compute-baseline/browser-compat-data';
-import { assertRequiredRemovalDateSet, assertValidFeatureReference } from './assertions';
+import { assertCompatSetConsistency, assertRequiredRemovalDateSet, assertValidFeatureReference } from './assertions';
 import { isMoved, isOrdinaryFeatureData, isSplit } from './type-guards';
+import { parseAuthoring, ParsedAuthoredData } from './parse';
 
 // The longest name allowed, to allow for compact display.
 const nameMaxLength = 80;
@@ -34,7 +35,7 @@ const uniqueIdMaps = {
     snapshots: new Map<string, string>(),
 }
 
-function* yamlEntries(root: string): Generator<[string, any]> {
+function* yamlEntries(root: string): Generator<[id: string, data: any, authored: ParsedAuthoredData]> {
     const filePaths = new fdir()
         .withBasePath()
         .filter((fp) => fp.endsWith('.yml'))
@@ -68,7 +69,14 @@ function* yamlEntries(root: string): Generator<[string, any]> {
             throw new Error(`${key} is not a valid identifier (see guidelines)`);
         }
 
-        const data = YAML.parse(fs.readFileSync(fp, { encoding: 'utf-8'}));
+        const data = YAML.parse(fs.readFileSync(fp, { encoding: 'utf-8' }));
+
+        // FIXME: This is a bit duplicative of other work in this file.
+        // To avoid a major refactor, the deduplication is not happening
+        // in this PR. I'll remove this comment before merging, but I'm
+        // making a note of it now before I forget.
+        const authored = parseAuthoring(key, data);
+
         const distPath = `${fp}.dist`;
         if (fs.existsSync(distPath)) {
             const dist = YAML.parse(fs.readFileSync(distPath, { encoding: 'utf-8'}));
@@ -79,7 +87,7 @@ function* yamlEntries(root: string): Generator<[string, any]> {
             data[draft] = true;
         }
 
-        yield [key, data];
+        yield [key, data, authored];
     }
 }
 
@@ -130,7 +138,7 @@ function* identifiers(value: undefined | string | string[]) {
 const bcdToFeatureId: Map<string, string> = new Map();
 
 const features: WebFeaturesData["features"] = {};
-for (const [key, data] of yamlEntries('features')) {
+for (const [key, data, authored] of yamlEntries('features')) {
     // Draft features reserve an identifier but aren't complete yet. Skip them.
     if (data[draft]) {
         if (!data.draft_date) {
@@ -237,10 +245,11 @@ for (const [key, data] of yamlEntries('features')) {
             for (const bcdKey of data.compat_features) {
                 data.status.by_compat_key[bcdKey] = getStatus(key, bcdKey);
             }
+            assertCompatSetConsistency(key, data.status, authored);
         }
     }
 
-   assertRequiredRemovalDateSet(key, data);
+    assertRequiredRemovalDateSet(key, data);
 
     features[key] = data;
 }
@@ -282,4 +291,3 @@ for (const browser of coreBrowserSet.map(identifier => compat.browser(identifier
 }
 
 export { browsers, features, groups, snapshots };
-

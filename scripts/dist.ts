@@ -15,6 +15,7 @@ import winston from "winston";
 import YAML, { Document, Scalar, YAMLSeq } from "yaml";
 import yargs from "yargs";
 import { checkForStaleCompat, tagsToFeatures } from "../compat-helpers";
+import { parseAuthoring } from "../parse";
 import type { FeatureData, FeatureMovedData, FeatureSplitData } from "../types";
 
 const argv = yargs(process.argv.slice(2))
@@ -197,6 +198,8 @@ function toDist(sourcePath: string): YAML.Document {
   }
   source as Partial<FeatureData>;
 
+  const parsed = parseAuthoring(id, source);
+
   // Collect tagged compat features. A `compat_features` list in the source
   // takes precedence, but can be removed if it matches the tagged features.
   const taggedCompatFeatures = (tagsToFeatures.get(`web-features:${id}`) ?? [])
@@ -204,7 +207,6 @@ function toDist(sourcePath: string): YAML.Document {
     .sort();
 
   if (source.compat_features) {
-    source.compat_features.sort();
     if (isDeepStrictEqual(source.compat_features, taggedCompatFeatures)) {
       logger.silly(
         `${id}: compat_features override matches tags in @mdn/browser-compat-data. Consider deleting the compat_features override.`,
@@ -212,29 +214,33 @@ function toDist(sourcePath: string): YAML.Document {
     }
   }
 
-  const compatFeatures = source.compat_features ?? taggedCompatFeatures;
-  let computeFrom = compatFeatures;
-
   const computeFromWasExplicitlySet = source.status?.compute_from !== undefined;
   if (computeFromWasExplicitlySet) {
-    const compute_from = source.status.compute_from;
-    const keys = Array.isArray(compute_from) ? compute_from : [compute_from];
-    for (const key of keys) {
-      if (!compatFeatures.includes(key)) {
-        throw new Error(
-          `${id}: compute_from key ${key} is not among the feature's compat keys`,
-        );
-      }
-    }
-
-    computeFrom = keys;
     delete source.status;
+  }
+
+  const featureIsKeyless =
+    !computeFromWasExplicitlySet &&
+    parsed.compatFeatures.all.length === 0 &&
+    taggedCompatFeatures.length === 0;
+
+  // TODO: move this to a linter?
+  if (featureIsKeyless) {
+    logger.debug(`${id} is keyless`);
+  } else if (parsed.compatFeatures.core.length === 0) {
+    logger.warn(`${id} has no core keys`);
+    if (source.status && source.status.baseline !== undefined) {
+      logger.warn(`${id} has a status override`);
+    } else {
+      logger.error(`${id} has no core keys and no status override!`);
+      exitStatus = 1;
+    }
   }
 
   // Compute the status. A `status` block in the source takes precedence, but
   // can be removed if it matches the computed status.
   let computedStatus = computeBaseline({
-    compatKeys: computeFrom,
+    compatKeys: parsed.compatFeatures.core,
     checkAncestors: true,
   });
 
@@ -259,7 +265,7 @@ function toDist(sourcePath: string): YAML.Document {
 
   // Map between status object and BCD keys with that computed status.
   const groups = new Map<SupportStatus, string[]>();
-  for (const key of compatFeatures) {
+  for (const key of parsed.compatFeatures.all) {
     const status = getStatus(id, key);
     let added = false;
     for (const [existingKey, list] of groups.entries()) {
@@ -282,7 +288,7 @@ function toDist(sourcePath: string): YAML.Document {
       exitStatus = 1;
     }
 
-    for (const key of compatFeatures) {
+    for (const key of parsed.compatFeatures.all) {
       const f = feature(key);
       if (f.deprecated && !deprecatedKeysAllowed) {
         logger.error(
