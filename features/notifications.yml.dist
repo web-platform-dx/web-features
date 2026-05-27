@@ -163,15 +163,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "48"
-  #   chrome_android: "48"
-  #   edge: "17"
-  #   firefox: "44"
-  #   firefox_android: "44"
-  - api.NotificationEvent.action
-
-  # baseline: false
-  # support:
   #   chrome: "20"
   #   edge: "14"
   #   firefox: "26"
@@ -215,6 +206,13 @@ compat_features:
   #   chrome_android: "47"
   #   edge: "79"
   - api.ServiceWorkerRegistration.showNotification.options_requireInteraction_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "48"
+  #   chrome_android: "48"
+  #   edge: "17"
+  - api.NotificationEvent.action
 
   # baseline: false
   # support:

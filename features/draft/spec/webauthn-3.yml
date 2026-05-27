@@ -1,4 +1,4 @@
-draft_date: 2026-05-08
+draft_date: 2026-05-18
 name: "Web Authentication: An API for accessing Public Key Credentials - Level 3"
 description: TODO
 spec: https://w3c.github.io/webauthn/
@@ -53,6 +53,9 @@ compat_features:
 # - Web authentication easy public key access:
 #   - api.AuthenticatorAttestationResponse.getAuthenticatorData
 #   - api.AuthenticatorAttestationResponse.getPublicKey
+#   - api.AuthenticatorAttestationResponse.getPublicKey.algorithm_eddsa
+#   - api.AuthenticatorAttestationResponse.getPublicKey.algorithm_es256
+#   - api.AuthenticatorAttestationResponse.getPublicKey.algorithm_rs256
 #   - api.AuthenticatorAttestationResponse.getPublicKeyAlgorithm
 # - Web authentication signal methods:
 #   - api.PublicKeyCredential.signalAllAcceptedCredentials_static

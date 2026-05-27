@@ -2,10 +2,10 @@ import { Compat } from "compute-baseline/browser-compat-data";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import yargs from "yargs";
-import { features, groups } from "../index.js";
-import { isOrdinaryFeatureData } from "../type-guards.js";
-import { caniuseToWebFeaturesId } from "./caniuse.js";
-import { compatFeaturesToCumulativeDaysShipped } from "./unmapped-compat-keys.js";
+import { features, groups } from "../index.ts";
+import { isOrdinaryFeatureData } from "../type-guards.ts";
+import { caniuseToWebFeaturesId } from "./caniuse.ts";
+import { compatFeaturesToCumulativeDaysShipped } from "./unmapped-compat-keys.ts";
 
 interface Result {
   featureCount: number;

@@ -4,9 +4,9 @@ import { Compat, Feature } from "compute-baseline/browser-compat-data";
 import { fileURLToPath } from "node:url";
 import winston from "winston";
 import yargs from "yargs";
-import { features } from "../index.js";
+import { features } from "../index.ts";
 import { support } from "../packages/compute-baseline/dist/baseline/support.js";
-import { isOrdinaryFeatureData } from "../type-guards.js";
+import { isOrdinaryFeatureData } from "../type-guards.ts";
 
 const defaultLogLevel = "warn";
 const today = Temporal.Now.plainDateISO();
