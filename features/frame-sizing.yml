@@ -1,0 +1,13 @@
+name: Responsive iframes
+description: >
+  The `frame-sizing` CSS property sets the size of an `<iframe>` element to that of it contents, to avoid scrolling in the iframe.
+  Embedded documents allow this with the `<meta name="responsive-embedded-sizing">` element and request resizing in the embedding page by calling `window.requestResize()`.
+spec: https://drafts.csswg.org/css-sizing-4/#propdef-frame-sizing
+# Expected
+# compat_features:
+#   - css.properties.frame-sizing
+#   - css.properties.frame-sizing.auto
+#   - css.properties.frame-sizing.content-width
+#   - css.properties.frame-sizing.content-block-size
+#   - css.properties.frame-sizing.content-inline-size
+#   - api.Window.requestResize
