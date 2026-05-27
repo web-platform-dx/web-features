@@ -431,7 +431,7 @@ Rarely, two or more features have equal claim to a key and their sets of `compat
 You can add a single key to two or more `compat_features` lists when independent features share some interface and one of these situations applies:
 
 - No feature has any claim to being first and the shared interface does not represent a useful feature on its own.
-  This sometimes happens when two independent features share a common interface.
+  This sometimes happens when two features share a common interface.
   For example, the `HTMLMediaElement` interface is required for both the `<video>` and `<audio>` elements, but there's no application for the `HTMLMediaElement` alone.
 
 - The computed status would be misleading without the shared interface.
