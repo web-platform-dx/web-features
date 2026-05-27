@@ -2,9 +2,9 @@ import assert from "node:assert/strict";
 import {
   assertCompatSetConsistency,
   assertValidFeatureReference,
-} from "./assertions";
-import { ParsedAuthoredData } from "./parse";
-import { Status } from "./types";
+} from "./assertions.ts";
+import type { ParsedAuthoredData } from "./parse.ts";
+import type { Status } from "./types.ts";
 
 describe("assertValidReference()", function () {
   it("throws if target ID is a move", function () {

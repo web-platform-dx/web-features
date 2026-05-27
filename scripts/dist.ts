@@ -14,9 +14,13 @@ import { isDeepStrictEqual } from "node:util";
 import winston from "winston";
 import YAML, { Document, Scalar, YAMLSeq } from "yaml";
 import yargs from "yargs";
-import { checkForStaleCompat, tagsToFeatures } from "../compat-helpers";
-import { parseAuthoring } from "../parse";
-import type { FeatureData, FeatureMovedData, FeatureSplitData } from "../types";
+import { checkForStaleCompat, tagsToFeatures } from "../compat-helpers.ts";
+import { parseAuthoring } from "../parse.ts";
+import type {
+  FeatureData,
+  FeatureMovedData,
+  FeatureSplitData,
+} from "../types.ts";
 
 const argv = yargs(process.argv.slice(2))
   .scriptName("dist")

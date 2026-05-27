@@ -1,8 +1,8 @@
 import { Temporal } from "@js-temporal/polyfill";
-import { ParsedAuthoredData } from "./parse";
-import { isOrdinaryFeatureData } from "./type-guards";
-import { BaselineHighLow, FeatureData, Status } from "./types";
-import { WebFeaturesData } from "./types.quicktype";
+import type { ParsedAuthoredData } from "./parse.ts";
+import { isOrdinaryFeatureData } from "./type-guards.ts";
+import type { WebFeaturesData } from "./types.quicktype.ts";
+import type { BaselineHighLow, FeatureData, Status } from "./types.ts";
 
 /**
  * Assert that a reference from one feature to another is an ordinary feature
