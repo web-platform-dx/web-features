@@ -58,4 +58,25 @@ export function assertRequiredRemovalDateSet(
   );
 }
 
+// compat keys to overlapping feature ID list
+export type OverlapAllowlist = Map<string, string[]>;
+
+export function assertAllowedOverlap(
+  compatKey: string,
+  featureID: string,
+  compatKeysToIDs: Map<string, string[]>,
+  allowlist: OverlapAllowlist,
+) {
+  const featuresWithThisCompatKey = compatKeysToIDs.get(compatKey) ?? [];
+  if (featuresWithThisCompatKey.length === 1) {
+    return;
+  }
+  const overlappers = allowlist.get(compatKey) ?? [];
+  if (!overlappers.includes(featureID)) {
+    throw new Error(
+      `BCD key ${compatKey} overlaps with one or more other features (${featuresWithThisCompatKey.join(", ")}) but the feature is not allowlisted (${overlappers.join(", ")})`,
+    );
+  }
+}
+
 // TODO: assertValidSnapshotReference
