@@ -3,9 +3,9 @@ description: The `font-feature-settings` CSS property sets low-level OpenType fe
 spec: https://drafts.csswg.org/css-fonts-4/#font-feature-settings-prop
 group: font-features
 caniuse: font-feature
-status:
-  compute_from: css.properties.font-feature-settings
 compat_features:
-  - css.properties.font-feature-settings
-  - css.properties.font-feature-settings.normal
-  - css.at-rules.font-face.font-feature-settings
+  core:
+    - css.properties.font-feature-settings # former compute_from
+    - css.properties.font-feature-settings.normal
+  spare:
+    - css.at-rules.font-face.font-feature-settings

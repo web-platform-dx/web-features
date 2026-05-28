@@ -4,8 +4,16 @@ spec: https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-e
 group:
   - media-elements
   - html-elements
-status:
-  compute_from: html.elements.source
+compat_features:
+  core:
+    - html.elements.source # former compute_from
+    - html.elements.source.src
+    - html.elements.source.type
+  modifier:
+    - html.elements.source.height
+    - html.elements.source.media
+    - html.elements.source.width
+
 # Included in srcset (see #1448)
 #   - html.elements.source.sizes
 #   - html.elements.source.srcset

@@ -5,14 +5,14 @@ group:
   - forms
   - html-elements
 caniuse: progress
-status:
-  compute_from: html.elements.progress
 compat_features:
-  - api.HTMLProgressElement
-  - api.HTMLProgressElement.labels
-  - api.HTMLProgressElement.max
-  - api.HTMLProgressElement.position
-  - api.HTMLProgressElement.value
-  - html.elements.progress
-  - html.elements.progress.max
-  - html.elements.progress.value
+  core:
+    - api.HTMLProgressElement
+    - api.HTMLProgressElement.max
+    - api.HTMLProgressElement.position
+    - api.HTMLProgressElement.value
+    - html.elements.progress # former compute_from
+    - html.elements.progress.max
+    - html.elements.progress.value
+  modifier:
+    - api.HTMLProgressElement.labels

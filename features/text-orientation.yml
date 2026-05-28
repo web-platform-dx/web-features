@@ -3,10 +3,10 @@ description: The `text-orientation` CSS property sets the how text is typeset wi
 spec: https://drafts.csswg.org/css-writing-modes-4/#text-orientation
 caniuse: css-text-orientation
 group: text
-status:
-  compute_from: css.properties.text-orientation
 compat_features:
-  - css.properties.text-orientation
-  - css.properties.text-orientation.mixed
-  - css.properties.text-orientation.sideways
-  - css.properties.text-orientation.upright
+  core:
+    - css.properties.text-orientation # former compute_from
+    - css.properties.text-orientation.mixed
+    - css.properties.text-orientation.upright
+  modifier:
+    - css.properties.text-orientation.sideways

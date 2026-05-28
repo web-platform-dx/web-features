@@ -6,5 +6,18 @@ spec:
 group:
   - resource-hints
   - fetch
-status:
-  compute_from: http.headers.Link.fetchpriority
+compat_features:
+  core:
+    - api.HTMLImageElement.fetchPriority
+    - api.HTMLLinkElement.fetchPriority
+    - api.HTMLScriptElement.fetchPriority
+    - api.Request.Request.options_parameter.priority
+    - api.fetch.options_parameter.priority
+    - html.elements.img.fetchpriority
+    - html.elements.link.fetchpriority
+    - html.elements.script.fetchpriority
+    - http.headers.Link.fetchpriority # former compute_from
+  spare:
+    - svg.elements.feImage.fetchpriority
+    - svg.elements.image.fetchpriority
+    - svg.elements.script.fetchpriority

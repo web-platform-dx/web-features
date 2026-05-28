@@ -4,13 +4,14 @@ spec: https://html.spec.whatwg.org/multipage/input.html#date-state-(type=date)
 group:
   - forms
   - html-elements
-status:
-  compute_from: html.elements.input.type_date
 caniuse: input-datetime
 compat_features:
-  - api.HTMLInputElement.valueAsDate
-  - html.elements.input.type_date
-  - html.elements.input.type_datetime-local
-  - html.elements.input.type_month
-  - html.elements.input.type_time
-  - html.elements.input.type_week
+  core:
+    - api.HTMLInputElement.valueAsDate
+    - html.elements.input.type_date # former compute_from
+    - html.elements.input.type_time
+  modifier:
+    - html.elements.input.type_datetime-local
+  spare:
+    - html.elements.input.type_month
+    - html.elements.input.type_week

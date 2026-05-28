@@ -3,10 +3,11 @@ description: The `conic-gradient()` and `repeating-conic-gradient()` CSS functio
 spec: https://drafts.csswg.org/css-images-4/#conic-gradients
 group: gradients
 caniuse: css-conic-gradients
-status:
-  compute_from: css.types.gradient.conic-gradient
 compat_features:
-  - css.types.gradient.conic-gradient
-  - css.types.gradient.conic-gradient.doubleposition
-  - css.types.gradient.conic-gradient.single_color_stop
-  - css.types.gradient.repeating-conic-gradient
+  core:
+    - css.types.gradient.conic-gradient # former compute_from
+    - css.types.gradient.repeating-conic-gradient
+  modifier:
+    - css.types.gradient.conic-gradient.doubleposition
+  spare:
+    - css.types.gradient.conic-gradient.single_color_stop

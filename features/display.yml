@@ -3,12 +3,12 @@ description: The `display` CSS property sets the display behavior of an element'
 spec: https://drafts.csswg.org/css-display-3/#the-display-properties
 group: css
 caniuse: inline-block
-status:
-  compute_from: css.properties.display
 compat_features:
-  - css.properties.display
-  - css.properties.display.none
-  - css.properties.display.none.option_is_hidden
-  - css.properties.display.block
-  - css.properties.display.inline
-  - css.properties.display.inline-block
+  core:
+    - css.properties.display # former compute_from
+    - css.properties.display.block
+    - css.properties.display.inline
+    - css.properties.display.inline-block
+    - css.properties.display.none
+  spare:
+    - css.properties.display.none.option_is_hidden

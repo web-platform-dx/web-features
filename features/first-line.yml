@@ -3,8 +3,8 @@ description: The `::first-line` CSS pseudo-element selects the first line of tex
 spec: https://drafts.csswg.org/css-pseudo-4/#first-line-pseudo
 group: selectors
 caniuse: css-first-line
-status:
-  compute_from: css.selectors.first-line
 compat_features:
-  - css.selectors.first-line
-  - css.selectors.first-line.svg_text_element
+  core:
+    - css.selectors.first-line # former compute_from
+  spare:
+    - css.selectors.first-line.svg_text_element

@@ -2,17 +2,15 @@ name: Reporting API
 description: The `Reporting-Endpoints` HTTP header and `ReportingObserver()` API send selected reports, such as Content Security Policy (CSP) violation reports or crash reports, to a nominated URL or callback function.
 spec: https://w3c.github.io/reporting/
 group: reporting
-status:
-  compute_from:
-    - api.ReportingObserver.ReportingObserver
-    - http.headers.Reporting-Endpoints
 compat_features:
-  - api.ReportingObserver
-  - api.ReportingObserver.ReportingObserver
-  - api.ReportingObserver.ReportingObserver.options_parameter
-  - api.ReportingObserver.ReportingObserver.options_parameter.types_property
-  - api.ReportingObserver.disconnect
-  - api.ReportingObserver.observe
-  - api.ReportingObserver.takeRecords
-  - api.ReportingObserver.worker_support
-  - http.headers.Reporting-Endpoints
+  core:
+    - api.ReportingObserver
+    - api.ReportingObserver.ReportingObserver # former compute_from
+    - api.ReportingObserver.ReportingObserver.options_parameter
+    - api.ReportingObserver.ReportingObserver.options_parameter.types_property
+    - api.ReportingObserver.disconnect
+    - api.ReportingObserver.observe
+    - api.ReportingObserver.takeRecords
+    - http.headers.Reporting-Endpoints # former compute_from
+  spare:
+    - api.ReportingObserver.worker_support

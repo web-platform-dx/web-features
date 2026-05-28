@@ -3,8 +3,8 @@ description: 'The `font-variation-settings` CSS property sets an "axis of variab
 spec: https://drafts.csswg.org/css-fonts-4/#font-variation-settings-def
 group: fonts
 caniuse: variable-fonts
-status:
-  compute_from: css.properties.font-variation-settings
 compat_features:
-  - css.properties.font-variation-settings
-  - css.at-rules.font-face.font-variation-settings
+  core:
+    - css.properties.font-variation-settings # former compute_from
+  spare:
+    - css.at-rules.font-face.font-variation-settings

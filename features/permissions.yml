@@ -5,15 +5,16 @@ spec:
   - https://wicg.github.io/permissions-request/#dom-permissions-request
 caniuse: permissions-api
 group: security
-status:
-  compute_from: api.PermissionStatus.state
 compat_features:
-  - api.Navigator.permissions
-  - api.PermissionStatus
-  - api.PermissionStatus.change_event
-  - api.PermissionStatus.name
-  - api.PermissionStatus.state
-  - api.Permissions
-  - api.Permissions.query
-  - api.Permissions.request
-  - api.WorkerNavigator.permissions
+  core:
+    - api.Navigator.permissions
+    - api.PermissionStatus
+    - api.PermissionStatus.state # former compute_from
+    - api.Permissions
+    - api.Permissions.query
+  modifier:
+    - api.PermissionStatus.name
+  spare:
+    - api.PermissionStatus.change_event
+    - api.Permissions.request
+    - api.WorkerNavigator.permissions

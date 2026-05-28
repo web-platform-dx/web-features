@@ -3,9 +3,9 @@ description: The `::first-letter` CSS pseudo-element selects the first letter in
 spec: https://drafts.csswg.org/css-pseudo-4/#first-letter-pseudo
 group: selectors
 caniuse: css-first-letter
-status:
-  compute_from: css.selectors.first-letter
 compat_features:
-  - css.selectors.first-letter
-  - css.selectors.first-letter.dutch_ij_digraph
-  - css.selectors.first-letter.svg_text_element
+  core:
+    - css.selectors.first-letter # former compute_from
+  spare:
+    - css.selectors.first-letter.dutch_ij_digraph
+    - css.selectors.first-letter.svg_text_element

@@ -3,17 +3,18 @@ description: The `EventSource` API creates a connection to a server and listens 
 spec: https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events
 caniuse: eventsource
 group: messaging
-status:
-  compute_from: api.EventSource
 compat_features:
-  - api.EventSource
-  - api.EventSource.EventSource
-  - api.EventSource.EventSource.options_withCredentials_parameter
-  - api.EventSource.close
-  - api.EventSource.error_event
-  - api.EventSource.message_event
-  - api.EventSource.open_event
-  - api.EventSource.readyState
-  - api.EventSource.url
-  - api.EventSource.withCredentials
-  - api.EventSource.worker_support
+  core:
+    - api.EventSource # former compute_from
+    - api.EventSource.EventSource
+    - api.EventSource.close
+    - api.EventSource.error_event
+    - api.EventSource.message_event
+    - api.EventSource.open_event
+    - api.EventSource.readyState
+  modifier:
+    - api.EventSource.EventSource.options_withCredentials_parameter
+    - api.EventSource.url
+    - api.EventSource.withCredentials
+  spare:
+    - api.EventSource.worker_support

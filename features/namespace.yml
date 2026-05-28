@@ -5,11 +5,11 @@ caniuse: css-namespaces
 group:
   - css
   - selectors
-status:
-  compute_from: css.at-rules.namespace
 compat_features:
-  - css.at-rules.namespace
-  - css.selectors.namespace
-  - api.CSSNamespaceRule
-  - api.CSSNamespaceRule.namespaceURI
-  - api.CSSNamespaceRule.prefix
+  core:
+    - css.at-rules.namespace # former compute_from
+  modifier:
+    - api.CSSNamespaceRule
+    - api.CSSNamespaceRule.namespaceURI
+    - api.CSSNamespaceRule.prefix
+    - css.selectors.namespace

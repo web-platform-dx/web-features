@@ -3,24 +3,24 @@ description: The `navigator.getGamepads()` API accesses and responds to signals 
 spec: https://w3c.github.io/gamepad/
 caniuse: gamepad
 group: gamepad
-status:
-  compute_from: api.Navigator.getGamepads
 compat_features:
-  - api.Gamepad
-  - api.Gamepad.axes
-  - api.Gamepad.buttons
-  - api.Gamepad.connected
-  - api.Gamepad.id
-  - api.Gamepad.index
-  - api.Gamepad.mapping
-  - api.Gamepad.timestamp
-  - api.GamepadButton
-  - api.GamepadButton.pressed
-  - api.GamepadButton.value
-  - api.Navigator.getGamepads
-  - api.GamepadEvent
-  - api.GamepadEvent.GamepadEvent
-  - api.GamepadEvent.gamepad
-  - api.Window.gamepadconnected_event
-  - api.Window.gamepaddisconnected_event
-  - html.elements.iframe.allow.gamepad
+  core:
+    - api.Gamepad
+    - api.Gamepad.axes
+    - api.Gamepad.buttons
+    - api.Gamepad.connected
+    - api.Gamepad.id
+    - api.Gamepad.index
+    - api.Gamepad.mapping
+    - api.Gamepad.timestamp
+    - api.GamepadButton
+    - api.GamepadButton.pressed
+    - api.GamepadButton.value
+    - api.GamepadEvent
+    - api.GamepadEvent.GamepadEvent
+    - api.GamepadEvent.gamepad
+    - api.Navigator.getGamepads # former compute_from
+  spare:
+    - api.Window.gamepadconnected_event
+    - api.Window.gamepaddisconnected_event
+    - html.elements.iframe.allow.gamepad

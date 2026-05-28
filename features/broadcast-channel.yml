@@ -3,5 +3,13 @@ description: The `BroadcastChannel` API allows you to send messages between same
 spec: https://html.spec.whatwg.org/multipage/web-messaging.html#broadcasting-to-other-browsing-contexts
 caniuse: broadcastchannel
 group: messaging
-status:
-  compute_from: api.BroadcastChannel.BroadcastChannel
+compat_features:
+  core:
+    - api.BroadcastChannel
+    - api.BroadcastChannel.BroadcastChannel # former compute_from
+    - api.BroadcastChannel.close
+    - api.BroadcastChannel.message_event
+    - api.BroadcastChannel.name
+    - api.BroadcastChannel.postMessage
+  modifier:
+    - api.BroadcastChannel.messageerror_event
