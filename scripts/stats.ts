@@ -90,14 +90,14 @@ export function stats(previous: Partial<Result>): Result {
   const unmappedCompatKeysCumulativeShippingDaysDiscourageable = Array.from(
     featuresToDays.entries(),
   )
-    .filter(([f, days]) => discourageableCompatKeys.has(f.id))
-    .map(([f, days]) => days)
+    .filter(([f]) => discourageableCompatKeys.has(f.id))
+    .map(([, days]) => days)
     .reduce((prev, curr) => prev + curr, 0);
   const unmappedCompatKeysCumulativeShippingDaysNormal = Array.from(
     featuresToDays.entries(),
   )
-    .filter(([f, days]) => normalCompatKeys.has(f.id))
-    .map(([f, days]) => days)
+    .filter(([f]) => normalCompatKeys.has(f.id))
+    .map(([, days]) => days)
     .reduce((prev, curr) => prev + curr, 0);
 
   const unmappedCompatKeysCumulativeShippingDays =
