@@ -1,9 +1,8 @@
-draft_date: 2026-05-08
+draft_date: 2026-05-22
 name: UI Events
 description: TODO
 spec: https://w3c.github.io/uievents/
 compat_features:
-  - api.HTMLElement.error_event
   - api.UIEvent
   - api.UIEvent.UIEvent
   - api.UIEvent.detail
@@ -17,22 +16,6 @@ compat_features:
 #   - api.Element.compositionend_event
 #   - api.Element.compositionstart_event
 #   - api.Element.compositionupdate_event
-# - Mouse events:
-#   - api.Element.auxclick_event
-#   - api.Element.click_event
-#   - api.Element.contextmenu_event
-#   - api.Element.dblclick_event
-#   - api.Element.mousedown_event
-#   - api.Element.mouseenter_event
-#   - api.Element.mouseleave_event
-#   - api.Element.mousemove_event
-#   - api.Element.mouseout_event
-#   - api.Element.mouseover_event
-#   - api.Element.mouseup_event
-# - Pointer Events:
-#   - api.Element.auxclick_event.type_pointerevent
-#   - api.Element.click_event.type_pointerevent
-#   - api.Element.contextmenu_event.type_pointerevent
 # - input (event):
 #   - api.Element.beforeinput_event
 #   - api.Element.input_event
@@ -66,9 +49,8 @@ compat_features:
 #   - api.KeyboardEvent.metaKey
 #   - api.KeyboardEvent.repeat
 #   - api.KeyboardEvent.shiftKey
-# - Wheel events:
-#   - api.Element.wheel_event
 # - DOM:
+#   - api.HTMLElement.error_event
 #   - api.HTMLElement.load_event
 # - Window:
 #   - api.Window.blur_event

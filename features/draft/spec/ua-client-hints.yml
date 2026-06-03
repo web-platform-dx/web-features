@@ -1,9 +1,10 @@
-draft_date: 2026-05-08
+draft_date: 2026-05-22
 name: User-Agent Client Hints
 description: TODO
 spec: https://wicg.github.io/ua-client-hints/
 compat_features:
   - http.headers.Permissions-Policy.ch-ua-high-entropy-values
+  - webdriver.bidi.userAgentClientHints
   - webdriver.bidi.userAgentClientHints.setClientHintsOverride
   - webdriver.bidi.userAgentClientHints.setClientHintsOverride.clientHints_parameter
   - webdriver.bidi.userAgentClientHints.setClientHintsOverride.contexts_parameter

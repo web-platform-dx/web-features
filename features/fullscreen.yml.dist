@@ -77,6 +77,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "71"
+  #   chrome_android: "71"
+  #   edge: "79"
+  #   firefox: "151"
+  #   firefox_android: "151"
+  #   safari: "16.4"
+  - api.Element.requestFullscreen.options_parameter
+
+  # baseline: false
+  # support:
   #   chrome: "62"
   #   chrome_android: "62"
   #   edge: "79"
@@ -90,7 +100,6 @@ compat_features:
   #   chrome_android: "71"
   #   edge: "79"
   #   safari: "16.4"
-  - api.Element.requestFullscreen.options_parameter
   - api.Element.requestFullscreen.options_parameter.navigationUI_option
 
   # baseline: false
