@@ -5,16 +5,16 @@ group:
   - forms
   - html-elements
 caniuse: input-number
-status:
-  compute_from: html.elements.input.type_number
 compat_features:
-  - api.HTMLInputElement.valueAsNumber
-  - api.HTMLInputElement.max
-  - api.HTMLInputElement.min
-  - api.HTMLInputElement.step
-  - api.HTMLInputElement.stepDown
-  - api.HTMLInputElement.stepUp
-  - html.elements.input.max
-  - html.elements.input.min
-  - html.elements.input.step
-  - html.elements.input.type_number
+  core:
+    - api.HTMLInputElement.max
+    - api.HTMLInputElement.min
+    - api.HTMLInputElement.step
+    - api.HTMLInputElement.valueAsNumber
+    - html.elements.input.max
+    - html.elements.input.min
+    - html.elements.input.step
+    - html.elements.input.type_number # former compute_from
+  spare:
+    - api.HTMLInputElement.stepDown
+    - api.HTMLInputElement.stepUp

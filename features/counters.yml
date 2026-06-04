@@ -3,17 +3,16 @@ description: The `counter-reset` and `counter-increment` CSS properties and the 
 spec: https://drafts.csswg.org/css-lists-3/#auto-numbering
 caniuse: css-counters
 group: counters
-status:
-  compute_from:
-    - css.properties.counter-increment
-    - css.properties.counter-reset
 compat_features:
-  - css.properties.counter-increment
-  - css.properties.counter-increment.list-item
-  - css.properties.counter-increment.none
-  - css.properties.counter-reset
-  - css.properties.counter-reset.list-item
-  - css.properties.counter-reset.none
-  - css.properties.counter-reset.reset_does_not_affect_siblings
-  - css.types.counters
-  - css.types.counter
+  core:
+    - css.properties.counter-increment # former compute_from
+    - css.properties.counter-reset # former compute_from
+    - css.types.counter
+  modifier:
+    - css.properties.counter-increment.list-item
+    - css.properties.counter-increment.none
+    - css.properties.counter-reset.none
+    - css.types.counters
+  spare:
+    - css.properties.counter-reset.list-item
+    - css.properties.counter-reset.reset_does_not_affect_siblings

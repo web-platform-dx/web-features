@@ -4,16 +4,17 @@ spec:
   - https://drafts.csswg.org/selectors-3/#nth-child-pseudo
   - https://drafts.csswg.org/selectors-3/#nth-last-child-pseudo
 group: selectors
-status:
-  compute_from: css.selectors.nth-child
 compat_features:
-  - css.selectors.first-child
-  - css.selectors.first-child.no_parent_required
-  - css.selectors.last-child
-  - css.selectors.last-child.no_parent_required
-  - css.selectors.nth-child
-  - css.selectors.nth-child.no_parent_required
-  - css.selectors.nth-last-child
-  - css.selectors.nth-last-child.no_parent_required
-  - css.selectors.only-child
-  - css.selectors.only-child.no_parent_required
+  core:
+    - css.selectors.last-child
+    - css.selectors.nth-child # former compute_from
+  modifier:
+    - css.selectors.first-child
+    - css.selectors.nth-last-child
+    - css.selectors.only-child
+    - css.selectors.only-child.no_parent_required
+  spare:
+    - css.selectors.first-child.no_parent_required
+    - css.selectors.last-child.no_parent_required
+    - css.selectors.nth-child.no_parent_required
+    - css.selectors.nth-last-child.no_parent_required

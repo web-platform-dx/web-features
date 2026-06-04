@@ -5,18 +5,18 @@ group: container-queries
 caniuse:
   - css-container-queries
   - css-container-query-units
-status:
-  compute_from: css.at-rules.container
 compat_features:
-  - api.CSSContainerRule
-  - api.CSSContainerRule.containerName
-  - api.CSSContainerRule.containerQuery
-  - css.at-rules.container
-  - css.properties.container
-  - css.properties.container-name
-  - css.properties.container-name.none
-  - css.properties.container-type
-  - css.properties.container-type.inline-size
-  - css.properties.container-type.normal
-  - css.properties.container-type.size
-  - css.types.length.container_query_length_units
+  core:
+    - api.CSSContainerRule
+    - css.at-rules.container # former compute_from
+    - css.properties.container
+    - css.properties.container-name
+    - css.properties.container-name.none
+    - css.properties.container-type
+    - css.properties.container-type.inline-size
+    - css.properties.container-type.normal
+    - css.properties.container-type.size
+    - css.types.length.container_query_length_units
+  modifier:
+    - api.CSSContainerRule.containerName
+    - api.CSSContainerRule.containerQuery

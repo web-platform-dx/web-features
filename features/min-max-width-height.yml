@@ -4,14 +4,14 @@ spec:
   - https://drafts.csswg.org/css-sizing-3/#min-size-properties
   - https://drafts.csswg.org/css-sizing-3/#max-size-properties
 caniuse: minmaxwh
-status:
-  compute_from: css.properties.max-height.none
 compat_features:
-  - css.properties.max-height
-  - css.properties.max-height.none
-  - css.properties.max-width
-  - css.properties.max-width.none
-  - css.properties.min-height
-  - css.properties.min-height.auto
-  - css.properties.min-width
-  - css.properties.min-width.auto
+  core:
+    - css.properties.max-height
+    - css.properties.max-height.none # former compute_from
+    - css.properties.max-width
+    - css.properties.max-width.none
+    - css.properties.min-width
+  modifier:
+    - css.properties.min-height
+    - css.properties.min-height.auto
+    - css.properties.min-width.auto

@@ -5,14 +5,14 @@ caniuse:
   - css-optional-pseudo
   - css-in-out-of-range
 group: selectors
-status:
-  compute_from: css.selectors.optional
 compat_features:
-  - css.selectors.invalid.form
-  - css.selectors.valid.form
-  - css.selectors.invalid
-  - css.selectors.optional
-  - css.selectors.required
-  - css.selectors.valid
-  - css.selectors.in-range
-  - css.selectors.out-of-range
+  core:
+    - css.selectors.invalid
+    - css.selectors.optional # former compute_from
+    - css.selectors.required
+    - css.selectors.valid
+  modifier:
+    - css.selectors.in-range
+    - css.selectors.invalid.form
+    - css.selectors.out-of-range
+    - css.selectors.valid.form

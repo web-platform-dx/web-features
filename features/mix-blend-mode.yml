@@ -3,10 +3,11 @@ description: The `mix-blend-mode` CSS property blends an element's content with 
 spec: https://drafts.csswg.org/compositing-2/#mix-blend-mode
 caniuse: css-mixblendmode
 group: blend-mode
-status:
-  compute_from: css.properties.mix-blend-mode
 compat_features:
-  - css.properties.mix-blend-mode
-  - css.properties.mix-blend-mode.plus-darker
-  - css.properties.mix-blend-mode.plus-lighter
-  - css.properties.mix-blend-mode.svg_elements
+  core:
+    - css.properties.mix-blend-mode # former compute_from
+  modifier:
+    - css.properties.mix-blend-mode.plus-lighter
+  spare:
+    - css.properties.mix-blend-mode.plus-darker
+    - css.properties.mix-blend-mode.svg_elements

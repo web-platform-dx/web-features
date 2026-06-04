@@ -4,8 +4,8 @@ spec: https://drafts.csswg.org/css-display-3/#list-items
 group:
   - css
   - lists
-status:
-  compute_from: css.properties.display.list-item
 compat_features:
-  - css.properties.display.list-item
-  - css.properties.display.list-item.legend-support
+  core:
+    - css.properties.display.list-item # former compute_from
+  spare:
+    - css.properties.display.list-item.legend-support

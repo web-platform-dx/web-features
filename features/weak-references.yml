@@ -3,5 +3,16 @@ description: The `WeakRef` and `FinalizationRegistry` objects hold references to
 spec: https://tc39.es/ecma262/multipage/managing-memory.html#sec-managing-memory
 snapshot: ecmascript-2021
 group: javascript
-status:
-  compute_from: javascript.builtins.WeakRef
+compat_features:
+  core:
+    - javascript.builtins.FinalizationRegistry
+    - javascript.builtins.FinalizationRegistry.FinalizationRegistry
+    - javascript.builtins.FinalizationRegistry.register
+    - javascript.builtins.FinalizationRegistry.unregister
+    - javascript.builtins.WeakRef # former compute_from
+    - javascript.builtins.WeakRef.WeakRef
+    - javascript.builtins.WeakRef.deref
+  spare:
+    - javascript.builtins.FinalizationRegistry.register.symbol_as_target
+    - javascript.builtins.FinalizationRegistry.unregister.symbol_as_target
+    - javascript.builtins.WeakRef.WeakRef.symbol_as_target

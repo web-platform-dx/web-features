@@ -5,7 +5,19 @@ group:
   - media-elements
   - html-elements
 caniuse: audio
-status:
-  compute_from: html.elements.audio
+compat_features:
+  core:
+    - api.HTMLAudioElement
+    - html.elements.audio # former compute_from
+    - html.elements.audio.controls
+    - html.elements.audio.src
+  modifier:
+    - api.HTMLAudioElement.Audio
+    - html.elements.audio.autoplay
+    - html.elements.audio.crossorigin
+    - html.elements.audio.loop
+    - html.elements.audio.muted
+    - html.elements.audio.preload
+
 # TODO: Tag relevant parts of HTMLMediaElement when possible:
 # https://github.com/web-platform-dx/web-features/issues/1173

@@ -4,18 +4,18 @@ spec: https://html.spec.whatwg.org/multipage/scripting.html#the-slot-element
 group:
   - html-elements
   - web-components
-status:
-  compute_from: html.elements.slot
 compat_features:
-  - api.Element.assignedSlot
-  - api.Element.slot
-  - api.HTMLSlotElement
-  - api.HTMLSlotElement.assignedElements
-  - api.HTMLSlotElement.assignedNodes
-  - api.HTMLSlotElement.name
-  - api.HTMLSlotElement.slotchange_event
-  - api.Text.assignedSlot
-  - css.selectors.slotted
-  - html.elements.slot
-  - html.elements.slot.name
-  - html.global_attributes.slot
+  core:
+    - api.Element.assignedSlot
+    - api.Element.slot
+    - api.HTMLSlotElement
+    - api.HTMLSlotElement.assignedNodes
+    - api.HTMLSlotElement.name
+    - api.Text.assignedSlot
+    - css.selectors.slotted
+    - html.elements.slot # former compute_from
+    - html.elements.slot.name
+    - html.global_attributes.slot
+  modifier:
+    - api.HTMLSlotElement.assignedElements
+    - api.HTMLSlotElement.slotchange_event

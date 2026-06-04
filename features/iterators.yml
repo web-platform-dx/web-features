@@ -5,10 +5,10 @@ snapshot: ecmascript-2015
 spec:
   - https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-%iteratorprototype%-object
   - https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#sec-for-in-and-for-of-statements
-status:
-  compute_from: javascript.statements.for_of
 compat_features:
-  - javascript.builtins.Iterator
-  - javascript.builtins.Iterator.@@iterator
-  - javascript.statements.for_of
-  - javascript.statements.for_of.closing_iterators
+  core:
+    - javascript.statements.for_of # former compute_from
+  modifier:
+    - javascript.builtins.Iterator
+    - javascript.builtins.Iterator.@@iterator
+    - javascript.statements.for_of.closing_iterators

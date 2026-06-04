@@ -1,18 +1,19 @@
 name: Visual viewport API
 description: The `visualViewport` API provides a way to query and modify the user-visible viewport of a web page.
 spec: https://drafts.csswg.org/cssom-view-1/#visualViewport
-status:
-  compute_from: api.Window.visualViewport
 compat_features:
-  - api.VisualViewport
-  - api.VisualViewport.height
-  - api.VisualViewport.offsetLeft
-  - api.VisualViewport.offsetTop
-  - api.VisualViewport.pageLeft
-  - api.VisualViewport.pageTop
-  - api.VisualViewport.resize_event
-  - api.VisualViewport.scale
-  - api.VisualViewport.scroll_event
-  - api.VisualViewport.scrollend_event
-  - api.VisualViewport.width
-  - api.Window.visualViewport
+  core:
+    - api.VisualViewport
+    - api.VisualViewport.height
+    - api.VisualViewport.offsetLeft
+    - api.VisualViewport.offsetTop
+    - api.VisualViewport.pageLeft
+    - api.VisualViewport.pageTop
+    - api.VisualViewport.scale
+    - api.VisualViewport.width
+    - api.Window.visualViewport # former compute_from
+  modifier:
+    - api.VisualViewport.resize_event
+    - api.VisualViewport.scroll_event
+  spare:
+    - api.VisualViewport.scrollend_event

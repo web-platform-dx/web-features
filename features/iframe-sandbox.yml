@@ -4,18 +4,19 @@ spec:
   - https://html.spec.whatwg.org/multipage/iframe-embed-object.html#attr-iframe-sandbox
   - https://privacycg.github.io/storage-access/#sandboxing-storage-access
 caniuse: iframe-sandbox
-status:
-  compute_from: html.elements.iframe.sandbox
 compat_features:
-  - api.HTMLIFrameElement.sandbox
-  - html.elements.iframe.sandbox
-  - html.elements.iframe.sandbox.allow-downloads
-  - html.elements.iframe.sandbox.allow-forms
-  - html.elements.iframe.sandbox.allow-modals
-  - html.elements.iframe.sandbox.allow-popups
-  - html.elements.iframe.sandbox.allow-popups-to-escape-sandbox
-  - html.elements.iframe.sandbox.allow-same-origin
-  - html.elements.iframe.sandbox.allow-scripts
-  - html.elements.iframe.sandbox.allow-top-navigation
-  - html.elements.iframe.sandbox.allow-top-navigation-by-user-activation
-  - html.elements.iframe.sandbox.allow-top-navigation-to-custom-protocols
+  core:
+    - api.HTMLIFrameElement.sandbox
+    - html.elements.iframe.sandbox # former compute_from
+  modifier:
+    - html.elements.iframe.sandbox.allow-downloads
+    - html.elements.iframe.sandbox.allow-forms
+    - html.elements.iframe.sandbox.allow-modals
+    - html.elements.iframe.sandbox.allow-popups
+    - html.elements.iframe.sandbox.allow-popups-to-escape-sandbox
+    - html.elements.iframe.sandbox.allow-same-origin
+    - html.elements.iframe.sandbox.allow-scripts
+    - html.elements.iframe.sandbox.allow-top-navigation
+    - html.elements.iframe.sandbox.allow-top-navigation-by-user-activation
+  spare:
+    - html.elements.iframe.sandbox.allow-top-navigation-to-custom-protocols

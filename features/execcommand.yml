@@ -9,16 +9,16 @@ discouraged:
   alternatives:
     - async-clipboard
     - contenteditable
-status:
-  compute_from: api.Document.execCommand
 compat_features:
-  - api.Document.execCommand
-  - api.Document.execCommand.copy
-  - api.Document.execCommand.cut
-  - api.Document.execCommand.defaultParagraphSeparator
-  - api.Document.execCommand.insertBrOnReturn
-  - api.Document.queryCommandEnabled
-  - api.Document.queryCommandIndeterm
-  - api.Document.queryCommandState
-  - api.Document.queryCommandSupported
-  - api.Document.queryCommandValue
+  core:
+    - api.Document.execCommand # former compute_from
+  modifier:
+    - api.Document.execCommand.copy
+    - api.Document.execCommand.cut
+    - api.Document.execCommand.defaultParagraphSeparator
+    - api.Document.execCommand.insertBrOnReturn
+    - api.Document.queryCommandEnabled
+    - api.Document.queryCommandIndeterm
+    - api.Document.queryCommandState
+    - api.Document.queryCommandSupported
+    - api.Document.queryCommandValue

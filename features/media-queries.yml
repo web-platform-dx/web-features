@@ -3,22 +3,23 @@ description: The `@media` CSS rule conditionally applies styles based on the out
 spec: https://drafts.csswg.org/mediaqueries-5/
 caniuse: css-mediaqueries
 group: media-queries
-status:
-  compute_from: css.at-rules.media
 compat_features:
-  - css.at-rules.media
-  - css.at-rules.media.color
-  - css.at-rules.media.grid
-  - css.at-rules.media.height
-  - css.at-rules.media.width
-  - css.at-rules.media.monochrome
-  - css.at-rules.media.orientation
-  - css.at-rules.media.aspect-ratio
-  - css.types.ratio
-  - css.types.ratio.number_value
-  - css.at-rules.media.color-index
-  - css.at-rules.media.calc
-  - css.at-rules.media.media_features
-  - css.at-rules.media.media_query_values
-  - css.at-rules.media.nested-queries
-  - css.at-rules.media.or_syntax
+  core:
+    - css.at-rules.media # former compute_from
+    - css.at-rules.media.media_features
+  modifier:
+    - css.at-rules.media.aspect-ratio
+    - css.at-rules.media.calc
+    - css.at-rules.media.color
+    - css.at-rules.media.grid
+    - css.at-rules.media.height
+    - css.at-rules.media.monochrome
+    - css.at-rules.media.nested-queries
+    - css.at-rules.media.or_syntax
+    - css.at-rules.media.orientation
+    - css.at-rules.media.width
+    - css.types.ratio
+  spare:
+    - css.at-rules.media.color-index
+    - css.at-rules.media.media_query_values
+    - css.types.ratio.number_value

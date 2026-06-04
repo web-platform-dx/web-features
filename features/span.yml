@@ -2,8 +2,8 @@ name: <span>
 description: The `<span>` HTML element is the generic inline container for content.
 spec: https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-span-element
 group: html-elements
-status:
-  compute_from: html.elements.span
 compat_features:
-  - api.HTMLSpanElement
-  - html.elements.span
+  core:
+    - html.elements.span # former compute_from
+  modifier:
+    - api.HTMLSpanElement

@@ -8,48 +8,49 @@ caniuse:
   - user-timing
   - high-resolution-time
 group: performance
-status:
-  compute_from: api.Performance
 compat_features:
-  - api.performance
-  - api.performance.worker_support
-  - api.Performance
-  - api.Performance.now
-  - api.Performance.timeOrigin
-  - api.Performance.toJSON
-  - api.Performance.getEntries
-  - api.Performance.getEntriesByName
-  - api.Performance.getEntriesByType
-  - api.Performance.clearMarks
-  - api.Performance.clearMeasures
-  - api.Performance.mark
-  - api.Performance.mark.markOptions_parameter
-  - api.Performance.mark.returns_performancemark
-  - api.Performance.measure
-  - api.Performance.measure.measureOptions_parameter
-  - api.Performance.measure.returns_performancemeasure
-  - api.PerformanceEntry
-  - api.PerformanceEntry.duration
-  - api.PerformanceEntry.entryType
-  - api.PerformanceEntry.name
-  - api.PerformanceEntry.startTime
-  - api.PerformanceEntry.toJSON
-  - api.PerformanceEntry.worker_support
-  - api.PerformanceMark
-  - api.PerformanceMark.PerformanceMark
-  - api.PerformanceMark.detail
-  - api.PerformanceMeasure
-  - api.PerformanceMeasure.detail
-  - api.PerformanceObserver
-  - api.PerformanceObserver.PerformanceObserver
-  - api.PerformanceObserver.PerformanceObserver.droppedEntriesCount
-  - api.PerformanceObserver.disconnect
-  - api.PerformanceObserver.observe
-  - api.PerformanceObserver.supportedEntryTypes_static
-  - api.PerformanceObserver.takeRecords
-  - api.PerformanceObserver.worker_support
-  - api.PerformanceObserverEntryList
-  - api.PerformanceObserverEntryList.getEntries
-  - api.PerformanceObserverEntryList.getEntriesByName
-  - api.PerformanceObserverEntryList.getEntriesByType
-  - http.headers.Timing-Allow-Origin
+  core:
+    - api.Performance # former compute_from
+    - api.performance
+  modifier:
+    - api.Performance.clearMarks
+    - api.Performance.clearMeasures
+    - api.Performance.getEntries
+    - api.Performance.getEntriesByName
+    - api.Performance.getEntriesByType
+    - api.Performance.mark
+    - api.Performance.mark.markOptions_parameter
+    - api.Performance.mark.returns_performancemark
+    - api.Performance.measure
+    - api.Performance.measure.measureOptions_parameter
+    - api.Performance.measure.returns_performancemeasure
+    - api.Performance.now
+    - api.Performance.timeOrigin
+    - api.Performance.toJSON
+    - api.PerformanceEntry
+    - api.PerformanceEntry.duration
+    - api.PerformanceEntry.entryType
+    - api.PerformanceEntry.name
+    - api.PerformanceEntry.startTime
+    - api.PerformanceEntry.toJSON
+    - api.PerformanceEntry.worker_support
+    - api.PerformanceMark
+    - api.PerformanceMark.PerformanceMark
+    - api.PerformanceMark.detail
+    - api.PerformanceMeasure
+    - api.PerformanceMeasure.detail
+    - api.PerformanceObserver
+    - api.PerformanceObserver.PerformanceObserver
+    - api.PerformanceObserver.disconnect
+    - api.PerformanceObserver.observe
+    - api.PerformanceObserver.supportedEntryTypes_static
+    - api.PerformanceObserver.takeRecords
+    - api.PerformanceObserver.worker_support
+    - api.PerformanceObserverEntryList
+    - api.PerformanceObserverEntryList.getEntries
+    - api.PerformanceObserverEntryList.getEntriesByName
+    - api.PerformanceObserverEntryList.getEntriesByType
+    - api.performance.worker_support
+    - http.headers.Timing-Allow-Origin
+  spare:
+    - api.PerformanceObserver.PerformanceObserver.droppedEntriesCount

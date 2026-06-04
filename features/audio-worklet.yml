@@ -4,9 +4,25 @@ spec: https://webaudio.github.io/web-audio-api/#AudioWorklet
 group:
   - web-audio
   - worklets
-status:
-  compute_from:
-    - api.AudioWorklet
-    - api.AudioWorkletNode.AudioWorkletNode
-    - api.AudioWorkletProcessor
-    - api.BaseAudioContext.audioWorklet
+compat_features:
+  core:
+    - api.AudioWorklet # former compute_from
+    - api.AudioWorkletGlobalScope
+    - api.AudioWorkletGlobalScope.currentFrame
+    - api.AudioWorkletGlobalScope.currentTime
+    - api.AudioWorkletGlobalScope.registerProcessor
+    - api.AudioWorkletGlobalScope.sampleRate
+    - api.AudioWorkletNode
+    - api.AudioWorkletNode.AudioWorkletNode # former compute_from
+    - api.AudioWorkletNode.parameters
+    - api.AudioWorkletNode.port
+    - api.AudioWorkletNode.processorerror_event
+    - api.AudioWorkletProcessor # former compute_from
+    - api.AudioWorkletProcessor.AudioWorkletProcessor
+    - api.AudioWorkletProcessor.port
+    - api.BaseAudioContext.audioWorklet # former compute_from
+    - api.Worklet
+    - api.Worklet.addModule
+    - api.WorkletGlobalScope
+  spare:
+    - api.AudioWorkletGlobalScope.port

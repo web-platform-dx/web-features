@@ -3,25 +3,24 @@ description: 'A `ReadableStream` constructed with `{ type: "bytes" }` reads byte
 spec: https://streams.spec.whatwg.org/
 caniuse: streams
 group: streams
-status:
-  compute_from:
-    - api.ReadableStreamBYOBReader
 compat_features:
-  - api.ReadableByteStreamController
-  - api.ReadableByteStreamController.byobRequest
-  - api.ReadableByteStreamController.close
-  - api.ReadableByteStreamController.desiredSize
-  - api.ReadableByteStreamController.enqueue
-  - api.ReadableByteStreamController.error
-  - api.ReadableStreamBYOBReader
-  - api.ReadableStreamBYOBReader.ReadableStreamBYOBReader
-  - api.ReadableStreamBYOBReader.cancel
-  - api.ReadableStreamBYOBReader.closed
-  - api.ReadableStreamBYOBReader.read
-  - api.ReadableStreamBYOBReader.releaseLock
-  - api.ReadableStreamBYOBReader.releaseLock.reject_pending_read_request
-  - api.ReadableStreamBYOBRequest
-  - api.ReadableStreamBYOBRequest.respond
-  - api.ReadableStreamBYOBRequest.respondWithNewView
-  - api.ReadableStreamBYOBRequest.view
-  - api.ReadableStreamBYOBReader.read.options_min_parameter
+  core:
+    - api.ReadableByteStreamController
+    - api.ReadableByteStreamController.byobRequest
+    - api.ReadableByteStreamController.close
+    - api.ReadableByteStreamController.desiredSize
+    - api.ReadableByteStreamController.enqueue
+    - api.ReadableByteStreamController.error
+    - api.ReadableStreamBYOBReader # former compute_from
+    - api.ReadableStreamBYOBReader.ReadableStreamBYOBReader
+    - api.ReadableStreamBYOBReader.cancel
+    - api.ReadableStreamBYOBReader.closed
+    - api.ReadableStreamBYOBReader.read
+    - api.ReadableStreamBYOBReader.releaseLock
+    - api.ReadableStreamBYOBRequest
+    - api.ReadableStreamBYOBRequest.respond
+    - api.ReadableStreamBYOBRequest.respondWithNewView
+    - api.ReadableStreamBYOBRequest.view
+  spare:
+    - api.ReadableStreamBYOBReader.read.options_min_parameter
+    - api.ReadableStreamBYOBReader.releaseLock.reject_pending_read_request
