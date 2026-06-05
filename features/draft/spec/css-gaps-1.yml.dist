@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "149"
+    chrome_android: "149"
+    edge: "149"
 compat_features:
   - css.properties.column-rule-break
   - css.properties.column-rule-break.intersection

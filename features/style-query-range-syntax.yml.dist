@@ -8,5 +8,19 @@ status:
     chrome_android: "142"
     edge: "142"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  #   edge: "142"
+  #   firefox: "151"
+  #   firefox_android: "151"
   - css.at-rules.container.style_queries_for_custom_properties.range_syntax
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  #   edge: "142"
   - css.types.if.style.range_syntax
