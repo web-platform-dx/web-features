@@ -1,4 +1,4 @@
-draft_date: 2026-05-08
+draft_date: 2026-06-05
 name: Cascading Style Sheets Level 2
 description: TODO
 spec: https://drafts.csswg.org/css2/
@@ -8,11 +8,7 @@ compat_features:
   - css.properties.text-decoration.dashed
   - css.properties.text-decoration.dotted
   - css.properties.text-decoration.double
-  - css.properties.text-decoration.line-through
-  - css.properties.text-decoration.none
-  - css.properties.text-decoration.overline
   - css.properties.text-decoration.solid
-  - css.properties.text-decoration.underline
 
 # The following features in the spec are already part of web-features:
 # - Tables:
@@ -41,6 +37,11 @@ compat_features:
 #   - css.properties.float.right
 # - font-style:
 #   - css.properties.font-style.oblique
+# - text-decoration:
+#   - css.properties.text-decoration.line-through
+#   - css.properties.text-decoration.none
+#   - css.properties.text-decoration.overline
+#   - css.properties.text-decoration.underline
 # - z-index:
 #   - css.properties.z-index
 #   - css.properties.z-index.auto

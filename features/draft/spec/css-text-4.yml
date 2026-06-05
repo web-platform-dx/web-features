@@ -1,4 +1,4 @@
-draft_date: 2026-05-08
+draft_date: 2026-06-05
 name: CSS Text Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-text-4/
@@ -13,6 +13,10 @@ compat_features:
   - css.properties.text-align-last.match-parent
   - css.properties.text-align-last.right
   - css.properties.text-align-last.start
+  - css.properties.text-fit
+  - css.properties.text-fit.grow
+  - css.properties.text-fit.none
+  - css.properties.text-fit.shrink
   - css.properties.text-wrap.auto
   - css.properties.white-space.collapse
   - css.properties.white-space.preserve

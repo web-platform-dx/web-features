@@ -20,7 +20,6 @@ compat_features:
   - api.HTMLOptionsCollection.add
   - api.HTMLOptionsCollection.length
   - api.HTMLOptionsCollection.selectedIndex
-  - api.Navigator.vendorSub
   - api.Window.unload_event
 
   # baseline: high
@@ -1026,4 +1025,10 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
+  - api.Document.parseHTMLUnsafe_static.options_sanitizer_parameter
+  - api.Element.setHTMLUnsafe.options_sanitizer_parameter
+  - api.Sanitizer.allowProcessingInstruction
+  - api.Sanitizer.removeProcessingInstruction
+  - api.ShadowRoot.setHTMLUnsafe.options_sanitizer_parameter
   - html.elements.track.kind.descriptions
+  - javascript.statements.import.import_attributes.type_text

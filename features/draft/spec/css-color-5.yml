@@ -1,9 +1,8 @@
-draft_date: 2026-05-08
+draft_date: 2026-06-05
 name: CSS Color Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-color-5/
 compat_features:
-  - css.types.color.color-mix.variadic_color_arguments
   - css.types.color.color.colorSpace_parameter_accepts_display-p3-linear_value
   - css.types.color.currentcolor
 
@@ -126,6 +125,8 @@ compat_features:
 #   - css.types.color.color
 # - color-mix():
 #   - css.types.color.color-mix
+# - color-mix() with three or more colors:
+#   - css.types.color.color-mix.variadic_color_arguments
 # - contrast-color():
 #   - css.types.color.contrast-color
 # - HSL:
