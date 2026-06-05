@@ -1,9 +1,11 @@
-draft_date: 2026-05-22
+draft_date: 2026-06-05
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
   - api.Document.designMode
+  - api.Document.parseHTMLUnsafe_static.options_sanitizer_parameter
+  - api.Element.setHTMLUnsafe.options_sanitizer_parameter
   - api.ElementInternals.shadowRoot
   - api.ErrorEvent
   - api.ErrorEvent.ErrorEvent
@@ -58,7 +60,6 @@ compat_features:
   - api.NavigationTransition.to
   - api.Navigator.oscpu
   - api.Navigator.taintEnabled
-  - api.Navigator.vendorSub
   - api.OffscreenCanvasRenderingContext2D.getContextAttributes
   - api.OffscreenCanvasRenderingContext2D.lang
   - api.PromiseRejectionEvent
@@ -67,9 +68,12 @@ compat_features:
   - api.PromiseRejectionEvent.reason
   - api.RadioNodeList
   - api.RadioNodeList.value
+  - api.Sanitizer.allowProcessingInstruction
+  - api.Sanitizer.removeProcessingInstruction
   - api.ServiceWorker.error_event
   - api.ShadowRoot.activeElement
   - api.ShadowRoot.innerHTML
+  - api.ShadowRoot.setHTMLUnsafe.options_sanitizer_parameter
   - api.SharedWorker.SharedWorker.enforces_trusted_types
   - api.SharedWorker.SharedWorker.options_extendedLifetime_parameter
   - api.TrackEvent
@@ -134,6 +138,7 @@ compat_features:
   - http.status.103
   - http.status.103.preconnect
   - http.status.103.preload
+  - javascript.statements.import.import_attributes.type_text
 
 # The following features in the spec are already part of web-features:
 # - Audio and video tracks:
@@ -559,6 +564,21 @@ compat_features:
 #   - api.Document.parseHTMLUnsafe_static
 #   - api.Element.setHTMLUnsafe
 #   - api.ShadowRoot.setHTMLUnsafe
+# - Sanitizer API:
+#   - api.Document.parseHTML_static
+#   - api.Element.setHTML
+#   - api.Sanitizer
+#   - api.Sanitizer.Sanitizer
+#   - api.Sanitizer.allowAttribute
+#   - api.Sanitizer.allowElement
+#   - api.Sanitizer.get
+#   - api.Sanitizer.removeAttribute
+#   - api.Sanitizer.removeElement
+#   - api.Sanitizer.removeUnsafe
+#   - api.Sanitizer.replaceElementWithChildren
+#   - api.Sanitizer.setComments
+#   - api.Sanitizer.setDataAttributes
+#   - api.ShadowRoot.setHTML
 # - Scroll methods on elements:
 #   - api.Document.scroll_event
 #   - api.Element.scroll_event
@@ -1321,7 +1341,7 @@ compat_features:
 #   - html.elements.input.size
 #   - html.elements.input.src
 #   - html.elements.input.type_text
-# - `alpha` and `colorspace` attributes for `<input type=color>`:
+# - alpha and colorspace attributes for <input type=color>:
 #   - api.HTMLInputElement.alpha
 #   - api.HTMLInputElement.colorSpace
 #   - html.elements.input.alpha
@@ -2003,6 +2023,7 @@ compat_features:
 #   - api.Navigator.productSub
 #   - api.Navigator.userAgent
 #   - api.Navigator.vendor
+#   - api.Navigator.vendorSub
 #   - api.WorkerNavigator.appCodeName
 #   - api.WorkerNavigator.appName
 #   - api.WorkerNavigator.appVersion

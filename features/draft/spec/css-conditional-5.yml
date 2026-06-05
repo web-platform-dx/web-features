@@ -1,4 +1,4 @@
-draft_date: 2026-05-08
+draft_date: 2026-06-05
 name: CSS Conditional Rules Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-conditional-5/
@@ -6,8 +6,12 @@ compat_features:
   - api.CSSContainerRule.conditions
   - css.at-rules.container.container-query_optional
   - css.at-rules.container.scroll-state_queries.scrolled
+  - css.at-rules.supports.at-rule
+  - css.properties.container-name.name-only_queries
+  - css.properties.container-type.name-only_queries
   - css.properties.container-type.weak_containment
   - css.properties.container.inline-size
+  - css.properties.container.name-only_queries
   - css.properties.container.none
   - css.properties.container.normal
   - css.properties.container.scroll-state
