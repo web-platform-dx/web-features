@@ -1,5 +1,5 @@
 name: Service workers static routing
-description: A declarative routing API for service workers that allows performance optimisation through bypassing the service worker for specified routes.
+description: "The service worker install event's `addRoutes` method declares resource paths that should either be fetched from the network or the cache, to bypass the service worker and improve performance."
 spec: https://w3c.github.io/ServiceWorker/
 group: workers
 compat_features:
