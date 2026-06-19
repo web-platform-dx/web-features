@@ -1702,8 +1702,9 @@ compat_features:
   #   safari_ios: "17"
   - api.CanvasRenderingContext2D.drawImage.SVGImageElement_source_image
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-12-07
+  # baseline_high_date: 2026-06-07
   # support:
   #   chrome: "120"
   #   chrome_android: "120"
@@ -1714,8 +1715,9 @@ compat_features:
   #   safari_ios: "15.4"
   - svg.global_attributes.mask
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-12-11
+  # baseline_high_date: 2026-06-11
   # support:
   #   chrome: "118"
   #   chrome_android: "118"
