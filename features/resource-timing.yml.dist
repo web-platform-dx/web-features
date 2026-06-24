@@ -130,6 +130,18 @@ compat_features:
   #   safari_ios: "11"
   - api.Performance.resourcetimingbufferfull_event
 
+  # baseline: low
+  # baseline_low_date: 2026-06-16
+  # support:
+  #   chrome: "115"
+  #   chrome_android: "115"
+  #   edge: "115"
+  #   firefox: "152"
+  #   firefox_android: "152"
+  #   safari: "26.4"
+  #   safari_ios: "26.4"
+  - api.PerformanceResourceTiming.firstInterimResponseStart
+
   # baseline: false
   # support:
   #   chrome: "43"
@@ -148,15 +160,6 @@ compat_features:
   #   firefox: "129"
   #   firefox_android: "129"
   - api.PerformanceResourceTiming.responseStatus
-
-  # baseline: false
-  # support:
-  #   chrome: "115"
-  #   chrome_android: "115"
-  #   edge: "115"
-  #   safari: "26.4"
-  #   safari_ios: "26.4"
-  - api.PerformanceResourceTiming.firstInterimResponseStart
 
   # baseline: false
   # support:
