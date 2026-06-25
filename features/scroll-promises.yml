@@ -1,0 +1,12 @@
+name: Scroll method promises
+description: The `scroll()`, `scrollBy()`, `scrollTo()`, and `scrollIntoView()` methods on the `Element` and `Window` interfaces return Promises that resolve when scrolling completes.
+spec: https://drafts.csswg.org/cssom-view
+group: scrolling
+compat_features:
+  - api.Element.scroll.returns_promise
+  - api.Element.scrollBy.returns_promise
+  - api.Element.scrollIntoView.returns_promise
+  - api.Element.scrollTo.returns_promise
+  - api.Window.scroll.returns_promise
+  - api.Window.scrollBy.returns_promise
+  - api.Window.scrollTo.returns_promise
