@@ -1112,11 +1112,14 @@ compat_features:
   - api.RTCPeerConnectionIceErrorEvent.address
   - api.RTCPeerConnectionIceErrorEvent.port
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-06-16
   # support:
   #   chrome: "57"
   #   chrome_android: "57"
   #   edge: "79"
+  #   firefox: "152"
+  #   firefox_android: "152"
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - api.RTCPeerConnection.RTCPeerConnection.configuration_rtcpMuxPolicy_parameter

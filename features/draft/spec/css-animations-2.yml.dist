@@ -44,7 +44,8 @@ compat_features:
   - css.properties.animation-timeline.auto
   - css.properties.animation-timeline.none
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "152"
+  #   firefox_android: "152"
   - api.AnimationEvent.animation
