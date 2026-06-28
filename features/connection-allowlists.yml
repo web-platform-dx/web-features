@@ -1,0 +1,8 @@
+name: Connection allowlists
+description: The `Connection-Allowlist` HTTP response header limits what resources that a page may request using fetch and other APIs.
+spec: https://wicg.github.io/connection-allowlists/
+# Expected:
+# compat_features:
+#   - http.headers.Connection-Allowlist
+#   - http.headers.Connection-Allowlist-Report-Only
+#   - api.ReportingObserver.ReportingObserver.options_parameter.types_property.connection-allowlist
