@@ -1,0 +1,10 @@
+name: WebDriver BiDi geolocation
+description: The `emulation.setGeolocationOverride` command simulates a geolocation in the browser.
+spec: https://w3c.github.io/webdriver-bidi/#module-emulation
+group: webdriver
+compat_features:
+  - webdriver.bidi.emulation.setGeolocationOverride
+  - webdriver.bidi.emulation.setGeolocationOverride.contexts_parameter
+  - webdriver.bidi.emulation.setGeolocationOverride.coordinates_parameter
+  - webdriver.bidi.emulation.setGeolocationOverride.error_parameter
+  - webdriver.bidi.emulation.setGeolocationOverride.userContexts_parameter
