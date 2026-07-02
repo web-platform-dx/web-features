@@ -11,11 +11,9 @@ compat_features:
     # Every test needs a session.
     - webdriver.bidi.session
     # Uncomment the next line and remove this line when https://github.com/mdn/browser-compat-data/pull/29965 is merged.
-    # This key should really be required in this feature.
     # - webdriver.bidi.session.new
     - webdriver.bidi.session.status
     # Uncomment the next line and remove this line when https://github.com/mdn/browser-compat-data/pull/29968 is merged.
-    # This key is required, and it is supported in Chrome. BCD is out of date.
     # - webdriver.bidi.session.end
 
     # All BiDi events go through these commands.
