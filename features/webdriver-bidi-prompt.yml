@@ -1,0 +1,20 @@
+name: WebDriver BiDi prompt
+description: The `browsingContext.handleUserPrompt` command and the `browsingContext.userPromptOpened` and `browsingContext.userPromptClosed_event` events allow closing an open prompt.
+spec: https://w3c.github.io/webdriver-bidi/#command-browsingContext-handleUserPrompt
+group: webdriver
+compat_features:
+  - webdriver.bidi.browsingContext.handleUserPrompt
+  - webdriver.bidi.browsingContext.handleUserPrompt.accept_parameter
+  - webdriver.bidi.browsingContext.handleUserPrompt.context_parameter
+  - webdriver.bidi.browsingContext.handleUserPrompt.userText_parameter
+  - webdriver.bidi.browsingContext.userPromptClosed_event
+  - webdriver.bidi.browsingContext.userPromptClosed_event.accepted_parameter
+  - webdriver.bidi.browsingContext.userPromptClosed_event.context_parameter
+  - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter
+  - webdriver.bidi.browsingContext.userPromptClosed_event.userText_parameter
+  - webdriver.bidi.browsingContext.userPromptOpened_event
+  - webdriver.bidi.browsingContext.userPromptOpened_event.context_parameter
+  - webdriver.bidi.browsingContext.userPromptOpened_event.defaultValue_parameter
+  - webdriver.bidi.browsingContext.userPromptOpened_event.handler_parameter
+  - webdriver.bidi.browsingContext.userPromptOpened_event.message_parameter
+  - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter
