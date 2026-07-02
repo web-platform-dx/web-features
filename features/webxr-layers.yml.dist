@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "147"
+    chrome_android: "147"
+    edge: "147"
 compat_features:
   # baseline: false
   # support:
@@ -15,7 +18,10 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "147"
+  #   chrome_android: "147"
+  #   edge: "147"
   - api.XRCompositionLayer
   - api.XRCompositionLayer.blendTextureSourceAlpha
   - api.XRCompositionLayer.destroy
@@ -44,11 +50,6 @@ compat_features:
   - api.XRLayerEvent
   - api.XRLayerEvent.XRLayerEvent
   - api.XRLayerEvent.layer
-  - api.XRMediaBinding
-  - api.XRMediaBinding.XRMediaBinding
-  - api.XRMediaBinding.createCylinderLayer
-  - api.XRMediaBinding.createEquirectLayer
-  - api.XRMediaBinding.createQuadLayer
   - api.XRProjectionLayer
   - api.XRProjectionLayer.fixedFoveation
   - api.XRProjectionLayer.ignoreDepthValues
@@ -78,3 +79,11 @@ compat_features:
   - api.XRWebGLSubImage.colorTextureWidth
   - api.XRWebGLSubImage.depthStencilTexture
   - api.XRWebGLSubImage.imageIndex
+
+  # baseline: false
+  # support: {}
+  - api.XRMediaBinding
+  - api.XRMediaBinding.XRMediaBinding
+  - api.XRMediaBinding.createCylinderLayer
+  - api.XRMediaBinding.createEquirectLayer
+  - api.XRMediaBinding.createQuadLayer

@@ -77,6 +77,81 @@ The identifier should match the name, with these additional guidelines:
   - 👍 Recommended: `user-pseudos`
   - 👎 Not recommended: `user-valid-and-user-invalid`
 
+### Move a feature to a new ID
+
+It’s possible to change or substitute a feature’s ID by creating a redirect from the original ID pointing to a new ID.
+You can do this when:
+
+* The original feature ID is misspelled.
+  For example, `numeric-seperators` (note spelling) data can be moved to `numeric-separators`.
+
+* The original feature ID breaks the identifier guidelines.
+  For example, `drones-initial-support` data can be moved to `drones`.
+
+* The original feature should not have existed as an independent feature.
+  For example, `single-color-gradients` was a poorly-conceived feature, where [a specification change](https://github.com/w3c/csswg-drafts/issues/10092) simplified the specification, implementation, and tools, but produced no novel browser behavior that developers could use in an application.
+  Instead, all the compatibility keys for the feature were reassigned to `gradients`.
+
+* Data consumers report that the original feature ID is confusing or misleading.
+
+You must not do this when the feature has been superseded, such that the feature's name has changed and the exposed behaviors or API surface have changed (in shipping browsers, up to and including unshipping).
+Instead, use [`discouraged` data](#discouraged) with one or more `alternatives`.
+
+To move the feature:
+
+1. If applicable, move the existing YAML files for the feature to the target ID filename.
+   For example, rename `features/numeric-seperators.yml` to `features/numeric-separators.yml`.
+
+   If the original feature is being replaced by another feature, then move on to the next step.
+
+2. Create a new YAML file for the original target ID filename.
+   For example, create an empty file `features/numeric-seperators.yml`.
+
+3. Populate the following data in the new YAML file:
+
+   ```yaml  
+   kind: moved  
+   redirect_target: TARGET-ID  
+   ```
+
+   where `TARGET-ID` is the target ID.
+
+4. Regenerate the dist files.
+   Run `npm run dist`.
+
+5. Commit your work and open a pull request.
+
+### Split a feature into two or more other features
+
+Some features may need to be split in two or more parts.
+You can do this when the original feature should not have existed as an independent feature in the first place.
+For example, similarly-named compat keys that ought to have been additions to existing features were erroneously combined and assigned to a new feature.
+
+To split the feature:
+
+1. If the feature to be split has any keys listed in `compat_features`, then reassign the keys to the target features.
+   
+   To get the list of keys, you may need to first run `npm run undist -- $feature` where `$feature` is the path to the YAML file of the feature to be split.
+
+2. Replace the contents of the original feature YAML file with the following data:
+
+   ```yaml
+   kind: split  
+   redirect_targets:  
+     - target-id1  
+     - target-id2  
+   ```
+
+   Replace the `target-id` values with two or more target ID strings.
+   Order `redirect_targets` by the most widely-relevant features first.
+   For example, if the feature is split to separate a Baseline subset of a feature from a non-Baseline subset, then put the Baseline feature first.
+   If you must break a tie, use alphabetical order.
+
+3. Regenerate the dist files.
+   Run `npm run dist`.
+
+4. Commit your work and open a pull request.
+
 ## Descriptions
 
 The `description` field contains a short description of the feature in Markdown-formatted text, which is converted to HTML in the published package.
@@ -345,6 +420,88 @@ When you set a `discouraged` block in a feature file, do:
   If possible, use the single most broadly applicable reference, such as specification text.
   If a feature is removed from a specification, link to an issue, pull request, or commit showing the removal.
 
-- Set one or more (optional) `alternative` feature IDs that are whole or partial substitutes for the discouraged feature.
+- Set one or more (optional) `alternatives` feature IDs that are whole or partial substitutes for the discouraged feature.
   An alternative doesn't have to be a narrow drop-in replacement for the discouraged feature but it must handle some use case of the discouraged feature.
   Guide developers to the most relevant features that would help them stop using the discouraged feature.
+
+## Status overrides
+
+Most features compute a status from `@mdn/browser-compat-data` (BCD) compat keys given by the `compat_features` array or the implicit keys given by web-features ID tags in BCD.
+
+Nevertheless, some features require some finessing to make sensible headline statuses.
+There are three ways to override a status, in order of preference:
+
+- Author a `compat_features` object with `core`, `modifier`, and `spare` arrays of compat keys.
+  The `core` array is used to calculate a status (like a flat `compat_features` array).
+  The keys in `modifier` are validated to have the same status _level_ as the `core` keys (for example, if the `core` set of keys is newly available, then the keys in `modifier` must be too), but not necessarily the same Baseline dates or initial browser releases.
+  The keys in `spare` relate to the feature but do not affect the feature's status.
+
+  For example, this override sets the status on the basis of key `a` and `b`, validates that key `c` is at the same level as `core`, and ignores `x` for the purpose of calculating a status.
+
+  ```yaml
+  compat_features:
+    core:
+      - a
+      - b
+    modifier:
+      - c
+    spare:
+      - x
+  ```
+
+- Author a literal `status` override in the feature's authored YAML file.
+  This provides an explicit, overriding status with a Baseline status level (false, `"low"`, or `"high"`), Baseline low date, and `support` information.
+  Note that you may combine this with `modifier` and `spare` in a `compat_features` list.
+
+  For example, this sets a status that completely ignores any BCD keys that might exist:
+
+  ```yaml
+  status:
+    baseline: high
+    baseline_low_date: 2015-07-29
+    support:
+      chrome: "1"
+      chrome_android: "18"
+      edge: "12"
+      firefox: "1"
+      firefox_android: "4"
+      safari: "4"
+      safari_ios: "3.2"
+  ```
+
+- **Deprecated**:
+  Author a `compute_from` override in the feature's authored YAML file.
+  The `status: { compute_from: … }` override selects one or more compat keys from which to calculate a status for the whole feature.
+  This ignores any `compat_features` keys (or BCD-tagged keys) not in the `compute_from` array.
+
+  This method is deprecated and planned for removal.
+  Do not author new `compute_from` overrides.
+
+  For example, this override sets the status on the basis of a single key:
+
+  ```yaml
+  status:
+    compute_from: html.elements.a
+  ```
+
+Whenever possible, avoid overrides.
+Consider alternatives such as splitting a feature into two or more features or fixing upstream data.
+
+If you must override a status, prefer using `compat_features` with `core` and `modifier` arrays over `spare`, a literal status override, or a `compute_from`.
+
+You can use an override method in the following situations:
+
+- To prevent a feature's status from advancing or regressing, while it's under [reconsideration](https://github.com/web-platform-dx/web-features/issues/3228).
+
+- To set a status in the absence of relevant BCD keys.
+  For example, see [`http2.yml`](../features/http2.yml).
+
+- To override BCD, when data is suspected to be in error.
+  In such cases, consider filing an upstream issue or pull request.
+
+- To align with support information given by caniuse, especially for caniuse features that predate web-features.
+  For example, see [`web-cryptography.yml`](../features/web-cryptography.yml).
+
+- To set the original version or date when an established feature is understood to have become available, but later acquired minor behavioral additions or restrictions.
+  This is also known as "birthday setting."
+  This is reason is rare!

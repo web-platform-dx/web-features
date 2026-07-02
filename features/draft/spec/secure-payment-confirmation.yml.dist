@@ -4,8 +4,7 @@
 status:
   baseline: false
   support:
-    chrome: "139"
-    chrome_android: "139"
-    edge: "139"
+    chrome: "148"
+    chrome_android: "148"
 compat_features:
-  - api.PaymentRequest.securePaymentConfirmationAvailability_static
+  - api.PaymentRequest.getSecurePaymentConfirmationCapabilities_static

@@ -1,0 +1,8 @@
+name: Web authentication signal methods
+description: The `signalUnknownCredential()`, `signalAllAcceptedCredentials()`, and `signalCurrentUserDetails()` methods of `PublicKeyCredential` inform authenticators of the state of public key credentials, so that incorrect or revoked credentials may be updated, removed, or hidden.
+spec: https://w3c.github.io/webauthn/#sctn-signal-methods
+group: webauthn
+compat_features:
+  - api.PublicKeyCredential.signalAllAcceptedCredentials_static
+  - api.PublicKeyCredential.signalCurrentUserDetails_static
+  - api.PublicKeyCredential.signalUnknownCredential_static

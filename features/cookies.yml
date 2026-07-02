@@ -17,4 +17,5 @@ compat_features:
   - http.headers.Set-Cookie.SameSite.Strict
   - http.headers.Set-Cookie.SameSite.none_requires_secure
   - http.headers.Set-Cookie.SameSite.schemeful
-  - http.headers.Set-Cookie.cookie_prefixes
+  - http.headers.Set-Cookie.host_secure_prefixes
+  - http.headers.Set-Cookie.http_host-http_prefixes

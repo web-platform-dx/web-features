@@ -4,11 +4,14 @@ import path from 'path';
 import { Temporal } from '@js-temporal/polyfill';
 import { fdir } from 'fdir';
 import YAML from 'yaml';
-import { convertMarkdown } from "./text";
-import { FeatureData, GroupData, SnapshotData, WebFeaturesData } from './types';
+import { convertMarkdown } from "./text.ts";
+import type { GroupData, SnapshotData, WebFeaturesData } from './types.ts';
 
-import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, parseRangedDateString } from 'compute-baseline';
+import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, getStatus, parseRangedDateString } from 'compute-baseline';
 import { Compat } from 'compute-baseline/browser-compat-data';
+import { assertCompatSetConsistency, assertRequiredRemovalDateSet, assertValidFeatureReference } from './assertions.ts';
+import { parseAuthoring, type ParsedAuthoredData } from './parse.ts';
+import { isMoved, isOrdinaryFeatureData, isSplit } from './type-guards.ts';
 
 // The longest name allowed, to allow for compact display.
 const nameMaxLength = 80;
@@ -32,7 +35,7 @@ const uniqueIdMaps = {
     snapshots: new Map<string, string>(),
 }
 
-function* yamlEntries(root: string): Generator<[string, any]> {
+function* yamlEntries(root: string): Generator<[id: string, data: any, authored: ParsedAuthoredData]> {
     const filePaths = new fdir()
         .withBasePath()
         .filter((fp) => fp.endsWith('.yml'))
@@ -43,10 +46,17 @@ function* yamlEntries(root: string): Generator<[string, any]> {
         // The feature identifier/key is the filename without extension.
         const { name: key } = path.parse(fp);
         const pathParts = fp.split(path.sep);
+        const isDraft = pathParts.includes('draft');
+        const isSpec = isDraft && pathParts.includes('spec');
+        const isProposed = isDraft && pathParts.includes('proposed');
+
+        if (isProposed) {
+            continue;
+        }
 
         // Assert ID uniqueness
         for (const [pool, map] of Object.entries(uniqueIdMaps)) {
-            if (!pathParts.includes("spec") && pathParts.includes(pool)) {
+            if (!isSpec && pathParts.includes(pool)) {
                 const otherFile: string | undefined = map.get(key);
                 if (otherFile) {
                     throw new Error(`ID collision between ${fp} and ${otherFile}`);
@@ -59,18 +69,25 @@ function* yamlEntries(root: string): Generator<[string, any]> {
             throw new Error(`${key} is not a valid identifier (see guidelines)`);
         }
 
-        const data = YAML.parse(fs.readFileSync(fp, { encoding: 'utf-8'}));
+        const data = YAML.parse(fs.readFileSync(fp, { encoding: 'utf-8' }));
+
+        // FIXME: This is a bit duplicative of other work in this file.
+        // To avoid a major refactor, the deduplication is not happening
+        // in this PR. I'll remove this comment before merging, but I'm
+        // making a note of it now before I forget.
+        const authored = parseAuthoring(key, data);
+
         const distPath = `${fp}.dist`;
         if (fs.existsSync(distPath)) {
             const dist = YAML.parse(fs.readFileSync(distPath, { encoding: 'utf-8'}));
             Object.assign(data, dist);
         }
 
-        if (pathParts.includes('draft')) {
+        if (isDraft) {
             data[draft] = true;
         }
 
-        yield [key, data];
+        yield [key, data, authored];
     }
 }
 
@@ -105,7 +122,7 @@ const snapshots: { [key: string]: SnapshotData } = Object.fromEntries(yamlEntrie
 // TODO: validate the snapshot data.
 
 // Helper to iterate an optional string-or-array-of-strings value.
-function* identifiers(value) {
+function* identifiers(value: undefined | string | string[]) {
     if (value === undefined) {
         return;
     }
@@ -120,8 +137,8 @@ function* identifiers(value) {
 // Map from BCD keys/paths to web-features identifiers.
 const bcdToFeatureId: Map<string, string> = new Map();
 
-const features: { [key: string]: FeatureData } = {};
-for (const [key, data] of yamlEntries('features')) {
+const features: WebFeaturesData["features"] = {};
+for (const [key, data, authored] of yamlEntries('features')) {
     // Draft features reserve an identifier but aren't complete yet. Skip them.
     if (data[draft]) {
         if (!data.draft_date) {
@@ -130,11 +147,52 @@ for (const [key, data] of yamlEntries('features')) {
         continue;
     }
 
-    // Convert markdown to text+HTML.
-    if (data.description) {
+    // Attach `kind: feature` to ordinary features
+    if (!isMoved(data) && !isSplit(data)) {
+        data.kind = "feature";
+    }
+
+    // Upgrade authored strings to arrays of 1
+    const optionalArrays = [
+        "spec",
+        "group",
+        "snapshot",
+        "caniuse",
+        "foo"
+    ];
+    const stringToStringArray = (value: string | string[]) => typeof value === "string" ? [value] : value;
+    for (const optionalArray of optionalArrays) {
+        const value = data[optionalArray];
+        if (value) {
+            data[optionalArray] = stringToStringArray(value);
+        }
+    }
+    if (data.discouraged) {
+        const value = data.discouraged.according_to;
+        if (value) {
+            data.discouraged.according_to = stringToStringArray(value);
+        }
+    }
+
+    if (isOrdinaryFeatureData(data)) {
+        // Convert Markdown fields
+        const description = data.description as unknown;
+        if (typeof description !== "string" || description.trim().length === 0) {
+            throw new Error(`${key}.yml is missing a description value!`);
+        }
         const { text, html } = convertMarkdown(data.description);
         data.description = text;
         data.description_html = html;
+
+        if ("discouraged" in data) {
+            const reason = data.discouraged.reason as unknown;
+            if (typeof reason !== "string" || reason.trim().length === 0) {
+                throw new Error(`${key}.yml is missing a discouraged reason value!`);
+            }
+            const { text, html } = convertMarkdown(data.discouraged.reason);
+            data.discouraged.reason = text;
+            data.discouraged.reason_html = html;
+        }
     }
 
     // Compute Baseline high date from low date.
@@ -180,17 +238,41 @@ for (const [key, data] of yamlEntries('features')) {
                 bcdToFeatureId.set(bcdKey, key);
             }
         }
+
+        // Generate by_compat_key data.
+        if (data.status) {
+            data.status.by_compat_key = {};
+            for (const bcdKey of data.compat_features) {
+                data.status.by_compat_key[bcdKey] = getStatus(key, bcdKey);
+            }
+            assertCompatSetConsistency(key, data.status, authored);
+        }
     }
+
+    assertRequiredRemovalDateSet(key, data);
 
     features[key] = data;
 }
 
-// Assert that discouraged feature's alternatives are valid
 for (const [id, feature] of Object.entries(features)) {
-    for (const alternative of feature.discouraged?.alternatives ?? []) {
-        if (!(alternative in features)) {
-            throw new Error(`${id}'s alternative "${alternative}" is not a valid feature ID`);
-        }
+    const { kind } = feature;
+    switch (kind) {
+        case "feature":
+            for (const alternative of feature.discouraged?.alternatives ?? []) {
+                assertValidFeatureReference(id, alternative, features)
+            }
+            break;
+        case "moved":
+            assertValidFeatureReference(id, feature.redirect_target, features);
+            break;
+        case "split":
+            for (const target of feature.redirect_targets) {
+                assertValidFeatureReference(id, target, features);
+            }
+            break;
+        default:
+            kind satisfies never;
+            throw new Error(`Unhandled feature kind ${kind}}`);
     }
 }
 
@@ -209,4 +291,3 @@ for (const browser of coreBrowserSet.map(identifier => compat.browser(identifier
 }
 
 export { browsers, features, groups, snapshots };
-

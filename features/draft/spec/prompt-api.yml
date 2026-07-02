@@ -1,0 +1,19 @@
+draft_date: 2026-04-28
+name: Prompt API
+description: TODO
+spec: https://webmachinelearning.github.io/prompt-api/
+compat_features:
+  - api.LanguageModel.contextoverflow_event
+
+# The following features in the spec are already part of web-features:
+# - LanguageModel:
+#   - api.LanguageModel
+#   - api.LanguageModel.append
+#   - api.LanguageModel.availability_static
+#   - api.LanguageModel.clone
+#   - api.LanguageModel.contextUsage
+#   - api.LanguageModel.contextWindow
+#   - api.LanguageModel.create_static
+#   - api.LanguageModel.measureContextUsage
+#   - api.LanguageModel.prompt
+#   - api.LanguageModel.promptStreaming

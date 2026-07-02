@@ -1,0 +1,6 @@
+name: scrollIntoView() container
+description: The `container` option of the `scrollIntoView()` method sets which ancestor scroll container to scroll. The `"nearest"` value scrolls only the nearest ancestor, instead of the default `"all"`.
+spec: https://drafts.csswg.org/cssom-view-1/#dom-scrollintoviewoptions-container
+group: scrolling
+compat_features:
+  - api.Element.scrollIntoView.options_parameter.container_option

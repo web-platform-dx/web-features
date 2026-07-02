@@ -3,12 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "1"
-    chrome_android: "18"
-    edge: "12"
-    safari: ≤4
-    safari_ios: ≤3.2
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -122,6 +117,11 @@ compat_features:
   - html.elements.colgroup.align
   - html.elements.colgroup.valign
   - html.elements.colgroup.width
+
+  # baseline: false
+  # support:
+  #   firefox: "1"
+  #   firefox_android: "4"
   - html.elements.tbody.charoff
   - html.elements.td.charoff
   - html.elements.tfoot.charoff
@@ -130,12 +130,7 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   safari: ≤4
-  #   safari_ios: ≤3.2
+  # support: {}
   - html.elements.col.char
   - html.elements.col.charoff
   - html.elements.colgroup.char

@@ -30,8 +30,6 @@ As such, a feature has no specific size. A feature might cover a single CSS prop
 
 For example, the `fetch()` API is a feature, the `:has()` CSS pseudo-class function too, and so is the Web Audio API.
 
-For the time being, this repository focuses only on features that are implemented in some browser and that are already documented on MDN.
-
 ### Hints for distinguishing features
 
 Sometimes it can be hard to tell whether something (like an HTML attribute or JavaScript method) is a distinct feature or part of another feature.
@@ -78,7 +76,7 @@ This table lists the fields that can be found in a feature file, and provides a 
 | `spec` | One or more specification URLs for this feature. | String, or array of strings | Yes |
 | `group` | An optional group, or list of groups that this feature belongs to. See the definition of groups under [Create a new feature from scratch](#create-a-new-feature-from-scratch). | String, or array of strings | No |
 | `caniuse` | The feature's ID on the [Can I Use](https://caniuse.com/) website. | String | No |
-| `compat_features` | @mdn/browser-compat-data (BCD) entry keys (e.g., `css.properties.background-color`) that make up this feature. If `compat_features` is not set in `<feature-id>.yml`, the `dist` script will populate `compat_features` in `<feature-id>.yml.dist` with BCD entry keys tagged with `web-features:<feature-id>` in BCD, if any exist. | Array of strings | No |
+| `compat_features` | @mdn/browser-compat-data (BCD) entry keys (e.g., `css.properties.background-color`) that make up this feature. This is typically an array of strings. Less commonly, an object consisting of three arrays of strings, `core`, `modifier`, and `spare`. Different validation rules apply the three lists. When in doubt, use a plain array (it's a shorthand for assigning all keys to the `core` array). If `compat_features` is not set in `<feature-id>.yml`, the `dist` script will populate `compat_features` in `<feature-id>.yml.dist` with BCD entry keys tagged with `web-features:<feature-id>` in BCD, if any exist. | Array of strings or object | No |
 | `status` | An optional object which describes whether the feature is considered baseline, when it achieved this baseline status, and the version number of supported browsers. In the majority of cases, this is calculated from the `compat_features` list or from browser-compat-data entries directly, and therefore not needed. | Object | No |
 | `status.compute_from` | An optional field, within the `status` object, to allows you to specify which BCD keys should the overall feature status be computed from. This is useful to list all BCD keys that are related to a feature, but only consider some of them in the baseline status calculation. | String, or array of strings | No |
 
@@ -273,6 +271,9 @@ To set the status of your new feature, you must associate your feature with one 
 
   You can also use the `npm run traverse | grep -i <keyword>` command in BCD to list all BCD keys that match a certain keyword.
 
+> [!NOTE]
+> In some cases, a feature may be so new that it doesn't have any corresponding BCD keys, for example when it's not supported by any browsers yet. Emerging features like this may still be added to the repository by omitting the `compat_features` property. As soon as BCD keys do become available for this feature, the steps above should be followed to ensure that they are properly associated with the feature.
+
 #### Generate and check the dist file
 
 To generate your feature's dist file, once your feature is associated with one or more BCD keys:
@@ -302,7 +303,7 @@ To fix data discrepancies in your dist file, open the dist file and, under `comp
 
 Look for the feature's entrypoint in the dist file. The entrypoint of a feature is the property, interface, method, or other constituent part of the feature which web developers use first. For example, the Web Audio API feature has the `AudioContext` interface as its entrypoint. Before doing anything else, developers will first instantiate an `AudioContext` object by doing `const audioContext = new AudioContext()`.
 
-If your feature's entrypoint doesn't have the same status as the overall feature, use the `compute_from` field in your feature file to flag the BCD key (or keys) that represent the minimum viable set of constituent parts of a feature that make it usable.
+If your feature's entrypoint doesn't have the same status as the overall feature, see [_Status overrides_](./guidelines.md#status-overrides) for ways to override the computed status.
 
 ### Create a GitHub Pull Request to review and merge your changes
 

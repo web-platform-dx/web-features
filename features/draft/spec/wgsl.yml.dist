@@ -3,9 +3,10 @@
 
 status:
   baseline: false
-  support:
-    chrome: "123"
-    chrome_android: "123"
-    edge: "123"
+  support: {}
 compat_features:
   - api.WGSLLanguageFeatures.extension_pointer_composite_access
+  - api.WGSLLanguageFeatures.extension_subgroup_id
+  - api.WGSLLanguageFeatures.extension_subgroup_uniformity
+  - api.WGSLLanguageFeatures.extension_texture_and_sampler_let
+  - api.WGSLLanguageFeatures.extension_uniform_buffer_standard_layout

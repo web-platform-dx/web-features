@@ -1,9 +1,15 @@
-draft_date: 2025-08-15
+draft_date: 2026-06-25
 name: CSSOM View Module
 description: TODO
 spec: https://drafts.csswg.org/cssom-view-1/
 compat_features:
-  - api.Document.featurePolicy
+  - api.Element.scroll.returns_promise
+  - api.Element.scrollBy.returns_promise
+  - api.Element.scrollIntoView.returns_promise
+  - api.Element.scrollTo.returns_promise
+  - api.Window.scroll.returns_promise
+  - api.Window.scrollBy.returns_promise
+  - api.Window.scrollTo.returns_promise
 
 # The following features in the spec are already part of web-features:
 # - document.caretPositionFromPoint():
@@ -83,8 +89,11 @@ compat_features:
 #   - api.Element.checkVisibility.options_visibilityProperty_parameter
 # - scrollIntoView():
 #   - api.Element.scrollIntoView
-#   - api.Element.scrollIntoView.options_container_parameter
 #   - api.Element.scrollIntoView.options_parameter
+#   - api.Element.scrollIntoView.options_parameter.block_option
+#   - api.Element.scrollIntoView.options_parameter.inline_option
+# - scrollIntoView() container:
+#   - api.Element.scrollIntoView.options_parameter.container_option
 # - <img>:
 #   - api.HTMLImageElement.x
 #   - api.HTMLImageElement.y
@@ -140,8 +149,6 @@ compat_features:
 #   - api.Window.moveBy
 #   - api.Window.moveTo
 #   - api.Window.open
-#   - api.Window.open.features_parameter_popup
-#   - api.Window.open.once_per_event
 #   - api.Window.outerHeight
 #   - api.Window.outerWidth
 #   - api.Window.resizeBy
@@ -159,5 +166,3 @@ compat_features:
 #   - api.Window.screenTop.relative-multi-screen
 #   - api.Window.screenX.relative-multi-screen
 #   - api.Window.screenY.relative-multi-screen
-# - Attribution reporting:
-#   - api.Window.open.features_parameter_attributionsrc

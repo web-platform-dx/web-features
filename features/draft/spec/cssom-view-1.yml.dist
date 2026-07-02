@@ -3,9 +3,12 @@
 
 status:
   baseline: false
-  support:
-    chrome: "74"
-    chrome_android: "74"
-    edge: "79"
+  support: {}
 compat_features:
-  - api.Document.featurePolicy
+  - api.Element.scroll.returns_promise
+  - api.Element.scrollBy.returns_promise
+  - api.Element.scrollIntoView.returns_promise
+  - api.Element.scrollTo.returns_promise
+  - api.Window.scroll.returns_promise
+  - api.Window.scrollBy.returns_promise
+  - api.Window.scrollTo.returns_promise

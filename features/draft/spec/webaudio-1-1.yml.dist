@@ -16,6 +16,22 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "146"
+  #   chrome_android: "146"
+  #   edge: "146"
+  - api.AudioContext.playbackStats
+  - api.AudioPlaybackStats
+  - api.AudioPlaybackStats.averageLatency
+  - api.AudioPlaybackStats.maximumLatency
+  - api.AudioPlaybackStats.minimumLatency
+  - api.AudioPlaybackStats.resetLatency
+  - api.AudioPlaybackStats.toJSON
+  - api.AudioPlaybackStats.totalDuration
+  - api.AudioPlaybackStats.underrunDuration
+  - api.AudioPlaybackStats.underrunEvents
+
+  # baseline: false
+  # support:
   #   firefox: "138"
   #   firefox_android: "138"
   - api.AudioWorklet.port

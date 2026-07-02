@@ -1,9 +1,12 @@
-draft_date: 2025-08-28
+draft_date: 2026-01-19
 name: Resource Timing
 description: TODO
 spec: https://w3c.github.io/resource-timing/
 compat_features:
+  - api.PerformanceResourceTiming.contentEncoding
   - api.PerformanceResourceTiming.finalResponseHeadersStart
+  - api.PerformanceResourceTiming.workerCacheLookupStart
+  - api.PerformanceResourceTiming.workerRouterEvaluationStart
 
 # The following features in the spec are already part of web-features:
 # - Performance:

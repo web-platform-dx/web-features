@@ -1,0 +1,10 @@
+name: Navigation timing confidence
+description: The `confidence` property of a navigation timing entry describes whether the navigation metric is likely to be representative the page's performance (high confidence) or affected by transient conditions, such as browser startup (low confidence).
+# Merge candidate: `navigation-timing`
+spec: https://w3c.github.io/navigation-timing/#sec-performance-timing-confidence
+compat_features:
+  - api.PerformanceNavigationTiming.confidence
+  - api.PerformanceTimingConfidence
+  - api.PerformanceTimingConfidence.randomizedTriggerRate
+  - api.PerformanceTimingConfidence.toJSON
+  - api.PerformanceTimingConfidence.value

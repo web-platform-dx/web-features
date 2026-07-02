@@ -1,8 +1,10 @@
-draft_date: 2025-07-10
+draft_date: 2025-10-21
 name: Screen Capture
 description: TODO
 spec: https://w3c.github.io/mediacapture-screen-share/
 compat_features:
+  - api.MediaDevices.getDisplayMedia.windowAudio_option
+  - api.MediaStreamTrack.applyConstraints.restrictOwnAudio_constraint
   - api.MediaStreamTrack.getSettings.return_object_property_screenPixelRatio
 
 # The following features in the spec are already part of web-features:

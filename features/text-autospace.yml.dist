@@ -3,13 +3,40 @@
 
 status:
   baseline: false
-  support:
-    safari: "18.4"
-    safari_ios: "18.4"
+  support: {}
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2025-11-11
+  # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
+  #   firefox: "145"
+  #   firefox_android: "145"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
   - css.properties.text-autospace
+  - css.properties.text-autospace.no-autospace
+  - css.properties.text-autospace.normal
+
+  # baseline: false
+  # support:
+  #   firefox: "145"
+  #   firefox_android: "145"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
   - css.properties.text-autospace.auto
   - css.properties.text-autospace.ideograph-alpha
   - css.properties.text-autospace.ideograph-numeric
-  - css.properties.text-autospace.no-autospace
-  - css.properties.text-autospace.normal
+
+  # baseline: false
+  # support:
+  #   firefox: "145"
+  #   firefox_android: "145"
+  - css.properties.text-autospace.insert
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.text-autospace.punctuation
+  - css.properties.text-autospace.replace

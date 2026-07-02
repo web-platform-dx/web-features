@@ -1,0 +1,8 @@
+name: Scroll marker target pseudo-classes
+description: The `:target-current` CSS pseudo-class selects the active scroll marker (as in `::scroll-marker`), while the `:target-after` and `:target-before` pseudo-classes select the inactive markers preceding and following the active scroll marker.
+spec: https://drafts.csswg.org/css-overflow-5/#active-before-after-scroll-markers
+group: scroll-markers
+compat_features:
+  - css.selectors.target-before
+  - css.selectors.target-current
+  - css.selectors.target-after

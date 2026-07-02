@@ -1,10 +1,13 @@
-draft_date: 2025-08-06
-name: Web Animations Level 2
+draft_date: 2026-05-22
+name: Web Animations Module Level 2
 description: TODO
 spec: https://drafts.csswg.org/web-animations-2/
 compat_features:
   - api.Animation.commitStyles.endpoint_inclusive_commitStyles
   - api.Animation.overallProgress
+  - api.AnimationTrigger
+  - api.Element.getAnimations.options_parameter
+  - api.Element.getAnimations.options_parameter.pseudoElement_option
 
 # The following features in the spec are already part of web-features:
 # - Web animations:
@@ -52,7 +55,6 @@ compat_features:
 #   - api.Element.animate.implicit_tofrom
 #   - api.Element.animate.options_composite_parameter
 #   - api.Element.animate.options_id_parameter
-#   - api.Element.animate.options_iterationComposite_parameter
 #   - api.Element.animate.options_pseudoElement_parameter
 #   - api.Element.animate.options_rangeEnd_parameter
 #   - api.Element.animate.options_rangeStart_parameter
@@ -62,8 +64,10 @@ compat_features:
 #   - api.KeyframeEffect.KeyframeEffect
 #   - api.KeyframeEffect.composite
 #   - api.KeyframeEffect.getKeyframes
-#   - api.KeyframeEffect.iterationComposite
 #   - api.KeyframeEffect.pseudoElement
 #   - api.KeyframeEffect.setKeyframes
 #   - api.KeyframeEffect.target
 #   - api.ShadowRoot.getAnimations
+# - iterationComposite:
+#   - api.Element.animate.options_iterationComposite_parameter
+#   - api.KeyframeEffect.iterationComposite

@@ -7,6 +7,8 @@ status:
     chrome: "115"
     chrome_android: "115"
     edge: "115"
+    safari: "26"
+    safari_ios: "26"
 compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
@@ -14,6 +16,8 @@ compat_features:
   #   chrome: "115"
   #   chrome_android: "115"
   #   edge: "115"
+  #   safari: "26"
+  #   safari_ios: "26"
   - api.ScrollTimeline
   - api.ScrollTimeline.ScrollTimeline
   - api.ScrollTimeline.axis
@@ -53,10 +57,17 @@ compat_features:
   #   chrome: "116"
   #   chrome_android: "116"
   #   edge: "116"
+  #   safari: "26"
+  #   safari_ios: "26"
   - css.properties.timeline-scope
   - css.properties.timeline-scope.none
 
   # baseline: false
+  # support:
+  #   safari: "26"
+  #   safari_ios: "26"
+  - css.properties.timeline-scope.all
+
+  # baseline: false
   # support: {}
   - css.properties.animation.animation-timeline_included
-  - css.properties.timeline-scope.all

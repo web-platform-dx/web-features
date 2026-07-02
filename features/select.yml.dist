@@ -206,6 +206,7 @@ compat_features:
   # baseline: false
   # support:
   #   chrome: "1"
+  #   chrome_android: "142"
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
@@ -213,5 +214,11 @@ compat_features:
   - html.elements.select.size
 
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "119"
+  #   edge: "119"
+  #   firefox: "122"
+  #   firefox_android: "145"
+  #   safari: "17"
+  #   safari_ios: "17.4"
   - html.elements.select.hr_in_select

@@ -1,10 +1,33 @@
-draft_date: 2025-08-06
+draft_date: 2026-05-18
 name: CSS Inline Layout Module Level 3
 description: TODO
 spec: https://drafts.csswg.org/css-inline-3/
 compat_features:
-  - css.properties.alignment-baseline.text-after-edge
-  - css.properties.alignment-baseline.text-before-edge
+  - css.properties.alignment-baseline.text-bottom
+  - css.properties.alignment-baseline.text-top
+  - css.properties.baseline-shift.bottom
+  - css.properties.baseline-shift.center
+  - css.properties.baseline-shift.top
+  - css.properties.dominant-baseline.text-bottom
+  - css.properties.dominant-baseline.text-top
+  - css.properties.text-box-edge.cap
+  - css.properties.text-box-edge.ex
+  - css.properties.text-box-edge.ideographic
+  - css.properties.text-box-edge.ideographic-ink
+  - css.properties.text-box-edge.text
+  - css.properties.text-box.auto
+  - css.properties.text-box.cap
+  - css.properties.text-box.ex
+  - css.properties.text-box.ideographic
+  - css.properties.text-box.ideographic-ink
+  - css.properties.text-box.none
+  - css.properties.text-box.text
+  - css.properties.text-box.trim-both
+  - css.properties.text-box.trim-end
+  - css.properties.text-box.trim-start
+  - css.properties.vertical-align.center
+  - css.properties.vertical-align.first
+  - css.properties.vertical-align.last
 
 # The following features in the spec are already part of web-features:
 # - alignment-baseline:
@@ -15,9 +38,10 @@ compat_features:
 #   - css.properties.alignment-baseline.ideographic
 #   - css.properties.alignment-baseline.mathematical
 #   - css.properties.alignment-baseline.middle
+#   - css.properties.alignment-baseline.text-after-edge
+#   - css.properties.alignment-baseline.text-before-edge
 # - baseline-shift:
 #   - css.properties.baseline-shift
-#   - css.properties.baseline-shift.baseline
 #   - css.properties.baseline-shift.sub
 #   - css.properties.baseline-shift.super
 # - baseline-source:

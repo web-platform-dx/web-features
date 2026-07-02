@@ -1,8 +1,21 @@
-draft_date: 2024-12-20
+draft_date: 2025-10-08
 name: Indexed Database API 3.0
 description: TODO
 spec: https://w3c.github.io/IndexedDB/
 compat_features:
+  - api.IDBDatabase.abort_event
+  - api.IDBIndex.getAll.object_parameter
+  - api.IDBIndex.getAll.object_parameter.direction
+  - api.IDBIndex.getAllKeys.object_parameter
+  - api.IDBIndex.getAllKeys.object_parameter.direction
+  - api.IDBObjectStore.getAll.object_parameter
+  - api.IDBObjectStore.getAll.object_parameter.direction
+  - api.IDBObjectStore.getAllKeys.object_parameter
+  - api.IDBObjectStore.getAllKeys.object_parameter.direction
+  - api.IDBRecord
+  - api.IDBRecord.key
+  - api.IDBRecord.primaryKey
+  - api.IDBRecord.value
   - api.IDBRequest.error.transient_unrecoverable_read_errors
 
 # The following features in the spec are already part of web-features:
@@ -123,3 +136,6 @@ compat_features:
 #   - api.IDBVersionChangeEvent.worker_support
 #   - api.indexedDB
 #   - api.indexedDB.worker_support
+# - IndexedDB getAllRecords():
+#   - api.IDBIndex.getAllRecords
+#   - api.IDBObjectStore.getAllRecords
