@@ -10,11 +10,9 @@ compat_features:
 
     # Every test needs a session.
     - webdriver.bidi.session
-    # Uncomment the next line and remove this line when https://github.com/mdn/browser-compat-data/pull/29965 is merged.
-    # - webdriver.bidi.session.new
+    - webdriver.bidi.session.new
     - webdriver.bidi.session.status
-    # Uncomment the next line and remove this line when https://github.com/mdn/browser-compat-data/pull/29968 is merged.
-    # - webdriver.bidi.session.end
+    - webdriver.bidi.session.end
 
     # All BiDi events go through these commands.
     - webdriver.bidi.session.subscribe
