@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "150"
+    chrome_android: "150"
+    edge: "150"
 compat_features:
   # baseline: high
   # baseline_low_date: 2023-02-14
@@ -63,6 +66,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "150"
+  #   chrome_android: "150"
+  #   edge: "150"
+  #   firefox: "151"
+  #   firefox_android: "151"
+  - api.CSSContainerRule.conditions
+
+  # baseline: false
+  # support:
   #   chrome: "137"
   #   chrome_android: "137"
   #   edge: "137"
@@ -81,9 +93,3 @@ compat_features:
   #   chrome_android: "148"
   #   edge: "148"
   - css.at-rules.supports.at-rule
-
-  # baseline: false
-  # support:
-  #   firefox: "151"
-  #   firefox_android: "151"
-  - api.CSSContainerRule.conditions

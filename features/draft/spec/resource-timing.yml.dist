@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "143"
-    chrome_android: "143"
-    edge: "143"
+  support: {}
 compat_features:
   # baseline: low
   # baseline_low_date: 2026-06-16
@@ -28,10 +25,15 @@ compat_features:
   - api.PerformanceResourceTiming.workerCacheLookupStart
   - api.PerformanceResourceTiming.workerRouterEvaluationStart
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "143"
   #   chrome_android: "143"
   #   edge: "143"
   - api.PerformanceResourceTiming.contentEncoding
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.PerformanceResourceTiming.workerFinalRouterSource
+  - api.PerformanceResourceTiming.workerMatchedRouterSource

@@ -59,6 +59,13 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "150"
+  #   chrome_android: "150"
+  #   edge: "150"
+  - api.Request.isReloadNavigation
+
+  # baseline: false
+  # support:
   #   chrome: "105"
   #   edge: "105"
   - api.Request.Request.options_parameter.duplex
@@ -68,4 +75,5 @@ compat_features:
   # baseline: false
   # support: {}
   - api.Request.destination.text
-  - api.Request.isReloadNavigation
+  - api.Request.textStream
+  - api.Response.textStream
