@@ -1,4 +1,4 @@
-draft_date: 2026-06-04
+draft_date: 2026-07-06
 name: CSS Values and Units Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-values-5/
@@ -79,6 +79,17 @@ compat_features:
 #   - css.properties.interpolate-size.numeric-only
 # - List style:
 #   - css.properties.list-style-type.string
+# - Motion path:
+#   - css.properties.offset-anchor.bottom
+#   - css.properties.offset-anchor.center
+#   - css.properties.offset-anchor.left
+#   - css.properties.offset-anchor.right
+#   - css.properties.offset-anchor.top
+#   - css.properties.offset-position.bottom
+#   - css.properties.offset-position.center
+#   - css.properties.offset-position.left
+#   - css.properties.offset-position.right
+#   - css.properties.offset-position.top
 # - opacity:
 #   - css.properties.opacity.percentages
 #   - css.types.number
@@ -115,7 +126,6 @@ compat_features:
 # - attr() (content only):
 #   - css.types.attr
 # - attr():
-#   - css.types.attr.declaration-value
 #   - css.types.attr.fallback
 #   - css.types.attr.type_function
 #   - css.types.attr.type_function.angle
