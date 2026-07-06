@@ -1,4 +1,4 @@
-draft_date: 2026-06-05
+draft_date: 2026-07-06
 name: Fetch
 description: TODO
 spec: https://fetch.spec.whatwg.org/
@@ -6,6 +6,8 @@ compat_features:
   - api.Request.Request.options_parameter.duplex
   - api.Request.destination.text
   - api.Request.isReloadNavigation
+  - api.Request.textStream
+  - api.Response.textStream
   - api.fetch.options_parameter.duplex
   - http.headers.Content-Length.cors_response_safelist
   - http.headers.Cross-Origin-Resource-Policy

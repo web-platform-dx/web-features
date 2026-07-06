@@ -1,4 +1,4 @@
-draft_date: 2026-05-08
+draft_date: 2026-07-06
 name: Scalable Vector Graphics (SVG) 2
 description: TODO
 spec: https://w3c.github.io/svgwg/svg2-draft/
@@ -10,6 +10,8 @@ compat_features:
   - css.properties.paint-order.markers
   - css.properties.paint-order.normal
   - css.properties.paint-order.stroke
+  - css.properties.path-length
+  - css.properties.path-length.none
   - css.properties.pointer-events.all
   - css.properties.pointer-events.auto
   - css.properties.pointer-events.bounding-box
@@ -32,7 +34,6 @@ compat_features:
   - css.properties.vector-effect.none
   - mediatypes.image.svg
   - svg.elements.use.omit_external_fragment
-  - svg.global_attributes.font-stretch
   - svg.global_attributes.transform.svg_root
 
 # The following features in the spec are already part of web-features:
@@ -677,3 +678,5 @@ compat_features:
 # - Opacity (SVG):
 #   - svg.global_attributes.fill-opacity
 #   - svg.global_attributes.stroke-opacity
+# - font-stretch:
+#   - svg.global_attributes.font-stretch
