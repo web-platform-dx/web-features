@@ -8,11 +8,14 @@ status:
     chrome_android: "143"
     edge: "143"
 compat_features:
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-06-16
   # support:
   #   chrome: "133"
   #   chrome_android: "133"
   #   edge: "133"
+  #   firefox: "152"
+  #   firefox_android: "152"
   #   safari: "26.4"
   #   safari_ios: "26.4"
   - api.PerformanceResourceTiming.finalResponseHeadersStart

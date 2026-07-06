@@ -3,8 +3,8 @@ import assert from "node:assert/strict";
 import webSpecs from 'web-specs' with { type: 'json' };
 import winston from "winston";
 
-import { features } from '../index.js';
-import { isOrdinaryFeatureData } from "../type-guards.js";
+import { features } from '../index.ts';
+import { isOrdinaryFeatureData } from "../type-guards.ts";
 
 const logger = winston.createLogger({
   level: "warn",
@@ -201,7 +201,7 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because it's a spec not tracked in web-specs."
     ],
     [
-        "https://www.rfc-editor.org/rfc/rfc7903#section-1.2",
+        "https://www.rfc-editor.org/info/rfc7903/#section-1.2",
         "Allowed because it's a spec not tracked in web-specs."
     ],
     [
@@ -231,6 +231,14 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/WICG/PEPC/blob/main/usermedia_element.md",
         "Replace with https://w3c.github.io/mediacapture-extensions/#the-usermedia-html-element when https://github.com/w3c/mediacapture-extensions/pull/168 merges."
+    ],
+    [
+        "https://github.com/WICG/privacy-preserving-ads",
+        "Discontinued spec allowed for discouraged feature."
+    ],
+    [
+        "https://wicg.github.io/turtledove/",
+        "Discontinued spec allowed for discouraged feature."
     ]
 ];
 

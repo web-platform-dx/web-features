@@ -1,9 +1,11 @@
-draft_date: 2026-05-18
+draft_date: 2026-06-05
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
   - api.Document.designMode
+  - api.Document.parseHTMLUnsafe_static.options_sanitizer_parameter
+  - api.Element.setHTMLUnsafe.options_sanitizer_parameter
   - api.ElementInternals.shadowRoot
   - api.ErrorEvent
   - api.ErrorEvent.ErrorEvent
@@ -24,7 +26,6 @@ compat_features:
   - api.HTMLCanvasElement.toBlob.type_parameter_webp
   - api.HTMLCanvasElement.toDataURL.type_parameter_png
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
-  - api.HTMLElement.error_event
   - api.HTMLElement.togglePopover.force_parameter
   - api.HTMLElement.togglePopover.options_force_parameter
   - api.HTMLImageElement.currentSrc
@@ -59,7 +60,6 @@ compat_features:
   - api.NavigationTransition.to
   - api.Navigator.oscpu
   - api.Navigator.taintEnabled
-  - api.Navigator.vendorSub
   - api.OffscreenCanvasRenderingContext2D.getContextAttributes
   - api.OffscreenCanvasRenderingContext2D.lang
   - api.PromiseRejectionEvent
@@ -68,9 +68,12 @@ compat_features:
   - api.PromiseRejectionEvent.reason
   - api.RadioNodeList
   - api.RadioNodeList.value
+  - api.Sanitizer.allowProcessingInstruction
+  - api.Sanitizer.removeProcessingInstruction
   - api.ServiceWorker.error_event
   - api.ShadowRoot.activeElement
   - api.ShadowRoot.innerHTML
+  - api.ShadowRoot.setHTMLUnsafe.options_sanitizer_parameter
   - api.SharedWorker.SharedWorker.enforces_trusted_types
   - api.SharedWorker.SharedWorker.options_extendedLifetime_parameter
   - api.TrackEvent
@@ -86,8 +89,6 @@ compat_features:
   - api.crossOriginIsolated
   - api.origin
   - api.reportError
-  - api.setInterval.supports_parameters_for_callback
-  - api.setTimeout.supports_parameters_for_callback
   - html.elements.button.command.request-close
   - html.elements.details.search_match_opens
   - html.elements.form.autocomplete.new-password
@@ -137,6 +138,7 @@ compat_features:
   - http.status.103
   - http.status.103.preconnect
   - http.status.103.preload
+  - javascript.statements.import.import_attributes.type_text
 
 # The following features in the spec are already part of web-features:
 # - Audio and video tracks:
@@ -436,6 +438,7 @@ compat_features:
 #   - api.HTMLDocument
 #   - api.HTMLElement
 #   - api.HTMLElement.dir
+#   - api.HTMLElement.error_event
 #   - api.HTMLElement.hidden
 #   - api.HTMLElement.innerText
 #   - api.HTMLElement.load_event
@@ -561,6 +564,21 @@ compat_features:
 #   - api.Document.parseHTMLUnsafe_static
 #   - api.Element.setHTMLUnsafe
 #   - api.ShadowRoot.setHTMLUnsafe
+# - Sanitizer API:
+#   - api.Document.parseHTML_static
+#   - api.Element.setHTML
+#   - api.Sanitizer
+#   - api.Sanitizer.Sanitizer
+#   - api.Sanitizer.allowAttribute
+#   - api.Sanitizer.allowElement
+#   - api.Sanitizer.get
+#   - api.Sanitizer.removeAttribute
+#   - api.Sanitizer.removeElement
+#   - api.Sanitizer.removeUnsafe
+#   - api.Sanitizer.replaceElementWithChildren
+#   - api.Sanitizer.setComments
+#   - api.Sanitizer.setDataAttributes
+#   - api.ShadowRoot.setHTML
 # - Scroll methods on elements:
 #   - api.Document.scroll_event
 #   - api.Element.scroll_event
@@ -1323,7 +1341,7 @@ compat_features:
 #   - html.elements.input.size
 #   - html.elements.input.src
 #   - html.elements.input.type_text
-# - `alpha` and `colorspace` attributes for `<input type=color>`:
+# - alpha and colorspace attributes for <input type=color>:
 #   - api.HTMLInputElement.alpha
 #   - api.HTMLInputElement.colorSpace
 #   - html.elements.input.alpha
@@ -2005,6 +2023,7 @@ compat_features:
 #   - api.Navigator.productSub
 #   - api.Navigator.userAgent
 #   - api.Navigator.vendor
+#   - api.Navigator.vendorSub
 #   - api.WorkerNavigator.appCodeName
 #   - api.WorkerNavigator.appName
 #   - api.WorkerNavigator.appVersion
@@ -2266,11 +2285,13 @@ compat_features:
 #   - api.clearInterval
 #   - api.clearInterval.worker_support
 #   - api.setInterval
+#   - api.setInterval.supports_parameters_for_callback
 #   - api.setInterval.worker_support
 # - setTimeout():
 #   - api.clearTimeout
 #   - api.clearTimeout.worker_support
 #   - api.setTimeout
+#   - api.setTimeout.supports_parameters_for_callback
 #   - api.setTimeout.worker_support
 # - isSecureContext:
 #   - api.isSecureContext

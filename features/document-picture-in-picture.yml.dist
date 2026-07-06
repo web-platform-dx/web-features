@@ -6,11 +6,13 @@ status:
   support:
     chrome: "130"
     edge: "130"
+    firefox: "151"
 compat_features:
   # baseline: false
   # support:
   #   chrome: "116"
   #   edge: "116"
+  #   firefox: "151"
   - api.DocumentPictureInPicture
   - api.DocumentPictureInPicture.enter_event
   - api.DocumentPictureInPicture.requestWindow
@@ -24,6 +26,7 @@ compat_features:
   # support:
   #   chrome: "124"
   #   edge: "124"
+  #   firefox: "151"
   - api.DocumentPictureInPicture.requestWindow.option_disallowReturnToOpener
 
   # ⬇️ Same status as overall feature ⬇️
@@ -31,4 +34,5 @@ compat_features:
   # support:
   #   chrome: "130"
   #   edge: "130"
+  #   firefox: "151"
   - api.DocumentPictureInPicture.requestWindow.option_preferInitialWindowPlacement

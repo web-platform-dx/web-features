@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "151"
+    firefox_android: "151"
 compat_features:
   # baseline: low
   # baseline_low_date: 2026-01-13
@@ -498,16 +500,11 @@ compat_features:
   #   safari_ios: "26.2"
   - css.properties.position-visibility.anchors-valid
 
-  # baseline: false
-  # support:
-  #   chrome: "144"
-  #   chrome_android: "144"
-  #   edge: "144"
-  - css.properties.anchor-name.position_after_layout
-
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "151"
+  #   firefox_android: "151"
   - css.properties.position-anchor
   - css.properties.position-anchor.auto
   - css.properties.position-anchor.none

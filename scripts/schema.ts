@@ -3,9 +3,9 @@ import fs from "node:fs";
 import path from "node:path";
 import url from 'url';
 
-import { DefinedError } from "ajv";
-import * as data from '../index.js';
-import { validate } from "./validate.js";
+import type { DefinedError } from "ajv";
+import * as data from '../index.ts';
+import { validate } from "./validate.ts";
 
 let status: 0 | 1 = 0;
 

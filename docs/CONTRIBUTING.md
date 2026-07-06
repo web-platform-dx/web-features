@@ -76,7 +76,7 @@ This table lists the fields that can be found in a feature file, and provides a 
 | `spec` | One or more specification URLs for this feature. | String, or array of strings | Yes |
 | `group` | An optional group, or list of groups that this feature belongs to. See the definition of groups under [Create a new feature from scratch](#create-a-new-feature-from-scratch). | String, or array of strings | No |
 | `caniuse` | The feature's ID on the [Can I Use](https://caniuse.com/) website. | String | No |
-| `compat_features` | @mdn/browser-compat-data (BCD) entry keys (e.g., `css.properties.background-color`) that make up this feature. If `compat_features` is not set in `<feature-id>.yml`, the `dist` script will populate `compat_features` in `<feature-id>.yml.dist` with BCD entry keys tagged with `web-features:<feature-id>` in BCD, if any exist. | Array of strings | No |
+| `compat_features` | @mdn/browser-compat-data (BCD) entry keys (e.g., `css.properties.background-color`) that make up this feature. This is typically an array of strings. Less commonly, an object consisting of three arrays of strings, `core`, `modifier`, and `spare`. Different validation rules apply the three lists. When in doubt, use a plain array (it's a shorthand for assigning all keys to the `core` array). If `compat_features` is not set in `<feature-id>.yml`, the `dist` script will populate `compat_features` in `<feature-id>.yml.dist` with BCD entry keys tagged with `web-features:<feature-id>` in BCD, if any exist. | Array of strings or object | No |
 | `status` | An optional object which describes whether the feature is considered baseline, when it achieved this baseline status, and the version number of supported browsers. In the majority of cases, this is calculated from the `compat_features` list or from browser-compat-data entries directly, and therefore not needed. | Object | No |
 | `status.compute_from` | An optional field, within the `status` object, to allows you to specify which BCD keys should the overall feature status be computed from. This is useful to list all BCD keys that are related to a feature, but only consider some of them in the baseline status calculation. | String, or array of strings | No |
 
@@ -303,7 +303,7 @@ To fix data discrepancies in your dist file, open the dist file and, under `comp
 
 Look for the feature's entrypoint in the dist file. The entrypoint of a feature is the property, interface, method, or other constituent part of the feature which web developers use first. For example, the Web Audio API feature has the `AudioContext` interface as its entrypoint. Before doing anything else, developers will first instantiate an `AudioContext` object by doing `const audioContext = new AudioContext()`.
 
-If your feature's entrypoint doesn't have the same status as the overall feature, use the `compute_from` field in your feature file to flag the BCD key (or keys) that represent the minimum viable set of constituent parts of a feature that make it usable.
+If your feature's entrypoint doesn't have the same status as the overall feature, see [_Status overrides_](./guidelines.md#status-overrides) for ways to override the computed status.
 
 ### Create a GitHub Pull Request to review and merge your changes
 

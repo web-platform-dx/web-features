@@ -57,6 +57,9 @@ compat_features:
   #   safari: "26.4"
   #   safari_ios: "26.4"
   - css.at-rules.container.container-query_optional
+  - css.properties.container-name.name-only_queries
+  - css.properties.container-type.name-only_queries
+  - css.properties.container.name-only_queries
 
   # baseline: false
   # support:
@@ -72,7 +75,15 @@ compat_features:
   #   edge: "144"
   - css.at-rules.container.scroll-state_queries.scrolled
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "148"
+  #   chrome_android: "148"
+  #   edge: "148"
+  - css.at-rules.supports.at-rule
+
+  # baseline: false
+  # support:
+  #   firefox: "151"
+  #   firefox_android: "151"
   - api.CSSContainerRule.conditions

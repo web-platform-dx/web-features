@@ -1,0 +1,21 @@
+draft_date: 2026-06-25
+name: Media Capabilities
+description: TODO
+spec: https://w3c.github.io/media-capabilities/
+compat_features:
+  - api.MediaCapabilities.decodingInfo.configuration_parameter
+  - api.MediaCapabilities.decodingInfo.configuration_parameter.type
+  - api.MediaCapabilities.decodingInfo.configuration_parameter.type.webrtc_option
+  - api.MediaCapabilities.encodingInfo.configuration_parameter
+  - api.MediaCapabilities.encodingInfo.configuration_parameter.type
+  - api.MediaCapabilities.encodingInfo.configuration_parameter.type.webrtc_option
+
+# The following features in the spec are already part of web-features:
+# - Media capabilities:
+#   - api.MediaCapabilities
+#   - api.MediaCapabilities.decodingInfo
+#   - api.MediaCapabilities.encodingInfo
+#   - api.Navigator.mediaCapabilities
+#   - api.WorkerNavigator.mediaCapabilities
+# - Encrypted media extensions:
+#   - api.MediaCapabilities.decodingInfo.configuration_parameter.keySystemConfiguration
