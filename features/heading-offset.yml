@@ -1,0 +1,9 @@
+name: Heading offset
+description: The `headingoffset` HTML attribute offsets the heading level of descendant `<h1>`–`<h6>` elements. The `headingreset` HTML attribute prevents heading offset computation from traversing beyond the element.
+spec: https://html.spec.whatwg.org/multipage/sections.html#heading-levels-&-offsets
+group: html
+compat_features:
+  - html.global_attributes.headingoffset
+  - html.global_attributes.headingreset
+  - api.HTMLElement.headingOffset
+  - api.HTMLElement.headingReset

@@ -1,4 +1,4 @@
-draft_date: 2025-11-03
+draft_date: 2026-07-06
 name: CSS Box Model Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-box-4/
@@ -49,9 +49,14 @@ compat_features:
 #   - css.properties.offset-path.padding-box
 #   - css.properties.offset-path.stroke-box
 #   - css.properties.offset-path.view-box
+# - overflow-clip-margin:
+#   - css.properties.overflow-clip-margin.content-box
+#   - css.properties.overflow-clip-margin.padding-box
 # - padding:
 #   - css.properties.padding
 #   - css.properties.padding-bottom
 #   - css.properties.padding-left
 #   - css.properties.padding-right
 #   - css.properties.padding-top
+# - Anchor positioning:
+#   - css.types.anchor-size.inset_margin
