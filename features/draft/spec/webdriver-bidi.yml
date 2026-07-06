@@ -1,4 +1,4 @@
-draft_date: 2026-06-25
+draft_date: 2026-07-06
 name: WebDriver BiDi
 description: TODO
 spec: https://w3c.github.io/webdriver-bidi/
@@ -146,6 +146,12 @@ compat_features:
   - webdriver.bidi.browsingContext.setViewport.devicePixelRatio_parameter
   - webdriver.bidi.browsingContext.setViewport.userContexts_parameter
   - webdriver.bidi.browsingContext.setViewport.viewport_parameter
+  - webdriver.bidi.browsingContext.startScreencast
+  - webdriver.bidi.browsingContext.startScreencast.context_parameter
+  - webdriver.bidi.browsingContext.startScreencast.mimeType_parameter
+  - webdriver.bidi.browsingContext.startScreencast.video_parameter
+  - webdriver.bidi.browsingContext.stopScreencast
+  - webdriver.bidi.browsingContext.stopScreencast.screencast_parameter
   - webdriver.bidi.browsingContext.traverseHistory
   - webdriver.bidi.browsingContext.traverseHistory.context_parameter
   - webdriver.bidi.browsingContext.traverseHistory.delta_parameter
