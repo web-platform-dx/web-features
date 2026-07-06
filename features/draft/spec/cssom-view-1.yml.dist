@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "150"
+    chrome_android: "150"
+    edge: "150"
 compat_features:
   - api.Element.scroll.returns_promise
   - api.Element.scrollBy.returns_promise

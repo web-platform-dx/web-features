@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "150"
+    edge: "150"
 compat_features:
   # baseline: false
   # support:
@@ -33,6 +35,8 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "150"
+  #   edge: "150"
   - api.SpeechRecognition.available_static.options_parameter.options_quality_parameter
   - api.SpeechRecognition.install_static.options_parameter.options_quality_parameter
