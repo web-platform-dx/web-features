@@ -7,12 +7,31 @@ status:
 compat_features:
   # baseline: false
   # support:
+  #   chrome: "120"
+  #   chrome_android: "120"
+  #   edge: "120"
+  #   firefox: "92"
+  #   firefox_android: "92"
+  - webdriver.bidi.session
+
+  # baseline: false
+  # support:
+  #   chrome: "120"
+  #   chrome_android: "120"
+  #   edge: "120"
+  #   firefox: "116"
+  #   firefox_android: "116"
+  - webdriver.bidi.session.end
+
+  # baseline: false
+  # support:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
   #   firefox: "92"
   #   firefox_android: "92"
-  - webdriver.bidi.session
+  - webdriver.bidi.session.new
+  - webdriver.bidi.session.new.capabilities_parameter
 
   # baseline: false
   # support:
@@ -650,8 +669,6 @@ compat_features:
   - webdriver.bidi.log.entryAdded_event.stackTrace_parameter
   - webdriver.bidi.script.message_event.source_parameter
   - webdriver.bidi.script.realmCreated_event.owners_parameter
-  - webdriver.bidi.session.new
-  - webdriver.bidi.session.new.capabilities_parameter
 
   # baseline: false
   # support:
@@ -736,12 +753,6 @@ compat_features:
   - webdriver.bidi.browsingContext.print.page_parameter
   - webdriver.bidi.browsingContext.print.scale_parameter
   - webdriver.bidi.browsingContext.print.shrinkToFit_parameter
-
-  # baseline: false
-  # support:
-  #   firefox: "116"
-  #   firefox_android: "116"
-  - webdriver.bidi.session.end
 
   # baseline: false
   # support:

@@ -986,6 +986,14 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "150"
+  #   chrome_android: "150"
+  #   edge: "150"
+  - api.Sanitizer.allowProcessingInstruction
+  - api.Sanitizer.removeProcessingInstruction
+
+  # baseline: false
+  # support:
   #   firefox: "1"
   #   firefox_android: "4"
   - api.Navigator.oscpu
@@ -1027,8 +1035,6 @@ compat_features:
   # support: {}
   - api.Document.parseHTMLUnsafe_static.options_sanitizer_parameter
   - api.Element.setHTMLUnsafe.options_sanitizer_parameter
-  - api.Sanitizer.allowProcessingInstruction
-  - api.Sanitizer.removeProcessingInstruction
   - api.ShadowRoot.setHTMLUnsafe.options_sanitizer_parameter
   - html.elements.track.kind.descriptions
   - javascript.statements.import.import_attributes.type_text
