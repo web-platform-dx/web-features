@@ -3,8 +3,8 @@ import assert from "node:assert/strict";
 import webSpecs from 'web-specs' with { type: 'json' };
 import winston from "winston";
 
-import { features } from '../index.js';
-import { isOrdinaryFeatureData } from "../type-guards.js";
+import { features } from '../index.ts';
+import { isOrdinaryFeatureData } from "../type-guards.ts";
 
 const logger = winston.createLogger({
   level: "warn",
@@ -185,10 +185,6 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because feature policy was replaced by permissions policy."
     ],
     [
-        "https://github.com/WICG/view-transitions/blob/main/scoped-transitions.md",
-        "Allowed until there's proper spec text. Follow https://github.com/w3c/csswg-drafts/issues/9890 for details."
-    ],
-    [
         "https://github.com/WICG/install-element",
         "Allowed because the <install> element is available in Chrome/Edge as an origin trial."
     ],
@@ -199,6 +195,50 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "http://webmachinelearning.github.io/prompt-api/",
         "Allowed because that's where LanguageModel (aka Prompt API) spec currently lives."
+    ],
+    [
+        "https://jpeg.org/jpeg/#content",
+        "Allowed because it's a spec not tracked in web-specs."
+    ],
+    [
+        "https://www.rfc-editor.org/info/rfc7903/#section-1.2",
+        "Allowed because it's a spec not tracked in web-specs."
+    ],
+    [
+        "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/OpaqueRange/explainer.md",
+        "Spec changes not yet merged. Replace when https://github.com/whatwg/dom/pull/1404 and https://github.com/whatwg/html/pull/11741 merge."
+    ],
+    [
+        "https://github.com/WICG/html-in-canvas/blob/main/README.md",
+        "Remove when https://github.com/whatwg/html/pull/11588 merges."
+    ],
+    [
+        "https://wicg.github.io/attribution-reporting-api/",
+        "Discontinued spec allowed for discouraged feature."
+    ],
+    [
+        "https://privacycg.github.io/requestStorageAccessFor/",
+        "Discontinued spec allowed for discouraged feature."
+    ],
+    [
+        "https://wicg.github.io/shared-storage/#web-locks-integration",
+        "Discontinued spec allowed for discouraged feature."
+    ],
+    [
+        "https://wicg.github.io/shared-storage/",
+        "Discontinued spec allowed for discouraged feature."
+    ],
+    [
+        "https://github.com/WICG/PEPC/blob/main/usermedia_element.md",
+        "Replace with https://w3c.github.io/mediacapture-extensions/#the-usermedia-html-element when https://github.com/w3c/mediacapture-extensions/pull/168 merges."
+    ],
+    [
+        "https://github.com/WICG/privacy-preserving-ads",
+        "Discontinued spec allowed for discouraged feature."
+    ],
+    [
+        "https://wicg.github.io/turtledove/",
+        "Discontinued spec allowed for discouraged feature."
     ]
 ];
 

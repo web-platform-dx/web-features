@@ -1,0 +1,6 @@
+name: Deprecation reports
+description: Deprecation reporting sends a report to a URL nominated by the `Reporting-Endpoints` header or the `ReportingObserver` API when a page uses a deprecated API or other browser feature.
+spec: https://wicg.github.io/deprecation-reporting/
+group: reporting
+compat_features:
+  - api.ReportingObserver.ReportingObserver.options_parameter.types_property.deprecation

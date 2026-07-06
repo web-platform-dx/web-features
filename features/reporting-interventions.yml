@@ -1,0 +1,16 @@
+name: Intervention reports
+description: Intervention reporting sends a report to a URL nominated by the `Reporting-Endpoints` header when the browser has not honored an application's request, contrary to specified behavior, such as for security or privacy reasons.
+spec: https://wicg.github.io/intervention-reporting/
+group: reporting
+discouraged:
+  reason: Specification authors no longer define browser behaviors as "interventions" or "non-interventions."
+  according_to: https://github.com/WICG/interventions/blob/2dc14cf385982835a5dee488e2b5295a9d441bea/README.md
+compat_features:
+  - api.InterventionReportBody
+  - api.InterventionReportBody.columnNumber
+  - api.InterventionReportBody.id
+  - api.InterventionReportBody.lineNumber
+  - api.InterventionReportBody.message
+  - api.InterventionReportBody.sourceFile
+  - api.InterventionReportBody.toJSON
+  - api.ReportingObserver.ReportingObserver.options_parameter.types_property.intervention

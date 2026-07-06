@@ -18,7 +18,7 @@ import type {
   Release,
   SnapshotData,
   Support,
-} from "./types.quicktype";
+} from "./types.quicktype.ts";
 
 // Passthrough types
 export type {

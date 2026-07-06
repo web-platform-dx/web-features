@@ -12,8 +12,8 @@ compat_features:
   - html.elements.iframe.browsingtopics
   - html.elements.iframe.allow.browsing-topics
   - api.HTMLIFrameElement.browsingTopics
-  - api.Request.Request.init_browsingTopics_parameter
-  - api.fetch.init_browsingTopics_parameter
+  - api.Request.Request.options_parameter.browsingTopics
+  - api.fetch.options_parameter.browsingTopics
   - http.headers.Observe-Browsing-Topics
   - http.headers.Permissions-Policy.browsing-topics
   - http.headers.Sec-Browsing-Topics

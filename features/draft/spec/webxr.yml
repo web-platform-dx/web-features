@@ -1,4 +1,4 @@
-draft_date: 2026-03-16
+draft_date: 2026-05-04
 name: WebXR Device API
 description: TODO
 spec: https://immersive-web.github.io/webxr/
@@ -13,6 +13,7 @@ compat_features:
   - api.XRSession.supportedFrameRates
   - api.XRSession.trackedSources
   - api.XRSession.updateTargetFrameRate
+  - api.XRSession.visibilitymaskchange_event
   - api.XRView.index
   - api.XRVisibilityMaskChangeEvent
   - api.XRVisibilityMaskChangeEvent.XRVisibilityMaskChangeEvent

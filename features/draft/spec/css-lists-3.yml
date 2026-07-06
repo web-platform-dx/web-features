@@ -1,8 +1,9 @@
-draft_date: 2026-01-19
+draft_date: 2026-05-08
 name: CSS Lists and Counters Module Level 3
 description: TODO
 spec: https://drafts.csswg.org/css-lists-3/
 compat_features:
+  - css.properties.content.alt_text.counters
   - css.selectors.marker.counter_support
 
 # The following features in the spec are already part of web-features:
@@ -34,4 +35,3 @@ compat_features:
 #   - css.properties.list-style-position.outside
 #   - css.properties.list-style-type
 #   - css.properties.list-style-type.none
-#   - css.properties.list-style-type.string

@@ -1,6 +1,6 @@
 # Curated list of Web platform features
 
-[web-features](https://web-platform-dx.github.io/web-features/web-features/) is the package that describes Web platform features and provides [Baseline](https://web-platform-dx.github.io/web-features/) status reports.
+[web-features](https://web-platform-dx.github.io/web-features-project/) is the package that describes Web platform features and provides [Baseline](https://web-platform-dx.github.io/baseline/) status reports.
 
 Subscribe to the [Upcoming changes](https://github.com/web-platform-dx/web-features/discussions/2613) announcements thread for news about upcoming releases, such as breaking changes or major features.
 
@@ -29,7 +29,7 @@ import schema from "web-features/data.schema.json" with { type: "json" };
 
 ## Rendering Baseline statuses with `web-features`
 
-If you're using `web-features` to render Baseline iconography or browser logos with support markers, then you must follow the [name and logo usage guidelines](https://web-platform-dx.github.io/web-features/name-and-logo-usage-guidelines/).
+If you're using `web-features` to render Baseline iconography or browser logos with support markers, then you must follow the [name and logo usage guidelines](https://web-platform-dx.github.io/name-and-logo-usage-guidelines/).
 
 For Baseline iconography, follow this procedure for each feature:
 

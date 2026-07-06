@@ -5,6 +5,19 @@ status:
   baseline: false
   support: {}
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "84"
+  #   chrome_android: "84"
+  #   edge: "84"
+  #   firefox: "75"
+  #   firefox_android: "79"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.Element.getAnimations.options_parameter
+
   # baseline: low
   # baseline_low_date: 2025-12-12
   # support:
@@ -29,3 +42,9 @@ compat_features:
   #   firefox: "142"
   #   firefox_android: "142"
   - api.Animation.commitStyles.endpoint_inclusive_commitStyles
+
+  # baseline: false
+  # support:
+  #   firefox: "152"
+  #   firefox_android: "152"
+  - api.Element.getAnimations.options_parameter.pseudoElement_option

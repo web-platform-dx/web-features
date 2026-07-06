@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "144"
-    chrome_android: "144"
-    edge: "144"
+  support: {}
 compat_features:
   # baseline: high
   # baseline_low_date: 2023-02-14
@@ -49,10 +46,44 @@ compat_features:
   #   safari_ios: "18.4"
   - css.properties.container-type.weak_containment
 
-  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2026-05-07
+  # support:
+  #   chrome: "148"
+  #   chrome_android: "148"
+  #   edge: "148"
+  #   firefox: "149"
+  #   firefox_android: "149"
+  #   safari: "26.4"
+  #   safari_ios: "26.4"
+  - css.at-rules.container.container-query_optional
+  - css.properties.container-name.name-only_queries
+  - css.properties.container-type.name-only_queries
+  - css.properties.container.name-only_queries
+
+  # baseline: false
+  # support:
+  #   chrome: "137"
+  #   chrome_android: "137"
+  #   edge: "137"
+  - css.types.if.style
+
   # baseline: false
   # support:
   #   chrome: "144"
   #   chrome_android: "144"
   #   edge: "144"
   - css.at-rules.container.scroll-state_queries.scrolled
+
+  # baseline: false
+  # support:
+  #   chrome: "148"
+  #   chrome_android: "148"
+  #   edge: "148"
+  - css.at-rules.supports.at-rule
+
+  # baseline: false
+  # support:
+  #   firefox: "151"
+  #   firefox_android: "151"
+  - api.CSSContainerRule.conditions
