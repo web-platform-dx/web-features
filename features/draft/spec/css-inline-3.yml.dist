@@ -7,6 +7,15 @@ status:
 compat_features:
   # baseline: false
   # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   safari: "5.1"
+  #   safari_ios: "5"
+  - css.properties.alignment-baseline.hanging
+
+  # baseline: false
+  # support:
   #   chrome: "133"
   #   chrome_android: "133"
   #   edge: "133"
@@ -47,3 +56,12 @@ compat_features:
   - css.properties.vertical-align.center
   - css.properties.vertical-align.first
   - css.properties.vertical-align.last
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.vertical-align.alphabetic
+  - css.properties.vertical-align.central
+  - css.properties.vertical-align.hanging
+  - css.properties.vertical-align.ideographic
+  - css.properties.vertical-align.mathematical
