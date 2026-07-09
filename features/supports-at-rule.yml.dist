@@ -3,4 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "148"
+    chrome_android: "148"
+    edge: "148"
+compat_features:
+  - css.at-rules.supports.at-rule
