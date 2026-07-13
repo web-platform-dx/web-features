@@ -54,6 +54,14 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "123"
+  #   edge: "123"
+  #   firefox: "151"
+  #   firefox_android: "151"
+  - css.at-rules.media.display-mode.picture-in-picture
+
+  # baseline: false
+  # support:
   #   chrome: "69"
   #   chrome_android: "105"
   #   edge: "79"
@@ -65,9 +73,3 @@ compat_features:
   #   chrome_android: "105"
   #   edge: "88"
   - http.headers.Permissions-Policy.picture-in-picture
-
-  # baseline: false
-  # support:
-  #   chrome: "123"
-  #   edge: "123"
-  - css.at-rules.media.display-mode.picture-in-picture

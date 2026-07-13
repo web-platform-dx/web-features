@@ -1,8 +1,16 @@
-draft_date: 2025-11-03
+draft_date: 2026-07-06
 name: CSS Inline Layout Module Level 3
 description: TODO
 spec: https://drafts.csswg.org/css-inline-3/
 compat_features:
+  - css.properties.alignment-baseline.hanging
+  - css.properties.alignment-baseline.text-bottom
+  - css.properties.alignment-baseline.text-top
+  - css.properties.baseline-shift.bottom
+  - css.properties.baseline-shift.center
+  - css.properties.baseline-shift.top
+  - css.properties.dominant-baseline.text-bottom
+  - css.properties.dominant-baseline.text-top
   - css.properties.text-box-edge.cap
   - css.properties.text-box-edge.ex
   - css.properties.text-box-edge.ideographic
@@ -18,6 +26,14 @@ compat_features:
   - css.properties.text-box.trim-both
   - css.properties.text-box.trim-end
   - css.properties.text-box.trim-start
+  - css.properties.vertical-align.alphabetic
+  - css.properties.vertical-align.center
+  - css.properties.vertical-align.central
+  - css.properties.vertical-align.first
+  - css.properties.vertical-align.hanging
+  - css.properties.vertical-align.ideographic
+  - css.properties.vertical-align.last
+  - css.properties.vertical-align.mathematical
 
 # The following features in the spec are already part of web-features:
 # - alignment-baseline:
@@ -32,7 +48,6 @@ compat_features:
 #   - css.properties.alignment-baseline.text-before-edge
 # - baseline-shift:
 #   - css.properties.baseline-shift
-#   - css.properties.baseline-shift.baseline
 #   - css.properties.baseline-shift.sub
 #   - css.properties.baseline-shift.super
 # - baseline-source:
@@ -74,10 +89,8 @@ compat_features:
 #   - css.properties.vertical-align
 #   - css.properties.vertical-align.baseline
 #   - css.properties.vertical-align.bottom
-#   - css.properties.vertical-align.middle
 #   - css.properties.vertical-align.sub
 #   - css.properties.vertical-align.super
-#   - css.properties.vertical-align.text-bottom
 #   - css.properties.vertical-align.text-top
 #   - css.properties.vertical-align.top
 # - SVG:

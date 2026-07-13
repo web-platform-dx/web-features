@@ -10,9 +10,9 @@ import winston from "winston";
 import { Document, parse } from "yaml";
 import yargs from "yargs";
 
-import { features } from "../index.js";
-import { isOrdinaryFeatureData } from "../type-guards.js";
-import { FeatureData } from "../types.js";
+import { features } from "../index.ts";
+import { isOrdinaryFeatureData } from "../type-guards.ts";
+import type { FeatureData } from "../types.ts";
 
 type WebSpecsSpec = (typeof webSpecs)[number];
 
@@ -20,11 +20,13 @@ const argv = yargs(process.argv.slice(2))
   .scriptName("update-drafts")
   .usage("$0", "Update draft features with BCD keys mentioned in specs.")
   .option("keys", {
-    type: "array",
+    type: "string",
+    array: true,
     describe: "Keys to match",
   })
   .option("paths", {
-    type: "array",
+    type: "string",
+    array: true,
     describe: "Draft feature files to update",
   })
   .option("verbose", {
@@ -33,7 +35,8 @@ const argv = yargs(process.argv.slice(2))
     type: "count",
     default: 0,
     defaultDescription: "warn",
-  }).argv;
+  })
+  .parseSync();
 
 const logger = winston.createLogger({
   level: argv.verbose > 0 ? "debug" : "info",

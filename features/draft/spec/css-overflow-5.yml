@@ -1,8 +1,17 @@
-draft_date: 2026-02-16
+draft_date: 2026-07-06
 name: CSS Overflow Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-overflow-5/
 compat_features:
+  - css.properties.block-ellipsis
+  - css.properties.block-ellipsis.auto
+  - css.properties.continue
+  - css.properties.continue.auto
+  - css.properties.continue.discard
+  - css.properties.line-clamp.auto
+  - css.properties.line-clamp.no-ellipsis
+  - css.properties.max-lines
+  - css.properties.max-lines.none
   - css.properties.overflow-block.auto
   - css.properties.overflow-block.clip
   - css.properties.overflow-block.hidden
@@ -52,8 +61,6 @@ compat_features:
 # - overflow-clip-margin:
 #   - css.properties.overflow-clip-margin
 #   - css.properties.overflow-clip-margin.border-box
-#   - css.properties.overflow-clip-margin.content-box
-#   - css.properties.overflow-clip-margin.padding-box
 # - scroll-behavior:
 #   - css.properties.scroll-behavior
 #   - css.properties.scroll-behavior.auto
@@ -79,8 +86,6 @@ compat_features:
 #   - css.properties.text-overflow.ellipsis
 #   - css.properties.text-overflow.two_value_syntax
 #   - svg.global_attributes.text-overflow
-# - Custom ellipses:
-#   - css.properties.text-overflow.string
 # - ::scroll-button:
 #   - css.selectors.scroll-button
 #   - css.selectors.scroll-button.block-end

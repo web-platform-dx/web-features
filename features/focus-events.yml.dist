@@ -70,10 +70,12 @@ compat_features:
   - api.FocusEvent.FocusEvent
   - api.FocusEvent.relatedTarget
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-02-14
   # support:
   #   chrome: "145"
   #   chrome_android: "145"
+  #   edge: "145"
   #   firefox: "104"
   #   firefox_android: "104"
   #   safari: "18.4"

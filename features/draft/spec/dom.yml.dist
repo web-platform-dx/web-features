@@ -4,11 +4,62 @@
 status:
   baseline: false
   support:
-    chrome: "83"
-    chrome_android: "83"
-    edge: "83"
-    safari: "26"
-    safari_ios: "26"
+    chrome: "146"
+    chrome_android: "146"
+    edge: "146"
 compat_features:
-  - api.Element.setAttribute.enforces_trusted_types
-  - api.Element.setAttributeNS.enforces_trusted_types
+  # baseline: high
+  # baseline_low_date: 2023-03-27
+  # baseline_high_date: 2025-09-27
+  # support:
+  #   chrome: "86"
+  #   chrome_android: "86"
+  #   edge: "86"
+  #   firefox: "92"
+  #   firefox_android: "92"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.Element.attachShadow.options_slotAssignment_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "56"
+  #   chrome_android: "56"
+  #   edge: "79"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.Document.createElement.options_parameter.options_is_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "143"
+  #   chrome_android: "143"
+  #   edge: "143"
+  #   firefox: "149"
+  #   firefox_android: "149"
+  - api.CustomElementRegistry.define.html_name_validity
+  - api.CustomElementRegistry.whenDefined.html_name_validity
+  - api.Document.createAttribute.html_name_validity
+  - api.Document.createAttributeNS.html_name_validity
+  - api.Document.createElement.html_name_validity
+  - api.Document.createElementNS.html_name_validity
+  - api.Element.setAttribute.html_name_validity
+  - api.Element.setAttributeNodeNS.html_name_validity
+  - api.Element.toggleAttribute.html_name_validity
+
+  # baseline: false
+  # support:
+  #   chrome: "146"
+  #   chrome_android: "146"
+  #   edge: "146"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.Document.createElement.options_parameter.customElementRegistry_option
+  - api.Document.createElementNS.options_parameter.customElementRegistry_option
+
+  # baseline: false
+  # support:
+  #   chrome: "56"
+  #   chrome_android: "56"
+  #   edge: "79"
+  - api.Document.createElementNS.options_parameter.options_is_parameter

@@ -1,8 +1,22 @@
-draft_date: 2026-02-16
+draft_date: 2026-05-08
 name: Media Queries Level 5
 description: TODO
 spec: https://drafts.csswg.org/mediaqueries-5/
 compat_features:
+  - api.Navigator.preferences
+  - api.PreferenceManager
+  - api.PreferenceManager.colorScheme
+  - api.PreferenceManager.contrast
+  - api.PreferenceManager.reducedData
+  - api.PreferenceManager.reducedMotion
+  - api.PreferenceManager.reducedTransparency
+  - api.PreferenceObject
+  - api.PreferenceObject.change_event
+  - api.PreferenceObject.clearOverride
+  - api.PreferenceObject.override
+  - api.PreferenceObject.requestOverride
+  - api.PreferenceObject.validValues
+  - api.PreferenceObject.value
   - css.at-rules.media.scan
 
 # The following features in the spec are already part of web-features:
@@ -19,12 +33,9 @@ compat_features:
 #   - css.at-rules.media.media_features
 #   - css.at-rules.media.media_query_values
 #   - css.at-rules.media.monochrome
-#   - css.at-rules.media.nested-queries
 #   - css.at-rules.media.or_syntax
 #   - css.at-rules.media.orientation
 #   - css.at-rules.media.width
-#   - css.types.ratio
-#   - css.types.ratio.number_value
 # - Interaction media queries:
 #   - css.at-rules.media.any-hover
 #   - css.at-rules.media.any-pointer

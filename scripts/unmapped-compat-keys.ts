@@ -3,9 +3,9 @@ import { coreBrowserSet } from "compute-baseline";
 import { Compat, Feature } from "compute-baseline/browser-compat-data";
 import winston from "winston";
 import yargs from "yargs";
-import { features } from "../index.js";
+import { features } from "../index.ts";
 import { support } from "../packages/compute-baseline/dist/baseline/support.js";
-import { isOrdinaryFeatureData } from "../type-guards.js";
+import { isOrdinaryFeatureData } from "../type-guards.ts";
 
 const compat = new Compat();
 const browsers = coreBrowserSet.map((b) => compat.browser(b));
@@ -29,7 +29,8 @@ const argv = yargs(process.argv.slice(2))
     type: "count",
     default: 0,
     defaultDescription: "warn",
-  }).argv;
+  })
+  .parseSync();
 
 const logger = winston.createLogger({
   level: argv.verbose > 0 ? "debug" : "warn",

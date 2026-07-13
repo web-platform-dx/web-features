@@ -3,20 +3,23 @@
 
 status:
   baseline: false
-  support:
-    chrome: "142"
-    edge: "142"
+  support: {}
 compat_features:
   # baseline: false
   # support:
   #   chrome: "139"
   #   edge: "139"
   - api.SpeechRecognition.available_static
+  - api.SpeechRecognition.available_static.options_parameter
+  - api.SpeechRecognition.available_static.options_parameter.options_langs_parameter
+  - api.SpeechRecognition.available_static.options_parameter.options_processLocally_parameter
   - api.SpeechRecognition.install_static
+  - api.SpeechRecognition.install_static.options_parameter
+  - api.SpeechRecognition.install_static.options_parameter.options_langs_parameter
+  - api.SpeechRecognition.install_static.options_parameter.options_processLocally_parameter
   - api.SpeechRecognition.processLocally
   - api.SpeechRecognition.start.audioTrack
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "142"
@@ -27,3 +30,15 @@ compat_features:
   - api.SpeechRecognitionPhrase.boost
   - api.SpeechRecognitionPhrase.phrase
   - http.headers.Permissions-Policy.on-device-speech-recognition
+
+  # baseline: false
+  # support:
+  #   chrome: "150"
+  #   edge: "150"
+  - api.SpeechRecognition.available_static.options_parameter.options_quality_parameter
+  - api.SpeechRecognition.install_static.options_parameter.options_quality_parameter
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.SpeechRecognition.unspokenPunctuation

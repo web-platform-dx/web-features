@@ -3,4 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "146"
+    chrome_android: "146"
+    edge: "146"
+compat_features:
+  - html.elements.meta.name.text-scale

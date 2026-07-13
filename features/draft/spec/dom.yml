@@ -1,10 +1,22 @@
-draft_date: 2026-02-04
+draft_date: 2026-05-18
 name: DOM
 description: TODO
 spec: https://dom.spec.whatwg.org/
 compat_features:
-  - api.Element.setAttribute.enforces_trusted_types
-  - api.Element.setAttributeNS.enforces_trusted_types
+  - api.CustomElementRegistry.define.html_name_validity
+  - api.CustomElementRegistry.whenDefined.html_name_validity
+  - api.Document.createAttribute.html_name_validity
+  - api.Document.createAttributeNS.html_name_validity
+  - api.Document.createElement.html_name_validity
+  - api.Document.createElement.options_parameter.customElementRegistry_option
+  - api.Document.createElement.options_parameter.options_is_parameter
+  - api.Document.createElementNS.html_name_validity
+  - api.Document.createElementNS.options_parameter.customElementRegistry_option
+  - api.Document.createElementNS.options_parameter.options_is_parameter
+  - api.Element.attachShadow.options_slotAssignment_parameter
+  - api.Element.setAttribute.html_name_validity
+  - api.Element.setAttributeNodeNS.html_name_validity
+  - api.Element.toggleAttribute.html_name_validity
 
 # The following features in the spec are already part of web-features:
 # - AbortController and AbortSignal:
@@ -20,9 +32,10 @@ compat_features:
 #   - api.AbortSignal.aborted
 #   - api.AbortSignal.reason
 #   - api.AbortSignal.throwIfAborted
-#   - api.AbortSignal.timeout_static
 # - AbortSignal.any():
 #   - api.AbortSignal.any_static
+# - AbortSignal.timeout():
+#   - api.AbortSignal.timeout_static
 # - Selection:
 #   - api.AbstractRange
 #   - api.AbstractRange.collapsed
@@ -359,8 +372,6 @@ compat_features:
 #   - api.Document.customElementRegistry
 #   - api.Element.customElementRegistry
 #   - api.ShadowRoot.customElementRegistry
-# - Feature policy:
-#   - api.Document.featurePolicy
 # - moveBefore():
 #   - api.Document.moveBefore
 #   - api.DocumentFragment.moveBefore
@@ -371,7 +382,6 @@ compat_features:
 #   - api.HTMLSlotElement.slotchange_event
 #   - api.Text.assignedSlot
 #   - html.elements.slot
-#   - html.elements.slot.name
 #   - html.global_attributes.slot
 # - Shadow DOM:
 #   - api.Element.attachShadow
@@ -407,6 +417,8 @@ compat_features:
 #   - api.MutationRecord.type
 # - Imperative slot assignment:
 #   - api.ShadowRoot.slotAssignment
+# - beforeunload:
+#   - api.Window.beforeunload_event.preventdefault_activation
 # - XSLT:
 #   - api.XSLTProcessor
 #   - api.XSLTProcessor.XSLTProcessor

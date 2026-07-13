@@ -1,9 +1,8 @@
-draft_date: 2026-02-16
+draft_date: 2026-07-06
 name: WebDriver BiDi
 description: TODO
 spec: https://w3c.github.io/webdriver-bidi/
 compat_features:
-  - webdriver.bidi.bluetooth
   - webdriver.bidi.browser
   - webdriver.bidi.browser.close
   - webdriver.bidi.browser.createUserContext
@@ -16,6 +15,11 @@ compat_features:
   - webdriver.bidi.browser.removeUserContext.userContext_parameter
   - webdriver.bidi.browser.setClientWindowState
   - webdriver.bidi.browser.setClientWindowState.clientWindow_parameter
+  - webdriver.bidi.browser.setClientWindowState.height_parameter
+  - webdriver.bidi.browser.setClientWindowState.state_parameter
+  - webdriver.bidi.browser.setClientWindowState.width_parameter
+  - webdriver.bidi.browser.setClientWindowState.x_parameter
+  - webdriver.bidi.browser.setClientWindowState.y_parameter
   - webdriver.bidi.browser.setDownloadBehavior
   - webdriver.bidi.browser.setDownloadBehavior.downloadBehavior_parameter
   - webdriver.bidi.browser.setDownloadBehavior.userContexts_parameter
@@ -56,6 +60,7 @@ compat_features:
   - webdriver.bidi.browsingContext.domContentLoaded_event.navigation_parameter
   - webdriver.bidi.browsingContext.domContentLoaded_event.timestamp_parameter
   - webdriver.bidi.browsingContext.domContentLoaded_event.url_parameter
+  - webdriver.bidi.browsingContext.domContentLoaded_event.userContext_parameter
   - webdriver.bidi.browsingContext.downloadEnd_event
   - webdriver.bidi.browsingContext.downloadEnd_event.context_parameter
   - webdriver.bidi.browsingContext.downloadEnd_event.filepath_parameter
@@ -63,17 +68,20 @@ compat_features:
   - webdriver.bidi.browsingContext.downloadEnd_event.status_parameter
   - webdriver.bidi.browsingContext.downloadEnd_event.timestamp_parameter
   - webdriver.bidi.browsingContext.downloadEnd_event.url_parameter
+  - webdriver.bidi.browsingContext.downloadEnd_event.userContext_parameter
   - webdriver.bidi.browsingContext.downloadWillBegin_event
   - webdriver.bidi.browsingContext.downloadWillBegin_event.context_parameter
   - webdriver.bidi.browsingContext.downloadWillBegin_event.navigation_parameter
   - webdriver.bidi.browsingContext.downloadWillBegin_event.suggestedFilename_parameter
   - webdriver.bidi.browsingContext.downloadWillBegin_event.timestamp_parameter
   - webdriver.bidi.browsingContext.downloadWillBegin_event.url_parameter
+  - webdriver.bidi.browsingContext.downloadWillBegin_event.userContext_parameter
   - webdriver.bidi.browsingContext.fragmentNavigated_event
   - webdriver.bidi.browsingContext.fragmentNavigated_event.context_parameter
   - webdriver.bidi.browsingContext.fragmentNavigated_event.navigation_parameter
   - webdriver.bidi.browsingContext.fragmentNavigated_event.timestamp_parameter
   - webdriver.bidi.browsingContext.fragmentNavigated_event.url_parameter
+  - webdriver.bidi.browsingContext.fragmentNavigated_event.userContext_parameter
   - webdriver.bidi.browsingContext.getTree
   - webdriver.bidi.browsingContext.getTree.maxDepth_parameter
   - webdriver.bidi.browsingContext.getTree.root_parameter
@@ -85,11 +93,13 @@ compat_features:
   - webdriver.bidi.browsingContext.historyUpdated_event.context_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event.timestamp_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event.url_parameter
+  - webdriver.bidi.browsingContext.historyUpdated_event.userContext_parameter
   - webdriver.bidi.browsingContext.load_event
   - webdriver.bidi.browsingContext.load_event.context_parameter
   - webdriver.bidi.browsingContext.load_event.navigation_parameter
   - webdriver.bidi.browsingContext.load_event.timestamp_parameter
   - webdriver.bidi.browsingContext.load_event.url_parameter
+  - webdriver.bidi.browsingContext.load_event.userContext_parameter
   - webdriver.bidi.browsingContext.locateNodes
   - webdriver.bidi.browsingContext.locateNodes.context_parameter
   - webdriver.bidi.browsingContext.locateNodes.locator_parameter
@@ -105,16 +115,19 @@ compat_features:
   - webdriver.bidi.browsingContext.navigationCommitted_event.navigation_parameter
   - webdriver.bidi.browsingContext.navigationCommitted_event.timestamp_parameter
   - webdriver.bidi.browsingContext.navigationCommitted_event.url_parameter
+  - webdriver.bidi.browsingContext.navigationCommitted_event.userContext_parameter
   - webdriver.bidi.browsingContext.navigationFailed_event
   - webdriver.bidi.browsingContext.navigationFailed_event.context_parameter
   - webdriver.bidi.browsingContext.navigationFailed_event.navigation_parameter
   - webdriver.bidi.browsingContext.navigationFailed_event.timestamp_parameter
   - webdriver.bidi.browsingContext.navigationFailed_event.url_parameter
+  - webdriver.bidi.browsingContext.navigationFailed_event.userContext_parameter
   - webdriver.bidi.browsingContext.navigationStarted_event
   - webdriver.bidi.browsingContext.navigationStarted_event.context_parameter
   - webdriver.bidi.browsingContext.navigationStarted_event.navigation_parameter
   - webdriver.bidi.browsingContext.navigationStarted_event.timestamp_parameter
   - webdriver.bidi.browsingContext.navigationStarted_event.url_parameter
+  - webdriver.bidi.browsingContext.navigationStarted_event.userContext_parameter
   - webdriver.bidi.browsingContext.print
   - webdriver.bidi.browsingContext.print.background_parameter
   - webdriver.bidi.browsingContext.print.context_parameter
@@ -133,6 +146,12 @@ compat_features:
   - webdriver.bidi.browsingContext.setViewport.devicePixelRatio_parameter
   - webdriver.bidi.browsingContext.setViewport.userContexts_parameter
   - webdriver.bidi.browsingContext.setViewport.viewport_parameter
+  - webdriver.bidi.browsingContext.startScreencast
+  - webdriver.bidi.browsingContext.startScreencast.context_parameter
+  - webdriver.bidi.browsingContext.startScreencast.mimeType_parameter
+  - webdriver.bidi.browsingContext.startScreencast.video_parameter
+  - webdriver.bidi.browsingContext.stopScreencast
+  - webdriver.bidi.browsingContext.stopScreencast.screencast_parameter
   - webdriver.bidi.browsingContext.traverseHistory
   - webdriver.bidi.browsingContext.traverseHistory.context_parameter
   - webdriver.bidi.browsingContext.traverseHistory.delta_parameter
@@ -144,6 +163,7 @@ compat_features:
   - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.beforeunload
   - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.confirm
   - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.prompt
+  - webdriver.bidi.browsingContext.userPromptClosed_event.userContext_parameter
   - webdriver.bidi.browsingContext.userPromptClosed_event.userText_parameter
   - webdriver.bidi.browsingContext.userPromptOpened_event
   - webdriver.bidi.browsingContext.userPromptOpened_event.context_parameter
@@ -155,6 +175,7 @@ compat_features:
   - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.beforeunload
   - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.confirm
   - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.prompt
+  - webdriver.bidi.browsingContext.userPromptOpened_event.userContext_parameter
   - webdriver.bidi.emulation
   - webdriver.bidi.emulation.setGeolocationOverride
   - webdriver.bidi.emulation.setGeolocationOverride.contexts_parameter
@@ -192,6 +213,7 @@ compat_features:
   - webdriver.bidi.input.fileDialogOpened_event.context_parameter
   - webdriver.bidi.input.fileDialogOpened_event.element_parameter
   - webdriver.bidi.input.fileDialogOpened_event.multiple_parameter
+  - webdriver.bidi.input.fileDialogOpened_event.userContext_parameter
   - webdriver.bidi.input.performActions
   - webdriver.bidi.input.performActions.actions_parameter
   - webdriver.bidi.input.performActions.context_parameter
@@ -232,6 +254,7 @@ compat_features:
   - webdriver.bidi.network.authRequired_event.request_parameter
   - webdriver.bidi.network.authRequired_event.response_parameter
   - webdriver.bidi.network.authRequired_event.timestamp_parameter
+  - webdriver.bidi.network.authRequired_event.userContext_parameter
   - webdriver.bidi.network.beforeRequestSent_event
   - webdriver.bidi.network.beforeRequestSent_event.context_parameter
   - webdriver.bidi.network.beforeRequestSent_event.initiator_parameter
@@ -241,6 +264,7 @@ compat_features:
   - webdriver.bidi.network.beforeRequestSent_event.redirectCount_parameter
   - webdriver.bidi.network.beforeRequestSent_event.request_parameter
   - webdriver.bidi.network.beforeRequestSent_event.timestamp_parameter
+  - webdriver.bidi.network.beforeRequestSent_event.userContext_parameter
   - webdriver.bidi.network.continueRequest
   - webdriver.bidi.network.continueRequest.body_parameter
   - webdriver.bidi.network.continueRequest.cookies_parameter
@@ -273,6 +297,7 @@ compat_features:
   - webdriver.bidi.network.fetchError_event.redirectCount_parameter
   - webdriver.bidi.network.fetchError_event.request_parameter
   - webdriver.bidi.network.fetchError_event.timestamp_parameter
+  - webdriver.bidi.network.fetchError_event.userContext_parameter
   - webdriver.bidi.network.getData
   - webdriver.bidi.network.getData.collector_parameter
   - webdriver.bidi.network.getData.dataType_parameter
@@ -300,6 +325,7 @@ compat_features:
   - webdriver.bidi.network.responseCompleted_event.request_parameter
   - webdriver.bidi.network.responseCompleted_event.response_parameter
   - webdriver.bidi.network.responseCompleted_event.timestamp_parameter
+  - webdriver.bidi.network.responseCompleted_event.userContext_parameter
   - webdriver.bidi.network.responseStarted_event
   - webdriver.bidi.network.responseStarted_event.context_parameter
   - webdriver.bidi.network.responseStarted_event.intercepts_parameter
@@ -309,6 +335,7 @@ compat_features:
   - webdriver.bidi.network.responseStarted_event.request_parameter
   - webdriver.bidi.network.responseStarted_event.response_parameter
   - webdriver.bidi.network.responseStarted_event.timestamp_parameter
+  - webdriver.bidi.network.responseStarted_event.userContext_parameter
   - webdriver.bidi.network.setCacheBehavior
   - webdriver.bidi.network.setCacheBehavior.cacheBehavior_parameter
   - webdriver.bidi.network.setCacheBehavior.contexts_parameter
@@ -341,6 +368,8 @@ compat_features:
   - webdriver.bidi.script.getRealms
   - webdriver.bidi.script.getRealms.context_parameter
   - webdriver.bidi.script.getRealms.type_parameter
+  - webdriver.bidi.script.getRealms.type_parameter.window
+  - webdriver.bidi.script.getRealms.type_parameter.worker
   - webdriver.bidi.script.message_event
   - webdriver.bidi.script.message_event.channel_parameter
   - webdriver.bidi.script.message_event.data_parameter
@@ -352,6 +381,7 @@ compat_features:
   - webdriver.bidi.script.realmCreated_event.realm_parameter
   - webdriver.bidi.script.realmCreated_event.sandbox_parameter
   - webdriver.bidi.script.realmCreated_event.type_parameter
+  - webdriver.bidi.script.realmCreated_event.userContext_parameter
   - webdriver.bidi.script.realmDestroyed_event
   - webdriver.bidi.script.realmDestroyed_event.realm_parameter
   - webdriver.bidi.script.removePreloadScript
@@ -366,7 +396,6 @@ compat_features:
   - webdriver.bidi.session.subscribe.events_parameter
   - webdriver.bidi.session.subscribe.userContexts_parameter
   - webdriver.bidi.session.unsubscribe
-  - webdriver.bidi.session.unsubscribe.contexts_parameter
   - webdriver.bidi.session.unsubscribe.events_parameter
   - webdriver.bidi.storage
   - webdriver.bidi.storage.deleteCookies
@@ -378,7 +407,6 @@ compat_features:
   - webdriver.bidi.storage.setCookie
   - webdriver.bidi.storage.setCookie.cookie_parameter
   - webdriver.bidi.storage.setCookie.partition_parameter
-  - webdriver.bidi.userAgentClientHints
   - webdriver.bidi.webExtension
   - webdriver.bidi.webExtension.install
   - webdriver.bidi.webExtension.install.extensionData_parameter

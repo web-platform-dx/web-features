@@ -3,9 +3,14 @@ description: The `overscroll-behavior` CSS property disables default scrolling b
 spec: https://drafts.csswg.org/css-overscroll-1/
 caniuse: css-overscroll-behavior
 group: scrolling
-# TODO: Removed compute_from when https://github.com/mdn/browser-compat-data/issues/24511 resolves incorrect Edge data.
-status:
-  compute_from: css.properties.overscroll-behavior-x
+# TODO: https://github.com/web-platform-dx/web-features/issues/1971
+# Status changed: https://github.com/web-platform-dx/web-features/pull/3991/changes
+# 2026-04-28 — high → false — The `overscroll-behavior` property does not work consistently across browsers when a scroll container has no overflow.
+# References:
+# - https://github.com/mdn/browser-compat-data/pull/29496
+# - https://bugzilla.mozilla.org/show_bug.cgi?id=1837436
+# - https://issues.chromium.org/issues/41371072
+# - https://bugs.webkit.org/show_bug.cgi?id=243452
 compat_features:
   - css.properties.overscroll-behavior
   - css.properties.overscroll-behavior-block

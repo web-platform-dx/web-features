@@ -6,5 +6,7 @@ status:
   support:
     chrome: "145"
     chrome_android: "145"
+    edge: "145"
 compat_features:
+  - api.VideoFrame.VideoFrame.metadata_option
   - api.VideoFrame.metadata

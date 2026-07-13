@@ -1,0 +1,26 @@
+name: Crash reporting
+description: Crash reporting sends a report to a URL nominated by the `Reporting-Endpoints` header when a user is unable to continue using the page because the browser or tab crashed.
+spec: https://wicg.github.io/crash-reporting/
+group: reporting
+# This was first implemented in Chrome 72 via the now-deprecated `Report-To`
+# header. Crash reporting thus predates `Reporting-Endpoints`. This somewhat
+# strangely makes the `http.headers.Reporting-Endpoints` the de facto inception
+# key for this feature. We can't (yet) overlap keys, so this status override is
+# required for now. Further reading:
+# - https://chromestatus.com/feature/6683949661159424
+# - https://bugzilla.mozilla.org/show_bug.cgi?id=1860588
+# - https://bugs.webkit.org/show_bug.cgi?id=269925
+status:
+  baseline: false
+  support:
+    chrome: "96"
+    chrome_android: "96"
+    edge: "96"
+    firefox: "149"
+    firefox_android: "149"
+compat_features:
+  # Include this key when https://github.com/web-platform-dx/web-features/issues/1173 is resolved:
+  # - http.headers.Reporting-Endpoints
+  # This key appeared later, allowing developers to opt-in to receiving _only_
+  # those reports, so it's excluded from the status calculation.
+  - http.headers.Reporting-Endpoints.crash-reporting

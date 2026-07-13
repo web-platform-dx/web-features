@@ -1,4 +1,9 @@
 import { coreBrowserSet, getStatus } from "compute-baseline";
+import {
+  Compat,
+  feature,
+  SupportStatement,
+} from "compute-baseline/browser-compat-data";
 import escapeHtml from "escape-html";
 import fs from "node:fs";
 import path from "node:path";
@@ -6,33 +11,27 @@ import { fileURLToPath } from "node:url";
 import winston from "winston";
 import YAML from "yaml";
 import yargs from "yargs";
-import { features } from "..";
-import { defaultCompat } from "../packages/compute-baseline/dist/browser-compat-data/compat";
-import { feature } from "../packages/compute-baseline/dist/browser-compat-data/feature";
-import { SupportStatement } from "../packages/compute-baseline/dist/browser-compat-data/supportStatements";
-import { convertHTML } from "../text";
-import { FeatureData } from "../types";
+import { features } from "../index.ts";
+import { convertHTML } from "../text.ts";
+import type { FeatureData } from "../types.ts";
 
-interface Args {
-  paths: string[];
-  verbose: number;
-}
+const compat = new Compat();
 
 const argv = yargs(process.argv.slice(2))
   .scriptName("dist")
-  .usage("$0 [paths..]", "Inspect a .yml or .dist file", (yargs) =>
-    yargs.positional("paths", {
-      describe: "Directories or files to inspect.",
-      default: ["features/a.yml"],
-    }),
-  )
+  .usage("$0 [paths..]", "Inspect a .yml or .dist file")
+  .positional("paths", {
+    describe: "Directories or files to inspect.",
+    default: ["features/a.yml"],
+  })
   .option("verbose", {
     alias: "v",
     describe: "Show more detail",
     type: "count",
     default: 0,
     defaultDescription: "warn",
-  }).argv as Args;
+  })
+  .parseSync();
 
 const logger = winston.createLogger({
   level: argv.verbose > 0 ? "debug" : "warn",
@@ -99,7 +98,7 @@ function getNotes(compatKey: string): Map<string, string[]> {
   const f = feature(compatKey);
   for (const browserKey of coreBrowserSet) {
     const statements = f
-      .supportStatements(defaultCompat.browser(browserKey))
+      .supportStatements(compat.browser(browserKey))
       .filter(isEligibleStatement);
     for (const statement of statements) {
       const notes = Array.isArray(statement.data.notes!)

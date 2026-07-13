@@ -8,7 +8,7 @@ import { isDeepStrictEqual } from "node:util";
 import winston from "winston";
 import YAML from "yaml";
 import yargs from "yargs";
-import { checkForStaleCompat } from "./dist";
+import { checkForStaleCompat } from "../compat-helpers.ts";
 
 const compat = new Compat();
 
@@ -17,17 +17,21 @@ const argv = yargs(process.argv.slice(2))
   .usage(
     "$0 [paths..]",
     "Remove `compat_features` from `.yml` files that have an equivalently tagged set of features in @mdn/browser-compat-data",
-    (yargs) =>
-      yargs
-        .positional("paths", {
-          describe: "Directories or files to check/update.",
-          default: ["features"],
-        })
-        .option("f", {
-          alias: "force",
-          type: "boolean",
-        }),
-  ).argv;
+  )
+  .positional("paths", {
+    describe: "Directories or files to check/update.",
+    default: ["features"],
+  })
+  .option("force", {
+    alias: "f",
+    type: "boolean",
+  })
+  .option("verbose", {
+    alias: "v",
+    type: "count",
+    default: 0,
+  })
+  .parseSync();
 
 const logger = winston.createLogger({
   level: argv.verbose > 0 ? "debug" : "warn",
@@ -119,7 +123,7 @@ function main() {
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  checkForStaleCompat();
+  checkForStaleCompat(logger);
   main();
   process.exit(exitStatus);
 }
