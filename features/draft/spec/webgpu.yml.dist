@@ -82,6 +82,16 @@ compat_features:
   - api.GPUTexture.textureBindingViewDimension
   - api.GPUTexture.usage.transient_attachment
 
+  # baseline: false
+  # support:
+  #   chrome: "150"
+  #   chrome_android: "150"
+  #   edge: "150"
+  - api.GPUComputePassEncoder.setImmediates
+  - api.GPURenderBundleEncoder.setImmediates
+  - api.GPURenderPassEncoder.setImmediates
+  - api.GPUSupportedLimits.maxImmediateSize
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}

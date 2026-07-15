@@ -1,4 +1,4 @@
-draft_date: 2026-05-18
+draft_date: 2026-07-15
 name: DOM
 description: TODO
 spec: https://dom.spec.whatwg.org/
@@ -17,6 +17,13 @@ compat_features:
   - api.Element.setAttribute.html_name_validity
   - api.Element.setAttributeNodeNS.html_name_validity
   - api.Element.toggleAttribute.html_name_validity
+  - api.ProcessingInstruction.getAttribute
+  - api.ProcessingInstruction.getAttributeNames
+  - api.ProcessingInstruction.hasAttribute
+  - api.ProcessingInstruction.hasAttributes
+  - api.ProcessingInstruction.removeAttribute
+  - api.ProcessingInstruction.setAttribute
+  - api.ProcessingInstruction.toggleAttribute
 
 # The following features in the spec are already part of web-features:
 # - AbortController and AbortSignal:
