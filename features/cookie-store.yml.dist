@@ -7,6 +7,8 @@ status:
     chrome: "87"
     chrome_android: "87"
     edge: "87"
+    firefox: "140"
+    firefox_android: "140"
 compat_features:
   # baseline: low
   # baseline_low_date: 2025-06-24
@@ -33,6 +35,7 @@ compat_features:
   - api.ServiceWorkerGlobalScope.cookieStore
   - api.Window.cookieStore
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "87"
@@ -51,7 +54,6 @@ compat_features:
   - api.ServiceWorkerGlobalScope.cookiechange_event
   - api.ServiceWorkerRegistration.cookies
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "87"

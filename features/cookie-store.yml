@@ -4,32 +4,38 @@ spec: https://cookiestore.spec.whatwg.org/
 group: cookies
 caniuse: cookie-store-api
 compat_features:
-  - api.CookieStore
-  - api.CookieStore.change_event
-  - api.CookieStore.delete
-  - api.CookieStore.get
-  - api.CookieStore.get.domain_return_property
-  - api.CookieStore.get.expires_return_property
-  - api.CookieStore.get.name_return_property
-  - api.CookieStore.get.path_return_property
-  - api.CookieStore.get.sameSite_return_property
-  - api.CookieStore.get.secure_return_property
-  - api.CookieStore.get.value_return_property
-  - api.CookieStore.getAll
-  - api.CookieStore.set
-  - api.CookieStoreManager
-  - api.CookieStoreManager.getSubscriptions
-  - api.CookieStoreManager.subscribe
-  - api.CookieStoreManager.unsubscribe
-  - api.ServiceWorkerRegistration.cookies
-  - api.CookieChangeEvent
-  - api.CookieChangeEvent.changed
-  - api.CookieChangeEvent.CookieChangeEvent
-  - api.CookieChangeEvent.deleted
-  - api.ExtendableCookieChangeEvent
-  - api.ExtendableCookieChangeEvent.changed
-  - api.ExtendableCookieChangeEvent.deleted
-  - api.ExtendableCookieChangeEvent.ExtendableCookieChangeEvent
-  - api.ServiceWorkerGlobalScope.cookieStore
-  - api.Window.cookieStore
-  - api.ServiceWorkerGlobalScope.cookiechange_event
+  core:
+    - api.CookieStore
+    - api.CookieStore.change_event
+    - api.CookieStore.delete
+    - api.CookieStore.get
+    - api.CookieStore.get.name_return_property
+    - api.CookieStore.get.value_return_property
+    - api.CookieStore.getAll
+    - api.CookieStore.set
+    - api.CookieStoreManager
+    - api.CookieStoreManager.getSubscriptions
+    - api.CookieStoreManager.subscribe
+    - api.CookieStoreManager.unsubscribe
+    - api.ServiceWorkerRegistration.cookies
+    - api.CookieChangeEvent
+    - api.CookieChangeEvent.changed
+    - api.CookieChangeEvent.CookieChangeEvent
+    - api.CookieChangeEvent.deleted
+    - api.ExtendableCookieChangeEvent
+    - api.ExtendableCookieChangeEvent.changed
+    - api.ExtendableCookieChangeEvent.deleted
+    - api.ExtendableCookieChangeEvent.ExtendableCookieChangeEvent
+    - api.ServiceWorkerGlobalScope.cookieStore
+    - api.Window.cookieStore
+    - api.ServiceWorkerGlobalScope.cookiechange_event
+  # Non-standard properties of the object returned by CookieStore.get(). These
+  # were removed from the spec (CookieListItem is now just name + value) but
+  # Chromium still exposes them as non-standard extensions, so they only ever
+  # shipped in Chrome. Kept as `spare` so they don't drag the feature's status.
+  spare:
+    - api.CookieStore.get.domain_return_property
+    - api.CookieStore.get.expires_return_property
+    - api.CookieStore.get.path_return_property
+    - api.CookieStore.get.sameSite_return_property
+    - api.CookieStore.get.secure_return_property
