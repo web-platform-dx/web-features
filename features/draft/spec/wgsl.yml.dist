@@ -3,10 +3,31 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "146"
+    chrome_android: "146"
+    edge: "146"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
   - api.WGSLLanguageFeatures.extension_pointer_composite_access
   - api.WGSLLanguageFeatures.extension_subgroup_id
-  - api.WGSLLanguageFeatures.extension_subgroup_uniformity
-  - api.WGSLLanguageFeatures.extension_texture_and_sampler_let
   - api.WGSLLanguageFeatures.extension_uniform_buffer_standard_layout
+
+  # baseline: false
+  # support:
+  #   chrome: "145"
+  #   chrome_android: "145"
+  #   edge: "145"
+  - api.WGSLLanguageFeatures.extension_subgroup_uniformity
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "146"
+  #   chrome_android: "146"
+  #   edge: "146"
+  - api.WGSLLanguageFeatures.extension_texture_and_sampler_let
