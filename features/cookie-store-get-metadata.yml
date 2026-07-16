@@ -1,0 +1,13 @@
+name: Cookie store get metadata
+description: The `domain`, `expires`, `path`, `sameSite` and `secure` properties returned from CookieStore.get
+spec: https://cookiestore.spec.whatwg.org/
+discouraged:
+  reason: Scripting access to cookie metadata creates privacy and forward-compatibility problems.
+  according_to:
+    - https://github.com/whatwg/cookiestore/pull/274
+compat_features:
+  - api.CookieStore.get.domain_return_property
+  - api.CookieStore.get.expires_return_property
+  - api.CookieStore.get.path_return_property
+  - api.CookieStore.get.sameSite_return_property
+  - api.CookieStore.get.secure_return_property
