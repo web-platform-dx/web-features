@@ -243,6 +243,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/whatwg/html/pull/9546",
         "Allowed because the <input type=\"checkbox\" switch> feature is not yet in a formal spec. Remove this exception when a formal spec is available."
+    ],
+    [
+        "https://github.com/whatwg/html/pull/12339",
+        "The spec for the shadowrootadoptedstylesheets attribute is a pull request only for now. Remove this exception when the formal spec is available."
     ]
 ];
 
