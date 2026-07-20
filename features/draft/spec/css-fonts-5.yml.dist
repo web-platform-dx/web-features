@@ -68,6 +68,12 @@ compat_features:
 
   # baseline: false
   # support:
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - css.properties.font-width.percentage
+
+  # baseline: false
+  # support:
   #   safari: "26"
   #   safari_ios: "26"
   - api.CSSFontFaceDescriptors.font-width
@@ -92,8 +98,3 @@ compat_features:
   - api.CSSFontFaceDescriptors.fontVariationSettings
   - api.CSSFontFaceDescriptors.line-gap-override
   - api.CSSFontFaceDescriptors.lineGapOverride
-
-  # baseline: false
-  # support:
-  #   safari: "18.4"
-  - css.properties.font-width.percentage

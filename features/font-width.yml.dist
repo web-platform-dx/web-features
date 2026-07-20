@@ -5,17 +5,13 @@ status:
   baseline: false
   support:
     safari: "18.4"
+    safari_ios: "18.4"
 compat_features:
-  # baseline: false
-  # support:
-  #   safari: "26"
-  #   safari_ios: "26"
-  - api.CSSFontFaceDescriptors.fontWidth
-
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   safari: "18.4"
+  #   safari_ios: "18.4"
   - css.at-rules.font-face.font-width
   - css.properties.font-width
   - css.properties.font-width.condensed
@@ -27,3 +23,9 @@ compat_features:
   - css.properties.font-width.semi-expanded
   - css.properties.font-width.ultra-condensed
   - css.properties.font-width.ultra-expanded
+
+  # baseline: false
+  # support:
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.CSSFontFaceDescriptors.fontWidth

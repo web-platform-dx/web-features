@@ -276,6 +276,7 @@ compat_features:
   #   safari_ios: "26"
   - api.GPUAdapter.info
   - api.GPUCanvasContext.getConfiguration
+  - api.GPUDevice.adapterInfo
   - api.GPUSupportedFeatures.feature_float32-blendable
   - api.GPUSupportedFeatures.feature_timestamp-query
 
@@ -324,7 +325,6 @@ compat_features:
   - api.GPUCommandEncoder.beginRenderPass.depthSlice_option
   - api.GPUCommandEncoder.beginRenderPass.separate_depth_stencil_read-only
   - api.GPUCommandEncoder.beginRenderPass.timestampWrites
-  - api.GPUDevice.adapterInfo
   - api.GPUDevice.createBindGroupLayout.storageTexture_access_read-write_read-only
   - api.GPUDevice.createComputePipeline.optional_entryPoint
   - api.GPUDevice.createComputePipelineAsync.optional_entryPoint

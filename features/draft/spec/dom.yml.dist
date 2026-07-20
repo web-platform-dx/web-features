@@ -23,15 +23,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "56"
-  #   chrome_android: "56"
-  #   edge: "79"
-  #   safari: "26"
-  #   safari_ios: "26"
-  - api.Document.createElement.options_parameter.options_is_parameter
-
-  # baseline: false
-  # support:
   #   chrome: "143"
   #   chrome_android: "143"
   #   edge: "143"
@@ -62,6 +53,7 @@ compat_features:
   #   chrome: "56"
   #   chrome_android: "56"
   #   edge: "79"
+  - api.Document.createElement.options_parameter.options_is_parameter
   - api.Document.createElementNS.options_parameter.options_is_parameter
 
   # ⬇️ Same status as overall feature ⬇️
