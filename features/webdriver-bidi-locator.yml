@@ -1,0 +1,11 @@
+name: WebDriver BiDi locator
+description: The `browsingContext.locateNodes` command returns a list of nodes matching a given locator, such as a CSS selector or XPath expression.
+spec: https://w3c.github.io/webdriver-bidi/#command-browsingContext-locateNodes
+group: webdriver
+compat_features:
+  - webdriver.bidi.browsingContext.locateNodes
+  - webdriver.bidi.browsingContext.locateNodes.context_parameter
+  - webdriver.bidi.browsingContext.locateNodes.locator_parameter
+  - webdriver.bidi.browsingContext.locateNodes.maxNodeCount_parameter
+  - webdriver.bidi.browsingContext.locateNodes.serializationOptions_parameter
+  - webdriver.bidi.browsingContext.locateNodes.startNodes_parameter
