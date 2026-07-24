@@ -861,13 +861,18 @@ compat_features:
   - webdriver.bidi.browser.setClientWindowState.state_parameter
   - webdriver.bidi.script.getRealms.type_parameter.worker
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "153"
+  #   firefox_android: "153"
   - webdriver.bidi.browser.setClientWindowState.height_parameter
   - webdriver.bidi.browser.setClientWindowState.width_parameter
   - webdriver.bidi.browser.setClientWindowState.x_parameter
   - webdriver.bidi.browser.setClientWindowState.y_parameter
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
   - webdriver.bidi.browsingContext.domContentLoaded_event.userContext_parameter
   - webdriver.bidi.browsingContext.downloadEnd_event.userContext_parameter
   - webdriver.bidi.browsingContext.downloadWillBegin_event.userContext_parameter
