@@ -35,6 +35,18 @@ compat_features:
   #   chrome: "141"
   #   chrome_android: "141"
   #   edge: "141"
+  #   firefox: "153"
+  #   firefox_android: "153"
+  - api.IDBRecord
+  - api.IDBRecord.key
+  - api.IDBRecord.primaryKey
+  - api.IDBRecord.value
+
+  # baseline: false
+  # support:
+  #   chrome: "141"
+  #   chrome_android: "141"
+  #   edge: "141"
   - api.IDBIndex.getAll.object_parameter
   - api.IDBIndex.getAll.object_parameter.direction
   - api.IDBIndex.getAllKeys.object_parameter
@@ -43,7 +55,3 @@ compat_features:
   - api.IDBObjectStore.getAll.object_parameter.direction
   - api.IDBObjectStore.getAllKeys.object_parameter
   - api.IDBObjectStore.getAllKeys.object_parameter.direction
-  - api.IDBRecord
-  - api.IDBRecord.key
-  - api.IDBRecord.primaryKey
-  - api.IDBRecord.value

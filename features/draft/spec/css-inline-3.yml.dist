@@ -5,11 +5,14 @@ status:
   baseline: false
   support: {}
 compat_features:
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-07-21
   # support:
   #   chrome: "1"
   #   chrome_android: "18"
   #   edge: "79"
+  #   firefox: "153"
+  #   firefox_android: "153"
   #   safari: "5.1"
   #   safari_ios: "5"
   - css.properties.alignment-baseline.hanging
@@ -57,13 +60,18 @@ compat_features:
   - css.properties.vertical-align.first
   - css.properties.vertical-align.last
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
-  - css.properties.text-box-edge.alphabetic
-  - css.properties.text-box.alphabetic
+  # support:
+  #   firefox: "153"
+  #   firefox_android: "153"
   - css.properties.vertical-align.alphabetic
   - css.properties.vertical-align.central
   - css.properties.vertical-align.hanging
   - css.properties.vertical-align.ideographic
   - css.properties.vertical-align.mathematical
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.text-box-edge.alphabetic
+  - css.properties.text-box.alphabetic

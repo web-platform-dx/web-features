@@ -24,6 +24,21 @@ compat_features:
   - css.properties.alignment-baseline.baseline
   - css.properties.alignment-baseline.middle
 
+  # baseline: low
+  # baseline_low_date: 2026-07-21
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: "153"
+  #   firefox_android: "153"
+  #   safari: "5.1"
+  #   safari_ios: "5"
+  - css.properties.alignment-baseline.alphabetic
+  - css.properties.alignment-baseline.central
+  - css.properties.alignment-baseline.ideographic
+  - css.properties.alignment-baseline.mathematical
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
@@ -32,9 +47,5 @@ compat_features:
   #   edge: "79"
   #   safari: "5.1"
   #   safari_ios: "5"
-  - css.properties.alignment-baseline.alphabetic
-  - css.properties.alignment-baseline.central
-  - css.properties.alignment-baseline.ideographic
-  - css.properties.alignment-baseline.mathematical
   - css.properties.alignment-baseline.text-after-edge
   - css.properties.alignment-baseline.text-before-edge

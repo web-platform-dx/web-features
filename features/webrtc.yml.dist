@@ -1124,6 +1124,18 @@ compat_features:
   #   safari_ios: "12.2"
   - api.RTCPeerConnection.RTCPeerConnection.configuration_rtcpMuxPolicy_parameter
 
+  # baseline: low
+  # baseline_low_date: 2026-07-21
+  # support:
+  #   chrome: "72"
+  #   chrome_android: "72"
+  #   edge: "12"
+  #   firefox: "153"
+  #   firefox_android: "153"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - api.RTCDtlsTransport.getRemoteCertificates
+
   # baseline: false
   # support:
   #   chrome: "58"
@@ -1180,7 +1192,6 @@ compat_features:
   #   safari: "15.4"
   #   safari_ios: "15.4"
   - api.RTCDtlsTransport.error_event
-  - api.RTCDtlsTransport.getRemoteCertificates
 
   # baseline: false
   # support:
