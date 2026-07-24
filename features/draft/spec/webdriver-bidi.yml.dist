@@ -874,7 +874,9 @@ compat_features:
   # baseline: false
   # support: {}
   - webdriver.bidi.browsingContext.domContentLoaded_event.userContext_parameter
+  - webdriver.bidi.browsingContext.downloadEnd_event.download_parameter
   - webdriver.bidi.browsingContext.downloadEnd_event.userContext_parameter
+  - webdriver.bidi.browsingContext.downloadWillBegin_event.download_parameter
   - webdriver.bidi.browsingContext.downloadWillBegin_event.userContext_parameter
   - webdriver.bidi.browsingContext.fragmentNavigated_event.userContext_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event

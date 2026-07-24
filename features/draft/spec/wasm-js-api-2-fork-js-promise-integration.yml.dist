@@ -9,6 +9,8 @@ status:
     firefox: "153"
     firefox_android: "153"
 compat_features:
+  - webassembly.api.SuspendError
+  - webassembly.api.SuspendError.SuspendError
   - webassembly.api.Suspending
   - webassembly.api.Suspending.Suspending
   - webassembly.api.promising_static
