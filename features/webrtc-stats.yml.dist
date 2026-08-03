@@ -1166,3 +1166,7 @@ compat_features:
   - api.RTCStatsReport.type_inbound-rtp.totalAssemblyTime
   - api.RTCStatsReport.type_inbound-rtp.totalFreezesDuration
   - api.RTCStatsReport.type_inbound-rtp.totalPausesDuration
+
+  # baseline: false
+  # support: {}
+  - api.RTCStatsReport.type_certificate.issuerCertificateId
