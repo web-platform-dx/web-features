@@ -3,11 +3,20 @@
 
 status:
   baseline: false
-  support:
-    chrome: "119"
-    chrome_android: "119"
-    edge: "119"
-    firefox: "142"
-    firefox_android: "142"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "119"
+  #   chrome_android: "119"
+  #   edge: "119"
+  #   firefox: "142"
+  #   firefox_android: "142"
   - api.RTCRtpSender.setParameters.parameters_encodings_parameter.codec
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.RTCIceCandidatePair
+  - api.RTCIceCandidatePair.local
+  - api.RTCIceCandidatePair.remote
