@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "151"
+    chrome_android: "151"
+    edge: "151"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -32,5 +35,8 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "151"
+  #   chrome_android: "151"
+  #   edge: "151"
   - css.types.color.alpha
