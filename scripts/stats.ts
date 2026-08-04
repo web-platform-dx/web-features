@@ -7,18 +7,49 @@ import { isOrdinaryFeatureData } from "../type-guards.ts";
 import { caniuseToWebFeaturesId } from "./caniuse.ts";
 import { compatFeaturesToCumulativeDaysShipped } from "./unmapped-compat-keys.ts";
 
-interface Result {
-  featureCount: number;
-  groupCount: number;
-  compatKeys: number;
-  unmappedCompatKeys: number;
-  unmappedCompatKeysNormal: number;
-  unmappedCompatKeysDiscourageable: number;
+interface ResultBase {
+  featuresCount: number; // `kind: feature` ID count (ignores other `kind` values)
+  groupsCount: number; // group ID count
+  compatKeysCount: number; // Count of in-scope BCD keys (i.e., excluding webextensions)
+  normalCompatKeysCount: number; // Count of in-scope BCD keys that are "normal" — standard and not deprecated
+  discourageableCompatKeysCount: number; // Count of in-scope BCD keys that are not "normal" — non-standard or deprecated
+
+  // Mapped keys are mapped to one or more web-features entries (higher is better).
+  // Unmapped keys are not mapped to any web-features entry (lower is better).
+  mappedCompatKeysCount: number;
+  unmappedCompatKeysCount: number;
+
+  mappedNormalCompatKeysCount: number;
+  unmappedNormalCompatKeysCount: number;
+
+  mappedDiscourageableCompatKeysCount: number;
+  unmappedDiscourageableCompatKeysCount: number;
+
+  mappedCompatKeysRatio: number; // mappedCompatKeysCount : compatKeysCount
+  unmappedCompatKeysRatio: number; // unmappedCompatKeysCount : compatKeysCount
+  unmappedNormalCompatKeysRatio: number; // unmappedNormalCompatKeysCount : normalCompatKeysCount
+  unmappedDiscourageableCompatKeysRatio: number; // unmappedDiscourageableCompatKeysCount : discourageableCompatKeysCount
+
+  caniuseIdsCount: number; // caniuse IDs
+  unmappedCaniuseIdsCount: number; // caniuseIDs that lack a corresponding web-features entry
+  unmappedCaniuseIdsRatio: number; // unmappedCaniuseIdsCont : caniuseIDs
+
+  // The "cumulative shipping days" metrics are the sum of days since each BCD
+  // key has shipped in each browser in the core browser set. A smaller number
+  // is better. This number increases every day for every key that has shipped
+  // but has not been mapped. This metric encourages us to map keys that are
+  // more likely to affect real-world developers (i.e., features implemented in
+  // multiple browsers). Widely-implemented but not mapped keys increase this
+  // metric more (up to +7 per calendar day per key), while other keys increase
+  // this metric less or not at all. Keys which have not yet shipped in any
+  // stable release count as 0. Like the Baseline calculation, partials and
+  // prefixes do not count as shipping.
   unmappedCompatKeysCumulativeShippingDays: number;
-  unmappedCompatKeysCumulativeShippingDaysNormal: number;
-  unmappedCompatKeysCumulativeShippingDaysDiscourageable: number;
-  caniuseIds: number;
-  unmappedCaniuseIds: number;
+  unmappedNormalCompatKeysCumulativeShippingDays: number;
+  unmappedDiscourageableCompatKeysCumulativeShippingDays: number;
+}
+
+interface Result extends ResultBase {
   change?: Change;
 }
 
@@ -41,10 +72,10 @@ const argv = yargs(process.argv.slice(2))
   .parseSync();
 
 export function stats(previous: Partial<Result>): Result {
-  const featureCount = Object.values(features).filter(
+  const featuresCount = Object.values(features).filter(
     isOrdinaryFeatureData,
   ).length;
-  const groupCount = Object.values(groups).length;
+  const groupsCount = Object.values(groups).length;
 
   const mappedCompatKeys = new Set(
     Object.values(features).flatMap((f) => {
@@ -76,24 +107,32 @@ export function stats(previous: Partial<Result>): Result {
   const normalCompatKeys = inScopeCompatKeys.difference(
     discourageableCompatKeys,
   );
-  const mappableKeys = inScopeCompatKeys.difference(mappedCompatKeys);
+  const unmappedKeys = inScopeCompatKeys.difference(mappedCompatKeys);
 
-  let compatKeys = inScopeCompatKeys.size;
-  let unmappedCompatKeys = mappableKeys.size;
-  let unmappedCompatKeysNormal = mappableKeys.difference(
+  const compatKeysCount = inScopeCompatKeys.size;
+  const normalCompatKeysCount = normalCompatKeys.size;
+  const discourageableCompatKeysCount = compatKeysCount - normalCompatKeysCount;
+
+  const mappedCompatKeysCount = mappedCompatKeys.size;
+  const unmappedCompatKeysCount = unmappedKeys.size;
+  const unmappedNormalCompatKeysCount = unmappedKeys.difference(
     discourageableCompatKeys,
   ).size;
-  let unmappedCompatKeysDiscourageable =
-    mappableKeys.difference(normalCompatKeys).size;
+  const mappedNormalCompatKeysCount =
+    mappedCompatKeysCount - unmappedNormalCompatKeysCount;
+  const unmappedDiscourageableCompatKeysCount =
+    unmappedKeys.difference(normalCompatKeys).size;
+  const mappedDiscourageableCompatKeysCount =
+    discourageableCompatKeysCount - unmappedDiscourageableCompatKeysCount;
 
   const featuresToDays = compatFeaturesToCumulativeDaysShipped();
-  const unmappedCompatKeysCumulativeShippingDaysDiscourageable = Array.from(
+  const unmappedDiscourageableCompatKeysCumulativeShippingDays = Array.from(
     featuresToDays.entries(),
   )
     .filter(([f]) => discourageableCompatKeys.has(f.id))
     .map(([, days]) => days)
     .reduce((prev, curr) => prev + curr, 0);
-  const unmappedCompatKeysCumulativeShippingDaysNormal = Array.from(
+  const unmappedNormalCompatKeysCumulativeShippingDays = Array.from(
     featuresToDays.entries(),
   )
     .filter(([f]) => normalCompatKeys.has(f.id))
@@ -101,26 +140,50 @@ export function stats(previous: Partial<Result>): Result {
     .reduce((prev, curr) => prev + curr, 0);
 
   const unmappedCompatKeysCumulativeShippingDays =
-    unmappedCompatKeysCumulativeShippingDaysDiscourageable +
-    unmappedCompatKeysCumulativeShippingDaysNormal;
+    unmappedDiscourageableCompatKeysCumulativeShippingDays +
+    unmappedNormalCompatKeysCumulativeShippingDays;
 
-  const caniuseIds = [...caniuseToWebFeaturesId.keys()].length;
-  const unmappedCaniuseIds = [...caniuseToWebFeaturesId.values()].filter(
+  const caniuseIdsCount = [...caniuseToWebFeaturesId.keys()].length;
+  const unmappedCaniuseIdsCount = [...caniuseToWebFeaturesId.values()].filter(
     (v) => v === null,
   ).length;
+  const unmappedCaniuseIdsRatio = unmappedCaniuseIdsCount / caniuseIdsCount;
 
-  const result = {
-    featureCount,
-    groupCount,
-    compatKeys,
-    unmappedCompatKeys,
-    unmappedCompatKeysNormal,
-    unmappedCompatKeysDiscourageable,
+  const mappedCompatKeysRatio = mappedCompatKeysCount / compatKeysCount;
+  const unmappedCompatKeysRatio = unmappedCompatKeysCount / compatKeysCount;
+  const unmappedNormalCompatKeysRatio =
+    unmappedNormalCompatKeysCount / normalCompatKeysCount;
+  const unmappedDiscourageableCompatKeysRatio =
+    unmappedDiscourageableCompatKeysCount / discourageableCompatKeysCount;
+
+  const result: ResultBase = {
+    featuresCount,
+    groupsCount,
+    compatKeysCount,
+    normalCompatKeysCount,
+    discourageableCompatKeysCount,
+
+    mappedCompatKeysCount,
+    unmappedCompatKeysCount,
+
+    mappedNormalCompatKeysCount,
+    unmappedNormalCompatKeysCount,
+
+    mappedDiscourageableCompatKeysCount,
+    unmappedDiscourageableCompatKeysCount,
+
+    mappedCompatKeysRatio,
+    unmappedCompatKeysRatio,
+    unmappedNormalCompatKeysRatio,
+    unmappedDiscourageableCompatKeysRatio,
+
+    caniuseIdsCount,
+    unmappedCaniuseIdsCount,
+    unmappedCaniuseIdsRatio,
+
     unmappedCompatKeysCumulativeShippingDays,
-    unmappedCompatKeysCumulativeShippingDaysNormal,
-    unmappedCompatKeysCumulativeShippingDaysDiscourageable,
-    caniuseIds,
-    unmappedCaniuseIds,
+    unmappedNormalCompatKeysCumulativeShippingDays,
+    unmappedDiscourageableCompatKeysCumulativeShippingDays,
   };
 
   if (previous) {
