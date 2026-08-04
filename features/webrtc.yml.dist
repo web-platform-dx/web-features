@@ -1112,14 +1112,29 @@ compat_features:
   - api.RTCPeerConnectionIceErrorEvent.address
   - api.RTCPeerConnectionIceErrorEvent.port
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-06-16
   # support:
   #   chrome: "57"
   #   chrome_android: "57"
   #   edge: "79"
+  #   firefox: "152"
+  #   firefox_android: "152"
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - api.RTCPeerConnection.RTCPeerConnection.configuration_rtcpMuxPolicy_parameter
+
+  # baseline: low
+  # baseline_low_date: 2026-07-21
+  # support:
+  #   chrome: "72"
+  #   chrome_android: "72"
+  #   edge: "12"
+  #   firefox: "153"
+  #   firefox_android: "153"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - api.RTCDtlsTransport.getRemoteCertificates
 
   # baseline: false
   # support:
@@ -1177,7 +1192,6 @@ compat_features:
   #   safari: "15.4"
   #   safari_ios: "15.4"
   - api.RTCDtlsTransport.error_event
-  - api.RTCDtlsTransport.getRemoteCertificates
 
   # baseline: false
   # support:

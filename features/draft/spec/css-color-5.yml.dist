@@ -4,8 +4,9 @@
 status:
   baseline: false
   support:
-    firefox: "150"
-    firefox_android: "150"
+    chrome: "151"
+    chrome_android: "151"
+    edge: "151"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -35,6 +36,7 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
-  #   firefox: "150"
-  #   firefox_android: "150"
-  - css.types.color.color-mix.variadic_color_arguments
+  #   chrome: "151"
+  #   chrome_android: "151"
+  #   edge: "151"
+  - css.types.color.alpha

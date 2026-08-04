@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "141"
-    chrome_android: "141"
-    edge: "141"
+  support: {}
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -41,19 +38,6 @@ compat_features:
   - css.properties.pointer-events.visibleFill
   - css.properties.pointer-events.visiblePainted
   - css.properties.pointer-events.visibleStroke
-
-  # baseline: high
-  # baseline_low_date: 2017-09-19
-  # baseline_high_date: 2020-03-19
-  # support:
-  #   chrome: "60"
-  #   chrome_android: "60"
-  #   edge: "12"
-  #   firefox: "9"
-  #   firefox_android: "9"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - svg.global_attributes.font-stretch
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -178,10 +162,15 @@ compat_features:
   - svg.elements.use.omit_external_fragment
   - svg.global_attributes.transform.svg_root
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "141"
   #   chrome_android: "141"
   #   edge: "141"
   - api.SVGAnimatedString.baseVal.enforces_trusted_types
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.path-length
+  - css.properties.path-length.none

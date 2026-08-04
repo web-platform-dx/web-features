@@ -1,4 +1,4 @@
-draft_date: 2026-05-18
+draft_date: 2026-07-15
 name: CSS Values and Units Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-values-5/
@@ -54,10 +54,6 @@ compat_features:
   - css.properties.perspective-origin.y-end
   - css.properties.perspective-origin.y-start
   - css.types.attr.attr-name_accepts_namespaces
-  - css.types.random.dashed-ident
-  - css.types.random.element-shared
-  - css.types.random.step
-  - css.types.url.integrity
 
 # The following features in the spec are already part of web-features:
 # - Media queries:
@@ -80,6 +76,17 @@ compat_features:
 #   - css.properties.interpolate-size.numeric-only
 # - List style:
 #   - css.properties.list-style-type.string
+# - Motion path:
+#   - css.properties.offset-anchor.bottom
+#   - css.properties.offset-anchor.center
+#   - css.properties.offset-anchor.left
+#   - css.properties.offset-anchor.right
+#   - css.properties.offset-anchor.top
+#   - css.properties.offset-position.bottom
+#   - css.properties.offset-position.center
+#   - css.properties.offset-position.left
+#   - css.properties.offset-position.right
+#   - css.properties.offset-position.top
 # - opacity:
 #   - css.properties.opacity.percentages
 #   - css.types.number
@@ -116,7 +123,6 @@ compat_features:
 # - attr() (content only):
 #   - css.types.attr
 # - attr():
-#   - css.types.attr.declaration-value
 #   - css.types.attr.fallback
 #   - css.types.attr.type_function
 #   - css.types.attr.type_function.angle
@@ -243,5 +249,7 @@ compat_features:
 #   - css.types.url
 # - cross-origin() for url():
 #   - css.types.url.cross-origin
+# - integrity() for url():
+#   - css.types.url.integrity
 # - referrer-policy() for url():
 #   - css.types.url.referrer-policy

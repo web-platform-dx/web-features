@@ -1,8 +1,9 @@
-draft_date: 2026-05-08
+draft_date: 2026-06-05
 name: CSS Flexible Box Layout Module Level 1
 description: TODO
 spec: https://drafts.csswg.org/css-flexbox-1/
 compat_features:
+  - css.properties.flex-flow.balance
   - css.properties.flex-flow.column
   - css.properties.flex-flow.column-reverse
   - css.properties.flex-flow.nowrap
@@ -10,6 +11,8 @@ compat_features:
   - css.properties.flex-flow.row-reverse
   - css.properties.flex-flow.wrap
   - css.properties.flex-flow.wrap-reverse
+  - css.properties.flex-line-count
+  - css.properties.flex-wrap.balance
   - css.properties.flex.auto
   - css.properties.flex.content
 

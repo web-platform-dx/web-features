@@ -3,12 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "135"
-    chrome_android: "135"
-    edge: "135"
-    firefox: "148"
-    firefox_android: "148"
+  support: {}
 compat_features:
   # baseline: low
   # baseline_low_date: 2025-09-15
@@ -52,3 +47,16 @@ compat_features:
   - css.properties.overflow-x.replaced_elements
   - css.properties.overflow-y.replaced_elements
   - css.properties.overflow.replaced_elements
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.block-ellipsis
+  - css.properties.block-ellipsis.auto
+  - css.properties.continue
+  - css.properties.continue.auto
+  - css.properties.continue.discard
+  - css.properties.line-clamp.auto
+  - css.properties.line-clamp.no-ellipsis
+  - css.properties.max-lines
+  - css.properties.max-lines.none
