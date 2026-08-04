@@ -1,8 +1,8 @@
 import { Compat } from "compute-baseline/browser-compat-data";
 import { fileURLToPath } from "node:url";
 import yargs from "yargs";
-import { features } from "../index.js";
-import { isOrdinaryFeatureData } from "../type-guards.js";
+import { features } from "../index.ts";
+import { isOrdinaryFeatureData } from "../type-guards.ts";
 
 yargs(process.argv.slice(2))
   .scriptName("stats")

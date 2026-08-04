@@ -1,8 +1,9 @@
-draft_date: 2025-10-13
+draft_date: 2026-05-08
 name: URL
 description: TODO
 spec: https://url.spec.whatwg.org/
 compat_features:
+  - api.HTMLBaseElement.href.forbid_special_characters
   - api.URL.pathname.encodes_trailing_space_in_opaque_path
 
 # The following features in the spec are already part of web-features:

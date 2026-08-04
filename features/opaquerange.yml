@@ -1,0 +1,14 @@
+name: OpaqueRange
+description: >
+  The `createValueRange()` for form elements, such as `<textarea>` or `<input type="text">`, gets an `OpaqueRange` object that represents a live span of text.
+  You can use this for range-based operations on the input text, such as setting custom highlights or placing autocomplete popovers.
+spec: https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/OpaqueRange/explainer.md
+group: selection
+# Expected:
+# compat_features:
+#   - api.HTMLTextAreaElement.createValueRange
+#   - api.HTMLInputElement.createValueRange
+#   - api.OpaqueRange
+#   - api.OpaqueRange.disconnect
+#   - api.OpaqueRange.getClientRects
+#   - api.OpaqueRange.getBoundingClientRect

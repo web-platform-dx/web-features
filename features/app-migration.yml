@@ -1,0 +1,7 @@
+name: Web app origin migration
+description: The `migrate_to` and `migrate_from` web app manifest members move an installed app from one origin to another, within the same site. They preserve the user's installation settings on the device, like shortcuts.
+spec: https://wicg.github.io/manifest-incubations/#web-application-origin-migration
+group: progressive-web-app
+compat_features:
+  - manifests.webapp.migrate_from
+  - manifests.webapp.migrate_to

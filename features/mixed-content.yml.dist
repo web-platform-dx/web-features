@@ -6,11 +6,11 @@ status:
   baseline_low_date: 2020-01-15
   baseline_high_date: 2022-07-15
   support:
-    chrome: ≤79
-    chrome_android: ≤79
+    chrome: "44"
+    chrome_android: "44"
     edge: "79"
-    firefox: ≤23
-    firefox_android: ≤23
+    firefox: "23"
+    firefox_android: "23"
     safari: ≤9.1
     safari_ios: ≤9.3
 compat_features:
@@ -19,11 +19,11 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
-  #   chrome: ≤79
-  #   chrome_android: ≤79
+  #   chrome: "44"
+  #   chrome_android: "44"
   #   edge: "79"
-  #   firefox: ≤23
-  #   firefox_android: ≤23
+  #   firefox: "23"
+  #   firefox_android: "23"
   #   safari: ≤9.1
   #   safari_ios: ≤9.3
   - http.mixed-content
@@ -73,6 +73,15 @@ compat_features:
   #   chrome: ≤79
   #   chrome_android: ≤79
   #   edge: "79"
+  #   firefox: "23"
+  #   firefox_android: "23"
+  - http.mixed-content.allow_file_urls
+
+  # baseline: false
+  # support:
+  #   chrome: ≤79
+  #   chrome_android: ≤79
+  #   edge: "79"
   #   firefox: "55"
   #   firefox_android: "55"
   - http.mixed-content.allow_loopback_url
@@ -85,12 +94,3 @@ compat_features:
   #   firefox: "84"
   #   firefox_android: "84"
   - http.mixed-content.allow_localhost_url
-
-  # baseline: false
-  # support:
-  #   chrome: ≤79
-  #   chrome_android: ≤79
-  #   edge: "79"
-  #   firefox: ≤23
-  #   firefox_android: ≤23
-  - http.mixed-content.allow_file_urls

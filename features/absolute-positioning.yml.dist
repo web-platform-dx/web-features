@@ -28,13 +28,16 @@ compat_features:
   #   safari_ios: "1"
   - css.properties.position.absolute
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2025-09-15
   # support:
   #   chrome: "122"
   #   chrome_android: "122"
   #   edge: "122"
   #   firefox: "134"
   #   firefox_android: "134"
+  #   safari: "26"
+  #   safari_ios: "26"
   - css.properties.align-self.position_absolute_context
   - css.properties.justify-self.position_absolute_context
   - css.properties.place-self.position_absolute_context

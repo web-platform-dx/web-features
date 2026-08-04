@@ -1,9 +1,9 @@
 name: Audit Consumers
 
 on:
-  # Runs on the 1st and 15th of every month, at 03:45 UTC, or manually triggered
+  # Runs on the 1st of every month, at 03:45 UTC, or manually triggered
   schedule:
-    - cron: "45 3 1,15 * *"
+    - cron: "45 3 1 * *"
   workflow_dispatch:
 
 jobs:
@@ -11,8 +11,8 @@ jobs:
     if: github.repository == 'web-platform-dx/web-features'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: .node-version
           cache: npm

@@ -3,15 +3,15 @@
 
 status:
   baseline: low
-  baseline_low_date: 2023-11-02
+  baseline_low_date: 2026-06-04
   support:
-    chrome: "119"
-    chrome_android: "119"
-    edge: "119"
-    firefox: "62"
-    firefox_android: "62"
-    safari: "13"
-    safari_ios: "13"
+    chrome: "149"
+    chrome_android: "149"
+    edge: "149"
+    firefox: "149"
+    firefox_android: "149"
+    safari: "17.2"
+    safari_ios: "17.2"
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -29,8 +29,9 @@ compat_features:
   - css.properties.shape-outside.margin-box
   - css.properties.shape-outside.padding-box
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-11-02
+  # baseline_high_date: 2026-05-02
   # support:
   #   chrome: "119"
   #   chrome_android: "119"
@@ -43,3 +44,17 @@ compat_features:
   - css.properties.clip-path.content-box
   - css.properties.clip-path.margin-box
   - css.properties.clip-path.padding-box
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: low
+  # baseline_low_date: 2026-06-04
+  # support:
+  #   chrome: "149"
+  #   chrome_android: "149"
+  #   edge: "149"
+  #   firefox: "149"
+  #   firefox_android: "149"
+  #   safari: "17.2"
+  #   safari_ios: "17.2"
+  - css.properties.shape-outside.rect
+  - css.properties.shape-outside.xywh

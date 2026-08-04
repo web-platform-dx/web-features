@@ -423,3 +423,85 @@ When you set a `discouraged` block in a feature file, do:
 - Set one or more (optional) `alternatives` feature IDs that are whole or partial substitutes for the discouraged feature.
   An alternative doesn't have to be a narrow drop-in replacement for the discouraged feature but it must handle some use case of the discouraged feature.
   Guide developers to the most relevant features that would help them stop using the discouraged feature.
+
+## Status overrides
+
+Most features compute a status from `@mdn/browser-compat-data` (BCD) compat keys given by the `compat_features` array or the implicit keys given by web-features ID tags in BCD.
+
+Nevertheless, some features require some finessing to make sensible headline statuses.
+There are three ways to override a status, in order of preference:
+
+- Author a `compat_features` object with `core`, `modifier`, and `spare` arrays of compat keys.
+  The `core` array is used to calculate a status (like a flat `compat_features` array).
+  The keys in `modifier` are validated to have the same status _level_ as the `core` keys (for example, if the `core` set of keys is newly available, then the keys in `modifier` must be too), but not necessarily the same Baseline dates or initial browser releases.
+  The keys in `spare` relate to the feature but do not affect the feature's status.
+
+  For example, this override sets the status on the basis of key `a` and `b`, validates that key `c` is at the same level as `core`, and ignores `x` for the purpose of calculating a status.
+
+  ```yaml
+  compat_features:
+    core:
+      - a
+      - b
+    modifier:
+      - c
+    spare:
+      - x
+  ```
+
+- Author a literal `status` override in the feature's authored YAML file.
+  This provides an explicit, overriding status with a Baseline status level (false, `"low"`, or `"high"`), Baseline low date, and `support` information.
+  Note that you may combine this with `modifier` and `spare` in a `compat_features` list.
+
+  For example, this sets a status that completely ignores any BCD keys that might exist:
+
+  ```yaml
+  status:
+    baseline: high
+    baseline_low_date: 2015-07-29
+    support:
+      chrome: "1"
+      chrome_android: "18"
+      edge: "12"
+      firefox: "1"
+      firefox_android: "4"
+      safari: "4"
+      safari_ios: "3.2"
+  ```
+
+- **Deprecated**:
+  Author a `compute_from` override in the feature's authored YAML file.
+  The `status: { compute_from: … }` override selects one or more compat keys from which to calculate a status for the whole feature.
+  This ignores any `compat_features` keys (or BCD-tagged keys) not in the `compute_from` array.
+
+  This method is deprecated and planned for removal.
+  Do not author new `compute_from` overrides.
+
+  For example, this override sets the status on the basis of a single key:
+
+  ```yaml
+  status:
+    compute_from: html.elements.a
+  ```
+
+Whenever possible, avoid overrides.
+Consider alternatives such as splitting a feature into two or more features or fixing upstream data.
+
+If you must override a status, prefer using `compat_features` with `core` and `modifier` arrays over `spare`, a literal status override, or a `compute_from`.
+
+You can use an override method in the following situations:
+
+- To prevent a feature's status from advancing or regressing, while it's under [reconsideration](https://github.com/web-platform-dx/web-features/issues/3228).
+
+- To set a status in the absence of relevant BCD keys.
+  For example, see [`http2.yml`](../features/http2.yml).
+
+- To override BCD, when data is suspected to be in error.
+  In such cases, consider filing an upstream issue or pull request.
+
+- To align with support information given by caniuse, especially for caniuse features that predate web-features.
+  For example, see [`web-cryptography.yml`](../features/web-cryptography.yml).
+
+- To set the original version or date when an established feature is understood to have become available, but later acquired minor behavioral additions or restrictions.
+  This is also known as "birthday setting."
+  This is reason is rare!

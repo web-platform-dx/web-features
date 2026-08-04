@@ -3,4 +3,14 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "147"
+    chrome_android: "147"
+    edge: "147"
+compat_features:
+  - api.Element.activeViewTransition
+  - api.Element.startViewTransition
+  - api.ViewTransition.transitionRoot
+  - css.properties.view-transition-scope
+  - css.properties.view-transition-scope.all
+  - css.properties.view-transition-scope.none

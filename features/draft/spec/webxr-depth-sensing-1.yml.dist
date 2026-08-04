@@ -3,12 +3,20 @@
 
 status:
   baseline: false
-  support:
-    chrome: "139"
-    chrome_android: "139"
-    edge: "139"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "139"
+  #   chrome_android: "139"
+  #   edge: "139"
   - api.XRSession.depthActive
   - api.XRSession.depthType
   - api.XRSession.pauseDepthSensing
   - api.XRSession.resumeDepthSensing
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.XRWebGLDepthInformation.imageIndex
+  - api.XRWebGLDepthInformation.textureType

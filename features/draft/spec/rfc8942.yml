@@ -1,16 +1,6 @@
-draft_date: 2026-01-06
+draft_date: 2026-05-08
 name: HTTP Client Hints
 description: TODO
 spec: https://httpwg.org/specs/rfc8942.html
 compat_features:
   - http.headers.Accept-CH
-
-# The following features in the spec are already part of web-features:
-# - User agent client hints:
-#   - http.headers.Accept-CH.Sec-CH-UA
-#   - http.headers.Accept-CH.Sec-CH-UA-Arch
-#   - http.headers.Accept-CH.Sec-CH-UA-Full-Version
-#   - http.headers.Accept-CH.Sec-CH-UA-Mobile
-#   - http.headers.Accept-CH.Sec-CH-UA-Model
-#   - http.headers.Accept-CH.Sec-CH-UA-Platform
-#   - http.headers.Accept-CH.Sec-CH-UA-Platform-Version

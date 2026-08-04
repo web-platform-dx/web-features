@@ -6,13 +6,21 @@ status:
   support:
     chrome: "89"
     edge: "89"
+    firefox: "151"
 compat_features:
   # baseline: false
   # support:
   #   chrome: "89"
   #   chrome_android: "89"
   #   edge: "89"
+  #   firefox: "151"
   - html.elements.iframe.allow.serial
+
+  # baseline: false
+  # support:
+  #   chrome: "89"
+  #   chrome_android: "89"
+  #   edge: "89"
   - http.headers.Permissions-Policy.serial
 
   # ⬇️ Same status as overall feature ⬇️
@@ -20,6 +28,7 @@ compat_features:
   # support:
   #   chrome: "89"
   #   edge: "89"
+  #   firefox: "151"
   - api.Navigator.serial
   - api.Serial
   - api.Serial.getPorts
@@ -40,7 +49,15 @@ compat_features:
   # support:
   #   chrome: "103"
   #   edge: "103"
+  #   firefox: "151"
   - api.SerialPort.forget
+
+  # baseline: false
+  # support:
+  #   chrome: "130"
+  #   edge: "130"
+  #   firefox: "151"
+  - api.SerialPort.connected
 
   # baseline: false
   # support:
@@ -55,5 +72,4 @@ compat_features:
   #   chrome: "130"
   #   edge: "130"
   - api.SerialPort.connect_event.bluetooth_rfcomm
-  - api.SerialPort.connected
   - api.SerialPort.disconnect_event.bluetooth_rfcomm

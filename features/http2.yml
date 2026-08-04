@@ -1,6 +1,7 @@
 name: HTTP/2
 description: The HTTP/2 protocol is a major revision of the HTTP network protocol, providing improved performance and efficiency by using a single TCP connection to send multiple streams of data at once.
 spec: https://httpwg.org/specs/rfc9113.html
+group: http
 caniuse: http2
 # Since HTTP/2 has no representation in BCD, the following version numbers are
 # from https://caniuse.com/http2. The keystone release is Safari 9.

@@ -1,5 +1,5 @@
-import { features } from "../index";
-import { isOrdinaryFeatureData } from "../type-guards";
+import { features } from "../index.ts";
+import { isOrdinaryFeatureData } from "../type-guards.ts";
 
 for (const [key, data] of Object.entries(features)) {
   if (isOrdinaryFeatureData(data)) {

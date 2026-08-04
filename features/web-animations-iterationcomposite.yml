@@ -1,0 +1,7 @@
+name: iterationComposite
+description: The `iterationComposite` property of a `KeyframeEffect` object sets whether an animation's iterations are calculated independently (`"replace"`) or are accumulated with the value of the previous iteration (`"accumulate"`).
+# Merge candidate: web-animations
+spec: https://drafts.csswg.org/web-animations-2/#the-iterationcompositeoperation-enumeration
+compat_features:
+  - api.KeyframeEffect.iterationComposite
+  - api.Element.animate.options_iterationComposite_parameter

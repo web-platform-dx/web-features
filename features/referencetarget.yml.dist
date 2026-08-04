@@ -4,3 +4,8 @@
 status:
   baseline: false
   support: {}
+compat_features:
+  - api.Element.attachShadow.options_referenceTarget_parameter
+  - api.HTMLTemplateElement.shadowRootReferenceTarget
+  - api.ShadowRoot.referenceTarget
+  - html.elements.template.shadowrootreferencetarget

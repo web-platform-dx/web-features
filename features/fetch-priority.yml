@@ -3,6 +3,8 @@ description: The `fetch()` `priority` option and the `fetchpriority` HTML attrib
 spec:
   - https://fetch.spec.whatwg.org/#request-priority
   - https://html.spec.whatwg.org/multipage/urls-and-fetching.html#fetch-priority-attributes
-group: resource-hints
+group:
+  - resource-hints
+  - fetch
 status:
   compute_from: http.headers.Link.fetchpriority

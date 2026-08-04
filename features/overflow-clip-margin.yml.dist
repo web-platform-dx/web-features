@@ -3,9 +3,21 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "148"
+    firefox_android: "148"
 compat_features:
+  # baseline: false
+  # support:
+  #   firefox: "102"
+  #   firefox_android: "102"
   - css.properties.overflow-clip-margin
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   firefox: "148"
+  #   firefox_android: "148"
   - css.properties.overflow-clip-margin.border-box
   - css.properties.overflow-clip-margin.content-box
   - css.properties.overflow-clip-margin.padding-box

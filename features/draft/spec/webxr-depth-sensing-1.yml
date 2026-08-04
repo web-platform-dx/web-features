@@ -1,4 +1,4 @@
-draft_date: 2025-07-03
+draft_date: 2026-03-16
 name: WebXR Depth Sensing Module
 description: TODO
 spec: https://immersive-web.github.io/depth-sensing/
@@ -7,6 +7,8 @@ compat_features:
   - api.XRSession.depthType
   - api.XRSession.pauseDepthSensing
   - api.XRSession.resumeDepthSensing
+  - api.XRWebGLDepthInformation.imageIndex
+  - api.XRWebGLDepthInformation.textureType
 
 # The following features in the spec are already part of web-features:
 # - Depth sensing:

@@ -11,9 +11,9 @@ compat_features:
   - api.Document.hasPrivateToken
   - api.Document.hasRedemptionRecord
   - api.HTMLIFrameElement.privateToken
-  - api.Request.Request.init_privateToken_parameter
+  - api.Request.Request.options_parameter.privateToken
   - api.XMLHttpRequest.setPrivateToken
-  - api.fetch.init_privateToken_parameter
+  - api.fetch.options_parameter.privateToken
   - html.elements.iframe.privateToken
   - http.headers.Permissions-Policy.private-state-token-issuance
   - http.headers.Permissions-Policy.private-state-token-redemption

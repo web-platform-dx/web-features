@@ -1,0 +1,15 @@
+name: <usermedia>
+description: >
+  The `<usermedia>` HTML element represents a button that, upon activation, toggles camera or microphone streams.
+  If needed, it may prompt the user to choose whether to grant the page access to the camera and microphone.
+spec: https://github.com/WICG/PEPC/blob/main/usermedia_element.md
+# Expected:
+# compat_features:
+#   - api.HTMLUserMediaElement
+#   - api.HTMLUserMediaElement.HTMLUserMediaElement
+#   - api.HTMLUserMediaElement.stream
+#   - api.HTMLUserMediaElement.setConstraints
+#   - api.HTMLUserMediaElement.error
+#   - api.HTMLUserMediaElement.autostart
+#   - html.elements.usermedia
+#   - html.elements.usermedia.autostart

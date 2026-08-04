@@ -206,6 +206,19 @@ compat_features:
   - api.RTCStatsReport.type_remote-candidate.protocol
 
   # baseline: high
+  # baseline_low_date: 2020-02-07
+  # baseline_high_date: 2022-08-07
+  # support:
+  #   chrome: "80"
+  #   chrome_android: "80"
+  #   edge: "80"
+  #   firefox: "65"
+  #   firefox_android: "65"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - api.RTCStatsReport.type_local-candidate.transportId
+
+  # baseline: high
   # baseline_low_date: 2020-03-24
   # baseline_high_date: 2022-09-24
   # support:
@@ -608,6 +621,63 @@ compat_features:
   #   safari_ios: "11"
   - api.RTCStatsReport.type_candidate-pair.totalRoundTripTime
 
+  # baseline: low
+  # baseline_low_date: 2026-07-21
+  # support:
+  #   chrome: "80"
+  #   chrome_android: "80"
+  #   edge: "80"
+  #   firefox: "153"
+  #   firefox_android: "153"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.RTCStatsReport.type_inbound-rtp.transportId
+  - api.RTCStatsReport.type_outbound-rtp.transportId
+  - api.RTCStatsReport.type_remote-inbound-rtp.transportId
+
+  # baseline: low
+  # baseline_low_date: 2026-07-21
+  # support:
+  #   chrome: "80"
+  #   chrome_android: "80"
+  #   edge: "80"
+  #   firefox: "153"
+  #   firefox_android: "153"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.RTCStatsReport.type_transport
+  - api.RTCStatsReport.type_transport.id
+  - api.RTCStatsReport.type_transport.selectedCandidatePairId
+  - api.RTCStatsReport.type_transport.timestamp
+  - api.RTCStatsReport.type_transport.type
+
+  # baseline: low
+  # baseline_low_date: 2026-07-21
+  # support:
+  #   chrome: "80"
+  #   chrome_android: "80"
+  #   edge: "80"
+  #   firefox: "153"
+  #   firefox_android: "153"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.RTCStatsReport.type_transport.dtlsCipher
+  - api.RTCStatsReport.type_transport.dtlsState
+  - api.RTCStatsReport.type_transport.srtpCipher
+  - api.RTCStatsReport.type_transport.tlsVersion
+
+  # baseline: low
+  # baseline_low_date: 2026-07-21
+  # support:
+  #   chrome: "91"
+  #   chrome_android: "91"
+  #   edge: "91"
+  #   firefox: "153"
+  #   firefox_android: "153"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - api.RTCStatsReport.type_remote-outbound-rtp.transportId
+
   # baseline: false
   # support:
   #   chrome: "80"
@@ -683,20 +753,8 @@ compat_features:
   #   chrome: "80"
   #   chrome_android: "80"
   #   edge: "80"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - api.RTCStatsReport.type_inbound-rtp.transportId
-  - api.RTCStatsReport.type_outbound-rtp.transportId
-  - api.RTCStatsReport.type_remote-inbound-rtp.transportId
-
-  # baseline: false
-  # support:
-  #   chrome: "80"
-  #   chrome_android: "80"
-  #   edge: "80"
   #   safari: "12.1"
   #   safari_ios: "12.2"
-  - api.RTCStatsReport.type_local-candidate.transportId
   - api.RTCStatsReport.type_remote-candidate.transportId
 
   # baseline: false
@@ -713,15 +771,10 @@ compat_features:
   - api.RTCStatsReport.type_certificate.id
   - api.RTCStatsReport.type_certificate.timestamp
   - api.RTCStatsReport.type_certificate.type
-  - api.RTCStatsReport.type_transport
   - api.RTCStatsReport.type_transport.bytesReceived
   - api.RTCStatsReport.type_transport.bytesSent
-  - api.RTCStatsReport.type_transport.id
   - api.RTCStatsReport.type_transport.localCertificateId
   - api.RTCStatsReport.type_transport.remoteCertificateId
-  - api.RTCStatsReport.type_transport.selectedCandidatePairId
-  - api.RTCStatsReport.type_transport.timestamp
-  - api.RTCStatsReport.type_transport.type
 
   # baseline: false
   # support:
@@ -731,10 +784,6 @@ compat_features:
   #   safari: "14.1"
   #   safari_ios: "14.5"
   - api.RTCStatsReport.type_outbound-rtp.mediaSourceId
-  - api.RTCStatsReport.type_transport.dtlsCipher
-  - api.RTCStatsReport.type_transport.dtlsState
-  - api.RTCStatsReport.type_transport.srtpCipher
-  - api.RTCStatsReport.type_transport.tlsVersion
 
   # baseline: false
   # support:
@@ -866,15 +915,6 @@ compat_features:
   #   chrome: "91"
   #   chrome_android: "91"
   #   edge: "91"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - api.RTCStatsReport.type_remote-outbound-rtp.transportId
-
-  # baseline: false
-  # support:
-  #   chrome: "91"
-  #   chrome_android: "91"
-  #   edge: "91"
   #   firefox: "65"
   #   firefox_android: "65"
   - api.RTCStatsReport.type_local-candidate.address
@@ -940,6 +980,18 @@ compat_features:
   #   firefox: "106"
   #   firefox_android: "106"
   - api.RTCStatsReport.type_inbound-rtp.totalProcessingDelay
+
+  # baseline: false
+  # support:
+  #   chrome: "103"
+  #   chrome_android: "103"
+  #   edge: "103"
+  #   firefox: "153"
+  #   firefox_android: "153"
+  - api.RTCStatsReport.type_transport.dtlsRole
+  - api.RTCStatsReport.type_transport.iceLocalUsernameFragment
+  - api.RTCStatsReport.type_transport.iceRole
+  - api.RTCStatsReport.type_transport.iceState
 
   # baseline: false
   # support:
@@ -1052,16 +1104,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "103"
-  #   chrome_android: "103"
-  #   edge: "103"
-  - api.RTCStatsReport.type_transport.dtlsRole
-  - api.RTCStatsReport.type_transport.iceLocalUsernameFragment
-  - api.RTCStatsReport.type_transport.iceRole
-  - api.RTCStatsReport.type_transport.iceState
-
-  # baseline: false
-  # support:
   #   chrome: "106"
   #   chrome_android: "106"
   #   edge: "106"
@@ -1124,3 +1166,7 @@ compat_features:
   - api.RTCStatsReport.type_inbound-rtp.totalAssemblyTime
   - api.RTCStatsReport.type_inbound-rtp.totalFreezesDuration
   - api.RTCStatsReport.type_inbound-rtp.totalPausesDuration
+
+  # baseline: false
+  # support: {}
+  - api.RTCStatsReport.type_certificate.issuerCertificateId

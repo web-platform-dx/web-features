@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "151"
+    chrome_android: "151"
+    edge: "151"
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -44,20 +47,11 @@ compat_features:
   - css.properties.animation-timeline.auto
   - css.properties.animation-timeline.none
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
-  - css.properties.animation-trigger
-  - css.properties.animation-trigger.none
-  - css.properties.timeline-trigger
-  - css.properties.timeline-trigger-name
-  - css.properties.timeline-trigger-name.none
-  - css.properties.timeline-trigger-source
-  - css.properties.timeline-trigger-source.auto
-  - css.properties.timeline-trigger-source.none
-  - css.properties.timeline-trigger.auto
-  - css.properties.timeline-trigger.none
-  - css.properties.timeline-trigger.normal
-  - css.properties.trigger-scope
-  - css.properties.trigger-scope.all
-  - css.properties.trigger-scope.none
+  # support:
+  #   chrome: "151"
+  #   chrome_android: "151"
+  #   edge: "151"
+  #   firefox: "152"
+  #   firefox_android: "152"
+  - api.AnimationEvent.animation

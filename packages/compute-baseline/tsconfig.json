@@ -4,12 +4,14 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "resolveJsonModule": true,
+    "rootDir": "./src",
     "outDir": "./dist",
     "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noUncheckedIndexedAccess": true
+    "noUncheckedIndexedAccess": true,
+    "types": ["node", "mocha"],
+    "strict": false
   },
   "include": ["./src"]
 }

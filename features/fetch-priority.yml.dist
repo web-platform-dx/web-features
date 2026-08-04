@@ -23,8 +23,8 @@ compat_features:
   #   firefox_android: "132"
   #   safari: "17.2"
   #   safari_ios: "17.2"
-  - api.Request.Request.init_priority_parameter
-  - api.fetch.init_priority_parameter
+  - api.Request.Request.options_parameter.priority
+  - api.fetch.options_parameter.priority
   - html.elements.img.fetchpriority
   - html.elements.link.fetchpriority
   - html.elements.script.fetchpriority

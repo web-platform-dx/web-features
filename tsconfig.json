@@ -1,11 +1,12 @@
 {
+  "extends": [
+    "@tsconfig/node22/tsconfig.json",
+    "@tsconfig/node-ts/tsconfig.json"
+  ],
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "Bundler",
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "noEmit": true
+    "noEmit": true,
+    "types": ["node", "mocha"],
+    "strict": false
   },
-  "exclude": ["packages/", "gh-pages/"]
+  "exclude": ["packages/"]
 }

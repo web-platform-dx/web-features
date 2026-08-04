@@ -1,13 +1,22 @@
-draft_date: 2025-09-30
+draft_date: 2026-07-06
 name: Web Speech API
 description: TODO
 spec: https://webaudio.github.io/web-speech-api/
 compat_features:
   - api.SpeechRecognition.available_static
+  - api.SpeechRecognition.available_static.options_parameter
+  - api.SpeechRecognition.available_static.options_parameter.options_langs_parameter
+  - api.SpeechRecognition.available_static.options_parameter.options_processLocally_parameter
+  - api.SpeechRecognition.available_static.options_parameter.options_quality_parameter
   - api.SpeechRecognition.install_static
+  - api.SpeechRecognition.install_static.options_parameter
+  - api.SpeechRecognition.install_static.options_parameter.options_langs_parameter
+  - api.SpeechRecognition.install_static.options_parameter.options_processLocally_parameter
+  - api.SpeechRecognition.install_static.options_parameter.options_quality_parameter
   - api.SpeechRecognition.phrases
   - api.SpeechRecognition.processLocally
   - api.SpeechRecognition.start.audioTrack
+  - api.SpeechRecognition.unspokenPunctuation
   - api.SpeechRecognitionPhrase
   - api.SpeechRecognitionPhrase.SpeechRecognitionPhrase
   - api.SpeechRecognitionPhrase.boost

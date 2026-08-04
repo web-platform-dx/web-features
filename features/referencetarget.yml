@@ -5,6 +5,8 @@ spec:
   - https://github.com/whatwg/html/pull/10995
 group:
   - web-components
-# Expected keys via Chrome origin trial in 133-135 https://chromestatus.com/feature/5188237101891584
-# api.Element.attachShadow.options_referenceTarget_parameter
-# api.ShadowRoot.referenceTarget
+compat_features:
+  - api.Element.attachShadow.options_referenceTarget_parameter
+  - api.ShadowRoot.referenceTarget
+  - api.HTMLTemplateElement.shadowRootReferenceTarget
+  - html.elements.template.shadowrootreferencetarget
