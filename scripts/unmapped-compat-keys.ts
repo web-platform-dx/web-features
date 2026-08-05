@@ -9,9 +9,17 @@ import { support } from "../packages/compute-baseline/dist/baseline/support.js";
 import { isOrdinaryFeatureData } from "../type-guards.ts";
 
 const defaultLogLevel = "warn";
-const today = Temporal.Now.plainDateISO();
 
 const compat = new Compat();
+
+// The reference date is a date that approximates "now" but doesn't advance past
+// the moment in time that a BCD release represents. This makes generated stats
+// consistent between runs where the underlying data hasn't changed but the
+// wall-clock time has. It also permits running stats retrospectively.
+const bcdTimestamp: string = (compat.data as any).__meta.timestamp;
+const referenceDate = Temporal.Instant.from(bcdTimestamp)
+  .toZonedDateTimeISO("UTC")
+  .toPlainDate();
 
 const logger = winston.createLogger({
   level: defaultLogLevel,
@@ -69,7 +77,7 @@ function cumulativeDaysShipped(feature: Feature) {
     .filter((r) => r !== undefined)
     .map(
       (r) =>
-        r.release.date.until(today, {
+        r.release.date.until(referenceDate, {
           largestUnit: "days",
           smallestUnit: "days",
         }).days,
