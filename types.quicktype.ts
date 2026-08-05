@@ -69,11 +69,11 @@ export interface FeatureData {
   /**
    * caniuse.com identifiers
    */
-  caniuse?: string[];
+  caniuse?: [string, ...string[]];
   /**
    * Sources of support data for this feature
    */
-  compat_features?: string[];
+  compat_features?: [string, ...string[]];
   /**
    * Short description of the feature, as a plain text string
    */
@@ -89,7 +89,7 @@ export interface FeatureData {
   /**
    * Group identifiers
    */
-  group?: string[];
+  group?: [string, ...string[]];
   kind: Kind;
   /**
    * Short name
@@ -98,11 +98,11 @@ export interface FeatureData {
   /**
    * Snapshot identifiers
    */
-  snapshot?: string[];
+  snapshot?: [string, ...string[]];
   /**
    * Specification URLs
    */
-  spec?: string[];
+  spec?: [string, ...string[]];
   /**
    * Whether a feature is considered a "Baseline" web platform feature and when it achieved
    * that status
@@ -115,7 +115,7 @@ export interface FeatureData {
   /**
    * The new IDs for this feature
    */
-  redirect_targets?: string[];
+  redirect_targets?: [string, ...string[]];
 }
 
 /**
@@ -126,11 +126,11 @@ export interface Discouraged {
    * Links to a formal discouragement notice, such as specification text, intent-to-unship,
    * etc.
    */
-  according_to: string[];
+  according_to: [string, ...string[]];
   /**
    * IDs for features that substitute some or all of this feature's utility
    */
-  alternatives?: string[];
+  alternatives?: [string, ...string[]];
   /**
    * A brief, developer-focused description of why the feature is discouraged
    */
@@ -196,7 +196,7 @@ export interface Status {
    * Browser versions that most-recently introduced the feature
    */
   support: Support;
-  [property: string]: any;
+  [property: string]: unknown;
 }
 
 /**
