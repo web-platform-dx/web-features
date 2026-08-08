@@ -1,10 +1,17 @@
 import assert from "node:assert/strict";
+import fs from "node:fs";
+import path from "node:path";
 
 import webSpecs from 'web-specs' with { type: 'json' };
 import winston from "winston";
 
 import { features } from '../index.ts';
 import { isOrdinaryFeatureData } from "../type-guards.ts";
+import { validateSpecFragment, type FragmentResult } from "./spec-fragments.ts";
+
+// Fragment mismatches warn instead of failing the build while the existing
+// data is cleaned up. Flip to true to make them errors. See issue #84.
+const fragmentErrorsAreFatal = false;
 
 const logger = winston.createLogger({
   level: "warn",
@@ -246,18 +253,18 @@ const defaultAllowlist: allowlistItem[] = [
     ]
 ];
 
-function isOK(url: URL, allowlist: allowlistItem[] = defaultAllowlist) {
+function isOK(url: URL, allowlist: allowlistItem[] = defaultAllowlist): "web-specs" | "allowlist" | false {
     for (const specUrl of specUrls) {
         if (specUrl.origin === url.origin && specUrl.pathname === url.pathname) {
             // that is, specUrl and url are the same, with the exception of the hash or query (`search`) string
-            return true;
+            return "web-specs";
         }
     }
 
     for (const [specUrl, message] of allowlist) {
         if (specUrl === url.toString()) {
             logger.warn(`${specUrl}: ${message}`);
-            return true;
+            return "allowlist";
         }
     }
 
@@ -273,6 +280,15 @@ function testIsOK() {
     // assert.ok(isOK(new URL("https://www.example.com/"), [["https://www.example.com/", "Remove this exception when…"]]));
 };
 testIsOK();
+
+function testValidateSpecFragment() {
+    assert.equal(validateSpecFragment(new URL("https://tc39.es/ecma262/multipage/")).status, "skipped");
+    assert.equal(validateSpecFragment(new URL("https://html.spec.whatwg.org/multipage/#:~:text=living%20standard")).status, "skipped");
+    assert.equal(validateSpecFragment(new URL("https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements")).status, "valid");
+    assert.equal(validateSpecFragment(new URL("https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements:~:text=custom")).status, "valid");
+    assert.equal(validateSpecFragment(new URL("https://html.spec.whatwg.org/multipage/custom-elements.html#not-a-real-anchor")).status, "invalid");
+};
+testValidateSpecFragment();
 
 
 /**
@@ -291,6 +307,95 @@ function suggestSpecs(bad: URL): void {
 let checkedFeatures = 0;
 let checkedSpecs = 0;
 let errors = 0;
+let fragmentWarnings = 0;
+
+interface FragmentReportRow {
+    feature: string;
+    url: string;
+    result: FragmentResult;
+}
+const fragmentReport: FragmentReportRow[] = [];
+
+/**
+ * Categorize a fragment check result for reporting. Bikeshed's generated
+ * `#ref-for-…` ids get their own bucket: they're not definition or heading
+ * ids, so webref doesn't know them, and they're brittle links anyway.
+ */
+function fragmentCategory({ url, result }: FragmentReportRow): string {
+    if (result.status === "invalid") {
+        return new URL(url).hash.startsWith("#ref-for-") ? "invalid (ref-for)" : "invalid";
+    }
+    if (result.status === "skipped") {
+        return `skipped (${result.reason})`;
+    }
+    return "valid";
+}
+
+/**
+ * Render the fragment check results as a self-contained HTML report.
+ */
+function formatFragmentReport(rows: FragmentReportRow[]): string {
+    const escape = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    const categories = new Map<string, number>();
+    for (const row of rows) {
+        const category = fragmentCategory(row);
+        categories.set(category, (categories.get(category) ?? 0) + 1);
+    }
+    const sortedCategories = [...categories.entries()].sort(([a], [b]) => a.localeCompare(b));
+    const summary = sortedCategories
+        .map(([category, count]) => `<div class="tile"><b>${count}</b><br>${escape(category)}</div>`)
+        .join("\n");
+    const options = sortedCategories
+        .map(([category]) => `<option>${escape(category)}</option>`)
+        .join("\n");
+    const tableRows = rows
+        .map((row) => {
+            const category = fragmentCategory(row);
+            const specs = row.result.status === "valid"
+                ? [...new Set(row.result.matches.map((m) => m.entry.spec))].join(", ")
+                : "";
+            return `<tr data-category="${escape(category)}"><td>${escape(row.feature)}</td><td><a href="${escape(row.url)}">${escape(row.url)}</a></td><td>${escape(category)}</td><td>${escape(specs)}</td></tr>`;
+        })
+        .join("\n");
+    return `<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>web-features spec URL fragment report</title>
+<style>
+body { font-family: system-ui, sans-serif; margin: 2rem auto; max-width: 70rem; padding: 0 1rem; color: #1a1a2e; }
+.tiles { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1rem 0; }
+.tile { border: 1px solid #ccc; border-radius: 0.5rem; padding: 0.75rem 1rem; min-width: 8rem; }
+.tile b { font-size: 1.5rem; }
+table { border-collapse: collapse; width: 100%; font-size: 0.875rem; }
+th, td { border-bottom: 1px solid #ddd; padding: 0.4rem 0.6rem; text-align: left; vertical-align: top; word-break: break-all; }
+th { position: sticky; top: 0; background: #fff; }
+@media (prefers-color-scheme: dark) {
+  body { background: #1a1a2e; color: #eee; }
+  .tile { border-color: #555; }
+  th { background: #1a1a2e; }
+  a { color: #9cf; }
+}
+</style>
+<h1>Spec URL fragment report</h1>
+<p>Fragment validation of <code>spec</code> URLs against <a href="https://www.npmjs.com/package/@webref/xref">@webref/xref</a>.
+See <a href="https://github.com/web-platform-dx/web-features/issues/84">web-platform-dx/web-features#84</a>.</p>
+<div class="tiles">${summary}</div>
+<label>Filter: <select id="filter"><option value="">all (${rows.length})</option>${options}</select></label>
+<table>
+<thead><tr><th>Feature</th><th>Spec URL</th><th>Result</th><th>webref spec</th></tr></thead>
+<tbody>${tableRows}</tbody>
+</table>
+<script>
+document.querySelector("#filter").addEventListener("change", (event) => {
+  for (const tr of document.querySelectorAll("tbody tr")) {
+    tr.hidden = Boolean(event.target.value) && tr.dataset.category !== event.target.value;
+  }
+});
+</script>
+</html>
+`;
+}
 
 // Ensure every exception in defaultAllowlist is needed
 for (const [allowedUrl, message] of defaultAllowlist) {
@@ -315,14 +420,40 @@ for (const [id, data] of Object.entries(features)) {
             logger.error(`Invalid URL "${spec}" found in spec for "${data.name}"`);
             errors++;
         }
-        if (url && !isOK(url)) {
-            logger.error(`URL for ${id} not in web-specs: ${url.toString()}`);
-            suggestSpecs(url);
-            errors++;
+        if (url) {
+            const pageResult = isOK(url);
+            if (!pageResult) {
+                logger.error(`URL for ${id} not in web-specs: ${url.toString()}`);
+                suggestSpecs(url);
+                errors++;
+            } else if (pageResult === "web-specs") {
+                // Allowlisted specs aren't in webref, so only web-specs
+                // matches get their fragment checked.
+                const result = validateSpecFragment(url);
+                fragmentReport.push({ feature: id, url: url.toString(), result });
+                if (result.status === "invalid") {
+                    logger.warn(`Unknown fragment in spec URL for ${id}: ${url.toString()}\nCheck that the fragment (#) is a definition or heading id in the spec, or link a more current anchor.`);
+                    fragmentWarnings++;
+                    if (fragmentErrorsAreFatal) {
+                        errors++;
+                    }
+                }
+            }
         }
         checkedSpecs++;
     }
     checkedFeatures++;
+}
+
+if (process.argv.includes("--report")) {
+    const reportPath = path.join(import.meta.dirname, "..", "reports", "spec-fragments.html");
+    fs.mkdirSync(path.dirname(reportPath), { recursive: true });
+    fs.writeFileSync(reportPath, formatFragmentReport(fragmentReport));
+    console.log(`\nFragment report written to ${path.relative(process.cwd(), reportPath)}`);
+}
+
+if (fragmentWarnings) {
+    console.log(`\n${fragmentWarnings} spec URL(s) have fragments unknown to @webref/xref (warnings only, see https://github.com/web-platform-dx/web-features/issues/84)`);
 }
 
 if (errors) {
