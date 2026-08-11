@@ -16,6 +16,14 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "151"
+  #   chrome_android: "151"
+  #   edge: "151"
+  - api.WebTransportDatagramDuplexStream.incomingMaxBufferedDatagrams
+  - api.WebTransportDatagramDuplexStream.outgoingMaxBufferedDatagrams
+
+  # baseline: false
+  # support:
   #   safari: "26.4"
   #   safari_ios: "26.4"
   - api.WebTransport.anticipatedConcurrentIncomingBidirectionalStreams
@@ -30,9 +38,3 @@ compat_features:
   - api.WebTransportSendGroup
   - api.WebTransportSendGroup.getStats
   - api.WebTransportSendStream.sendGroup
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - api.WebTransportDatagramDuplexStream.incomingMaxBufferedDatagrams
-  - api.WebTransportDatagramDuplexStream.outgoingMaxBufferedDatagrams

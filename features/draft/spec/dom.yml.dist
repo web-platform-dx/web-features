@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "146"
-    chrome_android: "146"
-    edge: "146"
+    chrome: "150"
+    chrome_android: "150"
+    edge: "150"
 compat_features:
   # baseline: high
   # baseline_low_date: 2023-03-27
@@ -20,15 +20,6 @@ compat_features:
   #   safari: "16.4"
   #   safari_ios: "16.4"
   - api.Element.attachShadow.options_slotAssignment_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "56"
-  #   chrome_android: "56"
-  #   edge: "79"
-  #   safari: "26"
-  #   safari_ios: "26"
-  - api.Document.createElement.options_parameter.options_is_parameter
 
   # baseline: false
   # support:
@@ -62,4 +53,19 @@ compat_features:
   #   chrome: "56"
   #   chrome_android: "56"
   #   edge: "79"
+  - api.Document.createElement.options_parameter.options_is_parameter
   - api.Document.createElementNS.options_parameter.options_is_parameter
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "150"
+  #   chrome_android: "150"
+  #   edge: "150"
+  - api.ProcessingInstruction.getAttribute
+  - api.ProcessingInstruction.getAttributeNames
+  - api.ProcessingInstruction.hasAttribute
+  - api.ProcessingInstruction.hasAttributes
+  - api.ProcessingInstruction.removeAttribute
+  - api.ProcessingInstruction.setAttribute
+  - api.ProcessingInstruction.toggleAttribute
