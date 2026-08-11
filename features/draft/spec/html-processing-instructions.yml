@@ -1,7 +1,13 @@
 draft_date: 2026-08-11
 name: HTML processing instructions
-description: Processing instructions such as `<?xml>` were originally only supported in XML documents, and treated as comments when present in HTML documents but more recently browsers have started supporting them in HTML documents as well for out-of-order streaming (using `<?start>`, `<?end>`, and `<?marker>`) and other use cases.
+description: Processing instructions such as `<?xml>` were originally only supported in XML documents, and treated as comments when present in HTML documents. Browsers have started supporting them in HTML documents for out-of-order streaming (using `<?start>`, `<?end>`, and `<?marker>`) and other use cases.
 spec: https://html.spec.whatwg.org/multipage/syntax.html#processing-instructions
-# TODO: Uncomment when XXX lands
-#compat_features:
-#- api.ProcessingInstruction.html
+compat_features:
+# TODO: Uncomment next line when https://github.com/mdn/browser-compat-data/pull/30213 lands
+#- api.ProcessingInstruction.doc-html
+- api.ProcessingInstruction.getAttribute
+- api.ProcessingInstruction.getAttributeNames
+- api.ProcessingInstruction.hasAttribute
+- api.ProcessingInstruction.hasAttributes
+- api.ProcessingInstruction.removeAttribute
+- api.ProcessingInstruction.setAttribute
