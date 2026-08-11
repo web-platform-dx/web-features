@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "120"
-    chrome_android: "120"
-    edge: "120"
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -15,10 +12,18 @@ compat_features:
   #   edge: "108"
   - html.elements.iframe.allow.wildcards
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "120"
   #   chrome_android: "120"
   #   edge: "120"
   - http.headers.Permissions-Policy-Report-Only
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.PermissionsPolicy
+  - api.PermissionsPolicy.allowedFeatures
+  - api.PermissionsPolicy.allowsFeature
+  - api.PermissionsPolicy.features
+  - api.PermissionsPolicy.getAllowlistForFeature

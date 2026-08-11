@@ -564,8 +564,9 @@ compat_features:
   - http.status.103
   - http.status.103.preconnect
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2024-01-23
+  # baseline_high_date: 2026-07-23
   # support:
   #   chrome: "108"
   #   chrome_android: "108"
@@ -649,6 +650,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "23"
+  #   chrome_android: "144"
+  #   edge: "79"
+  #   firefox: ≤49
+  #   firefox_android: ≤49
+  #   safari: "10.1"
+  - html.elements.iframe.sandbox.allow-pointer-lock
+
+  # baseline: false
+  # support:
   #   chrome: "119"
   #   edge: "119"
   #   firefox: "122"
@@ -665,15 +676,6 @@ compat_features:
   #   firefox: "96"
   #   firefox_android: "96"
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
-
-  # baseline: false
-  # support:
-  #   chrome: "23"
-  #   edge: "79"
-  #   firefox: ≤49
-  #   firefox_android: ≤49
-  #   safari: "10.1"
-  - html.elements.iframe.sandbox.allow-pointer-lock
 
   # baseline: false
   # support:
@@ -1030,19 +1032,20 @@ compat_features:
   #   firefox_android: "151"
   - html.elements.template.shadowrootslotassignment
 
+  # baseline: false
+  # support:
+  #   firefox: "153"
+  #   firefox_android: "153"
+  - api.HTMLAreaElement.hreflang
+  - api.HTMLAreaElement.type
+  - html.elements.area.hreflang
+  - html.elements.area.type
+  - javascript.statements.import.import_attributes.type_text
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.Document.parseHTMLUnsafe_static.options_sanitizer_parameter
   - api.Element.setHTMLUnsafe.options_sanitizer_parameter
-  - api.HTMLAreaElement.hreflang
-  - api.HTMLAreaElement.type
-  - api.HTMLElement.headingOffset
-  - api.HTMLElement.headingReset
   - api.ShadowRoot.setHTMLUnsafe.options_sanitizer_parameter
-  - html.elements.area.hreflang
-  - html.elements.area.type
   - html.elements.track.kind.descriptions
-  - html.global_attributes.headingoffset
-  - html.global_attributes.headingreset
-  - javascript.statements.import.import_attributes.type_text

@@ -1,4 +1,4 @@
-draft_date: 2026-07-06
+draft_date: 2026-07-09
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -28,8 +28,6 @@ compat_features:
   - api.HTMLCanvasElement.toBlob.type_parameter_webp
   - api.HTMLCanvasElement.toDataURL.type_parameter_png
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
-  - api.HTMLElement.headingOffset
-  - api.HTMLElement.headingReset
   - api.HTMLElement.togglePopover.force_parameter
   - api.HTMLElement.togglePopover.options_force_parameter
   - api.HTMLImageElement.currentSrc
@@ -127,8 +125,6 @@ compat_features:
   - html.global_attributes.data_attributes
   - html.global_attributes.dir
   - html.global_attributes.draggable
-  - html.global_attributes.headingoffset
-  - html.global_attributes.headingreset
   - html.global_attributes.hidden
   - html.global_attributes.id
   - http.headers.Cross-Origin-Embedder-Policy
@@ -1139,6 +1135,11 @@ compat_features:
 # - enterkeyhint:
 #   - api.HTMLElement.enterKeyHint
 #   - html.global_attributes.enterkeyhint
+# - Heading offset:
+#   - api.HTMLElement.headingOffset
+#   - api.HTMLElement.headingReset
+#   - html.global_attributes.headingoffset
+#   - html.global_attributes.headingreset
 # - inert:
 #   - api.HTMLElement.inert
 #   - api.HTMLElement.inert.ignores_find_in_page

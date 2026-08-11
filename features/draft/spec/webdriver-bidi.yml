@@ -1,4 +1,4 @@
-draft_date: 2026-07-06
+draft_date: 2026-07-24
 name: WebDriver BiDi
 description: TODO
 spec: https://w3c.github.io/webdriver-bidi/
@@ -63,6 +63,7 @@ compat_features:
   - webdriver.bidi.browsingContext.domContentLoaded_event.userContext_parameter
   - webdriver.bidi.browsingContext.downloadEnd_event
   - webdriver.bidi.browsingContext.downloadEnd_event.context_parameter
+  - webdriver.bidi.browsingContext.downloadEnd_event.download_parameter
   - webdriver.bidi.browsingContext.downloadEnd_event.filepath_parameter
   - webdriver.bidi.browsingContext.downloadEnd_event.navigation_parameter
   - webdriver.bidi.browsingContext.downloadEnd_event.status_parameter
@@ -71,6 +72,7 @@ compat_features:
   - webdriver.bidi.browsingContext.downloadEnd_event.userContext_parameter
   - webdriver.bidi.browsingContext.downloadWillBegin_event
   - webdriver.bidi.browsingContext.downloadWillBegin_event.context_parameter
+  - webdriver.bidi.browsingContext.downloadWillBegin_event.download_parameter
   - webdriver.bidi.browsingContext.downloadWillBegin_event.navigation_parameter
   - webdriver.bidi.browsingContext.downloadWillBegin_event.suggestedFilename_parameter
   - webdriver.bidi.browsingContext.downloadWillBegin_event.timestamp_parameter
