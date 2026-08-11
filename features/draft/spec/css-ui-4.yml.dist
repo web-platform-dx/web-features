@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "142"
-    chrome_android: "142"
-    edge: "142"
+  support: {}
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -55,7 +52,6 @@ compat_features:
   - css.properties.caret-animation.auto
   - css.properties.caret-animation.manual
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "142"
@@ -67,3 +63,10 @@ compat_features:
   - css.properties.interest-delay-start
   - css.properties.interest-delay-start.normal
   - css.properties.interest-delay.normal
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.window-drag
+  - css.properties.window-drag.move
+  - css.properties.window-drag.none

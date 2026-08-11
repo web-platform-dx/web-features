@@ -1,8 +1,10 @@
-draft_date: 2026-06-25
+draft_date: 2026-07-24
 name: "WebAssembly JavaScript Interface: Promise Integration"
 description: TODO
 spec: https://webassembly.github.io/js-promise-integration/js-api/
 compat_features:
+  - webassembly.api.SuspendError
+  - webassembly.api.SuspendError.SuspendError
   - webassembly.api.Suspending
   - webassembly.api.Suspending.Suspending
   - webassembly.api.promising_static
