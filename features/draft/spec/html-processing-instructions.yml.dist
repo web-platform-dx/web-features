@@ -3,4 +3,14 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "150"
+    chrome_android: "150"
+    edge: "150"
+compat_features:
+  - api.ProcessingInstruction.getAttribute
+  - api.ProcessingInstruction.getAttributeNames
+  - api.ProcessingInstruction.hasAttribute
+  - api.ProcessingInstruction.hasAttributes
+  - api.ProcessingInstruction.removeAttribute
+  - api.ProcessingInstruction.setAttribute
