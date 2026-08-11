@@ -1,0 +1,13 @@
+name: Soft Navigations
+description: The `soft-navigation` performance entry and the `PerformanceSoftNavigation` API is emitted by the browser when an SPA-style soft navigation occurs. This is defined as when a trusted user interaction causes a URL update and a visible contentful paint to the screen. It is used to measure the performance characteristics of the 
+spec: https://wicg.github.io/soft-navigations/#sec-soft-navs
+group: performance
+# Uncomment when https://github.com/mdn/browser-compat-data/pull/30195 is merged
+# compat_features:
+#   - api.PerformanceSoftNavigation
+#   - api.PerformanceSoftNavigation.getLargestInteractionContentfulPaint
+#   - api.PerformanceSoftNavigation.interactionId
+#   - api.PerformanceSoftNavigation.navigationId
+#   - api.PerformanceSoftNavigation.navigationType
+#   - api.PerformanceSoftNavigation.paintTime
+#   - api.PerformanceSoftNavigation.presentationTime
