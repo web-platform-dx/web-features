@@ -1,8 +1,9 @@
-draft_date: 2026-04-20
+draft_date: 2026-08-13
 name: WebGPU Shading Language
 description: TODO
 spec: https://gpuweb.github.io/gpuweb/wgsl/
 compat_features:
+  - api.WGSLLanguageFeatures.extension_linear_indexing
   - api.WGSLLanguageFeatures.extension_pointer_composite_access
   - api.WGSLLanguageFeatures.extension_subgroup_id
   - api.WGSLLanguageFeatures.extension_subgroup_uniformity
