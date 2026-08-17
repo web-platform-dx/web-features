@@ -1,4 +1,4 @@
-draft_date: 2026-07-09
+draft_date: 2026-08-17
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -142,7 +142,6 @@ compat_features:
   - http.status.103
   - http.status.103.preconnect
   - http.status.103.preload
-  - javascript.statements.import.import_attributes.type_text
 
 # The following features in the spec are already part of web-features:
 # - Audio and video tracks:
@@ -2523,3 +2522,5 @@ compat_features:
 #   - javascript.statements.import.import_attributes.type_css
 # - JSON import attributes:
 #   - javascript.statements.import.import_attributes.type_json
+# - Text import attributes:
+#   - javascript.statements.import.import_attributes.type_text

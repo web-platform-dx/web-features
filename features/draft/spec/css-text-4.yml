@@ -1,4 +1,4 @@
-draft_date: 2026-07-06
+draft_date: 2026-08-17
 name: CSS Text Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-text-4/
@@ -14,12 +14,20 @@ compat_features:
   - css.properties.text-align-last.right
   - css.properties.text-align-last.start
   - css.properties.text-wrap.auto
+  - css.properties.white-space-trim
+  - css.properties.white-space-trim.discard-after
+  - css.properties.white-space-trim.discard-before
+  - css.properties.white-space-trim.discard-inner
+  - css.properties.white-space-trim.none
   - css.properties.white-space.collapse
   - css.properties.white-space.preserve
   - css.properties.white-space.preserve-breaks
   - css.properties.white-space.preserve-spaces
   - css.properties.white-space.wrap
   - css.properties.word-spacing.percentages
+  - css.properties.wrap-inside
+  - css.properties.wrap-inside.auto
+  - css.properties.wrap-inside.avoid
 
 # The following features in the spec are already part of web-features:
 # - Hanging punctuation:
