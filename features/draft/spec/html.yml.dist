@@ -457,6 +457,19 @@ compat_features:
   - api.Window.unhandledrejection_event
 
   # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "69"
+  #   edge: "79"
+  #   firefox: "69"
+  #   firefox_android: "79"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - html.elements.form.autocomplete.new-password
+
+  # baseline: high
   # baseline_low_date: 2021-12-13
   # baseline_high_date: 2024-06-13
   # support:
@@ -625,6 +638,18 @@ compat_features:
   #   safari_ios: "26.2"
   - api.HTMLButtonElement.command.request-close
   - html.elements.button.command.request-close
+
+  # baseline: low
+  # baseline_low_date: 2025-12-12
+  # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
+  #   firefox: "140"
+  #   firefox_android: "140"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - html.elements.h1.no_ua_styles_in_article_aside_nav_section
 
   # baseline: low
   # baseline_low_date: 2026-01-13
@@ -893,14 +918,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   firefox: "140"
-  #   firefox_android: "140"
-  #   safari: "26.2"
-  #   safari_ios: "26.2"
-  - html.elements.h1.no_ua_styles_in_article_aside_nav_section
-
-  # baseline: false
-  # support:
   #   chrome: "87"
   #   chrome_android: "87"
   #   edge: "87"
@@ -1017,7 +1034,6 @@ compat_features:
   # support:
   #   firefox: "67"
   #   firefox_android: "67"
-  - html.elements.form.autocomplete.new-password
   - html.elements.textarea.autocomplete.new-password
 
   # baseline: false
