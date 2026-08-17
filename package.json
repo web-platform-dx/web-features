@@ -35,7 +35,8 @@
     "test:types": "npm run --workspaces test:types && tsc",
     "test": "npm run test:caniuse -- --quiet && npm run test:schematypes && npm run test:specs && npm run test:types && npm run test:format && npm run test:index && npm run test:dist && npm test --workspaces && npm run test:lint",
     "update-drafts": "tsx scripts/update-drafts.ts",
-    "remove-tagged-compat-features": "tsx scripts/remove-tagged-compat-features.ts && npm run format"
+    "remove-tagged-compat-features": "tsx scripts/remove-tagged-compat-features.ts && npm run format",
+    "stats": "tsx ./scripts/stats.ts"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
