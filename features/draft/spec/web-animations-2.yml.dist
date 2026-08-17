@@ -30,18 +30,24 @@ compat_features:
   #   safari_ios: "26.2"
   - api.Animation.overallProgress
 
+  # baseline: low
+  # baseline_low_date: 2026-01-21
+  # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
+  #   firefox: "142"
+  #   firefox_android: "142"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - api.Animation.commitStyles.endpoint_inclusive_commitStyles
+
   # baseline: false
   # support:
   #   chrome: "146"
   #   chrome_android: "146"
   #   edge: "146"
   - api.AnimationTrigger
-
-  # baseline: false
-  # support:
-  #   firefox: "142"
-  #   firefox_android: "142"
-  - api.Animation.commitStyles.endpoint_inclusive_commitStyles
 
   # baseline: false
   # support:

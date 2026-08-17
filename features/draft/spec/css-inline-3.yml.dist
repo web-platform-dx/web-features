@@ -24,26 +24,19 @@ compat_features:
   #   edge: "133"
   #   safari: "18.2"
   #   safari_ios: "18.2"
+  - css.properties.text-box-edge.alphabetic
+  - css.properties.text-box-edge.cap
+  - css.properties.text-box-edge.ex
   - css.properties.text-box-edge.text
+  - css.properties.text-box.alphabetic
   - css.properties.text-box.auto
+  - css.properties.text-box.cap
+  - css.properties.text-box.ex
   - css.properties.text-box.none
   - css.properties.text-box.text
   - css.properties.text-box.trim-both
   - css.properties.text-box.trim-end
   - css.properties.text-box.trim-start
-
-  # baseline: false
-  # support:
-  #   safari: "18.2"
-  #   safari_ios: "18.2"
-  - css.properties.text-box-edge.cap
-  - css.properties.text-box-edge.ex
-  - css.properties.text-box-edge.ideographic
-  - css.properties.text-box-edge.ideographic-ink
-  - css.properties.text-box.cap
-  - css.properties.text-box.ex
-  - css.properties.text-box.ideographic
-  - css.properties.text-box.ideographic-ink
 
   # baseline: false
   # support:
@@ -73,5 +66,7 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - css.properties.text-box-edge.alphabetic
-  - css.properties.text-box.alphabetic
+  - css.properties.text-box-edge.ideographic
+  - css.properties.text-box-edge.ideographic-ink
+  - css.properties.text-box.ideographic
+  - css.properties.text-box.ideographic-ink
