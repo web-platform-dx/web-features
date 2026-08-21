@@ -3,7 +3,8 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "154"
 compat_features:
   # baseline: false
   # support:
@@ -16,7 +17,8 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "154"
   - api.RTCIceCandidatePair
   - api.RTCIceCandidatePair.local
   - api.RTCIceCandidatePair.remote
