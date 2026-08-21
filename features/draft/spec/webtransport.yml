@@ -1,4 +1,4 @@
-draft_date: 2026-07-06
+draft_date: 2026-08-21
 name: WebTransport
 description: TODO
 spec: https://w3c.github.io/webtransport/
@@ -7,6 +7,7 @@ compat_features:
   - api.WebTransport.anticipatedConcurrentIncomingUnidirectionalStreams
   - api.WebTransport.createSendGroup
   - api.WebTransport.draining
+  - api.WebTransport.exportKeyingMaterial
   - api.WebTransport.protocol
   - api.WebTransport.supportsReliableOnly_static
   - api.WebTransportDatagramDuplexStream.createWritable
