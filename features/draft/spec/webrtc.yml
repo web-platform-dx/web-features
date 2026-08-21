@@ -1,8 +1,9 @@
-draft_date: 2026-08-03
+draft_date: 2026-08-21
 name: "WebRTC: Real-Time Communication in Browsers"
 description: TODO
 spec: https://w3c.github.io/webrtc-pc/
 compat_features:
+  - api.RTCError.errorDetail.sctp-failure
   - api.RTCIceCandidatePair
   - api.RTCIceCandidatePair.local
   - api.RTCIceCandidatePair.remote

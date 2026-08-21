@@ -3,9 +3,17 @@
 
 status:
   baseline: false
-  support:
-    firefox: "154"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "74"
+  #   chrome_android: "74"
+  #   edge: "79"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - api.RTCError.errorDetail.sctp-failure
+
   # baseline: false
   # support:
   #   chrome: "119"
@@ -15,7 +23,6 @@ compat_features:
   #   firefox_android: "142"
   - api.RTCRtpSender.setParameters.parameters_encodings_parameter.codec
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "154"
