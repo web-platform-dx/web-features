@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "154"
+    firefox_android: "154"
 compat_features:
   - javascript.builtins.Iterator.chunks
   - javascript.builtins.Iterator.windows
