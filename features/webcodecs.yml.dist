@@ -224,6 +224,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "127"
+  #   chrome_android: "127"
+  #   edge: "127"
+  #   firefox: "130"
+  #   firefox_android: "130"
+  - api.VideoFrame.copyTo.format_property
+
+  # baseline: false
+  # support:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"

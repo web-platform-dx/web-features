@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "150"
+    chrome_android: "150"
+    edge: "150"
 compat_features:
   - api.HTMLMediaElement.loading
   - html.elements.audio.loading

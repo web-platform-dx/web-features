@@ -1,4 +1,4 @@
-draft_date: 2026-02-23
+draft_date: 2026-08-21
 name: WebTransport
 description: TODO
 spec: https://w3c.github.io/webtransport/
@@ -7,9 +7,12 @@ compat_features:
   - api.WebTransport.anticipatedConcurrentIncomingUnidirectionalStreams
   - api.WebTransport.createSendGroup
   - api.WebTransport.draining
+  - api.WebTransport.exportKeyingMaterial
   - api.WebTransport.protocol
   - api.WebTransport.supportsReliableOnly_static
   - api.WebTransportDatagramDuplexStream.createWritable
+  - api.WebTransportDatagramDuplexStream.incomingMaxBufferedDatagrams
+  - api.WebTransportDatagramDuplexStream.outgoingMaxBufferedDatagrams
   - api.WebTransportDatagramsWritable
   - api.WebTransportDatagramsWritable.sendGroup
   - api.WebTransportDatagramsWritable.sendOrder
@@ -47,10 +50,8 @@ compat_features:
 #   - api.WebTransportBidirectionalStream.writable.returns_WebTransportSendStream
 #   - api.WebTransportDatagramDuplexStream
 #   - api.WebTransportDatagramDuplexStream.byob_readers
-#   - api.WebTransportDatagramDuplexStream.incomingHighWaterMark
 #   - api.WebTransportDatagramDuplexStream.incomingMaxAge
 #   - api.WebTransportDatagramDuplexStream.maxDatagramSize
-#   - api.WebTransportDatagramDuplexStream.outgoingHighWaterMark
 #   - api.WebTransportDatagramDuplexStream.outgoingMaxAge
 #   - api.WebTransportDatagramDuplexStream.readable
 #   - api.WebTransportError

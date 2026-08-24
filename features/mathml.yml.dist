@@ -295,11 +295,14 @@ compat_features:
   - css.properties.font-size.math
   - css.properties.math-depth
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-06-16
   # support:
   #   chrome: "109"
   #   chrome_android: "109"
   #   edge: "109"
+  #   firefox: "152"
+  #   firefox_android: "152"
   #   safari: "15.4"
   #   safari_ios: "15.4"
   - api.MathMLElement.nonce

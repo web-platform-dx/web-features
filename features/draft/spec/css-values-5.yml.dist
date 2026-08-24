@@ -22,8 +22,9 @@ compat_features:
   - css.properties.object-position.right
   - css.properties.object-position.top
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2024-01-23
+  # baseline_high_date: 2026-07-23
   # support:
   #   chrome: "116"
   #   chrome_android: "116"
@@ -83,15 +84,8 @@ compat_features:
   - css.properties.perspective-origin.y-end
   - css.properties.perspective-origin.y-start
 
-  # baseline: false
-  # support:
-  #   safari: "26.2"
-  #   safari_ios: "26.2"
-  - css.types.random.dashed-ident
-  - css.types.random.element-shared
-  - css.types.random.step
-
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
+  - css.properties.line-clamp.string
   - css.types.attr.attr-name_accepts_namespaces

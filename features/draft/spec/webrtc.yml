@@ -1,8 +1,12 @@
-draft_date: 2026-05-08
+draft_date: 2026-08-21
 name: "WebRTC: Real-Time Communication in Browsers"
 description: TODO
 spec: https://w3c.github.io/webrtc-pc/
 compat_features:
+  - api.RTCError.errorDetail.sctp-failure
+  - api.RTCIceCandidatePair
+  - api.RTCIceCandidatePair.local
+  - api.RTCIceCandidatePair.remote
   - api.RTCRtpSender.setParameters.parameters_encodings_parameter.codec
 
 # The following features in the spec are already part of web-features:

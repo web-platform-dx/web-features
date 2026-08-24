@@ -3,8 +3,17 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "151"
+    edge: "151"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "151"
+  #   chrome_android: "151"
+  #   edge: "151"
+  - api.SpeechRecognition.unspokenPunctuation
+
   # baseline: false
   # support:
   #   chrome: "139"
@@ -31,8 +40,9 @@ compat_features:
   - api.SpeechRecognitionPhrase.phrase
   - http.headers.Permissions-Policy.on-device-speech-recognition
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "150"
+  #   edge: "150"
   - api.SpeechRecognition.available_static.options_parameter.options_quality_parameter
   - api.SpeechRecognition.install_static.options_parameter.options_quality_parameter

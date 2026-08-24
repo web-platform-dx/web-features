@@ -1112,14 +1112,68 @@ compat_features:
   - api.RTCPeerConnectionIceErrorEvent.address
   - api.RTCPeerConnectionIceErrorEvent.port
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-06-16
   # support:
   #   chrome: "57"
   #   chrome_android: "57"
   #   edge: "79"
+  #   firefox: "152"
+  #   firefox_android: "152"
   #   safari: "12.1"
   #   safari_ios: "12.2"
   - api.RTCPeerConnection.RTCPeerConnection.configuration_rtcpMuxPolicy_parameter
+
+  # baseline: low
+  # baseline_low_date: 2026-07-21
+  # support:
+  #   chrome: "72"
+  #   chrome_android: "72"
+  #   edge: "12"
+  #   firefox: "153"
+  #   firefox_android: "153"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - api.RTCDtlsTransport.getRemoteCertificates
+
+  # baseline: low
+  # baseline_low_date: 2026-08-18
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "69"
+  #   edge: "79"
+  #   firefox: "154"
+  #   firefox_android: "154"
+  #   safari: "15"
+  #   safari_ios: "15"
+  - api.RTCRtpReceiver.getParameters.return_object_property_rtcp
+  - api.RTCRtpSender.getParameters.return_object_property_rtcp
+  - api.RTCRtpSender.setParameters.parameters_rtcp_parameter
+
+  # baseline: low
+  # baseline_low_date: 2026-08-18
+  # support:
+  #   chrome: "72"
+  #   chrome_android: "72"
+  #   edge: "12"
+  #   firefox: "154"
+  #   firefox_android: "154"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - api.RTCDtlsTransport.error_event
+
+  # baseline: low
+  # baseline_low_date: 2026-08-18
+  # support:
+  #   chrome: "75"
+  #   chrome_android: "75"
+  #   edge: "79"
+  #   firefox: "154"
+  #   firefox_android: "154"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.RTCIceTransport.getSelectedCandidatePair
+  - api.RTCIceTransport.selectedcandidatepairchange_event
 
   # baseline: false
   # support:
@@ -1160,43 +1214,12 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "69"
-  #   chrome_android: "69"
-  #   edge: "79"
-  #   safari: "15"
-  #   safari_ios: "15"
-  - api.RTCRtpReceiver.getParameters.return_object_property_rtcp
-  - api.RTCRtpSender.getParameters.return_object_property_rtcp
-  - api.RTCRtpSender.setParameters.parameters_rtcp_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "72"
-  #   chrome_android: "72"
-  #   edge: "12"
-  #   safari: "15.4"
-  #   safari_ios: "15.4"
-  - api.RTCDtlsTransport.error_event
-  - api.RTCDtlsTransport.getRemoteCertificates
-
-  # baseline: false
-  # support:
   #   chrome: "75"
   #   chrome_android: "75"
   #   edge: "13"
   #   firefox: "150"
   #   firefox_android: "150"
   - api.RTCIceTransport.role
-
-  # baseline: false
-  # support:
-  #   chrome: "75"
-  #   chrome_android: "75"
-  #   edge: "79"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - api.RTCIceTransport.getSelectedCandidatePair
-  - api.RTCIceTransport.selectedcandidatepairchange_event
 
   # baseline: false
   # support:

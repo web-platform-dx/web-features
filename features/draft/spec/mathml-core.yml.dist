@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "152"
+    firefox_android: "152"
 compat_features:
   # baseline: high
   # baseline_low_date: 2023-08-29
@@ -46,6 +48,8 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "152"
+  #   firefox_android: "152"
   - mathml.elements.a
   - mathml.elements.a.href

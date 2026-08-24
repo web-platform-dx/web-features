@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "151"
+    chrome_android: "151"
+    edge: "151"
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -44,7 +47,11 @@ compat_features:
   - css.properties.animation-timeline.auto
   - css.properties.animation-timeline.none
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "151"
+  #   chrome_android: "151"
+  #   edge: "151"
+  #   firefox: "152"
+  #   firefox_android: "152"
   - api.AnimationEvent.animation

@@ -3,35 +3,45 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "154"
+    firefox_android: "154"
 compat_features:
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-07-21
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "79"
+  #   firefox: "153"
+  #   firefox_android: "153"
+  #   safari: "5.1"
+  #   safari_ios: "5"
+  - css.properties.alignment-baseline.hanging
+
+  # baseline: low
+  # baseline_low_date: 2026-08-18
   # support:
   #   chrome: "133"
   #   chrome_android: "133"
   #   edge: "133"
+  #   firefox: "154"
+  #   firefox_android: "154"
   #   safari: "18.2"
   #   safari_ios: "18.2"
+  - css.properties.text-box-edge.alphabetic
+  - css.properties.text-box-edge.cap
+  - css.properties.text-box-edge.ex
   - css.properties.text-box-edge.text
+  - css.properties.text-box.alphabetic
   - css.properties.text-box.auto
+  - css.properties.text-box.cap
+  - css.properties.text-box.ex
   - css.properties.text-box.none
   - css.properties.text-box.text
   - css.properties.text-box.trim-both
   - css.properties.text-box.trim-end
   - css.properties.text-box.trim-start
-
-  # baseline: false
-  # support:
-  #   safari: "18.2"
-  #   safari_ios: "18.2"
-  - css.properties.text-box-edge.cap
-  - css.properties.text-box-edge.ex
-  - css.properties.text-box-edge.ideographic
-  - css.properties.text-box-edge.ideographic-ink
-  - css.properties.text-box.cap
-  - css.properties.text-box.ex
-  - css.properties.text-box.ideographic
-  - css.properties.text-box.ideographic-ink
 
   # baseline: false
   # support:
@@ -47,3 +57,25 @@ compat_features:
   - css.properties.vertical-align.center
   - css.properties.vertical-align.first
   - css.properties.vertical-align.last
+
+  # baseline: false
+  # support:
+  #   firefox: "153"
+  #   firefox_android: "153"
+  - css.properties.vertical-align.alphabetic
+  - css.properties.vertical-align.central
+  - css.properties.vertical-align.hanging
+  - css.properties.vertical-align.ideographic
+  - css.properties.vertical-align.mathematical
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   firefox: "154"
+  #   firefox_android: "154"
+  - css.properties.text-box-edge.ideographic
+  - css.properties.text-box-edge.ideographic-ink
+  - css.properties.text-box-trim.inline_elements
+  - css.properties.text-box.ideographic
+  - css.properties.text-box.ideographic-ink
+  - css.properties.text-box.inline_elements
