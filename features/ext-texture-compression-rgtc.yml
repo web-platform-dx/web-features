@@ -2,20 +2,5 @@ name: EXT_texture_compression_rgtc WebGL extension
 description: The `EXT_texture_compression_rgtc` extension for WebGL 1.0 and 2.0 contexts adds RGTC compressed texture formats. RGTC is a block-based texture compression format suited for unsigned and signed red and red-green textures. Also known as Red-Green Texture Compression.
 spec: https://registry.khronos.org/webgl/extensions/EXT_texture_compression_rgtc/
 group: webgl-extensions
-# Pinned status to delay advancing until upstream data is corrected.
-# See:
-# - https://github.com/web-platform-dx/web-features/pull/4228/changes#r3730495893
-# - https://github.com/mdn/browser-compat-data/pull/30184
-status:
-  baseline: low
-  baseline_low_date: 2025-05-12
-  support:
-    chrome: "93"
-    chrome_android: "83"
-    edge: "93"
-    firefox: "65"
-    firefox_android: "65"
-    safari: "14.1"
-    safari_ios: "18.5"
 compat_features:
   - api.EXT_texture_compression_rgtc

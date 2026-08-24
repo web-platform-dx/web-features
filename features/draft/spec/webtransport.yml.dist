@@ -38,3 +38,8 @@ compat_features:
   - api.WebTransportSendGroup
   - api.WebTransportSendGroup.getStats
   - api.WebTransportSendStream.sendGroup
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.WebTransport.exportKeyingMaterial
