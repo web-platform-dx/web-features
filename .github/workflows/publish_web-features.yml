@@ -33,9 +33,17 @@ jobs:
           registry-url: "https://registry.npmjs.org"
       - run: npm ci
       - run: npm run build
-      - run: gh release upload ${{ github.ref_name }} packages/web-features/data.json data.extended.json schemas/data.schema.json data.proposed.json schemas/data.proposed.schema.json
+      - run: gh release upload ${{ github.ref_name }}
         env:
           GH_TOKEN: ${{ github.token }}
+          ARTIFACTS: >
+            ${{ env.package_dir }}/data.json
+            data.extended.json
+            schemas/data.schema.json
+            data.proposed.json
+            schemas/data.proposed.schema.json
+            stats.json
+
   publish:
     if: github.repository == 'web-platform-dx/web-features'
     runs-on: ubuntu-latest
