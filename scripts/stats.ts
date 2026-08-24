@@ -3,10 +3,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import yargs from "yargs";
-import { features, groups } from "../index.ts";
 import { isOrdinaryFeatureData } from "../type-guards.ts";
-import { caniuseToWebFeaturesId } from "./caniuse.ts";
-import { compatFeaturesToCumulativeDaysShipped } from "./unmapped-compat-keys.ts";
 
 interface ResultBase {
   featuresCount: number; // `kind: feature` ID count (ignores other `kind` values)
@@ -72,7 +69,12 @@ const argv = yargs(process.argv.slice(2))
   .usage("$0", "Generate statistics")
   .parseSync();
 
-export function stats(previous: Partial<Result>): Result {
+export async function stats(previous: Partial<Result>): Promise<Result> {
+  const { features, groups } = await import("../index.ts");
+  const { caniuseToWebFeaturesId } = await import("./caniuse.ts");
+  const { compatFeaturesToCumulativeDaysShipped } =
+    await import("./unmapped-compat-keys.ts");
+
   const featuresCount = Object.values(features).filter(
     isOrdinaryFeatureData,
   ).length;
@@ -209,8 +211,16 @@ export function stats(previous: Partial<Result>): Result {
   return result;
 }
 
+async function main() {
+  let previous: Result | undefined;
+  if (argv.previous) {
+    previous = argv.previous;
+  }
+  console.log(JSON.stringify(await stats(previous), undefined, 2));
+}
+
 if (import.meta.url.startsWith("file:")) {
   if (process.argv[1] === fileURLToPath(import.meta.url)) {
-    console.log(JSON.stringify(stats(argv.previous), undefined, 2));
+    await main();
   }
 }
