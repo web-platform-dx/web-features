@@ -1,8 +1,11 @@
-draft_date: 2026-08-11
+draft_date: 2026-08-24
 name: <template for>
-description: The `<template for="…">` HTML element replaces the content at a named range or insertion point, marked by the processing instructions `<?start name="…">` and `<?end>` or `<?marker name="…">`. You can use this to stream partial updates into the document out of order.
-# TODO: Uncomment when https://github.com/whatwg/html/pull/11818 lands
-#spec: https://html.spec.whatwg.org/multipage/scripting.html#attr-template-for
-# TODO: Uncomment when XXX lands
-#compat_features:
-#- html.elements.template.for
+description: The `<template for="…">` HTML element replaces the content at a named range or insertion point, marked by the processing instructions `<?start name="…">` and `<?end>` or `<?marker name="…">`. This is used this to stream or "patch" partial updates into the document out of order.
+spec: https://html.spec.whatwg.org/multipage/scripting.html#attr-template-for
+# TODO: Uncomment when https://github.com/mdn/browser-compat-data/pull/30292 lands
+# compat_features:
+# - api.HTMLTemplateElement.htmlfor
+# - api.ProcessingInstruction.marker-end
+# - api.ProcessingInstruction.marker-start
+# - api.ProcessingInstruction.marker-marker
+# - html.elements.template.for
