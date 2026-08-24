@@ -5,6 +5,10 @@ import { fileURLToPath } from "node:url";
 import yargs from "yargs";
 import { isOrdinaryFeatureData } from "../type-guards.ts";
 
+// A release tag after "v3.5.1" or "next"
+type SupportedReleaseTag =
+  (`v{string}` & { __brand: "version ok" }) | "next" | "latest";
+
 interface ResultBase {
   featuresCount: number; // `kind: feature` ID count (ignores other `kind` values)
   groupsCount: number; // group ID count
@@ -63,8 +67,14 @@ const argv = yargs(process.argv.slice(2))
     description: "Path to a JSON file",
     coerce: (filePath) => {
       const raw = readFileSync(filePath, "utf-8");
-      return JSON.parse(raw);
+      return JSON.parse(raw) as Result;
     },
+  })
+  .option("previous-release", {
+    type: "string",
+    description:
+      "Fetch a previous release's (a tag, such as `next` or `v3.36.0`, or `latest`) stats to compare against",
+    coerce: parseReleaseTag,
   })
   .usage("$0", "Generate statistics")
   .parseSync();
@@ -211,10 +221,53 @@ export async function stats(previous: Partial<Result>): Promise<Result> {
   return result;
 }
 
+async function fetchStats(tagOrLatest: SupportedReleaseTag): Promise<Result> {
+  const url =
+    tagOrLatest === "latest"
+      ? "https://github.com/web-platform-dx/web-features/releases/latest/download/stats.json"
+      : `https://github.com/web-platform-dx/web-features/releases/download/${tagOrLatest}/stats.json`;
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(
+      `Failed to get previous release's stats.json file (${response.status})`,
+    );
+  }
+  return response.json() as Promise<Result>;
+}
+
+function parseReleaseTag(tag: string): SupportedReleaseTag {
+  if (tag === "next" || tag === "latest") {
+    return tag as SupportedReleaseTag;
+  }
+  if (!tag.startsWith("v")) {
+    throw new Error("Release tags start with `v`");
+  }
+  const numbers = tag.slice(1).split(".");
+  if (numbers.length !== 3) {
+    throw new Error("Release tags must be in SemVer-like vX.Y.Z format");
+  }
+  const major = parseInt(numbers[0], 10);
+  const minor = parseInt(numbers[1], 10);
+  const patch = parseInt(numbers[2], 10);
+
+  if ([major, minor, patch].some(isNaN)) {
+    throw new Error("Release tags must be in SemVer-like vX.Y.Z format");
+  }
+
+  if (major <= 3 && minor <= 35) {
+    throw new Error(
+      "This script can't handle releases at or before v3.36.0. If you need such stats, then file an issue.",
+    );
+  }
+  return tag as SupportedReleaseTag;
+}
+
 async function main() {
   let previous: Result | undefined;
   if (argv.previous) {
     previous = argv.previous;
+  } else if (argv.previousRelease) {
+    previous = await fetchStats(argv.previousRelease);
   }
   console.log(JSON.stringify(await stats(previous), undefined, 2));
 }
