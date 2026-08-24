@@ -1,5 +1,5 @@
 name: HTML processing instructions
-description: Processing instructions such as `<?xml>` were originally only supported in XML documents, and treated as comments when present in HTML documents. Browsers have started supporting them in HTML documents for out-of-order streaming (using `<?start>`, `<?end>`, and `<?marker>`) and other use cases.
+description: An HTML processing instruction is text enclosed by `<?` and `>`, which marks a target for further processing. They may appear anywhere in a document. They are ignored like comments when they're not recognized for a specific purpose.
 spec: https://html.spec.whatwg.org/multipage/syntax.html#processing-instructions
 compat_features:
 - api.ProcessingInstruction.doc_html
