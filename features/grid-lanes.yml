@@ -1,5 +1,5 @@
 name: Grid lanes
-description: "The `display: grid-lanes` or `display: inline-grid-lanes` CSS declaration creates a layout where items are tightly packed layout in parallel lanes. Items are placed one by one in the lane that has the most available space. Also known as masonry."
+description: "The `display: grid-lanes` and `display: inline-grid-lanes` CSS declarations create a layout where items are tightly packed in parallel lanes. Items are placed one by one in the lane that has the most available space. Also known as masonry."
 spec: https://drafts.csswg.org/css-grid-3/
 group: layout
 caniuse: css-grid-lanes
@@ -9,5 +9,3 @@ compat_features:
   - css.properties.flow-tolerance
   - css.properties.flow-tolerance.infinite
   - css.properties.flow-tolerance.normal
-  - css.properties.grid-template-columns.masonry
-  - css.properties.grid-template-rows.masonry
