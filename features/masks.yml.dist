@@ -35,7 +35,6 @@ compat_features:
   - css.properties.mask-composite.subtract
   - css.properties.mask-image
   - css.properties.mask-image.multiple_mask_images
-  - css.properties.mask-image.svg_masks
   - css.properties.mask-origin
   - css.properties.mask-position
   - css.properties.mask-repeat
@@ -48,6 +47,7 @@ compat_features:
   #   edge: "120"
   #   firefox: "53"
   #   firefox_android: "53"
+  - css.properties.mask-image.svg_masks
   - css.properties.mask-mode
   - css.properties.mask-mode.alpha
   - css.properties.mask-mode.luminance

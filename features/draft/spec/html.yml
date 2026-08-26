@@ -1,4 +1,4 @@
-draft_date: 2026-08-17
+draft_date: 2026-08-21
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -2233,7 +2233,6 @@ compat_features:
 #   - api.VisibilityStateEntry.startTime
 # - Window:
 #   - api.Window
-#   - api.Window.DOMContentLoaded_event
 #   - api.Window.blur_event
 #   - api.Window.close
 #   - api.Window.closed
@@ -2395,9 +2394,6 @@ compat_features:
 #   - html.elements.dfn
 # - <em>:
 #   - html.elements.em
-# - <fencedframe>:
-#   - html.elements.fencedframe.height
-#   - html.elements.fencedframe.width
 # - <figure> and <figcaption>:
 #   - html.elements.figcaption
 #   - html.elements.figure
