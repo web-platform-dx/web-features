@@ -1625,6 +1625,19 @@ compat_features:
   - svg.elements.a.referrerpolicy
 
   # baseline: high
+  # baseline_low_date: 2020-11-17
+  # baseline_high_date: 2023-05-17
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "83"
+  #   firefox_android: "83"
+  #   safari: "3"
+  #   safari_ios: "1"
+  - api.SVGElement.load_event
+
+  # baseline: high
   # baseline_low_date: 2022-03-14
   # baseline_high_date: 2024-09-14
   # support:
@@ -1825,7 +1838,6 @@ compat_features:
   #   edge: "12"
   #   safari: "3"
   #   safari_ios: "1"
-  - api.SVGElement.load_event
   - api.SVGSVGElement.checkEnclosure
   - api.SVGSVGElement.checkIntersection
   - api.SVGSVGElement.getEnclosureList
