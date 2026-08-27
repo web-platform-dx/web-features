@@ -52,7 +52,6 @@ compat_features:
   - api.HTMLSourceElement.src
   - api.HTMLSourceElement.type
   - api.HTMLSourceElement.width
-  - api.HTMLTemplateElement.htmlFor
   - api.HTMLUnknownElement
   - api.ImageData.ImageData.settings_parameter
   - api.ImageData.ImageData.settings_parameter.colorSpace_option
@@ -129,7 +128,6 @@ compat_features:
   - html.elements.script.type.importmap.integrity
   - html.elements.script.type.importmap.multiple_import_maps
   - html.elements.select.autocomplete
-  - html.elements.template.for
   - html.elements.template.shadowrootcustomelementregistry
   - html.elements.template.shadowrootslotassignment
   - html.elements.textarea.autocomplete.new-password
@@ -1854,6 +1852,9 @@ compat_features:
 #   - api.HTMLTemplateElement
 #   - api.HTMLTemplateElement.content
 #   - html.elements.template
+# - <template for>:
+#   - api.HTMLTemplateElement.htmlFor
+#   - html.elements.template.for
 # - Declarative shadow DOM:
 #   - api.HTMLTemplateElement.shadowRootClonable
 #   - api.HTMLTemplateElement.shadowRootDelegatesFocus
