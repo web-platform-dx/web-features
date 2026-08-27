@@ -491,12 +491,20 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "151"
+  #   chrome_android: "151"
+  #   edge: "151"
   #   firefox: "151"
   #   firefox_android: "151"
   - css.properties.position-anchor
-  - css.properties.position-anchor.auto
   - css.properties.position-anchor.none
   - css.properties.position-anchor.normal
+
+  # baseline: false
+  # support:
+  #   firefox: "151"
+  #   firefox_android: "151"
+  - css.properties.position-anchor.auto
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
