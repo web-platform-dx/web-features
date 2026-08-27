@@ -2,5 +2,5 @@ name: <template for>
 description: The `<template for="…">` HTML element replaces the content at a named range or insertion point, marked by the processing instructions `<?start name="…">` and `<?end>` or `<?marker name="…">`. You can use this to stream or "patch" partial updates into the document out of order.
 spec: https://html.spec.whatwg.org/multipage/scripting.html#attr-template-for
 compat_features:
-- api.HTMLTemplateElement.htmlfor
+- api.HTMLTemplateElement.htmlFor
 - html.elements.template.for
