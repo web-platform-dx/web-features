@@ -1021,8 +1021,10 @@ compat_features:
   #   chrome: "150"
   #   chrome_android: "150"
   #   edge: "150"
+  - api.HTMLTemplateElement.htmlFor
   - api.Sanitizer.allowProcessingInstruction
   - api.Sanitizer.removeProcessingInstruction
+  - html.elements.template.for
 
   # baseline: false
   # support:
@@ -1075,5 +1077,17 @@ compat_features:
   # support: {}
   - api.Document.parseHTMLUnsafe_static.options_sanitizer_parameter
   - api.Element.setHTMLUnsafe.options_sanitizer_parameter
+  - api.MathMLAnchorElement.hash
+  - api.MathMLAnchorElement.host
+  - api.MathMLAnchorElement.hostname
+  - api.MathMLAnchorElement.hreflang
+  - api.MathMLAnchorElement.origin
+  - api.MathMLAnchorElement.password
+  - api.MathMLAnchorElement.pathname
+  - api.MathMLAnchorElement.port
+  - api.MathMLAnchorElement.protocol
+  - api.MathMLAnchorElement.search
+  - api.MathMLAnchorElement.type
+  - api.MathMLAnchorElement.username
   - api.ShadowRoot.setHTMLUnsafe.options_sanitizer_parameter
   - html.elements.track.kind.descriptions
