@@ -4,3 +4,12 @@
 status:
   baseline: false
   support: {}
+compat_features:
+  - api.Window.requestResize
+  - css.properties.frame-sizing
+  - css.properties.frame-sizing.auto
+  - css.properties.frame-sizing.content-block-size
+  - css.properties.frame-sizing.content-height
+  - css.properties.frame-sizing.content-inline-size
+  - css.properties.frame-sizing.content-width
+  - html.elements.meta.name.responsive-embedded-sizing
