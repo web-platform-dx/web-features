@@ -1,4 +1,4 @@
-draft_date: 2026-08-21
+draft_date: 2026-08-27
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -65,7 +65,6 @@ compat_features:
   - api.Navigator.taintEnabled
   - api.OffscreenCanvasRenderingContext2D.getContextAttributes
   - api.OffscreenCanvasRenderingContext2D.lang
-  - api.ProcessingInstruction.doc_html
   - api.PromiseRejectionEvent
   - api.PromiseRejectionEvent.PromiseRejectionEvent
   - api.PromiseRejectionEvent.promise
@@ -2170,6 +2169,8 @@ compat_features:
 #   - api.PaintRenderingContext2D.strokeStyle
 #   - api.PaintRenderingContext2D.transform
 #   - api.PaintRenderingContext2D.translate
+# - HTML processing instructions:
+#   - api.ProcessingInstruction.doc_html
 # - Selection:
 #   - api.Range.createContextualFragment
 # - COEP violation reports:
