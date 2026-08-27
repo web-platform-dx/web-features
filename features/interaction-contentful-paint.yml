@@ -1,0 +1,10 @@
+name: Interaction contentful paint
+description: The `interaction-contentful-paint` performance entry, which returns an `InteractionContentfulPaint` instance, is emitted when an interaction causes one or more contentful paints. Use it to measure LCP for soft navigations in single page apps or to measure contentful paints due to an interaction.
+spec: https://wicg.github.io/soft-navigations/#sec-interaction-contentful-paint
+group: performance
+compat_features:
+  - api.InteractionContentfulPaint
+  - api.InteractionContentfulPaint.interactionId
+  - api.InteractionContentfulPaint.largestContentfulPaint
+  - api.InteractionContentfulPaint.paintTime
+  - api.InteractionContentfulPaint.presentationTime
