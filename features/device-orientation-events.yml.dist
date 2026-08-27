@@ -106,6 +106,8 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "152"
+  #   chrome_android: "152"
   #   safari_ios: "14.5"
   - api.DeviceMotionEvent.requestPermission_static
   - api.DeviceOrientationEvent.requestPermission_static

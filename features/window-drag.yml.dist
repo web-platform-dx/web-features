@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "152"
+    chrome_android: "152"
 compat_features:
   - css.properties.window-drag
   - css.properties.window-drag.move
