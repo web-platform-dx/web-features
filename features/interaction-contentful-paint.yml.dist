@@ -3,4 +3,13 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "151"
+    chrome_android: "151"
+    edge: "151"
+compat_features:
+  - api.InteractionContentfulPaint
+  - api.InteractionContentfulPaint.interactionId
+  - api.InteractionContentfulPaint.largestContentfulPaint
+  - api.InteractionContentfulPaint.paintTime
+  - api.InteractionContentfulPaint.presentationTime

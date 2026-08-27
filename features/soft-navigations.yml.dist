@@ -3,4 +3,14 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "151"
+    chrome_android: "151"
+    edge: "151"
+compat_features:
+  - api.PerformanceSoftNavigation
+  - api.PerformanceSoftNavigation.getLargestInteractionContentfulPaint
+  - api.PerformanceSoftNavigation.interactionId
+  - api.PerformanceSoftNavigation.navigationType
+  - api.PerformanceSoftNavigation.paintTime
+  - api.PerformanceSoftNavigation.presentationTime
