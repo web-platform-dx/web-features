@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "149"
+    edge: "149"
 compat_features:
   - manifests.webapp.migrate_from
   - manifests.webapp.migrate_to

@@ -1,4 +1,4 @@
-draft_date: 2026-04-02
+draft_date: 2026-05-22
 name: Web Animations Module Level 2
 description: TODO
 spec: https://drafts.csswg.org/web-animations-2/
@@ -6,6 +6,8 @@ compat_features:
   - api.Animation.commitStyles.endpoint_inclusive_commitStyles
   - api.Animation.overallProgress
   - api.AnimationTrigger
+  - api.Element.getAnimations.options_parameter
+  - api.Element.getAnimations.options_parameter.pseudoElement_option
 
 # The following features in the spec are already part of web-features:
 # - Web animations:

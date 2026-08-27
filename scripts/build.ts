@@ -1,14 +1,14 @@
-import { DefinedError } from "ajv";
+import type { DefinedError } from "ajv";
 import stringify from "fast-json-stable-stringify";
+import { fdir } from "fdir";
 import { execSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import winston from "winston";
-import yargs from "yargs";
-import * as data from "../index.js";
-import { validate, validateProposed } from "./validate.js";
-import { fdir } from "fdir";
 import YAML from "yaml";
+import yargs from "yargs";
+import * as data from "../index.ts";
+import { validate, validateProposed } from "./validate.ts";
 
 const logger = winston.createLogger({
   format: winston.format.combine(

@@ -1,4 +1,8 @@
-import type { FeatureData, FeatureMovedData, FeatureSplitData } from "./types";
+import type {
+  FeatureData,
+  FeatureMovedData,
+  FeatureSplitData,
+} from "./types.ts";
 
 export function isOrdinaryFeatureData(x: unknown): x is FeatureData {
   return (

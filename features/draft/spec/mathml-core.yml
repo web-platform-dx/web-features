@@ -1,13 +1,18 @@
-draft_date: 2026-05-08
+draft_date: 2026-08-27
 name: MathML Core
 description: TODO
 spec: https://w3c.github.io/mathml-core/
 compat_features:
+  - api.MathMLAnchorElement
+  - api.MathMLAnchorElement.href
+  - api.MathMLAnchorElement.target
   - css.properties.math-depth.auto-add
   - css.properties.math-shift.compact
   - css.properties.math-shift.normal
   - css.properties.math-style.compact
   - css.properties.math-style.normal
+  - mathml.elements.a
+  - mathml.elements.a.href
 
 # The following features in the spec are already part of web-features:
 # - MathML:

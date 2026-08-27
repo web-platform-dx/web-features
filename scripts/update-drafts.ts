@@ -10,9 +10,9 @@ import winston from "winston";
 import { Document, parse } from "yaml";
 import yargs from "yargs";
 
-import { features } from "../index.js";
-import { isOrdinaryFeatureData } from "../type-guards.js";
-import { FeatureData } from "../types.js";
+import { features } from "../index.ts";
+import { isOrdinaryFeatureData } from "../type-guards.ts";
+import type { FeatureData } from "../types.ts";
 
 type WebSpecsSpec = (typeof webSpecs)[number];
 

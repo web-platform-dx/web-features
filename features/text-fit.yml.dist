@@ -3,4 +3,12 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "150"
+    chrome_android: "150"
+    edge: "150"
+compat_features:
+  - css.properties.text-fit
+  - css.properties.text-fit.grow
+  - css.properties.text-fit.none
+  - css.properties.text-fit.shrink

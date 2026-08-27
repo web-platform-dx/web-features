@@ -494,27 +494,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "40"
-  #   chrome_android: "40"
-  #   edge: "17"
-  - api.InstallEvent
-
-  # baseline: false
-  # support:
-  #   chrome: "40"
-  #   chrome_android: "40"
-  #   edge: "79"
-  - api.InstallEvent.InstallEvent
-
-  # baseline: false
-  # support:
-  #   chrome: "123"
-  #   chrome_android: "123"
-  #   edge: "123"
-  - api.InstallEvent.addRoutes
-
-  # baseline: false
-  # support:
   #   safari: "16"
   #   safari_ios: "16"
   - api.WindowClient.ancestorOrigins
