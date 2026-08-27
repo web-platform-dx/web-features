@@ -1,16 +1,22 @@
-draft_date: 2026-01-19
+draft_date: 2026-08-27
 name: Paint Timing
 description: TODO
 spec: https://w3c.github.io/paint-timing/
 compat_features:
+  - api.InteractionContentfulPaint.paintTime
+  - api.InteractionContentfulPaint.presentationTime
   - api.LargestContentfulPaint.paintTime
   - api.LargestContentfulPaint.presentationTime
+  - api.PerformanceContainerTiming.paintTime
+  - api.PerformanceContainerTiming.presentationTime
   - api.PerformanceElementTiming.paintTime
   - api.PerformanceElementTiming.presentationTime
   - api.PerformanceLongAnimationFrameTiming.paintTime
   - api.PerformanceLongAnimationFrameTiming.presentationTime
   - api.PerformancePaintTiming.paintTime
   - api.PerformancePaintTiming.presentationTime
+  - api.PerformanceSoftNavigation.paintTime
+  - api.PerformanceSoftNavigation.presentationTime
 
 # The following features in the spec are already part of web-features:
 # - Paint timing:

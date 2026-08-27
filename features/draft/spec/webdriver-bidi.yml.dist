@@ -133,6 +133,7 @@ compat_features:
   - webdriver.bidi.script.getRealms
   - webdriver.bidi.script.getRealms.context_parameter
   - webdriver.bidi.script.getRealms.type_parameter
+  - webdriver.bidi.script.getRealms.type_parameter.window
 
   # baseline: false
   # support:
@@ -446,6 +447,24 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  #   firefox: "149"
+  #   firefox_android: "149"
+  - webdriver.bidi.script.realmCreated_event.owners_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  #   firefox: "151"
+  #   firefox_android: "151"
+  - webdriver.bidi.script.getRealms.type_parameter.worker
+
+  # baseline: false
+  # support:
   #   chrome: "131"
   #   chrome_android: "131"
   #   edge: "131"
@@ -667,8 +686,8 @@ compat_features:
   - webdriver.bidi.log.entryAdded_event.args_parameter
   - webdriver.bidi.log.entryAdded_event.source_parameter
   - webdriver.bidi.log.entryAdded_event.stackTrace_parameter
+  - webdriver.bidi.script.getRealms.type_parameter.worklet
   - webdriver.bidi.script.message_event.source_parameter
-  - webdriver.bidi.script.realmCreated_event.owners_parameter
 
   # baseline: false
   # support:
@@ -733,12 +752,6 @@ compat_features:
   - webdriver.bidi.emulation.setScriptingEnabled.contexts_parameter
   - webdriver.bidi.emulation.setScriptingEnabled.enabled_parameter
   - webdriver.bidi.emulation.setScriptingEnabled.userContexts_parameter
-
-  # baseline: false
-  # support:
-  #   firefox: "106"
-  #   firefox_android: "106"
-  - webdriver.bidi.script.getRealms.type_parameter.window
 
   # baseline: false
   # support:
@@ -859,7 +872,6 @@ compat_features:
   - webdriver.bidi.browser.setClientWindowState
   - webdriver.bidi.browser.setClientWindowState.clientWindow_parameter
   - webdriver.bidi.browser.setClientWindowState.state_parameter
-  - webdriver.bidi.script.getRealms.type_parameter.worker
 
   # baseline: false
   # support:

@@ -1,4 +1,4 @@
-draft_date: 2026-08-21
+draft_date: 2026-08-27
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -52,11 +52,24 @@ compat_features:
   - api.HTMLSourceElement.src
   - api.HTMLSourceElement.type
   - api.HTMLSourceElement.width
+  - api.HTMLTemplateElement.htmlFor
   - api.HTMLUnknownElement
   - api.ImageData.ImageData.settings_parameter
   - api.ImageData.ImageData.settings_parameter.colorSpace_option
   - api.ImageData.ImageData.settings_parameter.pixelFormat_option
   - api.ImageData.pixelFormat
+  - api.MathMLAnchorElement.hash
+  - api.MathMLAnchorElement.host
+  - api.MathMLAnchorElement.hostname
+  - api.MathMLAnchorElement.hreflang
+  - api.MathMLAnchorElement.origin
+  - api.MathMLAnchorElement.password
+  - api.MathMLAnchorElement.pathname
+  - api.MathMLAnchorElement.port
+  - api.MathMLAnchorElement.protocol
+  - api.MathMLAnchorElement.search
+  - api.MathMLAnchorElement.type
+  - api.MathMLAnchorElement.username
   - api.MouseEvent.relatedTarget.drag_events
   - api.NavigateEvent.sourceElement
   - api.NavigationTransition.committed
@@ -65,7 +78,6 @@ compat_features:
   - api.Navigator.taintEnabled
   - api.OffscreenCanvasRenderingContext2D.getContextAttributes
   - api.OffscreenCanvasRenderingContext2D.lang
-  - api.ProcessingInstruction.doc_html
   - api.PromiseRejectionEvent
   - api.PromiseRejectionEvent.PromiseRejectionEvent
   - api.PromiseRejectionEvent.promise
@@ -117,6 +129,7 @@ compat_features:
   - html.elements.script.type.importmap.integrity
   - html.elements.script.type.importmap.multiple_import_maps
   - html.elements.select.autocomplete
+  - html.elements.template.for
   - html.elements.template.shadowrootcustomelementregistry
   - html.elements.template.shadowrootslotassignment
   - html.elements.textarea.autocomplete.new-password
@@ -2170,6 +2183,8 @@ compat_features:
 #   - api.PaintRenderingContext2D.strokeStyle
 #   - api.PaintRenderingContext2D.transform
 #   - api.PaintRenderingContext2D.translate
+# - HTML processing instructions:
+#   - api.ProcessingInstruction.doc_html
 # - Selection:
 #   - api.Range.createContextualFragment
 # - COEP violation reports:
