@@ -44,8 +44,16 @@ compat_features:
   #   safari_ios: "26.4"
   - css.properties.math-depth.auto-add
 
+  # baseline: false
+  # support:
+  #   firefox: "152"
+  #   firefox_android: "152"
+  - mathml.elements.a
+  - mathml.elements.a.href
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
-  - mathml.elements.a
-  - mathml.elements.a.href
+  - api.MathMLAnchorElement
+  - api.MathMLAnchorElement.href
+  - api.MathMLAnchorElement.target

@@ -1,9 +1,11 @@
-draft_date: 2026-05-22
+draft_date: 2026-08-27
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
   - api.Document.designMode
+  - api.Document.parseHTMLUnsafe_static.options_sanitizer_parameter
+  - api.Element.setHTMLUnsafe.options_sanitizer_parameter
   - api.ElementInternals.shadowRoot
   - api.ErrorEvent
   - api.ErrorEvent.ErrorEvent
@@ -16,6 +18,8 @@ compat_features:
   - api.HTMLAllCollection.item
   - api.HTMLAllCollection.length
   - api.HTMLAllCollection.namedItem
+  - api.HTMLAreaElement.hreflang
+  - api.HTMLAreaElement.type
   - api.HTMLBaseElement.href.forbid_data_javascript_urls
   - api.HTMLButtonElement.command.request-close
   - api.HTMLCanvasElement.getContext.2d_context.options_colorType_parameter
@@ -26,6 +30,7 @@ compat_features:
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
   - api.HTMLElement.togglePopover.force_parameter
   - api.HTMLElement.togglePopover.options_force_parameter
+  - api.HTMLElement.toggle_event.details_elements.uses_toggleevent
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes.auto
   - api.HTMLInputElement.showPicker.datalist_input
@@ -47,18 +52,30 @@ compat_features:
   - api.HTMLSourceElement.src
   - api.HTMLSourceElement.type
   - api.HTMLSourceElement.width
+  - api.HTMLTemplateElement.htmlFor
   - api.HTMLUnknownElement
   - api.ImageData.ImageData.settings_parameter
   - api.ImageData.ImageData.settings_parameter.colorSpace_option
   - api.ImageData.ImageData.settings_parameter.pixelFormat_option
   - api.ImageData.pixelFormat
+  - api.MathMLAnchorElement.hash
+  - api.MathMLAnchorElement.host
+  - api.MathMLAnchorElement.hostname
+  - api.MathMLAnchorElement.hreflang
+  - api.MathMLAnchorElement.origin
+  - api.MathMLAnchorElement.password
+  - api.MathMLAnchorElement.pathname
+  - api.MathMLAnchorElement.port
+  - api.MathMLAnchorElement.protocol
+  - api.MathMLAnchorElement.search
+  - api.MathMLAnchorElement.type
+  - api.MathMLAnchorElement.username
   - api.MouseEvent.relatedTarget.drag_events
   - api.NavigateEvent.sourceElement
   - api.NavigationTransition.committed
   - api.NavigationTransition.to
   - api.Navigator.oscpu
   - api.Navigator.taintEnabled
-  - api.Navigator.vendorSub
   - api.OffscreenCanvasRenderingContext2D.getContextAttributes
   - api.OffscreenCanvasRenderingContext2D.lang
   - api.PromiseRejectionEvent
@@ -67,9 +84,12 @@ compat_features:
   - api.PromiseRejectionEvent.reason
   - api.RadioNodeList
   - api.RadioNodeList.value
+  - api.Sanitizer.allowProcessingInstruction
+  - api.Sanitizer.removeProcessingInstruction
   - api.ServiceWorker.error_event
   - api.ShadowRoot.activeElement
   - api.ShadowRoot.innerHTML
+  - api.ShadowRoot.setHTMLUnsafe.options_sanitizer_parameter
   - api.SharedWorker.SharedWorker.enforces_trusted_types
   - api.SharedWorker.SharedWorker.options_extendedLifetime_parameter
   - api.TrackEvent
@@ -85,6 +105,8 @@ compat_features:
   - api.crossOriginIsolated
   - api.origin
   - api.reportError
+  - html.elements.area.hreflang
+  - html.elements.area.type
   - html.elements.button.command.request-close
   - html.elements.details.search_match_opens
   - html.elements.form.autocomplete.new-password
@@ -107,6 +129,7 @@ compat_features:
   - html.elements.script.type.importmap.integrity
   - html.elements.script.type.importmap.multiple_import_maps
   - html.elements.select.autocomplete
+  - html.elements.template.for
   - html.elements.template.shadowrootcustomelementregistry
   - html.elements.template.shadowrootslotassignment
   - html.elements.textarea.autocomplete.new-password
@@ -559,6 +582,21 @@ compat_features:
 #   - api.Document.parseHTMLUnsafe_static
 #   - api.Element.setHTMLUnsafe
 #   - api.ShadowRoot.setHTMLUnsafe
+# - Sanitizer API:
+#   - api.Document.parseHTML_static
+#   - api.Element.setHTML
+#   - api.Sanitizer
+#   - api.Sanitizer.Sanitizer
+#   - api.Sanitizer.allowAttribute
+#   - api.Sanitizer.allowElement
+#   - api.Sanitizer.get
+#   - api.Sanitizer.removeAttribute
+#   - api.Sanitizer.removeElement
+#   - api.Sanitizer.removeUnsafe
+#   - api.Sanitizer.replaceElementWithChildren
+#   - api.Sanitizer.setComments
+#   - api.Sanitizer.setDataAttributes
+#   - api.ShadowRoot.setHTML
 # - Scroll methods on elements:
 #   - api.Document.scroll_event
 #   - api.Element.scroll_event
@@ -1111,6 +1149,11 @@ compat_features:
 # - enterkeyhint:
 #   - api.HTMLElement.enterKeyHint
 #   - html.global_attributes.enterkeyhint
+# - Heading offset:
+#   - api.HTMLElement.headingOffset
+#   - api.HTMLElement.headingReset
+#   - html.global_attributes.headingoffset
+#   - html.global_attributes.headingreset
 # - inert:
 #   - api.HTMLElement.inert
 #   - api.HTMLElement.inert.ignores_find_in_page
@@ -1321,7 +1364,7 @@ compat_features:
 #   - html.elements.input.size
 #   - html.elements.input.src
 #   - html.elements.input.type_text
-# - `alpha` and `colorspace` attributes for `<input type=color>`:
+# - alpha and colorspace attributes for <input type=color>:
 #   - api.HTMLInputElement.alpha
 #   - api.HTMLInputElement.colorSpace
 #   - html.elements.input.alpha
@@ -2003,6 +2046,7 @@ compat_features:
 #   - api.Navigator.productSub
 #   - api.Navigator.userAgent
 #   - api.Navigator.vendor
+#   - api.Navigator.vendorSub
 #   - api.WorkerNavigator.appCodeName
 #   - api.WorkerNavigator.appName
 #   - api.WorkerNavigator.appVersion
@@ -2139,6 +2183,8 @@ compat_features:
 #   - api.PaintRenderingContext2D.strokeStyle
 #   - api.PaintRenderingContext2D.transform
 #   - api.PaintRenderingContext2D.translate
+# - HTML processing instructions:
+#   - api.ProcessingInstruction.doc_html
 # - Selection:
 #   - api.Range.createContextualFragment
 # - COEP violation reports:
@@ -2202,7 +2248,6 @@ compat_features:
 #   - api.VisibilityStateEntry.startTime
 # - Window:
 #   - api.Window
-#   - api.Window.DOMContentLoaded_event
 #   - api.Window.blur_event
 #   - api.Window.close
 #   - api.Window.closed
@@ -2364,9 +2409,6 @@ compat_features:
 #   - html.elements.dfn
 # - <em>:
 #   - html.elements.em
-# - <fencedframe>:
-#   - html.elements.fencedframe.height
-#   - html.elements.fencedframe.width
 # - <figure> and <figcaption>:
 #   - html.elements.figcaption
 #   - html.elements.figure
@@ -2493,3 +2535,5 @@ compat_features:
 #   - javascript.statements.import.import_attributes.type_css
 # - JSON import attributes:
 #   - javascript.statements.import.import_attributes.type_json
+# - Text import attributes:
+#   - javascript.statements.import.import_attributes.type_text

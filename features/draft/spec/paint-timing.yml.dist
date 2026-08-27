@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "145"
-    chrome_android: "145"
-    edge: "145"
+  support: {}
 compat_features:
   # baseline: low
   # baseline_low_date: 2026-02-14
@@ -30,7 +27,6 @@ compat_features:
   - api.PerformancePaintTiming.paintTime
   - api.PerformancePaintTiming.presentationTime
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "145"
@@ -41,3 +37,19 @@ compat_features:
   - api.PerformanceElementTiming.presentationTime
   - api.PerformanceLongAnimationFrameTiming.paintTime
   - api.PerformanceLongAnimationFrameTiming.presentationTime
+
+  # baseline: false
+  # support:
+  #   chrome: "151"
+  #   chrome_android: "151"
+  #   edge: "151"
+  - api.InteractionContentfulPaint.paintTime
+  - api.InteractionContentfulPaint.presentationTime
+  - api.PerformanceSoftNavigation.paintTime
+  - api.PerformanceSoftNavigation.presentationTime
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.PerformanceContainerTiming.paintTime
+  - api.PerformanceContainerTiming.presentationTime

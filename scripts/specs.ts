@@ -201,7 +201,7 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because it's a spec not tracked in web-specs."
     ],
     [
-        "https://www.rfc-editor.org/rfc/rfc7903#section-1.2",
+        "https://www.rfc-editor.org/info/rfc7903/#section-1.2",
         "Allowed because it's a spec not tracked in web-specs."
     ],
     [
@@ -239,6 +239,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://wicg.github.io/turtledove/",
         "Discontinued spec allowed for discouraged feature."
+    ],
+    [
+        "https://github.com/whatwg/html/pull/9546",
+        "Allowed because the <input type=\"checkbox\" switch> feature is not yet in a formal spec. Remove this exception when a formal spec is available."
     ]
 ];
 

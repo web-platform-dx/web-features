@@ -4,10 +4,9 @@
 status:
   baseline: false
   support:
-    firefox: "149"
-    firefox_android: "149"
-    safari: "17.2"
-    safari_ios: "17.2"
+    chrome: "150"
+    chrome_android: "150"
+    edge: "150"
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -41,12 +40,23 @@ compat_features:
   - css.properties.clip-path.margin-box
   - css.properties.clip-path.padding-box
 
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-06-04
   # support:
+  #   chrome: "149"
+  #   chrome_android: "149"
+  #   edge: "149"
   #   firefox: "149"
   #   firefox_android: "149"
   #   safari: "17.2"
   #   safari_ios: "17.2"
   - css.properties.shape-outside.rect
   - css.properties.shape-outside.xywh
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "150"
+  #   chrome_android: "150"
+  #   edge: "150"
+  - css.types.basic-shape.polygon.round

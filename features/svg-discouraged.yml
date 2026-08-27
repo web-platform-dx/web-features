@@ -12,7 +12,6 @@ discouraged:
     - svg
     - font-face
 compat_features:
-  - api.SVGAElement.text
   - api.SVGElement.className
   - api.SVGPathElement.createSVGPathSegArcAbs
   - api.SVGPathElement.createSVGPathSegArcRel
@@ -38,7 +37,6 @@ compat_features:
   - api.SVGPoint.matrixTransform
   - api.SVGPoint.x
   - api.SVGPoint.y
-  - api.SVGRenderingIntent
   - api.SVGSVGElement.currentView
   - api.SVGSVGElement.forceRedraw
   - api.SVGSVGElement.suspendRedraw
