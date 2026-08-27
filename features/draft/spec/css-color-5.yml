@@ -1,9 +1,8 @@
-draft_date: 2026-08-21
+draft_date: 2026-08-27
 name: CSS Color Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-color-5/
 compat_features:
-  - css.types.color.alpha
   - css.types.color.color.colorSpace_parameter_accepts_display-p3-linear_value
   - css.types.color.currentcolor
   - css.types.color.from_currentcolor
@@ -123,6 +122,8 @@ compat_features:
 #   - css.types.color.oklab.relative_syntax
 #   - css.types.color.oklch.relative_syntax
 #   - css.types.color.rgb.relative_syntax
+# - alpha():
+#   - css.types.color.alpha
 # - color():
 #   - css.types.color.color
 # - color-mix():

@@ -1,4 +1,4 @@
-draft_date: 2026-07-24
+draft_date: 2026-08-27
 name: WebDriver BiDi
 description: TODO
 spec: https://w3c.github.io/webdriver-bidi/
@@ -372,6 +372,7 @@ compat_features:
   - webdriver.bidi.script.getRealms.type_parameter
   - webdriver.bidi.script.getRealms.type_parameter.window
   - webdriver.bidi.script.getRealms.type_parameter.worker
+  - webdriver.bidi.script.getRealms.type_parameter.worklet
   - webdriver.bidi.script.message_event
   - webdriver.bidi.script.message_event.channel_parameter
   - webdriver.bidi.script.message_event.data_parameter

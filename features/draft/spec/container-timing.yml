@@ -1,0 +1,16 @@
+draft_date: 2026-08-27
+name: Container Timing API
+description: TODO
+spec: https://wicg.github.io/container-timing/
+compat_features:
+  - api.HTMLElement.containerTiming
+  - api.HTMLElement.containerTimingIgnore
+  - api.PerformanceContainerTiming
+  - api.PerformanceContainerTiming.firstRenderTime
+  - api.PerformanceContainerTiming.identifier
+  - api.PerformanceContainerTiming.intersectionRect
+  - api.PerformanceContainerTiming.lastPaintedElement
+  - api.PerformanceContainerTiming.rootElement
+  - api.PerformanceContainerTiming.size
+  - html.global_attributes.containertiming
+  - html.global_attributes.containertimingignore
