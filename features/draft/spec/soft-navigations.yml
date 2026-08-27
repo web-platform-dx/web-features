@@ -3,11 +3,15 @@ name: Soft Navigations and Interaction Contentful Paint
 description: TODO
 spec: https://wicg.github.io/soft-navigations/
 compat_features:
-  - api.InteractionContentfulPaint
-  - api.InteractionContentfulPaint.interactionId
-  - api.InteractionContentfulPaint.largestContentfulPaint
   - api.PerformanceEntry.navigationId
-  - api.PerformanceSoftNavigation
-  - api.PerformanceSoftNavigation.getLargestInteractionContentfulPaint
-  - api.PerformanceSoftNavigation.interactionId
-  - api.PerformanceSoftNavigation.navigationType
+
+# The following features in the spec are already part of web-features:
+# - Interaction contentful paint:
+#   - api.InteractionContentfulPaint
+#   - api.InteractionContentfulPaint.interactionId
+#   - api.InteractionContentfulPaint.largestContentfulPaint
+# - Soft navigation performance entries:
+#   - api.PerformanceSoftNavigation
+#   - api.PerformanceSoftNavigation.getLargestInteractionContentfulPaint
+#   - api.PerformanceSoftNavigation.interactionId
+#   - api.PerformanceSoftNavigation.navigationType

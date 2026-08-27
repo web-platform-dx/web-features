@@ -1,9 +1,8 @@
-draft_date: 2026-07-06
+draft_date: 2026-08-27
 name: CSS Box Sizing Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-sizing-4/
 compat_features:
-  - api.Window.requestResize
   - css.properties.block-size.auto
   - css.properties.block-size.stretch
   - css.properties.flex-basis.stretch
@@ -11,12 +10,6 @@ compat_features:
   - css.properties.flex.max-content
   - css.properties.flex.min-content
   - css.properties.flex.stretch
-  - css.properties.frame-sizing
-  - css.properties.frame-sizing.auto
-  - css.properties.frame-sizing.content-block-size
-  - css.properties.frame-sizing.content-height
-  - css.properties.frame-sizing.content-inline-size
-  - css.properties.frame-sizing.content-width
   - css.properties.inline-size.auto
   - css.properties.inline-size.stretch
   - css.properties.max-block-size.stretch
@@ -25,9 +18,17 @@ compat_features:
   - css.properties.min-block-size.stretch
   - css.properties.min-inline-size.auto
   - css.properties.min-inline-size.stretch
-  - html.elements.meta.name.responsive-embedded-sizing
 
 # The following features in the spec are already part of web-features:
+# - Responsive iframes:
+#   - api.Window.requestResize
+#   - css.properties.frame-sizing
+#   - css.properties.frame-sizing.auto
+#   - css.properties.frame-sizing.content-block-size
+#   - css.properties.frame-sizing.content-height
+#   - css.properties.frame-sizing.content-inline-size
+#   - css.properties.frame-sizing.content-width
+#   - html.elements.meta.name.responsive-embedded-sizing
 # - aspect-ratio:
 #   - css.properties.aspect-ratio
 #   - css.properties.aspect-ratio.auto

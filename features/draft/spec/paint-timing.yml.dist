@@ -38,16 +38,6 @@ compat_features:
   - api.PerformanceLongAnimationFrameTiming.paintTime
   - api.PerformanceLongAnimationFrameTiming.presentationTime
 
-  # baseline: false
-  # support:
-  #   chrome: "151"
-  #   chrome_android: "151"
-  #   edge: "151"
-  - api.InteractionContentfulPaint.paintTime
-  - api.InteractionContentfulPaint.presentationTime
-  - api.PerformanceSoftNavigation.paintTime
-  - api.PerformanceSoftNavigation.presentationTime
-
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
