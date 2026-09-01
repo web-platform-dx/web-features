@@ -5,3 +5,13 @@ group:
   - html
   - reading-order
 caniuse: tabindex-attr
+status:
+  compute_from:
+    - api.HTMLElement.tabIndex
+    - html.global_attributes.tabindex
+compat_features:
+  - api.HTMLElement.tabIndex
+  - api.MathMLElement.tabIndex
+  - api.SVGElement.tabIndex
+  - html.global_attributes.tabindex
+  - svg.global_attributes.tabindex
