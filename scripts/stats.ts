@@ -1,4 +1,5 @@
 import { Compat } from "compute-baseline/browser-compat-data";
+import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import yargs from "yargs";
@@ -118,12 +119,22 @@ export function stats(previous: Partial<Result>): Result {
   const unmappedNormalCompatKeysCount = unmappedKeys.difference(
     discourageableCompatKeys,
   ).size;
-  const mappedNormalCompatKeysCount =
-    mappedCompatKeysCount - unmappedNormalCompatKeysCount;
+  const mappedNormalCompatKeysCount = mappedCompatKeys.difference(
+    discourageableCompatKeys,
+  ).size;
   const unmappedDiscourageableCompatKeysCount =
     unmappedKeys.difference(normalCompatKeys).size;
   const mappedDiscourageableCompatKeysCount =
-    discourageableCompatKeysCount - unmappedDiscourageableCompatKeysCount;
+    mappedCompatKeys.difference(normalCompatKeys).size;
+
+  assert.equal(
+    mappedCompatKeysCount,
+    mappedNormalCompatKeysCount + mappedDiscourageableCompatKeysCount,
+  );
+  assert.equal(
+    unmappedCompatKeysCount,
+    unmappedNormalCompatKeysCount + unmappedDiscourageableCompatKeysCount,
+  );
 
   const featuresToDays = compatFeaturesToCumulativeDaysShipped();
   const unmappedDiscourageableCompatKeysCumulativeShippingDays = Array.from(
