@@ -254,7 +254,7 @@ function parseReleaseTag(tag: string): SupportedReleaseTag {
     throw new Error("Release tags must be in SemVer-like vX.Y.Z format");
   }
 
-  if (major <= 3 && minor <= 35) {
+  if ((major == 3 && minor <= 35) || major <= 2) {
     throw new Error(
       "This script can't handle releases at or before v3.36.0. If you need such stats, then file an issue.",
     );
