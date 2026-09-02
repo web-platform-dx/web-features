@@ -7,6 +7,15 @@ status:
 compat_features:
   # baseline: false
   # support:
+  #   chrome: "150"
+  #   chrome_android: "150"
+  #   edge: "150"
+  #   firefox: "126"
+  #   firefox_android: "126"
+  - css.properties.zoom.is_animatable
+
+  # baseline: false
+  # support:
   #   chrome_android: "18"
   #   firefox_android: "4"
   #   safari_ios: ≤3.2

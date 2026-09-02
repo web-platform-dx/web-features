@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "155"
+    firefox_android: "155"
 compat_features:
   - javascript.builtins.Promise.allKeyed
   - javascript.builtins.Promise.allSettledKeyed

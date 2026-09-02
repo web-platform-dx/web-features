@@ -1,4 +1,4 @@
-draft_date: 2026-08-27
+draft_date: 2026-09-10
 name: Soft Navigations and Interaction Contentful Paint
 description: TODO
 spec: https://wicg.github.io/soft-navigations/
@@ -10,8 +10,10 @@ compat_features:
 #   - api.InteractionContentfulPaint
 #   - api.InteractionContentfulPaint.interactionId
 #   - api.InteractionContentfulPaint.largestContentfulPaint
+#   - api.InteractionContentfulPaint.toJSON
 # - Soft navigation performance entries:
 #   - api.PerformanceSoftNavigation
 #   - api.PerformanceSoftNavigation.getLargestInteractionContentfulPaint
 #   - api.PerformanceSoftNavigation.interactionId
 #   - api.PerformanceSoftNavigation.navigationType
+#   - api.PerformanceSoftNavigation.toJSON

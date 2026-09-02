@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "155"
+    firefox_android: "155"
 compat_features:
   # baseline: high
   # baseline_low_date: 2018-09-05
@@ -68,12 +70,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   firefox: "155"
+  #   firefox_android: "155"
   #   safari: "18.4"
   #   safari_ios: "18.4"
   - css.properties.font-width.percentage
 
   # baseline: false
   # support:
+  #   firefox: "155"
+  #   firefox_android: "155"
   #   safari: "26"
   #   safari_ios: "26"
   - api.CSSFontFaceDescriptors.font-width

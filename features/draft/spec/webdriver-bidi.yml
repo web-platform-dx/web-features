@@ -1,4 +1,4 @@
-draft_date: 2026-08-27
+draft_date: 2026-09-03
 name: WebDriver BiDi
 description: TODO
 spec: https://w3c.github.io/webdriver-bidi/
@@ -38,6 +38,7 @@ compat_features:
   - webdriver.bidi.browsingContext.contextCreated_event.children_parameter
   - webdriver.bidi.browsingContext.contextCreated_event.clientWindow_parameter
   - webdriver.bidi.browsingContext.contextCreated_event.context_parameter
+  - webdriver.bidi.browsingContext.contextCreated_event.emit_for_existing_contexts
   - webdriver.bidi.browsingContext.contextCreated_event.originalOpener_parameter
   - webdriver.bidi.browsingContext.contextCreated_event.parent_parameter
   - webdriver.bidi.browsingContext.contextCreated_event.url_parameter
@@ -377,6 +378,7 @@ compat_features:
   - webdriver.bidi.script.message_event.channel_parameter
   - webdriver.bidi.script.message_event.data_parameter
   - webdriver.bidi.script.message_event.source_parameter
+  - webdriver.bidi.script.message_event.source_parameter.userContext
   - webdriver.bidi.script.realmCreated_event
   - webdriver.bidi.script.realmCreated_event.context_parameter
   - webdriver.bidi.script.realmCreated_event.origin_parameter
@@ -384,6 +386,14 @@ compat_features:
   - webdriver.bidi.script.realmCreated_event.realm_parameter
   - webdriver.bidi.script.realmCreated_event.sandbox_parameter
   - webdriver.bidi.script.realmCreated_event.type_parameter
+  - webdriver.bidi.script.realmCreated_event.type_parameter.audio-worklet
+  - webdriver.bidi.script.realmCreated_event.type_parameter.dedicated-worker
+  - webdriver.bidi.script.realmCreated_event.type_parameter.paint-worklet
+  - webdriver.bidi.script.realmCreated_event.type_parameter.service-worker
+  - webdriver.bidi.script.realmCreated_event.type_parameter.shared-worker
+  - webdriver.bidi.script.realmCreated_event.type_parameter.window
+  - webdriver.bidi.script.realmCreated_event.type_parameter.worker
+  - webdriver.bidi.script.realmCreated_event.type_parameter.worklet
   - webdriver.bidi.script.realmCreated_event.userContext_parameter
   - webdriver.bidi.script.realmDestroyed_event
   - webdriver.bidi.script.realmDestroyed_event.realm_parameter
