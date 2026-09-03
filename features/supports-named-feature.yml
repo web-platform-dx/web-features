@@ -1,5 +1,8 @@
 name: named-feature()
-description: "The `named-feature()` function, when used with `@supports`, checks if a CSS behavior. For example, `@supports named-feature(anchor-position-follows-transforms)` checks whether anchor-positioning applies after transforms."
+description: >
+  The `named-feature()` function, when used with `@supports`, checks if a named CSS behavior is supported.
+  The CSS behavior names are defined by specification.
+  For example, `@supports named-feature(anchor-position-follows-transforms)` checks whether anchor-positioning applies after transforms."
 spec: https://drafts.csswg.org/css-conditional-5/#typedef-supports-named-feature-fn
 group:
   - css
