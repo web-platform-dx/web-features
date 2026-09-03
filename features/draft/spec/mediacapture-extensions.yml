@@ -1,6 +1,43 @@
-draft_date: 2026-08-27
+draft_date: 2026-09-03
 name: Media Capture and Streams Extensions
 description: TODO
 spec: https://w3c.github.io/mediacapture-extensions/
 compat_features:
+  - api.HTMLCameraElement
+  - api.HTMLCameraElement.cancel_event
+  - api.HTMLCameraElement.error
+  - api.HTMLCameraElement.error_event
+  - api.HTMLCameraElement.setConstraints
+  - api.HTMLCameraElement.track
+  - api.HTMLCameraElement.track_event
+  - api.HTMLMicrophoneElement
+  - api.HTMLMicrophoneElement.cancel_event
+  - api.HTMLMicrophoneElement.error
+  - api.HTMLMicrophoneElement.error_event
+  - api.HTMLMicrophoneElement.setConstraints
+  - api.HTMLMicrophoneElement.track
+  - api.HTMLMicrophoneElement.track_event
+  - api.HTMLUserMediaElement
+  - api.HTMLUserMediaElement.cancel_event
+  - api.HTMLUserMediaElement.error
+  - api.HTMLUserMediaElement.error_event
+  - api.HTMLUserMediaElement.setConstraints
+  - api.HTMLUserMediaElement.stream
+  - api.HTMLUserMediaElement.stream_event
   - api.MediaStreamTrack.configurationchange_event
+  - api.MediaStreamTrack.stats
+  - api.MediaStreamTrackAudioStats
+  - api.MediaStreamTrackAudioStats.averageLatency
+  - api.MediaStreamTrackAudioStats.latency
+  - api.MediaStreamTrackAudioStats.maximumLatency
+  - api.MediaStreamTrackAudioStats.minimumLatency
+  - api.MediaStreamTrackAudioStats.resetLatency
+  - api.MediaStreamTrackAudioStats.toJSON
+  - api.MediaStreamTrackVideoStats
+  - api.MediaStreamTrackVideoStats.deliveredFrames
+  - api.MediaStreamTrackVideoStats.discardedFrames
+  - api.MediaStreamTrackVideoStats.toJSON
+  - api.MediaStreamTrackVideoStats.totalFrames
+  - html.elements.camera
+  - html.elements.microphone
+  - html.elements.usermedia

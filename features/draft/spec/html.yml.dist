@@ -650,30 +650,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "5"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "32"
-  #   firefox_android: "32"
-  #   safari: "5"
-  #   safari_ios: "4"
-  - api.HTMLAllCollection
-  - api.HTMLAllCollection.item
-  - api.HTMLAllCollection.namedItem
-
-  # baseline: false
-  # support:
-  #   chrome: "6"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "32"
-  #   firefox_android: "32"
-  #   safari: "5"
-  #   safari_ios: "4"
-  - api.HTMLAllCollection.length
-
-  # baseline: false
-  # support:
   #   chrome: "4"
   #   chrome_android: "18"
   #   edge: "12"
@@ -1078,6 +1054,7 @@ compat_features:
   # baseline: false
   # support: {}
   - api.Document.parseHTMLUnsafe_static.options_sanitizer_parameter
+  - api.Element.setHTMLUnsafe.options_runscripts_parameter
   - api.MathMLAnchorElement.hash
   - api.MathMLAnchorElement.host
   - api.MathMLAnchorElement.hostname
@@ -1090,4 +1067,5 @@ compat_features:
   - api.MathMLAnchorElement.search
   - api.MathMLAnchorElement.type
   - api.MathMLAnchorElement.username
+  - api.ShadowRoot.setHTMLUnsafe.options_runscripts_parameter
   - html.elements.track.kind.descriptions

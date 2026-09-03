@@ -1,4 +1,4 @@
-draft_date: 2026-08-17
+draft_date: 2026-09-03
 name: CSS Overflow Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-overflow-5/
@@ -26,6 +26,9 @@ compat_features:
   - css.properties.overflow-x.replaced_elements
   - css.properties.overflow-y.replaced_elements
   - css.properties.overflow.replaced_elements
+  - css.properties.scroll-axis-lock
+  - css.properties.scroll-axis-lock.auto
+  - css.properties.scroll-axis-lock.none
 
 # The following features in the spec are already part of web-features:
 # - line-clamp:

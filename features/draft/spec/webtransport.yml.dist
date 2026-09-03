@@ -15,6 +15,7 @@ compat_features:
   #   firefox_android: "155"
   #   safari: "26.4"
   #   safari_ios: "26.4"
+  - api.WebTransport.WebTransport.options_protocols_parameter
   - api.WebTransport.protocol
 
   # baseline: false
@@ -53,3 +54,8 @@ compat_features:
   # support:
   #   firefox: "155"
   - api.WebTransport.exportKeyingMaterial
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.WebTransport.responseHeaders
