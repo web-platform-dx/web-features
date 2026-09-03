@@ -1,0 +1,15 @@
+name: WebDriver BiDi log
+description: The `log.entryAdded` event is sent when a new log entry is created in the browser, either from a console API call or an unhandled JavaScript error.
+spec: https://w3c.github.io/webdriver-bidi/#module-log
+group: webdriver
+compat_features:
+  - webdriver.bidi.log
+  - webdriver.bidi.log.entryAdded_event
+  - webdriver.bidi.log.entryAdded_event.args_parameter
+  - webdriver.bidi.log.entryAdded_event.level_parameter
+  - webdriver.bidi.log.entryAdded_event.method_parameter
+  - webdriver.bidi.log.entryAdded_event.source_parameter
+  - webdriver.bidi.log.entryAdded_event.stackTrace_parameter
+  - webdriver.bidi.log.entryAdded_event.text_parameter
+  - webdriver.bidi.log.entryAdded_event.timestamp_parameter
+  - webdriver.bidi.log.entryAdded_event.type_parameter

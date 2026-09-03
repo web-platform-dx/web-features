@@ -1,0 +1,15 @@
+name: WebDriver BiDi files
+description: The `input.setFiles` command sets the `files` property of an `<input type="file">` element to a set of file paths, and the `input.fileDialogOpened` event when the file dialog is opened.
+spec:
+  - https://w3c.github.io/webdriver-bidi/#command-input-setFiles
+  - https://w3c.github.io/webdriver-bidi/#event-input-fileDialogOpened
+group: webdriver
+compat_features:
+  - webdriver.bidi.input.setFiles
+  - webdriver.bidi.input.setFiles.context_parameter
+  - webdriver.bidi.input.setFiles.element_parameter
+  - webdriver.bidi.input.setFiles.files_parameter
+  - webdriver.bidi.input.fileDialogOpened_event
+  - webdriver.bidi.input.fileDialogOpened_event.context_parameter
+  - webdriver.bidi.input.fileDialogOpened_event.element_parameter
+  - webdriver.bidi.input.fileDialogOpened_event.multiple_parameter
