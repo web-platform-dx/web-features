@@ -84,8 +84,13 @@ compat_features:
   - css.properties.perspective-origin.y-end
   - css.properties.perspective-origin.y-start
 
+  # baseline: false
+  # support:
+  #   firefox: "155"
+  #   firefox_android: "155"
+  - css.types.attr.attr-name_accepts_namespaces
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - css.properties.line-clamp.string
-  - css.types.attr.attr-name_accepts_namespaces

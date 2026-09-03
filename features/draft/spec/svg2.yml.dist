@@ -169,9 +169,9 @@ compat_features:
   #   edge: "141"
   - api.SVGAnimatedString.baseVal.enforces_trusted_types
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "155"
   - api.SVGAElement.hash
   - api.SVGAElement.host
   - api.SVGAElement.hostname
@@ -182,5 +182,9 @@ compat_features:
   - api.SVGAElement.protocol
   - api.SVGAElement.search
   - api.SVGAElement.username
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
   - css.properties.path-length
   - css.properties.path-length.none
