@@ -4,12 +4,28 @@
 status:
   baseline: false
   support:
-    chrome: "152"
-    chrome_android: "152"
     firefox: "136"
     firefox_android: "136"
     safari: "14.1"
     safari_ios: "14.5"
 compat_features:
-  - api.HTMLElement.autocorrect
+  # baseline: low
+  # baseline_low_date: 2026-08-28
+  # support:
+  #   chrome: "152"
+  #   chrome_android: "152"
+  #   edge: "152"
+  #   firefox: "136"
+  #   firefox_android: "136"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
   - html.global_attributes.autocorrect
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   firefox: "136"
+  #   firefox_android: "136"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.HTMLElement.autocorrect

@@ -5,14 +5,33 @@ status:
   baseline: false
   support: {}
 compat_features:
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-09-01
   # support:
   #   chrome: "143"
   #   chrome_android: "143"
   #   edge: "143"
+  #   firefox: "155"
+  #   firefox_android: "155"
   #   safari: "26.4"
   #   safari_ios: "26.4"
   - api.WebTransport.protocol
+
+  # baseline: false
+  # support:
+  #   firefox: "155"
+  #   firefox_android: "155"
+  #   safari: "26.4"
+  #   safari_ios: "26.4"
+  - api.WebTransport.createSendGroup
+  - api.WebTransport.draining
+  - api.WebTransportDatagramDuplexStream.createWritable
+  - api.WebTransportDatagramsWritable
+  - api.WebTransportDatagramsWritable.sendGroup
+  - api.WebTransportDatagramsWritable.sendOrder
+  - api.WebTransportSendGroup
+  - api.WebTransportSendGroup.getStats
+  - api.WebTransportSendStream.sendGroup
 
   # baseline: false
   # support:
@@ -28,18 +47,9 @@ compat_features:
   #   safari_ios: "26.4"
   - api.WebTransport.anticipatedConcurrentIncomingBidirectionalStreams
   - api.WebTransport.anticipatedConcurrentIncomingUnidirectionalStreams
-  - api.WebTransport.createSendGroup
-  - api.WebTransport.draining
   - api.WebTransport.supportsReliableOnly_static
-  - api.WebTransportDatagramDuplexStream.createWritable
-  - api.WebTransportDatagramsWritable
-  - api.WebTransportDatagramsWritable.sendGroup
-  - api.WebTransportDatagramsWritable.sendOrder
-  - api.WebTransportSendGroup
-  - api.WebTransportSendGroup.getStats
-  - api.WebTransportSendStream.sendGroup
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "155"
   - api.WebTransport.exportKeyingMaterial

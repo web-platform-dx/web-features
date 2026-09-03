@@ -28,7 +28,6 @@ compat_features:
   #   safari_ios: "15.2"
   - webassembly.api.Exception
   - webassembly.api.Exception.Exception
-  - webassembly.api.Exception.Exception.options_parameter_traceStack
   - webassembly.api.Exception.getArg
   - webassembly.api.Exception.is
   - webassembly.api.Tag
@@ -42,6 +41,7 @@ compat_features:
   #   edge: "95"
   #   firefox: "100"
   #   firefox_android: "100"
+  - webassembly.api.Exception.Exception.options_parameter_traceStack
   - webassembly.api.Exception.stack
 
   # baseline: false
