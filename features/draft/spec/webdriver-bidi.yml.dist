@@ -278,6 +278,7 @@ compat_features:
   - webdriver.bidi.script.realmCreated_event.realm_parameter
   - webdriver.bidi.script.realmCreated_event.sandbox_parameter
   - webdriver.bidi.script.realmCreated_event.type_parameter
+  - webdriver.bidi.script.realmCreated_event.type_parameter.window
   - webdriver.bidi.script.realmDestroyed_event
   - webdriver.bidi.script.realmDestroyed_event.realm_parameter
 
@@ -443,6 +444,7 @@ compat_features:
   #   edge: "126"
   #   firefox: "143"
   #   firefox_android: "143"
+  - webdriver.bidi.browsingContext.contextCreated_event.emit_for_existing_contexts
   - webdriver.bidi.network.disownData
   - webdriver.bidi.network.getData
 
@@ -454,6 +456,9 @@ compat_features:
   #   firefox: "149"
   #   firefox_android: "149"
   - webdriver.bidi.script.realmCreated_event.owners_parameter
+  - webdriver.bidi.script.realmCreated_event.type_parameter.dedicated-worker
+  - webdriver.bidi.script.realmCreated_event.type_parameter.service-worker
+  - webdriver.bidi.script.realmCreated_event.type_parameter.shared-worker
 
   # baseline: false
   # support:
@@ -688,6 +693,10 @@ compat_features:
   - webdriver.bidi.log.entryAdded_event.source_parameter
   - webdriver.bidi.log.entryAdded_event.stackTrace_parameter
   - webdriver.bidi.script.getRealms.type_parameter.worklet
+  - webdriver.bidi.script.realmCreated_event.type_parameter.audio-worklet
+  - webdriver.bidi.script.realmCreated_event.type_parameter.paint-worklet
+  - webdriver.bidi.script.realmCreated_event.type_parameter.worker
+  - webdriver.bidi.script.realmCreated_event.type_parameter.worklet
 
   # baseline: false
   # support:
@@ -903,6 +912,7 @@ compat_features:
   - webdriver.bidi.browsingContext.userPromptOpened_event.userContext_parameter
   - webdriver.bidi.input.fileDialogOpened_event.userContext_parameter
   - webdriver.bidi.network.authRequired_event.userContext_parameter
+  - webdriver.bidi.script.message_event.source_parameter.userContext
   - webdriver.bidi.script.realmCreated_event.userContext_parameter
 
   # ⬇️ Same status as overall feature ⬇️

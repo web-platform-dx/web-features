@@ -1,9 +1,11 @@
-draft_date: 2026-08-27
+draft_date: 2026-09-03
 name: Soft Navigations and Interaction Contentful Paint
 description: TODO
 spec: https://wicg.github.io/soft-navigations/
 compat_features:
+  - api.InteractionContentfulPaint.toJSON
   - api.PerformanceEntry.navigationId
+  - api.PerformanceSoftNavigation.toJSON
 
 # The following features in the spec are already part of web-features:
 # - Interaction contentful paint:

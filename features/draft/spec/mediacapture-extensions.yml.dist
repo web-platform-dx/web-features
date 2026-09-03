@@ -3,8 +3,69 @@
 
 status:
   baseline: false
-  support:
-    safari: "16.4"
-    safari_ios: "16.4"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "120"
+  #   chrome_android: "120"
+  #   edge: "120"
+  - api.MediaStreamTrack.stats
+  - api.MediaStreamTrackVideoStats
+  - api.MediaStreamTrackVideoStats.deliveredFrames
+  - api.MediaStreamTrackVideoStats.discardedFrames
+  - api.MediaStreamTrackVideoStats.toJSON
+  - api.MediaStreamTrackVideoStats.totalFrames
+
+  # baseline: false
+  # support:
+  #   chrome: "125"
+  #   chrome_android: "125"
+  #   edge: "125"
+  - api.MediaStreamTrackAudioStats
+  - api.MediaStreamTrackAudioStats.averageLatency
+  - api.MediaStreamTrackAudioStats.latency
+  - api.MediaStreamTrackAudioStats.maximumLatency
+  - api.MediaStreamTrackAudioStats.minimumLatency
+  - api.MediaStreamTrackAudioStats.resetLatency
+  - api.MediaStreamTrackAudioStats.toJSON
+
+  # baseline: false
+  # support:
+  #   chrome: "151"
+  #   chrome_android: "151"
+  #   edge: "151"
+  - api.HTMLUserMediaElement
+  - api.HTMLUserMediaElement.cancel_event
+  - api.HTMLUserMediaElement.error
+  - api.HTMLUserMediaElement.error_event
+  - api.HTMLUserMediaElement.setConstraints
+  - api.HTMLUserMediaElement.stream
+  - api.HTMLUserMediaElement.stream_event
+  - html.elements.usermedia
+
+  # baseline: false
+  # support:
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
   - api.MediaStreamTrack.configurationchange_event
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.HTMLCameraElement
+  - api.HTMLCameraElement.cancel_event
+  - api.HTMLCameraElement.error
+  - api.HTMLCameraElement.error_event
+  - api.HTMLCameraElement.setConstraints
+  - api.HTMLCameraElement.track
+  - api.HTMLCameraElement.track_event
+  - api.HTMLMicrophoneElement
+  - api.HTMLMicrophoneElement.cancel_event
+  - api.HTMLMicrophoneElement.error
+  - api.HTMLMicrophoneElement.error_event
+  - api.HTMLMicrophoneElement.setConstraints
+  - api.HTMLMicrophoneElement.track
+  - api.HTMLMicrophoneElement.track_event
+  - html.elements.camera
+  - html.elements.microphone
