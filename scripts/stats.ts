@@ -51,11 +51,11 @@ interface ResultBase {
   unmappedDiscourageableCompatKeysCumulativeShippingDays: number;
 }
 
-interface Result extends ResultBase {
+export interface Result extends ResultBase {
   change?: Change;
 }
 
-type ResultKey = keyof Result;
+type ResultKey = keyof ResultBase;
 type ChangeKey = `${ResultKey}Change`;
 type Change = Record<ChangeKey, number>;
 
