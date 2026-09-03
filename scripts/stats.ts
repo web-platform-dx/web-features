@@ -1,11 +1,13 @@
 import { Compat } from "compute-baseline/browser-compat-data";
+import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import yargs from "yargs";
-import { features, groups } from "../index.ts";
 import { isOrdinaryFeatureData } from "../type-guards.ts";
-import { caniuseToWebFeaturesId } from "./caniuse.ts";
-import { compatFeaturesToCumulativeDaysShipped } from "./unmapped-compat-keys.ts";
+
+// A release tag after "v3.5.1" or "next"
+type SupportedReleaseTag =
+  (`v{string}` & { __brand: "version ok" }) | "next" | "latest";
 
 interface ResultBase {
   featuresCount: number; // `kind: feature` ID count (ignores other `kind` values)
@@ -65,13 +67,24 @@ const argv = yargs(process.argv.slice(2))
     description: "Path to a JSON file",
     coerce: (filePath) => {
       const raw = readFileSync(filePath, "utf-8");
-      return JSON.parse(raw);
+      return JSON.parse(raw) as Result;
     },
+  })
+  .option("previous-release", {
+    type: "string",
+    description:
+      "Fetch a previous release's (a tag, such as `next` or `v3.36.0`, or `latest`) stats to compare against",
+    coerce: parseReleaseTag,
   })
   .usage("$0", "Generate statistics")
   .parseSync();
 
-export function stats(previous: Partial<Result>): Result {
+export async function stats(previous: Partial<Result>): Promise<Result> {
+  const { features, groups } = await import("../index.ts");
+  const { caniuseToWebFeaturesId } = await import("./caniuse.ts");
+  const { compatFeaturesToCumulativeDaysShipped } =
+    await import("./unmapped-compat-keys.ts");
+
   const featuresCount = Object.values(features).filter(
     isOrdinaryFeatureData,
   ).length;
@@ -118,12 +131,22 @@ export function stats(previous: Partial<Result>): Result {
   const unmappedNormalCompatKeysCount = unmappedKeys.difference(
     discourageableCompatKeys,
   ).size;
-  const mappedNormalCompatKeysCount =
-    mappedCompatKeysCount - unmappedNormalCompatKeysCount;
+  const mappedNormalCompatKeysCount = mappedCompatKeys.difference(
+    discourageableCompatKeys,
+  ).size;
   const unmappedDiscourageableCompatKeysCount =
     unmappedKeys.difference(normalCompatKeys).size;
   const mappedDiscourageableCompatKeysCount =
-    discourageableCompatKeysCount - unmappedDiscourageableCompatKeysCount;
+    mappedCompatKeys.difference(normalCompatKeys).size;
+
+  assert.equal(
+    mappedCompatKeysCount,
+    mappedNormalCompatKeysCount + mappedDiscourageableCompatKeysCount,
+  );
+  assert.equal(
+    unmappedCompatKeysCount,
+    unmappedNormalCompatKeysCount + unmappedDiscourageableCompatKeysCount,
+  );
 
   const featuresToDays = compatFeaturesToCumulativeDaysShipped();
   const unmappedDiscourageableCompatKeysCumulativeShippingDays = Array.from(
@@ -198,8 +221,59 @@ export function stats(previous: Partial<Result>): Result {
   return result;
 }
 
+async function fetchStats(tagOrLatest: SupportedReleaseTag): Promise<Result> {
+  const url =
+    tagOrLatest === "latest"
+      ? "https://github.com/web-platform-dx/web-features/releases/latest/download/stats.json"
+      : `https://github.com/web-platform-dx/web-features/releases/download/${tagOrLatest}/stats.json`;
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(
+      `Failed to get previous release's stats.json file (${response.status})`,
+    );
+  }
+  return response.json() as Promise<Result>;
+}
+
+function parseReleaseTag(tag: string): SupportedReleaseTag {
+  if (tag === "next" || tag === "latest") {
+    return tag as SupportedReleaseTag;
+  }
+  if (!tag.startsWith("v")) {
+    throw new Error("Release tags start with `v`");
+  }
+  const numbers = tag.slice(1).split(".");
+  if (numbers.length !== 3) {
+    throw new Error("Release tags must be in SemVer-like vX.Y.Z format");
+  }
+  const major = parseInt(numbers[0], 10);
+  const minor = parseInt(numbers[1], 10);
+  const patch = parseInt(numbers[2], 10);
+
+  if ([major, minor, patch].some(isNaN)) {
+    throw new Error("Release tags must be in SemVer-like vX.Y.Z format");
+  }
+
+  if ((major == 3 && minor <= 35) || major <= 2) {
+    throw new Error(
+      "This script can't handle releases at or before v3.36.0. If you need such stats, then file an issue.",
+    );
+  }
+  return tag as SupportedReleaseTag;
+}
+
+async function main() {
+  let previous: Result | undefined;
+  if (argv.previous) {
+    previous = argv.previous;
+  } else if (argv.previousRelease) {
+    previous = await fetchStats(argv.previousRelease);
+  }
+  console.log(JSON.stringify(await stats(previous), undefined, 2));
+}
+
 if (import.meta.url.startsWith("file:")) {
   if (process.argv[1] === fileURLToPath(import.meta.url)) {
-    console.log(JSON.stringify(stats(argv.previous), undefined, 2));
+    await main();
   }
 }
