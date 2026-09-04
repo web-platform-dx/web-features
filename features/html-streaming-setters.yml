@@ -1,0 +1,43 @@
+name: HTML streaming setters
+description: The `streamHTML()`, `streamReplaceWithHTML()`, `streamBeforeHTML()`, `streamPrependHTML()`, `streamAppendHTML()` and `streamAfterHTML()` DOM methods, and unsafe equivalents, return writeable streams that incrementally insert HTML into an existing tree.
+spec: https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-parsing-and-serialization
+group: dom
+compat_features:
+  - api.CharacterData.streamAfterHTML
+  - api.CharacterData.streamAfterHTMLUnsafe
+  - api.CharacterData.streamBeforeHTML
+  - api.CharacterData.streamBeforeHTMLUnsafe
+  - api.CharacterData.streamReplaceWithHTML
+  - api.CharacterData.streamReplaceWithHTMLUnsafe
+  - api.DocumentType.streamAfterHTML
+  - api.DocumentType.streamAfterHTMLUnsafe
+  - api.DocumentType.streamBeforeHTML
+  - api.DocumentType.streamBeforeHTMLUnsafe
+  - api.DocumentType.streamReplaceWithHTML
+  - api.DocumentType.streamReplaceWithHTMLUnsafe
+  - api.Element.streamAfterHTML
+  - api.Element.streamAfterHTMLUnsafe
+  - api.Element.streamAppendHTML
+  - api.Element.streamAppendHTMLUnsafe
+  - api.Element.streamBeforeHTML
+  - api.Element.streamBeforeHTMLUnsafe
+  - api.Element.streamHTML
+  - api.Element.streamHTMLUnsafe
+  - api.Element.streamPrependHTML
+  - api.Element.streamPrependHTMLUnsafe
+  - api.Element.streamReplaceHTML
+  - api.Element.streamReplaceHTMLUnsafe
+  - api.Element.streamReplaceWithHTML
+  - api.Element.streamReplaceWithHTMLUnsafe
+  - api.ShadowRoot.streamAfterHTML
+  - api.ShadowRoot.streamAfterHTMLUnsafe
+  - api.ShadowRoot.streamAppendHTML
+  - api.ShadowRoot.streamAppendHTMLUnsafe
+  - api.ShadowRoot.streamBeforeHTML
+  - api.ShadowRoot.streamBeforeHTMLUnsafe
+  - api.ShadowRoot.streamHTML
+  - api.ShadowRoot.streamHTMLUnsafe
+  - api.ShadowRoot.streamPrependHTML
+  - api.ShadowRoot.streamPrependHTMLUnsafe
+  - api.ShadowRoot.streamReplaceWithHTML
+  - api.ShadowRoot.streamReplaceWithHTMLUnsafe
