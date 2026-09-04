@@ -27,7 +27,10 @@ compat_features:
   - api.Element.replaceHTMLUnsafe
   - api.Element.replaceWithHTML
   - api.Element.replaceWithHTMLUnsafe
+  - api.Element.setHTML
+  - api.Element.setHTMLUnsafe
   - api.Element.setHTMLUnsafe.options_runscripts_parameter
+  - api.ShadowRoot.setHTML
   - api.ShadowRoot.afterHTML
   - api.ShadowRoot.afterHTMLUnsafe
   - api.ShadowRoot.appendHTML
@@ -38,6 +41,7 @@ compat_features:
   - api.ShadowRoot.prependHTMLUnsafe
   - api.ShadowRoot.replaceWithHTML
   - api.ShadowRoot.replaceWithHTMLUnsafe
+  - api.ShadowRoot.setHTMLUnsafe
   - api.ShadowRoot.setHTMLUnsafe.options_runscripts_parameter
   - api.TrustedParserOptions
   - api.TrustedParserOptions.runScripts

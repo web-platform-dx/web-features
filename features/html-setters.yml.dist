@@ -5,6 +5,32 @@ status:
   baseline: false
   support: {}
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2025-09-15
+  # support:
+  #   chrome: "124"
+  #   chrome_android: "124"
+  #   edge: "124"
+  #   firefox: "123"
+  #   firefox_android: "123"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.Element.setHTMLUnsafe
+  - api.ShadowRoot.setHTMLUnsafe
+
+  # baseline: false
+  # support:
+  #   chrome: "146"
+  #   chrome_android: "146"
+  #   edge: "146"
+  #   firefox: "148"
+  #   firefox_android: "148"
+  - api.Element.setHTML
+  - api.ShadowRoot.setHTML
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
   - api.CharacterData.afterHTML
   - api.CharacterData.afterHTMLUnsafe
   - api.CharacterData.beforeHTML
