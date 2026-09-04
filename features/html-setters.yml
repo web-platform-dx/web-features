@@ -1,0 +1,45 @@
+name: HTML positional setters
+description: The setHTML(), replaceWithHTML(), beforeHTML(), prependHTML(), appendHTML() and afterHTML() methods, and unsafe equivalents, insert HTML into an existing tree.
+# Uncomment when https://github.com/whatwg/html/pull/12753 lands
+# spec: https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-parsing-and-serialization
+group: dom
+compat_features:
+  - api.CharacterData.afterHTML
+  - api.CharacterData.afterHTMLUnsafe
+  - api.CharacterData.beforeHTML
+  - api.CharacterData.beforeHTMLUnsafe
+  - api.CharacterData.replaceWithHTML
+  - api.CharacterData.replaceWithHTMLUnsafe
+  - api.DocumentType.afterHTML
+  - api.DocumentType.afterHTMLUnsafe
+  - api.DocumentType.beforeHTML
+  - api.DocumentType.beforeHTMLUnsafe
+  - api.DocumentType.replaceWithHTML
+  - api.DocumentType.replaceWithHTMLUnsafe
+  - api.Element.afterHTML
+  - api.Element.afterHTMLUnsafe
+  - api.Element.appendHTML
+  - api.Element.appendHTMLUnsafe
+  - api.Element.beforeHTML
+  - api.Element.beforeHTMLUnsafe
+  - api.Element.prependHTML
+  - api.Element.prependHTMLUnsafe
+  - api.Element.replaceHTML
+  - api.Element.replaceHTMLUnsafe
+  - api.Element.replaceWithHTML
+  - api.Element.replaceWithHTMLUnsafe
+  - api.Element.setHTMLUnsafe.options_runscripts_parameter
+  - api.ShadowRoot.afterHTML
+  - api.ShadowRoot.afterHTMLUnsafe
+  - api.ShadowRoot.appendHTML
+  - api.ShadowRoot.appendHTMLUnsafe
+  - api.ShadowRoot.beforeHTML
+  - api.ShadowRoot.beforeHTMLUnsafe
+  - api.ShadowRoot.prependHTML
+  - api.ShadowRoot.prependHTMLUnsafe
+  - api.ShadowRoot.replaceWithHTML
+  - api.ShadowRoot.replaceWithHTMLUnsafe
+  - api.ShadowRoot.setHTMLUnsafe.options_runscripts_parameter
+  - api.TrustedParserOptions
+  - api.TrustedParserOptions.runScripts
+  - api.TrustedParserOptions.sanitizer
