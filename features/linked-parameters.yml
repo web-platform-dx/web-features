@@ -1,0 +1,9 @@
+ame: Linked parameters
+description: The `link-parameters` CSS property, `param()` CSS function, and the `:~:param()` URL directive set CSS custom environment variables on an external resource, such as an external SVG image, allowing the external resource to adapt its presentation based on the values provided.
+spec: https://drafts.csswg.org/css-link-params-1/
+compat_features:
+  - css.properties.link-parameters
+  - css.properties.link-parameters.none
+  - css.types.param
+  - css.types.param.url
+  - css.types.param.url_fragments
