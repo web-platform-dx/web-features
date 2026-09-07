@@ -1,5 +1,5 @@
-name: Cookie store get metadata
-description: The `domain`, `expires`, `path`, `sameSite` and `secure` properties returned from CookieStore.get
+name: cookieStore.get() metadata
+description: The `cookieStore.get()` method returns cookie metadata, such as the `domain`, `expires`, `path`, `sameSite` and `secure` properties.
 spec: https://cookiestore.spec.whatwg.org/
 discouraged:
   reason: Scripting access to cookie metadata creates privacy and forward-compatibility problems.
