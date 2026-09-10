@@ -514,7 +514,7 @@ You can add a single key to two or more `compat_features` lists when independent
 
 - No feature has any claim to being first and the shared interface does not represent a useful feature on its own.
   This sometimes happens when two features share a common interface.
-  For example, the `HTMLMediaElement` interface is required for both the `<video>` and `<audio>` elements, but there's no application for the `HTMLMediaElement` alone.
+  For example, the `HTMLMediaElement` interface is required for both the `<video>` and `<audio>` elements, but there's no application for the `HTMLMediaElement` interface alone.
 
 - The computed status would be misleading without the shared interface.
   For example, features where the `Reporting-Endpoints` header replaced the now-deprecated `Report-To` header might have a deceptively early status without the key for `Reporting-Endpoints`.
@@ -525,7 +525,7 @@ For example, do not add `api.HTMLElement` to every HTML element feature (for exa
 Instead, assign `api.HTMLElement` to the DOM feature.
 
 Overlaps are forbidden by default and cause an error.
-If you must overlap a key between two features, then first exempt the relevant keys in [`features/_overlap_allowlist.yml`](../features/_overlap_allowlist.yml).
+If you must overlap a key between two (or more) features, then first exempt the relevant keys in [`features/_overlap_allowlist.yml`](../features/_overlap_allowlist.yml).
 The allowlist is an array of records that declare which features are to share some keys and which keys those features are allowed to share.
 Each allowlist entry must have a `reason`, which explains what exceptional case applies to the set of keys.
 Here's an example, where two features share two keys:
