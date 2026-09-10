@@ -1,0 +1,13 @@
+name: WebDriver BiDi timezone override
+description: The `emulation.setTimezoneOverride` command simulates a timezone in the browser.
+spec: https://w3c.github.io/webdriver-bidi/#module-emulation
+group: webdriver
+compat_features:
+  core:
+    - webdriver.bidi.emulation.setTimezoneOverride
+    - webdriver.bidi.emulation.setTimezoneOverride.contexts_parameter
+    - webdriver.bidi.emulation.setTimezoneOverride.dedicated_and_shared_workers
+    - webdriver.bidi.emulation.setTimezoneOverride.timezone_parameter
+    - webdriver.bidi.emulation.setTimezoneOverride.userContexts_parameter
+  spare:
+    - webdriver.bidi.emulation

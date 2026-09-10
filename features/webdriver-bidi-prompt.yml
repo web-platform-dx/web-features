@@ -11,6 +11,11 @@ compat_features:
   - webdriver.bidi.browsingContext.userPromptClosed_event.accepted_parameter
   - webdriver.bidi.browsingContext.userPromptClosed_event.context_parameter
   - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter
+  - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.alert
+  - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.beforeunload
+  - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.confirm
+  - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.prompt
+  - webdriver.bidi.browsingContext.userPromptClosed_event.userContext_parameter
   - webdriver.bidi.browsingContext.userPromptClosed_event.userText_parameter
   - webdriver.bidi.browsingContext.userPromptOpened_event
   - webdriver.bidi.browsingContext.userPromptOpened_event.context_parameter
@@ -18,3 +23,8 @@ compat_features:
   - webdriver.bidi.browsingContext.userPromptOpened_event.handler_parameter
   - webdriver.bidi.browsingContext.userPromptOpened_event.message_parameter
   - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter
+  - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.alert
+  - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.beforeunload
+  - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.confirm
+  - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.prompt
+  - webdriver.bidi.browsingContext.userPromptOpened_event.userContext_parameter
