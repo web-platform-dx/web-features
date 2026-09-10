@@ -209,16 +209,6 @@ compat_features:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
-  #   firefox: "118"
-  #   firefox_android: "118"
-  - webdriver.bidi.browsingContext.activate
-  - webdriver.bidi.browsingContext.activate.context_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "126"
-  #   chrome_android: "126"
-  #   edge: "126"
   #   firefox: "119"
   #   firefox_android: "119"
   - webdriver.bidi.browsingContext.navigationStarted_event

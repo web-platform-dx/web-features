@@ -1,0 +1,13 @@
+name: WebDriver BiDi network conditions
+description: The `emulation.setNetworkConditions` command simulates network conditions in the browser.
+spec: https://w3c.github.io/webdriver-bidi/#module-emulation
+group: webdriver
+compat_features:
+  core:
+    - webdriver.bidi.emulation.setNetworkConditions
+    - webdriver.bidi.emulation.setNetworkConditions.contexts_parameter
+    - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter
+    - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter.offline
+    - webdriver.bidi.emulation.setNetworkConditions.userContexts_parameter
+  spare:
+    - webdriver.bidi.emulation

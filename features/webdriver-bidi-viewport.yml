@@ -1,0 +1,10 @@
+name: WebDriver BiDi viewport
+description: The `browsingContext.setViewport` command modifies specific viewport characteristics, such as width and height.
+spec: https://w3c.github.io/webdriver-bidi/#command-browsingContext-setViewport
+group: webdriver
+compat_features:
+  - webdriver.bidi.browsingContext.setViewport
+  - webdriver.bidi.browsingContext.setViewport.context_parameter
+  - webdriver.bidi.browsingContext.setViewport.devicePixelRatio_parameter
+  - webdriver.bidi.browsingContext.setViewport.userContexts_parameter
+  - webdriver.bidi.browsingContext.setViewport.viewport_parameter

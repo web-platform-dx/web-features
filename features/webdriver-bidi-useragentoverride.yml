@@ -1,0 +1,12 @@
+name: WebDriver BiDi user-agent override
+description: The `emulation.setUserAgentOverride` command simulates a user-agent in the browser.
+spec: https://w3c.github.io/webdriver-bidi/#module-emulation
+group: webdriver
+compat_features:
+  core:
+    - webdriver.bidi.emulation.setUserAgentOverride
+    - webdriver.bidi.emulation.setUserAgentOverride.contexts_parameter
+    - webdriver.bidi.emulation.setUserAgentOverride.userAgent_parameter
+    - webdriver.bidi.emulation.setUserAgentOverride.userContexts_parameter
+  spare:
+    - webdriver.bidi.emulation
