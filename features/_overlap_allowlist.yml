@@ -1,4 +1,6 @@
-- features:
+- reason: >
+    The `<audio>` and `<video>` elements share the `HTMLMediaInterface` interface, unlike most other elements' interfaces.
+  features:
     - audio
     - video
   keys:

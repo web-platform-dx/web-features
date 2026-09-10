@@ -527,10 +527,12 @@ Instead, assign `api.HTMLElement` to the DOM feature.
 Overlaps are forbidden by default and cause an error.
 If you must overlap a key between two features, then first exempt the relevant keys in [`features/_overlap_allowlist.yml`](../features/_overlap_allowlist.yml).
 The allowlist is an array of records that declare which features are to share some keys and which keys those features are allowed to share.
+Each allowlist entry must have a `reason`, which explains what exceptional case applies to the set of keys.
 Here's an example, where two features share two keys:
 
 ```
-- features:
+- reason: The `<audio>` and `<video>` elements share…
+  features:
     - audio
     - video
   keys:

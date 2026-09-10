@@ -38,7 +38,10 @@ const uniqueIdMaps = {
 const overlapAllowlist: OverlapAllowlist = (() => {
     const map = new Map<string, string[]>();
     const allowlist = YAML.parse(fs.readFileSync("./features/_overlap_allowlist.yml", { encoding: "utf-8" }));
-    for (const {keys, features} of allowlist) {
+    for (const {reason, keys, features} of allowlist) {
+        if (typeof reason !== "string") {
+            throw new Error(`Overlap allowlist entries require a reason! Missing for ${JSON.stringify(features)} entry.`);
+        }
         for (const key of keys) {
             map.set(key, features);
         }
