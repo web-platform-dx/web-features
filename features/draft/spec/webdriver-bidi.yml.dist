@@ -119,6 +119,8 @@ compat_features:
   #   firefox: "106"
   #   firefox_android: "106"
   - webdriver.bidi.browsingContext.load_event
+  - webdriver.bidi.browsingContext.load_event.context_parameter
+  - webdriver.bidi.browsingContext.load_event.url_parameter
   - webdriver.bidi.script
   - webdriver.bidi.script.callFunction
   - webdriver.bidi.script.callFunction.arguments_parameter
@@ -679,8 +681,6 @@ compat_features:
   - webdriver.bidi.browsingContext.contextCreated_event.originalOpener_parameter
   - webdriver.bidi.browsingContext.contextDestroyed_event.children_parameter
   - webdriver.bidi.browsingContext.contextDestroyed_event.originalOpener_parameter
-  - webdriver.bidi.browsingContext.load_event.context_parameter
-  - webdriver.bidi.browsingContext.load_event.url_parameter
   - webdriver.bidi.browsingContext.locateNodes.locator_parameter
   - webdriver.bidi.browsingContext.navigationFailed_event
   - webdriver.bidi.browsingContext.navigationFailed_event.context_parameter
