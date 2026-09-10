@@ -1,0 +1,6 @@
+name: Shared worker extended lifetime
+description: Allows shared workers extra time to perform operations after all their owner globals have disappeared.
+spec: https://html.spec.whatwg.org/#dom-sharedworkeroptions-extendedlifetime
+group: workers
+compat_features:
+  - api.SharedWorker.SharedWorker.options_extendedLifetime_parameter
