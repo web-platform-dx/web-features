@@ -54,6 +54,8 @@ compat_features:
     - webdriver.bidi.browsingContext.getTree.maxDepth_parameter
     - webdriver.bidi.browsingContext.getTree.root_parameter
     - webdriver.bidi.browsingContext.load_event
+    - webdriver.bidi.browsingContext.load_event.navigation_parameter
+    - webdriver.bidi.browsingContext.load_event.timestamp_parameter
     - webdriver.bidi.browsingContext.navigate
     - webdriver.bidi.browsingContext.navigate.context_parameter
     - webdriver.bidi.browsingContext.navigate.url_parameter
@@ -118,9 +120,9 @@ compat_features:
     - webdriver.bidi.browsingContext.fragmentNavigated_event.timestamp_parameter
     - webdriver.bidi.browsingContext.fragmentNavigated_event.url_parameter
     - webdriver.bidi.browsingContext.fragmentNavigated_event.userContext_parameter
+    # https://github.com/mdn/browser-compat-data/commit/fd5836ec81dea5696d4c343a131d6b52e30c1bd2
+    # is marking these 2 keys as supported in Firefox 106. Move them to `core` once we upgrade BCD.
     - webdriver.bidi.browsingContext.load_event.context_parameter
-    - webdriver.bidi.browsingContext.load_event.navigation_parameter
-    - webdriver.bidi.browsingContext.load_event.timestamp_parameter
     - webdriver.bidi.browsingContext.load_event.url_parameter
     - webdriver.bidi.browsingContext.load_event.userContext_parameter
     - webdriver.bidi.browsingContext.navigationCommitted_event
