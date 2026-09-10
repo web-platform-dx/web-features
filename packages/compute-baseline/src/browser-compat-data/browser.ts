@@ -40,7 +40,12 @@ export class Browser {
         // For Safari TP, "nightly" isn't literally correct, but according to
         // the BCD schema this can be any "current alpha / experimental
         // release".
-        new Release(this, "preview", { status: "nightly" }, releases.length),
+        new Release(
+          this,
+          "preview",
+          { index: Infinity, status: "nightly" },
+          releases.length,
+        ),
       );
     }
     this.releases = releases;
