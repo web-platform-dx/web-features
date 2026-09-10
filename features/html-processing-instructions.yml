@@ -1,0 +1,12 @@
+name: HTML processing instructions
+description: An HTML processing instruction is text enclosed by `<?` and `>`, which marks a target for further processing. They may appear anywhere in a document. They are ignored like comments when they're not recognized for a specific purpose.
+spec: https://html.spec.whatwg.org/multipage/syntax.html#processing-instructions
+compat_features:
+  - api.ProcessingInstruction.doc_html
+  - api.ProcessingInstruction.getAttribute
+  - api.ProcessingInstruction.getAttributeNames
+  - api.ProcessingInstruction.hasAttribute
+  - api.ProcessingInstruction.hasAttributes
+  - api.ProcessingInstruction.removeAttribute
+  - api.ProcessingInstruction.setAttribute
+  - api.ProcessingInstruction.toggleAttribute

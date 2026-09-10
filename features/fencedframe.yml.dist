@@ -4,11 +4,10 @@
 status:
   baseline: false
   support:
-    chrome: "126"
-    chrome_android: "126"
-    edge: "126"
+    chrome: "128"
+    chrome_android: "128"
+    edge: "128"
 compat_features:
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "126"
@@ -35,6 +34,7 @@ compat_features:
   - http.headers.Content-Security-Policy.fenced-frame-src
   - http.headers.Sec-Fetch-Dest.fencedframe
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "128"

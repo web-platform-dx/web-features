@@ -1,4 +1,4 @@
-draft_date: 2026-07-24
+draft_date: 2026-08-27
 name: WebAssembly Core Specification
 description: TODO
 spec: https://webassembly.github.io/spec/core/bikeshed/
@@ -7,6 +7,7 @@ compat_features:
   - webassembly.definitions.elem
   - webassembly.definitions.func
   - webassembly.definitions.global
+  - webassembly.definitions.import
   - webassembly.definitions.table
   - webassembly.definitions.tag
   - webassembly.instructions.abs

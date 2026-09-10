@@ -1,4 +1,4 @@
-draft_date: 2026-07-24
+draft_date: 2026-08-27
 name: CSS Basic User Interface Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-ui-4/
@@ -18,9 +18,6 @@ compat_features:
   - css.properties.resize.horizontal
   - css.properties.resize.none
   - css.properties.resize.vertical
-  - css.properties.window-drag
-  - css.properties.window-drag.move
-  - css.properties.window-drag.none
 
 # The following features in the spec are already part of web-features:
 # - accent-color:
@@ -117,3 +114,7 @@ compat_features:
 #   - css.properties.user-select.auto
 #   - css.properties.user-select.none
 #   - css.properties.user-select.text
+# - window-drag:
+#   - css.properties.window-drag
+#   - css.properties.window-drag.move
+#   - css.properties.window-drag.none

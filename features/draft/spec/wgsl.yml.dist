@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "146"
-    chrome_android: "146"
-    edge: "146"
+    chrome: "148"
+    chrome_android: "148"
+    edge: "148"
 compat_features:
   # baseline: false
   # support:
@@ -24,10 +24,17 @@ compat_features:
   #   edge: "145"
   - api.WGSLLanguageFeatures.extension_subgroup_uniformity
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "146"
   #   chrome_android: "146"
   #   edge: "146"
   - api.WGSLLanguageFeatures.extension_texture_and_sampler_let
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "148"
+  #   chrome_android: "148"
+  #   edge: "148"
+  - api.WGSLLanguageFeatures.extension_linear_indexing

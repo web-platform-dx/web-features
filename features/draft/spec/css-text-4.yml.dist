@@ -91,6 +91,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "150"
+  #   chrome_android: "150"
+  #   edge: "150"
+  - css.properties.text-fit.consistent
+  - css.properties.text-fit.per-line
+  - css.properties.text-fit.per-line-all
+  - css.properties.text-fit.percentage
+
+  # baseline: false
+  # support:
   #   safari: "16"
   #   safari_ios: "16"
   - css.properties.text-align-last.match-parent
@@ -100,3 +110,15 @@ compat_features:
   #   firefox: "124"
   #   firefox_android: "124"
   - css.properties.white-space.preserve-spaces
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.white-space-trim
+  - css.properties.white-space-trim.discard-after
+  - css.properties.white-space-trim.discard-before
+  - css.properties.white-space-trim.discard-inner
+  - css.properties.white-space-trim.none
+  - css.properties.wrap-inside
+  - css.properties.wrap-inside.auto
+  - css.properties.wrap-inside.avoid

@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "150"
-    chrome_android: "150"
-    edge: "150"
+    chrome: "146"
+    chrome_android: "146"
+    edge: "146"
 compat_features:
   # baseline: high
   # baseline_low_date: 2023-03-27
@@ -55,17 +55,3 @@ compat_features:
   #   edge: "79"
   - api.Document.createElement.options_parameter.options_is_parameter
   - api.Document.createElementNS.options_parameter.options_is_parameter
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "150"
-  #   chrome_android: "150"
-  #   edge: "150"
-  - api.ProcessingInstruction.getAttribute
-  - api.ProcessingInstruction.getAttributeNames
-  - api.ProcessingInstruction.hasAttribute
-  - api.ProcessingInstruction.hasAttributes
-  - api.ProcessingInstruction.removeAttribute
-  - api.ProcessingInstruction.setAttribute
-  - api.ProcessingInstruction.toggleAttribute

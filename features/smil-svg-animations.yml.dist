@@ -327,13 +327,16 @@ compat_features:
   - api.SVGAnimationElement.beginEvent_event
   - api.SVGAnimationElement.repeatEvent_event
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-05-11
   # support:
   #   chrome: "35"
   #   chrome_android: "35"
   #   edge: "79"
   #   firefox: "93"
   #   firefox_android: "93"
+  #   safari: "26.5"
+  #   safari_ios: "26.5"
   - api.SVGAnimationElement.endEvent_event
 
   # baseline: false
