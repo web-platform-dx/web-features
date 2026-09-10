@@ -175,6 +175,15 @@ describe("computeBaseline", function () {
     });
     assert.equal(actual.baseline, false);
   });
+
+  it("returns no support for no keys", function () {
+    const actual = computeBaseline({
+      compatKeys: [],
+      checkAncestors: false,
+    });
+    assert.equal(actual.baseline, false);
+    assert.equal(actual.support.size, 0);
+  });
 });
 
 describe("keystoneDateToStatus()", function () {

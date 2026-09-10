@@ -3,6 +3,5 @@ description: >
   The `<meta name="text-scale" content="scale" />` HTML element allows the browser's initial font size to be affected by the operating system text scale settings.
   The `<meta name="text-scale" content="legacy" />` element is the default behavior that respects only browser font-size settings.
 spec: https://drafts.csswg.org/css-fonts-5/#text-scale-meta
-# Expected:
-# compat_features:
-#   - html.elements.meta.name.text-scale
+compat_features:
+  - html.elements.meta.name.text-scale

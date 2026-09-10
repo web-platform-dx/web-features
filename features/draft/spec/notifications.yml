@@ -1,4 +1,4 @@
-draft_date: 2025-09-17
+draft_date: 2026-05-08
 name: Notifications API
 description: TODO
 spec: https://notifications.spec.whatwg.org/
@@ -27,7 +27,6 @@ compat_features:
 #   - api.Notification.requestPermission_static
 #   - api.Notification.requestPermission_static.returns_promise
 #   - api.Notification.requireInteraction
-#   - api.Notification.secure_context_required
 #   - api.Notification.show_event
 #   - api.Notification.silent
 #   - api.Notification.tag
@@ -39,6 +38,7 @@ compat_features:
 #   - api.NotificationEvent.NotificationEvent
 #   - api.NotificationEvent.action
 #   - api.NotificationEvent.notification
+#   - api.Permissions.permission_notifications
 #   - api.ServiceWorkerGlobalScope.notificationclick_event
 #   - api.ServiceWorkerGlobalScope.notificationclose_event
 #   - api.ServiceWorkerRegistration.getNotifications

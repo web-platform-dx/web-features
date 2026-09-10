@@ -3,4 +3,9 @@ description: "The `position: absolute` CSS declaration removes an element from t
 spec: https://drafts.csswg.org/css-position-3/#abspos-insets
 group: positioning
 compat_features:
-  - css.properties.position.absolute
+  core:
+    - css.properties.position.absolute # former compute_from
+  spare:
+    - css.properties.align-self.position_absolute_context
+    - css.properties.justify-self.position_absolute_context
+    - css.properties.place-self.position_absolute_context

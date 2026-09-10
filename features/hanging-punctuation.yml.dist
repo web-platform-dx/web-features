@@ -3,10 +3,13 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    safari: "26.5"
+    safari_ios: "26.5"
 compat_features:
   - css.properties.hanging-punctuation
   - css.properties.hanging-punctuation.allow-end
   - css.properties.hanging-punctuation.first
+  - css.properties.hanging-punctuation.force-end
   - css.properties.hanging-punctuation.last
   - css.properties.hanging-punctuation.none

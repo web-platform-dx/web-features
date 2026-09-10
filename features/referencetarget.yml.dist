@@ -3,4 +3,12 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "152"
+    chrome_android: "152"
+    edge: "152"
+compat_features:
+  - api.Element.attachShadow.options_referenceTarget_parameter
+  - api.HTMLTemplateElement.shadowRootReferenceTarget
+  - api.ShadowRoot.referenceTarget
+  - html.elements.template.shadowrootreferencetarget

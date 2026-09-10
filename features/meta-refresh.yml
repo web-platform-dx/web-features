@@ -1,0 +1,8 @@
+name: Meta refresh
+description: >
+  The `<meta http-equiv="refresh">` HTML element and the equivalent `Refresh` HTTP header trigger a page reload or redirect.
+  They apply only when the page is fully loaded, after other HTTP redirects or scripted redirects that might execute before the page is fully loaded.
+spec: https://html.spec.whatwg.org/multipage/semantics.html#attr-meta-http-equiv-refresh
+compat_features:
+  - html.elements.meta.http-equiv.refresh
+  - http.headers.Refresh

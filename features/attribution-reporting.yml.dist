@@ -28,10 +28,10 @@ compat_features:
   - api.HTMLAnchorElement.attributionSrc
   - api.HTMLImageElement.attributionSrc
   - api.HTMLScriptElement.attributionSrc
-  - api.Request.Request.init_attributionReporting_parameter
+  - api.Request.Request.options_parameter.attributionReporting
   - api.Window.open.features_parameter_attributionsrc
   - api.XMLHttpRequest.setAttributionReporting
-  - api.fetch.init_attributionReporting_parameter
+  - api.fetch.options_parameter.attributionReporting
   - html.elements.a.attributionsrc
   - html.elements.area.attributionsrc
   - html.elements.img.attributionsrc

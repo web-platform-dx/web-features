@@ -5,12 +5,34 @@ status:
   baseline: low
   baseline_low_date: 2025-04-29
   support:
-    chrome: "91"
-    chrome_android: "91"
-    edge: "91"
+    chrome: "120"
+    chrome_android: "120"
+    edge: "120"
     firefox: "138"
     firefox_android: "138"
-    safari: "15"
-    safari_ios: "15"
+    safari: "17.4"
+    safari_ios: "17.4"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2024-03-05
+  # support:
+  #   chrome: "120"
+  #   chrome_android: "120"
+  #   edge: "120"
+  #   firefox: "121"
+  #   firefox_android: "121"
+  #   safari: "17.4"
+  #   safari_ios: "17.4"
+  - javascript.builtins.Intl.DateTimeFormat.DateTimeFormat.options_parameter.options_timeZone_parameter.utc_offset
+
+  # baseline: low
+  # baseline_low_date: 2025-04-29
+  # support:
+  #   chrome: "91"
+  #   chrome_android: "91"
+  #   edge: "91"
+  #   firefox: "138"
+  #   firefox_android: "138"
+  #   safari: "15"
+  #   safari_ios: "15"
   - javascript.operators.import.options_parameter

@@ -1,6 +1,7 @@
 name: Fetch form data
 description: The `Request.formData()` and `Response.formData()` methods read a request or response body and return a `FormData` promise. You can use it to access the fields of a form submission.
 spec: https://fetch.spec.whatwg.org/#body-mixin
+group: fetch
 compat_features:
   - api.Request.formData
   - api.Response.formData

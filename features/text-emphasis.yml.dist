@@ -28,6 +28,8 @@ compat_features:
   #   safari_ios: "7"
   - css.properties.text-emphasis
   - css.properties.text-emphasis-color
+  - css.properties.text-emphasis-color.currentColor
+  - css.properties.text-emphasis-color.transparent
   - css.properties.text-emphasis-position
   - css.properties.text-emphasis-style
   - css.properties.text-emphasis-style.circle
@@ -37,6 +39,8 @@ compat_features:
   - css.properties.text-emphasis-style.none
   - css.properties.text-emphasis-style.sesame
   - css.properties.text-emphasis-style.triangle
+  - css.properties.text-emphasis.currentColor
+  - css.properties.text-emphasis.transparent
 
   # baseline: high
   # baseline_low_date: 2022-03-03

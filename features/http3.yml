@@ -1,6 +1,7 @@
 name: HTTP/3
 description: HTTP/3 is a major revision of the HTTP network protocol, providing improved performance and efficiency by using QUIC as the underlying transport protocol.
 spec: https://httpwg.org/specs/rfc9114.html
+group: http
 caniuse: http3
 # Since HTTP/3 has no representation in BCD, the following version numbers are
 # from https://caniuse.com/http3. TODO: capture partial support in Safari with

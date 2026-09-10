@@ -167,19 +167,6 @@ compat_features:
   #   safari_ios: "10.3"
   - api.KeyboardEvent.key.dead_key
 
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "56"
-  #   chrome_android: "56"
-  #   edge: "79"
-  #   firefox: "31"
-  #   firefox_android: "31"
-  #   safari: "10.1"
-  #   safari_ios: "10.3"
-  - api.KeyboardEvent.isComposing
-
   # baseline: low
   # baseline_low_date: 2025-05-27
   # support:
@@ -211,6 +198,15 @@ compat_features:
   #   safari: "10.1"
   #   safari_ios: "10.3"
   - api.KeyboardEvent.code
+
+  # baseline: false
+  # support:
+  #   chrome: "56"
+  #   chrome_android: "56"
+  #   edge: "79"
+  #   firefox: "31"
+  #   firefox_android: "31"
+  - api.KeyboardEvent.isComposing
 
   # baseline: false
   # support:

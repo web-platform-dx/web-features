@@ -1,0 +1,11 @@
+name: Permissions policy violation reporting
+description: >
+  Permissions policy violation reporting sends a report to
+  a URL nominated by the `Reporting-Endpoints` header or the `ReportingObserver` API when a page violates a policy.
+  You can also use the `Permissions-Policy-Report-Only` header to receive reports of what might break under a given policy.
+spec: https://w3c.github.io/webappsec-permissions-policy/#reporting
+group: reporting
+compat_features:
+  - api.ReportingObserver.ReportingObserver.options_parameter.types_property.permissions-policy-violation
+# Expected:
+# - http.headers.Permissions-Policy-Report-Only

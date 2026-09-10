@@ -5,21 +5,27 @@ status:
   baseline: false
   support: {}
 compat_features:
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-09-01
   # support:
   #   chrome: "143"
   #   chrome_android: "143"
   #   edge: "143"
+  #   firefox: "155"
+  #   firefox_android: "155"
+  #   safari: "26.4"
+  #   safari_ios: "26.4"
+  - api.WebTransport.WebTransport.options_protocols_parameter
   - api.WebTransport.protocol
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
-  - api.WebTransport.anticipatedConcurrentIncomingBidirectionalStreams
-  - api.WebTransport.anticipatedConcurrentIncomingUnidirectionalStreams
+  # support:
+  #   firefox: "155"
+  #   firefox_android: "155"
+  #   safari: "26.4"
+  #   safari_ios: "26.4"
   - api.WebTransport.createSendGroup
   - api.WebTransport.draining
-  - api.WebTransport.supportsReliableOnly_static
   - api.WebTransportDatagramDuplexStream.createWritable
   - api.WebTransportDatagramsWritable
   - api.WebTransportDatagramsWritable.sendGroup
@@ -27,3 +33,29 @@ compat_features:
   - api.WebTransportSendGroup
   - api.WebTransportSendGroup.getStats
   - api.WebTransportSendStream.sendGroup
+
+  # baseline: false
+  # support:
+  #   chrome: "151"
+  #   chrome_android: "151"
+  #   edge: "151"
+  - api.WebTransportDatagramDuplexStream.incomingMaxBufferedDatagrams
+  - api.WebTransportDatagramDuplexStream.outgoingMaxBufferedDatagrams
+
+  # baseline: false
+  # support:
+  #   safari: "26.4"
+  #   safari_ios: "26.4"
+  - api.WebTransport.anticipatedConcurrentIncomingBidirectionalStreams
+  - api.WebTransport.anticipatedConcurrentIncomingUnidirectionalStreams
+  - api.WebTransport.supportsReliableOnly_static
+
+  # baseline: false
+  # support:
+  #   firefox: "155"
+  - api.WebTransport.exportKeyingMaterial
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.WebTransport.responseHeaders

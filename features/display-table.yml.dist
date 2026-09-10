@@ -3,12 +3,12 @@
 
 status:
   baseline: high
-  baseline_low_date: ≤2017-04-05
-  baseline_high_date: ≤2019-10-05
+  baseline_low_date: 2015-07-29
+  baseline_high_date: 2018-01-29
   support:
     chrome: "1"
     chrome_android: "18"
-    edge: ≤15
+    edge: "12"
     firefox: "3"
     firefox_android: "4"
     safari: ≤4
@@ -41,21 +41,21 @@ compat_features:
   #   chrome: "1"
   #   chrome_android: "18"
   #   edge: "12"
-  #   firefox: "3"
-  #   firefox_android: "4"
-  #   safari: "1"
-  #   safari_ios: "1"
-  - css.properties.display.inline-table
-
-  # baseline: high
-  # baseline_low_date: ≤2017-04-05
-  # baseline_high_date: ≤2019-10-05
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: ≤15
   #   firefox: "1"
   #   firefox_android: "4"
   #   safari: ≤4
   #   safari_ios: ≤3.2
   - css.properties.display.table-caption
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "3"
+  #   firefox_android: "4"
+  #   safari: "1"
+  #   safari_ios: "1"
+  - css.properties.display.inline-table

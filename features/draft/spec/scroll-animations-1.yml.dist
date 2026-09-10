@@ -4,14 +4,40 @@
 status:
   baseline: false
   support:
-    chrome: "115"
-    chrome_android: "115"
-    edge: "115"
-    safari: "26"
-    safari_ios: "26"
+    chrome: "147"
+    chrome_android: "147"
+    edge: "147"
+    safari: "26.5"
+    safari_ios: "26.5"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "115"
+  #   chrome_android: "115"
+  #   edge: "115"
+  #   safari: "26"
+  #   safari_ios: "26"
   - css.properties.animation-range.normal
   - css.properties.scroll-timeline-name.none
   - css.properties.scroll-timeline.none
   - css.properties.view-timeline-name.none
   - css.properties.view-timeline.none
+
+  # baseline: false
+  # support:
+  #   chrome: "119"
+  #   chrome_android: "119"
+  #   edge: "119"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - css.types.timeline-range-name
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "147"
+  #   chrome_android: "147"
+  #   edge: "147"
+  #   safari: "26.5"
+  #   safari_ios: "26.5"
+  - css.types.timeline-range-name.scroll

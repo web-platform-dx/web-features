@@ -26,6 +26,6 @@ compat_features:
   #   edge: "126"
   - api.Document.browsingTopics
   - api.HTMLIFrameElement.browsingTopics
-  - api.Request.Request.init_browsingTopics_parameter
-  - api.fetch.init_browsingTopics_parameter
+  - api.Request.Request.options_parameter.browsingTopics
+  - api.fetch.options_parameter.browsingTopics
   - html.elements.iframe.browsingtopics

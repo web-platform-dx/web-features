@@ -1,7 +1,18 @@
-draft_date: 2025-10-08
+draft_date: 2026-05-08
 name: CSS Values and Units Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-values-4/
 compat_features:
   - css.types.calc.typed_division_produces_unitless_number
   - css.types.sign.typed_division_produces_unitless_number
+
+# The following features in the spec are already part of web-features:
+# - Multi-column layout:
+#   - css.properties.column-gap.multicol_context.percentage_values
+# - Grid:
+#   - css.properties.gap.grid_context.percentage_values
+# - Transitions (CSS):
+#   - css.properties.transition-property.IDENT_value
+# - Media queries:
+#   - css.types.ratio
+#   - css.types.ratio.number_value

@@ -1,4 +1,4 @@
-draft_date: 2026-03-16
+draft_date: 2026-05-08
 name: Content Security Policy Level 3
 description: TODO
 spec: https://w3c.github.io/webappsec-csp/
@@ -39,7 +39,6 @@ compat_features:
 #   - http.headers.Content-Security-Policy.meta-element-support
 #   - http.headers.Content-Security-Policy.object-src
 #   - http.headers.Content-Security-Policy.report-sample
-#   - http.headers.Content-Security-Policy.report-to
 #   - http.headers.Content-Security-Policy.sandbox
 #   - http.headers.Content-Security-Policy.script-src
 #   - http.headers.Content-Security-Policy.script-src.external_scripts
@@ -54,7 +53,6 @@ compat_features:
 #   - http.headers.Content-Security-Policy.worker-src
 #   - http.headers.Content-Security-Policy.worker_support
 #   - http.headers.Content-Security-Policy-Report-Only
-# - Reporting API:
+# - CSP violation reports:
 #   - api.ReportingObserver.ReportingObserver.options_parameter.types_property.csp-violation
-# - Speculation rules:
-#   - http.headers.Content-Security-Policy.script-src.inline-speculation-rules
+#   - http.headers.Content-Security-Policy.report-to

@@ -1,22 +1,20 @@
 name: Clearing site data
 description: The `Clear-Site-Data` header deletes browsing data (such as cookies, storage, or cache) associated with the requesting website.
 spec: https://w3c.github.io/webappsec-clear-site-data/
-# status:
-#   compute_from: http.headers.Clear-Site-Data.wildcard
-# Freezing this status until upstream can be trusted
-# - https://github.com/web-platform-dx/web-features/pull/3881#discussion_r2983196809
+# TODO: https://github.com/web-platform-dx/web-features/issues/1971
+# 2026-04-08 — low → false — A bug in Chrome prevents `Clear-Site-Data` from taking full effect until after a hard refresh.
+# References:
 # - https://github.com/mdn/browser-compat-data/pull/29333
+# - https://issues.chromium.org/issues/364634040
 status:
-  baseline: low
-  baseline_low_date: 2023-09-18
-  support:
-    chrome: "117"
-    chrome_android: "117"
-    edge: "117"
-    firefox: "63"
-    firefox_android: "63"
-    safari: "17"
-    safari_ios: "17"
+  # Compute from the header and values implied by the description: cache, cookies,
+  # storage, and the wildcard (`*`, which invokes all of the preceding).
+  compute_from:
+    - http.headers.Clear-Site-Data
+    - http.headers.Clear-Site-Data.cache
+    - http.headers.Clear-Site-Data.cookies
+    - http.headers.Clear-Site-Data.storage
+    - http.headers.Clear-Site-Data.wildcard
 compat_features:
   - http.headers.Clear-Site-Data
   - http.headers.Clear-Site-Data.cache

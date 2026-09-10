@@ -35,3 +35,8 @@ compat_features:
   #   firefox: "138"
   #   firefox_android: "138"
   - api.AudioWorklet.port
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.BaseAudioContext.renderQuantumSize

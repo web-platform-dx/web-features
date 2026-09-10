@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "141"
-    chrome_android: "141"
-    edge: "141"
+  support: {}
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -165,10 +162,29 @@ compat_features:
   - svg.elements.use.omit_external_fragment
   - svg.global_attributes.transform.svg_root
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "141"
   #   chrome_android: "141"
   #   edge: "141"
   - api.SVGAnimatedString.baseVal.enforces_trusted_types
+
+  # baseline: false
+  # support:
+  #   firefox: "155"
+  - api.SVGAElement.hash
+  - api.SVGAElement.host
+  - api.SVGAElement.hostname
+  - api.SVGAElement.origin
+  - api.SVGAElement.password
+  - api.SVGAElement.pathname
+  - api.SVGAElement.port
+  - api.SVGAElement.protocol
+  - api.SVGAElement.search
+  - api.SVGAElement.username
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.path-length
+  - css.properties.path-length.none

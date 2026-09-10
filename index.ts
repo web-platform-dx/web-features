@@ -4,13 +4,14 @@ import path from 'path';
 import { Temporal } from '@js-temporal/polyfill';
 import { fdir } from 'fdir';
 import YAML from 'yaml';
-import { convertMarkdown } from "./text";
-import { GroupData, SnapshotData, WebFeaturesData } from './types';
+import { convertMarkdown } from "./text.ts";
+import type { GroupData, SnapshotData, WebFeaturesData } from './types.ts';
 
 import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, getStatus, parseRangedDateString } from 'compute-baseline';
 import { Compat } from 'compute-baseline/browser-compat-data';
-import { assertRequiredRemovalDateSet, assertValidFeatureReference } from './assertions';
-import { isMoved, isOrdinaryFeatureData, isSplit } from './type-guards';
+import { assertCompatSetConsistency, assertRequiredRemovalDateSet, assertValidFeatureReference } from './assertions.ts';
+import { parseAuthoring, type ParsedAuthoredData } from './parse.ts';
+import { isMoved, isOrdinaryFeatureData, isSplit } from './type-guards.ts';
 
 // The longest name allowed, to allow for compact display.
 const nameMaxLength = 80;
@@ -34,7 +35,7 @@ const uniqueIdMaps = {
     snapshots: new Map<string, string>(),
 }
 
-function* yamlEntries(root: string): Generator<[string, any]> {
+function* yamlEntries(root: string): Generator<[id: string, data: any, authored: ParsedAuthoredData]> {
     const filePaths = new fdir()
         .withBasePath()
         .filter((fp) => fp.endsWith('.yml'))
@@ -45,10 +46,17 @@ function* yamlEntries(root: string): Generator<[string, any]> {
         // The feature identifier/key is the filename without extension.
         const { name: key } = path.parse(fp);
         const pathParts = fp.split(path.sep);
+        const isDraft = pathParts.includes('draft');
+        const isSpec = isDraft && pathParts.includes('spec');
+        const isProposed = isDraft && pathParts.includes('proposed');
+
+        if (isProposed) {
+            continue;
+        }
 
         // Assert ID uniqueness
         for (const [pool, map] of Object.entries(uniqueIdMaps)) {
-            if (!pathParts.includes("spec") && pathParts.includes(pool)) {
+            if (!isSpec && pathParts.includes(pool)) {
                 const otherFile: string | undefined = map.get(key);
                 if (otherFile) {
                     throw new Error(`ID collision between ${fp} and ${otherFile}`);
@@ -61,18 +69,25 @@ function* yamlEntries(root: string): Generator<[string, any]> {
             throw new Error(`${key} is not a valid identifier (see guidelines)`);
         }
 
-        const data = YAML.parse(fs.readFileSync(fp, { encoding: 'utf-8'}));
+        const data = YAML.parse(fs.readFileSync(fp, { encoding: 'utf-8' }));
+
+        // FIXME: This is a bit duplicative of other work in this file.
+        // To avoid a major refactor, the deduplication is not happening
+        // in this PR. I'll remove this comment before merging, but I'm
+        // making a note of it now before I forget.
+        const authored = parseAuthoring(key, data);
+
         const distPath = `${fp}.dist`;
         if (fs.existsSync(distPath)) {
             const dist = YAML.parse(fs.readFileSync(distPath, { encoding: 'utf-8'}));
             Object.assign(data, dist);
         }
 
-        if (pathParts.includes('draft')) {
+        if (isDraft) {
             data[draft] = true;
         }
 
-        yield [key, data];
+        yield [key, data, authored];
     }
 }
 
@@ -107,7 +122,7 @@ const snapshots: { [key: string]: SnapshotData } = Object.fromEntries(yamlEntrie
 // TODO: validate the snapshot data.
 
 // Helper to iterate an optional string-or-array-of-strings value.
-function* identifiers(value) {
+function* identifiers(value: undefined | string | string[]) {
     if (value === undefined) {
         return;
     }
@@ -123,7 +138,7 @@ function* identifiers(value) {
 const bcdToFeatureId: Map<string, string> = new Map();
 
 const features: WebFeaturesData["features"] = {};
-for (const [key, data] of yamlEntries('features')) {
+for (const [key, data, authored] of yamlEntries('features')) {
     // Draft features reserve an identifier but aren't complete yet. Skip them.
     if (data[draft]) {
         if (!data.draft_date) {
@@ -230,10 +245,11 @@ for (const [key, data] of yamlEntries('features')) {
             for (const bcdKey of data.compat_features) {
                 data.status.by_compat_key[bcdKey] = getStatus(key, bcdKey);
             }
+            assertCompatSetConsistency(key, data.status, authored);
         }
     }
 
-   assertRequiredRemovalDateSet(key, data);
+    assertRequiredRemovalDateSet(key, data);
 
     features[key] = data;
 }
@@ -275,4 +291,3 @@ for (const browser of coreBrowserSet.map(identifier => compat.browser(identifier
 }
 
 export { browsers, features, groups, snapshots };
-

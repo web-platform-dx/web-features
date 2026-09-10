@@ -1,11 +1,8 @@
-draft_date: 2026-02-16
+draft_date: 2026-05-08
 name: HTTP Semantics
 description: TODO
 spec: https://httpwg.org/specs/rfc9110.html
 compat_features:
-  - http.headers.Content-Length.cors_response_safelist
-  - http.headers.Range.cors_safe
-  - http.headers.Referer.length_limit_4096B
   - http.headers.Retry-After
   - http.headers.Upgrade
   - http.status.308
@@ -50,13 +47,6 @@ compat_features:
 #   - http.methods.OPTIONS
 #   - http.methods.POST
 #   - http.methods.PUT
-# - Compression Dictionary Transport:
-#   - http.headers.Accept-Encoding.dcb
-#   - http.headers.Accept-Encoding.dcz
-#   - http.headers.Content-Encoding.dcb
-#   - http.headers.Content-Encoding.dcz
 # - HTTP authentication:
 #   - http.headers.Authorization
-#   - http.headers.Authorization.NTLM
 #   - http.headers.WWW-Authenticate
-#   - http.headers.WWW-Authenticate.NTLM

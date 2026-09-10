@@ -4,10 +4,32 @@
 status:
   baseline: false
   support:
-    chrome: "119"
-    chrome_android: "119"
-    edge: "119"
-    firefox: "142"
-    firefox_android: "142"
+    firefox: "155"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2026-09-01
+  # support:
+  #   chrome: "74"
+  #   chrome_android: "74"
+  #   edge: "79"
+  #   firefox: "155"
+  #   firefox_android: "155"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - api.RTCError.errorDetail.sctp-failure
+
+  # baseline: false
+  # support:
+  #   chrome: "119"
+  #   chrome_android: "119"
+  #   edge: "119"
+  #   firefox: "142"
+  #   firefox_android: "142"
   - api.RTCRtpSender.setParameters.parameters_encodings_parameter.codec
+
+  # baseline: false
+  # support:
+  #   firefox: "154"
+  - api.RTCIceCandidatePair
+  - api.RTCIceCandidatePair.local
+  - api.RTCIceCandidatePair.remote

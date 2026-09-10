@@ -1,4 +1,4 @@
-draft_date: 2026-01-29
+draft_date: 2026-06-05
 name: Trusted Types
 description: TODO
 spec: https://w3c.github.io/trusted-types/dist/spec/
@@ -7,10 +7,10 @@ compat_features:
   - api.Document.parseHTMLUnsafe_static.enforces_trusted_types
   - api.Element.insertAdjacentHTML.enforces_trusted_types
   - api.Element.outerHTML.enforces_trusted_types
+  - api.Element.setAttribute.enforces_trusted_types
+  - api.Element.setAttributeNS.enforces_trusted_types
   - api.Element.setHTMLUnsafe.enforces_trusted_types
   - api.HTMLIFrameElement.srcdoc.enforces_trusted_types
-  - api.HTMLScriptElement.innerText
-  - api.HTMLScriptElement.textContent
   - api.Range.createContextualFragment.enforces_trusted_types
   - api.ShadowRoot.setHTMLUnsafe.enforces_trusted_types
   - javascript.builtins.AsyncFunction.AsyncFunction.enforces_trusted_types
@@ -55,3 +55,6 @@ compat_features:
 #   - api.trustedTypes
 #   - http.headers.Content-Security-Policy.require-trusted-types-for
 #   - http.headers.Content-Security-Policy.trusted-types
+# - <script> and <noscript>:
+#   - api.HTMLScriptElement.innerText
+#   - api.HTMLScriptElement.textContent

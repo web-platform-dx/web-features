@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "155"
+    firefox_android: "155"
 compat_features:
   # baseline: high
   # baseline_low_date: 2018-09-05
@@ -42,6 +44,8 @@ compat_features:
 
   # baseline: false
   # support:
+  #   firefox: "150"
+  #   firefox_android: "150"
   #   safari: "26"
   #   safari_ios: "26"
   - api.CSSFontFaceDescriptors
@@ -51,7 +55,6 @@ compat_features:
   - api.CSSFontFaceDescriptors.font-stretch
   - api.CSSFontFaceDescriptors.font-style
   - api.CSSFontFaceDescriptors.font-weight
-  - api.CSSFontFaceDescriptors.font-width
   - api.CSSFontFaceDescriptors.fontDisplay
   - api.CSSFontFaceDescriptors.fontFamily
   - api.CSSFontFaceDescriptors.fontFeatureSettings
@@ -67,11 +70,37 @@ compat_features:
 
   # baseline: false
   # support:
+  #   firefox: "155"
+  #   firefox_android: "155"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - css.properties.font-width.percentage
+
+  # baseline: false
+  # support:
+  #   firefox: "155"
+  #   firefox_android: "155"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.CSSFontFaceDescriptors.font-width
+
+  # baseline: false
+  # support:
   #   firefox: "137"
   #   firefox_android: "137"
   - css.properties.font-synthesis-style.oblique-only
 
   # baseline: false
   # support:
-  #   safari: "18.4"
-  - css.properties.font-width.percentage
+  #   firefox: "150"
+  #   firefox_android: "150"
+  - api.CSSFontFaceDescriptors.ascent-override
+  - api.CSSFontFaceDescriptors.ascentOverride
+  - api.CSSFontFaceDescriptors.descent-override
+  - api.CSSFontFaceDescriptors.descentOverride
+  - api.CSSFontFaceDescriptors.font-language-override
+  - api.CSSFontFaceDescriptors.font-variation-settings
+  - api.CSSFontFaceDescriptors.fontLanguageOverride
+  - api.CSSFontFaceDescriptors.fontVariationSettings
+  - api.CSSFontFaceDescriptors.line-gap-override
+  - api.CSSFontFaceDescriptors.lineGapOverride

@@ -3,8 +3,15 @@
 
 status:
   baseline: false
-  support:
-    firefox: "147"
-    firefox_android: "147"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   firefox: "147"
+  #   firefox_android: "147"
   - css.selectors.marker.counter_support
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.content.alt_text.counters

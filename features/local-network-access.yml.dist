@@ -3,6 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "142"
+    chrome_android: "142"
+    edge: "142"
 compat_features:
   - api.Request.targetAddressSpace

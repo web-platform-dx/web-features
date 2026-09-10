@@ -3,6 +3,7 @@ description: "The `setInterval()` global function repeatedly executes provided c
 spec: https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#timers
 compat_features:
   - api.setInterval
+  - api.setInterval.supports_parameters_for_callback
   - api.setInterval.worker_support
   - api.clearInterval
   - api.clearInterval.worker_support
