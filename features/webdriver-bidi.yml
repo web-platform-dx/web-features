@@ -89,9 +89,9 @@ compat_features:
     - webdriver.bidi.script.message_event.source_parameter
 
   spare:
-    # These keys have different browser support data than above.
-    # They are part of the above BiDi modules, but seem like later additions
-    # which we might or might not want to move to separate features.
+    # The following keys are part of the above BiDi modules, but have
+    # more recent browser support data.
+    # They are treated as later additions that don't prevent using BiDi.
     - webdriver.bidi.browser.getClientWindows
     - webdriver.bidi.browsingContext.activate
     - webdriver.bidi.browsingContext.activate.context_parameter
