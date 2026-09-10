@@ -36,7 +36,7 @@ compat_features:
   #   firefox_android: "138"
   - api.AudioWorklet.port
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "153"
   - api.BaseAudioContext.renderQuantumSize
