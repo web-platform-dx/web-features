@@ -18,7 +18,7 @@ import type {
   Release,
   SnapshotData,
   Support,
-} from "./types.quicktype";
+} from "./types.quicktype.ts";
 
 // Passthrough types
 export type {
@@ -45,6 +45,7 @@ const badQuicktypeStatusHeadline: QuicktypeStatusHeadline = {
   baseline: true, // This is an improper value in our actual published data
   support: {},
 };
+// @ts-expect-error
 const badQuicktypeStatus: QuicktypeStatus = badQuicktypeStatusHeadline;
 
 const badSupportStatus: SupportStatus = {

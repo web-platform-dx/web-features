@@ -28,6 +28,7 @@ compat_features:
   - api.HTMLScriptElement
   - api.HTMLScriptElement.src
   - api.HTMLScriptElement.text
+  - api.HTMLScriptElement.textContent
   - api.HTMLScriptElement.type
 
   # ⬇️ Same status as overall feature ⬇️
@@ -110,6 +111,19 @@ compat_features:
   #   safari: "5.1"
   #   safari_ios: "5"
   - api.HTMLScriptElement.async
+
+  # baseline: high
+  # baseline_low_date: 2016-03-08
+  # baseline_high_date: 2018-09-08
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "45"
+  #   firefox_android: "45"
+  #   safari: "3"
+  #   safari_ios: "2"
+  - api.HTMLScriptElement.innerText
 
   # baseline: high
   # baseline_low_date: 2016-08-02

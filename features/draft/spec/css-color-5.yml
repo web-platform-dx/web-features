@@ -1,11 +1,11 @@
-draft_date: 2026-05-08
+draft_date: 2026-08-27
 name: CSS Color Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-color-5/
 compat_features:
-  - css.types.color.color-mix.variadic_color_arguments
   - css.types.color.color.colorSpace_parameter_accepts_display-p3-linear_value
   - css.types.color.currentcolor
+  - css.types.color.from_currentcolor
 
 # The following features in the spec are already part of web-features:
 # - accent-color:
@@ -122,10 +122,14 @@ compat_features:
 #   - css.types.color.oklab.relative_syntax
 #   - css.types.color.oklch.relative_syntax
 #   - css.types.color.rgb.relative_syntax
+# - alpha():
+#   - css.types.color.alpha
 # - color():
 #   - css.types.color.color
 # - color-mix():
 #   - css.types.color.color-mix
+# - color-mix() with three or more colors:
+#   - css.types.color.color-mix.variadic_color_arguments
 # - contrast-color():
 #   - css.types.color.contrast-color
 # - HSL:

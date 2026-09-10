@@ -7,12 +7,31 @@ status:
 compat_features:
   # baseline: false
   # support:
+  #   chrome: "120"
+  #   chrome_android: "120"
+  #   edge: "120"
+  #   firefox: "92"
+  #   firefox_android: "92"
+  - webdriver.bidi.session
+
+  # baseline: false
+  # support:
+  #   chrome: "120"
+  #   chrome_android: "120"
+  #   edge: "120"
+  #   firefox: "116"
+  #   firefox_android: "116"
+  - webdriver.bidi.session.end
+
+  # baseline: false
+  # support:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
   #   firefox: "92"
   #   firefox_android: "92"
-  - webdriver.bidi.session
+  - webdriver.bidi.session.new
+  - webdriver.bidi.session.new.capabilities_parameter
 
   # baseline: false
   # support:
@@ -59,6 +78,11 @@ compat_features:
   #   firefox: "99"
   #   firefox_android: "99"
   - webdriver.bidi.browsingContext
+  - webdriver.bidi.browsingContext.contextCreated_event
+  - webdriver.bidi.browsingContext.contextCreated_event.children_parameter
+  - webdriver.bidi.browsingContext.contextCreated_event.context_parameter
+  - webdriver.bidi.browsingContext.contextCreated_event.parent_parameter
+  - webdriver.bidi.browsingContext.contextCreated_event.url_parameter
 
   # baseline: false
   # support:
@@ -95,6 +119,8 @@ compat_features:
   #   firefox: "106"
   #   firefox_android: "106"
   - webdriver.bidi.browsingContext.load_event
+  - webdriver.bidi.browsingContext.load_event.context_parameter
+  - webdriver.bidi.browsingContext.load_event.url_parameter
   - webdriver.bidi.script
   - webdriver.bidi.script.callFunction
   - webdriver.bidi.script.callFunction.arguments_parameter
@@ -114,6 +140,7 @@ compat_features:
   - webdriver.bidi.script.getRealms
   - webdriver.bidi.script.getRealms.context_parameter
   - webdriver.bidi.script.getRealms.type_parameter
+  - webdriver.bidi.script.getRealms.type_parameter.window
 
   # baseline: false
   # support:
@@ -186,6 +213,7 @@ compat_features:
   - webdriver.bidi.script.message_event
   - webdriver.bidi.script.message_event.channel_parameter
   - webdriver.bidi.script.message_event.data_parameter
+  - webdriver.bidi.script.message_event.source_parameter
 
   # baseline: false
   # support:
@@ -252,6 +280,7 @@ compat_features:
   - webdriver.bidi.script.realmCreated_event.realm_parameter
   - webdriver.bidi.script.realmCreated_event.sandbox_parameter
   - webdriver.bidi.script.realmCreated_event.type_parameter
+  - webdriver.bidi.script.realmCreated_event.type_parameter.window
   - webdriver.bidi.script.realmDestroyed_event
   - webdriver.bidi.script.realmDestroyed_event.realm_parameter
 
@@ -309,6 +338,7 @@ compat_features:
   - webdriver.bidi.browser.getUserContexts
   - webdriver.bidi.browser.removeUserContext
   - webdriver.bidi.browser.removeUserContext.userContext_parameter
+  - webdriver.bidi.browsingContext.contextCreated_event.userContext_parameter
   - webdriver.bidi.browsingContext.contextDestroyed_event.userContext_parameter
   - webdriver.bidi.browsingContext.create.userContext_parameter
   - webdriver.bidi.script.addPreloadScript.contexts_parameter
@@ -401,6 +431,7 @@ compat_features:
   #   edge: "126"
   #   firefox: "140"
   #   firefox_android: "140"
+  - webdriver.bidi.browsingContext.contextCreated_event.clientWindow_parameter
   - webdriver.bidi.browsingContext.contextDestroyed_event.clientWindow_parameter
   - webdriver.bidi.browsingContext.navigationCommitted_event
   - webdriver.bidi.browsingContext.navigationCommitted_event.context_parameter
@@ -415,15 +446,30 @@ compat_features:
   #   edge: "126"
   #   firefox: "143"
   #   firefox_android: "143"
-  - webdriver.bidi.browsingContext.contextCreated_event
-  - webdriver.bidi.browsingContext.contextCreated_event.children_parameter
-  - webdriver.bidi.browsingContext.contextCreated_event.clientWindow_parameter
-  - webdriver.bidi.browsingContext.contextCreated_event.context_parameter
-  - webdriver.bidi.browsingContext.contextCreated_event.parent_parameter
-  - webdriver.bidi.browsingContext.contextCreated_event.url_parameter
-  - webdriver.bidi.browsingContext.contextCreated_event.userContext_parameter
+  - webdriver.bidi.browsingContext.contextCreated_event.emit_for_existing_contexts
   - webdriver.bidi.network.disownData
   - webdriver.bidi.network.getData
+
+  # baseline: false
+  # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  #   firefox: "149"
+  #   firefox_android: "149"
+  - webdriver.bidi.script.realmCreated_event.owners_parameter
+  - webdriver.bidi.script.realmCreated_event.type_parameter.dedicated-worker
+  - webdriver.bidi.script.realmCreated_event.type_parameter.service-worker
+  - webdriver.bidi.script.realmCreated_event.type_parameter.shared-worker
+
+  # baseline: false
+  # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  #   firefox: "151"
+  #   firefox_android: "151"
+  - webdriver.bidi.script.getRealms.type_parameter.worker
 
   # baseline: false
   # support:
@@ -635,8 +681,6 @@ compat_features:
   - webdriver.bidi.browsingContext.contextCreated_event.originalOpener_parameter
   - webdriver.bidi.browsingContext.contextDestroyed_event.children_parameter
   - webdriver.bidi.browsingContext.contextDestroyed_event.originalOpener_parameter
-  - webdriver.bidi.browsingContext.load_event.context_parameter
-  - webdriver.bidi.browsingContext.load_event.url_parameter
   - webdriver.bidi.browsingContext.locateNodes.locator_parameter
   - webdriver.bidi.browsingContext.navigationFailed_event
   - webdriver.bidi.browsingContext.navigationFailed_event.context_parameter
@@ -648,10 +692,11 @@ compat_features:
   - webdriver.bidi.log.entryAdded_event.args_parameter
   - webdriver.bidi.log.entryAdded_event.source_parameter
   - webdriver.bidi.log.entryAdded_event.stackTrace_parameter
-  - webdriver.bidi.script.message_event.source_parameter
-  - webdriver.bidi.script.realmCreated_event.owners_parameter
-  - webdriver.bidi.session.new
-  - webdriver.bidi.session.new.capabilities_parameter
+  - webdriver.bidi.script.getRealms.type_parameter.worklet
+  - webdriver.bidi.script.realmCreated_event.type_parameter.audio-worklet
+  - webdriver.bidi.script.realmCreated_event.type_parameter.paint-worklet
+  - webdriver.bidi.script.realmCreated_event.type_parameter.worker
+  - webdriver.bidi.script.realmCreated_event.type_parameter.worklet
 
   # baseline: false
   # support:
@@ -701,7 +746,6 @@ compat_features:
   #   chrome: "140"
   #   chrome_android: "140"
   #   edge: "140"
-  - webdriver.bidi.bluetooth
   - webdriver.bidi.browser.createUserContext.unhandledPromptBehavior_parameter
   - webdriver.bidi.emulation.setScreenOrientationOverride.contexts_parameter
   - webdriver.bidi.emulation.setScreenOrientationOverride.screenOrientation_parameter
@@ -720,19 +764,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "147"
-  #   chrome_android: "147"
-  #   edge: "147"
-  - webdriver.bidi.userAgentClientHints
-
-  # baseline: false
-  # support:
-  #   firefox: "106"
-  #   firefox_android: "106"
-  - webdriver.bidi.script.getRealms.type_parameter.window
-
-  # baseline: false
-  # support:
   #   firefox: "112"
   #   firefox_android: "112"
   - webdriver.bidi.browsingContext.print
@@ -744,12 +775,6 @@ compat_features:
   - webdriver.bidi.browsingContext.print.page_parameter
   - webdriver.bidi.browsingContext.print.scale_parameter
   - webdriver.bidi.browsingContext.print.shrinkToFit_parameter
-
-  # baseline: false
-  # support:
-  #   firefox: "116"
-  #   firefox_android: "116"
-  - webdriver.bidi.session.end
 
   # baseline: false
   # support:
@@ -849,24 +874,64 @@ compat_features:
   #   firefox_android: "147"
   - webdriver.bidi.emulation.setScreenSettingsOverride
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "151"
+  #   firefox_android: "151"
   - webdriver.bidi.browser.setClientWindowState
   - webdriver.bidi.browser.setClientWindowState.clientWindow_parameter
-  - webdriver.bidi.browser.setClientWindowState.height_parameter
   - webdriver.bidi.browser.setClientWindowState.state_parameter
+
+  # baseline: false
+  # support:
+  #   firefox: "153"
+  #   firefox_android: "153"
+  - webdriver.bidi.browser.setClientWindowState.height_parameter
   - webdriver.bidi.browser.setClientWindowState.width_parameter
   - webdriver.bidi.browser.setClientWindowState.x_parameter
   - webdriver.bidi.browser.setClientWindowState.y_parameter
+
+  # baseline: false
+  # support:
+  #   firefox: "154"
+  #   firefox_android: "154"
+  - webdriver.bidi.browsingContext.domContentLoaded_event.userContext_parameter
+  - webdriver.bidi.browsingContext.downloadEnd_event.download_parameter
+  - webdriver.bidi.browsingContext.downloadEnd_event.userContext_parameter
+  - webdriver.bidi.browsingContext.fragmentNavigated_event.userContext_parameter
+  - webdriver.bidi.browsingContext.load_event.userContext_parameter
+  - webdriver.bidi.browsingContext.navigationCommitted_event.userContext_parameter
+  - webdriver.bidi.browsingContext.navigationStarted_event.userContext_parameter
+  - webdriver.bidi.browsingContext.startScreencast
+  - webdriver.bidi.browsingContext.startScreencast.context_parameter
+  - webdriver.bidi.browsingContext.startScreencast.mimeType_parameter
+  - webdriver.bidi.browsingContext.startScreencast.video_parameter
+  - webdriver.bidi.browsingContext.stopScreencast
+  - webdriver.bidi.browsingContext.stopScreencast.screencast_parameter
+  - webdriver.bidi.browsingContext.userPromptClosed_event.userContext_parameter
+  - webdriver.bidi.browsingContext.userPromptOpened_event.userContext_parameter
+  - webdriver.bidi.input.fileDialogOpened_event.userContext_parameter
+  - webdriver.bidi.network.authRequired_event.userContext_parameter
+  - webdriver.bidi.script.message_event.source_parameter.userContext
+  - webdriver.bidi.script.realmCreated_event.userContext_parameter
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - webdriver.bidi.browsingContext.downloadWillBegin_event.download_parameter
+  - webdriver.bidi.browsingContext.downloadWillBegin_event.userContext_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event
   - webdriver.bidi.browsingContext.historyUpdated_event.context_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event.timestamp_parameter
   - webdriver.bidi.browsingContext.historyUpdated_event.url_parameter
+  - webdriver.bidi.browsingContext.historyUpdated_event.userContext_parameter
+  - webdriver.bidi.browsingContext.navigationFailed_event.userContext_parameter
   - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.beforeunload
   - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.beforeunload
   - webdriver.bidi.network.addDataCollector.collectorType_parameter
   - webdriver.bidi.network.authRequired_event.response_parameter
+  - webdriver.bidi.network.beforeRequestSent_event.userContext_parameter
+  - webdriver.bidi.network.fetchError_event.userContext_parameter
   - webdriver.bidi.network.provideResponse.body_parameter
   - webdriver.bidi.network.provideResponse.cookies_parameter
   - webdriver.bidi.network.provideResponse.headers_parameter
@@ -881,6 +946,7 @@ compat_features:
   - webdriver.bidi.network.responseCompleted_event.request_parameter
   - webdriver.bidi.network.responseCompleted_event.response_parameter
   - webdriver.bidi.network.responseCompleted_event.timestamp_parameter
+  - webdriver.bidi.network.responseCompleted_event.userContext_parameter
   - webdriver.bidi.network.responseStarted_event
   - webdriver.bidi.network.responseStarted_event.context_parameter
   - webdriver.bidi.network.responseStarted_event.intercepts_parameter
@@ -890,4 +956,4 @@ compat_features:
   - webdriver.bidi.network.responseStarted_event.request_parameter
   - webdriver.bidi.network.responseStarted_event.response_parameter
   - webdriver.bidi.network.responseStarted_event.timestamp_parameter
-  - webdriver.bidi.script.getRealms.type_parameter.worker
+  - webdriver.bidi.network.responseStarted_event.userContext_parameter

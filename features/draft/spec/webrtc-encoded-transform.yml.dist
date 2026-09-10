@@ -66,13 +66,21 @@ compat_features:
   #   chrome: "127"
   #   chrome_android: "127"
   #   edge: "127"
-  - api.RTCEncodedAudioFrame.RTCEncodedAudioFrame.options_metadata_audioLevel_parameter
-  - api.RTCEncodedAudioFrame.RTCEncodedAudioFrame.options_metadata_captureTime_parameter
+  #   firefox: "152"
+  #   firefox_android: "152"
   - api.RTCEncodedAudioFrame.RTCEncodedAudioFrame.options_metadata_receiveTime_parameter
-  - api.RTCEncodedAudioFrame.getMetadata.return_object_property_captureTime
   - api.RTCEncodedAudioFrame.getMetadata.return_object_property_receiveTime
   - api.RTCEncodedVideoFrame.RTCEncodedVideoFrame.options_metadata_receiveTime_parameter
   - api.RTCEncodedVideoFrame.getMetadata.return_object_property_receiveTime
+
+  # baseline: false
+  # support:
+  #   chrome: "127"
+  #   chrome_android: "127"
+  #   edge: "127"
+  - api.RTCEncodedAudioFrame.RTCEncodedAudioFrame.options_metadata_audioLevel_parameter
+  - api.RTCEncodedAudioFrame.RTCEncodedAudioFrame.options_metadata_captureTime_parameter
+  - api.RTCEncodedAudioFrame.getMetadata.return_object_property_captureTime
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false

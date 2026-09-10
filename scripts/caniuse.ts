@@ -1,8 +1,8 @@
 import lite from "caniuse-lite";
 import { fileURLToPath } from "node:url";
 import winston from "winston";
-import { features } from "../index.js";
-import { isOrdinaryFeatureData } from "../type-guards.js";
+import { features } from "../index.ts";
+import { isOrdinaryFeatureData } from "../type-guards.ts";
 
 const logger = winston.createLogger({
   format: winston.format.printf(({ message }) => `${message}`),

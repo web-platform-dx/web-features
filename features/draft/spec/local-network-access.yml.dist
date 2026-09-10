@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "145"
-    chrome_android: "145"
-    edge: "145"
+    chrome: "147"
+    chrome_android: "147"
+    edge: "147"
 compat_features:
   # baseline: false
   # support:
@@ -18,7 +18,6 @@ compat_features:
   - api.fetch.options_parameter.targetAddressSpace
   - http.headers.Permissions-Policy.local-network-access
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "145"
@@ -28,3 +27,12 @@ compat_features:
   - api.Permissions.permission_loopback-network
   - http.headers.Permissions-Policy.local-network
   - http.headers.Permissions-Policy.loopback-network
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "147"
+  #   chrome_android: "147"
+  #   edge: "147"
+  - api.WebSocket.local_network_access
+  - api.WebTransport.local_network_access

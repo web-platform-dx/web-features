@@ -1,9 +1,12 @@
-draft_date: 2026-05-08
+draft_date: 2026-07-24
 name: CSS Images Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-images-4/
 compat_features:
-  - css.types.gradient.repeating-conic-gradient.single_color_stop
+  - css.types.basic-shape.circle.closest-corner
+  - css.types.basic-shape.circle.farthest-corner
+  - css.types.basic-shape.ellipse.closest-corner
+  - css.types.basic-shape.ellipse.farthest-corner
 
 # The following features in the spec are already part of web-features:
 # - element():
@@ -81,6 +84,7 @@ compat_features:
 #   - css.types.gradient.conic-gradient.doubleposition
 #   - css.types.gradient.conic-gradient.single_color_stop
 #   - css.types.gradient.repeating-conic-gradient
+#   - css.types.gradient.repeating-conic-gradient.single_color_stop
 # - Gradient interpolation:
 #   - css.types.gradient.radial-gradient.hue_interpolation_method
 #   - css.types.gradient.radial-gradient.interpolation_color_space

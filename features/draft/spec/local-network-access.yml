@@ -1,4 +1,4 @@
-draft_date: 2026-04-06
+draft_date: 2026-06-25
 name: Local Network Access
 description: TODO
 spec: https://wicg.github.io/local-network-access/
@@ -7,6 +7,8 @@ compat_features:
   - api.Permissions.permission_local-network-access
   - api.Permissions.permission_loopback-network
   - api.Request.Request.options_parameter.targetAddressSpace
+  - api.WebSocket.local_network_access
+  - api.WebTransport.local_network_access
   - api.fetch.options_parameter.targetAddressSpace
   - http.headers.Permissions-Policy.local-network
   - http.headers.Permissions-Policy.local-network-access

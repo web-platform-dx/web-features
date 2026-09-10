@@ -1,7 +1,7 @@
 import { Octokit } from "@octokit/rest";
 import * as cheerio from "cheerio";
 
-import { features as webFeatures } from "../index.js";
+import { features as webFeatures } from "../index.ts";
 
 interface Report {
   heading: string;

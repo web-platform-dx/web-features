@@ -4,21 +4,23 @@ spec: https://drafts.csswg.org/css-values-5/#attr-notation
 caniuse: css3-attr
 group: css
 compat_features:
-  - css.types.attr.declaration-value
-  - css.types.attr.fallback
-  - css.types.attr.type_function
-  - css.types.attr.type_function.angle
-  - css.types.attr.type_function.color
-  - css.types.attr.type_function.custom-ident
-  - css.types.attr.type_function.ident
-  - css.types.attr.type_function.image
-  - css.types.attr.type_function.integer
-  - css.types.attr.type_function.length
-  - css.types.attr.type_function.length-percentage
-  - css.types.attr.type_function.number
-  - css.types.attr.type_function.percentage
-  - css.types.attr.type_function.resolution
-  - css.types.attr.type_function.string
-  - css.types.attr.type_function.time
-  - css.types.attr.type_function.transform-function
-  - css.types.attr.type_function.url
+  core:
+    - css.types.attr.declaration-value
+    - css.types.attr.fallback
+    - css.types.attr.type_function
+    - css.types.attr.type_function.angle
+    - css.types.attr.type_function.color
+    - css.types.attr.type_function.custom-ident
+    - css.types.attr.type_function.ident
+    - css.types.attr.type_function.image
+    - css.types.attr.type_function.integer
+    - css.types.attr.type_function.length
+    - css.types.attr.type_function.length-percentage
+    - css.types.attr.type_function.number
+    - css.types.attr.type_function.percentage
+    - css.types.attr.type_function.resolution
+    - css.types.attr.type_function.string
+    - css.types.attr.type_function.time
+    - css.types.attr.type_function.transform-function
+  spare:
+    - css.types.attr.type_function.url
