@@ -59,13 +59,28 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "150"
+  #   chrome_android: "150"
+  #   edge: "150"
+  - api.Request.isReloadNavigation
+
+  # baseline: false
+  # support:
+  #   chrome: "151"
+  #   chrome_android: "151"
+  #   edge: "151"
+  - api.Request.textStream
+  - api.Response.textStream
+
+  # baseline: false
+  # support:
   #   chrome: "105"
   #   edge: "105"
   - api.Request.Request.options_parameter.duplex
   - api.fetch.options_parameter.duplex
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "153"
+  #   firefox_android: "153"
   - api.Request.destination.text
-  - api.Request.isReloadNavigation

@@ -4,6 +4,9 @@
 status:
   baseline: false
   support:
+    chrome: "151"
+    chrome_android: "151"
+    edge: "151"
     firefox: "152"
     firefox_android: "152"
 compat_features:
@@ -37,6 +40,9 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
+  #   chrome: "151"
+  #   chrome_android: "151"
+  #   edge: "151"
   #   firefox: "152"
   #   firefox_android: "152"
   - api.TransitionEvent.animation

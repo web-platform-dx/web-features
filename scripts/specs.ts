@@ -239,6 +239,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://wicg.github.io/turtledove/",
         "Discontinued spec allowed for discouraged feature."
+    ],
+    [
+        "https://github.com/whatwg/html/pull/9546",
+        "Allowed because the <input type=\"checkbox\" switch> feature is not yet in a formal spec. Remove this exception when a formal spec is available."
     ]
 ];
 

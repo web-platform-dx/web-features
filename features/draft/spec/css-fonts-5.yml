@@ -1,4 +1,4 @@
-draft_date: 2026-05-08
+draft_date: 2026-07-06
 name: CSS Fonts Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-fonts-5/
@@ -38,7 +38,6 @@ compat_features:
   - css.properties.font-synthesis.none
   - css.properties.font-variation-settings.normal
   - css.properties.font-width.percentage
-  - svg.global_attributes.font-stretch
 
 # The following features in the spec are already part of web-features:
 # - font-width:
@@ -147,6 +146,7 @@ compat_features:
 #   - css.properties.font-stretch.semi-expanded
 #   - css.properties.font-stretch.ultra-condensed
 #   - css.properties.font-stretch.ultra-expanded
+#   - svg.global_attributes.font-stretch
 # - font-style:
 #   - css.at-rules.font-face.font-style
 #   - css.properties.font-style

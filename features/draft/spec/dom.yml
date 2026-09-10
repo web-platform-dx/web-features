@@ -1,4 +1,4 @@
-draft_date: 2026-05-18
+draft_date: 2026-08-27
 name: DOM
 description: TODO
 spec: https://dom.spec.whatwg.org/
@@ -297,6 +297,7 @@ compat_features:
 #   - api.NodeList.length
 #   - api.NodeList.values
 #   - api.ProcessingInstruction
+#   - api.ProcessingInstruction.doc_xml
 #   - api.ProcessingInstruction.target
 #   - api.Text
 #   - api.Text.Text
@@ -415,18 +416,15 @@ compat_features:
 #   - api.MutationRecord.removedNodes
 #   - api.MutationRecord.target
 #   - api.MutationRecord.type
+# - HTML processing instructions:
+#   - api.ProcessingInstruction.getAttribute
+#   - api.ProcessingInstruction.getAttributeNames
+#   - api.ProcessingInstruction.hasAttribute
+#   - api.ProcessingInstruction.hasAttributes
+#   - api.ProcessingInstruction.removeAttribute
+#   - api.ProcessingInstruction.setAttribute
+#   - api.ProcessingInstruction.toggleAttribute
 # - Imperative slot assignment:
 #   - api.ShadowRoot.slotAssignment
 # - beforeunload:
 #   - api.Window.beforeunload_event.preventdefault_activation
-# - XSLT:
-#   - api.XSLTProcessor
-#   - api.XSLTProcessor.XSLTProcessor
-#   - api.XSLTProcessor.clearParameters
-#   - api.XSLTProcessor.getParameter
-#   - api.XSLTProcessor.importStylesheet
-#   - api.XSLTProcessor.removeParameter
-#   - api.XSLTProcessor.reset
-#   - api.XSLTProcessor.setParameter
-#   - api.XSLTProcessor.transformToDocument
-#   - api.XSLTProcessor.transformToFragment

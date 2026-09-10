@@ -117,16 +117,12 @@ describe("features", function () {
         const lineClamp = feature(
           "css.properties.line-clamp",
         ).supportedInDetails(cr.version("100"));
-        assert.equal(lineClamp.length, 1);
-        const release = lineClamp[0];
-        assert("supported" in release);
-        assert(release.supported === true);
-        assert(release.supported !== null);
-        if ("qualifications" in release) {
-          assert.equal(release.qualifications.prefix, "-webkit-");
-        } else {
-          assert(false);
-        }
+        const prefixedEntry = lineClamp.find(
+          (s) => s.supported === true && "qualifications" in s,
+        );
+        assert(prefixedEntry !== undefined);
+        assert("qualifications" in prefixedEntry);
+        assert.equal(prefixedEntry.qualifications.prefix, "-webkit-");
       });
 
       it("returns mixed results for (un)prefixed features", function () {

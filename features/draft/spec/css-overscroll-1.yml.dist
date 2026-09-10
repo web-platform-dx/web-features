@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "150"
+    chrome_android: "150"
+    edge: "150"
 compat_features:
   - css.properties.overscroll-behavior-block.chain
   - css.properties.overscroll-behavior-inline.chain

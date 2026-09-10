@@ -41,6 +41,7 @@ compat_features:
   #   safari: "18"
   #   safari_ios: "18"
   - api.Document.startViewTransition
+  - api.Document.startViewTransition.updateCallback_parameter
   - api.ViewTransition
   - api.ViewTransition.finished
   - api.ViewTransition.ready
@@ -74,15 +75,6 @@ compat_features:
   - api.Document.startViewTransition.options_parameter
   - api.Document.startViewTransition.options_parameter.types_parameter
   - api.Document.startViewTransition.options_parameter.update_parameter
-
-  # baseline: false
-  # support:
-  #   chrome: "111"
-  #   chrome_android: "111"
-  #   edge: "111"
-  #   safari: "18"
-  #   safari_ios: "18"
-  - api.Document.startViewTransition.updateCallback_parameter
 
   # baseline: false
   # support:

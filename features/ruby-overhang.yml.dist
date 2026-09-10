@@ -7,6 +7,19 @@ status:
     safari: "18.2"
     safari_ios: "18.2"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "151"
+  #   chrome_android: "151"
+  #   edge: "151"
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
   - css.properties.ruby-overhang
   - css.properties.ruby-overhang.auto
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   safari: "18.2"
+  #   safari_ios: "18.2"
   - css.properties.ruby-overhang.none

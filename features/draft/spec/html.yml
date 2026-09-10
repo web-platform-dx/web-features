@@ -1,10 +1,11 @@
-draft_date: 2026-06-05
+draft_date: 2026-09-03
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
   - api.Document.designMode
   - api.Document.parseHTMLUnsafe_static.options_sanitizer_parameter
+  - api.Element.setHTMLUnsafe.options_runscripts_parameter
   - api.Element.setHTMLUnsafe.options_sanitizer_parameter
   - api.ElementInternals.shadowRoot
   - api.ErrorEvent
@@ -14,10 +15,8 @@ compat_features:
   - api.ErrorEvent.filename
   - api.ErrorEvent.lineno
   - api.ErrorEvent.message
-  - api.HTMLAllCollection
-  - api.HTMLAllCollection.item
-  - api.HTMLAllCollection.length
-  - api.HTMLAllCollection.namedItem
+  - api.HTMLAreaElement.hreflang
+  - api.HTMLAreaElement.type
   - api.HTMLBaseElement.href.forbid_data_javascript_urls
   - api.HTMLButtonElement.command.request-close
   - api.HTMLCanvasElement.getContext.2d_context.options_colorType_parameter
@@ -28,6 +27,7 @@ compat_features:
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
   - api.HTMLElement.togglePopover.force_parameter
   - api.HTMLElement.togglePopover.options_force_parameter
+  - api.HTMLElement.toggle_event.details_elements.uses_toggleevent
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes.auto
   - api.HTMLInputElement.showPicker.datalist_input
@@ -54,6 +54,18 @@ compat_features:
   - api.ImageData.ImageData.settings_parameter.colorSpace_option
   - api.ImageData.ImageData.settings_parameter.pixelFormat_option
   - api.ImageData.pixelFormat
+  - api.MathMLAnchorElement.hash
+  - api.MathMLAnchorElement.host
+  - api.MathMLAnchorElement.hostname
+  - api.MathMLAnchorElement.hreflang
+  - api.MathMLAnchorElement.origin
+  - api.MathMLAnchorElement.password
+  - api.MathMLAnchorElement.pathname
+  - api.MathMLAnchorElement.port
+  - api.MathMLAnchorElement.protocol
+  - api.MathMLAnchorElement.search
+  - api.MathMLAnchorElement.type
+  - api.MathMLAnchorElement.username
   - api.MouseEvent.relatedTarget.drag_events
   - api.NavigateEvent.sourceElement
   - api.NavigationTransition.committed
@@ -73,6 +85,7 @@ compat_features:
   - api.ServiceWorker.error_event
   - api.ShadowRoot.activeElement
   - api.ShadowRoot.innerHTML
+  - api.ShadowRoot.setHTMLUnsafe.options_runscripts_parameter
   - api.ShadowRoot.setHTMLUnsafe.options_sanitizer_parameter
   - api.SharedWorker.SharedWorker.enforces_trusted_types
   - api.SharedWorker.SharedWorker.options_extendedLifetime_parameter
@@ -89,6 +102,8 @@ compat_features:
   - api.crossOriginIsolated
   - api.origin
   - api.reportError
+  - html.elements.area.hreflang
+  - html.elements.area.type
   - html.elements.button.command.request-close
   - html.elements.details.search_match_opens
   - html.elements.form.autocomplete.new-password
@@ -138,7 +153,6 @@ compat_features:
   - http.status.103
   - http.status.103.preconnect
   - http.status.103.preload
-  - javascript.statements.import.import_attributes.type_text
 
 # The following features in the spec are already part of web-features:
 # - Audio and video tracks:
@@ -1131,6 +1145,11 @@ compat_features:
 # - enterkeyhint:
 #   - api.HTMLElement.enterKeyHint
 #   - html.global_attributes.enterkeyhint
+# - Heading offset:
+#   - api.HTMLElement.headingOffset
+#   - api.HTMLElement.headingReset
+#   - html.global_attributes.headingoffset
+#   - html.global_attributes.headingreset
 # - inert:
 #   - api.HTMLElement.inert
 #   - api.HTMLElement.inert.ignores_find_in_page
@@ -1694,7 +1713,6 @@ compat_features:
 #   - html.elements.select.size
 # - <output>:
 #   - api.HTMLOutputElement
-#   - api.HTMLOutputElement.HTMLOutputElement
 #   - api.HTMLOutputElement.defaultValue
 #   - api.HTMLOutputElement.form
 #   - api.HTMLOutputElement.htmlFor
@@ -1831,6 +1849,9 @@ compat_features:
 #   - api.HTMLTemplateElement
 #   - api.HTMLTemplateElement.content
 #   - html.elements.template
+# - <template for>:
+#   - api.HTMLTemplateElement.htmlFor
+#   - html.elements.template.for
 # - Declarative shadow DOM:
 #   - api.HTMLTemplateElement.shadowRootClonable
 #   - api.HTMLTemplateElement.shadowRootDelegatesFocus
@@ -2160,6 +2181,8 @@ compat_features:
 #   - api.PaintRenderingContext2D.strokeStyle
 #   - api.PaintRenderingContext2D.transform
 #   - api.PaintRenderingContext2D.translate
+# - HTML processing instructions:
+#   - api.ProcessingInstruction.doc_html
 # - Selection:
 #   - api.Range.createContextualFragment
 # - COEP violation reports:
@@ -2223,7 +2246,6 @@ compat_features:
 #   - api.VisibilityStateEntry.startTime
 # - Window:
 #   - api.Window
-#   - api.Window.DOMContentLoaded_event
 #   - api.Window.blur_event
 #   - api.Window.close
 #   - api.Window.closed
@@ -2385,9 +2407,6 @@ compat_features:
 #   - html.elements.dfn
 # - <em>:
 #   - html.elements.em
-# - <fencedframe>:
-#   - html.elements.fencedframe.height
-#   - html.elements.fencedframe.width
 # - <figure> and <figcaption>:
 #   - html.elements.figcaption
 #   - html.elements.figure
@@ -2514,3 +2533,5 @@ compat_features:
 #   - javascript.statements.import.import_attributes.type_css
 # - JSON import attributes:
 #   - javascript.statements.import.import_attributes.type_json
+# - Text import attributes:
+#   - javascript.statements.import.import_attributes.type_text

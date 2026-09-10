@@ -45,6 +45,7 @@ const badQuicktypeStatusHeadline: QuicktypeStatusHeadline = {
   baseline: true, // This is an improper value in our actual published data
   support: {},
 };
+// @ts-expect-error
 const badQuicktypeStatus: QuicktypeStatus = badQuicktypeStatusHeadline;
 
 const badSupportStatus: SupportStatus = {
