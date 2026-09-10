@@ -3,7 +3,12 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "133"
+    chrome_android: "133"
+    edge: "133"
+    firefox: "155"
+    firefox_android: "155"
 compat_features:
   # baseline: low
   # baseline_low_date: 2025-03-31
@@ -18,6 +23,7 @@ compat_features:
   - css.types.attr.declaration-value
   - css.types.attr.fallback
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "133"
@@ -41,7 +47,6 @@ compat_features:
   - css.types.attr.type_function.time
   - css.types.attr.type_function.transform-function
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - css.types.attr.type_function.url
