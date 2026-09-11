@@ -354,7 +354,7 @@ function formatFragmentReport(rows: FragmentReportRow[]): string {
             const specs = row.result.status === "valid"
                 ? [...new Set(row.result.matches.map((m) => m.entry.spec))].join(", ")
                 : "";
-            return `<tr data-category="${escape(category)}"><td>${escape(row.feature)}</td><td><a href="${escape(row.url)}">${escape(row.url)}</a></td><td>${escape(category)}</td><td>${escape(specs)}</td></tr>`;
+            return `<tr data-category="${escape(category)}"><td><a href="https://web-platform-dx.github.io/web-features-explorer/features/${escape(row.feature)}/">${escape(row.feature)}</a></td><td><a href="${escape(row.url)}">${escape(row.url)}</a></td><td>${escape(category)}</td><td>${escape(specs)}</td></tr>`;
         })
         .join("\n");
     return `<!DOCTYPE html>
