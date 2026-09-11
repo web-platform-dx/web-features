@@ -65,10 +65,6 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because there is no other specification to link to."
     ],
     [
-        "https://github.com/WebAssembly/spec/blob/main/proposals/nontrapping-float-to-int-conversion/Overview.md",
-        "Allowed because there is no other specification to link to."
-    ],
-    [
         "https://github.com/WebAssembly/spec/blob/main/proposals/reference-types/Overview.md",
         "Allowed because there is no other specification to link to."
     ],
