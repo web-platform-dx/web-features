@@ -1,3 +1,4 @@
+import { Temporal } from "@js-temporal/polyfill";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import yargs from "yargs";
@@ -40,12 +41,21 @@ function main() {
 }
 
 function report(stats: Result): string {
+  const startDate = Temporal.Instant.from(
+    stats.change.timestamp,
+  ).toZonedDateTimeISO("Etc/UTC");
+  const endDate = Temporal.Instant.from(stats.timestamp).toZonedDateTimeISO(
+    "Etc/UTC",
+  );
+  const duration = endDate.since(startDate);
+  const revisions = `${stats.change.hash}..${stats.hash}`;
+
   return [
     "### BCD coverage",
     "",
     "This shows feature entry coverage for fine-grained compatibility data. For unmapped keys, fewer is better.",
     "",
-    reportCompatCoverage(stats),
+    reportCompatCoverage(stats, startDate, endDate),
     "",
     "### Cumulative shipping days",
     "",
@@ -59,11 +69,21 @@ function report(stats: Result): string {
     "",
     reportCaniuseCoverage(stats),
     "",
+    `From ${formatDate(startDate)} to ${formatDate(endDate)} (${duration.days} days, ${revisions})`,
   ].join("\n");
 }
 
-function reportCompatCoverage(stats: Result): string {
-  const headers = ["", "Before", "After", "Net"];
+function reportCompatCoverage(
+  stats: Result,
+  startDate: Temporal.ZonedDateTime,
+  endDate: Temporal.ZonedDateTime,
+): string {
+  const headers = [
+    "",
+    `Before (${formatDate(startDate)})`,
+    `After (${formatDate(endDate)})`,
+    "Net",
+  ];
   const alignment = ["left", "right", "right", "right"];
   const rows: [string, number, number, number][] = [
     [
@@ -152,6 +172,10 @@ function reportCaniuseCoverage(stats: Result): string {
   const head = [arrayToTableRow(headers), alignTable(alignment)].join("\n");
   const body = rows.map(arrayToTableRow).join("\n");
   return [head, body].join("\n");
+}
+
+function formatDate(date: Temporal.ZonedDateTime): string {
+  return date.toPlainDate().toString();
 }
 
 function arrayToTableRow(arr: (string | number)[]): string {
