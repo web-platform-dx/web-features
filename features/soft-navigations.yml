@@ -1,5 +1,5 @@
 name: Soft navigation performance entries
-description: The `soft-navigation` performance entry, which returns a `PerformanceSoftNavigation` instance, is emitted when soft navigation occurs in a single page app. This is defined as when a trusted user interaction causes a URL update and a visible contentful paint to the screen.
+description: A `soft-navigation` performance entry measures the duration of a soft navigation in a single page app. A soft navigation is defined as when a trusted user interaction causes a URL update and a visible contentful paint to the screen.
 spec: https://wicg.github.io/soft-navigations/#sec-soft-navs
 group: performance
 compat_features:
