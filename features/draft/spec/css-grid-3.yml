@@ -1,13 +1,8 @@
-draft_date: 2026-08-17
+draft_date: 2026-09-14
 name: CSS Grid Layout Module Level 3
 description: TODO
 spec: https://drafts.csswg.org/css-grid-3/
 compat_features:
-  - css.properties.display.grid-lanes
-  - css.properties.display.inline-grid-lanes
-  - css.properties.flow-tolerance
-  - css.properties.flow-tolerance.infinite
-  - css.properties.flow-tolerance.normal
   - css.properties.grid-area.auto
   - css.properties.grid-auto-columns.auto
   - css.properties.grid-auto-columns.max-content
@@ -67,6 +62,12 @@ compat_features:
 #   - css.properties.column-gap.multicol_context
 # - Flexbox gap:
 #   - css.properties.column-gap.flex_context
+# - Grid lanes:
+#   - css.properties.display.grid-lanes
+#   - css.properties.display.inline-grid-lanes
+#   - css.properties.flow-tolerance
+#   - css.properties.flow-tolerance.infinite
+#   - css.properties.flow-tolerance.normal
 # - Subgrid:
 #   - css.properties.grid-template-columns.subgrid
 #   - css.properties.grid-template-rows.subgrid
