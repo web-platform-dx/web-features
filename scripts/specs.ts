@@ -97,10 +97,6 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because there is no other specification to link to."
     ],
     [
-        "https://github.com/WebAssembly/memory64/blob/main/proposals/memory64/Overview.md",
-        "Allowed because there is no other specification to link to."
-    ],
-    [
         "https://github.com/WebAssembly/exception-handling/blob/main/proposals/exception-handling/legacy/Exceptions.md",
         "Allowed because there is no other specification to link to."
     ],
