@@ -50,9 +50,10 @@ compat_features:
   #   safari_ios: "16.4"
   - api.MediaStreamTrack.configurationchange_event
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "153"
+  #   chrome_android: "153"
   - api.HTMLCameraElement
   - api.HTMLCameraElement.cancel_event
   - api.HTMLCameraElement.error

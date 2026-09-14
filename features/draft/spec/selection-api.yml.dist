@@ -4,9 +4,6 @@
 status:
   baseline: false
   support:
-    chrome: "137"
-    chrome_android: "137"
-    edge: "137"
     firefox: "142"
     firefox_android: "142"
 compat_features:
@@ -50,7 +47,6 @@ compat_features:
   #   safari_ios: "1"
   - api.Selection.collapse.node_parameter_nullable
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "137"
@@ -61,3 +57,9 @@ compat_features:
   - api.Selection.collapse.accepts_nodes_in_shadow_trees
   - api.Selection.extend.accepts_nodes_in_shadow_trees
   - api.Selection.setBaseAndExtent.accepts_nodes_in_shadow_trees
+
+  # baseline: false
+  # support:
+  #   firefox: "51"
+  #   firefox_android: "51"
+  - api.Selection.addRange.multiple_ranges
