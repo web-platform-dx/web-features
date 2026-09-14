@@ -177,10 +177,6 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because there is no spec yet for Web Install."
     ],
     [
-        "https://github.com/WebAssembly/branch-hinting/blob/main/proposals/branch-hinting/Overview.md",
-        "Allowed because there is no other specification to link to."
-    ],
-    [
         "https://www.w3.org/TR/2019/WD-feature-policy-1-20190416/",
         "Allowed because feature policy was replaced by permissions policy."
     ],
