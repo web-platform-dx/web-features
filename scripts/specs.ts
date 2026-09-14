@@ -283,9 +283,9 @@ testIsOK();
 
 function testValidateSpecFragment() {
     assert.equal(validateSpecFragment(new URL("https://tc39.es/ecma262/multipage/")).status, "skipped");
-    assert.equal(validateSpecFragment(new URL("https://html.spec.whatwg.org/multipage/#:~:text=living%20standard")).status, "skipped");
+    assert.equal(validateSpecFragment(new URL("https://html.spec.whatwg.org/multipage/#:~:text=living%20standard")).status, "invalid");
     assert.equal(validateSpecFragment(new URL("https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements")).status, "valid");
-    assert.equal(validateSpecFragment(new URL("https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements:~:text=custom")).status, "valid");
+    assert.equal(validateSpecFragment(new URL("https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements:~:text=custom")).status, "invalid");
     assert.equal(validateSpecFragment(new URL("https://html.spec.whatwg.org/multipage/custom-elements.html#not-a-real-anchor")).status, "invalid");
 };
 testValidateSpecFragment();
@@ -323,6 +323,9 @@ const fragmentReport: FragmentReportRow[] = [];
  */
 function fragmentCategory({ url, result }: FragmentReportRow): string {
     if (result.status === "invalid") {
+        if (result.reason === "text-fragment") {
+            return "invalid (text-fragment)";
+        }
         return new URL(url).hash.startsWith("#ref-for-") ? "invalid (ref-for)" : "invalid";
     }
     if (result.status === "skipped") {
@@ -432,7 +435,11 @@ for (const [id, data] of Object.entries(features)) {
                 const result = validateSpecFragment(url);
                 fragmentReport.push({ feature: id, url: url.toString(), result });
                 if (result.status === "invalid") {
-                    logger.warn(`Unknown fragment in spec URL for ${id}: ${url.toString()}\nCheck that the fragment (#) is a definition or heading id in the spec, or link a more current anchor.`);
+                    if (result.reason === "text-fragment") {
+                        logger.warn(`Text fragment in spec URL for ${id}: ${url.toString()}\nText fragments (:~:text=) are not allowed in spec URLs; link a definition or heading id instead.`);
+                    } else {
+                        logger.warn(`Unknown fragment in spec URL for ${id}: ${url.toString()}\nCheck that the fragment (#) is a definition or heading id in the spec, or link a more current anchor.`);
+                    }
                     fragmentWarnings++;
                     if (fragmentErrorsAreFatal) {
                         errors++;

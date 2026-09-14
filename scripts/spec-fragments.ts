@@ -1,8 +1,8 @@
 // Fragment-level validation of spec URLs against @webref/xref, which knows the
 // definition and heading anchors of every spec crawled by w3c/webref.
 //
-// The rules deliberately mirror BCD's spec_url linter so that both projects
-// accept the same URLs. See:
+// The rules largely mirror BCD's spec_url linter, except that text fragments
+// are forbidden here rather than skipped. See:
 // https://github.com/mdn/browser-compat-data/blob/main/lint/linter/test-spec-urls.js
 // https://github.com/web-platform-dx/web-features/issues/84
 
@@ -13,8 +13,8 @@ type LookupFunction = (url: string, options?: LookupOptions) => XrefMatch[];
 
 export type FragmentResult =
   | { status: "valid"; matches: XrefMatch[] }
-  | { status: "invalid" }
-  | { status: "skipped"; reason: "no-fragment" | "text-fragment-only" };
+  | { status: "invalid"; reason: "unknown-fragment" | "text-fragment" }
+  | { status: "skipped"; reason: "no-fragment" };
 
 let initialized = false;
 
@@ -41,20 +41,18 @@ export function validateSpecFragment(
     return { status: "skipped", reason: "no-fragment" };
   }
 
-  // A text fragment (`#:~:text=…`) can't be validated, but a section id
-  // preceding it (`#section:~:text=…`) can.
+  // Text fragments (`#:~:text=…`) can't be validated against webref and break
+  // easily as spec prose changes, so web-features forbids them outright. (BCD
+  // merely skips them, because its fine-grained keys sometimes need them.)
   if (target.hash.includes(":~:text=")) {
-    const sectionId = target.hash.split(":~:text=")[0].replace(/^#/, "");
-    if (!sectionId) {
-      return { status: "skipped", reason: "text-fragment-only" };
-    }
-    target = new URL(target);
-    target.hash = sectionId;
+    return { status: "invalid", reason: "text-fragment" };
   }
 
   const matches = lookup(target.toString(), {
     series: true,
     standing: "good",
   });
-  return matches.length ? { status: "valid", matches } : { status: "invalid" };
+  return matches.length
+    ? { status: "valid", matches }
+    : { status: "invalid", reason: "unknown-fragment" };
 }
