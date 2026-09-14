@@ -51,7 +51,7 @@ function report(stats: Result): string {
   const revisions = `[\`${stats.change.hash.slice(0, 8)}..${stats.hash.slice(0, 8)}\`](https://github.com/web-platform-dx/web-features/compare/${stats.change.hash}..${stats.hash})`;
 
   return [
-    "### BCD coverage",
+    "### BCD coverage gap",
     "",
     "This shows feature entry coverage for fine-grained compatibility data. For unmapped keys, fewer is better.",
     "",
@@ -63,7 +63,7 @@ function report(stats: Result): string {
     "",
     reportCumulativeShippingDays(stats),
     "",
-    "### caniuse coverage",
+    "### caniuse coverage gap",
     "",
     "This shows feature entry correspondence to independently-authored headline features on [caniuse.com](https://caniuse.com/). For unmapped IDs, fewer is better.",
     "",
@@ -79,38 +79,62 @@ function reportCompatCoverage(
   endDate: Temporal.ZonedDateTime,
 ): string {
   const headers = [
-    "",
+    "Comapt keys",
     `Before (${formatDate(startDate)})`,
     `After (${formatDate(endDate)})`,
-    "Net",
+    "Change (abs.)",
+    "Change (%)",
   ];
-  const alignment = ["left", "right", "right", "right"];
-  const rows: [string, number, number, number][] = [
+  const alignment = ["left", "right", "right", "right", "right"];
+  const rows: [string, string, string, string, string][] = [
     [
-      "BCD keys",
-      stats.compatKeysCount - stats.change.compatKeysCount,
-      stats.compatKeysCount,
-      stats.change.compatKeysCount,
+      "BCD excluding `webextensions.*`",
+      formatInteger(stats.compatKeysCount - stats.change.compatKeysCount),
+      formatInteger(stats.compatKeysCount),
+      formatInteger(stats.change.compatKeysCount),
+      formatPercentage(
+        (stats.change.compatKeysCount / stats.compatKeysCount) * 100,
+      ),
     ],
     [
-      "All keys unmapped",
-      stats.unmappedCompatKeysCount - stats.change.unmappedCompatKeysCount,
-      stats.unmappedCompatKeysCount,
-      stats.change.unmappedCompatKeysCount,
+      "All unmapped by web-features",
+      formatInteger(
+        stats.unmappedCompatKeysCount - stats.change.unmappedCompatKeysCount,
+      ),
+      formatInteger(stats.unmappedCompatKeysCount),
+      formatInteger(stats.change.unmappedCompatKeysCount),
+      formatPercentage(
+        (stats.change.unmappedCompatKeysCount / stats.unmappedCompatKeysCount) *
+          100,
+      ),
     ],
     [
-      "Normal keys unmapped",
-      stats.unmappedNormalCompatKeysCount -
-        stats.change.unmappedNormalCompatKeysCount,
-      stats.unmappedNormalCompatKeysCount,
-      stats.change.unmappedNormalCompatKeysCount,
+      "Normal unmapped",
+      formatInteger(
+        stats.unmappedNormalCompatKeysCount -
+          stats.change.unmappedNormalCompatKeysCount,
+      ),
+      formatInteger(stats.unmappedNormalCompatKeysCount),
+      formatInteger(stats.change.unmappedNormalCompatKeysCount),
+      formatPercentage(
+        (stats.change.unmappedNormalCompatKeysCount /
+          stats.unmappedNormalCompatKeysCount) *
+          100,
+      ),
     ],
     [
-      "Deprecated or non-standard keys unmapped",
-      stats.unmappedDiscourageableCompatKeysCount -
-        stats.change.unmappedDiscourageableCompatKeysCount,
-      stats.unmappedDiscourageableCompatKeysCount,
-      stats.change.unmappedDiscourageableCompatKeysCount,
+      "Deprecated or non-standard unmapped",
+      formatInteger(
+        stats.unmappedDiscourageableCompatKeysCount -
+          stats.change.unmappedDiscourageableCompatKeysCount,
+      ),
+      formatInteger(stats.unmappedDiscourageableCompatKeysCount),
+      formatInteger(stats.change.unmappedDiscourageableCompatKeysCount),
+      formatPercentage(
+        (stats.change.unmappedDiscourageableCompatKeysCount /
+          stats.unmappedDiscourageableCompatKeysCount) *
+          100,
+      ),
     ],
   ];
 
@@ -120,29 +144,62 @@ function reportCompatCoverage(
 }
 
 function reportCumulativeShippingDays(stats: Result): string {
-  const headers = ["Cumulative shipping days", "Before", "After", "Net"];
-  const alignment = ["left", "right", "right", "right"];
-  const rows: [string, number, number, number][] = [
+  const headers = [
+    "Cumulative shipping days",
+    "Before",
+    "After",
+    "Change (abs.)",
+    "Change (%)",
+  ];
+  const alignment = ["left", "right", "right", "right", "right"];
+  const rows: [string, string, string, string, string][] = [
     [
-      "All keys unmapped",
-      stats.unmappedCompatKeysCumulativeShippingDays -
-        stats.change.unmappedCompatKeysCumulativeShippingDays,
-      stats.unmappedCompatKeysCumulativeShippingDays,
-      stats.change.unmappedCompatKeysCumulativeShippingDays,
+      "All unmapped by web-features",
+      formatInteger(
+        stats.unmappedCompatKeysCumulativeShippingDays -
+          stats.change.unmappedCompatKeysCumulativeShippingDays,
+      ),
+      formatInteger(stats.unmappedCompatKeysCumulativeShippingDays),
+      formatInteger(stats.change.unmappedCompatKeysCumulativeShippingDays),
+      formatPercentage(
+        (stats.change.unmappedCompatKeysCumulativeShippingDays /
+          stats.unmappedCompatKeysCumulativeShippingDays) *
+          100,
+      ),
     ],
     [
-      "Normal keys unmapped",
-      stats.unmappedNormalCompatKeysCumulativeShippingDays -
+      "Normal unmapped",
+      formatInteger(
+        stats.unmappedNormalCompatKeysCumulativeShippingDays -
+          stats.change.unmappedNormalCompatKeysCumulativeShippingDays,
+      ),
+      formatInteger(stats.unmappedNormalCompatKeysCumulativeShippingDays),
+      formatInteger(
         stats.change.unmappedNormalCompatKeysCumulativeShippingDays,
-      stats.unmappedNormalCompatKeysCumulativeShippingDays,
-      stats.change.unmappedNormalCompatKeysCumulativeShippingDays,
+      ),
+      formatPercentage(
+        (stats.change.unmappedNormalCompatKeysCumulativeShippingDays /
+          stats.unmappedNormalCompatKeysCumulativeShippingDays) *
+          100,
+      ),
     ],
     [
-      "Deprecated or non-standard keys unmapped",
-      stats.unmappedDiscourageableCompatKeysCumulativeShippingDays -
+      "Deprecated or non-standard unmapped",
+      formatInteger(
+        stats.unmappedDiscourageableCompatKeysCumulativeShippingDays -
+          stats.change.unmappedDiscourageableCompatKeysCumulativeShippingDays,
+      ),
+      formatInteger(
+        stats.unmappedDiscourageableCompatKeysCumulativeShippingDays,
+      ),
+      formatInteger(
         stats.change.unmappedDiscourageableCompatKeysCumulativeShippingDays,
-      stats.unmappedDiscourageableCompatKeysCumulativeShippingDays,
-      stats.change.unmappedDiscourageableCompatKeysCumulativeShippingDays,
+      ),
+      formatPercentage(
+        (stats.change.unmappedDiscourageableCompatKeysCumulativeShippingDays /
+          stats.unmappedDiscourageableCompatKeysCumulativeShippingDays) *
+          100,
+      ),
     ],
   ];
 
@@ -152,20 +209,37 @@ function reportCumulativeShippingDays(stats: Result): string {
 }
 
 function reportCaniuseCoverage(stats: Result): string {
-  const headers = ["", "Before", "After", "Net"];
-  const alignment = ["left", "right", "right", "right"];
-  const rows: [string, number, number, number][] = [
+  const headers = [
+    "caniuse IDs",
+    "Before",
+    "After",
+    "Change (abs.)",
+    "Change (%)",
+  ];
+  const alignment = ["left", "right", "right", "right", "right"];
+  const rows: [string, string, string, string, string][] = [
     [
-      "caniuse IDs",
-      stats.caniuseIdsCount - stats.change.unmappedCaniuseIdsCount,
-      stats.caniuseIdsCount,
-      stats.change.unmappedCaniuseIdsCount,
+      "All",
+      formatInteger(
+        stats.caniuseIdsCount - stats.change.unmappedCaniuseIdsCount,
+      ),
+      formatInteger(stats.caniuseIdsCount),
+      formatInteger(stats.change.unmappedCaniuseIdsCount),
+      formatPercentage(
+        (stats.change.caniuseIdsCount / stats.caniuseIdsCount) * 100,
+      ),
     ],
     [
-      "caniuse IDs unmapped",
-      stats.unmappedCaniuseIdsCount - stats.change.unmappedCaniuseIdsCount,
-      stats.unmappedCaniuseIdsCount,
-      stats.change.unmappedCaniuseIdsCount,
+      "Unmapped by web-features",
+      formatInteger(
+        stats.unmappedCaniuseIdsCount - stats.change.unmappedCaniuseIdsCount,
+      ),
+      formatInteger(stats.unmappedCaniuseIdsCount),
+      formatInteger(stats.change.unmappedCaniuseIdsCount),
+      formatPercentage(
+        (stats.change.unmappedCaniuseIdsCount / stats.unmappedCaniuseIdsCount) *
+          100,
+      ),
     ],
   ];
 
@@ -176,6 +250,26 @@ function reportCaniuseCoverage(stats: Result): string {
 
 function formatDate(date: Temporal.ZonedDateTime): string {
   return date.toPlainDate().toString();
+}
+
+function formatInteger(n: number): string {
+  return Intl.NumberFormat("en-US", {
+    useGrouping: "always",
+  })
+    .format(n)
+    .replaceAll(",", "&#x202F;");
+}
+
+function formatPercentage(n: number): string {
+  return (
+    Intl.NumberFormat("en-US", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+      useGrouping: "always",
+    })
+      .format(n)
+      .replaceAll(",", "&#x202F;") + "%"
+  );
 }
 
 function arrayToTableRow(arr: (string | number)[]): string {
