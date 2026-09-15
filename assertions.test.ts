@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import {
+  assertAllowedOverlap,
   assertCompatSetConsistency,
   assertValidFeatureReference,
 } from "./assertions.ts";
@@ -36,6 +37,58 @@ describe("assertValidReference()", function () {
   it("does not throw if target ID is a feature", function () {
     assert.doesNotThrow(() => {
       assertValidFeatureReference("a", "dom", { dom: { kind: "feature" } });
+    });
+  });
+});
+
+describe("assertAllowedOverlap()", function () {
+  it("does not throw when a key does not overlap", function () {
+    assert.doesNotThrow(() => {
+      const keysToIDs = new Map([["api.HTMLMediaElement", ["audio"]]]);
+      assertAllowedOverlap(
+        `api.HTMLMediaElement`,
+        `audio`,
+        keysToIDs,
+        new Map(),
+      );
+    });
+  });
+
+  it("does not throw when a key is allowlisted with another feature", function () {
+    assert.doesNotThrow(() => {
+      const keysToIDs = new Map([["api.HTMLMediaElement", ["audio", "video"]]]);
+      assertAllowedOverlap(
+        "api.HTMLMediaElement",
+        "audio",
+        keysToIDs,
+        new Map([["api.HTMLMediaElement", ["audio", "video"]]]),
+      );
+    });
+  });
+
+  it("throws when a key is not allowlisted and overlaps", function () {
+    assert.throws(() => {
+      const keysToIDs = new Map([["api.HTMLMediaElement", ["audio", "video"]]]);
+      assertAllowedOverlap(
+        "api.HTMLMediaElement",
+        "audio",
+        keysToIDs,
+        new Map(),
+      );
+    });
+  });
+
+  it("throws when a key is allowlisted but overlaps with an unnamed feature", function () {
+    assert.throws(() => {
+      const keysToIDs = new Map([
+        ["api.HTMLMediaElement", ["audio", "media-super-feature"]],
+      ]);
+      assertAllowedOverlap(
+        "api.HTMLMediaElement",
+        "video",
+        keysToIDs,
+        new Map([["api.HTMLMediaElement", ["audio", "media-super-feature"]]]),
+      );
     });
   });
 });
