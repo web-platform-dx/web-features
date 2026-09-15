@@ -43,6 +43,6 @@ compat_features:
   - api.ShadowRoot.replaceWithHTMLUnsafe
   - api.ShadowRoot.setHTMLUnsafe
   - api.ShadowRoot.setHTMLUnsafe.options_runscripts_parameter
-  - api.TrustedParserOptions
-  - api.TrustedParserOptions.runScripts
-  - api.TrustedParserOptions.sanitizer
+  - api.TrustedHTMLParserOptions
+  - api.TrustedHTMLParserOptions.runScripts
+  - api.TrustedHTMLParserOptions.sanitizer

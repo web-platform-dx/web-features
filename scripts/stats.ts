@@ -1,5 +1,6 @@
 import { Compat } from "compute-baseline/browser-compat-data";
 import assert from "node:assert/strict";
+import { spawnSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import yargs from "yargs";
@@ -10,6 +11,9 @@ type SupportedReleaseTag =
   (`v{string}` & { __brand: "version ok" }) | "next" | "latest";
 
 interface ResultBase {
+  hash: string | null; // Git commit from which the stats have been generated
+  timestamp: string | null; // Git author timestamp from which the stats have been generated
+
   featuresCount: number; // `kind: feature` ID count (ignores other `kind` values)
   groupsCount: number; // group ID count
   compatKeysCount: number; // Count of in-scope BCD keys (i.e., excluding webextensions)
@@ -51,13 +55,9 @@ interface ResultBase {
   unmappedDiscourageableCompatKeysCumulativeShippingDays: number;
 }
 
-interface Result extends ResultBase {
-  change?: Change;
+export interface Result extends ResultBase {
+  change?: ResultBase;
 }
-
-type ResultKey = keyof Result;
-type ChangeKey = `${ResultKey}Change`;
-type Change = Record<ChangeKey, number>;
 
 const argv = yargs(process.argv.slice(2))
   .scriptName("stats")
@@ -80,6 +80,15 @@ const argv = yargs(process.argv.slice(2))
   .parseSync();
 
 export async function stats(previous: Partial<Result>): Promise<Result> {
+  const hash =
+    spawnSync("git", ["rev-parse", "HEAD"], {
+      encoding: "utf-8",
+    }).stdout.trim() ?? null;
+  const timestamp =
+    spawnSync("git", ["show", "--no-patch", "--format=%aI", hash], {
+      encoding: "utf-8",
+    }).stdout.trim() ?? null;
+
   const { features, groups } = await import("../index.ts");
   const { caniuseToWebFeaturesId } = await import("./caniuse.ts");
   const { compatFeaturesToCumulativeDaysShipped } =
@@ -180,6 +189,9 @@ export async function stats(previous: Partial<Result>): Promise<Result> {
     unmappedDiscourageableCompatKeysCount / discourageableCompatKeysCount;
 
   const result: ResultBase = {
+    hash,
+    timestamp,
+
     featuresCount,
     groupsCount,
     compatKeysCount,
@@ -211,11 +223,13 @@ export async function stats(previous: Partial<Result>): Promise<Result> {
 
   if (previous) {
     const change = Object.fromEntries(
-      Object.keys(previous).map((key) => [
-        `${key}Change`,
-        result[key] - previous[key],
-      ]),
-    ) as Change;
+      Object.keys(previous).map((key) => {
+        if (["hash", "timestamp"].includes(key)) {
+          return [key, previous[key]];
+        }
+        return [key, result[key] - previous[key]];
+      }),
+    ) as ResultBase;
     return { ...result, change };
   }
   return result;
