@@ -1,5 +1,5 @@
 name: Sanitizer API
-description: The `Sanitizer` API can customize the sanitization process used to parse and insert HTML into the DOM in a way that can prevent cross-site scripting attacks. `Document.parseHTML()` and other DOM methods like `setHTML()` can use the Sanitizer API on the provided HTML.
+description: The `Sanitizer` API customizes the sanitization of HTML parsed and inserted into the DOM in a way that can prevent cross-site scripting attacks. You can use it with DOM APIs that accept a sanitizer option, such as `Document.parseHTML()` or HTML setters such as `setHTML()`.
 spec: https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#html-sanitization
 compat_features:
   - api.Document.parseHTML_static
