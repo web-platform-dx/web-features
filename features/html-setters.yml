@@ -1,6 +1,8 @@
 name: HTML setter methods
 description: The `setHTML()`, `replaceWithHTML()`, `beforeHTML()`, `prependHTML()`, `appendHTML()` and `afterHTML()` DOM methods, and unsafe equivalents, insert HTML into an existing tree.
-spec: https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-parsing-and-serialization
+spec: https://github.com/whatwg/html/pull/12753
+#TODO: replace with below and remove from specs.ts once about PR is merged
+#spec: https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-parsing-and-serialization
 group: dom
 compat_features:
   - api.CharacterData.afterHTML
