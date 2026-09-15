@@ -79,7 +79,7 @@ function reportCompatCoverage(
   endDate: Temporal.ZonedDateTime,
 ): string {
   const headers = [
-    "Comapt keys",
+    "Compat keys",
     `Before (${formatDate(startDate)})`,
     `After (${formatDate(endDate)})`,
     "Change (abs.)",
