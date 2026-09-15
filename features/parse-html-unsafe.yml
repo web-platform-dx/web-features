@@ -1,4 +1,4 @@
-name: Unsanitized HTML parsing methods
+name: Unsanitized HTML parsing
 description: The `Document.parseHTMLUnsafe()` static method parses HTML into a DOM tree, much like the `setHTMLUnsafe()` DOM method inserts HTML into an existing tree. No sanitization applies, so never call it with user-provided strings.
 spec: https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-parsing-and-serialization
 compat_features:
