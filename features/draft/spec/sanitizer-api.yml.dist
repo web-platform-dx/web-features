@@ -5,8 +5,23 @@ status:
   baseline: false
   support: {}
 compat_features:
-  - api.Document.parseHTMLUnsafe_static.options_sanitizer_parameter
+  # baseline: false
+  # support:
+  #   chrome: "146"
+  #   chrome_android: "146"
+  #   edge: "146"
   - api.Element.setHTMLUnsafe.options_sanitizer_parameter
+  - api.ShadowRoot.setHTMLUnsafe.options_sanitizer_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "150"
+  #   chrome_android: "150"
+  #   edge: "150"
   - api.Sanitizer.allowProcessingInstruction
   - api.Sanitizer.removeProcessingInstruction
-  - api.ShadowRoot.setHTMLUnsafe.options_sanitizer_parameter
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.Document.parseHTMLUnsafe_static.options_sanitizer_parameter

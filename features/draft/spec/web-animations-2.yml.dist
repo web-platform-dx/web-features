@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "152"
+    firefox_android: "152"
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-07-28
@@ -30,19 +32,19 @@ compat_features:
   #   safari_ios: "26.2"
   - api.Animation.overallProgress
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-01-21
   # support:
-  #   chrome: "146"
-  #   chrome_android: "146"
-  #   edge: "146"
-  - api.AnimationTrigger
-
-  # baseline: false
-  # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
   #   firefox: "142"
   #   firefox_android: "142"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
   - api.Animation.commitStyles.endpoint_inclusive_commitStyles
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "152"

@@ -1,8 +1,13 @@
-draft_date: 2026-05-08
+draft_date: 2026-07-24
 name: Permissions Policy
 description: TODO
 spec: https://w3c.github.io/webappsec-permissions-policy/
 compat_features:
+  - api.PermissionsPolicy
+  - api.PermissionsPolicy.allowedFeatures
+  - api.PermissionsPolicy.allowsFeature
+  - api.PermissionsPolicy.features
+  - api.PermissionsPolicy.getAllowlistForFeature
   - html.elements.iframe.allow.wildcards
   - http.headers.Permissions-Policy-Report-Only
 

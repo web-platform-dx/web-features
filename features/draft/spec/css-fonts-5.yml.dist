@@ -3,21 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "155"
+    firefox_android: "155"
 compat_features:
-  # baseline: high
-  # baseline_low_date: 2017-09-19
-  # baseline_high_date: 2020-03-19
-  # support:
-  #   chrome: "60"
-  #   chrome_android: "60"
-  #   edge: "12"
-  #   firefox: "9"
-  #   firefox_android: "9"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - svg.global_attributes.font-stretch
-
   # baseline: high
   # baseline_low_date: 2018-09-05
   # baseline_high_date: 2021-03-05
@@ -81,6 +70,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   firefox: "155"
+  #   firefox_android: "155"
+  #   safari: "18.4"
+  #   safari_ios: "18.4"
+  - css.properties.font-width.percentage
+
+  # baseline: false
+  # support:
+  #   firefox: "155"
+  #   firefox_android: "155"
   #   safari: "26"
   #   safari_ios: "26"
   - api.CSSFontFaceDescriptors.font-width
@@ -105,8 +104,3 @@ compat_features:
   - api.CSSFontFaceDescriptors.fontVariationSettings
   - api.CSSFontFaceDescriptors.line-gap-override
   - api.CSSFontFaceDescriptors.lineGapOverride
-
-  # baseline: false
-  # support:
-  #   safari: "18.4"
-  - css.properties.font-width.percentage

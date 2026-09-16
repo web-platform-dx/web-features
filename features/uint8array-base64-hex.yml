@@ -1,5 +1,5 @@
 name: Uint8Array base64 and hex conversion
-description: The `Uint8Array` object methods `fromBase64()`, `toBase64()`, and `setFromBase64()` convert to and from base64 strings. The `fromHex()`, `toHex()`, and `setFromHex()` methods convert to and from hex strings.
+description: The static `Uint8Array.fromBase64()` method and the `Uint8Array` instance methods `toBase64()` and `setFromBase64()` convert to and from base64 strings. Similarly, the static `Uint8Array.fromHex()` method and the instance methods `toHex()` and `setFromHex()` convert to and from hex strings.
 spec:
   - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-additional-properties-of-the-uint8array-constructor
   - https://tc39.es/ecma262/multipage/indexed-collections.html#sec-additional-properties-of-the-uint8array-prototype-object

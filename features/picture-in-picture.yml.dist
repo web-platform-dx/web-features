@@ -7,6 +7,7 @@ status:
     chrome: "69"
     chrome_android: "105"
     edge: "79"
+    firefox: "153"
     safari: "13.1"
     safari_ios: "13.4"
 compat_features:
@@ -16,12 +17,12 @@ compat_features:
   #   chrome: "69"
   #   chrome_android: "105"
   #   edge: "79"
+  #   firefox: "153"
   #   safari: "13.1"
   #   safari_ios: "13.4"
   - api.Document.exitPictureInPicture
   - api.Document.pictureInPictureElement
   - api.Document.pictureInPictureEnabled
-  - api.HTMLVideoElement.disablePictureInPicture
   - api.HTMLVideoElement.enterpictureinpicture_event
   - api.HTMLVideoElement.leavepictureinpicture_event
   - api.HTMLVideoElement.requestPictureInPicture
@@ -30,13 +31,13 @@ compat_features:
   - api.PictureInPictureWindow.resize_event
   - api.PictureInPictureWindow.width
   - api.ShadowRoot.pictureInPictureElement
-  - html.elements.video.disablepictureinpicture
 
   # baseline: false
   # support:
   #   chrome: "85"
   #   chrome_android: "105"
   #   edge: "85"
+  #   firefox: "153"
   #   safari: "16"
   #   safari_ios: "16"
   - api.PictureInPictureEvent
@@ -48,9 +49,28 @@ compat_features:
   #   chrome: "110"
   #   chrome_android: "110"
   #   edge: "110"
+  #   firefox: "153"
   #   safari: "13.1"
   #   safari_ios: "13.4"
   - css.selectors.picture-in-picture
+
+  # baseline: false
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "105"
+  #   edge: "79"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.HTMLVideoElement.disablePictureInPicture
+  - html.elements.video.disablepictureinpicture
+
+  # baseline: false
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "105"
+  #   edge: "79"
+  #   firefox: "153"
+  - html.elements.iframe.allow.picture-in-picture
 
   # baseline: false
   # support:
@@ -59,13 +79,6 @@ compat_features:
   #   firefox: "151"
   #   firefox_android: "151"
   - css.at-rules.media.display-mode.picture-in-picture
-
-  # baseline: false
-  # support:
-  #   chrome: "69"
-  #   chrome_android: "105"
-  #   edge: "79"
-  - html.elements.iframe.allow.picture-in-picture
 
   # baseline: false
   # support:

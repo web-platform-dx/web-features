@@ -3,8 +3,6 @@ description: The `LanguageModel` API prompts an on-device language model. Also k
 spec: http://webmachinelearning.github.io/prompt-api/
 compat_features:
   # The follow keys are expected, at the time this feature was authored:
-  # - api.LanguageModel.destroy
-  # - api.LanguageModel.oncontextoverflow_event
   # - http.headers.Permissions-Policy.language-model
   - api.LanguageModel
   - api.LanguageModel.append
@@ -12,7 +10,9 @@ compat_features:
   - api.LanguageModel.clone
   - api.LanguageModel.contextUsage
   - api.LanguageModel.contextWindow
+  - api.LanguageModel.contextoverflow_event
   - api.LanguageModel.create_static
+  - api.LanguageModel.destroy
   - api.LanguageModel.measureContextUsage
   - api.LanguageModel.prompt
   - api.LanguageModel.promptStreaming

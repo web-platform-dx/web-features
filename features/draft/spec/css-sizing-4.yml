@@ -1,11 +1,10 @@
-draft_date: 2026-05-08
+draft_date: 2026-09-10
 name: CSS Box Sizing Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-sizing-4/
 compat_features:
   - css.properties.block-size.auto
   - css.properties.block-size.stretch
-  - css.properties.flex-basis.stretch
   - css.properties.flex.fit-content
   - css.properties.flex.max-content
   - css.properties.flex.min-content
@@ -20,6 +19,15 @@ compat_features:
   - css.properties.min-inline-size.stretch
 
 # The following features in the spec are already part of web-features:
+# - Responsive iframes:
+#   - api.Window.requestResize
+#   - css.properties.frame-sizing
+#   - css.properties.frame-sizing.auto
+#   - css.properties.frame-sizing.content-block-size
+#   - css.properties.frame-sizing.content-height
+#   - css.properties.frame-sizing.content-inline-size
+#   - css.properties.frame-sizing.content-width
+#   - html.elements.meta.name.responsive-embedded-sizing
 # - aspect-ratio:
 #   - css.properties.aspect-ratio
 #   - css.properties.aspect-ratio.auto

@@ -161,10 +161,6 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because the Topics API isn't on a standards track yet. Remove this exception when it is."
     ],
     [
-        "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/Accessibility/AriaNotify/explainer.md",
-        "Allowed because the ariaNotify() method is not yet in a formal spec. Remove this exception when a formal spec is available."
-    ],
-    [
         "https://github.com/whatwg/html/pull/11006",
         "Allowed because this spec PR hasn't landed yet. Once the PR merges, change the spec url and remove this exception."
     ],
@@ -183,10 +179,6 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://www.w3.org/TR/2019/WD-feature-policy-1-20190416/",
         "Allowed because feature policy was replaced by permissions policy."
-    ],
-    [
-        "https://github.com/WICG/install-element",
-        "Allowed because the <install> element is available in Chrome/Edge as an origin trial."
     ],
     [
         "https://github.com/whatwg/html/pull/11723",
@@ -239,6 +231,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://wicg.github.io/turtledove/",
         "Discontinued spec allowed for discouraged feature."
+    ],
+    [
+        "https://github.com/whatwg/html/pull/9546",
+        "Allowed because the <input type=\"checkbox\" switch> feature is not yet in a formal spec. Remove this exception when a formal spec is available."
     ]
 ];
 
