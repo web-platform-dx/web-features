@@ -1,0 +1,17 @@
+name: WebDriver BiDi locale override
+description: The `emulation.setLocaleOverride` command simulates a locale in the browser.
+spec: https://w3c.github.io/webdriver-bidi/#module-emulation
+group: webdriver
+compat_features:
+  core:
+    - webdriver.bidi.emulation.setLocaleOverride
+    - webdriver.bidi.emulation.setLocaleOverride.contexts_parameter
+    - webdriver.bidi.emulation.setLocaleOverride.cross_origin_iframes
+    - webdriver.bidi.emulation.setLocaleOverride.dedicated_and_shared_workers
+    - webdriver.bidi.emulation.setLocaleOverride.locale_parameter
+    - webdriver.bidi.emulation.setLocaleOverride.locale_parameter.sets_accept-language_header
+    - webdriver.bidi.emulation.setLocaleOverride.locale_parameter.sets_navigator_language
+    - webdriver.bidi.emulation.setLocaleOverride.updates_existing_sandboxes
+    - webdriver.bidi.emulation.setLocaleOverride.userContexts_parameter
+  spare:
+    - webdriver.bidi.emulation

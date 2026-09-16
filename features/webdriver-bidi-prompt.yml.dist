@@ -3,12 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "126"
-    chrome_android: "126"
-    edge: "126"
-    firefox: "129"
-    firefox_android: "129"
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -44,7 +39,6 @@ compat_features:
   #   firefox_android: "121"
   - webdriver.bidi.browsingContext.userPromptOpened_event.defaultValue_parameter
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "126"
@@ -57,3 +51,32 @@ compat_features:
   - webdriver.bidi.browsingContext.handleUserPrompt.context_parameter
   - webdriver.bidi.browsingContext.handleUserPrompt.userText_parameter
   - webdriver.bidi.browsingContext.userPromptOpened_event.handler_parameter
+
+  # baseline: false
+  # support:
+  #   firefox: "118"
+  #   firefox_android: "118"
+  - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.alert
+  - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.confirm
+  - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.prompt
+
+  # baseline: false
+  # support:
+  #   firefox: "119"
+  #   firefox_android: "119"
+  - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.alert
+  - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.confirm
+  - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.prompt
+
+  # baseline: false
+  # support:
+  #   firefox: "154"
+  #   firefox_android: "154"
+  - webdriver.bidi.browsingContext.userPromptClosed_event.userContext_parameter
+  - webdriver.bidi.browsingContext.userPromptOpened_event.userContext_parameter
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - webdriver.bidi.browsingContext.userPromptClosed_event.type_parameter.beforeunload
+  - webdriver.bidi.browsingContext.userPromptOpened_event.type_parameter.beforeunload

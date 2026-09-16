@@ -79,6 +79,52 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
+  #   firefox: "143"
+  #   firefox_android: "143"
+  - webdriver.bidi.network.disownData.collector_parameter
+  - webdriver.bidi.network.disownData.dataType_parameter
+  - webdriver.bidi.network.disownData.request_parameter
+  - webdriver.bidi.network.getData.collector_parameter
+  - webdriver.bidi.network.getData.dataType_parameter
+  - webdriver.bidi.network.getData.dataType_parameter.response
+  - webdriver.bidi.network.getData.disown_parameter
+  - webdriver.bidi.network.getData.request_parameter
+  - webdriver.bidi.network.removeDataCollector
+
+  # baseline: false
+  # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
+  #   firefox: "146"
+  #   firefox_android: "146"
+  - webdriver.bidi.network.getData.data_url
+
+  # baseline: false
+  # support:
+  #   chrome: "141"
+  #   chrome_android: "141"
+  #   edge: "141"
+  #   firefox: "146"
+  #   firefox_android: "146"
+  - webdriver.bidi.network.setExtraHeaders
+  - webdriver.bidi.network.setExtraHeaders.contexts_parameter
+  - webdriver.bidi.network.setExtraHeaders.userContexts_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  #   edge: "142"
+  #   firefox: "146"
+  #   firefox_android: "146"
+  - webdriver.bidi.network.getData.dataType_parameter.request
+
+  # baseline: false
+  # support:
   #   chrome: "133"
   #   chrome_android: "133"
   #   edge: "133"
@@ -100,6 +146,27 @@ compat_features:
   - webdriver.bidi.network.fetchError_event.redirectCount_parameter
   - webdriver.bidi.network.fetchError_event.request_parameter
   - webdriver.bidi.network.fetchError_event.timestamp_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
+  - webdriver.bidi.network.removeDataCollector.collector_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "141"
+  #   chrome_android: "141"
+  #   edge: "141"
+  - webdriver.bidi.network.setExtraHeaders.headers_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  #   edge: "142"
+  - webdriver.bidi.network.getData.cached_responses
 
   # baseline: false
   # support:
@@ -150,10 +217,37 @@ compat_features:
   #   firefox_android: "133"
   - webdriver.bidi.network.continueRequest.url_parameter
 
+  # baseline: false
+  # support:
+  #   firefox: "143"
+  #   firefox_android: "143"
+  - webdriver.bidi.network.addDataCollector
+  - webdriver.bidi.network.addDataCollector.contexts_parameter
+  - webdriver.bidi.network.addDataCollector.dataTypes_parameter
+  - webdriver.bidi.network.addDataCollector.dataTypes_parameter.response
+  - webdriver.bidi.network.addDataCollector.maxEncodedDataSize_parameter
+  - webdriver.bidi.network.addDataCollector.userContexts_parameter
+  - webdriver.bidi.network.disownData.dataType_parameter.response
+
+  # baseline: false
+  # support:
+  #   firefox: "146"
+  #   firefox_android: "146"
+  - webdriver.bidi.network.disownData.dataType_parameter.request
+
+  # baseline: false
+  # support:
+  #   firefox: "154"
+  #   firefox_android: "154"
+  - webdriver.bidi.network.authRequired_event.userContext_parameter
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
+  - webdriver.bidi.network.addDataCollector.collectorType_parameter
   - webdriver.bidi.network.authRequired_event.response_parameter
+  - webdriver.bidi.network.beforeRequestSent_event.userContext_parameter
+  - webdriver.bidi.network.fetchError_event.userContext_parameter
   - webdriver.bidi.network.provideResponse.body_parameter
   - webdriver.bidi.network.provideResponse.cookies_parameter
   - webdriver.bidi.network.provideResponse.headers_parameter
@@ -168,6 +262,7 @@ compat_features:
   - webdriver.bidi.network.responseCompleted_event.request_parameter
   - webdriver.bidi.network.responseCompleted_event.response_parameter
   - webdriver.bidi.network.responseCompleted_event.timestamp_parameter
+  - webdriver.bidi.network.responseCompleted_event.userContext_parameter
   - webdriver.bidi.network.responseStarted_event
   - webdriver.bidi.network.responseStarted_event.context_parameter
   - webdriver.bidi.network.responseStarted_event.intercepts_parameter
@@ -177,3 +272,4 @@ compat_features:
   - webdriver.bidi.network.responseStarted_event.request_parameter
   - webdriver.bidi.network.responseStarted_event.response_parameter
   - webdriver.bidi.network.responseStarted_event.timestamp_parameter
+  - webdriver.bidi.network.responseStarted_event.userContext_parameter

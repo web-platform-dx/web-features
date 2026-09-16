@@ -1,0 +1,12 @@
+name: WebDriver BiDi script enabled
+description: The `emulation.setScriptingEnabled` command simulates script enablement in the browser.
+spec: https://w3c.github.io/webdriver-bidi/#module-emulation
+group: webdriver
+compat_features:
+  core:
+    - webdriver.bidi.emulation.setScriptingEnabled
+    - webdriver.bidi.emulation.setScriptingEnabled.contexts_parameter
+    - webdriver.bidi.emulation.setScriptingEnabled.enabled_parameter
+    - webdriver.bidi.emulation.setScriptingEnabled.userContexts_parameter
+  spare:
+    - webdriver.bidi.emulation
