@@ -3,11 +3,8 @@ description: The `emulation.setScreenOrientationOverride` command simulates scre
 spec: https://w3c.github.io/webdriver-bidi/#module-emulation
 group: webdriver
 compat_features:
-  core:
-    - webdriver.bidi.emulation.setScreenOrientationOverride
-    - webdriver.bidi.emulation.setScreenOrientationOverride.contexts_parameter
-    - webdriver.bidi.emulation.setScreenOrientationOverride.screenOrientation_parameter
-    - webdriver.bidi.emulation.setScreenOrientationOverride.userContexts_parameter
-    - webdriver.bidi.emulation.setScreenSettingsOverride
-  spare:
-    - webdriver.bidi.emulation
+  - webdriver.bidi.emulation.setScreenOrientationOverride
+  - webdriver.bidi.emulation.setScreenOrientationOverride.contexts_parameter
+  - webdriver.bidi.emulation.setScreenOrientationOverride.screenOrientation_parameter
+  - webdriver.bidi.emulation.setScreenOrientationOverride.userContexts_parameter
+  - webdriver.bidi.emulation.setScreenSettingsOverride
