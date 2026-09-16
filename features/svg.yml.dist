@@ -414,6 +414,9 @@ compat_features:
   #   safari_ios: "2"
   - api.SVGTextPathElement
   - api.SVGTextPathElement.href
+  - api.SVGTextPathElement.method
+  - api.SVGTextPathElement.spacing
+  - api.SVGTextPathElement.startOffset
   - svg.elements.textPath
   - svg.elements.textPath.textLength
 
@@ -644,9 +647,6 @@ compat_features:
   #   firefox_android: "20"
   #   safari: "3.1"
   #   safari_ios: "2"
-  - api.SVGTextPathElement.method
-  - api.SVGTextPathElement.spacing
-  - api.SVGTextPathElement.startOffset
   - svg.elements.textPath.startOffset
 
   # baseline: high
@@ -865,6 +865,9 @@ compat_features:
   #   safari: "4"
   #   safari_ios: "3.2"
   - css.properties.text-anchor
+  - css.properties.text-anchor.end
+  - css.properties.text-anchor.middle
+  - css.properties.text-anchor.start
 
   # baseline: high
   # baseline_low_date: 2017-01-24
@@ -904,6 +907,7 @@ compat_features:
   - css.properties.stroke-linejoin.round
   - css.properties.stroke-miterlimit
   - css.properties.stroke-width
+  - css.properties.stroke.none
 
   # baseline: high
   # baseline_low_date: ≤2017-04-05
@@ -920,11 +924,18 @@ compat_features:
   - css.properties.fill-rule
   - css.properties.fill-rule.evenodd
   - css.properties.fill-rule.nonzero
+  - css.properties.fill.none
   - css.properties.marker
   - css.properties.marker-end
+  - css.properties.marker-end.none
   - css.properties.marker-mid
+  - css.properties.marker-mid.none
   - css.properties.marker-start
+  - css.properties.marker-start.none
+  - css.properties.marker.none
   - css.properties.stop-color
+  - css.properties.stop-color.currentColor
+  - css.properties.stop-color.transparent
   - css.properties.stop-opacity
 
   # baseline: high
@@ -1176,8 +1187,10 @@ compat_features:
   #   safari: "4"
   #   safari_ios: "3.2"
   - css.properties.color-interpolation
+  - css.properties.color-interpolation.auto
   - css.properties.color-interpolation.sRGB
   - css.properties.shape-rendering
+  - css.properties.shape-rendering.auto
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -1612,6 +1625,19 @@ compat_features:
   - svg.elements.a.referrerpolicy
 
   # baseline: high
+  # baseline_low_date: 2020-11-17
+  # baseline_high_date: 2023-05-17
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "83"
+  #   firefox_android: "83"
+  #   safari: "3"
+  #   safari_ios: "1"
+  - api.SVGElement.load_event
+
+  # baseline: high
   # baseline_low_date: 2022-03-14
   # baseline_high_date: 2024-09-14
   # support:
@@ -1623,6 +1649,19 @@ compat_features:
   #   safari: "15.4"
   #   safari_ios: "15.4"
   - api.SVGElement.nonce
+
+  # baseline: high
+  # baseline_low_date: 2022-03-14
+  # baseline_high_date: 2024-09-14
+  # support:
+  #   chrome: ≤83
+  #   chrome_android: ≤83
+  #   edge: ≤83
+  #   firefox: "77"
+  #   firefox_android: "79"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - svg.global_attributes.transform-origin
 
   # baseline: high
   # baseline_low_date: 2022-05-16
@@ -1663,8 +1702,9 @@ compat_features:
   #   safari_ios: "8"
   - svg.global_attributes.requiredExtensions.mathml
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-03-27
+  # baseline_high_date: 2025-09-27
   # support:
   #   chrome: "38"
   #   chrome_android: "38"
@@ -1675,8 +1715,9 @@ compat_features:
   #   safari_ios: "16.4"
   - api.SVGStyleElement.sheet
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-09-18
+  # baseline_high_date: 2026-03-18
   # support:
   #   chrome: "59"
   #   chrome_android: "59"
@@ -1687,8 +1728,9 @@ compat_features:
   #   safari_ios: "17"
   - api.CanvasRenderingContext2D.drawImage.SVGImageElement_source_image
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-12-07
+  # baseline_high_date: 2026-06-07
   # support:
   #   chrome: "120"
   #   chrome_android: "120"
@@ -1699,8 +1741,9 @@ compat_features:
   #   safari_ios: "15.4"
   - svg.global_attributes.mask
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-12-11
+  # baseline_high_date: 2026-06-11
   # support:
   #   chrome: "118"
   #   chrome_android: "118"
@@ -1712,8 +1755,9 @@ compat_features:
   - api.SVGImageElement.crossOrigin
   - svg.elements.image.crossorigin
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2024-03-05
+  # baseline_high_date: 2026-09-05
   # support:
   #   chrome: "43"
   #   chrome_android: "43"
@@ -1763,6 +1807,31 @@ compat_features:
   - api.SVGGeometryElement.isPointInFill.point_parameter_DOMPoint
   - api.SVGGeometryElement.isPointInStroke.point_parameter_DOMPoint
 
+  # baseline: low
+  # baseline_low_date: 2025-12-12
+  # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  #   edge: "142"
+  #   firefox: "117"
+  #   firefox_android: "117"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - api.SVGScriptElement.async
+
+  # baseline: low
+  # baseline_low_date: 2026-01-21
+  # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
+  #   firefox: "61"
+  #   firefox_android: "61"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - api.SVGAElement.hreflang
+  - api.SVGAElement.type
+
   # baseline: false
   # support:
   #   chrome: "1"
@@ -1770,7 +1839,6 @@ compat_features:
   #   edge: "12"
   #   safari: "3"
   #   safari_ios: "1"
-  - api.SVGElement.load_event
   - api.SVGSVGElement.checkEnclosure
   - api.SVGSVGElement.checkIntersection
   - api.SVGSVGElement.getEnclosureList
@@ -1825,6 +1893,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
+  #   firefox: "61"
+  #   firefox_android: "61"
+  - api.SVGAElement.referrerPolicy
+
+  # baseline: false
+  # support:
   #   chrome: ≤80
   #   chrome_android: ≤80
   #   edge: ≤80
@@ -1832,15 +1909,6 @@ compat_features:
   #   safari_ios: ≤13.4
   - svg.global_attributes.alignment-baseline
   - svg.global_attributes.baseline-shift
-
-  # baseline: false
-  # support:
-  #   chrome: ≤83
-  #   chrome_android: ≤83
-  #   edge: ≤83
-  #   firefox: "77"
-  #   firefox_android: "79"
-  - svg.global_attributes.transform-origin
 
   # baseline: false
   # support:
@@ -1872,6 +1940,8 @@ compat_features:
   #   safari: "11.1"
   #   safari_ios: "11.3"
   - css.properties.stroke-color
+  - css.properties.stroke-color.currentColor
+  - css.properties.stroke-color.transparent
 
   # baseline: false
   # support:
@@ -1889,9 +1959,6 @@ compat_features:
   # support:
   #   firefox: "61"
   #   firefox_android: "61"
-  - api.SVGAElement.hreflang
-  - api.SVGAElement.referrerPolicy
-  - api.SVGAElement.type
   - svg.elements.a.hreflang
   - svg.elements.a.type
   - svg.elements.textPath.path
@@ -1901,7 +1968,6 @@ compat_features:
   # support:
   #   firefox: "117"
   #   firefox_android: "117"
-  - api.SVGScriptElement.async
   - api.SVGScriptElement.defer
   - svg.elements.script.async
   - svg.elements.script.defer

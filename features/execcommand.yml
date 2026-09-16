@@ -4,6 +4,7 @@ spec: https://w3c.github.io/editing/docs/execCommand/
 caniuse: document-execcommand
 group: clipboard
 discouraged:
+  reason: The `execCommand()` method is "not implemented consistently or fully by user agents, and it is not expected that this will change in the foreseeable future."
   according_to:
     - https://w3c.github.io/editing/docs/execCommand/
   alternatives:

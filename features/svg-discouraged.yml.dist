@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    safari: ≤13.1
+    safari_ios: ≤13.4
 compat_features:
   # baseline: false
   # support:
@@ -215,15 +217,10 @@ compat_features:
   #   safari_ios: "7"
   - api.SVGSVGElement.currentView
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   safari: ≤13.1
   #   safari_ios: ≤13.4
   - svg.global_attributes.glyph-orientation-horizontal
   - svg.global_attributes.glyph-orientation-vertical
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - api.SVGAElement.text
-  - api.SVGRenderingIntent

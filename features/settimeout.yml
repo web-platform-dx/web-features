@@ -3,6 +3,7 @@ description: "The `setTimeout()` global function executes provided code after a 
 spec: https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#timers
 compat_features:
   - api.setTimeout
+  - api.setTimeout.supports_parameters_for_callback
   - api.setTimeout.worker_support
   - api.clearTimeout
   - api.clearTimeout.worker_support

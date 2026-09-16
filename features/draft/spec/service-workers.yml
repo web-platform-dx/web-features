@@ -1,8 +1,9 @@
-draft_date: 2025-04-28
-name: Service Workers
+draft_date: 2026-06-19
+name: Service Workers Nightly
 description: TODO
 spec: https://w3c.github.io/ServiceWorker/
 compat_features:
+  - api.ServiceWorkerContainer.register.enforces_trusted_types
   - http.headers.Service-Worker
   - http.headers.Service-Worker-Allowed
 
@@ -58,9 +59,6 @@ compat_features:
 #   - api.FetchEvent.respondWith.networkerror_on_same-origin_cors
 #   - api.FetchEvent.respondWith.resource_url
 #   - api.FetchEvent.resultingClientId
-#   - api.InstallEvent
-#   - api.InstallEvent.InstallEvent
-#   - api.InstallEvent.addRoutes
 #   - api.NavigationPreloadManager
 #   - api.NavigationPreloadManager.disable
 #   - api.NavigationPreloadManager.enable
@@ -111,8 +109,13 @@ compat_features:
 #   - api.caches.secure_context_required
 #   - api.caches.worker_support
 #   - http.headers.Service-Worker-Navigation-Preload
+# - Service workers static routing:
+#   - api.InstallEvent
+#   - api.InstallEvent.InstallEvent
+#   - api.InstallEvent.addRoutes
 # - JavaScript modules in service workers:
 #   - api.ServiceWorker.ecmascript_modules
+#   - javascript.statements.import.service_worker_support
 # - messageerror:
 #   - api.ServiceWorkerContainer.messageerror_event
 #   - api.ServiceWorkerGlobalScope.messageerror_event

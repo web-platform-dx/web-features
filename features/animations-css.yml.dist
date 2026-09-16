@@ -76,6 +76,30 @@ compat_features:
   - css.properties.animation-play-state.paused
   - css.properties.animation-play-state.running
   - css.properties.animation-timing-function
+  - css.properties.animation-timing-function.ease
+  - css.properties.animation-timing-function.ease-in
+  - css.properties.animation-timing-function.ease-in-out
+  - css.properties.animation-timing-function.ease-out
+  - css.properties.animation-timing-function.linear
+  - css.properties.animation-timing-function.step-end
+  - css.properties.animation-timing-function.step-start
+  - css.properties.animation.alternate
+  - css.properties.animation.alternate-reverse
+  - css.properties.animation.auto
+  - css.properties.animation.backwards
+  - css.properties.animation.both
+  - css.properties.animation.ease
+  - css.properties.animation.ease-in
+  - css.properties.animation.ease-in-out
+  - css.properties.animation.ease-out
+  - css.properties.animation.forwards
+  - css.properties.animation.infinite
+  - css.properties.animation.linear
+  - css.properties.animation.none
+  - css.properties.animation.normal
+  - css.properties.animation.reverse
+  - css.properties.animation.step-end
+  - css.properties.animation.step-start
 
   # baseline: high
   # baseline_low_date: 2016-08-02
@@ -214,4 +238,6 @@ compat_features:
   #   chrome: "115"
   #   chrome_android: "115"
   #   edge: "115"
+  #   safari: "26"
+  #   safari_ios: "26"
   - css.at-rules.keyframes.named_range_keyframes

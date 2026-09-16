@@ -1,0 +1,24 @@
+name: Protected audience
+description: The protected audience API facilitates advertisement sales by allowing sites to register users as part of an interest group or to choose which ads appear based on those interest groups, while minimizing the ability of advertisers to track specific members of the interest group. Also known as FLEDGE.
+spec: https://wicg.github.io/turtledove/
+discouraged:
+  removal_date: 2026-06-01 # Chrome 150
+  reason: Following the announcement that Chrome will maintain its current approach to third-party cookies, Chrome decided to withdraw certain Privacy Sandbox features including the protected audience API.
+  according_to:
+    - https://groups.google.com/a/chromium.org/g/blink-dev/c/k_nubsMb97g/m/aAp_5MTXBQAJ
+    - https://chromestatus.com/feature/6552486106234880
+compat_features:
+  - api.HTMLIFrameElement.adAuctionHeaders
+  - api.Navigator.canLoadAdAuctionFencedFrame
+  - api.Navigator.clearOriginJoinedAdInterestGroups
+  - api.Navigator.createAuctionNonce
+  - api.Navigator.deprecatedRunAdAuctionEnforcesKAnonymity
+  - api.Navigator.getInterestGroupAdAuctionData
+  - api.Navigator.joinAdInterestGroup
+  - api.Navigator.leaveAdInterestGroup
+  - api.Navigator.protectedAudience
+  - api.Navigator.runAdAuction
+  - api.Navigator.updateAdInterestGroups
+  - api.ProtectedAudience
+  - api.ProtectedAudience.queryFeatureSupport
+  - api.SharedStorageWorkletGlobalScope.interestGroups

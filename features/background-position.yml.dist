@@ -85,8 +85,12 @@ compat_features:
   - css.properties.background-position.right
   - css.properties.background-position.top
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-01-21
   # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
   #   firefox: "49"
   #   firefox_android: "49"
   #   safari: "15.4"

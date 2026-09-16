@@ -34,7 +34,6 @@ compat_features:
   - html.elements.iframe.csp
   - html.elements.meta.http-equiv.content-security-policy
   - html.global_attributes.nonce
-  - html.global_attributes.nonce.nonce_hiding
   - http.headers.Content-Security-Policy
   - http.headers.Content-Security-Policy-Report-Only
   - http.headers.Content-Security-Policy.base-uri
@@ -51,7 +50,6 @@ compat_features:
   - http.headers.Content-Security-Policy.meta-element-support
   - http.headers.Content-Security-Policy.object-src
   - http.headers.Content-Security-Policy.report-sample
-  - http.headers.Content-Security-Policy.report-to
   - http.headers.Content-Security-Policy.sandbox
   - http.headers.Content-Security-Policy.script-src
   - http.headers.Content-Security-Policy.script-src-attr

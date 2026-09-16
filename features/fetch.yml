@@ -1,6 +1,7 @@
 name: Fetch
 description: The `fetch()` method makes asynchronous HTTP requests.
 spec: https://fetch.spec.whatwg.org/
+group: fetch
 caniuse: fetch
 status:
   compute_from: api.fetch
@@ -23,9 +24,10 @@ compat_features:
   - api.Request
   - api.Request.Request
   - api.Request.Request.cross_origin_stripped
-  - api.Request.Request.init_keepalive_parameter
-  - api.Request.Request.init_referrer_parameter
-  - api.Request.Request.request_body_readablestream
+  - api.Request.Request.options_parameter
+  - api.Request.Request.options_parameter.body
+  - api.Request.Request.options_parameter.keepalive
+  - api.Request.Request.options_parameter.referrer
   - api.Request.Request.response_body_readablestream
   - api.Request.arrayBuffer
   - api.Request.blob
@@ -38,8 +40,6 @@ compat_features:
   - api.Request.credentials.default_same-origin
   - api.Request.destination
   - api.Request.duplex
-  - api.Request.formData
-  - api.Request.integrity
   - api.Request.isHistoryNavigation
   - api.Request.headers
   - api.Request.json
@@ -64,7 +64,6 @@ compat_features:
   - api.Response.bytes
   - api.Response.clone
   - api.Response.error_static
-  - api.Response.formData
   - api.Response.headers
   - api.Response.json
   - api.Response.json_static
@@ -79,5 +78,7 @@ compat_features:
   - api.fetch
   - api.fetch.authorization_removed_cross_origin
   - api.fetch.blob_data_support
-  - api.fetch.init_keepalive_parameter
-  - api.fetch.init_referrerPolicy_parameter
+  - api.fetch.options_parameter
+  - api.fetch.options_parameter.body
+  - api.fetch.options_parameter.keepalive
+  - api.fetch.options_parameter.referrerPolicy

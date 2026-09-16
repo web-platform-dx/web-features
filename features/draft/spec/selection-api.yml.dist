@@ -4,9 +4,8 @@
 status:
   baseline: false
   support:
-    chrome: "137"
-    chrome_android: "137"
-    edge: "137"
+    firefox: "142"
+    firefox_android: "142"
 compat_features:
   # baseline: high
   # baseline_low_date: 2018-04-30
@@ -61,7 +60,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "74"
-  #   chrome_android: "74"
-  #   edge: "79"
-  - api.Document.featurePolicy
+  #   firefox: "51"
+  #   firefox_android: "51"
+  - api.Selection.addRange.multiple_ranges

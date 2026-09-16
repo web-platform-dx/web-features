@@ -1,0 +1,15 @@
+name: Language detector
+description: >
+  The `LanguageDetector` API identifies the likely natural language that some text is written in.
+  You can use this API to supplement machine translation when the source source language is not known.
+spec: https://webmachinelearning.github.io/translation-api/#language-detector-api
+compat_features:
+  - api.LanguageDetector
+  - api.LanguageDetector.availability_static
+  - api.LanguageDetector.create_static
+  - api.LanguageDetector.destroy
+  - api.LanguageDetector.detect
+  - api.LanguageDetector.expectedInputLanguages
+  - api.LanguageDetector.inputQuota
+  - api.LanguageDetector.measureInputUsage
+# Missing from BCD: http.headers.Permissions-Policy.language-detector

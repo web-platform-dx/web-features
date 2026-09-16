@@ -327,8 +327,9 @@ compat_features:
   - api.AbstractRange.startContainer
   - api.AbstractRange.startOffset
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-09-18
+  # baseline_high_date: 2026-03-18
   # support:
   #   chrome: "58"
   #   chrome_android: "58"
@@ -373,12 +374,3 @@ compat_features:
   #   firefox_android: "52"
   #   safari: "1.3"
   - api.Node.selectstart_event
-
-  # baseline: false
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   safari: "1"
-  #   safari_ios: "1"
-  - api.Range.detach

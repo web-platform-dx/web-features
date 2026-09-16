@@ -63,6 +63,10 @@ compat_features:
   - api.HTMLOptionElement.selected
   - api.HTMLOptionElement.text
   - api.HTMLOptionElement.value
+  - api.HTMLOptionsCollection
+  - api.HTMLOptionsCollection.add
+  - api.HTMLOptionsCollection.length
+  - api.HTMLOptionsCollection.selectedIndex
   - api.HTMLSelectElement.add
   - api.HTMLSelectElement.disabled
   - api.HTMLSelectElement.form
@@ -112,6 +116,19 @@ compat_features:
   - html.elements.option.label
   - html.elements.option.selected
   - html.elements.option.value
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "4"
+  #   firefox_android: "4"
+  #   safari: "3.1"
+  #   safari_ios: "1"
+  - api.HTMLOptionsCollection.remove
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -206,6 +223,7 @@ compat_features:
   # baseline: false
   # support:
   #   chrome: "1"
+  #   chrome_android: "142"
   #   edge: "12"
   #   firefox: "1"
   #   firefox_android: "4"
@@ -213,5 +231,11 @@ compat_features:
   - html.elements.select.size
 
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "119"
+  #   edge: "119"
+  #   firefox: "122"
+  #   firefox_android: "145"
+  #   safari: "17"
+  #   safari_ios: "17.4"
   - html.elements.select.hr_in_select

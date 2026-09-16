@@ -4,21 +4,32 @@
 status:
   baseline: false
   support:
-    chrome: "108"
-    chrome_android: "108"
-    edge: "108"
+    chrome: "152"
+    chrome_android: "152"
+    edge: "152"
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "88"
-  #   chrome_android: "88"
-  #   edge: "88"
-  - http.headers.Permissions-Policy
-
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "108"
   #   chrome_android: "108"
   #   edge: "108"
-  - http.headers.Permissions-Policy.wildcards
+  - html.elements.iframe.allow.wildcards
+
+  # baseline: false
+  # support:
+  #   chrome: "120"
+  #   chrome_android: "120"
+  #   edge: "120"
+  - http.headers.Permissions-Policy-Report-Only
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "152"
+  #   chrome_android: "152"
+  #   edge: "152"
+  - api.PermissionsPolicy
+  - api.PermissionsPolicy.allowedFeatures
+  - api.PermissionsPolicy.allowsFeature
+  - api.PermissionsPolicy.features
+  - api.PermissionsPolicy.getAllowlistForFeature

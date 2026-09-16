@@ -246,8 +246,12 @@ compat_features:
   #   safari_ios: "14.5"
   - api.Blob.stream
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-01-21
   # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
   #   firefox: "128"
   #   firefox_android: "128"
   #   safari: "18"

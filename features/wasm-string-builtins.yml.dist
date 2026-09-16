@@ -10,10 +10,29 @@ status:
     firefox: "134"
     firefox_android: "134"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2025-12-12
+  # support:
+  #   chrome: "130"
+  #   chrome_android: "130"
+  #   edge: "130"
+  #   firefox: "134"
+  #   firefox_android: "134"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - webassembly.jsStringBuiltins
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "130"
+  #   chrome_android: "130"
+  #   edge: "130"
+  #   firefox: "134"
+  #   firefox_android: "134"
   - webassembly.api.Module.Module.compile_options
   - webassembly.api.compileStreaming_static.compile_options
   - webassembly.api.compile_static.compile_options
   - webassembly.api.instantiateStreaming_static.compile_options
   - webassembly.api.instantiate_static.compile_options
   - webassembly.api.validate_static.compile_options
-  - webassembly.jsStringBuiltins

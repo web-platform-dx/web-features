@@ -3,6 +3,11 @@ description: The `background-attachment` CSS property sets whether an element's 
 spec: https://drafts.csswg.org/css-backgrounds-3/#the-background-attachment
 group: background
 caniuse: background-attachment
+# TODO: https://github.com/web-platform-dx/web-features/issues/1971
+# Status changed: https://github.com/web-platform-dx/web-features/pull/3721
+# 2026-01-29 — low → false — Safari on iOS recognizes the `fixed` value, but does not fix the background to the viewport.
+# References:
+# - https://bugs.webkit.org/show_bug.cgi?id=275247
 compat_features:
   - css.properties.background-attachment
   - css.properties.background-attachment.fixed

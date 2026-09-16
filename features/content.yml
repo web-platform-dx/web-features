@@ -6,10 +6,14 @@ status:
   compute_from: css.properties.content
 compat_features:
   - css.properties.content
+  - css.properties.content.close-quote
   - css.properties.content.element_replacement
   - css.properties.content.gradient
+  - css.properties.content.no-close-quote
+  - css.properties.content.no-open-quote
   - css.properties.content.none
   - css.properties.content.none_applies_to_elements
+  - css.properties.content.open-quote
   - css.properties.content.normal
   - css.properties.content.url
   - css.types.string

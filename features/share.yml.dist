@@ -34,6 +34,26 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "128"
+  #   chrome_android: "76"
+  #   edge: "93"
+  #   firefox_android: "79"
+  #   safari: "14"
+  #   safari_ios: "14"
+  - api.Navigator.share.data_text_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "128"
+  #   chrome_android: "76"
+  #   edge: "93"
+  #   firefox_android: "96"
+  #   safari: "14"
+  #   safari_ios: "14"
+  - api.Navigator.canShare.data_text_parameter
+
+  # baseline: false
+  # support:
   #   chrome: "86"
   #   chrome_android: "86"
   #   edge: "86"
@@ -49,9 +69,7 @@ compat_features:
   #   safari: "14"
   #   safari_ios: "14"
   - api.Navigator.canShare.data_files_parameter
-  - api.Navigator.canShare.data_text_parameter
   - api.Navigator.share.data_files_parameter
-  - api.Navigator.share.data_text_parameter
 
   # baseline: false
   # support:

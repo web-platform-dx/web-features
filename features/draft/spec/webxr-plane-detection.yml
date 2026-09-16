@@ -1,0 +1,21 @@
+draft_date: 2026-03-16
+name: WebXR Plane Detection Module
+description: TODO
+spec: https://immersive-web.github.io/plane-detection/
+compat_features:
+  - api.XRFrame.detectedPlanes
+  - api.XRPlane
+  - api.XRPlane.lastChangedTime
+  - api.XRPlane.orientation
+  - api.XRPlane.planeSpace
+  - api.XRPlane.polygon
+  - api.XRPlane.semanticLabel
+  - api.XRPlaneSet
+  - api.XRPlaneSet.@@iterator
+  - api.XRPlaneSet.entries
+  - api.XRPlaneSet.forEach
+  - api.XRPlaneSet.has
+  - api.XRPlaneSet.keys
+  - api.XRPlaneSet.size
+  - api.XRPlaneSet.values
+  - api.XRSession.initiateRoomCapture

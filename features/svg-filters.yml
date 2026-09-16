@@ -1,6 +1,6 @@
 name: SVG filters
 description: The `<filter>` SVG element applies custom effects such as color manipulation, blurring, or morphing to SVG elements.
-spec: https://drafts.fxtf.org/filter-effects-1/
+spec: https://drafts.csswg.org/filter-effects-1/
 caniuse: svg-filters
 group: svg
 status:
@@ -214,8 +214,12 @@ compat_features:
   - css.properties.color-interpolation-filters.sRGB
   - css.properties.filter.svg_elements
   - css.properties.flood-color
+  - css.properties.flood-color.currentColor
+  - css.properties.flood-color.transparent
   - css.properties.flood-opacity
   - css.properties.lighting-color
+  - css.properties.lighting-color.currentColor
+  - css.properties.lighting-color.transparent
   - svg.elements.feBlend
   - svg.elements.feBlend.in
   - svg.elements.feBlend.in2

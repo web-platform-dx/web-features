@@ -1,0 +1,15 @@
+name: Element-scoped view transitions
+description: >
+  The `startViewTransition()` method of an `Element` object starts a view transition that affects only that element's DOM tree.
+  You can use this to run separate elements' transitions concurrently.
+spec: https://drafts.csswg.org/css-view-transitions-2/#scoped-vt
+group: view-transitions
+compat_features:
+  - api.Element.activeViewTransition
+  - api.Element.startViewTransition
+  - api.ViewTransition.transitionRoot
+  - css.properties.view-transition-scope
+  - css.properties.view-transition-scope.all
+  - css.properties.view-transition-scope.none
+# This feature is subordinate to view-transitions. It should probably merge into
+# it one day.

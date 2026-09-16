@@ -231,6 +231,7 @@ compat_features:
   #   safari: "3.1"
   #   safari_ios: "3"
   - api.HTMLMediaElement.defaultPlaybackRate
+  - api.HTMLMediaElement.playbackRate
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -384,9 +385,3 @@ compat_features:
   #   safari_ios: "10"
   - api.HTMLVideoElement.playsInline
   - html.elements.video.playsinline
-
-  # baseline: false
-  # support:
-  #   safari: "3.1"
-  #   safari_ios: "3"
-  - api.HTMLMediaElement.playbackRate

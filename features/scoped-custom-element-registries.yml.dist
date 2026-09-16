@@ -3,7 +3,12 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "146"
+    chrome_android: "146"
+    edge: "146"
+    safari: "26"
+    safari_ios: "26"
 compat_features:
   - api.CustomElementRegistry.CustomElementRegistry
   - api.CustomElementRegistry.initialize

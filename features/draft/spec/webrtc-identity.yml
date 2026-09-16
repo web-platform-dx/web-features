@@ -1,4 +1,4 @@
-draft_date: 2024-09-09
+draft_date: 2026-05-08
 name: Identity for WebRTC 1.0
 description: TODO
 spec: https://w3c.github.io/webrtc-identity/
@@ -11,3 +11,7 @@ compat_features:
   - api.RTCPeerConnection.idpLoginUrl
   - api.RTCPeerConnection.peerIdentity
   - api.RTCPeerConnection.setIdentityProvider
+
+# The following features in the spec are already part of web-features:
+# - WebRTC:
+#   - api.RTCPeerConnection.RTCPeerConnection.configuration_peerIdentity_parameter

@@ -29,6 +29,23 @@ compat_features:
   - css.at-rules.keyframes.named_range_keyframes
   - css.at-rules.keyframes.ignore_important_declarations
   - css.properties.animation
+  - css.properties.animation.alternate
+  - css.properties.animation.alternate-reverse
+  - css.properties.animation.auto
+  - css.properties.animation.backwards
+  - css.properties.animation.both
+  - css.properties.animation.ease
+  - css.properties.animation.ease-in
+  - css.properties.animation.ease-in-out
+  - css.properties.animation.ease-out
+  - css.properties.animation.forwards
+  - css.properties.animation.infinite
+  - css.properties.animation.linear
+  - css.properties.animation.none
+  - css.properties.animation.normal
+  - css.properties.animation.reverse
+  - css.properties.animation.step-end
+  - css.properties.animation.step-start
   - css.properties.animation-delay
   - css.properties.animation-direction
   - css.properties.animation-direction.alternate
@@ -50,5 +67,12 @@ compat_features:
   - css.properties.animation-play-state.paused
   - css.properties.animation-play-state.running
   - css.properties.animation-timing-function
+  - css.properties.animation-timing-function.ease
+  - css.properties.animation-timing-function.ease-in
+  - css.properties.animation-timing-function.ease-in-out
+  - css.properties.animation-timing-function.ease-out
   - css.properties.animation-timing-function.jump
+  - css.properties.animation-timing-function.linear
+  - css.properties.animation-timing-function.step-end
+  - css.properties.animation-timing-function.step-start
   - css.types.time

@@ -1,0 +1,9 @@
+name: clipboardchange
+description: The `clipboardchange` event for `navigator.clipboard` fires when the user modifies the clipboard's contents.
+spec: https://w3c.github.io/clipboard-apis/#clipboard-event-clipboardchange
+group: clipboard
+compat_features:
+  - api.ClipboardChangeEvent
+  - api.ClipboardChangeEvent.ClipboardChangeEvent
+  - api.ClipboardChangeEvent.changeId
+  - api.ClipboardChangeEvent.types

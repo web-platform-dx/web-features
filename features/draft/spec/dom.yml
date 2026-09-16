@@ -1,9 +1,22 @@
-draft_date: 2025-06-19
+draft_date: 2026-08-27
 name: DOM
 description: TODO
 spec: https://dom.spec.whatwg.org/
 compat_features:
-  - api.Document.featurePolicy
+  - api.CustomElementRegistry.define.html_name_validity
+  - api.CustomElementRegistry.whenDefined.html_name_validity
+  - api.Document.createAttribute.html_name_validity
+  - api.Document.createAttributeNS.html_name_validity
+  - api.Document.createElement.html_name_validity
+  - api.Document.createElement.options_parameter.customElementRegistry_option
+  - api.Document.createElement.options_parameter.options_is_parameter
+  - api.Document.createElementNS.html_name_validity
+  - api.Document.createElementNS.options_parameter.customElementRegistry_option
+  - api.Document.createElementNS.options_parameter.options_is_parameter
+  - api.Element.attachShadow.options_slotAssignment_parameter
+  - api.Element.setAttribute.html_name_validity
+  - api.Element.setAttributeNodeNS.html_name_validity
+  - api.Element.toggleAttribute.html_name_validity
 
 # The following features in the spec are already part of web-features:
 # - AbortController and AbortSignal:
@@ -19,9 +32,10 @@ compat_features:
 #   - api.AbortSignal.aborted
 #   - api.AbortSignal.reason
 #   - api.AbortSignal.throwIfAborted
-#   - api.AbortSignal.timeout_static
 # - AbortSignal.any():
 #   - api.AbortSignal.any_static
+# - AbortSignal.timeout():
+#   - api.AbortSignal.timeout_static
 # - Selection:
 #   - api.AbstractRange
 #   - api.AbstractRange.collapsed
@@ -41,7 +55,6 @@ compat_features:
 #   - api.Range.compareBoundaryPoints
 #   - api.Range.comparePoint
 #   - api.Range.deleteContents
-#   - api.Range.detach
 #   - api.Range.endContainer
 #   - api.Range.endOffset
 #   - api.Range.extractContents
@@ -284,6 +297,7 @@ compat_features:
 #   - api.NodeList.length
 #   - api.NodeList.values
 #   - api.ProcessingInstruction
+#   - api.ProcessingInstruction.doc_xml
 #   - api.ProcessingInstruction.target
 #   - api.Text
 #   - api.Text.Text
@@ -369,7 +383,6 @@ compat_features:
 #   - api.HTMLSlotElement.slotchange_event
 #   - api.Text.assignedSlot
 #   - html.elements.slot
-#   - html.elements.slot.name
 #   - html.global_attributes.slot
 # - Shadow DOM:
 #   - api.Element.attachShadow
@@ -403,16 +416,15 @@ compat_features:
 #   - api.MutationRecord.removedNodes
 #   - api.MutationRecord.target
 #   - api.MutationRecord.type
+# - HTML processing instructions:
+#   - api.ProcessingInstruction.getAttribute
+#   - api.ProcessingInstruction.getAttributeNames
+#   - api.ProcessingInstruction.hasAttribute
+#   - api.ProcessingInstruction.hasAttributes
+#   - api.ProcessingInstruction.removeAttribute
+#   - api.ProcessingInstruction.setAttribute
+#   - api.ProcessingInstruction.toggleAttribute
 # - Imperative slot assignment:
 #   - api.ShadowRoot.slotAssignment
-# - XSLT:
-#   - api.XSLTProcessor
-#   - api.XSLTProcessor.XSLTProcessor
-#   - api.XSLTProcessor.clearParameters
-#   - api.XSLTProcessor.getParameter
-#   - api.XSLTProcessor.importStylesheet
-#   - api.XSLTProcessor.removeParameter
-#   - api.XSLTProcessor.reset
-#   - api.XSLTProcessor.setParameter
-#   - api.XSLTProcessor.transformToDocument
-#   - api.XSLTProcessor.transformToFragment
+# - beforeunload:
+#   - api.Window.beforeunload_event.preventdefault_activation

@@ -3,8 +3,21 @@
 
 status:
   baseline: false
-  support:
-    chrome: "136"
-    edge: "136"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "136"
+  #   edge: "136"
   - api.MediaStreamTrack.getSettings.return_object_property_screenPixelRatio
+
+  # baseline: false
+  # support:
+  #   chrome: "141"
+  #   edge: "141"
+  - api.MediaStreamTrack.applyConstraints.restrictOwnAudio_constraint
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.MediaDevices.getDisplayMedia.windowAudio_option

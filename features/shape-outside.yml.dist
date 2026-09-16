@@ -46,5 +46,8 @@ compat_features:
   - css.properties.shape-image-threshold.percentages
 
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "149"
+  #   chrome_android: "149"
+  #   edge: "149"
   - css.properties.shape-outside.path

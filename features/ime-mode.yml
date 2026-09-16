@@ -3,7 +3,11 @@ description: The `ime-mode` CSS property sets the state of the input method edit
 spec: https://drafts.csswg.org/css-ui-3/#input-method-editor
 group: css
 discouraged:
+  reason: You should not modify the state of input method editor. Instead, you should use hints (such as a `lang` or `inputmode` attribute) to help the browser select the right user interface for text input.
   according_to:
     - https://drafts.csswg.org/css-ui-3/#input-method-editor
+  alternatives:
+    - inputmode
+    - lang-attr
 compat_features:
   - css.properties.ime-mode

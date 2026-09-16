@@ -126,7 +126,7 @@ export class Feature {
     let unknown = false;
     for (const s of this.supportStatements(release.browser)) {
       const supported = s.supportedInDetails(release);
-      if (supported.supported && !supported.qualifications) {
+      if (supported.supported && !("qualifications" in supported)) {
         return true;
       }
 

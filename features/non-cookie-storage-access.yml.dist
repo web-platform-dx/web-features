@@ -42,10 +42,15 @@ compat_features:
   - api.StorageAccessHandle.revokeObjectURL
   - api.StorageAccessHandle.sessionStorage
 
+  # baseline: false
+  # support:
+  #   chrome: "125"
+  #   chrome_android: "148"
+  - api.SharedWorker.SharedWorker.options_sameSiteCookies_parameter
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "125"
   - api.Document.requestStorageAccess.types_parameter.types_SharedWorker_parameter
-  - api.SharedWorker.SharedWorker.options_sameSiteCookies_parameter
   - api.StorageAccessHandle.SharedWorker

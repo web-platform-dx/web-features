@@ -130,6 +130,18 @@ compat_features:
   #   safari_ios: "11"
   - api.Performance.resourcetimingbufferfull_event
 
+  # baseline: low
+  # baseline_low_date: 2026-06-16
+  # support:
+  #   chrome: "115"
+  #   chrome_android: "115"
+  #   edge: "115"
+  #   firefox: "152"
+  #   firefox_android: "152"
+  #   safari: "26.4"
+  #   safari_ios: "26.4"
+  - api.PerformanceResourceTiming.firstInterimResponseStart
+
   # baseline: false
   # support:
   #   chrome: "43"
@@ -151,27 +163,25 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "107"
-  #   chrome_android: "107"
-  #   edge: "107"
-  - api.PerformanceResourceTiming.renderBlockingStatus
-
-  # baseline: false
-  # support:
-  #   chrome: "115"
-  #   chrome_android: "115"
-  #   edge: "115"
-  - api.PerformanceResourceTiming.firstInterimResponseStart
-
-  # baseline: false
-  # support:
   #   chrome: "117"
   #   chrome_android: "117"
   #   edge: "117"
+  #   safari: "26.4"
+  #   safari_ios: "26.4"
   - api.PerformanceResourceTiming.deliveryType
 
   # baseline: false
   # support:
+  #   chrome: "148"
+  #   chrome_android: "148"
+  #   edge: "148"
   #   firefox: "129"
   #   firefox_android: "129"
   - api.PerformanceResourceTiming.contentType
+
+  # baseline: false
+  # support:
+  #   chrome: "107"
+  #   chrome_android: "107"
+  #   edge: "107"
+  - api.PerformanceResourceTiming.renderBlockingStatus

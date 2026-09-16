@@ -63,17 +63,3 @@ compat_features:
   #   safari: "3.1"
   #   safari_ios: "2"
   - api.HTMLIFrameElement.getSVGDocument
-
-  # baseline: high
-  # baseline_low_date: 2020-07-28
-  # baseline_high_date: 2023-01-28
-  # support:
-  #   chrome: "60"
-  #   chrome_android: "60"
-  #   edge: "79"
-  #   firefox: "74"
-  #   firefox_android: "79"
-  #   safari: "11.1"
-  #   safari_ios: "11.3"
-  - api.HTMLIFrameElement.allow
-  - html.elements.iframe.allow

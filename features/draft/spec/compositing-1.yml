@@ -1,0 +1,35 @@
+draft_date: 2025-11-03
+name: Compositing and Blending Level 1
+description: TODO
+spec: https://drafts.csswg.org/compositing-1/
+compat_features:
+  - css.properties.isolation.auto
+  - css.properties.isolation.isolate
+  - css.properties.mix-blend-mode.color
+  - css.properties.mix-blend-mode.color-burn
+  - css.properties.mix-blend-mode.color-dodge
+  - css.properties.mix-blend-mode.darken
+  - css.properties.mix-blend-mode.difference
+  - css.properties.mix-blend-mode.exclusion
+  - css.properties.mix-blend-mode.hard-light
+  - css.properties.mix-blend-mode.hue
+  - css.properties.mix-blend-mode.lighten
+  - css.properties.mix-blend-mode.luminosity
+  - css.properties.mix-blend-mode.multiply
+  - css.properties.mix-blend-mode.normal
+  - css.properties.mix-blend-mode.overlay
+  - css.properties.mix-blend-mode.saturation
+  - css.properties.mix-blend-mode.screen
+  - css.properties.mix-blend-mode.soft-light
+
+# The following features in the spec are already part of web-features:
+# - background-blend-mode:
+#   - css.properties.background-blend-mode
+#   - css.types.blend-mode
+# - isolation:
+#   - css.properties.isolation
+# - mix-blend-mode:
+#   - css.properties.mix-blend-mode
+#   - css.properties.mix-blend-mode.plus-darker
+#   - css.properties.mix-blend-mode.plus-lighter
+#   - css.properties.mix-blend-mode.svg_elements

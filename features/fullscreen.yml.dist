@@ -11,8 +11,9 @@ status:
     firefox_android: "64"
     safari: "16.4"
 compat_features:
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2023-03-27
+  # baseline_high_date: 2025-09-27
   # support:
   #   chrome: "69"
   #   chrome_android: "69"
@@ -76,6 +77,16 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "71"
+  #   chrome_android: "71"
+  #   edge: "79"
+  #   firefox: "151"
+  #   firefox_android: "151"
+  #   safari: "16.4"
+  - api.Element.requestFullscreen.options_parameter
+
+  # baseline: false
+  # support:
   #   chrome: "62"
   #   chrome_android: "62"
   #   edge: "79"
@@ -89,7 +100,7 @@ compat_features:
   #   chrome_android: "71"
   #   edge: "79"
   #   safari: "16.4"
-  - api.Element.requestFullscreen.options_navigationUI_parameter
+  - api.Element.requestFullscreen.options_parameter.navigationUI_option
 
   # baseline: false
   # support:
