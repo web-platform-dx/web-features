@@ -227,6 +227,14 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/whatwg/html/pull/9546",
         "Allowed because the <input type=\"checkbox\" switch> feature is not yet in a formal spec. Remove this exception when a formal spec is available."
+    ],
+    [
+        "https://github.com/whatwg/html/pull/12753",
+        "Allowed because it's shipping in Chrome. Replace with https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-parsing-and-serialization when above PR is merged."
+    ],
+    [
+        "https://github.com/whatwg/html/pull/12758",
+        "Allowed because it's shipping in Chrome. Replace with https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-parsing-and-serialization when above PR is merged."
     ]
 ];
 
