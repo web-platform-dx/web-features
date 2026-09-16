@@ -173,20 +173,12 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because there is no spec yet for Web Install."
     ],
     [
-        "https://github.com/WebAssembly/branch-hinting/blob/main/proposals/branch-hinting/Overview.md",
-        "Allowed because there is no other specification to link to."
-    ],
-    [
         "https://www.w3.org/TR/2019/WD-feature-policy-1-20190416/",
         "Allowed because feature policy was replaced by permissions policy."
     ],
     [
         "https://github.com/whatwg/html/pull/11723",
         "Allowed because the focusgroup spec PR hasn't landed yet. Once the PR merges, remove this and add the spec URL to the focusgroup feature."
-    ],
-    [
-        "http://webmachinelearning.github.io/prompt-api/",
-        "Allowed because that's where LanguageModel (aka Prompt API) spec currently lives."
     ],
     [
         "https://jpeg.org/jpeg/#content",
