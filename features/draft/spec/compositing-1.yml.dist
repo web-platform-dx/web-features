@@ -18,6 +18,34 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
+  #   chrome: "35"
+  #   chrome_android: "35"
+  #   edge: "79"
+  #   firefox: "30"
+  #   firefox_android: "30"
+  #   safari: "8"
+  #   safari_ios: "8"
+  - css.properties.background-blend-mode.color
+  - css.properties.background-blend-mode.color-burn
+  - css.properties.background-blend-mode.color-dodge
+  - css.properties.background-blend-mode.darken
+  - css.properties.background-blend-mode.difference
+  - css.properties.background-blend-mode.exclusion
+  - css.properties.background-blend-mode.hard-light
+  - css.properties.background-blend-mode.hue
+  - css.properties.background-blend-mode.lighten
+  - css.properties.background-blend-mode.luminosity
+  - css.properties.background-blend-mode.multiply
+  - css.properties.background-blend-mode.normal
+  - css.properties.background-blend-mode.overlay
+  - css.properties.background-blend-mode.saturation
+  - css.properties.background-blend-mode.screen
+  - css.properties.background-blend-mode.soft-light
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
   #   chrome: "41"
   #   chrome_android: "41"
   #   edge: "79"

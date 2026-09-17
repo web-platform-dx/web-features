@@ -1,10 +1,15 @@
-draft_date: 2026-05-08
+draft_date: 2026-09-17
 name: CSS Text Decoration Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-text-decor-4/
 compat_features:
   - css.properties.text-decoration-inset
   - css.properties.text-decoration-inset.auto
+  - css.properties.text-decoration-skip-spaces
+  - css.properties.text-decoration-skip-spaces.all
+  - css.properties.text-decoration-skip-spaces.end
+  - css.properties.text-decoration-skip-spaces.none
+  - css.properties.text-decoration-skip-spaces.start
   - css.properties.text-decoration.auto
   - css.properties.text-decoration.from-font
   - css.properties.text-decoration.grammar-error

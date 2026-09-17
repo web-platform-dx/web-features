@@ -16,10 +16,6 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "3"
   #   safari_ios: "1"
-  - api.HTMLOptionsCollection
-  - api.HTMLOptionsCollection.add
-  - api.HTMLOptionsCollection.length
-  - api.HTMLOptionsCollection.selectedIndex
   - api.Window.unload_event
 
   # baseline: high
@@ -34,19 +30,6 @@ compat_features:
   #   safari: ≤4
   #   safari_ios: ≤3.2
   - html.global_attributes.class
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "3.1"
-  #   safari_ios: "1"
-  - api.HTMLOptionsCollection.remove
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -1026,6 +1009,12 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "125"
+  #   edge: "125"
+  - api.NotRestoredReasonDetails.reason.unload-listener
+
+  # baseline: false
+  # support:
   #   firefox: "151"
   #   firefox_android: "151"
   - html.elements.template.shadowrootslotassignment
@@ -1043,7 +1032,6 @@ compat_features:
   # baseline: false
   # support: {}
   - api.Document.parseHTMLUnsafe_static.options_sanitizer_parameter
-  - api.Element.setHTMLUnsafe.options_runscripts_parameter
   - api.MathMLAnchorElement.hash
   - api.MathMLAnchorElement.host
   - api.MathMLAnchorElement.hostname
@@ -1056,5 +1044,5 @@ compat_features:
   - api.MathMLAnchorElement.search
   - api.MathMLAnchorElement.type
   - api.MathMLAnchorElement.username
-  - api.ShadowRoot.setHTMLUnsafe.options_runscripts_parameter
+  - api.NotRestoredReasonDetails.reason.websocket
   - html.elements.track.kind.descriptions
