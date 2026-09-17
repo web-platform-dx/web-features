@@ -1,11 +1,10 @@
-draft_date: 2026-09-03
+draft_date: 2026-09-17
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
   - api.Document.designMode
   - api.Document.parseHTMLUnsafe_static.options_sanitizer_parameter
-  - api.Element.setHTMLUnsafe.options_runscripts_parameter
   - api.Element.setHTMLUnsafe.options_sanitizer_parameter
   - api.ElementInternals.shadowRoot
   - api.ErrorEvent
@@ -36,11 +35,6 @@ compat_features:
   - api.HTMLInputElement.showPicker.week_input
   - api.HTMLMediaElement.getStartDate
   - api.HTMLMediaElement.playbackRate.negative_values
-  - api.HTMLOptionsCollection
-  - api.HTMLOptionsCollection.add
-  - api.HTMLOptionsCollection.length
-  - api.HTMLOptionsCollection.remove
-  - api.HTMLOptionsCollection.selectedIndex
   - api.HTMLScriptElement.noModule
   - api.HTMLSelectedContentElement
   - api.HTMLSourceElement
@@ -85,7 +79,6 @@ compat_features:
   - api.ServiceWorker.error_event
   - api.ShadowRoot.activeElement
   - api.ShadowRoot.innerHTML
-  - api.ShadowRoot.setHTMLUnsafe.options_runscripts_parameter
   - api.ShadowRoot.setHTMLUnsafe.options_sanitizer_parameter
   - api.SharedWorker.SharedWorker.enforces_trusted_types
   - api.SharedWorker.SharedWorker.options_extendedLifetime_parameter
@@ -574,10 +567,8 @@ compat_features:
 #   - api.Location.search
 #   - api.Location.toString
 #   - api.Window.location
-# - Unsanitized HTML parsing methods:
+# - Unsanitized HTML parsing:
 #   - api.Document.parseHTMLUnsafe_static
-#   - api.Element.setHTMLUnsafe
-#   - api.ShadowRoot.setHTMLUnsafe
 # - Sanitizer API:
 #   - api.Document.parseHTML_static
 #   - api.Element.setHTML
@@ -639,6 +630,11 @@ compat_features:
 # - Keyboard events:
 #   - api.Element.keydown_event
 #   - api.Element.keyup_event
+# - HTML setter methods:
+#   - api.Element.setHTMLUnsafe
+#   - api.Element.setHTMLUnsafe.options_runscripts_parameter
+#   - api.ShadowRoot.setHTMLUnsafe
+#   - api.ShadowRoot.setHTMLUnsafe.options_runscripts_parameter
 # - Wheel events:
 #   - api.Element.wheel_event
 # - Form-associated custom elements:
@@ -1675,6 +1671,11 @@ compat_features:
 #   - api.HTMLOptionElement.selected
 #   - api.HTMLOptionElement.text
 #   - api.HTMLOptionElement.value
+#   - api.HTMLOptionsCollection
+#   - api.HTMLOptionsCollection.add
+#   - api.HTMLOptionsCollection.length
+#   - api.HTMLOptionsCollection.remove
+#   - api.HTMLOptionsCollection.selectedIndex
 #   - api.HTMLSelectElement
 #   - api.HTMLSelectElement.add
 #   - api.HTMLSelectElement.add.index_before_parameter
@@ -2238,7 +2239,7 @@ compat_features:
 #   - api.Window.storage_event
 # - ToggleEvent source:
 #   - api.ToggleEvent.source
-# - Page visibility state:
+# - Page visibility state performance entries:
 #   - api.VisibilityStateEntry
 #   - api.VisibilityStateEntry.duration
 #   - api.VisibilityStateEntry.entryType
