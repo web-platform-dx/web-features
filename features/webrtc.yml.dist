@@ -1175,6 +1175,18 @@ compat_features:
   - api.RTCIceTransport.getSelectedCandidatePair
   - api.RTCIceTransport.selectedcandidatepairchange_event
 
+  # baseline: low
+  # baseline_low_date: 2026-09-14
+  # support:
+  #   chrome: "124"
+  #   chrome_android: "124"
+  #   edge: "124"
+  #   firefox: "115"
+  #   firefox_android: "115"
+  #   safari: "27"
+  #   safari_ios: "27"
+  - api.RTCRtpReceiver.jitterBufferTarget
+
   # baseline: false
   # support:
   #   chrome: "58"
@@ -1259,15 +1271,6 @@ compat_features:
   #   firefox_android: "118"
   - api.RTCRtpTransceiver.currentDirection.stopped_value
   - api.RTCRtpTransceiver.direction.value_stopped
-
-  # baseline: false
-  # support:
-  #   chrome: "124"
-  #   chrome_android: "124"
-  #   edge: "124"
-  #   firefox: "115"
-  #   firefox_android: "115"
-  - api.RTCRtpReceiver.jitterBufferTarget
 
   # baseline: false
   # support:

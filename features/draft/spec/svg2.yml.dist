@@ -160,8 +160,16 @@ compat_features:
   #   chrome: "137"
   #   chrome_android: "137"
   #   edge: "137"
-  - svg.elements.use.omit_external_fragment
+  #   firefox: "23"
+  #   firefox_android: "23"
   - svg.global_attributes.transform.svg_root
+
+  # baseline: false
+  # support:
+  #   chrome: "137"
+  #   chrome_android: "137"
+  #   edge: "137"
+  - svg.elements.use.omit_external_fragment
 
   # baseline: false
   # support:

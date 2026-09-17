@@ -13,7 +13,15 @@ compat_features:
   #   chrome: "108"
   #   chrome_android: "108"
   #   edge: "108"
+  #   safari: "27"
+  #   safari_ios: "27"
   - api.CredentialsContainer.get.identity_option
+
+  # baseline: false
+  # support:
+  #   chrome: "108"
+  #   chrome_android: "108"
+  #   edge: "108"
   - api.IdentityCredential
   - api.IdentityCredential.token
 

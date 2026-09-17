@@ -3,7 +3,12 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "88"
+    chrome_android: "88"
+    edge: "88"
+    firefox: "97"
+    firefox_android: "97"
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-07-28
@@ -52,8 +57,3 @@ compat_features:
   #   firefox: "97"
   #   firefox_android: "97"
   - css.types.basic-shape.path.d
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - css.types.basic-shape.path.shape-outside

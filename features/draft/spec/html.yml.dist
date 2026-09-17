@@ -648,6 +648,18 @@ compat_features:
   #   safari_ios: "26.2"
   - api.NavigateEvent.sourceElement
 
+  # baseline: low
+  # baseline_low_date: 2026-09-14
+  # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  #   firefox: "150"
+  #   firefox_android: "150"
+  #   safari: "27"
+  #   safari_ios: "27"
+  - api.HTMLImageElement.sizes.auto
+
   # baseline: false
   # support:
   #   chrome: "4"
@@ -790,21 +802,21 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "126"
-  #   chrome_android: "126"
-  #   edge: "126"
-  #   firefox: "150"
-  #   firefox_android: "150"
-  - api.HTMLImageElement.sizes.auto
-
-  # baseline: false
-  # support:
   #   chrome: "131"
   #   chrome_android: "131"
   #   edge: "131"
   #   safari: "18.4"
   #   safari_ios: "18.4"
   - http.headers.Cross-Origin-Opener-Policy.noopener-allow-popups
+
+  # baseline: false
+  # support:
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
+  #   safari: "27"
+  #   safari_ios: "27"
+  - api.HTMLSelectedContentElement
 
   # baseline: false
   # support:
@@ -927,13 +939,6 @@ compat_features:
   #   chrome_android: "134"
   #   edge: "134"
   - api.OffscreenCanvasRenderingContext2D.getContextAttributes
-
-  # baseline: false
-  # support:
-  #   chrome: "135"
-  #   chrome_android: "135"
-  #   edge: "135"
-  - api.HTMLSelectedContentElement
 
   # baseline: false
   # support:
