@@ -27,6 +27,16 @@ const argv = yargs(process.argv.slice(2))
       );
     },
   })
+  .option("start-date", {
+    description:
+      "Override the commit-derived start date, for calendar-based reports. Takes a timestamp like 2026-09-21 23:12:00 that is assumed to be UTC.",
+    type: "string",
+  })
+  .option("end-date", {
+    description:
+      "Override the commit-derived end date, for calendar-based reports. Takes a timestamp like 2026-09-21 23:12:00 that is assumed to be UTC.",
+    type: "string",
+  })
   .parseSync();
 
 function main() {
@@ -41,14 +51,12 @@ function main() {
 }
 
 function report(stats: Result): string {
-  const startDate = Temporal.Instant.from(
-    stats.change.timestamp,
-  ).toZonedDateTimeISO("Etc/UTC");
-  const endDate = Temporal.Instant.from(stats.timestamp).toZonedDateTimeISO(
-    "Etc/UTC",
+  const startDate = timeStampToZonedDateTimeUTC(
+    argv.startDate ?? stats.change.timestamp,
   );
+  const endDate = timeStampToZonedDateTimeUTC(argv.endDate ?? stats.timestamp);
   const duration = endDate.since(startDate);
-  const revisions = `[\`${stats.change.hash.slice(0, 8)}..${stats.hash.slice(0, 8)}\`](https://github.com/web-platform-dx/web-features/compare/${stats.change.hash}..${stats.hash})`;
+  const revisions = `[\`${stats.change.hash.slice(0, 8)}...${stats.hash.slice(0, 8)}\`](https://github.com/web-platform-dx/web-features/compare/${stats.change.hash}..${stats.hash})`;
 
   return [
     "### BCD coverage gap",
@@ -69,7 +77,7 @@ function report(stats: Result): string {
     "",
     reportCaniuseCoverage(stats),
     "",
-    `From ${formatDate(startDate)} to ${formatDate(endDate)} (${duration.days} days, ${revisions})`,
+    `This report reflects ${revisions}, from ${formatDate(startDate)} to ${formatDate(endDate)} (${duration.round("days").total("days")} days).`,
   ].join("\n");
 }
 
@@ -246,6 +254,12 @@ function reportCaniuseCoverage(stats: Result): string {
   const head = [arrayToTableRow(headers), alignTable(alignment)].join("\n");
   const body = rows.map(arrayToTableRow).join("\n");
   return [head, body].join("\n");
+}
+
+function timeStampToZonedDateTimeUTC(
+  timestamp: string,
+): Temporal.ZonedDateTime {
+  return Temporal.Instant.from(timestamp).toZonedDateTimeISO("Etc/UTC");
 }
 
 function formatDate(date: Temporal.ZonedDateTime): string {
