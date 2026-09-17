@@ -1,4 +1,4 @@
-draft_date: 2026-08-21
+draft_date: 2026-09-17
 name: CSS Text Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-text-4/
@@ -24,6 +24,10 @@ compat_features:
   - css.properties.white-space-trim.discard-inner
   - css.properties.white-space-trim.none
   - css.properties.white-space.collapse
+  - css.properties.white-space.discard-after
+  - css.properties.white-space.discard-before
+  - css.properties.white-space.discard-inner
+  - css.properties.white-space.none
   - css.properties.white-space.preserve
   - css.properties.white-space.preserve-breaks
   - css.properties.white-space.preserve-spaces
@@ -91,8 +95,6 @@ compat_features:
 #   - css.properties.text-autospace.insert
 #   - css.properties.text-autospace.no-autospace
 #   - css.properties.text-autospace.normal
-#   - css.properties.text-autospace.punctuation
-#   - css.properties.text-autospace.replace
 # - text-fit:
 #   - css.properties.text-fit
 #   - css.properties.text-fit.grow

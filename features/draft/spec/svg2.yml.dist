@@ -181,6 +181,16 @@ compat_features:
   # baseline: false
   # support:
   #   firefox: "155"
+  #   firefox_android: "155"
+  - api.SVGGraphicsElement.getBBox.options_parameter
+  - api.SVGGraphicsElement.getBBox.options_parameter.options_clipped_parameter
+  - api.SVGGraphicsElement.getBBox.options_parameter.options_fill_parameter
+  - api.SVGGraphicsElement.getBBox.options_parameter.options_markers_parameter
+  - api.SVGGraphicsElement.getBBox.options_parameter.options_stroke_parameter
+
+  # baseline: false
+  # support:
+  #   firefox: "155"
   - api.SVGAElement.hash
   - api.SVGAElement.host
   - api.SVGAElement.hostname
