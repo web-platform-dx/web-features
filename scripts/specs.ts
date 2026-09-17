@@ -45,10 +45,6 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because this URL actually serves the same content as the Editor Draft URL, and because the ED URL is a bit verbose. See https://github.com/mdn/browser-compat-data/pull/22569#issuecomment-1992632118."
     ],
     [
-        "https://github.com/WebAssembly/spec/blob/main/proposals/bulk-memory-operations/Overview.md",
-        "Allowed because there is no other specification to link to."
-    ],
-    [
         "https://github.com/WebAssembly/exception-handling/blob/main/proposals/exception-handling/Exceptions.md",
         "Allowed because there is no other specification to link to."
     ],
