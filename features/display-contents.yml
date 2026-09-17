@@ -6,3 +6,9 @@ group: css
 compat_features:
   - css.properties.display.contents
   - css.properties.display.contents.contents_unusual
+# Status override due to missing data upstream. Revert when
+# `css.properties.display.contents.focusable_elements` is reinstated to this
+# feature.
+status:
+  baseline: false
+  support: {}
