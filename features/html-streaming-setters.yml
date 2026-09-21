@@ -5,6 +5,7 @@ spec: https://github.com/whatwg/html/pull/12758
 #spec: https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-parsing-and-serialization
 group: dom
 compat_features:
+  - api.Blob.textStream
   - api.CharacterData.streamAfterHTML
   - api.CharacterData.streamAfterHTMLUnsafe
   - api.CharacterData.streamBeforeHTML
@@ -31,6 +32,8 @@ compat_features:
   - api.Element.streamReplaceHTMLUnsafe
   - api.Element.streamReplaceWithHTML
   - api.Element.streamReplaceWithHTMLUnsafe
+  - api.Request.textStream
+  - api.Response.textStream
   - api.ShadowRoot.streamAfterHTML
   - api.ShadowRoot.streamAfterHTMLUnsafe
   - api.ShadowRoot.streamAppendHTML
