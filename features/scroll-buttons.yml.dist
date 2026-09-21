@@ -3,13 +3,11 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "135"
+    chrome_android: "135"
+    edge: "135"
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "135"
-  #   chrome_android: "135"
-  #   edge: "135"
   - css.selectors.scroll-button
   - css.selectors.scroll-button.block-end
   - css.selectors.scroll-button.block-start
@@ -20,9 +18,3 @@ compat_features:
   - css.selectors.scroll-button.right
   - css.selectors.scroll-button.star
   - css.selectors.scroll-button.up
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - css.selectors.scroll-button.next
-  - css.selectors.scroll-button.prev

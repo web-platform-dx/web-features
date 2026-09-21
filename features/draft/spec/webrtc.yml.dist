@@ -3,13 +3,17 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "155"
 compat_features:
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-09-01
   # support:
   #   chrome: "74"
   #   chrome_android: "74"
   #   edge: "79"
+  #   firefox: "155"
+  #   firefox_android: "155"
   #   safari: "15.4"
   #   safari_ios: "15.4"
   - api.RTCError.errorDetail.sctp-failure

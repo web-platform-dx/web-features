@@ -83,13 +83,16 @@ compat_features:
   - api.Element.beforeinput_event
   - api.InputEvent.getTargetRanges
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-09-14
   # support:
   #   chrome: "60"
   #   chrome_android: "60"
   #   edge: "79"
   #   firefox: "31"
   #   firefox_android: "31"
+  #   safari: "27"
+  #   safari_ios: "27"
   - api.InputEvent.isComposing
 
   # baseline: false

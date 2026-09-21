@@ -3,7 +3,11 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "145"
+    firefox_android: "145"
+    safari: "27"
+    safari_ios: "27"
 compat_features:
   # baseline: low
   # baseline_low_date: 2025-11-11
@@ -29,14 +33,11 @@ compat_features:
   - css.properties.text-autospace.ideograph-alpha
   - css.properties.text-autospace.ideograph-numeric
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "145"
   #   firefox_android: "145"
+  #   safari: "27"
+  #   safari_ios: "27"
   - css.properties.text-autospace.insert
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - css.properties.text-autospace.punctuation
-  - css.properties.text-autospace.replace
