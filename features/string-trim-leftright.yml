@@ -7,6 +7,8 @@ discouraged:
   reason: >
     TC39 recommends using `trimStart()` and `trimEnd()` instead.
     The `trimLeft()` and `trimRight()` aliases are provided for compatibility with old code.
+  alternatives:
+    - string-trim-startend
 spec: https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#String.prototype.trimleft
 group: string
 compat_features:
