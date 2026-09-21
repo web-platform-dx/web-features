@@ -20,14 +20,11 @@
   "type": "module",
   "scripts": {
     "prepare": "cp ../../LICENSE.txt . && tsc",
-    "test:coverage": "c8 npm run test",
+    "test:coverage": "npx tsx --experimental-test-coverage --test 'src/**/*.test.ts'",
     "test:types": "tsc --noEmit",
     "test": "npx tsx --test 'src/**/*.test.ts'"
   },
   "license": "Apache-2.0",
-  "devDependencies": {
-    "c8": "^12.0.0"
-  },
   "peerDependencies": {
     "@mdn/browser-compat-data": "^8.0.0"
   },
