@@ -1,0 +1,64 @@
+name: Post coverage stats
+
+permissions: {}
+
+on:
+  workflow_dispatch:
+    inputs:
+      current:
+        description: "ref name (i.e., branch, tag, or commit)"
+        required: true
+        type: string
+        default: "main"
+      previous:
+        description: "ref name (i.e., branch, tag, or commit hash)"
+        required: true
+        type: string
+      issue_number:
+        description: "issue number to comment on"
+        required: true
+        type: string
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  post_comment:
+    name: Generate stats and post comment
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write  # to write comments on issues
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          ref: ${{ inputs.previous }}
+          # Check out the complete history, but not all the blobs
+          filter: blob:none
+          fetch-depth: 0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - name: Generate stats for previous
+        run: |
+          npm ci
+          previous_stats_json="$(mktemp)"
+          npm run --silent stats > "$previous_stats_json"
+          echo "previous_stats_json=$previous_stats_json" >> "$GITHUB_ENV"
+      - name: Check out current
+        run: git checkout "$CURRENT_REF"
+        env:
+          CURRENT_REF: ${{ inputs.current }}
+      - name: Generate stats for current
+        run: |
+          npm ci
+          current_report_markdown="$(mktemp)"
+          npm run --silent stats -- --previous="$previous_stats_json" | npx tsx ./scripts/stats-report.ts - > "$current_report_markdown"
+          echo "current_report_markdown=$current_report_markdown" >> "$GITHUB_ENV"
+      - name: Post comment
+        run: gh issue comment "$ISSUE_NUMBER" --repo "$REPO" --body-file="$current_report_markdown"
+        env:
+          ISSUE_NUMBER: ${{ inputs.issue_number }}
+          GH_TOKEN: ${{ github.token }}
