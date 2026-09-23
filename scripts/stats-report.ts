@@ -29,12 +29,12 @@ const argv = yargs(process.argv.slice(2))
   })
   .option("start-date", {
     description:
-      "Override the commit-derived start date, for calendar-based reports. Takes a timestamp like 2026-09-21 23:12:00 that is assumed to be UTC.",
+      "Override the commit-derived start date, for calendar-based reports. Takes a timestamp like `2026-09-21T00:04:00+00:00` that is assumed to be UTC.",
     type: "string",
   })
   .option("end-date", {
     description:
-      "Override the commit-derived end date, for calendar-based reports. Takes a timestamp like 2026-09-21 23:12:00 that is assumed to be UTC.",
+      "Override the commit-derived end date, for calendar-based reports. Takes a timestamp like `2026-09-21T00:04:00+00:00` that is assumed to be UTC.",
     type: "string",
   })
   .parseSync();
