@@ -5,7 +5,6 @@ spec: https://github.com/whatwg/html/pull/12758
 #spec: https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-parsing-and-serialization
 group: dom
 compat_features:
-  - api.Blob.textStream
   - api.CharacterData.streamAfterHTML
   - api.CharacterData.streamAfterHTMLUnsafe
   - api.CharacterData.streamBeforeHTML
@@ -32,8 +31,6 @@ compat_features:
   - api.Element.streamReplaceHTMLUnsafe
   - api.Element.streamReplaceWithHTML
   - api.Element.streamReplaceWithHTMLUnsafe
-  - api.Request.textStream
-  - api.Response.textStream
   - api.ShadowRoot.streamAfterHTML
   - api.ShadowRoot.streamAfterHTMLUnsafe
   - api.ShadowRoot.streamAppendHTML
@@ -46,3 +43,10 @@ compat_features:
   - api.ShadowRoot.streamPrependHTMLUnsafe
   - api.ShadowRoot.streamReplaceWithHTML
   - api.ShadowRoot.streamReplaceWithHTMLUnsafe
+  # These convenience methods are possibly a parallel or independent feature,
+  # but we choose to include them here since they were initially introduced
+  # for these streaming methods. For more background, see
+  # https://github.com/web-platform-dx/web-features/pull/4383/
+  - api.Blob.textStream
+  - api.Request.textStream
+  - api.Response.textStream
