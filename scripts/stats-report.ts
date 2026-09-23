@@ -56,7 +56,7 @@ function report(stats: Result): string {
   );
   const endDate = timeStampToZonedDateTimeUTC(argv.endDate ?? stats.timestamp);
   const duration = endDate.since(startDate);
-  const revisions = `[\`${stats.change.hash.slice(0, 8)}...${stats.hash.slice(0, 8)}\`](https://github.com/web-platform-dx/web-features/compare/${stats.change.hash}..${stats.hash})`;
+  const revisions = `[\`${stats.change.hash.slice(0, 8)}...${stats.hash.slice(0, 8)}\`](https://github.com/web-platform-dx/web-features/compare/${stats.change.hash}...${stats.hash})`;
 
   return [
     "### BCD coverage gap",
