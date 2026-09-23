@@ -5,6 +5,18 @@ status:
   baseline: false
   support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "151"
+  #   chrome_android: "151"
+  #   edge: "151"
+  - api.Blob.textStream
+  - api.Request.textStream
+  - api.Response.textStream
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
   - api.CharacterData.streamAfterHTML
   - api.CharacterData.streamAfterHTMLUnsafe
   - api.CharacterData.streamBeforeHTML

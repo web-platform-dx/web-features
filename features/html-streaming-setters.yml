@@ -41,3 +41,10 @@ compat_features:
   - api.ShadowRoot.streamPrependHTMLUnsafe
   - api.ShadowRoot.streamReplaceWithHTML
   - api.ShadowRoot.streamReplaceWithHTMLUnsafe
+  # These convenience methods are possibly a parallel or independent feature,
+  # but we choose to include them here since they were initially introduced
+  # for these streaming methods. For more background, see
+  # https://github.com/web-platform-dx/web-features/pull/4383/
+  - api.Blob.textStream
+  - api.Request.textStream
+  - api.Response.textStream
