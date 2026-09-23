@@ -1,0 +1,6 @@
+name: Iterator join()
+description: The `join()` method of an `Iterator` object returns a string concatenation of all the iterator's items, separated by commas or a given separator string. It's similar to the `join()` method of arrays.
+spec: https://tc39.es/proposal-iterator-join/#sec-iterator.prototype.join
+group: iterators
+compat_features:
+  - javascript.builtins.Iterator.join
