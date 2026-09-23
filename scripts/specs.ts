@@ -161,10 +161,6 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because it's a spec not tracked in web-specs."
     ],
     [
-        "https://www.rfc-editor.org/info/rfc7903/#section-1.2",
-        "Allowed because it's a spec not tracked in web-specs."
-    ],
-    [
         "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/OpaqueRange/explainer.md",
         "Spec changes not yet merged. Replace when https://github.com/whatwg/dom/pull/1404 and https://github.com/whatwg/html/pull/11741 merge."
     ],

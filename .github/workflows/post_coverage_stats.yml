@@ -1,23 +1,29 @@
-name: Post coverage stats
+name: Post coverage stats by date
 
 permissions: {}
 
 on:
+  schedule:
+    # Thursdays at 4:00 in the morning. Run times aren't guaranteed, so
+    # hopefully this will run before the WebDX CG meeting each week.
+    - cron: 0 4 * * 4
+      timezone: Etc/UTC
   workflow_dispatch:
     inputs:
-      current:
-        description: "ref name (i.e., branch, tag, or commit)"
-        required: true
+      start_date:
+        description: "starting UTC datetime (as in the Linux `date` command, such as `today 04:00:00` or `2026-09-22T00:04:00+00:00`)"
         type: string
-        default: "main"
-      previous:
-        description: "ref name (i.e., branch, tag, or commit hash)"
-        required: true
+      end_date:
+        description: "ending UTC datetime (as in the Linux `date` command, such as `last thursday 04:00:01` or `2026-09-22T00:04:01+00:00`)"
         type: string
       issue_number:
         description: "issue number to comment on"
-        required: true
         type: string
+
+env:
+  DEFAULT_ISSUE: 4402
+  DEFAULT_START_DATE: "last thursday 04:00:01"
+  DEFAULT_END_DATE: "today 04:00:00"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
@@ -25,6 +31,8 @@ concurrency:
 
 jobs:
   post_comment:
+    # Skip the weekly post when the repo is a fork
+    if: (github.event_name == 'schedule' && github.repository == 'web-platform-dx/web-features') || (github.event_name != 'schedule')
     name: Generate stats and post comment
     runs-on: ubuntu-latest
     permissions:
@@ -33,14 +41,33 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-          ref: ${{ inputs.previous }}
-          # Check out the complete history, but not all the blobs
+          # Clone the complete history, but fetch blobs on demand
           filter: blob:none
           fetch-depth: 0
+          ref: ${{ github.ref }}
+      - name: Get commits
+        id: commits
+        run: |
+          start_timestamp=$(date --utc -d "$START_DATE" --iso-8601=seconds)
+          echo "start_timestamp=$start_timestamp" >> "$GITHUB_OUTPUT"
+
+          end_timestamp=$(date --utc -d "$END_DATE" --iso-8601=seconds)
+          echo "end_timestamp=$end_timestamp" >> "$GITHUB_OUTPUT"
+
+          echo "previous=$(git rev-list -1 --before="$start_timestamp" "$STARTING_REF")" >> "$GITHUB_OUTPUT"
+          echo "current=$(git rev-list -1 --before="$end_timestamp" "$STARTING_REF")" >> "$GITHUB_OUTPUT"
+        env:
+          STARTING_REF: ${{ github.ref }}
+          START_DATE: ${{ inputs.start_date || env.DEFAULT_START_DATE }}
+          END_DATE: ${{ inputs.end_date || env.DEFAULT_END_DATE }}
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: .node-version
           cache: npm
+      - name: Check out previous
+        run: git checkout "$PREVIOUS_REF"
+        env:
+          PREVIOUS_REF: ${{ steps.commits.outputs.previous }}
       - name: Generate stats for previous
         run: |
           npm ci
@@ -50,15 +77,31 @@ jobs:
       - name: Check out current
         run: git checkout "$CURRENT_REF"
         env:
-          CURRENT_REF: ${{ inputs.current }}
+          CURRENT_REF: ${{ steps.commits.outputs.current }}
       - name: Generate stats for current
         run: |
           npm ci
+          current_stats_json="$(mktemp)"
+          npm run --silent stats -- --previous="$previous_stats_json" > "$current_stats_json"
+          echo "current_stats_json=$current_stats_json" >> "$GITHUB_ENV"
+      - name: Check out starting ref
+        # This ensures you get the `stats-report.ts` at the time the workflow
+        # runs, instead of the script at the last commit in the reported range
+        # of commits.
+        run: git checkout "$STARTING_REF"
+        env:
+          STARTING_REF: ${{ github.ref }}
+      - name: Generate report
+        run: |
+          npm ci
           current_report_markdown="$(mktemp)"
-          npm run --silent stats -- --previous="$previous_stats_json" | npx tsx ./scripts/stats-report.ts - > "$current_report_markdown"
+          npx tsx ./scripts/stats-report.ts --start-date="$START_DATE" --end-date="$END_DATE" "$current_stats_json" > "$current_report_markdown"
           echo "current_report_markdown=$current_report_markdown" >> "$GITHUB_ENV"
+        env:
+          START_DATE: ${{ steps.commits.outputs.start_timestamp }}
+          END_DATE: ${{ steps.commits.outputs.end_timestamp }}
       - name: Post comment
         run: gh issue comment "$ISSUE_NUMBER" --repo "$REPO" --body-file="$current_report_markdown"
         env:
-          ISSUE_NUMBER: ${{ inputs.issue_number }}
+          ISSUE_NUMBER: ${{ inputs.issue_number || env.DEFAULT_ISSUE }}
           GH_TOKEN: ${{ github.token }}
