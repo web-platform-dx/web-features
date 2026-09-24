@@ -228,11 +228,9 @@ function reportCaniuseCoverage(stats: Result): string {
   const rows: [string, string, string, string, string][] = [
     [
       "All",
-      formatInteger(
-        stats.caniuseIdsCount - stats.change.unmappedCaniuseIdsCount,
-      ),
+      formatInteger(stats.caniuseIdsCount - stats.change.caniuseIdsCount),
       formatInteger(stats.caniuseIdsCount),
-      formatInteger(stats.change.unmappedCaniuseIdsCount),
+      formatInteger(stats.change.caniuseIdsCount),
       formatPercentage(
         (stats.change.caniuseIdsCount / stats.caniuseIdsCount) * 100,
       ),
