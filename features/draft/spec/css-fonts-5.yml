@@ -1,4 +1,4 @@
-draft_date: 2026-07-06
+draft_date: 2026-09-24
 name: CSS Fonts Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-fonts-5/
@@ -34,8 +34,51 @@ compat_features:
   - api.CSSFontFaceDescriptors.unicodeRange
   - api.CSSFontFaceRule.style.type_CSSFontFaceDescriptors
   - css.properties.font-language-override.normal
+  - css.properties.font-size.large
+  - css.properties.font-size.larger
+  - css.properties.font-size.medium
+  - css.properties.font-size.small
+  - css.properties.font-size.smaller
+  - css.properties.font-size.x-large
+  - css.properties.font-size.x-small
+  - css.properties.font-size.xx-large
+  - css.properties.font-size.xx-small
   - css.properties.font-synthesis-style.oblique-only
   - css.properties.font-synthesis.none
+  - css.properties.font-variant.all-petite-caps
+  - css.properties.font-variant.all-small-caps
+  - css.properties.font-variant.common-ligatures
+  - css.properties.font-variant.contextual
+  - css.properties.font-variant.diagonal-fractions
+  - css.properties.font-variant.discretionary-ligatures
+  - css.properties.font-variant.emoji
+  - css.properties.font-variant.full-width
+  - css.properties.font-variant.historical-ligatures
+  - css.properties.font-variant.jis04
+  - css.properties.font-variant.jis78
+  - css.properties.font-variant.jis83
+  - css.properties.font-variant.jis90
+  - css.properties.font-variant.lining-nums
+  - css.properties.font-variant.no-common-ligatures
+  - css.properties.font-variant.no-contextual
+  - css.properties.font-variant.no-discretionary-ligatures
+  - css.properties.font-variant.no-historical-ligatures
+  - css.properties.font-variant.oldstyle-nums
+  - css.properties.font-variant.ordinal
+  - css.properties.font-variant.petite-caps
+  - css.properties.font-variant.proportional-nums
+  - css.properties.font-variant.proportional-width
+  - css.properties.font-variant.ruby
+  - css.properties.font-variant.simplified
+  - css.properties.font-variant.slashed-zero
+  - css.properties.font-variant.small-caps
+  - css.properties.font-variant.stacked-fractions
+  - css.properties.font-variant.tabular-nums
+  - css.properties.font-variant.text
+  - css.properties.font-variant.titling-caps
+  - css.properties.font-variant.traditional
+  - css.properties.font-variant.unicase
+  - css.properties.font-variant.unicode
   - css.properties.font-variation-settings.normal
   - css.properties.font-width.percentage
 

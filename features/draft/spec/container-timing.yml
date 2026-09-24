@@ -1,0 +1,20 @@
+draft_date: 2026-09-24
+name: Container Timing API
+description: TODO
+spec: https://wicg.github.io/container-timing/
+compat_features:
+  - api.PerformanceContainerTiming.toJSON
+
+# The following features in the spec are already part of web-features:
+# - Container timing performance entries:
+#   - api.HTMLElement.containerTiming
+#   - api.HTMLElement.containerTimingIgnore
+#   - api.PerformanceContainerTiming
+#   - api.PerformanceContainerTiming.firstRenderTime
+#   - api.PerformanceContainerTiming.identifier
+#   - api.PerformanceContainerTiming.intersectionRect
+#   - api.PerformanceContainerTiming.lastPaintedElement
+#   - api.PerformanceContainerTiming.rootElement
+#   - api.PerformanceContainerTiming.size
+#   - html.global_attributes.containertiming
+#   - html.global_attributes.containertimingignore

@@ -1,8 +1,14 @@
-draft_date: 2026-06-05
+draft_date: 2026-09-24
 name: CSS Backgrounds Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-backgrounds-4/
 compat_features:
+  - css.properties.background-position-x.center
+  - css.properties.background-position-x.left
+  - css.properties.background-position-x.right
+  - css.properties.background-position-y.bottom
+  - css.properties.background-position-y.center
+  - css.properties.background-position-y.top
   - css.properties.background-repeat-x
   - css.properties.background-repeat-y
   - css.properties.background.border-area
@@ -13,6 +19,22 @@ compat_features:
   - css.properties.background.right
   - css.properties.background.top
   - css.properties.border-image-source.none
+  - css.properties.mask-repeat.no-repeat
+  - css.properties.mask-repeat.repeat
+  - css.properties.mask-repeat.repeat-x
+  - css.properties.mask-repeat.repeat-y
+  - css.properties.mask-repeat.round
+  - css.properties.mask-repeat.space
+  - css.properties.mask-size.auto
+  - css.properties.mask-size.contain
+  - css.properties.mask-size.cover
+  - css.properties.mask.no-repeat
+  - css.properties.mask.repeat
+  - css.properties.mask.repeat-x
+  - css.properties.mask.repeat-y
+  - css.properties.mask.round
+  - css.properties.mask.space
+  - css.types.line-width
 
 # The following features in the spec are already part of web-features:
 # - background:
@@ -48,6 +70,9 @@ compat_features:
 #   - css.properties.background-size.auto
 #   - css.properties.background-size.contain
 #   - css.properties.background-size.cover
+# - background-clip: text:
+#   - css.properties.background.text
+#   - css.properties.background-clip.text
 # - background-attachment:
 #   - css.properties.background-attachment
 #   - css.properties.background-attachment.fixed
@@ -56,8 +81,6 @@ compat_features:
 #   - css.properties.background-attachment.scroll
 # - background-clip: border-area:
 #   - css.properties.background-clip.border-area
-# - background-clip: text:
-#   - css.properties.background-clip.text
 # - background-color:
 #   - css.properties.background-color
 # - background-image:
