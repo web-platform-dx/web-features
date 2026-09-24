@@ -10,6 +10,25 @@ status:
     firefox: "103"
     firefox_android: "103"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2026-09-14
+  # support:
+  #   chrome: "87"
+  #   chrome_android: "87"
+  #   edge: "87"
+  #   firefox: "103"
+  #   firefox_android: "103"
+  #   safari: "27"
+  #   safari_ios: "27"
   - api.ReadableStream.transferable
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "87"
+  #   chrome_android: "87"
+  #   edge: "87"
+  #   firefox: "103"
+  #   firefox_android: "103"
   - api.TransformStream.transferable
   - api.WritableStream.transferable

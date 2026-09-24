@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "154"
+    chrome_android: "154"
 compat_features:
   - api.Window.requestResize
   - css.properties.frame-sizing
