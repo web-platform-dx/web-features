@@ -3,7 +3,10 @@ description: The `color` CSS property sets the primary foreground color of an el
 spec: https://drafts.csswg.org/css-color-4/#the-color-property
 group: css
 compat_features:
-  - css.properties.color
-  - css.properties.color.transparent
-  - css.types.color
-  - css.types.color.transparent
+  core:
+    - css.properties.color
+    - css.properties.color.transparent
+    - css.types.color
+    - css.types.color.transparent
+  modifier:
+    - css.types.color.currentcolor
