@@ -90,9 +90,14 @@ compat_features:
   #   edge: "150"
   - css.at-rules.supports.named-feature.anchor-position-follows-transforms
 
+  # baseline: false
+  # support:
+  #   chrome: "154"
+  #   chrome_android: "154"
+  - css.at-rules.supports.named-feature.single-axis-scroll-container
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.CSSMediaRule.matches
   - api.CSSSupportsRule.matches
-  - css.at-rules.supports.named-feature.single-axis-scroll-container

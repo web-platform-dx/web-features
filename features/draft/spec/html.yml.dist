@@ -1009,12 +1009,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "125"
-  #   edge: "125"
-  - api.NotRestoredReasonDetails.reason.unload-listener
-
-  # baseline: false
-  # support:
   #   firefox: "151"
   #   firefox_android: "151"
   - html.elements.template.shadowrootslotassignment
@@ -1027,6 +1021,11 @@ compat_features:
   - api.HTMLAreaElement.type
   - html.elements.area.hreflang
   - html.elements.area.type
+
+  # baseline: false
+  # support:
+  #   edge: "125"
+  - api.NotRestoredReasonDetails.reason.unload-listener
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false

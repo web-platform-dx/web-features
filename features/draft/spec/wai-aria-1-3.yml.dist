@@ -3,6 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "141"
+    chrome_android: "141"
+    edge: "141"
 compat_features:
   - http.headers.Permissions-Policy.aria-notify
