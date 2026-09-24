@@ -1,4 +1,4 @@
-draft_date: 2026-09-17
+draft_date: 2026-09-24
 name: CSS Conditional Rules Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-conditional-5/
@@ -6,9 +6,7 @@ compat_features:
   - api.CSSContainerRule.conditions
   - api.CSSMediaRule.matches
   - api.CSSSupportsRule.matches
-  - css.at-rules.container.container-query_optional
   - css.at-rules.container.scroll-state_queries.scrolled
-  - css.at-rules.supports.named-feature
   - css.at-rules.supports.named-feature.anchor-position-follows-transforms
   - css.at-rules.supports.named-feature.single-axis-scroll-container
   - css.properties.container-name.name-only_queries
@@ -31,7 +29,7 @@ compat_features:
 #   - api.CSSConditionRule.conditionText
 #   - api.CSSMediaRule
 #   - api.CSSMediaRule.media
-# - Container queries:
+# - Container queries (size):
 #   - api.CSSContainerRule
 #   - api.CSSContainerRule.containerName
 #   - api.CSSContainerRule.containerQuery
@@ -50,6 +48,8 @@ compat_features:
 #   - css.at-rules.supports.font-format
 #   - css.at-rules.supports.font-tech
 #   - css.at-rules.supports.selector
+# - Name-only container queries:
+#   - css.at-rules.container.container-query_optional
 # - Container scroll-state queries:
 #   - css.at-rules.container.scroll-state_queries
 #   - css.at-rules.container.scroll-state_queries.scrollable
@@ -68,3 +68,5 @@ compat_features:
 #   - css.at-rules.media.nested-queries
 # - at-rule():
 #   - css.at-rules.supports.at-rule
+# - named-feature():
+#   - css.at-rules.supports.named-feature
