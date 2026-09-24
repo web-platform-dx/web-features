@@ -1,10 +1,12 @@
-draft_date: 2026-07-06
+draft_date: 2026-07-15
 name: MediaStreamTrack Insertable Media Processing using Streams
 description: TODO
 spec: https://w3c.github.io/mediacapture-transform/
 compat_features:
   - api.MediaStreamTrackHandle
   - api.MediaStreamTrackHandle.MediaStreamTrackHandle
+  - api.MediaStreamTrackProcessor.discardedFrames
+  - api.MediaStreamTrackProcessor.totalFrames
 
 # The following features in the spec are already part of web-features:
 # - Insertable streams for MediaStreamTrack:

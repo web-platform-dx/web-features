@@ -16,10 +16,6 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "3"
   #   safari_ios: "1"
-  - api.HTMLOptionsCollection
-  - api.HTMLOptionsCollection.add
-  - api.HTMLOptionsCollection.length
-  - api.HTMLOptionsCollection.selectedIndex
   - api.Window.unload_event
 
   # baseline: high
@@ -34,19 +30,6 @@ compat_features:
   #   safari: ≤4
   #   safari_ios: ≤3.2
   - html.global_attributes.class
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "3.1"
-  #   safari_ios: "1"
-  - api.HTMLOptionsCollection.remove
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -129,34 +112,6 @@ compat_features:
   #   safari: "5"
   #   safari_ios: "4"
   - api.Window.postMessage.transfer_parameter
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "5"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "32"
-  #   firefox_android: "32"
-  #   safari: "5"
-  #   safari_ios: "4"
-  - api.HTMLAllCollection
-  - api.HTMLAllCollection.item
-  - api.HTMLAllCollection.namedItem
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "6"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "32"
-  #   firefox_android: "32"
-  #   safari: "5"
-  #   safari_ios: "4"
-  - api.HTMLAllCollection.length
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -457,6 +412,19 @@ compat_features:
   - api.Window.unhandledrejection_event
 
   # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "69"
+  #   chrome_android: "69"
+  #   edge: "79"
+  #   firefox: "69"
+  #   firefox_android: "79"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - html.elements.form.autocomplete.new-password
+
+  # baseline: high
   # baseline_low_date: 2021-12-13
   # baseline_high_date: 2024-06-13
   # support:
@@ -564,8 +532,22 @@ compat_features:
   - http.status.103
   - http.status.103.preconnect
 
-  # baseline: low
+  # baseline: high
+  # baseline_low_date: 2023-12-11
+  # baseline_high_date: 2026-06-11
+  # support:
+  #   chrome: "119"
+  #   chrome_android: "119"
+  #   edge: "119"
+  #   firefox: "120"
+  #   firefox_android: "120"
+  #   safari: "17.2"
+  #   safari_ios: "17.2"
+  - api.HTMLElement.toggle_event.details_elements.uses_toggleevent
+
+  # baseline: high
   # baseline_low_date: 2024-01-23
+  # baseline_high_date: 2026-07-23
   # support:
   #   chrome: "108"
   #   chrome_android: "108"
@@ -626,6 +608,18 @@ compat_features:
   - html.elements.button.command.request-close
 
   # baseline: low
+  # baseline_low_date: 2025-12-12
+  # support:
+  #   chrome: "140"
+  #   chrome_android: "140"
+  #   edge: "140"
+  #   firefox: "140"
+  #   firefox_android: "140"
+  #   safari: "26.2"
+  #   safari_ios: "26.2"
+  - html.elements.h1.no_ua_styles_in_article_aside_nav_section
+
+  # baseline: low
   # baseline_low_date: 2026-01-13
   # support:
   #   chrome: "135"
@@ -637,6 +631,18 @@ compat_features:
   #   safari_ios: "26.2"
   - api.NavigateEvent.sourceElement
 
+  # baseline: low
+  # baseline_low_date: 2026-09-14
+  # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  #   firefox: "150"
+  #   firefox_android: "150"
+  #   safari: "27"
+  #   safari_ios: "27"
+  - api.HTMLImageElement.sizes.auto
+
   # baseline: false
   # support:
   #   chrome: "4"
@@ -646,6 +652,16 @@ compat_features:
   #   firefox_android: "4"
   #   safari: ≤4
   - html.elements.link.rel.icon
+
+  # baseline: false
+  # support:
+  #   chrome: "23"
+  #   chrome_android: "144"
+  #   edge: "79"
+  #   firefox: ≤49
+  #   firefox_android: ≤49
+  #   safari: "10.1"
+  - html.elements.iframe.sandbox.allow-pointer-lock
 
   # baseline: false
   # support:
@@ -665,15 +681,6 @@ compat_features:
   #   firefox: "96"
   #   firefox_android: "96"
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
-
-  # baseline: false
-  # support:
-  #   chrome: "23"
-  #   edge: "79"
-  #   firefox: ≤49
-  #   firefox_android: ≤49
-  #   safari: "10.1"
-  - html.elements.iframe.sandbox.allow-pointer-lock
 
   # baseline: false
   # support:
@@ -778,15 +785,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "126"
-  #   chrome_android: "126"
-  #   edge: "126"
-  #   firefox: "150"
-  #   firefox_android: "150"
-  - api.HTMLImageElement.sizes.auto
-
-  # baseline: false
-  # support:
   #   chrome: "131"
   #   chrome_android: "131"
   #   edge: "131"
@@ -796,12 +794,12 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "133"
-  #   chrome_android: "133"
-  #   edge: "133"
-  #   safari: "18.4"
-  #   safari_ios: "18.4"
-  - html.elements.script.type.importmap.multiple_import_maps
+  #   chrome: "135"
+  #   chrome_android: "135"
+  #   edge: "135"
+  #   safari: "27"
+  #   safari_ios: "27"
+  - api.HTMLSelectedContentElement
 
   # baseline: false
   # support:
@@ -891,14 +889,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   firefox: "140"
-  #   firefox_android: "140"
-  #   safari: "26.2"
-  #   safari_ios: "26.2"
-  - html.elements.h1.no_ua_styles_in_article_aside_nav_section
-
-  # baseline: false
-  # support:
   #   chrome: "87"
   #   chrome_android: "87"
   #   edge: "87"
@@ -935,13 +925,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "135"
-  #   chrome_android: "135"
-  #   edge: "135"
-  - api.HTMLSelectedContentElement
-
-  # baseline: false
-  # support:
   #   chrome: "137"
   #   chrome_android: "137"
   #   edge: "137"
@@ -972,17 +955,18 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "146"
+  #   chrome_android: "146"
+  #   edge: "146"
+  - api.Element.setHTMLUnsafe.options_sanitizer_parameter
+  - api.ShadowRoot.setHTMLUnsafe.options_sanitizer_parameter
+
+  # baseline: false
+  # support:
   #   chrome: "147"
   #   chrome_android: "147"
   #   edge: "147"
   - html.elements.link.rel.modulepreload.as-style
-
-  # baseline: false
-  # support:
-  #   chrome: "148"
-  #   chrome_android: "148"
-  #   edge: "148"
-  - api.SharedWorker.SharedWorker.options_extendedLifetime_parameter
 
   # baseline: false
   # support:
@@ -1015,7 +999,6 @@ compat_features:
   # support:
   #   firefox: "67"
   #   firefox_android: "67"
-  - html.elements.form.autocomplete.new-password
   - html.elements.textarea.autocomplete.new-password
 
   # baseline: false
@@ -1026,23 +1009,40 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "125"
+  #   edge: "125"
+  - api.NotRestoredReasonDetails.reason.unload-listener
+
+  # baseline: false
+  # support:
   #   firefox: "151"
   #   firefox_android: "151"
   - html.elements.template.shadowrootslotassignment
+
+  # baseline: false
+  # support:
+  #   firefox: "153"
+  #   firefox_android: "153"
+  - api.HTMLAreaElement.hreflang
+  - api.HTMLAreaElement.type
+  - html.elements.area.hreflang
+  - html.elements.area.type
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.Document.parseHTMLUnsafe_static.options_sanitizer_parameter
-  - api.Element.setHTMLUnsafe.options_sanitizer_parameter
-  - api.HTMLAreaElement.hreflang
-  - api.HTMLAreaElement.type
-  - api.HTMLElement.headingOffset
-  - api.HTMLElement.headingReset
-  - api.ShadowRoot.setHTMLUnsafe.options_sanitizer_parameter
-  - html.elements.area.hreflang
-  - html.elements.area.type
+  - api.MathMLAnchorElement.hash
+  - api.MathMLAnchorElement.host
+  - api.MathMLAnchorElement.hostname
+  - api.MathMLAnchorElement.hreflang
+  - api.MathMLAnchorElement.origin
+  - api.MathMLAnchorElement.password
+  - api.MathMLAnchorElement.pathname
+  - api.MathMLAnchorElement.port
+  - api.MathMLAnchorElement.protocol
+  - api.MathMLAnchorElement.search
+  - api.MathMLAnchorElement.type
+  - api.MathMLAnchorElement.username
+  - api.NotRestoredReasonDetails.reason.websocket
   - html.elements.track.kind.descriptions
-  - html.global_attributes.headingoffset
-  - html.global_attributes.headingreset
-  - javascript.statements.import.import_attributes.type_text

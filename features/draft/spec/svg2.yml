@@ -1,9 +1,24 @@
-draft_date: 2026-07-06
+draft_date: 2026-09-17
 name: Scalable Vector Graphics (SVG) 2
 description: TODO
 spec: https://w3c.github.io/svgwg/svg2-draft/
 compat_features:
+  - api.SVGAElement.hash
+  - api.SVGAElement.host
+  - api.SVGAElement.hostname
+  - api.SVGAElement.origin
+  - api.SVGAElement.password
+  - api.SVGAElement.pathname
+  - api.SVGAElement.port
+  - api.SVGAElement.protocol
+  - api.SVGAElement.search
+  - api.SVGAElement.username
   - api.SVGAnimatedString.baseVal.enforces_trusted_types
+  - api.SVGGraphicsElement.getBBox.options_parameter
+  - api.SVGGraphicsElement.getBBox.options_parameter.options_clipped_parameter
+  - api.SVGGraphicsElement.getBBox.options_parameter.options_fill_parameter
+  - api.SVGGraphicsElement.getBBox.options_parameter.options_markers_parameter
+  - api.SVGGraphicsElement.getBBox.options_parameter.options_stroke_parameter
   - css.properties.color-interpolation.linearRGB
   - css.properties.d.none
   - css.properties.paint-order.fill

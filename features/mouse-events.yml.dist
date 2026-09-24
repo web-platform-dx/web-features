@@ -205,6 +205,19 @@ compat_features:
   #   safari_ios: "18.2"
   - api.Element.auxclick_event
 
+  # baseline: low
+  # baseline_low_date: 2026-01-13
+  # support:
+  #   chrome: "37"
+  #   chrome_android: "144"
+  #   edge: "13"
+  #   firefox: "41"
+  #   firefox_android: "41"
+  #   safari: "9"
+  #   safari_ios: "17"
+  - api.MouseEvent.movementX
+  - api.MouseEvent.movementY
+
   # baseline: false
   # support:
   #   chrome: "1"
@@ -214,14 +227,3 @@ compat_features:
   #   firefox_android: "6"
   #   safari: "3"
   - api.Element.contextmenu_event
-
-  # baseline: false
-  # support:
-  #   chrome: "37"
-  #   edge: "13"
-  #   firefox: "41"
-  #   firefox_android: "41"
-  #   safari: "9"
-  #   safari_ios: "17"
-  - api.MouseEvent.movementX
-  - api.MouseEvent.movementY

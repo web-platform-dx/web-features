@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "150"
-    chrome_android: "150"
-    edge: "150"
+  support: {}
 compat_features:
   # baseline: high
   # baseline_low_date: 2023-02-14
@@ -89,7 +86,15 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "148"
-  #   chrome_android: "148"
-  #   edge: "148"
-  - css.at-rules.supports.at-rule
+  #   chrome: "150"
+  #   chrome_android: "150"
+  #   edge: "150"
+  - css.at-rules.supports.named-feature
+  - css.at-rules.supports.named-feature.anchor-position-follows-transforms
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.CSSMediaRule.matches
+  - api.CSSSupportsRule.matches
+  - css.at-rules.supports.named-feature.single-axis-scroll-container

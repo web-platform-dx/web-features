@@ -28,6 +28,18 @@ compat_features:
   #   safari_ios: "1"
   - css.types.color.system-color
 
+  # baseline: low
+  # baseline_low_date: 2026-07-02
+  # support:
+  #   chrome: "150"
+  #   chrome_android: "150"
+  #   edge: "150"
+  #   firefox: "103"
+  #   firefox_android: "103"
+  #   safari: "16.5"
+  #   safari_ios: "16.5"
+  - css.types.color.system-color.accentcolor_accentcolortext
+
   # baseline: false
   # support:
   #   chrome: "101"
@@ -46,11 +58,3 @@ compat_features:
   #   firefox_android: "109"
   - css.types.color.system-color.mark
   - css.types.color.system-color.marktext
-
-  # baseline: false
-  # support:
-  #   firefox: "103"
-  #   firefox_android: "103"
-  #   safari: "16.5"
-  #   safari_ios: "16.5"
-  - css.types.color.system-color.accentcolor_accentcolortext

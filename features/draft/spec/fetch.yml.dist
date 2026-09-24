@@ -71,9 +71,8 @@ compat_features:
   - api.Request.Request.options_parameter.duplex
   - api.fetch.options_parameter.duplex
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "153"
+  #   firefox_android: "153"
   - api.Request.destination.text
-  - api.Request.textStream
-  - api.Response.textStream

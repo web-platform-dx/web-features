@@ -1,4 +1,4 @@
-draft_date: 2026-07-06
+draft_date: 2026-09-17
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -14,10 +14,6 @@ compat_features:
   - api.ErrorEvent.filename
   - api.ErrorEvent.lineno
   - api.ErrorEvent.message
-  - api.HTMLAllCollection
-  - api.HTMLAllCollection.item
-  - api.HTMLAllCollection.length
-  - api.HTMLAllCollection.namedItem
   - api.HTMLAreaElement.hreflang
   - api.HTMLAreaElement.type
   - api.HTMLBaseElement.href.forbid_data_javascript_urls
@@ -28,10 +24,9 @@ compat_features:
   - api.HTMLCanvasElement.toBlob.type_parameter_webp
   - api.HTMLCanvasElement.toDataURL.type_parameter_png
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
-  - api.HTMLElement.headingOffset
-  - api.HTMLElement.headingReset
   - api.HTMLElement.togglePopover.force_parameter
   - api.HTMLElement.togglePopover.options_force_parameter
+  - api.HTMLElement.toggle_event.details_elements.uses_toggleevent
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes.auto
   - api.HTMLInputElement.showPicker.datalist_input
@@ -40,11 +35,6 @@ compat_features:
   - api.HTMLInputElement.showPicker.week_input
   - api.HTMLMediaElement.getStartDate
   - api.HTMLMediaElement.playbackRate.negative_values
-  - api.HTMLOptionsCollection
-  - api.HTMLOptionsCollection.add
-  - api.HTMLOptionsCollection.length
-  - api.HTMLOptionsCollection.remove
-  - api.HTMLOptionsCollection.selectedIndex
   - api.HTMLScriptElement.noModule
   - api.HTMLSelectedContentElement
   - api.HTMLSourceElement
@@ -58,12 +48,26 @@ compat_features:
   - api.ImageData.ImageData.settings_parameter.colorSpace_option
   - api.ImageData.ImageData.settings_parameter.pixelFormat_option
   - api.ImageData.pixelFormat
+  - api.MathMLAnchorElement.hash
+  - api.MathMLAnchorElement.host
+  - api.MathMLAnchorElement.hostname
+  - api.MathMLAnchorElement.hreflang
+  - api.MathMLAnchorElement.origin
+  - api.MathMLAnchorElement.password
+  - api.MathMLAnchorElement.pathname
+  - api.MathMLAnchorElement.port
+  - api.MathMLAnchorElement.protocol
+  - api.MathMLAnchorElement.search
+  - api.MathMLAnchorElement.type
+  - api.MathMLAnchorElement.username
   - api.MouseEvent.relatedTarget.drag_events
   - api.NavigateEvent.sourceElement
   - api.NavigationTransition.committed
   - api.NavigationTransition.to
   - api.Navigator.oscpu
   - api.Navigator.taintEnabled
+  - api.NotRestoredReasonDetails.reason.unload-listener
+  - api.NotRestoredReasonDetails.reason.websocket
   - api.OffscreenCanvasRenderingContext2D.getContextAttributes
   - api.OffscreenCanvasRenderingContext2D.lang
   - api.PromiseRejectionEvent
@@ -79,7 +83,6 @@ compat_features:
   - api.ShadowRoot.innerHTML
   - api.ShadowRoot.setHTMLUnsafe.options_sanitizer_parameter
   - api.SharedWorker.SharedWorker.enforces_trusted_types
-  - api.SharedWorker.SharedWorker.options_extendedLifetime_parameter
   - api.TrackEvent
   - api.TrackEvent.TrackEvent
   - api.TrackEvent.track
@@ -115,7 +118,6 @@ compat_features:
   - html.elements.link.rel.modulepreload.as-script
   - html.elements.link.rel.modulepreload.as-style
   - html.elements.script.type.importmap.integrity
-  - html.elements.script.type.importmap.multiple_import_maps
   - html.elements.select.autocomplete
   - html.elements.template.shadowrootcustomelementregistry
   - html.elements.template.shadowrootslotassignment
@@ -127,8 +129,6 @@ compat_features:
   - html.global_attributes.data_attributes
   - html.global_attributes.dir
   - html.global_attributes.draggable
-  - html.global_attributes.headingoffset
-  - html.global_attributes.headingreset
   - html.global_attributes.hidden
   - html.global_attributes.id
   - http.headers.Cross-Origin-Embedder-Policy
@@ -146,7 +146,6 @@ compat_features:
   - http.status.103
   - http.status.103.preconnect
   - http.status.103.preload
-  - javascript.statements.import.import_attributes.type_text
 
 # The following features in the spec are already part of web-features:
 # - Audio and video tracks:
@@ -568,10 +567,8 @@ compat_features:
 #   - api.Location.search
 #   - api.Location.toString
 #   - api.Window.location
-# - Unsanitized HTML parsing methods:
+# - Unsanitized HTML parsing:
 #   - api.Document.parseHTMLUnsafe_static
-#   - api.Element.setHTMLUnsafe
-#   - api.ShadowRoot.setHTMLUnsafe
 # - Sanitizer API:
 #   - api.Document.parseHTML_static
 #   - api.Element.setHTML
@@ -633,6 +630,11 @@ compat_features:
 # - Keyboard events:
 #   - api.Element.keydown_event
 #   - api.Element.keyup_event
+# - HTML setter methods:
+#   - api.Element.setHTMLUnsafe
+#   - api.Element.setHTMLUnsafe.options_runscripts_parameter
+#   - api.ShadowRoot.setHTMLUnsafe
+#   - api.ShadowRoot.setHTMLUnsafe.options_runscripts_parameter
 # - Wheel events:
 #   - api.Element.wheel_event
 # - Form-associated custom elements:
@@ -1139,6 +1141,11 @@ compat_features:
 # - enterkeyhint:
 #   - api.HTMLElement.enterKeyHint
 #   - html.global_attributes.enterkeyhint
+# - Heading offset:
+#   - api.HTMLElement.headingOffset
+#   - api.HTMLElement.headingReset
+#   - html.global_attributes.headingoffset
+#   - html.global_attributes.headingreset
 # - inert:
 #   - api.HTMLElement.inert
 #   - api.HTMLElement.inert.ignores_find_in_page
@@ -1393,9 +1400,7 @@ compat_features:
 #   - api.HTMLInputElement.valueAsDate
 #   - html.elements.input.type_date
 #   - html.elements.input.type_datetime-local
-#   - html.elements.input.type_month
 #   - html.elements.input.type_time
-#   - html.elements.input.type_week
 # - <ol>, <ul>, and <li>:
 #   - api.HTMLLIElement
 #   - api.HTMLLIElement.value
@@ -1664,6 +1669,11 @@ compat_features:
 #   - api.HTMLOptionElement.selected
 #   - api.HTMLOptionElement.text
 #   - api.HTMLOptionElement.value
+#   - api.HTMLOptionsCollection
+#   - api.HTMLOptionsCollection.add
+#   - api.HTMLOptionsCollection.length
+#   - api.HTMLOptionsCollection.remove
+#   - api.HTMLOptionsCollection.selectedIndex
 #   - api.HTMLSelectElement
 #   - api.HTMLSelectElement.add
 #   - api.HTMLSelectElement.add.index_before_parameter
@@ -1702,7 +1712,6 @@ compat_features:
 #   - html.elements.select.size
 # - <output>:
 #   - api.HTMLOutputElement
-#   - api.HTMLOutputElement.HTMLOutputElement
 #   - api.HTMLOutputElement.defaultValue
 #   - api.HTMLOutputElement.form
 #   - api.HTMLOutputElement.htmlFor
@@ -1839,6 +1848,9 @@ compat_features:
 #   - api.HTMLTemplateElement
 #   - api.HTMLTemplateElement.content
 #   - html.elements.template
+# - <template for>:
+#   - api.HTMLTemplateElement.htmlFor
+#   - html.elements.template.for
 # - Declarative shadow DOM:
 #   - api.HTMLTemplateElement.shadowRootClonable
 #   - api.HTMLTemplateElement.shadowRootDelegatesFocus
@@ -2168,6 +2180,8 @@ compat_features:
 #   - api.PaintRenderingContext2D.strokeStyle
 #   - api.PaintRenderingContext2D.transform
 #   - api.PaintRenderingContext2D.translate
+# - HTML processing instructions:
+#   - api.ProcessingInstruction.doc_html
 # - Selection:
 #   - api.Range.createContextualFragment
 # - COEP violation reports:
@@ -2203,6 +2217,8 @@ compat_features:
 # - JavaScript modules in shared workers:
 #   - api.SharedWorker.SharedWorker.ecmascript_modules
 #   - api.SharedWorker.SharedWorker.options_type_parameter
+# - Shared worker extended lifetime:
+#   - api.SharedWorker.SharedWorker.options_extendedLifetime_parameter
 # - localStorage and sessionStorage:
 #   - api.Storage
 #   - api.Storage.clear
@@ -2223,7 +2239,7 @@ compat_features:
 #   - api.Window.storage_event
 # - ToggleEvent source:
 #   - api.ToggleEvent.source
-# - Page visibility state:
+# - Page visibility state performance entries:
 #   - api.VisibilityStateEntry
 #   - api.VisibilityStateEntry.duration
 #   - api.VisibilityStateEntry.entryType
@@ -2231,7 +2247,6 @@ compat_features:
 #   - api.VisibilityStateEntry.startTime
 # - Window:
 #   - api.Window
-#   - api.Window.DOMContentLoaded_event
 #   - api.Window.blur_event
 #   - api.Window.close
 #   - api.Window.closed
@@ -2393,9 +2408,6 @@ compat_features:
 #   - html.elements.dfn
 # - <em>:
 #   - html.elements.em
-# - <fencedframe>:
-#   - html.elements.fencedframe.height
-#   - html.elements.fencedframe.width
 # - <figure> and <figcaption>:
 #   - html.elements.figcaption
 #   - html.elements.figure
@@ -2423,6 +2435,8 @@ compat_features:
 #   - html.elements.input.type_url
 # - <input type="hidden">:
 #   - html.elements.input.type_hidden
+# - <input type="month">:
+#   - html.elements.input.type_month
 # - <input type="password">:
 #   - html.elements.input.type_password
 # - <input type="radio">:
@@ -2435,6 +2449,8 @@ compat_features:
 #   - html.elements.input.type_search
 # - <input type="submit">:
 #   - html.elements.input.type_submit
+# - <input type="week">:
+#   - html.elements.input.type_week
 # - <ins>:
 #   - html.elements.ins
 #   - html.elements.ins.cite
@@ -2486,6 +2502,8 @@ compat_features:
 #   - html.elements.samp
 # - Import maps:
 #   - html.elements.script.type.importmap
+# - Multiple import maps:
+#   - html.elements.script.type.importmap.multiple_import_maps
 # - <search>:
 #   - html.elements.search
 # - <section>:
@@ -2522,3 +2540,5 @@ compat_features:
 #   - javascript.statements.import.import_attributes.type_css
 # - JSON import attributes:
 #   - javascript.statements.import.import_attributes.type_json
+# - Text import attributes:
+#   - javascript.statements.import.import_attributes.type_text

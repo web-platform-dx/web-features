@@ -1,40 +1,21 @@
 import assert from "node:assert/strict";
+import { describe, it } from "node:test";
 
 import { Temporal } from "@js-temporal/polyfill";
-import * as chai from "chai";
-import chaiJestSnapshot from "chai-jest-snapshot";
 
 import { browser } from "../browser-compat-data/index.js";
 import { computeBaseline, getStatus, keystoneDateToStatus } from "./index.js";
 
-chai.use(chaiJestSnapshot);
-
 describe("getStatus", function () {
-  before(function () {
-    chaiJestSnapshot.resetSnapshotRegistry();
-  });
-
-  beforeEach(function () {
-    chaiJestSnapshot.configureUsingMochaContext(this);
-  });
-
-  it("returns a status", function () {
+  it("returns a status", function (t) {
     const result = getStatus("fetch", "api.Response.json");
     assert.equal(result.baseline, "high");
-    chai.expect(result).to.matchSnapshot();
+    t.assert.snapshot(result);
   });
 });
 
 describe("computeBaseline", function () {
-  before(function () {
-    chaiJestSnapshot.resetSnapshotRegistry();
-  });
-
-  beforeEach(function () {
-    chaiJestSnapshot.configureUsingMochaContext(this);
-  });
-
-  it("returns something sensible for the most complex features", function () {
+  it("returns something sensible for the most complex features", function (t) {
     // These are some of the most "complex" BCD features, given approximately by:
     // const complexity = JSON.stringify(data.__compat, undefined, 2).split("\n").length
     const result = Object.fromEntries(
@@ -55,10 +36,10 @@ describe("computeBaseline", function () {
     assert.equal(result["css.types.basic-shape.path"]?.baseline, "high");
     assert.equal(result["api.DOMMatrix.DOMMatrix"]?.baseline, "high");
     assert.equal(result["css.types.image.cross-fade"]?.baseline, false);
-    chai.expect(result).to.matchSnapshot();
+    t.assert.snapshot(result);
   });
 
-  it("returns something sensible for the least complex features", function () {
+  it("returns something sensible for the least complex features", function (t) {
     // These are some of the least "complex" BCD features
     const result = Object.fromEntries(
       [
@@ -81,7 +62,7 @@ describe("computeBaseline", function () {
       "high",
     );
     assert.equal(result["html.elements.form.target"]?.baseline, "high");
-    chai.expect(result).to.matchSnapshot();
+    t.assert.snapshot(result);
   });
 
   it("returns a result for a feature", function () {
@@ -94,7 +75,7 @@ describe("computeBaseline", function () {
     assert.equal(result.baseline_high_date, "2018-01-29"); // 30 months later
   });
 
-  it("finds discrepancies with ancestors (checkAncestors)", function () {
+  it("finds discrepancies with ancestors (checkAncestors)", function (t) {
     // If the features change, you can find new test cases with the
     // `find-troublesome-ancestors.ts` script.
     const result = computeBaseline({
@@ -122,9 +103,9 @@ describe("computeBaseline", function () {
       resultWithAncestors.baseline_low_date?.toString(),
     );
 
-    chai.expect(result).to.matchSnapshot();
-    chai.expect(resultExplicit).to.matchSnapshot();
-    chai.expect(resultWithAncestors).to.matchSnapshot();
+    t.assert.snapshot(result);
+    t.assert.snapshot(resultExplicit);
+    t.assert.snapshot(resultWithAncestors);
   });
 
   it("surfaces version ranges from the underlying compat data", function () {
@@ -159,12 +140,12 @@ describe("computeBaseline", function () {
     assert(JSON.parse(result.toJSON()).baseline_low_date.startsWith("≤"));
   });
 
-  it("disregards support that's been removed", function () {
+  it("disregards support that's been removed", function (t) {
     const result = computeBaseline({
       compatKeys: ["api.AudioTrack"],
       checkAncestors: false,
     });
-    chai.expect(result).to.matchSnapshot();
+    t.assert.snapshot(result);
     assert.notEqual(Boolean(result.baseline), true);
   });
 

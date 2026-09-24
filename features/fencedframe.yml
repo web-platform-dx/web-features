@@ -1,8 +1,12 @@
 name: <fencedframe>
 description: The `<fencedframe>` element embeds another HTML page into the current page in a more secure and privacy-preserving way than `<iframe>` elements.
 spec: https://wicg.github.io/fenced-frame/
-status:
-  compute_from: html.elements.fencedframe
+discouraged:
+  removal_date: 2026-09-09
+  reason: Following the announcement that Chrome will maintain its current approach to third-party cookies, Chrome decided to withdraw certain Privacy Sandbox features including the `<fencedframe>` element and related APIs.
+  according_to:
+    - https://groups.google.com/a/chromium.org/g/blink-dev/c/c9w5uH3eSuo/m/KcvocvF1DQAJ
+    - https://chromestatus.com/feature/6366274495053824
 compat_features:
   - api.Fence
   - api.Fence.getNestedConfigs
