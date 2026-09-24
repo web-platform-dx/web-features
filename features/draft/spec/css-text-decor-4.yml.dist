@@ -3,9 +3,7 @@
 
 status:
   baseline: false
-  support:
-    firefox: "146"
-    firefox_android: "146"
+  support: {}
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -79,10 +77,18 @@ compat_features:
   - css.properties.text-decoration.grammar-error
   - css.properties.text-decoration.spelling-error
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "146"
   #   firefox_android: "146"
   - css.properties.text-decoration-inset
   - css.properties.text-decoration-inset.auto
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.text-decoration-skip-spaces
+  - css.properties.text-decoration-skip-spaces.all
+  - css.properties.text-decoration-skip-spaces.end
+  - css.properties.text-decoration-skip-spaces.none
+  - css.properties.text-decoration-skip-spaces.start

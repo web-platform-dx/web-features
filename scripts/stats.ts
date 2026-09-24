@@ -85,7 +85,7 @@ export async function stats(previous: Partial<Result>): Promise<Result> {
       encoding: "utf-8",
     }).stdout.trim() ?? null;
   const timestamp =
-    spawnSync("git", ["show", "--no-patch", "--format=%aI", hash], {
+    spawnSync("git", ["show", "--no-patch", "--format=%cI", hash], {
       encoding: "utf-8",
     }).stdout.trim() ?? null;
 
