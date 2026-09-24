@@ -8,6 +8,8 @@ status:
     chrome_android: "146"
     edge: "146"
 compat_features:
+  - css.properties.animation-trigger
+  - css.properties.animation-trigger.none
   - css.properties.timeline-trigger
   - css.properties.timeline-trigger-activation-range
   - css.properties.timeline-trigger-activation-range-end
@@ -25,7 +27,13 @@ compat_features:
   - css.properties.timeline-trigger-active-range.auto
   - css.properties.timeline-trigger-active-range.normal
   - css.properties.timeline-trigger-name
+  - css.properties.timeline-trigger-name.none
   - css.properties.timeline-trigger-source
+  - css.properties.timeline-trigger-source.auto
+  - css.properties.timeline-trigger-source.none
   - css.properties.timeline-trigger.auto
+  - css.properties.timeline-trigger.none
   - css.properties.timeline-trigger.normal
   - css.properties.trigger-scope
+  - css.properties.trigger-scope.all
+  - css.properties.trigger-scope.none
