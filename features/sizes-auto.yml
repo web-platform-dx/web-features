@@ -4,3 +4,13 @@ spec: https://html.spec.whatwg.org/multipage/images.html#valdef-sizes-auto
 group: images
 compat_features:
   - html.elements.img.sizes.auto
+# Holding this status back due to potential showstopper in Safari. See
+# https://github.com/web-platform-dx/web-features/pull/4422/changes#r4095054647
+status:
+  baseline: false
+  support:
+    chrome: "126"
+    chrome_android: "126"
+    edge: "126"
+    firefox: "150"
+    firefox_android: "150"
