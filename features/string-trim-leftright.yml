@@ -1,0 +1,16 @@
+name: String trimLeft() and trimRight()
+description: >
+  The `trimLeft()` and `trimRight()` methods of strings return a new string with whitespace removed from the beginning or end of the string.
+  They're aliases for `trimStart()` and `trimEnd()`.
+discouraged:
+  according_to: https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#String.prototype.trimleft
+  reason: >
+    TC39 recommends using `trimStart()` and `trimEnd()` instead.
+    The `trimLeft()` and `trimRight()` aliases are provided for compatibility with old code.
+  alternatives:
+    - string-trim-startend
+spec: https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#String.prototype.trimleft
+group: string
+compat_features:
+  - javascript.builtins.String.trimLeft
+  - javascript.builtins.String.trimRight

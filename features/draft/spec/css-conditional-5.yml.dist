@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "150"
-    chrome_android: "150"
-    edge: "150"
+  support: {}
 compat_features:
   # baseline: high
   # baseline_low_date: 2023-02-14
@@ -59,7 +56,6 @@ compat_features:
   #   firefox_android: "149"
   #   safari: "26.4"
   #   safari_ios: "26.4"
-  - css.at-rules.container.container-query_optional
   - css.properties.container-name.name-only_queries
   - css.properties.container-type.name-only_queries
   - css.properties.container.name-only_queries
@@ -87,10 +83,16 @@ compat_features:
   #   edge: "144"
   - css.at-rules.container.scroll-state_queries.scrolled
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "150"
   #   chrome_android: "150"
   #   edge: "150"
-  - css.at-rules.supports.named-feature
+  - css.at-rules.supports.named-feature.anchor-position-follows-transforms
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.CSSMediaRule.matches
+  - api.CSSSupportsRule.matches
+  - css.at-rules.supports.named-feature.single-axis-scroll-container

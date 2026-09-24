@@ -6,6 +6,7 @@ import {
 } from "./assertions.ts";
 import type { ParsedAuthoredData } from "./parse.ts";
 import type { Status } from "./types.ts";
+import { describe, it } from "node:test";
 
 describe("assertValidReference()", function () {
   it("throws if target ID is a move", function () {
