@@ -9,6 +9,19 @@ compat_features:
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
   # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "1"
+  #   safari_ios: "3"
+  - css.types.line-width
+
+  # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
   #   chrome: "15"
   #   chrome_android: "18"
   #   edge: "12"
@@ -17,6 +30,24 @@ compat_features:
   #   safari: "6"
   #   safari_ios: "6"
   - css.properties.border-image-source.none
+
+  # baseline: high
+  # baseline_low_date: 2016-09-20
+  # baseline_high_date: 2019-03-20
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "49"
+  #   firefox_android: "49"
+  #   safari: "1"
+  #   safari_ios: "1"
+  - css.properties.background-position-x.center
+  - css.properties.background-position-x.left
+  - css.properties.background-position-x.right
+  - css.properties.background-position-y.bottom
+  - css.properties.background-position-y.center
+  - css.properties.background-position-y.top
 
   # baseline: high
   # baseline_low_date: ≤2017-04-05
@@ -47,6 +78,33 @@ compat_features:
   - css.properties.background.left
   - css.properties.background.right
   - css.properties.background.top
+
+  # baseline: high
+  # baseline_low_date: 2023-12-07
+  # baseline_high_date: 2026-06-07
+  # support:
+  #   chrome: "120"
+  #   chrome_android: "120"
+  #   edge: "120"
+  #   firefox: "53"
+  #   firefox_android: "53"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - css.properties.mask-repeat.no-repeat
+  - css.properties.mask-repeat.repeat
+  - css.properties.mask-repeat.repeat-x
+  - css.properties.mask-repeat.repeat-y
+  - css.properties.mask-repeat.round
+  - css.properties.mask-repeat.space
+  - css.properties.mask-size.auto
+  - css.properties.mask-size.contain
+  - css.properties.mask-size.cover
+  - css.properties.mask.no-repeat
+  - css.properties.mask.repeat
+  - css.properties.mask.repeat-x
+  - css.properties.mask.repeat-y
+  - css.properties.mask.round
+  - css.properties.mask.space
 
   # baseline: false
   # support:

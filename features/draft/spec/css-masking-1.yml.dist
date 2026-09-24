@@ -3,13 +3,21 @@
 
 status:
   baseline: false
-  support:
-    chrome: "120"
-    chrome_android: "120"
-    edge: "120"
-    firefox: "54"
-    firefox_android: "54"
+  support: {}
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "55"
+  #   chrome_android: "55"
+  #   edge: "79"
+  #   firefox: "3.5"
+  #   firefox_android: "4"
+  #   safari: "9.1"
+  #   safari_ios: "9.3"
+  - css.properties.clip-path.none
+
   # baseline: high
   # baseline_low_date: 2023-11-02
   # baseline_high_date: 2026-05-02
@@ -25,6 +33,26 @@ compat_features:
   - css.properties.clip-path.content-box
   - css.properties.clip-path.margin-box
   - css.properties.clip-path.padding-box
+
+  # baseline: high
+  # baseline_low_date: 2023-12-07
+  # baseline_high_date: 2026-06-07
+  # support:
+  #   chrome: "120"
+  #   chrome_android: "120"
+  #   edge: "120"
+  #   firefox: "53"
+  #   firefox_android: "53"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - css.properties.mask-image.none
+  - css.properties.mask.add
+  - css.properties.mask.alpha
+  - css.properties.mask.exclude
+  - css.properties.mask.intersect
+  - css.properties.mask.match-source
+  - css.properties.mask.none
+  - css.properties.mask.subtract
 
   # baseline: false
   # support:
@@ -43,3 +71,27 @@ compat_features:
   - css.properties.mask-origin.border-box
   - css.properties.mask-origin.content-box
   - css.properties.mask-origin.padding-box
+  - css.properties.mask.border-box
+  - css.properties.mask.content-box
+  - css.properties.mask.fill-box
+  - css.properties.mask.luminance
+  - css.properties.mask.no-clip
+  - css.properties.mask.padding-box
+  - css.properties.mask.stroke-box
+  - css.properties.mask.view-box
+
+  # baseline: false
+  # support:
+  #   safari: "17.2"
+  #   safari_ios: "17.2"
+  - css.properties.mask-border-repeat.repeat
+  - css.properties.mask-border-repeat.round
+  - css.properties.mask-border-repeat.space
+  - css.properties.mask-border-repeat.stretch
+  - css.properties.mask-border-source.none
+  - css.properties.mask-border-width.auto
+  - css.properties.mask-border.none
+  - css.properties.mask-border.repeat
+  - css.properties.mask-border.round
+  - css.properties.mask-border.space
+  - css.properties.mask-border.stretch

@@ -1,8 +1,10 @@
-draft_date: 2026-07-15
+draft_date: 2026-09-24
 name: Pointer Events
 description: TODO
 spec: https://w3c.github.io/pointerevents/
 compat_features:
+  - api.MouseEvent.layerX
+  - api.MouseEvent.layerY
   - api.WheelEvent.momentum
 
 # The following features in the spec are already part of web-features:

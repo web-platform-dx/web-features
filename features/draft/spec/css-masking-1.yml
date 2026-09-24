@@ -1,4 +1,4 @@
-draft_date: 2026-07-06
+draft_date: 2026-09-24
 name: CSS Masking Module Level 1
 description: TODO
 spec: https://drafts.csswg.org/css-masking-1/
@@ -6,7 +6,19 @@ compat_features:
   - css.properties.clip-path.border-box
   - css.properties.clip-path.content-box
   - css.properties.clip-path.margin-box
+  - css.properties.clip-path.none
   - css.properties.clip-path.padding-box
+  - css.properties.mask-border-repeat.repeat
+  - css.properties.mask-border-repeat.round
+  - css.properties.mask-border-repeat.space
+  - css.properties.mask-border-repeat.stretch
+  - css.properties.mask-border-source.none
+  - css.properties.mask-border-width.auto
+  - css.properties.mask-border.none
+  - css.properties.mask-border.repeat
+  - css.properties.mask-border.round
+  - css.properties.mask-border.space
+  - css.properties.mask-border.stretch
   - css.properties.mask-clip.border-box
   - css.properties.mask-clip.content-box
   - css.properties.mask-clip.fill-box
@@ -14,9 +26,25 @@ compat_features:
   - css.properties.mask-clip.padding-box
   - css.properties.mask-clip.stroke-box
   - css.properties.mask-clip.view-box
+  - css.properties.mask-image.none
   - css.properties.mask-origin.border-box
   - css.properties.mask-origin.content-box
   - css.properties.mask-origin.padding-box
+  - css.properties.mask.add
+  - css.properties.mask.alpha
+  - css.properties.mask.border-box
+  - css.properties.mask.content-box
+  - css.properties.mask.exclude
+  - css.properties.mask.fill-box
+  - css.properties.mask.intersect
+  - css.properties.mask.luminance
+  - css.properties.mask.match-source
+  - css.properties.mask.no-clip
+  - css.properties.mask.none
+  - css.properties.mask.padding-box
+  - css.properties.mask.stroke-box
+  - css.properties.mask.subtract
+  - css.properties.mask.view-box
 
 # The following features in the spec are already part of web-features:
 # - clip-path:

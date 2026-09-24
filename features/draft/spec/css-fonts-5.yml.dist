@@ -8,6 +8,27 @@ status:
     firefox_android: "155"
 compat_features:
   # baseline: high
+  # baseline_low_date: 2015-07-29
+  # baseline_high_date: 2018-01-29
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "1"
+  #   firefox_android: "4"
+  #   safari: "1"
+  #   safari_ios: "1"
+  - css.properties.font-size.large
+  - css.properties.font-size.larger
+  - css.properties.font-size.medium
+  - css.properties.font-size.small
+  - css.properties.font-size.smaller
+  - css.properties.font-size.x-large
+  - css.properties.font-size.x-small
+  - css.properties.font-size.xx-large
+  - css.properties.font-size.xx-small
+
+  # baseline: high
   # baseline_low_date: 2018-09-05
   # baseline_high_date: 2021-03-05
   # support:
@@ -21,6 +42,73 @@ compat_features:
   - css.properties.font-variation-settings.normal
 
   # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "31"
+  #   chrome_android: "31"
+  #   edge: "79"
+  #   firefox: "34"
+  #   firefox_android: "34"
+  #   safari: "7"
+  #   safari_ios: "7"
+  - css.properties.font-variant.common-ligatures
+  - css.properties.font-variant.contextual
+  - css.properties.font-variant.discretionary-ligatures
+  - css.properties.font-variant.historical-ligatures
+  - css.properties.font-variant.no-common-ligatures
+  - css.properties.font-variant.no-contextual
+  - css.properties.font-variant.no-discretionary-ligatures
+  - css.properties.font-variant.no-historical-ligatures
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "52"
+  #   chrome_android: "52"
+  #   edge: "79"
+  #   firefox: "34"
+  #   firefox_android: "34"
+  #   safari: "9.1"
+  #   safari_ios: "9.3"
+  - css.properties.font-variant.all-petite-caps
+  - css.properties.font-variant.all-small-caps
+  - css.properties.font-variant.diagonal-fractions
+  - css.properties.font-variant.lining-nums
+  - css.properties.font-variant.oldstyle-nums
+  - css.properties.font-variant.ordinal
+  - css.properties.font-variant.petite-caps
+  - css.properties.font-variant.proportional-nums
+  - css.properties.font-variant.slashed-zero
+  - css.properties.font-variant.small-caps
+  - css.properties.font-variant.stacked-fractions
+  - css.properties.font-variant.tabular-nums
+  - css.properties.font-variant.titling-caps
+  - css.properties.font-variant.unicase
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "63"
+  #   chrome_android: "63"
+  #   edge: "79"
+  #   firefox: "34"
+  #   firefox_android: "34"
+  #   safari: "9.1"
+  #   safari_ios: "9.3"
+  - css.properties.font-variant.full-width
+  - css.properties.font-variant.jis04
+  - css.properties.font-variant.jis78
+  - css.properties.font-variant.jis83
+  - css.properties.font-variant.jis90
+  - css.properties.font-variant.proportional-width
+  - css.properties.font-variant.ruby
+  - css.properties.font-variant.simplified
+  - css.properties.font-variant.traditional
+
+  # baseline: high
   # baseline_low_date: 2022-01-06
   # baseline_high_date: 2024-07-06
   # support:
@@ -32,6 +120,17 @@ compat_features:
   #   safari: "9"
   #   safari_ios: "9"
   - css.properties.font-synthesis.none
+
+  # baseline: false
+  # support:
+  #   chrome: "131"
+  #   chrome_android: "131"
+  #   edge: "131"
+  #   firefox: "141"
+  #   firefox_android: "141"
+  - css.properties.font-variant.emoji
+  - css.properties.font-variant.text
+  - css.properties.font-variant.unicode
 
   # baseline: false
   # support:

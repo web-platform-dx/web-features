@@ -1,4 +1,4 @@
-draft_date: 2026-09-17
+draft_date: 2026-09-24
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -78,6 +78,7 @@ compat_features:
   - api.RadioNodeList.value
   - api.Sanitizer.allowProcessingInstruction
   - api.Sanitizer.removeProcessingInstruction
+  - api.Sanitizer.setJavascriptURLs
   - api.ServiceWorker.error_event
   - api.ShadowRoot.activeElement
   - api.ShadowRoot.innerHTML
