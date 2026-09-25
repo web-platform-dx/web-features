@@ -1,0 +1,13 @@
+name: String substr()
+description: The `substr()` method of strings returns part of a string, starting from an index and ending a given number of characters after.
+spec: https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-string.prototype.substr
+discouraged:
+  reason: TC39 included `substr()` in Annex B of the ECMAScript specification, which covers JavaScript features with "one or more undesirable characteristics and in the absence of legacy usage would be removed."
+  according_to:
+    - https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html#sec-additional-ecmascript-features-for-web-browsers
+  # No `alternatives` because it would be `alternatives: [strings]`. In the
+  # future it'd be nice to have a reference to `substring()` and `slice()`
+  # instead.
+  # See: https://github.com/web-platform-dx/web-features/issues/2676
+compat_features:
+  - javascript.builtins.String.substr
