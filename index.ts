@@ -9,7 +9,7 @@ import type { GroupData, SnapshotData, WebFeaturesData } from './types.ts';
 
 import { BASELINE_LOW_TO_HIGH_DURATION, coreBrowserSet, getStatus, parseRangedDateString } from 'compute-baseline';
 import { Compat } from 'compute-baseline/browser-compat-data';
-import { assertCompatSetConsistency, assertRequiredRemovalDateSet, assertValidFeatureReference } from './assertions.ts';
+import { assertAllowedOverlap, assertCompatSetConsistency, assertRequiredRemovalDateSet, assertValidFeatureReference, type OverlapAllowlist } from './assertions.ts';
 import { parseAuthoring, type ParsedAuthoredData } from './parse.ts';
 import { isMoved, isOrdinaryFeatureData, isSplit } from './type-guards.ts';
 
@@ -35,6 +35,20 @@ const uniqueIdMaps = {
     snapshots: new Map<string, string>(),
 }
 
+const overlapAllowlist: OverlapAllowlist = (() => {
+    const map = new Map<string, string[]>();
+    const allowlist = YAML.parse(fs.readFileSync("./features/_overlap_allowlist.yml", { encoding: "utf-8" }));
+    for (const {reason, keys, features} of allowlist) {
+        if (typeof reason !== "string") {
+            throw new Error(`Overlap allowlist entries require a reason! Missing for ${JSON.stringify(features)} entry.`);
+        }
+        for (const key of keys) {
+            map.set(key, features);
+        }
+    }
+    return map;
+})()
+
 function* yamlEntries(root: string): Generator<[id: string, data: any, authored: ParsedAuthoredData]> {
     const filePaths = new fdir()
         .withBasePath()
@@ -45,6 +59,11 @@ function* yamlEntries(root: string): Generator<[id: string, data: any, authored:
     for (const fp of filePaths) {
         // The feature identifier/key is the filename without extension.
         const { name: key } = path.parse(fp);
+
+        if (key.startsWith("_")) {
+            continue;
+        }
+
         const pathParts = fp.split(path.sep);
         const isDraft = pathParts.includes('draft');
         const isSpec = isDraft && pathParts.includes('spec');
@@ -135,7 +154,7 @@ function* identifiers(value: undefined | string | string[]) {
 
 
 // Map from BCD keys/paths to web-features identifiers.
-const bcdToFeatureId: Map<string, string> = new Map();
+const bcdToFeatureId: Map<string, string[]> = new Map();
 
 const features: WebFeaturesData["features"] = {};
 for (const [key, data, authored] of yamlEntries('features')) {
@@ -228,15 +247,9 @@ for (const [key, data, authored] of yamlEntries('features')) {
         // no effect on what web-features users see.
         data.compat_features.sort();
 
-        // Check that no BCD key is used twice until the meaning is made clear in
-        // https://github.com/web-platform-dx/web-features/issues/1173.
         for (const bcdKey of data.compat_features) {
-            const otherKey = bcdToFeatureId.get(bcdKey);
-            if (otherKey) {
-                throw new Error(`BCD key ${bcdKey} is used in both ${otherKey} and ${key}, which creates ambiguity for some consumers. Please see https://github.com/web-platform-dx/web-features/issues/1173 and help us find a good solution to allow this.`);
-            } else {
-                bcdToFeatureId.set(bcdKey, key);
-            }
+            bcdToFeatureId.set(bcdKey, [...(bcdToFeatureId.get(bcdKey) ?? []), key]);
+            assertAllowedOverlap(bcdKey, key, bcdToFeatureId, overlapAllowlist);
         }
 
         // Generate by_compat_key data.
