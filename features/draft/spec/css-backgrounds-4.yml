@@ -1,14 +1,8 @@
-draft_date: 2026-09-24
+draft_date: 2026-09-28
 name: CSS Backgrounds Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-backgrounds-4/
 compat_features:
-  - css.properties.background-position-x.center
-  - css.properties.background-position-x.left
-  - css.properties.background-position-x.right
-  - css.properties.background-position-y.bottom
-  - css.properties.background-position-y.center
-  - css.properties.background-position-y.top
   - css.properties.background-repeat-x
   - css.properties.background-repeat-y
   - css.properties.background.border-area
@@ -97,9 +91,15 @@ compat_features:
 #   - css.properties.background-position.side-relative_values
 #   - css.properties.background-position.top
 #   - css.properties.background-position-x
+#   - css.properties.background-position-x.center
+#   - css.properties.background-position-x.left
+#   - css.properties.background-position-x.right
 #   - css.properties.background-position-x.side-relative_values
 #   - css.properties.background-position-y
+#   - css.properties.background-position-y.bottom
+#   - css.properties.background-position-y.center
 #   - css.properties.background-position-y.side-relative_values
+#   - css.properties.background-position-y.top
 # - background-repeat:
 #   - css.properties.background-repeat
 #   - css.properties.background-repeat.2-value
