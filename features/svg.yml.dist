@@ -1438,6 +1438,19 @@ compat_features:
   - css.properties.clip-rule.nonzero
 
   # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: ≤31
+  #   chrome_android: ≤31
+  #   edge: "79"
+  #   firefox: "3"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - css.properties.color-interpolation.linearRGB
+
+  # baseline: high
   # baseline_low_date: 2020-03-24
   # baseline_high_date: 2022-09-24
   # support:
