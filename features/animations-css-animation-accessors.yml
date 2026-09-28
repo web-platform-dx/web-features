@@ -1,0 +1,9 @@
+name: Animation accessors
+description: The `animation` property of an `AnimationEvent` or `TransitionEvent` object is the `Animation` object that triggered the event.
+spec: https://drafts.csswg.org/css-animations-2/#dom-animationevent-animation
+group:
+  - animation
+  - css
+compat_features:
+  - api.AnimationEvent.animation
+  - api.TransitionEvent.animation
