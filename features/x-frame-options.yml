@@ -1,0 +1,16 @@
+name: X-Frame-Options
+description: >
+  The `X-Frame-Options` HTTP header limits where a document may be embedded in an iframe.
+  The `X-Frame-Options: SAMEORIGIN` header disallows embedding in another origin.
+  The `X-Frame-Options: DENY` header disallows embedding in any context, regardless of origin.
+spec: https://html.spec.whatwg.org/multipage/speculative-loading.html#the-x-frame-options-header
+# Spec'd originally in https://www.rfc-editor.org/info/rfc7034/
+# This was superseded by the WHATWG spec.
+
+# caniuse shows this as partial across the board, for not supporting
+# `ALLOW-FROM`. Only IE ever supported this.
+# caniuse: x-frame-options
+compat_features:
+  - http.headers.X-Frame-Options
+  - http.headers.X-Frame-Options.DENY
+  - http.headers.X-Frame-Options.SAMEORIGIN
