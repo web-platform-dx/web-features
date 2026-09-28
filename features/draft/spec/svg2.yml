@@ -1,4 +1,4 @@
-draft_date: 2026-09-17
+draft_date: 2026-09-28
 name: Scalable Vector Graphics (SVG) 2
 description: TODO
 spec: https://w3c.github.io/svgwg/svg2-draft/
@@ -27,14 +27,7 @@ compat_features:
   - css.properties.paint-order.stroke
   - css.properties.path-length
   - css.properties.path-length.none
-  - css.properties.pointer-events.all
-  - css.properties.pointer-events.auto
   - css.properties.pointer-events.bounding-box
-  - css.properties.pointer-events.fill
-  - css.properties.pointer-events.none
-  - css.properties.pointer-events.painted
-  - css.properties.pointer-events.stroke
-  - css.properties.pointer-events.visible
   - css.properties.pointer-events.visibleFill
   - css.properties.pointer-events.visiblePainted
   - css.properties.pointer-events.visibleStroke
@@ -647,7 +640,14 @@ compat_features:
 #   - svg.global_attributes.paint-order
 # - pointer-events:
 #   - css.properties.pointer-events
+#   - css.properties.pointer-events.all
+#   - css.properties.pointer-events.auto
+#   - css.properties.pointer-events.fill
 #   - css.properties.pointer-events.html_elements
+#   - css.properties.pointer-events.none
+#   - css.properties.pointer-events.painted
+#   - css.properties.pointer-events.stroke
+#   - css.properties.pointer-events.visible
 # - text-decoration:
 #   - css.properties.text-decoration
 #   - css.properties.text-decoration.includes_color-and-style

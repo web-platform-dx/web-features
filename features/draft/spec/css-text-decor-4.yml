@@ -1,4 +1,4 @@
-draft_date: 2026-09-17
+draft_date: 2026-09-28
 name: CSS Text Decoration Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-text-decor-4/
@@ -24,7 +24,6 @@ compat_features:
   - css.properties.text-emphasis.open
   - css.properties.text-emphasis.sesame
   - css.properties.text-emphasis.triangle
-  - css.properties.text-shadow.none
 
 # The following features in the spec are already part of web-features:
 # - text-decoration:
@@ -69,6 +68,7 @@ compat_features:
 #   - css.properties.text-emphasis-style.triangle
 # - text-shadow:
 #   - css.properties.text-shadow
+#   - css.properties.text-shadow.none
 # - text-underline-offset:
 #   - css.properties.text-underline-offset
 #   - css.properties.text-underline-offset.auto
