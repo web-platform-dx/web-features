@@ -1,0 +1,11 @@
+name: CSSPseudoElement
+description: The `pseudo()` method of an `Element` object returns a `CSSPseudoElement` object, which represents a pseudo-element and its context in the document tree.
+spec: https://drafts.csswg.org/css-pseudo-4/#CSSPseudoElement-interface
+group: cssom
+compat_features:
+  - api.Element.pseudo
+  - api.CSSPseudoElement
+  - api.CSSPseudoElement.element
+  - api.CSSPseudoElement.parent
+  - api.CSSPseudoElement.pseudo
+  - api.CSSPseudoElement.type
