@@ -1,0 +1,10 @@
+name: scroll-axis-lock
+description: >
+  The `scroll-axis-lock` property controls whether scrolling is locked to one dimension at a time or freely follows movement in two dimensions.
+  By default, browsers may lock the scroll axis, ignoring minor perpendicular scrolling, when scrolling is nearly vertical or horizontal.
+spec: https://drafts.csswg.org/css-overflow-5/#scroll-axis-locking
+group: scrolling
+compat_features:
+  - css.properties.scroll-axis-lock
+  - css.properties.scroll-axis-lock.auto
+  - css.properties.scroll-axis-lock.none
