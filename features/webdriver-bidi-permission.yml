@@ -1,0 +1,12 @@
+name: WebDriver BiDi permission
+description: The `permission` extension module contains commands for managing the browser permissions.
+spec: https://www.w3.org/TR/permissions/#automation-webdriver-bidi
+group: webdriver
+compat_features:
+  - webdriver.bidi.permission
+  - webdriver.bidi.permission.setPermission
+  - webdriver.bidi.permission.setPermission.descriptor_parameter
+  - webdriver.bidi.permission.setPermission.embeddedOrigin_parameter
+  - webdriver.bidi.permission.setPermission.origin_parameter
+  - webdriver.bidi.permission.setPermission.state_parameter
+  - webdriver.bidi.permission.setPermission.userContext_parameter

@@ -1,0 +1,13 @@
+name: WebDriver BiDi preload script
+description: The `browsingContext.addPreloadScript` command adds a preload script, which runs on creation of a new Window, before any author-defined script have run.
+spec: https://w3c.github.io/webdriver-bidi/#preload-script
+group: webdriver
+compat_features:
+  - webdriver.bidi.script.addPreloadScript
+  - webdriver.bidi.script.addPreloadScript.arguments_parameter
+  - webdriver.bidi.script.addPreloadScript.contexts_parameter
+  - webdriver.bidi.script.addPreloadScript.functionDeclaration_parameter
+  - webdriver.bidi.script.addPreloadScript.sandbox_parameter
+  - webdriver.bidi.script.addPreloadScript.userContexts_parameter
+  - webdriver.bidi.script.removePreloadScript
+  - webdriver.bidi.script.removePreloadScript.script_parameter
