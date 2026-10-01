@@ -3,8 +3,7 @@
 
 status:
   baseline: false
-  support:
-    edge: "128"
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -38,7 +37,7 @@ compat_features:
   #   edge: "128"
   - api.Navigator.deprecatedReplaceInURN
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support:
-  #   edge: "126"
+  # support: {}
   - api.FencedFrameConfig.setSharedStorageContext
