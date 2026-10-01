@@ -1,8 +1,10 @@
-draft_date: 2026-09-24
+draft_date: 2026-10-01
 name: CSS Text Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-text-4/
 compat_features:
+  - css.properties.hyphenate-limit-lines
+  - css.properties.hyphenate-limit-lines.no-limit
   - css.properties.hyphens.manual
   - css.properties.hyphens.none
   - css.properties.letter-spacing.percentages
