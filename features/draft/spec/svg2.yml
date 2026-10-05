@@ -1,4 +1,4 @@
-draft_date: 2026-09-28
+draft_date: 2026-10-05
 name: Scalable Vector Graphics (SVG) 2
 description: TODO
 spec: https://w3c.github.io/svgwg/svg2-draft/
@@ -19,7 +19,6 @@ compat_features:
   - api.SVGGraphicsElement.getBBox.options_parameter.options_fill_parameter
   - api.SVGGraphicsElement.getBBox.options_parameter.options_markers_parameter
   - api.SVGGraphicsElement.getBBox.options_parameter.options_stroke_parameter
-  - css.properties.color-interpolation.linearRGB
   - css.properties.d.none
   - css.properties.paint-order.fill
   - css.properties.paint-order.markers
@@ -311,6 +310,7 @@ compat_features:
 #   - api.SVGViewElement.viewBox
 #   - css.properties.color-interpolation
 #   - css.properties.color-interpolation.auto
+#   - css.properties.color-interpolation.linearRGB
 #   - css.properties.color-interpolation.sRGB
 #   - css.properties.cx
 #   - css.properties.cy
