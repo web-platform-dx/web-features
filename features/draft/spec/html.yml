@@ -1,4 +1,4 @@
-draft_date: 2026-09-24
+draft_date: 2026-10-05
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -88,7 +88,6 @@ compat_features:
   - api.TrackEvent.TrackEvent
   - api.TrackEvent.track
   - api.Window.originAgentCluster
-  - api.Window.postMessage.transfer_parameter
   - api.Window.rejectionhandled_event
   - api.Window.unhandledrejection_event
   - api.Window.unload_event
@@ -111,7 +110,6 @@ compat_features:
   - html.elements.iframe.allow.document-domain
   - html.elements.iframe.sandbox.allow-orientation-lock
   - html.elements.iframe.sandbox.allow-pointer-lock
-  - html.elements.input.autocomplete
   - html.elements.input.type_color.accepts_css_colors
   - html.elements.input.type_range.labeled_values
   - html.elements.link.rel.icon
@@ -534,6 +532,7 @@ compat_features:
 #   - api.MessageEvent.source
 #   - api.Window.message_event
 #   - api.Window.postMessage
+#   - api.Window.postMessage.transfer_parameter
 #   - api.Worker.message_event
 #   - api.Worker.postMessage
 # - messageerror:
@@ -1339,6 +1338,7 @@ compat_features:
 #   - html.elements.input
 #   - html.elements.input.accept
 #   - html.elements.input.alt
+#   - html.elements.input.autocomplete
 #   - html.elements.input.checked
 #   - html.elements.input.disabled
 #   - html.elements.input.form

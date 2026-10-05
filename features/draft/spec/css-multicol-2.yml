@@ -1,4 +1,4 @@
-draft_date: 2026-05-08
+draft_date: 2026-10-05
 name: CSS Multi-column Layout Module Level 2
 description: TODO
 spec: https://drafts.csswg.org/css-multicol-2/
@@ -9,7 +9,6 @@ compat_features:
   - css.properties.column-wrap.auto
   - css.properties.column-wrap.nowrap
   - css.properties.column-wrap.wrap
-  - css.properties.columns.auto
   - css.properties.columns.column-height
 
 # The following features in the spec are already part of web-features:
@@ -26,6 +25,7 @@ compat_features:
 #   - css.properties.column-width
 #   - css.properties.column-width.auto
 #   - css.properties.columns
+#   - css.properties.columns.auto
 # - Column breaks:
 #   - css.properties.break-after.multicol_context
 #   - css.properties.break-before.multicol_context
