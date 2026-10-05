@@ -1,0 +1,9 @@
+name: Iterator.zip() and Iterator.zipKeyed()
+description: >
+  The `Iterator.zip()` and `Iterator.zipKeyed()` static methods return new iterators that aggregate items from multiple iterables.
+  You can use them to iterate jointly, to get all of the items at the same position in each iterable.
+spec: https://tc39.es/ecma262/multipage/control-abstraction-objects.html#sec-iterator.zip
+group: iterators
+compat_features:
+  - javascript.builtins.Iterator.zip
+  - javascript.builtins.Iterator.zipKeyed
