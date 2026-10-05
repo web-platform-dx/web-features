@@ -55,12 +55,14 @@ compat_features:
   - api.Selection.anchorNode
   - api.Selection.anchorOffset
   - api.Selection.collapse
+  - api.Selection.collapse.offset_parameter_optional
   - api.Selection.collapseToEnd
   - api.Selection.collapseToStart
   - api.Selection.containsNode
   - api.Selection.deleteFromDocument
   - api.Selection.empty
   - api.Selection.extend
+  - api.Selection.extend.offset_parameter_optional
   - api.Selection.focusNode
   - api.Selection.focusOffset
   - api.Selection.getRangeAt
