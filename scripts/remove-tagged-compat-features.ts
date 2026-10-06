@@ -1,6 +1,5 @@
 import { setLogger } from "compute-baseline";
 import { Compat, Feature } from "compute-baseline/browser-compat-data";
-import { fdir } from "fdir";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -108,11 +107,7 @@ function cleanup(sourcePath: string, options?: { force?: boolean }): void {
 function main() {
   const filePaths: string[] = argv.paths.flatMap((fileOrDirectory) => {
     if (fs.statSync(fileOrDirectory).isDirectory()) {
-      return new fdir()
-        .withBasePath()
-        .filter((path) => path.endsWith(".yml"))
-        .crawl(fileOrDirectory)
-        .sync();
+      return fs.globSync(path.join(fileOrDirectory, "**/*.yml"));
     }
     return fileOrDirectory.endsWith(".yml") ? fileOrDirectory : [];
   });

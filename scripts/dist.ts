@@ -6,7 +6,6 @@ import {
   setLogger,
 } from "compute-baseline";
 import { feature } from "compute-baseline/browser-compat-data";
-import { fdir } from "fdir";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -388,11 +387,9 @@ function isDistOrDistable(path: string): boolean {
 function main() {
   const filePaths: string[] = argv.paths.flatMap((fileOrDirectory) => {
     if (fs.statSync(fileOrDirectory).isDirectory()) {
-      return new fdir()
-        .withBasePath()
-        .filter(isDistOrDistable)
-        .crawl(fileOrDirectory)
-        .sync();
+      return fs.globSync(path.join(fileOrDirectory, "*"), {
+        exclude: (fp) => !isDistOrDistable(fp),
+      });
     }
     return isDistOrDistable(fileOrDirectory) ? fileOrDirectory : [];
   });
