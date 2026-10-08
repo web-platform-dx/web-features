@@ -75,14 +75,24 @@ async function useCounterReport(): Promise<Report> {
 
   // Convert feature-name to FeatureName following the same rules as
   // Chromium use counters:
-  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/public/mojom/use_counter/metrics/webdx_feature.mojom;l=35-47;drc=af140c76c416302ecadb5e7cf3f989d6293ba5ec
-  // In short, uppercase the first letter in each sequence of letters and remove hyphens.
+  // https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/public/mojom/use_counter/metrics/webdx_feature.mojom;l=35-46;drc=4ce4ff6c172e34e19452e068b55b744faf958fac
+  // In short, split IDs by hyphens, title case each item, then prepend any items that start with a digit with an underscore.
+  const webFeaturesIdToUseCounter = (id: string) => {
+    const items = id.split("-");
+    const words = [];
+    for (const item of items) {
+      const capitalized = item[0].toUpperCase() + item.slice(1);
+      if (/^\d/.test(capitalized)) {
+        words.push("_" + capitalized);
+      } else {
+        words.push(capitalized);
+      }
+    }
+    return words.join("");
+  };
+
   const expectedCounterLabels = new Set(
-    Object.keys(webFeatures).map((id) => {
-      return id
-        .replace(/[a-z]+/g, (m) => m[0].toUpperCase() + m.substring(1))
-        .replaceAll("-", "");
-    }),
+    Object.keys(webFeatures).map(webFeaturesIdToUseCounter),
   );
 
   const items = [];
