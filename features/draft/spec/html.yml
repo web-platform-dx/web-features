@@ -117,12 +117,14 @@ compat_features:
   - html.elements.link.rel.modulepreload.as-script
   - html.elements.link.rel.modulepreload.as-style
   - html.elements.script.type.importmap.integrity
+  - html.elements.script.type.module.http_errors_not_cached
   - html.elements.select.autocomplete
   - html.elements.template.shadowrootcustomelementregistry
   - html.elements.template.shadowrootslotassignment
   - html.elements.textarea.autocomplete.new-password
   - html.elements.textarea.autocomplete.one-time-code
   - html.elements.textarea.autocomplete.webauthn
+  - html.elements.textarea.wrap.soft
   - html.elements.track.kind.descriptions
   - html.global_attributes.class
   - html.global_attributes.data_attributes
@@ -142,6 +144,8 @@ compat_features:
   - http.status.103
   - http.status.103.preconnect
   - http.status.103.preload
+  - javascript.operators.import.http_errors_not_cached
+  - javascript.statements.import.http_errors_not_cached
 
 # The following features in the spec are already part of web-features:
 # - Audio and video tracks:
