@@ -1,4 +1,4 @@
-draft_date: 2026-10-05
+draft_date: 2026-10-08
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -139,9 +139,6 @@ compat_features:
   - http.headers.Origin-Agent-Cluster
   - http.headers.Permissions-Policy.autoplay
   - http.headers.Permissions-Policy.cross-origin-isolated
-  - http.headers.X-Frame-Options
-  - http.headers.X-Frame-Options.DENY
-  - http.headers.X-Frame-Options.SAMEORIGIN
   - http.status.103
   - http.status.103.preconnect
   - http.status.103.preload
@@ -2533,6 +2530,10 @@ compat_features:
 #   - html.elements.wbr
 # - style (attribute):
 #   - html.global_attributes.style
+# - X-Frame-Options:
+#   - http.headers.X-Frame-Options
+#   - http.headers.X-Frame-Options.DENY
+#   - http.headers.X-Frame-Options.SAMEORIGIN
 # - Promise.any():
 #   - javascript.builtins.AggregateError.serializable_object
 # - Promise (initial support):
