@@ -112,12 +112,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "87"
+  #   chrome_android: "87"
+  #   edge: "87"
+  - css.properties.break-after.paged_context.recto
+  - css.properties.break-before.paged_context.recto
+
+  # baseline: false
+  # support:
   #   firefox: "65"
   #   firefox_android: "65"
   - css.properties.break-after.always
   - css.properties.break-before.always
-
-  # baseline: false
-  # support: {}
-  - css.properties.break-after.paged_context.recto
-  - css.properties.break-before.paged_context.recto

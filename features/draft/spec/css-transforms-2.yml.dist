@@ -7,6 +7,8 @@ status:
     chrome: "137"
     chrome_android: "137"
     edge: "137"
+    firefox: "155"
+    firefox_android: "155"
 compat_features:
   # baseline: high
   # baseline_low_date: 2015-09-30
@@ -36,10 +38,20 @@ compat_features:
   - css.properties.backface-visibility.hidden
   - css.properties.backface-visibility.visible
 
-  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "133"
+  #   chrome_android: "133"
+  #   edge: "133"
+  #   firefox: "155"
+  #   firefox_android: "155"
+  - css.types.attr.type_function.transform-function
+
   # baseline: false
   # support:
   #   chrome: "137"
   #   chrome_android: "137"
   #   edge: "137"
+  #   firefox: "23"
+  #   firefox_android: "23"
   - svg.global_attributes.transform.svg_root

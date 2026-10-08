@@ -53,6 +53,18 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "146"
+  #   chrome_android: "146"
+  #   edge: "146"
+  #   safari: "27"
+  #   safari_ios: "27"
+  - api.GPUSupportedLimits.maxStorageBuffersInFragmentStage
+  - api.GPUSupportedLimits.maxStorageBuffersInVertexStage
+  - api.GPUSupportedLimits.maxStorageTexturesInFragmentStage
+  - api.GPUSupportedLimits.maxStorageTexturesInVertexStage
+
+  # baseline: false
+  # support:
   #   chrome: "144"
   #   chrome_android: "144"
   #   edge: "144"
@@ -74,10 +86,6 @@ compat_features:
   #   chrome_android: "146"
   #   edge: "146"
   - api.GPUDevice.createTexture.descriptor_usage_parameter.accept_transient_attachment
-  - api.GPUSupportedLimits.maxStorageBuffersInFragmentStage
-  - api.GPUSupportedLimits.maxStorageBuffersInVertexStage
-  - api.GPUSupportedLimits.maxStorageTexturesInFragmentStage
-  - api.GPUSupportedLimits.maxStorageTexturesInVertexStage
   - api.GPUTexture.createView.descriptor_usage_parameter.transient_attachment
   - api.GPUTexture.textureBindingViewDimension
   - api.GPUTexture.usage.transient_attachment

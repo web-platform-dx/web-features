@@ -1,11 +1,14 @@
-draft_date: 2025-03-17
+draft_date: 2026-09-28
 name: SVG Paths
 description: TODO
 spec: https://svgwg.org/specs/paths/
 compat_features:
   - api.SVGPathElement.getPathData
   - api.SVGPathElement.getPathSegmentAtLength
-  - api.SVGPathElement.getPointAtLength
-  - api.SVGPathElement.getTotalLength
-  - api.SVGPathElement.pathLength
   - api.SVGPathElement.setPathData
+
+# The following features in the spec are already part of web-features:
+# - SVG:
+#   - api.SVGPathElement.getPointAtLength
+#   - api.SVGPathElement.getTotalLength
+#   - api.SVGPathElement.pathLength

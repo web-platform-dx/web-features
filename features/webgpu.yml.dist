@@ -270,6 +270,15 @@ compat_features:
   # baseline: false
   # support:
   #   chrome: "144"
+  #   chrome_android: "121"
+  #   edge: "144"
+  #   safari: "27"
+  #   safari_ios: "27"
+  - api.GPUDevice.uncapturederror_event
+
+  # baseline: false
+  # support:
+  #   chrome: "144"
   #   chrome_android: "144"
   #   edge: "144"
   #   safari: "26"
@@ -294,7 +303,6 @@ compat_features:
   - api.GPUDevice.createRenderPipelineAsync.texture_rgb10a2uint
   - api.GPUDevice.createRenderPipelineAsync.vertex_unorm10-10-10-2
   - api.GPUDevice.createTexture.texture_rgb10a2uint
-  - api.GPUDevice.uncapturederror_event
   - api.GPUError
   - api.GPUError.message
   - api.GPUQueue.copyExternalImageToTexture.htmlimageelement_imagedata_source

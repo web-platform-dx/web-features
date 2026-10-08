@@ -1,4 +1,4 @@
-draft_date: 2026-09-03
+draft_date: 2026-10-05
 name: CSS Overflow Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-overflow-5/
@@ -7,6 +7,7 @@ compat_features:
   - css.properties.block-ellipsis.auto
   - css.properties.block-ellipsis.no-ellipsis
   - css.properties.continue
+  - css.properties.continue.-webkit-legacy
   - css.properties.continue.auto
   - css.properties.continue.discard
   - css.properties.line-clamp.auto
@@ -26,9 +27,6 @@ compat_features:
   - css.properties.overflow-x.replaced_elements
   - css.properties.overflow-y.replaced_elements
   - css.properties.overflow.replaced_elements
-  - css.properties.scroll-axis-lock
-  - css.properties.scroll-axis-lock.auto
-  - css.properties.scroll-axis-lock.none
 
 # The following features in the spec are already part of web-features:
 # - line-clamp:
@@ -64,6 +62,10 @@ compat_features:
 #   - css.properties.overflow-inline.overlay
 # - overflow-clip-margin:
 #   - css.properties.overflow-clip-margin
+# - scroll-axis-lock:
+#   - css.properties.scroll-axis-lock
+#   - css.properties.scroll-axis-lock.auto
+#   - css.properties.scroll-axis-lock.none
 # - scroll-behavior:
 #   - css.properties.scroll-behavior
 #   - css.properties.scroll-behavior.auto
@@ -97,8 +99,6 @@ compat_features:
 #   - css.selectors.scroll-button.inline-end
 #   - css.selectors.scroll-button.inline-start
 #   - css.selectors.scroll-button.left
-#   - css.selectors.scroll-button.next
-#   - css.selectors.scroll-button.prev
 #   - css.selectors.scroll-button.right
 #   - css.selectors.scroll-button.star
 #   - css.selectors.scroll-button.up

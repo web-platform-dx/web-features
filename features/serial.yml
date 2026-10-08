@@ -1,6 +1,7 @@
 name: Web serial
 description: The `navigator.serial` API communicates with devices over serial ports, such as microcontrollers.
-spec: https://wicg.github.io/serial/
+spec: https://serial.spec.whatwg.org/
+caniuse: web-serial
 status:
   compute_from: api.Navigator.serial
 compat_features:

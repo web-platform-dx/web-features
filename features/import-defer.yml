@@ -1,4 +1,7 @@
 name: import defer
-description: The `import defer` JavaScript statement imports a module while deferring its evaluation until its first use.
+description: The `import defer` and `import.defer()` JavaScript statements import a module while deferring its evaluation until its first use.
 spec: https://tc39.es/proposal-defer-import-eval/
 group: js-modules
+compat_features:
+  - javascript.statements.import.defer
+  - javascript.operators.import.defer

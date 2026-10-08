@@ -1,4 +1,4 @@
-draft_date: 2026-05-08
+draft_date: 2026-10-08
 name: ECMAScript® 2027 Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
@@ -862,6 +862,11 @@ compat_features:
 # - String trimStart() and trimEnd():
 #   - javascript.builtins.String.trimEnd
 #   - javascript.builtins.String.trimStart
+# - Explicit resource management:
+#   - javascript.builtins.SuppressedError
+#   - javascript.builtins.SuppressedError.SuppressedError
+#   - javascript.builtins.SuppressedError.error
+#   - javascript.builtins.SuppressedError.suppressed
 # - Typed array iterators:
 #   - javascript.builtins.TypedArray.@@iterator
 #   - javascript.builtins.TypedArray.entries

@@ -1,4 +1,4 @@
-draft_date: 2026-08-21
+draft_date: 2026-10-08
 name: Scalable Vector Graphics (SVG) 2
 description: TODO
 spec: https://w3c.github.io/svgwg/svg2-draft/
@@ -14,7 +14,11 @@ compat_features:
   - api.SVGAElement.search
   - api.SVGAElement.username
   - api.SVGAnimatedString.baseVal.enforces_trusted_types
-  - css.properties.color-interpolation.linearRGB
+  - api.SVGGraphicsElement.getBBox.options_parameter
+  - api.SVGGraphicsElement.getBBox.options_parameter.options_clipped_parameter
+  - api.SVGGraphicsElement.getBBox.options_parameter.options_fill_parameter
+  - api.SVGGraphicsElement.getBBox.options_parameter.options_markers_parameter
+  - api.SVGGraphicsElement.getBBox.options_parameter.options_stroke_parameter
   - css.properties.d.none
   - css.properties.paint-order.fill
   - css.properties.paint-order.markers
@@ -22,14 +26,7 @@ compat_features:
   - css.properties.paint-order.stroke
   - css.properties.path-length
   - css.properties.path-length.none
-  - css.properties.pointer-events.all
-  - css.properties.pointer-events.auto
   - css.properties.pointer-events.bounding-box
-  - css.properties.pointer-events.fill
-  - css.properties.pointer-events.none
-  - css.properties.pointer-events.painted
-  - css.properties.pointer-events.stroke
-  - css.properties.pointer-events.visible
   - css.properties.pointer-events.visibleFill
   - css.properties.pointer-events.visiblePainted
   - css.properties.pointer-events.visibleStroke
@@ -43,6 +40,9 @@ compat_features:
   - css.properties.vector-effect.non-scaling-stroke
   - css.properties.vector-effect.none
   - mediatypes.image.svg
+  - svg.elements.textPath.method
+  - svg.elements.textPath.method.align
+  - svg.elements.textPath.method.stretch
   - svg.elements.use.omit_external_fragment
   - svg.global_attributes.transform.svg_root
 
@@ -313,6 +313,7 @@ compat_features:
 #   - api.SVGViewElement.viewBox
 #   - css.properties.color-interpolation
 #   - css.properties.color-interpolation.auto
+#   - css.properties.color-interpolation.linearRGB
 #   - css.properties.color-interpolation.sRGB
 #   - css.properties.cx
 #   - css.properties.cy
@@ -642,7 +643,14 @@ compat_features:
 #   - svg.global_attributes.paint-order
 # - pointer-events:
 #   - css.properties.pointer-events
+#   - css.properties.pointer-events.all
+#   - css.properties.pointer-events.auto
+#   - css.properties.pointer-events.fill
 #   - css.properties.pointer-events.html_elements
+#   - css.properties.pointer-events.none
+#   - css.properties.pointer-events.painted
+#   - css.properties.pointer-events.stroke
+#   - css.properties.pointer-events.visible
 # - text-decoration:
 #   - css.properties.text-decoration
 #   - css.properties.text-decoration.includes_color-and-style

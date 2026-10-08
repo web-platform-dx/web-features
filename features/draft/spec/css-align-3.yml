@@ -1,0 +1,100 @@
+draft_date: 2026-10-08
+name: CSS Box Alignment Module Level 3
+description: TODO
+spec: https://drafts.csswg.org/css-align-3/
+compat_features:
+  - css.properties.align-content.center
+  - css.properties.align-content.space-around
+  - css.properties.align-content.space-between
+  - css.properties.align-items.normal
+  - css.properties.align-items.self-end
+  - css.properties.align-items.self-start
+  - css.properties.align-items.stretch
+  - css.properties.align-self.center
+  - css.properties.align-self.self-end
+  - css.properties.align-self.self-start
+
+# The following features in the spec are already part of web-features:
+# - Flexbox:
+#   - css.properties.align-content
+#   - css.properties.align-content.baseline
+#   - css.properties.align-content.context_flex
+#   - css.properties.align-content.end
+#   - css.properties.align-content.first_baseline
+#   - css.properties.align-content.last_baseline
+#   - css.properties.align-content.normal
+#   - css.properties.align-content.safe
+#   - css.properties.align-content.space-evenly
+#   - css.properties.align-content.start
+#   - css.properties.align-content.unsafe
+#   - css.properties.align-items
+#   - css.properties.align-items.center
+#   - css.properties.align-items.context_flex
+#   - css.properties.align-items.context_flex.end_in_flex
+#   - css.properties.align-items.context_flex.start_in_flex
+#   - css.properties.align-items.end
+#   - css.properties.align-items.first_baseline
+#   - css.properties.align-items.last_baseline
+#   - css.properties.align-items.safe
+#   - css.properties.align-items.start
+#   - css.properties.align-items.unsafe
+#   - css.properties.align-self
+#   - css.properties.align-self.auto
+#   - css.properties.align-self.context_flex
+#   - css.properties.align-self.end
+#   - css.properties.align-self.first_baseline
+#   - css.properties.align-self.last_baseline
+#   - css.properties.align-self.normal
+#   - css.properties.align-self.safe
+#   - css.properties.align-self.start
+#   - css.properties.align-self.stretch
+#   - css.properties.align-self.unsafe
+#   - css.properties.justify-content
+#   - css.properties.justify-content.flex_context
+#   - css.properties.justify-content.flex_context.left_right
+#   - css.properties.justify-content.flex_context.safe_unsafe
+#   - css.properties.justify-content.flex_context.space-evenly
+#   - css.properties.justify-content.flex_context.start_end
+#   - css.properties.justify-content.flex_context.stretch
+#   - css.properties.justify-content.left
+#   - css.properties.justify-content.normal
+#   - css.properties.justify-content.right
+#   - css.properties.justify-items
+#   - css.properties.justify-items.center
+#   - css.properties.justify-items.flex_context
+#   - css.properties.justify-items.left
+#   - css.properties.justify-items.legacy
+#   - css.properties.justify-items.right
+#   - css.properties.place-content
+#   - css.properties.place-content.flex_context
+#   - css.properties.place-items
+#   - css.properties.place-items.flex_context
+#   - css.properties.place-self
+#   - css.properties.place-self.flex_context
+# - align-content in block layouts:
+#   - css.properties.align-content.context_block
+# - Grid:
+#   - css.properties.align-content.context_grid
+#   - css.properties.align-items.context_grid
+#   - css.properties.align-self.context_grid
+#   - css.properties.justify-content.grid_context
+#   - css.properties.justify-items.grid_context
+#   - css.properties.justify-self
+#   - css.properties.justify-self.auto
+#   - css.properties.justify-self.grid_context
+#   - css.properties.justify-self.left
+#   - css.properties.justify-self.normal
+#   - css.properties.justify-self.right
+#   - css.properties.justify-self.stretch
+#   - css.properties.place-content.grid_context
+#   - css.properties.place-items.grid_context
+#   - css.properties.place-self.grid_context
+# - Multi-column layout:
+#   - css.properties.align-content.context_multicol
+# - Absolute positioning:
+#   - css.properties.align-self.context_position_absolute
+#   - css.properties.justify-self.position_absolute_context
+#   - css.properties.place-self.position_absolute_context
+# - justify-self in block layouts:
+#   - css.properties.justify-items.block_context
+#   - css.properties.justify-self.block_context
