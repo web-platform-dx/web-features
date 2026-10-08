@@ -121,7 +121,7 @@ describe("computeBaseline", function () {
     const multiKey = computeBaseline({
       compatKeys: [
         "css.properties.align-self",
-        "css.properties.align-self.flex_context.baseline",
+        "css.properties.align-self.context_flex",
       ],
       checkAncestors: false,
     });

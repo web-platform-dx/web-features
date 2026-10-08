@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "155"
+    chrome_android: "155"
 compat_features:
   - api.SubtleCrypto.decapsulateBits
   - api.SubtleCrypto.decapsulateKey
