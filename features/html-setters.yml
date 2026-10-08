@@ -11,12 +11,6 @@ compat_features:
   - api.CharacterData.beforeHTMLUnsafe
   - api.CharacterData.replaceWithHTML
   - api.CharacterData.replaceWithHTMLUnsafe
-  - api.DocumentType.afterHTML
-  - api.DocumentType.afterHTMLUnsafe
-  - api.DocumentType.beforeHTML
-  - api.DocumentType.beforeHTMLUnsafe
-  - api.DocumentType.replaceWithHTML
-  - api.DocumentType.replaceWithHTMLUnsafe
   - api.Element.afterHTML
   - api.Element.afterHTMLUnsafe
   - api.Element.appendHTML
@@ -25,8 +19,6 @@ compat_features:
   - api.Element.beforeHTMLUnsafe
   - api.Element.prependHTML
   - api.Element.prependHTMLUnsafe
-  - api.Element.replaceHTML
-  - api.Element.replaceHTMLUnsafe
   - api.Element.replaceWithHTML
   - api.Element.replaceWithHTMLUnsafe
   # TODO: overlap `api.Element.setHTML()` with `sanitizer` and this feature,

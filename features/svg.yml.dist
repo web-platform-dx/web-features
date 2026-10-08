@@ -1072,6 +1072,9 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "3"
   #   safari_ios: "2"
+  - api.SVGPathElement.getPointAtLength
+  - api.SVGPathElement.getTotalLength
+  - api.SVGPathElement.pathLength
   - svg.elements.circle.fill
   - svg.elements.image.height
   - svg.elements.image.preserveAspectRatio
@@ -1433,6 +1436,19 @@ compat_features:
   - css.properties.clip-rule
   - css.properties.clip-rule.evenodd
   - css.properties.clip-rule.nonzero
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: ≤31
+  #   chrome_android: ≤31
+  #   edge: "79"
+  #   firefox: "3"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - css.properties.color-interpolation.linearRGB
 
   # baseline: high
   # baseline_low_date: 2020-03-24

@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "128"
-    chrome_android: "128"
-    edge: "128"
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -18,7 +15,6 @@ compat_features:
   - api.Fence.reportEvent
   - api.Fence.setReportEventDataForAutomaticBeacons
   - api.FencedFrameConfig
-  - api.FencedFrameConfig.setSharedStorageContext
   - api.HTMLFencedFrameElement
   - api.HTMLFencedFrameElement.allow
   - api.HTMLFencedFrameElement.config
@@ -34,10 +30,14 @@ compat_features:
   - http.headers.Content-Security-Policy.fenced-frame-src
   - http.headers.Sec-Fetch-Dest.fencedframe
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "128"
   #   chrome_android: "128"
   #   edge: "128"
   - api.Navigator.deprecatedReplaceInURN
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - api.FencedFrameConfig.setSharedStorageContext

@@ -91,6 +91,14 @@ compat_features:
 
   # baseline: false
   # support:
+  #   firefox: "91"
+  #   firefox_android: "91"
+  #   safari: "7"
+  #   safari_ios: "7"
+  - css.properties.tab-size.is_animatable
+
+  # baseline: false
+  # support:
   #   chrome: "150"
   #   chrome_android: "150"
   #   edge: "150"
@@ -114,6 +122,8 @@ compat_features:
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
+  - css.properties.hyphenate-limit-lines
+  - css.properties.hyphenate-limit-lines.no-limit
   - css.properties.white-space-trim
   - css.properties.white-space-trim.discard-after
   - css.properties.white-space-trim.discard-before

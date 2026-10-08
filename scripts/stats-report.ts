@@ -27,6 +27,25 @@ const argv = yargs(process.argv.slice(2))
       );
     },
   })
+  .option("start-date", {
+    description:
+      "Override the commit-derived start date, for calendar-based reports. Takes a timestamp like `2026-09-21T00:04:00+00:00` that is assumed to be UTC.",
+    type: "string",
+  })
+  .option("end-date", {
+    description:
+      "Override the commit-derived end date, for calendar-based reports. Takes a timestamp like `2026-09-21T00:04:00+00:00` that is assumed to be UTC.",
+    type: "string",
+  })
+  .option("prepend", {
+    description:
+      "Add arbitrary Markdown before the report body, such as for headers.",
+    type: "string",
+  })
+  .option("append", {
+    description:
+      "Add arbitrary Markdown after the report body, such as for footnotes.",
+  })
   .parseSync();
 
 function main() {
@@ -41,16 +60,14 @@ function main() {
 }
 
 function report(stats: Result): string {
-  const startDate = Temporal.Instant.from(
-    stats.change.timestamp,
-  ).toZonedDateTimeISO("Etc/UTC");
-  const endDate = Temporal.Instant.from(stats.timestamp).toZonedDateTimeISO(
-    "Etc/UTC",
+  const startDate = timeStampToZonedDateTimeUTC(
+    argv.startDate ?? stats.change.timestamp,
   );
+  const endDate = timeStampToZonedDateTimeUTC(argv.endDate ?? stats.timestamp);
   const duration = endDate.since(startDate);
-  const revisions = `[\`${stats.change.hash.slice(0, 8)}..${stats.hash.slice(0, 8)}\`](https://github.com/web-platform-dx/web-features/compare/${stats.change.hash}..${stats.hash})`;
+  const revisions = `[\`${stats.change.hash.slice(0, 8)}...${stats.hash.slice(0, 8)}\`](https://github.com/web-platform-dx/web-features/compare/${stats.change.hash}...${stats.hash})`;
 
-  return [
+  const body = [
     "### BCD coverage gap",
     "",
     "This shows feature entry coverage for fine-grained compatibility data. For unmapped keys, fewer is better.",
@@ -69,8 +86,17 @@ function report(stats: Result): string {
     "",
     reportCaniuseCoverage(stats),
     "",
-    `From ${formatDate(startDate)} to ${formatDate(endDate)} (${duration.days} days, ${revisions})`,
-  ].join("\n");
+    `This report reflects ${revisions}, from ${formatDate(startDate)} to ${formatDate(endDate)} (${duration.round("days").total("days")} days).`,
+    "",
+  ];
+
+  const lines = [
+    ...(argv.prepend ? [argv.prepend, ""] : []),
+    ...body,
+    ...(argv.append ? [argv.append, ""] : []),
+  ];
+
+  return lines.join("\n");
 }
 
 function reportCompatCoverage(
@@ -220,11 +246,9 @@ function reportCaniuseCoverage(stats: Result): string {
   const rows: [string, string, string, string, string][] = [
     [
       "All",
-      formatInteger(
-        stats.caniuseIdsCount - stats.change.unmappedCaniuseIdsCount,
-      ),
+      formatInteger(stats.caniuseIdsCount - stats.change.caniuseIdsCount),
       formatInteger(stats.caniuseIdsCount),
-      formatInteger(stats.change.unmappedCaniuseIdsCount),
+      formatInteger(stats.change.caniuseIdsCount),
       formatPercentage(
         (stats.change.caniuseIdsCount / stats.caniuseIdsCount) * 100,
       ),
@@ -246,6 +270,12 @@ function reportCaniuseCoverage(stats: Result): string {
   const head = [arrayToTableRow(headers), alignTable(alignment)].join("\n");
   const body = rows.map(arrayToTableRow).join("\n");
   return [head, body].join("\n");
+}
+
+function timeStampToZonedDateTimeUTC(
+  timestamp: string,
+): Temporal.ZonedDateTime {
+  return Temporal.Instant.from(timestamp).toZonedDateTimeISO("Etc/UTC");
 }
 
 function formatDate(date: Temporal.ZonedDateTime): string {

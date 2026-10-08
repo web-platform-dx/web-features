@@ -23,6 +23,28 @@ compat_features:
   - css.properties.object-position.top
 
   # baseline: high
+  # baseline_low_date: 2023-12-07
+  # baseline_high_date: 2026-06-07
+  # support:
+  #   chrome: "120"
+  #   chrome_android: "120"
+  #   edge: "120"
+  #   firefox: "53"
+  #   firefox_android: "53"
+  #   safari: "15.4"
+  #   safari_ios: "15.4"
+  - css.properties.mask-position.bottom
+  - css.properties.mask-position.center
+  - css.properties.mask-position.left
+  - css.properties.mask-position.right
+  - css.properties.mask-position.top
+  - css.properties.mask.bottom
+  - css.properties.mask.center
+  - css.properties.mask.left
+  - css.properties.mask.right
+  - css.properties.mask.top
+
+  # baseline: high
   # baseline_low_date: 2024-01-23
   # baseline_high_date: 2026-07-23
   # support:

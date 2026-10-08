@@ -5,18 +5,24 @@ status:
   baseline: false
   support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "151"
+  #   chrome_android: "151"
+  #   edge: "151"
+  - api.Blob.textStream
+  - api.Request.textStream
+  - api.Response.textStream
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
   - api.CharacterData.streamAfterHTML
   - api.CharacterData.streamAfterHTMLUnsafe
   - api.CharacterData.streamBeforeHTML
   - api.CharacterData.streamBeforeHTMLUnsafe
   - api.CharacterData.streamReplaceWithHTML
   - api.CharacterData.streamReplaceWithHTMLUnsafe
-  - api.DocumentType.streamAfterHTML
-  - api.DocumentType.streamAfterHTMLUnsafe
-  - api.DocumentType.streamBeforeHTML
-  - api.DocumentType.streamBeforeHTMLUnsafe
-  - api.DocumentType.streamReplaceWithHTML
-  - api.DocumentType.streamReplaceWithHTMLUnsafe
   - api.Element.streamAfterHTML
   - api.Element.streamAfterHTMLUnsafe
   - api.Element.streamAppendHTML
@@ -27,8 +33,6 @@ compat_features:
   - api.Element.streamHTMLUnsafe
   - api.Element.streamPrependHTML
   - api.Element.streamPrependHTMLUnsafe
-  - api.Element.streamReplaceHTML
-  - api.Element.streamReplaceHTMLUnsafe
   - api.Element.streamReplaceWithHTML
   - api.Element.streamReplaceWithHTMLUnsafe
   - api.ShadowRoot.streamAfterHTML

@@ -89,34 +89,6 @@ compat_features:
   # baseline_low_date: 2015-07-29
   # baseline_high_date: 2018-01-29
   # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "4"
-  #   safari_ios: "3.2"
-  - http.headers.X-Frame-Options
-  - http.headers.X-Frame-Options.DENY
-  - http.headers.X-Frame-Options.SAMEORIGIN
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "4"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "20"
-  #   firefox_android: "20"
-  #   safari: "5"
-  #   safari_ios: "4"
-  - api.Window.postMessage.transfer_parameter
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
   #   chrome: "7"
   #   chrome_android: "18"
   #   edge: "12"
@@ -154,19 +126,6 @@ compat_features:
   - api.ErrorEvent.filename
   - api.ErrorEvent.lineno
   - api.ErrorEvent.message
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "14"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "4"
-  #   firefox_android: "4"
-  #   safari: "6"
-  #   safari_ios: "6"
-  - html.elements.input.autocomplete
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -749,6 +708,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "96"
+  #   chrome_android: "96"
+  #   edge: "96"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - http.headers.Cross-Origin-Opener-Policy.report-to_parameter
+
+  # baseline: false
+  # support:
   #   chrome: "97"
   #   chrome_android: "97"
   #   edge: "97"
@@ -904,13 +872,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "96"
-  #   chrome_android: "96"
-  #   edge: "96"
-  - http.headers.Cross-Origin-Opener-Policy.report-to_parameter
-
-  # baseline: false
-  # support:
   #   chrome: "108"
   #   chrome_android: "108"
   #   edge: "108"
@@ -1009,12 +970,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "125"
-  #   edge: "125"
-  - api.NotRestoredReasonDetails.reason.unload-listener
-
-  # baseline: false
-  # support:
   #   firefox: "151"
   #   firefox_android: "151"
   - html.elements.template.shadowrootslotassignment
@@ -1044,5 +999,7 @@ compat_features:
   - api.MathMLAnchorElement.search
   - api.MathMLAnchorElement.type
   - api.MathMLAnchorElement.username
+  - api.NotRestoredReasonDetails.reason.unload-listener
   - api.NotRestoredReasonDetails.reason.websocket
+  - api.Sanitizer.setJavascriptURLs
   - html.elements.track.kind.descriptions

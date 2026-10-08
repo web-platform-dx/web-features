@@ -1,20 +1,20 @@
-draft_date: 2026-05-08
+draft_date: 2026-10-08
 name: CSS Pseudo-Elements Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-pseudo-4/
 compat_features:
-  - api.CSSPseudoElement.parent
-  - api.CSSPseudoElement.pseudo
-  - api.Element.pseudo
   - css.selectors.after.nested_marker
   - css.selectors.before.nested_marker
   - css.selectors.search-text
 
 # The following features in the spec are already part of web-features:
-# - CSS object model:
+# - CSSPseudoElement:
 #   - api.CSSPseudoElement
 #   - api.CSSPseudoElement.element
+#   - api.CSSPseudoElement.parent
+#   - api.CSSPseudoElement.pseudo
 #   - api.CSSPseudoElement.type
+#   - api.Element.pseudo
 # - ::before and ::after:
 #   - css.selectors.after
 #   - css.selectors.after.animation_and_transition_support

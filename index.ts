@@ -2,7 +2,6 @@ import fs from 'fs';
 import path from 'path';
 
 import { Temporal } from '@js-temporal/polyfill';
-import { fdir } from 'fdir';
 import YAML from 'yaml';
 import { convertMarkdown } from "./text.ts";
 import type { GroupData, SnapshotData, WebFeaturesData } from './types.ts';
@@ -36,11 +35,7 @@ const uniqueIdMaps = {
 }
 
 function* yamlEntries(root: string): Generator<[id: string, data: any, authored: ParsedAuthoredData]> {
-    const filePaths = new fdir()
-        .withBasePath()
-        .filter((fp) => fp.endsWith('.yml'))
-        .crawl(root)
-        .sync() as string[];
+    const filePaths = fs.globSync(path.join(root, "**/*.yml"));
 
     for (const fp of filePaths) {
         // The feature identifier/key is the filename without extension.

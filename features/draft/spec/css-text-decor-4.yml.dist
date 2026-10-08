@@ -3,21 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "146"
+    firefox_android: "146"
 compat_features:
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "2"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "3.5"
-  #   firefox_android: "4"
-  #   safari: "1.1"
-  #   safari_ios: "1"
-  - css.properties.text-shadow.none
-
   # baseline: high
   # baseline_low_date: 2022-03-03
   # baseline_high_date: 2024-09-03
@@ -77,18 +66,10 @@ compat_features:
   - css.properties.text-decoration.grammar-error
   - css.properties.text-decoration.spelling-error
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   firefox: "146"
   #   firefox_android: "146"
   - css.properties.text-decoration-inset
   - css.properties.text-decoration-inset.auto
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - css.properties.text-decoration-skip-spaces
-  - css.properties.text-decoration-skip-spaces.all
-  - css.properties.text-decoration-skip-spaces.end
-  - css.properties.text-decoration-skip-spaces.none
-  - css.properties.text-decoration-skip-spaces.start

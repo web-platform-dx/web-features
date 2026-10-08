@@ -11,12 +11,6 @@ compat_features:
   - api.CharacterData.streamBeforeHTMLUnsafe
   - api.CharacterData.streamReplaceWithHTML
   - api.CharacterData.streamReplaceWithHTMLUnsafe
-  - api.DocumentType.streamAfterHTML
-  - api.DocumentType.streamAfterHTMLUnsafe
-  - api.DocumentType.streamBeforeHTML
-  - api.DocumentType.streamBeforeHTMLUnsafe
-  - api.DocumentType.streamReplaceWithHTML
-  - api.DocumentType.streamReplaceWithHTMLUnsafe
   - api.Element.streamAfterHTML
   - api.Element.streamAfterHTMLUnsafe
   - api.Element.streamAppendHTML
@@ -27,8 +21,6 @@ compat_features:
   - api.Element.streamHTMLUnsafe
   - api.Element.streamPrependHTML
   - api.Element.streamPrependHTMLUnsafe
-  - api.Element.streamReplaceHTML
-  - api.Element.streamReplaceHTMLUnsafe
   - api.Element.streamReplaceWithHTML
   - api.Element.streamReplaceWithHTMLUnsafe
   - api.ShadowRoot.streamAfterHTML
@@ -43,3 +35,10 @@ compat_features:
   - api.ShadowRoot.streamPrependHTMLUnsafe
   - api.ShadowRoot.streamReplaceWithHTML
   - api.ShadowRoot.streamReplaceWithHTMLUnsafe
+  # These convenience methods are possibly a parallel or independent feature,
+  # but we choose to include them here since they were initially introduced
+  # for these streaming methods. For more background, see
+  # https://github.com/web-platform-dx/web-features/pull/4383/
+  - api.Blob.textStream
+  - api.Request.textStream
+  - api.Response.textStream

@@ -66,7 +66,13 @@ compat_features:
   #   safari: "1"
   #   safari_ios: "1"
   - css.properties.background-position-x
+  - css.properties.background-position-x.center
+  - css.properties.background-position-x.left
+  - css.properties.background-position-x.right
   - css.properties.background-position-y
+  - css.properties.background-position-y.bottom
+  - css.properties.background-position-y.center
+  - css.properties.background-position-y.top
 
   # baseline: high
   # baseline_low_date: 2020-01-15

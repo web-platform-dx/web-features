@@ -1,4 +1,4 @@
-draft_date: 2026-09-17
+draft_date: 2026-10-08
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -78,6 +78,7 @@ compat_features:
   - api.RadioNodeList.value
   - api.Sanitizer.allowProcessingInstruction
   - api.Sanitizer.removeProcessingInstruction
+  - api.Sanitizer.setJavascriptURLs
   - api.ServiceWorker.error_event
   - api.ShadowRoot.activeElement
   - api.ShadowRoot.innerHTML
@@ -87,7 +88,6 @@ compat_features:
   - api.TrackEvent.TrackEvent
   - api.TrackEvent.track
   - api.Window.originAgentCluster
-  - api.Window.postMessage.transfer_parameter
   - api.Window.rejectionhandled_event
   - api.Window.unhandledrejection_event
   - api.Window.unload_event
@@ -110,7 +110,6 @@ compat_features:
   - html.elements.iframe.allow.document-domain
   - html.elements.iframe.sandbox.allow-orientation-lock
   - html.elements.iframe.sandbox.allow-pointer-lock
-  - html.elements.input.autocomplete
   - html.elements.input.type_color.accepts_css_colors
   - html.elements.input.type_range.labeled_values
   - html.elements.link.rel.icon
@@ -140,9 +139,6 @@ compat_features:
   - http.headers.Origin-Agent-Cluster
   - http.headers.Permissions-Policy.autoplay
   - http.headers.Permissions-Policy.cross-origin-isolated
-  - http.headers.X-Frame-Options
-  - http.headers.X-Frame-Options.DENY
-  - http.headers.X-Frame-Options.SAMEORIGIN
   - http.status.103
   - http.status.103.preconnect
   - http.status.103.preload
@@ -533,6 +529,7 @@ compat_features:
 #   - api.MessageEvent.source
 #   - api.Window.message_event
 #   - api.Window.postMessage
+#   - api.Window.postMessage.transfer_parameter
 #   - api.Worker.message_event
 #   - api.Worker.postMessage
 # - messageerror:
@@ -1338,6 +1335,7 @@ compat_features:
 #   - html.elements.input
 #   - html.elements.input.accept
 #   - html.elements.input.alt
+#   - html.elements.input.autocomplete
 #   - html.elements.input.checked
 #   - html.elements.input.disabled
 #   - html.elements.input.form
@@ -2532,6 +2530,10 @@ compat_features:
 #   - html.elements.wbr
 # - style (attribute):
 #   - html.global_attributes.style
+# - X-Frame-Options:
+#   - http.headers.X-Frame-Options
+#   - http.headers.X-Frame-Options.DENY
+#   - http.headers.X-Frame-Options.SAMEORIGIN
 # - Promise.any():
 #   - javascript.builtins.AggregateError.serializable_object
 # - Promise (initial support):

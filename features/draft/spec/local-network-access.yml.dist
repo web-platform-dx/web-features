@@ -10,6 +10,16 @@ status:
 compat_features:
   # baseline: false
   # support:
+  #   chrome: "145"
+  #   chrome_android: "145"
+  #   edge: "145"
+  #   firefox: "153"
+  #   firefox_android: "153"
+  - api.Permissions.permission_local-network
+  - api.Permissions.permission_loopback-network
+
+  # baseline: false
+  # support:
   #   chrome: "142"
   #   chrome_android: "142"
   #   edge: "142"
@@ -23,8 +33,6 @@ compat_features:
   #   chrome: "145"
   #   chrome_android: "145"
   #   edge: "145"
-  - api.Permissions.permission_local-network
-  - api.Permissions.permission_loopback-network
   - http.headers.Permissions-Policy.local-network
   - http.headers.Permissions-Policy.loopback-network
 
