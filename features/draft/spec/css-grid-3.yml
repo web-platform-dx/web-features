@@ -1,4 +1,4 @@
-draft_date: 2026-09-14
+draft_date: 2026-10-08
 name: CSS Grid Layout Module Level 3
 description: TODO
 spec: https://drafts.csswg.org/css-grid-3/
@@ -19,8 +19,12 @@ compat_features:
   - css.properties.grid.none
 
 # The following features in the spec are already part of web-features:
+# - Multi-column layout:
+#   - css.properties.column-gap
+#   - css.properties.column-gap.multicol_context
+# - Flexbox gap:
+#   - css.properties.column-gap.flex_context
 # - Grid:
-#   - css.properties.align-content.grid_context
 #   - css.properties.column-gap.grid_context
 #   - css.properties.grid
 #   - css.properties.grid-area
@@ -57,11 +61,6 @@ compat_features:
 #   - css.properties.grid-template-rows.none
 #   - css.properties.grid-template-rows.repeat
 #   - css.types.flex
-# - Multi-column layout:
-#   - css.properties.column-gap
-#   - css.properties.column-gap.multicol_context
-# - Flexbox gap:
-#   - css.properties.column-gap.flex_context
 # - Grid lanes:
 #   - css.properties.display.grid-lanes
 #   - css.properties.display.inline-grid-lanes
