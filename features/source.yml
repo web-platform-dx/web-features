@@ -6,6 +6,16 @@ group:
   - html-elements
 status:
   compute_from: html.elements.source
-# Included in srcset (see #1448)
-#   - html.elements.source.sizes
-#   - html.elements.source.srcset
+compat_features:
+  - html.elements.source
+  - html.elements.source.height
+  - html.elements.source.media
+  - html.elements.source.src
+  - html.elements.source.type
+  - html.elements.source.width
+  - api.HTMLSourceElement
+  - api.HTMLSourceElement.height
+  - api.HTMLSourceElement.media
+  - api.HTMLSourceElement.src
+  - api.HTMLSourceElement.type
+  - api.HTMLSourceElement.width
