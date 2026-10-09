@@ -408,25 +408,6 @@ compat_features:
   #   chrome: "1"
   #   chrome_android: "18"
   #   edge: "12"
-  #   firefox: "2"
-  #   firefox_android: "4"
-  #   safari: "3.1"
-  #   safari_ios: "2"
-  - api.SVGTextPathElement
-  - api.SVGTextPathElement.href
-  - api.SVGTextPathElement.method
-  - api.SVGTextPathElement.spacing
-  - api.SVGTextPathElement.startOffset
-  - svg.elements.textPath
-  - svg.elements.textPath.textLength
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
   #   firefox: "3"
   #   firefox_android: "4"
   #   safari: "3"
@@ -619,7 +600,6 @@ compat_features:
   - svg.elements.g.systemLanguage
   - svg.elements.rect.systemLanguage
   - svg.elements.switch.systemLanguage
-  - svg.elements.textPath.systemLanguage
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -635,19 +615,6 @@ compat_features:
   - api.SVGViewElement
   - api.SVGViewElement.preserveAspectRatio
   - api.SVGViewElement.viewBox
-
-  # baseline: high
-  # baseline_low_date: 2015-07-29
-  # baseline_high_date: 2018-01-29
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "12"
-  #   firefox: "20"
-  #   firefox_android: "20"
-  #   safari: "3.1"
-  #   safari_ios: "2"
-  - svg.elements.textPath.startOffset
 
   # baseline: high
   # baseline_low_date: 2015-07-29
@@ -1024,19 +991,6 @@ compat_features:
   #   chrome: "50"
   #   chrome_android: "50"
   #   edge: "12"
-  #   firefox: "2"
-  #   firefox_android: "4"
-  #   safari: "12.1"
-  #   safari_ios: "12.2"
-  - svg.elements.textPath.href
-
-  # baseline: high
-  # baseline_low_date: 2019-03-25
-  # baseline_high_date: 2021-09-25
-  # support:
-  #   chrome: "50"
-  #   chrome_android: "50"
-  #   edge: "12"
   #   firefox: "51"
   #   firefox_android: "51"
   #   safari: "12.1"
@@ -1135,19 +1089,6 @@ compat_features:
   #   safari_ios: "2"
   - svg.elements.rect.fill
 
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "79"
-  #   firefox: "2"
-  #   firefox_android: "4"
-  #   safari: "3.1"
-  #   safari_ios: "2"
-  - svg.elements.textPath.fill
-
   # ⬇️ Same status as overall feature ⬇️
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -1221,19 +1162,6 @@ compat_features:
   #   safari_ios: "2"
   - svg.elements.view.preserveAspectRatio
   - svg.elements.view.viewBox
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
-  #   chrome: "1"
-  #   chrome_android: "18"
-  #   edge: "79"
-  #   firefox: "20"
-  #   firefox_android: "20"
-  #   safari: "3.1"
-  #   safari_ios: "2"
-  - svg.elements.textPath.spacing
 
   # baseline: high
   # baseline_low_date: 2020-01-15
