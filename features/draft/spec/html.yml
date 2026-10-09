@@ -1,4 +1,4 @@
-draft_date: 2026-10-08
+draft_date: 2026-10-09
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -117,7 +117,6 @@ compat_features:
   - html.elements.link.rel.modulepreload.as-script
   - html.elements.link.rel.modulepreload.as-style
   - html.elements.script.type.importmap.integrity
-  - html.elements.script.type.module.http_errors_not_cached
   - html.elements.select.autocomplete
   - html.elements.template.shadowrootcustomelementregistry
   - html.elements.template.shadowrootslotassignment
@@ -144,8 +143,6 @@ compat_features:
   - http.status.103
   - http.status.103.preconnect
   - http.status.103.preload
-  - javascript.operators.import.http_errors_not_cached
-  - javascript.statements.import.http_errors_not_cached
 
 # The following features in the spec are already part of web-features:
 # - Audio and video tracks:
@@ -2506,6 +2503,10 @@ compat_features:
 #   - html.elements.script.type.importmap
 # - Multiple import maps:
 #   - html.elements.script.type.importmap.multiple_import_maps
+# - Retriable module loading:
+#   - html.elements.script.type.module.http_errors_not_cached
+#   - javascript.operators.import.http_errors_not_cached
+#   - javascript.statements.import.http_errors_not_cached
 # - <search>:
 #   - html.elements.search
 # - <section>:
