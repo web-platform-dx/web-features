@@ -385,14 +385,15 @@ function isDistOrDistable(path: string): boolean {
 }
 
 function main() {
-  const filePaths: string[] = argv.paths.flatMap((fileOrDirectory) => {
-    if (fs.statSync(fileOrDirectory).isDirectory()) {
-      return fs.globSync(path.join(fileOrDirectory, "*"), {
-        exclude: (fp) => !isDistOrDistable(fp),
-      });
-    }
-    return isDistOrDistable(fileOrDirectory) ? fileOrDirectory : [];
-  });
+  const filePaths = argv.paths
+    .flatMap((fileOrDirectory) => {
+      if (fs.statSync(fileOrDirectory).isDirectory()) {
+        return fs.globSync(path.join(fileOrDirectory, "*"));
+      } else {
+        return [fileOrDirectory];
+      }
+    })
+    .filter(isDistOrDistable);
 
   // Map from .yml to .yml.dist to filter out duplicates.
   const sourceToDist = new Map<string, string>(
