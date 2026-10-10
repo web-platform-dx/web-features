@@ -1,0 +1,12 @@
+name: WebDriver BiDi user context
+description: The `createUserContext` command creates a user context, which represents a collection of zero or more top-level traversables, each with their own storage partition, so that data is not shared between different user contexts.
+spec: https://w3c.github.io/webdriver-bidi/#user-context
+group: webdriver
+compat_features:
+  - webdriver.bidi.browser.createUserContext
+  - webdriver.bidi.browser.createUserContext.acceptInsecureCerts_parameter
+  - webdriver.bidi.browser.createUserContext.proxy_parameter
+  - webdriver.bidi.browser.createUserContext.unhandledPromptBehavior_parameter
+  - webdriver.bidi.browser.getUserContexts
+  - webdriver.bidi.browser.removeUserContext
+  - webdriver.bidi.browser.removeUserContext.userContext_parameter

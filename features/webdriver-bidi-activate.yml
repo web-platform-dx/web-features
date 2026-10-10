@@ -1,0 +1,7 @@
+name: WebDriver BiDi activate
+description: The `browsingContext.activate` command brings the browser to the foreground and gives it focus, to use APIs that require user activation.
+spec: https://w3c.github.io/webdriver-bidi/#command-browsingContext-activate
+group: webdriver
+compat_features:
+  - webdriver.bidi.browsingContext.activate
+  - webdriver.bidi.browsingContext.activate.context_parameter

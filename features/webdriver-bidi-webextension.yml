@@ -1,0 +1,10 @@
+name: WebDriver BiDi webextension
+description: The `webExtension.install` and `webExtension.uninstall` commands install and uninstall web extensions in the browser.
+spec: https://w3c.github.io/webdriver-bidi/#module-webExtension
+group: webdriver
+compat_features:
+  - webdriver.bidi.webExtension
+  - webdriver.bidi.webExtension.install
+  - webdriver.bidi.webExtension.install.extensionData_parameter
+  - webdriver.bidi.webExtension.uninstall
+  - webdriver.bidi.webExtension.uninstall.extension_parameter
