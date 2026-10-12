@@ -66,9 +66,11 @@ compat_features:
   #   safari: "9"
   #   safari_ios: "9"
   - css.properties.align-content
+  - css.properties.align-content.center
   - css.properties.align-content.context_flex
   - css.properties.align-content.normal
   - css.properties.align-items.center
+  - css.properties.align-self.center
   - css.properties.flex-flow
   - css.properties.flex-wrap
   - css.properties.flex-wrap.nowrap
@@ -144,6 +146,7 @@ compat_features:
   #   safari: "9"
   #   safari_ios: "9"
   - css.properties.align-items.baseline
+  - css.properties.align-items.normal
   - css.properties.align-self.auto
   - css.properties.align-self.baseline
   - css.properties.align-self.normal
@@ -190,6 +193,7 @@ compat_features:
   #   safari: "9"
   #   safari_ios: "9"
   - css.properties.align-content.stretch
+  - css.properties.align-items.stretch
   - css.properties.align-self.context_flex.stretch_in_flex
   - css.properties.justify-content.flex_context.stretch
 
@@ -263,6 +267,8 @@ compat_features:
   #   firefox_android: "52"
   #   safari: "11"
   #   safari_ios: "11"
+  - css.properties.align-content.space-around
+  - css.properties.align-content.space-between
   - css.properties.align-content.space-evenly
   - css.properties.justify-content.flex_context.space-evenly
 
@@ -336,6 +342,10 @@ compat_features:
   #   safari_ios: "15.6"
   - css.properties.align-content.end
   - css.properties.align-content.start
+  - css.properties.align-items.self-end
+  - css.properties.align-items.self-start
+  - css.properties.align-self.self-end
+  - css.properties.align-self.self-start
 
   # baseline: high
   # baseline_low_date: 2022-09-12
