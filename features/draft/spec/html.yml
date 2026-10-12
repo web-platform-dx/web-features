@@ -1,4 +1,4 @@
-draft_date: 2026-10-09
+draft_date: 2026-10-12
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -123,12 +123,10 @@ compat_features:
   - html.elements.textarea.autocomplete.new-password
   - html.elements.textarea.autocomplete.one-time-code
   - html.elements.textarea.autocomplete.webauthn
-  - html.elements.textarea.wrap.soft
   - html.elements.track.kind.descriptions
   - html.global_attributes.class
   - html.global_attributes.data_attributes
   - html.global_attributes.dir
-  - html.global_attributes.draggable
   - html.global_attributes.hidden
   - html.global_attributes.id
   - http.headers.Cross-Origin-Embedder-Policy
@@ -486,6 +484,7 @@ compat_features:
 #   - api.HTMLElement.dragover_event
 #   - api.HTMLElement.dragstart_event
 #   - api.HTMLElement.drop_event
+#   - html.global_attributes.draggable
 # - Dedicated workers:
 #   - api.DedicatedWorkerGlobalScope
 #   - api.DedicatedWorkerGlobalScope.close
@@ -1901,6 +1900,7 @@ compat_features:
 #   - html.elements.textarea.rows
 #   - html.elements.textarea.wrap
 #   - html.elements.textarea.wrap.hard
+#   - html.elements.textarea.wrap.soft
 # - <time>:
 #   - api.HTMLTimeElement
 #   - api.HTMLTimeElement.dateTime

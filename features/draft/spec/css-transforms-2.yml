@@ -1,18 +1,16 @@
-draft_date: 2026-09-17
+draft_date: 2026-10-12
 name: CSS Transforms Module Level 2
 description: TODO
 spec: https://drafts.csswg.org/css-transforms-2/
 compat_features:
-  - css.properties.backface-visibility.hidden
-  - css.properties.backface-visibility.visible
-  - css.properties.transform-style.flat
-  - css.properties.transform-style.preserve-3d
   - css.types.attr.type_function.transform-function
   - svg.global_attributes.transform.svg_root
 
 # The following features in the spec are already part of web-features:
 # - 3D transforms:
 #   - css.properties.backface-visibility
+#   - css.properties.backface-visibility.hidden
+#   - css.properties.backface-visibility.visible
 #   - css.properties.perspective
 #   - css.properties.perspective.none
 #   - css.properties.perspective-origin
@@ -23,6 +21,8 @@ compat_features:
 #   - css.properties.perspective-origin.top
 #   - css.properties.transform.3d
 #   - css.properties.transform-style
+#   - css.properties.transform-style.flat
+#   - css.properties.transform-style.preserve-3d
 #   - css.types.transform-function.matrix3d
 #   - css.types.transform-function.perspective
 #   - css.types.transform-function.perspective.none
