@@ -3,15 +3,15 @@
 
 status:
   baseline: low
-  baseline_low_date: 2026-09-14
+  baseline_low_date: 2024-08-06
   support:
-    chrome: "151"
-    chrome_android: "151"
-    edge: "151"
-    firefox: "152"
-    firefox_android: "152"
-    safari: "27"
-    safari_ios: "27"
+    chrome: "117"
+    chrome_android: "117"
+    edge: "117"
+    firefox: "129"
+    firefox_android: "129"
+    safari: "17.4"
+    safari_ios: "17.4"
 compat_features:
   # baseline: high
   # baseline_low_date: 2016-09-20
@@ -27,6 +27,7 @@ compat_features:
   - css.properties.transition.allow-discrete
   - css.properties.transition.normal
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: low
   # baseline_low_date: 2024-08-06
   # support:
@@ -39,16 +40,3 @@ compat_features:
   #   safari_ios: "17.4"
   - css.properties.transition-behavior.allow-discrete
   - css.properties.transition-behavior.normal
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: low
-  # baseline_low_date: 2026-09-14
-  # support:
-  #   chrome: "151"
-  #   chrome_android: "151"
-  #   edge: "151"
-  #   firefox: "152"
-  #   firefox_android: "152"
-  #   safari: "27"
-  #   safari_ios: "27"
-  - api.TransitionEvent.animation

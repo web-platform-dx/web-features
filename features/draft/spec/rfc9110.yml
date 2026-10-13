@@ -1,10 +1,9 @@
-draft_date: 2026-05-08
+draft_date: 2026-10-05
 name: HTTP Semantics
 description: TODO
 spec: https://httpwg.org/specs/rfc9110.html
 compat_features:
   - http.headers.Retry-After
-  - http.headers.Upgrade
   - http.status.308
 
 # The following features in the spec are already part of web-features:
@@ -37,6 +36,7 @@ compat_features:
 #   - http.headers.Server
 #   - http.headers.TE
 #   - http.headers.Trailer
+#   - http.headers.Upgrade
 #   - http.headers.User-Agent
 #   - http.headers.Vary
 #   - http.headers.Via

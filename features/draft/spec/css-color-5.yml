@@ -1,10 +1,9 @@
-draft_date: 2026-08-27
+draft_date: 2026-10-12
 name: CSS Color Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-color-5/
 compat_features:
   - css.types.color.color.colorSpace_parameter_accepts_display-p3-linear_value
-  - css.types.color.currentcolor
   - css.types.color.from_currentcolor
 
 # The following features in the spec are already part of web-features:
@@ -26,6 +25,7 @@ compat_features:
 #   - css.properties.border-top-color.currentColor
 #   - css.properties.color.currentColor
 #   - css.properties.outline-color.currentColor
+#   - css.types.color.currentcolor
 # - background:
 #   - css.properties.background.transparent
 # - background-color:
@@ -160,7 +160,8 @@ compat_features:
 #   - css.types.color.rgb_hexadecimal_notation.alpha_hexadecimal_notation
 # - System colors:
 #   - css.types.color.system-color
-#   - css.types.color.system-color.accentcolor_accentcolortext
+#   - css.types.color.system-color.accentcolor
+#   - css.types.color.system-color.accentcolortext
 #   - css.types.color.system-color.buttonborder
 #   - css.types.color.system-color.mark
 #   - css.types.color.system-color.marktext

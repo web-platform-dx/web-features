@@ -56,7 +56,6 @@ compat_features:
   #   firefox_android: "149"
   #   safari: "26.4"
   #   safari_ios: "26.4"
-  - css.at-rules.container.container-query_optional
   - css.properties.container-name.name-only_queries
   - css.properties.container-type.name-only_queries
   - css.properties.container.name-only_queries
@@ -89,12 +88,17 @@ compat_features:
   #   chrome: "150"
   #   chrome_android: "150"
   #   edge: "150"
-  - css.at-rules.supports.named-feature
   - css.at-rules.supports.named-feature.anchor-position-follows-transforms
+
+  # baseline: false
+  # support:
+  #   chrome: "154"
+  #   chrome_android: "154"
+  #   edge: "154"
+  - css.at-rules.supports.named-feature.single-axis-scroll-container
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
   - api.CSSMediaRule.matches
   - api.CSSSupportsRule.matches
-  - css.at-rules.supports.named-feature.single-axis-scroll-container

@@ -1,8 +1,8 @@
 import { Compat } from "compute-baseline/browser-compat-data";
 import * as diff from "diff";
-import { fdir } from "fdir";
 import fsSync from "node:fs";
 import fs from "node:fs/promises";
+import path from "node:path";
 import { fileURLToPath } from "node:url";
 import Path from "path";
 import webSpecs from "web-specs" with { type: "json" };
@@ -104,11 +104,7 @@ async function main() {
   if (filterPaths?.length) {
     const filePaths = filterPaths.flatMap((fileOrDirectory) => {
       if (fsSync.statSync(fileOrDirectory).isDirectory()) {
-        return new fdir()
-          .withBasePath()
-          .filter((fp) => fp.endsWith(".yml"))
-          .crawl(fileOrDirectory)
-          .sync();
+        return fsSync.globSync(path.join(fileOrDirectory, "**/*.yml"));
       }
       return fileOrDirectory;
     });
