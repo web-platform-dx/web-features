@@ -1,0 +1,8 @@
+name: Iterator includes()
+description: >
+  The `includes()` method of an `Iterator` object returns `true` when an item yielded by the iterator is the same as a given value.
+  It's similar to the `includes()` method of arrays.
+spec: https://tc39.es/proposal-iterator-join/#sec-iterator.prototype.join
+group: iterators
+compat_features:
+  - javascript.builtins.Iterator.includes

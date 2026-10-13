@@ -3,12 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "138"
-    chrome_android: "138"
-    edge: "138"
-    safari: "27"
-    safari_ios: "27"
+  support: {}
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -53,7 +48,6 @@ compat_features:
   #   safari_ios: "16"
   - css.properties.flex.fit-content
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "138"
@@ -68,3 +62,13 @@ compat_features:
   - css.properties.max-inline-size.stretch
   - css.properties.min-block-size.stretch
   - css.properties.min-inline-size.stretch
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.size
+  - css.properties.size.auto
+  - css.properties.size.fit-content
+  - css.properties.size.max-content
+  - css.properties.size.min-content
+  - css.properties.size.stretch
