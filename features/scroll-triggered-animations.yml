@@ -1,5 +1,5 @@
 name: Scroll-triggered animations
-description: The `animation-trigger` CSS property associates an animation with a trigger created by the `timeline-trigger` CSS property. When that trigger is linked to a scroll timeline, the animation runs depending on the timeline range reached. Also known as scroll-triggered animations.
+description: Scroll-triggered animations start and stop CSS animations when an element is within or outside a scrolling range. It's an alternative to applying styles with the `IntersectionObserver` API. Not to be confused with scroll-driven animations.
 spec: https://drafts.csswg.org/animation-triggers-1/
 group:
   - scrolling
