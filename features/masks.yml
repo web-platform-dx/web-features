@@ -9,9 +9,16 @@ compat_features:
   - css.properties.mask
   - css.properties.mask-clip
   - css.properties.mask-clip.border
+  - css.properties.mask-clip.border-box
   - css.properties.mask-clip.content
+  - css.properties.mask-clip.content-box
+  - css.properties.mask-clip.fill-box
+  - css.properties.mask-clip.no-clip
   - css.properties.mask-clip.padding
+  - css.properties.mask-clip.padding-box
+  - css.properties.mask-clip.stroke-box
   - css.properties.mask-clip.text
+  - css.properties.mask-clip.view-box
   - css.properties.mask-composite
   - css.properties.mask-composite.add
   - css.properties.mask-composite.exclude
@@ -25,12 +32,54 @@ compat_features:
   - css.properties.mask-mode.luminance
   - css.properties.mask-mode.match-source
   - css.properties.mask-origin
+  - css.properties.mask-origin.border
+  - css.properties.mask-origin.border-box
+  - css.properties.mask-origin.content
+  - css.properties.mask-origin.content-box
   - css.properties.mask-origin.fill-box
+  - css.properties.mask-origin.padding
+  - css.properties.mask-origin.padding-box
   - css.properties.mask-origin.stroke-box
   - css.properties.mask-origin.view-box
-  - css.properties.mask-origin.border
-  - css.properties.mask-origin.content
-  - css.properties.mask-origin.padding
   - css.properties.mask-position
+  - css.properties.mask-position.bottom
+  - css.properties.mask-position.center
+  - css.properties.mask-position.left
+  - css.properties.mask-position.right
+  - css.properties.mask-position.top
   - css.properties.mask-repeat
+  - css.properties.mask-repeat.no-repeat
+  - css.properties.mask-repeat.repeat
+  - css.properties.mask-repeat.repeat-x
+  - css.properties.mask-repeat.repeat-y
+  - css.properties.mask-repeat.round
+  - css.properties.mask-repeat.space
   - css.properties.mask-size
+  - css.properties.mask-size.auto
+  - css.properties.mask-size.contain
+  - css.properties.mask-size.cover
+  - css.properties.mask.add
+  - css.properties.mask.alpha
+  - css.properties.mask.border-box
+  - css.properties.mask.bottom
+  - css.properties.mask.center
+  - css.properties.mask.content-box
+  - css.properties.mask.exclude
+  - css.properties.mask.fill-box
+  - css.properties.mask.intersect
+  - css.properties.mask.left
+  - css.properties.mask.luminance
+  - css.properties.mask.match-source
+  - css.properties.mask.no-clip
+  - css.properties.mask.no-repeat
+  - css.properties.mask.padding-box
+  - css.properties.mask.repeat
+  - css.properties.mask.repeat-x
+  - css.properties.mask.repeat-y
+  - css.properties.mask.right
+  - css.properties.mask.round
+  - css.properties.mask.space
+  - css.properties.mask.stroke-box
+  - css.properties.mask.subtract
+  - css.properties.mask.top
+  - css.properties.mask.view-box
