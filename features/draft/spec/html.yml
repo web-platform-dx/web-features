@@ -1,4 +1,4 @@
-draft_date: 2026-10-12
+draft_date: 2026-10-14
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -37,12 +37,6 @@ compat_features:
   - api.HTMLMediaElement.playbackRate.negative_values
   - api.HTMLScriptElement.noModule
   - api.HTMLSelectedContentElement
-  - api.HTMLSourceElement
-  - api.HTMLSourceElement.height
-  - api.HTMLSourceElement.media
-  - api.HTMLSourceElement.src
-  - api.HTMLSourceElement.type
-  - api.HTMLSourceElement.width
   - api.HTMLUnknownElement
   - api.ImageData.ImageData.settings_parameter
   - api.ImageData.ImageData.settings_parameter.colorSpace_option
@@ -1773,6 +1767,19 @@ compat_features:
 #   - html.global_attributes.slot
 # - Imperative slot assignment:
 #   - api.HTMLSlotElement.assign
+# - <source>:
+#   - api.HTMLSourceElement
+#   - api.HTMLSourceElement.height
+#   - api.HTMLSourceElement.media
+#   - api.HTMLSourceElement.src
+#   - api.HTMLSourceElement.type
+#   - api.HTMLSourceElement.width
+#   - html.elements.source
+#   - html.elements.source.height
+#   - html.elements.source.media
+#   - html.elements.source.src
+#   - html.elements.source.type
+#   - html.elements.source.width
 # - <span>:
 #   - api.HTMLSpanElement
 #   - html.elements.span
@@ -2515,13 +2522,6 @@ compat_features:
 #   - html.elements.selectedcontent
 # - <small>:
 #   - html.elements.small
-# - <source>:
-#   - html.elements.source
-#   - html.elements.source.height
-#   - html.elements.source.media
-#   - html.elements.source.src
-#   - html.elements.source.type
-#   - html.elements.source.width
 # - <strong>:
 #   - html.elements.strong
 # - <sub> and <sup>:
