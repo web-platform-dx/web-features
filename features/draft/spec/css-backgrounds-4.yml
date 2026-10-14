@@ -1,4 +1,4 @@
-draft_date: 2026-10-12
+draft_date: 2026-10-14
 name: CSS Backgrounds Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-backgrounds-4/
@@ -12,21 +12,6 @@ compat_features:
   - css.properties.background.left
   - css.properties.background.right
   - css.properties.background.top
-  - css.properties.mask-repeat.no-repeat
-  - css.properties.mask-repeat.repeat
-  - css.properties.mask-repeat.repeat-x
-  - css.properties.mask-repeat.repeat-y
-  - css.properties.mask-repeat.round
-  - css.properties.mask-repeat.space
-  - css.properties.mask-size.auto
-  - css.properties.mask-size.contain
-  - css.properties.mask-size.cover
-  - css.properties.mask.no-repeat
-  - css.properties.mask.repeat
-  - css.properties.mask.repeat-x
-  - css.properties.mask.repeat-y
-  - css.properties.mask.round
-  - css.properties.mask.space
 
 # The following features in the spec are already part of web-features:
 # - background:
@@ -489,6 +474,22 @@ compat_features:
 #   - css.properties.column-rule-width.medium
 #   - css.properties.column-rule-width.thick
 #   - css.properties.column-rule-width.thin
+# - Masks:
+#   - css.properties.mask.no-repeat
+#   - css.properties.mask.repeat
+#   - css.properties.mask.repeat-x
+#   - css.properties.mask.repeat-y
+#   - css.properties.mask.round
+#   - css.properties.mask.space
+#   - css.properties.mask-repeat.no-repeat
+#   - css.properties.mask-repeat.repeat
+#   - css.properties.mask-repeat.repeat-x
+#   - css.properties.mask-repeat.repeat-y
+#   - css.properties.mask-repeat.round
+#   - css.properties.mask-repeat.space
+#   - css.properties.mask-size.auto
+#   - css.properties.mask-size.contain
+#   - css.properties.mask-size.cover
 # - Outlines:
 #   - css.properties.outline-style.dashed
 #   - css.properties.outline-style.dotted

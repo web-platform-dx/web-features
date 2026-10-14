@@ -1,24 +1,8 @@
-draft_date: 2026-05-08
+draft_date: 2026-10-14
 name: Media Capture and Streams
 description: TODO
 spec: https://w3c.github.io/mediacapture-main/
 compat_features:
-  - api.MediaDevices.getSupportedConstraints.return_object_property_aspectRatio
-  - api.MediaDevices.getSupportedConstraints.return_object_property_autoGainControl
-  - api.MediaDevices.getSupportedConstraints.return_object_property_channelCount
-  - api.MediaDevices.getSupportedConstraints.return_object_property_deviceId
-  - api.MediaDevices.getSupportedConstraints.return_object_property_echoCancellation
-  - api.MediaDevices.getSupportedConstraints.return_object_property_facingMode
-  - api.MediaDevices.getSupportedConstraints.return_object_property_frameRate
-  - api.MediaDevices.getSupportedConstraints.return_object_property_groupId
-  - api.MediaDevices.getSupportedConstraints.return_object_property_height
-  - api.MediaDevices.getSupportedConstraints.return_object_property_latency
-  - api.MediaDevices.getSupportedConstraints.return_object_property_noiseSuppression
-  - api.MediaDevices.getSupportedConstraints.return_object_property_resizeMode
-  - api.MediaDevices.getSupportedConstraints.return_object_property_sampleRate
-  - api.MediaDevices.getSupportedConstraints.return_object_property_sampleSize
-  - api.MediaDevices.getSupportedConstraints.return_object_property_width
-  - api.MediaDevices.getUserMedia.constraints_resizeMode_parameter
   - api.MediaStreamTrack.applyConstraints.echoCancellation_constraint.all
   - api.MediaStreamTrack.applyConstraints.echoCancellation_constraint.remote-only
 
@@ -36,7 +20,23 @@ compat_features:
 #   - api.MediaDevices.devicechange_event
 #   - api.MediaDevices.enumerateDevices
 #   - api.MediaDevices.getSupportedConstraints
+#   - api.MediaDevices.getSupportedConstraints.return_object_property_aspectRatio
+#   - api.MediaDevices.getSupportedConstraints.return_object_property_autoGainControl
+#   - api.MediaDevices.getSupportedConstraints.return_object_property_channelCount
+#   - api.MediaDevices.getSupportedConstraints.return_object_property_deviceId
+#   - api.MediaDevices.getSupportedConstraints.return_object_property_echoCancellation
+#   - api.MediaDevices.getSupportedConstraints.return_object_property_facingMode
+#   - api.MediaDevices.getSupportedConstraints.return_object_property_frameRate
+#   - api.MediaDevices.getSupportedConstraints.return_object_property_groupId
+#   - api.MediaDevices.getSupportedConstraints.return_object_property_height
+#   - api.MediaDevices.getSupportedConstraints.return_object_property_latency
+#   - api.MediaDevices.getSupportedConstraints.return_object_property_noiseSuppression
+#   - api.MediaDevices.getSupportedConstraints.return_object_property_resizeMode
+#   - api.MediaDevices.getSupportedConstraints.return_object_property_sampleRate
+#   - api.MediaDevices.getSupportedConstraints.return_object_property_sampleSize
+#   - api.MediaDevices.getSupportedConstraints.return_object_property_width
 #   - api.MediaDevices.getUserMedia
+#   - api.MediaDevices.getUserMedia.constraints_resizeMode_parameter
 #   - api.MediaDevices.getUserMedia.secure_context_required
 #   - api.MediaStream
 #   - api.MediaStream.MediaStream

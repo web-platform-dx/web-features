@@ -1,10 +1,8 @@
-draft_date: 2026-08-27
+draft_date: 2026-10-14
 name: WebAssembly Core Specification
 description: TODO
 spec: https://webassembly.github.io/spec/core/bikeshed/
 compat_features:
-  - webassembly.definitions.data
-  - webassembly.definitions.elem
   - webassembly.definitions.func
   - webassembly.definitions.global
   - webassembly.definitions.import
@@ -41,14 +39,12 @@ compat_features:
   - webassembly.instructions.convert_low_i32x4_u
   - webassembly.instructions.copysign
   - webassembly.instructions.ctz
-  - webassembly.instructions.data_drop
   - webassembly.instructions.demote
   - webassembly.instructions.demote_f64x2_zero
   - webassembly.instructions.div
   - webassembly.instructions.div.v128
   - webassembly.instructions.dot_i16x8_s
   - webassembly.instructions.drop
-  - webassembly.instructions.elem_drop
   - webassembly.instructions.end
   - webassembly.instructions.eq
   - webassembly.instructions.eq.v128
@@ -143,10 +139,7 @@ compat_features:
   - webassembly.instructions.max.v128
   - webassembly.instructions.max_s
   - webassembly.instructions.max_u
-  - webassembly.instructions.memory_copy
-  - webassembly.instructions.memory_fill
   - webassembly.instructions.memory_grow
-  - webassembly.instructions.memory_init
   - webassembly.instructions.memory_load
   - webassembly.instructions.memory_size
   - webassembly.instructions.memory_store
@@ -204,11 +197,9 @@ compat_features:
   - webassembly.instructions.sub_sat_s
   - webassembly.instructions.sub_sat_u
   - webassembly.instructions.swizzle
-  - webassembly.instructions.table_copy
   - webassembly.instructions.table_fill
   - webassembly.instructions.table_get
   - webassembly.instructions.table_grow
-  - webassembly.instructions.table_init
   - webassembly.instructions.table_set
   - webassembly.instructions.table_size
   - webassembly.instructions.throw
@@ -219,12 +210,8 @@ compat_features:
   - webassembly.instructions.trunc_f32_u
   - webassembly.instructions.trunc_f64_s
   - webassembly.instructions.trunc_f64_u
-  - webassembly.instructions.trunc_sat_f32_s
-  - webassembly.instructions.trunc_sat_f32_u
   - webassembly.instructions.trunc_sat_f32x4_s
   - webassembly.instructions.trunc_sat_f32x4_u
-  - webassembly.instructions.trunc_sat_f64_s
-  - webassembly.instructions.trunc_sat_f64_u
   - webassembly.instructions.trunc_sat_f64x2_s_zero
   - webassembly.instructions.trunc_sat_f64x2_u_zero
   - webassembly.instructions.try_table
@@ -246,5 +233,20 @@ compat_features:
   - webassembly.types.v128
 
 # The following features in the spec are already part of web-features:
+# - Bulk memory operations (WebAssembly):
+#   - webassembly.definitions.data
+#   - webassembly.definitions.elem
+#   - webassembly.instructions.data_drop
+#   - webassembly.instructions.elem_drop
+#   - webassembly.instructions.memory_copy
+#   - webassembly.instructions.memory_fill
+#   - webassembly.instructions.memory_init
+#   - webassembly.instructions.table_copy
+#   - webassembly.instructions.table_init
 # - Import and export of mutable globals (WebAssembly):
 #   - webassembly.definitions.global.mut
+# - Non-trapping float-to-int conversion (WebAssembly):
+#   - webassembly.instructions.trunc_sat_f32_s
+#   - webassembly.instructions.trunc_sat_f32_u
+#   - webassembly.instructions.trunc_sat_f64_s
+#   - webassembly.instructions.trunc_sat_f64_u
