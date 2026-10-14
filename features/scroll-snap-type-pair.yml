@@ -1,0 +1,9 @@
+# This is a candidate for merging into `scroll-snap`, when it is Baseline high.
+name: "scroll-snap-type: pair"
+description: >
+  The `scroll-snap-type: pair` CSS declaration snaps scrolling to a single element in both the X and Y axes.
+  You can use this to snap to scattered points of interest on a 2D plane.
+spec: https://drafts.csswg.org/css-scroll-snap-1/#valdef-scroll-snap-type-pair
+group: scrolling
+compat_features:
+  - css.properties.scroll-snap-type.pair
