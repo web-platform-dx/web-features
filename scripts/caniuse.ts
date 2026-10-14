@@ -30,6 +30,11 @@ export const caniuseToWebFeaturesId: Map<string, string | null> = (() => {
       continue;
     }
     for (const caniuseId of data.caniuse) {
+      if (caniuseId.startsWith("wf-")) {
+        throw new Error(
+          `Invalid caniuse ID used for ${id}: self-referential wf- feature IDs are not allowed`,
+        );
+      }
       if (!mapping.has(caniuseId)) {
         throw new Error(`Invalid caniuse ID used for ${id}: ${caniuseId}`);
       }
