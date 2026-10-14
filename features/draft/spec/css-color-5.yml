@@ -1,4 +1,4 @@
-draft_date: 2026-10-12
+draft_date: 2026-10-14
 name: CSS Color Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-color-5/
@@ -160,11 +160,12 @@ compat_features:
 #   - css.types.color.rgb_hexadecimal_notation.alpha_hexadecimal_notation
 # - System colors:
 #   - css.types.color.system-color
-#   - css.types.color.system-color.accentcolor
-#   - css.types.color.system-color.accentcolortext
 #   - css.types.color.system-color.buttonborder
 #   - css.types.color.system-color.mark
 #   - css.types.color.system-color.marktext
+# - AccentColor and AccentColorText:
+#   - css.types.color.system-color.accentcolor
+#   - css.types.color.system-color.accentcolortext
 # - Gradient interpolation:
 #   - css.types.gradient.conic-gradient.hue_interpolation_method
 #   - css.types.gradient.conic-gradient.interpolation_color_space
