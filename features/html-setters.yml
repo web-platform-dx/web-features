@@ -1,8 +1,6 @@
 name: HTML setter methods
 description: The `setHTML()`, `replaceWithHTML()`, `beforeHTML()`, `prependHTML()`, `appendHTML()` and `afterHTML()` DOM methods, and unsafe equivalents, insert HTML into an existing tree.
-spec: https://github.com/whatwg/html/pull/12753
-#TODO: replace with below and remove from specs.ts once about PR is merged
-#spec: https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-parsing-and-serialization
+spec: https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-parsing-and-serialization
 group: dom
 compat_features:
   - api.CharacterData.afterHTML
@@ -26,16 +24,10 @@ compat_features:
   # See: https://github.com/web-platform-dx/web-features/issues/1173
   - api.Element.setHTMLUnsafe
   - api.Element.setHTMLUnsafe.options_runscripts_parameter
-  - api.ShadowRoot.afterHTML
-  - api.ShadowRoot.afterHTMLUnsafe
   - api.ShadowRoot.appendHTML
   - api.ShadowRoot.appendHTMLUnsafe
-  - api.ShadowRoot.beforeHTML
-  - api.ShadowRoot.beforeHTMLUnsafe
   - api.ShadowRoot.prependHTML
   - api.ShadowRoot.prependHTMLUnsafe
-  - api.ShadowRoot.replaceWithHTML
-  - api.ShadowRoot.replaceWithHTMLUnsafe
   # TODO: overlap `api.ShadowRoot.setHTML()` with `sanitizer` and this feature,
   # to guarantee status consistency
   # See: https://github.com/web-platform-dx/web-features/issues/1173
