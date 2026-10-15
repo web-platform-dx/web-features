@@ -120,7 +120,6 @@ compat_features:
   - html.elements.track.kind.descriptions
   - html.global_attributes.class
   - html.global_attributes.data_attributes
-  - html.global_attributes.dir
   - html.global_attributes.hidden
   - html.global_attributes.id
   - http.headers.Cross-Origin-Embedder-Policy
@@ -137,6 +136,8 @@ compat_features:
   - http.status.103.preload
 
 # The following features in the spec are already part of web-features:
+# - dir:
+#   - html.global_attributes.dir
 # - Audio and video tracks:
 #   - api.AudioTrack
 #   - api.AudioTrack.enabled
