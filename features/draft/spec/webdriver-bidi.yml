@@ -1,4 +1,4 @@
-draft_date: 2026-09-24
+draft_date: 2026-10-15
 name: WebDriver BiDi
 description: TODO
 spec: https://w3c.github.io/webdriver-bidi/
@@ -120,6 +120,11 @@ compat_features:
   - webdriver.bidi.emulation.setLocaleOverride.contexts_parameter
   - webdriver.bidi.emulation.setLocaleOverride.locale_parameter
   - webdriver.bidi.emulation.setLocaleOverride.userContexts_parameter
+  - webdriver.bidi.emulation.setMediaFeaturesOverride
+  - webdriver.bidi.emulation.setMediaFeaturesOverride.contexts_parameter
+  - webdriver.bidi.emulation.setMediaFeaturesOverride.features_parameter
+  - webdriver.bidi.emulation.setMediaFeaturesOverride.features_parameter.prefers-color-scheme
+  - webdriver.bidi.emulation.setMediaFeaturesOverride.userContexts_parameter
   - webdriver.bidi.emulation.setNetworkConditions
   - webdriver.bidi.emulation.setNetworkConditions.contexts_parameter
   - webdriver.bidi.emulation.setNetworkConditions.networkConditions_parameter

@@ -1,4 +1,4 @@
-draft_date: 2026-10-14
+draft_date: 2026-10-15
 name: Trusted Types
 description: TODO
 spec: https://w3c.github.io/trusted-types/dist/spec/
@@ -58,3 +58,5 @@ compat_features:
 # - <script> and <noscript>:
 #   - api.HTMLScriptElement.innerText
 #   - api.HTMLScriptElement.textContent
+# - HTML setter methods:
+#   - api.TrustedHTMLParserOptions
