@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
-import { WebFeaturesData } from "./types";
+import { WebFeaturesData } from "./types.js";
 
 const jsonPath = fileURLToPath(new URL("./data.json", import.meta.url));
 const { browsers, features, groups, snapshots } = JSON.parse(
