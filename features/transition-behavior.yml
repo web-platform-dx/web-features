@@ -2,6 +2,12 @@ name: transition-behavior
 description: "The `transition-behavior: allow-discrete` CSS declaration allows transitions for properties whose animation behavior is discrete. Such properties can't be interpolated and swap from their start value to the end value at 50%."
 spec: https://drafts.csswg.org/css-transitions-2/#transition-behavior-property
 group: transitions
+# TODO: https://github.com/web-platform-dx/web-features/issues/1971
+# Status changed: https://github.com/web-platform-dx/web-features/pull/4536
+# 2026-10-15 — low → false — The `display` property was acknowledged to be a core use case for `transition-behavior`.
+# References:
+# - https://bugzil.la/1923525
 compat_features:
   - css.properties.transition-behavior
   - css.properties.transition.transition-behavior
+  - css.properties.transition-behavior.transitionable_display
