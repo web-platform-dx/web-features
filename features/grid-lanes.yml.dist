@@ -3,12 +3,18 @@
 
 status:
   baseline: false
-  support:
-    safari: "26.4"
-    safari_ios: "26.4"
+  support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   safari: "26.4"
+  #   safari_ios: "26.4"
   - css.properties.display.grid-lanes
   - css.properties.display.inline-grid-lanes
-  - css.properties.flow-tolerance
-  - css.properties.flow-tolerance.infinite
-  - css.properties.flow-tolerance.normal
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - css.properties.fit-tolerance
+  - css.properties.fit-tolerance.infinite
+  - css.properties.fit-tolerance.normal
