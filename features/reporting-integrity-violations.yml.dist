@@ -15,7 +15,6 @@ compat_features:
   - http.headers.Integrity-Policy
   - http.headers.Integrity-Policy-Report-Only
   - http.headers.Integrity-Policy-Report-Only.blocked-destinations_script
-  - http.headers.Integrity-Policy.blocked-destinations_script
 
   # baseline: false
   # support:
@@ -25,6 +24,13 @@ compat_features:
   #   firefox: "149"
   #   firefox_android: "149"
   - api.ReportingObserver.ReportingObserver.options_parameter.types_property.integrity-violation
+
+  # baseline: false
+  # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
+  #   edge: "138"
+  - http.headers.Integrity-Policy.blocked-destinations_script
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
