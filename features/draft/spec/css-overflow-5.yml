@@ -1,19 +1,19 @@
-draft_date: 2026-10-05
+draft_date: 2026-10-15
 name: CSS Overflow Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-overflow-5/
 compat_features:
   - css.properties.block-ellipsis
-  - css.properties.block-ellipsis.auto
+  - css.properties.block-ellipsis.ellipsis
   - css.properties.block-ellipsis.no-ellipsis
   - css.properties.continue
   - css.properties.continue.-webkit-legacy
-  - css.properties.continue.auto
   - css.properties.continue.discard
-  - css.properties.line-clamp.auto
+  - css.properties.continue.normal
+  - css.properties.line-clamp.ellipsis
   - css.properties.line-clamp.no-ellipsis
   - css.properties.max-lines
-  - css.properties.max-lines.none
+  - css.properties.max-lines.auto
   - css.properties.overflow-block.auto
   - css.properties.overflow-block.clip
   - css.properties.overflow-block.hidden
