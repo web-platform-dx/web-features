@@ -495,6 +495,7 @@ compat_features:
   - svg.elements.use.external_uri
   - svg.elements.use.height
   - svg.elements.use.href
+  - svg.elements.use.omit_external_fragment
   - svg.elements.use.systemLanguage
   - svg.elements.use.width
   - svg.elements.use.x
@@ -535,6 +536,7 @@ compat_features:
   - svg.global_attributes.text-decoration
   - svg.global_attributes.text-rendering
   - svg.global_attributes.transform
+  - svg.global_attributes.transform.svg_root
   - svg.global_attributes.unicode-bidi
   - svg.global_attributes.vector-effect
   - svg.global_attributes.visibility
