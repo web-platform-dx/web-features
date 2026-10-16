@@ -1,0 +1,4 @@
+name: OfflineAudioContext incremental rendering
+description: The optional `chunkSize` argument of `OfflineAudioContext.startRendering()` returns an `AudioBuffer` of at most that many sample frames, so you can render long or unbounded audio graphs incrementally. The `close()` method stops rendering.
+spec: https://webaudio.github.io/web-audio-api/#dom-offlineaudiocontext-startrendering
+group: web-audio
