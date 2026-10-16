@@ -1,0 +1,14 @@
+name: unload
+description: The `unload` event is fired when a document or one of its descendants is being unloaded, after it is no longer visible to the user.
+spec: https://html.spec.whatwg.org/multipage/document-lifecycle.html#unloading-documents
+# This feature is not discouraged notwithstanding
+# https://chromestatus.com/feature/5579556305502208. Spec work to formally
+# discourage web developers from using this feature has never been completed.
+# See also: https://github.com/whatwg/html/issues/6026
+compat_features:
+  core:
+    - api.Window.unload_event
+  spare:
+    # This is Chrome's opt in for this feature. See:
+    # https://developer.chrome.com/docs/web-platform/deprecating-unload#control_access_to_unload
+    - http.headers.Permissions-Policy.unload
