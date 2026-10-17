@@ -1,0 +1,11 @@
+name: WebDriver BiDi screencasting
+description: The `emulation.startScreencast` command streams the browser viewport.
+spec: https://w3c.github.io/webdriver-bidi/#command-browsingContext-startScreencast
+group: webdriver
+compat_features:
+  - webdriver.bidi.browsingContext.startScreencast
+  - webdriver.bidi.browsingContext.startScreencast.context_parameter
+  - webdriver.bidi.browsingContext.startScreencast.mimeType_parameter
+  - webdriver.bidi.browsingContext.startScreencast.video_parameter
+  - webdriver.bidi.browsingContext.stopScreencast
+  - webdriver.bidi.browsingContext.stopScreencast.screencast_parameter

@@ -1,0 +1,12 @@
+name: WebDriver BiDi client window
+description: The `browser.setClientWindowState` command sets the dimensions of a client window.
+spec: https://w3c.github.io/webdriver-bidi/#cddl-type-browsersetclientwindowstate
+group: webdriver
+compat_features:
+  - webdriver.bidi.browser.setClientWindowState
+  - webdriver.bidi.browser.setClientWindowState.clientWindow_parameter
+  - webdriver.bidi.browser.setClientWindowState.height_parameter
+  - webdriver.bidi.browser.setClientWindowState.state_parameter
+  - webdriver.bidi.browser.setClientWindowState.width_parameter
+  - webdriver.bidi.browser.setClientWindowState.x_parameter
+  - webdriver.bidi.browser.setClientWindowState.y_parameter

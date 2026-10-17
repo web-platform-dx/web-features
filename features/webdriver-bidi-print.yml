@@ -1,0 +1,14 @@
+name: WebDriver BiDi print
+description: The `browsingContext.print` command creates a paginated representation of a document, and returns it as a PDF document represented as a Base64-encoded string.
+spec: https://w3c.github.io/webdriver-bidi/#command-browsingContext-print
+group: webdriver
+compat_features:
+  - webdriver.bidi.browsingContext.print
+  - webdriver.bidi.browsingContext.print.background_parameter
+  - webdriver.bidi.browsingContext.print.context_parameter
+  - webdriver.bidi.browsingContext.print.margin_parameter
+  - webdriver.bidi.browsingContext.print.orientation_parameter
+  - webdriver.bidi.browsingContext.print.pageRanges_parameter
+  - webdriver.bidi.browsingContext.print.page_parameter
+  - webdriver.bidi.browsingContext.print.scale_parameter
+  - webdriver.bidi.browsingContext.print.shrinkToFit_parameter
