@@ -119,11 +119,13 @@ If there was more than one introduction (e.g., a feature was withdrawn then rein
 
 ### Wider-support (high) status
 
-For each feature definition in `web-features`, a wider-support status shall be conferred to the feature if the feature satisfies the following test:
+For each feature definition in `web-features`, a wider-support status shall be conferred to the feature if the feature satisfies the following tests:
 
-The feature’s keystone date is on or before today’s date minus 30 months and the dates of the following long-term support releases:
+1. The feature’s keystone date is on or before today’s date minus 30 months.
+2. The feature's keystone date is on or before the release date for the latest x.0 release of Firefox ESR.
+3. The feature's keystone date is on or before the release date for the previous x.0 release of Firefox ESR, if it's currently active.
 
-* Mozilla Firefox ESR, given by the release date for the latest x.0 release of Firefox ESR (or the previous x.0 release, when there are two active ESR releases).
+(This does not include active ESR releases before the previous x.0 release, even if the previous x.0 release is no longer active. For example, Firefox ESR 115 stayed active much longer than usual, but, after two subsequent ESR releases, the definition of Baseline would not rely on the release date of ESR 115, even if it's still active.)
 
 This duration is selected to approximate developer signals, estimates of browser release uptake over time, an estimate of high total market share support, and the project owners group’s best judgment.
 
