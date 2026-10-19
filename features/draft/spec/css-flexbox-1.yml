@@ -1,14 +1,10 @@
-draft_date: 2026-10-08
+draft_date: 2026-10-19
 name: CSS Flexible Box Layout Module Level 1
 description: TODO
 spec: https://drafts.csswg.org/css-flexbox-1/
 compat_features:
-  - css.properties.align-content.flex-end
-  - css.properties.align-content.flex-start
   - css.properties.align-items.flex-end
   - css.properties.align-items.flex-start
-  - css.properties.align-self.flex-end
-  - css.properties.align-self.flex-start
   - css.properties.flex-flow.balance
   - css.properties.flex-flow.column
   - css.properties.flex-flow.column-reverse
@@ -24,6 +20,8 @@ compat_features:
 # The following features in the spec are already part of web-features:
 # - Flexbox:
 #   - css.properties.align-content
+#   - css.properties.align-content.flex-end
+#   - css.properties.align-content.flex-start
 #   - css.properties.align-content.stretch
 #   - css.properties.align-items
 #   - css.properties.align-items.baseline
@@ -33,6 +31,8 @@ compat_features:
 #   - css.properties.align-self.baseline
 #   - css.properties.align-self.context_flex
 #   - css.properties.align-self.context_flex.stretch_in_flex
+#   - css.properties.align-self.flex-end
+#   - css.properties.align-self.flex-start
 #   - css.properties.align-self.stretch
 #   - css.properties.flex
 #   - css.properties.flex.none
