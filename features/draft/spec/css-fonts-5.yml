@@ -1,4 +1,4 @@
-draft_date: 2026-10-14
+draft_date: 2026-10-19
 name: CSS Fonts Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-fonts-5/
@@ -36,14 +36,8 @@ compat_features:
   - css.properties.font-language-override.normal
   - css.properties.font-synthesis-style.oblique-only
   - css.properties.font-synthesis.none
-  - css.properties.font-variant.all-petite-caps
-  - css.properties.font-variant.all-small-caps
   - css.properties.font-variant.emoji
-  - css.properties.font-variant.petite-caps
-  - css.properties.font-variant.small-caps
   - css.properties.font-variant.text
-  - css.properties.font-variant.titling-caps
-  - css.properties.font-variant.unicase
   - css.properties.font-variant.unicode
   - css.properties.font-variation-settings.normal
   - css.properties.font-width.percentage
@@ -267,6 +261,21 @@ compat_features:
 #   - css.properties.font-variant.sub
 #   - css.properties.font-variant.super
 #   - svg.global_attributes.font-variant
+# - font-variant-caps:
+#   - css.properties.font-variant.all-petite-caps
+#   - css.properties.font-variant.all-small-caps
+#   - css.properties.font-variant.petite-caps
+#   - css.properties.font-variant.small-caps
+#   - css.properties.font-variant.titling-caps
+#   - css.properties.font-variant.unicase
+#   - css.properties.font-variant-caps
+#   - css.properties.font-variant-caps.all-petite-caps
+#   - css.properties.font-variant-caps.all-small-caps
+#   - css.properties.font-variant-caps.normal
+#   - css.properties.font-variant-caps.petite-caps
+#   - css.properties.font-variant-caps.small-caps
+#   - css.properties.font-variant-caps.titling-caps
+#   - css.properties.font-variant-caps.unicase
 # - font-variant-ligatures:
 #   - css.properties.font-variant.common-ligatures
 #   - css.properties.font-variant.contextual
@@ -327,15 +336,6 @@ compat_features:
 #   - css.properties.font-variant-east-asian.ruby
 #   - css.properties.font-variant-east-asian.simplified
 #   - css.properties.font-variant-east-asian.traditional
-# - font-variant-caps:
-#   - css.properties.font-variant-caps
-#   - css.properties.font-variant-caps.all-petite-caps
-#   - css.properties.font-variant-caps.all-small-caps
-#   - css.properties.font-variant-caps.normal
-#   - css.properties.font-variant-caps.petite-caps
-#   - css.properties.font-variant-caps.small-caps
-#   - css.properties.font-variant-caps.titling-caps
-#   - css.properties.font-variant-caps.unicase
 # - font-variant-emoji:
 #   - css.properties.font-variant-emoji
 #   - css.properties.font-variant-emoji.emoji
