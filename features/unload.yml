@@ -9,6 +9,7 @@ compat_features:
   core:
     - api.Window.unload_event
   spare:
-    # This is Chrome's opt in for this feature. See:
+    # This is Chrome's way to re-enable the feature, since they have deprecated
+    # it by default. See:
     # https://developer.chrome.com/docs/web-platform/deprecating-unload#control_access_to_unload
     - http.headers.Permissions-Policy.unload
