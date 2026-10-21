@@ -1,0 +1,13 @@
+name: Document isolation policy
+description: The `Document-Isolation-Policy` HTTP header makes a single document cross-origin isolated, giving it access to features such as `SharedArrayBuffer`, without requiring the pages that embed it or the content it embeds to send `Cross-Origin-Opener-Policy` or `Cross-Origin-Embedder-Policy` headers.
+spec: https://wicg.github.io/document-isolation-policy/
+group: security
+# TODO: Add the header to BCD and compute this status:
+# https://github.com/mdn/browser-compat-data/pull/30939
+status:
+  baseline: false
+  support:
+    # https://chromestatus.com/feature/5141940204208128
+    chrome: "137"
+    chrome_android: "146"
+    edge: "137"
