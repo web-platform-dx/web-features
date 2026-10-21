@@ -1,5 +1,6 @@
 name: dir
-description: The `dir` global HTML attribute sets an element's text direction to left to right (`ltr`) or right to left (`rtl`), or determines it from the content (`auto`). Elements generally inherit their parent's direction when the attribute is omitted.
+description: The `dir` global HTML attribute sets an element's text direction to left to right (`ltr`), right to left (`rtl`), or based on the content (`auto`). Elements generally inherit their parent's direction when the attribute is omitted.
 spec: https://html.spec.whatwg.org/multipage/dom.html#the-dir-attribute
 compat_features:
+  - api.HTMLElement.dir
   - html.global_attributes.dir
