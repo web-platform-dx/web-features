@@ -1,0 +1,6 @@
+name: Document-Isolation-Policy
+description: The `Document-Isolation-Policy` HTTP header makes a document cross-origin isolated, giving it access to APIs such as `SharedArrayBuffer`, without requiring the document or those it embeds to send `Cross-Origin-Opener-Policy` or `Cross-Origin-Embedder-Policy` headers.
+spec: https://wicg.github.io/document-isolation-policy/
+group: security
+compat_features:
+  - http.headers.Document-Isolation-Policy
