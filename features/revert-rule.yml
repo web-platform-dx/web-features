@@ -1,0 +1,11 @@
+name: revert-rule
+# This description does not explicitly name `if()` as a use case here, since
+# it's less well supported than `revert-rule` itself. Consider revising this
+# description should `if()` itself reach the same status as `revert-rule`.
+description: >
+  The `revert-rule` CSS keyword resets a property to its previous value in the cascade, as if the current style rule had not been present.
+  It's especially useful with conditionals, to cancel a declaration when the condition is not met.
+spec: https://drafts.csswg.org/css-cascade-5/#revert-rule-keyword
+group: explicit-defaults
+compat_features:
+  - css.types.global_keywords.revert-rule

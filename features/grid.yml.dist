@@ -52,10 +52,10 @@ compat_features:
   #   firefox_android: "52"
   #   safari: "10.1"
   #   safari_ios: "10.3"
-  - css.properties.align-content.grid_context
-  - css.properties.align-items.grid_context
-  - css.properties.align-self.grid_context
-  - css.properties.justify-content.grid_context
+  - css.properties.align-content.context_grid
+  - css.properties.align-items.context_grid
+  - css.properties.align-self.context_grid
+  - css.properties.justify-content.context_grid
 
   # baseline: high
   # baseline_low_date: 2017-10-17
@@ -68,9 +68,9 @@ compat_features:
   #   firefox_android: "45"
   #   safari: "10.1"
   #   safari_ios: "10.3"
-  - css.properties.justify-items.grid_context
+  - css.properties.justify-items.context_grid
   - css.properties.justify-self
-  - css.properties.justify-self.grid_context
+  - css.properties.justify-self.context_grid
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: high
@@ -181,19 +181,6 @@ compat_features:
   # baseline_low_date: 2020-01-15
   # baseline_high_date: 2022-07-15
   # support:
-  #   chrome: "57"
-  #   chrome_android: "57"
-  #   edge: "79"
-  #   firefox: "52"
-  #   firefox_android: "52"
-  #   safari: "11"
-  #   safari_ios: "11"
-  - css.properties.align-items.grid_context.start_end
-
-  # baseline: high
-  # baseline_low_date: 2020-01-15
-  # baseline_high_date: 2022-07-15
-  # support:
   #   chrome: "59"
   #   chrome_android: "59"
   #   edge: "79"
@@ -201,8 +188,8 @@ compat_features:
   #   firefox_android: "45"
   #   safari: "11"
   #   safari_ios: "11"
-  - css.properties.place-items.grid_context
-  - css.properties.place-self.grid_context
+  - css.properties.place-items.context_grid
+  - css.properties.place-self.context_grid
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -215,7 +202,7 @@ compat_features:
   #   firefox_android: "53"
   #   safari: "11"
   #   safari_ios: "11"
-  - css.properties.place-content.grid_context
+  - css.properties.place-content.context_grid
 
   # baseline: high
   # baseline_low_date: 2020-07-28

@@ -1,4 +1,4 @@
-draft_date: 2026-07-15
+draft_date: 2026-10-08
 name: WebGPU
 description: TODO
 spec: https://gpuweb.github.io/gpuweb/
@@ -12,6 +12,10 @@ compat_features:
   - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTextureView
   - api.GPUDevice.createBindGroup.descriptor_entries_resource_parameter_accepts_GPUTexture_resource
   - api.GPUDevice.createPipelineLayout.descriptor_bindGroupLayouts_parameter_accepts_null_values
+  - api.GPUDevice.createRenderPipeline.vertex_1-component
+  - api.GPUDevice.createRenderPipeline.vertex_unorm8x4-bgra
+  - api.GPUDevice.createRenderPipelineAsync.vertex_1-component
+  - api.GPUDevice.createRenderPipelineAsync.vertex_unorm8x4-bgra
   - api.GPUDevice.createTexture.descriptor_usage_parameter
   - api.GPUDevice.createTexture.descriptor_usage_parameter.accept_transient_attachment
   - api.GPURenderBundleEncoder.setImmediates

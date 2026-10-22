@@ -1,4 +1,4 @@
-draft_date: 2026-07-06
+draft_date: 2026-10-19
 name: CSS Fonts Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-fonts-5/
@@ -36,6 +36,9 @@ compat_features:
   - css.properties.font-language-override.normal
   - css.properties.font-synthesis-style.oblique-only
   - css.properties.font-synthesis.none
+  - css.properties.font-variant.emoji
+  - css.properties.font-variant.text
+  - css.properties.font-variant.unicode
   - css.properties.font-variation-settings.normal
   - css.properties.font-width.percentage
 
@@ -213,7 +216,16 @@ compat_features:
 #   - css.properties.font-palette.palette-mix_function
 # - font-size:
 #   - css.properties.font-size
+#   - css.properties.font-size.large
+#   - css.properties.font-size.larger
+#   - css.properties.font-size.medium
 #   - css.properties.font-size.rem_values
+#   - css.properties.font-size.small
+#   - css.properties.font-size.smaller
+#   - css.properties.font-size.x-large
+#   - css.properties.font-size.x-small
+#   - css.properties.font-size.xx-large
+#   - css.properties.font-size.xx-small
 #   - css.properties.font-size.xxx-large
 #   - svg.global_attributes.font-size
 # - MathML:
@@ -250,6 +262,12 @@ compat_features:
 #   - css.properties.font-variant.super
 #   - svg.global_attributes.font-variant
 # - font-variant-caps:
+#   - css.properties.font-variant.all-petite-caps
+#   - css.properties.font-variant.all-small-caps
+#   - css.properties.font-variant.petite-caps
+#   - css.properties.font-variant.small-caps
+#   - css.properties.font-variant.titling-caps
+#   - css.properties.font-variant.unicase
 #   - css.properties.font-variant-caps
 #   - css.properties.font-variant-caps.all-petite-caps
 #   - css.properties.font-variant-caps.all-small-caps
@@ -258,7 +276,55 @@ compat_features:
 #   - css.properties.font-variant-caps.small-caps
 #   - css.properties.font-variant-caps.titling-caps
 #   - css.properties.font-variant-caps.unicase
+# - font-variant-ligatures:
+#   - css.properties.font-variant.common-ligatures
+#   - css.properties.font-variant.contextual
+#   - css.properties.font-variant.discretionary-ligatures
+#   - css.properties.font-variant.historical-ligatures
+#   - css.properties.font-variant.no-common-ligatures
+#   - css.properties.font-variant.no-contextual
+#   - css.properties.font-variant.no-discretionary-ligatures
+#   - css.properties.font-variant.no-historical-ligatures
+#   - css.properties.font-variant-ligatures
+#   - css.properties.font-variant-ligatures.common-ligatures
+#   - css.properties.font-variant-ligatures.contextual
+#   - css.properties.font-variant-ligatures.discretionary-ligatures
+#   - css.properties.font-variant-ligatures.historical-ligatures
+#   - css.properties.font-variant-ligatures.no-common-ligatures
+#   - css.properties.font-variant-ligatures.no-contextual
+#   - css.properties.font-variant-ligatures.no-discretionary-ligatures
+#   - css.properties.font-variant-ligatures.no-historical-ligatures
+#   - css.properties.font-variant-ligatures.none
+#   - css.properties.font-variant-ligatures.normal
+# - font-variant-numeric:
+#   - css.properties.font-variant.diagonal-fractions
+#   - css.properties.font-variant.lining-nums
+#   - css.properties.font-variant.oldstyle-nums
+#   - css.properties.font-variant.ordinal
+#   - css.properties.font-variant.proportional-nums
+#   - css.properties.font-variant.slashed-zero
+#   - css.properties.font-variant.stacked-fractions
+#   - css.properties.font-variant.tabular-nums
+#   - css.properties.font-variant-numeric
+#   - css.properties.font-variant-numeric.diagonal-fractions
+#   - css.properties.font-variant-numeric.lining-nums
+#   - css.properties.font-variant-numeric.normal
+#   - css.properties.font-variant-numeric.oldstyle-nums
+#   - css.properties.font-variant-numeric.ordinal
+#   - css.properties.font-variant-numeric.proportional-nums
+#   - css.properties.font-variant-numeric.slashed-zero
+#   - css.properties.font-variant-numeric.stacked-fractions
+#   - css.properties.font-variant-numeric.tabular-nums
 # - font-variant-east-asian:
+#   - css.properties.font-variant.full-width
+#   - css.properties.font-variant.jis04
+#   - css.properties.font-variant.jis78
+#   - css.properties.font-variant.jis83
+#   - css.properties.font-variant.jis90
+#   - css.properties.font-variant.proportional-width
+#   - css.properties.font-variant.ruby
+#   - css.properties.font-variant.simplified
+#   - css.properties.font-variant.traditional
 #   - css.properties.font-variant-east-asian
 #   - css.properties.font-variant-east-asian.full-width
 #   - css.properties.font-variant-east-asian.jis04
@@ -276,29 +342,6 @@ compat_features:
 #   - css.properties.font-variant-emoji.normal
 #   - css.properties.font-variant-emoji.text
 #   - css.properties.font-variant-emoji.unicode
-# - font-variant-ligatures:
-#   - css.properties.font-variant-ligatures
-#   - css.properties.font-variant-ligatures.common-ligatures
-#   - css.properties.font-variant-ligatures.contextual
-#   - css.properties.font-variant-ligatures.discretionary-ligatures
-#   - css.properties.font-variant-ligatures.historical-ligatures
-#   - css.properties.font-variant-ligatures.no-common-ligatures
-#   - css.properties.font-variant-ligatures.no-contextual
-#   - css.properties.font-variant-ligatures.no-discretionary-ligatures
-#   - css.properties.font-variant-ligatures.no-historical-ligatures
-#   - css.properties.font-variant-ligatures.none
-#   - css.properties.font-variant-ligatures.normal
-# - font-variant-numeric:
-#   - css.properties.font-variant-numeric
-#   - css.properties.font-variant-numeric.diagonal-fractions
-#   - css.properties.font-variant-numeric.lining-nums
-#   - css.properties.font-variant-numeric.normal
-#   - css.properties.font-variant-numeric.oldstyle-nums
-#   - css.properties.font-variant-numeric.ordinal
-#   - css.properties.font-variant-numeric.proportional-nums
-#   - css.properties.font-variant-numeric.slashed-zero
-#   - css.properties.font-variant-numeric.stacked-fractions
-#   - css.properties.font-variant-numeric.tabular-nums
 # - font-variant-position:
 #   - css.properties.font-variant-position
 #   - css.properties.font-variant-position.normal

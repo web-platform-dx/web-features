@@ -1,10 +1,11 @@
-draft_date: 2026-08-03
+draft_date: 2026-09-17
 name: CSS Linked Parameters Module Level 1
 description: TODO
 spec: https://drafts.csswg.org/css-link-params-1/
 compat_features:
-  - css.properties.link-parameters
-  - css.properties.link-parameters.none
   - css.types.param
-  - css.types.param.url
-  - css.types.param.url_fragments
+
+# The following features in the spec are already part of web-features:
+# - Link parameters:
+#   - css.properties.link-parameters
+#   - css.properties.link-parameters.none

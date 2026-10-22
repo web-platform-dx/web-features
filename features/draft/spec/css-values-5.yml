@@ -1,4 +1,4 @@
-draft_date: 2026-09-03
+draft_date: 2026-10-15
 name: CSS Values and Units Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-values-5/
@@ -55,7 +55,9 @@ compat_features:
   - css.properties.perspective-origin.y-end
   - css.properties.perspective-origin.y-start
   - css.types.attr.attr-name_accepts_namespaces
+  - css.types.attr.raw-string
   - css.types.progress.no-clamp
+  - css.types.random-item
 
 # The following features in the spec are already part of web-features:
 # - Media queries:
@@ -78,6 +80,17 @@ compat_features:
 #   - css.properties.interpolate-size.numeric-only
 # - List style:
 #   - css.properties.list-style-type.string
+# - Masks:
+#   - css.properties.mask.bottom
+#   - css.properties.mask.center
+#   - css.properties.mask.left
+#   - css.properties.mask.right
+#   - css.properties.mask.top
+#   - css.properties.mask-position.bottom
+#   - css.properties.mask-position.center
+#   - css.properties.mask-position.left
+#   - css.properties.mask-position.right
+#   - css.properties.mask-position.top
 # - Motion path:
 #   - css.properties.offset-anchor.bottom
 #   - css.properties.offset-anchor.center
@@ -138,7 +151,6 @@ compat_features:
 #   - css.types.attr.type_function.resolution
 #   - css.types.attr.type_function.string
 #   - css.types.attr.type_function.time
-#   - css.types.attr.type_function.url
 # - calc():
 #   - css.types.calc
 #   - css.types.calc.nested

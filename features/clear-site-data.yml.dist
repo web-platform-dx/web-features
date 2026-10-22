@@ -50,5 +50,13 @@ compat_features:
   - http.headers.Clear-Site-Data.clientHints
 
   # baseline: false
+  # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
+  #   edge: "138"
+  - http.headers.Clear-Site-Data.prefetchCache
+  - http.headers.Clear-Site-Data.prerenderCache
+
+  # baseline: false
   # support: {}
   - http.headers.Clear-Site-Data.executionContexts

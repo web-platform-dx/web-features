@@ -66,14 +66,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "151"
-  #   chrome_android: "151"
-  #   edge: "151"
-  - api.Request.textStream
-  - api.Response.textStream
-
-  # baseline: false
-  # support:
   #   chrome: "105"
   #   edge: "105"
   - api.Request.Request.options_parameter.duplex

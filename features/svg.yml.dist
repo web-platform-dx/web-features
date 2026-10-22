@@ -1072,6 +1072,9 @@ compat_features:
   #   firefox_android: "4"
   #   safari: "3"
   #   safari_ios: "2"
+  - api.SVGPathElement.getPointAtLength
+  - api.SVGPathElement.getTotalLength
+  - api.SVGPathElement.pathLength
   - svg.elements.circle.fill
   - svg.elements.image.height
   - svg.elements.image.preserveAspectRatio
@@ -1298,6 +1301,8 @@ compat_features:
   #   safari: "5.1"
   #   safari_ios: "5"
   - css.properties.vector-effect
+  - css.properties.vector-effect.non-scaling-stroke
+  - css.properties.vector-effect.none
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -1433,6 +1438,19 @@ compat_features:
   - css.properties.clip-rule
   - css.properties.clip-rule.evenodd
   - css.properties.clip-rule.nonzero
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: ≤31
+  #   chrome_android: ≤31
+  #   edge: "79"
+  #   firefox: "3"
+  #   firefox_android: "4"
+  #   safari: "4"
+  #   safari_ios: "3.2"
+  - css.properties.color-interpolation.linearRGB
 
   # baseline: high
   # baseline_low_date: 2020-03-24
@@ -1755,8 +1773,9 @@ compat_features:
   - api.SVGImageElement.crossOrigin
   - svg.elements.image.crossorigin
 
-  # baseline: low
+  # baseline: high
   # baseline_low_date: 2024-03-05
+  # baseline_high_date: 2026-09-05
   # support:
   #   chrome: "43"
   #   chrome_android: "43"
@@ -1892,6 +1911,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "137"
+  #   chrome_android: "137"
+  #   edge: "137"
+  #   firefox: "23"
+  #   firefox_android: "23"
+  - svg.global_attributes.transform.svg_root
+
+  # baseline: false
+  # support:
   #   chrome: "144"
   #   chrome_android: "144"
   #   edge: "144"
@@ -1933,6 +1961,13 @@ compat_features:
   - svg.elements.a.referrerpolicy.no-referrer-when-downgrade
   - svg.elements.a.referrerpolicy.origin-when-cross-origin
   - svg.elements.a.referrerpolicy.unsafe-url
+
+  # baseline: false
+  # support:
+  #   chrome: "137"
+  #   chrome_android: "137"
+  #   edge: "137"
+  - svg.elements.use.omit_external_fragment
 
   # baseline: false
   # support:
