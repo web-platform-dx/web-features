@@ -9,9 +9,11 @@ import { features } from '../index.ts';
 import { isOrdinaryFeatureData } from "../type-guards.ts";
 import { validateSpecFragment, type FragmentResult } from "./spec-fragments.ts";
 
-// Fragment mismatches warn instead of failing the build while the existing
-// data is cleaned up. Flip to true to make them errors. See issue #84.
-const fragmentErrorsAreFatal = false;
+// Fragment mismatches fail the build. Set to false to downgrade them to
+// warnings, for example while a webref update is being worked through. See
+// issue #84.
+const fragmentErrorsAreFatal = true;
+const fragmentLogLevel = fragmentErrorsAreFatal ? "error" : "warn";
 
 const logger = winston.createLogger({
   level: "warn",
@@ -267,7 +269,7 @@ function suggestSpecs(bad: URL): void {
 let checkedFeatures = 0;
 let checkedSpecs = 0;
 let errors = 0;
-let fragmentWarnings = 0;
+let fragmentProblems = 0;
 
 interface FragmentReportRow {
     feature: string;
@@ -396,11 +398,11 @@ for (const [id, data] of Object.entries(features)) {
                 fragmentReport.push({ feature: id, url: url.toString(), result });
                 if (result.status === "invalid") {
                     if (result.reason === "text-fragment") {
-                        logger.warn(`Text fragment in spec URL for ${id}: ${url.toString()}\nText fragments (:~:text=) are not allowed in spec URLs; link a definition or heading id instead.`);
+                        logger.log(fragmentLogLevel, `Text fragment in spec URL for ${id}: ${url.toString()}\nText fragments (:~:text=) are not allowed in spec URLs; link a definition or heading id instead.`);
                     } else {
-                        logger.warn(`Unknown fragment in spec URL for ${id}: ${url.toString()}\nCheck that the fragment (#) is a definition or heading id in the spec, or link a more current anchor.`);
+                        logger.log(fragmentLogLevel, `Unknown fragment in spec URL for ${id}: ${url.toString()}\nCheck that the fragment (#) is a definition or heading id in the spec, or link a more current anchor.`);
                     }
-                    fragmentWarnings++;
+                    fragmentProblems++;
                     if (fragmentErrorsAreFatal) {
                         errors++;
                     }
@@ -419,8 +421,8 @@ if (process.argv.includes("--report")) {
     console.log(`\nFragment report written to ${path.relative(process.cwd(), reportPath)}`);
 }
 
-if (fragmentWarnings) {
-    console.log(`\n${fragmentWarnings} spec URL(s) have fragments unknown to @webref/xref (warnings only, see https://github.com/web-platform-dx/web-features/issues/84)`);
+if (fragmentProblems) {
+    console.log(`\n${fragmentProblems} spec URL(s) have fragments unknown to @webref/xref${fragmentErrorsAreFatal ? "" : " (warnings only)"}, see https://github.com/web-platform-dx/web-features/issues/84`);
 }
 
 if (errors) {
