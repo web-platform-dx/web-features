@@ -6,30 +6,32 @@ group:
   - canvas
   - webgl
   - webgpu
-# Expected:
-# compat_features:
-#   - api.CanvasPaintEvent
-#   - api.CanvasPaintEvent.CanvasPaintEvent
-#   - api.CanvasPaintEvent.changedElements
-#   - api.CanvasRenderingContext2D.drawElementImage
-#   - api.ElementGeometryUpdateEvent
-#   - api.ElementGeometryUpdateEvent.ElementGeometryUpdateEvent
-#   - api.ElementGeometryUpdateEvent.elements
-#   - api.GPUQueue.drawElementImageToTexture
-#   - api.HTMLCanvasElement.captureElementImage
-#   - api.HTMLCanvasElement.clearElementGeometry
-#   - api.HTMLCanvasElement.content
-#   - api.HTMLCanvasElement.elementgeometryupdate_event
-#   - api.HTMLCanvasElement.getElementImageDefaultSize
-#   - api.HTMLCanvasElement.getElementTransform
-#   - api.HTMLCanvasElement.paint_event
-#   - api.HTMLCanvasElement.requestPaint
-#   - api.HTMLCanvasElement.updateElementGeometry
-#   - api.OffscreenCanvas.clearElementGeometry
-#   - api.OffscreenCanvas.getElementImageDefaultSize
-#   - api.OffscreenCanvas.updateElementGeometry
-#   - api.OffscreenCanvasRenderingContext2D.drawElementImage
-#   - api.WebGL2RenderingContext.texElementSubImage2D
-#   - api.WebGLRenderingContext.texElementSubImage2D
-#   - html.elements.canvas.content
-#   - html.global_attributes.drawable
+compat_features:
+  - api.CanvasPaintEvent
+  - api.CanvasPaintEvent.CanvasPaintEvent
+  - api.CanvasPaintEvent.changedElements
+  - api.CanvasRenderingContext2D.drawElementImage
+  - api.ElementGeometryUpdateEvent
+  - api.ElementGeometryUpdateEvent.ElementGeometryUpdateEvent
+  - api.ElementGeometryUpdateEvent.elements
+  - api.ElementImage
+  - api.ElementImage.close
+  - api.ElementImage.worker_support
+  - api.GPUQueue.drawElementImageToTexture
+  - api.HTMLCanvasElement.captureElementImage
+  - api.HTMLCanvasElement.clearElementGeometry
+  - api.HTMLCanvasElement.content
+  - api.HTMLCanvasElement.elementgeometryupdate_event
+  - api.HTMLCanvasElement.getElementImageDefaultSize
+  - api.HTMLCanvasElement.getElementTransform
+  - api.HTMLCanvasElement.paint_event
+  - api.HTMLCanvasElement.requestPaint
+  - api.HTMLCanvasElement.updateElementGeometry
+  - api.OffscreenCanvas.clearElementGeometry
+  - api.OffscreenCanvas.getElementImageDefaultSize
+  - api.OffscreenCanvas.updateElementGeometry
+  - api.OffscreenCanvasRenderingContext2D.drawElementImage
+  - api.WebGL2RenderingContext.texElementSubImage2D
+  - api.WebGLRenderingContext.texElementSubImage2D
+  - html.elements.canvas.content
+  - html.global_attributes.drawable
