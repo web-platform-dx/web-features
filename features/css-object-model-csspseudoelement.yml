@@ -1,0 +1,16 @@
+name: CSSPseudoElement
+description: >
+  A `CSSPseudoElement` object represents a pseudo-element and its context in the document tree.
+  You get an instance through the `pseudo()` method of `Element` or `CSSPseudoElement` objects or the `pseudoTarget` property of some events.
+spec: https://drafts.csswg.org/css-pseudo-4/#CSSPseudoElement-interface
+group: cssom
+compat_features:
+  - api.Element.pseudo
+  - api.CSSPseudoElement
+  - api.CSSPseudoElement.element
+  - api.CSSPseudoElement.parent
+  - api.CSSPseudoElement.pseudo
+  - api.CSSPseudoElement.type
+# Expected:
+# - api.AnimationEvent.pseudoTarget
+# - api.UIEvent.pseudoTarget

@@ -264,12 +264,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "45"
-  #   edge: "79"
-  - api.ServiceWorkerRegistration.showNotification.options_vibrate_parameter
-
-  # baseline: false
-  # support:
   #   chrome: "47"
   #   edge: "17"
   - api.Notification.requireInteraction
@@ -291,12 +285,6 @@ compat_features:
   #   chrome: "53"
   #   edge: "18"
   - api.Notification.badge
-
-  # baseline: false
-  # support:
-  #   chrome: "53"
-  #   edge: "79"
-  - api.Notification.vibrate
 
   # baseline: false
   # support:

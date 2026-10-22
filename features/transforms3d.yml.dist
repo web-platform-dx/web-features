@@ -56,6 +56,8 @@ compat_features:
   - css.properties.perspective-origin.top
   - css.properties.perspective.none
   - css.properties.transform-style
+  - css.properties.transform-style.flat
+  - css.properties.transform-style.preserve-3d
   - css.properties.transform.3d
 
   # ⬇️ Same status as overall feature ⬇️
@@ -71,6 +73,8 @@ compat_features:
   #   safari: "15.4"
   #   safari_ios: "15.4"
   - css.properties.backface-visibility
+  - css.properties.backface-visibility.hidden
+  - css.properties.backface-visibility.visible
 
   # baseline: high
   # baseline_low_date: 2022-03-14

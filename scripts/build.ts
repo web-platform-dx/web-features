@@ -1,6 +1,5 @@
 import type { DefinedError } from "ajv";
 import stringify from "fast-json-stable-stringify";
-import { fdir } from "fdir";
 import { execSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
@@ -91,11 +90,7 @@ function valid(data: any): boolean {
 
 function buildProposed() {
   const features: any = {};
-  const filePaths = new fdir()
-    .withBasePath()
-    .filter((fp) => fp.endsWith(".yml"))
-    .crawl("features/draft/proposed")
-    .sync() as string[];
+  const filePaths = fs.globSync("features/draft/proposed/**/*.yml");
   for (const fp of filePaths) {
     const { name: key } = path.parse(fp);
     let data;

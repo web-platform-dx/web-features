@@ -3,7 +3,9 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    safari: "27"
+    safari_ios: "27"
 compat_features:
   - api.HTMLModelElement
   - api.HTMLModelElement.boundingBoxCenter

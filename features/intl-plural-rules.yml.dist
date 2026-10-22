@@ -45,6 +45,7 @@ compat_features:
   #   safari_ios: "15.4"
   - javascript.builtins.Intl.PluralRules.PluralRules.options_parameter
   - javascript.builtins.Intl.PluralRules.PluralRules.options_parameter.options_roundingPriority_parameter
+  - javascript.builtins.Intl.PluralRules.PluralRules.options_parameter.options_trailingZeroDisplay_parameter
   - javascript.builtins.Intl.PluralRules.selectRange
 
   # baseline: high
@@ -67,9 +68,3 @@ compat_features:
   #   safari: "17.2"
   #   safari_ios: "17.2"
   - javascript.builtins.Intl.PluralRules.PluralRules.options_parameter.options_roundingIncrement_parameter
-
-  # baseline: false
-  # support:
-  #   firefox: "116"
-  #   firefox_android: "116"
-  - javascript.builtins.Intl.PluralRules.PluralRules.options_parameter.options_trailingZeroDisplay_parameter

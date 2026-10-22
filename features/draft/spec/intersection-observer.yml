@@ -1,0 +1,32 @@
+draft_date: 2026-09-17
+name: Intersection Observer
+description: TODO
+spec: https://w3c.github.io/IntersectionObserver/
+compat_features:
+  - api.IntersectionObserver.IntersectionObserver.options_trackVisibility_parameter
+
+# The following features in the spec are already part of web-features:
+# - Intersection observer:
+#   - api.IntersectionObserver
+#   - api.IntersectionObserver.IntersectionObserver
+#   - api.IntersectionObserver.IntersectionObserver.options_root_parameter_Document
+#   - api.IntersectionObserver.delay
+#   - api.IntersectionObserver.disconnect
+#   - api.IntersectionObserver.observe
+#   - api.IntersectionObserver.root
+#   - api.IntersectionObserver.rootMargin
+#   - api.IntersectionObserver.scrollMargin
+#   - api.IntersectionObserver.takeRecords
+#   - api.IntersectionObserver.thresholds
+#   - api.IntersectionObserver.trackVisibility
+#   - api.IntersectionObserver.unobserve
+#   - api.IntersectionObserverEntry
+#   - api.IntersectionObserverEntry.IntersectionObserverEntry
+#   - api.IntersectionObserverEntry.boundingClientRect
+#   - api.IntersectionObserverEntry.intersectionRatio
+#   - api.IntersectionObserverEntry.intersectionRect
+#   - api.IntersectionObserverEntry.isIntersecting
+#   - api.IntersectionObserverEntry.isVisible
+#   - api.IntersectionObserverEntry.rootBounds
+#   - api.IntersectionObserverEntry.target
+#   - api.IntersectionObserverEntry.time

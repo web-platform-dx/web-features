@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { describe, it } from "node:test";
 
 import { BrowserStatement, Identifier } from "@mdn/browser-compat-data";
 import { Compat } from "./compat.js";

@@ -1,0 +1,9 @@
+name: HTMLGeolocationElement initialPermissionStatus
+description: The `initialPermissionStatus` property of the `HTMLGeolocationElement` API represents whether `geolocation` was previously granted, denied, or neither, when the page first loads.
+spec: https://wicg.github.io/PEPC/geolocation-element.html#dom-powerfulfeatureobserver-initialpermissionstatus
+group: geolocation
+discouraged:
+  reason: The value of the property can be miscomputed and the sole implementer, Chromium, intends to remove it.
+  according_to: https://chromestatus.com/feature/5113729407647744
+compat_features:
+  - api.HTMLGeolocationElement.initialPermissionStatus

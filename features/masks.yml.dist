@@ -37,8 +37,39 @@ compat_features:
   - css.properties.mask-image.multiple_mask_images
   - css.properties.mask-origin
   - css.properties.mask-position
+  - css.properties.mask-position.bottom
+  - css.properties.mask-position.center
+  - css.properties.mask-position.left
+  - css.properties.mask-position.right
+  - css.properties.mask-position.top
   - css.properties.mask-repeat
+  - css.properties.mask-repeat.no-repeat
+  - css.properties.mask-repeat.repeat
+  - css.properties.mask-repeat.repeat-x
+  - css.properties.mask-repeat.repeat-y
+  - css.properties.mask-repeat.round
+  - css.properties.mask-repeat.space
   - css.properties.mask-size
+  - css.properties.mask-size.auto
+  - css.properties.mask-size.contain
+  - css.properties.mask-size.cover
+  - css.properties.mask.add
+  - css.properties.mask.alpha
+  - css.properties.mask.bottom
+  - css.properties.mask.center
+  - css.properties.mask.exclude
+  - css.properties.mask.intersect
+  - css.properties.mask.left
+  - css.properties.mask.match-source
+  - css.properties.mask.no-repeat
+  - css.properties.mask.repeat
+  - css.properties.mask.repeat-x
+  - css.properties.mask.repeat-y
+  - css.properties.mask.right
+  - css.properties.mask.round
+  - css.properties.mask.space
+  - css.properties.mask.subtract
+  - css.properties.mask.top
 
   # baseline: false
   # support:
@@ -47,14 +78,32 @@ compat_features:
   #   edge: "120"
   #   firefox: "53"
   #   firefox_android: "53"
+  - css.properties.mask-clip.border-box
+  - css.properties.mask-clip.content-box
+  - css.properties.mask-clip.fill-box
+  - css.properties.mask-clip.no-clip
+  - css.properties.mask-clip.padding-box
+  - css.properties.mask-clip.stroke-box
+  - css.properties.mask-clip.view-box
   - css.properties.mask-image.svg_masks
   - css.properties.mask-mode
   - css.properties.mask-mode.alpha
   - css.properties.mask-mode.luminance
   - css.properties.mask-mode.match-source
+  - css.properties.mask-origin.border-box
+  - css.properties.mask-origin.content-box
   - css.properties.mask-origin.fill-box
+  - css.properties.mask-origin.padding-box
   - css.properties.mask-origin.stroke-box
   - css.properties.mask-origin.view-box
+  - css.properties.mask.border-box
+  - css.properties.mask.content-box
+  - css.properties.mask.fill-box
+  - css.properties.mask.luminance
+  - css.properties.mask.no-clip
+  - css.properties.mask.padding-box
+  - css.properties.mask.stroke-box
+  - css.properties.mask.view-box
 
   # baseline: false
   # support:

@@ -8,9 +8,16 @@ compat_features:
   - api.ML
   - api.ML.createContext
   - api.MLContext
+  - api.MLContext.createConstantTensor
+  - api.MLContext.createTensor
+  - api.MLContext.destroy
   - api.MLContext.dispatch
+  - api.MLContext.lost
   - api.MLContext.opSupportLimits
+  - api.MLContext.readTensor
+  - api.MLContext.writeTensor
   - api.MLGraph
+  - api.MLGraph.destroy
   - api.MLGraphBuilder
   - api.MLGraphBuilder.MLGraphBuilder
   - api.MLGraphBuilder.abs
@@ -40,6 +47,7 @@ compat_features:
   - api.MLGraphBuilder.gather
   - api.MLGraphBuilder.gatherElements
   - api.MLGraphBuilder.gatherND
+  - api.MLGraphBuilder.gelu
   - api.MLGraphBuilder.gemm
   - api.MLGraphBuilder.greater
   - api.MLGraphBuilder.greaterOrEqual
@@ -50,6 +58,8 @@ compat_features:
   - api.MLGraphBuilder.identity
   - api.MLGraphBuilder.input
   - api.MLGraphBuilder.instanceNormalization
+  - api.MLGraphBuilder.isInfinite
+  - api.MLGraphBuilder.isNaN
   - api.MLGraphBuilder.l2Pool2d
   - api.MLGraphBuilder.layerNormalization
   - api.MLGraphBuilder.leakyRelu
@@ -69,6 +79,7 @@ compat_features:
   - api.MLGraphBuilder.min
   - api.MLGraphBuilder.mul
   - api.MLGraphBuilder.neg
+  - api.MLGraphBuilder.notEqual
   - api.MLGraphBuilder.pad
   - api.MLGraphBuilder.pow
   - api.MLGraphBuilder.prelu
@@ -87,6 +98,8 @@ compat_features:
   - api.MLGraphBuilder.relu
   - api.MLGraphBuilder.resample2d
   - api.MLGraphBuilder.reshape
+  - api.MLGraphBuilder.reverse
+  - api.MLGraphBuilder.roundEven
   - api.MLGraphBuilder.scatterElements
   - api.MLGraphBuilder.scatterND
   - api.MLGraphBuilder.sigmoid
@@ -106,5 +119,14 @@ compat_features:
   - api.MLGraphBuilder.triangular
   - api.MLGraphBuilder.where
   - api.MLOperand
+  - api.MLOperand.dataType
+  - api.MLOperand.shape
+  - api.MLTensor
+  - api.MLTensor.constant
+  - api.MLTensor.dataType
+  - api.MLTensor.destroy
+  - api.MLTensor.readable
+  - api.MLTensor.shape
+  - api.MLTensor.writable
   - api.Navigator.ml
   - api.WorkerNavigator.ml

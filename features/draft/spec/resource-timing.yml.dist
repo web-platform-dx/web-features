@@ -22,6 +22,8 @@ compat_features:
   #   chrome: "140"
   #   chrome_android: "140"
   #   edge: "140"
+  #   safari: "27"
+  #   safari_ios: "27"
   - api.PerformanceResourceTiming.workerCacheLookupStart
   - api.PerformanceResourceTiming.workerRouterEvaluationStart
 
@@ -32,8 +34,9 @@ compat_features:
   #   edge: "143"
   - api.PerformanceResourceTiming.contentEncoding
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   safari: "27"
+  #   safari_ios: "27"
   - api.PerformanceResourceTiming.workerFinalRouterSource
   - api.PerformanceResourceTiming.workerMatchedRouterSource

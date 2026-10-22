@@ -1,0 +1,9 @@
+name: Retriable module loading
+description: >
+  You can retry importing a module that failed to import previously.
+  Failed module imports, through the `import` JavaScript statement, the `import()` JavaScript syntax, or dynamically created `<script src="…" type="module">` HTML elements, aren't cached.
+spec: https://html.spec.whatwg.org/multipage/webappapis.html#fetch-a-single-module-script
+compat_features:
+  - html.elements.script.type.module.http_errors_not_cached
+  - javascript.operators.import.http_errors_not_cached
+  - javascript.statements.import.http_errors_not_cached
