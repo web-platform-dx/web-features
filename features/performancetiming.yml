@@ -1,11 +1,11 @@
 name: PerformanceTiming and PerformanceNavigation
 description: The `window.performance.timing` and `window.performance.navigation` APIs report performance timing information for events that occur during the loading and use of the current page.
-spec: https://w3c.github.io/navigation-timing/#obsolete
+spec: https://w3c.github.io/navigation-timing/#obsolete-heading
 group: performance
 discouraged:
   reason: This feature is supserseded by the `PerformanceNavigationTiming` API.
   according_to:
-    - https://w3c.github.io/navigation-timing/#obsolete
+    - https://w3c.github.io/navigation-timing/#obsolete-heading
   alternatives:
     - performance
     - navigation-timing
