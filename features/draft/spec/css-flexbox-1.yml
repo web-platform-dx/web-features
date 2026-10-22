@@ -15,7 +15,6 @@ compat_features:
   - css.properties.flex-flow.wrap-reverse
   - css.properties.flex-line-count
   - css.properties.flex.auto
-  - css.properties.flex.content
 
 # The following features in the spec are already part of web-features:
 # - Flexbox:
@@ -57,6 +56,6 @@ compat_features:
 # - Grid:
 #   - css.properties.align-items.context_grid
 #   - css.properties.align-self.context_grid
-#   - css.properties.justify-content.grid_context
+#   - css.properties.justify-content.context_grid
 # - flex-wrap: balance:
 #   - css.properties.flex-wrap.balance
