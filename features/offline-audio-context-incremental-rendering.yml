@@ -1,6 +1,6 @@
 name: OfflineAudioContext incremental rendering
 description: >
-  The `startRendering()` method of the `OfflineAudioContext` API accepts an optional chunk size argument, which sets the number of sample frames to render in a `AudioBuffer`.
+  The `startRendering()` method of the `OfflineAudioContext` API accepts an optional chunk size argument, which sets the number of sample frames to render in an `AudioBuffer`.
   You can use this to process audio incrementally, reducing the memory required to process high amounts of data.
 spec: https://webaudio.github.io/web-audio-api/#dom-offlineaudiocontext-startrendering
 group: web-audio
