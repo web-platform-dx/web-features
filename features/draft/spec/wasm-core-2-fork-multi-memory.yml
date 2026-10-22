@@ -1,0 +1,12 @@
+draft_date: 2026-10-22
+name: "WebAssembly Core: Multi Memory"
+description: TODO
+spec: https://webassembly.github.io/multi-memory/core/bikeshed/
+compat_features:
+  - webassembly.instructions.memory_copy.multi_memory
+  - webassembly.instructions.memory_fill.multi_memory
+  - webassembly.instructions.memory_grow.multi_memory
+  - webassembly.instructions.memory_init.multi_memory
+  - webassembly.instructions.memory_load.multi_memory
+  - webassembly.instructions.memory_size.multi_memory
+  - webassembly.instructions.memory_store.multi_memory
