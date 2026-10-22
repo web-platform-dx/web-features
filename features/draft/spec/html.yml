@@ -1,4 +1,4 @@
-draft_date: 2026-10-19
+draft_date: 2026-10-22
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -77,6 +77,8 @@ compat_features:
   - api.TrackEvent
   - api.TrackEvent.TrackEvent
   - api.TrackEvent.track
+  - api.TrustedHTMLParserOptions.runScripts
+  - api.TrustedHTMLParserOptions.sanitizer
   - api.Window.originAgentCluster
   - api.Window.rejectionhandled_event
   - api.Window.unhandledrejection_event
@@ -133,8 +135,6 @@ compat_features:
   - http.status.103.preload
 
 # The following features in the spec are already part of web-features:
-# - dir:
-#   - html.global_attributes.dir
 # - Audio and video tracks:
 #   - api.AudioTrack
 #   - api.AudioTrack.enabled
@@ -359,8 +359,6 @@ compat_features:
 #   - api.ShadowRoot.prependHTMLUnsafe
 #   - api.ShadowRoot.setHTMLUnsafe
 #   - api.ShadowRoot.setHTMLUnsafe.options_runscripts_parameter
-#   - api.TrustedHTMLParserOptions.runScripts
-#   - api.TrustedHTMLParserOptions.sanitizer
 # - CloseWatcher:
 #   - api.CloseWatcher
 #   - api.CloseWatcher.CloseWatcher
@@ -458,7 +456,6 @@ compat_features:
 #   - api.Element.outerHTML
 #   - api.HTMLDocument
 #   - api.HTMLElement
-#   - api.HTMLElement.dir
 #   - api.HTMLElement.error_event
 #   - api.HTMLElement.hidden
 #   - api.HTMLElement.innerText
@@ -1149,6 +1146,9 @@ compat_features:
 # - contenteditable="plaintext-only":
 #   - api.HTMLElement.contentEditable.plaintext-only
 #   - html.global_attributes.contenteditable.plaintext-only
+# - dir:
+#   - api.HTMLElement.dir
+#   - html.global_attributes.dir
 # - enterkeyhint:
 #   - api.HTMLElement.enterKeyHint
 #   - html.global_attributes.enterkeyhint
