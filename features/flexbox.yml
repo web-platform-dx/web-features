@@ -60,6 +60,7 @@ compat_features:
   - css.properties.display.flex
   - css.properties.display.inline-flex
   - css.properties.flex
+  - css.properties.flex.content
   - css.properties.flex-basis
   - css.properties.flex-basis.auto
   - css.properties.flex-basis.content
@@ -82,18 +83,22 @@ compat_features:
   - css.properties.flex.none
   - css.properties.justify-content
   - css.properties.justify-content.context_flex
-  - css.properties.justify-content.safe
-  - css.properties.justify-content.unsafe
-  - css.properties.justify-content.space-evenly
-  - css.properties.justify-content.start
   - css.properties.justify-content.end
-  - css.properties.justify-content.stretch
+  - css.properties.justify-content.flex-end
+  - css.properties.justify-content.flex-start
   - css.properties.justify-content.left
   - css.properties.justify-content.normal
   - css.properties.justify-content.right
+  - css.properties.justify-content.safe
+  - css.properties.justify-content.space-evenly
+  - css.properties.justify-content.start
+  - css.properties.justify-content.stretch
+  - css.properties.justify-content.unsafe
   - css.properties.justify-items
   - css.properties.justify-items.center
   - css.properties.justify-items.context_flex
+  - css.properties.justify-items.flex-end
+  - css.properties.justify-items.flex-start
   - css.properties.justify-items.left
   - css.properties.justify-items.legacy
   - css.properties.justify-items.right
