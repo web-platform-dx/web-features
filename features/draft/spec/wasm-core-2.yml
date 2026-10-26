@@ -1,4 +1,4 @@
-draft_date: 2026-10-14
+draft_date: 2026-10-26
 name: WebAssembly Core Specification
 description: TODO
 spec: https://webassembly.github.io/spec/core/bikeshed/
@@ -170,6 +170,13 @@ compat_features:
   - webassembly.instructions.promote_32
   - webassembly.instructions.promote_low_f32x4
   - webassembly.instructions.q15mulr_sat_s
+  - webassembly.instructions.ref_as_non_null
+  - webassembly.instructions.ref_cast
+  - webassembly.instructions.ref_eq
+  - webassembly.instructions.ref_func
+  - webassembly.instructions.ref_is_null
+  - webassembly.instructions.ref_null
+  - webassembly.instructions.ref_test
   - webassembly.instructions.reinterpret
   - webassembly.instructions.rem
   - webassembly.instructions.replace_lane
@@ -234,6 +241,7 @@ compat_features:
 
 # The following features in the spec are already part of web-features:
 # - Bulk memory operations (WebAssembly):
+#   - webassembly.bulk-memory-operations
 #   - webassembly.definitions.data
 #   - webassembly.definitions.elem
 #   - webassembly.instructions.data_drop
@@ -245,8 +253,27 @@ compat_features:
 #   - webassembly.instructions.table_init
 # - Import and export of mutable globals (WebAssembly):
 #   - webassembly.definitions.global.mut
+# - Exception handling (WebAssembly):
+#   - webassembly.exception-handling
+# - Exception references with exnref (WebAssembly):
+#   - webassembly.exceptionsFinal
+# - Fixed-width SIMD (WebAssembly):
+#   - webassembly.fixed-width-SIMD
 # - Non-trapping float-to-int conversion (WebAssembly):
 #   - webassembly.instructions.trunc_sat_f32_s
 #   - webassembly.instructions.trunc_sat_f32_u
 #   - webassembly.instructions.trunc_sat_f64_s
 #   - webassembly.instructions.trunc_sat_f64_u
+#   - webassembly.non-trapping-float-to-int-conversions
+# - Multi-value (WebAssembly):
+#   - webassembly.multi-value
+# - Multi-memory (WebAssembly):
+#   - webassembly.multiMemory
+# - Reference types (WebAssembly):
+#   - webassembly.reference-types
+# - Relaxed-width SIMD (WebAssembly):
+#   - webassembly.relaxed-SIMD
+# - Sign extension operators (WebAssembly):
+#   - webassembly.sign-extension-operations
+# - Tail call optimization (WebAssembly):
+#   - webassembly.tail-calls

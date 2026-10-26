@@ -1,4 +1,4 @@
-draft_date: 2026-07-24
+draft_date: 2026-10-26
 name: "WebAssembly JavaScript Interface: Promise Integration"
 description: TODO
 spec: https://webassembly.github.io/js-promise-integration/js-api/
@@ -8,3 +8,7 @@ compat_features:
   - webassembly.api.Suspending
   - webassembly.api.Suspending.Suspending
   - webassembly.api.promising_static
+
+# The following features in the spec are already part of web-features:
+# - JavaScript promise integration (WebAssembly):
+#   - webassembly.jspi

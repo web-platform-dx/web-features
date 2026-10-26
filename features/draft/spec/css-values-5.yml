@@ -1,4 +1,4 @@
-draft_date: 2026-10-15
+draft_date: 2026-10-26
 name: CSS Values and Units Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-values-5/
@@ -58,6 +58,12 @@ compat_features:
   - css.types.attr.raw-string
   - css.types.progress.no-clamp
   - css.types.random-item
+  - css.types.random.auto
+  - css.types.random.dashed-ident
+  - css.types.random.element-scoped
+  - css.types.random.fixed
+  - css.types.random.property-index-scoped
+  - css.types.random.property-scoped
 
 # The following features in the spec are already part of web-features:
 # - Media queries:
