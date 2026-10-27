@@ -1,0 +1,12 @@
+name: Window resizing
+description: The `window.minimize()`, `window.maximize()`, `window.restore()`, and `window.setResizable()` methods control the size of a window and whether users may resize it.
+spec:
+  - https://w3c.github.io/window-management/#api-window-minimize-method
+  - https://w3c.github.io/window-management/#api-window-maximize-method
+  - https://w3c.github.io/window-management/#api-window-restore-method
+  - https://w3c.github.io/window-management/#api-window-setresizable-method
+compat_features:
+  - api.Window.maximize
+  - api.Window.minimize
+  - api.Window.restore
+  - api.Window.setResizable
