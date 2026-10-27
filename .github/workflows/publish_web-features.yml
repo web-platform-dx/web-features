@@ -49,16 +49,42 @@ jobs:
     if: github.repository == 'web-platform-dx/web-features'
     runs-on: ubuntu-latest
     needs: "test"
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - uses: actions/checkout@v7.0.1
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version-file: .node-version
           cache: npm
-          registry-url: "https://registry.npmjs.org"
       - run: npm ci
       - run: npm run build
-      - run: npm publish
+      - name: Authenticate to Google Cloud for OSS Exit Gate
+        id: auth
+        uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093 # v3
+        with:
+          token_format: 'access_token'
+          workload_identity_provider: 'projects/305452601764/locations/global/workloadIdentityPools/builders/providers/github'
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db # v3
+      - name: Stage to Artifact Registry and trigger OSS Exit Gate
         working-directory: ${{ env.package_dir }}
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          ACCESS_TOKEN: ${{ steps.auth.outputs.access_token }}
+          RUN_ID: ${{ github.run_id }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+        run: |
+          cat << 'NPMRC' > "$HOME/.npmrc"
+          registry=https://us-npm.pkg.dev/oss-exit-gate-prod/web-features--npm/
+          //us-npm.pkg.dev/oss-exit-gate-prod/web-features--npm/:always-auth=true
+          //us-npm.pkg.dev/oss-exit-gate-prod/web-features--npm/:_authToken=${ACCESS_TOKEN}
+          NPMRC
+          trap 'rm -f "$HOME/.npmrc"' EXIT
+          npm publish --access public --registry="https://us-npm.pkg.dev/oss-exit-gate-prod/web-features--npm/"
+          cat << 'MANIFEST' > manifest.json
+          {
+            "publish_all": true
+          }
+          MANIFEST
+          gcloud storage cp manifest.json "gs://oss-exit-gate-prod-projects-bucket/web-features/npm/manifests/manifest-${RUN_ID}-${RUN_ATTEMPT}.json"
