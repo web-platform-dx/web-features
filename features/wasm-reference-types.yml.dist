@@ -14,4 +14,7 @@ status:
     safari: "15.1"
     safari_ios: "15.1"
 compat_features:
+  - webassembly.instructions.ref_func
+  - webassembly.instructions.ref_is_null
+  - webassembly.instructions.ref_null
   - webassembly.reference-types
