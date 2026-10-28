@@ -70,7 +70,13 @@ compat_features:
   #   safari_ios: "10.3"
   - css.properties.justify-items.context_grid
   - css.properties.justify-self
+  - css.properties.justify-self.baseline
+  - css.properties.justify-self.center
   - css.properties.justify-self.context_grid
+  - css.properties.justify-self.flex-end
+  - css.properties.justify-self.flex-start
+  - css.properties.justify-self.self-end
+  - css.properties.justify-self.self-start
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: high
@@ -147,9 +153,11 @@ compat_features:
   #   safari: "10.1"
   #   safari_ios: "10.3"
   - css.properties.justify-self.auto
+  - css.properties.justify-self.end
   - css.properties.justify-self.left
   - css.properties.justify-self.normal
   - css.properties.justify-self.right
+  - css.properties.justify-self.start
   - css.properties.justify-self.stretch
 
   # baseline: high
