@@ -1220,6 +1220,9 @@ compat_features:
   #   safari: "3"
   #   safari_ios: "2"
   - svg.elements.view.preserveAspectRatio
+  - svg.elements.view.svgView
+  - svg.elements.view.svgView.preserveAspectRatio_parameter
+  - svg.elements.view.svgView.viewBox_parameter
   - svg.elements.view.viewBox
 
   # baseline: high
@@ -1633,6 +1636,19 @@ compat_features:
   # baseline_low_date: 2020-09-16
   # baseline_high_date: 2023-03-16
   # support:
+  #   chrome: "50"
+  #   chrome_android: "50"
+  #   edge: "79"
+  #   firefox: "6"
+  #   firefox_android: "6"
+  #   safari: "14"
+  #   safari_ios: "14"
+  - svg.elements.path.pathLength
+
+  # baseline: high
+  # baseline_low_date: 2020-09-16
+  # baseline_high_date: 2023-03-16
+  # support:
   #   chrome: "51"
   #   chrome_android: "51"
   #   edge: "79"
@@ -1641,6 +1657,24 @@ compat_features:
   #   safari: "14"
   #   safari_ios: "14"
   - svg.elements.a.referrerpolicy
+
+  # baseline: high
+  # baseline_low_date: 2020-09-16
+  # baseline_high_date: 2023-03-16
+  # support:
+  #   chrome: "57"
+  #   chrome_android: "57"
+  #   edge: "79"
+  #   firefox: "61"
+  #   firefox_android: "61"
+  #   safari: "14"
+  #   safari_ios: "14"
+  - svg.elements.circle.pathLength
+  - svg.elements.ellipse.pathLength
+  - svg.elements.line.pathLength
+  - svg.elements.polygon.pathLength
+  - svg.elements.polyline.pathLength
+  - svg.elements.rect.pathLength
 
   # baseline: high
   # baseline_low_date: 2020-11-17
@@ -1879,6 +1913,7 @@ compat_features:
   #   safari: "3"
   #   safari_ios: "2"
   - svg.elements.tspan.lengthAdjust
+  - svg.elements.view.svgView.transform_parameter
 
   # baseline: false
   # support:
