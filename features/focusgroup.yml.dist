@@ -3,4 +3,14 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "150"
+    chrome_android: "150"
+    edge: "150"
+compat_features:
+  - api.HTMLElement.focusGroup
+  - api.HTMLElement.focusGroupStart
+  - api.SVGElement.focusGroup
+  - api.SVGElement.focusGroupStart
+  - html.global_attributes.focusgroup
+  - html.global_attributes.focusgroupstart
