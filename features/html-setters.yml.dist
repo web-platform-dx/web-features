@@ -18,6 +18,16 @@ compat_features:
   - api.Element.setHTMLUnsafe
   - api.ShadowRoot.setHTMLUnsafe
 
+  # baseline: false
+  # support:
+  #   chrome: "146"
+  #   chrome_android: "146"
+  #   edge: "146"
+  #   firefox: "148"
+  #   firefox_android: "148"
+  - api.Element.setHTML
+  - api.ShadowRoot.setHTML
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
@@ -44,3 +54,4 @@ compat_features:
   - api.ShadowRoot.prependHTMLUnsafe
   - api.ShadowRoot.setHTMLUnsafe.options_runscripts_parameter
   - api.TrustedHTMLParserOptions
+  - api.TrustedTypePolicy.createParserOptions
