@@ -8,6 +8,9 @@ group:
 compat_features:
   # Multi-column already supported column-rule.
   # See multi-column.yml for BCD keys related to decorating gaps in multi-column layouts.
+  # Just these are new:
+  - css.properties.column-rule-color.multiple_colors
+  - css.properties.column-rule-color.repeat
   # Gap decorations added more column-rule-related properties though, listed below.
   - css.properties.column-rule-break
   - css.properties.column-rule-break.intersection
