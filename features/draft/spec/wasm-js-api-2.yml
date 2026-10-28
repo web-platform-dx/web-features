@@ -1,4 +1,4 @@
-draft_date: 2026-09-03
+draft_date: 2026-10-28
 name: WebAssembly JavaScript Interface
 description: TODO
 spec: https://webassembly.github.io/spec/js-api/
@@ -48,3 +48,6 @@ compat_features:
 #   - webassembly.api.Exception.stack
 # - Import and export of mutable globals (WebAssembly):
 #   - webassembly.api.Global.Global.mutable
+# - String builtins (WebAssembly):
+#   - webassembly.api.compile_static.compile_options
+#   - webassembly.api.instantiate_static.compile_options

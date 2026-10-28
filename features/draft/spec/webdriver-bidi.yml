@@ -1,4 +1,4 @@
-draft_date: 2026-10-15
+draft_date: 2026-10-28
 name: WebDriver BiDi
 description: TODO
 spec: https://w3c.github.io/webdriver-bidi/
@@ -58,6 +58,11 @@ compat_features:
   - webdriver.bidi.browsingContext.locateNodes.maxNodeCount_parameter
   - webdriver.bidi.browsingContext.locateNodes.serializationOptions_parameter
   - webdriver.bidi.browsingContext.locateNodes.startNodes_parameter
+  - webdriver.bidi.browsingContext.navigationAborted_event.context_parameter
+  - webdriver.bidi.browsingContext.navigationAborted_event.navigation_parameter
+  - webdriver.bidi.browsingContext.navigationAborted_event.timestamp_parameter
+  - webdriver.bidi.browsingContext.navigationAborted_event.url_parameter
+  - webdriver.bidi.browsingContext.navigationAborted_event.userContext_parameter
   - webdriver.bidi.browsingContext.navigationFailed_event
   - webdriver.bidi.browsingContext.navigationFailed_event.context_parameter
   - webdriver.bidi.browsingContext.navigationFailed_event.navigation_parameter
@@ -147,6 +152,10 @@ compat_features:
   - webdriver.bidi.emulation.setUserAgentOverride.contexts_parameter
   - webdriver.bidi.emulation.setUserAgentOverride.userAgent_parameter
   - webdriver.bidi.emulation.setUserAgentOverride.userContexts_parameter
+  - webdriver.bidi.emulation.setViewportMetaOverride
+  - webdriver.bidi.emulation.setViewportMetaOverride.contexts_parameter
+  - webdriver.bidi.emulation.setViewportMetaOverride.userContexts_parameter
+  - webdriver.bidi.emulation.setViewportMetaOverride.viewportMeta_parameter
   - webdriver.bidi.input.fileDialogOpened_event
   - webdriver.bidi.input.fileDialogOpened_event.context_parameter
   - webdriver.bidi.input.fileDialogOpened_event.element_parameter
@@ -171,6 +180,7 @@ compat_features:
   - webdriver.bidi.network.addDataCollector.collectorType_parameter
   - webdriver.bidi.network.addDataCollector.contexts_parameter
   - webdriver.bidi.network.addDataCollector.dataTypes_parameter
+  - webdriver.bidi.network.addDataCollector.dataTypes_parameter.request
   - webdriver.bidi.network.addDataCollector.dataTypes_parameter.response
   - webdriver.bidi.network.addDataCollector.maxEncodedDataSize_parameter
   - webdriver.bidi.network.addDataCollector.userContexts_parameter
@@ -272,6 +282,10 @@ compat_features:
   - webdriver.bidi.network.setCacheBehavior
   - webdriver.bidi.network.setCacheBehavior.cacheBehavior_parameter
   - webdriver.bidi.network.setCacheBehavior.contexts_parameter
+  - webdriver.bidi.network.setExtraHeaders
+  - webdriver.bidi.network.setExtraHeaders.contexts_parameter
+  - webdriver.bidi.network.setExtraHeaders.headers_parameter
+  - webdriver.bidi.network.setExtraHeaders.userContexts_parameter
   - webdriver.bidi.script.addPreloadScript
   - webdriver.bidi.script.addPreloadScript.arguments_parameter
   - webdriver.bidi.script.addPreloadScript.contexts_parameter
@@ -290,14 +304,11 @@ compat_features:
   - webdriver.bidi.script.realmCreated_event.realm_parameter
   - webdriver.bidi.script.realmCreated_event.sandbox_parameter
   - webdriver.bidi.script.realmCreated_event.type_parameter
-  - 
   - webdriver.bidi.script.realmCreated_event.type_parameter.dedicated-worker
-  - 
   - webdriver.bidi.script.realmCreated_event.type_parameter.service-worker
   - webdriver.bidi.script.realmCreated_event.type_parameter.shared-worker
   - webdriver.bidi.script.realmCreated_event.type_parameter.window
   - webdriver.bidi.script.realmCreated_event.type_parameter.worker
-  - 
   - webdriver.bidi.script.realmCreated_event.userContext_parameter
   - webdriver.bidi.script.realmDestroyed_event
   - webdriver.bidi.script.realmDestroyed_event.realm_parameter

@@ -1,4 +1,4 @@
-draft_date: 2026-10-19
+draft_date: 2026-10-28
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -86,6 +86,8 @@ compat_features:
   - api.crossOriginIsolated
   - api.origin
   - api.reportError
+  - css.properties.appearance.base-select.list_box
+  - css.properties.appearance.base-select.single_dropdown
   - html.elements.area.hreflang
   - html.elements.area.type
   - html.elements.button.command.request-close
@@ -120,8 +122,12 @@ compat_features:
   - html.global_attributes.hidden
   - html.global_attributes.id
   - http.headers.Cross-Origin-Embedder-Policy
+  - http.headers.Cross-Origin-Embedder-Policy-Report-Only
+  - http.headers.Cross-Origin-Embedder-Policy-Report-Only.report-to_parameter
   - http.headers.Cross-Origin-Embedder-Policy.credentialless
   - http.headers.Cross-Origin-Opener-Policy
+  - http.headers.Cross-Origin-Opener-Policy-Report-Only
+  - http.headers.Cross-Origin-Opener-Policy-Report-Only.report-to_parameter
   - http.headers.Cross-Origin-Opener-Policy.noopener-allow-popups
   - http.headers.Cross-Origin-Opener-Policy.report-to_parameter
   - http.headers.No-Vary-Search.speculation_rules_prefetch
@@ -133,8 +139,6 @@ compat_features:
   - http.status.103.preload
 
 # The following features in the spec are already part of web-features:
-# - dir:
-#   - html.global_attributes.dir
 # - Audio and video tracks:
 #   - api.AudioTrack
 #   - api.AudioTrack.enabled
@@ -359,8 +363,6 @@ compat_features:
 #   - api.ShadowRoot.prependHTMLUnsafe
 #   - api.ShadowRoot.setHTMLUnsafe
 #   - api.ShadowRoot.setHTMLUnsafe.options_runscripts_parameter
-#   - api.TrustedHTMLParserOptions.runScripts
-#   - api.TrustedHTMLParserOptions.sanitizer
 # - CloseWatcher:
 #   - api.CloseWatcher
 #   - api.CloseWatcher.CloseWatcher
@@ -458,7 +460,6 @@ compat_features:
 #   - api.Element.outerHTML
 #   - api.HTMLDocument
 #   - api.HTMLElement
-#   - api.HTMLElement.dir
 #   - api.HTMLElement.error_event
 #   - api.HTMLElement.hidden
 #   - api.HTMLElement.innerText
@@ -1149,6 +1150,9 @@ compat_features:
 # - contenteditable="plaintext-only":
 #   - api.HTMLElement.contentEditable.plaintext-only
 #   - html.global_attributes.contenteditable.plaintext-only
+# - dir:
+#   - api.HTMLElement.dir
+#   - html.global_attributes.dir
 # - enterkeyhint:
 #   - api.HTMLElement.enterKeyHint
 #   - html.global_attributes.enterkeyhint

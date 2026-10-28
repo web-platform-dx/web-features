@@ -1,10 +1,11 @@
-draft_date: 2026-10-15
+draft_date: 2026-10-28
 name: Trusted Types
 description: TODO
 spec: https://w3c.github.io/trusted-types/dist/spec/
 compat_features:
   - api.Element.setAttribute.enforces_trusted_types
   - api.Element.setAttributeNS.enforces_trusted_types
+  - api.TrustedTypePolicy.createParserOptions
   - javascript.builtins.AsyncFunction.AsyncFunction.enforces_trusted_types
   - javascript.builtins.AsyncGeneratorFunction.AsyncGeneratorFunction.enforces_trusted_types
   - javascript.builtins.Function.Function.enforces_trusted_types
