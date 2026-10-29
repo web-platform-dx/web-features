@@ -1,9 +1,12 @@
-draft_date: 2026-05-08
+draft_date: 2026-10-29
 name: Notifications API
 description: TODO
 spec: https://notifications.spec.whatwg.org/
 compat_features:
+  - api.Notification.Notification.options_parameter
+  - api.Notification.Notification.options_parameter.navigate
   - api.Notification.navigate
+  - api.ServiceWorkerRegistration.showNotification.options_navigate_parameter
 
 # The following features in the spec are already part of web-features:
 # - Notifications:
@@ -32,7 +35,6 @@ compat_features:
 #   - api.Notification.tag
 #   - api.Notification.timestamp
 #   - api.Notification.title
-#   - api.Notification.vibrate
 #   - api.Notification.worker_support
 #   - api.NotificationEvent
 #   - api.NotificationEvent.NotificationEvent
@@ -49,4 +51,3 @@ compat_features:
 #   - api.ServiceWorkerRegistration.showNotification.options_image_parameter
 #   - api.ServiceWorkerRegistration.showNotification.options_renotify_parameter
 #   - api.ServiceWorkerRegistration.showNotification.options_requireInteraction_parameter
-#   - api.ServiceWorkerRegistration.showNotification.options_vibrate_parameter

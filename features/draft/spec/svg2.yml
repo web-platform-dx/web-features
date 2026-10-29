@@ -1,4 +1,4 @@
-draft_date: 2026-10-19
+draft_date: 2026-10-29
 name: Scalable Vector Graphics (SVG) 2
 description: TODO
 spec: https://w3c.github.io/svgwg/svg2-draft/
@@ -38,9 +38,20 @@ compat_features:
   - css.properties.text-rendering.optimizeLegibility
   - css.properties.text-rendering.optimizeSpeed
   - mediatypes.image.svg
+  - svg.elements.circle.pathLength
+  - svg.elements.ellipse.pathLength
+  - svg.elements.line.pathLength
+  - svg.elements.path.pathLength
+  - svg.elements.polygon.pathLength
+  - svg.elements.polyline.pathLength
+  - svg.elements.rect.pathLength
   - svg.elements.textPath.method
   - svg.elements.textPath.method.align
   - svg.elements.textPath.method.stretch
+  - svg.elements.view.svgView
+  - svg.elements.view.svgView.preserveAspectRatio_parameter
+  - svg.elements.view.svgView.transform_parameter
+  - svg.elements.view.svgView.viewBox_parameter
 
 # The following features in the spec are already part of web-features:
 # - SVG:

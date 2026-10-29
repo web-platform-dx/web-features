@@ -1,4 +1,4 @@
-draft_date: 2026-10-08
+draft_date: 2026-10-29
 name: ECMAScript® 2027 Language Specification
 description: TODO
 spec: https://tc39.es/ecma262/multipage/
@@ -264,6 +264,8 @@ compat_features:
 #   - javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
 #   - javascript.builtins.SharedArrayBuffer.byteLength
 #   - javascript.builtins.SharedArrayBuffer.slice
+# - Atomics.pause():
+#   - javascript.builtins.Atomics.pause
 # - Atomics.waitAsync():
 #   - javascript.builtins.Atomics.waitAsync
 # - BigInt:
@@ -606,12 +608,21 @@ compat_features:
 #   - javascript.builtins.Iterator.toArray
 # - Iterator.concat():
 #   - javascript.builtins.Iterator.concat
+# - Iterator join():
+#   - javascript.builtins.Iterator.join
+# - Iterator.zip() and Iterator.zipKeyed():
+#   - javascript.builtins.Iterator.zip
+#   - javascript.builtins.Iterator.zipKeyed
 # - JSON:
 #   - javascript.builtins.JSON
 #   - javascript.builtins.JSON.json_superset
 #   - javascript.builtins.JSON.parse
 #   - javascript.builtins.JSON.stringify
 #   - javascript.builtins.JSON.stringify.well_formed_stringify
+# - JSON source text access:
+#   - javascript.builtins.JSON.isRawJSON
+#   - javascript.builtins.JSON.parse.reviver_parameter_context_argument
+#   - javascript.builtins.JSON.rawJSON
 # - Map (initial support):
 #   - javascript.builtins.Map
 #   - javascript.builtins.Map.@@iterator
