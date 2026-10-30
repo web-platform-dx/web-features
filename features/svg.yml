@@ -329,6 +329,7 @@ compat_features:
   - svg.elements.circle.cx
   - svg.elements.circle.cy
   - svg.elements.circle.fill
+  - svg.elements.circle.pathLength
   - svg.elements.circle.r
   - svg.elements.circle.systemLanguage
   - svg.elements.defs
@@ -338,6 +339,7 @@ compat_features:
   - svg.elements.ellipse.cx
   - svg.elements.ellipse.cy
   - svg.elements.ellipse.fill
+  - svg.elements.ellipse.pathLength
   - svg.elements.ellipse.rx
   - svg.elements.ellipse.ry
   - svg.elements.ellipse.systemLanguage
@@ -358,6 +360,7 @@ compat_features:
   - svg.elements.image.x
   - svg.elements.image.y
   - svg.elements.line
+  - svg.elements.line.pathLength
   - svg.elements.line.systemLanguage
   - svg.elements.line.x1
   - svg.elements.line.x2
@@ -394,6 +397,7 @@ compat_features:
   - svg.elements.path
   - svg.elements.path.d
   - svg.elements.path.fill
+  - svg.elements.path.pathLength
   - svg.elements.path.systemLanguage
   - svg.elements.pattern
   - svg.elements.pattern.height
@@ -407,10 +411,12 @@ compat_features:
   - svg.elements.pattern.y
   - svg.elements.polygon
   - svg.elements.polygon.fill
+  - svg.elements.polygon.pathLength
   - svg.elements.polygon.points
   - svg.elements.polygon.systemLanguage
   - svg.elements.polyline
   - svg.elements.polyline.fill
+  - svg.elements.polyline.pathLength
   - svg.elements.polyline.points
   - svg.elements.polyline.systemLanguage
   - svg.elements.radialGradient
@@ -427,6 +433,7 @@ compat_features:
   - svg.elements.rect
   - svg.elements.rect.fill
   - svg.elements.rect.height
+  - svg.elements.rect.pathLength
   - svg.elements.rect.rx
   - svg.elements.rect.ry
   - svg.elements.rect.systemLanguage
@@ -502,6 +509,10 @@ compat_features:
   - svg.elements.use.y
   - svg.elements.view
   - svg.elements.view.preserveAspectRatio
+  - svg.elements.view.svgView
+  - svg.elements.view.svgView.preserveAspectRatio_parameter
+  - svg.elements.view.svgView.transform_parameter
+  - svg.elements.view.svgView.viewBox_parameter
   - svg.elements.view.viewBox
   - svg.global_attributes.class
   - svg.global_attributes.clip-rule
