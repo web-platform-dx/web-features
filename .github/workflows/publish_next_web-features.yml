@@ -110,7 +110,7 @@ jobs:
         run: |
           gh_command="gh release edit"
           if ! gh release view next; then
-            gh_command=gh release create
+            gh_command="gh release create"
           fi
           $gh_command \
             --verify-tag \
