@@ -1,6 +1,8 @@
 name: resizable media query
 description: A `resizable` media query sets styles based on whether the user may resize the window.
 spec: https://w3c.github.io/window-management/#media-descriptor-resizable
-group: media-queries
+group:
+  - media-queries
+  - window-management
 compat_features:
   - css.at-rules.media.resizable
