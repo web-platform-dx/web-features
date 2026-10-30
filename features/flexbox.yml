@@ -83,6 +83,7 @@ compat_features:
   - css.properties.flex.none
   - css.properties.justify-content
   - css.properties.justify-content.context_flex
+  - css.properties.justify-content.center
   - css.properties.justify-content.end
   - css.properties.justify-content.flex-end
   - css.properties.justify-content.flex-start
@@ -90,23 +91,64 @@ compat_features:
   - css.properties.justify-content.normal
   - css.properties.justify-content.right
   - css.properties.justify-content.safe
+  - css.properties.justify-content.space-around
+  - css.properties.justify-content.space-between
   - css.properties.justify-content.space-evenly
   - css.properties.justify-content.start
   - css.properties.justify-content.stretch
   - css.properties.justify-content.unsafe
   - css.properties.justify-items
+  - css.properties.justify-items.baseline
   - css.properties.justify-items.center
+  - css.properties.justify-items.end
   - css.properties.justify-items.context_flex
   - css.properties.justify-items.flex-end
   - css.properties.justify-items.flex-start
   - css.properties.justify-items.left
+  - css.properties.justify-items.normal
   - css.properties.justify-items.legacy
   - css.properties.justify-items.right
+  - css.properties.justify-items.self-end
+  - css.properties.justify-items.self-start
+  - css.properties.justify-items.start
+  - css.properties.justify-items.stretch
   - css.properties.order
   - css.properties.place-content
   - css.properties.place-content.context_flex
+  - css.properties.place-content.baseline
+  - css.properties.place-content.center
+  - css.properties.place-content.end
+  - css.properties.place-content.flex-end
+  - css.properties.place-content.flex-start
+  - css.properties.place-content.normal
+  - css.properties.place-content.space-around
+  - css.properties.place-content.space-between
+  - css.properties.place-content.space-evenly
+  - css.properties.place-content.start
+  - css.properties.place-content.stretch
   - css.properties.place-items
+  - css.properties.place-items.baseline
+  - css.properties.place-items.center
+  - css.properties.place-items.end
+  - css.properties.place-items.flex-end
+  - css.properties.place-items.flex-start
+  - css.properties.place-items.normal
+  - css.properties.place-items.self-end
+  - css.properties.place-items.self-start
+  - css.properties.place-items.start
+  - css.properties.place-items.stretch
   - css.properties.place-items.context_flex
   - css.properties.place-self
   - css.properties.place-self.context_flex
+  - css.properties.place-self.auto
+  - css.properties.place-self.baseline
+  - css.properties.place-self.center
+  - css.properties.place-self.end
+  - css.properties.place-self.flex-end
+  - css.properties.place-self.flex-start
+  - css.properties.place-self.normal
+  - css.properties.place-self.self-end
+  - css.properties.place-self.self-start
+  - css.properties.place-self.start
+  - css.properties.place-self.stretch
   - css.properties.position.absolutely_positioned_flex_children

@@ -80,6 +80,7 @@ compat_features:
   - css.properties.flex-wrap.nowrap
   - css.properties.flex-wrap.wrap
   - css.properties.flex-wrap.wrap-reverse
+  - css.properties.justify-content.center
   - css.properties.justify-content.flex-end
   - css.properties.justify-content.flex-start
 
@@ -110,9 +111,11 @@ compat_features:
   - css.properties.align-items.context_flex
   - css.properties.justify-content.context_flex
   - css.properties.justify-items
+  - css.properties.justify-items.baseline
   - css.properties.justify-items.context_flex
   - css.properties.justify-items.flex-end
   - css.properties.justify-items.flex-start
+  - css.properties.justify-items.normal
 
   # baseline: high
   # baseline_low_date: 2017-09-19
@@ -202,6 +205,21 @@ compat_features:
   - css.properties.align-items.stretch
   - css.properties.align-self.context_flex.stretch_in_flex
   - css.properties.justify-content.stretch
+  - css.properties.justify-items.stretch
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "57"
+  #   chrome_android: "57"
+  #   edge: "79"
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "10.1"
+  #   safari_ios: "10.3"
+  - css.properties.justify-items.end
+  - css.properties.justify-items.start
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -229,7 +247,12 @@ compat_features:
   #   safari: "9"
   #   safari_ios: "9"
   - css.properties.place-content
+  - css.properties.place-content.baseline
+  - css.properties.place-content.center
   - css.properties.place-content.context_flex
+  - css.properties.place-content.flex-end
+  - css.properties.place-content.flex-start
+  - css.properties.place-content.normal
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -243,9 +266,33 @@ compat_features:
   #   safari: "11"
   #   safari_ios: "11"
   - css.properties.place-items
+  - css.properties.place-items.baseline
+  - css.properties.place-items.center
   - css.properties.place-items.context_flex
+  - css.properties.place-items.flex-end
+  - css.properties.place-items.flex-start
+  - css.properties.place-items.normal
   - css.properties.place-self
+  - css.properties.place-self.auto
+  - css.properties.place-self.baseline
+  - css.properties.place-self.center
   - css.properties.place-self.context_flex
+  - css.properties.place-self.flex-end
+  - css.properties.place-self.flex-start
+  - css.properties.place-self.normal
+
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "59"
+  #   chrome_android: "59"
+  #   edge: "79"
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "9"
+  #   safari_ios: "9"
+  - css.properties.place-content.stretch
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -261,6 +308,8 @@ compat_features:
   - css.properties.align-content.first_baseline
   - css.properties.align-items.first_baseline
   - css.properties.align-self.first_baseline
+  - css.properties.place-items.stretch
+  - css.properties.place-self.stretch
 
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -276,7 +325,12 @@ compat_features:
   - css.properties.align-content.space-around
   - css.properties.align-content.space-between
   - css.properties.align-content.space-evenly
+  - css.properties.justify-content.space-around
+  - css.properties.justify-content.space-between
   - css.properties.justify-content.space-evenly
+  - css.properties.place-content.space-around
+  - css.properties.place-content.space-between
+  - css.properties.place-content.space-evenly
 
   # baseline: high
   # baseline_low_date: 2020-09-22
@@ -367,6 +421,18 @@ compat_features:
   - css.properties.align-items.self-start
   - css.properties.align-self.self-end
   - css.properties.align-self.self-start
+  - css.properties.justify-items.self-end
+  - css.properties.justify-items.self-start
+  - css.properties.place-content.end
+  - css.properties.place-content.start
+  - css.properties.place-items.end
+  - css.properties.place-items.self-end
+  - css.properties.place-items.self-start
+  - css.properties.place-items.start
+  - css.properties.place-self.end
+  - css.properties.place-self.self-end
+  - css.properties.place-self.self-start
+  - css.properties.place-self.start
 
   # baseline: high
   # baseline_low_date: 2022-09-12
