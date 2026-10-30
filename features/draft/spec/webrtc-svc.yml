@@ -1,0 +1,7 @@
+draft_date: 2026-10-29
+name: Scalable Video Coding (SVC) Extension for WebRTC
+description: TODO
+spec: https://w3c.github.io/webrtc-svc/
+compat_features:
+  - api.RTCPeerConnection.addTransceiver.init_sendEncodings_parameter.scalabilityMode
+  - api.RTCRtpSender.setParameters.parameters_encodings_parameter.scalabilityMode
