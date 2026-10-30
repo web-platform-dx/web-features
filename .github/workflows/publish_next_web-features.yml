@@ -87,8 +87,11 @@ jobs:
       - run: npm publish --tag ${{ env.dist_tag }}
         working-directory: ${{ env.package_dir }}
 
-      - name: Set existing release to draft
-        run: gh release edit --draft "$TAG"
+      - name: Set existing release to draft, if it exists
+        run: |
+          if gh release view next; then
+            gh release edit --draft "$TAG"
+          fi
         env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ env.dist_tag }}
@@ -105,7 +108,11 @@ jobs:
 
       - name: Publish pre-release on GitHub
         run: |
-          gh release edit \
+          gh_command="gh release edit"
+          if ! gh release view next; then
+            gh_command=gh release create
+          fi
+          $gh_command \
             --verify-tag \
             --title "$PACKAGE@$TAG" \
             --notes "$NOTES" \
