@@ -19,18 +19,15 @@ compat_features:
   - api.Element.prependHTMLUnsafe
   - api.Element.replaceWithHTML
   - api.Element.replaceWithHTMLUnsafe
-  # TODO: overlap `api.Element.setHTML()` with `sanitizer` and this feature,
-  # to guarantee status consistency
-  # See: https://github.com/web-platform-dx/web-features/issues/1173
+  - api.Element.setHTML
   - api.Element.setHTMLUnsafe
   - api.Element.setHTMLUnsafe.options_runscripts_parameter
   - api.ShadowRoot.appendHTML
   - api.ShadowRoot.appendHTMLUnsafe
   - api.ShadowRoot.prependHTML
   - api.ShadowRoot.prependHTMLUnsafe
-  # TODO: overlap `api.ShadowRoot.setHTML()` with `sanitizer` and this feature,
-  # to guarantee status consistency
-  # See: https://github.com/web-platform-dx/web-features/issues/1173
+  - api.ShadowRoot.setHTML
   - api.ShadowRoot.setHTMLUnsafe
   - api.ShadowRoot.setHTMLUnsafe.options_runscripts_parameter
   - api.TrustedHTMLParserOptions
+  - api.TrustedTypePolicy.createParserOptions

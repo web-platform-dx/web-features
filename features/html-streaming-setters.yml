@@ -29,6 +29,8 @@ compat_features:
   - api.ShadowRoot.streamHTMLUnsafe
   - api.ShadowRoot.streamPrependHTML
   - api.ShadowRoot.streamPrependHTMLUnsafe
+  - api.TrustedHTMLParserOptions
+  - api.TrustedTypePolicy.createParserOptions
   # These convenience methods are possibly a parallel or independent feature,
   # but we choose to include them here since they were initially introduced
   # for these streaming methods. For more background, see
