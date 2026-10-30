@@ -355,5 +355,19 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "150"
+  #   chrome_android: "150"
+  #   edge: "150"
+  - api.GPUDevice.createPipelineLayout.descriptor_immediateSize_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "152"
+  #   chrome_android: "152"
+  #   edge: "152"
+  - api.GPUSupportedFeatures.feature_subgroup-size-control
+
+  # baseline: false
+  # support:
   #   chrome_android: "121"
   - api.GPU.requestAdapter.discrete_adapter_default_ac
