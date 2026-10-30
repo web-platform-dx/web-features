@@ -1,5 +1,7 @@
 name: Interest invokers
-description: Interest invokers, registered by the `interestfor` HTML attribute, trigger events and actions on a target element when a user shows interest in the element, through behaviors such as hover, focus, or long-press. Pseudo-elements apply styles to sources and targets of interest.
+description: >
+  Interest invokers, registered by the `interestfor` HTML attribute, trigger events and actions on a target element when a user shows interest in the element, through behaviors such as hover, focus, or long-press.
+  Pseudo-elements apply styles to sources and targets of interest.
 spec: https://github.com/whatwg/html/pull/11006
 group: html
 compat_features:
@@ -12,6 +14,13 @@ compat_features:
   - api.InterestEvent.InterestEvent
   - api.InterestEvent.source
   - api.SVGAElement.interestForElement
+  - css.properties.interest-delay
+  - css.properties.interest-delay-end
+  - css.properties.interest-delay-end.normal
+  - css.properties.interest-delay-start
+  - css.properties.interest-delay-start.normal
+  - css.properties.interest-delay.normal
+  - css.selectors.interest-button
   - css.selectors.interest-source
   - css.selectors.interest-target
   - html.elements.a.interestfor
