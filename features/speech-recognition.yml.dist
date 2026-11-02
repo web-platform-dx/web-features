@@ -73,3 +73,14 @@ compat_features:
   #   chrome: "139"
   #   edge: "139"
   - api.SpeechRecognition.continuous
+  - api.SpeechRecognition.start.audioTrack
+
+  # baseline: false
+  # support:
+  #   chrome: "142"
+  #   edge: "142"
+  - api.SpeechRecognitionPhrase
+  - api.SpeechRecognitionPhrase.SpeechRecognitionPhrase
+  - api.SpeechRecognitionPhrase.boost
+  - api.SpeechRecognitionPhrase.phrase
+  - http.headers.Permissions-Policy.on-device-speech-recognition
