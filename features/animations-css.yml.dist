@@ -239,11 +239,14 @@ compat_features:
   #   safari_ios: "17"
   - api.CSSKeyframesRule.length
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-10-27
   # support:
   #   chrome: "115"
   #   chrome_android: "115"
   #   edge: "115"
+  #   firefox: "159"
+  #   firefox_android: "159"
   #   safari: "18.4"
   #   safari_ios: "18.4"
   - css.properties.animation-duration.auto
