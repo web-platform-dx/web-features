@@ -1,7 +1,9 @@
 name: Navigation timing performance entries
 description: A `navigation` performance entry measures navigation events, such as loading time or the number of redirects.
 spec: https://w3c.github.io/navigation-timing/
-group: performance
+group:
+  - performance
+  - navigation
 status:
   compute_from: api.PerformanceNavigationTiming
 compat_features:
