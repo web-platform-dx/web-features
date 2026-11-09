@@ -1,4 +1,4 @@
-draft_date: 2026-11-02
+draft_date: 2026-11-09
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -111,7 +111,6 @@ compat_features:
   - html.elements.link.rel.modulepreload.as-style
   - html.elements.script.type.importmap.integrity
   - html.elements.select.autocomplete
-  - html.elements.template.shadowrootcustomelementregistry
   - html.elements.template.shadowrootslotassignment
   - html.elements.textarea.autocomplete.new-password
   - html.elements.textarea.autocomplete.one-time-code
@@ -395,6 +394,7 @@ compat_features:
 #   - api.CustomElementRegistry.CustomElementRegistry
 #   - api.CustomElementRegistry.initialize
 #   - api.HTMLTemplateElement.shadowRootCustomElementRegistry
+#   - html.elements.template.shadowrootcustomelementregistry
 # - Customized built-in elements:
 #   - api.CustomElementRegistry.builtin_element_support
 #   - html.global_attributes.is
