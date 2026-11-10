@@ -4,12 +4,25 @@
 status:
   baseline: false
   support:
-    chrome: "133"
-    chrome_android: "133"
-    edge: "133"
+    chrome: "144"
+    chrome_android: "144"
+    edge: "144"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "133"
+  #   chrome_android: "133"
+  #   edge: "133"
   - css.at-rules.container.scroll-state_queries
   - css.at-rules.container.scroll-state_queries.scrollable
   - css.at-rules.container.scroll-state_queries.snapped
   - css.at-rules.container.scroll-state_queries.stuck
   - css.properties.container-type.scroll-state
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "144"
+  #   chrome_android: "144"
+  #   edge: "144"
+  - css.at-rules.container.scroll-state_queries.scrolled

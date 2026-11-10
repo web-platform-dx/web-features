@@ -4,9 +4,9 @@
 status:
   baseline: false
   support:
-    chrome: "116"
-    chrome_android: "116"
-    edge: "116"
+    chrome: "136"
+    chrome_android: "136"
+    edge: "136"
 compat_features:
   # baseline: false
   # support:
@@ -25,7 +25,6 @@ compat_features:
   - api.IdentityCredential
   - api.IdentityCredential.token
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "116"
@@ -33,3 +32,27 @@ compat_features:
   #   edge: "116"
   - api.CredentialsContainer.get.identity_option.context_option
   - api.CredentialsContainer.get.identity_option.providers_option_loginHint
+
+  # baseline: false
+  # support:
+  #   chrome: "123"
+  #   chrome_android: "123"
+  #   edge: "123"
+  - api.CredentialsContainer.get.identity_option.providers_option_domainHint
+
+  # baseline: false
+  # support:
+  #   chrome: "132"
+  #   chrome_android: "132"
+  #   edge: "132"
+  - api.CredentialsContainer.get.identity_option.mode_option
+  - api.CredentialsContainer.get.identity_option.providers_option_fields
+  - api.CredentialsContainer.get.identity_option.providers_option_params
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "136"
+  #   chrome_android: "136"
+  #   edge: "136"
+  - api.CredentialsContainer.get.identity_option.providers_multiple

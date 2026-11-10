@@ -10,4 +10,11 @@ status:
     firefox: "125"
     firefox_android: "125"
 compat_features:
+  - webassembly.instructions.memory_copy.multi_memory
+  - webassembly.instructions.memory_fill.multi_memory
+  - webassembly.instructions.memory_grow.multi_memory
+  - webassembly.instructions.memory_init.multi_memory
+  - webassembly.instructions.memory_load.multi_memory
+  - webassembly.instructions.memory_size.multi_memory
+  - webassembly.instructions.memory_store.multi_memory
   - webassembly.multiMemory

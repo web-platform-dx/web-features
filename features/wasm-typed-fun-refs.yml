@@ -3,4 +3,5 @@ description: A typed function reference can be called directly.
 spec: https://webassembly.github.io/function-references/core/bikeshed/
 group: webassembly
 compat_features:
+  - webassembly.instructions.ref_as_non_null
   - webassembly.typedFunctionReferences

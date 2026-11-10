@@ -1,4 +1,4 @@
-draft_date: 2026-10-15
+draft_date: 2026-11-02
 name: CSS Values and Units Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-values-5/
@@ -58,6 +58,7 @@ compat_features:
   - css.types.attr.raw-string
   - css.types.progress.no-clamp
   - css.types.random-item
+  - css.types.random.step
 
 # The following features in the spec are already part of web-features:
 # - Media queries:
@@ -74,10 +75,6 @@ compat_features:
 #   - css.properties.font-weight.number
 # - Grid:
 #   - css.properties.gap.grid_context.calc_values
-# - interpolate-size:
-#   - css.properties.interpolate-size
-#   - css.properties.interpolate-size.allow-keywords
-#   - css.properties.interpolate-size.numeric-only
 # - List style:
 #   - css.properties.list-style-type.string
 # - Masks:
@@ -161,8 +158,6 @@ compat_features:
 #   - css.types.calc-keyword.e
 #   - css.types.calc-keyword.infinity
 #   - css.types.calc-keyword.pi
-# - calc-size():
-#   - css.types.calc-size
 # - min(), max(), and clamp():
 #   - css.types.clamp
 #   - css.types.max
@@ -248,6 +243,12 @@ compat_features:
 #   - css.types.progress
 # - random():
 #   - css.types.random
+#   - css.types.random.auto
+#   - css.types.random.dashed-ident
+#   - css.types.random.element-scoped
+#   - css.types.random.fixed
+#   - css.types.random.property-index-scoped
+#   - css.types.random.property-scoped
 # - resolution media query:
 #   - css.types.resolution
 #   - css.types.resolution.dpcm

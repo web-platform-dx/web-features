@@ -4,10 +4,15 @@
 status:
   baseline: false
   support:
-    chrome: "142"
-    chrome_android: "142"
-    edge: "142"
+    chrome: "149"
+    chrome_android: "149"
+    edge: "149"
 compat_features:
+  # baseline: false
+  # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  #   edge: "142"
   - api.HTMLAnchorElement.interestForElement
   - api.HTMLAreaElement.interestForElement
   - api.HTMLButtonElement.interestForElement
@@ -17,9 +22,23 @@ compat_features:
   - api.InterestEvent.InterestEvent
   - api.InterestEvent.source
   - api.SVGAElement.interestForElement
+  - css.properties.interest-delay
+  - css.properties.interest-delay-end
+  - css.properties.interest-delay-end.normal
+  - css.properties.interest-delay-start
+  - css.properties.interest-delay-start.normal
+  - css.properties.interest-delay.normal
   - css.selectors.interest-source
   - css.selectors.interest-target
   - html.elements.a.interestfor
   - html.elements.area.interestfor
   - html.elements.button.interestfor
   - svg.elements.a.interestfor
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "149"
+  #   chrome_android: "149"
+  #   edge: "149"
+  - css.selectors.interest-button

@@ -1220,6 +1220,9 @@ compat_features:
   #   safari: "3"
   #   safari_ios: "2"
   - svg.elements.view.preserveAspectRatio
+  - svg.elements.view.svgView
+  - svg.elements.view.svgView.preserveAspectRatio_parameter
+  - svg.elements.view.svgView.viewBox_parameter
   - svg.elements.view.viewBox
 
   # baseline: high
@@ -1633,6 +1636,19 @@ compat_features:
   # baseline_low_date: 2020-09-16
   # baseline_high_date: 2023-03-16
   # support:
+  #   chrome: "50"
+  #   chrome_android: "50"
+  #   edge: "79"
+  #   firefox: "6"
+  #   firefox_android: "6"
+  #   safari: "14"
+  #   safari_ios: "14"
+  - svg.elements.path.pathLength
+
+  # baseline: high
+  # baseline_low_date: 2020-09-16
+  # baseline_high_date: 2023-03-16
+  # support:
   #   chrome: "51"
   #   chrome_android: "51"
   #   edge: "79"
@@ -1641,6 +1657,24 @@ compat_features:
   #   safari: "14"
   #   safari_ios: "14"
   - svg.elements.a.referrerpolicy
+
+  # baseline: high
+  # baseline_low_date: 2020-09-16
+  # baseline_high_date: 2023-03-16
+  # support:
+  #   chrome: "57"
+  #   chrome_android: "57"
+  #   edge: "79"
+  #   firefox: "61"
+  #   firefox_android: "61"
+  #   safari: "14"
+  #   safari_ios: "14"
+  - svg.elements.circle.pathLength
+  - svg.elements.ellipse.pathLength
+  - svg.elements.line.pathLength
+  - svg.elements.polygon.pathLength
+  - svg.elements.polyline.pathLength
+  - svg.elements.rect.pathLength
 
   # baseline: high
   # baseline_low_date: 2020-11-17
@@ -1879,6 +1913,7 @@ compat_features:
   #   safari: "3"
   #   safari_ios: "2"
   - svg.elements.tspan.lengthAdjust
+  - svg.elements.view.svgView.transform_parameter
 
   # baseline: false
   # support:
@@ -1908,6 +1943,15 @@ compat_features:
   #   safari: "16.4"
   #   safari_ios: "16.4"
   - api.SVGElement.attributeStyleMap
+
+  # baseline: false
+  # support:
+  #   chrome: "137"
+  #   chrome_android: "137"
+  #   edge: "137"
+  #   firefox: "23"
+  #   firefox_android: "23"
+  - svg.global_attributes.transform.svg_root
 
   # baseline: false
   # support:
@@ -1952,6 +1996,13 @@ compat_features:
   - svg.elements.a.referrerpolicy.no-referrer-when-downgrade
   - svg.elements.a.referrerpolicy.origin-when-cross-origin
   - svg.elements.a.referrerpolicy.unsafe-url
+
+  # baseline: false
+  # support:
+  #   chrome: "137"
+  #   chrome_android: "137"
+  #   edge: "137"
+  - svg.elements.use.omit_external_fragment
 
   # baseline: false
   # support:

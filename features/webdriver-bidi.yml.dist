@@ -49,7 +49,6 @@ compat_features:
   - webdriver.bidi.session.subscribe.contexts_parameter
   - webdriver.bidi.session.subscribe.events_parameter
   - webdriver.bidi.session.unsubscribe
-  - webdriver.bidi.session.unsubscribe.contexts_parameter
   - webdriver.bidi.session.unsubscribe.events_parameter
 
   # baseline: false
@@ -318,6 +317,19 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "155"
+  #   chrome_android: "155"
+  #   edge: "155"
+  #   firefox: "154"
+  #   firefox_android: "154"
+  - webdriver.bidi.browsingContext.domContentLoaded_event.userContext_parameter
+  - webdriver.bidi.browsingContext.fragmentNavigated_event.userContext_parameter
+  - webdriver.bidi.browsingContext.load_event.userContext_parameter
+  - webdriver.bidi.browsingContext.navigationCommitted_event.userContext_parameter
+  - webdriver.bidi.script.message_event.source_parameter.userContext
+
+  # baseline: false
+  # support:
   #   chrome: "126"
   #   chrome_android: "126"
   #   edge: "126"
@@ -329,16 +341,12 @@ compat_features:
 
   # baseline: false
   # support:
-  #   firefox: "134"
-  #   firefox_android: "134"
-  - webdriver.bidi.browser.getClientWindows
+  #   firefox: "93"
+  #   firefox_android: "93"
+  - webdriver.bidi.session.unsubscribe.contexts_parameter
 
   # baseline: false
   # support:
-  #   firefox: "154"
-  #   firefox_android: "154"
-  - webdriver.bidi.browsingContext.domContentLoaded_event.userContext_parameter
-  - webdriver.bidi.browsingContext.fragmentNavigated_event.userContext_parameter
-  - webdriver.bidi.browsingContext.load_event.userContext_parameter
-  - webdriver.bidi.browsingContext.navigationCommitted_event.userContext_parameter
-  - webdriver.bidi.script.message_event.source_parameter.userContext
+  #   firefox: "134"
+  #   firefox_android: "134"
+  - webdriver.bidi.browser.getClientWindows

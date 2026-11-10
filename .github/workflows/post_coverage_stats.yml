@@ -4,10 +4,14 @@ permissions: {}
 
 on:
   schedule:
-    # Thursdays at 4:00 in the morning. Run times aren't guaranteed, so
-    # hopefully this will run before the WebDX CG meeting each week.
-    - cron: 0 4 * * 4
+    # WEEKLY: Run times aren't guaranteed, so hopefully this will run before the
+    # WebDX CG meeting each week.
+    - cron: 33 4 * * 4  # Weekly on Thursdays at 4:33 AM.
       timezone: Etc/UTC
+    # MONTHLY
+    - cron: 53 6 1 * *  # 1st of the Month at 6:53 AM.
+      timezone: Etc/UTC
+  # AD HOC
   workflow_dispatch:
     inputs:
       start_date:
@@ -22,8 +26,15 @@ on:
 
 env:
   DEFAULT_ISSUE: 4402
-  DEFAULT_START_DATE: "last thursday 04:00:01"
-  DEFAULT_END_DATE: "today 04:00:00"
+  # GitHub Actions doesn't provide a way to associate environments with specific
+  # schedules. This (fragile) case names a schedule based on the cron schedule
+  # of the triggering event.
+  SCHEDULE_NAME: >-
+    ${{ case(
+      github.event.schedule.cron == '33 4 * * 4', 'WEEKLY',
+      github.event.schedule.cron == '53 6 1 * *', 'MONTHLY',
+      'AD HOC'
+    ) }}
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
@@ -58,8 +69,18 @@ jobs:
           echo "current=$(git rev-list -1 --before="$end_timestamp" "$STARTING_REF")" >> "$GITHUB_OUTPUT"
         env:
           STARTING_REF: ${{ github.ref }}
-          START_DATE: ${{ inputs.start_date || env.DEFAULT_START_DATE }}
-          END_DATE: ${{ inputs.end_date || env.DEFAULT_END_DATE }}
+          START_DATE: >-
+            ${{ inputs.start_date || case(
+              env.SCHEDULE_NAME == 'MONTHLY', '1 month ago 04:00:01',
+              env.SCHEDULE_NAME == 'WEEKLY', 'last Thursday 04:00:01',
+              'last Thursday 04:00:01'
+            ) }}
+          END_DATE: >-
+            ${{ inputs.end_date || case(
+              env.SCHEDULE_NAME == 'MONTHLY', 'today 04:00:00',
+              env.SCHEDULE_NAME == 'WEEKLY', 'today 04:00:00',
+              'today 04:00:00'
+            ) }}
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version-file: .node-version
@@ -95,9 +116,21 @@ jobs:
         run: |
           npm ci
           current_report_markdown="$(mktemp)"
-          npx tsx ./scripts/stats-report.ts --start-date="$START_DATE" --end-date="$END_DATE" "$current_stats_json" > "$current_report_markdown"
+          header=""
+          if [ "$SCHEDULE_NAME" = "MONTHLY" ]; then
+            header="## $(date --utc -d "$END_DATE" '+%B %Y')"
+          elif [ "$SCHEDULE_NAME" = "WEEKLY" ]; then
+            header="## Week $(date --utc -d "$END_DATE" '+%U %G')"
+          elif [ "$SCHEDULE_NAME" = "AD HOC" ]; then
+            header=""
+          else
+            echo "Unexpected event: $SCHEDULE_NAME"
+            exit 1
+          fi
+          npx tsx ./scripts/stats-report.ts --prepend="$header" --start-date="$START_DATE" --end-date="$END_DATE" "$current_stats_json" > "$current_report_markdown"
           echo "current_report_markdown=$current_report_markdown" >> "$GITHUB_ENV"
         env:
+          SCHEDULE_NAME: ${{ env.SCHEDULE_NAME }}
           START_DATE: ${{ steps.commits.outputs.start_timestamp }}
           END_DATE: ${{ steps.commits.outputs.end_timestamp }}
       - name: Post comment

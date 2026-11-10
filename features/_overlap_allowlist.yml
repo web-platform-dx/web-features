@@ -54,3 +54,19 @@
     - api.HTMLMediaElement.timeupdate_event
     - api.HTMLMediaElement.volumechange_event
     - api.HTMLMediaElement.waiting_event
+- reason: >
+    `setHTML()` was the original lone point of use of the sanitizer API, so a sanitizer feature without has no practical use.
+    Meanwhile, the HTML setters feature is a family of closely-related and similarly-named methods, so it's incoherent to omit the `setHTML()` methods.
+  features:
+    - sanitizer
+    - html-setters
+  keys:
+    - api.Element.setHTML
+    - api.ShadowRoot.setHTML
+- reason: Parser options are a shared utility of HTML setters and streaming setters.
+  features:
+    - html-setters
+    - html-streaming-setters
+  keys:
+    - api.TrustedHTMLParserOptions
+    - api.TrustedTypePolicy.createParserOptions

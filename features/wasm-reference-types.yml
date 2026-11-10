@@ -4,4 +4,7 @@ spec: https://github.com/WebAssembly/spec/blob/main/proposals/reference-types/Ov
 group: webassembly
 caniuse: wasm-reference-types
 compat_features:
+  - webassembly.instructions.ref_func
+  - webassembly.instructions.ref_is_null
+  - webassembly.instructions.ref_null
   - webassembly.reference-types

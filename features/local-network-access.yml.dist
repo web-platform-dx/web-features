@@ -4,8 +4,33 @@
 status:
   baseline: false
   support:
-    chrome: "142"
-    chrome_android: "142"
-    edge: "142"
+    chrome: "145"
+    chrome_android: "145"
+    edge: "145"
 compat_features:
-  - api.Request.targetAddressSpace
+  # baseline: false
+  # support:
+  #   chrome: "145"
+  #   chrome_android: "145"
+  #   edge: "145"
+  #   firefox: "153"
+  #   firefox_android: "153"
+  - api.Permissions.permission_local-network
+
+  # baseline: false
+  # support:
+  #   chrome: "142"
+  #   chrome_android: "142"
+  #   edge: "142"
+  - api.Permissions.permission_local-network-access
+  - api.Request.Request.options_parameter.targetAddressSpace
+  - api.fetch.options_parameter.targetAddressSpace
+  - http.headers.Permissions-Policy.local-network-access
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "145"
+  #   chrome_android: "145"
+  #   edge: "145"
+  - http.headers.Permissions-Policy.local-network

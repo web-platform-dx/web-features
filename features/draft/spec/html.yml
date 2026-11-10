@@ -1,4 +1,4 @@
-draft_date: 2026-10-15
+draft_date: 2026-11-09
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -29,10 +29,6 @@ compat_features:
   - api.HTMLElement.toggle_event.details_elements.uses_toggleevent
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes.auto
-  - api.HTMLInputElement.showPicker.datalist_input
-  - api.HTMLInputElement.showPicker.month_input
-  - api.HTMLInputElement.showPicker.time_input
-  - api.HTMLInputElement.showPicker.week_input
   - api.HTMLMediaElement.getStartDate
   - api.HTMLMediaElement.playbackRate.negative_values
   - api.HTMLScriptElement.noModule
@@ -90,6 +86,8 @@ compat_features:
   - api.crossOriginIsolated
   - api.origin
   - api.reportError
+  - css.properties.appearance.base-select.list_box
+  - css.properties.appearance.base-select.single_dropdown
   - html.elements.area.hreflang
   - html.elements.area.type
   - html.elements.button.command.request-close
@@ -113,7 +111,6 @@ compat_features:
   - html.elements.link.rel.modulepreload.as-style
   - html.elements.script.type.importmap.integrity
   - html.elements.select.autocomplete
-  - html.elements.template.shadowrootcustomelementregistry
   - html.elements.template.shadowrootslotassignment
   - html.elements.textarea.autocomplete.new-password
   - html.elements.textarea.autocomplete.one-time-code
@@ -121,12 +118,15 @@ compat_features:
   - html.elements.track.kind.descriptions
   - html.global_attributes.class
   - html.global_attributes.data_attributes
-  - html.global_attributes.dir
   - html.global_attributes.hidden
   - html.global_attributes.id
   - http.headers.Cross-Origin-Embedder-Policy
+  - http.headers.Cross-Origin-Embedder-Policy-Report-Only
+  - http.headers.Cross-Origin-Embedder-Policy-Report-Only.report-to_parameter
   - http.headers.Cross-Origin-Embedder-Policy.credentialless
   - http.headers.Cross-Origin-Opener-Policy
+  - http.headers.Cross-Origin-Opener-Policy-Report-Only
+  - http.headers.Cross-Origin-Opener-Policy-Report-Only.report-to_parameter
   - http.headers.Cross-Origin-Opener-Policy.noopener-allow-popups
   - http.headers.Cross-Origin-Opener-Policy.report-to_parameter
   - http.headers.No-Vary-Search.speculation_rules_prefetch
@@ -362,8 +362,6 @@ compat_features:
 #   - api.ShadowRoot.prependHTMLUnsafe
 #   - api.ShadowRoot.setHTMLUnsafe
 #   - api.ShadowRoot.setHTMLUnsafe.options_runscripts_parameter
-#   - api.TrustedHTMLParserOptions.runScripts
-#   - api.TrustedHTMLParserOptions.sanitizer
 # - CloseWatcher:
 #   - api.CloseWatcher
 #   - api.CloseWatcher.CloseWatcher
@@ -396,6 +394,7 @@ compat_features:
 #   - api.CustomElementRegistry.CustomElementRegistry
 #   - api.CustomElementRegistry.initialize
 #   - api.HTMLTemplateElement.shadowRootCustomElementRegistry
+#   - html.elements.template.shadowrootcustomelementregistry
 # - Customized built-in elements:
 #   - api.CustomElementRegistry.builtin_element_support
 #   - html.global_attributes.is
@@ -461,7 +460,6 @@ compat_features:
 #   - api.Element.outerHTML
 #   - api.HTMLDocument
 #   - api.HTMLElement
-#   - api.HTMLElement.dir
 #   - api.HTMLElement.error_event
 #   - api.HTMLElement.hidden
 #   - api.HTMLElement.innerText
@@ -1152,6 +1150,9 @@ compat_features:
 # - contenteditable="plaintext-only":
 #   - api.HTMLElement.contentEditable.plaintext-only
 #   - html.global_attributes.contenteditable.plaintext-only
+# - dir:
+#   - api.HTMLElement.dir
+#   - html.global_attributes.dir
 # - enterkeyhint:
 #   - api.HTMLElement.enterKeyHint
 #   - html.global_attributes.enterkeyhint
@@ -1405,9 +1406,13 @@ compat_features:
 # - showPicker() for <input>:
 #   - api.HTMLInputElement.showPicker
 #   - api.HTMLInputElement.showPicker.color_input
+#   - api.HTMLInputElement.showPicker.datalist_input
 #   - api.HTMLInputElement.showPicker.date_input
 #   - api.HTMLInputElement.showPicker.datetime_local_input
 #   - api.HTMLInputElement.showPicker.file_input
+#   - api.HTMLInputElement.showPicker.month_input
+#   - api.HTMLInputElement.showPicker.time_input
+#   - api.HTMLInputElement.showPicker.week_input
 # - <input type="image">:
 #   - api.HTMLInputElement.src
 #   - html.elements.input.type_image
