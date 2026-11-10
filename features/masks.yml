@@ -6,7 +6,6 @@ caniuse: css-masks
 status:
   compute_from: css.properties.mask
 compat_features:
-  - css.properties.mask
   - css.properties.mask-clip
   - css.properties.mask-clip.border
   - css.properties.mask-clip.border-box
@@ -26,6 +25,7 @@ compat_features:
   - css.properties.mask-composite.subtract
   - css.properties.mask-image
   - css.properties.mask-image.multiple_mask_images
+  - css.properties.mask-image.none
   - css.properties.mask-image.svg_masks
   - css.properties.mask-mode
   - css.properties.mask-mode.alpha
@@ -58,6 +58,7 @@ compat_features:
   - css.properties.mask-size.auto
   - css.properties.mask-size.contain
   - css.properties.mask-size.cover
+  - css.properties.mask
   - css.properties.mask.add
   - css.properties.mask.alpha
   - css.properties.mask.border-box
@@ -72,6 +73,7 @@ compat_features:
   - css.properties.mask.match-source
   - css.properties.mask.no-clip
   - css.properties.mask.no-repeat
+  - css.properties.mask.none
   - css.properties.mask.padding-box
   - css.properties.mask.repeat
   - css.properties.mask.repeat-x
