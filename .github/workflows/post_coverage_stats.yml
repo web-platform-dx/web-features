@@ -41,6 +41,30 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  update_issue_graphs:
+    # Skip updating when the repo is a fork
+    if: (github.event_name == 'schedule' && github.repository == 'web-platform-dx/web-features') || (github.event_name != 'schedule')
+    name: Graph progress and update issue
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write  # to modify issues
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - run: |
+          {
+            echo "$PREAMBLE"
+            npx tsx ./scripts/stats-graph.ts --gh-token="$GH_TOKEN"
+          } | gh issue edit "$ISSUE_NUMBER" --body-file=-
+        env:
+          PREAMBLE: |
+            This issue contains statistical reports on our progress towards the WebDX CG goal of closing the coverage gap between web-features and two key data sources: [mdn/browser-compat-data](https://github.com/mdn/browser-compat-data) and [caniuse](https://caniuse.com/). See [issues](https://github.com/search?q=org%3Aweb-platform-dx+label%3AR26%3Acoverage&type=issues) and [roadmap focus area](https://docs.google.com/document/d/1e58q9LsObhg2vuORHntWZsH5nOPldlAvCQ5lBnvqt-E/edit?tab=t.0#heading=h.bjis84co107r) for more information. It's the sequel to https://github.com/web-platform-dx/web-features/issues/788.
+          ISSUE_NUMBER: ${{ inputs.issue_number || env.DEFAULT_ISSUE }}
+          GH_TOKEN: ${{ github.token }}
   post_comment:
     # Skip the weekly post when the repo is a fork
     if: (github.event_name == 'schedule' && github.repository == 'web-platform-dx/web-features') || (github.event_name != 'schedule')
