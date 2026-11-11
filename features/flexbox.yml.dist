@@ -52,6 +52,7 @@ compat_features:
   - css.properties.flex-direction
   - css.properties.flex-direction.column
   - css.properties.flex-direction.row
+  - css.properties.flex.auto
   - css.properties.flex.none
 
   # baseline: high
@@ -76,6 +77,13 @@ compat_features:
   - css.properties.align-self.flex-end
   - css.properties.align-self.flex-start
   - css.properties.flex-flow
+  - css.properties.flex-flow.column
+  - css.properties.flex-flow.column-reverse
+  - css.properties.flex-flow.nowrap
+  - css.properties.flex-flow.row
+  - css.properties.flex-flow.row-reverse
+  - css.properties.flex-flow.wrap
+  - css.properties.flex-flow.wrap-reverse
   - css.properties.flex-wrap
   - css.properties.flex-wrap.nowrap
   - css.properties.flex-wrap.wrap
@@ -447,6 +455,8 @@ compat_features:
   #   safari_ios: "16"
   - css.properties.flex-basis.max-content
   - css.properties.flex-basis.min-content
+  - css.properties.flex.max-content
+  - css.properties.flex.min-content
 
   # baseline: high
   # baseline_low_date: 2022-09-12
@@ -460,6 +470,7 @@ compat_features:
   #   safari: "16"
   #   safari_ios: "16"
   - css.properties.flex-basis.fit-content
+  - css.properties.flex.fit-content
 
   # baseline: high
   # baseline_low_date: 2022-12-13
@@ -502,6 +513,15 @@ compat_features:
   #   firefox: "32"
   #   firefox_android: "32"
   - css.properties.flex-grow.less_than_zero_animate
+
+  # baseline: false
+  # support:
+  #   chrome: "138"
+  #   chrome_android: "138"
+  #   edge: "138"
+  #   safari: "27"
+  #   safari_ios: "27"
+  - css.properties.flex-basis.stretch
 
   # baseline: false
   # support:
