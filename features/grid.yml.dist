@@ -96,13 +96,20 @@ compat_features:
   - css.properties.gap.normal
   - css.properties.grid
   - css.properties.grid-area
+  - css.properties.grid-area.auto
   - css.properties.grid-auto-flow
   - css.properties.grid-column
   - css.properties.grid-column-end
+  - css.properties.grid-column-end.auto
   - css.properties.grid-column-start
+  - css.properties.grid-column-start.auto
+  - css.properties.grid-column.auto
   - css.properties.grid-row
   - css.properties.grid-row-end
+  - css.properties.grid-row-end.auto
   - css.properties.grid-row-start
+  - css.properties.grid-row-start.auto
+  - css.properties.grid-row.auto
   - css.properties.grid-template
   - css.properties.grid-template-areas
   - css.properties.grid-template-columns
@@ -111,6 +118,7 @@ compat_features:
   - css.properties.grid-template-rows
   - css.properties.grid-template-rows.fit-content
   - css.properties.grid-template-rows.minmax
+  - css.properties.grid.none
 
   # baseline: high
   # baseline_low_date: 2018-09-17
@@ -224,7 +232,25 @@ compat_features:
   #   safari: "10.1"
   #   safari_ios: "10.3"
   - css.properties.grid-auto-columns
+  - css.properties.grid-auto-columns.auto
   - css.properties.grid-auto-rows
+  - css.properties.grid-auto-rows.auto
+
+  # baseline: high
+  # baseline_low_date: 2020-07-28
+  # baseline_high_date: 2023-01-28
+  # support:
+  #   chrome: "57"
+  #   chrome_android: "57"
+  #   edge: "16"
+  #   firefox: "70"
+  #   firefox_android: "79"
+  #   safari: "11"
+  #   safari_ios: "11"
+  - css.properties.grid-auto-columns.max-content
+  - css.properties.grid-auto-columns.min-content
+  - css.properties.grid-auto-rows.max-content
+  - css.properties.grid-auto-rows.min-content
 
   # baseline: high
   # baseline_low_date: 2020-07-28
