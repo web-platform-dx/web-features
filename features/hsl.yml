@@ -3,6 +3,11 @@ description: The `hsl()` and `hsla()` CSS functions pick colors using hue, satur
 spec: https://drafts.csswg.org/css-color-4/#the-hsl-notation
 caniuse: css3-colors
 group: color-types
-status:
-  compute_from: css.types.color.hsl.alpha_parameter
-# TODO: For alignment with caniuse, tag `hsla()` features when https://github.com/mdn/browser-compat-data/issues/24191 is resolved and update compute_from
+compat_features:
+  core:
+    - css.types.color.hsl
+    - css.types.color.hsl.alpha_parameter
+    - css.types.color.hsl.space_separated_parameters
+    - css.types.color.hsla
+  spare:
+    - css.types.color.hsl.mixed_type_parameters
