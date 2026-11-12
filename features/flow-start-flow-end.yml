@@ -1,0 +1,19 @@
+name: flow-start and flow-end
+description: >
+  The `flow-start` and `flow-end` CSS alignment values (as in `justify-items: flow-start` or `align-self: flow-end`) align items to the stacking axis (in grid lanes layouts) or the flex direction (in flexbox layouts), where placement begins and ends.
+  In other contexts, the values behave as `start` and `end`.
+spec: https://drafts.csswg.org/css-align-3/#valdef-self-position-flow-start
+group: layout
+compat_features:
+  - css.properties.align-items.flow-end
+  - css.properties.align-items.flow-start
+  - css.properties.align-self.flow-end
+  - css.properties.align-self.flow-start
+  - css.properties.justify-items.flow-end
+  - css.properties.justify-items.flow-start
+  - css.properties.justify-self.flow-end
+  - css.properties.justify-self.flow-start
+  - css.properties.place-items.flow-end
+  - css.properties.place-items.flow-start
+  - css.properties.place-self.flow-end
+  - css.properties.place-self.flow-start
