@@ -203,6 +203,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/whatwg/html/pull/12758",
         "Allowed because it's shipping in Chrome. Replace with https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-parsing-and-serialization when above PR is merged."
+    ],
+    [
+        "https://w3c.github.io/webrtc-extensions/#diagnostic-logging",
+        "Allowed because it's not tracked in browser specs. Remove this exception if https://github.com/w3c/browser-specs/issues/305 is resolved."
     ]
 ];
 
