@@ -3,6 +3,10 @@
  */
 export interface WebFeaturesData {
   /**
+   * Version of @mdn/browser-compat-data that this data was built with
+   */
+  bcd_version: string;
+  /**
    * Browsers and browser release data
    */
   browsers: Browsers;

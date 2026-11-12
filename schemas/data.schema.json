@@ -3,6 +3,10 @@
   "description": "The top-level web-features data package",
   "type": "object",
   "properties": {
+    "bcd_version": {
+      "description": "Version of @mdn/browser-compat-data that this data was built with",
+      "type": "string"
+    },
     "browsers": {
       "description": "Browsers and browser release data",
       "type": "object",
@@ -73,7 +77,7 @@
       }
     }
   },
-  "required": ["browsers", "features", "groups", "snapshots"],
+  "required": ["bcd_version", "browsers", "features", "groups", "snapshots"],
   "additionalProperties": false,
   "definitions": {
     "Discouraged": {
