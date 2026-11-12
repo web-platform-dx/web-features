@@ -1,0 +1,8 @@
+name: polygon() round keyword
+description: >
+  The `polygon()` CSS function accepts the `round` keyword and a `<length>` value that rounds every vertex of the polygon.
+  You can use it to make rounded shapes without computing Bézier curves by hand.
+spec: https://drafts.csswg.org/css-shapes-1/#funcdef-basic-shape-polygon
+group: clipping-shapes-masking
+compat_features:
+  - css.types.basic-shape.polygon.round
