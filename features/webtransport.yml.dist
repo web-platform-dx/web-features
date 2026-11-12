@@ -70,6 +70,30 @@ compat_features:
   #   safari_ios: "26.4"
   - api.WebTransport.byob_readers
 
+  # baseline: low
+  # baseline_low_date: 2026-11-05
+  # support:
+  #   chrome: "157"
+  #   chrome_android: "157"
+  #   edge: "157"
+  #   firefox: "114"
+  #   firefox_android: "114"
+  #   safari: "26.4"
+  #   safari_ios: "26.4"
+  - api.WebTransport.reliability
+
+  # baseline: low
+  # baseline_low_date: 2026-11-10
+  # support:
+  #   chrome: "109"
+  #   chrome_android: "109"
+  #   edge: "109"
+  #   firefox: "160"
+  #   firefox_android: "160"
+  #   safari: "26.4"
+  #   safari_ios: "26.4"
+  - api.WebTransportDatagramDuplexStream.byob_readers
+
   # baseline: false
   # support:
   #   chrome: "97"
@@ -87,7 +111,6 @@ compat_features:
   #   safari: "26.4"
   #   safari_ios: "26.4"
   - api.WebTransport.createUnidirectionalStream.byob_readers
-  - api.WebTransportDatagramDuplexStream.byob_readers
 
   # baseline: false
   # support:
@@ -99,7 +122,6 @@ compat_features:
   - api.WebTransport.WebTransport.options_congestionControl_parameter
   - api.WebTransport.WebTransport.options_requireUnreliable_parameter
   - api.WebTransport.congestionControl
-  - api.WebTransport.reliability
   - api.WebTransportBidirectionalStream.readable.returns_WebTransportReceiveStream
   - api.WebTransportBidirectionalStream.writable.returns_WebTransportSendStream
   - api.WebTransportReceiveStream

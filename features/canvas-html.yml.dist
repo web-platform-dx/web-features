@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "157"
+    chrome_android: "157"
+    edge: "157"
 compat_features:
   - api.CanvasPaintEvent
   - api.CanvasPaintEvent.CanvasPaintEvent

@@ -7,12 +7,14 @@ status:
     chrome: "139"
     chrome_android: "139"
     edge: "139"
+    firefox: "160"
 compat_features:
   # baseline: false
   # support:
   #   chrome: "33"
   #   chrome_android: "33"
   #   edge: "79"
+  #   firefox: "160"
   #   safari: "14.1"
   #   safari_ios: "14.5"
   - api.SpeechRecognitionAlternative
@@ -31,6 +33,7 @@ compat_features:
   #   chrome: "139"
   #   chrome_android: "139"
   #   edge: "139"
+  #   firefox: "160"
   #   safari: "14.1"
   #   safari_ios: "14.5"
   - api.SpeechRecognitionErrorEvent
@@ -48,6 +51,7 @@ compat_features:
   #   chrome: "139"
   #   chrome_android: "139"
   #   edge: "139"
+  #   firefox: "160"
   - api.SpeechRecognition
   - api.SpeechRecognition.SpeechRecognition
   - api.SpeechRecognition.abort
@@ -62,8 +66,6 @@ compat_features:
   - api.SpeechRecognition.result_event
   - api.SpeechRecognition.soundend_event
   - api.SpeechRecognition.soundstart_event
-  - api.SpeechRecognition.speechend_event
-  - api.SpeechRecognition.speechstart_event
   - api.SpeechRecognition.start
   - api.SpeechRecognition.start_event
   - api.SpeechRecognition.stop
@@ -71,7 +73,16 @@ compat_features:
   # baseline: false
   # support:
   #   chrome: "139"
+  #   chrome_android: "139"
   #   edge: "139"
+  - api.SpeechRecognition.speechend_event
+  - api.SpeechRecognition.speechstart_event
+
+  # baseline: false
+  # support:
+  #   chrome: "139"
+  #   edge: "139"
+  #   firefox: "160"
   - api.SpeechRecognition.continuous
   - api.SpeechRecognition.start.audioTrack
 
@@ -79,8 +90,14 @@ compat_features:
   # support:
   #   chrome: "142"
   #   edge: "142"
+  #   firefox: "160"
   - api.SpeechRecognitionPhrase
   - api.SpeechRecognitionPhrase.SpeechRecognitionPhrase
   - api.SpeechRecognitionPhrase.boost
   - api.SpeechRecognitionPhrase.phrase
+
+  # baseline: false
+  # support:
+  #   chrome: "142"
+  #   edge: "142"
   - http.headers.Permissions-Policy.on-device-speech-recognition
