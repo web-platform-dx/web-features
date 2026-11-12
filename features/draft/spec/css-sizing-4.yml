@@ -1,13 +1,10 @@
-draft_date: 2026-11-02
+draft_date: 2026-11-12
 name: CSS Box Sizing Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-sizing-4/
 compat_features:
   - css.properties.block-size.auto
   - css.properties.block-size.stretch
-  - css.properties.flex.fit-content
-  - css.properties.flex.max-content
-  - css.properties.flex.min-content
   - css.properties.flex.stretch
   - css.properties.inline-size.auto
   - css.properties.inline-size.stretch
@@ -103,6 +100,9 @@ compat_features:
 #   - css.properties.contain-intrinsic-width
 #   - css.properties.contain-intrinsic-width.none
 # - Flexbox:
+#   - css.properties.flex.fit-content
+#   - css.properties.flex.max-content
+#   - css.properties.flex.min-content
 #   - css.properties.flex-basis.fit-content
 #   - css.properties.flex-basis.max-content
 #   - css.properties.flex-basis.min-content

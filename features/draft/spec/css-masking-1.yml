@@ -1,4 +1,4 @@
-draft_date: 2026-10-14
+draft_date: 2026-11-12
 name: CSS Masking Module Level 1
 description: TODO
 spec: https://drafts.csswg.org/css-masking-1/
@@ -7,8 +7,6 @@ compat_features:
   - css.properties.clip-path.content-box
   - css.properties.clip-path.margin-box
   - css.properties.clip-path.padding-box
-  - css.properties.mask-image.none
-  - css.properties.mask.none
 
 # The following features in the spec are already part of web-features:
 # - clip-path:
@@ -60,6 +58,7 @@ compat_features:
 #   - css.properties.mask.luminance
 #   - css.properties.mask.match-source
 #   - css.properties.mask.no-clip
+#   - css.properties.mask.none
 #   - css.properties.mask.padding-box
 #   - css.properties.mask.stroke-box
 #   - css.properties.mask.subtract
@@ -79,6 +78,7 @@ compat_features:
 #   - css.properties.mask-composite.subtract
 #   - css.properties.mask-image
 #   - css.properties.mask-image.multiple_mask_images
+#   - css.properties.mask-image.none
 #   - css.properties.mask-image.svg_masks
 #   - css.properties.mask-mode
 #   - css.properties.mask-mode.alpha
