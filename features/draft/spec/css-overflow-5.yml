@@ -1,4 +1,4 @@
-draft_date: 2026-10-15
+draft_date: 2026-11-12
 name: CSS Overflow Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-overflow-5/
@@ -8,6 +8,7 @@ compat_features:
   - css.properties.block-ellipsis.no-ellipsis
   - css.properties.continue
   - css.properties.continue.-webkit-legacy
+  - css.properties.continue.collapse
   - css.properties.continue.discard
   - css.properties.continue.normal
   - css.properties.line-clamp.ellipsis
@@ -57,9 +58,7 @@ compat_features:
 #   - css.types.overflow.clip
 # - Logical properties:
 #   - css.properties.overflow-block
-#   - css.properties.overflow-block.overlay
 #   - css.properties.overflow-inline
-#   - css.properties.overflow-inline.overlay
 # - overflow-clip-margin:
 #   - css.properties.overflow-clip-margin
 # - scroll-axis-lock:
