@@ -3,24 +3,27 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    firefox: "160"
 compat_features:
   # baseline: false
   # support:
   #   chrome: "139"
   #   chrome_android: "139"
   #   edge: "139"
+  #   firefox: "160"
   - api.SpeechGrammarList
   - api.SpeechGrammarList.SpeechGrammarList
   - api.SpeechGrammarList.addFromString
-  - api.SpeechGrammarList.addFromURI
+  - api.SpeechGrammarList.addFromUri
   - api.SpeechGrammarList.item
   - api.SpeechGrammarList.length
   - api.SpeechRecognition.grammars
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   firefox: "160"
   - api.SpeechGrammar
   - api.SpeechGrammar.src
   - api.SpeechGrammar.weight
