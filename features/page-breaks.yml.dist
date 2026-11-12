@@ -74,22 +74,11 @@ compat_features:
   # support:
   #   chrome: "50"
   #   chrome_android: "50"
-  #   edge: "12"
-  #   safari: "10"
-  #   safari_ios: "10"
-  - css.properties.break-after.paged_context.avoid-page
-
-  # baseline: false
-  # support:
-  #   chrome: "50"
-  #   chrome_android: "50"
   #   edge: "79"
   #   safari: "10"
   #   safari_ios: "10"
-  - css.properties.break-after.avoid-page
   - css.properties.break-after.recto
   - css.properties.break-after.verso
-  - css.properties.break-before.avoid-page
   - css.properties.break-before.recto
   - css.properties.break-before.verso
 
@@ -101,6 +90,25 @@ compat_features:
   #   firefox: "92"
   #   firefox_android: "92"
   - css.properties.break-inside.paged_context.avoid-page
+
+  # baseline: false
+  # support:
+  #   chrome: "108"
+  #   chrome_android: "108"
+  #   edge: "12"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - css.properties.break-after.paged_context.avoid-page
+
+  # baseline: false
+  # support:
+  #   chrome: "108"
+  #   chrome_android: "108"
+  #   edge: "108"
+  #   safari: "10"
+  #   safari_ios: "10"
+  - css.properties.break-after.avoid-page
+  - css.properties.break-before.avoid-page
 
   # baseline: false
   # support:

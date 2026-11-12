@@ -14,6 +14,14 @@ compat_features:
   - api.Request.textStream
   - api.Response.textStream
 
+  # baseline: false
+  # support:
+  #   chrome: "157"
+  #   chrome_android: "157"
+  #   edge: "157"
+  - api.TrustedHTMLParserOptions
+  - api.TrustedTypePolicy.createParserOptions
+
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support: {}
@@ -41,5 +49,3 @@ compat_features:
   - api.ShadowRoot.streamHTMLUnsafe
   - api.ShadowRoot.streamPrependHTML
   - api.ShadowRoot.streamPrependHTMLUnsafe
-  - api.TrustedHTMLParserOptions
-  - api.TrustedTypePolicy.createParserOptions
