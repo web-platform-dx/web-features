@@ -1,4 +1,4 @@
-draft_date: 2026-11-02
+draft_date: 2026-11-12
 name: CSS Basic User Interface Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-ui-4/
@@ -9,7 +9,9 @@ compat_features:
   - css.properties.caret-color.auto
   - css.properties.resize.both
   - css.properties.resize.horizontal
+  - css.properties.resize.iframe_elements
   - css.properties.resize.none
+  - css.properties.resize.replaced_elements
   - css.properties.resize.vertical
 
 # The following features in the spec are already part of web-features:
