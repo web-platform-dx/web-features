@@ -4,3 +4,6 @@ spec: https://wicg.github.io/document-isolation-policy/
 group: security
 compat_features:
   - http.headers.Document-Isolation-Policy
+  - http.headers.Document-Isolation-Policy.isolate-and-credentialless
+  - http.headers.Document-Isolation-Policy.isolate-and-require-corp
+  - http.headers.Document-Isolation-Policy.none
