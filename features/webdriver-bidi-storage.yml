@@ -1,0 +1,15 @@
+name: WebDriver BiDi storage access
+description: The `storage` module contains commands relating to accessing browser storage, such as cookies.
+spec: https://w3c.github.io/webdriver-bidi/#module-storage
+group: webdriver
+compat_features:
+  - webdriver.bidi.storage
+  - webdriver.bidi.storage.deleteCookies
+  - webdriver.bidi.storage.deleteCookies.filter_parameter
+  - webdriver.bidi.storage.deleteCookies.partition_parameter
+  - webdriver.bidi.storage.getCookies
+  - webdriver.bidi.storage.getCookies.filter_parameter
+  - webdriver.bidi.storage.getCookies.partition_parameter
+  - webdriver.bidi.storage.setCookie
+  - webdriver.bidi.storage.setCookie.cookie_parameter
+  - webdriver.bidi.storage.setCookie.partition_parameter
