@@ -1,0 +1,28 @@
+name: Speculation rules prerender
+description: Speculation rules are hints to the browser to proactively download pages in the background so they appear instantly when the user navigates to them.
+spec:
+  - https://wicg.github.io/nav-speculation/prerendering.html
+compat_features:
+  # Prerender-specific features:
+  - api.PerformanceNavigationTiming.activationStart
+  - api.Document.prerendering
+  - api.Document.prerenderingchange_event
+  - html.elements.script.type.speculationrules.prerender
+  - http.headers.Supports-Loading-Mode
+  - http.headers.Supports-Loading-Mode.credentialed-prerender
+  # General speculation rules features (exluding prefetch-specific features):
+  - html.elements.script.type.speculationrules
+  - html.elements.script.type.speculationrules.source
+  - html.elements.script.type.speculationrules.urls
+  - html.elements.script.type.speculationrules.requires
+  - http.headers.Content-Security-Policy.script-src.inline-speculation-rules
+  - http.headers.Sec-Purpose.speculationrules
+  - html.elements.script.type.speculationrules.referrer_policy
+  - api.Request.destination.speculationrules
+  - html.elements.script.type.speculationrules.eagerness
+  - html.elements.script.type.speculationrules.relative_to
+  - html.elements.script.type.speculationrules.where
+  - http.headers.Speculation-Rules
+  - html.elements.script.type.speculationrules.expects_no_vary_search
+  - html.elements.script.type.speculationrules.tag
+  - http.headers.Sec-Speculation-Tags
