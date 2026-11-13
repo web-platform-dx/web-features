@@ -1,0 +1,11 @@
+name: Wide arithmetic (WebAssembly)
+description: >
+  Wide 128-bit integer arithmetic instructions operate on larger-than-64-bit numbers with results represented by two 64-bit integers.
+  You can use these instructions to improve performance for some use cases, such as arbitrary precision math.
+spec: https://github.com/WebAssembly/wide-arithmetic/blob/main/proposals/wide-arithmetic/Overview.md#wide-arithmetic:~:text=i64%2Eadd128
+compat_features:
+  - webassembly.instructions.add128
+  - webassembly.instructions.mul_wide_s
+  - webassembly.instructions.mul_wide_u
+  - webassembly.instructions.sub128
+  - webassembly.wideArithmetic
