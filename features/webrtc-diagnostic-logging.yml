@@ -1,0 +1,10 @@
+name: WebRTC diagnostic logging
+description: >
+  The `startDiagnosticLogging()`, `stopDiagnosticLogging()`, and `cancelDiagnosticLogging()` static methods of the `RTCPeerConnection` API control the collection of internal WebRTC diagnostic data.
+  The data can be used for local debugging or, with user permission, shared with the browser vendor.
+spec: https://w3c.github.io/webrtc-extensions/#diagnostic-logging
+group: webrtc
+compat_features:
+  - api.RTCPeerConnection.cancelDiagnosticLogging_static
+  - api.RTCPeerConnection.startDiagnosticLogging_static
+  - api.RTCPeerConnection.stopDiagnosticLogging_static
