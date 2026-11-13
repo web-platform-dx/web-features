@@ -70,3 +70,23 @@
   keys:
     - api.TrustedHTMLParserOptions
     - api.TrustedTypePolicy.createParserOptions
+- reason: Speculation Rules prerender depends on base speculation rules and additional keys.
+  features:
+    - speculation-rules
+    - speculation-rules-prerender
+  keys:
+    - html.elements.script.type.speculationrules
+    - html.elements.script.type.speculationrules.source
+    - html.elements.script.type.speculationrules.urls
+    - html.elements.script.type.speculationrules.requires
+    - http.headers.Content-Security-Policy.script-src.inline-speculation-rules
+    - http.headers.Sec-Purpose.speculationrules
+    - html.elements.script.type.speculationrules.referrer_policy
+    - api.Request.destination.speculationrules
+    - html.elements.script.type.speculationrules.eagerness
+    - html.elements.script.type.speculationrules.relative_to
+    - html.elements.script.type.speculationrules.where
+    - http.headers.Speculation-Rules
+    - html.elements.script.type.speculationrules.expects_no_vary_search
+    - html.elements.script.type.speculationrules.tag
+    - http.headers.Sec-Speculation-Tags
