@@ -2,7 +2,7 @@ name: Attribution reporting
 description: The attribution reporting API measures when an ad click or view leads to a conversion, such as a purchase on an advertiser site.
 spec: https://wicg.github.io/attribution-reporting-api/
 discouraged:
-  removal_date: 2026-06-01 # Chrome 150
+  removal_date: 2026-12-08 # Chrome 159, though it possibly became a "stub" as early as 152
   reason: Following the announcement that Chrome will maintain its current approach to third-party cookies, Chrome decided to withdraw certain Privacy Sandbox features including the attribution reporting API.
   according_to:
     - https://groups.google.com/a/chromium.org/g/blink-dev/c/4K2RRt6VYCQ
