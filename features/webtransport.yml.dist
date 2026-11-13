@@ -71,6 +71,19 @@ compat_features:
   - api.WebTransport.byob_readers
 
   # baseline: low
+  # baseline_low_date: 2026-09-01
+  # support:
+  #   chrome: "143"
+  #   chrome_android: "143"
+  #   edge: "143"
+  #   firefox: "155"
+  #   firefox_android: "155"
+  #   safari: "26.4"
+  #   safari_ios: "26.4"
+  - api.WebTransport.WebTransport.options_protocols_parameter
+  - api.WebTransport.protocol
+
+  # baseline: low
   # baseline_low_date: 2026-11-05
   # support:
   #   chrome: "157"
