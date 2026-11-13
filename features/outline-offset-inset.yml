@@ -1,0 +1,9 @@
+name: "outline-offset: inset"
+description: The `inset` value for the `outline-offset` CSS property draws an element's outline inside its border edge, offset inward by the outline's width. Unlike a negative length, this works for `auto` outlines, whose width depends on the platform.
+# The `inset` keyword is not yet in the specification. See
+# https://github.com/w3c/csswg-drafts/issues/13765 and
+# https://github.com/w3c/csswg-drafts/pull/14791
+spec: https://drafts.csswg.org/css-ui-4/#outline-offset
+group: borders-outlines
+compat_features:
+  - css.properties.outline-offset.inset
