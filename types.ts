@@ -68,7 +68,7 @@ const goodSupportStatus: QuicktypeStatusHeadline | SupportStatus = {
 
 export interface WebFeaturesData extends Pick<
   QuicktypeWebFeaturesData,
-  "bcd_version" | "browsers" | "groups" | "snapshots"
+  "browsers" | "groups" | "meta" | "snapshots"
 > {
   features: {
     [key: string]: FeatureData | FeatureMovedData | FeatureSplitData;
