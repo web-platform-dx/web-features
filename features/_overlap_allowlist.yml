@@ -90,3 +90,11 @@
     - html.elements.script.type.speculationrules.expects_no_vary_search
     - html.elements.script.type.speculationrules.tag
     - http.headers.Sec-Speculation-Tags
+- reason: Some Privacy Sandbox APIs shared navigator methods.
+  features:
+    - ad-selection
+    - protected-audience
+  keys:
+    - api.Navigator.getInterestGroupAdAuctionData
+    - api.Navigator.joinAdInterestGroup
+    - api.Navigator.runAdAuction

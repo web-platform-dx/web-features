@@ -1,10 +1,8 @@
-draft_date: 2026-10-05
+draft_date: 2026-11-16
 name: CSS Text Decoration Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-text-decor-4/
 compat_features:
-  - css.properties.text-decoration-inset
-  - css.properties.text-decoration-inset.auto
   - css.properties.text-decoration.auto
   - css.properties.text-decoration.from-font
   - css.properties.text-decoration.grammar-error
@@ -36,6 +34,9 @@ compat_features:
 #   - css.properties.text-decoration-thickness
 #   - css.properties.text-decoration-thickness.auto
 #   - css.properties.text-decoration-thickness.from-font
+# - text-decoration-inset:
+#   - css.properties.text-decoration-inset
+#   - css.properties.text-decoration-inset.auto
 # - Spelling and grammar text decorations:
 #   - css.properties.text-decoration-line.grammar-error
 #   - css.properties.text-decoration-line.spelling-error
