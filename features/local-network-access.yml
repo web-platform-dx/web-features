@@ -1,6 +1,16 @@
 name: Local network access
-description: |
+description: >
   The `"local-network-access"` user permission (and certain actions that imply this permission, such as a `fetch()` request with `{ targetAddressSpace: "local" }`) allows a site to send requests to servers on a user's local network.
 spec: https://wicg.github.io/local-network-access/
 compat_features:
-  - api.Request.targetAddressSpace
+  core:
+    - api.Permissions.permission_local-network
+    - api.Permissions.permission_local-network-access
+    - api.Request.Request.options_parameter.targetAddressSpace
+    - api.fetch.options_parameter.targetAddressSpace
+  spare:
+    # Permissions policies intersect with the `permissions-policy` feature in
+    # obfuscating ways, so park these as spare until such time the header is
+    # broadly supported.
+    - http.headers.Permissions-Policy.local-network
+    - http.headers.Permissions-Policy.local-network-access

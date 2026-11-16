@@ -1,0 +1,35 @@
+draft_date: 2026-10-15
+name: Web-based Payment Handler API
+description: TODO
+spec: https://w3c.github.io/web-based-payment-handler/
+compat_features:
+  - api.PaymentRequest.show.returns_OperationError
+  - api.PaymentRequestEvent.respondWith.returns_OperationError
+
+# The following features in the spec are already part of web-features:
+# - Payment handler:
+#   - api.CanMakePaymentEvent
+#   - api.CanMakePaymentEvent.CanMakePaymentEvent
+#   - api.CanMakePaymentEvent.respondWith
+#   - api.PaymentManager
+#   - api.PaymentManager.enableDelegations
+#   - api.PaymentManager.secure_context_required
+#   - api.PaymentManager.userHint
+#   - api.PaymentRequestEvent
+#   - api.PaymentRequestEvent.PaymentRequestEvent
+#   - api.PaymentRequestEvent.changePaymentMethod
+#   - api.PaymentRequestEvent.changeShippingAddress
+#   - api.PaymentRequestEvent.changeShippingOption
+#   - api.PaymentRequestEvent.methodData
+#   - api.PaymentRequestEvent.modifiers
+#   - api.PaymentRequestEvent.openWindow
+#   - api.PaymentRequestEvent.paymentOptions
+#   - api.PaymentRequestEvent.paymentRequestId
+#   - api.PaymentRequestEvent.paymentRequestOrigin
+#   - api.PaymentRequestEvent.respondWith
+#   - api.PaymentRequestEvent.shippingOptions
+#   - api.PaymentRequestEvent.topOrigin
+#   - api.PaymentRequestEvent.total
+#   - api.ServiceWorkerGlobalScope.canmakepayment_event
+#   - api.ServiceWorkerGlobalScope.paymentrequest_event
+#   - api.ServiceWorkerRegistration.paymentManager

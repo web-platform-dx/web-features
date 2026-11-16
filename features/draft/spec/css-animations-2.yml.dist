@@ -4,9 +4,11 @@
 status:
   baseline: false
   support:
-    chrome: "151"
-    chrome_android: "151"
-    edge: "151"
+    chrome: "115"
+    chrome_android: "115"
+    edge: "115"
+    safari: "26"
+    safari_ios: "26"
 compat_features:
   # baseline: high
   # baseline_low_date: 2020-01-15
@@ -37,6 +39,7 @@ compat_features:
   - css.properties.animation-composition.add
   - css.properties.animation-composition.replace
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "115"
@@ -46,12 +49,3 @@ compat_features:
   #   safari_ios: "26"
   - css.properties.animation-timeline.auto
   - css.properties.animation-timeline.none
-
-  # baseline: false
-  # support:
-  #   chrome: "151"
-  #   chrome_android: "151"
-  #   edge: "151"
-  #   firefox: "152"
-  #   firefox_android: "152"
-  - api.AnimationEvent.animation

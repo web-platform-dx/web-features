@@ -1,0 +1,18 @@
+draft_date: 2026-10-15
+name: Idle Detection API
+description: TODO
+spec: https://wicg.github.io/idle-detection/
+compat_features:
+  - api.Permissions.permission_idle-detection
+
+# The following features in the spec are already part of web-features:
+# - Idle detection:
+#   - api.IdleDetector
+#   - api.IdleDetector.IdleDetector
+#   - api.IdleDetector.change_event
+#   - api.IdleDetector.requestPermission_static
+#   - api.IdleDetector.screenState
+#   - api.IdleDetector.start
+#   - api.IdleDetector.userState
+#   - html.elements.iframe.allow.idle-detection
+#   - http.headers.Permissions-Policy.idle-detection

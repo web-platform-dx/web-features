@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { describe, it } from "node:test";
 
 import { Compat } from "./compat.js";
 import { Feature } from "./index.js";

@@ -101,6 +101,7 @@ compat_features:
   - api.GPUDevice.createComputePipelineAsync
   - api.GPUDevice.createComputePipelineAsync.optional_entryPoint
   - api.GPUDevice.createPipelineLayout
+  - api.GPUDevice.createPipelineLayout.descriptor_immediateSize_parameter
   - api.GPUDevice.createQuerySet
   - api.GPUDevice.createQuerySet.timestamp
   - api.GPUDevice.createRenderBundleEncoder
@@ -229,6 +230,7 @@ compat_features:
   - api.GPUSupportedFeatures.feature_indirect-first-instance
   - api.GPUSupportedFeatures.feature_rg11b10ufloat-renderable
   - api.GPUSupportedFeatures.feature_shader-f16
+  - api.GPUSupportedFeatures.feature_subgroup-size-control
   - api.GPUSupportedFeatures.feature_texture-compression-astc
   - api.GPUSupportedFeatures.feature_texture-compression-bc
   - api.GPUSupportedFeatures.feature_texture-compression-etc2

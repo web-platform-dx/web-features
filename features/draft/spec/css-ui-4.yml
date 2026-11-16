@@ -1,4 +1,4 @@
-draft_date: 2026-08-27
+draft_date: 2026-11-12
 name: CSS Basic User Interface Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-ui-4/
@@ -7,16 +7,11 @@ compat_features:
   - css.properties.caret-animation.auto
   - css.properties.caret-animation.manual
   - css.properties.caret-color.auto
-  - css.properties.interest-delay
-  - css.properties.interest-delay-end
-  - css.properties.interest-delay-end.normal
-  - css.properties.interest-delay-start
-  - css.properties.interest-delay-start.normal
-  - css.properties.interest-delay.normal
-  - css.properties.outline.auto
   - css.properties.resize.both
   - css.properties.resize.horizontal
+  - css.properties.resize.iframe_elements
   - css.properties.resize.none
+  - css.properties.resize.replaced_elements
   - css.properties.resize.vertical
 
 # The following features in the spec are already part of web-features:
@@ -92,8 +87,16 @@ compat_features:
 #   - css.properties.interactivity
 #   - css.properties.interactivity.auto
 #   - css.properties.interactivity.inert
+# - Interest invokers:
+#   - css.properties.interest-delay
+#   - css.properties.interest-delay.normal
+#   - css.properties.interest-delay-end
+#   - css.properties.interest-delay-end.normal
+#   - css.properties.interest-delay-start
+#   - css.properties.interest-delay-start.normal
 # - outline:
 #   - css.properties.outline
+#   - css.properties.outline.auto
 # - Outlines:
 #   - css.properties.outline-color
 #   - css.properties.outline-offset

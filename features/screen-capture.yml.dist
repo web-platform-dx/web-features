@@ -8,7 +8,18 @@ status:
     edge: "79"
     firefox: "33"
     safari: "13"
+    safari_ios: "27"
 compat_features:
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support:
+  #   chrome: "72"
+  #   edge: "79"
+  #   firefox: "33"
+  #   safari: "13"
+  #   safari_ios: "27"
+  - api.MediaDevices.getDisplayMedia
+
   # baseline: false
   # support:
   #   chrome: "94"
@@ -26,15 +37,6 @@ compat_features:
   #   safari: "11.1"
   #   safari_ios: "11.3"
   - api.MediaStreamTrack.applyConstraints.displaySurface_constraint
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "72"
-  #   edge: "79"
-  #   firefox: "33"
-  #   safari: "13"
-  - api.MediaDevices.getDisplayMedia
 
   # baseline: false
   # support:

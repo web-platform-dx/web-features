@@ -1,4 +1,4 @@
-draft_date: 2026-07-06
+draft_date: 2026-11-02
 name: Web Speech API
 description: TODO
 spec: https://webaudio.github.io/web-speech-api/
@@ -15,13 +15,7 @@ compat_features:
   - api.SpeechRecognition.install_static.options_parameter.options_quality_parameter
   - api.SpeechRecognition.phrases
   - api.SpeechRecognition.processLocally
-  - api.SpeechRecognition.start.audioTrack
   - api.SpeechRecognition.unspokenPunctuation
-  - api.SpeechRecognitionPhrase
-  - api.SpeechRecognitionPhrase.SpeechRecognitionPhrase
-  - api.SpeechRecognitionPhrase.boost
-  - api.SpeechRecognitionPhrase.phrase
-  - http.headers.Permissions-Policy.on-device-speech-recognition
 
 # The following features in the spec are already part of web-features:
 # - Speech recognition:
@@ -43,6 +37,7 @@ compat_features:
 #   - api.SpeechRecognition.speechend_event
 #   - api.SpeechRecognition.speechstart_event
 #   - api.SpeechRecognition.start
+#   - api.SpeechRecognition.start.audioTrack
 #   - api.SpeechRecognition.start_event
 #   - api.SpeechRecognition.stop
 #   - api.SpeechRecognitionAlternative
@@ -56,6 +51,10 @@ compat_features:
 #   - api.SpeechRecognitionEvent.SpeechRecognitionEvent
 #   - api.SpeechRecognitionEvent.resultIndex
 #   - api.SpeechRecognitionEvent.results
+#   - api.SpeechRecognitionPhrase
+#   - api.SpeechRecognitionPhrase.SpeechRecognitionPhrase
+#   - api.SpeechRecognitionPhrase.boost
+#   - api.SpeechRecognitionPhrase.phrase
 #   - api.SpeechRecognitionResult
 #   - api.SpeechRecognitionResult.isFinal
 #   - api.SpeechRecognitionResult.item
@@ -63,6 +62,7 @@ compat_features:
 #   - api.SpeechRecognitionResultList
 #   - api.SpeechRecognitionResultList.item
 #   - api.SpeechRecognitionResultList.length
+#   - http.headers.Permissions-Policy.on-device-speech-recognition
 # - Speech recognition grammar:
 #   - api.SpeechRecognition.grammars
 # - Speech synthesis:

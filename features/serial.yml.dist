@@ -5,6 +5,7 @@ status:
   baseline: false
   support:
     chrome: "89"
+    chrome_android: "148"
     edge: "89"
     firefox: "151"
 compat_features:
@@ -16,17 +17,11 @@ compat_features:
   #   firefox: "151"
   - html.elements.iframe.allow.serial
 
-  # baseline: false
-  # support:
-  #   chrome: "89"
-  #   chrome_android: "89"
-  #   edge: "89"
-  - http.headers.Permissions-Policy.serial
-
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "89"
+  #   chrome_android: "148"
   #   edge: "89"
   #   firefox: "151"
   - api.Navigator.serial
@@ -48,6 +43,7 @@ compat_features:
   # baseline: false
   # support:
   #   chrome: "103"
+  #   chrome_android: "148"
   #   edge: "103"
   #   firefox: "151"
   - api.SerialPort.forget
@@ -55,13 +51,22 @@ compat_features:
   # baseline: false
   # support:
   #   chrome: "130"
+  #   chrome_android: "148"
   #   edge: "130"
   #   firefox: "151"
   - api.SerialPort.connected
 
   # baseline: false
   # support:
+  #   chrome: "89"
+  #   chrome_android: "89"
+  #   edge: "89"
+  - http.headers.Permissions-Policy.serial
+
+  # baseline: false
+  # support:
   #   chrome: "117"
+  #   chrome_android: "148"
   #   edge: "117"
   - api.Serial.requestPort.allowedBluetoothServiceClassIds_option
   - api.Serial.requestPort.filters_bluetoothServiceClassId
@@ -70,6 +75,7 @@ compat_features:
   # baseline: false
   # support:
   #   chrome: "130"
+  #   chrome_android: "148"
   #   edge: "130"
   - api.SerialPort.connect_event.bluetooth_rfcomm
   - api.SerialPort.disconnect_event.bluetooth_rfcomm

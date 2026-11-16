@@ -7,12 +7,16 @@ status:
     chrome: "135"
     chrome_android: "135"
     edge: "135"
+    safari: "27"
+    safari_ios: "27"
 compat_features:
   # baseline: false
   # support:
   #   chrome: "133"
   #   chrome_android: "133"
   #   edge: "133"
+  #   safari: "27"
+  #   safari_ios: "27"
   - css.selectors.checkmark
   - css.selectors.picker-icon
 
@@ -22,6 +26,8 @@ compat_features:
   #   chrome: "135"
   #   chrome_android: "135"
   #   edge: "135"
+  #   safari: "27"
+  #   safari_ios: "27"
   - css.properties.appearance.base-select
   - css.selectors.picker
   - html.elements.selectedcontent

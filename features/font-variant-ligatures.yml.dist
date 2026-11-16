@@ -14,6 +14,38 @@ status:
     safari: "9.1"
     safari_ios: "9.3"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "31"
+  #   chrome_android: "31"
+  #   edge: "79"
+  #   firefox: "34"
+  #   firefox_android: "34"
+  #   safari: "7"
+  #   safari_ios: "7"
+  - css.properties.font-variant.common-ligatures
+  - css.properties.font-variant.contextual
+  - css.properties.font-variant.discretionary-ligatures
+  - css.properties.font-variant.historical-ligatures
+  - css.properties.font-variant.no-common-ligatures
+  - css.properties.font-variant.no-contextual
+  - css.properties.font-variant.no-discretionary-ligatures
+  - css.properties.font-variant.no-historical-ligatures
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: high
+  # baseline_low_date: 2020-01-15
+  # baseline_high_date: 2022-07-15
+  # support:
+  #   chrome: "34"
+  #   chrome_android: "34"
+  #   edge: "79"
+  #   firefox: "34"
+  #   firefox_android: "34"
+  #   safari: "9.1"
+  #   safari_ios: "9.3"
   - css.properties.font-variant-ligatures
   - css.properties.font-variant-ligatures.common-ligatures
   - css.properties.font-variant-ligatures.contextual

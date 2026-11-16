@@ -17,8 +17,24 @@ compat_features:
   - api.MediaDevices.devicechange_event
   - api.MediaDevices.enumerateDevices
   - api.MediaDevices.getUserMedia
-  - api.MediaDevices.getSupportedConstraints
+  - api.MediaDevices.getUserMedia.constraints_resizeMode_parameter
   - api.MediaDevices.getUserMedia.secure_context_required
+  - api.MediaDevices.getSupportedConstraints
+  - api.MediaDevices.getSupportedConstraints.return_object_property_aspectRatio
+  - api.MediaDevices.getSupportedConstraints.return_object_property_autoGainControl
+  - api.MediaDevices.getSupportedConstraints.return_object_property_channelCount
+  - api.MediaDevices.getSupportedConstraints.return_object_property_deviceId
+  - api.MediaDevices.getSupportedConstraints.return_object_property_echoCancellation
+  - api.MediaDevices.getSupportedConstraints.return_object_property_facingMode
+  - api.MediaDevices.getSupportedConstraints.return_object_property_frameRate
+  - api.MediaDevices.getSupportedConstraints.return_object_property_groupId
+  - api.MediaDevices.getSupportedConstraints.return_object_property_height
+  - api.MediaDevices.getSupportedConstraints.return_object_property_latency
+  - api.MediaDevices.getSupportedConstraints.return_object_property_noiseSuppression
+  - api.MediaDevices.getSupportedConstraints.return_object_property_resizeMode
+  - api.MediaDevices.getSupportedConstraints.return_object_property_sampleRate
+  - api.MediaDevices.getSupportedConstraints.return_object_property_sampleSize
+  - api.MediaDevices.getSupportedConstraints.return_object_property_width
   - api.MediaStream
   - api.MediaStream.MediaStream
   - api.MediaStream.active

@@ -1,0 +1,10 @@
+name: column-wrap
+description: >
+  The `column-wrap` and `column-height` CSS properties control when columns in a multicolumn layout wrap or overflow.
+  You can use this to constrain the height of columns within a taller box or to create two-dimensional column layouts.
+spec: https://drafts.csswg.org/css-multicol-2/#propdef-column-wrap
+group: multi-column
+compat_features:
+  - css.properties.column-height
+  - css.properties.column-wrap
+  - css.properties.columns.column-height

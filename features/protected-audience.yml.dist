@@ -3,9 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "134"
-    chrome_android: "134"
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -42,7 +40,5 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support:
-  #   chrome: "134"
-  #   chrome_android: "134"
+  # support: {}
   - api.SharedStorageWorkletGlobalScope.interestGroups

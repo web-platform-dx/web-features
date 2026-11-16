@@ -202,29 +202,38 @@ compat_features:
   - api.Element.animate.options_composite_parameter
   - api.KeyframeEffect.composite
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-02-14
   # support:
-  #   chrome: "84"
-  #   chrome_android: "84"
-  #   edge: "84"
-  #   firefox: "75"
-  #   firefox_android: "79"
-  - api.Element.animate.implicit_tofrom
+  #   chrome: "145"
+  #   chrome_android: "145"
+  #   edge: "145"
+  #   firefox: "54"
+  #   firefox_android: "54"
+  #   safari: "13.1"
+  #   safari_ios: "13.4"
+  - api.Element.animationcancel_event
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-10-27
   # support:
   #   chrome: "85"
   #   chrome_android: "85"
   #   edge: "85"
+  #   firefox: "159"
+  #   firefox_android: "159"
   #   safari: "16"
   #   safari_ios: "16"
   - api.Element.animate.options_timeline_parameter
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-10-27
   # support:
   #   chrome: "115"
   #   chrome_android: "115"
   #   edge: "115"
+  #   firefox: "159"
+  #   firefox_android: "159"
   #   safari: "26"
   #   safari_ios: "26"
   - api.AnimationTimeline.duration
@@ -233,8 +242,9 @@ compat_features:
 
   # baseline: false
   # support:
-  #   firefox: "54"
-  #   firefox_android: "54"
-  #   safari: "13.1"
-  #   safari_ios: "13.4"
-  - api.Element.animationcancel_event
+  #   chrome: "84"
+  #   chrome_android: "84"
+  #   edge: "84"
+  #   firefox: "75"
+  #   firefox_android: "79"
+  - api.Element.animate.implicit_tofrom

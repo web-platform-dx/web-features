@@ -12,11 +12,16 @@ compat_features:
   #   edge: "126"
   - api.HTMLIFrameElement.sharedStorageWritable
   - api.HTMLImageElement.sharedStorageWritable
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
   - api.SharedStorage
   - api.SharedStorage.append
   - api.SharedStorage.clear
   - api.SharedStorage.createWorklet
   - api.SharedStorage.delete
+  - api.SharedStorage.get
   - api.SharedStorage.run
   - api.SharedStorage.selectURL
   - api.SharedStorage.set
@@ -28,8 +33,3 @@ compat_features:
   - api.SharedStorageWorkletGlobalScope.register
   - api.SharedStorageWorkletGlobalScope.sharedStorage
   - api.Window.sharedStorage
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
-  - api.SharedStorage.get

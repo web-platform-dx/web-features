@@ -9,9 +9,18 @@ status:
     chrome: "75"
     chrome_android: "75"
     edge: "79"
-    firefox: "78"
+    firefox: "79"
     firefox_android: "79"
     safari: "15.1"
     safari_ios: "15.1"
 compat_features:
   - webassembly.bulk-memory-operations
+  - webassembly.definitions.data
+  - webassembly.definitions.elem
+  - webassembly.instructions.data_drop
+  - webassembly.instructions.elem_drop
+  - webassembly.instructions.memory_copy
+  - webassembly.instructions.memory_fill
+  - webassembly.instructions.memory_init
+  - webassembly.instructions.table_copy
+  - webassembly.instructions.table_init

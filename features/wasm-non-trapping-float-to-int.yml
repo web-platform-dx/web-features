@@ -4,4 +4,8 @@ spec: https://github.com/WebAssembly/spec/blob/main/proposals/nontrapping-float-
 group: webassembly
 caniuse: wasm-nontrapping-fptoint
 compat_features:
+  - webassembly.instructions.trunc_sat_f32_s
+  - webassembly.instructions.trunc_sat_f32_u
+  - webassembly.instructions.trunc_sat_f64_s
+  - webassembly.instructions.trunc_sat_f64_u
   - webassembly.non-trapping-float-to-int-conversions

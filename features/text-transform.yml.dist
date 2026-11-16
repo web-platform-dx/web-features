@@ -82,6 +82,14 @@ compat_features:
 
   # baseline: false
   # support:
+  #   firefox: "14"
+  #   firefox_android: "14"
+  #   safari: "27"
+  #   safari_ios: "27"
+  - css.properties.text-transform.dutch_ij_digraph
+
+  # baseline: false
+  # support:
   #   firefox: "19"
   #   firefox_android: "19"
   #   safari: "17"
@@ -95,9 +103,3 @@ compat_features:
   #   safari: "17"
   #   safari_ios: "17"
   - css.properties.text-transform.full-size-kana
-
-  # baseline: false
-  # support:
-  #   firefox: "14"
-  #   firefox_android: "14"
-  - css.properties.text-transform.dutch_ij_digraph

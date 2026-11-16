@@ -1,0 +1,12 @@
+draft_date: 2026-11-12
+name: Document-Isolation-Policy
+description: TODO
+spec: https://wicg.github.io/document-isolation-policy/
+compat_features:
+  - http.headers.Document-Isolation-Policy.isolate-and-credentialless
+  - http.headers.Document-Isolation-Policy.isolate-and-require-corp
+  - http.headers.Document-Isolation-Policy.none
+
+# The following features in the spec are already part of web-features:
+# - Document-Isolation-Policy:
+#   - http.headers.Document-Isolation-Policy

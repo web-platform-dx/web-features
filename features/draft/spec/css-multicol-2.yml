@@ -1,20 +1,16 @@
-draft_date: 2026-05-08
+draft_date: 2026-10-19
 name: CSS Multi-column Layout Module Level 2
 description: TODO
 spec: https://drafts.csswg.org/css-multicol-2/
 compat_features:
-  - css.properties.column-height
   - css.properties.column-height.auto
-  - css.properties.column-wrap
   - css.properties.column-wrap.auto
   - css.properties.column-wrap.nowrap
   - css.properties.column-wrap.wrap
-  - css.properties.columns.auto
-  - css.properties.columns.column-height
 
 # The following features in the spec are already part of web-features:
 # - Multi-column layout:
-#   - css.properties.align-content.multicol_context
+#   - css.properties.align-content.context_multicol
 #   - css.properties.column-count
 #   - css.properties.column-count.auto
 #   - css.properties.column-gap
@@ -26,6 +22,7 @@ compat_features:
 #   - css.properties.column-width
 #   - css.properties.column-width.auto
 #   - css.properties.columns
+#   - css.properties.columns.auto
 # - Column breaks:
 #   - css.properties.break-after.multicol_context
 #   - css.properties.break-before.multicol_context
@@ -44,6 +41,10 @@ compat_features:
 #   - css.properties.column-gap.flex_context
 # - Grid:
 #   - css.properties.column-gap.grid_context
+# - column-wrap:
+#   - css.properties.column-height
+#   - css.properties.column-wrap
+#   - css.properties.columns.column-height
 # - column-span:
 #   - css.properties.column-span
 #   - css.properties.column-span.all

@@ -1,10 +1,12 @@
-draft_date: 2026-05-07
+draft_date: 2026-11-12
 name: CSS View Transitions Module Level 2
 description: TODO
 spec: https://drafts.csswg.org/css-view-transitions-2/
 compat_features:
   - api.Document.activeViewTransition
   - api.ViewTransition.waitUntil
+  - css.at-rules.view-transition.navigation
+  - css.at-rules.view-transition.types
   - css.properties.view-transition-group
   - css.properties.view-transition-group.contain
   - css.properties.view-transition-group.nearest

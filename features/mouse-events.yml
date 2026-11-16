@@ -30,6 +30,8 @@ compat_features:
   - api.MouseEvent.clientY
   - api.MouseEvent.ctrlKey
   - api.MouseEvent.getModifierState
+  - api.MouseEvent.layerX
+  - api.MouseEvent.layerY
   - api.MouseEvent.metaKey
   # The next two were specified with `pointer-lock`, but work independently of it.
   - api.MouseEvent.movementX

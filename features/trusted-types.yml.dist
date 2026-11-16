@@ -24,11 +24,16 @@ compat_features:
   #   firefox_android: "148"
   #   safari: "26"
   #   safari_ios: "26"
+  - api.DOMParser.parseFromString.enforces_trusted_types
   - api.Element.innerHTML.enforces_trusted_types
+  - api.Element.insertAdjacentHTML.enforces_trusted_types
+  - api.Element.outerHTML.enforces_trusted_types
+  - api.HTMLIFrameElement.srcdoc.enforces_trusted_types
   - api.HTMLScriptElement.innerText.enforces_trusted_types
   - api.HTMLScriptElement.src.enforces_trusted_types
   - api.HTMLScriptElement.text.enforces_trusted_types
   - api.HTMLScriptElement.textContent.enforces_trusted_types
+  - api.Range.createContextualFragment.enforces_trusted_types
   - api.ShadowRoot.innerHTML.enforces_trusted_types
   - api.TrustedHTML
   - api.TrustedHTML.toString
@@ -70,3 +75,29 @@ compat_features:
   - api.TrustedHTML.toJSON
   - api.TrustedScript.toJSON
   - api.TrustedScriptURL.toJSON
+
+  # baseline: low
+  # baseline_low_date: 2026-02-24
+  # support:
+  #   chrome: "124"
+  #   chrome_android: "124"
+  #   edge: "124"
+  #   firefox: "148"
+  #   firefox_android: "148"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - api.Document.parseHTMLUnsafe_static.enforces_trusted_types
+  - api.Element.setHTMLUnsafe.enforces_trusted_types
+  - api.ShadowRoot.setHTMLUnsafe.enforces_trusted_types
+
+  # baseline: low
+  # baseline_low_date: 2026-02-24
+  # support:
+  #   chrome: "145"
+  #   chrome_android: "145"
+  #   edge: "145"
+  #   firefox: "148"
+  #   firefox_android: "148"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - http.headers.Content-Security-Policy.script-src.trusted-types-eval

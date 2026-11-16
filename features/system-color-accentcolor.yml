@@ -1,0 +1,9 @@
+name: AccentColor and AccentColorText
+description: >
+  The `AccentColor` and `AccentColorText` CSS system color values are the background color and text color of accented user interface controls.
+  To prevent browser fingerprinting, browsers may (and often do) use fixed color values that do not reflect user customization or theming choices.
+spec: https://drafts.csswg.org/css-color-4/#valdef-color-accentcolor
+group: color-types
+compat_features:
+  - css.types.color.system-color.accentcolor
+  - css.types.color.system-color.accentcolortext

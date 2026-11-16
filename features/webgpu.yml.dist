@@ -270,6 +270,15 @@ compat_features:
   # baseline: false
   # support:
   #   chrome: "144"
+  #   chrome_android: "121"
+  #   edge: "144"
+  #   safari: "27"
+  #   safari_ios: "27"
+  - api.GPUDevice.uncapturederror_event
+
+  # baseline: false
+  # support:
+  #   chrome: "144"
   #   chrome_android: "144"
   #   edge: "144"
   #   safari: "26"
@@ -294,7 +303,6 @@ compat_features:
   - api.GPUDevice.createRenderPipelineAsync.texture_rgb10a2uint
   - api.GPUDevice.createRenderPipelineAsync.vertex_unorm10-10-10-2
   - api.GPUDevice.createTexture.texture_rgb10a2uint
-  - api.GPUDevice.uncapturederror_event
   - api.GPUError
   - api.GPUError.message
   - api.GPUQueue.copyExternalImageToTexture.htmlimageelement_imagedata_source
@@ -344,6 +352,20 @@ compat_features:
   - api.WGSLLanguageFeatures.extension_packed_4x8_integer_dot_product
   - api.WGSLLanguageFeatures.extension_readonly_and_readwrite_storage_textures
   - api.WGSLLanguageFeatures.extension_unrestricted_pointer_parameters
+
+  # baseline: false
+  # support:
+  #   chrome: "150"
+  #   chrome_android: "150"
+  #   edge: "150"
+  - api.GPUDevice.createPipelineLayout.descriptor_immediateSize_parameter
+
+  # baseline: false
+  # support:
+  #   chrome: "152"
+  #   chrome_android: "152"
+  #   edge: "152"
+  - api.GPUSupportedFeatures.feature_subgroup-size-control
 
   # baseline: false
   # support:

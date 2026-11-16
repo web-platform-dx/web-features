@@ -1,11 +1,10 @@
-draft_date: 2026-09-03
+draft_date: 2026-11-09
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
   - api.Document.designMode
   - api.Document.parseHTMLUnsafe_static.options_sanitizer_parameter
-  - api.Element.setHTMLUnsafe.options_runscripts_parameter
   - api.Element.setHTMLUnsafe.options_sanitizer_parameter
   - api.ElementInternals.shadowRoot
   - api.ErrorEvent
@@ -30,25 +29,10 @@ compat_features:
   - api.HTMLElement.toggle_event.details_elements.uses_toggleevent
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes.auto
-  - api.HTMLInputElement.showPicker.datalist_input
-  - api.HTMLInputElement.showPicker.month_input
-  - api.HTMLInputElement.showPicker.time_input
-  - api.HTMLInputElement.showPicker.week_input
   - api.HTMLMediaElement.getStartDate
   - api.HTMLMediaElement.playbackRate.negative_values
-  - api.HTMLOptionsCollection
-  - api.HTMLOptionsCollection.add
-  - api.HTMLOptionsCollection.length
-  - api.HTMLOptionsCollection.remove
-  - api.HTMLOptionsCollection.selectedIndex
   - api.HTMLScriptElement.noModule
   - api.HTMLSelectedContentElement
-  - api.HTMLSourceElement
-  - api.HTMLSourceElement.height
-  - api.HTMLSourceElement.media
-  - api.HTMLSourceElement.src
-  - api.HTMLSourceElement.type
-  - api.HTMLSourceElement.width
   - api.HTMLUnknownElement
   - api.ImageData.ImageData.settings_parameter
   - api.ImageData.ImageData.settings_parameter.colorSpace_option
@@ -72,6 +56,8 @@ compat_features:
   - api.NavigationTransition.to
   - api.Navigator.oscpu
   - api.Navigator.taintEnabled
+  - api.NotRestoredReasonDetails.reason.unload-listener
+  - api.NotRestoredReasonDetails.reason.websocket
   - api.OffscreenCanvasRenderingContext2D.getContextAttributes
   - api.OffscreenCanvasRenderingContext2D.lang
   - api.PromiseRejectionEvent
@@ -82,18 +68,16 @@ compat_features:
   - api.RadioNodeList.value
   - api.Sanitizer.allowProcessingInstruction
   - api.Sanitizer.removeProcessingInstruction
+  - api.Sanitizer.setJavascriptURLs
   - api.ServiceWorker.error_event
   - api.ShadowRoot.activeElement
   - api.ShadowRoot.innerHTML
-  - api.ShadowRoot.setHTMLUnsafe.options_runscripts_parameter
   - api.ShadowRoot.setHTMLUnsafe.options_sanitizer_parameter
   - api.SharedWorker.SharedWorker.enforces_trusted_types
-  - api.SharedWorker.SharedWorker.options_extendedLifetime_parameter
   - api.TrackEvent
   - api.TrackEvent.TrackEvent
   - api.TrackEvent.track
   - api.Window.originAgentCluster
-  - api.Window.postMessage.transfer_parameter
   - api.Window.rejectionhandled_event
   - api.Window.unhandledrejection_event
   - api.Window.unload_event
@@ -102,6 +86,8 @@ compat_features:
   - api.crossOriginIsolated
   - api.origin
   - api.reportError
+  - css.properties.appearance.base-select.list_box
+  - css.properties.appearance.base-select.single_dropdown
   - html.elements.area.hreflang
   - html.elements.area.type
   - html.elements.button.command.request-close
@@ -116,7 +102,7 @@ compat_features:
   - html.elements.iframe.allow.document-domain
   - html.elements.iframe.sandbox.allow-orientation-lock
   - html.elements.iframe.sandbox.allow-pointer-lock
-  - html.elements.input.autocomplete
+  - html.elements.img.controls
   - html.elements.input.type_color.accepts_css_colors
   - html.elements.input.type_range.labeled_values
   - html.elements.link.rel.icon
@@ -124,9 +110,7 @@ compat_features:
   - html.elements.link.rel.modulepreload.as-script
   - html.elements.link.rel.modulepreload.as-style
   - html.elements.script.type.importmap.integrity
-  - html.elements.script.type.importmap.multiple_import_maps
   - html.elements.select.autocomplete
-  - html.elements.template.shadowrootcustomelementregistry
   - html.elements.template.shadowrootslotassignment
   - html.elements.textarea.autocomplete.new-password
   - html.elements.textarea.autocomplete.one-time-code
@@ -134,22 +118,21 @@ compat_features:
   - html.elements.track.kind.descriptions
   - html.global_attributes.class
   - html.global_attributes.data_attributes
-  - html.global_attributes.dir
-  - html.global_attributes.draggable
   - html.global_attributes.hidden
   - html.global_attributes.id
   - http.headers.Cross-Origin-Embedder-Policy
+  - http.headers.Cross-Origin-Embedder-Policy-Report-Only
+  - http.headers.Cross-Origin-Embedder-Policy-Report-Only.report-to_parameter
   - http.headers.Cross-Origin-Embedder-Policy.credentialless
   - http.headers.Cross-Origin-Opener-Policy
+  - http.headers.Cross-Origin-Opener-Policy-Report-Only
+  - http.headers.Cross-Origin-Opener-Policy-Report-Only.report-to_parameter
   - http.headers.Cross-Origin-Opener-Policy.noopener-allow-popups
   - http.headers.Cross-Origin-Opener-Policy.report-to_parameter
   - http.headers.No-Vary-Search.speculation_rules_prefetch
   - http.headers.Origin-Agent-Cluster
   - http.headers.Permissions-Policy.autoplay
   - http.headers.Permissions-Policy.cross-origin-isolated
-  - http.headers.X-Frame-Options
-  - http.headers.X-Frame-Options.DENY
-  - http.headers.X-Frame-Options.SAMEORIGIN
   - http.status.103
   - http.status.103.preconnect
   - http.status.103.preload
@@ -354,6 +337,31 @@ compat_features:
 # - Canvas roundRect():
 #   - api.CanvasRenderingContext2D.roundRect
 #   - api.OffscreenCanvasRenderingContext2D.roundRect
+# - HTML setter methods:
+#   - api.CharacterData.afterHTML
+#   - api.CharacterData.afterHTMLUnsafe
+#   - api.CharacterData.beforeHTML
+#   - api.CharacterData.beforeHTMLUnsafe
+#   - api.CharacterData.replaceWithHTML
+#   - api.CharacterData.replaceWithHTMLUnsafe
+#   - api.Element.afterHTML
+#   - api.Element.afterHTMLUnsafe
+#   - api.Element.appendHTML
+#   - api.Element.appendHTMLUnsafe
+#   - api.Element.beforeHTML
+#   - api.Element.beforeHTMLUnsafe
+#   - api.Element.prependHTML
+#   - api.Element.prependHTMLUnsafe
+#   - api.Element.replaceWithHTML
+#   - api.Element.replaceWithHTMLUnsafe
+#   - api.Element.setHTMLUnsafe
+#   - api.Element.setHTMLUnsafe.options_runscripts_parameter
+#   - api.ShadowRoot.appendHTML
+#   - api.ShadowRoot.appendHTMLUnsafe
+#   - api.ShadowRoot.prependHTML
+#   - api.ShadowRoot.prependHTMLUnsafe
+#   - api.ShadowRoot.setHTMLUnsafe
+#   - api.ShadowRoot.setHTMLUnsafe.options_runscripts_parameter
 # - CloseWatcher:
 #   - api.CloseWatcher
 #   - api.CloseWatcher.CloseWatcher
@@ -386,6 +394,7 @@ compat_features:
 #   - api.CustomElementRegistry.CustomElementRegistry
 #   - api.CustomElementRegistry.initialize
 #   - api.HTMLTemplateElement.shadowRootCustomElementRegistry
+#   - html.elements.template.shadowrootcustomelementregistry
 # - Customized built-in elements:
 #   - api.CustomElementRegistry.builtin_element_support
 #   - html.global_attributes.is
@@ -451,7 +460,6 @@ compat_features:
 #   - api.Element.outerHTML
 #   - api.HTMLDocument
 #   - api.HTMLElement
-#   - api.HTMLElement.dir
 #   - api.HTMLElement.error_event
 #   - api.HTMLElement.hidden
 #   - api.HTMLElement.innerText
@@ -496,6 +504,7 @@ compat_features:
 #   - api.HTMLElement.dragover_event
 #   - api.HTMLElement.dragstart_event
 #   - api.HTMLElement.drop_event
+#   - html.global_attributes.draggable
 # - Dedicated workers:
 #   - api.DedicatedWorkerGlobalScope
 #   - api.DedicatedWorkerGlobalScope.close
@@ -540,6 +549,7 @@ compat_features:
 #   - api.MessageEvent.source
 #   - api.Window.message_event
 #   - api.Window.postMessage
+#   - api.Window.postMessage.transfer_parameter
 #   - api.Worker.message_event
 #   - api.Worker.postMessage
 # - messageerror:
@@ -574,10 +584,8 @@ compat_features:
 #   - api.Location.search
 #   - api.Location.toString
 #   - api.Window.location
-# - Unsanitized HTML parsing methods:
+# - Unsanitized HTML parsing:
 #   - api.Document.parseHTMLUnsafe_static
-#   - api.Element.setHTMLUnsafe
-#   - api.ShadowRoot.setHTMLUnsafe
 # - Sanitizer API:
 #   - api.Document.parseHTML_static
 #   - api.Element.setHTML
@@ -1142,6 +1150,9 @@ compat_features:
 # - contenteditable="plaintext-only":
 #   - api.HTMLElement.contentEditable.plaintext-only
 #   - html.global_attributes.contenteditable.plaintext-only
+# - dir:
+#   - api.HTMLElement.dir
+#   - html.global_attributes.dir
 # - enterkeyhint:
 #   - api.HTMLElement.enterKeyHint
 #   - html.global_attributes.enterkeyhint
@@ -1342,6 +1353,7 @@ compat_features:
 #   - html.elements.input
 #   - html.elements.input.accept
 #   - html.elements.input.alt
+#   - html.elements.input.autocomplete
 #   - html.elements.input.checked
 #   - html.elements.input.disabled
 #   - html.elements.input.form
@@ -1394,9 +1406,13 @@ compat_features:
 # - showPicker() for <input>:
 #   - api.HTMLInputElement.showPicker
 #   - api.HTMLInputElement.showPicker.color_input
+#   - api.HTMLInputElement.showPicker.datalist_input
 #   - api.HTMLInputElement.showPicker.date_input
 #   - api.HTMLInputElement.showPicker.datetime_local_input
 #   - api.HTMLInputElement.showPicker.file_input
+#   - api.HTMLInputElement.showPicker.month_input
+#   - api.HTMLInputElement.showPicker.time_input
+#   - api.HTMLInputElement.showPicker.week_input
 # - <input type="image">:
 #   - api.HTMLInputElement.src
 #   - html.elements.input.type_image
@@ -1404,9 +1420,7 @@ compat_features:
 #   - api.HTMLInputElement.valueAsDate
 #   - html.elements.input.type_date
 #   - html.elements.input.type_datetime-local
-#   - html.elements.input.type_month
 #   - html.elements.input.type_time
-#   - html.elements.input.type_week
 # - <ol>, <ul>, and <li>:
 #   - api.HTMLLIElement
 #   - api.HTMLLIElement.value
@@ -1675,6 +1689,11 @@ compat_features:
 #   - api.HTMLOptionElement.selected
 #   - api.HTMLOptionElement.text
 #   - api.HTMLOptionElement.value
+#   - api.HTMLOptionsCollection
+#   - api.HTMLOptionsCollection.add
+#   - api.HTMLOptionsCollection.length
+#   - api.HTMLOptionsCollection.remove
+#   - api.HTMLOptionsCollection.selectedIndex
 #   - api.HTMLSelectElement
 #   - api.HTMLSelectElement.add
 #   - api.HTMLSelectElement.add.index_before_parameter
@@ -1776,6 +1795,19 @@ compat_features:
 #   - html.global_attributes.slot
 # - Imperative slot assignment:
 #   - api.HTMLSlotElement.assign
+# - <source>:
+#   - api.HTMLSourceElement
+#   - api.HTMLSourceElement.height
+#   - api.HTMLSourceElement.media
+#   - api.HTMLSourceElement.src
+#   - api.HTMLSourceElement.type
+#   - api.HTMLSourceElement.width
+#   - html.elements.source
+#   - html.elements.source.height
+#   - html.elements.source.media
+#   - html.elements.source.src
+#   - html.elements.source.type
+#   - html.elements.source.width
 # - <span>:
 #   - api.HTMLSpanElement
 #   - html.elements.span
@@ -1903,6 +1935,7 @@ compat_features:
 #   - html.elements.textarea.rows
 #   - html.elements.textarea.wrap
 #   - html.elements.textarea.wrap.hard
+#   - html.elements.textarea.wrap.soft
 # - <time>:
 #   - api.HTMLTimeElement
 #   - api.HTMLTimeElement.dateTime
@@ -2198,7 +2231,7 @@ compat_features:
 #   - html.elements.script.type.speculationrules.relative_to
 #   - html.elements.script.type.speculationrules.requires
 #   - html.elements.script.type.speculationrules.requires.anonymous-client-ip-when-cross-origin
-#   - html.elements.script.type.speculationrules.source_optional
+#   - html.elements.script.type.speculationrules.source
 #   - html.elements.script.type.speculationrules.tag
 #   - html.elements.script.type.speculationrules.urls
 #   - html.elements.script.type.speculationrules.where
@@ -2218,6 +2251,8 @@ compat_features:
 # - JavaScript modules in shared workers:
 #   - api.SharedWorker.SharedWorker.ecmascript_modules
 #   - api.SharedWorker.SharedWorker.options_type_parameter
+# - Shared worker extended lifetime:
+#   - api.SharedWorker.SharedWorker.options_extendedLifetime_parameter
 # - localStorage and sessionStorage:
 #   - api.Storage
 #   - api.Storage.clear
@@ -2238,7 +2273,7 @@ compat_features:
 #   - api.Window.storage_event
 # - ToggleEvent source:
 #   - api.ToggleEvent.source
-# - Page visibility state:
+# - Page visibility state performance entries:
 #   - api.VisibilityStateEntry
 #   - api.VisibilityStateEntry.duration
 #   - api.VisibilityStateEntry.entryType
@@ -2434,6 +2469,8 @@ compat_features:
 #   - html.elements.input.type_url
 # - <input type="hidden">:
 #   - html.elements.input.type_hidden
+# - <input type="month">:
+#   - html.elements.input.type_month
 # - <input type="password">:
 #   - html.elements.input.type_password
 # - <input type="radio">:
@@ -2446,6 +2483,8 @@ compat_features:
 #   - html.elements.input.type_search
 # - <input type="submit">:
 #   - html.elements.input.type_submit
+# - <input type="week">:
+#   - html.elements.input.type_week
 # - <ins>:
 #   - html.elements.ins
 #   - html.elements.ins.cite
@@ -2497,6 +2536,12 @@ compat_features:
 #   - html.elements.samp
 # - Import maps:
 #   - html.elements.script.type.importmap
+# - Multiple import maps:
+#   - html.elements.script.type.importmap.multiple_import_maps
+# - Retriable module loading:
+#   - html.elements.script.type.module.http_errors_not_cached
+#   - javascript.operators.import.http_errors_not_cached
+#   - javascript.statements.import.http_errors_not_cached
 # - <search>:
 #   - html.elements.search
 # - <section>:
@@ -2505,13 +2550,6 @@ compat_features:
 #   - html.elements.selectedcontent
 # - <small>:
 #   - html.elements.small
-# - <source>:
-#   - html.elements.source
-#   - html.elements.source.height
-#   - html.elements.source.media
-#   - html.elements.source.src
-#   - html.elements.source.type
-#   - html.elements.source.width
 # - <strong>:
 #   - html.elements.strong
 # - <sub> and <sup>:
@@ -2525,6 +2563,10 @@ compat_features:
 #   - html.elements.wbr
 # - style (attribute):
 #   - html.global_attributes.style
+# - X-Frame-Options:
+#   - http.headers.X-Frame-Options
+#   - http.headers.X-Frame-Options.DENY
+#   - http.headers.X-Frame-Options.SAMEORIGIN
 # - Promise.any():
 #   - javascript.builtins.AggregateError.serializable_object
 # - Promise (initial support):

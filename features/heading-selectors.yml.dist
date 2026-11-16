@@ -5,5 +5,13 @@ status:
   baseline: false
   support: {}
 compat_features:
+  # baseline: false
+  # support:
+  #   safari: "27"
+  #   safari_ios: "27"
   - css.selectors.heading
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
   - css.selectors.headingfunction

@@ -9,6 +9,7 @@ compat_features:
   - api.WebTransport.WebTransport
   - api.WebTransport.WebTransport.options_allowPooling_parameter
   - api.WebTransport.WebTransport.options_congestionControl_parameter
+  - api.WebTransport.WebTransport.options_protocols_parameter
   - api.WebTransport.WebTransport.options_requireUnreliable_parameter
   - api.WebTransport.WebTransport.options_serverCertificateHashes_parameter
   - api.WebTransport.byob_readers
@@ -24,6 +25,7 @@ compat_features:
   - api.WebTransport.getStats
   - api.WebTransport.incomingBidirectionalStreams
   - api.WebTransport.incomingUnidirectionalStreams
+  - api.WebTransport.protocol
   - api.WebTransport.ready
   - api.WebTransport.reliability
   - api.WebTransportBidirectionalStream

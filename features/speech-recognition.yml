@@ -25,6 +25,7 @@ compat_features:
   - api.SpeechRecognition.speechstart_event
   - api.SpeechRecognition.start
   - api.SpeechRecognition.start_event
+  - api.SpeechRecognition.start.audioTrack
   - api.SpeechRecognition.stop
   - api.SpeechRecognitionAlternative
   - api.SpeechRecognitionAlternative.confidence
@@ -37,6 +38,10 @@ compat_features:
   - api.SpeechRecognitionEvent.SpeechRecognitionEvent
   - api.SpeechRecognitionEvent.resultIndex
   - api.SpeechRecognitionEvent.results
+  - api.SpeechRecognitionPhrase
+  - api.SpeechRecognitionPhrase.SpeechRecognitionPhrase
+  - api.SpeechRecognitionPhrase.boost
+  - api.SpeechRecognitionPhrase.phrase
   - api.SpeechRecognitionResult
   - api.SpeechRecognitionResult.isFinal
   - api.SpeechRecognitionResult.item
@@ -44,3 +49,4 @@ compat_features:
   - api.SpeechRecognitionResultList
   - api.SpeechRecognitionResultList.item
   - api.SpeechRecognitionResultList.length
+  - http.headers.Permissions-Policy.on-device-speech-recognition

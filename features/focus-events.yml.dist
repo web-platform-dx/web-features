@@ -70,6 +70,20 @@ compat_features:
   - api.FocusEvent.FocusEvent
   - api.FocusEvent.relatedTarget
 
+  # baseline: high
+  # baseline_low_date: 2017-03-07
+  # baseline_high_date: 2019-09-07
+  # support:
+  #   chrome: "1"
+  #   chrome_android: "18"
+  #   edge: "12"
+  #   firefox: "52"
+  #   firefox_android: "52"
+  #   safari: "5"
+  #   safari_ios: "4.2"
+  - api.Element.focusin_event
+  - api.Element.focusout_event
+
   # baseline: low
   # baseline_low_date: 2026-02-14
   # support:
@@ -90,10 +104,3 @@ compat_features:
   #   safari: "15"
   #   safari_ios: "15.5"
   - api.HTMLElement.focus.options_preventScroll_parameter
-
-  # baseline: false
-  # support:
-  #   safari: "5"
-  #   safari_ios: "4.2"
-  - api.Element.focusin_event
-  - api.Element.focusout_event

@@ -31,6 +31,7 @@ compat_features:
   #   edge: "109"
   - html.elements.script.type.speculationrules
   - html.elements.script.type.speculationrules.prerender
+  - html.elements.script.type.speculationrules.source
   - html.elements.script.type.speculationrules.urls
   - http.headers.Supports-Loading-Mode
   - http.headers.Supports-Loading-Mode.credentialed-prerender
@@ -78,13 +79,6 @@ compat_features:
 
   # baseline: false
   # support:
-  #   chrome: "122"
-  #   chrome_android: "122"
-  #   edge: "122"
-  - html.elements.script.type.speculationrules.source_optional
-
-  # baseline: false
-  # support:
   #   chrome: "127"
   #   chrome_android: "127"
   #   edge: "127"
@@ -97,6 +91,13 @@ compat_features:
   #   edge: "136"
   - html.elements.script.type.speculationrules.tag
   - http.headers.Sec-Speculation-Tags
+
+  # baseline: false
+  # support:
+  #   chrome: "151"
+  #   chrome_android: "151"
+  #   edge: "151"
+  - html.elements.script.type.speculationrules.form_submission
 
   # baseline: false
   # support:

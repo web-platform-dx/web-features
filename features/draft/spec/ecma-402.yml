@@ -1,15 +1,9 @@
-draft_date: 2025-07-24
-name: ECMAScript® 2026 Internationalization API Specification
+draft_date: 2026-10-14
+name: ECMAScript® 2027 Internationalization API Specification
 description: TODO
 spec: https://tc39.es/ecma402/
 compat_features:
   - javascript.builtins.Intl.Locale.variants
-  - javascript.builtins.Intl.supportedValuesOf.key_parameter_calendar
-  - javascript.builtins.Intl.supportedValuesOf.key_parameter_collation
-  - javascript.builtins.Intl.supportedValuesOf.key_parameter_currency
-  - javascript.builtins.Intl.supportedValuesOf.key_parameter_numberingSystem
-  - javascript.builtins.Intl.supportedValuesOf.key_parameter_timeZone
-  - javascript.builtins.Intl.supportedValuesOf.key_parameter_unit
 
 # The following features in the spec are already part of web-features:
 # - Intl:
@@ -104,6 +98,12 @@ compat_features:
 #   - javascript.builtins.Intl.NumberFormat.supportedLocalesOf
 #   - javascript.builtins.Intl.getCanonicalLocales
 #   - javascript.builtins.Intl.supportedValuesOf
+#   - javascript.builtins.Intl.supportedValuesOf.key_parameter_calendar
+#   - javascript.builtins.Intl.supportedValuesOf.key_parameter_collation
+#   - javascript.builtins.Intl.supportedValuesOf.key_parameter_currency
+#   - javascript.builtins.Intl.supportedValuesOf.key_parameter_numberingSystem
+#   - javascript.builtins.Intl.supportedValuesOf.key_parameter_timeZone
+#   - javascript.builtins.Intl.supportedValuesOf.key_parameter_unit
 #   - javascript.builtins.Number.toLocaleString
 #   - javascript.builtins.Number.toLocaleString.locales_parameter
 #   - javascript.builtins.Number.toLocaleString.options_parameter

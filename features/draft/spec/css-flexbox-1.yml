@@ -1,35 +1,33 @@
-draft_date: 2026-08-27
+draft_date: 2026-11-12
 name: CSS Flexible Box Layout Module Level 1
 description: TODO
 spec: https://drafts.csswg.org/css-flexbox-1/
 compat_features:
+  - css.properties.align-items.flex-end
+  - css.properties.align-items.flex-start
   - css.properties.flex-flow.balance
-  - css.properties.flex-flow.column
-  - css.properties.flex-flow.column-reverse
-  - css.properties.flex-flow.nowrap
-  - css.properties.flex-flow.row
-  - css.properties.flex-flow.row-reverse
-  - css.properties.flex-flow.wrap
-  - css.properties.flex-flow.wrap-reverse
   - css.properties.flex-line-count
-  - css.properties.flex.auto
-  - css.properties.flex.content
 
 # The following features in the spec are already part of web-features:
 # - Flexbox:
 #   - css.properties.align-content
-#   - css.properties.align-content.flex_context
-#   - css.properties.align-content.flex_context.stretch
+#   - css.properties.align-content.flex-end
+#   - css.properties.align-content.flex-start
+#   - css.properties.align-content.stretch
 #   - css.properties.align-items
-#   - css.properties.align-items.flex_context
-#   - css.properties.align-items.flex_context.baseline
+#   - css.properties.align-items.baseline
+#   - css.properties.align-items.context_flex
 #   - css.properties.align-self
 #   - css.properties.align-self.auto
-#   - css.properties.align-self.flex_context
-#   - css.properties.align-self.flex_context.baseline
-#   - css.properties.align-self.flex_context.stretch
+#   - css.properties.align-self.baseline
+#   - css.properties.align-self.context_flex
+#   - css.properties.align-self.context_flex.stretch_in_flex
+#   - css.properties.align-self.flex-end
+#   - css.properties.align-self.flex-start
 #   - css.properties.align-self.stretch
 #   - css.properties.flex
+#   - css.properties.flex.auto
+#   - css.properties.flex.content
 #   - css.properties.flex.none
 #   - css.properties.flex-basis
 #   - css.properties.flex-basis.auto
@@ -40,6 +38,13 @@ compat_features:
 #   - css.properties.flex-direction.row
 #   - css.properties.flex-direction.row-reverse
 #   - css.properties.flex-flow
+#   - css.properties.flex-flow.column
+#   - css.properties.flex-flow.column-reverse
+#   - css.properties.flex-flow.nowrap
+#   - css.properties.flex-flow.row
+#   - css.properties.flex-flow.row-reverse
+#   - css.properties.flex-flow.wrap
+#   - css.properties.flex-flow.wrap-reverse
 #   - css.properties.flex-grow
 #   - css.properties.flex-shrink
 #   - css.properties.flex-wrap
@@ -47,11 +52,17 @@ compat_features:
 #   - css.properties.flex-wrap.wrap
 #   - css.properties.flex-wrap.wrap-reverse
 #   - css.properties.justify-content
-#   - css.properties.justify-content.flex_context
+#   - css.properties.justify-content.context_flex
+#   - css.properties.justify-content.flex-end
+#   - css.properties.justify-content.flex-start
+#   - css.properties.justify-items.flex-end
+#   - css.properties.justify-items.flex-start
 #   - css.properties.position.absolutely_positioned_flex_children
 # - Grid:
-#   - css.properties.align-items.grid_context
-#   - css.properties.align-self.grid_context
-#   - css.properties.justify-content.grid_context
+#   - css.properties.align-items.context_grid
+#   - css.properties.align-self.context_grid
+#   - css.properties.justify-content.context_grid
+#   - css.properties.justify-self.flex-end
+#   - css.properties.justify-self.flex-start
 # - flex-wrap: balance:
 #   - css.properties.flex-wrap.balance

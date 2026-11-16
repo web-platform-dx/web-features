@@ -1,0 +1,49 @@
+exports[`computeBaseline > disregards support that's been removed 1`] = `
+"{\\n  \\"baseline\\": false,\\n  \\"support\\": {\\n    \\"safari\\": \\"8\\",\\n    \\"safari_ios\\": \\"8\\"\\n  }\\n}"
+`;
+
+exports[`computeBaseline > finds discrepancies with ancestors (checkAncestors) 1`] = `
+"{\\n  \\"baseline\\": \\"high\\",\\n  \\"baseline_low_date\\": \\"2023-03-27\\",\\n  \\"baseline_high_date\\": \\"2025-09-27\\",\\n  \\"support\\": {\\n    \\"chrome\\": \\"69\\",\\n    \\"chrome_android\\": \\"69\\",\\n    \\"edge\\": \\"79\\",\\n    \\"firefox\\": \\"64\\",\\n    \\"firefox_android\\": \\"64\\",\\n    \\"safari\\": \\"16.4\\",\\n    \\"safari_ios\\": \\"16.4\\"\\n  }\\n}"
+`;
+
+exports[`computeBaseline > finds discrepancies with ancestors (checkAncestors) 2`] = `
+"{\\n  \\"baseline\\": false,\\n  \\"support\\": {\\n    \\"chrome\\": \\"71\\",\\n    \\"chrome_android\\": \\"71\\",\\n    \\"edge\\": \\"79\\",\\n    \\"firefox\\": \\"64\\",\\n    \\"firefox_android\\": \\"64\\",\\n    \\"safari\\": \\"16.4\\"\\n  }\\n}"
+`;
+
+exports[`computeBaseline > finds discrepancies with ancestors (checkAncestors) 3`] = `
+"{\\n  \\"baseline\\": false,\\n  \\"support\\": {\\n    \\"chrome\\": \\"71\\",\\n    \\"chrome_android\\": \\"71\\",\\n    \\"edge\\": \\"79\\",\\n    \\"firefox\\": \\"64\\",\\n    \\"firefox_android\\": \\"64\\",\\n    \\"safari\\": \\"16.4\\"\\n  }\\n}"
+`;
+
+exports[`computeBaseline > returns something sensible for the least complex features 1`] = `
+{
+  "css.properties.counter-reset.reset_does_not_affect_siblings": "{\\n  \\"baseline\\": false,\\n  \\"support\\": {\\n    \\"firefox\\": \\"82\\",\\n    \\"firefox_android\\": \\"82\\"\\n  }\\n}",
+  "html.global_attributes.exportparts": "{\\n  \\"baseline\\": \\"high\\",\\n  \\"baseline_low_date\\": \\"2020-07-28\\",\\n  \\"baseline_high_date\\": \\"2023-01-28\\",\\n  \\"support\\": {\\n    \\"chrome\\": \\"73\\",\\n    \\"chrome_android\\": \\"73\\",\\n    \\"edge\\": \\"79\\",\\n    \\"firefox\\": \\"72\\",\\n    \\"firefox_android\\": \\"79\\",\\n    \\"safari\\": \\"13.1\\",\\n    \\"safari_ios\\": \\"13.4\\"\\n  }\\n}",
+  "html.elements.form.target": "{\\n  \\"baseline\\": \\"high\\",\\n  \\"baseline_low_date\\": \\"2015-07-29\\",\\n  \\"baseline_high_date\\": \\"2018-01-29\\",\\n  \\"support\\": {\\n    \\"chrome\\": \\"1\\",\\n    \\"chrome_android\\": \\"18\\",\\n    \\"edge\\": \\"12\\",\\n    \\"firefox\\": \\"1\\",\\n    \\"firefox_android\\": \\"4\\",\\n    \\"safari\\": \\"3\\",\\n    \\"safari_ios\\": \\"2\\"\\n  }\\n}"
+}
+`;
+
+exports[`computeBaseline > returns something sensible for the most complex features 1`] = `
+{
+  "api.Document.visibilitychange_event": "{\\n  \\"baseline\\": \\"high\\",\\n  \\"baseline_low_date\\": \\"2021-04-26\\",\\n  \\"baseline_high_date\\": \\"2023-10-26\\",\\n  \\"support\\": {\\n    \\"chrome\\": \\"62\\",\\n    \\"chrome_android\\": \\"62\\",\\n    \\"edge\\": \\"18\\",\\n    \\"firefox\\": \\"56\\",\\n    \\"firefox_android\\": \\"56\\",\\n    \\"safari\\": \\"14.1\\",\\n    \\"safari_ios\\": \\"14.5\\"\\n  }\\n}",
+  "css.types.basic-shape.path": "{\\n  \\"baseline\\": \\"high\\",\\n  \\"baseline_low_date\\": \\"2020-07-28\\",\\n  \\"baseline_high_date\\": \\"2023-01-28\\",\\n  \\"support\\": {\\n    \\"chrome\\": \\"52\\",\\n    \\"chrome_android\\": \\"52\\",\\n    \\"edge\\": \\"79\\",\\n    \\"firefox\\": \\"72\\",\\n    \\"firefox_android\\": \\"79\\",\\n    \\"safari\\": \\"13.1\\",\\n    \\"safari_ios\\": \\"13\\"\\n  }\\n}",
+  "api.DOMMatrix.DOMMatrix": "{\\n  \\"baseline\\": \\"high\\",\\n  \\"baseline_low_date\\": \\"2020-01-15\\",\\n  \\"baseline_high_date\\": \\"2022-07-15\\",\\n  \\"support\\": {\\n    \\"chrome\\": \\"61\\",\\n    \\"chrome_android\\": \\"61\\",\\n    \\"edge\\": \\"79\\",\\n    \\"firefox\\": \\"33\\",\\n    \\"firefox_android\\": \\"33\\",\\n    \\"safari\\": \\"11\\",\\n    \\"safari_ios\\": \\"11\\"\\n  }\\n}",
+  "css.types.image.cross-fade": "{\\n  \\"baseline\\": false,\\n  \\"support\\": {\\n    \\"safari\\": \\"10\\",\\n    \\"safari_ios\\": \\"9.3\\"\\n  }\\n}"
+}
+`;
+
+exports[`getStatus > returns a status 1`] = `
+{
+  "baseline": "high",
+  "baseline_low_date": "2017-03-27",
+  "baseline_high_date": "2019-09-27",
+  "support": {
+    "chrome": "42",
+    "chrome_android": "42",
+    "edge": "14",
+    "firefox": "39",
+    "firefox_android": "39",
+    "safari": "10.1",
+    "safari_ios": "10.3"
+  }
+}
+`;

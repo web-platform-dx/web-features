@@ -14,4 +14,8 @@ status:
     safari: "15.1"
     safari_ios: "15.1"
 compat_features:
+  - webassembly.instructions.trunc_sat_f32_s
+  - webassembly.instructions.trunc_sat_f32_u
+  - webassembly.instructions.trunc_sat_f64_s
+  - webassembly.instructions.trunc_sat_f64_u
   - webassembly.non-trapping-float-to-int-conversions

@@ -1,8 +1,9 @@
-draft_date: 2026-09-03
+draft_date: 2026-11-09
 name: Web Audio API 1.1
 description: TODO
 spec: https://webaudio.github.io/web-audio-api/
 compat_features:
+  - api.AudioContext.AudioContext.options_renderSizeHint_parameter
   - api.AudioContext.playbackStats
   - api.AudioPlaybackStats
   - api.AudioPlaybackStats.averageLatency
@@ -15,7 +16,7 @@ compat_features:
   - api.AudioPlaybackStats.underrunEvents
   - api.AudioWorklet.port
   - api.BaseAudioContext.renderQuantumSize
-  - api.BaseAudioContext.state.interrupted
+  - api.OfflineAudioContext.OfflineAudioContext.options_renderSizeHint_parameter
 
 # The following features in the spec are already part of web-features:
 # - Web Audio:
@@ -134,6 +135,7 @@ compat_features:
 #   - api.BaseAudioContext.listener
 #   - api.BaseAudioContext.sampleRate
 #   - api.BaseAudioContext.state
+#   - api.BaseAudioContext.state.interrupted
 #   - api.BaseAudioContext.statechange_event
 #   - api.BiquadFilterNode
 #   - api.BiquadFilterNode.BiquadFilterNode
@@ -254,3 +256,5 @@ compat_features:
 #   - api.OfflineAudioContext.startRendering
 #   - api.OfflineAudioContext.startRendering.returns_promise
 #   - api.OfflineAudioContext.suspend
+# - OfflineAudioContext incremental rendering:
+#   - api.OfflineAudioContext.close

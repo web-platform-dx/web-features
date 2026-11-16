@@ -1,9 +1,8 @@
-draft_date: 2026-05-22
+draft_date: 2026-10-08
 name: CSS Transitions Module Level 2
 description: TODO
 spec: https://drafts.csswg.org/css-transitions-2/
 compat_features:
-  - api.TransitionEvent.animation
   - css.properties.transition-behavior.allow-discrete
   - css.properties.transition-behavior.normal
   - css.properties.transition.allow-discrete
@@ -35,6 +34,8 @@ compat_features:
 #   - css.properties.transition-property.all
 #   - css.properties.transition-property.none
 #   - css.properties.transition-timing-function
+# - Animation accessors:
+#   - api.TransitionEvent.animation
 # - transition-behavior:
 #   - css.properties.transition.transition-behavior
 #   - css.properties.transition-behavior

@@ -6,7 +6,6 @@ import {
   setLogger,
 } from "compute-baseline";
 import { feature } from "compute-baseline/browser-compat-data";
-import { fdir } from "fdir";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -370,6 +369,10 @@ function insertCompatFeatures(yaml: Document, groups: Map<string, string[]>) {
  * mistakes, such as `.yaml` files.
  */
 function isDistOrDistable(path: string): boolean {
+  if (path.includes("_overlap_allowlist.yml")) {
+    return false;
+  }
+
   if (path.startsWith("features/draft/proposed/")) {
     return false;
   }
@@ -386,16 +389,15 @@ function isDistOrDistable(path: string): boolean {
 }
 
 function main() {
-  const filePaths: string[] = argv.paths.flatMap((fileOrDirectory) => {
-    if (fs.statSync(fileOrDirectory).isDirectory()) {
-      return new fdir()
-        .withBasePath()
-        .filter(isDistOrDistable)
-        .crawl(fileOrDirectory)
-        .sync();
-    }
-    return isDistOrDistable(fileOrDirectory) ? fileOrDirectory : [];
-  });
+  const filePaths = argv.paths
+    .flatMap((fileOrDirectory) => {
+      if (fs.statSync(fileOrDirectory).isDirectory()) {
+        return fs.globSync(path.join(fileOrDirectory, "*"));
+      } else {
+        return [fileOrDirectory];
+      }
+    })
+    .filter(isDistOrDistable);
 
   // Map from .yml to .yml.dist to filter out duplicates.
   const sourceToDist = new Map<string, string>(

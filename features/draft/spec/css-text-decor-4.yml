@@ -1,4 +1,4 @@
-draft_date: 2026-05-08
+draft_date: 2026-10-05
 name: CSS Text Decoration Module Level 4
 description: TODO
 spec: https://drafts.csswg.org/css-text-decor-4/
@@ -19,7 +19,6 @@ compat_features:
   - css.properties.text-emphasis.open
   - css.properties.text-emphasis.sesame
   - css.properties.text-emphasis.triangle
-  - css.properties.text-shadow.none
 
 # The following features in the spec are already part of web-features:
 # - text-decoration:
@@ -46,6 +45,12 @@ compat_features:
 #   - css.properties.text-decoration-skip-ink.none
 # - text-decoration-skip-ink: all:
 #   - css.properties.text-decoration-skip-ink.all
+# - text-decoration-skip-spaces:
+#   - css.properties.text-decoration-skip-spaces
+#   - css.properties.text-decoration-skip-spaces.all
+#   - css.properties.text-decoration-skip-spaces.end
+#   - css.properties.text-decoration-skip-spaces.none
+#   - css.properties.text-decoration-skip-spaces.start
 # - text-emphasis:
 #   - css.properties.text-emphasis
 #   - css.properties.text-emphasis-color
@@ -64,6 +69,7 @@ compat_features:
 #   - css.properties.text-emphasis-style.triangle
 # - text-shadow:
 #   - css.properties.text-shadow
+#   - css.properties.text-shadow.none
 # - text-underline-offset:
 #   - css.properties.text-underline-offset
 #   - css.properties.text-underline-offset.auto

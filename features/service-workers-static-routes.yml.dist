@@ -7,12 +7,16 @@ status:
     chrome: "123"
     chrome_android: "123"
     edge: "123"
+    safari: "27"
+    safari_ios: "27"
 compat_features:
   # baseline: false
   # support:
   #   chrome: "40"
   #   chrome_android: "40"
   #   edge: "17"
+  #   safari: "27"
+  #   safari_ios: "27"
   - api.InstallEvent
 
   # baseline: false
@@ -20,6 +24,8 @@ compat_features:
   #   chrome: "40"
   #   chrome_android: "40"
   #   edge: "79"
+  #   safari: "27"
+  #   safari_ios: "27"
   - api.InstallEvent.InstallEvent
 
   # ⬇️ Same status as overall feature ⬇️
@@ -28,4 +34,6 @@ compat_features:
   #   chrome: "123"
   #   chrome_android: "123"
   #   edge: "123"
+  #   safari: "27"
+  #   safari_ios: "27"
   - api.InstallEvent.addRoutes

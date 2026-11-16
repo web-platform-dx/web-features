@@ -4,3 +4,8 @@ spec:
   - https://drafts.csswg.org/selectors-4/#resource-pseudos
   - https://html.spec.whatwg.org/multipage/semantics-other.html#pseudo-classes
 group: media-elements
+# TODO: https://github.com/web-platform-dx/web-features/issues/1971
+# Status changed: https://github.com/web-platform-dx/web-features/pull/4376
+# 2026-09-17 — low → false — An upstream data error showed media element pseudo-classes as shipped prematurely.
+# References:
+# - https://github.com/mdn/browser-compat-data/pull/30563

@@ -696,6 +696,15 @@ compat_features:
 
   # baseline: false
   # support:
+  #   chrome: "136"
+  #   chrome_android: "136"
+  #   edge: "136"
+  #   safari: "14.1"
+  #   safari_ios: "14.5"
+  - api.BaseAudioContext.state.interrupted
+
+  # baseline: false
+  # support:
   #   chrome: "14"
   #   edge: "12"
   #   safari: "6"

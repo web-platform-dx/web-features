@@ -3,10 +3,7 @@
 
 status:
   baseline: false
-  support:
-    chrome: "133"
-    chrome_android: "133"
-    edge: "133"
+  support: {}
 compat_features:
   # baseline: false
   # support:
@@ -18,7 +15,6 @@ compat_features:
   - http.headers.Attribution-Reporting-Register-Source
   - http.headers.Attribution-Reporting-Register-Trigger
   - http.headers.Attribution-Reporting-Support
-  - http.headers.Permissions-Policy.attribution-reporting
 
   # baseline: false
   # support:
@@ -37,10 +33,14 @@ compat_features:
   - html.elements.img.attributionsrc
   - html.elements.script.attributionsrc
 
-  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "133"
   #   chrome_android: "133"
   #   edge: "133"
   - api.HTMLAreaElement.attributionSrc
+
+  # ⬇️ Same status as overall feature ⬇️
+  # baseline: false
+  # support: {}
+  - http.headers.Permissions-Policy.attribution-reporting

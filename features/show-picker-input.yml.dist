@@ -46,3 +46,36 @@ compat_features:
   #   safari: "17.4"
   - api.HTMLInputElement.showPicker.date_input
   - api.HTMLInputElement.showPicker.datetime_local_input
+
+  # baseline: false
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox_android: "101"
+  #   safari: "16"
+  - api.HTMLInputElement.showPicker.time_input
+
+  # baseline: false
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox_android: "121"
+  - api.HTMLInputElement.showPicker.month_input
+  - api.HTMLInputElement.showPicker.week_input
+
+  # baseline: false
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  #   firefox: "149"
+  - api.HTMLInputElement.showPicker.datalist_input
+
+  # baseline: false
+  # support:
+  #   chrome: "99"
+  #   chrome_android: "99"
+  #   edge: "99"
+  - api.HTMLInputElement.showPicker.autocomplete_input

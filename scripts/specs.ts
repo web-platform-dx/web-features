@@ -53,10 +53,6 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because there is no other specification to link to."
     ],
     [
-        "https://github.com/WebAssembly/extended-const/blob/main/proposals/extended-const/Overview.md",
-        "Allowed because there is no other specification to link to."
-    ],
-    [
         "https://github.com/WebAssembly/multi-memory/blob/main/proposals/multi-memory/Overview.md",
         "Allowed because there is no other specification to link to."
     ],
@@ -81,15 +77,7 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because there is no other specification to link to."
     ],
     [
-        "https://github.com/WebAssembly/tail-call/blob/main/proposals/tail-call/Overview.md",
-        "Allowed because there is no other specification to link to."
-    ],
-    [
         "https://github.com/WebAssembly/threads/blob/main/proposals/threads/Overview.md",
-        "Allowed because there is no other specification to link to."
-    ],
-    [
-        "https://github.com/WebAssembly/function-references/blob/main/proposals/function-references/Overview.md",
         "Allowed because there is no other specification to link to."
     ],
     [
@@ -97,15 +85,7 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because there is no other specification to link to."
     ],
     [
-        "https://github.com/WebAssembly/memory64/blob/main/proposals/memory64/Overview.md",
-        "Allowed because there is no other specification to link to."
-    ],
-    [
         "https://github.com/WebAssembly/exception-handling/blob/main/proposals/exception-handling/legacy/Exceptions.md",
-        "Allowed because there is no other specification to link to."
-    ],
-    [
-        "https://github.com/WebAssembly/js-promise-integration/blob/main/proposals/js-promise-integration/Overview.md",
         "Allowed because there is no other specification to link to."
     ],
     [
@@ -161,47 +141,23 @@ const defaultAllowlist: allowlistItem[] = [
         "Allowed because the Topics API isn't on a standards track yet. Remove this exception when it is."
     ],
     [
-        "https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/Accessibility/AriaNotify/explainer.md",
-        "Allowed because the ariaNotify() method is not yet in a formal spec. Remove this exception when a formal spec is available."
-    ],
-    [
         "https://github.com/whatwg/html/pull/11006",
         "Allowed because this spec PR hasn't landed yet. Once the PR merges, change the spec url and remove this exception."
-    ],
-    [
-        "https://github.com/whatwg/html/pull/11980",
-        "Allowed because this spec PR hasn't landed yet. Once the PR merges, change the spec URL and remove this exception."
     ],
     [
         "https://github.com/w3c/manifest/pull/1175",
         "Allowed because there is no spec yet for Web Install."
     ],
     [
-        "https://github.com/WebAssembly/branch-hinting/blob/main/proposals/branch-hinting/Overview.md",
-        "Allowed because there is no other specification to link to."
-    ],
-    [
         "https://www.w3.org/TR/2019/WD-feature-policy-1-20190416/",
         "Allowed because feature policy was replaced by permissions policy."
-    ],
-    [
-        "https://github.com/WICG/install-element",
-        "Allowed because the <install> element is available in Chrome/Edge as an origin trial."
     ],
     [
         "https://github.com/whatwg/html/pull/11723",
         "Allowed because the focusgroup spec PR hasn't landed yet. Once the PR merges, remove this and add the spec URL to the focusgroup feature."
     ],
     [
-        "http://webmachinelearning.github.io/prompt-api/",
-        "Allowed because that's where LanguageModel (aka Prompt API) spec currently lives."
-    ],
-    [
         "https://jpeg.org/jpeg/#content",
-        "Allowed because it's a spec not tracked in web-specs."
-    ],
-    [
-        "https://www.rfc-editor.org/info/rfc7903/#section-1.2",
         "Allowed because it's a spec not tracked in web-specs."
     ],
     [
@@ -229,10 +185,6 @@ const defaultAllowlist: allowlistItem[] = [
         "Discontinued spec allowed for discouraged feature."
     ],
     [
-        "https://github.com/WICG/PEPC/blob/main/usermedia_element.md",
-        "Replace with https://w3c.github.io/mediacapture-extensions/#the-usermedia-html-element when https://github.com/w3c/mediacapture-extensions/pull/168 merges."
-    ],
-    [
         "https://github.com/WICG/privacy-preserving-ads",
         "Discontinued spec allowed for discouraged feature."
     ],
@@ -243,6 +195,14 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/whatwg/html/pull/9546",
         "Allowed because the <input type=\"checkbox\" switch> feature is not yet in a formal spec. Remove this exception when a formal spec is available."
+    ],
+    [
+        "https://github.com/whatwg/html/pull/12753",
+        "Allowed because it's shipping in Chrome. Replace with https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-parsing-and-serialization when above PR is merged."
+    ],
+    [
+        "https://github.com/whatwg/html/pull/12758",
+        "Allowed because it's shipping in Chrome. Replace with https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-parsing-and-serialization when above PR is merged."
     ]
 ];
 

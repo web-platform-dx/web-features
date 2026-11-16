@@ -3,7 +3,12 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "157"
+    chrome_android: "157"
+    edge: "157"
+    safari: "27"
+    safari_ios: "27"
 compat_features:
   # baseline: low
   # baseline_low_date: 2026-01-13
@@ -489,13 +494,16 @@ compat_features:
   - css.properties.position-try.self-y-end
   - css.properties.position-try.self-y-start
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-09-14
   # support:
   #   chrome: "151"
   #   chrome_android: "151"
   #   edge: "151"
   #   firefox: "151"
   #   firefox_android: "151"
+  #   safari: "27"
+  #   safari_ios: "27"
   - css.properties.position-anchor
   - css.properties.position-anchor.auto
   - css.properties.position-anchor.none
@@ -503,6 +511,11 @@ compat_features:
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "157"
+  #   chrome_android: "157"
+  #   edge: "157"
+  #   safari: "27"
+  #   safari_ios: "27"
   - css.properties.position-visibility.anchor-valid
   - css.properties.position-visibility.anchor-visible
