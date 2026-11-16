@@ -1,18 +1,16 @@
-draft_date: 2026-11-12
+draft_date: 2026-11-16
 name: WebTransport
 description: TODO
 spec: https://w3c.github.io/webtransport/
 compat_features:
   - api.WebTransport.WebTransport.options_datagramsReadableType_parameter
   - api.WebTransport.WebTransport.options_headers_parameter
-  - api.WebTransport.WebTransport.options_protocols_parameter
   - api.WebTransport.anticipatedConcurrentIncomingBidirectionalStreams
   - api.WebTransport.anticipatedConcurrentIncomingUnidirectionalStreams
   - api.WebTransport.createSendGroup
   - api.WebTransport.draining
   - api.WebTransport.exportKeyingMaterial
   - api.WebTransport.exportKeyingMaterial.outputLength_parameter
-  - api.WebTransport.protocol
   - api.WebTransport.responseHeaders
   - api.WebTransport.supportsReliableOnly_static
   - api.WebTransportDatagramDuplexStream.createWritable
@@ -31,6 +29,7 @@ compat_features:
 #   - api.WebTransport.WebTransport
 #   - api.WebTransport.WebTransport.options_allowPooling_parameter
 #   - api.WebTransport.WebTransport.options_congestionControl_parameter
+#   - api.WebTransport.WebTransport.options_protocols_parameter
 #   - api.WebTransport.WebTransport.options_requireUnreliable_parameter
 #   - api.WebTransport.WebTransport.options_serverCertificateHashes_parameter
 #   - api.WebTransport.byob_readers
@@ -46,6 +45,7 @@ compat_features:
 #   - api.WebTransport.getStats
 #   - api.WebTransport.incomingBidirectionalStreams
 #   - api.WebTransport.incomingUnidirectionalStreams
+#   - api.WebTransport.protocol
 #   - api.WebTransport.ready
 #   - api.WebTransport.reliability
 #   - api.WebTransportBidirectionalStream
