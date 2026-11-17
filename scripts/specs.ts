@@ -195,6 +195,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/whatwg/html/pull/9546",
         "Allowed because the <input type=\"checkbox\" switch> feature is not yet in a formal spec. Remove this exception when a formal spec is available."
+    ],
+    [
+        "https://github.com/WebAssembly/wide-arithmetic/blob/main/proposals/wide-arithmetic/Overview.md",
+        "Allowed because there is no other specification to link to.",
     ]
 ];
 
