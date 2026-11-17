@@ -70,3 +70,11 @@
   keys:
     - api.TrustedHTMLParserOptions
     - api.TrustedTypePolicy.createParserOptions
+- reason: Some Privacy Sandbox APIs shared navigator methods.
+  features:
+    - ad-selection
+    - protected-audience
+  keys:
+    - api.Navigator.getInterestGroupAdAuctionData
+    - api.Navigator.joinAdInterestGroup
+    - api.Navigator.runAdAuction
