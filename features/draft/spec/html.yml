@@ -1,10 +1,11 @@
-draft_date: 2026-11-09
+draft_date: 2026-11-19
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
 compat_features:
   - api.Document.designMode
   - api.Document.parseHTMLUnsafe_static.options_sanitizer_parameter
+  - api.Element.contextmenu_event.light_dismisses_popover
   - api.Element.setHTMLUnsafe.options_sanitizer_parameter
   - api.ElementInternals.shadowRoot
   - api.ErrorEvent
@@ -362,6 +363,31 @@ compat_features:
 #   - api.ShadowRoot.prependHTMLUnsafe
 #   - api.ShadowRoot.setHTMLUnsafe
 #   - api.ShadowRoot.setHTMLUnsafe.options_runscripts_parameter
+# - HTML streaming setters:
+#   - api.CharacterData.streamAfterHTML
+#   - api.CharacterData.streamAfterHTMLUnsafe
+#   - api.CharacterData.streamBeforeHTML
+#   - api.CharacterData.streamBeforeHTMLUnsafe
+#   - api.CharacterData.streamReplaceWithHTML
+#   - api.CharacterData.streamReplaceWithHTMLUnsafe
+#   - api.Element.streamAfterHTML
+#   - api.Element.streamAfterHTMLUnsafe
+#   - api.Element.streamAppendHTML
+#   - api.Element.streamAppendHTMLUnsafe
+#   - api.Element.streamBeforeHTML
+#   - api.Element.streamBeforeHTMLUnsafe
+#   - api.Element.streamHTML
+#   - api.Element.streamHTMLUnsafe
+#   - api.Element.streamPrependHTML
+#   - api.Element.streamPrependHTMLUnsafe
+#   - api.Element.streamReplaceWithHTML
+#   - api.Element.streamReplaceWithHTMLUnsafe
+#   - api.ShadowRoot.streamAppendHTML
+#   - api.ShadowRoot.streamAppendHTMLUnsafe
+#   - api.ShadowRoot.streamHTML
+#   - api.ShadowRoot.streamHTMLUnsafe
+#   - api.ShadowRoot.streamPrependHTML
+#   - api.ShadowRoot.streamPrependHTMLUnsafe
 # - CloseWatcher:
 #   - api.CloseWatcher
 #   - api.CloseWatcher.CloseWatcher
