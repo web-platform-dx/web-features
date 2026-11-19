@@ -1,4 +1,4 @@
-draft_date: 2026-11-12
+draft_date: 2026-11-19
 name: CSS Overflow Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-overflow-5/
@@ -25,8 +25,11 @@ compat_features:
   - css.properties.overflow-inline.hidden
   - css.properties.overflow-inline.scroll
   - css.properties.overflow-inline.visible
+  - css.properties.overflow-x.overlay
   - css.properties.overflow-x.replaced_elements
+  - css.properties.overflow-y.overlay
   - css.properties.overflow-y.replaced_elements
+  - css.properties.overflow.overlay
   - css.properties.overflow.replaced_elements
 
 # The following features in the spec are already part of web-features:
