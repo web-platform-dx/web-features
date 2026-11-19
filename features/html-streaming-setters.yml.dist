@@ -3,7 +3,10 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "157"
+    chrome_android: "157"
+    edge: "157"
 compat_features:
   # baseline: false
   # support:
@@ -14,17 +17,12 @@ compat_features:
   - api.Request.textStream
   - api.Response.textStream
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
   # support:
   #   chrome: "157"
   #   chrome_android: "157"
   #   edge: "157"
-  - api.TrustedHTMLParserOptions
-  - api.TrustedTypePolicy.createParserOptions
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
   - api.CharacterData.streamAfterHTML
   - api.CharacterData.streamAfterHTMLUnsafe
   - api.CharacterData.streamBeforeHTML
@@ -49,3 +47,5 @@ compat_features:
   - api.ShadowRoot.streamHTMLUnsafe
   - api.ShadowRoot.streamPrependHTML
   - api.ShadowRoot.streamPrependHTMLUnsafe
+  - api.TrustedHTMLParserOptions
+  - api.TrustedTypePolicy.createParserOptions

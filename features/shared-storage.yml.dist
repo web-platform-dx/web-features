@@ -5,17 +5,8 @@ status:
   baseline: false
   support: {}
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "126"
-  #   chrome_android: "126"
-  #   edge: "126"
   - api.HTMLIFrameElement.sharedStorageWritable
   - api.HTMLImageElement.sharedStorageWritable
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
   - api.SharedStorage
   - api.SharedStorage.append
   - api.SharedStorage.clear

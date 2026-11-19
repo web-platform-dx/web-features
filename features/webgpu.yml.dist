@@ -288,6 +288,9 @@ compat_features:
   - api.GPUDevice.adapterInfo
   - api.GPUSupportedFeatures.feature_float32-blendable
   - api.GPUSupportedFeatures.feature_timestamp-query
+  - api.WGSLLanguageFeatures.extension_packed_4x8_integer_dot_product
+  - api.WGSLLanguageFeatures.extension_readonly_and_readwrite_storage_textures
+  - api.WGSLLanguageFeatures.extension_unrestricted_pointer_parameters
 
   # baseline: false
   # support:
@@ -349,9 +352,6 @@ compat_features:
   - api.GPUSupportedFeatures.feature_clip-distances
   - api.GPUSupportedFeatures.feature_dual-source-blending
   - api.GPUTexture.createView.descriptor_usage_parameter
-  - api.WGSLLanguageFeatures.extension_packed_4x8_integer_dot_product
-  - api.WGSLLanguageFeatures.extension_readonly_and_readwrite_storage_textures
-  - api.WGSLLanguageFeatures.extension_unrestricted_pointer_parameters
 
   # baseline: false
   # support:
