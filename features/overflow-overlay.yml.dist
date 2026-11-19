@@ -9,7 +9,31 @@ status:
     edge: "114"
     firefox: "112"
     firefox_android: "112"
-    safari: "12"
-    safari_ios: "12"
+    safari: "12.1"
+    safari_ios: "12.2"
 compat_features:
+  # baseline: high
+  # baseline_low_date: 2023-04-11
+  # baseline_high_date: 2025-10-11
+  # support:
+  #   chrome: "15"
+  #   chrome_android: "100"
+  #   edge: "79"
+  #   firefox: "112"
+  #   firefox_android: "112"
+  #   safari: "12.1"
+  #   safari_ios: "12.2"
+  - css.properties.overflow-x.overlay
+  - css.properties.overflow-y.overlay
+  - css.properties.overflow.overlay
+
+  # baseline: false
+  # support:
+  #   chrome: "114"
+  #   chrome_android: "114"
+  #   edge: "114"
+  #   firefox: "112"
+  #   firefox_android: "112"
+  #   safari: "12"
+  #   safari_ios: "12"
   - css.types.overflow.overlay
