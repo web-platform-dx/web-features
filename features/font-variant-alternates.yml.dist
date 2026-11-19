@@ -29,7 +29,6 @@ compat_features:
   - css.at-rules.font-feature-values
   - css.at-rules.font-feature-values.annotation
   - css.at-rules.font-feature-values.character-variant
-  - css.at-rules.font-feature-values.historical-forms
   - css.at-rules.font-feature-values.ornaments
   - css.at-rules.font-feature-values.styleset
   - css.at-rules.font-feature-values.stylistic
@@ -98,3 +97,9 @@ compat_features:
   - api.CSSFontFeatureValuesRule.styleset
   - api.CSSFontFeatureValuesRule.stylistic
   - api.CSSFontFeatureValuesRule.swash
+
+  # baseline: false
+  # support:
+  #   safari: "9.1"
+  #   safari_ios: "9.3"
+  - css.at-rules.font-feature-values.historical-forms

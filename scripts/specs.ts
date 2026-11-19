@@ -199,6 +199,10 @@ const defaultAllowlist: allowlistItem[] = [
     [
         "https://github.com/WebAssembly/wide-arithmetic/blob/main/proposals/wide-arithmetic/Overview.md",
         "Allowed because there is no other specification to link to.",
+    ],
+    [
+        "https://github.com/w3c/gamepad/commit/789fd6beccaf6b42a1735bf6e8ba21d65e2d9632",
+        "Allowed because the entire spec was deleted without any alternative reference."
     ]
 ];
 

@@ -18,27 +18,17 @@ compat_features:
   - api.ProtectedAudience
   - api.ProtectedAudience.queryFeatureSupport
 
+  # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support:
-  #   chrome: "128"
-  #   chrome_android: "128"
+  # support: {}
   - api.Navigator.canLoadAdAuctionFencedFrame
   - api.Navigator.clearOriginJoinedAdInterestGroups
   - api.Navigator.createAuctionNonce
   - api.Navigator.deprecatedRunAdAuctionEnforcesKAnonymity
+  - api.Navigator.getInterestGroupAdAuctionData
   - api.Navigator.joinAdInterestGroup
   - api.Navigator.leaveAdInterestGroup
   - api.Navigator.protectedAudience
   - api.Navigator.runAdAuction
   - api.Navigator.updateAdInterestGroups
-
-  # baseline: false
-  # support:
-  #   chrome: "132"
-  #   chrome_android: "132"
-  - api.Navigator.getInterestGroupAdAuctionData
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support: {}
   - api.SharedStorageWorkletGlobalScope.interestGroups
