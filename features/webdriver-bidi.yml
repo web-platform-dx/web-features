@@ -95,8 +95,6 @@ compat_features:
     # more recent browser support data.
     # They are treated as later additions that don't prevent using BiDi.
     - webdriver.bidi.browser.getClientWindows
-    - webdriver.bidi.browsingContext.activate
-    - webdriver.bidi.browsingContext.activate.context_parameter
     - webdriver.bidi.browsingContext.close.promptUnload_parameter
     - webdriver.bidi.browsingContext.contextCreated_event.clientWindow_parameter
     - webdriver.bidi.browsingContext.contextCreated_event.emit_for_existing_contexts

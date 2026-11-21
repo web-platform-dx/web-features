@@ -1,0 +1,10 @@
+name: WebDriver BiDi screenshot
+description: The `browsingContext.captureScreenshot` command captures an image of the given navigable, and returns it as a Base64-encoded string.
+spec: https://w3c.github.io/webdriver-bidi/#command-browsingContext-captureScreenshot
+group: webdriver
+compat_features:
+  - webdriver.bidi.browsingContext.captureScreenshot
+  - webdriver.bidi.browsingContext.captureScreenshot.clip_parameter
+  - webdriver.bidi.browsingContext.captureScreenshot.context_parameter
+  - webdriver.bidi.browsingContext.captureScreenshot.format_parameter
+  - webdriver.bidi.browsingContext.captureScreenshot.origin_parameter
