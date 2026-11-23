@@ -1,0 +1,6 @@
+name: focus-without-user-activation permissions policy
+description: The `focus-without-user-activation` permissions policy lets websites control whether embedded documents can take focus programmatically without user activation, using the `Permissions-Policy` header or an iframe's `allow` attribute.
+spec: https://html.spec.whatwg.org/multipage/infrastructure.html#focus-without-user-activation-feature
+group: permissions-policy
+compat_features:
+  - http.headers.Permissions-Policy.focus-without-user-activation
