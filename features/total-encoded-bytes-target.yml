@@ -1,0 +1,13 @@
+name: totalEncodedBytesTarget
+description: The `totalEncodedBytesTarget` property of `RTCOutboundRtpStreamStats` reports the sum of the target frame sizes for all of the frames encoded so far.
+spec: https://w3c.github.io/webrtc-stats/
+group: webrtc
+discouraged:
+  # Chromium has reported 0 for this stat since version 84 and Firefox reads
+  # the value of a different internal field, so the reported values are not
+  # usable. The stat was removed from the specification rather than fixed.
+  reason: The `totalEncodedBytesTarget` statistic is unreliable and has been removed from the specification.
+  according_to:
+    - https://github.com/w3c/webrtc-stats/pull/824
+compat_features:
+  - api.RTCStatsReport.type_outbound-rtp.totalEncodedBytesTarget
