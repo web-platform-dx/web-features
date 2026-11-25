@@ -3,20 +3,8 @@
 
 status:
   baseline: false
-  support:
-    chrome: "132"
-    chrome_android: "132"
+  support: {}
 compat_features:
-  # baseline: false
-  # support:
-  #   chrome: "128"
-  #   chrome_android: "128"
+  - api.Navigator.getInterestGroupAdAuctionData
   - api.Navigator.joinAdInterestGroup
   - api.Navigator.runAdAuction
-
-  # ⬇️ Same status as overall feature ⬇️
-  # baseline: false
-  # support:
-  #   chrome: "132"
-  #   chrome_android: "132"
-  - api.Navigator.getInterestGroupAdAuctionData

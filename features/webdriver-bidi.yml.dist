@@ -10,6 +10,18 @@ status:
     firefox: "117"
     firefox_android: "117"
 compat_features:
+  # baseline: low
+  # baseline_low_date: 2025-09-15
+  # support:
+  #   chrome: "126"
+  #   chrome_android: "126"
+  #   edge: "126"
+  #   firefox: "117"
+  #   firefox_android: "117"
+  #   safari: "26"
+  #   safari_ios: "26"
+  - webdriver.bidi.browser
+
   # baseline: false
   # support:
   #   chrome: "120"
@@ -194,7 +206,6 @@ compat_features:
   #   edge: "126"
   #   firefox: "117"
   #   firefox_android: "117"
-  - webdriver.bidi.browser
   - webdriver.bidi.browser.close
   - webdriver.bidi.browsingContext.create.background_parameter
   - webdriver.bidi.browsingContext.domContentLoaded_event.navigation_parameter

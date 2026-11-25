@@ -1,4 +1,4 @@
-draft_date: 2026-11-02
+draft_date: 2026-11-19
 name: CSS Values and Units Module Level 5
 description: TODO
 spec: https://drafts.csswg.org/css-values-5/
@@ -56,8 +56,10 @@ compat_features:
   - css.properties.perspective-origin.y-start
   - css.types.attr.attr-name_accepts_namespaces
   - css.types.attr.raw-string
+  - css.types.calc-mix
+  - css.types.ident
+  - css.types.inherit
   - css.types.progress.no-clamp
-  - css.types.random-item
   - css.types.random.step
 
 # The following features in the spec are already part of web-features:
@@ -249,6 +251,8 @@ compat_features:
 #   - css.types.random.fixed
 #   - css.types.random.property-index-scoped
 #   - css.types.random.property-scoped
+# - random-item():
+#   - css.types.random-item
 # - resolution media query:
 #   - css.types.resolution
 #   - css.types.resolution.dpcm
