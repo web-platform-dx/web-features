@@ -307,11 +307,14 @@ compat_features:
   #   safari_ios: "15.4"
   - api.MathMLElement.nonce
 
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-11-24
   # support:
   #   chrome: "109"
   #   chrome_android: "109"
   #   edge: "109"
+  #   firefox: "161"
+  #   firefox_android: "161"
   #   safari: "16.4"
   #   safari_ios: "16.4"
   - api.MathMLElement.attributeStyleMap

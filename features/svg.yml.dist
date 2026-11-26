@@ -1884,6 +1884,18 @@ compat_features:
   - api.SVGAElement.hreflang
   - api.SVGAElement.type
 
+  # baseline: low
+  # baseline_low_date: 2026-11-24
+  # support:
+  #   chrome: "66"
+  #   chrome_android: "66"
+  #   edge: "79"
+  #   firefox: "161"
+  #   firefox_android: "161"
+  #   safari: "16.4"
+  #   safari_ios: "16.4"
+  - api.SVGElement.attributeStyleMap
+
   # baseline: false
   # support:
   #   chrome: "1"
@@ -1934,15 +1946,6 @@ compat_features:
   #   firefox_android: "63"
   - api.SVGImageElement.decoding
   - svg.elements.image.decoding
-
-  # baseline: false
-  # support:
-  #   chrome: "66"
-  #   chrome_android: "66"
-  #   edge: "79"
-  #   safari: "16.4"
-  #   safari_ios: "16.4"
-  - api.SVGElement.attributeStyleMap
 
   # baseline: false
   # support:

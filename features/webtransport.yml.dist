@@ -138,9 +138,7 @@ compat_features:
   - api.WebTransportBidirectionalStream.readable.returns_WebTransportReceiveStream
   - api.WebTransportBidirectionalStream.writable.returns_WebTransportSendStream
   - api.WebTransportReceiveStream
-  - api.WebTransportReceiveStream.getStats
   - api.WebTransportSendStream
-  - api.WebTransportSendStream.getStats
   - api.WebTransportSendStream.getWriter
 
   # baseline: false
@@ -158,6 +156,15 @@ compat_features:
   #   safari: "26.4"
   #   safari_ios: "26.4"
   - api.WebTransportSendStream.sendOrder
+
+  # baseline: false
+  # support:
+  #   firefox: "160"
+  #   firefox_android: "160"
+  #   safari: "26.4"
+  #   safari_ios: "26.4"
+  - api.WebTransportReceiveStream.getStats
+  - api.WebTransportSendStream.getStats
 
   # baseline: false
   # support:
