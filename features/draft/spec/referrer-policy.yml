@@ -1,9 +1,15 @@
-draft_date: 2026-05-08
+draft_date: 2026-11-26
 name: Referrer Policy
 description: TODO
 spec: https://w3c.github.io/webappsec-referrer-policy/
 compat_features:
   - http.headers.Referer.length_limit_4096B
+  - svg.elements.image.referrerpolicy.no-referrer-when-downgrade
+  - svg.elements.image.referrerpolicy.origin-when-cross-origin
+  - svg.elements.image.referrerpolicy.unsafe-url
+  - svg.elements.script.referrerpolicy.no-referrer-when-downgrade
+  - svg.elements.script.referrerpolicy.origin-when-cross-origin
+  - svg.elements.script.referrerpolicy.unsafe-url
 
 # The following features in the spec are already part of web-features:
 # - Referrer policy:

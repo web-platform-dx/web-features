@@ -1,9 +1,12 @@
-draft_date: 2026-10-14
+draft_date: 2026-11-26
 name: ECMAScript® 2027 Internationalization API Specification
 description: TODO
 spec: https://tc39.es/ecma402/
 compat_features:
+  - javascript.builtins.Intl.Locale.firstDayOfWeek
   - javascript.builtins.Intl.Locale.variants
+  - javascript.builtins.Intl.PluralRules.PluralRules.options_parameter.options_compactDisplay_parameter
+  - javascript.builtins.Intl.PluralRules.PluralRules.options_parameter.options_notation_parameter
 
 # The following features in the spec are already part of web-features:
 # - Intl:

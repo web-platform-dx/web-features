@@ -1,4 +1,4 @@
-draft_date: 2026-08-27
+draft_date: 2026-11-26
 name: DOM
 description: TODO
 spec: https://dom.spec.whatwg.org/
@@ -17,6 +17,8 @@ compat_features:
   - api.Element.setAttribute.html_name_validity
   - api.Element.setAttributeNodeNS.html_name_validity
   - api.Element.toggleAttribute.html_name_validity
+  - api.ShadowRoot.slotAssignment.manual
+  - api.ShadowRoot.slotAssignment.named
 
 # The following features in the spec are already part of web-features:
 # - AbortController and AbortSignal:

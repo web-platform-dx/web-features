@@ -1,4 +1,4 @@
-draft_date: 2026-11-19
+draft_date: 2026-11-26
 name: HTML
 description: TODO
 spec: https://html.spec.whatwg.org/multipage/
@@ -15,26 +15,90 @@ compat_features:
   - api.ErrorEvent.filename
   - api.ErrorEvent.lineno
   - api.ErrorEvent.message
+  - api.HTMLAnchorElement.HTMLAnchorElement
+  - api.HTMLAreaElement.HTMLAreaElement
   - api.HTMLAreaElement.hreflang
   - api.HTMLAreaElement.type
+  - api.HTMLAudioElement.HTMLAudioElement
+  - api.HTMLBRElement.HTMLBRElement
+  - api.HTMLBaseElement.HTMLBaseElement
   - api.HTMLBaseElement.href.forbid_data_javascript_urls
+  - api.HTMLBodyElement.HTMLBodyElement
+  - api.HTMLButtonElement.HTMLButtonElement
   - api.HTMLButtonElement.command.request-close
+  - api.HTMLCanvasElement.HTMLCanvasElement
   - api.HTMLCanvasElement.getContext.2d_context.options_colorType_parameter
   - api.HTMLCanvasElement.toBlob.quality_parameter
   - api.HTMLCanvasElement.toBlob.type_parameter_png
   - api.HTMLCanvasElement.toBlob.type_parameter_webp
   - api.HTMLCanvasElement.toDataURL.type_parameter_png
   - api.HTMLCanvasElement.toDataURL.type_parameter_webp
+  - api.HTMLDListElement.HTMLDListElement
+  - api.HTMLDataElement.HTMLDataElement
+  - api.HTMLDataListElement.HTMLDataListElement
+  - api.HTMLDetailsElement.HTMLDetailsElement
+  - api.HTMLDialogElement.HTMLDialogElement
+  - api.HTMLDivElement.HTMLDivElement
+  - api.HTMLElement.HTMLElement
   - api.HTMLElement.togglePopover.force_parameter
   - api.HTMLElement.togglePopover.options_force_parameter
   - api.HTMLElement.toggle_event.details_elements.uses_toggleevent
+  - api.HTMLEmbedElement.HTMLEmbedElement
+  - api.HTMLFieldSetElement.HTMLFieldSetElement
+  - api.HTMLFormElement.HTMLFormElement
+  - api.HTMLHRElement.HTMLHRElement
+  - api.HTMLHeadElement.HTMLHeadElement
+  - api.HTMLHeadingElement.HTMLHeadingElement
+  - api.HTMLHtmlElement.HTMLHtmlElement
+  - api.HTMLIFrameElement.HTMLIFrameElement
+  - api.HTMLImageElement.HTMLImageElement
   - api.HTMLImageElement.currentSrc
   - api.HTMLImageElement.sizes.auto
+  - api.HTMLInputElement.HTMLInputElement
+  - api.HTMLLIElement.HTMLLIElement
+  - api.HTMLLabelElement.HTMLLabelElement
+  - api.HTMLLegendElement.HTMLLegendElement
+  - api.HTMLLinkElement.HTMLLinkElement
+  - api.HTMLMapElement.HTMLMapElement
   - api.HTMLMediaElement.getStartDate
   - api.HTMLMediaElement.playbackRate.negative_values
+  - api.HTMLMenuElement.HTMLMenuElement
+  - api.HTMLMetaElement.HTMLMetaElement
+  - api.HTMLMeterElement.HTMLMeterElement
+  - api.HTMLModElement.HTMLModElement
+  - api.HTMLOListElement.HTMLOListElement
+  - api.HTMLObjectElement.HTMLObjectElement
+  - api.HTMLOptGroupElement.HTMLOptGroupElement
+  - api.HTMLOptionElement.HTMLOptionElement
+  - api.HTMLOutputElement.HTMLOutputElement
+  - api.HTMLParagraphElement.HTMLParagraphElement
+  - api.HTMLPictureElement.HTMLPictureElement
+  - api.HTMLPreElement.HTMLPreElement
+  - api.HTMLProgressElement.HTMLProgressElement
+  - api.HTMLQuoteElement.HTMLQuoteElement
+  - api.HTMLScriptElement.HTMLScriptElement
   - api.HTMLScriptElement.noModule
+  - api.HTMLSelectElement.HTMLSelectElement
   - api.HTMLSelectedContentElement
+  - api.HTMLSelectedContentElement.HTMLSelectedContentElement
+  - api.HTMLSlotElement.HTMLSlotElement
+  - api.HTMLSourceElement.HTMLSourceElement
+  - api.HTMLSpanElement.HTMLSpanElement
+  - api.HTMLStyleElement.HTMLStyleElement
+  - api.HTMLTableCaptionElement.HTMLTableCaptionElement
+  - api.HTMLTableCellElement.HTMLTableCellElement
+  - api.HTMLTableColElement.HTMLTableColElement
+  - api.HTMLTableElement.HTMLTableElement
+  - api.HTMLTableRowElement.HTMLTableRowElement
+  - api.HTMLTableSectionElement.HTMLTableSectionElement
+  - api.HTMLTemplateElement.HTMLTemplateElement
+  - api.HTMLTextAreaElement.HTMLTextAreaElement
+  - api.HTMLTimeElement.HTMLTimeElement
+  - api.HTMLTitleElement.HTMLTitleElement
+  - api.HTMLTrackElement.HTMLTrackElement
+  - api.HTMLUListElement.HTMLUListElement
   - api.HTMLUnknownElement
+  - api.HTMLVideoElement.HTMLVideoElement
   - api.ImageData.ImageData.settings_parameter
   - api.ImageData.ImageData.settings_parameter.colorSpace_option
   - api.ImageData.ImageData.settings_parameter.pixelFormat_option
@@ -134,6 +198,7 @@ compat_features:
   - http.headers.Origin-Agent-Cluster
   - http.headers.Permissions-Policy.autoplay
   - http.headers.Permissions-Policy.cross-origin-isolated
+  - http.headers.Permissions-Policy.focus-without-user-activation
   - http.status.103
   - http.status.103.preconnect
   - http.status.103.preload

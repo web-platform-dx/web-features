@@ -1,8 +1,9 @@
-draft_date: 2026-10-05
+draft_date: 2026-11-26
 name: HTTP Semantics
 description: TODO
 spec: https://httpwg.org/specs/rfc9110.html
 compat_features:
+  - http.headers.Content-Encoding.gzip
   - http.headers.Retry-After
   - http.status.308
 
