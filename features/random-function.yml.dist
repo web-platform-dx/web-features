@@ -3,28 +3,36 @@
 
 status:
   baseline: false
-  support: {}
+  support:
+    chrome: "156"
+    chrome_android: "156"
+    edge: "156"
+    firefox: "161"
+    firefox_android: "161"
 compat_features:
-  # baseline: false
+  # baseline: low
+  # baseline_low_date: 2026-11-24
   # support:
   #   chrome: "156"
   #   chrome_android: "156"
   #   edge: "156"
+  #   firefox: "161"
+  #   firefox_android: "161"
   #   safari: "26.2"
   #   safari_ios: "26.2"
   - css.types.random
-  - css.types.random.dashed-ident
-
-  # baseline: false
-  # support:
-  #   safari: "26.2"
-  #   safari_ios: "26.2"
   - css.types.random.auto
+  - css.types.random.dashed-ident
   - css.types.random.element-scoped
   - css.types.random.fixed
 
   # ⬇️ Same status as overall feature ⬇️
   # baseline: false
-  # support: {}
+  # support:
+  #   chrome: "156"
+  #   chrome_android: "156"
+  #   edge: "156"
+  #   firefox: "161"
+  #   firefox_android: "161"
   - css.types.random.property-index-scoped
   - css.types.random.property-scoped
