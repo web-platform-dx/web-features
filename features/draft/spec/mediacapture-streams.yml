@@ -1,8 +1,9 @@
-draft_date: 2026-10-14
+draft_date: 2026-11-26
 name: Media Capture and Streams
 description: TODO
 spec: https://w3c.github.io/mediacapture-main/
 compat_features:
+  - api.MediaStreamTrack.applyConstraints.backgroundBlur_constraint
   - api.MediaStreamTrack.applyConstraints.echoCancellation_constraint.all
   - api.MediaStreamTrack.applyConstraints.echoCancellation_constraint.remote-only
 
