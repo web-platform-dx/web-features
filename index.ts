@@ -298,4 +298,9 @@ for (const browser of coreBrowserSet.map(identifier => compat.browser(identifier
     }
 }
 
-export { browsers, features, groups, snapshots };
+// Lets consumers that also use @mdn/browser-compat-data install the matching version.
+const meta: WebFeaturesData["meta"] = {
+    "@mdn/browser-compat-data": compat.version,
+};
+
+export { browsers, features, groups, meta, snapshots };

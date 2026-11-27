@@ -15,6 +15,10 @@ export interface WebFeaturesData {
    */
   groups: { [key: string]: GroupData };
   /**
+   * Metadata about the web-features data
+   */
+  meta: Meta;
+  /**
    * Snapshot identifiers and data
    */
   snapshots: { [key: string]: SnapshotData };
@@ -221,6 +225,16 @@ export interface GroupData {
    * Identifier of parent group
    */
   parent?: string;
+}
+
+/**
+ * Metadata about the web-features data
+ */
+export interface Meta {
+  /**
+   * Version of @mdn/browser-compat-data that this data was built with
+   */
+  "@mdn/browser-compat-data": string;
 }
 
 export interface SnapshotData {
