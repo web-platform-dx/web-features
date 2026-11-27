@@ -1,0 +1,29 @@
+name: WebDriver BiDi realms
+description: The WebDriver BiDi `script` module contains commands to list and detect realms.
+spec: https://w3c.github.io/webdriver-bidi/#command-script-getRealms
+group: webdriver
+compat_features:
+  - webdriver.bidi.script.getRealms
+  - webdriver.bidi.script.getRealms.context_parameter
+  - webdriver.bidi.script.getRealms.type_parameter
+  - webdriver.bidi.script.getRealms.type_parameter.window
+  - webdriver.bidi.script.getRealms.type_parameter.worker
+  - webdriver.bidi.script.getRealms.type_parameter.worklet
+  - webdriver.bidi.script.realmCreated_event
+  - webdriver.bidi.script.realmCreated_event.context_parameter
+  - webdriver.bidi.script.realmCreated_event.origin_parameter
+  - webdriver.bidi.script.realmCreated_event.owners_parameter
+  - webdriver.bidi.script.realmCreated_event.realm_parameter
+  - webdriver.bidi.script.realmCreated_event.sandbox_parameter
+  - webdriver.bidi.script.realmCreated_event.type_parameter
+  - webdriver.bidi.script.realmCreated_event.type_parameter.audio-worklet
+  - webdriver.bidi.script.realmCreated_event.type_parameter.dedicated-worker
+  - webdriver.bidi.script.realmCreated_event.type_parameter.paint-worklet
+  - webdriver.bidi.script.realmCreated_event.type_parameter.service-worker
+  - webdriver.bidi.script.realmCreated_event.type_parameter.shared-worker
+  - webdriver.bidi.script.realmCreated_event.type_parameter.window
+  - webdriver.bidi.script.realmCreated_event.type_parameter.worker
+  - webdriver.bidi.script.realmCreated_event.type_parameter.worklet
+  - webdriver.bidi.script.realmCreated_event.userContext_parameter
+  - webdriver.bidi.script.realmDestroyed_event
+  - webdriver.bidi.script.realmDestroyed_event.realm_parameter

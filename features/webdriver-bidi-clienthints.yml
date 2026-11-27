@@ -1,0 +1,10 @@
+name: WebDriver BiDi client-hints
+description: The `setClientHintsOverride` command sets or removes emulated user agent client-hints.
+spec: https://wicg.github.io/ua-client-hints/#automation
+group: webdriver
+compat_features:
+  - webdriver.bidi.userAgentClientHints
+  - webdriver.bidi.userAgentClientHints.setClientHintsOverride
+  - webdriver.bidi.userAgentClientHints.setClientHintsOverride.clientHints_parameter
+  - webdriver.bidi.userAgentClientHints.setClientHintsOverride.contexts_parameter
+  - webdriver.bidi.userAgentClientHints.setClientHintsOverride.userContexts_parameter

@@ -1,0 +1,18 @@
+name: WebDriver BiDi Bluetooth
+description: The `bluetooth` module allows defining and controlling simulated peripherals and advertisements that behave like physical device peripherals and their advertisements.
+spec: https://webbluetoothcg.github.io/web-bluetooth/#automated-testing
+group: webdriver
+compat_features:
+  - webdriver.bidi.bluetooth
+  - webdriver.bidi.bluetooth.disableSimulation
+  - webdriver.bidi.bluetooth.handleRequestDevicePrompt
+  - webdriver.bidi.bluetooth.simulateAdapter
+  - webdriver.bidi.bluetooth.simulateAdvertisement
+  - webdriver.bidi.bluetooth.simulateCharacteristic
+  - webdriver.bidi.bluetooth.simulateCharacteristicResponse
+  - webdriver.bidi.bluetooth.simulateDescriptor
+  - webdriver.bidi.bluetooth.simulateDescriptorResponse
+  - webdriver.bidi.bluetooth.simulateGattConnectionResponse
+  - webdriver.bidi.bluetooth.simulateGattDisconnection
+  - webdriver.bidi.bluetooth.simulatePreconnectedPeripheral
+  - webdriver.bidi.bluetooth.simulateService
